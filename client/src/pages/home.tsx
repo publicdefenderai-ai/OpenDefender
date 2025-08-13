@@ -84,7 +84,7 @@ export default function Home() {
               Know Your Rights.<br />
               <span className="text-blue-800 dark:text-blue-200">Protect Your Future.</span>
             </h2>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
               Get free legal guidance, understand court processes, and access resources to help navigate the criminal justice system.
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ export default function Home() {
                 <AlertTriangle className="mr-2 h-5 w-5" />
                 URGENT HELP NEEDED
               </Button>
-              <p className="text-sm text-blue-200">
+              <p className="text-sm text-blue-800 dark:text-blue-200">
                 If you're being arrested or in court now, click here for immediate rights information.
               </p>
             </div>
@@ -118,11 +118,11 @@ export default function Home() {
                         <Lightbulb className="h-8 w-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold mb-4">Learn Your Rights & Local Process</h3>
-                      <p className="text-blue-100 mb-6">
+                      <p className="text-blue-800 dark:text-blue-200 mb-6">
                         Access general legal information, court procedures, and jurisdiction-specific guidance without entering personal details.
                       </p>
                     </div>
-                    <div className="flex items-center justify-center text-blue-200 group-hover:text-white transition-colors">
+                    <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:text-white transition-colors">
                       <span className="mr-2">Get Started</span>
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -141,11 +141,11 @@ export default function Home() {
                       <MessageSquare className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4">Get Guidance for My Case</h3>
-                    <p className="text-blue-100 mb-6">
+                    <p className="text-blue-800 dark:text-blue-200 mb-6">
                       Answer a few questions to receive personalized guidance, next steps, and relevant resources for your situation.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center text-blue-200 group-hover:text-white transition-colors">
+                  <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:text-white transition-colors">
                     <span className="mr-2">Start Q&A</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -290,7 +290,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 text-center">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">Get Personalized Legal Guidance</h2>
-            <p className="text-xl text-blue-100 mb-12">
+            <p className="text-xl text-blue-800 dark:text-blue-200 mb-12">
               Answer a few questions to receive tailored advice for your specific situation
             </p>
           </ScrollReveal>
@@ -306,12 +306,12 @@ export default function Home() {
                   
                   <div className="flex items-center mb-4 opacity-60">
                     <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</div>
-                    <span className="font-semibold text-blue-200">What charges are you facing?</span>
+                    <span className="font-semibold text-blue-800 dark:text-blue-200">What charges are you facing?</span>
                   </div>
 
                   <div className="flex items-center mb-4 opacity-60">
                     <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</div>
-                    <span className="font-semibold text-blue-200">What stage is your case in?</span>
+                    <span className="font-semibold text-blue-800 dark:text-blue-200">What stage is your case in?</span>
                   </div>
 
                   <Button
@@ -327,7 +327,7 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <p className="text-sm text-blue-200 mt-6">
+            <p className="text-sm text-blue-800 dark:text-blue-200 mt-6">
               <Shield className="inline h-4 w-4 mr-2" />
               Your responses are not stored and are deleted when you close your session
             </p>
@@ -514,7 +514,7 @@ export default function Home() {
             <Card className="legal-blue rounded-xl p-8 text-white text-center">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold mb-4">Transparency in Development</h3>
-                <p className="text-blue-100 mb-6 max-w-4xl mx-auto">
+                <p className="text-blue-800 dark:text-blue-200 mb-6 max-w-4xl mx-auto">
                   Track our progress as we integrate additional data sources, expand coverage, and enhance AI capabilities. 
                   We believe in open development and community feedback.
                 </p>
