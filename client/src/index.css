@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 40% 96%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(210 40% 96%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
+  --accent: hsl(210 40% 96%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(217 91% 60%);
+  --chart-1: hsl(217 91% 60%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  
+  /* Legal theme colors */
+  --legal-blue: hsl(217 91% 60%);
+  --legal-blue-dark: hsl(217 91% 45%);
+  --urgent-red: hsl(0 84% 60%);
+  --urgent-red-dark: hsl(0 84% 45%);
+  --success-green: hsl(142 76% 36%);
+  --success-green-dark: hsl(142 76% 26%);
+  --neutral-dark: hsl(210 25% 7.8431%);
+  --neutral-medium: hsl(215.4 16.3% 46.9%);
+  --neutral-light: hsl(210 40% 98%);
+  
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(210 25% 7.8431%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(222.2 84% 4.9%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(222.2 84% 4.9%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(217 91% 60%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(217.2 32.6% 17.5%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(217.2 32.6% 17.5%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(217.2 32.6% 17.5%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(210 40% 98%);
+  --border: hsl(217.2 32.6% 17.5%);
+  --input: hsl(217.2 32.6% 17.5%);
+  --ring: hsl(217 91% 60%);
+  
+  /* Dark mode legal colors */
+  --neutral-dark: hsl(210 40% 98%);
+  --neutral-medium: hsl(215 20.2% 65.1%);
+  --neutral-light: hsl(217.2 32.6% 17.5%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 { @apply text-4xl lg:text-5xl; }
+  h2 { @apply text-3xl lg:text-4xl; }
+  h3 { @apply text-2xl lg:text-3xl; }
+  h4 { @apply text-xl lg:text-2xl; }
+  h5 { @apply text-lg lg:text-xl; }
+  h6 { @apply text-base lg:text-lg; }
+}
+
+@layer components {
+  .legal-blue {
+    @apply bg-[hsl(var(--legal-blue))] text-white;
+  }
+  
+  .legal-blue-hover {
+    @apply hover:bg-[hsl(var(--legal-blue-dark))];
+  }
+  
+  .success-green {
+    @apply bg-[hsl(var(--success-green))] text-white;
+  }
+  
+  .success-green-hover {
+    @apply hover:bg-[hsl(var(--success-green-dark))];
+  }
+  
+  .urgent-red {
+    @apply bg-[hsl(var(--urgent-red))] text-white;
+  }
+  
+  .urgent-red-hover {
+    @apply hover:bg-[hsl(var(--urgent-red-dark))];
+  }
+  
+  .text-neutral-dark {
+    @apply text-[hsl(var(--neutral-dark))];
+  }
+  
+  .text-neutral-medium {
+    @apply text-[hsl(var(--neutral-medium))];
+  }
+  
+  .bg-neutral-light {
+    @apply bg-[hsl(var(--neutral-light))];
+  }
+  
+  .gradient-hero {
+    @apply bg-gradient-to-br from-[hsl(var(--legal-blue))] to-[hsl(var(--legal-blue-dark))];
+  }
+  
+  .scroll-reveal {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+/* Focus styles for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .legal-blue {
+    @apply bg-blue-700;
+  }
+  
+  .success-green {
+    @apply bg-green-700;
+  }
+  
+  .urgent-red {
+    @apply bg-red-700;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .transition-all,
+  .transition-colors,
+  .transition-transform {
+    @apply transition-none;
+  }
+}
