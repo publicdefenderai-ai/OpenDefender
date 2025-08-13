@@ -18,7 +18,10 @@ import {
   Users,
   Quote,
   RotateCcw,
-  ExternalLink
+  ExternalLink,
+  Lightbulb,
+  CheckCircle,
+  UserCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -79,7 +82,7 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Know Your Rights.<br />
-              <span className="text-blue-200">Protect Your Future.</span>
+              <span className="text-blue-800 dark:text-blue-200">Protect Your Future.</span>
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
               Get free legal guidance, understand court processes, and access resources to help navigate the criminal justice system.
@@ -91,7 +94,7 @@ export default function Home() {
             <div className="mb-12">
               <Button
                 onClick={handleUrgentHelp}
-                className="urgent-red urgent-red-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:scale-105 transition-all duration-200 mb-6"
+                className="urgent-red hover:bg-red-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200 mb-6"
                 data-testid="button-urgent-help"
               >
                 <AlertTriangle className="mr-2 h-5 w-5" />
@@ -108,11 +111,11 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Learn Your Rights */}
               <Link href="/rights-info">
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group h-full">
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
                   <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                     <div>
                       <div className="w-16 h-16 success-green rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                        <BookOpen className="h-8 w-8 text-white" />
+                        <Lightbulb className="h-8 w-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold mb-4">Learn Your Rights & Local Process</h3>
                       <p className="text-blue-100 mb-6">
@@ -121,7 +124,7 @@ export default function Home() {
                     </div>
                     <div className="flex items-center justify-center text-blue-200 group-hover:text-white transition-colors">
                       <span className="mr-2">Get Started</span>
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </CardContent>
                 </Card>
@@ -129,7 +132,7 @@ export default function Home() {
 
               {/* Get Guidance */}
               <Card 
-                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 cursor-pointer group h-full"
+                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:shadow-lg transition-all duration-300 cursor-pointer group h-full"
                 onClick={() => setShowQAFlow(true)}
               >
                 <CardContent className="p-8 text-center h-full flex flex-col justify-between">
@@ -144,7 +147,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-center text-blue-200 group-hover:text-white transition-colors">
                     <span className="mr-2">Start Q&A</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
               </Card>
@@ -170,7 +173,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
               <DataSourceCard
-                icon={<University className="h-6 w-6 text-white" />}
+                icon={<Book className="h-6 w-6 text-white" />}
                 title="Federal Court Records"
                 description="Access to 500M+ federal court documents through PACER and CourtListener APIs, including case law, dockets, and judicial data."
                 status="live"
@@ -181,7 +184,7 @@ export default function Home() {
 
             <ScrollReveal delay={0.2}>
               <DataSourceCard
-                icon={<MapPin className="h-6 w-6 text-white" />}
+                icon={<FileText className="h-6 w-6 text-white" />}
                 title="State & Local Laws"
                 description="Federal and state statutes from Cornell LII, GovInfo.gov, and state legislature websites with regular updates."
                 status="government"
@@ -313,7 +316,7 @@ export default function Home() {
 
                   <Button
                     onClick={() => setShowQAFlow(true)}
-                    className="w-full success-green success-green-hover font-bold py-4 rounded-xl"
+                    className="w-full success-green hover:bg-green-700 hover:shadow-lg font-bold py-4 rounded-xl transition-all duration-200"
                     data-testid="button-start-assessment"
                   >
                     Start Personalized Assessment
@@ -350,7 +353,7 @@ export default function Home() {
             <ScrollReveal delay={0.1}>
               <div className="text-center">
                 <div className="w-16 h-16 legal-blue rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Quote className="h-8 w-8 text-white" />
+                  <CheckCircle className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-semibold mb-3 text-foreground">Verified Citations</h3>
                 <p className="text-sm text-muted-foreground">
@@ -362,7 +365,7 @@ export default function Home() {
             <ScrollReveal delay={0.2}>
               <div className="text-center">
                 <div className="w-16 h-16 success-green rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-white" />
+                  <UserCheck className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-semibold mb-3 text-foreground">Find Legal Help</h3>
                 <p className="text-sm text-muted-foreground">
@@ -410,10 +413,10 @@ export default function Home() {
           <ScrollReveal delay={0.6}>
             <div className="text-center mt-12">
               <div className="space-x-4">
-                <Button className="legal-blue legal-blue-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg">
+                <Button className="legal-blue hover:bg-blue-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200">
                   Find a Public Defender
                 </Button>
-                <Button className="success-green success-green-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg">
+                <Button className="success-green hover:bg-green-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200">
                   Legal Aid Organizations
                 </Button>
               </div>
