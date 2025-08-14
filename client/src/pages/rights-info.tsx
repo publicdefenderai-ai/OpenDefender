@@ -47,7 +47,7 @@ export default function RightsInfo() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
                 Know Your Legal Rights
               </h1>
               <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
