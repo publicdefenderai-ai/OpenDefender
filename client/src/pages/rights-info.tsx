@@ -121,7 +121,7 @@ export default function RightsInfo() {
       </section>
 
       {/* Detailed Rights Information */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30" id="constitutional-rights">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
@@ -139,7 +139,7 @@ export default function RightsInfo() {
               </TabsList>
             </ScrollReveal>
 
-            <TabsContent value="miranda" id="miranda-rights">
+            <TabsContent value="miranda">
               <ScrollReveal delay={0.2}>
                 <MirandaRightsSection />
               </ScrollReveal>

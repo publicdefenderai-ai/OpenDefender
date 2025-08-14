@@ -228,7 +228,7 @@ export default function Home() {
                 title="Miranda Rights"
                 description="Understanding your constitutional rights during police interactions and arrest situations."
                 buttonText="Learn More"
-                href="/rights-info#miranda-rights"
+                href="/rights-info#constitutional-rights"
                 iconBgColor="legal-blue"
               />
             </ScrollReveal>
