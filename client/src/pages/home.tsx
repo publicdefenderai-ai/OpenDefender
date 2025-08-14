@@ -81,7 +81,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Know Your Rights.<br />
+              <span className="text-blue-800 dark:text-blue-200">Know Your Rights.</span><br />
               <span className="text-blue-800 dark:text-blue-200">Protect Your Future.</span>
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
