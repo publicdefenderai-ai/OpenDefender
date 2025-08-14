@@ -359,6 +359,18 @@ export default function CaseGuidance() {
       </section>
 
       <Footer />
+      
+      {/* Privacy Footer Banner */}
+      <div className="legal-blue text-white py-3 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2">
+            <Shield className="h-4 w-4" />
+            <span className="text-sm font-medium">
+              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
