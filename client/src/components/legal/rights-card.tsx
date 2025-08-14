@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 interface RightsCardProps {
   icon: React.ReactNode;
@@ -8,6 +9,7 @@ interface RightsCardProps {
   description: string;
   buttonText: string;
   onClick?: () => void;
+  href?: string;
   iconBgColor?: string;
 }
 
@@ -17,6 +19,7 @@ export function RightsCard({
   description, 
   buttonText, 
   onClick,
+  href,
   iconBgColor = "legal-blue"
 }: RightsCardProps) {
   return (
@@ -27,14 +30,26 @@ export function RightsCard({
         </div>
         <h3 className="text-lg font-semibold mb-3 text-foreground">{title}</h3>
         <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{description}</p>
-        <Button
-          variant="ghost"
-          onClick={onClick}
-          className="text-primary hover:text-primary-foreground hover:bg-primary font-medium text-sm p-0 h-auto"
-          data-testid={`button-${buttonText.toLowerCase().replace(/\s+/g, '-')}`}
-        >
-          {buttonText} <ArrowRight className="ml-1 h-3 w-3" />
-        </Button>
+        {href ? (
+          <Link href={href}>
+            <Button
+              variant="ghost"
+              className="text-primary hover:text-primary-foreground hover:bg-primary font-medium text-sm p-0 h-auto"
+              data-testid={`button-${buttonText.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+              {buttonText} <ArrowRight className="ml-1 h-3 w-3" />
+            </Button>
+          </Link>
+        ) : (
+          <Button
+            variant="ghost"
+            onClick={onClick}
+            className="text-primary hover:text-primary-foreground hover:bg-primary font-medium text-sm p-0 h-auto"
+            data-testid={`button-${buttonText.toLowerCase().replace(/\s+/g, '-')}`}
+          >
+            {buttonText} <ArrowRight className="ml-1 h-3 w-3" />
+          </Button>
+        )}
       </CardContent>
     </Card>
   );

@@ -228,6 +228,7 @@ export default function Home() {
                 title="Miranda Rights"
                 description="Understanding your constitutional rights during police interactions and arrest situations."
                 buttonText="Learn More"
+                href="/rights-info#miranda-rights"
                 iconBgColor="legal-blue"
               />
             </ScrollReveal>
@@ -238,6 +239,7 @@ export default function Home() {
                 title="Court Process Timeline"
                 description="Step-by-step guide through arrest, arraignment, trial, and sentencing procedures."
                 buttonText="View Timeline"
+                href="/rights-info#criminal-justice-timeline"
                 iconBgColor="success-green"
               />
             </ScrollReveal>
