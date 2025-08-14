@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import RightsInfo from "@/pages/rights-info";
 import CaseGuidance from "@/pages/case-guidance";
+import CourtLocator from "@/pages/court-locator";
 import DevelopmentRoadmap from "@/pages/development-roadmap";
 
 function Router() {
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/rights-info" component={RightsInfo} />
       <Route path="/case-guidance" component={CaseGuidance} />
+      <Route path="/court-locator" component={CourtLocator} />
       <Route path="/development-roadmap" component={DevelopmentRoadmap} />
       <Route component={NotFound} />
     </Switch>

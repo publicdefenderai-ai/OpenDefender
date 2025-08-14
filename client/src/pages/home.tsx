@@ -250,6 +250,7 @@ export default function Home() {
                 title="Local Court Info"
                 description="Court addresses, hours, bail schedules, and public defender contact information by jurisdiction."
                 buttonText="Find Courts"
+                href="/court-locator"
                 iconBgColor="bg-blue-500"
               />
             </ScrollReveal>
