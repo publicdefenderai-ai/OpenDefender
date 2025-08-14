@@ -17,7 +17,7 @@ export function PrivacyBanner() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Shield className="h-4 w-4" />
-          <span className="text-sm font-medium">
+          <span className="text-sm font-medium text-black">
             <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
           </span>
         </div>
