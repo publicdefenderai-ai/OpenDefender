@@ -1,4 +1,4 @@
-import { Scale, Twitter, Linkedin, Github } from "lucide-react";
+import { Scale, Twitter, Linkedin, Github, Shield } from "lucide-react";
 import { Link } from "wouter";
 
 export function Footer() {
@@ -136,6 +136,18 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Privacy Notice */}
+        <div className="mt-8">
+          <div className="legal-blue text-white py-4 px-6 rounded-lg">
+            <div className="flex items-center justify-center space-x-2">
+              <Shield className="h-4 w-4" />
+              <span className="text-sm font-medium">
+                <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              </span>
+            </div>
           </div>
         </div>
 
