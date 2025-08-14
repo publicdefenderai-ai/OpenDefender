@@ -122,7 +122,7 @@ export default function Home() {
                         Access general legal information, court procedures, and jurisdiction-specific guidance without entering personal details.
                       </p>
                     </div>
-                    <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:text-white transition-colors">
+                    <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 py-3 px-6 rounded-lg">
                       <span className="mr-2">Get Started</span>
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -145,7 +145,7 @@ export default function Home() {
                       Answer a few questions to receive personalized guidance, next steps, and relevant resources for your situation.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:text-white transition-colors">
+                  <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 py-3 px-6 rounded-lg">
                     <span className="mr-2">Start Q&A</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>

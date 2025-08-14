@@ -50,7 +50,7 @@ export default function RightsInfo() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Know Your Legal Rights
               </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
                 Understanding your constitutional and legal rights is the first step in protecting yourself within the criminal justice system.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function RightsInfo() {
                 icon={<Shield className="h-6 w-6 text-white" />}
                 title="Right to Remain Silent"
                 description="You don't have to answer questions beyond basic identification"
-                bgColor="legal-blue"
+                bgColor="bg-blue-600"
               />
             </ScrollReveal>
 
@@ -95,7 +95,7 @@ export default function RightsInfo() {
                 icon={<Scale className="h-6 w-6 text-white" />}
                 title="Right to an Attorney"
                 description="Free legal representation if you cannot afford one"
-                bgColor="success-green"
+                bgColor="bg-green-600"
               />
             </ScrollReveal>
 
