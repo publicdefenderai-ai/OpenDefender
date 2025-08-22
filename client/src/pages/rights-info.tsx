@@ -277,11 +277,11 @@ export default function RightsInfo() {
                 Need Immediate Legal Help?
               </h3>
               <div className="space-x-4">
-                <Button className="urgent-red urgent-red-hover font-bold py-3 px-6 rounded-lg">
+                <Button className="bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg">
                   Emergency Legal Aid
                 </Button>
                 <Link href="/case-guidance">
-                  <Button className="legal-blue legal-blue-hover font-bold py-3 px-6 rounded-lg">
+                  <Button className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg">
                     Get Case Guidance
                   </Button>
                 </Link>
