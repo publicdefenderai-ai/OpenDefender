@@ -135,10 +135,13 @@ export default function CaseGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Get Personalized Legal Guidance
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
+                Case Guidance
               </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                Get Personalized Legal Guidance
+              </h2>
+              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto mb-8">
                 Answer a few questions about your situation to receive tailored legal guidance, next steps, and resources specific to your case and jurisdiction.
               </p>
               
@@ -154,7 +157,7 @@ export default function CaseGuidance() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="flex items-center justify-center space-x-2 text-sm text-blue-200">
+            <div className="flex items-center justify-center space-x-2 text-sm text-blue-800 dark:text-blue-200">
               <Shield className="h-4 w-4" />
               <span>Your responses are private and automatically deleted after your session</span>
             </div>
