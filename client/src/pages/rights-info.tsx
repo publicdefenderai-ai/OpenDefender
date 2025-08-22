@@ -131,11 +131,35 @@ export default function RightsInfo() {
 
           <Tabs defaultValue="miranda" className="w-full">
             <ScrollReveal delay={0.1}>
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
-                <TabsTrigger value="miranda" data-testid="tab-miranda">Miranda Rights</TabsTrigger>
-                <TabsTrigger value="arrest" data-testid="tab-arrest">During Arrest</TabsTrigger>
-                <TabsTrigger value="court" data-testid="tab-court">In Court</TabsTrigger>
-                <TabsTrigger value="prison" data-testid="tab-prison">If Convicted</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-background border border-border">
+                <TabsTrigger 
+                  value="miranda" 
+                  data-testid="tab-miranda"
+                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
+                >
+                  Miranda Rights
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="arrest" 
+                  data-testid="tab-arrest"
+                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
+                >
+                  During Arrest
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="court" 
+                  data-testid="tab-court"
+                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
+                >
+                  In Court
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="prison" 
+                  data-testid="tab-prison"
+                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
+                >
+                  If Convicted
+                </TabsTrigger>
               </TabsList>
             </ScrollReveal>
 
