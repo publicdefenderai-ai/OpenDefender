@@ -84,7 +84,7 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
               key={index}
               className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
                 index <= currentStep 
-                  ? "legal-blue text-white" 
+                  ? "bg-gray-700 text-white" 
                   : "bg-gray-200 text-gray-400"
               }`}
             >
@@ -162,7 +162,7 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
       <Button
         onClick={onNext}
         disabled={!formData.consentGiven}
-        className="w-full legal-blue legal-blue-hover"
+        className="w-full bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
         data-testid="button-next-consent"
       >
         Continue <ArrowRight className="ml-2 h-4 w-4" />
@@ -252,7 +252,7 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
         <Button
           onClick={onNext}
           disabled={!formData.jurisdiction}
-          className="flex-1 legal-blue legal-blue-hover"
+          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-jurisdiction"
         >
           Continue <ArrowRight className="ml-2 h-4 w-4" />
@@ -305,7 +305,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         <Button
           onClick={onNext}
           disabled={!formData.charges}
-          className="flex-1 legal-blue legal-blue-hover"
+          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"
         >
           Continue <ArrowRight className="ml-2 h-4 w-4" />
@@ -374,7 +374,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
         <Button
           onClick={onNext}
           disabled={!formData.caseStage || !formData.custodyStatus}
-          className="flex-1 success-green success-green-hover"
+          className="flex-1 bg-green-600 text-white font-bold hover:bg-green-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-generate-guidance"
         >
           {isLast ? "Generate Guidance" : "Continue"} <ArrowRight className="ml-2 h-4 w-4" />
