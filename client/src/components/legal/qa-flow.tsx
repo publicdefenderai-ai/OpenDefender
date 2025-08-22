@@ -83,7 +83,7 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
             <div
               key={index}
               className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                index <= currentStep 
+                index === currentStep 
                   ? "bg-gray-700 text-white" 
                   : "bg-gray-200 text-gray-400"
               }`}
