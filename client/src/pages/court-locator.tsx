@@ -118,7 +118,7 @@ export default function CourtLocator() {
                     value={zipCode}
                     onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                     onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                    className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder-blue-200"
+                    className="bg-white border-2 border-blue-300 text-black placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                     data-testid="input-zip-code"
                   />
                 </div>
