@@ -791,6 +791,112 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast }: 
   );
 }
 
+function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
+  return (
+    <Card className="hover:shadow-md transition-all duration-200">
+      <CardContent className="p-4">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h4 className="font-semibold text-lg mb-1">{office.name}</h4>
+            <div className="flex flex-wrap gap-2">
+              {office.county && (
+                <Badge variant="outline" className="text-xs">
+                  {office.county} County
+                </Badge>
+              )}
+              <Badge className="bg-blue-600 text-white text-xs">
+                {office.distance} mi away
+              </Badge>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          {/* Address */}
+          <div className="flex items-start gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+            <div>
+              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm font-medium">{office.address}</div>
+            </div>
+          </div>
+
+          {/* Phone */}
+          {office.phone && (
+            <div className="flex items-start gap-2">
+              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Phone</div>
+                <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
+                  {office.phone}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Email */}
+          {office.email && (
+            <div className="flex items-start gap-2">
+              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Email</div>
+                <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
+                  {office.email}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Hours */}
+          {office.hours && (
+            <div className="flex items-start gap-2">
+              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm font-medium">{office.hours}</div>
+              </div>
+            </div>
+          )}
+
+          {/* Services */}
+          <div>
+            <div className="text-sm text-muted-foreground mb-2">Services</div>
+            <div className="flex flex-wrap gap-1">
+              {office.services.map((service) => (
+                <Badge key={service} variant="outline" className="text-xs">
+                  {service}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="flex gap-2 pt-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1"
+              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(office.address)}`, '_blank')}
+            >
+              <Navigation className="h-3 w-3 mr-1" />
+              Directions
+            </Button>
+            {office.website && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.open(office.website, '_blank')}
+              >
+                <ExternalLink className="h-3 w-3" />
+              </Button>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
 function ResourceCard({ icon, title, description, contact, bgColor }: {
   icon: React.ReactNode;
   title: string;
