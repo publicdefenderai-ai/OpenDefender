@@ -79,19 +79,21 @@ export default function CaseGuidance() {
     try {
       const result = await generateGuidance.mutateAsync(data);
       if (result.success) {
+        // The guidance is directly the EnhancedGuidance object
+        const guidance = result.guidance;
         setGuidanceResult({
           sessionId: result.sessionId,
-          criticalAlerts: result.guidance.criticalAlerts || [],
-          immediateActions: result.guidance.immediateActions || [],
-          nextSteps: result.guidance.nextSteps || [],
-          deadlines: result.guidance.deadlines || [],
-          rights: result.guidance.rights || [],
-          resources: result.guidance.resources || [],
-          warnings: result.guidance.warnings || [],
-          evidenceToGather: result.guidance.evidenceToGather || [],
-          courtPreparation: result.guidance.courtPreparation || [],
-          avoidActions: result.guidance.avoidActions || [],
-          timeline: result.guidance.timeline || [],
+          criticalAlerts: guidance.criticalAlerts || [],
+          immediateActions: guidance.immediateActions || [],
+          nextSteps: guidance.nextSteps || [],
+          deadlines: guidance.deadlines || [],
+          rights: guidance.rights || [],
+          resources: guidance.resources || [],
+          warnings: guidance.warnings || [],
+          evidenceToGather: guidance.evidenceToGather || [],
+          courtPreparation: guidance.courtPreparation || [],
+          avoidActions: guidance.avoidActions || [],
+          timeline: guidance.timeline || [],
           caseData: data,
         });
         setShowQAFlow(false);

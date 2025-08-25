@@ -90,10 +90,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/legal-guidance", async (req, res) => {
     try {
       const sessionId = req.body.sessionId || randomUUID();
-      const validatedData = insertLegalCaseSchema.parse({
+      
+      // Transform the data to match schema expectations
+      const transformedData = {
         ...req.body,
         sessionId,
-      });
+        charges: typeof req.body.charges === 'string' ? [req.body.charges] : req.body.charges,
+        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours from now
+      };
+      
+      const validatedData = insertLegalCaseSchema.parse(transformedData);
 
       // Generate personalized guidance based on case details
       const guidance = generateLegalGuidance(validatedData);

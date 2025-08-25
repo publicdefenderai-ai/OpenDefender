@@ -345,7 +345,7 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     immediateActions: buildImmediateActions(caseData, stageData, chargeData),
     nextSteps: buildNextSteps(caseData, stageData),
     deadlines: buildDeadlines(caseData, jurisdictionData, stageData),
-    rights: stageData?.rights || buildBasicRights(caseStage),
+    rights: (stageData as any)?.rights || buildBasicRights(caseStage),
     resources: buildResources(jurisdiction, hasAttorney),
     warnings: buildWarnings(caseData, chargeData),
     evidenceToGather: chargeData?.evidenceToGather || [],
