@@ -5,6 +5,7 @@ import { courtListenerService } from "./services/courtlistener";
 import { legalDataService } from "./services/legal-data";
 import { insertLegalCaseSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
+import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Legal Resources API
@@ -95,7 +96,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       // Generate personalized guidance based on case details
-      const guidance = await generateLegalGuidance(validatedData);
+      const guidance = generateLegalGuidance(validatedData);
       
       const legalCase = await storage.createLegalCase({
         ...validatedData,
@@ -150,89 +151,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   return httpServer;
 }
 
-async function generateLegalGuidance(caseData: any) {
-  // This function would use AI/ML to generate personalized legal guidance
-  // For now, we'll provide structured guidance based on case parameters
-  
-  const { jurisdiction, charges, caseStage, custodyStatus } = caseData;
-  
-  const guidance = {
-    nextSteps: [],
-    deadlines: [],
-    rights: [],
-    resources: [],
-    warnings: [],
-  };
-
-  // Add guidance based on case stage
-  switch (caseStage) {
-    case 'arrest':
-      guidance.nextSteps.push(
-        'Request to speak with a public defender immediately',
-        'Do not answer questions without an attorney present',
-        'Ask about bail/bond options'
-      );
-      guidance.rights.push(
-        'Right to remain silent',
-        'Right to an attorney',
-        'Right to a phone call'
-      );
-      guidance.deadlines.push({
-        event: 'Arraignment',
-        timeframe: 'Within 48-72 hours',
-        description: 'First court appearance where charges are read'
-      });
-      break;
-      
-    case 'arraignment':
-      guidance.nextSteps.push(
-        'Enter plea (recommend Not Guilty to preserve options)',
-        'Request public defender if you qualify',
-        'Discuss bail/release conditions with attorney'
-      );
-      guidance.deadlines.push({
-        event: 'Preliminary Hearing',
-        timeframe: '10-14 days',
-        description: 'Hearing to determine if there is probable cause'
-      });
-      break;
-      
-    case 'pretrial':
-      guidance.nextSteps.push(
-        'Work with attorney on defense strategy',
-        'Comply with all bail conditions',
-        'Gather evidence and witnesses'
-      );
-      guidance.deadlines.push({
-        event: 'Discovery Deadline',
-        timeframe: 'Varies by jurisdiction',
-        description: 'Exchange of evidence between prosecution and defense'
-      });
-      break;
-  }
-
-  // Add resources based on jurisdiction
-  guidance.resources.push(
-    {
-      type: 'Public Defender',
-      description: 'Free legal representation if you qualify',
-      contact: 'Contact local public defender office'
-    },
-    {
-      type: 'Legal Aid',
-      description: 'Additional legal assistance and resources',
-      contact: 'Local legal aid society'
-    }
-  );
-
-  // Add warnings for custody status
-  if (custodyStatus === 'detained') {
-    guidance.warnings.push(
-      'Limited time to prepare defense while in custody',
-      'Maintain good behavior to preserve bail eligibility',
-      'Communicate only with attorney about case details'
-    );
-  }
-
-  return guidance;
+function generateLegalGuidance(caseData: any) {
+  // Use the enhanced guidance engine for comprehensive legal guidance
+  return generateEnhancedGuidance(caseData);
 }

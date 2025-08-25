@@ -28,23 +28,39 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { QAFlow } from "@/components/legal/qa-flow";
+import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance } from "@/hooks/use-legal-data";
 
-interface GuidanceResult {
+interface EnhancedGuidanceResult {
   sessionId: string;
+  criticalAlerts: string[];
+  immediateActions: string[];
   nextSteps: string[];
   deadlines: Array<{
     event: string;
     timeframe: string;
     description: string;
+    priority: 'critical' | 'important' | 'normal';
+    daysFromNow?: number;
   }>;
   rights: string[];
   resources: Array<{
     type: string;
     description: string;
     contact: string;
+    hours?: string;
+    website?: string;
   }>;
   warnings: string[];
+  evidenceToGather: string[];
+  courtPreparation: string[];
+  avoidActions: string[];
+  timeline: Array<{
+    stage: string;
+    description: string;
+    timeframe: string;
+    completed: boolean;
+  }>;
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -56,7 +72,7 @@ interface GuidanceResult {
 
 export default function CaseGuidance() {
   const [showQAFlow, setShowQAFlow] = useState(false);
-  const [guidanceResult, setGuidanceResult] = useState<GuidanceResult | null>(null);
+  const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
 
   const handleQAComplete = async (data: any) => {
@@ -65,11 +81,17 @@ export default function CaseGuidance() {
       if (result.success) {
         setGuidanceResult({
           sessionId: result.sessionId,
-          nextSteps: result.guidance.nextSteps,
-          deadlines: result.guidance.deadlines,
-          rights: result.guidance.rights,
-          resources: result.guidance.resources,
-          warnings: result.guidance.warnings,
+          criticalAlerts: result.guidance.criticalAlerts || [],
+          immediateActions: result.guidance.immediateActions || [],
+          nextSteps: result.guidance.nextSteps || [],
+          deadlines: result.guidance.deadlines || [],
+          rights: result.guidance.rights || [],
+          resources: result.guidance.resources || [],
+          warnings: result.guidance.warnings || [],
+          evidenceToGather: result.guidance.evidenceToGather || [],
+          courtPreparation: result.guidance.courtPreparation || [],
+          avoidActions: result.guidance.avoidActions || [],
+          timeline: result.guidance.timeline || [],
           caseData: data,
         });
         setShowQAFlow(false);
@@ -113,10 +135,11 @@ export default function CaseGuidance() {
         <PrivacyBanner />
         <Header />
         
-        <main className="max-w-7xl mx-auto px-4 py-8">
-          <GuidanceResults 
-            result={guidanceResult} 
-            onNewSession={handleNewSession}
+        <main className="px-4 py-8">
+          <GuidanceDashboard 
+            guidance={guidanceResult} 
+            onClose={() => setGuidanceResult(null)}
+            onDeleteSession={handleNewSession}
           />
         </main>
         
@@ -437,173 +460,4 @@ function PrivacyFeature({ icon, title, description }: {
   );
 }
 
-function GuidanceResults({ result, onNewSession }: {
-  result: GuidanceResult;
-  onNewSession: () => void;
-}) {
-  return (
-    <div className="space-y-8">
-      {/* Header */}
-      <ScrollReveal>
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-foreground mb-4">
-            Your Personalized Legal Guidance
-          </h1>
-          <p className="text-muted-foreground mb-6">
-            Based on your situation in {result.caseData.jurisdiction} with charges: {result.caseData.charges}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Button
-              onClick={onNewSession}
-              variant="outline"
-              data-testid="button-new-session"
-            >
-              Start New Session
-            </Button>
-            <Button className="legal-blue legal-blue-hover">
-              <Download className="mr-2 h-4 w-4" />
-              Save as PDF
-            </Button>
-          </div>
-        </div>
-      </ScrollReveal>
 
-      {/* Next Steps */}
-      <ScrollReveal delay={0.1}>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <ArrowRight className="h-5 w-5 text-primary" />
-              <span>Immediate Next Steps</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ol className="space-y-3">
-              {result.nextSteps.map((step, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
-                    {index + 1}
-                  </span>
-                  <span className="text-foreground">{step}</span>
-                </li>
-              ))}
-            </ol>
-          </CardContent>
-        </Card>
-      </ScrollReveal>
-
-      {/* Deadlines */}
-      {result.deadlines.length > 0 && (
-        <ScrollReveal delay={0.2}>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Clock className="h-5 w-5 text-urgent-red" />
-                <span>Important Deadlines</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {result.deadlines.map((deadline, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-4 bg-muted rounded-lg">
-                    <Badge className="urgent-red text-white">
-                      {deadline.timeframe}
-                    </Badge>
-                    <div>
-                      <h4 className="font-semibold text-foreground">{deadline.event}</h4>
-                      <p className="text-sm text-muted-foreground">{deadline.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-      )}
-
-      {/* Rights */}
-      <ScrollReveal delay={0.3}>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Shield className="h-5 w-5 text-success-green" />
-              <span>Your Rights</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2">
-              {result.rights.map((right, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-success-green flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{right}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      </ScrollReveal>
-
-      {/* Resources */}
-      <ScrollReveal delay={0.4}>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Users className="h-5 w-5 text-primary" />
-              <span>Local Resources</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {result.resources.map((resource, index) => (
-                <div key={index} className="p-4 border rounded-lg">
-                  <h4 className="font-semibold text-foreground mb-2">{resource.type}</h4>
-                  <p className="text-sm text-muted-foreground mb-2">{resource.description}</p>
-                  <div className="flex items-center text-primary">
-                    <Phone className="h-4 w-4 mr-2" />
-                    <span className="text-sm">{resource.contact}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </ScrollReveal>
-
-      {/* Warnings */}
-      {result.warnings.length > 0 && (
-        <ScrollReveal delay={0.5}>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <AlertTriangle className="h-5 w-5 text-amber-500" />
-                <span>Important Warnings</span>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                {result.warnings.map((warning, index) => (
-                  <Alert key={index} className="border-amber-200 bg-amber-50 dark:bg-amber-900/20">
-                    <AlertTriangle className="h-4 w-4 text-amber-600" />
-                    <AlertDescription className="text-amber-800 dark:text-amber-200">
-                      {warning}
-                    </AlertDescription>
-                  </Alert>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-      )}
-
-      {/* Disclaimer */}
-      <ScrollReveal delay={0.6}>
-        <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-          <AlertDescription className="text-amber-800 dark:text-amber-200">
-            <strong className="font-semibold">Legal Disclaimer:</strong> This guidance is for informational purposes only and does not constitute legal advice. Laws vary by jurisdiction and change over time. Always consult with a qualified attorney for advice specific to your case.
-          </AlertDescription>
-        </Alert>
-      </ScrollReveal>
-    </div>
-  );
-}
