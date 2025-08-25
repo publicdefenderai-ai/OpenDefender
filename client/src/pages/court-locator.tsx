@@ -88,6 +88,13 @@ export default function CourtLocator() {
     }
   };
 
+  const stateCourts = courts.filter(court => 
+    court.type === 'state' || court.type === 'municipal' || court.type === 'traffic'
+  );
+  const federalCourts = courts.filter(court => 
+    court.type === 'federal' || court.type === 'bankruptcy'
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <PrivacyBanner />
@@ -124,40 +131,32 @@ export default function CourtLocator() {
                 </div>
                 <Button
                   onClick={handleSearch}
-                  disabled={isSearching}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6"
+                  disabled={isSearching || zipCode.length !== 5}
+                  className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 shadow-lg"
                   data-testid="button-search-courts"
                 >
                   {isSearching ? (
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    >
-                      <Search className="h-4 w-4" />
-                    </motion.div>
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-blue-600 border-t-transparent mr-2"></div>
+                      Searching...
+                    </>
                   ) : (
-                    <Search className="h-4 w-4" />
+                    <>
+                      <Search className="mr-2 h-4 w-4" />
+                      Search
+                    </>
                   )}
                 </Button>
               </div>
               
               {error && (
-                <Alert className="mt-4 bg-red-500/20 border-red-500/50">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription className="text-white">
+                <Alert className="mt-4 border-yellow-200 bg-yellow-50">
+                  <AlertCircle className="h-4 w-4 text-yellow-600" />
+                  <AlertDescription className="text-yellow-800">
                     {error}
                   </AlertDescription>
                 </Alert>
               )}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.4}>
-            <div className="text-center">
-              <p className="text-sm text-blue-800 dark:text-blue-200">
-                <MapPin className="inline h-4 w-4 mr-1" />
-                Enter your ZIP code to find courthouses within 25 miles using free OpenStreetMap data
-              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -170,7 +169,7 @@ export default function CourtLocator() {
             <ScrollReveal>
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Courts Near {zipCode}
+                  Court Search Results
                 </h2>
                 <p className="text-muted-foreground">
                   Found {courts.length} courthouse{courts.length !== 1 ? 's' : ''} in your area
@@ -178,103 +177,61 @@ export default function CourtLocator() {
               </div>
             </ScrollReveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {courts.map((court, index) => (
-                <ScrollReveal key={court.id} delay={index * 0.1}>
-                  <Card className="h-full hover:shadow-lg transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <CardTitle className="text-lg mb-2">{court.name}</CardTitle>
-                          <Badge className={`${getCourtTypeColor(court.type)} text-white`}>
-                            {getCourtTypeName(court.type)}
-                          </Badge>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-sm text-muted-foreground mb-1">Distance</div>
-                          <div className="font-semibold text-blue-600">
-                            {court.distance} mi
-                          </div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        {/* Address */}
-                        <div className="flex items-start gap-3">
-                          <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                          <div>
-                            <div className="text-sm text-muted-foreground">Address</div>
-                            <div className="text-sm font-medium">{court.address}</div>
-                          </div>
-                        </div>
+            {/* Court Results */}
+            <div className="space-y-12">
+              {/* State Courts Section */}
+              {stateCourts.length > 0 && (
+                <div>
+                  <ScrollReveal>
+                    <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
+                      <Scale className="h-6 w-6 mr-3 text-green-600" />
+                      State & Local Courts ({stateCourts.length})
+                    </h3>
+                    <p className="text-muted-foreground mb-8">
+                      Courts organized by county, with same-county courts listed first
+                    </p>
+                  </ScrollReveal>
+                  
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {stateCourts.map((court, index) => (
+                      <CourtCard 
+                        key={court.id} 
+                        court={court} 
+                        index={index} 
+                        getCourtTypeColor={getCourtTypeColor} 
+                        getCourtTypeName={getCourtTypeName} 
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
 
-                        {/* Phone */}
-                        {court.phone && (
-                          <div className="flex items-start gap-3">
-                            <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                            <div>
-                              <div className="text-sm text-muted-foreground">Phone</div>
-                              <div className="text-sm font-medium">
-                                <a href={`tel:${court.phone}`} className="hover:text-blue-600 transition-colors">
-                                  {court.phone}
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Hours */}
-                        {court.hours && (
-                          <div className="flex items-start gap-3">
-                            <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                            <div>
-                              <div className="text-sm text-muted-foreground">Hours</div>
-                              <div className="text-sm font-medium">{court.hours}</div>
-                            </div>
-                          </div>
-                        )}
-
-                        {/* Services */}
-                        <div>
-                          <div className="text-sm text-muted-foreground mb-2">Services</div>
-                          <div className="flex flex-wrap gap-1">
-                            {court.services.map((service) => (
-                              <Badge key={service} variant="outline" className="text-xs">
-                                {service}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Actions */}
-                        <div className="flex gap-2 pt-2">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="flex-1"
-                            onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(court.address)}`, '_blank')}
-                            data-testid={`button-directions-${court.id}`}
-                          >
-                            <Navigation className="h-3 w-3 mr-1" />
-                            Directions
-                          </Button>
-                          {court.website && (
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => window.open(court.website, '_blank')}
-                              data-testid={`button-website-${court.id}`}
-                            >
-                              <ExternalLink className="h-3 w-3" />
-                            </Button>
-                          )}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
-              ))}
+              {/* Federal Courts Section */}
+              {federalCourts.length > 0 && (
+                <div>
+                  <ScrollReveal>
+                    <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
+                      <Building2 className="h-6 w-6 mr-3 text-blue-600" />
+                      Federal Courts ({federalCourts.length})
+                    </h3>
+                    <p className="text-muted-foreground mb-8">
+                      Federal courts handle federal crimes and civil cases
+                    </p>
+                  </ScrollReveal>
+                  
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {federalCourts.map((court, index) => (
+                      <CourtCard 
+                        key={court.id} 
+                        court={court} 
+                        index={index} 
+                        getCourtTypeColor={getCourtTypeColor} 
+                        getCourtTypeName={getCourtTypeName} 
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {courts.length === 0 && (
@@ -376,10 +333,10 @@ export default function CourtLocator() {
               <Link href="/case-guidance">
                 <Button 
                   variant="outline"
-                  className="font-bold py-3 px-8 rounded-xl border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-xl"
                   data-testid="button-get-guidance"
                 >
-                  Get Personalized Guidance
+                  Get Case Guidance
                 </Button>
               </Link>
             </div>
@@ -389,5 +346,117 @@ export default function CourtLocator() {
 
       <Footer />
     </div>
+  );
+}
+
+// Court Card Component
+function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName }: {
+  court: CourtLocation;
+  index: number;
+  getCourtTypeColor: (type: CourtLocation["type"]) => string;
+  getCourtTypeName: (type: CourtLocation["type"]) => string;
+}) {
+  return (
+    <ScrollReveal key={court.id} delay={index * 0.1}>
+      <Card className="h-full hover:shadow-lg transition-all duration-300">
+        <CardHeader>
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              <CardTitle className="text-lg mb-2">{court.name}</CardTitle>
+              <div className="flex flex-wrap gap-2 mb-2">
+                <Badge className={`${getCourtTypeColor(court.type)} text-white`}>
+                  {getCourtTypeName(court.type)}
+                </Badge>
+                {court.county && (
+                  <Badge variant="outline" className="text-xs">
+                    {court.county} County
+                  </Badge>
+                )}
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="text-sm text-muted-foreground mb-1">Distance</div>
+              <div className="font-semibold text-blue-600">
+                {court.distance} mi
+              </div>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {/* Address */}
+            <div className="flex items-start gap-3">
+              <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Address</div>
+                <div className="text-sm font-medium">{court.address}</div>
+              </div>
+            </div>
+
+            {/* Phone */}
+            {court.phone && (
+              <div className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <div>
+                  <div className="text-sm text-muted-foreground">Phone</div>
+                  <div className="text-sm font-medium">
+                    <a href={`tel:${court.phone}`} className="hover:text-blue-600 transition-colors">
+                      {court.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Hours */}
+            {court.hours && (
+              <div className="flex items-start gap-3">
+                <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <div>
+                  <div className="text-sm text-muted-foreground">Hours</div>
+                  <div className="text-sm font-medium">{court.hours}</div>
+                </div>
+              </div>
+            )}
+
+            {/* Services */}
+            <div>
+              <div className="text-sm text-muted-foreground mb-2">Services</div>
+              <div className="flex flex-wrap gap-1">
+                {court.services.map((service) => (
+                  <Badge key={service} variant="outline" className="text-xs">
+                    {service}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex gap-2 pt-2">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1"
+                onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(court.address)}`, '_blank')}
+                data-testid={`button-directions-${court.id}`}
+              >
+                <Navigation className="h-3 w-3 mr-1" />
+                Directions
+              </Button>
+              {court.website && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => window.open(court.website, '_blank')}
+                  data-testid={`button-website-${court.id}`}
+                >
+                  <ExternalLink className="h-3 w-3" />
+                </Button>
+              )}
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </ScrollReveal>
   );
 }
