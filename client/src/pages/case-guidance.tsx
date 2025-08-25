@@ -77,10 +77,15 @@ export default function CaseGuidance() {
 
   const handleQAComplete = async (data: any) => {
     try {
+      console.log("Sending guidance request with data:", data);
       const result = await generateGuidance.mutateAsync(data);
+      console.log("Received guidance result:", result);
+      
       if (result.success) {
         // The guidance is directly the EnhancedGuidance object
         const guidance = result.guidance;
+        console.log("Processing guidance data:", guidance);
+        
         setGuidanceResult({
           sessionId: result.sessionId,
           criticalAlerts: guidance.criticalAlerts || [],
@@ -97,9 +102,12 @@ export default function CaseGuidance() {
           caseData: data,
         });
         setShowQAFlow(false);
+      } else {
+        console.error("API returned unsuccessful result:", result);
       }
     } catch (error) {
       console.error("Failed to generate guidance:", error);
+      console.error("Error details:", error);
     }
   };
 

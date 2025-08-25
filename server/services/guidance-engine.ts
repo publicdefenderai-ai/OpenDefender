@@ -3,7 +3,7 @@
 
 interface CaseData {
   jurisdiction: string;
-  charges: string;
+  charges: string | string[];
   caseStage: string;
   custodyStatus: string;
   hasAttorney: boolean;
@@ -333,7 +333,9 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
   const jurisdictionData = jurisdictionRules[jurisdiction as keyof typeof jurisdictionRules] || jurisdictionRules['federal'];
   
   // Identify charge type (simplified matching)
-  const chargeType = identifyChargeType(charges.toLowerCase());
+  // Handle charges as either string or array
+  const chargesString = Array.isArray(charges) ? charges.join(' ').toLowerCase() : charges.toLowerCase();
+  const chargeType = identifyChargeType(chargesString);
   const chargeData = chargeGuidance[chargeType as keyof typeof chargeGuidance];
   
   // Get stage-specific guidance
