@@ -26,19 +26,34 @@ export interface CourtData {
 }
 
 export interface LegalGuidance {
+  criticalAlerts: string[];
+  immediateActions: string[];
   nextSteps: string[];
   deadlines: Array<{
     event: string;
     timeframe: string;
     description: string;
+    priority: 'critical' | 'important' | 'normal';
+    daysFromNow?: number;
   }>;
   rights: string[];
   resources: Array<{
     type: string;
     description: string;
     contact: string;
+    hours?: string;
+    website?: string;
   }>;
   warnings: string[];
+  evidenceToGather: string[];
+  courtPreparation: string[];
+  avoidActions: string[];
+  timeline: Array<{
+    stage: string;
+    description: string;
+    timeframe: string;
+    completed: boolean;
+  }>;
 }
 
 export const legalDataApi = {
