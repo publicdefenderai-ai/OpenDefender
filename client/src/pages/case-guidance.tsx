@@ -81,12 +81,12 @@ export default function CaseGuidance() {
       const result = await generateGuidance.mutateAsync(data);
       console.log("Received guidance result:", result);
       
-      if (result.success) {
+      if (result && result.success) {
         // The guidance is directly the EnhancedGuidance object
         const guidance = result.guidance;
         console.log("Processing guidance data:", guidance);
         
-        setGuidanceResult({
+        const guidanceData = {
           sessionId: result.sessionId,
           criticalAlerts: guidance.criticalAlerts || [],
           immediateActions: guidance.immediateActions || [],
@@ -100,14 +100,20 @@ export default function CaseGuidance() {
           avoidActions: guidance.avoidActions || [],
           timeline: guidance.timeline || [],
           caseData: data,
-        });
+        };
+        
+        console.log("Setting guidance result:", guidanceData);
+        setGuidanceResult(guidanceData);
         setShowQAFlow(false);
+        console.log("Should now show dashboard");
       } else {
         console.error("API returned unsuccessful result:", result);
+        alert("Failed to generate guidance. Please try again.");
       }
     } catch (error) {
       console.error("Failed to generate guidance:", error);
       console.error("Error details:", error);
+      alert("An error occurred while generating guidance. Please try again.");
     }
   };
 
