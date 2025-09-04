@@ -95,7 +95,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const transformedData = {
         ...req.body,
         sessionId,
-        charges: typeof req.body.charges === 'string' ? [req.body.charges] : req.body.charges,
+        charges: Array.isArray(req.body.charges) 
+          ? req.body.charges 
+          : typeof req.body.charges === 'string' 
+            ? [req.body.charges] 
+            : req.body.charges,
         expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours from now
       };
       

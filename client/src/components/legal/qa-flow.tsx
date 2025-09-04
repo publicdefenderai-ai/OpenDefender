@@ -5,8 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Lock, ArrowRight, ArrowLeft } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Lock, ArrowRight, ArrowLeft, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
@@ -17,7 +19,7 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
     jurisdiction: "",
-    charges: "",
+    charges: [] as string[],
     caseStage: "",
     custodyStatus: "",
     hasAttorney: false,
@@ -263,21 +265,149 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
 }
 
 function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [showAllCharges, setShowAllCharges] = useState(false);
+  
+  // Get charges based on selected jurisdiction
+  const availableCharges = formData.jurisdiction === 'federal' 
+    ? getChargesByJurisdiction('Federal')
+    : getChargesByJurisdiction('CA');
+  
+  // Filter charges by category if selected
+  const filteredCharges = selectedCategory 
+    ? availableCharges.filter(charge => 
+        chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id)
+      )
+    : availableCharges;
+  
+  const displayedCharges = showAllCharges ? filteredCharges : filteredCharges.slice(0, 8);
+  
+  const handleChargeToggle = (chargeId: string) => {
+    const currentCharges = formData.charges || [];
+    const updatedCharges = currentCharges.includes(chargeId)
+      ? currentCharges.filter((id: string) => id !== chargeId)
+      : [...currentCharges, chargeId];
+    updateFormData("charges", updatedCharges);
+  };
+  
+  const removeCharge = (chargeId: string) => {
+    const updatedCharges = formData.charges.filter((id: string) => id !== chargeId);
+    updateFormData("charges", updatedCharges);
+  };
+  
+  const getChargeById = (id: string) => {
+    return criminalCharges.find(charge => charge.id === id);
+  };
+
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-4">About your case</h3>
+        <h3 className="text-lg font-semibold mb-4">What charges are you facing?</h3>
         
         <div className="space-y-4">
+          {/* Selected Charges */}
+          {formData.charges.length > 0 && (
+            <div className="mb-4">
+              <Label className="text-sm font-medium mb-2 block">Selected Charges:</Label>
+              <div className="flex flex-wrap gap-2">
+                {formData.charges.map((chargeId: string) => {
+                  const charge = getChargeById(chargeId);
+                  return charge ? (
+                    <Badge
+                      key={chargeId}
+                      variant="default"
+                      className="flex items-center gap-1 px-3 py-1"
+                    >
+                      {charge.name} ({charge.code})
+                      <button
+                        onClick={() => removeCharge(chargeId)}
+                        className="ml-1 hover:text-red-200"
+                        type="button"
+                      >
+                        <X className="h-3 w-3" />
+                      </button>
+                    </Badge>
+                  ) : null;
+                })}
+              </div>
+            </div>
+          )}
+          
+          {/* Category Filter */}
           <div>
-            <Label htmlFor="charges">What charges are you facing?</Label>
-            <Input
-              id="charges"
-              value={formData.charges}
-              onChange={(e) => updateFormData("charges", e.target.value)}
-              placeholder="e.g., DUI, theft, assault, drug possession..."
-              data-testid="input-charges"
-            />
+            <Label htmlFor="category">Filter by Category (Optional)</Label>
+            <Select
+              value={selectedCategory}
+              onValueChange={setSelectedCategory}
+            >
+              <SelectTrigger data-testid="select-charge-category">
+                <SelectValue placeholder="All categories" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="">All categories</SelectItem>
+                {Object.keys(chargeCategories).map(category => (
+                  <SelectItem key={category} value={category}>
+                    {category}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          
+          {/* Charge Selection */}
+          <div>
+            <Label className="text-sm font-medium mb-2 block">
+              Select all charges that apply to your case:
+            </Label>
+            <div className="max-h-64 overflow-y-auto border rounded-md p-3 space-y-2">
+              {displayedCharges.map(charge => (
+                <div
+                  key={charge.id}
+                  className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
+                  onClick={() => handleChargeToggle(charge.id)}
+                >
+                  <Checkbox
+                    checked={formData.charges.includes(charge.id)}
+                    onChange={() => {}} // Handled by parent click
+                    data-testid={`checkbox-charge-${charge.id}`}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-medium text-sm">{charge.name}</span>
+                      <Badge 
+                        variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
+                        className="text-xs"
+                      >
+                        {charge.code}
+                      </Badge>
+                      <Badge 
+                        variant="outline"
+                        className="text-xs"
+                      >
+                        {charge.category}
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      {charge.description}
+                    </p>
+                    <p className="text-xs text-red-600 mt-1">
+                      Max penalty: {charge.maxPenalty}
+                    </p>
+                  </div>
+                </div>
+              ))}
+              
+              {!showAllCharges && filteredCharges.length > 8 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowAllCharges(true)}
+                  className="w-full"
+                >
+                  Show {filteredCharges.length - 8} more charges...
+                </Button>
+              )}
+            </div>
           </div>
 
           <div className="flex items-center space-x-2">
@@ -304,7 +434,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         </Button>
         <Button
           onClick={onNext}
-          disabled={!formData.charges}
+          disabled={formData.charges.length === 0}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"
         >

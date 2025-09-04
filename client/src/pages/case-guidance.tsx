@@ -99,7 +99,10 @@ export default function CaseGuidance() {
           courtPreparation: guidance.courtPreparation || [],
           avoidActions: guidance.avoidActions || [],
           timeline: guidance.timeline || [],
-          caseData: data,
+          caseData: {
+            ...data,
+            charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges
+          },
         };
         
         console.log("Setting guidance result:", guidanceData);

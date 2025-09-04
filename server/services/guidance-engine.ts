@@ -1,6 +1,8 @@
 // Enhanced Legal Guidance Generation Engine
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
+import { criminalCharges, getChargeById } from '../../shared/criminal-charges';
+
 interface CaseData {
   jurisdiction: string;
   charges: string | string[];
@@ -332,27 +334,30 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
   // Get jurisdiction-specific rules
   const jurisdictionData = jurisdictionRules[jurisdiction as keyof typeof jurisdictionRules] || jurisdictionRules['federal'];
   
-  // Identify charge type (simplified matching)
-  // Handle charges as either string or array
+  // Handle multiple charges - get specific charge data
+  const chargeIds = Array.isArray(charges) ? charges : [charges];
+  const specificCharges = chargeIds.map(id => getChargeById(id)).filter(Boolean);
+  
+  // Fallback to legacy charge type identification for backwards compatibility
   const chargesString = Array.isArray(charges) ? charges.join(' ').toLowerCase() : charges.toLowerCase();
-  const chargeType = identifyChargeType(chargesString);
-  const chargeData = chargeGuidance[chargeType as keyof typeof chargeGuidance];
+  const fallbackChargeType = identifyChargeType(chargesString);
+  const fallbackChargeData = chargeGuidance[fallbackChargeType as keyof typeof chargeGuidance];
   
   // Get stage-specific guidance
   const stageData = stageGuidance[caseStage as keyof typeof stageGuidance];
   
-  // Build comprehensive guidance
+  // Build comprehensive guidance with charge-specific information
   const guidance: EnhancedGuidance = {
-    criticalAlerts: buildCriticalAlerts(caseData, jurisdictionData),
-    immediateActions: buildImmediateActions(caseData, stageData, chargeData),
+    criticalAlerts: buildCriticalAlertsForCharges(caseData, jurisdictionData, specificCharges),
+    immediateActions: buildImmediateActionsForCharges(caseData, stageData, specificCharges, fallbackChargeData),
     nextSteps: buildNextSteps(caseData, stageData),
     deadlines: buildDeadlines(caseData, jurisdictionData, stageData),
-    rights: (stageData as any)?.rights || buildBasicRights(caseStage),
+    rights: buildRightsForCharges(specificCharges, caseStage),
     resources: buildResources(jurisdiction, hasAttorney),
-    warnings: buildWarnings(caseData, chargeData),
-    evidenceToGather: chargeData?.evidenceToGather || [],
+    warnings: buildWarningsForCharges(caseData, specificCharges, fallbackChargeData),
+    evidenceToGather: buildEvidenceForCharges(specificCharges, fallbackChargeData),
     courtPreparation: (stageData as any)?.courtPreparation || [],
-    avoidActions: (stageData as any)?.avoidActions || [],
+    avoidActions: buildAvoidActionsForCharges(specificCharges, stageData),
     timeline: buildCaseTimeline(caseStage, jurisdictionData)
   };
   
@@ -375,6 +380,155 @@ function identifyChargeType(charges: string): string {
   }
   
   return 'general'; // Default for unrecognized charges
+}
+
+// New charge-specific guidance functions
+function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any, specificCharges: any[]): string[] {
+  const alerts: string[] = [];
+  
+  // Add stage-specific alerts
+  if (caseData.caseStage === 'arrest') {
+    alerts.push('URGENT: Exercise right to remain silent - do not answer questions without attorney');
+    if (caseData.custodyStatus === 'detained') {
+      alerts.push(`Arraignment must occur ${jurisdictionData.arraignmentDeadline}`);
+    }
+  }
+  
+  if (!caseData.hasAttorney) {
+    alerts.push('CRITICAL: Request public defender immediately if you cannot afford attorney');
+  }
+  
+  // Add charge-specific critical alerts
+  specificCharges.forEach(charge => {
+    if (charge.urgentActions) {
+      alerts.push(...charge.urgentActions.map((action: string) => `URGENT (${charge.code}): ${action}`));
+    }
+  });
+  
+  return alerts;
+}
+
+function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, specificCharges: any[], fallbackChargeData: any): string[] {
+  const actions: string[] = [];
+  
+  // Add stage-specific actions
+  if (stageData?.immediateActions) {
+    actions.push(...stageData.immediateActions);
+  } else if (fallbackChargeData?.immediateActions) {
+    actions.push(...fallbackChargeData.immediateActions);
+  }
+  
+  // Add charge-specific actions from database
+  specificCharges.forEach(charge => {
+    if (charge.urgentActions) {
+      actions.push(...charge.urgentActions);
+    }
+  });
+  
+  // Add basic actions for arrest stage
+  if (caseData.caseStage === 'arrest') {
+    actions.unshift(
+      'Exercise right to remain silent immediately',
+      'Request attorney before any questioning',
+      'Comply physically but assert rights verbally',
+      'Memorize booking number and jail location'
+    );
+  }
+  
+  return Array.from(new Set(actions)); // Remove duplicates
+}
+
+function buildRightsForCharges(specificCharges: any[], caseStage: string): string[] {
+  const rights: string[] = [];
+  
+  // Add basic constitutional rights
+  rights.push(...buildBasicRights(caseStage));
+  
+  // Add charge-specific rights
+  specificCharges.forEach(charge => {
+    if (charge.specificRights) {
+      rights.push(...charge.specificRights.map((right: string) => `${right} (${charge.code})`));
+    }
+  });
+  
+  return Array.from(new Set(rights)); // Remove duplicates
+}
+
+function buildWarningsForCharges(caseData: CaseData, specificCharges: any[], fallbackChargeData: any): string[] {
+  const warnings: string[] = [];
+  
+  // Add general warnings
+  warnings.push(
+    'Do not discuss your case on social media',
+    'Avoid contact with witnesses or alleged victims',
+    'Comply with all court orders and bail conditions'
+  );
+  
+  if (caseData.custodyStatus === 'detained') {
+    warnings.push('Limited time to prepare defense while in custody');
+  }
+  
+  if (caseData.caseStage === 'arrest' || caseData.caseStage === 'arraignment') {
+    warnings.push('Maintain good behavior to preserve bail eligibility');
+  }
+  
+  // Add charge-specific warnings based on charge category
+  specificCharges.forEach(charge => {
+    if (charge.category === 'felony') {
+      warnings.push(`${charge.name}: Potential consequences include restitution requirements`);
+    }
+    if (charge.jurisdiction === 'Federal') {
+      warnings.push(`Federal charge (${charge.code}): Federal sentencing guidelines apply`);
+    }
+  });
+  
+  return warnings;
+}
+
+function buildEvidenceForCharges(specificCharges: any[], fallbackChargeData: any): string[] {
+  const evidence: string[] = [];
+  
+  // Add charge-specific evidence from database
+  specificCharges.forEach(charge => {
+    if (charge.evidenceToGather) {
+      evidence.push(...charge.evidenceToGather);
+    }
+  });
+  
+  // Add fallback evidence if no specific charges
+  if (evidence.length === 0 && fallbackChargeData?.evidenceToGather) {
+    evidence.push(...fallbackChargeData.evidenceToGather);
+  }
+  
+  return Array.from(new Set(evidence)); // Remove duplicates
+}
+
+function buildAvoidActionsForCharges(specificCharges: any[], stageData: any): string[] {
+  const avoidActions: string[] = [];
+  
+  // Add stage-specific avoid actions
+  if ((stageData as any)?.avoidActions) {
+    avoidActions.push(...(stageData as any).avoidActions);
+  }
+  
+  // Add general avoid actions for arrest/detention
+  avoidActions.push(
+    'Do not discuss case with cellmates',
+    'Do not sign any documents without attorney review',
+    'Do not waive any rights'
+  );
+  
+  // Add charge-specific avoid actions
+  specificCharges.forEach(charge => {
+    if (charge.category === 'felony') {
+      avoidActions.push(`Do not contact alleged victims (${charge.code})`);
+    }
+    if (charge.name.toLowerCase().includes('domestic')) {
+      avoidActions.push('Do not violate any restraining orders');
+    }
+  });
+  
+  return Array.from(new Set(avoidActions)); // Remove duplicates
 }
 
 function buildCriticalAlerts(caseData: CaseData, jurisdictionData: any): string[] {
