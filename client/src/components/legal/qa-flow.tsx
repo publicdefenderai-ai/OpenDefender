@@ -274,7 +274,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     : getChargesByJurisdiction('CA');
   
   // Filter charges by category if selected
-  const filteredCharges = selectedCategory 
+  const filteredCharges = selectedCategory && selectedCategory !== 'all'
     ? availableCharges.filter(charge => 
         chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id)
       )
@@ -344,7 +344,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All categories</SelectItem>
+                <SelectItem value="all">All categories</SelectItem>
                 {Object.keys(chargeCategories).map(category => (
                   <SelectItem key={category} value={category}>
                     {category}
