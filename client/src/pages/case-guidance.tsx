@@ -106,9 +106,21 @@ export default function CaseGuidance() {
         };
         
         console.log("Setting guidance result:", guidanceData);
-        setGuidanceResult(guidanceData);
+        console.log("Current showQAFlow state:", showQAFlow);
+        console.log("Current guidanceResult state:", guidanceResult);
+        
+        // Use a single state update to avoid race conditions
         setShowQAFlow(false);
-        console.log("Should now show dashboard");
+        setGuidanceResult(guidanceData);
+        
+        console.log("Updated states - should now show dashboard");
+        console.log("guidanceResult is now:", guidanceData);
+        console.log("showQAFlow is now:", false);
+        
+        // Force a re-render after state update
+        setTimeout(() => {
+          console.log("After timeout - showQAFlow:", false, "guidanceResult:", !!guidanceData);
+        }, 100);
       } else {
         console.error("API returned unsuccessful result:", result);
         alert("Failed to generate guidance. Please try again.");
@@ -140,7 +152,10 @@ export default function CaseGuidance() {
         <main className="max-w-7xl mx-auto px-4 py-8">
           <QAFlow 
             onComplete={handleQAComplete}
-            onCancel={() => setShowQAFlow(false)}
+            onCancel={() => {
+              console.log("QAFlow cancelled, returning to home");
+              setShowQAFlow(false);
+            }}
           />
         </main>
         <Footer />
@@ -148,6 +163,8 @@ export default function CaseGuidance() {
     );
   }
 
+  console.log("Render check - showQAFlow:", showQAFlow, "guidanceResult:", !!guidanceResult);
+  
   if (guidanceResult) {
     return (
       <div className="min-h-screen bg-background">
