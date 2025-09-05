@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   BookOpen, 
@@ -27,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
@@ -35,37 +34,13 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RightsCard } from "@/components/legal/rights-card";
 import { DataSourceCard } from "@/components/legal/data-source-card";
-import { QAFlow } from "@/components/legal/qa-flow";
-
 export default function Home() {
-  const [showQAFlow, setShowQAFlow] = useState(false);
+  const [, setLocation] = useLocation();
 
   const handleUrgentHelp = () => {
     // Show emergency rights modal or redirect to urgent help page
     alert("URGENT LEGAL RIGHTS:\n\n1. You have the right to remain silent\n2. You have the right to an attorney\n3. Do not sign anything without legal counsel\n4. Ask for a public defender if you cannot afford an attorney\n\nContact local emergency legal services immediately.");
   };
-
-  const handleQAComplete = (data: any) => {
-    console.log("QA Flow completed with data:", data);
-    setShowQAFlow(false);
-    // Here you would typically redirect to results page or show guidance
-  };
-
-  if (showQAFlow) {
-    return (
-      <div className="min-h-screen bg-background">
-        <PrivacyBanner />
-        <Header />
-        <main className="max-w-7xl mx-auto px-4 py-8">
-          <QAFlow 
-            onComplete={handleQAComplete}
-            onCancel={() => setShowQAFlow(false)}
-          />
-        </main>
-        <Footer />
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -133,7 +108,7 @@ export default function Home() {
               {/* Get Guidance */}
               <Card 
                 className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:shadow-lg transition-all duration-300 cursor-pointer group h-full"
-                onClick={() => setShowQAFlow(true)}
+                onClick={() => setLocation('/case-guidance')}
               >
                 <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                   <div>
@@ -318,7 +293,7 @@ export default function Home() {
                   </div>
 
                   <Button
-                    onClick={() => setShowQAFlow(true)}
+                    onClick={() => setLocation('/case-guidance')}
                     className="w-full success-green hover:bg-green-700 hover:shadow-lg font-bold py-4 rounded-xl transition-all duration-200"
                     data-testid="button-start-assessment"
                   >
