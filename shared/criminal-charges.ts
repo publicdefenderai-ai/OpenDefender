@@ -511,15 +511,285 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
     specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
     urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+
+  // Ohio Revised Code - Common Charges
+  {
+    id: 'oh-orc-2913.02',
+    name: 'Theft',
+    code: 'ORC 2913.02',
+    jurisdiction: 'OH',
+    category: 'felony',
+    description: 'Knowingly obtaining or controlling property without consent',
+    maxPenalty: '1st degree misdemeanor (under $1,000) to 1st degree felony ($150K+)',
+    commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Consent of owner'],
+    evidenceToGather: ['Receipts', 'Ownership documents', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Secure witness statements']
+  },
+  {
+    id: 'oh-orc-2919.25',
+    name: 'Domestic Violence',
+    code: 'ORC 2919.25',
+    jurisdiction: 'OH',
+    category: 'misdemeanor',
+    description: 'Knowingly causing physical harm to family/household member',
+    maxPenalty: '4th degree misdemeanor to 1st degree misdemeanor (up to 180 days)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to medical examination'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'oh-orc-2911.12',
+    name: 'Burglary',
+    code: 'ORC 2911.12',
+    jurisdiction: 'OH',
+    category: 'felony',
+    description: 'Trespassing in occupied structure with purpose to commit criminal offense',
+    maxPenalty: '2nd degree felony to 3rd degree felony',
+    commonDefenses: ['Lack of intent to commit crime', 'Permission to enter', 'Mistake of fact'],
+    evidenceToGather: ['Proof of permission to enter', 'Alibi documentation', 'Witness statements'],
+    specificRights: ['Right to challenge search warrant', 'Right to suppress evidence'],
+    urgentActions: ['Document your whereabouts', 'Gather proof of legitimate access']
+  },
+  {
+    id: 'oh-orc-4511.19',
+    name: 'Operating a Vehicle Under the Influence (OVI)',
+    code: 'ORC 4511.19',
+    jurisdiction: 'OH',
+    category: 'misdemeanor',
+    description: 'Operating vehicle under influence of alcohol, drugs, or with BAC 0.08%+',
+    maxPenalty: '1st degree misdemeanor (mandatory 3 days) to enhanced penalties for high BAC',
+    commonDefenses: ['Faulty BAC testing', 'Medical conditions', 'Improper stop'],
+    evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
+    specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
+    urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+
+  // Georgia Code - Common Charges
+  {
+    id: 'ga-16-8-2',
+    name: 'Theft by Taking',
+    code: 'O.C.G.A. § 16-8-2',
+    jurisdiction: 'GA',
+    category: 'felony',
+    description: 'Unlawfully takes property with intent to deprive owner',
+    maxPenalty: 'Misdemeanor (under $1,500) to Felony (1-20 years for $25K+)',
+    commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Consent of owner'],
+    evidenceToGather: ['Receipts', 'Ownership documents', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Secure witness statements']
+  },
+  {
+    id: 'ga-16-5-20',
+    name: 'Simple Assault',
+    code: 'O.C.G.A. § 16-5-20',
+    jurisdiction: 'GA',
+    category: 'misdemeanor',
+    description: 'Attempts to commit violent injury or places another in fear',
+    maxPenalty: 'Misdemeanor (up to 12 months jail, $1,000 fine)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to medical examination'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'ga-16-7-1',
+    name: 'Burglary',
+    code: 'O.C.G.A. § 16-7-1',
+    jurisdiction: 'GA',
+    category: 'felony',
+    description: 'Enters/remains in dwelling without authority with intent to commit felony/theft',
+    maxPenalty: '1st Degree (1-20 years) to 2nd Degree (1-5 years)',
+    commonDefenses: ['Lack of intent to commit crime', 'Permission to enter', 'Mistake of fact'],
+    evidenceToGather: ['Proof of permission to enter', 'Alibi documentation', 'Witness statements'],
+    specificRights: ['Right to challenge search warrant', 'Right to suppress evidence'],
+    urgentActions: ['Document your whereabouts', 'Gather proof of legitimate access']
+  },
+  {
+    id: 'ga-40-6-391',
+    name: 'Driving Under the Influence (DUI)',
+    code: 'O.C.G.A. § 40-6-391',
+    jurisdiction: 'GA',
+    category: 'misdemeanor',
+    description: 'Operating vehicle under influence of alcohol or drugs',
+    maxPenalty: 'Up to 12 months jail (1st offense) to Felony (4th+ offense)',
+    commonDefenses: ['Faulty BAC testing', 'Medical conditions', 'Improper stop'],
+    evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
+    specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
+    urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+
+  // North Carolina General Statutes - Common Charges
+  {
+    id: 'nc-gs-14-72',
+    name: 'Larceny',
+    code: 'G.S. 14-72',
+    jurisdiction: 'NC',
+    category: 'felony',
+    description: 'Unlawful taking of personal property with intent to deprive owner',
+    maxPenalty: 'Class 1 Misdemeanor ($1,000 or less) to Class H Felony (over $1,000)',
+    commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Consent of owner'],
+    evidenceToGather: ['Receipts', 'Ownership documents', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Secure witness statements']
+  },
+  {
+    id: 'nc-gs-14-32',
+    name: 'Simple Assault',
+    code: 'G.S. 14-32',
+    jurisdiction: 'NC',
+    category: 'misdemeanor',
+    description: 'Unlawfully assaulting another person',
+    maxPenalty: 'Class 2 Misdemeanor to Class A1 Misdemeanor (enhanced)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to medical examination'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'nc-gs-14-51',
+    name: 'First Degree Burglary',
+    code: 'G.S. 14-51',
+    jurisdiction: 'NC',
+    category: 'felony',
+    description: 'Breaking and entering dwelling at night with intent to commit felony',
+    maxPenalty: 'Class D Felony (up to 204 months prison)',
+    commonDefenses: ['Lack of intent to commit crime', 'Permission to enter', 'Mistake of fact'],
+    evidenceToGather: ['Proof of permission to enter', 'Alibi documentation', 'Witness statements'],
+    specificRights: ['Right to challenge search warrant', 'Right to suppress evidence'],
+    urgentActions: ['Document your whereabouts', 'Gather proof of legitimate access']
+  },
+  {
+    id: 'nc-gs-20-138.1',
+    name: 'Driving While Impaired (DWI)',
+    code: 'G.S. 20-138.1',
+    jurisdiction: 'NC',
+    category: 'misdemeanor',
+    description: 'Operating vehicle while impaired by alcohol or drugs',
+    maxPenalty: 'Level V Misdemeanor to Level A1 Misdemeanor (structured sentencing)',
+    commonDefenses: ['Faulty BAC testing', 'Medical conditions', 'Improper stop'],
+    evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
+    specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
+    urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+
+  // Michigan Compiled Laws - Common Charges
+  {
+    id: 'mi-mcl-750.356',
+    name: 'Larceny',
+    code: 'MCL 750.356',
+    jurisdiction: 'MI',
+    category: 'felony',
+    description: 'Unlawful taking of property with intent to permanently deprive owner',
+    maxPenalty: 'Misdemeanor (under $200) to 10-year Felony ($20K+ or repeat offender)',
+    commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Consent of owner'],
+    evidenceToGather: ['Receipts', 'Ownership documents', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Secure witness statements']
+  },
+  {
+    id: 'mi-mcl-750.81',
+    name: 'Assault and Battery',
+    code: 'MCL 750.81',
+    jurisdiction: 'MI',
+    category: 'misdemeanor',
+    description: 'Unlawfully touching another person or putting them in fear of harm',
+    maxPenalty: 'Misdemeanor (up to 93 days jail, $500 fine)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to medical examination'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'mi-mcl-750.110',
+    name: 'Breaking and Entering',
+    code: 'MCL 750.110',
+    jurisdiction: 'MI',
+    category: 'felony',
+    description: 'Breaking and entering building with intent to commit crime',
+    maxPenalty: 'Misdemeanor (no intent) to 5-year Felony (with felonious intent)',
+    commonDefenses: ['Lack of intent to commit crime', 'Permission to enter', 'Mistake of fact'],
+    evidenceToGather: ['Proof of permission to enter', 'Alibi documentation', 'Witness statements'],
+    specificRights: ['Right to challenge search warrant', 'Right to suppress evidence'],
+    urgentActions: ['Document your whereabouts', 'Gather proof of legitimate access']
+  },
+  {
+    id: 'mi-mcl-257.625',
+    name: 'Operating While Intoxicated (OWI)',
+    code: 'MCL 257.625',
+    jurisdiction: 'MI',
+    category: 'misdemeanor',
+    description: 'Operating vehicle while under influence of alcohol or drugs',
+    maxPenalty: 'Misdemeanor (1st/2nd offense) to 5-year Felony (3rd offense)',
+    commonDefenses: ['Faulty BAC testing', 'Medical conditions', 'Improper stop'],
+    evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
+    specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
+    urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+
+  // Virginia Code - Common Charges
+  {
+    id: 'va-18.2-95',
+    name: 'Grand Larceny',
+    code: 'Va. Code § 18.2-95',
+    jurisdiction: 'VA',
+    category: 'felony',
+    description: 'Theft of $5+ from person or $200+ of property or any firearm',
+    maxPenalty: '1-20 years prison OR up to 12 months jail and/or $2,500 fine',
+    commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Consent of owner'],
+    evidenceToGather: ['Receipts', 'Ownership documents', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Secure witness statements']
+  },
+  {
+    id: 'va-18.2-57',
+    name: 'Assault and Battery',
+    code: 'Va. Code § 18.2-57',
+    jurisdiction: 'VA',
+    category: 'misdemeanor',
+    description: 'Simple assault and battery against another person',
+    maxPenalty: 'Class 1 Misdemeanor (up to 12 months jail and/or $2,500 fine)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to medical examination'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'va-18.2-89',
+    name: 'Burglary',
+    code: 'Va. Code § 18.2-89',
+    jurisdiction: 'VA',
+    category: 'felony',
+    description: 'Breaking and entering dwelling at night with intent to commit crime',
+    maxPenalty: 'Class 3 Felony (5-20 years, up to $100,000 fine) to Class 2 Felony if armed',
+    commonDefenses: ['Lack of intent to commit crime', 'Permission to enter', 'Mistake of fact'],
+    evidenceToGather: ['Proof of permission to enter', 'Alibi documentation', 'Witness statements'],
+    specificRights: ['Right to challenge search warrant', 'Right to suppress evidence'],
+    urgentActions: ['Document your whereabouts', 'Gather proof of legitimate access']
+  },
+  {
+    id: 'va-18.2-266',
+    name: 'Driving Under the Influence (DUI)',
+    code: 'Va. Code § 18.2-266',
+    jurisdiction: 'VA',
+    category: 'misdemeanor',
+    description: 'Operating vehicle under influence of alcohol or drugs',
+    maxPenalty: 'Class 1 Misdemeanor (1st offense) to Class 6 Felony (3rd offense)',
+    commonDefenses: ['Faulty BAC testing', 'Medical conditions', 'Improper stop'],
+    evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
+    specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
+    urgentActions: ['Request independent blood test', 'Document medical conditions']
   }
 ];
 
 export const chargeCategories = {
-  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'fl-784.03', 'ny-pl-120.00', 'pa-18-2701', 'il-720-5-12-3'],
-  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'il-720-5-16-1', 'il-720-5-19-1'],
+  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'fl-784.03', 'ny-pl-120.00', 'pa-18-2701', 'il-720-5-12-3', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57'],
+  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'nc-gs-14-72', 'nc-gs-14-51', 'mi-mcl-750.356', 'mi-mcl-750.110', 'va-18.2-95', 'va-18.2-89'],
   'Drug Crimes': ['ca-hs-11350', 'fed-21-841'],
   'Federal Crimes': ['fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371'],
-  'Traffic/DUI': ['ca-vc-23152', 'tx-pc-49.04', 'fl-316.193', 'ny-vtl-1192', 'pa-75-3802', 'il-625-5-11-501'],
+  'Traffic/DUI': ['ca-vc-23152', 'tx-pc-49.04', 'fl-316.193', 'ny-vtl-1192', 'pa-75-3802', 'il-625-5-11-501', 'oh-orc-4511.19', 'ga-40-6-391', 'nc-gs-20-138.1', 'mi-mcl-257.625', 'va-18.2-266'],
   'Public Order': ['ca-pc-314', 'ca-pc-647']
 };
 
