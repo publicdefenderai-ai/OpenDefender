@@ -270,6 +270,58 @@ export const criminalCharges: CriminalCharge[] = [
     specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
     urgentActions: ['Request independent blood test', 'Document medical conditions']
   },
+  {
+    id: 'tx-hs-481.115',
+    name: 'Possession of Controlled Substance - Penalty Group 1',
+    code: 'HS 481.115',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Possession of cocaine, heroin, methamphetamine, fentanyl',
+    maxPenalty: 'State Jail Felony (under 1g) to Enhanced 1st Degree Felony (400g+)',
+    commonDefenses: ['Lack of knowledge', 'Lack of possession', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Chain of custody', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to test evidence'],
+    urgentActions: ['Challenge search and seizure', 'Request substance testing']
+  },
+  {
+    id: 'tx-pc-29.02',
+    name: 'Robbery',
+    code: 'PC 29.02',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentionally threatening or placing another in fear while committing theft',
+    maxPenalty: '2nd Degree Felony (2-20 years, $10,000 fine)',
+    commonDefenses: ['Lack of intent', 'Self-defense', 'Mistaken identity'],
+    evidenceToGather: ['Video surveillance', 'Witness statements', 'Alibi evidence'],
+    specificRights: ['Right to confront witnesses', 'Right to cross-examine'],
+    urgentActions: ['Gather alibi evidence', 'Document circumstances']
+  },
+  {
+    id: 'tx-pc-46.02',
+    name: 'Unlawful Carrying of Weapons',
+    code: 'PC 46.02',
+    jurisdiction: 'TX',
+    category: 'misdemeanor',
+    description: 'Intentionally carrying handgun, illegal knife, or club',
+    maxPenalty: 'Class A Misdemeanor to 3rd Degree Felony (enhanced)',
+    commonDefenses: ['Valid license', 'Lawful carry exception', 'Necessity'],
+    evidenceToGather: ['License documentation', 'Witness statements'],
+    specificRights: ['Right to show lawful possession', 'Right to constitutional defense'],
+    urgentActions: ['Gather license documentation', 'Review carry laws']
+  },
+  {
+    id: 'tx-pc-25.11',
+    name: 'Continuous Violence Against Family',
+    code: 'PC 25.11',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Two or more acts of family violence within 12-month period',
+    maxPenalty: '3rd Degree Felony (2-10 years, $10,000 fine)',
+    commonDefenses: ['Self-defense', 'False allegations', 'Lack of pattern'],
+    evidenceToGather: ['Medical records', 'Photos', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to challenge pattern'],
+    urgentActions: ['Document defensive circumstances', 'Gather character evidence']
+  },
 
   // Florida Statutes - Common Charges  
   {
@@ -336,6 +388,71 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
     specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
     urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+  {
+    id: 'fl-893.13',
+    name: 'Drug Possession',
+    code: 'FS 893.13',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Unlawful possession of controlled substances',
+    maxPenalty: '1st degree misdemeanor (under 20g marijuana) to 3rd degree felony',
+    commonDefenses: ['Lack of knowledge', 'Unlawful search', 'Medical marijuana defense'],
+    evidenceToGather: ['Lab results', 'Medical marijuana card', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Gather medical documentation']
+  },
+  {
+    id: 'fl-790.23',
+    name: 'Felon in Possession of Firearm',
+    code: 'FS 790.23',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Possession of firearm by convicted felon',
+    maxPenalty: '2nd degree felony (up to 15 years prison)',
+    commonDefenses: ['Restoration of civil rights', 'Lack of knowledge', 'Temporary possession'],
+    evidenceToGather: ['Criminal history', 'Rights restoration documents'],
+    specificRights: ['Right to show civil rights restoration', 'Right to constitutional defense'],
+    urgentActions: ['Check rights restoration status', 'Document circumstances']
+  },
+  {
+    id: 'fl-812.13',
+    name: 'Robbery',
+    code: 'FS 812.13',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Taking property from person by force, violence, assault, or fear',
+    maxPenalty: '2nd degree felony (up to 15 years prison)',
+    commonDefenses: ['Lack of force', 'Consent', 'Mistaken identity'],
+    evidenceToGather: ['Video surveillance', 'Witness statements', 'Medical records'],
+    specificRights: ['Right to confront witnesses', 'Right to self-defense'],
+    urgentActions: ['Gather alibi evidence', 'Document injuries']
+  },
+  {
+    id: 'fl-794.011',
+    name: 'Sexual Battery',
+    code: 'FS 794.011',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Oral, anal, or vaginal penetration by force or without consent',
+    maxPenalty: 'Life felony to 1st degree felony (up to life prison)',
+    commonDefenses: ['Consent', 'Mistaken identity', 'False accusations'],
+    evidenceToGather: ['DNA evidence', 'Medical records', 'Communication records'],
+    specificRights: ['Right to confront accusers', 'Right to DNA testing'],
+    urgentActions: ['Preserve evidence', 'Document consensual relationship']
+  },
+  {
+    id: 'fl-817.568',
+    name: 'Identity Theft',
+    code: 'FS 817.568',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Unlawful use of personal identification information',
+    maxPenalty: '3rd degree felony (enhanced based on amount and victims)',
+    commonDefenses: ['Authorized use', 'Lack of intent', 'Mistaken identity'],
+    evidenceToGather: ['Financial records', 'Computer evidence', 'Witness statements'],
+    specificRights: ['Right to challenge digital evidence', 'Right to expert testimony'],
+    urgentActions: ['Secure digital evidence', 'Document authorized access']
   },
 
   // New York Penal Law - Common Charges
@@ -781,13 +898,261 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Video evidence'],
     specificRights: ['Right to independent BAC test', 'Right to refuse field sobriety tests'],
     urgentActions: ['Request independent blood test', 'Document medical conditions']
+  },
+
+  // Additional comprehensive charges for all states
+  // Pennsylvania Additional Charges
+  {
+    id: 'pa-18-3925',
+    name: 'Receiving Stolen Property',
+    code: '18 Pa.C.S. § 3925',
+    jurisdiction: 'PA',
+    category: 'felony',
+    description: 'Receiving property knowing it was stolen',
+    maxPenalty: 'Summary offense (under $50) to 1st Degree Felony ($500K+)',
+    commonDefenses: ['Lack of knowledge', 'Good faith purchaser', 'Authorized possession'],
+    evidenceToGather: ['Purchase receipts', 'Ownership documents', 'Communication records'],
+    specificRights: ['Right to show good faith', 'Right to confront witnesses'],
+    urgentActions: ['Gather purchase documentation', 'Document legitimate acquisition']
+  },
+  {
+    id: 'pa-18-6318',
+    name: 'Drug Possession',
+    code: '18 Pa.C.S. § 6318',
+    jurisdiction: 'PA',
+    category: 'felony',
+    description: 'Unlawful possession of controlled substances',
+    maxPenalty: 'Up to 1 year jail (1st offense) to 3 years prison (subsequent)',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'pa-18-908',
+    name: 'Terroristic Threats',
+    code: '18 Pa.C.S. § 908',
+    jurisdiction: 'PA',
+    category: 'misdemeanor',
+    description: 'Threatening to commit violence with intent to terrorize',
+    maxPenalty: '1st degree misdemeanor (up to 5 years if public terror)',
+    commonDefenses: ['Lack of intent', 'Protected speech', 'No credible threat'],
+    evidenceToGather: ['Communication records', 'Witness statements', 'Context evidence'],
+    specificRights: ['Right to free speech defense', 'Right to challenge intent'],
+    urgentActions: ['Document context', 'Gather character evidence']
+  },
+
+  // Illinois Additional Charges
+  {
+    id: 'il-720-5-12-2',
+    name: 'Aggravated Assault',
+    code: '720 ILCS 5/12-2',
+    jurisdiction: 'IL',
+    category: 'felony',
+    description: 'Assault with deadly weapon or causing great bodily harm',
+    maxPenalty: 'Class 3 Felony (2-5 years prison, $25,000 fine)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Weapon evidence', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document defensive circumstances', 'Preserve evidence']
+  },
+  {
+    id: 'il-720-570-402',
+    name: 'Drug Possession',
+    code: '720 ILCS 570/402',
+    jurisdiction: 'IL',
+    category: 'felony',
+    description: 'Unlawful possession of controlled substances',
+    maxPenalty: 'Class 4 Felony (1-3 years) to Class 1 Felony (4-15 years)',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search documentation'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'il-720-5-24-1',
+    name: 'Unlawful Use of Weapons',
+    code: '720 ILCS 5/24-1',
+    jurisdiction: 'IL',
+    category: 'felony',
+    description: 'Unlawful possession or use of weapons',
+    maxPenalty: 'Class 4 Felony to Class 2 Felony (enhanced)',
+    commonDefenses: ['Valid permit', 'Home defense exception', 'Lack of knowledge'],
+    evidenceToGather: ['Permit documentation', 'Registration papers'],
+    specificRights: ['Right to show lawful possession', 'Right to constitutional defense'],
+    urgentActions: ['Gather permit documentation', 'Review weapon laws']
+  },
+
+  // Michigan Additional Charges
+  {
+    id: 'mi-mcl-333.7403',
+    name: 'Drug Possession',
+    code: 'MCL 333.7403',
+    jurisdiction: 'MI',
+    category: 'felony',
+    description: 'Possession of controlled substances',
+    maxPenalty: 'Up to 4 years prison, $25,000 fine',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'mi-mcl-750.543m',
+    name: 'Identity Theft',
+    code: 'MCL 750.543m',
+    jurisdiction: 'MI',
+    category: 'felony',
+    description: 'Using another person\'s identity to obtain benefit',
+    maxPenalty: '5-year felony, $25,000 fine (enhanced based on amount)',
+    commonDefenses: ['Authorized use', 'Lack of intent', 'Mistaken identity'],
+    evidenceToGather: ['Financial records', 'Authorization documents', 'Digital evidence'],
+    specificRights: ['Right to show authorization', 'Right to expert testimony'],
+    urgentActions: ['Secure digital evidence', 'Document authorized access']
+  },
+  {
+    id: 'mi-mcl-750.200h',
+    name: 'Computer Crime',
+    code: 'MCL 750.200h',
+    jurisdiction: 'MI',
+    category: 'felony',
+    description: 'Unauthorized computer access or damage',
+    maxPenalty: '4-year felony, $5,000 fine (enhanced for higher damages)',
+    commonDefenses: ['Authorized access', 'Lack of intent', 'No damage caused'],
+    evidenceToGather: ['Computer logs', 'Authorization records', 'Damage assessments'],
+    specificRights: ['Right to show authorization', 'Right to technical defense'],
+    urgentActions: ['Preserve digital evidence', 'Document authorized access']
+  },
+
+  // Virginia Additional Charges
+  {
+    id: 'va-18.2-250',
+    name: 'Drug Possession',
+    code: 'Va. Code § 18.2-250',
+    jurisdiction: 'VA',
+    category: 'felony',
+    description: 'Possession of controlled substances unlawfully',
+    maxPenalty: 'Class 5 Felony (1-10 years) to Class 1 Misdemeanor (Schedule VI)',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'va-18.2-308',
+    name: 'Carrying Concealed Weapons',
+    code: 'Va. Code § 18.2-308',
+    jurisdiction: 'VA',
+    category: 'misdemeanor',
+    description: 'Carrying concealed weapon without permit',
+    maxPenalty: 'Class 1 Misdemeanor (up to 12 months jail, $2,500 fine)',
+    commonDefenses: ['Valid permit', 'Home/vehicle exception', 'Temporary carrying'],
+    evidenceToGather: ['Permit documentation', 'Self-defense evidence'],
+    specificRights: ['Right to show lawful carry', 'Right to constitutional defense'],
+    urgentActions: ['Gather permit documentation', 'Document circumstances']
+  },
+  {
+    id: 'va-18.2-178',
+    name: 'Credit Card Fraud',
+    code: 'Va. Code § 18.2-178',
+    jurisdiction: 'VA',
+    category: 'felony',
+    description: 'Fraudulent use of credit card or credit card number',
+    maxPenalty: 'Class 1 Misdemeanor (under $1,000) to Class 6 Felony ($1,000+)',
+    commonDefenses: ['Authorized use', 'Lack of intent', 'Mistake of fact'],
+    evidenceToGather: ['Credit card statements', 'Authorization records', 'Purchase receipts'],
+    specificRights: ['Right to show authorization', 'Right to challenge evidence'],
+    urgentActions: ['Gather authorization evidence', 'Document legitimate use']
+  },
+
+  // North Carolina Additional Charges  
+  {
+    id: 'nc-gs-90-95',
+    name: 'Drug Possession',
+    code: 'G.S. 90-95',
+    jurisdiction: 'NC',
+    category: 'felony',
+    description: 'Possession of controlled substances',
+    maxPenalty: 'Class 3 Misdemeanor (marijuana 1st offense) to Class I Felony',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'nc-gs-14-269',
+    name: 'Carrying Concealed Gun',
+    code: 'G.S. 14-269',
+    jurisdiction: 'NC',
+    category: 'misdemeanor',
+    description: 'Carrying concealed handgun without permit',
+    maxPenalty: 'Class 2 Misdemeanor (up to 60 days jail)',
+    commonDefenses: ['Valid permit', 'Home/vehicle exception', 'Emergency circumstances'],
+    evidenceToGather: ['Permit documentation', 'Emergency evidence'],
+    specificRights: ['Right to show lawful carry', 'Right to necessity defense'],
+    urgentActions: ['Gather permit documentation', 'Document emergency']
+  },
+  {
+    id: 'nc-gs-14-100',
+    name: 'Embezzlement',
+    code: 'G.S. 14-100',
+    jurisdiction: 'NC',
+    category: 'felony',
+    description: 'Fraudulent conversion of property by person in position of trust',
+    maxPenalty: 'Class H Felony to Class C Felony (based on amount)',
+    commonDefenses: ['Authorized use', 'Lack of intent', 'Good faith belief'],
+    evidenceToGather: ['Financial records', 'Authorization documents', 'Employment records'],
+    specificRights: ['Right to show authorization', 'Right to good faith defense'],
+    urgentActions: ['Gather employment records', 'Document authorized transactions']
+  },
+
+  // Georgia Additional Charges
+  {
+    id: 'ga-16-13-30',
+    name: 'Drug Possession',
+    code: 'O.C.G.A. § 16-13-30',
+    jurisdiction: 'GA',
+    category: 'felony',
+    description: 'Possession, manufacture, distribution of controlled substances',
+    maxPenalty: '1-3 years (Schedule I/II under 1g) to enhanced penalties for trafficking',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'ga-16-11-126',
+    name: 'Carrying Weapons',
+    code: 'O.C.G.A. § 16-11-126',
+    jurisdiction: 'GA',
+    category: 'misdemeanor',
+    description: 'Carrying weapon without proper license',
+    maxPenalty: 'Misdemeanor (up to 12 months jail, $1,000 fine)',
+    commonDefenses: ['Valid license', 'Constitutional carry', 'Home/vehicle exception'],
+    evidenceToGather: ['License documentation', 'Training certificates'],
+    specificRights: ['Right to show lawful carry', 'Right to constitutional defense'],
+    urgentActions: ['Gather license documentation', 'Review carry laws']
+  },
+  {
+    id: 'ga-16-9-1',
+    name: 'Forgery',
+    code: 'O.C.G.A. § 16-9-1',
+    jurisdiction: 'GA',
+    category: 'felony',
+    description: 'Making false writing with intent to defraud',
+    maxPenalty: '1-15 years prison (based on amount and circumstances)',
+    commonDefenses: ['Authorized signature', 'Lack of intent', 'No false writing'],
+    evidenceToGather: ['Original documents', 'Handwriting analysis', 'Authorization evidence'],
+    specificRights: ['Right to handwriting expert', 'Right to show authorization'],
+    urgentActions: ['Preserve original documents', 'Gather authorization evidence']
   }
 ];
 
 export const chargeCategories = {
-  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'fl-784.03', 'ny-pl-120.00', 'pa-18-2701', 'il-720-5-12-3', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57'],
-  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'nc-gs-14-72', 'nc-gs-14-51', 'mi-mcl-750.356', 'mi-mcl-750.110', 'va-18.2-95', 'va-18.2-89'],
-  'Drug Crimes': ['ca-hs-11350', 'fed-21-841'],
+  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57'],
+  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'fl-817.568', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'pa-18-3925', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'ga-16-9-1', 'nc-gs-14-72', 'nc-gs-14-51', 'nc-gs-14-100', 'mi-mcl-750.356', 'mi-mcl-750.110', 'mi-mcl-750.543m', 'mi-mcl-750.200h', 'va-18.2-95', 'va-18.2-89', 'va-18.2-178'],
+  'Drug Crimes': ['ca-hs-11350', 'tx-hs-481.115', 'fl-893.13', 'pa-18-6318', 'il-720-570-402', 'mi-mcl-333.7403', 'va-18.2-250', 'nc-gs-90-95', 'ga-16-13-30', 'fed-21-841'],
+  'Weapons Crimes': ['tx-pc-46.02', 'fl-790.23', 'il-720-5-24-1', 'va-18.2-308', 'nc-gs-14-269', 'ga-16-11-126'],
   'Federal Crimes': ['fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371'],
   'Traffic/DUI': ['ca-vc-23152', 'tx-pc-49.04', 'fl-316.193', 'ny-vtl-1192', 'pa-75-3802', 'il-625-5-11-501', 'oh-orc-4511.19', 'ga-40-6-391', 'nc-gs-20-138.1', 'mi-mcl-257.625', 'va-18.2-266'],
   'Public Order': ['ca-pc-314', 'ca-pc-647']
