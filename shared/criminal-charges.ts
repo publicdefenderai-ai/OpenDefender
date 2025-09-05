@@ -5,7 +5,7 @@ export interface CriminalCharge {
   id: string;
   name: string;
   code: string;
-  jurisdiction: 'CA' | 'Federal';
+  jurisdiction: 'CA' | 'Federal' | 'TX' | 'FL' | 'NY' | 'PA' | 'IL' | 'OH' | 'GA' | 'NC' | 'MI' | 'NJ' | 'VA' | 'WA' | 'AZ' | 'MA' | 'TN' | 'IN' | 'MD' | 'MO' | 'WI' | 'CO' | 'MN' | 'SC' | 'AL' | 'LA' | 'KY' | 'OR' | 'OK' | 'CT' | 'IA' | 'MS' | 'AR' | 'UT' | 'KS' | 'NV' | 'NM' | 'NE' | 'WV' | 'ID' | 'HI' | 'NH' | 'ME' | 'MT' | 'RI' | 'DE' | 'SD' | 'ND' | 'AK' | 'VT' | 'WY';
   category: 'felony' | 'misdemeanor' | 'infraction';
   description: string;
   maxPenalty: string;
@@ -215,12 +215,96 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Witness statements', 'Video evidence', 'Medical records'],
     specificRights: ['Right to challenge vague statute', 'Right to diversion programs'],
     urgentActions: ['Document circumstances', 'Seek substance abuse treatment if applicable']
+  },
+
+  // Texas Penal Code - Common Charges
+  {
+    id: 'tx-pc-31.03',
+    name: 'Theft',
+    code: 'PC 31.03',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Unlawfully appropriating property with intent to deprive owner',
+    maxPenalty: 'Up to 99 years or life imprisonment',
+    commonDefenses: ['Lack of intent', 'Claim of right', 'Consent of owner'],
+    evidenceToGather: ['Receipts', 'Ownership documents', 'Witness statements'],
+    specificRights: ['Right to restitution hearing', 'Right to character evidence'],
+    urgentActions: ['Gather proof of ownership or permission', 'Document circumstances']
+  },
+  {
+    id: 'tx-pc-22.01',
+    name: 'Assault',
+    code: 'PC 22.01',
+    jurisdiction: 'TX',
+    category: 'misdemeanor',
+    description: 'Intentionally, knowingly, or recklessly causing bodily injury',
+    maxPenalty: 'Up to 1 year in county jail',
+    commonDefenses: ['Self-defense', 'Defense of third person', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness testimony'],
+    specificRights: ['Right to self-defense claim', 'Right to medical examination'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve medical evidence']
+  },
+
+  // Florida Statutes - Common Charges  
+  {
+    id: 'fl-812.014',
+    name: 'Theft',
+    code: 'FS 812.014',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Knowingly obtaining or using property of another with intent to deprive',
+    maxPenalty: 'Up to 30 years in state prison',
+    commonDefenses: ['Lack of intent to steal', 'Good faith belief of ownership'],
+    evidenceToGather: ['Purchase receipts', 'Ownership documentation', 'Character witnesses'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Secure witness statements']
+  },
+  {
+    id: 'fl-784.03',
+    name: 'Battery',
+    code: 'FS 784.03',
+    jurisdiction: 'FL',
+    category: 'misdemeanor',
+    description: 'Actually and intentionally touching another person against their will',
+    maxPenalty: 'Up to 1 year in county jail',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Consent', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Video surveillance', 'Witness statements'],
+    specificRights: ['Right to Stand Your Ground defense', 'Right to jury trial'],
+    urgentActions: ['Document defensive circumstances', 'Preserve evidence of threats']
+  },
+
+  // New York Penal Law - Common Charges
+  {
+    id: 'ny-pl-155.25',
+    name: 'Petit Larceny',
+    code: 'PL 155.25',
+    jurisdiction: 'NY',
+    category: 'misdemeanor',
+    description: 'Stealing property valued at $1,000 or less',
+    maxPenalty: 'Up to 1 year in jail',
+    commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Mistaken identity'],
+    evidenceToGather: ['Receipts', 'Alibi evidence', 'Character references'],
+    specificRights: ['Right to speedy trial', 'Right to suppress evidence'],
+    urgentActions: ['Gather alibi documentation', 'Preserve purchase records']
+  },
+  {
+    id: 'ny-pl-120.00',
+    name: 'Assault in the Third Degree',
+    code: 'PL 120.00',
+    jurisdiction: 'NY',
+    category: 'misdemeanor',
+    description: 'Intentionally causing physical injury to another person',
+    maxPenalty: 'Up to 1 year in jail',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Justification'],
+    evidenceToGather: ['Medical records', 'Photos of scene', 'Witness statements'],
+    specificRights: ['Right to justification defense', 'Right to medical records'],
+    urgentActions: ['Document injuries', 'Preserve evidence of self-defense']
   }
 ];
 
 export const chargeCategories = {
-  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5'],
-  'Property Crimes': ['ca-pc-459', 'ca-pc-487'],
+  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'fl-784.03', 'ny-pl-120.00'],
+  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'fl-812.014', 'ny-pl-155.25'],
   'Drug Crimes': ['ca-hs-11350', 'fed-21-841'],
   'Federal Crimes': ['fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371'],
   'Traffic/DUI': ['ca-vc-23152'],
@@ -231,8 +315,15 @@ export function getChargeById(id: string): CriminalCharge | undefined {
   return criminalCharges.find(charge => charge.id === id);
 }
 
-export function getChargesByJurisdiction(jurisdiction: 'CA' | 'Federal'): CriminalCharge[] {
-  return criminalCharges.filter(charge => charge.jurisdiction === jurisdiction);
+export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[] {
+  if (jurisdiction === 'federal') {
+    return criminalCharges.filter(charge => charge.jurisdiction === 'Federal');
+  }
+  
+  // Return both state-specific charges and federal charges
+  return criminalCharges.filter(charge => 
+    charge.jurisdiction === jurisdiction.toUpperCase() || charge.jurisdiction === 'Federal'
+  );
 }
 
 export function getChargesByCategory(category: string): CriminalCharge[] {
