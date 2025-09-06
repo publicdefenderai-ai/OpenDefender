@@ -86,6 +86,84 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Local Resources API - Public Defenders
+  app.get("/api/local-resources/public-defenders", async (req, res) => {
+    try {
+      const { zip } = req.query;
+      
+      if (!zip || typeof zip !== 'string' || zip.length !== 5) {
+        return res.status(400).json({ success: false, error: "Valid 5-digit ZIP code required" });
+      }
+
+      // Mock data for demonstration - in production this would call a real API
+      const mockResults = [
+        {
+          name: "County Public Defender Office",
+          address: `123 Justice St, City ${zip}`,
+          phone: "(555) 123-4567",
+          hours: "Mon-Fri 8:00 AM - 5:00 PM",
+          distance: "2.1 miles"
+        },
+        {
+          name: "State Public Defender Regional Office",
+          address: `456 Legal Ave, City ${zip}`,
+          phone: "(555) 987-6543", 
+          hours: "Mon-Fri 9:00 AM - 4:00 PM",
+          distance: "5.3 miles"
+        }
+      ];
+
+      res.json({ success: true, results: mockResults });
+    } catch (error) {
+      console.error("Failed to search public defenders:", error);
+      res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
+  // Local Resources API - Courthouses
+  app.get("/api/local-resources/courthouses", async (req, res) => {
+    try {
+      const { zip } = req.query;
+      
+      if (!zip || typeof zip !== 'string' || zip.length !== 5) {
+        return res.status(400).json({ success: false, error: "Valid 5-digit ZIP code required" });
+      }
+
+      // Mock data for demonstration - in production this would call a real API
+      const mockResults = [
+        {
+          name: "County District Court",
+          address: `789 Court St, City ${zip}`,
+          phone: "(555) 234-5678",
+          website: "https://example-court.gov",
+          hours: "Mon-Fri 8:30 AM - 4:30 PM",
+          distance: "1.8 miles"
+        },
+        {
+          name: "Municipal Court Self-Help Center", 
+          address: `321 City Hall Dr, City ${zip}`,
+          phone: "(555) 345-6789",
+          website: "https://example-city.gov/court",
+          hours: "Mon-Thu 9:00 AM - 3:00 PM",
+          distance: "3.2 miles"
+        },
+        {
+          name: "Superior Court Complex",
+          address: `654 Justice Blvd, City ${zip}`,
+          phone: "(555) 456-7890",
+          website: "https://example-superior.gov",
+          hours: "Mon-Fri 8:00 AM - 5:00 PM",
+          distance: "6.1 miles"
+        }
+      ];
+
+      res.json({ success: true, results: mockResults });
+    } catch (error) {
+      console.error("Failed to search courthouses:", error);
+      res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
   // Personalized Legal Guidance API
   app.post("/api/legal-guidance", async (req, res) => {
     try {
