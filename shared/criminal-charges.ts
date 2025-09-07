@@ -1145,14 +1145,174 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Original documents', 'Handwriting analysis', 'Authorization evidence'],
     specificRights: ['Right to handwriting expert', 'Right to show authorization'],
     urgentActions: ['Preserve original documents', 'Gather authorization evidence']
+  },
+
+  // Alabama Criminal Code - Title 13A
+  {
+    id: 'al-13a-6-20',
+    name: 'Assault in the First Degree',
+    code: 'AL Code §13A-6-20',
+    jurisdiction: 'AL',
+    category: 'felony',
+    description: 'Causing serious physical injury with intent using dangerous weapon',
+    maxPenalty: 'Class A Felony (10-99 years or life imprisonment, $60,000 fine)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Weapon evidence', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document defensive circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'al-13a-6-21',
+    name: 'Assault in the Second Degree',
+    code: 'AL Code §13A-6-21',
+    jurisdiction: 'AL',
+    category: 'felony',
+    description: 'Intent to cause serious physical injury with deadly weapon',
+    maxPenalty: 'Class C Felony (1-10 years imprisonment, $15,000 fine)',
+    commonDefenses: ['Self-defense', 'Lack of intent', 'Accident'],
+    evidenceToGather: ['Medical records', 'Weapon evidence', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to confront witnesses'],
+    urgentActions: ['Document circumstances', 'Gather character evidence']
+  },
+  {
+    id: 'al-13a-8-3',
+    name: 'Theft in the First Degree',
+    code: 'AL Code §13A-8-3',
+    jurisdiction: 'AL',
+    category: 'felony',
+    description: 'Theft of property valued at $2,500 or more',
+    maxPenalty: 'Class B Felony (2-20 years imprisonment, $30,000 fine)',
+    commonDefenses: ['Lack of intent to steal', 'Good faith belief of ownership'],
+    evidenceToGather: ['Purchase receipts', 'Ownership documentation', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Document legitimate acquisition']
+  },
+  {
+    id: 'al-13a-12-212',
+    name: 'Unlawful Possession of Controlled Substances',
+    code: 'AL Code §13A-12-212',
+    jurisdiction: 'AL',
+    category: 'felony',
+    description: 'Simple possession of Schedule I-V controlled substances',
+    maxPenalty: 'Class D Felony (1 year 1 day to 5 years, $7,500 fine)',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'al-13a-11-72',
+    name: 'Prohibited Person in Possession of Firearm',
+    code: 'AL Code §13A-11-72',
+    jurisdiction: 'AL',
+    category: 'felony',
+    description: 'Convicted felon or prohibited person possessing firearm',
+    maxPenalty: 'Up to 5 years imprisonment plus gun seizure',
+    commonDefenses: ['Rights restoration', 'Lack of knowledge', 'Temporary possession'],
+    evidenceToGather: ['Criminal history', 'Rights restoration documents'],
+    specificRights: ['Right to show rights restoration', 'Right to constitutional defense'],
+    urgentActions: ['Check rights restoration status', 'Document circumstances']
+  },
+  {
+    id: 'al-13a-6-130',
+    name: 'Domestic Violence in the First Degree',
+    code: 'AL Code §13A-6-130',
+    jurisdiction: 'AL',
+    category: 'felony',
+    description: 'First degree assault in domestic relationship',
+    maxPenalty: 'Class A Felony (10-99 years or life, 12 month minimum on second offense)',
+    commonDefenses: ['Self-defense', 'Mutual combat', 'False accusations'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Character witnesses'],
+    specificRights: ['Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document defensive circumstances', 'Gather character evidence']
+  },
+
+  // Alaska Criminal Statutes - Title 11
+  {
+    id: 'ak-11.41.200',
+    name: 'Assault in the First Degree',
+    code: 'AS 11.41.200',
+    jurisdiction: 'AK',
+    category: 'felony',
+    description: 'Intentionally causing serious physical injury',
+    maxPenalty: 'Class A Felony (up to 20 years, $250,000 fine)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent'],
+    evidenceToGather: ['Medical records', 'Weapon evidence', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document defensive circumstances', 'Preserve medical evidence']
+  },
+  {
+    id: 'ak-11.41.210',
+    name: 'Assault in the Second Degree',
+    code: 'AS 11.41.210',
+    jurisdiction: 'AK',
+    category: 'felony',
+    description: 'Recklessly causing serious physical injury with dangerous instrument',
+    maxPenalty: 'Class B Felony (up to 10 years, $100,000 fine)',
+    commonDefenses: ['Self-defense', 'Lack of intent', 'Accident'],
+    evidenceToGather: ['Medical records', 'Weapon evidence', 'Witness statements'],
+    specificRights: ['Right to self-defense claim', 'Right to confront witnesses'],
+    urgentActions: ['Document circumstances', 'Gather character evidence']
+  },
+  {
+    id: 'ak-11.46.120',
+    name: 'Theft in the First Degree',
+    code: 'AS 11.46.120',
+    jurisdiction: 'AK',
+    category: 'felony',
+    description: 'Theft of property or services valued over $25,000',
+    maxPenalty: 'Class B Felony (up to 10 years, $100,000 fine)',
+    commonDefenses: ['Lack of intent to steal', 'Good faith belief of ownership'],
+    evidenceToGather: ['Purchase receipts', 'Ownership documentation', 'Value assessments'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses'],
+    urgentActions: ['Gather ownership documentation', 'Document legitimate acquisition']
+  },
+  {
+    id: 'ak-11.71.040',
+    name: 'Misconduct Involving Controlled Substance 4th Degree',
+    code: 'AS 11.71.040',
+    jurisdiction: 'AK',
+    category: 'felony',
+    description: 'Possession of controlled substances',
+    maxPenalty: 'Class C Felony (up to 5 years, $50,000 fine)',
+    commonDefenses: ['Lack of knowledge', 'Medical necessity', 'Unlawful search'],
+    evidenceToGather: ['Lab results', 'Medical records', 'Search warrant'],
+    specificRights: ['Right to challenge search', 'Right to medical defense'],
+    urgentActions: ['Challenge search and seizure', 'Document medical conditions']
+  },
+  {
+    id: 'ak-11.61.200',
+    name: 'Misconduct Involving Weapons 4th Degree',
+    code: 'AS 11.61.200',
+    jurisdiction: 'AK',
+    category: 'misdemeanor',
+    description: 'Possession of firearm by prohibited person',
+    maxPenalty: 'Class A Misdemeanor (up to 1 year, $25,000 fine)',
+    commonDefenses: ['Rights restoration', 'Lack of knowledge', 'Self-defense exception'],
+    evidenceToGather: ['Criminal history', 'Rights restoration documents'],
+    specificRights: ['Right to show rights restoration', 'Right to constitutional defense'],
+    urgentActions: ['Check rights restoration status', 'Document circumstances']
+  },
+  {
+    id: 'ak-18.66.100',
+    name: 'Domestic Violence Assault',
+    code: 'AS 18.66.100',
+    jurisdiction: 'AK',
+    category: 'misdemeanor',
+    description: 'Assault against family or household member',
+    maxPenalty: 'Enhanced penalties under domestic violence statutes',
+    commonDefenses: ['Self-defense', 'Mutual combat', 'False accusations'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Character witnesses'],
+    specificRights: ['Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document defensive circumstances', 'Gather character evidence']
   }
 ];
 
 export const chargeCategories = {
-  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57'],
-  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'fl-817.568', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'pa-18-3925', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'ga-16-9-1', 'nc-gs-14-72', 'nc-gs-14-51', 'nc-gs-14-100', 'mi-mcl-750.356', 'mi-mcl-750.110', 'mi-mcl-750.543m', 'mi-mcl-750.200h', 'va-18.2-95', 'va-18.2-89', 'va-18.2-178'],
-  'Drug Crimes': ['ca-hs-11350', 'tx-hs-481.115', 'fl-893.13', 'pa-18-6318', 'il-720-570-402', 'mi-mcl-333.7403', 'va-18.2-250', 'nc-gs-90-95', 'ga-16-13-30', 'fed-21-841'],
-  'Weapons Crimes': ['tx-pc-46.02', 'fl-790.23', 'il-720-5-24-1', 'va-18.2-308', 'nc-gs-14-269', 'ga-16-11-126'],
+  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57', 'al-13a-6-20', 'al-13a-6-21', 'al-13a-6-130', 'ak-11.41.200', 'ak-11.41.210', 'ak-18.66.100'],
+  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'fl-817.568', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'pa-18-3925', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'ga-16-9-1', 'nc-gs-14-72', 'nc-gs-14-51', 'nc-gs-14-100', 'mi-mcl-750.356', 'mi-mcl-750.110', 'mi-mcl-750.543m', 'mi-mcl-750.200h', 'va-18.2-95', 'va-18.2-89', 'va-18.2-178', 'al-13a-8-3', 'ak-11.46.120'],
+  'Drug Crimes': ['ca-hs-11350', 'tx-hs-481.115', 'fl-893.13', 'pa-18-6318', 'il-720-570-402', 'mi-mcl-333.7403', 'va-18.2-250', 'nc-gs-90-95', 'ga-16-13-30', 'al-13a-12-212', 'ak-11.71.040', 'fed-21-841'],
+  'Weapons Crimes': ['tx-pc-46.02', 'fl-790.23', 'il-720-5-24-1', 'va-18.2-308', 'nc-gs-14-269', 'ga-16-11-126', 'al-13a-11-72', 'ak-11.61.200'],
   'Federal Crimes': ['fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371'],
   'Traffic/DUI': ['ca-vc-23152', 'tx-pc-49.04', 'fl-316.193', 'ny-vtl-1192', 'pa-75-3802', 'il-625-5-11-501', 'oh-orc-4511.19', 'ga-40-6-391', 'nc-gs-20-138.1', 'mi-mcl-257.625', 'va-18.2-266'],
   'Public Order': ['ca-pc-314', 'ca-pc-647']
