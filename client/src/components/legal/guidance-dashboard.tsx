@@ -16,8 +16,7 @@ import {
   Users,
   Calendar,
   Eye,
-  EyeOff,
-  Search
+  EyeOff
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,7 +25,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 
 interface EnhancedGuidanceData {
   sessionId: string;
@@ -73,25 +71,10 @@ interface GuidanceDashboardProps {
   onDeleteSession: () => void;
 }
 
-interface LocalResource {
-  name: string;
-  address: string;
-  phone: string;
-  website?: string;
-  hours?: string;
-  distance?: string;
-}
-
 export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: GuidanceDashboardProps) {
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showSensitiveInfo, setShowSensitiveInfo] = useState(false);
-  const [publicDefenderZip, setPublicDefenderZip] = useState('');
-  const [courthouseZip, setCourthouseZip] = useState('');
-  const [publicDefenderResults, setPublicDefenderResults] = useState<LocalResource[]>([]);
-  const [courthouseResults, setCourthouseResults] = useState<LocalResource[]>([]);
-  const [searchingPublicDefender, setSearchingPublicDefender] = useState(false);
-  const [searchingCourthouse, setSearchingCourthouse] = useState(false);
 
   const toggleAction = (action: string) => {
     const newCompleted = new Set(completedActions);
@@ -124,52 +107,6 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
       deadline.priority === 'critical' && 
       (deadline.daysFromNow === undefined || deadline.daysFromNow <= 7)
     );
-  };
-
-  const searchPublicDefenders = async (zipCode: string) => {
-    if (!zipCode.trim() || zipCode.length !== 5) return;
-    
-    setSearchingPublicDefender(true);
-    try {
-      const response = await fetch(`/api/local-resources/public-defenders?zip=${zipCode}`);
-      if (response.ok) {
-        const data = await response.json();
-        setPublicDefenderResults(data.results || []);
-      }
-    } catch (error) {
-      console.error('Error searching public defenders:', error);
-    } finally {
-      setSearchingPublicDefender(false);
-    }
-  };
-
-  const searchCourthouses = async (zipCode: string) => {
-    if (!zipCode.trim() || zipCode.length !== 5) return;
-    
-    setSearchingCourthouse(true);
-    try {
-      const response = await fetch(`/api/local-resources/courthouses?zip=${zipCode}`);
-      if (response.ok) {
-        const data = await response.json();
-        setCourthouseResults(data.results || []);
-      }
-    } catch (error) {
-      console.error('Error searching courthouses:', error);
-    } finally {
-      setSearchingCourthouse(false);
-    }
-  };
-
-  const handlePublicDefenderKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      searchPublicDefenders(publicDefenderZip);
-    }
-  };
-
-  const handleCourthouseKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      searchCourthouses(courthouseZip);
-    }
   };
 
   return (
@@ -384,175 +321,50 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
           </CollapsibleContent>
         </Collapsible>
 
-        {/* Public Defender Office */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5 text-green-600" />
-              Public Defender Office
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="flex gap-2">
-                <Input
-                  placeholder="Enter ZIP code"
-                  value={publicDefenderZip}
-                  onChange={(e) => setPublicDefenderZip(e.target.value)}
-                  onKeyPress={handlePublicDefenderKeyPress}
-                  maxLength={5}
-                  className="flex-1"
-                  data-testid="input-public-defender-zip"
-                />
-                <Button 
-                  onClick={() => searchPublicDefenders(publicDefenderZip)}
-                  disabled={searchingPublicDefender || publicDefenderZip.length !== 5}
-                  className="gap-2"
-                  data-testid="button-search-public-defender"
-                >
-                  <Search className="h-4 w-4" />
-                  {searchingPublicDefender ? 'Searching...' : 'Search'}
-                </Button>
-              </div>
-              
-              {/* Default Public Defender Info */}
-              <div className="border rounded-lg p-4 bg-muted/50">
-                <h4 className="font-medium mb-2">General Public Defender Information</h4>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Contact your local public defender office for free legal representation if you cannot afford an attorney.
-                </p>
-                <div className="flex items-center gap-4 text-sm">
-                  <div className="flex items-center gap-1">
-                    <Phone className="h-3 w-3" />
-                    Call court clerk for public defender contact
+        {/* Local Resources */}
+        <Collapsible>
+          <CollapsibleTrigger asChild>
+            <Card className="cursor-pointer hover:bg-muted/50">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-green-600" />
+                    Local Resources
                   </div>
-                </div>
-              </div>
-
-              {/* Local Results */}
-              {publicDefenderResults.length > 0 && (
-                <div className="space-y-3">
-                  <h4 className="font-medium text-sm">Local Public Defender Offices</h4>
-                  {publicDefenderResults.map((office, index) => (
-                    <div key={index} className="border rounded-lg p-4" data-testid={`public-defender-result-${index}`}>
-                      <h5 className="font-medium mb-2">{office.name}</h5>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex items-center gap-1">
-                          <MapPin className="h-3 w-3" />
-                          {office.address}
-                        </div>
+                  <ChevronDown className="h-4 w-4" />
+                </CardTitle>
+              </CardHeader>
+            </Card>
+          </CollapsibleTrigger>
+          <CollapsibleContent>
+            <Card className="mt-2">
+              <CardContent className="pt-6">
+                <div className="space-y-4">
+                  {guidance.resources.map((resource, index) => (
+                    <div key={index} className="border rounded-lg p-4">
+                      <h4 className="font-medium mb-2">{resource.type}</h4>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {resource.description}
+                      </p>
+                      <div className="flex items-center gap-4 text-sm">
                         <div className="flex items-center gap-1">
                           <Phone className="h-3 w-3" />
-                          {office.phone}
+                          {resource.contact}
                         </div>
-                        {office.hours && (
+                        {resource.hours && (
                           <div className="flex items-center gap-1">
                             <Clock className="h-3 w-3" />
-                            {office.hours}
-                          </div>
-                        )}
-                        {office.distance && (
-                          <div className="text-muted-foreground">
-                            {office.distance} away
+                            {resource.hours}
                           </div>
                         )}
                       </div>
                     </div>
                   ))}
                 </div>
-              )}
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Court Self-Help Center */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Scale className="h-5 w-5 text-blue-600" />
-              Court Self-Help Center
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="flex gap-2">
-                <Input
-                  placeholder="Enter ZIP code"
-                  value={courthouseZip}
-                  onChange={(e) => setCourthouseZip(e.target.value)}
-                  onKeyPress={handleCourthouseKeyPress}
-                  maxLength={5}
-                  className="flex-1"
-                  data-testid="input-courthouse-zip"
-                />
-                <Button 
-                  onClick={() => searchCourthouses(courthouseZip)}
-                  disabled={searchingCourthouse || courthouseZip.length !== 5}
-                  className="gap-2"
-                  data-testid="button-search-courthouse"
-                >
-                  <Search className="h-4 w-4" />
-                  {searchingCourthouse ? 'Searching...' : 'Search'}
-                </Button>
-              </div>
-              
-              {/* Default Court Info */}
-              <div className="border rounded-lg p-4 bg-muted/50">
-                <h4 className="font-medium mb-2">General Court Information</h4>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Court self-help centers provide assistance with legal forms, procedures, and court processes.
-                </p>
-                <div className="flex items-center gap-4 text-sm">
-                  <div className="flex items-center gap-1">
-                    <Phone className="h-3 w-3" />
-                    Contact your local courthouse
-                  </div>
-                </div>
-              </div>
-
-              {/* Local Results */}
-              {courthouseResults.length > 0 && (
-                <div className="space-y-3">
-                  <h4 className="font-medium text-sm">Local Courthouses & Self-Help Centers</h4>
-                  {courthouseResults.map((courthouse, index) => (
-                    <div key={index} className="border rounded-lg p-4" data-testid={`courthouse-result-${index}`}>
-                      <h5 className="font-medium mb-2">{courthouse.name}</h5>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex items-center gap-1">
-                          <MapPin className="h-3 w-3" />
-                          {courthouse.address}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Phone className="h-3 w-3" />
-                          {courthouse.phone}
-                        </div>
-                        {courthouse.hours && (
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-3 w-3" />
-                            {courthouse.hours}
-                          </div>
-                        )}
-                        {courthouse.website && (
-                          <div className="flex items-center gap-1">
-                            <ExternalLink className="h-3 w-3" />
-                            <a href={courthouse.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                              Visit Website
-                            </a>
-                          </div>
-                        )}
-                        {courthouse.distance && (
-                          <div className="text-muted-foreground">
-                            {courthouse.distance} away
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </CardContent>
-        </Card>
+              </CardContent>
+            </Card>
+          </CollapsibleContent>
+        </Collapsible>
 
         {/* Evidence to Gather */}
         {guidance.evidenceToGather.length > 0 && (
