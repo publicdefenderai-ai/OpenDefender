@@ -11,6 +11,7 @@ import CaseGuidance from "@/pages/case-guidance";
 import CourtLocator from "@/pages/court-locator";
 import DevelopmentRoadmap from "@/pages/development-roadmap";
 import DashboardTest from "@/pages/dashboard-test";
+import ImmigrationGuidance from "@/pages/immigration-guidance";
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/court-locator" component={CourtLocator} />
       <Route path="/development-roadmap" component={DevelopmentRoadmap} />
       <Route path="/dashboard-test" component={DashboardTest} />
+      <Route path="/immigration-guidance" component={ImmigrationGuidance} />
       <Route component={NotFound} />
     </Switch>
   );

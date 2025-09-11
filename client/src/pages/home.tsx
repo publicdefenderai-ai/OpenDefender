@@ -81,6 +81,24 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
+          {/* Immigration Enforcement Button */}
+          <ScrollReveal delay={0.3}>
+            <div className="mb-12">
+              <Link href="/immigration-guidance">
+                <Button
+                  className="bg-amber-600 hover:bg-amber-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200 mb-6 text-white"
+                  data-testid="button-immigration-enforcement"
+                >
+                  <Shield className="mr-2 h-5 w-5" />
+                  IMMIGRATION ENFORCEMENT
+                </Button>
+              </Link>
+              <p className="text-sm text-blue-800 dark:text-blue-200">
+                Know your rights during ICE encounters and deportation proceedings - for citizens and non-citizens.
+              </p>
+            </div>
+          </ScrollReveal>
+
           {/* Main Entry Points */}
           <ScrollReveal delay={0.4}>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
