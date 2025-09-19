@@ -189,7 +189,48 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Document your injuries', 'Preserve communication records', 'Understand restraining orders']
   },
 
-  // Federal Charges - Title 18 USC
+  // Federal Charges - Murder and Manslaughter (Title 18 USC)
+  {
+    id: 'fed-18-1111-1st',
+    name: 'First Degree Murder',
+    code: '18 USC 1111',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Premeditated murder or murder during commission of specific federal felonies',
+    maxPenalty: 'Life imprisonment or death penalty',
+    commonDefenses: ['Lack of premeditation', 'Self-defense', 'Insanity defense', 'Lack of federal jurisdiction', 'Mistaken identity'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Federal jurisdiction proof', 'Mental health records', 'Timeline documentation'],
+    specificRights: ['Right to federal defender', 'Right to challenge federal jurisdiction', 'Right to capital case procedures'],
+    urgentActions: ['Contact federal defense attorney immediately', 'Challenge federal jurisdiction', 'Preserve mental health records']
+  },
+  {
+    id: 'fed-18-1111-2nd',
+    name: 'Second Degree Murder',
+    code: '18 USC 1111',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Intentional killing without premeditation under federal jurisdiction',
+    maxPenalty: 'Any term of years up to life imprisonment (no death penalty)',
+    commonDefenses: ['Self-defense', 'Lack of intent', 'Heat of passion', 'Lack of federal jurisdiction', 'Provocation'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Federal jurisdiction proof', 'Evidence of provocation', 'Witness statements'],
+    specificRights: ['Right to federal defender', 'Right to challenge federal jurisdiction', 'Right to jury trial'],
+    urgentActions: ['Contact federal defense attorney', 'Challenge federal jurisdiction if applicable', 'Document circumstances']
+  },
+  {
+    id: 'fed-18-1112',
+    name: 'Manslaughter',
+    code: '18 USC 1112',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Unlawful killing without malice under federal jurisdiction',
+    maxPenalty: 'Up to 10 years imprisonment',
+    commonDefenses: ['Accident', 'Self-defense', 'Lack of criminal negligence', 'Lack of federal jurisdiction', 'No intent to harm'],
+    evidenceToGather: ['Accident evidence', 'Federal jurisdiction proof', 'Expert testimony', 'Medical records', 'Safety protocols'],
+    specificRights: ['Right to federal defender', 'Right to challenge federal jurisdiction', 'Right to expert witnesses'],
+    urgentActions: ['Contact federal defense attorney', 'Preserve accident evidence', 'Challenge jurisdiction if applicable']
+  },
+  
+  // Federal Charges - Other Crimes (Title 18 USC)
   {
     id: 'fed-18-1341',
     name: 'Mail Fraud',
@@ -297,7 +338,61 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Document circumstances', 'Seek substance abuse treatment if applicable']
   },
 
-  // Texas Penal Code - Common Charges
+  // Texas Penal Code - Murder and Manslaughter Charges  
+  {
+    id: 'tx-pc-19.03',
+    name: 'Capital Murder',
+    code: 'PC 19.03',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentional or knowing murder with specific aggravating factors (officer, child, multiple victims, etc.)',
+    maxPenalty: 'Death penalty or life without parole',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent', 'Insanity defense', 'Challenging aggravating factors'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Mental health records', 'Character evidence', 'Mitigation evidence'],
+    specificRights: ['Right to capital case counsel', 'Right to mental health evaluation', 'Right to challenge death penalty'],
+    urgentActions: ['Contact capital defense attorney immediately', 'Do not discuss case', 'Preserve mitigation evidence']
+  },
+  {
+    id: 'tx-pc-19.02',
+    name: 'Murder',
+    code: 'PC 19.02',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentionally, knowingly, or recklessly causing death of another',
+    maxPenalty: '5-99 years or life (enhanced if sudden passion: 2-20 years)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Sudden passion', 'Lack of intent', 'Provocation'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Evidence of sudden passion', 'Provocation evidence', 'Character witnesses'],
+    specificRights: ['Right to sudden passion defense', 'Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document sudden passion circumstances', 'Preserve evidence of provocation', 'Contact defense attorney']
+  },
+  {
+    id: 'tx-pc-19.04',
+    name: 'Manslaughter',
+    code: 'PC 19.04',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Recklessly causing the death of another person',
+    maxPenalty: '2nd degree felony: 2-20 years and up to $10,000 fine',
+    commonDefenses: ['Lack of recklessness', 'Accident', 'Self-defense', 'Defense of others', 'No causal connection'],
+    evidenceToGather: ['Accident reconstruction', 'Expert testimony', 'Medical records', 'Safety protocols', 'Witness statements'],
+    specificRights: ['Right to challenge recklessness standard', 'Right to expert witnesses', 'Right to accident defense'],
+    urgentActions: ['Preserve accident evidence', 'Contact expert witnesses', 'Document safety compliance']
+  },
+  {
+    id: 'tx-pc-19.05',
+    name: 'Criminally Negligent Homicide',
+    code: 'PC 19.05',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Causing death by criminal negligence',
+    maxPenalty: 'State jail felony: 180 days - 2 years and up to $10,000 fine',
+    commonDefenses: ['Lack of criminal negligence', 'Accident', 'Act of God', 'Intervening cause', 'No duty of care'],
+    evidenceToGather: ['Safety standards', 'Expert testimony', 'Training records', 'Equipment inspection', 'Industry standards'],
+    specificRights: ['Right to challenge negligence standard', 'Right to expert testimony', 'Right to prove lack of duty'],
+    urgentActions: ['Preserve safety records', 'Contact safety experts', 'Document training and protocols']
+  },
+  
+  // Texas Penal Code - Other Common Charges
   {
     id: 'tx-pc-31.03',
     name: 'Theft',
@@ -403,7 +498,74 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Document defensive circumstances', 'Gather character evidence']
   },
 
-  // Florida Statutes - Common Charges  
+  // Florida Statutes - Murder and Manslaughter Charges
+  {
+    id: 'fl-782.04-1st',
+    name: 'First Degree Murder',
+    code: 'FS 782.04',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Premeditated murder, felony murder, or murder by specified means',
+    maxPenalty: 'Life without parole or death penalty',
+    commonDefenses: ['Self-defense', 'Lack of premeditation', 'Stand Your Ground defense', 'Insanity defense', 'Mistaken identity'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Mental health records', 'Self-defense evidence', 'Character witnesses'],
+    specificRights: ['Right to Stand Your Ground hearing', 'Right to capital case counsel', 'Right to mental health evaluation'],
+    urgentActions: ['Contact capital defense attorney', 'Invoke Stand Your Ground if applicable', 'Preserve mental health records']
+  },
+  {
+    id: 'fl-782.04-2nd',
+    name: 'Second Degree Murder',
+    code: 'FS 782.04',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Intentional killing without premeditation or depraved mind murder',
+    maxPenalty: 'Life imprisonment or term of years',
+    commonDefenses: ['Self-defense', 'Stand Your Ground defense', 'Heat of passion', 'Lack of intent', 'Provocation'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Self-defense evidence', 'Evidence of provocation', 'Medical records'],
+    specificRights: ['Right to Stand Your Ground hearing', 'Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document self-defense circumstances', 'Invoke Stand Your Ground if applicable', 'Contact defense attorney']
+  },
+  {
+    id: 'fl-782.04-3rd',
+    name: 'Third Degree Murder (Felony Murder)',
+    code: 'FS 782.04',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Death occurring during commission of non-enumerated felony',
+    maxPenalty: 'Up to 15 years in prison',
+    commonDefenses: ['No participation in underlying felony', 'Lack of foreseeability', 'Accident', 'Lack of causal connection'],
+    evidenceToGather: ['Evidence of role in felony', 'Character witnesses', 'Expert testimony on causation', 'Accident evidence'],
+    specificRights: ['Right to challenge felony murder rule', 'Right to prove minimal role', 'Right to causation defense'],
+    urgentActions: ['Document limited role', 'Challenge felony murder application', 'Gather character evidence']
+  },
+  {
+    id: 'fl-782.07',
+    name: 'Manslaughter',
+    code: 'FS 782.07',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Killing another without lawful justification but without premeditation',
+    maxPenalty: 'Up to 15 years in prison',
+    commonDefenses: ['Self-defense', 'Heat of passion', 'Provocation', 'Accident', 'Lack of intent'],
+    evidenceToGather: ['Evidence of provocation', 'Self-defense evidence', 'Medical records', 'Character witnesses', 'Timeline of events'],
+    specificRights: ['Right to heat of passion defense', 'Right to self-defense claim', 'Right to Stand Your Ground hearing'],
+    urgentActions: ['Document provocation circumstances', 'Preserve self-defense evidence', 'Contact defense attorney']
+  },
+  {
+    id: 'fl-782.071',
+    name: 'Vehicular Homicide',
+    code: 'FS 782.071',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Killing another by operation of motor vehicle in reckless manner',
+    maxPenalty: 'Up to 15 years in prison (2nd degree felony)',
+    commonDefenses: ['Lack of recklessness', 'Medical emergency', 'Mechanical failure', 'Victim fault'],
+    evidenceToGather: ['Accident reconstruction', 'Vehicle inspection records', 'Medical records', 'Traffic citations', 'Witness statements'],
+    specificRights: ['Right to accident reconstruction expert', 'Right to challenge recklessness', 'Right to jury trial'],
+    urgentActions: ['Preserve vehicle evidence', 'Contact accident reconstruction expert', 'Document medical conditions']
+  },
+  
+  // Florida Statutes - Other Common Charges
   {
     id: 'fl-812.014-petit',
     name: 'Petit Theft',
@@ -535,7 +697,74 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Secure digital evidence', 'Document authorized access']
   },
 
-  // New York Penal Law - Common Charges
+  // New York Penal Law - Murder and Manslaughter Charges
+  {
+    id: 'ny-pl-125.27',
+    name: 'Murder in the First Degree',
+    code: 'PL 125.27',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentional killing with specific aggravating factors (police officer, judge, witness, contract killing)',
+    maxPenalty: 'Life without parole (death penalty currently suspended)',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent', 'Challenging aggravating factors', 'Insanity defense'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Mental health records', 'Character evidence', 'Evidence challenging aggravating factors'],
+    specificRights: ['Right to capital case procedures', 'Right to mental health evaluation', 'Right to challenge aggravating factors'],
+    urgentActions: ['Contact experienced murder defense attorney', 'Challenge aggravating factors', 'Preserve mental health records']
+  },
+  {
+    id: 'ny-pl-125.25',
+    name: 'Murder in the Second Degree',
+    code: 'PL 125.25',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentional murder, depraved indifference murder, or some felony murder cases',
+    maxPenalty: '15 years to life, 25 years to life, or life without parole',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent', 'Heat of passion', 'Justification'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Self-defense evidence', 'Character witnesses', 'Medical records'],
+    specificRights: ['Right to justification defense', 'Right to self-defense claim', 'Right to jury trial'],
+    urgentActions: ['Document self-defense circumstances', 'Preserve justification evidence', 'Contact defense attorney']
+  },
+  {
+    id: 'ny-pl-125.20',
+    name: 'Manslaughter in the First Degree',
+    code: 'PL 125.20',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentional killing under influence of extreme emotional disturbance',
+    maxPenalty: '5-25 years in prison (Class B felony)',
+    commonDefenses: ['Extreme emotional disturbance', 'Self-defense', 'Heat of passion', 'Provocation', 'Mental disease'],
+    evidenceToGather: ['Mental health records', 'Evidence of emotional disturbance', 'Provocation evidence', 'Character witnesses'],
+    specificRights: ['Right to extreme emotional disturbance defense', 'Right to mental health evaluation', 'Right to expert testimony'],
+    urgentActions: ['Document emotional disturbance', 'Preserve mental health records', 'Contact mental health expert']
+  },
+  {
+    id: 'ny-pl-125.15',
+    name: 'Manslaughter in the Second Degree',
+    code: 'PL 125.15',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Recklessly causing death of another person',
+    maxPenalty: 'Up to 15 years in prison (Class C felony)',
+    commonDefenses: ['Lack of recklessness', 'Accident', 'No criminal negligence', 'Intervening cause', 'Self-defense'],
+    evidenceToGather: ['Accident reconstruction', 'Expert testimony', 'Safety protocols', 'Medical records', 'Character witnesses'],
+    specificRights: ['Right to challenge recklessness standard', 'Right to accident defense', 'Right to expert witnesses'],
+    urgentActions: ['Preserve accident evidence', 'Contact safety experts', 'Document circumstances']
+  },
+  {
+    id: 'ny-vt-125.12',
+    name: 'Vehicular Manslaughter in the Second Degree',
+    code: 'VT 125.12',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Recklessly causing death by operation of motor vehicle',
+    maxPenalty: 'Up to 7 years in prison (Class D felony)',
+    commonDefenses: ['Lack of recklessness', 'Medical emergency', 'Mechanical failure', 'No causal connection'],
+    evidenceToGather: ['Accident reconstruction', 'Vehicle inspection', 'Medical records', 'Traffic violation history', 'Expert testimony'],
+    specificRights: ['Right to accident reconstruction expert', 'Right to challenge recklessness', 'Right to medical emergency defense'],
+    urgentActions: ['Preserve vehicle evidence', 'Document medical conditions', 'Contact accident expert']
+  },
+  
+  // New York Penal Law - Other Common Charges
   {
     id: 'ny-pl-155.25',
     name: 'Petit Larceny',
@@ -3935,7 +4164,16 @@ export const criminalCharges: CriminalCharge[] = [
 ];
 
 export const chargeCategories = {
-  'Violent Crimes': ['ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57', 'al-13a-6-20', 'al-13a-6-21', 'al-13a-6-130', 'ak-11.41.200', 'ak-11.41.210', 'ak-18.66.100', 'az-13-1203', 'az-13-1204', 'wa-9a.36.011', 'wa-9a.36.021', 'ma-265-13a', 'ma-265-15a', 'tn-39-13-101', 'tn-39-13-102', 'wi-940-19', 'wi-940-225', 'co-18-3-202', 'co-18-3-203', 'ct-53a-59', 'ct-53a-60', 'la-14-37', 'la-14-34', 'la-14-35.3', 'or-163-assault-1', 'or-163-assault-2', 'nv-200-471', 'nv-200-assault-weapon', 'nj-2c-12-1', 'nj-2c-12-1b', 'md-3-202', 'md-3-203', 'mo-565-050', 'mo-565-060', 'mn-609-221', 'mn-609-222', 'sc-16-3-600', 'sc-16-3-600-2', 'sc-16-25-20', 'ky-508-assault-4', 'ky-strangulation', 'in-battery', 'in-intimidation', 'in-domestic-battery', 'ia-708-1', 'ia-708-2a', 'ks-21-5412', 'ks-domestic-assault', 'ar-5-13-205', 'ar-aggravated-assault', 'ar-domestic-battering', 'de-assault-3', 'de-assault-2', 'hi-assault-1', 'hi-assault-3', 'hi-domestic-abuse', 'id-assault', 'id-battery', 'id-domestic-violence', 'me-assault', 'me-aggravated-assault', 'me-domestic-violence', 'ms-simple-assault', 'ms-aggravated-assault', 'ms-domestic-violence', 'mt-45-5-201', 'mt-aggravated-assault', 'mt-pfma', 'ne-28-310', 'ne-28-308', 'ne-28-323', 'nh-631-1', 'nh-631-2', 'nh-631-2b', 'nm-30-3-1', 'nm-30-3-2', 'nm-domestic-violence', 'nd-12.1-17-01', 'nd-12.1-17-02', 'nd-domestic-violence', 'ok-21-641', 'ok-21-642', 'ok-21-644', 'ri-11-5-2', 'ri-felony-assault', 'ri-domestic-violence', 'sd-22-18-1', 'sd-22-18-1.1', 'sd-domestic-abuse', 'ut-76-5-102', 'ut-76-5-103', 'ut-domestic-violence', 'vt-13-1023', 'vt-13-1024', 'vt-13-1042', 'wv-61-2-9', 'wv-61-2-10b', 'wv-domestic-assault', 'wy-6-2-501', 'wy-6-2-509', 'wy-6-2-510', 'dc-22-407', 'dc-22-402', 'dc-domestic-violence'],
+  'Violent Crimes': [
+    // Murder and Manslaughter charges (most serious violent crimes)
+    'ca-pc-187-1st', 'ca-pc-187-2nd', 'ca-pc-192a', 'ca-pc-192b', 'ca-pc-192c1', 'ca-pc-192c2',
+    'fed-18-1111-1st', 'fed-18-1111-2nd', 'fed-18-1112',
+    'tx-pc-19.03', 'tx-pc-19.02', 'tx-pc-19.04', 'tx-pc-19.05',
+    'fl-782.04-1st', 'fl-782.04-2nd', 'fl-782.04-3rd', 'fl-782.07', 'fl-782.071',
+    'ny-pl-125.27', 'ny-pl-125.25', 'ny-pl-125.20', 'ny-pl-125.15', 'ny-vt-125.12',
+    // Other violent crimes
+    'ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57', 'al-13a-6-20', 'al-13a-6-21', 'al-13a-6-130', 'ak-11.41.200', 'ak-11.41.210', 'ak-18.66.100', 'az-13-1203', 'az-13-1204', 'wa-9a.36.011', 'wa-9a.36.021', 'ma-265-13a', 'ma-265-15a', 'tn-39-13-101', 'tn-39-13-102', 'wi-940-19', 'wi-940-225', 'co-18-3-202', 'co-18-3-203', 'ct-53a-59', 'ct-53a-60', 'la-14-37', 'la-14-34', 'la-14-35.3', 'or-163-assault-1', 'or-163-assault-2', 'nv-200-471', 'nv-200-assault-weapon', 'nj-2c-12-1', 'nj-2c-12-1b', 'md-3-202', 'md-3-203', 'mo-565-050', 'mo-565-060', 'mn-609-221', 'mn-609-222', 'sc-16-3-600', 'sc-16-3-600-2', 'sc-16-25-20', 'ky-508-assault-4', 'ky-strangulation', 'in-battery', 'in-intimidation', 'in-domestic-battery', 'ia-708-1', 'ia-708-2a', 'ks-21-5412', 'ks-domestic-assault', 'ar-5-13-205', 'ar-aggravated-assault', 'ar-domestic-battering', 'de-assault-3', 'de-assault-2', 'hi-assault-1', 'hi-assault-3', 'hi-domestic-abuse', 'id-assault', 'id-battery', 'id-domestic-violence', 'me-assault', 'me-aggravated-assault', 'me-domestic-violence', 'ms-simple-assault', 'ms-aggravated-assault', 'ms-domestic-violence', 'mt-45-5-201', 'mt-aggravated-assault', 'mt-pfma', 'ne-28-310', 'ne-28-308', 'ne-28-323', 'nh-631-1', 'nh-631-2', 'nh-631-2b', 'nm-30-3-1', 'nm-30-3-2', 'nm-domestic-violence', 'nd-12.1-17-01', 'nd-12.1-17-02', 'nd-domestic-violence', 'ok-21-641', 'ok-21-642', 'ok-21-644', 'ri-11-5-2', 'ri-felony-assault', 'ri-domestic-violence', 'sd-22-18-1', 'sd-22-18-1.1', 'sd-domestic-abuse', 'ut-76-5-102', 'ut-76-5-103', 'ut-domestic-violence', 'vt-13-1023', 'vt-13-1024', 'vt-13-1042', 'wv-61-2-9', 'wv-61-2-10b', 'wv-domestic-assault', 'wy-6-2-501', 'wy-6-2-509', 'wy-6-2-510', 'dc-22-407', 'dc-22-402', 'dc-domestic-violence'
+  ],
   'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'fl-817.568', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'pa-18-3925', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'ga-16-9-1', 'nc-gs-14-72', 'nc-gs-14-51', 'nc-gs-14-100', 'mi-mcl-750.356', 'mi-mcl-750.110', 'mi-mcl-750.543m', 'mi-mcl-750.200h', 'va-18.2-95', 'va-18.2-89', 'va-18.2-178', 'al-13a-8-3', 'ak-11.46.120', 'az-13-1802', 'wa-9a.56.030', 'ma-266-30', 'tn-39-14-105', 'wi-943-20', 'co-18-4-401', 'ct-53a-122', 'la-14-theft', 'or-164-055', 'nv-205-0832', 'nj-2c-20-2', 'md-7-104', 'mo-570-030', 'mn-609-52', 'sc-16-13-30', 'ky-theft', 'in-theft', 'ia-714-2', 'ks-21-5801', 'ar-theft', 'de-theft', 'hi-theft-1', 'id-grand-theft', 'me-theft', 'ms-grand-larceny', 'mt-theft', 'ne-28-511', 'nh-637-11', 'nm-30-16-1', 'nd-12.1-23-05', 'ok-21-1701', 'ri-11-41-5', 'sd-22-30a-17', 'ut-76-6-404', 'vt-theft', 'wv-grand-larceny', 'wy-theft', 'dc-22-3212'],
   'Drug Crimes': ['ca-hs-11350', 'tx-hs-481.115', 'fl-893.13', 'pa-18-6318', 'il-720-570-402', 'mi-mcl-333.7403', 'va-18.2-250', 'nc-gs-90-95', 'ga-16-13-30', 'al-13a-12-212', 'ak-11.71.040', 'az-13-3407', 'wa-69.50.4013', 'ma-94c-possession', 'tn-39-17-417', 'wi-drug-possession', 'co-18-18-403.5', 'ct-21a-279', 'or-475-752', 'nv-453-336', 'nj-2c-35-10', 'md-5-601', 'mo-drug-possession', 'mn-152-drug', 'sc-44-53-375', 'ky-218a-1415', 'in-drug-possession', 'ia-124-401', 'ks-21-5706', 'ar-drug-possession', 'de-drug-possession', 'hi-drug-possession', 'id-drug-possession', 'me-drug-possession', 'ms-drug-possession', 'mt-drug-possession', 'ne-drug-possession', 'nh-drug-possession', 'nm-30-31-23', 'nd-drug-possession', 'ok-drug-possession', 'ri-drug-possession', 'sd-drug-possession', 'ut-drug-possession', 'vt-drug-possession', 'wv-drug-possession', 'wy-drug-possession', 'dc-drug-possession', 'fed-21-841'],
   'Weapons Crimes': ['tx-pc-46.02', 'fl-790.23', 'il-720-5-24-1', 'va-18.2-308', 'nc-gs-14-269', 'ga-16-11-126', 'al-13a-11-72', 'ak-11.61.200', 'az-13-3102', 'wa-9.41.040', 'ma-269-firearm', 'tn-39-17-1307', 'wi-941-29', 'co-18-12-108', 'ct-53a-217', 'la-14-95.1', 'or-166-felon', 'nv-202-firearm', 'nj-2c-39-5', 'md-4-203', 'mo-571-030', 'mn-624-713', 'ky-527-040', 'ia-724-4', 'ks-21-6304', 'de-firearm-concealed'],
