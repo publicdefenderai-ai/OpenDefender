@@ -16,7 +16,87 @@ export interface CriminalCharge {
 }
 
 export const criminalCharges: CriminalCharge[] = [
-  // California Penal Code - Common Charges
+  // California Penal Code - Murder and Manslaughter Charges
+  {
+    id: 'ca-pc-187-1st',
+    name: 'First Degree Murder',
+    code: 'PC 187',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Willful, deliberate, and premeditated killing with malice aforethought',
+    maxPenalty: '25 years to life in state prison, or death penalty/life without parole',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of premeditation', 'Insanity defense', 'Mistaken identity'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Witness statements', 'Timeline documentation', 'Mental health records'],
+    specificRights: ['Right to capital case counsel', 'Right to mental health evaluation', 'Right to challenge death penalty'],
+    urgentActions: ['Contact experienced capital defense attorney', 'Do not discuss case', 'Preserve mental health records']
+  },
+  {
+    id: 'ca-pc-187-2nd',
+    name: 'Second Degree Murder',
+    code: 'PC 187',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Unlawful killing with malice aforethought but without premeditation',
+    maxPenalty: '15 years to life in state prison',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent', 'Heat of passion', 'Provocation'],
+    evidenceToGather: ['Crime scene evidence', 'DNA evidence', 'Witness statements', 'Medical records', 'Character witnesses'],
+    specificRights: ['Right to jury trial', 'Right to confront witnesses', 'Right to expert testimony'],
+    urgentActions: ['Contact experienced murder defense attorney', 'Preserve evidence of provocation', 'Document circumstances']
+  },
+  {
+    id: 'ca-pc-192a',
+    name: 'Voluntary Manslaughter',
+    code: 'PC 192(a)',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Unlawful killing in sudden quarrel or heat of passion',
+    maxPenalty: '3, 6, or 11 years in state prison',
+    commonDefenses: ['Self-defense', 'Heat of passion', 'Adequate provocation', 'Imperfect self-defense'],
+    evidenceToGather: ['Evidence of provocation', 'Witness statements', 'Medical records', 'Timeline of events'],
+    specificRights: ['Right to heat of passion defense', 'Right to provocation evidence', 'Right to jury instruction on lesser charges'],
+    urgentActions: ['Document provocation circumstances', 'Preserve evidence of emotional state', 'Contact defense attorney']
+  },
+  {
+    id: 'ca-pc-192b',
+    name: 'Involuntary Manslaughter',
+    code: 'PC 192(b)',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Unlawful killing without malice in commission of unlawful act or lawful act done unlawfully',
+    maxPenalty: 'Up to 4 years in state prison',
+    commonDefenses: ['Lack of criminal negligence', 'Act was not inherently dangerous', 'Accident', 'No causal connection'],
+    evidenceToGather: ['Expert testimony', 'Accident reconstruction', 'Medical records', 'Safety protocols'],
+    specificRights: ['Right to expert witnesses', 'Right to challenge causation', 'Right to accident defense'],
+    urgentActions: ['Preserve accident evidence', 'Contact expert witnesses', 'Document safety compliance']
+  },
+  {
+    id: 'ca-pc-192c1',
+    name: 'Vehicular Manslaughter with Gross Negligence',
+    code: 'PC 192(c)(1)',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Driving with gross negligence resulting in death',
+    maxPenalty: 'Up to 6 years in state prison (felony) or 1 year county jail (misdemeanor)',
+    commonDefenses: ['Lack of gross negligence', 'Victim fault', 'Medical emergency', 'Mechanical failure'],
+    evidenceToGather: ['Accident reconstruction', 'Vehicle inspection', 'Medical records', 'Witness statements', 'Traffic citations'],
+    specificRights: ['Right to accident reconstruction expert', 'Right to vehicle inspection', 'Right to challenge negligence standard'],
+    urgentActions: ['Preserve vehicle evidence', 'Contact accident reconstruction expert', 'Document medical conditions']
+  },
+  {
+    id: 'ca-pc-192c2',
+    name: 'Vehicular Manslaughter without Gross Negligence',
+    code: 'PC 192(c)(2)',
+    jurisdiction: 'CA',
+    category: 'misdemeanor',
+    description: 'Driving in unlawful manner resulting in death without gross negligence',
+    maxPenalty: 'Up to 1 year in county jail',
+    commonDefenses: ['No unlawful act', 'Victim fault', 'Medical emergency', 'Mechanical failure'],
+    evidenceToGather: ['Traffic violation records', 'Accident reconstruction', 'Vehicle maintenance records', 'Medical records'],
+    specificRights: ['Right to challenge traffic violation', 'Right to prove lack of negligence', 'Right to jury trial'],
+    urgentActions: ['Document driving record', 'Preserve vehicle maintenance records', 'Contact traffic expert']
+  },
+  
+  // California Penal Code - Other Violent Crimes
   {
     id: 'ca-pc-211',
     name: 'Robbery',
