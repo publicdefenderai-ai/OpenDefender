@@ -5,7 +5,7 @@ export interface CriminalCharge {
   id: string;
   name: string;
   code: string;
-  jurisdiction: 'CA' | 'Federal' | 'TX' | 'FL' | 'NY' | 'PA' | 'IL' | 'OH' | 'GA' | 'NC' | 'MI' | 'NJ' | 'VA' | 'WA' | 'AZ' | 'MA' | 'TN' | 'IN' | 'MD' | 'MO' | 'WI' | 'CO' | 'MN' | 'SC' | 'AL' | 'LA' | 'KY' | 'OR' | 'OK' | 'CT' | 'IA' | 'MS' | 'AR' | 'UT' | 'KS' | 'NV' | 'NM' | 'NE' | 'WV' | 'ID' | 'HI' | 'NH' | 'ME' | 'MT' | 'RI' | 'DE' | 'SD' | 'ND' | 'AK' | 'VT' | 'WY';
+  jurisdiction: 'CA' | 'Federal' | 'TX' | 'FL' | 'NY' | 'PA' | 'IL' | 'OH' | 'GA' | 'NC' | 'MI' | 'NJ' | 'VA' | 'WA' | 'AZ' | 'MA' | 'TN' | 'IN' | 'MD' | 'MO' | 'WI' | 'CO' | 'MN' | 'SC' | 'AL' | 'LA' | 'KY' | 'OR' | 'OK' | 'CT' | 'IA' | 'MS' | 'AR' | 'UT' | 'KS' | 'NV' | 'NM' | 'NE' | 'WV' | 'ID' | 'HI' | 'NH' | 'ME' | 'MT' | 'RI' | 'DE' | 'SD' | 'ND' | 'AK' | 'VT' | 'WY' | 'DC';
   category: 'felony' | 'misdemeanor' | 'infraction';
   description: string;
   maxPenalty: string;
