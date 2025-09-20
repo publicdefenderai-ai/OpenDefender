@@ -278,7 +278,21 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
       )
     : availableCharges;
   
-  const displayedCharges = showAllCharges ? filteredCharges : filteredCharges.slice(0, 8);
+  // Separate federal and state charges, then sort alphabetically
+  const federalCharges = filteredCharges
+    .filter(charge => charge.id.startsWith('fed-'))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  
+  const stateCharges = filteredCharges
+    .filter(charge => !charge.id.startsWith('fed-'))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  
+  // Apply "show all" logic to each section
+  const displayedFederalCharges = showAllCharges ? federalCharges : federalCharges.slice(0, 4);
+  const displayedStateCharges = showAllCharges ? stateCharges : stateCharges.slice(0, 4);
+  
+  const totalDisplayedCharges = displayedFederalCharges.length + displayedStateCharges.length;
+  const totalFilteredCharges = federalCharges.length + stateCharges.length;
   
   const handleChargeToggle = (chargeId: string) => {
     const currentCharges = formData.charges || [];
@@ -357,52 +371,111 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
             <Label className="text-sm font-medium mb-2 block">
               Select all charges that apply to your case:
             </Label>
-            <div className="max-h-64 overflow-y-auto border rounded-md p-3 space-y-2">
-              {displayedCharges.map(charge => (
-                <div
-                  key={charge.id}
-                  className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
-                  onClick={() => handleChargeToggle(charge.id)}
-                >
-                  <Checkbox
-                    checked={formData.charges.includes(charge.id)}
-                    onChange={() => {}} // Handled by parent click
-                    data-testid={`checkbox-charge-${charge.id}`}
-                  />
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-medium text-sm">{charge.name}</span>
-                      <Badge 
-                        variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
-                        className="text-xs"
+            <div className="max-h-64 overflow-y-auto border rounded-md p-3 space-y-4">
+              
+              {/* State Charges Section */}
+              {stateCharges.length > 0 && (
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-2 border-b pb-1">
+                    State Charges
+                  </h4>
+                  <div className="space-y-2">
+                    {displayedStateCharges.map(charge => (
+                      <div
+                        key={charge.id}
+                        className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
+                        onClick={() => handleChargeToggle(charge.id)}
                       >
-                        {charge.code}
-                      </Badge>
-                      <Badge 
-                        variant="outline"
-                        className="text-xs"
-                      >
-                        {charge.category}
-                      </Badge>
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      {charge.description}
-                    </p>
-                    <p className="text-xs text-red-600 mt-1">
-                      Max penalty: {charge.maxPenalty}
-                    </p>
+                        <Checkbox
+                          checked={formData.charges.includes(charge.id)}
+                          onChange={() => {}} // Handled by parent click
+                          data-testid={`checkbox-charge-${charge.id}`}
+                        />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="font-medium text-sm">{charge.name}</span>
+                            <Badge 
+                              variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
+                              className="text-xs"
+                            >
+                              {charge.code}
+                            </Badge>
+                            <Badge 
+                              variant="outline"
+                              className="text-xs"
+                            >
+                              {charge.category}
+                            </Badge>
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            {charge.description}
+                          </p>
+                          <p className="text-xs text-red-600 mt-1">
+                            Max penalty: {charge.maxPenalty}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
+              )}
               
-              {!showAllCharges && filteredCharges.length > 8 && (
+              {/* Federal Charges Section */}
+              {federalCharges.length > 0 && (
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-2 border-b pb-1">
+                    Federal Charges
+                  </h4>
+                  <div className="space-y-2">
+                    {displayedFederalCharges.map(charge => (
+                      <div
+                        key={charge.id}
+                        className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
+                        onClick={() => handleChargeToggle(charge.id)}
+                      >
+                        <Checkbox
+                          checked={formData.charges.includes(charge.id)}
+                          onChange={() => {}} // Handled by parent click
+                          data-testid={`checkbox-charge-${charge.id}`}
+                        />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="font-medium text-sm">{charge.name}</span>
+                            <Badge 
+                              variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
+                              className="text-xs"
+                            >
+                              {charge.code}
+                            </Badge>
+                            <Badge 
+                              variant="outline"
+                              className="text-xs"
+                            >
+                              {charge.category}
+                            </Badge>
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            {charge.description}
+                          </p>
+                          <p className="text-xs text-red-600 mt-1">
+                            Max penalty: {charge.maxPenalty}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Show More Button */}
+              {!showAllCharges && totalFilteredCharges > totalDisplayedCharges && (
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => setShowAllCharges(true)}
                   className="w-full"
                 >
-                  Show {filteredCharges.length - 8} more charges...
+                  Show {totalFilteredCharges - totalDisplayedCharges} more charges...
                 </Button>
               )}
             </div>
