@@ -278,14 +278,50 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
       )
     : availableCharges;
   
-  // Separate federal and state charges, then sort alphabetically
-  const federalCharges = filteredCharges
-    .filter(charge => charge.id.startsWith('fed-'))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  // Custom sorting function to group crimes with degrees together
+  const sortChargesWithDegrees = (charges: any[]) => {
+    return charges.sort((a, b) => {
+      // Extract base crime name (remove degree indicators)
+      const getBaseName = (name: string) => {
+        return name.replace(/\s+(in the\s+)?(First|Second|Third|Fourth|1st|2nd|3rd|4th)\s+(Degree|Class)/i, '').trim();
+      };
+      
+      // Extract degree from name
+      const getDegreeOrder = (name: string) => {
+        const degreeMatch = name.match(/(First|Second|Third|Fourth|1st|2nd|3rd|4th)/i);
+        if (!degreeMatch) return 0; // No degree, sort first
+        
+        const degree = degreeMatch[1].toLowerCase();
+        switch (degree) {
+          case 'first': case '1st': return 1;
+          case 'second': case '2nd': return 2;
+          case 'third': case '3rd': return 3;
+          case 'fourth': case '4th': return 4;
+          default: return 5;
+        }
+      };
+      
+      const baseNameA = getBaseName(a.name);
+      const baseNameB = getBaseName(b.name);
+      
+      // If same base crime, sort by degree
+      if (baseNameA === baseNameB) {
+        return getDegreeOrder(a.name) - getDegreeOrder(b.name);
+      }
+      
+      // Otherwise sort alphabetically by base name
+      return baseNameA.localeCompare(baseNameB);
+    });
+  };
   
-  const stateCharges = filteredCharges
-    .filter(charge => !charge.id.startsWith('fed-'))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  // Separate federal and state charges, then sort with degree grouping
+  const federalCharges = sortChargesWithDegrees(
+    filteredCharges.filter(charge => charge.id.startsWith('fed-'))
+  );
+  
+  const stateCharges = sortChargesWithDegrees(
+    filteredCharges.filter(charge => !charge.id.startsWith('fed-'))
+  );
   
   // Apply "show all" logic to each section
   const displayedFederalCharges = showAllCharges ? federalCharges : federalCharges.slice(0, 4);
