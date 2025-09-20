@@ -57,19 +57,19 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/legal-glossary" className="hover:text-white transition-colors">
                   Legal Glossary
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/diversion-programs" className="hover:text-white transition-colors">
                   Diversion Programs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/record-expungement" className="hover:text-white transition-colors">
                   Record Expungement
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

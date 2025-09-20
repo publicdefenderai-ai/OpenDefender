@@ -1,0 +1,404 @@
+import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { 
+  Search, 
+  MapPin, 
+  ArrowLeft,
+  Filter,
+  X,
+  Phone,
+  Mail,
+  ExternalLink,
+  Users,
+  CheckCircle
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Link } from "wouter";
+
+import { PrivacyBanner } from "@/components/layout/privacy-banner";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { 
+  diversionPrograms, 
+  searchDiversionPrograms, 
+  getProgramsByState, 
+  getAvailableStates 
+} from "@/lib/diversion-programs-data";
+
+interface DiversionProgramCardProps {
+  program: any;
+}
+
+function DiversionProgramCard({ program }: DiversionProgramCardProps) {
+  return (
+    <Card className="hover:shadow-lg transition-all duration-300 h-full">
+      <CardHeader>
+        <CardTitle className="flex items-start justify-between">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-2">{program.name}</h3>
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="outline" className="text-xs">
+                {program.county ? `${program.county} County` : program.state}
+              </Badge>
+              <Badge className="bg-blue-600 text-white text-xs">
+                {program.jurisdictionType}
+              </Badge>
+            </div>
+          </div>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="space-y-4">
+          {/* Location */}
+          <div className="flex items-start gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+            <div>
+              <div className="text-sm text-muted-foreground">Location</div>
+              <div className="text-sm font-medium">
+                {program.cities ? program.cities.slice(0, 3).join(", ") : program.county ? `${program.county} County` : program.state}
+                {program.cities && program.cities.length > 3 && ` +${program.cities.length - 3} more`}
+              </div>
+            </div>
+          </div>
+
+          {/* Program Types */}
+          <div>
+            <div className="text-sm text-muted-foreground mb-2">Program Types</div>
+            <div className="flex flex-wrap gap-1">
+              {program.programTypes.map((type: string) => (
+                <Badge key={type} variant="secondary" className="text-xs">
+                  {type}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          {/* Eligibility */}
+          {program.eligibilityNotes && (
+            <div>
+              <div className="text-sm text-muted-foreground mb-1">Eligibility</div>
+              <p className="text-sm text-foreground">{program.eligibilityNotes}</p>
+            </div>
+          )}
+
+          {/* Contact Information */}
+          {program.contact && (
+            <div className="space-y-2 pt-2 border-t">
+              <div className="text-sm text-muted-foreground mb-2">Contact Information</div>
+              
+              {program.contact.phone && (
+                <div className="flex items-center gap-2">
+                  <Phone className="h-3 w-3 text-muted-foreground" />
+                  <a 
+                    href={`tel:${program.contact.phone}`} 
+                    className="text-sm hover:text-blue-600 transition-colors"
+                  >
+                    {program.contact.phone}
+                  </a>
+                </div>
+              )}
+
+              {program.contact.email && (
+                <div className="flex items-center gap-2">
+                  <Mail className="h-3 w-3 text-muted-foreground" />
+                  <a 
+                    href={`mailto:${program.contact.email}`} 
+                    className="text-sm hover:text-blue-600 transition-colors"
+                  >
+                    {program.contact.email}
+                  </a>
+                </div>
+              )}
+
+              {program.contact.url && (
+                <div className="flex items-center gap-2">
+                  <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                  <a 
+                    href={program.contact.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm hover:text-blue-600 transition-colors"
+                  >
+                    Visit Website
+                  </a>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default function DiversionPrograms() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedState, setSelectedState] = useState("");
+  const [selectedProgramType, setSelectedProgramType] = useState("");
+
+  // Get all unique program types
+  const availableProgramTypes = useMemo(() => {
+    const types = new Set<string>();
+    diversionPrograms.forEach(program => {
+      program.programTypes.forEach(type => types.add(type));
+    });
+    return Array.from(types).sort();
+  }, []);
+
+  // Filter programs based on search, state, and program type
+  const filteredPrograms = useMemo(() => {
+    let programs = diversionPrograms;
+
+    // Apply search filter (location-based)
+    if (searchQuery.trim()) {
+      programs = searchDiversionPrograms(searchQuery);
+    }
+
+    // Apply state filter
+    if (selectedState && selectedState !== "all") {
+      programs = programs.filter(program => program.state === selectedState);
+    }
+
+    // Apply program type filter
+    if (selectedProgramType && selectedProgramType !== "all") {
+      programs = programs.filter(program => 
+        program.programTypes.includes(selectedProgramType)
+      );
+    }
+
+    return programs.sort((a, b) => a.name.localeCompare(b.name));
+  }, [searchQuery, selectedState, selectedProgramType]);
+
+  const availableStates = getAvailableStates();
+
+  const clearFilters = () => {
+    setSearchQuery("");
+    setSelectedState("");
+    setSelectedProgramType("");
+  };
+
+  const hasActiveFilters = searchQuery || selectedState || selectedProgramType;
+
+  return (
+    <div className="min-h-screen bg-background">
+      <PrivacyBanner />
+      <Header />
+
+      {/* Hero Section */}
+      <section className="gradient-hero text-white py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <Users className="h-8 w-8 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-800 dark:text-blue-200">
+              Diversion Programs
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+              Find alternative programs to avoid conviction and get the help you need
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="flex items-center gap-4 mb-8">
+              <Link href="/">
+                <Button variant="outline" size="sm">
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Back to Home
+                </Button>
+              </Link>
+              <div className="text-sm text-muted-foreground">
+                {filteredPrograms.length} of {diversionPrograms.length} programs
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Search and Filters */}
+          <ScrollReveal delay={0.1}>
+            <Card className="mb-8">
+              <CardContent className="p-6">
+                <div className="space-y-6">
+                  {/* Search Input */}
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      placeholder="Enter your zip code, county, or city..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="pl-10"
+                      data-testid="input-location-search"
+                    />
+                  </div>
+
+                  {/* State and Program Type Filters */}
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Filter by State:</label>
+                      <Select
+                        value={selectedState}
+                        onValueChange={setSelectedState}
+                      >
+                        <SelectTrigger data-testid="select-state-filter">
+                          <SelectValue placeholder="All states" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="all">All states</SelectItem>
+                          {availableStates.map(state => (
+                            <SelectItem key={state} value={state}>
+                              {state === "Federal" ? "Federal Programs" : state}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Filter by Program Type:</label>
+                      <Select
+                        value={selectedProgramType}
+                        onValueChange={setSelectedProgramType}
+                      >
+                        <SelectTrigger data-testid="select-program-type-filter">
+                          <SelectValue placeholder="All program types" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="all">All program types</SelectItem>
+                          {availableProgramTypes.map(type => (
+                            <SelectItem key={type} value={type}>
+                              {type}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  {/* Clear Filters */}
+                  {hasActiveFilters && (
+                    <div className="flex items-center gap-2">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={clearFilters}
+                        className="text-muted-foreground"
+                        data-testid="button-clear-filters"
+                      >
+                        <X className="h-4 w-4 mr-2" />
+                        Clear All Filters
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+
+          {/* Information Banner */}
+          <ScrollReveal delay={0.15}>
+            <Card className="mb-8 bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                      What are Diversion Programs?
+                    </h3>
+                    <p className="text-sm text-blue-700 dark:text-blue-300">
+                      Diversion programs allow eligible defendants to avoid traditional prosecution by completing 
+                      treatment, community service, or other requirements. Successful completion often results in 
+                      dismissed charges or reduced penalties.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+
+          {/* Programs List */}
+          <ScrollReveal delay={0.2}>
+            {filteredPrograms.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6">
+                {filteredPrograms.map((program) => (
+                  <DiversionProgramCard
+                    key={program.id}
+                    program={program}
+                  />
+                ))}
+              </div>
+            ) : (
+              <Card>
+                <CardContent className="p-12 text-center">
+                  <Users className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-2">No programs found</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Try adjusting your search location or filters to find programs in your area.
+                  </p>
+                  {hasActiveFilters && (
+                    <Button variant="outline" onClick={clearFilters}>
+                      Clear Filters
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
+            )}
+          </ScrollReveal>
+
+          {/* Quick Navigation */}
+          <ScrollReveal delay={0.3}>
+            <div className="mt-12 grid md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-3">Need Legal Guidance?</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Get personalized legal advice for your specific charges and situation.
+                  </p>
+                  <Link href="/case-guidance">
+                    <Button variant="outline" className="w-full">
+                      Get Legal Guidance
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6">
+                  <h3 className="font-semibold mb-3">Learn About Record Clearing</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Check if you're eligible to expunge or seal your criminal record.
+                  </p>
+                  <Link href="/record-expungement">
+                    <Button variant="outline" className="w-full">
+                      Check Eligibility
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

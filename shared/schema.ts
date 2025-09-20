@@ -74,3 +74,69 @@ export type InsertLegalResource = z.infer<typeof insertLegalResourceSchema>;
 export type LegalResource = typeof legalResources.$inferSelect;
 export type InsertCourtData = z.infer<typeof insertCourtDataSchema>;
 export type CourtData = typeof courtData.$inferSelect;
+
+// Legal Glossary Schema
+export const glossaryTerms = pgTable("glossary_terms", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  term: text("term").notNull(),
+  definition: text("definition").notNull(),
+  aliases: text("aliases").array(),
+  tags: text("tags").array(),
+  slug: text("slug").notNull().unique(),
+  lastUpdated: timestamp("last_updated").defaultNow(),
+});
+
+// Diversion Programs Schema
+export const diversionPrograms = pgTable("diversion_programs", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  jurisdictionType: text("jurisdiction_type").notNull(), // 'county', 'city', 'state'
+  state: text("state").notNull(),
+  county: text("county"),
+  cities: text("cities").array(),
+  zipCodes: text("zip_codes").array(),
+  programTypes: text("program_types").array().notNull(),
+  eligibilityNotes: text("eligibility_notes"),
+  contact: jsonb("contact"), // { phone?, email?, url? }
+  sources: text("sources").array(),
+  lastUpdated: timestamp("last_updated").defaultNow(),
+  isActive: boolean("is_active").default(true),
+});
+
+// Record Expungement Schema
+export const expungementRules = pgTable("expungement_rules", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  state: text("state").notNull(),
+  overview: text("overview").notNull(),
+  waitingPeriods: jsonb("waiting_periods"), // { misdemeanorMonths?, felonyMonths? }
+  exclusions: text("exclusions").array(),
+  conditions: text("conditions").array(),
+  steps: text("steps").array(),
+  sources: text("sources").array(),
+  lastUpdated: timestamp("last_updated").defaultNow(),
+  isActive: boolean("is_active").default(true),
+});
+
+// Insert schemas for new tables
+export const insertGlossaryTermSchema = createInsertSchema(glossaryTerms).omit({
+  id: true,
+  lastUpdated: true,
+});
+
+export const insertDiversionProgramSchema = createInsertSchema(diversionPrograms).omit({
+  id: true,
+  lastUpdated: true,
+});
+
+export const insertExpungementRuleSchema = createInsertSchema(expungementRules).omit({
+  id: true,
+  lastUpdated: true,
+});
+
+// Types for new schemas
+export type InsertGlossaryTerm = z.infer<typeof insertGlossaryTermSchema>;
+export type GlossaryTerm = typeof glossaryTerms.$inferSelect;
+export type InsertDiversionProgram = z.infer<typeof insertDiversionProgramSchema>;
+export type DiversionProgram = typeof diversionPrograms.$inferSelect;
+export type InsertExpungementRule = z.infer<typeof insertExpungementRuleSchema>;
+export type ExpungementRule = typeof expungementRules.$inferSelect;
