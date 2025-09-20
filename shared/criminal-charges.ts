@@ -4160,6 +4160,807 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos of injuries', 'Character witnesses'],
     specificRights: ['Right to self-defense claim', 'Right to jury trial'],
     urgentActions: ['Document defensive circumstances', 'Gather character evidence']
+  },
+
+  // === ARSON CHARGES - ADDED FOR COMPREHENSIVE COVERAGE ===
+  
+  // California Arson Charges
+  {
+    id: 'ca-pc-451',
+    name: 'Arson',
+    code: 'PC 451',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Willfully and maliciously setting fire to or burning any structure, forest land, or property',
+    maxPenalty: '16 months to 9 years in state prison depending on type of property',
+    commonDefenses: ['Lack of intent', 'Accident', 'Mistaken identity', 'Mental illness'],
+    evidenceToGather: ['Fire investigation reports', 'Accelerant analysis', 'Surveillance video', 'Witness statements', 'Cell phone records'],
+    specificRights: ['Right to fire investigation expert', 'Right to challenge accelerant evidence', 'Right to mental health evaluation'],
+    urgentActions: ['Contact experienced arson defense attorney', 'Preserve evidence of whereabouts', 'Do not discuss case with investigators']
+  },
+  {
+    id: 'ca-pc-452',
+    name: 'Unlawfully Causing a Fire',
+    code: 'PC 452',
+    jurisdiction: 'CA',
+    category: 'misdemeanor',
+    description: 'Unlawfully causing a fire that burns any structure, forest land, or property (without malice)',
+    maxPenalty: 'Up to 6 months jail and/or $1,000 fine (misdemeanor) or up to 3 years prison (felony)',
+    commonDefenses: ['Accident', 'Lack of criminal negligence', 'Act of nature', 'Third party cause'],
+    evidenceToGather: ['Fire investigation reports', 'Weather conditions', 'Safety compliance records', 'Expert testimony'],
+    specificRights: ['Right to accident defense', 'Right to challenge negligence standard', 'Right to expert witnesses'],
+    urgentActions: ['Document safety precautions taken', 'Preserve evidence of accident', 'Contact fire investigation expert']
+  },
+
+  // Texas Arson Charges
+  {
+    id: 'tx-pc-28.02',
+    name: 'Arson',
+    code: 'PC 28.02',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Starting a fire or causing an explosion with intent to destroy or damage any vegetation, fence, or structure',
+    maxPenalty: 'State jail felony (180 days-2 years) to 1st degree felony (5-99 years/life)',
+    commonDefenses: ['Lack of intent', 'Accident', 'Self-defense', 'Defense of property'],
+    evidenceToGather: ['Fire investigation reports', 'Accelerant testing', 'Motive evidence', 'Alibi witnesses'],
+    specificRights: ['Right to fire expert', 'Right to challenge intent evidence', 'Right to jury trial'],
+    urgentActions: ['Contact experienced arson attorney', 'Preserve alibi evidence', 'Document legitimate reasons for presence']
+  },
+
+  // Florida Arson Charges
+  {
+    id: 'fl-806.01-1st',
+    name: 'Arson in the First Degree',
+    code: 'FS 806.01',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Unlawfully damaging a dwelling or structure by fire when person is inside',
+    maxPenalty: 'Life felony - up to life in prison',
+    commonDefenses: ['Lack of intent', 'Accident', 'Mistaken identity', 'Lack of knowledge of occupancy'],
+    evidenceToGather: ['Fire scene investigation', 'Accelerant evidence', 'Witness testimony', 'Building occupancy records'],
+    specificRights: ['Right to life felony defense counsel', 'Right to fire investigation expert', 'Right to challenge evidence'],
+    urgentActions: ['Contact capital defense attorney immediately', 'Preserve evidence of accident/lack of intent', 'Do not speak to investigators']
+  },
+  {
+    id: 'fl-806.01-2nd',
+    name: 'Arson in the Second Degree',
+    code: 'FS 806.01',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Unlawfully damaging structure or property by fire',
+    maxPenalty: '2nd degree felony - up to 15 years prison, $10,000 fine',
+    commonDefenses: ['Accident', 'Lack of intent', 'Property owner consent', 'Self-defense'],
+    evidenceToGather: ['Fire investigation reports', 'Property ownership records', 'Insurance information', 'Witness statements'],
+    specificRights: ['Right to fire expert testimony', 'Right to challenge intent', 'Right to jury trial'],
+    urgentActions: ['Document property ownership/permission', 'Preserve accident evidence', 'Contact arson defense attorney']
+  },
+
+  // New York Arson Charges
+  {
+    id: 'ny-pl-150.20',
+    name: 'Arson in the First Degree',
+    code: 'PL 150.20',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentionally damaging a building by starting a fire when person is inside',
+    maxPenalty: 'Class A-I felony - 15-40 years to life in prison',
+    commonDefenses: ['Lack of intent', 'Accident', 'No knowledge of occupancy', 'Mental illness'],
+    evidenceToGather: ['Fire investigation evidence', 'Building occupancy records', 'Mental health records', 'Witness testimony'],
+    specificRights: ['Right to Class A felony counsel', 'Right to mental health evaluation', 'Right to fire expert'],
+    urgentActions: ['Contact experienced capital defense attorney', 'Preserve mental health records', 'Do not discuss case']
+  },
+  {
+    id: 'ny-pl-150.15',
+    name: 'Arson in the Second Degree',
+    code: 'PL 150.15',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentionally damaging a building by starting a fire',
+    maxPenalty: 'Class B felony - up to 25 years in prison',
+    commonDefenses: ['Accident', 'Lack of intent', 'Property owner permission', 'Self-defense'],
+    evidenceToGather: ['Fire scene analysis', 'Property records', 'Accelerant testing', 'Timeline evidence'],
+    specificRights: ['Right to fire investigation expert', 'Right to challenge intent evidence', 'Right to jury trial'],
+    urgentActions: ['Document property ownership/permission', 'Preserve evidence of accident', 'Contact arson attorney']
+  },
+  {
+    id: 'ny-pl-150.10',
+    name: 'Arson in the Third Degree',
+    code: 'PL 150.10',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentionally damaging property of another by starting a fire',
+    maxPenalty: 'Class C felony - up to 15 years in prison',
+    commonDefenses: ['Accident', 'Lack of intent', 'Property owner consent', 'Mistake of fact'],
+    evidenceToGather: ['Property ownership records', 'Fire investigation reports', 'Consent documentation', 'Witness statements'],
+    specificRights: ['Right to property consent defense', 'Right to challenge intent', 'Right to expert testimony'],
+    urgentActions: ['Gather property consent evidence', 'Document accident circumstances', 'Contact defense attorney']
+  },
+
+  // Federal Arson Charges
+  {
+    id: 'fed-18-81',
+    name: 'Federal Arson',
+    code: '18 USC 81',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Maliciously damaging or destroying by fire or explosives any building, vehicle or property used in interstate commerce',
+    maxPenalty: 'Up to 20 years prison; life imprisonment if death results',
+    commonDefenses: ['Lack of interstate commerce nexus', 'Accident', 'Lack of malicious intent', 'Mistaken identity'],
+    evidenceToGather: ['Interstate commerce evidence', 'Fire investigation reports', 'Federal jurisdiction evidence', 'Expert testimony'],
+    specificRights: ['Right to challenge federal jurisdiction', 'Right to fire investigation expert', 'Right to federal counsel'],
+    urgentActions: ['Contact federal criminal defense attorney', 'Challenge jurisdiction if appropriate', 'Preserve accident evidence']
+  },
+
+  // === KIDNAPPING CHARGES - ADDED FOR COMPREHENSIVE COVERAGE ===
+
+  // California Kidnapping Charges
+  {
+    id: 'ca-pc-207',
+    name: 'Kidnapping',
+    code: 'PC 207',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Forcibly, or by threat of force, taking and carrying away another person against their will',
+    maxPenalty: '3, 5, or 8 years in state prison',
+    commonDefenses: ['Consent', 'Lack of force or threat', 'No intent to detain', 'Parental rights'],
+    evidenceToGather: ['Witness statements', 'Surveillance video', 'Cell phone records', 'GPS data', 'Physical evidence'],
+    specificRights: ['Right to challenge consent evidence', 'Right to parental rights defense', 'Right to expert testimony'],
+    urgentActions: ['Contact experienced kidnapping defense attorney', 'Preserve evidence of consent/parental rights', 'Do not discuss case']
+  },
+  {
+    id: 'ca-pc-209',
+    name: 'Kidnapping for Ransom/Robbery/Rape',
+    code: 'PC 209',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Kidnapping another person for the purpose of robbery, ransom, extortion, or to commit rape',
+    maxPenalty: 'Life in prison without possibility of parole',
+    commonDefenses: ['Lack of intent for underlying crime', 'No kidnapping occurred', 'False accusations', 'Mistaken identity'],
+    evidenceToGather: ['Evidence disproving intent', 'Alibi witnesses', 'Communication records', 'DNA evidence'],
+    specificRights: ['Right to life sentence defense counsel', 'Right to challenge intent evidence', 'Right to separate representation'],
+    urgentActions: ['Contact capital defense attorney immediately', 'Preserve alibi evidence', 'Do not speak to investigators without counsel']
+  },
+  {
+    id: 'ca-pc-278',
+    name: 'Child Abduction (Parental)',
+    code: 'PC 278',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Taking, enticing, or keeping a child away from lawful custodian with malicious intent',
+    maxPenalty: 'Up to 4 years in state prison',
+    commonDefenses: ['Emergency circumstances', 'Protecting child from harm', 'Misunderstanding of custody order', 'Consent of other parent'],
+    evidenceToGather: ['Custody orders', 'Communication with other parent', 'Evidence of emergency', 'Child welfare concerns'],
+    specificRights: ['Right to present custody defense', 'Right to child protection evidence', 'Right to family court records'],
+    urgentActions: ['Gather custody documentation', 'Document emergency circumstances', 'Contact family law attorney']
+  },
+
+  // Texas Kidnapping Charges
+  {
+    id: 'tx-pc-20.03',
+    name: 'Kidnapping',
+    code: 'PC 20.03',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentionally or knowingly abducting another person',
+    maxPenalty: '3rd degree felony (2-10 years) to 1st degree felony (5-99 years/life)',
+    commonDefenses: ['Consent', 'Lack of intent', 'No substantial movement', 'Parental immunity'],
+    evidenceToGather: ['Witness testimony', 'Video surveillance', 'Cell phone evidence', 'Physical evidence'],
+    specificRights: ['Right to consent defense', 'Right to challenge movement evidence', 'Right to jury trial'],
+    urgentActions: ['Contact kidnapping defense attorney', 'Preserve consent evidence', 'Document legitimate reasons for actions']
+  },
+  {
+    id: 'tx-pc-20.04',
+    name: 'Aggravated Kidnapping',
+    code: 'PC 20.04',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Kidnapping with intent to violate, abuse, terrorize, or use as shield or hostage',
+    maxPenalty: '1st degree felony - 5-99 years or life in prison',
+    commonDefenses: ['Lack of intent for underlying crime', 'No kidnapping occurred', 'Consent', 'False accusations'],
+    evidenceToGather: ['Evidence disproving intent', 'Consent documentation', 'Alibi witnesses', 'Communications'],
+    specificRights: ['Right to challenge intent evidence', 'Right to life sentence defense', 'Right to expert witnesses'],
+    urgentActions: ['Contact experienced aggravated kidnapping attorney', 'Preserve exonerating evidence', 'Do not discuss case']
+  },
+
+  // Florida Kidnapping Charges
+  {
+    id: 'fl-787.01',
+    name: 'Kidnapping',
+    code: 'FS 787.01',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Forcibly, secretly, or by threat confining, abducting, or imprisoning another person',
+    maxPenalty: '1st degree felony - up to 30 years prison; life felony if child under 13',
+    commonDefenses: ['Consent', 'Lack of force or secrecy', 'No confinement occurred', 'Parental rights'],
+    evidenceToGather: ['Witness statements', 'Surveillance footage', 'Communication records', 'Physical evidence'],
+    specificRights: ['Right to consent defense', 'Right to parental immunity', 'Right to challenge confinement evidence'],
+    urgentActions: ['Contact kidnapping defense attorney', 'Preserve consent/parental evidence', 'Document legitimate activities']
+  },
+  {
+    id: 'fl-787.02',
+    name: 'False Imprisonment',
+    code: 'FS 787.02',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Forcibly, by threat, or secretly confining or abducting another person against their will',
+    maxPenalty: '3rd degree felony - up to 5 years prison, $5,000 fine',
+    commonDefenses: ['Consent', 'No confinement', 'Lack of force or threat', 'Misunderstanding'],
+    evidenceToGather: ['Consent evidence', 'Witness testimony', 'Communication records', 'Video evidence'],
+    specificRights: ['Right to consent defense', 'Right to challenge confinement evidence', 'Right to jury trial'],
+    urgentActions: ['Document consent or lack of confinement', 'Gather witness statements', 'Contact defense attorney']
+  },
+
+  // New York Kidnapping Charges
+  {
+    id: 'ny-pl-135.25',
+    name: 'Kidnapping in the First Degree',
+    code: 'PL 135.25',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Abducting another person when victim is not released in a safe place or when ransom demanded',
+    maxPenalty: 'Class A-I felony - 15-40 years to life in prison',
+    commonDefenses: ['Consent', 'Safe release occurred', 'No abduction', 'Lack of ransom intent'],
+    evidenceToGather: ['Evidence of safe release', 'Consent documentation', 'Communication records', 'Witness testimony'],
+    specificRights: ['Right to Class A felony counsel', 'Right to challenge release evidence', 'Right to expert testimony'],
+    urgentActions: ['Contact capital defense attorney immediately', 'Document safe release evidence', 'Preserve consent evidence']
+  },
+  {
+    id: 'ny-pl-135.20',
+    name: 'Kidnapping in the Second Degree',
+    code: 'PL 135.20',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Abducting another person',
+    maxPenalty: 'Class B felony - up to 25 years in prison',
+    commonDefenses: ['Consent', 'No abduction occurred', 'Lack of restraint', 'Parental rights'],
+    evidenceToGather: ['Consent evidence', 'Witness statements', 'Video surveillance', 'Communication records'],
+    specificRights: ['Right to consent defense', 'Right to parental immunity', 'Right to challenge abduction evidence'],
+    urgentActions: ['Preserve consent evidence', 'Document parental rights', 'Contact kidnapping defense attorney']
+  },
+  {
+    id: 'ny-pl-135.10',
+    name: 'Unlawful Imprisonment in the First Degree',
+    code: 'PL 135.10',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Restraining another person under circumstances exposing them to risk of serious physical injury',
+    maxPenalty: 'Class E felony - up to 4 years in prison',
+    commonDefenses: ['Consent', 'No restraint', 'No risk of injury', 'Emergency circumstances'],
+    evidenceToGather: ['Consent documentation', 'Medical evidence', 'Emergency circumstances', 'Witness statements'],
+    specificRights: ['Right to consent defense', 'Right to emergency defense', 'Right to challenge injury risk'],
+    urgentActions: ['Document consent or emergency', 'Gather medical evidence', 'Contact defense attorney']
+  },
+
+  // Federal Kidnapping Charges
+  {
+    id: 'fed-18-1201',
+    name: 'Federal Kidnapping',
+    code: '18 USC 1201',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Unlawfully seizing, confining, kidnapping, abducting, or carrying away a person',
+    maxPenalty: 'Up to 20 years prison; life imprisonment if death results',
+    commonDefenses: ['Lack of interstate nexus', 'Consent', 'No kidnapping occurred', 'Parental immunity'],
+    evidenceToGather: ['Interstate travel evidence', 'Consent documentation', 'Federal jurisdiction evidence', 'Communications'],
+    specificRights: ['Right to challenge federal jurisdiction', 'Right to parental immunity', 'Right to federal counsel'],
+    urgentActions: ['Contact federal criminal defense attorney', 'Challenge jurisdiction if appropriate', 'Preserve consent evidence']
+  },
+
+  // === RAPE AND SEXUAL BATTERY CHARGES - ADDED FOR COMPREHENSIVE COVERAGE ===
+
+  // California Rape and Sexual Battery Charges
+  {
+    id: 'ca-pc-261',
+    name: 'Rape',
+    code: 'PC 261',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Sexual intercourse accomplished against a person\'s will by force, violence, duress, menace, or threat',
+    maxPenalty: '3, 6, or 8 years in state prison',
+    commonDefenses: ['Consent', 'Mistake of fact regarding consent', 'False accusations', 'Lack of force'],
+    evidenceToGather: ['Medical evidence', 'Witness statements', 'Communication records', 'Expert testimony', 'Character evidence'],
+    specificRights: ['Right to rape shield protections', 'Right to challenge consent evidence', 'Right to expert testimony'],
+    urgentActions: ['Contact experienced sex crimes defense attorney', 'Preserve evidence of consent', 'Do not discuss case']
+  },
+  {
+    id: 'ca-pc-243.4',
+    name: 'Sexual Battery',
+    code: 'PC 243.4',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Touching intimate part of another person against their will for sexual arousal, gratification, or abuse',
+    maxPenalty: 'Misdemeanor: up to 6 months jail; Felony: 2-4 years state prison',
+    commonDefenses: ['Consent', 'Accidental touching', 'Lack of sexual intent', 'False accusations'],
+    evidenceToGather: ['Witness statements', 'Surveillance video', 'Medical evidence', 'Character witnesses'],
+    specificRights: ['Right to consent defense', 'Right to challenge intent evidence', 'Right to character evidence'],
+    urgentActions: ['Contact sex crimes defense attorney', 'Document consent evidence', 'Preserve character references']
+  },
+  {
+    id: 'ca-pc-261.5',
+    name: 'Statutory Rape',
+    code: 'PC 261.5',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Sexual intercourse with a person under 18 years old (excluding spouses)',
+    maxPenalty: 'Misdemeanor or felony depending on age difference',
+    commonDefenses: ['Marriage exception', 'Mistake of age', 'Romeo and Juliet provisions'],
+    evidenceToGather: ['Age documentation', 'Marriage certificates', 'Communication records', 'Relationship timeline'],
+    specificRights: ['Right to age mistake defense', 'Right to marriage exception', 'Right to close-in-age defense'],
+    urgentActions: ['Gather age and marriage documentation', 'Contact juvenile/sex crimes attorney', 'Document relationship circumstances']
+  },
+
+  // Texas Sexual Assault Charges
+  {
+    id: 'tx-pc-22.011',
+    name: 'Sexual Assault',
+    code: 'PC 22.011',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentionally or knowingly causing sexual contact with another person without consent',
+    maxPenalty: '2nd degree felony - 2-20 years prison, up to $10,000 fine',
+    commonDefenses: ['Consent', 'Lack of intent', 'False accusations', 'Mistake regarding consent'],
+    evidenceToGather: ['Medical evidence', 'Consent evidence', 'Communication records', 'Witness statements'],
+    specificRights: ['Right to consent defense', 'Right to rape shield protections', 'Right to expert testimony'],
+    urgentActions: ['Contact experienced sexual assault defense attorney', 'Preserve consent evidence', 'Do not discuss case']
+  },
+  {
+    id: 'tx-pc-22.021',
+    name: 'Aggravated Sexual Assault',
+    code: 'PC 22.021',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Sexual assault with additional aggravating factors (weapon, serious injury, etc.)',
+    maxPenalty: '1st degree felony - 5-99 years or life in prison',
+    commonDefenses: ['Consent', 'Lack of aggravating factors', 'False accusations', 'Mistaken identity'],
+    evidenceToGather: ['Evidence disproving aggravating factors', 'Consent documentation', 'Medical evidence', 'Alibi witnesses'],
+    specificRights: ['Right to challenge aggravating factors', 'Right to life sentence defense', 'Right to expert witnesses'],
+    urgentActions: ['Contact experienced aggravated sexual assault attorney', 'Preserve exonerating evidence', 'Challenge aggravating factors']
+  },
+
+  // Florida Sexual Battery Charges
+  {
+    id: 'fl-794.011-capital',
+    name: 'Sexual Battery (Capital)',
+    code: 'FS 794.011',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Sexual battery on person under 12 by person 18 or older',
+    maxPenalty: 'Capital felony - life imprisonment or death penalty',
+    commonDefenses: ['Age mistake', 'Lack of penetration', 'False accusations', 'Mental illness'],
+    evidenceToGather: ['Age documentation', 'Medical evidence', 'Mental health records', 'Character witnesses'],
+    specificRights: ['Right to capital defense counsel', 'Right to mental health evaluation', 'Right to age evidence'],
+    urgentActions: ['Contact capital defense attorney immediately', 'Preserve age documentation', 'Obtain mental health evaluation']
+  },
+  {
+    id: 'fl-794.011-life',
+    name: 'Sexual Battery (Life Felony)',
+    code: 'FS 794.011',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Sexual battery with physical force likely to cause serious injury or when victim is physically incapacitated',
+    maxPenalty: 'Life felony - up to life in prison',
+    commonDefenses: ['Consent', 'Lack of force', 'No incapacitation', 'False accusations'],
+    evidenceToGather: ['Medical evidence', 'Consent evidence', 'Force evidence', 'Incapacitation evidence'],
+    specificRights: ['Right to life sentence defense', 'Right to consent defense', 'Right to expert medical testimony'],
+    urgentActions: ['Contact life felony defense attorney', 'Preserve consent evidence', 'Challenge force allegations']
+  },
+  {
+    id: 'fl-794.011-1st',
+    name: 'Sexual Battery (First Degree)',
+    code: 'FS 794.011',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Sexual battery on person 12 or older without consent',
+    maxPenalty: '1st degree felony - up to 30 years prison',
+    commonDefenses: ['Consent', 'False accusations', 'Mistaken identity', 'Lack of penetration'],
+    evidenceToGather: ['Consent evidence', 'Medical evidence', 'Communication records', 'DNA evidence'],
+    specificRights: ['Right to consent defense', 'Right to rape shield protections', 'Right to DNA challenges'],
+    urgentActions: ['Contact sexual battery defense attorney', 'Preserve consent evidence', 'Challenge DNA evidence if applicable']
+  },
+
+  // New York Sexual Offense Charges
+  {
+    id: 'ny-pl-130.35',
+    name: 'Rape in the First Degree',
+    code: 'PL 130.35',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Sexual intercourse with another person by forcible compulsion or when victim is incapable of consent',
+    maxPenalty: 'Class B felony - up to 25 years in prison',
+    commonDefenses: ['Consent', 'Lack of force', 'Capacity to consent', 'False accusations'],
+    evidenceToGather: ['Medical evidence', 'Consent evidence', 'Capacity evidence', 'Witness statements'],
+    specificRights: ['Right to consent defense', 'Right to capacity evidence', 'Right to rape shield protections'],
+    urgentActions: ['Contact experienced rape defense attorney', 'Preserve consent/capacity evidence', 'Challenge force allegations']
+  },
+  {
+    id: 'ny-pl-130.30',
+    name: 'Rape in the Second Degree',
+    code: 'PL 130.30',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Sexual intercourse with another person without consent under specific circumstances',
+    maxPenalty: 'Class D felony - up to 7 years in prison',
+    commonDefenses: ['Consent', 'Age proximity defense', 'False accusations', 'Mistake regarding consent'],
+    evidenceToGather: ['Age documentation', 'Consent evidence', 'Communication records', 'Relationship evidence'],
+    specificRights: ['Right to age proximity defense', 'Right to consent defense', 'Right to relationship evidence'],
+    urgentActions: ['Document age and relationship factors', 'Preserve consent evidence', 'Contact sex crimes attorney']
+  },
+  {
+    id: 'ny-pl-130.25',
+    name: 'Rape in the Third Degree',
+    code: 'PL 130.25',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Sexual intercourse with another person without consent or with person incapable of consent',
+    maxPenalty: 'Class E felony - up to 4 years in prison',
+    commonDefenses: ['Consent', 'Capacity to consent', 'Age factors', 'False accusations'],
+    evidenceToGather: ['Consent evidence', 'Capacity documentation', 'Age records', 'Medical evidence'],
+    specificRights: ['Right to consent defense', 'Right to capacity evidence', 'Right to age defenses'],
+    urgentActions: ['Preserve consent evidence', 'Document capacity factors', 'Contact defense attorney']
+  },
+
+  // Federal Sexual Abuse Charges
+  {
+    id: 'fed-18-2241',
+    name: 'Aggravated Sexual Abuse',
+    code: '18 USC 2241',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Sexual act by force, threat, or when victim is unable to consent in federal jurisdiction',
+    maxPenalty: 'Up to life imprisonment',
+    commonDefenses: ['Lack of federal jurisdiction', 'Consent', 'Lack of force', 'False accusations'],
+    evidenceToGather: ['Federal jurisdiction evidence', 'Consent documentation', 'Force evidence', 'Medical records'],
+    specificRights: ['Right to challenge federal jurisdiction', 'Right to consent defense', 'Right to federal counsel'],
+    urgentActions: ['Contact federal criminal defense attorney', 'Challenge jurisdiction if appropriate', 'Preserve consent evidence']
+  },
+  {
+    id: 'fed-18-2242',
+    name: 'Sexual Abuse',
+    code: '18 USC 2242',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Sexual contact without permission in federal jurisdiction',
+    maxPenalty: 'Up to 20 years imprisonment',
+    commonDefenses: ['Lack of federal jurisdiction', 'Consent', 'Accidental contact', 'False accusations'],
+    evidenceToGather: ['Federal jurisdiction evidence', 'Consent documentation', 'Witness statements', 'Character evidence'],
+    specificRights: ['Right to challenge federal jurisdiction', 'Right to consent defense', 'Right to character evidence'],
+    urgentActions: ['Contact federal defense attorney', 'Challenge jurisdiction', 'Document consent evidence']
+  },
+
+  // === CHILD ABUSE AND ELDER ABUSE CHARGES - ADDED FOR COMPREHENSIVE COVERAGE ===
+
+  // California Child Abuse and Elder Abuse Charges
+  {
+    id: 'ca-pc-273d',
+    name: 'Child Abuse (Corporal Injury)',
+    code: 'PC 273d',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Willfully inflicting corporal punishment or injury resulting in traumatic condition on a child',
+    maxPenalty: '2, 4, or 6 years in state prison',
+    commonDefenses: ['Reasonable discipline', 'Accident', 'False accusations', 'Self-defense'],
+    evidenceToGather: ['Medical records', 'Photos of injuries', 'Witness statements', 'Discipline practices'],
+    specificRights: ['Right to reasonable discipline defense', 'Right to challenge injury evidence', 'Right to family court records'],
+    urgentActions: ['Contact child abuse defense attorney', 'Document discipline practices', 'Preserve evidence of accident']
+  },
+  {
+    id: 'ca-pc-273a',
+    name: 'Child Endangerment',
+    code: 'PC 273a',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Willfully causing or permitting a child to suffer unjustifiable physical or mental suffering',
+    maxPenalty: 'Misdemeanor: up to 1 year jail; Felony: up to 6 years prison',
+    commonDefenses: ['Lack of willfulness', 'No endangerment occurred', 'Emergency circumstances', 'Reasonable parenting'],
+    evidenceToGather: ['Evidence of safety measures', 'Emergency circumstances', 'Parenting practices', 'Expert testimony'],
+    specificRights: ['Right to emergency defense', 'Right to parenting expert', 'Right to challenge endangerment'],
+    urgentActions: ['Document safety measures taken', 'Preserve emergency evidence', 'Contact family defense attorney']
+  },
+  {
+    id: 'ca-pc-368',
+    name: 'Elder Abuse',
+    code: 'PC 368',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Willfully causing or permitting suffering, injury, or endangerment of an elder or dependent adult',
+    maxPenalty: '2, 3, or 4 years in state prison; Enhanced if great bodily injury',
+    commonDefenses: ['Lack of willfulness', 'Reasonable care provided', 'Emergency circumstances', 'Consent'],
+    evidenceToGather: ['Care records', 'Medical documentation', 'Expert testimony on care standards', 'Consent evidence'],
+    specificRights: ['Right to care standard defense', 'Right to consent evidence', 'Right to medical expert'],
+    urgentActions: ['Gather care documentation', 'Contact elder abuse defense attorney', 'Document care standards']
+  },
+
+  // Texas Child Abuse Charges
+  {
+    id: 'tx-pc-22.04',
+    name: 'Injury to a Child',
+    code: 'PC 22.04',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentionally, knowingly, recklessly, or with criminal negligence causing injury to a child',
+    maxPenalty: 'State jail felony to 1st degree felony (2-99 years) depending on injury severity',
+    commonDefenses: ['Accident', 'Reasonable discipline', 'Lack of intent', 'Medical condition'],
+    evidenceToGather: ['Medical records', 'Accident evidence', 'Discipline documentation', 'Expert medical testimony'],
+    specificRights: ['Right to accident defense', 'Right to reasonable discipline defense', 'Right to medical expert'],
+    urgentActions: ['Document accident circumstances', 'Preserve medical evidence', 'Contact child injury defense attorney']
+  },
+  {
+    id: 'tx-fc-261.001',
+    name: 'Child Abuse (Family Code)',
+    code: 'Family Code 261.001',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Physical injury that results in substantial harm or creates substantial risk of death',
+    maxPenalty: 'Varies by specific circumstances and injury severity',
+    commonDefenses: ['Accident', 'Medical condition', 'False accusations', 'Reasonable discipline'],
+    evidenceToGather: ['Medical records', 'Accident reconstruction', 'Discipline practices', 'Character witnesses'],
+    specificRights: ['Right to medical expert', 'Right to accident defense', 'Right to character evidence'],
+    urgentActions: ['Gather medical documentation', 'Document accident circumstances', 'Contact family law attorney']
+  },
+
+  // Florida Child Abuse Charges
+  {
+    id: 'fl-827.03',
+    name: 'Child Abuse',
+    code: 'FS 827.03',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Intentional infliction of physical or mental injury upon a child or intentional act likely to cause injury',
+    maxPenalty: '3rd degree felony - up to 5 years prison, $5,000 fine',
+    commonDefenses: ['Accident', 'Reasonable discipline', 'False accusations', 'Medical condition'],
+    evidenceToGather: ['Medical records', 'Discipline documentation', 'Accident evidence', 'Character witnesses'],
+    specificRights: ['Right to reasonable discipline defense', 'Right to accident defense', 'Right to medical expert'],
+    urgentActions: ['Document discipline practices', 'Preserve accident evidence', 'Contact child abuse defense attorney']
+  },
+  {
+    id: 'fl-827.03-agg',
+    name: 'Aggravated Child Abuse',
+    code: 'FS 827.03',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Child abuse that results in great bodily harm, permanent disability, or disfigurement',
+    maxPenalty: '1st degree felony - up to 30 years prison',
+    commonDefenses: ['Accident', 'Medical condition', 'False accusations', 'Lack of intent'],
+    evidenceToGather: ['Medical expert testimony', 'Accident reconstruction', 'Medical condition evidence', 'Character evidence'],
+    specificRights: ['Right to medical expert', 'Right to accident defense', 'Right to challenge injury evidence'],
+    urgentActions: ['Contact experienced aggravated child abuse attorney', 'Obtain medical expert', 'Document accident circumstances']
+  },
+  {
+    id: 'fl-825.102',
+    name: 'Abuse of Elderly/Disabled Adult',
+    code: 'FS 825.102',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Intentional infliction of physical or psychological injury upon elderly person or disabled adult',
+    maxPenalty: '3rd degree felony - up to 5 years prison; 1st degree if great bodily harm',
+    commonDefenses: ['Accident', 'Reasonable care', 'Consent', 'Emergency circumstances'],
+    evidenceToGather: ['Care records', 'Medical documentation', 'Consent evidence', 'Expert testimony'],
+    specificRights: ['Right to care standard defense', 'Right to consent defense', 'Right to medical expert'],
+    urgentActions: ['Gather care documentation', 'Document consent', 'Contact elder abuse defense attorney']
+  },
+
+  // New York Child Abuse Charges
+  {
+    id: 'ny-pl-260.10',
+    name: 'Endangering the Welfare of a Child',
+    code: 'PL 260.10',
+    jurisdiction: 'NY',
+    category: 'misdemeanor',
+    description: 'Acting in a manner likely to be injurious to physical, mental, or moral welfare of child under 17',
+    maxPenalty: 'Class A misdemeanor - up to 1 year jail',
+    commonDefenses: ['Reasonable parenting', 'No endangerment', 'Emergency circumstances', 'False accusations'],
+    evidenceToGather: ['Parenting practices', 'Safety measures', 'Emergency documentation', 'Character witnesses'],
+    specificRights: ['Right to reasonable parenting defense', 'Right to emergency defense', 'Right to character evidence'],
+    urgentActions: ['Document parenting practices', 'Preserve emergency evidence', 'Contact family defense attorney']
+  },
+  {
+    id: 'ny-pl-260.25',
+    name: 'Endangering Welfare of Vulnerable Elderly',
+    code: 'PL 260.25',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Recklessly engaging in conduct creating substantial risk of physical injury to vulnerable elderly person',
+    maxPenalty: 'Class E felony - up to 4 years prison',
+    commonDefenses: ['Reasonable care', 'No substantial risk', 'Emergency circumstances', 'Consent'],
+    evidenceToGather: ['Care standards', 'Risk assessment', 'Emergency circumstances', 'Consent documentation'],
+    specificRights: ['Right to care standard defense', 'Right to risk assessment', 'Right to emergency defense'],
+    urgentActions: ['Document care standards', 'Gather emergency evidence', 'Contact elder abuse attorney']
+  },
+
+  // Federal Child Abuse Charges
+  {
+    id: 'fed-18-2251',
+    name: 'Sexual Exploitation of Children',
+    code: '18 USC 2251',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Using, employing, or persuading a minor to engage in sexually explicit conduct for production of visual depictions',
+    maxPenalty: '15-30 years imprisonment; enhanced penalties for repeat offenders',
+    commonDefenses: ['Lack of federal jurisdiction', 'Age mistake', 'Lack of knowledge', 'False accusations'],
+    evidenceToGather: ['Federal jurisdiction evidence', 'Age documentation', 'Knowledge evidence', 'Expert testimony'],
+    specificRights: ['Right to challenge federal jurisdiction', 'Right to age evidence', 'Right to federal counsel'],
+    urgentActions: ['Contact federal criminal defense attorney', 'Challenge jurisdiction if appropriate', 'Gather age evidence']
+  },
+
+  // === THEFT VARIANTS AND OTHER PROPERTY CRIMES - ADDED FOR COMPREHENSIVE COVERAGE ===
+
+  // California Theft Variants and Property Crimes
+  {
+    id: 'ca-pc-484',
+    name: 'Petty Theft (Shoplifting)',
+    code: 'PC 484',
+    jurisdiction: 'CA',
+    category: 'misdemeanor',
+    description: 'Taking property valued at $950 or less with intent to permanently deprive owner',
+    maxPenalty: 'Up to 6 months jail and/or $1,000 fine',
+    commonDefenses: ['Lack of intent to steal', 'Good faith belief of ownership', 'Mistake', 'Entrapment'],
+    evidenceToGather: ['Purchase receipts', 'Ownership documentation', 'Surveillance video', 'Witness statements'],
+    specificRights: ['Right to challenge intent evidence', 'Right to ownership defense', 'Right to jury trial'],
+    urgentActions: ['Gather ownership documentation', 'Preserve receipt evidence', 'Contact theft defense attorney']
+  },
+  {
+    id: 'ca-pc-518',
+    name: 'Extortion (Blackmail)',
+    code: 'PC 518',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Obtaining property from another through wrongful use of force, fear, or official right',
+    maxPenalty: '2, 3, or 4 years in state prison',
+    commonDefenses: ['No threat made', 'Legitimate demand', 'No intent to extort', 'False accusations'],
+    evidenceToGather: ['Communication records', 'Witness statements', 'Context of relationship', 'Legitimate claim evidence'],
+    specificRights: ['Right to challenge threat evidence', 'Right to legitimate demand defense', 'Right to context evidence'],
+    urgentActions: ['Preserve legitimate claim evidence', 'Document relationship context', 'Contact extortion defense attorney']
+  },
+  {
+    id: 'ca-pc-68',
+    name: 'Bribery of Public Official',
+    code: 'PC 68',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Giving or offering money or thing of value to public official to influence official act',
+    maxPenalty: '2, 3, or 4 years in state prison',
+    commonDefenses: ['No corrupt intent', 'Legitimate payment', 'No official act involved', 'Entrapment'],
+    evidenceToGather: ['Payment documentation', 'Official act evidence', 'Intent evidence', 'Business relationship records'],
+    specificRights: ['Right to challenge corrupt intent', 'Right to legitimate payment defense', 'Right to entrapment defense'],
+    urgentActions: ['Document legitimate business relationship', 'Preserve payment records', 'Contact public corruption attorney']
+  },
+
+  // Texas Theft and Property Crime Variants
+  {
+    id: 'tx-pc-31.03-shoplifting',
+    name: 'Retail Theft (Shoplifting)',
+    code: 'PC 31.03',
+    jurisdiction: 'TX',
+    category: 'misdemeanor',
+    description: 'Theft of property from retail establishment',
+    maxPenalty: 'Class B misdemeanor to felony depending on value',
+    commonDefenses: ['Lack of intent to steal', 'Mistake', 'Payment made', 'Entrapment'],
+    evidenceToGather: ['Receipt evidence', 'Payment documentation', 'Surveillance video', 'Intent evidence'],
+    specificRights: ['Right to intent defense', 'Right to challenge value', 'Right to payment evidence'],
+    urgentActions: ['Gather payment evidence', 'Document intent to pay', 'Contact retail theft attorney']
+  },
+  {
+    id: 'tx-pc-36.02',
+    name: 'Bribery',
+    code: 'PC 36.02',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Conferring benefit on public servant with intent to influence official conduct',
+    maxPenalty: '2nd degree felony - 2-20 years prison, up to $10,000 fine',
+    commonDefenses: ['No corrupt intent', 'Legitimate business', 'No benefit conferred', 'Entrapment'],
+    evidenceToGather: ['Business relationship evidence', 'Intent evidence', 'Payment documentation', 'Official conduct records'],
+    specificRights: ['Right to legitimate business defense', 'Right to challenge intent', 'Right to entrapment defense'],
+    urgentActions: ['Document legitimate business relationship', 'Preserve intent evidence', 'Contact corruption defense attorney']
+  },
+  {
+    id: 'tx-pc-36.06',
+    name: 'Obstruction or Retaliation',
+    code: 'PC 36.06',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Intentionally or knowingly harming or threatening to harm another by unlawful act',
+    maxPenalty: '3rd degree felony - 2-10 years prison',
+    commonDefenses: ['No intent to obstruct', 'No threat made', 'Legitimate criticism', 'Protected speech'],
+    evidenceToGather: ['Communication records', 'Context evidence', 'Intent evidence', 'Protected speech documentation'],
+    specificRights: ['Right to protected speech defense', 'Right to challenge threat evidence', 'Right to context evidence'],
+    urgentActions: ['Document protected speech', 'Preserve context evidence', 'Contact First Amendment attorney']
+  },
+
+  // Florida Property Crime Variants
+  {
+    id: 'fl-812.015',
+    name: 'Retail Theft',
+    code: 'FS 812.015',
+    jurisdiction: 'FL',
+    category: 'misdemeanor',
+    description: 'Taking possession of or carrying away merchandise from retail establishment',
+    maxPenalty: '1st degree misdemeanor - up to 1 year jail, $1,000 fine',
+    commonDefenses: ['Lack of intent', 'Payment made', 'Mistake', 'Entrapment'],
+    evidenceToGather: ['Payment evidence', 'Intent documentation', 'Surveillance footage', 'Receipt records'],
+    specificRights: ['Right to intent defense', 'Right to payment evidence', 'Right to challenge retail theft charge'],
+    urgentActions: ['Gather payment documentation', 'Document intent to pay', 'Contact retail theft defense attorney']
+  },
+  {
+    id: 'fl-838.015',
+    name: 'Bribery',
+    code: 'FS 838.015',
+    jurisdiction: 'FL',
+    category: 'felony',
+    description: 'Unlawfully giving, offering, or promising anything of value to public servant',
+    maxPenalty: '2nd degree felony - up to 15 years prison, $10,000 fine',
+    commonDefenses: ['No corrupt intent', 'Legitimate business relationship', 'No benefit offered', 'Entrapment'],
+    evidenceToGather: ['Business relationship documentation', 'Intent evidence', 'Communication records', 'Legitimate purpose evidence'],
+    specificRights: ['Right to legitimate business defense', 'Right to challenge intent', 'Right to entrapment defense'],
+    urgentActions: ['Document legitimate business purpose', 'Preserve relationship evidence', 'Contact corruption attorney']
+  },
+
+  // New York Property Crime Variants
+  {
+    id: 'ny-pl-155.25-shoplifting',
+    name: 'Petit Larceny (Shoplifting)',
+    code: 'PL 155.25',
+    jurisdiction: 'NY',
+    category: 'misdemeanor',
+    description: 'Wrongfully taking property from retail establishment with intent to deprive',
+    maxPenalty: 'Class A misdemeanor - up to 1 year jail',
+    commonDefenses: ['Lack of intent', 'Payment made', 'Mistake', 'Entrapment'],
+    evidenceToGather: ['Payment documentation', 'Intent evidence', 'Receipt records', 'Surveillance video'],
+    specificRights: ['Right to intent defense', 'Right to payment evidence', 'Right to challenge larceny charge'],
+    urgentActions: ['Document payment attempt', 'Gather intent evidence', 'Contact shoplifting defense attorney']
+  },
+  {
+    id: 'ny-pl-200.00',
+    name: 'Bribery in the Third Degree',
+    code: 'PL 200.00',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Conferring or offering to confer benefit upon public servant when not authorized by law',
+    maxPenalty: 'Class D felony - up to 7 years prison',
+    commonDefenses: ['Authorized by law', 'No corrupt intent', 'Legitimate business', 'No benefit conferred'],
+    evidenceToGather: ['Legal authorization', 'Business relationship evidence', 'Intent documentation', 'Official conduct records'],
+    specificRights: ['Right to legal authorization defense', 'Right to challenge corrupt intent', 'Right to business relationship evidence'],
+    urgentActions: ['Document legal authorization', 'Preserve business evidence', 'Contact public corruption attorney']
+  },
+  {
+    id: 'ny-pl-155.05',
+    name: 'Larceny (Enhanced Elements)',
+    code: 'PL 155.05',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Wrongfully taking, obtaining, or withholding property from owner with intent to deprive',
+    maxPenalty: 'Varies by degree - Class E felony to Class B felony',
+    commonDefenses: ['Good faith belief of ownership', 'Lack of intent to deprive', 'Consent', 'Return of property'],
+    evidenceToGather: ['Ownership documentation', 'Intent evidence', 'Consent records', 'Property return evidence'],
+    specificRights: ['Right to ownership defense', 'Right to consent defense', 'Right to challenge intent'],
+    urgentActions: ['Gather ownership evidence', 'Document consent or return', 'Contact larceny defense attorney']
+  },
+
+  // Federal Fraud and Corruption Charges
+  {
+    id: 'fed-18-1341',
+    name: 'Mail Fraud',
+    code: '18 USC 1341',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Using mail system in furtherance of scheme to defraud or obtain money/property by false pretenses',
+    maxPenalty: 'Up to 20 years imprisonment; 30 years if affecting financial institution',
+    commonDefenses: ['Lack of federal jurisdiction', 'Good faith', 'No scheme to defraud', 'No use of mail'],
+    evidenceToGather: ['Federal jurisdiction evidence', 'Good faith evidence', 'Business documentation', 'Mail usage records'],
+    specificRights: ['Right to challenge federal jurisdiction', 'Right to good faith defense', 'Right to federal counsel'],
+    urgentActions: ['Contact federal criminal defense attorney', 'Document good faith business practices', 'Preserve business records']
+  },
+  {
+    id: 'fed-18-666',
+    name: 'Federal Program Bribery',
+    code: '18 USC 666',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Bribery concerning programs receiving federal funds',
+    maxPenalty: 'Up to 10 years imprisonment',
+    commonDefenses: ['Lack of federal funding nexus', 'No corrupt intent', 'Legitimate business relationship', 'Entrapment'],
+    evidenceToGather: ['Federal funding evidence', 'Business relationship documentation', 'Intent evidence', 'Entrapment evidence'],
+    specificRights: ['Right to challenge federal nexus', 'Right to legitimate business defense', 'Right to entrapment defense'],
+    urgentActions: ['Contact federal corruption attorney', 'Document legitimate business relationship', 'Challenge federal nexus']
   }
 ];
 
@@ -4171,13 +4972,35 @@ export const chargeCategories = {
     'tx-pc-19.03', 'tx-pc-19.02', 'tx-pc-19.04', 'tx-pc-19.05',
     'fl-782.04-1st', 'fl-782.04-2nd', 'fl-782.04-3rd', 'fl-782.07', 'fl-782.071',
     'ny-pl-125.27', 'ny-pl-125.25', 'ny-pl-125.20', 'ny-pl-125.15', 'ny-vt-125.12',
-    // Other violent crimes
+    // Kidnapping charges
+    'ca-pc-207', 'ca-pc-209', 'ca-pc-278', 'tx-pc-20.03', 'tx-pc-20.04', 'fl-787.01', 'fl-787.02', 'ny-pl-135.25', 'ny-pl-135.20', 'ny-pl-135.10', 'fed-18-1201',
+    // Rape and Sexual Battery charges
+    'ca-pc-261', 'ca-pc-243.4', 'ca-pc-261.5', 'tx-pc-22.011', 'tx-pc-22.021', 'fl-794.011-capital', 'fl-794.011-life', 'fl-794.011-1st', 'ny-pl-130.35', 'ny-pl-130.30', 'ny-pl-130.25', 'fed-18-2241', 'fed-18-2242',
+    // Child Abuse and Elder Abuse charges
+    'ca-pc-273d', 'ca-pc-273a', 'ca-pc-368', 'tx-pc-22.04', 'tx-fc-261.001', 'fl-827.03', 'fl-827.03-agg', 'fl-825.102', 'ny-pl-260.10', 'ny-pl-260.25', 'fed-18-2251',
+    // Other violent crimes (assault, robbery, domestic violence, etc.)
     'ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57', 'al-13a-6-20', 'al-13a-6-21', 'al-13a-6-130', 'ak-11.41.200', 'ak-11.41.210', 'ak-18.66.100', 'az-13-1203', 'az-13-1204', 'wa-9a.36.011', 'wa-9a.36.021', 'ma-265-13a', 'ma-265-15a', 'tn-39-13-101', 'tn-39-13-102', 'wi-940-19', 'wi-940-225', 'co-18-3-202', 'co-18-3-203', 'ct-53a-59', 'ct-53a-60', 'la-14-37', 'la-14-34', 'la-14-35.3', 'or-163-assault-1', 'or-163-assault-2', 'nv-200-471', 'nv-200-assault-weapon', 'nj-2c-12-1', 'nj-2c-12-1b', 'md-3-202', 'md-3-203', 'mo-565-050', 'mo-565-060', 'mn-609-221', 'mn-609-222', 'sc-16-3-600', 'sc-16-3-600-2', 'sc-16-25-20', 'ky-508-assault-4', 'ky-strangulation', 'in-battery', 'in-intimidation', 'in-domestic-battery', 'ia-708-1', 'ia-708-2a', 'ks-21-5412', 'ks-domestic-assault', 'ar-5-13-205', 'ar-aggravated-assault', 'ar-domestic-battering', 'de-assault-3', 'de-assault-2', 'hi-assault-1', 'hi-assault-3', 'hi-domestic-abuse', 'id-assault', 'id-battery', 'id-domestic-violence', 'me-assault', 'me-aggravated-assault', 'me-domestic-violence', 'ms-simple-assault', 'ms-aggravated-assault', 'ms-domestic-violence', 'mt-45-5-201', 'mt-aggravated-assault', 'mt-pfma', 'ne-28-310', 'ne-28-308', 'ne-28-323', 'nh-631-1', 'nh-631-2', 'nh-631-2b', 'nm-30-3-1', 'nm-30-3-2', 'nm-domestic-violence', 'nd-12.1-17-01', 'nd-12.1-17-02', 'nd-domestic-violence', 'ok-21-641', 'ok-21-642', 'ok-21-644', 'ri-11-5-2', 'ri-felony-assault', 'ri-domestic-violence', 'sd-22-18-1', 'sd-22-18-1.1', 'sd-domestic-abuse', 'ut-76-5-102', 'ut-76-5-103', 'ut-domestic-violence', 'vt-13-1023', 'vt-13-1024', 'vt-13-1042', 'wv-61-2-9', 'wv-61-2-10b', 'wv-domestic-assault', 'wy-6-2-501', 'wy-6-2-509', 'wy-6-2-510', 'dc-22-407', 'dc-22-402', 'dc-domestic-violence'
   ],
-  'Property Crimes': ['ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'fl-817.568', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'pa-18-3925', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'ga-16-9-1', 'nc-gs-14-72', 'nc-gs-14-51', 'nc-gs-14-100', 'mi-mcl-750.356', 'mi-mcl-750.110', 'mi-mcl-750.543m', 'mi-mcl-750.200h', 'va-18.2-95', 'va-18.2-89', 'va-18.2-178', 'al-13a-8-3', 'ak-11.46.120', 'az-13-1802', 'wa-9a.56.030', 'ma-266-30', 'tn-39-14-105', 'wi-943-20', 'co-18-4-401', 'ct-53a-122', 'la-14-theft', 'or-164-055', 'nv-205-0832', 'nj-2c-20-2', 'md-7-104', 'mo-570-030', 'mn-609-52', 'sc-16-13-30', 'ky-theft', 'in-theft', 'ia-714-2', 'ks-21-5801', 'ar-theft', 'de-theft', 'hi-theft-1', 'id-grand-theft', 'me-theft', 'ms-grand-larceny', 'mt-theft', 'ne-28-511', 'nh-637-11', 'nm-30-16-1', 'nd-12.1-23-05', 'ok-21-1701', 'ri-11-41-5', 'sd-22-30a-17', 'ut-76-6-404', 'vt-theft', 'wv-grand-larceny', 'wy-theft', 'dc-22-3212'],
+  'Property Crimes': [
+    // Arson charges
+    'ca-pc-451', 'ca-pc-452', 'tx-pc-28.02', 'fl-806.01-1st', 'fl-806.01-2nd', 'ny-pl-150.20', 'ny-pl-150.15', 'ny-pl-150.10', 'fed-18-81',
+    // Theft variants, shoplifting, and other property crimes
+    'ca-pc-484', 'ca-pc-518', 'tx-pc-31.03-shoplifting', 'fl-812.015', 'ny-pl-155.25-shoplifting', 'ny-pl-155.05',
+    // Existing property crimes
+    'ca-pc-459', 'ca-pc-487', 'tx-pc-31.03', 'tx-pc-30.02', 'fl-812.014-petit', 'fl-812.014-grand', 'fl-810.02', 'fl-817.568', 'ny-pl-155.25', 'ny-pl-155.30', 'ny-pl-140.20', 'pa-18-3921', 'pa-18-3502', 'pa-18-3925', 'il-720-5-16-1', 'il-720-5-19-1', 'oh-orc-2913.02', 'oh-orc-2911.12', 'ga-16-8-2', 'ga-16-7-1', 'ga-16-9-1', 'nc-gs-14-72', 'nc-gs-14-51', 'nc-gs-14-100', 'mi-mcl-750.356', 'mi-mcl-750.110', 'mi-mcl-750.543m', 'mi-mcl-750.200h', 'va-18.2-95', 'va-18.2-89', 'va-18.2-178', 'al-13a-8-3', 'ak-11.46.120', 'az-13-1802', 'wa-9a.56.030', 'ma-266-30', 'tn-39-14-105', 'wi-943-20', 'co-18-4-401', 'ct-53a-122', 'la-14-theft', 'or-164-055', 'nv-205-0832', 'nj-2c-20-2', 'md-7-104', 'mo-570-030', 'mn-609-52', 'sc-16-13-30', 'ky-theft', 'in-theft', 'ia-714-2', 'ks-21-5801', 'ar-theft', 'de-theft', 'hi-theft-1', 'id-grand-theft', 'me-theft', 'ms-grand-larceny', 'mt-theft', 'ne-28-511', 'nh-637-11', 'nm-30-16-1', 'nd-12.1-23-05', 'ok-21-1701', 'ri-11-41-5', 'sd-22-30a-17', 'ut-76-6-404', 'vt-theft', 'wv-grand-larceny', 'wy-theft', 'dc-22-3212'
+  ],
   'Drug Crimes': ['ca-hs-11350', 'tx-hs-481.115', 'fl-893.13', 'pa-18-6318', 'il-720-570-402', 'mi-mcl-333.7403', 'va-18.2-250', 'nc-gs-90-95', 'ga-16-13-30', 'al-13a-12-212', 'ak-11.71.040', 'az-13-3407', 'wa-69.50.4013', 'ma-94c-possession', 'tn-39-17-417', 'wi-drug-possession', 'co-18-18-403.5', 'ct-21a-279', 'or-475-752', 'nv-453-336', 'nj-2c-35-10', 'md-5-601', 'mo-drug-possession', 'mn-152-drug', 'sc-44-53-375', 'ky-218a-1415', 'in-drug-possession', 'ia-124-401', 'ks-21-5706', 'ar-drug-possession', 'de-drug-possession', 'hi-drug-possession', 'id-drug-possession', 'me-drug-possession', 'ms-drug-possession', 'mt-drug-possession', 'ne-drug-possession', 'nh-drug-possession', 'nm-30-31-23', 'nd-drug-possession', 'ok-drug-possession', 'ri-drug-possession', 'sd-drug-possession', 'ut-drug-possession', 'vt-drug-possession', 'wv-drug-possession', 'wy-drug-possession', 'dc-drug-possession', 'fed-21-841'],
   'Weapons Crimes': ['tx-pc-46.02', 'fl-790.23', 'il-720-5-24-1', 'va-18.2-308', 'nc-gs-14-269', 'ga-16-11-126', 'al-13a-11-72', 'ak-11.61.200', 'az-13-3102', 'wa-9.41.040', 'ma-269-firearm', 'tn-39-17-1307', 'wi-941-29', 'co-18-12-108', 'ct-53a-217', 'la-14-95.1', 'or-166-felon', 'nv-202-firearm', 'nj-2c-39-5', 'md-4-203', 'mo-571-030', 'mn-624-713', 'ky-527-040', 'ia-724-4', 'ks-21-6304', 'de-firearm-concealed'],
-  'Federal Crimes': ['fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371'],
+  'Federal Crimes': [
+    // Existing federal crimes
+    'fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371',
+    // New federal charges added
+    'fed-18-81', 'fed-18-1201', 'fed-18-2241', 'fed-18-2242', 'fed-18-2251', 'fed-18-666'
+  ],
+  'Corruption/Bribery': [
+    // State bribery and corruption charges
+    'ca-pc-68', 'tx-pc-36.02', 'tx-pc-36.06', 'fl-838.015', 'ny-pl-200.00', 'fed-18-666'
+  ],
   'Traffic/DUI': ['ca-vc-23152', 'tx-pc-49.04', 'fl-316.193', 'ny-vtl-1192', 'pa-75-3802', 'il-625-5-11-501', 'oh-orc-4511.19', 'ga-40-6-391', 'nc-gs-20-138.1', 'mi-mcl-257.625', 'va-18.2-266'],
   'Public Order': ['ca-pc-314', 'ca-pc-647']
 };
