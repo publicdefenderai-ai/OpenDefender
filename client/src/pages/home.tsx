@@ -254,6 +254,7 @@ export default function Home() {
                 title="Diversion Programs"
                 description="Alternative sentencing options including drug courts, community service, and treatment programs."
                 buttonText="Explore Options"
+                href="/diversion-programs"
                 iconBgColor="bg-green-600"
               />
             </ScrollReveal>
@@ -264,6 +265,7 @@ export default function Home() {
                 title="Legal Glossary"
                 description="Plain-language definitions of common legal terms and court procedures."
                 buttonText="Browse Terms"
+                href="/legal-glossary"
                 iconBgColor="bg-purple-600"
               />
             </ScrollReveal>
@@ -274,6 +276,7 @@ export default function Home() {
                 title="Record Expungement"
                 description="Learn about sealing or expunging criminal records and eligibility requirements by state."
                 buttonText="Check Eligibility"
+                href="/record-expungement"
                 iconBgColor="bg-indigo-600"
               />
             </ScrollReveal>
