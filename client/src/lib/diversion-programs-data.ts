@@ -22,6 +22,24 @@ export const diversionPrograms: DiversionProgram[] = [
     isActive: true,
   },
   {
+    id: "ca-la-mental-health-court",
+    name: "Los Angeles County Mental Health Court",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Los Angeles",
+    cities: ["Los Angeles", "Pasadena", "Glendale", "Burbank", "Long Beach"],
+    zipCodes: ["90001", "90002", "90003", "90004", "90005", "90006", "90007", "90008", "90010", "90012", "90013", "90014", "90015", "90017", "90019", "90020", "90021", "90024", "90025", "90026", "90027", "90028", "90029", "90031", "90032", "90033", "90034", "90035", "90036", "90037", "90038", "90039", "90040", "90041", "90042", "90043", "90044", "90045", "90046", "90047", "90048", "90049", "90056", "90057", "90058", "90059", "90061", "90062", "90063", "90064", "90065", "90066", "90067", "90068", "90069", "90071", "90073", "90077", "90078", "90079", "90089", "90094", "90095", "90210", "90211", "90212", "90230", "90232", "90247", "90248", "90249", "90250", "90254", "90255", "90260", "90262", "90263", "90264", "90265", "90266", "90267", "90272", "90274", "90275", "90277", "90278", "90280", "90290", "90291", "90292", "90293", "90301", "90302", "90303", "90304", "90305", "90401", "90402", "90403", "90404", "90405"],
+    programTypes: ["Mental Health Court", "Rapid Diversion Program", "Court Linkage Program", "Crisis Intervention"],
+    eligibilityNotes: "Mental health or substance use disorders. Pre-plea diversion available under California Penal Code Section 1001.36. Both misdemeanor and felony charges eligible.",
+    contact: {
+      phone: "(323) 226-2908",
+      url: "https://www.lacourt.org/division/mentalhealth/mentalhealth.aspx"
+    },
+    sources: ["Los Angeles Superior Court Mental Health Division", "Center for Health and Justice Report"],
+    lastUpdated: new Date("2024-09-20"),
+    isActive: true,
+  },
+  {
     id: "ca-sf-community-justice",
     name: "San Francisco Community Justice Center",
     jurisdictionType: "city",
@@ -169,6 +187,83 @@ export const diversionPrograms: DiversionProgram[] = [
     },
     sources: ["Brooklyn Criminal Court"],
     lastUpdated: new Date("2024-01-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-bronx-tasc",
+    name: "Bronx TASC Diversion Program",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Bronx",
+    cities: ["Bronx"],
+    zipCodes: ["10451", "10452", "10453", "10454", "10455", "10456", "10457", "10458", "10459", "10460", "10461", "10462", "10463", "10464", "10465", "10466", "10467", "10468", "10469", "10470", "10471", "10472", "10473", "10474", "10475"],
+    programTypes: ["Substance Abuse Treatment", "Case Management", "Court Liaison Services"],
+    eligibilityNotes: "Non-violent substance abuse related offenses. Minimum 12-18 month program commitment. Successful completion may result in case reduction or dismissal.",
+    contact: {
+      phone: "(718) 538-7416",
+      email: "Yolanda.Cardona@EAC-Network.org",
+      url: "https://eac-network.org/bronx-tasc/"
+    },
+    sources: ["EAC Network", "Center for Health and Justice Report"],
+    lastUpdated: new Date("2024-09-20"),
+    isActive: true,
+  },
+
+  // Delaware Programs
+  {
+    id: "de-wilmington-tasc",
+    name: "Delaware TASC Treatment Access Center - Wilmington",
+    jurisdictionType: "state",
+    state: "DE",
+    county: "New Castle",
+    cities: ["Wilmington", "Newark", "New Castle"],
+    zipCodes: ["19701", "19702", "19703", "19706", "19707", "19708", "19709", "19710", "19711", "19712", "19713", "19714", "19715", "19716", "19717", "19718", "19720", "19721", "19801", "19802", "19803", "19804", "19805", "19806", "19807", "19808", "19809", "19810", "19850", "19880", "19884", "19885", "19886", "19890", "19891", "19892", "19893", "19894", "19895", "19896", "19897", "19898"],
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "TIP/WISH Court", "Re-Entry Court"],
+    eligibilityNotes: "Coordinates all drug court diversion programs in Delaware. Superior Court minimum 6 months, Court of Common Pleas minimum 14 weeks.",
+    contact: {
+      phone: "(302) 577-2711",
+      url: "https://dhss.delaware.gov/dhss/dsamh/tasc.html"
+    },
+    sources: ["Delaware Department of Health and Social Services", "Center for Health and Justice Report"],
+    lastUpdated: new Date("2024-09-20"),
+    isActive: true,
+  },
+  {
+    id: "de-georgetown-tasc",
+    name: "Delaware TASC Treatment Access Center - Georgetown",
+    jurisdictionType: "state",
+    state: "DE",
+    county: "Sussex",
+    cities: ["Georgetown", "Rehoboth Beach", "Lewes", "Seaford", "Milford"],
+    zipCodes: ["19930", "19931", "19933", "19934", "19936", "19938", "19939", "19940", "19941", "19943", "19944", "19945", "19946", "19947", "19950", "19951", "19952", "19953", "19954", "19955", "19956", "19958", "19960", "19962", "19963", "19964", "19966", "19967", "19968", "19969", "19970", "19971", "19973", "19975", "19977", "19979", "19980"],
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "TIP/WISH Court", "Re-Entry Court"],
+    eligibilityNotes: "Southern Delaware location serving Sussex County. Provides intake assessments, urinalysis, educational groups, and case management services.",
+    contact: {
+      phone: "(302) 854-0010",
+      url: "https://dhss.delaware.gov/dhss/dsamh/tasc.html"
+    },
+    sources: ["Delaware Department of Health and Social Services", "Center for Health and Justice Report"],
+    lastUpdated: new Date("2024-09-20"),
+    isActive: true,
+  },
+
+  // Wisconsin Programs
+  {
+    id: "wi-milwaukee-drug-court",
+    name: "Milwaukee County Drug Treatment Court",
+    jurisdictionType: "county",
+    state: "WI",
+    county: "Milwaukee",
+    cities: ["Milwaukee", "West Allis", "Wauwatosa", "Greenfield"],
+    zipCodes: ["53201", "53202", "53203", "53204", "53205", "53206", "53207", "53208", "53209", "53210", "53211", "53212", "53213", "53214", "53215", "53216", "53217", "53218", "53219", "53220", "53221", "53222", "53223", "53224", "53225", "53226", "53227", "53228", "53233", "53234", "53235", "53237", "53259", "53263", "53274", "53278", "53288", "53290", "53293", "53295"],
+    programTypes: ["Drug Treatment Court", "Treatment Alternatives and Diversion (TAD)"],
+    eligibilityNotes: "Part of Wisconsin's TAD program for non-violent offenders with substance abuse issues. Alternative to incarceration with judicial supervision.",
+    contact: {
+      phone: "(414) 278-5362",
+      url: "https://county.milwaukee.gov/EN/Courts/Court-Resources/Drug-Treatment-Court"
+    },
+    sources: ["Milwaukee County Courts", "Wisconsin DOJ TAD Program", "Center for Health and Justice Report"],
+    lastUpdated: new Date("2024-09-20"),
     isActive: true,
   },
 

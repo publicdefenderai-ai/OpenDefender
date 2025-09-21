@@ -8,6 +8,19 @@ Public Defender AI is a web application designed to provide accessible legal gui
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+### Enhanced Diversion Programs Database (September 2024)
+- Expanded diversion programs database using Center for Health and Justice research
+- Added verified TASC programs with real contact information:
+  - Bronx TASC Diversion Program (NY) - EAC Network partnership
+  - Delaware TASC Treatment Access Centers (Wilmington and Georgetown locations)  
+  - Milwaukee County Drug Treatment Court (WI) - Part of state TAD program
+  - Los Angeles County Mental Health Court (CA) - Rapid Diversion Program
+- All new programs include verified addresses, phone numbers, and eligibility requirements
+- Enhanced location search capabilities with comprehensive zip code coverage
+- Programs sourced from official Center for Health and Justice national survey report
+
 ## System Architecture
 
 ### Frontend Architecture
