@@ -4937,7 +4937,7 @@ export const criminalCharges: CriminalCharge[] = [
 
   // Federal Fraud and Corruption Charges
   {
-    id: 'fed-18-1341',
+    id: 'fed-18-1341-mail',
     name: 'Mail Fraud',
     code: '18 USC 1341',
     jurisdiction: 'Federal',
@@ -4961,6 +4961,209 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Federal funding evidence', 'Business relationship documentation', 'Intent evidence', 'Entrapment evidence'],
     specificRights: ['Right to challenge federal nexus', 'Right to legitimate business defense', 'Right to entrapment defense'],
     urgentActions: ['Contact federal corruption attorney', 'Document legitimate business relationship', 'Challenge federal nexus']
+  },
+
+  // Technology/Cyber Crimes (Federal and Key States)
+  {
+    id: 'fed-18-1028',
+    name: 'Identity Theft',
+    code: '18 USC 1028',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Unlawfully producing, transferring, or possessing identity documents with intent to defraud',
+    maxPenalty: 'Up to 15 years federal prison and/or $250,000 fine',
+    commonDefenses: ['Lack of intent to defraud', 'Authorized use', 'Mistaken identity', 'Good faith'],
+    evidenceToGather: ['Identity documents', 'Financial documentation', 'Authorization records', 'Digital forensics'],
+    specificRights: ['Right to digital forensics expert', 'Right to challenge intent', 'Right to authorization defense'],
+    urgentActions: ['Preserve digital evidence', 'Contact identity theft attorney', 'Document authorized access']
+  },
+  {
+    id: 'fed-18-1028a',
+    name: 'Aggravated Identity Theft',
+    code: '18 USC 1028A',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Using means of identification of another person during commission of specified felonies',
+    maxPenalty: 'Mandatory 2 years consecutive to underlying felony (5 years for terrorism)',
+    commonDefenses: ['No knowledge of identity theft', 'Authorized use', 'Challenge underlying felony', 'Constitutional defense'],
+    evidenceToGather: ['Identity documentation', 'Underlying felony evidence', 'Authorization records', 'Knowledge evidence'],
+    specificRights: ['Right to challenge underlying felony', 'Right to knowledge defense', 'Right to consecutive sentencing challenge'],
+    urgentActions: ['Challenge underlying felony', 'Document lack of knowledge', 'Contact federal identity theft attorney']
+  },
+  {
+    id: 'ca-pc-530.5',
+    name: 'Identity Theft',
+    code: 'PC 530.5',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Unlawfully using another person\'s personal identifying information without consent',
+    maxPenalty: 'Up to 3 years in state prison and/or $10,000 fine',
+    commonDefenses: ['Consent of victim', 'Lack of intent to defraud', 'Mistaken identity', 'Family member exception'],
+    evidenceToGather: ['Financial records', 'Digital evidence', 'Consent documentation', 'Identity verification'],
+    specificRights: ['Right to show consent', 'Right to family member defense', 'Right to challenge financial loss'],
+    urgentActions: ['Document relationship to victim', 'Gather consent evidence', 'Contact identity theft attorney']
+  },
+  {
+    id: 'ny-pl-190.80',
+    name: 'Identity Theft in the First Degree',
+    code: 'PL 190.80',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Identity theft involving 10+ victims or financial benefit over $2,000',
+    maxPenalty: 'Class D felony - up to 7 years prison',
+    commonDefenses: ['Lack of intent to defraud', 'Authorized use', 'No financial benefit', 'Mistaken identity'],
+    evidenceToGather: ['Financial records', 'Digital evidence', 'Victim count documentation', 'Authorization records'],
+    specificRights: ['Right to challenge victim count', 'Right to show authorization', 'Right to financial analysis'],
+    urgentActions: ['Document authorized access', 'Challenge financial benefit calculation', 'Contact identity theft attorney']
+  },
+  {
+    id: 'ny-pl-190.79',
+    name: 'Identity Theft in the Second Degree',
+    code: 'PL 190.79',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Identity theft involving financial benefit between $500-$2,000 or personal identifying information',
+    maxPenalty: 'Class E felony - up to 4 years prison',
+    commonDefenses: ['Lack of intent to defraud', 'Authorized use', 'No financial benefit', 'Mistaken identity'],
+    evidenceToGather: ['Financial records', 'Digital evidence', 'Authorization records', 'Personal information'],
+    specificRights: ['Right to challenge financial benefit', 'Right to show authorization', 'Right to financial analysis'],
+    urgentActions: ['Document authorized access', 'Challenge financial benefit calculation', 'Contact identity theft attorney']
+  },
+  {
+    id: 'ny-pl-190.78',
+    name: 'Identity Theft in the Third Degree',
+    code: 'PL 190.78',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Identity theft involving financial benefit under $500',
+    maxPenalty: 'Class A misdemeanor - up to 1 year jail',
+    commonDefenses: ['Lack of intent to defraud', 'Authorized use', 'No financial benefit', 'Mistaken identity'],
+    evidenceToGather: ['Financial records', 'Digital evidence', 'Authorization records', 'Personal information'],
+    specificRights: ['Right to challenge financial benefit', 'Right to show authorization', 'Right to misdemeanor reduction'],
+    urgentActions: ['Document authorized access', 'Challenge financial benefit calculation', 'Contact identity theft attorney']
+  },
+  {
+    id: 'tx-pc-32.51',
+    name: 'Fraudulent Use of Identifying Information',
+    code: 'PC 32.51',
+    jurisdiction: 'TX',
+    category: 'felony',
+    description: 'Obtaining, possessing, transferring, or using identifying information of another without consent',
+    maxPenalty: 'State jail felony to 1st degree felony (depending on number of items/amount)',
+    commonDefenses: ['Consent of victim', 'Lack of intent to harm', 'Authorized use', 'Family member exception'],
+    evidenceToGather: ['Consent documentation', 'Family relationship proof', 'Financial records', 'Digital evidence'],
+    specificRights: ['Right to show consent', 'Right to family member defense', 'Right to challenge intent'],
+    urgentActions: ['Document relationship or consent', 'Gather authorization evidence', 'Contact identity theft attorney']
+  },
+
+  // Stalking and Harassment Crimes
+  {
+    id: 'fed-18-2261a',
+    name: 'Interstate Stalking',
+    code: '18 USC 2261A',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Using mail, internet, or crossing state lines to stalk another person',
+    maxPenalty: 'Up to 5 years federal prison; up to life if death results',
+    commonDefenses: ['Lack of intent to harass', 'Protected speech', 'No reasonable fear caused', 'Constitutional challenge'],
+    evidenceToGather: ['Communication records', 'Digital evidence', 'Witness statements', 'Intent documentation'],
+    specificRights: ['Right to First Amendment defense', 'Right to challenge interstate commerce', 'Right to intent defense'],
+    urgentActions: ['Preserve communication records', 'Document legitimate purpose', 'Contact federal stalking attorney']
+  },
+  {
+    id: 'ca-pc-646.9',
+    name: 'Stalking',
+    code: 'PC 646.9',
+    jurisdiction: 'CA',
+    category: 'felony',
+    description: 'Willfully harassing another person and making credible threat',
+    maxPenalty: 'Up to 5 years in state prison',
+    commonDefenses: ['No credible threat', 'Protected speech', 'Lack of intent to harass', 'Constitutional defense'],
+    evidenceToGather: ['Communication records', 'Threat analysis', 'Witness statements', 'Mental health records'],
+    specificRights: ['Right to First Amendment defense', 'Right to challenge credible threat', 'Right to mental health evaluation'],
+    urgentActions: ['Document communication context', 'Gather character witnesses', 'Contact stalking defense attorney']
+  },
+  {
+    id: 'ny-pl-120.45',
+    name: 'Stalking in the First Degree',
+    code: 'PL 120.45',
+    jurisdiction: 'NY',
+    category: 'felony',
+    description: 'Intentionally engaging in course of conduct directed at specific person causing reasonable fear',
+    maxPenalty: 'Class D felony - up to 7 years prison',
+    commonDefenses: ['No intent to cause fear', 'Protected speech', 'Legitimate purpose', 'Constitutional challenge'],
+    evidenceToGather: ['Communication records', 'Intent documentation', 'Legitimate purpose evidence', 'Mental health records'],
+    specificRights: ['Right to First Amendment defense', 'Right to legitimate purpose defense', 'Right to intent challenge'],
+    urgentActions: ['Document legitimate purpose', 'Preserve communication context', 'Contact stalking defense attorney']
+  },
+
+  // Financial/White Collar Crimes
+  {
+    id: 'fed-18-1343',
+    name: 'Wire Fraud',
+    code: '18 USC 1343',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Using interstate wire communications in furtherance of scheme to defraud',
+    maxPenalty: 'Up to 20 years federal prison; 30 years if affecting financial institution',
+    commonDefenses: ['Good faith', 'Lack of intent to defraud', 'No interstate wire use', 'Entrapment'],
+    evidenceToGather: ['Communication records', 'Financial documentation', 'Business records', 'Intent evidence'],
+    specificRights: ['Right to good faith defense', 'Right to challenge interstate commerce', 'Right to business relationship evidence'],
+    urgentActions: ['Preserve business documentation', 'Document good faith practices', 'Contact federal white collar attorney']
+  },
+  {
+    id: 'fed-18-1956',
+    name: 'Money Laundering',
+    code: '18 USC 1956',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Conducting financial transactions with proceeds of unlawful activity',
+    maxPenalty: 'Up to 20 years federal prison and/or $500,000 fine',
+    commonDefenses: ['Lack of knowledge of unlawful activity', 'Legitimate business transaction', 'Good faith', 'Entrapment'],
+    evidenceToGather: ['Financial records', 'Business documentation', 'Knowledge evidence', 'Transaction records'],
+    specificRights: ['Right to challenge knowledge element', 'Right to legitimate business defense', 'Right to financial expert'],
+    urgentActions: ['Preserve financial records', 'Document legitimate business purpose', 'Contact money laundering attorney']
+  },
+  {
+    id: 'fed-26-7201',
+    name: 'Tax Evasion',
+    code: '26 USC 7201',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Willfully attempting to evade or defeat federal income tax',
+    maxPenalty: 'Up to 5 years federal prison and/or $100,000 fine',
+    commonDefenses: ['Lack of willfulness', 'Good faith reliance on advisor', 'Impossibility', 'Statute of limitations'],
+    evidenceToGather: ['Tax records', 'Financial documentation', 'Advisor communications', 'Intent evidence'],
+    specificRights: ['Right to challenge willfulness', 'Right to advisor reliance defense', 'Right to tax expert'],
+    urgentActions: ['Gather tax documentation', 'Document advisor reliance', 'Contact tax crimes attorney']
+  },
+
+  // Administrative/Process Crimes  
+  {
+    id: 'fed-18-1621',
+    name: 'Perjury',
+    code: '18 USC 1621',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Willfully making false statements under oath in federal proceedings',
+    maxPenalty: 'Up to 5 years federal prison',
+    commonDefenses: ['Lack of willfulness', 'Truth of statement', 'Immaterial statement', 'Faulty memory'],
+    evidenceToGather: ['Transcript records', 'Truth documentation', 'Materiality evidence', 'Memory evidence'],
+    specificRights: ['Right to challenge materiality', 'Right to prove truth', 'Right to memory defense'],
+    urgentActions: ['Gather truth documentation', 'Document memory issues', 'Contact perjury defense attorney']
+  },
+  {
+    id: 'fed-18-1503',
+    name: 'Obstruction of Justice',
+    code: '18 USC 1503',
+    jurisdiction: 'Federal',
+    category: 'felony',
+    description: 'Corruptly influencing, obstructing, or impeding federal judicial proceedings',
+    maxPenalty: 'Up to 10 years federal prison',
+    commonDefenses: ['Lack of corrupt intent', 'No pending proceeding', 'Protected conduct', 'First Amendment'],
+    evidenceToGather: ['Intent documentation', 'Proceeding status', 'Protected conduct evidence', 'Constitutional arguments'],
+    specificRights: ['Right to challenge corrupt intent', 'Right to First Amendment defense', 'Right to protected conduct defense'],
+    urgentActions: ['Document legitimate purpose', 'Challenge proceeding status', 'Contact obstruction defense attorney']
   }
 ];
 
@@ -4978,8 +5181,10 @@ export const chargeCategories = {
     'ca-pc-261', 'ca-pc-243.4', 'ca-pc-261.5', 'tx-pc-22.011', 'tx-pc-22.021', 'fl-794.011-capital', 'fl-794.011-life', 'fl-794.011-1st', 'ny-pl-130.35', 'ny-pl-130.30', 'ny-pl-130.25', 'fed-18-2241', 'fed-18-2242',
     // Child Abuse and Elder Abuse charges
     'ca-pc-273d', 'ca-pc-273a', 'ca-pc-368', 'tx-pc-22.04', 'tx-fc-261.001', 'fl-827.03', 'fl-827.03-agg', 'fl-825.102', 'ny-pl-260.10', 'ny-pl-260.25', 'fed-18-2251',
-    // Other violent crimes (assault, robbery, domestic violence, etc.)
-    'ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57', 'al-13a-6-20', 'al-13a-6-21', 'al-13a-6-130', 'ak-11.41.200', 'ak-11.41.210', 'ak-18.66.100', 'az-13-1203', 'az-13-1204', 'wa-9a.36.011', 'wa-9a.36.021', 'ma-265-13a', 'ma-265-15a', 'tn-39-13-101', 'tn-39-13-102', 'wi-940-19', 'wi-940-225', 'co-18-3-202', 'co-18-3-203', 'ct-53a-59', 'ct-53a-60', 'la-14-37', 'la-14-34', 'la-14-35.3', 'or-163-assault-1', 'or-163-assault-2', 'nv-200-471', 'nv-200-assault-weapon', 'nj-2c-12-1', 'nj-2c-12-1b', 'md-3-202', 'md-3-203', 'mo-565-050', 'mo-565-060', 'mn-609-221', 'mn-609-222', 'sc-16-3-600', 'sc-16-3-600-2', 'sc-16-25-20', 'ky-508-assault-4', 'ky-strangulation', 'in-battery', 'in-intimidation', 'in-domestic-battery', 'ia-708-1', 'ia-708-2a', 'ks-21-5412', 'ks-domestic-assault', 'ar-5-13-205', 'ar-aggravated-assault', 'ar-domestic-battering', 'de-assault-3', 'de-assault-2', 'hi-assault-1', 'hi-assault-3', 'hi-domestic-abuse', 'id-assault', 'id-battery', 'id-domestic-violence', 'me-assault', 'me-aggravated-assault', 'me-domestic-violence', 'ms-simple-assault', 'ms-aggravated-assault', 'ms-domestic-violence', 'mt-45-5-201', 'mt-aggravated-assault', 'mt-pfma', 'ne-28-310', 'ne-28-308', 'ne-28-323', 'nh-631-1', 'nh-631-2', 'nh-631-2b', 'nm-30-3-1', 'nm-30-3-2', 'nm-domestic-violence', 'nd-12.1-17-01', 'nd-12.1-17-02', 'nd-domestic-violence', 'ok-21-641', 'ok-21-642', 'ok-21-644', 'ri-11-5-2', 'ri-felony-assault', 'ri-domestic-violence', 'sd-22-18-1', 'sd-22-18-1.1', 'sd-domestic-abuse', 'ut-76-5-102', 'ut-76-5-103', 'ut-domestic-violence', 'vt-13-1023', 'vt-13-1024', 'vt-13-1042', 'wv-61-2-9', 'wv-61-2-10b', 'wv-domestic-assault', 'wy-6-2-501', 'wy-6-2-509', 'wy-6-2-510', 'dc-22-407', 'dc-22-402', 'dc-domestic-violence'
+    // Other violent crimes (assault, robbery, domestic violence, etc.) 
+    'ca-pc-211', 'ca-pc-245', 'ca-pc-242', 'ca-pc-273.5', 'tx-pc-22.01', 'tx-pc-29.02', 'tx-pc-25.11', 'fl-784.03', 'fl-812.13', 'fl-794.011', 'ny-pl-120.00', 'pa-18-2701', 'pa-18-908', 'il-720-5-12-3', 'il-720-5-12-2', 'oh-orc-2919.25', 'ga-16-5-20', 'nc-gs-14-32', 'mi-mcl-750.81', 'va-18.2-57', 'al-13a-6-20', 'al-13a-6-21', 'al-13a-6-130', 'ak-11.41.200', 'ak-11.41.210', 'ak-18.66.100', 'az-13-1203', 'az-13-1204', 'wa-9a.36.011', 'wa-9a.36.021', 'ma-265-13a', 'ma-265-15a', 'tn-39-13-101', 'tn-39-13-102', 'wi-940-19', 'wi-940-225', 'co-18-3-202', 'co-18-3-203', 'ct-53a-59', 'ct-53a-60', 'la-14-37', 'la-14-34', 'la-14-35.3', 'or-163-assault-1', 'or-163-assault-2', 'nv-200-471', 'nv-200-assault-weapon', 'nj-2c-12-1', 'nj-2c-12-1b', 'md-3-202', 'md-3-203', 'mo-565-050', 'mo-565-060', 'mn-609-221', 'mn-609-222', 'sc-16-3-600', 'sc-16-3-600-2', 'sc-16-25-20', 'ky-508-assault-4', 'ky-strangulation', 'in-battery', 'in-intimidation', 'in-domestic-battery', 'ia-708-1', 'ia-708-2a', 'ks-21-5412', 'ks-domestic-assault', 'ar-5-13-205', 'ar-aggravated-assault', 'ar-domestic-battering', 'de-assault-3', 'de-assault-2', 'hi-assault-1', 'hi-assault-3', 'hi-domestic-abuse', 'id-assault', 'id-battery', 'id-domestic-violence', 'me-assault', 'me-aggravated-assault', 'me-domestic-violence', 'ms-simple-assault', 'ms-aggravated-assault', 'ms-domestic-violence', 'mt-45-5-201', 'mt-aggravated-assault', 'mt-pfma', 'ne-28-310', 'ne-28-308', 'ne-28-323', 'nh-631-1', 'nh-631-2', 'nh-631-2b', 'nm-30-3-1', 'nm-30-3-2', 'nm-domestic-violence', 'nd-12.1-17-01', 'nd-12.1-17-02', 'nd-domestic-violence', 'ok-21-641', 'ok-21-642', 'ok-21-644', 'ri-11-5-2', 'ri-felony-assault', 'ri-domestic-violence', 'sd-22-18-1', 'sd-22-18-1.1', 'sd-domestic-abuse', 'ut-76-5-102', 'ut-76-5-103', 'ut-domestic-violence', 'vt-13-1023', 'vt-13-1024', 'vt-13-1042', 'wv-61-2-9', 'wv-61-2-10b', 'wv-domestic-assault', 'wy-6-2-501', 'wy-6-2-509', 'wy-6-2-510', 'dc-22-407', 'dc-22-402', 'dc-domestic-violence',
+    // Stalking charges (also included in Technology/Cyber category)
+    'ca-pc-646.9', 'ny-pl-120.45'
   ],
   'Property Crimes': [
     // Arson charges
@@ -4993,13 +5198,21 @@ export const chargeCategories = {
   'Weapons Crimes': ['tx-pc-46.02', 'fl-790.23', 'il-720-5-24-1', 'va-18.2-308', 'nc-gs-14-269', 'ga-16-11-126', 'al-13a-11-72', 'ak-11.61.200', 'az-13-3102', 'wa-9.41.040', 'ma-269-firearm', 'tn-39-17-1307', 'wi-941-29', 'co-18-12-108', 'ct-53a-217', 'la-14-95.1', 'or-166-felon', 'nv-202-firearm', 'nj-2c-39-5', 'md-4-203', 'mo-571-030', 'mn-624-713', 'ky-527-040', 'ia-724-4', 'ks-21-6304', 'de-firearm-concealed'],
   'Federal Crimes': [
     // Existing federal crimes
-    'fed-18-1341', 'fed-18-1030', 'fed-18-922', 'fed-18-371',
+    'fed-18-1341-mail', 'fed-18-1030', 'fed-18-922', 'fed-18-371',
     // New federal charges added
-    'fed-18-81', 'fed-18-1201', 'fed-18-2241', 'fed-18-2242', 'fed-18-2251', 'fed-18-666'
+    'fed-18-81', 'fed-18-1201', 'fed-18-2241', 'fed-18-2242', 'fed-18-2251', 'fed-18-666',
+    // Technology/Cyber and Financial crimes
+    'fed-18-1028', 'fed-18-1028a', 'fed-18-2261a', 'fed-18-1343', 'fed-18-1956', 'fed-26-7201', 'fed-18-1621', 'fed-18-1503'
   ],
   'Corruption/Bribery': [
     // State bribery and corruption charges
     'ca-pc-68', 'tx-pc-36.02', 'tx-pc-36.06', 'fl-838.015', 'ny-pl-200.00', 'fed-18-666'
+  ],
+  'Technology/Cyber Crimes': [
+    // Identity theft charges
+    'fed-18-1028', 'fed-18-1028a', 'ca-pc-530.5', 'ny-pl-190.80', 'ny-pl-190.79', 'ny-pl-190.78', 'tx-pc-32.51',
+    // Stalking and harassment
+    'fed-18-2261a', 'ca-pc-646.9', 'ny-pl-120.45'
   ],
   'Traffic/DUI': ['ca-vc-23152', 'tx-pc-49.04', 'fl-316.193', 'ny-vtl-1192', 'pa-75-3802', 'il-625-5-11-501', 'oh-orc-4511.19', 'ga-40-6-391', 'nc-gs-20-138.1', 'mi-mcl-257.625', 'va-18.2-266'],
   'Public Order': ['ca-pc-314', 'ca-pc-647']
