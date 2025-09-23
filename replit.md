@@ -10,6 +10,18 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Comprehensive Criminal Charges Database Expansion (September 2025)
+- Expanded criminal charges database with comprehensive FindLaw crime categories
+- Added missing crime types across Technology/Cyber, Financial/White Collar, Administrative/Process, and Specialized categories:
+  - **Federal charges**: Identity Theft (18 USC 1028, 1028A), Wire Fraud (18 USC 1343), Money Laundering (18 USC 1956), Tax Evasion (26 USC 7201), Interstate Stalking (18 USC 2261A), Perjury (18 USC 1621), Obstruction of Justice (18 USC 1503)
+  - **State charges**: Identity Theft for CA, NY (all degrees), TX; Stalking for CA, NY
+- Fixed critical statutory inaccuracies:
+  - Corrected Federal Identity Theft from incorrect 18 USC 1030 to proper 18 USC 1028/1028A
+  - Fixed NY Identity Theft degree classifications to proper PL 190.80 (1st), 190.79 (2nd), 190.78 (3rd)
+- Resolved React duplicate key warnings in legal guidance flow
+- Enhanced charge categorization with new "Technology/Cyber Crimes" category
+- Achieved comprehensive coverage for ALL 50 states plus DC and federal charges
+
 ### Enhanced Diversion Programs Database (September 2024)
 - Expanded diversion programs database using Center for Health and Justice research
 - Added verified TASC programs with real contact information:
