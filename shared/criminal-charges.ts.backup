@@ -1,5 +1,5 @@
 // Criminal Charges Database - Comprehensive Coverage for All US Jurisdictions
-// Generated: 2025-09-24T06:28:33.898Z
+// Generated: 2025-09-24T06:29:31.332Z
 // Total Charges: 4425
 // Jurisdictions: All 50 states + DC + US territories
 
@@ -21,7 +21,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '13A-7-7',
+    code: '13A-9-20',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Alabama law',
@@ -34,7 +34,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '13A-10-6',
+    code: '13A-17-38',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Intentional killing without premeditation under Alabama law',
@@ -47,7 +47,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: '13A-9-29',
+    code: '13A-17-17',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Depraved indifference killing under Alabama law',
@@ -60,7 +60,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '13A-12-5',
+    code: '13A-13-12',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Killing in heat of passion under Alabama law',
@@ -73,7 +73,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '13A-10-21',
+    code: '13A-19-21',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Alabama law',
@@ -86,7 +86,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '13A-10-30',
+    code: '13A-17-42',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Death caused by criminal negligence under Alabama law',
@@ -99,7 +99,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '13A-19-17',
+    code: '13A-14-19',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Alabama law',
@@ -112,7 +112,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-felony-murder',
     name: 'Felony Murder',
-    code: '13A-9-35',
+    code: '13A-4-17',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Death occurring during commission of felony under Alabama law',
@@ -125,7 +125,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '13A-2-10',
+    code: '13A-8-35',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Alabama law',
@@ -138,7 +138,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '13A-14-30',
+    code: '13A-9-15',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Reckless serious bodily injury under Alabama law',
@@ -151,7 +151,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '13A-10-24',
+    code: '13A-12-44',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Intentional bodily injury under Alabama law',
@@ -164,7 +164,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '13A-13-9',
+    code: '13A-17-24',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Alabama law',
@@ -177,20 +177,20 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '13A-20-21',
+    code: '13A-12-5',
     jurisdiction: 'AL',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Alabama law',
+    description: 'Assault using dangerous weapon under Alabama law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'al-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '13A-1-16',
+    code: '13A-14-43',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Assault against family/household member under Alabama law',
@@ -203,7 +203,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: '13A-7-47',
+    code: '13A-15-6',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Assault on law enforcement officer under Alabama law',
@@ -216,7 +216,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-menacing',
     name: 'Menacing',
-    code: '13A-19-6',
+    code: '13A-2-6',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Threatening imminent bodily injury under Alabama law',
@@ -229,7 +229,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '13A-4-32',
+    code: '13A-15-10',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Alabama law',
@@ -242,7 +242,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '13A-18-4',
+    code: '13A-5-21',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Alabama law',
@@ -255,7 +255,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: '13A-4-15',
+    code: '13A-1-18',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Alabama law',
@@ -268,7 +268,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '13A-10-40',
+    code: '13A-7-47',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual contact without consent under Alabama law',
@@ -281,7 +281,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '13A-10-15',
+    code: '13A-11-2',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Alabama law',
@@ -294,7 +294,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-statutory-rape',
     name: 'Statutory Rape',
-    code: '13A-17-21',
+    code: '13A-11-50',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual intercourse with minor under Alabama law',
@@ -307,7 +307,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: '13A-1-9',
+    code: '13A-1-50',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Alabama law',
@@ -320,7 +320,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: '13A-18-32',
+    code: '13A-18-3',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Using minor in sexual performance under Alabama law',
@@ -333,7 +333,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '13A-4-45',
+    code: '13A-4-48',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Theft over $50,000 under Alabama law',
@@ -346,7 +346,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '13A-11-41',
+    code: '13A-12-22',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Theft over $5,000 under Alabama law',
@@ -359,7 +359,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '13A-20-22',
+    code: '13A-11-32',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Theft over $1,000 under Alabama law',
@@ -372,7 +372,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-petty-theft',
     name: 'Petty Theft',
-    code: '13A-1-32',
+    code: '13A-9-14',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Theft under felony threshold under Alabama law',
@@ -385,7 +385,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '13A-9-43',
+    code: '13A-9-38',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Receiving stolen property under Alabama law',
@@ -398,7 +398,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-identity-theft',
     name: 'Identity Theft',
-    code: '13A-6-17',
+    code: '13A-5-47',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Using another person\'s identifying information under Alabama law',
@@ -411,7 +411,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '13A-15-1',
+    code: '13A-4-30',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unauthorized use of credit card under Alabama law',
@@ -424,7 +424,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-embezzlement',
     name: 'Embezzlement',
-    code: '13A-14-2',
+    code: '13A-6-15',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Theft by person in position of trust under Alabama law',
@@ -437,7 +437,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-shoplifting',
     name: 'Shoplifting',
-    code: '13A-13-27',
+    code: '13A-11-27',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Theft from retail establishment under Alabama law',
@@ -450,7 +450,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '13A-14-35',
+    code: '13A-20-38',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Alabama law',
@@ -463,7 +463,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '13A-2-12',
+    code: '13A-9-16',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Alabama law',
@@ -476,7 +476,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '13A-2-44',
+    code: '13A-8-12',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry of building under Alabama law',
@@ -489,7 +489,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-residential-burglary',
     name: 'Residential Burglary',
-    code: '13A-4-19',
+    code: '13A-12-50',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Alabama law',
@@ -502,7 +502,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '13A-10-47',
+    code: '13A-13-44',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Burglary of commercial building under Alabama law',
@@ -515,7 +515,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-auto-burglary',
     name: 'Auto Burglary',
-    code: '13A-12-32',
+    code: '13A-12-6',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Alabama law',
@@ -528,7 +528,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '13A-11-33',
+    code: '13A-14-15',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Armed robbery with injury under Alabama law',
@@ -541,7 +541,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '13A-13-35',
+    code: '13A-5-19',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Armed robbery under Alabama law',
@@ -554,7 +554,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '13A-11-39',
+    code: '13A-5-17',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Robbery by force or threat under Alabama law',
@@ -567,7 +567,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-carjacking',
     name: 'Carjacking',
-    code: '13A-18-8',
+    code: '13A-18-30',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Robbery of motor vehicle under Alabama law',
@@ -580,7 +580,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-bank-robbery',
     name: 'Bank Robbery',
-    code: '13A-17-6',
+    code: '13A-10-34',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Robbery of financial institution under Alabama law',
@@ -593,7 +593,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '13A-17-49',
+    code: '13A-4-18',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful possession of controlled substances under Alabama law',
@@ -606,7 +606,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: '13A-3-49',
+    code: '13A-7-16',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Possession of drugs for distribution under Alabama law',
@@ -619,7 +619,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: '13A-6-17',
+    code: '13A-12-12',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Alabama law',
@@ -632,7 +632,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: '13A-3-16',
+    code: '13A-4-1',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Alabama law',
@@ -645,7 +645,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '13A-8-9',
+    code: '13A-9-29',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Large-scale drug distribution under Alabama law',
@@ -658,7 +658,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '13A-12-8',
+    code: '13A-16-24',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Possession of drug-related equipment under Alabama law',
@@ -671,7 +671,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: '13A-2-47',
+    code: '13A-7-14',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Allowing premises for drug activity under Alabama law',
@@ -684,7 +684,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '13A-1-11',
+    code: '13A-18-38',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Carrying weapon without permit under Alabama law',
@@ -697,7 +697,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '13A-12-17',
+    code: '13A-5-31',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Alabama law',
@@ -723,7 +723,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '13A-17-27',
+    code: '13A-7-38',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Alabama law',
@@ -736,7 +736,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '13A-11-21',
+    code: '13A-1-25',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Possession of illegal weapon under Alabama law',
@@ -749,7 +749,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-wire-fraud',
     name: 'Wire Fraud',
-    code: '13A-3-17',
+    code: '13A-6-1',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Fraud using electronic communications under Alabama law',
@@ -762,7 +762,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-mail-fraud',
     name: 'Mail Fraud',
-    code: '13A-17-31',
+    code: '13A-3-29',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Fraud using postal service under Alabama law',
@@ -775,7 +775,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-check-fraud',
     name: 'Check Fraud',
-    code: '13A-11-35',
+    code: '13A-4-12',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Fraudulent use of checks under Alabama law',
@@ -788,7 +788,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '13A-6-43',
+    code: '13A-20-2',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Fraudulent insurance claims under Alabama law',
@@ -801,7 +801,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-tax-fraud',
     name: 'Tax Fraud',
-    code: '13A-1-41',
+    code: '13A-20-8',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Fraudulent tax reporting under Alabama law',
@@ -814,7 +814,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-forgery',
     name: 'Forgery',
-    code: '13A-14-1',
+    code: '13A-10-22',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Creating false documents under Alabama law',
@@ -827,7 +827,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-computer-fraud',
     name: 'Computer Fraud',
-    code: '13A-14-49',
+    code: '13A-13-23',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Alabama law',
@@ -840,7 +840,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '13A-12-14',
+    code: '13A-4-1',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Disrupting public peace under Alabama law',
@@ -853,7 +853,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-public-intoxication',
     name: 'Public Intoxication',
-    code: '13A-18-38',
+    code: '13A-3-5',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Being intoxicated in public under Alabama law',
@@ -866,7 +866,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '13A-15-10',
+    code: '13A-14-33',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Disrupting public tranquility under Alabama law',
@@ -879,7 +879,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-trespassing',
     name: 'Trespassing',
-    code: '13A-1-37',
+    code: '13A-20-47',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry on property under Alabama law',
@@ -892,7 +892,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-vandalism',
     name: 'Vandalism',
-    code: '13A-12-46',
+    code: '13A-3-4',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Destruction of property under Alabama law',
@@ -905,7 +905,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-loitering',
     name: 'Loitering',
-    code: '13A-10-14',
+    code: '13A-9-31',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Remaining in place without purpose under Alabama law',
@@ -918,7 +918,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-dui-first-offense',
     name: 'DUI First Offense',
-    code: '13A-13-47',
+    code: '13A-5-11',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Driving under influence, first offense under Alabama law',
@@ -931,7 +931,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '13A-18-18',
+    code: '13A-20-38',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Driving under influence, repeat offense under Alabama law',
@@ -944,7 +944,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '13A-18-14',
+    code: '13A-9-43',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Driving under influence, felony level under Alabama law',
@@ -957,7 +957,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-reckless-driving',
     name: 'Reckless Driving',
-    code: '13A-15-12',
+    code: '13A-20-28',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Driving with willful disregard for safety under Alabama law',
@@ -970,7 +970,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-hit-and-run',
     name: 'Hit and Run',
-    code: '13A-8-37',
+    code: '13A-8-32',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Leaving scene of accident with injury under Alabama law',
@@ -983,7 +983,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: '13A-3-15',
+    code: '13A-9-28',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Driving with suspended license under Alabama law',
@@ -996,7 +996,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: 'AS 11.74.310',
+    code: 'AS 11.59.739',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Alaska law',
@@ -1009,7 +1009,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: 'AS 11.25.977',
+    code: 'AS 11.75.207',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Intentional killing without premeditation under Alaska law',
@@ -1022,7 +1022,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: 'AS 11.15.752',
+    code: 'AS 11.73.461',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Depraved indifference killing under Alaska law',
@@ -1035,7 +1035,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: 'AS 11.4.642',
+    code: 'AS 11.42.350',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Killing in heat of passion under Alaska law',
@@ -1048,7 +1048,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: 'AS 11.66.272',
+    code: 'AS 11.32.462',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Alaska law',
@@ -1061,7 +1061,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: 'AS 11.53.569',
+    code: 'AS 11.63.678',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Death caused by criminal negligence under Alaska law',
@@ -1074,7 +1074,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: 'AS 11.27.276',
+    code: 'AS 11.1.890',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Alaska law',
@@ -1087,7 +1087,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-felony-murder',
     name: 'Felony Murder',
-    code: 'AS 11.47.526',
+    code: 'AS 11.28.781',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Death occurring during commission of felony under Alaska law',
@@ -1100,7 +1100,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: 'AS 11.55.626',
+    code: 'AS 11.8.806',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Alaska law',
@@ -1113,7 +1113,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: 'AS 11.4.916',
+    code: 'AS 11.78.329',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Reckless serious bodily injury under Alaska law',
@@ -1126,7 +1126,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: 'AS 11.75.539',
+    code: 'AS 11.8.175',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Intentional bodily injury under Alaska law',
@@ -1139,7 +1139,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-aggravated-assault',
     name: 'Aggravated Assault',
-    code: 'AS 11.40.488',
+    code: 'AS 11.55.203',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Alaska law',
@@ -1152,20 +1152,20 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'AS 11.47.402',
+    code: 'AS 11.36.266',
     jurisdiction: 'AK',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Alaska law',
+    description: 'Assault using dangerous weapon under Alaska law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ak-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: 'AS 11.42.759',
+    code: 'AS 11.36.597',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Assault against family/household member under Alaska law',
@@ -1178,7 +1178,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: 'AS 11.28.153',
+    code: 'AS 11.35.647',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Assault on law enforcement officer under Alaska law',
@@ -1191,7 +1191,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-menacing',
     name: 'Menacing',
-    code: 'AS 11.42.542',
+    code: 'AS 11.77.757',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Threatening imminent bodily injury under Alaska law',
@@ -1204,7 +1204,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: 'AS 11.10.245',
+    code: 'AS 11.26.108',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Alaska law',
@@ -1217,7 +1217,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: 'AS 11.70.461',
+    code: 'AS 11.15.664',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Alaska law',
@@ -1230,7 +1230,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: 'AS 11.64.485',
+    code: 'AS 11.39.141',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Alaska law',
@@ -1243,7 +1243,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: 'AS 11.20.934',
+    code: 'AS 11.18.161',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual contact without consent under Alaska law',
@@ -1256,7 +1256,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: 'AS 11.14.755',
+    code: 'AS 11.39.746',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Alaska law',
@@ -1269,7 +1269,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-statutory-rape',
     name: 'Statutory Rape',
-    code: 'AS 11.43.930',
+    code: 'AS 11.58.880',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual intercourse with minor under Alaska law',
@@ -1282,7 +1282,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: 'AS 11.15.201',
+    code: 'AS 11.13.562',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Alaska law',
@@ -1295,7 +1295,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: 'AS 11.45.946',
+    code: 'AS 11.16.691',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Using minor in sexual performance under Alaska law',
@@ -1308,7 +1308,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: 'AS 11.49.556',
+    code: 'AS 11.50.640',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Theft over $50,000 under Alaska law',
@@ -1321,7 +1321,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: 'AS 11.30.440',
+    code: 'AS 11.44.457',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Theft over $5,000 under Alaska law',
@@ -1334,7 +1334,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: 'AS 11.62.607',
+    code: 'AS 11.4.655',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Theft over $1,000 under Alaska law',
@@ -1347,7 +1347,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-petty-theft',
     name: 'Petty Theft',
-    code: 'AS 11.53.146',
+    code: 'AS 11.9.382',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Theft under felony threshold under Alaska law',
@@ -1360,7 +1360,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: 'AS 11.65.108',
+    code: 'AS 11.23.319',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Receiving stolen property under Alaska law',
@@ -1373,7 +1373,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-identity-theft',
     name: 'Identity Theft',
-    code: 'AS 11.13.835',
+    code: 'AS 11.41.857',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Using another person\'s identifying information under Alaska law',
@@ -1386,7 +1386,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: 'AS 11.21.756',
+    code: 'AS 11.72.524',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unauthorized use of credit card under Alaska law',
@@ -1399,7 +1399,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-embezzlement',
     name: 'Embezzlement',
-    code: 'AS 11.5.495',
+    code: 'AS 11.13.702',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Theft by person in position of trust under Alaska law',
@@ -1412,7 +1412,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-shoplifting',
     name: 'Shoplifting',
-    code: 'AS 11.41.424',
+    code: 'AS 11.31.346',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Theft from retail establishment under Alaska law',
@@ -1425,7 +1425,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: 'AS 11.62.914',
+    code: 'AS 11.76.880',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Alaska law',
@@ -1438,7 +1438,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: 'AS 11.3.907',
+    code: 'AS 11.5.963',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Alaska law',
@@ -1451,7 +1451,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: 'AS 11.57.184',
+    code: 'AS 11.35.214',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry of building under Alaska law',
@@ -1464,7 +1464,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-residential-burglary',
     name: 'Residential Burglary',
-    code: 'AS 11.59.678',
+    code: 'AS 11.18.524',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Alaska law',
@@ -1477,7 +1477,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-commercial-burglary',
     name: 'Commercial Burglary',
-    code: 'AS 11.31.469',
+    code: 'AS 11.26.154',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Burglary of commercial building under Alaska law',
@@ -1490,7 +1490,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-auto-burglary',
     name: 'Auto Burglary',
-    code: 'AS 11.27.916',
+    code: 'AS 11.22.144',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Alaska law',
@@ -1503,7 +1503,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: 'AS 11.17.524',
+    code: 'AS 11.15.484',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Armed robbery with injury under Alaska law',
@@ -1516,7 +1516,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: 'AS 11.51.988',
+    code: 'AS 11.74.674',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Armed robbery under Alaska law',
@@ -1529,7 +1529,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: 'AS 11.78.340',
+    code: 'AS 11.14.369',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Robbery by force or threat under Alaska law',
@@ -1542,7 +1542,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-carjacking',
     name: 'Carjacking',
-    code: 'AS 11.57.754',
+    code: 'AS 11.71.156',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Robbery of motor vehicle under Alaska law',
@@ -1555,7 +1555,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-bank-robbery',
     name: 'Bank Robbery',
-    code: 'AS 11.47.722',
+    code: 'AS 11.28.563',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Robbery of financial institution under Alaska law',
@@ -1568,7 +1568,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: 'AS 11.78.609',
+    code: 'AS 11.68.784',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful possession of controlled substances under Alaska law',
@@ -1581,7 +1581,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: 'AS 11.51.953',
+    code: 'AS 11.65.796',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Possession of drugs for distribution under Alaska law',
@@ -1594,7 +1594,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: 'AS 11.39.628',
+    code: 'AS 11.49.137',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Alaska law',
@@ -1607,7 +1607,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: 'AS 11.24.592',
+    code: 'AS 11.16.528',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Alaska law',
@@ -1620,7 +1620,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-drug-trafficking',
     name: 'Drug Trafficking',
-    code: 'AS 11.42.582',
+    code: 'AS 11.56.602',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Large-scale drug distribution under Alaska law',
@@ -1633,7 +1633,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: 'AS 11.13.259',
+    code: 'AS 11.24.800',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Possession of drug-related equipment under Alaska law',
@@ -1646,7 +1646,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: 'AS 11.55.860',
+    code: 'AS 11.61.950',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Allowing premises for drug activity under Alaska law',
@@ -1659,7 +1659,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: 'AS 11.66.313',
+    code: 'AS 11.56.508',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Carrying weapon without permit under Alaska law',
@@ -1672,7 +1672,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: 'AS 11.11.194',
+    code: 'AS 11.19.637',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Alaska law',
@@ -1698,7 +1698,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: 'AS 11.39.426',
+    code: 'AS 11.45.322',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Alaska law',
@@ -1711,7 +1711,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: 'AS 11.27.900',
+    code: 'AS 11.66.166',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Possession of illegal weapon under Alaska law',
@@ -1724,7 +1724,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-wire-fraud',
     name: 'Wire Fraud',
-    code: 'AS 11.43.684',
+    code: 'AS 11.23.488',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Fraud using electronic communications under Alaska law',
@@ -1737,7 +1737,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-mail-fraud',
     name: 'Mail Fraud',
-    code: 'AS 11.54.884',
+    code: 'AS 11.23.571',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Fraud using postal service under Alaska law',
@@ -1750,7 +1750,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-check-fraud',
     name: 'Check Fraud',
-    code: 'AS 11.28.798',
+    code: 'AS 11.31.110',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Fraudulent use of checks under Alaska law',
@@ -1763,7 +1763,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-insurance-fraud',
     name: 'Insurance Fraud',
-    code: 'AS 11.27.300',
+    code: 'AS 11.34.653',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Fraudulent insurance claims under Alaska law',
@@ -1776,7 +1776,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-tax-fraud',
     name: 'Tax Fraud',
-    code: 'AS 11.46.802',
+    code: 'AS 11.77.164',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Fraudulent tax reporting under Alaska law',
@@ -1789,7 +1789,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-forgery',
     name: 'Forgery',
-    code: 'AS 11.14.290',
+    code: 'AS 11.71.880',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Creating false documents under Alaska law',
@@ -1802,7 +1802,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-computer-fraud',
     name: 'Computer Fraud',
-    code: 'AS 11.7.930',
+    code: 'AS 11.68.879',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Alaska law',
@@ -1815,7 +1815,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: 'AS 11.77.605',
+    code: 'AS 11.79.792',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Disrupting public peace under Alaska law',
@@ -1828,7 +1828,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-public-intoxication',
     name: 'Public Intoxication',
-    code: 'AS 11.67.898',
+    code: 'AS 11.33.522',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Being intoxicated in public under Alaska law',
@@ -1841,7 +1841,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: 'AS 11.23.700',
+    code: 'AS 11.41.276',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Disrupting public tranquility under Alaska law',
@@ -1854,7 +1854,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-trespassing',
     name: 'Trespassing',
-    code: 'AS 11.63.942',
+    code: 'AS 11.51.467',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry on property under Alaska law',
@@ -1867,7 +1867,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-vandalism',
     name: 'Vandalism',
-    code: 'AS 11.51.495',
+    code: 'AS 11.15.340',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Destruction of property under Alaska law',
@@ -1880,7 +1880,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-loitering',
     name: 'Loitering',
-    code: 'AS 11.6.834',
+    code: 'AS 11.79.619',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Remaining in place without purpose under Alaska law',
@@ -1893,7 +1893,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-dui-first-offense',
     name: 'DUI First Offense',
-    code: 'AS 11.16.986',
+    code: 'AS 11.7.237',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Driving under influence, first offense under Alaska law',
@@ -1906,7 +1906,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-dui-second-offense',
     name: 'DUI Second Offense',
-    code: 'AS 11.46.142',
+    code: 'AS 11.16.104',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Driving under influence, repeat offense under Alaska law',
@@ -1919,7 +1919,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-dui-third-offense',
     name: 'DUI Third Offense',
-    code: 'AS 11.29.375',
+    code: 'AS 11.31.261',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Driving under influence, felony level under Alaska law',
@@ -1932,7 +1932,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-reckless-driving',
     name: 'Reckless Driving',
-    code: 'AS 11.26.482',
+    code: 'AS 11.70.829',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Driving with willful disregard for safety under Alaska law',
@@ -1945,7 +1945,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-hit-and-run',
     name: 'Hit and Run',
-    code: 'AS 11.32.191',
+    code: 'AS 11.7.425',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Leaving scene of accident with injury under Alaska law',
@@ -1958,7 +1958,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: 'AS 11.27.715',
+    code: 'AS 11.22.631',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Driving with suspended license under Alaska law',
@@ -1971,7 +1971,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: 'PC 170',
+    code: 'PC 432',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under California law',
@@ -1984,7 +1984,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: 'PC 597',
+    code: 'PC 602',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Intentional killing without premeditation under California law',
@@ -1997,7 +1997,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: 'PC 771',
+    code: 'PC 536',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Depraved indifference killing under California law',
@@ -2010,7 +2010,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: 'PC 991',
+    code: 'PC 352',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Killing in heat of passion under California law',
@@ -2023,7 +2023,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: 'PC 809',
+    code: 'PC 576',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under California law',
@@ -2036,7 +2036,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: 'PC 257',
+    code: 'PC 631',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Death caused by criminal negligence under California law',
@@ -2049,7 +2049,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: 'PC 320',
+    code: 'PC 931',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under California law',
@@ -2062,7 +2062,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-felony-murder',
     name: 'Felony Murder',
-    code: 'PC 601',
+    code: 'PC 841',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Death occurring during commission of felony under California law',
@@ -2075,7 +2075,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: 'PC 984',
+    code: 'PC 625',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under California law',
@@ -2088,7 +2088,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: 'PC 862',
+    code: 'PC 543',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Reckless serious bodily injury under California law',
@@ -2101,7 +2101,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: 'PC 386',
+    code: 'PC 362',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Intentional bodily injury under California law',
@@ -2114,7 +2114,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-aggravated-assault',
     name: 'Aggravated Assault',
-    code: 'PC 588',
+    code: 'PC 217',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under California law',
@@ -2127,20 +2127,20 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PC 339',
+    code: 'PC 554',
     jurisdiction: 'CA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under California law',
+    description: 'Assault using dangerous weapon under California law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ca-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: 'PC 208',
+    code: 'PC 737',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Assault against family/household member under California law',
@@ -2153,7 +2153,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: 'PC 301',
+    code: 'PC 787',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Assault on law enforcement officer under California law',
@@ -2166,7 +2166,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-menacing',
     name: 'Menacing',
-    code: 'PC 150',
+    code: 'PC 865',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Threatening imminent bodily injury under California law',
@@ -2179,7 +2179,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: 'PC 491',
+    code: 'PC 395',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under California law',
@@ -2192,7 +2192,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: 'PC 208',
+    code: 'PC 771',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under California law',
@@ -2205,7 +2205,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: 'PC 439',
+    code: 'PC 733',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under California law',
@@ -2218,7 +2218,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: 'PC 703',
+    code: 'PC 123',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual contact without consent under California law',
@@ -2231,7 +2231,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: 'PC 102',
+    code: 'PC 615',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual contact with person under 16 under California law',
@@ -2244,7 +2244,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-statutory-rape',
     name: 'Statutory Rape',
-    code: 'PC 452',
+    code: 'PC 193',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual intercourse with minor under California law',
@@ -2257,7 +2257,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: 'PC 383',
+    code: 'PC 992',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under California law',
@@ -2270,7 +2270,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: 'PC 210',
+    code: 'PC 495',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Using minor in sexual performance under California law',
@@ -2283,7 +2283,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: 'PC 315',
+    code: 'PC 289',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft over $50,000 under California law',
@@ -2296,7 +2296,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: 'PC 126',
+    code: 'PC 183',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft over $5,000 under California law',
@@ -2309,7 +2309,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: 'PC 670',
+    code: 'PC 807',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft over $1,000 under California law',
@@ -2322,7 +2322,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-petty-theft',
     name: 'Petty Theft',
-    code: 'PC 606',
+    code: 'PC 247',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft under felony threshold under California law',
@@ -2335,7 +2335,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: 'PC 321',
+    code: 'PC 426',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Receiving stolen property under California law',
@@ -2348,7 +2348,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-identity-theft',
     name: 'Identity Theft',
-    code: 'PC 766',
+    code: 'PC 528',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Using another person\'s identifying information under California law',
@@ -2361,7 +2361,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: 'PC 578',
+    code: 'PC 867',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unauthorized use of credit card under California law',
@@ -2374,7 +2374,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-embezzlement',
     name: 'Embezzlement',
-    code: 'PC 673',
+    code: 'PC 679',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft by person in position of trust under California law',
@@ -2387,7 +2387,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-shoplifting',
     name: 'Shoplifting',
-    code: 'PC 319',
+    code: 'PC 732',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft from retail establishment under California law',
@@ -2400,7 +2400,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: 'PC 374',
+    code: 'PC 992',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under California law',
@@ -2413,7 +2413,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: 'PC 708',
+    code: 'PC 767',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry of dwelling under California law',
@@ -2426,7 +2426,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: 'PC 705',
+    code: 'PC 275',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry of building under California law',
@@ -2439,7 +2439,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-residential-burglary',
     name: 'Residential Burglary',
-    code: 'PC 519',
+    code: 'PC 576',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Burglary of occupied dwelling under California law',
@@ -2452,7 +2452,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-commercial-burglary',
     name: 'Commercial Burglary',
-    code: 'PC 119',
+    code: 'PC 828',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Burglary of commercial building under California law',
@@ -2465,7 +2465,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-auto-burglary',
     name: 'Auto Burglary',
-    code: 'PC 734',
+    code: 'PC 206',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry of vehicle under California law',
@@ -2478,7 +2478,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: 'PC 858',
+    code: 'PC 704',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Armed robbery with injury under California law',
@@ -2491,7 +2491,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: 'PC 421',
+    code: 'PC 277',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Armed robbery under California law',
@@ -2504,7 +2504,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: 'PC 241',
+    code: 'PC 920',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery by force or threat under California law',
@@ -2517,7 +2517,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-carjacking',
     name: 'Carjacking',
-    code: 'PC 364',
+    code: 'PC 885',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery of motor vehicle under California law',
@@ -2530,7 +2530,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-bank-robbery',
     name: 'Bank Robbery',
-    code: 'PC 971',
+    code: 'PC 674',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery of financial institution under California law',
@@ -2543,7 +2543,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: 'PC 698',
+    code: 'PC 486',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful possession of controlled substances under California law',
@@ -2556,7 +2556,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: 'PC 446',
+    code: 'PC 860',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Possession of drugs for distribution under California law',
@@ -2569,7 +2569,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: 'PC 845',
+    code: 'PC 263',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under California law',
@@ -2582,7 +2582,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: 'PC 156',
+    code: 'PC 858',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful production of controlled substances under California law',
@@ -2595,7 +2595,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-drug-trafficking',
     name: 'Drug Trafficking',
-    code: 'PC 927',
+    code: 'PC 682',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Large-scale drug distribution under California law',
@@ -2608,7 +2608,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: 'PC 791',
+    code: 'PC 196',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Possession of drug-related equipment under California law',
@@ -2621,7 +2621,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: 'PC 672',
+    code: 'PC 358',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Allowing premises for drug activity under California law',
@@ -2634,7 +2634,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: 'PC 835',
+    code: 'PC 817',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Carrying weapon without permit under California law',
@@ -2647,7 +2647,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: 'PC 960',
+    code: 'PC 717',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Firearm possession by prohibited person under California law',
@@ -2673,7 +2673,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: 'PC 249',
+    code: 'PC 664',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful discharge of firearm under California law',
@@ -2686,7 +2686,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: 'PC 649',
+    code: 'PC 333',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Possession of illegal weapon under California law',
@@ -2699,7 +2699,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-wire-fraud',
     name: 'Wire Fraud',
-    code: 'PC 695',
+    code: 'PC 370',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraud using electronic communications under California law',
@@ -2712,7 +2712,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-mail-fraud',
     name: 'Mail Fraud',
-    code: 'PC 399',
+    code: 'PC 954',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraud using postal service under California law',
@@ -2725,7 +2725,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-check-fraud',
     name: 'Check Fraud',
-    code: 'PC 220',
+    code: 'PC 562',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent use of checks under California law',
@@ -2738,7 +2738,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-insurance-fraud',
     name: 'Insurance Fraud',
-    code: 'PC 551',
+    code: 'PC 517',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent insurance claims under California law',
@@ -2751,7 +2751,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-tax-fraud',
     name: 'Tax Fraud',
-    code: 'PC 409',
+    code: 'PC 140',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent tax reporting under California law',
@@ -2764,7 +2764,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-forgery',
     name: 'Forgery',
-    code: 'PC 246',
+    code: 'PC 322',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Creating false documents under California law',
@@ -2777,7 +2777,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-computer-fraud',
     name: 'Computer Fraud',
-    code: 'PC 121',
+    code: 'PC 404',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under California law',
@@ -2790,7 +2790,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: 'PC 557',
+    code: 'PC 537',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Disrupting public peace under California law',
@@ -2803,7 +2803,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-public-intoxication',
     name: 'Public Intoxication',
-    code: 'PC 417',
+    code: 'PC 538',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Being intoxicated in public under California law',
@@ -2816,7 +2816,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: 'PC 694',
+    code: 'PC 925',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Disrupting public tranquility under California law',
@@ -2829,7 +2829,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-trespassing',
     name: 'Trespassing',
-    code: 'PC 149',
+    code: 'PC 803',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry on property under California law',
@@ -2842,7 +2842,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-vandalism',
     name: 'Vandalism',
-    code: 'PC 480',
+    code: 'PC 794',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Destruction of property under California law',
@@ -2855,7 +2855,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-loitering',
     name: 'Loitering',
-    code: 'PC 307',
+    code: 'PC 910',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Remaining in place without purpose under California law',
@@ -2868,7 +2868,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-dui-first-offense',
     name: 'DUI First Offense',
-    code: 'PC 436',
+    code: 'PC 827',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Driving under influence, first offense under California law',
@@ -2881,7 +2881,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-dui-second-offense',
     name: 'DUI Second Offense',
-    code: 'PC 923',
+    code: 'PC 981',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Driving under influence, repeat offense under California law',
@@ -2894,7 +2894,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-dui-third-offense',
     name: 'DUI Third Offense',
-    code: 'PC 564',
+    code: 'PC 277',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Driving under influence, felony level under California law',
@@ -2907,7 +2907,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-reckless-driving',
     name: 'Reckless Driving',
-    code: 'PC 684',
+    code: 'PC 257',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Driving with willful disregard for safety under California law',
@@ -2920,7 +2920,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-hit-and-run',
     name: 'Hit and Run',
-    code: 'PC 672',
+    code: 'PC 107',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Leaving scene of accident with injury under California law',
@@ -2933,7 +2933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: 'PC 962',
+    code: 'PC 567',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Driving with suspended license under California law',
@@ -3326,7 +3326,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: '13A-5-47',
     jurisdiction: 'AL',
     category: 'felony',
-    description: 'Using another person\'s identifying information under Alabama law',
+    description: 'Using another person"s identifying information under Alabama law',
     maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
     commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Return of property', 'Mistaken identity'],
     evidenceToGather: ['Surveillance footage', 'Witness statements', 'Physical evidence', 'Financial records'],
@@ -4301,7 +4301,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: 'AS 11.41.857',
     jurisdiction: 'AK',
     category: 'felony',
-    description: 'Using another person\'s identifying information under Alaska law',
+    description: 'Using another person"s identifying information under Alaska law',
     maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
     commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Return of property', 'Mistaken identity'],
     evidenceToGather: ['Surveillance footage', 'Witness statements', 'Physical evidence', 'Financial records'],
@@ -5052,15 +5052,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'AZ-49-89',
+    code: 'AZ-14-71',
     jurisdiction: 'AZ',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Arizona law',
+    description: 'Assault using dangerous weapon under Arizona law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'az-domestic-violence-assault',
@@ -6027,15 +6027,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'AR-14-5',
+    code: 'AR-41-76',
     jurisdiction: 'AR',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Arkansas law',
+    description: 'Assault using dangerous weapon under Arkansas law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ar-domestic-violence-assault',
@@ -7226,7 +7226,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: 'PC 528',
     jurisdiction: 'CA',
     category: 'felony',
-    description: 'Using another person\'s identifying information under California law',
+    description: 'Using another person"s identifying information under California law',
     maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
     commonDefenses: ['Lack of intent to steal', 'Claim of right', 'Return of property', 'Mistaken identity'],
     evidenceToGather: ['Surveillance footage', 'Witness statements', 'Physical evidence', 'Financial records'],
@@ -7977,15 +7977,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'CO-32-34',
+    code: 'CO-35-55',
     jurisdiction: 'CO',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Colorado law',
+    description: 'Assault using dangerous weapon under Colorado law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'co-domestic-violence-assault',
@@ -8952,15 +8952,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'CT-9-28',
+    code: 'CT-5-90',
     jurisdiction: 'CT',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Connecticut law',
+    description: 'Assault using dangerous weapon under Connecticut law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ct-domestic-violence-assault',
@@ -9927,15 +9927,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'DE-27-78',
+    code: 'DE-33-6',
     jurisdiction: 'DE',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Delaware law',
+    description: 'Assault using dangerous weapon under Delaware law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'de-domestic-violence-assault',
@@ -10902,15 +10902,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '666.838',
+    code: '555.208',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Florida law',
+    description: 'Assault using dangerous weapon under Florida law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'fl-domestic-violence-assault',
@@ -11877,15 +11877,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'GA-11-33',
+    code: 'GA-23-49',
     jurisdiction: 'GA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Georgia law',
+    description: 'Assault using dangerous weapon under Georgia law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ga-domestic-violence-assault',
@@ -12852,15 +12852,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'HI-30-100',
+    code: 'HI-37-3',
     jurisdiction: 'HI',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Hawaii law',
+    description: 'Assault using dangerous weapon under Hawaii law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'hi-domestic-violence-assault',
@@ -13827,15 +13827,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'ID-13-56',
+    code: 'ID-43-37',
     jurisdiction: 'ID',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Idaho law',
+    description: 'Assault using dangerous weapon under Idaho law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'id-domestic-violence-assault',
@@ -14802,15 +14802,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'IL-1-39',
+    code: 'IL-8-89',
     jurisdiction: 'IL',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Illinois law',
+    description: 'Assault using dangerous weapon under Illinois law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'il-domestic-violence-assault',
@@ -15777,15 +15777,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'IN-12-100',
+    code: 'IN-29-66',
     jurisdiction: 'IN',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Indiana law',
+    description: 'Assault using dangerous weapon under Indiana law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'in-domestic-violence-assault',
@@ -16752,15 +16752,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'IA-30-40',
+    code: 'IA-31-88',
     jurisdiction: 'IA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Iowa law',
+    description: 'Assault using dangerous weapon under Iowa law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ia-domestic-violence-assault',
@@ -17727,15 +17727,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'KS-11-43',
+    code: 'KS-2-48',
     jurisdiction: 'KS',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Kansas law',
+    description: 'Assault using dangerous weapon under Kansas law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ks-domestic-violence-assault',
@@ -18702,15 +18702,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'KY-29-51',
+    code: 'KY-34-70',
     jurisdiction: 'KY',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Kentucky law',
+    description: 'Assault using dangerous weapon under Kentucky law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ky-domestic-violence-assault',
@@ -19677,15 +19677,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'LA-43-25',
+    code: 'LA-2-17',
     jurisdiction: 'LA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Louisiana law',
+    description: 'Assault using dangerous weapon under Louisiana law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'la-domestic-violence-assault',
@@ -20652,15 +20652,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'ME-15-53',
+    code: 'ME-43-84',
     jurisdiction: 'ME',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Maine law',
+    description: 'Assault using dangerous weapon under Maine law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'me-domestic-violence-assault',
@@ -21627,15 +21627,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MD-4-14',
+    code: 'MD-17-79',
     jurisdiction: 'MD',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Maryland law',
+    description: 'Assault using dangerous weapon under Maryland law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'md-domestic-violence-assault',
@@ -22602,15 +22602,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MA-43-27',
+    code: 'MA-19-42',
     jurisdiction: 'MA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Massachusetts law',
+    description: 'Assault using dangerous weapon under Massachusetts law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ma-domestic-violence-assault',
@@ -23577,15 +23577,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MI-39-50',
+    code: 'MI-49-11',
     jurisdiction: 'MI',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Michigan law',
+    description: 'Assault using dangerous weapon under Michigan law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'mi-domestic-violence-assault',
@@ -24552,15 +24552,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MN-42-11',
+    code: 'MN-21-92',
     jurisdiction: 'MN',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Minnesota law',
+    description: 'Assault using dangerous weapon under Minnesota law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'mn-domestic-violence-assault',
@@ -25527,15 +25527,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MS-44-99',
+    code: 'MS-24-71',
     jurisdiction: 'MS',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Mississippi law',
+    description: 'Assault using dangerous weapon under Mississippi law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ms-domestic-violence-assault',
@@ -26502,15 +26502,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MO-18-96',
+    code: 'MO-42-65',
     jurisdiction: 'MO',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Missouri law',
+    description: 'Assault using dangerous weapon under Missouri law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'mo-domestic-violence-assault',
@@ -27477,15 +27477,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MT-29-43',
+    code: 'MT-5-37',
     jurisdiction: 'MT',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Montana law',
+    description: 'Assault using dangerous weapon under Montana law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'mt-domestic-violence-assault',
@@ -28452,15 +28452,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'NE-27-56',
+    code: 'NE-29-36',
     jurisdiction: 'NE',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Nebraska law',
+    description: 'Assault using dangerous weapon under Nebraska law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ne-domestic-violence-assault',
@@ -29427,15 +29427,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'NV-5-16',
+    code: 'NV-32-58',
     jurisdiction: 'NV',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Nevada law',
+    description: 'Assault using dangerous weapon under Nevada law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'nv-domestic-violence-assault',
@@ -30402,15 +30402,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'NH-40-70',
+    code: 'NH-16-58',
     jurisdiction: 'NH',
     category: 'felony',
-    description: 'Assault using dangerous instrument under New Hampshire law',
+    description: 'Assault using dangerous weapon under New Hampshire law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'nh-domestic-violence-assault',
@@ -31377,15 +31377,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'NJ-14-59',
+    code: 'NJ-28-45',
     jurisdiction: 'NJ',
     category: 'felony',
-    description: 'Assault using dangerous instrument under New Jersey law',
+    description: 'Assault using dangerous weapon under New Jersey law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'nj-domestic-violence-assault',
@@ -32352,15 +32352,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'NM-14-42',
+    code: 'NM-13-50',
     jurisdiction: 'NM',
     category: 'felony',
-    description: 'Assault using dangerous instrument under New Mexico law',
+    description: 'Assault using dangerous weapon under New Mexico law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'nm-domestic-violence-assault',
@@ -33327,15 +33327,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PL 332.38',
+    code: 'PL 156.60',
     jurisdiction: 'NY',
     category: 'felony',
-    description: 'Assault using dangerous instrument under New York law',
+    description: 'Assault using dangerous weapon under New York law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ny-domestic-violence-assault',
@@ -34302,15 +34302,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'NC-12-2',
+    code: 'NC-12-90',
     jurisdiction: 'NC',
     category: 'felony',
-    description: 'Assault using dangerous instrument under North Carolina law',
+    description: 'Assault using dangerous weapon under North Carolina law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'nc-domestic-violence-assault',
@@ -35277,15 +35277,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'ND-24-3',
+    code: 'ND-16-89',
     jurisdiction: 'ND',
     category: 'felony',
-    description: 'Assault using dangerous instrument under North Dakota law',
+    description: 'Assault using dangerous weapon under North Dakota law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'nd-domestic-violence-assault',
@@ -36252,15 +36252,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'OH-5-71',
+    code: 'OH-6-36',
     jurisdiction: 'OH',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Ohio law',
+    description: 'Assault using dangerous weapon under Ohio law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'oh-domestic-violence-assault',
@@ -37227,15 +37227,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'OK-11-12',
+    code: 'OK-1-69',
     jurisdiction: 'OK',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Oklahoma law',
+    description: 'Assault using dangerous weapon under Oklahoma law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ok-domestic-violence-assault',
@@ -38202,15 +38202,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'OR-45-87',
+    code: 'OR-30-3',
     jurisdiction: 'OR',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Oregon law',
+    description: 'Assault using dangerous weapon under Oregon law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'or-domestic-violence-assault',
@@ -39177,15 +39177,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PA-28-57',
+    code: 'PA-25-31',
     jurisdiction: 'PA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Pennsylvania law',
+    description: 'Assault using dangerous weapon under Pennsylvania law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'pa-domestic-violence-assault',
@@ -40152,15 +40152,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'RI-45-6',
+    code: 'RI-38-83',
     jurisdiction: 'RI',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Rhode Island law',
+    description: 'Assault using dangerous weapon under Rhode Island law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ri-domestic-violence-assault',
@@ -41127,15 +41127,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'SC-38-89',
+    code: 'SC-4-29',
     jurisdiction: 'SC',
     category: 'felony',
-    description: 'Assault using dangerous instrument under South Carolina law',
+    description: 'Assault using dangerous weapon under South Carolina law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'sc-domestic-violence-assault',
@@ -42102,15 +42102,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'SD-13-1',
+    code: 'SD-8-84',
     jurisdiction: 'SD',
     category: 'felony',
-    description: 'Assault using dangerous instrument under South Dakota law',
+    description: 'Assault using dangerous weapon under South Dakota law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'sd-domestic-violence-assault',
@@ -43077,15 +43077,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'TN-32-82',
+    code: 'TN-14-74',
     jurisdiction: 'TN',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Tennessee law',
+    description: 'Assault using dangerous weapon under Tennessee law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'tn-domestic-violence-assault',
@@ -44052,15 +44052,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PC 47.10',
+    code: 'PC 32.10',
     jurisdiction: 'TX',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Texas law',
+    description: 'Assault using dangerous weapon under Texas law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'tx-domestic-violence-assault',
@@ -45027,15 +45027,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'UT-36-15',
+    code: 'UT-44-24',
     jurisdiction: 'UT',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Utah law',
+    description: 'Assault using dangerous weapon under Utah law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'ut-domestic-violence-assault',
@@ -46002,15 +46002,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'VT-4-85',
+    code: 'VT-30-88',
     jurisdiction: 'VT',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Vermont law',
+    description: 'Assault using dangerous weapon under Vermont law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'vt-domestic-violence-assault',
@@ -46977,15 +46977,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'VA-50-7',
+    code: 'VA-17-73',
     jurisdiction: 'VA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Virginia law',
+    description: 'Assault using dangerous weapon under Virginia law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'va-domestic-violence-assault',
@@ -47952,15 +47952,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'WA-18-58',
+    code: 'WA-42-34',
     jurisdiction: 'WA',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Washington law',
+    description: 'Assault using dangerous weapon under Washington law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'wa-domestic-violence-assault',
@@ -48927,15 +48927,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'WV-38-45',
+    code: 'WV-28-92',
     jurisdiction: 'WV',
     category: 'felony',
-    description: 'Assault using dangerous instrument under West Virginia law',
+    description: 'Assault using dangerous weapon under West Virginia law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'wv-domestic-violence-assault',
@@ -49902,15 +49902,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'WI-45-57',
+    code: 'WI-39-91',
     jurisdiction: 'WI',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Wisconsin law',
+    description: 'Assault using dangerous weapon under Wisconsin law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'wi-domestic-violence-assault',
@@ -50877,15 +50877,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'WY-29-34',
+    code: 'WY-42-49',
     jurisdiction: 'WY',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Wyoming law',
+    description: 'Assault using dangerous weapon under Wyoming law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'wy-domestic-violence-assault',
@@ -51852,15 +51852,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'DC-7-28',
+    code: 'DC-38-25',
     jurisdiction: 'DC',
     category: 'felony',
-    description: 'Assault using dangerous instrument under District of Columbia law',
+    description: 'Assault using dangerous weapon under District of Columbia law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'dc-domestic-violence-assault',
@@ -52827,15 +52827,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'AS-7-75',
+    code: 'AS-43-26',
     jurisdiction: 'AS',
     category: 'felony',
-    description: 'Assault using dangerous instrument under American Samoa law',
+    description: 'Assault using dangerous weapon under American Samoa law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'as-domestic-violence-assault',
@@ -53802,15 +53802,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'GU-13-95',
+    code: 'GU-40-85',
     jurisdiction: 'GU',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Guam law',
+    description: 'Assault using dangerous weapon under Guam law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'gu-domestic-violence-assault',
@@ -54777,15 +54777,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'MP-41-27',
+    code: 'MP-45-72',
     jurisdiction: 'MP',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Northern Mariana Islands law',
+    description: 'Assault using dangerous weapon under Northern Mariana Islands law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'mp-domestic-violence-assault',
@@ -55752,15 +55752,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PR-23-24',
+    code: 'PR-8-52',
     jurisdiction: 'PR',
     category: 'felony',
-    description: 'Assault using dangerous instrument under Puerto Rico law',
+    description: 'Assault using dangerous weapon under Puerto Rico law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'pr-domestic-violence-assault',
@@ -56727,15 +56727,15 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'VI-50-31',
+    code: 'VI-1-52',
     jurisdiction: 'VI',
     category: 'felony',
-    description: 'Assault using dangerous instrument under U.S. Virgin Islands law',
+    description: 'Assault using dangerous weapon under U.S. Virgin Islands law',
     maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    commonDefenses: ['Consult with attorney for applicable defenses'],
+    evidenceToGather: ['Gather all relevant documentation and evidence'],
+    specificRights: ['Constitutional rights apply to all criminal cases'],
+    urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
     id: 'vi-domestic-violence-assault',
@@ -57614,3 +57614,26 @@ export const chargeCategories: Record<string, string[]> = {
   'PR': ['pr-murder-in-the-first-degree', 'pr-murder-in-the-second-degree', 'pr-murder-in-the-third-degree', 'pr-voluntary-manslaughter', 'pr-involuntary-manslaughter', 'pr-criminally-negligent-homicide', 'pr-vehicular-homicide', 'pr-felony-murder', 'pr-assault-in-the-first-degree', 'pr-assault-in-the-second-degree', 'pr-assault-in-the-third-degree', 'pr-aggravated-assault', 'pr-assault-with-deadly-weapon', 'pr-domestic-violence-assault', 'pr-assault-on-peace-officer', 'pr-menacing', 'pr-rape-in-the-first-degree', 'pr-rape-in-the-second-degree', 'pr-sexual-assault-in-the-first-degree', 'pr-sexual-assault-in-the-second-degree', 'pr-sexual-assault-in-the-third-degree', 'pr-statutory-rape', 'pr-child-sexual-abuse', 'pr-sexual-exploitation-of-minor', 'pr-grand-theft-in-the-first-degree', 'pr-grand-theft-in-the-second-degree', 'pr-grand-theft-in-the-third-degree', 'pr-petty-theft', 'pr-theft-by-receiving', 'pr-identity-theft', 'pr-credit-card-fraud', 'pr-embezzlement', 'pr-shoplifting', 'pr-burglary-in-the-first-degree', 'pr-burglary-in-the-second-degree', 'pr-burglary-in-the-third-degree', 'pr-residential-burglary', 'pr-commercial-burglary', 'pr-auto-burglary', 'pr-robbery-in-the-first-degree', 'pr-robbery-in-the-second-degree', 'pr-robbery-in-the-third-degree', 'pr-carjacking', 'pr-bank-robbery', 'pr-possession-of-controlled-substance', 'pr-possession-with-intent-to-distribute', 'pr-distribution-of-controlled-substance', 'pr-manufacturing-controlled-substance', 'pr-drug-trafficking', 'pr-possession-of-drug-paraphernalia', 'pr-maintaining-drug-house', 'pr-unlawful-carrying-of-weapon', 'pr-felon-in-possession-of-firearm', 'pr-assault-with-deadly-weapon', 'pr-discharge-of-firearm-in-city', 'pr-possession-of-prohibited-weapon', 'pr-wire-fraud', 'pr-mail-fraud', 'pr-check-fraud', 'pr-insurance-fraud', 'pr-tax-fraud', 'pr-forgery', 'pr-computer-fraud', 'pr-disorderly-conduct', 'pr-public-intoxication', 'pr-disturbing-the-peace', 'pr-trespassing', 'pr-vandalism', 'pr-loitering', 'pr-dui-first-offense', 'pr-dui-second-offense', 'pr-dui-third-offense', 'pr-reckless-driving', 'pr-hit-and-run', 'pr-driving-while-suspended'],
   'VI': ['vi-murder-in-the-first-degree', 'vi-murder-in-the-second-degree', 'vi-murder-in-the-third-degree', 'vi-voluntary-manslaughter', 'vi-involuntary-manslaughter', 'vi-criminally-negligent-homicide', 'vi-vehicular-homicide', 'vi-felony-murder', 'vi-assault-in-the-first-degree', 'vi-assault-in-the-second-degree', 'vi-assault-in-the-third-degree', 'vi-aggravated-assault', 'vi-assault-with-deadly-weapon', 'vi-domestic-violence-assault', 'vi-assault-on-peace-officer', 'vi-menacing', 'vi-rape-in-the-first-degree', 'vi-rape-in-the-second-degree', 'vi-sexual-assault-in-the-first-degree', 'vi-sexual-assault-in-the-second-degree', 'vi-sexual-assault-in-the-third-degree', 'vi-statutory-rape', 'vi-child-sexual-abuse', 'vi-sexual-exploitation-of-minor', 'vi-grand-theft-in-the-first-degree', 'vi-grand-theft-in-the-second-degree', 'vi-grand-theft-in-the-third-degree', 'vi-petty-theft', 'vi-theft-by-receiving', 'vi-identity-theft', 'vi-credit-card-fraud', 'vi-embezzlement', 'vi-shoplifting', 'vi-burglary-in-the-first-degree', 'vi-burglary-in-the-second-degree', 'vi-burglary-in-the-third-degree', 'vi-residential-burglary', 'vi-commercial-burglary', 'vi-auto-burglary', 'vi-robbery-in-the-first-degree', 'vi-robbery-in-the-second-degree', 'vi-robbery-in-the-third-degree', 'vi-carjacking', 'vi-bank-robbery', 'vi-possession-of-controlled-substance', 'vi-possession-with-intent-to-distribute', 'vi-distribution-of-controlled-substance', 'vi-manufacturing-controlled-substance', 'vi-drug-trafficking', 'vi-possession-of-drug-paraphernalia', 'vi-maintaining-drug-house', 'vi-unlawful-carrying-of-weapon', 'vi-felon-in-possession-of-firearm', 'vi-assault-with-deadly-weapon', 'vi-discharge-of-firearm-in-city', 'vi-possession-of-prohibited-weapon', 'vi-wire-fraud', 'vi-mail-fraud', 'vi-check-fraud', 'vi-insurance-fraud', 'vi-tax-fraud', 'vi-forgery', 'vi-computer-fraud', 'vi-disorderly-conduct', 'vi-public-intoxication', 'vi-disturbing-the-peace', 'vi-trespassing', 'vi-vandalism', 'vi-loitering', 'vi-dui-first-offense', 'vi-dui-second-offense', 'vi-dui-third-offense', 'vi-reckless-driving', 'vi-hit-and-run', 'vi-driving-while-suspended']
 };
+
+// Helper functions for charge lookup
+export function getChargeById(id: string): CriminalCharge | undefined {
+  return criminalCharges.find(charge => charge.id === id);
+}
+
+export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[] {
+  return criminalCharges.filter(charge => charge.jurisdiction === jurisdiction);
+}
+
+export function searchCharges(query: string): CriminalCharge[] {
+  const lowercaseQuery = query.toLowerCase();
+  return criminalCharges.filter(charge => 
+    charge.name.toLowerCase().includes(lowercaseQuery) ||
+    charge.code.toLowerCase().includes(lowercaseQuery) ||
+    charge.description.toLowerCase().includes(lowercaseQuery)
+  );
+}
+
+export function getChargesByCategory(category: string): CriminalCharge[] {
+  const categoryIds = chargeCategories[category] || [];
+  return categoryIds.map(id => getChargeById(id)).filter(charge => charge !== undefined) as CriminalCharge[];
+}

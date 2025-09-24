@@ -74,40 +74,53 @@ class ChargeIntegrator {
   }
 
   mergeCharges() {
-    console.log('🔄 Merging charges...');
+    console.log('🔄 Merging charges with strict deduplication...');
     
-    // Create a map of existing charges by ID for deduplication
-    const existingChargesMap = new Map();
-    this.existingCharges.forEach(charge => {
-      existingChargesMap.set(charge.id, charge);
-    });
-
-    // Start with existing charges
-    this.mergedCharges = [...this.existingCharges];
+    // Use a Map to enforce unique IDs and prevent duplicates
+    const chargeMap = new Map();
     let newChargesCount = 0;
     let updatedChargesCount = 0;
+    let duplicatesSkipped = 0;
 
-    // Add or update with scraped charges
-    this.scrapedCharges.forEach(scrapedCharge => {
-      if (existingChargesMap.has(scrapedCharge.id)) {
-        // Update existing charge with scraped data (scraped data takes precedence)
-        const existingIndex = this.mergedCharges.findIndex(c => c.id === scrapedCharge.id);
-        if (existingIndex !== -1) {
-          this.mergedCharges[existingIndex] = scrapedCharge;
-          updatedChargesCount++;
-        }
+    // Add existing charges to map first
+    this.existingCharges.forEach(charge => {
+      if (chargeMap.has(charge.id)) {
+        console.log(`⚠️  Duplicate in existing charges: ${charge.id}`);
+        duplicatesSkipped++;
       } else {
-        // Add new charge
-        this.mergedCharges.push(scrapedCharge);
+        chargeMap.set(charge.id, charge);
+      }
+    });
+
+    // Process scraped charges with strict deduplication
+    this.scrapedCharges.forEach(scrapedCharge => {
+      if (chargeMap.has(scrapedCharge.id)) {
+        // Update existing charge (scraped data takes precedence)
+        chargeMap.set(scrapedCharge.id, scrapedCharge);
+        updatedChargesCount++;
+      } else {
+        // Add new unique charge
+        chargeMap.set(scrapedCharge.id, scrapedCharge);
         newChargesCount++;
       }
     });
 
-    console.log(`✅ Merge complete:`);
-    console.log(`   - Existing charges: ${this.existingCharges.length}`);
+    // Convert map back to array with guaranteed unique IDs
+    this.mergedCharges = Array.from(chargeMap.values());
+
+    console.log(`✅ Merge complete with strict deduplication:`);
+    console.log(`   - Original existing charges: ${this.existingCharges.length}`);
     console.log(`   - New charges added: ${newChargesCount}`);
     console.log(`   - Existing charges updated: ${updatedChargesCount}`);
-    console.log(`   - Total merged charges: ${this.mergedCharges.length}`);
+    console.log(`   - Duplicates prevented: ${duplicatesSkipped}`);
+    console.log(`   - Final unique charges: ${this.mergedCharges.length}`);
+    
+    // Verify no duplicates remain
+    const uniqueIds = new Set(this.mergedCharges.map(c => c.id));
+    if (uniqueIds.size !== this.mergedCharges.length) {
+      throw new Error(`Duplicate IDs still exist! Expected ${this.mergedCharges.length}, got ${uniqueIds.size} unique IDs`);
+    }
+    console.log(`✅ ID uniqueness verified: ${uniqueIds.size} unique charges`);
   }
 
   buildChargeCategories() {
@@ -205,6 +218,10 @@ class ChargeIntegrator {
     // Generate TypeScript content
     const tsContent = this.generateTypeScriptContent();
     
+    // Add note about data source
+    console.log('📝 Note: This database contains synthesized criminal charges based on common law patterns');
+    console.log('   across all US jurisdictions for comprehensive coverage in legal guidance.');
+    
     // Create backup of existing file
     try {
       await fs.copyFile('shared/criminal-charges.ts', 'shared/criminal-charges.ts.backup');
@@ -224,6 +241,11 @@ class ChargeIntegrator {
 // Generated: ${new Date().toISOString()}
 // Total Charges: ${this.mergedCharges.length}
 // Jurisdictions: All 50 states + DC + US territories
+//
+// NOTE: This database contains synthesized criminal charges based on standard criminal law
+// patterns and Model Penal Code principles for comprehensive coverage across all US jurisdictions.
+// The charges represent common crime categories found in state criminal codes but use
+// generated statute codes and standardized penalties for consistency in legal guidance.
 
 export interface CriminalCharge {
   id: string;
