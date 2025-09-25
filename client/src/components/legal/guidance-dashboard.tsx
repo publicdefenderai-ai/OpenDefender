@@ -16,7 +16,10 @@ import {
   Users,
   Calendar,
   Eye,
-  EyeOff
+  EyeOff,
+  ArrowRight,
+  Gavel,
+  X
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -288,6 +291,30 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
         </CardContent>
       </Card>
 
+      {/* Next Steps */}
+      {guidance.nextSteps.length > 0 && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <ArrowRight className="h-5 w-5 text-indigo-600" />
+              Next Steps
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {guidance.nextSteps.map((step, index) => (
+                <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                  <div className="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">
+                    {index + 1}
+                  </div>
+                  <span className="flex-1 text-sm">{step}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
       {/* Expandable Sections */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Your Rights */}
@@ -423,6 +450,72 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-600 mt-1">•</span>
                         <span className="text-sm">{warning}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </CollapsibleContent>
+          </Collapsible>
+        )}
+
+        {/* Court Preparation */}
+        {guidance.courtPreparation.length > 0 && (
+          <Collapsible>
+            <CollapsibleTrigger asChild>
+              <Card className="cursor-pointer hover:bg-muted/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Gavel className="h-5 w-5 text-orange-600" />
+                      Court Preparation
+                    </div>
+                    <ChevronDown className="h-4 w-4" />
+                  </CardTitle>
+                </CardHeader>
+              </Card>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <Card className="mt-2">
+                <CardContent className="pt-6">
+                  <ul className="space-y-2">
+                    {guidance.courtPreparation.map((preparation, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <span className="text-orange-600 mt-1">•</span>
+                        <span className="text-sm">{preparation}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </CollapsibleContent>
+          </Collapsible>
+        )}
+
+        {/* Actions to Avoid */}
+        {guidance.avoidActions.length > 0 && (
+          <Collapsible>
+            <CollapsibleTrigger asChild>
+              <Card className="cursor-pointer hover:bg-muted/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <X className="h-5 w-5 text-red-500" />
+                      Actions to Avoid
+                    </div>
+                    <ChevronDown className="h-4 w-4" />
+                  </CardTitle>
+                </CardHeader>
+              </Card>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <Card className="mt-2">
+                <CardContent className="pt-6">
+                  <ul className="space-y-2">
+                    {guidance.avoidActions.map((action, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <span className="text-red-500 mt-1">•</span>
+                        <span className="text-sm">{action}</span>
                       </li>
                     ))}
                   </ul>
