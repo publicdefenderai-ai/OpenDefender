@@ -20,13 +20,17 @@ import {
   ExternalLink,
   Lightbulb,
   CheckCircle,
-  UserCheck
+  UserCheck,
+  X,
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link, useLocation } from "wouter";
+import { useState } from "react";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
@@ -36,10 +40,10 @@ import { RightsCard } from "@/components/legal/rights-card";
 import { DataSourceCard } from "@/components/legal/data-source-card";
 export default function Home() {
   const [, setLocation] = useLocation();
+  const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
 
   const handleUrgentHelp = () => {
-    // Show emergency rights modal or redirect to urgent help page
-    alert("URGENT LEGAL RIGHTS:\n\n1. You have the right to remain silent\n2. You have the right to an attorney\n3. Do not sign anything without legal counsel\n4. Ask for a public defender if you cannot afford an attorney\n\nContact local emergency legal services immediately.");
+    setUrgentHelpOpen(true);
   };
 
   return (
@@ -545,6 +549,97 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Urgent Help Modal */}
+      <Dialog open={urgentHelpOpen} onOpenChange={setUrgentHelpOpen}>
+        <DialogContent className="max-w-2xl bg-white dark:bg-gray-900 border-red-200 dark:border-red-800">
+          <DialogHeader>
+            <DialogTitle className="flex items-center text-red-600 dark:text-red-400 text-2xl font-bold">
+              <AlertTriangle className="mr-3 h-8 w-8" />
+              URGENT LEGAL RIGHTS
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-6 mt-6">
+            <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
+              <Shield className="h-5 w-5 text-red-600 dark:text-red-400" />
+              <AlertDescription className="text-red-800 dark:text-red-200 font-semibold">
+                If you're being arrested or in custody RIGHT NOW, know these critical rights:
+              </AlertDescription>
+            </Alert>
+
+            <div className="grid gap-4">
+              <Card className="border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-900/20">
+                <CardContent className="p-4">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">1</div>
+                    <div>
+                      <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-1">Right to Remain Silent</h4>
+                      <p className="text-blue-800 dark:text-blue-200 text-sm">You do not have to answer questions. Say: "I am exercising my right to remain silent."</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-green-500 bg-green-50 dark:bg-green-900/20">
+                <CardContent className="p-4">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">2</div>
+                    <div>
+                      <h4 className="font-bold text-green-900 dark:text-green-100 mb-1">Right to an Attorney</h4>
+                      <p className="text-green-800 dark:text-green-200 text-sm">Ask for a lawyer immediately. Say: "I want to speak to an attorney before answering any questions."</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-amber-500 bg-amber-50 dark:bg-amber-900/20">
+                <CardContent className="p-4">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">3</div>
+                    <div>
+                      <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Do Not Sign Anything</h4>
+                      <p className="text-amber-800 dark:text-amber-200 text-sm">Never sign documents without your attorney present. This includes waivers or statements.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-purple-500 bg-purple-50 dark:bg-purple-900/20">
+                <CardContent className="p-4">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">4</div>
+                    <div>
+                      <h4 className="font-bold text-purple-900 dark:text-purple-100 mb-1">Public Defender</h4>
+                      <p className="text-purple-800 dark:text-purple-200 text-sm">If you cannot afford an attorney, ask for a public defender. You have this right.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+              <Phone className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+              <AlertDescription className="text-amber-800 dark:text-amber-200">
+                <strong className="font-semibold">Contact Emergency Legal Services Immediately:</strong>
+                <br />• Call the local public defender's office
+                <br />• Contact legal aid organizations in your area
+                <br />• Ask a family member to find you an attorney
+              </AlertDescription>
+            </Alert>
+
+            <div className="flex justify-center pt-4">
+              <Button
+                onClick={() => setUrgentHelpOpen(false)}
+                className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold"
+                data-testid="button-close-urgent-help"
+              >
+                I Understand - Close
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
