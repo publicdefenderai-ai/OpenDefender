@@ -220,7 +220,7 @@ export default function CaseGuidance() {
                 number={1}
                 title="Answer Questions"
                 description="Provide information about your jurisdiction, charges, and case stage"
-                icon={<MessageSquare className="h-6 w-6 text-white" />}
+                icon={<MessageSquare className="h-6 w-6 text-blue-600" />}
               />
             </ScrollReveal>
 
@@ -229,7 +229,7 @@ export default function CaseGuidance() {
                 number={2}
                 title="AI Analysis"
                 description="Our system analyzes your situation using legal databases and precedents"
-                icon={<Scale className="h-6 w-6 text-white" />}
+                icon={<Scale className="h-6 w-6 text-green-600" />}
               />
             </ScrollReveal>
 
@@ -238,7 +238,7 @@ export default function CaseGuidance() {
                 number={3}
                 title="Get Guidance"
                 description="Receive tailored next steps, deadlines, and relevant legal information"
-                icon={<FileText className="h-6 w-6 text-white" />}
+                icon={<FileText className="h-6 w-6 text-purple-600" />}
               />
             </ScrollReveal>
 
@@ -247,7 +247,7 @@ export default function CaseGuidance() {
                 number={4}
                 title="Connect to Help"
                 description="Access local resources, attorneys, and support organizations"
-                icon={<Users className="h-6 w-6 text-white" />}
+                icon={<Users className="h-6 w-6 text-orange-600" />}
               />
             </ScrollReveal>
           </div>
@@ -269,7 +269,7 @@ export default function CaseGuidance() {
                 icon={<ArrowRight className="h-6 w-6 text-white" />}
                 title="Next Steps"
                 description="Clear, actionable steps you should take based on your case stage and circumstances"
-                bgColor="legal-blue"
+                bgColor="bg-blue-600"
               />
             </ScrollReveal>
 
@@ -278,7 +278,7 @@ export default function CaseGuidance() {
                 icon={<Clock className="h-6 w-6 text-white" />}
                 title="Important Deadlines"
                 description="Critical dates and timeframes you need to be aware of in your jurisdiction"
-                bgColor="urgent-red"
+                bgColor="bg-red-600"
               />
             </ScrollReveal>
 
@@ -287,7 +287,7 @@ export default function CaseGuidance() {
                 icon={<Shield className="h-6 w-6 text-white" />}
                 title="Your Rights"
                 description="Specific rights that apply to your situation and how to exercise them"
-                bgColor="success-green"
+                bgColor="bg-green-600"
               />
             </ScrollReveal>
 
@@ -428,10 +428,10 @@ function StepCard({ number, title, description, icon }: {
     <Card className="text-center hover:shadow-lg transition-all duration-300">
       <CardContent className="p-6">
         <div className="relative mb-4">
-          <div className="w-12 h-12 legal-blue rounded-lg flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mx-auto">
             {icon}
           </div>
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-success-green text-white rounded-full flex items-center justify-center text-xs font-bold">
+          <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
             {number}
           </div>
         </div>
