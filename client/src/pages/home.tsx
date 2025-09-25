@@ -221,23 +221,23 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal delay={0.1}>
               <RightsCard
-                icon={<Shield className="h-6 w-6 text-white" />}
+                icon={<Shield className="h-6 w-6 text-blue-600" />}
                 title="Miranda Rights"
                 description="Understanding your constitutional rights during police interactions and arrest situations."
                 buttonText="Learn More"
                 href="/rights-info#constitutional-rights"
-                iconBgColor="legal-blue"
+                iconBgColor="bg-blue-100 dark:bg-blue-900"
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <RightsCard
-                icon={<Calendar className="h-6 w-6 text-white" />}
+                icon={<Calendar className="h-6 w-6 text-green-600" />}
                 title="Court Process Timeline"
                 description="Step-by-step guide through arrest, arraignment, trial, and sentencing procedures."
                 buttonText="View Timeline"
                 href="/rights-info#criminal-justice-timeline"
-                iconBgColor="success-green"
+                iconBgColor="bg-green-100 dark:bg-green-900"
               />
             </ScrollReveal>
 
