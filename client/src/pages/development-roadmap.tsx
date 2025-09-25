@@ -256,22 +256,22 @@ export default function DevelopmentRoadmap() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Development Roadmap
               </h1>
-              <p className="text-xl text-blue-100 max-w-4xl mx-auto mb-8">
+              <p className="text-xl text-blue-900 dark:text-blue-100 max-w-4xl mx-auto mb-8">
                 Transparency in our mission to expand access to justice through technology. 
                 Track our progress as we build a comprehensive legal assistance platform.
               </p>
               <div className="flex items-center justify-center space-x-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold">{overallProgress}%</div>
-                  <div className="text-blue-200 text-sm">Overall Progress</div>
+                  <div className="text-blue-900 dark:text-blue-200 text-sm">Overall Progress</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold">{roadmapItems.filter(item => item.status === "completed").length}</div>
-                  <div className="text-blue-200 text-sm">Completed</div>
+                  <div className="text-blue-900 dark:text-blue-200 text-sm">Completed</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold">{roadmapItems.filter(item => item.status === "in-progress").length}</div>
-                  <div className="text-blue-200 text-sm">In Progress</div>
+                  <div className="text-blue-900 dark:text-blue-200 text-sm">In Progress</div>
                 </div>
               </div>
             </div>
@@ -292,7 +292,7 @@ export default function DevelopmentRoadmap() {
             <ScrollReveal delay={0.1}>
               <Card className="text-center">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 success-green rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-3">Access to Justice</h3>
@@ -306,7 +306,7 @@ export default function DevelopmentRoadmap() {
             <ScrollReveal delay={0.2}>
               <Card className="text-center">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 legal-blue rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-3">Privacy First</h3>
