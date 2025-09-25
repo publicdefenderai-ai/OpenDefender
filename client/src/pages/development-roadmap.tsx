@@ -253,7 +253,7 @@ export default function DevelopmentRoadmap() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900 dark:text-white">
                 Development Roadmap
               </h1>
               <p className="text-xl text-blue-900 dark:text-blue-100 max-w-4xl mx-auto mb-8">
