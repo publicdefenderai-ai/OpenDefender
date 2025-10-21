@@ -59,6 +59,11 @@ interface EnhancedGuidanceData {
     timeframe: string;
     completed: boolean;
   }>;
+  chargeClassifications?: Array<{
+    name: string;
+    classification: string;
+    code: string;
+  }>;
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -148,7 +153,26 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
             <div className="text-center">
               <div className="text-sm text-muted-foreground">Charges</div>
               <div className="font-medium">
-                {showSensitiveInfo ? guidance.caseData.charges : 'Protected'}
+                {showSensitiveInfo ? (
+                  <div className="flex flex-col gap-1">
+                    {guidance.chargeClassifications && guidance.chargeClassifications.length > 0 ? (
+                      guidance.chargeClassifications.map((charge, idx) => (
+                        <div key={idx} className="flex items-center justify-center gap-2">
+                          <span>{charge.name} ({charge.code})</span>
+                          <Badge 
+                            variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
+                            className="text-xs"
+                            data-testid={`badge-charge-classification-${idx}`}
+                          >
+                            {charge.classification.toUpperCase()}
+                          </Badge>
+                        </div>
+                      ))
+                    ) : (
+                      guidance.caseData.charges
+                    )}
+                  </div>
+                ) : 'Protected'}
               </div>
             </div>
             <div className="text-center">

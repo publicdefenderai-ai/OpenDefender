@@ -6,6 +6,7 @@ import { legalDataService } from "./services/legal-data";
 import { insertLegalCaseSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
+import { getChargeById } from "../shared/criminal-charges.js";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Legal Resources API
@@ -241,5 +242,29 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
 function generateLegalGuidance(caseData: any) {
   // Use the enhanced guidance engine for comprehensive legal guidance
-  return generateEnhancedGuidance(caseData);
+  const guidance = generateEnhancedGuidance(caseData);
+  
+  // Extract charge classifications
+  const chargeIds = Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges];
+  const chargeClassifications = chargeIds
+    .map((id: string) => {
+      const charge = getChargeById(id);
+      if (!charge) {
+        console.warn(`Warning: Charge ID "${id}" not found in database`);
+        return null;
+      }
+      return { name: charge.name, classification: charge.category, code: charge.code };
+    })
+    .filter(Boolean);
+  
+  // Log if we couldn't find all charges
+  if (chargeClassifications.length !== chargeIds.length) {
+    console.warn(`Warning: Could not find all charges. Found ${chargeClassifications.length} of ${chargeIds.length}`);
+  }
+  
+  // Add charge classification to guidance
+  return {
+    ...guidance,
+    chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined
+  };
 }
