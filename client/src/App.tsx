@@ -15,6 +15,7 @@ import ImmigrationGuidance from "@/pages/immigration-guidance";
 import LegalGlossary from "@/pages/legal-glossary";
 import DiversionPrograms from "@/pages/diversion-programs";
 import RecordExpungement from "@/pages/record-expungement";
+import MissionStatement from "@/pages/mission-statement";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/legal-glossary" component={LegalGlossary} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
       <Route path="/record-expungement" component={RecordExpungement} />
+      <Route path="/mission-statement" component={MissionStatement} />
       <Route component={NotFound} />
     </Switch>
   );

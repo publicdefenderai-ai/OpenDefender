@@ -393,11 +393,18 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All categories</SelectItem>
-                {Object.keys(chargeCategories).map(category => (
-                  <SelectItem key={category} value={category}>
-                    {category}
-                  </SelectItem>
-                ))}
+                {Object.keys(chargeCategories)
+                  .filter(category => {
+                    // Filter out state/jurisdiction codes (2-letter uppercase codes)
+                    const isStateCode = /^[A-Z]{2}$/.test(category);
+                    return !isStateCode;
+                  })
+                  .map(category => (
+                    <SelectItem key={category} value={category}>
+                      {category}
+                    </SelectItem>
+                  ))
+                }
               </SelectContent>
             </Select>
           </div>

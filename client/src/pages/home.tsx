@@ -41,6 +41,7 @@ import { DataSourceCard } from "@/components/legal/data-source-card";
 export default function Home() {
   const [, setLocation] = useLocation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
+  const [showAllRights, setShowAllRights] = useState(false);
 
   const handleUrgentHelp = () => {
     setUrgentHelpOpen(true);
@@ -52,7 +53,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-16 lg:py-24">
+      <section className="gradient-hero text-white py-12 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -154,20 +155,20 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-12 lg:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 lg:mb-6">
                 Powered by Real Legal Data
               </h2>
-              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
                 Our AI agent uses comprehensive legal databases and court records to provide accurate, up-to-date information.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             <ScrollReveal delay={0.1}>
               <DataSourceCard
                 icon={<Book className="h-6 w-6 text-white" />}
@@ -205,20 +206,20 @@ export default function Home() {
       </section>
 
       {/* Rights Information Section */}
-      <section className="py-16 lg:py-24 bg-muted/30" id="rights-info">
+      <section className="py-12 lg:py-24 bg-muted/30" id="rights-info">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 lg:mb-6">
                 Know Your Rights
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg md:text-xl text-muted-foreground">
                 Essential legal information everyone should know
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             <ScrollReveal delay={0.1}>
               <RightsCard
                 icon={<Shield className="h-6 w-6 text-blue-600" />}
@@ -252,44 +253,62 @@ export default function Home() {
               />
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
-              <RightsCard
-                icon={<Route className="h-6 w-6 text-white" />}
-                title="Diversion Programs"
-                description="Alternative sentencing options including drug courts, community service, and treatment programs."
-                buttonText="Explore Options"
-                href="/diversion-programs"
-                iconBgColor="bg-green-600"
-              />
-            </ScrollReveal>
+            {(showAllRights || typeof window !== 'undefined' && window.innerWidth >= 768) && (
+              <>
+                <ScrollReveal delay={0.4}>
+                  <RightsCard
+                    icon={<Route className="h-6 w-6 text-white" />}
+                    title="Diversion Programs"
+                    description="Alternative sentencing options including drug courts, community service, and treatment programs."
+                    buttonText="Explore Options"
+                    href="/diversion-programs"
+                    iconBgColor="bg-green-600"
+                  />
+                </ScrollReveal>
 
-            <ScrollReveal delay={0.5}>
-              <RightsCard
-                icon={<Book className="h-6 w-6 text-white" />}
-                title="Legal Glossary"
-                description="Plain-language definitions of common legal terms and court procedures."
-                buttonText="Browse Terms"
-                href="/legal-glossary"
-                iconBgColor="bg-purple-600"
-              />
-            </ScrollReveal>
+                <ScrollReveal delay={0.5}>
+                  <RightsCard
+                    icon={<Book className="h-6 w-6 text-white" />}
+                    title="Legal Glossary"
+                    description="Plain-language definitions of common legal terms and court procedures."
+                    buttonText="Browse Terms"
+                    href="/legal-glossary"
+                    iconBgColor="bg-purple-600"
+                  />
+                </ScrollReveal>
 
-            <ScrollReveal delay={0.6}>
-              <RightsCard
-                icon={<Eraser className="h-6 w-6 text-white" />}
-                title="Record Expungement"
-                description="Learn about sealing or expunging criminal records and eligibility requirements by state."
-                buttonText="Check Eligibility"
-                href="/record-expungement"
-                iconBgColor="bg-indigo-600"
-              />
-            </ScrollReveal>
+                <ScrollReveal delay={0.6}>
+                  <RightsCard
+                    icon={<Eraser className="h-6 w-6 text-white" />}
+                    title="Record Expungement"
+                    description="Learn about sealing or expunging criminal records and eligibility requirements by state."
+                    buttonText="Check Eligibility"
+                    href="/record-expungement"
+                    iconBgColor="bg-indigo-600"
+                  />
+                </ScrollReveal>
+              </>
+            )}
           </div>
+
+          {!showAllRights && typeof window !== 'undefined' && window.innerWidth < 768 && (
+            <div className="text-center mt-6 md:hidden">
+              <Button
+                variant="outline"
+                onClick={() => setShowAllRights(true)}
+                className="w-full sm:w-auto"
+                data-testid="button-show-more-rights"
+              >
+                Show More Resources
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Personalized Guidance Preview */}
-      <section className="py-16 lg:py-24 legal-blue text-white">
+      <section className="py-12 lg:py-24 legal-blue text-white">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <ScrollReveal>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">Get Personalized Legal Guidance</h2>
@@ -339,20 +358,20 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-12 lg:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 lg:mb-6">
                 Built on Trust & Transparency
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg md:text-xl text-muted-foreground">
                 Every piece of legal information is backed by credible sources
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <ScrollReveal delay={0.1}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -415,11 +434,11 @@ export default function Home() {
           {/* Call to Action */}
           <ScrollReveal delay={0.6}>
             <div className="text-center mt-12">
-              <div className="space-x-4">
-                <Button className="legal-blue hover:bg-blue-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:space-x-4 sm:gap-0">
+                <Button className="legal-blue hover:bg-blue-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200">
                   Find a Public Defender
                 </Button>
-                <Button className="success-green hover:bg-green-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200">
+                <Button className="success-green hover:bg-green-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200">
                   Legal Aid Organizations
                 </Button>
               </div>
@@ -428,8 +447,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Data Sources & Development */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      {/* Data Sources & Development - Hidden on mobile to reduce clutter */}
+      <section className="hidden md:block py-16 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -552,10 +571,10 @@ export default function Home() {
 
       {/* Urgent Help Modal */}
       <Dialog open={urgentHelpOpen} onOpenChange={setUrgentHelpOpen}>
-        <DialogContent className="max-w-2xl bg-white dark:bg-gray-900 border-red-200 dark:border-red-800">
+        <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 border-red-200 dark:border-red-800">
           <DialogHeader>
-            <DialogTitle className="flex items-center text-red-600 dark:text-red-400 text-2xl font-bold">
-              <AlertTriangle className="mr-3 h-8 w-8" />
+            <DialogTitle className="flex items-center text-red-600 dark:text-red-400 text-xl sm:text-2xl font-bold pr-8">
+              <AlertTriangle className="mr-2 sm:mr-3 h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
               URGENT LEGAL RIGHTS
             </DialogTitle>
           </DialogHeader>
