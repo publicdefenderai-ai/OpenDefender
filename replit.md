@@ -10,6 +10,20 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### v1.0 Mobile Optimization and Feature Enhancements (October 2025)
+- Created Mission Statement page (`/mission-statement`) with project goals and guiding principles
+- Enhanced header functionality:
+  - ? (help) icon now links to Mission Statement page
+  - Implemented mobile hamburger menu with sheet navigation (Get Guidance, Learn Your Rights, Immigration Assistance)
+- Mobile responsiveness improvements:
+  - Optimized Urgent Help popup for mobile (max-w-[95vw], scrollable content, accessible close button)
+  - Implemented "Show More" functionality for rights cards on mobile (initially shows 3, expandable to all 6)
+  - Vertically stacked CTA buttons on mobile for better accessibility
+  - Reduced padding and spacing across all sections on mobile devices
+  - Hidden duplicate "Data Sources" section on mobile to reduce visual clutter
+- Fixed Personalized Assessment category filter to exclude state codes (CA, NY, TX, etc.) from dropdown, showing only crime type categories
+- Overall mobile experience: cleaner layout, reduced clutter, professional appearance optimized for smartphones
+
 ### Comprehensive Criminal Charges Database Expansion (September 2025)
 - Expanded criminal charges database with comprehensive FindLaw crime categories
 - Added missing crime types across Technology/Cyber, Financial/White Collar, Administrative/Process, and Specialized categories:
