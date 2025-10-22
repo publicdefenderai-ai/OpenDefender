@@ -69,7 +69,7 @@ export async function searchPublicDefenderOffices(zipCode: string): Promise<Publ
         const osmResponse = await fetch(
           `https://nominatim.openstreetmap.org/search?` +
           `q="${term}"&` +
-          `viewbox=${bbox.west},${bbox.south},${bbox.east},${bbox.north}&` +
+          `viewbox=${bbox.west},${bbox.north},${bbox.east},${bbox.south}&` +
           `bounded=1&` +
           `format=json&` +
           `addressdetails=1&` +

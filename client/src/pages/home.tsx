@@ -22,7 +22,12 @@ import {
   CheckCircle,
   UserCheck,
   X,
-  Phone
+  Phone,
+  Search,
+  Mail,
+  Navigation,
+  Clock,
+  HelpCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -38,13 +43,70 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RightsCard } from "@/components/legal/rights-card";
 import { DataSourceCard } from "@/components/legal/data-source-card";
+import { Input } from "@/components/ui/input";
+import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
+import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 export default function Home() {
   const [, setLocation] = useLocation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
   const [showAllRights, setShowAllRights] = useState(false);
+  
+  // Public Defender search state
+  const [showPublicDefenderModal, setShowPublicDefenderModal] = useState(false);
+  const [pdZipCode, setPdZipCode] = useState("");
+  const [pdSearching, setPdSearching] = useState(false);
+  const [pdOffices, setPdOffices] = useState<PublicDefenderOffice[]>([]);
+  const [pdError, setPdError] = useState("");
+  
+  // Legal Aid Organizations search state
+  const [showLegalAidModal, setShowLegalAidModal] = useState(false);
+  const [laZipCode, setLaZipCode] = useState("");
+  const [laSearching, setLaSearching] = useState(false);
+  const [laOrganizations, setLaOrganizations] = useState<LegalAidOrganization[]>([]);
+  const [laError, setLaError] = useState("");
 
   const handleUrgentHelp = () => {
     setUrgentHelpOpen(true);
+  };
+  
+  const handlePublicDefenderSearch = async () => {
+    if (!pdZipCode.trim() || pdZipCode.length !== 5) {
+      setPdError("Please enter a valid 5-digit ZIP code");
+      return;
+    }
+
+    setPdSearching(true);
+    setPdError("");
+    
+    try {
+      const offices = await searchPublicDefenderOffices(pdZipCode);
+      setPdOffices(offices);
+    } catch (err) {
+      console.error('Public defender search error:', err);
+      setPdError("Unable to search for offices. Please try again or contact your local court for information.");
+    } finally {
+      setPdSearching(false);
+    }
+  };
+  
+  const handleLegalAidSearch = async () => {
+    if (!laZipCode.trim() || laZipCode.length !== 5) {
+      setLaError("Please enter a valid 5-digit ZIP code");
+      return;
+    }
+
+    setLaSearching(true);
+    setLaError("");
+    
+    try {
+      const organizations = await searchLegalAidOrganizations(laZipCode);
+      setLaOrganizations(organizations);
+    } catch (err) {
+      console.error('Legal aid search error:', err);
+      setLaError("Unable to search for organizations. Please try again or contact your local bar association.");
+    } finally {
+      setLaSearching(false);
+    }
   };
 
   return (
@@ -435,10 +497,18 @@ export default function Home() {
           <ScrollReveal delay={0.6}>
             <div className="text-center mt-12">
               <div className="flex flex-col sm:flex-row justify-center gap-4 sm:space-x-4 sm:gap-0">
-                <Button className="legal-blue hover:bg-blue-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200">
+                <Button 
+                  onClick={() => setShowPublicDefenderModal(true)}
+                  className="legal-blue hover:bg-blue-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200"
+                  data-testid="button-find-public-defender"
+                >
                   Find a Public Defender
                 </Button>
-                <Button className="success-green hover:bg-green-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200">
+                <Button 
+                  onClick={() => setShowLegalAidModal(true)}
+                  className="success-green hover:bg-green-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200"
+                  data-testid="button-legal-aid-organizations"
+                >
                   Legal Aid Organizations
                 </Button>
               </div>
@@ -659,6 +729,400 @@ export default function Home() {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Public Defender Search Modal */}
+      <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Users className="h-5 w-5" />
+              Find Public Defender Offices
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-6">
+            {/* Search Section */}
+            <div className="flex gap-3">
+              <div className="flex-1">
+                <Input
+                  type="text"
+                  placeholder="Enter ZIP code"
+                  value={pdZipCode}
+                  onChange={(e) => setPdZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
+                  onKeyPress={(e) => e.key === 'Enter' && handlePublicDefenderSearch()}
+                  className="border-2 border-blue-300 focus:border-blue-500"
+                  data-testid="input-pd-zipcode"
+                />
+              </div>
+              <Button
+                onClick={handlePublicDefenderSearch}
+                disabled={pdSearching || pdZipCode.length !== 5}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6"
+                data-testid="button-search-pd"
+              >
+                {pdSearching ? (
+                  <>
+                    <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
+                    Searching...
+                  </>
+                ) : (
+                  <>
+                    <Search className="mr-2 h-4 w-4" />
+                    Search
+                  </>
+                )}
+              </Button>
+            </div>
+
+            {/* Error Message */}
+            {pdError && (
+              <Alert className="border-yellow-200 bg-yellow-50">
+                <AlertTriangle className="h-4 w-4 text-yellow-600" />
+                <AlertDescription className="text-yellow-800">
+                  {pdError}
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {/* Results */}
+            {pdOffices.length > 0 && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">
+                  Found {pdOffices.length} office{pdOffices.length !== 1 ? 's' : ''} near you
+                </h3>
+                
+                <div className="grid gap-4">
+                  {pdOffices.map((office) => (
+                    <PublicDefenderOfficeCard key={office.id} office={office} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* No Results */}
+            {!pdSearching && pdOffices.length === 0 && pdZipCode.length === 5 && !pdError && (
+              <div className="text-center py-8">
+                <Users className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">No offices found</h3>
+                <p className="text-muted-foreground">
+                  Try searching with a different ZIP code or contact your local court for referral information.
+                </p>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Legal Aid Organizations Search Modal */}
+      <Dialog open={showLegalAidModal} onOpenChange={setShowLegalAidModal}>
+        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <HelpCircle className="h-5 w-5" />
+              Find Legal Aid Organizations
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-6">
+            <Alert className="border-blue-200 bg-blue-50">
+              <Shield className="h-4 w-4 text-blue-600" />
+              <AlertDescription className="text-blue-800">
+                <strong>These organizations focus on criminal justice and immigration legal assistance.</strong> Services are often free or low-cost for those who qualify.
+              </AlertDescription>
+            </Alert>
+
+            {/* Search Section */}
+            <div className="flex gap-3">
+              <div className="flex-1">
+                <Input
+                  type="text"
+                  placeholder="Enter ZIP code"
+                  value={laZipCode}
+                  onChange={(e) => setLaZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
+                  onKeyPress={(e) => e.key === 'Enter' && handleLegalAidSearch()}
+                  className="border-2 border-green-300 focus:border-green-500"
+                  data-testid="input-la-zipcode"
+                />
+              </div>
+              <Button
+                onClick={handleLegalAidSearch}
+                disabled={laSearching || laZipCode.length !== 5}
+                className="bg-green-600 hover:bg-green-700 text-white font-bold px-6"
+                data-testid="button-search-la"
+              >
+                {laSearching ? (
+                  <>
+                    <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
+                    Searching...
+                  </>
+                ) : (
+                  <>
+                    <Search className="mr-2 h-4 w-4" />
+                    Search
+                  </>
+                )}
+              </Button>
+            </div>
+
+            {/* Error Message */}
+            {laError && (
+              <Alert className="border-yellow-200 bg-yellow-50">
+                <AlertTriangle className="h-4 w-4 text-yellow-600" />
+                <AlertDescription className="text-yellow-800">
+                  {laError}
+                </AlertDescription>
+              </Alert>
+            )}
+
+            {/* Results */}
+            {laOrganizations.length > 0 && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">
+                  Found {laOrganizations.length} organization{laOrganizations.length !== 1 ? 's' : ''} near you
+                </h3>
+                
+                <div className="grid gap-4">
+                  {laOrganizations.map((org) => (
+                    <LegalAidOrganizationCard key={org.id} organization={org} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* No Results */}
+            {!laSearching && laOrganizations.length === 0 && laZipCode.length === 5 && !laError && (
+              <div className="text-center py-8">
+                <HelpCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">No organizations found</h3>
+                <p className="text-muted-foreground">
+                  Try searching with a different ZIP code or contact your local bar association for referrals.
+                </p>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
+  );
+}
+
+// Component for displaying Public Defender Office cards
+function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
+  return (
+    <Card className="hover:shadow-md transition-all duration-200">
+      <CardContent className="p-4">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h4 className="font-semibold text-lg mb-1">{office.name}</h4>
+            <div className="flex flex-wrap gap-2">
+              {office.county && (
+                <Badge variant="outline" className="text-xs">
+                  {office.county} County
+                </Badge>
+              )}
+              <Badge className="bg-blue-600 text-white text-xs">
+                {office.distance} mi away
+              </Badge>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          {/* Address */}
+          <div className="flex items-start gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+            <div>
+              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm font-medium">{office.address}</div>
+            </div>
+          </div>
+
+          {/* Phone */}
+          {office.phone && (
+            <div className="flex items-start gap-2">
+              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Phone</div>
+                <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
+                  {office.phone}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Email */}
+          {office.email && (
+            <div className="flex items-start gap-2">
+              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Email</div>
+                <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
+                  {office.email}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Hours */}
+          {office.hours && (
+            <div className="flex items-start gap-2">
+              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm font-medium">{office.hours}</div>
+              </div>
+            </div>
+          )}
+
+          {/* Services */}
+          <div>
+            <div className="text-sm text-muted-foreground mb-2">Services</div>
+            <div className="flex flex-wrap gap-1">
+              {office.services.map((service) => (
+                <Badge key={service} variant="outline" className="text-xs">
+                  {service}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="flex gap-2 pt-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1"
+              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(office.address)}`, '_blank')}
+              data-testid={`button-directions-${office.id}`}
+            >
+              <Navigation className="h-3 w-3 mr-1" />
+              Directions
+            </Button>
+            {office.website && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.open(office.website, '_blank')}
+                data-testid={`button-website-${office.id}`}
+              >
+                <ExternalLink className="h-3 w-3" />
+              </Button>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+// Component for displaying Legal Aid Organization cards
+function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrganization }) {
+  return (
+    <Card className="hover:shadow-md transition-all duration-200">
+      <CardContent className="p-4">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h4 className="font-semibold text-lg mb-1">{organization.name}</h4>
+            <div className="flex flex-wrap gap-2">
+              {organization.county && (
+                <Badge variant="outline" className="text-xs">
+                  {organization.county} County
+                </Badge>
+              )}
+              <Badge className="bg-green-600 text-white text-xs">
+                {organization.distance} mi away
+              </Badge>
+              <Badge variant="secondary" className="text-xs">
+                {organization.organizationType}
+              </Badge>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          {/* Address */}
+          <div className="flex items-start gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+            <div>
+              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm font-medium">{organization.address}</div>
+            </div>
+          </div>
+
+          {/* Phone */}
+          {organization.phone && (
+            <div className="flex items-start gap-2">
+              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Phone</div>
+                <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-green-600">
+                  {organization.phone}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Email */}
+          {organization.email && (
+            <div className="flex items-start gap-2">
+              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Email</div>
+                <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-green-600">
+                  {organization.email}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Hours */}
+          {organization.hours && (
+            <div className="flex items-start gap-2">
+              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm font-medium">{organization.hours}</div>
+              </div>
+            </div>
+          )}
+
+          {/* Services */}
+          <div>
+            <div className="text-sm text-muted-foreground mb-2">Services Offered</div>
+            <div className="flex flex-wrap gap-1">
+              {organization.services.map((service) => (
+                <Badge key={service} variant="outline" className="text-xs">
+                  {service}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="flex gap-2 pt-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1"
+              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(organization.address)}`, '_blank')}
+              data-testid={`button-directions-${organization.id}`}
+            >
+              <Navigation className="h-3 w-3 mr-1" />
+              Directions
+            </Button>
+            {organization.website && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.open(organization.website, '_blank')}
+                data-testid={`button-website-${organization.id}`}
+              >
+                <ExternalLink className="h-3 w-3" />
+              </Button>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

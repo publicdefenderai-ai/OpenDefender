@@ -10,6 +10,30 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### Legal Aid Organizations & Public Defender Search (October 2025)
+- Implemented ZIP code-based search functionality for finding legal assistance organizations
+- **Public Defender Search**:
+  - Search modal accessible from home page and rights-info page
+  - Uses OpenStreetMap/Nominatim API for geocoding and location-based search
+  - Returns public defender offices within 50-mile radius
+  - Displays office details: address, phone, email, hours, services, distance from ZIP code
+  - Fixed bounding box bug for accurate geographic searches
+- **Legal Aid Organizations Search**:
+  - Created `legal-aid-services.ts` service focusing on criminal justice and immigration legal assistance
+  - Excludes general homeless services unrelated to criminal law
+  - Search terms target: legal aid societies, immigration legal services, criminal defense organizations
+  - Returns organizations with type badges (Immigration Legal Services, Criminal Justice Legal Aid, etc.)
+  - Services displayed include: Immigration Status Assistance, Deportation Defense, Criminal Defense Assistance, Expungement Help
+  - Fallback data provides generic organizations when no local results found
+- Both search features include:
+  - ZIP code validation (5-digit requirement)
+  - Loading states during searches
+  - Error handling with helpful messages
+  - Distance-based sorting (same county prioritized)
+  - Direct links to Google Maps for directions
+  - Modal dialogs with consistent UX on both home and rights-info pages
+- Integration points: Home page CTA buttons and Rights Info page resource cards
+
 ### RECAP/Court Records Integration (October 2025)
 - Integrated RECAP Archive and CourtListener API for free court record access
 - Implemented "free-first" search strategy: checks RECAP Archive before suggesting paid PACER access
