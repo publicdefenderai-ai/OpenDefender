@@ -140,3 +140,32 @@ export type InsertDiversionProgram = z.infer<typeof insertDiversionProgramSchema
 export type DiversionProgram = typeof diversionPrograms.$inferSelect;
 export type InsertExpungementRule = z.infer<typeof insertExpungementRuleSchema>;
 export type ExpungementRule = typeof expungementRules.$inferSelect;
+
+// RECAP/Court Records Schema - for caching search results and documents
+export const courtRecords = pgTable("court_records", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  recordType: text("record_type").notNull(), // 'opinion', 'docket', 'recap_document'
+  courtListenerId: text("courtlistener_id"), // ID from CourtListener/RECAP
+  pacerId: text("pacer_id"), // PACER case/document ID if available
+  courtId: text("court_id").notNull(),
+  courtName: text("court_name"),
+  caseName: text("case_name").notNull(),
+  caseNumber: text("case_number"),
+  docketNumber: text("docket_number"),
+  dateFiled: timestamp("date_filed"),
+  description: text("description"),
+  documentUrl: text("document_url"),
+  recapUrl: text("recap_url"), // Free RECAP archive URL if available
+  pacerUrl: text("pacer_url"), // PACER URL (costs money)
+  isRecapAvailable: boolean("is_recap_available").default(false),
+  metadata: jsonb("metadata"), // Additional data from API
+  lastChecked: timestamp("last_checked").defaultNow(),
+});
+
+export const insertCourtRecordSchema = createInsertSchema(courtRecords).omit({
+  id: true,
+  lastChecked: true,
+});
+
+export type InsertCourtRecord = z.infer<typeof insertCourtRecordSchema>;
+export type CourtRecord = typeof courtRecords.$inferSelect;
