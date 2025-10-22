@@ -165,10 +165,27 @@ export class RecapService {
       this.searchOpinions(params)
     ]);
 
+    // Check for failures and propagate errors if both searches failed
+    const recapFailed = recapResults.status === 'rejected';
+    const opinionsFailed = opinionResults.status === 'rejected';
+
+    if (recapFailed && opinionsFailed) {
+      // Both searches failed - this is a critical error
+      const error = new Error('Both RECAP and opinion searches failed. CourtListener API may be unavailable.');
+      (error as any).recapError = recapResults.reason;
+      (error as any).opinionsError = opinionResults.reason;
+      throw error;
+    }
+
     return {
       recap: recapResults.status === 'fulfilled' ? recapResults.value : { count: 0, results: [] },
       opinions: opinionResults.status === 'fulfilled' ? opinionResults.value : { count: 0, results: [] },
-      hasRecapAccess: !!COURTLISTENER_TOKEN
+      hasRecapAccess: !!COURTLISTENER_TOKEN,
+      partialFailure: recapFailed || opinionsFailed,
+      failedServices: {
+        recap: recapFailed,
+        opinions: opinionsFailed
+      }
     };
   }
 

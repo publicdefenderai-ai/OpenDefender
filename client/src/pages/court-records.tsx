@@ -153,6 +153,18 @@ export default function CourtRecords() {
               </Alert>
             )}
 
+            {(data as any)?.partialFailure && (
+              <Alert variant="destructive" className="mb-6">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>
+                  <strong>Partial Search Failure:</strong> Some search services are unavailable. 
+                  {(data as any).failedServices?.recap && ' RECAP docket search failed.'}
+                  {(data as any).failedServices?.opinions && ' Case law opinion search failed.'}
+                  {' '}Results shown may be incomplete.
+                </AlertDescription>
+              </Alert>
+            )}
+
             {(data as any)?.recap?.count > 0 && (
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
