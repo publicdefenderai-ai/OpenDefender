@@ -10,6 +10,27 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### RECAP/Court Records Integration (October 2025)
+- Integrated RECAP Archive and CourtListener API for free court record access
+- Implemented "free-first" search strategy: checks RECAP Archive before suggesting paid PACER access
+- Added Court Records Search page (`/court-records`):
+  - Search federal court filings and dockets from RECAP Archive
+  - Search case law opinions from CourtListener database
+  - Clear indicators showing which documents are free vs. paid
+  - Direct links to free RECAP documents
+- Created RECAP Extensions page (`/recap-extensions`):
+  - Information about RECAP browser extensions for Chrome, Edge, Firefox, and Safari
+  - Prominent third-party disclaimer explaining the relationship with Free Law Project
+  - Benefits explanation and how-it-works guide
+  - Installation links for all supported browsers
+- Added backend services:
+  - `RecapService` class for CourtListener/RECAP API integration
+  - Search endpoints: `/api/court-records/search` and `/api/court-records/docket/:docketId`
+  - Support for searching by case name, docket number, keywords, court, and date ranges
+- Updated navigation: Added Court Records Search and RECAP Extensions to header menu
+- Database schema: Added `courtRecords` table for caching search results
+- External API: Integrated with CourtListener REST API v4 using authentication token
+
 ### v1.0 Mobile Optimization and Feature Enhancements (October 2025)
 - Created Mission Statement page (`/mission-statement`) with project goals and guiding principles
 - Enhanced header functionality:
@@ -79,6 +100,8 @@ Preferred communication style: Simple, everyday language.
 **Court Data API**: `/api/court-data/:jurisdiction` - Fetches court information and local court details
 **Case Law Search**: `/api/case-law/search` - Searches legal opinions and case precedents
 **Legal Guidance**: Provides AI-generated legal guidance based on user input through a multi-step questionnaire
+**Court Records Search**: `/api/court-records/search` - Searches RECAP Archive and case law database with free-first strategy
+**Docket Details**: `/api/court-records/docket/:docketId` - Retrieves detailed docket information and associated documents
 
 ### Authentication and Session Management
 
@@ -99,8 +122,11 @@ Uses session-based authentication with PostgreSQL session store. Sessions are co
 
 ### Legal Data Sources
 - **CourtListener API**: Free access to legal opinions, court data, and case law
+- **RECAP Archive**: Free repository of federal court documents crowdsourced from PACER users
+- **PACER Fetch API**: On-demand access to PACER documents (used as fallback when not available in RECAP)
 - **Cornell Legal Information Institute**: Referenced for legal statutes and constitutional information
 - **Government APIs**: Planned integration with federal and state legal databases
+- **Juriscraper**: Python library for court website scraping (documented for future integration)
 
 ### UI and Styling
 - **shadcn/ui**: Component library built on Radix UI primitives
