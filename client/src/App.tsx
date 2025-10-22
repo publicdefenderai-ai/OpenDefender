@@ -16,6 +16,8 @@ import LegalGlossary from "@/pages/legal-glossary";
 import DiversionPrograms from "@/pages/diversion-programs";
 import RecordExpungement from "@/pages/record-expungement";
 import MissionStatement from "@/pages/mission-statement";
+import CourtRecords from "@/pages/court-records";
+import RecapExtensions from "@/pages/recap-extensions";
 
 function Router() {
   return (
@@ -31,6 +33,8 @@ function Router() {
       <Route path="/diversion-programs" component={DiversionPrograms} />
       <Route path="/record-expungement" component={RecordExpungement} />
       <Route path="/mission-statement" component={MissionStatement} />
+      <Route path="/court-records" component={CourtRecords} />
+      <Route path="/recap-extensions" component={RecapExtensions} />
       <Route component={NotFound} />
     </Switch>
   );

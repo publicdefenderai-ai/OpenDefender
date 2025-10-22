@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { courtListenerService } from "./services/courtlistener";
 import { legalDataService } from "./services/legal-data";
+import { recapService } from "./services/recap";
 import { insertLegalCaseSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
@@ -233,6 +234,71 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Failed to delete legal guidance:", error);
       res.status(500).json({ success: false, error: "Failed to delete session" });
+    }
+  });
+
+  // RECAP/Court Records Search API
+  app.get("/api/court-records/search", async (req, res) => {
+    try {
+      const { 
+        q: searchTerm, 
+        case_name: caseName, 
+        docket_number: docketNumber,
+        court,
+        date_from: dateFrom,
+        date_to: dateTo
+      } = req.query;
+
+      if (!searchTerm && !caseName && !docketNumber) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "At least one search parameter required (search term, case name, or docket number)" 
+        });
+      }
+
+      const results = await recapService.searchUnifiedCourtRecords({
+        searchTerm: searchTerm as string,
+        caseName: caseName as string,
+        docketNumber: docketNumber as string,
+        court: court as string,
+        dateFrom: dateFrom as string,
+        dateTo: dateTo as string
+      });
+
+      res.json({ 
+        success: true, 
+        ...results,
+        message: results.hasRecapAccess 
+          ? 'Showing results from RECAP Archive (free) and case law database'
+          : 'Limited results - API token required for full RECAP access'
+      });
+    } catch (error) {
+      console.error("Court records search failed:", error);
+      res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
+  // Get RECAP Docket Details
+  app.get("/api/court-records/docket/:docketId", async (req, res) => {
+    try {
+      const { docketId } = req.params;
+      
+      if (!docketId || isNaN(Number(docketId))) {
+        return res.status(400).json({ success: false, error: "Valid docket ID required" });
+      }
+
+      const docket = await recapService.getDocket(Number(docketId));
+      const documents = await recapService.getDocketDocuments(Number(docketId));
+
+      res.json({ 
+        success: true, 
+        docket,
+        documents: documents.results,
+        documentCount: documents.count
+      });
+    } catch (error) {
+      console.error("Failed to fetch docket details:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch docket details" });
     }
   });
 

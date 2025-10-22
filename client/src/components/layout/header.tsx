@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import {
@@ -31,6 +31,18 @@ export function Header() {
       href: "/immigration-guidance",
       icon: Globe,
       description: "Immigration enforcement guidance"
+    },
+    {
+      title: "Court Records Search",
+      href: "/court-records",
+      icon: FileSearch,
+      description: "Search free RECAP archive & case law"
+    },
+    {
+      title: "RECAP Extensions",
+      href: "/recap-extensions",
+      icon: Download,
+      description: "Free browser tools for PACER"
     }
   ];
 
