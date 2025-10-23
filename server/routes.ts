@@ -25,6 +25,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Legal Aid Organizations API - Get organizations by state and/or type
+  app.get("/api/legal-aid-organizations", async (req, res) => {
+    try {
+      const { state, organizationType } = req.query;
+      const organizations = await storage.getLegalAidOrganizations(
+        state as string,
+        organizationType as string
+      );
+      res.json({ 
+        success: true, 
+        organizations,
+        count: organizations.length,
+        sources: ["EOIR", "LSC", "usa.gov"]
+      });
+    } catch (error) {
+      console.error("Failed to fetch legal aid organizations:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch legal aid organizations" });
+    }
+  });
+
   // Court Data API
   app.get("/api/court-data/:jurisdiction", async (req, res) => {
     try {

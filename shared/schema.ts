@@ -169,3 +169,33 @@ export const insertCourtRecordSchema = createInsertSchema(courtRecords).omit({
 
 export type InsertCourtRecord = z.infer<typeof insertCourtRecordSchema>;
 export type CourtRecord = typeof courtRecords.$inferSelect;
+
+// Legal Aid Organizations Schema - comprehensive database of legal assistance providers
+export const legalAidOrganizations = pgTable("legal_aid_organizations", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  organizationType: text("organization_type").notNull(), // 'immigration', 'criminal_defense', 'civil_legal_aid', 'public_defender'
+  address: text("address"),
+  city: text("city").notNull(),
+  state: text("state").notNull(), // Two-letter state code
+  zipCode: text("zip_code"),
+  county: text("county"),
+  phone: text("phone"),
+  email: text("email"),
+  website: text("website"),
+  latitude: text("latitude"), // Stored as text for precision
+  longitude: text("longitude"), // Stored as text for precision
+  services: text("services").array(), // e.g., ['Deportation Defense', 'Asylum Applications', 'Criminal Defense']
+  eligibility: text("eligibility"), // Requirements/restrictions
+  dataSource: text("data_source").notNull(), // 'EOIR', 'LSC', 'usa.gov', 'manual'
+  lastUpdated: timestamp("last_updated").defaultNow(),
+  isActive: boolean("is_active").default(true),
+});
+
+export const insertLegalAidOrganizationSchema = createInsertSchema(legalAidOrganizations).omit({
+  id: true,
+  lastUpdated: true,
+});
+
+export type InsertLegalAidOrganization = z.infer<typeof insertLegalAidOrganizationSchema>;
+export type LegalAidOrganization = typeof legalAidOrganizations.$inferSelect;

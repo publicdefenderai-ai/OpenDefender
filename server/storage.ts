@@ -1,5 +1,6 @@
-import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData } from "@shared/schema";
+import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization } from "@shared/schema";
 import { randomUUID } from "crypto";
+import { legalAidOrganizationsSeed } from "./data/legal-aid-organizations-seed";
 
 export interface IStorage {
   // User management
@@ -19,6 +20,11 @@ export interface IStorage {
   // Court data
   getCourtData(jurisdiction: string): Promise<CourtData[]>;
   createCourtData(courtData: InsertCourtData): Promise<CourtData>;
+  
+  // Legal aid organizations
+  getLegalAidOrganizations(state?: string, organizationType?: string): Promise<LegalAidOrganization[]>;
+  createLegalAidOrganization(organization: InsertLegalAidOrganization): Promise<LegalAidOrganization>;
+  bulkCreateLegalAidOrganizations(organizations: InsertLegalAidOrganization[]): Promise<LegalAidOrganization[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -26,14 +32,16 @@ export class MemStorage implements IStorage {
   private legalCases: Map<string, LegalCase>;
   private legalResources: Map<string, LegalResource>;
   private courtData: Map<string, CourtData>;
+  private legalAidOrganizations: Map<string, LegalAidOrganization>;
 
   constructor() {
     this.users = new Map();
     this.legalCases = new Map();
     this.legalResources = new Map();
     this.courtData = new Map();
+    this.legalAidOrganizations = new Map();
     
-    // Initialize with sample legal resources
+    // Initialize with sample legal resources and organizations
     this.initializeSampleData();
   }
 
@@ -86,6 +94,18 @@ export class MemStorage implements IStorage {
 
     sampleCourts.forEach(court => {
       this.courtData.set(court.id, court);
+    });
+
+    // Initialize legal aid organizations from seed data
+    legalAidOrganizationsSeed.forEach(org => {
+      const id = randomUUID();
+      const organization: LegalAidOrganization = {
+        ...org,
+        id,
+        lastUpdated: new Date(),
+        isActive: org.isActive ?? true,
+      };
+      this.legalAidOrganizations.set(id, organization);
     });
   }
 
@@ -180,6 +200,36 @@ export class MemStorage implements IStorage {
     };
     this.courtData.set(id, courtData);
     return courtData;
+  }
+
+  async getLegalAidOrganizations(state?: string, organizationType?: string): Promise<LegalAidOrganization[]> {
+    return Array.from(this.legalAidOrganizations.values()).filter(org => {
+      if (!org.isActive) return false;
+      if (state && org.state !== state) return false;
+      if (organizationType && org.organizationType !== organizationType) return false;
+      return true;
+    });
+  }
+
+  async createLegalAidOrganization(insertOrganization: InsertLegalAidOrganization): Promise<LegalAidOrganization> {
+    const id = randomUUID();
+    const organization: LegalAidOrganization = {
+      ...insertOrganization,
+      id,
+      lastUpdated: new Date(),
+      isActive: insertOrganization.isActive ?? true,
+    };
+    this.legalAidOrganizations.set(id, organization);
+    return organization;
+  }
+
+  async bulkCreateLegalAidOrganizations(organizations: InsertLegalAidOrganization[]): Promise<LegalAidOrganization[]> {
+    const created: LegalAidOrganization[] = [];
+    for (const org of organizations) {
+      const result = await this.createLegalAidOrganization(org);
+      created.push(result);
+    }
+    return created;
   }
 }
 
