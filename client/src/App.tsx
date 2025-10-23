@@ -18,6 +18,10 @@ import RecordExpungement from "@/pages/record-expungement";
 import MissionStatement from "@/pages/mission-statement";
 import CourtRecords from "@/pages/court-records";
 import RecapExtensions from "@/pages/recap-extensions";
+import Process from "@/pages/process";
+import SearchSeizure from "@/pages/search-seizure";
+import FriendsFamily from "@/pages/friends-family";
+import HowTo from "@/pages/how-to";
 
 function Router() {
   return (
@@ -35,6 +39,10 @@ function Router() {
       <Route path="/mission-statement" component={MissionStatement} />
       <Route path="/court-records" component={CourtRecords} />
       <Route path="/recap-extensions" component={RecapExtensions} />
+      <Route path="/process" component={Process} />
+      <Route path="/search-seizure" component={SearchSeizure} />
+      <Route path="/friends-family" component={FriendsFamily} />
+      <Route path="/how-to" component={HowTo} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -52,9 +52,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/process" className="hover:text-white transition-colors">
                   Court Procedures
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/legal-glossary" className="hover:text-white transition-colors">
@@ -62,13 +62,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/diversion-programs" className="hover:text-white transition-colors">
-                  Diversion Programs
+                <Link href="/record-expungement" className="hover:text-white transition-colors">
+                  Record Expungement
                 </Link>
               </li>
               <li>
-                <Link href="/record-expungement" className="hover:text-white transition-colors">
-                  Record Expungement
+                <Link href="/friends-family" className="hover:text-white transition-colors">
+                  Assisting Others
                 </Link>
               </li>
             </ul>
@@ -79,29 +79,19 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Get Help</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Find Public Defender
-                </a>
+                <Link href="/case-guidance" className="hover:text-white transition-colors">
+                  Get Case Guidance
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Legal Aid Organizations
-                </a>
+                <Link href="/diversion-programs" className="hover:text-white transition-colors">
+                  Diversion Programs
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Emergency Resources
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Crisis Support
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Community Help
-                </a>
+                <Link href="/court-locator" className="hover:text-white transition-colors">
+                  Find Local Courts
+                </Link>
               </li>
             </ul>
           </div>
@@ -111,9 +101,9 @@ export function Footer() {
             <h4 className="font-semibold mb-4">About</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/mission-statement" className="hover:text-white transition-colors">
                   Our Mission
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/development-roadmap" className="hover:text-white transition-colors">

@@ -1,55 +1,228 @@
 import { motion } from "framer-motion";
 import { 
-  BookOpen, 
-  MessageSquare, 
   AlertTriangle, 
   ArrowRight,
   Shield,
-  Calendar,
-  MapPin,
-  Route,
-  Book,
-  Eraser,
-  University,
-  BarChart3,
-  Gavel,
-  FileText,
-  Users,
-  Quote,
-  RotateCcw,
-  ExternalLink,
-  Lightbulb,
   CheckCircle,
   UserCheck,
-  X,
   Phone,
+  X,
   Search,
   Mail,
   Navigation,
   Clock,
-  HelpCircle
+  HelpCircle,
+  MapPin,
+  RotateCcw,
+  Book,
+  FileText,
+  BarChart3
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useState } from "react";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { RightsCard } from "@/components/legal/rights-card";
 import { DataSourceCard } from "@/components/legal/data-source-card";
 import { Input } from "@/components/ui/input";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
+import { GetStartedMenu } from "@/components/navigation/get-started-menu";
+
+function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
+  return (
+    <Card className="hover:shadow-md transition-all duration-200">
+      <CardContent className="p-4">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h4 className="font-semibold text-lg mb-1">{office.name}</h4>
+            <div className="flex flex-wrap gap-2">
+              {office.county && (
+                <span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+                  {office.county} County
+                </span>
+              )}
+              <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">
+                {office.distance} mi away
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          <div className="flex items-start gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+            <div>
+              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm font-medium">{office.address}</div>
+            </div>
+          </div>
+
+          {office.phone && (
+            <div className="flex items-start gap-2">
+              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Phone</div>
+                <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
+                  {office.phone}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {office.email && (
+            <div className="flex items-start gap-2">
+              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Email</div>
+                <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
+                  {office.email}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {office.hours && (
+            <div className="flex items-start gap-2">
+              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm font-medium">{office.hours}</div>
+              </div>
+            </div>
+          )}
+
+          <div>
+            <div className="text-sm text-muted-foreground mb-2">Services</div>
+            <div className="flex flex-wrap gap-1">
+              {office.services.map((service) => (
+                <span key={service} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+                  {service}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex gap-2 pt-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1"
+              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(office.address)}`, '_blank')}
+            >
+              <Navigation className="h-3 w-3 mr-1" />
+              Directions
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrganization }) {
+  return (
+    <Card className="hover:shadow-md transition-all duration-200">
+      <CardContent className="p-4">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h4 className="font-semibold text-lg mb-1">{organization.name}</h4>
+            <div className="flex flex-wrap gap-2">
+              {organization.county && (
+                <span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+                  {organization.county} County
+                </span>
+              )}
+              <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">
+                {organization.distance} mi away
+              </span>
+              <span className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
+                {organization.organizationType}
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          <div className="flex items-start gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+            <div>
+              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm font-medium">{organization.address}</div>
+            </div>
+          </div>
+
+          {organization.phone && (
+            <div className="flex items-start gap-2">
+              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Phone</div>
+                <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-green-600">
+                  {organization.phone}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {organization.email && (
+            <div className="flex items-start gap-2">
+              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Email</div>
+                <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-green-600">
+                  {organization.email}
+                </a>
+              </div>
+            </div>
+          )}
+
+          {organization.hours && (
+            <div className="flex items-start gap-2">
+              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm font-medium">{organization.hours}</div>
+              </div>
+            </div>
+          )}
+
+          <div>
+            <div className="text-sm text-muted-foreground mb-2">Services Offered</div>
+            <div className="flex flex-wrap gap-1">
+              {organization.services.map((service) => (
+                <span key={service} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+                  {service}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex gap-2 pt-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1"
+              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(organization.address)}`, '_blank')}
+            >
+              <Navigation className="h-3 w-3 mr-1" />
+              Directions
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
 export default function Home() {
-  const [, setLocation] = useLocation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
-  const [showAllRights, setShowAllRights] = useState(false);
+  const [getStartedOpen, setGetStartedOpen] = useState(false);
   
   // Public Defender search state
   const [showPublicDefenderModal, setShowPublicDefenderModal] = useState(false);
@@ -115,122 +288,78 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-12 lg:py-24">
+      <section className="gradient-hero text-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               <span className="text-blue-800 dark:text-blue-200">Know Your Rights.</span><br />
               <span className="text-blue-800 dark:text-blue-200">Protect Your Future.</span>
             </h2>
-            <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl md:text-3xl mb-12 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
               Get free legal guidance, understand court processes, and access resources to help navigate the criminal justice system.
             </p>
           </motion.div>
 
-          {/* Emergency Help Button */}
+          {/* Main CTAs */}
           <ScrollReveal delay={0.2}>
-            <div className="mb-12">
+            <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto">
+              <Button
+                onClick={() => setGetStartedOpen(true)}
+                className="success-green hover:bg-green-700 hover:shadow-2xl font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
+                data-testid="button-get-started"
+              >
+                Get Started
+                <ArrowRight className="ml-3 h-6 w-6" />
+              </Button>
+              
               <Button
                 onClick={handleUrgentHelp}
-                className="urgent-red hover:bg-red-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200 mb-6"
+                className="urgent-red hover:bg-red-700 hover:shadow-2xl font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
                 data-testid="button-urgent-help"
               >
-                <AlertTriangle className="mr-2 h-5 w-5" />
+                <AlertTriangle className="mr-3 h-6 w-6" />
                 URGENT HELP NEEDED
               </Button>
-              <p className="text-sm text-blue-800 dark:text-blue-200">
-                If you're being arrested or in court now, click here for immediate rights information.
+              
+              <p className="text-sm text-blue-800 dark:text-blue-200 mt-2">
+                If you're being arrested or in court now, click "Urgent Help" for immediate rights information.
               </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Immigration Enforcement Button */}
-          <ScrollReveal delay={0.3}>
-            <div className="mb-12">
-              <Link href="/immigration-guidance">
+              
+              {/* Add Navigating This Tool button */}
+              <Link href="/how-to">
                 <Button
-                  className="bg-amber-600 hover:bg-amber-700 hover:shadow-xl font-bold py-4 px-8 rounded-xl text-lg shadow-lg transition-all duration-200 mb-6 text-white"
-                  data-testid="button-immigration-enforcement"
+                  variant="outline"
+                  className="mt-4 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-blue-800 dark:text-blue-200 font-semibold py-3 px-6 rounded-lg"
+                  data-testid="button-navigating-tool"
                 >
-                  <Shield className="mr-2 h-5 w-5" />
-                  IMMIGRATION ENFORCEMENT
+                  <Book className="mr-2 h-4 w-4" />
+                  Navigating This Tool
                 </Button>
               </Link>
-              <p className="text-sm text-blue-800 dark:text-blue-200">
-                Know your rights during ICE encounters and deportation proceedings - for citizens and non-citizens.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Main Entry Points */}
-          <ScrollReveal delay={0.4}>
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* Learn Your Rights */}
-              <Link href="/rights-info">
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:shadow-lg transition-all duration-300 cursor-pointer group h-full">
-                  <CardContent className="p-8 text-center h-full flex flex-col justify-between">
-                    <div>
-                      <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                        <Lightbulb className="h-8 w-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Learn Your Rights & Local Process</h3>
-                      <p className="text-blue-800 dark:text-blue-200 mb-6">
-                        Access general legal information, court procedures, and jurisdiction-specific guidance without entering personal details.
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 py-3 px-6 rounded-lg">
-                      <span className="mr-2">Get Started</span>
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              {/* Get Guidance */}
-              <Card 
-                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:shadow-lg transition-all duration-300 cursor-pointer group h-full"
-                onClick={() => setLocation('/case-guidance')}
-              >
-                <CardContent className="p-8 text-center h-full flex flex-col justify-between">
-                  <div>
-                    <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                      <MessageSquare className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4">Get Guidance for My Case</h3>
-                    <p className="text-blue-800 dark:text-blue-200 mb-6">
-                      Answer a few questions to receive personalized guidance, next steps, and relevant resources for your situation.
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center text-blue-800 dark:text-blue-200 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 py-3 px-6 rounded-lg">
-                    <span className="mr-2">Start Q&A</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-12 lg:py-24 bg-background">
+      <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 lg:mb-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-foreground mb-6">
                 Powered by Real Legal Data
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
                 Our AI agent uses comprehensive legal databases and court records to provide accurate, up-to-date information.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
               <DataSourceCard
                 icon={<Book className="h-6 w-6 text-white" />}
@@ -267,173 +396,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Rights Information Section */}
-      <section className="py-12 lg:py-24 bg-muted/30" id="rights-info">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 lg:mb-6">
-                Know Your Rights
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Essential legal information everyone should know
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-            <ScrollReveal delay={0.1}>
-              <RightsCard
-                icon={<Shield className="h-6 w-6 text-blue-600" />}
-                title="Miranda Rights"
-                description="Understanding your constitutional rights during police interactions and arrest situations."
-                buttonText="Learn More"
-                href="/rights-info#constitutional-rights"
-                iconBgColor="bg-blue-100 dark:bg-blue-900"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <RightsCard
-                icon={<Calendar className="h-6 w-6 text-green-600" />}
-                title="Court Process Timeline"
-                description="Step-by-step guide through arrest, arraignment, trial, and sentencing procedures."
-                buttonText="View Timeline"
-                href="/rights-info#criminal-justice-timeline"
-                iconBgColor="bg-green-100 dark:bg-green-900"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <RightsCard
-                icon={<MapPin className="h-6 w-6 text-white" />}
-                title="Local Court Info"
-                description="Court addresses, hours, bail schedules, and public defender contact information by jurisdiction."
-                buttonText="Find Courts"
-                href="/court-locator"
-                iconBgColor="bg-blue-500"
-              />
-            </ScrollReveal>
-
-            {(showAllRights || typeof window !== 'undefined' && window.innerWidth >= 768) && (
-              <>
-                <ScrollReveal delay={0.4}>
-                  <RightsCard
-                    icon={<Route className="h-6 w-6 text-white" />}
-                    title="Diversion Programs"
-                    description="Alternative sentencing options including drug courts, community service, and treatment programs."
-                    buttonText="Explore Options"
-                    href="/diversion-programs"
-                    iconBgColor="bg-green-600"
-                  />
-                </ScrollReveal>
-
-                <ScrollReveal delay={0.5}>
-                  <RightsCard
-                    icon={<Book className="h-6 w-6 text-white" />}
-                    title="Legal Glossary"
-                    description="Plain-language definitions of common legal terms and court procedures."
-                    buttonText="Browse Terms"
-                    href="/legal-glossary"
-                    iconBgColor="bg-purple-600"
-                  />
-                </ScrollReveal>
-
-                <ScrollReveal delay={0.6}>
-                  <RightsCard
-                    icon={<Eraser className="h-6 w-6 text-white" />}
-                    title="Record Expungement"
-                    description="Learn about sealing or expunging criminal records and eligibility requirements by state."
-                    buttonText="Check Eligibility"
-                    href="/record-expungement"
-                    iconBgColor="bg-indigo-600"
-                  />
-                </ScrollReveal>
-              </>
-            )}
-          </div>
-
-          {!showAllRights && typeof window !== 'undefined' && window.innerWidth < 768 && (
-            <div className="text-center mt-6 md:hidden">
-              <Button
-                variant="outline"
-                onClick={() => setShowAllRights(true)}
-                className="w-full sm:w-auto"
-                data-testid="button-show-more-rights"
-              >
-                Show More Resources
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Personalized Guidance Preview */}
-      <section className="py-12 lg:py-24 legal-blue text-white">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <ScrollReveal>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Get Personalized Legal Guidance</h2>
-            <p className="text-xl text-blue-800 dark:text-blue-200 mb-12">
-              Answer a few questions to receive tailored advice for your specific situation
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl p-8 text-left max-w-2xl mx-auto">
-              <CardContent className="p-0">
-                <div className="space-y-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-sm font-bold mr-3">1</div>
-                    <span className="font-semibold">What state/jurisdiction are you in?</span>
-                  </div>
-                  
-                  <div className="flex items-center mb-4 opacity-60">
-                    <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</div>
-                    <span className="font-semibold text-blue-800 dark:text-blue-200">What charges are you facing?</span>
-                  </div>
-
-                  <div className="flex items-center mb-4 opacity-60">
-                    <div className="w-8 h-8 bg-gray-400 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</div>
-                    <span className="font-semibold text-blue-800 dark:text-blue-200">What stage is your case in?</span>
-                  </div>
-
-                  <Button
-                    onClick={() => setLocation('/case-guidance')}
-                    className="w-full success-green hover:bg-green-700 hover:shadow-lg font-bold py-4 rounded-xl transition-all duration-200"
-                    data-testid="button-start-assessment"
-                  >
-                    Start Personalized Assessment
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.4}>
-            <p className="text-sm text-blue-800 dark:text-blue-200 mt-6">
-              <Shield className="inline h-4 w-4 mr-2" />
-              Your responses are not stored and are deleted when you close your session
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* Trust & Safety Section */}
-      <section className="py-12 lg:py-24 bg-background">
+      <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-12 lg:mb-16">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 lg:mb-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-foreground mb-6">
                 Built on Trust & Transparency
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground">
                 Every piece of legal information is backed by credible sources
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollReveal delay={0.1}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -492,256 +469,97 @@ export default function Home() {
               </AlertDescription>
             </Alert>
           </ScrollReveal>
-
-          {/* Call to Action */}
-          <ScrollReveal delay={0.6}>
-            <div className="text-center mt-12">
-              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:space-x-4 sm:gap-0">
-                <Button 
-                  onClick={() => setShowPublicDefenderModal(true)}
-                  className="legal-blue hover:bg-blue-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200"
-                  data-testid="button-find-public-defender"
-                >
-                  Find a Public Defender
-                </Button>
-                <Button 
-                  onClick={() => setShowLegalAidModal(true)}
-                  className="success-green hover:bg-green-700 hover:shadow-xl font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-200"
-                  data-testid="button-legal-aid-organizations"
-                >
-                  Legal Aid Organizations
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Data Sources & Development - Hidden on mobile to reduce clutter */}
-      <section className="hidden md:block py-16 lg:py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Powered by Comprehensive Legal Data
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Real-time access to federal and state legal information
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <ScrollReveal delay={0.1}>
-              <DataSourceCard
-                icon={<Gavel className="h-5 w-5 text-white" />}
-                title="CourtListener"
-                description="8.4+ million court opinions, federal dockets, and judge data via Free Law Project API"
-                status="free"
-                statusText="FREE"
-                iconBgColor="legal-blue"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <DataSourceCard
-                icon={<FileText className="h-5 w-5 text-white" />}
-                title="PACER"
-                description="500M+ federal court documents and case records with authentication API"
-                status="paid"
-                statusText="$0.10/page"
-                iconBgColor="bg-blue-600"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <DataSourceCard
-                icon={<BarChart3 className="h-5 w-5 text-white" />}
-                title="DOJ Statistics"
-                description="FBI Crime Data, National Crime Victimization Survey, and Bureau of Justice Statistics"
-                status="government"
-                statusText="FREE"
-                iconBgColor="success-green"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <DataSourceCard
-                icon={<University className="h-5 w-5 text-white" />}
-                title="State Laws"
-                description="Cornell LII, GovInfo.gov, and state legislature websites for current statutes"
-                status="government"
-                statusText="FREE"
-                iconBgColor="bg-purple-600"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.5}>
-              <div className="opacity-75">
-                <DataSourceCard
-                  icon={<AlertTriangle className="h-5 w-5 text-white" />}
-                  title="Judge Analytics"
-                  description="Sentencing patterns, plea statistics (using sample data during development)"
-                  status="mock"
-                  statusText="MOCK"
-                  iconBgColor="bg-amber-500"
-                />
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.6}>
-              <DataSourceCard
-                icon={<Users className="h-5 w-5 text-white" />}
-                title="Legal Aid"
-                description="NLADA, NAPD, and state public defender office resources and contacts"
-                status="government"
-                statusText="FREE"
-                iconBgColor="bg-indigo-600"
-              />
-            </ScrollReveal>
-          </div>
-
-          {/* Development Roadmap CTA */}
-          <ScrollReveal delay={0.7}>
-            <Card className="legal-blue rounded-xl p-8 text-white text-center">
-              <CardContent className="p-0">
-                <h3 className="text-2xl font-bold mb-4">Transparency in Development</h3>
-                <p className="text-blue-800 dark:text-blue-200 mb-6 max-w-4xl mx-auto">
-                  Track our progress as we integrate additional data sources, expand coverage, and enhance AI capabilities. 
-                  We believe in open development and community feedback.
-                </p>
-                <Link href="/development-roadmap">
-                  <Button 
-                    className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors"
-                    data-testid="button-view-roadmap"
-                  >
-                    View Development Roadmap
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </ScrollReveal>
         </div>
       </section>
 
       <Footer />
-      
-      {/* Privacy Footer Banner */}
-      <div className="legal-blue text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2">
-            <Shield className="h-4 w-4" />
-            <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
-            </span>
-          </div>
-        </div>
-      </div>
 
       {/* Urgent Help Modal */}
       <Dialog open={urgentHelpOpen} onOpenChange={setUrgentHelpOpen}>
-        <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 border-red-200 dark:border-red-800">
+        <DialogContent className="max-w-[95vw] md:max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="flex items-center text-red-600 dark:text-red-400 text-xl sm:text-2xl font-bold pr-8">
-              <AlertTriangle className="mr-2 sm:mr-3 h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
-              URGENT LEGAL RIGHTS
+            <DialogTitle className="flex items-center gap-2 text-red-600">
+              <AlertTriangle className="h-5 w-5" />
+              Urgent Legal Situation
             </DialogTitle>
           </DialogHeader>
           
-          <div className="space-y-6 mt-6">
-            <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
-              <Shield className="h-5 w-5 text-red-600 dark:text-red-400" />
-              <AlertDescription className="text-red-800 dark:text-red-200 font-semibold">
-                If you're being arrested or in custody RIGHT NOW, know these critical rights:
+          <div className="space-y-6 mt-4">
+            <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
+              <AlertTriangle className="h-4 w-4 text-red-600" />
+              <AlertDescription className="text-red-800 dark:text-red-200">
+                <strong>If you are being arrested RIGHT NOW:</strong> You have the right to remain silent and the right to an attorney. Exercise these rights immediately.
               </AlertDescription>
             </Alert>
 
-            <div className="grid gap-4">
-              <Card className="border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-900/20">
-                <CardContent className="p-4">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">1</div>
-                    <div>
-                      <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-1">Right to Remain Silent</h4>
-                      <p className="text-blue-800 dark:text-blue-200 text-sm">You do not have to answer questions. Say: "I am exercising my right to remain silent."</p>
-                    </div>
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <h3 className="font-bold text-lg text-red-600">Immediate Actions:</h3>
+                
+                <div className="space-y-3">
+                  <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
+                    <h4 className="font-bold text-green-900 dark:text-green-100 mb-2">1. Stay Calm</h4>
+                    <p className="text-sm text-green-800 dark:text-green-200">
+                      Do not resist arrest. Keep your hands visible. Follow instructions calmly.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
 
-              <Card className="border-l-4 border-l-green-500 bg-green-50 dark:bg-green-900/20">
-                <CardContent className="p-4">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">2</div>
-                    <div>
-                      <h4 className="font-bold text-green-900 dark:text-green-100 mb-1">Right to an Attorney</h4>
-                      <p className="text-green-800 dark:text-green-200 text-sm">Ask for a lawyer immediately. Say: "I want to speak to an attorney before answering any questions."</p>
-                    </div>
+                  <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
+                    <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-2">2. Assert Your Rights</h4>
+                    <p className="text-sm text-blue-800 dark:text-blue-200 mb-2">
+                      Say clearly: "I am exercising my right to remain silent. I want to speak to an attorney."
+                    </p>
+                    <p className="text-sm text-blue-800 dark:text-blue-200">
+                      Then stop talking to police. Do not answer questions until you have a lawyer.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
 
-              <Card className="border-l-4 border-l-amber-500 bg-amber-50 dark:bg-amber-900/20">
-                <CardContent className="p-4">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">3</div>
-                    <div>
-                      <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Do Not Sign Anything</h4>
-                      <p className="text-amber-800 dark:text-amber-200 text-sm">Never sign documents without your attorney present. This includes waivers or statements.</p>
-                    </div>
+                  <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg">
+                    <h4 className="font-bold text-purple-900 dark:text-purple-100 mb-2">3. Do NOT Consent to Searches</h4>
+                    <p className="text-sm text-purple-800 dark:text-purple-200">
+                      Say: "I do not consent to any searches." Do not physically resist, but make your refusal clear.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
 
-              <Card className="border-l-4 border-l-purple-500 bg-purple-50 dark:bg-purple-900/20">
-                <CardContent className="p-4">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 mt-1">4</div>
-                    <div>
-                      <h4 className="font-bold text-purple-900 dark:text-purple-100 mb-1">Public Defender</h4>
-                      <p className="text-purple-800 dark:text-purple-200 text-sm">If you cannot afford an attorney, ask for a public defender. You have this right.</p>
-                    </div>
+                  <div className="bg-amber-50 dark:bg-amber-950 p-4 rounded-lg">
+                    <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-2">4. Request a Public Defender</h4>
+                    <p className="text-sm text-amber-800 dark:text-amber-200">
+                      If you cannot afford an attorney, you have the right to a free public defender. Request one immediately at your first court appearance.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
 
-            <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-              <Phone className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-              <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">Contact Emergency Legal Services Immediately:</strong>
-                <br />• Call the local public defender's office
-                <br />• Contact legal aid organizations in your area
-                <br />• Ask a family member to find you an attorney
+            <Alert>
+              <Shield className="h-4 w-4" />
+              <AlertDescription>
+                <strong>Remember:</strong> Anything you say can and will be used against you in court. The best protection is to remain silent until you have legal representation.
               </AlertDescription>
             </Alert>
-
-            <div className="flex justify-center pt-4">
-              <Button
-                onClick={() => setUrgentHelpOpen(false)}
-                className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold"
-                data-testid="button-close-urgent-help"
-              >
-                I Understand - Close
-              </Button>
-            </div>
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Get Started Menu */}
+      <GetStartedMenu
+        isOpen={getStartedOpen}
+        onClose={() => setGetStartedOpen(false)}
+        onShowPublicDefender={() => setShowPublicDefenderModal(true)}
+        onShowLegalAid={() => setShowLegalAidModal(true)}
+      />
 
       {/* Public Defender Search Modal */}
       <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5" />
+              <MapPin className="h-5 w-5" />
               Find Public Defender Offices
             </DialogTitle>
           </DialogHeader>
           
           <div className="space-y-6">
-            {/* Search Section */}
             <div className="flex gap-3">
               <div className="flex-1">
                 <Input
@@ -774,7 +592,6 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Error Message */}
             {pdError && (
               <Alert className="border-yellow-200 bg-yellow-50">
                 <AlertTriangle className="h-4 w-4 text-yellow-600" />
@@ -784,7 +601,6 @@ export default function Home() {
               </Alert>
             )}
 
-            {/* Results */}
             {pdOffices.length > 0 && (
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">
@@ -796,17 +612,6 @@ export default function Home() {
                     <PublicDefenderOfficeCard key={office.id} office={office} />
                   ))}
                 </div>
-              </div>
-            )}
-
-            {/* No Results */}
-            {!pdSearching && pdOffices.length === 0 && pdZipCode.length === 5 && !pdError && (
-              <div className="text-center py-8">
-                <Users className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">No offices found</h3>
-                <p className="text-muted-foreground">
-                  Try searching with a different ZIP code or contact your local court for referral information.
-                </p>
               </div>
             )}
           </div>
@@ -831,7 +636,6 @@ export default function Home() {
               </AlertDescription>
             </Alert>
 
-            {/* Search Section */}
             <div className="flex gap-3">
               <div className="flex-1">
                 <Input
@@ -864,7 +668,6 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Error Message */}
             {laError && (
               <Alert className="border-yellow-200 bg-yellow-50">
                 <AlertTriangle className="h-4 w-4 text-yellow-600" />
@@ -874,7 +677,6 @@ export default function Home() {
               </Alert>
             )}
 
-            {/* Results */}
             {laOrganizations.length > 0 && (
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">
@@ -888,241 +690,9 @@ export default function Home() {
                 </div>
               </div>
             )}
-
-            {/* No Results */}
-            {!laSearching && laOrganizations.length === 0 && laZipCode.length === 5 && !laError && (
-              <div className="text-center py-8">
-                <HelpCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">No organizations found</h3>
-                <p className="text-muted-foreground">
-                  Try searching with a different ZIP code or contact your local bar association for referrals.
-                </p>
-              </div>
-            )}
           </div>
         </DialogContent>
       </Dialog>
     </div>
-  );
-}
-
-// Component for displaying Public Defender Office cards
-function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
-  return (
-    <Card className="hover:shadow-md transition-all duration-200">
-      <CardContent className="p-4">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex-1">
-            <h4 className="font-semibold text-lg mb-1">{office.name}</h4>
-            <div className="flex flex-wrap gap-2">
-              {office.county && (
-                <Badge variant="outline" className="text-xs">
-                  {office.county} County
-                </Badge>
-              )}
-              <Badge className="bg-blue-600 text-white text-xs">
-                {office.distance} mi away
-              </Badge>
-            </div>
-          </div>
-        </div>
-        
-        <div className="space-y-3">
-          {/* Address */}
-          <div className="flex items-start gap-2">
-            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-            <div>
-              <div className="text-sm text-muted-foreground">Address</div>
-              <div className="text-sm font-medium">{office.address}</div>
-            </div>
-          </div>
-
-          {/* Phone */}
-          {office.phone && (
-            <div className="flex items-start gap-2">
-              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">Phone</div>
-                <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
-                  {office.phone}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {/* Email */}
-          {office.email && (
-            <div className="flex items-start gap-2">
-              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">Email</div>
-                <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
-                  {office.email}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {/* Hours */}
-          {office.hours && (
-            <div className="flex items-start gap-2">
-              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">Hours</div>
-                <div className="text-sm font-medium">{office.hours}</div>
-              </div>
-            </div>
-          )}
-
-          {/* Services */}
-          <div>
-            <div className="text-sm text-muted-foreground mb-2">Services</div>
-            <div className="flex flex-wrap gap-1">
-              {office.services.map((service) => (
-                <Badge key={service} variant="outline" className="text-xs">
-                  {service}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
-          {/* Actions */}
-          <div className="flex gap-2 pt-2">
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex-1"
-              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(office.address)}`, '_blank')}
-              data-testid={`button-directions-${office.id}`}
-            >
-              <Navigation className="h-3 w-3 mr-1" />
-              Directions
-            </Button>
-            {office.website && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => window.open(office.website, '_blank')}
-                data-testid={`button-website-${office.id}`}
-              >
-                <ExternalLink className="h-3 w-3" />
-              </Button>
-            )}
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-// Component for displaying Legal Aid Organization cards
-function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrganization }) {
-  return (
-    <Card className="hover:shadow-md transition-all duration-200">
-      <CardContent className="p-4">
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex-1">
-            <h4 className="font-semibold text-lg mb-1">{organization.name}</h4>
-            <div className="flex flex-wrap gap-2">
-              {organization.county && (
-                <Badge variant="outline" className="text-xs">
-                  {organization.county} County
-                </Badge>
-              )}
-              <Badge className="bg-green-600 text-white text-xs">
-                {organization.distance} mi away
-              </Badge>
-              <Badge variant="secondary" className="text-xs">
-                {organization.organizationType}
-              </Badge>
-            </div>
-          </div>
-        </div>
-        
-        <div className="space-y-3">
-          {/* Address */}
-          <div className="flex items-start gap-2">
-            <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-            <div>
-              <div className="text-sm text-muted-foreground">Address</div>
-              <div className="text-sm font-medium">{organization.address}</div>
-            </div>
-          </div>
-
-          {/* Phone */}
-          {organization.phone && (
-            <div className="flex items-start gap-2">
-              <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">Phone</div>
-                <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-green-600">
-                  {organization.phone}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {/* Email */}
-          {organization.email && (
-            <div className="flex items-start gap-2">
-              <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">Email</div>
-                <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-green-600">
-                  {organization.email}
-                </a>
-              </div>
-            </div>
-          )}
-
-          {/* Hours */}
-          {organization.hours && (
-            <div className="flex items-start gap-2">
-              <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">Hours</div>
-                <div className="text-sm font-medium">{organization.hours}</div>
-              </div>
-            </div>
-          )}
-
-          {/* Services */}
-          <div>
-            <div className="text-sm text-muted-foreground mb-2">Services Offered</div>
-            <div className="flex flex-wrap gap-1">
-              {organization.services.map((service) => (
-                <Badge key={service} variant="outline" className="text-xs">
-                  {service}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
-          {/* Actions */}
-          <div className="flex gap-2 pt-2">
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex-1"
-              onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(organization.address)}`, '_blank')}
-              data-testid={`button-directions-${organization.id}`}
-            >
-              <Navigation className="h-3 w-3 mr-1" />
-              Directions
-            </Button>
-            {organization.website && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => window.open(organization.website, '_blank')}
-                data-testid={`button-website-${organization.id}`}
-              >
-                <ExternalLink className="h-3 w-3" />
-              </Button>
-            )}
-          </div>
-        </div>
-      </CardContent>
-    </Card>
   );
 }

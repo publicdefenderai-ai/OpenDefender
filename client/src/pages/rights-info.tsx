@@ -272,19 +272,6 @@ export default function RightsInfo() {
               </p>
             </div>
           </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="flex justify-center">
-              <Link href="/case-guidance">
-                <Button 
-                  className="success-green success-green-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg"
-                  data-testid="button-get-personalized-guidance"
-                >
-                  Get Personalized Guidance
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -404,67 +391,6 @@ export default function RightsInfo() {
               </ScrollReveal>
             </TabsContent>
           </Tabs>
-        </div>
-      </section>
-
-      {/* Court Process Timeline */}
-      <section className="py-16 bg-background" id="criminal-justice-timeline">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Criminal Justice Process Timeline
-            </h2>
-          </ScrollReveal>
-
-          <div className="space-y-8">
-            {processSteps.map((step, index) => (
-              <ScrollReveal key={step.title} delay={index * 0.1}>
-                <ProcessStep
-                  number={index + 1}
-                  title={step.title}
-                  description={step.description}
-                  timeframe={step.timeframe}
-                  rights={step.rights}
-                  isLast={index === processSteps.length - 1}
-                />
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Legal Resources */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Legal Resources & Support
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ScrollReveal delay={0.1}>
-              <PublicDefenderCard 
-                onSearchClick={() => setShowPublicDefenderModal(true)}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <LegalAidCard 
-                onSearchClick={() => setShowLegalAidModal(true)}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <ResourceCard
-                icon={<Phone className="h-6 w-6 text-white" />}
-                title="Crisis Hotlines"
-                description="24/7 support for legal emergencies and crisis situations"
-                contact="National: 1-800-XXX-XXXX"
-                bgColor="urgent-red"
-              />
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 
