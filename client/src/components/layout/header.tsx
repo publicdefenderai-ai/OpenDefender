@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import {
@@ -9,40 +9,53 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   const menuItems = [
     {
-      title: "Get Guidance",
+      title: t('header.menu.getGuidance'),
       href: "/case-guidance",
       icon: MessageSquare,
-      description: "Start personalized legal assessment"
+      description: t('header.menu.getGuidanceDesc')
     },
     {
-      title: "Learn Your Rights",
+      title: t('header.menu.learnRights'),
       href: "/rights-info",
       icon: Info,
-      description: "Understand your constitutional rights"
+      description: t('header.menu.learnRightsDesc')
     },
     {
-      title: "Immigration Assistance",
+      title: t('header.menu.immigration'),
       href: "/immigration-guidance",
       icon: Globe,
-      description: "Immigration enforcement guidance"
+      description: t('header.menu.immigrationDesc')
     },
     {
-      title: "Court Records Search",
+      title: t('header.menu.courtRecords'),
       href: "/court-records",
       icon: FileSearch,
-      description: "Search free RECAP archive & case law"
+      description: t('header.menu.courtRecordsDesc')
     },
     {
-      title: "RECAP Extensions",
+      title: t('header.menu.recapExtensions'),
       href: "/recap-extensions",
       icon: Download,
-      description: "Free browser tools for PACER"
+      description: t('header.menu.recapExtensionsDesc')
     }
   ];
 
@@ -55,12 +68,28 @@ export function Header() {
               <Scale className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">Public Defender AI</h1>
-              <p className="text-sm text-muted-foreground">Free Legal Guidance & Rights Information</p>
+              <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
+              <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
             </div>
           </Link>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            {/* Language Selector - Desktop */}
+            <div className="hidden md:block">
+              <Select value={i18n.language} onValueChange={changeLanguage}>
+                <SelectTrigger className="w-[140px] h-9 border-0 bg-transparent hover:bg-accent" data-testid="select-language">
+                  <div className="flex items-center gap-2">
+                    <Languages className="h-4 w-4" />
+                    <SelectValue />
+                  </div>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="en" data-testid="option-english">English</SelectItem>
+                  <SelectItem value="es" data-testid="option-spanish">Español</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            
             <Link href="/mission-statement">
               <Button
                 variant="ghost"
@@ -87,6 +116,24 @@ export function Header() {
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
+                
+                {/* Language Selector - Mobile */}
+                <div className="mt-4 mb-4">
+                  <label className="text-sm font-medium mb-2 block">{t('header.language')}</label>
+                  <Select value={i18n.language} onValueChange={changeLanguage}>
+                    <SelectTrigger className="w-full" data-testid="select-language-mobile">
+                      <div className="flex items-center gap-2">
+                        <Languages className="h-4 w-4" />
+                        <SelectValue />
+                      </div>
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="en" data-testid="option-english-mobile">English</SelectItem>
+                      <SelectItem value="es" data-testid="option-spanish-mobile">Español</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
                 <div className="mt-6 flex flex-col space-y-3">
                   {menuItems.map((item) => {
                     const Icon = item.icon;
