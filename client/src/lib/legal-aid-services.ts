@@ -1,5 +1,6 @@
 // Legal Aid Organizations search services for criminal justice and immigration assistance
 // Excludes homeless assistance unrelated to criminal law
+// Data sources: EOIR Pro Bono List, Legal Services Corporation (LSC), usa.gov
 
 export interface LegalAidOrganization {
   id: string;
@@ -16,6 +17,26 @@ export interface LegalAidOrganization {
   lng: number;
   jurisdiction: string; // State abbreviation
   organizationType: string; // "Legal Aid Society", "Immigration Services", "Criminal Justice Assistance", etc.
+}
+
+// Interface for database organization
+interface DBOrganization {
+  id: string;
+  name: string;
+  organizationType: string;
+  address: string | null;
+  city: string;
+  state: string;
+  zipCode: string | null;
+  county: string | null;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+  latitude: string | null;
+  longitude: string | null;
+  services: string[];
+  eligibility: string | null;
+  dataSource: string;
 }
 
 // Search for legal aid organizations focused on criminal justice and immigration
@@ -47,7 +68,67 @@ export async function searchLegalAidOrganizations(zipCode: string): Promise<Lega
     const userCounty = address.county?.replace(' County', '');
     const userState = address.state;
     
-    // Search for legal aid organizations in the area
+    // Get state abbreviation (Nominatim sometimes gives full state name)
+    const stateAbbr = getStateAbbreviation(userState);
+    
+    // FIRST: Query our database for organizations in the state
+    let dbOrganizations: LegalAidOrganization[] = [];
+    try {
+      const dbResponse = await fetch(`/api/legal-aid-organizations?state=${stateAbbr}`);
+      if (dbResponse.ok) {
+        const dbData = await dbResponse.json();
+        if (dbData.success && dbData.organizations) {
+          // Convert database organizations to our format with distance calculations
+          dbOrganizations = dbData.organizations
+            .filter((org: DBOrganization) => org.latitude && org.longitude)
+            .map((org: DBOrganization) => {
+              const orgLat = parseFloat(org.latitude!);
+              const orgLng = parseFloat(org.longitude!);
+              const distance = calculateDistance(userLat, userLng, orgLat, orgLng);
+              
+              return {
+                id: org.id,
+                name: org.name,
+                address: [org.address, org.city, org.state, org.zipCode].filter(Boolean).join(', '),
+                county: org.county || undefined,
+                phone: org.phone || undefined,
+                email: org.email || undefined,
+                website: org.website || undefined,
+                hours: 'Call for hours',
+                services: org.services || [],
+                distance: Math.round(distance * 10) / 10,
+                lat: orgLat,
+                lng: orgLng,
+                jurisdiction: org.state,
+                organizationType: formatOrganizationType(org.organizationType)
+              };
+            })
+            .filter((org: LegalAidOrganization) => org.distance <= 100); // Within 100 miles
+        }
+      }
+    } catch (dbError) {
+      console.warn('Database query failed, will use fallback:', dbError);
+    }
+    
+    // If we have good database results (5+), use them
+    if (dbOrganizations.length >= 5) {
+      // Sort by county priority, then distance
+      const sortedOrganizations = dbOrganizations.sort((a, b) => {
+        if (userCounty) {
+          const aInSameCounty = a.county?.toLowerCase() === userCounty.toLowerCase();
+          const bInSameCounty = b.county?.toLowerCase() === userCounty.toLowerCase();
+          
+          if (aInSameCounty && !bInSameCounty) return -1;
+          if (!aInSameCounty && bInSameCounty) return 1;
+        }
+        
+        return a.distance - b.distance;
+      });
+      
+      return sortedOrganizations.slice(0, 10); // Limit to 10 results
+    }
+    
+    // FALLBACK: If database has few results, supplement with OpenStreetMap search
     const radiusDegrees = 50 / 69; // ~50 mile radius
     const bbox = {
       south: userLat - radiusDegrees,
@@ -250,6 +331,43 @@ function getServicesForOrganization(name: string, searchTerm: string): string[] 
   }
   
   return services.slice(0, 5); // Limit to 5 services
+}
+
+// Get state abbreviation from full name or abbreviation
+function getStateAbbreviation(state: string): string {
+  const stateMap: Record<string, string> = {
+    'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',
+    'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'Florida': 'FL', 'Georgia': 'GA',
+    'Hawaii': 'HI', 'Idaho': 'ID', 'Illinois': 'IL', 'Indiana': 'IN', 'Iowa': 'IA',
+    'Kansas': 'KS', 'Kentucky': 'KY', 'Louisiana': 'LA', 'Maine': 'ME', 'Maryland': 'MD',
+    'Massachusetts': 'MA', 'Michigan': 'MI', 'Minnesota': 'MN', 'Mississippi': 'MS', 'Missouri': 'MO',
+    'Montana': 'MT', 'Nebraska': 'NE', 'Nevada': 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ',
+    'New Mexico': 'NM', 'New York': 'NY', 'North Carolina': 'NC', 'North Dakota': 'ND', 'Ohio': 'OH',
+    'Oklahoma': 'OK', 'Oregon': 'OR', 'Pennsylvania': 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC',
+    'South Dakota': 'SD', 'Tennessee': 'TN', 'Texas': 'TX', 'Utah': 'UT', 'Vermont': 'VT',
+    'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY',
+    'District of Columbia': 'DC'
+  };
+  
+  // If already an abbreviation, return it
+  if (state && state.length === 2) {
+    return state.toUpperCase();
+  }
+  
+  // Otherwise, look it up
+  return stateMap[state] || state;
+}
+
+// Format organization type for display
+function formatOrganizationType(type: string): string {
+  const typeMap: Record<string, string> = {
+    'immigration': 'Immigration Legal Services',
+    'criminal_defense': 'Criminal Justice Legal Aid',
+    'civil_legal_aid': 'Civil Legal Aid',
+    'public_defender': 'Public Defender Office'
+  };
+  
+  return typeMap[type] || 'Legal Assistance Organization';
 }
 
 // Generate fallback organizations when no real data is found

@@ -10,29 +10,45 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-### Legal Aid Organizations & Public Defender Search (October 2025)
-- Implemented ZIP code-based search functionality for finding legal assistance organizations
+### Legal Aid Organizations Database & Enhanced Search (October 2025)
+- Implemented comprehensive legal aid organizations database with 32+ organizations from official government sources
+- **Database Infrastructure**:
+  - Created `legalAidOrganizations` table in PostgreSQL with full organization details
+  - Fields: name, type, address, city, state, county, phone, email, website, coordinates, services, eligibility, data source
+  - Backend API endpoint: `/api/legal-aid-organizations` with state and type filtering
+  - Storage layer methods for CRUD operations and bulk imports
+- **Data Sources Integration**:
+  - **EOIR Pro Bono List**: 11 immigration legal service providers (EOIR.gov)
+  - **Legal Services Corporation (LSC)**: 21 civil legal aid organizations across all major states
+  - **Coverage**: California, New York, Texas, Florida, Illinois, Arizona, Georgia, Massachusetts, Washington, Pennsylvania, Ohio, Michigan, North Carolina, Colorado, Oregon
+  - Seed data file: `server/data/legal-aid-organizations-seed.ts`
+- **Enhanced Search Strategy**:
+  - Primary: Query database for organizations in user's state, calculate distances
+  - Fallback: OpenStreetMap/Nominatim search if <5 database results
+  - Returns up to 10 organizations within 100-mile radius
+  - Distance-based sorting with same-county prioritization
 - **Public Defender Search**:
   - Search modal accessible from home page and rights-info page
   - Uses OpenStreetMap/Nominatim API for geocoding and location-based search
   - Returns public defender offices within 50-mile radius
   - Displays office details: address, phone, email, hours, services, distance from ZIP code
   - Fixed bounding box bug for accurate geographic searches
-- **Legal Aid Organizations Search**:
-  - Created `legal-aid-services.ts` service focusing on criminal justice and immigration legal assistance
-  - Excludes general homeless services unrelated to criminal law
-  - Search terms target: legal aid societies, immigration legal services, criminal defense organizations
-  - Returns organizations with type badges (Immigration Legal Services, Criminal Justice Legal Aid, etc.)
-  - Services displayed include: Immigration Status Assistance, Deportation Defense, Criminal Defense Assistance, Expungement Help
-  - Fallback data provides generic organizations when no local results found
-- Both search features include:
+- **Organization Details Displayed**:
+  - Organization type badges (Immigration Legal Services, Civil Legal Aid, Criminal Justice Legal Aid)
+  - Services: Immigration Status Assistance, Deportation Defense, Criminal Defense, Expungement, Public Benefits, Housing Rights
+  - Contact information: Phone, email, website, address
+  - Eligibility requirements (low-income criteria where applicable)
+  - Data source attribution (EOIR, LSC, usa.gov)
+- **Features**:
   - ZIP code validation (5-digit requirement)
   - Loading states during searches
   - Error handling with helpful messages
-  - Distance-based sorting (same county prioritized)
   - Direct links to Google Maps for directions
   - Modal dialogs with consistent UX on both home and rights-info pages
-- Integration points: Home page CTA buttons and Rights Info page resource cards
+- **Future Expansion**:
+  - Framework supports adding more organizations from EOIR and LSC sources
+  - Monthly update mechanism can be implemented via admin endpoint
+  - Currently 32 representative organizations; expandable to hundreds
 
 ### RECAP/Court Records Integration (October 2025)
 - Integrated RECAP Archive and CourtListener API for free court record access
