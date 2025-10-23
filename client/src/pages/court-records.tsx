@@ -9,8 +9,10 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Search, ExternalLink, AlertCircle, FileText, Scale, DollarSign, Download } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { format } from 'date-fns';
+import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 
 export default function CourtRecords() {
+  useScrollToTop();
   const [searchTerm, setSearchTerm] = useState('');
   const [caseName, setCaseName] = useState('');
   const [docketNumber, setDocketNumber] = useState('');

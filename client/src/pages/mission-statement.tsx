@@ -5,8 +5,10 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export default function MissionStatement() {
+  useScrollToTop();
   const goals = [
     {
       icon: Users,

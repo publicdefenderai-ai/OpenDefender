@@ -10,6 +10,7 @@ import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 interface RightsScenario {
   icon: React.ReactNode;
@@ -235,6 +236,7 @@ function ScenarioCard({ scenario }: { scenario: RightsScenario }) {
 }
 
 export default function SearchSeizure() {
+  useScrollToTop();
   return (
     <div className="min-h-screen bg-background">
       <PrivacyBanner />

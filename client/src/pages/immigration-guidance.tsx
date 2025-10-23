@@ -25,8 +25,10 @@ import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export default function ImmigrationGuidance() {
+  useScrollToTop();
   return (
     <div className="min-h-screen bg-background">
       <Header />

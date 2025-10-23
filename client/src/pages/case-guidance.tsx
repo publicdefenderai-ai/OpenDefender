@@ -30,6 +30,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { QAFlow } from "@/components/legal/qa-flow";
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance } from "@/hooks/use-legal-data";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 interface EnhancedGuidanceResult {
   sessionId: string;
@@ -71,6 +72,7 @@ interface EnhancedGuidanceResult {
 }
 
 export default function CaseGuidance() {
+  useScrollToTop();
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
