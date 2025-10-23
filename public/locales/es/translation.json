@@ -1,0 +1,123 @@
+{
+  "header": {
+    "title": "Defensor Público IA",
+    "subtitle": "Orientación Legal Gratuita e Información sobre sus Derechos",
+    "menu": {
+      "getGuidance": "Obtener Orientación",
+      "getGuidanceDesc": "Iniciar evaluación legal personalizada",
+      "learnRights": "Conozca sus Derechos",
+      "learnRightsDesc": "Entienda sus derechos constitucionales",
+      "immigration": "Asistencia Migratoria",
+      "immigrationDesc": "Orientación sobre cumplimiento de inmigración",
+      "courtRecords": "Búsqueda de Registros Judiciales",
+      "courtRecordsDesc": "Buscar en archivo RECAP gratuito y jurisprudencia",
+      "recapExtensions": "Extensiones RECAP",
+      "recapExtensionsDesc": "Herramientas gratuitas para navegador PACER"
+    },
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Orientación Legal Gratuita Cuando Más lo Necesita",
+      "subtitle": "Acceda a sus derechos, entienda sus opciones y encuentre recursos legales — todo sin costo alguno.",
+      "urgentHelpButton": "¿Necesita Ayuda Urgente?",
+      "getStartedButton": "Comenzar"
+    },
+    "urgentHelp": {
+      "title": "¿Necesita Asistencia Legal Inmediata?",
+      "subtitle": "Si enfrenta arresto o detención, estos recursos pueden ayudarle ahora mismo:",
+      "publicDefender": "Encontrar Defensor Público",
+      "publicDefenderDesc": "Buscar oficinas de defensor público cerca de usted",
+      "legalAid": "Organizaciones de Asistencia Legal",
+      "legalAidDesc": "Encontrar asistencia legal gratuita en su área",
+      "knowRights": "Conozca sus Derechos",
+      "knowRightsDesc": "Entienda sus protecciones constitucionales",
+      "closeButton": "Cerrar"
+    },
+    "whatWeDo": {
+      "title": "Lo Que Hacemos",
+      "subtitle": "Defensor Público IA ayuda a las personas a entender sus derechos legales y navegar el sistema de justicia penal.",
+      "card1Title": "Orientación Legal con IA",
+      "card1Desc": "Obtenga información legal personalizada según su situación específica",
+      "card2Title": "Información sobre Derechos",
+      "card2Desc": "Aprenda sobre sus derechos constitucionales durante el arresto y procedimientos judiciales",
+      "card3Title": "Encuentre Recursos",
+      "card3Desc": "Localice defensores públicos, organizaciones de asistencia legal e información judicial"
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar?",
+      "subtitle": "Acceda a orientación legal gratuita y recursos adaptados a su situación.",
+      "button": "Iniciar Evaluación Legal"
+    },
+    "knowRights": {
+      "title": "Conozca sus Derechos",
+      "subtitle": "Entender sus derechos constitucionales es el primer paso para protegerse.",
+      "rightToRemainSilent": "Derecho a Permanecer en Silencio",
+      "rightToRemainSilentDesc": "No tiene que responder preguntas sin un abogado presente",
+      "rightToAttorney": "Derecho a un Abogado",
+      "rightToAttorneyDesc": "Tiene derecho a representación legal, incluso si no puede pagarla",
+      "rightToFairTrial": "Derecho a un Juicio Justo",
+      "rightToFairTrialDesc": "Tiene derecho al debido proceso y a un jurado imparcial",
+      "searchWarrantRights": "Protecciones contra Registro e Incautación",
+      "searchWarrantRightsDesc": "La policía necesita una orden para registrarle a usted o su propiedad en la mayoría de los casos",
+      "selfIncrimination": "Protección contra la Autoincriminación",
+      "selfIncriminationDesc": "No puede ser obligado a testificar contra sí mismo",
+      "speedyTrial": "Derecho a un Juicio Rápido",
+      "speedyTrialDesc": "Tiene derecho a un juicio sin demoras irrazonables",
+      "learnMore": "Aprenda Más sobre sus Derechos",
+      "showMore": "Mostrar Más",
+      "showLess": "Mostrar Menos"
+    },
+    "dataSources": {
+      "title": "Fuentes de Datos",
+      "subtitle": "Nuestra información proviene de bases de datos legales confiables y autorizadas.",
+      "courtlistener": "API CourtListener",
+      "courtlistenerDesc": "8.4M+ opiniones judiciales y expedientes federales del Proyecto Ley Libre",
+      "recap": "Archivo RECAP",
+      "recapDesc": "Acceso gratuito a registros judiciales federales recopilados de usuarios de PACER",
+      "cornell": "Instituto Legal Cornell",
+      "cornellDesc": "Constitución de EE.UU., estatutos federales y recursos legales"
+    }
+  },
+  "footer": {
+    "tagline": "Expandiendo el acceso a la justicia a través de orientación legal y recursos impulsados por IA.",
+    "legalResources": "Recursos Legales",
+    "knowYourRights": "Conozca sus Derechos",
+    "courtProcedures": "Procedimientos Judiciales",
+    "legalGlossary": "Glosario Legal",
+    "recordExpungement": "Eliminación de Antecedentes",
+    "friendsFamily": "Para Amigos y Familia",
+    "getHelp": "Obtener Ayuda",
+    "getCaseGuidance": "Obtener Orientación de Caso",
+    "diversionPrograms": "Programas de Desviación",
+    "findLocalCourts": "Encontrar Tribunales Locales",
+    "findPublicDefender": "Encontrar Defensor Público",
+    "legalAidOrgs": "Organizaciones de Asistencia Legal",
+    "about": "Acerca de",
+    "ourMission": "Nuestra Misión",
+    "developmentRoadmap": "Hoja de Ruta de Desarrollo",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales — toda información se elimina después de la sesión.",
+    "copyright": "© 2025 Defensor Público IA. No sustituye el asesoramiento legal profesional."
+  },
+  "common": {
+    "close": "Cerrar",
+    "cancel": "Cancelar",
+    "submit": "Enviar",
+    "search": "Buscar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "name": "Nombre",
+    "description": "Descripción",
+    "learnMore": "Más Información",
+    "getStarted": "Comenzar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "save": "Guardar"
+  }
+}

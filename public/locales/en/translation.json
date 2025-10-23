@@ -1,0 +1,123 @@
+{
+  "header": {
+    "title": "Public Defender AI",
+    "subtitle": "Free Legal Guidance & Rights Information",
+    "menu": {
+      "getGuidance": "Get Guidance",
+      "getGuidanceDesc": "Start personalized legal assessment",
+      "learnRights": "Learn Your Rights",
+      "learnRightsDesc": "Understand your constitutional rights",
+      "immigration": "Immigration Assistance",
+      "immigrationDesc": "Immigration enforcement guidance",
+      "courtRecords": "Court Records Search",
+      "courtRecordsDesc": "Search free RECAP archive & case law",
+      "recapExtensions": "RECAP Extensions",
+      "recapExtensionsDesc": "Free browser tools for PACER"
+    },
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Free Legal Guidance When You Need It Most",
+      "subtitle": "Access your rights, understand your options, and find legal resources — all at no cost.",
+      "urgentHelpButton": "Need Urgent Help?",
+      "getStartedButton": "Get Started"
+    },
+    "urgentHelp": {
+      "title": "Need Immediate Legal Assistance?",
+      "subtitle": "If you're facing arrest or detention, these resources can help right now:",
+      "publicDefender": "Find Public Defender",
+      "publicDefenderDesc": "Search for public defender offices near you",
+      "legalAid": "Legal Aid Organizations",
+      "legalAidDesc": "Find free legal assistance in your area",
+      "knowRights": "Know Your Rights",
+      "knowRightsDesc": "Understand your constitutional protections",
+      "closeButton": "Close"
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "subtitle": "Public Defender AI helps individuals understand their legal rights and navigate the criminal justice system.",
+      "card1Title": "AI Legal Guidance",
+      "card1Desc": "Get personalized legal information based on your specific situation",
+      "card2Title": "Rights Information",
+      "card2Desc": "Learn about your constitutional rights during arrest and court proceedings",
+      "card3Title": "Find Resources",
+      "card3Desc": "Locate public defenders, legal aid organizations, and court information"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Access free legal guidance and resources tailored to your situation.",
+      "button": "Start Legal Assessment"
+    },
+    "knowRights": {
+      "title": "Know Your Rights",
+      "subtitle": "Understanding your constitutional rights is the first step to protecting yourself.",
+      "rightToRemainSilent": "Right to Remain Silent",
+      "rightToRemainSilentDesc": "You don't have to answer questions without a lawyer present",
+      "rightToAttorney": "Right to an Attorney",
+      "rightToAttorneyDesc": "You have the right to legal representation, even if you can't afford it",
+      "rightToFairTrial": "Right to a Fair Trial",
+      "rightToFairTrialDesc": "You're entitled to due process and an impartial jury",
+      "searchWarrantRights": "Search & Seizure Protections",
+      "searchWarrantRightsDesc": "Police need a warrant to search you or your property in most cases",
+      "selfIncrimination": "Protection Against Self-Incrimination",
+      "selfIncriminationDesc": "You cannot be forced to testify against yourself",
+      "speedyTrial": "Right to Speedy Trial",
+      "speedyTrialDesc": "You have the right to a trial without unreasonable delays",
+      "learnMore": "Learn More About Your Rights",
+      "showMore": "Show More",
+      "showLess": "Show Less"
+    },
+    "dataSources": {
+      "title": "Data Sources",
+      "subtitle": "Our information comes from trusted, authoritative legal databases.",
+      "courtlistener": "CourtListener API",
+      "courtlistenerDesc": "8.4M+ court opinions and federal dockets from Free Law Project",
+      "recap": "RECAP Archive",
+      "recapDesc": "Free access to federal court records crowdsourced from PACER users",
+      "cornell": "Cornell Legal Institute",
+      "cornellDesc": "US Constitution, federal statutes, and legal resources"
+    }
+  },
+  "footer": {
+    "tagline": "Expanding access to justice through AI-powered legal guidance and resources.",
+    "legalResources": "Legal Resources",
+    "knowYourRights": "Know Your Rights",
+    "courtProcedures": "Court Procedures",
+    "legalGlossary": "Legal Glossary",
+    "recordExpungement": "Record Expungement",
+    "friendsFamily": "For Friends & Family",
+    "getHelp": "Get Help",
+    "getCaseGuidance": "Get Case Guidance",
+    "diversionPrograms": "Diversion Programs",
+    "findLocalCourts": "Find Local Courts",
+    "findPublicDefender": "Find Public Defender",
+    "legalAidOrgs": "Legal Aid Organizations",
+    "about": "About",
+    "ourMission": "Our Mission",
+    "developmentRoadmap": "Development Roadmap",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "privacyNotice": "Privacy First: We do not store your personal data — all input deleted after session.",
+    "copyright": "© 2025 Public Defender AI. Not a substitute for professional legal advice."
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "name": "Name",
+    "description": "Description",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save"
+  }
+}
