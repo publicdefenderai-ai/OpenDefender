@@ -34,6 +34,7 @@ import { Input } from "@/components/ui/input";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 import { GetStartedMenu } from "@/components/navigation/get-started-menu";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   return (
@@ -221,6 +222,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 }
 
 export default function Home() {
+  useScrollToTop();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
   const [getStartedOpen, setGetStartedOpen] = useState(false);
   
