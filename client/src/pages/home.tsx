@@ -412,7 +412,7 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -428,18 +428,6 @@ export default function Home() {
             <ScrollReveal delay={0.2}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <UserCheck className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-semibold mb-3 text-foreground">Find Legal Help</h3>
-                <p className="text-sm text-muted-foreground">
-                  Direct connections to public defenders and legal aid organizations in your area
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-semibold mb-3 text-foreground">Privacy Protected</h3>
@@ -449,7 +437,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
+            <ScrollReveal delay={0.3}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <RotateCcw className="h-8 w-8 text-white" />
