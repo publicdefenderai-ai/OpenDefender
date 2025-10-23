@@ -27,6 +27,16 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
@@ -52,6 +62,64 @@ interface RoadmapItem {
 export default function DevelopmentRoadmap() {
   useScrollToTop();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [showFeatureRequestModal, setShowFeatureRequestModal] = useState(false);
+  const [featureName, setFeatureName] = useState("");
+  const [featureEmail, setFeatureEmail] = useState("");
+  const [featureDescription, setFeatureDescription] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const { toast } = useToast();
+
+  const handleSubmitFeatureRequest = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Honeypot check for spam protection
+    if (honeypot) {
+      // Silently reject spam
+      return;
+    }
+
+    if (!featureName || !featureEmail || !featureDescription) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill out all fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(featureEmail)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Construct mailto link
+    const subject = encodeURIComponent(`Feature Request: ${featureName}`);
+    const body = encodeURIComponent(
+      `Name: ${featureName}\n\nEmail: ${featureEmail}\n\nFeature Request:\n${featureDescription}`
+    );
+    const mailtoLink = `mailto:publicdefenderai@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Reset form and close modal
+    setFeatureName("");
+    setFeatureEmail("");
+    setFeatureDescription("");
+    setHoneypot("");
+    setShowFeatureRequestModal(false);
+
+    toast({
+      title: "Email Client Opened",
+      description: "Your default email client should open. Please send the email to submit your request.",
+    });
+  };
 
   const roadmapItems: RoadmapItem[] = [
     {
@@ -416,35 +484,18 @@ export default function DevelopmentRoadmap() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <ScrollReveal delay={0.1}>
-              <CommunityCard
-                icon={<Github className="h-6 w-6 text-white" />}
-                title="Open Source"
-                description="Core components available on GitHub for community review and contribution"
-                bgColor="legal-blue"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <CommunityCard
-                icon={<Users className="h-6 w-6 text-white" />}
-                title="Legal Expert Review"
-                description="Partnership with legal professionals for accuracy and ethical guidelines"
-                bgColor="success-green"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
               <CommunityCard
                 icon={<Lightbulb className="h-6 w-6 text-white" />}
                 title="Feature Requests"
                 description="Community-driven feature suggestions and priority voting"
                 bgColor="bg-purple-600"
+                onClick={() => setShowFeatureRequestModal(true)}
               />
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
+            <ScrollReveal delay={0.2}>
               <CommunityCard
                 icon={<BarChart3 className="h-6 w-6 text-white" />}
                 title="Impact Metrics"
@@ -474,6 +525,95 @@ export default function DevelopmentRoadmap() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Feature Request Modal */}
+      <Dialog open={showFeatureRequestModal} onOpenChange={setShowFeatureRequestModal}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle>Submit a Feature Request</DialogTitle>
+            <DialogDescription>
+              Help us improve Public Defender AI by sharing your ideas. Your request will be sent to our team at publicdefenderai@gmail.com.
+            </DialogDescription>
+          </DialogHeader>
+          
+          <form onSubmit={handleSubmitFeatureRequest} className="space-y-4">
+            {/* Honeypot field for spam protection - hidden from users */}
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              style={{ display: 'none' }}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+
+            <div className="space-y-2">
+              <label htmlFor="feature-name" className="text-sm font-medium">
+                Your Name
+              </label>
+              <Input
+                id="feature-name"
+                type="text"
+                placeholder="Enter your name"
+                value={featureName}
+                onChange={(e) => setFeatureName(e.target.value)}
+                required
+                data-testid="input-feature-name"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="feature-email" className="text-sm font-medium">
+                Your Email
+              </label>
+              <Input
+                id="feature-email"
+                type="email"
+                placeholder="your@email.com"
+                value={featureEmail}
+                onChange={(e) => setFeatureEmail(e.target.value)}
+                required
+                data-testid="input-feature-email"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="feature-description" className="text-sm font-medium">
+                Feature Request
+              </label>
+              <Textarea
+                id="feature-description"
+                placeholder="Describe the feature you'd like to see..."
+                value={featureDescription}
+                onChange={(e) => setFeatureDescription(e.target.value)}
+                required
+                rows={5}
+                data-testid="textarea-feature-description"
+              />
+            </div>
+
+            <div className="flex justify-end gap-3 pt-4">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setShowFeatureRequestModal(false)}
+                data-testid="button-cancel-feature-request"
+              >
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                className="bg-purple-600 hover:bg-purple-700 text-white"
+                data-testid="button-submit-feature-request"
+              >
+                <Lightbulb className="mr-2 h-4 w-4" />
+                Submit Request
+              </Button>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
       
@@ -603,14 +743,19 @@ function DataSourceStatus({ name, status, description, coverage, cost, progress 
   );
 }
 
-function CommunityCard({ icon, title, description, bgColor }: {
+function CommunityCard({ icon, title, description, bgColor, onClick }: {
   icon: React.ReactNode;
   title: string;
   description: string;
   bgColor: string;
+  onClick?: () => void;
 }) {
   return (
-    <Card className="text-center hover:shadow-lg transition-all duration-300">
+    <Card 
+      className={`text-center hover:shadow-lg transition-all duration-300 ${onClick ? 'cursor-pointer' : ''}`}
+      onClick={onClick}
+      data-testid={onClick ? `card-${title.toLowerCase().replace(/\s+/g, '-')}` : undefined}
+    >
       <CardContent className="p-6">
         <div className={`w-12 h-12 ${bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
           {icon}
