@@ -315,7 +315,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/friends-family" className="hover:text-white transition-colors">
-                  Assisting Others
+                  For Friends & Family
                 </Link>
               </li>
             </ul>
@@ -374,11 +374,6 @@ export function Footer() {
                 <Link href="/development-roadmap" className="hover:text-white transition-colors">
                   Development Roadmap
                 </Link>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Data Sources
-                </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
