@@ -22,9 +22,11 @@ import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { searchCourthousesWithFederalData, getMockCourtData, CourtLocation } from "@/lib/court-services";
 
 export default function CourtLocator() {
+  useScrollToTop();
   const [zipCode, setZipCode] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [courts, setCourts] = useState<CourtLocation[]>([]);

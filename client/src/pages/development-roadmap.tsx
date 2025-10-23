@@ -33,6 +33,7 @@ import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 interface RoadmapItem {
   id: string;
@@ -49,6 +50,7 @@ interface RoadmapItem {
 }
 
 export default function DevelopmentRoadmap() {
+  useScrollToTop();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const roadmapItems: RoadmapItem[] = [

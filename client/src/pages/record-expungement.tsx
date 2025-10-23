@@ -32,6 +32,7 @@ import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
   expungementRules, 
   getExpungementByState, 
@@ -178,6 +179,7 @@ function EligibilityResult({ result, selectedState }: EligibilityResultProps) {
 }
 
 export default function RecordExpungement() {
+  useScrollToTop();
   const [selectedState, setSelectedState] = useState("");
   const [offenseType, setOffenseType] = useState<"misdemeanor" | "felony" | "">("");
   const [completionDate, setCompletionDate] = useState("");

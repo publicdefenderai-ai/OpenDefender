@@ -29,6 +29,7 @@ import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
   diversionPrograms, 
   searchDiversionPrograms, 
@@ -143,6 +144,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
 }
 
 export default function DiversionPrograms() {
+  useScrollToTop();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [selectedProgramType, setSelectedProgramType] = useState("");

@@ -24,6 +24,7 @@ import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
   legalGlossaryTerms, 
   searchGlossaryTerms, 
@@ -32,6 +33,7 @@ import {
 } from "@/lib/legal-glossary-data";
 
 export default function LegalGlossary() {
+  useScrollToTop();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
   const [selectedTag, setSelectedTag] = useState("");
