@@ -59,7 +59,7 @@ export default function MissionStatement() {
               Mission Statement
             </h1>
             <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              The Public Defender AI Agent project aims to leverage artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel.
+              Public Defender AI is a <strong>public good</strong> dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and Creative Commons for documentation, ensuring it remains free and accessible to all who need it.
             </p>
           </motion.div>
         </ScrollReveal>
