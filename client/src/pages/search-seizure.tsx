@@ -269,7 +269,49 @@ export default function SearchSeizure() {
             </Alert>
           </ScrollReveal>
 
+          {/* General Behavior Tips */}
           <ScrollReveal delay={0.1}>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              General Guidelines for Police Interactions
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <ScrollReveal delay={0.2}>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-green-600">Stay Calm</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Remain polite and calm, even if you believe your rights are being violated. Arguments escalate situations and can be used against you.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-blue-600">Assert Your Rights</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Clearly state "I do not consent to this search" and "I want to speak to an attorney." Silence alone may not be enough.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="font-semibold text-lg mb-3 text-purple-600">Document Everything</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Remember badge numbers, officer names, and witness information. Write down what happened as soon as possible.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.5}>
             <h2 className="text-3xl font-bold text-center text-foreground mb-8">
               Common Search Scenarios
             </h2>
@@ -288,52 +330,11 @@ export default function SearchSeizure() {
         </div>
       </section>
 
-      {/* General Behavior Tips */}
+      {/* Legal Disclaimer */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              General Guidelines for Police Interactions
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <ScrollReveal delay={0.1}>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-green-600">Stay Calm</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Remain polite and calm, even if you believe your rights are being violated. Arguments escalate situations and can be used against you.
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-blue-600">Assert Your Rights</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Clearly state "I do not consent to this search" and "I want to speak to an attorney." Silence alone may not be enough.
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-purple-600">Document Everything</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Remember badge numbers, officer names, and witness information. Write down what happened as soon as possible.
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal delay={0.4}>
-            <Alert className="mt-12 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+            <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
               <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
               <AlertDescription className="text-amber-800 dark:text-amber-200">
                 <strong>Legal Disclaimer:</strong> This information is for educational purposes only and does not constitute legal advice. Laws and enforcement practices vary by jurisdiction. Always consult with a qualified attorney for advice specific to your situation.

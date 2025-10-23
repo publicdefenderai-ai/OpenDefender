@@ -320,7 +320,7 @@ export default function Home() {
               
               <Button
                 onClick={handleUrgentHelp}
-                className="urgent-red hover:bg-red-700 hover:shadow-2xl font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
+                className="bg-red-600 hover:bg-red-700 hover:shadow-2xl text-white font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
                 data-testid="button-urgent-help"
               >
                 <AlertTriangle className="mr-3 h-6 w-6" />
