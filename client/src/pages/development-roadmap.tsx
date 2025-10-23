@@ -411,7 +411,7 @@ export default function DevelopmentRoadmap() {
                 Community & Open Development
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We believe in transparent development and community input. Here's how you can participate.
+                Public Defender AI is a public good, built on open-source principles. The codebase is licensed under MIT and documentation under Creative Commons, ensuring this platform remains free and accessible to all who need it.
               </p>
             </div>
           </ScrollReveal>
