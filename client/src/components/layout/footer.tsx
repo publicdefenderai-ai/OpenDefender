@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
+import { useTranslation } from "react-i18next";
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   return (
@@ -194,6 +195,8 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 }
 
 export function Footer() {
+  const { t } = useTranslation();
+  
   // Public Defender search state
   const [showPublicDefenderModal, setShowPublicDefenderModal] = useState(false);
   const [pdZipCode, setPdZipCode] = useState("");
@@ -262,7 +265,7 @@ export function Footer() {
               <span className="font-bold text-lg">Public Defender AI</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Expanding access to justice through AI-powered legal guidance and resources.
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-3">
               <a 
@@ -291,31 +294,31 @@ export function Footer() {
 
           {/* Legal Resources */}
           <div>
-            <h4 className="font-semibold mb-4">Legal Resources</h4>
+            <h4 className="font-semibold mb-4">{t('footer.legalResources')}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/rights-info" className="hover:text-white transition-colors">
-                  Know Your Rights
+                  {t('footer.knowYourRights')}
                 </Link>
               </li>
               <li>
                 <Link href="/process" className="hover:text-white transition-colors">
-                  Court Procedures
+                  {t('footer.courtProcedures')}
                 </Link>
               </li>
               <li>
                 <Link href="/legal-glossary" className="hover:text-white transition-colors">
-                  Legal Glossary
+                  {t('footer.legalGlossary')}
                 </Link>
               </li>
               <li>
                 <Link href="/record-expungement" className="hover:text-white transition-colors">
-                  Record Expungement
+                  {t('footer.recordExpungement')}
                 </Link>
               </li>
               <li>
                 <Link href="/friends-family" className="hover:text-white transition-colors">
-                  For Friends & Family
+                  {t('footer.friendsFamily')}
                 </Link>
               </li>
             </ul>
@@ -323,21 +326,21 @@ export function Footer() {
 
           {/* Get Help */}
           <div>
-            <h4 className="font-semibold mb-4">Get Help</h4>
+            <h4 className="font-semibold mb-4">{t('footer.getHelp')}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/case-guidance" className="hover:text-white transition-colors">
-                  Get Case Guidance
+                  {t('footer.getCaseGuidance')}
                 </Link>
               </li>
               <li>
                 <Link href="/diversion-programs" className="hover:text-white transition-colors">
-                  Diversion Programs
+                  {t('footer.diversionPrograms')}
                 </Link>
               </li>
               <li>
                 <Link href="/court-locator" className="hover:text-white transition-colors">
-                  Find Local Courts
+                  {t('footer.findLocalCourts')}
                 </Link>
               </li>
               <li>
@@ -346,7 +349,7 @@ export function Footer() {
                   className="hover:text-white transition-colors text-left"
                   data-testid="button-find-public-defender-footer"
                 >
-                  Find Public Defender
+                  {t('footer.findPublicDefender')}
                 </button>
               </li>
               <li>
@@ -355,7 +358,7 @@ export function Footer() {
                   className="hover:text-white transition-colors text-left"
                   data-testid="button-legal-aid-organizations-footer"
                 >
-                  Legal Aid Organizations
+                  {t('footer.legalAidOrgs')}
                 </button>
               </li>
             </ul>
@@ -363,26 +366,26 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h4 className="font-semibold mb-4">About</h4>
+            <h4 className="font-semibold mb-4">{t('footer.about')}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/mission-statement" className="hover:text-white transition-colors">
-                  Our Mission
+                  {t('footer.ourMission')}
                 </Link>
               </li>
               <li>
                 <Link href="/development-roadmap" className="hover:text-white transition-colors">
-                  Development Roadmap
+                  {t('footer.developmentRoadmap')}
                 </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Privacy Policy
+                  {t('footer.privacyPolicy')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Terms of Service
+                  {t('footer.termsOfService')}
                 </a>
               </li>
             </ul>
@@ -395,7 +398,7 @@ export function Footer() {
             <div className="flex items-center justify-center space-x-2">
               <Shield className="h-4 w-4" />
               <span className="text-sm font-medium">
-                <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+                {t('footer.privacyNotice')}
               </span>
             </div>
           </div>
@@ -404,7 +407,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Public Defender AI. Not a substitute for professional legal advice.
+            {t('footer.copyright')}
           </p>
           <div className="flex space-x-6 text-sm text-gray-400">
             <a href="#" className="hover:text-white transition-colors">

@@ -24,6 +24,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
@@ -223,6 +224,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 
 export default function Home() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
   const [getStartedOpen, setGetStartedOpen] = useState(false);
   

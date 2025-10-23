@@ -31,31 +31,36 @@ export function Header() {
       title: t('header.menu.getGuidance'),
       href: "/case-guidance",
       icon: MessageSquare,
-      description: t('header.menu.getGuidanceDesc')
+      description: t('header.menu.getGuidanceDesc'),
+      testId: "menu-case-guidance"
     },
     {
       title: t('header.menu.learnRights'),
       href: "/rights-info",
       icon: Info,
-      description: t('header.menu.learnRightsDesc')
+      description: t('header.menu.learnRightsDesc'),
+      testId: "menu-rights-info"
     },
     {
       title: t('header.menu.immigration'),
       href: "/immigration-guidance",
       icon: Globe,
-      description: t('header.menu.immigrationDesc')
+      description: t('header.menu.immigrationDesc'),
+      testId: "menu-immigration-guidance"
     },
     {
       title: t('header.menu.courtRecords'),
       href: "/court-records",
       icon: FileSearch,
-      description: t('header.menu.courtRecordsDesc')
+      description: t('header.menu.courtRecordsDesc'),
+      testId: "menu-court-records"
     },
     {
       title: t('header.menu.recapExtensions'),
       href: "/recap-extensions",
       icon: Download,
-      description: t('header.menu.recapExtensionsDesc')
+      description: t('header.menu.recapExtensionsDesc'),
+      testId: "menu-recap-extensions"
     }
   ];
 
@@ -146,7 +151,7 @@ export function Header() {
                         <Button
                           variant="ghost"
                           className="w-full justify-start h-auto py-4 px-4"
-                          data-testid={`menu-${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+                          data-testid={item.testId}
                         >
                           <div className="flex items-start space-x-3">
                             <Icon className="h-5 w-5 mt-0.5 text-blue-600" />
