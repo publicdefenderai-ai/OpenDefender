@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { 
   Shield, 
@@ -42,6 +43,7 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export default function RightsInfo() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [selectedJurisdiction, setSelectedJurisdiction] = useState("federal");
   const { data: resources, isLoading } = useLegalResources(selectedJurisdiction);
 
@@ -55,11 +57,11 @@ export default function RightsInfo() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
-                Know Your Legal Rights
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600" data-testid="heading-rights-title">
+                {t('rights.hero.title')}
               </h1>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-                Understanding your constitutional and legal rights is the first step in protecting yourself within the criminal justice system.
+              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto" data-testid="text-rights-subtitle">
+                {t('rights.hero.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -70,8 +72,8 @@ export default function RightsInfo() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Essential Rights Everyone Should Know
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-quick-rights">
+              {t('rights.quickRights.title')}
             </h2>
           </ScrollReveal>
 
@@ -79,8 +81,8 @@ export default function RightsInfo() {
             <ScrollReveal delay={0.1}>
               <QuickRightCard
                 icon={<Shield className="h-6 w-6 text-white" />}
-                title="Right to Remain Silent"
-                description="You don't have to answer questions beyond basic identification"
+                title={t('rights.quickRights.silent.title')}
+                description={t('rights.quickRights.silent.description')}
                 bgColor="bg-blue-600"
               />
             </ScrollReveal>
@@ -88,8 +90,8 @@ export default function RightsInfo() {
             <ScrollReveal delay={0.2}>
               <QuickRightCard
                 icon={<Scale className="h-6 w-6 text-white" />}
-                title="Right to an Attorney"
-                description="Free legal representation if you cannot afford one"
+                title={t('rights.quickRights.attorney.title')}
+                description={t('rights.quickRights.attorney.description')}
                 bgColor="bg-green-600"
               />
             </ScrollReveal>
@@ -97,8 +99,8 @@ export default function RightsInfo() {
             <ScrollReveal delay={0.3}>
               <QuickRightCard
                 icon={<Phone className="h-6 w-6 text-white" />}
-                title="Right to a Phone Call"
-                description="Contact family, attorney, or bail bondsman after arrest"
+                title={t('rights.quickRights.phoneCall.title')}
+                description={t('rights.quickRights.phoneCall.description')}
                 bgColor="bg-blue-500"
               />
             </ScrollReveal>
@@ -106,8 +108,8 @@ export default function RightsInfo() {
             <ScrollReveal delay={0.4}>
               <QuickRightCard
                 icon={<UserCheck className="h-6 w-6 text-white" />}
-                title="Right to Know Charges"
-                description="Must be informed of accusations against you"
+                title={t('rights.quickRights.knowCharges.title')}
+                description={t('rights.quickRights.knowCharges.description')}
                 bgColor="bg-purple-600"
               />
             </ScrollReveal>
@@ -119,8 +121,8 @@ export default function RightsInfo() {
       <section className="py-16 bg-muted/30" id="constitutional-rights">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Your Constitutional Rights in Detail
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-detailed-rights">
+              {t('rights.detailedRights.title')}
             </h2>
           </ScrollReveal>
 
@@ -132,28 +134,28 @@ export default function RightsInfo() {
                   data-testid="tab-miranda"
                   className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
                 >
-                  Miranda Rights
+                  {t('rights.detailedRights.tabs.miranda')}
                 </TabsTrigger>
                 <TabsTrigger 
                   value="arrest" 
                   data-testid="tab-arrest"
                   className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
                 >
-                  During Arrest
+                  {t('rights.detailedRights.tabs.arrest')}
                 </TabsTrigger>
                 <TabsTrigger 
                   value="court" 
                   data-testid="tab-court"
                   className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
                 >
-                  In Court
+                  {t('rights.detailedRights.tabs.court')}
                 </TabsTrigger>
                 <TabsTrigger 
                   value="prison" 
                   data-testid="tab-prison"
                   className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
                 >
-                  If Convicted
+                  {t('rights.detailedRights.tabs.prison')}
                 </TabsTrigger>
               </TabsList>
             </ScrollReveal>
@@ -192,23 +194,29 @@ export default function RightsInfo() {
             <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
               <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
               <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">Legal Disclaimer:</strong> This information is for educational purposes only and does not constitute legal advice. Laws vary by jurisdiction and change over time. Always consult with a qualified attorney for advice specific to your situation.
+                <strong className="font-semibold">{t('rights.disclaimer.title')}</strong> {t('rights.disclaimer.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <div className="text-center mt-12">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Need Immediate Legal Help?
+              <h3 className="text-xl font-semibold text-foreground mb-4" data-testid="heading-need-help">
+                {t('rights.disclaimer.needHelp')}
               </h3>
               <div className="space-x-4">
-                <Button className="bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg">
-                  Emergency Legal Aid
+                <Button 
+                  data-testid="button-emergency-aid" 
+                  className="bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg"
+                >
+                  {t('rights.disclaimer.emergencyAid')}
                 </Button>
                 <Link href="/case-guidance">
-                  <Button className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg">
-                    Get Case Guidance
+                  <Button 
+                    data-testid="button-case-guidance" 
+                    className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg"
+                  >
+                    {t('rights.disclaimer.caseGuidance')}
                   </Button>
                 </Link>
               </div>
@@ -242,41 +250,43 @@ function QuickRightCard({ icon, title, description, bgColor }: {
 }
 
 function MirandaRightsSection() {
+  const { t } = useTranslation();
+  
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <Shield className="h-5 w-5 text-primary" />
-          <span>Miranda Rights</span>
+          <span>{t('rights.detailedRights.miranda.title')}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div>
-          <h4 className="font-semibold text-foreground mb-3">The Complete Miranda Warning:</h4>
+          <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.miranda.completeWarning')}</h4>
           <div className="bg-muted p-4 rounded-lg space-y-2 text-sm">
-            <p>"You have the right to remain silent."</p>
-            <p>"Anything you say can and will be used against you in a court of law."</p>
-            <p>"You have the right to an attorney."</p>
-            <p>"If you cannot afford an attorney, one will be provided for you."</p>
-            <p>"Do you understand the rights I have just read to you?"</p>
-            <p>"With these rights in mind, do you wish to speak to me?"</p>
+            <p>"{t('rights.detailedRights.miranda.warning1')}"</p>
+            <p>"{t('rights.detailedRights.miranda.warning2')}"</p>
+            <p>"{t('rights.detailedRights.miranda.warning3')}"</p>
+            <p>"{t('rights.detailedRights.miranda.warning4')}"</p>
+            <p>"{t('rights.detailedRights.miranda.warning5')}"</p>
+            <p>"{t('rights.detailedRights.miranda.warning6')}"</p>
           </div>
         </div>
 
         <div>
-          <h4 className="font-semibold text-foreground mb-3">When Miranda Rights Apply:</h4>
+          <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.miranda.whenApply')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• When you are in police custody AND being interrogated</li>
-            <li>• Not required for traffic stops or voluntary questioning</li>
-            <li>• Must be given before custodial interrogation begins</li>
-            <li>• You can invoke these rights at any time during questioning</li>
+            <li>• {t('rights.detailedRights.miranda.apply1')}</li>
+            <li>• {t('rights.detailedRights.miranda.apply2')}</li>
+            <li>• {t('rights.detailedRights.miranda.apply3')}</li>
+            <li>• {t('rights.detailedRights.miranda.apply4')}</li>
           </ul>
         </div>
 
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>Important:</strong> If police fail to read Miranda rights, statements made during custodial interrogation may be inadmissible in court, but this doesn't automatically dismiss your case.
+            <strong>{t('rights.detailedRights.miranda.alertTitle')}</strong> {t('rights.detailedRights.miranda.alertText')}
           </AlertDescription>
         </Alert>
       </CardContent>
@@ -285,46 +295,48 @@ function MirandaRightsSection() {
 }
 
 function ArrestRightsSection() {
+  const { t } = useTranslation();
+  
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <UserCheck className="h-5 w-5 text-primary" />
-          <span>Rights During Arrest</span>
+          <span>{t('rights.detailedRights.arrest.title')}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-semibold text-foreground mb-3">What You Should Do:</h4>
+            <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldDo')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Stay calm and don't resist arrest</li>
-              <li>• Keep your hands visible</li>
-              <li>• Exercise your right to remain silent</li>
-              <li>• Ask for an attorney immediately</li>
-              <li>• Remember details for your lawyer later</li>
+              <li>• {t('rights.detailedRights.arrest.do1')}</li>
+              <li>• {t('rights.detailedRights.arrest.do2')}</li>
+              <li>• {t('rights.detailedRights.arrest.do3')}</li>
+              <li>• {t('rights.detailedRights.arrest.do4')}</li>
+              <li>• {t('rights.detailedRights.arrest.do5')}</li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold text-foreground mb-3">What You Should NOT Do:</h4>
+            <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldNotDo')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Don't run or resist physically</li>
-              <li>• Don't argue with police</li>
-              <li>• Don't consent to searches</li>
-              <li>• Don't answer questions without a lawyer</li>
-              <li>• Don't sign anything</li>
+              <li>• {t('rights.detailedRights.arrest.dont1')}</li>
+              <li>• {t('rights.detailedRights.arrest.dont2')}</li>
+              <li>• {t('rights.detailedRights.arrest.dont3')}</li>
+              <li>• {t('rights.detailedRights.arrest.dont4')}</li>
+              <li>• {t('rights.detailedRights.arrest.dont5')}</li>
             </ul>
           </div>
         </div>
 
         <div>
-          <h4 className="font-semibold text-foreground mb-3">Police Powers During Arrest:</h4>
+          <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.policePowers')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• Can search you and immediate area for weapons/evidence</li>
-            <li>• Can seize items in plain view</li>
-            <li>• Can search your vehicle if arrested during traffic stop</li>
-            <li>• Cannot search your phone without a warrant (in most cases)</li>
+            <li>• {t('rights.detailedRights.arrest.power1')}</li>
+            <li>• {t('rights.detailedRights.arrest.power2')}</li>
+            <li>• {t('rights.detailedRights.arrest.power3')}</li>
+            <li>• {t('rights.detailedRights.arrest.power4')}</li>
           </ul>
         </div>
       </CardContent>
@@ -333,34 +345,36 @@ function ArrestRightsSection() {
 }
 
 function CourtRightsSection() {
+  const { t } = useTranslation();
+  
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <Gavel className="h-5 w-5 text-primary" />
-          <span>Rights in Court</span>
+          <span>{t('rights.detailedRights.court.title')}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-semibold text-foreground mb-3">Constitutional Rights:</h4>
+            <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.court.constitutional')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Right to a fair and speedy trial</li>
-              <li>• Right to an impartial jury</li>
-              <li>• Right to confront witnesses</li>
-              <li>• Right to present a defense</li>
-              <li>• Right to appeal conviction</li>
+              <li>• {t('rights.detailedRights.court.right1')}</li>
+              <li>• {t('rights.detailedRights.court.right2')}</li>
+              <li>• {t('rights.detailedRights.court.right3')}</li>
+              <li>• {t('rights.detailedRights.court.right4')}</li>
+              <li>• {t('rights.detailedRights.court.right5')}</li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold text-foreground mb-3">Burden of Proof:</h4>
+            <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.court.burdenProof')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Prosecution must prove guilt beyond reasonable doubt</li>
-              <li>• You are presumed innocent until proven guilty</li>
-              <li>• You don't have to prove your innocence</li>
-              <li>• You have the right not to testify</li>
+              <li>• {t('rights.detailedRights.court.burden1')}</li>
+              <li>• {t('rights.detailedRights.court.burden2')}</li>
+              <li>• {t('rights.detailedRights.court.burden3')}</li>
+              <li>• {t('rights.detailedRights.court.burden4')}</li>
             </ul>
           </div>
         </div>
@@ -368,7 +382,7 @@ function CourtRightsSection() {
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>Court Etiquette:</strong> Dress appropriately, arrive on time, stand when the judge enters, address the judge as "Your Honor," and let your attorney speak for you.
+            <strong>{t('rights.detailedRights.court.etiquetteTitle')}</strong> {t('rights.detailedRights.court.etiquetteText')}
           </AlertDescription>
         </Alert>
       </CardContent>
@@ -377,42 +391,44 @@ function CourtRightsSection() {
 }
 
 function PrisonRightsSection() {
+  const { t } = useTranslation();
+  
   return (
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <FileX className="h-5 w-5 text-primary" />
-          <span>Rights If Convicted</span>
+          <span>{t('rights.detailedRights.prison.title')}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div>
-          <h4 className="font-semibold text-foreground mb-3">Continuing Rights:</h4>
+          <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.prison.continuing')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• Right to appeal your conviction</li>
-            <li>• Right to legal representation for appeal</li>
-            <li>• Right to humane treatment in prison</li>
-            <li>• Right to medical care</li>
-            <li>• Right to practice religion</li>
-            <li>• Right to communicate with family (with restrictions)</li>
+            <li>• {t('rights.detailedRights.prison.right1')}</li>
+            <li>• {t('rights.detailedRights.prison.right2')}</li>
+            <li>• {t('rights.detailedRights.prison.right3')}</li>
+            <li>• {t('rights.detailedRights.prison.right4')}</li>
+            <li>• {t('rights.detailedRights.prison.right5')}</li>
+            <li>• {t('rights.detailedRights.prison.right6')}</li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-semibold text-foreground mb-3">After Release:</h4>
+          <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.prison.afterRelease')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• Possible probation or parole supervision</li>
-            <li>• Potential employment restrictions</li>
-            <li>• Loss of certain civil rights (voting, firearms)</li>
-            <li>• Immigration consequences for non-citizens</li>
-            <li>• Possible record expungement or sealing</li>
+            <li>• {t('rights.detailedRights.prison.after1')}</li>
+            <li>• {t('rights.detailedRights.prison.after2')}</li>
+            <li>• {t('rights.detailedRights.prison.after3')}</li>
+            <li>• {t('rights.detailedRights.prison.after4')}</li>
+            <li>• {t('rights.detailedRights.prison.after5')}</li>
           </ul>
         </div>
 
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>Collateral Consequences:</strong> Criminal convictions can affect employment, housing, professional licenses, student aid, and immigration status. Discuss these with your attorney.
+            <strong>{t('rights.detailedRights.prison.collateralTitle')}</strong> {t('rights.detailedRights.prison.collateralText')}
           </AlertDescription>
         </Alert>
       </CardContent>

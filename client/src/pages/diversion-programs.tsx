@@ -12,6 +12,7 @@ import {
   Users,
   CheckCircle
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -42,6 +43,8 @@ interface DiversionProgramCardProps {
 }
 
 function DiversionProgramCard({ program }: DiversionProgramCardProps) {
+  const { t } = useTranslation();
+  
   return (
     <Card className="hover:shadow-lg transition-all duration-300 h-full">
       <CardHeader>
@@ -50,7 +53,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
             <h3 className="text-lg font-semibold mb-2">{program.name}</h3>
             <div className="flex flex-wrap gap-2">
               <Badge variant="outline" className="text-xs">
-                {program.county ? `${program.county} County` : program.state}
+                {program.county ? `${program.county} ${t('diversionPrograms.programCard.county')}` : program.state}
               </Badge>
               <Badge className="bg-blue-600 text-white text-xs">
                 {program.jurisdictionType}
@@ -65,17 +68,17 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
           <div className="flex items-start gap-2">
             <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
-              <div className="text-sm text-muted-foreground">Location</div>
+              <div className="text-sm text-muted-foreground">{t('diversionPrograms.programCard.location')}</div>
               <div className="text-sm font-medium">
-                {program.cities ? program.cities.slice(0, 3).join(", ") : program.county ? `${program.county} County` : program.state}
-                {program.cities && program.cities.length > 3 && ` +${program.cities.length - 3} more`}
+                {program.cities ? program.cities.slice(0, 3).join(", ") : program.county ? `${program.county} ${t('diversionPrograms.programCard.county')}` : program.state}
+                {program.cities && program.cities.length > 3 && ` ${t('diversionPrograms.programCard.moreLocations', { count: program.cities.length - 3 })}`}
               </div>
             </div>
           </div>
 
           {/* Program Types */}
           <div>
-            <div className="text-sm text-muted-foreground mb-2">Program Types</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('diversionPrograms.programCard.programTypes')}</div>
             <div className="flex flex-wrap gap-1">
               {program.programTypes.map((type: string) => (
                 <Badge key={type} variant="secondary" className="text-xs">
@@ -88,7 +91,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
           {/* Eligibility */}
           {program.eligibilityNotes && (
             <div>
-              <div className="text-sm text-muted-foreground mb-1">Eligibility</div>
+              <div className="text-sm text-muted-foreground mb-1">{t('diversionPrograms.programCard.eligibility')}</div>
               <p className="text-sm text-foreground">{program.eligibilityNotes}</p>
             </div>
           )}
@@ -96,7 +99,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
           {/* Contact Information */}
           {program.contact && (
             <div className="space-y-2 pt-2 border-t">
-              <div className="text-sm text-muted-foreground mb-2">Contact Information</div>
+              <div className="text-sm text-muted-foreground mb-2">{t('diversionPrograms.programCard.contactInformation')}</div>
               
               {program.contact.phone && (
                 <div className="flex items-center gap-2">
@@ -131,7 +134,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
                     rel="noopener noreferrer"
                     className="text-sm hover:text-blue-600 transition-colors"
                   >
-                    Visit Website
+                    {t('diversionPrograms.programCard.visitWebsite')}
                   </a>
                 </div>
               )}
@@ -145,6 +148,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
 
 export default function DiversionPrograms() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [selectedProgramType, setSelectedProgramType] = useState("");
@@ -210,10 +214,10 @@ export default function DiversionPrograms() {
               <Users className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-800 dark:text-blue-200">
-              Diversion Programs
+              {t('diversionPrograms.hero.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-              Find alternative programs to avoid conviction and get the help you need
+              {t('diversionPrograms.hero.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -227,11 +231,11 @@ export default function DiversionPrograms() {
               <Link href="/">
                 <Button variant="outline" size="sm">
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
+                  {t('diversionPrograms.navigation.backToHome')}
                 </Button>
               </Link>
               <div className="text-sm text-muted-foreground">
-                {filteredPrograms.length} of {diversionPrograms.length} programs
+                {t('diversionPrograms.navigation.programsCount', { count: filteredPrograms.length, total: diversionPrograms.length })}
               </div>
             </div>
           </ScrollReveal>
@@ -245,7 +249,7 @@ export default function DiversionPrograms() {
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input
-                      placeholder="Enter your zip code, county, or city..."
+                      placeholder={t('diversionPrograms.search.placeholder')}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="pl-10"
@@ -256,19 +260,19 @@ export default function DiversionPrograms() {
                   {/* State and Program Type Filters */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Filter by State:</label>
+                      <label className="text-sm font-medium mb-2 block">{t('diversionPrograms.search.filterByState')}</label>
                       <Select
                         value={selectedState}
                         onValueChange={setSelectedState}
                       >
                         <SelectTrigger data-testid="select-state-filter">
-                          <SelectValue placeholder="All states" />
+                          <SelectValue placeholder={t('diversionPrograms.search.allStates')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="all">All states</SelectItem>
+                          <SelectItem value="all">{t('diversionPrograms.search.allStates')}</SelectItem>
                           {availableStates.map(state => (
                             <SelectItem key={state} value={state}>
-                              {state === "Federal" ? "Federal Programs" : state}
+                              {state === "Federal" ? t('diversionPrograms.search.federalPrograms') : state}
                             </SelectItem>
                           ))}
                         </SelectContent>
@@ -276,16 +280,16 @@ export default function DiversionPrograms() {
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Filter by Program Type:</label>
+                      <label className="text-sm font-medium mb-2 block">{t('diversionPrograms.search.filterByProgramType')}</label>
                       <Select
                         value={selectedProgramType}
                         onValueChange={setSelectedProgramType}
                       >
                         <SelectTrigger data-testid="select-program-type-filter">
-                          <SelectValue placeholder="All program types" />
+                          <SelectValue placeholder={t('diversionPrograms.search.allProgramTypes')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="all">All program types</SelectItem>
+                          <SelectItem value="all">{t('diversionPrograms.search.allProgramTypes')}</SelectItem>
                           {availableProgramTypes.map(type => (
                             <SelectItem key={type} value={type}>
                               {type}
@@ -307,7 +311,7 @@ export default function DiversionPrograms() {
                         data-testid="button-clear-filters"
                       >
                         <X className="h-4 w-4 mr-2" />
-                        Clear All Filters
+                        {t('diversionPrograms.search.clearAllFilters')}
                       </Button>
                     </div>
                   )}
@@ -324,12 +328,10 @@ export default function DiversionPrograms() {
                   <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-                      What are Diversion Programs?
+                      {t('diversionPrograms.infoBanner.title')}
                     </h3>
                     <p className="text-sm text-blue-700 dark:text-blue-300">
-                      Diversion programs allow eligible defendants to avoid traditional prosecution by completing 
-                      treatment, community service, or other requirements. Successful completion often results in 
-                      dismissed charges or reduced penalties.
+                      {t('diversionPrograms.infoBanner.description')}
                     </p>
                   </div>
                 </div>
@@ -352,13 +354,13 @@ export default function DiversionPrograms() {
               <Card>
                 <CardContent className="p-12 text-center">
                   <Users className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">No programs found</h3>
+                  <h3 className="text-lg font-semibold mb-2">{t('diversionPrograms.emptyState.title')}</h3>
                   <p className="text-muted-foreground mb-4">
-                    Try adjusting your search location or filters to find programs in your area.
+                    {t('diversionPrograms.emptyState.description')}
                   </p>
                   {hasActiveFilters && (
                     <Button variant="outline" onClick={clearFilters}>
-                      Clear Filters
+                      {t('diversionPrograms.emptyState.clearFilters')}
                     </Button>
                   )}
                 </CardContent>
@@ -371,26 +373,26 @@ export default function DiversionPrograms() {
             <div className="mt-12 grid md:grid-cols-2 gap-6">
               <Card className="hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Need Legal Guidance?</h3>
+                  <h3 className="font-semibold mb-3">{t('diversionPrograms.quickNav.legalGuidanceTitle')}</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Get personalized legal advice for your specific charges and situation.
+                    {t('diversionPrograms.quickNav.legalGuidanceDesc')}
                   </p>
                   <Link href="/case-guidance">
                     <Button variant="outline" className="w-full">
-                      Get Legal Guidance
+                      {t('diversionPrograms.quickNav.legalGuidanceButton')}
                     </Button>
                   </Link>
                 </CardContent>
               </Card>
               <Card className="hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Learn About Record Clearing</h3>
+                  <h3 className="font-semibold mb-3">{t('diversionPrograms.quickNav.recordClearingTitle')}</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Check if you're eligible to expunge or seal your criminal record.
+                    {t('diversionPrograms.quickNav.recordClearingDesc')}
                   </p>
                   <Link href="/record-expungement">
                     <Button variant="outline" className="w-full">
-                      Check Eligibility
+                      {t('diversionPrograms.quickNav.recordClearingButton')}
                     </Button>
                   </Link>
                 </CardContent>

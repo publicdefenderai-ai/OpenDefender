@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, Phone, FileText, Clock, MapPin, AlertCircle, Shield, AlertTriangle, CheckCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,8 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export default function FriendsFamily() {
   useScrollToTop();
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen bg-background">
       <PrivacyBanner />
@@ -24,10 +27,10 @@ export default function FriendsFamily() {
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
                 <Users className="inline h-10 w-10 mr-2 mb-2" />
-                Helping an Arrested Friend or Family Member
+                {t('friendsFamily.hero.title')}
               </h1>
               <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-                Practical steps you can take to support someone who has been arrested or detained
+                {t('friendsFamily.hero.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -41,14 +44,14 @@ export default function FriendsFamily() {
             <Alert className="mb-12 border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
               <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400" />
               <AlertDescription className="text-red-800 dark:text-red-200">
-                <strong>First 24 Hours Are Critical:</strong> Quick action can make a significant difference in helping your loved one. Focus on gathering information, securing legal representation, and providing support.
+                <strong>{t('friendsFamily.criticalAlert.title')}</strong> {t('friendsFamily.criticalAlert.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Step-by-Step Action Plan
+              {t('friendsFamily.sectionTitle')}
             </h2>
           </ScrollReveal>
 
@@ -61,36 +64,36 @@ export default function FriendsFamily() {
                     <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                       1
                     </div>
-                    <span>Find Out Where They Are Being Held</span>
+                    <span>{t('friendsFamily.step1.title')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">
-                    The first step is locating which facility is holding your loved one.
+                    {t('friendsFamily.step1.description')}
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
                       <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-                        How to Find Them:
+                        {t('friendsFamily.step1.howToFindTitle')}
                       </h4>
                       <ul className="space-y-1 text-sm text-blue-800 dark:text-blue-200">
-                        <li>• Call local police station or county jail</li>
-                        <li>• Check online inmate locator (county sheriff website)</li>
-                        <li>• Call the court clerk's office</li>
-                        <li>• For federal arrests: call Federal Bureau of Prisons</li>
+                        <li>• {t('friendsFamily.step1.howToFind1')}</li>
+                        <li>• {t('friendsFamily.step1.howToFind2')}</li>
+                        <li>• {t('friendsFamily.step1.howToFind3')}</li>
+                        <li>• {t('friendsFamily.step1.howToFind4')}</li>
                       </ul>
                     </div>
                     
                     <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
                       <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
-                        Information to Provide:
+                        {t('friendsFamily.step1.infoToProvideTitle')}
                       </h4>
                       <ul className="space-y-1 text-sm text-green-800 dark:text-green-200">
-                        <li>• Full legal name</li>
-                        <li>• Date of birth</li>
-                        <li>• Approximate date/time of arrest</li>
-                        <li>• Location where arrested (if known)</li>
+                        <li>• {t('friendsFamily.step1.infoToProvide1')}</li>
+                        <li>• {t('friendsFamily.step1.infoToProvide2')}</li>
+                        <li>• {t('friendsFamily.step1.infoToProvide3')}</li>
+                        <li>• {t('friendsFamily.step1.infoToProvide4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -106,41 +109,41 @@ export default function FriendsFamily() {
                     <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                       2
                     </div>
-                    <span>Secure Legal Representation</span>
+                    <span>{t('friendsFamily.step2.title')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">
-                    Getting a lawyer involved early is one of the most important things you can do.
+                    {t('friendsFamily.step2.description')}
                   </p>
                   
                   <div className="space-y-3">
                     <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20">
                       <AlertTriangle className="h-4 w-4 text-amber-600" />
                       <AlertDescription className="text-amber-800 dark:text-amber-200">
-                        <strong>Important:</strong> If they cannot afford an attorney, they have the right to a public defender. Don't delay - request one at the first court appearance (arraignment).
+                        <strong>{t('friendsFamily.step2.alertTitle')}</strong> {t('friendsFamily.step2.alertText')}
                       </AlertDescription>
                     </Alert>
 
                     <div className="grid md:grid-cols-3 gap-4">
                       <div className="bg-muted p-4 rounded-lg">
-                        <h4 className="font-semibold mb-2">Public Defender</h4>
+                        <h4 className="font-semibold mb-2">{t('friendsFamily.step2.publicDefenderTitle')}</h4>
                         <p className="text-sm text-muted-foreground">
-                          Free for those who financially qualify. Request at arraignment or through court clerk.
+                          {t('friendsFamily.step2.publicDefenderDesc')}
                         </p>
                       </div>
                       
                       <div className="bg-muted p-4 rounded-lg">
-                        <h4 className="font-semibold mb-2">Legal Aid Organizations</h4>
+                        <h4 className="font-semibold mb-2">{t('friendsFamily.step2.legalAidTitle')}</h4>
                         <p className="text-sm text-muted-foreground">
-                          Free or low-cost legal services for qualifying individuals.
+                          {t('friendsFamily.step2.legalAidDesc')}
                         </p>
                       </div>
                       
                       <div className="bg-muted p-4 rounded-lg">
-                        <h4 className="font-semibold mb-2">Private Attorney</h4>
+                        <h4 className="font-semibold mb-2">{t('friendsFamily.step2.privateAttorneyTitle')}</h4>
                         <p className="text-sm text-muted-foreground">
-                          Hired representation. Can be expensive but may offer more personalized attention.
+                          {t('friendsFamily.step2.privateAttorneyDesc')}
                         </p>
                       </div>
                     </div>
@@ -157,28 +160,28 @@ export default function FriendsFamily() {
                     <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                       3
                     </div>
-                    <span>Gather Important Information</span>
+                    <span>{t('friendsFamily.step3.title')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Collect details that will help their attorney and prepare for court proceedings.
+                    {t('friendsFamily.step3.description')}
                   </p>
                   
                   <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg">
                     <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-3 flex items-center">
                       <FileText className="h-4 w-4 mr-2" />
-                      Key Information to Document:
+                      {t('friendsFamily.step3.keyInfoTitle')}
                     </h4>
                     <ul className="grid md:grid-cols-2 gap-2 text-sm text-purple-800 dark:text-purple-200">
-                      <li>• Booking number/inmate number</li>
-                      <li>• Charges filed against them</li>
-                      <li>• Court date and time</li>
-                      <li>• Bail amount (if set)</li>
-                      <li>• Names of arresting officers</li>
-                      <li>• Case number</li>
-                      <li>• Name of assigned public defender (if applicable)</li>
-                      <li>• Witness contact information</li>
+                      <li>• {t('friendsFamily.step3.keyInfo1')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo2')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo3')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo4')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo5')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo6')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo7')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo8')}</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -193,33 +196,33 @@ export default function FriendsFamily() {
                     <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                       4
                     </div>
-                    <span>Understand Bail and Bonding</span>
+                    <span>{t('friendsFamily.step4.title')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">
-                    Bail allows temporary release from jail while awaiting trial.
+                    {t('friendsFamily.step4.description')}
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold mb-3">Bail Options:</h4>
+                      <h4 className="font-semibold mb-3">{t('friendsFamily.step4.bailOptionsTitle')}</h4>
                       <ul className="space-y-2 text-sm text-muted-foreground">
                         <li className="flex items-start">
                           <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                          <span><strong>Cash Bail:</strong> Pay full amount to court (refunded after case ends)</span>
+                          <span><strong>{t('friendsFamily.step4.cashBailTitle')}</strong> {t('friendsFamily.step4.cashBailDesc')}</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                          <span><strong>Bail Bond:</strong> Pay 10-15% to bondsman (non-refundable)</span>
+                          <span><strong>{t('friendsFamily.step4.bailBondTitle')}</strong> {t('friendsFamily.step4.bailBondDesc')}</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                          <span><strong>Property Bond:</strong> Use property as collateral</span>
+                          <span><strong>{t('friendsFamily.step4.propertyBondTitle')}</strong> {t('friendsFamily.step4.propertyBondDesc')}</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                          <span><strong>Release on Recognizance:</strong> Released without payment (low flight risk)</span>
+                          <span><strong>{t('friendsFamily.step4.rorTitle')}</strong> {t('friendsFamily.step4.rorDesc')}</span>
                         </li>
                       </ul>
                     </div>
@@ -227,7 +230,7 @@ export default function FriendsFamily() {
                     <Alert className="h-fit">
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
-                        <strong>Bail Bondsman Warning:</strong> If you use a bondsman, you're responsible if the person doesn't appear in court. You could lose your collateral or be required to pay the full bail amount.
+                        <strong>{t('friendsFamily.step4.warningTitle')}</strong> {t('friendsFamily.step4.warningText')}
                       </AlertDescription>
                     </Alert>
                   </div>
@@ -243,40 +246,40 @@ export default function FriendsFamily() {
                     <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                       5
                     </div>
-                    <span>Provide Ongoing Support</span>
+                    <span>{t('friendsFamily.step5.title')}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Being arrested is stressful. Here's how you can help throughout the process.
+                    {t('friendsFamily.step5.description')}
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-indigo-50 dark:bg-indigo-950 p-4 rounded-lg">
                       <h4 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-2">
-                        Practical Help:
+                        {t('friendsFamily.step5.practicalHelpTitle')}
                       </h4>
                       <ul className="space-y-1 text-sm text-indigo-800 dark:text-indigo-200">
-                        <li>• Attend court hearings for support</li>
-                        <li>• Help gather character references</li>
-                        <li>• Collect employment records</li>
-                        <li>• Secure important documents</li>
-                        <li>• Manage their affairs while detained</li>
-                        <li>• Deposit money for commissary/phone calls</li>
+                        <li>• {t('friendsFamily.step5.practicalHelp1')}</li>
+                        <li>• {t('friendsFamily.step5.practicalHelp2')}</li>
+                        <li>• {t('friendsFamily.step5.practicalHelp3')}</li>
+                        <li>• {t('friendsFamily.step5.practicalHelp4')}</li>
+                        <li>• {t('friendsFamily.step5.practicalHelp5')}</li>
+                        <li>• {t('friendsFamily.step5.practicalHelp6')}</li>
                       </ul>
                     </div>
                     
                     <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
                       <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
-                        Emotional Support:
+                        {t('friendsFamily.step5.emotionalSupportTitle')}
                       </h4>
                       <ul className="space-y-1 text-sm text-green-800 dark:text-green-200">
-                        <li>• Stay in contact through approved channels</li>
-                        <li>• Write letters if visits aren't possible</li>
-                        <li>• Remain positive and encouraging</li>
-                        <li>• Don't discuss case details on monitored calls</li>
-                        <li>• Help them stay connected with family</li>
-                        <li>• Support mental health needs</li>
+                        <li>• {t('friendsFamily.step5.emotionalSupport1')}</li>
+                        <li>• {t('friendsFamily.step5.emotionalSupport2')}</li>
+                        <li>• {t('friendsFamily.step5.emotionalSupport3')}</li>
+                        <li>• {t('friendsFamily.step5.emotionalSupport4')}</li>
+                        <li>• {t('friendsFamily.step5.emotionalSupport5')}</li>
+                        <li>• {t('friendsFamily.step5.emotionalSupport6')}</li>
                       </ul>
                     </div>
                   </div>
@@ -292,7 +295,7 @@ export default function FriendsFamily() {
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-center text-foreground mb-8">
-              Important Reminders
+              {t('friendsFamily.warnings.title')}
             </h2>
           </ScrollReveal>
 
@@ -301,7 +304,7 @@ export default function FriendsFamily() {
               <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
                 <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400" />
                 <AlertDescription className="text-red-800 dark:text-red-200">
-                  <strong>Never Discuss Case Details on Jail Phones:</strong> All calls from jail are recorded and can be used as evidence. Only discuss the case with their attorney through approved confidential channels.
+                  <strong>{t('friendsFamily.warnings.jailCallsTitle')}</strong> {t('friendsFamily.warnings.jailCallsText')}
                 </AlertDescription>
               </Alert>
             </ScrollReveal>
@@ -310,7 +313,7 @@ export default function FriendsFamily() {
               <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
                 <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                 <AlertDescription className="text-amber-800 dark:text-amber-200">
-                  <strong>Don't Try to Interfere:</strong> Never attempt to contact witnesses, destroy evidence, or interfere with the investigation. This can result in additional charges for both you and your loved one.
+                  <strong>{t('friendsFamily.warnings.interferenceTitle')}</strong> {t('friendsFamily.warnings.interferenceText')}
                 </AlertDescription>
               </Alert>
             </ScrollReveal>
@@ -320,7 +323,7 @@ export default function FriendsFamily() {
             <Alert className="mt-6 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
               <Shield className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
-                <strong>Legal Disclaimer:</strong> This information is for educational purposes only and does not constitute legal advice. Every situation is different. Consult with a qualified attorney for guidance specific to your loved one's case.
+                <strong>{t('friendsFamily.disclaimer.title')}</strong> {t('friendsFamily.disclaimer.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
@@ -335,7 +338,7 @@ export default function FriendsFamily() {
           <div className="flex items-center justify-center space-x-2">
             <Shield className="h-4 w-4" />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              <strong>{t('friendsFamily.privacyBanner.title')}</strong> {t('friendsFamily.privacyBanner.text')}
             </span>
           </div>
         </div>

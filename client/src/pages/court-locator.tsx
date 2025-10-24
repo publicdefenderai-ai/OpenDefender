@@ -17,6 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
@@ -27,6 +28,7 @@ import { searchCourthousesWithFederalData, getMockCourtData, CourtLocation } fro
 
 export default function CourtLocator() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [zipCode, setZipCode] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [courts, setCourts] = useState<CourtLocation[]>([]);
@@ -35,7 +37,7 @@ export default function CourtLocator() {
 
   const handleSearch = async () => {
     if (!zipCode.trim() || zipCode.length !== 5) {
-      setError("Please enter a valid 5-digit ZIP code");
+      setError(t('courtLocator.search.error'));
       return;
     }
 
@@ -50,7 +52,7 @@ export default function CourtLocator() {
         // Fallback to mock data if no real results
         const mockData = getMockCourtData(zipCode);
         setCourts(mockData);
-        setError("Limited court data available for this area. Showing sample results.");
+        setError(t('courtLocator.search.limitedData'));
       } else {
         setCourts(courtData);
       }
@@ -61,7 +63,7 @@ export default function CourtLocator() {
       // Use mock data as fallback
       const mockData = getMockCourtData(zipCode);
       setCourts(mockData);
-      setError("Using sample data. Some court information may be limited for this area.");
+      setError(t('courtLocator.search.sampleData'));
       setSearchPerformed(true);
     } finally {
       setIsSearching(false);
@@ -81,12 +83,12 @@ export default function CourtLocator() {
 
   const getCourtTypeName = (type: CourtLocation["type"]) => {
     switch (type) {
-      case "federal": return "Federal Court";
-      case "state": return "State Court";
-      case "municipal": return "Municipal Court";
-      case "traffic": return "Traffic Court";
-      case "bankruptcy": return "Bankruptcy Court";
-      default: return "Court";
+      case "federal": return t('courtLocator.courtTypes.federal');
+      case "state": return t('courtLocator.courtTypes.state');
+      case "municipal": return t('courtLocator.courtTypes.municipal');
+      case "traffic": return t('courtLocator.courtTypes.traffic');
+      case "bankruptcy": return t('courtLocator.courtTypes.bankruptcy');
+      default: return t('courtLocator.courtTypes.court');
     }
   };
 
@@ -108,10 +110,10 @@ export default function CourtLocator() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
-                Find Your Local Court
+                {t('courtLocator.hero.title')}
               </h1>
               <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-                Locate nearby courthouses using free government data sources and OpenStreetMap. Get contact information, hours of operation, and available services in your area.
+                {t('courtLocator.hero.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -123,7 +125,7 @@ export default function CourtLocator() {
                 <div className="flex-1">
                   <Input
                     type="text"
-                    placeholder="Enter ZIP code"
+                    placeholder={t('courtLocator.search.inputPlaceholder')}
                     value={zipCode}
                     onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                     onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
@@ -140,12 +142,12 @@ export default function CourtLocator() {
                   {isSearching ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-2 border-blue-600 border-t-transparent mr-2"></div>
-                      Searching...
+                      {t('courtLocator.search.searching')}
                     </>
                   ) : (
                     <>
                       <Search className="mr-2 h-4 w-4" />
-                      Search
+                      {t('courtLocator.search.searchButton')}
                     </>
                   )}
                 </Button>
@@ -171,10 +173,10 @@ export default function CourtLocator() {
             <ScrollReveal>
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Court Search Results
+                  {t('courtLocator.results.title')}
                 </h2>
                 <p className="text-muted-foreground">
-                  Found {courts.length} courthouse{courts.length !== 1 ? 's' : ''} in your area
+                  {t('courtLocator.results.foundCourts', { count: courts.length, plural: courts.length !== 1 ? 's' : '' })}
                 </p>
               </div>
             </ScrollReveal>
@@ -187,10 +189,10 @@ export default function CourtLocator() {
                   <ScrollReveal>
                     <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
                       <Scale className="h-6 w-6 mr-3 text-green-600" />
-                      State & Local Courts ({stateCourts.length})
+                      {t('courtLocator.sections.stateTitle', { count: stateCourts.length })}
                     </h3>
                     <p className="text-muted-foreground mb-8">
-                      Courts organized by county, with same-county courts listed first
+                      {t('courtLocator.sections.stateDesc')}
                     </p>
                   </ScrollReveal>
                   
@@ -201,7 +203,8 @@ export default function CourtLocator() {
                         court={court} 
                         index={index} 
                         getCourtTypeColor={getCourtTypeColor} 
-                        getCourtTypeName={getCourtTypeName} 
+                        getCourtTypeName={getCourtTypeName}
+                        t={t}
                       />
                     ))}
                   </div>
@@ -214,10 +217,10 @@ export default function CourtLocator() {
                   <ScrollReveal>
                     <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
                       <Building2 className="h-6 w-6 mr-3 text-blue-600" />
-                      Federal Courts ({federalCourts.length})
+                      {t('courtLocator.sections.federalTitle', { count: federalCourts.length })}
                     </h3>
                     <p className="text-muted-foreground mb-8">
-                      Federal courts handle federal crimes and civil cases
+                      {t('courtLocator.sections.federalDesc')}
                     </p>
                   </ScrollReveal>
                   
@@ -228,7 +231,8 @@ export default function CourtLocator() {
                         court={court} 
                         index={index} 
                         getCourtTypeColor={getCourtTypeColor} 
-                        getCourtTypeName={getCourtTypeName} 
+                        getCourtTypeName={getCourtTypeName}
+                        t={t}
                       />
                     ))}
                   </div>
@@ -241,10 +245,10 @@ export default function CourtLocator() {
                 <div className="text-center py-12">
                   <Building2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    No courts found
+                    {t('courtLocator.results.noCourts')}
                   </h3>
                   <p className="text-muted-foreground">
-                    Try searching with a different ZIP code
+                    {t('courtLocator.results.tryDifferent')}
                   </p>
                 </div>
               </ScrollReveal>
@@ -318,10 +322,10 @@ export default function CourtLocator() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-foreground mb-6">
-              Need Legal Guidance?
+              {t('rights.disclaimer.needHelp')}
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Understanding court procedures and your rights is crucial when facing legal issues.
+              {t('courtLocator.info.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/rights-info">
@@ -329,7 +333,7 @@ export default function CourtLocator() {
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl"
                   data-testid="button-know-your-rights"
                 >
-                  Know Your Rights
+                  {t('footer.knowYourRights')}
                 </Button>
               </Link>
               <Link href="/case-guidance">
@@ -338,7 +342,7 @@ export default function CourtLocator() {
                   className="border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-xl"
                   data-testid="button-get-guidance"
                 >
-                  Get Case Guidance
+                  {t('footer.getCaseGuidance')}
                 </Button>
               </Link>
             </div>
@@ -352,11 +356,12 @@ export default function CourtLocator() {
 }
 
 // Court Card Component
-function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName }: {
+function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
   court: CourtLocation;
   index: number;
   getCourtTypeColor: (type: CourtLocation["type"]) => string;
   getCourtTypeName: (type: CourtLocation["type"]) => string;
+  t: any;
 }) {
   return (
     <ScrollReveal key={court.id} delay={index * 0.1}>
@@ -400,7 +405,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName }: {
               <div className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="text-sm text-muted-foreground">Phone</div>
+                  <div className="text-sm text-muted-foreground">{t('courtLocator.courtCard.phone')}</div>
                   <div className="text-sm font-medium">
                     <a href={`tel:${court.phone}`} className="hover:text-blue-600 transition-colors">
                       {court.phone}
@@ -415,7 +420,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName }: {
               <div className="flex items-start gap-3">
                 <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="text-sm text-muted-foreground">Hours</div>
+                  <div className="text-sm text-muted-foreground">{t('courtLocator.courtCard.hours')}</div>
                   <div className="text-sm font-medium">{court.hours}</div>
                 </div>
               </div>
@@ -423,7 +428,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName }: {
 
             {/* Services */}
             <div>
-              <div className="text-sm text-muted-foreground mb-2">Services</div>
+              <div className="text-sm text-muted-foreground mb-2">{t('courtLocator.courtCard.services')}</div>
               <div className="flex flex-wrap gap-1">
                 {court.services.map((service) => (
                   <Badge key={service} variant="outline" className="text-xs">
@@ -443,7 +448,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName }: {
                 data-testid={`button-directions-${court.id}`}
               >
                 <Navigation className="h-3 w-3 mr-1" />
-                Directions
+                {t('courtLocator.courtCard.directions')}
               </Button>
               {court.website && (
                 <Button

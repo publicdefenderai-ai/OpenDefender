@@ -6,32 +6,35 @@ import { Footer } from "@/components/layout/footer";
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useTranslation } from "react-i18next";
 
 export default function MissionStatement() {
   useScrollToTop();
+  const { t } = useTranslation();
+  
   const goals = [
     {
       icon: Users,
-      title: "Expand Access to Justice",
-      description: "Deliver preliminary legal information, guidance, and case-relevant insights to defendants at no cost, reducing barriers for underserved populations.",
+      titleKey: "missionStatement.goals.expandAccess.title",
+      descriptionKey: "missionStatement.goals.expandAccess.description",
       color: "bg-blue-600"
     },
     {
       icon: Scale,
-      title: "Support Public Defender Workflows",
-      description: "Provide public defenders with fast access to aggregated legal data, case statistics, and procedural requirements to help them prepare more effective defense strategies.",
+      titleKey: "missionStatement.goals.supportDefenders.title",
+      descriptionKey: "missionStatement.goals.supportDefenders.description",
       color: "bg-green-600"
     },
     {
       icon: FileText,
-      title: "Empower Informed Decision-Making",
-      description: "Enable defendants to better understand their rights, legal options, and potential outcomes through clear, plain-language explanations grounded in reliable data.",
+      titleKey: "missionStatement.goals.empowerDecisions.title",
+      descriptionKey: "missionStatement.goals.empowerDecisions.description",
       color: "bg-purple-600"
     },
     {
       icon: TrendingUp,
-      title: "Increase Efficiency and Fairness",
-      description: "Automate collection and synthesis of public legal datasets so that defendants and attorneys can quickly identify relevant precedents, procedural rules, and plea or sentencing trends.",
+      titleKey: "missionStatement.goals.increaseFairness.title",
+      descriptionKey: "missionStatement.goals.increaseFairness.description",
       color: "bg-orange-600"
     }
   ];
@@ -56,10 +59,10 @@ export default function MissionStatement() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              Mission Statement
+              {t('missionStatement.hero.title')}
             </h1>
             <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Public Defender AI is a <strong>public good</strong> dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and Creative Commons for documentation, ensuring it remains free and accessible to all who need it.
+              {t('missionStatement.hero.subtitle')}
             </p>
           </motion.div>
         </ScrollReveal>
@@ -68,14 +71,14 @@ export default function MissionStatement() {
         <ScrollReveal>
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
-              Our Primary Goals
+              {t('missionStatement.goals.title')}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {goals.map((goal, index) => {
                 const Icon = goal.icon;
                 return (
                   <motion.div
-                    key={goal.title}
+                    key={goal.titleKey}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -88,10 +91,10 @@ export default function MissionStatement() {
                           </div>
                           <div>
                             <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                              {goal.title}
+                              {t(goal.titleKey)}
                             </h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                              {goal.description}
+                              {t(goal.descriptionKey)}
                             </p>
                           </div>
                         </div>
@@ -115,15 +118,15 @@ export default function MissionStatement() {
             <div className="flex items-center gap-3 mb-4">
               <Shield className="h-8 w-8 text-blue-600" />
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                Guiding Principles
+                {t('missionStatement.principles.title')}
               </h2>
             </div>
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-              This project is guided by the principles of <strong>fairness</strong>, <strong>transparency</strong>, <strong>data privacy</strong>, and <strong>compliance</strong> with applicable laws and ethical guidelines governing legal practice.
+              {t('missionStatement.principles.description')}
             </p>
-            <div className="bg-blue-50 dark:bg-slate-700 border-l-4 border-blue-600 p-4 rounded">
+            <div className="bg-blue-50 dark:test-slate-700 border-l-4 border-blue-600 p-4 rounded">
               <p className="text-slate-800 dark:text-slate-200 font-medium">
-                The AI agent is not a substitute for a licensed attorney but a support tool to supplement human legal counsel and improve access to equitable defense resources.
+                {t('missionStatement.principles.disclaimer')}
               </p>
             </div>
           </motion.div>

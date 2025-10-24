@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import { 
   Search, 
   BookOpen, 
@@ -34,6 +35,7 @@ import {
 
 export default function LegalGlossary() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
   const [selectedTag, setSelectedTag] = useState("");
@@ -101,10 +103,10 @@ export default function LegalGlossary() {
               <BookOpen className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-800 dark:text-blue-200">
-              Legal Glossary
+              {t('legalGlossary.hero.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-              Understanding legal terms and concepts to help you navigate the criminal justice system
+              {t('legalGlossary.hero.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -118,11 +120,11 @@ export default function LegalGlossary() {
               <Link href="/">
                 <Button variant="outline" size="sm">
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
+                  {t('legalGlossary.navigation.backToHome')}
                 </Button>
               </Link>
               <div className="text-sm text-muted-foreground">
-                {filteredTerms.length} of {legalGlossaryTerms.length} terms
+                {t('legalGlossary.navigation.termsCount', { count: filteredTerms.length, total: legalGlossaryTerms.length })}
               </div>
             </div>
           </ScrollReveal>
@@ -136,7 +138,7 @@ export default function LegalGlossary() {
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input
-                      placeholder="Search legal terms, definitions, or keywords..."
+                      placeholder={t('legalGlossary.search.placeholder')}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="pl-10"
@@ -148,7 +150,7 @@ export default function LegalGlossary() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <Hash className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm font-medium">Browse by Letter:</span>
+                      <span className="text-sm font-medium">{t('legalGlossary.search.browseByLetter')}</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {availableLetters.map(letter => (
@@ -170,7 +172,7 @@ export default function LegalGlossary() {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <Filter className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-sm font-medium">Filter by Category:</span>
+                      <span className="text-sm font-medium">{t('legalGlossary.search.filterByCategory')}</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {availableTags.slice(0, 10).map(tag => (
@@ -198,7 +200,7 @@ export default function LegalGlossary() {
                         data-testid="button-clear-filters"
                       >
                         <X className="h-4 w-4 mr-2" />
-                        Clear All Filters
+                        {t('legalGlossary.search.clearFilters')}
                       </Button>
                     </div>
                   )}
@@ -214,7 +216,7 @@ export default function LegalGlossary() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BookOpen className="h-5 w-5" />
-                    Legal Terms & Definitions
+                    {t('legalGlossary.terms.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
@@ -275,13 +277,13 @@ export default function LegalGlossary() {
               <Card>
                 <CardContent className="p-12 text-center">
                   <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">No terms found</h3>
+                  <h3 className="text-lg font-semibold mb-2">{t('courtRecords.results.noResults')}</h3>
                   <p className="text-muted-foreground mb-4">
-                    Try adjusting your search or filters to find what you're looking for.
+                    {t('courtRecords.results.searchFailed')}
                   </p>
                   {hasActiveFilters && (
                     <Button variant="outline" onClick={clearFilters}>
-                      Clear Filters
+                      {t('legalGlossary.search.clearFilters')}
                     </Button>
                   )}
                 </CardContent>

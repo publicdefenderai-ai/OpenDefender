@@ -38,6 +38,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 
 import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
@@ -47,20 +48,21 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 interface RoadmapItem {
   id: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   status: "completed" | "in-progress" | "planned" | "researching";
   priority: "critical" | "high" | "medium" | "low";
   category: "data" | "features" | "infrastructure" | "ai" | "legal";
   estimatedCompletion?: string;
   dependencies?: string[];
   progress?: number;
-  challenges?: string[];
-  impact: string;
+  challengesKeys?: string[];
+  impactKey: string;
 }
 
 export default function DevelopmentRoadmap() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [showFeatureRequestModal, setShowFeatureRequestModal] = useState(false);
   const [featureName, setFeatureName] = useState("");
@@ -80,8 +82,8 @@ export default function DevelopmentRoadmap() {
 
     if (!featureName || !featureEmail || !featureDescription) {
       toast({
-        title: "Missing Information",
-        description: "Please fill out all fields.",
+        title: t('developmentRoadmap.featureRequest.validationName'),
+        description: t('developmentRoadmap.featureRequest.validationNameDesc'),
         variant: "destructive",
       });
       return;
@@ -91,8 +93,8 @@ export default function DevelopmentRoadmap() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(featureEmail)) {
       toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
+        title: t('developmentRoadmap.featureRequest.validationEmail'),
+        description: t('developmentRoadmap.featureRequest.validationEmailDesc'),
         variant: "destructive",
       });
       return;
@@ -116,121 +118,121 @@ export default function DevelopmentRoadmap() {
     setShowFeatureRequestModal(false);
 
     toast({
-      title: "Email Client Opened",
-      description: "Your default email client should open. Please send the email to submit your request.",
+      title: t('developmentRoadmap.featureRequest.successTitle'),
+      description: t('developmentRoadmap.featureRequest.successDesc'),
     });
   };
 
   const roadmapItems: RoadmapItem[] = [
     {
       id: "courtlistener-integration",
-      title: "CourtListener API Integration",
-      description: "Complete integration with Free Law Project's CourtListener API for 8.4+ million court opinions and federal dockets",
+      titleKey: "developmentRoadmap.items.courtlistener.title",
+      descriptionKey: "developmentRoadmap.items.courtlistener.description",
       status: "completed",
       priority: "critical",
       category: "data",
       progress: 100,
-      impact: "Provides foundational access to federal case law and court records"
+      impactKey: "developmentRoadmap.items.courtlistener.impact"
     },
     {
       id: "pacer-authentication",
-      title: "PACER Authentication & Data Access",
-      description: "Implement PACER authentication API and cost-effective document retrieval system",
+      titleKey: "developmentRoadmap.items.pacer.title",
+      descriptionKey: "developmentRoadmap.items.pacer.description",
       status: "in-progress",
       priority: "high",
       category: "data",
       estimatedCompletion: "Q1 2025",
       progress: 45,
-      challenges: ["Cost management for $0.10/page", "Rate limiting compliance", "Bulk data optimization"],
-      impact: "Access to 500M+ federal court documents and real-time case updates"
+      challengesKeys: ["developmentRoadmap.items.pacer.challenges.cost", "developmentRoadmap.items.pacer.challenges.rateLimit", "developmentRoadmap.items.pacer.challenges.bulk"],
+      impactKey: "developmentRoadmap.items.pacer.impact"
     },
     {
       id: "state-statutes-api",
-      title: "State Statutes Database",
-      description: "Integration with Cornell LII, GovInfo.gov, and state legislature APIs for current statutes",
+      titleKey: "developmentRoadmap.items.stateStatutes.title",
+      descriptionKey: "developmentRoadmap.items.stateStatutes.description",
       status: "in-progress",
       priority: "high",
       category: "data",
       estimatedCompletion: "Q2 2025",
       progress: 30,
-      impact: "Comprehensive coverage of federal and state legal codes"
+      impactKey: "developmentRoadmap.items.stateStatutes.impact"
     },
     {
       id: "ai-guidance-engine",
-      title: "AI Legal Guidance Engine",
-      description: "Advanced AI system for generating personalized legal guidance based on case parameters",
+      titleKey: "developmentRoadmap.items.aiGuidance.title",
+      descriptionKey: "developmentRoadmap.items.aiGuidance.description",
       status: "in-progress",
       priority: "critical",
       category: "ai",
       estimatedCompletion: "Q2 2025",
       progress: 65,
-      challenges: ["Legal accuracy validation", "Bias detection and mitigation", "Jurisdiction-specific nuances"],
-      impact: "Core functionality for personalized legal assistance"
+      challengesKeys: ["developmentRoadmap.items.aiGuidance.challenges.accuracy", "developmentRoadmap.items.aiGuidance.challenges.bias", "developmentRoadmap.items.aiGuidance.challenges.jurisdiction"],
+      impactKey: "developmentRoadmap.items.aiGuidance.impact"
     },
     {
       id: "judge-analytics",
-      title: "Judge & Court Analytics",
-      description: "Statistical analysis of sentencing patterns, plea agreements, and judicial decision-making",
+      titleKey: "developmentRoadmap.items.judgeAnalytics.title",
+      descriptionKey: "developmentRoadmap.items.judgeAnalytics.description",
       status: "researching",
       priority: "medium",
       category: "data",
       estimatedCompletion: "Q3 2025",
-      challenges: ["Data privacy concerns", "Statistical significance", "Bias in historical data"],
-      impact: "Predictive insights for case strategy and outcomes"
+      challengesKeys: ["developmentRoadmap.items.judgeAnalytics.challenges.privacy", "developmentRoadmap.items.judgeAnalytics.challenges.significance", "developmentRoadmap.items.judgeAnalytics.challenges.historicalBias"],
+      impactKey: "developmentRoadmap.items.judgeAnalytics.impact"
     },
     {
       id: "mobile-app",
-      title: "Mobile Application",
-      description: "Native mobile apps for iOS and Android with offline capabilities for emergency situations",
+      titleKey: "developmentRoadmap.items.mobileApp.title",
+      descriptionKey: "developmentRoadmap.items.mobileApp.description",
       status: "planned",
       priority: "high",
       category: "features",
       estimatedCompletion: "Q3 2025",
       dependencies: ["ai-guidance-engine"],
-      impact: "Accessibility during arrest and emergency situations"
+      impactKey: "developmentRoadmap.items.mobileApp.impact"
     },
     {
       id: "multilingual-support",
-      title: "Multi-language Support",
-      description: "Translation system for Spanish, French, and other common languages in criminal justice",
+      titleKey: "developmentRoadmap.items.multilingual.title",
+      descriptionKey: "developmentRoadmap.items.multilingual.description",
       status: "planned",
       priority: "medium",
       category: "features",
       estimatedCompletion: "Q4 2025",
-      impact: "Expanded access for non-English speaking defendants"
+      impactKey: "developmentRoadmap.items.multilingual.impact"
     },
     {
       id: "legal-aid-directory",
-      title: "Legal Aid Organization Directory",
-      description: "Comprehensive database of public defenders and legal aid organizations nationwide",
+      titleKey: "developmentRoadmap.items.legalAidDirectory.title",
+      descriptionKey: "developmentRoadmap.items.legalAidDirectory.description",
       status: "in-progress",
       priority: "high",
       category: "data",
       estimatedCompletion: "Q1 2025",
       progress: 75,
-      impact: "Direct connection to legal representation resources"
+      impactKey: "developmentRoadmap.items.legalAidDirectory.impact"
     },
     {
       id: "real-time-alerts",
-      title: "Real-time Case Alerts",
-      description: "Notification system for court dates, deadline changes, and case updates",
+      titleKey: "developmentRoadmap.items.realTimeAlerts.title",
+      descriptionKey: "developmentRoadmap.items.realTimeAlerts.description",
       status: "planned",
       priority: "medium",
       category: "features",
       estimatedCompletion: "Q4 2025",
       dependencies: ["pacer-authentication", "mobile-app"],
-      impact: "Prevention of missed court appearances and deadlines"
+      impactKey: "developmentRoadmap.items.realTimeAlerts.impact"
     },
     {
       id: "privacy-encryption",
-      title: "Advanced Privacy & Encryption",
-      description: "End-to-end encryption and enhanced privacy protections for sensitive legal consultations",
+      titleKey: "developmentRoadmap.items.privacyEncryption.title",
+      descriptionKey: "developmentRoadmap.items.privacyEncryption.description",
       status: "in-progress",
       priority: "critical",
       category: "infrastructure",
       estimatedCompletion: "Q1 2025",
       progress: 80,
-      impact: "Maximum privacy protection for vulnerable users"
+      impactKey: "developmentRoadmap.items.privacyEncryption.impact"
     }
   ];
 
@@ -324,24 +326,23 @@ export default function DevelopmentRoadmap() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900 dark:text-white">
-                Development Roadmap
+                {t('developmentRoadmap.hero.title')}
               </h1>
               <p className="text-xl text-blue-900 dark:text-blue-100 max-w-4xl mx-auto mb-8">
-                Transparency in our mission to expand access to justice through technology. 
-                Track our progress as we build a comprehensive legal assistance platform.
+                {t('developmentRoadmap.hero.description')}
               </p>
               <div className="flex items-center justify-center space-x-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold">{overallProgress}%</div>
-                  <div className="text-blue-900 dark:text-blue-200 text-sm">Overall Progress</div>
+                  <div className="text-blue-900 dark:text-blue-200 text-sm">{t('developmentRoadmap.progress.overall')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold">{roadmapItems.filter(item => item.status === "completed").length}</div>
-                  <div className="text-blue-900 dark:text-blue-200 text-sm">Completed</div>
+                  <div className="text-blue-900 dark:text-blue-200 text-sm">{t('developmentRoadmap.stats.completed')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold">{roadmapItems.filter(item => item.status === "in-progress").length}</div>
-                  <div className="text-blue-900 dark:text-blue-200 text-sm">In Progress</div>
+                  <div className="text-blue-900 dark:text-blue-200 text-sm">{t('developmentRoadmap.stats.inProgress')}</div>
                 </div>
               </div>
             </div>
@@ -418,7 +419,7 @@ export default function DevelopmentRoadmap() {
                   onClick={() => setSelectedCategory("all")}
                   data-testid="filter-all"
                 >
-                  All ({categoryStats.all})
+                  {t('developmentRoadmap.categories.all')} ({categoryStats.all})
                 </Button>
                 <Button
                   variant={selectedCategory === "data" ? "default" : "outline"}
@@ -427,7 +428,7 @@ export default function DevelopmentRoadmap() {
                   data-testid="filter-data"
                 >
                   <Database className="h-4 w-4 mr-1" />
-                  Data ({categoryStats.data})
+                  {t('developmentRoadmap.categories.data')} ({categoryStats.data})
                 </Button>
                 <Button
                   variant={selectedCategory === "features" ? "default" : "outline"}
@@ -436,7 +437,7 @@ export default function DevelopmentRoadmap() {
                   data-testid="filter-features"
                 >
                   <Zap className="h-4 w-4 mr-1" />
-                  Features ({categoryStats.features})
+                  {t('developmentRoadmap.categories.features')} ({categoryStats.features})
                 </Button>
                 <Button
                   variant={selectedCategory === "ai" ? "default" : "outline"}
@@ -445,7 +446,7 @@ export default function DevelopmentRoadmap() {
                   data-testid="filter-ai"
                 >
                   <Code className="h-4 w-4 mr-1" />
-                  AI ({categoryStats.ai})
+                  {t('developmentRoadmap.categories.ai')} ({categoryStats.ai})
                 </Button>
                 <Button
                   variant={selectedCategory === "infrastructure" ? "default" : "outline"}
@@ -454,7 +455,7 @@ export default function DevelopmentRoadmap() {
                   data-testid="filter-infrastructure"
                 >
                   <Shield className="h-4 w-4 mr-1" />
-                  Infrastructure ({categoryStats.infrastructure})
+                  {t('developmentRoadmap.categories.infrastructure')} ({categoryStats.infrastructure})
                 </Button>
               </div>
             </div>
@@ -463,7 +464,7 @@ export default function DevelopmentRoadmap() {
           <div className="space-y-6">
             {filteredItems.map((item, index) => (
               <ScrollReveal key={item.id} delay={index * 0.1}>
-                <RoadmapCard item={item} />
+                <RoadmapCard item={item} t={t} />
               </ScrollReveal>
             ))}
           </div>
@@ -476,10 +477,10 @@ export default function DevelopmentRoadmap() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                Community & Open Development
+                {t('developmentRoadmap.getInvolved.title')}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Public Defender AI is a public good, built on open-source principles. The codebase is licensed under MIT and documentation under Creative Commons, ensuring this platform remains free and accessible to all who need it.
+                {t('developmentRoadmap.hero.openSourceNote')}
               </p>
             </div>
           </ScrollReveal>
@@ -488,8 +489,8 @@ export default function DevelopmentRoadmap() {
             <ScrollReveal delay={0.1}>
               <CommunityCard
                 icon={<Lightbulb className="h-6 w-6 text-white" />}
-                title="Feature Requests"
-                description="Community-driven feature suggestions and priority voting"
+                title={t('developmentRoadmap.featureRequest.requestButton')}
+                description={t('developmentRoadmap.getInvolved.feedback.description')}
                 bgColor="bg-purple-600"
                 onClick={() => setShowFeatureRequestModal(true)}
               />
@@ -498,8 +499,8 @@ export default function DevelopmentRoadmap() {
             <ScrollReveal delay={0.2}>
               <CommunityCard
                 icon={<BarChart3 className="h-6 w-6 text-white" />}
-                title="Impact Metrics"
-                description="Regular reporting on usage, outcomes, and social impact"
+                title={t('developmentRoadmap.getInvolved.spread.title')}
+                description={t('developmentRoadmap.getInvolved.spread.description')}
                 bgColor="bg-amber-500"
               />
             </ScrollReveal>
@@ -510,14 +511,14 @@ export default function DevelopmentRoadmap() {
               <div className="space-x-4">
                 <Button className="legal-blue legal-blue-hover font-bold py-3 px-6 rounded-lg">
                   <Github className="mr-2 h-4 w-4" />
-                  View on GitHub
+                  {t('developmentRoadmap.getInvolved.contribute.title')}
                 </Button>
                 <Button className="success-green success-green-hover font-bold py-3 px-6 rounded-lg">
-                  Provide Feedback
+                  {t('developmentRoadmap.getInvolved.feedback.title')}
                 </Button>
                 <Link href="/case-guidance">
                   <Button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg">
-                    Try the Platform
+                    {t('footer.getCaseGuidance')}
                   </Button>
                 </Link>
               </div>
@@ -530,9 +531,9 @@ export default function DevelopmentRoadmap() {
       <Dialog open={showFeatureRequestModal} onOpenChange={setShowFeatureRequestModal}>
         <DialogContent className="sm:max-w-[500px]">
           <DialogHeader>
-            <DialogTitle>Submit a Feature Request</DialogTitle>
+            <DialogTitle>{t('developmentRoadmap.featureRequest.modalTitle')}</DialogTitle>
             <DialogDescription>
-              Help us improve Public Defender AI by sharing your ideas. Your request will be sent to our team at publicdefenderai@gmail.com.
+              {t('developmentRoadmap.featureRequest.description')}
             </DialogDescription>
           </DialogHeader>
           
@@ -550,12 +551,12 @@ export default function DevelopmentRoadmap() {
 
             <div className="space-y-2">
               <label htmlFor="feature-name" className="text-sm font-medium">
-                Your Name
+                {t('developmentRoadmap.featureRequest.nameLabel')}
               </label>
               <Input
                 id="feature-name"
                 type="text"
-                placeholder="Enter your name"
+                placeholder={t('developmentRoadmap.featureRequest.namePlaceholder')}
                 value={featureName}
                 onChange={(e) => setFeatureName(e.target.value)}
                 required
@@ -565,12 +566,12 @@ export default function DevelopmentRoadmap() {
 
             <div className="space-y-2">
               <label htmlFor="feature-email" className="text-sm font-medium">
-                Your Email
+                {t('developmentRoadmap.featureRequest.emailLabel')}
               </label>
               <Input
                 id="feature-email"
                 type="email"
-                placeholder="your@email.com"
+                placeholder={t('developmentRoadmap.featureRequest.emailPlaceholder')}
                 value={featureEmail}
                 onChange={(e) => setFeatureEmail(e.target.value)}
                 required
@@ -580,11 +581,11 @@ export default function DevelopmentRoadmap() {
 
             <div className="space-y-2">
               <label htmlFor="feature-description" className="text-sm font-medium">
-                Feature Request
+                {t('developmentRoadmap.featureRequest.descriptionLabel')}
               </label>
               <Textarea
                 id="feature-description"
-                placeholder="Describe the feature you'd like to see..."
+                placeholder={t('developmentRoadmap.featureRequest.descriptionPlaceholder')}
                 value={featureDescription}
                 onChange={(e) => setFeatureDescription(e.target.value)}
                 required
@@ -600,7 +601,7 @@ export default function DevelopmentRoadmap() {
                 onClick={() => setShowFeatureRequestModal(false)}
                 data-testid="button-cancel-feature-request"
               >
-                Cancel
+                {t('developmentRoadmap.featureRequest.cancelButton')}
               </Button>
               <Button
                 type="submit"
@@ -608,7 +609,7 @@ export default function DevelopmentRoadmap() {
                 data-testid="button-submit-feature-request"
               >
                 <Lightbulb className="mr-2 h-4 w-4" />
-                Submit Request
+                {t('developmentRoadmap.featureRequest.submitButton')}
               </Button>
             </div>
           </form>
@@ -623,7 +624,7 @@ export default function DevelopmentRoadmap() {
           <div className="flex items-center justify-center space-x-2">
             <Shield className="h-4 w-4" />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              {t('helpSomeone.privacyBanner.text')}
             </span>
           </div>
         </div>
@@ -632,7 +633,7 @@ export default function DevelopmentRoadmap() {
   );
 }
 
-function RoadmapCard({ item }: { item: RoadmapItem }) {
+function RoadmapCard({ item, t }: { item: RoadmapItem; t: any }) {
   return (
     <Card className="hover:shadow-lg transition-all duration-300">
       <CardHeader>
@@ -642,28 +643,28 @@ function RoadmapCard({ item }: { item: RoadmapItem }) {
               <div className="flex items-center space-x-1">
                 {getStatusIcon(item.status)}
                 <Badge className={`${getStatusColor(item.status)} text-white text-xs`}>
-                  {item.status.replace("-", " ").toUpperCase()}
+                  {t(`developmentRoadmap.status.${item.status.replace("-", "")}`)}
                 </Badge>
               </div>
               <Badge className={`${getPriorityColor(item.priority)} text-white text-xs`}>
-                {item.priority.toUpperCase()}
+                {t(`developmentRoadmap.priority.${item.priority}`)}
               </Badge>
               <div className="flex items-center space-x-1 text-muted-foreground">
                 {getCategoryIcon(item.category)}
-                <span className="text-xs capitalize">{item.category}</span>
+                <span className="text-xs capitalize">{t(`developmentRoadmap.categories.${item.category}`)}</span>
               </div>
             </div>
-            <CardTitle className="text-lg">{item.title}</CardTitle>
+            <CardTitle className="text-lg">{t(item.titleKey)}</CardTitle>
           </div>
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground mb-4">{item.description}</p>
+        <p className="text-muted-foreground mb-4">{t(item.descriptionKey)}</p>
         
         {item.progress !== undefined && (
           <div className="mb-4">
             <div className="flex justify-between text-sm mb-1">
-              <span>Progress</span>
+              <span>{t('developmentRoadmap.roadmapItem.progress')}</span>
               <span>{item.progress}%</span>
             </div>
             <Progress value={item.progress} className="h-2" />
@@ -673,18 +674,18 @@ function RoadmapCard({ item }: { item: RoadmapItem }) {
         {item.estimatedCompletion && (
           <div className="flex items-center text-sm text-muted-foreground mb-2">
             <Clock className="h-4 w-4 mr-2" />
-            <span>Target: {item.estimatedCompletion}</span>
+            <span>{t('developmentRoadmap.roadmapItem.estimatedCompletion')}: {item.estimatedCompletion}</span>
           </div>
         )}
 
-        {item.challenges && item.challenges.length > 0 && (
+        {item.challengesKeys && item.challengesKeys.length > 0 && (
           <div className="mb-4">
-            <h4 className="font-medium text-foreground mb-2 text-sm">Current Challenges:</h4>
+            <h4 className="font-medium text-foreground mb-2 text-sm">{t('developmentRoadmap.roadmapItem.challenges')}:</h4>
             <ul className="space-y-1">
-              {item.challenges.map((challenge, index) => (
+              {item.challengesKeys.map((challengeKey, index) => (
                 <li key={index} className="text-xs text-muted-foreground flex items-start">
                   <span className="text-amber-500 mr-2">•</span>
-                  {challenge}
+                  {t(challengeKey)}
                 </li>
               ))}
             </ul>
@@ -692,8 +693,8 @@ function RoadmapCard({ item }: { item: RoadmapItem }) {
         )}
 
         <div className="bg-muted p-3 rounded-lg">
-          <h4 className="font-medium text-foreground mb-1 text-sm">Impact:</h4>
-          <p className="text-xs text-muted-foreground">{item.impact}</p>
+          <h4 className="font-medium text-foreground mb-1 text-sm">{t('developmentRoadmap.roadmapItem.impact')}:</h4>
+          <p className="text-xs text-muted-foreground">{t(item.impactKey)}</p>
         </div>
       </CardContent>
     </Card>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   MessageSquare, 
@@ -73,6 +74,7 @@ interface EnhancedGuidanceResult {
 
 export default function CaseGuidance() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
@@ -177,14 +179,14 @@ export default function CaseGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
-                Case Guidance
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600" data-testid="heading-case-title">
+                {t('case.hero.title')}
               </h1>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Get Personalized Legal Guidance
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="heading-case-subtitle">
+                {t('case.hero.subtitle')}
               </h2>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto mb-8">
-                Answer a few questions about your situation to receive tailored legal guidance, next steps, and resources specific to your case and jurisdiction.
+              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto mb-8" data-testid="text-case-description">
+                {t('case.hero.description')}
               </p>
               
               <Button
@@ -193,7 +195,7 @@ export default function CaseGuidance() {
                 data-testid="button-start-guidance"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
-                Start Personalized Assessment
+                {t('case.hero.startButton')}
               </Button>
             </div>
           </ScrollReveal>
@@ -201,7 +203,7 @@ export default function CaseGuidance() {
           <ScrollReveal delay={0.2}>
             <div className="flex items-center justify-center space-x-2 text-sm text-blue-800 dark:text-blue-200">
               <Shield className="h-4 w-4" />
-              <span>Your responses are private and automatically deleted after your session</span>
+              <span>{t('case.hero.privacyNote')}</span>
             </div>
           </ScrollReveal>
         </div>
@@ -211,8 +213,8 @@ export default function CaseGuidance() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              How Personalized Guidance Works
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-how-it-works">
+              {t('case.howItWorks.title')}
             </h2>
           </ScrollReveal>
 
@@ -220,8 +222,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.1}>
               <StepCard
                 number={1}
-                title="Answer Questions"
-                description="Provide information about your jurisdiction, charges, and case stage"
+                title={t('case.howItWorks.step1Title')}
+                description={t('case.howItWorks.step1Desc')}
                 icon={<MessageSquare className="h-6 w-6 text-blue-600" />}
               />
             </ScrollReveal>
@@ -229,8 +231,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.2}>
               <StepCard
                 number={2}
-                title="AI Analysis"
-                description="Our system analyzes your situation using legal databases and precedents"
+                title={t('case.howItWorks.step2Title')}
+                description={t('case.howItWorks.step2Desc')}
                 icon={<Scale className="h-6 w-6 text-green-600" />}
               />
             </ScrollReveal>
@@ -238,8 +240,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.3}>
               <StepCard
                 number={3}
-                title="Get Guidance"
-                description="Receive tailored next steps, deadlines, and relevant legal information"
+                title={t('case.howItWorks.step3Title')}
+                description={t('case.howItWorks.step3Desc')}
                 icon={<FileText className="h-6 w-6 text-purple-600" />}
               />
             </ScrollReveal>
@@ -247,8 +249,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.4}>
               <StepCard
                 number={4}
-                title="Connect to Help"
-                description="Access local resources, attorneys, and support organizations"
+                title={t('case.howItWorks.step4Title')}
+                description={t('case.howItWorks.step4Desc')}
                 icon={<Users className="h-6 w-6 text-orange-600" />}
               />
             </ScrollReveal>
@@ -260,8 +262,8 @@ export default function CaseGuidance() {
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              What You'll Receive
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-benefits">
+              {t('case.benefits.title')}
             </h2>
           </ScrollReveal>
 
@@ -269,8 +271,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.1}>
               <BenefitCard
                 icon={<ArrowRight className="h-6 w-6 text-white" />}
-                title="Next Steps"
-                description="Clear, actionable steps you should take based on your case stage and circumstances"
+                title={t('case.benefits.nextStepsTitle')}
+                description={t('case.benefits.nextStepsDesc')}
                 bgColor="bg-blue-600"
               />
             </ScrollReveal>
@@ -278,8 +280,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.2}>
               <BenefitCard
                 icon={<Clock className="h-6 w-6 text-white" />}
-                title="Important Deadlines"
-                description="Critical dates and timeframes you need to be aware of in your jurisdiction"
+                title={t('case.benefits.deadlinesTitle')}
+                description={t('case.benefits.deadlinesDesc')}
                 bgColor="bg-red-600"
               />
             </ScrollReveal>
@@ -287,8 +289,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.3}>
               <BenefitCard
                 icon={<Shield className="h-6 w-6 text-white" />}
-                title="Your Rights"
-                description="Specific rights that apply to your situation and how to exercise them"
+                title={t('case.benefits.rightsTitle')}
+                description={t('case.benefits.rightsDesc')}
                 bgColor="bg-green-600"
               />
             </ScrollReveal>
@@ -296,8 +298,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.4}>
               <BenefitCard
                 icon={<Users className="h-6 w-6 text-white" />}
-                title="Local Resources"
-                description="Public defenders, legal aid organizations, and support services in your area"
+                title={t('case.benefits.resourcesTitle')}
+                description={t('case.benefits.resourcesDesc')}
                 bgColor="bg-purple-600"
               />
             </ScrollReveal>
@@ -305,8 +307,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.5}>
               <BenefitCard
                 icon={<AlertTriangle className="h-6 w-6 text-white" />}
-                title="Important Warnings"
-                description="Things to avoid and potential pitfalls specific to your situation"
+                title={t('case.benefits.warningsTitle')}
+                description={t('case.benefits.warningsDesc')}
                 bgColor="bg-amber-500"
               />
             </ScrollReveal>
@@ -314,8 +316,8 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.6}>
               <BenefitCard
                 icon={<BookOpen className="h-6 w-6 text-white" />}
-                title="Legal Information"
-                description="Relevant laws, statutes, and precedents that apply to your case"
+                title={t('case.benefits.legalInfoTitle')}
+                description={t('case.benefits.legalInfoDesc')}
                 bgColor="bg-indigo-600"
               />
             </ScrollReveal>
@@ -328,11 +330,11 @@ export default function CaseGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                Your Privacy is Protected
+              <h2 className="text-3xl font-bold text-foreground mb-6" data-testid="heading-privacy">
+                {t('case.privacy.title')}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We take your privacy seriously. Here's how we protect your information.
+                {t('case.privacy.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -341,32 +343,32 @@ export default function CaseGuidance() {
             <ScrollReveal delay={0.1}>
               <PrivacyFeature
                 icon={<Shield className="h-5 w-5 text-success-green" />}
-                title="No Data Storage"
-                description="Personal information is not saved to our servers"
+                title={t('case.privacy.noStorageTitle')}
+                description={t('case.privacy.noStorageDesc')}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <PrivacyFeature
                 icon={<Clock className="h-5 w-5 text-success-green" />}
-                title="Session-Only"
-                description="Data exists only during your active session"
+                title={t('case.privacy.sessionOnlyTitle')}
+                description={t('case.privacy.sessionOnlyDesc')}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
               <PrivacyFeature
                 icon={<FileText className="h-5 w-5 text-success-green" />}
-                title="Auto-Delete"
-                description="All information automatically deleted when you leave"
+                title={t('case.privacy.autoDeleteTitle')}
+                description={t('case.privacy.autoDeleteDesc')}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
               <PrivacyFeature
                 icon={<Users className="h-5 w-5 text-success-green" />}
-                title="Anonymous"
-                description="No account required, completely anonymous usage"
+                title={t('case.privacy.anonymousTitle')}
+                description={t('case.privacy.anonymousDesc')}
               />
             </ScrollReveal>
           </div>
@@ -375,7 +377,7 @@ export default function CaseGuidance() {
             <Alert className="mt-12 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
               <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
               <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">Important:</strong> This tool provides general legal information and guidance only. It is not a substitute for professional legal advice. Always consult with a qualified attorney for advice specific to your case.
+                <strong className="font-semibold">{t('common.important')}:</strong> {t('case.privacy.disclaimer')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
@@ -387,7 +389,7 @@ export default function CaseGuidance() {
                 className="legal-blue legal-blue-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg mr-4"
                 data-testid="button-start-guidance-bottom"
               >
-                Get Started Now
+                {t('case.privacy.getStartedButton')}
               </Button>
               <Link href="/rights-info">
                 <Button 
@@ -395,7 +397,7 @@ export default function CaseGuidance() {
                   className="font-bold py-4 px-8 rounded-xl text-lg"
                   data-testid="button-learn-rights"
                 >
-                  Learn About Your Rights First
+                  {t('case.privacy.learnRightsButton')}
                 </Button>
               </Link>
             </div>
@@ -411,7 +413,7 @@ export default function CaseGuidance() {
           <div className="flex items-center justify-center space-x-2">
             <Shield className="h-4 w-4" />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              <strong>{t('common.privacyFirst')}:</strong> {t('case.privacy.footerBanner')}
             </span>
           </div>
         </div>

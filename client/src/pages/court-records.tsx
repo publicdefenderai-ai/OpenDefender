@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -13,6 +14,7 @@ import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 
 export default function CourtRecords() {
   useScrollToTop();
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [caseName, setCaseName] = useState('');
   const [docketNumber, setDocketNumber] = useState('');
@@ -40,18 +42,17 @@ export default function CourtRecords() {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-3">Court Records Search</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-3">{t('courtRecords.hero.title')}</h1>
           <p className="text-lg text-muted-foreground mb-4">
-            Search free court records from the RECAP Archive and case law database
+            {t('courtRecords.hero.subtitle')}
           </p>
           
           <Alert className="mb-6">
             <AlertCircle className="h-4 w-4" />
             <AlertDescription>
-              <strong>Free First Policy:</strong> We search the free RECAP Archive first. If a document isn't available for free, 
-              we'll show you where to find it on PACER (which charges fees). Install the{' '}
-              <a href="/recap-extensions" className="underline font-medium hover:text-primary">RECAP browser extension</a>
-              {' '}to automatically save your PACER purchases to the free archive.
+              <strong>{t('courtRecords.freeFirstAlert.title')}</strong> {t('courtRecords.freeFirstAlert.text1')}{' '}
+              <a href="/recap-extensions" className="underline font-medium hover:text-primary">{t('courtRecords.freeFirstAlert.linkText')}</a>
+              {' '}{t('courtRecords.freeFirstAlert.text2')}
             </AlertDescription>
           </Alert>
         </div>
@@ -60,18 +61,18 @@ export default function CourtRecords() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Search className="w-5 h-5" />
-              Search Parameters
+              {t('courtRecords.searchParams.title')}
             </CardTitle>
             <CardDescription>
-              Enter at least one search criterion below
+              {t('courtRecords.searchParams.description')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-3 gap-4 mb-4">
               <div>
-                <label className="text-sm font-medium mb-2 block">Search Term</label>
+                <label className="text-sm font-medium mb-2 block">{t('courtRecords.searchParams.searchTerm')}</label>
                 <Input
-                  placeholder="Keywords, party names..."
+                  placeholder={t('courtRecords.searchParams.searchTermPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onKeyPress={handleKeyPress}
@@ -79,9 +80,9 @@ export default function CourtRecords() {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium mb-2 block">Case Name</label>
+                <label className="text-sm font-medium mb-2 block">{t('courtRecords.searchParams.caseName')}</label>
                 <Input
-                  placeholder="Smith v. Jones"
+                  placeholder={t('courtRecords.searchParams.caseNamePlaceholder')}
                   value={caseName}
                   onChange={(e) => setCaseName(e.target.value)}
                   onKeyPress={handleKeyPress}
@@ -89,9 +90,9 @@ export default function CourtRecords() {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium mb-2 block">Docket Number</label>
+                <label className="text-sm font-medium mb-2 block">{t('courtRecords.searchParams.docketNumber')}</label>
                 <Input
-                  placeholder="1:20-cv-12345"
+                  placeholder={t('courtRecords.searchParams.docketNumberPlaceholder')}
                   value={docketNumber}
                   onChange={(e) => setDocketNumber(e.target.value)}
                   onKeyPress={handleKeyPress}
@@ -106,7 +107,7 @@ export default function CourtRecords() {
               data-testid="button-search"
             >
               <Search className="w-4 h-4 mr-2" />
-              Search Court Records
+              {t('courtRecords.searchParams.searchButton')}
             </Button>
           </CardContent>
         </Card>
@@ -132,7 +133,7 @@ export default function CourtRecords() {
           <Alert variant="destructive">
             <AlertCircle className="h-4 w-4" />
             <AlertDescription>
-              Search failed. Please try again or refine your search criteria.
+              {t('courtRecords.results.searchFailed')}
             </AlertDescription>
           </Alert>
         )}
@@ -141,10 +142,10 @@ export default function CourtRecords() {
           <div>
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-semibold">
-                Search Results
+                {t('courtRecords.results.title')}
               </h2>
               <p className="text-sm text-muted-foreground">
-                {((data as any)?.recap?.count || 0) + ((data as any)?.opinions?.count || 0)} total results
+                {t('courtRecords.results.totalResults', { count: ((data as any)?.recap?.count || 0) + ((data as any)?.opinions?.count || 0) })}
               </p>
             </div>
 
@@ -159,10 +160,10 @@ export default function CourtRecords() {
               <Alert variant="destructive" className="mb-6">
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription>
-                  <strong>Partial Search Failure:</strong> Some search services are unavailable. 
-                  {(data as any).failedServices?.recap && ' RECAP docket search failed.'}
-                  {(data as any).failedServices?.opinions && ' Case law opinion search failed.'}
-                  {' '}Results shown may be incomplete.
+                  <strong>{t('courtRecords.partialFailure.title')}</strong> {t('courtRecords.partialFailure.text')}
+                  {(data as any).failedServices?.recap && ` ${t('courtRecords.partialFailure.recapFailed')}`}
+                  {(data as any).failedServices?.opinions && ` ${t('courtRecords.partialFailure.opinionsFailed')}`}
+                  {' '}{t('courtRecords.partialFailure.incomplete')}
                 </AlertDescription>
               </Alert>
             )}
@@ -171,7 +172,7 @@ export default function CourtRecords() {
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
                   <FileText className="w-5 h-5" />
-                  RECAP Archive - Federal Court Filings ({(data as any).recap.count})
+                  {t('courtRecords.results.recapSection', { count: (data as any).recap.count })}
                 </h3>
                 <div className="space-y-4">
                   {(data as any).recap.results.map((result: any, idx: number) => (
@@ -192,7 +193,7 @@ export default function CourtRecords() {
                                 )}
                                 {result.date_filed && (
                                   <span className="text-sm">
-                                    Filed: {format(new Date(result.date_filed), 'MMM d, yyyy')}
+                                    {t('courtRecords.results.filed', { date: format(new Date(result.date_filed), 'MMM d, yyyy') })}
                                   </span>
                                 )}
                               </div>
@@ -200,19 +201,19 @@ export default function CourtRecords() {
                           </div>
                           <Badge className="bg-green-600 hover:bg-green-700 ml-4">
                             <Download className="w-3 h-3 mr-1" />
-                            FREE
+                            {t('courtRecords.results.free')}
                           </Badge>
                         </div>
                       </CardHeader>
                       <CardContent>
                         {result.nature_of_suit && (
                           <p className="text-sm text-muted-foreground mb-3">
-                            <strong>Nature of Suit:</strong> {result.nature_of_suit}
+                            <strong>{t('courtRecords.results.natureOfSuit')}</strong> {result.nature_of_suit}
                           </p>
                         )}
                         {result.assigned_to_str && (
                           <p className="text-sm text-muted-foreground mb-3">
-                            <strong>Judge:</strong> {result.assigned_to_str}
+                            <strong>{t('courtRecords.results.assignedTo')}</strong> {result.assigned_to_str}
                           </p>
                         )}
                         <div className="flex gap-2 mt-4">
@@ -228,7 +229,7 @@ export default function CourtRecords() {
                               rel="noopener noreferrer"
                             >
                               <ExternalLink className="w-4 h-4 mr-2" />
-                              View on RECAP (Free)
+                              {t('courtRecords.results.downloadFree')}
                             </a>
                           </Button>
                         </div>
@@ -243,7 +244,7 @@ export default function CourtRecords() {
               <div>
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
                   <Scale className="w-5 h-5" />
-                  Case Law Opinions ({(data as any).opinions.count})
+                  {t('courtRecords.results.opinionsSection', { count: (data as any).opinions.count })}
                 </h3>
                 <div className="space-y-4">
                   {(data as any).opinions.results.map((result: any, idx: number) => (
@@ -260,7 +261,7 @@ export default function CourtRecords() {
                             )}
                             {result.date_filed && (
                               <span className="text-sm">
-                                Filed: {format(new Date(result.date_filed), 'MMM d, yyyy')}
+                                {t('courtRecords.results.filed', { date: format(new Date(result.date_filed), 'MMM d, yyyy') })}
                               </span>
                             )}
                           </div>
@@ -284,7 +285,7 @@ export default function CourtRecords() {
                             rel="noopener noreferrer"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
-                            Read Opinion
+                            {t('courtRecords.results.viewOpinion')}
                           </a>
                         </Button>
                       </CardContent>
@@ -298,9 +299,9 @@ export default function CourtRecords() {
               <Card>
                 <CardContent className="py-12 text-center">
                   <AlertCircle className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">No Results Found</h3>
+                  <h3 className="text-lg font-semibold mb-2">{t('courtRecords.results.noResults')}</h3>
                   <p className="text-muted-foreground mb-4">
-                    No court records match your search criteria. Try different keywords or check your spelling.
+                    {t('courtRecords.results.searchFailed')}
                   </p>
                   <Button variant="outline" onClick={() => {
                     setSearchTerm('');
@@ -308,7 +309,7 @@ export default function CourtRecords() {
                     setDocketNumber('');
                     setHasSearched(false);
                   }}>
-                    Clear Search
+                    {t('common.back')}
                   </Button>
                 </CardContent>
               </Card>
@@ -320,9 +321,9 @@ export default function CourtRecords() {
           <Card>
             <CardContent className="py-12 text-center">
               <Search className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Ready to Search</h3>
+              <h3 className="text-lg font-semibold mb-2">{t('courtRecords.searchParams.title')}</h3>
               <p className="text-muted-foreground">
-                Enter your search criteria above to find court records, federal filings, and case law opinions.
+                {t('courtRecords.searchParams.description')}
               </p>
             </CardContent>
           </Card>

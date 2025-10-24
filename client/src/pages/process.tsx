@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import { Calendar, Clock, Shield, Scale, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -86,13 +87,14 @@ const processSteps = [
   }
 ];
 
-function ProcessStep({ number, title, description, timeframe, rights, isLast }: {
+function ProcessStep({ number, title, description, timeframe, rights, isLast, t }: {
   number: number;
   title: string;
   description: string;
   timeframe: string;
   rights: string[];
   isLast?: boolean;
+  t: any;
 }) {
   return (
     <div className="relative">
@@ -125,7 +127,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast }: 
               <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
                   <Shield className="h-4 w-4 mr-2" />
-                  Your Rights at This Stage:
+                  {t('process.steps.yourRights')}
                 </h4>
                 <ul className="space-y-1">
                   {rights.map((right, index) => (
@@ -145,6 +147,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast }: 
 
 export default function Process() {
   useScrollToTop();
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <PrivacyBanner />
@@ -157,10 +160,10 @@ export default function Process() {
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
                 <Calendar className="inline h-10 w-10 mr-2 mb-2" />
-                Criminal Justice Process Timeline
+                {t('process.hero.title')}
               </h1>
               <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-                Step-by-step guide through arrest, arraignment, trial, and sentencing procedures
+                {t('process.hero.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -174,7 +177,7 @@ export default function Process() {
             <Alert className="mb-12 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
               <Scale className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
-                <strong>Important:</strong> The exact timeline and procedures can vary significantly by jurisdiction and case complexity. Always consult with a qualified attorney for guidance specific to your situation.
+                <strong>{t('process.alert.important')}</strong> {t('process.alert.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
@@ -189,6 +192,7 @@ export default function Process() {
                   timeframe={step.timeframe}
                   rights={step.rights}
                   isLast={index === processSteps.length - 1}
+                  t={t}
                 />
               </ScrollReveal>
             ))}
@@ -201,7 +205,7 @@ export default function Process() {
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-center text-foreground mb-8">
-              Important Notes
+              {t('process.additionalInfo.title')}
             </h2>
           </ScrollReveal>
 
@@ -211,10 +215,10 @@ export default function Process() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-3 flex items-center">
                     <Shield className="h-5 w-5 text-blue-600 mr-2" />
-                    Plea Bargains
+                    {t('process.additionalInfo.pleaBargains.title')}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Most criminal cases (about 90-95%) are resolved through plea bargains rather than going to trial. This happens during the discovery phase when prosecutors and defense attorneys negotiate reduced charges or sentencing in exchange for a guilty plea.
+                    {t('process.additionalInfo.pleaBargains.text')}
                   </p>
                 </CardContent>
               </Card>
@@ -225,10 +229,10 @@ export default function Process() {
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-3 flex items-center">
                     <Clock className="h-5 w-5 text-green-600 mr-2" />
-                    Speedy Trial Rights
+                    {t('process.additionalInfo.speedyTrial.title')}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    The Sixth Amendment guarantees your right to a speedy trial. Federal cases must typically begin within 70 days of indictment or first appearance. State requirements vary, often ranging from 60 to 180 days.
+                    {t('process.additionalInfo.speedyTrial.text')}
                   </p>
                 </CardContent>
               </Card>
@@ -254,7 +258,7 @@ export default function Process() {
           <div className="flex items-center justify-center space-x-2">
             <Shield className="h-4 w-4" />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              <strong>{t('common.privacyFirst')}:</strong> {t('footer.privacyNotice')}
             </span>
           </div>
         </div>
