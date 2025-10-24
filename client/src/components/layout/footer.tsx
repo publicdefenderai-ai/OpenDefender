@@ -10,6 +10,8 @@ import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-a
 import { useTranslation } from "react-i18next";
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
+  const { t } = useTranslation();
+  
   return (
     <Card className="hover:shadow-md transition-all duration-200">
       <CardContent className="p-4">
@@ -19,11 +21,11 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex flex-wrap gap-2">
               {office.county && (
                 <span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                  {office.county} County
+                  {office.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
               <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">
-                {office.distance} mi away
+                {office.distance} {t('home.publicDefenderSearch.miAway')}
               </span>
             </div>
           </div>
@@ -33,7 +35,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
           <div className="flex items-start gap-2">
             <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
-              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.address')}</div>
               <div className="text-sm font-medium">{office.address}</div>
             </div>
           </div>
@@ -42,7 +44,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex items-start gap-2">
               <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Phone</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.phone')}</div>
                 <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
                   {office.phone}
                 </a>
@@ -54,7 +56,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex items-start gap-2">
               <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Email</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.email')}</div>
                 <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
                   {office.email}
                 </a>
@@ -66,14 +68,14 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex items-start gap-2">
               <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.hours')}</div>
                 <div className="text-sm font-medium">{office.hours}</div>
               </div>
             </div>
           )}
 
           <div>
-            <div className="text-sm text-muted-foreground mb-2">Services</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('home.publicDefenderSearch.services')}</div>
             <div className="flex flex-wrap gap-1">
               {office.services.map((service) => (
                 <span key={service} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
@@ -91,7 +93,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
               onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(office.address)}`, '_blank')}
             >
               <Navigation className="h-3 w-3 mr-1" />
-              Directions
+              {t('home.publicDefenderSearch.directions')}
             </Button>
           </div>
         </div>
@@ -101,6 +103,8 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
 }
 
 function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrganization }) {
+  const { t } = useTranslation();
+  
   return (
     <Card className="hover:shadow-md transition-all duration-200">
       <CardContent className="p-4">
@@ -110,11 +114,11 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex flex-wrap gap-2">
               {organization.county && (
                 <span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                  {organization.county} County
+                  {organization.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
               <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">
-                {organization.distance} mi away
+                {organization.distance} {t('home.publicDefenderSearch.miAway')}
               </span>
               <span className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
                 {organization.organizationType}
@@ -127,7 +131,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
           <div className="flex items-start gap-2">
             <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
-              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.address')}</div>
               <div className="text-sm font-medium">{organization.address}</div>
             </div>
           </div>
@@ -136,7 +140,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex items-start gap-2">
               <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Phone</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.phone')}</div>
                 <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-green-600">
                   {organization.phone}
                 </a>
@@ -148,7 +152,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex items-start gap-2">
               <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Email</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.email')}</div>
                 <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-green-600">
                   {organization.email}
                 </a>
@@ -160,14 +164,14 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex items-start gap-2">
               <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.hours')}</div>
                 <div className="text-sm font-medium">{organization.hours}</div>
               </div>
             </div>
           )}
 
           <div>
-            <div className="text-sm text-muted-foreground mb-2">Services Offered</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('home.legalAidSearch.servicesOffered')}</div>
             <div className="flex flex-wrap gap-1">
               {organization.services.map((service) => (
                 <span key={service} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
@@ -185,7 +189,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
               onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(organization.address)}`, '_blank')}
             >
               <Navigation className="h-3 w-3 mr-1" />
-              Directions
+              {t('home.publicDefenderSearch.directions')}
             </Button>
           </div>
         </div>
@@ -213,7 +217,7 @@ export function Footer() {
   
   const handlePublicDefenderSearch = async () => {
     if (!pdZipCode.trim() || pdZipCode.length !== 5) {
-      setPdError("Please enter a valid 5-digit ZIP code");
+      setPdError(t('home.publicDefenderSearch.error'));
       return;
     }
 
@@ -225,7 +229,7 @@ export function Footer() {
       setPdOffices(offices);
     } catch (err) {
       console.error('Public defender search error:', err);
-      setPdError("Unable to search for offices. Please try again or contact your local court for information.");
+      setPdError(t('home.publicDefenderSearch.errorGeneral'));
     } finally {
       setPdSearching(false);
     }
@@ -233,7 +237,7 @@ export function Footer() {
   
   const handleLegalAidSearch = async () => {
     if (!laZipCode.trim() || laZipCode.length !== 5) {
-      setLaError("Please enter a valid 5-digit ZIP code");
+      setLaError(t('home.legalAidSearch.error'));
       return;
     }
 
@@ -245,7 +249,7 @@ export function Footer() {
       setLaOrganizations(organizations);
     } catch (err) {
       console.error('Legal aid search error:', err);
-      setLaError("Unable to search for organizations. Please try again or contact your local bar association.");
+      setLaError(t('home.legalAidSearch.errorGeneral'));
     } finally {
       setLaSearching(false);
     }
@@ -428,14 +432,14 @@ export function Footer() {
     <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
       <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Find Public Defender Offices</DialogTitle>
+          <DialogTitle>{t('home.publicDefenderSearch.title')}</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-4">
           <div className="flex gap-2">
             <Input
               type="text"
-              placeholder="Enter ZIP code"
+              placeholder={t('home.publicDefenderSearch.inputPlaceholder')}
               value={pdZipCode}
               onChange={(e) => setPdZipCode(e.target.value)}
               maxLength={5}
@@ -448,7 +452,7 @@ export function Footer() {
               data-testid="button-search-pd-footer"
             >
               <Search className="h-4 w-4 mr-2" />
-              {pdSearching ? "Searching..." : "Search"}
+              {pdSearching ? t('home.publicDefenderSearch.searching') : t('home.publicDefenderSearch.searchButton')}
             </Button>
           </div>
 
@@ -459,7 +463,7 @@ export function Footer() {
           {pdOffices.length > 0 && (
             <div className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Found {pdOffices.length} public defender office{pdOffices.length !== 1 ? 's' : ''} near you:
+                {t('home.searchResults.foundOffices', { count: pdOffices.length, plural: pdOffices.length !== 1 ? 's' : '' })}
               </p>
               {pdOffices.map((office) => (
                 <PublicDefenderOfficeCard key={office.id} office={office} />
@@ -467,9 +471,9 @@ export function Footer() {
             </div>
           )}
 
-          {!pdSearching && pdOffices.length === 0 && pdZipCode && !pdError && (
+          {!pdSearching && pdOffices.length === 0 && !pdError && (
             <p className="text-sm text-muted-foreground">
-              Enter your ZIP code to find public defender offices in your area.
+              {t('home.publicDefenderSearch.noResults')}
             </p>
           )}
         </div>
@@ -480,14 +484,14 @@ export function Footer() {
     <Dialog open={showLegalAidModal} onOpenChange={setShowLegalAidModal}>
       <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Find Legal Aid Organizations</DialogTitle>
+          <DialogTitle>{t('home.legalAidSearch.title')}</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-4">
           <div className="flex gap-2">
             <Input
               type="text"
-              placeholder="Enter ZIP code"
+              placeholder={t('home.legalAidSearch.inputPlaceholder')}
               value={laZipCode}
               onChange={(e) => setLaZipCode(e.target.value)}
               maxLength={5}
@@ -500,7 +504,7 @@ export function Footer() {
               data-testid="button-search-la-footer"
             >
               <Search className="h-4 w-4 mr-2" />
-              {laSearching ? "Searching..." : "Search"}
+              {laSearching ? t('home.legalAidSearch.searching') : t('home.legalAidSearch.searchButton')}
             </Button>
           </div>
 
@@ -511,7 +515,7 @@ export function Footer() {
           {laOrganizations.length > 0 && (
             <div className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Found {laOrganizations.length} legal aid organization{laOrganizations.length !== 1 ? 's' : ''} near you:
+                {t('home.legalAidSearch.resultsFound', { count: laOrganizations.length, plural: laOrganizations.length !== 1 ? 's' : '' })}
               </p>
               {laOrganizations.map((org) => (
                 <LegalAidOrganizationCard key={org.id} organization={org} />
@@ -519,9 +523,9 @@ export function Footer() {
             </div>
           )}
 
-          {!laSearching && laOrganizations.length === 0 && laZipCode && !laError && (
+          {!laSearching && laOrganizations.length === 0 && !laError && (
             <p className="text-sm text-muted-foreground">
-              Enter your ZIP code to find legal aid organizations in your area.
+              {t('home.legalAidSearch.noResults')}
             </p>
           )}
         </div>
