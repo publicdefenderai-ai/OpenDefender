@@ -177,6 +177,7 @@ i18n
             "legalGlossary": "Legal Glossary",
             "recordExpungement": "Record Expungement",
             "friendsFamily": "For Friends & Family",
+            "courtRecords": "Find Court Records",
             "getHelp": "Get Help",
             "getCaseGuidance": "Get Case Guidance",
             "diversionPrograms": "Diversion Programs",
@@ -405,6 +406,10 @@ i18n
               "legalAid": {
                 "title": "Legal Aid Resources & Support",
                 "description": "Find legal help and support services"
+              },
+              "courtRecords": {
+                "title": "Court Records Search",
+                "description": "Search free RECAP archive and case law"
               }
             },
             "legalRightsSubmenu": {
@@ -1698,6 +1703,7 @@ i18n
             "legalGlossary": "Glosario Legal",
             "recordExpungement": "Eliminación de Antecedentes",
             "friendsFamily": "Para Amigos y Familia",
+            "courtRecords": "Buscar Registros Judiciales",
             "getHelp": "Obtener Ayuda",
             "getCaseGuidance": "Obtener Orientación de Caso",
             "diversionPrograms": "Programas de Desviación",
@@ -1926,6 +1932,10 @@ i18n
               "legalAid": {
                 "title": "Recursos y Apoyo de Asistencia Legal",
                 "description": "Encuentre ayuda legal y servicios de apoyo"
+              },
+              "courtRecords": {
+                "title": "Búsqueda de Registros Judiciales",
+                "description": "Buscar en archivo RECAP gratuito y jurisprudencia"
               }
             },
             "legalRightsSubmenu": {

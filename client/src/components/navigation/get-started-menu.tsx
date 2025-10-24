@@ -16,7 +16,8 @@ import {
   Route,
   Eraser,
   Book,
-  Home as HomeIcon
+  Home as HomeIcon,
+  FileSearch
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -166,6 +167,31 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/court-records')}
+        className="w-full"
+        data-testid="menu-item-court-records"
+      >
+        <Card className="hover:shadow-lg hover:border-indigo-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-4">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <FileSearch className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1 text-left min-w-0">
+                <h3 className="font-semibold text-lg group-hover:text-indigo-600 transition-colors">
+                  {t('getStartedMenu.main.courtRecords.title')}
+                </h3>
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                  {t('getStartedMenu.main.courtRecords.description')}
+                </p>
+              </div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-indigo-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>

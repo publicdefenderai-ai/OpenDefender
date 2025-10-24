@@ -325,6 +325,11 @@ export function Footer() {
                   {t('footer.friendsFamily')}
                 </Link>
               </li>
+              <li>
+                <Link href="/court-records" className="hover:text-white transition-colors">
+                  {t('footer.courtRecords')}
+                </Link>
+              </li>
             </ul>
           </div>
 
