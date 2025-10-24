@@ -21,7 +21,6 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
 
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -87,7 +86,6 @@ export default function LegalGlossary() {
 
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
 
       {/* Hero Section */}

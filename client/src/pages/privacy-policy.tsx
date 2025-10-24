@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
@@ -14,7 +13,6 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
       
       <main className="max-w-4xl mx-auto px-4 py-12 md:py-16">

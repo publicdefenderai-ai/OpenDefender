@@ -3,7 +3,6 @@ import { Target, Users, Scale, TrendingUp, Shield, FileText } from "lucide-react
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
@@ -41,7 +40,6 @@ export default function MissionStatement() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
-      <PrivacyBanner />
       <Header />
       
       <main className="container mx-auto px-4 py-12 max-w-5xl">

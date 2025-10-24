@@ -1,5 +1,4 @@
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
@@ -112,7 +111,6 @@ const testGuidanceData = {
 export default function DashboardTest() {
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
       
       <main className="px-4 py-8">

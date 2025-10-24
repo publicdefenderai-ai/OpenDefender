@@ -6,7 +6,6 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -239,7 +238,6 @@ export default function SearchSeizure() {
   useScrollToTop();
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
 
       {/* Hero Section */}

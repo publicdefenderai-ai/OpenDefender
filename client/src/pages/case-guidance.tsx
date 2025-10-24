@@ -33,7 +33,6 @@ import { Link } from "wouter";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -389,7 +388,6 @@ export default function CaseGuidance() {
   if (showQAFlow) {
     return (
       <div className="min-h-screen bg-background">
-        <PrivacyBanner />
         <Header />
         <main className="max-w-7xl mx-auto px-4 py-8">
           <QAFlow 
@@ -405,7 +403,6 @@ export default function CaseGuidance() {
   if (guidanceResult) {
     return (
       <div className="min-h-screen bg-background">
-        <PrivacyBanner />
         <Header />
         
         <main className="px-4 py-8">
@@ -570,7 +567,6 @@ export default function CaseGuidance() {
 
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
 
       {/* Hero Section */}

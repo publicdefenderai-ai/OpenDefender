@@ -19,7 +19,6 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -101,7 +100,6 @@ export default function CourtLocator() {
 
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
 
       {/* Hero Section */}

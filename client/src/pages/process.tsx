@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
-import { PrivacyBanner } from "@/components/layout/privacy-banner";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -76,7 +75,6 @@ export default function Process() {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
-      <PrivacyBanner />
       <Header />
 
       {/* Hero Section */}
