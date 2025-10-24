@@ -124,7 +124,7 @@ export default function MissionStatement() {
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
               {t('missionStatement.principles.description')}
             </p>
-            <div className="bg-blue-50 dark:test-slate-700 border-l-4 border-blue-600 p-4 rounded">
+            <div className="bg-blue-50 dark:bg-slate-700 border-l-4 border-blue-600 p-4 rounded">
               <p className="text-slate-800 dark:text-slate-200 font-medium">
                 {t('missionStatement.principles.disclaimer')}
               </p>
