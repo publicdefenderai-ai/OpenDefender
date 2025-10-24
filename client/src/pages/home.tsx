@@ -296,44 +296,44 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-24 lg:py-32">
+      <section className="gradient-hero text-white py-12 md:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
               <span className="text-blue-800 dark:text-blue-200">{t('home.hero.title1')}</span><br />
               <span className="text-blue-800 dark:text-blue-200">{t('home.hero.title2')}</span>
             </h2>
-            <p className="text-2xl md:text-3xl mb-12 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
 
           {/* Main CTAs */}
           <ScrollReveal delay={0.2}>
-            <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center gap-4 md:gap-6 max-w-2xl mx-auto">
               <Button
                 onClick={() => setGetStartedOpen(true)}
-                className="success-green hover:bg-green-700 hover:shadow-2xl font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
+                className="success-green hover:bg-green-700 hover:shadow-2xl font-bold py-4 px-8 md:py-6 md:px-12 rounded-2xl text-lg md:text-2xl shadow-xl transition-all duration-200 w-full md:w-auto min-h-[48px]"
                 data-testid="button-get-started"
               >
                 {t('home.hero.getStartedButton')}
-                <ArrowRight className="ml-3 h-6 w-6" />
+                <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6" />
               </Button>
               
               <Button
                 onClick={handleUrgentHelp}
-                className="bg-red-600 hover:bg-red-700 hover:shadow-2xl text-white font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
+                className="bg-red-600 hover:bg-red-700 hover:shadow-2xl text-white font-bold py-4 px-8 md:py-6 md:px-12 rounded-2xl text-lg md:text-2xl shadow-xl transition-all duration-200 w-full md:w-auto min-h-[48px]"
                 data-testid="button-urgent-help"
               >
-                <AlertTriangle className="mr-3 h-6 w-6" />
+                <AlertTriangle className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
                 {t('home.hero.urgentHelpButton')}
               </Button>
               
-              <p className="text-sm text-blue-800 dark:text-blue-200 mt-2">
+              <p className="text-xs sm:text-sm text-blue-800 dark:text-blue-200 mt-2 px-4">
                 {t('home.hero.urgentHelpNotice')}
               </p>
               
@@ -341,7 +341,7 @@ export default function Home() {
               <Link href="/how-to">
                 <Button
                   variant="outline"
-                  className="mt-4 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-blue-800 dark:text-blue-200 font-semibold py-3 px-6 rounded-lg"
+                  className="mt-2 md:mt-4 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-blue-800 dark:text-blue-200 font-semibold py-3 px-6 rounded-lg min-h-[44px]"
                   data-testid="button-navigating-tool"
                 >
                   <Book className="mr-2 h-4 w-4" />
@@ -354,20 +354,20 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-background">
+      <section className="py-12 md:py-20 lg:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
                 {t('home.features.title')}
               </h2>
-              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-base md:text-xl text-muted-foreground max-w-4xl mx-auto px-2">
                 {t('home.features.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <DataSourceCard
                 icon={<Book className="h-6 w-6 text-white" />}
@@ -405,20 +405,20 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
                 {t('home.trust.title')}
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-base md:text-xl text-muted-foreground px-2">
                 {t('home.trust.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">

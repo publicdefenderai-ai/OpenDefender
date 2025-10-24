@@ -185,15 +185,15 @@ export default function HowTo() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-16">
+      <section className="gradient-hero text-white py-10 md:py-14 lg:py-16">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
-                <Lightbulb className="inline h-10 w-10 mr-2 mb-2" />
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-blue-600">
+                <Lightbulb className="inline h-7 w-7 md:h-10 md:w-10 mr-2 mb-1 md:mb-2" />
                 Navigating This Tool
               </h1>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto px-2">
                 Explore all the legal resources, guidance tools, and information available to help you understand and navigate the criminal justice system
               </p>
             </div>
@@ -202,12 +202,12 @@ export default function HowTo() {
       </section>
 
       {/* Overview */}
-      <section className="py-16 bg-background">
+      <section className="py-10 md:py-14 lg:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6">What This Platform Offers</h2>
-              <p className="text-lg text-muted-foreground">
+            <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14 lg:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-4 md:mb-6">What This Platform Offers</h2>
+              <p className="text-base md:text-lg text-muted-foreground px-2">
                 Public Defender AI provides free, accessible legal information to help you understand your rights, navigate court processes, and find the support you need. All resources are backed by real legal data and designed with privacy in mind.
               </p>
             </div>
@@ -218,9 +218,9 @@ export default function HowTo() {
             const categoryResources = resources.filter(r => r.category === category);
             
             return (
-              <div key={category} className="mb-16">
+              <div key={category} className="mb-10 md:mb-14 lg:mb-16">
                 <ScrollReveal delay={categoryIndex * 0.1}>
-                  <h2 className="text-2xl font-bold mb-6 flex items-center">
+                  <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 flex items-center">
                     {category === "Get Help" && <AlertTriangle className="h-6 w-6 mr-2 text-red-600" />}
                     {category === "Legal Rights" && <Shield className="h-6 w-6 mr-2 text-blue-600" />}
                     {category === "Resources" && <Users className="h-6 w-6 mr-2 text-green-600" />}
@@ -229,7 +229,7 @@ export default function HowTo() {
                   </h2>
                 </ScrollReveal>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   {categoryResources.map((resource, index) => (
                     <ScrollReveal key={resource.title} delay={(categoryIndex * 0.1) + (index * 0.05)}>
                       <ResourceCardComponent resource={resource} />
