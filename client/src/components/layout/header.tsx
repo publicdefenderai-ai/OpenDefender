@@ -117,7 +117,7 @@ export function Header() {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[90%] sm:w-[400px]">
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                 </SheetHeader>
@@ -153,11 +153,11 @@ export function Header() {
                           className="w-full justify-start h-auto py-4 px-4"
                           data-testid={item.testId}
                         >
-                          <div className="flex items-start space-x-3">
-                            <Icon className="h-5 w-5 mt-0.5 text-blue-600" />
-                            <div className="text-left">
+                          <div className="flex items-start space-x-3 w-full">
+                            <Icon className="h-5 w-5 mt-0.5 text-blue-600 flex-shrink-0" />
+                            <div className="text-left flex-1 min-w-0">
                               <div className="font-semibold">{item.title}</div>
-                              <div className="text-sm text-muted-foreground font-normal">
+                              <div className="text-sm text-muted-foreground font-normal whitespace-normal break-words">
                                 {item.description}
                               </div>
                             </div>
