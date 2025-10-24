@@ -147,7 +147,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(200, 0, 0);
-    doc.text('⚠ CRITICAL ALERTS', margin, yPosition);
+    doc.text('! CRITICAL ALERTS', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -156,7 +156,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.criticalAlerts.forEach((alert, idx) => {
       checkPageBreak();
-      yPosition = addText(`${idx + 1}. ${alert}`, margin + 5, yPosition);
+      yPosition = addText(`   ${idx + 1}. ${alert}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -177,7 +177,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.immediateActions.forEach((action, idx) => {
       checkPageBreak();
-      yPosition = addText(`□ ${action}`, margin + 5, yPosition);
+      yPosition = addText(`   [ ] ${action}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -272,7 +272,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.evidenceToGather.forEach((evidence, idx) => {
       checkPageBreak();
-      yPosition = addText(`□ ${evidence}`, margin + 5, yPosition);
+      yPosition = addText(`   [ ] ${evidence}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -291,7 +291,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.courtPreparation.forEach((item, idx) => {
       checkPageBreak();
-      yPosition = addText(`□ ${item}`, margin + 5, yPosition);
+      yPosition = addText(`   [ ] ${item}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -303,7 +303,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(200, 0, 0);
-    doc.text('⚠ Actions to Avoid', margin, yPosition);
+    doc.text('! Actions to Avoid', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -312,7 +312,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.avoidActions.forEach((action, idx) => {
       checkPageBreak();
-      yPosition = addText(`✗ ${action}`, margin + 5, yPosition);
+      yPosition = addText(`   - ${action}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -333,7 +333,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.warnings.forEach((warning, idx) => {
       checkPageBreak();
-      yPosition = addText(`⚠ ${warning}`, margin + 5, yPosition);
+      yPosition = addText(`   * ${warning}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -385,7 +385,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition += 8;
 
     const timelineData = guidance.timeline.map(stage => [
-      stage.completed ? '✓' : '○',
+      stage.completed ? '[X]' : '[ ]',
       stage.stage,
       stage.description,
       stage.timeframe
