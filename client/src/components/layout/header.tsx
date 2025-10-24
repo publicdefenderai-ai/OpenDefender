@@ -95,7 +95,7 @@ export function Header() {
               </Select>
             </div>
             
-            <Link href="/mission-statement">
+            <Link href="/how-to">
               <Button
                 variant="ghost"
                 size="sm"
