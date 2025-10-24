@@ -169,7 +169,7 @@ export default function Process() {
             <Alert className="mt-8 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
               <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
               <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong>Legal Disclaimer:</strong> This information is for educational purposes only and does not constitute legal advice. Laws and procedures vary by state and federal jurisdiction. Always consult with a qualified attorney for advice specific to your situation.
+                <strong>{t('process.legalDisclaimer.title')}</strong> {t('process.legalDisclaimer.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>

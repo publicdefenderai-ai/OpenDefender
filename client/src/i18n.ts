@@ -771,6 +771,10 @@ i18n
                 "title": "Bond and Bail",
                 "text": "Bail is money paid to the court to ensure you return for trial. If you can't afford bail, you may remain in custody or request a bail hearing. Some jurisdictions offer release on recognizance (ROR) for low-risk defendants."
               }
+            },
+            "legalDisclaimer": {
+              "title": "Legal Disclaimer:",
+              "text": "This information is for educational purposes only and does not constitute legal advice. Laws and procedures vary by state and federal jurisdiction. Always consult with a qualified attorney for advice specific to your situation."
             }
           },
           "diversionPrograms": {
@@ -1976,6 +1980,10 @@ i18n
                 "title": "Fianza y Libertad Bajo Fianza",
                 "text": "La fianza es el dinero pagado a la corte para asegurar que regrese para el juicio. Si no puede pagar la fianza, puede permanecer bajo custodia o solicitar una audiencia de fianza. Algunas jurisdicciones ofrecen liberación bajo palabra (ROR) para acusados de bajo riesgo."
               }
+            },
+            "legalDisclaimer": {
+              "title": "Aviso Legal:",
+              "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes y procedimientos varían según el estado y la jurisdicción federal. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación."
             }
           },
           "diversionPrograms": {
