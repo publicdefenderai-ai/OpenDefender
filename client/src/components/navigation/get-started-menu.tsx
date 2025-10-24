@@ -78,19 +78,19 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       >
         <Card className="hover:shadow-lg hover:border-blue-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                 <MessageSquare className="h-6 w-6 text-white" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors">
                   {t('getStartedMenu.main.caseGuidance.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
                   {t('getStartedMenu.main.caseGuidance.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors" />
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -103,19 +103,19 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       >
         <Card className="hover:shadow-lg hover:border-amber-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                 <Globe className="h-6 w-6 text-white" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-lg group-hover:text-amber-600 transition-colors">
                   {t('getStartedMenu.main.immigration.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
                   {t('getStartedMenu.main.immigration.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-amber-600 transition-colors" />
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-amber-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -128,19 +128,19 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       >
         <Card className="hover:shadow-lg hover:border-green-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                 <Shield className="h-6 w-6 text-white" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-lg group-hover:text-green-600 transition-colors">
                   {t('getStartedMenu.main.legalRights.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
                   {t('getStartedMenu.main.legalRights.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 transition-colors" />
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -153,19 +153,19 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       >
         <Card className="hover:shadow-lg hover:border-purple-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <div className="flex-1 text-left">
+              <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors">
                   {t('getStartedMenu.main.legalAid.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
                   {t('getStartedMenu.main.legalAid.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors" />
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
