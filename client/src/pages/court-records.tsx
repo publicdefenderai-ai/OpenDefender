@@ -25,6 +25,21 @@ export default function CourtRecords() {
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ['/api/court-records/search', { q: searchTerm, case_name: caseName, docket_number: docketNumber }],
     enabled: false,
+    queryFn: async () => {
+      const params = new URLSearchParams();
+      if (searchTerm) params.append('q', searchTerm);
+      if (caseName) params.append('case_name', caseName);
+      if (docketNumber) params.append('docket_number', docketNumber);
+      
+      const url = `/api/court-records/search?${params.toString()}`;
+      const response = await fetch(url, { credentials: 'include' });
+      
+      if (!response.ok) {
+        throw new Error(`Search failed: ${response.statusText}`);
+      }
+      
+      return await response.json();
+    }
   });
 
   const handleSearch = () => {
