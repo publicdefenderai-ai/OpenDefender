@@ -32,6 +32,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Checkbox } from "@/components/ui/checkbox";
+import { generateGuidancePDF } from "@/lib/pdf-generator";
 
 interface EnhancedGuidanceData {
   sessionId: string;
@@ -86,7 +87,7 @@ interface GuidanceDashboardProps {
 }
 
 export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPublicDefender, onShowLegalAid }: GuidanceDashboardProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showSensitiveInfo, setShowSensitiveInfo] = useState(false);
@@ -124,6 +125,11 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
     );
   };
 
+  const handleExportPDF = () => {
+    // Generate PDF entirely on client-side - no data sent to external servers
+    generateGuidancePDF(guidance, i18n.language);
+  };
+
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Case Summary Header */}
@@ -150,7 +156,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
               <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
                 {t('legalGuidance.dashboard.close')}
               </Button>
-              <Button variant="outline" className="gap-2 flex-1 md:flex-none" data-testid="button-export-pdf">
+              <Button variant="outline" onClick={handleExportPDF} className="gap-2 flex-1 md:flex-none" data-testid="button-export-pdf">
                 <Download className="h-4 w-4" />
                 {t('legalGuidance.dashboard.exportPDF')}
               </Button>
