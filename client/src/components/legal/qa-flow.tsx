@@ -273,7 +273,7 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
 function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [showAllCharges, setShowAllCharges] = useState(false);
+  const [showAllCharges, setShowAllCharges] = useState(true);
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
   const availableCharges = getChargesByJurisdiction(formData.jurisdiction);

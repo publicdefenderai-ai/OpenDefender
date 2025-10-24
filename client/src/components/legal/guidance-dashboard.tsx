@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
@@ -20,7 +21,9 @@ import {
   EyeOff,
   ArrowRight,
   Gavel,
-  X
+  X,
+  Building,
+  HelpCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -78,9 +81,11 @@ interface GuidanceDashboardProps {
   guidance: EnhancedGuidanceData;
   onClose: () => void;
   onDeleteSession: () => void;
+  onShowPublicDefender?: () => void;
+  onShowLegalAid?: () => void;
 }
 
-export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: GuidanceDashboardProps) {
+export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPublicDefender, onShowLegalAid }: GuidanceDashboardProps) {
   const { t } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
@@ -392,27 +397,65 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
           <CollapsibleContent>
             <Card className="mt-2">
               <CardContent className="pt-6">
-                <div className="space-y-4">
-                  {guidance.resources.map((resource, index) => (
-                    <div key={index} className="border rounded-lg p-4">
-                      <h4 className="font-medium mb-2">{resource.type}</h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        {resource.description}
-                      </p>
-                      <div className="flex items-center gap-4 text-sm">
-                        <div className="flex items-center gap-1">
-                          <Phone className="h-3 w-3" />
-                          {resource.contact}
+                <div className="space-y-3">
+                  {/* Public Defender Office */}
+                  {onShowPublicDefender && (
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start h-auto py-4 px-4"
+                      onClick={onShowPublicDefender}
+                    >
+                      <div className="flex items-start gap-3 w-full">
+                        <MapPin className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div className="flex-1 text-left">
+                          <div className="font-semibold text-base mb-1">Public Defender Office</div>
+                          <p className="text-sm text-muted-foreground">
+                            Search for public defender offices near you
+                          </p>
                         </div>
-                        {resource.hours && (
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-3 w-3" />
-                            {resource.hours}
-                          </div>
-                        )}
+                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
                       </div>
-                    </div>
-                  ))}
+                    </Button>
+                  )}
+
+                  {/* Legal Aid Organizations */}
+                  {onShowLegalAid && (
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start h-auto py-4 px-4"
+                      onClick={onShowLegalAid}
+                    >
+                      <div className="flex items-start gap-3 w-full">
+                        <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                        <div className="flex-1 text-left">
+                          <div className="font-semibold text-base mb-1">Legal Aid</div>
+                          <p className="text-sm text-muted-foreground">
+                            Find legal aid organizations and free legal services
+                          </p>
+                        </div>
+                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                      </div>
+                    </Button>
+                  )}
+
+                  {/* Court Self-Help Center */}
+                  <Link href="/court-locator">
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start h-auto py-4 px-4"
+                    >
+                      <div className="flex items-start gap-3 w-full">
+                        <Building className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <div className="flex-1 text-left">
+                          <div className="font-semibold text-base mb-1">Court Self-Help Center</div>
+                          <p className="text-sm text-muted-foreground">
+                            Find local courthouses and court information
+                          </p>
+                        </div>
+                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                      </div>
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
