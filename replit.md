@@ -12,7 +12,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Frontend Architecture
 
-The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui components built on Radix UI primitives. Styling is managed with Tailwind CSS, incorporating a custom legal-themed design system. Framer Motion provides animations. State management employs TanStack Query for server state (caching, background updates) and React hooks for local state. The application supports light/dark modes and is optimized for mobile responsiveness across all features, including a mobile hamburger menu and adaptive display of content. It features internationalization (i18n) with `react-i18next` for Spanish translation support.
+The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui components built on Radix UI primitives. Styling is managed with Tailwind CSS, incorporating a custom legal-themed design system. Framer Motion provides animations. State management employs TanStack Query for server state (caching, background updates) and React hooks for local state. The application supports light/dark modes and is optimized for mobile responsiveness across all features, including a mobile hamburger menu and adaptive display of content. It features full bilingual support with complete internationalization (i18n) using `react-i18next` - all 13 pages are fully translated to Spanish with 700+ translation keys covering the entire user interface.
 
 ### Backend Architecture
 
