@@ -1213,6 +1213,21 @@ i18n
               "a2": "Yes, most courthouses are open to the public during business hours. This can help you find the correct courtroom and feel more comfortable on your actual court date.",
               "q3": "What should I bring to court?",
               "a3": "Bring your court summons, valid ID, any relevant documents related to your case, and a pen and paper to take notes. Dress professionally and arrive early."
+            },
+            "courtInformation": {
+              "title": "Important Court Information",
+              "courtTypesCard": {
+                "title": "Court Types",
+                "description": "Different courts handle different types of cases. Federal courts handle federal crimes, state courts handle most criminal cases, and municipal courts handle local violations."
+              },
+              "courtHoursCard": {
+                "title": "Court Hours",
+                "description": "Most courts operate Monday through Friday during business hours. Some courts have extended hours or weekend sessions for certain matters."
+              },
+              "dataSourcesCard": {
+                "title": "Data Sources",
+                "description": "Court locations from OpenStreetMap and CourtListener (Free Law Project). Always call ahead to confirm hours and procedures as data may vary."
+              }
             }
           },
           "developmentRoadmap": {
@@ -2597,6 +2612,21 @@ i18n
               "a2": "Sí, la mayoría de los tribunales están abiertos al público durante horas de oficina. Esto puede ayudarle a encontrar la sala correcta y sentirse más cómodo en su fecha de comparecencia real.",
               "q3": "¿Qué debo llevar al tribunal?",
               "a3": "Lleve su citación judicial, identificación válida, cualquier documento relevante relacionado con su caso, y papel y bolígrafo para tomar notas. Vístase profesionalmente y llegue temprano."
+            },
+            "courtInformation": {
+              "title": "Información Importante del Tribunal",
+              "courtTypesCard": {
+                "title": "Tipos de Tribunales",
+                "description": "Diferentes tribunales manejan diferentes tipos de casos. Los tribunales federales manejan crímenes federales, los tribunales estatales manejan la mayoría de casos penales, y los tribunales municipales manejan violaciones locales."
+              },
+              "courtHoursCard": {
+                "title": "Horarios del Tribunal",
+                "description": "La mayoría de los tribunales operan de lunes a viernes durante horas de oficina. Algunos tribunales tienen horarios extendidos o sesiones de fin de semana para ciertos asuntos."
+              },
+              "dataSourcesCard": {
+                "title": "Fuentes de Datos",
+                "description": "Ubicaciones de tribunales de OpenStreetMap y CourtListener (Proyecto de Ley Libre). Siempre llame con anticipación para confirmar horarios y procedimientos ya que los datos pueden variar."
+              }
             }
           },
           "developmentRoadmap": {

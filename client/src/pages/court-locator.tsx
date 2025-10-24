@@ -263,7 +263,7 @@ export default function CourtLocator() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-6">
-                Important Court Information
+                {t('courtLocator.courtInformation.title')}
               </h2>
             </div>
           </ScrollReveal>
@@ -275,10 +275,9 @@ export default function CourtLocator() {
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <Scale className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">Court Types</h3>
+                  <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.courtTypesCard.title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Different courts handle different types of cases. Federal courts handle federal crimes, 
-                    state courts handle most criminal cases, and municipal courts handle local violations.
+                    {t('courtLocator.courtInformation.courtTypesCard.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -290,10 +289,9 @@ export default function CourtLocator() {
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                     <Clock className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">Court Hours</h3>
+                  <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.courtHoursCard.title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Most courts operate Monday through Friday during business hours. 
-                    Some courts have extended hours or weekend sessions for certain matters.
+                    {t('courtLocator.courtInformation.courtHoursCard.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -305,10 +303,9 @@ export default function CourtLocator() {
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">Data Sources</h3>
+                  <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.dataSourcesCard.title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Court locations from OpenStreetMap and CourtListener (Free Law Project). 
-                    Always call ahead to confirm hours and procedures as data may vary.
+                    {t('courtLocator.courtInformation.dataSourcesCard.description')}
                   </p>
                 </CardContent>
               </Card>
