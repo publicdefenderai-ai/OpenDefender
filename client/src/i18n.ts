@@ -1273,7 +1273,7 @@ i18n
               "title": "Development Roadmap",
               "subtitle": "Our Vision for the Future",
               "description": "Track our progress as we build the most comprehensive free legal assistance platform. This roadmap is transparent, data-driven, and focused on expanding access to justice.",
-              "openSourceNote": "This project is open-source (MIT License) and built in public. We're committed to transparency in development and decision-making."
+              "openSourceNote": "This project is open-source (MIT License for code, CC0 for documentation) and built in public. We're committed to transparency in development and decision-making."
             },
             "mission": {
               "title": "Our Mission & Principles",
@@ -1442,7 +1442,7 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Mission Statement",
-              "subtitle": "Public Defender AI is a public good dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and Creative Commons for documentation, ensuring it remains free and accessible to all who need it."
+              "subtitle": "Public Defender AI is a public good dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and CC0 (Creative Commons Zero) for documentation, ensuring it remains free and accessible to all who need it."
             },
             "goals": {
               "title": "Our Primary Goals",
@@ -2725,7 +2725,7 @@ i18n
               "title": "Hoja de Ruta de Desarrollo",
               "subtitle": "Nuestra Visión para el Futuro",
               "description": "Siga nuestro progreso mientras construimos la plataforma de asistencia legal gratuita más completa. Esta hoja de ruta es transparente, basada en datos y enfocada en expandir el acceso a la justicia.",
-              "openSourceNote": "Este proyecto es de código abierto (Licencia MIT) y se construye en público. Estamos comprometidos con la transparencia en el desarrollo y la toma de decisiones."
+              "openSourceNote": "Este proyecto es de código abierto (Licencia MIT para código, CC0 para documentación) y se construye en público. Estamos comprometidos con la transparencia en el desarrollo y la toma de decisiones."
             },
             "mission": {
               "title": "Nuestra Misión y Principios",
@@ -2894,7 +2894,7 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Declaración de Misión",
-              "subtitle": "Defensor Público IA es un bien público dedicado a aprovechar la inteligencia artificial, datos legales y automatización para proporcionar asistencia oportuna, precisa y accesible a personas en los Estados Unidos acusadas de crímenes y que pueden no tener acceso inmediato a asesoramiento legal. Esta plataforma se construye sobre principios de código abierto con licencia MIT para el código y Creative Commons para la documentación, asegurando que permanezca gratuita y accesible para todos los que la necesiten."
+              "subtitle": "Defensor Público IA es un bien público dedicado a aprovechar la inteligencia artificial, datos legales y automatización para proporcionar asistencia oportuna, precisa y accesible a personas en los Estados Unidos acusadas de crímenes y que pueden no tener acceso inmediato a asesoramiento legal. Esta plataforma se construye sobre principios de código abierto con licencia MIT para el código y CC0 (Creative Commons Zero) para la documentación, asegurando que permanezca gratuita y accesible para todos los que la necesiten."
             },
             "goals": {
               "title": "Nuestros Objetivos Principales",
