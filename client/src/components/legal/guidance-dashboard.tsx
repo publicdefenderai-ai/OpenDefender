@@ -129,8 +129,8 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
       {/* Case Summary Header */}
       <Card className="border-l-4 border-l-blue-600">
         <CardHeader>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex items-center gap-2 md:gap-4 flex-wrap">
               <div className="flex items-center gap-2">
                 <Scale className="h-5 w-5 text-blue-600" />
                 <CardTitle className="text-xl">{t('legalGuidance.dashboard.title')}</CardTitle>
@@ -140,16 +140,17 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
                 size="sm"
                 onClick={() => setShowSensitiveInfo(!showSensitiveInfo)}
                 className="gap-2"
+                data-testid="button-toggle-sensitive-info"
               >
                 {showSensitiveInfo ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 {showSensitiveInfo ? t('legalGuidance.dashboard.hideDetails') : t('legalGuidance.dashboard.showDetails')}
               </Button>
             </div>
-            <div className="flex gap-2">
-              <Button variant="outline" onClick={onClose}>
+            <div className="flex gap-2 flex-wrap md:flex-nowrap">
+              <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
                 {t('legalGuidance.dashboard.close')}
               </Button>
-              <Button variant="outline" className="gap-2">
+              <Button variant="outline" className="gap-2 flex-1 md:flex-none" data-testid="button-export-pdf">
                 <Download className="h-4 w-4" />
                 {t('legalGuidance.dashboard.exportPDF')}
               </Button>
