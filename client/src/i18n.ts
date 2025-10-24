@@ -678,7 +678,80 @@ i18n
             },
             "steps": {
               "yourRights": "Your Rights at This Stage:",
-              "whatToExpect": "What to Expect:"
+              "whatToExpect": "What to Expect:",
+              "step1": {
+                "title": "Arrest",
+                "description": "Law enforcement takes you into custody based on probable cause or a warrant.",
+                "timeframe": "Immediate",
+                "rights": [
+                  "Right to remain silent",
+                  "Right to an attorney",
+                  "Right to a phone call",
+                  "Right to be informed of charges"
+                ]
+              },
+              "step2": {
+                "title": "Booking",
+                "description": "Processing at the police station including fingerprints, photos, and personal information.",
+                "timeframe": "1-3 hours",
+                "rights": [
+                  "Right to medical attention if needed",
+                  "Right to contact attorney or family",
+                  "Right to humane treatment"
+                ]
+              },
+              "step3": {
+                "title": "Initial Appearance/Arraignment",
+                "description": "First court appearance where charges are formally read and you enter a plea.",
+                "timeframe": "24-72 hours",
+                "rights": [
+                  "Right to be informed of charges",
+                  "Right to have attorney present",
+                  "Right to request public defender",
+                  "Right to reasonable bail"
+                ]
+              },
+              "step4": {
+                "title": "Preliminary Hearing",
+                "description": "Court determines if there's probable cause to believe you committed the crime.",
+                "timeframe": "1-2 weeks",
+                "rights": [
+                  "Right to challenge evidence",
+                  "Right to cross-examine witnesses",
+                  "Right to attorney representation"
+                ]
+              },
+              "step5": {
+                "title": "Discovery",
+                "description": "Both sides exchange evidence, witness lists, and other case information.",
+                "timeframe": "Weeks to months",
+                "rights": [
+                  "Right to see prosecution's evidence",
+                  "Right to present defense evidence",
+                  "Right to expert witnesses"
+                ]
+              },
+              "step6": {
+                "title": "Trial",
+                "description": "Formal presentation of evidence before a judge or jury to determine guilt or innocence.",
+                "timeframe": "Varies",
+                "rights": [
+                  "Right to jury trial",
+                  "Right to confront witnesses",
+                  "Right to remain silent",
+                  "Right to present defense"
+                ]
+              },
+              "step7": {
+                "title": "Sentencing",
+                "description": "If convicted, the court determines the appropriate punishment.",
+                "timeframe": "2-6 weeks after trial",
+                "rights": [
+                  "Right to speak at sentencing",
+                  "Right to appeal",
+                  "Right to fair and proportional punishment"
+                ]
+              }
             },
             "additionalInfo": {
               "title": "Important Notes",
@@ -1810,7 +1883,80 @@ i18n
             },
             "steps": {
               "yourRights": "Sus Derechos en Esta Etapa:",
-              "whatToExpect": "Qué Esperar:"
+              "whatToExpect": "Qué Esperar:",
+              "step1": {
+                "title": "Arresto",
+                "description": "Las fuerzas del orden lo toman bajo custodia basándose en causa probable o una orden judicial.",
+                "timeframe": "Inmediato",
+                "rights": [
+                  "Derecho a permanecer en silencio",
+                  "Derecho a un abogado",
+                  "Derecho a una llamada telefónica",
+                  "Derecho a ser informado de los cargos"
+                ]
+              },
+              "step2": {
+                "title": "Registro",
+                "description": "Procesamiento en la estación de policía incluyendo huellas dactilares, fotos e información personal.",
+                "timeframe": "1-3 horas",
+                "rights": [
+                  "Derecho a atención médica si es necesario",
+                  "Derecho a contactar a un abogado o familia",
+                  "Derecho a trato humano"
+                ]
+              },
+              "step3": {
+                "title": "Comparecencia Inicial/Acusación Formal",
+                "description": "Primera comparecencia en corte donde se leen formalmente los cargos y usted se declara.",
+                "timeframe": "24-72 horas",
+                "rights": [
+                  "Derecho a ser informado de los cargos",
+                  "Derecho a tener un abogado presente",
+                  "Derecho a solicitar un defensor público",
+                  "Derecho a fianza razonable"
+                ]
+              },
+              "step4": {
+                "title": "Audiencia Preliminar",
+                "description": "La corte determina si hay causa probable para creer que usted cometió el crimen.",
+                "timeframe": "1-2 semanas",
+                "rights": [
+                  "Derecho a impugnar evidencia",
+                  "Derecho a interrogar testigos",
+                  "Derecho a representación legal"
+                ]
+              },
+              "step5": {
+                "title": "Descubrimiento",
+                "description": "Ambas partes intercambian evidencia, listas de testigos y otra información del caso.",
+                "timeframe": "Semanas a meses",
+                "rights": [
+                  "Derecho a ver la evidencia de la fiscalía",
+                  "Derecho a presentar evidencia de defensa",
+                  "Derecho a testigos expertos"
+                ]
+              },
+              "step6": {
+                "title": "Juicio",
+                "description": "Presentación formal de evidencia ante un juez o jurado para determinar culpabilidad o inocencia.",
+                "timeframe": "Varía",
+                "rights": [
+                  "Derecho a juicio por jurado",
+                  "Derecho a confrontar testigos",
+                  "Derecho a permanecer en silencio",
+                  "Derecho a presentar defensa"
+                ]
+              },
+              "step7": {
+                "title": "Sentencia",
+                "description": "Si es condenado, la corte determina el castigo apropiado.",
+                "timeframe": "2-6 semanas después del juicio",
+                "rights": [
+                  "Derecho a hablar en la sentencia",
+                  "Derecho a apelar",
+                  "Derecho a castigo justo y proporcional"
+                ]
+              }
             },
             "additionalInfo": {
               "title": "Notas Importantes",

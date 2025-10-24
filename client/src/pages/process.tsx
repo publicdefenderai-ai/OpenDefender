@@ -11,81 +11,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
-const processSteps = [
-  {
-    title: "Arrest",
-    description: "Law enforcement takes you into custody based on probable cause or a warrant.",
-    timeframe: "Immediate",
-    rights: [
-      "Right to remain silent",
-      "Right to an attorney",
-      "Right to a phone call",
-      "Right to be informed of charges"
-    ]
-  },
-  {
-    title: "Booking",
-    description: "Processing at the police station including fingerprints, photos, and personal information.",
-    timeframe: "1-3 hours",
-    rights: [
-      "Right to medical attention if needed",
-      "Right to contact attorney or family",
-      "Right to humane treatment"
-    ]
-  },
-  {
-    title: "Initial Appearance/Arraignment",
-    description: "First court appearance where charges are formally read and you enter a plea.",
-    timeframe: "24-72 hours",
-    rights: [
-      "Right to be informed of charges",
-      "Right to have attorney present",
-      "Right to request public defender",
-      "Right to reasonable bail"
-    ]
-  },
-  {
-    title: "Preliminary Hearing",
-    description: "Court determines if there's probable cause to believe you committed the crime.",
-    timeframe: "1-2 weeks",
-    rights: [
-      "Right to challenge evidence",
-      "Right to cross-examine witnesses",
-      "Right to attorney representation"
-    ]
-  },
-  {
-    title: "Discovery",
-    description: "Both sides exchange evidence, witness lists, and other case information.",
-    timeframe: "Weeks to months",
-    rights: [
-      "Right to see prosecution's evidence",
-      "Right to present defense evidence",
-      "Right to expert witnesses"
-    ]
-  },
-  {
-    title: "Trial",
-    description: "Formal presentation of evidence before a judge or jury to determine guilt or innocence.",
-    timeframe: "Varies",
-    rights: [
-      "Right to jury trial",
-      "Right to confront witnesses",
-      "Right to remain silent",
-      "Right to present defense"
-    ]
-  },
-  {
-    title: "Sentencing",
-    description: "If convicted, the court determines the appropriate punishment.",
-    timeframe: "2-6 weeks after trial",
-    rights: [
-      "Right to speak at sentencing",
-      "Right to appeal",
-      "Right to fair and proportional punishment"
-    ]
-  }
-];
+// Process steps are now in i18n translations
 
 function ProcessStep({ number, title, description, timeframe, rights, isLast, t }: {
   number: number;
@@ -183,15 +109,15 @@ export default function Process() {
           </ScrollReveal>
 
           <div className="space-y-0">
-            {processSteps.map((step, index) => (
-              <ScrollReveal key={step.title} delay={index * 0.1}>
+            {[1, 2, 3, 4, 5, 6, 7].map((stepNum) => (
+              <ScrollReveal key={`step${stepNum}`} delay={(stepNum - 1) * 0.1}>
                 <ProcessStep
-                  number={index + 1}
-                  title={step.title}
-                  description={step.description}
-                  timeframe={step.timeframe}
-                  rights={step.rights}
-                  isLast={index === processSteps.length - 1}
+                  number={stepNum}
+                  title={t(`process.steps.step${stepNum}.title`)}
+                  description={t(`process.steps.step${stepNum}.description`)}
+                  timeframe={t(`process.steps.step${stepNum}.timeframe`)}
+                  rights={t(`process.steps.step${stepNum}.rights`, { returnObjects: true }) as string[]}
+                  isLast={stepNum === 7}
                   t={t}
                 />
               </ScrollReveal>
