@@ -19,6 +19,7 @@ import {
   Home as HomeIcon
 } from "lucide-react";
 import { useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 
 interface GetStartedMenuProps {
   isOpen: boolean;
@@ -32,6 +33,7 @@ type MenuLevel = "main" | "legal-rights" | "legal-aid";
 export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLegalAid }: GetStartedMenuProps) {
   const [, setLocation] = useLocation();
   const [currentMenu, setCurrentMenu] = useState<MenuLevel>("main");
+  const { t } = useTranslation();
 
   const handleNavigate = (path: string) => {
     setLocation(path);
@@ -82,10 +84,10 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               </div>
               <div className="flex-1 text-left">
                 <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors">
-                  Get Guidance For My Case
+                  {t('getStartedMenu.main.caseGuidance.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Personalized legal guidance based on your situation
+                  {t('getStartedMenu.main.caseGuidance.description')}
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors" />
@@ -107,10 +109,10 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               </div>
               <div className="flex-1 text-left">
                 <h3 className="font-semibold text-lg group-hover:text-amber-600 transition-colors">
-                  Immigration Enforcement
+                  {t('getStartedMenu.main.immigration.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Rights during ICE encounters and deportation
+                  {t('getStartedMenu.main.immigration.description')}
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-amber-600 transition-colors" />
@@ -132,10 +134,10 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               </div>
               <div className="flex-1 text-left">
                 <h3 className="font-semibold text-lg group-hover:text-green-600 transition-colors">
-                  Legal Rights Info
+                  {t('getStartedMenu.main.legalRights.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Constitutional rights and legal processes
+                  {t('getStartedMenu.main.legalRights.description')}
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 transition-colors" />
@@ -157,10 +159,10 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               </div>
               <div className="flex-1 text-left">
                 <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors">
-                  Legal Aid Resources & Support
+                  {t('getStartedMenu.main.legalAid.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Find legal help and support services
+                  {t('getStartedMenu.main.legalAid.description')}
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors" />
@@ -181,7 +183,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="button-back"
       >
         <ArrowLeft className="h-4 w-4 mr-2" />
-        Back to Main Menu
+        {t('getStartedMenu.legalRightsSubmenu.backButton')}
       </Button>
 
       <button
@@ -194,7 +196,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Shield className="h-5 w-5 text-blue-600" />
               <span className="font-medium group-hover:text-blue-600 transition-colors">
-                Your Constitutional Rights
+                {t('getStartedMenu.legalRightsSubmenu.constitutionalRights')}
               </span>
             </div>
           </CardContent>
@@ -211,7 +213,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Calendar className="h-5 w-5 text-green-600" />
               <span className="font-medium group-hover:text-green-600 transition-colors">
-                Criminal Justice Process
+                {t('getStartedMenu.legalRightsSubmenu.criminalJusticeProcess')}
               </span>
             </div>
           </CardContent>
@@ -228,7 +230,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Search className="h-5 w-5 text-purple-600" />
               <span className="font-medium group-hover:text-purple-600 transition-colors">
-                Search and Seizure
+                {t('getStartedMenu.legalRightsSubmenu.searchSeizure')}
               </span>
             </div>
           </CardContent>
@@ -245,7 +247,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <HomeIcon className="h-5 w-5 text-indigo-600" />
               <span className="font-medium group-hover:text-indigo-600 transition-colors">
-                Assisting Friends or Family
+                {t('getStartedMenu.legalRightsSubmenu.assistingFriends')}
               </span>
             </div>
           </CardContent>
@@ -262,7 +264,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Book className="h-5 w-5 text-orange-600" />
               <span className="font-medium group-hover:text-orange-600 transition-colors">
-                Legal Glossary
+                {t('getStartedMenu.legalRightsSubmenu.legalGlossary')}
               </span>
             </div>
           </CardContent>
@@ -281,7 +283,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="button-back-aid"
       >
         <ArrowLeft className="h-4 w-4 mr-2" />
-        Back to Main Menu
+        {t('getStartedMenu.legalAidSubmenu.backButton')}
       </Button>
 
       <button
@@ -294,7 +296,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-blue-600" />
               <span className="font-medium group-hover:text-blue-600 transition-colors">
-                Find Public Defender
+                {t('getStartedMenu.legalAidSubmenu.publicDefender')}
               </span>
             </div>
           </CardContent>
@@ -311,7 +313,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <HelpCircle className="h-5 w-5 text-green-600" />
               <span className="font-medium group-hover:text-green-600 transition-colors">
-                Legal Aid Organizations
+                {t('getStartedMenu.legalAidSubmenu.legalAidOrgs')}
               </span>
             </div>
           </CardContent>
@@ -328,7 +330,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Route className="h-5 w-5 text-purple-600" />
               <span className="font-medium group-hover:text-purple-600 transition-colors">
-                Diversion Programs
+                {t('getStartedMenu.legalAidSubmenu.diversionPrograms')}
               </span>
             </div>
           </CardContent>
@@ -345,7 +347,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Eraser className="h-5 w-5 text-indigo-600" />
               <span className="font-medium group-hover:text-indigo-600 transition-colors">
-                Records Expungement
+                {t('getStartedMenu.legalAidSubmenu.recordsExpungement')}
               </span>
             </div>
           </CardContent>
@@ -357,11 +359,11 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
   const getMenuTitle = () => {
     switch (currentMenu) {
       case "legal-rights":
-        return "Legal Rights Info";
+        return t('getStartedMenu.legalRightsSubmenu.title');
       case "legal-aid":
-        return "Legal Aid Resources & Support";
+        return t('getStartedMenu.legalAidSubmenu.title');
       default:
-        return "What Do You Need?";
+        return t('getStartedMenu.main.title');
     }
   };
 

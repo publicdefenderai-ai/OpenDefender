@@ -387,6 +387,44 @@ i18n
               }
             }
           },
+          "getStartedMenu": {
+            "main": {
+              "title": "What Do You Need?",
+              "caseGuidance": {
+                "title": "Get Guidance For My Case",
+                "description": "Personalized legal guidance based on your situation"
+              },
+              "immigration": {
+                "title": "Immigration Enforcement",
+                "description": "Rights during ICE encounters and deportation"
+              },
+              "legalRights": {
+                "title": "Legal Rights Info",
+                "description": "Constitutional rights and legal processes"
+              },
+              "legalAid": {
+                "title": "Legal Aid Resources & Support",
+                "description": "Find legal help and support services"
+              }
+            },
+            "legalRightsSubmenu": {
+              "title": "Legal Rights Info",
+              "backButton": "Back to Main Menu",
+              "constitutionalRights": "Your Constitutional Rights",
+              "criminalJusticeProcess": "Criminal Justice Process",
+              "searchSeizure": "Search and Seizure",
+              "assistingFriends": "Assisting Friends or Family",
+              "legalGlossary": "Legal Glossary"
+            },
+            "legalAidSubmenu": {
+              "title": "Legal Aid Resources & Support",
+              "backButton": "Back to Main Menu",
+              "publicDefender": "Find Public Defender",
+              "legalAidOrgs": "Legal Aid Organizations",
+              "diversionPrograms": "Diversion Programs",
+              "recordsExpungement": "Records Expungement"
+            }
+          },
           "case": {
             "hero": {
               "title": "Case Guidance",
@@ -1799,6 +1837,44 @@ i18n
                 "title": "Privacidad Protegida:",
                 "text": "Esta orientación se genera en base a su información y se eliminará automáticamente después de que termine su sesión. No se almacena información personal de forma permanente."
               }
+            }
+          },
+          "getStartedMenu": {
+            "main": {
+              "title": "¿Qué Necesita?",
+              "caseGuidance": {
+                "title": "Obtener Orientación para Mi Caso",
+                "description": "Orientación legal personalizada basada en su situación"
+              },
+              "immigration": {
+                "title": "Aplicación de Inmigración",
+                "description": "Derechos durante encuentros con ICE y deportación"
+              },
+              "legalRights": {
+                "title": "Información de Derechos Legales",
+                "description": "Derechos constitucionales y procesos legales"
+              },
+              "legalAid": {
+                "title": "Recursos y Apoyo de Asistencia Legal",
+                "description": "Encuentre ayuda legal y servicios de apoyo"
+              }
+            },
+            "legalRightsSubmenu": {
+              "title": "Información de Derechos Legales",
+              "backButton": "Volver al Menú Principal",
+              "constitutionalRights": "Sus Derechos Constitucionales",
+              "criminalJusticeProcess": "Proceso de Justicia Criminal",
+              "searchSeizure": "Registro e Incautación",
+              "assistingFriends": "Ayudar a Amigos o Familiares",
+              "legalGlossary": "Glosario Legal"
+            },
+            "legalAidSubmenu": {
+              "title": "Recursos y Apoyo de Asistencia Legal",
+              "backButton": "Volver al Menú Principal",
+              "publicDefender": "Encontrar Defensor Público",
+              "legalAidOrgs": "Organizaciones de Asistencia Legal",
+              "diversionPrograms": "Programas de Desviación",
+              "recordsExpungement": "Eliminación de Antecedentes"
             }
           },
           "case": {
