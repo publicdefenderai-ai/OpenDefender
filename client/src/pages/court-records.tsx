@@ -269,7 +269,7 @@ export default function CourtRecords() {
                     <Card key={result.id} className="hover:shadow-lg transition-shadow">
                       <CardHeader>
                         <CardTitle className="text-lg mb-2" data-testid={`text-opinion-name-${idx}`}>
-                          {result.case_name}
+                          {result.caseName || result.caseNameFull || result.case_name}
                         </CardTitle>
                         <CardDescription className="space-y-1">
                           <div className="flex flex-wrap gap-2">
@@ -277,9 +277,9 @@ export default function CourtRecords() {
                             {result.citation && result.citation.length > 0 && (
                               <Badge variant="secondary">{result.citation[0]}</Badge>
                             )}
-                            {result.date_filed && (
+                            {(result.dateFiled || result.date_filed) && (
                               <span className="text-sm">
-                                {t('courtRecords.results.filed', { date: format(new Date(result.date_filed), 'MMM d, yyyy') })}
+                                {t('courtRecords.results.filed', { date: format(new Date(result.dateFiled || result.date_filed), 'MMM d, yyyy') })}
                               </span>
                             )}
                           </div>

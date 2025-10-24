@@ -52,15 +52,16 @@ interface RecapDocument {
 interface Opinion {
   id: number;
   absolute_url: string;
-  case_name: string;
-  case_name_short: string;
+  caseName: string; // Search API uses camelCase
+  caseNameShort?: string;
+  caseNameFull?: string;
   court: string;
   court_id: string;
-  docket_number: string;
-  date_filed: string;
-  citation: string[];
-  status: string;
-  snippet: string;
+  docketNumber?: string;
+  dateFiled?: string;
+  citation?: string[];
+  status?: string;
+  snippet?: string;
 }
 
 interface SearchResponse<T> {
