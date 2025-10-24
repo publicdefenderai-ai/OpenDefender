@@ -108,6 +108,7 @@ export class RecapService {
   async searchOpinions(params: CourtListenerSearchParams): Promise<SearchResponse<Opinion>> {
     try {
       // Remove undefined values to avoid API errors
+      // Note: The search API has different ordering rules and doesn't accept order_by the same way
       const cleanParams: Record<string, string> = {
         type: 'o',
         format: 'json'
@@ -119,7 +120,7 @@ export class RecapService {
       if (params.court) cleanParams.court = params.court;
       if (params.filed_after) cleanParams.filed_after = params.filed_after;
       if (params.filed_before) cleanParams.filed_before = params.filed_before;
-      if (params.order_by) cleanParams.order_by = params.order_by;
+      // Do NOT include order_by for the search API - it uses different ordering
       
       const response = await axios.get(`${COURTLISTENER_BASE_URL}/search/`, {
         headers: this.headers,
@@ -176,7 +177,7 @@ export class RecapService {
       court: query.court,
       filed_after: query.dateFrom,
       filed_before: query.dateTo,
-      order_by: '-date_filed'
+      order_by: '-date_created' // For dockets API
     };
 
     // Search both RECAP dockets and opinions in parallel
