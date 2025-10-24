@@ -355,7 +355,7 @@ export default function DevelopmentRoadmap() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission & Principles</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">{t('developmentRoadmap.mission.title')}</h2>
             </div>
           </ScrollReveal>
 
@@ -366,9 +366,9 @@ export default function DevelopmentRoadmap() {
                   <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-3">Access to Justice</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{t('developmentRoadmap.mission.accessToJustice.title')}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Making legal guidance accessible to everyone, regardless of economic status or location
+                    {t('developmentRoadmap.mission.accessToJustice.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -380,9 +380,9 @@ export default function DevelopmentRoadmap() {
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-3">Privacy First</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{t('developmentRoadmap.mission.privacyFirst.title')}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Protecting user privacy with ephemeral sessions and no data retention
+                    {t('developmentRoadmap.mission.privacyFirst.description')}
                   </p>
                 </CardContent>
               </Card>
@@ -394,9 +394,9 @@ export default function DevelopmentRoadmap() {
                   <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-3">Continuous Improvement</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{t('developmentRoadmap.mission.continuousImprovement.title')}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Iterating based on user feedback and evolving legal landscape
+                    {t('developmentRoadmap.mission.continuousImprovement.description')}
                   </p>
                 </CardContent>
               </Card>

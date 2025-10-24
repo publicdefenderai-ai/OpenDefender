@@ -1237,6 +1237,21 @@ i18n
               "description": "Track our progress as we build the most comprehensive free legal assistance platform. This roadmap is transparent, data-driven, and focused on expanding access to justice.",
               "openSourceNote": "This project is open-source (MIT License) and built in public. We're committed to transparency in development and decision-making."
             },
+            "mission": {
+              "title": "Our Mission & Principles",
+              "accessToJustice": {
+                "title": "Access to Justice",
+                "description": "Making legal guidance accessible to everyone, regardless of economic status or location"
+              },
+              "privacyFirst": {
+                "title": "Privacy First",
+                "description": "Protecting user privacy with ephemeral sessions and no data retention"
+              },
+              "continuousImprovement": {
+                "title": "Continuous Improvement",
+                "description": "Iterating based on user feedback and evolving legal landscape"
+              }
+            },
             "stats": {
               "completed": "Completed",
               "inProgress": "In Progress",
@@ -2635,6 +2650,21 @@ i18n
               "subtitle": "Nuestra Visión para el Futuro",
               "description": "Siga nuestro progreso mientras construimos la plataforma de asistencia legal gratuita más completa. Esta hoja de ruta es transparente, basada en datos y enfocada en expandir el acceso a la justicia.",
               "openSourceNote": "Este proyecto es de código abierto (Licencia MIT) y se construye en público. Estamos comprometidos con la transparencia en el desarrollo y la toma de decisiones."
+            },
+            "mission": {
+              "title": "Nuestra Misión y Principios",
+              "accessToJustice": {
+                "title": "Acceso a la Justicia",
+                "description": "Hacer que la orientación legal sea accesible para todos, independientemente de su estado económico o ubicación"
+              },
+              "privacyFirst": {
+                "title": "Privacidad Primero",
+                "description": "Proteger la privacidad del usuario con sesiones efímeras y sin retención de datos"
+              },
+              "continuousImprovement": {
+                "title": "Mejora Continua",
+                "description": "Iterando basándonos en comentarios de usuarios y el panorama legal en evolución"
+              }
             },
             "stats": {
               "completed": "Completado",
