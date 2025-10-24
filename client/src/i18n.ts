@@ -40,21 +40,55 @@ i18n
           },
           "home": {
             "hero": {
-              "title": "Free Legal Guidance When You Need It Most",
-              "subtitle": "Access your rights, understand your options, and find legal resources — all at no cost.",
-              "urgentHelpButton": "Need Urgent Help?",
-              "getStartedButton": "Get Started"
+              "title1": "Know Your Rights.",
+              "title2": "Protect Your Future.",
+              "subtitle": "Get free legal guidance, understand court processes, and access resources to help navigate the criminal justice system.",
+              "urgentHelpButton": "URGENT HELP NEEDED",
+              "getStartedButton": "GET STARTED",
+              "navigatingToolButton": "Navigating This Tool",
+              "urgentHelpNotice": "If you're being arrested or in court now, click \"Urgent Help\" for immediate rights information."
+            },
+            "features": {
+              "title": "Powered by Real Legal Data",
+              "subtitle": "Our AI agent uses comprehensive legal databases and court records to provide accurate, up-to-date information.",
+              "federalCourts": "Federal Court Records",
+              "federalCourtsDesc": "Access to 500M+ federal court documents through PACER and CourtListener APIs, including case law, dockets, and judicial data.",
+              "federalCourtsStatus": "Live Data Integration",
+              "stateLaws": "State & Local Laws",
+              "stateLawsDesc": "Federal and state statutes from Cornell LII, GovInfo.gov, and state legislature websites with regular updates.",
+              "stateLawsStatus": "Updated Monthly",
+              "analytics": "Criminal Justice Analytics",
+              "analyticsDesc": "DOJ APIs, Bureau of Justice Statistics, and state-specific datasets for sentencing guidelines and case outcomes.",
+              "analyticsStatus": "Mock Data (Development)"
+            },
+            "trust": {
+              "title": "Built on Trust & Transparency",
+              "subtitle": "Every piece of legal information is backed by credible sources",
+              "verifiedTitle": "Verified Citations",
+              "verifiedDesc": "All legal statements include proper citations to statutes, case law, and regulations",
+              "privacyTitle": "Privacy Protected",
+              "privacyDesc": "No personal information stored, all session data automatically deleted",
+              "currentTitle": "Current Information",
+              "currentDesc": "Legal databases updated regularly to reflect the latest laws and procedures",
+              "disclaimerTitle": "Important Legal Disclaimer:",
+              "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
             "urgentHelp": {
-              "title": "Need Immediate Legal Assistance?",
-              "subtitle": "If you're facing arrest or detention, these resources can help right now:",
-              "publicDefender": "Find Public Defender",
-              "publicDefenderDesc": "Search for public defender offices near you",
-              "legalAid": "Legal Aid Organizations",
-              "legalAidDesc": "Find free legal assistance in your area",
-              "knowRights": "Know Your Rights",
-              "knowRightsDesc": "Understand your constitutional protections",
-              "closeButton": "Close"
+              "modalTitle": "Urgent Legal Situation",
+              "arrestWarning": "If you are being arrested RIGHT NOW:",
+              "arrestWarningText": "You have the right to remain silent and the right to an attorney. Exercise these rights immediately.",
+              "immediateActions": "Immediate Actions:",
+              "stayCalmTitle": "1. Stay Calm",
+              "stayCalmText": "Do not resist arrest. Keep your hands visible. Follow instructions calmly.",
+              "assertRightsTitle": "2. Assert Your Rights",
+              "assertRightsText1": "Say clearly: \"I am exercising my right to remain silent. I want to speak to an attorney.\"",
+              "assertRightsText2": "Then stop talking to police. Do not answer questions until you have a lawyer.",
+              "noConsentTitle": "3. Do NOT Consent to Searches",
+              "noConsentText": "Say: \"I do not consent to any searches.\" Do not physically resist, but make your refusal clear.",
+              "publicDefenderTitle": "4. Request a Public Defender",
+              "publicDefenderText": "If you cannot afford an attorney, you have the right to a free public defender. Request one immediately at your first court appearance.",
+              "rememberTitle": "Remember:",
+              "rememberText": "Anything you say can and will be used against you in court. The best protection is to remain silent until you have legal representation."
             },
             "whatWeDo": {
               "title": "What We Do",
@@ -99,6 +133,35 @@ i18n
               "recapDesc": "Free access to federal court records crowdsourced from PACER users",
               "cornell": "Cornell Legal Institute",
               "cornellDesc": "US Constitution, federal statutes, and legal resources"
+            },
+            "publicDefenderSearch": {
+              "title": "Find Public Defender Offices",
+              "inputLabel": "Enter ZIP Code",
+              "inputPlaceholder": "Enter 5-digit ZIP code",
+              "searchButton": "Search",
+              "searching": "Searching...",
+              "noResults": "No public defender offices found within 50 miles. Try a different ZIP code or contact your local courthouse for information.",
+              "error": "Please enter a valid 5-digit ZIP code",
+              "errorGeneral": "Unable to search for offices. Please try again or contact your local court for information.",
+              "county": "County",
+              "milesAway": "mi away",
+              "address": "Address",
+              "phone": "Phone",
+              "email": "Email",
+              "hours": "Hours",
+              "services": "Services",
+              "directions": "Directions"
+            },
+            "legalAidSearch": {
+              "title": "Find Legal Aid Organizations",
+              "inputLabel": "Enter ZIP Code",
+              "inputPlaceholder": "Enter 5-digit ZIP code",
+              "searchButton": "Search",
+              "searching": "Searching...",
+              "noResults": "No legal aid organizations found within 100 miles. Try a different ZIP code or contact your state bar association.",
+              "error": "Please enter a valid 5-digit ZIP code",
+              "errorGeneral": "Unable to search for organizations. Please try again or contact your local bar association.",
+              "servicesOffered": "Services Offered"
             }
           },
           "footer": {
@@ -165,21 +228,55 @@ i18n
           },
           "home": {
             "hero": {
-              "title": "Orientación Legal Gratuita Cuando Más lo Necesita",
-              "subtitle": "Acceda a sus derechos, entienda sus opciones y encuentre recursos legales — todo sin costo alguno.",
-              "urgentHelpButton": "¿Necesita Ayuda Urgente?",
-              "getStartedButton": "Comenzar"
+              "title1": "Conozca sus Derechos.",
+              "title2": "Proteja su Futuro.",
+              "subtitle": "Obtenga orientación legal gratuita, entienda los procesos judiciales y acceda a recursos para navegar el sistema de justicia penal.",
+              "urgentHelpButton": "AYUDA URGENTE NECESARIA",
+              "getStartedButton": "COMENZAR",
+              "navigatingToolButton": "Cómo Usar Esta Herramienta",
+              "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente\" para información inmediata sobre sus derechos."
+            },
+            "features": {
+              "title": "Respaldado por Datos Legales Reales",
+              "subtitle": "Nuestro agente de IA utiliza bases de datos legales exhaustivas y registros judiciales para proporcionar información precisa y actualizada.",
+              "federalCourts": "Registros Judiciales Federales",
+              "federalCourtsDesc": "Acceso a más de 500M de documentos judiciales federales a través de las API de PACER y CourtListener, incluyendo jurisprudencia, expedientes y datos judiciales.",
+              "federalCourtsStatus": "Integración de Datos en Vivo",
+              "stateLaws": "Leyes Estatales y Locales",
+              "stateLawsDesc": "Estatutos federales y estatales del Instituto Legal Cornell, GovInfo.gov y sitios web de legislaturas estatales con actualizaciones regulares.",
+              "stateLawsStatus": "Actualizado Mensualmente",
+              "analytics": "Análisis de Justicia Penal",
+              "analyticsDesc": "API del DOJ, Oficina de Estadísticas de Justicia y conjuntos de datos específicos del estado para pautas de sentencia y resultados de casos.",
+              "analyticsStatus": "Datos Simulados (Desarrollo)"
+            },
+            "trust": {
+              "title": "Basado en Confianza y Transparencia",
+              "subtitle": "Cada pieza de información legal está respaldada por fuentes creíbles",
+              "verifiedTitle": "Citas Verificadas",
+              "verifiedDesc": "Todas las declaraciones legales incluyen citas apropiadas a estatutos, jurisprudencia y regulaciones",
+              "privacyTitle": "Privacidad Protegida",
+              "privacyDesc": "No se almacena información personal, todos los datos de la sesión se eliminan automáticamente",
+              "currentTitle": "Información Actualizada",
+              "currentDesc": "Bases de datos legales actualizadas regularmente para reflejar las leyes y procedimientos más recientes",
+              "disclaimerTitle": "Descargo de Responsabilidad Legal Importante:",
+              "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
             },
             "urgentHelp": {
-              "title": "¿Necesita Asistencia Legal Inmediata?",
-              "subtitle": "Si enfrenta arresto o detención, estos recursos pueden ayudarle ahora mismo:",
-              "publicDefender": "Encontrar Defensor Público",
-              "publicDefenderDesc": "Buscar oficinas de defensor público cerca de usted",
-              "legalAid": "Organizaciones de Asistencia Legal",
-              "legalAidDesc": "Encontrar asistencia legal gratuita en su área",
-              "knowRights": "Conozca sus Derechos",
-              "knowRightsDesc": "Entienda sus protecciones constitucionales",
-              "closeButton": "Cerrar"
+              "modalTitle": "Situación Legal Urgente",
+              "arrestWarning": "Si está siendo arrestado AHORA MISMO:",
+              "arrestWarningText": "Tiene derecho a permanecer en silencio y derecho a un abogado. Ejerza estos derechos inmediatamente.",
+              "immediateActions": "Acciones Inmediatas:",
+              "stayCalmTitle": "1. Mantenga la Calma",
+              "stayCalmText": "No resista el arresto. Mantenga sus manos visibles. Siga las instrucciones con calma.",
+              "assertRightsTitle": "2. Haga Valer sus Derechos",
+              "assertRightsText1": "Diga claramente: \"Estoy ejerciendo mi derecho a permanecer en silencio. Quiero hablar con un abogado.\"",
+              "assertRightsText2": "Luego deje de hablar con la policía. No responda preguntas hasta tener un abogado.",
+              "noConsentTitle": "3. NO Consienta Registros",
+              "noConsentText": "Diga: \"No consiento ningún registro.\" No resista físicamente, pero deje clara su negativa.",
+              "publicDefenderTitle": "4. Solicite un Defensor Público",
+              "publicDefenderText": "Si no puede pagar un abogado, tiene derecho a un defensor público gratuito. Solicite uno inmediatamente en su primera comparecencia ante el tribunal.",
+              "rememberTitle": "Recuerde:",
+              "rememberText": "Todo lo que diga puede y será usado en su contra en la corte. La mejor protección es permanecer en silencio hasta tener representación legal."
             },
             "whatWeDo": {
               "title": "Lo Que Hacemos",
@@ -224,6 +321,35 @@ i18n
               "recapDesc": "Acceso gratuito a registros judiciales federales recopilados de usuarios de PACER",
               "cornell": "Instituto Legal Cornell",
               "cornellDesc": "Constitución de EE.UU., estatutos federales y recursos legales"
+            },
+            "publicDefenderSearch": {
+              "title": "Encontrar Oficinas de Defensor Público",
+              "inputLabel": "Ingrese Código Postal",
+              "inputPlaceholder": "Ingrese código postal de 5 dígitos",
+              "searchButton": "Buscar",
+              "searching": "Buscando...",
+              "noResults": "No se encontraron oficinas de defensor público dentro de 50 millas. Intente con un código postal diferente o contacte a su tribunal local para información.",
+              "error": "Por favor ingrese un código postal válido de 5 dígitos",
+              "errorGeneral": "No se puede buscar oficinas. Por favor intente nuevamente o contacte a su tribunal local para información.",
+              "county": "Condado",
+              "milesAway": "mi de distancia",
+              "address": "Dirección",
+              "phone": "Teléfono",
+              "email": "Correo Electrónico",
+              "hours": "Horario",
+              "services": "Servicios",
+              "directions": "Direcciones"
+            },
+            "legalAidSearch": {
+              "title": "Encontrar Organizaciones de Asistencia Legal",
+              "inputLabel": "Ingrese Código Postal",
+              "inputPlaceholder": "Ingrese código postal de 5 dígitos",
+              "searchButton": "Buscar",
+              "searching": "Buscando...",
+              "noResults": "No se encontraron organizaciones de asistencia legal dentro de 100 millas. Intente con un código postal diferente o contacte a la asociación de abogados de su estado.",
+              "error": "Por favor ingrese un código postal válido de 5 dígitos",
+              "errorGeneral": "No se puede buscar organizaciones. Por favor intente nuevamente o contacte a la asociación de abogados local.",
+              "servicesOffered": "Servicios Ofrecidos"
             }
           },
           "footer": {

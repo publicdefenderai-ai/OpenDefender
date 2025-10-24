@@ -1,13 +1,6 @@
-import { Shield, Moon, Sun, Globe } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ui/theme-provider";
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 export function PrivacyBanner() {
   const { theme, setTheme } = useTheme();
@@ -32,20 +25,6 @@ export function PrivacyBanner() {
               <Moon className="h-4 w-4" />
             )}
           </Button>
-          
-          <Select defaultValue="en">
-            <SelectTrigger className="w-32 bg-background border text-sm">
-              <div className="flex items-center space-x-1">
-                <Globe className="h-3 w-3" />
-                <SelectValue />
-              </div>
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="en">English</SelectItem>
-              <SelectItem value="es">Español</SelectItem>
-              <SelectItem value="fr">Français</SelectItem>
-            </SelectContent>
-          </Select>
         </div>
       </div>
     </div>
