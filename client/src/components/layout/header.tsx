@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   Sheet,
   SheetContent,
@@ -21,6 +21,8 @@ import { useTranslation } from "react-i18next";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const [location] = useLocation();
+  const isHomePage = location === "/";
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -68,15 +70,28 @@ export function Header() {
     <header className="bg-background shadow-sm border-b">
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 legal-blue rounded-lg flex items-center justify-center">
-              <Scale className="h-5 w-5 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
-              <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
-            </div>
-          </Link>
+          {isHomePage ? (
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 legal-blue rounded-lg flex items-center justify-center">
+                <Scale className="h-5 w-5 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
+                <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
+              </div>
+            </Link>
+          ) : (
+            <Link href="/">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground hover:text-foreground"
+                data-testid="button-home"
+              >
+                <Home className="h-6 w-6" />
+              </Button>
+            </Link>
+          )}
           
           <div className="flex items-center space-x-2">
             {/* Language Selector - Desktop */}
