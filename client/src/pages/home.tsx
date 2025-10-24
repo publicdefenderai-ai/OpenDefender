@@ -38,6 +38,8 @@ import { GetStartedMenu } from "@/components/navigation/get-started-menu";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
+  const { t } = useTranslation();
+  
   return (
     <Card className="hover:shadow-md transition-all duration-200">
       <CardContent className="p-4">
@@ -47,11 +49,11 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex flex-wrap gap-2">
               {office.county && (
                 <span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                  {office.county} County
+                  {office.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
               <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">
-                {office.distance} mi away
+                {office.distance} {t('home.publicDefenderSearch.milesAway')}
               </span>
             </div>
           </div>
@@ -61,7 +63,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
           <div className="flex items-start gap-2">
             <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
-              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.address')}</div>
               <div className="text-sm font-medium">{office.address}</div>
             </div>
           </div>
@@ -70,7 +72,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex items-start gap-2">
               <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Phone</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.phone')}</div>
                 <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
                   {office.phone}
                 </a>
@@ -82,7 +84,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex items-start gap-2">
               <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Email</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.email')}</div>
                 <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
                   {office.email}
                 </a>
@@ -94,14 +96,14 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <div className="flex items-start gap-2">
               <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.hours')}</div>
                 <div className="text-sm font-medium">{office.hours}</div>
               </div>
             </div>
           )}
 
           <div>
-            <div className="text-sm text-muted-foreground mb-2">Services</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('home.publicDefenderSearch.services')}</div>
             <div className="flex flex-wrap gap-1">
               {office.services.map((service) => (
                 <span key={service} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
@@ -119,7 +121,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
               onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(office.address)}`, '_blank')}
             >
               <Navigation className="h-3 w-3 mr-1" />
-              Directions
+              {t('home.publicDefenderSearch.directions')}
             </Button>
           </div>
         </div>
@@ -129,6 +131,8 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
 }
 
 function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrganization }) {
+  const { t } = useTranslation();
+  
   return (
     <Card className="hover:shadow-md transition-all duration-200">
       <CardContent className="p-4">
@@ -138,11 +142,11 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex flex-wrap gap-2">
               {organization.county && (
                 <span className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                  {organization.county} County
+                  {organization.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
               <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">
-                {organization.distance} mi away
+                {organization.distance} {t('home.publicDefenderSearch.milesAway')}
               </span>
               <span className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
                 {organization.organizationType}
@@ -155,7 +159,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
           <div className="flex items-start gap-2">
             <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
-              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.address')}</div>
               <div className="text-sm font-medium">{organization.address}</div>
             </div>
           </div>
@@ -164,7 +168,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex items-start gap-2">
               <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Phone</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.phone')}</div>
                 <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-green-600">
                   {organization.phone}
                 </a>
@@ -176,7 +180,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex items-start gap-2">
               <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Email</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.email')}</div>
                 <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-green-600">
                   {organization.email}
                 </a>
@@ -188,14 +192,14 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
             <div className="flex items-start gap-2">
               <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Hours</div>
+                <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.hours')}</div>
                 <div className="text-sm font-medium">{organization.hours}</div>
               </div>
             </div>
           )}
 
           <div>
-            <div className="text-sm text-muted-foreground mb-2">Services Offered</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('home.legalAidSearch.servicesOffered')}</div>
             <div className="flex flex-wrap gap-1">
               {organization.services.map((service) => (
                 <span key={service} className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
@@ -213,7 +217,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
               onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(organization.address)}`, '_blank')}
             >
               <Navigation className="h-3 w-3 mr-1" />
-              Directions
+              {t('home.publicDefenderSearch.directions')}
             </Button>
           </div>
         </div>
@@ -248,7 +252,7 @@ export default function Home() {
   
   const handlePublicDefenderSearch = async () => {
     if (!pdZipCode.trim() || pdZipCode.length !== 5) {
-      setPdError("Please enter a valid 5-digit ZIP code");
+      setPdError(t('home.publicDefenderSearch.error'));
       return;
     }
 
@@ -260,7 +264,7 @@ export default function Home() {
       setPdOffices(offices);
     } catch (err) {
       console.error('Public defender search error:', err);
-      setPdError("Unable to search for offices. Please try again or contact your local court for information.");
+      setPdError(t('home.publicDefenderSearch.errorGeneral'));
     } finally {
       setPdSearching(false);
     }
@@ -268,7 +272,7 @@ export default function Home() {
   
   const handleLegalAidSearch = async () => {
     if (!laZipCode.trim() || laZipCode.length !== 5) {
-      setLaError("Please enter a valid 5-digit ZIP code");
+      setLaError(t('home.legalAidSearch.error'));
       return;
     }
 
@@ -280,7 +284,7 @@ export default function Home() {
       setLaOrganizations(organizations);
     } catch (err) {
       console.error('Legal aid search error:', err);
-      setLaError("Unable to search for organizations. Please try again or contact your local bar association.");
+      setLaError(t('home.legalAidSearch.errorGeneral'));
     } finally {
       setLaSearching(false);
     }
@@ -300,11 +304,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-              <span className="text-blue-800 dark:text-blue-200">Know Your Rights.</span><br />
-              <span className="text-blue-800 dark:text-blue-200">Protect Your Future.</span>
+              <span className="text-blue-800 dark:text-blue-200">{t('home.hero.title1')}</span><br />
+              <span className="text-blue-800 dark:text-blue-200">{t('home.hero.title2')}</span>
             </h2>
             <p className="text-2xl md:text-3xl mb-12 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
-              Get free legal guidance, understand court processes, and access resources to help navigate the criminal justice system.
+              {t('home.hero.subtitle')}
             </p>
           </motion.div>
 
@@ -316,7 +320,7 @@ export default function Home() {
                 className="success-green hover:bg-green-700 hover:shadow-2xl font-bold py-6 px-12 rounded-2xl text-2xl shadow-xl transition-all duration-200 w-full md:w-auto"
                 data-testid="button-get-started"
               >
-                GET STARTED
+                {t('home.hero.getStartedButton')}
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
               
@@ -326,11 +330,11 @@ export default function Home() {
                 data-testid="button-urgent-help"
               >
                 <AlertTriangle className="mr-3 h-6 w-6" />
-                URGENT HELP NEEDED
+                {t('home.hero.urgentHelpButton')}
               </Button>
               
               <p className="text-sm text-blue-800 dark:text-blue-200 mt-2">
-                If you're being arrested or in court now, click "Urgent Help" for immediate rights information.
+                {t('home.hero.urgentHelpNotice')}
               </p>
               
               {/* Add Navigating This Tool button */}
@@ -341,7 +345,7 @@ export default function Home() {
                   data-testid="button-navigating-tool"
                 >
                   <Book className="mr-2 h-4 w-4" />
-                  Navigating This Tool
+                  {t('home.hero.navigatingToolButton')}
                 </Button>
               </Link>
             </div>
@@ -355,10 +359,10 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Powered by Real Legal Data
+                {t('home.features.title')}
               </h2>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-                Our AI agent uses comprehensive legal databases and court records to provide accurate, up-to-date information.
+                {t('home.features.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -367,10 +371,10 @@ export default function Home() {
             <ScrollReveal delay={0.1}>
               <DataSourceCard
                 icon={<Book className="h-6 w-6 text-white" />}
-                title="Federal Court Records"
-                description="Access to 500M+ federal court documents through PACER and CourtListener APIs, including case law, dockets, and judicial data."
+                title={t('home.features.federalCourts')}
+                description={t('home.features.federalCourtsDesc')}
                 status="live"
-                statusText="Live Data Integration"
+                statusText={t('home.features.federalCourtsStatus')}
                 iconBgColor="bg-blue-600"
               />
             </ScrollReveal>
@@ -378,10 +382,10 @@ export default function Home() {
             <ScrollReveal delay={0.2}>
               <DataSourceCard
                 icon={<FileText className="h-6 w-6 text-white" />}
-                title="State & Local Laws"
-                description="Federal and state statutes from Cornell LII, GovInfo.gov, and state legislature websites with regular updates."
+                title={t('home.features.stateLaws')}
+                description={t('home.features.stateLawsDesc')}
                 status="government"
-                statusText="Updated Monthly"
+                statusText={t('home.features.stateLawsStatus')}
                 iconBgColor="bg-green-600"
               />
             </ScrollReveal>
@@ -389,10 +393,10 @@ export default function Home() {
             <ScrollReveal delay={0.3}>
               <DataSourceCard
                 icon={<BarChart3 className="h-6 w-6 text-white" />}
-                title="Criminal Justice Analytics"
-                description="DOJ APIs, Bureau of Justice Statistics, and state-specific datasets for sentencing guidelines and case outcomes."
+                title={t('home.features.analytics')}
+                description={t('home.features.analyticsDesc')}
                 status="mock"
-                statusText="Mock Data (Development)"
+                statusText={t('home.features.analyticsStatus')}
                 iconBgColor="bg-blue-500"
               />
             </ScrollReveal>
@@ -406,10 +410,10 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Built on Trust & Transparency
+                {t('home.trust.title')}
               </h2>
               <p className="text-xl text-muted-foreground">
-                Every piece of legal information is backed by credible sources
+                {t('home.trust.subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -420,9 +424,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-semibold mb-3 text-foreground">Verified Citations</h3>
+                <h3 className="font-semibold mb-3 text-foreground">{t('home.trust.verifiedTitle')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  All legal statements include proper citations to statutes, case law, and regulations
+                  {t('home.trust.verifiedDesc')}
                 </p>
               </div>
             </ScrollReveal>
@@ -432,9 +436,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-semibold mb-3 text-foreground">Privacy Protected</h3>
+                <h3 className="font-semibold mb-3 text-foreground">{t('home.trust.privacyTitle')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  No personal information stored, all session data automatically deleted
+                  {t('home.trust.privacyDesc')}
                 </p>
               </div>
             </ScrollReveal>
@@ -444,9 +448,9 @@ export default function Home() {
                 <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <RotateCcw className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-semibold mb-3 text-foreground">Current Information</h3>
+                <h3 className="font-semibold mb-3 text-foreground">{t('home.trust.currentTitle')}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Legal databases updated regularly to reflect the latest laws and procedures
+                  {t('home.trust.currentDesc')}
                 </p>
               </div>
             </ScrollReveal>
@@ -457,7 +461,7 @@ export default function Home() {
             <Alert className="mt-16 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
               <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
               <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">Important Legal Disclaimer:</strong> This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel.
+                <strong className="font-semibold">{t('home.trust.disclaimerTitle')}</strong> {t('home.trust.disclaimerText')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
@@ -472,7 +476,7 @@ export default function Home() {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-red-600">
               <AlertTriangle className="h-5 w-5" />
-              Urgent Legal Situation
+              {t('home.urgentHelp.modalTitle')}
             </DialogTitle>
           </DialogHeader>
           
@@ -480,43 +484,43 @@ export default function Home() {
             <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
               <AlertTriangle className="h-4 w-4 text-red-600" />
               <AlertDescription className="text-red-800 dark:text-red-200">
-                <strong>If you are being arrested RIGHT NOW:</strong> You have the right to remain silent and the right to an attorney. Exercise these rights immediately.
+                <strong>{t('home.urgentHelp.arrestWarning')}</strong> {t('home.urgentHelp.arrestWarningText')}
               </AlertDescription>
             </Alert>
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <h3 className="font-bold text-lg text-red-600">Immediate Actions:</h3>
+                <h3 className="font-bold text-lg text-red-600">{t('home.urgentHelp.immediateActions')}</h3>
                 
                 <div className="space-y-3">
                   <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-green-900 dark:text-green-100 mb-2">1. Stay Calm</h4>
+                    <h4 className="font-bold text-green-900 dark:text-green-100 mb-2">{t('home.urgentHelp.stayCalmTitle')}</h4>
                     <p className="text-sm text-green-800 dark:text-green-200">
-                      Do not resist arrest. Keep your hands visible. Follow instructions calmly.
+                      {t('home.urgentHelp.stayCalmText')}
                     </p>
                   </div>
 
                   <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-2">2. Assert Your Rights</h4>
+                    <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-2">{t('home.urgentHelp.assertRightsTitle')}</h4>
                     <p className="text-sm text-blue-800 dark:text-blue-200 mb-2">
-                      Say clearly: "I am exercising my right to remain silent. I want to speak to an attorney."
+                      {t('home.urgentHelp.assertRightsText1')}
                     </p>
                     <p className="text-sm text-blue-800 dark:text-blue-200">
-                      Then stop talking to police. Do not answer questions until you have a lawyer.
+                      {t('home.urgentHelp.assertRightsText2')}
                     </p>
                   </div>
 
                   <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-purple-900 dark:text-purple-100 mb-2">3. Do NOT Consent to Searches</h4>
+                    <h4 className="font-bold text-purple-900 dark:text-purple-100 mb-2">{t('home.urgentHelp.noConsentTitle')}</h4>
                     <p className="text-sm text-purple-800 dark:text-purple-200">
-                      Say: "I do not consent to any searches." Do not physically resist, but make your refusal clear.
+                      {t('home.urgentHelp.noConsentText')}
                     </p>
                   </div>
 
                   <div className="bg-amber-50 dark:bg-amber-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-2">4. Request a Public Defender</h4>
+                    <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-2">{t('home.urgentHelp.publicDefenderTitle')}</h4>
                     <p className="text-sm text-amber-800 dark:text-amber-200">
-                      If you cannot afford an attorney, you have the right to a free public defender. Request one immediately at your first court appearance.
+                      {t('home.urgentHelp.publicDefenderText')}
                     </p>
                   </div>
                 </div>
@@ -526,7 +530,7 @@ export default function Home() {
             <Alert>
               <Shield className="h-4 w-4" />
               <AlertDescription>
-                <strong>Remember:</strong> Anything you say can and will be used against you in court. The best protection is to remain silent until you have legal representation.
+                <strong>{t('home.urgentHelp.rememberTitle')}</strong> {t('home.urgentHelp.rememberText')}
               </AlertDescription>
             </Alert>
           </div>
@@ -547,7 +551,7 @@ export default function Home() {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <MapPin className="h-5 w-5" />
-              Find Public Defender Offices
+              {t('home.publicDefenderSearch.title')}
             </DialogTitle>
           </DialogHeader>
           
@@ -556,7 +560,7 @@ export default function Home() {
               <div className="flex-1">
                 <Input
                   type="text"
-                  placeholder="Enter ZIP code"
+                  placeholder={t('home.publicDefenderSearch.inputPlaceholder')}
                   value={pdZipCode}
                   onChange={(e) => setPdZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                   onKeyPress={(e) => e.key === 'Enter' && handlePublicDefenderSearch()}
@@ -573,12 +577,12 @@ export default function Home() {
                 {pdSearching ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
-                    Searching...
+                    {t('home.publicDefenderSearch.searching')}
                   </>
                 ) : (
                   <>
                     <Search className="mr-2 h-4 w-4" />
-                    Search
+                    {t('home.publicDefenderSearch.searchButton')}
                   </>
                 )}
               </Button>
@@ -596,7 +600,7 @@ export default function Home() {
             {pdOffices.length > 0 && (
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">
-                  Found {pdOffices.length} office{pdOffices.length !== 1 ? 's' : ''} near you
+                  {t('home.searchResults.foundOffices', { count: pdOffices.length, plural: pdOffices.length !== 1 ? 's' : '' })}
                 </h3>
                 
                 <div className="grid gap-4">
@@ -616,7 +620,7 @@ export default function Home() {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <HelpCircle className="h-5 w-5" />
-              Find Legal Aid Organizations
+              {t('home.legalAidSearch.title')}
             </DialogTitle>
           </DialogHeader>
           
@@ -624,7 +628,7 @@ export default function Home() {
             <Alert className="border-blue-200 bg-blue-50">
               <Shield className="h-4 w-4 text-blue-600" />
               <AlertDescription className="text-blue-800">
-                <strong>These organizations focus on criminal justice and immigration legal assistance.</strong> Services are often free or low-cost for those who qualify.
+                {t('home.legalAidSearch.alertMessage')}
               </AlertDescription>
             </Alert>
 
@@ -632,7 +636,7 @@ export default function Home() {
               <div className="flex-1">
                 <Input
                   type="text"
-                  placeholder="Enter ZIP code"
+                  placeholder={t('home.legalAidSearch.inputPlaceholder')}
                   value={laZipCode}
                   onChange={(e) => setLaZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                   onKeyPress={(e) => e.key === 'Enter' && handleLegalAidSearch()}
@@ -649,12 +653,12 @@ export default function Home() {
                 {laSearching ? (
                   <>
                     <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"></div>
-                    Searching...
+                    {t('home.legalAidSearch.searching')}
                   </>
                 ) : (
                   <>
                     <Search className="mr-2 h-4 w-4" />
-                    Search
+                    {t('home.legalAidSearch.searchButton')}
                   </>
                 )}
               </Button>
@@ -672,7 +676,7 @@ export default function Home() {
             {laOrganizations.length > 0 && (
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">
-                  Found {laOrganizations.length} organization{laOrganizations.length !== 1 ? 's' : ''} near you
+                  {t('home.legalAidSearch.resultsFound', { count: laOrganizations.length, plural: laOrganizations.length !== 1 ? 's' : '' })}
                 </h3>
                 
                 <div className="grid gap-4">

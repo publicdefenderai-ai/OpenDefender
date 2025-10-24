@@ -161,7 +161,12 @@ i18n
               "noResults": "No legal aid organizations found within 100 miles. Try a different ZIP code or contact your state bar association.",
               "error": "Please enter a valid 5-digit ZIP code",
               "errorGeneral": "Unable to search for organizations. Please try again or contact your local bar association.",
-              "servicesOffered": "Services Offered"
+              "servicesOffered": "Services Offered",
+              "alertMessage": "These organizations focus on criminal justice and immigration legal assistance. Services are often free or low-cost for those who qualify.",
+              "resultsFound": "Found {{count}} organization{{plural}} near you"
+            },
+            "searchResults": {
+              "foundOffices": "Found {{count}} office{{plural}} near you"
             }
           },
           "footer": {
@@ -349,7 +354,12 @@ i18n
               "noResults": "No se encontraron organizaciones de asistencia legal dentro de 100 millas. Intente con un código postal diferente o contacte a la asociación de abogados de su estado.",
               "error": "Por favor ingrese un código postal válido de 5 dígitos",
               "errorGeneral": "No se puede buscar organizaciones. Por favor intente nuevamente o contacte a la asociación de abogados local.",
-              "servicesOffered": "Servicios Ofrecidos"
+              "servicesOffered": "Servicios Ofrecidos",
+              "alertMessage": "Estas organizaciones se enfocan en asistencia legal de justicia penal e inmigración. Los servicios a menudo son gratuitos o de bajo costo para quienes califican.",
+              "resultsFound": "Se encontró {{count}} organización{{plural}} cerca de usted"
+            },
+            "searchResults": {
+              "foundOffices": "Se encontró {{count}} oficina{{plural}} cerca de usted"
             }
           },
           "footer": {
