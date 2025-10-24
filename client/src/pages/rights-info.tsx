@@ -187,6 +187,25 @@ export default function RightsInfo() {
         </div>
       </section>
 
+      {/* Learn More About Search Rights */}
+      <section className="py-8 bg-background">
+        <div className="max-w-7xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center">
+              <Link href="/search-seizure">
+                <Button 
+                  data-testid="button-search-rights" 
+                  className="bg-purple-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-purple-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg"
+                >
+                  <Search className="mr-2 h-5 w-5" />
+                  Rights During a Search
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Important Disclaimers */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
