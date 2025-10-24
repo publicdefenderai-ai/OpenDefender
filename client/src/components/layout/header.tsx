@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import {
@@ -17,15 +17,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "@/components/ui/theme-provider";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const { theme, setTheme } = useTheme();
   const [location] = useLocation();
   const isHomePage = location === "/";
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const menuItems = [
@@ -110,6 +116,17 @@ export function Header() {
               </Select>
             </div>
             
+            {/* Theme Toggle - Desktop */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="text-muted-foreground hover:text-foreground hidden md:flex"
+              data-testid="button-theme-toggle"
+            >
+              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
+            
             <Link href="/how-to">
               <Button
                 variant="ghost"
@@ -152,6 +169,29 @@ export function Header() {
                       <SelectItem value="es" data-testid="option-spanish-mobile">Español</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+                
+                {/* Theme Toggle - Mobile */}
+                <div className="mb-4">
+                  <label className="text-sm font-medium mb-2 block">{t('header.theme')}</label>
+                  <Button
+                    variant="outline"
+                    onClick={toggleTheme}
+                    className="w-full justify-start"
+                    data-testid="button-theme-toggle-mobile"
+                  >
+                    {theme === "dark" ? (
+                      <>
+                        <Sun className="h-4 w-4 mr-2" />
+                        {t('header.lightMode')}
+                      </>
+                    ) : (
+                      <>
+                        <Moon className="h-4 w-4 mr-2" />
+                        {t('header.darkMode')}
+                      </>
+                    )}
+                  </Button>
                 </div>
                 
                 <div className="mt-6 flex flex-col space-y-3">

@@ -36,7 +36,10 @@ i18n
               "recapExtensions": "RECAP Extensions",
               "recapExtensionsDesc": "Free browser tools for PACER"
             },
-            "language": "Language"
+            "language": "Language",
+            "theme": "Theme",
+            "darkMode": "Dark Mode",
+            "lightMode": "Light Mode"
           },
           "home": {
             "hero": {
@@ -1562,7 +1565,10 @@ i18n
               "recapExtensions": "Extensiones RECAP",
               "recapExtensionsDesc": "Herramientas gratuitas para navegador PACER"
             },
-            "language": "Idioma"
+            "language": "Idioma",
+            "theme": "Tema",
+            "darkMode": "Modo Oscuro",
+            "lightMode": "Modo Claro"
           },
           "home": {
             "hero": {
