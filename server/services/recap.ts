@@ -81,12 +81,22 @@ export class RecapService {
 
   async searchRECAPDockets(params: CourtListenerSearchParams): Promise<SearchResponse<RecapDocket>> {
     try {
+      // Remove undefined values to avoid API errors
+      const cleanParams: Record<string, string> = {
+        format: 'json'
+      };
+      
+      if (params.q) cleanParams.q = params.q;
+      if (params.case_name) cleanParams.case_name = params.case_name;
+      if (params.docket_number) cleanParams.docket_number = params.docket_number;
+      if (params.court) cleanParams.court = params.court;
+      if (params.filed_after) cleanParams.filed_after = params.filed_after;
+      if (params.filed_before) cleanParams.filed_before = params.filed_before;
+      if (params.order_by) cleanParams.order_by = params.order_by;
+      
       const response = await axios.get(`${COURTLISTENER_BASE_URL}/dockets/`, {
         headers: this.headers,
-        params: {
-          ...params,
-          format: 'json'
-        }
+        params: cleanParams
       });
       return response.data;
     } catch (error) {
@@ -97,13 +107,23 @@ export class RecapService {
 
   async searchOpinions(params: CourtListenerSearchParams): Promise<SearchResponse<Opinion>> {
     try {
+      // Remove undefined values to avoid API errors
+      const cleanParams: Record<string, string> = {
+        type: 'o',
+        format: 'json'
+      };
+      
+      if (params.q) cleanParams.q = params.q;
+      if (params.case_name) cleanParams.case_name = params.case_name;
+      if (params.docket_number) cleanParams.docket_number = params.docket_number;
+      if (params.court) cleanParams.court = params.court;
+      if (params.filed_after) cleanParams.filed_after = params.filed_after;
+      if (params.filed_before) cleanParams.filed_before = params.filed_before;
+      if (params.order_by) cleanParams.order_by = params.order_by;
+      
       const response = await axios.get(`${COURTLISTENER_BASE_URL}/search/`, {
         headers: this.headers,
-        params: {
-          ...params,
-          type: 'o',
-          format: 'json'
-        }
+        params: cleanParams
       });
       return response.data;
     } catch (error) {
