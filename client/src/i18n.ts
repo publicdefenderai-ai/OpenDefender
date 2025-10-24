@@ -212,6 +212,181 @@ i18n
             "important": "Important",
             "privacyFirst": "Privacy First"
           },
+          "legalGuidance": {
+            "qaFlow": {
+              "title": "Get Personalized Legal Guidance",
+              "cancel": "Cancel",
+              "stepProgress": "Step {{current}} of {{total}}: {{title}}",
+              "privacyNotice": "Your responses are not stored and are deleted when you close your session",
+              "steps": {
+                "consent": "Privacy & Consent",
+                "jurisdiction": "Jurisdiction",
+                "caseDetails": "Your Case",
+                "status": "Current Status"
+              },
+              "consent": {
+                "title": "Privacy Disclaimer & Consent",
+                "important": "Important:",
+                "generalInfo": "This tool provides general legal information only and is not a substitute for professional legal advice.",
+                "noStorage": "We do not store your personal information. All data is deleted when you close your session.",
+                "consultAttorney": "For specific legal advice, consult with a qualified attorney.",
+                "checkboxLabel": "I understand and consent to continue",
+                "continueButton": "Continue"
+              },
+              "jurisdiction": {
+                "title": "Where is your case?",
+                "label": "State/Jurisdiction",
+                "placeholder": "Select your state...",
+                "states": {
+                  "AL": "Alabama",
+                  "AK": "Alaska",
+                  "AZ": "Arizona",
+                  "AR": "Arkansas",
+                  "CA": "California",
+                  "CO": "Colorado",
+                  "CT": "Connecticut",
+                  "DE": "Delaware",
+                  "FL": "Florida",
+                  "GA": "Georgia",
+                  "HI": "Hawaii",
+                  "ID": "Idaho",
+                  "IL": "Illinois",
+                  "IN": "Indiana",
+                  "IA": "Iowa",
+                  "KS": "Kansas",
+                  "KY": "Kentucky",
+                  "LA": "Louisiana",
+                  "ME": "Maine",
+                  "MD": "Maryland",
+                  "MA": "Massachusetts",
+                  "MI": "Michigan",
+                  "MN": "Minnesota",
+                  "MS": "Mississippi",
+                  "MO": "Missouri",
+                  "MT": "Montana",
+                  "NE": "Nebraska",
+                  "NV": "Nevada",
+                  "NH": "New Hampshire",
+                  "NJ": "New Jersey",
+                  "NM": "New Mexico",
+                  "NY": "New York",
+                  "NC": "North Carolina",
+                  "ND": "North Dakota",
+                  "OH": "Ohio",
+                  "OK": "Oklahoma",
+                  "OR": "Oregon",
+                  "PA": "Pennsylvania",
+                  "RI": "Rhode Island",
+                  "SC": "South Carolina",
+                  "SD": "South Dakota",
+                  "TN": "Tennessee",
+                  "TX": "Texas",
+                  "UT": "Utah",
+                  "VT": "Vermont",
+                  "VA": "Virginia",
+                  "WA": "Washington",
+                  "WV": "West Virginia",
+                  "WI": "Wisconsin",
+                  "WY": "Wyoming",
+                  "DC": "District of Columbia",
+                  "federal": "Federal"
+                },
+                "back": "Back",
+                "continue": "Continue"
+              },
+              "caseDetails": {
+                "title": "What charges are you facing?",
+                "selectedCharges": "Selected Charges:",
+                "filterLabel": "Filter by Category (Optional)",
+                "filterPlaceholder": "All categories",
+                "allCategories": "All categories",
+                "selectLabel": "Select all charges that apply to your case:",
+                "stateCharges": "State Charges",
+                "federalCharges": "Federal Charges",
+                "maxPenalty": "Max penalty:",
+                "showMore": "Show {{count}} more charges...",
+                "hasAttorneyLabel": "I already have an attorney or public defender",
+                "back": "Back",
+                "continue": "Continue"
+              },
+              "status": {
+                "title": "Current status",
+                "caseStageLabel": "What stage is your case in?",
+                "caseStageplaceholder": "Select current stage...",
+                "stages": {
+                  "arrest": "Just arrested / Investigation",
+                  "arraignment": "Arraignment scheduled/completed",
+                  "pretrial": "Pre-trial proceedings",
+                  "trial": "Trial scheduled/in progress",
+                  "sentencing": "Sentencing phase",
+                  "appeal": "Appeal process",
+                  "unsure": "Not sure"
+                },
+                "custodyLabel": "Are you currently in custody?",
+                "custodyPlaceholder": "Select custody status...",
+                "custodyOptions": {
+                  "yes": "Yes, in custody",
+                  "bail": "Released on bail/bond",
+                  "recognizance": "Released on recognizance (no bail)",
+                  "no": "No, not in custody"
+                },
+                "back": "Back",
+                "submitButton": "Get My Legal Guidance"
+              }
+            },
+            "dashboard": {
+              "title": "Legal Guidance Dashboard",
+              "hideDetails": "Hide Details",
+              "showDetails": "Show Details",
+              "close": "Close",
+              "exportPDF": "Export PDF",
+              "summary": {
+                "charges": "Charges",
+                "jurisdiction": "Jurisdiction",
+                "currentStage": "Current Stage",
+                "progress": "Progress",
+                "protected": "Protected"
+              },
+              "criticalAlerts": {
+                "title": "Critical Alerts - Action Required"
+              },
+              "upcomingDeadlines": {
+                "title": "Upcoming Deadlines"
+              },
+              "immediateActions": {
+                "title": "Immediate Actions (Next 48 Hours)",
+                "completed": "Completed: {{count}} of {{total}} actions"
+              },
+              "caseTimeline": {
+                "title": "Case Timeline"
+              },
+              "nextSteps": {
+                "title": "Next Steps"
+              },
+              "yourRights": {
+                "title": "Your Rights"
+              },
+              "localResources": {
+                "title": "Local Resources"
+              },
+              "evidenceToGather": {
+                "title": "Evidence to Gather"
+              },
+              "importantWarnings": {
+                "title": "Important Warnings"
+              },
+              "courtPreparation": {
+                "title": "Court Preparation"
+              },
+              "actionsToAvoid": {
+                "title": "Actions to Avoid"
+              },
+              "privacyNotice": {
+                "title": "Privacy Protected:",
+                "text": "This guidance is generated based on your input and will be automatically deleted after your session ends. No personal information is permanently stored."
+              }
+            }
+          },
           "case": {
             "hero": {
               "title": "Case Guidance",
@@ -1420,6 +1595,181 @@ i18n
             "save": "Guardar",
             "important": "Importante",
             "privacyFirst": "Privacidad Primero"
+          },
+          "legalGuidance": {
+            "qaFlow": {
+              "title": "Obtenga Orientación Legal Personalizada",
+              "cancel": "Cancelar",
+              "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
+              "privacyNotice": "Sus respuestas no se almacenan y se eliminan cuando cierra su sesión",
+              "steps": {
+                "consent": "Privacidad y Consentimiento",
+                "jurisdiction": "Jurisdicción",
+                "caseDetails": "Su Caso",
+                "status": "Estado Actual"
+              },
+              "consent": {
+                "title": "Aviso de Privacidad y Consentimiento",
+                "important": "Importante:",
+                "generalInfo": "Esta herramienta proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional.",
+                "noStorage": "No almacenamos su información personal. Todos los datos se eliminan cuando cierra su sesión.",
+                "consultAttorney": "Para asesoramiento legal específico, consulte con un abogado calificado.",
+                "checkboxLabel": "Entiendo y acepto continuar",
+                "continueButton": "Continuar"
+              },
+              "jurisdiction": {
+                "title": "¿Dónde está su caso?",
+                "label": "Estado/Jurisdicción",
+                "placeholder": "Seleccione su estado...",
+                "states": {
+                  "AL": "Alabama",
+                  "AK": "Alaska",
+                  "AZ": "Arizona",
+                  "AR": "Arkansas",
+                  "CA": "California",
+                  "CO": "Colorado",
+                  "CT": "Connecticut",
+                  "DE": "Delaware",
+                  "FL": "Florida",
+                  "GA": "Georgia",
+                  "HI": "Hawái",
+                  "ID": "Idaho",
+                  "IL": "Illinois",
+                  "IN": "Indiana",
+                  "IA": "Iowa",
+                  "KS": "Kansas",
+                  "KY": "Kentucky",
+                  "LA": "Luisiana",
+                  "ME": "Maine",
+                  "MD": "Maryland",
+                  "MA": "Massachusetts",
+                  "MI": "Michigan",
+                  "MN": "Minnesota",
+                  "MS": "Mississippi",
+                  "MO": "Misuri",
+                  "MT": "Montana",
+                  "NE": "Nebraska",
+                  "NV": "Nevada",
+                  "NH": "Nuevo Hampshire",
+                  "NJ": "Nueva Jersey",
+                  "NM": "Nuevo México",
+                  "NY": "Nueva York",
+                  "NC": "Carolina del Norte",
+                  "ND": "Dakota del Norte",
+                  "OH": "Ohio",
+                  "OK": "Oklahoma",
+                  "OR": "Oregón",
+                  "PA": "Pensilvania",
+                  "RI": "Rhode Island",
+                  "SC": "Carolina del Sur",
+                  "SD": "Dakota del Sur",
+                  "TN": "Tennessee",
+                  "TX": "Texas",
+                  "UT": "Utah",
+                  "VT": "Vermont",
+                  "VA": "Virginia",
+                  "WA": "Washington",
+                  "WV": "Virginia Occidental",
+                  "WI": "Wisconsin",
+                  "WY": "Wyoming",
+                  "DC": "Distrito de Columbia",
+                  "federal": "Federal"
+                },
+                "back": "Volver",
+                "continue": "Continuar"
+              },
+              "caseDetails": {
+                "title": "¿Qué cargos enfrenta?",
+                "selectedCharges": "Cargos Seleccionados:",
+                "filterLabel": "Filtrar por Categoría (Opcional)",
+                "filterPlaceholder": "Todas las categorías",
+                "allCategories": "Todas las categorías",
+                "selectLabel": "Seleccione todos los cargos que apliquen a su caso:",
+                "stateCharges": "Cargos Estatales",
+                "federalCharges": "Cargos Federales",
+                "maxPenalty": "Pena máxima:",
+                "showMore": "Mostrar {{count}} cargos más...",
+                "hasAttorneyLabel": "Ya tengo un abogado o defensor público",
+                "back": "Volver",
+                "continue": "Continuar"
+              },
+              "status": {
+                "title": "Estado actual",
+                "caseStageLabel": "¿En qué etapa está su caso?",
+                "caseStageplaceholder": "Seleccione la etapa actual...",
+                "stages": {
+                  "arrest": "Recién arrestado / Investigación",
+                  "arraignment": "Lectura de cargos programada/completada",
+                  "pretrial": "Procedimientos previos al juicio",
+                  "trial": "Juicio programado/en progreso",
+                  "sentencing": "Fase de sentencia",
+                  "appeal": "Proceso de apelación",
+                  "unsure": "No estoy seguro"
+                },
+                "custodyLabel": "¿Está actualmente bajo custodia?",
+                "custodyPlaceholder": "Seleccione estado de custodia...",
+                "custodyOptions": {
+                  "yes": "Sí, bajo custodia",
+                  "bail": "Liberado bajo fianza",
+                  "recognizance": "Liberado bajo palabra (sin fianza)",
+                  "no": "No, no estoy bajo custodia"
+                },
+                "back": "Volver",
+                "submitButton": "Obtener Mi Orientación Legal"
+              }
+            },
+            "dashboard": {
+              "title": "Panel de Orientación Legal",
+              "hideDetails": "Ocultar Detalles",
+              "showDetails": "Mostrar Detalles",
+              "close": "Cerrar",
+              "exportPDF": "Exportar PDF",
+              "summary": {
+                "charges": "Cargos",
+                "jurisdiction": "Jurisdicción",
+                "currentStage": "Etapa Actual",
+                "progress": "Progreso",
+                "protected": "Protegido"
+              },
+              "criticalAlerts": {
+                "title": "Alertas Críticas - Acción Requerida"
+              },
+              "upcomingDeadlines": {
+                "title": "Plazos Próximos"
+              },
+              "immediateActions": {
+                "title": "Acciones Inmediatas (Próximas 48 Horas)",
+                "completed": "Completadas: {{count}} de {{total}} acciones"
+              },
+              "caseTimeline": {
+                "title": "Cronología del Caso"
+              },
+              "nextSteps": {
+                "title": "Próximos Pasos"
+              },
+              "yourRights": {
+                "title": "Sus Derechos"
+              },
+              "localResources": {
+                "title": "Recursos Locales"
+              },
+              "evidenceToGather": {
+                "title": "Evidencia a Recopilar"
+              },
+              "importantWarnings": {
+                "title": "Advertencias Importantes"
+              },
+              "courtPreparation": {
+                "title": "Preparación para la Corte"
+              },
+              "actionsToAvoid": {
+                "title": "Acciones a Evitar"
+              },
+              "privacyNotice": {
+                "title": "Privacidad Protegida:",
+                "text": "Esta orientación se genera en base a su información y se eliminará automáticamente después de que termine su sesión. No se almacena información personal de forma permanente."
+              }
+            }
           },
           "case": {
             "hero": {

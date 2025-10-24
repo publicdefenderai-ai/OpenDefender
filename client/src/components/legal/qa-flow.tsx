@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +17,7 @@ interface QAFlowProps {
 }
 
 export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
     jurisdiction: "",
@@ -28,19 +30,19 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
 
   const steps = [
     {
-      title: "Privacy & Consent",
+      title: t('legalGuidance.qaFlow.steps.consent'),
       component: ConsentStep,
     },
     {
-      title: "Jurisdiction",
+      title: t('legalGuidance.qaFlow.steps.jurisdiction'),
       component: JurisdictionStep,
     },
     {
-      title: "Your Case",
+      title: t('legalGuidance.qaFlow.steps.caseDetails'),
       component: CaseDetailsStep,
     },
     {
-      title: "Current Status",
+      title: t('legalGuidance.qaFlow.steps.status'),
       component: StatusStep,
     },
   ];
@@ -69,13 +71,13 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <div className="flex items-center justify-between mb-4">
-          <CardTitle className="text-2xl">Get Personalized Legal Guidance</CardTitle>
+          <CardTitle className="text-2xl">{t('legalGuidance.qaFlow.title')}</CardTitle>
           <Button
             variant="ghost"
             onClick={onCancel}
             data-testid="button-cancel-qa"
           >
-            Cancel
+            {t('legalGuidance.qaFlow.cancel')}
           </Button>
         </div>
         
@@ -95,7 +97,7 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
           ))}
         </div>
         <p className="text-sm text-muted-foreground mt-2">
-          Step {currentStep + 1} of {steps.length}: {steps[currentStep].title}
+          {t('legalGuidance.qaFlow.stepProgress', { current: currentStep + 1, total: steps.length, title: steps[currentStep].title })}
         </p>
       </CardHeader>
 
@@ -123,7 +125,7 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
         <div className="flex items-center space-x-2 mt-6 p-4 bg-muted rounded-lg">
           <Lock className="h-4 w-4 text-muted-foreground" />
           <p className="text-xs text-muted-foreground">
-            Your responses are not stored and are deleted when you close your session
+            {t('legalGuidance.qaFlow.privacyNotice')}
           </p>
         </div>
       </CardContent>
@@ -132,19 +134,21 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
 }
 
 function ConsentStep({ formData, updateFormData, onNext }: any) {
+  const { t } = useTranslation();
+  
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Privacy Disclaimer & Consent</h3>
+        <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.consent.title')}</h3>
         <div className="space-y-4 text-sm text-muted-foreground">
           <p>
-            <strong>Important:</strong> This tool provides general legal information only and is not a substitute for professional legal advice.
+            <strong>{t('legalGuidance.qaFlow.consent.important')}</strong> {t('legalGuidance.qaFlow.consent.generalInfo')}
           </p>
           <p>
-            We do not store your personal information. All data is deleted when you close your session.
+            {t('legalGuidance.qaFlow.consent.noStorage')}
           </p>
           <p>
-            For specific legal advice, consult with a qualified attorney.
+            {t('legalGuidance.qaFlow.consent.consultAttorney')}
           </p>
         </div>
       </div>
@@ -157,7 +161,7 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
           data-testid="checkbox-consent"
         />
         <Label htmlFor="consent" className="text-sm">
-          I understand and consent to continue
+          {t('legalGuidance.qaFlow.consent.checkboxLabel')}
         </Label>
       </div>
 
@@ -167,78 +171,80 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
         className="w-full bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
         data-testid="button-next-consent"
       >
-        Continue <ArrowRight className="ml-2 h-4 w-4" />
+        {t('legalGuidance.qaFlow.consent.continueButton')} <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </div>
   );
 }
 
 function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
+  const { t } = useTranslation();
+  
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Where is your case?</h3>
-        <Label htmlFor="jurisdiction">State/Jurisdiction</Label>
+        <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.jurisdiction.title')}</h3>
+        <Label htmlFor="jurisdiction">{t('legalGuidance.qaFlow.jurisdiction.label')}</Label>
         <Select
           value={formData.jurisdiction}
           onValueChange={(value) => updateFormData("jurisdiction", value)}
         >
           <SelectTrigger data-testid="select-jurisdiction">
-            <SelectValue placeholder="Select your state..." />
+            <SelectValue placeholder={t('legalGuidance.qaFlow.jurisdiction.placeholder')} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="AL">Alabama</SelectItem>
-            <SelectItem value="AK">Alaska</SelectItem>
-            <SelectItem value="AZ">Arizona</SelectItem>
-            <SelectItem value="AR">Arkansas</SelectItem>
-            <SelectItem value="CA">California</SelectItem>
-            <SelectItem value="CO">Colorado</SelectItem>
-            <SelectItem value="CT">Connecticut</SelectItem>
-            <SelectItem value="DE">Delaware</SelectItem>
-            <SelectItem value="FL">Florida</SelectItem>
-            <SelectItem value="GA">Georgia</SelectItem>
-            <SelectItem value="HI">Hawaii</SelectItem>
-            <SelectItem value="ID">Idaho</SelectItem>
-            <SelectItem value="IL">Illinois</SelectItem>
-            <SelectItem value="IN">Indiana</SelectItem>
-            <SelectItem value="IA">Iowa</SelectItem>
-            <SelectItem value="KS">Kansas</SelectItem>
-            <SelectItem value="KY">Kentucky</SelectItem>
-            <SelectItem value="LA">Louisiana</SelectItem>
-            <SelectItem value="ME">Maine</SelectItem>
-            <SelectItem value="MD">Maryland</SelectItem>
-            <SelectItem value="MA">Massachusetts</SelectItem>
-            <SelectItem value="MI">Michigan</SelectItem>
-            <SelectItem value="MN">Minnesota</SelectItem>
-            <SelectItem value="MS">Mississippi</SelectItem>
-            <SelectItem value="MO">Missouri</SelectItem>
-            <SelectItem value="MT">Montana</SelectItem>
-            <SelectItem value="NE">Nebraska</SelectItem>
-            <SelectItem value="NV">Nevada</SelectItem>
-            <SelectItem value="NH">New Hampshire</SelectItem>
-            <SelectItem value="NJ">New Jersey</SelectItem>
-            <SelectItem value="NM">New Mexico</SelectItem>
-            <SelectItem value="NY">New York</SelectItem>
-            <SelectItem value="NC">North Carolina</SelectItem>
-            <SelectItem value="ND">North Dakota</SelectItem>
-            <SelectItem value="OH">Ohio</SelectItem>
-            <SelectItem value="OK">Oklahoma</SelectItem>
-            <SelectItem value="OR">Oregon</SelectItem>
-            <SelectItem value="PA">Pennsylvania</SelectItem>
-            <SelectItem value="RI">Rhode Island</SelectItem>
-            <SelectItem value="SC">South Carolina</SelectItem>
-            <SelectItem value="SD">South Dakota</SelectItem>
-            <SelectItem value="TN">Tennessee</SelectItem>
-            <SelectItem value="TX">Texas</SelectItem>
-            <SelectItem value="UT">Utah</SelectItem>
-            <SelectItem value="VT">Vermont</SelectItem>
-            <SelectItem value="VA">Virginia</SelectItem>
-            <SelectItem value="WA">Washington</SelectItem>
-            <SelectItem value="WV">West Virginia</SelectItem>
-            <SelectItem value="WI">Wisconsin</SelectItem>
-            <SelectItem value="WY">Wyoming</SelectItem>
-            <SelectItem value="DC">District of Columbia</SelectItem>
-            <SelectItem value="federal">Federal</SelectItem>
+            <SelectItem value="AL">{t('legalGuidance.qaFlow.jurisdiction.states.AL')}</SelectItem>
+            <SelectItem value="AK">{t('legalGuidance.qaFlow.jurisdiction.states.AK')}</SelectItem>
+            <SelectItem value="AZ">{t('legalGuidance.qaFlow.jurisdiction.states.AZ')}</SelectItem>
+            <SelectItem value="AR">{t('legalGuidance.qaFlow.jurisdiction.states.AR')}</SelectItem>
+            <SelectItem value="CA">{t('legalGuidance.qaFlow.jurisdiction.states.CA')}</SelectItem>
+            <SelectItem value="CO">{t('legalGuidance.qaFlow.jurisdiction.states.CO')}</SelectItem>
+            <SelectItem value="CT">{t('legalGuidance.qaFlow.jurisdiction.states.CT')}</SelectItem>
+            <SelectItem value="DE">{t('legalGuidance.qaFlow.jurisdiction.states.DE')}</SelectItem>
+            <SelectItem value="FL">{t('legalGuidance.qaFlow.jurisdiction.states.FL')}</SelectItem>
+            <SelectItem value="GA">{t('legalGuidance.qaFlow.jurisdiction.states.GA')}</SelectItem>
+            <SelectItem value="HI">{t('legalGuidance.qaFlow.jurisdiction.states.HI')}</SelectItem>
+            <SelectItem value="ID">{t('legalGuidance.qaFlow.jurisdiction.states.ID')}</SelectItem>
+            <SelectItem value="IL">{t('legalGuidance.qaFlow.jurisdiction.states.IL')}</SelectItem>
+            <SelectItem value="IN">{t('legalGuidance.qaFlow.jurisdiction.states.IN')}</SelectItem>
+            <SelectItem value="IA">{t('legalGuidance.qaFlow.jurisdiction.states.IA')}</SelectItem>
+            <SelectItem value="KS">{t('legalGuidance.qaFlow.jurisdiction.states.KS')}</SelectItem>
+            <SelectItem value="KY">{t('legalGuidance.qaFlow.jurisdiction.states.KY')}</SelectItem>
+            <SelectItem value="LA">{t('legalGuidance.qaFlow.jurisdiction.states.LA')}</SelectItem>
+            <SelectItem value="ME">{t('legalGuidance.qaFlow.jurisdiction.states.ME')}</SelectItem>
+            <SelectItem value="MD">{t('legalGuidance.qaFlow.jurisdiction.states.MD')}</SelectItem>
+            <SelectItem value="MA">{t('legalGuidance.qaFlow.jurisdiction.states.MA')}</SelectItem>
+            <SelectItem value="MI">{t('legalGuidance.qaFlow.jurisdiction.states.MI')}</SelectItem>
+            <SelectItem value="MN">{t('legalGuidance.qaFlow.jurisdiction.states.MN')}</SelectItem>
+            <SelectItem value="MS">{t('legalGuidance.qaFlow.jurisdiction.states.MS')}</SelectItem>
+            <SelectItem value="MO">{t('legalGuidance.qaFlow.jurisdiction.states.MO')}</SelectItem>
+            <SelectItem value="MT">{t('legalGuidance.qaFlow.jurisdiction.states.MT')}</SelectItem>
+            <SelectItem value="NE">{t('legalGuidance.qaFlow.jurisdiction.states.NE')}</SelectItem>
+            <SelectItem value="NV">{t('legalGuidance.qaFlow.jurisdiction.states.NV')}</SelectItem>
+            <SelectItem value="NH">{t('legalGuidance.qaFlow.jurisdiction.states.NH')}</SelectItem>
+            <SelectItem value="NJ">{t('legalGuidance.qaFlow.jurisdiction.states.NJ')}</SelectItem>
+            <SelectItem value="NM">{t('legalGuidance.qaFlow.jurisdiction.states.NM')}</SelectItem>
+            <SelectItem value="NY">{t('legalGuidance.qaFlow.jurisdiction.states.NY')}</SelectItem>
+            <SelectItem value="NC">{t('legalGuidance.qaFlow.jurisdiction.states.NC')}</SelectItem>
+            <SelectItem value="ND">{t('legalGuidance.qaFlow.jurisdiction.states.ND')}</SelectItem>
+            <SelectItem value="OH">{t('legalGuidance.qaFlow.jurisdiction.states.OH')}</SelectItem>
+            <SelectItem value="OK">{t('legalGuidance.qaFlow.jurisdiction.states.OK')}</SelectItem>
+            <SelectItem value="OR">{t('legalGuidance.qaFlow.jurisdiction.states.OR')}</SelectItem>
+            <SelectItem value="PA">{t('legalGuidance.qaFlow.jurisdiction.states.PA')}</SelectItem>
+            <SelectItem value="RI">{t('legalGuidance.qaFlow.jurisdiction.states.RI')}</SelectItem>
+            <SelectItem value="SC">{t('legalGuidance.qaFlow.jurisdiction.states.SC')}</SelectItem>
+            <SelectItem value="SD">{t('legalGuidance.qaFlow.jurisdiction.states.SD')}</SelectItem>
+            <SelectItem value="TN">{t('legalGuidance.qaFlow.jurisdiction.states.TN')}</SelectItem>
+            <SelectItem value="TX">{t('legalGuidance.qaFlow.jurisdiction.states.TX')}</SelectItem>
+            <SelectItem value="UT">{t('legalGuidance.qaFlow.jurisdiction.states.UT')}</SelectItem>
+            <SelectItem value="VT">{t('legalGuidance.qaFlow.jurisdiction.states.VT')}</SelectItem>
+            <SelectItem value="VA">{t('legalGuidance.qaFlow.jurisdiction.states.VA')}</SelectItem>
+            <SelectItem value="WA">{t('legalGuidance.qaFlow.jurisdiction.states.WA')}</SelectItem>
+            <SelectItem value="WV">{t('legalGuidance.qaFlow.jurisdiction.states.WV')}</SelectItem>
+            <SelectItem value="WI">{t('legalGuidance.qaFlow.jurisdiction.states.WI')}</SelectItem>
+            <SelectItem value="WY">{t('legalGuidance.qaFlow.jurisdiction.states.WY')}</SelectItem>
+            <SelectItem value="DC">{t('legalGuidance.qaFlow.jurisdiction.states.DC')}</SelectItem>
+            <SelectItem value="federal">{t('legalGuidance.qaFlow.jurisdiction.states.federal')}</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -249,7 +255,7 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
           onClick={onPrev}
           data-testid="button-prev-jurisdiction"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back
+          <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.jurisdiction.back')}
         </Button>
         <Button
           onClick={onNext}
@@ -257,7 +263,7 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-jurisdiction"
         >
-          Continue <ArrowRight className="ml-2 h-4 w-4" />
+          {t('legalGuidance.qaFlow.jurisdiction.continue')} <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>
@@ -265,6 +271,7 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
 }
 
 function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [showAllCharges, setShowAllCharges] = useState(false);
   
@@ -350,13 +357,13 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-4">What charges are you facing?</h3>
+        <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
         
         <div className="space-y-4">
           {/* Selected Charges */}
           {formData.charges.length > 0 && (
             <div className="mb-4">
-              <Label className="text-sm font-medium mb-2 block">Selected Charges:</Label>
+              <Label className="text-sm font-medium mb-2 block">{t('legalGuidance.qaFlow.caseDetails.selectedCharges')}</Label>
               <div className="flex flex-wrap gap-2">
                 {formData.charges.map((chargeId: string) => {
                   const charge = getChargeById(chargeId);
@@ -383,16 +390,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           
           {/* Category Filter */}
           <div>
-            <Label htmlFor="category">Filter by Category (Optional)</Label>
+            <Label htmlFor="category">{t('legalGuidance.qaFlow.caseDetails.filterLabel')}</Label>
             <Select
               value={selectedCategory}
               onValueChange={setSelectedCategory}
             >
               <SelectTrigger data-testid="select-charge-category">
-                <SelectValue placeholder="All categories" />
+                <SelectValue placeholder={t('legalGuidance.qaFlow.caseDetails.allCategories')} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All categories</SelectItem>
+                <SelectItem value="all">{t('legalGuidance.qaFlow.caseDetails.allCategories')}</SelectItem>
                 {Object.keys(chargeCategories)
                   .filter(category => {
                     // Filter out state/jurisdiction codes (2-letter uppercase codes)
@@ -412,7 +419,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           {/* Charge Selection */}
           <div>
             <Label className="text-sm font-medium mb-2 block">
-              Select all charges that apply to your case:
+              {t('legalGuidance.qaFlow.caseDetails.selectLabel')}
             </Label>
             <div className="max-h-64 overflow-y-auto border rounded-md p-3 space-y-4">
               
@@ -420,7 +427,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               {stateCharges.length > 0 && (
                 <div>
                   <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-2 border-b pb-1">
-                    State Charges
+                    {t('legalGuidance.qaFlow.caseDetails.stateCharges')}
                   </h4>
                   <div className="space-y-2">
                     {displayedStateCharges.map(charge => (
@@ -454,7 +461,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             {charge.description}
                           </p>
                           <p className="text-xs text-red-600 mt-1">
-                            Max penalty: {charge.maxPenalty}
+                            {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
                           </p>
                         </div>
                       </div>
@@ -467,7 +474,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               {federalCharges.length > 0 && (
                 <div>
                   <h4 className="font-semibold text-sm text-gray-700 dark:text-gray-300 mb-2 border-b pb-1">
-                    Federal Charges
+                    {t('legalGuidance.qaFlow.caseDetails.federalCharges')}
                   </h4>
                   <div className="space-y-2">
                     {displayedFederalCharges.map(charge => (
@@ -501,7 +508,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             {charge.description}
                           </p>
                           <p className="text-xs text-red-600 mt-1">
-                            Max penalty: {charge.maxPenalty}
+                            {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
                           </p>
                         </div>
                       </div>
@@ -518,7 +525,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   onClick={() => setShowAllCharges(true)}
                   className="w-full"
                 >
-                  Show {totalFilteredCharges - totalDisplayedCharges} more charges...
+                  {t('legalGuidance.qaFlow.caseDetails.showMore', { count: totalFilteredCharges - totalDisplayedCharges })}
                 </Button>
               )}
             </div>
@@ -532,7 +539,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               data-testid="checkbox-has-attorney"
             />
             <Label htmlFor="hasAttorney" className="text-sm">
-              I already have an attorney or public defender
+              {t('legalGuidance.qaFlow.caseDetails.hasAttorneyLabel')}
             </Label>
           </div>
         </div>
@@ -544,7 +551,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           onClick={onPrev}
           data-testid="button-prev-case-details"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back
+          <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.caseDetails.back')}
         </Button>
         <Button
           onClick={onNext}
@@ -552,7 +559,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"
         >
-          Continue <ArrowRight className="ml-2 h-4 w-4" />
+          {t('legalGuidance.qaFlow.caseDetails.continue')} <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>
@@ -560,47 +567,49 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
 }
 
 function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
+  const { t } = useTranslation();
+  
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-4">Current status</h3>
+        <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.status.title')}</h3>
         
         <div className="space-y-4">
           <div>
-            <Label htmlFor="caseStage">What stage is your case in?</Label>
+            <Label htmlFor="caseStage">{t('legalGuidance.qaFlow.status.caseStageLabel')}</Label>
             <Select
               value={formData.caseStage}
               onValueChange={(value) => updateFormData("caseStage", value)}
             >
               <SelectTrigger data-testid="select-case-stage">
-                <SelectValue placeholder="Select current stage..." />
+                <SelectValue placeholder={t('legalGuidance.qaFlow.status.caseStageplaceholder')} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="arrest">Just arrested / Investigation</SelectItem>
-                <SelectItem value="arraignment">Arraignment scheduled/completed</SelectItem>
-                <SelectItem value="pretrial">Pre-trial proceedings</SelectItem>
-                <SelectItem value="trial">Trial scheduled/in progress</SelectItem>
-                <SelectItem value="sentencing">Sentencing phase</SelectItem>
-                <SelectItem value="appeal">Appeal process</SelectItem>
-                <SelectItem value="unsure">Not sure</SelectItem>
+                <SelectItem value="arrest">{t('legalGuidance.qaFlow.status.stages.arrest')}</SelectItem>
+                <SelectItem value="arraignment">{t('legalGuidance.qaFlow.status.stages.arraignment')}</SelectItem>
+                <SelectItem value="pretrial">{t('legalGuidance.qaFlow.status.stages.pretrial')}</SelectItem>
+                <SelectItem value="trial">{t('legalGuidance.qaFlow.status.stages.trial')}</SelectItem>
+                <SelectItem value="sentencing">{t('legalGuidance.qaFlow.status.stages.sentencing')}</SelectItem>
+                <SelectItem value="appeal">{t('legalGuidance.qaFlow.status.stages.appeal')}</SelectItem>
+                <SelectItem value="unsure">{t('legalGuidance.qaFlow.status.stages.unsure')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div>
-            <Label htmlFor="custodyStatus">Are you currently in custody?</Label>
+            <Label htmlFor="custodyStatus">{t('legalGuidance.qaFlow.status.custodyLabel')}</Label>
             <Select
               value={formData.custodyStatus}
               onValueChange={(value) => updateFormData("custodyStatus", value)}
             >
               <SelectTrigger data-testid="select-custody-status">
-                <SelectValue placeholder="Select custody status..." />
+                <SelectValue placeholder={t('legalGuidance.qaFlow.status.custodyPlaceholder')} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="detained">Yes, in custody</SelectItem>
-                <SelectItem value="released">Released on bail/bond</SelectItem>
-                <SelectItem value="ownRecognizance">Released on own recognizance</SelectItem>
-                <SelectItem value="notArrested">Not arrested yet</SelectItem>
+                <SelectItem value="detained">{t('legalGuidance.qaFlow.status.custodyOptions.yes')}</SelectItem>
+                <SelectItem value="released">{t('legalGuidance.qaFlow.status.custodyOptions.bail')}</SelectItem>
+                <SelectItem value="ownRecognizance">{t('legalGuidance.qaFlow.status.custodyOptions.recognizance')}</SelectItem>
+                <SelectItem value="notArrested">{t('legalGuidance.qaFlow.status.custodyOptions.no')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -613,7 +622,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
           onClick={onPrev}
           data-testid="button-prev-status"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back
+          <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.status.back')}
         </Button>
         <Button
           onClick={onNext}
@@ -621,7 +630,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
           className="flex-1 bg-green-600 text-white font-bold hover:bg-green-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-generate-guidance"
         >
-          {isLast ? "Generate Guidance" : "Continue"} <ArrowRight className="ml-2 h-4 w-4" />
+          {isLast ? t('legalGuidance.qaFlow.status.submitButton') : "Continue"} <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>

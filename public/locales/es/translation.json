@@ -119,5 +119,59 @@
     "back": "Atrás",
     "next": "Siguiente",
     "save": "Guardar"
+  },
+  "legalGuidance": {
+    "dashboard": {
+      "title": "Panel de Orientación Legal",
+      "hideDetails": "Ocultar Detalles",
+      "showDetails": "Mostrar Detalles",
+      "close": "Cerrar",
+      "exportPDF": "Exportar PDF",
+      "summary": {
+        "charges": "Cargos",
+        "protected": "Protegido",
+        "jurisdiction": "Jurisdicción",
+        "currentStage": "Etapa Actual",
+        "progress": "Progreso"
+      },
+      "criticalAlerts": {
+        "title": "Alertas Críticas - Acción Requerida"
+      },
+      "upcomingDeadlines": {
+        "title": "Fechas Límite Próximas"
+      },
+      "immediateActions": {
+        "title": "Acciones Inmediatas (Próximas 48 Horas)",
+        "completed": "Completado: {{count}} de {{total}} acciones"
+      },
+      "caseTimeline": {
+        "title": "Cronología del Caso"
+      },
+      "nextSteps": {
+        "title": "Próximos Pasos"
+      },
+      "yourRights": {
+        "title": "Sus Derechos"
+      },
+      "localResources": {
+        "title": "Recursos Locales"
+      },
+      "evidenceToGather": {
+        "title": "Evidencia a Recopilar"
+      },
+      "importantWarnings": {
+        "title": "Advertencias Importantes"
+      },
+      "courtPreparation": {
+        "title": "Preparación para la Corte"
+      },
+      "actionsToAvoid": {
+        "title": "Acciones a Evitar"
+      },
+      "privacyNotice": {
+        "title": "Privacidad Protegida:",
+        "text": "Esta orientación se genera según su información y se eliminará automáticamente después de que finalice su sesión. No se almacena información personal de forma permanente."
+      }
+    }
   }
 }

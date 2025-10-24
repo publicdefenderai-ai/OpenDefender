@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
@@ -80,6 +81,7 @@ interface GuidanceDashboardProps {
 }
 
 export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: GuidanceDashboardProps) {
+  const { t } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showSensitiveInfo, setShowSensitiveInfo] = useState(false);
@@ -126,7 +128,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <Scale className="h-5 w-5 text-blue-600" />
-                <CardTitle className="text-xl">Legal Guidance Dashboard</CardTitle>
+                <CardTitle className="text-xl">{t('legalGuidance.dashboard.title')}</CardTitle>
               </div>
               <Button
                 variant="outline"
@@ -135,23 +137,23 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                 className="gap-2"
               >
                 {showSensitiveInfo ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                {showSensitiveInfo ? 'Hide Details' : 'Show Details'}
+                {showSensitiveInfo ? t('legalGuidance.dashboard.hideDetails') : t('legalGuidance.dashboard.showDetails')}
               </Button>
             </div>
             <div className="flex gap-2">
               <Button variant="outline" onClick={onClose}>
-                Close
+                {t('legalGuidance.dashboard.close')}
               </Button>
               <Button variant="outline" className="gap-2">
                 <Download className="h-4 w-4" />
-                Export PDF
+                {t('legalGuidance.dashboard.exportPDF')}
               </Button>
             </div>
           </div>
           
           <div className="grid md:grid-cols-4 gap-4 mt-4">
             <div className="text-center">
-              <div className="text-sm text-muted-foreground">Charges</div>
+              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.charges')}</div>
               <div className="font-medium">
                 {showSensitiveInfo ? (
                   <div className="flex flex-col gap-1">
@@ -172,21 +174,21 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                       guidance.caseData.charges
                     )}
                   </div>
-                ) : 'Protected'}
+                ) : t('legalGuidance.dashboard.summary.protected')}
               </div>
             </div>
             <div className="text-center">
-              <div className="text-sm text-muted-foreground">Jurisdiction</div>
+              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.jurisdiction')}</div>
               <div className="font-medium">{guidance.caseData.jurisdiction.toUpperCase()}</div>
             </div>
             <div className="text-center">
-              <div className="text-sm text-muted-foreground">Current Stage</div>
+              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.currentStage')}</div>
               <Badge variant="outline" className="capitalize">
                 {guidance.caseData.caseStage}
               </Badge>
             </div>
             <div className="text-center">
-              <div className="text-sm text-muted-foreground">Progress</div>
+              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.progress')}</div>
               <div className="flex items-center gap-2">
                 <Progress value={getTimelinePriority()} className="flex-1" />
                 <span className="text-sm font-medium">{getTimelinePriority()}%</span>
@@ -201,7 +203,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
         <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
           <AlertTriangle className="h-4 w-4 text-red-600" />
           <AlertDescription className="text-red-800 dark:text-red-200">
-            <div className="font-semibold mb-2">Critical Alerts - Action Required</div>
+            <div className="font-semibold mb-2">{t('legalGuidance.dashboard.criticalAlerts.title')}</div>
             <ul className="space-y-1">
               {guidance.criticalAlerts.map((alert, index) => (
                 <li key={index} className="flex items-start gap-2">
@@ -220,7 +222,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
               <Clock className="h-5 w-5" />
-              Upcoming Deadlines
+              {t('legalGuidance.dashboard.upcomingDeadlines.title')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -248,7 +250,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <CheckCircle className="h-5 w-5 text-green-600" />
-            Immediate Actions (Next 48 Hours)
+            {t('legalGuidance.dashboard.immediateActions.title')}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -274,7 +276,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
           </div>
           
           <div className="mt-4 text-sm text-muted-foreground">
-            Completed: {completedActions.size} of {guidance.immediateActions.length} actions
+            {t('legalGuidance.dashboard.immediateActions.completed', { count: completedActions.size, total: guidance.immediateActions.length })}
           </div>
         </CardContent>
       </Card>
@@ -284,7 +286,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calendar className="h-5 w-5 text-blue-600" />
-            Case Timeline
+            {t('legalGuidance.dashboard.caseTimeline.title')}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -321,7 +323,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <ArrowRight className="h-5 w-5 text-indigo-600" />
-              Next Steps
+              {t('legalGuidance.dashboard.nextSteps.title')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -349,7 +351,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                 <CardTitle className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Shield className="h-5 w-5 text-blue-600" />
-                    Your Rights
+                    {t('legalGuidance.dashboard.yourRights.title')}
                   </div>
                   <ChevronDown className="h-4 w-4" />
                 </CardTitle>
@@ -380,7 +382,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                 <CardTitle className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <Users className="h-5 w-5 text-green-600" />
-                    Local Resources
+                    {t('legalGuidance.dashboard.localResources.title')}
                   </div>
                   <ChevronDown className="h-4 w-4" />
                 </CardTitle>
@@ -426,7 +428,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <FileText className="h-5 w-5 text-purple-600" />
-                      Evidence to Gather
+                      {t('legalGuidance.dashboard.evidenceToGather.title')}
                     </div>
                     <ChevronDown className="h-4 w-4" />
                   </CardTitle>
@@ -459,7 +461,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <AlertTriangle className="h-5 w-5 text-red-600" />
-                      Important Warnings
+                      {t('legalGuidance.dashboard.importantWarnings.title')}
                     </div>
                     <ChevronDown className="h-4 w-4" />
                   </CardTitle>
@@ -492,7 +494,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Gavel className="h-5 w-5 text-orange-600" />
-                      Court Preparation
+                      {t('legalGuidance.dashboard.courtPreparation.title')}
                     </div>
                     <ChevronDown className="h-4 w-4" />
                   </CardTitle>
@@ -525,7 +527,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <X className="h-5 w-5 text-red-500" />
-                      Actions to Avoid
+                      {t('legalGuidance.dashboard.actionsToAvoid.title')}
                     </div>
                     <ChevronDown className="h-4 w-4" />
                   </CardTitle>
@@ -554,8 +556,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession }: Guidan
       <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
         <Shield className="h-4 w-4 text-blue-600" />
         <AlertDescription className="text-blue-800 dark:text-blue-200">
-          <strong>Privacy Protected:</strong> This guidance is generated based on your input and will be automatically deleted after your session ends. 
-          No personal information is permanently stored.
+          <strong>{t('legalGuidance.dashboard.privacyNotice.title')}</strong> {t('legalGuidance.dashboard.privacyNotice.text')}
         </AlertDescription>
       </Alert>
     </div>

@@ -119,5 +119,59 @@
     "back": "Back",
     "next": "Next",
     "save": "Save"
+  },
+  "legalGuidance": {
+    "dashboard": {
+      "title": "Legal Guidance Dashboard",
+      "hideDetails": "Hide Details",
+      "showDetails": "Show Details",
+      "close": "Close",
+      "exportPDF": "Export PDF",
+      "summary": {
+        "charges": "Charges",
+        "protected": "Protected",
+        "jurisdiction": "Jurisdiction",
+        "currentStage": "Current Stage",
+        "progress": "Progress"
+      },
+      "criticalAlerts": {
+        "title": "Critical Alerts - Action Required"
+      },
+      "upcomingDeadlines": {
+        "title": "Upcoming Deadlines"
+      },
+      "immediateActions": {
+        "title": "Immediate Actions (Next 48 Hours)",
+        "completed": "Completed: {{count}} of {{total}} actions"
+      },
+      "caseTimeline": {
+        "title": "Case Timeline"
+      },
+      "nextSteps": {
+        "title": "Next Steps"
+      },
+      "yourRights": {
+        "title": "Your Rights"
+      },
+      "localResources": {
+        "title": "Local Resources"
+      },
+      "evidenceToGather": {
+        "title": "Evidence to Gather"
+      },
+      "importantWarnings": {
+        "title": "Important Warnings"
+      },
+      "courtPreparation": {
+        "title": "Court Preparation"
+      },
+      "actionsToAvoid": {
+        "title": "Actions to Avoid"
+      },
+      "privacyNotice": {
+        "title": "Privacy Protected:",
+        "text": "This guidance is generated based on your input and will be automatically deleted after your session ends. No personal information is permanently stored."
+      }
+    }
   }
 }
