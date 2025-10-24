@@ -1468,6 +1468,75 @@ i18n
               "description": "This project is guided by the principles of fairness, transparency, data privacy, and compliance with applicable laws and ethical guidelines governing legal practice.",
               "disclaimer": "The AI agent is not a substitute for a licensed attorney but a support tool to supplement human legal counsel and improve access to equitable defense resources."
             }
+          },
+          "privacyPolicy": {
+            "hero": {
+              "title": "Privacy Policy",
+              "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
+              "lastUpdated": "Last Updated: October 24, 2025"
+            },
+            "notice": {
+              "title": "Privacy-First Platform:",
+              "description": "We do not collect or store personal data. Your privacy is protected by default."
+            },
+            "principles": {
+              "title": "Our Privacy Principles",
+              "noPersonalData": {
+                "title": "No Personal Data Collection",
+                "description": "We do not collect, store, or maintain any personally identifiable information. This includes names, addresses, case details, charges, or any other information that could identify you personally. All interactions with our platform are anonymous."
+              },
+              "anonymizedData": {
+                "title": "Anonymized Data Only",
+                "description": "We may collect anonymized, aggregated data for the following purposes:",
+                "usage": {
+                  "metrics": "Understanding how our platform is used to improve user experience",
+                  "improvements": "Identifying features and resources that are most helpful",
+                  "integrations": "Providing anonymized insights to third parties who wish to integrate our services into their platforms"
+                }
+              },
+              "noSharing": {
+                "title": "No Data Sharing or Sale",
+                "description": "We do not share, sell, or provide your data to any third parties. Since we do not collect personal data, we could not share it even if we wanted to. Any anonymized data shared is completely stripped of identifying information."
+              }
+            },
+            "technical": {
+              "title": "Technical Details",
+              "sessions": {
+                "title": "Session Data",
+                "description": "Temporary session data is used to maintain your browsing experience during a single visit. This data is automatically deleted when you close your browser or end your session. No session information is stored permanently."
+              },
+              "logs": {
+                "title": "Server Logs",
+                "description": "Our web servers may temporarily collect standard technical information such as IP addresses, browser type, and access times for security and troubleshooting purposes. These logs are retained for a limited time and are not used to identify individual users."
+              },
+              "external": {
+                "title": "External Data Sources",
+                "description": "Our platform accesses public legal databases and services to provide you with information:",
+                "services": {
+                  "courtListener": "CourtListener API - for case law and court data",
+                  "recap": "RECAP Archive - for federal court documents",
+                  "cornell": "Cornell Legal Information Institute - for legal statutes"
+                },
+                "note": "When you use our platform to search these databases, your queries may be transmitted to these services. We recommend reviewing their privacy policies if you have concerns about external data access."
+              }
+            },
+            "rights": {
+              "title": "Your Privacy Rights",
+              "description": "Because we do not collect or store personal data, you automatically have the following protections:",
+              "list": {
+                "noDataStored": "No data to access, modify, or delete - we never store it in the first place",
+                "sessionControl": "Full control over session data - simply close your browser to end all tracking",
+                "noTracking": "No cross-site tracking, cookies, or persistent identifiers"
+              }
+            },
+            "changes": {
+              "title": "Changes to This Policy",
+              "description": "We may update this privacy policy from time to time. The date of the last update is shown at the top of this page. Continued use of our platform after changes constitutes acceptance of the updated policy."
+            },
+            "contact": {
+              "title": "Questions About Privacy?",
+              "description": "If you have questions about how we protect your privacy, please reach out through our public GitHub repository or community channels."
+            }
           }
         }
       },
@@ -2919,6 +2988,75 @@ i18n
               "title": "Principios Rectores",
               "description": "Este proyecto está guiado por los principios de equidad, transparencia, privacidad de datos y cumplimiento con las leyes aplicables y pautas éticas que rigen la práctica legal.",
               "disclaimer": "El agente de IA no sustituye a un abogado con licencia, sino que es una herramienta de apoyo para complementar el asesoramiento legal humano y mejorar el acceso a recursos de defensa equitativos."
+            }
+          },
+          "privacyPolicy": {
+            "hero": {
+              "title": "Política de Privacidad",
+              "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
+              "lastUpdated": "Última actualización: 24 de octubre de 2025"
+            },
+            "notice": {
+              "title": "Plataforma que prioriza la privacidad:",
+              "description": "No recopilamos ni almacenamos datos personales. Su privacidad está protegida de forma predeterminada."
+            },
+            "principles": {
+              "title": "Nuestros Principios de Privacidad",
+              "noPersonalData": {
+                "title": "Sin Recopilación de Datos Personales",
+                "description": "No recopilamos, almacenamos ni mantenemos información de identificación personal. Esto incluye nombres, direcciones, detalles de casos, cargos o cualquier otra información que pueda identificarlo personalmente. Todas las interacciones con nuestra plataforma son anónimas."
+              },
+              "anonymizedData": {
+                "title": "Solo Datos Anonimizados",
+                "description": "Podemos recopilar datos anonimizados y agregados para los siguientes propósitos:",
+                "usage": {
+                  "metrics": "Comprender cómo se utiliza nuestra plataforma para mejorar la experiencia del usuario",
+                  "improvements": "Identificar características y recursos que son más útiles",
+                  "integrations": "Proporcionar información anonimizada a terceros que deseen integrar nuestros servicios en sus plataformas"
+                }
+              },
+              "noSharing": {
+                "title": "Sin Compartir o Vender Datos",
+                "description": "No compartimos, vendemos ni proporcionamos sus datos a terceros. Como no recopilamos datos personales, no podríamos compartirlos aunque quisiéramos. Cualquier dato anonimizado compartido está completamente desprovisto de información identificatoria."
+              }
+            },
+            "technical": {
+              "title": "Detalles Técnicos",
+              "sessions": {
+                "title": "Datos de Sesión",
+                "description": "Los datos temporales de sesión se utilizan para mantener su experiencia de navegación durante una sola visita. Estos datos se eliminan automáticamente cuando cierra su navegador o finaliza su sesión. No se almacena información de sesión de forma permanente."
+              },
+              "logs": {
+                "title": "Registros del Servidor",
+                "description": "Nuestros servidores web pueden recopilar temporalmente información técnica estándar como direcciones IP, tipo de navegador y tiempos de acceso con fines de seguridad y resolución de problemas. Estos registros se conservan por un tiempo limitado y no se utilizan para identificar usuarios individuales."
+              },
+              "external": {
+                "title": "Fuentes de Datos Externas",
+                "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
+                "services": {
+                  "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
+                  "recap": "Archivo RECAP - para documentos judiciales federales",
+                  "cornell": "Instituto de Información Legal de Cornell - para estatutos legales"
+                },
+                "note": "Cuando usa nuestra plataforma para buscar en estas bases de datos, sus consultas pueden transmitirse a estos servicios. Recomendamos revisar sus políticas de privacidad si tiene inquietudes sobre el acceso a datos externos."
+              }
+            },
+            "rights": {
+              "title": "Sus Derechos de Privacidad",
+              "description": "Debido a que no recopilamos ni almacenamos datos personales, automáticamente tiene las siguientes protecciones:",
+              "list": {
+                "noDataStored": "No hay datos para acceder, modificar o eliminar - nunca los almacenamos en primer lugar",
+                "sessionControl": "Control total sobre los datos de sesión - simplemente cierre su navegador para finalizar todo el seguimiento",
+                "noTracking": "Sin seguimiento entre sitios, cookies o identificadores persistentes"
+              }
+            },
+            "changes": {
+              "title": "Cambios a Esta Política",
+              "description": "Podemos actualizar esta política de privacidad de vez en cuando. La fecha de la última actualización se muestra en la parte superior de esta página. El uso continuado de nuestra plataforma después de los cambios constituye la aceptación de la política actualizada."
+            },
+            "contact": {
+              "title": "¿Preguntas sobre privacidad?",
+              "description": "Si tiene preguntas sobre cómo protegemos su privacidad, comuníquese a través de nuestro repositorio público de GitHub o canales comunitarios."
             }
           }
         }
