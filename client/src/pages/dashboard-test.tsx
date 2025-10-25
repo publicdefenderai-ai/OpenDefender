@@ -11,10 +11,10 @@ const testGuidanceData = {
     "CRITICAL: Request public defender immediately if you cannot afford attorney"
   ],
   immediateActions: [
-    "Exercise right to remain silent immediately",
-    "Request attorney before any questioning",
-    "Comply physically but assert rights verbally",
-    "Memorize booking number and jail location"
+    { action: "Exercise right to remain silent immediately", urgency: "urgent" as const },
+    { action: "Request attorney before any questioning", urgency: "urgent" as const },
+    { action: "Comply physically but assert rights verbally", urgency: "urgent" as const },
+    { action: "Memorize booking number and jail location", urgency: "high" as const }
   ],
   nextSteps: [
     "Contact attorney or request public defender",

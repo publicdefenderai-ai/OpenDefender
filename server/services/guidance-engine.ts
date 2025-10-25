@@ -27,9 +27,14 @@ interface GuidanceResource {
   website?: string;
 }
 
+export interface ImmediateAction {
+  action: string;
+  urgency: 'urgent' | 'high' | 'medium' | 'low';
+}
+
 interface EnhancedGuidance {
   criticalAlerts: string[];
-  immediateActions: string[];
+  immediateActions: ImmediateAction[];
   nextSteps: string[];
   deadlines: GuidanceDeadline[];
   rights: string[];
@@ -408,34 +413,67 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   return alerts;
 }
 
-function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, specificCharges: any[], fallbackChargeData: any): string[] {
-  const actions: string[] = [];
+function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, specificCharges: any[], fallbackChargeData: any): ImmediateAction[] {
+  const actions: ImmediateAction[] = [];
   
-  // Add stage-specific actions
-  if (stageData?.immediateActions) {
-    actions.push(...stageData.immediateActions);
-  } else if (fallbackChargeData?.immediateActions) {
-    actions.push(...fallbackChargeData.immediateActions);
-  }
-  
-  // Add charge-specific actions from database
-  specificCharges.forEach(charge => {
-    if (charge.urgentActions) {
-      actions.push(...charge.urgentActions);
-    }
-  });
-  
-  // Add basic actions for arrest stage
+  // Add basic actions for arrest stage with URGENT priority
   if (caseData.caseStage === 'arrest') {
-    actions.unshift(
-      'Exercise right to remain silent immediately',
-      'Request attorney before any questioning',
-      'Comply physically but assert rights verbally',
-      'Memorize booking number and jail location'
+    actions.push(
+      { action: 'Exercise right to remain silent immediately', urgency: 'urgent' },
+      { action: 'Request attorney before any questioning', urgency: 'urgent' },
+      { action: 'Comply physically but assert rights verbally', urgency: 'urgent' },
+      { action: 'Memorize booking number and jail location', urgency: 'high' }
     );
   }
   
-  return Array.from(new Set(actions)); // Remove duplicates
+  // Add stage-specific critical actions with URGENT priority
+  if (stageData?.criticalActions) {
+    actions.push(...stageData.criticalActions.map((action: string) => ({ 
+      action, 
+      urgency: 'urgent' as const 
+    })));
+  }
+  
+  // Add stage-specific immediate actions with HIGH priority
+  if (stageData?.immediateActions) {
+    actions.push(...stageData.immediateActions.map((action: string) => ({ 
+      action, 
+      urgency: 'high' as const 
+    })));
+  }
+  
+  // Add charge-specific urgent actions from database
+  specificCharges.forEach(charge => {
+    if (charge.urgentActions) {
+      actions.push(...charge.urgentActions.map((action: string) => ({ 
+        action, 
+        urgency: 'urgent' as const 
+      })));
+    }
+  });
+  
+  // Add fallback charge-specific actions with MEDIUM priority
+  if (fallbackChargeData?.immediateActions) {
+    actions.push(...fallbackChargeData.immediateActions.map((action: string) => ({ 
+      action, 
+      urgency: 'medium' as const 
+    })));
+  }
+  
+  // Add attorney action if needed with URGENT priority
+  if (!caseData.hasAttorney && caseData.caseStage === 'arrest') {
+    actions.unshift({ 
+      action: 'Request public defender immediately if you cannot afford attorney', 
+      urgency: 'urgent' 
+    });
+  }
+  
+  // Remove duplicates based on action text
+  const uniqueActions = Array.from(
+    new Map(actions.map(item => [item.action, item])).values()
+  );
+  
+  return uniqueActions;
 }
 
 function buildRightsForCharges(specificCharges: any[], caseStage: string): string[] {

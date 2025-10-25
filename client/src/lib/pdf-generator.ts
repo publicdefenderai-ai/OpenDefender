@@ -1,10 +1,15 @@
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 
+interface ImmediateAction {
+  action: string;
+  urgency: 'urgent' | 'high' | 'medium' | 'low';
+}
+
 interface EnhancedGuidanceData {
   sessionId: string;
   criticalAlerts: string[];
-  immediateActions: string[];
+  immediateActions: ImmediateAction[];
   nextSteps: string[];
   deadlines: Array<{
     event: string;
@@ -44,6 +49,14 @@ interface EnhancedGuidanceData {
     hasAttorney: boolean;
   };
 }
+
+// Utility function to format charge names in plain English
+const formatChargeName = (name: string): string => {
+  return name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+};
 
 /**
  * Generates a PDF document from legal guidance data.
@@ -122,7 +135,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     guidance.chargeClassifications.forEach((charge, idx) => {
       summaryData.push([
         idx === 0 ? 'Charges' : '',
-        `${charge.name} (${charge.code}) - ${charge.classification.toUpperCase()}`
+        `${formatChargeName(charge.name)} (${charge.code}) - ${charge.classification.toUpperCase()}`
       ]);
     });
   } else {
@@ -175,9 +188,10 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    guidance.immediateActions.forEach((action, idx) => {
+    guidance.immediateActions.forEach((actionItem, idx) => {
       checkPageBreak();
-      yPosition = addText(`   [ ] ${action}`, margin + 5, yPosition);
+      const urgencyLabel = `[${actionItem.urgency.toUpperCase()}]`;
+      yPosition = addText(`   [ ] ${urgencyLabel} ${actionItem.action}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;

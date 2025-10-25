@@ -34,10 +34,15 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Checkbox } from "@/components/ui/checkbox";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 
+interface ImmediateAction {
+  action: string;
+  urgency: 'urgent' | 'high' | 'medium' | 'low';
+}
+
 interface EnhancedGuidanceData {
   sessionId: string;
   criticalAlerts: string[];
-  immediateActions: string[];
+  immediateActions: ImmediateAction[];
   nextSteps: string[];
   deadlines: Array<{
     event: string;
@@ -86,6 +91,30 @@ interface GuidanceDashboardProps {
   onShowLegalAid?: () => void;
 }
 
+// Utility function to format charge names in plain English
+const formatChargeName = (name: string): string => {
+  return name
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+};
+
+// Get urgency badge color
+const getUrgencyBadgeVariant = (urgency: string) => {
+  switch (urgency) {
+    case 'urgent':
+      return 'destructive';
+    case 'high':
+      return 'default';
+    case 'medium':
+      return 'secondary';
+    case 'low':
+      return 'outline';
+    default:
+      return 'outline';
+  }
+};
+
 export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPublicDefender, onShowLegalAid }: GuidanceDashboardProps) {
   const { t, i18n } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
@@ -112,10 +141,9 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
     setExpandedSections(newExpanded);
   };
 
-  const getTimelinePriority = () => {
-    const completedStages = guidance.timeline.filter(stage => stage.completed).length;
-    const totalStages = guidance.timeline.length;
-    return Math.round((completedStages / totalStages) * 100);
+  const getImmediateActionsProgress = () => {
+    if (guidance.immediateActions.length === 0) return 0;
+    return Math.round((completedActions.size / guidance.immediateActions.length) * 100);
   };
 
   const getUrgentDeadlines = () => {
@@ -172,7 +200,7 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
                     {guidance.chargeClassifications && guidance.chargeClassifications.length > 0 ? (
                       guidance.chargeClassifications.map((charge, idx) => (
                         <div key={idx} className="flex items-center justify-center gap-2">
-                          <span>{charge.name} ({charge.code})</span>
+                          <span>{formatChargeName(charge.name)} ({charge.code})</span>
                           <Badge 
                             variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
                             className="text-xs"
@@ -200,30 +228,40 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
               </Badge>
             </div>
             <div className="text-center">
-              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.progress')}</div>
+              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.actionsCompleted')}</div>
               <div className="flex items-center gap-2">
-                <Progress value={getTimelinePriority()} className="flex-1" />
-                <span className="text-sm font-medium">{getTimelinePriority()}%</span>
+                <Progress value={getImmediateActionsProgress()} className="flex-1" />
+                <span className="text-sm font-medium">{getImmediateActionsProgress()}%</span>
               </div>
             </div>
           </div>
         </CardHeader>
       </Card>
 
-      {/* Critical Alerts */}
-      {guidance.criticalAlerts.length > 0 && (
+      {/* Attorney Alert - Show if no attorney */}
+      {!guidance.caseData.hasAttorney && (
         <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
           <AlertTriangle className="h-4 w-4 text-red-600" />
           <AlertDescription className="text-red-800 dark:text-red-200">
-            <div className="font-semibold mb-2">{t('legalGuidance.dashboard.criticalAlerts.title')}</div>
-            <ul className="space-y-1">
-              {guidance.criticalAlerts.map((alert, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">•</span>
-                  <span>{alert}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="font-semibold">
+              Request{' '}
+              {onShowPublicDefender ? (
+                <button
+                  onClick={onShowPublicDefender}
+                  className="underline hover:text-red-900 dark:hover:text-red-100 font-bold"
+                  data-testid="link-public-defender-alert"
+                >
+                  public defender
+                </button>
+              ) : (
+                <Link href="/public-defender">
+                  <span className="underline hover:text-red-900 dark:hover:text-red-100 font-bold cursor-pointer">
+                    public defender
+                  </span>
+                </Link>
+              )}{' '}
+              immediately if you cannot afford attorney
+            </div>
           </AlertDescription>
         </Alert>
       )}
@@ -260,29 +298,43 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
       {/* Immediate Actions Checklist */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <CheckCircle className="h-5 w-5 text-green-600" />
-            {t('legalGuidance.dashboard.immediateActions.title')}
+          <CardTitle className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-600" />
+              {t('legalGuidance.dashboard.immediateActions.title')}
+            </div>
+            <div className="flex items-center gap-2">
+              <Progress value={getImmediateActionsProgress()} className="w-24" />
+              <span className="text-sm font-medium">{getImmediateActionsProgress()}%</span>
+            </div>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            {guidance.immediateActions.map((action, index) => (
+            {guidance.immediateActions.map((actionItem, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <Checkbox
                   id={`action-${index}`}
-                  checked={completedActions.has(action)}
-                  onCheckedChange={() => toggleAction(action)}
+                  checked={completedActions.has(actionItem.action)}
+                  onCheckedChange={() => toggleAction(actionItem.action)}
                   className="mt-1"
+                  data-testid={`checkbox-action-${index}`}
                 />
                 <label
                   htmlFor={`action-${index}`}
                   className={`flex-1 cursor-pointer ${
-                    completedActions.has(action) ? 'line-through text-muted-foreground' : ''
+                    completedActions.has(actionItem.action) ? 'line-through text-muted-foreground' : ''
                   }`}
                 >
-                  {action}
+                  {actionItem.action}
                 </label>
+                <Badge 
+                  variant={getUrgencyBadgeVariant(actionItem.urgency)}
+                  className="text-xs uppercase shrink-0"
+                  data-testid={`badge-urgency-${index}`}
+                >
+                  {actionItem.urgency}
+                </Badge>
               </div>
             ))}
           </div>
@@ -405,8 +457,8 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
             <Card className="mt-2">
               <CardContent className="pt-6">
                 <div className="space-y-3">
-                  {/* Public Defender Office */}
-                  {onShowPublicDefender && (
+                  {/* Public Defender Office - Only show if user doesn't have attorney */}
+                  {!guidance.caseData.hasAttorney && onShowPublicDefender && (
                     <Button
                       variant="outline"
                       className="w-full justify-start h-auto py-4 px-4"

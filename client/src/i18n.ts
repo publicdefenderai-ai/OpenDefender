@@ -349,6 +349,7 @@ i18n
                 "jurisdiction": "Jurisdiction",
                 "currentStage": "Current Stage",
                 "progress": "Progress",
+                "actionsCompleted": "Actions Completed",
                 "protected": "Protected"
               },
               "criticalAlerts": {
@@ -1878,6 +1879,7 @@ i18n
                 "jurisdiction": "Jurisdicción",
                 "currentStage": "Etapa Actual",
                 "progress": "Progreso",
+                "actionsCompleted": "Acciones Completadas",
                 "protected": "Protegido"
               },
               "criticalAlerts": {

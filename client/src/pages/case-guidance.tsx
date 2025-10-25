@@ -41,10 +41,15 @@ import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
+interface ImmediateAction {
+  action: string;
+  urgency: 'urgent' | 'high' | 'medium' | 'low';
+}
+
 interface EnhancedGuidanceResult {
   sessionId: string;
   criticalAlerts: string[];
-  immediateActions: string[];
+  immediateActions: ImmediateAction[];
   nextSteps: string[];
   deadlines: Array<{
     event: string;
@@ -314,6 +319,7 @@ export default function CaseGuidance() {
           courtPreparation: guidance.courtPreparation || [],
           avoidActions: guidance.avoidActions || [],
           timeline: guidance.timeline || [],
+          chargeClassifications: guidance.chargeClassifications,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges
