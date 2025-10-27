@@ -494,19 +494,23 @@ i18n
               "title": "Essential Rights Everyone Should Know",
               "silent": {
                 "title": "Right to Remain Silent",
-                "description": "You don't have to answer questions beyond basic identification"
+                "description": "You don't have to answer questions beyond basic identification",
+                "detailedExplanation": "The Fifth Amendment protects you from self-incrimination, meaning you cannot be forced to testify against yourself. You only need to provide basic identifying information like your name and address - beyond that, you have the absolute right to refuse to answer any questions from law enforcement without an attorney present. Anything you say can be used against you in court, so exercising this right protects you from making statements that could harm your defense, even if you believe you're innocent."
               },
               "attorney": {
                 "title": "Right to an Attorney",
-                "description": "Free legal representation if you cannot afford one"
+                "description": "Free legal representation if you cannot afford one",
+                "detailedExplanation": "The Sixth Amendment guarantees your right to legal counsel in criminal proceedings. If you cannot afford to hire a private attorney, the court must provide you with a public defender at no cost to you - this applies to any criminal case where jail time is a possible penalty. You should request an attorney immediately upon arrest and before answering any questions, as having legal representation from the start significantly improves your chances of a fair outcome."
               },
               "phoneCall": {
                 "title": "Right to a Phone Call",
-                "description": "Contact family, attorney, or bail bondsman after arrest"
+                "description": "Contact family, attorney, or bail bondsman after arrest",
+                "detailedExplanation": "After being arrested and booked, you have the right to make a reasonable number of phone calls to contact an attorney, family member, or bail bondsman. Police cannot listen to calls with your attorney due to attorney-client privilege, but they may monitor other calls. It's important to use this right wisely - contact your lawyer first if possible, and avoid discussing details of your case on any call that might be recorded."
               },
               "knowCharges": {
                 "title": "Right to Know Charges",
-                "description": "Must be informed of accusations against you"
+                "description": "Must be informed of accusations against you",
+                "detailedExplanation": "The Sixth Amendment requires that you be formally informed of the criminal charges against you, typically at your arraignment or initial court appearance within 48-72 hours of arrest. You have the right to know exactly what crimes you're accused of, the specific laws you allegedly violated, and the potential penalties you face. This information allows you and your attorney to prepare an appropriate defense strategy and ensures you can't be tried for crimes you weren't properly notified about."
               }
             },
             "detailedRights": {
@@ -2024,19 +2028,23 @@ i18n
               "title": "Derechos Esenciales que Todos Deben Conocer",
               "silent": {
                 "title": "Derecho a Permanecer en Silencio",
-                "description": "No tiene que responder preguntas más allá de la identificación básica"
+                "description": "No tiene que responder preguntas más allá de la identificación básica",
+                "detailedExplanation": "La Quinta Enmienda le protege contra la auto-incriminación, lo que significa que no puede ser obligado a testificar contra usted mismo. Solo necesita proporcionar información de identificación básica como su nombre y dirección - más allá de eso, tiene el derecho absoluto de negarse a responder cualquier pregunta de las autoridades sin un abogado presente. Todo lo que diga puede ser usado en su contra en la corte, por lo que ejercer este derecho le protege de hacer declaraciones que podrían perjudicar su defensa, incluso si cree que es inocente."
               },
               "attorney": {
                 "title": "Derecho a un Abogado",
-                "description": "Representación legal gratuita si no puede pagarla"
+                "description": "Representación legal gratuita si no puede pagarla",
+                "detailedExplanation": "La Sexta Enmienda garantiza su derecho a asesoría legal en procedimientos criminales. Si no puede pagar un abogado privado, la corte debe proporcionarle un defensor público sin costo para usted - esto aplica a cualquier caso criminal donde el tiempo en prisión sea una pena posible. Debe solicitar un abogado inmediatamente después del arresto y antes de responder cualquier pregunta, ya que tener representación legal desde el principio mejora significativamente sus posibilidades de un resultado justo."
               },
               "phoneCall": {
                 "title": "Derecho a una Llamada Telefónica",
-                "description": "Contactar a familia, abogado o fianza después del arresto"
+                "description": "Contactar a familia, abogado o fianza después del arresto",
+                "detailedExplanation": "Después de ser arrestado y procesado, tiene derecho a hacer un número razonable de llamadas telefónicas para contactar a un abogado, familiar o agente de fianzas. La policía no puede escuchar llamadas con su abogado debido al privilegio abogado-cliente, pero pueden monitorear otras llamadas. Es importante usar este derecho sabiamente - contacte a su abogado primero si es posible, y evite discutir detalles de su caso en cualquier llamada que pueda ser grabada."
               },
               "knowCharges": {
                 "title": "Derecho a Conocer los Cargos",
-                "description": "Debe ser informado de las acusaciones en su contra"
+                "description": "Debe ser informado de las acusaciones en su contra",
+                "detailedExplanation": "La Sexta Enmienda requiere que sea informado formalmente de los cargos criminales en su contra, típicamente en su lectura de cargos o comparecencia inicial dentro de 48-72 horas del arresto. Tiene derecho a saber exactamente de qué crímenes se le acusa, las leyes específicas que supuestamente violó, y las penas potenciales que enfrenta. Esta información le permite a usted y a su abogado preparar una estrategia de defensa apropiada y asegura que no pueda ser juzgado por crímenes de los que no fue debidamente notificado."
               }
             },
             "detailedRights": {

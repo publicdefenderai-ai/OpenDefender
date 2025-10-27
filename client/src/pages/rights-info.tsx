@@ -45,6 +45,7 @@ export default function RightsInfo() {
   const { t } = useTranslation();
   const [selectedJurisdiction, setSelectedJurisdiction] = useState("federal");
   const { data: resources, isLoading } = useLegalResources(selectedJurisdiction);
+  const [selectedRight, setSelectedRight] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,6 +83,7 @@ export default function RightsInfo() {
                 title={t('rights.quickRights.silent.title')}
                 description={t('rights.quickRights.silent.description')}
                 bgColor="bg-blue-600"
+                onClick={() => setSelectedRight('silent')}
               />
             </ScrollReveal>
 
@@ -91,6 +93,7 @@ export default function RightsInfo() {
                 title={t('rights.quickRights.attorney.title')}
                 description={t('rights.quickRights.attorney.description')}
                 bgColor="bg-green-600"
+                onClick={() => setSelectedRight('attorney')}
               />
             </ScrollReveal>
 
@@ -100,6 +103,7 @@ export default function RightsInfo() {
                 title={t('rights.quickRights.phoneCall.title')}
                 description={t('rights.quickRights.phoneCall.description')}
                 bgColor="bg-blue-500"
+                onClick={() => setSelectedRight('phoneCall')}
               />
             </ScrollReveal>
 
@@ -109,6 +113,7 @@ export default function RightsInfo() {
                 title={t('rights.quickRights.knowCharges.title')}
                 description={t('rights.quickRights.knowCharges.description')}
                 bgColor="bg-purple-600"
+                onClick={() => setSelectedRight('knowCharges')}
               />
             </ScrollReveal>
           </div>
@@ -243,24 +248,50 @@ export default function RightsInfo() {
       </section>
 
       <Footer />
+
+      {/* Right Detail Dialog */}
+      <Dialog open={selectedRight !== null} onOpenChange={(open) => !open && setSelectedRight(null)}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              {selectedRight === 'silent' && <Shield className="h-5 w-5 text-blue-600" />}
+              {selectedRight === 'attorney' && <Scale className="h-5 w-5 text-green-600" />}
+              {selectedRight === 'phoneCall' && <Phone className="h-5 w-5 text-blue-500" />}
+              {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-purple-600" />}
+              {selectedRight && t(`rights.quickRights.${selectedRight}.title`)}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <p className="text-muted-foreground">
+              {selectedRight && t(`rights.quickRights.${selectedRight}.detailedExplanation`)}
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
 
-function QuickRightCard({ icon, title, description, bgColor }: {
+function QuickRightCard({ icon, title, description, bgColor, onClick }: {
   icon: React.ReactNode;
   title: string;
   description: string;
   bgColor: string;
+  onClick: () => void;
 }) {
   return (
-    <Card className="text-center hover:shadow-lg transition-all duration-300">
+    <Card 
+      className="text-center hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105" 
+      onClick={onClick}
+      data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
+    >
       <CardContent className="p-6">
         <div className={`w-12 h-12 ${bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
           {icon}
         </div>
         <h3 className="font-semibold text-foreground mb-2">{title}</h3>
         <p className="text-sm text-muted-foreground">{description}</p>
+        <p className="text-xs text-blue-600 dark:text-blue-400 mt-3 font-medium">Click for details</p>
       </CardContent>
     </Card>
   );
