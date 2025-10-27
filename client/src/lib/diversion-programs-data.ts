@@ -3,27 +3,32 @@ import { DiversionProgram } from "@shared/schema";
 /**
  * DIVERSION PROGRAMS DATABASE
  * 
- * Current Status: 57 diversion programs across major US metropolitan areas
+ * Current Status: 73 diversion programs across major US metropolitan areas
  * Last Updated: November 2024
  * 
- * California Coverage (16 programs):
+ * California Coverage (16 programs across 9 counties):
  * - Los Angeles County, San Francisco, Orange County, San Diego County
- * - Sacramento County, Alameda County, Riverside County
+ * - Sacramento County (3 programs), Alameda County (2), Riverside County (2)
  * - Fresno County, Kern County
  * 
- * New York Coverage (12 programs):
+ * New York Coverage (12 programs across 6 counties):
  * - Manhattan, Brooklyn, Bronx, Queens, Staten Island (Richmond)
- * - Nassau County, Albany County, Westchester County
+ * - Nassau County, Albany County (2), Westchester County (3)
  * - Rockland County, Suffolk County
  * 
- * Other States (29 programs):
+ * Georgia Coverage (16 programs across 8 counties + 1 city):
+ * - Atlanta Metro: Fulton County, Cobb County, Gwinnett County (5), DeKalb County (3)
+ * - Clayton County, Henry County, Douglas County, Sandy Springs (city)
+ * 
+ * Illinois Coverage (4 programs across 3 counties):
+ * - Cook County/Chicago, DuPage County, Kane County (2), Winnebago County
+ * 
+ * Other States (25 programs):
  * - Texas (Harris County, Dallas County)
  * - Florida (Miami-Dade, Broward County)
- * - Illinois (Cook County/Chicago)
  * - Pennsylvania (Philadelphia)
  * - Washington (King County/Seattle)
  * - Colorado (Denver)
- * - Georgia (Fulton County/Atlanta)
  * - Massachusetts (Suffolk County/Boston)
  * - Tennessee (Davidson County/Nashville)
  * - Oregon (Multnomah County/Portland)
@@ -34,14 +39,15 @@ import { DiversionProgram } from "@shared/schema";
  * Data Sources:
  * 1. NDAA Prosecutor-Led Diversion Programs Directory (https://diversion.ndaa.org/)
  * 2. Center for Health and Justice Report (2024)
- * 3. State and county court systems
+ * 3. State and county court systems (CA, NY, GA, IL)
  * 4. District Attorney offices and prosecutor-led diversion programs
  * 5. Municipal court programs
  * 6. CrimeSolutions.gov Programs API (when available)
+ * 7. State court websites and Solicitor-General offices
  * 
  * Program Types Include:
  * - Drug Courts & Substance Abuse Treatment
- * - Mental Health Courts & Crisis Intervention
+ * - Mental Health Courts & Crisis Intervention (SPMI programs)
  * - Veterans Courts & PTSD Treatment
  * - Pre-Booking/Pretrial Diversion (LEAD/PATH model)
  * - Pre-Filing/Pre-Arraignment Diversion
@@ -49,6 +55,8 @@ import { DiversionProgram } from "@shared/schema";
  * - Community Service & Restorative Justice
  * - Youth & Young Adult Diversion
  * - CARE Courts (California)
+ * - Accountability Courts (Georgia)
+ * - Deferred Prosecution Programs (Illinois, Kane County model)
  */
 
 export const diversionPrograms: DiversionProgram[] = [
@@ -1075,6 +1083,288 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.nycourts.gov/courts/10jd/suffolk/treatment/"
     },
     sources: ["Suffolk County Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Georgia Additional Programs
+  {
+    id: "ga-cobb-pretrial-diversion",
+    name: "Cobb County Pretrial Diversion Program",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Cobb",
+    cities: ["Marietta", "Smyrna", "Kennesaw", "Acworth", "Austell"],
+    zipCodes: ["30060", "30062", "30064", "30066", "30067", "30068", "30080", "30082", "30101", "30106", "30126", "30127", "30144", "30152", "30168", "30339"],
+    programTypes: ["Pretrial Diversion", "First Offender Program", "Community Service"],
+    eligibilityNotes: "First-time, non-violent offenders focusing on theft, disorderly conduct. Counseling, therapy, education, drug screening, community service, mentoring. Admin fees + restitution. Duration varies.",
+    contact: {
+      url: "https://www.cobbcounty.gov/courts/district-attorney/pretrial-diversion"
+    },
+    sources: ["Cobb County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-gwinnett-ptid",
+    name: "Gwinnett County Pre-Trial Intervention & Diversion (PTID)",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Gwinnett",
+    cities: ["Lawrenceville", "Duluth", "Norcross", "Suwanee", "Buford", "Snellville"],
+    zipCodes: ["30019", "30024", "30043", "30044", "30045", "30046", "30047", "30048", "30049", "30052", "30071", "30078", "30091", "30092", "30093", "30094", "30095", "30096", "30097", "30099"],
+    programTypes: ["Felony Diversion", "PTID", "O.C.G.A. §15-18-80"],
+    eligibilityNotes: "Non-violent offenses, Schedule I-IV drugs <2g. Managed by Professional Probation Services (PPS). Sliding fee scale by need. Immigration status NOT a factor. Excludes prior felony First Offender completion.",
+    contact: {
+      url: "https://www.gwinnettcounty.com/departments/districtattorney/pre-trialinterventiondiversion"
+    },
+    sources: ["Gwinnett County District Attorney", "Professional Probation Services"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-gwinnett-youth-diversion",
+    name: "Gwinnett County Youth Diversion Program",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Gwinnett",
+    cities: ["Lawrenceville", "Duluth", "Norcross", "Suwanee", "Buford", "Snellville"],
+    zipCodes: ["30019", "30024", "30043", "30044", "30045", "30046", "30047", "30048", "30049", "30052", "30071", "30078", "30091", "30092", "30093", "30094", "30095", "30096", "30097", "30099"],
+    programTypes: ["Youth Diversion", "Juvenile Restorative Justice", "Volunteer Panel"],
+    eligibilityNotes: "Since 1996. First-time juvenile offenders. Community volunteer panel meets with juvenile & parents/guardians. Panel determines consequences via signed agreement. Voluntary. Case dismissed if successfully completed. No delinquency record.",
+    contact: {
+      email: "stephanie.morrison@gwinnettcounty.com",
+      url: "https://www.gwinnettcourts.com/juvenile/youth-diversion-program"
+    },
+    sources: ["Gwinnett County Juvenile Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-gwinnett-new-directions",
+    name: "Gwinnett County New Directions Program",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Gwinnett",
+    cities: ["Lawrenceville", "Duluth", "Norcross", "Suwanee", "Buford", "Snellville"],
+    zipCodes: ["30019", "30024", "30043", "30044", "30045", "30046", "30047", "30048", "30049", "30052", "30071", "30078", "30091", "30092", "30093", "30094", "30095", "30096", "30097", "30099"],
+    programTypes: ["Juvenile Diversion", "Educational Program", "I Have Willpower Curriculum"],
+    eligibilityNotes: "12-week program for first-time juvenile offenders. Partner: Be More Positive Enterprises, Inc. 4-phase 'I Have Willpower' curriculum addressing accountability, self-awareness, decision-making.",
+    contact: {
+      url: "https://www.gwinnettcounty.com/departments/districtattorney/programs/newdirections"
+    },
+    sources: ["Gwinnett County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-gwinnett-mental-health",
+    name: "Gwinnett County Mental Health Diversion",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Gwinnett",
+    cities: ["Lawrenceville", "Duluth", "Norcross", "Suwanee", "Buford", "Snellville"],
+    zipCodes: ["30019", "30024", "30043", "30044", "30045", "30046", "30047", "30048", "30049", "30052", "30071", "30078", "30091", "30092", "30093", "30094", "30095", "30096", "30097", "30099"],
+    programTypes: ["Mental Health Diversion", "SPMI Treatment", "Misdemeanor"],
+    eligibilityNotes: "Verified SPMI diagnosis (Schizophrenia, Schizoaffective, Bipolar, Major Depression, PTSD, GAD). Non-violent misdemeanor directly related to diagnosis. Biopsychosocial assessment. Treatment may include psychiatry, medication compliance, therapy, case management, vocational training.",
+    contact: {
+      phone: "(678) 347-6287",
+      email: "Jamie.Story@VPHealth.org",
+      url: "https://www.gwinnettcounty.com/departments/solicitor/mentalhealthdiversion"
+    },
+    sources: ["Gwinnett County Solicitor-General", "View Point Health"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-dekalb-solicitor-diversion",
+    name: "DeKalb County Solicitor Pre-Trial Diversion",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "DeKalb",
+    cities: ["Decatur", "Tucker", "Stone Mountain", "Lithonia", "Clarkston"],
+    zipCodes: ["30002", "30021", "30030", "30032", "30033", "30034", "30035", "30038", "30058", "30079", "30083", "30084", "30085", "30086", "30087", "30088"],
+    programTypes: ["Misdemeanor Diversion", "Pretrial Intervention", "Solicitor-General"],
+    eligibilityNotes: "First-time, low-level misdemeanor offenders (shoplifting, disorderly conduct, affray). Minimum 6 months. Community service, counseling/classes, employment/school enrollment, monthly probation fees. Successful completion → charges dismissed, eligible for record restriction.",
+    contact: {
+      url: "https://dekalbsolicitorgeneral.com/diversion/"
+    },
+    sources: ["DeKalb County Solicitor-General"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-dekalb-da-diversion",
+    name: "DeKalb County District Attorney Pre-Trial Diversion",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "DeKalb",
+    cities: ["Decatur", "Tucker", "Stone Mountain", "Lithonia", "Clarkston"],
+    zipCodes: ["30002", "30021", "30030", "30032", "30033", "30034", "30035", "30038", "30058", "30079", "30083", "30084", "30085", "30086", "30087", "30088"],
+    programTypes: ["Felony Diversion", "Superior Court", "First Offender"],
+    eligibilityNotes: "First-time non-violent felony offenders. Minimum 6 months. Attorney mandatory at orientation. Employment/school enrollment, community service, fees paid over 6 months. No prior criminal convictions. Charges dismissed upon completion; arrest record can be restricted.",
+    contact: {
+      url: "https://www.dekalbda.org/about_us/pre-trial_diversion.php"
+    },
+    sources: ["DeKalb County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-dekalb-accountability-courts",
+    name: "DeKalb County Accountability Courts",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "DeKalb",
+    cities: ["Decatur", "Tucker", "Stone Mountain", "Lithonia", "Clarkston"],
+    zipCodes: ["30002", "30021", "30030", "30032", "30033", "30034", "30035", "30038", "30058", "30079", "30083", "30084", "30085", "30086", "30087", "30088"],
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Three 2-year outpatient treatment programs. Drug Court has Track 1 (high risk/need) and Track 2 (moderate-to-high). Mental Health Court for chronic/multiple mental illnesses. Veterans Court offers drug & mental health treatment with mentor from same military branch.",
+    contact: {
+      url: "https://www.dekalbda.org/"
+    },
+    sources: ["DeKalb County District Attorney", "DeKalb County Superior Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-clayton-ptid",
+    name: "Clayton County Pre-Trial Intervention & Diversion",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Clayton",
+    cities: ["Jonesboro", "Riverdale", "Morrow", "Forest Park", "College Park"],
+    zipCodes: ["30236", "30238", "30260", "30274", "30288", "30294", "30296", "30297"],
+    programTypes: ["Pretrial Diversion", "PIDP", "First Offender"],
+    eligibilityNotes: "First-time offenders, no prior diversion participation, ability to pay restitution. Self-development programs, ADA + DA approval required. 90 days duration. $600 + $25 drug screening + restitution.",
+    contact: {
+      url: "https://www.claytoncountyda.info/pretrialinterventiondiversionprogram"
+    },
+    sources: ["Clayton County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-henry-pretrial-diversion",
+    name: "Henry County Pretrial Diversion Program",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Henry",
+    cities: ["McDonough", "Stockbridge", "Hampton", "Locust Grove"],
+    zipCodes: ["30228", "30233", "30236", "30252", "30253", "30258", "30281"],
+    programTypes: ["Pretrial Diversion", "First-Time Offender", "Individualized Supervision"],
+    eligibilityNotes: "First-time, non-violent offenders. Individualized supervision, corrective programs. Specified period. Fees + restitution.",
+    contact: {
+      phone: "(770) 288-7366",
+      email: "lflint@co.henry.ga.us",
+      url: "https://henrycountyda.org/pretrial-diversion-program/"
+    },
+    sources: ["Henry County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-douglas-pretrial-diversion",
+    name: "Douglas County Pre-Trial Diversion Program",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Douglas",
+    cities: ["Douglasville", "Villa Rica", "Austell"],
+    zipCodes: ["30134", "30135", "30187"],
+    programTypes: ["Young Adult Diversion", "General Diversion", "BJA Grant"],
+    eligibilityNotes: "Two tracks: Young Adult (17-24) / General (25+). Non-violent offenders, minimal criminal history. Accountability courses, life skills training, victim/community restoration. 9-12 months avg. BJA Grant funded.",
+    contact: {
+      url: "https://bja.ojp.gov/funding/awards/15pbja-24-gg-00290-brnd"
+    },
+    sources: ["Douglas County District Attorney", "Bureau of Justice Assistance"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-sandy-springs-treatment",
+    name: "Sandy Springs Treatment Diversion Program",
+    jurisdictionType: "city",
+    state: "GA",
+    county: "Fulton",
+    cities: ["Sandy Springs"],
+    zipCodes: ["30328", "30342", "30350"],
+    programTypes: ["Treatment Diversion", "Municipal Court", "Drug/Alcohol/Mental Health"],
+    eligibilityNotes: "Launched 2021. 12-month program for non-violent misdemeanors (non-DUI). Tailored for drug/alcohol addiction or mental health issues. Accountability team: prosecutor, defense attorney, judge, community leaders. Fee: $700 entry + $60/month (reducible via community service). PTSD support for veterans.",
+    contact: {
+      url: "https://www.sandyspringsga.gov/"
+    },
+    sources: ["Sandy Springs Solicitor's Office"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Illinois Additional Programs
+  {
+    id: "il-dupage-pretrial-diversion",
+    name: "DuPage County Pretrial Diversion Program",
+    jurisdictionType: "county",
+    state: "IL",
+    county: "DuPage",
+    cities: ["Wheaton", "Naperville", "Downers Grove", "Elmhurst", "Lombard", "Carol Stream", "Glen Ellyn"],
+    zipCodes: ["60101", "60103", "60106", "60108", "60126", "60128", "60137", "60139", "60148", "60157", "60181", "60187", "60188", "60189", "60515", "60516", "60517", "60540", "60555", "60559", "60561", "60563", "60565", "60566"],
+    programTypes: ["Felony Diversion", "Theft/Shoplifting Focus"],
+    eligibilityNotes: "First-time non-violent felonies. Qualifying: theft, shoplifting (retail theft >$300, theft >$500). NOT eligible: drug cases, DUIs, low-level marijuana, mandatory prison felonies. Unique: requires guilty plea upfront. 1-year probation with tailored conditions. $50 application + $750 if accepted.",
+    contact: {
+      url: "https://www.dupageco.org/statesattorney/"
+    },
+    sources: ["DuPage County State's Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "il-kane-deferred-prosecution",
+    name: "Kane County Deferred Prosecution Programs",
+    jurisdictionType: "county",
+    state: "IL",
+    county: "Kane",
+    cities: ["Aurora", "Elgin", "St. Charles", "Carpentersville", "Geneva", "Batavia"],
+    zipCodes: ["60119", "60120", "60123", "60124", "60134", "60136", "60140", "60142", "60151", "60174", "60175", "60177", "60505", "60506", "60507", "60510", "60511", "60519", "60538", "60539"],
+    programTypes: ["Deferred Prosecution", "Drug/Alcohol Program", "Domestic Violence", "Solicitation"],
+    eligibilityNotes: "Started 1995 (originally 'Second Chance'). Five program categories: Felony/Misdemeanor, Misdemeanor Drug/Alcohol, Domestic Violence/Battery (first in IL), Felony Drug, Solicitation of Prostitution. 92% do not re-offend after completion (2015 Aurora University study).",
+    contact: {
+      phone: "(630) 232-3500",
+      url: "https://sao.kanecountyil.gov/Pages/SecondChance.aspx"
+    },
+    sources: ["Kane County State's Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "il-kane-lead",
+    name: "Kane County LEAD Pre-Arrest Diversion",
+    jurisdictionType: "county",
+    state: "IL",
+    county: "Kane",
+    cities: ["Elgin", "Aurora"],
+    zipCodes: ["60119", "60120", "60123", "60124", "60505", "60506", "60507"],
+    programTypes: ["Pre-Arrest Diversion", "LEAD Model", "Law Enforcement Assisted"],
+    eligibilityNotes: "Launched November 2023. $1.2M federal DOJ grant + $152K state grant. Operating: Elgin PD, Kane County Sheriff. Expansion to Aurora PD in 2024. Officers refer to social services instead of arrest for low-level crimes. Services: job training, housing, addiction/mental health treatment, ID assistance. Reduces racial disparities.",
+    contact: {
+      url: "https://sao.kanecountyil.gov/LEAD"
+    },
+    sources: ["Kane County State's Attorney", "U.S. Department of Justice"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "il-winnebago-divert",
+    name: "Winnebago County DIVERT Program",
+    jurisdictionType: "county",
+    state: "IL",
+    county: "Winnebago",
+    cities: ["Rockford", "Machesney Park", "Loves Park", "Roscoe"],
+    zipCodes: ["61008", "61011", "61012", "61073", "61101", "61102", "61103", "61104", "61107", "61108", "61109", "61111", "61112", "61114", "61115"],
+    programTypes: ["Pretrial Diversion", "State-Funded", "Free Program"],
+    eligibilityNotes: "Launched March 2022 with state grant. First-time, non-violent offenders. FREE (state-funded) - replaced previous $500 fee program. 155 successful completions by January 2024. Prosecutor-led.",
+    contact: {
+      url: "https://loyolaccj.org/blog/evaluating-a-prosecutor-led-pretrial-diversion-program-in-winnebago-county-interim-report"
+    },
+    sources: ["Winnebago County State's Attorney", "Loyola University Chicago Center for Criminal Justice"],
     lastUpdated: new Date("2024-11-01"),
     isActive: true,
   },
