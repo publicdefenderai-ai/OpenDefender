@@ -291,7 +291,6 @@ function QuickRightCard({ icon, title, description, bgColor, onClick }: {
         </div>
         <h3 className="font-semibold text-foreground mb-2">{title}</h3>
         <p className="text-sm text-muted-foreground">{description}</p>
-        <p className="text-xs text-blue-600 dark:text-blue-400 mt-3 font-medium">Click for details</p>
       </CardContent>
     </Card>
   );
