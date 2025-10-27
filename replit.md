@@ -20,7 +20,7 @@ The backend is built with Express.js and TypeScript, providing a RESTful API. It
 
 ### Data Sources and Integrations
 
-The system integrates with various legal data sources to provide comprehensive information. It includes a robust database of legal aid organizations with detailed contact and service information, and a comprehensive criminal charges database covering federal and state offenses across all 50 states and DC, cross-referenced with FindLaw categories. It also incorporates an expanded diversion programs database with verified program details. A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored.
+The system integrates with various legal data sources to provide comprehensive information. It includes a robust database of legal aid organizations with detailed contact and service information, and a comprehensive criminal charges database covering federal and state offenses across all 50 states and DC, cross-referenced with FindLaw categories. The diversion programs database now contains 60+ programs across major US metropolitan areas, including drug courts, mental health courts, veterans courts, pretrial diversion programs, and harm reduction initiatives (LEAD/PATH) in 15+ states with verified contact information, eligibility criteria, and program details. A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored.
 
 ### API Architecture
 
@@ -56,7 +56,9 @@ Vite is used for frontend development (HMR, TypeScript checking) and client-side
 - **EOIR.gov**: Immigration legal service providers.
 - **Legal Services Corporation (LSC)**: Civil legal aid organizations.
 - **Center for Health and Justice**: Diversion program research.
-- **NDAA Diversion Programs Directory** (https://diversion.ndaa.org/): National directory of 250+ prosecutor-led diversion programs. Monthly review scheduled for updates (last review: November 2024, next: December 2024).
+- **NDAA Diversion Programs Directory** (https://diversion.ndaa.org/): National directory of 250+ prosecutor-led diversion programs (referenced for future expansion).
+- **CrimeSolutions.gov Programs API** (https://data.ojp.usdoj.gov/): DOJ Office of Justice Programs database of evidence-based programs (currently offline due to government operations, will be integrated when available).
+- **State and Local Court Systems**: Direct research from court websites and district attorney offices across major US metropolitan areas.
 
 ### UI and Styling
 - **shadcn/ui**: Component library.

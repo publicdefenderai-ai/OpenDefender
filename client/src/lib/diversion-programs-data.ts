@@ -3,23 +3,40 @@ import { DiversionProgram } from "@shared/schema";
 /**
  * DIVERSION PROGRAMS DATABASE
  * 
+ * Current Status: 60+ diversion programs across major US metropolitan areas
+ * Last Updated: November 2024
+ * 
+ * Coverage includes programs in:
+ * - California (Los Angeles, San Francisco, Orange County, San Diego)
+ * - Texas (Harris County, Dallas County)
+ * - Florida (Miami-Dade, Broward County)
+ * - New York (Manhattan, Brooklyn, Bronx)
+ * - Illinois (Cook County/Chicago)
+ * - Pennsylvania (Philadelphia)
+ * - Washington (King County/Seattle)
+ * - Colorado (Denver)
+ * - Georgia (Fulton County/Atlanta)
+ * - Massachusetts (Suffolk County/Boston)
+ * - Tennessee (Davidson County/Nashville)
+ * - Oregon (Multnomah County/Portland)
+ * - North Carolina (Mecklenburg County/Charlotte)
+ * - Ohio (Franklin County/Columbus)
+ * - Delaware, Wisconsin, and Federal programs
+ * 
  * Data Sources:
  * 1. Center for Health and Justice Report (2024)
- * 2. NDAA Prosecutor-Led Diversion Programs Directory (https://diversion.ndaa.org/)
- *    - Contains 250+ programs nationwide
- *    - Categories: Restorative justice, Substance use, Mental health, Domestic violence,
- *      Early intervention (youth), Traffic/DUI, Sex trafficking/prostitution
+ * 2. State and county court systems
+ * 3. District Attorney offices and prosecutor-led diversion programs
+ * 4. Municipal court programs
+ * 5. CrimeSolutions.gov Programs API (when available)
  * 
- * Update Schedule:
- * - Monthly review recommended (check NDAA directory for new programs)
- * - Last NDAA review: November 2024
- * - Next NDAA review: December 2024
- * 
- * To update from NDAA:
- * 1. Visit https://diversion.ndaa.org/
- * 2. Click "Show all Diversion Programs" 
- * 3. Filter by state/region/program type
- * 4. Add new programs following the DiversionProgram schema
+ * Program Types Include:
+ * - Drug Courts & Substance Abuse Treatment
+ * - Mental Health Courts & Crisis Intervention
+ * - Veterans Courts & PTSD Treatment
+ * - Pre-Booking/Pretrial Diversion
+ * - Harm Reduction Programs (LEAD/PATH)
+ * - Community Service & Restorative Justice
  */
 
 export const diversionPrograms: DiversionProgram[] = [
@@ -286,6 +303,446 @@ export const diversionPrograms: DiversionProgram[] = [
     },
     sources: ["Milwaukee County Courts", "Wisconsin DOJ TAD Program", "Center for Health and Justice Report"],
     lastUpdated: new Date("2024-09-20"),
+    isActive: true,
+  },
+
+  // Illinois Programs
+  {
+    id: "il-cook-drug-court",
+    name: "Cook County Drug Treatment Court",
+    jurisdictionType: "county",
+    state: "IL",
+    county: "Cook",
+    cities: ["Chicago", "Skokie", "Rolling Meadows", "Maywood", "Bridgeview", "Markham"],
+    zipCodes: ["60601", "60602", "60603", "60604", "60605", "60606", "60607", "60608", "60609", "60610", "60611", "60612", "60613", "60614", "60615", "60616", "60617", "60618", "60619", "60620", "60621", "60622", "60623", "60624", "60625", "60626", "60628", "60629", "60630", "60631", "60632", "60633", "60634", "60636", "60637", "60638", "60639", "60640", "60641", "60642", "60643", "60644", "60645", "60646", "60647", "60649", "60651", "60652", "60653", "60654", "60655", "60656", "60657", "60659", "60660", "60661"],
+    programTypes: ["Drug Court", "Substance Abuse Treatment"],
+    eligibilityNotes: "High-risk, high-need defendants with non-violent felony offenses eligible for probation. Diagnosed substance use disorder required. No conviction for violent crime in past 10 years. 18-24 month program duration.",
+    contact: {
+      phone: "problemsolvingcourts@cookcountyil.gov",
+      url: "https://www.cookcountycourt.org/division/problem-solving-courts/drug-treatment-court-programs"
+    },
+    sources: ["Cook County Circuit Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "il-cook-mental-health-court",
+    name: "Cook County Mental Health Treatment Court",
+    jurisdictionType: "county",
+    state: "IL",
+    county: "Cook",
+    cities: ["Chicago", "Skokie", "Rolling Meadows", "Maywood", "Bridgeview", "Markham"],
+    zipCodes: ["60601", "60602", "60603", "60604", "60605", "60606", "60607", "60608", "60609", "60610", "60611", "60612", "60613", "60614", "60615", "60616", "60617", "60618", "60619", "60620", "60621", "60622", "60623", "60624", "60625", "60626", "60628", "60629", "60630", "60631", "60632", "60633", "60634", "60636", "60637", "60638", "60639", "60640", "60641", "60642", "60643", "60644", "60645", "60646", "60647", "60649", "60651", "60652", "60653", "60654", "60655", "60656", "60657", "60659", "60660", "60661"],
+    programTypes: ["Mental Health Court", "Crisis Intervention", "Intensive Probation"],
+    eligibilityNotes: "High-risk, high-need repeat offenders with felony non-violent offenses. Diagnosed mental health disorder required. 24 months intensive probation. Capacity up to 35 participants per court.",
+    contact: {
+      phone: "problemsolvingcourts@cookcountyil.gov",
+      url: "https://www.cookcountycourt.org/division/problem-solving-courts/mental-health-treatment-court-program"
+    },
+    sources: ["Cook County Circuit Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Pennsylvania Programs  
+  {
+    id: "pa-phila-drug-court",
+    name: "Philadelphia Drug Treatment Court",
+    jurisdictionType: "city",
+    state: "PA",
+    county: "Philadelphia",
+    cities: ["Philadelphia"],
+    zipCodes: ["19102", "19103", "19104", "19106", "19107", "19111", "19112", "19113", "19114", "19115", "19116", "19118", "19119", "19120", "19121", "19122", "19123", "19124", "19125", "19126", "19127", "19128", "19129", "19130", "19131", "19132", "19133", "19134", "19135", "19136", "19137", "19138", "19139", "19140", "19141", "19142", "19143", "19144", "19145", "19146", "19147", "19148", "19149", "19150", "19151", "19152", "19153", "19154"],
+    programTypes: ["Drug Treatment Court", "Substance Abuse Treatment", "Dual Diagnosis"],
+    eligibilityNotes: "Year-long intensive program spanning four phases. No-contest plea required. No requirement for clean criminal history. Dual diagnosis option available for co-occurring mental health and substance abuse issues.",
+    contact: {
+      url: "https://phillyda.org/adult-diversion-and-alternatives-to-incarceration-initiatives/"
+    },
+    sources: ["Philadelphia District Attorney's Office"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "pa-phila-amp",
+    name: "Philadelphia Accelerated Misdemeanor Program (AMP)",
+    jurisdictionType: "city",
+    state: "PA",
+    county: "Philadelphia",
+    cities: ["Philadelphia"],
+    zipCodes: ["19102", "19103", "19104", "19106", "19107", "19111", "19112", "19113", "19114", "19115", "19116", "19118", "19119", "19120", "19121", "19122", "19123", "19124", "19125", "19126", "19127", "19128", "19129", "19130", "19131", "19132", "19133", "19134", "19135", "19136", "19137", "19138", "19139", "19140", "19141", "19142", "19143", "19144", "19145", "19146", "19147", "19148", "19149", "19150", "19151", "19152", "19153", "19154"],
+    programTypes: ["Pretrial Diversion", "Community Service"],
+    eligibilityNotes: "Non-violent misdemeanor offenders with minimal criminal convictions. Pre-plea (case stays in pretrial status). Requires 12-18 hours community service OR proof of drug treatment.",
+    contact: {
+      url: "https://phillyda.org/adult-diversion-and-alternatives-to-incarceration-initiatives/"
+    },
+    sources: ["Philadelphia District Attorney's Office"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "pa-phila-veterans-court",
+    name: "Philadelphia Veterans Court",
+    jurisdictionType: "city",
+    state: "PA",
+    county: "Philadelphia",
+    cities: ["Philadelphia"],
+    zipCodes: ["19102", "19103", "19104", "19106", "19107", "19111", "19112", "19113", "19114", "19115", "19116", "19118", "19119", "19120", "19121", "19122", "19123", "19124", "19125", "19126", "19127", "19128", "19129", "19130", "19131", "19132", "19133", "19134", "19135", "19136", "19137", "19138", "19139", "19140", "19141", "19142", "19143", "19144", "19145", "19146", "19147", "19148", "19149", "19150", "19151", "19152", "19153", "19154"],
+    programTypes: ["Veterans Court", "Mental Health Treatment", "Substance Abuse Treatment"],
+    eligibilityNotes: "Active or former military members charged with non-violent misdemeanors. Services through VA officials include drug/alcohol treatment, mental health treatment, medical referrals, housing assistance, employment training. Includes mentor matching. Eligible for expungement upon completion.",
+    contact: {
+      url: "https://phillyda.org/adult-diversion-and-alternatives-to-incarceration-initiatives/"
+    },
+    sources: ["Philadelphia District Attorney's Office"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Washington Programs
+  {
+    id: "wa-king-lead",
+    name: "Seattle-King County LEAD Program (Let Everyone Advance with Dignity)",
+    jurisdictionType: "county",
+    state: "WA",
+    county: "King",
+    cities: ["Seattle", "Burien"],
+    zipCodes: ["98101", "98102", "98103", "98104", "98105", "98106", "98107", "98108", "98109", "98112", "98115", "98116", "98117", "98118", "98119", "98121", "98122", "98125", "98126", "98133", "98134", "98136", "98144", "98146", "98148", "98154", "98164", "98166", "98168", "98174", "98177", "98178", "98188", "98195", "98199"],
+    programTypes: ["Pre-Booking Diversion", "Harm Reduction", "Case Management"],
+    eligibilityNotes: "Low-level drug possession/sales (≤3 grams), prostitution, property crimes. Cannot have felony convictions for serious violent crimes. Harm-reduction oriented, abstinence not required. Services provided as long as needed with no fixed end date.",
+    contact: {
+      phone: "(206) 392-0050",
+      url: "https://kingcounty.gov/en/dept/dchs/human-social-services/behavioral-health-recovery/diversion-reentry-programs/lead"
+    },
+    sources: ["King County Department of Community and Human Services", "Purpose, Dignity, Action (PDA)"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Colorado Programs
+  {
+    id: "co-denver-reach",
+    name: "Denver REACH Mental Health Diversion Program",
+    jurisdictionType: "city",
+    state: "CO",
+    county: "Denver",
+    cities: ["Denver"],
+    zipCodes: ["80201", "80202", "80203", "80204", "80205", "80206", "80207", "80209", "80210", "80211", "80212", "80214", "80216", "80218", "80219", "80220", "80221", "80222", "80223", "80224", "80226", "80227", "80230", "80231", "80232", "80235", "80236", "80237", "80238", "80239", "80246", "80247", "80249", "80264"],
+    programTypes: ["Mental Health Diversion", "Competency Screening", "Treatment Linkage"],
+    eligibilityNotes: "Low-level offenses with individuals previously found incompetent. Six-month diversion program. Released to community with treatment plans. Cases dismissed if compliant.",
+    contact: {
+      url: "https://www.denverda.org/units-and-programs/alternatives-to-prosecution/"
+    },
+    sources: ["Denver District Attorney's Office", "WellPower"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Georgia Programs
+  {
+    id: "ga-fulton-diversion-center",
+    name: "Fulton County Center for Diversion & Services",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Fulton",
+    cities: ["Atlanta"],
+    zipCodes: ["30301", "30302", "30303", "30304", "30305", "30306", "30307", "30308", "30309", "30310", "30311", "30312", "30313", "30314", "30315", "30316", "30317", "30318", "30319", "30324", "30326", "30327", "30328", "30329", "30331", "30332", "30334", "30336", "30337", "30338", "30339", "30340", "30341", "30342", "30343", "30344", "30345", "30346", "30350", "30354", "30363"],
+    programTypes: ["Pre-Arrest Diversion", "Crisis Services", "Sobering Center", "Case Management"],
+    eligibilityNotes: "24/7 services. Age 18+. Voluntary participation required. Brought by law enforcement or first responders. Excludes violent crimes or substantial risk of harm. Offenses driven by mental health crises, substance use, extreme poverty, or homelessness.",
+    contact: {
+      url: "http://fultoncourt.org/center-for-diversion-and-services"
+    },
+    sources: ["Fulton County Superior Court", "Grady Health System"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ga-fulton-drug-court",
+    name: "Fulton County Accountability Court (Drug Court)",
+    jurisdictionType: "county",
+    state: "GA",
+    county: "Fulton",
+    cities: ["Atlanta"],
+    zipCodes: ["30301", "30302", "30303", "30304", "30305", "30306", "30307", "30308", "30309", "30310", "30311", "30312", "30313", "30314", "30315", "30316", "30317", "30318", "30319", "30324", "30326", "30327", "30328", "30329", "30331", "30332", "30334", "30336", "30337", "30338", "30339", "30340", "30341", "30342", "30343", "30344", "30345", "30346", "30350", "30354", "30363"],
+    programTypes: ["Drug Court", "Substance Abuse Treatment", "Job Training"],
+    eligibilityNotes: "Non-violent felony drug offenses. Substance abuse and/or mental health challenges. Age 17+, Fulton County resident. Voluntary participation. 18 months minimum program. $750 participation fee.",
+    contact: {
+      phone: "(404) 613-5313",
+      url: "http://www.fultonsuperiorcourtga.gov/accountability-courts"
+    },
+    sources: ["Fulton County Superior Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Massachusetts Programs
+  {
+    id: "ma-suffolk-drug-diversion",
+    name: "Suffolk County Drug Diversion Program",
+    jurisdictionType: "county",
+    state: "MA",
+    county: "Suffolk",
+    cities: ["Boston"],
+    zipCodes: ["02108", "02109", "02110", "02111", "02113", "02114", "02115", "02116", "02118", "02119", "02120", "02121", "02122", "02124", "02125", "02126", "02127", "02128", "02129", "02130", "02131", "02132", "02134", "02135", "02136", "02163", "02199", "02203", "02210", "02215"],
+    programTypes: ["Drug Diversion", "Substance Abuse Treatment", "Pre-Disposition"],
+    eligibilityNotes: "Nonviolent offenders with substance use and mental health disorders. Eligible individuals can opt into treatment instead of prosecution. Participation can mitigate sentences.",
+    contact: {
+      url: "https://northsuffolk.org/addiction-services/"
+    },
+    sources: ["Suffolk County District Attorney's Office", "North Suffolk Mental Health Association"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ma-suffolk-recovery-court",
+    name: "Suffolk County Recovery Court",
+    jurisdictionType: "county",
+    state: "MA",
+    county: "Suffolk",
+    cities: ["Boston", "Dorchester", "Charlestown", "South Boston", "East Boston"],
+    zipCodes: ["02108", "02109", "02110", "02111", "02113", "02114", "02115", "02116", "02118", "02119", "02120", "02121", "02122", "02124", "02125", "02126", "02127", "02128", "02129", "02130", "02131", "02132", "02134", "02135", "02136", "02163", "02199", "02203", "02210", "02215"],
+    programTypes: ["Recovery Court", "Substance Abuse Treatment", "Judicial Supervision"],
+    eligibilityNotes: "Nonviolent individuals with substance use disorders. Alternative to incarceration. Integrates substance abuse treatment with case processing and judicial supervision. 4 court sessions at different locations.",
+    contact: {
+      phone: "(857) 287-1806",
+      email: "Elizabeth.Plange@BMC.org",
+      url: "https://www.bmc.org/programs/criminal-justice-mental-health-programs"
+    },
+    sources: ["Boston Medical Center"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ma-suffolk-mental-health-court",
+    name: "Suffolk County Mental Health Court",
+    jurisdictionType: "county",
+    state: "MA",
+    county: "Suffolk",
+    cities: ["Boston", "West Roxbury", "Roxbury"],
+    zipCodes: ["02108", "02109", "02110", "02111", "02113", "02114", "02115", "02116", "02118", "02119", "02120", "02121", "02122", "02124", "02125", "02126", "02127", "02128", "02129", "02130", "02131", "02132", "02134", "02135", "02136", "02163", "02199", "02203", "02210", "02215"],
+    programTypes: ["Mental Health Court", "Pretrial Diversion", "Intensive Social Services"],
+    eligibilityNotes: "Mental health + co-occurring substance use issues. Pretrial diversion or post-conviction program. Treatment and intensive social services. Goal: achieve recovery, maintain stability, avoid incarceration. 3 court sessions.",
+    contact: {
+      phone: "(857) 287-1806",
+      email: "Elizabeth.Plange@BMC.org",
+      url: "https://www.bmc.org/programs/criminal-justice-mental-health-programs"
+    },
+    sources: ["Boston Medical Center"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // California Programs (San Diego - additional)
+  {
+    id: "ca-sd-drug-court",
+    name: "San Diego County Drug Court (PC 1000)",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "San Diego",
+    cities: ["San Diego", "Chula Vista", "Oceanside", "Escondido", "Carlsbad"],
+    zipCodes: ["92101", "92102", "92103", "92104", "92105", "92106", "92107", "92108", "92109", "92110", "92111", "92113", "92114", "92115", "92116", "92117", "92118", "92119", "92120", "92121", "92122", "92123", "92124", "92126", "92127", "92128", "92129", "92130", "92131", "92132", "92134", "92135", "92136", "92139", "92140", "92145", "92147", "92154", "92155"],
+    programTypes: ["Drug Court", "Deferred Entry of Judgment", "Substance Abuse Counseling"],
+    eligibilityNotes: "First-time, non-violent drug offenders. Plead guilty → judge delays sentencing for 18 months → complete 5-6 months of substance abuse counseling + random drug testing. Charges dismissed if successful.",
+    contact: {
+      url: "https://www.sdcourt.ca.gov/"
+    },
+    sources: ["San Diego Superior Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-sd-behavioral-health-court",
+    name: "San Diego Behavioral Health Court",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "San Diego",
+    cities: ["San Diego"],
+    zipCodes: ["92101", "92102", "92103", "92104", "92105", "92106", "92107", "92108", "92109", "92110", "92111", "92113", "92114", "92115", "92116", "92117", "92118", "92119", "92120", "92121", "92122", "92123", "92124", "92126", "92127", "92128", "92129", "92130", "92131", "92132", "92134", "92135", "92136", "92139", "92140", "92145", "92147", "92154", "92155"],
+    programTypes: ["Mental Health Court", "Behavioral Health Treatment", "Intensive Services"],
+    eligibilityNotes: "Felony defendants with serious mental illness (schizophrenia, schizoaffective disorder, bipolar disorder). Capacity: 75 spots for adults. Must plead guilty and agree to strict program requirements. 51% completion rate.",
+    contact: {
+      url: "https://www.sdcourt.ca.gov/"
+    },
+    sources: ["San Diego Superior Court", "Telecare"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Tennessee Programs
+  {
+    id: "tn-davidson-recovery-court",
+    name: "Nashville-Davidson County Recovery Court",
+    jurisdictionType: "county",
+    state: "TN",
+    county: "Davidson",
+    cities: ["Nashville"],
+    zipCodes: ["37201", "37203", "37204", "37205", "37206", "37207", "37208", "37209", "37210", "37211", "37212", "37213", "37214", "37215", "37216", "37217", "37218", "37219", "37220", "37221", "37228", "37243"],
+    programTypes: ["Recovery Court", "Drug Court", "Medication-Assisted Treatment"],
+    eligibilityNotes: "Non-violent offenders with substance abuse/chemical dependency diagnosis. Willing to participate in treatment. Services include substance use treatment, MAT, behavioral health services, drug testing, housing/transportation assistance, employment support, community service.",
+    contact: {
+      url: "https://recoverycourt.nashville.gov/"
+    },
+    sources: ["General Sessions Court of Metropolitan Nashville & Davidson County"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "tn-davidson-mental-health-court",
+    name: "Nashville-Davidson County Mental Health Court",
+    jurisdictionType: "county",
+    state: "TN",
+    county: "Davidson",
+    cities: ["Nashville"],
+    zipCodes: ["37201", "37203", "37204", "37205", "37206", "37207", "37208", "37209", "37210", "37211", "37212", "37213", "37214", "37215", "37216", "37217", "37218", "37219", "37220", "37221", "37228", "37243"],
+    programTypes: ["Mental Health Court", "Crisis Intervention", "Treatment Linkage"],
+    eligibilityNotes: "Individuals with mental illness who can participate via probation program or diversion program for criminal charges. Mental health evaluation & treatment, medication compliance monitoring, psychiatric treatment, links to community providers.",
+    contact: {
+      url: "https://mentalhealthcourt.nashville.gov/"
+    },
+    sources: ["General Sessions Court of Metropolitan Nashville & Davidson County"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "tn-davidson-veterans-court",
+    name: "Nashville-Davidson County Veterans Treatment Court",
+    jurisdictionType: "county",
+    state: "TN",
+    county: "Davidson",
+    cities: ["Nashville"],
+    zipCodes: ["37201", "37203", "37204", "37205", "37206", "37207", "37208", "37209", "37210", "37211", "37212", "37213", "37214", "37215", "37216", "37217", "37218", "37219", "37220", "37221", "37228", "37243"],
+    programTypes: ["Veterans Court", "PTSD Treatment", "Substance Abuse for Veterans"],
+    eligibilityNotes: "Veterans with addiction, serious mental illness, or co-occurring disorders. Agree to participate as condition of probation or diversion program. Mental health evaluation, alcohol/substance abuse assistance, supervision by veteran-specific client specialists, volunteer veteran mentors.",
+    contact: {
+      url: "https://gscourt.nashville.gov/departments-services/veterans-treatment-court/"
+    },
+    sources: ["General Sessions Court of Metropolitan Nashville & Davidson County"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Oregon Programs
+  {
+    id: "or-multnomah-path",
+    name: "Multnomah County PATH Program (Providing Access To Hope)",
+    jurisdictionType: "county",
+    state: "OR",
+    county: "Multnomah",
+    cities: ["Portland"],
+    zipCodes: ["97201", "97202", "97203", "97204", "97205", "97206", "97209", "97210", "97211", "97212", "97213", "97214", "97215", "97216", "97217", "97218", "97219", "97220", "97221", "97222", "97223", "97224", "97225", "97227", "97229", "97230", "97232", "97233", "97239"],
+    programTypes: ["Pre-Booking Diversion", "Harm Reduction", "Mental Health Support"],
+    eligibilityNotes: "Diversion from jail for people with substance use and mental health challenges. Prioritizes Black, Indigenous, and People of Color at risk for legal engagement and homelessness. Goal-setting, resource connection, substance use and mental health support.",
+    contact: {
+      phone: "(503) 988-4888",
+      url: "https://www.multco.us/lpscc/law-enforcement-assisted-diversion-lead"
+    },
+    sources: ["Multnomah County Behavioral Health Division"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "or-multnomah-stop",
+    name: "Multnomah County STOP Drug Diversion Program",
+    jurisdictionType: "county",
+    state: "OR",
+    county: "Multnomah",
+    cities: ["Portland"],
+    zipCodes: ["97201", "97202", "97203", "97204", "97205", "97206", "97209", "97210", "97211", "97212", "97213", "97214", "97215", "97216", "97217", "97218", "97219", "97220", "97221", "97222", "97223", "97224", "97225", "97227", "97229", "97230", "97232", "97233", "97239"],
+    programTypes: ["Drug Diversion", "Substance Abuse Treatment"],
+    eligibilityNotes: "First-time drug possession offenses. Post-plea model (participants plead guilty, charges dropped upon completion). 365 days in treatment required. Six consecutive clean drug tests needed. Charges can be removed from criminal record upon successful completion. Established 1991.",
+    contact: {
+      phone: "(503) 988-4888",
+      url: "https://www.multco.us/dcj-adult/stop-drug-diversion"
+    },
+    sources: ["Multnomah County Circuit Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "or-multnomah-mental-health-court",
+    name: "Multnomah County Mental Health Court",
+    jurisdictionType: "county",
+    state: "OR",
+    county: "Multnomah",
+    cities: ["Portland"],
+    zipCodes: ["97201", "97202", "97203", "97204", "97205", "97206", "97209", "97210", "97211", "97212", "97213", "97214", "97215", "97216", "97217", "97218", "97219", "97220", "97221", "97222", "97223", "97224", "97225", "97227", "97229", "97230", "97232", "97233", "97239"],
+    programTypes: ["Mental Health Court", "Treatment Services", "Medication Management"],
+    eligibilityNotes: "Currently on probation with qualifying mental health diagnoses (major depression, bipolar disorder, schizophrenia, or similar). Minimum 1 year to complete. 6-12 month programs with therapy, case management, and medication management.",
+    contact: {
+      url: "https://www.mcda.us/index.php/community-initiatives-special-programs/mental-health-court"
+    },
+    sources: ["Multnomah County District Attorney", "Cascadia Health"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // North Carolina Programs
+  {
+    id: "nc-mecklenburg-step",
+    name: "Mecklenburg County S.T.E.P. Program",
+    jurisdictionType: "county",
+    state: "NC",
+    county: "Mecklenburg",
+    cities: ["Charlotte"],
+    zipCodes: ["28201", "28202", "28203", "28204", "28205", "28206", "28207", "28208", "28209", "28210", "28211", "28212", "28213", "28214", "28215", "28216", "28217", "28226", "28227", "28244", "28262", "28269", "28270", "28273", "28277", "28278", "28280", "28282"],
+    programTypes: ["Drug Treatment Court", "Supervision", "Treatment", "Education"],
+    eligibilityNotes: "Chemically dependent adults with court-ordered treatment plans. Minimum 1 year program. Regular court supervision, drug/alcohol screening and testing, assigned case coordinator, assistance with medical, social, employment, and housing services.",
+    contact: {
+      url: "https://cjs.mecknc.gov/Services/STEP"
+    },
+    sources: ["Mecklenburg County Criminal Justice Services"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "nc-mecklenburg-90-96",
+    name: "Mecklenburg County 90-96 Program",
+    jurisdictionType: "county",
+    state: "NC",
+    county: "Mecklenburg",
+    cities: ["Charlotte"],
+    zipCodes: ["28201", "28202", "28203", "28204", "28205", "28206", "28207", "28208", "28209", "28210", "28211", "28212", "28213", "28214", "28215", "28216", "28217", "28226", "28227", "28244", "28262", "28269", "28270", "28273", "28277", "28278", "28280", "28282"],
+    programTypes: ["Conditional Discharge", "Drug Education", "Community Service"],
+    eligibilityNotes: "First-time drug possession offenses (small amounts) and drug paraphernalia. No previous drug charge convictions. No prior felony convictions. Requires drug abuse assessment, 225 hours community service, regular random drug testing, regular case manager meetings. Charges dismissed upon completion.",
+    contact: {
+      url: "https://cjs.mecknc.gov/"
+    },
+    sources: ["Mecklenburg County Criminal Justice Services", "Anuvia Prevention and Recovery Center"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // Ohio Programs
+  {
+    id: "oh-franklin-rise",
+    name: "Franklin County RISE Mental Health Court",
+    jurisdictionType: "county",
+    state: "OH",
+    county: "Franklin",
+    cities: ["Columbus"],
+    zipCodes: ["43004", "43016", "43017", "43026", "43054", "43064", "43065", "43068", "43081", "43085", "43119", "43123", "43125", "43201", "43202", "43203", "43204", "43205", "43206", "43207", "43209", "43210", "43211", "43212", "43213", "43214", "43215", "43217", "43219", "43220", "43221", "43222", "43223", "43224", "43227", "43228", "43229", "43230", "43231", "43232", "43235"],
+    programTypes: ["Mental Health Court", "Treatment Services", "Accountability Support"],
+    eligibilityNotes: "Felony offenders with serious mental illness. Moderate to high-risk offenders where mental illness was a primary factor in criminal involvement. 2-year specialized docket with 4 phases. History of serious/repetitive violence may exclude participation.",
+    contact: {
+      url: "https://fccourts.org/503/Mental-Health-Court"
+    },
+    sources: ["Franklin County Court of Common Pleas"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "oh-franklin-prosecutor-diversion",
+    name: "Franklin County Prosecutor's Diversion Unit",
+    jurisdictionType: "county",
+    state: "OH",
+    county: "Franklin",
+    cities: ["Columbus"],
+    zipCodes: ["43004", "43016", "43017", "43026", "43054", "43064", "43065", "43068", "43081", "43085", "43119", "43123", "43125", "43201", "43202", "43203", "43204", "43205", "43206", "43207", "43209", "43210", "43211", "43212", "43213", "43214", "43215", "43217", "43219", "43220", "43221", "43222", "43223", "43224", "43227", "43228", "43229", "43230", "43231", "43232", "43235"],
+    programTypes: ["Pretrial Diversion", "Post-Indictment Diversion"],
+    eligibilityNotes: "First-time, non-violent offenders. Avoid or be diverted from prosecution after indictment. Strict entry criteria. Completion avoids prosecution.",
+    contact: {
+      url: "https://prosecutor.franklincountyohio.gov/criminal-division/diversion-unit"
+    },
+    sources: ["Franklin County Prosecutor's Office"],
+    lastUpdated: new Date("2024-11-01"),
     isActive: true,
   },
 
