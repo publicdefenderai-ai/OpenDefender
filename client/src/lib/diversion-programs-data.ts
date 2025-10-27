@@ -3,14 +3,22 @@ import { DiversionProgram } from "@shared/schema";
 /**
  * DIVERSION PROGRAMS DATABASE
  * 
- * Current Status: 60+ diversion programs across major US metropolitan areas
+ * Current Status: 57 diversion programs across major US metropolitan areas
  * Last Updated: November 2024
  * 
- * Coverage includes programs in:
- * - California (Los Angeles, San Francisco, Orange County, San Diego)
+ * California Coverage (16 programs):
+ * - Los Angeles County, San Francisco, Orange County, San Diego County
+ * - Sacramento County, Alameda County, Riverside County
+ * - Fresno County, Kern County
+ * 
+ * New York Coverage (12 programs):
+ * - Manhattan, Brooklyn, Bronx, Queens, Staten Island (Richmond)
+ * - Nassau County, Albany County, Westchester County
+ * - Rockland County, Suffolk County
+ * 
+ * Other States (29 programs):
  * - Texas (Harris County, Dallas County)
  * - Florida (Miami-Dade, Broward County)
- * - New York (Manhattan, Brooklyn, Bronx)
  * - Illinois (Cook County/Chicago)
  * - Pennsylvania (Philadelphia)
  * - Washington (King County/Seattle)
@@ -21,22 +29,26 @@ import { DiversionProgram } from "@shared/schema";
  * - Oregon (Multnomah County/Portland)
  * - North Carolina (Mecklenburg County/Charlotte)
  * - Ohio (Franklin County/Columbus)
- * - Delaware, Wisconsin, and Federal programs
+ * - Delaware, Wisconsin, Federal programs
  * 
  * Data Sources:
- * 1. Center for Health and Justice Report (2024)
- * 2. State and county court systems
- * 3. District Attorney offices and prosecutor-led diversion programs
- * 4. Municipal court programs
- * 5. CrimeSolutions.gov Programs API (when available)
+ * 1. NDAA Prosecutor-Led Diversion Programs Directory (https://diversion.ndaa.org/)
+ * 2. Center for Health and Justice Report (2024)
+ * 3. State and county court systems
+ * 4. District Attorney offices and prosecutor-led diversion programs
+ * 5. Municipal court programs
+ * 6. CrimeSolutions.gov Programs API (when available)
  * 
  * Program Types Include:
  * - Drug Courts & Substance Abuse Treatment
  * - Mental Health Courts & Crisis Intervention
  * - Veterans Courts & PTSD Treatment
- * - Pre-Booking/Pretrial Diversion
- * - Harm Reduction Programs (LEAD/PATH)
+ * - Pre-Booking/Pretrial Diversion (LEAD/PATH model)
+ * - Pre-Filing/Pre-Arraignment Diversion
+ * - Harm Reduction Programs
  * - Community Service & Restorative Justice
+ * - Youth & Young Adult Diversion
+ * - CARE Courts (California)
  */
 
 export const diversionPrograms: DiversionProgram[] = [
@@ -742,6 +754,327 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://prosecutor.franklincountyohio.gov/criminal-division/diversion-unit"
     },
     sources: ["Franklin County Prosecutor's Office"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // California Additional Programs
+  {
+    id: "ca-sacramento-mental-health",
+    name: "Sacramento County Mental Health Diversion",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Sacramento",
+    cities: ["Sacramento", "Elk Grove", "Citrus Heights", "Folsom", "Rancho Cordova"],
+    zipCodes: ["95811", "95814", "95815", "95816", "95817", "95818", "95819", "95820", "95821", "95822", "95823", "95824", "95825", "95826", "95827", "95828", "95829", "95830", "95831", "95832", "95833", "95834", "95835", "95836", "95837", "95838", "95841", "95842", "95843", "95864", "95865", "95866", "95867"],
+    programTypes: ["Mental Health Diversion", "PC 1001.36", "Community Treatment"],
+    eligibilityNotes: "Felony, misdemeanor, or wobbler charges with diagnosed mental health disorders (300+ qualifying conditions). Up to 2 years community-based treatment. Recent controversy over oversight and accountability.",
+    contact: {
+      url: "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx"
+    },
+    sources: ["Sacramento Superior Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-sacramento-drug-diversion",
+    name: "Sacramento County Drug Diversion Program",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Sacramento",
+    cities: ["Sacramento", "Elk Grove", "Citrus Heights", "Folsom", "Rancho Cordova"],
+    zipCodes: ["95811", "95814", "95815", "95816", "95817", "95818", "95819", "95820", "95821", "95822", "95823", "95824", "95825", "95826", "95827", "95828", "95829", "95830", "95831", "95832", "95833", "95834", "95835", "95836", "95837", "95838", "95841", "95842", "95843", "95864", "95865", "95866", "95867"],
+    programTypes: ["Drug Diversion", "Prop 36", "Recovery Court"],
+    eligibilityNotes: "First-time drug offense, simple possession. 18-36 months duration. Recovery Court located at 8745 Folsom Blvd. Multi-disciplinary sites offering detox, residential treatment, outpatient, methadone, sober living.",
+    contact: {
+      url: "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx"
+    },
+    sources: ["Sacramento Superior Court", "Sacramento Probation Department"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-sacramento-veterans",
+    name: "Sacramento County Veterans Treatment Program",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Sacramento",
+    cities: ["Sacramento", "Elk Grove", "Citrus Heights", "Folsom", "Rancho Cordova"],
+    zipCodes: ["95811", "95814", "95815", "95816", "95817", "95818", "95819", "95820", "95821", "95822", "95823", "95824", "95825", "95826", "95827", "95828", "95829", "95830", "95831", "95832", "95833", "95834", "95835", "95836", "95837", "95838", "95841", "95842", "95843", "95864", "95865", "95866", "95867"],
+    programTypes: ["Veterans Court", "Military Diversion"],
+    eligibilityNotes: "12-18 months for veterans with service-related offenses. Excludes sex, arson, gang crimes. Service-connected conditions including PTSD, TBI.",
+    contact: {
+      url: "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx"
+    },
+    sources: ["Sacramento Superior Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-alameda-cares",
+    name: "Alameda County CARES Navigation Center",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Alameda",
+    cities: ["Oakland", "Berkeley", "Fremont", "Hayward", "San Leandro", "Alameda"],
+    zipCodes: ["94501", "94502", "94536", "94537", "94538", "94539", "94541", "94542", "94543", "94544", "94545", "94546", "94555", "94577", "94578", "94579", "94580", "94586", "94587", "94588", "94601", "94602", "94603", "94604", "94605", "94606", "94607", "94608", "94609", "94610", "94611", "94612", "94613", "94618", "94619", "94621", "94701", "94702", "94703", "94704", "94705", "94706", "94707", "94708", "94709", "94710", "94720"],
+    programTypes: ["Pre-Arrest Diversion", "Mobile Crisis Response", "Substance Use Treatment"],
+    eligibilityNotes: "$6 million Prop 47 grant awarded October 2024 (largest in DA office history). County-wide mobile unit. Police can refer individuals directly to treatment without jail or court. Prioritizes substance use and mental health issues.",
+    contact: {
+      phone: "(510) 272-6222",
+      url: "https://www.alameda.courts.ca.gov/divisions/collaborative-courts"
+    },
+    sources: ["Alameda County District Attorney", "Alameda County Behavioral Health"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-alameda-eic",
+    name: "Alameda County Early Intervention Court",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Alameda",
+    cities: ["Oakland", "Berkeley", "Fremont", "Hayward", "San Leandro", "Alameda"],
+    zipCodes: ["94501", "94502", "94536", "94537", "94538", "94539", "94541", "94542", "94543", "94544", "94545", "94546", "94555", "94577", "94578", "94579", "94580", "94586", "94587", "94588", "94601", "94602", "94603", "94604", "94605", "94606", "94607", "94608", "94609", "94610", "94611", "94612", "94613", "94618", "94619", "94621", "94701", "94702", "94703", "94704", "94705", "94706", "94707", "94708", "94709", "94710", "94720"],
+    programTypes: ["Early Intervention Court", "Case Management", "PC 1170(h)"],
+    eligibilityNotes: "Low-level felonies (PC Section 1170(h)). Alameda County Medi-Cal eligible, no private insurance. Typically 1 year with weekly then monthly progress reports. Case dismissal + PC 851.91 relief. Excludes gun cases, DV, 290 registration.",
+    contact: {
+      url: "https://www.alameda.courts.ca.gov/divisions/collaborative-courts"
+    },
+    sources: ["Alameda County Superior Court", "Leaders in Community Alternatives (LCA)"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-orange-first-point",
+    name: "Orange County FIRST Point Diversion Program",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Orange",
+    cities: ["Santa Ana", "Anaheim", "Irvine", "Huntington Beach", "Garden Grove", "Orange", "Fullerton", "Costa Mesa", "Mission Viejo", "Westminster", "Newport Beach", "Buena Park", "Lake Forest", "Tustin", "Yorba Linda", "San Clemente", "Laguna Niguel", "La Habra", "Fountain Valley", "Placentia", "Rancho Santa Margarita", "Aliso Viejo", "Brea", "Seal Beach"],
+    zipCodes: ["92602", "92603", "92604", "92606", "92610", "92612", "92614", "92617", "92618", "92620", "92624", "92626", "92627", "92629", "92630", "92637", "92646", "92647", "92648", "92649", "92651", "92653", "92655", "92656", "92657", "92660", "92661", "92662", "92663", "92672", "92673", "92675", "92676", "92677", "92678", "92679", "92683", "92688", "92691", "92692", "92694", "92697", "92701", "92703", "92704", "92705", "92706", "92707", "92708", "92780", "92782", "92801", "92802", "92803", "92804", "92805", "92806", "92807", "92808", "92831", "92832", "92833", "92835", "92840", "92841", "92843", "92844", "92845", "92861", "92865", "92866", "92867", "92868", "92869", "92870", "92886", "92887"],
+    programTypes: ["Pre-Filing Diversion", "Mental Health Support", "Substance Abuse Treatment"],
+    eligibilityNotes: "Launched early 2022. Low-level offenders with mental health and substance abuse issues. Partners: OC DA, Sheriff, Seal Beach PD, Irvine PD, Health Care Agency. Coverage: Seal Beach, Irvine, South OC. No charges filed; connects offenders to services immediately.",
+    contact: {
+      url: "https://orangecountyda.org/"
+    },
+    sources: ["Orange County District Attorney", "Orange County Health Care Agency"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-riverside-judicial-diversion",
+    name: "Riverside County Judicial Diversion (PC 1001.95)",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Riverside",
+    cities: ["Riverside", "Moreno Valley", "Corona", "Murrieta", "Temecula", "Indio", "Palm Desert", "Lake Elsinore", "Hemet", "Perris"],
+    zipCodes: ["92201", "92203", "92210", "92211", "92220", "92230", "92234", "92236", "92240", "92253", "92260", "92262", "92264", "92270", "92274", "92276", "92280", "92282", "92292", "92320", "92324", "92501", "92503", "92504", "92505", "92506", "92507", "92508", "92509", "92518", "92530", "92532", "92536", "92539", "92543", "92544", "92545", "92548", "92551", "92553", "92555", "92557", "92563", "92567", "92570", "92571", "92582", "92583", "92584", "92585", "92586", "92587", "92590", "92591", "92592", "92593", "92595", "92596"],
+    programTypes: ["Judicial Diversion", "Misdemeanor Diversion", "PC 1001.95"],
+    eligibilityNotes: "Judge-initiated pretrial diversion for misdemeanors. Judge can grant over prosecutor's objection. Eligible: petty theft, trespassing, minor drug charges. Excludes DUI, DV, sex offenses, stalking. Charges dismissed upon completion.",
+    contact: {
+      url: "https://www.riverside.courts.ca.gov/"
+    },
+    sources: ["Riverside Superior Court"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-riverside-care-court",
+    name: "Riverside County CARE Court",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Riverside",
+    cities: ["Riverside", "Moreno Valley", "Corona", "Murrieta", "Temecula", "Indio", "Palm Desert"],
+    zipCodes: ["92201", "92203", "92210", "92211", "92220", "92230", "92234", "92236", "92240", "92253", "92260", "92262", "92264", "92270", "92274", "92276", "92280", "92282", "92292", "92320", "92324", "92501", "92503", "92504", "92505", "92506", "92507", "92508", "92509", "92518", "92530", "92532", "92536", "92539", "92543", "92544", "92545", "92548"],
+    programTypes: ["CARE Court", "Civil Behavioral Health", "Mental Health Treatment"],
+    eligibilityNotes: "Effective October 1, 2023. Civil court program for behavioral health treatment. Residents with serious mental illness. Referrals: family, friends, doctors, law enforcement. Department 12, Riverside Historic Courthouse. Monday-Friday afternoons.",
+    contact: {
+      phone: "(800) 499-3008",
+      url: "https://ruhealth.org/behavioral-health/care-court"
+    },
+    sources: ["Riverside University Health System"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-fresno-mental-health",
+    name: "Fresno County Mental Health Diversion (AB 1810)",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Fresno",
+    cities: ["Fresno", "Clovis", "Madera", "Sanger", "Reedley"],
+    zipCodes: ["93650", "93701", "93702", "93703", "93704", "93705", "93706", "93710", "93711", "93720", "93721", "93722", "93723", "93724", "93725", "93726", "93727", "93728", "93730"],
+    programTypes: ["Mental Health Diversion Court", "ACT Model", "FSP Model"],
+    eligibilityNotes: "Adults 18+ with primary behavioral health diagnoses (bipolar, schizophrenia, PTSD). 2 years pre-trial probation. ACT and FSP model: 4+ contacts/week at highest intensity, supportive housing, case management, therapy, medication support.",
+    contact: {
+      url: "https://www.fresno.courts.ca.gov/"
+    },
+    sources: ["Fresno County Department of Behavioral Health", "Turning Point of Central California"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ca-kern-att-diversion",
+    name: "Kern County ATT Mental Health Diversion Program",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Kern",
+    cities: ["Bakersfield", "Delano", "Ridgecrest", "Wasco", "Arvin", "Tehachapi"],
+    zipCodes: ["93203", "93215", "93250", "93263", "93280", "93301", "93304", "93305", "93306", "93307", "93308", "93309", "93311", "93312", "93313", "93314"],
+    programTypes: ["Mental Health Diversion", "Severe Mental Illness", "Court-Referred"],
+    eligibilityNotes: "Individuals with severe mental illness referred by court after serious crimes. 1-2 years. Recovery Specialists, therapists, multiple weekly sessions. FY 2024 results: 33% reduction incarceration days, 30% reduction psychiatric inpatient days, 9% reduction homeless days.",
+    contact: {
+      url: "https://www.kern.courts.ca.gov/"
+    },
+    sources: ["Kern County Superior Court", "Kern Behavioral Health and Recovery Services"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+
+  // New York Additional Programs
+  {
+    id: "ny-manhattan-green-light",
+    name: "Manhattan Project Green Light",
+    jurisdictionType: "city",
+    state: "NY",
+    county: "New York",
+    cities: ["Manhattan", "New York"],
+    zipCodes: ["10001", "10002", "10003", "10004", "10005", "10006", "10007", "10009", "10010", "10011", "10012", "10013", "10014", "10016", "10017", "10018", "10019", "10020", "10021", "10022", "10023", "10024", "10025", "10026", "10027", "10028", "10029", "10030", "10031", "10032", "10033", "10034", "10035", "10036", "10037", "10038", "10039", "10040", "10044", "10065", "10069", "10075", "10103", "10110", "10111", "10112", "10115", "10119", "10128", "10162", "10165", "10167", "10168", "10169", "10170", "10171", "10172", "10173", "10174", "10177", "10199", "10271", "10278", "10279", "10280", "10282"],
+    programTypes: ["Driver's License Diversion", "Pre-Arraignment", "Post-Arraignment"],
+    eligibilityNotes: "VTL § 511(1)(a) (driving with suspended license). Suspensions not from DWI/drug convictions. Clear suspensions within 2 weeks → DA declines prosecution. Post-arraignment: clear suspensions by next court date → case dismissed.",
+    contact: {
+      phone: "(646) 213-2633",
+      email: "greenlight@nycja.org",
+      url: "https://manhattanda.org/projectgreenlight/"
+    },
+    sources: ["Manhattan District Attorney's Office"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-albany-lead",
+    name: "Albany County LEAD Program",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Albany",
+    cities: ["Albany", "Cohoes", "Watervliet"],
+    zipCodes: ["12201", "12202", "12203", "12204", "12205", "12206", "12207", "12208", "12209", "12210", "12211", "12220"],
+    programTypes: ["Pre-Arrest Diversion", "LEAD", "Harm Reduction", "Case Management"],
+    eligibilityNotes: "Non-violent offenders with addiction, mental illness, or poverty issues. Police diversion at point of contact instead of arrest. Operational since 2015 (3rd LEAD program in U.S.). Both diversion and referral pathways. Quarterly public reporting.",
+    contact: {
+      phone: "(518) 694-5116",
+      email: "info@albanylead.org",
+      url: "https://albanylead.org/"
+    },
+    sources: ["Albany PD", "Albany County DA", "Albany County Public Defender"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-albany-community-accountability",
+    name: "Albany County Community Accountability Board",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Albany",
+    cities: ["Albany", "Cohoes", "Watervliet"],
+    zipCodes: ["12201", "12202", "12203", "12204", "12205", "12206", "12207", "12208", "12209", "12210", "12211", "12220"],
+    programTypes: ["Restorative Justice", "Young Adult Diversion", "Felony Diversion"],
+    eligibilityNotes: "Ages 18-25, no prior felony convictions, facing felony charges. 18-24 months duration. Full dismissal of charges upon completion. Victim perspective work, apology letters, restitution, community service required.",
+    contact: {
+      phone: "(518) 487-5200",
+      url: "https://www.albanycountyny.gov/departments/probation"
+    },
+    sources: ["Albany County Probation Department"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-westchester-fresh-start",
+    name: "Westchester County Fresh Start Program",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Westchester",
+    cities: ["Yonkers", "New Rochelle", "Mount Vernon", "White Plains", "Port Chester", "Harrison", "Rye"],
+    zipCodes: ["10501", "10502", "10503", "10504", "10505", "10506", "10507", "10510", "10511", "10522", "10523", "10528", "10530", "10532", "10533", "10543", "10550", "10552", "10553", "10557", "10562", "10566", "10573", "10577", "10580", "10583", "10588", "10589", "10590", "10591", "10594", "10595", "10601", "10603", "10604", "10605", "10606", "10607", "10701", "10702", "10703", "10704", "10705", "10706", "10707", "10708", "10709", "10710"],
+    programTypes: ["Pre-Arraignment Diversion", "First-Time Offenders", "Social Services"],
+    eligibilityNotes: "First-time, non-violent, low-level offenders. Social services, counseling, and rehabilitation as alternative to conviction, fines, and incarceration. Partnership between DA's Office and Westchester County Department of Community Mental Health.",
+    contact: {
+      phone: "(914) 995-3415",
+      url: "https://www.westchesterda.net/diversion-and-youth-programs"
+    },
+    sources: ["Westchester County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-westchester-opt-in",
+    name: "Westchester County OPT-In Program",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Westchester",
+    cities: ["Yonkers", "New Rochelle", "Mount Vernon", "White Plains", "Port Chester"],
+    zipCodes: ["10501", "10502", "10503", "10504", "10505", "10506", "10507", "10510", "10511", "10522", "10523", "10528", "10530", "10532", "10533", "10543", "10550", "10552", "10553", "10557", "10562", "10566", "10573", "10577", "10580", "10583", "10588", "10589", "10590", "10591", "10594", "10595", "10601", "10603", "10604", "10605", "10606", "10607", "10701", "10702", "10703", "10704", "10705", "10706", "10707", "10708", "10709", "10710"],
+    programTypes: ["Substance Use Diversion", "Pre-Arraignment", "Overdose Prevention"],
+    eligibilityNotes: "Substance-related offenses. Connects individuals with peer mentors before first court appearance. Provides naloxone kits through Urban League of Westchester. Individualized treatment plans. Successful participation considered in case resolutions.",
+    contact: {
+      phone: "(914) 995-3415",
+      url: "https://www.westchesterda.net/diversion-and-youth-programs"
+    },
+    sources: ["Westchester County District Attorney", "Urban League of Westchester"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-westchester-project-reset",
+    name: "Westchester County Project Reset",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Westchester",
+    cities: ["Yonkers", "New Rochelle", "Mount Vernon", "White Plains"],
+    zipCodes: ["10501", "10502", "10503", "10504", "10505", "10506", "10507", "10510", "10511", "10522", "10523", "10528", "10530", "10532", "10533", "10543", "10550", "10552", "10553", "10557", "10562", "10566", "10573", "10577", "10580", "10583", "10588", "10589", "10590", "10591", "10594", "10595", "10601", "10603", "10604", "10605", "10606", "10607", "10701", "10702", "10703", "10704", "10705", "10706", "10707", "10708", "10709", "10710"],
+    programTypes: ["Prosecutor-Led Diversion", "Community-Based Intervention", "Low-Level Offenses"],
+    eligibilityNotes: "Low-level offenses. Brief community-based interventions instead of traditional case processing. 71% of eligible participants had cases dismissed or declined for prosecution (2024 evaluation). Workshops focus on healing, self-reflection, community-based services.",
+    contact: {
+      phone: "(914) 995-3415",
+      url: "https://www.westchesterda.net/diversion-and-youth-programs"
+    },
+    sources: ["Westchester County District Attorney"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-rockland-partnership-youth",
+    name: "Rockland County Partnership for Safe Youth",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Rockland",
+    cities: ["New City", "Spring Valley", "Nyack", "Pearl River", "Monsey", "Suffern"],
+    zipCodes: ["10901", "10913", "10920", "10923", "10927", "10952", "10954", "10956", "10960", "10962", "10965", "10968", "10970", "10974", "10976", "10977", "10980", "10983", "10984", "10989", "10994"],
+    programTypes: ["Youth Diversion", "School-Based", "Ages 16-21"],
+    eligibilityNotes: "Ages 16-21 with low-level, non-violent crimes (shoplifting, graffiti, marijuana possession, curfew violations). Students sign contracts for behavior/academic requirements. Charges dismissed upon successful completion. 90%+ positive outcomes. Served ~90 families in 2024.",
+    contact: {
+      phone: "(845) 638-5609",
+      url: "https://www.rocklandda.org/diversion"
+    },
+    sources: ["Rockland County District Attorney", "Rockland BOCES"],
+    lastUpdated: new Date("2024-11-01"),
+    isActive: true,
+  },
+  {
+    id: "ny-suffolk-judicial-diversion",
+    name: "Suffolk County Judicial Diversion Program",
+    jurisdictionType: "county",
+    state: "NY",
+    county: "Suffolk",
+    cities: ["Huntington", "Brookhaven", "Islip", "Smithtown", "Babylon", "Southampton"],
+    zipCodes: ["11701", "11702", "11703", "11704", "11705", "11706", "11713", "11714", "11715", "11716", "11717", "11718", "11719", "11720", "11721", "11722", "11724", "11725", "11726", "11727", "11729", "11730", "11731", "11732", "11733", "11735", "11738", "11739", "11740", "11741", "11742", "11743", "11746", "11747", "11749", "11751", "11752", "11753", "11754", "11755", "11756", "11757", "11758", "11760", "11762", "11763", "11764", "11766", "11767", "11768", "11769", "11770", "11772", "11776", "11777", "11778", "11779", "11780", "11782", "11784", "11786", "11787", "11788", "11789", "11790", "11792", "11794", "11795", "11796", "11798"],
+    programTypes: ["Felony Diversion", "CPL Article 216", "Substance Abuse Treatment"],
+    eligibilityNotes: "Non-violent felony charges + substance abuse issues. Court-supervised drug/alcohol treatment alternative to jail/probation. Focus on rehabilitation over punishment.",
+    contact: {
+      url: "https://www.nycourts.gov/courts/10jd/suffolk/treatment/"
+    },
+    sources: ["Suffolk County Court"],
     lastUpdated: new Date("2024-11-01"),
     isActive: true,
   },
