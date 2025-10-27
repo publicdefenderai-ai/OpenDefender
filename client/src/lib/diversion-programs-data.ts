@@ -1,5 +1,27 @@
 import { DiversionProgram } from "@shared/schema";
 
+/**
+ * DIVERSION PROGRAMS DATABASE
+ * 
+ * Data Sources:
+ * 1. Center for Health and Justice Report (2024)
+ * 2. NDAA Prosecutor-Led Diversion Programs Directory (https://diversion.ndaa.org/)
+ *    - Contains 250+ programs nationwide
+ *    - Categories: Restorative justice, Substance use, Mental health, Domestic violence,
+ *      Early intervention (youth), Traffic/DUI, Sex trafficking/prostitution
+ * 
+ * Update Schedule:
+ * - Monthly review recommended (check NDAA directory for new programs)
+ * - Last NDAA review: November 2024
+ * - Next NDAA review: December 2024
+ * 
+ * To update from NDAA:
+ * 1. Visit https://diversion.ndaa.org/
+ * 2. Click "Show all Diversion Programs" 
+ * 3. Filter by state/region/program type
+ * 4. Add new programs following the DiversionProgram schema
+ */
+
 export const diversionPrograms: DiversionProgram[] = [
   // California Programs
   {

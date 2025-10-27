@@ -56,6 +56,7 @@ Vite is used for frontend development (HMR, TypeScript checking) and client-side
 - **EOIR.gov**: Immigration legal service providers.
 - **Legal Services Corporation (LSC)**: Civil legal aid organizations.
 - **Center for Health and Justice**: Diversion program research.
+- **NDAA Diversion Programs Directory** (https://diversion.ndaa.org/): National directory of 250+ prosecutor-led diversion programs. Monthly review scheduled for updates (last review: November 2024, next: December 2024).
 
 ### UI and Styling
 - **shadcn/ui**: Component library.
