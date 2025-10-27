@@ -401,38 +401,6 @@ export default function RecordExpungement() {
               />
             </ScrollReveal>
           )}
-
-          {/* Quick Navigation */}
-          <ScrollReveal delay={0.4}>
-            <div className="mt-12 grid md:grid-cols-2 gap-6">
-              <Card className="hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">{t('recordExpungement.quickNav.legalHelpTitle')}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {t('recordExpungement.quickNav.legalHelpDesc')}
-                  </p>
-                  <Link href="/case-guidance">
-                    <Button variant="outline" className="w-full">
-                      {t('recordExpungement.quickNav.legalHelpButton')}
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-              <Card className="hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">{t('recordExpungement.quickNav.diversionProgramsTitle')}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {t('recordExpungement.quickNav.diversionProgramsDesc')}
-                  </p>
-                  <Link href="/diversion-programs">
-                    <Button variant="outline" className="w-full">
-                      {t('recordExpungement.quickNav.diversionProgramsButton')}
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
