@@ -331,7 +331,7 @@ export default function Home() {
                 {t('home.hero.urgentHelpButton')}
               </Button>
               
-              <p className="text-sm sm:text-base font-semibold text-blue-800 dark:text-blue-200 mt-2 px-4">
+              <p className="text-sm sm:text-base font-semibold text-blue-800 dark:text-blue-200 mt-2 px-4 max-w-4xl mx-auto">
                 {t('home.hero.urgentHelpNotice')}
               </p>
               

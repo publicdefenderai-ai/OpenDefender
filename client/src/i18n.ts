@@ -49,7 +49,7 @@ i18n
               "urgentHelpButton": "URGENT HELP NEEDED",
               "getStartedButton": "GET STARTED",
               "navigatingToolButton": "Navigating This Tool",
-              "urgentHelpNotice": "If you're being arrested or in court now, click \"Urgent Help\" for immediate rights information."
+              "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance."
             },
             "features": {
               "title": "Powered by Real Legal Data",
@@ -1579,7 +1579,7 @@ i18n
               "urgentHelpButton": "AYUDA URGENTE NECESARIA",
               "getStartedButton": "COMENZAR",
               "navigatingToolButton": "Cómo Usar Esta Herramienta",
-              "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente\" para información inmediata sobre sus derechos."
+              "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata."
             },
             "features": {
               "title": "Respaldado por Datos Legales Reales",
