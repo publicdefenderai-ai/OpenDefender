@@ -516,27 +516,27 @@ i18n
             "detailedRights": {
               "title": "Your Legal Rights in Detail",
               "tabs": {
-                "miranda": "Your Rights Warning",
+                "miranda": "Miranda Warning",
                 "arrest": "During Arrest",
                 "court": "In Court",
                 "prison": "If Convicted"
               },
               "miranda": {
-                "title": "Your Rights Warning",
-                "completeWarning": "The Complete Rights Warning:",
+                "title": "Miranda Warning",
+                "completeWarning": "The Complete Miranda Warning:",
                 "warning1": "You have the right to remain silent.",
                 "warning2": "Anything you say can and will be used against you in a court of law.",
                 "warning3": "You have the right to an attorney.",
                 "warning4": "If you cannot afford an attorney, one will be provided for you.",
                 "warning5": "Do you understand the rights I have just read to you?",
                 "warning6": "With these rights in mind, do you wish to speak to me?",
-                "whenApply": "When Your Rights Warning Applies:",
+                "whenApply": "When Miranda Warning Applies:",
                 "apply1": "When you are in police custody AND being interrogated",
                 "apply2": "Not required for traffic stops or voluntary questioning",
                 "apply3": "Must be given before custodial interrogation begins",
                 "apply4": "You can invoke these rights at any time during questioning",
                 "alertTitle": "Important:",
-                "alertText": "If police don't read you your rights warning, statements you made while in custody may not be allowed in court, but this doesn't automatically dismiss your case."
+                "alertText": "If police don't read you your Miranda warning, statements you made while in custody may not be allowed in court, but this doesn't automatically dismiss your case."
               },
               "arrest": {
                 "title": "Rights During Arrest",
@@ -2050,13 +2050,13 @@ i18n
             "detailedRights": {
               "title": "Sus Derechos Constitucionales en Detalle",
               "tabs": {
-                "miranda": "Derechos Miranda",
+                "miranda": "Advertencia Miranda",
                 "arrest": "Durante el Arresto",
                 "court": "En la Corte",
                 "prison": "Si es Condenado"
               },
               "miranda": {
-                "title": "Derechos Miranda",
+                "title": "Advertencia Miranda",
                 "completeWarning": "La Advertencia Miranda Completa:",
                 "warning1": "Tiene derecho a permanecer en silencio.",
                 "warning2": "Todo lo que diga puede y será usado en su contra en un tribunal de justicia.",
