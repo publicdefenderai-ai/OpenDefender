@@ -16,12 +16,14 @@ import {
   RotateCcw,
   Book,
   FileText,
-  BarChart3
+  BarChart3,
+  ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Link } from "wouter";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -35,6 +37,46 @@ import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 import { GetStartedMenu } from "@/components/navigation/get-started-menu";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+
+interface TrustItemProps {
+  icon: React.ReactNode;
+  iconBgColor: string;
+  title: string;
+  description: string;
+}
+
+function TrustItem({ icon, iconBgColor, title, description }: TrustItemProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+      <Card className="overflow-hidden border-2 hover:border-primary/20 transition-all duration-200" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+        <CollapsibleTrigger className="w-full" data-testid={`button-toggle-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className={`w-12 h-12 ${iconBgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                  {icon}
+                </div>
+                <h3 className="font-semibold text-foreground text-left">{title}</h3>
+              </div>
+              <ChevronDown 
+                className={`h-5 w-5 text-muted-foreground transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+              />
+            </div>
+          </CardContent>
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <CardContent className="px-4 pb-4 pt-0">
+            <p className="text-sm text-muted-foreground pl-[60px]" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+              {description}
+            </p>
+          </CardContent>
+        </CollapsibleContent>
+      </Card>
+    </Collapsible>
+  );
+}
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   const { t } = useTranslation();
@@ -416,72 +458,33 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          {/* Mobile: Compact three lines */}
-          <div className="md:hidden space-y-3">
+          {/* Expandable Trust Items */}
+          <div className="max-w-3xl mx-auto space-y-3">
             <ScrollReveal delay={0.1}>
-              <div className="flex items-center gap-3 bg-background/50 p-3 rounded-lg">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm">{t('home.trust.verifiedTitle')}</h3>
-              </div>
+              <TrustItem
+                icon={<CheckCircle className="h-6 w-6 text-white" />}
+                iconBgColor="bg-blue-600"
+                title={t('home.trust.verifiedTitle')}
+                description={t('home.trust.verifiedDesc')}
+              />
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="flex items-center gap-3 bg-background/50 p-3 rounded-lg">
-                <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm">{t('home.trust.privacyTitle')}</h3>
-              </div>
+              <TrustItem
+                icon={<Shield className="h-6 w-6 text-white" />}
+                iconBgColor="bg-green-600"
+                title={t('home.trust.privacyTitle')}
+                description={t('home.trust.privacyDesc')}
+              />
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="flex items-center gap-3 bg-background/50 p-3 rounded-lg">
-                <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <RotateCcw className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm">{t('home.trust.currentTitle')}</h3>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          {/* Desktop: Original grid layout */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <ScrollReveal delay={0.1}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-semibold mb-3 text-foreground">{t('home.trust.verifiedTitle')}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {t('home.trust.verifiedDesc')}
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-semibold mb-3 text-foreground">{t('home.trust.privacyTitle')}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {t('home.trust.privacyDesc')}
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <RotateCcw className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-semibold mb-3 text-foreground">{t('home.trust.currentTitle')}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {t('home.trust.currentDesc')}
-                </p>
-              </div>
+              <TrustItem
+                icon={<RotateCcw className="h-6 w-6 text-white" />}
+                iconBgColor="bg-purple-600"
+                title={t('home.trust.currentTitle')}
+                description={t('home.trust.currentDesc')}
+              />
             </ScrollReveal>
           </div>
 
