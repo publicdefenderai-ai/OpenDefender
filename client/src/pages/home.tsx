@@ -406,7 +406,7 @@ export default function Home() {
       <section className="py-12 md:py-20 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-10 md:mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
                 {t('home.trust.title')}
               </h2>
@@ -416,7 +416,38 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+          {/* Mobile: Compact three lines */}
+          <div className="md:hidden space-y-3">
+            <ScrollReveal delay={0.1}>
+              <div className="flex items-center gap-3 bg-background/50 p-3 rounded-lg">
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="font-semibold text-foreground text-sm">{t('home.trust.verifiedTitle')}</h3>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="flex items-center gap-3 bg-background/50 p-3 rounded-lg">
+                <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Shield className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="font-semibold text-foreground text-sm">{t('home.trust.privacyTitle')}</h3>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="flex items-center gap-3 bg-background/50 p-3 rounded-lg">
+                <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <RotateCcw className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="font-semibold text-foreground text-sm">{t('home.trust.currentTitle')}</h3>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* Desktop: Original grid layout */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
