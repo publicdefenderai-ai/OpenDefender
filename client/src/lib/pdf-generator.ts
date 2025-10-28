@@ -89,7 +89,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   // Title
   doc.setFontSize(22);
   doc.setFont('helvetica', 'bold');
-  doc.text('Legal Case Guidance', pageWidth / 2, yPosition, { align: 'center' });
+  doc.text('Your Legal Help Guide', pageWidth / 2, yPosition, { align: 'center' });
   yPosition += 15;
 
   // Subtitle - Date and Session
@@ -108,7 +108,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   doc.setFontSize(9);
   doc.setTextColor(150, 0, 0);
   yPosition = addText(
-    'CONFIDENTIAL: This document contains private legal guidance. Do not share without consulting an attorney.',
+    'PRIVATE: This document has your personal legal information. Don\'t share it without talking to a lawyer first.',
     margin,
     yPosition
   );
@@ -118,17 +118,17 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(0, 0, 0);
-  doc.text('Case Summary', margin, yPosition);
+  doc.text('Your Case Information', margin, yPosition);
   yPosition += 8;
 
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
   
   const summaryData = [
-    ['Jurisdiction', guidance.caseData.jurisdiction.toUpperCase()],
-    ['Case Stage', guidance.caseData.caseStage],
-    ['Custody Status', guidance.caseData.custodyStatus],
-    ['Has Attorney', guidance.caseData.hasAttorney ? 'Yes' : 'No'],
+    ['Your State', guidance.caseData.jurisdiction.toUpperCase()],
+    ['Where You Are in the Process', guidance.caseData.caseStage],
+    ['Are You in Jail', guidance.caseData.custodyStatus],
+    ['Do You Have a Lawyer', guidance.caseData.hasAttorney ? 'Yes' : 'No'],
   ];
 
   if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
@@ -181,7 +181,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 100, 200);
-    doc.text('Immediate Actions Required', margin, yPosition);
+    doc.text('What You Should Do Right Now', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -203,7 +203,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text('Important Deadlines', margin, yPosition);
+    doc.text('Important Dates', margin, yPosition);
     yPosition += 8;
 
     const deadlineData = guidance.deadlines.map(deadline => [
@@ -238,7 +238,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 150, 0);
-    doc.text('Your Constitutional Rights', margin, yPosition);
+    doc.text('Your Legal Rights', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);

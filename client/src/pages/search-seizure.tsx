@@ -29,9 +29,9 @@ const scenarios: RightsScenario[] = [
     iconBgColor: "bg-blue-600",
     yourRights: [
       "You can ask if you're free to leave",
-      "You can refuse to answer questions beyond basic identification",
-      "Officer needs reasonable suspicion to stop you",
-      "Pat-down limited to weapons unless plain-view evidence found"
+      "You can refuse to answer questions (except giving your name)",
+      "Officer needs a good reason to stop you",
+      "Pat-down should only check for weapons unless they see something illegal in the open"
     ],
     whatToDo: [
       "Stay calm and keep hands visible",
@@ -54,10 +54,10 @@ const scenarios: RightsScenario[] = [
     description: "When police want to search your car during a traffic stop",
     iconBgColor: "bg-green-600",
     yourRights: [
-      "Police need probable cause or your consent to search",
-      "You can refuse consent to search the vehicle",
-      "Officer can see items in plain view",
-      "If arrested, your car can be searched without warrant"
+      "Police need a good reason or your permission to search",
+      "You can say no to a search of your vehicle",
+      "Officer can see items that are out in the open",
+      "If arrested, your car can be searched without permission"
     ],
     whatToDo: [
       "Pull over safely when signaled",
@@ -80,11 +80,11 @@ const scenarios: RightsScenario[] = [
     description: "When law enforcement wants to enter or search your dwelling",
     iconBgColor: "bg-purple-600",
     yourRights: [
-      "Police generally need a warrant to enter your home",
-      "You can refuse entry without a warrant",
-      "Warrant must describe specific areas to be searched",
-      "You have right to see the warrant before allowing entry",
-      "Emergency situations (exigent circumstances) may allow warrantless entry"
+      "Police usually need a warrant (court order) to enter your home",
+      "You can say no if they don't have a warrant",
+      "The warrant must say exactly what they can search",
+      "You have the right to see the warrant before letting them in",
+      "Police can enter without a warrant in emergencies (like hearing screams)"
     ],
     whatToDo: [
       "Ask to see the warrant before opening door",
@@ -108,11 +108,11 @@ const scenarios: RightsScenario[] = [
     description: "When police want to conduct a body search",
     iconBgColor: "bg-red-600",
     yourRights: [
-      "Police need reasonable suspicion for pat-down",
-      "Full body search requires probable cause or arrest",
-      "Strip searches require warrant or serious circumstances",
-      "You can state you don't consent",
-      "Right to privacy protections under 4th Amendment"
+      "Police need a good reason to pat you down",
+      "Full body search requires arrest or a very good reason",
+      "Strip searches require a warrant or serious emergency",
+      "You can say you don't agree to the search",
+      "You have privacy rights under the law"
     ],
     whatToDo: [
       "Keep hands visible at all times",
@@ -135,11 +135,11 @@ const scenarios: RightsScenario[] = [
     description: "When police ask to see or unlock your phone",
     iconBgColor: "bg-indigo-600",
     yourRights: [
-      "Police generally need a warrant to search your phone",
+      "Police usually need a warrant (court order) to search your phone",
       "You can refuse to unlock your phone",
-      "Fifth Amendment protects against self-incrimination",
-      "Biometric unlock (Face ID, fingerprint) has less protection than passcode",
-      "Police cannot force you to provide a passcode"
+      "You have the right not to help them build a case against you",
+      "Fingerprint/Face ID can be forced, but passcodes cannot",
+      "Police cannot make you give them your passcode"
     ],
     whatToDo: [
       "Clearly state: 'I do not consent to a search of my phone'",
@@ -250,7 +250,7 @@ export default function SearchSeizure() {
                 Search and Seizure Rights
               </h1>
               <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
-                Know your Fourth Amendment rights during police stops, searches, and seizures
+                Know your rights during police stops, searches, and seizures
               </p>
             </div>
           </ScrollReveal>
@@ -264,7 +264,7 @@ export default function SearchSeizure() {
             <Alert className="mb-12 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
               <Shield className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
-                <strong>Key Principle:</strong> The Fourth Amendment protects you against unreasonable searches and seizures. Police generally need a warrant or your consent, unless specific exceptions apply (emergencies, plain view, etc.). You have the right to refuse consent, even if it doesn't stop the search.
+                <strong>Key Principle:</strong> The law protects you from unfair searches. Police usually need a warrant (court order) or your permission to search you, unless there's an emergency or they can see something illegal in plain sight. You have the right to say no, even if it doesn't stop the search.
               </AlertDescription>
             </Alert>
           </ScrollReveal>
@@ -291,7 +291,7 @@ export default function SearchSeizure() {
             <ScrollReveal delay={0.3}>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3 text-blue-600">Assert Your Rights</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-blue-600">State Your Rights</h3>
                   <p className="text-sm text-muted-foreground">
                     Clearly state "I do not consent to this search" and "I want to speak to an attorney." Silence alone may not be enough.
                   </p>

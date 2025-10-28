@@ -244,10 +244,10 @@ const stageGuidance = {
   'arrest': {
     name: 'Arrest Stage',
     criticalActions: [
-      'Exercise right to remain silent immediately',
-      'Request attorney before any questioning',
-      'Comply physically but assert rights verbally',
-      'Memorize booking number and jail location'
+      'Stay silent - don\'t answer questions without a lawyer',
+      'Ask for a lawyer before any questioning',
+      'Do what police say, but tell them you want a lawyer',
+      'Write down your booking number and where you are'
     ],
     immediateDeadlines: [
       'Arraignment within 24-72 hours',
@@ -255,80 +255,80 @@ const stageGuidance = {
       'Notify emergency contacts'
     ],
     rights: [
-      'Right to remain silent (5th Amendment)',
-      'Right to attorney (6th Amendment)',
-      'Right to reasonable bail (8th Amendment)',
-      'Right to phone call',
-      'Right to medical attention if injured',
-      'Right to know charges against you'
+      'You have the right to stay silent and not answer questions',
+      'You have the right to a lawyer',
+      'You have the right to ask for bail so you can get out of jail',
+      'You have the right to make a phone call',
+      'You have the right to see a doctor if you\'re hurt',
+      'You have the right to know what you\'re being charged with'
     ],
     avoidActions: [
-      'Do not discuss case with cellmates',
-      'Do not sign any documents without attorney review',
-      'Do not waive any rights',
-      'Do not resist arrest physically',
-      'Do not make statements to police'
+      'Don\'t talk about your case with other people in jail',
+      'Don\'t sign anything without a lawyer looking at it first',
+      'Don\'t give up any of your rights',
+      'Don\'t fight back or resist when being arrested',
+      'Don\'t answer questions or make statements to police'
     ]
   },
   'arraignment': {
-    name: 'Arraignment',
+    name: 'First Court Appearance',
     criticalActions: [
-      'Enter "Not Guilty" plea to preserve options',
-      'Request public defender if you qualify financially',
-      'Address bail and release conditions',
-      'Get copy of charging documents'
+      'Say "Not Guilty" to keep all your options open',
+      'Ask for a public defender if you can\'t afford a lawyer',
+      'Talk to the judge about bail so you can get out of jail',
+      'Get a copy of the papers that say what you\'re charged with'
     ],
     courtPreparation: [
-      'Dress professionally (business casual minimum)',
-      'Arrive early and locate correct courtroom',
-      'Bring photo ID and any court paperwork',
-      'Turn off cell phone',
-      'Stand when judge enters and exits'
+      'Wear clean, neat clothes (dress nicely if you can)',
+      'Get there early and find the right courtroom',
+      'Bring your ID and any court papers you have',
+      'Turn off your cell phone',
+      'Stand up when the judge comes in and leaves'
     ],
     rights: [
-      'Right to hear charges read aloud',
-      'Right to enter plea',
-      'Right to attorney representation',
-      'Right to reasonable bail consideration',
-      'Right to interpreter if needed'
+      'You have the right to hear what you\'re charged with',
+      'You have the right to say whether you\'re guilty or not guilty',
+      'You have the right to have a lawyer with you',
+      'You have the right to ask for bail',
+      'You have the right to a translator if you need one'
     ]
   },
   'pretrial': {
-    name: 'Pretrial Phase',
+    name: 'Before Trial',
     criticalActions: [
-      'Work closely with attorney on defense strategy',
-      'Comply strictly with all bail conditions',
-      'Gather evidence and locate witnesses',
-      'Consider plea negotiations carefully'
+      'Work with your lawyer to plan your defense',
+      'Follow all the rules of your bail',
+      'Collect evidence and find people who can be witnesses',
+      'Think carefully about any deals the prosecutor offers'
     ],
     deadlines: [
-      'Discovery exchanges',
-      'Motion filing deadlines',
-      'Plea negotiation deadlines',
-      'Trial preparation milestones'
+      'Sharing evidence with the other side',
+      'Filing court papers',
+      'Deciding on plea deals',
+      'Getting ready for trial'
     ],
     activities: [
-      'Review discovery materials with attorney',
-      'Participate in depositions if required',
-      'Attend all scheduled hearings',
-      'Consider expert witness needs',
-      'Evaluate plea offer terms'
+      'Look at the evidence with your lawyer',
+      'Give statements if your lawyer says to',
+      'Go to all court dates',
+      'Talk to your lawyer about expert witnesses if needed',
+      'Review any plea deals carefully'
     ]
   },
   'trial': {
-    name: 'Trial Phase',
+    name: 'Trial',
     criticalActions: [
-      'Prepare testimony with attorney',
-      'Review evidence and witness lists',
-      'Understand courtroom procedures',
-      'Prepare for possible outcomes'
+      'Practice what you\'ll say with your lawyer',
+      'Look at all the evidence and witness list',
+      'Learn what will happen in the courtroom',
+      'Be ready for different outcomes'
     ],
     rights: [
-      'Right to jury trial (in most cases)',
-      'Right to confront witnesses',
-      'Right to present defense',
-      'Right to remain silent',
-      'Right to attorney representation throughout'
+      'You have the right to a jury trial (in most cases)',
+      'You have the right to question witnesses against you',
+      'You have the right to tell your side of the story',
+      'You have the right to stay silent',
+      'You have the right to have a lawyer with you the whole time'
     ]
   }
 };
@@ -393,14 +393,14 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   
   // Add stage-specific alerts
   if (caseData.caseStage === 'arrest') {
-    alerts.push('URGENT: Exercise right to remain silent - do not answer questions without attorney');
+    alerts.push('URGENT: Stay silent - don\'t answer questions without a lawyer');
     if (caseData.custodyStatus === 'detained') {
-      alerts.push(`Arraignment must occur ${jurisdictionData.arraignmentDeadline}`);
+      alerts.push(`You must see a judge ${jurisdictionData.arraignmentDeadline}`);
     }
   }
   
   if (!caseData.hasAttorney) {
-    alerts.push('CRITICAL: Request public defender immediately if you cannot afford attorney');
+    alerts.push('CRITICAL: Ask for a public defender right away if you can\'t afford a lawyer');
   }
   
   // Add charge-specific critical alerts
@@ -419,10 +419,10 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   // Add basic actions for arrest stage with URGENT priority
   if (caseData.caseStage === 'arrest') {
     actions.push(
-      { action: 'Exercise right to remain silent immediately', urgency: 'urgent' },
-      { action: 'Request attorney before any questioning', urgency: 'urgent' },
-      { action: 'Comply physically but assert rights verbally', urgency: 'urgent' },
-      { action: 'Memorize booking number and jail location', urgency: 'high' }
+      { action: 'Stay silent - don\'t answer questions without a lawyer', urgency: 'urgent' },
+      { action: 'Ask for a lawyer before any questioning', urgency: 'urgent' },
+      { action: 'Do what police say, but tell them you want a lawyer', urgency: 'urgent' },
+      { action: 'Write down your booking number and where you are', urgency: 'high' }
     );
   }
   
@@ -463,7 +463,7 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   // Add attorney action if needed with URGENT priority
   if (!caseData.hasAttorney && caseData.caseStage === 'arrest') {
     actions.unshift({ 
-      action: 'Request public defender immediately if you cannot afford attorney', 
+      action: 'Ask for a public defender right away if you can\'t afford a lawyer', 
       urgency: 'urgent' 
     });
   }

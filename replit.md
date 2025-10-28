@@ -1,5 +1,27 @@
 # Public Defender AI - Legal Guidance Platform
 
+## Recent Changes
+
+- **Language Simplification Initiative (October 2025)**: Comprehensive site-wide effort to replace complex legal terminology with simple, accessible language for users with limited education, low English proficiency, or no legal background
+  - Simplified guidance engine critical alerts and immediate actions: "Exercise right to remain silent" → "Stay silent - don't answer questions without a lawyer"
+  - Updated all translation keys (English and Spanish) for urgent help modal, case guidance flow, and rights information
+  - Simplified PDF generator user-facing text: "Legal Case Guidance" → "Your Legal Help Guide", "Jurisdiction" → "Your State"
+  - Replaced complex terminology throughout:
+    - "Assert rights" → "State your rights"
+    - "Assessment" → "Get started"
+    - "Precedent" → "Past court cases"
+    - "Probable cause/Reasonable suspicion" → "Good reason"
+    - "Exigent circumstances" → "Emergencies"
+    - "Fourth/Fifth/Sixth Amendment" → "The law" with simplified explanations
+    - "Constitutional rights" → "Legal rights"
+    - "Due process" → "Fair legal process"
+    - "Arraignment" → "First court appearance"
+    - "Preliminary hearing" → "First hearing"
+    - "Miranda rights" → "Your rights warning"
+    - "Impartial jury" → "Fair, unbiased jury"
+    - "Statutes" → "Laws"
+  - All 13 pages and 750+ translation keys now use 6th-8th grade reading level language
+
 ## Overview
 
 Public Defender AI is a web application providing accessible, AI-powered legal guidance and rights information. It offers case law search, legal resource databases, and connects users with legal aid organizations. The platform is built with privacy-first principles, ensuring user data is ephemeral and not permanently stored. Key capabilities include AI-powered legal assistance, access to court records, and a comprehensive database of criminal charges and diversion programs. The project aims to empower individuals without immediate legal representation by democratizing access to legal information.

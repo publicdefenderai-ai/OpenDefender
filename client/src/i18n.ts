@@ -26,9 +26,9 @@ i18n
             "subtitle": "Free Legal Guidance & Rights Information",
             "menu": {
               "getGuidance": "Get Guidance",
-              "getGuidanceDesc": "Start personalized legal assessment",
+              "getGuidanceDesc": "Get legal help for your situation",
               "learnRights": "Learn Your Rights",
-              "learnRightsDesc": "Understand your constitutional rights",
+              "learnRightsDesc": "Learn about your legal rights",
               "immigration": "Immigration Assistance",
               "immigrationDesc": "Immigration enforcement guidance",
               "courtRecords": "Court Records Search",
@@ -58,7 +58,7 @@ i18n
               "federalCourtsDesc": "Access to 500M+ federal court documents through PACER and CourtListener APIs, including case law, dockets, and judicial data.",
               "federalCourtsStatus": "Live Data Integration",
               "stateLaws": "State & Local Laws",
-              "stateLawsDesc": "Federal and state statutes from Cornell LII, GovInfo.gov, and state legislature websites with regular updates.",
+              "stateLawsDesc": "Federal and state laws from Cornell LII, GovInfo.gov, and state legislature websites with regular updates.",
               "stateLawsStatus": "Updated Monthly",
               "analytics": "Criminal Justice Analytics",
               "analyticsDesc": "DOJ APIs, Bureau of Justice Statistics, and state-specific datasets for sentencing guidelines and case outcomes.",
@@ -68,7 +68,7 @@ i18n
               "title": "Built on Trust & Transparency",
               "subtitle": "Every piece of legal information is backed by credible sources",
               "verifiedTitle": "Verified Citations",
-              "verifiedDesc": "All legal statements include proper citations to statutes, case law, and regulations",
+              "verifiedDesc": "All legal statements include proper citations to laws, court cases, and regulations",
               "privacyTitle": "Privacy Protected",
               "privacyDesc": "No personal information stored, all session data automatically deleted",
               "currentTitle": "Current Information",
@@ -79,19 +79,19 @@ i18n
             "urgentHelp": {
               "modalTitle": "Urgent Legal Situation",
               "arrestWarning": "If you are being arrested RIGHT NOW:",
-              "arrestWarningText": "You have the right to remain silent and the right to an attorney. Exercise these rights immediately.",
-              "immediateActions": "Immediate Actions:",
+              "arrestWarningText": "You have the right to stay silent and the right to a lawyer. Use these rights right away.",
+              "immediateActions": "What to Do Right Now:",
               "stayCalmTitle": "1. Stay Calm",
-              "stayCalmText": "Do not resist arrest. Keep your hands visible. Follow instructions calmly.",
-              "assertRightsTitle": "2. Assert Your Rights",
-              "assertRightsText1": "Say clearly: \"I am exercising my right to remain silent. I want to speak to an attorney.\"",
-              "assertRightsText2": "Then stop talking to police. Do not answer questions until you have a lawyer.",
-              "noConsentTitle": "3. Do NOT Consent to Searches",
-              "noConsentText": "Say: \"I do not consent to any searches.\" Do not physically resist, but make your refusal clear.",
-              "publicDefenderTitle": "4. Request a Public Defender",
-              "publicDefenderText": "If you cannot afford an attorney, you have the right to a free public defender. Request one immediately at your first court appearance.",
+              "stayCalmText": "Don't fight back. Keep your hands where police can see them. Do what they say calmly.",
+              "assertRightsTitle": "2. State Your Rights",
+              "assertRightsText1": "Say clearly: \"I want to stay silent. I want to talk to a lawyer.\"",
+              "assertRightsText2": "Then stop talking to police. Don't answer questions until you have a lawyer.",
+              "noConsentTitle": "3. Don't Let Them Search",
+              "noConsentText": "Say: \"I don't give permission to search.\" Don't fight back, but make it clear you're saying no.",
+              "publicDefenderTitle": "4. Ask for a Public Defender",
+              "publicDefenderText": "If you can't pay for a lawyer, you can get one for free. Ask for a public defender when you first go to court.",
               "rememberTitle": "Remember:",
-              "rememberText": "Anything you say can and will be used against you in court. The best protection is to remain silent until you have legal representation."
+              "rememberText": "Anything you say can be used against you in court. The best way to protect yourself is to stay silent until you have a lawyer."
             },
             "whatWeDo": {
               "title": "What We Do",
@@ -99,24 +99,24 @@ i18n
               "card1Title": "AI Legal Guidance",
               "card1Desc": "Get personalized legal information based on your specific situation",
               "card2Title": "Rights Information",
-              "card2Desc": "Learn about your constitutional rights during arrest and court proceedings",
+              "card2Desc": "Learn about your legal rights during arrest and court proceedings",
               "card3Title": "Find Resources",
               "card3Desc": "Locate public defenders, legal aid organizations, and court information"
             },
             "cta": {
               "title": "Ready to Get Started?",
-              "subtitle": "Access free legal guidance and resources tailored to your situation.",
-              "button": "Start Legal Assessment"
+              "subtitle": "Get free legal help and information for your situation.",
+              "button": "Get Started"
             },
             "knowRights": {
               "title": "Know Your Rights",
-              "subtitle": "Understanding your constitutional rights is the first step to protecting yourself.",
+              "subtitle": "Understanding your legal rights is the first step to protecting yourself.",
               "rightToRemainSilent": "Right to Remain Silent",
               "rightToRemainSilentDesc": "You don't have to answer questions without a lawyer present",
               "rightToAttorney": "Right to an Attorney",
               "rightToAttorneyDesc": "You have the right to legal representation, even if you can't afford it",
               "rightToFairTrial": "Right to a Fair Trial",
-              "rightToFairTrialDesc": "You're entitled to due process and an impartial jury",
+              "rightToFairTrialDesc": "You're entitled to a fair legal process and an unbiased jury",
               "searchWarrantRights": "Search & Seizure Protections",
               "searchWarrantRightsDesc": "Police need a warrant to search you or your property in most cases",
               "selfIncrimination": "Protection Against Self-Incrimination",
@@ -135,7 +135,7 @@ i18n
               "recap": "RECAP Archive",
               "recapDesc": "Free access to federal court records crowdsourced from PACER users",
               "cornell": "Cornell Legal Institute",
-              "cornellDesc": "US Constitution, federal statutes, and legal resources"
+              "cornellDesc": "US Constitution, federal laws, and legal resources"
             },
             "publicDefenderSearch": {
               "title": "Find Public Defender Offices",
@@ -224,7 +224,7 @@ i18n
               "privacyNotice": "Your responses are not stored and are deleted when you close your session",
               "steps": {
                 "consent": "Privacy & Consent",
-                "jurisdiction": "Jurisdiction",
+                "jurisdiction": "Your State",
                 "caseDetails": "Your Case",
                 "status": "Current Status"
               },
@@ -239,7 +239,7 @@ i18n
               },
               "jurisdiction": {
                 "title": "Where is your case?",
-                "label": "State/Jurisdiction",
+                "label": "Your State",
                 "placeholder": "Select your state...",
                 "states": {
                   "AL": "Alabama",
@@ -346,7 +346,7 @@ i18n
               "exportPDF": "Export PDF",
               "summary": {
                 "charges": "Charges",
-                "jurisdiction": "Jurisdiction",
+                "jurisdiction": "Your State",
                 "currentStage": "Current Stage",
                 "progress": "Progress",
                 "actionsCompleted": "Actions Completed",
@@ -419,7 +419,7 @@ i18n
             "legalRightsSubmenu": {
               "title": "Legal Rights Info",
               "backButton": "Back to Main Menu",
-              "constitutionalRights": "Your Constitutional Rights",
+              "constitutionalRights": "Your Legal Rights",
               "criminalJusticeProcess": "Criminal Justice Process",
               "searchSeizure": "Search and Seizure",
               "assistingFriends": "Assisting Friends or Family",
@@ -438,16 +438,16 @@ i18n
             "hero": {
               "title": "Case Guidance",
               "subtitle": "Get Personalized Legal Guidance",
-              "description": "Answer a few questions about your situation to receive tailored legal guidance, next steps, and resources specific to your case and jurisdiction.",
-              "startButton": "Start Personalized Assessment",
+              "description": "Answer a few questions about your situation to get legal help, next steps, and resources for your case.",
+              "startButton": "Get Started",
               "privacyNote": "Your responses are private and automatically deleted after your session"
             },
             "howItWorks": {
               "title": "How Personalized Guidance Works",
               "step1Title": "Answer Questions",
-              "step1Desc": "Provide information about your jurisdiction, charges, and case stage",
-              "step2Title": "AI Analysis",
-              "step2Desc": "Our system analyzes your situation using legal databases and precedents",
+              "step1Desc": "Tell us about your state, charges, and where you are in the legal process",
+              "step2Title": "We Review Your Situation",
+              "step2Desc": "Our system looks at your situation using legal databases and past court cases",
               "step3Title": "Get Guidance",
               "step3Desc": "Receive tailored next steps, deadlines, and relevant legal information",
               "step4Title": "Connect to Help",
@@ -458,15 +458,15 @@ i18n
               "nextStepsTitle": "Next Steps",
               "nextStepsDesc": "Clear, actionable steps you should take based on your case stage and circumstances",
               "deadlinesTitle": "Important Deadlines",
-              "deadlinesDesc": "Critical dates and timeframes you need to be aware of in your jurisdiction",
+              "deadlinesDesc": "Important dates and deadlines you need to know about in your state",
               "rightsTitle": "Your Rights",
-              "rightsDesc": "Specific rights that apply to your situation and how to exercise them",
+              "rightsDesc": "Rights that apply to your situation and how to use them",
               "resourcesTitle": "Local Resources",
               "resourcesDesc": "Public defenders, legal aid organizations, and support services in your area",
               "warningsTitle": "Important Warnings",
               "warningsDesc": "Things to avoid and potential pitfalls specific to your situation",
               "legalInfoTitle": "Legal Information",
-              "legalInfoDesc": "Relevant laws, statutes, and precedents that apply to your case"
+              "legalInfoDesc": "Laws and past court cases that apply to your situation"
             },
             "privacy": {
               "title": "Your Privacy is Protected",
@@ -488,19 +488,19 @@ i18n
           "rights": {
             "hero": {
               "title": "Know Your Legal Rights",
-              "subtitle": "Understanding your constitutional and legal rights is the first step in protecting yourself within the criminal justice system."
+              "subtitle": "Understanding your legal rights is the first step in protecting yourself in the legal system."
             },
             "quickRights": {
               "title": "Essential Rights Everyone Should Know",
               "silent": {
                 "title": "Right to Remain Silent",
                 "description": "You don't have to answer questions beyond basic identification",
-                "detailedExplanation": "The Fifth Amendment protects you from self-incrimination, meaning you cannot be forced to testify against yourself. You only need to provide basic identifying information like your name and address - beyond that, you have the absolute right to refuse to answer any questions from law enforcement without an attorney present. Anything you say can be used against you in court, so exercising this right protects you from making statements that could harm your defense, even if you believe you're innocent."
+                "detailedExplanation": "The law protects you from being forced to say things that hurt your case. You only need to give basic information like your name and address - beyond that, you can refuse to answer any questions from police without a lawyer present. Anything you say can be used against you in court, so using this right protects you from saying things that could hurt your defense, even if you think you're innocent."
               },
               "attorney": {
                 "title": "Right to an Attorney",
                 "description": "Free legal representation if you cannot afford one",
-                "detailedExplanation": "The Sixth Amendment guarantees your right to legal counsel in criminal proceedings. If you cannot afford to hire a private attorney, the court must provide you with a public defender at no cost to you - this applies to any criminal case where jail time is a possible penalty. You should request an attorney immediately upon arrest and before answering any questions, as having legal representation from the start significantly improves your chances of a fair outcome."
+                "detailedExplanation": "The law guarantees your right to have a lawyer for criminal cases. If you can't afford to hire a lawyer, the court must give you a public defender for free - this applies to any criminal case where you could go to jail. You should ask for a lawyer right away when arrested and before answering any questions, because having a lawyer from the start greatly improves your chances of a fair outcome."
               },
               "phoneCall": {
                 "title": "Right to a Phone Call",
@@ -510,33 +510,33 @@ i18n
               "knowCharges": {
                 "title": "Right to Know Charges",
                 "description": "Must be informed of accusations against you",
-                "detailedExplanation": "The Sixth Amendment requires that you be formally informed of the criminal charges against you, typically at your arraignment or initial court appearance within 48-72 hours of arrest. You have the right to know exactly what crimes you're accused of, the specific laws you allegedly violated, and the potential penalties you face. This information allows you and your attorney to prepare an appropriate defense strategy and ensures you can't be tried for crimes you weren't properly notified about."
+                "detailedExplanation": "The law requires that you be formally told about the criminal charges against you, usually at your first court appearance within 48-72 hours of arrest. You have the right to know exactly what crimes you're accused of, which laws they say you broke, and what punishments you could face. This information lets you and your lawyer prepare your defense and makes sure you can't be tried for crimes you weren't properly told about."
               }
             },
             "detailedRights": {
-              "title": "Your Constitutional Rights in Detail",
+              "title": "Your Legal Rights in Detail",
               "tabs": {
-                "miranda": "Miranda Rights",
+                "miranda": "Your Rights Warning",
                 "arrest": "During Arrest",
                 "court": "In Court",
                 "prison": "If Convicted"
               },
               "miranda": {
-                "title": "Miranda Rights",
-                "completeWarning": "The Complete Miranda Warning:",
+                "title": "Your Rights Warning",
+                "completeWarning": "The Complete Rights Warning:",
                 "warning1": "You have the right to remain silent.",
                 "warning2": "Anything you say can and will be used against you in a court of law.",
                 "warning3": "You have the right to an attorney.",
                 "warning4": "If you cannot afford an attorney, one will be provided for you.",
                 "warning5": "Do you understand the rights I have just read to you?",
                 "warning6": "With these rights in mind, do you wish to speak to me?",
-                "whenApply": "When Miranda Rights Apply:",
+                "whenApply": "When Your Rights Warning Applies:",
                 "apply1": "When you are in police custody AND being interrogated",
                 "apply2": "Not required for traffic stops or voluntary questioning",
                 "apply3": "Must be given before custodial interrogation begins",
                 "apply4": "You can invoke these rights at any time during questioning",
                 "alertTitle": "Important:",
-                "alertText": "If police fail to read Miranda rights, statements made during custodial interrogation may be inadmissible in court, but this doesn't automatically dismiss your case."
+                "alertText": "If police don't read you your rights warning, statements you made while in custody may not be allowed in court, but this doesn't automatically dismiss your case."
               },
               "arrest": {
                 "title": "Rights During Arrest",
@@ -560,9 +560,9 @@ i18n
               },
               "court": {
                 "title": "Rights in Court",
-                "constitutional": "Constitutional Rights:",
+                "constitutional": "Legal Rights:",
                 "right1": "Right to a fair and speedy trial",
-                "right2": "Right to an impartial jury",
+                "right2": "Right to a fair, unbiased jury",
                 "right3": "Right to confront witnesses",
                 "right4": "Right to present a defense",
                 "right5": "Right to appeal conviction",
@@ -595,7 +595,7 @@ i18n
             },
             "disclaimer": {
               "title": "Legal Disclaimer:",
-              "text": "This information is for educational purposes only and does not constitute legal advice. Laws vary by jurisdiction and change over time. Always consult with a qualified attorney for advice specific to your situation.",
+              "text": "This information is for learning only and is not legal advice. Laws are different in each state and change over time. Always talk to a real lawyer for help with your specific situation.",
               "needHelp": "Need Immediate Legal Help?",
               "emergencyAid": "Emergency Legal Aid",
               "caseGuidance": "Get Case Guidance"
@@ -609,12 +609,12 @@ i18n
             },
             "criticalAlert": {
               "title": "CRITICAL:",
-              "text": "These rights apply to ALL persons in the United States, regardless of citizenship status. You have constitutional protections even during immigration enforcement actions."
+              "text": "These rights apply to ALL persons in the United States, no matter your citizenship. You have legal protections even during immigration enforcement actions."
             },
             "emergencyRights": {
               "title": "Immediate Rights During ICE Encounters",
               "subtitle": "These rights apply to EVERYONE - citizens, non-citizens, documented, and undocumented persons",
-              "constitutionalTitle": "Constitutional Rights",
+              "constitutionalTitle": "Your Legal Rights",
               "constitutionalRights": {
                 "silent": {
                   "title": "Right to Remain Silent:",
@@ -858,7 +858,7 @@ i18n
               "citedBy": "Cited by {{count}} cases",
               "citations": "Citations:",
               "status": "Status:",
-              "precedentialStatus": "Precedential Status:"
+              "precedentialStatus": "Court Decision Type:"
             },
             "partialFailure": {
               "title": "Partial Search Failure:",
@@ -896,11 +896,11 @@ i18n
           "process": {
             "hero": {
               "title": "Criminal Justice Process Timeline",
-              "subtitle": "Step-by-step guide through arrest, arraignment, trial, and sentencing procedures"
+              "subtitle": "Step-by-step guide through arrest, first court appearance, trial, and sentencing"
             },
             "alert": {
               "important": "Important:",
-              "text": "The exact timeline and procedures can vary significantly by jurisdiction and case complexity. Always consult with a qualified attorney for guidance specific to your situation."
+              "text": "The exact timing and steps can be different in each state and for different cases. Always talk to a real lawyer for help with your specific situation."
             },
             "steps": {
               "yourRights": "Your Rights at This Stage:",
@@ -927,7 +927,7 @@ i18n
                 ]
               },
               "step3": {
-                "title": "Initial Appearance/Arraignment",
+                "title": "First Court Appearance",
                 "description": "First court appearance where charges are formally read and you enter a plea.",
                 "timeframe": "24-72 hours",
                 "rights": [
@@ -938,7 +938,7 @@ i18n
                 ]
               },
               "step4": {
-                "title": "Preliminary Hearing",
+                "title": "First Hearing",
                 "description": "Court determines if there's probable cause to believe you committed the crime.",
                 "timeframe": "1-2 weeks",
                 "rights": [
@@ -987,11 +987,11 @@ i18n
               },
               "speedyTrial": {
                 "title": "Speedy Trial Rights",
-                "text": "The Sixth Amendment guarantees your right to a speedy trial. Federal cases must typically begin within 70 days of indictment or first appearance. State requirements vary, often ranging from 60 to 180 days."
+                "text": "The law guarantees your right to a quick trial. Federal cases must usually start within 70 days of being charged or your first court appearance. State rules vary, often ranging from 60 to 180 days."
               },
               "publicDefender": {
                 "title": "Getting a Public Defender",
-                "text": "If you cannot afford an attorney, you have the constitutional right to one. Public defenders are appointed at your initial appearance. You may need to complete a financial affidavit to prove eligibility."
+                "text": "If you can't pay for a lawyer, you have the legal right to one. Public defenders are assigned when you first go to court. You may need to fill out a form to show you can't afford a lawyer."
               },
               "bondBail": {
                 "title": "Bond and Bail",
@@ -1126,9 +1126,9 @@ i18n
               "title": "Secure Legal Representation",
               "description": "Getting a lawyer involved early is one of the most important things you can do.",
               "alertTitle": "Important:",
-              "alertText": "If they cannot afford an attorney, they have the right to a public defender. Don't delay - request one at the first court appearance (arraignment).",
+              "alertText": "If they can't afford a lawyer, they have the right to a public defender. Don't delay - ask for one when they first see the judge.",
               "publicDefenderTitle": "Public Defender",
-              "publicDefenderDesc": "Free for those who financially qualify. Request at arraignment or through court clerk.",
+              "publicDefenderDesc": "Free for those who can't afford a lawyer. Ask for one at first court appearance or through court clerk.",
               "legalAidTitle": "Legal Aid Organizations",
               "legalAidDesc": "Free or low-cost legal services for qualifying individuals.",
               "privateAttorneyTitle": "Private Attorney",
@@ -1361,8 +1361,8 @@ i18n
                 }
               },
               "stateStatutes": {
-                "title": "State Statutes Database",
-                "description": "Integration with Cornell LII, GovInfo.gov, and state legislature APIs for current statutes",
+                "title": "State Laws Database",
+                "description": "Integration with Cornell LII, GovInfo.gov, and state legislature APIs for current laws",
                 "impact": "Comprehensive coverage of federal and state legal codes"
               },
               "aiGuidance": {
@@ -1528,7 +1528,7 @@ i18n
                 "services": {
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
-                  "cornell": "Cornell Legal Information Institute - for legal statutes"
+                  "cornell": "Cornell Legal Information Institute - for legal laws"
                 },
                 "note": "When you use our platform to search these databases, your queries may be transmitted to these services. We recommend reviewing their privacy policies if you have concerns about external data access."
               }
@@ -1617,8 +1617,8 @@ i18n
               "immediateActions": "Acciones Inmediatas:",
               "stayCalmTitle": "1. Mantenga la Calma",
               "stayCalmText": "No resista el arresto. Mantenga sus manos visibles. Siga las instrucciones con calma.",
-              "assertRightsTitle": "2. Haga Valer sus Derechos",
-              "assertRightsText1": "Diga claramente: \"Estoy ejerciendo mi derecho a permanecer en silencio. Quiero hablar con un abogado.\"",
+              "assertRightsTitle": "2. Diga Sus Derechos",
+              "assertRightsText1": "Diga claramente: \"Quiero quedarme en silencio. Quiero hablar con un abogado.\"",
               "assertRightsText2": "Luego deje de hablar con la policía. No responda preguntas hasta tener un abogado.",
               "noConsentTitle": "3. NO Consienta Registros",
               "noConsentText": "Diga: \"No consiento ningún registro.\" No resista físicamente, pero deje clara su negativa.",
@@ -1758,7 +1758,7 @@ i18n
               "privacyNotice": "Sus respuestas no se almacenan y se eliminan cuando cierra su sesión",
               "steps": {
                 "consent": "Privacidad y Consentimiento",
-                "jurisdiction": "Jurisdicción",
+                "jurisdiction": "Su Estado",
                 "caseDetails": "Su Caso",
                 "status": "Estado Actual"
               },
@@ -1773,7 +1773,7 @@ i18n
               },
               "jurisdiction": {
                 "title": "¿Dónde está su caso?",
-                "label": "Estado/Jurisdicción",
+                "label": "Su Estado",
                 "placeholder": "Seleccione su estado...",
                 "states": {
                   "AL": "Alabama",
@@ -1880,7 +1880,7 @@ i18n
               "exportPDF": "Exportar PDF",
               "summary": {
                 "charges": "Cargos",
-                "jurisdiction": "Jurisdicción",
+                "jurisdiction": "Su Estado",
                 "currentStage": "Etapa Actual",
                 "progress": "Progreso",
                 "actionsCompleted": "Acciones Completadas",
@@ -1953,7 +1953,7 @@ i18n
             "legalRightsSubmenu": {
               "title": "Información de Derechos Legales",
               "backButton": "Volver al Menú Principal",
-              "constitutionalRights": "Sus Derechos Constitucionales",
+              "constitutionalRights": "Sus Derechos Legales",
               "criminalJusticeProcess": "Proceso de Justicia Criminal",
               "searchSeizure": "Registro e Incautación",
               "assistingFriends": "Ayudar a Amigos o Familiares",
@@ -1979,9 +1979,9 @@ i18n
             "howItWorks": {
               "title": "Cómo Funciona la Orientación Personalizada",
               "step1Title": "Responda Preguntas",
-              "step1Desc": "Proporcione información sobre su jurisdicción, cargos y etapa del caso",
-              "step2Title": "Análisis de IA",
-              "step2Desc": "Nuestro sistema analiza su situación utilizando bases de datos legales y precedentes",
+              "step1Desc": "Díganos sobre su estado, cargos y dónde está en el proceso legal",
+              "step2Title": "Revisamos Su Situación",
+              "step2Desc": "Nuestro sistema mira su situación usando bases de datos legales y casos pasados",
               "step3Title": "Obtenga Orientación",
               "step3Desc": "Reciba próximos pasos personalizados, plazos e información legal relevante",
               "step4Title": "Conéctese con Ayuda",
@@ -2000,7 +2000,7 @@ i18n
               "warningsTitle": "Advertencias Importantes",
               "warningsDesc": "Cosas que debe evitar y posibles problemas específicos de su situación",
               "legalInfoTitle": "Información Legal",
-              "legalInfoDesc": "Leyes, estatutos y precedentes relevantes que se aplican a su caso"
+              "legalInfoDesc": "Leyes y casos pasados que se aplican a su situación"
             },
             "privacy": {
               "title": "Su Privacidad Está Protegida",
@@ -2094,7 +2094,7 @@ i18n
               },
               "court": {
                 "title": "Derechos en la Corte",
-                "constitutional": "Derechos Constitucionales:",
+                "constitutional": "Derechos Legales:",
                 "right1": "Derecho a un juicio justo y rápido",
                 "right2": "Derecho a un jurado imparcial",
                 "right3": "Derecho a confrontar a los testigos",
@@ -2148,7 +2148,7 @@ i18n
             "emergencyRights": {
               "title": "Derechos Inmediatos Durante Encuentros con ICE",
               "subtitle": "Estos derechos se aplican a TODOS - ciudadanos, no ciudadanos, personas documentadas e indocumentadas",
-              "constitutionalTitle": "Derechos Constitucionales",
+              "constitutionalTitle": "Sus Derechos Legales",
               "constitutionalRights": {
                 "silent": {
                   "title": "Derecho a Permanecer en Silencio:",
@@ -2392,7 +2392,7 @@ i18n
               "citedBy": "Citado por {{count}} casos",
               "citations": "Citas:",
               "status": "Estado:",
-              "precedentialStatus": "Estado Precedencial:"
+              "precedentialStatus": "Tipo de Decisión:"
             },
             "partialFailure": {
               "title": "Fallo Parcial de Búsqueda:",
