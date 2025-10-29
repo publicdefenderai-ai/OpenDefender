@@ -413,9 +413,9 @@ i18n
                 "title": "Legal Aid Resources & Support",
                 "description": "Find legal help and support services"
               },
-              "courtRecords": {
-                "title": "Court Records Search",
-                "description": "Search free RECAP archive and case law"
+              "lawsRecords": {
+                "title": "Laws and Records",
+                "description": "Find statutes, case law, and court records"
               }
             },
             "legalRightsSubmenu": {
@@ -434,6 +434,12 @@ i18n
               "legalAidOrgs": "Legal Aid Organizations",
               "diversionPrograms": "Diversion Programs",
               "recordsExpungement": "Records Expungement"
+            },
+            "lawsRecordsSubmenu": {
+              "title": "Laws and Records",
+              "backButton": "Back to Main Menu",
+              "courtRecords": "Court Records Search",
+              "statutes": "Statutes Search"
             }
           },
           "case": {
@@ -1949,9 +1955,9 @@ i18n
                 "title": "Recursos y Apoyo de Asistencia Legal",
                 "description": "Encuentre ayuda legal y servicios de apoyo"
               },
-              "courtRecords": {
-                "title": "Búsqueda de Registros Judiciales",
-                "description": "Buscar en archivo RECAP gratuito y jurisprudencia"
+              "lawsRecords": {
+                "title": "Leyes y Registros",
+                "description": "Buscar estatutos, jurisprudencia y registros judiciales"
               }
             },
             "legalRightsSubmenu": {
@@ -1970,6 +1976,12 @@ i18n
               "legalAidOrgs": "Organizaciones de Asistencia Legal",
               "diversionPrograms": "Programas de Desviación",
               "recordsExpungement": "Eliminación de Antecedentes"
+            },
+            "lawsRecordsSubmenu": {
+              "title": "Leyes y Registros",
+              "backButton": "Volver al Menú Principal",
+              "courtRecords": "Búsqueda de Registros Judiciales",
+              "statutes": "Búsqueda de Estatutos"
             }
           },
           "case": {

@@ -29,7 +29,7 @@ interface GetStartedMenuProps {
   onShowLegalAid?: () => void;
 }
 
-type MenuLevel = "main" | "legal-rights" | "legal-aid";
+type MenuLevel = "main" | "legal-rights" | "legal-aid" | "laws-records";
 
 export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLegalAid }: GetStartedMenuProps) {
   const [, setLocation] = useLocation();
@@ -173,9 +173,9 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/court-records')}
+        onClick={() => setCurrentMenu("laws-records")}
         className="w-full"
-        data-testid="menu-item-court-records"
+        data-testid="menu-item-laws-records"
       >
         <Card className="hover:shadow-lg hover:border-indigo-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-4">
@@ -185,10 +185,10 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               </div>
               <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-lg group-hover:text-indigo-600 transition-colors">
-                  {t('getStartedMenu.main.courtRecords.title')}
+                  {t('getStartedMenu.main.lawsRecords.title')}
                 </h3>
                 <p className="text-sm text-muted-foreground whitespace-normal break-words">
-                  {t('getStartedMenu.main.courtRecords.description')}
+                  {t('getStartedMenu.main.lawsRecords.description')}
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-indigo-600 transition-colors flex-shrink-0" />
@@ -382,12 +382,63 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
     </div>
   );
 
+  // Laws and Records submenu
+  const lawsRecordsMenu = (
+    <div className="space-y-3">
+      <Button
+        variant="ghost"
+        onClick={goBack}
+        className="mb-2"
+        data-testid="button-back-laws"
+      >
+        <ArrowLeft className="h-4 w-4 mr-2" />
+        {t('getStartedMenu.lawsRecordsSubmenu.backButton')}
+      </Button>
+
+      <button
+        onClick={() => handleNavigate('/court-records')}
+        className="w-full"
+        data-testid="submenu-item-court-records"
+      >
+        <Card className="hover:shadow-md hover:border-blue-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <FileSearch className="h-5 w-5 text-blue-600" />
+              <span className="font-medium group-hover:text-blue-600 transition-colors">
+                {t('getStartedMenu.lawsRecordsSubmenu.courtRecords')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/statutes')}
+        className="w-full"
+        data-testid="submenu-item-statutes"
+      >
+        <Card className="hover:shadow-md hover:border-green-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Book className="h-5 w-5 text-green-600" />
+              <span className="font-medium group-hover:text-green-600 transition-colors">
+                {t('getStartedMenu.lawsRecordsSubmenu.statutes')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+    </div>
+  );
+
   const getMenuTitle = () => {
     switch (currentMenu) {
       case "legal-rights":
         return t('getStartedMenu.legalRightsSubmenu.title');
       case "legal-aid":
         return t('getStartedMenu.legalAidSubmenu.title');
+      case "laws-records":
+        return t('getStartedMenu.lawsRecordsSubmenu.title');
       default:
         return t('getStartedMenu.main.title');
     }
@@ -399,6 +450,8 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         return legalRightsMenu;
       case "legal-aid":
         return legalAidMenu;
+      case "laws-records":
+        return lawsRecordsMenu;
       default:
         return mainMenu;
     }
