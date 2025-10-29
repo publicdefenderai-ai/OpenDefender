@@ -53,12 +53,22 @@ export default function StatutesPage() {
   const [activeSearchQuery, setActiveSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<string>('federal');
 
+  const federalUrl = activeSearchQuery 
+    ? `/api/statutes/federal?q=${encodeURIComponent(activeSearchQuery)}`
+    : '/api/statutes/federal';
+
+  const stateUrl = selectedState
+    ? activeSearchQuery
+      ? `/api/statutes/${selectedState}?q=${encodeURIComponent(activeSearchQuery)}`
+      : `/api/statutes/${selectedState}`
+    : '';
+
   const { data: federalStatutes, isLoading: loadingFederal } = useQuery<StatuteSearchResult>({
-    queryKey: ['/api/statutes/federal', { q: activeSearchQuery }],
+    queryKey: [federalUrl],
   });
 
   const { data: stateStatutes, isLoading: loadingState } = useQuery<StatuteSearchResult>({
-    queryKey: ['/api/statutes', selectedState, { q: activeSearchQuery }],
+    queryKey: [stateUrl],
     enabled: !!selectedState,
   });
 
