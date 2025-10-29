@@ -1,6 +1,8 @@
-import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization } from "@shared/schema";
+import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { legalAidOrganizationsSeed } from "./data/legal-aid-organizations-seed";
+import { federalStatutesSeed } from "./data/federal-statutes-seed";
+import { stateStatutesSeed } from "./data/state-statutes-seed";
 
 export interface IStorage {
   // User management
@@ -25,6 +27,10 @@ export interface IStorage {
   getLegalAidOrganizations(state?: string, organizationType?: string): Promise<LegalAidOrganization[]>;
   createLegalAidOrganization(organization: InsertLegalAidOrganization): Promise<LegalAidOrganization>;
   bulkCreateLegalAidOrganizations(organizations: InsertLegalAidOrganization[]): Promise<LegalAidOrganization[]>;
+  
+  // Statutes
+  getStatutes(jurisdiction: string, searchQuery?: string): Promise<Statute[]>;
+  createStatute(statute: InsertStatute): Promise<Statute>;
 }
 
 export class MemStorage implements IStorage {
@@ -33,6 +39,7 @@ export class MemStorage implements IStorage {
   private legalResources: Map<string, LegalResource>;
   private courtData: Map<string, CourtData>;
   private legalAidOrganizations: Map<string, LegalAidOrganization>;
+  private statutes: Map<string, Statute>;
 
   constructor() {
     this.users = new Map();
@@ -40,6 +47,7 @@ export class MemStorage implements IStorage {
     this.legalResources = new Map();
     this.courtData = new Map();
     this.legalAidOrganizations = new Map();
+    this.statutes = new Map();
     
     // Initialize with sample legal resources and organizations
     this.initializeSampleData();
@@ -106,6 +114,18 @@ export class MemStorage implements IStorage {
         isActive: org.isActive ?? true,
       };
       this.legalAidOrganizations.set(id, organization);
+    });
+
+    // Initialize statutes from seed data (federal and state)
+    [...federalStatutesSeed, ...stateStatutesSeed].forEach(statute => {
+      const id = randomUUID();
+      const statuteWithId: Statute = {
+        ...statute,
+        id,
+        lastUpdated: new Date(),
+        isActive: statute.isActive ?? true,
+      };
+      this.statutes.set(id, statuteWithId);
     });
   }
 
@@ -230,6 +250,44 @@ export class MemStorage implements IStorage {
       created.push(result);
     }
     return created;
+  }
+
+  async getStatutes(jurisdiction: string, searchQuery?: string): Promise<Statute[]> {
+    const jurisdictionLower = jurisdiction.toLowerCase();
+    
+    return Array.from(this.statutes.values()).filter(statute => {
+      // Filter by active status
+      if (!statute.isActive) return false;
+      
+      // Filter by jurisdiction
+      if (jurisdictionLower !== statute.jurisdiction.toLowerCase()) return false;
+      
+      // If no search query, return all statutes for jurisdiction
+      if (!searchQuery) return true;
+      
+      // Search in title, citation, summary, content, and category
+      const query = searchQuery.toLowerCase();
+      return (
+        statute.title?.toLowerCase().includes(query) ||
+        statute.citation?.toLowerCase().includes(query) ||
+        statute.summary?.toLowerCase().includes(query) ||
+        statute.content?.toLowerCase().includes(query) ||
+        statute.category?.toLowerCase().includes(query) ||
+        statute.relatedCharges?.some(charge => charge.toLowerCase().includes(query))
+      );
+    });
+  }
+
+  async createStatute(insertStatute: InsertStatute): Promise<Statute> {
+    const id = randomUUID();
+    const statute: Statute = {
+      ...insertStatute,
+      id,
+      lastUpdated: new Date(),
+      isActive: insertStatute.isActive ?? true,
+    };
+    this.statutes.set(id, statute);
+    return statute;
   }
 }
 
