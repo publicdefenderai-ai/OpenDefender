@@ -2,6 +2,21 @@
 
 ## Recent Changes
 
+- **State Laws Database Implementation (October 2025)**: Completed Phase 1 & 2 of comprehensive federal and state criminal statute database
+  - **GovInfo.gov API Integration**: Connected to official U.S. government API for federal statutes (Title 18 USC - Crimes and Criminal Procedure)
+    - Authentication: X-Api-Key header-based authentication
+    - Caching: Database schema for persistent statute storage
+    - Coverage: Federal criminal code with full text, citations, and official URLs
+  - **State Statutes Seed Data**: Built comprehensive database for top 10 states by population (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI)
+    - Structured data includes citation, summary, penalties, and categories
+    - State-specific criminal codes with references to official sources
+  - **Statutes Browser Page**: New `/statutes` page with tabbed interface for federal and state law browsing
+    - Client-side search and filtering by title, citation, or keywords
+    - Null-safe rendering handles missing or incomplete data gracefully
+    - Mobile-responsive design with state selector dropdown
+  - **Database Schema**: Added `statutes` table in shared/schema.ts with comprehensive fields for federal/state laws
+  - **Development Roadmap Updated**: State Laws Database progress increased from 30% to 70% complete
+
 - **Language Simplification Initiative (October 2025)**: Comprehensive site-wide effort to replace complex legal terminology with simple, accessible language for users with limited education, low English proficiency, or no legal background
   - Simplified guidance engine critical alerts and immediate actions: "Exercise right to remain silent" → "Stay silent - don't answer questions without a lawyer"
   - Updated all translation keys (English and Spanish) for urgent help modal, case guidance flow, and rights information
@@ -53,6 +68,8 @@ The API includes endpoints for:
 - `/api/court-records/search`: Searches RECAP Archive and case law database.
 - `/api/court-records/docket/:docketId`: Retrieves detailed docket information.
 - `/api/legal-aid-organizations`: Provides legal aid organization data with filtering.
+- `/api/statutes/federal`: Retrieves federal criminal statutes (Title 18 USC) from GovInfo.gov API.
+- `/api/statutes/:stateCode`: Retrieves state criminal statutes for specified state (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI).
 - AI-generated legal guidance based on user input.
 
 ### Authentication and Session Management
