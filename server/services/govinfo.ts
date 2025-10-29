@@ -83,6 +83,7 @@ class GovInfoService {
         {
           headers: {
             'Content-Type': 'application/json',
+            'X-Api-Key': this.apiKey,
           },
           timeout: 15000,
         }

@@ -14,8 +14,8 @@ import { Search, BookOpen, ExternalLink, AlertCircle, Loader2 } from "lucide-rea
 
 interface Statute {
   packageId?: string;
-  title: string;
-  citation: string;
+  title?: string;
+  citation?: string;
   url?: string;
   dateIssued?: string;
   source?: string;
@@ -71,8 +71,8 @@ export default function StatutesPage() {
 
   const filteredStatutes = displayStatutes?.statutes?.filter(statute =>
     !searchQuery || 
-    statute.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    statute.citation.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    statute.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    statute.citation?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     statute.summary?.toLowerCase().includes(searchQuery.toLowerCase())
   ) || [];
 
@@ -196,19 +196,23 @@ export default function StatutesPage() {
 }
 
 function StatuteCard({ statute }: { statute: Statute }) {
+  const citationKey = (statute.citation || 'unknown').replace(/[^a-z0-9]/gi, '-').toLowerCase();
+  
   return (
-    <Card data-testid={`card-statute-${statute.citation.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`}>
+    <Card data-testid={`card-statute-${citationKey}`}>
       <CardHeader>
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <CardTitle className="text-xl mb-2">
               <BookOpen className="inline h-5 w-5 mr-2 text-primary" />
-              {statute.title}
+              {statute.title || 'Untitled Statute'}
             </CardTitle>
             <div className="flex flex-wrap gap-2 items-center">
-              <Badge variant="secondary" data-testid={`badge-citation-${statute.citation}`}>
-                {statute.citation}
-              </Badge>
+              {statute.citation && (
+                <Badge variant="secondary" data-testid={`badge-citation-${statute.citation}`}>
+                  {statute.citation}
+                </Badge>
+              )}
               {statute.category && (
                 <Badge variant="outline">
                   {statute.category.replace(/_/g, ' ')}
@@ -221,7 +225,7 @@ function StatuteCard({ statute }: { statute: Statute }) {
               variant="ghost"
               size="sm"
               asChild
-              data-testid={`button-view-statute-${statute.citation}`}
+              data-testid={`button-view-statute-${citationKey}`}
             >
               <a href={statute.url} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4" />
