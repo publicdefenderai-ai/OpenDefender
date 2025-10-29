@@ -50,31 +50,26 @@ export default function StatutesPage() {
   const { t } = useTranslation();
   const [selectedState, setSelectedState] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeSearchQuery, setActiveSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<string>('federal');
 
   const { data: federalStatutes, isLoading: loadingFederal } = useQuery<StatuteSearchResult>({
-    queryKey: ['/api/statutes/federal'],
+    queryKey: ['/api/statutes/federal', { q: activeSearchQuery }],
   });
 
   const { data: stateStatutes, isLoading: loadingState } = useQuery<StatuteSearchResult>({
-    queryKey: ['/api/statutes', selectedState],
+    queryKey: ['/api/statutes', selectedState, { q: activeSearchQuery }],
     enabled: !!selectedState,
   });
 
   const handleSearch = () => {
-    // This would trigger a new API call with the search query
-    console.log('Searching for:', searchQuery);
+    setActiveSearchQuery(searchQuery);
   };
 
   const displayStatutes = activeTab === 'federal' ? federalStatutes : stateStatutes;
   const isLoading = activeTab === 'federal' ? loadingFederal : loadingState;
 
-  const filteredStatutes = displayStatutes?.statutes?.filter(statute =>
-    !searchQuery || 
-    statute.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    statute.citation?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    statute.summary?.toLowerCase().includes(searchQuery.toLowerCase())
-  ) || [];
+  const filteredStatutes = displayStatutes?.statutes || [];
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">

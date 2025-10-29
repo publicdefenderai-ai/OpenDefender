@@ -84,11 +84,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Statutes API - Get by jurisdiction
+  // Statutes API - Get by jurisdiction with optional search
   app.get("/api/statutes/:jurisdiction", async (req, res) => {
     try {
       const { jurisdiction } = req.params;
-      const statutes = await legalDataService.getStatutes(jurisdiction);
+      const { q: searchQuery } = req.query;
+      const statutes = await legalDataService.getStatutes(jurisdiction, searchQuery as string);
       res.json(statutes);
     } catch (error) {
       console.error("Failed to fetch statutes:", error);

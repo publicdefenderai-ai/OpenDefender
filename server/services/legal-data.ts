@@ -1,9 +1,10 @@
 import { courtListenerService } from './courtlistener';
 import { govInfoService } from './govinfo';
+import { storage } from '../storage';
 
 interface LegalDataService {
   searchCaseLaw(query: string, jurisdiction?: string): Promise<any>;
-  getStatutes(jurisdiction: string): Promise<any>;
+  getStatutes(jurisdiction: string, searchQuery?: string): Promise<any>;
   searchFederalStatutes(query: string, title?: string, section?: string): Promise<any>;
   getSentencingGuidelines(jurisdiction: string): Promise<any>;
   getLocalCourtInfo(jurisdiction: string): Promise<any>;
@@ -32,36 +33,37 @@ class LegalDataServiceImpl implements LegalDataService {
     }
   }
 
-  async getStatutes(jurisdiction: string) {
-    // For federal jurisdiction, use GovInfo API
-    if (jurisdiction.toLowerCase() === 'federal') {
-      return await this.searchFederalStatutes('', '18'); // Default to Title 18 (Crimes)
-    }
-
-    // For state jurisdictions, return placeholder for now
-    // TODO: Integrate state-specific statute APIs
+  async getStatutes(jurisdiction: string, searchQuery?: string) {
     try {
-      const mockStatutes = {
+      // Query statutes from storage (works for both federal and state)
+      const statutes = await storage.getStatutes(jurisdiction, searchQuery);
+      
+      return {
         success: true,
         jurisdiction,
-        statutes: [
-          {
-            title: 'State Criminal Code',
-            section: 'Pending Integration',
-            description: `${jurisdiction} criminal statutes - coming soon`,
-            url: `https://law.justia.com/codes/${jurisdiction.toLowerCase()}/`,
-          },
-        ],
-        source: 'State Website (Pending Integration)',
+        count: statutes.length,
+        statutes: statutes.map(statute => ({
+          id: statute.id,
+          citation: statute.citation,
+          title: statute.title,
+          summary: statute.summary,
+          content: statute.content,
+          penalties: statute.penalties,
+          category: statute.category,
+          relatedCharges: statute.relatedCharges,
+          url: statute.url,
+          source: statute.source,
+          jurisdiction: statute.jurisdiction,
+        })),
+        source: jurisdiction.toLowerCase() === 'federal' ? 'GovInfo.gov' : 'State Laws Database',
       };
-
-      return mockStatutes;
     } catch (error) {
       console.error('Statute search failed:', error);
       return {
         success: false,
         error: 'Failed to fetch statutes',
         statutes: [],
+        count: 0,
       };
     }
   }
