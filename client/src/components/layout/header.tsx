@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home, Moon, Sun } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home, Moon, Sun, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import {
@@ -48,6 +48,13 @@ export function Header() {
       icon: Info,
       description: t('header.menu.learnRightsDesc'),
       testId: "menu-rights-info"
+    },
+    {
+      title: t('header.menu.statutes'),
+      href: "/statutes",
+      icon: BookOpen,
+      description: t('header.menu.statutesDesc'),
+      testId: "menu-statutes"
     },
     {
       title: t('header.menu.immigration'),
