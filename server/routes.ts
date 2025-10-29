@@ -84,7 +84,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Statutes API
+  // Statutes API - Get by jurisdiction
   app.get("/api/statutes/:jurisdiction", async (req, res) => {
     try {
       const { jurisdiction } = req.params;
@@ -93,6 +93,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Failed to fetch statutes:", error);
       res.status(500).json({ success: false, error: "Failed to fetch statutes" });
+    }
+  });
+
+  // Statutes Search API - Search federal statutes
+  app.get("/api/statutes/search/federal", async (req, res) => {
+    try {
+      const { q: query, title, section } = req.query;
+      const results = await legalDataService.searchFederalStatutes(
+        (query as string) || '',
+        title as string,
+        section as string
+      );
+      res.json(results);
+    } catch (error) {
+      console.error("Federal statute search failed:", error);
+      res.status(500).json({ success: false, error: "Search failed" });
     }
   });
 

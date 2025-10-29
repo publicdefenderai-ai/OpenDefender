@@ -1,8 +1,10 @@
 import { courtListenerService } from './courtlistener';
+import { govInfoService } from './govinfo';
 
 interface LegalDataService {
   searchCaseLaw(query: string, jurisdiction?: string): Promise<any>;
   getStatutes(jurisdiction: string): Promise<any>;
+  searchFederalStatutes(query: string, title?: string, section?: string): Promise<any>;
   getSentencingGuidelines(jurisdiction: string): Promise<any>;
   getLocalCourtInfo(jurisdiction: string): Promise<any>;
 }
@@ -31,21 +33,26 @@ class LegalDataServiceImpl implements LegalDataService {
   }
 
   async getStatutes(jurisdiction: string) {
-    // This would integrate with Cornell LII, GovInfo.gov, or state APIs
+    // For federal jurisdiction, use GovInfo API
+    if (jurisdiction.toLowerCase() === 'federal') {
+      return await this.searchFederalStatutes('', '18'); // Default to Title 18 (Crimes)
+    }
+
+    // For state jurisdictions, return placeholder for now
+    // TODO: Integrate state-specific statute APIs
     try {
-      // Mock implementation - in production would fetch from actual APIs
       const mockStatutes = {
         success: true,
         jurisdiction,
         statutes: [
           {
-            title: 'Criminal Code',
-            section: '18 USC 1',
-            description: 'Federal criminal statutes',
-            url: 'https://www.law.cornell.edu/uscode/text/18',
+            title: 'State Criminal Code',
+            section: 'Pending Integration',
+            description: `${jurisdiction} criminal statutes - coming soon`,
+            url: `https://law.justia.com/codes/${jurisdiction.toLowerCase()}/`,
           },
         ],
-        source: 'Cornell LII',
+        source: 'State Website (Pending Integration)',
       };
 
       return mockStatutes;
@@ -57,6 +64,54 @@ class LegalDataServiceImpl implements LegalDataService {
         statutes: [],
       };
     }
+  }
+
+  async searchFederalStatutes(query: string, title?: string, section?: string) {
+    try {
+      const results = await govInfoService.searchUSCode(title || '18', section);
+      
+      if (!results) {
+        return {
+          success: false,
+          error: 'GovInfo API unavailable',
+          statutes: [],
+        };
+      }
+
+      const statutes = results.packages.map(pkg => ({
+        packageId: pkg.packageId,
+        title: pkg.title,
+        citation: this.extractCitation(pkg.title, pkg.packageId),
+        url: `https://www.govinfo.gov/app/details/${pkg.packageId}`,
+        dateIssued: pkg.dateIssued,
+        source: 'GovInfo.gov',
+      }));
+
+      return {
+        success: true,
+        jurisdiction: 'federal',
+        count: results.count,
+        statutes,
+        source: 'GovInfo.gov',
+      };
+    } catch (error) {
+      console.error('Federal statute search failed:', error);
+      return {
+        success: false,
+        error: 'Failed to search federal statutes',
+        statutes: [],
+      };
+    }
+  }
+
+  private extractCitation(title: string, packageId: string): string {
+    // Try to extract citation from title or packageId
+    // packageId format: USCODE-2023-title18-partI-chap1-sec1
+    const match = packageId.match(/title(\d+).*?sec(\d+)/i);
+    if (match) {
+      return `${match[1]} USC § ${match[2]}`;
+    }
+    return title;
   }
 
   async getSentencingGuidelines(jurisdiction: string) {

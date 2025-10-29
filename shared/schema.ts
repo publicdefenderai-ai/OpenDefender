@@ -199,3 +199,31 @@ export const insertLegalAidOrganizationSchema = createInsertSchema(legalAidOrgan
 
 export type InsertLegalAidOrganization = z.infer<typeof insertLegalAidOrganizationSchema>;
 export type LegalAidOrganization = typeof legalAidOrganizations.$inferSelect;
+
+// Statutes Schema - Federal and State Criminal Laws
+export const statutes = pgTable("statutes", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  title: text("title").notNull(),
+  citation: text("citation").notNull(), // e.g., "18 USC § 1001", "Cal. Penal Code § 242"
+  jurisdiction: text("jurisdiction").notNull(), // 'federal' or two-letter state code
+  level: text("level").notNull(), // 'federal', 'state'
+  chapter: text("chapter"), // Chapter or division number
+  section: text("section").notNull(), // Section number
+  content: text("content").notNull(), // Full text of the statute
+  summary: text("summary"), // Plain language summary
+  category: text("category"), // e.g., 'fraud', 'assault', 'theft', 'drug_offenses'
+  relatedCharges: text("related_charges").array(), // Criminal charge names this statute covers
+  penalties: text("penalties"), // Description of potential penalties
+  url: text("url"), // Link to official source (Cornell LII, GovInfo, state website)
+  sourceApi: text("source_api"), // 'govinfo', 'cornell_lii', 'state_website', 'manual'
+  lastUpdated: timestamp("last_updated").defaultNow(),
+  isActive: boolean("is_active").default(true),
+});
+
+export const insertStatuteSchema = createInsertSchema(statutes).omit({
+  id: true,
+  lastUpdated: true,
+});
+
+export type InsertStatute = z.infer<typeof insertStatuteSchema>;
+export type Statute = typeof statutes.$inferSelect;
