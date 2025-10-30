@@ -96,29 +96,36 @@ This document outlines the comprehensive API integration strategy for the Public
    - Package details retrieval
    - Full-text extraction
 
-2. **California Laws API** (`server/services/california-laws.ts`)
-   - ❌ **SERVICE UNAVAILABLE** - API deprecated/offline as of Oct 2025
-   - Planned removal pending OpenLaws integration
+2. **Legal Data Service** (`server/services/legal-data.ts`)
+   - Current implementation: Local seed data only
+   - Future: Hybrid search with API integration (post-OpenLaws access)
+   - Source attribution tracking ready for API integration
 
-3. **Legal Data Service** (`server/services/legal-data.ts`)
-   - Hybrid search: Local seed data + API integration
-   - Deduplication by citation
-   - Source attribution (seed_data vs API)
+### Current Data Flow:
+```
+User Search Query
+  ↓
+Legal Data Service
+  ↓
+Local Storage (Seed Data)
+  ↓
+Return Results
+```
 
-### Data Flow:
+### Future Data Flow (Post-OpenLaws Integration):
 ```
 User Search Query
   ↓
 Legal Data Service
   ↓
 ┌─────────────────┬──────────────────┐
-│ Local Storage   │ API Integration  │
-│ (Seed Data)     │ (CA Laws / Gov)  │
+│ Local Storage   │ OpenLaws API     │
+│ (Seed Data)     │ (50 States + Fed)│
 └─────────────────┴──────────────────┘
   ↓
 Deduplicate by Citation
   ↓
-Return Combined Results
+Return Combined Results with Source Attribution
 ```
 
 ---
@@ -134,10 +141,17 @@ Return Combined Results
 **Note**: California's CaliLaws API is deprecated and no longer functional as of October 2025.
 
 ### **Recommended Solution**: OpenLaws API Integration
-- **Impact**: Covers all 49 remaining states + territories
-- **Timeline**: Request access immediately
-- **Effort**: Single integration vs. 49 individual state APIs
+- **Impact**: Covers ALL 50 states + federal + DC + territories (53 jurisdictions total)
+- **Timeline**: Request access immediately at https://openlaws.us/api/
+- **Effort**: Single integration vs. 50+ individual state APIs
 - **Sustainability**: CivicTech organization committed to long-term availability
+- **Implementation Plan**:
+  1. Request API access (schedule 25-min session)
+  2. Receive bearer token + sandbox access
+  3. Build OpenLaws service (`server/services/openlaws.ts`)
+  4. Update legal-data service to include OpenLaws hybrid search
+  5. Implement citation → statute mapping for 4,146 criminal charges
+  6. Cache frequently accessed statutes in local database for performance
 
 ---
 
