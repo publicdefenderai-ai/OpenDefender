@@ -20,19 +20,13 @@ This document outlines the comprehensive API integration strategy for the Public
   - Full text: `GET /packages/{packageId}/htm`
 - **Implementation**: `server/services/govinfo.ts`
 
-### ✅ **California (CA)**
-- **API**: California Laws API
-- **Status**: ✅ Integrated
-- **Coverage**: Complete Penal Code + all CA codes
-- **Authentication**: None required (free public API)
-- **Cost**: Free
-- **Endpoints**:
-  - Sections: `GET https://api.calilaws.com/v1/sections`
-  - Codes list: `GET https://api.calilaws.com/v1/codes`
-- **Implementation**: `server/services/california-laws.ts`
-- **Example usage**:
-  - Penal Code search: `GET /v1/sections?code=PEN&section=242`
-  - Keyword search: `GET /v1/sections?code=PEN&q=assault`
+### ❌ **California (CA)** - No Current Free API
+- **Status**: ❌ No official API from leginfo.legislature.ca.gov
+- **Attempted**: CaliLaws API (api.calilaws.com) - **DEPRECATED** (last updated ~2015, no longer accessible)
+- **Official Alternative**: FTP database download from ftp://www.leginfo.ca.gov/pub/bill/ (requires local database setup)
+- **Recommendation**: Wait for OpenLaws API integration for comprehensive CA coverage
+- **Current Implementation**: Minimal seed data in `server/data/state-statutes-seed.ts`
+- **Note**: LegiScan API covers CA bill tracking but not enacted criminal statutes
 
 ---
 
@@ -103,9 +97,8 @@ This document outlines the comprehensive API integration strategy for the Public
    - Full-text extraction
 
 2. **California Laws API** (`server/services/california-laws.ts`)
-   - Penal Code section lookup
-   - Multi-code search
-   - Division/chapter browsing
+   - ❌ **SERVICE UNAVAILABLE** - API deprecated/offline as of Oct 2025
+   - Planned removal pending OpenLaws integration
 
 3. **Legal Data Service** (`server/services/legal-data.ts`)
    - Hybrid search: Local seed data + API integration
@@ -133,10 +126,12 @@ Return Combined Results
 ## State Coverage Analysis
 
 ### States WITHOUT Current API Coverage:
-**49 states** (excluding CA which has California Laws API)
+**ALL 50 states** (no individual state APIs currently available)
 
-- AL, AK, AZ, AR, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY
+- All 50 states: AL, AK, AZ, AR, CA, CO, CT, DE, FL, GA, HI, ID, IL, IN, IA, KS, KY, LA, ME, MD, MA, MI, MN, MS, MO, MT, NE, NV, NH, NJ, NM, NY, NC, ND, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VT, VA, WA, WV, WI, WY
 - Plus: DC, Puerto Rico, US Territories
+
+**Note**: California's CaliLaws API is deprecated and no longer functional as of October 2025.
 
 ### **Recommended Solution**: OpenLaws API Integration
 - **Impact**: Covers all 49 remaining states + territories
@@ -177,12 +172,13 @@ Return Combined Results
 ## Next Steps
 
 ### Immediate Actions:
-1. ✅ **Complete**: California Laws API integration
-2. ✅ **Complete**: GovInfo.gov federal integration
-3. ✅ **Complete**: Hybrid search combining local + API results
-4. 🔜 **Next**: Contact OpenLaws team to request API access
-5. 🔜 **Next**: Integrate OpenLaws API for 50-state coverage
-6. 🔜 **Next**: Build charge → statute mapping using criminal-charges.ts data
+1. ✅ **Complete**: GovInfo.gov federal integration
+2. ✅ **Complete**: Hybrid search combining local seed data + API results
+3. ✅ **Complete**: API research - Identified OpenLaws as best solution
+4. ❌ **Deprecated**: California Laws API (no longer accessible)
+5. 🔜 **PRIORITY**: Contact OpenLaws team to request API access (https://openlaws.us/api/)
+6. 🔜 **Next**: Integrate OpenLaws API for 50-state coverage
+7. 🔜 **Next**: Build charge → statute mapping using criminal-charges.ts data
 
 ### Integration Timeline:
 - **Week 1**: OpenLaws API access request & approval

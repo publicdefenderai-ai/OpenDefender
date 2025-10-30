@@ -1,6 +1,5 @@
 import { courtListenerService } from './courtlistener';
 import { govInfoService } from './govinfo';
-import { californiaLawsService } from './california-laws';
 import { storage } from '../storage';
 
 interface LegalDataService {
@@ -36,67 +35,29 @@ class LegalDataServiceImpl implements LegalDataService {
 
   async getStatutes(jurisdiction: string, searchQuery?: string) {
     try {
-      // First, query statutes from local storage
-      const localStatutes = await storage.getStatutes(jurisdiction, searchQuery);
-      
-      // For California, also try fetching from California Laws API if search query provided
-      let apiStatutes: any[] = [];
-      if (jurisdiction.toUpperCase() === 'CA' && searchQuery) {
-        try {
-          const caResult = await californiaLawsService.searchSections('PEN', searchQuery);
-          if (caResult && caResult.sections.length > 0) {
-            // Transform CA API results to our statute format
-            apiStatutes = caResult.sections.map(section => ({
-              citation: `Cal. Penal Code § ${section.section}`,
-              title: section.title || `Section ${section.section}`,
-              summary: section.content?.substring(0, 200) + '...' || '',
-              content: section.content,
-              penalties: 'See statute text for penalty details',
-              category: 'criminal',
-              relatedCharges: [],
-              url: `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=${section.section}`,
-              source: 'California Legislature',
-              jurisdiction: 'CA',
-            }));
-          }
-        } catch (apiError) {
-          console.log('CA Laws API supplemental search failed, using local data only:', apiError);
-        }
-      }
-      
-      // Combine local and API results, removing duplicates by citation
-      const allStatutes = [...localStatutes.map(s => ({
-        id: s.id,
-        citation: s.citation,
-        title: s.title,
-        summary: s.summary,
-        content: s.content,
-        penalties: s.penalties,
-        category: s.category,
-        relatedCharges: s.relatedCharges,
-        url: s.url,
-        source: s.sourceApi || 'seed_data',
-        jurisdiction: s.jurisdiction,
-      }))];
-      
-      // Add API statutes that aren't already in local data
-      const localCitations = new Set(allStatutes.map(s => s.citation));
-      apiStatutes.forEach(apiStat => {
-        if (!localCitations.has(apiStat.citation)) {
-          allStatutes.push(apiStat);
-        }
-      });
+      // Query statutes from local storage (seed data)
+      const statutes = await storage.getStatutes(jurisdiction, searchQuery);
       
       return {
         success: true,
         jurisdiction,
-        count: allStatutes.length,
-        statutes: allStatutes,
+        count: statutes.length,
+        statutes: statutes.map(s => ({
+          id: s.id,
+          citation: s.citation,
+          title: s.title,
+          summary: s.summary,
+          content: s.content,
+          penalties: s.penalties,
+          category: s.category,
+          relatedCharges: s.relatedCharges,
+          url: s.url,
+          source: s.sourceApi || 'seed_data',
+          jurisdiction: s.jurisdiction,
+        })),
         source: jurisdiction.toLowerCase() === 'federal' 
-          ? 'GovInfo.gov' 
-          : jurisdiction.toUpperCase() === 'CA' && apiStatutes.length > 0
-          ? 'State Laws Database + California Legislature API'
-          : 'State Laws Database',
+          ? 'GovInfo.gov + Seed Data' 
+          : 'State Laws Seed Data',
       };
     } catch (error) {
       console.error('Statute search failed:', error);
