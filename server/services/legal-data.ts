@@ -75,7 +75,7 @@ class LegalDataServiceImpl implements LegalDataService {
         category: s.category,
         relatedCharges: s.relatedCharges,
         url: s.url,
-        source: s.source,
+        source: s.sourceApi || 'seed_data',
         jurisdiction: s.jurisdiction,
       }))];
       
