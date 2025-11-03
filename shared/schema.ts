@@ -227,3 +227,79 @@ export const insertStatuteSchema = createInsertSchema(statutes).omit({
 
 export type InsertStatute = z.infer<typeof insertStatuteSchema>;
 export type Statute = typeof statutes.$inferSelect;
+
+// Statute Scrape Logs - Track when and how we scraped statute data
+export const statuteScrapes = pgTable("statute_scrapes", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  jurisdiction: text("jurisdiction").notNull(), // 'federal' or two-letter state code
+  sourceUrl: text("source_url").notNull(), // URL we scraped from
+  scrapeType: text("scrape_type").notNull(), // 'initial', 'update', 'targeted'
+  status: text("status").notNull(), // 'success', 'partial', 'failed'
+  statutesScraped: text("statutes_scraped"), // Number or description of statutes scraped
+  errorMessage: text("error_message"), // Error details if failed
+  triggeredBy: text("triggered_by"), // 'manual', 'legiscan_bill_1234', 'scheduled'
+  scrapedAt: timestamp("scraped_at").defaultNow(),
+  metadata: jsonb("metadata"), // Additional scrape details
+});
+
+// LegiScan Bill Tracking - Monitor bills that modify criminal statutes
+export const legiScanBills = pgTable("legiscan_bills", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  billId: text("bill_id").notNull().unique(), // LegiScan bill_id
+  billNumber: text("bill_number").notNull(),
+  state: text("state").notNull(), // Two-letter state code
+  title: text("title").notNull(),
+  description: text("description"),
+  status: text("status").notNull(), // 'introduced', 'passed', 'enacted', 'vetoed'
+  changeHash: text("change_hash").notNull(), // For detecting updates
+  lastAction: text("last_action"),
+  lastActionDate: timestamp("last_action_date"),
+  url: text("url"), // LegiScan or state legislature URL
+  affectsStatutes: text("affects_statutes").array(), // Citation(s) of statutes this bill modifies
+  needsReview: boolean("needs_review").default(true), // Whether we need to re-scrape affected statutes
+  reviewedAt: timestamp("reviewed_at"),
+  firstDetected: timestamp("first_detected").defaultNow(),
+  lastChecked: timestamp("last_checked").defaultNow(),
+  metadata: jsonb("metadata"), // Additional LegiScan data
+});
+
+// Statute Update Queue - Track which statutes need re-scraping
+export const statuteUpdateQueue = pgTable("statute_update_queue", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  jurisdiction: text("jurisdiction").notNull(), // State or 'federal'
+  citation: text("citation").notNull(), // Statute citation that needs updating
+  reason: text("reason").notNull(), // 'legiscan_bill', 'scheduled_refresh', 'manual'
+  triggeredBy: text("triggered_by"), // LegiScan bill ID or other trigger
+  priority: text("priority").notNull().default('normal'), // 'high', 'normal', 'low'
+  status: text("status").notNull().default('pending'), // 'pending', 'in_progress', 'completed', 'failed'
+  attempts: text("attempts").default('0'), // Number of scrape attempts
+  lastAttempt: timestamp("last_attempt"),
+  errorMessage: text("error_message"),
+  queuedAt: timestamp("queued_at").defaultNow(),
+  completedAt: timestamp("completed_at"),
+});
+
+// Insert schemas
+export const insertStatuteScrapeSchema = createInsertSchema(statuteScrapes).omit({
+  id: true,
+  scrapedAt: true,
+});
+
+export const insertLegiScanBillSchema = createInsertSchema(legiScanBills).omit({
+  id: true,
+  firstDetected: true,
+  lastChecked: true,
+});
+
+export const insertStatuteUpdateQueueSchema = createInsertSchema(statuteUpdateQueue).omit({
+  id: true,
+  queuedAt: true,
+});
+
+// Types
+export type InsertStatuteScrape = z.infer<typeof insertStatuteScrapeSchema>;
+export type StatuteScrape = typeof statuteScrapes.$inferSelect;
+export type InsertLegiScanBill = z.infer<typeof insertLegiScanBillSchema>;
+export type LegiScanBill = typeof legiScanBills.$inferSelect;
+export type InsertStatuteUpdateQueue = z.infer<typeof insertStatuteUpdateQueueSchema>;
+export type StatuteUpdateQueue = typeof statuteUpdateQueue.$inferSelect;
