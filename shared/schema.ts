@@ -232,14 +232,15 @@ export type Statute = typeof statutes.$inferSelect;
 export const statuteScrapes = pgTable("statute_scrapes", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   jurisdiction: text("jurisdiction").notNull(), // 'federal' or two-letter state code
-  sourceUrl: text("source_url").notNull(), // URL we scraped from
-  scrapeType: text("scrape_type").notNull(), // 'initial', 'update', 'targeted'
-  status: text("status").notNull(), // 'success', 'partial', 'failed'
-  statutesScraped: text("statutes_scraped"), // Number or description of statutes scraped
+  scrapeType: text("scrape_type").notNull(), // 'full_scrape', 'incremental', 'targeted'
+  status: text("status").notNull(), // 'in_progress', 'completed', 'failed'
+  statutesScraped: text("statutes_scraped").default('0'), // Number of statutes scraped
+  errorCount: text("error_count").default('0'), // Number of errors encountered
   errorMessage: text("error_message"), // Error details if failed
-  triggeredBy: text("triggered_by"), // 'manual', 'legiscan_bill_1234', 'scheduled'
-  scrapedAt: timestamp("scraped_at").defaultNow(),
-  metadata: jsonb("metadata"), // Additional scrape details
+  startedAt: timestamp("started_at").notNull().defaultNow(),
+  completedAt: timestamp("completed_at"),
+  lastUpdatedAt: timestamp("last_updated_at"),
+  metadata: jsonb("metadata"), // Additional scrape details (sourceUrl, triggeredBy, etc.)
 });
 
 // LegiScan Bill Tracking - Monitor bills that modify criminal statutes
@@ -282,7 +283,9 @@ export const statuteUpdateQueue = pgTable("statute_update_queue", {
 // Insert schemas
 export const insertStatuteScrapeSchema = createInsertSchema(statuteScrapes).omit({
   id: true,
-  scrapedAt: true,
+  startedAt: true,
+  completedAt: true,
+  lastUpdatedAt: true,
 });
 
 export const insertLegiScanBillSchema = createInsertSchema(legiScanBills).omit({
