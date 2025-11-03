@@ -20,6 +20,7 @@ export interface CriminalCharge {
   evidenceToGather: string[];
   specificRights: string[];
   urgentActions: string[];
+  statuteCitations?: string[]; // Link to underlying statutes (e.g., ["Cal. Penal Code § 242", "18 USC § 1001"])
 }
 
 export const criminalCharges: CriminalCharge[] = [
