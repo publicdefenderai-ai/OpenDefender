@@ -21,10 +21,12 @@ The backend is built with Express.js and TypeScript, providing a RESTful API. It
 ### Data Sources and Integrations
 
 The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations, a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a hybrid multi-source approach:
-1.  **Primary**: OpenLaws API (when access granted) for 50-state + federal coverage.
-2.  **Current**: Seed data for 10 states via PostgreSQL.
-3.  **Fallback**: Ethical web scraping for 7 allowed states.
+1.  **Primary**: OpenLaws API (⏳ AWAITING ACCESS) for 50-state + federal coverage - full integration built and ready.
+2.  **Current**: Seed data (15 statutes, 10 states) via PostgreSQL - ✅ operational and serving statute data.
+3.  **Fallback**: Ethical web scraping (7 allowed states: TX, FL, NY, IL, OH, NC, MI) - 🔧 infrastructure complete, paused pending OpenLaws access.
 4.  **Monitoring**: LegiScan API for quarterly statute change detection.
+
+**Current Status (Nov 2025)**: OpenLaws API access requested and awaiting response. All infrastructure ready to activate immediately upon access grant. Using seed data for immediate statute needs. Web scraping paused to prioritize OpenLaws integration (4.3M+ statutes vs. manual URL debugging for limited coverage).
 
 ### API Architecture
 
