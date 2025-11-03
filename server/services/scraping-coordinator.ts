@@ -1,4 +1,4 @@
-import { CaliforniaScraper } from './statute-scraper';
+import { CaliforniaScraper, TexasScraper, FloridaScraper, NewYorkScraper, IllinoisScraper, OhioScraper, NorthCarolinaScraper, MichiganScraper } from './statute-scraper';
 import { db } from '../db';
 import { statuteScrapes, type StatuteScrape } from '@shared/schema';
 import { eq, desc } from 'drizzle-orm';
@@ -25,29 +25,49 @@ export class ScrapingCoordinator {
     this.activeScrapes.set(stateCode, true);
 
     try {
+      let scraper: any;
+      let stateName: string;
+      
       switch (stateCode) {
-        case 'CA':
-          const caScraper = new CaliforniaScraper();
-          await caScraper.scrape();
-          return {
-            success: true,
-            message: 'California scrape completed successfully',
-            scrapeId: caScraper['scrapeId'] || undefined,
-          };
-        
-        // TODO: Add other states
         case 'TX':
+          scraper = new TexasScraper();
+          stateName = 'Texas';
+          break;
         case 'FL':
+          scraper = new FloridaScraper();
+          stateName = 'Florida';
+          break;
         case 'NY':
-        case 'PA':
+          scraper = new NewYorkScraper();
+          stateName = 'New York';
+          break;
         case 'IL':
+          scraper = new IllinoisScraper();
+          stateName = 'Illinois';
+          break;
         case 'OH':
-        case 'GA':
+          scraper = new OhioScraper();
+          stateName = 'Ohio';
+          break;
         case 'NC':
+          scraper = new NorthCarolinaScraper();
+          stateName = 'North Carolina';
+          break;
         case 'MI':
+          scraper = new MichiganScraper();
+          stateName = 'Michigan';
+          break;
+        case 'CA':
+          // California is blocked by robots.txt, but keep for reference
           return {
             success: false,
-            message: `Scraper for ${stateCode} not yet implemented`,
+            message: 'California scraping blocked by robots.txt (ethical compliance)',
+          };
+        case 'PA':
+        case 'GA':
+          return {
+            success: false,
+            message: `${stateCode} scraping blocked by robots.txt (ethical compliance)`,
           };
         
         default:
@@ -56,6 +76,20 @@ export class ScrapingCoordinator {
             message: `Unknown state code: ${stateCode}`,
           };
       }
+      
+      if (scraper) {
+        await scraper.scrape();
+        return {
+          success: true,
+          message: `${stateName} scrape completed successfully`,
+          scrapeId: scraper['scrapeId'] || undefined,
+        };
+      }
+      
+      return {
+        success: false,
+        message: `No scraper found for ${stateCode}`,
+      };
     } catch (error) {
       console.error(`[Coordinator] Error scraping ${stateCode}:`, error);
       return {
