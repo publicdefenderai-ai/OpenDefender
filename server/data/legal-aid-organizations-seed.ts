@@ -1,8 +1,8 @@
 import { type InsertLegalAidOrganization } from "@shared/schema";
 
 // Comprehensive legal aid organizations database
-// Sources: EOIR Pro Bono List, Legal Services Corporation (LSC), usa.gov/legal-aid
-// Last Updated: October 2025
+// Sources: EOIR Pro Bono List, Legal Services Corporation (LSC), State/County PD Offices, Federal Defender Directory
+// Last Updated: November 2025
 
 export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   // ========== IMMIGRATION LEGAL AID - EOIR PRO BONO LIST ==========
@@ -812,6 +812,792 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
     ],
     eligibility: "Low-income Oregon residents statewide.",
     dataSource: "LSC",
+    isActive: true,
+  },
+
+  // ========== PUBLIC DEFENDER OFFICES - COUNTY & STATE ==========
+
+  // California - Los Angeles County
+  {
+    name: "Los Angeles County Public Defender",
+    organizationType: "public_defender",
+    address: "210 W. Temple Street",
+    city: "Los Angeles",
+    state: "CA",
+    zipCode: "90012",
+    county: "Los Angeles",
+    phone: "(213) 974-2811",
+    email: null,
+    website: "https://pubdef.lacounty.gov",
+    latitude: "34.0553",
+    longitude: "-118.2427",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Drug Court",
+      "Veterans Court"
+    ],
+    eligibility: "Indigent defendants in Los Angeles County criminal and juvenile cases who cannot afford a private attorney.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // California - San Francisco County
+  {
+    name: "San Francisco Public Defender",
+    organizationType: "public_defender",
+    address: "555 7th Street",
+    city: "San Francisco",
+    state: "CA",
+    zipCode: "94103",
+    county: "San Francisco",
+    phone: "(415) 553-1671",
+    email: null,
+    website: "https://sfpublicdefender.org",
+    latitude: "37.7800",
+    longitude: "-122.4075",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Post-Conviction Relief",
+      "Clean Slate Program",
+      "Reentry Services"
+    ],
+    eligibility: "Indigent defendants in San Francisco County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // California - San Diego County
+  {
+    name: "San Diego County Public Defender",
+    organizationType: "public_defender",
+    address: "450 B Street, Suite 800",
+    city: "San Diego",
+    state: "CA",
+    zipCode: "92101",
+    county: "San Diego",
+    phone: "(619) 338-4700",
+    email: null,
+    website: "https://www.sandiegocounty.gov/defender",
+    latitude: "32.7157",
+    longitude: "-117.1611",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Veterans Court"
+    ],
+    eligibility: "Indigent defendants in San Diego County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // California - Alameda County
+  {
+    name: "Alameda County Public Defender",
+    organizationType: "public_defender",
+    address: "1401 Lakeside Drive, 12th Floor",
+    city: "Oakland",
+    state: "CA",
+    zipCode: "94612",
+    county: "Alameda",
+    phone: "(510) 272-6600",
+    email: null,
+    website: "https://www.acgov.org/defender",
+    latitude: "37.8058",
+    longitude: "-122.2631",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Advocacy",
+      "Immigration Representation"
+    ],
+    eligibility: "Indigent defendants in Alameda County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Illinois - Cook County (Chicago)
+  {
+    name: "Cook County Public Defender",
+    organizationType: "public_defender",
+    address: "69 W. Washington Street, Suite 1600",
+    city: "Chicago",
+    state: "IL",
+    zipCode: "60602",
+    county: "Cook",
+    phone: "(312) 603-0600",
+    email: null,
+    website: "https://www.cookcountypublicdefender.org",
+    latitude: "41.8837",
+    longitude: "-87.6297",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Drug Treatment Court",
+      "Veterans Court",
+      "Expungement Services"
+    ],
+    eligibility: "Indigent defendants in Cook County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Texas - Harris County (Houston)
+  {
+    name: "Harris County Public Defender",
+    organizationType: "public_defender",
+    address: "1001 Preston Street, Suite 400",
+    city: "Houston",
+    state: "TX",
+    zipCode: "77002",
+    county: "Harris",
+    phone: "(713) 274-6700",
+    email: null,
+    website: "https://hcpdo.org",
+    latitude: "29.7604",
+    longitude: "-95.3698",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Division",
+      "Veterans Court"
+    ],
+    eligibility: "Indigent defendants in Harris County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Texas - Dallas County
+  {
+    name: "Dallas County Public Defender",
+    organizationType: "public_defender",
+    address: "133 N. Riverfront Boulevard, LB 7",
+    city: "Dallas",
+    state: "TX",
+    zipCode: "75207",
+    county: "Dallas",
+    phone: "(214) 653-3550",
+    email: null,
+    website: "https://www.dallascounty.org/government/defender",
+    latitude: "32.7767",
+    longitude: "-96.7970",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Mental Health Court",
+      "Veterans Court"
+    ],
+    eligibility: "Indigent defendants in Dallas County criminal cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Florida - Miami-Dade County
+  {
+    name: "Miami-Dade Public Defender",
+    organizationType: "public_defender",
+    address: "1320 NW 14th Street",
+    city: "Miami",
+    state: "FL",
+    zipCode: "33125",
+    county: "Miami-Dade",
+    phone: "(305) 545-1958",
+    email: null,
+    website: "https://www.pdmiami.com",
+    latitude: "25.7907",
+    longitude: "-80.2201",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Drug Court",
+      "Veterans Court"
+    ],
+    eligibility: "Indigent defendants in Miami-Dade County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // New York - Kings County (Brooklyn)
+  {
+    name: "Brooklyn Defender Services",
+    organizationType: "public_defender",
+    address: "177 Livingston Street, 7th Floor",
+    city: "Brooklyn",
+    state: "NY",
+    zipCode: "11201",
+    county: "Kings",
+    phone: "(718) 254-0700",
+    email: null,
+    website: "https://www.bds.org",
+    latitude: "40.6909",
+    longitude: "-73.9882",
+    services: [
+      "Criminal Defense",
+      "Family Defense",
+      "Immigration Defense",
+      "Civil Action Practice",
+      "Reentry Services"
+    ],
+    eligibility: "Indigent defendants in Brooklyn criminal, family, and immigration cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // New York - New York County (Manhattan)
+  {
+    name: "The Legal Aid Society - Criminal Defense Practice",
+    organizationType: "public_defender",
+    address: "199 Water Street",
+    city: "New York",
+    state: "NY",
+    zipCode: "10038",
+    county: "New York",
+    phone: "(212) 577-3300",
+    email: null,
+    website: "https://www.legalaidnyc.org",
+    latitude: "40.7089",
+    longitude: "-74.0047",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Appeals",
+      "Post-Conviction Relief"
+    ],
+    eligibility: "Indigent defendants in New York City criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Pennsylvania - Philadelphia County
+  {
+    name: "Defender Association of Philadelphia",
+    organizationType: "public_defender",
+    address: "1441 Sansom Street",
+    city: "Philadelphia",
+    state: "PA",
+    zipCode: "19102",
+    county: "Philadelphia",
+    phone: "(215) 568-3190",
+    email: null,
+    website: "https://www.philadefender.org",
+    latitude: "39.9496",
+    longitude: "-75.1651",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Appeals",
+      "Special Defense Units"
+    ],
+    eligibility: "Indigent defendants in Philadelphia County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Georgia - Fulton County (Atlanta)
+  {
+    name: "Fulton County Public Defender",
+    organizationType: "public_defender",
+    address: "136 Pryor Street SW, Suite C-301",
+    city: "Atlanta",
+    state: "GA",
+    zipCode: "30303",
+    county: "Fulton",
+    phone: "(404) 612-4640",
+    email: null,
+    website: "https://www.fultoncountyga.gov/inside-fulton-county/fulton-county-departments/public-defender",
+    latitude: "33.7537",
+    longitude: "-84.3917",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Mental Health Court",
+      "Drug Court"
+    ],
+    eligibility: "Indigent defendants in Fulton County criminal cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Arizona - Maricopa County (Phoenix)
+  {
+    name: "Maricopa County Public Defender",
+    organizationType: "public_defender",
+    address: "620 W. Jackson Street",
+    city: "Phoenix",
+    state: "AZ",
+    zipCode: "85003",
+    county: "Maricopa",
+    phone: "(602) 506-7711",
+    email: null,
+    website: "https://www.maricopa.gov/1026/Public-Defender",
+    latitude: "33.4484",
+    longitude: "-112.0740",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court"
+    ],
+    eligibility: "Indigent defendants in Maricopa County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Washington - King County (Seattle)
+  {
+    name: "The Defender Association",
+    organizationType: "public_defender",
+    address: "810 Third Avenue, Suite 800",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98104",
+    county: "King",
+    phone: "(206) 447-3900",
+    email: null,
+    website: "https://www.defender.org",
+    latitude: "47.6062",
+    longitude: "-122.3321",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Immigration Project",
+      "Parents Representation Program"
+    ],
+    eligibility: "Indigent defendants in King County criminal cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Massachusetts - Suffolk County (Boston)
+  {
+    name: "Committee for Public Counsel Services - Public Defender Division",
+    organizationType: "public_defender",
+    address: "44 Bromfield Street",
+    city: "Boston",
+    state: "MA",
+    zipCode: "02108",
+    county: "Suffolk",
+    phone: "(617) 482-6212",
+    email: null,
+    website: "https://www.publiccounsel.net",
+    latitude: "42.3564",
+    longitude: "-71.0603",
+    services: [
+      "Criminal Defense",
+      "Juvenile Defense",
+      "Mental Health Advocacy",
+      "Appeals"
+    ],
+    eligibility: "Indigent defendants in Massachusetts criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Michigan - Wayne County (Detroit)
+  {
+    name: "Wayne County Public Defender",
+    organizationType: "public_defender",
+    address: "1441 St. Antoine Street, Suite 1100",
+    city: "Detroit",
+    state: "MI",
+    zipCode: "48226",
+    county: "Wayne",
+    phone: "(313) 224-5500",
+    email: null,
+    website: "https://www.waynecounty.com/elected/publicdefender",
+    latitude: "42.3314",
+    longitude: "-83.0458",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court"
+    ],
+    eligibility: "Indigent defendants in Wayne County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Minnesota - Hennepin County (Minneapolis)
+  {
+    name: "Hennepin County Public Defender",
+    organizationType: "public_defender",
+    address: "C-2100 Government Center, 300 South 6th Street",
+    city: "Minneapolis",
+    state: "MN",
+    zipCode: "55487",
+    county: "Hennepin",
+    phone: "(612) 348-7500",
+    email: null,
+    website: "https://www.hennepinpublicdefender.org",
+    latitude: "44.9778",
+    longitude: "-93.2650",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Drug Court"
+    ],
+    eligibility: "Indigent defendants in Hennepin County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Colorado - Denver County
+  {
+    name: "Denver Public Defender",
+    organizationType: "public_defender",
+    address: "1290 Broadway, Suite 1700",
+    city: "Denver",
+    state: "CO",
+    zipCode: "80203",
+    county: "Denver",
+    phone: "(720) 913-8800",
+    email: null,
+    website: "https://www.coloradodefenders.us",
+    latitude: "39.7392",
+    longitude: "-104.9903",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Appellate Services"
+    ],
+    eligibility: "Indigent defendants in Denver County and statewide Colorado criminal cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Oregon - Multnomah County (Portland)
+  {
+    name: "Metropolitan Public Defender",
+    organizationType: "public_defender",
+    address: "1120 SW 3rd Avenue, Suite 600",
+    city: "Portland",
+    state: "OR",
+    zipCode: "97204",
+    county: "Multnomah",
+    phone: "(503) 225-9100",
+    email: null,
+    website: "https://www.mpdlaw.com",
+    latitude: "45.5152",
+    longitude: "-122.6784",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court"
+    ],
+    eligibility: "Indigent defendants in Multnomah County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // Maryland - Baltimore City
+  {
+    name: "Office of the Public Defender - Baltimore City",
+    organizationType: "public_defender",
+    address: "6 Saint Paul Street, Suite 1302",
+    city: "Baltimore",
+    state: "MD",
+    zipCode: "21202",
+    county: "Baltimore City",
+    phone: "(410) 767-8479",
+    email: null,
+    website: "https://www.opd.state.md.us",
+    latitude: "39.2904",
+    longitude: "-76.6122",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Advocacy"
+    ],
+    eligibility: "Indigent defendants in Baltimore City criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // North Carolina - Mecklenburg County (Charlotte)
+  {
+    name: "Mecklenburg County Public Defender",
+    organizationType: "public_defender",
+    address: "720 East 4th Street, Suite 300",
+    city: "Charlotte",
+    state: "NC",
+    zipCode: "28202",
+    county: "Mecklenburg",
+    phone: "(704) 336-4310",
+    email: null,
+    website: "https://www.mecknc.gov/CountyManagersOffice/PublicDefender",
+    latitude: "35.2271",
+    longitude: "-80.8431",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense"
+    ],
+    eligibility: "Indigent defendants in Mecklenburg County criminal and juvenile cases.",
+    dataSource: "state_website",
+    isActive: true,
+  },
+
+  // ========== FEDERAL PUBLIC DEFENDER OFFICES ==========
+
+  // California - Central District (Los Angeles)
+  {
+    name: "Federal Public Defender - Central District of California",
+    organizationType: "public_defender",
+    address: "321 East 2nd Street",
+    city: "Los Angeles",
+    state: "CA",
+    zipCode: "90012",
+    county: "Los Angeles",
+    phone: "(213) 894-2854",
+    email: null,
+    website: "https://fpdcdca.org",
+    latitude: "34.0479",
+    longitude: "-118.2396",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Capital Habeas Corpus",
+      "Pretrial Services"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Central District of California.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New York - Southern District (Manhattan)
+  {
+    name: "Federal Defenders of New York - Manhattan Office",
+    organizationType: "public_defender",
+    address: "52 Duane Street, 10th Floor",
+    city: "New York",
+    state: "NY",
+    zipCode: "10007",
+    county: "New York",
+    phone: "(212) 417-8700",
+    email: null,
+    website: "https://www.federaldefendersny.org",
+    latitude: "40.7148",
+    longitude: "-74.0068",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Immigration Consequences Advocacy"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of New York.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Illinois - Northern District (Chicago)
+  {
+    name: "Illinois Federal Defender Program",
+    organizationType: "public_defender",
+    address: "55 E. Monroe Street, Suite 2800",
+    city: "Chicago",
+    state: "IL",
+    zipCode: "60603",
+    county: "Cook",
+    phone: "(312) 621-8380",
+    email: null,
+    website: "https://www.ilnd.uscourts.gov/Pages.aspx?page=Federal-Defender",
+    latitude: "41.8806",
+    longitude: "-87.6256",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Post-Conviction Relief"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Illinois.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Texas - Northern District (Dallas)
+  {
+    name: "Federal Public Defender - Northern District of Texas",
+    organizationType: "public_defender",
+    address: "525 S. Griffin Street, Suite 629",
+    city: "Dallas",
+    state: "TX",
+    zipCode: "75202",
+    county: "Dallas",
+    phone: "(214) 767-2746",
+    email: null,
+    website: "https://www.txnd.uscourts.gov/federal-public-defenders-office",
+    latitude: "32.7767",
+    longitude: "-96.7979",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Immigration Defense"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Texas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Pennsylvania - Eastern District (Philadelphia)
+  {
+    name: "Federal Community Defender - Eastern District of Pennsylvania",
+    organizationType: "public_defender",
+    address: "601 Walnut Street, Suite 540 West",
+    city: "Philadelphia",
+    state: "PA",
+    zipCode: "19106",
+    county: "Philadelphia",
+    phone: "(215) 928-1100",
+    email: null,
+    website: "https://pae.fd.org",
+    latitude: "39.9480",
+    longitude: "-75.1486",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Capital Habeas Corpus",
+      "Immigration Consequences"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Pennsylvania.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Florida - Southern District (Miami)
+  {
+    name: "Federal Public Defender - Southern District of Florida",
+    organizationType: "public_defender",
+    address: "150 W. Flagler Street, Suite 1700",
+    city: "Miami",
+    state: "FL",
+    zipCode: "33130",
+    county: "Miami-Dade",
+    phone: "(305) 530-7000",
+    email: null,
+    website: "https://www.flsd.uscourts.gov",
+    latitude: "25.7743",
+    longitude: "-80.1937",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Immigration Defense"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Florida.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Georgia - Northern District (Atlanta)
+  {
+    name: "Georgia Federal Defender Program - Northern District",
+    organizationType: "public_defender",
+    address: "101 Marietta Street NW, Suite 1500",
+    city: "Atlanta",
+    state: "GA",
+    zipCode: "30303",
+    county: "Fulton",
+    phone: "(404) 688-7498",
+    email: null,
+    website: "https://www.gand.uscourts.gov",
+    latitude: "33.7573",
+    longitude: "-84.3898",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Habeas Corpus"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Georgia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Washington - Western District (Seattle)
+  {
+    name: "Federal Defenders of Western Washington",
+    organizationType: "public_defender",
+    address: "1601 Fifth Avenue, Suite 700",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+    county: "King",
+    phone: "(206) 553-1100",
+    email: null,
+    website: "https://www.wawd.uscourts.gov/federal-public-defender",
+    latitude: "47.6101",
+    longitude: "-122.3352",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Immigration Consequences"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Washington.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Massachusetts - District of Massachusetts (Boston)
+  {
+    name: "Federal Defender Office - District of Massachusetts",
+    organizationType: "public_defender",
+    address: "408 Atlantic Avenue, 3rd Floor",
+    city: "Boston",
+    state: "MA",
+    zipCode: "02110",
+    county: "Suffolk",
+    phone: "(617) 223-8061",
+    email: null,
+    website: "https://www.mad.uscourts.gov/boston/fpd.htm",
+    latitude: "42.3554",
+    longitude: "-71.0520",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Immigration Defense"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Massachusetts.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Nevada - District of Nevada (Las Vegas)
+  {
+    name: "Federal Public Defender - District of Nevada",
+    organizationType: "public_defender",
+    address: "411 E. Bonneville Avenue",
+    city: "Las Vegas",
+    state: "NV",
+    zipCode: "89101",
+    county: "Clark",
+    phone: "(702) 388-6577",
+    email: null,
+    website: "https://fpdnevada.org",
+    latitude: "36.1699",
+    longitude: "-115.1398",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals",
+      "Post-Conviction Relief"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Nevada.",
+    dataSource: "federal_defender",
     isActive: true,
   },
 ];
