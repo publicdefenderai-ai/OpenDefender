@@ -204,11 +204,11 @@ export default function DevelopmentRoadmap() {
       id: "legal-aid-directory",
       titleKey: "developmentRoadmap.items.legalAidDirectory.title",
       descriptionKey: "developmentRoadmap.items.legalAidDirectory.description",
-      status: "in-progress",
+      status: "completed",
       priority: "high",
       category: "data",
       estimatedCompletion: "Q1 2025",
-      progress: 75,
+      progress: 100,
       impactKey: "developmentRoadmap.items.legalAidDirectory.impact"
     },
     {
