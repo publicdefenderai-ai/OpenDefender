@@ -2,6 +2,30 @@
 
 ## Recent Changes
 
+- **Charge-to-Statute Integration (November 2025)**: Connected all 4,146 criminal charges to their underlying federal/state statutes
+  - **LegiScan API Integration** (✅ Complete): Set up free tier access (30k queries/month) for quarterly statute change monitoring
+    - Validates enacted bills that modify criminal statutes
+    - Logs bill discoveries for manual review and statute update queue
+    - Rate-limited search with proper error handling
+  - **Database Schema Extensions** (✅ Complete): Added statute tracking and version control tables
+    - `statuteScrapes` table: Tracks scraping sessions, success/failure, and statistics
+    - `legiScanBills` table: Stores discovered bills for review and monitoring
+    - `statuteUpdateQueue` table: Manages statute update workflow
+    - `statuteCitations` field on CriminalCharge: Links charges to underlying laws
+  - **Citation Generator Service** (✅ Complete): Built comprehensive citation formatter for all 50 states + DC + territories
+    - State-specific code normalization (IL 720-5/, MA ch., OK 21- prefixes)
+    - Official .gov URL patterns for top 10 states (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI)
+    - Examples: 'CA 242' → 'Cal. Penal Code § 242', 'IL 720-5/9-1' → '720 ILCS 5/9-1'
+  - **Case Assessment UI Enhancement** (✅ Complete): Integrated statute citations into charge selection workflow
+    - Displays formal statute citation for each selected charge
+    - Links to official .gov statute websites when available
+    - Fallback message when citations cannot be generated
+    - Mobile-responsive design with statute reference icons
+  - **Documentation** (✅ Complete): Created comprehensive strategy documents
+    - `server/docs/CHARGE_TO_STATUTE_MAPPING_STRATEGY.md`: Hybrid scraping + API monitoring approach
+    - `server/docs/STATE_STATUTE_SITES_RESEARCH.md`: Official .gov URLs and HTML patterns for top 10 states
+  - **Next Steps**: Build web scraper to perform initial statute loads from .gov sites, populate relatedCharges bidirectionally
+
 - **State Laws Database API Integration Research (October 2025)**: Completed comprehensive API research and strategic planning for 50-state statute coverage
   - **GovInfo.gov API Integration**: ✅ Connected to official U.S. government API for federal statutes (Title 18 USC - Crimes and Criminal Procedure)
     - Authentication: X-Api-Key header-based authentication
