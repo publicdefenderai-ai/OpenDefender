@@ -1,78 +1,8 @@
 # Public Defender AI - Legal Guidance Platform
 
-## Recent Changes
-
-- **Charge-to-Statute Integration (November 2025)**: Connected all 4,146 criminal charges to their underlying federal/state statutes
-  - **LegiScan API Integration** (✅ Complete): Set up free tier access (30k queries/month) for quarterly statute change monitoring
-    - Validates enacted bills that modify criminal statutes
-    - Logs bill discoveries for manual review and statute update queue
-    - Rate-limited search with proper error handling
-  - **Database Schema Extensions** (✅ Complete): Added statute tracking and version control tables
-    - `statuteScrapes` table: Tracks scraping sessions, success/failure, and statistics
-    - `legiScanBills` table: Stores discovered bills for review and monitoring
-    - `statuteUpdateQueue` table: Manages statute update workflow
-    - `statuteCitations` field on CriminalCharge: Links charges to underlying laws
-  - **Citation Generator Service** (✅ Complete): Built comprehensive citation formatter for all 50 states + DC + territories
-    - State-specific code normalization (IL 720-5/, MA ch., OK 21- prefixes)
-    - Official .gov URL patterns for top 10 states (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI)
-    - Examples: 'CA 242' → 'Cal. Penal Code § 242', 'IL 720-5/9-1' → '720 ILCS 5/9-1'
-  - **Case Assessment UI Enhancement** (✅ Complete): Integrated statute citations into charge selection workflow
-    - Displays formal statute citation for each selected charge
-    - Links to official .gov statute websites when available
-    - Fallback message when citations cannot be generated
-    - Mobile-responsive design with statute reference icons
-  - **Documentation** (✅ Complete): Created comprehensive strategy documents
-    - `server/docs/CHARGE_TO_STATUTE_MAPPING_STRATEGY.md`: Hybrid scraping + API monitoring approach
-    - `server/docs/STATE_STATUTE_SITES_RESEARCH.md`: Official .gov URLs and HTML patterns for top 10 states
-  - **Next Steps**: Build web scraper to perform initial statute loads from .gov sites, populate relatedCharges bidirectionally
-
-- **State Laws Database API Integration Research (October 2025)**: Completed comprehensive API research and strategic planning for 50-state statute coverage
-  - **GovInfo.gov API Integration**: ✅ Connected to official U.S. government API for federal statutes (Title 18 USC - Crimes and Criminal Procedure)
-    - Authentication: X-Api-Key header-based authentication
-    - Caching: Database schema for persistent statute storage
-    - Coverage: Federal criminal code with full text, citations, and official URLs
-  - **API Research Completed**: Evaluated all available statute APIs for 50-state coverage
-    - ❌ Justia/FindLaw: No public APIs, TOS prohibits scraping
-    - ❌ CaliLaws API: Deprecated (last updated ~2015, no longer accessible)
-    - ⚠️ LegiScan/Open States: Bill tracking only (not enacted statutes)
-    - ✅ **OpenLaws API**: Best solution - covers all 50 states + federal + DC (53 jurisdictions)
-  - **API Integration Strategy**: Created comprehensive documentation in `server/docs/API_INTEGRATION_STRATEGY.md`
-    - Current state: Minimal seed data for 10 states (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI)
-    - Next step: Contact OpenLaws (https://openlaws.us/api/) for API access (CivicTech non-profit)
-    - Future: Hybrid approach combining seed data + OpenLaws API for comprehensive coverage
-  - **State Statutes Seed Data**: Built minimal database for top 10 states by population
-    - Structured data includes citation, summary, penalties, and categories
-    - State-specific criminal codes with references to official sources
-  - **Statutes Browser Page**: New `/statutes` page with tabbed interface for federal and state law browsing
-    - Client-side search and filtering by title, citation, or keywords
-    - Null-safe rendering handles missing or incomplete data gracefully
-    - Mobile-responsive design with state selector dropdown
-  - **Database Schema**: Added `statutes` table in shared/schema.ts with comprehensive fields for federal/state laws
-  - **Development Roadmap Updated**: State Laws Database progress increased from 30% to 70% complete
-
-- **Language Simplification Initiative (October 2025)**: Comprehensive site-wide effort to replace complex legal terminology with simple, accessible language for users with limited education, low English proficiency, or no legal background
-  - Simplified guidance engine critical alerts and immediate actions: "Exercise right to remain silent" → "Stay silent - don't answer questions without a lawyer"
-  - Updated all translation keys (English and Spanish) for urgent help modal, case guidance flow, and rights information
-  - Simplified PDF generator user-facing text: "Legal Case Guidance" → "Your Legal Help Guide", "Jurisdiction" → "Your State"
-  - Replaced complex terminology throughout:
-    - "Assert rights" → "State your rights"
-    - "Assessment" → "Get started"
-    - "Precedent" → "Past court cases"
-    - "Probable cause/Reasonable suspicion" → "Good reason"
-    - "Exigent circumstances" → "Emergencies"
-    - "Fourth/Fifth/Sixth Amendment" → "The law" with simplified explanations
-    - "Constitutional rights" → "Legal rights"
-    - "Due process" → "Fair legal process"
-    - "Arraignment" → "First court appearance"
-    - "Preliminary hearing" → "First hearing"
-    - "Miranda rights" → "Your rights warning"
-    - "Impartial jury" → "Fair, unbiased jury"
-    - "Statutes" → "Laws"
-  - All 13 pages and 750+ translation keys now use 6th-8th grade reading level language
-
 ## Overview
 
-Public Defender AI is a web application providing accessible, AI-powered legal guidance and rights information. It offers case law search, legal resource databases, and connects users with legal aid organizations. The platform is built with privacy-first principles, ensuring user data is ephemeral and not permanently stored. Key capabilities include AI-powered legal assistance, access to court records, and a comprehensive database of criminal charges and diversion programs. The project aims to empower individuals without immediate legal representation by democratizing access to legal information.
+Public Defender AI is a web application providing accessible, AI-powered legal guidance and rights information. It offers case law search, legal resource databases, and connects users with legal aid organizations. The platform is built with privacy-first principles, ensuring user data is ephemeral and not permanently stored. Key capabilities include AI-powered legal assistance, access to court records, and a comprehensive database of criminal charges, statutes, and diversion programs. The project aims to empower individuals without immediate legal representation by democratizing access to legal information, particularly focusing on simplified language for users with limited legal background.
 
 ## User Preferences
 
@@ -82,28 +12,32 @@ Preferred communication style: Simple, everyday language.
 
 ### Frontend Architecture
 
-The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui components built on Radix UI primitives. Styling is managed with Tailwind CSS, incorporating a custom legal-themed design system. Framer Motion provides animations. State management employs TanStack Query for server state (caching, background updates) and React hooks for local state. The application supports light/dark modes and is optimized for mobile responsiveness across all features, including a mobile hamburger menu and adaptive display of content. It features complete bilingual support (English/Spanish) with internationalization (i18n) using `react-i18next` - all 13 pages, interactive modals, and navigation menus are fully translated to Spanish with 750+ translation keys covering the entire user interface including the Get Started menu, Legal Guidance modal, Court Locator information cards, and Development Roadmap mission section.
+The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui components built on Radix UI primitives. Styling is managed with Tailwind CSS, incorporating a custom legal-themed design system. Framer Motion provides animations. State management employs TanStack Query for server state and React hooks for local state. The application supports light/dark modes and is optimized for mobile responsiveness across all features. It features complete bilingual support (English/Spanish) with internationalization (i18n) using `react-i18next`, ensuring all 13 pages, interactive modals, and navigation menus are fully translated. All user-facing text is designed for a 6th-8th grade reading level.
 
 ### Backend Architecture
 
-The backend is built with Express.js and TypeScript, providing a RESTful API. It includes custom middleware for logging and error handling. Drizzle ORM with PostgreSQL is used for type-safe database operations. Legal case data is designed to be ephemeral and automatically expires to ensure user privacy. The server provides endpoints for legal resources, court data, case law search, AI legal guidance, court records search (RECAP/CourtListener), and legal aid organizations, including location-based searches for public defenders.
+The backend is built with Express.js and TypeScript, providing a RESTful API. It includes custom middleware for logging and error handling. Drizzle ORM with PostgreSQL is used for type-safe database operations. Legal case data is designed to be ephemeral and automatically expires to ensure user privacy. The server provides endpoints for legal resources, court data, case law search, AI legal guidance, court records search, and legal aid organizations, including location-based searches for public defenders.
 
 ### Data Sources and Integrations
 
-The system integrates with various legal data sources to provide comprehensive information. It includes a robust database of legal aid organizations with detailed contact and service information, and a comprehensive criminal charges database covering federal and state offenses across all 50 states and DC, cross-referenced with FindLaw categories. The diversion programs database now contains 73 programs across major US metropolitan areas, with comprehensive coverage of California (16 programs across 9 counties), New York (12 programs across 6 counties), Georgia (16 programs across 8 counties including the Atlanta metro area), and Illinois (4 programs across 3 counties including Chicago), plus programs in Texas, Florida, Pennsylvania, Washington, Colorado, Massachusetts, Tennessee, Oregon, North Carolina, Ohio, Delaware, and Wisconsin. Programs include drug courts, mental health courts (including SPMI diversion), veterans courts, pretrial diversion, deferred prosecution, harm reduction initiatives (LEAD/PATH model), accountability courts, and CARE courts, all with verified contact information, eligibility criteria, and program details sourced from the NDAA Prosecutor-Led Diversion Programs Directory, state court systems, district attorney offices, and solicitor-general offices. A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored.
+The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations, a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a hybrid multi-source approach:
+1.  **Primary**: OpenLaws API (when access granted) for 50-state + federal coverage.
+2.  **Current**: Seed data for 10 states via PostgreSQL.
+3.  **Fallback**: Ethical web scraping for 7 allowed states.
+4.  **Monitoring**: LegiScan API for quarterly statute change detection.
 
 ### API Architecture
 
 The API includes endpoints for:
-- `/api/legal-resources`: Retrieves resources filtered by jurisdiction/category.
-- `/api/court-data/:jurisdiction`: Fetches court information.
-- `/api/case-law/search`: Searches legal opinions and precedents.
-- `/api/court-records/search`: Searches RECAP Archive and case law database.
-- `/api/court-records/docket/:docketId`: Retrieves detailed docket information.
-- `/api/legal-aid-organizations`: Provides legal aid organization data with filtering.
-- `/api/statutes/federal`: Retrieves federal criminal statutes (Title 18 USC) from GovInfo.gov API.
-- `/api/statutes/:stateCode`: Retrieves state criminal statutes for specified state (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI).
-- AI-generated legal guidance based on user input.
+-   Legal resources (filtered by jurisdiction/category)
+-   Court information by jurisdiction
+-   Case law search
+-   Court records search (RECAP Archive and case law database)
+-   Detailed docket information by ID
+-   Legal aid organization data with filtering
+-   Federal criminal statutes (Title 18 USC)
+-   State criminal statutes by state code
+-   AI-generated legal guidance based on user input.
 
 ### Authentication and Session Management
 
@@ -111,42 +45,42 @@ Session-based authentication is used with a PostgreSQL session store, configured
 
 ### Build and Deployment
 
-Vite is used for frontend development (HMR, TypeScript checking) and client-side production optimization. ESBuild bundles the server for production. Drizzle Kit handles database schema migrations.
+Vite is used for frontend development and client-side production optimization. ESBuild bundles the server for production. Drizzle Kit handles database schema migrations.
 
 ## External Dependencies
 
 ### Database
-- **PostgreSQL**: Primary database (Neon serverless PostgreSQL).
-- **Drizzle ORM**: Type-safe database management.
-- **connect-pg-simple**: PostgreSQL session store.
+-   **PostgreSQL**: Primary database (Neon serverless PostgreSQL).
+-   **Drizzle ORM**: Type-safe database management.
+-   **connect-pg-simple**: PostgreSQL session store.
 
 ### Legal Data Sources
-- **CourtListener API**: Legal opinions, court data, case law.
-- **RECAP Archive**: Federal court documents.
-- **PACER Fetch API**: On-demand access to PACER documents (fallback).
-- **GovInfo.gov API**: Federal criminal statutes (Title 18 USC) - actively integrated.
-- **OpenLaws API** (Pending): All 50 states + federal statutes - priority integration target (https://openlaws.us/api/).
-- **Cornell Legal Information Institute**: Legal statutes reference.
-- **EOIR.gov**: Immigration legal service providers.
-- **Legal Services Corporation (LSC)**: Civil legal aid organizations.
-- **Center for Health and Justice**: Diversion program research.
-- **NDAA Diversion Programs Directory** (https://diversion.ndaa.org/): National directory of 250+ prosecutor-led diversion programs (referenced for future expansion).
-- **CrimeSolutions.gov Programs API** (https://data.ojp.usdoj.gov/): DOJ Office of Justice Programs database of evidence-based programs (currently offline due to government operations, will be integrated when available).
-- **State and Local Court Systems**: Direct research from court websites and district attorney offices across major US metropolitan areas.
+-   **CourtListener API**: Legal opinions, court data, case law.
+-   **RECAP Archive**: Federal court documents.
+-   **PACER Fetch API**: On-demand access to PACER documents (fallback).
+-   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
+-   **OpenLaws API** (Pending): All 50 states + federal statutes.
+-   **LegiScan API**: Quarterly statute change monitoring.
+-   **Cornell Legal Information Institute**: Legal statutes reference.
+-   **EOIR.gov**: Immigration legal service providers.
+-   **Legal Services Corporation (LSC)**: Civil legal aid organizations.
+-   **Center for Health and Justice**: Diversion program research.
+-   **NDAA Diversion Programs Directory**: Reference for diversion programs.
+-   **State and Local Court Systems**: Direct research from court websites and district attorney offices.
 
 ### UI and Styling
-- **shadcn/ui**: Component library.
-- **Tailwind CSS**: Utility-first CSS framework.
-- **Framer Motion**: Animations.
-- **React Hook Form**: Form management.
+-   **shadcn/ui**: Component library.
+-   **Tailwind CSS**: Utility-first CSS framework.
+-   **Framer Motion**: Animations.
+-   **React Hook Form**: Form management.
 
 ### Development and Build Tools
-- **Vite**: Development server and build tool.
-- **TypeScript**: Type safety.
-- **ESBuild**: Fast JavaScript bundler.
-- **react-i18next**: Internationalization.
+-   **Vite**: Development server and build tool.
+-   **TypeScript**: Type safety.
+-   **ESBuild**: Fast JavaScript bundler.
+-   **react-i18next**: Internationalization.
 
 ### Third-Party Services
-- **Neon Database**: Serverless PostgreSQL hosting.
-- **CourtListener**: Legal case database and API.
-- **OpenStreetMap/Nominatim**: Geocoding and location-based search.
+-   **Neon Database**: Serverless PostgreSQL hosting.
+-   **CourtListener**: Legal case database and API.
+-   **OpenStreetMap/Nominatim**: Geocoding and location-based search.

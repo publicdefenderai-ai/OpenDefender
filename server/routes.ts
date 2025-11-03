@@ -10,6 +10,8 @@ import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { getChargeById } from "../shared/criminal-charges.js";
 import { scrapingCoordinator } from "./services/scraping-coordinator";
 import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
+import { statuteSeeder } from "./services/statute-seeder";
+import { openLawsClient } from "./services/openlaws-client";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Legal Resources API
@@ -86,20 +88,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Statutes API - Get by jurisdiction with optional search
-  app.get("/api/statutes/:jurisdiction", async (req, res) => {
-    try {
-      const { jurisdiction } = req.params;
-      const { q: searchQuery } = req.query;
-      const statutes = await legalDataService.getStatutes(jurisdiction, searchQuery as string);
-      res.json(statutes);
-    } catch (error) {
-      console.error("Failed to fetch statutes:", error);
-      res.status(500).json({ success: false, error: "Failed to fetch statutes" });
-    }
-  });
-
-  // Statutes Search API - Search federal statutes
+  // Statutes Search API - Search federal statutes (must come before :jurisdiction)
   app.get("/api/statutes/search/federal", async (req, res) => {
     try {
       const { q: query, title, section } = req.query;
@@ -112,6 +101,43 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Federal statute search failed:", error);
       res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
+  // Statute Database Seeding endpoints (must come before :jurisdiction)
+  // Seed database with stateStatutesSeed data
+  app.post("/api/statutes/seed", async (req, res) => {
+    try {
+      console.log('[API] Starting statute database seeding...');
+      const result = await statuteSeeder.seedDatabase();
+      res.json(result);
+    } catch (error) {
+      console.error("Seeding failed:", error);
+      res.status(500).json({ success: false, error: "Seeding failed" });
+    }
+  });
+
+  // Get seeding status
+  app.get("/api/statutes/seed-status", async (req, res) => {
+    try {
+      const status = await statuteSeeder.getSeedingStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      console.error("Failed to fetch seeding status:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch status" });
+    }
+  });
+
+  // Statutes API - Get by jurisdiction with optional search
+  app.get("/api/statutes/:jurisdiction", async (req, res) => {
+    try {
+      const { jurisdiction } = req.params;
+      const { q: searchQuery } = req.query;
+      const statutes = await legalDataService.getStatutes(jurisdiction, searchQuery as string);
+      res.json(statutes);
+    } catch (error) {
+      console.error("Failed to fetch statutes:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch statutes" });
     }
   });
 
@@ -408,6 +434,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Robots.txt audit failed:", error);
       res.status(500).json({ success: false, error: "Audit failed" });
+    }
+  });
+
+  // OpenLaws API - Check availability
+  app.get("/api/openlaws/status", async (req, res) => {
+    try {
+      const status = await openLawsClient.checkAvailability();
+      res.json(status);
+    } catch (error) {
+      console.error("OpenLaws status check failed:", error);
+      res.status(500).json({ available: false, message: "Status check failed" });
+    }
+  });
+
+  // OpenLaws API - Search by citation
+  app.get("/api/openlaws/citation/:citation", async (req, res) => {
+    try {
+      const { citation } = req.params;
+      const statute = await openLawsClient.searchByCitation(decodeURIComponent(citation));
+      if (statute) {
+        res.json({ success: true, statute });
+      } else {
+        res.status(404).json({ success: false, error: "Statute not found" });
+      }
+    } catch (error) {
+      console.error("OpenLaws citation search failed:", error);
+      res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
+  // OpenLaws API - Bulk import jurisdiction
+  app.post("/api/openlaws/import/:jurisdictionCode", async (req, res) => {
+    try {
+      const { jurisdictionCode } = req.params;
+      const result = await openLawsClient.bulkImportJurisdiction(jurisdictionCode.toUpperCase());
+      res.json({ success: result.success, ...result });
+    } catch (error) {
+      console.error("OpenLaws bulk import failed:", error);
+      res.status(500).json({ success: false, error: "Import failed" });
     }
   });
 

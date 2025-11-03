@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, jsonb, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, jsonb, boolean, unique } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -218,7 +218,10 @@ export const statutes = pgTable("statutes", {
   sourceApi: text("source_api"), // 'govinfo', 'cornell_lii', 'state_website', 'manual'
   lastUpdated: timestamp("last_updated").defaultNow(),
   isActive: boolean("is_active").default(true),
-});
+}, (table) => ({
+  // Unique constraint: same citation can exist in different jurisdictions
+  citationJurisdictionUnique: unique().on(table.citation, table.jurisdiction),
+}));
 
 export const insertStatuteSchema = createInsertSchema(statutes).omit({
   id: true,
