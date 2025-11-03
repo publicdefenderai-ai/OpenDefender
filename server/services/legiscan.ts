@@ -149,13 +149,17 @@ class LegiScanService {
       const result = await this.searchBills(query, state, year);
       
       if (result) {
-        // Extract bill summaries (skip 'summary' key)
+        // LegiScan API returns bill objects keyed by numeric index (skip 'summary' metadata)
+        // Example: { summary: {...}, 0: {bill...}, 1: {bill...}, ... }
         Object.keys(result).forEach(key => {
           if (key !== 'summary') {
             const bill = result[key] as LegiScanBillSummary;
-            if (!seenBillIds.has(bill.bill_id)) {
+            
+            // Validate bill object structure before adding
+            if (bill && typeof bill === 'object' && bill.bill_id && !seenBillIds.has(bill.bill_id)) {
               seenBillIds.add(bill.bill_id);
               allResults.push(bill);
+              console.log(`Found enacted bill: ${bill.state} ${bill.bill_number} - ${bill.title}`);
             }
           }
         });
@@ -165,6 +169,7 @@ class LegiScanService {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
+    console.log(`Found ${allResults.length} total enacted criminal bills for ${state}`);
     return allResults;
   }
 

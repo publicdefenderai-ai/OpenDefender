@@ -7,9 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
+import { generateStatuteCitation, getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
@@ -364,25 +365,67 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           {formData.charges.length > 0 && (
             <div className="mb-4">
               <Label className="text-sm font-medium mb-2 block">{t('legalGuidance.qaFlow.caseDetails.selectedCharges')}</Label>
-              <div className="flex flex-wrap gap-2">
+              <div className="space-y-2">
                 {formData.charges.map((chargeId: string) => {
                   const charge = getChargeById(chargeId);
-                  return charge ? (
-                    <Badge
+                  if (!charge) return null;
+                  
+                  const statuteCitation = generateStatuteCitation(charge.jurisdiction, charge.code);
+                  const statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                  const officialSite = getOfficialStatuteSite(charge.jurisdiction);
+                  
+                  return (
+                    <div 
                       key={chargeId}
-                      variant="default"
-                      className="flex items-center gap-1 px-3 py-1"
+                      className="p-3 bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg"
                     >
-                      {charge.name} ({charge.code})
-                      <button
-                        onClick={() => removeCharge(chargeId)}
-                        className="ml-1 hover:text-red-200"
-                        type="button"
-                      >
-                        <X className="h-3 w-3" />
-                      </button>
-                    </Badge>
-                  ) : null;
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="font-semibold text-sm">{charge.name}</span>
+                            <Badge variant={charge.category === 'felony' ? 'destructive' : 'secondary'} className="text-xs">
+                              {charge.category}
+                            </Badge>
+                          </div>
+                          {statuteCitation ? (
+                            <div className="flex items-center gap-2 mt-2">
+                              <Scale className="h-3 w-3 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                              <span className="text-xs font-medium text-blue-700 dark:text-blue-300">
+                                {statuteCitation}
+                              </span>
+                              {(statuteUrl || officialSite) && (
+                                <a
+                                  href={statuteUrl || officialSite || '#'}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 flex items-center gap-1"
+                                  onClick={(e) => e.stopPropagation()}
+                                  data-testid={`link-statute-${charge.id}`}
+                                >
+                                  <ExternalLink className="h-3 w-3" />
+                                  <span className="text-xs">View Law</span>
+                                </a>
+                              )}
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-2 mt-2">
+                              <span className="text-xs text-gray-500 dark:text-gray-400 italic">
+                                Statute reference pending - contact legal aid for details
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        <button
+                          onClick={() => removeCharge(chargeId)}
+                          className="text-gray-500 hover:text-red-600 dark:hover:text-red-400 p-1"
+                          type="button"
+                          data-testid={`button-remove-charge-${chargeId}`}
+                        >
+                          <X className="h-4 w-4" />
+                        </button>
+                      </div>
+                    </div>
+                  );
                 })}
               </div>
             </div>
@@ -430,42 +473,66 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                     {t('legalGuidance.qaFlow.caseDetails.stateCharges')}
                   </h4>
                   <div className="space-y-2">
-                    {displayedStateCharges.map(charge => (
-                      <div
-                        key={charge.id}
-                        className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
-                        onClick={() => handleChargeToggle(charge.id)}
-                      >
-                        <Checkbox
-                          checked={formData.charges.includes(charge.id)}
-                          onChange={() => {}} // Handled by parent click
-                          data-testid={`checkbox-charge-${charge.id}`}
-                        />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-medium text-sm">{charge.name}</span>
-                            <Badge 
-                              variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
-                              className="text-xs"
-                            >
-                              {charge.code}
-                            </Badge>
-                            <Badge 
-                              variant="outline"
-                              className="text-xs"
-                            >
-                              {charge.category}
-                            </Badge>
+                    {displayedStateCharges.map(charge => {
+                      const statuteCitation = generateStatuteCitation(charge.jurisdiction, charge.code);
+                      const statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                      
+                      return (
+                        <div
+                          key={charge.id}
+                          className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
+                          onClick={() => handleChargeToggle(charge.id)}
+                        >
+                          <Checkbox
+                            checked={formData.charges.includes(charge.id)}
+                            onChange={() => {}} // Handled by parent click
+                            data-testid={`checkbox-charge-${charge.id}`}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="font-medium text-sm">{charge.name}</span>
+                              <Badge 
+                                variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
+                                className="text-xs"
+                              >
+                                {charge.code}
+                              </Badge>
+                              <Badge 
+                                variant="outline"
+                                className="text-xs"
+                              >
+                                {charge.category}
+                              </Badge>
+                            </div>
+                            {statuteCitation && (
+                              <div className="flex items-center gap-1 mb-1">
+                                <Scale className="h-3 w-3 text-blue-600 dark:text-blue-400" />
+                                <span className="text-xs text-blue-700 dark:text-blue-300 font-medium">
+                                  {statuteCitation}
+                                </span>
+                                {statuteUrl && (
+                                  <a
+                                    href={statuteUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <ExternalLink className="h-3 w-3" />
+                                  </a>
+                                )}
+                              </div>
+                            )}
+                            <p className="text-xs text-muted-foreground">
+                              {charge.description}
+                            </p>
+                            <p className="text-xs text-red-600 mt-1">
+                              {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground">
-                            {charge.description}
-                          </p>
-                          <p className="text-xs text-red-600 mt-1">
-                            {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
-                          </p>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -477,42 +544,66 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                     {t('legalGuidance.qaFlow.caseDetails.federalCharges')}
                   </h4>
                   <div className="space-y-2">
-                    {displayedFederalCharges.map(charge => (
-                      <div
-                        key={charge.id}
-                        className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
-                        onClick={() => handleChargeToggle(charge.id)}
-                      >
-                        <Checkbox
-                          checked={formData.charges.includes(charge.id)}
-                          onChange={() => {}} // Handled by parent click
-                          data-testid={`checkbox-charge-${charge.id}`}
-                        />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-medium text-sm">{charge.name}</span>
-                            <Badge 
-                              variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
-                              className="text-xs"
-                            >
-                              {charge.code}
-                            </Badge>
-                            <Badge 
-                              variant="outline"
-                              className="text-xs"
-                            >
-                              {charge.category}
-                            </Badge>
+                    {displayedFederalCharges.map(charge => {
+                      const statuteCitation = generateStatuteCitation(charge.jurisdiction, charge.code);
+                      const statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                      
+                      return (
+                        <div
+                          key={charge.id}
+                          className="flex items-start space-x-3 p-2 hover:bg-muted rounded cursor-pointer"
+                          onClick={() => handleChargeToggle(charge.id)}
+                        >
+                          <Checkbox
+                            checked={formData.charges.includes(charge.id)}
+                            onChange={() => {}} // Handled by parent click
+                            data-testid={`checkbox-charge-${charge.id}`}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="font-medium text-sm">{charge.name}</span>
+                              <Badge 
+                                variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
+                                className="text-xs"
+                              >
+                                {charge.code}
+                              </Badge>
+                              <Badge 
+                                variant="outline"
+                                className="text-xs"
+                              >
+                                {charge.category}
+                              </Badge>
+                            </div>
+                            {statuteCitation && (
+                              <div className="flex items-center gap-1 mb-1">
+                                <Scale className="h-3 w-3 text-blue-600 dark:text-blue-400" />
+                                <span className="text-xs text-blue-700 dark:text-blue-300 font-medium">
+                                  {statuteCitation}
+                                </span>
+                                {statuteUrl && (
+                                  <a
+                                    href={statuteUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    <ExternalLink className="h-3 w-3" />
+                                  </a>
+                                )}
+                              </div>
+                            )}
+                            <p className="text-xs text-muted-foreground">
+                              {charge.description}
+                            </p>
+                            <p className="text-xs text-red-600 mt-1">
+                              {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground">
-                            {charge.description}
-                          </p>
-                          <p className="text-xs text-red-600 mt-1">
-                            {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
-                          </p>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               )}
