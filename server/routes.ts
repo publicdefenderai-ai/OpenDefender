@@ -58,8 +58,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ success: false, error: "ZIP code required" });
       }
 
-      // Geocode the ZIP code using Nominatim
-      const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&country=us&format=json&limit=1`;
+      // Geocode the ZIP code using Nominatim (with address details to get state)
+      const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&country=us&format=json&limit=1&addressdetails=1`;
       const geocodeResponse = await fetch(geocodeUrl, {
         headers: {
           'User-Agent': 'PublicDefenderAI/1.0'
@@ -76,12 +76,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(404).json({ success: false, error: "ZIP code not found" });
       }
 
-      const { lat: userLat, lon: userLon } = geocodeData[0];
+      const { lat: userLat, lon: userLon, address } = geocodeData[0];
       const radiusMiles = parseFloat(radius as string);
+      
+      // Extract state abbreviation from geocode result
+      // Nominatim provides ISO3166-2-lvl4 like "US-CA" or full state name
+      let userState: string | undefined;
+      if (address?.['ISO3166-2-lvl4']) {
+        // Extract state code from "US-CA" format
+        userState = address['ISO3166-2-lvl4'].split('-')[1];
+      } else if (address?.state) {
+        // Fallback: map full state name to abbreviation
+        const stateMap: Record<string, string> = {
+          'Alabama': 'AL', 'Alaska': 'AK', 'Arizona': 'AZ', 'Arkansas': 'AR', 'California': 'CA',
+          'Colorado': 'CO', 'Connecticut': 'CT', 'Delaware': 'DE', 'Florida': 'FL', 'Georgia': 'GA',
+          'Hawaii': 'HI', 'Idaho': 'ID', 'Illinois': 'IL', 'Indiana': 'IN', 'Iowa': 'IA',
+          'Kansas': 'KS', 'Kentucky': 'KY', 'Louisiana': 'LA', 'Maine': 'ME', 'Maryland': 'MD',
+          'Massachusetts': 'MA', 'Michigan': 'MI', 'Minnesota': 'MN', 'Mississippi': 'MS', 'Missouri': 'MO',
+          'Montana': 'MT', 'Nebraska': 'NE', 'Nevada': 'NV', 'New Hampshire': 'NH', 'New Jersey': 'NJ',
+          'New Mexico': 'NM', 'New York': 'NY', 'North Carolina': 'NC', 'North Dakota': 'ND', 'Ohio': 'OH',
+          'Oklahoma': 'OK', 'Oregon': 'OR', 'Pennsylvania': 'PA', 'Rhode Island': 'RI', 'South Carolina': 'SC',
+          'South Dakota': 'SD', 'Tennessee': 'TN', 'Texas': 'TX', 'Utah': 'UT', 'Vermont': 'VT',
+          'Virginia': 'VA', 'Washington': 'WA', 'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY',
+          'District of Columbia': 'DC'
+        };
+        userState = stateMap[address.state];
+      }
 
-      // Get all organizations (optionally filtered by type)
+      // Get all organizations (optionally filtered by type AND state)
       const allOrgs = await storage.getLegalAidOrganizations(
-        undefined,
+        userState, // Filter by the ZIP code's state
         organizationType as string
       );
 
@@ -125,6 +149,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         organizations: organizationsWithDistance,
         count: organizationsWithDistance.length,
         zipCode,
+        state: userState,
         radius: radiusMiles,
         fallbackUsed: organizationsWithDistance.length === 1 && allOrgsWithDistance.length > 0 && organizationsWithDistance[0].distance > radiusMiles
       });
