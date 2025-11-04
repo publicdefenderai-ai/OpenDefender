@@ -49,6 +49,83 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Legal Aid Organizations Proximity Search API - Find organizations near a ZIP code
+  app.get("/api/legal-aid-organizations/proximity", async (req, res) => {
+    try {
+      const { zipCode, radius = "50", organizationType } = req.query;
+      
+      if (!zipCode) {
+        return res.status(400).json({ success: false, error: "ZIP code required" });
+      }
+
+      // Geocode the ZIP code using Nominatim
+      const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&country=us&format=json&limit=1`;
+      const geocodeResponse = await fetch(geocodeUrl, {
+        headers: {
+          'User-Agent': 'PublicDefenderAI/1.0'
+        }
+      });
+      
+      if (!geocodeResponse.ok) {
+        return res.status(500).json({ success: false, error: "Geocoding failed" });
+      }
+
+      const geocodeData = await geocodeResponse.json();
+      
+      if (!geocodeData || geocodeData.length === 0) {
+        return res.status(404).json({ success: false, error: "ZIP code not found" });
+      }
+
+      const { lat: userLat, lon: userLon } = geocodeData[0];
+      const radiusMiles = parseFloat(radius as string);
+
+      // Get all organizations (optionally filtered by type)
+      const allOrgs = await storage.getLegalAidOrganizations(
+        undefined,
+        organizationType as string
+      );
+
+      // Haversine formula to calculate distance
+      const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
+        const R = 3959; // Earth's radius in miles
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a = 
+          Math.sin(dLat/2) * Math.sin(dLat/2) +
+          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+          Math.sin(dLon/2) * Math.sin(dLon/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c;
+      };
+
+      // Calculate distances and filter
+      const organizationsWithDistance = allOrgs
+        .filter(org => org.latitude && org.longitude) // Only include orgs with coordinates
+        .map(org => {
+          const distance = calculateDistance(
+            parseFloat(userLat),
+            parseFloat(userLon),
+            parseFloat(org.latitude!),
+            parseFloat(org.longitude!)
+          );
+          return { ...org, distance };
+        })
+        .filter(org => org.distance <= radiusMiles)
+        .sort((a, b) => a.distance - b.distance);
+
+      res.json({
+        success: true,
+        organizations: organizationsWithDistance,
+        count: organizationsWithDistance.length,
+        zipCode,
+        radius: radiusMiles
+      });
+    } catch (error) {
+      console.error("Failed to fetch organizations by proximity:", error);
+      res.status(500).json({ success: false, error: "Proximity search failed" });
+    }
+  });
+
   // Court Data API
   app.get("/api/court-data/:jurisdiction", async (req, res) => {
     try {
