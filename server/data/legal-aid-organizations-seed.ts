@@ -923,6 +923,183 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
     isActive: true,
   },
 
+  // California - Santa Clara County
+  {
+    name: "Santa Clara County Public Defender",
+    organizationType: "public_defender",
+    address: "120 W. Mission Street",
+    city: "San Jose",
+    state: "CA",
+    zipCode: "95110",
+    county: "Santa Clara",
+    phone: "(408) 299-7700",
+    email: null,
+    website: "https://pdo.santaclaracounty.gov",
+    latitude: "37.3349",
+    longitude: "-121.8908",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Clean Slate Program"
+    ],
+    eligibility: "Indigent defendants in Santa Clara County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
+  // California - Orange County
+  {
+    name: "Orange County Public Defender",
+    organizationType: "public_defender",
+    address: "801 Civic Center Drive West, Suite 400",
+    city: "Santa Ana",
+    state: "CA",
+    zipCode: "92701",
+    county: "Orange",
+    phone: "(657) 251-6090",
+    email: "PDInfo@ocpubdef.com",
+    website: "https://www.pubdef.ocgov.com",
+    latitude: "33.7455",
+    longitude: "-117.8677",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Court",
+      "Veterans Court"
+    ],
+    eligibility: "Indigent defendants in Orange County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
+  // California - Sacramento County
+  {
+    name: "Sacramento County Public Defender",
+    organizationType: "public_defender",
+    address: "700 H Street, Suite 0270",
+    city: "Sacramento",
+    state: "CA",
+    zipCode: "95814",
+    county: "Sacramento",
+    phone: "(916) 874-6411",
+    email: null,
+    website: "https://publicdefender.saccounty.gov",
+    latitude: "38.5816",
+    longitude: "-121.4944",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Mental Health Conservatorship"
+    ],
+    eligibility: "Indigent defendants in Sacramento County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
+  // California - Riverside County
+  {
+    name: "Riverside County Public Defender",
+    organizationType: "public_defender",
+    address: "4075 Main Street, Suite 100",
+    city: "Riverside",
+    state: "CA",
+    zipCode: "92501",
+    county: "Riverside",
+    phone: "(951) 955-6000",
+    email: "LOPDCustomerservice@Rivco.org",
+    website: "https://rivcopublicdefender.org",
+    latitude: "33.9533",
+    longitude: "-117.3962",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Fresh Start Program"
+    ],
+    eligibility: "Indigent defendants in Riverside County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
+  // California - San Bernardino County
+  {
+    name: "San Bernardino County Public Defender",
+    organizationType: "public_defender",
+    address: "398 W. Fourth Street, 3rd Floor",
+    city: "San Bernardino",
+    state: "CA",
+    zipCode: "92415",
+    county: "San Bernardino",
+    phone: "(909) 386-5045",
+    email: "media@pd.sbcounty.gov",
+    website: "https://pd.sbcounty.gov",
+    latitude: "34.1083",
+    longitude: "-117.2898",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Record Expungement"
+    ],
+    eligibility: "Indigent defendants in San Bernardino County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
+  // California - Contra Costa County
+  {
+    name: "Contra Costa County Public Defender",
+    organizationType: "public_defender",
+    address: "800 Ferry Street",
+    city: "Martinez",
+    state: "CA",
+    zipCode: "94553",
+    county: "Contra Costa",
+    phone: "(925) 335-8000",
+    email: null,
+    website: "https://www.cocopublicdefenders.org",
+    latitude: "38.0194",
+    longitude: "-122.1342",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense",
+      "Clean Slate Program",
+      "Immigration Support"
+    ],
+    eligibility: "Indigent defendants in Contra Costa County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
+  // California - Fresno County
+  {
+    name: "Fresno County Public Defender",
+    organizationType: "public_defender",
+    address: "2135 Fresno Street, Suite 100",
+    city: "Fresno",
+    state: "CA",
+    zipCode: "93721",
+    county: "Fresno",
+    phone: "(559) 600-3546",
+    email: null,
+    website: "https://www.fresnocountyca.gov/Departments/Public-Defender",
+    latitude: "36.7378",
+    longitude: "-119.7871",
+    services: [
+      "Felony Defense",
+      "Misdemeanor Defense",
+      "Juvenile Defense"
+    ],
+    eligibility: "Indigent defendants in Fresno County criminal and juvenile cases.",
+    dataSource: "county_website",
+    isActive: true,
+  },
+
   // Illinois - Cook County (Chicago)
   {
     name: "Cook County Public Defender",
