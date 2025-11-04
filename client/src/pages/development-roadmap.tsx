@@ -140,7 +140,7 @@ export default function DevelopmentRoadmap() {
       status: "in-progress",
       priority: "high",
       category: "data",
-      estimatedCompletion: "Q1 2025",
+      estimatedCompletion: "Q4 2025",
       progress: 45,
       challengesKeys: ["developmentRoadmap.items.pacer.challenges.cost", "developmentRoadmap.items.pacer.challenges.rateLimit", "developmentRoadmap.items.pacer.challenges.bulk"],
       impactKey: "developmentRoadmap.items.pacer.impact"
@@ -152,7 +152,7 @@ export default function DevelopmentRoadmap() {
       status: "in-progress",
       priority: "high",
       category: "data",
-      estimatedCompletion: "Q2 2025",
+      estimatedCompletion: "Q4 2025",
       progress: 70,
       impactKey: "developmentRoadmap.items.stateStatutes.impact"
     },
@@ -163,7 +163,7 @@ export default function DevelopmentRoadmap() {
       status: "in-progress",
       priority: "critical",
       category: "ai",
-      estimatedCompletion: "Q2 2025",
+      estimatedCompletion: "Q1 2026",
       progress: 65,
       challengesKeys: ["developmentRoadmap.items.aiGuidance.challenges.accuracy", "developmentRoadmap.items.aiGuidance.challenges.bias", "developmentRoadmap.items.aiGuidance.challenges.jurisdiction"],
       impactKey: "developmentRoadmap.items.aiGuidance.impact"
@@ -175,7 +175,7 @@ export default function DevelopmentRoadmap() {
       status: "researching",
       priority: "medium",
       category: "data",
-      estimatedCompletion: "Q3 2025",
+      estimatedCompletion: "Q4 2025",
       challengesKeys: ["developmentRoadmap.items.judgeAnalytics.challenges.privacy", "developmentRoadmap.items.judgeAnalytics.challenges.significance", "developmentRoadmap.items.judgeAnalytics.challenges.historicalBias"],
       impactKey: "developmentRoadmap.items.judgeAnalytics.impact"
     },
@@ -186,7 +186,7 @@ export default function DevelopmentRoadmap() {
       status: "planned",
       priority: "high",
       category: "features",
-      estimatedCompletion: "Q3 2025",
+      estimatedCompletion: "Q1 2026",
       dependencies: ["ai-guidance-engine"],
       impactKey: "developmentRoadmap.items.mobileApp.impact"
     },
@@ -207,7 +207,6 @@ export default function DevelopmentRoadmap() {
       status: "completed",
       priority: "high",
       category: "data",
-      estimatedCompletion: "Q1 2025",
       progress: 100,
       impactKey: "developmentRoadmap.items.legalAidDirectory.impact"
     },
@@ -229,7 +228,7 @@ export default function DevelopmentRoadmap() {
       status: "in-progress",
       priority: "critical",
       category: "infrastructure",
-      estimatedCompletion: "Q1 2025",
+      estimatedCompletion: "Q4 2025",
       progress: 80,
       impactKey: "developmentRoadmap.items.privacyEncryption.impact"
     }
