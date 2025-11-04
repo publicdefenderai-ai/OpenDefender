@@ -98,8 +98,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return R * c;
       };
 
-      // Calculate distances and filter
-      const organizationsWithDistance = allOrgs
+      // Calculate distances for all organizations
+      const allOrgsWithDistance = allOrgs
         .filter(org => org.latitude && org.longitude) // Only include orgs with coordinates
         .map(org => {
           const distance = calculateDistance(
@@ -110,15 +110,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
           );
           return { ...org, distance };
         })
-        .filter(org => org.distance <= radiusMiles)
         .sort((a, b) => a.distance - b.distance);
+
+      // First try to find organizations within the radius
+      let organizationsWithDistance = allOrgsWithDistance.filter(org => org.distance <= radiusMiles);
+
+      // Fallback: If no organizations within radius, return the closest one
+      if (organizationsWithDistance.length === 0 && allOrgsWithDistance.length > 0) {
+        organizationsWithDistance = [allOrgsWithDistance[0]]; // Return just the closest
+      }
 
       res.json({
         success: true,
         organizations: organizationsWithDistance,
         count: organizationsWithDistance.length,
         zipCode,
-        radius: radiusMiles
+        radius: radiusMiles,
+        fallbackUsed: organizationsWithDistance.length === 1 && allOrgsWithDistance.length > 0 && organizationsWithDistance[0].distance > radiusMiles
       });
     } catch (error) {
       console.error("Failed to fetch organizations by proximity:", error);
@@ -546,7 +554,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { jurisdictionCode } = req.params;
       const result = await openLawsClient.bulkImportJurisdiction(jurisdictionCode.toUpperCase());
-      res.json({ success: result.success, ...result });
+      res.json(result);
     } catch (error) {
       console.error("OpenLaws bulk import failed:", error);
       res.status(500).json({ success: false, error: "Import failed" });
