@@ -1787,7 +1787,7 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
     isActive: true,
   },
 
-  // California - Northern District
+  // California - Northern District (San Francisco Main Office)
   {
     name: "California Northern Federal Public Defender",
     organizationType: "public_defender",
@@ -1801,6 +1801,52 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
     website: "https://www.cand.uscourts.gov",
     latitude: "37.7749",
     longitude: "-122.4194",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of California.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // California - Northern District (Oakland Office)
+  {
+    name: "California Northern Federal Public Defender - Oakland Office",
+    organizationType: "public_defender",
+    address: "1301 Clay Street, Suite 1350N",
+    city: "Oakland",
+    state: "CA",
+    zipCode: "94612",
+    county: "Alameda",
+    phone: "(510) 637-3500",
+    email: null,
+    website: "https://www.cand.uscourts.gov",
+    latitude: "37.8044",
+    longitude: "-122.2712",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of California.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // California - Northern District (Oakland Alt. Office)
+  {
+    name: "California Northern Federal Public Defender - Oakland City Center",
+    organizationType: "public_defender",
+    address: "1300 Clay Street",
+    city: "Oakland",
+    state: "CA",
+    zipCode: "94612",
+    county: "Alameda",
+    phone: "(510) 637-3500",
+    email: null,
+    website: "https://www.cand.uscourts.gov",
+    latitude: "37.8044",
+    longitude: "-122.2712",
     services: [
       "Federal Criminal Defense",
       "Federal Appeals"
