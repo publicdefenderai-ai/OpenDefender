@@ -1600,4 +1600,1915 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
     dataSource: "federal_defender",
     isActive: true,
   },
+
+  // ========== ADDITIONAL FEDERAL PUBLIC DEFENDER OFFICES (All Districts) ==========
+
+  // Alaska
+  {
+    name: "Alaska Federal Public Defender",
+    organizationType: "public_defender",
+    address: "188 W Northern Lights Blvd, Suite 700",
+    city: "Anchorage",
+    state: "AK",
+    zipCode: "99503",
+    county: "Anchorage",
+    phone: "(907) 646-3400",
+    email: null,
+    website: "https://www.akd.uscourts.gov",
+    latitude: "61.2181",
+    longitude: "-149.9003",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Alaska.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Alabama - Middle District
+  {
+    name: "Alabama Middle Community Defender",
+    organizationType: "public_defender",
+    address: "817 South Court Street",
+    city: "Montgomery",
+    state: "AL",
+    zipCode: "36104",
+    county: "Montgomery",
+    phone: "(334) 834-2099",
+    email: null,
+    website: "https://www.almd.uscourts.gov",
+    latitude: "32.3668",
+    longitude: "-86.2999",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of Alabama.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Alabama - Northern District
+  {
+    name: "Alabama Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "505 20th Street North, Room 1425",
+    city: "Birmingham",
+    state: "AL",
+    zipCode: "35203",
+    county: "Jefferson",
+    phone: "(205) 208-7170",
+    email: null,
+    website: "https://www.alnd.uscourts.gov",
+    latitude: "33.5186",
+    longitude: "-86.8104",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Alabama.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Alabama - Southern District
+  {
+    name: "Alabama Southern Community Defender",
+    organizationType: "public_defender",
+    address: "11 North Water Street, Suite 11290",
+    city: "Mobile",
+    state: "AL",
+    zipCode: "36602",
+    county: "Mobile",
+    phone: "(251) 433-0910",
+    email: null,
+    website: "https://www.alsd.uscourts.gov",
+    latitude: "30.6943",
+    longitude: "-88.0431",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Alabama.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Arkansas - Eastern District
+  {
+    name: "Arkansas Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "1401 West Capitol Avenue, Suite 490",
+    city: "Little Rock",
+    state: "AR",
+    zipCode: "72201",
+    county: "Pulaski",
+    phone: "(501) 324-6113",
+    email: null,
+    website: "https://www.are.uscourts.gov",
+    latitude: "34.7465",
+    longitude: "-92.2896",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Arkansas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Arkansas - Western District
+  {
+    name: "Arkansas Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "112 W Center St, Suite 300",
+    city: "Fayetteville",
+    state: "AR",
+    zipCode: "72701",
+    county: "Washington",
+    phone: "(479) 442-2306",
+    email: null,
+    website: "https://www.arwd.uscourts.gov",
+    latitude: "36.0626",
+    longitude: "-94.1574",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Arkansas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Arizona
+  {
+    name: "Arizona Federal Public Defender",
+    organizationType: "public_defender",
+    address: "250 North 7th Avenue, Room 600",
+    city: "Phoenix",
+    state: "AZ",
+    zipCode: "85007",
+    county: "Maricopa",
+    phone: "(602) 382-2700",
+    email: null,
+    website: "https://www.azd.uscourts.gov",
+    latitude: "33.4484",
+    longitude: "-112.0740",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Arizona.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // California - Eastern District
+  {
+    name: "California Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "801 I Street, 3rd Floor",
+    city: "Sacramento",
+    state: "CA",
+    zipCode: "95814",
+    county: "Sacramento",
+    phone: "(916) 498-5700",
+    email: null,
+    website: "https://www.caed.uscourts.gov",
+    latitude: "38.5816",
+    longitude: "-121.4944",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of California.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // California - Northern District
+  {
+    name: "California Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "450 Golden Gate Avenue, Suite 19-6884",
+    city: "San Francisco",
+    state: "CA",
+    zipCode: "94102",
+    county: "San Francisco",
+    phone: "(415) 436-7700",
+    email: null,
+    website: "https://www.cand.uscourts.gov",
+    latitude: "37.7749",
+    longitude: "-122.4194",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of California.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // California - Southern District
+  {
+    name: "Federal Defenders of San Diego",
+    organizationType: "public_defender",
+    address: "225 Broadway, Suite 900",
+    city: "San Diego",
+    state: "CA",
+    zipCode: "92101",
+    county: "San Diego",
+    phone: "(619) 234-8467",
+    email: null,
+    website: "https://www.casd.uscourts.gov",
+    latitude: "32.7157",
+    longitude: "-117.1611",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of California.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Colorado
+  {
+    name: "Colorado Federal Public Defender",
+    organizationType: "public_defender",
+    address: "633 17th Street, Suite 1000",
+    city: "Denver",
+    state: "CO",
+    zipCode: "80202",
+    county: "Denver",
+    phone: "(303) 294-7002",
+    email: null,
+    website: "https://www.cod.uscourts.gov",
+    latitude: "39.7392",
+    longitude: "-104.9903",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Colorado.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Connecticut
+  {
+    name: "Connecticut Federal Public Defender",
+    organizationType: "public_defender",
+    address: "10 Columbus Boulevard",
+    city: "Hartford",
+    state: "CT",
+    zipCode: "06106",
+    county: "Hartford",
+    phone: "(860) 493-6260",
+    email: null,
+    website: "https://www.ctd.uscourts.gov",
+    latitude: "41.7658",
+    longitude: "-72.6734",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Connecticut.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // District of Columbia
+  {
+    name: "District of Columbia Federal Public Defender",
+    organizationType: "public_defender",
+    address: "625 Indiana Avenue, N.W., Suite 550",
+    city: "Washington",
+    state: "DC",
+    zipCode: "20004",
+    county: "District of Columbia",
+    phone: "(202) 208-7500",
+    email: null,
+    website: "https://www.dcd.uscourts.gov",
+    latitude: "38.8951",
+    longitude: "-77.0369",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Columbia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Delaware
+  {
+    name: "Delaware Federal Public Defender",
+    organizationType: "public_defender",
+    address: "800 North King Street, Suite 200",
+    city: "Wilmington",
+    state: "DE",
+    zipCode: "19801",
+    county: "New Castle",
+    phone: "(302) 573-6010",
+    email: null,
+    website: "https://www.ded.uscourts.gov",
+    latitude: "39.7391",
+    longitude: "-75.5398",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Delaware.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Florida - Middle District
+  {
+    name: "Florida Middle Federal Public Defender",
+    organizationType: "public_defender",
+    address: "400 North Tampa Street, Room 2700",
+    city: "Tampa",
+    state: "FL",
+    zipCode: "33602",
+    county: "Hillsborough",
+    phone: "(813) 228-2715",
+    email: null,
+    website: "https://www.flmd.uscourts.gov",
+    latitude: "27.9506",
+    longitude: "-82.4572",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of Florida.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Florida - Northern District
+  {
+    name: "Florida Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "227 North Bronough Street, Room 4200",
+    city: "Tallahassee",
+    state: "FL",
+    zipCode: "32301",
+    county: "Leon",
+    phone: "(850) 942-8818",
+    email: null,
+    website: "https://www.flnd.uscourts.gov",
+    latitude: "30.4383",
+    longitude: "-84.2807",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Florida.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Georgia - Middle District
+  {
+    name: "Federal Defenders of the Middle District of Georgia",
+    organizationType: "public_defender",
+    address: "440 Martin Luther King Jr. Blvd, Suite 400",
+    city: "Macon",
+    state: "GA",
+    zipCode: "31201",
+    county: "Bibb",
+    phone: "(478) 743-4747",
+    email: null,
+    website: "https://www.gamd.uscourts.gov",
+    latitude: "32.8407",
+    longitude: "-83.6324",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of Georgia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Guam
+  {
+    name: "Guam Federal Public Defender",
+    organizationType: "public_defender",
+    address: "400 Route 8, Room 501",
+    city: "Mong Mong",
+    state: "GU",
+    zipCode: "96910",
+    county: "Guam",
+    phone: "(671) 472-7111",
+    email: null,
+    website: "https://www.gud.uscourts.gov",
+    latitude: "13.4443",
+    longitude: "144.7937",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Guam.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Hawaii
+  {
+    name: "Hawaii Federal Public Defender",
+    organizationType: "public_defender",
+    address: "300 Ala Moana Boulevard, Suite 7-104",
+    city: "Honolulu",
+    state: "HI",
+    zipCode: "96850",
+    county: "Honolulu",
+    phone: "(808) 541-2521",
+    email: null,
+    website: "https://www.hid.uscourts.gov",
+    latitude: "21.3099",
+    longitude: "-157.8581",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Hawaii.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Iowa - Southern District
+  {
+    name: "Iowa Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "400 Locust Street, Suite 340",
+    city: "Des Moines",
+    state: "IA",
+    zipCode: "50309",
+    county: "Polk",
+    phone: "(515) 309-9610",
+    email: null,
+    website: "https://www.iasd.uscourts.gov",
+    latitude: "41.5868",
+    longitude: "-93.6250",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Iowa.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Idaho
+  {
+    name: "Federal Defender Services of Idaho",
+    organizationType: "public_defender",
+    address: "702 West Idaho Street, Room 1000",
+    city: "Boise",
+    state: "ID",
+    zipCode: "83702",
+    county: "Ada",
+    phone: "(208) 331-5500",
+    email: null,
+    website: "https://www.id.uscourts.gov",
+    latitude: "43.6150",
+    longitude: "-116.2023",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Idaho.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Illinois - Central District
+  {
+    name: "Illinois Central Federal Public Defender",
+    organizationType: "public_defender",
+    address: "401 Main Street, Suite 1500",
+    city: "Peoria",
+    state: "IL",
+    zipCode: "61602",
+    county: "Peoria",
+    phone: "(309) 671-7891",
+    email: null,
+    website: "https://www.ilcd.uscourts.gov",
+    latitude: "40.6936",
+    longitude: "-89.5890",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Central District of Illinois.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Illinois - Southern District
+  {
+    name: "Illinois Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "650 Missouri Avenue, Suite G10A",
+    city: "East St. Louis",
+    state: "IL",
+    zipCode: "62201",
+    county: "St. Clair",
+    phone: "(618) 482-9050",
+    email: null,
+    website: "https://www.ilsd.uscourts.gov",
+    latitude: "38.6270",
+    longitude: "-90.1994",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Illinois.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Indiana - Northern District
+  {
+    name: "Federal Community Defenders - Northern District of Indiana",
+    organizationType: "public_defender",
+    address: "2929 Carlson Drive, Suite 101",
+    city: "Hammond",
+    state: "IN",
+    zipCode: "46323",
+    county: "Lake",
+    phone: "(219) 937-8020",
+    email: null,
+    website: "https://www.innd.uscourts.gov",
+    latitude: "41.5834",
+    longitude: "-87.5001",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Indiana.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Indiana - Southern District
+  {
+    name: "Indiana Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "46 East Ohio Street, Suite 300",
+    city: "Indianapolis",
+    state: "IN",
+    zipCode: "46204",
+    county: "Marion",
+    phone: "(317) 229-2420",
+    email: null,
+    website: "https://www.insd.uscourts.gov",
+    latitude: "39.7684",
+    longitude: "-86.1581",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Indiana.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Kansas
+  {
+    name: "Kansas Federal Public Defender",
+    organizationType: "public_defender",
+    address: "500 State Avenue, Suite 201",
+    city: "Kansas City",
+    state: "KS",
+    zipCode: "66101",
+    county: "Wyandotte",
+    phone: "(913) 551-6704",
+    email: null,
+    website: "https://www.ksd.uscourts.gov",
+    latitude: "39.1134",
+    longitude: "-94.6266",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Kansas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Kentucky - Eastern District
+  {
+    name: "Kentucky Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "100 East Vine Street, Suite 800",
+    city: "Lexington",
+    state: "KY",
+    zipCode: "40507",
+    county: "Fayette",
+    phone: "(859) 233-2237",
+    email: null,
+    website: "https://www.kyed.uscourts.gov",
+    latitude: "38.0406",
+    longitude: "-84.5037",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Kentucky.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Kentucky - Western District
+  {
+    name: "Western Kentucky Federal Community Defender",
+    organizationType: "public_defender",
+    address: "500 West Jefferson Street, Suite 2100",
+    city: "Louisville",
+    state: "KY",
+    zipCode: "40202",
+    county: "Jefferson",
+    phone: "(502) 753-4821",
+    email: null,
+    website: "https://www.kywd.uscourts.gov",
+    latitude: "38.2527",
+    longitude: "-85.7585",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Kentucky.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Louisiana - Eastern District
+  {
+    name: "Louisiana Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "500 Poydras Street, Suite B-210",
+    city: "New Orleans",
+    state: "LA",
+    zipCode: "70130",
+    county: "Orleans",
+    phone: "(504) 589-7930",
+    email: null,
+    website: "https://www.laed.uscourts.gov",
+    latitude: "29.9511",
+    longitude: "-90.0715",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Louisiana.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Louisiana - Middle District
+  {
+    name: "Louisiana Middle Federal Public Defender",
+    organizationType: "public_defender",
+    address: "707 Florida Street, Suite 210",
+    city: "Baton Rouge",
+    state: "LA",
+    zipCode: "70801",
+    county: "East Baton Rouge",
+    phone: "(225) 389-3641",
+    email: null,
+    website: "https://www.lamd.uscourts.gov",
+    latitude: "30.4515",
+    longitude: "-91.1871",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of Louisiana.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Louisiana - Western District
+  {
+    name: "Louisiana Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "300 Fannin Street, Suite 3105",
+    city: "Shreveport",
+    state: "LA",
+    zipCode: "71101",
+    county: "Caddo",
+    phone: "(318) 676-3690",
+    email: null,
+    website: "https://www.lawd.uscourts.gov",
+    latitude: "32.5252",
+    longitude: "-93.7502",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Louisiana.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Maine
+  {
+    name: "Maine Federal Public Defender",
+    organizationType: "public_defender",
+    address: "98 Maine Avenue, Suite 301",
+    city: "Bangor",
+    state: "ME",
+    zipCode: "04401",
+    county: "Penobscot",
+    phone: "(207) 945-0068",
+    email: null,
+    website: "https://www.med.uscourts.gov",
+    latitude: "44.8016",
+    longitude: "-68.7712",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Maine.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Maryland
+  {
+    name: "Maryland Federal Public Defender",
+    organizationType: "public_defender",
+    address: "6411 Ivy Lane, Suite 710",
+    city: "Greenbelt",
+    state: "MD",
+    zipCode: "20770",
+    county: "Prince George's",
+    phone: "(301) 344-0600",
+    email: null,
+    website: "https://www.mdd.uscourts.gov",
+    latitude: "39.0458",
+    longitude: "-76.6413",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Maryland.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Michigan - Eastern District
+  {
+    name: "Michigan Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "231 West Lafayette Boulevard, Room 260",
+    city: "Detroit",
+    state: "MI",
+    zipCode: "48226",
+    county: "Wayne",
+    phone: "(313) 226-6020",
+    email: null,
+    website: "https://www.mied.uscourts.gov",
+    latitude: "42.3314",
+    longitude: "-83.0458",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Michigan.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Michigan - Western District
+  {
+    name: "Michigan Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "1 Division Avenue North, Suite 500",
+    city: "Grand Rapids",
+    state: "MI",
+    zipCode: "49503",
+    county: "Kent",
+    phone: "(616) 456-2404",
+    email: null,
+    website: "https://www.miwd.uscourts.gov",
+    latitude: "42.9634",
+    longitude: "-85.6681",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Michigan.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Minnesota
+  {
+    name: "Minnesota Federal Public Defender",
+    organizationType: "public_defender",
+    address: "300 South Fourth Street, Suite 107",
+    city: "Minneapolis",
+    state: "MN",
+    zipCode: "55415",
+    county: "Hennepin",
+    phone: "(612) 664-5810",
+    email: null,
+    website: "https://www.mnd.uscourts.gov",
+    latitude: "44.9778",
+    longitude: "-93.2650",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Minnesota.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Mississippi - Northern District
+  {
+    name: "Mississippi Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "911 Jackson Avenue, Room 756",
+    city: "Oxford",
+    state: "MS",
+    zipCode: "38655",
+    county: "Lafayette",
+    phone: "(662) 234-1971",
+    email: null,
+    website: "https://www.msnd.uscourts.gov",
+    latitude: "34.3665",
+    longitude: "-89.5192",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Mississippi.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Mississippi - Southern District
+  {
+    name: "Mississippi Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "188 East Capitol Street, Suite 500",
+    city: "Jackson",
+    state: "MS",
+    zipCode: "39201",
+    county: "Hinds",
+    phone: "(601) 965-4511",
+    email: null,
+    website: "https://www.mssd.uscourts.gov",
+    latitude: "32.2988",
+    longitude: "-90.1848",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Mississippi.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Missouri - Eastern District
+  {
+    name: "Missouri Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "1010 Market Street, Suite 960",
+    city: "St. Louis",
+    state: "MO",
+    zipCode: "63101",
+    county: "St. Louis City",
+    phone: "(314) 241-3222",
+    email: null,
+    website: "https://www.moed.uscourts.gov",
+    latitude: "38.6270",
+    longitude: "-90.1994",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Missouri.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Missouri - Western District
+  {
+    name: "Missouri Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "901 St. Louis Street, Suite 400",
+    city: "Springfield",
+    state: "MO",
+    zipCode: "65806",
+    county: "Greene",
+    phone: "(417) 865-3791",
+    email: null,
+    website: "https://www.mowd.uscourts.gov",
+    latitude: "37.2090",
+    longitude: "-93.2923",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Missouri.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Montana
+  {
+    name: "Montana Federal Public Defender",
+    organizationType: "public_defender",
+    address: "100 North Park Avenue, Suite 300",
+    city: "Helena",
+    state: "MT",
+    zipCode: "59601",
+    county: "Lewis and Clark",
+    phone: "(406) 449-8180",
+    email: null,
+    website: "https://www.mtd.uscourts.gov",
+    latitude: "46.5891",
+    longitude: "-112.0391",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Montana.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Nebraska
+  {
+    name: "Nebraska Federal Public Defender",
+    organizationType: "public_defender",
+    address: "111 South 18th Plaza, Suite 1500",
+    city: "Omaha",
+    state: "NE",
+    zipCode: "68102",
+    county: "Douglas",
+    phone: "(402) 280-4300",
+    email: null,
+    website: "https://www.ned.uscourts.gov",
+    latitude: "41.2565",
+    longitude: "-95.9345",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Nebraska.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New Hampshire
+  {
+    name: "New Hampshire Federal Public Defender",
+    organizationType: "public_defender",
+    address: "22 Bridge Street, 4th Floor",
+    city: "Concord",
+    state: "NH",
+    zipCode: "03301",
+    county: "Merrimack",
+    phone: "(603) 225-1552",
+    email: null,
+    website: "https://www.nhd.uscourts.gov",
+    latitude: "43.2081",
+    longitude: "-71.5376",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of New Hampshire.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New Jersey
+  {
+    name: "New Jersey Federal Public Defender",
+    organizationType: "public_defender",
+    address: "22 South Clinton Avenue, 8th Floor",
+    city: "Trenton",
+    state: "NJ",
+    zipCode: "08608",
+    county: "Mercer",
+    phone: "(609) 989-0414",
+    email: null,
+    website: "https://www.njd.uscourts.gov",
+    latitude: "40.2206",
+    longitude: "-74.7597",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of New Jersey.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New Mexico
+  {
+    name: "New Mexico Federal Public Defender",
+    organizationType: "public_defender",
+    address: "111 Lomas Boulevard NW, Suite 501",
+    city: "Albuquerque",
+    state: "NM",
+    zipCode: "87102",
+    county: "Bernalillo",
+    phone: "(505) 346-2489",
+    email: null,
+    website: "https://www.nmd.uscourts.gov",
+    latitude: "35.0844",
+    longitude: "-106.6504",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of New Mexico.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New York - Eastern District
+  {
+    name: "Federal Defenders of New York - Eastern District",
+    organizationType: "public_defender",
+    address: "One Pierrepont Plaza, 16th Floor",
+    city: "Brooklyn",
+    state: "NY",
+    zipCode: "11201",
+    county: "Kings",
+    phone: "(718) 330-1200",
+    email: null,
+    website: "https://www.nyed.uscourts.gov",
+    latitude: "40.6943",
+    longitude: "-73.9879",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of New York.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New York - Northern District
+  {
+    name: "New York Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "39 North Pearl Street, 4th Floor",
+    city: "Albany",
+    state: "NY",
+    zipCode: "12207",
+    county: "Albany",
+    phone: "(518) 434-1718",
+    email: null,
+    website: "https://www.nynd.uscourts.gov",
+    latitude: "42.6526",
+    longitude: "-73.7562",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of New York.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // New York - Western District
+  {
+    name: "New York Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "68 Court Street, Suite 200",
+    city: "Buffalo",
+    state: "NY",
+    zipCode: "14202",
+    county: "Erie",
+    phone: "(716) 551-5191",
+    email: null,
+    website: "https://www.nywd.uscourts.gov",
+    latitude: "42.8864",
+    longitude: "-78.8784",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of New York.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // North Carolina - Eastern District
+  {
+    name: "North Carolina Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "310 New Bern Avenue, Suite 800",
+    city: "Raleigh",
+    state: "NC",
+    zipCode: "27601",
+    county: "Wake",
+    phone: "(919) 856-4236",
+    email: null,
+    website: "https://www.nced.uscourts.gov",
+    latitude: "35.7796",
+    longitude: "-78.6382",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of North Carolina.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // North Carolina - Middle District
+  {
+    name: "North Carolina Middle Federal Public Defender",
+    organizationType: "public_defender",
+    address: "101 South Edgeworth Street, 4th Floor",
+    city: "Greensboro",
+    state: "NC",
+    zipCode: "27401",
+    county: "Guilford",
+    phone: "(336) 333-5351",
+    email: null,
+    website: "https://www.ncmd.uscourts.gov",
+    latitude: "36.0726",
+    longitude: "-79.7920",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of North Carolina.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // North Carolina - Western District
+  {
+    name: "North Carolina Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "227 West Trade Street, Suite 1650",
+    city: "Charlotte",
+    state: "NC",
+    zipCode: "28202",
+    county: "Mecklenburg",
+    phone: "(704) 338-4550",
+    email: null,
+    website: "https://www.ncwd.uscourts.gov",
+    latitude: "35.2271",
+    longitude: "-80.8431",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of North Carolina.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // North Dakota
+  {
+    name: "North Dakota Federal Public Defender",
+    organizationType: "public_defender",
+    address: "655 First Avenue North, Suite 500",
+    city: "Fargo",
+    state: "ND",
+    zipCode: "58102",
+    county: "Cass",
+    phone: "(701) 297-7190",
+    email: null,
+    website: "https://www.ndd.uscourts.gov",
+    latitude: "46.8772",
+    longitude: "-96.7898",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of North Dakota.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Northern Mariana Islands
+  {
+    name: "Northern Mariana Islands Federal Public Defender",
+    organizationType: "public_defender",
+    address: "Horiguchi Building, Chalan Kanoa",
+    city: "Saipan",
+    state: "MP",
+    zipCode: "96950",
+    county: "Northern Mariana Islands",
+    phone: "(670) 236-2850",
+    email: null,
+    website: "https://www.nmid.uscourts.gov",
+    latitude: "15.1783",
+    longitude: "145.7547",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Northern Mariana Islands.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Ohio - Northern District
+  {
+    name: "Ohio Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "801 West Superior Avenue, Suite 1450",
+    city: "Cleveland",
+    state: "OH",
+    zipCode: "44113",
+    county: "Cuyahoga",
+    phone: "(216) 522-4856",
+    email: null,
+    website: "https://www.ohnd.uscourts.gov",
+    latitude: "41.4993",
+    longitude: "-81.6944",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Ohio.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Ohio - Southern District
+  {
+    name: "Ohio Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "10 West Broad Street, Suite 1020",
+    city: "Columbus",
+    state: "OH",
+    zipCode: "43215",
+    county: "Franklin",
+    phone: "(614) 469-2999",
+    email: null,
+    website: "https://www.ohsd.uscourts.gov",
+    latitude: "39.9612",
+    longitude: "-82.9988",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Ohio.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Oklahoma - Eastern District
+  {
+    name: "Oklahoma Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "106 North 5th Street, Suite 200",
+    city: "Muskogee",
+    state: "OK",
+    zipCode: "74401",
+    county: "Muskogee",
+    phone: "(918) 687-2410",
+    email: null,
+    website: "https://www.oked.uscourts.gov",
+    latitude: "35.7479",
+    longitude: "-95.3697",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Oklahoma.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Oklahoma - Northern District
+  {
+    name: "Oklahoma Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "224 South Boulder Avenue, Suite 300",
+    city: "Tulsa",
+    state: "OK",
+    zipCode: "74103",
+    county: "Tulsa",
+    phone: "(918) 382-4787",
+    email: null,
+    website: "https://www.oknd.uscourts.gov",
+    latitude: "36.1540",
+    longitude: "-95.9928",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of Oklahoma.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Oklahoma - Western District
+  {
+    name: "Oklahoma Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "215 Dean A. McGee Avenue, Suite 109",
+    city: "Oklahoma City",
+    state: "OK",
+    zipCode: "73102",
+    county: "Oklahoma",
+    phone: "(405) 609-5975",
+    email: null,
+    website: "https://www.okwd.uscourts.gov",
+    latitude: "35.4676",
+    longitude: "-97.5164",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Oklahoma.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Oregon
+  {
+    name: "Oregon Federal Public Defender",
+    organizationType: "public_defender",
+    address: "101 SW Main Street, Suite 1700",
+    city: "Portland",
+    state: "OR",
+    zipCode: "97204",
+    county: "Multnomah",
+    phone: "(503) 326-2123",
+    email: null,
+    website: "https://www.ord.uscourts.gov",
+    latitude: "45.5152",
+    longitude: "-122.6784",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Oregon.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Pennsylvania - Middle District
+  {
+    name: "Pennsylvania Middle Federal Public Defender",
+    organizationType: "public_defender",
+    address: "100 Chestnut Street, Suite 306",
+    city: "Harrisburg",
+    state: "PA",
+    zipCode: "17101",
+    county: "Dauphin",
+    phone: "(717) 782-2237",
+    email: null,
+    website: "https://www.pamd.uscourts.gov",
+    latitude: "40.2732",
+    longitude: "-76.8867",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of Pennsylvania.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Pennsylvania - Western District
+  {
+    name: "Pennsylvania Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "1001 Liberty Avenue, Suite 1500",
+    city: "Pittsburgh",
+    state: "PA",
+    zipCode: "15222",
+    county: "Allegheny",
+    phone: "(412) 644-6565",
+    email: null,
+    website: "https://www.pawd.uscourts.gov",
+    latitude: "40.4406",
+    longitude: "-79.9959",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Pennsylvania.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Puerto Rico
+  {
+    name: "Puerto Rico Federal Public Defender",
+    organizationType: "public_defender",
+    address: "150 Carlos Chardon Avenue, Suite 500",
+    city: "San Juan",
+    state: "PR",
+    zipCode: "00918",
+    county: "San Juan",
+    phone: "(787) 729-6960",
+    email: null,
+    website: "https://www.prd.uscourts.gov",
+    latitude: "18.4655",
+    longitude: "-66.1057",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Puerto Rico.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Rhode Island
+  {
+    name: "Rhode Island Federal Public Defender",
+    organizationType: "public_defender",
+    address: "10 Weybosset Street, Suite 300",
+    city: "Providence",
+    state: "RI",
+    zipCode: "02903",
+    county: "Providence",
+    phone: "(401) 528-4281",
+    email: null,
+    website: "https://www.rid.uscourts.gov",
+    latitude: "41.8240",
+    longitude: "-71.4128",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Rhode Island.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // South Carolina
+  {
+    name: "South Carolina Federal Public Defender",
+    organizationType: "public_defender",
+    address: "1310 Gadsden Street, Suite B",
+    city: "Columbia",
+    state: "SC",
+    zipCode: "29201",
+    county: "Richland",
+    phone: "(803) 765-5305",
+    email: null,
+    website: "https://www.scd.uscourts.gov",
+    latitude: "34.0007",
+    longitude: "-81.0348",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of South Carolina.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // South Dakota
+  {
+    name: "South Dakota Federal Public Defender",
+    organizationType: "public_defender",
+    address: "515 South Dakota Avenue, Suite 201",
+    city: "Sioux Falls",
+    state: "SD",
+    zipCode: "57104",
+    county: "Minnehaha",
+    phone: "(605) 330-4489",
+    email: null,
+    website: "https://www.sdd.uscourts.gov",
+    latitude: "43.5473",
+    longitude: "-96.7311",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of South Dakota.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Tennessee - Eastern District
+  {
+    name: "Tennessee Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "800 South Gay Street, Suite 2400",
+    city: "Knoxville",
+    state: "TN",
+    zipCode: "37929",
+    county: "Knox",
+    phone: "(865) 637-7979",
+    email: null,
+    website: "https://www.tned.uscourts.gov",
+    latitude: "35.9606",
+    longitude: "-83.9207",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Tennessee.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Tennessee - Middle District
+  {
+    name: "Tennessee Middle Federal Public Defender",
+    organizationType: "public_defender",
+    address: "810 Broadway, Suite 200",
+    city: "Nashville",
+    state: "TN",
+    zipCode: "37203",
+    county: "Davidson",
+    phone: "(615) 736-5047",
+    email: null,
+    website: "https://www.tnmd.uscourts.gov",
+    latitude: "36.1627",
+    longitude: "-86.7816",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Middle District of Tennessee.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Tennessee - Western District
+  {
+    name: "Tennessee Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "200 Jefferson Avenue, Suite 200",
+    city: "Memphis",
+    state: "TN",
+    zipCode: "38103",
+    county: "Shelby",
+    phone: "(901) 544-3895",
+    email: null,
+    website: "https://www.tnwd.uscourts.gov",
+    latitude: "35.1495",
+    longitude: "-90.0490",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Tennessee.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Texas - Eastern District
+  {
+    name: "Texas Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "211 East Ferguson Street, Suite 504",
+    city: "Tyler",
+    state: "TX",
+    zipCode: "75702",
+    county: "Smith",
+    phone: "(903) 590-1000",
+    email: null,
+    website: "https://www.txed.uscourts.gov",
+    latitude: "32.3513",
+    longitude: "-95.3011",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Texas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Texas - Southern District
+  {
+    name: "Texas Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "440 Louisiana Street, Suite 1350",
+    city: "Houston",
+    state: "TX",
+    zipCode: "77002",
+    county: "Harris",
+    phone: "(713) 718-4600",
+    email: null,
+    website: "https://www.txs.uscourts.gov",
+    latitude: "29.7604",
+    longitude: "-95.3698",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of Texas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Texas - Western District
+  {
+    name: "Texas Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "727 East Durango Boulevard, Suite A-406",
+    city: "San Antonio",
+    state: "TX",
+    zipCode: "78206",
+    county: "Bexar",
+    phone: "(210) 229-6180",
+    email: null,
+    website: "https://www.txwd.uscourts.gov",
+    latitude: "29.4241",
+    longitude: "-98.4936",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Texas.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Utah
+  {
+    name: "Utah Federal Public Defender",
+    organizationType: "public_defender",
+    address: "46 West Broadway, Suite 110",
+    city: "Salt Lake City",
+    state: "UT",
+    zipCode: "84101",
+    county: "Salt Lake",
+    phone: "(801) 524-4010",
+    email: null,
+    website: "https://www.utd.uscourts.gov",
+    latitude: "40.7608",
+    longitude: "-111.8910",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Utah.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Vermont
+  {
+    name: "Vermont Federal Public Defender",
+    organizationType: "public_defender",
+    address: "11 Elmwood Avenue, Suite 4",
+    city: "Burlington",
+    state: "VT",
+    zipCode: "05401",
+    county: "Chittenden",
+    phone: "(802) 660-2260",
+    email: null,
+    website: "https://www.vtd.uscourts.gov",
+    latitude: "44.4759",
+    longitude: "-73.2121",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Vermont.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Virgin Islands
+  {
+    name: "Virgin Islands Federal Public Defender",
+    organizationType: "public_defender",
+    address: "5400 Veterans Drive, Suite 108",
+    city: "St. Thomas",
+    state: "VI",
+    zipCode: "00802",
+    county: "St. Thomas",
+    phone: "(340) 774-0147",
+    email: null,
+    website: "https://www.vid.uscourts.gov",
+    latitude: "18.3358",
+    longitude: "-64.8963",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Virgin Islands.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Virginia - Eastern District
+  {
+    name: "Virginia Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "701 East Broad Street, Suite 3600",
+    city: "Richmond",
+    state: "VA",
+    zipCode: "23219",
+    county: "Richmond City",
+    phone: "(804) 771-2304",
+    email: null,
+    website: "https://www.vaed.uscourts.gov",
+    latitude: "37.5407",
+    longitude: "-77.4360",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Virginia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Virginia - Western District
+  {
+    name: "Virginia Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "310 First Street SW, Suite 750",
+    city: "Roanoke",
+    state: "VA",
+    zipCode: "24011",
+    county: "Roanoke City",
+    phone: "(540) 857-2471",
+    email: null,
+    website: "https://www.vawd.uscourts.gov",
+    latitude: "37.2710",
+    longitude: "-79.9414",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Virginia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Washington - Eastern District
+  {
+    name: "Washington Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "920 West Riverside Avenue, Suite 700",
+    city: "Spokane",
+    state: "WA",
+    zipCode: "99201",
+    county: "Spokane",
+    phone: "(509) 353-2100",
+    email: null,
+    website: "https://www.waed.uscourts.gov",
+    latitude: "47.6588",
+    longitude: "-117.4260",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Washington.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Washington - Western District (already have Seattle office, this is the main)
+  {
+    name: "Federal Defenders of Western Washington",
+    organizationType: "public_defender",
+    address: "1601 Fifth Avenue, Suite 700",
+    city: "Seattle",
+    state: "WA",
+    zipCode: "98101",
+    county: "King",
+    phone: "(206) 553-1100",
+    email: null,
+    website: "https://www.wawd.uscourts.gov",
+    latitude: "47.6101",
+    longitude: "-122.3352",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Washington.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // West Virginia - Northern District
+  {
+    name: "West Virginia Northern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "1125 Chapline Street, Suite 300",
+    city: "Wheeling",
+    state: "WV",
+    zipCode: "26003",
+    county: "Ohio",
+    phone: "(304) 232-0140",
+    email: null,
+    website: "https://www.wvnd.uscourts.gov",
+    latitude: "40.0640",
+    longitude: "-80.7210",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Northern District of West Virginia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // West Virginia - Southern District
+  {
+    name: "West Virginia Southern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "300 Virginia Street East, Suite 2500",
+    city: "Charleston",
+    state: "WV",
+    zipCode: "25301",
+    county: "Kanawha",
+    phone: "(304) 347-5928",
+    email: null,
+    website: "https://www.wvsd.uscourts.gov",
+    latitude: "38.3498",
+    longitude: "-81.6326",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Southern District of West Virginia.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Wisconsin - Eastern District
+  {
+    name: "Wisconsin Eastern Federal Public Defender",
+    organizationType: "public_defender",
+    address: "517 East Wisconsin Avenue, Suite 400",
+    city: "Milwaukee",
+    state: "WI",
+    zipCode: "53202",
+    county: "Milwaukee",
+    phone: "(414) 297-1020",
+    email: null,
+    website: "https://www.wied.uscourts.gov",
+    latitude: "43.0389",
+    longitude: "-87.9065",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Eastern District of Wisconsin.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Wisconsin - Western District
+  {
+    name: "Wisconsin Western Federal Public Defender",
+    organizationType: "public_defender",
+    address: "222 West Washington Avenue, Suite 700",
+    city: "Madison",
+    state: "WI",
+    zipCode: "53703",
+    county: "Dane",
+    phone: "(608) 264-5158",
+    email: null,
+    website: "https://www.wiwd.uscourts.gov",
+    latitude: "43.0731",
+    longitude: "-89.3840",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the Western District of Wisconsin.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
+
+  // Wyoming
+  {
+    name: "Wyoming Federal Public Defender",
+    organizationType: "public_defender",
+    address: "214 West 15th Street, Suite 100",
+    city: "Cheyenne",
+    state: "WY",
+    zipCode: "82001",
+    county: "Laramie",
+    phone: "(307) 772-2781",
+    email: null,
+    website: "https://www.wyd.uscourts.gov",
+    latitude: "41.1400",
+    longitude: "-104.8202",
+    services: [
+      "Federal Criminal Defense",
+      "Federal Appeals"
+    ],
+    eligibility: "Indigent defendants in federal criminal cases in the District of Wyoming.",
+    dataSource: "federal_defender",
+    isActive: true,
+  },
 ];
