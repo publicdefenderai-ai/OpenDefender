@@ -16,6 +16,7 @@ interface CourtListenerSearchParams {
   filed_before?: string;
   type?: 'r' | 'o' | 'oa'; // r=RECAP, o=opinions, oa=oral arguments
   order_by?: string;
+  search_type?: 'semantic' | 'keyword';
 }
 
 interface RecapDocket {
@@ -121,6 +122,7 @@ export class RecapService {
       if (params.court) cleanParams.court = params.court;
       if (params.filed_after) cleanParams.filed_after = params.filed_after;
       if (params.filed_before) cleanParams.filed_before = params.filed_before;
+      if (params.search_type) cleanParams.search_type = params.search_type;
       // Do NOT include order_by for the search API - it uses different ordering
       
       const response = await axios.get(`${COURTLISTENER_BASE_URL}/search/`, {
@@ -170,6 +172,7 @@ export class RecapService {
     court?: string;
     dateFrom?: string;
     dateTo?: string;
+    searchType?: 'keyword' | 'semantic';
   }) {
     const params: CourtListenerSearchParams = {
       q: query.searchTerm,
@@ -178,7 +181,8 @@ export class RecapService {
       court: query.court,
       filed_after: query.dateFrom,
       filed_before: query.dateTo,
-      order_by: '-date_created' // For dockets API
+      order_by: '-date_created', // For dockets API
+      search_type: query.searchType === 'semantic' ? 'semantic' : undefined
     };
 
     // Search both RECAP dockets and opinions in parallel

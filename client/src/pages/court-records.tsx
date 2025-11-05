@@ -7,7 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Skeleton } from '@/components/ui/skeleton';
-import { Search, ExternalLink, AlertCircle, FileText, Scale, DollarSign, Download } from 'lucide-react';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { Search, ExternalLink, AlertCircle, FileText, Scale, DollarSign, Download, Sparkles } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { format } from 'date-fns';
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
@@ -21,15 +23,17 @@ export default function CourtRecords() {
   const [caseName, setCaseName] = useState('');
   const [docketNumber, setDocketNumber] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
+  const [useSemanticSearch, setUseSemanticSearch] = useState(false);
 
   const { data, isLoading, error, refetch } = useQuery({
-    queryKey: ['/api/court-records/search', { q: searchTerm, case_name: caseName, docket_number: docketNumber }],
+    queryKey: ['/api/court-records/search', { q: searchTerm, case_name: caseName, docket_number: docketNumber, search_type: useSemanticSearch ? 'semantic' : 'keyword' }],
     enabled: false,
     queryFn: async () => {
       const params = new URLSearchParams();
       if (searchTerm) params.append('q', searchTerm);
       if (caseName) params.append('case_name', caseName);
       if (docketNumber) params.append('docket_number', docketNumber);
+      if (useSemanticSearch) params.append('search_type', 'semantic');
       
       const url = `/api/court-records/search?${params.toString()}`;
       const response = await fetch(url, { credentials: 'include' });
@@ -86,11 +90,36 @@ export default function CourtRecords() {
             </CardDescription>
           </CardHeader>
           <CardContent>
+            <div className="mb-4 p-4 bg-muted/30 rounded-lg border">
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                    <Label htmlFor="semantic-search" className="text-sm font-semibold">
+                      AI-Powered Semantic Search
+                    </Label>
+                    <Badge variant="secondary" className="text-xs">NEW</Badge>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    {useSemanticSearch 
+                      ? "Using natural language to find cases by meaning and intent" 
+                      : "Using keyword matching to search case names and docket numbers"}
+                  </p>
+                </div>
+                <Switch
+                  id="semantic-search"
+                  checked={useSemanticSearch}
+                  onCheckedChange={setUseSemanticSearch}
+                  data-testid="switch-semantic-search"
+                />
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-3 gap-4 mb-4">
               <div>
                 <label className="text-sm font-medium mb-2 block">{t('courtRecords.searchParams.searchTerm')}</label>
                 <Input
-                  placeholder={t('courtRecords.searchParams.searchTermPlaceholder')}
+                  placeholder={useSemanticSearch ? "Describe what you're looking for..." : t('courtRecords.searchParams.searchTermPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onKeyPress={handleKeyPress}
@@ -124,7 +153,7 @@ export default function CourtRecords() {
               disabled={!searchTerm && !caseName && !docketNumber}
               data-testid="button-search"
             >
-              <Search className="w-4 h-4 mr-2" />
+              {useSemanticSearch ? <Sparkles className="w-4 h-4 mr-2" /> : <Search className="w-4 h-4 mr-2" />}
               {t('courtRecords.searchParams.searchButton')}
             </Button>
           </CardContent>

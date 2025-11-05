@@ -501,7 +501,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         docket_number: docketNumber,
         court,
         date_from: dateFrom,
-        date_to: dateTo
+        date_to: dateTo,
+        search_type: searchType
       } = req.query;
 
       if (!searchTerm && !caseName && !docketNumber) {
@@ -517,7 +518,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         docketNumber: docketNumber as string,
         court: court as string,
         dateFrom: dateFrom as string,
-        dateTo: dateTo as string
+        dateTo: dateTo as string,
+        searchType: (searchType as string) === 'semantic' ? 'semantic' : 'keyword'
       });
 
       res.json({ 
