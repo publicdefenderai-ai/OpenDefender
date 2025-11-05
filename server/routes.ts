@@ -178,24 +178,74 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Case Law Search API
+  // Case Law Search API - supports both keyword and semantic search
   app.get("/api/case-law/search", async (req, res) => {
     try {
-      const { q: query, jurisdiction } = req.query;
+      const { q: query, jurisdiction, search_type } = req.query;
       
       if (!query) {
         return res.status(400).json({ success: false, error: "Query parameter required" });
       }
 
+      const searchType = (search_type as string) === 'semantic' ? 'semantic' : 'keyword';
+      
       const results = await legalDataService.searchCaseLaw(
         query as string,
-        jurisdiction as string
+        jurisdiction as string,
+        searchType
       );
       
       res.json(results);
     } catch (error) {
       console.error("Case law search failed:", error);
       res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
+  // Semantic Search API - natural language case law search
+  app.get("/api/case-law/semantic-search", async (req, res) => {
+    try {
+      const { q: query, jurisdiction, keyword_filter } = req.query;
+      
+      if (!query) {
+        return res.status(400).json({ success: false, error: "Query parameter required" });
+      }
+
+      const results = await legalDataService.semanticSearchCaseLaw(
+        query as string,
+        jurisdiction as string,
+        keyword_filter as string
+      );
+      
+      res.json(results);
+    } catch (error) {
+      console.error("Semantic search failed:", error);
+      res.status(500).json({ success: false, error: "Semantic search failed" });
+    }
+  });
+
+  // Hybrid Search API - combines keywords with natural language
+  app.get("/api/case-law/hybrid-search", async (req, res) => {
+    try {
+      const { natural_language, keywords, jurisdiction } = req.query;
+      
+      if (!natural_language || !keywords) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Both natural_language and keywords parameters required" 
+        });
+      }
+
+      const results = await legalDataService.hybridSearchCaseLaw(
+        natural_language as string,
+        keywords as string,
+        jurisdiction as string
+      );
+      
+      res.json(results);
+    } catch (error) {
+      console.error("Hybrid search failed:", error);
+      res.status(500).json({ success: false, error: "Hybrid search failed" });
     }
   });
 

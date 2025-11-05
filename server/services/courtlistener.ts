@@ -1,5 +1,7 @@
 interface CourtListenerAPI {
   searchOpinions(query: string, jurisdiction?: string): Promise<any>;
+  semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string): Promise<any>;
+  hybridSearchOpinions(naturalLanguage: string, keywords: string, jurisdiction?: string): Promise<any>;
   getJudgeData(judgeId: string): Promise<any>;
   searchDockets(query: string): Promise<any>;
 }
@@ -43,6 +45,38 @@ class CourtListenerService implements CourtListenerAPI {
   async searchOpinions(query: string, jurisdiction?: string) {
     const params: Record<string, string> = {
       q: query,
+      format: 'json',
+    };
+
+    if (jurisdiction) {
+      params.court = jurisdiction;
+    }
+
+    return this.makeRequest('/search/', params);
+  }
+
+  async semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string) {
+    const params: Record<string, string> = {
+      q: query,
+      search_type: 'semantic',
+      format: 'json',
+    };
+
+    if (jurisdiction) {
+      params.court = jurisdiction;
+    }
+
+    if (keywordFilter) {
+      params.q = `"${keywordFilter}" ${query}`;
+    }
+
+    return this.makeRequest('/search/', params);
+  }
+
+  async hybridSearchOpinions(naturalLanguage: string, keywords: string, jurisdiction?: string) {
+    const params: Record<string, string> = {
+      q: `"${keywords}" ${naturalLanguage}`,
+      search_type: 'semantic',
       format: 'json',
     };
 

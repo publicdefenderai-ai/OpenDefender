@@ -3,7 +3,9 @@ import { govInfoService } from './govinfo';
 import { storage } from '../storage';
 
 interface LegalDataService {
-  searchCaseLaw(query: string, jurisdiction?: string): Promise<any>;
+  searchCaseLaw(query: string, jurisdiction?: string, searchType?: 'keyword' | 'semantic'): Promise<any>;
+  semanticSearchCaseLaw(query: string, jurisdiction?: string, keywordFilter?: string): Promise<any>;
+  hybridSearchCaseLaw(naturalLanguage: string, keywords: string, jurisdiction?: string): Promise<any>;
   getStatutes(jurisdiction: string, searchQuery?: string): Promise<any>;
   searchFederalStatutes(query: string, title?: string, section?: string): Promise<any>;
   getSentencingGuidelines(jurisdiction: string): Promise<any>;
@@ -11,22 +13,73 @@ interface LegalDataService {
 }
 
 class LegalDataServiceImpl implements LegalDataService {
-  async searchCaseLaw(query: string, jurisdiction?: string) {
+  async searchCaseLaw(query: string, jurisdiction?: string, searchType: 'keyword' | 'semantic' = 'keyword') {
     try {
-      // Use CourtListener for case law search
-      const results = await courtListenerService.searchOpinions(query, jurisdiction);
+      let results;
+      if (searchType === 'semantic') {
+        results = await courtListenerService.semanticSearchOpinions(query, jurisdiction);
+      } else {
+        results = await courtListenerService.searchOpinions(query, jurisdiction);
+      }
       
       return {
         success: true,
         results: results.results || [],
         count: results.count || 0,
         source: 'CourtListener',
+        searchType,
       };
     } catch (error) {
       console.error('Case law search failed:', error);
       return {
         success: false,
         error: 'Failed to search case law',
+        results: [],
+        count: 0,
+      };
+    }
+  }
+
+  async semanticSearchCaseLaw(query: string, jurisdiction?: string, keywordFilter?: string) {
+    try {
+      const results = await courtListenerService.semanticSearchOpinions(query, jurisdiction, keywordFilter);
+      
+      return {
+        success: true,
+        results: results.results || [],
+        count: results.count || 0,
+        source: 'CourtListener Semantic Search',
+        searchType: 'semantic',
+      };
+    } catch (error) {
+      console.error('Semantic case law search failed:', error);
+      return {
+        success: false,
+        error: 'Failed to perform semantic search',
+        results: [],
+        count: 0,
+      };
+    }
+  }
+
+  async hybridSearchCaseLaw(naturalLanguage: string, keywords: string, jurisdiction?: string) {
+    try {
+      const results = await courtListenerService.hybridSearchOpinions(naturalLanguage, keywords, jurisdiction);
+      
+      return {
+        success: true,
+        results: results.results || [],
+        count: results.count || 0,
+        source: 'CourtListener Hybrid Search',
+        searchType: 'hybrid',
+        keywords,
+        naturalLanguage,
+      };
+    } catch (error) {
+      console.error('Hybrid case law search failed:', error);
+      return {
+        success: false,
+        error: 'Failed to perform hybrid search',
         results: [],
         count: 0,
       };
