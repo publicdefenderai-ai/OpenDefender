@@ -391,6 +391,37 @@ export default function CaseGuidance() {
     }
   };
 
+  // Show loading state while generating guidance
+  if (generateGuidance.isPending) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="px-4 py-8 flex items-center justify-center min-h-[60vh]">
+          <Card className="w-full max-w-md">
+            <CardContent className="pt-6">
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="relative">
+                  <div className="h-16 w-16 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin"></div>
+                  <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold">{t('case.loading.title') || 'Generating Your Personalized Guidance'}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {t('case.loading.description') || 'Our AI is analyzing your case details and creating customized legal guidance. This may take up to a minute...'}
+                  </p>
+                </div>
+                <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
+                  <div className="bg-blue-600 dark:bg-blue-400 h-full rounded-full animate-pulse" style={{ width: '70%' }}></div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   if (showQAFlow) {
     return (
       <div className="min-h-screen bg-background">
