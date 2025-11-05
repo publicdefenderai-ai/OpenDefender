@@ -155,25 +155,21 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
   yPosition = (doc as any).lastAutoTable.finalY + 10;
 
-  // Critical Alerts
-  if (guidance.criticalAlerts.length > 0) {
+  // Overview
+  if (guidance.overview) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.setTextColor(200, 0, 0);
-    doc.text('! CRITICAL ALERTS', margin, yPosition);
+    doc.setTextColor(0, 100, 200);
+    doc.text('Overview', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    guidance.criticalAlerts.forEach((alert, idx) => {
-      checkPageBreak();
-      yPosition = addText(`   ${idx + 1}. ${alert}`, margin + 5, yPosition);
-      yPosition += 3;
-    });
-    yPosition += 5;
+    yPosition = addText(guidance.overview, margin + 5, yPosition);
+    yPosition += 10;
   }
 
   // Immediate Actions
@@ -182,7 +178,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 100, 200);
-    doc.text('What You Should Do Right Now', margin, yPosition);
+    doc.text('Immediate Actions (Next 48 Hours)', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
