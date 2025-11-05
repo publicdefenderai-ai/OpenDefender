@@ -18,6 +18,8 @@ The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui co
 
 The backend is built with Express.js and TypeScript, providing a RESTful API. It includes custom middleware for logging and error handling. Drizzle ORM with PostgreSQL is used for type-safe database operations. Legal case data is designed to be ephemeral and automatically expires to ensure user privacy. The server provides endpoints for legal resources, court data, case law search, AI legal guidance, court records search, and legal aid organizations, including location-based searches for public defenders.
 
+**AI Legal Guidance Engine**: The platform features a dual-mode guidance system that intelligently selects between Claude AI (Anthropic) and a rule-based engine. When users provide detailed incident descriptions or specific concerns, Claude Sonnet 4.5 generates personalized, context-aware legal guidance using advanced natural language processing. The system automatically falls back to the rule-based engine if AI is unavailable or if users provide minimal details, ensuring consistent service. All AI interactions include usage tracking (input/output tokens, cost estimation) logged server-side for transparency and cost monitoring.
+
 ### Data Sources and Integrations
 
 The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations (153 total: 123 public defender offices [95 federal, 28 state/county], 12 immigration, 18 civil legal aid), a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a hybrid multi-source approach:
@@ -81,6 +83,10 @@ Vite is used for frontend development and client-side production optimization. E
 -   **TypeScript**: Type safety.
 -   **ESBuild**: Fast JavaScript bundler.
 -   **react-i18next**: Internationalization.
+
+### AI and Machine Learning
+-   **Anthropic Claude API**: AI-powered legal guidance generation using Claude Sonnet 4.5.
+-   **Cost Tracking**: Server-side monitoring of API usage (tokens and costs).
 
 ### Third-Party Services
 -   **Neon Database**: Serverless PostgreSQL hosting.
