@@ -35,8 +35,10 @@ The system integrates with various legal data sources to provide comprehensive i
 The API includes endpoints for:
 -   Legal resources (filtered by jurisdiction/category)
 -   Court information by jurisdiction
--   Case law search
--   Court records search (RECAP Archive and case law database)
+-   Case law search (keyword and **semantic search modes**)
+-   Court records search (RECAP Archive and case law database with semantic search support)
+-   Semantic case law search (natural language queries)
+-   Hybrid search (combines keywords with semantic understanding)
 -   Detailed docket information by ID
 -   Legal aid organization data with filtering
 -   Federal criminal statutes (Title 18 USC)
@@ -59,7 +61,7 @@ Vite is used for frontend development and client-side production optimization. E
 -   **connect-pg-simple**: PostgreSQL session store.
 
 ### Legal Data Sources
--   **CourtListener API**: Legal opinions, court data, case law.
+-   **CourtListener API**: Legal opinions, court data, case law with **AI-Powered Semantic Search** (Nov 2025) - Natural language search that understands meaning and intent beyond keyword matching.
 -   **RECAP Archive**: Federal court documents.
 -   **PACER Fetch API**: On-demand access to PACER documents (fallback).
 -   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
