@@ -267,6 +267,23 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
         </Alert>
       )}
 
+      {/* Overview Section */}
+      {guidance.overview && (
+        <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-blue-800 dark:text-blue-200">
+              <FileText className="h-5 w-5" />
+              Overview
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-blue-900 dark:text-blue-100 leading-relaxed" data-testid="text-guidance-overview">
+              {guidance.overview}
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
       {/* Urgent Deadlines */}
       {getUrgentDeadlines().length > 0 && (
         <Card className="border-amber-200 bg-amber-50 dark:bg-amber-900/20">
