@@ -413,9 +413,9 @@ export default function CaseGuidance() {
                   <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">{t('case.loading.title') || 'Generating Your Personalized Guidance'}</h3>
+                  <h3 className="text-xl font-semibold">Generating Your Personalized Guidance</h3>
                   <p className="text-sm text-muted-foreground">
-                    {t('case.loading.description') || 'Our AI is analyzing your case details and creating customized legal guidance. This may take up to a minute...'}
+                    Our AI is analyzing your case details and creating customized legal guidance. This may take up to a minute...
                   </p>
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
