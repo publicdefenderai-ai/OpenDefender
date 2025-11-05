@@ -763,9 +763,6 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
               className="mt-2"
               data-testid="textarea-incident-description"
             />
-            <p className="text-xs text-muted-foreground mt-1">
-              Include what led to the arrest, what the police said, and any important details
-            </p>
           </div>
 
           <div>
@@ -781,21 +778,10 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
               className="mt-2"
               data-testid="textarea-concerns-questions"
             />
-            <p className="text-xs text-muted-foreground mt-1">
-              Tell us your main concerns and we'll address them specifically
-            </p>
           </div>
         </div>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
-        <p className="text-sm text-blue-900 dark:text-blue-100 flex items-start gap-2">
-          <MessageSquare className="h-4 w-4 mt-0.5 flex-shrink-0" />
-          <span>
-            <strong>Why provide details?</strong> Our AI lawyer assistant reads your specific facts and generates personalized guidance - not generic advice. The more you share, the more helpful the guidance will be.
-          </span>
-        </p>
-      </div>
 
       <div className="flex space-x-4">
         <Button
