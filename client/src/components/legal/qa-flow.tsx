@@ -7,7 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
 import { generateStatuteCitation, getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
@@ -27,6 +28,8 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
     custodyStatus: "",
     hasAttorney: false,
     consentGiven: false,
+    incidentDescription: "",
+    concernsQuestions: "",
   });
 
   const steps = [
@@ -45,6 +48,10 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
     {
       title: t('legalGuidance.qaFlow.steps.status'),
       component: StatusStep,
+    },
+    {
+      title: "Additional Details (Optional)",
+      component: AdditionalDetailsStep,
     },
   ];
 
@@ -718,10 +725,92 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
         <Button
           onClick={onNext}
           disabled={!formData.caseStage || !formData.custodyStatus}
+          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+          data-testid="button-continue-status"
+        >
+          Continue <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
+  const { t } = useTranslation();
+  
+  return (
+    <div className="space-y-6">
+      <div>
+        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+          <MessageSquare className="h-5 w-5" />
+          Tell Us More (Optional)
+        </h3>
+        <p className="text-sm text-muted-foreground mb-4">
+          The more details you provide, the better our AI can tailor guidance to your specific situation. All fields are optional - skip any you're not comfortable sharing.
+        </p>
+        
+        <div className="space-y-4">
+          <div>
+            <Label htmlFor="incidentDescription">
+              What happened? Describe the incident in your own words
+            </Label>
+            <Textarea
+              id="incidentDescription"
+              value={formData.incidentDescription || ""}
+              onChange={(e) => updateFormData("incidentDescription", e.target.value)}
+              placeholder="Example: I was driving home from work when the police pulled me over. They said I was swerving but I had just swerved to avoid a pothole..."
+              rows={4}
+              className="mt-2"
+              data-testid="textarea-incident-description"
+            />
+            <p className="text-xs text-muted-foreground mt-1">
+              Include what led to the arrest, what the police said, and any important details
+            </p>
+          </div>
+
+          <div>
+            <Label htmlFor="concernsQuestions">
+              What are you most worried about? Any specific questions?
+            </Label>
+            <Textarea
+              id="concernsQuestions"
+              value={formData.concernsQuestions || ""}
+              onChange={(e) => updateFormData("concernsQuestions", e.target.value)}
+              placeholder="Example: I'm worried about losing my job. I have kids and can't afford a lawyer. When do I have to go to court?"
+              rows={4}
+              className="mt-2"
+              data-testid="textarea-concerns-questions"
+            />
+            <p className="text-xs text-muted-foreground mt-1">
+              Tell us your main concerns and we'll address them specifically
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
+        <p className="text-sm text-blue-900 dark:text-blue-100 flex items-start gap-2">
+          <MessageSquare className="h-4 w-4 mt-0.5 flex-shrink-0" />
+          <span>
+            <strong>Why provide details?</strong> Our AI lawyer assistant reads your specific facts and generates personalized guidance - not generic advice. The more you share, the more helpful the guidance will be.
+          </span>
+        </p>
+      </div>
+
+      <div className="flex space-x-4">
+        <Button
+          variant="outline"
+          onClick={onPrev}
+          data-testid="button-prev-additional"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" /> Back
+        </Button>
+        <Button
+          onClick={onNext}
           className="flex-1 bg-green-600 text-white font-bold hover:bg-green-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-generate-guidance"
         >
-          {isLast ? t('legalGuidance.qaFlow.status.submitButton') : "Continue"} <ArrowRight className="ml-2 h-4 w-4" />
+          {t('legalGuidance.qaFlow.status.submitButton')} <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>

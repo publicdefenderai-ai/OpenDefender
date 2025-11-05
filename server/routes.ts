@@ -7,6 +7,7 @@ import { recapService } from "./services/recap";
 import { insertLegalCaseSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
+import { generateClaudeGuidance, testClaudeConnection } from "./services/claude-guidance.js";
 import { getChargeById } from "../shared/criminal-charges.js";
 import { scrapingCoordinator } from "./services/scraping-coordinator";
 import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
@@ -361,7 +362,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
       // Generate personalized guidance based on case details
-      const guidance = generateLegalGuidance(validatedData);
+      const guidance = await generateLegalGuidance(validatedData);
       
       const legalCase = await storage.createLegalCase({
         ...validatedData,
@@ -409,6 +410,35 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Failed to delete legal guidance:", error);
       res.status(500).json({ success: false, error: "Failed to delete session" });
+    }
+  });
+
+  // Claude AI Health Check
+  app.get("/api/ai/health", async (req, res) => {
+    try {
+      const hasApiKey = !!process.env.ANTHROPIC_API_KEY;
+      if (!hasApiKey) {
+        return res.json({ 
+          success: true, 
+          available: false, 
+          reason: "API key not configured" 
+        });
+      }
+
+      const isConnected = await testClaudeConnection();
+      res.json({ 
+        success: true, 
+        available: isConnected,
+        model: "claude-sonnet-4-20250514",
+        features: ["personalized-guidance", "natural-language-processing"]
+      });
+    } catch (error) {
+      console.error("AI health check failed:", error);
+      res.json({ 
+        success: true, 
+        available: false, 
+        reason: "Connection test failed" 
+      });
     }
   });
 
@@ -590,11 +620,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   return httpServer;
 }
 
-function generateLegalGuidance(caseData: any) {
-  // Use the enhanced guidance engine for comprehensive legal guidance
-  const guidance = generateEnhancedGuidance(caseData);
-  
-  // Extract charge classifications
+async function generateLegalGuidance(caseData: any) {
+  // Extract charge classifications first
   const chargeIds = Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges];
   const chargeClassifications = chargeIds
     .map((id: string) => {
@@ -603,7 +630,13 @@ function generateLegalGuidance(caseData: any) {
         console.warn(`Warning: Charge ID "${id}" not found in database`);
         return null;
       }
-      return { name: charge.name, classification: charge.category, code: charge.code };
+      return { 
+        name: charge.name, 
+        classification: charge.category, 
+        code: charge.code,
+        title: charge.name,
+        maxPenalty: charge.maxPenalty 
+      };
     })
     .filter(Boolean);
   
@@ -612,9 +645,36 @@ function generateLegalGuidance(caseData: any) {
     console.warn(`Warning: Could not find all charges. Found ${chargeClassifications.length} of ${chargeIds.length}`);
   }
   
-  // Add charge classification to guidance
+  // Try Claude AI first if API key is available
+  const useAI = !!process.env.ANTHROPIC_API_KEY;
+  
+  if (useAI && (caseData.incidentDescription || caseData.concernsQuestions)) {
+    try {
+      console.log('Generating AI-powered guidance with Claude...');
+      const claudeGuidance = await generateClaudeGuidance(caseData);
+      
+      // Log usage metrics
+      console.log(`Claude usage: ${claudeGuidance.usageMetrics.inputTokens} input + ${claudeGuidance.usageMetrics.outputTokens} output tokens`);
+      console.log(`Estimated cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);
+      
+      return {
+        ...claudeGuidance,
+        chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
+        generatedBy: 'claude-ai'
+      };
+    } catch (error) {
+      console.error('Claude AI failed, falling back to rule-based system:', error);
+      // Fall through to rule-based system
+    }
+  }
+  
+  // Fallback to rule-based guidance engine
+  console.log('Generating rule-based guidance...');
+  const guidance = generateEnhancedGuidance(caseData);
+  
   return {
     ...guidance,
-    chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined
+    chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
+    generatedBy: 'rule-based'
   };
 }
