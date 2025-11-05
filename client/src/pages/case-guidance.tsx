@@ -48,6 +48,7 @@ interface ImmediateAction {
 
 interface EnhancedGuidanceResult {
   sessionId: string;
+  overview: string;
   criticalAlerts: string[];
   immediateActions: ImmediateAction[];
   nextSteps: string[];
@@ -313,6 +314,7 @@ export default function CaseGuidance() {
         // Build the complete guidance data object synchronously
         const guidanceData: EnhancedGuidanceResult = {
           sessionId: result.sessionId,
+          overview: guidance.overview || '',
           criticalAlerts: guidance.criticalAlerts || [],
           immediateActions: guidance.immediateActions || [],
           nextSteps: guidance.nextSteps || [],

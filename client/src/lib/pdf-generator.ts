@@ -8,6 +8,7 @@ interface ImmediateAction {
 
 interface EnhancedGuidanceData {
   sessionId: string;
+  overview: string;
   criticalAlerts: string[];
   immediateActions: ImmediateAction[];
   nextSteps: string[];

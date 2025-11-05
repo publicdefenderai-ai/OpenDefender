@@ -24,6 +24,7 @@ interface CaseDetails {
 }
 
 interface ClaudeGuidance {
+  overview: string;
   criticalAlerts: string[];
   immediateActions: Array<{
     action: string;
@@ -83,6 +84,7 @@ CRITICAL REQUIREMENTS:
 
 RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
+- overview: A 3-5 sentence summary in plain English following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome
 - criticalAlerts: Array of urgent warnings (3-5 items max)
 - immediateActions: Array of {action: string, urgency: 'urgent'|'high'|'medium'|'low'}
 - nextSteps: Array of what to do after immediate actions

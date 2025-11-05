@@ -26,6 +26,7 @@ export interface CourtData {
 }
 
 export interface LegalGuidance {
+  overview: string;
   criticalAlerts: string[];
   immediateActions: Array<{
     action: string;
