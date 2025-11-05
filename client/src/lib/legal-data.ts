@@ -27,7 +27,10 @@ export interface CourtData {
 
 export interface LegalGuidance {
   criticalAlerts: string[];
-  immediateActions: string[];
+  immediateActions: Array<{
+    action: string;
+    urgency: 'urgent' | 'high' | 'medium' | 'low';
+  }>;
   nextSteps: string[];
   deadlines: Array<{
     event: string;

@@ -302,11 +302,16 @@ export default function CaseGuidance() {
       console.log("Received guidance result:", result);
       
       if (result && result.success) {
+        // Wait a tick to ensure the API response is fully processed
+        // This prevents partial rendering of guidance data
+        await new Promise(resolve => setTimeout(resolve, 0));
+        
         // The guidance is directly the EnhancedGuidance object
         const guidance = result.guidance;
         console.log("Processing guidance data:", guidance);
         
-        const guidanceData = {
+        // Build the complete guidance data object synchronously
+        const guidanceData: EnhancedGuidanceResult = {
           sessionId: result.sessionId,
           criticalAlerts: guidance.criticalAlerts || [],
           immediateActions: guidance.immediateActions || [],
@@ -319,14 +324,17 @@ export default function CaseGuidance() {
           courtPreparation: guidance.courtPreparation || [],
           avoidActions: guidance.avoidActions || [],
           timeline: guidance.timeline || [],
-          chargeClassifications: guidance.chargeClassifications,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges
           },
         };
         
+        // Close the QA flow first
         setShowQAFlow(false);
+        
+        // Then set the complete guidance result in one atomic update
+        // This ensures the guidance dashboard receives complete, stable data
         setGuidanceResult(guidanceData);
       } else {
         console.error("API returned unsuccessful result:", result);
