@@ -569,39 +569,6 @@ function buildAvoidActionsForCharges(specificCharges: any[], stageData: any): st
   return Array.from(new Set(avoidActions)); // Remove duplicates
 }
 
-function buildCriticalAlerts(caseData: CaseData, jurisdictionData: any): string[] {
-  const alerts: string[] = [];
-  
-  if (caseData.caseStage === 'arrest') {
-    alerts.push('URGENT: Exercise right to remain silent - do not answer questions without attorney');
-    if (caseData.custodyStatus === 'detained') {
-      alerts.push(`Arraignment must occur ${jurisdictionData.arraignmentDeadline}`);
-    }
-  }
-  
-  if (!caseData.hasAttorney) {
-    alerts.push('CRITICAL: Request public defender immediately if you cannot afford attorney');
-  }
-  
-  return alerts;
-}
-
-function buildImmediateActions(caseData: CaseData, stageData: any, chargeData: any): string[] {
-  const actions: string[] = [];
-  
-  // Add stage-specific actions
-  if (stageData?.criticalActions) {
-    actions.push(...stageData.criticalActions);
-  }
-  
-  // Add charge-specific actions
-  if (chargeData?.immediateActions) {
-    actions.push(...chargeData.immediateActions.slice(0, 3)); // Limit to top 3
-  }
-  
-  return actions;
-}
-
 function buildNextSteps(caseData: CaseData, stageData: any): string[] {
   const steps: string[] = [];
   
@@ -710,27 +677,6 @@ function buildResources(jurisdiction: string, hasAttorney: boolean): GuidanceRes
   );
   
   return resources;
-}
-
-function buildWarnings(caseData: CaseData, chargeData: any): string[] {
-  const warnings: string[] = [
-    'Do not discuss your case on social media',
-    'Avoid contact with witnesses or alleged victims',
-    'Comply with all court orders and bail conditions'
-  ];
-  
-  if (caseData.custodyStatus === 'detained') {
-    warnings.push(
-      'Limited time to prepare defense while in custody',
-      'Maintain good behavior to preserve bail eligibility'
-    );
-  }
-  
-  if (chargeData?.collateralConsequences) {
-    warnings.push(`Potential consequences: ${chargeData.collateralConsequences[0]}`);
-  }
-  
-  return warnings;
 }
 
 function buildCaseTimeline(caseStage: string, jurisdictionData: any): Array<{stage: string; description: string; timeframe: string; completed: boolean}> {

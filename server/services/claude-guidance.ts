@@ -24,11 +24,15 @@ const CACHE_TTL = 60 * 60 * 1000; // 1 hour in milliseconds
 // Clean up expired cache entries periodically
 setInterval(() => {
   const now = Date.now();
-  for (const [key, entry] of responseCache.entries()) {
+  const keysToDelete: string[] = [];
+  
+  responseCache.forEach((entry, key) => {
     if (now - entry.timestamp > CACHE_TTL) {
-      responseCache.delete(key);
+      keysToDelete.push(key);
     }
-  }
+  });
+  
+  keysToDelete.forEach(key => responseCache.delete(key));
 }, 10 * 60 * 1000); // Run cleanup every 10 minutes
 
 interface CaseDetails {
@@ -208,7 +212,7 @@ Remember: Use simple language, be specific, and prioritize by urgency.`;
 
 // Generate cache key from case details
 function generateCacheKey(caseDetails: CaseDetails): string {
-  // Create deterministic hash of case details
+  // Create deterministic hash of ALL case details fields to avoid cache collisions
   const hash = crypto.createHash('sha256');
   hash.update(JSON.stringify({
     jurisdiction: caseDetails.jurisdiction,
@@ -216,7 +220,15 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     caseStage: caseDetails.caseStage,
     custodyStatus: caseDetails.custodyStatus,
     hasAttorney: caseDetails.hasAttorney,
+    arrestDate: caseDetails.arrestDate,
+    arrestLocation: caseDetails.arrestLocation,
     incidentDescription: caseDetails.incidentDescription,
+    policeStatement: caseDetails.policeStatement,
+    witnessesPresent: caseDetails.witnessesPresent,
+    evidenceNotes: caseDetails.evidenceNotes,
+    priorConvictions: caseDetails.priorConvictions,
+    employmentStatus: caseDetails.employmentStatus,
+    familySituation: caseDetails.familySituation,
     concernsQuestions: caseDetails.concernsQuestions,
   }));
   return hash.digest('hex');
@@ -362,9 +374,10 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt();
     const userPrompt = buildUserPrompt(caseDetails);
 
-    // Add timeout protection (30 seconds)
+    // Add timeout protection (30 seconds) with cleanup
+    let timeoutId: NodeJS.Timeout;
     const timeoutPromise = new Promise<never>((_, reject) => {
-      setTimeout(() => reject(new Error('Claude API request timed out after 30 seconds')), 30000);
+      timeoutId = setTimeout(() => reject(new Error('Claude API request timed out after 30 seconds')), 30000);
     });
 
     const apiPromise = anthropic.messages.create({
@@ -378,6 +391,9 @@ export async function generateClaudeGuidance(
           content: userPrompt,
         },
       ],
+    }).finally(() => {
+      // Clear timeout once API call completes (success or failure)
+      clearTimeout(timeoutId);
     });
 
     const message = await Promise.race([apiPromise, timeoutPromise]);
