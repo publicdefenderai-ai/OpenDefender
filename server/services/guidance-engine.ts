@@ -33,6 +33,7 @@ export interface ImmediateAction {
 }
 
 interface EnhancedGuidance {
+  overview: string;
   criticalAlerts: string[];
   immediateActions: ImmediateAction[];
   nextSteps: string[];
@@ -353,6 +354,7 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
   
   // Build comprehensive guidance with charge-specific information
   const guidance: EnhancedGuidance = {
+    overview: buildOverview(caseData, specificCharges, jurisdictionData),
     criticalAlerts: buildCriticalAlertsForCharges(caseData, jurisdictionData, specificCharges),
     immediateActions: buildImmediateActionsForCharges(caseData, stageData, specificCharges, fallbackChargeData),
     nextSteps: buildNextSteps(caseData, stageData),
@@ -677,6 +679,55 @@ function buildResources(jurisdiction: string, hasAttorney: boolean): GuidanceRes
   );
   
   return resources;
+}
+
+function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionData: any): string {
+  const { caseStage, custodyStatus, hasAttorney } = caseData;
+  
+  // Part 1: Current situation
+  let situation = '';
+  if (caseStage === 'arrest') {
+    situation = custodyStatus === 'detained' 
+      ? 'You have been arrested and are currently in custody.' 
+      : 'You have been arrested and released.';
+  } else if (caseStage === 'arraignment') {
+    situation = 'You are at the arraignment stage where charges will be formally read and you will enter a plea.';
+  } else if (caseStage === 'pre-trial') {
+    situation = 'Your case is in the pre-trial phase where evidence is being gathered and reviewed.';
+  } else if (caseStage === 'trial') {
+    situation = 'Your case is going to trial where evidence will be presented and a verdict will be reached.';
+  } else {
+    situation = 'You are facing criminal charges and navigating the legal process.';
+  }
+  
+  // Part 2: Important actions (2-3 key things)
+  let actions = '';
+  if (!hasAttorney) {
+    actions = 'The most important thing right now is to get a lawyer - ask for a public defender if you cannot afford one. Do not make any statements to police without a lawyer present.';
+  } else if (caseStage === 'arrest') {
+    actions = 'Stay silent and do not answer questions without your lawyer. Make sure you attend your arraignment hearing on time.';
+  } else if (caseStage === 'arraignment') {
+    actions = `Work with your lawyer to understand the charges and prepare for your plea. Make sure you meet the deadline for your arraignment: ${jurisdictionData.arraignmentDeadline}.`;
+  } else if (caseStage === 'pre-trial') {
+    actions = 'Work closely with your lawyer to gather evidence and prepare your defense. Follow all court orders and bail conditions.';
+  } else {
+    actions = 'Follow your lawyer\'s advice, attend all court dates, and comply with any conditions of your release.';
+  }
+  
+  // Part 3: Key issue determining outcome
+  let keyIssue = '';
+  if (specificCharges.length > 0) {
+    const charge = specificCharges[0];
+    if (charge.defenseStrategies && charge.defenseStrategies.length > 0) {
+      keyIssue = `The key issue in your case will likely be: ${charge.defenseStrategies[0].toLowerCase()}.`;
+    } else {
+      keyIssue = 'The outcome will depend on the strength of the evidence and your defense strategy.';
+    }
+  } else {
+    keyIssue = 'The strength of the prosecution\'s evidence and your defense strategy will determine the outcome.';
+  }
+  
+  return `${situation} ${actions} ${keyIssue}`;
 }
 
 function buildCaseTimeline(caseStage: string, jurisdictionData: any): Array<{stage: string; description: string; timeframe: string; completed: boolean}> {
