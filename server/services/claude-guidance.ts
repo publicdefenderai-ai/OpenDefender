@@ -11,6 +11,7 @@ if (!apiKey) {
 
 const anthropic = new Anthropic({
   apiKey,
+  timeout: 60000, // 60 second timeout for the SDK
 });
 
 // Simple in-memory cache for identical requests (expires after 1 hour)
@@ -374,14 +375,17 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt();
     const userPrompt = buildUserPrompt(caseDetails);
 
-    // Add timeout protection (30 seconds) with cleanup
+    console.log('Calling Claude API with model: claude-sonnet-4-5');
+    console.log('Prompt length:', userPrompt.length, 'characters');
+
+    // Add timeout protection (60 seconds) with cleanup
     let timeoutId: NodeJS.Timeout;
     const timeoutPromise = new Promise<never>((_, reject) => {
-      timeoutId = setTimeout(() => reject(new Error('Claude API request timed out after 30 seconds')), 30000);
+      timeoutId = setTimeout(() => reject(new Error('Claude API request timed out after 60 seconds')), 60000);
     });
 
     const apiPromise = anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514', // Latest Sonnet 4.5 model
+      model: 'claude-sonnet-4-5', // Claude Sonnet 4.5 (September 2025)
       max_tokens: 4096,
       temperature: 0.3, // Lower temperature for more consistent legal guidance
       system: systemPrompt,
@@ -483,7 +487,7 @@ export async function generateClaudeGuidance(
 export async function testClaudeConnection(): Promise<boolean> {
   try {
     await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5', // Claude Sonnet 4.5 (September 2025)
       max_tokens: 10,
       messages: [{ role: 'user', content: 'test' }],
     });
