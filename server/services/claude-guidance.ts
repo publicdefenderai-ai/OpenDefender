@@ -122,9 +122,10 @@ function sanitizeInput(input: string | undefined, maxLength: number = 5000): str
 }
 
 function buildUserPrompt(caseDetails: CaseDetails): string {
+  // Sanitize charges array/string
   const chargesText = Array.isArray(caseDetails.charges) 
-    ? caseDetails.charges.join(', ') 
-    : caseDetails.charges;
+    ? caseDetails.charges.map(c => sanitizeInput(c, 200)).join(', ') 
+    : sanitizeInput(caseDetails.charges, 200);
 
   let prompt = `Provide legal guidance for this situation:
 

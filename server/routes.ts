@@ -13,8 +13,27 @@ import { scrapingCoordinator } from "./services/scraping-coordinator";
 import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
 import { statuteSeeder } from "./services/statute-seeder";
 import { openLawsClient } from "./services/openlaws-client";
+import rateLimit from "express-rate-limit";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Rate limiter for AI-powered endpoints (expensive operations)
+  const aiRateLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 10, // Limit each IP to 10 requests per 15 minutes
+    message: {
+      success: false,
+      error: 'Too many guidance requests from this IP. Please try again in 15 minutes.'
+    },
+    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+    // Skip rate limiting for local development
+    skip: (req) => {
+      const isDev = process.env.NODE_ENV === 'development';
+      const isLocalhost = req.ip === '127.0.0.1' || req.ip === '::1';
+      return isDev && isLocalhost;
+    }
+  });
+
   // Legal Resources API
   app.get("/api/legal-resources", async (req, res) => {
     try {
@@ -392,8 +411,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Personalized Legal Guidance API
-  app.post("/api/legal-guidance", async (req, res) => {
+  // Personalized Legal Guidance API (rate limited - expensive AI operations)
+  app.post("/api/legal-guidance", aiRateLimiter, async (req, res) => {
     try {
       const sessionId = req.body.sessionId || randomUUID();
       
