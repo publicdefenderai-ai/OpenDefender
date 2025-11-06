@@ -1,5 +1,6 @@
 // Claude AI-Powered Legal Guidance Service
 import Anthropic from '@anthropic-ai/sdk';
+import crypto from 'crypto';
 
 // Validate API key on module load
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -11,6 +12,24 @@ if (!apiKey) {
 const anthropic = new Anthropic({
   apiKey,
 });
+
+// Simple in-memory cache for identical requests (expires after 1 hour)
+interface CacheEntry {
+  response: ClaudeGuidance;
+  timestamp: number;
+}
+const responseCache = new Map<string, CacheEntry>();
+const CACHE_TTL = 60 * 60 * 1000; // 1 hour in milliseconds
+
+// Clean up expired cache entries periodically
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, entry] of responseCache.entries()) {
+    if (now - entry.timestamp > CACHE_TTL) {
+      responseCache.delete(key);
+    }
+  }
+}, 10 * 60 * 1000); // Run cleanup every 10 minutes
 
 interface CaseDetails {
   jurisdiction: string;
@@ -187,6 +206,64 @@ Remember: Use simple language, be specific, and prioritize by urgency.`;
   return prompt;
 }
 
+// Generate cache key from case details
+function generateCacheKey(caseDetails: CaseDetails): string {
+  // Create deterministic hash of case details
+  const hash = crypto.createHash('sha256');
+  hash.update(JSON.stringify({
+    jurisdiction: caseDetails.jurisdiction,
+    charges: caseDetails.charges,
+    caseStage: caseDetails.caseStage,
+    custodyStatus: caseDetails.custodyStatus,
+    hasAttorney: caseDetails.hasAttorney,
+    incidentDescription: caseDetails.incidentDescription,
+    concernsQuestions: caseDetails.concernsQuestions,
+  }));
+  return hash.digest('hex');
+}
+
+// Improved JSON extraction with multiple fallback strategies
+function extractJSON(responseText: string): string {
+  // Strategy 1: Try to extract from markdown code block
+  const markdownMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+  if (markdownMatch) {
+    return markdownMatch[1].trim();
+  }
+
+  // Strategy 2: Look for JSON object with balanced braces
+  const braceStack: number[] = [];
+  let jsonStart = -1;
+  let jsonEnd = -1;
+
+  for (let i = 0; i < responseText.length; i++) {
+    if (responseText[i] === '{') {
+      if (braceStack.length === 0) {
+        jsonStart = i;
+      }
+      braceStack.push(i);
+    } else if (responseText[i] === '}') {
+      braceStack.pop();
+      if (braceStack.length === 0 && jsonStart !== -1) {
+        jsonEnd = i;
+        break;
+      }
+    }
+  }
+
+  if (jsonStart !== -1 && jsonEnd !== -1) {
+    return responseText.slice(jsonStart, jsonEnd + 1);
+  }
+
+  // Strategy 3: Try simple indexOf/lastIndexOf as last resort
+  const simpleStart = responseText.indexOf('{');
+  const simpleEnd = responseText.lastIndexOf('}');
+  if (simpleStart !== -1 && simpleEnd !== -1 && simpleEnd > simpleStart) {
+    return responseText.slice(simpleStart, simpleEnd + 1);
+  }
+
+  throw new Error('No valid JSON structure found in Claude response');
+}
+
 // Validate Claude response structure
 function validateClaudeResponse(data: any): void {
   const validUrgencies = ['urgent', 'high', 'medium', 'low'];
@@ -272,11 +349,25 @@ function validateClaudeResponse(data: any): void {
 export async function generateClaudeGuidance(
   caseDetails: CaseDetails
 ): Promise<ClaudeGuidance> {
+  // Check cache first
+  const cacheKey = generateCacheKey(caseDetails);
+  const cachedEntry = responseCache.get(cacheKey);
+  
+  if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_TTL) {
+    console.log('Cache hit for guidance request');
+    return cachedEntry.response;
+  }
+
   try {
     const systemPrompt = buildSystemPrompt();
     const userPrompt = buildUserPrompt(caseDetails);
 
-    const message = await anthropic.messages.create({
+    // Add timeout protection (30 seconds)
+    const timeoutPromise = new Promise<never>((_, reject) => {
+      setTimeout(() => reject(new Error('Claude API request timed out after 30 seconds')), 30000);
+    });
+
+    const apiPromise = anthropic.messages.create({
       model: 'claude-sonnet-4-20250514', // Latest Sonnet 4.5 model
       max_tokens: 4096,
       temperature: 0.3, // Lower temperature for more consistent legal guidance
@@ -289,39 +380,24 @@ export async function generateClaudeGuidance(
       ],
     });
 
+    const message = await Promise.race([apiPromise, timeoutPromise]);
+
     // Extract the text content
     const textContent = message.content.find(block => block.type === 'text');
     if (!textContent || textContent.type !== 'text') {
       throw new Error('No text content in Claude response');
     }
 
-    // Parse the JSON response
+    // Parse the JSON response using improved extraction
     const responseText = textContent.text;
-    
-    // Try to extract JSON from the response (Claude sometimes wraps it in markdown)
-    let jsonText: string;
-    const jsonMatch = responseText.match(/```json\s*([\s\S]*?)\s*```/);
-    
-    if (jsonMatch) {
-      jsonText = jsonMatch[1];
-    } else {
-      // Try to find JSON object (find first { and last })
-      const jsonStart = responseText.indexOf('{');
-      const jsonEnd = responseText.lastIndexOf('}');
-      
-      if (jsonStart === -1 || jsonEnd === -1 || jsonEnd < jsonStart) {
-        throw new Error('No valid JSON found in Claude response');
-      }
-      
-      jsonText = responseText.slice(jsonStart, jsonEnd + 1);
-    }
+    const jsonText = extractJSON(responseText);
     
     // Parse and validate the JSON
     let parsedData: any;
     try {
       parsedData = JSON.parse(jsonText);
     } catch (parseError) {
-      throw new Error(`Failed to parse Claude response as JSON: ${parseError instanceof Error ? parseError.message : 'Unknown parse error'}`);
+      throw new Error(`Failed to parse Claude response as JSON: ${parseError instanceof Error ? parseError.message : 'Unknown parse error'}. Response preview: ${responseText.slice(0, 200)}...`);
     }
 
     // Validate response structure
@@ -353,9 +429,34 @@ export async function generateClaudeGuidance(
       },
     };
 
+    // Cache the successful response
+    responseCache.set(cacheKey, {
+      response: guidance,
+      timestamp: Date.now(),
+    });
+
     return guidance;
   } catch (error) {
     console.error('Claude AI error:', error);
+    
+    // Provide specific error messages based on error type
+    if (error instanceof Anthropic.APIError) {
+      if (error.status === 429) {
+        throw new Error('AI service is currently overloaded. Please try again in a few minutes.');
+      } else if (error.status === 401 || error.status === 403) {
+        throw new Error('AI service authentication failed. Please contact support.');
+      } else if (error.status === 500 || error.status === 503) {
+        throw new Error('AI service is temporarily unavailable. Please try again shortly.');
+      } else if (error.status === 400) {
+        throw new Error('Invalid request to AI service. Please try with different input.');
+      }
+    }
+    
+    // Check for timeout
+    if (error instanceof Error && error.message.includes('timed out')) {
+      throw new Error('AI service request timed out. The service may be experiencing high load. Please try again.');
+    }
+    
     throw new Error(
       `Failed to generate AI guidance: ${error instanceof Error ? error.message : 'Unknown error'}`
     );
