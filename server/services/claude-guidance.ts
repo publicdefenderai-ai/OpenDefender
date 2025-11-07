@@ -1,16 +1,24 @@
 // Claude AI-Powered Legal Guidance Service
+// Using Replit AI Integrations for Anthropic access (no personal API key required)
 import Anthropic from '@anthropic-ai/sdk';
 import crypto from 'crypto';
 
-// Validate API key on module load
-const apiKey = process.env.ANTHROPIC_API_KEY;
-if (!apiKey) {
-  console.error('CRITICAL: ANTHROPIC_API_KEY environment variable is not set');
-  throw new Error('ANTHROPIC_API_KEY environment variable is required for AI guidance features');
+// Validate Replit AI Integrations credentials
+const apiKey = process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY;
+const baseURL = process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL;
+
+if (!apiKey || !baseURL) {
+  console.error('CRITICAL: Replit AI Integrations credentials not set');
+  console.error('Missing:', {
+    apiKey: !apiKey ? 'AI_INTEGRATIONS_ANTHROPIC_API_KEY' : 'present',
+    baseURL: !baseURL ? 'AI_INTEGRATIONS_ANTHROPIC_BASE_URL' : 'present'
+  });
+  throw new Error('Replit AI Integrations credentials required for AI guidance features');
 }
 
 const anthropic = new Anthropic({
   apiKey,
+  baseURL,
   timeout: 60000, // 60 second timeout for the SDK
 });
 
@@ -376,17 +384,15 @@ export async function generateClaudeGuidance(
     const userPrompt = buildUserPrompt(caseDetails);
 
     console.log('Calling Claude API with model: claude-sonnet-4-5');
+    console.log('Base URL:', baseURL);
     console.log('Prompt length:', userPrompt.length, 'characters');
 
-    // Add timeout protection (60 seconds) with cleanup
-    let timeoutId: NodeJS.Timeout;
-    const timeoutPromise = new Promise<never>((_, reject) => {
-      timeoutId = setTimeout(() => reject(new Error('Claude API request timed out after 60 seconds')), 60000);
-    });
-
-    const apiPromise = anthropic.messages.create({
+    console.log('Making API request to Claude...');
+    const startTime = Date.now();
+    
+    const message = await anthropic.messages.create({
       model: 'claude-sonnet-4-5', // Claude Sonnet 4.5 (September 2025)
-      max_tokens: 4096,
+      max_tokens: 3072, // Balanced to provide complete responses without timing out
       temperature: 0.3, // Lower temperature for more consistent legal guidance
       system: systemPrompt,
       messages: [
@@ -395,12 +401,10 @@ export async function generateClaudeGuidance(
           content: userPrompt,
         },
       ],
-    }).finally(() => {
-      // Clear timeout once API call completes (success or failure)
-      clearTimeout(timeoutId);
     });
-
-    const message = await Promise.race([apiPromise, timeoutPromise]);
+    
+    console.log('Claude API responded in', Date.now() - startTime, 'ms');
+    console.log('Response usage:', message.usage);
 
     // Extract the text content
     const textContent = message.content.find(block => block.type === 'text');
