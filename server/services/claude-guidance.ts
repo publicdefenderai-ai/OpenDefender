@@ -367,6 +367,61 @@ function validateClaudeResponse(data: any): void {
   }
 }
 
+// Helper function to make Claude API call with retry logic
+async function callClaudeWithRetry(
+  systemPrompt: string,
+  userPrompt: string,
+  maxRetries: number = 1
+): Promise<Anthropic.Messages.Message> {
+  let lastError: Error | null = null;
+  
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      if (attempt > 0) {
+        console.log(`Retrying Claude API call (attempt ${attempt + 1}/${maxRetries + 1})...`);
+      }
+      
+      const startTime = Date.now();
+      const message = await anthropic.messages.create({
+        model: 'claude-sonnet-4-5',
+        max_tokens: 3072,
+        temperature: 0.3,
+        system: systemPrompt,
+        messages: [
+          {
+            role: 'user',
+            content: userPrompt,
+          },
+        ],
+      });
+      
+      console.log('Claude API responded in', Date.now() - startTime, 'ms');
+      console.log('Response usage:', message.usage);
+      
+      return message;
+    } catch (error: any) {
+      lastError = error;
+      
+      // Check if this is a timeout error that we should retry
+      const isTimeout = error.constructor.name === 'APIConnectionTimeoutError' || 
+                       (error instanceof Error && error.message.includes('timed out'));
+      
+      if (isTimeout && attempt < maxRetries) {
+        console.warn(`Claude API timed out on attempt ${attempt + 1}, will retry...`);
+        // Add a small delay before retry (1 second)
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        continue;
+      }
+      
+      // If not a timeout or we've exhausted retries, throw the error
+      throw error;
+    }
+  }
+  
+  // This should never be reached, but TypeScript needs it
+  throw lastError || new Error('Failed to call Claude API after retries');
+}
+
 export async function generateClaudeGuidance(
   caseDetails: CaseDetails
 ): Promise<ClaudeGuidance> {
@@ -387,24 +442,9 @@ export async function generateClaudeGuidance(
     console.log('Base URL:', baseURL);
     console.log('Prompt length:', userPrompt.length, 'characters');
 
-    console.log('Making API request to Claude...');
-    const startTime = Date.now();
+    console.log('Making API request to Claude (with retry on timeout)...');
     
-    const message = await anthropic.messages.create({
-      model: 'claude-sonnet-4-5', // Claude Sonnet 4.5 (September 2025)
-      max_tokens: 3072, // Balanced to provide complete responses without timing out
-      temperature: 0.3, // Lower temperature for more consistent legal guidance
-      system: systemPrompt,
-      messages: [
-        {
-          role: 'user',
-          content: userPrompt,
-        },
-      ],
-    });
-    
-    console.log('Claude API responded in', Date.now() - startTime, 'ms');
-    console.log('Response usage:', message.usage);
+    const message = await callClaudeWithRetry(systemPrompt, userPrompt, 1);
 
     // Extract the text content
     const textContent = message.content.find(block => block.type === 'text');
