@@ -382,7 +382,7 @@ async function callClaudeWithRetry(
       const timeoutMs = 65000; // 65 seconds - slightly longer than SDK timeout
       const apiCallPromise = anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 3072,
+        max_tokens: 2048,
         temperature: 0.3,
         system: systemPrompt,
         messages: [
@@ -446,8 +446,8 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt();
     const userPrompt = buildUserPrompt(caseDetails);
 
-    console.log('Calling Claude API with model: claude-sonnet-4-20250514');
-    console.log('Using direct Anthropic API (https://api.anthropic.com)');
+    console.log('Generating personalized guidance with Claude Sonnet 4...');
+    console.log('Using direct Anthropic API');
     console.log('Prompt length:', userPrompt.length, 'characters');
 
     console.log('Making API request to Claude (with retry on timeout)...');
