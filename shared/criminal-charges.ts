@@ -1951,7 +1951,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: 'PC 432',
+    code: '432',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under California law',
@@ -1964,7 +1964,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: 'PC 602',
+    code: '602',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Intentional killing without premeditation under California law',
@@ -1977,7 +1977,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: 'PC 536',
+    code: '536',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Depraved indifference killing under California law',
@@ -1990,7 +1990,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: 'PC 352',
+    code: '352',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Killing in heat of passion under California law',
@@ -2003,7 +2003,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: 'PC 576',
+    code: '576',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under California law',
@@ -2016,7 +2016,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: 'PC 631',
+    code: '631',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Death caused by criminal negligence under California law',
@@ -2029,7 +2029,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: 'PC 931',
+    code: '931',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under California law',
@@ -2042,7 +2042,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-felony-murder',
     name: 'Felony Murder',
-    code: 'PC 841',
+    code: '841',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Death occurring during commission of felony under California law',
@@ -2055,7 +2055,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: 'PC 625',
+    code: '625',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under California law',
@@ -2068,7 +2068,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: 'PC 543',
+    code: '543',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Reckless serious bodily injury under California law',
@@ -2081,7 +2081,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: 'PC 362',
+    code: '362',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under California law',
@@ -2094,7 +2094,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-aggravated-assault',
     name: 'Aggravated Assault',
-    code: 'PC 217',
+    code: '217',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under California law',
@@ -2107,7 +2107,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PC 554',
+    code: '554',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Assault using dangerous weapon under California law',
@@ -2120,7 +2120,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: 'PC 737',
+    code: '737',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Assault against family/household member under California law',
@@ -2133,7 +2133,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: 'PC 787',
+    code: '787',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Assault on law enforcement officer under California law',
@@ -2146,7 +2146,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-menacing',
     name: 'Menacing',
-    code: 'PC 865',
+    code: '865',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under California law',
@@ -2159,7 +2159,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: 'PC 395',
+    code: '395',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under California law',
@@ -2172,7 +2172,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: 'PC 771',
+    code: '771',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under California law',
@@ -2185,7 +2185,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: 'PC 733',
+    code: '733',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under California law',
@@ -2198,7 +2198,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: 'PC 123',
+    code: '123',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual contact without consent under California law',
@@ -2211,7 +2211,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: 'PC 615',
+    code: '615',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual contact with person under 16 under California law',
@@ -2224,7 +2224,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-statutory-rape',
     name: 'Statutory Rape',
-    code: 'PC 193',
+    code: '193',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual intercourse with minor under California law',
@@ -2237,7 +2237,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: 'PC 992',
+    code: '992',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under California law',
@@ -2250,7 +2250,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: 'PC 495',
+    code: '495',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Using minor in sexual performance under California law',
@@ -2263,7 +2263,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: 'PC 289',
+    code: '289',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft over $50,000 under California law',
@@ -2276,7 +2276,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: 'PC 183',
+    code: '183',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft over $5,000 under California law',
@@ -2289,7 +2289,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: 'PC 807',
+    code: '807',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft over $1,000 under California law',
@@ -2302,7 +2302,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-petty-theft',
     name: 'Petty Theft',
-    code: 'PC 247',
+    code: '247',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under California law',
@@ -2315,7 +2315,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: 'PC 426',
+    code: '426',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Receiving stolen property under California law',
@@ -2328,7 +2328,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-identity-theft',
     name: 'Identity Theft',
-    code: 'PC 528',
+    code: '528',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Using another person\'s identifying information under California law',
@@ -2341,7 +2341,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: 'PC 867',
+    code: '867',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unauthorized use of credit card under California law',
@@ -2354,7 +2354,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-embezzlement',
     name: 'Embezzlement',
-    code: 'PC 679',
+    code: '679',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Theft by person in position of trust under California law',
@@ -2367,7 +2367,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-shoplifting',
     name: 'Shoplifting',
-    code: 'PC 732',
+    code: '732',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under California law',
@@ -2380,7 +2380,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: 'PC 992',
+    code: '992',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under California law',
@@ -2393,7 +2393,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: 'PC 767',
+    code: '767',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry of dwelling under California law',
@@ -2406,7 +2406,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: 'PC 275',
+    code: '275',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry of building under California law',
@@ -2419,7 +2419,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-residential-burglary',
     name: 'Residential Burglary',
-    code: 'PC 576',
+    code: '576',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Burglary of occupied dwelling under California law',
@@ -2432,7 +2432,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-commercial-burglary',
     name: 'Commercial Burglary',
-    code: 'PC 828',
+    code: '828',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Burglary of commercial building under California law',
@@ -2445,7 +2445,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-auto-burglary',
     name: 'Auto Burglary',
-    code: 'PC 206',
+    code: '206',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful entry of vehicle under California law',
@@ -2458,7 +2458,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: 'PC 704',
+    code: '704',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Armed robbery with injury under California law',
@@ -2471,7 +2471,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: 'PC 277',
+    code: '277',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Armed robbery under California law',
@@ -2484,7 +2484,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: 'PC 920',
+    code: '920',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery by force or threat under California law',
@@ -2497,7 +2497,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-carjacking',
     name: 'Carjacking',
-    code: 'PC 885',
+    code: '885',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery of motor vehicle under California law',
@@ -2510,7 +2510,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-bank-robbery',
     name: 'Bank Robbery',
-    code: 'PC 674',
+    code: '674',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery of financial institution under California law',
@@ -2523,7 +2523,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: 'PC 486',
+    code: '486',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under California law',
@@ -2536,7 +2536,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: 'PC 860',
+    code: '860',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Possession of drugs for distribution under California law',
@@ -2549,7 +2549,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: 'PC 263',
+    code: '263',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under California law',
@@ -2562,7 +2562,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: 'PC 858',
+    code: '858',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful production of controlled substances under California law',
@@ -2575,7 +2575,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-drug-trafficking',
     name: 'Drug Trafficking',
-    code: 'PC 682',
+    code: '682',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Large-scale drug distribution under California law',
@@ -2588,7 +2588,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: 'PC 196',
+    code: '196',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under California law',
@@ -2601,7 +2601,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: 'PC 358',
+    code: '358',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Allowing premises for drug activity under California law',
@@ -2614,7 +2614,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: 'PC 817',
+    code: '817',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under California law',
@@ -2627,7 +2627,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: 'PC 717',
+    code: '717',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Firearm possession by prohibited person under California law',
@@ -2640,7 +2640,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: 'PC 664',
+    code: '664',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unlawful discharge of firearm under California law',
@@ -2653,7 +2653,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: 'PC 333',
+    code: '333',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Possession of illegal weapon under California law',
@@ -2666,7 +2666,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-wire-fraud',
     name: 'Wire Fraud',
-    code: 'PC 370',
+    code: '370',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraud using electronic communications under California law',
@@ -2679,7 +2679,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-mail-fraud',
     name: 'Mail Fraud',
-    code: 'PC 954',
+    code: '954',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraud using postal service under California law',
@@ -2692,7 +2692,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-check-fraud',
     name: 'Check Fraud',
-    code: 'PC 562',
+    code: '562',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent use of checks under California law',
@@ -2705,7 +2705,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-insurance-fraud',
     name: 'Insurance Fraud',
-    code: 'PC 517',
+    code: '517',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent insurance claims under California law',
@@ -2718,7 +2718,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-tax-fraud',
     name: 'Tax Fraud',
-    code: 'PC 140',
+    code: '140',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent tax reporting under California law',
@@ -2731,7 +2731,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-forgery',
     name: 'Forgery',
-    code: 'PC 322',
+    code: '322',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Creating false documents under California law',
@@ -2744,7 +2744,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-computer-fraud',
     name: 'Computer Fraud',
-    code: 'PC 404',
+    code: '404',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under California law',
@@ -2757,7 +2757,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: 'PC 537',
+    code: '537',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under California law',
@@ -2770,7 +2770,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-public-intoxication',
     name: 'Public Intoxication',
-    code: 'PC 538',
+    code: '538',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under California law',
@@ -2783,7 +2783,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: 'PC 925',
+    code: '925',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under California law',
@@ -2796,7 +2796,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-trespassing',
     name: 'Trespassing',
-    code: 'PC 803',
+    code: '803',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under California law',
@@ -2809,7 +2809,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-vandalism',
     name: 'Vandalism',
-    code: 'PC 794',
+    code: '794',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Destruction of property under California law',
@@ -2822,7 +2822,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-loitering',
     name: 'Loitering',
-    code: 'PC 910',
+    code: '910',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under California law',
@@ -2835,7 +2835,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-dui-first-offense',
     name: 'DUI First Offense',
-    code: 'PC 827',
+    code: '827',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under California law',
@@ -2848,7 +2848,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-dui-second-offense',
     name: 'DUI Second Offense',
-    code: 'PC 981',
+    code: '981',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under California law',
@@ -2861,7 +2861,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-dui-third-offense',
     name: 'DUI Third Offense',
-    code: 'PC 277',
+    code: '277',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Driving under influence, felony level under California law',
@@ -2874,7 +2874,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-reckless-driving',
     name: 'Reckless Driving',
-    code: 'PC 257',
+    code: '257',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under California law',
@@ -2887,7 +2887,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-hit-and-run',
     name: 'Hit and Run',
-    code: 'PC 107',
+    code: '107',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under California law',
@@ -2900,7 +2900,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: 'PC 567',
+    code: '567',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Driving with suspended license under California law',
@@ -29849,7 +29849,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: 'PL 213.12',
+    code: '213.12',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under New York law',
@@ -29862,7 +29862,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: 'PL 304.31',
+    code: '304.31',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Intentional killing without premeditation under New York law',
@@ -29875,7 +29875,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: 'PL 210.68',
+    code: '210.68',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Depraved indifference killing under New York law',
@@ -29888,7 +29888,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: 'PL 105.43',
+    code: '105.43',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Killing in heat of passion under New York law',
@@ -29901,7 +29901,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: 'PL 290.15',
+    code: '290.15',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under New York law',
@@ -29914,7 +29914,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: 'PL 218.25',
+    code: '218.25',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Death caused by criminal negligence under New York law',
@@ -29927,7 +29927,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: 'PL 185.31',
+    code: '185.31',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under New York law',
@@ -29940,7 +29940,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-felony-murder',
     name: 'Felony Murder',
-    code: 'PL 217.26',
+    code: '217.26',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Death occurring during commission of felony under New York law',
@@ -29953,7 +29953,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: 'PL 387.44',
+    code: '387.44',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under New York law',
@@ -29966,7 +29966,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: 'PL 187.67',
+    code: '187.67',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Reckless serious bodily injury under New York law',
@@ -29979,7 +29979,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: 'PL 295.70',
+    code: '295.70',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under New York law',
@@ -29992,7 +29992,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-aggravated-assault',
     name: 'Aggravated Assault',
-    code: 'PL 386.87',
+    code: '386.87',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under New York law',
@@ -30005,7 +30005,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PL 156.60',
+    code: '156.60',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Assault using dangerous weapon under New York law',
@@ -30018,7 +30018,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: 'PL 155.74',
+    code: '155.74',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Assault against family/household member under New York law',
@@ -30031,7 +30031,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: 'PL 296.70',
+    code: '296.70',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Assault on law enforcement officer under New York law',
@@ -30044,7 +30044,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-menacing',
     name: 'Menacing',
-    code: 'PL 211.38',
+    code: '211.38',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under New York law',
@@ -30057,7 +30057,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: 'PL 269.60',
+    code: '269.60',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under New York law',
@@ -30070,7 +30070,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: 'PL 361.19',
+    code: '361.19',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under New York law',
@@ -30083,7 +30083,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: 'PL 305.75',
+    code: '305.75',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under New York law',
@@ -30096,7 +30096,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: 'PL 180.72',
+    code: '180.72',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual contact without consent under New York law',
@@ -30109,7 +30109,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: 'PL 188.88',
+    code: '188.88',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual contact with person under 16 under New York law',
@@ -30122,7 +30122,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-statutory-rape',
     name: 'Statutory Rape',
-    code: 'PL 293.29',
+    code: '293.29',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual intercourse with minor under New York law',
@@ -30135,7 +30135,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: 'PL 144.79',
+    code: '144.79',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under New York law',
@@ -30148,7 +30148,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: 'PL 341.98',
+    code: '341.98',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Using minor in sexual performance under New York law',
@@ -30161,7 +30161,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: 'PL 358.95',
+    code: '358.95',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Theft over $50,000 under New York law',
@@ -30174,7 +30174,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: 'PL 222.31',
+    code: '222.31',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Theft over $5,000 under New York law',
@@ -30187,7 +30187,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: 'PL 300.18',
+    code: '300.18',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Theft over $1,000 under New York law',
@@ -30200,7 +30200,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-petty-theft',
     name: 'Petty Theft',
-    code: 'PL 258.71',
+    code: '258.71',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under New York law',
@@ -30213,7 +30213,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: 'PL 348.90',
+    code: '348.90',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Receiving stolen property under New York law',
@@ -30226,7 +30226,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-identity-theft',
     name: 'Identity Theft',
-    code: 'PL 395.34',
+    code: '395.34',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Using another person\'s identifying information under New York law',
@@ -30239,7 +30239,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: 'PL 115.98',
+    code: '115.98',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unauthorized use of credit card under New York law',
@@ -30252,7 +30252,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-embezzlement',
     name: 'Embezzlement',
-    code: 'PL 168.58',
+    code: '168.58',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Theft by person in position of trust under New York law',
@@ -30265,7 +30265,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-shoplifting',
     name: 'Shoplifting',
-    code: 'PL 311.12',
+    code: '311.12',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under New York law',
@@ -30278,7 +30278,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: 'PL 306.20',
+    code: '306.20',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under New York law',
@@ -30291,7 +30291,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: 'PL 393.46',
+    code: '393.46',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful entry of dwelling under New York law',
@@ -30304,7 +30304,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: 'PL 317.68',
+    code: '317.68',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful entry of building under New York law',
@@ -30317,7 +30317,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-residential-burglary',
     name: 'Residential Burglary',
-    code: 'PL 343.22',
+    code: '343.22',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Burglary of occupied dwelling under New York law',
@@ -30330,7 +30330,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-commercial-burglary',
     name: 'Commercial Burglary',
-    code: 'PL 360.51',
+    code: '360.51',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Burglary of commercial building under New York law',
@@ -30343,7 +30343,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-auto-burglary',
     name: 'Auto Burglary',
-    code: 'PL 336.43',
+    code: '336.43',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful entry of vehicle under New York law',
@@ -30356,7 +30356,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: 'PL 244.31',
+    code: '244.31',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Armed robbery with injury under New York law',
@@ -30369,7 +30369,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: 'PL 174.68',
+    code: '174.68',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Armed robbery under New York law',
@@ -30382,7 +30382,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: 'PL 362.78',
+    code: '362.78',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Robbery by force or threat under New York law',
@@ -30395,7 +30395,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-carjacking',
     name: 'Carjacking',
-    code: 'PL 313.72',
+    code: '313.72',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Robbery of motor vehicle under New York law',
@@ -30408,7 +30408,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-bank-robbery',
     name: 'Bank Robbery',
-    code: 'PL 367.72',
+    code: '367.72',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Robbery of financial institution under New York law',
@@ -30421,7 +30421,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: 'PL 305.46',
+    code: '305.46',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under New York law',
@@ -30434,7 +30434,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: 'PL 234.22',
+    code: '234.22',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Possession of drugs for distribution under New York law',
@@ -30447,7 +30447,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: 'PL 170.51',
+    code: '170.51',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under New York law',
@@ -30460,7 +30460,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: 'PL 151.40',
+    code: '151.40',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful production of controlled substances under New York law',
@@ -30473,7 +30473,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-drug-trafficking',
     name: 'Drug Trafficking',
-    code: 'PL 220.19',
+    code: '220.19',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Large-scale drug distribution under New York law',
@@ -30486,7 +30486,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: 'PL 164.66',
+    code: '164.66',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under New York law',
@@ -30499,7 +30499,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: 'PL 221.77',
+    code: '221.77',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Allowing premises for drug activity under New York law',
@@ -30512,7 +30512,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: 'PL 110.43',
+    code: '110.43',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under New York law',
@@ -30525,7 +30525,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: 'PL 147.62',
+    code: '147.62',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Firearm possession by prohibited person under New York law',
@@ -30538,7 +30538,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: 'PL 259.77',
+    code: '259.77',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unlawful discharge of firearm under New York law',
@@ -30551,7 +30551,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: 'PL 186.90',
+    code: '186.90',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Possession of illegal weapon under New York law',
@@ -30564,7 +30564,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-wire-fraud',
     name: 'Wire Fraud',
-    code: 'PL 346.12',
+    code: '346.12',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraud using electronic communications under New York law',
@@ -30577,7 +30577,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-mail-fraud',
     name: 'Mail Fraud',
-    code: 'PL 235.45',
+    code: '235.45',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraud using postal service under New York law',
@@ -30590,7 +30590,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-check-fraud',
     name: 'Check Fraud',
-    code: 'PL 216.65',
+    code: '216.65',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraudulent use of checks under New York law',
@@ -30603,7 +30603,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-insurance-fraud',
     name: 'Insurance Fraud',
-    code: 'PL 123.62',
+    code: '123.62',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraudulent insurance claims under New York law',
@@ -30616,7 +30616,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-tax-fraud',
     name: 'Tax Fraud',
-    code: 'PL 309.62',
+    code: '309.62',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraudulent tax reporting under New York law',
@@ -30629,7 +30629,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-forgery',
     name: 'Forgery',
-    code: 'PL 297.78',
+    code: '297.78',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Creating false documents under New York law',
@@ -30642,7 +30642,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-computer-fraud',
     name: 'Computer Fraud',
-    code: 'PL 269.90',
+    code: '269.90',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under New York law',
@@ -30655,7 +30655,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: 'PL 303.53',
+    code: '303.53',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Disrupting public peace under New York law',
@@ -30668,7 +30668,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-public-intoxication',
     name: 'Public Intoxication',
-    code: 'PL 231.64',
+    code: '231.64',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under New York law',
@@ -30681,7 +30681,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: 'PL 254.28',
+    code: '254.28',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under New York law',
@@ -30694,7 +30694,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-trespassing',
     name: 'Trespassing',
-    code: 'PL 281.35',
+    code: '281.35',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under New York law',
@@ -30707,7 +30707,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-vandalism',
     name: 'Vandalism',
-    code: 'PL 215.87',
+    code: '215.87',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Destruction of property under New York law',
@@ -30720,7 +30720,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-loitering',
     name: 'Loitering',
-    code: 'PL 213.93',
+    code: '213.93',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under New York law',
@@ -30733,7 +30733,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-dui-first-offense',
     name: 'DUI First Offense',
-    code: 'PL 221.36',
+    code: '221.36',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under New York law',
@@ -30746,7 +30746,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-dui-second-offense',
     name: 'DUI Second Offense',
-    code: 'PL 354.51',
+    code: '354.51',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under New York law',
@@ -30759,7 +30759,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-dui-third-offense',
     name: 'DUI Third Offense',
-    code: 'PL 326.19',
+    code: '326.19',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Driving under influence, felony level under New York law',
@@ -30772,7 +30772,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-reckless-driving',
     name: 'Reckless Driving',
-    code: 'PL 383.82',
+    code: '383.82',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under New York law',
@@ -30785,7 +30785,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-hit-and-run',
     name: 'Hit and Run',
-    code: 'PL 350.51',
+    code: '350.51',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under New York law',
@@ -30798,7 +30798,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: 'PL 148.38',
+    code: '148.38',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Driving with suspended license under New York law',
@@ -40431,7 +40431,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: 'PC 10.18',
+    code: '10.18',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Texas law',
@@ -40444,7 +40444,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: 'PC 3.2',
+    code: '3.2',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Intentional killing without premeditation under Texas law',
@@ -40457,7 +40457,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: 'PC 49.9',
+    code: '49.9',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Depraved indifference killing under Texas law',
@@ -40470,7 +40470,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: 'PC 12.16',
+    code: '12.16',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Killing in heat of passion under Texas law',
@@ -40483,7 +40483,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: 'PC 11.20',
+    code: '11.20',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Texas law',
@@ -40496,7 +40496,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: 'PC 28.9',
+    code: '28.9',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Death caused by criminal negligence under Texas law',
@@ -40509,7 +40509,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: 'PC 15.18',
+    code: '15.18',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Texas law',
@@ -40522,7 +40522,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-felony-murder',
     name: 'Felony Murder',
-    code: 'PC 48.7',
+    code: '48.7',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Death occurring during commission of felony under Texas law',
@@ -40535,7 +40535,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: 'PC 16.19',
+    code: '16.19',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Texas law',
@@ -40548,7 +40548,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: 'PC 21.16',
+    code: '21.16',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Reckless serious bodily injury under Texas law',
@@ -40561,7 +40561,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: 'PC 42.15',
+    code: '42.15',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Texas law',
@@ -40574,7 +40574,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-aggravated-assault',
     name: 'Aggravated Assault',
-    code: 'PC 40.12',
+    code: '40.12',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Texas law',
@@ -40587,7 +40587,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: 'PC 32.10',
+    code: '32.10',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Assault using dangerous weapon under Texas law',
@@ -40600,7 +40600,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: 'PC 3.11',
+    code: '3.11',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Texas law',
@@ -40613,7 +40613,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: 'PC 27.10',
+    code: '27.10',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Assault on law enforcement officer under Texas law',
@@ -40626,7 +40626,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-menacing',
     name: 'Menacing',
-    code: 'PC 9.5',
+    code: '9.5',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under Texas law',
@@ -40639,7 +40639,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: 'PC 19.3',
+    code: '19.3',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Texas law',
@@ -40652,7 +40652,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: 'PC 23.7',
+    code: '23.7',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Texas law',
@@ -40665,7 +40665,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: 'PC 13.8',
+    code: '13.8',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Texas law',
@@ -40678,7 +40678,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: 'PC 44.17',
+    code: '44.17',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual contact without consent under Texas law',
@@ -40691,7 +40691,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: 'PC 26.5',
+    code: '26.5',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Texas law',
@@ -40704,7 +40704,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-statutory-rape',
     name: 'Statutory Rape',
-    code: 'PC 22.12',
+    code: '22.12',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual intercourse with minor under Texas law',
@@ -40717,7 +40717,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: 'PC 24.4',
+    code: '24.4',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Texas law',
@@ -40730,7 +40730,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: 'PC 31.16',
+    code: '31.16',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Using minor in sexual performance under Texas law',
@@ -40743,7 +40743,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: 'PC 26.19',
+    code: '26.19',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft over $50,000 under Texas law',
@@ -40756,7 +40756,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: 'PC 7.6',
+    code: '7.6',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft over $5,000 under Texas law',
@@ -40769,7 +40769,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: 'PC 49.19',
+    code: '49.19',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft over $1,000 under Texas law',
@@ -40782,7 +40782,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-petty-theft',
     name: 'Petty Theft',
-    code: 'PC 11.10',
+    code: '11.10',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under Texas law',
@@ -40795,7 +40795,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: 'PC 48.14',
+    code: '48.14',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Texas law',
@@ -40808,7 +40808,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-identity-theft',
     name: 'Identity Theft',
-    code: 'PC 6.6',
+    code: '6.6',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Using another person\'s identifying information under Texas law',
@@ -40821,7 +40821,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: 'PC 37.18',
+    code: '37.18',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unauthorized use of credit card under Texas law',
@@ -40834,7 +40834,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-embezzlement',
     name: 'Embezzlement',
-    code: 'PC 41.1',
+    code: '41.1',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft by person in position of trust under Texas law',
@@ -40847,7 +40847,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-shoplifting',
     name: 'Shoplifting',
-    code: 'PC 12.9',
+    code: '12.9',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Texas law',
@@ -40860,7 +40860,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: 'PC 8.16',
+    code: '8.16',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Texas law',
@@ -40873,7 +40873,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: 'PC 35.16',
+    code: '35.16',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Texas law',
@@ -40886,7 +40886,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: 'PC 7.15',
+    code: '7.15',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry of building under Texas law',
@@ -40899,7 +40899,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-residential-burglary',
     name: 'Residential Burglary',
-    code: 'PC 16.17',
+    code: '16.17',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Texas law',
@@ -40912,7 +40912,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-commercial-burglary',
     name: 'Commercial Burglary',
-    code: 'PC 43.11',
+    code: '43.11',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Burglary of commercial building under Texas law',
@@ -40925,7 +40925,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-auto-burglary',
     name: 'Auto Burglary',
-    code: 'PC 44.3',
+    code: '44.3',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Texas law',
@@ -40938,7 +40938,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: 'PC 21.17',
+    code: '21.17',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Armed robbery with injury under Texas law',
@@ -40951,7 +40951,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: 'PC 42.7',
+    code: '42.7',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Armed robbery under Texas law',
@@ -40964,7 +40964,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: 'PC 15.3',
+    code: '15.3',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Robbery by force or threat under Texas law',
@@ -40977,7 +40977,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-carjacking',
     name: 'Carjacking',
-    code: 'PC 17.11',
+    code: '17.11',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Robbery of motor vehicle under Texas law',
@@ -40990,7 +40990,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-bank-robbery',
     name: 'Bank Robbery',
-    code: 'PC 23.8',
+    code: '23.8',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Robbery of financial institution under Texas law',
@@ -41003,7 +41003,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: 'PC 41.16',
+    code: '41.16',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Texas law',
@@ -41016,7 +41016,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: 'PC 4.16',
+    code: '4.16',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Possession of drugs for distribution under Texas law',
@@ -41029,7 +41029,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: 'PC 23.7',
+    code: '23.7',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Texas law',
@@ -41042,7 +41042,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: 'PC 16.8',
+    code: '16.8',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Texas law',
@@ -41055,7 +41055,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-drug-trafficking',
     name: 'Drug Trafficking',
-    code: 'PC 50.17',
+    code: '50.17',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Large-scale drug distribution under Texas law',
@@ -41068,7 +41068,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: 'PC 41.7',
+    code: '41.7',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Texas law',
@@ -41081,7 +41081,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: 'PC 17.7',
+    code: '17.7',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Allowing premises for drug activity under Texas law',
@@ -41094,7 +41094,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: 'PC 38.4',
+    code: '38.4',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Texas law',
@@ -41107,7 +41107,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: 'PC 23.9',
+    code: '23.9',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Texas law',
@@ -41120,7 +41120,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: 'PC 31.19',
+    code: '31.19',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Texas law',
@@ -41133,7 +41133,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: 'PC 48.15',
+    code: '48.15',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Possession of illegal weapon under Texas law',
@@ -41146,7 +41146,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-wire-fraud',
     name: 'Wire Fraud',
-    code: 'PC 25.15',
+    code: '25.15',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraud using electronic communications under Texas law',
@@ -41159,7 +41159,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-mail-fraud',
     name: 'Mail Fraud',
-    code: 'PC 1.19',
+    code: '1.19',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraud using postal service under Texas law',
@@ -41172,7 +41172,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-check-fraud',
     name: 'Check Fraud',
-    code: 'PC 46.7',
+    code: '46.7',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraudulent use of checks under Texas law',
@@ -41185,7 +41185,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-insurance-fraud',
     name: 'Insurance Fraud',
-    code: 'PC 7.18',
+    code: '7.18',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraudulent insurance claims under Texas law',
@@ -41198,7 +41198,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-tax-fraud',
     name: 'Tax Fraud',
-    code: 'PC 16.8',
+    code: '16.8',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraudulent tax reporting under Texas law',
@@ -41211,7 +41211,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-forgery',
     name: 'Forgery',
-    code: 'PC 40.17',
+    code: '40.17',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Creating false documents under Texas law',
@@ -41224,7 +41224,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-computer-fraud',
     name: 'Computer Fraud',
-    code: 'PC 34.20',
+    code: '34.20',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Texas law',
@@ -41237,7 +41237,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: 'PC 15.2',
+    code: '15.2',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Texas law',
@@ -41250,7 +41250,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-public-intoxication',
     name: 'Public Intoxication',
-    code: 'PC 40.14',
+    code: '40.14',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under Texas law',
@@ -41263,7 +41263,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: 'PC 22.17',
+    code: '22.17',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Texas law',
@@ -41276,7 +41276,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-trespassing',
     name: 'Trespassing',
-    code: 'PC 37.2',
+    code: '37.2',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under Texas law',
@@ -41289,7 +41289,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-vandalism',
     name: 'Vandalism',
-    code: 'PC 19.3',
+    code: '19.3',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Destruction of property under Texas law',
@@ -41302,7 +41302,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-loitering',
     name: 'Loitering',
-    code: 'PC 25.3',
+    code: '25.3',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under Texas law',
@@ -41315,7 +41315,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-dui-first-offense',
     name: 'DUI First Offense',
-    code: 'PC 1.9',
+    code: '1.9',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under Texas law',
@@ -41328,7 +41328,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-dui-second-offense',
     name: 'DUI Second Offense',
-    code: 'PC 47.4',
+    code: '47.4',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Texas law',
@@ -41341,7 +41341,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-dui-third-offense',
     name: 'DUI Third Offense',
-    code: 'PC 38.13',
+    code: '38.13',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Driving under influence, felony level under Texas law',
@@ -41354,7 +41354,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-reckless-driving',
     name: 'Reckless Driving',
-    code: 'PC 45.20',
+    code: '45.20',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Texas law',
@@ -41367,7 +41367,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-hit-and-run',
     name: 'Hit and Run',
-    code: 'PC 47.6',
+    code: '47.6',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Texas law',
@@ -41380,7 +41380,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: 'PC 50.1',
+    code: '50.1',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving with suspended license under Texas law',
