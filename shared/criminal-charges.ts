@@ -32735,7 +32735,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '41-73',
+    code: '2903.01',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Ohio law',
@@ -32748,7 +32748,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '42-95',
+    code: '2903.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Intentional killing without premeditation under Ohio law',
@@ -32761,7 +32761,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: '9-100',
+    code: '2903.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Depraved indifference killing under Ohio law',
@@ -32774,7 +32774,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '42-42',
+    code: '2903.03',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Killing in heat of passion under Ohio law',
@@ -32787,7 +32787,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '27-1',
+    code: '2903.04',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Ohio law',
@@ -32800,7 +32800,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '30-9',
+    code: '2903.05',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Death caused by criminal negligence under Ohio law',
@@ -32813,7 +32813,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '44-30',
+    code: '2903.06',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Ohio law',
@@ -32826,7 +32826,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-felony-murder',
     name: 'Felony Murder',
-    code: '39-80',
+    code: '2903.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Death occurring during commission of felony under Ohio law',
@@ -32839,7 +32839,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '12-19',
+    code: '2903.11',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Ohio law',
@@ -32852,7 +32852,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '3-34',
+    code: '2903.12',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Reckless serious bodily injury under Ohio law',
@@ -32865,7 +32865,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '4-99',
+    code: '2903.13',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Ohio law',
@@ -32878,7 +32878,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '43-98',
+    code: '2903.12',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Ohio law',
@@ -32891,7 +32891,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '6-36',
+    code: '2903.11',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Assault using dangerous weapon under Ohio law',
@@ -32904,7 +32904,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '7-65',
+    code: '2919.25',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Ohio law',
@@ -32917,7 +32917,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: '10-21',
+    code: '2903.11',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Assault on law enforcement officer under Ohio law',
@@ -32930,7 +32930,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-menacing',
     name: 'Menacing',
-    code: '34-73',
+    code: '2903.21',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under Ohio law',
@@ -32943,7 +32943,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '8-26',
+    code: '2907.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Ohio law',
@@ -32956,7 +32956,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '38-92',
+    code: '2907.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Ohio law',
@@ -32969,7 +32969,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: '43-28',
+    code: '2907.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Ohio law',
@@ -32982,7 +32982,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '27-88',
+    code: '2907.03',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual contact without consent under Ohio law',
@@ -32995,7 +32995,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '11-23',
+    code: '2907.05',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Ohio law',
@@ -33008,7 +33008,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-statutory-rape',
     name: 'Statutory Rape',
-    code: '13-34',
+    code: '2907.04',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual intercourse with minor under Ohio law',
@@ -33021,7 +33021,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: '31-5',
+    code: '2907.05',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Ohio law',
@@ -33034,7 +33034,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: '20-26',
+    code: '2907.321',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Using minor in sexual performance under Ohio law',
@@ -33047,7 +33047,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '19-29',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Theft over $50,000 under Ohio law',
@@ -33060,7 +33060,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '40-23',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Theft over $5,000 under Ohio law',
@@ -33073,7 +33073,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '7-9',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Theft over $1,000 under Ohio law',
@@ -33086,7 +33086,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-petty-theft',
     name: 'Petty Theft',
-    code: '29-57',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under Ohio law',
@@ -33099,7 +33099,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '33-99',
+    code: '2913.51',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Ohio law',
@@ -33112,7 +33112,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-identity-theft',
     name: 'Identity Theft',
-    code: '1-75',
+    code: '2913.49',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Using another person\'s identifying information under Ohio law',
@@ -33125,7 +33125,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '39-68',
+    code: '2913.21',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unauthorized use of credit card under Ohio law',
@@ -33138,7 +33138,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-embezzlement',
     name: 'Embezzlement',
-    code: '43-54',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Theft by person in position of trust under Ohio law',
@@ -33151,7 +33151,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-shoplifting',
     name: 'Shoplifting',
-    code: '1-27',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Ohio law',
@@ -33164,7 +33164,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '34-18',
+    code: '2911.11',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Ohio law',
@@ -33177,7 +33177,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '46-62',
+    code: '2911.12',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Ohio law',
@@ -33190,7 +33190,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '7-45',
+    code: '2911.12',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful entry of building under Ohio law',
@@ -33203,7 +33203,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-residential-burglary',
     name: 'Residential Burglary',
-    code: '33-14',
+    code: '2911.12',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Ohio law',
@@ -33216,7 +33216,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '13-63',
+    code: '2911.12',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Burglary of commercial building under Ohio law',
@@ -33229,7 +33229,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-auto-burglary',
     name: 'Auto Burglary',
-    code: '18-4',
+    code: '2911.13',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Ohio law',
@@ -33242,7 +33242,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '34-18',
+    code: '2911.01',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Armed robbery with injury under Ohio law',
@@ -33255,7 +33255,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '5-26',
+    code: '2911.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Armed robbery under Ohio law',
@@ -33268,7 +33268,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '21-33',
+    code: '2911.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Robbery by force or threat under Ohio law',
@@ -33281,7 +33281,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-carjacking',
     name: 'Carjacking',
-    code: '3-4',
+    code: '2911.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Robbery of motor vehicle under Ohio law',
@@ -33294,7 +33294,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-bank-robbery',
     name: 'Bank Robbery',
-    code: '42-2',
+    code: '2911.01',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Robbery of financial institution under Ohio law',
@@ -33307,7 +33307,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '36-19',
+    code: '2925.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Ohio law',
@@ -33320,7 +33320,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: '17-90',
+    code: '2925.03',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Possession of drugs for distribution under Ohio law',
@@ -33333,7 +33333,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: '26-11',
+    code: '2925.03',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Ohio law',
@@ -33346,7 +33346,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: '14-79',
+    code: '2925.04',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Ohio law',
@@ -33359,7 +33359,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '21-77',
+    code: '2925.03',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Large-scale drug distribution under Ohio law',
@@ -33372,7 +33372,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '30-79',
+    code: '2925.14',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Ohio law',
@@ -33385,7 +33385,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: '23-47',
+    code: '2925.13',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Allowing premises for drug activity under Ohio law',
@@ -33398,7 +33398,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '40-27',
+    code: '2923.12',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Ohio law',
@@ -33411,7 +33411,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '39-65',
+    code: '2923.13',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Ohio law',
@@ -33424,7 +33424,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '50-59',
+    code: '2923.161',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Ohio law',
@@ -33437,7 +33437,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '34-80',
+    code: '2923.17',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Possession of illegal weapon under Ohio law',
@@ -33476,7 +33476,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-check-fraud',
     name: 'Check Fraud',
-    code: '10-24',
+    code: '2913.11',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Fraudulent use of checks under Ohio law',
@@ -33489,7 +33489,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '27-36',
+    code: '2913.47',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Fraudulent insurance claims under Ohio law',
@@ -33515,7 +33515,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-forgery',
     name: 'Forgery',
-    code: '10-40',
+    code: '2913.31',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Creating false documents under Ohio law',
@@ -33528,7 +33528,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-computer-fraud',
     name: 'Computer Fraud',
-    code: '32-77',
+    code: '2913.04',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Ohio law',
@@ -33541,7 +33541,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '3-45',
+    code: '2917.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Ohio law',
@@ -33554,7 +33554,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-public-intoxication',
     name: 'Public Intoxication',
-    code: '38-97',
+    code: '2917.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under Ohio law',
@@ -33567,7 +33567,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '9-38',
+    code: '2917.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Ohio law',
@@ -33580,7 +33580,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-trespassing',
     name: 'Trespassing',
-    code: '15-83',
+    code: '2911.21',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under Ohio law',
@@ -33593,7 +33593,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-vandalism',
     name: 'Vandalism',
-    code: '30-19',
+    code: '2909.05',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Destruction of property under Ohio law',
@@ -33606,7 +33606,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-loitering',
     name: 'Loitering',
-    code: '30-65',
+    code: '2917.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under Ohio law',
@@ -33619,7 +33619,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-dui-first-offense',
     name: 'DUI First Offense',
-    code: '1-86',
+    code: '4511.19',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under Ohio law',
@@ -33632,7 +33632,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '35-30',
+    code: '4511.19',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Ohio law',
@@ -33645,7 +33645,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '44-24',
+    code: '4511.19',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Driving under influence, felony level under Ohio law',
@@ -33658,7 +33658,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-reckless-driving',
     name: 'Reckless Driving',
-    code: '32-43',
+    code: '4511.20',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Ohio law',
@@ -33671,7 +33671,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-hit-and-run',
     name: 'Hit and Run',
-    code: '24-33',
+    code: '4549.02',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Ohio law',
@@ -33684,7 +33684,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: '21-60',
+    code: '4510.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Driving with suspended license under Ohio law',
