@@ -35621,7 +35621,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '6-8',
+    code: '2502(a)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Pennsylvania law',
@@ -35634,7 +35634,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '41-96',
+    code: '2502(b)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Intentional killing without premeditation under Pennsylvania law',
@@ -35647,7 +35647,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: '15-78',
+    code: '2502(c)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Depraved indifference killing under Pennsylvania law',
@@ -35660,7 +35660,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '3-46',
+    code: '2503',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Killing in heat of passion under Pennsylvania law',
@@ -35673,7 +35673,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '3-13',
+    code: '2504',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Pennsylvania law',
@@ -35686,7 +35686,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '44-1',
+    code: '2504',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Death caused by criminal negligence under Pennsylvania law',
@@ -35699,7 +35699,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '15-58',
+    code: '75-3735',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Pennsylvania law',
@@ -35712,7 +35712,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-felony-murder',
     name: 'Felony Murder',
-    code: '35-51',
+    code: '2502(b)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Death occurring during commission of felony under Pennsylvania law',
@@ -35725,7 +35725,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '31-52',
+    code: '2702',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Pennsylvania law',
@@ -35738,7 +35738,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '34-27',
+    code: '2701',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Reckless serious bodily injury under Pennsylvania law',
@@ -35751,7 +35751,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '50-29',
+    code: '2701',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Pennsylvania law',
@@ -35764,7 +35764,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '19-53',
+    code: '2702',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Pennsylvania law',
@@ -35777,7 +35777,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '25-31',
+    code: '2702',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Assault using dangerous weapon under Pennsylvania law',
@@ -35790,7 +35790,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '12-59',
+    code: '2701',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Pennsylvania law',
@@ -35803,7 +35803,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: '43-62',
+    code: '2702.1',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Assault on law enforcement officer under Pennsylvania law',
@@ -35816,7 +35816,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-menacing',
     name: 'Menacing',
-    code: '44-94',
+    code: '2706',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under Pennsylvania law',
@@ -35829,7 +35829,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '46-98',
+    code: '3121',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Pennsylvania law',
@@ -35842,7 +35842,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '41-30',
+    code: '3121',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Pennsylvania law',
@@ -35855,7 +35855,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: '16-10',
+    code: '3121',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Pennsylvania law',
@@ -35868,7 +35868,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '32-67',
+    code: '3124.1',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual contact without consent under Pennsylvania law',
@@ -35881,7 +35881,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '19-47',
+    code: '3126',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Pennsylvania law',
@@ -35894,7 +35894,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-statutory-rape',
     name: 'Statutory Rape',
-    code: '18-47',
+    code: '3122.1',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual intercourse with minor under Pennsylvania law',
@@ -35907,7 +35907,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: '11-4',
+    code: '3126',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Pennsylvania law',
@@ -35920,7 +35920,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: '25-38',
+    code: '6312',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Using minor in sexual performance under Pennsylvania law',
@@ -35933,7 +35933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '22-32',
+    code: '3921',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Theft over $50,000 under Pennsylvania law',
@@ -35946,7 +35946,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '8-24',
+    code: '3921',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Theft over $5,000 under Pennsylvania law',
@@ -35959,7 +35959,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '31-20',
+    code: '3921',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Theft over $1,000 under Pennsylvania law',
@@ -35972,7 +35972,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-petty-theft',
     name: 'Petty Theft',
-    code: '21-51',
+    code: '3921',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under Pennsylvania law',
@@ -35985,7 +35985,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '26-57',
+    code: '3925',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Pennsylvania law',
@@ -35998,7 +35998,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-identity-theft',
     name: 'Identity Theft',
-    code: '12-88',
+    code: '4120',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Using another person\'s identifying information under Pennsylvania law',
@@ -36011,7 +36011,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '36-15',
+    code: '4106',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unauthorized use of credit card under Pennsylvania law',
@@ -36024,7 +36024,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-embezzlement',
     name: 'Embezzlement',
-    code: '23-20',
+    code: '3927',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Theft by person in position of trust under Pennsylvania law',
@@ -36037,7 +36037,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-shoplifting',
     name: 'Shoplifting',
-    code: '9-69',
+    code: '3929',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Pennsylvania law',
@@ -36050,7 +36050,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '9-68',
+    code: '3502',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Pennsylvania law',
@@ -36063,7 +36063,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '19-73',
+    code: '3502',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Pennsylvania law',
@@ -36076,7 +36076,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '14-92',
+    code: '3502',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful entry of building under Pennsylvania law',
@@ -36089,7 +36089,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-residential-burglary',
     name: 'Residential Burglary',
-    code: '16-77',
+    code: '3502',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Pennsylvania law',
@@ -36102,7 +36102,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '5-69',
+    code: '3502',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Burglary of commercial building under Pennsylvania law',
@@ -36115,7 +36115,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-auto-burglary',
     name: 'Auto Burglary',
-    code: '13-49',
+    code: '3502',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Pennsylvania law',
@@ -36128,7 +36128,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '29-37',
+    code: '3701',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Armed robbery with injury under Pennsylvania law',
@@ -36141,7 +36141,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '30-94',
+    code: '3701',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Armed robbery under Pennsylvania law',
@@ -36154,7 +36154,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '5-79',
+    code: '3701',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Robbery by force or threat under Pennsylvania law',
@@ -36167,7 +36167,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-carjacking',
     name: 'Carjacking',
-    code: '16-49',
+    code: '3702',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Robbery of motor vehicle under Pennsylvania law',
@@ -36180,7 +36180,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-bank-robbery',
     name: 'Bank Robbery',
-    code: '11-44',
+    code: '3701',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Robbery of financial institution under Pennsylvania law',
@@ -36193,7 +36193,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '1-59',
+    code: '35-780-113(a)(16)',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Pennsylvania law',
@@ -36206,7 +36206,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: '37-1',
+    code: '35-780-113(a)(30)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Possession of drugs for distribution under Pennsylvania law',
@@ -36219,7 +36219,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: '10-60',
+    code: '35-780-113(a)(30)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Pennsylvania law',
@@ -36232,7 +36232,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: '12-100',
+    code: '35-780-113(a)(30)',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Pennsylvania law',
@@ -36245,7 +36245,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '44-84',
+    code: '7508',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Large-scale drug distribution under Pennsylvania law',
@@ -36258,7 +36258,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '33-8',
+    code: '35-780-113(a)(32)',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Pennsylvania law',
@@ -36271,7 +36271,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: '46-49',
+    code: '35-780-113',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Allowing premises for drug activity under Pennsylvania law',
@@ -36284,7 +36284,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '38-63',
+    code: '6106',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Pennsylvania law',
@@ -36297,7 +36297,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '30-3',
+    code: '6105',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Pennsylvania law',
@@ -36310,7 +36310,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '43-24',
+    code: '908',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Pennsylvania law',
@@ -36323,7 +36323,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '7-12',
+    code: '908',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Possession of illegal weapon under Pennsylvania law',
@@ -36362,7 +36362,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-check-fraud',
     name: 'Check Fraud',
-    code: '30-9',
+    code: '4105',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Fraudulent use of checks under Pennsylvania law',
@@ -36375,7 +36375,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '42-76',
+    code: '4117',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Fraudulent insurance claims under Pennsylvania law',
@@ -36401,7 +36401,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-forgery',
     name: 'Forgery',
-    code: '34-87',
+    code: '4101',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Creating false documents under Pennsylvania law',
@@ -36414,7 +36414,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-computer-fraud',
     name: 'Computer Fraud',
-    code: '20-55',
+    code: '7611',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Pennsylvania law',
@@ -36427,7 +36427,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '50-53',
+    code: '5503',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Pennsylvania law',
@@ -36440,7 +36440,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-public-intoxication',
     name: 'Public Intoxication',
-    code: '41-51',
+    code: '5505',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under Pennsylvania law',
@@ -36453,7 +36453,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '26-47',
+    code: '5503',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Pennsylvania law',
@@ -36466,7 +36466,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-trespassing',
     name: 'Trespassing',
-    code: '43-83',
+    code: '3503',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under Pennsylvania law',
@@ -36479,7 +36479,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-vandalism',
     name: 'Vandalism',
-    code: '28-56',
+    code: '3304',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Destruction of property under Pennsylvania law',
@@ -36492,7 +36492,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-loitering',
     name: 'Loitering',
-    code: '42-51',
+    code: '5506',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under Pennsylvania law',
@@ -36505,7 +36505,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-dui-first-offense',
     name: 'DUI First Offense',
-    code: '42-94',
+    code: '75-3802',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under Pennsylvania law',
@@ -36518,7 +36518,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '33-10',
+    code: '75-3802',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Pennsylvania law',
@@ -36531,7 +36531,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '30-32',
+    code: '75-3802',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Driving under influence, felony level under Pennsylvania law',
@@ -36544,7 +36544,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-reckless-driving',
     name: 'Reckless Driving',
-    code: '2-83',
+    code: '75-3736',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Pennsylvania law',
@@ -36557,7 +36557,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-hit-and-run',
     name: 'Hit and Run',
-    code: '23-72',
+    code: '75-3742',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Pennsylvania law',
@@ -36570,7 +36570,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: '35-37',
+    code: '75-1543',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Driving with suspended license under Pennsylvania law',
