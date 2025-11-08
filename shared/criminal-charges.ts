@@ -40470,7 +40470,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '12.16',
+    code: '19.04',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Killing in heat of passion under Texas law',
@@ -40483,7 +40483,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '11.20',
+    code: '19.04',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Texas law',
@@ -40496,7 +40496,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '28.9',
+    code: '19.05',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Death caused by criminal negligence under Texas law',
@@ -40509,7 +40509,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '15.18',
+    code: '49.08',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Texas law',
@@ -40522,7 +40522,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-felony-murder',
     name: 'Felony Murder',
-    code: '48.7',
+    code: '19.02(b)(3)',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Death occurring during commission of felony under Texas law',
@@ -40535,7 +40535,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '16.19',
+    code: '22.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Texas law',
@@ -40548,7 +40548,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '21.16',
+    code: '22.01',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Reckless serious bodily injury under Texas law',
@@ -40561,7 +40561,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '42.15',
+    code: '22.01',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Texas law',
@@ -40574,7 +40574,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '40.12',
+    code: '22.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Texas law',
@@ -40587,7 +40587,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '32.10',
+    code: '22.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Assault using dangerous weapon under Texas law',
@@ -40600,7 +40600,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '3.11',
+    code: '22.01',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Texas law',
@@ -40613,7 +40613,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: '27.10',
+    code: '22.01(b)(1)',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Assault on law enforcement officer under Texas law',
@@ -40639,7 +40639,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '19.3',
+    code: '22.021',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Texas law',
@@ -40652,7 +40652,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '23.7',
+    code: '22.011',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Texas law',
@@ -40665,7 +40665,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: '13.8',
+    code: '22.021',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Texas law',
@@ -40678,7 +40678,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '44.17',
+    code: '22.011',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual contact without consent under Texas law',
@@ -40691,7 +40691,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '26.5',
+    code: '22.011',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Texas law',
@@ -40704,7 +40704,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-statutory-rape',
     name: 'Statutory Rape',
-    code: '22.12',
+    code: '22.011(a)(2)(A)',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual intercourse with minor under Texas law',
@@ -40717,7 +40717,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: '24.4',
+    code: '21.11',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Texas law',
@@ -40730,7 +40730,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: '31.16',
+    code: '43.25',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Using minor in sexual performance under Texas law',
@@ -40743,7 +40743,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '26.19',
+    code: '31.03',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft over $50,000 under Texas law',
@@ -40756,7 +40756,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '7.6',
+    code: '31.03',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft over $5,000 under Texas law',
@@ -40769,7 +40769,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '49.19',
+    code: '31.03',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft over $1,000 under Texas law',
@@ -40782,7 +40782,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-petty-theft',
     name: 'Petty Theft',
-    code: '11.10',
+    code: '31.03',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under Texas law',
@@ -40795,7 +40795,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '48.14',
+    code: '31.03(a)',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Texas law',
@@ -40808,7 +40808,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-identity-theft',
     name: 'Identity Theft',
-    code: '6.6',
+    code: '32.51',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Using another person\'s identifying information under Texas law',
@@ -40821,7 +40821,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '37.18',
+    code: '32.31',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unauthorized use of credit card under Texas law',
@@ -40834,7 +40834,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-embezzlement',
     name: 'Embezzlement',
-    code: '41.1',
+    code: '31.03',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Theft by person in position of trust under Texas law',
@@ -40847,7 +40847,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-shoplifting',
     name: 'Shoplifting',
-    code: '12.9',
+    code: '31.03',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Texas law',
@@ -40860,7 +40860,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '8.16',
+    code: '30.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Texas law',
@@ -40873,7 +40873,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '35.16',
+    code: '30.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Texas law',
@@ -40886,7 +40886,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '7.15',
+    code: '30.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry of building under Texas law',
@@ -40899,7 +40899,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-residential-burglary',
     name: 'Residential Burglary',
-    code: '16.17',
+    code: '30.02(a)(1)',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Texas law',
@@ -40912,7 +40912,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '43.11',
+    code: '30.02(a)(2)',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Burglary of commercial building under Texas law',
@@ -40925,7 +40925,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-auto-burglary',
     name: 'Auto Burglary',
-    code: '44.3',
+    code: '30.04',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Texas law',
@@ -40938,7 +40938,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '21.17',
+    code: '29.03',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Armed robbery with injury under Texas law',
@@ -40951,7 +40951,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '42.7',
+    code: '29.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Armed robbery under Texas law',
@@ -40964,7 +40964,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '15.3',
+    code: '29.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Robbery by force or threat under Texas law',
@@ -40977,7 +40977,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-carjacking',
     name: 'Carjacking',
-    code: '17.11',
+    code: '29.03',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Robbery of motor vehicle under Texas law',
@@ -40990,7 +40990,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-bank-robbery',
     name: 'Bank Robbery',
-    code: '23.8',
+    code: '29.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Robbery of financial institution under Texas law',
@@ -41003,7 +41003,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '41.16',
+    code: '481.115',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Texas law',
@@ -41016,7 +41016,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: '4.16',
+    code: '481.112',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Possession of drugs for distribution under Texas law',
@@ -41029,7 +41029,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: '23.7',
+    code: '481.112',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Texas law',
@@ -41042,7 +41042,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: '16.8',
+    code: '481.112',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Texas law',
@@ -41055,7 +41055,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '50.17',
+    code: '481.112',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Large-scale drug distribution under Texas law',
@@ -41068,7 +41068,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '41.7',
+    code: '481.125',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Texas law',
@@ -41094,7 +41094,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '38.4',
+    code: '46.02',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Texas law',
@@ -41107,7 +41107,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '23.9',
+    code: '46.04',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Texas law',
@@ -41120,7 +41120,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '31.19',
+    code: '46.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Texas law',
@@ -41133,7 +41133,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '48.15',
+    code: '46.05',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Possession of illegal weapon under Texas law',
@@ -41172,7 +41172,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-check-fraud',
     name: 'Check Fraud',
-    code: '46.7',
+    code: '32.41',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraudulent use of checks under Texas law',
@@ -41185,7 +41185,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '7.18',
+    code: '35.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraudulent insurance claims under Texas law',
@@ -41211,7 +41211,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-forgery',
     name: 'Forgery',
-    code: '40.17',
+    code: '32.21',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Creating false documents under Texas law',
@@ -41224,7 +41224,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-computer-fraud',
     name: 'Computer Fraud',
-    code: '34.20',
+    code: '33.02',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Texas law',
@@ -41237,7 +41237,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '15.2',
+    code: '42.01',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Texas law',
@@ -41250,7 +41250,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-public-intoxication',
     name: 'Public Intoxication',
-    code: '40.14',
+    code: '49.02',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under Texas law',
@@ -41263,7 +41263,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '22.17',
+    code: '42.01',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Texas law',
@@ -41276,7 +41276,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-trespassing',
     name: 'Trespassing',
-    code: '37.2',
+    code: '30.05',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under Texas law',
@@ -41289,7 +41289,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-vandalism',
     name: 'Vandalism',
-    code: '19.3',
+    code: '28.03',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Destruction of property under Texas law',
@@ -41315,7 +41315,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-dui-first-offense',
     name: 'DUI First Offense',
-    code: '1.9',
+    code: '49.04',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under Texas law',
@@ -41328,7 +41328,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '47.4',
+    code: '49.04',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Texas law',
@@ -41341,7 +41341,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '38.13',
+    code: '49.04',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Driving under influence, felony level under Texas law',
@@ -41354,7 +41354,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-reckless-driving',
     name: 'Reckless Driving',
-    code: '45.20',
+    code: '545.401',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Texas law',
@@ -41367,7 +41367,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-hit-and-run',
     name: 'Hit and Run',
-    code: '47.6',
+    code: '550.021',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Texas law',
@@ -41380,7 +41380,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: '50.1',
+    code: '521.457',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Driving with suspended license under Texas law',
