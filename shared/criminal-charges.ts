@@ -11571,7 +11571,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '41-88',
+    code: '5/9-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Illinois law',
@@ -11584,7 +11584,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '25-10',
+    code: '5/9-2',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Intentional killing without premeditation under Illinois law',
@@ -11610,7 +11610,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '46-24',
+    code: '5/9-2',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Killing in heat of passion under Illinois law',
@@ -11623,7 +11623,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '8-85',
+    code: '5/9-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Illinois law',
@@ -11636,7 +11636,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '47-78',
+    code: '5/9-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Death caused by criminal negligence under Illinois law',
@@ -11649,7 +11649,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '44-65',
+    code: '5/9-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Illinois law',
@@ -11662,7 +11662,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-felony-murder',
     name: 'Felony Murder',
-    code: '19-22',
+    code: '5/9-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Death occurring during commission of felony under Illinois law',
@@ -11675,7 +11675,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '46-42',
+    code: '5/12-3.05',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Illinois law',
@@ -11688,7 +11688,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '8-35',
+    code: '5/12-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Reckless serious bodily injury under Illinois law',
@@ -11701,7 +11701,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '12-75',
+    code: '5/12-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Illinois law',
@@ -11714,7 +11714,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '25-43',
+    code: '5/12-2',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Illinois law',
@@ -11727,7 +11727,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '8-89',
+    code: '5/12-2',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Assault using dangerous weapon under Illinois law',
@@ -11740,7 +11740,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '29-81',
+    code: '5/12-3.2',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Illinois law',
@@ -11753,7 +11753,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: '5-97',
+    code: '5/12-3.05(d)(4)',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Assault on law enforcement officer under Illinois law',
@@ -11766,7 +11766,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-menacing',
     name: 'Menacing',
-    code: '15-45',
+    code: '5/12-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under Illinois law',
@@ -11779,7 +11779,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '27-70',
+    code: '5/11-1.30',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Illinois law',
@@ -11792,7 +11792,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '6-67',
+    code: '5/11-1.20',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Illinois law',
@@ -11805,7 +11805,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: '16-21',
+    code: '5/11-1.30',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Illinois law',
@@ -11818,7 +11818,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '43-83',
+    code: '5/11-1.20',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual contact without consent under Illinois law',
@@ -11831,7 +11831,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '20-19',
+    code: '5/11-1.50',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Illinois law',
@@ -11844,7 +11844,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-statutory-rape',
     name: 'Statutory Rape',
-    code: '42-60',
+    code: '5/11-1.40',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual intercourse with minor under Illinois law',
@@ -11857,7 +11857,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: '12-44',
+    code: '5/11-1.50',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Illinois law',
@@ -11870,7 +11870,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: '16-11',
+    code: '5/11-20.1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Using minor in sexual performance under Illinois law',
@@ -11883,7 +11883,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '40-52',
+    code: '5/16-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Theft over $50,000 under Illinois law',
@@ -11896,7 +11896,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '13-32',
+    code: '5/16-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Theft over $5,000 under Illinois law',
@@ -11909,7 +11909,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '9-25',
+    code: '5/16-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Theft over $1,000 under Illinois law',
@@ -11922,7 +11922,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-petty-theft',
     name: 'Petty Theft',
-    code: '16-79',
+    code: '5/16-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under Illinois law',
@@ -11935,7 +11935,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '5-86',
+    code: '5/16-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Illinois law',
@@ -11948,7 +11948,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-identity-theft',
     name: 'Identity Theft',
-    code: '20-83',
+    code: '5/16-30',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Using another person\'s identifying information under Illinois law',
@@ -11961,7 +11961,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '46-55',
+    code: '5/17-31',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unauthorized use of credit card under Illinois law',
@@ -11974,7 +11974,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-embezzlement',
     name: 'Embezzlement',
-    code: '2-11',
+    code: '5/16-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Theft by person in position of trust under Illinois law',
@@ -11987,7 +11987,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-shoplifting',
     name: 'Shoplifting',
-    code: '15-79',
+    code: '5/16-25',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Illinois law',
@@ -12000,7 +12000,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '26-28',
+    code: '5/19-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Illinois law',
@@ -12013,7 +12013,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '9-94',
+    code: '5/19-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Illinois law',
@@ -12026,7 +12026,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '42-16',
+    code: '5/19-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful entry of building under Illinois law',
@@ -12039,7 +12039,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-residential-burglary',
     name: 'Residential Burglary',
-    code: '29-5',
+    code: '5/19-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Illinois law',
@@ -12052,7 +12052,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '20-99',
+    code: '5/19-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Burglary of commercial building under Illinois law',
@@ -12065,7 +12065,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-auto-burglary',
     name: 'Auto Burglary',
-    code: '38-49',
+    code: '5/19-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Illinois law',
@@ -12078,7 +12078,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '17-7',
+    code: '5/18-2',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Armed robbery with injury under Illinois law',
@@ -12091,7 +12091,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '3-10',
+    code: '5/18-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Armed robbery under Illinois law',
@@ -12104,7 +12104,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '19-79',
+    code: '5/18-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Robbery by force or threat under Illinois law',
@@ -12117,7 +12117,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-carjacking',
     name: 'Carjacking',
-    code: '26-77',
+    code: '5/18-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Robbery of motor vehicle under Illinois law',
@@ -12130,7 +12130,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-bank-robbery',
     name: 'Bank Robbery',
-    code: '45-53',
+    code: '5/18-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Robbery of financial institution under Illinois law',
@@ -12143,7 +12143,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '1-23',
+    code: '570/402',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Illinois law',
@@ -12156,7 +12156,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: '35-67',
+    code: '570/401',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Possession of drugs for distribution under Illinois law',
@@ -12169,7 +12169,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: '24-42',
+    code: '570/401',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Illinois law',
@@ -12182,7 +12182,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: '48-14',
+    code: '570/401',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Illinois law',
@@ -12195,7 +12195,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '44-75',
+    code: '570/401.1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Large-scale drug distribution under Illinois law',
@@ -12208,7 +12208,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '27-99',
+    code: '570/406',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Illinois law',
@@ -12221,7 +12221,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: '3-59',
+    code: '570/405',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Allowing premises for drug activity under Illinois law',
@@ -12234,7 +12234,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '29-1',
+    code: '5/24-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Illinois law',
@@ -12247,7 +12247,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '12-65',
+    code: '5/24-1.1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Illinois law',
@@ -12260,7 +12260,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '23-74',
+    code: '5/24-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Illinois law',
@@ -12273,7 +12273,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '11-45',
+    code: '5/24-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Possession of illegal weapon under Illinois law',
@@ -12312,7 +12312,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-check-fraud',
     name: 'Check Fraud',
-    code: '10-96',
+    code: '5/17-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Fraudulent use of checks under Illinois law',
@@ -12325,7 +12325,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '22-16',
+    code: '5/17-10.5',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Fraudulent insurance claims under Illinois law',
@@ -12351,7 +12351,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-forgery',
     name: 'Forgery',
-    code: '21-1',
+    code: '5/17-3',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Creating false documents under Illinois law',
@@ -12364,7 +12364,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-computer-fraud',
     name: 'Computer Fraud',
-    code: '50-42',
+    code: '5/17-50',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Illinois law',
@@ -12377,7 +12377,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '36-80',
+    code: '5/26-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Illinois law',
@@ -12390,7 +12390,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-public-intoxication',
     name: 'Public Intoxication',
-    code: '45-48',
+    code: '5/26-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under Illinois law',
@@ -12403,7 +12403,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '28-86',
+    code: '5/26-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Illinois law',
@@ -12416,7 +12416,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-trespassing',
     name: 'Trespassing',
-    code: '40-74',
+    code: '5/21-3',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under Illinois law',
@@ -12429,7 +12429,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-vandalism',
     name: 'Vandalism',
-    code: '30-60',
+    code: '5/21-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Destruction of property under Illinois law',
@@ -12442,7 +12442,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-loitering',
     name: 'Loitering',
-    code: '44-26',
+    code: '5/26-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under Illinois law',
@@ -12455,7 +12455,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-dui-first-offense',
     name: 'DUI First Offense',
-    code: '27-7',
+    code: '625-5/11-501',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under Illinois law',
@@ -12468,7 +12468,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '31-57',
+    code: '625-5/11-501',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Illinois law',
@@ -12481,7 +12481,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '45-85',
+    code: '625-5/11-501',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Driving under influence, felony level under Illinois law',
@@ -12494,7 +12494,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-reckless-driving',
     name: 'Reckless Driving',
-    code: '15-93',
+    code: '625-5/11-503',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Illinois law',
@@ -12507,7 +12507,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-hit-and-run',
     name: 'Hit and Run',
-    code: '24-22',
+    code: '625-5/11-401',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Illinois law',
@@ -12520,7 +12520,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: '43-17',
+    code: '625-5/6-303',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Driving with suspended license under Illinois law',
