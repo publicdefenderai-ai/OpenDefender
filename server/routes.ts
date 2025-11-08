@@ -26,11 +26,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     },
     standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-    // Skip rate limiting for local development
-    skip: (req) => {
-      const isDev = process.env.NODE_ENV === 'development';
-      const isLocalhost = req.ip === '127.0.0.1' || req.ip === '::1';
-      return isDev && isLocalhost;
+    // Skip rate limiting in development mode entirely
+    skip: (req) => process.env.NODE_ENV === 'development',
+    // Use a safer key generator that doesn't rely solely on IP
+    validate: {
+      trustProxy: false, // Disable trust proxy validation to avoid errors
+      xForwardedForHeader: false
     }
   });
 

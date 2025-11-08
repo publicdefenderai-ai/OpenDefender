@@ -382,7 +382,10 @@ async function callClaudeWithRetry(
       }
       
       const startTime = Date.now();
-      const message = await anthropic.messages.create({
+      
+      // Wrap the API call in a timeout promise to ensure it actually times out
+      const timeoutMs = 65000; // 65 seconds - slightly longer than SDK timeout
+      const apiCallPromise = anthropic.messages.create({
         model: 'claude-sonnet-4-5',
         max_tokens: 3072,
         temperature: 0.3,
@@ -394,6 +397,12 @@ async function callClaudeWithRetry(
           },
         ],
       });
+      
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error('Claude API timed out after 65 seconds')), timeoutMs);
+      });
+      
+      const message = await Promise.race([apiCallPromise, timeoutPromise]);
       
       console.log('Claude API responded in', Date.now() - startTime, 'ms');
       console.log('Response usage:', message.usage);
