@@ -7723,7 +7723,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '517.836',
+    code: '782.04(1)(a)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Florida law',
@@ -7736,7 +7736,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '605.648',
+    code: '782.04(2)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Intentional killing without premeditation under Florida law',
@@ -7749,7 +7749,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: '177.228',
+    code: '782.04(4)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Depraved indifference killing under Florida law',
@@ -7762,7 +7762,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '514.913',
+    code: '782.07(1)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Killing in heat of passion under Florida law',
@@ -7775,7 +7775,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '493.438',
+    code: '782.07(1)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Florida law',
@@ -7788,7 +7788,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '441.201',
+    code: '782.071',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Death caused by criminal negligence under Florida law',
@@ -7801,7 +7801,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '348.773',
+    code: '782.071',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Florida law',
@@ -7814,7 +7814,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-felony-murder',
     name: 'Felony Murder',
-    code: '762.300',
+    code: '782.04(1)(a)2',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Death occurring during commission of felony under Florida law',
@@ -7827,7 +7827,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '339.822',
+    code: '784.045',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Florida law',
@@ -7840,7 +7840,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '582.835',
+    code: '784.03',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Reckless serious bodily injury under Florida law',
@@ -7853,7 +7853,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '523.983',
+    code: '784.011',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Florida law',
@@ -7866,7 +7866,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '364.962',
+    code: '784.021',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Florida law',
@@ -7879,7 +7879,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-assault-with-deadly-weapon',
     name: 'Assault with Deadly Weapon',
-    code: '555.208',
+    code: '784.021',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Assault using dangerous weapon under Florida law',
@@ -7892,7 +7892,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '992.210',
+    code: '784.03',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Florida law',
@@ -7905,7 +7905,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-assault-on-peace-officer',
     name: 'Assault on Peace Officer',
-    code: '118.339',
+    code: '784.07',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Assault on law enforcement officer under Florida law',
@@ -7918,7 +7918,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-menacing',
     name: 'Menacing',
-    code: '564.472',
+    code: '784.011',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Threatening imminent bodily injury under Florida law',
@@ -7931,7 +7931,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '304.561',
+    code: '794.011(3)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Florida law',
@@ -7944,7 +7944,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '297.268',
+    code: '794.011(4)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Florida law',
@@ -7957,7 +7957,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-sexual-assault-in-the-first-degree',
     name: 'Sexual Assault in the First Degree',
-    code: '326.291',
+    code: '794.011(3)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual contact by force with aggravating circumstances under Florida law',
@@ -7970,7 +7970,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '132.321',
+    code: '794.011(4)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual contact without consent under Florida law',
@@ -7983,7 +7983,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '242.526',
+    code: '794.011(5)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual contact with person under 16 under Florida law',
@@ -7996,7 +7996,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-statutory-rape',
     name: 'Statutory Rape',
-    code: '187.684',
+    code: '794.05',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual intercourse with minor under Florida law',
@@ -8009,7 +8009,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-child-sexual-abuse',
     name: 'Child Sexual Abuse',
-    code: '948.220',
+    code: '800.04',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Sexual abuse of child under 12 under Florida law',
@@ -8022,7 +8022,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-sexual-exploitation-of-minor',
     name: 'Sexual Exploitation of Minor',
-    code: '691.218',
+    code: '827.071',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Using minor in sexual performance under Florida law',
@@ -8035,7 +8035,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '652.741',
+    code: '812.014',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft over $50,000 under Florida law',
@@ -8048,7 +8048,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '534.458',
+    code: '812.014',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft over $5,000 under Florida law',
@@ -8061,7 +8061,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '677.661',
+    code: '812.014',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft over $1,000 under Florida law',
@@ -8074,7 +8074,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-petty-theft',
     name: 'Petty Theft',
-    code: '954.203',
+    code: '812.014',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under Florida law',
@@ -8087,7 +8087,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '459.995',
+    code: '812.019',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Florida law',
@@ -8100,7 +8100,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-identity-theft',
     name: 'Identity Theft',
-    code: '678.529',
+    code: '817.568',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Using another person\'s identifying information under Florida law',
@@ -8113,7 +8113,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '259.171',
+    code: '817.61',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unauthorized use of credit card under Florida law',
@@ -8126,7 +8126,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-embezzlement',
     name: 'Embezzlement',
-    code: '588.313',
+    code: '812.014',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft by person in position of trust under Florida law',
@@ -8139,7 +8139,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-shoplifting',
     name: 'Shoplifting',
-    code: '934.390',
+    code: '812.015',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Florida law',
@@ -8152,7 +8152,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '537.886',
+    code: '810.02',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Florida law',
@@ -8165,7 +8165,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '460.911',
+    code: '810.02',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Florida law',
@@ -8178,7 +8178,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '234.255',
+    code: '810.02',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful entry of building under Florida law',
@@ -8191,7 +8191,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-residential-burglary',
     name: 'Residential Burglary',
-    code: '528.641',
+    code: '810.02(2)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Florida law',
@@ -8204,7 +8204,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '789.654',
+    code: '810.02(3)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Burglary of commercial building under Florida law',
@@ -8217,7 +8217,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-auto-burglary',
     name: 'Auto Burglary',
-    code: '680.817',
+    code: '810.02(4)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful entry of vehicle under Florida law',
@@ -8230,7 +8230,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '205.597',
+    code: '812.13',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Armed robbery with injury under Florida law',
@@ -8243,7 +8243,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '743.276',
+    code: '812.13',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Armed robbery under Florida law',
@@ -8256,7 +8256,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '284.514',
+    code: '812.131',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Robbery by force or threat under Florida law',
@@ -8269,7 +8269,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-carjacking',
     name: 'Carjacking',
-    code: '871.906',
+    code: '812.133',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Robbery of motor vehicle under Florida law',
@@ -8282,7 +8282,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-bank-robbery',
     name: 'Bank Robbery',
-    code: '288.108',
+    code: '812.13',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Robbery of financial institution under Florida law',
@@ -8295,7 +8295,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '978.366',
+    code: '893.13(6)(a)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Florida law',
@@ -8308,7 +8308,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-with-intent-to-distribute',
     name: 'Possession with Intent to Distribute',
-    code: '291.594',
+    code: '893.13(1)(a)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Possession of drugs for distribution under Florida law',
@@ -8321,7 +8321,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-distribution-of-controlled-substance',
     name: 'Distribution of Controlled Substance',
-    code: '305.997',
+    code: '893.13(1)(a)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful distribution of controlled substances under Florida law',
@@ -8334,7 +8334,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-manufacturing-controlled-substance',
     name: 'Manufacturing Controlled Substance',
-    code: '973.347',
+    code: '893.13(1)(a)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful production of controlled substances under Florida law',
@@ -8347,7 +8347,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '786.677',
+    code: '893.135',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Large-scale drug distribution under Florida law',
@@ -8360,7 +8360,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '204.223',
+    code: '893.147',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Florida law',
@@ -8373,7 +8373,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-maintaining-drug-house',
     name: 'Maintaining Drug House',
-    code: '578.482',
+    code: '893.1351',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Allowing premises for drug activity under Florida law',
@@ -8386,7 +8386,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '902.537',
+    code: '790.01',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Florida law',
@@ -8399,7 +8399,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '933.663',
+    code: '790.23',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Florida law',
@@ -8412,7 +8412,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '739.720',
+    code: '790.15',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Florida law',
@@ -8425,7 +8425,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '646.928',
+    code: '790.221',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Possession of illegal weapon under Florida law',
@@ -8464,7 +8464,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-check-fraud',
     name: 'Check Fraud',
-    code: '841.523',
+    code: '832.05',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Fraudulent use of checks under Florida law',
@@ -8477,7 +8477,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '889.179',
+    code: '817.234',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Fraudulent insurance claims under Florida law',
@@ -8503,7 +8503,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-forgery',
     name: 'Forgery',
-    code: '300.951',
+    code: '831.01',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Creating false documents under Florida law',
@@ -8516,7 +8516,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-computer-fraud',
     name: 'Computer Fraud',
-    code: '484.196',
+    code: '815.06',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Florida law',
@@ -8529,7 +8529,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '816.516',
+    code: '877.03',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Florida law',
@@ -8542,7 +8542,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-public-intoxication',
     name: 'Public Intoxication',
-    code: '120.856',
+    code: '856.011',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under Florida law',
@@ -8555,7 +8555,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '469.705',
+    code: '877.03',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Florida law',
@@ -8568,7 +8568,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-trespassing',
     name: 'Trespassing',
-    code: '591.629',
+    code: '810.08',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Unlawful entry on property under Florida law',
@@ -8581,7 +8581,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-vandalism',
     name: 'Vandalism',
-    code: '722.624',
+    code: '806.13',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Destruction of property under Florida law',
@@ -8594,7 +8594,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-loitering',
     name: 'Loitering',
-    code: '323.139',
+    code: '856.021',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under Florida law',
@@ -8607,7 +8607,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-dui-first-offense',
     name: 'DUI First Offense',
-    code: '791.409',
+    code: '316.193',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Driving under influence, first offense under Florida law',
@@ -8620,7 +8620,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '884.863',
+    code: '316.193',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Florida law',
@@ -8633,7 +8633,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '196.381',
+    code: '316.193',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Driving under influence, felony level under Florida law',
@@ -8646,7 +8646,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-reckless-driving',
     name: 'Reckless Driving',
-    code: '606.919',
+    code: '316.192',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Florida law',
@@ -8659,7 +8659,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-hit-and-run',
     name: 'Hit and Run',
-    code: '415.313',
+    code: '316.027',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Florida law',
@@ -8672,7 +8672,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-driving-while-suspended',
     name: 'Driving While Suspended',
-    code: '720.650',
+    code: '322.34',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Driving with suspended license under Florida law',
