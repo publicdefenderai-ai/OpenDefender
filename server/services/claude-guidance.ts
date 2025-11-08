@@ -1,24 +1,19 @@
 // Claude AI-Powered Legal Guidance Service
-// Using Replit AI Integrations for Anthropic access (no personal API key required)
+// Using direct Anthropic API with user-provided API key
 import Anthropic from '@anthropic-ai/sdk';
 import crypto from 'crypto';
 
-// Validate Replit AI Integrations credentials
-const apiKey = process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY;
-const baseURL = process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL;
+// Validate Anthropic API credentials
+const apiKey = process.env.ANTHROPIC_API_KEY;
 
-if (!apiKey || !baseURL) {
-  console.error('CRITICAL: Replit AI Integrations credentials not set');
-  console.error('Missing:', {
-    apiKey: !apiKey ? 'AI_INTEGRATIONS_ANTHROPIC_API_KEY' : 'present',
-    baseURL: !baseURL ? 'AI_INTEGRATIONS_ANTHROPIC_BASE_URL' : 'present'
-  });
-  throw new Error('Replit AI Integrations credentials required for AI guidance features');
+if (!apiKey) {
+  console.error('CRITICAL: Anthropic API key not set');
+  console.error('Missing: ANTHROPIC_API_KEY');
+  throw new Error('ANTHROPIC_API_KEY required for AI guidance features');
 }
 
 const anthropic = new Anthropic({
   apiKey,
-  baseURL,
   timeout: 60000, // 60 second timeout for the SDK
 });
 
@@ -386,7 +381,7 @@ async function callClaudeWithRetry(
       // Wrap the API call in a timeout promise to ensure it actually times out
       const timeoutMs = 65000; // 65 seconds - slightly longer than SDK timeout
       const apiCallPromise = anthropic.messages.create({
-        model: 'claude-sonnet-4-5',
+        model: 'claude-sonnet-4-20250514',
         max_tokens: 3072,
         temperature: 0.3,
         system: systemPrompt,
@@ -415,14 +410,18 @@ async function callClaudeWithRetry(
       const isTimeout = error.constructor.name === 'APIConnectionTimeoutError' || 
                        (error instanceof Error && error.message.includes('timed out'));
       
-      if (isTimeout && attempt < maxRetries) {
-        console.warn(`Claude API timed out on attempt ${attempt + 1}, will retry...`);
-        // Add a small delay before retry (1 second)
-        await new Promise(resolve => setTimeout(resolve, 1000));
+      // Check if this is an overloaded error (529) that we should retry
+      const isOverloaded = error instanceof Anthropic.APIError && error.status === 529;
+      
+      if ((isTimeout || isOverloaded) && attempt < maxRetries) {
+        console.warn(`Claude API ${isOverloaded ? 'overloaded' : 'timed out'} on attempt ${attempt + 1}, will retry...`);
+        // Add a delay before retry (3 seconds for overloaded, 1 second for timeout)
+        const delay = isOverloaded ? 3000 : 1000;
+        await new Promise(resolve => setTimeout(resolve, delay));
         continue;
       }
       
-      // If not a timeout or we've exhausted retries, throw the error
+      // If not a retriable error or we've exhausted retries, throw the error
       throw error;
     }
   }
@@ -447,8 +446,8 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt();
     const userPrompt = buildUserPrompt(caseDetails);
 
-    console.log('Calling Claude API with model: claude-sonnet-4-5');
-    console.log('Base URL:', baseURL);
+    console.log('Calling Claude API with model: claude-sonnet-4-20250514');
+    console.log('Using direct Anthropic API (https://api.anthropic.com)');
     console.log('Prompt length:', userPrompt.length, 'characters');
 
     console.log('Making API request to Claude (with retry on timeout)...');
@@ -540,7 +539,7 @@ export async function generateClaudeGuidance(
 export async function testClaudeConnection(): Promise<boolean> {
   try {
     await anthropic.messages.create({
-      model: 'claude-sonnet-4-5', // Claude Sonnet 4.5 (September 2025)
+      model: 'claude-sonnet-4-20250514', // Claude Sonnet 4 (May 2025)
       max_tokens: 10,
       messages: [{ role: 'user', content: 'test' }],
     });
