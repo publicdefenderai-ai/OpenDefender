@@ -223,16 +223,105 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
       return `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=${code}&lawCode=PEN`;
     
     case 'TX':
-      // Texas URLs require chapter number (e.g., 19.02 → chapter 19)
+      // Texas: Official site serves chapter pages with anchor fragments
+      // e.g., 19.02 → PE.19.htm#19.02, 481.115 → HS.481.htm#481.115
+      if (code.startsWith('481.')) {
+        const chapter = code.split('.')[0];
+        return `https://statutes.capitol.texas.gov/Docs/HS/htm/HS.${chapter}.htm#${code}`;
+      }
       const chapter = code.split('.')[0];
       return `https://statutes.capitol.texas.gov/Docs/PE/htm/PE.${chapter}.htm#${code}`;
     
     case 'FL':
-      // Florida URLs use chapter.section format
+      // Florida URLs: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/0782.html
+      if (code.includes('.')) {
+        const [chapterStr] = code.split('.');
+        const chapterNum = parseInt(chapterStr, 10);
+        const chapterPadded = chapterStr.padStart(4, '0'); // e.g., 782 → 0782, 39 → 0039
+        const rangeStart = Math.floor(chapterNum / 100) * 100; // e.g., 782 → 700, 39 → 0
+        const rangeEnd = rangeStart + 99; // e.g., 799, 99
+        const chapterRange = `${String(rangeStart).padStart(4, '0')}-${String(rangeEnd).padStart(4, '0')}`; // e.g., 0700-0799, 0000-0099
+        return `http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=${chapterRange}/${chapterPadded}/${chapterPadded}.html`;
+      }
       return `https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=${code}.html`;
     
     case 'NY':
       return `https://www.nysenate.gov/legislation/laws/PEN/${code}`;
+    
+    case 'IL':
+      // Illinois: 720 ILCS 5/article-section format
+      // Handle both "5/9-1" and "720-5/9-1" formats
+      let ilCode = code;
+      if (code.startsWith('720-5/')) {
+        ilCode = code.substring(6); // Remove "720-5/" prefix
+      } else if (code.startsWith('5/')) {
+        ilCode = code.substring(2); // Remove "5/" prefix
+      }
+      return `https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072000050K${ilCode}`;
+    
+    case 'PA':
+      // Pennsylvania: Different Titles (18, 35, 75)
+      // Determine title and extract the section code
+      let title = '18';
+      let sectionCode = code;
+      
+      if (code.startsWith('35-')) {
+        title = '35';
+        sectionCode = code.replace('35-', '');
+        // Title 35 uses hyphenated format: 780-113(a)(16) or 780-113.1(a)(16)
+        // Split on hyphen: chapter-section(subsection)
+        const parts = sectionCode.split('(')[0].split('-'); // Remove subsection, then split
+        if (parts.length >= 2) {
+          const chapter = parts[0];
+          let section = parts[1];
+          
+          // Handle decimal sections (e.g., 113.1 → 113.001)
+          if (section.includes('.')) {
+            const [mainSec, decimal] = section.split('.');
+            section = `${mainSec}.${decimal.padStart(3, '0')}`;
+            return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter}.${section}..HTM`;
+          }
+          
+          return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter}.${section}..HTM`;
+        }
+        // Fallback if format is unexpected
+        return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${sectionCode.split('(')[0]}..HTM`;
+      } else if (code.startsWith('75-')) {
+        title = '75';
+        sectionCode = code.replace('75-', '');
+      }
+      
+      // Remove subsection markers like (a) for Title 18 and 75
+      const baseCode = sectionCode.split('(')[0];
+      
+      // Handle decimal statutes (e.g., 2709.1 → 00.027.009.001..HTM)
+      if (baseCode.includes('.')) {
+        const parts = baseCode.split('.');
+        const mainCode = parts[0]; // e.g., "2709"
+        const decimal = parts.slice(1).join('.'); // e.g., "1" or "1.2"
+        
+        // Split main code into chapter and section
+        if (mainCode.length >= 3) {
+          const chapterLen = mainCode.length - 2;
+          const chapter = mainCode.substring(0, chapterLen);
+          const section = mainCode.substring(chapterLen);
+          // Add decimal parts
+          return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter.padStart(3, '0')}.${section.padStart(3, '0')}.${decimal.padStart(3, '0')}..HTM`;
+        }
+      }
+      
+      // Numeric code - split into chapter and section
+      if (baseCode.length >= 3) {
+        // 3-digit (908 → ch 9, sec 08, or 143 → ch 1, sec 43)
+        // 4-digit (2502 → ch 25, sec 02, or 3802 → ch 38, sec 02)
+        const chapterLen = baseCode.length - 2;
+        const chapter = baseCode.substring(0, chapterLen);
+        const section = baseCode.substring(chapterLen);
+        return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter.padStart(3, '0')}.${section.padStart(3, '0')}..HTM`;
+      }
+      
+      // Fallback for shorter codes or unusual formats
+      return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${baseCode.padStart(3, '0')}..HTM`;
     
     case 'OH':
       return `https://codes.ohio.gov/ohio-revised-code/section-${code}`;
