@@ -3,18 +3,12 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   MessageSquare, 
-  ArrowRight, 
-  ArrowLeft,
   Shield, 
-  CheckCircle, 
   AlertTriangle,
   Clock,
   FileText,
   Users,
   Phone,
-  ExternalLink,
-  Download,
-  BookOpen,
   Scale,
   HelpCircle,
   MapPin,
@@ -700,73 +694,6 @@ export default function CaseGuidance() {
         </div>
       </section>
 
-      {/* What You'll Get */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-benefits">
-              {t('case.benefits.title')}
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ScrollReveal delay={0.1}>
-              <BenefitCard
-                icon={<ArrowRight className="h-6 w-6 text-white" />}
-                title={t('case.benefits.nextStepsTitle')}
-                description={t('case.benefits.nextStepsDesc')}
-                bgColor="bg-blue-600"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <BenefitCard
-                icon={<Clock className="h-6 w-6 text-white" />}
-                title={t('case.benefits.deadlinesTitle')}
-                description={t('case.benefits.deadlinesDesc')}
-                bgColor="bg-red-600"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <BenefitCard
-                icon={<Shield className="h-6 w-6 text-white" />}
-                title={t('case.benefits.rightsTitle')}
-                description={t('case.benefits.rightsDesc')}
-                bgColor="bg-green-600"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <BenefitCard
-                icon={<Users className="h-6 w-6 text-white" />}
-                title={t('case.benefits.resourcesTitle')}
-                description={t('case.benefits.resourcesDesc')}
-                bgColor="bg-purple-600"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.5}>
-              <BenefitCard
-                icon={<AlertTriangle className="h-6 w-6 text-white" />}
-                title={t('case.benefits.warningsTitle')}
-                description={t('case.benefits.warningsDesc')}
-                bgColor="bg-amber-500"
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.6}>
-              <BenefitCard
-                icon={<BookOpen className="h-6 w-6 text-white" />}
-                title={t('case.benefits.legalInfoTitle')}
-                description={t('case.benefits.legalInfoDesc')}
-                bgColor="bg-indigo-600"
-              />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* Privacy & Security */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
@@ -882,25 +809,6 @@ function StepCard({ number, title, description, icon }: {
           </div>
         </div>
         <h3 className="font-semibold text-foreground mb-3">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
-  );
-}
-
-function BenefitCard({ icon, title, description, bgColor }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  bgColor: string;
-}) {
-  return (
-    <Card className="hover:shadow-lg transition-all duration-300">
-      <CardContent className="p-6">
-        <div className={`w-12 h-12 ${bgColor} rounded-lg flex items-center justify-center mb-4`}>
-          {icon}
-        </div>
-        <h3 className="text-lg font-semibold text-foreground mb-3">{title}</h3>
         <p className="text-sm text-muted-foreground">{description}</p>
       </CardContent>
     </Card>

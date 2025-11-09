@@ -14,6 +14,8 @@ Preferred communication style: Simple, everyday language.
 
 The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui components built on Radix UI primitives. Styling is managed with Tailwind CSS, incorporating a custom legal-themed design system. Framer Motion provides animations. State management employs TanStack Query for server state and React hooks for local state. The application supports light/dark modes and is optimized for mobile responsiveness across all features. It features complete bilingual support (English/Spanish) with internationalization (i18n) using `react-i18next`, ensuring all 13 pages, interactive modals, and navigation menus are fully translated. All user-facing text is designed for a 6th-8th grade reading level.
 
+**Recent UI Updates (Nov 2025)**: The /case-guidance page has been streamlined by removing the "What You'll Receive" section. This content has been preserved in an internal FAQ outline (docs/faq-outline.md) for potential future use in a dedicated FAQ page. The page now flows directly from "How It Works" to "Privacy & Security" sections, creating a more focused user experience.
+
 ### Backend Architecture
 
 The backend is built with Express.js and TypeScript, providing a RESTful API. It includes custom middleware for logging and error handling. Drizzle ORM with PostgreSQL is used for type-safe database operations. Legal case data is designed to be ephemeral and automatically expires to ensure user privacy. The server provides endpoints for legal resources, court data, case law search, AI legal guidance, court records search, and legal aid organizations, including location-based searches for public defenders.
