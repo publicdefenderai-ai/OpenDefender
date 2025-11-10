@@ -24,6 +24,7 @@ import SearchSeizure from "@/pages/search-seizure";
 import FriendsFamily from "@/pages/friends-family";
 import HowTo from "@/pages/how-to";
 import PrivacyPolicy from "@/pages/privacy-policy";
+import Disclaimers from "@/pages/disclaimers";
 import Statutes from "@/pages/statutes";
 
 function Router() {
@@ -47,6 +48,7 @@ function Router() {
       <Route path="/friends-family" component={FriendsFamily} />
       <Route path="/how-to" component={HowTo} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/disclaimers" component={Disclaimers} />
       <Route path="/statutes" component={Statutes} />
       <Route component={NotFound} />
     </Switch>

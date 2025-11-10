@@ -193,7 +193,7 @@ i18n
             "ourMission": "Our Mission",
             "developmentRoadmap": "Development Roadmap",
             "privacyPolicy": "Privacy Policy",
-            "termsOfService": "Terms of Service",
+            "noticeDisclaimers": "Notice & Disclaimers",
             "privacyNotice": "Privacy First: We do not store your personal data — all input deleted after session.",
             "copyright": "© 2025 Public Defender AI. Not a substitute for professional legal advice."
           },
@@ -1735,7 +1735,7 @@ i18n
             "ourMission": "Nuestra Misión",
             "developmentRoadmap": "Hoja de Ruta de Desarrollo",
             "privacyPolicy": "Política de Privacidad",
-            "termsOfService": "Términos de Servicio",
+            "noticeDisclaimers": "Avisos y Exenciones",
             "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales — toda información se elimina después de la sesión.",
             "copyright": "© 2025 Defensor Público IA. No sustituye el asesoramiento legal profesional."
           },

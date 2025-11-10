@@ -393,9 +393,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  {t('footer.termsOfService')}
-                </a>
+                <Link href="/disclaimers" className="hover:text-white transition-colors">
+                  {t('footer.noticeDisclaimers')}
+                </Link>
               </li>
             </ul>
           </div>
