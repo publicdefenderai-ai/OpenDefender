@@ -1,4 +1,4 @@
-import { Scale, Twitter, Linkedin, Github, Shield, Search, Phone, Mail, Navigation, Clock, MapPin, X } from "lucide-react";
+import { Scale, Twitter, Github, Shield, Search, Phone, Mail, Navigation, Clock, MapPin, X } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -278,13 +278,6 @@ export function Footer() {
                 data-testid="link-twitter"
               >
                 <Twitter className="h-4 w-4" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-white transition-colors"
-                data-testid="link-linkedin"
-              >
-                <Linkedin className="h-4 w-4" />
               </a>
               <a 
                 href="#" 
