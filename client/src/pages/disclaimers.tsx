@@ -146,7 +146,15 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Because PublicDefenderAI is open source and public domain under CC0, anyone can freely use or change it without any restrictions or promises.
+                  Because PublicDefenderAI is open source and public domain under CC0, anyone can freely use or change it without any restrictions or promises. The public repository is available{" "}
+                  <a 
+                    href="https://github.com/shahabasghar/PublicDefenderAI" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                  >
+                    here
+                  </a>.
                 </p>
               </CardContent>
             </Card>
