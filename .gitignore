@@ -4,3 +4,20 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.pem
+*.key
+
+# Database
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
