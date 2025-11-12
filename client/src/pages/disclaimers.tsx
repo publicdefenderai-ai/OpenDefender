@@ -98,11 +98,11 @@ export default function Disclaimers() {
           </div>
         </ScrollReveal>
 
-        {/* No Responsibility */}
+        {/* Limitation of Liability */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              No Responsibility
+              Limitation of Liability
             </h2>
             
             <Card>
