@@ -63,8 +63,8 @@ i18n
               "stateLawsDesc": "Federal criminal statutes from GovInfo.gov and seed database of state statutes (15 statutes, 10 states). Full 50-state coverage pending OpenLaws API access. Quarterly monitoring via LegiScan API.",
               "stateLawsStatus": "Partial Completion",
               "analytics": "Criminal Justice Analytics",
-              "analyticsDesc": "DOJ APIs, Bureau of Justice Statistics, and state-specific datasets for sentencing guidelines and case outcomes.",
-              "analyticsStatus": "Mock Data (Development)"
+              "analyticsDesc": "Bureau of Justice Statistics (BJS) integration in progress. NCVS/NIBRS API implementation with proper weighting and pagination pending validation.",
+              "analyticsStatus": "Partial Completion"
             },
             "trust": {
               "title": "Built on Trust & Transparency",
@@ -1605,8 +1605,8 @@ i18n
               "stateLawsDesc": "Estatutos penales federales de GovInfo.gov y base de datos inicial de estatutos estatales (15 estatutos, 10 estados). Cobertura completa de 50 estados pendiente de acceso a la API de OpenLaws. Monitoreo trimestral vía API de LegiScan.",
               "stateLawsStatus": "Finalización Parcial",
               "analytics": "Análisis de Justicia Penal",
-              "analyticsDesc": "API del DOJ, Oficina de Estadísticas de Justicia y conjuntos de datos específicos del estado para pautas de sentencia y resultados de casos.",
-              "analyticsStatus": "Datos Simulados (Desarrollo)"
+              "analyticsDesc": "Integración de la Oficina de Estadísticas de Justicia (BJS) en progreso. Implementación de API NCVS/NIBRS con ponderación adecuada y paginación pendiente de validación.",
+              "analyticsStatus": "Finalización Parcial"
             },
             "trust": {
               "title": "Basado en Confianza y Transparencia",

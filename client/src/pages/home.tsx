@@ -435,7 +435,7 @@ export default function Home() {
                 icon={<BarChart3 className="h-6 w-6 text-white" />}
                 title={t('home.features.analytics')}
                 description={t('home.features.analyticsDesc')}
-                status="mock"
+                status="partial"
                 statusText={t('home.features.analyticsStatus')}
                 iconBgColor="bg-blue-500"
               />

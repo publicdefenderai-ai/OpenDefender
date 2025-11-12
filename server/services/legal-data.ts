@@ -237,23 +237,29 @@ class LegalDataServiceImpl implements LegalDataService {
 
   async getDOJStatistics() {
     try {
-      // This would integrate with DOJ APIs for crime statistics
-      const mockStats = {
+      // Import dynamically to avoid circular dependencies
+      const { bjsStatisticsService } = await import('./bjs-statistics');
+      
+      // Get real crime statistics from BJS API
+      const stats = await bjsStatisticsService.getCrimeStatistics();
+      
+      return {
         success: true,
         statistics: {
-          federalCases: 75000,
-          convictionRate: 0.89,
-          averageSentence: 36, // months
+          totalVictimizations: stats.totalVictimizations,
+          violentCrimes: stats.violentCrimeCount,
+          propertyCrimes: stats.propertyCrimeCount,
+          byType: stats.byType,
+          yearRange: stats.yearRange,
         },
-        source: 'Department of Justice',
+        source: stats.metadata.source,
+        note: stats.metadata.note,
       };
-
-      return mockStats;
     } catch (error) {
-      console.error('DOJ statistics fetch failed:', error);
+      console.error('BJS statistics fetch failed:', error);
       return {
         success: false,
-        error: 'Failed to fetch DOJ statistics',
+        error: 'Failed to fetch crime statistics',
         statistics: {},
       };
     }

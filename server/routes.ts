@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { courtListenerService } from "./services/courtlistener";
 import { legalDataService } from "./services/legal-data";
 import { recapService } from "./services/recap";
+import { bjsStatisticsService } from "./services/bjs-statistics";
 import { insertLegalCaseSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
@@ -646,6 +647,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Robots.txt audit failed:", error);
       res.status(500).json({ success: false, error: "Audit failed" });
+    }
+  });
+
+  // BJS Statistics API - Get crime statistics
+  app.get("/api/statistics/bjs/crime", async (req, res) => {
+    try {
+      const { startYear, endYear } = req.query;
+      const stats = await bjsStatisticsService.getCrimeStatistics(
+        startYear ? parseInt(startYear as string) : undefined,
+        endYear ? parseInt(endYear as string) : undefined
+      );
+      res.json({ success: true, ...stats });
+    } catch (error) {
+      console.error("BJS statistics fetch failed:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch BJS crime statistics" });
+    }
+  });
+
+  // BJS Statistics API - Get victimization trends
+  app.get("/api/statistics/bjs/trends", async (req, res) => {
+    try {
+      const { years } = req.query;
+      const yearArray = years 
+        ? (years as string).split(',').map(y => parseInt(y)) 
+        : [new Date().getFullYear() - 5, new Date().getFullYear() - 1];
+      
+      const trends = await bjsStatisticsService.getVictimizationTrends(yearArray);
+      res.json({ success: true, ...trends });
+    } catch (error) {
+      console.error("BJS trends fetch failed:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch victimization trends" });
+    }
+  });
+
+  // BJS Statistics API - Health check
+  app.get("/api/statistics/bjs/health", async (req, res) => {
+    try {
+      const health = await bjsStatisticsService.checkHealth();
+      res.json(health);
+    } catch (error) {
+      res.status(500).json({ healthy: false, message: "Health check failed" });
     }
   });
 

@@ -69,6 +69,7 @@ Vite is used for frontend development and client-side production optimization. E
 -   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
 -   **OpenLaws API** (Pending): All 50 states + federal statutes.
 -   **LegiScan API**: Quarterly statute change monitoring.
+-   **Bureau of Justice Statistics (BJS) API** (⚠️ IN PROGRESS): NCVS (National Crime Victimization Survey) and NIBRS (National Incident-Based Reporting System) for crime statistics. **Current Status**: Infrastructure implemented but requires critical fixes before production use: (1) Separate person-level and household-level weighting to avoid mixing incompatible units, (2) Implement pagination (currently capped at 100k records, causing data truncation), (3) Validate totals reconcile with category breakdowns. See `server/services/bjs-statistics.ts` and `shared/bjs-code-mappings.ts`.
 -   **Cornell Legal Information Institute**: Legal statutes reference.
 -   **EOIR.gov**: Immigration legal service providers.
 -   **Legal Services Corporation (LSC)**: Civil legal aid organizations.
