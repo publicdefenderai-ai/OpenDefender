@@ -280,7 +280,9 @@ export function Footer() {
                 <Twitter className="h-4 w-4" />
               </a>
               <a 
-                href="#" 
+                href="https://github.com/shahabasghar/PublicDefenderAI" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
                 data-testid="link-github"
               >
