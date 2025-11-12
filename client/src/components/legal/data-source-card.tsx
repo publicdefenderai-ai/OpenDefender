@@ -6,7 +6,7 @@ interface DataSourceCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
-  status: "live" | "free" | "paid" | "mock" | "government";
+  status: "live" | "free" | "paid" | "mock" | "government" | "partial";
   statusText: string;
   iconBgColor?: string;
 }
@@ -26,6 +26,7 @@ export function DataSourceCard({
       case "government":
         return <Check className="h-3 w-3" />;
       case "mock":
+      case "partial":
         return <AlertTriangle className="h-3 w-3" />;
       case "paid":
         return <Info className="h-3 w-3" />;
@@ -44,6 +45,7 @@ export function DataSourceCard({
       case "paid":
         return "legal-blue";
       case "mock":
+      case "partial":
         return "bg-amber-500";
       default:
         return "bg-gray-500";
@@ -66,12 +68,13 @@ export function DataSourceCard({
           </div>
         </div>
         <p className="text-sm text-muted-foreground mb-3">{description}</p>
-        <div className={`text-xs ${status === "mock" ? "text-amber-600" : "text-" + getStatusColor().replace("bg-", "")}`}>
+        <div className={`text-xs ${status === "mock" || status === "partial" ? "text-amber-600" : "text-" + getStatusColor().replace("bg-", "")}`}>
           {status === "live" && "✓ Live Integration"}
           {status === "free" && "✓ Free Access"}
           {status === "government" && "✓ Official Government Data"}
           {status === "paid" && "✓ Commercial API"}
           {status === "mock" && "⚠ Development Phase"}
+          {status === "partial" && "⚠ Partial Completion"}
         </div>
       </CardContent>
     </Card>

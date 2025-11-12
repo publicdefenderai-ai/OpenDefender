@@ -413,7 +413,7 @@ export default function Home() {
                 icon={<Book className="h-6 w-6 text-white" />}
                 title={t('home.features.federalCourts')}
                 description={t('home.features.federalCourtsDesc')}
-                status="live"
+                status="partial"
                 statusText={t('home.features.federalCourtsStatus')}
                 iconBgColor="bg-blue-600"
               />
@@ -424,7 +424,7 @@ export default function Home() {
                 icon={<FileText className="h-6 w-6 text-white" />}
                 title={t('home.features.stateLaws')}
                 description={t('home.features.stateLawsDesc')}
-                status="government"
+                status="partial"
                 statusText={t('home.features.stateLawsStatus')}
                 iconBgColor="bg-green-600"
               />
