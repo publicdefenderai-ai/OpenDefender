@@ -4,15 +4,26 @@
  * Scrubs sensitive information from user input before sending to Claude AI.
  * Uses category-aware placeholders to preserve narrative context while removing identifiers.
  * 
- * Redacted categories:
- * - Full names (including aliases)
- * - Physical addresses (home, work, school)
- * - Email addresses and usernames
- * - Phone numbers
- * - SSN, passport, driver's license, government IDs
- * - Financial information (account/card numbers)
- * - Birthdates
- * - Sensitive employment, health, educational, legal records
+ * **Redacted Categories (High Confidence):**
+ * - Email addresses, phone numbers (regex-based, reliable)
+ * - SSN, credit cards, account numbers (regex-based, reliable)
+ * - Physical addresses with street numbers (pattern-based)
+ * - Government IDs (driver's licenses, passports)
+ * - Birthdates in specific formats
+ * - **Names in strong context**: "my name is X", "I am X", "Officer/Judge/Dr. X"
+ * 
+ * **IMPORTANT LIMITATIONS:**
+ * This regex-based approach cannot guarantee 100% name redaction while preserving legal context.
+ * Names mentioned in free-form narrative (e.g., "John Doe witnessed the event") may not be caught
+ * to avoid over-redacting institutional terms like "State of California" or "District Attorney's Office".
+ * 
+ * **Privacy Guidance for Users:**
+ * - Avoid mentioning full names in free-form descriptions
+ * - Use pronouns ("the officer", "my attorney") instead of names
+ * - Focus on facts and circumstances rather than personal identifiers
+ * 
+ * **Future Enhancement:**
+ * Consider Microsoft Presidio or similar NER/ML-based solution for production-grade name detection.
  */
 
 import { Redactor } from '@redactpii/node';
@@ -103,16 +114,16 @@ const ADDITIONAL_PII_PATTERNS = {
   // MM/DD/YYYY, DD-MM-YYYY, Month DD, YYYY, etc.
   DOB: /\b(?:DOB|BIRTH|BORN)[:\s]*(?:\d{1,2}[/-]\d{1,2}[/-]\d{2,4}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+\d{4})\b/gi,
   
-  // Enhanced name detection - matches names in any case (2-4 words)
-  // Matches: "John Doe", "john doe", "JOHN DOE", "Mary Jane Smith", "Officer Johnson"
-  // Limitations: May have false positives with proper nouns, place names, organizations
-  // This is a trade-off between privacy (over-redaction) and accuracy
-  FULL_NAME: /\b[A-Za-z]{2,15}(?:\s+[A-Za-z]{2,15}){1,3}\b/g,
+  // Context-based name detection (HIGH CONFIDENCE ONLY)
+  // Only redacts names when preceded by strong contextual triggers
+  // Catches: "my name is John Doe", "I am Jane Smith", "I'm Bob", "called Alice", "named Charlie", "Officer Bob Jones", "Dr. Alice Brown Jr."
+  // Supports: case-insensitive, apostrophes, hyphens, initials, suffixes
+  // DOES NOT catch names in free narrative to preserve legal context (e.g., "State of California")
+  NAME_WITH_STRONG_CONTEXT: /\b(?:my\s+name\s+(?:is|was)|I\s+(?:am|was)|I'm\s+|called\s+|named\s+|(?:Officer|Detective|Sergeant|Lieutenant|Captain|Chief|Judge|Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Professor)\s+)((?:[A-Za-z'-]+|[A-Z]\.?)(?:\s+(?:[A-Za-z'-]+|[A-Z]\.?))*(?:\s+(?:Jr\.|Sr\.|III|IV|V|Esq\.))?)/gi,
   
-  // Specific name context patterns for higher confidence  
-  // Catches: "my name is X", "I am X", "arrested X", "Officer X", etc.
-  // Case-insensitive to catch all variants
-  NAME_WITH_CONTEXT: /\b(?:my\s+name\s+(?:is|was)|I\s+(?:am|was)|called|named|(?:Officer|Detective|Mr\.|Mrs\.|Ms\.|Dr\.)\s+)([A-Za-z]+(?:\s+[A-Za-z]+)*)/gi,
+  // Institutional titles and jurisdictional phrases that should NOT be redacted (not personal names)
+  // Must check before redacting title + name combinations
+  INSTITUTIONAL_TITLES: /\b(?:Attorney\s+General|Chief\s+Justice|Chief\s+Judge|District\s+Attorney|Public\s+Defender|State\s+Attorney|Solicitor\s+General|State\s+of\s+[A-Z][a-z]+|(?:City|County|State)\s+(?:Attorney'?s?|Prosecutor'?s?)\s+Office|Office\s+of\s+the\s+[A-Z][a-z]+|Department\s+of\s+[A-Z][a-z]+)\b/gi,
 };
 
 /**
@@ -125,44 +136,20 @@ function redactText(text: string | undefined): string {
   let redacted = redactor.redact(text);
   
   // Second pass: Apply additional custom patterns
-  // Apply context-based name redaction first (higher confidence)
-  redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.NAME_WITH_CONTEXT, (match, name) => {
-    return match.replace(name, '[REDACTED_NAME]');
+  
+  // First, protect institutional titles from redaction
+  const institutionalTitlePlaceholders = new Map<string, string>();
+  let placeholderIndex = 0;
+  redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.INSTITUTIONAL_TITLES, (match) => {
+    const placeholder = `__INSTITUTIONAL_TITLE_${placeholderIndex++}__`;
+    institutionalTitlePlaceholders.set(placeholder, match);
+    return placeholder;
   });
   
-  // Apply general capitalized name pattern
-  // Skip common words/titles to reduce false positives
-  const commonWords = new Set([
-    'The', 'This', 'That', 'These', 'Those', 'What', 'When', 'Where', 'Which', 'Who',
-    'Police', 'Court', 'Judge', 'Attorney', 'Defendant', 'Plaintiff', 'State', 'Federal',
-    'County', 'City', 'Department', 'Office', 'Bureau', 'Agency', 'United', 'States',
-    'America', 'Public', 'Defender', 'District', 'Superior', 'Municipal', 'Criminal',
-    'Civil', 'Family', 'Juvenile', 'Traffic', 'Small', 'Claims', 'Monday', 'Tuesday',
-    'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'January', 'February',
-    'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
-    'November', 'December', 'North', 'South', 'East', 'West', 'Street', 'Avenue',
-    'Boulevard', 'Road', 'Drive', 'Lane', 'Court'
-  ]);
-  
-  redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.FULL_NAME, (match) => {
-    // Check if it's a common word/title we should skip (case-insensitive)
-    const firstWord = match.split(/\s+/)[0];
-    
-    // Check against common words (case-insensitive comparison)
-    const commonWordsArray = Array.from(commonWords);
-    for (const commonWord of commonWordsArray) {
-      if (firstWord.toLowerCase() === commonWord.toLowerCase()) {
-        return match; // Don't redact
-      }
-    }
-    
-    // Also skip if all words are very short (likely not names)
-    const words = match.split(/\s+/);
-    if (words.every(w => w.length <= 2)) {
-      return match; // Don't redact short words like "to be", "if it"
-    }
-    
-    return '[REDACTED_NAME]';
+  // Apply context-based name redaction (HIGH CONFIDENCE ONLY)
+  // This preserves legal context while catching the most explicit name disclosures
+  redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.NAME_WITH_STRONG_CONTEXT, (match, name) => {
+    return match.replace(name, '[REDACTED_NAME]');
   });
   
   redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.ADDRESS, '[REDACTED_ADDRESS]');
@@ -170,6 +157,11 @@ function redactText(text: string | undefined): string {
   redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.PASSPORT, '[REDACTED_PASSPORT]');
   redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.ACCOUNT_NUMBER, '[REDACTED_ACCOUNT]');
   redacted = redacted.replace(ADDITIONAL_PII_PATTERNS.DOB, '[REDACTED_DOB]');
+  
+  // Restore institutional titles
+  institutionalTitlePlaceholders.forEach((original, placeholder) => {
+    redacted = redacted.replace(placeholder, original);
+  });
   
   return redacted;
 }
@@ -308,8 +300,7 @@ export function hasPII(text: string): boolean {
     PASSPORT: new RegExp(ADDITIONAL_PII_PATTERNS.PASSPORT.source, 'gi'),
     ACCOUNT_NUMBER: new RegExp(ADDITIONAL_PII_PATTERNS.ACCOUNT_NUMBER.source, 'gi'),
     DOB: new RegExp(ADDITIONAL_PII_PATTERNS.DOB.source, 'gi'),
-    FULL_NAME: new RegExp(ADDITIONAL_PII_PATTERNS.FULL_NAME.source, 'g'),
-    NAME_WITH_CONTEXT: new RegExp(ADDITIONAL_PII_PATTERNS.NAME_WITH_CONTEXT.source, 'gi'),
+    NAME_WITH_STRONG_CONTEXT: new RegExp(ADDITIONAL_PII_PATTERNS.NAME_WITH_STRONG_CONTEXT.source, 'gi'),
   };
   
   for (const pattern of Object.values(patterns)) {
