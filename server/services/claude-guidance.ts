@@ -2,6 +2,7 @@
 // Using direct Anthropic API with user-provided API key
 import Anthropic from '@anthropic-ai/sdk';
 import crypto from 'crypto';
+import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
 
 // Validate Anthropic API credentials
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -433,8 +434,33 @@ async function callClaudeWithRetry(
 export async function generateClaudeGuidance(
   caseDetails: CaseDetails
 ): Promise<ClaudeGuidance> {
-  // Check cache first
-  const cacheKey = generateCacheKey(caseDetails);
+  // CRITICAL: Redact PII before any processing (cache, API calls, logs)
+  // This ensures no personally identifiable information reaches Claude or our systems
+  let processedDetails = caseDetails;
+  
+  if (isPIIRedactionEnabled()) {
+    const { redactedDetails, stats } = redactCaseDetails(caseDetails);
+    processedDetails = redactedDetails;
+    
+    // Log redaction stats for observability (NOT the actual redacted values)
+    if (stats.total > 0) {
+      console.log('[PII Protection] Redacted sensitive information:', {
+        total: stats.total,
+        breakdown: {
+          names: stats.name,
+          emails: stats.email,
+          phones: stats.phone,
+          ssn: stats.ssn,
+          creditCards: stats.creditCard,
+          addresses: stats.address,
+          dob: stats.dob,
+        }
+      });
+    }
+  }
+  
+  // Check cache using redacted details (prevents PII in cache keys)
+  const cacheKey = generateCacheKey(processedDetails);
   const cachedEntry = responseCache.get(cacheKey);
   
   if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_TTL) {
@@ -444,7 +470,7 @@ export async function generateClaudeGuidance(
 
   try {
     const systemPrompt = buildSystemPrompt();
-    const userPrompt = buildUserPrompt(caseDetails);
+    const userPrompt = buildUserPrompt(processedDetails);
 
     console.log('Generating personalized guidance with Claude Sonnet 4...');
     console.log('Using direct Anthropic API');
