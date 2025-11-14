@@ -26,13 +26,12 @@ The backend is built with Express.js and TypeScript, providing a RESTful API. It
 
 ### Data Sources and Integrations
 
-The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations (153 total: 123 public defender offices [95 federal, 28 state/county], 12 immigration, 18 civil legal aid), a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a hybrid multi-source approach:
-1.  **Primary**: Justia web scraping (✅ ACTIVE) for all 50-state + DC coverage - comprehensive criminal codes.
-2.  **Federal**: GovInfo API (✅ ACTIVE) for Title 18 USC federal criminal statutes.
-3.  **Seed Data**: PostgreSQL database (15 statutes, 10 states) - ✅ operational for immediate fallback.
-4.  **Monitoring**: LegiScan API for quarterly statute change detection.
+The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations (153 total: 123 public defender offices [95 federal, 28 state/county], 12 immigration, 18 civil legal aid), a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a pragmatic multi-source approach:
+1.  **Primary - Federal**: GovInfo API (✅ ACTIVE) for Title 18 USC federal criminal statutes - complete coverage.
+2.  **Primary - State**: Curated seed data (15 statutes, 10 states) - ✅ operational, high-quality manually verified statutes.
+3.  **Monitoring**: LegiScan API for quarterly statute change detection.
 
-**Current Status (Nov 2025)**: OpenLaws API abandoned after team became unresponsive for weeks. Implemented Justia web scraping as primary solution, providing comprehensive, free access to all 50 state statutory codes through ethical web scraping with full robots.txt compliance and respectful rate limiting (3-second delays). Automatic discovery of criminal code paths and section parsing. Session-based progress tracking in PostgreSQL.
+**Current Status (Nov 2025)**: After exhaustive testing, web scraping approaches proved non-viable: (1) OpenLaws API - team unresponsive for weeks, (2) Justia - actively blocked by CloudFront CDN regardless of robots.txt compliance, (3) State websites - URL structures outdated/changed. **Current working solution focuses on quality over quantity**: GovInfo federal coverage + manually curated high-quality seed data for top 10 states covering common criminal offenses (assault, theft, burglary, fraud, robbery). This approach ensures data accuracy and legal compliance while avoiding unreliable web scraping battles.
 
 ### API Architecture
 

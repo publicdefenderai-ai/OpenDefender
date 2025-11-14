@@ -1,4 +1,6 @@
-import { CaliforniaScraper, TexasScraper, FloridaScraper, NewYorkScraper, IllinoisScraper, OhioScraper, NorthCarolinaScraper, MichiganScraper, JustiaScraper } from './statute-scraper';
+// Legacy scrapers no longer used - all automated scraping approaches failed
+// Keeping imports commented for historical reference:
+// import { CaliforniaScraper, TexasScraper, FloridaScraper, NewYorkScraper, IllinoisScraper, OhioScraper, NorthCarolinaScraper, MichiganScraper } from './statute-scraper';
 import { db } from '../db';
 import { statuteScrapes, type StatuteScrape } from '@shared/schema';
 import { eq, desc } from 'drizzle-orm';
@@ -37,97 +39,33 @@ export class ScrapingCoordinator {
       let scraper: any;
       let stateName = stateCode;
       
-      // Justia scraper disabled - CloudFront actively blocks all automated requests
-      // Keeping code for reference but not using by default
-      if (useJustia && !forceStateSite && false) { // Disabled: CloudFront 403 blocking
-        try {
-          scraper = new JustiaScraper(stateCode);
-          stateName = stateCode;
-          console.log(`[Coordinator] Using Justia scraper for ${stateCode}`);
-        } catch (error) {
-          console.error(`[Coordinator] Failed to create Justia scraper for ${stateCode}:`, error);
-          // Fall through to state-specific scrapers if Justia fails
-        }
-      }
+      // NOTE: All web scraping approaches have failed:
+      // - Justia: CloudFront bot detection blocks all requests (403)
+      // - State websites: URLs outdated, returning 404s
+      // - OpenLaws API: Team unresponsive
+      // 
+      // Current working solution: Curated seed data only
+      // See server/data/state-statutes-seed.ts for expansion
       
-      // Fallback to state-specific scrapers if Justia not available or forced
-      if (!scraper) {
-        switch (stateCode) {
-          case 'TX':
-            scraper = new TexasScraper();
-            stateName = 'Texas';
-            break;
-          case 'FL':
-            scraper = new FloridaScraper();
-            stateName = 'Florida';
-            break;
-          case 'NY':
-            scraper = new NewYorkScraper();
-            stateName = 'New York';
-            break;
-          case 'IL':
-            scraper = new IllinoisScraper();
-            stateName = 'Illinois';
-            break;
-          case 'OH':
-            scraper = new OhioScraper();
-            stateName = 'Ohio';
-            break;
-          case 'NC':
-            scraper = new NorthCarolinaScraper();
-            stateName = 'North Carolina';
-            break;
-          case 'MI':
-            scraper = new MichiganScraper();
-            stateName = 'Michigan';
-            break;
-          case 'CA':
-            // Note: Direct CA website blocked by robots.txt, but Justia is allowed
-            if (forceStateSite) {
-              return {
-                success: false,
-                message: 'California state website scraping blocked by robots.txt (use Justia instead)',
-              };
-            }
-            // Justia handles CA without issues
-            scraper = new JustiaScraper(stateCode);
-            stateName = 'California';
-            break;
-          
-          default:
-            // For any unknown state, try Justia as universal fallback
-            if (!forceStateSite) {
-              try {
-                scraper = new JustiaScraper(stateCode);
-                stateName = stateCode;
-              } catch (error) {
-                return {
-                  success: false,
-                  message: `No scraper available for ${stateCode}. Try using Justia scraper.`,
-                };
-              }
-            } else {
-              return {
-                success: false,
-                message: `No state-specific scraper for ${stateCode}. Use Justia instead.`,
-              };
-            }
-        }
-      }
+      // All states return informative message about curated data approach
+      const stateStatuteCount: Record<string, number> = {
+        'CA': 3, 'FL': 2, 'TX': 2, 'NY': 2,
+        'GA': 1, 'IL': 1, 'MI': 1, 'NC': 1, 'OH': 1, 'PA': 1
+      };
       
-      if (scraper) {
-        await scraper.scrape();
+      const count = stateStatuteCount[stateCode] || 0;
+      
+      if (count > 0) {
         return {
-          success: true,
-          message: `${stateName} scrape completed successfully`,
-          scrapeId: scraper['scrapeId'] || undefined,
+          success: false,
+          message: `Automated scraping not available. ${stateCode} has ${count} curated statute${count > 1 ? 's' : ''} in seed data. To expand: edit server/data/state-statutes-seed.ts`,
+        };
+      } else {
+        return {
+          success: false,
+          message: `No coverage for ${stateCode}. Current approach: curated seed data for major states. To add ${stateCode} statutes: edit server/data/state-statutes-seed.ts`,
         };
       }
-      
-      return {
-        success: false,
-        message: `No scraper found for ${stateCode}`,
-      };
     } catch (error) {
       console.error(`[Coordinator] Error scraping ${stateCode}:`, error);
       return {

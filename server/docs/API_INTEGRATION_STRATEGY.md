@@ -30,55 +30,47 @@ This document outlines the comprehensive API integration strategy for the Public
 
 ---
 
-## ✅ IMPLEMENTED: Justia Web Scraping (All 50 States)
+## ❌ FAILED: Web Scraping Approaches (All Non-Viable)
 
-### **Justia Codes Scraper** (ACTIVE SOLUTION)
+### **Justia Codes** (CloudFront Blocking)
 - **URL**: https://law.justia.com/codes/
-- **Coverage**: All 50 states + DC
-- **Content**: Complete compiled statutory codes
-- **Cost**: FREE (web scraping with robots.txt compliance and respectful rate limiting)
-- **Status**: ✅ **IMPLEMENTED AND ACTIVE**
-- **Compliance**: Follows robots.txt directives, 3-second rate limiting, proper User-Agent identification
+- **Status**: ❌ **BLOCKED** - CloudFront CDN returns 403 Forbidden for all automated requests
+- **Tested**: November 2025
+- **Issue**: Bot detection at CDN level blocks before reaching servers, regardless of robots.txt compliance
+- **Conclusion**: Not viable for programmatic access
 
-#### Advantages:
-1. **Universal Coverage**: All 50 states through one consistent source
-2. **Consistent Structure**: Uniform HTML structure across all states
-3. **Well-Maintained**: Justia regularly updates state codes
-4. **No API Key Required**: Direct web scraping (with robots.txt compliance)
-5. **Comprehensive Criminal Codes**: Full penal/criminal code coverage
-6. **Automatic Discovery**: Scraper finds criminal code paths automatically
+### **State Legislature Websites** (Outdated URLs)
+- **Tested States**: TX, FL, NY, IL, OH, NC, MI
+- **Status**: ❌ **BROKEN** - URL structures changed, returning 404 errors
+- **Example**: Texas `statutes.capitol.texas.gov` sections return 404
+- **Issue**: Legislature websites redesign without maintaining old URL patterns
+- **Conclusion**: Unsustainable - requires constant URL monitoring and updates
 
-#### Implementation Details:
-- **File**: `server/services/statute-scraper.ts` (JustiaScraper class)
-- **Rate Limiting**: 3 seconds between requests (respectful)
-- **Robots.txt**: Full compliance checked before each request
-- **Session Tracking**: Database logging of scraping progress
-- **Auto-Discovery**: Finds criminal code sections automatically
-- **Fallback**: State-specific scrapers still available if needed
-
-#### Usage:
-```typescript
-// Scrape any state via Justia (default)
-const scraper = new JustiaScraper('CA');  // Or any state code
-await scraper.scrape();
-
-// Via API endpoint
-POST /api/scrape/statutes/CA
-```
-
-#### Integration Priority: ✅ **COMPLETED**
-- **Impact**: Covers ALL 50 states with free, ethical web scraping
-- **Replaces**: Need for OpenLaws API (no longer waiting for access)
-- **Timeline**: Available immediately
+### **OpenLaws API** (Team Unresponsive)
+- **Status**: ❌ **ABANDONED** - No response after weeks of outreach
+- **Conclusion**: Unreliable for production use
 
 ---
 
-## ❌ DEPRECATED: OpenLaws API (No Longer Pursued)
+## ✅ WORKING SOLUTION: Quality Over Quantity
 
-### **OpenLaws API** (Not Responding)
-- **Status**: ❌ Team not responding after weeks of outreach
-- **Conclusion**: Abandoned in favor of Justia web scraping solution
-- **Replacement**: Justia scraper provides equivalent functionality
+### **Federal Statutes - GovInfo API** (ACTIVE)
+- **URL**: https://www.govinfo.gov/app/details/USCODE-2021-title18
+- **Coverage**: Complete Title 18 USC (federal criminal code)
+- **Cost**: FREE (official government API)
+- **Status**: ✅ **FULLY OPERATIONAL**
+- **Reliability**: Stable, maintained by U.S. Government Publishing Office
+
+### **State Statutes - Curated Seed Data** (ACTIVE)
+- **Coverage**: 15 high-quality statutes across 10 major states
+- **States**: CA (3), FL (2), TX (2), NY (2), GA, IL, MI, NC, OH, PA (1 each)
+- **Content**: Common criminal offenses (assault, theft, burglary, robbery, fraud)
+- **Status**: ✅ **VERIFIED AND OPERATIONAL**
+- **Advantages**:
+  - Manually verified for accuracy
+  - No web scraping reliability issues
+  - Covers most common user queries
+  - Can expand strategically as needed
 
 ---
 
@@ -208,25 +200,29 @@ Return Combined Results with Source Attribution
 ## Next Steps
 
 ### Completed Actions:
-1. ✅ **Complete**: GovInfo.gov federal integration
-2. ✅ **Complete**: Hybrid search combining local seed data + API results
-3. ✅ **Complete**: Justia web scraper for all 50 states
-4. ✅ **Complete**: Scraping coordinator integration
-5. ✅ **Complete**: API endpoints for statute scraping
+1. ✅ **Complete**: GovInfo.gov federal integration - fully operational
+2. ✅ **Complete**: Hybrid search combining local seed data + API results  
+3. ✅ **Complete**: Curated seed data for 10 major states (15 statutes)
+4. ❌ **Tested & Abandoned**: Justia web scraper (CloudFront blocking)
+5. ❌ **Tested & Abandoned**: State website scrapers (404s, outdated URLs)
 6. ❌ **Deprecated**: California Laws API (no longer accessible)
 7. ❌ **Abandoned**: OpenLaws API (team not responding)
 
-### Remaining Actions:
-1. 🔜 **Next**: Test Justia scraper with 3-5 states to verify functionality
-2. 🔜 **Next**: Build charge → statute mapping using criminal-charges.ts data
-3. 🔜 **Next**: Gradual rollout: scrape top 10 states by population first
-4. 🔜 **Next**: Implement caching strategy for frequently accessed statutes
+### Current Strategy:
+**Quality over quantity** - Focus on verified, accurate data rather than unreliable web scraping
 
-### Deployment Timeline:
-- **Week 1**: Test scraping for CA, TX, FL, NY, IL (top 5 states)
-- **Week 2**: Expand to top 10 states, monitor performance
-- **Week 3**: Statute → Charge mapping implementation
-- **Week 4**: Full 50-state rollout, user testing & refinement
+### Remaining Actions:
+1. 🔜 **Next**: Expand seed data to 50 statutes covering top 15 states
+2. 🔜 **Next**: Build charge → statute mapping using criminal-charges.ts data
+3. 🔜 **Next**: Implement caching strategy for frequently accessed statutes
+4. 🔜 **Future**: Monitor LegiScan for statute changes, update seed data quarterly
+
+### Deployment Strategy:
+- **Current**: Federal complete + 10 states operational
+- **Month 1**: Expand to top 20 states with curated data
+- **Month 2**: Statute → Charge mapping implementation
+- **Month 3**: User testing & refinement based on actual queries
+- **Ongoing**: Quarterly reviews and targeted seed data expansion
 
 ---
 
@@ -283,4 +279,4 @@ Once OpenLaws API is integrated:
 **Maintained By**: Public Defender AI Development Team
 **License**: MIT (code) / CC0 (documentation)
 
-**Major Update (Nov 14, 2025)**: Implemented Justia web scraping as primary solution for all 50 states after OpenLaws team became unresponsive. This provides immediate, free, and comprehensive state statute coverage.
+**Major Update (Nov 14, 2025)**: After comprehensive testing of web scraping approaches (Justia, state websites), all proved non-viable due to bot blocking and URL rot. Pivoted to **quality-over-quantity strategy**: GovInfo federal API (complete coverage) + manually curated high-quality seed data for major states. This approach prioritizes data accuracy and reliability over fragile web scraping.
