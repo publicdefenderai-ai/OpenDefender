@@ -37,8 +37,9 @@ export class ScrapingCoordinator {
       let scraper: any;
       let stateName = stateCode;
       
-      // Default to Justia scraper for all 50 states + DC (comprehensive and consistent)
-      if (useJustia && !forceStateSite) {
+      // Justia scraper disabled - CloudFront actively blocks all automated requests
+      // Keeping code for reference but not using by default
+      if (useJustia && !forceStateSite && false) { // Disabled: CloudFront 403 blocking
         try {
           scraper = new JustiaScraper(stateCode);
           stateName = stateCode;
