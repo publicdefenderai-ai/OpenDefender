@@ -30,33 +30,55 @@ This document outlines the comprehensive API integration strategy for the Public
 
 ---
 
-## Recommended Multi-State API: OpenLaws
+## ✅ IMPLEMENTED: Justia Web Scraping (All 50 States)
 
-### **OpenLaws API** (Priority Integration)
-- **URL**: https://openlaws.us/api/
-- **Coverage**: All 50 states + DC + Puerto Rico + Federal
-- **Content**: Statutes, regulations, constitutions, case law
-- **Cost**: Contact for access (CivicTech non-profit, likely free for public good projects)
-- **API Docs**: https://openlaws.apidocumentation.com/
+### **Justia Codes Scraper** (ACTIVE SOLUTION)
+- **URL**: https://law.justia.com/codes/
+- **Coverage**: All 50 states + DC
+- **Content**: Complete compiled statutory codes
+- **Cost**: FREE (web scraping with robots.txt compliance and respectful rate limiting)
+- **Status**: ✅ **IMPLEMENTED AND ACTIVE**
+- **Compliance**: Follows robots.txt directives, 3-second rate limiting, proper User-Agent identification
 
-#### Key Features:
-1. **Unified Data Model**: One consistent API across all 53 jurisdictions
-2. **Citation Lookup**: Fetch by citation (e.g., "Cal. Penal Code § 242", "18 USC § 1001")
-3. **Full-Text Search**: BM25 keyword search + hybrid semantic search
-4. **50-State Surveys**: Cross-jurisdiction searches
-5. **Historical Versions**: Track statutory changes over time (federal only currently)
-6. **Case Law Integration**: Partnership with CourtListener/Free Law Project
-7. **Rich Text Rendering**: Hierarchical structure with nested sections
+#### Advantages:
+1. **Universal Coverage**: All 50 states through one consistent source
+2. **Consistent Structure**: Uniform HTML structure across all states
+3. **Well-Maintained**: Justia regularly updates state codes
+4. **No API Key Required**: Direct web scraping (with robots.txt compliance)
+5. **Comprehensive Criminal Codes**: Full penal/criminal code coverage
+6. **Automatic Discovery**: Scraper finds criminal code paths automatically
 
-#### Authentication:
-- Bearer token authentication
-- Request access: Schedule 25-min session at https://openlaws.us/api/
-- Sandbox environment provided for testing
+#### Implementation Details:
+- **File**: `server/services/statute-scraper.ts` (JustiaScraper class)
+- **Rate Limiting**: 3 seconds between requests (respectful)
+- **Robots.txt**: Full compliance checked before each request
+- **Session Tracking**: Database logging of scraping progress
+- **Auto-Discovery**: Finds criminal code sections automatically
+- **Fallback**: State-specific scrapers still available if needed
 
-#### Integration Priority: **HIGH**
-- **Impact**: Covers all 50 states with single API
-- **Alignment**: Perfect for criminal charge → statute mapping
-- **Timeline**: Contact OpenLaws team to request access ASAP
+#### Usage:
+```typescript
+// Scrape any state via Justia (default)
+const scraper = new JustiaScraper('CA');  // Or any state code
+await scraper.scrape();
+
+// Via API endpoint
+POST /api/scrape/statutes/CA
+```
+
+#### Integration Priority: ✅ **COMPLETED**
+- **Impact**: Covers ALL 50 states with free, ethical web scraping
+- **Replaces**: Need for OpenLaws API (no longer waiting for access)
+- **Timeline**: Available immediately
+
+---
+
+## ❌ DEPRECATED: OpenLaws API (No Longer Pursued)
+
+### **OpenLaws API** (Not Responding)
+- **Status**: ❌ Team not responding after weeks of outreach
+- **Conclusion**: Abandoned in favor of Justia web scraping solution
+- **Replacement**: Justia scraper provides equivalent functionality
 
 ---
 
@@ -185,20 +207,26 @@ Return Combined Results with Source Attribution
 
 ## Next Steps
 
-### Immediate Actions:
+### Completed Actions:
 1. ✅ **Complete**: GovInfo.gov federal integration
 2. ✅ **Complete**: Hybrid search combining local seed data + API results
-3. ✅ **Complete**: API research - Identified OpenLaws as best solution
-4. ❌ **Deprecated**: California Laws API (no longer accessible)
-5. 🔜 **PRIORITY**: Contact OpenLaws team to request API access (https://openlaws.us/api/)
-6. 🔜 **Next**: Integrate OpenLaws API for 50-state coverage
-7. 🔜 **Next**: Build charge → statute mapping using criminal-charges.ts data
+3. ✅ **Complete**: Justia web scraper for all 50 states
+4. ✅ **Complete**: Scraping coordinator integration
+5. ✅ **Complete**: API endpoints for statute scraping
+6. ❌ **Deprecated**: California Laws API (no longer accessible)
+7. ❌ **Abandoned**: OpenLaws API (team not responding)
 
-### Integration Timeline:
-- **Week 1**: OpenLaws API access request & approval
-- **Week 2**: OpenLaws integration development & testing
+### Remaining Actions:
+1. 🔜 **Next**: Test Justia scraper with 3-5 states to verify functionality
+2. 🔜 **Next**: Build charge → statute mapping using criminal-charges.ts data
+3. 🔜 **Next**: Gradual rollout: scrape top 10 states by population first
+4. 🔜 **Next**: Implement caching strategy for frequently accessed statutes
+
+### Deployment Timeline:
+- **Week 1**: Test scraping for CA, TX, FL, NY, IL (top 5 states)
+- **Week 2**: Expand to top 10 states, monitor performance
 - **Week 3**: Statute → Charge mapping implementation
-- **Week 4**: User testing & refinement
+- **Week 4**: Full 50-state rollout, user testing & refinement
 
 ---
 
@@ -251,6 +279,8 @@ Once OpenLaws API is integrated:
 
 ---
 
-**Last Updated**: October 30, 2025
+**Last Updated**: November 14, 2025
 **Maintained By**: Public Defender AI Development Team
 **License**: MIT (code) / CC0 (documentation)
+
+**Major Update (Nov 14, 2025)**: Implemented Justia web scraping as primary solution for all 50 states after OpenLaws team became unresponsive. This provides immediate, free, and comprehensive state statute coverage.

@@ -141,9 +141,12 @@ export abstract class StatuteScraper {
     content: string;
     url: string;
     jurisdiction: string;
+    level?: string;
+    section?: string;
     category?: string;
     penalties?: string;
     effectiveDate?: string;
+    sourceApi?: string;
   }) {
     try {
       // Check if statute already exists
@@ -156,13 +159,18 @@ export abstract class StatuteScraper {
         await db.update(statutes)
           .set({
             ...statute,
-            updatedAt: new Date(),
+            lastUpdated: new Date(),
           })
           .where(eq(statutes.citation, statute.citation));
         console.log(`[Scraper] Updated statute: ${statute.citation}`);
       } else {
-        // Insert new statute
-        await db.insert(statutes).values(statute);
+        // Insert new statute (needs required fields for schema)
+        const statuteData = {
+          ...statute,
+          level: statute.level || (statute.jurisdiction.toLowerCase() === 'federal' ? 'federal' : 'state'),
+          section: statute.section || statute.citation.split('§')[1]?.trim() || 'unknown',
+        };
+        await db.insert(statutes).values(statuteData);
         console.log(`[Scraper] Inserted statute: ${statute.citation}`);
       }
       
@@ -821,5 +829,291 @@ export class MichiganScraper extends StatuteScraper {
         sourceApi: 'state_website',
       };
     } catch (error) { return null; }
+  }
+}
+
+/**
+ * Justia Code Scraper - Comprehensive source for all 50 states
+ * Source: https://law.justia.com/codes/
+ * 
+ * Advantages over individual state scrapers:
+ * - Consistent HTML structure across all states
+ * - All 50 states + DC + territories in one source
+ * - Well-maintained and regularly updated
+ * - Free access with comprehensive criminal codes
+ */
+export class JustiaScraper extends StatuteScraper {
+  private stateSlug: string;
+  private stateName: string;
+  
+  // Map of state codes to Justia URL slugs
+  private static STATE_SLUGS: Record<string, string> = {
+    'AL': 'alabama', 'AK': 'alaska', 'AZ': 'arizona', 'AR': 'arkansas',
+    'CA': 'california', 'CO': 'colorado', 'CT': 'connecticut', 'DE': 'delaware',
+    'FL': 'florida', 'GA': 'georgia', 'HI': 'hawaii', 'ID': 'idaho',
+    'IL': 'illinois', 'IN': 'indiana', 'IA': 'iowa', 'KS': 'kansas',
+    'KY': 'kentucky', 'LA': 'louisiana', 'ME': 'maine', 'MD': 'maryland',
+    'MA': 'massachusetts', 'MI': 'michigan', 'MN': 'minnesota', 'MS': 'mississippi',
+    'MO': 'missouri', 'MT': 'montana', 'NE': 'nebraska', 'NV': 'nevada',
+    'NH': 'new-hampshire', 'NJ': 'new-jersey', 'NM': 'new-mexico', 'NY': 'new-york',
+    'NC': 'north-carolina', 'ND': 'north-dakota', 'OH': 'ohio', 'OK': 'oklahoma',
+    'OR': 'oregon', 'PA': 'pennsylvania', 'RI': 'rhode-island', 'SC': 'south-carolina',
+    'SD': 'south-dakota', 'TN': 'tennessee', 'TX': 'texas', 'UT': 'utah',
+    'VT': 'vermont', 'VA': 'virginia', 'WA': 'washington', 'WV': 'west-virginia',
+    'WI': 'wisconsin', 'WY': 'wyoming', 'DC': 'district-of-columbia',
+  };
+
+  constructor(stateCode: string) {
+    const stateSlug = JustiaScraper.STATE_SLUGS[stateCode.toUpperCase()];
+    if (!stateSlug) {
+      throw new Error(`Invalid state code: ${stateCode}`);
+    }
+    super('https://law.justia.com', stateCode.toUpperCase());
+    this.stateSlug = stateSlug;
+    this.stateName = stateCode.toUpperCase();
+    this.requestDelay = 3000; // 3 seconds between requests for Justia (respectful)
+  }
+
+  /**
+   * Scrape criminal code sections for the state
+   * This is a targeted scrape of common criminal statutes
+   */
+  async scrape(): Promise<void> {
+    await this.startScrapeSession('justia_targeted_scrape');
+    
+    let statutesScraped = 0;
+    let errorCount = 0;
+
+    try {
+      console.log(`[Justia Scraper] Starting ${this.stateName} criminal codes scrape from Justia...`);
+      
+      // First, discover the penal/criminal code structure for this state
+      const codePath = await this.discoverCriminalCodePath();
+      if (!codePath) {
+        console.log(`[Justia Scraper] Could not find criminal code path for ${this.stateName}`);
+        await this.completeScrapeSession(false, 'Criminal code path not found');
+        return;
+      }
+
+      console.log(`[Justia Scraper] Found criminal code path: ${codePath}`);
+      
+      // For now, we'll scrape a targeted list of common criminal sections
+      // In the future, we can expand this to discover all sections automatically
+      const sections = await this.discoverCriminalSections(codePath);
+      
+      for (const sectionUrl of sections.slice(0, 50)) { // Limit to 50 for initial scrape
+        try {
+          const statute = await this.scrapeStatuteByUrl(sectionUrl);
+          if (statute) {
+            const saved = await this.saveStatute(statute);
+            if (saved) {
+              statutesScraped++;
+              await this.updateScrapeProgress(statutesScraped, errorCount);
+            }
+          }
+        } catch (error) {
+          console.error(`[Justia Scraper] Error scraping ${sectionUrl}:`, error);
+          errorCount++;
+          await this.updateScrapeProgress(statutesScraped, errorCount);
+        }
+      }
+
+      await this.completeScrapeSession(true, undefined, {
+        stateName: this.stateName,
+        codePath,
+        sectionsAttempted: sections.length,
+        sectionsSucceeded: statutesScraped,
+        sectionsFailed: errorCount,
+      });
+
+      console.log(`[Justia Scraper] ${this.stateName} completed: ${statutesScraped} statutes scraped, ${errorCount} errors`);
+    } catch (error) {
+      console.error(`[Justia Scraper] Fatal error during ${this.stateName} scrape:`, error);
+      await this.completeScrapeSession(false, error instanceof Error ? error.message : 'Unknown error');
+      throw error;
+    }
+  }
+
+  /**
+   * Discover the criminal/penal code path for a state on Justia
+   */
+  private async discoverCriminalCodePath(): Promise<string | null> {
+    try {
+      const stateIndexUrl = `https://law.justia.com/codes/${this.stateSlug}/`;
+      const html = await this.fetchWithRateLimit(stateIndexUrl);
+      const $ = cheerio.load(html);
+      
+      // Look for links containing common criminal code keywords
+      const criminalKeywords = [
+        'penal', 'criminal', 'crimes', 'offenses', 'crim-pro', 
+        'code-of-criminal', 'penal-code', 'criminal-code'
+      ];
+      
+      let bestMatch: string | null = null;
+      
+      $('a').each((i, elem) => {
+        const href = $(elem).attr('href');
+        const text = $(elem).text().toLowerCase();
+        
+        if (href && href.includes('/codes/')) {
+          for (const keyword of criminalKeywords) {
+            if (href.toLowerCase().includes(keyword) || text.includes(keyword)) {
+              bestMatch = href;
+              return false; // Break the loop
+            }
+          }
+        }
+      });
+      
+      return bestMatch;
+    } catch (error) {
+      console.error(`[Justia Scraper] Error discovering criminal code path:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Discover individual criminal statute sections within a code
+   */
+  private async discoverCriminalSections(codePath: string): Promise<string[]> {
+    try {
+      const fullUrl = codePath.startsWith('http') ? codePath : `https://law.justia.com${codePath}`;
+      const html = await this.fetchWithRateLimit(fullUrl);
+      const $ = cheerio.load(html);
+      
+      const sections: string[] = [];
+      
+      // Find all links that look like statute sections
+      $('a').each((i, elem) => {
+        const href = $(elem).attr('href');
+        if (href && (
+          href.includes('/section-') || 
+          href.includes('/sec-') ||
+          href.includes('-section-') ||
+          href.match(/\/\d+(-|\.)\d+/) // Matches patterns like /123-45 or /123.45
+        )) {
+          const fullLink = href.startsWith('http') ? href : `https://law.justia.com${href}`;
+          sections.push(fullLink);
+        }
+      });
+      
+      // Remove duplicates
+      return Array.from(new Set(sections));
+    } catch (error) {
+      console.error(`[Justia Scraper] Error discovering sections:`, error);
+      return [];
+    }
+  }
+
+  /**
+   * Scrape a single statute by its Justia URL
+   */
+  private async scrapeStatuteByUrl(url: string): Promise<any> {
+    try {
+      const html = await this.fetchWithRateLimit(url);
+      const $ = cheerio.load(html);
+      
+      // Extract statute information using Justia's structure
+      const title = $('h1, h2').first().text().trim() || 
+                    $('.statute-title, .section-title').first().text().trim() ||
+                    'Untitled Section';
+      
+      // Get the main statute text (varies by state structure)
+      let content = $('.statute-text, .section-content, .law-content').first().text().trim();
+      
+      // Fallback: get all paragraph tags if no specific content area found
+      if (!content || content.length < 20) {
+        const paragraphs: string[] = [];
+        $('p').each((i, elem) => {
+          const text = $(elem).text().trim();
+          if (text.length > 20) {
+            paragraphs.push(text);
+          }
+        });
+        content = paragraphs.join('\n\n');
+      }
+
+      if (!content || content.length < 20) {
+        console.log(`[Justia Scraper] No content found for ${url}`);
+        return null;
+      }
+
+      // Extract citation from URL or title
+      const citation = this.extractCitation(url, title);
+      const section = this.extractSection(url, title);
+      
+      return {
+        citation,
+        title,
+        content,
+        url,
+        jurisdiction: this.stateName,
+        level: 'state',
+        section,
+        category: 'criminal_offenses',
+        sourceApi: 'justia',
+      };
+    } catch (error) {
+      console.error(`[Justia Scraper] Error fetching ${url}:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Not implemented - use scrapeStatuteByUrl instead
+   */
+  async scrapeStatute(citation: string): Promise<any> {
+    throw new Error('JustiaScraper requires URL-based scraping. Use scrapeStatuteByUrl() instead.');
+  }
+
+  /**
+   * Extract citation from URL or title
+   */
+  private extractCitation(url: string, title: string): string {
+    // Try to extract from title first
+    const titleMatch = title.match(/§\s*[\d\w.-]+/);
+    if (titleMatch) {
+      return `${this.getStateAbbrev()} ${titleMatch[0]}`;
+    }
+    
+    // Extract section number from URL
+    const urlMatch = url.match(/section[-_]?([\d.-]+)/i) || 
+                     url.match(/sec[-_]?([\d.-]+)/i) ||
+                     url.match(/(\d+[-\.]\d+)/);
+    
+    if (urlMatch) {
+      return `${this.getStateAbbrev()} § ${urlMatch[1]}`;
+    }
+    
+    return `${this.getStateAbbrev()} [Citation Unknown]`;
+  }
+
+  /**
+   * Extract section number from URL or title
+   */
+  private extractSection(url: string, title: string): string {
+    const urlMatch = url.match(/section[-_]?([\d.-]+)/i) || 
+                     url.match(/sec[-_]?([\d.-]+)/i) ||
+                     url.match(/(\d+[-\.]\d+)/);
+    
+    return urlMatch ? urlMatch[1] : 'unknown';
+  }
+
+  /**
+   * Get proper state abbreviation for citation
+   */
+  private getStateAbbrev(): string {
+    // Common state code abbreviations for legal citations
+    const abbrevMap: Record<string, string> = {
+      'CA': 'Cal. Penal Code',
+      'TX': 'Tex. Penal Code',
+      'FL': 'Fla. Stat.',
+      'NY': 'N.Y. Penal Law',
+      'IL': 'ILCS',
+      'PA': 'Pa. Cons. Stat.',
+      // Add more as needed, fallback to state code
+    };
+    
+    return abbrevMap[this.stateName] || `${this.stateName} Stat.`;
   }
 }
