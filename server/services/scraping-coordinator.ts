@@ -49,8 +49,8 @@ export class ScrapingCoordinator {
       
       // All states return informative message about curated data approach
       const stateStatuteCount: Record<string, number> = {
-        'CA': 3, 'FL': 2, 'TX': 2, 'NY': 2,
-        'GA': 1, 'IL': 1, 'MI': 1, 'NC': 1, 'OH': 1, 'PA': 1
+        'CA': 20, 'TX': 20, 'FL': 20, 'NY': 20, 'PA': 20,
+        'IL': 20, 'OH': 20, 'GA': 20, 'NC': 20, 'MI': 20
       };
       
       const count = stateStatuteCount[stateCode] || 0;
