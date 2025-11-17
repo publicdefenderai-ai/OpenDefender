@@ -124,16 +124,6 @@ export default function DevelopmentRoadmap() {
 
   const roadmapItems: RoadmapItem[] = [
     {
-      id: "courtlistener-integration",
-      titleKey: "developmentRoadmap.items.courtlistener.title",
-      descriptionKey: "developmentRoadmap.items.courtlistener.description",
-      status: "completed",
-      priority: "critical",
-      category: "data",
-      progress: 100,
-      impactKey: "developmentRoadmap.items.courtlistener.impact"
-    },
-    {
       id: "pacer-authentication",
       titleKey: "developmentRoadmap.items.pacer.title",
       descriptionKey: "developmentRoadmap.items.pacer.description",
@@ -189,26 +179,6 @@ export default function DevelopmentRoadmap() {
       estimatedCompletion: "Q1 2026",
       dependencies: ["ai-guidance-engine"],
       impactKey: "developmentRoadmap.items.mobileApp.impact"
-    },
-    {
-      id: "multilingual-support",
-      titleKey: "developmentRoadmap.items.multilingual.title",
-      descriptionKey: "developmentRoadmap.items.multilingual.description",
-      status: "planned",
-      priority: "medium",
-      category: "features",
-      estimatedCompletion: "Q4 2025",
-      impactKey: "developmentRoadmap.items.multilingual.impact"
-    },
-    {
-      id: "legal-aid-directory",
-      titleKey: "developmentRoadmap.items.legalAidDirectory.title",
-      descriptionKey: "developmentRoadmap.items.legalAidDirectory.description",
-      status: "completed",
-      priority: "high",
-      category: "data",
-      progress: 100,
-      impactKey: "developmentRoadmap.items.legalAidDirectory.impact"
     },
     {
       id: "real-time-alerts",
