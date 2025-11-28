@@ -2936,7 +2936,7 @@ export const stateStatutesSeed = [
     category: 'assault',
     relatedCharges: ['Assault and Battery', 'Simple Assault'],
     penalties: 'Misdemeanor: up to 93 days in jail and/or fine up to $500',
-    url: 'http://www.legislature.mi.gov/(S(u1hghltofncbdwqflf0pvkqp))/mileg.aspx?page=getObject&objectName=mcl-750-81',
+    url: 'http://www.legislature.mi.gov/mileg.aspx?page=getObject&objectName=mcl-750-81',
     sourceApi: 'state_website',
     isActive: true,
   },
