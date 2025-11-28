@@ -352,7 +352,8 @@ export class OpenLawsClient {
 }
 
 // Create singleton instance (will not work until API key is provided)
+// Note: OpenLaws API uses /api/v1 prefix, not /v1
 export const openLawsClient = new OpenLawsClient({
-  baseUrl: process.env.OPENLAWS_API_URL || 'https://api.openlaws.us/v1',
+  baseUrl: process.env.OPENLAWS_API_URL || 'https://api.openlaws.us/api/v1',
   timeout: 30000,
 });

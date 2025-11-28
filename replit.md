@@ -29,9 +29,10 @@ The backend is built with Express.js and TypeScript, providing a RESTful API. It
 The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations (153 total: 123 public defender offices [95 federal, 28 state/county], 12 immigration, 18 civil legal aid), a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a pragmatic multi-source approach:
 1.  **Primary - Federal**: GovInfo API (✅ ACTIVE) for Title 18 USC federal criminal statutes - complete coverage.
 2.  **Primary - State**: Curated seed data (200 statutes, 10 states) - ✅ operational, high-quality manually verified statutes covering the 20 most common criminal charges per state.
-3.  **Monitoring**: LegiScan API for quarterly statute change detection.
+3.  **OpenLaws API** (✅ ACTIVE - Nov 2025): API key obtained and integrated. Provides access to 53 jurisdictions (50 states + DC + Puerto Rico + Federal). Base URL: `https://api.openlaws.us/api/v1`. Authentication via Bearer token. Client service at `server/services/openlaws-client.ts`.
+4.  **Monitoring**: LegiScan API for quarterly statute change detection.
 
-**Current Status (Nov 2025)**: After exhaustive testing, web scraping approaches proved non-viable: (1) OpenLaws API - team unresponsive for weeks, (2) Justia - actively blocked by CloudFront CDN regardless of robots.txt compliance, (3) State websites - URL structures outdated/changed. **Current working solution focuses on quality over quantity**: GovInfo federal coverage + **200 manually curated high-quality statutes** for top 10 states (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI) with 20 statutes each covering assault, theft, burglary, robbery, drug offenses, DUI, domestic violence, weapons, fraud, and other common charges based on FBI UCR 2024 data. This approach ensures data accuracy and legal compliance while avoiding unreliable web scraping battles.
+**Current Status (Nov 2025)**: OpenLaws API is now active with confirmed access to all 53 US jurisdictions. The current API tier provides jurisdiction listing and law metadata endpoints. Citation lookup and full-text search may require enterprise tier access. Current working solution: GovInfo federal coverage + **200 manually curated high-quality statutes** for top 10 states (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI) with 20 statutes each covering assault, theft, burglary, robbery, drug offenses, DUI, domestic violence, weapons, fraud, and other common charges based on FBI UCR 2024 data. OpenLaws integration can be expanded as additional API access is granted.
 
 ### API Architecture
 
@@ -68,7 +69,7 @@ Vite is used for frontend development and client-side production optimization. E
 -   **RECAP Archive**: Federal court documents.
 -   **PACER Fetch API**: On-demand access to PACER documents (fallback).
 -   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
--   **OpenLaws API** (Pending): All 50 states + federal statutes.
+-   **OpenLaws API** (✅ ACTIVE): All 53 jurisdictions (50 states + DC + Puerto Rico + Federal) statute/regulation metadata. API key configured.
 -   **LegiScan API**: Quarterly statute change monitoring.
 -   **Bureau of Justice Statistics (BJS) API** (⚠️ IN PROGRESS): NCVS (National Crime Victimization Survey) and NIBRS (National Incident-Based Reporting System) for crime statistics. **Current Status**: Infrastructure implemented but requires critical fixes before production use: (1) Separate person-level and household-level weighting to avoid mixing incompatible units, (2) Implement pagination (currently capped at 100k records, causing data truncation), (3) Validate totals reconcile with category breakdowns. See `server/services/bjs-statistics.ts` and `shared/bjs-code-mappings.ts`.
 -   **Cornell Legal Information Institute**: Legal statutes reference.
