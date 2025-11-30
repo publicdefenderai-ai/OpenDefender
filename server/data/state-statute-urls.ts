@@ -931,6 +931,35 @@ const newHampshireConfig: StateStatuteUrlConfig = {
 };
 
 /**
+ * New Jersey - Using Justia for statute-specific links
+ * URL pattern: /codes/new-jersey/title-{title}/section-{title}-{section}/
+ * Official NJ legislature site uses web gateway requiring navigation; Justia provides direct links
+ */
+const newJerseyConfig: StateStatuteUrlConfig = {
+  state: 'NJ',
+  stateName: 'New Jersey',
+  baseUrl: 'https://law.justia.com/codes/new-jersey',
+  codeMapping: { 
+    'Stat. Ann.': 'njsa',
+    'N.J.S.A.': 'njsa',
+  },
+  generateUrl: (codeName: string, section: string) => {
+    // NJ uses Title:Section format (e.g., 2C:12-1, 39:4-50)
+    // Parse title and section from format like "2C:12-1" or "39:4-50"
+    const parts = section.split(':');
+    if (parts.length >= 2) {
+      const title = parts[0].toLowerCase();
+      const sectionNum = parts[1];
+      // Justia URL format: /title-{title}/section-{title}-{section}/
+      return `https://law.justia.com/codes/new-jersey/title-${title}/section-${title}-${sectionNum}/`;
+    }
+    // Fallback to title-level for unparseable citations
+    return `https://law.justia.com/codes/new-jersey/`;
+  },
+  notes: 'Using Justia for New Jersey statutes - provides statute-specific direct links. Official NJ Legislature site requires gateway navigation.',
+};
+
+/**
  * Maine - legislature.maine.gov
  * URL pattern: /statutes/{title}/title{title}sec{section}.html
  */
@@ -1142,6 +1171,7 @@ export const stateStatuteConfigs: Record<string, StateStatuteUrlConfig> = {
   ID: idahoConfig,
   HI: hawaiiConfig,
   NH: newHampshireConfig,
+  NJ: newJerseyConfig,
   ME: maineConfig,
   MT: montanaConfig,
   RI: rhodeIslandConfig,
@@ -1480,6 +1510,12 @@ export function parseCitation(citation: string): ParsedCitation | null {
   match = citation.match(/^N\.H\.\s+Rev\.\s+Stat\.\s+Ann\.\s+§\s*(.+)$/i);
   if (match) {
     return buildResult('NH', 'Rev. Stat. Ann.', match[1].trim());
+  }
+
+  // New Jersey: "N.J. Stat. Ann. § 2C:12-1"
+  match = citation.match(/^N\.J\.\s+Stat\.\s+Ann\.\s+§\s*(.+)$/i);
+  if (match) {
+    return buildResult('NJ', 'Stat. Ann.', match[1].trim());
   }
 
   // Maine: "Me. Rev. Stat. Ann. tit. 17-A, § 207"
