@@ -2,7 +2,7 @@
 
 ## Overview
 
-Public Defender AI is a web application providing accessible, AI-powered legal guidance and rights information. It offers case law search, legal resource databases, and connects users with legal aid organizations. The platform is built with privacy-first principles, ensuring user data is ephemeral and not permanently stored. Key capabilities include AI-powered legal assistance, access to court records, and a comprehensive database of criminal charges, statutes, and diversion programs. The project aims to empower individuals without immediate legal representation by democratizing access to legal information, particularly focusing on simplified language for users with limited legal background.
+Public Defender AI is a web application providing accessible, AI-powered legal guidance and rights information. It offers case law search, legal resource databases, and connects users with legal aid organizations. The platform prioritizes user privacy by ensuring data ephemerality. Its core purpose is to democratize access to legal information for individuals without immediate legal representation, simplifying complex legal concepts for a broad audience.
 
 ## User Preferences
 
@@ -10,101 +10,49 @@ Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-### Frontend Architecture
+### UI/UX Decisions
 
-The frontend uses React 18 with TypeScript, Wouter for routing, and shadcn/ui components built on Radix UI primitives. Styling is managed with Tailwind CSS, incorporating a custom legal-themed design system. Framer Motion provides animations. State management employs TanStack Query for server state and React hooks for local state. The application supports light/dark modes and is optimized for mobile responsiveness across all features. It features complete bilingual support (English/Spanish) with internationalization (i18n) using `react-i18next`, ensuring all 13 pages, interactive modals, and navigation menus are fully translated. All user-facing text is designed for a 6th-8th grade reading level.
+The frontend is built with React 18 and TypeScript, utilizing shadcn/ui components, Wouter for routing, and Tailwind CSS for styling. It features a custom legal-themed design, Framer Motion for animations, and comprehensive bilingual support (English/Spanish) with `react-i18next`. All user-facing text is designed for a 6th-8th grade reading level, and the application is mobile-responsive. State management uses TanStack Query and React hooks.
 
-**Recent UI Updates (Nov 2025)**: The /case-guidance page has been streamlined by removing the "What You'll Receive" section. This content has been preserved in an internal FAQ outline (docs/faq-outline.md) for potential future use in a dedicated FAQ page. The page now flows directly from "How It Works" to "Privacy & Security" sections, creating a more focused user experience.
+### Technical Implementations
 
-### Backend Architecture
+The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.
 
-The backend is built with Express.js and TypeScript, providing a RESTful API. It includes custom middleware for logging and error handling. Drizzle ORM with PostgreSQL is used for type-safe database operations. Legal case data is designed to be ephemeral and automatically expires to ensure user privacy. The server provides endpoints for legal resources, court data, case law search, AI legal guidance, court records search, and legal aid organizations, including location-based searches for public defenders.
+A dual-mode AI guidance system intelligently selects between Anthropic's Claude AI (Sonnet 4.5) and a rule-based engine. It includes robust error handling with retry logic and fallbacks to ensure continuous service. All AI interactions are cost-tracked. A critical PII redaction system (`server/services/pii-redactor.ts`) automatically scrubs user input before it reaches Claude AI, balancing privacy with the preservation of legal context. High-confidence PII is redacted with category-aware placeholders.
 
-**AI Legal Guidance Engine**: The platform features a dual-mode guidance system that intelligently selects between Claude AI (Anthropic) and a rule-based engine. When users provide detailed incident descriptions or specific concerns, Claude Sonnet 4 (May 2025) generates personalized, context-aware legal guidance using advanced natural language processing. The system includes automatic retry logic with enforced 65-second timeouts using Promise.race() wrappers, ensuring reliable timeout handling even when SDK timeouts fail. It automatically retries once on timeout or API overload (529 errors) and falls back to the rule-based engine if both attempts fail, ensuring consistent service delivery without UI freezing. All AI interactions include usage tracking (input/output tokens, cost estimation) logged server-side for transparency and cost monitoring. Uses direct Anthropic API connection (https://api.anthropic.com) with user-provided API key for maximum reliability.
-
-**PII Protection (Nov 2025)**: All user input is automatically scrubbed of Personally Identifiable Information (PII) before being sent to Claude AI. The redaction system (`server/services/pii-redactor.ts`) uses a hybrid regex-based approach that balances privacy protection with legal context preservation. **High-confidence redaction** includes: email addresses, phone numbers, SSN/government IDs, credit cards, account numbers, physical addresses, birthdates, driver's licenses, and passports. **Context-based name redaction** catches explicit disclosures ("my name is X", "I am X", "Officer/Judge/Dr. X") while preserving institutional references ("State of California", "District Attorney's Office"). The system uses `@redactpii/node` with custom patterns, category-aware placeholders (`[REDACTED_EMAIL]`, `[REDACTED_PHONE]`, etc.), and protects against over-redaction of legal terms. Redaction occurs before cache key generation and API calls. Logs aggregate counts for observability. **Documented limitations**: Names in free-form narrative may not be caught to preserve legal context - a deliberate trade-off between comprehensive PII removal and preserving actionable legal guidance. Users are advised to avoid full names and use pronouns. Future enhancement: Microsoft Presidio or NER-based solution for production-grade name detection. Can be disabled via `DISABLE_PII_REDACTION=true` for development.
-
-### Data Sources and Integrations
-
-The system integrates with various legal data sources to provide comprehensive information. This includes a robust database of legal aid organizations (153 total: 123 public defender offices [95 federal, 28 state/county], 12 immigration, 18 civil legal aid), a comprehensive criminal charges database, a database of diversion programs (73 programs across major US metropolitan areas), and an extensive criminal statutes database (federal and state). A "free-first" search strategy is implemented for court records, prioritizing RECAP Archive before suggesting paid PACER access. User session data is automatically deleted post-session, and no personal identifying information is permanently stored. The statute integration employs a pragmatic multi-source approach:
-1.  **Primary - Federal**: GovInfo API (✅ ACTIVE) for Title 18 USC federal criminal statutes - complete coverage.
-2.  **Primary - State**: Curated seed data (✅ **527 statutes, 50 states + DC** - Nov 2025) - Comprehensive nationwide coverage with manually verified statutes. Original 10 states (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI) have 20 statutes each covering top FBI UCR charges. Remaining 41 states + DC have 6-8 statutes each covering: assault, theft, DUI, fraud, domestic violence, sexual assault, drug offenses, and **weapons offenses** (Nov 2025 expansion based on FBI UCR arrest data showing weapons as top-10 arrest category with high felony exposure).
-3.  **OpenLaws API** (⚠️ METADATA ONLY - Nov 2025): API key obtained but **current tier provides metadata only, NOT actual statute text**. Returns jurisdiction lists and law type categories (statutes, regulations, constitutions) for 53 jurisdictions. Citation lookup (`/citation`), full-text search, and statute content endpoints require enterprise tier access. Base URL: `https://api.openlaws.us/api/v1`. Client service at `server/services/openlaws-client.ts`.
-4.  **State Statute Source URLs** (✅ COMPLETE - Nov 2025): Direct links to statute text generated from citation data. URL generators for all 50 states + DC + federal (52 total). Uses Bluebook Table 1.3 citation formats. Most states link to official legislature websites; New Jersey uses Justia.com for statute-specific links (official NJ site requires gateway navigation). See `server/data/state-statute-urls.ts` for URL generation and `verifyStatuteUrls()` for validation.
-5.  **Monitoring**: LegiScan API for quarterly statute change detection.
-
-**Current Status (Dec 2025)**: **Full 50-state coverage achieved with expanded categories!** OpenLaws API provides jurisdiction metadata only - no actual statute text in current tier. **Working solution**: GovInfo API for federal statutes + **557 unique manually curated state statutes covering all 50 states + DC**:
-- **10 original states** (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI): 20+ statutes each covering FBI UCR 2024 top charges
-- **41 additional states + DC**: 7-9 statutes each covering up to 9 categories: assault, theft, DUI, fraud, domestic violence, sexual assault, drug offenses, weapons offenses, and **public order/disorderly conduct** (Dec 2025 expansion based on FBI UCR data showing public order as top arrest category).
-- **Category breakdown**: **public_order (88)**, fraud (67), drug_offenses (61), assault (56), theft (55), weapons (51), DUI (51), domestic_violence (47), sexual_assault (41), property (30), violent (10)
-- **Dec 2025 Public Order Expansion**: Added disorderly conduct/disturbing the peace/breach of peace statutes for all 51 jurisdictions. Each statute includes verified Bluebook citations, penalty information, and official legislature URLs.
-- **Dec 2025 Charge Category Filters**: Added 8 named charge filter categories to the Guidance Modal: Violent Crimes, Sexual Offenses, Theft & Property, Drug Offenses, Weapons, Fraud, Public Order, and DUI & Traffic. This allows users to filter the comprehensive charge list by category for easier navigation.
-- **Dec 2025 Charge Code Data Fix**: Reconciled 43 disorderly conduct charge codes in `shared/criminal-charges.ts` to match database statute citations (e.g., AL '13A-11-7', NC '14-288.4', MI '750.167', GA '16-11-39'). This ensures accurate Bluebook citations and working "View Law" links across all jurisdictions.
-- **Dec 2025 Data Consistency Validator**: Added automated validation script (`scripts/validate-charge-statute-consistency.ts`) that cross-validates charge codes against database statute citations. Uses dual-lookup strategy (code match + title match) to detect mismatches. Run with `npx tsx scripts/validate-charge-statute-consistency.ts`. Returns exit code 1 on mismatches for CI/CD integration. Currently identifies 42 additional mismatches in other charge categories (assault, theft, possession) for future data cleanup.
-Each statute includes a direct URL link to the official state legislature website for users to view the full, authoritative text.
+The platform integrates various legal data sources, including databases for legal aid organizations, criminal charges, diversion programs, and criminal statutes (federal and state). A "free-first" search strategy is used for court records, prioritizing RECAP Archive. User session data is automatically deleted post-session. Federal statutes are sourced from the GovInfo API, while state statutes are derived from a comprehensive, manually curated database with 50-state coverage, expanded to include various charge categories and direct links to official legislature websites.
 
 ### API Architecture
 
-The API includes endpoints for:
--   Legal resources (filtered by jurisdiction/category)
--   Court information by jurisdiction
--   Case law search (keyword and **semantic search modes**)
--   Court records search (RECAP Archive and case law database with semantic search support)
--   Semantic case law search (natural language queries)
--   Hybrid search (combines keywords with semantic understanding)
--   Detailed docket information by ID
--   Legal aid organization data with filtering
--   Federal criminal statutes (Title 18 USC)
--   State criminal statutes by state code
--   AI-generated legal guidance based on user input.
+The API provides endpoints for legal resources, court information, AI-powered legal guidance, detailed docket information, and comprehensive search capabilities including keyword, semantic, and hybrid search for case law and court records.
 
-### Authentication and Session Management
+### System Design Choices
 
-Session-based authentication is used with a PostgreSQL session store, configured for automatic expiration to uphold privacy principles.
-
-### Build and Deployment
-
-Vite is used for frontend development and client-side production optimization. ESBuild bundles the server for production. Drizzle Kit handles database schema migrations.
+Session-based authentication with PostgreSQL session storage is configured for automatic expiration to ensure privacy. Frontend development uses Vite, and the server is bundled with ESBuild for production. Drizzle Kit manages database migrations.
 
 ## External Dependencies
 
 ### Database
--   **PostgreSQL**: Primary database (Neon serverless PostgreSQL).
+-   **PostgreSQL**: Primary database (Neon serverless).
 -   **Drizzle ORM**: Type-safe database management.
--   **connect-pg-simple**: PostgreSQL session store.
 
 ### Legal Data Sources
--   **CourtListener API**: Legal opinions, court data, case law with **AI-Powered Semantic Search** (Nov 2025) - Natural language search that understands meaning and intent beyond keyword matching.
+-   **CourtListener API**: Legal opinions, court data, case law (includes AI-Powered Semantic Search).
 -   **RECAP Archive**: Federal court documents.
 -   **PACER Fetch API**: On-demand access to PACER documents (fallback).
 -   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
--   **OpenLaws API** (⚠️ METADATA ONLY): 53 jurisdictions directory listing only. Does NOT provide actual statute text in current tier - citation lookup and full-text search require enterprise access.
--   **LegiScan API**: Quarterly statute change monitoring.
--   **Bureau of Justice Statistics (BJS) API** (⚠️ IN PROGRESS): NCVS (National Crime Victimization Survey) and NIBRS (National Incident-Based Reporting System) for crime statistics. **Current Status**: Infrastructure implemented but requires critical fixes before production use: (1) Separate person-level and household-level weighting to avoid mixing incompatible units, (2) Implement pagination (currently capped at 100k records, causing data truncation), (3) Validate totals reconcile with category breakdowns. See `server/services/bjs-statistics.ts` and `shared/bjs-code-mappings.ts`.
+-   **OpenLaws API**: Provides metadata for 53 jurisdictions (no statute text in current tier).
+-   **LegiScan API**: For quarterly statute change monitoring.
+-   **Bureau of Justice Statistics (BJS) API**: For crime statistics (currently in progress).
 -   **Cornell Legal Information Institute**: Legal statutes reference.
 -   **EOIR.gov**: Immigration legal service providers.
 -   **Legal Services Corporation (LSC)**: Civil legal aid organizations.
 -   **Center for Health and Justice**: Diversion program research.
 -   **NDAA Diversion Programs Directory**: Reference for diversion programs.
--   **State and Local Court Systems**: Direct research from court websites and district attorney offices.
-
-### UI and Styling
--   **shadcn/ui**: Component library.
--   **Tailwind CSS**: Utility-first CSS framework.
--   **Framer Motion**: Animations.
--   **React Hook Form**: Form management.
-
-### Development and Build Tools
--   **Vite**: Development server and build tool.
--   **TypeScript**: Type safety.
--   **ESBuild**: Fast JavaScript bundler.
--   **react-i18next**: Internationalization.
 
 ### AI and Machine Learning
 -   **Anthropic Claude API**: AI-powered legal guidance generation using Claude Sonnet 4.5.
--   **Cost Tracking**: Server-side monitoring of API usage (tokens and costs).
 
 ### Third-Party Services
 -   **Neon Database**: Serverless PostgreSQL hosting.
--   **CourtListener**: Legal case database and API.
 -   **OpenStreetMap/Nominatim**: Geocoding and location-based search.
