@@ -157,7 +157,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '13A-12-44',
+    code: '13A-6-22',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Alabama law',
@@ -2302,7 +2302,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-petty-theft',
     name: 'Petty Theft',
-    code: '488',
+    code: '484',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under California law',
@@ -4447,7 +4447,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '47-25',
+    code: '5-64-419',
     jurisdiction: 'AR',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Arkansas law',
@@ -4967,7 +4967,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '22-60',
+    code: '18-3-204',
     jurisdiction: 'CO',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Colorado law',
@@ -6891,7 +6891,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '31-94',
+    code: '611',
     jurisdiction: 'DE',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Delaware law',
@@ -8295,7 +8295,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '893.13(6)(a)',
+    code: '893.13',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Florida law',
@@ -8828,7 +8828,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '15-96',
+    code: '16-5-21',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Georgia law',
@@ -9777,7 +9777,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '47-24',
+    code: '707-712',
     jurisdiction: 'HI',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Hawaii law',
@@ -11181,7 +11181,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '27-25',
+    code: '37-2732',
     jurisdiction: 'ID',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Idaho law',
@@ -11441,7 +11441,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '39-25',
+    code: '18-6409',
     jurisdiction: 'ID',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Idaho law',
@@ -13105,7 +13105,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '32-59',
+    code: '35-48-4-7',
     jurisdiction: 'IN',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Indiana law',
@@ -14067,7 +14067,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '30-51',
+    code: '124.401',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Iowa law',
@@ -14171,7 +14171,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '46-48',
+    code: '724.26',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Iowa law',
@@ -17213,7 +17213,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '2-46',
+    code: '14:103',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Louisiana law',
@@ -17512,7 +17512,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '30-6',
+    code: '207-A',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Maine law',
@@ -20073,7 +20073,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '272-53',
+    code: '53',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Massachusetts law',
@@ -20606,7 +20606,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-identity-theft',
     name: 'Identity Theft',
-    code: '31-23',
+    code: '445.65',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Using another person\'s identifying information under Michigan law',
@@ -20801,7 +20801,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '24-58',
+    code: '333.7403',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Michigan law',
@@ -21009,7 +21009,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-forgery',
     name: 'Forgery',
-    code: '14-22',
+    code: '750.248',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Creating false documents under Michigan law',
@@ -22725,7 +22725,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '36-46',
+    code: '41-29-139',
     jurisdiction: 'MS',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Mississippi law',
@@ -23336,7 +23336,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '29-85',
+    code: '566.031',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Missouri law',
@@ -23687,7 +23687,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '5-75',
+    code: '579.015',
     jurisdiction: 'MO',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Missouri law',
@@ -25169,7 +25169,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '16-78',
+    code: '28-310',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Nebraska law',
@@ -25611,7 +25611,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '49-5',
+    code: '28-416',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Nebraska law',
@@ -25871,7 +25871,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '20-77',
+    code: '28-1322',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Nebraska law',
@@ -29459,7 +29459,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '4-62',
+    code: '30-31-23',
     jurisdiction: 'NM',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under New Mexico law',
@@ -31188,7 +31188,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-identity-theft',
     name: 'Identity Theft',
-    code: '10-34',
+    code: '14-113.20',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Using another person\'s identifying information under North Carolina law',
@@ -31383,7 +31383,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '11-70',
+    code: '90-95',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under North Carolina law',
@@ -32345,7 +32345,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '40-53',
+    code: '19-03.1-23',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under North Dakota law',
@@ -34529,7 +34529,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-disturbing-the-peace',
     name: 'Disturbing the Peace',
-    code: '30-34',
+    code: '22',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Disrupting public tranquility under Oklahoma law',
@@ -36193,7 +36193,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '35-780-113(a)(16)',
+    code: '780-113',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Pennsylvania law',
@@ -37155,7 +37155,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '39-16',
+    code: '21-28-4.01',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Rhode Island law',
@@ -38117,7 +38117,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '15-61',
+    code: '44-53-370',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under South Carolina law',
@@ -38858,7 +38858,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-petty-theft',
     name: 'Petty Theft',
-    code: '31-87',
+    code: '22-30A-17',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Theft under felony threshold under South Dakota law',
@@ -41965,7 +41965,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '15-75',
+    code: '58-37-8',
     jurisdiction: 'UT',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Utah law',
@@ -44851,7 +44851,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '20-61',
+    code: '69.50.4013',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Washington law',
@@ -45813,7 +45813,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '4-16',
+    code: '60A-4-401',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under West Virginia law',
@@ -46775,7 +46775,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '43-66',
+    code: '961.41',
     jurisdiction: 'WI',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Wisconsin law',
@@ -48699,7 +48699,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '14-74',
+    code: '48-904.01',
     jurisdiction: 'DC',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under District of Columbia law',

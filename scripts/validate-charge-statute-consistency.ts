@@ -92,6 +92,10 @@ const STATE_CITATION_PATTERNS: Record<string, (code: string) => string> = {
 };
 
 function extractSectionFromCitation(citation: string): string | null {
+  if (citation.includes('ILCS')) {
+    const ilcsMatch = citation.match(/ILCS\s+([\d\w\-.:\/]+)/);
+    return ilcsMatch ? ilcsMatch[1] : null;
+  }
   const match = citation.match(/§\s*([\d\w\-.:\/]+)/);
   return match ? match[1] : null;
 }
