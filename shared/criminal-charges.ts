@@ -833,7 +833,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '13A-4-1',
+    code: '13A-11-7',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Alabama law',
@@ -1795,7 +1795,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '11.79.792',
+    code: '11.61.110',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Alaska law',
@@ -3719,7 +3719,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '25-10',
+    code: '13-2904',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Arizona law',
@@ -4681,7 +4681,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '35-37',
+    code: '5-71-207',
     jurisdiction: 'AR',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Arkansas law',
@@ -5643,7 +5643,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '23-78',
+    code: '18-9-106',
     jurisdiction: 'CO',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Colorado law',
@@ -6605,7 +6605,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '12-92',
+    code: '53a-182',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Connecticut law',
@@ -7567,7 +7567,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '11-83',
+    code: '1301',
     jurisdiction: 'DE',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Delaware law',
@@ -9491,7 +9491,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '34-74',
+    code: '16-11-39',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Georgia law',
@@ -10453,7 +10453,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '44-71',
+    code: '711-1101',
     jurisdiction: 'HI',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Hawaii law',
@@ -13339,7 +13339,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '25-55',
+    code: '35-45-1-3',
     jurisdiction: 'IN',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Indiana law',
@@ -14301,7 +14301,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '6-50',
+    code: '723.4',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Iowa law',
@@ -15263,7 +15263,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '18-63',
+    code: '21-6203',
     jurisdiction: 'KS',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Kansas law',
@@ -16225,7 +16225,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '1-29',
+    code: '525.060',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Kentucky law',
@@ -17187,7 +17187,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '31-64',
+    code: '14:103',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Louisiana law',
@@ -18149,7 +18149,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '49-49',
+    code: '501-A',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Maine law',
@@ -19111,7 +19111,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '31-28',
+    code: '10-201',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Maryland law',
@@ -20073,7 +20073,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '46-20',
+    code: '272-53',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Massachusetts law',
@@ -21035,7 +21035,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '46-45',
+    code: '750.167',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Michigan law',
@@ -21997,7 +21997,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '40-66',
+    code: '609.72',
     jurisdiction: 'MN',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Minnesota law',
@@ -22959,7 +22959,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '10-99',
+    code: '97-35-7',
     jurisdiction: 'MS',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Mississippi law',
@@ -23921,7 +23921,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '30-16',
+    code: '574.010',
     jurisdiction: 'MO',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Missouri law',
@@ -24883,7 +24883,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '48-28',
+    code: '45-8-101',
     jurisdiction: 'MT',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Montana law',
@@ -25845,7 +25845,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '35-52',
+    code: '28-1322',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Nebraska law',
@@ -26807,7 +26807,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '4-98',
+    code: '203.010',
     jurisdiction: 'NV',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Nevada law',
@@ -27769,7 +27769,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '36-19',
+    code: '644:2',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Disrupting public peace under New Hampshire law',
@@ -28731,7 +28731,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '27-87',
+    code: '2C:33-2',
     jurisdiction: 'NJ',
     category: 'misdemeanor',
     description: 'Disrupting public peace under New Jersey law',
@@ -29693,7 +29693,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '34-63',
+    code: '30-20-1',
     jurisdiction: 'NM',
     category: 'misdemeanor',
     description: 'Disrupting public peace under New Mexico law',
@@ -31617,7 +31617,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '29-35',
+    code: '14-288.4',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Disrupting public peace under North Carolina law',
@@ -32579,7 +32579,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '19-85',
+    code: '12.1-31-01',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Disrupting public peace under North Dakota law',
@@ -34503,7 +34503,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '28-28',
+    code: '21-1362',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Oklahoma law',
@@ -35465,7 +35465,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '19-60',
+    code: '166.025',
     jurisdiction: 'OR',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Oregon law',
@@ -37389,7 +37389,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '10-65',
+    code: '11-45-1',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Rhode Island law',
@@ -38351,7 +38351,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '34-70',
+    code: '16-17-530',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Disrupting public peace under South Carolina law',
@@ -39313,7 +39313,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '27-28',
+    code: '22-18-35',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Disrupting public peace under South Dakota law',
@@ -40275,7 +40275,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '29-76',
+    code: '39-17-305',
     jurisdiction: 'TN',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Tennessee law',
@@ -42199,7 +42199,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '23-47',
+    code: '76-9-102',
     jurisdiction: 'UT',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Utah law',
@@ -43161,7 +43161,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '14-95',
+    code: '1026',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Vermont law',
@@ -44123,7 +44123,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '10-80',
+    code: '18.2-415',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Virginia law',
@@ -45085,7 +45085,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '50-41',
+    code: '9A.84.030',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Washington law',
@@ -46047,7 +46047,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '16-37',
+    code: '61-6-1b',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Disrupting public peace under West Virginia law',
@@ -47009,7 +47009,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '18-94',
+    code: '947.01',
     jurisdiction: 'WI',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Wisconsin law',
@@ -47971,7 +47971,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '2-22',
+    code: '6-6-102',
     jurisdiction: 'WY',
     category: 'misdemeanor',
     description: 'Disrupting public peace under Wyoming law',
@@ -48933,7 +48933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-disorderly-conduct',
     name: 'Disorderly Conduct',
-    code: '38-22',
+    code: '22-1321',
     jurisdiction: 'DC',
     category: 'misdemeanor',
     description: 'Disrupting public peace under District of Columbia law',
