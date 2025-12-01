@@ -96,6 +96,13 @@ function extractSectionFromCitation(citation: string): string | null {
   return match ? match[1] : null;
 }
 
+function normalizeChargeName(name: string): string {
+  return name.toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[^a-z0-9 ]/g, '')
+    .trim();
+}
+
 async function validateChargeStatuteConsistency(): Promise<void> {
   console.log('🔍 Charge-Statute Consistency Validator\n');
   console.log('=' .repeat(60));
@@ -116,12 +123,16 @@ async function validateChargeStatuteConsistency(): Promise<void> {
   console.log(`   Found ${dbStatutes.length} statutes in database\n`);
   
   const statutesByJurisdictionAndSection = new Map<string, typeof dbStatutes[0]>();
+  const statutesByJurisdictionAndTitle = new Map<string, typeof dbStatutes[0]>();
+  
   for (const statute of dbStatutes) {
     const section = extractSectionFromCitation(statute.citation);
     if (section) {
       const key = `${statute.jurisdiction}:${section}`;
       statutesByJurisdictionAndSection.set(key, statute);
     }
+    const titleKey = `${statute.jurisdiction}:${normalizeChargeName(statute.title)}`;
+    statutesByJurisdictionAndTitle.set(titleKey, statute);
   }
   
   console.log('🔄 Validating charges against database...\n');
@@ -148,6 +159,28 @@ async function validateChargeStatuteConsistency(): Promise<void> {
     const expectedCitation = STATE_CITATION_PATTERNS[charge.jurisdiction](charge.code);
     const lookupKey = `${charge.jurisdiction}:${charge.code}`;
     const dbStatute = statutesByJurisdictionAndSection.get(lookupKey);
+    
+    const titleKey = `${charge.jurisdiction}:${normalizeChargeName(charge.name)}`;
+    const statuteByTitle = statutesByJurisdictionAndTitle.get(titleKey);
+    
+    if (statuteByTitle && !dbStatute) {
+      const dbSection = extractSectionFromCitation(statuteByTitle.citation);
+      const result: ValidationResult = {
+        chargeId: charge.id,
+        chargeName: charge.name,
+        jurisdiction: charge.jurisdiction,
+        chargeCode: charge.code,
+        expectedCitation,
+        dbCitation: statuteByTitle.citation,
+        dbSection,
+        status: 'mismatch',
+        reason: `Charge code '${charge.code}' should be '${dbSection}' to match DB statute`
+      };
+      results.push(result);
+      mismatches.push(result);
+      stats.mismatches++;
+      continue;
+    }
     
     if (!dbStatute) {
       results.push({
