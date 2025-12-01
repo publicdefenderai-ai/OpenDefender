@@ -332,6 +332,73 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'MI':
       return `http://legislature.mi.gov/doc.aspx?mcl-${code}`;
     
+    case 'GA':
+      // Georgia: Justia with proper path structure
+      // O.C.G.A. § 16-5-21 format → title-16/chapter-16-5/section-16-5-21
+      const gaTitle = code.split('-')[0];
+      const gaChapter = code.split('-')[1];
+      return `https://law.justia.com/codes/georgia/2022/title-${gaTitle}/chapter-${gaTitle}-${gaChapter}/section-${code}/`;
+    
+    case 'NE':
+      // Nebraska: nebraskalegislature.gov simple query format
+      return `https://nebraskalegislature.gov/laws/statutes.php?statute=${code}`;
+    
+    case 'AL':
+      // Alabama: Justia with year and all lowercase slugs
+      // Code format: 13A-6-22 or 32-5A-191 (Title-Chapter-Section)
+      // Justia uses: title-13a/chapter-6/section-13a-6-22 (all lowercase)
+      const alTitle = code.split('-')[0].toLowerCase();
+      const alChapter = code.split('-')[1].toLowerCase();
+      return `https://law.justia.com/codes/alabama/2022/title-${alTitle}/chapter-${alChapter}/section-${code.toLowerCase()}/`;
+    
+    case 'AR':
+      // Arkansas: Justia format
+      // Code format: 5-64-419 (Title-Chapter-Section)
+      return `https://law.justia.com/codes/arkansas/2022/title-${code.split('-')[0]}/chapter-${code.split('-')[1]}/section-${code}/`;
+    
+    case 'CO':
+      // Colorado: Official legislature site
+      return `https://law.justia.com/codes/colorado/2022/title-${code.split('-')[0]}/article-${code.split('-')[1]}/section-${code}/`;
+    
+    case 'DE':
+      // Delaware: Official legislature
+      return `https://delcode.delaware.gov/title11/c0${code.padStart(2, '0')}/index.html`;
+    
+    case 'HI':
+      // Hawaii: Capitol.hawaii.gov
+      // Code format: 707-712 (Chapter-Section)
+      const hiChapter = code.split('-')[0];
+      return `https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0${hiChapter}/HRS_0${hiChapter}-0${code.split('-')[1] || ''}.htm`;
+    
+    case 'ID':
+      // Idaho: Official legislature
+      // Code format: 37-2732 or 18-6409 (Title-Section)
+      return `https://legislature.idaho.gov/statutesrules/idstat/Title${code.split('-')[0]}/T${code.split('-')[0]}CH${code.split('-')[1]?.substring(0, 2) || ''}/SECT${code}/`;
+    
+    case 'IN':
+      // Indiana: Official legislature
+      // Code format: 35-48-4-7 (Title-Article-Chapter-Section)
+      const inParts = code.split('-');
+      return `https://iga.in.gov/laws/2024/ic/titles/${inParts[0]}/articles/${inParts[1]}/chapters/${inParts[2]}/#${inParts[0]}-${inParts[1]}-${inParts[2]}-${inParts[3] || ''}`;
+    
+    case 'IA':
+      // Iowa: Simple PDF access with chapter number
+      return `https://www.legis.iowa.gov/docs/code/${code}.pdf`;
+    
+    case 'WI':
+      // Wisconsin: Official legislature with chapter/subchapter
+      // Code format: 961.41 (Chapter.Section)
+      const wiParts = code.split('.');
+      return `https://docs.legis.wisconsin.gov/statutes/statutes/${wiParts[0]}/${wiParts[0]}.${wiParts[1] || ''}`;
+    
+    case 'WA':
+      // Washington: RCW official site
+      return `https://app.leg.wa.gov/RCW/default.aspx?cite=${code}`;
+    
+    case 'DC':
+      // DC: Official code site
+      return `https://code.dccouncil.gov/us/dc/council/code/sections/${code}`;
+    
     // Add more states as URL patterns are confirmed
     default:
       return null;
