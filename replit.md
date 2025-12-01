@@ -38,6 +38,8 @@ The system integrates with various legal data sources to provide comprehensive i
 - **41 additional states + DC**: 7-9 statutes each covering up to 9 categories: assault, theft, DUI, fraud, domestic violence, sexual assault, drug offenses, weapons offenses, and **public order/disorderly conduct** (Dec 2025 expansion based on FBI UCR data showing public order as top arrest category).
 - **Category breakdown**: **public_order (88)**, fraud (67), drug_offenses (61), assault (56), theft (55), weapons (51), DUI (51), domestic_violence (47), sexual_assault (41), property (30), violent (10)
 - **Dec 2025 Public Order Expansion**: Added disorderly conduct/disturbing the peace/breach of peace statutes for all 51 jurisdictions. Each statute includes verified Bluebook citations, penalty information, and official legislature URLs.
+- **Dec 2025 Charge Category Filters**: Added 8 named charge filter categories to the Guidance Modal: Violent Crimes, Sexual Offenses, Theft & Property, Drug Offenses, Weapons, Fraud, Public Order, and DUI & Traffic. This allows users to filter the comprehensive charge list by category for easier navigation.
+- **Dec 2025 Charge Code Data Fix**: Reconciled 43 disorderly conduct charge codes in `shared/criminal-charges.ts` to match database statute citations (e.g., AL '13A-11-7', NC '14-288.4', MI '750.167', GA '16-11-39'). This ensures accurate Bluebook citations and working "View Law" links across all jurisdictions.
 Each statute includes a direct URL link to the official state legislature website for users to view the full, authoritative text.
 
 ### API Architecture
