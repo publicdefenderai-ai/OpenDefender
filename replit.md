@@ -33,10 +33,11 @@ The system integrates with various legal data sources to provide comprehensive i
 4.  **State Statute Source URLs** (✅ COMPLETE - Nov 2025): Direct links to statute text generated from citation data. URL generators for all 50 states + DC + federal (52 total). Uses Bluebook Table 1.3 citation formats. Most states link to official legislature websites; New Jersey uses Justia.com for statute-specific links (official NJ site requires gateway navigation). See `server/data/state-statute-urls.ts` for URL generation and `verifyStatuteUrls()` for validation.
 5.  **Monitoring**: LegiScan API for quarterly statute change detection.
 
-**Current Status (Nov 2025)**: **Full 50-state coverage achieved with expanded categories!** OpenLaws API provides jurisdiction metadata only - no actual statute text in current tier. **Working solution**: GovInfo API for federal statutes + **513 unique manually curated state statutes covering all 50 states + DC**:
-- **10 original states** (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI): 20 statutes each covering FBI UCR 2024 top charges
-- **41 additional states + DC**: 6-8 statutes each (varies by jurisdiction) covering up to 8 categories: assault, theft, DUI, fraud, domestic violence, sexual assault, drug offenses, and **weapons offenses** (Nov 2025 expansion based on FBI UCR data showing weapons as top-10 arrest category). All 41 jurisdictions have weapons statutes; some jurisdictions have fewer categories due to citation overlap or data availability.
-- **Category breakdown**: fraud (67), drug_offenses (61), assault (56), theft (55), **weapons (51)**, DUI (51), domestic_violence (47), public_order (44), sexual_assault (41), property (30), violent (10)
+**Current Status (Dec 2025)**: **Full 50-state coverage achieved with expanded categories!** OpenLaws API provides jurisdiction metadata only - no actual statute text in current tier. **Working solution**: GovInfo API for federal statutes + **557 unique manually curated state statutes covering all 50 states + DC**:
+- **10 original states** (CA, TX, FL, NY, PA, IL, OH, GA, NC, MI): 20+ statutes each covering FBI UCR 2024 top charges
+- **41 additional states + DC**: 7-9 statutes each covering up to 9 categories: assault, theft, DUI, fraud, domestic violence, sexual assault, drug offenses, weapons offenses, and **public order/disorderly conduct** (Dec 2025 expansion based on FBI UCR data showing public order as top arrest category).
+- **Category breakdown**: **public_order (88)**, fraud (67), drug_offenses (61), assault (56), theft (55), weapons (51), DUI (51), domestic_violence (47), sexual_assault (41), property (30), violent (10)
+- **Dec 2025 Public Order Expansion**: Added disorderly conduct/disturbing the peace/breach of peace statutes for all 51 jurisdictions. Each statute includes verified Bluebook citations, penalty information, and official legislature URLs.
 Each statute includes a direct URL link to the official state legislature website for users to view the full, authoritative text.
 
 ### API Architecture
