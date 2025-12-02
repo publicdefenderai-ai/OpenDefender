@@ -131,7 +131,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '13A-8-35',
+    code: '13A-6-20',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Alabama law',
@@ -144,7 +144,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '13A-9-15',
+    code: '13A-6-21',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Reckless serious bodily injury under Alabama law',
@@ -651,7 +651,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-drug-trafficking',
     name: 'Drug Trafficking',
-    code: '13A-9-29',
+    code: '13A-12-231',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Large-scale drug distribution under Alabama law',
@@ -1093,7 +1093,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '11.8.806',
+    code: '11.41.200',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Alaska law',
@@ -1106,7 +1106,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '11.78.329',
+    code: '11.41.210',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Reckless serious bodily injury under Alaska law',
@@ -1119,7 +1119,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '11.8.175',
+    code: '11.41.220',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Alaska law',
@@ -3056,7 +3056,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '30-99',
+    code: '13-1204',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Arizona law',
@@ -5903,7 +5903,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '30-49',
+    code: '53a-59',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Connecticut law',
@@ -5916,7 +5916,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '14-41',
+    code: '53a-60',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Reckless serious bodily injury under Connecticut law',
@@ -5929,7 +5929,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '23-12',
+    code: '53a-61',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Connecticut law',
@@ -6371,7 +6371,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '49-83',
+    code: '21a-279',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Connecticut law',
@@ -8295,7 +8295,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '893.13',
+    code: '893.13(6)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Florida law',
@@ -15523,7 +15523,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '22-27',
+    code: '508.010',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Kentucky law',
@@ -15536,7 +15536,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '7-29',
+    code: '508.020',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Reckless serious bodily injury under Kentucky law',
@@ -15549,7 +15549,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-assault-in-the-third-degree',
     name: 'Assault in the Third Degree',
-    code: '14-85',
+    code: '508.025',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Intentional bodily injury under Kentucky law',
@@ -18409,7 +18409,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-assault-in-the-first-degree',
     name: 'Assault in the First Degree',
-    code: '10-99',
+    code: '3-202',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Serious bodily injury with deadly weapon under Maryland law',
@@ -18422,7 +18422,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '18-58',
+    code: '3-203',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Reckless serious bodily injury under Maryland law',
@@ -22296,7 +22296,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-aggravated-assault',
     name: 'Aggravated Assault',
-    code: '14-76',
+    code: '97-3-7(2)',
     jurisdiction: 'MS',
     category: 'felony',
     description: 'Assault with intent to cause serious harm under Mississippi law',
