@@ -30,6 +30,10 @@ The API provides endpoints for legal resources, court information, AI-powered le
 
 Session-based authentication with PostgreSQL session storage is configured for automatic expiration to ensure privacy. Frontend development uses Vite, and the server is bundled with ESBuild for production. Drizzle Kit manages database migrations.
 
+### Data Quality Assurance
+
+An automated charge-statute consistency validator (`server/services/charge-statute-validator.ts`) runs on every server startup, ensuring criminal charge codes in `shared/criminal-charges.ts` align with verified statute citations in the database. Mismatches are logged as warnings with actionable fix commands. Utility scripts for validation (`scripts/validate-charge-statute-consistency.ts`) and auto-fixing (`scripts/fix-charge-codes.ts`) support maintenance.
+
 ## External Dependencies
 
 ### Database
