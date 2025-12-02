@@ -3329,7 +3329,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-shoplifting',
     name: 'Shoplifting',
-    code: '36-62',
+    code: '13-1805',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Theft from retail establishment under Arizona law',
@@ -4239,7 +4239,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '6-96',
+    code: '5-36-106',
     jurisdiction: 'AR',
     category: 'misdemeanor',
     description: 'Receiving stolen property under Arkansas law',
@@ -5214,7 +5214,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-identity-theft',
     name: 'Identity Theft',
-    code: '26-54',
+    code: '18-5-902',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Using another person\'s identifying information under Colorado law',
@@ -8958,7 +8958,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-statutory-rape',
     name: 'Statutory Rape',
-    code: '4-57',
+    code: '16-6-3',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Sexual intercourse with minor under Georgia law',
@@ -14834,7 +14834,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-identity-theft',
     name: 'Identity Theft',
-    code: '10-15',
+    code: '21-6107',
     jurisdiction: 'KS',
     category: 'felony',
     description: 'Using another person\'s identifying information under Kansas law',
@@ -16758,7 +16758,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-identity-theft',
     name: 'Identity Theft',
-    code: '36-18',
+    code: '14:67.16',
     jurisdiction: 'LA',
     category: 'felony',
     description: 'Using another person\'s identifying information under Louisiana law',
@@ -21568,7 +21568,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-identity-theft',
     name: 'Identity Theft',
-    code: '41-58',
+    code: '609.527',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Using another person\'s identifying information under Minnesota law',
@@ -44487,7 +44487,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-rape-in-the-first-degree',
     name: 'Rape in the First Degree',
-    code: '47-62',
+    code: '9A.44.040',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Sexual intercourse by force or threat under Washington law',
@@ -44500,7 +44500,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-rape-in-the-second-degree',
     name: 'Rape in the Second Degree',
-    code: '36-29',
+    code: '9A.44.050',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Sexual intercourse with incapacitated person under Washington law',
@@ -46580,7 +46580,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-identity-theft',
     name: 'Identity Theft',
-    code: '40-67',
+    code: '943.201',
     jurisdiction: 'WI',
     category: 'felony',
     description: 'Using another person\'s identifying information under Wisconsin law',
