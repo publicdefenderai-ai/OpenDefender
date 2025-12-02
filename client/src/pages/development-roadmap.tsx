@@ -143,7 +143,7 @@ export default function DevelopmentRoadmap() {
       priority: "high",
       category: "data",
       estimatedCompletion: "Q4 2025",
-      progress: 70,
+      progress: 88,
       impactKey: "developmentRoadmap.items.stateStatutes.impact"
     },
     {
