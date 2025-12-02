@@ -93,10 +93,11 @@ const STATE_CITATION_PATTERNS: Record<string, (code: string) => string> = {
 
 function extractSectionFromCitation(citation: string): string | null {
   if (citation.includes('ILCS')) {
-    const ilcsMatch = citation.match(/ILCS\s+([\d\w\-.:\/]+)/);
+    const ilcsMatch = citation.match(/ILCS\s+([\d\w\-.:\/()]+)/);
     return ilcsMatch ? ilcsMatch[1] : null;
   }
-  const match = citation.match(/§\s*([\d\w\-.:\/]+)/);
+  // Include parenthetical subsections like 192(a), 782.04(1), 16-7-1(b)
+  const match = citation.match(/§\s*([\d\w\-.:\/]+(?:\([A-Za-z0-9]+\))?)/);
   return match ? match[1] : null;
 }
 

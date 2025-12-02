@@ -92,7 +92,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '13A-17-42',
+    code: '13A-6-4',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Death caused by criminal negligence under Alabama law',
@@ -456,7 +456,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '13A-20-38',
+    code: '13A-7-5',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Alabama law',
@@ -469,7 +469,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '13A-9-16',
+    code: '13A-7-6',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Alabama law',
@@ -482,7 +482,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '13A-8-12',
+    code: '13A-7-7',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unlawful entry of building under Alabama law',
@@ -534,7 +534,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '13A-14-15',
+    code: '13A-8-41',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Armed robbery with injury under Alabama law',
@@ -547,7 +547,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '13A-5-19',
+    code: '13A-8-42',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Armed robbery under Alabama law',
@@ -560,7 +560,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '13A-5-17',
+    code: '13A-8-43',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Robbery by force or threat under Alabama law',
@@ -989,7 +989,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '11.59.739',
+    code: '11.41.100',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Alaska law',
@@ -1002,7 +1002,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '11.75.207',
+    code: '11.41.110',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Intentional killing without premeditation under Alaska law',
@@ -1054,7 +1054,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '11.63.678',
+    code: '11.41.130',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Death caused by criminal negligence under Alaska law',
@@ -1418,7 +1418,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '11.76.880',
+    code: '11.46.300',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Alaska law',
@@ -1431,7 +1431,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '11.5.963',
+    code: '11.46.310',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Alaska law',
@@ -1496,7 +1496,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '11.15.484',
+    code: '11.41.500',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Armed robbery with injury under Alaska law',
@@ -1509,7 +1509,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '11.74.674',
+    code: '11.41.510',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Armed robbery under Alaska law',
@@ -1990,7 +1990,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '192',
+    code: '192(a)',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Killing in heat of passion under California law',
@@ -2003,7 +2003,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '192',
+    code: '192(b)',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under California law',
@@ -3342,7 +3342,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '25-15',
+    code: '13-1508',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Arizona law',
@@ -3355,7 +3355,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '4-45',
+    code: '13-1507',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Arizona law',
@@ -3368,7 +3368,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '10-88',
+    code: '13-1506',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Unlawful entry of building under Arizona law',
@@ -3875,7 +3875,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '1-6',
+    code: '5-10-102',
     jurisdiction: 'AR',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Arkansas law',
@@ -3888,7 +3888,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '21-32',
+    code: '5-10-103',
     jurisdiction: 'AR',
     category: 'felony',
     description: 'Intentional killing without premeditation under Arkansas law',
@@ -4343,7 +4343,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-residential-burglary',
     name: 'Residential Burglary',
-    code: '45-30',
+    code: '5-39-201',
     jurisdiction: 'AR',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Arkansas law',
@@ -4356,7 +4356,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-commercial-burglary',
     name: 'Commercial Burglary',
-    code: '38-60',
+    code: '5-39-202',
     jurisdiction: 'AR',
     category: 'felony',
     description: 'Burglary of commercial building under Arkansas law',
@@ -4837,7 +4837,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '20-84',
+    code: '18-3-102',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Colorado law',
@@ -4850,7 +4850,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '20-83',
+    code: '18-3-103',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Intentional killing without premeditation under Colorado law',
@@ -4902,7 +4902,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '3-87',
+    code: '18-3-105',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Death caused by criminal negligence under Colorado law',
@@ -4915,7 +4915,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '6-38',
+    code: '18-3-106',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Colorado law',
@@ -5266,7 +5266,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '49-62',
+    code: '18-4-202',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Colorado law',
@@ -5279,7 +5279,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '22-51',
+    code: '18-4-203',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Colorado law',
@@ -5292,7 +5292,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '37-78',
+    code: '18-4-204',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Unlawful entry of building under Colorado law',
@@ -5864,7 +5864,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '38-72',
+    code: '53a-58',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Death caused by criminal negligence under Connecticut law',
@@ -6228,7 +6228,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '18-5',
+    code: '53a-101',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Connecticut law',
@@ -6241,7 +6241,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '11-7',
+    code: '53a-102',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Connecticut law',
@@ -6254,7 +6254,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '44-2',
+    code: '53a-103',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Unlawful entry of building under Connecticut law',
@@ -6306,7 +6306,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '24-50',
+    code: '53a-134',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Armed robbery with injury under Connecticut law',
@@ -6319,7 +6319,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '42-79',
+    code: '53a-135',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Armed robbery under Connecticut law',
@@ -6332,7 +6332,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '45-36',
+    code: '53a-136',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Robbery by force or threat under Connecticut law',
@@ -6761,7 +6761,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '12-60',
+    code: '636',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Delaware law',
@@ -6774,7 +6774,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '30-15',
+    code: '635',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Intentional killing without premeditation under Delaware law',
@@ -6826,7 +6826,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '11-78',
+    code: '631',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Death caused by criminal negligence under Delaware law',
@@ -7190,7 +7190,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '32-80',
+    code: '826',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Delaware law',
@@ -7203,7 +7203,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '13-19',
+    code: '825',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Delaware law',
@@ -7216,7 +7216,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '31-73',
+    code: '824',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Unlawful entry of building under Delaware law',
@@ -7268,7 +7268,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '2-76',
+    code: '832',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Armed robbery with injury under Delaware law',
@@ -7281,7 +7281,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '11-29',
+    code: '831',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Armed robbery under Delaware law',
@@ -7723,7 +7723,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '782.04(1)(a)',
+    code: '782.04(1)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Florida law',
@@ -8724,7 +8724,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '13-72',
+    code: '16-5-2',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Killing in heat of passion under Georgia law',
@@ -8737,7 +8737,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '26-42',
+    code: '16-5-3',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Georgia law',
@@ -9114,7 +9114,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '40-100',
+    code: '16-7-1(a)',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Georgia law',
@@ -9127,7 +9127,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '2-76',
+    code: '16-7-1(b)',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Georgia law',
@@ -9647,7 +9647,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '45-59',
+    code: '707-701',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Hawaii law',
@@ -9660,7 +9660,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '25-42',
+    code: '707-701.5',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Intentional killing without premeditation under Hawaii law',
@@ -10076,7 +10076,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '4-86',
+    code: '708-810',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Hawaii law',
@@ -10089,7 +10089,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '12-33',
+    code: '708-811',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Hawaii law',
@@ -10154,7 +10154,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '42-35',
+    code: '708-840',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Armed robbery with injury under Hawaii law',
@@ -10167,7 +10167,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '1-84',
+    code: '708-841',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Armed robbery under Hawaii law',
@@ -10609,7 +10609,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '40-55',
+    code: '18-4003',
     jurisdiction: 'ID',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Idaho law',
@@ -10622,7 +10622,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '24-62',
+    code: '18-4004',
     jurisdiction: 'ID',
     category: 'felony',
     description: 'Intentional killing without premeditation under Idaho law',
@@ -10648,7 +10648,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '11-28',
+    code: '18-4006(1)',
     jurisdiction: 'ID',
     category: 'felony',
     description: 'Killing in heat of passion under Idaho law',
@@ -10661,7 +10661,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '29-97',
+    code: '18-4006(2)',
     jurisdiction: 'ID',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Idaho law',
@@ -12572,7 +12572,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '36-41',
+    code: '35-42-1-3',
     jurisdiction: 'IN',
     category: 'felony',
     description: 'Killing in heat of passion under Indiana law',
@@ -12585,7 +12585,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '16-83',
+    code: '35-42-1-4',
     jurisdiction: 'IN',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Indiana law',
@@ -13495,7 +13495,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '14-4',
+    code: '707.2',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Iowa law',
@@ -13508,7 +13508,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '30-66',
+    code: '707.3',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Intentional killing without premeditation under Iowa law',
@@ -13534,7 +13534,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '24-41',
+    code: '707.4',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Killing in heat of passion under Iowa law',
@@ -13547,7 +13547,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '46-33',
+    code: '707.5',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Iowa law',
@@ -13573,7 +13573,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '2-42',
+    code: '707.6A',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Iowa law',
@@ -13924,7 +13924,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '19-8',
+    code: '713.3',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Iowa law',
@@ -13937,7 +13937,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '3-60',
+    code: '713.5',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Iowa law',
@@ -13950,7 +13950,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '26-93',
+    code: '713.6A',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Unlawful entry of building under Iowa law',
@@ -14002,7 +14002,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '31-70',
+    code: '711.2',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Armed robbery with injury under Iowa law',
@@ -14015,7 +14015,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '45-53',
+    code: '711.3',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Armed robbery under Iowa law',
@@ -14457,7 +14457,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '33-95',
+    code: '21-5402',
     jurisdiction: 'KS',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Kansas law',
@@ -14470,7 +14470,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '16-86',
+    code: '21-5403',
     jurisdiction: 'KS',
     category: 'felony',
     description: 'Intentional killing without premeditation under Kansas law',
@@ -14496,7 +14496,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '40-41',
+    code: '21-5404',
     jurisdiction: 'KS',
     category: 'felony',
     description: 'Killing in heat of passion under Kansas law',
@@ -14509,7 +14509,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '22-35',
+    code: '21-5405',
     jurisdiction: 'KS',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Kansas law',
@@ -15848,7 +15848,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '6-62',
+    code: '511.020',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Kentucky law',
@@ -15861,7 +15861,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '47-2',
+    code: '511.030',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Kentucky law',
@@ -15874,7 +15874,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '46-65',
+    code: '511.040',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Unlawful entry of building under Kentucky law',
@@ -15926,7 +15926,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '41-4',
+    code: '515.020',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Armed robbery with injury under Kentucky law',
@@ -15939,7 +15939,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '19-15',
+    code: '515.030',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Armed robbery under Kentucky law',
@@ -16459,7 +16459,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '29-72',
+    code: '14:32.1',
     jurisdiction: 'LA',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Louisiana law',
@@ -17434,7 +17434,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-felony-murder',
     name: 'Felony Murder',
-    code: '8-38',
+    code: '202',
     jurisdiction: 'ME',
     category: 'felony',
     description: 'Death occurring during commission of felony under Maine law',
@@ -18357,7 +18357,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '39-92',
+    code: '2-207',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Maryland law',
@@ -18734,7 +18734,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '9-94',
+    code: '6-202',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Maryland law',
@@ -18747,7 +18747,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '5-11',
+    code: '6-203',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Maryland law',
@@ -18760,7 +18760,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '3-46',
+    code: '6-204',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Unlawful entry of building under Maryland law',
@@ -19280,7 +19280,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '26-46',
+    code: '1',
     jurisdiction: 'MA',
     category: 'felony',
     description: 'Intentional killing without premeditation under Massachusetts law',
@@ -19319,7 +19319,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '32-57',
+    code: '13',
     jurisdiction: 'MA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Massachusetts law',
@@ -20281,7 +20281,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '14-13',
+    code: '750.321',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Michigan law',
@@ -21191,7 +21191,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '5-40',
+    code: '609.185',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Minnesota law',
@@ -21204,7 +21204,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '44-42',
+    code: '609.19',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Intentional killing without premeditation under Minnesota law',
@@ -21217,7 +21217,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-murder-in-the-third-degree',
     name: 'Murder in the Third Degree',
-    code: '31-100',
+    code: '609.195',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Depraved indifference killing under Minnesota law',
@@ -21620,7 +21620,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '23-35',
+    code: '609.582',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Minnesota law',
@@ -21633,7 +21633,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '47-88',
+    code: '609.582',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Minnesota law',
@@ -21646,7 +21646,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '46-100',
+    code: '609.582',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Unlawful entry of building under Minnesota law',
@@ -23115,7 +23115,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '40-73',
+    code: '565.020',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Missouri law',
@@ -23128,7 +23128,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '41-55',
+    code: '565.021',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Intentional killing without premeditation under Missouri law',
@@ -23154,7 +23154,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '10-48',
+    code: '565.023',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Killing in heat of passion under Missouri law',
@@ -23544,7 +23544,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '47-47',
+    code: '569.160',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Missouri law',
@@ -23557,7 +23557,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '9-64',
+    code: '569.170',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Missouri law',
@@ -23622,7 +23622,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '35-52',
+    code: '570.023',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Armed robbery with injury under Missouri law',
@@ -23635,7 +23635,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '6-48',
+    code: '570.025',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Armed robbery under Missouri law',
@@ -25039,7 +25039,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '1-25',
+    code: '28-303',
     jurisdiction: 'NE',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Nebraska law',
@@ -25052,7 +25052,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '30-81',
+    code: '28-304',
     jurisdiction: 'NE',
     category: 'felony',
     description: 'Intentional killing without premeditation under Nebraska law',
@@ -26040,7 +26040,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '16-99',
+    code: '200.050',
     jurisdiction: 'NV',
     category: 'felony',
     description: 'Killing in heat of passion under Nevada law',
@@ -26053,7 +26053,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '13-81',
+    code: '200.070',
     jurisdiction: 'NV',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Nevada law',
@@ -26079,7 +26079,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '17-23',
+    code: '484C.130',
     jurisdiction: 'NV',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Nevada law',
@@ -28926,7 +28926,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '6-24',
+    code: '30-2-3',
     jurisdiction: 'NM',
     category: 'felony',
     description: 'Killing in heat of passion under New Mexico law',
@@ -28939,7 +28939,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '48-19',
+    code: '30-2-3(B)',
     jurisdiction: 'NM',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under New Mexico law',
@@ -30863,7 +30863,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '16-60',
+    code: '14-18',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under North Carolina law',
@@ -33697,7 +33697,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '50-67',
+    code: '701.7',
     jurisdiction: 'OK',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Oklahoma law',
@@ -33710,7 +33710,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '25-59',
+    code: '701.8',
     jurisdiction: 'OK',
     category: 'felony',
     description: 'Intentional killing without premeditation under Oklahoma law',
@@ -34126,7 +34126,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '2-32',
+    code: '1431',
     jurisdiction: 'OK',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Oklahoma law',
@@ -34139,7 +34139,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '21-52',
+    code: '1435',
     jurisdiction: 'OK',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Oklahoma law',
@@ -34204,7 +34204,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '2-16',
+    code: '797',
     jurisdiction: 'OK',
     category: 'felony',
     description: 'Armed robbery with injury under Oklahoma law',
@@ -34724,7 +34724,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '24-77',
+    code: '163.145',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Death caused by criminal negligence under Oregon law',
@@ -35088,7 +35088,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '38-24',
+    code: '164.225',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Oregon law',
@@ -35101,7 +35101,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '43-86',
+    code: '164.215',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Oregon law',
@@ -35166,7 +35166,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '25-94',
+    code: '164.415',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Armed robbery with injury under Oregon law',
@@ -35179,7 +35179,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '1-4',
+    code: '164.405',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Armed robbery under Oregon law',
@@ -35192,7 +35192,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-robbery-in-the-third-degree',
     name: 'Robbery in the Third Degree',
-    code: '40-12',
+    code: '164.395',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Robbery by force or threat under Oregon law',
@@ -37584,7 +37584,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '37-31',
+    code: '16-3-50',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Killing in heat of passion under South Carolina law',
@@ -37597,7 +37597,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '32-61',
+    code: '16-3-60',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under South Carolina law',
@@ -37974,7 +37974,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '12-41',
+    code: '16-11-311',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under South Carolina law',
@@ -37987,7 +37987,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '1-8',
+    code: '16-11-312',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Unlawful entry of dwelling under South Carolina law',
@@ -38000,7 +38000,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-burglary-in-the-third-degree',
     name: 'Burglary in the Third Degree',
-    code: '9-72',
+    code: '16-11-313',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Unlawful entry of building under South Carolina law',
@@ -38507,7 +38507,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '26-53',
+    code: '22-16-4',
     jurisdiction: 'SD',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under South Dakota law',
@@ -38520,7 +38520,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '47-57',
+    code: '22-16-7',
     jurisdiction: 'SD',
     category: 'felony',
     description: 'Intentional killing without premeditation under South Dakota law',
@@ -38585,7 +38585,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '38-98',
+    code: '22-16-41',
     jurisdiction: 'SD',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under South Dakota law',
@@ -39014,7 +39014,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '29-15',
+    code: '22-30-1',
     jurisdiction: 'SD',
     category: 'felony',
     description: 'Armed robbery with injury under South Dakota law',
@@ -39027,7 +39027,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '45-70',
+    code: '22-30-1.1',
     jurisdiction: 'SD',
     category: 'felony',
     description: 'Armed robbery under South Dakota law',
@@ -39508,7 +39508,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '36-88',
+    code: '39-13-211',
     jurisdiction: 'TN',
     category: 'felony',
     description: 'Killing in heat of passion under Tennessee law',
@@ -39534,7 +39534,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-criminally-negligent-homicide',
     name: 'Criminally Negligent Homicide',
-    code: '4-48',
+    code: '39-13-212',
     jurisdiction: 'TN',
     category: 'felony',
     description: 'Death caused by criminal negligence under Tennessee law',
@@ -39547,7 +39547,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '50-24',
+    code: '39-13-213',
     jurisdiction: 'TN',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Tennessee law',
@@ -42368,7 +42368,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '34-15',
+    code: '2301',
     jurisdiction: 'VT',
     category: 'felony',
     description: 'Intentional killing without premeditation under Vermont law',
@@ -43330,7 +43330,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '49-48',
+    code: '18.2-32',
     jurisdiction: 'VA',
     category: 'felony',
     description: 'Intentional killing without premeditation under Virginia law',
@@ -43356,7 +43356,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '5-58',
+    code: '18.2-35',
     jurisdiction: 'VA',
     category: 'felony',
     description: 'Killing in heat of passion under Virginia law',
@@ -43369,7 +43369,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '36-93',
+    code: '18.2-36',
     jurisdiction: 'VA',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under Virginia law',
@@ -44279,7 +44279,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '1-35',
+    code: '9A.32.030',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Washington law',
@@ -44292,7 +44292,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '5-91',
+    code: '9A.32.050',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Intentional killing without premeditation under Washington law',
@@ -44357,7 +44357,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '2-65',
+    code: '46.61.520',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under Washington law',
@@ -44708,7 +44708,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '26-59',
+    code: '9A.52.020',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Washington law',
@@ -44721,7 +44721,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '45-79',
+    code: '9A.52.030',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Washington law',
@@ -44747,7 +44747,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-residential-burglary',
     name: 'Residential Burglary',
-    code: '26-33',
+    code: '9A.52.025',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Burglary of occupied dwelling under Washington law',
@@ -44786,7 +44786,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '36-61',
+    code: '9A.56.200',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Armed robbery with injury under Washington law',
@@ -44799,7 +44799,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '30-13',
+    code: '9A.56.210',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Armed robbery under Washington law',
@@ -45241,7 +45241,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '11-45',
+    code: '61-2-1',
     jurisdiction: 'WV',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under West Virginia law',
@@ -45254,7 +45254,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '16-98',
+    code: '61-2-3',
     jurisdiction: 'WV',
     category: 'felony',
     description: 'Intentional killing without premeditation under West Virginia law',
@@ -45280,7 +45280,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '10-20',
+    code: '61-2-4',
     jurisdiction: 'WV',
     category: 'felony',
     description: 'Killing in heat of passion under West Virginia law',
@@ -45293,7 +45293,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '19-44',
+    code: '61-2-5',
     jurisdiction: 'WV',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under West Virginia law',
@@ -46294,7 +46294,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-felony-murder',
     name: 'Felony Murder',
-    code: '48-94',
+    code: '940.03',
     jurisdiction: 'WI',
     category: 'felony',
     description: 'Death occurring during commission of felony under Wisconsin law',
@@ -47165,7 +47165,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '24-43',
+    code: '6-2-101',
     jurisdiction: 'WY',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under Wyoming law',
@@ -47178,7 +47178,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '41-57',
+    code: '6-2-104',
     jurisdiction: 'WY',
     category: 'felony',
     description: 'Intentional killing without premeditation under Wyoming law',
@@ -48127,7 +48127,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
-    code: '33-31',
+    code: '22-2101',
     jurisdiction: 'DC',
     category: 'felony',
     description: 'Premeditated killing with malice aforethought under District of Columbia law',
@@ -48140,7 +48140,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-murder-in-the-second-degree',
     name: 'Murder in the Second Degree',
-    code: '22-93',
+    code: '22-2103',
     jurisdiction: 'DC',
     category: 'felony',
     description: 'Intentional killing without premeditation under District of Columbia law',
@@ -48179,7 +48179,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-involuntary-manslaughter',
     name: 'Involuntary Manslaughter',
-    code: '2-76',
+    code: '22-2105',
     jurisdiction: 'DC',
     category: 'felony',
     description: 'Unintentional killing due to recklessness under District of Columbia law',
