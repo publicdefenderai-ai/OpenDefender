@@ -160,6 +160,7 @@ export default function PrivacyPolicy() {
                     <li>{t('privacyPolicy.technical.external.services.courtListener')}</li>
                     <li>{t('privacyPolicy.technical.external.services.recap')}</li>
                     <li>{t('privacyPolicy.technical.external.services.cornell')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.openLaws')}</li>
                   </ul>
                   <p className="text-muted-foreground leading-relaxed mt-2">
                     {t('privacyPolicy.technical.external.note')}
