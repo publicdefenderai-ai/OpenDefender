@@ -95,7 +95,46 @@ export class OpenLawsClient {
   }
 
   /**
-   * Search for statutes by citation
+   * Validate and lookup a citation using OpenLaws validation endpoint
+   * Uses POST /citations/validate for proper citation validation
+   * Example: "Cal. Penal Code § 242"
+   */
+  async validateCitation(citation: string): Promise<{
+    valid: boolean;
+    canonical_citation?: string;
+    division_id?: string;
+    authoritative_url?: string;
+    error?: string;
+  }> {
+    if (!this.isConfigured) {
+      throw new Error('OpenLaws API not configured');
+    }
+
+    try {
+      // Normalize citation to Bluebook format
+      const normalizedCitation = this.normalizeCitation(citation);
+      
+      const response = await this.axios.post('/citations/validate', {
+        citation: normalizedCitation,
+      });
+      
+      return {
+        valid: true,
+        canonical_citation: response.data?.canonical_citation || response.data?.citation,
+        division_id: response.data?.division_id || response.data?.id,
+        authoritative_url: response.data?.authoritative_url || response.data?.url,
+      };
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 404) {
+        return { valid: false, error: 'Citation not found' };
+      }
+      console.error(`[OpenLaws] Error validating citation "${citation}":`, error);
+      return { valid: false, error: error instanceof Error ? error.message : 'Unknown error' };
+    }
+  }
+
+  /**
+   * Search for statutes by citation using path-encoded request
    * Example: "Cal. Penal Code § 242"
    */
   async searchByCitation(citation: string): Promise<OpenLawsStatute | null> {
@@ -104,14 +143,53 @@ export class OpenLawsClient {
     }
 
     try {
-      const response = await this.axios.get('/citations', {
-        params: { citation },
-      });
+      // Normalize and encode the citation for URL path
+      const normalizedCitation = this.normalizeCitation(citation);
+      const encodedCitation = encodeURIComponent(normalizedCitation);
+      
+      const response = await this.axios.get(`/citations/${encodedCitation}`);
       return response.data || null;
     } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 404) {
+        // Citation not found - not necessarily an error
+        return null;
+      }
       console.error(`[OpenLaws] Error searching for citation "${citation}":`, error);
       return null;
     }
+  }
+
+  /**
+   * Normalize citation to Bluebook format for API queries
+   * Handles common variations in state abbreviations and section symbols
+   */
+  private normalizeCitation(citation: string): string {
+    let normalized = citation.trim();
+    
+    // Normalize section symbols
+    normalized = normalized.replace(/§§?/g, '§');
+    normalized = normalized.replace(/\bsection\b/gi, '§');
+    normalized = normalized.replace(/\bsec\.\b/gi, '§');
+    
+    // Normalize common state abbreviations to Bluebook format
+    const stateNormalizations: Record<string, string> = {
+      'Cal.': 'Cal.',
+      'California': 'Cal.',
+      'Tex.': 'Tex.',
+      'Texas': 'Tex.',
+      'Fla.': 'Fla.',
+      'Florida': 'Fla.',
+      'N.Y.': 'N.Y.',
+      'New York': 'N.Y.',
+    };
+    
+    for (const [variant, canonical] of Object.entries(stateNormalizations)) {
+      if (normalized.includes(variant)) {
+        normalized = normalized.replace(variant, canonical);
+      }
+    }
+    
+    return normalized;
   }
 
   /**

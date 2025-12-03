@@ -45,7 +45,7 @@ An automated charge-statute consistency validator (`server/services/charge-statu
 -   **RECAP Archive**: Federal court documents.
 -   **PACER Fetch API**: On-demand access to PACER documents (fallback).
 -   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
--   **OpenLaws API**: Provides metadata for 53 jurisdictions (no statute text in current tier).
+-   **OpenLaws API**: Accessible at api.openlaws.us (53 jurisdictions confirmed). Citation validation/search endpoints return 404 in current tier - requires enterprise access for statute text retrieval. Used for jurisdiction metadata only; manually curated seed data remains authoritative source.
 -   **LegiScan API**: For quarterly statute change monitoring.
 -   **Bureau of Justice Statistics (BJS) API**: For crime statistics (currently in progress).
 -   **Cornell Legal Information Institute**: Legal statutes reference.
