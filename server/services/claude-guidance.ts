@@ -3,6 +3,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import crypto from 'crypto';
 import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
+import { validateLegalGuidance, ValidationResult } from './legal-accuracy-validator';
 
 // Validate Anthropic API credentials
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -101,6 +102,19 @@ interface ClaudeGuidance {
     inputTokens: number;
     outputTokens: number;
     estimatedCost: number;
+  };
+  validation?: {
+    confidenceScore: number;
+    isValid: boolean;
+    summary: string;
+    checksPerformed: number;
+    checksPassed: number;
+    issues: Array<{
+      type: string;
+      severity: 'error' | 'warning' | 'info';
+      message: string;
+      suggestion?: string;
+    }>;
   };
 }
 
@@ -527,7 +541,35 @@ export async function generateClaudeGuidance(
       },
     };
 
-    // Cache the successful response
+    // Run legal accuracy validation against our databases
+    try {
+      const validationResult = await validateLegalGuidance(guidance, {
+        jurisdiction: processedDetails.jurisdiction,
+        charges: processedDetails.charges,
+        caseStage: processedDetails.caseStage,
+      });
+      
+      guidance.validation = {
+        confidenceScore: validationResult.confidenceScore,
+        isValid: validationResult.isValid,
+        summary: validationResult.summary,
+        checksPerformed: validationResult.checksPerformed,
+        checksPassed: validationResult.checksPassed,
+        issues: validationResult.issues.map(issue => ({
+          type: issue.type,
+          severity: issue.severity,
+          message: issue.message,
+          suggestion: issue.suggestion,
+        })),
+      };
+      
+      console.log(`[Guidance] Validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+    } catch (validationError) {
+      console.warn('[Guidance] Validation failed, returning guidance without validation:', validationError);
+      // Continue without validation - guidance is still useful
+    }
+
+    // Cache the successful response (including validation)
     responseCache.set(cacheKey, {
       response: guidance,
       timestamp: Date.now(),

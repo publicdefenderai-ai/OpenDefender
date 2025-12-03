@@ -10,6 +10,7 @@ import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, testClaudeConnection } from "./services/claude-guidance.js";
 import { getChargeById } from "../shared/criminal-charges.js";
+import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { scrapingCoordinator } from "./services/scraping-coordinator";
 import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -786,9 +787,38 @@ async function generateLegalGuidance(caseData: any) {
   console.log('Generating rule-based guidance...');
   const guidance = generateEnhancedGuidance(caseData);
   
+  // Run validation for rule-based guidance as well
+  let validation;
+  try {
+    const validationResult = await validateLegalGuidance(guidance, {
+      jurisdiction: caseData.jurisdiction,
+      charges: caseData.charges,
+      caseStage: caseData.caseStage,
+    });
+    
+    validation = {
+      confidenceScore: validationResult.confidenceScore,
+      isValid: validationResult.isValid,
+      summary: validationResult.summary,
+      checksPerformed: validationResult.checksPerformed,
+      checksPassed: validationResult.checksPassed,
+      issues: validationResult.issues.map(issue => ({
+        type: issue.type,
+        severity: issue.severity,
+        message: issue.message,
+        suggestion: issue.suggestion,
+      })),
+    };
+    
+    console.log(`[Guidance] Rule-based validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+  } catch (validationError) {
+    console.warn('[Guidance] Rule-based validation failed:', validationError);
+  }
+  
   return {
     ...guidance,
     chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
+    validation,
     generatedBy: 'rule-based'
   };
 }

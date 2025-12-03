@@ -71,6 +71,19 @@ interface EnhancedGuidanceResult {
     timeframe: string;
     completed: boolean;
   }>;
+  validation?: {
+    confidenceScore: number;
+    isValid: boolean;
+    summary: string;
+    checksPerformed: number;
+    checksPassed: number;
+    issues: Array<{
+      type: string;
+      severity: 'error' | 'warning' | 'info';
+      message: string;
+      suggestion?: string;
+    }>;
+  };
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -320,6 +333,7 @@ export default function CaseGuidance() {
           courtPreparation: guidance.courtPreparation || [],
           avoidActions: guidance.avoidActions || [],
           timeline: guidance.timeline || [],
+          validation: guidance.validation,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges

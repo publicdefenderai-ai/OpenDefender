@@ -75,6 +75,19 @@ interface EnhancedGuidanceData {
     classification: string;
     code: string;
   }>;
+  validation?: {
+    confidenceScore: number;
+    isValid: boolean;
+    summary: string;
+    checksPerformed: number;
+    checksPassed: number;
+    issues: Array<{
+      type: string;
+      severity: 'error' | 'warning' | 'info';
+      message: string;
+      suggestion?: string;
+    }>;
+  };
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -280,6 +293,106 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
             <p className="text-blue-900 dark:text-blue-100 leading-relaxed" data-testid="text-guidance-overview">
               {guidance.overview}
             </p>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Validation Confidence Section */}
+      {guidance.validation && (
+        <Card className={`border ${
+          guidance.validation.confidenceScore >= 0.8 
+            ? 'border-green-200 bg-green-50 dark:bg-green-900/20' 
+            : guidance.validation.confidenceScore >= 0.6 
+              ? 'border-yellow-200 bg-yellow-50 dark:bg-yellow-900/20'
+              : 'border-orange-200 bg-orange-50 dark:bg-orange-900/20'
+        }`}>
+          <CardHeader className="pb-3">
+            <div className="flex items-center justify-between">
+              <CardTitle className={`flex items-center gap-2 ${
+                guidance.validation.confidenceScore >= 0.8 
+                  ? 'text-green-800 dark:text-green-200' 
+                  : guidance.validation.confidenceScore >= 0.6 
+                    ? 'text-yellow-800 dark:text-yellow-200'
+                    : 'text-orange-800 dark:text-orange-200'
+              }`}>
+                <Shield className="h-5 w-5" />
+                {t('guidance.validation.title', 'Accuracy Check')}
+              </CardTitle>
+              <div className="flex items-center gap-2">
+                <Badge 
+                  variant={guidance.validation.confidenceScore >= 0.8 ? 'default' : 'secondary'}
+                  className={`${
+                    guidance.validation.confidenceScore >= 0.8 
+                      ? 'bg-green-600 hover:bg-green-700' 
+                      : guidance.validation.confidenceScore >= 0.6 
+                        ? 'bg-yellow-600 hover:bg-yellow-700'
+                        : 'bg-orange-600 hover:bg-orange-700'
+                  } text-white`}
+                  data-testid="badge-confidence-score"
+                >
+                  {Math.round(guidance.validation.confidenceScore * 100)}% {t('guidance.validation.confidence', 'Confidence')}
+                </Badge>
+              </div>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <p className={`text-sm ${
+              guidance.validation.confidenceScore >= 0.8 
+                ? 'text-green-900 dark:text-green-100' 
+                : guidance.validation.confidenceScore >= 0.6 
+                  ? 'text-yellow-900 dark:text-yellow-100'
+                  : 'text-orange-900 dark:text-orange-100'
+            }`} data-testid="text-validation-summary">
+              {guidance.validation.summary}
+            </p>
+            
+            <div className="flex items-center gap-4 text-sm">
+              <span className="text-muted-foreground">
+                {t('guidance.validation.checks', 'Checks')}: {guidance.validation.checksPassed}/{guidance.validation.checksPerformed}
+              </span>
+              <Progress 
+                value={(guidance.validation.checksPassed / guidance.validation.checksPerformed) * 100} 
+                className="flex-1 h-2"
+              />
+            </div>
+
+            {guidance.validation.issues.length > 0 && (
+              <Collapsible>
+                <CollapsibleTrigger asChild>
+                  <Button variant="ghost" size="sm" className="p-0 h-auto text-sm hover:bg-transparent">
+                    <ChevronRight className="h-4 w-4 mr-1" />
+                    {t('guidance.validation.viewDetails', 'View validation details')} ({guidance.validation.issues.length})
+                  </Button>
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-2 space-y-2">
+                  {guidance.validation.issues.map((issue, index) => (
+                    <div 
+                      key={index} 
+                      className={`p-2 rounded text-sm ${
+                        issue.severity === 'error' 
+                          ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200' 
+                          : issue.severity === 'warning' 
+                            ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200'
+                            : 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200'
+                      }`}
+                      data-testid={`validation-issue-${index}`}
+                    >
+                      <div className="flex items-start gap-2">
+                        {issue.severity === 'error' && <AlertTriangle className="h-4 w-4 flex-shrink-0 mt-0.5" />}
+                        {issue.severity === 'warning' && <AlertTriangle className="h-4 w-4 flex-shrink-0 mt-0.5" />}
+                        {issue.severity === 'info' && <HelpCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />}
+                        <div>
+                          <p className="font-medium">{issue.message}</p>
+                          {issue.suggestion && (
+                            <p className="text-xs mt-1 opacity-80">{issue.suggestion}</p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </CollapsibleContent>
+              </Collapsible>
+            )}
           </CardContent>
         </Card>
       )}

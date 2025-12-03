@@ -58,6 +58,19 @@ export interface LegalGuidance {
     timeframe: string;
     completed: boolean;
   }>;
+  validation?: {
+    confidenceScore: number;
+    isValid: boolean;
+    summary: string;
+    checksPerformed: number;
+    checksPassed: number;
+    issues: Array<{
+      type: string;
+      severity: 'error' | 'warning' | 'info';
+      message: string;
+      suggestion?: string;
+    }>;
+  };
 }
 
 export const legalDataApi = {
