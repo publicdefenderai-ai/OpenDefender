@@ -417,7 +417,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '13A-4-30',
+    code: '13A-9-14',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Unauthorized use of credit card under Alabama law',
@@ -807,7 +807,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-forgery',
     name: 'Forgery',
-    code: '13A-10-22',
+    code: '13A-9-2',
     jurisdiction: 'AL',
     category: 'felony',
     description: 'Creating false documents under Alabama law',
@@ -1769,7 +1769,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-forgery',
     name: 'Forgery',
-    code: '11.71.880',
+    code: '11.46.500',
     jurisdiction: 'AK',
     category: 'felony',
     description: 'Creating false documents under Alaska law',
@@ -2510,7 +2510,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-bank-robbery',
     name: 'Bank Robbery',
-    code: '674',
+    code: '211',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Robbery of financial institution under California law',
@@ -2718,7 +2718,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-tax-fraud',
     name: 'Tax Fraud',
-    code: '140',
+    code: '19706',
     jurisdiction: 'CA',
     category: 'felony',
     description: 'Fraudulent tax reporting under California law',
@@ -2770,7 +2770,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-public-intoxication',
     name: 'Public Intoxication',
-    code: '647',
+    code: '647(f)',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under California law',
@@ -2822,7 +2822,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-loitering',
     name: 'Loitering',
-    code: '647',
+    code: '653g',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under California law',
@@ -3303,7 +3303,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '19-79',
+    code: '13-2102',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Unauthorized use of credit card under Arizona law',
@@ -3693,7 +3693,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-forgery',
     name: 'Forgery',
-    code: '27-25',
+    code: '13-2002',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Creating false documents under Arizona law',
@@ -3706,7 +3706,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-computer-fraud',
     name: 'Computer Fraud',
-    code: '17-88',
+    code: '13-2316',
     jurisdiction: 'AZ',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Arizona law',
@@ -3836,7 +3836,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-reckless-driving',
     name: 'Reckless Driving',
-    code: '1-56',
+    code: '28-693',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Arizona law',
@@ -4655,7 +4655,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-forgery',
     name: 'Forgery',
-    code: '35-27',
+    code: '5-37-201',
     jurisdiction: 'AR',
     category: 'felony',
     description: 'Creating false documents under Arkansas law',
@@ -5227,7 +5227,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '49-61',
+    code: '18-5-702',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Unauthorized use of credit card under Colorado law',
@@ -5617,7 +5617,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-forgery',
     name: 'Forgery',
-    code: '14-83',
+    code: '18-5-102',
     jurisdiction: 'CO',
     category: 'felony',
     description: 'Creating false documents under Colorado law',
@@ -5760,7 +5760,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-reckless-driving',
     name: 'Reckless Driving',
-    code: '25-7',
+    code: '42-4-1401',
     jurisdiction: 'CO',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Colorado law',
@@ -6579,7 +6579,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-forgery',
     name: 'Forgery',
-    code: '43-22',
+    code: '53a-138',
     jurisdiction: 'CT',
     category: 'felony',
     description: 'Creating false documents under Connecticut law',
@@ -7541,7 +7541,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-forgery',
     name: 'Forgery',
-    code: '13-16',
+    code: '861',
     jurisdiction: 'DE',
     category: 'felony',
     description: 'Creating false documents under Delaware law',
@@ -8490,7 +8490,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-tax-fraud',
     name: 'Tax Fraud',
-    code: '145.949',
+    code: '213.29',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Fraudulent tax reporting under Florida law',
@@ -8659,7 +8659,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-hit-and-run',
     name: 'Hit and Run',
-    code: '316.027',
+    code: '316.061',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Florida law',
@@ -9439,7 +9439,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '26-2',
+    code: '33-1-9',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Fraudulent insurance claims under Georgia law',
@@ -9452,7 +9452,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-tax-fraud',
     name: 'Tax Fraud',
-    code: '11-76',
+    code: '48-7-54',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Fraudulent tax reporting under Georgia law',
@@ -9478,7 +9478,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-computer-fraud',
     name: 'Computer Fraud',
-    code: '36-21',
+    code: '16-9-93',
     jurisdiction: 'GA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Georgia law',
@@ -9608,7 +9608,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-reckless-driving',
     name: 'Reckless Driving',
-    code: '42-9',
+    code: '40-6-390',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Georgia law',
@@ -9621,7 +9621,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-hit-and-run',
     name: 'Hit and Run',
-    code: '42-95',
+    code: '40-6-270',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Georgia law',
@@ -10427,7 +10427,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-forgery',
     name: 'Forgery',
-    code: '21-72',
+    code: '708-852',
     jurisdiction: 'HI',
     category: 'felony',
     description: 'Creating false documents under Hawaii law',
@@ -11389,7 +11389,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-forgery',
     name: 'Forgery',
-    code: '19-21',
+    code: '18-3601',
     jurisdiction: 'ID',
     category: 'felony',
     description: 'Creating false documents under Idaho law',
@@ -12208,7 +12208,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '570/406',
+    code: '600/3.5',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Illinois law',
@@ -12338,7 +12338,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-tax-fraud',
     name: 'Tax Fraud',
-    code: '35-71',
+    code: '5/1301',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Fraudulent tax reporting under Illinois law',
@@ -12494,7 +12494,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-reckless-driving',
     name: 'Reckless Driving',
-    code: '625-5/11-503',
+    code: '5/11-503',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Illinois law',
@@ -13313,7 +13313,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-forgery',
     name: 'Forgery',
-    code: '17-59',
+    code: '35-43-5-2',
     jurisdiction: 'IN',
     category: 'felony',
     description: 'Creating false documents under Indiana law',
@@ -13326,7 +13326,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-computer-fraud',
     name: 'Computer Fraud',
-    code: '49-21',
+    code: '35-43-1-4',
     jurisdiction: 'IN',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Indiana law',
@@ -14275,7 +14275,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-forgery',
     name: 'Forgery',
-    code: '7-28',
+    code: '715A.2',
     jurisdiction: 'IA',
     category: 'felony',
     description: 'Creating false documents under Iowa law',
@@ -15237,7 +15237,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-forgery',
     name: 'Forgery',
-    code: '44-27',
+    code: '21-5824',
     jurisdiction: 'KS',
     category: 'felony',
     description: 'Creating false documents under Kansas law',
@@ -16199,7 +16199,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-forgery',
     name: 'Forgery',
-    code: '7-2',
+    code: '516.030',
     jurisdiction: 'KY',
     category: 'felony',
     description: 'Creating false documents under Kentucky law',
@@ -17161,7 +17161,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-forgery',
     name: 'Forgery',
-    code: '42-78',
+    code: '14:72',
     jurisdiction: 'LA',
     category: 'felony',
     description: 'Creating false documents under Louisiana law',
@@ -17174,7 +17174,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-computer-fraud',
     name: 'Computer Fraud',
-    code: '48-66',
+    code: '14:73.5',
     jurisdiction: 'LA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Louisiana law',
@@ -18123,7 +18123,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-forgery',
     name: 'Forgery',
-    code: '2-98',
+    code: '703',
     jurisdiction: 'ME',
     category: 'felony',
     description: 'Creating false documents under Maine law',
@@ -19085,7 +19085,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-forgery',
     name: 'Forgery',
-    code: '43-43',
+    code: '8-601',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Creating false documents under Maryland law',
@@ -19098,7 +19098,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-computer-fraud',
     name: 'Computer Fraud',
-    code: '44-25',
+    code: '7-302',
     jurisdiction: 'MD',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Maryland law',
@@ -20047,7 +20047,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-forgery',
     name: 'Forgery',
-    code: '37-88',
+    code: '1',
     jurisdiction: 'MA',
     category: 'felony',
     description: 'Creating false documents under Massachusetts law',
@@ -20060,7 +20060,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-computer-fraud',
     name: 'Computer Fraud',
-    code: '10-34',
+    code: '33A',
     jurisdiction: 'MA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Massachusetts law',
@@ -20775,7 +20775,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-carjacking',
     name: 'Carjacking',
-    code: '19-85',
+    code: '750.529a',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Robbery of motor vehicle under Michigan law',
@@ -20983,7 +20983,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '33-41',
+    code: '500.4503',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Fraudulent insurance claims under Michigan law',
@@ -20996,7 +20996,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-tax-fraud',
     name: 'Tax Fraud',
-    code: '26-4',
+    code: '205.27',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Fraudulent tax reporting under Michigan law',
@@ -21022,7 +21022,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-computer-fraud',
     name: 'Computer Fraud',
-    code: '37-38',
+    code: '752.794',
     jurisdiction: 'MI',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Michigan law',
@@ -21152,7 +21152,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-reckless-driving',
     name: 'Reckless Driving',
-    code: '40-1',
+    code: '257.626',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Michigan law',
@@ -21984,7 +21984,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-computer-fraud',
     name: 'Computer Fraud',
-    code: '30-70',
+    code: '609.89',
     jurisdiction: 'MN',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Minnesota law',
@@ -22933,7 +22933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-forgery',
     name: 'Forgery',
-    code: '47-49',
+    code: '97-21-33',
     jurisdiction: 'MS',
     category: 'felony',
     description: 'Creating false documents under Mississippi law',
@@ -23895,7 +23895,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-forgery',
     name: 'Forgery',
-    code: '50-63',
+    code: '570.090',
     jurisdiction: 'MO',
     category: 'felony',
     description: 'Creating false documents under Missouri law',
@@ -24857,7 +24857,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-forgery',
     name: 'Forgery',
-    code: '24-27',
+    code: '45-6-325',
     jurisdiction: 'MT',
     category: 'felony',
     description: 'Creating false documents under Montana law',
@@ -25819,7 +25819,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-forgery',
     name: 'Forgery',
-    code: '12-14',
+    code: '28-602',
     jurisdiction: 'NE',
     category: 'felony',
     description: 'Creating false documents under Nebraska law',
@@ -25832,7 +25832,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-computer-fraud',
     name: 'Computer Fraud',
-    code: '47-31',
+    code: '28-1343',
     jurisdiction: 'NE',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Nebraska law',
@@ -26781,7 +26781,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-forgery',
     name: 'Forgery',
-    code: '17-54',
+    code: '205.090',
     jurisdiction: 'NV',
     category: 'felony',
     description: 'Creating false documents under Nevada law',
@@ -26794,7 +26794,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-computer-fraud',
     name: 'Computer Fraud',
-    code: '11-35',
+    code: '205.4765',
     jurisdiction: 'NV',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Nevada law',
@@ -27743,7 +27743,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-forgery',
     name: 'Forgery',
-    code: '13-43',
+    code: '638:1',
     jurisdiction: 'NH',
     category: 'felony',
     description: 'Creating false documents under New Hampshire law',
@@ -28705,7 +28705,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-forgery',
     name: 'Forgery',
-    code: '41-1',
+    code: '2C:21-1',
     jurisdiction: 'NJ',
     category: 'felony',
     description: 'Creating false documents under New Jersey law',
@@ -28718,7 +28718,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-computer-fraud',
     name: 'Computer Fraud',
-    code: '29-67',
+    code: '2C:20-25',
     jurisdiction: 'NJ',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under New Jersey law',
@@ -29667,7 +29667,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-forgery',
     name: 'Forgery',
-    code: '48-2',
+    code: '30-16-10',
     jurisdiction: 'NM',
     category: 'felony',
     description: 'Creating false documents under New Mexico law',
@@ -30239,7 +30239,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '190.80',
+    code: '165.15',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Unauthorized use of credit card under New York law',
@@ -30395,7 +30395,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-carjacking',
     name: 'Carjacking',
-    code: '160.10',
+    code: '160.15',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Robbery of motor vehicle under New York law',
@@ -30603,7 +30603,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '176.05',
+    code: '176.15',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraudulent insurance claims under New York law',
@@ -30616,7 +30616,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-tax-fraud',
     name: 'Tax Fraud',
-    code: '309.62',
+    code: '1801',
     jurisdiction: 'NY',
     category: 'felony',
     description: 'Fraudulent tax reporting under New York law',
@@ -31565,7 +31565,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '49-45',
+    code: '58-2-161',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Fraudulent insurance claims under North Carolina law',
@@ -31578,7 +31578,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-tax-fraud',
     name: 'Tax Fraud',
-    code: '22-67',
+    code: '105-236',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Fraudulent tax reporting under North Carolina law',
@@ -31591,7 +31591,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-forgery',
     name: 'Forgery',
-    code: '8-18',
+    code: '14-119',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Creating false documents under North Carolina law',
@@ -31604,7 +31604,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-computer-fraud',
     name: 'Computer Fraud',
-    code: '2-60',
+    code: '14-454',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under North Carolina law',
@@ -31734,7 +31734,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-reckless-driving',
     name: 'Reckless Driving',
-    code: '40-38',
+    code: '20-140',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under North Carolina law',
@@ -31747,7 +31747,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-hit-and-run',
     name: 'Hit and Run',
-    code: '49-75',
+    code: '20-166',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under North Carolina law',
@@ -32553,7 +32553,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-forgery',
     name: 'Forgery',
-    code: '32-68',
+    code: '12.1-24-01',
     jurisdiction: 'ND',
     category: 'felony',
     description: 'Creating false documents under North Dakota law',
@@ -32566,7 +32566,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-computer-fraud',
     name: 'Computer Fraud',
-    code: '47-66',
+    code: '12.1-06.1-08',
     jurisdiction: 'ND',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under North Dakota law',
@@ -33502,7 +33502,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-tax-fraud',
     name: 'Tax Fraud',
-    code: '38-65',
+    code: '5747.19',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Fraudulent tax reporting under Ohio law',
@@ -34477,7 +34477,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-forgery',
     name: 'Forgery',
-    code: '1-65',
+    code: '1561',
     jurisdiction: 'OK',
     category: 'felony',
     description: 'Creating false documents under Oklahoma law',
@@ -35439,7 +35439,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-forgery',
     name: 'Forgery',
-    code: '31-41',
+    code: '165.007',
     jurisdiction: 'OR',
     category: 'felony',
     description: 'Creating false documents under Oregon law',
@@ -36388,7 +36388,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-tax-fraud',
     name: 'Tax Fraud',
-    code: '9-61',
+    code: '7354',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Fraudulent tax reporting under Pennsylvania law',
@@ -36544,7 +36544,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-reckless-driving',
     name: 'Reckless Driving',
-    code: '75-3736',
+    code: '3736',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Pennsylvania law',
@@ -37363,7 +37363,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-forgery',
     name: 'Forgery',
-    code: '36-41',
+    code: '11-17-1',
     jurisdiction: 'RI',
     category: 'felony',
     description: 'Creating false documents under Rhode Island law',
@@ -38325,7 +38325,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-forgery',
     name: 'Forgery',
-    code: '31-59',
+    code: '16-13-10',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Creating false documents under South Carolina law',
@@ -39287,7 +39287,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-forgery',
     name: 'Forgery',
-    code: '5-79',
+    code: '22-39-1',
     jurisdiction: 'SD',
     category: 'felony',
     description: 'Creating false documents under South Dakota law',
@@ -40249,7 +40249,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-forgery',
     name: 'Forgery',
-    code: '24-79',
+    code: '39-14-114',
     jurisdiction: 'TN',
     category: 'felony',
     description: 'Creating false documents under Tennessee law',
@@ -40262,7 +40262,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-computer-fraud',
     name: 'Computer Fraud',
-    code: '36-40',
+    code: '39-14-602',
     jurisdiction: 'TN',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Tennessee law',
@@ -41198,7 +41198,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-tax-fraud',
     name: 'Tax Fraud',
-    code: '16.8',
+    code: '171.212',
     jurisdiction: 'TX',
     category: 'felony',
     description: 'Fraudulent tax reporting under Texas law',
@@ -42173,7 +42173,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-forgery',
     name: 'Forgery',
-    code: '31-99',
+    code: '76-6-501',
     jurisdiction: 'UT',
     category: 'felony',
     description: 'Creating false documents under Utah law',
@@ -42186,7 +42186,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-computer-fraud',
     name: 'Computer Fraud',
-    code: '2-37',
+    code: '76-6-703',
     jurisdiction: 'UT',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Utah law',
@@ -43135,7 +43135,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-forgery',
     name: 'Forgery',
-    code: '24-53',
+    code: '1801',
     jurisdiction: 'VT',
     category: 'felony',
     description: 'Creating false documents under Vermont law',
@@ -44097,7 +44097,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-forgery',
     name: 'Forgery',
-    code: '42-48',
+    code: '18.2-172',
     jurisdiction: 'VA',
     category: 'felony',
     description: 'Creating false documents under Virginia law',
@@ -44110,7 +44110,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-computer-fraud',
     name: 'Computer Fraud',
-    code: '35-89',
+    code: '18.2-152.3',
     jurisdiction: 'VA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Virginia law',
@@ -45059,7 +45059,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-forgery',
     name: 'Forgery',
-    code: '45-5',
+    code: '9A.60.020',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Creating false documents under Washington law',
@@ -45072,7 +45072,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-computer-fraud',
     name: 'Computer Fraud',
-    code: '40-63',
+    code: '9A.90.060',
     jurisdiction: 'WA',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Washington law',
@@ -45202,7 +45202,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-reckless-driving',
     name: 'Reckless Driving',
-    code: '31-56',
+    code: '46.61.500',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Driving with willful disregard for safety under Washington law',
@@ -45215,7 +45215,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-hit-and-run',
     name: 'Hit and Run',
-    code: '45-37',
+    code: '46.52.020',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Leaving scene of accident with injury under Washington law',
@@ -46021,7 +46021,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-forgery',
     name: 'Forgery',
-    code: '32-8',
+    code: '61-4-5',
     jurisdiction: 'WV',
     category: 'felony',
     description: 'Creating false documents under West Virginia law',
@@ -46034,7 +46034,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-computer-fraud',
     name: 'Computer Fraud',
-    code: '16-37',
+    code: '61-3C-5',
     jurisdiction: 'WV',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under West Virginia law',
@@ -46983,7 +46983,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-forgery',
     name: 'Forgery',
-    code: '31-12',
+    code: '943.38',
     jurisdiction: 'WI',
     category: 'felony',
     description: 'Creating false documents under Wisconsin law',
@@ -46996,7 +46996,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-computer-fraud',
     name: 'Computer Fraud',
-    code: '3-17',
+    code: '943.70',
     jurisdiction: 'WI',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Wisconsin law',
@@ -47945,7 +47945,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-forgery',
     name: 'Forgery',
-    code: '9-83',
+    code: '6-3-602',
     jurisdiction: 'WY',
     category: 'felony',
     description: 'Creating false documents under Wyoming law',
@@ -48907,7 +48907,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-forgery',
     name: 'Forgery',
-    code: '8-32',
+    code: '22-3241',
     jurisdiction: 'DC',
     category: 'felony',
     description: 'Creating false documents under District of Columbia law',
@@ -48920,7 +48920,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-computer-fraud',
     name: 'Computer Fraud',
-    code: '30-8',
+    code: '22-3932',
     jurisdiction: 'DC',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under District of Columbia law',

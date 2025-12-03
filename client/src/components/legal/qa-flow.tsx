@@ -492,7 +492,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                         >
                           <Checkbox
                             checked={formData.charges.includes(charge.id)}
-                            onChange={() => {}} // Handled by parent click
+                            className="pointer-events-none"
                             data-testid={`checkbox-charge-${charge.id}`}
                           />
                           <div className="flex-1 min-w-0">
@@ -563,7 +563,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                         >
                           <Checkbox
                             checked={formData.charges.includes(charge.id)}
-                            onChange={() => {}} // Handled by parent click
+                            className="pointer-events-none"
                             data-testid={`checkbox-charge-${charge.id}`}
                           />
                           <div className="flex-1 min-w-0">
