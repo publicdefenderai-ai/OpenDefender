@@ -139,11 +139,11 @@ export default function DevelopmentRoadmap() {
       id: "state-statutes-api",
       titleKey: "developmentRoadmap.items.stateStatutes.title",
       descriptionKey: "developmentRoadmap.items.stateStatutes.description",
-      status: "in-progress",
+      status: "completed",
       priority: "high",
       category: "data",
-      estimatedCompletion: "Q4 2025",
-      progress: 92,
+      estimatedCompletion: "Completed Dec 2025",
+      progress: 100,
       impactKey: "developmentRoadmap.items.stateStatutes.impact"
     },
     {
