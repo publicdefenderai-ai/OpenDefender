@@ -32,6 +32,12 @@ The legal accuracy validation system (`server/services/legal-accuracy-validator.
 - Semantic score default: 0.1 (conservative when CourtListener doesn't return scores)
 - Confidence boost: 0.05-0.15 based on corroborating case count and court level
 
+**Search Query Enhancements (Dec 2025)**: Improved CourtListener search with:
+- Enriched queries with legal synonyms from charge category keywords
+- Statute citation extraction from charge codes
+- Multi-stage fallback: primary search → broader search (no jurisdiction filter) → simpler category-based semantic search
+- Better logging for search quality monitoring
+
 **User Feedback System**: Users can rate precedent case helpfulness via thumbs up/down buttons. Feedback is validated with Zod schema, deduplicated (one vote per session per case), and stored for analytics.
 
 **Validation UX (Dec 2025)**: Replaced jarring "Accuracy Check" card with supportive reassurance message. Technical metrics (confidence scores, tier breakdowns) are hidden by default behind a collapsible "How we verified this" section for advanced users. When no precedent cases are found, the system displays a supportive explanation rather than leaving the user confused.
