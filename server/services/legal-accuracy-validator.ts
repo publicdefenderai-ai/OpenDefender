@@ -1,27 +1,41 @@
 /**
  * Legal Accuracy Validation Service
  * 
- * Tier 1 Validation: Cross-references AI-generated legal guidance against 
+ * Multi-Tier Validation: Cross-references AI-generated legal guidance against 
  * authoritative data sources to ensure accuracy.
  * 
- * Validation Layers:
+ * Tier 1 - Statute Validation (Primary):
  * 1. Citation Validation - Verifies statute citations exist in our database
  * 2. Penalty Accuracy - Confirms penalty statements match official records
  * 3. Jurisdiction Match - Ensures guidance is appropriate for the specified state
  * 4. Timeline Verification - Validates deadlines are realistic for jurisdiction
+ * 
+ * Tier 2 - Case Law Validation (Secondary):
+ * 1. Precedent Search - Finds similar cases via CourtListener semantic search
+ * 2. Relevance Scoring - Weights cases by jurisdiction, charge category, court level
+ * 3. Corroboration Check - Requires multiple precedents to boost confidence
  */
 
 import { storage } from '../storage';
 import { criminalCharges, getChargeById, getChargesByJurisdiction } from '@shared/criminal-charges';
+import { caseLawValidator, type PrecedentCase, type CaseLawValidationResult } from './case-law-validator';
 
 export interface ValidationIssue {
-  type: 'citation_not_found' | 'penalty_mismatch' | 'jurisdiction_mismatch' | 'timeline_issue' | 'charge_not_found';
+  type: 'citation_not_found' | 'penalty_mismatch' | 'jurisdiction_mismatch' | 'timeline_issue' | 'charge_not_found' | 'no_precedents' | 'weak_precedents' | 'contrary_precedent';
   severity: 'error' | 'warning' | 'info';
   field: string;
   message: string;
   aiValue?: string;
   expectedValue?: string;
   suggestion?: string;
+}
+
+export interface TierValidation {
+  name: string;
+  score: number;
+  checksPerformed: number;
+  checksPassed: number;
+  issues: ValidationIssue[];
 }
 
 export interface ValidationResult {
@@ -41,6 +55,12 @@ export interface ValidationResult {
     chargesTotal: number;
   };
   summary: string;
+  tiers?: {
+    tier1: TierValidation;
+    tier2?: TierValidation;
+  };
+  precedents?: PrecedentCase[];
+  caseLaw?: CaseLawValidationResult;
 }
 
 interface GuidanceToValidate {
@@ -460,39 +480,83 @@ export async function validateLegalGuidance(
   console.log('[Validator] Starting legal accuracy validation...');
   const startTime = Date.now();
   
-  const allIssues: ValidationIssue[] = [];
-  let checksPerformed = 0;
-  let checksPassed = 0;
+  const tier1Issues: ValidationIssue[] = [];
+  let tier1ChecksPerformed = 0;
+  let tier1ChecksPassed = 0;
   
   const citationResult = await validateCitations(guidance, context.jurisdiction);
-  allIssues.push(...citationResult.issues);
+  tier1Issues.push(...citationResult.issues);
   if (citationResult.total > 0) {
-    checksPerformed++;
-    if (citationResult.verified >= citationResult.total * 0.5) checksPassed++;
+    tier1ChecksPerformed++;
+    if (citationResult.verified >= citationResult.total * 0.5) tier1ChecksPassed++;
   }
   
   const penaltyResult = await validatePenalties(guidance, context);
-  allIssues.push(...penaltyResult.issues);
+  tier1Issues.push(...penaltyResult.issues);
   if (penaltyResult.total > 0) {
-    checksPerformed++;
-    if (penaltyResult.verified >= penaltyResult.total * 0.5) checksPassed++;
+    tier1ChecksPerformed++;
+    if (penaltyResult.verified >= penaltyResult.total * 0.5) tier1ChecksPassed++;
   }
   
   const chargeResult = await validateCharges(context);
-  allIssues.push(...chargeResult.issues);
-  checksPerformed++;
-  if (chargeResult.verified >= chargeResult.total * 0.5) checksPassed++;
+  tier1Issues.push(...chargeResult.issues);
+  tier1ChecksPerformed++;
+  if (chargeResult.verified >= chargeResult.total * 0.5) tier1ChecksPassed++;
   
   const timelineResult = validateTimelines(guidance, context.jurisdiction);
-  allIssues.push(...timelineResult.issues);
+  tier1Issues.push(...timelineResult.issues);
   
   const jurisdictionMatch = chargeResult.issues.filter(i => i.type === 'jurisdiction_mismatch').length === 0;
   
+  // Calculate Tier 1 score
+  const tier1Score = tier1ChecksPerformed > 0 ? tier1ChecksPassed / tier1ChecksPerformed : 1;
+  
+  // Tier 2: Case Law Validation (run in parallel with result processing)
+  let caseLawResult: CaseLawValidationResult | undefined;
+  let tier2Issues: ValidationIssue[] = [];
+  let tier2ChecksPerformed = 0;
+  let tier2ChecksPassed = 0;
+  
+  try {
+    console.log('[Validator] Starting Tier 2 case law validation...');
+    caseLawResult = await caseLawValidator.validateWithCaseLaw(guidance, context);
+    
+    if (caseLawResult.isAvailable) {
+      tier2ChecksPerformed = 1;
+      if (caseLawResult.corroboratingCases >= 2) {
+        tier2ChecksPassed = 1;
+      } else if (caseLawResult.corroboratingCases === 1) {
+        tier2ChecksPassed = 0.5;
+      }
+      
+      // Convert case law issues to validation issues
+      tier2Issues = caseLawResult.issues.map(issue => ({
+        type: issue.type as ValidationIssue['type'],
+        severity: issue.severity,
+        field: 'precedents',
+        message: issue.message,
+      }));
+    }
+  } catch (error) {
+    console.warn('[Validator] Tier 2 case law validation failed:', error);
+    tier2Issues.push({
+      type: 'no_precedents',
+      severity: 'info',
+      field: 'precedents',
+      message: 'Case law validation temporarily unavailable.',
+    });
+  }
+  
+  // Combine all issues
+  const allIssues = [...tier1Issues, ...tier2Issues];
+  const totalChecksPerformed = tier1ChecksPerformed + tier2ChecksPerformed;
+  const totalChecksPassed = tier1ChecksPassed + tier2ChecksPassed;
+  
   const partialResult = {
-    isValid: allIssues.filter(i => i.severity === 'error').length === 0,
+    isValid: tier1Issues.filter(i => i.severity === 'error').length === 0,
     validationTimestamp: new Date(),
-    checksPerformed,
-    checksPassed,
+    checksPerformed: totalChecksPerformed,
+    checksPassed: Math.round(totalChecksPassed),
     issues: allIssues,
     validatedData: {
       citationsVerified: citationResult.verified,
@@ -505,17 +569,59 @@ export async function validateLegalGuidance(
     },
   };
   
-  const confidenceScore = calculateConfidenceScore(partialResult);
-  const summary = generateSummary({ ...partialResult, confidenceScore });
+  // Calculate combined confidence score (Tier 1: 70%, Tier 2: 30%)
+  const tier2Score = caseLawResult?.tier2Score || 0;
+  const tier2Weight = caseLawResult?.isAvailable ? 0.3 : 0;
+  const tier1Weight = 1 - tier2Weight;
+  
+  let baseConfidenceScore = calculateConfidenceScore(partialResult);
+  
+  // Apply Tier 2 boost (only if Tier 1 is valid)
+  if (caseLawResult?.isAvailable && caseLawResult.confidenceBoost > 0 && partialResult.isValid) {
+    baseConfidenceScore = Math.min(1, baseConfidenceScore + caseLawResult.confidenceBoost);
+  }
+  
+  // Calculate weighted combined score
+  const confidenceScore = caseLawResult?.isAvailable
+    ? (baseConfidenceScore * tier1Weight) + (tier2Score * tier2Weight)
+    : baseConfidenceScore;
+  
+  let summary = generateSummary({ ...partialResult, confidenceScore });
+  
+  // Append Tier 2 summary if available
+  if (caseLawResult?.isAvailable && caseLawResult.precedentsFound > 0) {
+    summary += ` ${caseLawResult.summary}`;
+  }
   
   const result: ValidationResult = {
     ...partialResult,
     confidenceScore,
     summary,
+    tiers: {
+      tier1: {
+        name: 'Statute Validation',
+        score: tier1Score,
+        checksPerformed: tier1ChecksPerformed,
+        checksPassed: tier1ChecksPassed,
+        issues: tier1Issues,
+      },
+      tier2: caseLawResult?.isAvailable ? {
+        name: 'Case Law Validation',
+        score: tier2Score,
+        checksPerformed: tier2ChecksPerformed,
+        checksPassed: Math.round(tier2ChecksPassed),
+        issues: tier2Issues,
+      } : undefined,
+    },
+    precedents: caseLawResult?.precedents,
+    caseLaw: caseLawResult,
   };
   
   const duration = Date.now() - startTime;
-  console.log(`[Validator] Validation completed in ${duration}ms - Confidence: ${(confidenceScore * 100).toFixed(1)}%`);
+  console.log(`[Validator] Validation completed in ${duration}ms - Combined Confidence: ${(confidenceScore * 100).toFixed(1)}%`);
+  if (caseLawResult?.isAvailable) {
+    console.log(`[Validator] Tier 2: ${caseLawResult.precedentsFound} precedents, ${caseLawResult.corroboratingCases} corroborating`);
+  }
   
   return result;
 }

@@ -11,7 +11,7 @@ class CourtListenerService implements CourtListenerAPI {
   private apiKey: string;
 
   constructor() {
-    this.apiKey = process.env.COURTLISTENER_API_KEY || '';
+    this.apiKey = process.env.COURTLISTENER_API_TOKEN || process.env.COURTLISTENER_API_KEY || '';
   }
 
   private async makeRequest(endpoint: string, params?: Record<string, string>) {

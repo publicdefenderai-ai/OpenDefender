@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute } from "@shared/schema";
+import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute, type CaseFeedback, type InsertCaseFeedback } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { legalAidOrganizationsSeed } from "./data/legal-aid-organizations-seed";
 import { federalStatutesSeed } from "./data/federal-statutes-seed";
@@ -31,6 +31,11 @@ export interface IStorage {
   // Statutes
   getStatutes(jurisdiction: string, searchQuery?: string): Promise<Statute[]>;
   createStatute(statute: InsertStatute): Promise<Statute>;
+  
+  // Case feedback
+  createCaseFeedback(feedback: InsertCaseFeedback): Promise<CaseFeedback>;
+  getCaseFeedbackStats(caseId: string): Promise<{ helpful: number; notHelpful: number }>;
+  getCaseFeedbackBySession(sessionId: string): Promise<CaseFeedback[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -40,6 +45,7 @@ export class MemStorage implements IStorage {
   private courtData: Map<string, CourtData>;
   private legalAidOrganizations: Map<string, LegalAidOrganization>;
   private statutes: Map<string, Statute>;
+  private caseFeedback: Map<string, CaseFeedback>;
 
   constructor() {
     this.users = new Map();
@@ -48,6 +54,7 @@ export class MemStorage implements IStorage {
     this.courtData = new Map();
     this.legalAidOrganizations = new Map();
     this.statutes = new Map();
+    this.caseFeedback = new Map();
     
     // Initialize with sample legal resources and organizations
     this.initializeSampleData();
@@ -288,6 +295,47 @@ export class MemStorage implements IStorage {
     };
     this.statutes.set(id, statute);
     return statute;
+  }
+
+  async createCaseFeedback(insertFeedback: InsertCaseFeedback): Promise<CaseFeedback> {
+    const id = randomUUID();
+    const feedback: CaseFeedback = {
+      id,
+      sessionId: insertFeedback.sessionId,
+      caseId: insertFeedback.caseId,
+      caseName: insertFeedback.caseName,
+      jurisdiction: insertFeedback.jurisdiction,
+      chargeCategory: insertFeedback.chargeCategory ?? null,
+      isHelpful: insertFeedback.isHelpful,
+      caseStage: insertFeedback.caseStage ?? null,
+      createdAt: new Date(),
+    };
+    this.caseFeedback.set(id, feedback);
+    return feedback;
+  }
+
+  async getCaseFeedbackStats(caseId: string): Promise<{ helpful: number; notHelpful: number }> {
+    let helpful = 0;
+    let notHelpful = 0;
+    
+    const feedbackArray = Array.from(this.caseFeedback.values());
+    for (const feedback of feedbackArray) {
+      if (feedback.caseId === caseId) {
+        if (feedback.isHelpful) {
+          helpful++;
+        } else {
+          notHelpful++;
+        }
+      }
+    }
+    
+    return { helpful, notHelpful };
+  }
+
+  async getCaseFeedbackBySession(sessionId: string): Promise<CaseFeedback[]> {
+    return Array.from(this.caseFeedback.values()).filter(
+      feedback => feedback.sessionId === sessionId
+    );
   }
 }
 

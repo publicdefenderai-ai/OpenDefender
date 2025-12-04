@@ -23,8 +23,14 @@ import {
   Gavel,
   X,
   Building,
-  HelpCircle
+  HelpCircle,
+  ThumbsUp,
+  ThumbsDown,
+  BookOpen,
+  Bookmark
 } from "lucide-react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -37,6 +43,33 @@ import { generateGuidancePDF } from "@/lib/pdf-generator";
 interface ImmediateAction {
   action: string;
   urgency: 'urgent' | 'high' | 'medium' | 'low';
+}
+
+interface PrecedentCase {
+  id: string;
+  caseName: string;
+  citation: string;
+  court: string;
+  courtLevel: 'supreme' | 'appellate' | 'trial' | 'unknown';
+  jurisdiction: string;
+  dateFiled: string;
+  relevanceScore: number;
+  matchedChargeCategories: string[];
+  excerpt?: string;
+  url?: string;
+  absoluteUrl?: string;
+}
+
+interface TierValidation {
+  name: string;
+  score: number;
+  checksPerformed: number;
+  checksPassed: number;
+  issues: Array<{
+    type: string;
+    severity: 'error' | 'warning' | 'info';
+    message: string;
+  }>;
 }
 
 interface EnhancedGuidanceData {
@@ -87,6 +120,11 @@ interface EnhancedGuidanceData {
       message: string;
       suggestion?: string;
     }>;
+    tiers?: {
+      tier1: TierValidation;
+      tier2?: TierValidation;
+    };
+    precedents?: PrecedentCase[];
   };
   caseData: {
     jurisdiction: string;
@@ -128,6 +166,217 @@ const getUrgencyBadgeVariant = (urgency: string) => {
       return 'outline';
   }
 };
+
+// Get court level badge variant
+const getCourtLevelBadge = (level: string) => {
+  switch (level) {
+    case 'supreme':
+      return { variant: 'default' as const, label: 'Supreme Court' };
+    case 'appellate':
+      return { variant: 'secondary' as const, label: 'Appellate Court' };
+    case 'trial':
+      return { variant: 'outline' as const, label: 'Trial Court' };
+    default:
+      return { variant: 'outline' as const, label: 'Court' };
+  }
+};
+
+// Precedent Cases Section with Feedback
+function PrecedentCasesSection({ 
+  precedents, 
+  sessionId,
+  jurisdiction,
+  caseStage
+}: { 
+  precedents: PrecedentCase[]; 
+  sessionId: string;
+  jurisdiction: string;
+  caseStage: string;
+}) {
+  const { t } = useTranslation();
+  const queryClient = useQueryClient();
+  const [feedbackGiven, setFeedbackGiven] = useState<Record<string, boolean | null>>({});
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const feedbackMutation = useMutation({
+    mutationFn: async ({ caseId, caseName, isHelpful, chargeCategory }: { 
+      caseId: string; 
+      caseName: string; 
+      isHelpful: boolean;
+      chargeCategory?: string;
+    }) => {
+      return apiRequest('POST', '/api/case-feedback', {
+        sessionId,
+        caseId,
+        caseName,
+        jurisdiction,
+        chargeCategory,
+        isHelpful,
+        caseStage,
+      });
+    },
+    onSuccess: (_, variables) => {
+      setFeedbackGiven(prev => ({ ...prev, [variables.caseId]: variables.isHelpful }));
+    },
+  });
+
+  const handleFeedback = (precedent: PrecedentCase, isHelpful: boolean) => {
+    feedbackMutation.mutate({
+      caseId: precedent.id,
+      caseName: precedent.caseName,
+      isHelpful,
+      chargeCategory: precedent.matchedChargeCategories[0],
+    });
+  };
+
+  const displayedPrecedents = isExpanded ? precedents : precedents.slice(0, 3);
+
+  return (
+    <Card className="border-purple-200 bg-purple-50 dark:bg-purple-900/20">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-purple-800 dark:text-purple-200">
+          <BookOpen className="h-5 w-5" />
+          {t('guidance.precedents.title', 'Related Court Cases')}
+          <Badge variant="secondary" className="ml-2">
+            {precedents.length} {precedents.length === 1 ? 'case' : 'cases'}
+          </Badge>
+        </CardTitle>
+        <p className="text-sm text-purple-700 dark:text-purple-300 mt-1">
+          {t('guidance.precedents.description', 'Court cases similar to your situation that may help understand possible outcomes.')}
+        </p>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        {displayedPrecedents.map((precedent) => {
+          const courtInfo = getCourtLevelBadge(precedent.courtLevel);
+          const hasFeedback = feedbackGiven[precedent.id] !== undefined;
+          
+          return (
+            <div 
+              key={precedent.id}
+              className="p-4 bg-white dark:bg-gray-800 rounded-lg border border-purple-100 dark:border-purple-800"
+              data-testid={`precedent-case-${precedent.id}`}
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h4 className="font-medium text-gray-900 dark:text-gray-100 truncate">
+                      {precedent.caseName}
+                    </h4>
+                    <Badge variant={courtInfo.variant} className="text-xs">
+                      {courtInfo.label}
+                    </Badge>
+                  </div>
+                  
+                  {precedent.citation && (
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      {precedent.citation}
+                    </p>
+                  )}
+                  
+                  <div className="flex items-center gap-3 mt-2 text-xs text-gray-500 dark:text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Building className="h-3 w-3" />
+                      {precedent.court}
+                    </span>
+                    {precedent.dateFiled && (
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        {new Date(precedent.dateFiled).getFullYear()}
+                      </span>
+                    )}
+                    <span className="flex items-center gap-1">
+                      <Scale className="h-3 w-3" />
+                      {Math.round(precedent.relevanceScore * 100)}% match
+                    </span>
+                  </div>
+
+                  {precedent.excerpt && (
+                    <p className="text-sm text-gray-700 dark:text-gray-300 mt-2 line-clamp-2">
+                      {precedent.excerpt}
+                    </p>
+                  )}
+
+                  {precedent.matchedChargeCategories.length > 0 && (
+                    <div className="flex items-center gap-2 mt-2">
+                      {precedent.matchedChargeCategories.slice(0, 3).map((cat, i) => (
+                        <Badge key={i} variant="outline" className="text-xs capitalize">
+                          {cat.replace('_', ' ')}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex flex-col items-end gap-2">
+                  {(precedent.url || precedent.absoluteUrl) && (
+                    <a 
+                      href={precedent.absoluteUrl || precedent.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-200"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
+                  
+                  {/* Feedback buttons */}
+                  <div className="flex items-center gap-1">
+                    {hasFeedback ? (
+                      <Badge variant={feedbackGiven[precedent.id] ? 'default' : 'secondary'} className="text-xs">
+                        {feedbackGiven[precedent.id] ? 'Helpful' : 'Not Helpful'}
+                      </Badge>
+                    ) : (
+                      <>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-8 w-8 p-0 text-gray-500 hover:text-green-600"
+                          onClick={() => handleFeedback(precedent, true)}
+                          disabled={feedbackMutation.isPending}
+                          data-testid={`btn-helpful-${precedent.id}`}
+                        >
+                          <ThumbsUp className="h-4 w-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="h-8 w-8 p-0 text-gray-500 hover:text-red-600"
+                          onClick={() => handleFeedback(precedent, false)}
+                          disabled={feedbackMutation.isPending}
+                          data-testid={`btn-not-helpful-${precedent.id}`}
+                        >
+                          <ThumbsDown className="h-4 w-4" />
+                        </Button>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+
+        {precedents.length > 3 && (
+          <Button
+            variant="ghost"
+            className="w-full text-purple-700 dark:text-purple-300"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded 
+              ? t('guidance.precedents.showLess', 'Show fewer cases') 
+              : t('guidance.precedents.showMore', `Show all ${precedents.length} cases`)
+            }
+            <ChevronDown className={`h-4 w-4 ml-2 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+          </Button>
+        )}
+
+        <p className="text-xs text-purple-600 dark:text-purple-400 text-center mt-2">
+          {t('guidance.precedents.feedbackNote', 'Your feedback helps improve case relevance for others.')}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
 
 export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPublicDefender, onShowLegalAid }: GuidanceDashboardProps) {
   const { t, i18n } = useTranslation();
@@ -356,6 +605,20 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
               />
             </div>
 
+            {/* Tier breakdown */}
+            {guidance.validation.tiers && (
+              <div className="flex items-center gap-4 text-xs mt-2">
+                <Badge variant="outline" className="font-normal">
+                  Tier 1 (Statutes): {Math.round(guidance.validation.tiers.tier1.score * 100)}%
+                </Badge>
+                {guidance.validation.tiers.tier2 && (
+                  <Badge variant="outline" className="font-normal">
+                    Tier 2 (Case Law): {Math.round(guidance.validation.tiers.tier2.score * 100)}%
+                  </Badge>
+                )}
+              </div>
+            )}
+
             {guidance.validation.issues.length > 0 && (
               <Collapsible>
                 <CollapsibleTrigger asChild>
@@ -395,6 +658,16 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
             )}
           </CardContent>
         </Card>
+      )}
+
+      {/* Precedent Cases Section */}
+      {guidance.validation?.precedents && guidance.validation.precedents.length > 0 && (
+        <PrecedentCasesSection 
+          precedents={guidance.validation.precedents}
+          sessionId={guidance.sessionId}
+          jurisdiction={guidance.caseData.jurisdiction}
+          caseStage={guidance.caseData.caseStage}
+        />
       )}
 
       {/* Urgent Deadlines */}

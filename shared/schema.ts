@@ -313,3 +313,24 @@ export type InsertLegiScanBill = z.infer<typeof insertLegiScanBillSchema>;
 export type LegiScanBill = typeof legiScanBills.$inferSelect;
 export type InsertStatuteUpdateQueue = z.infer<typeof insertStatuteUpdateQueueSchema>;
 export type StatuteUpdateQueue = typeof statuteUpdateQueue.$inferSelect;
+
+// Case Feedback Schema - User feedback on precedent case relevance
+export const caseFeedback = pgTable("case_feedback", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sessionId: text("session_id").notNull(),
+  caseId: text("case_id").notNull(), // CourtListener case ID
+  caseName: text("case_name").notNull(),
+  jurisdiction: text("jurisdiction").notNull(),
+  chargeCategory: text("charge_category"),
+  isHelpful: boolean("is_helpful").notNull(),
+  caseStage: text("case_stage"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
+export const insertCaseFeedbackSchema = createInsertSchema(caseFeedback).omit({
+  id: true,
+  createdAt: true,
+});
+
+export type InsertCaseFeedback = z.infer<typeof insertCaseFeedbackSchema>;
+export type CaseFeedback = typeof caseFeedback.$inferSelect;

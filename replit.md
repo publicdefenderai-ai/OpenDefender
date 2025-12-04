@@ -20,6 +20,20 @@ The backend, developed with Express.js and TypeScript, provides a RESTful API. D
 
 A dual-mode AI guidance system intelligently selects between Anthropic's Claude AI (Sonnet 4.5) and a rule-based engine. It includes robust error handling with retry logic and fallbacks to ensure continuous service. All AI interactions are cost-tracked. A critical PII redaction system (`server/services/pii-redactor.ts`) automatically scrubs user input before it reaches Claude AI, balancing privacy with the preservation of legal context. High-confidence PII is redacted with category-aware placeholders.
 
+### Multi-Tier Validation System
+
+The legal accuracy validation system (`server/services/legal-accuracy-validator.ts`) uses a two-tier approach:
+
+**Tier 1 - Statute Validation (70% weight)**: Validates statutory citations against the curated database, checks penalty range accuracy, and verifies jurisdiction-specific requirements.
+
+**Tier 2 - Case Law Validation (30% weight)**: The case law validator (`server/services/case-law-validator.ts`) queries CourtListener's semantic search API to find relevant precedents. Key parameters:
+- Relevance score threshold: 0.2 (minimum for inclusion)
+- Corroboration threshold: 0.4 (for counting as supporting case)
+- Semantic score default: 0.1 (conservative when CourtListener doesn't return scores)
+- Confidence boost: 0.05-0.15 based on corroborating case count and court level
+
+**User Feedback System**: Users can rate precedent case helpfulness via thumbs up/down buttons. Feedback is validated with Zod schema, deduplicated (one vote per session per case), and stored for analytics.
+
 The platform integrates various legal data sources, including databases for legal aid organizations, criminal charges, diversion programs, and criminal statutes (federal and state). A "free-first" search strategy is used for court records, prioritizing RECAP Archive. User session data is automatically deleted post-session. Federal statutes are sourced from the GovInfo API, while state statutes are derived from a comprehensive, manually curated database with 50-state + DC coverage (1,255 unique statutes with 713 validated charge-statute matches). Coverage includes 12 major offense categories: Homicide (221 statutes), Burglary (107), Theft (91), Robbery (90), Assault/Battery (85), Drug Offenses (81), Sexual Assault (80), Fraud (100+ including wire/mail/check/insurance/computer/tax fraud and forgery), Traffic/DUI (50+ including reckless driving, hit-and-run, suspended license), Public Order (60+ including disorderly conduct, trespassing, vandalism, loitering, public intoxication), Weapons (51 felon-in-possession statutes plus unlawful discharge), and additional variants (carjacking, drug paraphernalia, domestic violence). All 51 jurisdictions have direct links to official legislature websites.
 
 ### API Architecture

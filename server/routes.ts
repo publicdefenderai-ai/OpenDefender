@@ -5,7 +5,7 @@ import { courtListenerService } from "./services/courtlistener";
 import { legalDataService } from "./services/legal-data";
 import { recapService } from "./services/recap";
 import { bjsStatisticsService } from "./services/bjs-statistics";
-import { insertLegalCaseSchema } from "@shared/schema";
+import { insertLegalCaseSchema, insertCaseFeedbackSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, testClaudeConnection } from "./services/claude-guidance.js";
@@ -470,6 +470,85 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Failed to fetch legal guidance:", error);
       res.status(500).json({ success: false, error: "Failed to fetch guidance" });
+    }
+  });
+
+  // Case Feedback API - Submit feedback on precedent case helpfulness
+  app.post("/api/case-feedback", async (req, res) => {
+    try {
+      // Use Zod schema for validation
+      const parseResult = insertCaseFeedbackSchema.safeParse(req.body);
+      
+      if (!parseResult.success) {
+        const errorMessages = parseResult.error.errors.map(e => `${e.path.join('.')}: ${e.message}`);
+        return res.status(400).json({ 
+          success: false, 
+          error: `Validation failed: ${errorMessages.join(', ')}` 
+        });
+      }
+      
+      const { sessionId, caseId, caseName, jurisdiction, chargeCategory, isHelpful, caseStage } = parseResult.data;
+      
+      // Additional security checks beyond schema validation
+      if (sessionId.length < 10 || sessionId.length > 100) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Invalid session ID format" 
+        });
+      }
+      
+      // Check for duplicate feedback (one vote per session per case)
+      const existingFeedback = await storage.getCaseFeedbackBySession(sessionId);
+      const alreadyVoted = existingFeedback.some(f => f.caseId === caseId);
+      if (alreadyVoted) {
+        return res.status(409).json({ 
+          success: false, 
+          error: "Feedback already submitted for this case" 
+        });
+      }
+      
+      const feedback = await storage.createCaseFeedback({
+        sessionId,
+        caseId,
+        caseName,
+        jurisdiction,
+        chargeCategory: chargeCategory || null,
+        isHelpful,
+        caseStage: caseStage || null,
+      });
+      
+      console.log(`[Feedback] User ${isHelpful ? 'found helpful' : 'did not find helpful'}: ${caseName}`);
+      
+      res.json({ success: true, feedback });
+    } catch (error) {
+      console.error("Failed to submit case feedback:", error);
+      res.status(500).json({ success: false, error: "Failed to submit feedback" });
+    }
+  });
+
+  // Get Case Feedback Stats - Aggregated helpfulness stats for a case
+  app.get("/api/case-feedback/stats/:caseId", async (req, res) => {
+    try {
+      const { caseId } = req.params;
+      const stats = await storage.getCaseFeedbackStats(caseId);
+      
+      res.json({ success: true, stats });
+    } catch (error) {
+      console.error("Failed to get case feedback stats:", error);
+      res.status(500).json({ success: false, error: "Failed to get feedback stats" });
+    }
+  });
+
+  // Get User's Case Feedback by Session
+  app.get("/api/case-feedback/session/:sessionId", async (req, res) => {
+    try {
+      const { sessionId } = req.params;
+      const feedback = await storage.getCaseFeedbackBySession(sessionId);
+      
+      res.json({ success: true, feedback });
+    } catch (error) {
+      console.error("Failed to get session feedback:", error);
+      res.status(500).json({ success: false, error: "Failed to get feedback" });
     }
   });
 
