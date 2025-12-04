@@ -174,10 +174,11 @@ class CaseLawValidator {
     return categories.length > 0 ? categories : ['general'];
   }
 
-  private buildSearchQuery(charges: string[], caseStage?: string): { query: string; keywords: string; statuteCitations: string[] } {
+  private buildSearchQuery(charges: string[], caseStage?: string): { query: string; keywords: string; statuteCitations: string[]; statuteSearchTerms: string[] } {
     const chargeCategories = new Set<string>();
     const chargeNames: string[] = [];
     const statuteCitations: string[] = [];
+    const statuteSearchTerms: string[] = [];
     const legalTerms: string[] = [];
     
     for (const chargeId of charges) {
@@ -189,6 +190,12 @@ class CaseLawValidator {
         // Extract statute citation if available (e.g., "245" from charge code)
         if (charge.code) {
           statuteCitations.push(charge.code);
+          
+          // Build searchable statute terms based on jurisdiction
+          const searchTerm = this.buildStatuteSearchTerm(charge.jurisdiction, charge.code);
+          if (searchTerm) {
+            statuteSearchTerms.push(searchTerm);
+          }
         }
       }
     }
@@ -231,7 +238,32 @@ class CaseLawValidator {
       }
     }
     
-    return { query, keywords, statuteCitations };
+    return { query, keywords, statuteCitations, statuteSearchTerms };
+  }
+  
+  // Build searchable statute terms from jurisdiction and code
+  private buildStatuteSearchTerm(jurisdiction: string, code: string): string | null {
+    // Map jurisdictions to their statute naming conventions
+    const statutePatterns: Record<string, string> = {
+      'CA': `Penal Code ${code}`,
+      'NY': `Penal Law ${code}`,
+      'TX': `Penal Code ${code}`,
+      'FL': `Statutes ${code}`,
+      'IL': `Criminal Code ${code}`,
+      'PA': `Crimes Code ${code}`,
+      'OH': `Revised Code ${code}`,
+      'GA': `Code ${code}`,
+      'NC': `General Statutes ${code}`,
+      'MI': `Compiled Laws ${code}`,
+      'NJ': `Statutes ${code}`,
+      'VA': `Code ${code}`,
+      'WA': `RCW ${code}`,
+      'AZ': `Revised Statutes ${code}`,
+      'MA': `General Laws ${code}`,
+      'federal': `USC ${code}`,
+    };
+    
+    return statutePatterns[jurisdiction] || null;
   }
   
   // Fallback search using simpler keyword-only approach
@@ -264,10 +296,11 @@ class CaseLawValidator {
     targetJurisdiction: string,
     chargeCategories: string[],
     caseStage?: string,
-    providedSemanticScore?: number
+    providedSemanticScore?: number,
+    statuteCodes?: string[]
   ): number {
     let score = 0;
-    const weights = { semantic: 0.5, chargeCategory: 0.3, stage: 0.2 };
+    const weights = { semantic: 0.45, chargeCategory: 0.25, stage: 0.15, statute: 0.15 };
     
     // Use provided semantic score or conservative default of 0.1 when missing
     const semanticScore = providedSemanticScore ?? 0.1;
@@ -302,6 +335,22 @@ class CaseLawValidator {
       score += stageMatch * weights.stage;
     } else {
       score += 0.5 * weights.stage;
+    }
+    
+    // Statute citation match (boost for cases mentioning the specific statute code)
+    if (statuteCodes && statuteCodes.length > 0) {
+      let statuteMatch = 0;
+      for (const code of statuteCodes) {
+        // Look for the statute code in the opinion text (e.g., "245", "13A-9-20")
+        if (opinionText.includes(code.toLowerCase())) {
+          statuteMatch = 1;
+          break;
+        }
+      }
+      score += statuteMatch * weights.statute;
+    } else {
+      // No statute codes to match, give neutral score
+      score += 0.5 * weights.statute;
     }
     
     // Apply court weight multiplier
@@ -362,19 +411,26 @@ class CaseLawValidator {
       await this.throttleRequest();
       
       // Build search query from charges and case stage
-      const { query, keywords, statuteCitations } = this.buildSearchQuery(chargeArray, context.caseStage);
+      const { query, keywords, statuteCitations, statuteSearchTerms } = this.buildSearchQuery(chargeArray, context.caseStage);
       
       // Get court filter for jurisdiction
       const courtFilter = STATE_TO_COURT_PREFIX[context.jurisdiction] || undefined;
       
-      console.log(`[CaseLawValidator] Searching CourtListener: "${query}" in ${context.jurisdiction}`);
-      if (statuteCitations.length > 0) {
-        console.log(`[CaseLawValidator] Statute citations available: ${statuteCitations.join(', ')}`);
+      // Build enhanced query with statute terms if available
+      let enhancedQuery = query;
+      if (statuteSearchTerms.length > 0) {
+        // Add statute terms to query (e.g., "Penal Code 245")
+        enhancedQuery = `${query} ${statuteSearchTerms.slice(0, 2).join(' ')}`;
+      }
+      
+      console.log(`[CaseLawValidator] Searching CourtListener: "${enhancedQuery}" in ${context.jurisdiction}`);
+      if (statuteSearchTerms.length > 0) {
+        console.log(`[CaseLawValidator] Statute search terms: ${statuteSearchTerms.join(', ')}`);
       }
       
       // Use hybrid search for best results
       let searchResult = await courtListenerService.hybridSearchOpinions(
-        query,
+        enhancedQuery,
         keywords,
         courtFilter
       );
@@ -384,17 +440,28 @@ class CaseLawValidator {
         console.log(`[CaseLawValidator] No results with jurisdiction filter, trying broader search...`);
         await this.throttleRequest();
         searchResult = await courtListenerService.hybridSearchOpinions(
-          query,
+          enhancedQuery,
           keywords,
           undefined // No jurisdiction filter
         );
       }
       
-      // Fallback 2: Try simpler category-based query
+      // Fallback 2: Try statute-specific search if we have statute terms
+      if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && statuteSearchTerms.length > 0) {
+        const statuteQuery = statuteSearchTerms.join(' ');
+        console.log(`[CaseLawValidator] Trying statute-specific search: "${statuteQuery}"`);
+        await this.throttleRequest();
+        searchResult = await courtListenerService.searchOpinions(
+          statuteQuery,
+          courtFilter
+        );
+      }
+      
+      // Fallback 3: Try simpler category-based query
       if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
         const fallbackQuery = this.buildFallbackQuery(chargeArray);
         if (fallbackQuery && fallbackQuery !== keywords) {
-          console.log(`[CaseLawValidator] Trying fallback query: "${fallbackQuery}"`);
+          console.log(`[CaseLawValidator] Trying category fallback query: "${fallbackQuery}"`);
           await this.throttleRequest();
           searchResult = await courtListenerService.semanticSearchOpinions(
             fallbackQuery,
@@ -434,7 +501,8 @@ class CaseLawValidator {
           context.jurisdiction,
           chargeCategories,
           context.caseStage,
-          semanticScore
+          semanticScore,
+          statuteCitations // Pass statute codes for matching
         );
         
         console.log(`[CaseLawValidator] Case "${opinion.caseName || 'Unknown'}" scored ${(relevanceScore * 100).toFixed(1)}% (semantic: ${(semanticScore * 100).toFixed(1)}%)`);
