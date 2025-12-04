@@ -174,21 +174,49 @@ class CaseLawValidator {
     return categories.length > 0 ? categories : ['general'];
   }
 
-  private buildSearchQuery(charges: string[], caseStage?: string): { query: string; keywords: string } {
+  private buildSearchQuery(charges: string[], caseStage?: string): { query: string; keywords: string; statuteCitations: string[] } {
     const chargeCategories = new Set<string>();
     const chargeNames: string[] = [];
+    const statuteCitations: string[] = [];
+    const legalTerms: string[] = [];
     
     for (const chargeId of charges) {
       const charge = getChargeById(chargeId);
       if (charge) {
         chargeNames.push(charge.name);
         this.extractChargeCategory(chargeId).forEach(cat => chargeCategories.add(cat));
+        
+        // Extract statute citation if available (e.g., "245" from charge code)
+        if (charge.code) {
+          statuteCitations.push(charge.code);
+        }
       }
     }
     
-    const keywords = chargeNames.slice(0, 3).join(' ');
-    let query = keywords;
+    // Add relevant legal synonyms from category keywords (pick top 2 per category)
+    for (const category of Array.from(chargeCategories)) {
+      const categoryKeywords = CHARGE_CATEGORY_KEYWORDS[category];
+      if (categoryKeywords) {
+        // Add first 2 keywords that aren't already in charge names
+        const newTerms = categoryKeywords
+          .filter(kw => !chargeNames.some(name => name.toLowerCase().includes(kw)))
+          .slice(0, 2);
+        legalTerms.push(...newTerms);
+      }
+    }
     
+    // Build primary keywords from charge names (limit to 3)
+    const keywords = chargeNames.slice(0, 3).join(' ');
+    
+    // Build enriched query: charge names + legal synonyms
+    let query = chargeNames.join(' ');
+    
+    // Add legal synonyms for broader matching
+    if (legalTerms.length > 0) {
+      query += ` ${legalTerms.slice(0, 4).join(' ')}`;
+    }
+    
+    // Add case stage context
     if (caseStage) {
       const stageKeywords: Record<string, string> = {
         'arraignment': 'arraignment plea',
@@ -203,7 +231,32 @@ class CaseLawValidator {
       }
     }
     
-    return { query, keywords };
+    return { query, keywords, statuteCitations };
+  }
+  
+  // Fallback search using simpler keyword-only approach
+  private buildFallbackQuery(charges: string[]): string {
+    const terms: string[] = [];
+    
+    for (const chargeId of charges) {
+      const charge = getChargeById(chargeId);
+      if (charge) {
+        // Extract core legal terms from charge name
+        const name = charge.name.toLowerCase();
+        
+        // Add the primary charge category term
+        for (const [category, keywords] of Object.entries(CHARGE_CATEGORY_KEYWORDS)) {
+          if (keywords.some(kw => name.includes(kw))) {
+            // Use the most common/searchable term from the category
+            terms.push(keywords[0]);
+            break;
+          }
+        }
+      }
+    }
+    
+    // Return unique terms
+    return Array.from(new Set(terms)).slice(0, 3).join(' ');
   }
 
   private calculateRelevanceScore(
@@ -309,19 +362,47 @@ class CaseLawValidator {
       await this.throttleRequest();
       
       // Build search query from charges and case stage
-      const { query, keywords } = this.buildSearchQuery(chargeArray, context.caseStage);
+      const { query, keywords, statuteCitations } = this.buildSearchQuery(chargeArray, context.caseStage);
       
       // Get court filter for jurisdiction
       const courtFilter = STATE_TO_COURT_PREFIX[context.jurisdiction] || undefined;
       
       console.log(`[CaseLawValidator] Searching CourtListener: "${query}" in ${context.jurisdiction}`);
+      if (statuteCitations.length > 0) {
+        console.log(`[CaseLawValidator] Statute citations available: ${statuteCitations.join(', ')}`);
+      }
       
       // Use hybrid search for best results
-      const searchResult = await courtListenerService.hybridSearchOpinions(
+      let searchResult = await courtListenerService.hybridSearchOpinions(
         query,
         keywords,
         courtFilter
       );
+      
+      // Fallback 1: Try without jurisdiction filter if no results
+      if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && courtFilter) {
+        console.log(`[CaseLawValidator] No results with jurisdiction filter, trying broader search...`);
+        await this.throttleRequest();
+        searchResult = await courtListenerService.hybridSearchOpinions(
+          query,
+          keywords,
+          undefined // No jurisdiction filter
+        );
+      }
+      
+      // Fallback 2: Try simpler category-based query
+      if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
+        const fallbackQuery = this.buildFallbackQuery(chargeArray);
+        if (fallbackQuery && fallbackQuery !== keywords) {
+          console.log(`[CaseLawValidator] Trying fallback query: "${fallbackQuery}"`);
+          await this.throttleRequest();
+          searchResult = await courtListenerService.semanticSearchOpinions(
+            fallbackQuery,
+            courtFilter,
+            undefined
+          );
+        }
+      }
       
       if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
         result.summary = 'No relevant case law found for this charge and jurisdiction.';
