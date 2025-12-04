@@ -34,9 +34,10 @@ The legal accuracy validation system (`server/services/legal-accuracy-validator.
 
 **Search Query Enhancements (Dec 2025)**: Improved CourtListener search with:
 - Enriched queries with legal synonyms from charge category keywords
-- Statute citation extraction from charge codes
-- Multi-stage fallback: primary search → broader search (no jurisdiction filter) → simpler category-based semantic search
+- Statute citation extraction from charge codes with jurisdiction-aware formatting (e.g., "Penal Code 245" for CA, "Penal Law 121" for NY)
+- Multi-stage fallback: primary search → broader search (no jurisdiction filter) → statute-specific search → category-based semantic search
 - Better logging for search quality monitoring
+- Relevance scoring weights: semantic 45%, charge category 25%, case stage 15%, statute citation match 15%
 
 **User Feedback System**: Users can rate precedent case helpfulness via thumbs up/down buttons. Feedback is validated with Zod schema, deduplicated (one vote per session per case), and stored for analytics.
 
