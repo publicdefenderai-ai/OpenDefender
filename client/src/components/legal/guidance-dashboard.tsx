@@ -546,118 +546,104 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
         </Card>
       )}
 
-      {/* Validation Confidence Section */}
+      {/* Simple Reassurance Message with Hidden Technical Details */}
       {guidance.validation && (
-        <Card className={`border ${
-          guidance.validation.confidenceScore >= 0.8 
-            ? 'border-green-200 bg-green-50 dark:bg-green-900/20' 
-            : guidance.validation.confidenceScore >= 0.6 
-              ? 'border-yellow-200 bg-yellow-50 dark:bg-yellow-900/20'
-              : 'border-orange-200 bg-orange-50 dark:bg-orange-900/20'
-        }`}>
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <CardTitle className={`flex items-center gap-2 ${
-                guidance.validation.confidenceScore >= 0.8 
-                  ? 'text-green-800 dark:text-green-200' 
-                  : guidance.validation.confidenceScore >= 0.6 
-                    ? 'text-yellow-800 dark:text-yellow-200'
-                    : 'text-orange-800 dark:text-orange-200'
-              }`}>
-                <Shield className="h-5 w-5" />
-                {t('guidance.validation.title', 'Accuracy Check')}
-              </CardTitle>
-              <div className="flex items-center gap-2">
-                <Badge 
-                  variant={guidance.validation.confidenceScore >= 0.8 ? 'default' : 'secondary'}
-                  className={`${
-                    guidance.validation.confidenceScore >= 0.8 
-                      ? 'bg-green-600 hover:bg-green-700' 
-                      : guidance.validation.confidenceScore >= 0.6 
-                        ? 'bg-yellow-600 hover:bg-yellow-700'
-                        : 'bg-orange-600 hover:bg-orange-700'
-                  } text-white`}
-                  data-testid="badge-confidence-score"
-                >
-                  {Math.round(guidance.validation.confidenceScore * 100)}% {t('guidance.validation.confidence', 'Confidence')}
-                </Badge>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            <p className={`text-sm ${
-              guidance.validation.confidenceScore >= 0.8 
-                ? 'text-green-900 dark:text-green-100' 
-                : guidance.validation.confidenceScore >= 0.6 
-                  ? 'text-yellow-900 dark:text-yellow-100'
-                  : 'text-orange-900 dark:text-orange-100'
-            }`} data-testid="text-validation-summary">
-              {guidance.validation.summary}
+        <div className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+          <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+          <div className="flex-1">
+            <p className="text-sm text-slate-700 dark:text-slate-300" data-testid="text-validation-reassurance">
+              {t('guidance.validation.reassurance', 
+                `This guidance is based on ${guidance.caseData.jurisdiction.toUpperCase()} criminal statutes and verified legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
+              )}
             </p>
             
-            <div className="flex items-center gap-4 text-sm">
-              <span className="text-muted-foreground">
-                {t('guidance.validation.checks', 'Checks')}: {guidance.validation.checksPassed}/{guidance.validation.checksPerformed}
-              </span>
-              <Progress 
-                value={(guidance.validation.checksPassed / guidance.validation.checksPerformed) * 100} 
-                className="flex-1 h-2"
-              />
-            </div>
-
-            {/* Tier breakdown */}
-            {guidance.validation.tiers && (
-              <div className="flex items-center gap-4 text-xs mt-2">
-                <Badge variant="outline" className="font-normal">
-                  Tier 1 (Statutes): {Math.round(guidance.validation.tiers.tier1.score * 100)}%
-                </Badge>
-                {guidance.validation.tiers.tier2 && (
-                  <Badge variant="outline" className="font-normal">
-                    Tier 2 (Case Law): {Math.round(guidance.validation.tiers.tier2.score * 100)}%
-                  </Badge>
-                )}
-              </div>
-            )}
-
-            {guidance.validation.issues.length > 0 && (
-              <Collapsible>
-                <CollapsibleTrigger asChild>
-                  <Button variant="ghost" size="sm" className="p-0 h-auto text-sm hover:bg-transparent">
-                    <ChevronRight className="h-4 w-4 mr-1" />
-                    {t('guidance.validation.viewDetails', 'View validation details')} ({guidance.validation.issues.length})
-                  </Button>
-                </CollapsibleTrigger>
-                <CollapsibleContent className="mt-2 space-y-2">
-                  {guidance.validation.issues.map((issue, index) => (
-                    <div 
-                      key={index} 
-                      className={`p-2 rounded text-sm ${
-                        issue.severity === 'error' 
-                          ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200' 
-                          : issue.severity === 'warning' 
-                            ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200'
-                            : 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200'
-                      }`}
-                      data-testid={`validation-issue-${index}`}
-                    >
-                      <div className="flex items-start gap-2">
-                        {issue.severity === 'error' && <AlertTriangle className="h-4 w-4 flex-shrink-0 mt-0.5" />}
-                        {issue.severity === 'warning' && <AlertTriangle className="h-4 w-4 flex-shrink-0 mt-0.5" />}
-                        {issue.severity === 'info' && <HelpCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />}
-                        <div>
-                          <p className="font-medium">{issue.message}</p>
-                          {issue.suggestion && (
-                            <p className="text-xs mt-1 opacity-80">{issue.suggestion}</p>
-                          )}
-                        </div>
-                      </div>
+            {/* Collapsible technical details for advanced users */}
+            <Collapsible className="mt-3">
+              <CollapsibleTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="p-0 h-auto text-xs text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-transparent group"
+                  data-testid="btn-show-verification-details"
+                >
+                  <ChevronRight className="h-3 w-3 mr-1 transition-transform group-data-[state=open]:rotate-90" />
+                  {t('guidance.validation.showDetails', 'How we verified this')}
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-600">
+                <div className="space-y-3 text-xs text-slate-600 dark:text-slate-400">
+                  {/* What we checked */}
+                  <div className="space-y-1.5">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-3.5 w-3.5 text-green-500" />
+                      <span>{t('guidance.validation.checkedStatutes', 'Verified against state criminal statutes')}</span>
                     </div>
-                  ))}
-                </CollapsibleContent>
-              </Collapsible>
-            )}
-          </CardContent>
-        </Card>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-3.5 w-3.5 text-green-500" />
+                      <span>{t('guidance.validation.checkedPenalties', 'Cross-referenced sentencing guidelines')}</span>
+                    </div>
+                    {guidance.validation.precedents && guidance.validation.precedents.length > 0 ? (
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-3.5 w-3.5 text-green-500" />
+                        <span>{t('guidance.validation.foundCases', `Found ${guidance.validation.precedents.length} similar court case${guidance.validation.precedents.length !== 1 ? 's' : ''}`)}</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        <HelpCircle className="h-3.5 w-3.5 text-slate-400" />
+                        <span>{t('guidance.validation.noCasesFound', 'We searched for similar court cases but none matched closely enough to include')}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Technical metrics - hidden by default, only for advanced users */}
+                  <div className="pt-2 border-t border-slate-200 dark:border-slate-600">
+                    <p className="text-slate-500 dark:text-slate-500 mb-2">
+                      {t('guidance.validation.technicalDetails', 'Technical details:')}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="font-normal text-xs" data-testid="badge-confidence-score">
+                        {Math.round(guidance.validation.confidenceScore * 100)}% confidence
+                      </Badge>
+                      <Badge variant="outline" className="font-normal text-xs">
+                        {guidance.validation.checksPassed}/{guidance.validation.checksPerformed} checks passed
+                      </Badge>
+                      {guidance.validation.tiers?.tier1 && (
+                        <Badge variant="outline" className="font-normal text-xs">
+                          Statutes: {Math.round(guidance.validation.tiers.tier1.score * 100)}%
+                        </Badge>
+                      )}
+                      {guidance.validation.tiers?.tier2 && (
+                        <Badge variant="outline" className="font-normal text-xs">
+                          Case law: {Math.round(guidance.validation.tiers.tier2.score * 100)}%
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Issues - only show if there are any */}
+                  {guidance.validation.issues.length > 0 && (
+                    <div className="pt-2 border-t border-slate-200 dark:border-slate-600 space-y-1.5">
+                      {guidance.validation.issues.map((issue, index) => (
+                        <div 
+                          key={index} 
+                          className="flex items-start gap-2"
+                          data-testid={`validation-issue-${index}`}
+                        >
+                          {issue.severity === 'info' ? (
+                            <HelpCircle className="h-3.5 w-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
+                          ) : (
+                            <AlertTriangle className="h-3.5 w-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
+                          )}
+                          <span>{issue.message}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+        </div>
       )}
 
       {/* Precedent Cases Section */}
