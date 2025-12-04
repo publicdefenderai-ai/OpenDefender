@@ -154,7 +154,7 @@ export default function DevelopmentRoadmap() {
       priority: "critical",
       category: "ai",
       estimatedCompletion: "Q1 2026",
-      progress: 65,
+      progress: 78,
       challengesKeys: ["developmentRoadmap.items.aiGuidance.challenges.accuracy", "developmentRoadmap.items.aiGuidance.challenges.bias", "developmentRoadmap.items.aiGuidance.challenges.jurisdiction"],
       impactKey: "developmentRoadmap.items.aiGuidance.impact"
     },
