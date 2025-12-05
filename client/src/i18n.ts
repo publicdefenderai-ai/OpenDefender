@@ -389,8 +389,13 @@ i18n
                 "title": "Actions to Avoid"
               },
               "privacyNotice": {
-                "title": "Privacy Protected:",
-                "text": "This guidance is generated based on your input and will be automatically deleted after your session ends. No personal information is permanently stored."
+                "title": "Your Privacy is Protected",
+                "text": "This guidance is generated based on your input and will be automatically deleted after your session ends. No personal information is permanently stored.",
+                "encrypted": "All data encrypted in transit and at rest",
+                "autoDelete": "Session data automatically deleted after 24 hours",
+                "piiRedacted": "Personal information redacted before AI processing",
+                "deleteNow": "Delete My Data Now",
+                "deleteNote": "Permanently removes all session data"
               }
             }
           },
@@ -1935,8 +1940,13 @@ i18n
                 "title": "Acciones a Evitar"
               },
               "privacyNotice": {
-                "title": "Privacidad Protegida:",
-                "text": "Esta orientación se genera en base a su información y se eliminará automáticamente después de que termine su sesión. No se almacena información personal de forma permanente."
+                "title": "Su Privacidad está Protegida",
+                "text": "Esta orientación se genera en base a su información y se eliminará automáticamente después de que termine su sesión. No se almacena información personal de forma permanente.",
+                "encrypted": "Todos los datos encriptados en tránsito y en reposo",
+                "autoDelete": "Datos de sesión eliminados automáticamente después de 24 horas",
+                "piiRedacted": "Información personal redactada antes del procesamiento de IA",
+                "deleteNow": "Eliminar Mis Datos Ahora",
+                "deleteNote": "Elimina permanentemente todos los datos de la sesión"
               }
             }
           },

@@ -27,7 +27,9 @@ import {
   ThumbsUp,
   ThumbsDown,
   BookOpen,
-  Bookmark
+  Bookmark,
+  Trash2,
+  Lock
 } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -1044,13 +1046,50 @@ export function GuidanceDashboard({ guidance, onClose, onDeleteSession, onShowPu
         )}
       </div>
 
-      {/* Privacy Notice */}
-      <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
-        <Shield className="h-4 w-4 text-blue-600" />
-        <AlertDescription className="text-blue-800 dark:text-blue-200">
-          <strong>{t('legalGuidance.dashboard.privacyNotice.title')}</strong> {t('legalGuidance.dashboard.privacyNotice.text')}
-        </AlertDescription>
-      </Alert>
+      {/* Privacy & Data Control Section */}
+      <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
+        <CardContent className="pt-6">
+          <div className="flex flex-col md:flex-row md:items-start gap-4">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-3">
+                <Shield className="h-5 w-5 text-blue-600" />
+                <h3 className="font-semibold text-blue-800 dark:text-blue-200">
+                  {t('legalGuidance.dashboard.privacyNotice.title', 'Your Privacy is Protected')}
+                </h3>
+              </div>
+              <div className="space-y-2 text-sm text-blue-800 dark:text-blue-200">
+                <div className="flex items-center gap-2">
+                  <Lock className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span>{t('legalGuidance.dashboard.privacyNotice.encrypted', 'All data encrypted in transit and at rest')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span>{t('legalGuidance.dashboard.privacyNotice.autoDelete', 'Session data automatically deleted after 24 hours')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal information redacted before AI processing')}</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2 md:items-end">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={onDeleteSession}
+                className="gap-2 border-red-300 text-red-700 hover:bg-red-50 dark:border-red-700 dark:text-red-400 dark:hover:bg-red-900/20"
+                data-testid="button-delete-my-data"
+              >
+                <Trash2 className="h-4 w-4" />
+                {t('legalGuidance.dashboard.privacyNotice.deleteNow', 'Delete My Data Now')}
+              </Button>
+              <p className="text-xs text-blue-600 dark:text-blue-400 text-center md:text-right">
+                {t('legalGuidance.dashboard.privacyNotice.deleteNote', 'Permanently removes all session data')}
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
