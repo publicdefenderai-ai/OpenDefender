@@ -88,9 +88,9 @@ export default function LegalGlossary() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="gradient-hero text-white py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Hero Section - Purple Vivid Header */}
+      <section className="vivid-header-purple py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,10 +100,10 @@ export default function LegalGlossary() {
             <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
               <BookOpen className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-800 dark:text-blue-200">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               {t('legalGlossary.hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-white/85 max-w-3xl mx-auto">
               {t('legalGlossary.hero.subtitle')}
             </p>
           </motion.div>

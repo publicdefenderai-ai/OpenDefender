@@ -18,16 +18,16 @@ export default function FriendsFamily() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="gradient-hero text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Hero Section - Rose Vivid Header */}
+      <section className="vivid-header-rose py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 <Users className="inline h-10 w-10 mr-2 mb-2" />
                 {t('friendsFamily.hero.title')}
               </h1>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+              <p className="text-xl text-white/85 max-w-3xl mx-auto">
                 {t('friendsFamily.hero.subtitle')}
               </p>
             </div>
