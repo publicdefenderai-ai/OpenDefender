@@ -322,6 +322,13 @@
   background: linear-gradient(135deg, hsl(345 60% 35%) 0%, hsl(350 55% 42%) 50%, hsl(355 50% 48%) 100%);
 }
 
+/* Green/Growth gradient - Diversion Programs (second chances, rehabilitation) */
+.vivid-header-green {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(155 55% 28%) 0%, hsl(150 50% 35%) 50%, hsl(145 45% 42%) 100%);
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal,

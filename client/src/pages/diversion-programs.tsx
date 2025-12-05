@@ -199,9 +199,9 @@ export default function DiversionPrograms() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="gradient-hero text-white py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Hero Section - Green Vivid Header */}
+      <section className="vivid-header-green py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -211,10 +211,10 @@ export default function DiversionPrograms() {
             <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
               <Users className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-800 dark:text-blue-200">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               {t('diversionPrograms.hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-white/85 max-w-3xl mx-auto">
               {t('diversionPrograms.hero.subtitle')}
             </p>
           </motion.div>
@@ -233,7 +233,10 @@ export default function DiversionPrograms() {
                 </Button>
               </Link>
               <div className="text-sm text-muted-foreground">
-                {t('diversionPrograms.navigation.programsCount', { count: filteredPrograms.length, total: diversionPrograms.length })}
+                {hasActiveFilters 
+                  ? t('diversionPrograms.navigation.programsCount', { count: filteredPrograms.length, total: diversionPrograms.length })
+                  : t('diversionPrograms.navigation.totalPrograms', { total: diversionPrograms.length, defaultValue: `${diversionPrograms.length} programs available` })
+                }
               </div>
             </div>
           </ScrollReveal>
@@ -337,9 +340,25 @@ export default function DiversionPrograms() {
             </Card>
           </ScrollReveal>
 
-          {/* Programs List */}
+          {/* Programs List - Only show after search/filter is applied */}
           <ScrollReveal delay={0.2}>
-            {filteredPrograms.length > 0 ? (
+            {!hasActiveFilters ? (
+              /* Initial state - prompt user to search */
+              <Card className="border-dashed border-2">
+                <CardContent className="p-12 text-center">
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Search className="h-8 w-8 text-green-600 dark:text-green-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('diversionPrograms.initialState.title', { defaultValue: 'Search for Diversion Programs' })}</h3>
+                  <p className="text-muted-foreground mb-2 max-w-md mx-auto">
+                    {t('diversionPrograms.initialState.description', { defaultValue: 'Enter your city, county, or state above to find diversion programs in your area.' })}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {t('diversionPrograms.initialState.programCount', { count: diversionPrograms.length, defaultValue: `We have ${diversionPrograms.length} programs across multiple states ready to help.` })}
+                  </p>
+                </CardContent>
+              </Card>
+            ) : filteredPrograms.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6">
                 {filteredPrograms.map((program) => (
                   <DiversionProgramCard
@@ -356,11 +375,9 @@ export default function DiversionPrograms() {
                   <p className="text-muted-foreground mb-4">
                     {t('diversionPrograms.emptyState.description')}
                   </p>
-                  {hasActiveFilters && (
-                    <Button variant="outline" onClick={clearFilters}>
-                      {t('diversionPrograms.emptyState.clearFilters')}
-                    </Button>
-                  )}
+                  <Button variant="outline" onClick={clearFilters}>
+                    {t('diversionPrograms.emptyState.clearFilters')}
+                  </Button>
                 </CardContent>
               </Card>
             )}
