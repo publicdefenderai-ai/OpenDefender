@@ -54,7 +54,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
               <Badge variant="outline" className="text-xs">
                 {program.county ? `${program.county} ${t('diversionPrograms.programCard.county')}` : program.state}
               </Badge>
-              <Badge className="bg-blue-600 text-white text-xs">
+              <Badge variant="secondary" className="text-xs">
                 {program.jurisdictionType}
               </Badge>
             </div>

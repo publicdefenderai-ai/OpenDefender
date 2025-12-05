@@ -33,113 +33,99 @@ interface ResourceCard {
   description: string;
   link: string;
   category: string;
-  iconBgColor: string;
 }
 
 const resources: ResourceCard[] = [
   {
-    icon: <MessageSquare className="h-6 w-6 text-white" />,
+    icon: <MessageSquare className="h-5 w-5" />,
     title: "Personalized Case Guidance",
     description: "Get tailored legal guidance, next steps, and resources based on your charges and jurisdiction.",
     link: "/case-guidance",
-    category: "Get Help",
-    iconBgColor: "bg-blue-600"
+    category: "Get Help"
   },
   {
-    icon: <Globe className="h-6 w-6 text-white" />,
+    icon: <Globe className="h-5 w-5" />,
     title: "Immigration Rights",
     description: "Know your rights during ICE encounters and deportation proceedings.",
     link: "/immigration-guidance",
-    category: "Get Help",
-    iconBgColor: "bg-amber-600"
+    category: "Get Help"
   },
   {
-    icon: <Shield className="h-6 w-6 text-white" />,
+    icon: <Shield className="h-5 w-5" />,
     title: "Constitutional Rights",
     description: "Learn about your Miranda rights, rights during arrest, and in court.",
     link: "/rights-info",
-    category: "Legal Rights",
-    iconBgColor: "bg-blue-500"
+    category: "Legal Rights"
   },
   {
-    icon: <Calendar className="h-6 w-6 text-white" />,
+    icon: <Calendar className="h-5 w-5" />,
     title: "Criminal Justice Process",
     description: "Step-by-step timeline from arrest through sentencing and what to expect at each stage.",
     link: "/process",
-    category: "Legal Rights",
-    iconBgColor: "bg-green-600"
+    category: "Legal Rights"
   },
   {
-    icon: <Search className="h-6 w-6 text-white" />,
+    icon: <Search className="h-5 w-5" />,
     title: "Search & Seizure Rights",
     description: "Know your Fourth Amendment rights during police stops and searches.",
     link: "/search-seizure",
-    category: "Legal Rights",
-    iconBgColor: "bg-purple-600"
+    category: "Legal Rights"
   },
   {
-    icon: <Users className="h-6 w-6 text-white" />,
+    icon: <Users className="h-5 w-5" />,
     title: "Helping Friends/Family",
     description: "Support someone who has been arrested with practical guidance and resources.",
     link: "/friends-family",
-    category: "Legal Rights",
-    iconBgColor: "bg-indigo-600"
+    category: "Legal Rights"
   },
   {
-    icon: <MapPin className="h-6 w-6 text-white" />,
+    icon: <MapPin className="h-5 w-5" />,
     title: "Find Public Defenders",
     description: "Search by ZIP code to find public defender offices providing free legal representation.",
     link: "/",
-    category: "Resources",
-    iconBgColor: "bg-blue-600"
+    category: "Resources"
   },
   {
-    icon: <HelpCircle className="h-6 w-6 text-white" />,
+    icon: <HelpCircle className="h-5 w-5" />,
     title: "Legal Aid Organizations",
     description: "Find free or low-cost legal services and immigration support in your area.",
     link: "/",
-    category: "Resources",
-    iconBgColor: "bg-green-600"
+    category: "Resources"
   },
   {
-    icon: <Route className="h-6 w-6 text-white" />,
+    icon: <Route className="h-5 w-5" />,
     title: "Diversion Programs",
     description: "Explore alternative sentencing options like drug courts and treatment programs.",
     link: "/diversion-programs",
-    category: "Resources",
-    iconBgColor: "bg-green-500"
+    category: "Resources"
   },
   {
-    icon: <Eraser className="h-6 w-6 text-white" />,
+    icon: <Eraser className="h-5 w-5" />,
     title: "Record Expungement",
     description: "Learn about sealing or expunging criminal records in your state.",
     link: "/record-expungement",
-    category: "Resources",
-    iconBgColor: "bg-indigo-600"
+    category: "Resources"
   },
   {
-    icon: <FileText className="h-6 w-6 text-white" />,
+    icon: <FileText className="h-5 w-5" />,
     title: "Court Records Search",
     description: "Search free federal court documents and case law without PACER fees.",
     link: "/court-records",
-    category: "Resources",
-    iconBgColor: "bg-blue-500"
+    category: "Resources"
   },
   {
-    icon: <Book className="h-6 w-6 text-white" />,
+    icon: <Book className="h-5 w-5" />,
     title: "Legal Glossary",
     description: "Plain-language definitions of legal terms and court procedures.",
     link: "/legal-glossary",
-    category: "Reference",
-    iconBgColor: "bg-purple-500"
+    category: "Reference"
   },
   {
-    icon: <MapPin className="h-6 w-6 text-white" />,
+    icon: <MapPin className="h-5 w-5" />,
     title: "Court Locator",
     description: "Find court addresses, hours, and contact information by jurisdiction.",
     link: "/court-locator",
-    category: "Reference",
-    iconBgColor: "bg-blue-400"
+    category: "Reference"
   }
 ];
 
@@ -148,15 +134,15 @@ const categories = ["Get Help", "Legal Rights", "Resources", "Reference"];
 function ResourceCardComponent({ resource }: { resource: ResourceCard }) {
   return (
     <Link href={resource.link}>
-      <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
+      <Card className="h-full hover:shadow-md transition-all duration-200 cursor-pointer group border">
         <CardHeader>
           <div className="flex items-start gap-4">
-            <div className={`w-12 h-12 ${resource.iconBgColor} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0`}>
+            <div className="w-12 h-12 rounded-full border-2 border-muted flex items-center justify-center group-hover:border-primary/50 transition-colors flex-shrink-0 text-muted-foreground group-hover:text-primary">
               {resource.icon}
             </div>
             <div className="flex-1">
               <div className="flex items-start justify-between gap-2">
-                <CardTitle className="text-lg group-hover:text-blue-600 transition-colors">
+                <CardTitle className="text-lg group-hover:text-primary transition-colors">
                   {resource.title}
                 </CardTitle>
                 <Badge variant="outline" className="text-xs flex-shrink-0">
@@ -183,15 +169,14 @@ export default function HowTo() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-10 md:py-14 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-background py-12 md:py-16 border-b">
+        <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-blue-600">
-                <Lightbulb className="inline h-7 w-7 md:h-10 md:w-10 mr-2 mb-1 md:mb-2" />
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground">
                 Navigating This Tool
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto px-2">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
                 Explore all the legal resources, guidance tools, and information available to help you understand and navigate the criminal justice system
               </p>
             </div>

@@ -15,31 +15,27 @@ export default function MissionStatement() {
     {
       icon: Users,
       titleKey: "missionStatement.goals.expandAccess.title",
-      descriptionKey: "missionStatement.goals.expandAccess.description",
-      color: "bg-blue-600"
+      descriptionKey: "missionStatement.goals.expandAccess.description"
     },
     {
       icon: Scale,
       titleKey: "missionStatement.goals.supportDefenders.title",
-      descriptionKey: "missionStatement.goals.supportDefenders.description",
-      color: "bg-green-600"
+      descriptionKey: "missionStatement.goals.supportDefenders.description"
     },
     {
       icon: FileText,
       titleKey: "missionStatement.goals.empowerDecisions.title",
-      descriptionKey: "missionStatement.goals.empowerDecisions.description",
-      color: "bg-purple-600"
+      descriptionKey: "missionStatement.goals.empowerDecisions.description"
     },
     {
       icon: TrendingUp,
       titleKey: "missionStatement.goals.increaseFairness.title",
-      descriptionKey: "missionStatement.goals.increaseFairness.description",
-      color: "bg-orange-600"
+      descriptionKey: "missionStatement.goals.increaseFairness.description"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen bg-background">
       <Header />
       
       <main className="container mx-auto px-4 py-12 max-w-5xl">
@@ -51,15 +47,10 @@ export default function MissionStatement() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-blue-600 rounded-full">
-                <Target className="h-12 w-12 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               {t('missionStatement.hero.title')}
             </h1>
-            <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               {t('missionStatement.hero.subtitle')}
             </p>
           </motion.div>
@@ -68,7 +59,7 @@ export default function MissionStatement() {
         {/* Primary Goals Section */}
         <ScrollReveal>
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
               {t('missionStatement.goals.title')}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -81,17 +72,17 @@ export default function MissionStatement() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Card className="h-full hover:shadow-lg transition-shadow">
+                    <Card className="h-full hover:shadow-md transition-shadow border">
                       <CardContent className="pt-6">
                         <div className="flex items-start gap-4">
-                          <div className={`p-3 ${goal.color} rounded-lg flex-shrink-0`}>
-                            <Icon className="h-6 w-6 text-white" />
+                          <div className="w-12 h-12 rounded-full border-2 border-muted flex items-center justify-center flex-shrink-0 text-muted-foreground">
+                            <Icon className="h-5 w-5" />
                           </div>
                           <div>
-                            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                            <h3 className="text-xl font-semibold text-foreground mb-2">
                               {t(goal.titleKey)}
                             </h3>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            <p className="text-muted-foreground leading-relaxed">
                               {t(goal.descriptionKey)}
                             </p>
                           </div>
