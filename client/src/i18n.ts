@@ -1508,7 +1508,7 @@ i18n
             "hero": {
               "title": "Privacy Policy",
               "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-              "lastUpdated": "Last Updated: October 24, 2025"
+              "lastUpdated": "Last Updated: December 5, 2025"
             },
             "notice": {
               "title": "Privacy-First Platform:",
@@ -1532,6 +1532,26 @@ i18n
               "noSharing": {
                 "title": "No Data Sharing or Sale",
                 "description": "We do not share, sell, or provide your data to any third parties. Since we do not collect personal data, we could not share it even if we wanted to. Any anonymized data shared is completely stripped of identifying information."
+              }
+            },
+            "caseData": {
+              "title": "How We Protect Your Case Information",
+              "summary": "When you use our legal guidance tool, your case information receives multiple layers of protection. Here's exactly what happens to your data:",
+              "memoryOnly": {
+                "title": "Memory-Only Storage",
+                "description": "Your case information is stored only in temporary server memory - it is never written to a database or saved to disk. This means your data exists only while being processed and cannot be recovered after your session ends."
+              },
+              "piiRedaction": {
+                "title": "Personal Information Automatically Removed",
+                "description": "Before your case details are processed by our AI, we automatically detect and remove personal information like names, phone numbers, email addresses, and Social Security numbers. This redaction happens locally on our servers using machine learning - your personal details are never sent to external AI services."
+              },
+              "autoDelete": {
+                "title": "Automatic 24-Hour Deletion",
+                "description": "Even in memory, your case data has a maximum lifespan of 24 hours. After this time, it is automatically and permanently deleted. You don't need to take any action - deletion happens automatically."
+              },
+              "serverRestart": {
+                "title": "Cleared on Server Restart",
+                "description": "Because data is stored only in memory, any server restart or update completely clears all session data. This happens regularly as we improve the platform, providing an additional layer of data ephemerality."
               }
             },
             "technical": {
@@ -3065,7 +3085,7 @@ i18n
             "hero": {
               "title": "Política de Privacidad",
               "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-              "lastUpdated": "Última actualización: 24 de octubre de 2025"
+              "lastUpdated": "Última actualización: 5 de diciembre de 2025"
             },
             "notice": {
               "title": "Plataforma que prioriza la privacidad:",
@@ -3089,6 +3109,26 @@ i18n
               "noSharing": {
                 "title": "Sin Compartir o Vender Datos",
                 "description": "No compartimos, vendemos ni proporcionamos sus datos a terceros. Como no recopilamos datos personales, no podríamos compartirlos aunque quisiéramos. Cualquier dato anonimizado compartido está completamente desprovisto de información identificatoria."
+              }
+            },
+            "caseData": {
+              "title": "Cómo Protegemos la Información de su Caso",
+              "summary": "Cuando usa nuestra herramienta de orientación legal, la información de su caso recibe múltiples capas de protección. Esto es exactamente lo que sucede con sus datos:",
+              "memoryOnly": {
+                "title": "Almacenamiento Solo en Memoria",
+                "description": "La información de su caso se almacena solo en la memoria temporal del servidor - nunca se escribe en una base de datos ni se guarda en disco. Esto significa que sus datos existen solo mientras se procesan y no se pueden recuperar después de que finalice su sesión."
+              },
+              "piiRedaction": {
+                "title": "Información Personal Eliminada Automáticamente",
+                "description": "Antes de que los detalles de su caso sean procesados por nuestra IA, detectamos y eliminamos automáticamente información personal como nombres, números de teléfono, direcciones de correo electrónico y números de Seguro Social. Esta redacción ocurre localmente en nuestros servidores usando aprendizaje automático - sus datos personales nunca se envían a servicios de IA externos."
+              },
+              "autoDelete": {
+                "title": "Eliminación Automática en 24 Horas",
+                "description": "Incluso en memoria, los datos de su caso tienen una vida útil máxima de 24 horas. Después de este tiempo, se eliminan automática y permanentemente. No necesita tomar ninguna acción - la eliminación ocurre automáticamente."
+              },
+              "serverRestart": {
+                "title": "Borrado al Reiniciar el Servidor",
+                "description": "Debido a que los datos se almacenan solo en memoria, cualquier reinicio o actualización del servidor borra completamente todos los datos de sesión. Esto ocurre regularmente mientras mejoramos la plataforma, proporcionando una capa adicional de efímero de datos."
               }
             },
             "technical": {
