@@ -1,4 +1,5 @@
-import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute, type CaseFeedback, type InsertCaseFeedback } from "@shared/schema";
+import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute, type CaseFeedback, type InsertCaseFeedback, type PrivacyConsent, type InsertPrivacyConsent } from "@shared/schema";
+import crypto from "crypto";
 import { randomUUID } from "crypto";
 import { legalAidOrganizationsSeed } from "./data/legal-aid-organizations-seed";
 import { federalStatutesSeed } from "./data/federal-statutes-seed";
@@ -36,6 +37,10 @@ export interface IStorage {
   createCaseFeedback(feedback: InsertCaseFeedback): Promise<CaseFeedback>;
   getCaseFeedbackStats(caseId: string): Promise<{ helpful: number; notHelpful: number }>;
   getCaseFeedbackBySession(sessionId: string): Promise<CaseFeedback[]>;
+  
+  // Privacy consent tracking (anonymous)
+  recordPrivacyConsent(consent: InsertPrivacyConsent): Promise<PrivacyConsent>;
+  getPrivacyConsentStats(): Promise<{ total: number; granted: number; denied: number; byType: Record<string, number> }>;
 }
 
 export class MemStorage implements IStorage {
@@ -46,6 +51,7 @@ export class MemStorage implements IStorage {
   private legalAidOrganizations: Map<string, LegalAidOrganization>;
   private statutes: Map<string, Statute>;
   private caseFeedback: Map<string, CaseFeedback>;
+  private privacyConsents: Map<string, PrivacyConsent>;
 
   constructor() {
     this.users = new Map();
@@ -55,6 +61,7 @@ export class MemStorage implements IStorage {
     this.legalAidOrganizations = new Map();
     this.statutes = new Map();
     this.caseFeedback = new Map();
+    this.privacyConsents = new Map();
     
     // Initialize with sample legal resources and organizations
     this.initializeSampleData();
@@ -336,6 +343,70 @@ export class MemStorage implements IStorage {
     return Array.from(this.caseFeedback.values()).filter(
       feedback => feedback.sessionId === sessionId
     );
+  }
+
+  async recordPrivacyConsent(insertConsent: InsertPrivacyConsent): Promise<PrivacyConsent> {
+    const id = randomUUID();
+    
+    // Create unique key for deduplication (sessionHash + consentType)
+    const uniqueKey = `${insertConsent.sessionHash}_${insertConsent.consentType}`;
+    
+    // Check if consent already exists for this session/type combo
+    const existing = Array.from(this.privacyConsents.values()).find(
+      c => c.sessionHash === insertConsent.sessionHash && c.consentType === insertConsent.consentType
+    );
+    
+    if (existing) {
+      // Update existing consent record
+      const updated: PrivacyConsent = {
+        ...existing,
+        granted: insertConsent.granted,
+        consentVersion: insertConsent.consentVersion,
+        consentedAt: new Date(),
+      };
+      this.privacyConsents.set(existing.id, updated);
+      return updated;
+    }
+    
+    // Create new consent record
+    const consent: PrivacyConsent = {
+      id,
+      sessionHash: insertConsent.sessionHash,
+      consentType: insertConsent.consentType,
+      consentVersion: insertConsent.consentVersion,
+      granted: insertConsent.granted,
+      ipHash: insertConsent.ipHash ?? null,
+      userAgent: insertConsent.userAgent ?? null,
+      consentedAt: new Date(),
+    };
+    this.privacyConsents.set(id, consent);
+    return consent;
+  }
+
+  async getPrivacyConsentStats(): Promise<{ total: number; granted: number; denied: number; byType: Record<string, number> }> {
+    const consents = Array.from(this.privacyConsents.values());
+    const byType: Record<string, number> = {};
+    
+    let granted = 0;
+    let denied = 0;
+    
+    for (const consent of consents) {
+      if (consent.granted) {
+        granted++;
+      } else {
+        denied++;
+      }
+      
+      // Count by type
+      byType[consent.consentType] = (byType[consent.consentType] || 0) + 1;
+    }
+    
+    return {
+      total: consents.length,
+      granted,
+      denied,
+      byType,
+    };
   }
 }
 

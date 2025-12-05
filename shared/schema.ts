@@ -334,3 +334,25 @@ export const insertCaseFeedbackSchema = createInsertSchema(caseFeedback).omit({
 
 export type InsertCaseFeedback = z.infer<typeof insertCaseFeedbackSchema>;
 export type CaseFeedback = typeof caseFeedback.$inferSelect;
+
+// Privacy Consent Tracking - Anonymous consent records (no PII stored)
+export const privacyConsents = pgTable("privacy_consents", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sessionHash: text("session_hash").notNull(), // SHA-256 hash of session ID (not the actual session ID)
+  consentType: text("consent_type").notNull(), // 'privacy_policy', 'data_processing', 'ai_guidance'
+  consentVersion: text("consent_version").notNull(), // Version of the consent text shown
+  granted: boolean("granted").notNull(),
+  ipHash: text("ip_hash"), // Optional hashed IP for audit (not the actual IP)
+  userAgent: text("user_agent"), // Browser info for audit
+  consentedAt: timestamp("consented_at").defaultNow(),
+}, (table) => ({
+  uniqueSessionConsent: unique().on(table.sessionHash, table.consentType),
+}));
+
+export const insertPrivacyConsentSchema = createInsertSchema(privacyConsents).omit({
+  id: true,
+  consentedAt: true,
+});
+
+export type InsertPrivacyConsent = z.infer<typeof insertPrivacyConsentSchema>;
+export type PrivacyConsent = typeof privacyConsents.$inferSelect;

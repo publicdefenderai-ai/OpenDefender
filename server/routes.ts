@@ -552,6 +552,55 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Privacy Consent Tracking - Record user consent (anonymous)
+  app.post("/api/privacy-consent", async (req, res) => {
+    try {
+      const { sessionId, consentType, consentVersion, granted } = req.body;
+      
+      if (!sessionId || !consentType || !consentVersion || granted === undefined) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Missing required fields: sessionId, consentType, consentVersion, granted" 
+        });
+      }
+      
+      // Hash the session ID for privacy (we don't store the actual session ID)
+      const crypto = await import('crypto');
+      const sessionHash = crypto.createHash('sha256').update(sessionId).digest('hex');
+      
+      // Optionally hash the IP for audit purposes
+      const ip = req.ip || req.socket.remoteAddress || '';
+      const ipHash = ip ? crypto.createHash('sha256').update(ip).digest('hex').slice(0, 16) : null;
+      
+      const consent = await storage.recordPrivacyConsent({
+        sessionHash,
+        consentType,
+        consentVersion,
+        granted,
+        ipHash,
+        userAgent: req.headers['user-agent'] || null,
+      });
+      
+      console.log(`[Privacy] Consent recorded: ${consentType} v${consentVersion} - ${granted ? 'granted' : 'denied'}`);
+      
+      res.json({ success: true, recorded: true });
+    } catch (error) {
+      console.error("Failed to record privacy consent:", error);
+      res.status(500).json({ success: false, error: "Failed to record consent" });
+    }
+  });
+
+  // Privacy Consent Stats - Aggregate stats (no PII exposed)
+  app.get("/api/privacy-consent/stats", async (req, res) => {
+    try {
+      const stats = await storage.getPrivacyConsentStats();
+      res.json({ success: true, stats });
+    } catch (error) {
+      console.error("Failed to get privacy consent stats:", error);
+      res.status(500).json({ success: false, error: "Failed to get stats" });
+    }
+  });
+
   // Delete Legal Guidance Session
   app.delete("/api/legal-guidance/:sessionId", async (req, res) => {
     try {
