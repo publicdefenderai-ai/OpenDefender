@@ -71,6 +71,7 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        serif: ["Source Serif 4", "Georgia", "serif"],
       },
       keyframes: {
         "accordion-down": {
