@@ -1391,10 +1391,27 @@ export const diversionPrograms: DiversionProgram[] = [
 ];
 
 // Helper function to search diversion programs by location
+const stateNameToAbbrev: Record<string, string> = {
+  'alabama': 'AL', 'alaska': 'AK', 'arizona': 'AZ', 'arkansas': 'AR', 'california': 'CA',
+  'colorado': 'CO', 'connecticut': 'CT', 'delaware': 'DE', 'florida': 'FL', 'georgia': 'GA',
+  'hawaii': 'HI', 'idaho': 'ID', 'illinois': 'IL', 'indiana': 'IN', 'iowa': 'IA',
+  'kansas': 'KS', 'kentucky': 'KY', 'louisiana': 'LA', 'maine': 'ME', 'maryland': 'MD',
+  'massachusetts': 'MA', 'michigan': 'MI', 'minnesota': 'MN', 'mississippi': 'MS', 'missouri': 'MO',
+  'montana': 'MT', 'nebraska': 'NE', 'nevada': 'NV', 'new hampshire': 'NH', 'new jersey': 'NJ',
+  'new mexico': 'NM', 'new york': 'NY', 'north carolina': 'NC', 'north dakota': 'ND', 'ohio': 'OH',
+  'oklahoma': 'OK', 'oregon': 'OR', 'pennsylvania': 'PA', 'rhode island': 'RI', 'south carolina': 'SC',
+  'south dakota': 'SD', 'tennessee': 'TN', 'texas': 'TX', 'utah': 'UT', 'vermont': 'VT',
+  'virginia': 'VA', 'washington': 'WA', 'west virginia': 'WV', 'wisconsin': 'WI', 'wyoming': 'WY',
+  'district of columbia': 'DC', 'washington dc': 'DC', 'washington d.c.': 'DC', 'd.c.': 'DC'
+};
+
 export function searchDiversionPrograms(query: string): DiversionProgram[] {
   if (!query.trim()) return diversionPrograms;
   
-  const lowercaseQuery = query.toLowerCase();
+  const lowercaseQuery = query.toLowerCase().trim();
+  
+  // Check if query matches a full state name and get the abbreviation
+  const stateAbbrev = stateNameToAbbrev[lowercaseQuery];
   
   return diversionPrograms.filter(program => {
     // Search by zip code
@@ -1412,8 +1429,13 @@ export function searchDiversionPrograms(query: string): DiversionProgram[] {
       return true;
     }
     
-    // Search by state
+    // Search by state abbreviation (e.g., "CA")
     if (program.state.toLowerCase().includes(lowercaseQuery)) {
+      return true;
+    }
+    
+    // Search by full state name (e.g., "California" -> matches "CA")
+    if (stateAbbrev && program.state.toUpperCase() === stateAbbrev) {
       return true;
     }
     
