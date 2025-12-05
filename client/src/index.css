@@ -198,33 +198,43 @@
   perspective-origin: center center;
 }
 
-/* Flip rotation for tabs - content rotates in from the side */
-@keyframes flipInX {
+/* Smooth header rotation from side */
+@keyframes rightsHeaderTurn {
   0% {
-    transform: rotateX(-90deg);
+    transform: rotateY(-12deg) translateX(-24px);
     opacity: 0;
   }
-  40% {
-    transform: rotateX(20deg);
-    opacity: 0.8;
-  }
   60% {
-    transform: rotateX(-10deg);
-    opacity: 0.9;
-  }
-  80% {
-    transform: rotateX(5deg);
+    transform: rotateY(3deg) translateX(2px);
+    opacity: 1;
   }
   100% {
-    transform: rotateX(0);
+    transform: rotateY(0) translateX(0);
     opacity: 1;
   }
 }
 
-.animate-flip-in-x {
-  animation: flipInX 0.6s ease-out forwards;
-  transform-origin: top center;
-  backface-visibility: hidden;
+/* Gentle content rise/fade */
+@keyframes rightsContentRise {
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-rights-header {
+  animation: rightsHeaderTurn 0.45s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation-fill-mode: both;
+}
+
+.animate-rights-content {
+  animation: rightsContentRise 0.35s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation-delay: 120ms;
+  animation-fill-mode: both;
 }
 
 /* Cube rotation for scenario cards */
@@ -290,7 +300,8 @@
   .transition-all,
   .transition-colors,
   .transition-transform,
-  .animate-flip-in-x,
+  .animate-rights-header,
+  .animate-rights-content,
   .animate-cube-rotate,
   .animate-card-flip {
     @apply transition-none;

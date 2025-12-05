@@ -168,25 +168,25 @@ export default function RightsInfo() {
 
             <div className="perspective-container">
               <TabsContent value="miranda" className="mt-0">
-                <div key={`miranda-${animationKey}`} className="animate-flip-in-x">
+                <div key={`miranda-${animationKey}`}>
                   <MirandaRightsSection />
                 </div>
               </TabsContent>
 
               <TabsContent value="arrest" className="mt-0">
-                <div key={`arrest-${animationKey}`} className="animate-flip-in-x">
+                <div key={`arrest-${animationKey}`}>
                   <ArrestRightsSection />
                 </div>
               </TabsContent>
 
               <TabsContent value="court" className="mt-0">
-                <div key={`court-${animationKey}`} className="animate-flip-in-x">
+                <div key={`court-${animationKey}`}>
                   <CourtRightsSection />
                 </div>
               </TabsContent>
 
               <TabsContent value="prison" className="mt-0">
-                <div key={`prison-${animationKey}`} className="animate-flip-in-x">
+                <div key={`prison-${animationKey}`}>
                   <PrisonRightsSection />
                 </div>
               </TabsContent>
@@ -305,13 +305,13 @@ function MirandaRightsSection() {
   
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="animate-rights-header">
         <CardTitle className="flex items-center space-x-2">
           <Shield className="h-5 w-5 text-primary" />
           <span>{t('rights.detailedRights.miranda.title')}</span>
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 animate-rights-content">
         <div>
           <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.miranda.completeWarning')}</h4>
           <div className="bg-muted p-4 rounded-lg space-y-2 text-sm">
@@ -350,13 +350,13 @@ function ArrestRightsSection() {
   
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="animate-rights-header">
         <CardTitle className="flex items-center space-x-2">
           <UserCheck className="h-5 w-5 text-primary" />
           <span>{t('rights.detailedRights.arrest.title')}</span>
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 animate-rights-content">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldDo')}</h4>
@@ -400,13 +400,13 @@ function CourtRightsSection() {
   
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="animate-rights-header">
         <CardTitle className="flex items-center space-x-2">
           <Gavel className="h-5 w-5 text-primary" />
           <span>{t('rights.detailedRights.court.title')}</span>
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 animate-rights-content">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.court.constitutional')}</h4>
@@ -446,13 +446,13 @@ function PrisonRightsSection() {
   
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="animate-rights-header">
         <CardTitle className="flex items-center space-x-2">
           <FileX className="h-5 w-5 text-primary" />
           <span>{t('rights.detailedRights.prison.title')}</span>
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 animate-rights-content">
         <div>
           <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.prison.continuing')}</h4>
           <ul className="space-y-2 text-muted-foreground">
