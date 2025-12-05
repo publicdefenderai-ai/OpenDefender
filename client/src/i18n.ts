@@ -1420,10 +1420,16 @@ i18n
               },
               "privacyEncryption": {
                 "title": "Advanced Privacy & Encryption",
-                "description": "NLP-based PII detection, anonymous consent tracking, and enhanced privacy protections. End-to-end encryption planned for sensitive legal consultations.",
-                "impact": "Maximum privacy protection for vulnerable users",
+                "description": "Complete privacy protection: NLP-based PII detection, anonymous consent tracking, transport encryption (HTTPS), encryption at rest (database), and session-based ephemerality with user-controlled data deletion.",
+                "impact": "Maximum privacy protection for vulnerable users"
+              },
+              "clientE2E": {
+                "title": "Client-Side End-to-End Encryption",
+                "description": "Advanced future feature: Browser-based encryption where user data is encrypted before leaving the device, ensuring zero-knowledge architecture.",
+                "impact": "Ultimate privacy for extremely sensitive consultations",
                 "challenges": {
-                  "e2e": "End-to-end encryption requires secure key management and client-side cryptography implementation"
+                  "keyManagement": "Secure key generation and storage in browser without server access",
+                  "aiCompatibility": "AI processing requires plaintext - trade-off between encryption and guidance quality"
                 }
               }
             },
@@ -2971,10 +2977,16 @@ i18n
               },
               "privacyEncryption": {
                 "title": "Privacidad y Encriptación Avanzadas",
-                "description": "Detección de PII basada en NLP, seguimiento de consentimiento anónimo y protecciones de privacidad mejoradas. Encriptación de extremo a extremo planificada para consultas legales sensibles.",
-                "impact": "Máxima protección de privacidad para usuarios vulnerables",
+                "description": "Protección de privacidad completa: detección de PII basada en NLP, seguimiento de consentimiento anónimo, encriptación en tránsito (HTTPS), encriptación en reposo (base de datos), y efimeralidad basada en sesión con eliminación de datos controlada por el usuario.",
+                "impact": "Máxima protección de privacidad para usuarios vulnerables"
+              },
+              "clientE2E": {
+                "title": "Encriptación de Extremo a Extremo del Cliente",
+                "description": "Función avanzada futura: Encriptación basada en navegador donde los datos del usuario se encriptan antes de salir del dispositivo, garantizando arquitectura de conocimiento cero.",
+                "impact": "Privacidad máxima para consultas extremadamente sensibles",
                 "challenges": {
-                  "e2e": "La encriptación de extremo a extremo requiere gestión segura de claves e implementación de criptografía del lado del cliente"
+                  "keyManagement": "Generación y almacenamiento seguro de claves en el navegador sin acceso al servidor",
+                  "aiCompatibility": "El procesamiento de IA requiere texto sin encriptar - compromiso entre encriptación y calidad de orientación"
                 }
               }
             },

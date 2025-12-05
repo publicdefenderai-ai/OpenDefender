@@ -195,13 +195,23 @@ export default function DevelopmentRoadmap() {
       id: "privacy-encryption",
       titleKey: "developmentRoadmap.items.privacyEncryption.title",
       descriptionKey: "developmentRoadmap.items.privacyEncryption.description",
-      status: "in-progress",
+      status: "completed",
       priority: "critical",
       category: "infrastructure",
-      estimatedCompletion: "Q1 2026",
-      progress: 95,
-      challengesKeys: ["developmentRoadmap.items.privacyEncryption.challenges.e2e"],
+      estimatedCompletion: "Completed Dec 2025",
+      progress: 100,
       impactKey: "developmentRoadmap.items.privacyEncryption.impact"
+    },
+    {
+      id: "client-e2e-encryption",
+      titleKey: "developmentRoadmap.items.clientE2E.title",
+      descriptionKey: "developmentRoadmap.items.clientE2E.description",
+      status: "researching",
+      priority: "medium",
+      category: "infrastructure",
+      estimatedCompletion: "TBD",
+      challengesKeys: ["developmentRoadmap.items.clientE2E.challenges.keyManagement", "developmentRoadmap.items.clientE2E.challenges.aiCompatibility"],
+      impactKey: "developmentRoadmap.items.clientE2E.impact"
     }
   ];
 
