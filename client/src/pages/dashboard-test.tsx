@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 // Test data that matches what the API returns
 const testGuidanceData = {
   sessionId: "test-session",
+  overview: "You are facing a robbery charge in California. This is a serious felony that requires immediate legal attention. Your arraignment must happen within 48 hours, and exercising your right to remain silent is critical at this stage.",
   criticalAlerts: [
     "URGENT: Exercise right to remain silent - do not answer questions without attorney",
     "Arraignment must occur Within 48 hours (72 hours if arrested on weekend)",
@@ -126,7 +127,6 @@ export default function DashboardTest() {
         <GuidanceDashboard 
           guidance={testGuidanceData} 
           onClose={() => window.location.href = '/case-guidance'}
-          onDeleteSession={() => window.location.href = '/case-guidance'}
         />
       </main>
       

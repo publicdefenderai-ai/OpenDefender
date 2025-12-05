@@ -464,7 +464,6 @@ export default function CaseGuidance() {
           <GuidanceDashboard 
             guidance={guidanceResult} 
             onClose={() => setGuidanceResult(null)}
-            onDeleteSession={handleNewSession}
             onShowPublicDefender={() => setShowPublicDefenderModal(true)}
             onShowLegalAid={() => setShowLegalAidModal(true)}
           />

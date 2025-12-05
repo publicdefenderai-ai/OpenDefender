@@ -601,18 +601,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Delete Legal Guidance Session
-  app.delete("/api/legal-guidance/:sessionId", async (req, res) => {
-    try {
-      const { sessionId } = req.params;
-      await storage.deleteLegalCase(sessionId);
-      res.json({ success: true, message: "Session deleted" });
-    } catch (error) {
-      console.error("Failed to delete legal guidance:", error);
-      res.status(500).json({ success: false, error: "Failed to delete session" });
-    }
-  });
-
   // Claude AI Health Check
   app.get("/api/ai/health", async (req, res) => {
     try {

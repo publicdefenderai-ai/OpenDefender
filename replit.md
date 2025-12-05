@@ -29,9 +29,9 @@ The platform implements comprehensive privacy protection across four layers:
 **2. Encryption at Rest**: PostgreSQL database uses Google Cloud SQL with automatic encryption, key rotation, and granular access controls. All stored data is encrypted at the database level.
 
 **3. Session-Based Ephemerality**: 
-- Legal case data auto-expires after 24 hours via `setTimeout` cleanup
-- Manual "Delete My Data Now" button allows immediate data deletion
-- DELETE `/api/legal-guidance/:sessionId` endpoint for programmatic deletion
+- Legal case data is memory-only (never written to database)
+- Auto-expires after 24 hours via `setTimeout` cleanup
+- Cleared on any server restart
 
 **4. PII Protection (NLP-Based)**: The redaction system (`server/services/pii-redactor.ts`) uses:
 - **NLP-Based Name Detection**: compromise.js for ML-powered detection, running 100% locally
