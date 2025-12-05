@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Check, AlertTriangle, Info } from "lucide-react";
 
 interface DataSourceCardProps {
@@ -16,8 +15,7 @@ export function DataSourceCard({
   title, 
   description, 
   status, 
-  statusText,
-  iconBgColor = "legal-blue"
+  statusText
 }: DataSourceCardProps) {
   const getStatusIcon = () => {
     switch (status) {
@@ -35,39 +33,38 @@ export function DataSourceCard({
     }
   };
 
-  const getStatusColor = () => {
+  const getStatusVariant = () => {
     switch (status) {
       case "live":
       case "government":
-        return "success-green";
       case "free":
-        return "success-green";
+        return "text-primary";
       case "paid":
-        return "legal-blue";
+        return "text-muted-foreground";
       case "mock":
       case "partial":
-        return "bg-amber-500";
+        return "text-muted-foreground";
       default:
-        return "bg-gray-500";
+        return "text-muted-foreground";
     }
   };
 
   return (
-    <Card className="bg-card border-border shadow-sm">
+    <Card className="bg-card border shadow-sm hover:shadow-md transition-shadow">
       <CardContent className="p-6">
-        <div className="flex items-center mb-4">
-          <div className={`w-10 h-10 ${iconBgColor} rounded-lg flex items-center justify-center mr-3`}>
+        <div className="flex items-start gap-4 mb-3">
+          <div className="w-10 h-10 rounded-full border-2 border-muted flex items-center justify-center flex-shrink-0 text-muted-foreground">
             {icon}
           </div>
-          <div>
-            <h3 className="font-semibold text-foreground">{title}</h3>
-            <Badge className={`${getStatusColor()} text-white text-xs`}>
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-foreground mb-1">{title}</h3>
+            <span className={`text-xs font-medium ${getStatusVariant()} flex items-center gap-1`}>
               {getStatusIcon()}
-              <span className="ml-1">{statusText}</span>
-            </Badge>
+              {statusText}
+            </span>
           </div>
         </div>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
       </CardContent>
     </Card>
   );

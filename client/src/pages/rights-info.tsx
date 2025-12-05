@@ -52,14 +52,14 @@ export default function RightsInfo() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-background py-16 border-b">
+        <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600" data-testid="heading-rights-title">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" data-testid="heading-rights-title">
                 {t('rights.hero.title')}
               </h1>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto" data-testid="text-rights-subtitle">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-rights-subtitle">
                 {t('rights.hero.subtitle')}
               </p>
             </div>
@@ -79,40 +79,36 @@ export default function RightsInfo() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ScrollReveal delay={0.1}>
               <QuickRightCard
-                icon={<Shield className="h-6 w-6 text-white" />}
+                icon={<Shield className="h-5 w-5" />}
                 title={t('rights.quickRights.silent.title')}
                 description={t('rights.quickRights.silent.description')}
-                bgColor="bg-blue-600"
                 onClick={() => setSelectedRight('silent')}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <QuickRightCard
-                icon={<Scale className="h-6 w-6 text-white" />}
+                icon={<Scale className="h-5 w-5" />}
                 title={t('rights.quickRights.attorney.title')}
                 description={t('rights.quickRights.attorney.description')}
-                bgColor="bg-green-600"
                 onClick={() => setSelectedRight('attorney')}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
               <QuickRightCard
-                icon={<Phone className="h-6 w-6 text-white" />}
+                icon={<Phone className="h-5 w-5" />}
                 title={t('rights.quickRights.phoneCall.title')}
                 description={t('rights.quickRights.phoneCall.description')}
-                bgColor="bg-blue-500"
                 onClick={() => setSelectedRight('phoneCall')}
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
               <QuickRightCard
-                icon={<UserCheck className="h-6 w-6 text-white" />}
+                icon={<UserCheck className="h-5 w-5" />}
                 title={t('rights.quickRights.knowCharges.title')}
                 description={t('rights.quickRights.knowCharges.description')}
-                bgColor="bg-purple-600"
                 onClick={() => setSelectedRight('knowCharges')}
               />
             </ScrollReveal>
@@ -272,21 +268,20 @@ export default function RightsInfo() {
   );
 }
 
-function QuickRightCard({ icon, title, description, bgColor, onClick }: {
+function QuickRightCard({ icon, title, description, onClick }: {
   icon: React.ReactNode;
   title: string;
   description: string;
-  bgColor: string;
   onClick: () => void;
 }) {
   return (
     <Card 
-      className="text-center hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105" 
+      className="text-center hover:shadow-md transition-all duration-200 cursor-pointer border" 
       onClick={onClick}
       data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
     >
       <CardContent className="p-6">
-        <div className={`w-12 h-12 ${bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+        <div className="w-12 h-12 rounded-full border-2 border-muted flex items-center justify-center mx-auto mb-4 text-muted-foreground">
           {icon}
         </div>
         <h3 className="font-semibold text-foreground mb-2">{title}</h3>

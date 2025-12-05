@@ -40,22 +40,21 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 interface TrustItemProps {
   icon: React.ReactNode;
-  iconBgColor: string;
   title: string;
   description: string;
 }
 
-function TrustItem({ icon, iconBgColor, title, description }: TrustItemProps) {
+function TrustItem({ icon, title, description }: TrustItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <Card className="overflow-hidden border-2 hover:border-primary/20 transition-all duration-200" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+      <Card className="overflow-hidden border hover:border-primary/30 transition-all duration-200" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
         <CollapsibleTrigger className="w-full" data-testid={`button-toggle-${title.toLowerCase().replace(/\s+/g, '-')}`}>
           <CardContent className="p-4">
             <div className="flex items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <div className={`w-12 h-12 ${iconBgColor} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                <div className="w-10 h-10 rounded-full border-2 border-muted flex items-center justify-center flex-shrink-0 text-muted-foreground">
                   {icon}
                 </div>
                 <h3 className="font-semibold text-foreground text-left">{title}</h3>
@@ -68,7 +67,7 @@ function TrustItem({ icon, iconBgColor, title, description }: TrustItemProps) {
         </CollapsibleTrigger>
         <CollapsibleContent>
           <CardContent className="px-4 pb-4 pt-0">
-            <p className="text-sm text-muted-foreground pl-[60px]" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+            <p className="text-sm text-muted-foreground pl-[52px]" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
               {description}
             </p>
           </CardContent>
@@ -93,7 +92,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
                   {office.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
-              <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">
+              <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">
                 {office.distance} {t('home.publicDefenderSearch.milesAway')}
               </span>
             </div>
@@ -186,7 +185,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
                   {organization.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
-              <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">
+              <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">
                 {organization.distance} {t('home.publicDefenderSearch.milesAway')}
               </span>
               <span className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
@@ -336,57 +335,51 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-12 md:py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      <section className="bg-background py-16 md:py-24 lg:py-32 border-b">
+        <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
-              <span className="text-blue-800 dark:text-blue-200">{t('home.hero.title1')}</span><br />
-              <span className="text-blue-800 dark:text-blue-200">{t('home.hero.title2')}</span>
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 text-blue-800 dark:text-blue-200 max-w-4xl mx-auto leading-relaxed">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight text-foreground">
+              {t('home.hero.title1')}{' '}
+              <span className="text-primary">{t('home.hero.title2')}</span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl mb-10 md:mb-14 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
 
           {/* Main CTAs */}
           <ScrollReveal delay={0.2}>
-            <div className="flex flex-col items-center gap-4 md:gap-6 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center gap-4 md:gap-5 max-w-xl mx-auto">
               <Button
                 onClick={() => setGetStartedOpen(true)}
-                className="success-green hover:bg-green-700 hover:shadow-2xl font-bold py-4 px-8 md:py-6 md:px-12 rounded-2xl text-lg md:text-2xl shadow-xl transition-all duration-200 w-full md:w-auto min-h-[48px]"
+                size="lg"
+                className="bg-primary hover:bg-primary/90 font-semibold py-6 px-10 rounded-lg text-lg shadow-sm transition-all duration-200 w-full md:w-auto min-h-[56px]"
                 data-testid="button-get-started"
               >
                 {t('home.hero.getStartedButton')}
-                <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
-              <Button
+              <button
                 onClick={handleUrgentHelp}
-                className="bg-red-600 hover:bg-red-700 hover:shadow-2xl text-white font-bold py-4 px-8 md:py-6 md:px-12 rounded-2xl text-lg md:text-2xl shadow-xl transition-all duration-200 w-full md:w-auto min-h-[48px]"
+                className="text-destructive hover:text-destructive/80 font-medium text-base underline-offset-4 hover:underline transition-colors flex items-center gap-2"
                 data-testid="button-urgent-help"
               >
-                <AlertTriangle className="mr-2 md:mr-3 h-5 w-5 md:h-6 md:w-6" />
+                <AlertTriangle className="h-4 w-4" />
                 {t('home.hero.urgentHelpButton')}
-              </Button>
+              </button>
               
-              <p className="text-sm sm:text-base font-semibold text-blue-800 dark:text-blue-200 mt-2 px-4 max-w-5xl mx-auto">
+              <p className="text-sm text-muted-foreground mt-4 px-4 max-w-2xl mx-auto">
                 {t('home.hero.urgentHelpNotice')}
               </p>
               
-              {/* Add Navigating This Tool button */}
-              <Link href="/how-to">
-                <Button
-                  variant="outline"
-                  className="mt-2 md:mt-4 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-blue-800 dark:text-blue-200 font-semibold py-3 px-6 rounded-lg min-h-[44px]"
-                  data-testid="button-navigating-tool"
-                >
-                  <Book className="mr-2 h-4 w-4" />
-                  {t('home.hero.navigatingToolButton')}
-                </Button>
+              <Link href="/how-to" className="mt-2 text-sm text-muted-foreground hover:text-foreground underline-offset-4 hover:underline transition-colors flex items-center gap-1.5">
+                <Book className="h-4 w-4" />
+                {t('home.hero.navigatingToolButton')}
               </Link>
             </div>
           </ScrollReveal>
@@ -410,34 +403,31 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <DataSourceCard
-                icon={<Book className="h-6 w-6 text-white" />}
+                icon={<Book className="h-5 w-5" />}
                 title={t('home.features.federalCourts')}
                 description={t('home.features.federalCourtsDesc')}
                 status="partial"
                 statusText={t('home.features.federalCourtsStatus')}
-                iconBgColor="bg-blue-600"
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
               <DataSourceCard
-                icon={<FileText className="h-6 w-6 text-white" />}
+                icon={<FileText className="h-5 w-5" />}
                 title={t('home.features.stateLaws')}
                 description={t('home.features.stateLawsDesc')}
                 status="live"
                 statusText={t('home.features.stateLawsStatus')}
-                iconBgColor="bg-green-600"
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
               <DataSourceCard
-                icon={<BarChart3 className="h-6 w-6 text-white" />}
+                icon={<BarChart3 className="h-5 w-5" />}
                 title={t('home.features.analytics')}
                 description={t('home.features.analyticsDesc')}
                 status="partial"
                 statusText={t('home.features.analyticsStatus')}
-                iconBgColor="bg-blue-500"
               />
             </ScrollReveal>
           </div>
@@ -462,8 +452,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto space-y-3">
             <ScrollReveal delay={0.1}>
               <TrustItem
-                icon={<CheckCircle className="h-6 w-6 text-white" />}
-                iconBgColor="bg-blue-600"
+                icon={<CheckCircle className="h-5 w-5" />}
                 title={t('home.trust.verifiedTitle')}
                 description={t('home.trust.verifiedDesc')}
               />
@@ -471,8 +460,7 @@ export default function Home() {
 
             <ScrollReveal delay={0.2}>
               <TrustItem
-                icon={<Shield className="h-6 w-6 text-white" />}
-                iconBgColor="bg-green-600"
+                icon={<Shield className="h-5 w-5" />}
                 title={t('home.trust.privacyTitle')}
                 description={t('home.trust.privacyDesc')}
               />
@@ -480,8 +468,7 @@ export default function Home() {
 
             <ScrollReveal delay={0.3}>
               <TrustItem
-                icon={<RotateCcw className="h-6 w-6 text-white" />}
-                iconBgColor="bg-purple-600"
+                icon={<RotateCcw className="h-5 w-5" />}
                 title={t('home.trust.currentTitle')}
                 description={t('home.trust.currentDesc')}
               />
@@ -490,12 +477,14 @@ export default function Home() {
 
           {/* Disclaimer */}
           <ScrollReveal delay={0.5}>
-            <Alert className="mt-16 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-              <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">{t('home.trust.disclaimerTitle')}</strong> {t('home.trust.disclaimerText')}
-              </AlertDescription>
-            </Alert>
+            <Card className="mt-12 max-w-3xl mx-auto">
+              <CardContent className="p-6">
+                <p className="text-sm text-muted-foreground">
+                  <strong className="font-semibold text-foreground">{t('home.trust.disclaimerTitle')}</strong>{' '}
+                  {t('home.trust.disclaimerText')}
+                </p>
+              </CardContent>
+            </Card>
           </ScrollReveal>
         </div>
       </section>
