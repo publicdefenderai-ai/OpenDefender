@@ -364,16 +364,18 @@ export default function Home() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
-              <button
+              <Button
                 onClick={handleUrgentHelp}
-                className="text-destructive hover:text-destructive/80 font-medium text-base underline-offset-4 hover:underline transition-colors flex items-center gap-2"
+                variant="destructive"
+                size="lg"
+                className="font-semibold py-5 px-8 rounded-lg text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full md:w-auto min-h-[52px] animate-pulse hover:animate-none"
                 data-testid="button-urgent-help"
               >
-                <AlertTriangle className="h-4 w-4" />
+                <AlertTriangle className="h-5 w-5 mr-2" />
                 {t('home.hero.urgentHelpButton')}
-              </button>
+              </Button>
               
-              <p className="text-sm text-muted-foreground mt-4 px-4 max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground mt-2 px-4 max-w-2xl mx-auto">
                 {t('home.hero.urgentHelpNotice')}
               </p>
               

@@ -46,6 +46,13 @@ export default function RightsInfo() {
   const [selectedJurisdiction, setSelectedJurisdiction] = useState("federal");
   const { data: resources, isLoading } = useLegalResources(selectedJurisdiction);
   const [selectedRight, setSelectedRight] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState("miranda");
+  const [animationKey, setAnimationKey] = useState(0);
+  
+  const handleTabChange = (value: string) => {
+    setAnimationKey(prev => prev + 1);
+    setActiveTab(value);
+  };
 
   return (
     <div className="min-h-screen bg-background">

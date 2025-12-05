@@ -192,12 +192,108 @@
   }
 }
 
+/* 3D Rotation Animations */
+.perspective-container {
+  perspective: 1200px;
+  perspective-origin: center center;
+}
+
+/* Flip rotation for tabs - content rotates in from the side */
+@keyframes flipInX {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: rotateX(20deg);
+    opacity: 0.8;
+  }
+  60% {
+    transform: rotateX(-10deg);
+    opacity: 0.9;
+  }
+  80% {
+    transform: rotateX(5deg);
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-flip-in-x {
+  animation: flipInX 0.6s ease-out forwards;
+  transform-origin: top center;
+  backface-visibility: hidden;
+}
+
+/* Cube rotation for scenario cards */
+@keyframes cubeRotateIn {
+  0% {
+    transform: rotateY(-90deg) scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(15deg) scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-cube-rotate {
+  animation: cubeRotateIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+/* Card flip for expanded scenarios */
+@keyframes cardFlip {
+  0% {
+    transform: rotateX(90deg) translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-card-flip {
+  animation: cardFlip 0.4s ease-out forwards;
+  transform-origin: top center;
+}
+
+/* Vivid contrast header blocks */
+.vivid-header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(220 60% 35%) 0%, hsl(220 55% 45%) 50%, hsl(220 50% 55%) 100%);
+}
+
+.vivid-header-content {
+  position: relative;
+  z-index: 10;
+}
+
+.vivid-header-alt {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(240 30% 15%) 0%, hsl(230 25% 22%) 50%, hsl(220 20% 28%) 100%);
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal,
   .transition-all,
   .transition-colors,
-  .transition-transform {
+  .transition-transform,
+  .animate-flip-in-x,
+  .animate-cube-rotate,
+  .animate-card-flip {
     @apply transition-none;
+    animation: none !important;
   }
 }
