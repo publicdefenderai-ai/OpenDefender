@@ -18,7 +18,15 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.
 
-A dual-mode AI guidance system intelligently selects between Anthropic's Claude AI (Sonnet 4.5) and a rule-based engine. It includes robust error handling with retry logic and fallbacks to ensure continuous service. All AI interactions are cost-tracked. A critical PII redaction system (`server/services/pii-redactor.ts`) automatically scrubs user input before it reaches Claude AI, balancing privacy with the preservation of legal context. High-confidence PII is redacted with category-aware placeholders.
+A dual-mode AI guidance system intelligently selects between Anthropic's Claude AI (Sonnet 4.5) and a rule-based engine. It includes robust error handling with retry logic and fallbacks to ensure continuous service. All AI interactions are cost-tracked.
+
+**Privacy-First PII Protection (Dec 2025)**: The PII redaction system (`server/services/pii-redactor.ts`) uses a hybrid approach:
+- **NLP-Based Name Detection**: Uses compromise.js for ML-powered person name detection, running 100% locally (no external API calls)
+- **Institutional Term Preservation**: Legal terms like "State of California", "People vs", court names are protected from false positive redaction
+- **Regex Pattern Matching**: Additional detection for emails, SSNs, phone numbers, addresses, dates
+- **High-Confidence Thresholds**: Category-aware placeholders (e.g., `[REDACTED_NAME]`, `[REDACTED_EMAIL]`) ensure context is preserved for legal analysis
+
+**Anonymous Consent Tracking**: Privacy consent records use SHA-256 hashed session identifiers—raw session IDs are never persisted. Only aggregate statistics are exposed via API. Server logs contain no PII; all user content is redacted before any logging.
 
 ### Multi-Tier Validation System
 
