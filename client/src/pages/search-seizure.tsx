@@ -158,30 +158,48 @@ const scenarios: RightsScenario[] = [
   }
 ];
 
-function ScenarioCard({ scenario }: { scenario: RightsScenario }) {
+function ScenarioCard({ scenario, index }: { scenario: RightsScenario; index: number }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [animateContent, setAnimateContent] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleOpenChange = (open: boolean) => {
+    setIsOpen(open);
+    if (open) {
+      setAnimateContent(true);
+    } else {
+      setAnimateContent(false);
+    }
+  };
 
   return (
-    <Card className="hover:shadow-lg transition-all duration-300">
-      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-        <CardHeader>
-          <CollapsibleTrigger className="w-full">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className={`w-12 h-12 ${scenario.iconBgColor} rounded-lg flex items-center justify-center`}>
-                  {scenario.icon}
+    <div className="perspective-container">
+      <Card 
+        className={`hover:shadow-lg transition-all duration-300 ${!hasAnimated ? 'animate-cube-rotate' : ''}`}
+        style={{ animationDelay: `${index * 0.08}s` }}
+        onAnimationEnd={() => setHasAnimated(true)}
+      >
+        <Collapsible open={isOpen} onOpenChange={handleOpenChange}>
+          <CardHeader>
+            <CollapsibleTrigger className="w-full">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className={`w-12 h-12 ${scenario.iconBgColor} rounded-lg flex items-center justify-center transition-transform duration-300 ${isOpen ? 'scale-110' : ''}`}>
+                    {scenario.icon}
+                  </div>
+                  <div className="text-left">
+                    <CardTitle>{scenario.title}</CardTitle>
+                    <p className="text-sm text-muted-foreground mt-1">{scenario.description}</p>
+                  </div>
                 </div>
-                <div className="text-left">
-                  <CardTitle>{scenario.title}</CardTitle>
-                  <p className="text-sm text-muted-foreground mt-1">{scenario.description}</p>
+                <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+                  <ChevronDown className="h-5 w-5" />
                 </div>
               </div>
-              {isOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-            </div>
-          </CollapsibleTrigger>
-        </CardHeader>
-        <CollapsibleContent>
-          <CardContent className="space-y-6">
+            </CollapsibleTrigger>
+          </CardHeader>
+          <CollapsibleContent>
+            <CardContent className={`space-y-6 perspective-container ${animateContent ? 'animate-card-flip' : ''}`}>
             {/* Your Rights */}
             <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3 flex items-center">
@@ -231,6 +249,7 @@ function ScenarioCard({ scenario }: { scenario: RightsScenario }) {
         </CollapsibleContent>
       </Collapsible>
     </Card>
+    </div>
   );
 }
 
@@ -240,16 +259,16 @@ export default function SearchSeizure() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="gradient-hero text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Hero Section - Vivid Header */}
+      <section className="vivid-header py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 <Search className="inline h-10 w-10 mr-2 mb-2" />
                 Search and Seizure Rights
               </h1>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto">
                 Know your rights during police stops, searches, and seizures
               </p>
             </div>
@@ -323,7 +342,7 @@ export default function SearchSeizure() {
           <div className="space-y-4">
             {scenarios.map((scenario, index) => (
               <ScrollReveal key={scenario.title} delay={index * 0.1}>
-                <ScenarioCard scenario={scenario} />
+                <ScenarioCard scenario={scenario} index={index} />
               </ScrollReveal>
             ))}
           </div>

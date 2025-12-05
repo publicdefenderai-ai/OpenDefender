@@ -58,15 +58,15 @@ export default function RightsInfo() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-background py-16 border-b">
-        <div className="max-w-4xl mx-auto px-4">
+      {/* Hero Section - Vivid Header */}
+      <section className="vivid-header-alt py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground" data-testid="heading-rights-title">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white" data-testid="heading-rights-title">
                 {t('rights.hero.title')}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-rights-subtitle">
+              <p className="text-xl text-white/80 max-w-3xl mx-auto" data-testid="text-rights-subtitle">
                 {t('rights.hero.subtitle')}
               </p>
             </div>
@@ -132,7 +132,7 @@ export default function RightsInfo() {
             </h2>
           </ScrollReveal>
 
-          <Tabs defaultValue="miranda" className="w-full">
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <ScrollReveal delay={0.1}>
               <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-background border border-border">
                 <TabsTrigger 
@@ -166,29 +166,31 @@ export default function RightsInfo() {
               </TabsList>
             </ScrollReveal>
 
-            <TabsContent value="miranda">
-              <ScrollReveal delay={0.2}>
-                <MirandaRightsSection />
-              </ScrollReveal>
-            </TabsContent>
+            <div className="perspective-container">
+              <TabsContent value="miranda" className="mt-0">
+                <div key={`miranda-${animationKey}`} className="animate-flip-in-x">
+                  <MirandaRightsSection />
+                </div>
+              </TabsContent>
 
-            <TabsContent value="arrest">
-              <ScrollReveal delay={0.2}>
-                <ArrestRightsSection />
-              </ScrollReveal>
-            </TabsContent>
+              <TabsContent value="arrest" className="mt-0">
+                <div key={`arrest-${animationKey}`} className="animate-flip-in-x">
+                  <ArrestRightsSection />
+                </div>
+              </TabsContent>
 
-            <TabsContent value="court">
-              <ScrollReveal delay={0.2}>
-                <CourtRightsSection />
-              </ScrollReveal>
-            </TabsContent>
+              <TabsContent value="court" className="mt-0">
+                <div key={`court-${animationKey}`} className="animate-flip-in-x">
+                  <CourtRightsSection />
+                </div>
+              </TabsContent>
 
-            <TabsContent value="prison">
-              <ScrollReveal delay={0.2}>
-                <PrisonRightsSection />
-              </ScrollReveal>
-            </TabsContent>
+              <TabsContent value="prison" className="mt-0">
+                <div key={`prison-${animationKey}`} className="animate-flip-in-x">
+                  <PrisonRightsSection />
+                </div>
+              </TabsContent>
+            </div>
           </Tabs>
         </div>
       </section>
