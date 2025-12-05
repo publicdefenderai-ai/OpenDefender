@@ -1415,8 +1415,11 @@ i18n
               },
               "privacyEncryption": {
                 "title": "Advanced Privacy & Encryption",
-                "description": "End-to-end encryption and enhanced privacy protections for sensitive legal consultations",
-                "impact": "Maximum privacy protection for vulnerable users"
+                "description": "NLP-based PII detection, anonymous consent tracking, and enhanced privacy protections. End-to-end encryption planned for sensitive legal consultations.",
+                "impact": "Maximum privacy protection for vulnerable users",
+                "challenges": {
+                  "e2e": "End-to-end encryption requires secure key management and client-side cryptography implementation"
+                }
               }
             },
             "getInvolved": {
@@ -2958,8 +2961,11 @@ i18n
               },
               "privacyEncryption": {
                 "title": "Privacidad y Encriptación Avanzadas",
-                "description": "Encriptación de extremo a extremo y protecciones de privacidad mejoradas para consultas legales sensibles",
-                "impact": "Máxima protección de privacidad para usuarios vulnerables"
+                "description": "Detección de PII basada en NLP, seguimiento de consentimiento anónimo y protecciones de privacidad mejoradas. Encriptación de extremo a extremo planificada para consultas legales sensibles.",
+                "impact": "Máxima protección de privacidad para usuarios vulnerables",
+                "challenges": {
+                  "e2e": "La encriptación de extremo a extremo requiere gestión segura de claves e implementación de criptografía del lado del cliente"
+                }
               }
             },
             "getInvolved": {

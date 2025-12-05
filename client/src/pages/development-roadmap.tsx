@@ -198,8 +198,9 @@ export default function DevelopmentRoadmap() {
       status: "in-progress",
       priority: "critical",
       category: "infrastructure",
-      estimatedCompletion: "Q4 2025",
-      progress: 80,
+      estimatedCompletion: "Q1 2026",
+      progress: 95,
+      challengesKeys: ["developmentRoadmap.items.privacyEncryption.challenges.e2e"],
       impactKey: "developmentRoadmap.items.privacyEncryption.impact"
     }
   ];
