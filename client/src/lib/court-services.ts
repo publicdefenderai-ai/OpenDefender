@@ -15,8 +15,23 @@ export interface CourtLocation {
   lng: number;
 }
 
-// Free geocoding service to convert ZIP to coordinates and get county info
-export async function getZipCodeCoordinates(zipCode: string): Promise<{ lat: number; lng: number; county?: string } | null> {
+// State name to abbreviation mapping for geocoding results
+const stateNameToAbbreviation: Record<string, string> = {
+  'alabama': 'AL', 'alaska': 'AK', 'arizona': 'AZ', 'arkansas': 'AR', 'california': 'CA',
+  'colorado': 'CO', 'connecticut': 'CT', 'delaware': 'DE', 'florida': 'FL', 'georgia': 'GA',
+  'hawaii': 'HI', 'idaho': 'ID', 'illinois': 'IL', 'indiana': 'IN', 'iowa': 'IA',
+  'kansas': 'KS', 'kentucky': 'KY', 'louisiana': 'LA', 'maine': 'ME', 'maryland': 'MD',
+  'massachusetts': 'MA', 'michigan': 'MI', 'minnesota': 'MN', 'mississippi': 'MS', 'missouri': 'MO',
+  'montana': 'MT', 'nebraska': 'NE', 'nevada': 'NV', 'new hampshire': 'NH', 'new jersey': 'NJ',
+  'new mexico': 'NM', 'new york': 'NY', 'north carolina': 'NC', 'north dakota': 'ND', 'ohio': 'OH',
+  'oklahoma': 'OK', 'oregon': 'OR', 'pennsylvania': 'PA', 'rhode island': 'RI', 'south carolina': 'SC',
+  'south dakota': 'SD', 'tennessee': 'TN', 'texas': 'TX', 'utah': 'UT', 'vermont': 'VT',
+  'virginia': 'VA', 'washington': 'WA', 'west virginia': 'WV', 'wisconsin': 'WI', 'wyoming': 'WY',
+  'district of columbia': 'DC'
+};
+
+// Free geocoding service to convert ZIP to coordinates, county, and state info
+export async function getZipCodeCoordinates(zipCode: string): Promise<{ lat: number; lng: number; county?: string; state?: string; stateAbbrev?: string } | null> {
   try {
     // Using Nominatim (OpenStreetMap) - completely free
     const response = await fetch(
@@ -36,10 +51,15 @@ export async function getZipCodeCoordinates(zipCode: string): Promise<{ lat: num
     if (data && data.length > 0) {
       const place = data[0];
       const address = place.address || {};
+      const stateName = address.state?.toLowerCase();
+      const stateAbbrev = stateName ? stateNameToAbbreviation[stateName] : undefined;
+      
       return {
         lat: parseFloat(place.lat),
         lng: parseFloat(place.lon),
-        county: address.county?.replace(' County', '') // Remove "County" suffix if present
+        county: address.county?.replace(' County', ''), // Remove "County" suffix if present
+        state: address.state,
+        stateAbbrev
       };
     }
     return null;

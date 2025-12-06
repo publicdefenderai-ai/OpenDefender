@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 import { 
   Search, 
@@ -10,7 +10,9 @@ import {
   Mail,
   ExternalLink,
   Users,
-  CheckCircle
+  CheckCircle,
+  Loader2,
+  Info
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -24,6 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link } from "wouter";
 
 import { Header } from "@/components/layout/header";
@@ -33,8 +36,10 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
   diversionPrograms, 
   searchDiversionPrograms, 
+  searchDiversionProgramsExpanded,
   getProgramsByState, 
-  getAvailableStates 
+  getAvailableStates,
+  type ExpandedSearchResult
 } from "@/lib/diversion-programs-data";
 
 interface DiversionProgramCardProps {
@@ -151,6 +156,60 @@ export default function DiversionPrograms() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [selectedProgramType, setSelectedProgramType] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
+  const [expandedSearchResult, setExpandedSearchResult] = useState<ExpandedSearchResult | null>(null);
+  const [debouncedQuery, setDebouncedQuery] = useState("");
+
+  // Debounce search query to avoid excessive API calls
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(searchQuery);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // Run expanded search when debounced query changes (for zip codes)
+  // Use a ref to track the current query to prevent race conditions
+  const latestQueryRef = useRef<string>("");
+  
+  useEffect(() => {
+    const currentQuery = debouncedQuery.trim();
+    latestQueryRef.current = currentQuery;
+    
+    const runExpandedSearch = async () => {
+      // Clear loading state immediately for empty/non-zip queries
+      if (!currentQuery) {
+        setIsSearching(false);
+        setExpandedSearchResult(null);
+        return;
+      }
+      
+      // Only use async search for zip codes (5 digits)
+      if (/^\d{5}$/.test(currentQuery)) {
+        setIsSearching(true);
+        try {
+          const result = await searchDiversionProgramsExpanded(currentQuery);
+          // Only update state if this is still the latest query (prevents race conditions)
+          if (latestQueryRef.current === currentQuery) {
+            setExpandedSearchResult(result);
+            setIsSearching(false);
+          }
+        } catch (error) {
+          console.error('Error in expanded search:', error);
+          if (latestQueryRef.current === currentQuery) {
+            setExpandedSearchResult({ programs: searchDiversionPrograms(currentQuery) });
+            setIsSearching(false);
+          }
+        }
+      } else {
+        // For non-zip searches, use sync search and clear loading state
+        setIsSearching(false);
+        setExpandedSearchResult({ programs: searchDiversionPrograms(currentQuery) });
+      }
+    };
+    
+    runExpandedSearch();
+  }, [debouncedQuery]);
 
   // Get all unique program types
   const availableProgramTypes = useMemo(() => {
@@ -163,11 +222,12 @@ export default function DiversionPrograms() {
 
   // Filter programs based on search, state, and program type
   const filteredPrograms = useMemo(() => {
-    let programs = diversionPrograms;
+    // Start with expanded search results if available, otherwise all programs
+    let programs = expandedSearchResult?.programs ?? (debouncedQuery.trim() ? [] : diversionPrograms);
 
-    // Apply search filter (location-based)
-    if (searchQuery.trim()) {
-      programs = searchDiversionPrograms(searchQuery);
+    // If no expanded search result but we have a query (and not searching), fall back
+    if (!expandedSearchResult && debouncedQuery.trim() && !isSearching) {
+      programs = searchDiversionPrograms(debouncedQuery);
     }
 
     // Apply state filter
@@ -183,7 +243,7 @@ export default function DiversionPrograms() {
     }
 
     return programs.sort((a, b) => a.name.localeCompare(b.name));
-  }, [searchQuery, selectedState, selectedProgramType]);
+  }, [expandedSearchResult, debouncedQuery, selectedState, selectedProgramType, isSearching]);
 
   const availableStates = getAvailableStates();
 
@@ -191,6 +251,7 @@ export default function DiversionPrograms() {
     setSearchQuery("");
     setSelectedState("");
     setSelectedProgramType("");
+    setExpandedSearchResult(null);
   };
 
   const hasActiveFilters = searchQuery || selectedState || selectedProgramType;
@@ -320,6 +381,37 @@ export default function DiversionPrograms() {
               </CardContent>
             </Card>
           </ScrollReveal>
+
+          {/* Expanded Search Info - Shows when zip code search expanded to state */}
+          {expandedSearchResult?.expandedToState && (
+            <ScrollReveal delay={0.12}>
+              <Alert className="mb-6 bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
+                <Info className="h-4 w-4 text-green-600" />
+                <AlertDescription className="text-green-800 dark:text-green-200">
+                  {t('diversionPrograms.expandedSearch.message', {
+                    zipCode: expandedSearchResult.searchedZipCode,
+                    state: expandedSearchResult.expandedToState,
+                    count: expandedSearchResult.programs.length,
+                    defaultValue: `Showing all ${expandedSearchResult.programs.length} programs in ${expandedSearchResult.expandedToState} for ZIP code ${expandedSearchResult.searchedZipCode}. These programs may be available to you or accept referrals from your area.`
+                  })}
+                </AlertDescription>
+              </Alert>
+            </ScrollReveal>
+          )}
+
+          {/* Loading State */}
+          {isSearching && (
+            <ScrollReveal delay={0.12}>
+              <Card className="mb-6">
+                <CardContent className="p-6 flex items-center justify-center gap-3">
+                  <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                  <span className="text-muted-foreground">
+                    {t('diversionPrograms.search.searching', { defaultValue: 'Searching for programs near you...' })}
+                  </span>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          )}
 
           {/* Information Banner */}
           <ScrollReveal delay={0.15}>

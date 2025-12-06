@@ -1,4 +1,5 @@
 import { DiversionProgram } from "@shared/schema";
+import { getZipCodeCoordinates } from "./court-services";
 
 /**
  * DIVERSION PROGRAMS DATABASE
@@ -1404,6 +1405,56 @@ const stateNameToAbbrev: Record<string, string> = {
   'virginia': 'VA', 'washington': 'WA', 'west virginia': 'WV', 'wisconsin': 'WI', 'wyoming': 'WY',
   'district of columbia': 'DC', 'washington dc': 'DC', 'washington d.c.': 'DC', 'd.c.': 'DC'
 };
+
+// Check if a string looks like a zip code (5 digits)
+function isZipCode(query: string): boolean {
+  return /^\d{5}$/.test(query.trim());
+}
+
+// Async search that expands zip code searches to show all programs in that state
+export interface ExpandedSearchResult {
+  programs: DiversionProgram[];
+  expandedToState?: string;
+  searchedZipCode?: string;
+  county?: string;
+}
+
+export async function searchDiversionProgramsExpanded(query: string): Promise<ExpandedSearchResult> {
+  if (!query.trim()) {
+    return { programs: [] };
+  }
+  
+  const trimmedQuery = query.trim();
+  
+  // If it's a zip code, geocode it and expand to state
+  if (isZipCode(trimmedQuery)) {
+    try {
+      const geoResult = await getZipCodeCoordinates(trimmedQuery);
+      
+      if (geoResult?.stateAbbrev) {
+        // Return all programs in that state
+        const statePrograms = diversionPrograms.filter(
+          program => program.state.toUpperCase() === geoResult.stateAbbrev
+        );
+        
+        return {
+          programs: statePrograms.sort((a, b) => a.name.localeCompare(b.name)),
+          expandedToState: geoResult.state,
+          searchedZipCode: trimmedQuery,
+          county: geoResult.county
+        };
+      }
+    } catch (error) {
+      console.error('Error geocoding zip code for diversion programs:', error);
+    }
+    
+    // Fall back to regular search if geocoding fails
+    return { programs: searchDiversionPrograms(trimmedQuery) };
+  }
+  
+  // For non-zip-code queries, use the regular search
+  return { programs: searchDiversionPrograms(trimmedQuery) };
+}
 
 export function searchDiversionPrograms(query: string): DiversionProgram[] {
   if (!query.trim()) return diversionPrograms;
