@@ -57,7 +57,7 @@ export function RotatingCardCarousel({
 
   return (
     <div className="relative w-full max-w-lg mx-auto" style={{ perspective: "1000px" }}>
-      <div className="relative h-[200px] flex items-center justify-center">
+      <div className="relative h-[180px] flex items-center justify-center">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
@@ -73,13 +73,13 @@ export function RotatingCardCarousel({
             className="absolute w-full"
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="bg-card border border-border/50 rounded-2xl p-8 shadow-lg backdrop-blur-sm">
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <div className="bg-card border border-border/50 rounded-2xl px-6 py-5 shadow-lg backdrop-blur-sm">
+              <div className="flex flex-col items-center text-center gap-3">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center text-primary ring-1 ring-primary/20">
                   {items[currentIndex].icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-foreground mb-1.5">
                     {items[currentIndex].title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -92,15 +92,15 @@ export function RotatingCardCarousel({
         </AnimatePresence>
       </div>
 
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="flex justify-center gap-2.5 mt-4">
         {items.map((_, index) => (
           <button
             key={index}
             onClick={() => goToIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
                 ? "bg-primary w-6"
-                : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                : "w-2 bg-muted-foreground/20 ring-1 ring-border hover:bg-muted-foreground/40"
             }`}
             aria-label={`Go to slide ${index + 1}`}
             data-testid={`carousel-dot-${index}`}

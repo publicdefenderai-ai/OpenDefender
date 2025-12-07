@@ -75,7 +75,7 @@ i18n
               "privacyDesc": "No personal information stored, all session data automatically deleted",
               "currentTitle": "Current Information",
               "currentDesc": "Legal databases updated regularly to reflect the latest laws and procedures",
-              "disclaimerTitle": "Important Legal Disclaimer:",
+              "disclaimerTitle": "Legal Disclaimer:",
               "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
             "urgentHelp": {
@@ -1652,7 +1652,7 @@ i18n
               "privacyDesc": "No se almacena información personal, todos los datos de la sesión se eliminan automáticamente",
               "currentTitle": "Información Actualizada",
               "currentDesc": "Bases de datos legales actualizadas regularmente para reflejar las leyes y procedimientos más recientes",
-              "disclaimerTitle": "Descargo de Responsabilidad Legal Importante:",
+              "disclaimerTitle": "Descargo de Responsabilidad Legal:",
               "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
             },
             "urgentHelp": {

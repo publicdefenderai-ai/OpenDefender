@@ -49,16 +49,21 @@ function TrustItem({ title, description }: Omit<TrustItemProps, 'icon'>) {
           <div className="flex items-center justify-between gap-3">
             <h3 className="font-medium text-foreground text-left">{title}</h3>
             <ChevronDown 
-              className={`h-4 w-4 text-muted-foreground transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+              className={`h-4 w-4 text-muted-foreground transition-transform duration-300 ease-out flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
             />
           </div>
         </CollapsibleTrigger>
-        <CollapsibleContent>
-          <div className="px-2 pb-4">
+        <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="px-2 pb-4"
+          >
             <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
               {description}
             </p>
-          </div>
+          </motion.div>
         </CollapsibleContent>
       </div>
     </Collapsible>
@@ -335,7 +340,7 @@ export default function Home() {
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-foreground">
               {t('home.hero.title1')}{' '}
-              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{t('home.hero.title2')}</span>
+              <span className="text-primary">{t('home.hero.title2')}</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-10 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
