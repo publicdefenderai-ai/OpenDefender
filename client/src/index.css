@@ -286,6 +286,14 @@
 .vivid-header-content {
   position: relative;
   z-index: 10;
+  color: white;
+}
+
+.vivid-header-content h1,
+.vivid-header-content h2,
+.vivid-header-content p,
+.vivid-header-content span {
+  color: white;
 }
 
 .vivid-header-alt {
