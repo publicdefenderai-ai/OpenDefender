@@ -3,35 +3,30 @@ import {
   AlertTriangle, 
   ArrowRight,
   Shield,
-  CheckCircle,
-  UserCheck,
   Phone,
-  X,
-  Search,
   Mail,
   Navigation,
   Clock,
-  HelpCircle,
   MapPin,
-  RotateCcw,
   Book,
   FileText,
   BarChart3,
-  ChevronDown
+  ChevronDown,
+  Search,
+  HelpCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Link } from "wouter";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { DataSourceCard } from "@/components/legal/data-source-card";
+import { RotatingCardCarousel } from "@/components/ui/rotating-card-carousel";
 import { Input } from "@/components/ui/input";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
@@ -44,35 +39,28 @@ interface TrustItemProps {
   description: string;
 }
 
-function TrustItem({ icon, title, description }: TrustItemProps) {
+function TrustItem({ title, description }: Omit<TrustItemProps, 'icon'>) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <Card className="overflow-hidden border hover:border-primary/30 transition-all duration-200" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-        <CollapsibleTrigger className="w-full" data-testid={`button-toggle-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-          <CardContent className="p-4">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full border-2 border-muted flex items-center justify-center flex-shrink-0 text-muted-foreground">
-                  {icon}
-                </div>
-                <h3 className="font-semibold text-foreground text-left">{title}</h3>
-              </div>
-              <ChevronDown 
-                className={`h-5 w-5 text-muted-foreground transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
-              />
-            </div>
-          </CardContent>
+      <div className="border-b border-border/50 last:border-b-0" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+        <CollapsibleTrigger className="w-full py-4 px-2" data-testid={`button-toggle-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="font-medium text-foreground text-left">{title}</h3>
+            <ChevronDown 
+              className={`h-4 w-4 text-muted-foreground transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+            />
+          </div>
         </CollapsibleTrigger>
         <CollapsibleContent>
-          <CardContent className="px-4 pb-4 pt-0">
-            <p className="text-sm text-muted-foreground pl-[52px]" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+          <div className="px-2 pb-4">
+            <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
               {description}
             </p>
-          </CardContent>
+          </div>
         </CollapsibleContent>
-      </Card>
+      </div>
     </Collapsible>
   );
 }
@@ -335,29 +323,32 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-background py-16 md:py-24 lg:py-32 border-b">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="relative py-16 md:py-24 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+        
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight text-foreground">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-foreground">
               {t('home.hero.title1')}{' '}
-              <span className="text-primary">{t('home.hero.title2')}</span>
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{t('home.hero.title2')}</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-10 md:mb-14 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl mb-10 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
 
           {/* Main CTAs */}
           <ScrollReveal delay={0.2}>
-            <div className="flex flex-col items-center gap-4 md:gap-5 max-w-xl mx-auto">
+            <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
               <Button
                 onClick={() => setGetStartedOpen(true)}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 font-semibold py-6 px-10 rounded-lg text-lg shadow-sm transition-all duration-200 w-full md:w-auto min-h-[56px]"
+                className="bg-primary hover:bg-primary/90 font-semibold py-6 px-10 rounded-xl text-lg shadow-md hover:shadow-lg transition-all duration-200 w-full md:w-auto"
                 data-testid="button-get-started"
               >
                 {t('home.hero.getStartedButton')}
@@ -366,127 +357,102 @@ export default function Home() {
               
               <Button
                 onClick={handleUrgentHelp}
-                variant="destructive"
+                variant="outline"
                 size="lg"
-                className="font-semibold py-5 px-8 rounded-lg text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full md:w-auto min-h-[52px]"
+                className="font-medium py-5 px-8 rounded-xl text-base border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-950/50 transition-all duration-200 w-full md:w-auto"
                 data-testid="button-urgent-help"
               >
-                <AlertTriangle className="h-5 w-5 mr-2" />
+                <AlertTriangle className="h-4 w-4 mr-2" />
                 {t('home.hero.urgentHelpButton')}
               </Button>
               
-              <p className="text-sm text-muted-foreground mt-2 px-4 max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground mt-1 max-w-sm">
                 {t('home.hero.urgentHelpNotice')}
               </p>
-              
-              <Link href="/how-to" className="mt-2 text-sm text-muted-foreground hover:text-foreground underline-offset-4 hover:underline transition-colors flex items-center gap-1.5">
-                <Book className="h-4 w-4" />
-                {t('home.hero.navigatingToolButton')}
-              </Link>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 md:py-20 lg:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Data Sources Section */}
+      <section className="py-16 md:py-20 bg-background border-t border-border/30">
+        <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-10 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
-                {t('home.features.title')}
-              </h2>
-              <p className="text-base md:text-xl text-muted-foreground max-w-4xl mx-auto px-2">
+            <div className="text-center mb-8">
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t('home.features.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            <ScrollReveal delay={0.1}>
-              <DataSourceCard
-                icon={<Book className="h-5 w-5" />}
-                title={t('home.features.federalCourts')}
-                description={t('home.features.federalCourtsDesc')}
-                status="partial"
-                statusText={t('home.features.federalCourtsStatus')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <DataSourceCard
-                icon={<FileText className="h-5 w-5" />}
-                title={t('home.features.stateLaws')}
-                description={t('home.features.stateLawsDesc')}
-                status="live"
-                statusText={t('home.features.stateLawsStatus')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <DataSourceCard
-                icon={<BarChart3 className="h-5 w-5" />}
-                title={t('home.features.analytics')}
-                description={t('home.features.analyticsDesc')}
-                status="partial"
-                statusText={t('home.features.analyticsStatus')}
-              />
-            </ScrollReveal>
-          </div>
+          <ScrollReveal delay={0.2}>
+            <RotatingCardCarousel
+              items={[
+                {
+                  id: "federal-courts",
+                  icon: <Book className="h-6 w-6" />,
+                  title: t('home.features.federalCourts'),
+                  description: t('home.features.federalCourtsDesc'),
+                },
+                {
+                  id: "state-laws",
+                  icon: <FileText className="h-6 w-6" />,
+                  title: t('home.features.stateLaws'),
+                  description: t('home.features.stateLawsDesc'),
+                },
+                {
+                  id: "analytics",
+                  icon: <BarChart3 className="h-6 w-6" />,
+                  title: t('home.features.analytics'),
+                  description: t('home.features.analyticsDesc'),
+                },
+              ]}
+              autoRotateInterval={5000}
+            />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-12 md:py-20 lg:py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 md:py-20 bg-muted/20">
+        <div className="max-w-2xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-6 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
+            <div className="text-center mb-8">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
                 {t('home.trust.title')}
               </h2>
-              <p className="text-base md:text-xl text-muted-foreground px-2">
+              <p className="text-sm text-muted-foreground">
                 {t('home.trust.subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
           {/* Expandable Trust Items */}
-          <div className="max-w-3xl mx-auto space-y-3">
-            <ScrollReveal delay={0.1}>
-              <TrustItem
-                icon={<CheckCircle className="h-5 w-5" />}
-                title={t('home.trust.verifiedTitle')}
-                description={t('home.trust.verifiedDesc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <TrustItem
-                icon={<Shield className="h-5 w-5" />}
-                title={t('home.trust.privacyTitle')}
-                description={t('home.trust.privacyDesc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <TrustItem
-                icon={<RotateCcw className="h-5 w-5" />}
-                title={t('home.trust.currentTitle')}
-                description={t('home.trust.currentDesc')}
-              />
-            </ScrollReveal>
-          </div>
-
-          {/* Disclaimer */}
-          <ScrollReveal delay={0.5}>
-            <Card className="mt-12 max-w-3xl mx-auto">
-              <CardContent className="p-6">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="font-semibold text-foreground">{t('home.trust.disclaimerTitle')}</strong>{' '}
-                  {t('home.trust.disclaimerText')}
-                </p>
+          <ScrollReveal delay={0.1}>
+            <Card className="border-border/50">
+              <CardContent className="p-4">
+                <TrustItem
+                  title={t('home.trust.verifiedTitle')}
+                  description={t('home.trust.verifiedDesc')}
+                />
+                <TrustItem
+                  title={t('home.trust.privacyTitle')}
+                  description={t('home.trust.privacyDesc')}
+                />
+                <TrustItem
+                  title={t('home.trust.currentTitle')}
+                  description={t('home.trust.currentDesc')}
+                />
               </CardContent>
             </Card>
+          </ScrollReveal>
+
+          {/* Disclaimer */}
+          <ScrollReveal delay={0.3}>
+            <p className="mt-8 text-xs text-muted-foreground text-center leading-relaxed">
+              <span className="font-medium">{t('home.trust.disclaimerTitle')}</span>{' '}
+              {t('home.trust.disclaimerText')}
+            </p>
           </ScrollReveal>
         </div>
       </section>
