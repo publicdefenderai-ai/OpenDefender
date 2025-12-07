@@ -39,6 +39,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Checkbox } from "@/components/ui/checkbox";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { criminalCharges } from "@shared/criminal-charges";
+import { getChargeExplanation } from "@shared/charge-explanations";
 
 interface ImmediateAction {
   action: string;
@@ -379,44 +380,31 @@ function PrecedentCasesSection({
 
 // Your Charges Section - Plain English explanation of charges
 function YourChargesSection({ 
-  chargeClassifications, 
-  charges,
-  jurisdiction 
+  chargeClassifications
 }: { 
   chargeClassifications?: Array<{ name: string; classification: string; code: string }>;
-  charges: string;
-  jurisdiction: string;
 }) {
   const { t } = useTranslation();
   
-  // Parse charge IDs from the charges string or use classifications
-  const getChargeDetails = () => {
-    if (chargeClassifications && chargeClassifications.length > 0) {
-      return chargeClassifications.map(classification => {
-        // Try to find the full charge data
-        const chargeData = criminalCharges.find(c => 
-          c.code === classification.code && 
-          (c.jurisdiction === jurisdiction || c.jurisdiction === 'federal')
-        ) || criminalCharges.find(c => 
-          c.name.toLowerCase() === classification.name.toLowerCase()
-        );
-        
-        return {
-          name: formatChargeName(classification.name),
-          code: classification.code,
-          classification: classification.classification,
-          description: chargeData?.description || null,
-          maxPenalty: chargeData?.maxPenalty || null,
-          commonDefenses: chargeData?.commonDefenses || [],
-        };
-      });
-    }
-    return [];
-  };
+  if (!chargeClassifications || chargeClassifications.length === 0) {
+    return null;
+  }
 
-  const chargeDetails = getChargeDetails();
+  // Get plain-language explanations for each charge
+  const chargesWithExplanations = chargeClassifications.map(classification => {
+    const explanation = getChargeExplanation(classification.name);
+    return {
+      name: formatChargeName(classification.name),
+      code: classification.code,
+      classification: classification.classification,
+      explanation
+    };
+  });
 
-  if (chargeDetails.length === 0) {
+  // Filter to only show charges that have explanations
+  const chargesWithContent = chargesWithExplanations.filter(c => c.explanation);
+
+  if (chargesWithContent.length === 0) {
     return null;
   }
 
@@ -425,23 +413,23 @@ function YourChargesSection({
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-foreground">
           <Gavel className="h-5 w-5 text-muted-foreground" />
-          {t('guidance.yourCharges.title', 'Your Charges')}
+          {t('guidance.yourCharges.title', 'Understanding Your Charges')}
         </CardTitle>
         <p className="text-sm text-muted-foreground mt-1">
-          {t('guidance.yourCharges.subtitle', 'Here is a plain-language explanation of what you are facing.')}
+          {t('guidance.yourCharges.subtitle', 'Here\'s what these legal terms actually mean in plain English.')}
         </p>
       </CardHeader>
-      <CardContent className="space-y-4">
-        {chargeDetails.map((charge, index) => (
+      <CardContent className="space-y-6">
+        {chargesWithContent.map((charge, index) => (
           <div 
             key={index} 
-            className="p-4 rounded-lg border border-border bg-muted/30"
+            className="space-y-4"
             data-testid={`charge-explanation-${index}`}
           >
-            <div className="flex items-start justify-between gap-3 mb-3">
+            {/* Charge Header */}
+            <div className="flex items-start justify-between gap-3">
               <div>
-                <h4 className="font-semibold text-foreground">{charge.name}</h4>
-                <span className="text-xs text-muted-foreground">{charge.code}</span>
+                <h4 className="font-semibold text-foreground text-lg">{charge.name}</h4>
               </div>
               <Badge 
                 variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
@@ -451,49 +439,62 @@ function YourChargesSection({
               </Badge>
             </div>
 
-            {charge.description && (
-              <div className="mb-3">
-                <p className="text-sm text-foreground leading-relaxed">
-                  <span className="font-medium">{t('guidance.yourCharges.whatItMeans', 'What this means:')} </span>
-                  {charge.description}
+            {/* Plain Summary */}
+            {charge.explanation && (
+              <p className="text-sm text-foreground leading-relaxed">
+                {charge.explanation.plainSummary}
+              </p>
+            )}
+
+            {/* Degree Context - helps explain 1st vs 2nd degree etc. */}
+            {charge.explanation?.degreeContext && (
+              <div className="p-3 rounded-lg bg-muted/50 border-l-2 border-primary">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-medium text-foreground">How degrees differ: </span>
+                  {charge.explanation.degreeContext}
                 </p>
               </div>
             )}
 
-            {charge.maxPenalty && (
-              <div className="mb-3">
-                <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">{t('guidance.yourCharges.possiblePenalty', 'Possible penalty:')} </span>
-                  {charge.maxPenalty}
+            {/* Key Legal Terms */}
+            {charge.explanation?.keyTerms && charge.explanation.keyTerms.length > 0 && (
+              <div className="space-y-3">
+                <p className="text-sm font-medium text-foreground">
+                  Key legal terms the prosecution must prove:
                 </p>
-              </div>
-            )}
-
-            {charge.commonDefenses.length > 0 && (
-              <div className="pt-3 border-t border-border">
-                <p className="text-sm font-medium text-foreground mb-2">
-                  {t('guidance.yourCharges.commonDefenses', 'Common defenses that may apply:')}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {charge.commonDefenses.slice(0, 4).map((defense, defenseIdx) => (
-                    <Badge 
-                      key={defenseIdx} 
-                      variant="outline" 
-                      className="text-xs font-normal"
+                <div className="space-y-3">
+                  {charge.explanation.keyTerms.map((term, termIdx) => (
+                    <div 
+                      key={termIdx}
+                      className="p-3 rounded-lg border border-border bg-muted/30"
                     >
-                      {defense}
-                    </Badge>
+                      <p className="text-sm">
+                        <span className="font-semibold text-foreground">{term.term}: </span>
+                        <span className="text-muted-foreground">{term.plainMeaning}</span>
+                      </p>
+                      {term.example && (
+                        <p className="text-xs text-muted-foreground mt-1 italic">
+                          Example: {term.example}
+                        </p>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
             )}
+
+            {/* Separator between charges */}
+            {index < chargesWithContent.length - 1 && (
+              <div className="border-t border-border pt-4" />
+            )}
           </div>
         ))}
 
-        <div className="p-3 rounded-lg bg-muted/50 border border-border">
+        {/* Disclaimer */}
+        <div className="p-3 rounded-lg bg-muted/50 border border-border mt-4">
           <p className="text-xs text-muted-foreground leading-relaxed">
-            <strong>{t('guidance.yourCharges.disclaimer.title', 'Important:')} </strong>
-            {t('guidance.yourCharges.disclaimer.text', 'The prosecution must prove every element of these charges beyond a reasonable doubt. A public defender or attorney can review your specific facts and identify which elements may be challenged in your case.')}
+            <strong>Remember: </strong>
+            The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.
           </p>
         </div>
       </CardContent>
@@ -657,8 +658,6 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       {/* Your Charges Section */}
       <YourChargesSection 
         chargeClassifications={guidance.chargeClassifications}
-        charges={guidance.caseData.charges}
-        jurisdiction={guidance.caseData.jurisdiction}
       />
 
       {/* Simple Reassurance Message with Hidden Technical Details */}
