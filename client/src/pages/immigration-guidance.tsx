@@ -597,7 +597,7 @@ export default function ImmigrationGuidance() {
                   {t('immigration.finalCta.rights')}
                 </Button>
               </Link>
-              <Link href="/">
+              <Link href="/how-to">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto" data-testid="button-find-resources">
                   <ArrowRight className="mr-2 h-5 w-5" />
                   {t('immigration.finalCta.local')}
