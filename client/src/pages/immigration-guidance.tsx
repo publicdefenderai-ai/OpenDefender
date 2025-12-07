@@ -587,9 +587,6 @@ export default function ImmigrationGuidance() {
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <ScrollReveal>
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
-              <ArrowRight className="h-8 w-8 text-primary" />
-            </div>
             <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-get-additional-help-title">
               {t('immigration.finalCta.title')}
             </h2>
