@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { X } from "lucide-react";
 import "./i18n";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
@@ -26,6 +28,41 @@ import HowTo from "@/pages/how-to";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import Disclaimers from "@/pages/disclaimers";
 import Statutes from "@/pages/statutes";
+
+function BetaBanner() {
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  if (isDismissed) {
+    return null;
+  }
+
+  return (
+    <div 
+      className="w-full bg-muted/80 border-b border-border py-2.5 px-4"
+      data-testid="beta-banner"
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3 flex-1 min-w-0">
+          <span className="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+            Beta
+          </span>
+          <p className="text-sm text-muted-foreground truncate sm:whitespace-normal">
+            <span className="hidden sm:inline">Beta Version — Our guidance is carefully researched, but we're still refining features based on user feedback.</span>
+            <span className="sm:hidden">Beta — We're still refining features based on feedback.</span>
+          </p>
+        </div>
+        <button
+          onClick={() => setIsDismissed(true)}
+          className="shrink-0 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+          aria-label="Dismiss beta banner"
+          data-testid="beta-banner-dismiss"
+        >
+          <X className="h-4 w-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 function Router() {
   return (
@@ -61,6 +98,7 @@ function App() {
       <ThemeProvider defaultTheme="light" storageKey="public-defender-theme">
         <TooltipProvider>
           <Toaster />
+          <BetaBanner />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
