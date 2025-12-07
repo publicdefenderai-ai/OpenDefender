@@ -40,6 +40,7 @@ import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Checkbox } from "@/components/ui/checkbox";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
+import { criminalCharges } from "@shared/criminal-charges";
 
 interface ImmediateAction {
   action: string;
@@ -232,16 +233,16 @@ function PrecedentCasesSection({
   const displayedPrecedents = isExpanded ? precedents : precedents.slice(0, 3);
 
   return (
-    <Card className="border-purple-200 bg-purple-50 dark:bg-purple-900/20">
+    <Card className="border-border">
       <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-purple-800 dark:text-purple-200">
-          <BookOpen className="h-5 w-5" />
+        <CardTitle className="flex items-center gap-2 text-foreground">
+          <BookOpen className="h-5 w-5 text-muted-foreground" />
           {t('guidance.precedents.title', 'Related Court Cases')}
           <Badge variant="secondary" className="ml-2">
             {precedents.length} {precedents.length === 1 ? 'case' : 'cases'}
           </Badge>
         </CardTitle>
-        <p className="text-sm text-purple-700 dark:text-purple-300 mt-1">
+        <p className="text-sm text-muted-foreground mt-1">
           {t('guidance.precedents.description', 'Court cases similar to your situation that may help understand possible outcomes.')}
         </p>
       </CardHeader>
@@ -253,13 +254,13 @@ function PrecedentCasesSection({
           return (
             <div 
               key={precedent.id}
-              className="p-4 bg-white dark:bg-gray-800 rounded-lg border border-purple-100 dark:border-purple-800"
+              className="p-4 bg-muted/30 rounded-lg border border-border"
               data-testid={`precedent-case-${precedent.id}`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <h4 className="font-medium text-gray-900 dark:text-gray-100 truncate">
+                    <h4 className="font-medium text-foreground truncate">
                       {precedent.caseName}
                     </h4>
                     <Badge variant={courtInfo.variant} className="text-xs">
@@ -268,12 +269,12 @@ function PrecedentCasesSection({
                   </div>
                   
                   {precedent.citation && (
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    <p className="text-sm text-muted-foreground mt-1">
                       {precedent.citation}
                     </p>
                   )}
                   
-                  <div className="flex items-center gap-3 mt-2 text-xs text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Building className="h-3 w-3" />
                       {precedent.court}
@@ -291,7 +292,7 @@ function PrecedentCasesSection({
                   </div>
 
                   {precedent.excerpt && (
-                    <p className="text-sm text-gray-700 dark:text-gray-300 mt-2 line-clamp-2">
+                    <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
                       {precedent.excerpt}
                     </p>
                   )}
@@ -313,7 +314,7 @@ function PrecedentCasesSection({
                       href={precedent.absoluteUrl || precedent.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-200"
+                      className="text-primary hover:text-primary/80"
                     >
                       <ExternalLink className="h-4 w-4" />
                     </a>
@@ -359,7 +360,7 @@ function PrecedentCasesSection({
         {precedents.length > 3 && (
           <Button
             variant="ghost"
-            className="w-full text-purple-700 dark:text-purple-300"
+            className="w-full text-muted-foreground hover:text-foreground"
             onClick={() => setIsExpanded(!isExpanded)}
           >
             {isExpanded 
@@ -370,9 +371,133 @@ function PrecedentCasesSection({
           </Button>
         )}
 
-        <p className="text-xs text-purple-600 dark:text-purple-400 text-center mt-2">
+        <p className="text-xs text-muted-foreground text-center mt-2">
           {t('guidance.precedents.feedbackNote', 'Your feedback helps improve case relevance for others.')}
         </p>
+      </CardContent>
+    </Card>
+  );
+}
+
+// Your Charges Section - Plain English explanation of charges
+function YourChargesSection({ 
+  chargeClassifications, 
+  charges,
+  jurisdiction 
+}: { 
+  chargeClassifications?: Array<{ name: string; classification: string; code: string }>;
+  charges: string;
+  jurisdiction: string;
+}) {
+  const { t } = useTranslation();
+  
+  // Parse charge IDs from the charges string or use classifications
+  const getChargeDetails = () => {
+    if (chargeClassifications && chargeClassifications.length > 0) {
+      return chargeClassifications.map(classification => {
+        // Try to find the full charge data
+        const chargeData = criminalCharges.find(c => 
+          c.code === classification.code && 
+          (c.jurisdiction === jurisdiction || c.jurisdiction === 'federal')
+        ) || criminalCharges.find(c => 
+          c.name.toLowerCase() === classification.name.toLowerCase()
+        );
+        
+        return {
+          name: formatChargeName(classification.name),
+          code: classification.code,
+          classification: classification.classification,
+          description: chargeData?.description || null,
+          maxPenalty: chargeData?.maxPenalty || null,
+          commonDefenses: chargeData?.commonDefenses || [],
+        };
+      });
+    }
+    return [];
+  };
+
+  const chargeDetails = getChargeDetails();
+
+  if (chargeDetails.length === 0) {
+    return null;
+  }
+
+  return (
+    <Card className="border-border">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-foreground">
+          <Gavel className="h-5 w-5 text-muted-foreground" />
+          {t('guidance.yourCharges.title', 'Your Charges')}
+        </CardTitle>
+        <p className="text-sm text-muted-foreground mt-1">
+          {t('guidance.yourCharges.subtitle', 'Here is a plain-language explanation of what you are facing.')}
+        </p>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {chargeDetails.map((charge, index) => (
+          <div 
+            key={index} 
+            className="p-4 rounded-lg border border-border bg-muted/30"
+            data-testid={`charge-explanation-${index}`}
+          >
+            <div className="flex items-start justify-between gap-3 mb-3">
+              <div>
+                <h4 className="font-semibold text-foreground">{charge.name}</h4>
+                <span className="text-xs text-muted-foreground">{charge.code}</span>
+              </div>
+              <Badge 
+                variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
+                className="shrink-0"
+              >
+                {charge.classification}
+              </Badge>
+            </div>
+
+            {charge.description && (
+              <div className="mb-3">
+                <p className="text-sm text-foreground leading-relaxed">
+                  <span className="font-medium">{t('guidance.yourCharges.whatItMeans', 'What this means:')} </span>
+                  {charge.description}
+                </p>
+              </div>
+            )}
+
+            {charge.maxPenalty && (
+              <div className="mb-3">
+                <p className="text-sm text-muted-foreground">
+                  <span className="font-medium text-foreground">{t('guidance.yourCharges.possiblePenalty', 'Possible penalty:')} </span>
+                  {charge.maxPenalty}
+                </p>
+              </div>
+            )}
+
+            {charge.commonDefenses.length > 0 && (
+              <div className="pt-3 border-t border-border">
+                <p className="text-sm font-medium text-foreground mb-2">
+                  {t('guidance.yourCharges.commonDefenses', 'Common defenses that may apply:')}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {charge.commonDefenses.slice(0, 4).map((defense, defenseIdx) => (
+                    <Badge 
+                      key={defenseIdx} 
+                      variant="outline" 
+                      className="text-xs font-normal"
+                    >
+                      {defense}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+
+        <div className="p-3 rounded-lg bg-muted/50 border border-border">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            <strong>{t('guidance.yourCharges.disclaimer.title', 'Important:')} </strong>
+            {t('guidance.yourCharges.disclaimer.text', 'The prosecution must prove every element of these charges beyond a reasonable doubt. A public defender or attorney can review your specific facts and identify which elements may be challenged in your case.')}
+          </p>
+        </div>
       </CardContent>
     </Card>
   );
@@ -424,13 +549,13 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Case Summary Header */}
-      <Card className="border-l-4 border-l-blue-600">
+      <Card className="border-l-4 border-l-primary">
         <CardHeader>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-2 md:gap-4 flex-wrap">
               <div className="flex items-center gap-2">
-                <Scale className="h-5 w-5 text-blue-600" />
-                <CardTitle className="text-xl">{t('legalGuidance.dashboard.title')}</CardTitle>
+                <Scale className="h-5 w-5 text-muted-foreground" />
+                <CardTitle className="text-xl text-foreground">{t('legalGuidance.dashboard.title')}</CardTitle>
               </div>
               <Button
                 variant="outline"
@@ -531,20 +656,27 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Overview Section */}
       {guidance.overview && (
-        <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
+        <Card className="border-border">
           <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2 text-blue-800 dark:text-blue-200">
-              <FileText className="h-5 w-5" />
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <FileText className="h-5 w-5 text-muted-foreground" />
               Overview
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-blue-900 dark:text-blue-100 leading-relaxed" data-testid="text-guidance-overview">
+            <p className="text-muted-foreground leading-relaxed" data-testid="text-guidance-overview">
               {guidance.overview}
             </p>
           </CardContent>
         </Card>
       )}
+
+      {/* Your Charges Section */}
+      <YourChargesSection 
+        chargeClassifications={guidance.chargeClassifications}
+        charges={guidance.caseData.charges}
+        jurisdiction={guidance.caseData.jurisdiction}
+      />
 
       {/* Simple Reassurance Message with Hidden Technical Details */}
       {guidance.validation && (
@@ -658,23 +790,23 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Urgent Deadlines */}
       {getUrgentDeadlines().length > 0 && (
-        <Card className="border-amber-200 bg-amber-50 dark:bg-amber-900/20">
+        <Card className="border-border">
           <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
-              <Clock className="h-5 w-5" />
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <Clock className="h-5 w-5 text-muted-foreground" />
               {t('legalGuidance.dashboard.upcomingDeadlines.title')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               {getUrgentDeadlines().map((deadline, index) => (
-                <div key={index} className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg">
+                <div key={index} className="flex items-center justify-between p-3 bg-muted/30 rounded-lg border border-border">
                   <div>
-                    <div className="font-medium">{deadline.event}</div>
+                    <div className="font-medium text-foreground">{deadline.event}</div>
                     <div className="text-sm text-muted-foreground">{deadline.description}</div>
                   </div>
                   <div className="text-right">
-                    <Badge variant={deadline.priority === 'critical' ? 'destructive' : 'default'}>
+                    <Badge variant={deadline.priority === 'critical' ? 'destructive' : 'secondary'}>
                       {deadline.timeframe}
                     </Badge>
                   </div>
@@ -686,16 +818,16 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       )}
 
       {/* Immediate Actions Checklist */}
-      <Card>
+      <Card className="border-border">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-600" />
+            <div className="flex items-center gap-2 text-foreground">
+              <CheckCircle className="h-5 w-5 text-muted-foreground" />
               {t('legalGuidance.dashboard.immediateActions.title')}
             </div>
             <div className="flex items-center gap-2">
               <Progress value={getImmediateActionsProgress()} className="w-24" />
-              <span className="text-sm font-medium">{getImmediateActionsProgress()}%</span>
+              <span className="text-sm font-medium text-muted-foreground">{getImmediateActionsProgress()}%</span>
             </div>
           </CardTitle>
         </CardHeader>
@@ -736,10 +868,10 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       </Card>
 
       {/* Case Timeline */}
-      <Card>
+      <Card className="border-border">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Calendar className="h-5 w-5 text-blue-600" />
+          <CardTitle className="flex items-center gap-2 text-foreground">
+            <Calendar className="h-5 w-5 text-muted-foreground" />
             {t('legalGuidance.dashboard.caseTimeline.title')}
           </CardTitle>
         </CardHeader>
@@ -747,17 +879,15 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           <div className="space-y-4">
             {guidance.timeline.map((stage, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className={`w-4 h-4 rounded-full mt-2 ${
-                  stage.completed ? 'bg-green-600' : 'bg-gray-300'
+                <div className={`w-3 h-3 rounded-full mt-2 ${
+                  stage.completed ? 'bg-primary' : 'bg-muted-foreground/30'
                 }`} />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <h4 className={`font-medium ${
-                      stage.completed ? 'text-green-700' : 'text-foreground'
-                    }`}>
+                    <h4 className="font-medium text-foreground">
                       {stage.stage}
                     </h4>
-                    <Badge variant={stage.completed ? 'default' : 'outline'}>
+                    <Badge variant={stage.completed ? 'secondary' : 'outline'} className="text-xs">
                       {stage.timeframe}
                     </Badge>
                   </div>
@@ -773,21 +903,21 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Next Steps */}
       {guidance.nextSteps.length > 0 && (
-        <Card>
+        <Card className="border-border">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <ArrowRight className="h-5 w-5 text-indigo-600" />
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <ArrowRight className="h-5 w-5 text-muted-foreground" />
               {t('legalGuidance.dashboard.nextSteps.title')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               {guidance.nextSteps.map((step, index) => (
-                <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                  <div className="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">
+                <div key={index} className="flex items-start gap-3 p-3 rounded-lg border border-border bg-muted/20">
+                  <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
                     {index + 1}
                   </div>
-                  <span className="flex-1 text-sm">{step}</span>
+                  <span className="flex-1 text-sm text-foreground">{step}</span>
                 </div>
               ))}
             </div>
@@ -800,26 +930,26 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         {/* Your Rights */}
         <Collapsible>
           <CollapsibleTrigger asChild>
-            <Card className="cursor-pointer hover:bg-muted/50">
+            <Card className="cursor-pointer hover:bg-muted/50 border-border">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
+                <CardTitle className="flex items-center justify-between text-foreground">
                   <div className="flex items-center gap-2">
-                    <Shield className="h-5 w-5 text-blue-600" />
+                    <Shield className="h-5 w-5 text-muted-foreground" />
                     {t('legalGuidance.dashboard.yourRights.title')}
                   </div>
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
                 </CardTitle>
               </CardHeader>
             </Card>
           </CollapsibleTrigger>
           <CollapsibleContent>
-            <Card className="mt-2">
+            <Card className="mt-2 border-border">
               <CardContent className="pt-6">
                 <ul className="space-y-2">
                   {guidance.rights.map((right, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <span className="text-blue-600 mt-1">•</span>
-                      <span className="text-sm">{right}</span>
+                      <span className="text-muted-foreground mt-1">•</span>
+                      <span className="text-sm text-foreground">{right}</span>
                     </li>
                   ))}
                 </ul>
@@ -831,14 +961,14 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         {/* Local Resources */}
         <Collapsible>
           <CollapsibleTrigger asChild>
-            <Card className="cursor-pointer hover:bg-muted/50">
+            <Card className="cursor-pointer hover:bg-muted/50 border-border">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
+                <CardTitle className="flex items-center justify-between text-foreground">
                   <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-green-600" />
+                    <Users className="h-5 w-5 text-muted-foreground" />
                     {t('legalGuidance.dashboard.localResources.title')}
                   </div>
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
                 </CardTitle>
               </CardHeader>
             </Card>
