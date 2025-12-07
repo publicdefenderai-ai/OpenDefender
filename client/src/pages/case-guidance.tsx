@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   Shield, 
   AlertTriangle,
@@ -690,55 +691,23 @@ export default function CaseGuidance() {
         <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
             <div className="bg-muted/50 rounded-xl p-6 md:p-8">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center flex-shrink-0 ring-1 ring-primary/20">
-                  <Shield className="h-5 w-5 text-primary" />
+              <div className="flex flex-col items-center text-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 ring-1 ring-primary/20">
+                  <Shield className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-2" data-testid="heading-privacy">
-                    {t('case.privacy.title')}
-                  </h2>
-                  <p className="text-muted-foreground">
-                    {t('case.privacy.subtitle')}
-                  </p>
-                </div>
+                <h2 className="text-xl font-semibold text-foreground mb-2" data-testid="heading-privacy">
+                  {t('case.privacy.title')}
+                </h2>
+                <p className="text-muted-foreground text-sm max-w-md">
+                  {t('case.privacy.subtitle')}
+                </p>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <div>
-                    <span className="font-medium text-foreground">{t('case.privacy.noStorageTitle')}</span>
-                    <span className="text-muted-foreground"> — {t('case.privacy.noStorageDesc')}</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <div>
-                    <span className="font-medium text-foreground">{t('case.privacy.sessionOnlyTitle')}</span>
-                    <span className="text-muted-foreground"> — {t('case.privacy.sessionOnlyDesc')}</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <div>
-                    <span className="font-medium text-foreground">{t('case.privacy.autoDeleteTitle')}</span>
-                    <span className="text-muted-foreground"> — {t('case.privacy.autoDeleteDesc')}</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <div>
-                    <span className="font-medium text-foreground">{t('case.privacy.anonymousTitle')}</span>
-                    <span className="text-muted-foreground"> — {t('case.privacy.anonymousDesc')}</span>
-                  </div>
-                </div>
-              </div>
+              <PrivacyAssurancesCarousel />
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
                 <Button
                   onClick={handleStartQA}
-                  className="flex-1 sm:flex-none"
                   data-testid="button-start-guidance-bottom"
                 >
                   {t('case.privacy.getStartedButton')}
@@ -784,6 +753,88 @@ function StepCard({ number, title, description }: {
       </div>
       <h3 className="font-medium text-foreground mb-2">{title}</h3>
       <p className="text-sm text-muted-foreground">{description}</p>
+    </div>
+  );
+}
+
+function PrivacyAssurancesCarousel() {
+  const { t } = useTranslation();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const items = [
+    {
+      title: t('case.privacy.noStorageTitle'),
+      description: t('case.privacy.noStorageDesc'),
+    },
+    {
+      title: t('case.privacy.sessionOnlyTitle'),
+      description: t('case.privacy.sessionOnlyDesc'),
+    },
+    {
+      title: t('case.privacy.autoDeleteTitle'),
+      description: t('case.privacy.autoDeleteDesc'),
+    },
+    {
+      title: t('case.privacy.anonymousTitle'),
+      description: t('case.privacy.anonymousDesc'),
+    },
+  ];
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % items.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [items.length, isPaused]);
+
+  return (
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+      role="region"
+      aria-live="polite"
+      data-testid="carousel-privacy"
+    >
+      <div className="min-h-[80px] flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center px-4"
+          >
+            <h3 className="font-semibold text-foreground mb-1">
+              {items[activeIndex].title}
+            </h3>
+            <p className="text-sm text-muted-foreground max-w-sm mx-auto">
+              {items[activeIndex].description}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="flex justify-center gap-2 mt-4">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === activeIndex
+                ? "bg-primary w-6"
+                : "w-2 bg-transparent border border-muted-foreground/40 hover:border-primary/60"
+            }`}
+            aria-label={`Go to privacy point ${index + 1}`}
+            data-testid={`carousel-dot-${index}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
