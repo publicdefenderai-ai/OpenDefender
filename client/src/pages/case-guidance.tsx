@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
 import { 
-  MessageSquare, 
   Shield, 
   AlertTriangle,
   Clock,
-  FileText,
-  Users,
   Phone,
   Scale,
   HelpCircle,
@@ -17,10 +13,8 @@ import {
   Mail
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Progress } from "@/components/ui/progress";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Link } from "wouter";
@@ -624,56 +618,43 @@ export default function CaseGuidance() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="vivid-header py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600" data-testid="heading-case-title">
-                {t('case.hero.title')}
-              </h1>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="heading-case-subtitle">
-                {t('case.hero.subtitle')}
-              </h2>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto mb-8" data-testid="text-case-description">
-                {t('case.hero.description')}
-              </p>
-              
-              <Button
-                onClick={handleStartQA}
-                className="success-green success-green-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:scale-105 transition-all duration-200"
-                data-testid="button-start-guidance"
-              >
-                <MessageSquare className="mr-2 h-5 w-5" />
-                {t('case.hero.startButton')}
-              </Button>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="flex items-center justify-center space-x-2 text-sm text-blue-800 dark:text-blue-200">
-              <Shield className="h-4 w-4" />
-              <span>{t('case.hero.privacyNote')}</span>
-            </div>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-case-title">
+              {t('case.hero.title')}
+            </h1>
+            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8" data-testid="text-case-description">
+              {t('case.hero.description')}
+            </p>
+            
+            <Button
+              onClick={handleStartQA}
+              size="lg"
+              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-lg shadow-lg"
+              data-testid="button-start-guidance"
+            >
+              {t('case.hero.startButton')}
+            </Button>
           </ScrollReveal>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-how-it-works">
+            <h2 className="text-2xl font-bold text-center text-foreground mb-10" data-testid="heading-how-it-works">
               {t('case.howItWorks.title')}
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-6">
             <ScrollReveal delay={0.1}>
               <StepCard
                 number={1}
                 title={t('case.howItWorks.step1Title')}
                 description={t('case.howItWorks.step1Desc')}
-                icon={<MessageSquare className="h-6 w-6 text-blue-600" />}
               />
             </ScrollReveal>
 
@@ -682,7 +663,6 @@ export default function CaseGuidance() {
                 number={2}
                 title={t('case.howItWorks.step2Title')}
                 description={t('case.howItWorks.step2Desc')}
-                icon={<Scale className="h-6 w-6 text-green-600" />}
               />
             </ScrollReveal>
 
@@ -691,7 +671,6 @@ export default function CaseGuidance() {
                 number={3}
                 title={t('case.howItWorks.step3Title')}
                 description={t('case.howItWorks.step3Desc')}
-                icon={<FileText className="h-6 w-6 text-purple-600" />}
               />
             </ScrollReveal>
 
@@ -700,7 +679,6 @@ export default function CaseGuidance() {
                 number={4}
                 title={t('case.howItWorks.step4Title')}
                 description={t('case.howItWorks.step4Desc')}
-                icon={<Users className="h-6 w-6 text-orange-600" />}
               />
             </ScrollReveal>
           </div>
@@ -708,140 +686,107 @@ export default function CaseGuidance() {
       </section>
 
       {/* Privacy & Security */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-12 bg-background">
+        <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6" data-testid="heading-privacy">
-                {t('case.privacy.title')}
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                {t('case.privacy.subtitle')}
-              </p>
-            </div>
-          </ScrollReveal>
+            <div className="bg-muted/50 rounded-xl p-6 md:p-8">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center flex-shrink-0 ring-1 ring-primary/20">
+                  <Shield className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-2" data-testid="heading-privacy">
+                    {t('case.privacy.title')}
+                  </h2>
+                  <p className="text-muted-foreground">
+                    {t('case.privacy.subtitle')}
+                  </p>
+                </div>
+              </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ScrollReveal delay={0.1}>
-              <PrivacyFeature
-                icon={<Shield className="h-5 w-5 text-success-green" />}
-                title={t('case.privacy.noStorageTitle')}
-                description={t('case.privacy.noStorageDesc')}
-              />
-            </ScrollReveal>
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground">{t('case.privacy.noStorageTitle')}</span>
+                    <span className="text-muted-foreground"> — {t('case.privacy.noStorageDesc')}</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground">{t('case.privacy.sessionOnlyTitle')}</span>
+                    <span className="text-muted-foreground"> — {t('case.privacy.sessionOnlyDesc')}</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground">{t('case.privacy.autoDeleteTitle')}</span>
+                    <span className="text-muted-foreground"> — {t('case.privacy.autoDeleteDesc')}</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium text-foreground">{t('case.privacy.anonymousTitle')}</span>
+                    <span className="text-muted-foreground"> — {t('case.privacy.anonymousDesc')}</span>
+                  </div>
+                </div>
+              </div>
 
-            <ScrollReveal delay={0.2}>
-              <PrivacyFeature
-                icon={<Clock className="h-5 w-5 text-success-green" />}
-                title={t('case.privacy.sessionOnlyTitle')}
-                description={t('case.privacy.sessionOnlyDesc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <PrivacyFeature
-                icon={<FileText className="h-5 w-5 text-success-green" />}
-                title={t('case.privacy.autoDeleteTitle')}
-                description={t('case.privacy.autoDeleteDesc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <PrivacyFeature
-                icon={<Users className="h-5 w-5 text-success-green" />}
-                title={t('case.privacy.anonymousTitle')}
-                description={t('case.privacy.anonymousDesc')}
-              />
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal delay={0.5}>
-            <Alert className="mt-12 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-              <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">{t('common.important')}:</strong> {t('case.privacy.disclaimer')}
-              </AlertDescription>
-            </Alert>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.6}>
-            <div className="text-center mt-12">
-              <Button
-                onClick={handleStartQA}
-                className="legal-blue legal-blue-hover font-bold py-4 px-8 rounded-xl text-lg shadow-lg mr-4"
-                data-testid="button-start-guidance-bottom"
-              >
-                {t('case.privacy.getStartedButton')}
-              </Button>
-              <Link href="/rights-info">
-                <Button 
-                  variant="outline" 
-                  className="font-bold py-4 px-8 rounded-xl text-lg"
-                  data-testid="button-learn-rights"
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  onClick={handleStartQA}
+                  className="flex-1 sm:flex-none"
+                  data-testid="button-start-guidance-bottom"
                 >
-                  {t('case.privacy.learnRightsButton')}
+                  {t('case.privacy.getStartedButton')}
                 </Button>
-              </Link>
+                <Link href="/rights-info">
+                  <Button 
+                    variant="outline" 
+                    className="w-full sm:w-auto"
+                    data-testid="button-learn-rights"
+                  >
+                    {t('case.privacy.learnRightsButton')}
+                  </Button>
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <Footer />
-      
-      {/* Privacy Footer Banner */}
-      <div className="legal-blue text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2">
-            <Shield className="h-4 w-4" />
-            <span className="text-sm font-medium">
-              <strong>{t('common.privacyFirst')}:</strong> {t('case.privacy.footerBanner')}
-            </span>
-          </div>
+      {/* Disclaimer */}
+      <div className="py-6 px-4">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs text-muted-foreground text-center">
+            <span className="font-medium">{t('common.important')}:</span> {t('case.privacy.disclaimer')}
+          </p>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
 
-function StepCard({ number, title, description, icon }: {
+function StepCard({ number, title, description }: {
   number: number;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}) {
-  return (
-    <Card className="text-center hover:shadow-lg transition-all duration-300">
-      <CardContent className="p-6">
-        <div className="relative mb-4">
-          <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mx-auto">
-            {icon}
-          </div>
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
-            {number}
-          </div>
-        </div>
-        <h3 className="font-semibold text-foreground mb-3">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
-  );
-}
-
-function PrivacyFeature({ icon, title, description }: {
-  icon: React.ReactNode;
   title: string;
   description: string;
 }) {
   return (
     <div className="text-center">
-      <div className="flex justify-center mb-3">
-        {icon}
+      <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3 text-sm font-semibold">
+        {number}
       </div>
-      <h4 className="font-semibold text-foreground mb-2">{title}</h4>
+      <h3 className="font-medium text-foreground mb-2">{title}</h3>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
 }
+
 
 
