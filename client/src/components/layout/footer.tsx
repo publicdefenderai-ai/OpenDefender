@@ -1,4 +1,4 @@
-import { Scale, Twitter, Github, Shield, Search, Phone, Mail, Navigation, Clock, MapPin, X } from "lucide-react";
+import { Scale, Github, Shield, Search, Phone, Mail, Navigation, Clock, MapPin, X } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -272,13 +272,6 @@ export function Footer() {
               {t('footer.tagline')}
             </p>
             <div className="flex space-x-3">
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-white transition-colors"
-                data-testid="link-twitter"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
               <a 
                 href="https://github.com/shahabasghar/PublicDefenderAI" 
                 target="_blank"
