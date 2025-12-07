@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { 
   Shield, 
   AlertTriangle, 
@@ -28,6 +29,196 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
+function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  const phases = [
+    {
+      id: 'phase1',
+      icon: <Eye className="h-6 w-6" />,
+      title: t('immigration.deportationPhases.phase1.title'),
+      color: 'blue',
+      rightsTitle: t('immigration.deportationPhases.phase1.rightsTitle'),
+      rights: [
+        t('immigration.deportationPhases.phase1.rights.askLeave'),
+        t('immigration.deportationPhases.phase1.rights.warrant'),
+        t('immigration.deportationPhases.phase1.rights.silent'),
+        t('immigration.deportationPhases.phase1.rights.attorney'),
+      ],
+      expectTitle: t('immigration.deportationPhases.phase1.expectTitle'),
+      expectations: [
+        t('immigration.deportationPhases.phase1.expect.approach'),
+        t('immigration.deportationPhases.phase1.expect.documents'),
+        t('immigration.deportationPhases.phase1.expect.adminWarrant'),
+        t('immigration.deportationPhases.phase1.expect.detention'),
+      ],
+    },
+    {
+      id: 'phase2',
+      icon: <Users className="h-6 w-6" />,
+      title: t('immigration.deportationPhases.phase2.title'),
+      color: 'orange',
+      rightsTitle: t('immigration.deportationPhases.phase2.rightsTitle'),
+      rights: [
+        t('immigration.deportationPhases.phase2.rights.phone'),
+        t('immigration.deportationPhases.phase2.rights.consulate'),
+        t('immigration.deportationPhases.phase2.rights.interpreter'),
+        t('immigration.deportationPhases.phase2.rights.charges'),
+        t('immigration.deportationPhases.phase2.rights.bond'),
+      ],
+      expectTitle: t('immigration.deportationPhases.phase2.importantTitle'),
+      expectations: [
+        t('immigration.deportationPhases.phase2.important.duration'),
+        t('immigration.deportationPhases.phase2.important.nta'),
+        t('immigration.deportationPhases.phase2.important.mandatory'),
+        t('immigration.deportationPhases.phase2.important.bondAmount'),
+        t('immigration.deportationPhases.phase2.important.criminal'),
+      ],
+    },
+    {
+      id: 'phase3',
+      icon: <Gavel className="h-6 w-6" />,
+      title: t('immigration.deportationPhases.phase3.title'),
+      color: 'purple',
+      rightsTitle: t('immigration.deportationPhases.phase3.rightsTitle'),
+      rights: [
+        t('immigration.deportationPhases.phase3.rights.attorney'),
+        t('immigration.deportationPhases.phase3.rights.interpreter'),
+        t('immigration.deportationPhases.phase3.rights.examine'),
+        t('immigration.deportationPhases.phase3.rights.present'),
+        t('immigration.deportationPhases.phase3.rights.appeal'),
+      ],
+      expectTitle: t('immigration.deportationPhases.phase3.outcomesTitle'),
+      expectations: [
+        t('immigration.deportationPhases.phase3.outcomes.relief'),
+        t('immigration.deportationPhases.phase3.outcomes.voluntary'),
+        t('immigration.deportationPhases.phase3.outcomes.removal'),
+        t('immigration.deportationPhases.phase3.outcomes.continuances'),
+        t('immigration.deportationPhases.phase3.outcomes.closure'),
+      ],
+    },
+    {
+      id: 'phase4',
+      icon: <FileText className="h-6 w-6" />,
+      title: t('immigration.deportationPhases.phase4.title'),
+      color: 'red',
+      rightsTitle: t('immigration.deportationPhases.phase4.rightsTitle'),
+      rights: [
+        t('immigration.deportationPhases.phase4.rights.deadline'),
+        t('immigration.deportationPhases.phase4.rights.federal'),
+        t('immigration.deportationPhases.phase4.rights.stay'),
+        t('immigration.deportationPhases.phase4.rights.motions'),
+      ],
+      expectTitle: t('immigration.deportationPhases.phase4.processTitle'),
+      expectations: [
+        t('immigration.deportationPhases.phase4.process.schedule'),
+        t('immigration.deportationPhases.phase4.process.period'),
+        t('immigration.deportationPhases.phase4.process.refusal'),
+        t('immigration.deportationPhases.phase4.process.supervision'),
+        t('immigration.deportationPhases.phase4.process.bar'),
+      ],
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % phases.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [phases.length]);
+
+  const getColorClasses = (color: string) => {
+    const colors: Record<string, { bg: string; text: string; ring: string }> = {
+      blue: { bg: 'from-blue-500/20 via-blue-500/10', text: 'text-blue-600 dark:text-blue-400', ring: 'ring-blue-500/20' },
+      orange: { bg: 'from-orange-500/20 via-orange-500/10', text: 'text-orange-600 dark:text-orange-400', ring: 'ring-orange-500/20' },
+      purple: { bg: 'from-purple-500/20 via-purple-500/10', text: 'text-purple-600 dark:text-purple-400', ring: 'ring-purple-500/20' },
+      red: { bg: 'from-red-500/20 via-red-500/10', text: 'text-red-600 dark:text-red-400', ring: 'ring-red-500/20' },
+    };
+    return colors[color] || colors.blue;
+  };
+
+  return (
+    <div className="relative">
+      <div className="relative h-[500px] md:h-[400px]" style={{ perspective: '1000px' }}>
+        {phases.map((phase, index) => {
+          const isActive = index === activeIndex;
+          const offset = index - activeIndex;
+          const colors = getColorClasses(phase.color);
+          
+          return (
+            <motion.div
+              key={phase.id}
+              className="absolute inset-0 w-full"
+              initial={false}
+              animate={{
+                rotateY: offset * 45,
+                z: isActive ? 0 : -200,
+                opacity: isActive ? 1 : 0.3,
+                scale: isActive ? 1 : 0.85,
+              }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              style={{ transformStyle: 'preserve-3d' }}
+            >
+              <Card className={`h-full hover:shadow-lg transition-all duration-200 ${isActive ? 'shadow-lg' : ''}`}>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid={`text-${phase.id}-title`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colors.bg} to-transparent flex items-center justify-center ring-1 ${colors.ring}`}>
+                      <span className={colors.text}>{phase.icon}</span>
+                    </div>
+                    <div>
+                      <Badge variant="outline" className="mb-1">Phase {index + 1}</Badge>
+                      <div className="text-xl">{phase.title}</div>
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3 text-foreground">{phase.rightsTitle}</h4>
+                      <ul className="space-y-2 text-sm">
+                        {phase.rights.map((right, i) => (
+                          <li key={i} className="flex items-start">
+                            <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                            {right}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3 text-foreground">{phase.expectTitle}</h4>
+                      <ul className="space-y-2 text-sm">
+                        {phase.expectations.map((exp, i) => (
+                          <li key={i}>• {exp}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      <div className="flex justify-center gap-3 mt-8">
+        {phases.map((phase, index) => (
+          <button
+            key={phase.id}
+            onClick={() => setActiveIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === activeIndex
+                ? 'bg-primary ring-2 ring-primary ring-offset-2 ring-offset-background'
+                : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+            }`}
+            aria-label={`Go to phase ${index + 1}`}
+            data-testid={`dot-phase-${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ImmigrationGuidance() {
   useScrollToTop();
   const { t } = useTranslation();
@@ -36,43 +227,51 @@ export default function ImmigrationGuidance() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-amber-600 text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      {/* Hero Section - Vivid Gradient Style */}
+      <section className="vivid-header text-white py-16 lg:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
+        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" data-testid="text-immigration-hero-title">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center mx-auto mb-8 ring-1 ring-white/20">
+              <Flag className="h-10 w-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white" data-testid="text-immigration-hero-title">
               {t('immigration.hero.title1')}<br />
-              <span className="text-amber-200">{t('immigration.hero.title2')}</span>
+              <span className="text-white/80">{t('immigration.hero.title2')}</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-amber-100 max-w-4xl mx-auto leading-relaxed" data-testid="text-immigration-hero-subtitle">
+            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-4xl mx-auto leading-relaxed" data-testid="text-immigration-hero-subtitle">
               {t('immigration.hero.subtitle')}
             </p>
           </motion.div>
-
-          <ScrollReveal delay={0.2}>
-            <Alert className="bg-red-600 border-red-700 text-white max-w-4xl mx-auto mb-8">
-              <AlertTriangle className="h-5 w-5 text-white" />
-              <AlertDescription className="text-white font-semibold" data-testid="alert-critical-rights">
-                <strong>{t('immigration.criticalAlert.title')}</strong> {t('immigration.criticalAlert.text')}
-              </AlertDescription>
-            </Alert>
-          </ScrollReveal>
         </div>
       </section>
 
+      {/* Critical Alert - Below Hero */}
+      <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-20 mb-8">
+        <Alert className="bg-red-600 border-red-700 text-white shadow-lg">
+          <AlertTriangle className="h-5 w-5 text-white" />
+          <AlertDescription className="text-white font-semibold" data-testid="alert-critical-rights">
+            <strong>{t('immigration.criticalAlert.title')}</strong> {t('immigration.criticalAlert.text')}
+          </AlertDescription>
+        </Alert>
+      </div>
+
       {/* Emergency Rights Section */}
-      <section className="py-16 bg-red-50 dark:bg-red-950">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-red-800 dark:text-red-200 mb-6" data-testid="text-emergency-rights-title">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-red-500/20">
+                <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-emergency-rights-title">
                 {t('immigration.emergencyRights.title')}
               </h2>
-              <p className="text-xl text-red-700 dark:text-red-300" data-testid="text-emergency-rights-subtitle">
+              <p className="text-xl text-muted-foreground" data-testid="text-emergency-rights-subtitle">
                 {t('immigration.emergencyRights.subtitle')}
               </p>
             </div>
@@ -80,10 +279,12 @@ export default function ImmigrationGuidance() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="border-red-200 bg-white dark:bg-gray-900">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-red-800 dark:text-red-200" data-testid="text-constitutional-rights-title">
-                    <Shield className="mr-2 h-6 w-6" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-constitutional-rights-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
+                      <Shield className="h-5 w-5 text-green-600 dark:text-green-400" />
+                    </div>
                     {t('immigration.emergencyRights.constitutionalTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -119,10 +320,12 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="border-amber-200 bg-amber-50 dark:bg-amber-950">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-amber-800 dark:text-amber-200" data-testid="text-what-not-to-do-title">
-                    <XCircle className="mr-2 h-6 w-6" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-what-not-to-do-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20">
+                      <XCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
+                    </div>
                     {t('immigration.emergencyRights.whatNotToDoTitle')}
                   </CardTitle>
                 </CardHeader>
@@ -160,11 +363,14 @@ export default function ImmigrationGuidance() {
         </div>
       </section>
 
-      {/* Deportation Process Phases */}
+      {/* Deportation Process Phases - 3D Carousel */}
       <section className="py-16 lg:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+                <Clock className="h-8 w-8 text-primary" />
+              </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-deportation-phases-title">
                 {t('immigration.deportationPhases.title')}
               </h2>
@@ -174,214 +380,22 @@ export default function ImmigrationGuidance() {
             </div>
           </ScrollReveal>
 
-          <div className="space-y-8">
-            {/* Phase 1: Initial Encounter */}
-            <ScrollReveal delay={0.1}>
-              <Card className="border-blue-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-blue-800 dark:text-blue-200" data-testid="text-phase1-title">
-                    <Eye className="mr-2 h-6 w-6" />
-                    {t('immigration.deportationPhases.phase1.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase1.rightsTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase1.rights.askLeave')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase1.rights.warrant')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase1.rights.silent')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase1.rights.attorney')}
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase1.expectTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li>• {t('immigration.deportationPhases.phase1.expect.approach')}</li>
-                        <li>• {t('immigration.deportationPhases.phase1.expect.documents')}</li>
-                        <li>• {t('immigration.deportationPhases.phase1.expect.adminWarrant')}</li>
-                        <li>• {t('immigration.deportationPhases.phase1.expect.detention')}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Phase 2: Detention */}
-            <ScrollReveal delay={0.2}>
-              <Card className="border-orange-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-orange-800 dark:text-orange-200" data-testid="text-phase2-title">
-                    <Users className="mr-2 h-6 w-6" />
-                    {t('immigration.deportationPhases.phase2.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase2.rightsTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase2.rights.phone')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase2.rights.consulate')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase2.rights.interpreter')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase2.rights.charges')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase2.rights.bond')}
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase2.importantTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li>• {t('immigration.deportationPhases.phase2.important.duration')}</li>
-                        <li>• {t('immigration.deportationPhases.phase2.important.nta')}</li>
-                        <li>• {t('immigration.deportationPhases.phase2.important.mandatory')}</li>
-                        <li>• {t('immigration.deportationPhases.phase2.important.bondAmount')}</li>
-                        <li>• {t('immigration.deportationPhases.phase2.important.criminal')}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Phase 3: Immigration Court */}
-            <ScrollReveal delay={0.3}>
-              <Card className="border-purple-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-purple-800 dark:text-purple-200" data-testid="text-phase3-title">
-                    <Gavel className="mr-2 h-6 w-6" />
-                    {t('immigration.deportationPhases.phase3.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase3.rightsTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase3.rights.attorney')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase3.rights.interpreter')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase3.rights.examine')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase3.rights.present')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase3.rights.appeal')}
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase3.outcomesTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li>• {t('immigration.deportationPhases.phase3.outcomes.relief')}</li>
-                        <li>• {t('immigration.deportationPhases.phase3.outcomes.voluntary')}</li>
-                        <li>• {t('immigration.deportationPhases.phase3.outcomes.removal')}</li>
-                        <li>• {t('immigration.deportationPhases.phase3.outcomes.continuances')}</li>
-                        <li>• {t('immigration.deportationPhases.phase3.outcomes.closure')}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Phase 4: Appeals and Final Removal */}
-            <ScrollReveal delay={0.4}>
-              <Card className="border-red-200">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-red-800 dark:text-red-200" data-testid="text-phase4-title">
-                    <FileText className="mr-2 h-6 w-6" />
-                    {t('immigration.deportationPhases.phase4.title')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase4.rightsTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase4.rights.deadline')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase4.rights.federal')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase4.rights.stay')}
-                        </li>
-                        <li className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                          {t('immigration.deportationPhases.phase4.rights.motions')}
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{t('immigration.deportationPhases.phase4.processTitle')}</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li>• {t('immigration.deportationPhases.phase4.process.schedule')}</li>
-                        <li>• {t('immigration.deportationPhases.phase4.process.period')}</li>
-                        <li>• {t('immigration.deportationPhases.phase4.process.refusal')}</li>
-                        <li>• {t('immigration.deportationPhases.phase4.process.supervision')}</li>
-                        <li>• {t('immigration.deportationPhases.phase4.process.bar')}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
+          <DeportationPhasesCarousel t={t} />
         </div>
       </section>
 
       {/* Special Protections */}
-      <section className="py-16 bg-green-50 dark:bg-green-950">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-green-800 dark:text-green-200 mb-6" data-testid="text-special-protections-title">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-green-500/20">
+                <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-special-protections-title">
                 {t('immigration.specialProtections.title')}
               </h2>
-              <p className="text-xl text-green-700 dark:text-green-300" data-testid="text-special-protections-subtitle">
+              <p className="text-xl text-muted-foreground" data-testid="text-special-protections-subtitle">
                 {t('immigration.specialProtections.subtitle')}
               </p>
             </div>
@@ -389,10 +403,12 @@ export default function ImmigrationGuidance() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="border-green-200">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-green-800 dark:text-green-200" data-testid="text-us-citizens-title">
-                    <UserCheck className="mr-2 h-5 w-5" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-us-citizens-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
+                      <UserCheck className="h-5 w-5 text-green-600 dark:text-green-400" />
+                    </div>
                     {t('immigration.specialProtections.usCitizens.title')}
                   </CardTitle>
                 </CardHeader>
@@ -409,10 +425,12 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="border-blue-200">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-blue-800 dark:text-blue-200" data-testid="text-vulnerable-populations-title">
-                    <Users className="mr-2 h-5 w-5" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-vulnerable-populations-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
+                      <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                    </div>
                     {t('immigration.specialProtections.vulnerable.title')}
                   </CardTitle>
                 </CardHeader>
@@ -429,10 +447,12 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Card className="border-purple-200">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-purple-800 dark:text-purple-200" data-testid="text-sanctuary-jurisdictions-title">
-                    <Home className="mr-2 h-5 w-5" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-sanctuary-jurisdictions-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent flex items-center justify-center ring-1 ring-purple-500/20">
+                      <Home className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+                    </div>
                     {t('immigration.specialProtections.sanctuary.title')}
                   </CardTitle>
                 </CardHeader>
@@ -456,6 +476,9 @@ export default function ImmigrationGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+                <Phone className="h-8 w-8 text-primary" />
+              </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-emergency-resources-title">
                 {t('immigration.resources.title')}
               </h2>
@@ -467,10 +490,12 @@ export default function ImmigrationGuidance() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="border-blue-200">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-blue-800 dark:text-blue-200" data-testid="text-national-hotlines-title">
-                    <Phone className="mr-2 h-6 w-6" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-national-hotlines-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
+                      <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                    </div>
                     {t('immigration.resources.hotlines.title')}
                   </CardTitle>
                 </CardHeader>
@@ -478,17 +503,17 @@ export default function ImmigrationGuidance() {
                   <div className="space-y-4">
                     <div>
                       <strong className="text-lg">{t('immigration.resources.hotlines.nif.name')}</strong>
-                      <p className="text-2xl font-bold text-blue-600">{t('immigration.resources.hotlines.nif.number')}</p>
+                      <p className="text-2xl font-bold text-primary">{t('immigration.resources.hotlines.nif.number')}</p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.hotlines.nif.description')}</p>
                     </div>
                     <div>
                       <strong className="text-lg">{t('immigration.resources.hotlines.aclu.name')}</strong>
-                      <p className="text-2xl font-bold text-blue-600">{t('immigration.resources.hotlines.aclu.number')}</p>
+                      <p className="text-2xl font-bold text-primary">{t('immigration.resources.hotlines.aclu.number')}</p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.hotlines.aclu.description')}</p>
                     </div>
                     <div>
                       <strong className="text-lg">{t('immigration.resources.hotlines.doj.name')}</strong>
-                      <p className="text-2xl font-bold text-blue-600">{t('immigration.resources.hotlines.doj.number')}</p>
+                      <p className="text-2xl font-bold text-primary">{t('immigration.resources.hotlines.doj.number')}</p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.hotlines.doj.description')}</p>
                     </div>
                   </div>
@@ -497,10 +522,12 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="border-green-200">
+              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-green-800 dark:text-green-200" data-testid="text-locator-services-title">
-                    <BookOpen className="mr-2 h-6 w-6" />
+                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-locator-services-title">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
+                      <BookOpen className="h-5 w-5 text-green-600 dark:text-green-400" />
+                    </div>
                     {t('immigration.resources.locators.title')}
                   </CardTitle>
                 </CardHeader>
@@ -508,17 +535,17 @@ export default function ImmigrationGuidance() {
                   <div className="space-y-4">
                     <div>
                       <strong className="text-lg">{t('immigration.resources.locators.iceDetainee.name')}</strong>
-                      <p className="text-lg font-bold text-green-600">{t('immigration.resources.locators.iceDetainee.url')}</p>
+                      <p className="text-lg font-bold text-primary">{t('immigration.resources.locators.iceDetainee.url')}</p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.locators.iceDetainee.description')}</p>
                     </div>
                     <div>
                       <strong className="text-lg">{t('immigration.resources.locators.legalServices.name')}</strong>
-                      <p className="text-lg font-bold text-green-600">{t('immigration.resources.locators.legalServices.url')}</p>
+                      <p className="text-lg font-bold text-primary">{t('immigration.resources.locators.legalServices.url')}</p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.locators.legalServices.description')}</p>
                     </div>
                     <div>
                       <strong className="text-lg">{t('immigration.resources.locators.consulate.name')}</strong>
-                      <p className="text-lg font-bold text-green-600">{t('immigration.resources.locators.consulate.url')}</p>
+                      <p className="text-lg font-bold text-primary">{t('immigration.resources.locators.consulate.url')}</p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.locators.consulate.description')}</p>
                     </div>
                   </div>
@@ -529,9 +556,12 @@ export default function ImmigrationGuidance() {
 
           {/* Prepare Now Section */}
           <ScrollReveal delay={0.3}>
-            <Card className="mt-8 border-purple-200">
+            <Card className="mt-8 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
               <CardHeader>
-                <CardTitle className="text-purple-800 dark:text-purple-200" data-testid="text-prepare-now-title">
+                <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-prepare-now-title">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent flex items-center justify-center ring-1 ring-purple-500/20">
+                    <FileText className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+                  </div>
                   {t('immigration.resources.prepareTitle')}
                 </CardTitle>
               </CardHeader>
@@ -565,10 +595,13 @@ export default function ImmigrationGuidance() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-blue-50 dark:bg-blue-950">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-blue-800 dark:text-blue-200 mb-8" data-testid="text-get-additional-help-title">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+              <ArrowRight className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-get-additional-help-title">
               {t('immigration.finalCta.title')}
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
