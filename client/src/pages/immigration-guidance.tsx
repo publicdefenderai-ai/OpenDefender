@@ -137,67 +137,56 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
     return colors[color] || colors.blue;
   };
 
+  const activePhase = phases[activeIndex];
+  const activeColors = getColorClasses(activePhase.color);
+
   return (
     <div className="relative">
-      <div className="relative h-[500px] md:h-[400px]" style={{ perspective: '1000px' }}>
-        {phases.map((phase, index) => {
-          const isActive = index === activeIndex;
-          const offset = index - activeIndex;
-          const colors = getColorClasses(phase.color);
-          
-          return (
-            <motion.div
-              key={phase.id}
-              className="absolute inset-0 w-full"
-              initial={false}
-              animate={{
-                rotateY: offset * 45,
-                z: isActive ? 0 : -200,
-                opacity: isActive ? 1 : 0.3,
-                scale: isActive ? 1 : 0.85,
-              }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              <Card className={`h-full hover:shadow-lg transition-all duration-200 ${isActive ? 'shadow-lg' : ''}`}>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-foreground" data-testid={`text-${phase.id}-title`}>
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colors.bg} to-transparent flex items-center justify-center ring-1 ${colors.ring}`}>
-                      <span className={colors.text}>{phase.icon}</span>
-                    </div>
-                    <div>
-                      <Badge variant="outline" className="mb-1">Phase {index + 1}</Badge>
-                      <div className="text-xl">{phase.title}</div>
-                    </div>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{phase.rightsTitle}</h4>
-                      <ul className="space-y-2 text-sm">
-                        {phase.rights.map((right, i) => (
-                          <li key={i} className="flex items-start">
-                            <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                            {right}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-3 text-foreground">{phase.expectTitle}</h4>
-                      <ul className="space-y-2 text-sm">
-                        {phase.expectations.map((exp, i) => (
-                          <li key={i}>• {exp}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          );
-        })}
+      <div className="relative min-h-[420px] md:min-h-[350px]">
+        <motion.div
+          key={activePhase.id}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-200">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-foreground" data-testid={`text-${activePhase.id}-title`}>
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${activeColors.bg} to-transparent flex items-center justify-center ring-1 ${activeColors.ring}`}>
+                  <span className={activeColors.text}>{activePhase.icon}</span>
+                </div>
+                <div>
+                  <Badge variant="outline" className="mb-1">Phase {activeIndex + 1} of {phases.length}</Badge>
+                  <div className="text-xl">{activePhase.title}</div>
+                </div>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold mb-3 text-foreground">{activePhase.rightsTitle}</h4>
+                  <ul className="space-y-2 text-sm">
+                    {activePhase.rights.map((right, i) => (
+                      <li key={i} className="flex items-start">
+                        <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        {right}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-3 text-foreground">{activePhase.expectTitle}</h4>
+                  <ul className="space-y-2 text-sm">
+                    {activePhase.expectations.map((exp, i) => (
+                      <li key={i}>• {exp}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
 
       <div className="flex justify-center gap-3 mt-8">
@@ -205,10 +194,10 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
           <button
             key={phase.id}
             onClick={() => setActiveIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${
               index === activeIndex
-                ? 'bg-primary ring-2 ring-primary ring-offset-2 ring-offset-background'
-                : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                ? 'bg-primary border-primary ring-2 ring-primary/30 ring-offset-2 ring-offset-background'
+                : 'bg-transparent border-muted-foreground/50 hover:border-primary/50'
             }`}
             aria-label={`Go to phase ${index + 1}`}
             data-testid={`dot-phase-${index + 1}`}
