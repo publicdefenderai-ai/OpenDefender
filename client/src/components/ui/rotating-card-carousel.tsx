@@ -57,7 +57,7 @@ export function RotatingCardCarousel({
 
   return (
     <div className="relative w-full max-w-lg mx-auto" style={{ perspective: "1000px" }}>
-      <div className="relative h-[180px] flex items-center justify-center">
+      <div className="relative min-h-[170px] flex flex-col justify-center pb-2">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentIndex}
@@ -70,7 +70,7 @@ export function RotatingCardCarousel({
               duration: 0.5,
               ease: [0.4, 0, 0.2, 1],
             }}
-            className="absolute w-full"
+            className="w-full"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="bg-card border border-border/50 rounded-2xl px-6 py-5 shadow-lg backdrop-blur-sm">
@@ -82,7 +82,7 @@ export function RotatingCardCarousel({
                   <h3 className="text-lg font-semibold text-foreground mb-1.5">
                     {items[currentIndex].title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                     {items[currentIndex].description}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export function RotatingCardCarousel({
         </AnimatePresence>
       </div>
 
-      <div className="flex justify-center gap-2.5 mt-4">
+      <div className="flex justify-center gap-2.5 mt-2">
         {items.map((_, index) => (
           <button
             key={index}

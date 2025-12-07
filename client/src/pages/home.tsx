@@ -53,14 +53,18 @@ function TrustItem({ title, description }: Omit<TrustItemProps, 'icon'>) {
             />
           </div>
         </CollapsibleTrigger>
-        <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+        <CollapsibleContent asChild forceMount>
           <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="px-2 pb-4"
+            initial={false}
+            animate={isOpen ? "open" : "collapsed"}
+            variants={{
+              open: { height: "auto", opacity: 1 },
+              collapsed: { height: 0, opacity: 0 }
+            }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden px-2"
           >
-            <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+            <p className="pb-4 text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
               {description}
             </p>
           </motion.div>
