@@ -11,7 +11,10 @@ import {
   MapPin,
   Navigation,
   Search,
-  Mail
+  Mail,
+  HardDrive as HardDriveIcon,
+  Trash2,
+  EyeOff
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -700,7 +703,7 @@ export default function CaseGuidance() {
                 </h2>
               </div>
 
-              <PrivacyAssurancesCarousel />
+              <PrivacyGrid />
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
                 <Button
@@ -754,84 +757,72 @@ function StepCard({ number, title, description }: {
   );
 }
 
-function PrivacyAssurancesCarousel() {
+function PrivacyGrid() {
   const { t } = useTranslation();
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   const items = [
     {
       title: t('case.privacy.noStorageTitle'),
       description: t('case.privacy.noStorageDesc'),
+      icon: HardDriveIcon,
+      gradient: 'from-blue-500/20 to-cyan-500/20',
+      iconBg: 'from-blue-500 to-cyan-500',
     },
     {
       title: t('case.privacy.sessionOnlyTitle'),
       description: t('case.privacy.sessionOnlyDesc'),
+      icon: Clock,
+      gradient: 'from-violet-500/20 to-purple-500/20',
+      iconBg: 'from-violet-500 to-purple-500',
     },
     {
       title: t('case.privacy.autoDeleteTitle'),
       description: t('case.privacy.autoDeleteDesc'),
+      icon: Trash2,
+      gradient: 'from-emerald-500/20 to-teal-500/20',
+      iconBg: 'from-emerald-500 to-teal-500',
     },
     {
       title: t('case.privacy.anonymousTitle'),
       description: t('case.privacy.anonymousDesc'),
+      icon: EyeOff,
+      gradient: 'from-amber-500/20 to-orange-500/20',
+      iconBg: 'from-amber-500 to-orange-500',
     },
   ];
 
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % items.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [items.length, isPaused]);
-
   return (
-    <div 
-      className="relative"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-      role="region"
-      aria-live="polite"
-      data-testid="carousel-privacy"
-    >
-      <div className="flex items-center justify-center">
-        <AnimatePresence mode="wait">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" data-testid="privacy-grid">
+      {items.map((item, index) => {
+        const Icon = item.icon;
+        return (
           <motion.div
-            key={activeIndex}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center px-6 py-4 border border-border rounded-lg bg-background/50 min-w-[280px] max-w-sm"
-          >
-            <h3 className="font-semibold text-foreground mb-1">
-              {items[activeIndex].title}
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              {items[activeIndex].description}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <div className="flex justify-center gap-2 mt-4">
-        {items.map((_, index) => (
-          <button
             key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              index === activeIndex
-                ? "bg-primary w-6"
-                : "w-2 bg-transparent border border-muted-foreground/40 hover:border-primary/60"
-            }`}
-            aria-label={`Go to privacy point ${index + 1}`}
-            data-testid={`carousel-dot-${index}`}
-          />
-        ))}
-      </div>
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className={`relative group overflow-hidden rounded-xl bg-gradient-to-br ${item.gradient} p-[1px]`}
+            data-testid={`privacy-card-${index}`}
+          >
+            <div className="relative h-full rounded-xl bg-background/80 backdrop-blur-sm p-4 transition-shadow duration-300 group-hover:shadow-lg">
+              <div className="flex items-start gap-3">
+                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                  <Icon className="h-5 w-5 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold text-foreground text-sm mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
