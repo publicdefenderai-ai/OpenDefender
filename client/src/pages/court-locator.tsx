@@ -22,6 +22,7 @@ import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { RotatingCardCarousel } from "@/components/ui/rotating-card-carousel";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { searchCourthousesWithFederalData, getMockCourtData, CourtLocation } from "@/lib/court-services";
 
@@ -257,58 +258,40 @@ export default function CourtLocator() {
 
       {/* Information Section */}
       <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
                 {t('courtLocator.courtInformation.title')}
               </h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ScrollReveal delay={0.1}>
-              <Card className="hover:shadow-lg transition-all duration-200 hover:border-primary/30">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 text-primary ring-1 ring-primary/20">
-                    <Scale className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.courtTypesCard.title')}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t('courtLocator.courtInformation.courtTypesCard.description')}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card className="hover:shadow-lg transition-all duration-200 hover:border-primary/30">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 text-primary ring-1 ring-primary/20">
-                    <Clock className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.courtHoursCard.title')}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t('courtLocator.courtInformation.courtHoursCard.description')}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <Card className="hover:shadow-lg transition-all duration-200 hover:border-primary/30">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 text-primary ring-1 ring-primary/20">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.dataSourcesCard.title')}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {t('courtLocator.courtInformation.dataSourcesCard.description')}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal delay={0.2}>
+            <RotatingCardCarousel
+              items={[
+                {
+                  id: "court-types",
+                  icon: <Scale className="h-6 w-6" />,
+                  title: t('courtLocator.courtInformation.courtTypesCard.title'),
+                  description: t('courtLocator.courtInformation.courtTypesCard.description'),
+                },
+                {
+                  id: "court-hours",
+                  icon: <Clock className="h-6 w-6" />,
+                  title: t('courtLocator.courtInformation.courtHoursCard.title'),
+                  description: t('courtLocator.courtInformation.courtHoursCard.description'),
+                },
+                {
+                  id: "data-sources",
+                  icon: <Phone className="h-6 w-6" />,
+                  title: t('courtLocator.courtInformation.dataSourcesCard.title'),
+                  description: t('courtLocator.courtInformation.dataSourcesCard.description'),
+                },
+              ]}
+              autoRotateInterval={5000}
+            />
+          </ScrollReveal>
         </div>
       </section>
 

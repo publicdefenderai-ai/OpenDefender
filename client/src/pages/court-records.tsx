@@ -62,13 +62,19 @@ export default function CourtRecords() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-3">{t('courtRecords.hero.title')}</h1>
-          <p className="text-lg text-muted-foreground mb-4">
+      
+      {/* Hero Section */}
+      <section className="vivid-header-alt py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('courtRecords.hero.title')}</h1>
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
             {t('courtRecords.hero.subtitle')}
           </p>
-          
+        </div>
+      </section>
+      
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="mb-8">
           <Alert className="mb-6">
             <AlertCircle className="h-4 w-4" />
             <AlertDescription>

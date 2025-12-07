@@ -13,8 +13,10 @@ import {
   BarChart3,
   ChevronDown,
   Search,
-  HelpCircle
+  HelpCircle,
+  Compass
 } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -378,6 +380,16 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mt-1 max-w-sm">
                 {t('home.hero.urgentHelpNotice')}
               </p>
+              
+              <Link href="/how-to">
+                <button 
+                  className="mt-4 text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5 underline-offset-4 hover:underline"
+                  data-testid="link-how-to"
+                >
+                  <Compass className="h-4 w-4" />
+                  {t('home.hero.navigatingToolButton')}
+                </button>
+              </Link>
             </div>
           </ScrollReveal>
         </div>

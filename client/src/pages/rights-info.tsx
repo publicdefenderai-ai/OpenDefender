@@ -309,7 +309,7 @@ function QuickRightCard({ icon, title, description, onClick }: {
 }) {
   return (
     <Card 
-      className="text-center hover:shadow-lg transition-all duration-200 cursor-pointer border hover:border-primary/30" 
+      className="text-center hover:shadow-lg transition-all duration-200 cursor-pointer border hover:border-primary hover:ring-2 hover:ring-primary/30 ring-offset-2 ring-offset-background" 
       onClick={onClick}
       data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
     >
