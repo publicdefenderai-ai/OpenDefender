@@ -25,6 +25,7 @@ export function Header() {
   const { theme, setTheme } = useTheme();
   const [location] = useLocation();
   const isHomePage = location === "/";
+  const isHowToPage = location === "/how-to";
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -134,16 +135,18 @@ export function Header() {
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
             
-            <Link href="/how-to">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-muted-foreground hover:text-foreground"
-                data-testid="button-help"
-              >
-                <HelpCircle className="h-5 w-5" />
-              </Button>
-            </Link>
+            {!isHowToPage && (
+              <Link href="/how-to">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-muted-foreground hover:text-foreground"
+                  data-testid="button-help"
+                >
+                  <HelpCircle className="h-5 w-5" />
+                </Button>
+              </Link>
+            )}
             
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
