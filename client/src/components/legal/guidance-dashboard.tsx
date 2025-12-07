@@ -401,12 +401,13 @@ function YourChargesSection({
     };
   });
 
-  // Filter to only show charges that have explanations
-  const chargesWithContent = chargesWithExplanations.filter(c => c.explanation);
-
-  if (chargesWithContent.length === 0) {
-    return null;
-  }
+  // Generate fallback description based on classification
+  const getFallbackDescription = (charge: { name: string; classification: string; code: string }) => {
+    const isFelony = charge.classification === 'felony';
+    return isFelony 
+      ? `This is a felony charge, which is a more serious criminal offense. Felonies can carry significant penalties including potential prison time. Your attorney can explain the specific elements the prosecution must prove.`
+      : `This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.`;
+  };
 
   return (
     <Card className="border-border">
@@ -420,7 +421,7 @@ function YourChargesSection({
         </p>
       </CardHeader>
       <CardContent className="space-y-6">
-        {chargesWithContent.map((charge, index) => (
+        {chargesWithExplanations.map((charge, index) => (
           <div 
             key={index} 
             className="space-y-4"
@@ -439,12 +440,10 @@ function YourChargesSection({
               </Badge>
             </div>
 
-            {/* Plain Summary */}
-            {charge.explanation && (
-              <p className="text-sm text-foreground leading-relaxed">
-                {charge.explanation.plainSummary}
-              </p>
-            )}
+            {/* Plain Summary - use explanation or fallback */}
+            <p className="text-sm text-foreground leading-relaxed">
+              {charge.explanation?.plainSummary || getFallbackDescription(charge)}
+            </p>
 
             {/* Degree Context - helps explain 1st vs 2nd degree etc. */}
             {charge.explanation?.degreeContext && (
@@ -484,7 +483,7 @@ function YourChargesSection({
             )}
 
             {/* Separator between charges */}
-            {index < chargesWithContent.length - 1 && (
+            {index < chargesWithExplanations.length - 1 && (
               <div className="border-t border-border pt-4" />
             )}
           </div>
