@@ -134,10 +134,10 @@ const categories = ["Get Help", "Legal Rights", "Resources", "Reference"];
 function ResourceCardComponent({ resource }: { resource: ResourceCard }) {
   return (
     <Link href={resource.link}>
-      <Card className="h-full hover:shadow-md transition-all duration-200 cursor-pointer group border">
+      <Card className="h-full hover:shadow-lg transition-all duration-200 cursor-pointer group border hover:border-primary/30">
         <CardHeader>
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full border-2 border-muted flex items-center justify-center group-hover:border-primary/50 transition-colors flex-shrink-0 text-muted-foreground group-hover:text-primary">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center flex-shrink-0 text-primary ring-1 ring-primary/20 group-hover:ring-primary/40 transition-all">
               {resource.icon}
             </div>
             <div className="flex-1">
@@ -169,14 +169,14 @@ export default function HowTo() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-background py-12 md:py-16 border-b">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="vivid-header-alt py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
                 Navigating This Tool
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto px-2">
                 Explore all the legal resources, guidance tools, and information available to help you understand and navigate the criminal justice system
               </p>
             </div>

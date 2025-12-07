@@ -166,29 +166,53 @@ export default function RightsInfo() {
               </TabsList>
             </ScrollReveal>
 
-            <div className="perspective-container">
+            <div style={{ perspective: "1000px" }}>
               <TabsContent value="miranda" className="mt-0">
-                <div key={`miranda-${animationKey}`}>
+                <motion.div
+                  key={`miranda-${animationKey}`}
+                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
+                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
                   <MirandaRightsSection />
-                </div>
+                </motion.div>
               </TabsContent>
 
               <TabsContent value="arrest" className="mt-0">
-                <div key={`arrest-${animationKey}`}>
+                <motion.div
+                  key={`arrest-${animationKey}`}
+                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
+                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
                   <ArrestRightsSection />
-                </div>
+                </motion.div>
               </TabsContent>
 
               <TabsContent value="court" className="mt-0">
-                <div key={`court-${animationKey}`}>
+                <motion.div
+                  key={`court-${animationKey}`}
+                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
+                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
                   <CourtRightsSection />
-                </div>
+                </motion.div>
               </TabsContent>
 
               <TabsContent value="prison" className="mt-0">
-                <div key={`prison-${animationKey}`}>
+                <motion.div
+                  key={`prison-${animationKey}`}
+                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
+                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
                   <PrisonRightsSection />
-                </div>
+                </motion.div>
               </TabsContent>
             </div>
           </Tabs>
@@ -285,12 +309,12 @@ function QuickRightCard({ icon, title, description, onClick }: {
 }) {
   return (
     <Card 
-      className="text-center hover:shadow-md transition-all duration-200 cursor-pointer border" 
+      className="text-center hover:shadow-lg transition-all duration-200 cursor-pointer border hover:border-primary/30" 
       onClick={onClick}
       data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
     >
       <CardContent className="p-6">
-        <div className="w-12 h-12 rounded-full border-2 border-muted flex items-center justify-center mx-auto mb-4 text-muted-foreground">
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-4 text-primary ring-1 ring-primary/20">
           {icon}
         </div>
         <h3 className="font-semibold text-foreground mb-2">{title}</h3>

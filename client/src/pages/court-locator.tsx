@@ -103,14 +103,14 @@ export default function CourtLocator() {
       <Header />
 
       {/* Hero Section */}
-      <section className="gradient-hero text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="vivid-header-alt py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-600">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 {t('courtLocator.hero.title')}
               </h1>
-              <p className="text-xl text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
                 {t('courtLocator.hero.subtitle')}
               </p>
             </div>
@@ -268,10 +268,10 @@ export default function CourtLocator() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-200 hover:border-primary/30">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <Scale className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 text-primary ring-1 ring-primary/20">
+                    <Scale className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.courtTypesCard.title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -282,10 +282,10 @@ export default function CourtLocator() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-200 hover:border-primary/30">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-                    <Clock className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 text-primary ring-1 ring-primary/20">
+                    <Clock className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.courtHoursCard.title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -296,10 +296,10 @@ export default function CourtLocator() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-200 hover:border-primary/30">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-                    <Phone className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 text-primary ring-1 ring-primary/20">
+                    <Phone className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold mb-3">{t('courtLocator.courtInformation.dataSourcesCard.title')}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
