@@ -71,6 +71,11 @@ export interface LegalGuidance {
       suggestion?: string;
     }>;
   };
+  chargeClassifications?: Array<{
+    name: string;
+    classification: string;
+    code: string;
+  }>;
 }
 
 export const legalDataApi = {

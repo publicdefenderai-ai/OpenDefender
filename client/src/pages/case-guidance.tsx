@@ -82,6 +82,11 @@ interface EnhancedGuidanceResult {
       suggestion?: string;
     }>;
   };
+  chargeClassifications?: Array<{
+    name: string;
+    classification: string;
+    code: string;
+  }>;
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -332,6 +337,7 @@ export default function CaseGuidance() {
           avoidActions: guidance.avoidActions || [],
           timeline: guidance.timeline || [],
           validation: guidance.validation,
+          chargeClassifications: guidance.chargeClassifications,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges

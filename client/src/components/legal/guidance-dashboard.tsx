@@ -17,8 +17,6 @@ import {
   FileText,
   Users,
   Calendar,
-  Eye,
-  EyeOff,
   ArrowRight,
   Gavel,
   X,
@@ -507,7 +505,6 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   const { t, i18n } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
-  const [showSensitiveInfo, setShowSensitiveInfo] = useState(false);
 
   const toggleAction = (action: string) => {
     const newCompleted = new Set(completedActions);
@@ -552,21 +549,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       <Card className="border-l-4 border-l-primary">
         <CardHeader>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div className="flex items-center gap-2 md:gap-4 flex-wrap">
-              <div className="flex items-center gap-2">
-                <Scale className="h-5 w-5 text-muted-foreground" />
-                <CardTitle className="text-xl text-foreground">{t('legalGuidance.dashboard.title')}</CardTitle>
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setShowSensitiveInfo(!showSensitiveInfo)}
-                className="gap-2"
-                data-testid="button-toggle-sensitive-info"
-              >
-                {showSensitiveInfo ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                {showSensitiveInfo ? t('legalGuidance.dashboard.hideDetails') : t('legalGuidance.dashboard.showDetails')}
-              </Button>
+            <div className="flex items-center gap-2">
+              <Scale className="h-5 w-5 text-muted-foreground" />
+              <CardTitle className="text-xl text-foreground">{t('legalGuidance.dashboard.title')}</CardTitle>
             </div>
             <div className="flex gap-2 flex-wrap md:flex-nowrap">
               <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
@@ -583,26 +568,24 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             <div className="text-center">
               <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.charges')}</div>
               <div className="font-medium">
-                {showSensitiveInfo ? (
-                  <div className="flex flex-col gap-1">
-                    {guidance.chargeClassifications && guidance.chargeClassifications.length > 0 ? (
-                      guidance.chargeClassifications.map((charge, idx) => (
-                        <div key={idx} className="flex items-center justify-center gap-2">
-                          <span>{formatChargeName(charge.name)} ({charge.code})</span>
-                          <Badge 
-                            variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
-                            className="text-xs"
-                            data-testid={`badge-charge-classification-${idx}`}
-                          >
-                            {charge.classification.toUpperCase()}
-                          </Badge>
-                        </div>
-                      ))
-                    ) : (
-                      guidance.caseData.charges
-                    )}
-                  </div>
-                ) : t('legalGuidance.dashboard.summary.protected')}
+                <div className="flex flex-col gap-1">
+                  {guidance.chargeClassifications && guidance.chargeClassifications.length > 0 ? (
+                    guidance.chargeClassifications.map((charge, idx) => (
+                      <div key={idx} className="flex items-center justify-center gap-2">
+                        <span>{formatChargeName(charge.name)} ({charge.code})</span>
+                        <Badge 
+                          variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
+                          className="text-xs"
+                          data-testid={`badge-charge-classification-${idx}`}
+                        >
+                          {charge.classification.toUpperCase()}
+                        </Badge>
+                      </div>
+                    ))
+                  ) : (
+                    guidance.caseData.charges
+                  )}
+                </div>
               </div>
             </div>
             <div className="text-center">
