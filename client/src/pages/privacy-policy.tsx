@@ -13,21 +13,22 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-background">
       <Header />
       
+      {/* Hero Section with Colored Header */}
+      <section className="vivid-header-purple py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
+            {t('privacyPolicy.hero.title')}
+          </h1>
+          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
+            {t('privacyPolicy.hero.subtitle')}
+          </p>
+          <p className="text-sm text-white/60 mt-2">
+            {t('privacyPolicy.hero.lastUpdated')}
+          </p>
+        </div>
+      </section>
+      
       <main className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-        {/* Hero Section */}
-        <ScrollReveal>
-          <div className="text-center mb-10 md:mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-              {t('privacyPolicy.hero.title')}
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('privacyPolicy.hero.subtitle')}
-            </p>
-            <p className="text-sm text-muted-foreground mt-2">
-              {t('privacyPolicy.hero.lastUpdated')}
-            </p>
-          </div>
-        </ScrollReveal>
 
         {/* Core Principles */}
         <ScrollReveal>
@@ -182,6 +183,8 @@ export default function PrivacyPolicy() {
                     {t('privacyPolicy.technical.external.description')}
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-2">
+                    <li>{t('privacyPolicy.technical.external.services.anthropic')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.govInfo')}</li>
                     <li>{t('privacyPolicy.technical.external.services.courtListener')}</li>
                     <li>{t('privacyPolicy.technical.external.services.recap')}</li>
                     <li>{t('privacyPolicy.technical.external.services.cornell')}</li>

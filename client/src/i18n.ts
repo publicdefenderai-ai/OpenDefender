@@ -1568,12 +1568,14 @@ i18n
                 "title": "External Data Sources",
                 "description": "Our platform accesses public legal databases and services to provide you with information:",
                 "services": {
+                  "anthropic": "Anthropic Claude AI - for generating legal guidance (with PII redacted before processing)",
+                  "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
-                  "cornell": "Cornell Legal Information Institute - for legal laws",
+                  "cornell": "Cornell Legal Information Institute - for legal statutes",
                   "openLaws": "OpenLaws API - for state statute metadata"
                 },
-                "note": "When you use our platform to search these databases, your queries may be transmitted to these services. We recommend reviewing their privacy policies if you have concerns about external data access."
+                "note": "When you use our platform to search these databases, your queries may be transmitted to these services. Personal information is automatically redacted before being sent to AI services. We recommend reviewing their privacy policies if you have concerns about external data access."
               }
             },
             "rights": {
@@ -3145,12 +3147,14 @@ i18n
                 "title": "Fuentes de Datos Externas",
                 "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
                 "services": {
+                  "anthropic": "Anthropic Claude AI - para generar orientación legal (con información personal eliminada antes del procesamiento)",
+                  "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",
                   "cornell": "Instituto de Información Legal de Cornell - para estatutos legales",
                   "openLaws": "API de OpenLaws - para metadatos de estatutos estatales"
                 },
-                "note": "Cuando usa nuestra plataforma para buscar en estas bases de datos, sus consultas pueden transmitirse a estos servicios. Recomendamos revisar sus políticas de privacidad si tiene inquietudes sobre el acceso a datos externos."
+                "note": "Cuando usa nuestra plataforma para buscar en estas bases de datos, sus consultas pueden transmitirse a estos servicios. La información personal se elimina automáticamente antes de enviarse a los servicios de IA. Recomendamos revisar sus políticas de privacidad si tiene inquietudes sobre el acceso a datos externos."
               }
             },
             "rights": {
