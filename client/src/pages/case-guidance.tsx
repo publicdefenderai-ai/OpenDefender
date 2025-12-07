@@ -695,12 +695,9 @@ export default function CaseGuidance() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 ring-1 ring-primary/20">
                   <Shield className="h-6 w-6 text-primary" />
                 </div>
-                <h2 className="text-xl font-semibold text-foreground mb-2" data-testid="heading-privacy">
+                <h2 className="text-xl font-semibold text-foreground" data-testid="heading-privacy">
                   {t('case.privacy.title')}
                 </h2>
-                <p className="text-muted-foreground text-sm max-w-md">
-                  {t('case.privacy.subtitle')}
-                </p>
               </div>
 
               <PrivacyAssurancesCarousel />
@@ -800,7 +797,7 @@ function PrivacyAssurancesCarousel() {
       aria-live="polite"
       data-testid="carousel-privacy"
     >
-      <div className="min-h-[80px] flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
@@ -808,12 +805,12 @@ function PrivacyAssurancesCarousel() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center px-4"
+            className="text-center px-6 py-4 border border-border rounded-lg bg-background/50 min-w-[280px] max-w-sm"
           >
             <h3 className="font-semibold text-foreground mb-1">
               {items[activeIndex].title}
             </h3>
-            <p className="text-sm text-muted-foreground max-w-sm mx-auto">
+            <p className="text-sm text-muted-foreground">
               {items[activeIndex].description}
             </p>
           </motion.div>
