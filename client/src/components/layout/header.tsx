@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home, Moon, Sun, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
+import { useNavigationGuard } from "@/contexts/navigation-guard";
 import {
   Sheet,
   SheetContent,
@@ -23,9 +24,14 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const { theme, setTheme } = useTheme();
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
+  const { attemptNavigation } = useNavigationGuard();
   const isHomePage = location === "/";
   const isHowToPage = location === "/how-to";
+
+  const handleNavigate = (href: string) => {
+    attemptNavigation(() => setLocation(href));
+  };
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -95,16 +101,15 @@ export function Header() {
               </div>
             </Link>
           ) : (
-            <Link href="/">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-muted-foreground hover:text-foreground"
-                data-testid="button-home"
-              >
-                <Home className="h-6 w-6" />
-              </Button>
-            </Link>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-muted-foreground hover:text-foreground"
+              data-testid="button-home"
+              onClick={() => handleNavigate("/")}
+            >
+              <Home className="h-6 w-6" />
+            </Button>
           )}
           
           <div className="flex items-center space-x-2">
@@ -136,16 +141,15 @@ export function Header() {
             </Button>
             
             {!isHowToPage && (
-              <Link href="/how-to">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-muted-foreground hover:text-foreground"
-                  data-testid="button-help"
-                >
-                  <HelpCircle className="h-5 w-5" />
-                </Button>
-              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground hover:text-foreground"
+                data-testid="button-help"
+                onClick={() => handleNavigate("/how-to")}
+              >
+                <HelpCircle className="h-5 w-5" />
+              </Button>
             )}
             
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -208,27 +212,26 @@ export function Header() {
                   {menuItems.map((item) => {
                     const Icon = item.icon;
                     return (
-                      <Link
+                      <Button
                         key={item.href}
-                        href={item.href}
-                        onClick={() => setMobileMenuOpen(false)}
+                        variant="ghost"
+                        className="w-full justify-start h-auto py-4 px-4"
+                        data-testid={item.testId}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          handleNavigate(item.href);
+                        }}
                       >
-                        <Button
-                          variant="ghost"
-                          className="w-full justify-start h-auto py-4 px-4"
-                          data-testid={item.testId}
-                        >
-                          <div className="flex items-start space-x-3 w-full">
-                            <Icon className="h-5 w-5 mt-0.5 text-blue-600 flex-shrink-0" />
-                            <div className="text-left flex-1 min-w-0">
-                              <div className="font-semibold">{item.title}</div>
-                              <div className="text-sm text-muted-foreground font-normal whitespace-normal break-words">
-                                {item.description}
-                              </div>
+                        <div className="flex items-start space-x-3 w-full">
+                          <Icon className="h-5 w-5 mt-0.5 text-blue-600 flex-shrink-0" />
+                          <div className="text-left flex-1 min-w-0">
+                            <div className="font-semibold">{item.title}</div>
+                            <div className="text-sm text-muted-foreground font-normal whitespace-normal break-words">
+                              {item.description}
                             </div>
                           </div>
-                        </Button>
-                      </Link>
+                        </div>
+                      </Button>
                     );
                   })}
                 </div>
