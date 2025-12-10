@@ -32,6 +32,7 @@ import { QAFlow } from "@/components/legal/qa-flow";
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { generateGuidancePDF } from "@/lib/pdf-generator";
 
 interface ImmediateAction {
   action: string;
@@ -287,10 +288,15 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 
 export default function CaseGuidance() {
   useScrollToTop();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
+
+  // Exit warning state
+  const [showExitWarning, setShowExitWarning] = useState(false);
+  const [hasExported, setHasExported] = useState(false);
+  const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null);
 
   // Public Defender search state
   const [showPublicDefenderModal, setShowPublicDefenderModal] = useState(false);
@@ -305,6 +311,55 @@ export default function CaseGuidance() {
   const [laSearching, setLaSearching] = useState(false);
   const [laOrganizations, setLaOrganizations] = useState<LegalAidOrganization[]>([]);
   const [laError, setLaError] = useState("");
+
+  // Browser beforeunload warning for unsaved guidance
+  useEffect(() => {
+    if (guidanceResult && !hasExported) {
+      const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+        e.preventDefault();
+        e.returnValue = '';
+      };
+      window.addEventListener('beforeunload', handleBeforeUnload);
+      return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+    }
+  }, [guidanceResult, hasExported]);
+
+  // Handler for attempting to close/navigate away from guidance
+  const handleAttemptClose = (navigationAction?: () => void) => {
+    if (guidanceResult && !hasExported) {
+      setPendingNavigation(() => navigationAction || (() => setGuidanceResult(null)));
+      setShowExitWarning(true);
+    } else {
+      if (navigationAction) {
+        navigationAction();
+      } else {
+        setGuidanceResult(null);
+      }
+    }
+  };
+
+  // Handler for proceeding without export
+  const handleProceedWithoutExport = () => {
+    setShowExitWarning(false);
+    if (pendingNavigation) {
+      pendingNavigation();
+    } else {
+      setGuidanceResult(null);
+    }
+    setPendingNavigation(null);
+  };
+
+  // Handler for export from warning dialog - exports PDF and stays on page
+  const handleExportFromWarning = () => {
+    if (guidanceResult) {
+      // Generate the PDF directly
+      generateGuidancePDF(guidanceResult, i18n.language);
+      setHasExported(true);
+    }
+    // Close dialog and clear pending navigation - user stays on guidance page after export
+    setShowExitWarning(false);
+    setPendingNavigation(null);
+  };
 
   const handleQAComplete = async (data: any) => {
     try {
@@ -350,6 +405,8 @@ export default function CaseGuidance() {
         // Then set the complete guidance result in one atomic update
         // This ensures the guidance dashboard receives complete, stable data
         setGuidanceResult(guidanceData);
+        // Reset export state for new guidance session
+        setHasExported(false);
       } else {
         console.error("API returned unsuccessful result:", result);
         alert("Failed to generate guidance. Please try again.");
@@ -467,9 +524,10 @@ export default function CaseGuidance() {
         <main className="px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 
-            onClose={() => setGuidanceResult(null)}
+            onClose={() => handleAttemptClose()}
             onShowPublicDefender={() => setShowPublicDefenderModal(true)}
             onShowLegalAid={() => setShowLegalAidModal(true)}
+            onExport={() => setHasExported(true)}
           />
         </main>
         
@@ -614,6 +672,38 @@ export default function CaseGuidance() {
                   </div>
                 </div>
               )}
+            </div>
+          </DialogContent>
+        </Dialog>
+
+        {/* Exit Warning Dialog */}
+        <Dialog open={showExitWarning} onOpenChange={setShowExitWarning}>
+          <DialogContent className="max-w-md">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <AlertTriangle className="h-5 w-5 text-muted-foreground" />
+                {t('case.exitWarning.title')}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">
+                {t('case.exitWarning.message')}
+              </p>
+              <div className="flex gap-3 justify-end">
+                <Button
+                  variant="outline"
+                  onClick={handleProceedWithoutExport}
+                  data-testid="button-proceed-without-export"
+                >
+                  {t('case.exitWarning.proceed')}
+                </Button>
+                <Button
+                  onClick={handleExportFromWarning}
+                  data-testid="button-export-and-stay"
+                >
+                  {t('case.exitWarning.export')}
+                </Button>
+              </div>
             </div>
           </DialogContent>
         </Dialog>

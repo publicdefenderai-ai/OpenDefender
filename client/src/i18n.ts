@@ -496,6 +496,12 @@ i18n
               "getStartedButton": "Get Started Now",
               "learnRightsButton": "Learn About Your Rights First",
               "footerBanner": "We do not store your personal data — all input deleted after session."
+            },
+            "exitWarning": {
+              "title": "Before You Go",
+              "message": "Your personalized guidance has not been exported. To protect your privacy, we don't store this information. If you leave now, it will be lost.",
+              "export": "Export",
+              "proceed": "Proceed"
             }
           },
           "rights": {
@@ -2075,6 +2081,12 @@ i18n
               "getStartedButton": "Comenzar Ahora",
               "learnRightsButton": "Aprenda Primero Sobre Sus Derechos",
               "footerBanner": "No almacenamos sus datos personales — toda información se elimina después de la sesión."
+            },
+            "exitWarning": {
+              "title": "Antes de Irse",
+              "message": "Su orientación personalizada no ha sido exportada. Para proteger su privacidad, no almacenamos esta información. Si se va ahora, se perderá.",
+              "export": "Exportar",
+              "proceed": "Continuar"
             }
           },
           "rights": {

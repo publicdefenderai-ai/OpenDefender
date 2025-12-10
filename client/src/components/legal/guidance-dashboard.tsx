@@ -141,6 +141,7 @@ interface GuidanceDashboardProps {
   onClose: () => void;
   onShowPublicDefender?: () => void;
   onShowLegalAid?: () => void;
+  onExport?: () => void;
 }
 
 // Utility function to format charge names in plain English
@@ -501,7 +502,7 @@ function YourChargesSection({
   );
 }
 
-export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid }: GuidanceDashboardProps) {
+export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport }: GuidanceDashboardProps) {
   const { t, i18n } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
@@ -541,6 +542,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   const handleExportPDF = () => {
     // Generate PDF entirely on client-side - no data sent to external servers
     generateGuidancePDF(guidance, i18n.language);
+    // Notify parent that export has been completed
+    onExport?.();
   };
 
   return (
