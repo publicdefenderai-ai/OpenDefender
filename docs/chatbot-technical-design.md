@@ -448,9 +448,82 @@ const quickReplies = [
 
 ---
 
-## 9. Performance
+## 9. Visual Design System
 
-### 9.1 Code Splitting
+### 9.1 Design Principles
+- Clean and professional without being cold
+- Sleek and modern while remaining approachable
+- Emphasizes competence and results-orientation
+- Minimal icon clutter
+
+### 9.2 Color Accents
+- Overall palette: Muted/neutral base (existing brand colors)
+- Accent moments:
+  - Guidance ready: Subtle primary color highlight
+  - Important alerts: Warm accent (not alarming red)
+  - Export success: Brief green confirmation
+- Case info panel: Subtle gradient background (`from-primary/5 to-transparent`)
+- Bot message headers: Optional subtle gradient for depth
+
+### 9.3 Micro-animations (Framer Motion)
+```typescript
+// Message entry animation
+const messageVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.2, ease: "easeOut" }
+  }
+};
+
+// Quick reply button hover
+const buttonHover = {
+  y: -2,
+  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+  transition: { duration: 0.15 }
+};
+
+// Success checkmark animation
+const successVariants = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: { 
+    scale: 1, 
+    opacity: 1,
+    transition: { type: "spring", stiffness: 300, damping: 20 }
+  }
+};
+```
+- All animations respect `prefers-reduced-motion`
+
+### 9.4 Typography Hierarchy
+| Element | Size | Weight | Purpose |
+|---------|------|--------|---------|
+| Bot messages | 16px (base) | Regular | Primary content |
+| Key information | 16px | Semibold | Deadlines, rights, important facts |
+| Action items | 15px | Medium | Things user needs to do |
+| Quick reply buttons | 15px | Medium | Tappable options |
+| Case info labels | 13px | Regular | Sidebar metadata |
+| Case info values | 14px | Semibold | Sidebar values |
+
+- Clear visual distinction between "informational" (regular weight) and "action required" (semibold + accent border)
+
+### 9.5 Smart Visual Cues
+- **Progress indicator**: Horizontal stepper or dots showing current step in triage flow
+- **Confidence indicator**: Subtle meter or percentage when AI validates legal information
+- No verified badges on citations (reduce clutter)
+- Loading states use skeleton placeholders, not spinners
+
+### 9.6 Excluded Design Elements
+- No bot avatar or identity icon
+- No companion-style micro-copy ("Good question", "Got it")
+- No verified badges on statute citations
+
+---
+
+## 10. Performance
+
+### 10.1 Code Splitting
 
 ```typescript
 // Lazy load chat components
@@ -560,12 +633,14 @@ If issues arise post-launch:
 
 ---
 
-## 14. Open Questions
+## 14. Design Decisions (Resolved)
 
-1. Should free-text input be enabled from the start, or only after structured flow?
-2. Should we show "typing" indicator for locally-computed responses, or only AI responses?
-3. Mobile: full-screen overlay or slide-up panel?
-4. Should exported PDF include conversation history or just final guidance?
+| Question | Decision |
+|----------|----------|
+| Free-text input | Quick replies for triage, free-text unlocks after guidance is generated. Incident description always allows free-text. |
+| Typing indicator | Only for AI-generated responses. Pre-written responses appear instantly. |
+| Mobile layout | Slide-up panel (~85% of screen), not full-screen overlay. |
+| PDF export | Final guidance only, no conversation history. |
 
 ---
 
