@@ -29,8 +29,18 @@ export function Header() {
   const isHomePage = location === "/";
   const isHowToPage = location === "/how-to";
 
-  const handleNavigate = (href: string) => {
-    attemptNavigation(() => setLocation(href));
+  const handleNavigate = (href: string, closeMobileMenu = false) => {
+    const wasBlocked = !attemptNavigation(() => {
+      if (closeMobileMenu) {
+        setMobileMenuOpen(false);
+      }
+      setLocation(href);
+    });
+    // If blocked, we still need to close the menu (user will see warning dialog)
+    // But they can reopen menu after dismissing the dialog
+    if (wasBlocked && closeMobileMenu) {
+      setMobileMenuOpen(false);
+    }
   };
 
   const changeLanguage = (lng: string) => {
@@ -217,10 +227,7 @@ export function Header() {
                         variant="ghost"
                         className="w-full justify-start h-auto py-4 px-4"
                         data-testid={item.testId}
-                        onClick={() => {
-                          setMobileMenuOpen(false);
-                          handleNavigate(item.href);
-                        }}
+                        onClick={() => handleNavigate(item.href, true)}
                       >
                         <div className="flex items-start space-x-3 w-full">
                           <Icon className="h-5 w-5 mt-0.5 text-blue-600 flex-shrink-0" />

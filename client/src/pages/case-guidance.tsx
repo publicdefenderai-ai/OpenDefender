@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -33,6 +33,7 @@ import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
+import { useNavigationGuard } from "@/contexts/navigation-guard";
 
 interface ImmediateAction {
   action: string;
@@ -292,11 +293,39 @@ export default function CaseGuidance() {
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
+  const { registerGuard, unregisterGuard } = useNavigationGuard();
 
   // Exit warning state
   const [showExitWarning, setShowExitWarning] = useState(false);
   const [hasExported, setHasExported] = useState(false);
   const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null);
+
+  // Navigation guard callbacks - memoized to prevent recreation
+  const shouldBlockNavigation = useCallback(() => {
+    return !!(guidanceResult && !hasExported);
+  }, [guidanceResult, hasExported]);
+
+  const onBlockNavigation = useCallback((navigateFn: () => void) => {
+    setPendingNavigation(() => navigateFn);
+    setShowExitWarning(true);
+  }, []);
+
+  // Register navigation guard only when there's unexported guidance
+  useEffect(() => {
+    if (guidanceResult && !hasExported) {
+      registerGuard({
+        shouldBlock: shouldBlockNavigation,
+        onBlock: onBlockNavigation
+      });
+      
+      return () => {
+        unregisterGuard();
+      };
+    } else {
+      // Unregister guard if no unexported guidance
+      unregisterGuard();
+    }
+  }, [guidanceResult, hasExported, shouldBlockNavigation, onBlockNavigation, registerGuard, unregisterGuard]);
 
   // Public Defender search state
   const [showPublicDefenderModal, setShowPublicDefenderModal] = useState(false);
