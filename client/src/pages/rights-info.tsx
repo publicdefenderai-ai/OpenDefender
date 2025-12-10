@@ -256,13 +256,6 @@ export default function RightsInfo() {
                 {t('rights.disclaimer.needHelp')}
               </h3>
               <div className="flex flex-wrap justify-center gap-3">
-                <Button 
-                  data-testid="button-emergency-aid" 
-                  variant="outline"
-                  className="py-3 px-6"
-                >
-                  {t('rights.disclaimer.emergencyAid')}
-                </Button>
                 <Link href="/case-guidance">
                   <Button 
                     data-testid="button-case-guidance" 
