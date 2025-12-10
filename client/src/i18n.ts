@@ -607,7 +607,7 @@ i18n
               }
             },
             "disclaimer": {
-              "title": "Legal Disclaimer:",
+              "title": "Important:",
               "text": "This information is for learning only and is not legal advice. Laws are different in each state and change over time. Always talk to a real lawyer for help with your specific situation.",
               "needHelp": "Need Immediate Legal Help?",
               "emergencyAid": "Emergency Legal Aid",
@@ -2186,7 +2186,7 @@ i18n
               }
             },
             "disclaimer": {
-              "title": "Descargo de Responsabilidad Legal:",
+              "title": "Importante:",
               "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes varían según la jurisdicción y cambian con el tiempo. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación.",
               "needHelp": "¿Necesita Ayuda Legal Inmediata?",
               "emergencyAid": "Asistencia Legal de Emergencia",

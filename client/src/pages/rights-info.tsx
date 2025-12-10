@@ -227,7 +227,8 @@ export default function RightsInfo() {
               <Link href="/search-seizure">
                 <Button 
                   data-testid="button-search-rights" 
-                  className="bg-purple-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-purple-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg"
+                  variant="outline"
+                  className="py-4 px-8"
                 >
                   <Search className="mr-2 h-5 w-5" />
                   Rights During a Search
@@ -242,10 +243,9 @@ export default function RightsInfo() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-              <AlertDescription className="text-amber-800 dark:text-amber-200">
-                <strong className="font-semibold">{t('rights.disclaimer.title')}</strong> {t('rights.disclaimer.text')}
+            <Alert className="border-border bg-muted/50">
+              <AlertDescription className="text-muted-foreground">
+                <strong className="font-semibold text-foreground">{t('rights.disclaimer.title')}</strong> {t('rights.disclaimer.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
@@ -255,17 +255,18 @@ export default function RightsInfo() {
               <h3 className="text-xl font-semibold text-foreground mb-4" data-testid="heading-need-help">
                 {t('rights.disclaimer.needHelp')}
               </h3>
-              <div className="space-x-4">
+              <div className="flex flex-wrap justify-center gap-3">
                 <Button 
                   data-testid="button-emergency-aid" 
-                  className="bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg"
+                  variant="outline"
+                  className="py-3 px-6"
                 >
                   {t('rights.disclaimer.emergencyAid')}
                 </Button>
                 <Link href="/case-guidance">
                   <Button 
                     data-testid="button-case-guidance" 
-                    className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 hover:scale-105 hover:font-extrabold transition-all duration-200 shadow-md hover:shadow-lg"
+                    className="py-3 px-6"
                   >
                     {t('rights.disclaimer.caseGuidance')}
                   </Button>
