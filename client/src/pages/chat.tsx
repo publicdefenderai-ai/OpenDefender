@@ -110,6 +110,11 @@ export default function ChatPage() {
         break;
 
       default:
+        if (reply.value === 'view_guidance') {
+          handleViewGuidance();
+        } else if (reply.value === 'export_pdf') {
+          handleExportPdf();
+        }
         break;
     }
   }, [state.currentStep, actions, addBotMessage, t]);
@@ -168,7 +173,7 @@ export default function ChatPage() {
         
         setIsTyping(false);
         actions.setIsGenerating(false);
-        actions.setGuidanceData(data);
+        actions.setGuidanceData(data.guidance || data);
         
         addBotMessage(t('chat.messages.guidanceReady', "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records."), [
           { id: 'view-guidance', label: t('chat.replies.viewGuidance', "View My Guidance"), value: 'view_guidance', icon: '📋' },
@@ -207,6 +212,134 @@ export default function ChatPage() {
     setLocation('/');
   }, [state.hasUnsavedGuidance, actions, setLocation, toast, t]);
 
+  const handleViewGuidance = useCallback(() => {
+    if (!state.guidanceData) return;
+    
+    const data = state.guidanceData;
+    let formattedContent = "";
+    
+    if (data.overview) {
+      formattedContent = `**Overview**\n${data.overview}\n\n`;
+    }
+    
+    if (data.rights && data.rights.length > 0) {
+      formattedContent += `**Your Rights**\n${data.rights.map(r => `• ${r}`).join('\n')}\n\n`;
+    }
+    
+    if (data.nextSteps && data.nextSteps.length > 0) {
+      formattedContent += `**Next Steps**\n${data.nextSteps.map(s => `• ${s}`).join('\n')}\n\n`;
+    }
+    
+    if (data.deadlines && data.deadlines.length > 0) {
+      formattedContent += `**Important Deadlines**\n${data.deadlines.map(d => `• ${d.event}: ${d.timeframe}`).join('\n')}\n\n`;
+    }
+    
+    if (data.resources && data.resources.length > 0) {
+      formattedContent += `**Resources**\n${data.resources.map(r => `• ${r.type}: ${r.description}`).join('\n')}`;
+    }
+    
+    if (!formattedContent) {
+      formattedContent = "Your legal guidance is ready. Please export as PDF for full details.";
+    }
+    
+    addBotMessage(formattedContent);
+    actions.setCurrentStep('follow_up');
+  }, [state.guidanceData, addBotMessage, actions]);
+
+  const handleExportPdf = useCallback(async () => {
+    if (!state.guidanceData) {
+      toast({ title: t('chat.export.noData', 'No guidance to export'), variant: "destructive" });
+      return;
+    }
+
+    try {
+      const { jsPDF } = await import('jspdf');
+      const doc = new jsPDF();
+      
+      const margin = 20;
+      let y = margin;
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const maxWidth = pageWidth - (margin * 2);
+      
+      doc.setFontSize(18);
+      doc.setFont('helvetica', 'bold');
+      doc.text('Legal Guidance Summary', margin, y);
+      y += 12;
+      
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(100);
+      doc.text(`Generated: ${new Date().toLocaleDateString()}`, margin, y);
+      y += 8;
+      doc.text(`State: ${state.caseInfo.stateName || state.caseInfo.state || 'N/A'}`, margin, y);
+      y += 8;
+      if (state.caseInfo.chargeNames?.length) {
+        doc.text(`Charges: ${state.caseInfo.chargeNames.join(', ')}`, margin, y);
+        y += 8;
+      }
+      y += 6;
+      
+      doc.setTextColor(0);
+      doc.setDrawColor(200);
+      doc.line(margin, y, pageWidth - margin, y);
+      y += 10;
+      
+      const data = state.guidanceData;
+      let content = "";
+      
+      if (data.overview) {
+        content += `OVERVIEW\n${data.overview}\n\n`;
+      }
+      
+      if (data.rights && data.rights.length > 0) {
+        content += `YOUR RIGHTS\n${data.rights.map(r => `- ${r}`).join('\n')}\n\n`;
+      }
+      
+      if (data.nextSteps && data.nextSteps.length > 0) {
+        content += `NEXT STEPS\n${data.nextSteps.map(s => `- ${s}`).join('\n')}\n\n`;
+      }
+      
+      if (data.deadlines && data.deadlines.length > 0) {
+        content += `IMPORTANT DEADLINES\n${data.deadlines.map(d => `- ${d.event}: ${d.timeframe}`).join('\n')}\n\n`;
+      }
+      
+      if (data.resources && data.resources.length > 0) {
+        content += `RESOURCES\n${data.resources.map(r => `- ${r.type}: ${r.description} (${r.contact})`).join('\n')}\n\n`;
+      }
+      
+      if (data.immediateActions && data.immediateActions.length > 0) {
+        content += `IMMEDIATE ACTIONS\n${data.immediateActions.map(a => `- [${a.urgency}] ${a.action}`).join('\n')}\n\n`;
+      }
+      
+      if (data.warnings && data.warnings.length > 0) {
+        content += `WARNINGS\n${data.warnings.map(w => `- ${w}`).join('\n')}\n\n`;
+      }
+      
+      if (!content) {
+        content = "Legal guidance has been generated. Please contact a legal professional for personalized advice.";
+      }
+      
+      doc.setFontSize(11);
+      const lines = doc.splitTextToSize(content, maxWidth);
+      
+      for (const line of lines) {
+        if (y > doc.internal.pageSize.getHeight() - margin) {
+          doc.addPage();
+          y = margin;
+        }
+        doc.text(line, margin, y);
+        y += 6;
+      }
+      
+      doc.save('legal-guidance.pdf');
+      actions.setHasExported(true);
+      toast({ title: t('chat.export.success', 'PDF downloaded successfully') });
+    } catch (error) {
+      console.error('PDF export error:', error);
+      toast({ title: t('chat.export.error', 'Failed to export PDF'), variant: "destructive" });
+    }
+  }, [state.guidanceData, state.caseInfo, actions, toast, t]);
+
   const canUseFreeText = state.currentStep === 'incident_description' || 
                           state.currentStep === 'follow_up' || 
                           state.currentStep === 'guidance_ready';
@@ -230,16 +363,17 @@ export default function ChatPage() {
                 variant="ghost"
                 size="icon"
                 onClick={handleClose}
-                className="md:hidden"
+                className="md:hidden h-8 w-8"
                 data-testid="button-back"
               >
-                <ArrowLeft className="h-5 w-5" />
+                <ArrowLeft className="h-4 w-4" />
               </Button>
-              <div>
-                <h1 className="font-semibold text-foreground">{t('chat.header.title', 'Legal Guidance')}</h1>
-                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <h1 className="text-sm font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
+                <span className="text-muted-foreground">•</span>
+                <div className="flex items-center gap-1 text-xs text-muted-foreground">
                   <Lock className="h-3 w-3" />
-                  <span>{t('chat.header.privacy', 'Private & Secure')}</span>
+                  <span>{t('chat.header.privacy', 'Private')}</span>
                 </div>
               </div>
             </div>
@@ -249,10 +383,7 @@ export default function ChatPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => {
-                    actions.setHasExported(true);
-                    toast({ title: t('chat.export.success', 'PDF exported successfully') });
-                  }}
+                  onClick={handleExportPdf}
                   data-testid="button-export-pdf"
                 >
                   <Download className="h-4 w-4 mr-2" />
