@@ -9,7 +9,7 @@ import { insertLegalCaseSchema, insertCaseFeedbackSchema } from "@shared/schema"
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, testClaudeConnection } from "./services/claude-guidance.js";
-import { getChargeById } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, criminalCharges } from "../shared/criminal-charges.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { scrapingCoordinator } from "./services/scraping-coordinator";
 import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
@@ -69,6 +69,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Failed to fetch legal aid organizations:", error);
       res.status(500).json({ success: false, error: "Failed to fetch legal aid organizations" });
+    }
+  });
+
+  // Criminal Charges API - Get charges by jurisdiction
+  app.get("/api/criminal-charges", async (req, res) => {
+    try {
+      const { jurisdiction, search, category, limit } = req.query;
+      
+      let charges = jurisdiction 
+        ? getChargesByJurisdiction(jurisdiction as string)
+        : criminalCharges;
+      
+      // Filter by search term
+      if (search && typeof search === 'string') {
+        const searchLower = search.toLowerCase();
+        charges = charges.filter(charge => 
+          charge.name.toLowerCase().includes(searchLower) ||
+          charge.description.toLowerCase().includes(searchLower)
+        );
+      }
+      
+      // Filter by category (felony, misdemeanor, infraction)
+      if (category && typeof category === 'string') {
+        charges = charges.filter(charge => charge.category === category);
+      }
+      
+      // Limit results
+      const maxResults = Math.min(parseInt(limit as string) || 100, 500);
+      charges = charges.slice(0, maxResults);
+      
+      // Return simplified charge data for the selector
+      const simplifiedCharges = charges.map(charge => ({
+        id: charge.id,
+        code: charge.code,
+        name: charge.name,
+        category: charge.category,
+        description: charge.description,
+        maxPenalty: charge.maxPenalty,
+      }));
+      
+      res.json({ 
+        success: true, 
+        charges: simplifiedCharges,
+        count: simplifiedCharges.length,
+        totalAvailable: jurisdiction 
+          ? getChargesByJurisdiction(jurisdiction as string).length 
+          : criminalCharges.length
+      });
+    } catch (error) {
+      console.error("Failed to fetch criminal charges:", error);
+      res.status(500).json({ success: false, error: "Failed to fetch criminal charges" });
     }
   });
 

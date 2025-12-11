@@ -1,61 +1,75 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Check, ChevronDown, ChevronUp, Scale } from "lucide-react";
+import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useQuery } from "@tanstack/react-query";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 
+interface Charge {
+  id: string;
+  code: string;
+  name: string;
+  category: 'felony' | 'misdemeanor' | 'infraction';
+  description: string;
+  maxPenalty: string;
+}
+
 interface ChargeSelectorProps {
   jurisdiction: string;
   onSelect: (charges: Array<{ code: string; name: string }>) => void;
 }
 
-const COMMON_CHARGES = [
-  { code: "ASSAULT", name: "Assault", category: "Violent" },
-  { code: "BATTERY", name: "Battery", category: "Violent" },
-  { code: "DUI", name: "DUI / DWI", category: "Traffic" },
-  { code: "DRUG_POSS", name: "Drug Possession", category: "Drug" },
-  { code: "THEFT", name: "Theft / Larceny", category: "Property" },
-  { code: "BURGLARY", name: "Burglary", category: "Property" },
-  { code: "ROBBERY", name: "Robbery", category: "Violent" },
-  { code: "FRAUD", name: "Fraud", category: "Financial" },
-  { code: "DOMESTIC", name: "Domestic Violence", category: "Violent" },
-  { code: "TRESPASS", name: "Trespassing", category: "Property" },
-  { code: "DISORDERLY", name: "Disorderly Conduct", category: "Public Order" },
-  { code: "VANDALISM", name: "Vandalism / Criminal Mischief", category: "Property" },
-  { code: "RESISTING", name: "Resisting Arrest", category: "Public Order" },
-  { code: "WEAPONS", name: "Weapons Violation", category: "Weapons" },
-  { code: "PROBATION", name: "Probation Violation", category: "Other" },
-  { code: "OTHER", name: "Other / Not Listed", category: "Other" },
-];
-
-const CATEGORIES = ["All", "Violent", "Property", "Drug", "Traffic", "Financial", "Public Order", "Weapons", "Other"];
+const CATEGORY_LABELS: Record<string, string> = {
+  'All': 'All',
+  'felony': 'Felony',
+  'misdemeanor': 'Misdemeanor',
+  'infraction': 'Infraction',
+};
 
 export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) {
   const { t } = useTranslation();
   const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedCharges, setSelectedCharges] = useState<Array<{ code: string; name: string }>>([]);
   const [isExpanded, setIsExpanded] = useState(true);
 
-  const filteredCharges = useMemo(() => {
-    return COMMON_CHARGES.filter(charge => {
-      const matchesSearch = charge.name.toLowerCase().includes(search.toLowerCase());
-      const matchesCategory = selectedCategory === "All" || charge.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [search, selectedCategory]);
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedSearch(search), 300);
+    return () => clearTimeout(timer);
+  }, [search]);
 
-  const toggleCharge = (charge: { code: string; name: string }) => {
+  const { data, isLoading } = useQuery<{ charges: Charge[]; count: number; totalAvailable: number }>({
+    queryKey: ['/api/criminal-charges', jurisdiction, debouncedSearch, selectedCategory],
+    queryFn: async () => {
+      const params = new URLSearchParams({
+        jurisdiction,
+        limit: '100',
+      });
+      if (debouncedSearch) params.append('search', debouncedSearch);
+      if (selectedCategory !== 'All') params.append('category', selectedCategory);
+      
+      const res = await fetch(`/api/criminal-charges?${params}`);
+      if (!res.ok) throw new Error('Failed to fetch charges');
+      return res.json();
+    },
+    staleTime: 5 * 60 * 1000,
+  });
+
+  const charges = data?.charges || [];
+  const totalAvailable = data?.totalAvailable || 0;
+
+  const toggleCharge = (charge: Charge) => {
     setSelectedCharges(prev => {
       const exists = prev.some(c => c.code === charge.code);
       if (exists) {
         return prev.filter(c => c.code !== charge.code);
       }
-      return [...prev, charge];
+      return [...prev, { code: charge.code, name: charge.name }];
     });
   };
 
@@ -86,7 +100,10 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
             </Badge>
           )}
         </div>
-        {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-muted-foreground">{totalAvailable} available</span>
+          {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+        </div>
       </button>
 
       {isExpanded && (
@@ -97,71 +114,91 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
               <Input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder={t('chat.chargeSelector.searchPlaceholder', 'Search charges...')}
+                placeholder={t('chat.chargeSelector.searchPlaceholder', 'Search all charges...')}
                 className="pl-9"
                 data-testid="input-charge-search"
               />
             </div>
             
             <div className="flex flex-wrap gap-1.5">
-              {CATEGORIES.map(category => (
+              {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
                 <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  key={key}
+                  onClick={() => setSelectedCategory(key)}
                   className={cn(
                     "px-2.5 py-1 rounded-full text-xs font-medium transition-colors",
-                    selectedCategory === category
+                    selectedCategory === key
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground hover:bg-muted/80"
                   )}
-                  data-testid={`category-${category.toLowerCase()}`}
+                  data-testid={`category-${key.toLowerCase()}`}
                 >
-                  {category}
+                  {label}
                 </button>
               ))}
             </div>
           </div>
 
-          <ScrollArea className="h-48">
+          <ScrollArea className="h-56">
             <div className="p-2 space-y-1">
-              {filteredCharges.map((charge, index) => {
-                const isSelected = selectedCharges.some(c => c.code === charge.code);
-                return (
-                  <motion.button
-                    key={charge.code}
-                    initial={{ opacity: 0, x: -5 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.02 }}
-                    onClick={() => toggleCharge(charge)}
-                    className={cn(
-                      "w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-left",
-                      "transition-colors text-sm",
-                      isSelected
-                        ? "bg-primary/10 border border-primary/30"
-                        : "hover:bg-muted border border-transparent"
-                    )}
-                    data-testid={`charge-option-${charge.code}`}
-                  >
-                    <div className="flex items-center gap-3">
+              {isLoading ? (
+                <div className="flex items-center justify-center py-8">
+                  <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                  <span className="ml-2 text-sm text-muted-foreground">Loading charges...</span>
+                </div>
+              ) : charges.length > 0 ? (
+                charges.map((charge, index) => {
+                  const isSelected = selectedCharges.some(c => c.code === charge.code);
+                  return (
+                    <motion.button
+                      key={charge.id}
+                      initial={{ opacity: 0, x: -5 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: Math.min(index * 0.01, 0.3) }}
+                      onClick={() => toggleCharge(charge)}
+                      className={cn(
+                        "w-full flex items-start gap-3 px-3 py-2.5 rounded-lg text-left",
+                        "transition-colors text-sm",
+                        isSelected
+                          ? "bg-primary/10 border border-primary/30"
+                          : "hover:bg-muted border border-transparent"
+                      )}
+                      data-testid={`charge-option-${charge.id}`}
+                    >
                       <div className={cn(
-                        "w-5 h-5 rounded border flex items-center justify-center transition-colors",
+                        "w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center transition-colors mt-0.5",
                         isSelected
                           ? "bg-primary border-primary text-primary-foreground"
                           : "border-border"
                       )}>
                         {isSelected && <Check className="h-3 w-3" />}
                       </div>
-                      <span className={cn(isSelected && "font-medium")}>{charge.name}</span>
-                    </div>
-                    <Badge variant="outline" className="text-xs">
-                      {charge.category}
-                    </Badge>
-                  </motion.button>
-                );
-              })}
-              {filteredCharges.length === 0 && (
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className={cn("truncate", isSelected && "font-medium")}>{charge.name}</span>
+                          <Badge 
+                            variant="outline" 
+                            className={cn(
+                              "text-xs flex-shrink-0",
+                              charge.category === 'felony' && "border-red-500/50 text-red-600",
+                              charge.category === 'misdemeanor' && "border-yellow-500/50 text-yellow-600",
+                              charge.category === 'infraction' && "border-green-500/50 text-green-600"
+                            )}
+                          >
+                            {CATEGORY_LABELS[charge.category]}
+                          </Badge>
+                        </div>
+                        <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{charge.description}</p>
+                      </div>
+                    </motion.button>
+                  );
+                })
+              ) : (
                 <p className="text-center text-sm text-muted-foreground py-4">
-                  {t('chat.chargeSelector.noResults', 'No charges found')}
+                  {debouncedSearch 
+                    ? t('chat.chargeSelector.noResults', 'No charges found matching your search')
+                    : t('chat.chargeSelector.noCharges', 'No charges available')
+                  }
                 </p>
               )}
             </div>
