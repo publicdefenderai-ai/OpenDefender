@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { NavigationGuardProvider } from "@/contexts/navigation-guard";
+import { ChatProvider } from "@/contexts/chat-context";
+import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { X } from "lucide-react";
 import "./i18n";
 import NotFound from "@/pages/not-found";
@@ -29,6 +31,7 @@ import HowTo from "@/pages/how-to";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import Disclaimers from "@/pages/disclaimers";
 import Statutes from "@/pages/statutes";
+import Chat from "@/pages/chat";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -88,6 +91,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimers" component={Disclaimers} />
       <Route path="/statutes" component={Statutes} />
+      <Route path="/chat" component={Chat} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -98,11 +102,14 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="light" storageKey="public-defender-theme">
         <NavigationGuardProvider>
-          <TooltipProvider>
-            <Toaster />
-            <BetaBanner />
-            <Router />
-          </TooltipProvider>
+          <ChatProvider>
+            <TooltipProvider>
+              <Toaster />
+              <BetaBanner />
+              <Router />
+              <ChatLauncher />
+            </TooltipProvider>
+          </ChatProvider>
         </NavigationGuardProvider>
       </ThemeProvider>
     </QueryClientProvider>
