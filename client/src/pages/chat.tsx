@@ -40,11 +40,17 @@ export default function ChatPage() {
   const [showChargeSelector, setShowChargeSelector] = useState(false);
 
   useEffect(() => {
+    actions.openChat();
+    
     if (state.currentStep === 'welcome' && state.messages.length === 0) {
-      addBotMessage(t('chat.messages.welcome', "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?"), [
-        { id: 'urgent-yes', label: t('chat.replies.urgentYes', "Yes, I need help right now"), value: 'urgent_yes', icon: '🚨' },
-        { id: 'urgent-no', label: t('chat.replies.urgentNo', "No, I have time to talk"), value: 'urgent_no', icon: '✓' },
-      ]);
+      actions.addMessage({
+        role: 'bot',
+        content: t('chat.messages.welcome', "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?"),
+        quickReplies: [
+          { id: 'urgent-yes', label: t('chat.replies.urgentYes', "Yes, I need help right now"), value: 'urgent_yes', icon: '🚨' },
+          { id: 'urgent-no', label: t('chat.replies.urgentNo', "No, I have time to talk"), value: 'urgent_no', icon: '✓' },
+        ],
+      });
       actions.setCurrentStep('emergency_check');
     }
   }, []);
@@ -149,7 +155,7 @@ export default function ChatPage() {
       addBotMessage(t('chat.messages.generating', "Thank you. I'm now reviewing your situation and preparing your personalized guidance. This may take a moment..."));
 
       try {
-        const response = await apiRequest('POST', '/api/legal-guidance/generate', {
+        const response = await apiRequest('POST', '/api/legal-guidance', {
           jurisdiction: state.caseInfo.state,
           charges: state.caseInfo.charges,
           caseStage: state.caseInfo.courtStage,

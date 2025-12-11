@@ -1,17 +1,24 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "wouter";
 import { useChat } from "@/contexts/chat-context";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function ChatLauncher() {
   const { t } = useTranslation();
+  const [location, setLocation] = useLocation();
   const { state, actions } = useChat();
 
-  if (state.isOpen) {
+  if (state.isOpen || location === '/chat') {
     return null;
   }
+
+  const handleOpenChat = () => {
+    actions.openChat();
+    setLocation('/chat');
+  };
 
   return (
     <AnimatePresence>
@@ -28,7 +35,7 @@ export function ChatLauncher() {
           whileTap={{ scale: 0.95 }}
         >
           <Button
-            onClick={actions.openChat}
+            onClick={handleOpenChat}
             size="lg"
             className="relative h-14 rounded-full shadow-lg hover:shadow-xl transition-shadow bg-primary hover:bg-primary/90 px-5 gap-2"
             data-testid="button-open-chat"
