@@ -18,6 +18,13 @@ const buttonVariants = {
   })
 };
 
+const colorStyles = {
+  blue: "bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 dark:bg-blue-950 dark:border-blue-800 dark:text-blue-300 dark:hover:bg-blue-900",
+  green: "bg-green-50 border-green-200 text-green-700 hover:bg-green-100 hover:border-green-300 dark:bg-green-950 dark:border-green-800 dark:text-green-300 dark:hover:bg-green-900",
+  amber: "bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100 hover:border-amber-300 dark:bg-amber-950 dark:border-amber-800 dark:text-amber-300 dark:hover:bg-amber-900",
+  purple: "bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100 hover:border-purple-300 dark:bg-purple-950 dark:border-purple-800 dark:text-purple-300 dark:hover:bg-purple-900",
+};
+
 export function QuickReplyButtons({ 
   replies, 
   onSelect, 
@@ -46,12 +53,12 @@ export function QuickReplyButtons({
           disabled={disabled}
           className={cn(
             "flex items-center gap-2 px-4 py-3 rounded-xl",
-            "border border-border bg-background",
-            "text-left text-[15px] font-medium text-foreground",
+            "border text-left text-[15px] font-medium",
             "transition-colors duration-150",
-            disabled 
-              ? "opacity-50 cursor-not-allowed" 
-              : "hover:bg-muted hover:border-primary/50 cursor-pointer"
+            reply.color 
+              ? colorStyles[reply.color]
+              : "border-border bg-background text-foreground hover:bg-muted hover:border-primary/50",
+            disabled && "opacity-50 cursor-not-allowed"
           )}
           data-testid={`quick-reply-${reply.id}`}
           aria-label={reply.label}

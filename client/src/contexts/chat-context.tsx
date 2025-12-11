@@ -5,6 +5,7 @@ export interface QuickReply {
   label: string;
   value: string;
   icon?: string;
+  color?: 'blue' | 'green' | 'amber' | 'purple';
 }
 
 export interface Message {

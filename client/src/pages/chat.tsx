@@ -106,9 +106,9 @@ Note the officers' badge numbers, patrol car numbers, and any witness informatio
 
 ---
 **What would you like to do next?**`), [
-            { id: 'emergency-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance' },
-            { id: 'emergency-rights', label: t('chat.replies.myRights', "My Rights"), value: 'learn_rights' },
-            { id: 'emergency-process', label: t('chat.replies.criminalJusticeProcess', "Criminal Justice Process"), value: 'learn_process' },
+            { id: 'emergency-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance', color: 'blue' as const },
+            { id: 'emergency-rights', label: t('chat.replies.myRights', "My Rights"), value: 'learn_rights', color: 'green' as const },
+            { id: 'emergency-process', label: t('chat.replies.criminalJusticeProcess', "Criminal Justice Process"), value: 'learn_process', color: 'amber' as const },
           ]);
           actions.setCurrentStep('emergency_options');
         } else {
@@ -140,8 +140,8 @@ You must be told what crimes you're accused of.
 For more detailed information, visit our [Know Your Rights](/rights-info) page.
 
 **What would you like to do next?**`), [
-            { id: 'rights-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance' },
-            { id: 'rights-process', label: t('chat.replies.criminalJusticeProcess', "Criminal Justice Process"), value: 'learn_process' },
+            { id: 'rights-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance', color: 'blue' as const },
+            { id: 'rights-process', label: t('chat.replies.criminalJusticeProcess', "Criminal Justice Process"), value: 'learn_process', color: 'amber' as const },
           ]);
         } else if (reply.value === 'learn_process') {
           addBotMessage(t('chat.messages.processInfo', `**The Criminal Justice Process:**
@@ -168,8 +168,8 @@ You can challenge the verdict or sentence through higher courts.
 For a complete guide, visit our [Criminal Justice Process](/process) page.
 
 **What would you like to do next?**`), [
-            { id: 'process-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance' },
-            { id: 'process-rights', label: t('chat.replies.myRights', "My Rights"), value: 'learn_rights' },
+            { id: 'process-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance', color: 'blue' as const },
+            { id: 'process-rights', label: t('chat.replies.myRights', "My Rights"), value: 'learn_rights', color: 'green' as const },
           ]);
         }
         break;
