@@ -11,7 +11,8 @@ export function ChatLauncher() {
   const [location, setLocation] = useLocation();
   const { state, actions } = useChat();
 
-  if (state.isOpen || location === '/chat') {
+  // Only hide when on the chat page itself
+  if (location === '/chat') {
     return null;
   }
 
