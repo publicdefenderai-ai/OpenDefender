@@ -19,10 +19,10 @@ const buttonVariants = {
 };
 
 const colorStyles = {
-  blue: "bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 dark:bg-blue-950 dark:border-blue-800 dark:text-blue-300 dark:hover:bg-blue-900",
-  green: "bg-green-50 border-green-200 text-green-700 hover:bg-green-100 hover:border-green-300 dark:bg-green-950 dark:border-green-800 dark:text-green-300 dark:hover:bg-green-900",
-  amber: "bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100 hover:border-amber-300 dark:bg-amber-950 dark:border-amber-800 dark:text-amber-300 dark:hover:bg-amber-900",
-  purple: "bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100 hover:border-purple-300 dark:bg-purple-950 dark:border-purple-800 dark:text-purple-300 dark:hover:bg-purple-900",
+  blue: "bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800",
+  green: "bg-slate-50 border-primary/20 text-slate-700 hover:bg-primary/5 hover:border-primary/30 dark:bg-slate-900 dark:border-primary/30 dark:text-slate-300 dark:hover:bg-primary/10",
+  amber: "bg-primary/5 border-primary/20 text-primary hover:bg-primary/10 hover:border-primary/30 dark:bg-primary/10 dark:border-primary/30 dark:text-primary dark:hover:bg-primary/20",
+  purple: "bg-primary/5 border-primary/25 text-slate-700 hover:bg-primary/10 hover:border-primary/40 dark:bg-primary/15 dark:border-primary/40 dark:text-slate-300 dark:hover:bg-primary/25",
 };
 
 export function QuickReplyButtons({ 

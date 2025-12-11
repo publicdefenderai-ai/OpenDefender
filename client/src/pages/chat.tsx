@@ -47,8 +47,8 @@ export default function ChatPage() {
         role: 'bot',
         content: t('chat.messages.welcome', "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?"),
         quickReplies: [
-          { id: 'urgent-yes', label: t('chat.replies.urgentYes', "Yes, I need help right now"), value: 'urgent_yes', icon: '🚨' },
-          { id: 'urgent-no', label: t('chat.replies.urgentNo', "No, I have time to talk"), value: 'urgent_no', icon: '✓' },
+          { id: 'urgent-yes', label: t('chat.replies.urgentYes', "Yes, I need help right now"), value: 'urgent_yes', color: 'purple' as const },
+          { id: 'urgent-no', label: t('chat.replies.urgentNo', "No, I have time to talk"), value: 'urgent_no', color: 'blue' as const },
         ],
       });
       actions.setCurrentStep('emergency_check');
@@ -177,10 +177,10 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
       case 'court_stage':
         actions.updateCaseInfo({ courtStage: reply.value });
         addBotMessage(t('chat.messages.custodyQuestion', "Are you currently in custody or have you been released?"), [
-          { id: 'custody-yes', label: t('chat.replies.inCustody', "Yes, in custody"), value: 'yes', icon: '🔒' },
-          { id: 'custody-bail', label: t('chat.replies.onBail', "Out on bail/bond"), value: 'bail', icon: '💰' },
-          { id: 'custody-or', label: t('chat.replies.ownRecognizance', "Released on my own"), value: 'recognizance', icon: '✓' },
-          { id: 'custody-no', label: t('chat.replies.notInCustody', "Not in custody"), value: 'no', icon: '🏠' },
+          { id: 'custody-yes', label: t('chat.replies.inCustody', "Yes, in custody"), value: 'yes', color: 'purple' as const },
+          { id: 'custody-bail', label: t('chat.replies.onBail', "Out on bail/bond"), value: 'bail', color: 'blue' as const },
+          { id: 'custody-or', label: t('chat.replies.ownRecognizance', "Released on my own"), value: 'recognizance', color: 'blue' as const },
+          { id: 'custody-no', label: t('chat.replies.notInCustody', "Not in custody"), value: 'no', color: 'blue' as const },
         ]);
         actions.setCurrentStep('custody_status');
         break;
@@ -188,8 +188,8 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
       case 'custody_status':
         actions.updateCaseInfo({ custodyStatus: reply.value });
         addBotMessage(t('chat.messages.attorneyQuestion', "Do you have an attorney or public defender?"), [
-          { id: 'attorney-yes', label: t('chat.replies.hasAttorney', "Yes, I have representation"), value: 'yes', icon: '⚖️' },
-          { id: 'attorney-no', label: t('chat.replies.noAttorney', "No, I need to find one"), value: 'no', icon: '❓' },
+          { id: 'attorney-yes', label: t('chat.replies.hasAttorney', "Yes, I have representation"), value: 'yes', color: 'blue' as const },
+          { id: 'attorney-no', label: t('chat.replies.noAttorney', "No, I need to find one"), value: 'no', color: 'purple' as const },
         ]);
         actions.setCurrentStep('attorney_status');
         break;
@@ -246,6 +246,14 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
       actions.addMessage({ role: 'user', content: message });
       actions.updateCaseInfo({ incidentDescription: message });
       
+      // Ask about concerns before generating guidance
+      addBotMessage(t('chat.messages.concernsQuestion', "What are you most worried about? Any specific questions?\n\n(For example: losing your job, affording a lawyer, when you have to go to court)"));
+      actions.setCurrentStep('concerns_question');
+      
+    } else if (state.currentStep === 'concerns_question') {
+      actions.addMessage({ role: 'user', content: message });
+      actions.updateCaseInfo({ concerns: message });
+      
       setIsTyping(true);
       actions.setIsGenerating(true);
       actions.setCurrentStep('generating_guidance');
@@ -259,7 +267,8 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
           caseStage: state.caseInfo.courtStage,
           custodyStatus: state.caseInfo.custodyStatus,
           hasAttorney: state.caseInfo.hasAttorney,
-          incidentDescription: message,
+          incidentDescription: state.caseInfo.incidentDescription,
+          concerns: message,
         });
 
         const data = await response.json();
@@ -269,8 +278,8 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
         actions.setGuidanceData(data.guidance || data);
         
         addBotMessage(t('chat.messages.guidanceReady', "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records."), [
-          { id: 'view-guidance', label: t('chat.replies.viewGuidance', "View My Guidance"), value: 'view_guidance', icon: '📋' },
-          { id: 'export-pdf', label: t('chat.replies.exportPdf', "Export as PDF"), value: 'export_pdf', icon: '📄' },
+          { id: 'view-guidance', label: t('chat.replies.viewGuidance', "View My Guidance"), value: 'view_guidance', color: 'blue' as const },
+          { id: 'export-pdf', label: t('chat.replies.exportPdf', "Export as PDF"), value: 'export_pdf', color: 'purple' as const },
         ]);
         
       } catch (error) {
@@ -346,85 +355,21 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
     }
 
     try {
-      const { jsPDF } = await import('jspdf');
-      const doc = new jsPDF();
+      const { generateGuidancePDF } = await import('@/lib/pdf-generator');
       
-      const margin = 20;
-      let y = margin;
-      const pageWidth = doc.internal.pageSize.getWidth();
-      const maxWidth = pageWidth - (margin * 2);
+      // Format guidance data for the full PDF generator
+      const enhancedGuidance = {
+        ...state.guidanceData,
+        caseData: {
+          jurisdiction: state.caseInfo.stateName || state.caseInfo.state || 'Unknown',
+          charges: state.caseInfo.chargeNames?.join(', ') || 'Not specified',
+          caseStage: state.caseInfo.courtStage || 'Not specified',
+          custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
+          hasAttorney: state.caseInfo.hasAttorney || false,
+        },
+      };
       
-      doc.setFontSize(18);
-      doc.setFont('helvetica', 'bold');
-      doc.text('Legal Guidance Summary', margin, y);
-      y += 12;
-      
-      doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
-      doc.setTextColor(100);
-      doc.text(`Generated: ${new Date().toLocaleDateString()}`, margin, y);
-      y += 8;
-      doc.text(`State: ${state.caseInfo.stateName || state.caseInfo.state || 'N/A'}`, margin, y);
-      y += 8;
-      if (state.caseInfo.chargeNames?.length) {
-        doc.text(`Charges: ${state.caseInfo.chargeNames.join(', ')}`, margin, y);
-        y += 8;
-      }
-      y += 6;
-      
-      doc.setTextColor(0);
-      doc.setDrawColor(200);
-      doc.line(margin, y, pageWidth - margin, y);
-      y += 10;
-      
-      const data = state.guidanceData;
-      let content = "";
-      
-      if (data.overview) {
-        content += `OVERVIEW\n${data.overview}\n\n`;
-      }
-      
-      if (data.rights && data.rights.length > 0) {
-        content += `YOUR RIGHTS\n${data.rights.map(r => `- ${r}`).join('\n')}\n\n`;
-      }
-      
-      if (data.nextSteps && data.nextSteps.length > 0) {
-        content += `NEXT STEPS\n${data.nextSteps.map(s => `- ${s}`).join('\n')}\n\n`;
-      }
-      
-      if (data.deadlines && data.deadlines.length > 0) {
-        content += `IMPORTANT DEADLINES\n${data.deadlines.map(d => `- ${d.event}: ${d.timeframe}`).join('\n')}\n\n`;
-      }
-      
-      if (data.resources && data.resources.length > 0) {
-        content += `RESOURCES\n${data.resources.map(r => `- ${r.type}: ${r.description} (${r.contact})`).join('\n')}\n\n`;
-      }
-      
-      if (data.immediateActions && data.immediateActions.length > 0) {
-        content += `IMMEDIATE ACTIONS\n${data.immediateActions.map(a => `- [${a.urgency}] ${a.action}`).join('\n')}\n\n`;
-      }
-      
-      if (data.warnings && data.warnings.length > 0) {
-        content += `WARNINGS\n${data.warnings.map(w => `- ${w}`).join('\n')}\n\n`;
-      }
-      
-      if (!content) {
-        content = "Legal guidance has been generated. Please contact a legal professional for personalized advice.";
-      }
-      
-      doc.setFontSize(11);
-      const lines = doc.splitTextToSize(content, maxWidth);
-      
-      for (const line of lines) {
-        if (y > doc.internal.pageSize.getHeight() - margin) {
-          doc.addPage();
-          y = margin;
-        }
-        doc.text(line, margin, y);
-        y += 6;
-      }
-      
-      doc.save('legal-guidance.pdf');
+      generateGuidancePDF(enhancedGuidance, 'en');
       actions.setHasExported(true);
       toast({ title: t('chat.export.success', 'PDF downloaded successfully') });
     } catch (error) {
@@ -434,6 +379,7 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
   }, [state.guidanceData, state.caseInfo, actions, toast, t]);
 
   const canUseFreeText = state.currentStep === 'incident_description' || 
+                          state.currentStep === 'concerns_question' ||
                           state.currentStep === 'follow_up' || 
                           state.currentStep === 'guidance_ready';
 
@@ -563,6 +509,8 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
                 }
                 placeholder={state.currentStep === 'incident_description' 
                   ? t('chat.input.descriptionPlaceholder', 'Describe what happened...')
+                  : state.currentStep === 'concerns_question'
+                  ? t('chat.input.concernsPlaceholder', 'What worries you most about your situation?')
                   : t('chat.input.placeholder', 'Ask a follow-up question...')
                 }
               />

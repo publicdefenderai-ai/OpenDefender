@@ -26,6 +26,7 @@ export interface CaseInfo {
   custodyStatus?: string;
   hasAttorney?: boolean;
   incidentDescription?: string;
+  concerns?: string;
   isEmergency?: boolean;
 }
 
@@ -39,6 +40,7 @@ export type ConversationStep =
   | 'custody_status'
   | 'attorney_status'
   | 'incident_description'
+  | 'concerns_question'
   | 'generating_guidance'
   | 'guidance_ready'
   | 'follow_up'
