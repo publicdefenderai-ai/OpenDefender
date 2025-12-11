@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Scale } from "lucide-react";
+import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import type { Message } from "@/contexts/chat-context";
 
@@ -16,6 +17,51 @@ const messageVariants = {
     transition: { duration: 0.2, ease: "easeOut" }
   }
 };
+
+function parseMarkdownLinks(content: string) {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: (string | { text: string; href: string })[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkRegex.exec(content)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(content.slice(lastIndex, match.index));
+    }
+    parts.push({ text: match[1], href: match[2] });
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < content.length) {
+    parts.push(content.slice(lastIndex));
+  }
+
+  return parts;
+}
+
+function RenderContent({ content }: { content: string }) {
+  const parts = parseMarkdownLinks(content);
+  
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (typeof part === 'string') {
+          return <span key={index}>{part}</span>;
+        }
+        return (
+          <Link
+            key={index}
+            href={part.href}
+            className="text-primary underline underline-offset-2 hover:text-primary/80 font-medium"
+            data-testid={`link-${part.href.replace(/\//g, '-').slice(1)}`}
+          >
+            {part.text}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
 
 export function MessageBubble({ message, isLatest = false }: MessageBubbleProps) {
   const isBot = message.role === 'bot';
@@ -47,7 +93,7 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
         )}
       >
         <div className="text-[15px] leading-relaxed whitespace-pre-wrap">
-          {message.content}
+          <RenderContent content={message.content} />
         </div>
       </div>
     </motion.div>
