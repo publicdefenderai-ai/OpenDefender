@@ -60,7 +60,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
     staleTime: 5 * 60 * 1000,
   });
 
-  const charges = data?.charges || [];
+  const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
 
   const toggleCharge = (charge: Charge) => {
