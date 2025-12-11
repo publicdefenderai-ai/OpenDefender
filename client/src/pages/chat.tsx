@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Download, ArrowLeft, Lock, AlertTriangle, FileText } from "lucide-react";
+import { X, Download, ArrowLeft, Lock, AlertTriangle, FileText, Undo2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -60,6 +60,13 @@ export default function ChatPage() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [state.messages, isTyping]);
+
+  // Sync charge selector visibility with current step (for back navigation)
+  useEffect(() => {
+    if (state.currentStep !== 'charge_selection') {
+      setShowChargeSelector(false);
+    }
+  }, [state.currentStep]);
 
   const addBotMessage = useCallback((content: string, quickReplies?: QuickReply[]) => {
     actions.addMessage({
@@ -204,6 +211,7 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
   }, [state.currentStep, actions, addBotMessage, t]);
 
   const handleStateSelect = useCallback((stateCode: string) => {
+    actions.saveHistoryPoint(); // Save history before this selection
     const stateName = US_STATES[stateCode] || stateCode;
     actions.addMessage({ role: 'user', content: stateName });
     actions.updateCaseInfo({ state: stateCode, stateName });
@@ -214,6 +222,7 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
   }, [actions, addBotMessage, t]);
 
   const handleChargesSelect = useCallback((charges: Array<{ code: string; name: string }>) => {
+    actions.saveHistoryPoint(); // Save history before this selection
     const chargeNames = charges.map(c => c.name);
     const chargeCodes = charges.map(c => c.code);
     
@@ -448,10 +457,22 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
                 size="icon"
                 onClick={handleClose}
                 className="md:hidden h-8 w-8"
-                data-testid="button-back"
+                data-testid="button-close-mobile"
               >
                 <ArrowLeft className="h-4 w-4" />
               </Button>
+              {actions.canGoBack() && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={actions.goBack}
+                  className="h-8 px-2 text-muted-foreground hover:text-foreground"
+                  data-testid="button-go-back"
+                >
+                  <Undo2 className="h-4 w-4 mr-1" />
+                  <span className="text-xs">{t('chat.header.back', 'Back')}</span>
+                </Button>
+              )}
               <div className="flex items-center gap-2">
                 <h1 className="text-sm font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
                 <span className="text-muted-foreground">•</span>

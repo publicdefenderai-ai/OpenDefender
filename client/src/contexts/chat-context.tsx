@@ -71,10 +71,17 @@ interface GuidanceData {
   }>;
 }
 
+interface StepHistoryEntry {
+  step: ConversationStep;
+  messageCount: number;
+  caseInfo: CaseInfo;
+}
+
 interface ChatState {
   messages: Message[];
   caseInfo: CaseInfo;
   currentStep: ConversationStep;
+  stepHistory: StepHistoryEntry[];
   isOpen: boolean;
   hasUnsavedGuidance: boolean;
   guidanceData: GuidanceData | null;
@@ -95,6 +102,9 @@ interface ChatContextValue {
     setIsGenerating: (generating: boolean) => void;
     setHasExported: (exported: boolean) => void;
     resetChat: () => void;
+    goBack: () => void;
+    canGoBack: () => boolean;
+    saveHistoryPoint: () => void;
   };
 }
 
@@ -102,6 +112,7 @@ const initialState: ChatState = {
   messages: [],
   caseInfo: {},
   currentStep: 'welcome',
+  stepHistory: [],
   isOpen: false,
   hasUnsavedGuidance: false,
   guidanceData: null,
@@ -141,10 +152,20 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       content: reply.label,
       timestamp: new Date(),
     };
-    setState(prev => ({
-      ...prev,
-      messages: [...prev.messages, userMessage],
-    }));
+    setState(prev => {
+      // Save history BEFORE adding the user's reply message
+      // This way, going back will restore to the state before this interaction
+      const historyEntry: StepHistoryEntry = {
+        step: prev.currentStep,
+        messageCount: prev.messages.length,
+        caseInfo: { ...prev.caseInfo },
+      };
+      return {
+        ...prev,
+        messages: [...prev.messages, userMessage],
+        stepHistory: [...prev.stepHistory, historyEntry],
+      };
+    });
   }, []);
 
   const updateCaseInfo = useCallback((info: Partial<CaseInfo>) => {
@@ -157,6 +178,47 @@ export function ChatProvider({ children }: { children: ReactNode }) {
   const setCurrentStep = useCallback((step: ConversationStep) => {
     setState(prev => ({ ...prev, currentStep: step }));
   }, []);
+
+  const saveHistoryPoint = useCallback(() => {
+    setState(prev => {
+      const historyEntry: StepHistoryEntry = {
+        step: prev.currentStep,
+        messageCount: prev.messages.length,
+        caseInfo: { ...prev.caseInfo },
+      };
+      return {
+        ...prev,
+        stepHistory: [...prev.stepHistory, historyEntry],
+      };
+    });
+  }, []);
+
+  const goBack = useCallback(() => {
+    setState(prev => {
+      if (prev.stepHistory.length === 0) return prev;
+      
+      const newHistory = [...prev.stepHistory];
+      const previousState = newHistory.pop()!;
+      
+      // Remove messages added after the previous state
+      const messages = prev.messages.slice(0, previousState.messageCount);
+      
+      return {
+        ...prev,
+        currentStep: previousState.step,
+        stepHistory: newHistory,
+        messages,
+        caseInfo: previousState.caseInfo,
+      };
+    });
+  }, []);
+
+  const canGoBack = useCallback(() => {
+    return state.stepHistory.length > 0 && 
+           state.currentStep !== 'generating_guidance' && 
+           state.currentStep !== 'guidance_ready' &&
+           state.currentStep !== 'welcome';
+  }, [state.stepHistory.length, state.currentStep]);
 
   const setGuidanceData = useCallback((data: GuidanceData) => {
     setState(prev => ({
@@ -196,8 +258,11 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       setIsGenerating,
       setHasExported,
       resetChat,
+      goBack,
+      canGoBack,
+      saveHistoryPoint,
     },
-  }), [state, openChat, closeChat, addMessage, selectQuickReply, updateCaseInfo, setCurrentStep, setGuidanceData, setIsGenerating, setHasExported, resetChat]);
+  }), [state, openChat, closeChat, addMessage, selectQuickReply, updateCaseInfo, setCurrentStep, setGuidanceData, setIsGenerating, setHasExported, resetChat, goBack, canGoBack, saveHistoryPoint]);
 
   return (
     <ChatContext.Provider value={value}>
