@@ -76,11 +76,95 @@ export default function ChatPage() {
       case 'emergency_check':
         if (reply.value === 'urgent_yes') {
           actions.updateCaseInfo({ isEmergency: true });
-          addBotMessage(t('chat.messages.emergencyAdvice', "I understand this is urgent. Here's what's most important right now:\n\n• Stay calm and don't resist\n• You have the right to remain silent\n• Ask for a lawyer before answering questions\n\nLet me get you the right guidance. What state are you in?"));
+          // Show comprehensive urgent help info (same as "Urgent Help Needed" button)
+          addBotMessage(t('chat.messages.emergencyAdviceFull', `🚨 **If you're being arrested or detained right now:**
+
+**✅ Stay Calm**
+Do not resist, run, or argue. Keep your hands visible. Resisting can lead to additional charges, even if the original arrest is later found to be unlawful.
+
+**🔇 Exercise Your Right to Remain Silent**
+Say clearly: "I am exercising my right to remain silent."
+You do NOT have to answer questions about where you're going, what you're doing, or where you live.
+
+**⚖️ Request an Attorney**
+Say: "I want a lawyer." Police must stop questioning you once you ask for an attorney.
+If you can't afford one, you can request a public defender at your first court appearance.
+
+**🚫 Do Not Consent to Searches**
+Say: "I do not consent to any searches."
+Police may search anyway, but stating this protects your rights for later.
+
+**📝 Remember These Details**
+Note the officers' badge numbers, patrol car numbers, and any witness information. This can help your case later.
+
+---
+**What would you like to do next?**`), [
+            { id: 'emergency-personalized', label: t('chat.replies.getPersonalizedGuidance', "Get personalized guidance for my case"), value: 'personalized_guidance', icon: '📋' },
+            { id: 'emergency-rights', label: t('chat.replies.learnAboutRights', "Learn more about my rights"), value: 'learn_rights', icon: '⚖️' },
+            { id: 'emergency-process', label: t('chat.replies.learnAboutProcess', "Understand the criminal justice process"), value: 'learn_process', icon: '📅' },
+          ]);
+          actions.setCurrentStep('emergency_options');
         } else {
           addBotMessage(t('chat.messages.stateQuestion', "Great, let's take this step by step. First, what state is your case in?"));
+          actions.setCurrentStep('state_selection');
         }
-        actions.setCurrentStep('state_selection');
+        break;
+
+      case 'emergency_options':
+        if (reply.value === 'personalized_guidance') {
+          addBotMessage(t('chat.messages.stateQuestion', "Let's get you personalized guidance. First, what state is your case in?"));
+          actions.setCurrentStep('state_selection');
+        } else if (reply.value === 'learn_rights') {
+          addBotMessage(t('chat.messages.rightsInfo', `**Your Key Constitutional Rights:**
+
+🛡️ **Right to Remain Silent** (5th Amendment)
+You cannot be forced to testify against yourself. Anything you say can be used against you in court.
+
+⚖️ **Right to an Attorney** (6th Amendment)
+You have the right to a lawyer. If you can't afford one, the court will appoint a public defender.
+
+📞 **Right to a Phone Call**
+Most states allow at least one phone call after booking to contact family or an attorney.
+
+📜 **Right to Know the Charges**
+You must be told what crimes you're accused of.
+
+---
+For more detailed information, visit our [Know Your Rights](/rights-info) page.
+
+**What would you like to do next?**`), [
+            { id: 'rights-personalized', label: t('chat.replies.getPersonalizedGuidance', "Get personalized guidance for my case"), value: 'personalized_guidance', icon: '📋' },
+            { id: 'rights-process', label: t('chat.replies.learnAboutProcess', "Understand the criminal justice process"), value: 'learn_process', icon: '📅' },
+          ]);
+        } else if (reply.value === 'learn_process') {
+          addBotMessage(t('chat.messages.processInfo', `**The Criminal Justice Process:**
+
+**1. Arrest & Booking** (0-48 hours)
+You're taken into custody, fingerprinted, and photographed. You may be held until arraignment.
+
+**2. Arraignment** (24-72 hours after arrest)
+First court appearance where charges are read, you enter a plea, and bail is set.
+
+**3. Pre-Trial** (Weeks to months)
+Discovery of evidence, plea negotiations, and motions are filed.
+
+**4. Trial** (If no plea deal)
+Evidence is presented before a judge or jury who decides guilt.
+
+**5. Sentencing** (If convicted)
+Judge determines punishment based on guidelines and circumstances.
+
+**6. Appeal** (Optional)
+You can challenge the verdict or sentence through higher courts.
+
+---
+For a complete guide, visit our [Criminal Justice Process](/process) page.
+
+**What would you like to do next?**`), [
+            { id: 'process-personalized', label: t('chat.replies.getPersonalizedGuidance', "Get personalized guidance for my case"), value: 'personalized_guidance', icon: '📋' },
+            { id: 'process-rights', label: t('chat.replies.learnAboutRights', "Learn more about my rights"), value: 'learn_rights', icon: '⚖️' },
+          ]);
+        }
         break;
 
       case 'court_stage':

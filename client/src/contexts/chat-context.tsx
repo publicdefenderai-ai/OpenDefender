@@ -31,6 +31,7 @@ export interface CaseInfo {
 export type ConversationStep =
   | 'welcome'
   | 'emergency_check'
+  | 'emergency_options'
   | 'state_selection'
   | 'charge_selection'
   | 'court_stage'
