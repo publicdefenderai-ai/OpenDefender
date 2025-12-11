@@ -34,6 +34,15 @@ export type ConversationStep =
   | 'welcome'
   | 'emergency_check'
   | 'emergency_options'
+  | 'main_menu'
+  | 'rights_info_menu'
+  | 'resources_menu'
+  | 'laws_records_menu'
+  | 'immigration_info'
+  | 'pd_zip_search'
+  | 'pd_results'
+  | 'legal_aid_zip_search'
+  | 'legal_aid_results'
   | 'state_selection'
   | 'charge_selection'
   | 'court_stage'
@@ -45,6 +54,13 @@ export type ConversationStep =
   | 'guidance_ready'
   | 'follow_up'
   | 'completed';
+
+export type CompletedFlow = 
+  | 'personalized_guidance'
+  | 'immigration'
+  | 'rights_info'
+  | 'resources'
+  | 'laws_records';
 
 interface GuidanceData {
   sessionId: string;
@@ -90,6 +106,7 @@ interface ChatState {
   guidanceData: GuidanceData | null;
   isGenerating: boolean;
   hasExported: boolean;
+  completedFlows: CompletedFlow[];
 }
 
 interface ChatContextValue {
@@ -108,6 +125,8 @@ interface ChatContextValue {
     goBack: () => void;
     canGoBack: () => boolean;
     saveHistoryPoint: () => void;
+    markFlowCompleted: (flow: CompletedFlow) => void;
+    getAvailableFlows: () => CompletedFlow[];
   };
 }
 
@@ -121,6 +140,7 @@ const initialState: ChatState = {
   guidanceData: null,
   isGenerating: false,
   hasExported: false,
+  completedFlows: [],
 };
 
 const ChatContext = createContext<ChatContextValue | null>(null);
@@ -248,6 +268,20 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     setState(initialState);
   }, []);
 
+  const markFlowCompleted = useCallback((flow: CompletedFlow) => {
+    setState(prev => ({
+      ...prev,
+      completedFlows: prev.completedFlows.includes(flow) 
+        ? prev.completedFlows 
+        : [...prev.completedFlows, flow],
+    }));
+  }, []);
+
+  const getAvailableFlows = useCallback((): CompletedFlow[] => {
+    const allFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources', 'laws_records'];
+    return allFlows.filter(flow => !state.completedFlows.includes(flow));
+  }, [state.completedFlows]);
+
   const value = useMemo(() => ({
     state,
     actions: {
@@ -264,8 +298,10 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       goBack,
       canGoBack,
       saveHistoryPoint,
+      markFlowCompleted,
+      getAvailableFlows,
     },
-  }), [state, openChat, closeChat, addMessage, selectQuickReply, updateCaseInfo, setCurrentStep, setGuidanceData, setIsGenerating, setHasExported, resetChat, goBack, canGoBack, saveHistoryPoint]);
+  }), [state, openChat, closeChat, addMessage, selectQuickReply, updateCaseInfo, setCurrentStep, setGuidanceData, setIsGenerating, setHasExported, resetChat, goBack, canGoBack, saveHistoryPoint, markFlowCompleted, getAvailableFlows]);
 
   return (
     <ChatContext.Provider value={value}>

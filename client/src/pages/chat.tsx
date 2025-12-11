@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useChat, QuickReply, ConversationStep } from "@/contexts/chat-context";
+import { useChat, QuickReply, ConversationStep, CompletedFlow } from "@/contexts/chat-context";
 import { MessageBubble, TypingIndicator } from "@/components/chat/message-bubble";
 import { QuickReplyButtons, FullWidthReply } from "@/components/chat/quick-replies";
 import { ProgressDots } from "@/components/chat/progress-indicator";
@@ -15,6 +15,8 @@ import { StateSelector } from "@/components/chat/state-selector";
 import { ChargeSelector } from "@/components/chat/charge-selector";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
+import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 
 const US_STATES: Record<string, string> = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -29,6 +31,21 @@ const US_STATES: Record<string, string> = {
   VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
   DC: "District of Columbia"
 };
+
+const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; label: string; value: string; color: 'blue' | 'green' | 'amber' | 'purple' }> = {
+  personalized_guidance: { id: 'menu-guidance', label: "Personalized Guidance", value: 'menu_personalized', color: 'blue' },
+  immigration: { id: 'menu-immigration', label: "Immigration Enforcement", value: 'menu_immigration', color: 'amber' },
+  rights_info: { id: 'menu-rights', label: "Rights Info", value: 'menu_rights', color: 'green' },
+  resources: { id: 'menu-resources', label: "Resources", value: 'menu_resources', color: 'purple' },
+  laws_records: { id: 'menu-laws', label: "Laws & Records", value: 'menu_laws', color: 'blue' },
+};
+
+function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: CompletedFlow[] = []): QuickReply[] {
+  const allFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources', 'laws_records'];
+  return allFlows
+    .filter(flow => flow !== excludeFlow && !completedFlows.includes(flow))
+    .map(flow => FLOW_MENU_OPTIONS[flow]);
+}
 
 export default function ChatPage() {
   const { t } = useTranslation();
@@ -112,8 +129,111 @@ Note the officers' badge numbers, patrol car numbers, and any witness informatio
           ]);
           actions.setCurrentStep('emergency_options');
         } else {
-          addBotMessage(t('chat.messages.stateQuestion', "Great, let's take this step by step. First, what state is your case in?"));
+          // Show main menu with 5 options
+          addBotMessage(t('chat.messages.mainMenu', "What can I help you with?"), [
+            { id: 'menu-guidance', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'menu_personalized', color: 'blue' as const },
+            { id: 'menu-immigration', label: t('chat.replies.immigrationEnforcement', "Immigration Enforcement"), value: 'menu_immigration', color: 'amber' as const },
+            { id: 'menu-rights', label: t('chat.replies.rightsInfo', "Rights Info"), value: 'menu_rights', color: 'green' as const },
+            { id: 'menu-resources', label: t('chat.replies.resources', "Resources"), value: 'menu_resources', color: 'purple' as const },
+            { id: 'menu-laws', label: t('chat.replies.lawsRecords', "Laws & Records"), value: 'menu_laws', color: 'blue' as const },
+          ]);
+          actions.setCurrentStep('main_menu');
+        }
+        break;
+
+      case 'main_menu':
+        if (reply.value === 'menu_personalized') {
+          addBotMessage(t('chat.messages.stateQuestion', "Let's get you personalized guidance. First, what state is your case in?"));
           actions.setCurrentStep('state_selection');
+        } else if (reply.value === 'menu_immigration') {
+          addBotMessage(t('chat.messages.immigrationSummary', `**Immigration Enforcement Information**
+
+If you're worried about immigration enforcement, here's what you should know:
+
+**Your Rights:**
+• You have the right to remain silent about your immigration status
+• You don't have to open your door to immigration officers without a judicial warrant
+• You have the right to speak to a lawyer before answering questions
+
+**If Approached by ICE:**
+• Stay calm and don't run
+• Ask if you are free to leave
+• Don't sign any documents without speaking to a lawyer
+• Remember details about the encounter
+
+For comprehensive immigration guidance, visit our full [Immigration Guidance](/immigration-guidance) page.
+
+**What else can I help you with?**`), getNextMenuOptions('immigration', state.completedFlows));
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('main_menu');
+        } else if (reply.value === 'menu_rights') {
+          addBotMessage(t('chat.messages.rightsMenu', "Which rights topic would you like to learn about?"), [
+            { id: 'rights-constitutional', label: t('chat.replies.constitutionalRights', "Constitutional Rights"), value: 'rights_constitutional', color: 'blue' as const },
+            { id: 'rights-process', label: t('chat.replies.justiceProcess', "Justice Process"), value: 'rights_process', color: 'green' as const },
+            { id: 'rights-search', label: t('chat.replies.searchSeizure', "Search & Seizure"), value: 'rights_search', color: 'purple' as const },
+            { id: 'rights-family', label: t('chat.replies.helpingFamily', "Helping Family"), value: 'rights_family', color: 'amber' as const },
+            { id: 'rights-glossary', label: t('chat.replies.legalGlossary', "Legal Glossary"), value: 'rights_glossary', color: 'blue' as const },
+          ]);
+          actions.setCurrentStep('rights_info_menu');
+        } else if (reply.value === 'menu_resources') {
+          addBotMessage(t('chat.messages.resourcesMenu', "What type of resource are you looking for?"), [
+            { id: 'resources-pd', label: t('chat.replies.findPublicDefender', "Find Public Defender"), value: 'resources_pd', color: 'blue' as const },
+            { id: 'resources-legal-aid', label: t('chat.replies.legalAidOrgs', "Legal Aid Orgs"), value: 'resources_legal_aid', color: 'green' as const },
+            { id: 'resources-diversion', label: t('chat.replies.diversionPrograms', "Diversion Programs"), value: 'resources_diversion', color: 'purple' as const },
+            { id: 'resources-expungement', label: t('chat.replies.recordExpungement', "Record Expungement"), value: 'resources_expungement', color: 'amber' as const },
+          ]);
+          actions.setCurrentStep('resources_menu');
+        } else if (reply.value === 'menu_laws') {
+          addBotMessage(t('chat.messages.lawsMenu', "What would you like to search?"), [
+            { id: 'laws-court', label: t('chat.replies.courtRecords', "Court Records Search"), value: 'laws_court', color: 'blue' as const },
+            { id: 'laws-statutes', label: t('chat.replies.statutesSearch', "Statutes Search"), value: 'laws_statutes', color: 'green' as const },
+          ]);
+          actions.setCurrentStep('laws_records_menu');
+        }
+        break;
+
+      case 'rights_info_menu':
+        if (reply.value === 'rights_constitutional') {
+          setLocation('/rights-info');
+          actions.markFlowCompleted('rights_info');
+        } else if (reply.value === 'rights_process') {
+          setLocation('/process');
+          actions.markFlowCompleted('rights_info');
+        } else if (reply.value === 'rights_search') {
+          setLocation('/search-seizure');
+          actions.markFlowCompleted('rights_info');
+        } else if (reply.value === 'rights_family') {
+          setLocation('/friends-family');
+          actions.markFlowCompleted('rights_info');
+        } else if (reply.value === 'rights_glossary') {
+          setLocation('/legal-glossary');
+          actions.markFlowCompleted('rights_info');
+        }
+        break;
+
+      case 'resources_menu':
+        if (reply.value === 'resources_pd') {
+          addBotMessage(t('chat.messages.enterZipPD', "Please enter your ZIP code to find Public Defender offices near you:"));
+          actions.setCurrentStep('pd_zip_search');
+        } else if (reply.value === 'resources_legal_aid') {
+          addBotMessage(t('chat.messages.enterZipLegalAid', "Please enter your ZIP code to find Legal Aid organizations near you:"));
+          actions.setCurrentStep('legal_aid_zip_search');
+        } else if (reply.value === 'resources_diversion') {
+          setLocation('/diversion-programs');
+          actions.markFlowCompleted('resources');
+        } else if (reply.value === 'resources_expungement') {
+          setLocation('/record-expungement');
+          actions.markFlowCompleted('resources');
+        }
+        break;
+
+      case 'laws_records_menu':
+        if (reply.value === 'laws_court') {
+          setLocation('/court-records');
+          actions.markFlowCompleted('laws_records');
+        } else if (reply.value === 'laws_statutes') {
+          setLocation('/statutes');
+          actions.markFlowCompleted('laws_records');
         }
         break;
 
@@ -276,6 +396,7 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
         setIsTyping(false);
         actions.setIsGenerating(false);
         actions.setGuidanceData(data.guidance || data);
+        actions.markFlowCompleted('personalized_guidance');
         
         addBotMessage(t('chat.messages.guidanceReady', "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records."), [
           { id: 'view-guidance', label: t('chat.replies.viewGuidance', "View My Guidance"), value: 'view_guidance', color: 'blue' as const },
@@ -291,6 +412,88 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
           { id: 'retry', label: t('chat.replies.retry', "Try Again"), value: 'retry' },
         ]);
       }
+    } else if (state.currentStep === 'pd_zip_search') {
+      // Handle Public Defender ZIP search
+      const zipCode = message.trim();
+      if (!/^\d{5}$/.test(zipCode)) {
+        addBotMessage(t('chat.messages.invalidZip', "Please enter a valid 5-digit ZIP code."));
+        return;
+      }
+      
+      actions.addMessage({ role: 'user', content: zipCode });
+      setIsTyping(true);
+      
+      try {
+        const offices = await searchPublicDefenderOffices(zipCode);
+        setIsTyping(false);
+        
+        if (offices.length === 0) {
+          addBotMessage(t('chat.messages.noPDFound', `I couldn't find Public Defender offices near ${zipCode}. Try a different ZIP code or visit our [Resources page](/diversion-programs) for more options.
+
+**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+        } else {
+          const resultsText = offices.slice(0, 3).map((office, i) => 
+            `**${i + 1}. ${office.name}**
+📍 ${office.address}
+${office.phone ? `📞 ${office.phone}` : ''}
+${office.distance ? `📏 ${office.distance} miles away` : ''}`
+          ).join('\n\n');
+          
+          addBotMessage(t('chat.messages.pdResults', `Here are Public Defender offices near ${zipCode}:
+
+${resultsText}
+
+**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+        }
+        
+        actions.markFlowCompleted('resources');
+        actions.setCurrentStep('main_menu');
+      } catch (error) {
+        setIsTyping(false);
+        addBotMessage(t('chat.messages.searchError', "I had trouble searching. Please try again."));
+      }
+      
+    } else if (state.currentStep === 'legal_aid_zip_search') {
+      // Handle Legal Aid ZIP search
+      const zipCode = message.trim();
+      if (!/^\d{5}$/.test(zipCode)) {
+        addBotMessage(t('chat.messages.invalidZip', "Please enter a valid 5-digit ZIP code."));
+        return;
+      }
+      
+      actions.addMessage({ role: 'user', content: zipCode });
+      setIsTyping(true);
+      
+      try {
+        const orgs = await searchLegalAidOrganizations(zipCode);
+        setIsTyping(false);
+        
+        if (orgs.length === 0) {
+          addBotMessage(t('chat.messages.noLegalAidFound', `I couldn't find Legal Aid organizations near ${zipCode}. Try a different ZIP code or visit our [Resources page](/diversion-programs) for more options.
+
+**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+        } else {
+          const resultsText = orgs.slice(0, 3).map((org, i) => 
+            `**${i + 1}. ${org.name}**
+📍 ${org.address}
+${org.phone ? `📞 ${org.phone}` : ''}
+${org.distance ? `📏 ${org.distance} miles away` : ''}`
+          ).join('\n\n');
+          
+          addBotMessage(t('chat.messages.legalAidResults', `Here are Legal Aid organizations near ${zipCode}:
+
+${resultsText}
+
+**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+        }
+        
+        actions.markFlowCompleted('resources');
+        actions.setCurrentStep('main_menu');
+      } catch (error) {
+        setIsTyping(false);
+        addBotMessage(t('chat.messages.searchError', "I had trouble searching. Please try again."));
+      }
+      
     } else if (state.currentStep === 'follow_up' || state.currentStep === 'guidance_ready') {
       actions.addMessage({ role: 'user', content: message });
       setIsTyping(true);
@@ -344,9 +547,11 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
       formattedContent = "Your legal guidance is ready. Please export as PDF for full details.";
     }
     
-    addBotMessage(formattedContent);
-    actions.setCurrentStep('follow_up');
-  }, [state.guidanceData, addBotMessage, actions]);
+    formattedContent += "\n\n**What else can I help you with?**";
+    
+    addBotMessage(formattedContent, getNextMenuOptions('personalized_guidance', state.completedFlows));
+    actions.setCurrentStep('main_menu');
+  }, [state.guidanceData, state.completedFlows, addBotMessage, actions]);
 
   const handleExportPdf = useCallback(async () => {
     if (!state.guidanceData) {
@@ -367,19 +572,24 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
           custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
           hasAttorney: state.caseInfo.hasAttorney || false,
         },
-      };
+      } as any; // Type cast to avoid strict typing issues with guidance data format
       
       generateGuidancePDF(enhancedGuidance, 'en');
       actions.setHasExported(true);
       toast({ title: t('chat.export.success', 'PDF downloaded successfully') });
+      
+      addBotMessage(t('chat.messages.exportedWhatElse', "Your PDF has been downloaded.\n\n**What else can I help you with?**"), getNextMenuOptions('personalized_guidance', state.completedFlows));
+      actions.setCurrentStep('main_menu');
     } catch (error) {
       console.error('PDF export error:', error);
       toast({ title: t('chat.export.error', 'Failed to export PDF'), variant: "destructive" });
     }
-  }, [state.guidanceData, state.caseInfo, actions, toast, t]);
+  }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessage]);
 
   const canUseFreeText = state.currentStep === 'incident_description' || 
                           state.currentStep === 'concerns_question' ||
+                          state.currentStep === 'pd_zip_search' ||
+                          state.currentStep === 'legal_aid_zip_search' ||
                           state.currentStep === 'follow_up' || 
                           state.currentStep === 'guidance_ready';
 
@@ -511,6 +721,8 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
                   ? t('chat.input.descriptionPlaceholder', 'Describe what happened...')
                   : state.currentStep === 'concerns_question'
                   ? t('chat.input.concernsPlaceholder', 'What worries you most about your situation?')
+                  : (state.currentStep === 'pd_zip_search' || state.currentStep === 'legal_aid_zip_search')
+                  ? t('chat.input.zipPlaceholder', 'Enter your 5-digit ZIP code...')
                   : t('chat.input.placeholder', 'Ask a follow-up question...')
                 }
               />
