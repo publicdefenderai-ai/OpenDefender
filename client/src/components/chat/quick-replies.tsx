@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import type { QuickReply } from "@/contexts/chat-context";
+import { useChat } from "@/contexts/chat-context";
 
 interface QuickReplyButtonsProps {
   replies: QuickReply[];
@@ -39,6 +41,15 @@ export function QuickReplyButtons({
   disabled = false,
   columns = 2 
 }: QuickReplyButtonsProps) {
+  const { t } = useTranslation();
+  const { actions } = useChat();
+  
+  const handleSelect = (reply: QuickReply) => {
+    const displayLabel = reply.labelKey ? t(reply.labelKey) : reply.label || '';
+    actions.selectQuickReply(reply, displayLabel);
+    onSelect(reply);
+  };
+  
   return (
     <div 
       role="group" 
@@ -48,37 +59,40 @@ export function QuickReplyButtons({
         columns === 1 ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"
       )}
     >
-      {replies.map((reply, index) => (
-        <motion.button
-          key={reply.id}
-          custom={index}
-          variants={buttonVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover={!disabled ? { y: -2, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" } : {}}
-          whileTap={!disabled ? { scale: 0.98 } : {}}
-          onClick={() => !disabled && onSelect(reply)}
-          disabled={disabled}
-          className={cn(
-            "flex items-center gap-2 px-4 py-3 rounded-xl",
-            "border text-left text-[15px] font-medium",
-            "transition-colors duration-150",
-            reply.color 
-              ? colorStyles[reply.color]
-              : "border-border bg-background text-foreground hover:bg-muted hover:border-primary/50",
-            disabled && "opacity-50 cursor-not-allowed"
-          )}
-          data-testid={`quick-reply-${reply.id}`}
-          aria-label={reply.label}
-        >
-          {reply.icon && (
-            <span className="text-lg flex-shrink-0" role="img" aria-hidden="true">
-              {reply.icon}
-            </span>
-          )}
-          <span className="flex-1">{reply.label}</span>
-        </motion.button>
-      ))}
+      {replies.map((reply, index) => {
+        const displayLabel = reply.labelKey ? t(reply.labelKey) : reply.label || '';
+        return (
+          <motion.button
+            key={reply.id}
+            custom={index}
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover={!disabled ? { y: -2, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" } : {}}
+            whileTap={!disabled ? { scale: 0.98 } : {}}
+            onClick={() => !disabled && handleSelect(reply)}
+            disabled={disabled}
+            className={cn(
+              "flex items-center gap-2 px-4 py-3 rounded-xl",
+              "border text-left text-[15px] font-medium",
+              "transition-colors duration-150",
+              reply.color 
+                ? colorStyles[reply.color]
+                : "border-border bg-background text-foreground hover:bg-muted hover:border-primary/50",
+              disabled && "opacity-50 cursor-not-allowed"
+            )}
+            data-testid={`quick-reply-${reply.id}`}
+            aria-label={displayLabel}
+          >
+            {reply.icon && (
+              <span className="text-lg flex-shrink-0" role="img" aria-hidden="true">
+                {reply.icon}
+              </span>
+            )}
+            <span className="flex-1">{displayLabel}</span>
+          </motion.button>
+        );
+      })}
     </div>
   );
 }
@@ -96,11 +110,21 @@ export function FullWidthReply({
   disabled = false,
   variant = 'default'
 }: FullWidthReplyProps) {
+  const { t } = useTranslation();
+  const { actions } = useChat();
+  
+  const displayLabel = reply.labelKey ? t(reply.labelKey) : reply.label || '';
+  
+  const handleSelect = () => {
+    actions.selectQuickReply(reply, displayLabel);
+    onSelect(reply);
+  };
+  
   return (
     <motion.button
       whileHover={!disabled ? { y: -2, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" } : {}}
       whileTap={!disabled ? { scale: 0.98 } : {}}
-      onClick={() => !disabled && onSelect(reply)}
+      onClick={() => !disabled && handleSelect()}
       disabled={disabled}
       className={cn(
         "w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl",
@@ -117,7 +141,7 @@ export function FullWidthReply({
           {reply.icon}
         </span>
       )}
-      <span>{reply.label}</span>
+      <span>{displayLabel}</span>
     </motion.button>
   );
 }

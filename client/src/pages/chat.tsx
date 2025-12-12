@@ -40,12 +40,12 @@ const US_STATES: Record<string, string> = {
   DC: "District of Columbia"
 };
 
-const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; label: string; value: string; color: 'blue' | 'rose' | 'slate' | 'green' | 'purple' | 'amber' }> = {
-  personalized_guidance: { id: 'menu-guidance', label: "Personalized Guidance", value: 'menu_personalized', color: 'blue' },
-  immigration: { id: 'menu-immigration', label: "Immigration Enforcement", value: 'menu_immigration', color: 'rose' },
-  rights_info: { id: 'menu-rights', label: "Rights Info", value: 'menu_rights', color: 'slate' },
-  resources: { id: 'menu-resources', label: "Resources", value: 'menu_resources', color: 'green' },
-  laws_records: { id: 'menu-laws', label: "Laws & Records", value: 'menu_laws', color: 'purple' },
+const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; value: string; color: 'blue' | 'rose' | 'slate' | 'green' | 'purple' | 'amber' }> = {
+  personalized_guidance: { id: 'menu-guidance', labelKey: 'chat.replies.personalizedGuidance', value: 'menu_personalized', color: 'blue' },
+  immigration: { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' },
+  rights_info: { id: 'menu-rights', labelKey: 'chat.replies.rightsInfo', value: 'menu_rights', color: 'slate' },
+  resources: { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources', color: 'green' },
+  laws_records: { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' },
 };
 
 function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: CompletedFlow[] = []): QuickReply[] {
@@ -70,18 +70,12 @@ export default function ChatPage() {
     actions.resetChat();
     
     setTimeout(() => {
-      const welcomeText = lng === 'es' 
-        ? "¡Hola! Estoy aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?"
-        : "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?";
-      const urgentYes = lng === 'es' ? "Sí, necesito ayuda ahora mismo" : "Yes, I need help right now";
-      const urgentNo = lng === 'es' ? "No, tengo tiempo para hablar" : "No, I have time to talk";
-      
       actions.addMessage({
         role: 'bot',
-        content: welcomeText,
+        contentKey: 'chat.messages.welcome',
         quickReplies: [
-          { id: 'urgent-yes', label: urgentYes, value: 'urgent_yes', color: 'rose' as const },
-          { id: 'urgent-no', label: urgentNo, value: 'urgent_no', color: 'slate' as const },
+          { id: 'urgent-yes', labelKey: 'chat.replies.urgentYes', value: 'urgent_yes', color: 'rose' as const },
+          { id: 'urgent-no', labelKey: 'chat.replies.urgentNo', value: 'urgent_no', color: 'slate' as const },
         ],
       });
       actions.setCurrentStep('emergency_check');
@@ -105,10 +99,10 @@ export default function ChatPage() {
       hasInitialized.current = true;
       actions.addMessage({
         role: 'bot',
-        content: t('chat.messages.welcome', "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?"),
+        contentKey: 'chat.messages.welcome',
         quickReplies: [
-          { id: 'urgent-yes', label: t('chat.replies.urgentYes', "Yes, I need help right now"), value: 'urgent_yes', color: 'rose' as const },
-          { id: 'urgent-no', label: t('chat.replies.urgentNo', "No, I have time to talk"), value: 'urgent_no', color: 'slate' as const },
+          { id: 'urgent-yes', labelKey: 'chat.replies.urgentYes', value: 'urgent_yes', color: 'rose' as const },
+          { id: 'urgent-no', labelKey: 'chat.replies.urgentNo', value: 'urgent_no', color: 'slate' as const },
         ],
       });
       actions.setCurrentStep('emergency_check');
@@ -136,13 +130,13 @@ export default function ChatPage() {
       // Show "What else can I help you with?" with all 5 menu options
       actions.addMessage({
         role: 'bot',
-        content: t('chat.messages.whatElse', "What else can I help you with?"),
+        contentKey: 'chat.messages.whatElse',
         quickReplies: [
-          { id: 'menu-guidance', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'menu_personalized', color: 'blue' as const },
-          { id: 'menu-immigration', label: t('chat.replies.immigrationEnforcement', "Immigration Enforcement"), value: 'menu_immigration', color: 'rose' as const },
-          { id: 'menu-rights', label: t('chat.replies.rightsInfo', "Rights Info"), value: 'menu_rights', color: 'slate' as const },
-          { id: 'menu-resources', label: t('chat.replies.resources', "Resources"), value: 'menu_resources', color: 'green' as const },
-          { id: 'menu-laws', label: t('chat.replies.lawsRecords', "Laws & Records"), value: 'menu_laws', color: 'purple' as const },
+          { id: 'menu-guidance', labelKey: 'chat.replies.personalizedGuidance', value: 'menu_personalized', color: 'blue' as const },
+          { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
+          { id: 'menu-rights', labelKey: 'chat.replies.rightsInfo', value: 'menu_rights', color: 'slate' as const },
+          { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources', color: 'green' as const },
+          { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
         ],
       });
       actions.setCurrentStep('main_menu');
@@ -175,49 +169,33 @@ export default function ChatPage() {
     });
   }, [actions]);
 
-  const handleQuickReply = useCallback(async (reply: QuickReply) => {
-    actions.selectQuickReply(reply);
+  const addBotMessageWithKey = useCallback((contentKey: string, quickReplies?: QuickReply[], contentParams?: Record<string, string | number>) => {
+    actions.addMessage({
+      role: 'bot',
+      contentKey,
+      contentParams,
+      quickReplies,
+    });
+  }, [actions]);
 
+  const handleQuickReply = useCallback(async (reply: QuickReply) => {
     switch (state.currentStep) {
       case 'emergency_check':
         if (reply.value === 'urgent_yes') {
           actions.updateCaseInfo({ isEmergency: true });
-          // Show comprehensive urgent help info (same as "Urgent Help Needed" button)
-          addBotMessage(t('chat.messages.emergencyAdviceFull', `🚨 **If you're being arrested or detained right now:**
-
-**✅ Stay Calm**
-Do not resist, run, or argue. Keep your hands visible. Resisting can lead to additional charges, even if the original arrest is later found to be unlawful.
-
-**🔇 Exercise Your Right to Remain Silent**
-Say clearly: "I am exercising my right to remain silent."
-You do NOT have to answer questions about where you're going, what you're doing, or where you live.
-
-**⚖️ Request an Attorney**
-Say: "I want a lawyer." Police must stop questioning you once you ask for an attorney.
-If you can't afford one, you can request a public defender at your first court appearance.
-
-**🚫 Do Not Consent to Searches**
-Say: "I do not consent to any searches."
-Police may search anyway, but stating this protects your rights for later.
-
-**📝 Remember These Details**
-Note the officers' badge numbers, patrol car numbers, and any witness information. This can help your case later.
-
----
-**What would you like to do next?**`), [
-            { id: 'emergency-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance', color: 'blue' as const },
-            { id: 'emergency-rights', label: t('chat.replies.myRights', "My Rights"), value: 'learn_rights', color: 'slate' as const },
-            { id: 'emergency-process', label: t('chat.replies.criminalJusticeProcess', "Criminal Justice Process"), value: 'learn_process', color: 'green' as const },
+          addBotMessageWithKey('chat.messages.emergencyAdviceFull', [
+            { id: 'emergency-personalized', labelKey: 'chat.replies.personalizedGuidance', value: 'personalized_guidance', color: 'blue' as const },
+            { id: 'emergency-rights', labelKey: 'chat.replies.myRights', value: 'learn_rights', color: 'slate' as const },
+            { id: 'emergency-process', labelKey: 'chat.replies.criminalJusticeProcess', value: 'learn_process', color: 'green' as const },
           ]);
           actions.setCurrentStep('emergency_options');
         } else {
-          // Show main menu with 5 options
-          addBotMessage(t('chat.messages.mainMenu', "What can I help you with?"), [
-            { id: 'menu-guidance', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'menu_personalized', color: 'blue' as const },
-            { id: 'menu-immigration', label: t('chat.replies.immigrationEnforcement', "Immigration Enforcement"), value: 'menu_immigration', color: 'rose' as const },
-            { id: 'menu-rights', label: t('chat.replies.rightsInfo', "Rights Info"), value: 'menu_rights', color: 'slate' as const },
-            { id: 'menu-resources', label: t('chat.replies.resources', "Resources"), value: 'menu_resources', color: 'green' as const },
-            { id: 'menu-laws', label: t('chat.replies.lawsRecords', "Laws & Records"), value: 'menu_laws', color: 'purple' as const },
+          addBotMessageWithKey('chat.messages.mainMenu', [
+            { id: 'menu-guidance', labelKey: 'chat.replies.personalizedGuidance', value: 'menu_personalized', color: 'blue' as const },
+            { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
+            { id: 'menu-rights', labelKey: 'chat.replies.rightsInfo', value: 'menu_rights', color: 'slate' as const },
+            { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources', color: 'green' as const },
+            { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
           ]);
           actions.setCurrentStep('main_menu');
         }
@@ -225,57 +203,40 @@ Note the officers' badge numbers, patrol car numbers, and any witness informatio
 
       case 'main_menu':
         if (reply.value === 'menu_personalized') {
-          addBotMessage(t('chat.messages.stateQuestion', "Let's get you personalized guidance. First, what state is your case in?"));
+          addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_immigration') {
-          addBotMessage(t('chat.messages.immigrationSummary', `**Immigration Enforcement Information**
-
-If you're worried about immigration enforcement, here's what you should know:
-
-**Your Rights:**
-• You have the right to remain silent about your immigration status
-• You don't have to open your door to immigration officers without a judicial warrant
-• You have the right to speak to a lawyer before answering questions
-
-**If Approached by ICE:**
-• Stay calm and don't run
-• Ask if you are free to leave
-• Don't sign any documents without speaking to a lawyer
-• Remember details about the encounter
-
-For comprehensive immigration guidance, visit our full [Immigration Guidance](/immigration-guidance) page.
-
-**What else can I help you with?**`), getNextMenuOptions('immigration', state.completedFlows));
+          addBotMessageWithKey('chat.messages.immigrationSummary', getNextMenuOptions('immigration', state.completedFlows));
           actions.markFlowCompleted('immigration');
           actions.setCurrentStep('main_menu');
         } else if (reply.value === 'menu_rights') {
-          addBotMessage(t('chat.messages.rightsMenu', "Which rights topic would you like to learn about?"), [
-            { id: 'rights-constitutional', label: t('chat.replies.constitutionalRights', "Constitutional Rights"), value: 'rights_constitutional', color: 'slate' as const },
-            { id: 'rights-process', label: t('chat.replies.justiceProcess', "Justice Process"), value: 'rights_process', color: 'slate' as const },
-            { id: 'rights-search', label: t('chat.replies.searchSeizure', "Search & Seizure"), value: 'rights_search', color: 'slate' as const },
-            { id: 'rights-family', label: t('chat.replies.helpingFamily', "Helping Family"), value: 'rights_family', color: 'slate' as const },
-            { id: 'rights-glossary', label: t('chat.replies.legalGlossary', "Legal Glossary"), value: 'rights_glossary', color: 'slate' as const },
+          addBotMessageWithKey('chat.messages.rightsMenu', [
+            { id: 'rights-constitutional', labelKey: 'chat.replies.constitutionalRights', value: 'rights_constitutional', color: 'slate' as const },
+            { id: 'rights-process', labelKey: 'chat.replies.justiceProcess', value: 'rights_process', color: 'slate' as const },
+            { id: 'rights-search', labelKey: 'chat.replies.searchSeizure', value: 'rights_search', color: 'slate' as const },
+            { id: 'rights-family', labelKey: 'chat.replies.helpingFamily', value: 'rights_family', color: 'slate' as const },
+            { id: 'rights-glossary', labelKey: 'chat.replies.legalGlossary', value: 'rights_glossary', color: 'slate' as const },
           ]);
           actions.setCurrentStep('rights_info_menu');
         } else if (reply.value === 'menu_resources') {
-          addBotMessage(t('chat.messages.resourcesMenu', "What type of resource are you looking for?"), [
-            { id: 'resources-pd', label: t('chat.replies.findPublicDefender', "Find Public Defender"), value: 'resources_pd', color: 'green' as const },
-            { id: 'resources-legal-aid', label: t('chat.replies.legalAidOrgs', "Legal Aid Orgs"), value: 'resources_legal_aid', color: 'green' as const },
-            { id: 'resources-diversion', label: t('chat.replies.diversionPrograms', "Diversion Programs"), value: 'resources_diversion', color: 'green' as const },
-            { id: 'resources-expungement', label: t('chat.replies.recordExpungement', "Record Expungement"), value: 'resources_expungement', color: 'green' as const },
+          addBotMessageWithKey('chat.messages.resourcesMenu', [
+            { id: 'resources-pd', labelKey: 'chat.replies.findPublicDefender', value: 'resources_pd', color: 'green' as const },
+            { id: 'resources-legal-aid', labelKey: 'chat.replies.legalAidOrgs', value: 'resources_legal_aid', color: 'green' as const },
+            { id: 'resources-diversion', labelKey: 'chat.replies.diversionPrograms', value: 'resources_diversion', color: 'green' as const },
+            { id: 'resources-expungement', labelKey: 'chat.replies.recordExpungement', value: 'resources_expungement', color: 'green' as const },
           ]);
           actions.setCurrentStep('resources_menu');
         } else if (reply.value === 'menu_laws') {
-          addBotMessage(t('chat.messages.lawsMenu', "What would you like to search?"), [
-            { id: 'laws-court', label: t('chat.replies.courtRecords', "Court Records Search"), value: 'laws_court', color: 'purple' as const },
-            { id: 'laws-statutes', label: t('chat.replies.statutesSearch', "Statutes Search"), value: 'laws_statutes', color: 'purple' as const },
+          addBotMessageWithKey('chat.messages.lawsMenu', [
+            { id: 'laws-court', labelKey: 'chat.replies.courtRecords', value: 'laws_court', color: 'purple' as const },
+            { id: 'laws-statutes', labelKey: 'chat.replies.statutesSearch', value: 'laws_statutes', color: 'purple' as const },
           ]);
           actions.setCurrentStep('laws_records_menu');
         } else if (reply.value === 'resources_pd') {
-          addBotMessage(t('chat.messages.enterZipPD', "Please enter your ZIP code to find Public Defender offices near you:"));
+          addBotMessageWithKey('chat.messages.enterZipPD');
           actions.setCurrentStep('pd_zip_search');
         } else if (reply.value === 'resources_legal_aid') {
-          addBotMessage(t('chat.messages.enterZipLegalAid', "Please enter your ZIP code to find Legal Aid organizations near you:"));
+          addBotMessageWithKey('chat.messages.enterZipLegalAid');
           actions.setCurrentStep('legal_aid_zip_search');
         }
         break;
@@ -301,10 +262,10 @@ For comprehensive immigration guidance, visit our full [Immigration Guidance](/i
 
       case 'resources_menu':
         if (reply.value === 'resources_pd') {
-          addBotMessage(t('chat.messages.enterZipPD', "Please enter your ZIP code to find Public Defender offices near you:"));
+          addBotMessageWithKey('chat.messages.enterZipPD');
           actions.setCurrentStep('pd_zip_search');
         } else if (reply.value === 'resources_legal_aid') {
-          addBotMessage(t('chat.messages.enterZipLegalAid', "Please enter your ZIP code to find Legal Aid organizations near you:"));
+          addBotMessageWithKey('chat.messages.enterZipLegalAid');
           actions.setCurrentStep('legal_aid_zip_search');
         } else if (reply.value === 'resources_diversion') {
           setLocation('/diversion-programs');
@@ -327,84 +288,44 @@ For comprehensive immigration guidance, visit our full [Immigration Guidance](/i
 
       case 'emergency_options':
         if (reply.value === 'personalized_guidance') {
-          addBotMessage(t('chat.messages.stateQuestion', "Let's get you personalized guidance. First, what state is your case in?"));
+          addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'learn_rights') {
-          addBotMessage(t('chat.messages.rightsInfo', `**Your Key Constitutional Rights:**
-
-🛡️ **Right to Remain Silent** (5th Amendment)
-You cannot be forced to testify against yourself. Anything you say can be used against you in court.
-
-⚖️ **Right to an Attorney** (6th Amendment)
-You have the right to a lawyer. If you can't afford one, the court will appoint a public defender.
-
-📞 **Right to a Phone Call**
-Most states allow at least one phone call after booking to contact family or an attorney.
-
-📜 **Right to Know the Charges**
-You must be told what crimes you're accused of.
-
----
-For more detailed information, visit our [Know Your Rights](/rights-info) page.
-
-**What would you like to do next?**`), [
-            { id: 'rights-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance', color: 'blue' as const },
-            { id: 'rights-process', label: t('chat.replies.criminalJusticeProcess', "Criminal Justice Process"), value: 'learn_process', color: 'slate' as const },
+          addBotMessageWithKey('chat.messages.rightsInfo', [
+            { id: 'rights-personalized', labelKey: 'chat.replies.personalizedGuidance', value: 'personalized_guidance', color: 'blue' as const },
+            { id: 'rights-process', labelKey: 'chat.replies.criminalJusticeProcess', value: 'learn_process', color: 'slate' as const },
           ]);
         } else if (reply.value === 'learn_process') {
-          addBotMessage(t('chat.messages.processInfo', `**The Criminal Justice Process:**
-
-**1. Arrest & Booking** (0-48 hours)
-You're taken into custody, fingerprinted, and photographed. You may be held until arraignment.
-
-**2. Arraignment** (24-72 hours after arrest)
-First court appearance where charges are read, you enter a plea, and bail is set.
-
-**3. Pre-Trial** (Weeks to months)
-Discovery of evidence, plea negotiations, and motions are filed.
-
-**4. Trial** (If no plea deal)
-Evidence is presented before a judge or jury who decides guilt.
-
-**5. Sentencing** (If convicted)
-Judge determines punishment based on guidelines and circumstances.
-
-**6. Appeal** (Optional)
-You can challenge the verdict or sentence through higher courts.
-
----
-For a complete guide, visit our [Criminal Justice Process](/process) page.
-
-**What would you like to do next?**`), [
-            { id: 'process-personalized', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'personalized_guidance', color: 'blue' as const },
-            { id: 'process-rights', label: t('chat.replies.myRights', "My Rights"), value: 'learn_rights', color: 'slate' as const },
+          addBotMessageWithKey('chat.messages.processInfo', [
+            { id: 'process-personalized', labelKey: 'chat.replies.personalizedGuidance', value: 'personalized_guidance', color: 'blue' as const },
+            { id: 'process-rights', labelKey: 'chat.replies.myRights', value: 'learn_rights', color: 'slate' as const },
           ]);
         }
         break;
 
       case 'court_stage':
         actions.updateCaseInfo({ courtStage: reply.value });
-        addBotMessage(t('chat.messages.custodyQuestion', "Are you currently in custody or have you been released?"), [
-          { id: 'custody-yes', label: t('chat.replies.inCustody', "Yes, in custody"), value: 'yes', color: 'rose' as const },
-          { id: 'custody-bail', label: t('chat.replies.onBail', "Out on bail/bond"), value: 'bail', color: 'amber' as const },
-          { id: 'custody-or', label: t('chat.replies.ownRecognizance', "Released on my own"), value: 'recognizance', color: 'blue' as const },
-          { id: 'custody-no', label: t('chat.replies.notInCustody', "Not in custody"), value: 'no', color: 'blue' as const },
+        addBotMessageWithKey('chat.messages.custodyQuestion', [
+          { id: 'custody-yes', labelKey: 'chat.replies.inCustody', value: 'yes', color: 'rose' as const },
+          { id: 'custody-bail', labelKey: 'chat.replies.onBail', value: 'bail', color: 'amber' as const },
+          { id: 'custody-or', labelKey: 'chat.replies.ownRecognizance', value: 'recognizance', color: 'blue' as const },
+          { id: 'custody-no', labelKey: 'chat.replies.notInCustody', value: 'no', color: 'blue' as const },
         ]);
         actions.setCurrentStep('custody_status');
         break;
 
       case 'custody_status':
         actions.updateCaseInfo({ custodyStatus: reply.value });
-        addBotMessage(t('chat.messages.attorneyQuestion', "Do you have an attorney or public defender?"), [
-          { id: 'attorney-yes', label: t('chat.replies.hasAttorney', "Yes, I have representation"), value: 'yes', color: 'green' as const },
-          { id: 'attorney-no', label: t('chat.replies.noAttorney', "No, I need to find one"), value: 'no', color: 'amber' as const },
+        addBotMessageWithKey('chat.messages.attorneyQuestion', [
+          { id: 'attorney-yes', labelKey: 'chat.replies.hasAttorney', value: 'yes', color: 'green' as const },
+          { id: 'attorney-no', labelKey: 'chat.replies.noAttorney', value: 'no', color: 'amber' as const },
         ]);
         actions.setCurrentStep('attorney_status');
         break;
 
       case 'attorney_status':
         actions.updateCaseInfo({ hasAttorney: reply.value === 'yes' });
-        addBotMessage(t('chat.messages.descriptionPrompt', "Thanks for that information. Now, briefly describe what happened - this helps me give you more relevant guidance.\n\n(Your description is kept private and deleted after this session)"));
+        addBotMessageWithKey('chat.messages.descriptionPrompt');
         actions.setCurrentStep('incident_description');
         break;
 
@@ -416,7 +337,7 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
         }
         break;
     }
-  }, [state.currentStep, actions, addBotMessage, t]);
+  }, [state.currentStep, state.completedFlows, actions, addBotMessage, addBotMessageWithKey]);
 
   const handleStateSelect = useCallback((stateCode: string) => {
     actions.saveHistoryPoint(); // Save history before this selection
@@ -424,10 +345,10 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
     actions.addMessage({ role: 'user', content: stateName });
     actions.updateCaseInfo({ state: stateCode, stateName });
     
-    addBotMessage(t('chat.messages.chargeQuestion', `Got it, ${stateName}. What charges are you facing? Select all that apply.`));
+    addBotMessageWithKey('chat.messages.chargeQuestion', undefined, { stateName });
     setShowChargeSelector(true);
     actions.setCurrentStep('charge_selection');
-  }, [actions, addBotMessage, t]);
+  }, [actions, addBotMessageWithKey]);
 
   const handleChargesSelect = useCallback((charges: Array<{ id: string; code: string; name: string }>) => {
     actions.saveHistoryPoint(); // Save history before this selection
@@ -438,24 +359,23 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
     actions.updateCaseInfo({ charges: chargeIds, chargeNames });
     setShowChargeSelector(false);
 
-    addBotMessage(t('chat.messages.stageQuestion', "What stage is your case in?"), [
-      { id: 'stage-arrest', label: t('chat.replies.stageArrest', "Just arrested / under investigation"), value: 'arrest' },
-      { id: 'stage-arraignment', label: t('chat.replies.stageArraignment', "Arraignment coming up"), value: 'arraignment' },
-      { id: 'stage-pretrial', label: t('chat.replies.stagePretrial', "Pre-trial proceedings"), value: 'pretrial' },
-      { id: 'stage-trial', label: t('chat.replies.stageTrial', "Trial scheduled/ongoing"), value: 'trial' },
-      { id: 'stage-sentencing', label: t('chat.replies.stageSentencing', "Sentencing phase"), value: 'sentencing' },
-      { id: 'stage-unsure', label: t('chat.replies.stageUnsure', "I'm not sure"), value: 'unsure' },
+    addBotMessageWithKey('chat.messages.stageQuestion', [
+      { id: 'stage-arrest', labelKey: 'chat.replies.stageArrest', value: 'arrest' },
+      { id: 'stage-arraignment', labelKey: 'chat.replies.stageArraignment', value: 'arraignment' },
+      { id: 'stage-pretrial', labelKey: 'chat.replies.stagePretrial', value: 'pretrial' },
+      { id: 'stage-trial', labelKey: 'chat.replies.stageTrial', value: 'trial' },
+      { id: 'stage-sentencing', labelKey: 'chat.replies.stageSentencing', value: 'sentencing' },
+      { id: 'stage-unsure', labelKey: 'chat.replies.stageUnsure', value: 'unsure' },
     ]);
     actions.setCurrentStep('court_stage');
-  }, [actions, addBotMessage, t]);
+  }, [actions, addBotMessageWithKey]);
 
   const handleFreeTextSubmit = useCallback(async (message: string) => {
     if (state.currentStep === 'incident_description') {
       actions.addMessage({ role: 'user', content: message });
       actions.updateCaseInfo({ incidentDescription: message });
       
-      // Ask about concerns before generating guidance
-      addBotMessage(t('chat.messages.concernsQuestion', "What are you most worried about? Any specific questions?\n\n(For example: losing your job, affording a lawyer, when you have to go to court)"));
+      addBotMessageWithKey('chat.messages.concernsQuestion');
       actions.setCurrentStep('concerns_question');
       
     } else if (state.currentStep === 'concerns_question') {
@@ -466,7 +386,7 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
       actions.setIsGenerating(true);
       actions.setCurrentStep('generating_guidance');
       
-      addBotMessage(t('chat.messages.generating', "Thank you. I'm now reviewing your situation and preparing your personalized guidance. This may take a moment..."));
+      addBotMessageWithKey('chat.messages.generating');
 
       try {
         const response = await apiRequest('POST', '/api/legal-guidance', {
@@ -486,9 +406,9 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
         actions.setGuidanceData(data.guidance || data);
         actions.markFlowCompleted('personalized_guidance');
         
-        addBotMessage(t('chat.messages.guidanceReady', "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records."), [
-          { id: 'view-guidance', label: t('chat.replies.viewGuidance', "View My Guidance"), value: 'view_guidance', color: 'blue' as const },
-          { id: 'export-pdf', label: t('chat.replies.exportPdf', "Export as PDF"), value: 'export_pdf', color: 'slate' as const },
+        addBotMessageWithKey('chat.messages.guidanceReady', [
+          { id: 'view-guidance', labelKey: 'chat.replies.viewGuidance', value: 'view_guidance', color: 'blue' as const },
+          { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
         ]);
         
       } catch (error) {
@@ -496,15 +416,14 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
         setIsTyping(false);
         actions.setIsGenerating(false);
         
-        addBotMessage(t('chat.messages.error', "I'm sorry, I encountered an issue generating your guidance. Please try again or contact support if the problem continues."), [
-          { id: 'retry', label: t('chat.replies.retry', "Try Again"), value: 'retry' },
+        addBotMessageWithKey('chat.messages.error', [
+          { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
         ]);
       }
     } else if (state.currentStep === 'pd_zip_search') {
-      // Handle Public Defender ZIP search
       const zipCode = message.trim();
       if (!/^\d{5}$/.test(zipCode)) {
-        addBotMessage(t('chat.messages.invalidZip', "Please enter a valid 5-digit ZIP code."));
+        addBotMessageWithKey('chat.messages.invalidZip');
         return;
       }
       
@@ -516,40 +435,30 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
         setIsTyping(false);
         
         if (offices.length === 0) {
-          addBotMessage(t('chat.messages.noPDFound', `I couldn't find Public Defender offices near ${zipCode}. Try a different ZIP code or visit our [Resources page](/diversion-programs) for more options.
-
-**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+          addBotMessageWithKey('chat.messages.noPDFound', getNextMenuOptions('resources', state.completedFlows), { zipCode });
         } else {
           const resultsText = offices.slice(0, 3).map((office, i) => 
-            `**${i + 1}. ${office.name}**
-📍 ${office.address}
-${office.phone ? `📞 ${office.phone}` : ''}
-${office.distance ? `📏 ${office.distance} miles away` : ''}`
+            `**${i + 1}. ${office.name}**\n📍 ${office.address}${office.phone ? `\n📞 ${office.phone}` : ''}${office.distance ? `\n📏 ${office.distance} miles away` : ''}`
           ).join('\n\n');
           
-          addBotMessage(t('chat.messages.pdResults', `Here are Public Defender offices near ${zipCode}:
-
-${resultsText}
-
-**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+          addBotMessage(t('chat.messages.pdResults', `Here are Public Defender offices near {{zipCode}}:\n\n${resultsText}\n\n**What else can I help you with?**`, { zipCode }), getNextMenuOptions('resources', state.completedFlows));
         }
         
         actions.markFlowCompleted('resources');
         actions.setCurrentStep('main_menu');
       } catch (error) {
         setIsTyping(false);
-        addBotMessage(t('chat.messages.searchError', "I had trouble searching. You can try again or explore other options."), [
-          { id: 'retry-pd', label: t('chat.replies.tryAgain', "Try Another ZIP Code"), value: 'resources_pd', color: 'green' as const },
+        addBotMessageWithKey('chat.messages.searchError', [
+          { id: 'retry-pd', labelKey: 'chat.replies.tryAgain', value: 'resources_pd', color: 'green' as const },
           ...getNextMenuOptions('resources', state.completedFlows),
         ]);
         actions.setCurrentStep('main_menu');
       }
       
     } else if (state.currentStep === 'legal_aid_zip_search') {
-      // Handle Legal Aid ZIP search
       const zipCode = message.trim();
       if (!/^\d{5}$/.test(zipCode)) {
-        addBotMessage(t('chat.messages.invalidZip', "Please enter a valid 5-digit ZIP code."));
+        addBotMessageWithKey('chat.messages.invalidZip');
         return;
       }
       
@@ -561,30 +470,21 @@ ${resultsText}
         setIsTyping(false);
         
         if (orgs.length === 0) {
-          addBotMessage(t('chat.messages.noLegalAidFound', `I couldn't find Legal Aid organizations near ${zipCode}. Try a different ZIP code or visit our [Resources page](/diversion-programs) for more options.
-
-**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+          addBotMessageWithKey('chat.messages.noLegalAidFound', getNextMenuOptions('resources', state.completedFlows), { zipCode });
         } else {
           const resultsText = orgs.slice(0, 3).map((org, i) => 
-            `**${i + 1}. ${org.name}**
-📍 ${org.address}
-${org.phone ? `📞 ${org.phone}` : ''}
-${org.distance ? `📏 ${org.distance} miles away` : ''}`
+            `**${i + 1}. ${org.name}**\n📍 ${org.address}${org.phone ? `\n📞 ${org.phone}` : ''}${org.distance ? `\n📏 ${org.distance} miles away` : ''}`
           ).join('\n\n');
           
-          addBotMessage(t('chat.messages.legalAidResults', `Here are Legal Aid organizations near ${zipCode}:
-
-${resultsText}
-
-**What else can I help you with?**`), getNextMenuOptions('resources', state.completedFlows));
+          addBotMessage(t('chat.messages.legalAidResults', `Here are Legal Aid organizations near {{zipCode}}:\n\n${resultsText}\n\n**What else can I help you with?**`, { zipCode }), getNextMenuOptions('resources', state.completedFlows));
         }
         
         actions.markFlowCompleted('resources');
         actions.setCurrentStep('main_menu');
       } catch (error) {
         setIsTyping(false);
-        addBotMessage(t('chat.messages.searchError', "I had trouble searching. You can try again or explore other options."), [
-          { id: 'retry-legal-aid', label: t('chat.replies.tryAgain', "Try Another ZIP Code"), value: 'resources_legal_aid', color: 'green' as const },
+        addBotMessageWithKey('chat.messages.searchError', [
+          { id: 'retry-legal-aid', labelKey: 'chat.replies.tryAgain', value: 'resources_legal_aid', color: 'green' as const },
           ...getNextMenuOptions('resources', state.completedFlows),
         ]);
         actions.setCurrentStep('main_menu');
@@ -596,10 +496,10 @@ ${resultsText}
       
       setTimeout(() => {
         setIsTyping(false);
-        addBotMessage(t('chat.messages.followUpResponse', "That's a great question. Based on what you've told me, here's what I'd suggest..."));
+        addBotMessageWithKey('chat.messages.followUpResponse');
       }, 1500);
     }
-  }, [state.currentStep, state.caseInfo, actions, addBotMessage, t]);
+  }, [state.currentStep, state.caseInfo, state.completedFlows, actions, addBotMessage, addBotMessageWithKey, t]);
 
   const handleClose = useCallback(() => {
     if (state.hasUnsavedGuidance) {
@@ -674,13 +574,13 @@ ${resultsText}
       actions.setHasExported(true);
       toast({ title: t('chat.export.success', 'PDF downloaded successfully') });
       
-      addBotMessage(t('chat.messages.exportedWhatElse', "Your PDF has been downloaded.\n\n**What else can I help you with?**"), getNextMenuOptions('personalized_guidance', state.completedFlows));
+      addBotMessageWithKey('chat.messages.exportedWhatElse', getNextMenuOptions('personalized_guidance', state.completedFlows));
       actions.setCurrentStep('main_menu');
     } catch (error) {
       console.error('PDF export error:', error);
       toast({ title: t('chat.export.error', 'Failed to export PDF'), variant: "destructive" });
     }
-  }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessage]);
+  }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessageWithKey]);
 
   const canUseFreeText = state.currentStep === 'incident_description' || 
                           state.currentStep === 'concerns_question' ||

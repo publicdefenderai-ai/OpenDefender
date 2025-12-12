@@ -2,7 +2,8 @@ import { createContext, useContext, useState, useCallback, ReactNode, useMemo } 
 
 export interface QuickReply {
   id: string;
-  label: string;
+  label?: string;
+  labelKey?: string;
   value: string;
   icon?: string;
   color?: 'blue' | 'rose' | 'slate' | 'green' | 'purple' | 'amber';
@@ -11,7 +12,9 @@ export interface QuickReply {
 export interface Message {
   id: string;
   role: 'bot' | 'user';
-  content: string;
+  content?: string;
+  contentKey?: string;
+  contentParams?: Record<string, string | number>;
   timestamp: Date;
   quickReplies?: QuickReply[];
   metadata?: Record<string, unknown>;
@@ -115,7 +118,7 @@ interface ChatContextValue {
     openChat: () => void;
     closeChat: () => void;
     addMessage: (message: Omit<Message, 'id' | 'timestamp'>) => void;
-    selectQuickReply: (reply: QuickReply) => void;
+    selectQuickReply: (reply: QuickReply, displayLabel?: string) => void;
     updateCaseInfo: (info: Partial<CaseInfo>) => void;
     setCurrentStep: (step: ConversationStep) => void;
     setGuidanceData: (data: GuidanceData) => void;
@@ -168,11 +171,11 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     }));
   }, []);
 
-  const selectQuickReply = useCallback((reply: QuickReply) => {
+  const selectQuickReply = useCallback((reply: QuickReply, displayLabel?: string) => {
     const userMessage: Message = {
       id: crypto.randomUUID(),
       role: 'user',
-      content: reply.label,
+      content: displayLabel || reply.label || '',
       timestamp: new Date(),
     };
     setState(prev => {

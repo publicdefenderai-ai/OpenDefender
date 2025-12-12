@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Scale } from "lucide-react";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import type { Message } from "@/contexts/chat-context";
 
@@ -64,7 +65,12 @@ function RenderContent({ content }: { content: string }) {
 }
 
 export function MessageBubble({ message, isLatest = false }: MessageBubbleProps) {
+  const { t } = useTranslation();
   const isBot = message.role === 'bot';
+  
+  const displayContent = message.contentKey 
+    ? t(message.contentKey, message.contentParams || {})
+    : message.content || '';
 
   return (
     <motion.div
@@ -93,7 +99,7 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
         )}
       >
         <div className="text-[15px] leading-relaxed whitespace-pre-wrap">
-          <RenderContent content={message.content} />
+          <RenderContent content={displayContent} />
         </div>
       </div>
     </motion.div>
