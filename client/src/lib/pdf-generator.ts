@@ -156,12 +156,29 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
   yPosition = (doc as any).lastAutoTable.finalY + 10;
 
+  // Overview - appears first
+  if (guidance.overview) {
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0, 100, 200);
+    doc.text('Overview', margin, yPosition);
+    yPosition += 8;
+
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
+
+    yPosition = addText(guidance.overview, margin + 5, yPosition);
+    yPosition += 10;
+  }
+
   // Understanding Your Charges Section
   if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
     checkPageBreak(40);
-    doc.setFontSize(16);
+    doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.setTextColor(0, 0, 0);
+    doc.setTextColor(0, 100, 200);
     doc.text('Understanding Your Charges', margin, yPosition);
     yPosition += 6;
 
@@ -175,12 +192,12 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       checkPageBreak(50);
       
       // Charge header with classification
-      doc.setFontSize(12);
+      doc.setFontSize(11);
       doc.setFont('helvetica', 'bold');
       doc.setTextColor(0, 0, 0);
       const chargeHeader = `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`;
       doc.text(chargeHeader, margin, yPosition);
-      yPosition += 7;
+      yPosition += 8;
 
       // Get explanation for this charge
       const explanation = getChargeExplanation(charge.name);
@@ -191,14 +208,14 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
       if (explanation?.plainSummary) {
         yPosition = addText(explanation.plainSummary, margin + 5, yPosition);
-        yPosition += 5;
+        yPosition += 6;
       } else {
         // Fallback description based on classification
         const fallback = charge.classification === 'felony'
           ? 'This is a felony charge, which is a more serious criminal offense. Felonies can carry significant penalties including potential prison time. Your attorney can explain the specific elements the prosecution must prove.'
           : 'This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.';
         yPosition = addText(fallback, margin + 5, yPosition);
-        yPosition += 5;
+        yPosition += 6;
       }
 
       // Degree context if available
@@ -208,46 +225,50 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
         doc.setFont('helvetica', 'italic');
         doc.setTextColor(80, 80, 80);
         yPosition = addText(`How degrees differ: ${explanation.degreeContext}`, margin + 5, yPosition);
-        yPosition += 5;
+        yPosition += 6;
+        doc.setTextColor(0, 0, 0);
       }
 
-      // Key legal terms
+      // Key legal terms - cleaner formatting
       if (explanation?.keyTerms && explanation.keyTerms.length > 0) {
         checkPageBreak(30);
         doc.setFontSize(10);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(0, 0, 0);
         doc.text('Key legal terms the prosecution must prove:', margin + 5, yPosition);
-        yPosition += 7;
+        yPosition += 8;
 
         explanation.keyTerms.forEach((term) => {
-          checkPageBreak(20);
+          checkPageBreak(25);
+          
+          // Term name on its own line
           doc.setFontSize(10);
           doc.setFont('helvetica', 'bold');
           doc.setTextColor(0, 0, 0);
-          doc.text(`${term.term}:`, margin + 10, yPosition);
+          doc.text(`${term.term}`, margin + 10, yPosition);
+          yPosition += 6;
           
+          // Definition on next line, indented
           doc.setFont('helvetica', 'normal');
-          const termText = term.plainMeaning;
-          const termLines = doc.splitTextToSize(termText, pageWidth - 2 * margin - 15);
-          doc.text(termLines, margin + 10 + doc.getTextWidth(`${term.term}: `), yPosition);
-          yPosition += termLines.length * 5 + 2;
+          yPosition = addText(term.plainMeaning, margin + 15, yPosition);
+          yPosition += 4;
 
+          // Example on its own line
           if (term.example) {
             doc.setFontSize(9);
             doc.setFont('helvetica', 'italic');
             doc.setTextColor(100, 100, 100);
             yPosition = addText(`Example: ${term.example}`, margin + 15, yPosition);
             doc.setTextColor(0, 0, 0);
-            yPosition += 3;
+            yPosition += 4;
           }
+          yPosition += 2;
         });
-        yPosition += 3;
       }
 
       // Separator between charges
       if (chargeIdx < guidance.chargeClassifications!.length - 1) {
-        yPosition += 5;
+        yPosition += 3;
         doc.setDrawColor(200, 200, 200);
         doc.line(margin, yPosition, pageWidth - margin, yPosition);
         yPosition += 8;
@@ -266,23 +287,6 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       yPosition
     );
     doc.setTextColor(0, 0, 0);
-    yPosition += 10;
-  }
-
-  // Overview
-  if (guidance.overview) {
-    checkPageBreak(30);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(0, 100, 200);
-    doc.text('Overview', margin, yPosition);
-    yPosition += 8;
-
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(0, 0, 0);
-
-    yPosition = addText(guidance.overview, margin + 5, yPosition);
     yPosition += 10;
   }
 
