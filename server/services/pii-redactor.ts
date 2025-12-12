@@ -57,6 +57,7 @@ interface CaseDetails {
   employmentStatus?: string;
   familySituation?: string;
   concernsQuestions?: string;
+  language?: string;
 }
 
 /**
@@ -327,6 +328,7 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
     hasAttorney: caseDetails.hasAttorney,
     witnessesPresent: caseDetails.witnessesPresent,
     charges: caseDetails.charges,
+    language: caseDetails.language,
     
     arrestDate: redactField(caseDetails.arrestDate),
     arrestLocation: redactField(caseDetails.arrestLocation),

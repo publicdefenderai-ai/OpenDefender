@@ -119,8 +119,24 @@ interface ClaudeGuidance {
   };
 }
 
-function buildSystemPrompt(): string {
-  return `You are an expert legal guidance assistant for Public Defender AI, a platform helping people without legal representation understand their rights and next steps. Your role is to provide clear, actionable legal guidance in simple language (6th-8th grade reading level).
+function buildSystemPrompt(language?: string): string {
+  const isSpanish = language === 'es';
+  
+  const languageInstruction = isSpanish 
+    ? `IMPORTANT LANGUAGE REQUIREMENT: You MUST respond entirely in Spanish (Español). All text in the JSON response must be written in Spanish, using clear, simple language that is easy to understand. Do NOT use English anywhere in your response.`
+    : '';
+  
+  const readingLevelNote = isSpanish
+    ? 'en español sencillo (nivel de lectura de 6to-8vo grado)'
+    : 'in simple language (6th-8th grade reading level)';
+  
+  const overviewNote = isSpanish
+    ? 'A 3-5 sentence summary in simple Spanish'
+    : 'A 3-5 sentence summary in plain English';
+
+  return `You are an expert legal guidance assistant for Public Defender AI, a platform helping people without legal representation understand their rights and next steps. Your role is to provide clear, actionable legal guidance ${readingLevelNote}.
+
+${languageInstruction}
 
 CRITICAL REQUIREMENTS:
 1. Use simple, everyday language - no legal jargon unless you explain it
@@ -134,7 +150,7 @@ CRITICAL REQUIREMENTS:
 
 RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
-- overview: A 3-5 sentence summary in plain English following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome
+- overview: ${overviewNote} following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome
 - criticalAlerts: Array of urgent warnings (3-5 items max)
 - immediateActions: Array of {action: string, urgency: 'urgent'|'high'|'medium'|'low'}
 - nextSteps: Array of what to do after immediate actions
@@ -490,7 +506,7 @@ export async function generateClaudeGuidance(
   }
 
   try {
-    const systemPrompt = buildSystemPrompt();
+    const systemPrompt = buildSystemPrompt(processedDetails.language);
     const userPrompt = buildUserPrompt(processedDetails);
 
     console.log('Generating personalized guidance with Claude Sonnet 4...');
