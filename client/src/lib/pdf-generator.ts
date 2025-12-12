@@ -1,5 +1,6 @@
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
+import { getChargeExplanation } from "@shared/charge-explanations";
 
 interface ImmediateAction {
   action: string;
@@ -154,6 +155,119 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   });
 
   yPosition = (doc as any).lastAutoTable.finalY + 10;
+
+  // Understanding Your Charges Section
+  if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
+    checkPageBreak(40);
+    doc.setFontSize(16);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0, 0, 0);
+    doc.text('Understanding Your Charges', margin, yPosition);
+    yPosition += 6;
+
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(100, 100, 100);
+    yPosition = addText("Here's what these legal terms actually mean in plain English.", margin, yPosition);
+    yPosition += 8;
+
+    guidance.chargeClassifications.forEach((charge, chargeIdx) => {
+      checkPageBreak(50);
+      
+      // Charge header with classification
+      doc.setFontSize(12);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(0, 0, 0);
+      const chargeHeader = `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`;
+      doc.text(chargeHeader, margin, yPosition);
+      yPosition += 7;
+
+      // Get explanation for this charge
+      const explanation = getChargeExplanation(charge.name);
+      
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(0, 0, 0);
+
+      if (explanation?.plainSummary) {
+        yPosition = addText(explanation.plainSummary, margin + 5, yPosition);
+        yPosition += 5;
+      } else {
+        // Fallback description based on classification
+        const fallback = charge.classification === 'felony'
+          ? 'This is a felony charge, which is a more serious criminal offense. Felonies can carry significant penalties including potential prison time. Your attorney can explain the specific elements the prosecution must prove.'
+          : 'This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.';
+        yPosition = addText(fallback, margin + 5, yPosition);
+        yPosition += 5;
+      }
+
+      // Degree context if available
+      if (explanation?.degreeContext) {
+        checkPageBreak(25);
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'italic');
+        doc.setTextColor(80, 80, 80);
+        yPosition = addText(`How degrees differ: ${explanation.degreeContext}`, margin + 5, yPosition);
+        yPosition += 5;
+      }
+
+      // Key legal terms
+      if (explanation?.keyTerms && explanation.keyTerms.length > 0) {
+        checkPageBreak(30);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(0, 0, 0);
+        doc.text('Key legal terms the prosecution must prove:', margin + 5, yPosition);
+        yPosition += 7;
+
+        explanation.keyTerms.forEach((term) => {
+          checkPageBreak(20);
+          doc.setFontSize(10);
+          doc.setFont('helvetica', 'bold');
+          doc.setTextColor(0, 0, 0);
+          doc.text(`${term.term}:`, margin + 10, yPosition);
+          
+          doc.setFont('helvetica', 'normal');
+          const termText = term.plainMeaning;
+          const termLines = doc.splitTextToSize(termText, pageWidth - 2 * margin - 15);
+          doc.text(termLines, margin + 10 + doc.getTextWidth(`${term.term}: `), yPosition);
+          yPosition += termLines.length * 5 + 2;
+
+          if (term.example) {
+            doc.setFontSize(9);
+            doc.setFont('helvetica', 'italic');
+            doc.setTextColor(100, 100, 100);
+            yPosition = addText(`Example: ${term.example}`, margin + 15, yPosition);
+            doc.setTextColor(0, 0, 0);
+            yPosition += 3;
+          }
+        });
+        yPosition += 3;
+      }
+
+      // Separator between charges
+      if (chargeIdx < guidance.chargeClassifications!.length - 1) {
+        yPosition += 5;
+        doc.setDrawColor(200, 200, 200);
+        doc.line(margin, yPosition, pageWidth - margin, yPosition);
+        yPosition += 8;
+      }
+    });
+
+    // Disclaimer
+    checkPageBreak(25);
+    yPosition += 5;
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(100, 100, 100);
+    yPosition = addText(
+      'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.',
+      margin,
+      yPosition
+    );
+    doc.setTextColor(0, 0, 0);
+    yPosition += 10;
+  }
 
   // Overview
   if (guidance.overview) {
