@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Download, ArrowLeft, Lock, AlertTriangle, FileText, Undo2, Globe, Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import i18nInstance from "@/i18n";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -63,26 +64,45 @@ export default function ChatPage() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
-  const [chatResetKey, setChatResetKey] = useState(0);
 
   const handleLanguageChange = useCallback(async (lng: string) => {
-    await i18n.changeLanguage(lng);
+    await i18nInstance.changeLanguage(lng);
     actions.resetChat();
-    setChatResetKey(prev => prev + 1);
-    toast({
-      title: lng === 'es' ? 'Idioma cambiado' : 'Language changed',
-      description: lng === 'es' ? 'El chat se ha reiniciado en español' : 'Chat has been restarted in English',
-    });
-  }, [i18n, actions, toast]);
+    
+    setTimeout(() => {
+      const welcomeText = lng === 'es' 
+        ? "¡Hola! Estoy aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?"
+        : "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?";
+      const urgentYes = lng === 'es' ? "Sí, necesito ayuda ahora mismo" : "Yes, I need help right now";
+      const urgentNo = lng === 'es' ? "No, tengo tiempo para hablar" : "No, I have time to talk";
+      
+      actions.addMessage({
+        role: 'bot',
+        content: welcomeText,
+        quickReplies: [
+          { id: 'urgent-yes', label: urgentYes, value: 'urgent_yes', color: 'rose' as const },
+          { id: 'urgent-no', label: urgentNo, value: 'urgent_no', color: 'slate' as const },
+        ],
+      });
+      actions.setCurrentStep('emergency_check');
+      toast({
+        title: lng === 'es' ? 'Idioma cambiado' : 'Language changed',
+        description: lng === 'es' ? 'El chat se ha reiniciado en español' : 'Chat has been restarted in English',
+      });
+    }, 100);
+  }, [actions, toast]);
 
   const toggleTheme = useCallback(() => {
     setTheme(theme === "dark" ? "light" : "dark");
   }, [theme, setTheme]);
 
+  const hasInitialized = useRef(false);
+  
   useEffect(() => {
     actions.openChat();
     
-    if (state.currentStep === 'welcome' && state.messages.length === 0) {
+    if (state.currentStep === 'welcome' && state.messages.length === 0 && !hasInitialized.current) {
+      hasInitialized.current = true;
       actions.addMessage({
         role: 'bot',
         content: t('chat.messages.welcome', "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?"),
@@ -93,7 +113,7 @@ export default function ChatPage() {
       });
       actions.setCurrentStep('emergency_check');
     }
-  }, [chatResetKey]);
+  }, []);
 
   // Detect "stuck" state when user returns from another page
   // This happens when the last message has no quick replies and input is locked
