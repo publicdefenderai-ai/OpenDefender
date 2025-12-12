@@ -20,7 +20,7 @@ interface Charge {
 
 interface ChargeSelectorProps {
   jurisdiction: string;
-  onSelect: (charges: Array<{ code: string; name: string }>) => void;
+  onSelect: (charges: Array<{ id: string; code: string; name: string }>) => void;
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -35,7 +35,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedCharges, setSelectedCharges] = useState<Array<{ code: string; name: string }>>([]);
+  const [selectedCharges, setSelectedCharges] = useState<Array<{ id: string; code: string; name: string }>>([]);
   const [isExpanded, setIsExpanded] = useState(true);
 
   useEffect(() => {
@@ -65,11 +65,11 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
   const toggleCharge = (charge: Charge) => {
     setSelectedCharges(prev => {
-      const exists = prev.some(c => c.code === charge.code);
+      const exists = prev.some(c => c.id === charge.id);
       if (exists) {
-        return prev.filter(c => c.code !== charge.code);
+        return prev.filter(c => c.id !== charge.id);
       }
-      return [...prev, { code: charge.code, name: charge.name }];
+      return [...prev, { id: charge.id, code: charge.code, name: charge.name }];
     });
   };
 
@@ -148,7 +148,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                 </div>
               ) : charges.length > 0 ? (
                 charges.map((charge, index) => {
-                  const isSelected = selectedCharges.some(c => c.code === charge.code);
+                  const isSelected = selectedCharges.some(c => c.id === charge.id);
                   return (
                     <motion.button
                       key={charge.id}

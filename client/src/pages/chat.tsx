@@ -341,13 +341,13 @@ For a complete guide, visit our [Criminal Justice Process](/process) page.
     actions.setCurrentStep('charge_selection');
   }, [actions, addBotMessage, t]);
 
-  const handleChargesSelect = useCallback((charges: Array<{ code: string; name: string }>) => {
+  const handleChargesSelect = useCallback((charges: Array<{ id: string; code: string; name: string }>) => {
     actions.saveHistoryPoint(); // Save history before this selection
     const chargeNames = charges.map(c => c.name);
-    const chargeCodes = charges.map(c => c.code);
+    const chargeIds = charges.map(c => c.id);
     
     actions.addMessage({ role: 'user', content: chargeNames.join(', ') });
-    actions.updateCaseInfo({ charges: chargeCodes, chargeNames });
+    actions.updateCaseInfo({ charges: chargeIds, chargeNames });
     setShowChargeSelector(false);
 
     addBotMessage(t('chat.messages.stageQuestion', "What stage is your case in?"), [
