@@ -1678,9 +1678,12 @@ i18n
             "subtitle": "Private and secure"
           },
           "input": {
-            "placeholder": "Type your message...",
-            "lockMessage": "Select an option above to continue",
-            "describePrompt": "Describe what happened..."
+            "placeholder": "Ask a follow-up question...",
+            "selectOption": "Select an option above to continue",
+            "answering": "Complete the current step to continue",
+            "descriptionPlaceholder": "Describe what happened...",
+            "concernsPlaceholder": "What worries you most about your situation?",
+            "zipPlaceholder": "Enter your 5-digit ZIP code..."
           },
           "footer": {
             "privacy": "Your information is private and deleted after your session"
@@ -3403,9 +3406,12 @@ i18n
             "subtitle": "Privado y seguro"
           },
           "input": {
-            "placeholder": "Escriba su mensaje...",
-            "lockMessage": "Seleccione una opción arriba para continuar",
-            "describePrompt": "Describa lo que pasó..."
+            "placeholder": "Haga una pregunta adicional...",
+            "selectOption": "Seleccione una opción arriba para continuar",
+            "answering": "Complete el paso actual para continuar",
+            "descriptionPlaceholder": "Describa lo que pasó...",
+            "concernsPlaceholder": "¿Qué es lo que más le preocupa de su situación?",
+            "zipPlaceholder": "Ingrese su código postal de 5 dígitos..."
           },
           "footer": {
             "privacy": "Su información es privada y se elimina después de su sesión"

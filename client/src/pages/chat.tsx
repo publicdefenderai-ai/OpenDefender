@@ -387,8 +387,6 @@ export default function ChatPage() {
       setIsTyping(true);
       actions.setIsGenerating(true);
       actions.setCurrentStep('generating_guidance');
-      
-      addBotMessageWithKey('chat.messages.generating');
 
       try {
         const response = await apiRequest('POST', '/api/legal-guidance', {
@@ -399,6 +397,7 @@ export default function ChatPage() {
           hasAttorney: state.caseInfo.hasAttorney,
           incidentDescription: state.caseInfo.incidentDescription,
           concerns: message,
+          language: i18n.language,
         });
 
         const data = await response.json();

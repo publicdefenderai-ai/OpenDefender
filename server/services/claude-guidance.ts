@@ -57,6 +57,7 @@ interface CaseDetails {
   employmentStatus?: string;
   familySituation?: string;
   concernsQuestions?: string;
+  language?: string;
 }
 
 interface ClaudeGuidance {
@@ -226,6 +227,11 @@ BASIC CASE INFORMATION:
 
 Remember: Use simple language, be specific, and prioritize by urgency.`;
 
+  // Add language instruction if Spanish is requested
+  if (caseDetails.language === 'es') {
+    prompt += `\n\nIMPORTANT: Generate ALL guidance content in Spanish (Español). All text in the response should be in Spanish, using clear, simple language that is easy to understand.`;
+  }
+
   return prompt;
 }
 
@@ -249,6 +255,7 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     employmentStatus: caseDetails.employmentStatus,
     familySituation: caseDetails.familySituation,
     concernsQuestions: caseDetails.concernsQuestions,
+    language: caseDetails.language,
   }));
   return hash.digest('hex');
 }
