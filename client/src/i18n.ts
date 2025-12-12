@@ -1602,6 +1602,98 @@ i18n
               "description": "If you have questions about how we protect your privacy, please reach out through our public GitHub repository or community channels."
             }
           }
+        },
+        "chat": {
+          "messages": {
+            "welcome": "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
+            "emergencyAdviceFull": "🚨 **If you're being arrested or detained right now:**\n\n**✅ Stay Calm**\nDo not resist, run, or argue. Keep your hands visible. Resisting can lead to additional charges, even if the original arrest is later found to be unlawful.\n\n**🔇 Exercise Your Right to Remain Silent**\nSay clearly: \"I am exercising my right to remain silent.\"\nYou do NOT have to answer questions about where you're going, what you're doing, or where you live.\n\n**⚖️ Request an Attorney**\nSay: \"I want a lawyer.\" Police must stop questioning you once you ask for an attorney.\nIf you can't afford one, you can request a public defender at your first court appearance.\n\n**🚫 Do Not Consent to Searches**\nSay: \"I do not consent to any searches.\"\nPolice may search anyway, but stating this protects your rights for later.\n\n**📝 Remember These Details**\nNote the officers' badge numbers, patrol car numbers, and any witness information. This can help your case later.\n\n---\n**What would you like to do next?**",
+            "mainMenu": "What can I help you with?",
+            "stateQuestion": "Let's get you personalized guidance. First, what state is your case in?",
+            "chargeQuestion": "Got it, {{state}}. What charges are you facing? Select all that apply.",
+            "stageQuestion": "What stage is your case in?",
+            "custodyQuestion": "Are you currently in custody or have you been released?",
+            "attorneyQuestion": "Do you have an attorney or public defender?",
+            "descriptionPrompt": "Thanks for that information. Now, briefly describe what happened - this helps me give you more relevant guidance.\n\n(Your description is kept private and deleted after this session)",
+            "concernsQuestion": "What are you most worried about? Any specific questions?\n\n(For example: losing your job, affording a lawyer, when you have to go to court)",
+            "generating": "Thank you. I'm now reviewing your situation and preparing your personalized guidance. This may take a moment...",
+            "guidanceReady": "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records.",
+            "error": "I'm sorry, I encountered an issue generating your guidance. Please try again or contact support if the problem continues.",
+            "immigrationSummary": "**Immigration Enforcement Information**\n\nIf you're worried about immigration enforcement, here's what you should know:\n\n**Your Rights:**\n• You have the right to remain silent about your immigration status\n• You don't have to open your door to immigration officers without a judicial warrant\n• You have the right to speak to a lawyer before answering questions\n\n**If Approached by ICE:**\n• Stay calm and don't run\n• Ask if you are free to leave\n• Don't sign any documents without speaking to a lawyer\n• Remember details about the encounter\n\nFor comprehensive immigration guidance, visit our full [Immigration Guidance](/immigration-guidance) page.\n\n**What else can I help you with?**",
+            "rightsMenu": "Which rights topic would you like to learn about?",
+            "rightsInfo": "**Your Key Constitutional Rights:**\n\n🛡️ **Right to Remain Silent** (5th Amendment)\nYou cannot be forced to testify against yourself. Anything you say can be used against you in court.\n\n⚖️ **Right to an Attorney** (6th Amendment)\nYou have the right to a lawyer. If you can't afford one, the court will appoint a public defender.\n\n📞 **Right to a Phone Call**\nMost states allow at least one phone call after booking to contact family or an attorney.\n\n📜 **Right to Know the Charges**\nYou must be told what crimes you're accused of.\n\n---\nFor more detailed information, visit our [Know Your Rights](/rights-info) page.\n\n**What would you like to do next?**",
+            "processInfo": "**The Criminal Justice Process:**\n\n**1. Arrest & Booking** (0-48 hours)\nYou're taken into custody, fingerprinted, and photographed. You may be held until arraignment.\n\n**2. Arraignment** (24-72 hours after arrest)\nFirst court appearance where charges are read, you enter a plea, and bail is set.\n\n**3. Pre-Trial** (Weeks to months)\nDiscovery of evidence, plea negotiations, and motions are filed.\n\n**4. Trial** (If no plea deal)\nEvidence is presented before a judge or jury who decides guilt.\n\n**5. Sentencing** (If convicted)\nJudge determines punishment based on guidelines and circumstances.\n\n**6. Appeal** (Optional)\nYou can challenge the verdict or sentence through higher courts.\n\n---\nFor a complete guide, visit our [Criminal Justice Process](/process) page.\n\n**What would you like to do next?**",
+            "resourcesMenu": "What type of resource are you looking for?",
+            "lawsMenu": "What would you like to search?",
+            "enterZipPD": "Please enter your ZIP code to find Public Defender offices near you:",
+            "enterZipLegalAid": "Please enter your ZIP code to find Legal Aid organizations near you:",
+            "invalidZip": "Please enter a valid 5-digit ZIP code.",
+            "noPDFound": "I couldn't find Public Defender offices near {{zip}}. Try a different ZIP code or visit our [Resources page](/diversion-programs) for more options.\n\n**What else can I help you with?**",
+            "noLegalAidFound": "I couldn't find Legal Aid organizations near {{zip}}. Try a different ZIP code or visit our [Resources page](/diversion-programs) for more options.\n\n**What else can I help you with?**",
+            "pdResults": "Here are Public Defender offices near {{zip}}:\n\n{{results}}\n\n**What else can I help you with?**",
+            "legalAidResults": "Here are Legal Aid organizations near {{zip}}:\n\n{{results}}\n\n**What else can I help you with?**",
+            "searchError": "I had trouble searching. You can try again or explore other options.",
+            "whatElse": "What else can I help you with?",
+            "exportedWhatElse": "Your PDF has been downloaded.\n\n**What else can I help you with?**",
+            "followUpResponse": "That's a great question. Based on what you've told me, here's what I'd suggest..."
+          },
+          "replies": {
+            "urgentYes": "Yes, I need help right now",
+            "urgentNo": "No, I have time to talk",
+            "personalizedGuidance": "Personalized Guidance",
+            "immigrationEnforcement": "Immigration Enforcement",
+            "rightsInfo": "Rights Info",
+            "resources": "Resources",
+            "lawsRecords": "Laws & Records",
+            "myRights": "My Rights",
+            "criminalJusticeProcess": "Criminal Justice Process",
+            "constitutionalRights": "Constitutional Rights",
+            "justiceProcess": "Justice Process",
+            "searchSeizure": "Search & Seizure",
+            "helpingFamily": "Helping Family",
+            "legalGlossary": "Legal Glossary",
+            "findPublicDefender": "Find Public Defender",
+            "legalAidOrgs": "Legal Aid Orgs",
+            "diversionPrograms": "Diversion Programs",
+            "recordExpungement": "Record Expungement",
+            "courtRecords": "Court Records Search",
+            "statutesSearch": "Statutes Search",
+            "stageArrest": "Just arrested / under investigation",
+            "stageArraignment": "Arraignment coming up",
+            "stagePretrial": "Pre-trial proceedings",
+            "stageTrial": "Trial scheduled/ongoing",
+            "stageSentencing": "Sentencing phase",
+            "stageUnsure": "I'm not sure",
+            "inCustody": "Yes, in custody",
+            "onBail": "Out on bail/bond",
+            "ownRecognizance": "Released on my own",
+            "notInCustody": "Not in custody",
+            "hasAttorney": "Yes, I have representation",
+            "noAttorney": "No, I need to find one",
+            "viewGuidance": "View My Guidance",
+            "exportPdf": "Export as PDF",
+            "retry": "Try Again",
+            "tryAgain": "Try Another ZIP Code"
+          },
+          "header": {
+            "title": "Legal Guidance Chat",
+            "subtitle": "Private and secure"
+          },
+          "input": {
+            "placeholder": "Type your message...",
+            "lockMessage": "Select an option above to continue"
+          },
+          "footer": {
+            "privacy": "Your information is private and deleted after your session"
+          },
+          "exitWarning": {
+            "title": "You have guidance that hasn't been exported",
+            "description": "Your guidance will be lost if you leave without exporting."
+          },
+          "export": {
+            "noData": "No guidance to export",
+            "success": "PDF downloaded successfully",
+            "error": "Failed to export PDF"
+          }
         }
       },
       es: {
@@ -3186,6 +3278,98 @@ i18n
               "title": "¿Preguntas sobre privacidad?",
               "description": "Si tiene preguntas sobre cómo protegemos su privacidad, comuníquese a través de nuestro repositorio público de GitHub o canales comunitarios."
             }
+          }
+        },
+        "chat": {
+          "messages": {
+            "welcome": "¡Hola! Estoy aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?",
+            "emergencyAdviceFull": "🚨 **Si está siendo arrestado o detenido ahora mismo:**\n\n**✅ Mantenga la Calma**\nNo resista, corra ni discuta. Mantenga las manos visibles. Resistirse puede resultar en cargos adicionales, incluso si el arresto original luego se considera ilegal.\n\n**🔇 Ejerza su Derecho a Permanecer en Silencio**\nDiga claramente: \"Estoy ejerciendo mi derecho a permanecer en silencio.\"\nNO tiene que responder preguntas sobre adónde va, qué está haciendo o dónde vive.\n\n**⚖️ Solicite un Abogado**\nDiga: \"Quiero un abogado.\" La policía debe dejar de interrogarlo una vez que pida un abogado.\nSi no puede pagar uno, puede solicitar un defensor público en su primera comparecencia ante el tribunal.\n\n**🚫 No Consienta Registros**\nDiga: \"No consiento ningún registro.\"\nLa policía puede registrar de todos modos, pero decir esto protege sus derechos para después.\n\n**📝 Recuerde Estos Detalles**\nAnote los números de placa de los oficiales, números de patrulla y cualquier información de testigos. Esto puede ayudar su caso después.\n\n---\n**¿Qué le gustaría hacer ahora?**",
+            "mainMenu": "¿En qué puedo ayudarle?",
+            "stateQuestion": "Vamos a darle orientación personalizada. Primero, ¿en qué estado está su caso?",
+            "chargeQuestion": "Entendido, {{state}}. ¿Qué cargos enfrenta? Seleccione todos los que apliquen.",
+            "stageQuestion": "¿En qué etapa está su caso?",
+            "custodyQuestion": "¿Está actualmente bajo custodia o ha sido liberado?",
+            "attorneyQuestion": "¿Tiene un abogado o defensor público?",
+            "descriptionPrompt": "Gracias por esa información. Ahora, describa brevemente lo que pasó - esto me ayuda a darle orientación más relevante.\n\n(Su descripción se mantiene privada y se elimina después de esta sesión)",
+            "concernsQuestion": "¿Qué es lo que más le preocupa? ¿Alguna pregunta específica?\n\n(Por ejemplo: perder su trabajo, pagar un abogado, cuándo tiene que ir a la corte)",
+            "generating": "Gracias. Ahora estoy revisando su situación y preparando su orientación personalizada. Esto puede tomar un momento...",
+            "guidanceReady": "¡Su orientación legal está lista! He preparado un resumen de su situación, plazos importantes, sus derechos y próximos pasos recomendados.\n\nPuede exportar esto para guardarlo en sus registros.",
+            "error": "Lo siento, encontré un problema al generar su orientación. Por favor intente de nuevo o contacte soporte si el problema continúa.",
+            "immigrationSummary": "**Información sobre Aplicación de Inmigración**\n\nSi le preocupa la aplicación de inmigración, esto es lo que debe saber:\n\n**Sus Derechos:**\n• Tiene derecho a permanecer en silencio sobre su estatus migratorio\n• No tiene que abrir su puerta a oficiales de inmigración sin una orden judicial\n• Tiene derecho a hablar con un abogado antes de responder preguntas\n\n**Si es Abordado por ICE:**\n• Mantenga la calma y no corra\n• Pregunte si es libre de irse\n• No firme ningún documento sin hablar con un abogado\n• Recuerde detalles sobre el encuentro\n\nPara orientación completa sobre inmigración, visite nuestra página de [Guía de Inmigración](/immigration-guidance).\n\n**¿En qué más puedo ayudarle?**",
+            "rightsMenu": "¿Sobre qué tema de derechos le gustaría aprender?",
+            "rightsInfo": "**Sus Derechos Constitucionales Clave:**\n\n🛡️ **Derecho a Permanecer en Silencio** (5ta Enmienda)\nNo puede ser obligado a testificar contra sí mismo. Todo lo que diga puede usarse en su contra en la corte.\n\n⚖️ **Derecho a un Abogado** (6ta Enmienda)\nTiene derecho a un abogado. Si no puede pagar uno, la corte le asignará un defensor público.\n\n📞 **Derecho a una Llamada Telefónica**\nLa mayoría de los estados permiten al menos una llamada después del registro para contactar a la familia o un abogado.\n\n📜 **Derecho a Conocer los Cargos**\nDebe ser informado de qué crímenes se le acusa.\n\n---\nPara información más detallada, visite nuestra página [Conozca sus Derechos](/rights-info).\n\n**¿Qué le gustaría hacer ahora?**",
+            "processInfo": "**El Proceso de Justicia Penal:**\n\n**1. Arresto y Registro** (0-48 horas)\nEs llevado a custodia, le toman huellas y fotografías. Puede ser retenido hasta la lectura de cargos.\n\n**2. Lectura de Cargos** (24-72 horas después del arresto)\nPrimera comparecencia ante el tribunal donde se leen los cargos, usted declara y se fija la fianza.\n\n**3. Pre-Juicio** (Semanas a meses)\nDescubrimiento de evidencia, negociaciones de acuerdo y se presentan mociones.\n\n**4. Juicio** (Si no hay acuerdo)\nSe presenta evidencia ante un juez o jurado que decide la culpabilidad.\n\n**5. Sentencia** (Si es condenado)\nEl juez determina el castigo basándose en guías y circunstancias.\n\n**6. Apelación** (Opcional)\nPuede impugnar el veredicto o sentencia a través de tribunales superiores.\n\n---\nPara una guía completa, visite nuestra página [Proceso de Justicia Penal](/process).\n\n**¿Qué le gustaría hacer ahora?**",
+            "resourcesMenu": "¿Qué tipo de recurso está buscando?",
+            "lawsMenu": "¿Qué le gustaría buscar?",
+            "enterZipPD": "Por favor ingrese su código postal para encontrar oficinas de Defensor Público cerca de usted:",
+            "enterZipLegalAid": "Por favor ingrese su código postal para encontrar organizaciones de Asistencia Legal cerca de usted:",
+            "invalidZip": "Por favor ingrese un código postal válido de 5 dígitos.",
+            "noPDFound": "No encontré oficinas de Defensor Público cerca de {{zip}}. Intente con un código postal diferente o visite nuestra [página de Recursos](/diversion-programs) para más opciones.\n\n**¿En qué más puedo ayudarle?**",
+            "noLegalAidFound": "No encontré organizaciones de Asistencia Legal cerca de {{zip}}. Intente con un código postal diferente o visite nuestra [página de Recursos](/diversion-programs) para más opciones.\n\n**¿En qué más puedo ayudarle?**",
+            "pdResults": "Aquí están las oficinas de Defensor Público cerca de {{zip}}:\n\n{{results}}\n\n**¿En qué más puedo ayudarle?**",
+            "legalAidResults": "Aquí están las organizaciones de Asistencia Legal cerca de {{zip}}:\n\n{{results}}\n\n**¿En qué más puedo ayudarle?**",
+            "searchError": "Tuve problemas al buscar. Puede intentar de nuevo o explorar otras opciones.",
+            "whatElse": "¿En qué más puedo ayudarle?",
+            "exportedWhatElse": "Su PDF ha sido descargado.\n\n**¿En qué más puedo ayudarle?**",
+            "followUpResponse": "Esa es una gran pregunta. Basándome en lo que me ha dicho, esto es lo que sugeriría..."
+          },
+          "replies": {
+            "urgentYes": "Sí, necesito ayuda ahora mismo",
+            "urgentNo": "No, tengo tiempo para hablar",
+            "personalizedGuidance": "Orientación Personalizada",
+            "immigrationEnforcement": "Aplicación de Inmigración",
+            "rightsInfo": "Info de Derechos",
+            "resources": "Recursos",
+            "lawsRecords": "Leyes y Registros",
+            "myRights": "Mis Derechos",
+            "criminalJusticeProcess": "Proceso de Justicia Penal",
+            "constitutionalRights": "Derechos Constitucionales",
+            "justiceProcess": "Proceso Judicial",
+            "searchSeizure": "Registro e Incautación",
+            "helpingFamily": "Ayudar a la Familia",
+            "legalGlossary": "Glosario Legal",
+            "findPublicDefender": "Encontrar Defensor Público",
+            "legalAidOrgs": "Orgs de Asistencia Legal",
+            "diversionPrograms": "Programas de Desviación",
+            "recordExpungement": "Eliminación de Antecedentes",
+            "courtRecords": "Búsqueda de Registros Judiciales",
+            "statutesSearch": "Búsqueda de Estatutos",
+            "stageArrest": "Recién arrestado / bajo investigación",
+            "stageArraignment": "Lectura de cargos próxima",
+            "stagePretrial": "Procedimientos pre-juicio",
+            "stageTrial": "Juicio programado/en curso",
+            "stageSentencing": "Fase de sentencia",
+            "stageUnsure": "No estoy seguro",
+            "inCustody": "Sí, bajo custodia",
+            "onBail": "Libre bajo fianza",
+            "ownRecognizance": "Liberado bajo palabra",
+            "notInCustody": "No bajo custodia",
+            "hasAttorney": "Sí, tengo representación",
+            "noAttorney": "No, necesito encontrar uno",
+            "viewGuidance": "Ver Mi Orientación",
+            "exportPdf": "Exportar como PDF",
+            "retry": "Intentar de Nuevo",
+            "tryAgain": "Probar Otro Código Postal"
+          },
+          "header": {
+            "title": "Chat de Orientación Legal",
+            "subtitle": "Privado y seguro"
+          },
+          "input": {
+            "placeholder": "Escriba su mensaje...",
+            "lockMessage": "Seleccione una opción arriba para continuar"
+          },
+          "footer": {
+            "privacy": "Su información es privada y se elimina después de su sesión"
+          },
+          "exitWarning": {
+            "title": "Tiene orientación que no ha sido exportada",
+            "description": "Su orientación se perderá si sale sin exportar."
+          },
+          "export": {
+            "noData": "No hay orientación para exportar",
+            "success": "PDF descargado exitosamente",
+            "error": "Error al exportar PDF"
           }
         }
       }

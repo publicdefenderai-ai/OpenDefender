@@ -228,6 +228,12 @@ For comprehensive immigration guidance, visit our full [Immigration Guidance](/i
             { id: 'laws-statutes', label: t('chat.replies.statutesSearch', "Statutes Search"), value: 'laws_statutes', color: 'purple' as const },
           ]);
           actions.setCurrentStep('laws_records_menu');
+        } else if (reply.value === 'resources_pd') {
+          addBotMessage(t('chat.messages.enterZipPD', "Please enter your ZIP code to find Public Defender offices near you:"));
+          actions.setCurrentStep('pd_zip_search');
+        } else if (reply.value === 'resources_legal_aid') {
+          addBotMessage(t('chat.messages.enterZipLegalAid', "Please enter your ZIP code to find Legal Aid organizations near you:"));
+          actions.setCurrentStep('legal_aid_zip_search');
         }
         break;
 
@@ -489,7 +495,11 @@ ${resultsText}
         actions.setCurrentStep('main_menu');
       } catch (error) {
         setIsTyping(false);
-        addBotMessage(t('chat.messages.searchError', "I had trouble searching. Please try again."));
+        addBotMessage(t('chat.messages.searchError', "I had trouble searching. You can try again or explore other options."), [
+          { id: 'retry-pd', label: t('chat.replies.tryAgain', "Try Another ZIP Code"), value: 'resources_pd', color: 'green' as const },
+          ...getNextMenuOptions('resources', state.completedFlows),
+        ]);
+        actions.setCurrentStep('main_menu');
       }
       
     } else if (state.currentStep === 'legal_aid_zip_search') {
@@ -530,7 +540,11 @@ ${resultsText}
         actions.setCurrentStep('main_menu');
       } catch (error) {
         setIsTyping(false);
-        addBotMessage(t('chat.messages.searchError', "I had trouble searching. Please try again."));
+        addBotMessage(t('chat.messages.searchError', "I had trouble searching. You can try again or explore other options."), [
+          { id: 'retry-legal-aid', label: t('chat.replies.tryAgain', "Try Another ZIP Code"), value: 'resources_legal_aid', color: 'green' as const },
+          ...getNextMenuOptions('resources', state.completedFlows),
+        ]);
+        actions.setCurrentStep('main_menu');
       }
       
     } else if (state.currentStep === 'follow_up' || state.currentStep === 'guidance_ready') {
