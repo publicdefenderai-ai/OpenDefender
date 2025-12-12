@@ -52,7 +52,7 @@ export default function ChatPage() {
   const [, setLocation] = useLocation();
   const { state, actions } = useChat();
   const { toast } = useToast();
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
 
@@ -72,11 +72,16 @@ export default function ChatPage() {
     }
   }, []);
 
+  // Scroll to bottom when messages change or typing indicator appears
+  const scrollToBottom = useCallback(() => {
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }, []);
+
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [state.messages, isTyping]);
+    scrollToBottom();
+  }, [state.messages, isTyping, showChargeSelector, scrollToBottom]);
 
   // Sync charge selector visibility with current step (for back navigation)
   useEffect(() => {
@@ -665,10 +670,7 @@ ${resultsText}
 
           <ProgressDots currentStep={state.currentStep} />
 
-          <ScrollArea 
-            ref={scrollRef}
-            className="flex-1 px-4 py-4"
-          >
+          <ScrollArea className="flex-1 px-4 py-4">
             <div className="max-w-2xl mx-auto space-y-1">
               {state.messages.map((message, index) => (
                 <div key={message.id}>
@@ -704,6 +706,9 @@ ${resultsText}
                   <StateSelector onSelect={handleStateSelect} />
                 </div>
               )}
+              
+              {/* Scroll anchor - always at the bottom */}
+              <div ref={messagesEndRef} />
             </div>
           </ScrollArea>
 
