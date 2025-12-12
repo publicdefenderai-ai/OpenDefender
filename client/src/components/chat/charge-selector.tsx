@@ -23,15 +23,15 @@ interface ChargeSelectorProps {
   onSelect: (charges: Array<{ id: string; code: string; name: string }>) => void;
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  'All': 'All',
-  'felony': 'Felony',
-  'misdemeanor': 'Misdemeanor',
-  'infraction': 'Infraction',
-};
+const CATEGORY_KEYS = ['All', 'felony', 'misdemeanor', 'infraction'] as const;
 
 export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) {
   const { t } = useTranslation();
+  
+  const getCategoryLabel = (key: string) => {
+    const keyLower = key.toLowerCase();
+    return t(`chat.chargeSelector.categories.${keyLower}`, key);
+  };
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -101,7 +101,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
           )}
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-xs text-muted-foreground">{totalAvailable} available</span>
+          <span className="text-xs text-muted-foreground">{totalAvailable} {t('chat.chargeSelector.available', 'available')}</span>
           {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </div>
       </button>
@@ -121,7 +121,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
             </div>
             
             <div className="flex flex-wrap gap-1.5">
-              {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
+              {CATEGORY_KEYS.map((key) => (
                 <button
                   key={key}
                   onClick={() => setSelectedCategory(key)}
@@ -133,7 +133,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                   )}
                   data-testid={`category-${key.toLowerCase()}`}
                 >
-                  {label}
+                  {getCategoryLabel(key)}
                 </button>
               ))}
             </div>
@@ -144,7 +144,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
               {isLoading ? (
                 <div className="flex items-center justify-center py-8">
                   <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-                  <span className="ml-2 text-sm text-muted-foreground">Loading charges...</span>
+                  <span className="ml-2 text-sm text-muted-foreground">{t('chat.chargeSelector.loading', 'Loading charges...')}</span>
                 </div>
               ) : charges.length > 0 ? (
                 charges.map((charge, index) => {
@@ -185,7 +185,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                               charge.category === 'infraction' && "border-green-500/50 text-green-600"
                             )}
                           >
-                            {CATEGORY_LABELS[charge.category]}
+                            {getCategoryLabel(charge.category)}
                           </Badge>
                         </div>
                         <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{charge.description}</p>
@@ -213,7 +213,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
             >
               {selectedCharges.length === 0
                 ? t('chat.chargeSelector.selectAtLeast', 'Select at least one charge')
-                : t('chat.chargeSelector.continue', `Continue with ${selectedCharges.length} charge${selectedCharges.length > 1 ? 's' : ''}`)
+                : t('chat.chargeSelector.continue', { count: selectedCharges.length, defaultValue: `Continue with ${selectedCharges.length} charge(s)` })
               }
             </Button>
           </div>

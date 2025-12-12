@@ -1679,7 +1679,8 @@ i18n
           },
           "input": {
             "placeholder": "Type your message...",
-            "lockMessage": "Select an option above to continue"
+            "lockMessage": "Select an option above to continue",
+            "describePrompt": "Describe what happened..."
           },
           "footer": {
             "privacy": "Your information is private and deleted after your session"
@@ -1692,6 +1693,53 @@ i18n
             "noData": "No guidance to export",
             "success": "PDF downloaded successfully",
             "error": "Failed to export PDF"
+          },
+          "stateSelector": {
+            "placeholder": "Search for your state...",
+            "noResults": "No states found"
+          },
+          "chargeSelector": {
+            "title": "Select Charges",
+            "selected": "selected",
+            "available": "available",
+            "searchPlaceholder": "Search all charges...",
+            "loading": "Loading charges...",
+            "noResults": "No charges found matching your search",
+            "noCharges": "No charges available",
+            "selectAtLeast": "Select at least one charge",
+            "continue": "Continue with {{count}} charge(s)",
+            "categories": {
+              "all": "All",
+              "felony": "Felony",
+              "misdemeanor": "Misdemeanor",
+              "infraction": "Infraction"
+            }
+          },
+          "casePanel": {
+            "title": "Your Case Info",
+            "state": "State",
+            "charges": "Charges",
+            "stage": "Stage",
+            "custody": "Custody",
+            "attorney": "Attorney",
+            "hasAttorney": "Yes",
+            "noAttorney": "No",
+            "urgentSituation": "Urgent Situation",
+            "stages": {
+              "arrest": "Investigation/Arrest",
+              "arraignment": "Arraignment",
+              "pretrial": "Pre-trial",
+              "trial": "Trial",
+              "sentencing": "Sentencing",
+              "appeal": "Appeal",
+              "unsure": "Unknown"
+            },
+            "custody_status": {
+              "yes": "In Custody",
+              "bail": "Out on Bail",
+              "recognizance": "Own Recognizance",
+              "no": "Not in Custody"
+            }
           }
         }
         }
@@ -3356,7 +3404,8 @@ i18n
           },
           "input": {
             "placeholder": "Escriba su mensaje...",
-            "lockMessage": "Seleccione una opción arriba para continuar"
+            "lockMessage": "Seleccione una opción arriba para continuar",
+            "describePrompt": "Describa lo que pasó..."
           },
           "footer": {
             "privacy": "Su información es privada y se elimina después de su sesión"
@@ -3369,6 +3418,53 @@ i18n
             "noData": "No hay orientación para exportar",
             "success": "PDF descargado exitosamente",
             "error": "Error al exportar PDF"
+          },
+          "stateSelector": {
+            "placeholder": "Buscar su estado...",
+            "noResults": "No se encontraron estados"
+          },
+          "chargeSelector": {
+            "title": "Seleccionar Cargos",
+            "selected": "seleccionado(s)",
+            "available": "disponibles",
+            "searchPlaceholder": "Buscar todos los cargos...",
+            "loading": "Cargando cargos...",
+            "noResults": "No se encontraron cargos que coincidan con su búsqueda",
+            "noCharges": "No hay cargos disponibles",
+            "selectAtLeast": "Seleccione al menos un cargo",
+            "continue": "Continuar con {{count}} cargo(s)",
+            "categories": {
+              "all": "Todos",
+              "felony": "Delito Grave",
+              "misdemeanor": "Delito Menor",
+              "infraction": "Infracción"
+            }
+          },
+          "casePanel": {
+            "title": "Información de su Caso",
+            "state": "Estado",
+            "charges": "Cargos",
+            "stage": "Etapa",
+            "custody": "Custodia",
+            "attorney": "Abogado",
+            "hasAttorney": "Sí",
+            "noAttorney": "No",
+            "urgentSituation": "Situación Urgente",
+            "stages": {
+              "arrest": "Investigación/Arresto",
+              "arraignment": "Lectura de Cargos",
+              "pretrial": "Pre-juicio",
+              "trial": "Juicio",
+              "sentencing": "Sentencia",
+              "appeal": "Apelación",
+              "unsure": "Desconocido"
+            },
+            "custody_status": {
+              "yes": "Bajo Custodia",
+              "bail": "Libre Bajo Fianza",
+              "recognizance": "Bajo Palabra",
+              "no": "No Bajo Custodia"
+            }
           }
         }
         }

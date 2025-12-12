@@ -238,6 +238,8 @@ export default function ChatPage() {
         } else if (reply.value === 'resources_legal_aid') {
           addBotMessageWithKey('chat.messages.enterZipLegalAid');
           actions.setCurrentStep('legal_aid_zip_search');
+        } else if (reply.value === 'export_pdf') {
+          handleExportPdf();
         }
         break;
 
@@ -545,7 +547,13 @@ export default function ChatPage() {
     
     formattedContent += "\n\n**What else can I help you with?**";
     
-    addBotMessage(formattedContent, getNextMenuOptions('personalized_guidance', state.completedFlows));
+    const menuOptions = getNextMenuOptions('personalized_guidance', state.completedFlows);
+    const optionsWithExport = [
+      { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
+      ...menuOptions
+    ];
+    
+    addBotMessage(formattedContent, optionsWithExport);
     actions.setCurrentStep('main_menu');
   }, [state.guidanceData, state.completedFlows, addBotMessage, actions]);
 

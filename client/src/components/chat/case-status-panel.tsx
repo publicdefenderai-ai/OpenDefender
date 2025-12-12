@@ -10,25 +10,16 @@ interface CaseStatusPanelProps {
   className?: string;
 }
 
-const STAGE_LABELS: Record<string, string> = {
-  arrest: "Investigation/Arrest",
-  arraignment: "Arraignment",
-  pretrial: "Pre-trial",
-  trial: "Trial",
-  sentencing: "Sentencing",
-  appeal: "Appeal",
-  unsure: "Unknown",
-};
-
-const CUSTODY_LABELS: Record<string, string> = {
-  yes: "In Custody",
-  bail: "Out on Bail",
-  recognizance: "Own Recognizance",
-  no: "Not in Custody",
-};
-
 export function CaseStatusPanel({ caseInfo, className }: CaseStatusPanelProps) {
   const { t } = useTranslation();
+  
+  const getStageLabel = (stage: string) => {
+    return t(`chat.casePanel.stages.${stage}`, stage);
+  };
+  
+  const getCustodyLabel = (status: string) => {
+    return t(`chat.casePanel.custody_status.${status}`, status);
+  };
   const hasInfo = caseInfo.state || caseInfo.charges?.length || caseInfo.courtStage;
 
   if (!hasInfo) {
@@ -76,7 +67,7 @@ export function CaseStatusPanel({ caseInfo, className }: CaseStatusPanelProps) {
             <InfoRow 
               icon={Clock} 
               label={t('chat.casePanel.stage', 'Stage')}
-              value={STAGE_LABELS[caseInfo.courtStage] || caseInfo.courtStage}
+              value={getStageLabel(caseInfo.courtStage)}
             />
           )}
 
@@ -84,7 +75,7 @@ export function CaseStatusPanel({ caseInfo, className }: CaseStatusPanelProps) {
             <InfoRow 
               icon={AlertTriangle} 
               label={t('chat.casePanel.custody', 'Custody')}
-              value={CUSTODY_LABELS[caseInfo.custodyStatus] || caseInfo.custodyStatus}
+              value={getCustodyLabel(caseInfo.custodyStatus)}
             />
           )}
 
