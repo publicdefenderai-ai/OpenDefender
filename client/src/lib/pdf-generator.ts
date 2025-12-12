@@ -72,6 +72,100 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   const pageWidth = doc.internal.pageSize.getWidth();
   const margin = 15;
   let yPosition = 20;
+  const isSpanish = language === 'es';
+
+  // Localized labels
+  const labels = isSpanish ? {
+    title: 'Su Guía de Ayuda Legal',
+    generated: 'Generado',
+    privacy: 'PRIVADO: Este documento contiene su información legal personal. No lo comparta sin consultar primero con un abogado.',
+    caseInfo: 'Información de su Caso',
+    yourState: 'Su Estado',
+    processStage: 'Etapa del Proceso',
+    inJail: '¿Está Detenido?',
+    hasLawyer: '¿Tiene Abogado?',
+    charges: 'Cargos',
+    yes: 'Sí',
+    no: 'No',
+    overview: 'Resumen',
+    understandingCharges: 'Entendiendo sus Cargos',
+    chargesSubtitle: 'Esto es lo que significan estos términos legales en lenguaje sencillo.',
+    keyTerms: 'Términos legales clave que la fiscalía debe probar:',
+    chargeDisclaimer: 'Recuerde: La fiscalía debe probar cada elemento de estos cargos más allá de una duda razonable. Su abogado puede ayudar a identificar qué elementos pueden ser cuestionados basándose en la evidencia.',
+    immediateActions: 'Acciones Inmediatas (Próximas 48 Horas)',
+    importantDates: 'Fechas Importantes',
+    event: 'Evento',
+    timeframe: 'Plazo',
+    priority: 'Prioridad',
+    description: 'Descripción',
+    yourRights: 'Sus Derechos Legales',
+    nextSteps: 'Próximos Pasos Recomendados',
+    evidenceToGather: 'Evidencia a Reunir',
+    courtPrep: 'Lista de Preparación para la Corte',
+    actionsToAvoid: '! Acciones a Evitar',
+    warnings: 'Advertencias Importantes',
+    resources: 'Recursos Legales y Contactos',
+    type: 'Tipo',
+    contact: 'Contacto',
+    hours: 'Horario',
+    website: 'Sitio Web',
+    timeline: 'Cronología y Proceso del Caso',
+    status: 'Estado',
+    stage: 'Etapa',
+    footer: 'Esto no es asesoría legal. Consulte con un abogado calificado para su situación específica.',
+    page: 'Página',
+    of: 'de',
+    na: 'N/D',
+    felonyFallback: 'Este es un cargo de delito mayor, que es un delito penal más grave. Los delitos mayores pueden llevar penas significativas incluyendo tiempo en prisión. Su abogado puede explicar los elementos específicos que la fiscalía debe probar.',
+    misdemeanorFallback: 'Este es un cargo de delito menor, que generalmente es menos grave que un delito mayor. Los delitos menores aún pueden resultar en tiempo en la cárcel, multas y antecedentes penales. Su abogado puede explicar lo que la fiscalía necesita probar.',
+    howDegreesDiffer: 'Cómo difieren los grados:',
+    example: 'Ejemplo:',
+  } : {
+    title: 'Your Legal Help Guide',
+    generated: 'Generated',
+    privacy: 'PRIVATE: This document has your personal legal information. Don\'t share it without talking to a lawyer first.',
+    caseInfo: 'Your Case Information',
+    yourState: 'Your State',
+    processStage: 'Where You Are in the Process',
+    inJail: 'Are You in Jail',
+    hasLawyer: 'Do You Have a Lawyer',
+    charges: 'Charges',
+    yes: 'Yes',
+    no: 'No',
+    overview: 'Overview',
+    understandingCharges: 'Understanding Your Charges',
+    chargesSubtitle: "Here's what these legal terms actually mean in plain English.",
+    keyTerms: 'Key legal terms the prosecution must prove:',
+    chargeDisclaimer: 'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.',
+    immediateActions: 'Immediate Actions (Next 48 Hours)',
+    importantDates: 'Important Dates',
+    event: 'Event',
+    timeframe: 'Timeframe',
+    priority: 'Priority',
+    description: 'Description',
+    yourRights: 'Your Legal Rights',
+    nextSteps: 'Recommended Next Steps',
+    evidenceToGather: 'Evidence to Gather',
+    courtPrep: 'Court Preparation Checklist',
+    actionsToAvoid: '! Actions to Avoid',
+    warnings: 'Important Warnings',
+    resources: 'Legal Resources & Contacts',
+    type: 'Type',
+    contact: 'Contact',
+    hours: 'Hours',
+    website: 'Website',
+    timeline: 'Case Timeline & Process',
+    status: 'Status',
+    stage: 'Stage',
+    footer: 'This is not legal advice. Consult with a qualified attorney for your specific situation.',
+    page: 'Page',
+    of: 'of',
+    na: 'N/A',
+    felonyFallback: 'This is a felony charge, which is a more serious criminal offense. Felonies can carry significant penalties including potential prison time. Your attorney can explain the specific elements the prosecution must prove.',
+    misdemeanorFallback: 'This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.',
+    howDegreesDiffer: 'How degrees differ:',
+    example: 'Example:',
+  };
 
   // Helper function to add text with word wrap
   const addText = (text: string, x: number, y: number, options?: any) => {
@@ -91,57 +185,53 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   // Title
   doc.setFontSize(22);
   doc.setFont('helvetica', 'bold');
-  doc.text('Your Legal Help Guide', pageWidth / 2, yPosition, { align: 'center' });
+  doc.text(labels.title, pageWidth / 2, yPosition, { align: 'center' });
   yPosition += 15;
 
   // Subtitle - Date and Session
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(100, 100, 100);
-  const currentDate = new Date().toLocaleDateString('en-US', { 
+  const currentDate = new Date().toLocaleDateString(isSpanish ? 'es-ES' : 'en-US', { 
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
   });
-  doc.text(`Generated: ${currentDate}`, pageWidth / 2, yPosition, { align: 'center' });
+  doc.text(`${labels.generated}: ${currentDate}`, pageWidth / 2, yPosition, { align: 'center' });
   yPosition += 10;
 
   // Privacy Notice
   doc.setFontSize(9);
   doc.setTextColor(150, 0, 0);
-  yPosition = addText(
-    'PRIVATE: This document has your personal legal information. Don\'t share it without talking to a lawyer first.',
-    margin,
-    yPosition
-  );
+  yPosition = addText(labels.privacy, margin, yPosition);
   yPosition += 10;
 
   // Case Summary Section
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(0, 0, 0);
-  doc.text('Your Case Information', margin, yPosition);
+  doc.text(labels.caseInfo, margin, yPosition);
   yPosition += 8;
 
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
   
   const summaryData = [
-    ['Your State', guidance.caseData.jurisdiction.toUpperCase()],
-    ['Where You Are in the Process', guidance.caseData.caseStage],
-    ['Are You in Jail', guidance.caseData.custodyStatus],
-    ['Do You Have a Lawyer', guidance.caseData.hasAttorney ? 'Yes' : 'No'],
+    [labels.yourState, guidance.caseData.jurisdiction.toUpperCase()],
+    [labels.processStage, guidance.caseData.caseStage],
+    [labels.inJail, guidance.caseData.custodyStatus],
+    [labels.hasLawyer, guidance.caseData.hasAttorney ? labels.yes : labels.no],
   ];
 
   if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
     guidance.chargeClassifications.forEach((charge, idx) => {
       summaryData.push([
-        idx === 0 ? 'Charges' : '',
+        idx === 0 ? labels.charges : '',
         `${formatChargeName(charge.name)} (${charge.code}) - ${charge.classification.toUpperCase()}`
       ]);
     });
   } else {
-    summaryData.push(['Charges', guidance.caseData.charges]);
+    summaryData.push([labels.charges, guidance.caseData.charges]);
   }
 
   autoTable(doc, {
@@ -162,7 +252,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 100, 200);
-    doc.text('Overview', margin, yPosition);
+    doc.text(labels.overview, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -179,13 +269,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 100, 200);
-    doc.text('Understanding Your Charges', margin, yPosition);
+    doc.text(labels.understandingCharges, margin, yPosition);
     yPosition += 6;
 
     doc.setFontSize(9);
     doc.setFont('helvetica', 'italic');
     doc.setTextColor(100, 100, 100);
-    yPosition = addText("Here's what these legal terms actually mean in plain English.", margin, yPosition);
+    yPosition = addText(labels.chargesSubtitle, margin, yPosition);
     yPosition += 8;
 
     guidance.chargeClassifications.forEach((charge, chargeIdx) => {
@@ -212,8 +302,8 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       } else {
         // Fallback description based on classification
         const fallback = charge.classification === 'felony'
-          ? 'This is a felony charge, which is a more serious criminal offense. Felonies can carry significant penalties including potential prison time. Your attorney can explain the specific elements the prosecution must prove.'
-          : 'This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.';
+          ? labels.felonyFallback
+          : labels.misdemeanorFallback;
         yPosition = addText(fallback, margin + 5, yPosition);
         yPosition += 6;
       }
@@ -224,7 +314,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
         doc.setFontSize(9);
         doc.setFont('helvetica', 'italic');
         doc.setTextColor(80, 80, 80);
-        yPosition = addText(`How degrees differ: ${explanation.degreeContext}`, margin + 5, yPosition);
+        yPosition = addText(`${labels.howDegreesDiffer} ${explanation.degreeContext}`, margin + 5, yPosition);
         yPosition += 6;
         doc.setTextColor(0, 0, 0);
       }
@@ -235,7 +325,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
         doc.setFontSize(10);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(0, 0, 0);
-        doc.text('Key legal terms the prosecution must prove:', margin + 5, yPosition);
+        doc.text(labels.keyTerms, margin + 5, yPosition);
         yPosition += 8;
 
         explanation.keyTerms.forEach((term) => {
@@ -258,7 +348,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
             doc.setFontSize(9);
             doc.setFont('helvetica', 'italic');
             doc.setTextColor(100, 100, 100);
-            yPosition = addText(`Example: ${term.example}`, margin + 15, yPosition);
+            yPosition = addText(`${labels.example} ${term.example}`, margin + 15, yPosition);
             doc.setTextColor(0, 0, 0);
             yPosition += 4;
           }
@@ -282,7 +372,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFont('helvetica', 'italic');
     doc.setTextColor(100, 100, 100);
     yPosition = addText(
-      'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.',
+      labels.chargeDisclaimer,
       margin,
       yPosition
     );
@@ -296,7 +386,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 100, 200);
-    doc.text('Immediate Actions (Next 48 Hours)', margin, yPosition);
+    doc.text(labels.immediateActions, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -318,7 +408,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text('Important Dates', margin, yPosition);
+    doc.text(labels.importantDates, margin, yPosition);
     yPosition += 8;
 
     const deadlineData = guidance.deadlines.map(deadline => [
@@ -330,7 +420,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     autoTable(doc, {
       startY: yPosition,
-      head: [['Event', 'Timeframe', 'Priority', 'Description']],
+      head: [[labels.event, labels.timeframe, labels.priority, labels.description]],
       body: deadlineData,
       theme: 'striped',
       headStyles: { fillColor: [41, 128, 185] },
@@ -353,7 +443,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 150, 0);
-    doc.text('Your Legal Rights', margin, yPosition);
+    doc.text(labels.yourRights, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -374,7 +464,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text('Recommended Next Steps', margin, yPosition);
+    doc.text(labels.nextSteps, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -393,7 +483,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.text('Evidence to Gather', margin, yPosition);
+    doc.text(labels.evidenceToGather, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -412,7 +502,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.text('Court Preparation Checklist', margin, yPosition);
+    doc.text(labels.courtPrep, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -432,7 +522,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(200, 0, 0);
-    doc.text('! Actions to Avoid', margin, yPosition);
+    doc.text(labels.actionsToAvoid, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -453,7 +543,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(200, 100, 0);
-    doc.text('Important Warnings', margin, yPosition);
+    doc.text(labels.warnings, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
@@ -474,20 +564,20 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(0, 0, 0);
-    doc.text('Legal Resources & Contacts', margin, yPosition);
+    doc.text(labels.resources, margin, yPosition);
     yPosition += 8;
 
     const resourceData = guidance.resources.map(resource => [
       resource.type,
       resource.description,
       resource.contact,
-      resource.hours || 'N/A',
-      resource.website || 'N/A'
+      resource.hours || labels.na,
+      resource.website || labels.na
     ]);
 
     autoTable(doc, {
       startY: yPosition,
-      head: [['Type', 'Description', 'Contact', 'Hours', 'Website']],
+      head: [[labels.type, labels.description, labels.contact, labels.hours, labels.website]],
       body: resourceData,
       theme: 'striped',
       headStyles: { fillColor: [41, 128, 185] },
@@ -510,7 +600,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     checkPageBreak(40);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.text('Case Timeline & Process', margin, yPosition);
+    doc.text(labels.timeline, margin, yPosition);
     yPosition += 8;
 
     const timelineData = guidance.timeline.map(stage => [
@@ -522,7 +612,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     autoTable(doc, {
       startY: yPosition,
-      head: [['Status', 'Stage', 'Description', 'Timeframe']],
+      head: [[labels.status, labels.stage, labels.description, labels.timeframe]],
       body: timelineData,
       theme: 'grid',
       headStyles: { fillColor: [41, 128, 185] },
@@ -546,13 +636,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
     doc.text(
-      'This is not legal advice. Consult with a qualified attorney for your specific situation.',
+      labels.footer,
       pageWidth / 2,
       doc.internal.pageSize.getHeight() - 10,
       { align: 'center' }
     );
     doc.text(
-      `Page ${i} of ${pageCount}`,
+      `${labels.page} ${i} ${labels.of} ${pageCount}`,
       pageWidth - margin,
       doc.internal.pageSize.getHeight() - 10,
       { align: 'right' }
