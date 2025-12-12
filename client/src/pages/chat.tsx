@@ -72,6 +72,40 @@ export default function ChatPage() {
     }
   }, []);
 
+  // Detect "stuck" state when user returns from another page
+  // This happens when the last message has no quick replies and input is locked
+  useEffect(() => {
+    const latestMsg = state.messages[state.messages.length - 1];
+    const hasReplies = latestMsg?.quickReplies && latestMsg.quickReplies.length > 0;
+    const isFreeTextStep = state.currentStep === 'incident_description' || 
+                           state.currentStep === 'concerns_question' ||
+                           state.currentStep === 'pd_zip_search' ||
+                           state.currentStep === 'legal_aid_zip_search' ||
+                           state.currentStep === 'follow_up' || 
+                           state.currentStep === 'guidance_ready';
+    const isWelcome = state.currentStep === 'welcome';
+    const isGenerating = state.currentStep === 'generating_guidance';
+    const isChargeSelection = state.currentStep === 'charge_selection';
+    const isStateSelection = state.currentStep === 'state_selection';
+    
+    // If chat is stuck (no quick replies, can't use free text, not in special states)
+    if (state.messages.length > 0 && !hasReplies && !isFreeTextStep && !isWelcome && !isGenerating && !isChargeSelection && !isStateSelection) {
+      // Show "What else can I help you with?" with all 5 menu options
+      actions.addMessage({
+        role: 'bot',
+        content: t('chat.messages.whatElse', "What else can I help you with?"),
+        quickReplies: [
+          { id: 'menu-guidance', label: t('chat.replies.personalizedGuidance', "Personalized Guidance"), value: 'menu_personalized', color: 'blue' as const },
+          { id: 'menu-immigration', label: t('chat.replies.immigrationEnforcement', "Immigration Enforcement"), value: 'menu_immigration', color: 'rose' as const },
+          { id: 'menu-rights', label: t('chat.replies.rightsInfo', "Rights Info"), value: 'menu_rights', color: 'slate' as const },
+          { id: 'menu-resources', label: t('chat.replies.resources', "Resources"), value: 'menu_resources', color: 'green' as const },
+          { id: 'menu-laws', label: t('chat.replies.lawsRecords', "Laws & Records"), value: 'menu_laws', color: 'purple' as const },
+        ],
+      });
+      actions.setCurrentStep('main_menu');
+    }
+  }, []); // Run once on mount
+
   // Scroll to bottom when messages change or typing indicator appears
   const scrollToBottom = useCallback(() => {
     setTimeout(() => {
