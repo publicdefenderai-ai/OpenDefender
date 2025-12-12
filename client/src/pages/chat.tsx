@@ -1,10 +1,17 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Download, ArrowLeft, Lock, AlertTriangle, FileText, Undo2 } from "lucide-react";
+import { X, Download, ArrowLeft, Lock, AlertTriangle, FileText, Undo2, Globe, Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useTheme } from "@/components/ui/theme-provider";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useChat, QuickReply, ConversationStep, CompletedFlow } from "@/contexts/chat-context";
 import { MessageBubble, TypingIndicator } from "@/components/chat/message-bubble";
 import { QuickReplyButtons, FullWidthReply } from "@/components/chat/quick-replies";
@@ -48,13 +55,29 @@ function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: Complete
 }
 
 export default function ChatPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { state, actions } = useChat();
   const { toast } = useToast();
+  const { theme, setTheme } = useTheme();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
+  const [chatResetKey, setChatResetKey] = useState(0);
+
+  const handleLanguageChange = useCallback(async (lng: string) => {
+    await i18n.changeLanguage(lng);
+    actions.resetChat();
+    setChatResetKey(prev => prev + 1);
+    toast({
+      title: lng === 'es' ? 'Idioma cambiado' : 'Language changed',
+      description: lng === 'es' ? 'El chat se ha reiniciado en español' : 'Chat has been restarted in English',
+    });
+  }, [i18n, actions, toast]);
+
+  const toggleTheme = useCallback(() => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }, [theme, setTheme]);
 
   useEffect(() => {
     actions.openChat();
@@ -70,7 +93,7 @@ export default function ChatPage() {
       });
       actions.setCurrentStep('emergency_check');
     }
-  }, []);
+  }, [chatResetKey]);
 
   // Detect "stuck" state when user returns from another page
   // This happens when the last message has no quick replies and input is locked
@@ -692,7 +715,7 @@ ${resultsText}
               </div>
             </div>
             
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
               {state.guidanceData && (
                 <Button
                   variant="outline"
@@ -704,6 +727,46 @@ ${resultsText}
                   {t('chat.header.export', 'Export')}
                 </Button>
               )}
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    data-testid="button-language-toggle"
+                  >
+                    <Globe className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem 
+                    onClick={() => handleLanguageChange('en')}
+                    className={i18n.language === 'en' ? 'bg-accent' : ''}
+                    data-testid="menu-item-english"
+                  >
+                    🇺🇸 English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => handleLanguageChange('es')}
+                    className={i18n.language === 'es' ? 'bg-accent' : ''}
+                    data-testid="menu-item-spanish"
+                  >
+                    🇪🇸 Español
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                className="h-8 w-8"
+                data-testid="button-theme-toggle"
+              >
+                {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </Button>
+
               <Button
                 variant="ghost"
                 size="icon"
