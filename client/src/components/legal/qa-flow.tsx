@@ -50,7 +50,7 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
       component: StatusStep,
     },
     {
-      title: "Additional Details (Optional)",
+      title: t('legalGuidance.qaFlow.steps.additionalDetails'),
       component: AdditionalDetailsStep,
     },
   ];
@@ -743,22 +743,22 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
       <div>
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <MessageSquare className="h-5 w-5" />
-          Tell Us More (Optional)
+          {t('legalGuidance.qaFlow.additionalDetails.title')}
         </h3>
         <p className="text-sm text-muted-foreground mb-4">
-          The more details you provide, the better our AI can tailor guidance to your specific situation. All fields are optional - skip any you're not comfortable sharing.
+          {t('legalGuidance.qaFlow.additionalDetails.description')}
         </p>
         
         <div className="space-y-4">
           <div>
             <Label htmlFor="incidentDescription">
-              What happened? Describe the incident in your own words
+              {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
             </Label>
             <Textarea
               id="incidentDescription"
               value={formData.incidentDescription || ""}
               onChange={(e) => updateFormData("incidentDescription", e.target.value)}
-              placeholder="Example: I was driving home from work when the police pulled me over. They said I was swerving but I had just swerved to avoid a pothole..."
+              placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
               rows={4}
               className="mt-2"
               data-testid="textarea-incident-description"
@@ -767,13 +767,13 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
 
           <div>
             <Label htmlFor="concernsQuestions">
-              What are you most worried about? Any specific questions?
+              {t('legalGuidance.qaFlow.additionalDetails.concernsLabel')}
             </Label>
             <Textarea
               id="concernsQuestions"
               value={formData.concernsQuestions || ""}
               onChange={(e) => updateFormData("concernsQuestions", e.target.value)}
-              placeholder="Example: I'm worried about losing my job. I have kids and can't afford a lawyer. When do I have to go to court?"
+              placeholder={t('legalGuidance.qaFlow.additionalDetails.concernsPlaceholder')}
               rows={4}
               className="mt-2"
               data-testid="textarea-concerns-questions"
@@ -789,7 +789,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
           onClick={onPrev}
           data-testid="button-prev-additional"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back
+          <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.additionalDetails.back')}
         </Button>
         <Button
           onClick={onNext}

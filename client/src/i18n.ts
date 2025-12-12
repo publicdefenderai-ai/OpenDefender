@@ -228,7 +228,8 @@ i18n
                 "consent": "Privacy & Consent",
                 "jurisdiction": "Your State",
                 "caseDetails": "Your Case",
-                "status": "Current Status"
+                "status": "Current Status",
+                "additionalDetails": "Additional Details (Optional)"
               },
               "consent": {
                 "title": "Privacy Disclaimer & Consent",
@@ -337,7 +338,17 @@ i18n
                   "no": "No, not in custody"
                 },
                 "back": "Back",
-                "submitButton": "Get My Legal Guidance"
+                "submitButton": "Get My Legal Guidance",
+                "continue": "Continue"
+              },
+              "additionalDetails": {
+                "title": "Tell Us More (Optional)",
+                "description": "The more details you provide, the better our AI can tailor guidance to your specific situation. All fields are optional - skip any you're not comfortable sharing.",
+                "incidentLabel": "What happened? Describe the incident in your own words",
+                "incidentPlaceholder": "Example: I was driving home from work when the police pulled me over. They said I was swerving but I had just swerved to avoid a pothole...",
+                "concernsLabel": "What are you most worried about? Any specific questions?",
+                "concernsPlaceholder": "Example: I'm worried about losing my job. I have kids and can't afford a lawyer. When do I have to go to court?",
+                "back": "Back"
               }
             },
             "dashboard": {
@@ -1956,7 +1967,8 @@ i18n
                 "consent": "Privacidad y Consentimiento",
                 "jurisdiction": "Su Estado",
                 "caseDetails": "Su Caso",
-                "status": "Estado Actual"
+                "status": "Estado Actual",
+                "additionalDetails": "Detalles Adicionales (Opcional)"
               },
               "consent": {
                 "title": "Aviso de Privacidad y Consentimiento",
@@ -2065,7 +2077,17 @@ i18n
                   "no": "No, no estoy bajo custodia"
                 },
                 "back": "Volver",
-                "submitButton": "Obtener Mi Orientación Legal"
+                "submitButton": "Obtener Mi Orientación Legal",
+                "continue": "Continuar"
+              },
+              "additionalDetails": {
+                "title": "Cuéntenos Más (Opcional)",
+                "description": "Entre más detalles proporcione, mejor podrá nuestra IA adaptar la orientación a su situación específica. Todos los campos son opcionales - omita cualquiera que no se sienta cómodo compartiendo.",
+                "incidentLabel": "¿Qué pasó? Describa el incidente en sus propias palabras",
+                "incidentPlaceholder": "Ejemplo: Iba manejando a casa del trabajo cuando la policía me detuvo. Dijeron que estaba zigzagueando pero acababa de esquivar un bache...",
+                "concernsLabel": "¿Qué es lo que más le preocupa? ¿Alguna pregunta específica?",
+                "concernsPlaceholder": "Ejemplo: Me preocupa perder mi trabajo. Tengo hijos y no puedo pagar un abogado. ¿Cuándo tengo que ir a la corte?",
+                "back": "Volver"
               }
             },
             "dashboard": {
