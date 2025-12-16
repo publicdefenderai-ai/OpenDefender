@@ -728,7 +728,9 @@ export default function ChatPage() {
                 </div>
               ))}
               
-              {isTyping && <TypingIndicator />}
+              <AnimatePresence>
+                {isTyping && <TypingIndicator />}
+              </AnimatePresence>
               
               {showChargeSelector && state.caseInfo.state && (
                 <div className="ml-11 mt-3">

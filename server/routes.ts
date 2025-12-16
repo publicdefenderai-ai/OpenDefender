@@ -75,18 +75,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Criminal Charges API - Get charges by jurisdiction
   app.get("/api/criminal-charges", async (req, res) => {
     try {
-      const { jurisdiction, search, category, limit } = req.query;
+      const { jurisdiction, search, category, limit, language } = req.query;
+      const isSpanish = language === 'es';
       
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
         : criminalCharges;
       
-      // Filter by search term
+      // Filter by search term (search in both English and Spanish if available)
       if (search && typeof search === 'string') {
         const searchLower = search.toLowerCase();
         charges = charges.filter(charge => 
           charge.name.toLowerCase().includes(searchLower) ||
-          charge.description.toLowerCase().includes(searchLower)
+          charge.description.toLowerCase().includes(searchLower) ||
+          (charge.nameEs && charge.nameEs.toLowerCase().includes(searchLower)) ||
+          (charge.descriptionEs && charge.descriptionEs.toLowerCase().includes(searchLower))
         );
       }
       
@@ -99,13 +102,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const maxResults = Math.min(parseInt(limit as string) || 100, 500);
       charges = charges.slice(0, maxResults);
       
-      // Return simplified charge data for the selector
+      // Return simplified charge data for the selector with localized fields
       const simplifiedCharges = charges.map(charge => ({
         id: charge.id,
         code: charge.code,
-        name: charge.name,
+        name: isSpanish && charge.nameEs ? charge.nameEs : charge.name,
         category: charge.category,
-        description: charge.description,
+        description: isSpanish && charge.descriptionEs ? charge.descriptionEs : charge.description,
         maxPenalty: charge.maxPenalty,
       }));
       

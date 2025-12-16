@@ -26,7 +26,7 @@ interface ChargeSelectorProps {
 const CATEGORY_KEYS = ['All', 'felony', 'misdemeanor', 'infraction'] as const;
 
 export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const getCategoryLabel = (key: string) => {
     const keyLower = key.toLowerCase();
@@ -44,11 +44,12 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   }, [search]);
 
   const { data, isLoading } = useQuery<{ charges: Charge[]; count: number; totalAvailable: number }>({
-    queryKey: ['/api/criminal-charges', jurisdiction, debouncedSearch, selectedCategory],
+    queryKey: ['/api/criminal-charges', jurisdiction, debouncedSearch, selectedCategory, i18n.language],
     queryFn: async () => {
       const params = new URLSearchParams({
         jurisdiction,
         limit: '100',
+        language: i18n.language,
       });
       if (debouncedSearch) params.append('search', debouncedSearch);
       if (selectedCategory !== 'All') params.append('category', selectedCategory);

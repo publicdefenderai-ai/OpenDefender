@@ -9,6 +9,9 @@
 // generated statute codes and standardized penalties for consistency in legal guidance.
 
 export interface CriminalCharge {
+  // Spanish translations (optional - populated incrementally)
+  nameEs?: string;
+  descriptionEs?: string;
   id: string;
   name: string;
   code: string;
