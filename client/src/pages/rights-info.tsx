@@ -228,7 +228,7 @@ export default function RightsInfo() {
                 <Button 
                   data-testid="button-search-rights" 
                   variant="outline"
-                  className="py-4 px-8"
+                  className="py-4 px-8 bg-indigo-100 dark:bg-indigo-900/40 border-indigo-300 dark:border-indigo-700 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-200 dark:hover:bg-indigo-800/50"
                 >
                   <Search className="mr-2 h-5 w-5" />
                   Rights During a Search
