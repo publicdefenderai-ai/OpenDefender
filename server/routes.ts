@@ -10,6 +10,7 @@ import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, testClaudeConnection } from "./services/claude-guidance.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges } from "../shared/criminal-charges.js";
+import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { scrapingCoordinator } from "./services/scraping-coordinator";
 import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
@@ -103,14 +104,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       charges = charges.slice(0, maxResults);
       
       // Return simplified charge data for the selector with localized fields
-      const simplifiedCharges = charges.map(charge => ({
-        id: charge.id,
-        code: charge.code,
-        name: isSpanish && charge.nameEs ? charge.nameEs : charge.name,
-        category: charge.category,
-        description: isSpanish && charge.descriptionEs ? charge.descriptionEs : charge.description,
-        maxPenalty: charge.maxPenalty,
-      }));
+      const simplifiedCharges = charges.map(charge => {
+        let name = charge.name;
+        let description = charge.description;
+        
+        if (isSpanish) {
+          // Use direct field translations if available, otherwise use translation functions
+          name = charge.nameEs || translateChargeName(charge.name) || charge.name;
+          description = charge.descriptionEs || translateDescription(charge.description) || charge.description;
+        }
+        
+        return {
+          id: charge.id,
+          code: charge.code,
+          name,
+          category: charge.category,
+          description,
+          maxPenalty: charge.maxPenalty,
+        };
+      });
       
       res.json({ 
         success: true, 
