@@ -89,6 +89,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-center justify-between p-3 border-b border-border hover:bg-muted/50 transition-colors"
+        data-testid="button-charge-selector-toggle"
       >
         <div className="flex items-center gap-2">
           <Scale className="h-4 w-4 text-primary" />

@@ -83,15 +83,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ? getChargesByJurisdiction(jurisdiction as string)
         : criminalCharges;
       
-      // Filter by search term (search in both English and Spanish if available)
+      // Filter by search term (search in both English and Spanish)
       if (search && typeof search === 'string') {
         const searchLower = search.toLowerCase();
-        charges = charges.filter(charge => 
-          charge.name.toLowerCase().includes(searchLower) ||
-          charge.description.toLowerCase().includes(searchLower) ||
-          (charge.nameEs && charge.nameEs.toLowerCase().includes(searchLower)) ||
-          (charge.descriptionEs && charge.descriptionEs.toLowerCase().includes(searchLower))
-        );
+        charges = charges.filter(charge => {
+          // Search in English
+          if (charge.name.toLowerCase().includes(searchLower) ||
+              charge.description.toLowerCase().includes(searchLower)) {
+            return true;
+          }
+          
+          // Search in Spanish - use direct fields or translate on-the-fly
+          const nameEs = charge.nameEs || translateChargeName(charge.name) || '';
+          const descriptionEs = charge.descriptionEs || translateDescription(charge.description) || '';
+          
+          return nameEs.toLowerCase().includes(searchLower) ||
+                 descriptionEs.toLowerCase().includes(searchLower);
+        });
       }
       
       // Filter by category (felony, misdemeanor, infraction)
