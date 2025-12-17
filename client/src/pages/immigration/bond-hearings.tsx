@@ -14,7 +14,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { useTranslation } from 'react-i18next';
 import { Header } from "@/components/layout/header";
@@ -48,12 +47,9 @@ export default function BondHearings() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
                 <Gavel className="h-8 w-8 text-white" />
               </div>
-              <div>
-                <Badge variant="secondary" className="mb-2">{t('immigration.bond.badge')}</Badge>
-                <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-bond-hearings-title">
-                  {t('immigration.bond.title')}
-                </h1>
-              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-bond-hearings-title">
+                {t('immigration.bond.title')}
+              </h1>
             </div>
             <p className="text-lg text-white/90 max-w-3xl" data-testid="text-bond-hearings-subtitle">
               {t('immigration.bond.subtitle')}
@@ -62,10 +58,10 @@ export default function BondHearings() {
         </div>
       </section>
 
-      <Alert className="max-w-4xl mx-auto px-4 -mt-6 relative z-20 mb-8 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
         <Scale className="h-5 w-5 text-blue-600" />
         <AlertDescription className="text-blue-800 dark:text-blue-200" data-testid="alert-bond-info">
-          <strong>Important:</strong> {t('immigration.bond.importantAlert')}
+          <strong>{t('immigration.common.importantLabel')}</strong> {t('immigration.bond.importantAlert')}
         </AlertDescription>
       </Alert>
 

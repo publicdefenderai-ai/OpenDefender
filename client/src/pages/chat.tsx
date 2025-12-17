@@ -229,9 +229,13 @@ export default function ChatPage() {
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_immigration') {
-          addBotMessageWithKey('chat.messages.immigrationSummary', getNextMenuOptions('immigration', state.completedFlows));
-          actions.markFlowCompleted('immigration');
-          actions.setCurrentStep('main_menu');
+          addBotMessageWithKey('chat.messages.immigrationSituation', [
+            { id: 'imm-urgent', labelKey: 'chat.replies.immUrgent', value: 'imm_urgent', color: 'rose' as const },
+            { id: 'imm-planning', labelKey: 'chat.replies.immPlanning', value: 'imm_planning', color: 'blue' as const },
+            { id: 'imm-detained', labelKey: 'chat.replies.immDetained', value: 'imm_detained', color: 'amber' as const },
+            { id: 'imm-general', labelKey: 'chat.replies.immGeneralInfo', value: 'imm_general', color: 'slate' as const },
+          ]);
+          actions.setCurrentStep('immigration_situation');
         } else if (reply.value === 'menu_rights') {
           addBotMessageWithKey('chat.messages.rightsMenu', [
             { id: 'rights-constitutional', labelKey: 'chat.replies.constitutionalRights', value: 'rights_constitutional', color: 'slate' as const },
@@ -325,6 +329,132 @@ export default function ChatPage() {
             { id: 'process-personalized', labelKey: 'chat.replies.personalizedGuidance', value: 'personalized_guidance', color: 'blue' as const },
             { id: 'process-rights', labelKey: 'chat.replies.myRights', value: 'learn_rights', color: 'slate' as const },
           ]);
+        }
+        break;
+
+      case 'immigration_situation':
+        if (reply.value === 'imm_urgent') {
+          addBotMessageWithKey('chat.messages.immigrationUrgent.reminder', [
+            { id: 'imm-at-home', labelKey: 'chat.replies.immAtHome', value: 'imm_at_home', color: 'rose' as const },
+            { id: 'imm-at-work', labelKey: 'chat.replies.immAtWork', value: 'imm_at_work', color: 'rose' as const },
+            { id: 'imm-in-public', labelKey: 'chat.replies.immInPublic', value: 'imm_in_public', color: 'rose' as const },
+          ]);
+          actions.setCurrentStep('immigration_urgent_location');
+        } else if (reply.value === 'imm_planning') {
+          addBotMessageWithKey('chat.messages.immigrationPlanning.question', [
+            { id: 'imm-myself', labelKey: 'chat.replies.immMyself', value: 'imm_myself', color: 'blue' as const },
+            { id: 'imm-family', labelKey: 'chat.replies.immFamily', value: 'imm_family', color: 'blue' as const },
+            { id: 'imm-workplace', labelKey: 'chat.replies.immWorkplace', value: 'imm_workplace', color: 'blue' as const },
+          ]);
+          actions.setCurrentStep('immigration_planning_who');
+        } else if (reply.value === 'imm_detained') {
+          addBotMessageWithKey('chat.messages.immigrationDetained.question', [
+            { id: 'imm-ice-detention', labelKey: 'chat.replies.immIceDetention', value: 'imm_ice_detention', color: 'amber' as const },
+            { id: 'imm-county-jail', labelKey: 'chat.replies.immCountyJail', value: 'imm_county_jail', color: 'amber' as const },
+            { id: 'imm-port-entry', labelKey: 'chat.replies.immPortOfEntry', value: 'imm_port_entry', color: 'amber' as const },
+          ]);
+          actions.setCurrentStep('immigration_detained_status');
+        } else if (reply.value === 'imm_general') {
+          setLocation('/immigration-guidance');
+          actions.markFlowCompleted('immigration');
+        }
+        break;
+
+      case 'immigration_urgent_location':
+        if (reply.value === 'imm_at_home') {
+          addBotMessageWithKey('chat.messages.immigrationUrgent.atHome', [
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        } else if (reply.value === 'imm_at_work') {
+          addBotMessageWithKey('chat.messages.immigrationUrgent.atWork', [
+            { id: 'imm-workplace-raids', labelKey: 'chat.replies.immWorkplaceRaids', value: 'imm_workplace_raids', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        } else if (reply.value === 'imm_in_public') {
+          addBotMessageWithKey('chat.messages.immigrationUrgent.inPublic', [
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        }
+        break;
+
+      case 'immigration_planning_who':
+        if (reply.value === 'imm_myself') {
+          addBotMessageWithKey('chat.messages.immigrationPlanning.myself', [
+            { id: 'imm-daca-tps', labelKey: 'chat.replies.immDacaTps', value: 'imm_daca_tps', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        } else if (reply.value === 'imm_family') {
+          addBotMessageWithKey('chat.messages.immigrationPlanning.family', [
+            { id: 'imm-family-planning', labelKey: 'chat.replies.immFamilyPlanning', value: 'imm_family_planning', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        } else if (reply.value === 'imm_workplace') {
+          addBotMessageWithKey('chat.messages.immigrationPlanning.workplace', [
+            { id: 'imm-workplace-raids', labelKey: 'chat.replies.immWorkplaceRaids', value: 'imm_workplace_raids', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        }
+        break;
+
+      case 'immigration_detained_status':
+        if (reply.value === 'imm_ice_detention') {
+          addBotMessageWithKey('chat.messages.immigrationDetained.iceDetention', [
+            { id: 'imm-bond-hearings', labelKey: 'chat.replies.immBondHearings', value: 'imm_bond_hearings', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        } else if (reply.value === 'imm_county_jail') {
+          addBotMessageWithKey('chat.messages.immigrationDetained.countyJail', [
+            { id: 'imm-bond-hearings', labelKey: 'chat.replies.immBondHearings', value: 'imm_bond_hearings', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        } else if (reply.value === 'imm_port_entry') {
+          addBotMessageWithKey('chat.messages.immigrationDetained.portOfEntry', [
+            { id: 'imm-bond-hearings', labelKey: 'chat.replies.immBondHearings', value: 'imm_bond_hearings', color: 'blue' as const },
+            { id: 'imm-find-attorney', labelKey: 'chat.replies.immFindAttorney', value: 'imm_find_attorney', color: 'green' as const },
+            { id: 'imm-back-hub', labelKey: 'chat.replies.immBackToHub', value: 'imm_back_hub', color: 'slate' as const },
+          ]);
+          actions.markFlowCompleted('immigration');
+          actions.setCurrentStep('immigration_result');
+        }
+        break;
+
+      case 'immigration_result':
+        if (reply.value === 'imm_find_attorney') {
+          setLocation('/immigration-guidance/find-attorney');
+        } else if (reply.value === 'imm_daca_tps') {
+          setLocation('/immigration-guidance/daca-tps');
+        } else if (reply.value === 'imm_family_planning') {
+          setLocation('/immigration-guidance/family-planning');
+        } else if (reply.value === 'imm_workplace_raids') {
+          setLocation('/immigration-guidance/workplace-raids');
+        } else if (reply.value === 'imm_bond_hearings') {
+          setLocation('/immigration-guidance/bond-hearings');
+        } else if (reply.value === 'imm_back_hub') {
+          setLocation('/immigration-guidance');
         }
         break;
 

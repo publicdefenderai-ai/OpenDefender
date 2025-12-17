@@ -626,6 +626,9 @@ i18n
             }
           },
           "immigration": {
+            "common": {
+              "importantLabel": "Important:"
+            },
             "hero": {
               "title1": "Immigration Enforcement",
               "title2": "Know Your Rights",
@@ -1973,6 +1976,26 @@ i18n
             "guidanceReady": "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records.",
             "error": "I'm sorry, I encountered an issue generating your guidance. Please try again or contact support if the problem continues.",
             "immigrationSummary": "**Immigration Enforcement Information**\n\nIf you're worried about immigration enforcement, here's what you should know:\n\n**Your Rights:**\n• You have the right to remain silent about your immigration status\n• You don't have to open your door to immigration officers without a judicial warrant\n• You have the right to speak to a lawyer before answering questions\n\n**If Approached by ICE:**\n• Stay calm and don't run\n• Ask if you are free to leave\n• Don't sign any documents without speaking to a lawyer\n• Remember details about the encounter\n\nFor comprehensive immigration guidance, visit our full [Immigration Guidance](/immigration-guidance) page.\n\n**What else can I help you with?**",
+            "immigrationSituation": "I can help you with immigration-related questions. **What best describes your situation?**",
+            "immigrationUrgent": {
+              "reminder": "🚨 **Immediate Rights Reminder:**\n\n• **Stay calm** - Don't run or resist\n• **You have the right to remain silent** - You don't have to answer questions about your status\n• **Ask if you're free to leave** - If yes, calmly walk away\n• **Don't sign anything** without understanding it fully\n• **Request a lawyer** before answering questions\n\n**Where is this happening?**",
+              "atHome": "🏠 **Your Rights at Home:**\n\n• **Don't open the door** unless they show a judicial warrant (signed by a judge)\n• An ICE administrative warrant (Form I-200) does NOT give them the right to enter\n• Say: \"I do not consent to you entering my home\"\n• If they force entry, don't resist but state you don't consent\n• Gather names and badge numbers if possible\n\n📞 **Emergency Contacts:**\n• National Immigration Forum: 1-800-954-6287\n• ACLU: Text \"IMMIGRANT\" to 88823\n\n**Connect with an immigration attorney immediately:**",
+              "atWork": "💼 **Your Rights at Work:**\n\n• You have the right to remain silent\n• Ask to see a warrant - read it carefully\n• Don't run, lie, or use false documents\n• You can decline to answer questions about your status\n• Remember: You can have a lawyer present\n\n📋 Your employer CANNOT retaliate against you for exercising your rights.\n\n**Learn more about workplace raids and employer responsibilities:**",
+              "inPublic": "🚶 **Your Rights in Public/at Checkpoints:**\n\n• Stay calm and don't run\n• At a checkpoint, you may be asked about citizenship\n• You can remain silent about your immigration status\n• Don't carry false documents\n• If detained, ask for a lawyer immediately\n\n📞 **Emergency Contacts:**\n• National Immigration Forum: 1-800-954-6287\n• DOJ Immigration Review: 1-800-898-7180\n\n**Connect with an immigration attorney:**"
+            },
+            "immigrationPlanning": {
+              "question": "**Who are you planning for?**\n\nWe have resources to help you prepare:",
+              "myself": "For personal planning, consider:\n\n• **Know your rights** before any encounter\n• **Prepare an emergency contact card** with attorney information\n• **Keep important documents** in a safe, accessible place\n• **Create a family communication plan**\n\nIf you have DACA, TPS, or other protected status, stay informed about renewals and deadlines:",
+              "family": "**Family Planning Resources:**\n\nPreparing your family for potential immigration enforcement:\n\n• Designate a trusted person for childcare decisions\n• Prepare power of attorney documents\n• Keep copies of important documents accessible\n• Create a family emergency plan\n• Know your children's rights at school\n\nAccess our comprehensive family planning guide:",
+              "workplace": "**Workplace Preparation:**\n\nPrepare your workplace for potential ICE enforcement:\n\n• Know the difference between judicial and administrative warrants\n• Understand employer and employee rights\n• Create a workplace response plan\n• Know where to get legal help\n\nAccess our workplace raids guide:"
+            },
+            "immigrationDetained": {
+              "question": "**What is the current detention situation?**",
+              "iceDetention": "**If in ICE Detention:**\n\n📞 **Your Rights in Detention:**\n• Right to make phone calls to family and attorney\n• Right to contact your consulate\n• Right to request a bond hearing (in most cases)\n• Right to an interpreter\n\n💰 **Bond Information:**\n• Bond amounts typically range from $1,500 to $25,000+\n• Certain criminal convictions may make you ineligible for bond\n• A judge will consider ties to community, flight risk, and danger\n\n**Learn about bond hearings and how to prepare:**",
+              "countyJail": "**If in County Jail on Immigration Hold:**\n\n📋 **What This Means:**\n• ICE has requested the jail hold you for up to 48 hours after your criminal case\n• The hold is a REQUEST, not an order (in many states)\n• Some jails refuse to honor these detainers\n\n⚖️ **Your Rights:**\n• You can still request bond in your criminal case\n• Ask your criminal defense attorney about immigration consequences\n• You have the right to speak with an immigration attorney\n\n**Learn about bond hearings:",
+              "portOfEntry": "**At a Port of Entry (Airport/Border):**\n\n🛂 **Key Information:**\n• Different rules apply at ports of entry\n• CBP has broader authority at borders\n• You can still request to speak with a lawyer\n• Don't sign anything without understanding it\n\n📞 **If You're a U.S. Citizen/Green Card Holder:**\nYou cannot be denied entry, but delays may occur.\n\n**Connect with an immigration attorney immediately:**",
+              "result": "**Important:** Immigration law is complex. An experienced immigration attorney can make a significant difference in your case.\n\n📍 **Find verified immigration attorneys:**"
+            },
             "rightsMenu": "Which rights topic would you like to learn about?",
             "rightsInfo": "**Your Key Constitutional Rights:**\n\n🛡️ **Right to Remain Silent** (5th Amendment)\nYou cannot be forced to testify against yourself. Anything you say can be used against you in court.\n\n⚖️ **Right to an Attorney** (6th Amendment)\nYou have the right to a lawyer. If you can't afford one, the court will appoint a public defender.\n\n📞 **Right to a Phone Call**\nMost states allow at least one phone call after booking to contact family or an attorney.\n\n📜 **Right to Know the Charges**\nYou must be told what crimes you're accused of.\n\n---\nFor more detailed information, visit our [Know Your Rights](/rights-info) page.\n\n**What would you like to do next?**",
             "processInfo": "**The Criminal Justice Process:**\n\n**1. Arrest & Booking** (0-48 hours)\nYou're taken into custody, fingerprinted, and photographed. You may be held until arraignment.\n\n**2. Arraignment** (24-72 hours after arrest)\nFirst court appearance where charges are read, you enter a plea, and bail is set.\n\n**3. Pre-Trial** (Weeks to months)\nDiscovery of evidence, plea negotiations, and motions are filed.\n\n**4. Trial** (If no plea deal)\nEvidence is presented before a judge or jury who decides guilt.\n\n**5. Sentencing** (If convicted)\nJudge determines punishment based on guidelines and circumstances.\n\n**6. Appeal** (Optional)\nYou can challenge the verdict or sentence through higher courts.\n\n---\nFor a complete guide, visit our [Criminal Justice Process](/process) page.\n\n**What would you like to do next?**",
@@ -2029,7 +2052,26 @@ i18n
             "viewGuidance": "View My Guidance",
             "exportPdf": "Export as PDF",
             "retry": "Try Again",
-            "tryAgain": "Try Another ZIP Code"
+            "tryAgain": "Try Another ZIP Code",
+            "immUrgent": "Active encounter right now",
+            "immPlanning": "Planning/preparing",
+            "immDetained": "Already detained/in proceedings",
+            "immGeneralInfo": "Just want general info",
+            "immAtHome": "At home",
+            "immAtWork": "At work",
+            "immInPublic": "In public / checkpoint",
+            "immMyself": "Myself",
+            "immFamily": "My family",
+            "immWorkplace": "My workplace",
+            "immIceDetention": "In ICE detention",
+            "immCountyJail": "In county jail on immigration hold",
+            "immPortOfEntry": "At a port of entry",
+            "immFindAttorney": "Find Immigration Attorney",
+            "immDacaTps": "DACA/TPS Information",
+            "immFamilyPlanning": "Family Planning Guide",
+            "immWorkplaceRaids": "Workplace Raids Guide",
+            "immBondHearings": "Bond Hearings Info",
+            "immBackToHub": "Back to Immigration Hub"
           },
           "header": {
             "title": "Legal Guidance Chat",
@@ -2712,6 +2754,9 @@ i18n
             }
           },
           "immigration": {
+            "common": {
+              "importantLabel": "Importante:"
+            },
             "hero": {
               "title1": "Cumplimiento de Inmigración",
               "title2": "Conozca sus Derechos",
@@ -4059,6 +4104,26 @@ i18n
             "guidanceReady": "¡Su orientación legal está lista! He preparado un resumen de su situación, plazos importantes, sus derechos y próximos pasos recomendados.\n\nPuede exportar esto para guardarlo en sus registros.",
             "error": "Lo siento, encontré un problema al generar su orientación. Por favor intente de nuevo o contacte soporte si el problema continúa.",
             "immigrationSummary": "**Información sobre Aplicación de Inmigración**\n\nSi le preocupa la aplicación de inmigración, esto es lo que debe saber:\n\n**Sus Derechos:**\n• Tiene derecho a permanecer en silencio sobre su estatus migratorio\n• No tiene que abrir su puerta a oficiales de inmigración sin una orden judicial\n• Tiene derecho a hablar con un abogado antes de responder preguntas\n\n**Si es Abordado por ICE:**\n• Mantenga la calma y no corra\n• Pregunte si es libre de irse\n• No firme ningún documento sin hablar con un abogado\n• Recuerde detalles sobre el encuentro\n\nPara orientación completa sobre inmigración, visite nuestra página de [Guía de Inmigración](/immigration-guidance).\n\n**¿En qué más puedo ayudarle?**",
+            "immigrationSituation": "Puedo ayudarle con preguntas relacionadas con inmigración. **¿Qué describe mejor su situación?**",
+            "immigrationUrgent": {
+              "reminder": "🚨 **Recordatorio Inmediato de Derechos:**\n\n• **Mantenga la calma** - No corra ni resista\n• **Tiene derecho a permanecer en silencio** - No tiene que responder preguntas sobre su estatus\n• **Pregunte si es libre de irse** - Si sí, aléjese calmadamente\n• **No firme nada** sin entenderlo completamente\n• **Solicite un abogado** antes de responder preguntas\n\n**¿Dónde está ocurriendo esto?**",
+              "atHome": "🏠 **Sus Derechos en Casa:**\n\n• **No abra la puerta** a menos que le muestren una orden judicial (firmada por un juez)\n• Una orden administrativa de ICE (Formulario I-200) NO les da derecho a entrar\n• Diga: \"No consiento que entren a mi casa\"\n• Si entran a la fuerza, no resista pero declare que no consiente\n• Reúna nombres y números de placa si es posible\n\n📞 **Contactos de Emergencia:**\n• Foro Nacional de Inmigración: 1-800-954-6287\n• ACLU: Envíe \"IMMIGRANT\" al 88823\n\n**Conecte con un abogado de inmigración inmediatamente:**",
+              "atWork": "💼 **Sus Derechos en el Trabajo:**\n\n• Tiene derecho a permanecer en silencio\n• Pida ver una orden - léala cuidadosamente\n• No corra, mienta ni use documentos falsos\n• Puede negarse a responder preguntas sobre su estatus\n• Recuerde: Puede tener un abogado presente\n\n📋 Su empleador NO PUEDE tomar represalias contra usted por ejercer sus derechos.\n\n**Aprenda más sobre redadas en el trabajo y responsabilidades del empleador:**",
+              "inPublic": "🚶 **Sus Derechos en Público/en Puntos de Control:**\n\n• Mantenga la calma y no corra\n• En un punto de control, pueden preguntarle sobre ciudadanía\n• Puede permanecer en silencio sobre su estatus migratorio\n• No lleve documentos falsos\n• Si es detenido, pida un abogado inmediatamente\n\n📞 **Contactos de Emergencia:**\n• Foro Nacional de Inmigración: 1-800-954-6287\n• DOJ Revisión de Inmigración: 1-800-898-7180\n\n**Conecte con un abogado de inmigración:**"
+            },
+            "immigrationPlanning": {
+              "question": "**¿Para quién está planeando?**\n\nTenemos recursos para ayudarle a prepararse:",
+              "myself": "Para planificación personal, considere:\n\n• **Conozca sus derechos** antes de cualquier encuentro\n• **Prepare una tarjeta de contacto de emergencia** con información de abogado\n• **Mantenga documentos importantes** en un lugar seguro y accesible\n• **Cree un plan de comunicación familiar**\n\nSi tiene DACA, TPS u otro estatus protegido, manténgase informado sobre renovaciones y fechas límite:",
+              "family": "**Recursos de Planificación Familiar:**\n\nPreparando a su familia para posible aplicación de inmigración:\n\n• Designe una persona de confianza para decisiones de cuidado de niños\n• Prepare documentos de poder notarial\n• Mantenga copias de documentos importantes accesibles\n• Cree un plan de emergencia familiar\n• Conozca los derechos de sus hijos en la escuela\n\nAcceda a nuestra guía completa de planificación familiar:",
+              "workplace": "**Preparación del Lugar de Trabajo:**\n\nPrepare su lugar de trabajo para posible aplicación de ICE:\n\n• Conozca la diferencia entre órdenes judiciales y administrativas\n• Entienda los derechos del empleador y empleado\n• Cree un plan de respuesta en el trabajo\n• Sepa dónde obtener ayuda legal\n\nAcceda a nuestra guía de redadas en el trabajo:"
+            },
+            "immigrationDetained": {
+              "question": "**¿Cuál es la situación actual de detención?**",
+              "iceDetention": "**Si está en Detención de ICE:**\n\n📞 **Sus Derechos en Detención:**\n• Derecho a hacer llamadas telefónicas a familia y abogado\n• Derecho a contactar su consulado\n• Derecho a solicitar audiencia de fianza (en la mayoría de casos)\n• Derecho a un intérprete\n\n💰 **Información de Fianza:**\n• Las cantidades de fianza típicamente van de $1,500 a $25,000+\n• Ciertas condenas penales pueden hacerlo inelegible para fianza\n• Un juez considerará vínculos con la comunidad, riesgo de fuga y peligro\n\n**Aprenda sobre audiencias de fianza y cómo prepararse:**",
+              "countyJail": "**Si está en Cárcel del Condado con Retención de Inmigración:**\n\n📋 **Lo Que Esto Significa:**\n• ICE ha solicitado que la cárcel lo retenga hasta 48 horas después de su caso penal\n• La retención es una SOLICITUD, no una orden (en muchos estados)\n• Algunas cárceles se niegan a cumplir con estos retenedores\n\n⚖️ **Sus Derechos:**\n• Todavía puede solicitar fianza en su caso penal\n• Pregunte a su abogado defensor penal sobre consecuencias migratorias\n• Tiene derecho a hablar con un abogado de inmigración\n\n**Aprenda sobre audiencias de fianza:**",
+              "portOfEntry": "**En un Puerto de Entrada (Aeropuerto/Frontera):**\n\n🛂 **Información Clave:**\n• Diferentes reglas aplican en puertos de entrada\n• CBP tiene mayor autoridad en fronteras\n• Aún puede solicitar hablar con un abogado\n• No firme nada sin entenderlo\n\n📞 **Si es Ciudadano de EE.UU./Residente Permanente:**\nNo se le puede negar la entrada, pero pueden ocurrir retrasos.\n\n**Conecte con un abogado de inmigración inmediatamente:**",
+              "result": "**Importante:** La ley de inmigración es compleja. Un abogado de inmigración con experiencia puede hacer una diferencia significativa en su caso.\n\n📍 **Encuentre abogados de inmigración verificados:**"
+            },
             "rightsMenu": "¿Sobre qué tema de derechos le gustaría aprender?",
             "rightsInfo": "**Sus Derechos Constitucionales Clave:**\n\n🛡️ **Derecho a Permanecer en Silencio** (5ta Enmienda)\nNo puede ser obligado a testificar contra sí mismo. Todo lo que diga puede usarse en su contra en la corte.\n\n⚖️ **Derecho a un Abogado** (6ta Enmienda)\nTiene derecho a un abogado. Si no puede pagar uno, la corte le asignará un defensor público.\n\n📞 **Derecho a una Llamada Telefónica**\nLa mayoría de los estados permiten al menos una llamada después del registro para contactar a la familia o un abogado.\n\n📜 **Derecho a Conocer los Cargos**\nDebe ser informado de qué crímenes se le acusa.\n\n---\nPara información más detallada, visite nuestra página [Conozca sus Derechos](/rights-info).\n\n**¿Qué le gustaría hacer ahora?**",
             "processInfo": "**El Proceso de Justicia Penal:**\n\n**1. Arresto y Registro** (0-48 horas)\nEs llevado a custodia, le toman huellas y fotografías. Puede ser retenido hasta la lectura de cargos.\n\n**2. Lectura de Cargos** (24-72 horas después del arresto)\nPrimera comparecencia ante el tribunal donde se leen los cargos, usted declara y se fija la fianza.\n\n**3. Pre-Juicio** (Semanas a meses)\nDescubrimiento de evidencia, negociaciones de acuerdo y se presentan mociones.\n\n**4. Juicio** (Si no hay acuerdo)\nSe presenta evidencia ante un juez o jurado que decide la culpabilidad.\n\n**5. Sentencia** (Si es condenado)\nEl juez determina el castigo basándose en guías y circunstancias.\n\n**6. Apelación** (Opcional)\nPuede impugnar el veredicto o sentencia a través de tribunales superiores.\n\n---\nPara una guía completa, visite nuestra página [Proceso de Justicia Penal](/process).\n\n**¿Qué le gustaría hacer ahora?**",
@@ -4115,7 +4180,26 @@ i18n
             "viewGuidance": "Ver Mi Orientación",
             "exportPdf": "Exportar como PDF",
             "retry": "Intentar de Nuevo",
-            "tryAgain": "Probar Otro Código Postal"
+            "tryAgain": "Probar Otro Código Postal",
+            "immUrgent": "Encuentro activo ahora mismo",
+            "immPlanning": "Planificando/preparándome",
+            "immDetained": "Ya detenido/en procedimientos",
+            "immGeneralInfo": "Solo quiero información general",
+            "immAtHome": "En casa",
+            "immAtWork": "En el trabajo",
+            "immInPublic": "En público / punto de control",
+            "immMyself": "Para mí",
+            "immFamily": "Mi familia",
+            "immWorkplace": "Mi lugar de trabajo",
+            "immIceDetention": "En detención de ICE",
+            "immCountyJail": "En cárcel del condado con retención de inmigración",
+            "immPortOfEntry": "En un puerto de entrada",
+            "immFindAttorney": "Encontrar Abogado de Inmigración",
+            "immDacaTps": "Información de DACA/TPS",
+            "immFamilyPlanning": "Guía de Planificación Familiar",
+            "immWorkplaceRaids": "Guía de Redadas en el Trabajo",
+            "immBondHearings": "Info de Audiencias de Fianza",
+            "immBackToHub": "Volver al Centro de Inmigración"
           },
           "header": {
             "title": "Chat de Orientación Legal",

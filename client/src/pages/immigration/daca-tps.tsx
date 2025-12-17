@@ -47,12 +47,9 @@ export default function DacaTps() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <div>
-                <Badge variant="secondary" className="mb-2">{t('immigration.daca.badge')}</Badge>
-                <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-daca-tps-title">
-                  {t('immigration.daca.title')}
-                </h1>
-              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-daca-tps-title">
+                {t('immigration.daca.title')}
+              </h1>
             </div>
             <p className="text-lg text-white/90 max-w-3xl" data-testid="text-daca-tps-subtitle">
               {t('immigration.daca.subtitle')}
@@ -61,10 +58,10 @@ export default function DacaTps() {
         </div>
       </section>
 
-      <Alert className="max-w-4xl mx-auto px-4 -mt-6 relative z-20 mb-8 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
         <AlertTriangle className="h-5 w-5 text-amber-600" />
         <AlertDescription className="text-amber-800 dark:text-amber-200" data-testid="alert-daca-disclaimer">
-          <strong>Important:</strong> {t('immigration.daca.disclaimer')}
+          <strong>{t('immigration.common.importantLabel')}</strong> {t('immigration.daca.disclaimer')}
         </AlertDescription>
       </Alert>
 
