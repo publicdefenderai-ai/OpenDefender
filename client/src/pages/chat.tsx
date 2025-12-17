@@ -400,10 +400,13 @@ export default function ChatPage() {
       actions.setIsGenerating(true);
       actions.setCurrentStep('generating_guidance');
 
-      // Progress indicator - show "still working" message after 20 seconds if API is slow
+      // Progress indicator - show "still working" message after 15 seconds if API is slow
       const progressTimer = setTimeout(() => {
+        console.log('Progress timer fired - showing still working message');
+        setIsTyping(false); // Temporarily hide typing indicator to show message
         addBotMessageWithKey('chat.messages.stillWorking');
-      }, 20000);
+        setIsTyping(true); // Resume typing indicator
+      }, 15000);
 
       try {
         const response = await apiRequest('POST', '/api/legal-guidance', {
