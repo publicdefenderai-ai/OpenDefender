@@ -331,6 +331,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/immigration-guidance" className="hover:text-white transition-colors">
+                  {t('footer.immigrationEnforcement')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/diversion-programs" className="hover:text-white transition-colors">
                   {t('footer.diversionPrograms')}
                 </Link>
