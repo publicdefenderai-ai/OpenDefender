@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Download, ArrowLeft, Lock, AlertTriangle, FileText, Undo2, Globe, Moon, Sun } from "lucide-react";
+import { X, Download, ArrowLeft, AlertTriangle, FileText, Globe, Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import i18nInstance from "@/i18n";
 import { useLocation } from "wouter";
@@ -146,8 +146,17 @@ export default function ChatPage() {
   // Scroll to bottom when messages change or typing indicator appears
   const scrollToBottom = useCallback(() => {
     setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+      if (messagesEndRef.current) {
+        // Use scrollIntoView with block: 'end' for better mobile support
+        messagesEndRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        
+        // Fallback: also scroll the parent scroll container on mobile
+        const scrollContainer = messagesEndRef.current.closest('[data-radix-scroll-area-viewport]');
+        if (scrollContainer) {
+          scrollContainer.scrollTop = scrollContainer.scrollHeight;
+        }
+      }
+    }, 150);
   }, []);
 
   useEffect(() => {
@@ -611,15 +620,6 @@ export default function ChatPage() {
         <div className="flex-1 flex flex-col min-w-0">
           <header className="flex items-center justify-between px-4 py-3 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="flex items-center gap-3">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleClose}
-                className="md:hidden h-8 w-8"
-                data-testid="button-close-mobile"
-              >
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
               {actions.canGoBack() && (
                 <Button
                   variant="ghost"
@@ -628,18 +628,11 @@ export default function ChatPage() {
                   className="h-8 px-2 text-muted-foreground hover:text-foreground"
                   data-testid="button-go-back"
                 >
-                  <Undo2 className="h-4 w-4 mr-1" />
+                  <ArrowLeft className="h-4 w-4 mr-1" />
                   <span className="text-xs">{t('chat.header.back', 'Back')}</span>
                 </Button>
               )}
-              <div className="flex items-center gap-2">
-                <h1 className="text-sm font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
-                <span className="text-muted-foreground">•</span>
-                <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                  <Lock className="h-3 w-3" />
-                  <span>{t('chat.header.privacy', 'Private')}</span>
-                </div>
-              </div>
+              <h1 className="text-sm font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
             </div>
             
             <div className="flex items-center gap-1">
