@@ -129,21 +129,36 @@ interface GeneratingProgressProps {
 
 export function GeneratingProgress({ isGenerating, onProgressComplete }: GeneratingProgressProps) {
   const [progress, setProgress] = useState(0);
-  const startTimeRef = useRef<number>(Date.now());
+  const [hasStarted, setHasStarted] = useState(false);
+  const startTimeRef = useRef<number | null>(null);
   const hasCalledComplete = useRef(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   useEffect(() => {
     if (!isGenerating) {
+      // Reset everything when not generating
       setProgress(0);
+      setHasStarted(false);
+      startTimeRef.current = null;
       hasCalledComplete.current = false;
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
       return;
     }
     
-    // Reset start time when generation begins
-    startTimeRef.current = Date.now();
-    setProgress(0);
+    // Mark as started and set start time only once when isGenerating becomes true
+    if (!hasStarted) {
+      setHasStarted(true);
+      startTimeRef.current = Date.now();
+      setProgress(0);
+    }
     
-    const interval = setInterval(() => {
+    // Start interval to update progress
+    intervalRef.current = setInterval(() => {
+      if (!startTimeRef.current) return;
+      
       const elapsed = Date.now() - startTimeRef.current;
       const seconds = elapsed / 1000;
       
@@ -152,15 +167,21 @@ export function GeneratingProgress({ isGenerating, onProgressComplete }: Generat
         // Using easeOutQuad for natural deceleration
         const t = seconds / 15;
         const eased = t * (2 - t); // easeOutQuad
-        setProgress(Math.round(eased * 75));
+        const newProgress = Math.round(eased * 75);
+        setProgress(newProgress);
       } else if (seconds > 20 && onProgressComplete && !hasCalledComplete.current) {
         hasCalledComplete.current = true;
         onProgressComplete();
       }
-    }, 100);
+    }, 50); // More frequent updates for smoother animation
     
-    return () => clearInterval(interval);
-  }, [isGenerating, onProgressComplete]);
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isGenerating, hasStarted, onProgressComplete]);
   
   if (!isGenerating) return null;
   
@@ -171,11 +192,9 @@ export function GeneratingProgress({ isGenerating, onProgressComplete }: Generat
         <span className="text-sm font-medium text-primary">{progress}%</span>
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">
-        <motion.div
-          className="h-full bg-primary rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.1, ease: "linear" }}
+        <div
+          className="h-full bg-primary rounded-full transition-all duration-150 ease-out"
+          style={{ width: `${progress}%` }}
         />
       </div>
     </div>
