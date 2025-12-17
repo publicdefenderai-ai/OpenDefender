@@ -205,6 +205,7 @@ export default function ChatPage() {
         } else {
           addBotMessageWithKey('chat.messages.mainMenu', [
             { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
+            { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
             { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
             { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
           ]);
