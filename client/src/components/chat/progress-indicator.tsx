@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -129,16 +129,22 @@ interface GeneratingProgressProps {
 
 export function GeneratingProgress({ isGenerating, onProgressComplete }: GeneratingProgressProps) {
   const [progress, setProgress] = useState(0);
-  const [startTime] = useState(() => Date.now());
+  const startTimeRef = useRef<number>(Date.now());
+  const hasCalledComplete = useRef(false);
   
   useEffect(() => {
     if (!isGenerating) {
       setProgress(0);
+      hasCalledComplete.current = false;
       return;
     }
     
+    // Reset start time when generation begins
+    startTimeRef.current = Date.now();
+    setProgress(0);
+    
     const interval = setInterval(() => {
-      const elapsed = Date.now() - startTime;
+      const elapsed = Date.now() - startTimeRef.current;
       const seconds = elapsed / 1000;
       
       if (seconds <= 15) {
@@ -147,13 +153,14 @@ export function GeneratingProgress({ isGenerating, onProgressComplete }: Generat
         const t = seconds / 15;
         const eased = t * (2 - t); // easeOutQuad
         setProgress(Math.round(eased * 75));
-      } else if (seconds > 20 && onProgressComplete) {
+      } else if (seconds > 20 && onProgressComplete && !hasCalledComplete.current) {
+        hasCalledComplete.current = true;
         onProgressComplete();
       }
     }, 100);
     
     return () => clearInterval(interval);
-  }, [isGenerating, startTime, onProgressComplete]);
+  }, [isGenerating, onProgressComplete]);
   
   if (!isGenerating) return null;
   
