@@ -102,25 +102,6 @@ export function Header() {
           )}
           
           <div className="flex items-center space-x-2">
-            {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center space-x-1 mr-4">
-              {menuItems.map((item) => (
-                <Button
-                  key={item.href}
-                  variant="ghost"
-                  size="sm"
-                  className={`text-muted-foreground hover:text-foreground hover:bg-accent ${
-                    location === item.href ? "bg-accent text-foreground" : ""
-                  }`}
-                  data-testid={item.testId}
-                  onClick={() => handleNavigate(item.href)}
-                >
-                  <item.icon className="h-4 w-4 mr-2" />
-                  {item.title}
-                </Button>
-              ))}
-            </nav>
-            
             {/* Language Selector - Desktop */}
             <div className="hidden md:block">
               <Select value={i18n.language} onValueChange={changeLanguage}>

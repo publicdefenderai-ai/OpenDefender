@@ -49,8 +49,8 @@ const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; v
 };
 
 function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: CompletedFlow[] = []): QuickReply[] {
-  // Simplified to 3 main journeys: Get Help, Know Your Rights, Find Resources
-  const mainFlows: CompletedFlow[] = ['personalized_guidance', 'rights_info', 'resources'];
+  // 4 main journeys: Get Help, Immigration Enforcement, Know Your Rights, Find Resources
+  const mainFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources'];
   return mainFlows
     .filter(flow => flow !== excludeFlow && !completedFlows.includes(flow))
     .map(flow => FLOW_MENU_OPTIONS[flow]);
