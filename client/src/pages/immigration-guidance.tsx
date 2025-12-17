@@ -15,7 +15,11 @@ import {
   BookOpen,
   Eye,
   ArrowRight,
-  Flag
+  Flag,
+  Building2,
+  Heart,
+  Scale,
+  ChevronRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -352,8 +356,144 @@ export default function ImmigrationGuidance() {
         </div>
       </section>
 
+      {/* Topic Navigation Cards */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+                <BookOpen className="h-8 w-8 text-primary" />
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-detailed-guides-title">
+                {t('immigration.hub.detailedGuides.title')}
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                {t('immigration.hub.detailedGuides.subtitle')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ScrollReveal delay={0.1}>
+              <Link href="/immigration-guidance/daca-tps">
+                <Card className="h-full hover:shadow-lg hover:border-blue-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20 flex-shrink-0">
+                        <Shield className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors" data-testid="link-daca-tps">
+                          {t('immigration.hub.detailedGuides.dacaCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.dacaCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.15}>
+              <Link href="/immigration-guidance/workplace-raids">
+                <Card className="h-full hover:shadow-lg hover:border-orange-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent flex items-center justify-center ring-1 ring-orange-500/20 flex-shrink-0">
+                        <Building2 className="h-6 w-6 text-orange-600 dark:text-orange-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-orange-600 transition-colors" data-testid="link-workplace-raids">
+                          {t('immigration.hub.detailedGuides.raidsCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.raidsCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-orange-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Link href="/immigration-guidance/family-planning">
+                <Card className="h-full hover:shadow-lg hover:border-purple-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent flex items-center justify-center ring-1 ring-purple-500/20 flex-shrink-0">
+                        <Heart className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors" data-testid="link-family-planning">
+                          {t('immigration.hub.detailedGuides.familyCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.familyCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.25}>
+              <Link href="/immigration-guidance/bond-hearings">
+                <Card className="h-full hover:shadow-lg hover:border-green-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20 flex-shrink-0">
+                        <Scale className="h-6 w-6 text-green-600 dark:text-green-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-green-600 transition-colors" data-testid="link-bond-hearings">
+                          {t('immigration.hub.detailedGuides.bondCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.bondCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Link href="/immigration-guidance/find-attorney">
+                <Card className="h-full hover:shadow-lg hover:border-red-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20 flex-shrink-0">
+                        <UserCheck className="h-6 w-6 text-red-600 dark:text-red-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-red-600 transition-colors" data-testid="link-find-attorney">
+                          {t('immigration.hub.detailedGuides.attorneyCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.attorneyCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-red-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Deportation Process Phases - 3D Carousel */}
-      <section className="py-16 lg:py-24 bg-background">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">

@@ -838,6 +838,355 @@ i18n
               "title": "Get Additional Help",
               "rights": "Learn Your General Rights",
               "local": "Find Local Resources"
+            },
+            "hub": {
+              "detailedGuides": {
+                "title": "Detailed Guides",
+                "subtitle": "In-depth information on specific immigration topics",
+                "dacaCard": {
+                  "title": "DACA & TPS Information",
+                  "description": "Eligibility, renewal deadlines, and what to do if your status lapses"
+                },
+                "raidsCard": {
+                  "title": "Workplace Raids",
+                  "description": "Your rights during ICE enforcement, what employers must do"
+                },
+                "familyCard": {
+                  "title": "Mixed-Status Family Planning",
+                  "description": "Emergency plans, caregiver authorization, document preparation"
+                },
+                "bondCard": {
+                  "title": "Bond Hearings",
+                  "description": "Eligibility, hearing process, what to do if denied"
+                },
+                "attorneyCard": {
+                  "title": "Find & Verify an Attorney",
+                  "description": "Avoid fraud, verify credentials, find free legal help"
+                }
+              },
+              "backButton": "Back to Immigration Hub"
+            },
+            "daca": {
+              "badge": "Immigration Protection",
+              "title": "DACA & TPS Information",
+              "subtitle": "Understanding Deferred Action for Childhood Arrivals (DACA) and Temporary Protected Status (TPS) programs, eligibility requirements, and renewal processes.",
+              "disclaimer": "Immigration law changes frequently. Always verify current requirements with USCIS.gov or an immigration attorney before taking action.",
+              "dacaSection": {
+                "title": "DACA (Deferred Action for Childhood Arrivals)",
+                "whatIs": "What is DACA?",
+                "whatIsText": "DACA provides temporary protection from deportation and work authorization for individuals who came to the U.S. as children. It does not provide a path to citizenship or legal permanent residence.",
+                "eligibility": "Basic Eligibility Requirements",
+                "req1": "Were under 31 years old as of June 15, 2012",
+                "req2": "Came to the U.S. before age 16",
+                "req3": "Continuously resided in U.S. since June 15, 2007",
+                "req4": "Were present in U.S. on June 15, 2012",
+                "req5": "Currently in school, graduated, or have GED",
+                "req6": "No felony, significant misdemeanor, or 3+ misdemeanors",
+                "renewal": "Renewal Timeline",
+                "renewalText": "Submit renewal applications 120-150 days before your current DACA expires. Processing typically takes 3-6 months."
+              },
+              "tpsSection": {
+                "title": "TPS (Temporary Protected Status)",
+                "whatIs": "What is TPS?",
+                "whatIsText": "TPS is granted to nationals of designated countries experiencing ongoing armed conflict, environmental disaster, or other extraordinary conditions. It provides temporary lawful status and work authorization.",
+                "countries": "Currently Designated Countries",
+                "countriesNote": "*List subject to change. Verify current designations at USCIS.gov",
+                "benefits": "TPS Benefits",
+                "benefit1": "Protection from deportation while TPS is valid",
+                "benefit2": "Employment Authorization Document (EAD)",
+                "benefit3": "May apply for travel authorization",
+                "reregistration": "Re-registration",
+                "reregistrationText": "TPS holders must re-register during each re-registration period announced by USCIS. Missing deadlines can result in loss of status."
+              },
+              "statusLapse": {
+                "title": "What If Your Status Lapses?",
+                "dontPanic": "Don't Panic",
+                "dontPanicText": "A lapsed status doesn't mean immediate deportation. Consult with an immigration attorney immediately to understand your options.",
+                "gatherDocs": "Gather Documents",
+                "gatherDocsText": "Collect all your immigration documents, proof of continuous presence, and any correspondence from USCIS. These will be crucial for any remedy.",
+                "seekHelp": "Seek Legal Help",
+                "seekHelpText": "Contact an accredited representative or immigration attorney. Many organizations offer free or low-cost consultations for DACA/TPS holders."
+              },
+              "resources": "Official Resources"
+            },
+            "raids": {
+              "badge": "Workplace Rights",
+              "title": "Workplace Raids & Your Rights",
+              "subtitle": "Know your rights during ICE workplace enforcement actions. Understanding what agents can and cannot do helps protect you.",
+              "criticalAlert": "If ICE is at your workplace right now:",
+              "criticalAlertText": "Stay calm. You have rights. Do not run. Do not provide false documents.",
+              "yourRights": {
+                "title": "Your Rights During a Workplace Raid",
+                "silent": "Right to Remain Silent",
+                "silentText": "You don't have to answer questions about where you were born, your immigration status, or how you entered the U.S.",
+                "refuse": "Right to Refuse Consent",
+                "refuseText": "You can refuse to show documents beyond what's required for employment verification.",
+                "attorney": "Right to an Attorney",
+                "attorneyText": "You can request to speak with an attorney before answering any questions.",
+                "basis": "Right to Know Basis for Detention",
+                "basisText": "If detained, you can ask why and request to see the warrant or documentation."
+              },
+              "whatNotToDo": {
+                "title": "What NOT to Do",
+                "run": "Don't Run or Hide",
+                "runText": "Running may be used against you and could result in additional charges.",
+                "falseDocs": "Don't Provide False Documents",
+                "falseDocsText": "Using fake documents is a federal crime that can result in imprisonment and bars to future immigration relief.",
+                "lie": "Don't Lie About Identity",
+                "lieText": "Giving false information to federal agents is a crime. It's better to remain silent.",
+                "sign": "Don't Sign Documents You Don't Understand",
+                "signText": "Some forms may be voluntary departure agreements. Ask for time to consult an attorney."
+              },
+              "employer": {
+                "title": "Employer Obligations",
+                "mustProvide": "What Employers Must Provide",
+                "must1": "Access to non-public areas only with a judicial warrant (not administrative warrant)",
+                "must2": "Reasonable time for employees to consult with counsel if available",
+                "must3": "I-9 forms within 3 days notice (72 hours) if requested for audit",
+                "canDo": "What Employers Can Do",
+                "can1": "Request to see the warrant and verify it's signed by a judge",
+                "can2": "Contact their attorney before allowing access to non-public areas",
+                "can3": "Document the raid (agents' names, badge numbers, actions taken)",
+                "can4": "Post Know Your Rights information in the workplace"
+              },
+              "afterRaid": {
+                "title": "After a Workplace Raid",
+                "detained": "If You Were Detained",
+                "detained1": "Memorize or write down your A-Number",
+                "detained2": "Contact family to let them know your location",
+                "detained3": "Request to make phone calls - you have this right",
+                "detained4": "Don't sign anything without understanding it",
+                "detained5": "Ask for a bond hearing if eligible",
+                "notDetained": "If You Were Not Detained",
+                "notDetained1": "Document everything you witnessed",
+                "notDetained2": "Note badge numbers and agent names",
+                "notDetained3": "Consult with an immigration attorney",
+                "notDetained4": "Report civil rights violations to community organizations",
+                "notDetained5": "Create an emergency family plan"
+              },
+              "emergency": {
+                "title": "Emergency Contacts",
+                "subtitle": "Keep these numbers saved in your phone",
+                "nilc": "National Immigration Law Center",
+                "aclu": "ACLU Immigrants' Rights"
+              }
+            },
+            "family": {
+              "badge": "Family Protection",
+              "title": "Mixed-Status Family Planning",
+              "subtitle": "Protect your family by planning ahead. Create emergency plans, designate caregivers, and organize important documents.",
+              "planningAlert": "Planning ahead protects your family.",
+              "planningAlertText": "Even if nothing happens, having a plan reduces stress and ensures your children are cared for.",
+              "documents": {
+                "title": "Essential Documents to Prepare",
+                "poa": {
+                  "title": "Power of Attorney",
+                  "description": "Designates someone to make legal and financial decisions on your behalf if you're detained.",
+                  "item1": "General POA for financial matters",
+                  "item2": "Durable POA (survives incapacity)",
+                  "item3": "Must be notarized to be valid"
+                },
+                "caregiver": {
+                  "title": "Caregiver Authorization",
+                  "description": "Allows a trusted person to care for your children and make day-to-day decisions.",
+                  "item1": "Authorizes school enrollment",
+                  "item2": "Allows medical treatment consent",
+                  "item3": "Temporary (usually 6-12 months)"
+                },
+                "guardianship": {
+                  "title": "Guardianship Nomination",
+                  "description": "Names your preferred guardian if you can't care for your children long-term.",
+                  "item1": "Courts consider but don't always follow",
+                  "item2": "Name backup guardians too",
+                  "item3": "Should be notarized"
+                }
+              },
+              "emergencyPlan": {
+                "title": "Creating Your Family Emergency Plan",
+                "communication": {
+                  "title": "Communication Plan",
+                  "step1": "Memorize Key Numbers",
+                  "step1Text": "Have children memorize a trusted adult's phone number in case you're separated.",
+                  "step2": "Create a Contact Tree",
+                  "step2Text": "List 3-5 trusted people who can be called in an emergency. Share this list with your children's school.",
+                  "step3": "Code Words",
+                  "step3Text": "Create a family code word that trusted adults will use when picking up children."
+                },
+                "documentPrep": {
+                  "title": "Document Preparation",
+                  "step1": "Gather Birth Certificates",
+                  "step1Text": "Have copies of all family members' birth certificates, including U.S. citizen children.",
+                  "step2": "Passport Information",
+                  "step2Text": "Keep copies of all passports (home country and U.S. if applicable) in a secure location.",
+                  "step3": "Immigration Records",
+                  "step3Text": "Store copies of all immigration documents, including A-numbers for detained family members."
+                }
+              },
+              "financial": {
+                "title": "Financial & Practical Considerations",
+                "bank": "Bank Access",
+                "bankText": "Add a trusted person to your bank accounts or set up a joint account so bills can be paid if you're detained.",
+                "property": "Property Access",
+                "propertyText": "Leave a spare key with a trusted neighbor or friend. Document the location of important items in your home.",
+                "medical": "Medical Information",
+                "medicalText": "Keep a list of children's medications, allergies, and doctor contacts with your caregiver authorization."
+              },
+              "freeHelp": "Free Help Available:",
+              "freeHelpText": "Many immigrant advocacy organizations offer free assistance with family emergency planning. Contact your local legal aid organization or immigrant rights group for help creating these documents."
+            },
+            "bond": {
+              "badge": "Detention & Release",
+              "title": "Immigration Bond Hearings",
+              "subtitle": "Understanding the bond process, eligibility requirements, and how to prepare for a bond hearing in immigration court.",
+              "importantAlert": "Not everyone is eligible for bond. Some individuals are subject to mandatory detention. An immigration attorney can help determine eligibility.",
+              "whatIsBond": {
+                "title": "What is Immigration Bond?",
+                "delivery": {
+                  "title": "Delivery Bond",
+                  "description": "Allows release from detention while the immigration case proceeds. The person must appear at all hearings.",
+                  "amount": "Typical Amount:",
+                  "amountValue": "$1,500 - $25,000+",
+                  "setter": "Who Sets It:",
+                  "setterValue": "ICE or Immigration Judge"
+                },
+                "voluntary": {
+                  "title": "Voluntary Departure Bond",
+                  "description": "Allows someone to leave the U.S. voluntarily at their own expense. The bond is refunded if they depart by the deadline.",
+                  "amount": "Typical Amount:",
+                  "amountValue": "$500 - $5,000",
+                  "benefit": "Benefit:",
+                  "benefitValue": "Avoids removal order"
+                }
+              },
+              "eligibility": {
+                "title": "Bond Eligibility",
+                "mayBeEligible": "May Be Eligible",
+                "eligible1": "People with no serious criminal history",
+                "eligible2": "Those who are not flight risks",
+                "eligible3": "Individuals with strong community ties",
+                "eligible4": "People with U.S. citizen family members",
+                "eligible5": "Those with steady employment history",
+                "mandatoryDetention": "Mandatory Detention (No Bond)",
+                "mandatory1": "Aggravated felony convictions",
+                "mandatory2": "Certain drug offenses",
+                "mandatory3": "Firearms offenses",
+                "mandatory4": "Terrorism-related charges",
+                "mandatory5": "Prior deportation orders (in some cases)"
+              },
+              "process": {
+                "title": "The Bond Hearing Process",
+                "step1": "Request a Bond Hearing",
+                "step1Text": "You or your attorney must request a bond hearing before the immigration judge. ICE may also set an initial bond amount that can be challenged.",
+                "step2": "Gather Evidence",
+                "step2Text": "Prepare documents showing community ties: letters from family, proof of employment, lease agreements, utility bills, tax returns, and character letters.",
+                "step3": "Attend the Hearing",
+                "step3Text": "The judge will consider whether you're a flight risk or danger to the community. Having an attorney significantly improves outcomes.",
+                "step4": "Pay the Bond",
+                "step4Text": "If granted, bond must be paid through ICE (not the court). A family member or friend can pay on your behalf. Some organizations offer bond funds."
+              },
+              "denied": {
+                "title": "If Bond is Denied",
+                "options": "You Have Options",
+                "option1": "Appeal to the Board of Immigration Appeals (BIA)",
+                "option2": "Request reconsideration if circumstances change",
+                "option3": "File a habeas corpus petition in federal court",
+                "timeline": "Timeline",
+                "time1": "BIA appeal must be filed within 30 days",
+                "time2": "BIA decisions can take several months",
+                "time3": "Consult an attorney immediately"
+              },
+              "resources": {
+                "title": "Bond Fund Resources",
+                "subtitle": "Can't afford bond? These organizations may be able to help:",
+                "bailFund": "National Bail Fund Network",
+                "bailFundText": "Directory of local bond funds that help families pay immigration bonds.",
+                "raices": "RAICES Bond Fund",
+                "raicesText": "Provides bond assistance for immigrants detained in Texas and beyond."
+              }
+            },
+            "attorney": {
+              "badge": "Legal Representation",
+              "title": "Find & Verify an Immigration Attorney",
+              "subtitle": "How to find legitimate immigration legal help and protect yourself from scams.",
+              "scamWarning": "Beware of Notario Fraud!",
+              "scamWarningText": "In the U.S., \"notarios\" are not authorized to provide legal advice. Only licensed attorneys and DOJ-accredited representatives can represent you in immigration court.",
+              "whoCanHelp": {
+                "title": "Who Can Legally Help With Immigration Cases?",
+                "attorneys": {
+                  "title": "Licensed Attorneys",
+                  "description": "Attorneys licensed by any U.S. state bar can represent you in immigration matters, even if they're licensed in a different state.",
+                  "item1": "Can represent you in court",
+                  "item2": "Can file applications with USCIS",
+                  "item3": "Subject to ethical rules and discipline"
+                },
+                "accredited": {
+                  "title": "DOJ-Accredited Representatives",
+                  "description": "Non-attorneys who are trained and authorized by the Department of Justice to represent immigrants. They work at recognized organizations.",
+                  "item1": "Often offer free or low-cost services",
+                  "item2": "Can represent you in immigration court",
+                  "item3": "Work at non-profit organizations"
+                }
+              },
+              "verify": {
+                "title": "How to Verify an Immigration Attorney",
+                "stateBar": {
+                  "title": "Check State Bar",
+                  "description": "Every state has a bar association website where you can verify if an attorney is licensed and in good standing.",
+                  "link": "ABA Bar Directory"
+                },
+                "eoir": {
+                  "title": "EOIR Recognition List",
+                  "description": "The DOJ maintains a list of recognized organizations and accredited representatives authorized to provide immigration services.",
+                  "link": "EOIR Roster"
+                },
+                "aila": {
+                  "title": "AILA Lawyer Search",
+                  "description": "The American Immigration Lawyers Association (AILA) has a directory of member attorneys who specialize in immigration law.",
+                  "link": "AILA Lawyer Search"
+                }
+              },
+              "redFlags": {
+                "title": "Red Flags: Signs of Immigration Fraud",
+                "warnings": {
+                  "title": "Warning Signs",
+                  "item1": "Guarantees a specific outcome or approval",
+                  "item2": "Claims special connections to USCIS or judges",
+                  "item3": "Asks you to sign blank forms",
+                  "item4": "Won't provide a written contract",
+                  "item5": "Encourages you to lie on applications",
+                  "item6": "Keeps your original documents",
+                  "item7": "Uses the title \"notario\" or \"immigration consultant\""
+                },
+                "legitimate": {
+                  "title": "Signs of a Legitimate Attorney",
+                  "item1": "Provides a written fee agreement",
+                  "item2": "Explains risks and possible outcomes honestly",
+                  "item3": "Gives you copies of all documents filed",
+                  "item4": "Returns your original documents",
+                  "item5": "Responds to your questions and calls",
+                  "item6": "Is verifiable through state bar or EOIR",
+                  "item7": "Has you review and sign forms yourself"
+                }
+              },
+              "freeHelp": {
+                "title": "Free & Low-Cost Legal Help",
+                "organizations": "Legal Aid Organizations",
+                "org1": "Catholic Charities immigration services",
+                "org2": "CLINIC (Catholic Legal Immigration Network)",
+                "org3": "Local legal aid societies",
+                "org4": "Law school immigration clinics",
+                "findingHelp": "Finding Help",
+                "find1": "Call 211 for local resources",
+                "find2": "Search ImmigrationAdvocates.org",
+                "find3": "Contact your local bar association",
+                "find4": "Ask community organizations"
+              },
+              "reportFraud": {
+                "title": "Report Immigration Fraud",
+                "subtitle": "If you've been a victim of immigration fraud, report it:",
+                "ftc": "FTC Complaint",
+                "eoir": "EOIR Complaint"
+              }
             }
           },
           "courtRecords": {
@@ -2575,6 +2924,355 @@ i18n
               "title": "Obtenga Ayuda Adicional",
               "rights": "Aprenda sus Derechos Generales",
               "local": "Encuentre Recursos Locales"
+            },
+            "hub": {
+              "detailedGuides": {
+                "title": "Guías Detalladas",
+                "subtitle": "Información detallada sobre temas específicos de inmigración",
+                "dacaCard": {
+                  "title": "Información de DACA y TPS",
+                  "description": "Elegibilidad, fechas límite de renovación, y qué hacer si su estatus expira"
+                },
+                "raidsCard": {
+                  "title": "Redadas en el Trabajo",
+                  "description": "Sus derechos durante acciones de ICE, lo que los empleadores deben hacer"
+                },
+                "familyCard": {
+                  "title": "Planificación Familiar de Estatus Mixto",
+                  "description": "Planes de emergencia, autorización de cuidadores, preparación de documentos"
+                },
+                "bondCard": {
+                  "title": "Audiencias de Fianza",
+                  "description": "Elegibilidad, proceso de audiencia, qué hacer si es denegado"
+                },
+                "attorneyCard": {
+                  "title": "Encontrar y Verificar un Abogado",
+                  "description": "Evitar fraudes, verificar credenciales, encontrar ayuda legal gratuita"
+                }
+              },
+              "backButton": "Volver al Centro de Inmigración"
+            },
+            "daca": {
+              "badge": "Protección Migratoria",
+              "title": "Información de DACA y TPS",
+              "subtitle": "Entendiendo los programas de Acción Diferida para los Llegados en la Infancia (DACA) y Estatus de Protección Temporal (TPS), requisitos de elegibilidad y procesos de renovación.",
+              "disclaimer": "Las leyes de inmigración cambian frecuentemente. Siempre verifique los requisitos actuales en USCIS.gov o con un abogado de inmigración antes de tomar acción.",
+              "dacaSection": {
+                "title": "DACA (Acción Diferida para los Llegados en la Infancia)",
+                "whatIs": "¿Qué es DACA?",
+                "whatIsText": "DACA proporciona protección temporal contra la deportación y autorización de trabajo para personas que llegaron a EE.UU. siendo niños. No proporciona un camino hacia la ciudadanía o residencia permanente legal.",
+                "eligibility": "Requisitos Básicos de Elegibilidad",
+                "req1": "Tenía menos de 31 años a partir del 15 de junio de 2012",
+                "req2": "Llegó a EE.UU. antes de los 16 años",
+                "req3": "Ha residido continuamente en EE.UU. desde el 15 de junio de 2007",
+                "req4": "Estaba presente en EE.UU. el 15 de junio de 2012",
+                "req5": "Actualmente en la escuela, graduado, o tiene GED",
+                "req6": "Sin delitos graves, delitos menores significativos, o 3+ delitos menores",
+                "renewal": "Cronograma de Renovación",
+                "renewalText": "Presente solicitudes de renovación 120-150 días antes de que expire su DACA actual. El procesamiento típicamente toma 3-6 meses."
+              },
+              "tpsSection": {
+                "title": "TPS (Estatus de Protección Temporal)",
+                "whatIs": "¿Qué es TPS?",
+                "whatIsText": "TPS se otorga a nacionales de países designados que experimentan conflictos armados, desastres ambientales u otras condiciones extraordinarias. Proporciona estatus legal temporal y autorización de trabajo.",
+                "countries": "Países Actualmente Designados",
+                "countriesNote": "*Lista sujeta a cambios. Verifique las designaciones actuales en USCIS.gov",
+                "benefits": "Beneficios de TPS",
+                "benefit1": "Protección contra deportación mientras TPS sea válido",
+                "benefit2": "Documento de Autorización de Empleo (EAD)",
+                "benefit3": "Puede solicitar autorización de viaje",
+                "reregistration": "Re-registro",
+                "reregistrationText": "Los beneficiarios de TPS deben re-registrarse durante cada período de re-registro anunciado por USCIS. Perder fechas límite puede resultar en pérdida de estatus."
+              },
+              "statusLapse": {
+                "title": "¿Qué Pasa Si Su Estatus Expira?",
+                "dontPanic": "No Entre en Pánico",
+                "dontPanicText": "Un estatus expirado no significa deportación inmediata. Consulte con un abogado de inmigración inmediatamente para entender sus opciones.",
+                "gatherDocs": "Reúna Documentos",
+                "gatherDocsText": "Recopile todos sus documentos de inmigración, prueba de presencia continua y cualquier correspondencia de USCIS. Estos serán cruciales para cualquier remedio.",
+                "seekHelp": "Busque Ayuda Legal",
+                "seekHelpText": "Contacte a un representante acreditado o abogado de inmigración. Muchas organizaciones ofrecen consultas gratuitas o de bajo costo para beneficiarios de DACA/TPS."
+              },
+              "resources": "Recursos Oficiales"
+            },
+            "raids": {
+              "badge": "Derechos en el Trabajo",
+              "title": "Redadas en el Trabajo y Sus Derechos",
+              "subtitle": "Conozca sus derechos durante acciones de cumplimiento de ICE en el trabajo. Entender lo que los agentes pueden y no pueden hacer le ayuda a protegerse.",
+              "criticalAlert": "Si ICE está en su lugar de trabajo ahora mismo:",
+              "criticalAlertText": "Mantenga la calma. Usted tiene derechos. No corra. No proporcione documentos falsos.",
+              "yourRights": {
+                "title": "Sus Derechos Durante una Redada en el Trabajo",
+                "silent": "Derecho a Permanecer en Silencio",
+                "silentText": "No tiene que responder preguntas sobre dónde nació, su estatus migratorio, o cómo entró a EE.UU.",
+                "refuse": "Derecho a Rechazar Consentimiento",
+                "refuseText": "Puede negarse a mostrar documentos más allá de lo requerido para verificación de empleo.",
+                "attorney": "Derecho a un Abogado",
+                "attorneyText": "Puede solicitar hablar con un abogado antes de responder cualquier pregunta.",
+                "basis": "Derecho a Conocer la Base de Detención",
+                "basisText": "Si es detenido, puede preguntar por qué y solicitar ver la orden o documentación."
+              },
+              "whatNotToDo": {
+                "title": "Qué NO Hacer",
+                "run": "No Corra ni se Esconda",
+                "runText": "Correr puede usarse en su contra y podría resultar en cargos adicionales.",
+                "falseDocs": "No Proporcione Documentos Falsos",
+                "falseDocsText": "Usar documentos falsos es un delito federal que puede resultar en encarcelamiento e impedimentos para futuros beneficios migratorios.",
+                "lie": "No Mienta Sobre su Identidad",
+                "lieText": "Dar información falsa a agentes federales es un delito. Es mejor permanecer en silencio.",
+                "sign": "No Firme Documentos que No Entienda",
+                "signText": "Algunos formularios pueden ser acuerdos de salida voluntaria. Pida tiempo para consultar con un abogado."
+              },
+              "employer": {
+                "title": "Obligaciones del Empleador",
+                "mustProvide": "Lo Que los Empleadores Deben Proporcionar",
+                "must1": "Acceso a áreas no públicas solo con orden judicial (no orden administrativa)",
+                "must2": "Tiempo razonable para que los empleados consulten con abogados si están disponibles",
+                "must3": "Formularios I-9 dentro de 3 días de aviso (72 horas) si se solicita para auditoría",
+                "canDo": "Lo Que los Empleadores Pueden Hacer",
+                "can1": "Solicitar ver la orden y verificar que esté firmada por un juez",
+                "can2": "Contactar a su abogado antes de permitir acceso a áreas no públicas",
+                "can3": "Documentar la redada (nombres de agentes, números de placa, acciones tomadas)",
+                "can4": "Publicar información de Conozca Sus Derechos en el lugar de trabajo"
+              },
+              "afterRaid": {
+                "title": "Después de una Redada en el Trabajo",
+                "detained": "Si Fue Detenido",
+                "detained1": "Memorice o escriba su Número A",
+                "detained2": "Contacte a su familia para informarles su ubicación",
+                "detained3": "Solicite hacer llamadas telefónicas - tiene este derecho",
+                "detained4": "No firme nada sin entenderlo",
+                "detained5": "Pida una audiencia de fianza si es elegible",
+                "notDetained": "Si No Fue Detenido",
+                "notDetained1": "Documente todo lo que presenció",
+                "notDetained2": "Anote números de placa y nombres de agentes",
+                "notDetained3": "Consulte con un abogado de inmigración",
+                "notDetained4": "Reporte violaciones de derechos civiles a organizaciones comunitarias",
+                "notDetained5": "Cree un plan de emergencia familiar"
+              },
+              "emergency": {
+                "title": "Contactos de Emergencia",
+                "subtitle": "Guarde estos números en su teléfono",
+                "nilc": "Centro Nacional de Leyes de Inmigración",
+                "aclu": "ACLU Derechos de Inmigrantes"
+              }
+            },
+            "family": {
+              "badge": "Protección Familiar",
+              "title": "Planificación Familiar de Estatus Mixto",
+              "subtitle": "Proteja a su familia planificando con anticipación. Cree planes de emergencia, designe cuidadores y organice documentos importantes.",
+              "planningAlert": "Planificar con anticipación protege a su familia.",
+              "planningAlertText": "Aunque nada suceda, tener un plan reduce el estrés y asegura que sus hijos estén cuidados.",
+              "documents": {
+                "title": "Documentos Esenciales para Preparar",
+                "poa": {
+                  "title": "Poder Notarial",
+                  "description": "Designa a alguien para tomar decisiones legales y financieras en su nombre si es detenido.",
+                  "item1": "Poder general para asuntos financieros",
+                  "item2": "Poder duradero (sobrevive incapacidad)",
+                  "item3": "Debe ser notarizado para ser válido"
+                },
+                "caregiver": {
+                  "title": "Autorización de Cuidador",
+                  "description": "Permite a una persona de confianza cuidar a sus hijos y tomar decisiones diarias.",
+                  "item1": "Autoriza inscripción escolar",
+                  "item2": "Permite consentimiento para tratamiento médico",
+                  "item3": "Temporal (usualmente 6-12 meses)"
+                },
+                "guardianship": {
+                  "title": "Nominación de Tutor",
+                  "description": "Nombra a su tutor preferido si no puede cuidar a sus hijos a largo plazo.",
+                  "item1": "Los tribunales consideran pero no siempre siguen",
+                  "item2": "Nombre tutores de respaldo también",
+                  "item3": "Debe ser notarizado"
+                }
+              },
+              "emergencyPlan": {
+                "title": "Creando Su Plan de Emergencia Familiar",
+                "communication": {
+                  "title": "Plan de Comunicación",
+                  "step1": "Memorizar Números Clave",
+                  "step1Text": "Haga que los niños memoricen el número de teléfono de un adulto de confianza en caso de separación.",
+                  "step2": "Crear un Árbol de Contactos",
+                  "step2Text": "Liste 3-5 personas de confianza que pueden ser llamadas en una emergencia. Comparta esta lista con la escuela de sus hijos.",
+                  "step3": "Palabras Clave",
+                  "step3Text": "Cree una palabra clave familiar que los adultos de confianza usarán cuando recojan a los niños."
+                },
+                "documentPrep": {
+                  "title": "Preparación de Documentos",
+                  "step1": "Reunir Actas de Nacimiento",
+                  "step1Text": "Tenga copias de las actas de nacimiento de todos los miembros de la familia, incluyendo hijos ciudadanos estadounidenses.",
+                  "step2": "Información de Pasaportes",
+                  "step2Text": "Guarde copias de todos los pasaportes (del país de origen y de EE.UU. si aplica) en un lugar seguro.",
+                  "step3": "Registros de Inmigración",
+                  "step3Text": "Guarde copias de todos los documentos de inmigración, incluyendo números A para miembros de familia detenidos."
+                }
+              },
+              "financial": {
+                "title": "Consideraciones Financieras y Prácticas",
+                "bank": "Acceso Bancario",
+                "bankText": "Agregue a una persona de confianza a sus cuentas bancarias o configure una cuenta conjunta para que las facturas se puedan pagar si es detenido.",
+                "property": "Acceso a Propiedad",
+                "propertyText": "Deje una llave extra con un vecino o amigo de confianza. Documente la ubicación de artículos importantes en su hogar.",
+                "medical": "Información Médica",
+                "medicalText": "Mantenga una lista de medicamentos de los niños, alergias y contactos de médicos con su autorización de cuidador."
+              },
+              "freeHelp": "Ayuda Gratuita Disponible:",
+              "freeHelpText": "Muchas organizaciones de defensa de inmigrantes ofrecen asistencia gratuita con la planificación de emergencia familiar. Contacte a su organización local de ayuda legal o grupo de derechos de inmigrantes para ayuda creando estos documentos."
+            },
+            "bond": {
+              "badge": "Detención y Liberación",
+              "title": "Audiencias de Fianza de Inmigración",
+              "subtitle": "Entendiendo el proceso de fianza, requisitos de elegibilidad y cómo prepararse para una audiencia de fianza en la corte de inmigración.",
+              "importantAlert": "No todos son elegibles para fianza. Algunas personas están sujetas a detención obligatoria. Un abogado de inmigración puede ayudar a determinar la elegibilidad.",
+              "whatIsBond": {
+                "title": "¿Qué es la Fianza de Inmigración?",
+                "delivery": {
+                  "title": "Fianza de Entrega",
+                  "description": "Permite la liberación de detención mientras el caso de inmigración procede. La persona debe presentarse a todas las audiencias.",
+                  "amount": "Cantidad Típica:",
+                  "amountValue": "$1,500 - $25,000+",
+                  "setter": "Quién la Establece:",
+                  "setterValue": "ICE o Juez de Inmigración"
+                },
+                "voluntary": {
+                  "title": "Fianza de Salida Voluntaria",
+                  "description": "Permite a alguien salir de EE.UU. voluntariamente a su propio costo. La fianza se reembolsa si salen antes de la fecha límite.",
+                  "amount": "Cantidad Típica:",
+                  "amountValue": "$500 - $5,000",
+                  "benefit": "Beneficio:",
+                  "benefitValue": "Evita orden de deportación"
+                }
+              },
+              "eligibility": {
+                "title": "Elegibilidad para Fianza",
+                "mayBeEligible": "Puede Ser Elegible",
+                "eligible1": "Personas sin historial criminal serio",
+                "eligible2": "Aquellos que no son riesgo de fuga",
+                "eligible3": "Individuos con fuertes lazos comunitarios",
+                "eligible4": "Personas con familiares ciudadanos estadounidenses",
+                "eligible5": "Aquellos con historial de empleo estable",
+                "mandatoryDetention": "Detención Obligatoria (Sin Fianza)",
+                "mandatory1": "Condenas por delitos graves agravados",
+                "mandatory2": "Ciertos delitos de drogas",
+                "mandatory3": "Delitos con armas de fuego",
+                "mandatory4": "Cargos relacionados con terrorismo",
+                "mandatory5": "Órdenes de deportación previas (en algunos casos)"
+              },
+              "process": {
+                "title": "El Proceso de Audiencia de Fianza",
+                "step1": "Solicitar una Audiencia de Fianza",
+                "step1Text": "Usted o su abogado deben solicitar una audiencia de fianza ante el juez de inmigración. ICE también puede establecer una cantidad inicial de fianza que puede ser impugnada.",
+                "step2": "Reunir Evidencia",
+                "step2Text": "Prepare documentos que muestren lazos comunitarios: cartas de familia, prueba de empleo, contratos de arrendamiento, facturas de servicios, declaraciones de impuestos y cartas de carácter.",
+                "step3": "Asistir a la Audiencia",
+                "step3Text": "El juez considerará si usted es un riesgo de fuga o un peligro para la comunidad. Tener un abogado mejora significativamente los resultados.",
+                "step4": "Pagar la Fianza",
+                "step4Text": "Si se otorga, la fianza debe pagarse a través de ICE (no la corte). Un familiar o amigo puede pagar en su nombre. Algunas organizaciones ofrecen fondos de fianza."
+              },
+              "denied": {
+                "title": "Si la Fianza es Denegada",
+                "options": "Tiene Opciones",
+                "option1": "Apelar ante la Junta de Apelaciones de Inmigración (BIA)",
+                "option2": "Solicitar reconsideración si las circunstancias cambian",
+                "option3": "Presentar una petición de habeas corpus en corte federal",
+                "timeline": "Cronograma",
+                "time1": "La apelación ante BIA debe presentarse dentro de 30 días",
+                "time2": "Las decisiones de BIA pueden tomar varios meses",
+                "time3": "Consulte a un abogado inmediatamente"
+              },
+              "resources": {
+                "title": "Recursos de Fondos de Fianza",
+                "subtitle": "¿No puede pagar la fianza? Estas organizaciones pueden ayudar:",
+                "bailFund": "Red Nacional de Fondos de Fianza",
+                "bailFundText": "Directorio de fondos de fianza locales que ayudan a familias a pagar fianzas de inmigración.",
+                "raices": "Fondo de Fianza RAICES",
+                "raicesText": "Proporciona asistencia de fianza para inmigrantes detenidos en Texas y más allá."
+              }
+            },
+            "attorney": {
+              "badge": "Representación Legal",
+              "title": "Encontrar y Verificar un Abogado de Inmigración",
+              "subtitle": "Cómo encontrar ayuda legal de inmigración legítima y protegerse de estafas.",
+              "scamWarning": "¡Cuidado con el Fraude de Notarios!",
+              "scamWarningText": "En EE.UU., los \"notarios\" no están autorizados para dar consejo legal. Solo abogados con licencia y representantes acreditados por el DOJ pueden representarle en la corte de inmigración.",
+              "whoCanHelp": {
+                "title": "¿Quién Puede Ayudar Legalmente con Casos de Inmigración?",
+                "attorneys": {
+                  "title": "Abogados con Licencia",
+                  "description": "Abogados con licencia de cualquier colegio de abogados estatal de EE.UU. pueden representarle en asuntos de inmigración, incluso si tienen licencia en un estado diferente.",
+                  "item1": "Pueden representarle en la corte",
+                  "item2": "Pueden presentar solicitudes ante USCIS",
+                  "item3": "Sujetos a reglas éticas y disciplina"
+                },
+                "accredited": {
+                  "title": "Representantes Acreditados por el DOJ",
+                  "description": "No-abogados que están capacitados y autorizados por el Departamento de Justicia para representar a inmigrantes. Trabajan en organizaciones reconocidas.",
+                  "item1": "A menudo ofrecen servicios gratuitos o de bajo costo",
+                  "item2": "Pueden representarle en la corte de inmigración",
+                  "item3": "Trabajan en organizaciones sin fines de lucro"
+                }
+              },
+              "verify": {
+                "title": "Cómo Verificar a un Abogado de Inmigración",
+                "stateBar": {
+                  "title": "Verificar con el Colegio de Abogados",
+                  "description": "Cada estado tiene un sitio web del colegio de abogados donde puede verificar si un abogado tiene licencia y está en buen estado.",
+                  "link": "Directorio del Colegio de Abogados"
+                },
+                "eoir": {
+                  "title": "Lista de Reconocimiento de EOIR",
+                  "description": "El DOJ mantiene una lista de organizaciones reconocidas y representantes acreditados autorizados para proporcionar servicios de inmigración.",
+                  "link": "Lista EOIR"
+                },
+                "aila": {
+                  "title": "Búsqueda de Abogados AILA",
+                  "description": "La Asociación Americana de Abogados de Inmigración (AILA) tiene un directorio de abogados miembros que se especializan en leyes de inmigración.",
+                  "link": "Búsqueda de Abogados AILA"
+                }
+              },
+              "redFlags": {
+                "title": "Señales de Alerta: Signos de Fraude de Inmigración",
+                "warnings": {
+                  "title": "Señales de Advertencia",
+                  "item1": "Garantiza un resultado o aprobación específica",
+                  "item2": "Afirma tener conexiones especiales con USCIS o jueces",
+                  "item3": "Le pide que firme formularios en blanco",
+                  "item4": "No proporciona un contrato escrito",
+                  "item5": "Le anima a mentir en las solicitudes",
+                  "item6": "Se queda con sus documentos originales",
+                  "item7": "Usa el título \"notario\" o \"consultor de inmigración\""
+                },
+                "legitimate": {
+                  "title": "Señales de un Abogado Legítimo",
+                  "item1": "Proporciona un acuerdo de honorarios por escrito",
+                  "item2": "Explica riesgos y posibles resultados honestamente",
+                  "item3": "Le da copias de todos los documentos presentados",
+                  "item4": "Devuelve sus documentos originales",
+                  "item5": "Responde a sus preguntas y llamadas",
+                  "item6": "Es verificable a través del colegio de abogados o EOIR",
+                  "item7": "Le hace revisar y firmar formularios usted mismo"
+                }
+              },
+              "freeHelp": {
+                "title": "Ayuda Legal Gratuita y de Bajo Costo",
+                "organizations": "Organizaciones de Ayuda Legal",
+                "org1": "Servicios de inmigración de Caridades Católicas",
+                "org2": "CLINIC (Red Legal de Inmigración Católica)",
+                "org3": "Sociedades locales de ayuda legal",
+                "org4": "Clínicas de inmigración de escuelas de derecho",
+                "findingHelp": "Encontrando Ayuda",
+                "find1": "Llame al 211 para recursos locales",
+                "find2": "Busque en ImmigrationAdvocates.org",
+                "find3": "Contacte a su colegio de abogados local",
+                "find4": "Pregunte a organizaciones comunitarias"
+              },
+              "reportFraud": {
+                "title": "Reportar Fraude de Inmigración",
+                "subtitle": "Si ha sido víctima de fraude de inmigración, repórtelo:",
+                "ftc": "Queja FTC",
+                "eoir": "Queja EOIR"
+              }
             }
           },
           "courtRecords": {

@@ -18,6 +18,11 @@ import CourtLocator from "@/pages/court-locator";
 import DevelopmentRoadmap from "@/pages/development-roadmap";
 import DashboardTest from "@/pages/dashboard-test";
 import ImmigrationGuidance from "@/pages/immigration-guidance";
+import DacaTps from "@/pages/immigration/daca-tps";
+import WorkplaceRaids from "@/pages/immigration/workplace-raids";
+import FamilyPlanning from "@/pages/immigration/family-planning";
+import BondHearings from "@/pages/immigration/bond-hearings";
+import FindAttorney from "@/pages/immigration/find-attorney";
 import LegalGlossary from "@/pages/legal-glossary";
 import DiversionPrograms from "@/pages/diversion-programs";
 import RecordExpungement from "@/pages/record-expungement";
@@ -78,6 +83,11 @@ function Router() {
       <Route path="/development-roadmap" component={DevelopmentRoadmap} />
       <Route path="/dashboard-test" component={DashboardTest} />
       <Route path="/immigration-guidance" component={ImmigrationGuidance} />
+      <Route path="/immigration-guidance/daca-tps" component={DacaTps} />
+      <Route path="/immigration-guidance/workplace-raids" component={WorkplaceRaids} />
+      <Route path="/immigration-guidance/family-planning" component={FamilyPlanning} />
+      <Route path="/immigration-guidance/bond-hearings" component={BondHearings} />
+      <Route path="/immigration-guidance/find-attorney" component={FindAttorney} />
       <Route path="/legal-glossary" component={LegalGlossary} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
       <Route path="/record-expungement" component={RecordExpungement} />

@@ -34,6 +34,7 @@ import { useLegalGuidance } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
+import { AnimatedProgressBar } from "@/components/chat/progress-indicator";
 
 interface ImmediateAction {
   action: string;
@@ -518,9 +519,7 @@ export default function CaseGuidance() {
                     Our AI is analyzing your case details and creating customized legal guidance. This may take up to a minute...
                   </p>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2 overflow-hidden">
-                  <div className="bg-blue-600 dark:bg-blue-400 h-full rounded-full animate-pulse" style={{ width: '70%' }}></div>
-                </div>
+                <AnimatedProgressBar duration={30} maxProgress={80} />
               </div>
             </CardContent>
           </Card>

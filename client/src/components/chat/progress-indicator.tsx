@@ -122,6 +122,43 @@ export function ProgressDots({ currentStep }: ProgressIndicatorProps) {
   );
 }
 
+interface AnimatedProgressBarProps {
+  className?: string;
+  duration?: number;
+  maxProgress?: number;
+}
+
+export function AnimatedProgressBar({ className = "", duration = 15, maxProgress = 75 }: AnimatedProgressBarProps) {
+  const [progress, setProgress] = useState(0);
+  const startTimeRef = useRef<number>(Date.now());
+  
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+    setProgress(0);
+    
+    const interval = setInterval(() => {
+      const elapsed = (Date.now() - startTimeRef.current) / 1000;
+      
+      if (elapsed <= duration) {
+        const t = elapsed / duration;
+        const eased = t * (2 - t);
+        setProgress(Math.round(eased * maxProgress));
+      }
+    }, 50);
+    
+    return () => clearInterval(interval);
+  }, [duration, maxProgress]);
+  
+  return (
+    <div className={`w-full bg-muted rounded-full h-2 overflow-hidden ${className}`}>
+      <div
+        className="h-full bg-primary rounded-full transition-all duration-150 ease-out"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  );
+}
+
 interface GeneratingProgressProps {
   isGenerating: boolean;
   onProgressComplete?: () => void;
