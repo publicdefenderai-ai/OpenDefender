@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -117,6 +118,59 @@ export function ProgressDots({ currentStep }: ProgressIndicatorProps) {
           )}
         />
       ))}
+    </div>
+  );
+}
+
+interface GeneratingProgressProps {
+  isGenerating: boolean;
+  onProgressComplete?: () => void;
+}
+
+export function GeneratingProgress({ isGenerating, onProgressComplete }: GeneratingProgressProps) {
+  const [progress, setProgress] = useState(0);
+  const [startTime] = useState(() => Date.now());
+  
+  useEffect(() => {
+    if (!isGenerating) {
+      setProgress(0);
+      return;
+    }
+    
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const seconds = elapsed / 1000;
+      
+      if (seconds <= 15) {
+        // Smooth curve from 0 to 75% over 15 seconds
+        // Using easeOutQuad for natural deceleration
+        const t = seconds / 15;
+        const eased = t * (2 - t); // easeOutQuad
+        setProgress(Math.round(eased * 75));
+      } else if (seconds > 20 && onProgressComplete) {
+        onProgressComplete();
+      }
+    }, 100);
+    
+    return () => clearInterval(interval);
+  }, [isGenerating, startTime, onProgressComplete]);
+  
+  if (!isGenerating) return null;
+  
+  return (
+    <div className="w-full max-w-md mx-auto px-4 py-3">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-sm text-muted-foreground">Analyzing your situation...</span>
+        <span className="text-sm font-medium text-primary">{progress}%</span>
+      </div>
+      <div className="h-2 bg-muted rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-primary rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 0.1, ease: "linear" }}
+        />
+      </div>
     </div>
   );
 }

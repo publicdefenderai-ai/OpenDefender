@@ -16,7 +16,7 @@ import {
 import { useChat, QuickReply, ConversationStep, CompletedFlow } from "@/contexts/chat-context";
 import { MessageBubble, TypingIndicator } from "@/components/chat/message-bubble";
 import { QuickReplyButtons, FullWidthReply } from "@/components/chat/quick-replies";
-import { ProgressDots } from "@/components/chat/progress-indicator";
+import { ProgressDots, GeneratingProgress } from "@/components/chat/progress-indicator";
 import { CaseStatusPanel } from "@/components/chat/case-status-panel";
 import { ChatInput } from "@/components/chat/chat-input";
 import { StateSelector } from "@/components/chat/state-selector";
@@ -65,6 +65,17 @@ export default function ChatPage() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
+  const [stillWorkingShown, setStillWorkingShown] = useState(false);
+
+  const handleStillWorking = useCallback(() => {
+    if (!stillWorkingShown) {
+      setStillWorkingShown(true);
+      actions.addMessage({
+        role: 'bot',
+        contentKey: 'chat.messages.stillWorking',
+      });
+    }
+  }, [stillWorkingShown, actions]);
 
   const handleLanguageChange = useCallback(async (lng: string) => {
     await i18nInstance.changeLanguage(lng);
@@ -399,14 +410,7 @@ export default function ChatPage() {
       setIsTyping(true);
       actions.setIsGenerating(true);
       actions.setCurrentStep('generating_guidance');
-
-      // Progress indicator - show "still working" message after 15 seconds if API is slow
-      const progressTimer = setTimeout(() => {
-        console.log('Progress timer fired - showing still working message');
-        setIsTyping(false); // Temporarily hide typing indicator to show message
-        addBotMessageWithKey('chat.messages.stillWorking');
-        setIsTyping(true); // Resume typing indicator
-      }, 15000);
+      setStillWorkingShown(false);
 
       try {
         const response = await apiRequest('POST', '/api/legal-guidance', {
@@ -420,7 +424,6 @@ export default function ChatPage() {
           language: i18n.language,
         });
 
-        clearTimeout(progressTimer);
         const data = await response.json();
         
         setIsTyping(false);
@@ -434,7 +437,6 @@ export default function ChatPage() {
         ]);
         
       } catch (error) {
-        clearTimeout(progressTimer);
         console.error('Guidance generation error:', error);
         setIsTyping(false);
         actions.setIsGenerating(false);
@@ -735,6 +737,12 @@ export default function ChatPage() {
               ))}
               
               <AnimatePresence>
+                {isTyping && state.currentStep === 'generating_guidance' && (
+                  <GeneratingProgress 
+                    isGenerating={state.isGenerating} 
+                    onProgressComplete={handleStillWorking}
+                  />
+                )}
                 {isTyping && <TypingIndicator />}
               </AnimatePresence>
               
