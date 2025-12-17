@@ -1,15 +1,9 @@
 import { motion } from "framer-motion";
 import { 
   Building2, 
-  Shield, 
   AlertTriangle, 
-  CheckCircle,
-  XCircle,
   ArrowLeft,
-  FileText,
-  Phone,
-  Users,
-  Lock
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,86 +63,56 @@ export default function WorkplaceRaids() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8">
             <ScrollReveal>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" data-testid="text-your-rights-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
-                      <Shield className="h-5 w-5 text-green-600 dark:text-green-400" />
-                    </div>
+                  <CardTitle data-testid="text-your-rights-title">
                     {t('immigration.raids.yourRights.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.yourRights.silent')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.silentText')}</p>
-                    </div>
+                  <div className="border-l-2 border-green-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.yourRights.silent')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.silentText')}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.yourRights.refuse')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.refuseText')}</p>
-                    </div>
+                  <div className="border-l-2 border-green-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.yourRights.refuse')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.refuseText')}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.yourRights.attorney')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.attorneyText')}</p>
-                    </div>
+                  <div className="border-l-2 border-green-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.yourRights.attorney')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.attorneyText')}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.yourRights.basis')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.basisText')}</p>
-                    </div>
+                  <div className="border-l-2 border-green-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.yourRights.basis')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.yourRights.basisText')}</p>
                   </div>
                 </CardContent>
               </Card>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" data-testid="text-what-not-to-do-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20">
-                      <XCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
-                    </div>
+                  <CardTitle data-testid="text-what-not-to-do-title">
                     {t('immigration.raids.whatNotToDo.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <XCircle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.whatNotToDo.run')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.runText')}</p>
-                    </div>
+                  <div className="border-l-2 border-red-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.run')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.runText')}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <XCircle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.whatNotToDo.falseDocs')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.falseDocsText')}</p>
-                    </div>
+                  <div className="border-l-2 border-red-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.falseDocs')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.falseDocsText')}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <XCircle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.whatNotToDo.lie')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.lieText')}</p>
-                    </div>
+                  <div className="border-l-2 border-red-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.lie')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.lieText')}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <XCircle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <strong className="text-foreground">{t('immigration.raids.whatNotToDo.sign')}</strong>
-                      <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.signText')}</p>
-                    </div>
+                  <div className="border-l-2 border-red-500 pl-4">
+                    <strong className="text-foreground">{t('immigration.raids.whatNotToDo.sign')}</strong>
+                    <p className="text-sm text-muted-foreground">{t('immigration.raids.whatNotToDo.signText')}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -167,58 +131,35 @@ export default function WorkplaceRaids() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <Lock className="h-5 w-5 text-primary" />
+                  <CardTitle>
                     {t('immigration.raids.employer.mustProvide')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.must1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.must2')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.must3')}</span>
-                    </li>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                    <li>{t('immigration.raids.employer.must1')}</li>
+                    <li>{t('immigration.raids.employer.must2')}</li>
+                    <li>{t('immigration.raids.employer.must3')}</li>
                   </ul>
                 </CardContent>
               </Card>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <Users className="h-5 w-5 text-primary" />
+                  <CardTitle>
                     {t('immigration.raids.employer.canDo')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.can1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.can2')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.can3')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.raids.employer.can4')}</span>
-                    </li>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                    <li>{t('immigration.raids.employer.can1')}</li>
+                    <li>{t('immigration.raids.employer.can2')}</li>
+                    <li>{t('immigration.raids.employer.can3')}</li>
+                    <li>{t('immigration.raids.employer.can4')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -232,8 +173,7 @@ export default function WorkplaceRaids() {
           <ScrollReveal>
             <Card className="bg-primary/5 border-primary/20">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3" data-testid="text-after-raid-title">
-                  <FileText className="h-5 w-5 text-primary" />
+                <CardTitle data-testid="text-after-raid-title">
                   {t('immigration.raids.afterRaid.title')}
                 </CardTitle>
               </CardHeader>
@@ -241,22 +181,22 @@ export default function WorkplaceRaids() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold mb-3">{t('immigration.raids.afterRaid.detained')}</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• {t('immigration.raids.afterRaid.detained1')}</li>
-                      <li>• {t('immigration.raids.afterRaid.detained2')}</li>
-                      <li>• {t('immigration.raids.afterRaid.detained3')}</li>
-                      <li>• {t('immigration.raids.afterRaid.detained4')}</li>
-                      <li>• {t('immigration.raids.afterRaid.detained5')}</li>
+                    <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                      <li>{t('immigration.raids.afterRaid.detained1')}</li>
+                      <li>{t('immigration.raids.afterRaid.detained2')}</li>
+                      <li>{t('immigration.raids.afterRaid.detained3')}</li>
+                      <li>{t('immigration.raids.afterRaid.detained4')}</li>
+                      <li>{t('immigration.raids.afterRaid.detained5')}</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3">{t('immigration.raids.afterRaid.notDetained')}</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• {t('immigration.raids.afterRaid.notDetained1')}</li>
-                      <li>• {t('immigration.raids.afterRaid.notDetained2')}</li>
-                      <li>• {t('immigration.raids.afterRaid.notDetained3')}</li>
-                      <li>• {t('immigration.raids.afterRaid.notDetained4')}</li>
-                      <li>• {t('immigration.raids.afterRaid.notDetained5')}</li>
+                    <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                      <li>{t('immigration.raids.afterRaid.notDetained1')}</li>
+                      <li>{t('immigration.raids.afterRaid.notDetained2')}</li>
+                      <li>{t('immigration.raids.afterRaid.notDetained3')}</li>
+                      <li>{t('immigration.raids.afterRaid.notDetained4')}</li>
+                      <li>{t('immigration.raids.afterRaid.notDetained5')}</li>
                     </ul>
                   </div>
                 </div>
@@ -272,18 +212,18 @@ export default function WorkplaceRaids() {
             <h2 className="text-2xl font-bold mb-4">{t('immigration.raids.emergency.title')}</h2>
             <p className="text-muted-foreground mb-6">{t('immigration.raids.emergency.subtitle')}</p>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <Phone className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold">{t('immigration.raids.emergency.nilc')}</h3>
-                  <p className="text-2xl font-bold text-primary mt-2">1-844-NILC-123</p>
+                  <p className="text-xl font-bold text-primary mt-2">1-844-NILC-123</p>
                 </CardContent>
               </Card>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <Phone className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold">{t('immigration.raids.emergency.aclu')}</h3>
-                  <p className="text-2xl font-bold text-primary mt-2">1-800-775-2258</p>
+                  <p className="text-xl font-bold text-primary mt-2">1-800-775-2258</p>
                 </CardContent>
               </Card>
             </div>

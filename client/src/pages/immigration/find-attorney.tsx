@@ -1,16 +1,10 @@
 import { motion } from "framer-motion";
 import { 
   UserCheck, 
-  Shield, 
   AlertTriangle, 
-  CheckCircle,
-  XCircle,
   ArrowLeft,
   ExternalLink,
-  Search,
-  Phone,
-  FileText,
-  BadgeCheck
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -76,12 +70,9 @@ export default function FindAttorney() {
           
           <div className="grid lg:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow border-green-200 dark:border-green-800">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" data-testid="text-attorneys-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
-                      <BadgeCheck className="h-5 w-5 text-green-600 dark:text-green-400" />
-                    </div>
+                  <CardTitle data-testid="text-attorneys-title">
                     {t('immigration.attorney.whoCanHelp.attorneys.title')}
                   </CardTitle>
                 </CardHeader>
@@ -89,31 +80,19 @@ export default function FindAttorney() {
                   <p className="text-sm text-muted-foreground">
                     {t('immigration.attorney.whoCanHelp.attorneys.description')}
                   </p>
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span className="text-sm">{t('immigration.attorney.whoCanHelp.attorneys.item1')}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span className="text-sm">{t('immigration.attorney.whoCanHelp.attorneys.item2')}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span className="text-sm">{t('immigration.attorney.whoCanHelp.attorneys.item3')}</span>
-                    </div>
-                  </div>
+                  <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
+                    <li>{t('immigration.attorney.whoCanHelp.attorneys.item1')}</li>
+                    <li>{t('immigration.attorney.whoCanHelp.attorneys.item2')}</li>
+                    <li>{t('immigration.attorney.whoCanHelp.attorneys.item3')}</li>
+                  </ul>
                 </CardContent>
               </Card>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="h-full hover:shadow-lg transition-shadow border-blue-200 dark:border-blue-800">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" data-testid="text-accredited-reps-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
-                      <Shield className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                    </div>
+                  <CardTitle data-testid="text-accredited-reps-title">
                     {t('immigration.attorney.whoCanHelp.accredited.title')}
                   </CardTitle>
                 </CardHeader>
@@ -121,20 +100,11 @@ export default function FindAttorney() {
                   <p className="text-sm text-muted-foreground">
                     {t('immigration.attorney.whoCanHelp.accredited.description')}
                   </p>
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5" />
-                      <span className="text-sm">{t('immigration.attorney.whoCanHelp.accredited.item1')}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5" />
-                      <span className="text-sm">{t('immigration.attorney.whoCanHelp.accredited.item2')}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5" />
-                      <span className="text-sm">{t('immigration.attorney.whoCanHelp.accredited.item3')}</span>
-                    </div>
-                  </div>
+                  <ul className="text-sm text-muted-foreground space-y-2 list-disc list-inside">
+                    <li>{t('immigration.attorney.whoCanHelp.accredited.item1')}</li>
+                    <li>{t('immigration.attorney.whoCanHelp.accredited.item2')}</li>
+                    <li>{t('immigration.attorney.whoCanHelp.accredited.item3')}</li>
+                  </ul>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -152,11 +122,8 @@ export default function FindAttorney() {
           
           <div className="grid md:grid-cols-3 gap-6">
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Search className="h-6 w-6 text-primary" />
-                  </div>
                   <h3 className="font-semibold mb-2">{t('immigration.attorney.verify.stateBar.title')}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {t('immigration.attorney.verify.stateBar.description')}
@@ -176,11 +143,8 @@ export default function FindAttorney() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <FileText className="h-6 w-6 text-primary" />
-                  </div>
                   <h3 className="font-semibold mb-2">{t('immigration.attorney.verify.eoir.title')}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {t('immigration.attorney.verify.eoir.description')}
@@ -200,11 +164,8 @@ export default function FindAttorney() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <BadgeCheck className="h-6 w-6 text-primary" />
-                  </div>
                   <h3 className="font-semibold mb-2">{t('immigration.attorney.verify.aila.title')}</h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     {t('immigration.attorney.verify.aila.description')}
@@ -236,86 +197,42 @@ export default function FindAttorney() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow border-red-200 dark:border-red-800">
+              <Card className="h-full border-l-4 border-l-red-500">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-red-700 dark:text-red-400">
-                    <XCircle className="h-5 w-5" />
+                  <CardTitle className="text-red-700 dark:text-red-400">
                     {t('immigration.attorney.redFlags.warnings.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-sm">
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item2')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item3')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item4')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item5')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item6')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.warnings.item7')}</span>
-                    </li>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                    <li>{t('immigration.attorney.redFlags.warnings.item1')}</li>
+                    <li>{t('immigration.attorney.redFlags.warnings.item2')}</li>
+                    <li>{t('immigration.attorney.redFlags.warnings.item3')}</li>
+                    <li>{t('immigration.attorney.redFlags.warnings.item4')}</li>
+                    <li>{t('immigration.attorney.redFlags.warnings.item5')}</li>
+                    <li>{t('immigration.attorney.redFlags.warnings.item6')}</li>
+                    <li>{t('immigration.attorney.redFlags.warnings.item7')}</li>
                   </ul>
                 </CardContent>
               </Card>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="h-full hover:shadow-lg transition-shadow border-green-200 dark:border-green-800">
+              <Card className="h-full border-l-4 border-l-green-500">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-green-700 dark:text-green-400">
-                    <CheckCircle className="h-5 w-5" />
+                  <CardTitle className="text-green-700 dark:text-green-400">
                     {t('immigration.attorney.redFlags.legitimate.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item2')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item3')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item4')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item5')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item6')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>{t('immigration.attorney.redFlags.legitimate.item7')}</span>
-                    </li>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                    <li>{t('immigration.attorney.redFlags.legitimate.item1')}</li>
+                    <li>{t('immigration.attorney.redFlags.legitimate.item2')}</li>
+                    <li>{t('immigration.attorney.redFlags.legitimate.item3')}</li>
+                    <li>{t('immigration.attorney.redFlags.legitimate.item4')}</li>
+                    <li>{t('immigration.attorney.redFlags.legitimate.item5')}</li>
+                    <li>{t('immigration.attorney.redFlags.legitimate.item6')}</li>
+                    <li>{t('immigration.attorney.redFlags.legitimate.item7')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -338,19 +255,19 @@ export default function FindAttorney() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">{t('immigration.attorney.freeHelp.organizations')}</h4>
-                    <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-300">
-                      <li>• {t('immigration.attorney.freeHelp.org1')}</li>
-                      <li>• {t('immigration.attorney.freeHelp.org2')}</li>
-                      <li>• {t('immigration.attorney.freeHelp.org3')}</li>
-                      <li>• {t('immigration.attorney.freeHelp.org4')}</li>
+                    <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-300 list-disc list-inside">
+                      <li>{t('immigration.attorney.freeHelp.org1')}</li>
+                      <li>{t('immigration.attorney.freeHelp.org2')}</li>
+                      <li>{t('immigration.attorney.freeHelp.org3')}</li>
+                      <li>{t('immigration.attorney.freeHelp.org4')}</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">{t('immigration.attorney.freeHelp.findingHelp')}</h4>
-                    <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-300">
-                      <li>• {t('immigration.attorney.freeHelp.find1')}</li>
-                      <li>• {t('immigration.attorney.freeHelp.find2')}</li>
-                      <li>• {t('immigration.attorney.freeHelp.find3')}</li>
+                    <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-300 list-disc list-inside">
+                      <li>{t('immigration.attorney.freeHelp.find1')}</li>
+                      <li>{t('immigration.attorney.freeHelp.find2')}</li>
+                      <li>{t('immigration.attorney.freeHelp.find3')}</li>
                     </ul>
                   </div>
                 </div>

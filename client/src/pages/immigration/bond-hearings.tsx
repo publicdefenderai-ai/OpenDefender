@@ -2,14 +2,9 @@ import { motion } from "framer-motion";
 import { 
   Gavel, 
   Scale, 
-  FileText, 
   AlertTriangle, 
-  CheckCircle,
-  XCircle,
   ArrowLeft,
-  DollarSign,
-  Clock,
-  Users
+  Phone
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,12 +70,9 @@ export default function BondHearings() {
           
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
-                      <DollarSign className="h-5 w-5 text-green-600 dark:text-green-400" />
-                    </div>
+                  <CardTitle>
                     {t('immigration.bond.whatIsBond.delivery.title')}
                   </CardTitle>
                 </CardHeader>
@@ -97,12 +89,9 @@ export default function BondHearings() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
-                      <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                    </div>
+                  <CardTitle>
                     {t('immigration.bond.whatIsBond.voluntary.title')}
                   </CardTitle>
                 </CardHeader>
@@ -131,70 +120,38 @@ export default function BondHearings() {
           
           <div className="grid lg:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow border-green-200 dark:border-green-800">
-                <CardHeader className="bg-green-50/50 dark:bg-green-900/20">
-                  <CardTitle className="flex items-center gap-3 text-green-700 dark:text-green-400">
-                    <CheckCircle className="h-5 w-5" />
+              <Card className="h-full border-l-4 border-l-green-500">
+                <CardHeader>
+                  <CardTitle className="text-green-700 dark:text-green-400">
                     {t('immigration.bond.eligibility.mayBeEligible')}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <ul className="space-y-3 text-sm">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.eligible1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.eligible2')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.eligible3')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.eligible4')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.eligible5')}</span>
-                    </li>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                    <li>{t('immigration.bond.eligibility.eligible1')}</li>
+                    <li>{t('immigration.bond.eligibility.eligible2')}</li>
+                    <li>{t('immigration.bond.eligibility.eligible3')}</li>
+                    <li>{t('immigration.bond.eligibility.eligible4')}</li>
+                    <li>{t('immigration.bond.eligibility.eligible5')}</li>
                   </ul>
                 </CardContent>
               </Card>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="h-full hover:shadow-lg transition-shadow border-red-200 dark:border-red-800">
-                <CardHeader className="bg-red-50/50 dark:bg-red-900/20">
-                  <CardTitle className="flex items-center gap-3 text-red-700 dark:text-red-400">
-                    <XCircle className="h-5 w-5" />
+              <Card className="h-full border-l-4 border-l-red-500">
+                <CardHeader>
+                  <CardTitle className="text-red-700 dark:text-red-400">
                     {t('immigration.bond.eligibility.mandatoryDetention')}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <ul className="space-y-3 text-sm">
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.mandatory1')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.mandatory2')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.mandatory3')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.mandatory4')}</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <XCircle className="h-4 w-4 text-red-600 mt-0.5" />
-                      <span>{t('immigration.bond.eligibility.mandatory5')}</span>
-                    </li>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                    <li>{t('immigration.bond.eligibility.mandatory1')}</li>
+                    <li>{t('immigration.bond.eligibility.mandatory2')}</li>
+                    <li>{t('immigration.bond.eligibility.mandatory3')}</li>
+                    <li>{t('immigration.bond.eligibility.mandatory4')}</li>
+                    <li>{t('immigration.bond.eligibility.mandatory5')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -215,10 +172,10 @@ export default function BondHearings() {
             <div className="space-y-6">
               <ScrollReveal delay={0.1}>
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
                     1
                   </div>
-                  <Card className="flex-1 hover:shadow-lg transition-shadow">
+                  <Card className="flex-1">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2">{t('immigration.bond.process.step1')}</h3>
                       <p className="text-sm text-muted-foreground">
@@ -231,10 +188,10 @@ export default function BondHearings() {
 
               <ScrollReveal delay={0.2}>
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
                     2
                   </div>
-                  <Card className="flex-1 hover:shadow-lg transition-shadow">
+                  <Card className="flex-1">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2">{t('immigration.bond.process.step2')}</h3>
                       <p className="text-sm text-muted-foreground">
@@ -247,10 +204,10 @@ export default function BondHearings() {
 
               <ScrollReveal delay={0.3}>
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
                     3
                   </div>
-                  <Card className="flex-1 hover:shadow-lg transition-shadow">
+                  <Card className="flex-1">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2">{t('immigration.bond.process.step3')}</h3>
                       <p className="text-sm text-muted-foreground">
@@ -263,10 +220,10 @@ export default function BondHearings() {
 
               <ScrollReveal delay={0.4}>
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
                     4
                   </div>
-                  <Card className="flex-1 hover:shadow-lg transition-shadow">
+                  <Card className="flex-1">
                     <CardContent className="pt-6">
                       <h3 className="font-semibold mb-2">{t('immigration.bond.process.step4')}</h3>
                       <p className="text-sm text-muted-foreground">
@@ -295,36 +252,18 @@ export default function BondHearings() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold mb-3 text-amber-900 dark:text-amber-200">{t('immigration.bond.denied.options')}</h4>
-                    <ul className="space-y-2 text-sm text-amber-800 dark:text-amber-300">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 mt-0.5" />
-                        <span>{t('immigration.bond.denied.option1')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 mt-0.5" />
-                        <span>{t('immigration.bond.denied.option2')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 mt-0.5" />
-                        <span>{t('immigration.bond.denied.option3')}</span>
-                      </li>
+                    <ul className="space-y-2 text-sm text-amber-800 dark:text-amber-300 list-disc list-inside">
+                      <li>{t('immigration.bond.denied.option1')}</li>
+                      <li>{t('immigration.bond.denied.option2')}</li>
+                      <li>{t('immigration.bond.denied.option3')}</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3 text-amber-900 dark:text-amber-200">{t('immigration.bond.denied.timeline')}</h4>
-                    <ul className="space-y-2 text-sm text-amber-800 dark:text-amber-300">
-                      <li className="flex items-start gap-2">
-                        <Clock className="h-4 w-4 mt-0.5" />
-                        <span>{t('immigration.bond.denied.time1')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Clock className="h-4 w-4 mt-0.5" />
-                        <span>{t('immigration.bond.denied.time2')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Clock className="h-4 w-4 mt-0.5" />
-                        <span>{t('immigration.bond.denied.time3')}</span>
-                      </li>
+                    <ul className="space-y-2 text-sm text-amber-800 dark:text-amber-300 list-disc list-inside">
+                      <li>{t('immigration.bond.denied.time1')}</li>
+                      <li>{t('immigration.bond.denied.time2')}</li>
+                      <li>{t('immigration.bond.denied.time3')}</li>
                     </ul>
                   </div>
                 </div>
@@ -342,18 +281,18 @@ export default function BondHearings() {
               {t('immigration.bond.resources.subtitle')}
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <Users className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <Phone className="h-6 w-6 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold">{t('immigration.bond.resources.bailFund')}</h3>
                   <p className="text-sm text-muted-foreground mt-2">
                     {t('immigration.bond.resources.bailFundText')}
                   </p>
                 </CardContent>
               </Card>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <Scale className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <Scale className="h-6 w-6 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold">{t('immigration.bond.resources.raices')}</h3>
                   <p className="text-sm text-muted-foreground mt-2">
                     {t('immigration.bond.resources.raicesText')}

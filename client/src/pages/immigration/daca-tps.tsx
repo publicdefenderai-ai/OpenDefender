@@ -1,14 +1,9 @@
 import { motion } from "framer-motion";
 import { 
   Shield, 
-  Calendar, 
-  FileText, 
   AlertTriangle, 
-  CheckCircle,
-  Clock,
   ArrowLeft,
-  ExternalLink,
-  Users
+  ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,12 +64,9 @@ export default function DacaTps() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8">
             <ScrollReveal>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" data-testid="text-daca-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
-                      <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                    </div>
+                  <CardTitle data-testid="text-daca-title">
                     {t('immigration.daca.dacaSection.title')}
                   </CardTitle>
                 </CardHeader>
@@ -88,39 +80,18 @@ export default function DacaTps() {
                   
                   <div>
                     <h4 className="font-semibold mb-3 text-foreground">{t('immigration.daca.dacaSection.eligibility')}</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.dacaSection.req1')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.dacaSection.req2')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.dacaSection.req3')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.dacaSection.req4')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.dacaSection.req5')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.dacaSection.req6')}</span>
-                      </li>
+                    <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                      <li>{t('immigration.daca.dacaSection.req1')}</li>
+                      <li>{t('immigration.daca.dacaSection.req2')}</li>
+                      <li>{t('immigration.daca.dacaSection.req3')}</li>
+                      <li>{t('immigration.daca.dacaSection.req4')}</li>
+                      <li>{t('immigration.daca.dacaSection.req5')}</li>
+                      <li>{t('immigration.daca.dacaSection.req6')}</li>
                     </ul>
                   </div>
 
                   <div className="bg-muted/50 rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      <h4 className="font-semibold text-foreground">{t('immigration.daca.dacaSection.renewal')}</h4>
-                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">{t('immigration.daca.dacaSection.renewal')}</h4>
                     <p className="text-sm text-muted-foreground">
                       {t('immigration.daca.dacaSection.renewalText')}
                     </p>
@@ -130,12 +101,9 @@ export default function DacaTps() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3" data-testid="text-tps-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
-                      <Users className="h-5 w-5 text-green-600 dark:text-green-400" />
-                    </div>
+                  <CardTitle data-testid="text-tps-title">
                     {t('immigration.daca.tpsSection.title')}
                   </CardTitle>
                 </CardHeader>
@@ -163,27 +131,15 @@ export default function DacaTps() {
 
                   <div>
                     <h4 className="font-semibold mb-3 text-foreground">{t('immigration.daca.tpsSection.benefits')}</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.tpsSection.benefit1')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.tpsSection.benefit2')}</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{t('immigration.daca.tpsSection.benefit3')}</span>
-                      </li>
+                    <ul className="space-y-2 text-sm text-muted-foreground list-disc list-inside">
+                      <li>{t('immigration.daca.tpsSection.benefit1')}</li>
+                      <li>{t('immigration.daca.tpsSection.benefit2')}</li>
+                      <li>{t('immigration.daca.tpsSection.benefit3')}</li>
                     </ul>
                   </div>
 
                   <div className="bg-muted/50 rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Calendar className="h-4 w-4 text-primary" />
-                      <h4 className="font-semibold text-foreground">{t('immigration.daca.tpsSection.reregistration')}</h4>
-                    </div>
+                    <h4 className="font-semibold text-foreground mb-2">{t('immigration.daca.tpsSection.reregistration')}</h4>
                     <p className="text-sm text-muted-foreground">
                       {t('immigration.daca.tpsSection.reregistrationText')}
                     </p>
@@ -205,11 +161,8 @@ export default function DacaTps() {
           
           <div className="grid md:grid-cols-3 gap-6">
             <ScrollReveal delay={0.1}>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center mb-4">
-                    <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
-                  </div>
                   <h3 className="font-semibold mb-2">{t('immigration.daca.statusLapse.dontPanic')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('immigration.daca.statusLapse.dontPanicText')}
@@ -219,11 +172,8 @@ export default function DacaTps() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-4">
-                    <FileText className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                  </div>
                   <h3 className="font-semibold mb-2">{t('immigration.daca.statusLapse.gatherDocs')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('immigration.daca.statusLapse.gatherDocsText')}
@@ -233,11 +183,8 @@ export default function DacaTps() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card>
                 <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-green-600 dark:text-green-400" />
-                  </div>
                   <h3 className="font-semibold mb-2">{t('immigration.daca.statusLapse.seekHelp')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('immigration.daca.statusLapse.seekHelpText')}
