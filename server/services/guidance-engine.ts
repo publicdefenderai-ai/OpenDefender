@@ -237,6 +237,146 @@ const chargeGuidance = {
       'Firearm possession prohibition',
       'Immigration consequences'
     ]
+  },
+  'fraud': {
+    name: 'Fraud/White Collar Crime',
+    immediateActions: [
+      'Preserve all financial documents and records',
+      'Do not destroy or alter any documents',
+      'Stop any ongoing transactions related to the case',
+      'Avoid communicating with potential co-defendants'
+    ],
+    evidenceToGather: [
+      'Bank statements and financial records',
+      'Email communications and correspondence',
+      'Contracts and agreements',
+      'Proof of authorization for transactions',
+      'Character references from professional contacts'
+    ],
+    defenseStrategies: [
+      'Prove lack of intent to defraud',
+      'Document authorization or consent',
+      'Challenge amount calculations',
+      'Examine evidence of good faith belief'
+    ],
+    collateralConsequences: [
+      'Asset forfeiture and restitution',
+      'Professional license revocation',
+      'Banking and credit impacts',
+      'Employment restrictions in financial sectors'
+    ]
+  },
+  'burglary': {
+    name: 'Burglary',
+    immediateActions: [
+      'Document your whereabouts during alleged incident',
+      'Identify alibi witnesses immediately',
+      'Do not discuss case with anyone except attorney',
+      'Preserve any evidence of where you were'
+    ],
+    evidenceToGather: [
+      'Alibi evidence (receipts, GPS data, witnesses)',
+      'Security footage from other locations',
+      'Phone records showing location',
+      'Work attendance or time records',
+      'Social media posts with timestamps'
+    ],
+    defenseStrategies: [
+      'Establish solid alibi with evidence',
+      'Challenge eyewitness identification',
+      'Question forensic evidence collection',
+      'Examine intent elements'
+    ],
+    collateralConsequences: [
+      'Enhanced penalties for prior convictions',
+      'Ineligibility for certain housing',
+      'Employment background check impacts',
+      'Immigration consequences'
+    ]
+  },
+  'traffic': {
+    name: 'Traffic Violation',
+    immediateActions: [
+      'Note all details of the incident immediately',
+      'Take photos of the location and signage',
+      'Gather contact info from any witnesses',
+      'Check your driving record for accuracy'
+    ],
+    evidenceToGather: [
+      'Photos of traffic signs and road conditions',
+      'Dashcam or witness footage',
+      'Weather reports for that day',
+      'Maintenance records for speed detection equipment',
+      'Your driving history'
+    ],
+    defenseStrategies: [
+      'Challenge equipment calibration',
+      'Question officer\'s observation point',
+      'Document unclear or missing signage',
+      'Present evidence of emergency situation'
+    ],
+    collateralConsequences: [
+      'Points on license',
+      'Insurance rate increases',
+      'License suspension for repeat offenses',
+      'Commercial driving impacts'
+    ]
+  },
+  'weapons': {
+    name: 'Weapons Offense',
+    immediateActions: [
+      'Do not possess any weapons while case pending',
+      'Document any legal ownership or permits',
+      'Identify witnesses to the circumstances',
+      'Review storage and transport laws'
+    ],
+    evidenceToGather: [
+      'Firearm permits and licenses',
+      'Proof of legal purchase',
+      'Registration documents',
+      'Character witnesses',
+      'Evidence of lawful purpose'
+    ],
+    defenseStrategies: [
+      'Prove lawful possession and permits',
+      'Challenge search and seizure procedures',
+      'Examine constructive possession issues',
+      'Question identification of weapon type'
+    ],
+    collateralConsequences: [
+      'Permanent firearm ownership prohibition',
+      'Enhanced penalties for other offenses',
+      'Professional license impacts',
+      'Immigration consequences'
+    ]
+  },
+  'default': {
+    name: 'Criminal Charge',
+    immediateActions: [
+      'Exercise your right to remain silent',
+      'Request an attorney immediately',
+      'Document all relevant details while fresh in memory',
+      'Gather contact information for potential witnesses'
+    ],
+    evidenceToGather: [
+      'Any documentation related to the incident',
+      'Witness contact information',
+      'Photos or videos if available',
+      'Communication records',
+      'Alibi evidence if applicable'
+    ],
+    defenseStrategies: [
+      'Review all evidence with attorney',
+      'Identify weaknesses in prosecution case',
+      'Consider all available defenses',
+      'Evaluate plea options carefully'
+    ],
+    collateralConsequences: [
+      'Potential employment impacts',
+      'Background check implications',
+      'Professional licensing considerations',
+      'Immigration status effects if applicable'
+    ]
   }
 };
 
@@ -373,11 +513,15 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
 
 function identifyChargeType(charges: string): string {
   const chargeKeywords = {
-    dui: ['dui', 'dwi', 'driving under', 'intoxicated', 'impaired'],
-    assault: ['assault', 'battery', 'domestic violence', 'fighting'],
-    drug: ['drug', 'possession', 'narcotic', 'controlled substance', 'marijuana', 'cocaine'],
-    theft: ['theft', 'larceny', 'stealing', 'shoplifting', 'burglary', 'robbery'],
-    domestic: ['domestic', 'family violence', 'spousal']
+    dui: ['dui', 'dwi', 'driving under', 'intoxicated', 'impaired', 'blood alcohol'],
+    assault: ['assault', 'battery', 'fighting', 'bodily harm', 'aggravated assault'],
+    drug: ['drug', 'possession', 'narcotic', 'controlled substance', 'marijuana', 'cocaine', 'heroin', 'fentanyl', 'meth'],
+    theft: ['theft', 'larceny', 'stealing', 'shoplifting', 'petty theft', 'grand theft'],
+    domestic: ['domestic', 'family violence', 'spousal', 'intimate partner'],
+    fraud: ['fraud', 'embezzlement', 'forgery', 'identity theft', 'wire fraud', 'mail fraud', 'financial crime', 'white collar'],
+    burglary: ['burglary', 'breaking and entering', 'home invasion', 'unlawful entry'],
+    traffic: ['speeding', 'reckless driving', 'hit and run', 'running red light', 'traffic violation', 'driving without license'],
+    weapons: ['weapon', 'firearm', 'gun', 'unlawful possession', 'concealed carry', 'armed']
   };
   
   for (const [type, keywords] of Object.entries(chargeKeywords)) {
@@ -386,7 +530,7 @@ function identifyChargeType(charges: string): string {
     }
   }
   
-  return 'general'; // Default for unrecognized charges
+  return 'default'; // Default for unrecognized charges - now uses 'default' guidance
 }
 
 // New charge-specific guidance functions

@@ -16,7 +16,7 @@ if (!apiKey) {
 
 const anthropic = new Anthropic({
   apiKey,
-  timeout: 60000, // 60 second timeout for the SDK
+  timeout: 90000, // 90 second timeout for the SDK - generous time for complex legal guidance
 });
 
 // Simple in-memory cache for identical requests (expires after 1 hour)
@@ -417,7 +417,7 @@ async function callClaudeWithRetry(
       const startTime = Date.now();
       
       // Wrap the API call in a timeout promise to ensure it actually times out
-      const timeoutMs = 65000; // 65 seconds - slightly longer than SDK timeout
+      const timeoutMs = 95000; // 95 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 2048,
@@ -432,7 +432,7 @@ async function callClaudeWithRetry(
       });
       
       const timeoutPromise = new Promise<never>((_, reject) => {
-        setTimeout(() => reject(new Error('Claude API timed out after 65 seconds')), timeoutMs);
+        setTimeout(() => reject(new Error('Claude API timed out after 95 seconds')), timeoutMs);
       });
       
       const message = await Promise.race([apiCallPromise, timeoutPromise]);

@@ -400,6 +400,11 @@ export default function ChatPage() {
       actions.setIsGenerating(true);
       actions.setCurrentStep('generating_guidance');
 
+      // Progress indicator - show "still working" message after 20 seconds if API is slow
+      const progressTimer = setTimeout(() => {
+        addBotMessageWithKey('chat.messages.stillWorking');
+      }, 20000);
+
       try {
         const response = await apiRequest('POST', '/api/legal-guidance', {
           jurisdiction: state.caseInfo.state,
@@ -412,6 +417,7 @@ export default function ChatPage() {
           language: i18n.language,
         });
 
+        clearTimeout(progressTimer);
         const data = await response.json();
         
         setIsTyping(false);
@@ -425,6 +431,7 @@ export default function ChatPage() {
         ]);
         
       } catch (error) {
+        clearTimeout(progressTimer);
         console.error('Guidance generation error:', error);
         setIsTyping(false);
         actions.setIsGenerating(false);
