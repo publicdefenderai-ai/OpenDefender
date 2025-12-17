@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Info, Globe, FileSearch, Download, Languages, Home, Moon, Sun, BookOpen } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
@@ -53,46 +53,25 @@ export function Header() {
 
   const menuItems = [
     {
-      title: t('header.menu.getGuidance'),
-      href: "/case-guidance",
+      title: t('header.menu.getHelp'),
+      href: "/chat",
       icon: MessageSquare,
-      description: t('header.menu.getGuidanceDesc'),
-      testId: "menu-case-guidance"
+      description: t('header.menu.getHelpDesc'),
+      testId: "menu-get-help"
     },
     {
-      title: t('header.menu.learnRights'),
+      title: t('header.menu.knowRights'),
       href: "/rights-info",
-      icon: Info,
-      description: t('header.menu.learnRightsDesc'),
-      testId: "menu-rights-info"
+      icon: Shield,
+      description: t('header.menu.knowRightsDesc'),
+      testId: "menu-know-rights"
     },
     {
-      title: t('header.menu.statutes'),
-      href: "/statutes",
-      icon: BookOpen,
-      description: t('header.menu.statutesDesc'),
-      testId: "menu-statutes"
-    },
-    {
-      title: t('header.menu.immigration'),
-      href: "/immigration-guidance",
-      icon: Globe,
-      description: t('header.menu.immigrationDesc'),
-      testId: "menu-immigration-guidance"
-    },
-    {
-      title: t('header.menu.courtRecords'),
-      href: "/court-records",
-      icon: FileSearch,
-      description: t('header.menu.courtRecordsDesc'),
-      testId: "menu-court-records"
-    },
-    {
-      title: t('header.menu.recapExtensions'),
-      href: "/recap-extensions",
-      icon: Download,
-      description: t('header.menu.recapExtensionsDesc'),
-      testId: "menu-recap-extensions"
+      title: t('header.menu.findResources'),
+      href: "/court-locator",
+      icon: MapPin,
+      description: t('header.menu.findResourcesDesc'),
+      testId: "menu-find-resources"
     }
   ];
 

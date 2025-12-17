@@ -41,16 +41,17 @@ const US_STATES: Record<string, string> = {
 };
 
 const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; value: string; color: 'blue' | 'rose' | 'slate' | 'green' | 'purple' | 'amber' }> = {
-  personalized_guidance: { id: 'menu-guidance', labelKey: 'chat.replies.personalizedGuidance', value: 'menu_personalized', color: 'blue' },
+  personalized_guidance: { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' },
   immigration: { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' },
-  rights_info: { id: 'menu-rights', labelKey: 'chat.replies.rightsInfo', value: 'menu_rights', color: 'slate' },
-  resources: { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources', color: 'green' },
+  rights_info: { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' },
+  resources: { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' },
   laws_records: { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' },
 };
 
 function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: CompletedFlow[] = []): QuickReply[] {
-  const allFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources', 'laws_records'];
-  return allFlows
+  // Simplified to 3 main journeys: Get Help, Know Your Rights, Find Resources
+  const mainFlows: CompletedFlow[] = ['personalized_guidance', 'rights_info', 'resources'];
+  return mainFlows
     .filter(flow => flow !== excludeFlow && !completedFlows.includes(flow))
     .map(flow => FLOW_MENU_OPTIONS[flow]);
 }
@@ -127,16 +128,14 @@ export default function ChatPage() {
     
     // If chat is stuck (no quick replies, can't use free text, not in special states)
     if (state.messages.length > 0 && !hasReplies && !isFreeTextStep && !isWelcome && !isGenerating && !isChargeSelection && !isStateSelection) {
-      // Show "What else can I help you with?" with all 5 menu options
+      // Show "What else can I help you with?" with 3 main journey options
       actions.addMessage({
         role: 'bot',
         contentKey: 'chat.messages.whatElse',
         quickReplies: [
-          { id: 'menu-guidance', labelKey: 'chat.replies.personalizedGuidance', value: 'menu_personalized', color: 'blue' as const },
-          { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
-          { id: 'menu-rights', labelKey: 'chat.replies.rightsInfo', value: 'menu_rights', color: 'slate' as const },
-          { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources', color: 'green' as const },
-          { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
+          { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
+          { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
+          { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
         ],
       });
       actions.setCurrentStep('main_menu');
@@ -205,11 +204,9 @@ export default function ChatPage() {
           actions.setCurrentStep('emergency_options');
         } else {
           addBotMessageWithKey('chat.messages.mainMenu', [
-            { id: 'menu-guidance', labelKey: 'chat.replies.personalizedGuidance', value: 'menu_personalized', color: 'blue' as const },
-            { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
-            { id: 'menu-rights', labelKey: 'chat.replies.rightsInfo', value: 'menu_rights', color: 'slate' as const },
-            { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources', color: 'green' as const },
-            { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
+            { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
+            { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
+            { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
           ]);
           actions.setCurrentStep('main_menu');
         }
