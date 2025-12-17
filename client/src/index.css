@@ -80,6 +80,12 @@
     @apply border-border;
   }
   
+  /* Prevent horizontal overflow on mobile */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
