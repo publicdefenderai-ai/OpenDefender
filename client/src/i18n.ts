@@ -1936,7 +1936,7 @@ i18n
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
                   "cornell": "Cornell Legal Information Institute - for legal statutes",
-                  "openLaws": "OpenLaws API - for state statute text and legal data (53 jurisdictions)"
+                  "openLaws": "OpenLaws API - for state statute text and legal data"
                 },
                 "note": "When you use our platform to search these databases, your queries may be transmitted to these services. Personal information is automatically redacted before being sent to AI services. We recommend reviewing their privacy policies if you have concerns about external data access."
               }
@@ -4064,7 +4064,7 @@ i18n
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",
                   "cornell": "Instituto de Información Legal de Cornell - para estatutos legales",
-                  "openLaws": "API de OpenLaws - para texto de estatutos estatales y datos legales (53 jurisdicciones)"
+                  "openLaws": "API de OpenLaws - para texto de estatutos estatales y datos legales"
                 },
                 "note": "Cuando usa nuestra plataforma para buscar en estas bases de datos, sus consultas pueden transmitirse a estos servicios. La información personal se elimina automáticamente antes de enviarse a los servicios de IA. Recomendamos revisar sus políticas de privacidad si tiene inquietudes sobre el acceso a datos externos."
               }
