@@ -1179,10 +1179,9 @@ i18n
                 "org3": "Local legal aid societies",
                 "org4": "Law school immigration clinics",
                 "findingHelp": "Finding Help",
-                "find1": "Call 211 for local resources",
-                "find2": "Search ImmigrationAdvocates.org",
-                "find3": "Contact your local bar association",
-                "find4": "Ask community organizations"
+                "find1": "Search ImmigrationAdvocates.org",
+                "find2": "Contact your local bar association",
+                "find3": "Ask community organizations"
               },
               "reportFraud": {
                 "title": "Report Immigration Fraud",
@@ -3307,10 +3306,9 @@ i18n
                 "org3": "Sociedades locales de ayuda legal",
                 "org4": "Clínicas de inmigración de escuelas de derecho",
                 "findingHelp": "Encontrando Ayuda",
-                "find1": "Llame al 211 para recursos locales",
-                "find2": "Busque en ImmigrationAdvocates.org",
-                "find3": "Contacte a su colegio de abogados local",
-                "find4": "Pregunte a organizaciones comunitarias"
+                "find1": "Busque en ImmigrationAdvocates.org",
+                "find2": "Contacte a su colegio de abogados local",
+                "find3": "Pregunte a organizaciones comunitarias"
               },
               "reportFraud": {
                 "title": "Reportar Fraude de Inmigración",

@@ -351,7 +351,6 @@ export default function FindAttorney() {
                       <li>• {t('immigration.attorney.freeHelp.find1')}</li>
                       <li>• {t('immigration.attorney.freeHelp.find2')}</li>
                       <li>• {t('immigration.attorney.freeHelp.find3')}</li>
-                      <li>• {t('immigration.attorney.freeHelp.find4')}</li>
                     </ul>
                   </div>
                 </div>
