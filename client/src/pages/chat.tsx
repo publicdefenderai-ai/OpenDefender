@@ -145,18 +145,23 @@ export default function ChatPage() {
 
   // Scroll to bottom when messages change or typing indicator appears
   const scrollToBottom = useCallback(() => {
-    setTimeout(() => {
+    // Immediate scroll for mobile responsiveness
+    const doScroll = () => {
       if (messagesEndRef.current) {
-        // Use scrollIntoView with block: 'end' for better mobile support
-        messagesEndRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        
-        // Fallback: also scroll the parent scroll container on mobile
+        // Find the radix scroll viewport
         const scrollContainer = messagesEndRef.current.closest('[data-radix-scroll-area-viewport]');
         if (scrollContainer) {
           scrollContainer.scrollTop = scrollContainer.scrollHeight;
         }
+        // Also try scrollIntoView as fallback
+        messagesEndRef.current.scrollIntoView({ behavior: 'auto', block: 'end' });
       }
-    }, 150);
+    };
+    
+    // Run immediately and again after a short delay for content that loads async
+    doScroll();
+    setTimeout(doScroll, 100);
+    setTimeout(doScroll, 300);
   }, []);
 
   useEffect(() => {
@@ -701,7 +706,7 @@ export default function ChatPage() {
 
           <ProgressDots currentStep={state.currentStep} />
 
-          <ScrollArea className="flex-1 px-4 py-4">
+          <ScrollArea className="flex-1 px-4 py-4 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
             <div className="max-w-2xl mx-auto space-y-1">
               {state.messages.map((message, index) => (
                 <div key={message.id}>
