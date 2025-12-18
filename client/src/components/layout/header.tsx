@@ -96,6 +96,7 @@ export function Header() {
               className="text-muted-foreground hover:text-foreground"
               data-testid="button-home"
               onClick={() => handleNavigate("/")}
+              aria-label="Go to home page"
             >
               <Home className="h-6 w-6" />
             </Button>
@@ -125,6 +126,7 @@ export function Header() {
               onClick={toggleTheme}
               className="text-muted-foreground hover:text-foreground hidden md:flex"
               data-testid="button-theme-toggle"
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             >
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
@@ -136,6 +138,7 @@ export function Header() {
                 className="text-muted-foreground hover:text-foreground"
                 data-testid="button-help"
                 onClick={() => handleNavigate("/how-to")}
+                aria-label="How to use this site"
               >
                 <HelpCircle className="h-5 w-5" />
               </Button>
@@ -148,6 +151,7 @@ export function Header() {
                   size="sm"
                   className="text-muted-foreground hover:text-foreground md:hidden"
                   data-testid="button-menu"
+                  aria-label="Open navigation menu"
                 >
                   <Menu className="h-5 w-5" />
                 </Button>

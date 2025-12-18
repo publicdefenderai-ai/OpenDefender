@@ -829,6 +829,7 @@ export default function ChatPage() {
                     size="icon"
                     className="h-8 w-8"
                     data-testid="button-language-toggle"
+                    aria-label="Change language"
                   >
                     <Globe className="h-4 w-4" />
                   </Button>
@@ -857,6 +858,7 @@ export default function ChatPage() {
                 onClick={toggleTheme}
                 className="h-8 w-8"
                 data-testid="button-theme-toggle"
+                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               >
                 {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </Button>
@@ -867,6 +869,7 @@ export default function ChatPage() {
                 onClick={handleClose}
                 className="hidden md:flex"
                 data-testid="button-close-chat"
+                aria-label="Close chat"
               >
                 <X className="h-5 w-5" />
               </Button>
@@ -876,7 +879,7 @@ export default function ChatPage() {
           <ProgressDots currentStep={state.currentStep} />
 
           <ScrollArea className="flex-1 px-4 py-4 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
-            <div className="max-w-2xl mx-auto space-y-1">
+            <div className="max-w-2xl mx-auto space-y-1" role="log" aria-live="polite" aria-label="Chat messages">
               {state.messages.map((message, index) => (
                 <div key={message.id}>
                   <MessageBubble 

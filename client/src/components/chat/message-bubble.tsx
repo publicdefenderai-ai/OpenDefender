@@ -95,7 +95,7 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
           "rounded-2xl px-4 py-3 max-w-[80%]",
           isBot 
             ? "bg-muted text-foreground rounded-tl-sm" 
-            : "bg-primary text-primary-foreground rounded-tr-sm max-w-[70%]"
+            : "bg-primary/90 dark:bg-primary/80 text-white rounded-tr-sm max-w-[70%]"
         )}
       >
         <div className="text-[15px] leading-relaxed whitespace-pre-wrap">
