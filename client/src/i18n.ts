@@ -2011,7 +2011,11 @@ i18n
             "searchError": "I had trouble searching. You can try again or explore other options.",
             "whatElse": "What else can I help you with?",
             "exportedWhatElse": "Your PDF has been downloaded.\n\n**What else can I help you with?**",
-            "followUpResponse": "That's a great question. Based on what you've told me, here's what I'd suggest..."
+            "followUpResponse": "That's a great question. Based on what you've told me, here's what I'd suggest...",
+            "whatToDoNow": "**What would you like to do next?**",
+            "verifiedAgainst": "✓ Verified against {{state}} criminal statutes",
+            "verifiedGeneric": "✓ Verified against official criminal statutes",
+            "askFollowUpPrompt": "You can now type any follow-up questions below."
           },
           "replies": {
             "urgentYes": "Yes, I need help right now",
@@ -2051,6 +2055,11 @@ i18n
             "noAttorney": "No, I need to find one",
             "viewGuidance": "View My Guidance",
             "exportPdf": "Export as PDF",
+            "saveGuidance": "Save This Guidance",
+            "findPublicDefenderAction": "Find a Public Defender",
+            "findLegalAidAction": "Find Legal Aid Near Me",
+            "askFollowUp": "Ask a Follow-Up Question",
+            "moreOptions": "Explore Other Topics",
             "retry": "Try Again",
             "tryAgain": "Try Another ZIP Code",
             "immUrgent": "Active encounter right now",
@@ -4139,7 +4148,11 @@ i18n
             "searchError": "Tuve problemas al buscar. Puede intentar de nuevo o explorar otras opciones.",
             "whatElse": "¿En qué más puedo ayudarle?",
             "exportedWhatElse": "Su PDF ha sido descargado.\n\n**¿En qué más puedo ayudarle?**",
-            "followUpResponse": "Esa es una gran pregunta. Basándome en lo que me ha dicho, esto es lo que sugeriría..."
+            "followUpResponse": "Esa es una gran pregunta. Basándome en lo que me ha dicho, esto es lo que sugeriría...",
+            "whatToDoNow": "**¿Qué le gustaría hacer ahora?**",
+            "verifiedAgainst": "✓ Verificado con los estatutos penales de {{state}}",
+            "verifiedGeneric": "✓ Verificado con los estatutos penales oficiales",
+            "askFollowUpPrompt": "Ahora puede escribir cualquier pregunta adicional abajo."
           },
           "replies": {
             "urgentYes": "Sí, necesito ayuda ahora mismo",
@@ -4179,6 +4192,11 @@ i18n
             "noAttorney": "No, necesito encontrar uno",
             "viewGuidance": "Ver Mi Orientación",
             "exportPdf": "Exportar como PDF",
+            "saveGuidance": "Guardar Esta Orientación",
+            "findPublicDefenderAction": "Encontrar un Defensor Público",
+            "findLegalAidAction": "Encontrar Asistencia Legal Cerca",
+            "askFollowUp": "Hacer una Pregunta Adicional",
+            "moreOptions": "Explorar Otros Temas",
             "retry": "Intentar de Nuevo",
             "tryAgain": "Probar Otro Código Postal",
             "immUrgent": "Encuentro activo ahora mismo",

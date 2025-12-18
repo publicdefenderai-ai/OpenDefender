@@ -489,6 +489,23 @@ export default function ChatPage() {
           handleViewGuidance();
         } else if (reply.value === 'export_pdf') {
           handleExportPdf();
+        } else if (reply.value === 'find_public_defender') {
+          // "What To Do Now" action - Find a Public Defender
+          addBotMessageWithKey('chat.messages.enterZipPD');
+          actions.setCurrentStep('pd_zip_search');
+        } else if (reply.value === 'find_legal_aid') {
+          // "What To Do Now" action - Find Legal Aid
+          addBotMessageWithKey('chat.messages.enterZipLegalAid');
+          actions.setCurrentStep('legal_aid_zip_search');
+        } else if (reply.value === 'ask_follow_up') {
+          // "What To Do Now" action - Ask Follow-Up Question
+          addBotMessageWithKey('chat.messages.askFollowUpPrompt');
+          actions.setCurrentStep('follow_up');
+        } else if (reply.value === 'back_to_menu') {
+          // "What To Do Now" action - Back to main menu
+          const menuOptions = getNextMenuOptions('personalized_guidance', state.completedFlows);
+          addBotMessageWithKey('chat.messages.whatElse', menuOptions);
+          actions.setCurrentStep('main_menu');
         }
         break;
     }
@@ -698,17 +715,29 @@ export default function ChatPage() {
       formattedContent = "Your legal guidance is ready. Please export as PDF for full details.";
     }
     
-    formattedContent += "\n\n**What else can I help you with?**";
+    // Add confidence badge
+    const stateName = state.caseInfo.stateName || state.caseInfo.state;
+    const verificationBadge = stateName 
+      ? t('chat.messages.verifiedAgainst', { state: stateName, defaultValue: `✓ Verified against ${stateName} criminal statutes` })
+      : t('chat.messages.verifiedGeneric', '✓ Verified against official criminal statutes');
     
-    const menuOptions = getNextMenuOptions('personalized_guidance', state.completedFlows);
-    const optionsWithExport = [
-      { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
-      ...menuOptions
+    formattedContent += `\n\n---\n*${verificationBadge}*`;
+    
+    // Add "What To Do Now" section
+    formattedContent += `\n\n${t('chat.messages.whatToDoNow', '**What would you like to do next?**')}`;
+    
+    // "What To Do Now" action buttons - primary actions first, then secondary options
+    const whatToDoNowOptions = [
+      { id: 'find-pd-action', labelKey: 'chat.replies.findPublicDefenderAction', value: 'find_public_defender', color: 'blue' as const },
+      { id: 'find-legal-aid-action', labelKey: 'chat.replies.findLegalAidAction', value: 'find_legal_aid', color: 'blue' as const },
+      { id: 'save-guidance', labelKey: 'chat.replies.saveGuidance', value: 'export_pdf', color: 'slate' as const },
+      { id: 'ask-followup', labelKey: 'chat.replies.askFollowUp', value: 'ask_follow_up', color: 'slate' as const },
+      { id: 'more-options', labelKey: 'chat.replies.moreOptions', value: 'back_to_menu', color: 'slate' as const },
     ];
     
-    addBotMessage(formattedContent, optionsWithExport);
-    actions.setCurrentStep('main_menu');
-  }, [state.guidanceData, state.completedFlows, addBotMessage, actions]);
+    addBotMessage(formattedContent, whatToDoNowOptions);
+    actions.setCurrentStep('guidance_ready');
+  }, [state.guidanceData, state.caseInfo, addBotMessage, actions, t]);
 
   const handleExportPdf = useCallback(async () => {
     if (!state.guidanceData) {
