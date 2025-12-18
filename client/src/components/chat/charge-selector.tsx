@@ -141,8 +141,8 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
             </div>
           </div>
 
-          <ScrollArea className="h-56">
-            <div className="p-2 space-y-1">
+          <ScrollArea className="h-56 overflow-x-hidden">
+            <div className="p-2 space-y-1 overflow-hidden">
               {isLoading ? (
                 <div className="flex items-center justify-center py-8">
                   <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
@@ -175,9 +175,9 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                       )}>
                         {isSelected && <Check className="h-3 w-3" />}
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className={cn("truncate", isSelected && "font-medium")}>{charge.name}</span>
+                      <div className="flex-1 min-w-0 overflow-hidden">
+                        <div className="flex flex-wrap items-start gap-1">
+                          <span className={cn("break-words", isSelected && "font-medium")}>{charge.name}</span>
                           <Badge 
                             variant="outline" 
                             className={cn(
@@ -190,7 +190,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                             {getCategoryLabel(charge.category)}
                           </Badge>
                         </div>
-                        <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{charge.description}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
                       </div>
                     </motion.button>
                   );
