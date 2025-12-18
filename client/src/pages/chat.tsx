@@ -855,7 +855,7 @@ export default function ChatPage() {
                     isLatest={index === state.messages.length - 1}
                   />
                   {message.quickReplies && index === state.messages.length - 1 && (
-                    <div className="ml-11">
+                    <div className="ml-0 sm:ml-11">
                       <QuickReplyButtons
                         replies={message.quickReplies}
                         onSelect={handleQuickReply}
@@ -877,7 +877,7 @@ export default function ChatPage() {
               </AnimatePresence>
               
               {showChargeSelector && state.caseInfo.state && (
-                <div className="ml-11 mt-3">
+                <div className="ml-0 sm:ml-11 mt-3">
                   <ChargeSelector
                     jurisdiction={state.caseInfo.state}
                     onSelect={handleChargesSelect}
@@ -886,7 +886,7 @@ export default function ChatPage() {
               )}
 
               {state.currentStep === 'state_selection' && !showChargeSelector && (
-                <div className="ml-11 mt-3">
+                <div className="ml-0 sm:ml-11 mt-3">
                   <StateSelector onSelect={handleStateSelect} />
                 </div>
               )}

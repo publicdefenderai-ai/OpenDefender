@@ -43,7 +43,7 @@ export function StateSelector({ onSelect }: StateSelectorProps) {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-background border border-border rounded-xl overflow-hidden"
+      className="bg-background border border-border rounded-xl overflow-hidden w-full max-w-full"
     >
       <div className="p-3 border-b border-border">
         <div className="relative">
