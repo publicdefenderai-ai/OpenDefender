@@ -517,7 +517,7 @@ export default function ChatPage() {
     actions.addMessage({ role: 'user', content: stateName });
     actions.updateCaseInfo({ state: stateCode, stateName });
     
-    addBotMessageWithKey('chat.messages.chargeQuestion', undefined, { stateName });
+    addBotMessageWithKey('chat.messages.chargeQuestion', undefined, { state: stateName });
     setShowChargeSelector(true);
     actions.setCurrentStep('charge_selection');
   }, [actions, addBotMessageWithKey]);
