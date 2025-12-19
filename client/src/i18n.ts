@@ -1931,7 +1931,7 @@ i18n
                 "title": "External Data Sources",
                 "description": "Our platform accesses public legal databases and services to provide you with information:",
                 "services": {
-                  "anthropic": "Anthropic Claude AI - for generating legal guidance (with PII redacted before processing)",
+                  "anthropic": "Anthropic Claude Sonnet 4 - for generating legal guidance (with PII redacted before processing)",
                   "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
@@ -4068,7 +4068,7 @@ i18n
                 "title": "Fuentes de Datos Externas",
                 "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
                 "services": {
-                  "anthropic": "Anthropic Claude AI - para generar orientación legal (con información personal eliminada antes del procesamiento)",
+                  "anthropic": "Anthropic Claude Sonnet 4 - para generar orientación legal (con información personal eliminada antes del procesamiento)",
                   "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",

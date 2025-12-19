@@ -116,6 +116,33 @@ export default function Disclaimers() {
           </div>
         </ScrollReveal>
 
+        {/* AI Technology Disclosure */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              AI Technology Disclosure
+            </h2>
+            
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  PublicDefenderAI uses artificial intelligence to help generate legal guidance. Specifically, we use <strong className="text-foreground">Anthropic's Claude Sonnet 4</strong>, a large language model, to analyze your situation and provide information.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Important:</strong> AI-generated guidance is not a substitute for advice from a licensed attorney. While we verify responses against legal databases, AI can make mistakes. Always consult with a qualified lawyer for legal decisions.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Your privacy:</strong> Before your case details are sent to the AI, we automatically remove personal information like names, phone numbers, and addresses. See our{" "}
+                  <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
+                    Privacy Policy
+                  </Link>{" "}
+                  for details.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
         {/* About Third-Party Tools */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
