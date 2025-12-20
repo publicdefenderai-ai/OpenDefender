@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
@@ -184,12 +184,8 @@ export default function DocumentLibrary() {
       
       <section className="vivid-header py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full mb-4">
-            <FileText className="h-4 w-4 text-white" />
-            <span className="text-sm text-white font-medium">{t('documentLibrary.badge', 'Legal Document Guide')}</span>
-          </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
-            {t('documentLibrary.title', 'Legal Documents Library')}
+            {t('documentLibrary.title', 'Case Documents Library')}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
             {t('documentLibrary.subtitle', 'Understand the documents you may receive during your case. Each section is explained in plain language.')}

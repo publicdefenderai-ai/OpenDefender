@@ -1963,8 +1963,7 @@ i18n
             }
           },
           "documentLibrary": {
-            "badge": "Legal Document Guide",
-            "title": "Legal Documents Library",
+            "title": "Case Documents Library",
             "subtitle": "Understand the documents you may receive during your case. Each section is explained in plain language.",
             "importance": {
               "critical": "Critical",
@@ -4344,8 +4343,7 @@ i18n
             }
           },
           "documentLibrary": {
-            "badge": "Guía de Documentos Legales",
-            "title": "Biblioteca de Documentos Legales",
+            "title": "Biblioteca de Documentos del Caso",
             "subtitle": "Comprenda los documentos que puede recibir durante su caso. Cada sección se explica en lenguaje sencillo.",
             "importance": {
               "critical": "Crítico",
