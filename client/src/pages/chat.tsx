@@ -148,6 +148,7 @@ export default function ChatPage() {
           { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
           { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
           { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
+          { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
         ],
       });
       actions.setCurrentStep('main_menu');
@@ -220,6 +221,7 @@ export default function ChatPage() {
             { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
             { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
             { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
+            { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
           ]);
           actions.setCurrentStep('main_menu');
         }
@@ -258,6 +260,7 @@ export default function ChatPage() {
           addBotMessageWithKey('chat.messages.lawsMenu', [
             { id: 'laws-court', labelKey: 'chat.replies.courtRecords', value: 'laws_court', color: 'purple' as const },
             { id: 'laws-statutes', labelKey: 'chat.replies.statutesSearch', value: 'laws_statutes', color: 'purple' as const },
+            { id: 'laws-documents', labelKey: 'chat.replies.documentLibrary', value: 'laws_documents', color: 'purple' as const },
           ]);
           actions.setCurrentStep('laws_records_menu');
         } else if (reply.value === 'resources_pd') {
@@ -312,6 +315,9 @@ export default function ChatPage() {
           actions.markFlowCompleted('laws_records');
         } else if (reply.value === 'laws_statutes') {
           setLocation('/statutes');
+          actions.markFlowCompleted('laws_records');
+        } else if (reply.value === 'laws_documents') {
+          setLocation('/document-library');
           actions.markFlowCompleted('laws_records');
         }
         break;

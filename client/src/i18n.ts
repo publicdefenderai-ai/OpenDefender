@@ -427,8 +427,8 @@ i18n
                 "description": "Find legal help and support services"
               },
               "lawsRecords": {
-                "title": "Laws and Records",
-                "description": "Find statutes, case law, and court records"
+                "title": "Laws, Records, & Templates",
+                "description": "Find statutes, case law, court records, and document guides"
               }
             },
             "legalRightsSubmenu": {
@@ -449,10 +449,11 @@ i18n
               "recordsExpungement": "Records Expungement"
             },
             "lawsRecordsSubmenu": {
-              "title": "Laws and Records",
+              "title": "Laws, Records, & Templates",
               "backButton": "Back to Main Menu",
               "courtRecords": "Court Records Search",
-              "statutes": "Statutes Search"
+              "statutes": "Statutes Search",
+              "documentLibrary": "Document Library"
             }
           },
           "case": {
@@ -2269,7 +2270,7 @@ i18n
             "immigrationEnforcement": "Immigration Enforcement",
             "rightsInfo": "Rights Info",
             "resources": "Resources",
-            "lawsRecords": "Laws & Records",
+            "lawsRecords": "Laws, Records, & Templates",
             "myRights": "My Rights",
             "criminalJusticeProcess": "Criminal Justice Process",
             "constitutionalRights": "Constitutional Rights",
@@ -2283,6 +2284,7 @@ i18n
             "recordExpungement": "Record Expungement",
             "courtRecords": "Court Records Search",
             "statutesSearch": "Statutes Search",
+            "documentLibrary": "Document Library",
             "stageArrest": "Just arrested / under investigation",
             "stageArraignment": "Arraignment coming up",
             "stagePretrial": "Pre-trial proceedings",
@@ -2806,8 +2808,8 @@ i18n
                 "description": "Encuentre ayuda legal y servicios de apoyo"
               },
               "lawsRecords": {
-                "title": "Leyes y Registros",
-                "description": "Buscar estatutos, jurisprudencia y registros judiciales"
+                "title": "Leyes, Registros y Plantillas",
+                "description": "Buscar estatutos, jurisprudencia, registros judiciales y guías de documentos"
               }
             },
             "legalRightsSubmenu": {
@@ -2828,10 +2830,11 @@ i18n
               "recordsExpungement": "Eliminación de Antecedentes"
             },
             "lawsRecordsSubmenu": {
-              "title": "Leyes y Registros",
+              "title": "Leyes, Registros y Plantillas",
               "backButton": "Volver al Menú Principal",
               "courtRecords": "Búsqueda de Registros Judiciales",
-              "statutes": "Búsqueda de Estatutos"
+              "statutes": "Búsqueda de Estatutos",
+              "documentLibrary": "Biblioteca de Documentos"
             }
           },
           "case": {
@@ -4648,7 +4651,7 @@ i18n
             "immigrationEnforcement": "Aplicación de Inmigración",
             "rightsInfo": "Info de Derechos",
             "resources": "Recursos",
-            "lawsRecords": "Leyes y Registros",
+            "lawsRecords": "Leyes, Registros y Plantillas",
             "myRights": "Mis Derechos",
             "criminalJusticeProcess": "Proceso de Justicia Penal",
             "constitutionalRights": "Derechos Constitucionales",
@@ -4662,6 +4665,7 @@ i18n
             "recordExpungement": "Eliminación de Antecedentes",
             "courtRecords": "Búsqueda de Registros Judiciales",
             "statutesSearch": "Búsqueda de Estatutos",
+            "documentLibrary": "Biblioteca de Documentos",
             "stageArrest": "Recién arrestado / bajo investigación",
             "stageArraignment": "Lectura de cargos próxima",
             "stagePretrial": "Procedimientos pre-juicio",
