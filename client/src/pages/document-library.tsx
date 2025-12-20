@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, Filter, ChevronDown, ChevronUp, AlertTriangle, Info, CheckCircle2, ExternalLink } from "lucide-react";
+import { FileText, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
@@ -38,27 +38,23 @@ function ImportanceBadge({ level }: { level: LegalDocument['importanceLevel'] })
   
   const config = {
     critical: { 
-      icon: AlertTriangle, 
       className: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border-red-200 dark:border-red-800",
       label: t('documentLibrary.importance.critical', 'Critical')
     },
     important: { 
-      icon: Info, 
       className: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 border-amber-200 dark:border-amber-800",
       label: t('documentLibrary.importance.important', 'Important')
     },
     informational: { 
-      icon: CheckCircle2, 
       className: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-800",
       label: t('documentLibrary.importance.informational', 'Informational')
     },
   };
 
-  const { icon: Icon, className, label } = config[level];
+  const { className, label } = config[level];
 
   return (
-    <Badge variant="outline" className={`${className} flex items-center gap-1`}>
-      <Icon className="h-3 w-3" />
+    <Badge variant="outline" className={className}>
       {label}
     </Badge>
   );
@@ -72,10 +68,7 @@ function DocumentCard({ document }: { document: LegalDocument }) {
     <Card className="overflow-hidden" data-testid={`document-card-${document.slug}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-3">
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <FileText className="h-5 w-5 text-primary" />
-            </div>
+          <div className="flex-1">
             <div>
               <CardTitle className="text-lg leading-tight">
                 {t(document.titleKey)}
@@ -178,10 +171,7 @@ export default function DocumentLibrary() {
     const matchesPhase = selectedPhase === 'all' || doc.phases.includes(selectedPhase as CasePhase);
     const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
     return matchesPhase && matchesCategory;
-  }).sort((a, b) => {
-    const priorityOrder = { critical: 0, important: 1, informational: 2 };
-    return priorityOrder[a.importanceLevel] - priorityOrder[b.importanceLevel];
-  });
+  }).sort((a, b) => a.displayOrder - b.displayOrder);
 
   const criminalDocs = filteredDocuments.filter(d => d.category === 'criminal');
   const immigrationDocs = filteredDocuments.filter(d => d.category === 'immigration');
@@ -212,10 +202,7 @@ export default function DocumentLibrary() {
           <Card className="mb-8">
             <CardContent className="p-4 md:p-6">
               <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Filter className="h-4 w-4" />
-                  <span className="text-sm font-medium">{t('documentLibrary.filter.label', 'Filter by:')}</span>
-                </div>
+                <span className="text-sm font-medium text-muted-foreground">{t('documentLibrary.filter.label', 'Filter by:')}</span>
                 
                 <div className="flex flex-wrap gap-3 flex-1">
                   <Select value={selectedPhase} onValueChange={(v) => setSelectedPhase(v as CasePhase | 'all')}>
@@ -331,7 +318,6 @@ export default function DocumentLibrary() {
                 <Link href="/chat">
                   <Button data-testid="button-get-guidance">
                     {t('documentLibrary.cta.button', 'Get Guidance')}
-                    <ExternalLink className="h-4 w-4 ml-2" />
                   </Button>
                 </Link>
               </div>

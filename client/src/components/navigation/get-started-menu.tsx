@@ -17,7 +17,8 @@ import {
   Eraser,
   Book,
   Home as HomeIcon,
-  FileSearch
+  FileSearch,
+  FileText
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -423,6 +424,23 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               <Book className="h-5 w-5 text-green-600" />
               <span className="font-medium group-hover:text-green-600 transition-colors">
                 {t('getStartedMenu.lawsRecordsSubmenu.statutes')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/document-library')}
+        className="w-full"
+        data-testid="submenu-item-document-library"
+      >
+        <Card className="hover:shadow-md hover:border-purple-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <FileText className="h-5 w-5 text-purple-600" />
+              <span className="font-medium group-hover:text-purple-600 transition-colors">
+                {t('getStartedMenu.lawsRecordsSubmenu.documentLibrary')}
               </span>
             </div>
           </CardContent>

@@ -427,7 +427,7 @@ i18n
                 "description": "Find legal help and support services"
               },
               "lawsRecords": {
-                "title": "Laws, Records, & Templates",
+                "title": "Legal Resources",
                 "description": "Find statutes, case law, court records, and document guides"
               }
             },
@@ -449,7 +449,7 @@ i18n
               "recordsExpungement": "Records Expungement"
             },
             "lawsRecordsSubmenu": {
-              "title": "Laws, Records, & Templates",
+              "title": "Legal Resources",
               "backButton": "Back to Main Menu",
               "courtRecords": "Court Records Search",
               "statutes": "Statutes Search",
@@ -2270,7 +2270,7 @@ i18n
             "immigrationEnforcement": "Immigration Enforcement",
             "rightsInfo": "Rights Info",
             "resources": "Resources",
-            "lawsRecords": "Laws, Records, & Templates",
+            "lawsRecords": "Legal Resources",
             "myRights": "My Rights",
             "criminalJusticeProcess": "Criminal Justice Process",
             "constitutionalRights": "Constitutional Rights",
@@ -2808,7 +2808,7 @@ i18n
                 "description": "Encuentre ayuda legal y servicios de apoyo"
               },
               "lawsRecords": {
-                "title": "Leyes, Registros y Plantillas",
+                "title": "Recursos Legales",
                 "description": "Buscar estatutos, jurisprudencia, registros judiciales y guías de documentos"
               }
             },
@@ -2830,7 +2830,7 @@ i18n
               "recordsExpungement": "Eliminación de Antecedentes"
             },
             "lawsRecordsSubmenu": {
-              "title": "Leyes, Registros y Plantillas",
+              "title": "Recursos Legales",
               "backButton": "Volver al Menú Principal",
               "courtRecords": "Búsqueda de Registros Judiciales",
               "statutes": "Búsqueda de Estatutos",
@@ -4651,7 +4651,7 @@ i18n
             "immigrationEnforcement": "Aplicación de Inmigración",
             "rightsInfo": "Info de Derechos",
             "resources": "Recursos",
-            "lawsRecords": "Leyes, Registros y Plantillas",
+            "lawsRecords": "Recursos Legales",
             "myRights": "Mis Derechos",
             "criminalJusticeProcess": "Proceso de Justicia Penal",
             "constitutionalRights": "Derechos Constitucionales",

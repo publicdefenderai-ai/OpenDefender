@@ -22,6 +22,7 @@ export interface LegalDocument {
   category: DocumentCategory;
   phases: CasePhase[];
   importanceLevel: ImportanceLevel;
+  displayOrder: number;
   formNumber?: string;
   titleKey: string;
   descriptionKey: string;
@@ -37,6 +38,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['just_arrested'],
     importanceLevel: 'critical',
+    displayOrder: 1,
     titleKey: 'documents.citationTicket.title',
     descriptionKey: 'documents.citationTicket.description',
     purposeKey: 'documents.citationTicket.purpose',
@@ -54,6 +56,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['just_arrested'],
     importanceLevel: 'important',
+    displayOrder: 2,
     titleKey: 'documents.arrestWarrant.title',
     descriptionKey: 'documents.arrestWarrant.description',
     purposeKey: 'documents.arrestWarrant.purpose',
@@ -70,6 +73,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['just_arrested'],
     importanceLevel: 'critical',
+    displayOrder: 3,
     titleKey: 'documents.propertyVoucher.title',
     descriptionKey: 'documents.propertyVoucher.description',
     purposeKey: 'documents.propertyVoucher.purpose',
@@ -86,6 +90,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['just_arrested'],
     importanceLevel: 'important',
+    displayOrder: 4,
     titleKey: 'documents.bookingPapers.title',
     descriptionKey: 'documents.bookingPapers.description',
     purposeKey: 'documents.bookingPapers.purpose',
@@ -102,6 +107,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['just_arrested'],
     importanceLevel: 'informational',
+    displayOrder: 5,
     titleKey: 'documents.mirandaAcknowledgment.title',
     descriptionKey: 'documents.mirandaAcknowledgment.description',
     purposeKey: 'documents.mirandaAcknowledgment.purpose',
@@ -117,6 +123,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['arraignment'],
     importanceLevel: 'critical',
+    displayOrder: 6,
     titleKey: 'documents.criminalComplaint.title',
     descriptionKey: 'documents.criminalComplaint.description',
     purposeKey: 'documents.criminalComplaint.purpose',
@@ -133,6 +140,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['just_arrested', 'arraignment'],
     importanceLevel: 'critical',
+    displayOrder: 7,
     titleKey: 'documents.arraignmentNotice.title',
     descriptionKey: 'documents.arraignmentNotice.description',
     purposeKey: 'documents.arraignmentNotice.purpose',
@@ -149,6 +157,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['arraignment'],
     importanceLevel: 'critical',
+    displayOrder: 8,
     titleKey: 'documents.bailBondOrder.title',
     descriptionKey: 'documents.bailBondOrder.description',
     purposeKey: 'documents.bailBondOrder.purpose',
@@ -165,6 +174,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['pretrial'],
     importanceLevel: 'critical',
+    displayOrder: 9,
     titleKey: 'documents.discoveryDocuments.title',
     descriptionKey: 'documents.discoveryDocuments.description',
     purposeKey: 'documents.discoveryDocuments.purpose',
@@ -181,6 +191,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['pretrial'],
     importanceLevel: 'critical',
+    displayOrder: 10,
     titleKey: 'documents.pleaOffer.title',
     descriptionKey: 'documents.pleaOffer.description',
     purposeKey: 'documents.pleaOffer.purpose',
@@ -197,6 +208,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['pretrial', 'trial'],
     importanceLevel: 'important',
+    displayOrder: 11,
     titleKey: 'documents.subpoena.title',
     descriptionKey: 'documents.subpoena.description',
     purposeKey: 'documents.subpoena.purpose',
@@ -212,6 +224,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'criminal',
     phases: ['sentencing'],
     importanceLevel: 'critical',
+    displayOrder: 12,
     titleKey: 'documents.sentencingOrder.title',
     descriptionKey: 'documents.sentencingOrder.description',
     purposeKey: 'documents.sentencingOrder.purpose',
@@ -229,6 +242,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'immigration',
     phases: ['just_arrested'],
     importanceLevel: 'critical',
+    displayOrder: 101,
     formNumber: 'I-862',
     titleKey: 'documents.noticeToAppearI862.title',
     descriptionKey: 'documents.noticeToAppearI862.description',
@@ -247,6 +261,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'immigration',
     phases: ['just_arrested'],
     importanceLevel: 'important',
+    displayOrder: 102,
     formNumber: 'I-213',
     titleKey: 'documents.recordDeportableAlienI213.title',
     descriptionKey: 'documents.recordDeportableAlienI213.description',
@@ -263,6 +278,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'immigration',
     phases: ['arraignment'],
     importanceLevel: 'critical',
+    displayOrder: 103,
     titleKey: 'documents.bondHearingNotice.title',
     descriptionKey: 'documents.bondHearingNotice.description',
     purposeKey: 'documents.bondHearingNotice.purpose',
@@ -278,6 +294,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'immigration',
     phases: ['sentencing', 'post_conviction'],
     importanceLevel: 'critical',
+    displayOrder: 104,
     formNumber: 'I-205',
     titleKey: 'documents.warrantOfRemovalI205.title',
     descriptionKey: 'documents.warrantOfRemovalI205.description',
@@ -294,6 +311,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'immigration',
     phases: ['post_conviction'],
     importanceLevel: 'critical',
+    displayOrder: 105,
     formNumber: 'I-220B',
     titleKey: 'documents.orderOfSupervisionI220B.title',
     descriptionKey: 'documents.orderOfSupervisionI220B.description',
@@ -310,6 +328,7 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
     category: 'immigration',
     phases: ['just_arrested'],
     importanceLevel: 'critical',
+    displayOrder: 106,
     formNumber: 'I-860',
     titleKey: 'documents.expeditedRemovalI860.title',
     descriptionKey: 'documents.expeditedRemovalI860.description',
@@ -327,10 +346,7 @@ export function getDocumentsForPhase(phase: CasePhase, category?: DocumentCatego
     const matchesPhase = doc.phases.includes(phase);
     const matchesCategory = category ? doc.category === category : true;
     return matchesPhase && matchesCategory;
-  }).sort((a, b) => {
-    const priorityOrder: Record<ImportanceLevel, number> = { critical: 0, important: 1, informational: 2 };
-    return priorityOrder[a.importanceLevel] - priorityOrder[b.importanceLevel];
-  });
+  }).sort((a, b) => a.displayOrder - b.displayOrder);
 }
 
 export function getCriticalDocumentsForPhase(phase: CasePhase, category?: DocumentCategory): LegalDocument[] {
