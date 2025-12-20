@@ -25,6 +25,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
+import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 
 const US_STATES: Record<string, string> = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -709,6 +710,20 @@ export default function ChatPage() {
     
     if (data.resources && data.resources.length > 0) {
       formattedContent += `**Resources**\n${data.resources.map(r => `• ${r.type}: ${r.description}`).join('\n')}`;
+    }
+    
+    // Add Documents You Should Have section based on case stage
+    const casePhase = mapCaseStageToPhase(state.caseInfo.courtStage || 'just_arrested');
+    const relevantDocuments = getDocumentsForPhase(casePhase, 'criminal');
+    if (relevantDocuments.length > 0) {
+      formattedContent += `\n\n**${t('documents.guidance.documentsSection.title', 'Documents You Should Have')}**\n`;
+      formattedContent += `${t('documents.guidance.documentsSection.description', 'Based on your case stage, you should have received these important documents.')}\n`;
+      relevantDocuments.slice(0, 5).forEach((doc: LegalDocument) => {
+        const docTitle = t(doc.titleKey);
+        const importanceLabel = t(`documentLibrary.importance.${doc.importanceLevel}`);
+        formattedContent += `• ${docTitle} (${importanceLabel})\n`;
+      });
+      formattedContent += `\n[${t('documents.guidance.documentsSection.viewLibrary', 'View All Documents')}](/document-library)`;
     }
     
     if (!formattedContent) {

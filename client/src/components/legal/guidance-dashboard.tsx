@@ -40,6 +40,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { criminalCharges } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
+import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 
 interface ImmediateAction {
   action: string;
@@ -502,6 +503,94 @@ function YourChargesSection({
   );
 }
 
+function DocumentsSection({ caseStage }: { caseStage: string }) {
+  const { t } = useTranslation();
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const phase = mapCaseStageToPhase(caseStage || 'just_arrested');
+  const documents = getDocumentsForPhase(phase, 'criminal');
+  
+  if (documents.length === 0) return null;
+  
+  const importanceBadgeColor: Record<string, string> = {
+    critical: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
+    important: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400',
+    informational: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
+  };
+  
+  return (
+    <Card className="border-border">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-foreground">
+          <FileText className="h-5 w-5 text-muted-foreground" />
+          {t('documents.guidance.documentsSection.title', 'Documents You Should Have')}
+        </CardTitle>
+        <p className="text-sm text-muted-foreground mt-1">
+          {t('documents.guidance.documentsSection.description', 'Based on your case stage, you should have received these important documents. Click any document to learn more.')}
+        </p>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="space-y-2">
+          {documents.slice(0, isExpanded ? undefined : 4).map((doc: LegalDocument) => (
+            <Link
+              key={doc.id}
+              href={`/document-library#${doc.slug}`}
+              className="block"
+            >
+              <div 
+                className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors cursor-pointer"
+                data-testid={`doc-link-${doc.id}`}
+              >
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-sm text-foreground truncate">
+                    {t(doc.titleKey)}
+                  </p>
+                  <p className="text-xs text-muted-foreground truncate mt-0.5">
+                    {t(doc.descriptionKey)}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 ml-3 shrink-0">
+                  <span className={`text-xs px-2 py-0.5 rounded-full ${importanceBadgeColor[doc.importanceLevel]}`}>
+                    {t(`documentLibrary.importance.${doc.importanceLevel}`)}
+                  </span>
+                  <ChevronRight className="h-4 w-4 text-muted-foreground" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        {documents.length > 4 && (
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-full mt-3 text-muted-foreground hover:text-foreground"
+            data-testid="button-expand-documents"
+          >
+            {isExpanded 
+              ? t('common.showLess', 'Show Less') 
+              : t('common.showMore', 'Show {{count}} More', { count: documents.length - 4 })
+            }
+            <ChevronDown className={`h-4 w-4 ml-1 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+          </Button>
+        )}
+        
+        <Link href="/document-library" className="block mt-4">
+          <Button 
+            variant="outline" 
+            className="w-full"
+            data-testid="button-view-document-library"
+          >
+            <BookOpen className="h-4 w-4 mr-2" />
+            {t('documents.guidance.documentsSection.viewLibrary', 'View All Documents')}
+          </Button>
+        </Link>
+      </CardContent>
+    </Card>
+  );
+}
+
 export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport }: GuidanceDashboardProps) {
   const { t, i18n } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
@@ -771,6 +860,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           caseStage={guidance.caseData.caseStage}
         />
       )}
+
+      {/* Documents You Should Have Section */}
+      <DocumentsSection caseStage={guidance.caseData.caseStage} />
 
       {/* Urgent Deadlines */}
       {getUrgentDeadlines().length > 0 && (
