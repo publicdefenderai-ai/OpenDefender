@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
@@ -65,6 +65,13 @@ export function Header() {
       icon: Shield,
       description: t('header.menu.knowRightsDesc'),
       testId: "menu-know-rights"
+    },
+    {
+      title: t('header.menu.documentLibrary'),
+      href: "/document-library",
+      icon: FileText,
+      description: t('header.menu.documentLibraryDesc'),
+      testId: "menu-document-library"
     },
     {
       title: t('header.menu.findResources'),

@@ -29,6 +29,8 @@ i18n
               "getHelpDesc": "Chat with our AI for personalized legal guidance",
               "knowRights": "Know Your Rights",
               "knowRightsDesc": "Learn about your constitutional protections",
+              "documentLibrary": "Document Library",
+              "documentLibraryDesc": "Understand the legal documents in your case",
               "findResources": "Find Resources",
               "findResourcesDesc": "Locate courts, public defenders, and legal aid"
             },
@@ -2406,6 +2408,8 @@ i18n
               "getHelpDesc": "Chatea con nuestra IA para orientación legal personalizada",
               "knowRights": "Conozca sus Derechos",
               "knowRightsDesc": "Aprenda sobre sus protecciones constitucionales",
+              "documentLibrary": "Biblioteca de Documentos",
+              "documentLibraryDesc": "Entienda los documentos legales de su caso",
               "findResources": "Encontrar Recursos",
               "findResourcesDesc": "Localice tribunales, defensores públicos y ayuda legal"
             },
