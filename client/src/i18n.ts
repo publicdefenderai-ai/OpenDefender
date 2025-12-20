@@ -1959,6 +1959,246 @@ i18n
               "description": "If you have questions about how we protect your privacy, please reach out through our public GitHub repository or community channels."
             }
           },
+          "documentLibrary": {
+            "badge": "Legal Document Guide",
+            "title": "Legal Documents Library",
+            "subtitle": "Understand the documents you may receive during your case. Each section is explained in plain language.",
+            "importance": {
+              "critical": "Critical",
+              "important": "Important",
+              "informational": "Informational"
+            },
+            "card": {
+              "purpose": "Purpose",
+              "whatToDo": "What To Do With This Document",
+              "sections": "Document Sections"
+            },
+            "filter": {
+              "label": "Filter by:",
+              "phase": "Case Phase",
+              "category": "Category",
+              "allPhases": "All Phases",
+              "allCategories": "All Categories",
+              "criminal": "Criminal Justice",
+              "immigration": "Immigration",
+              "showing": "{{count}} documents"
+            },
+            "tabs": {
+              "criminal": "Criminal Justice",
+              "immigration": "Immigration"
+            },
+            "noDocuments": "No documents match your filters.",
+            "cta": {
+              "title": "Need Personalized Guidance?",
+              "description": "Our AI assistant can help you understand which documents you should have for your specific situation.",
+              "button": "Get Guidance"
+            }
+          },
+          "documents": {
+            "citationTicket": {
+              "title": "Citation / Ticket",
+              "description": "A written notice given for minor offenses instead of a physical arrest.",
+              "purpose": "This document officially notifies you of the charges against you and tells you when and where to appear in court. It serves as your summons to court.",
+              "whatToDo": "Keep this document safe! Note the court date and case number. Failing to appear on the listed date can result in a warrant for your arrest.",
+              "sections": {
+                "charges": { "label": "Offense/Charges Listed", "explanation": "This section shows what you are accused of doing. It references specific laws or codes you allegedly violated." },
+                "courtDate": { "label": "Court Appearance Date", "explanation": "This is the date and time you MUST appear in court. Missing this date can result in additional charges and an arrest warrant." },
+                "caseNumber": { "label": "Case/Citation Number", "explanation": "A unique identifier for your case. You'll need this number to look up your case online or when calling the court." },
+                "bailAmount": { "label": "Bail/Bond Amount", "explanation": "The amount of money you may need to pay to be released or to avoid jail. Not all citations include this." }
+              }
+            },
+            "arrestWarrant": {
+              "title": "Arrest Warrant",
+              "description": "A court order authorizing police to arrest you.",
+              "purpose": "This document, signed by a judge, gives police legal authority to arrest you. It means a judge found enough evidence (probable cause) to believe you committed a crime.",
+              "whatToDo": "If you're shown a warrant, don't resist. Ask for a copy and note the judge's name and charges listed. Contact an attorney immediately.",
+              "sections": {
+                "probableCause": { "label": "Statement of Probable Cause", "explanation": "This explains why the judge believes you may have committed a crime. It summarizes the evidence or allegations against you." },
+                "judgeSignature": { "label": "Judge's Signature", "explanation": "A valid arrest warrant must be signed by a judge or magistrate. Without this signature, the warrant may not be valid." },
+                "chargesListed": { "label": "Charges Listed", "explanation": "The specific crimes you are accused of. This determines how serious your case is and what penalties you might face." }
+              }
+            },
+            "propertyVoucher": {
+              "title": "Property Voucher",
+              "description": "A receipt listing all personal items taken from you during arrest.",
+              "purpose": "This is your proof of what belongings police took when you were arrested. You'll need this to get your property back after your case is resolved.",
+              "whatToDo": "Keep this document! Check that all items are listed correctly. You'll need the voucher number to reclaim your property. Report any missing items immediately.",
+              "sections": {
+                "itemsList": { "label": "Items Listed", "explanation": "A detailed list of everything taken from you - wallet, phone, jewelry, cash amounts, etc. Verify this is accurate before signing." },
+                "voucherNumber": { "label": "Voucher Number", "explanation": "The unique number you'll need to get your property back. Write this down separately in case you lose the paper." },
+                "officerInfo": { "label": "Officer Information", "explanation": "The name and badge number of the officer who took your property. This helps if there are disputes about your belongings." }
+              }
+            },
+            "bookingPapers": {
+              "title": "Booking Papers",
+              "description": "Documents created when you are processed into jail.",
+              "purpose": "These papers record your arrest information, the charges against you, and your personal information. They become part of your arrest record.",
+              "whatToDo": "Review for accuracy. Errors in booking papers can cause problems later. Note your booking number - family can use this to locate you or post bail.",
+              "sections": {
+                "personalInfo": { "label": "Personal Information", "explanation": "Your name, address, date of birth, and physical description. Make sure this is accurate to avoid identity issues." },
+                "arrestDetails": { "label": "Arrest Details", "explanation": "When, where, and why you were arrested. This information will be important for your defense." },
+                "bookingNumber": { "label": "Booking Number", "explanation": "A unique identifier for your jail stay. Family members can use this to find you in the jail system or arrange bail." }
+              }
+            },
+            "mirandaAcknowledgment": {
+              "title": "Miranda Rights Acknowledgment",
+              "description": "A form documenting that you were informed of your rights.",
+              "purpose": "This documents that police told you about your right to remain silent and your right to an attorney before questioning you.",
+              "whatToDo": "You don't have to sign this. If you do, it doesn't mean you're giving up your rights - you can still remain silent and ask for a lawyer at any time.",
+              "sections": {
+                "rightsListed": { "label": "Rights Listed", "explanation": "Your Miranda rights: right to remain silent, anything you say can be used against you, right to an attorney, right to a free attorney if you can't afford one." },
+                "waiverSection": { "label": "Waiver Section", "explanation": "This asks if you voluntarily give up these rights. You do NOT have to sign this. Even if you do, you can invoke your rights at any time during questioning." }
+              }
+            },
+            "criminalComplaint": {
+              "title": "Criminal Complaint",
+              "description": "The formal document that officially charges you with a crime.",
+              "purpose": "This is the prosecutor's official statement of what crimes you're accused of and the basic facts they claim prove you're guilty. It starts your criminal case.",
+              "whatToDo": "Read this carefully with your attorney. It tells you exactly what you're being charged with. Your defense strategy will be built around responding to these allegations.",
+              "sections": {
+                "charges": { "label": "Criminal Charges", "explanation": "The specific crimes you're accused of, including the degree (misdemeanor vs. felony). Each charge has different potential penalties." },
+                "factsAlleged": { "label": "Statement of Facts", "explanation": "The prosecutor's version of what happened. This is what they will try to prove at trial. Your attorney will look for weaknesses in this story." },
+                "statuteCitations": { "label": "Statute Citations", "explanation": "The specific laws you allegedly broke. These code sections define what the prosecutor must prove to convict you." }
+              }
+            },
+            "arraignmentNotice": {
+              "title": "Arraignment Notice",
+              "description": "Notice of your first court appearance after arrest.",
+              "purpose": "This tells you when and where you must appear for your arraignment - the hearing where you'll be formally told the charges and asked to enter a plea.",
+              "whatToDo": "Do not miss this date! Arrive early. If you don't have a lawyer, tell the judge you want a public defender. You'll typically plead 'not guilty' at this stage.",
+              "sections": {
+                "courtLocation": { "label": "Court Location", "explanation": "The specific courthouse, room number, and address where you must appear. Arrive early to go through security and find the right courtroom." },
+                "dateTime": { "label": "Date and Time", "explanation": "Exactly when you must appear. Missing this date will likely result in a bench warrant for your arrest." },
+                "caseNumber": { "label": "Case Number", "explanation": "Your unique case identifier. Use this to check in with the court clerk when you arrive." }
+              }
+            },
+            "bailBondOrder": {
+              "title": "Bail/Bond Order",
+              "description": "The court's decision on bail and conditions for your release.",
+              "purpose": "This document explains how much bail you owe, any conditions you must follow while released, and the consequences of violating those conditions.",
+              "whatToDo": "Follow ALL conditions strictly. Violations can result in re-arrest and bail being revoked. Keep this document - it lists your next court date.",
+              "sections": {
+                "bailAmount": { "label": "Bail Amount", "explanation": "The money required for your release. You may pay the full amount (refunded after case ends) or use a bail bondsman (typically 10% non-refundable fee)." },
+                "conditions": { "label": "Release Conditions", "explanation": "Rules you must follow while out on bail - like not contacting certain people, not leaving the state, or drug testing. Breaking these can send you back to jail." },
+                "nextCourtDate": { "label": "Next Court Date", "explanation": "Your next required court appearance. Missing this date forfeits your bail money and results in an arrest warrant." }
+              }
+            },
+            "discoveryDocuments": {
+              "title": "Discovery Documents",
+              "description": "Evidence the prosecution must share with your defense.",
+              "purpose": "These are all the materials the prosecutor plans to use against you at trial. Your attorney has the right to see this evidence so they can prepare your defense.",
+              "whatToDo": "Review these carefully with your attorney. Discovery can reveal weaknesses in the prosecution's case or evidence that supports your innocence.",
+              "sections": {
+                "policeReports": { "label": "Police Reports", "explanation": "Officers' written accounts of what happened. These often contain details that can be challenged or contradicted by other evidence." },
+                "witnessStatements": { "label": "Witness Statements", "explanation": "What witnesses told police. Your attorney will analyze these for inconsistencies and prepare for cross-examination." },
+                "evidenceList": { "label": "Evidence List", "explanation": "Physical evidence, videos, photos, lab results, etc. Your attorney can challenge how this evidence was collected or interpreted." }
+              }
+            },
+            "pleaOffer": {
+              "title": "Plea Offer",
+              "description": "A written offer from the prosecutor to resolve your case without trial.",
+              "purpose": "This proposes a deal: plead guilty to certain charges in exchange for reduced penalties or dropped charges. About 90% of cases are resolved through plea bargains.",
+              "whatToDo": "Discuss this carefully with your attorney before responding. Consider the strength of the evidence, potential trial outcomes, and personal circumstances. You don't have to accept.",
+              "sections": {
+                "offeredCharges": { "label": "Charges You'd Plead To", "explanation": "The specific charges you would admit guilt to. These may be less serious than your original charges." },
+                "recommendedSentence": { "label": "Recommended Sentence", "explanation": "What punishment the prosecutor recommends. Note: The judge doesn't have to follow this recommendation." },
+                "deadline": { "label": "Offer Deadline", "explanation": "How long you have to accept this deal. After the deadline, the offer may be withdrawn or become less favorable." }
+              }
+            },
+            "subpoena": {
+              "title": "Subpoena",
+              "description": "A court order requiring you to appear in court or provide documents.",
+              "purpose": "This legally compels you to testify as a witness or produce documents/records. Ignoring a subpoena can result in contempt of court charges.",
+              "whatToDo": "Take this seriously! Contact an attorney if you have concerns about testifying. You must appear on the date listed unless a judge excuses you.",
+              "sections": {
+                "appearanceRequired": { "label": "Appearance Details", "explanation": "When and where you must appear. This is not optional - failure to appear can result in arrest." },
+                "documentsRequested": { "label": "Documents Requested", "explanation": "Specific records or items you must bring. A 'subpoena duces tecum' requires you to produce documents." }
+              }
+            },
+            "sentencingOrder": {
+              "title": "Sentencing Order / Judgment",
+              "description": "The official document stating your sentence after conviction.",
+              "purpose": "This is the court's final decision on your punishment - jail time, fines, probation, community service, etc. It becomes part of your permanent record.",
+              "whatToDo": "Review for accuracy. Understand all conditions you must follow. Know your appeal deadline (usually 30 days). Keep this document for your records.",
+              "sections": {
+                "sentenceImposed": { "label": "Sentence Imposed", "explanation": "Your specific punishment - jail/prison time, whether it's suspended, and how it will be served (straight time vs. work release, etc.)." },
+                "finesRestitution": { "label": "Fines and Restitution", "explanation": "Money you owe - court fees, fines, and payments to victims. These are legally enforceable debts." },
+                "probationTerms": { "label": "Probation Terms", "explanation": "Rules you must follow during probation - reporting to a probation officer, drug testing, travel restrictions, etc. Violations can mean jail time." },
+                "appealRights": { "label": "Appeal Rights", "explanation": "Information about your right to appeal the conviction or sentence. You typically have 30 days to file an appeal." }
+              }
+            },
+            "noticeToAppearI862": {
+              "title": "Notice to Appear (NTA)",
+              "description": "The main charging document that starts deportation proceedings.",
+              "purpose": "This is ICE's formal notice that they want to deport you. It orders you to appear before an immigration judge and lists the reasons they claim you can be removed from the US.",
+              "whatToDo": "Get an immigration attorney IMMEDIATELY. Note your A-number and hearing date. Check the free legal services list provided. Never miss your hearing - it results in automatic deportation order.",
+              "sections": {
+                "aNumber": { "label": "Alien Registration Number (A-Number)", "explanation": "Your unique 9-digit identifier in the immigration system. You need this to check your case status online or by phone." },
+                "charges": { "label": "Immigration Charges", "explanation": "The legal reasons ICE claims you can be deported - overstayed visa, entered without inspection, criminal conviction, etc." },
+                "hearingInfo": { "label": "Hearing Information", "explanation": "Date, time, and location of your immigration court hearing. Sometimes says 'TBD' and you'll get a separate notice later." },
+                "legalServices": { "label": "Free Legal Services List", "explanation": "Contact information for free or low-cost immigration attorneys in your area. Call these immediately." }
+              }
+            },
+            "recordDeportableAlienI213": {
+              "title": "Record of Deportable/Inadmissible Alien",
+              "description": "ICE's record of your arrest and the reasons for detention.",
+              "purpose": "This documents how and why you were arrested by immigration officers, including any statements you made. It's often used as evidence against you.",
+              "whatToDo": "Review this carefully with an attorney. Check for errors in the facts. Any statements you made can be challenged if you weren't properly informed of your rights.",
+              "sections": {
+                "arrestCircumstances": { "label": "Arrest Circumstances", "explanation": "How, when, and where ICE arrested you. This may include whether they had a proper warrant." },
+                "statementsRecorded": { "label": "Statements Recorded", "explanation": "What ICE says you told them during arrest. These statements can be used against you, so verify their accuracy with your attorney." }
+              }
+            },
+            "bondHearingNotice": {
+              "title": "Bond Hearing Notice",
+              "description": "Notice of your hearing to request release from immigration detention.",
+              "purpose": "This tells you when you can ask an immigration judge to set bond so you can be released from detention while your case proceeds.",
+              "whatToDo": "Prepare evidence that you're not a flight risk or danger - community ties, employment, family in the US, etc. An attorney can significantly improve your chances.",
+              "sections": {
+                "hearingDate": { "label": "Hearing Date", "explanation": "When you can present your case for release. Missing this means you stay detained until your removal hearing." },
+                "eligibilityInfo": { "label": "Eligibility Information", "explanation": "Some people aren't eligible for bond due to criminal history or other factors. An attorney can explain your specific situation." }
+              }
+            },
+            "warrantOfRemovalI205": {
+              "title": "Warrant of Removal/Deportation",
+              "description": "The order authorizing ICE to physically deport you.",
+              "purpose": "This means an immigration judge has ordered your removal and ICE can now carry out the deportation. This is issued after you've lost your case or given up the right to fight it.",
+              "whatToDo": "Contact an attorney immediately about appeal options. You may have limited time (30 days for BIA appeal). Check if you qualify for any relief or protection.",
+              "sections": {
+                "removalOrder": { "label": "Removal Order", "explanation": "The official order that you must leave the United States. It includes the legal basis for your removal." },
+                "appealDeadline": { "label": "Appeal Deadline", "explanation": "How long you have to challenge this order. Missing this deadline may eliminate your options to stay and fight." }
+              }
+            },
+            "orderOfSupervisionI220B": {
+              "title": "Order of Supervision",
+              "description": "Conditions for release when you have a removal order but can't be immediately deported.",
+              "purpose": "If you have a final deportation order but your home country won't accept you or there are other barriers, ICE may release you under supervision with strict conditions.",
+              "whatToDo": "Follow ALL conditions strictly. Report as required. Violations can result in re-detention. Continue working with an attorney on options.",
+              "sections": {
+                "reportingRequirements": { "label": "Reporting Requirements", "explanation": "How often and where you must check in with ICE. Missing a check-in can result in immediate detention." },
+                "travelRestrictions": { "label": "Travel Restrictions", "explanation": "Limits on where you can travel. You typically cannot leave the area without permission and definitely cannot leave the US." }
+              }
+            },
+            "expeditedRemovalI860": {
+              "title": "Notice of Expedited Removal",
+              "description": "An order for quick deportation without a court hearing.",
+              "purpose": "This is used when someone is caught at or near the border without valid entry documents. It allows deportation without seeing an immigration judge.",
+              "whatToDo": "If you fear persecution in your home country, you MUST tell the officer immediately. Say 'I am afraid to return to my country.' This triggers a credible fear interview.",
+              "sections": {
+                "removalGrounds": { "label": "Grounds for Removal", "explanation": "Why ICE claims you can be quickly removed - usually entering without inspection or with fraudulent documents." },
+                "fearClaim": { "label": "Fear of Return", "explanation": "If you're afraid to go back to your country (fear of violence, persecution, etc.), you MUST express this fear to get a hearing. This is your only chance to avoid immediate removal." }
+              }
+            },
+            "guidance": {
+              "documentsSection": {
+                "title": "Documents You Should Have",
+                "description": "Based on your case stage, you should have received these important documents. Click any document to learn more.",
+                "noneFound": "No specific documents expected at this stage.",
+                "learnMore": "Learn More",
+                "viewLibrary": "View All Documents"
+              }
+            }
+          },
           "chat": {
           "messages": {
             "welcome": "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
@@ -4094,6 +4334,246 @@ i18n
             "contact": {
               "title": "¿Preguntas sobre privacidad?",
               "description": "Si tiene preguntas sobre cómo protegemos su privacidad, comuníquese a través de nuestro repositorio público de GitHub o canales comunitarios."
+            }
+          },
+          "documentLibrary": {
+            "badge": "Guía de Documentos Legales",
+            "title": "Biblioteca de Documentos Legales",
+            "subtitle": "Comprenda los documentos que puede recibir durante su caso. Cada sección se explica en lenguaje sencillo.",
+            "importance": {
+              "critical": "Crítico",
+              "important": "Importante",
+              "informational": "Informativo"
+            },
+            "card": {
+              "purpose": "Propósito",
+              "whatToDo": "Qué Hacer Con Este Documento",
+              "sections": "Secciones del Documento"
+            },
+            "filter": {
+              "label": "Filtrar por:",
+              "phase": "Fase del Caso",
+              "category": "Categoría",
+              "allPhases": "Todas las Fases",
+              "allCategories": "Todas las Categorías",
+              "criminal": "Justicia Penal",
+              "immigration": "Inmigración",
+              "showing": "{{count}} documentos"
+            },
+            "tabs": {
+              "criminal": "Justicia Penal",
+              "immigration": "Inmigración"
+            },
+            "noDocuments": "Ningún documento coincide con sus filtros.",
+            "cta": {
+              "title": "¿Necesita Orientación Personalizada?",
+              "description": "Nuestro asistente de IA puede ayudarle a entender qué documentos debería tener para su situación específica.",
+              "button": "Obtener Orientación"
+            }
+          },
+          "documents": {
+            "citationTicket": {
+              "title": "Citación / Multa",
+              "description": "Un aviso escrito dado por delitos menores en lugar de un arresto físico.",
+              "purpose": "Este documento le notifica oficialmente los cargos en su contra y le dice cuándo y dónde debe comparecer ante el tribunal. Sirve como su citación judicial.",
+              "whatToDo": "¡Guarde este documento! Anote la fecha de la corte y el número de caso. No presentarse en la fecha indicada puede resultar en una orden de arresto.",
+              "sections": {
+                "charges": { "label": "Delito/Cargos Listados", "explanation": "Esta sección muestra de qué se le acusa. Hace referencia a leyes o códigos específicos que supuestamente violó." },
+                "courtDate": { "label": "Fecha de Comparecencia", "explanation": "Esta es la fecha y hora en que DEBE presentarse en la corte. Faltar a esta fecha puede resultar en cargos adicionales y una orden de arresto." },
+                "caseNumber": { "label": "Número de Caso/Citación", "explanation": "Un identificador único para su caso. Necesitará este número para buscar su caso en línea o al llamar a la corte." },
+                "bailAmount": { "label": "Monto de Fianza", "explanation": "La cantidad de dinero que puede necesitar pagar para ser liberado o evitar la cárcel. No todas las citaciones incluyen esto." }
+              }
+            },
+            "arrestWarrant": {
+              "title": "Orden de Arresto",
+              "description": "Una orden judicial que autoriza a la policía a arrestarlo.",
+              "purpose": "Este documento, firmado por un juez, da a la policía autoridad legal para arrestarlo. Significa que un juez encontró suficiente evidencia (causa probable) para creer que cometió un delito.",
+              "whatToDo": "Si le muestran una orden, no resista. Pida una copia y anote el nombre del juez y los cargos listados. Contacte a un abogado inmediatamente.",
+              "sections": {
+                "probableCause": { "label": "Declaración de Causa Probable", "explanation": "Esto explica por qué el juez cree que pudo haber cometido un delito. Resume la evidencia o acusaciones en su contra." },
+                "judgeSignature": { "label": "Firma del Juez", "explanation": "Una orden de arresto válida debe estar firmada por un juez o magistrado. Sin esta firma, la orden puede no ser válida." },
+                "chargesListed": { "label": "Cargos Listados", "explanation": "Los delitos específicos de los que se le acusa. Esto determina qué tan serio es su caso y qué penalidades podría enfrentar." }
+              }
+            },
+            "propertyVoucher": {
+              "title": "Comprobante de Propiedad",
+              "description": "Un recibo que lista todos los artículos personales tomados durante el arresto.",
+              "purpose": "Esta es su prueba de qué pertenencias tomó la policía cuando fue arrestado. Necesitará esto para recuperar su propiedad después de que se resuelva su caso.",
+              "whatToDo": "¡Guarde este documento! Verifique que todos los artículos estén listados correctamente. Necesitará el número del comprobante para reclamar su propiedad. Reporte cualquier artículo faltante inmediatamente.",
+              "sections": {
+                "itemsList": { "label": "Artículos Listados", "explanation": "Una lista detallada de todo lo que le quitaron - cartera, teléfono, joyas, cantidades de dinero, etc. Verifique que sea preciso antes de firmar." },
+                "voucherNumber": { "label": "Número de Comprobante", "explanation": "El número único que necesitará para recuperar su propiedad. Anótelo por separado en caso de que pierda el papel." },
+                "officerInfo": { "label": "Información del Oficial", "explanation": "El nombre y número de placa del oficial que tomó su propiedad. Esto ayuda si hay disputas sobre sus pertenencias." }
+              }
+            },
+            "bookingPapers": {
+              "title": "Papeles de Registro",
+              "description": "Documentos creados cuando es procesado en la cárcel.",
+              "purpose": "Estos papeles registran su información de arresto, los cargos en su contra y su información personal. Se convierten en parte de su registro de arresto.",
+              "whatToDo": "Revise la precisión. Errores en los papeles de registro pueden causar problemas después. Anote su número de registro - la familia puede usarlo para localizarlo o pagar la fianza.",
+              "sections": {
+                "personalInfo": { "label": "Información Personal", "explanation": "Su nombre, dirección, fecha de nacimiento y descripción física. Asegúrese de que sea preciso para evitar problemas de identidad." },
+                "arrestDetails": { "label": "Detalles del Arresto", "explanation": "Cuándo, dónde y por qué fue arrestado. Esta información será importante para su defensa." },
+                "bookingNumber": { "label": "Número de Registro", "explanation": "Un identificador único para su estadía en la cárcel. Los familiares pueden usarlo para encontrarlo en el sistema de la cárcel o arreglar la fianza." }
+              }
+            },
+            "mirandaAcknowledgment": {
+              "title": "Reconocimiento de Derechos Miranda",
+              "description": "Un formulario que documenta que fue informado de sus derechos.",
+              "purpose": "Esto documenta que la policía le informó sobre su derecho a permanecer en silencio y su derecho a un abogado antes de interrogarlo.",
+              "whatToDo": "No tiene que firmar esto. Si lo hace, no significa que esté renunciando a sus derechos - aún puede permanecer en silencio y pedir un abogado en cualquier momento.",
+              "sections": {
+                "rightsListed": { "label": "Derechos Listados", "explanation": "Sus derechos Miranda: derecho a permanecer en silencio, todo lo que diga puede usarse en su contra, derecho a un abogado, derecho a un abogado gratuito si no puede pagarlo." },
+                "waiverSection": { "label": "Sección de Renuncia", "explanation": "Esto pregunta si renuncia voluntariamente a estos derechos. NO tiene que firmar esto. Incluso si lo hace, puede invocar sus derechos en cualquier momento durante el interrogatorio." }
+              }
+            },
+            "criminalComplaint": {
+              "title": "Denuncia Penal",
+              "description": "El documento formal que oficialmente lo acusa de un delito.",
+              "purpose": "Esta es la declaración oficial del fiscal de qué delitos se le acusa y los hechos básicos que afirman prueban su culpabilidad. Inicia su caso penal.",
+              "whatToDo": "Lea esto cuidadosamente con su abogado. Le dice exactamente de qué se le acusa. Su estrategia de defensa se construirá en respuesta a estas acusaciones.",
+              "sections": {
+                "charges": { "label": "Cargos Penales", "explanation": "Los delitos específicos de los que se le acusa, incluyendo el grado (delito menor vs. delito grave). Cada cargo tiene diferentes penalidades potenciales." },
+                "factsAlleged": { "label": "Declaración de Hechos", "explanation": "La versión del fiscal de lo que pasó. Esto es lo que intentarán probar en el juicio. Su abogado buscará debilidades en esta historia." },
+                "statuteCitations": { "label": "Citas de Estatutos", "explanation": "Las leyes específicas que supuestamente violó. Estas secciones de código definen lo que el fiscal debe probar para condenarlo." }
+              }
+            },
+            "arraignmentNotice": {
+              "title": "Aviso de Lectura de Cargos",
+              "description": "Aviso de su primera comparecencia ante la corte después del arresto.",
+              "purpose": "Esto le dice cuándo y dónde debe presentarse para su lectura de cargos - la audiencia donde se le informará formalmente los cargos y se le pedirá declarar.",
+              "whatToDo": "¡No falte a esta fecha! Llegue temprano. Si no tiene abogado, dígale al juez que quiere un defensor público. Típicamente declarará 'no culpable' en esta etapa.",
+              "sections": {
+                "courtLocation": { "label": "Ubicación de la Corte", "explanation": "El juzgado específico, número de sala y dirección donde debe presentarse. Llegue temprano para pasar seguridad y encontrar la sala correcta." },
+                "dateTime": { "label": "Fecha y Hora", "explanation": "Exactamente cuándo debe presentarse. Faltar a esta fecha probablemente resultará en una orden de arresto." },
+                "caseNumber": { "label": "Número de Caso", "explanation": "Su identificador único de caso. Use esto para registrarse con el secretario de la corte cuando llegue." }
+              }
+            },
+            "bailBondOrder": {
+              "title": "Orden de Fianza",
+              "description": "La decisión de la corte sobre la fianza y condiciones para su liberación.",
+              "purpose": "Este documento explica cuánta fianza debe, cualquier condición que debe seguir mientras esté liberado, y las consecuencias de violar esas condiciones.",
+              "whatToDo": "Siga TODAS las condiciones estrictamente. Las violaciones pueden resultar en re-arresto y revocación de la fianza. Guarde este documento - lista su próxima fecha de corte.",
+              "sections": {
+                "bailAmount": { "label": "Monto de Fianza", "explanation": "El dinero requerido para su liberación. Puede pagar el monto completo (reembolsado después del caso) o usar un fiador (típicamente 10% no reembolsable)." },
+                "conditions": { "label": "Condiciones de Liberación", "explanation": "Reglas que debe seguir mientras esté en libertad bajo fianza - como no contactar a ciertas personas, no salir del estado, o pruebas de drogas. Romper estas puede enviarlo de vuelta a la cárcel." },
+                "nextCourtDate": { "label": "Próxima Fecha de Corte", "explanation": "Su próxima comparecencia requerida. Faltar a esta fecha confisca su dinero de fianza y resulta en una orden de arresto." }
+              }
+            },
+            "discoveryDocuments": {
+              "title": "Documentos de Descubrimiento",
+              "description": "Evidencia que el fiscal debe compartir con su defensa.",
+              "purpose": "Estos son todos los materiales que el fiscal planea usar en su contra en el juicio. Su abogado tiene derecho a ver esta evidencia para preparar su defensa.",
+              "whatToDo": "Revise estos cuidadosamente con su abogado. El descubrimiento puede revelar debilidades en el caso del fiscal o evidencia que apoya su inocencia.",
+              "sections": {
+                "policeReports": { "label": "Informes Policiales", "explanation": "Relatos escritos de los oficiales de lo que pasó. Estos a menudo contienen detalles que pueden ser cuestionados o contradichos por otra evidencia." },
+                "witnessStatements": { "label": "Declaraciones de Testigos", "explanation": "Lo que los testigos le dijeron a la policía. Su abogado analizará estos para inconsistencias y preparará el contrainterrogatorio." },
+                "evidenceList": { "label": "Lista de Evidencia", "explanation": "Evidencia física, videos, fotos, resultados de laboratorio, etc. Su abogado puede cuestionar cómo se recolectó o interpretó esta evidencia." }
+              }
+            },
+            "pleaOffer": {
+              "title": "Oferta de Acuerdo",
+              "description": "Una oferta escrita del fiscal para resolver su caso sin juicio.",
+              "purpose": "Esto propone un trato: declararse culpable de ciertos cargos a cambio de penalidades reducidas o cargos retirados. Aproximadamente el 90% de los casos se resuelven mediante acuerdos.",
+              "whatToDo": "Discuta esto cuidadosamente con su abogado antes de responder. Considere la fuerza de la evidencia, resultados potenciales del juicio y circunstancias personales. No tiene que aceptar.",
+              "sections": {
+                "offeredCharges": { "label": "Cargos a los que se Declararía", "explanation": "Los cargos específicos a los que admitiría culpabilidad. Estos pueden ser menos serios que sus cargos originales." },
+                "recommendedSentence": { "label": "Sentencia Recomendada", "explanation": "Qué castigo recomienda el fiscal. Nota: El juez no tiene que seguir esta recomendación." },
+                "deadline": { "label": "Fecha Límite de la Oferta", "explanation": "Cuánto tiempo tiene para aceptar este trato. Después de la fecha límite, la oferta puede ser retirada o volverse menos favorable." }
+              }
+            },
+            "subpoena": {
+              "title": "Citación Judicial",
+              "description": "Una orden judicial que le requiere comparecer ante la corte o proporcionar documentos.",
+              "purpose": "Esto lo obliga legalmente a testificar como testigo o producir documentos/registros. Ignorar una citación puede resultar en cargos por desacato.",
+              "whatToDo": "¡Tome esto en serio! Contacte a un abogado si tiene preocupaciones sobre testificar. Debe presentarse en la fecha listada a menos que un juez lo excuse.",
+              "sections": {
+                "appearanceRequired": { "label": "Detalles de Comparecencia", "explanation": "Cuándo y dónde debe presentarse. Esto no es opcional - no presentarse puede resultar en arresto." },
+                "documentsRequested": { "label": "Documentos Solicitados", "explanation": "Registros o artículos específicos que debe traer. Una 'citación duces tecum' requiere que produzca documentos." }
+              }
+            },
+            "sentencingOrder": {
+              "title": "Orden de Sentencia / Fallo",
+              "description": "El documento oficial que establece su sentencia después de la condena.",
+              "purpose": "Esta es la decisión final de la corte sobre su castigo - tiempo en cárcel, multas, libertad condicional, servicio comunitario, etc. Se convierte en parte de su registro permanente.",
+              "whatToDo": "Revise la precisión. Entienda todas las condiciones que debe seguir. Conozca su fecha límite de apelación (usualmente 30 días). Guarde este documento para sus registros.",
+              "sections": {
+                "sentenceImposed": { "label": "Sentencia Impuesta", "explanation": "Su castigo específico - tiempo en cárcel/prisión, si está suspendido, y cómo se cumplirá (tiempo directo vs. libertad laboral, etc.)." },
+                "finesRestitution": { "label": "Multas y Restitución", "explanation": "Dinero que debe - cuotas de la corte, multas y pagos a víctimas. Estas son deudas legalmente exigibles." },
+                "probationTerms": { "label": "Términos de Libertad Condicional", "explanation": "Reglas que debe seguir durante la libertad condicional - reportarse a un oficial, pruebas de drogas, restricciones de viaje, etc. Las violaciones pueden significar tiempo en cárcel." },
+                "appealRights": { "label": "Derechos de Apelación", "explanation": "Información sobre su derecho a apelar la condena o sentencia. Típicamente tiene 30 días para presentar una apelación." }
+              }
+            },
+            "noticeToAppearI862": {
+              "title": "Notificación de Comparecencia (NTA)",
+              "description": "El documento principal de cargos que inicia los procedimientos de deportación.",
+              "purpose": "Este es el aviso formal de ICE de que quieren deportarlo. Le ordena comparecer ante un juez de inmigración y lista las razones por las que afirman que puede ser removido de EE.UU.",
+              "whatToDo": "Consiga un abogado de inmigración INMEDIATAMENTE. Anote su número A y fecha de audiencia. Consulte la lista de servicios legales gratuitos proporcionada. Nunca falte a su audiencia - resulta en orden de deportación automática.",
+              "sections": {
+                "aNumber": { "label": "Número de Registro de Extranjero (Número A)", "explanation": "Su identificador único de 9 dígitos en el sistema de inmigración. Necesita esto para verificar el estado de su caso en línea o por teléfono." },
+                "charges": { "label": "Cargos de Inmigración", "explanation": "Las razones legales por las que ICE afirma que puede ser deportado - visa vencida, entrada sin inspección, condena penal, etc." },
+                "hearingInfo": { "label": "Información de la Audiencia", "explanation": "Fecha, hora y ubicación de su audiencia en la corte de inmigración. A veces dice 'Por Determinar' y recibirá un aviso separado después." },
+                "legalServices": { "label": "Lista de Servicios Legales Gratuitos", "explanation": "Información de contacto para abogados de inmigración gratuitos o de bajo costo en su área. Llame inmediatamente." }
+              }
+            },
+            "recordDeportableAlienI213": {
+              "title": "Registro de Extranjero Deportable/Inadmisible",
+              "description": "El registro de ICE de su arresto y las razones de la detención.",
+              "purpose": "Esto documenta cómo y por qué fue arrestado por oficiales de inmigración, incluyendo cualquier declaración que haya hecho. A menudo se usa como evidencia en su contra.",
+              "whatToDo": "Revise esto cuidadosamente con un abogado. Verifique errores en los hechos. Cualquier declaración que haya hecho puede ser cuestionada si no fue informado apropiadamente de sus derechos.",
+              "sections": {
+                "arrestCircumstances": { "label": "Circunstancias del Arresto", "explanation": "Cómo, cuándo y dónde ICE lo arrestó. Esto puede incluir si tenían una orden apropiada." },
+                "statementsRecorded": { "label": "Declaraciones Registradas", "explanation": "Lo que ICE dice que les dijo durante el arresto. Estas declaraciones pueden usarse en su contra, así que verifique su precisión con su abogado." }
+              }
+            },
+            "bondHearingNotice": {
+              "title": "Aviso de Audiencia de Fianza",
+              "description": "Aviso de su audiencia para solicitar liberación de la detención de inmigración.",
+              "purpose": "Esto le dice cuándo puede pedirle a un juez de inmigración que fije una fianza para que pueda ser liberado de la detención mientras su caso procede.",
+              "whatToDo": "Prepare evidencia de que no es un riesgo de fuga ni un peligro - vínculos comunitarios, empleo, familia en EE.UU., etc. Un abogado puede mejorar significativamente sus posibilidades.",
+              "sections": {
+                "hearingDate": { "label": "Fecha de Audiencia", "explanation": "Cuándo puede presentar su caso para liberación. Faltar a esto significa que permanece detenido hasta su audiencia de remoción." },
+                "eligibilityInfo": { "label": "Información de Elegibilidad", "explanation": "Algunas personas no son elegibles para fianza debido a historial criminal u otros factores. Un abogado puede explicar su situación específica." }
+              }
+            },
+            "warrantOfRemovalI205": {
+              "title": "Orden de Remoción/Deportación",
+              "description": "La orden que autoriza a ICE a deportarlo físicamente.",
+              "purpose": "Esto significa que un juez de inmigración ha ordenado su remoción e ICE ahora puede ejecutar la deportación. Esto se emite después de que haya perdido su caso o renunciado al derecho de combatirlo.",
+              "whatToDo": "Contacte a un abogado inmediatamente sobre opciones de apelación. Puede tener tiempo limitado (30 días para apelación al BIA). Verifique si califica para algún alivio o protección.",
+              "sections": {
+                "removalOrder": { "label": "Orden de Remoción", "explanation": "La orden oficial de que debe salir de Estados Unidos. Incluye la base legal para su remoción." },
+                "appealDeadline": { "label": "Fecha Límite de Apelación", "explanation": "Cuánto tiempo tiene para impugnar esta orden. Perder esta fecha límite puede eliminar sus opciones para quedarse y luchar." }
+              }
+            },
+            "orderOfSupervisionI220B": {
+              "title": "Orden de Supervisión",
+              "description": "Condiciones para liberación cuando tiene una orden de remoción pero no puede ser deportado inmediatamente.",
+              "purpose": "Si tiene una orden final de deportación pero su país de origen no lo acepta o hay otras barreras, ICE puede liberarlo bajo supervisión con condiciones estrictas.",
+              "whatToDo": "Siga TODAS las condiciones estrictamente. Repórtese según lo requerido. Las violaciones pueden resultar en re-detención. Continúe trabajando con un abogado en opciones.",
+              "sections": {
+                "reportingRequirements": { "label": "Requisitos de Reporte", "explanation": "Con qué frecuencia y dónde debe presentarse con ICE. Faltar a un reporte puede resultar en detención inmediata." },
+                "travelRestrictions": { "label": "Restricciones de Viaje", "explanation": "Límites sobre dónde puede viajar. Típicamente no puede salir del área sin permiso y definitivamente no puede salir de EE.UU." }
+              }
+            },
+            "expeditedRemovalI860": {
+              "title": "Aviso de Remoción Expedita",
+              "description": "Una orden para deportación rápida sin audiencia en la corte.",
+              "purpose": "Esto se usa cuando alguien es atrapado en o cerca de la frontera sin documentos de entrada válidos. Permite la deportación sin ver a un juez de inmigración.",
+              "whatToDo": "Si teme persecución en su país de origen, DEBE decirle al oficial inmediatamente. Diga 'Tengo miedo de regresar a mi país.' Esto activa una entrevista de miedo creíble.",
+              "sections": {
+                "removalGrounds": { "label": "Fundamentos para Remoción", "explanation": "Por qué ICE afirma que puede ser removido rápidamente - usualmente entrada sin inspección o con documentos fraudulentos." },
+                "fearClaim": { "label": "Miedo de Regresar", "explanation": "Si tiene miedo de regresar a su país (miedo de violencia, persecución, etc.), DEBE expresar este miedo para obtener una audiencia. Esta es su única oportunidad de evitar la remoción inmediata." }
+              }
+            },
+            "guidance": {
+              "documentsSection": {
+                "title": "Documentos Que Debería Tener",
+                "description": "Basado en la etapa de su caso, debería haber recibido estos documentos importantes. Haga clic en cualquier documento para aprender más.",
+                "noneFound": "No se esperan documentos específicos en esta etapa.",
+                "learnMore": "Aprender Más",
+                "viewLibrary": "Ver Todos los Documentos"
+              }
             }
           },
           "chat": {
