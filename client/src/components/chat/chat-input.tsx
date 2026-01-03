@@ -149,26 +149,46 @@ export function ChatInput({
     };
 
     recognition.onerror = (event) => {
-      console.error('Speech recognition error:', event.error);
+      console.error('Speech recognition error:', event.error, event.message || '');
       setIsListening(false);
       setIsProcessing(false);
       
-      if (event.error === 'not-allowed') {
-        toast({
+      const errorMessages: Record<string, { title: string; description: string }> = {
+        'not-allowed': {
           title: t('chat.voice.permissionDenied', 'Microphone access denied'),
-          description: t('chat.voice.permissionDeniedDesc', 'Please allow microphone access in your browser settings.'),
-          variant: 'destructive'
-        });
-      } else if (event.error === 'network') {
-        toast({
-          title: t('chat.voice.networkError', 'Voice input unavailable'),
-          description: t('chat.voice.networkErrorDesc', 'Voice recognition requires an internet connection. Please type your message instead.'),
-          variant: 'destructive'
-        });
-      } else if (event.error !== 'aborted') {
-        toast({
+          description: t('chat.voice.permissionDeniedDesc', 'Please allow microphone access in your browser settings and reload the page.')
+        },
+        'network': {
+          title: t('chat.voice.networkError', 'Voice service connection failed'),
+          description: t('chat.voice.networkErrorDesc', 'Could not connect to speech recognition service. Please check your internet connection and try again, or type your message instead.')
+        },
+        'no-speech': {
+          title: t('chat.voice.noSpeech', 'No speech detected'),
+          description: t('chat.voice.noSpeechDesc', 'We didn\'t hear anything. Please try speaking closer to your microphone.')
+        },
+        'audio-capture': {
+          title: t('chat.voice.audioCapture', 'Microphone not available'),
+          description: t('chat.voice.audioCaptureDesc', 'Could not access your microphone. Please check that it\'s connected and not being used by another application.')
+        },
+        'service-not-allowed': {
+          title: t('chat.voice.serviceNotAllowed', 'Speech service blocked'),
+          description: t('chat.voice.serviceNotAllowedDesc', 'Speech recognition is blocked. This may be due to browser settings or security policies.')
+        },
+        'language-not-supported': {
+          title: t('chat.voice.languageNotSupported', 'Language not supported'),
+          description: t('chat.voice.languageNotSupportedDesc', 'The selected language is not supported for voice input.')
+        }
+      };
+      
+      if (event.error !== 'aborted') {
+        const errorInfo = errorMessages[event.error] || {
           title: t('chat.voice.error', 'Voice input error'),
-          description: t('chat.voice.errorDesc', 'There was an error with voice input. Please try again.'),
+          description: t('chat.voice.errorDesc', `Speech recognition error: ${event.error}. Please try again or type your message.`)
+        };
+        
+        toast({
+          title: errorInfo.title,
+          description: errorInfo.description,
           variant: 'destructive'
         });
       }
