@@ -343,6 +343,222 @@
   background: linear-gradient(135deg, hsl(155 55% 28%) 0%, hsl(150 50% 35%) 50%, hsl(145 45% 42%) 100%);
 }
 
+/* ===== VISUAL POLISH ENHANCEMENTS ===== */
+
+/* Enhanced Card Styles */
+.card-elevated {
+  @apply shadow-md hover:shadow-xl transition-all duration-300 ease-out;
+}
+
+.card-interactive {
+  @apply transition-all duration-300 ease-out cursor-pointer;
+  @apply hover:shadow-lg hover:-translate-y-1;
+}
+
+.card-interactive:hover {
+  border-color: hsl(var(--primary) / 0.2);
+}
+
+.card-glass {
+  @apply backdrop-blur-sm;
+  background: hsl(0 0% 100% / 0.8);
+  border-color: hsl(0 0% 100% / 0.2);
+}
+
+.dark .card-glass {
+  background: hsl(var(--card) / 0.8);
+}
+
+/* Micro-animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
+.stagger-6 { animation-delay: 300ms; }
+
+/* Enhanced hover effects */
+.hover-lift {
+  @apply transition-all duration-300 ease-out;
+  @apply hover:-translate-y-1 hover:shadow-lg;
+}
+
+.hover-glow {
+  @apply transition-all duration-300;
+  @apply hover:shadow-[0_0_20px_rgba(var(--primary),0.15)];
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 ease-out;
+  @apply hover:scale-[1.02] active:scale-[0.98];
+}
+
+/* Button micro-interactions */
+.btn-bounce {
+  @apply transition-transform duration-150;
+  @apply active:scale-95;
+}
+
+/* Enhanced skeleton loading */
+.skeleton-shimmer {
+  @apply relative overflow-hidden;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted-foreground) / 0.1) 50%,
+    hsl(var(--muted)) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Loading skeleton patterns */
+.skeleton-text {
+  @apply h-4 rounded-md skeleton-shimmer;
+}
+
+.skeleton-text-sm {
+  @apply h-3 rounded skeleton-shimmer;
+}
+
+.skeleton-title {
+  @apply h-6 rounded-md skeleton-shimmer;
+}
+
+.skeleton-avatar {
+  @apply w-10 h-10 rounded-full skeleton-shimmer;
+}
+
+.skeleton-card {
+  @apply rounded-xl p-6 border border-border/50;
+  @apply skeleton-shimmer;
+}
+
+.skeleton-button {
+  @apply h-10 px-6 rounded-lg skeleton-shimmer;
+}
+
+/* Refined Typography */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.heading-tight {
+  @apply tracking-tight leading-[1.1];
+}
+
+.heading-display {
+  @apply font-bold tracking-tight leading-[1.05];
+  font-family: var(--font-serif);
+}
+
+.body-tight {
+  @apply leading-[1.5];
+}
+
+.body-relaxed {
+  @apply leading-[1.75];
+}
+
+/* Better font weight contrast */
+.text-weight-medium {
+  font-weight: 500;
+}
+
+.text-weight-semibold {
+  font-weight: 600;
+}
+
+.text-weight-bold {
+  font-weight: 700;
+}
+
+/* Empty state styling */
+.empty-state {
+  @apply flex flex-col items-center justify-center py-16 px-8 text-center;
+}
+
+.empty-state-icon {
+  @apply w-20 h-20 mb-6 text-muted-foreground/40;
+}
+
+.empty-state-title {
+  @apply text-xl font-semibold text-foreground mb-2;
+}
+
+.empty-state-description {
+  @apply text-muted-foreground max-w-md;
+}
+
+/* Page transition wrapper */
+.page-transition {
+  @apply animate-fade-in-up;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal,
@@ -352,7 +568,15 @@
   .animate-rights-header,
   .animate-rights-content,
   .animate-cube-rotate,
-  .animate-card-flip {
+  .animate-card-flip,
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-slide-in-right,
+  .animate-scale-in,
+  .hover-lift,
+  .hover-scale,
+  .btn-bounce,
+  .skeleton-shimmer {
     @apply transition-none;
     animation: none !important;
   }
