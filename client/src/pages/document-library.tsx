@@ -23,6 +23,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { EmptyState } from "@/components/ui/empty-state";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
   LEGAL_DOCUMENTS, 
@@ -65,7 +66,7 @@ function DocumentCard({ document }: { document: LegalDocument }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Card className="overflow-hidden" data-testid={`document-card-${document.slug}`}>
+    <Card hoverable className="overflow-hidden" data-testid={`document-card-${document.slug}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1">
@@ -263,9 +264,15 @@ export default function DocumentLibrary() {
                 ))}
               </div>
               {criminalDocs.length === 0 && (
-                <p className="text-center text-muted-foreground py-8">
-                  {t('documentLibrary.noDocuments', 'No documents match your filters.')}
-                </p>
+                <EmptyState
+                  variant="documents"
+                  title={t('documentLibrary.noDocuments', 'No documents match your filters.')}
+                  description={t('documentLibrary.noDocumentsHint', 'Try adjusting your filters to see more documents.')}
+                  action={{
+                    label: t('documentLibrary.clearFilters', 'Clear filters'),
+                    onClick: () => { setSelectedPhase('all'); setSelectedCategory('all'); }
+                  }}
+                />
               )}
             </TabsContent>
             
@@ -278,9 +285,15 @@ export default function DocumentLibrary() {
                 ))}
               </div>
               {immigrationDocs.length === 0 && (
-                <p className="text-center text-muted-foreground py-8">
-                  {t('documentLibrary.noDocuments', 'No documents match your filters.')}
-                </p>
+                <EmptyState
+                  variant="documents"
+                  title={t('documentLibrary.noDocuments', 'No documents match your filters.')}
+                  description={t('documentLibrary.noDocumentsHint', 'Try adjusting your filters to see more documents.')}
+                  action={{
+                    label: t('documentLibrary.clearFilters', 'Clear filters'),
+                    onClick: () => { setSelectedPhase('all'); setSelectedCategory('all'); }
+                  }}
+                />
               )}
             </TabsContent>
           </Tabs>
@@ -292,9 +305,17 @@ export default function DocumentLibrary() {
               </ScrollReveal>
             ))}
             {filteredDocuments.length === 0 && (
-              <p className="text-center text-muted-foreground py-8 col-span-2">
-                {t('documentLibrary.noDocuments', 'No documents match your filters.')}
-              </p>
+              <div className="col-span-2">
+                <EmptyState
+                  variant="documents"
+                  title={t('documentLibrary.noDocuments', 'No documents match your filters.')}
+                  description={t('documentLibrary.noDocumentsHint', 'Try adjusting your filters to see more documents.')}
+                  action={{
+                    label: t('documentLibrary.clearFilters', 'Clear filters'),
+                    onClick: () => { setSelectedPhase('all'); setSelectedCategory('all'); }
+                  }}
+                />
+              </div>
             )}
           </div>
         )}

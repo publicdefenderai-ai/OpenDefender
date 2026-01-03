@@ -44,15 +44,15 @@ const variantIcons: Record<EmptyStateVariant, typeof Search> = {
   error: AlertCircle,
 };
 
-const variantColors: Record<EmptyStateVariant, string> = {
-  search: "text-primary/30",
-  "no-results": "text-muted-foreground/30",
-  location: "text-blue-500/30",
-  chat: "text-green-500/30",
-  legal: "text-primary/30",
-  community: "text-purple-500/30",
-  documents: "text-amber-500/30",
-  error: "text-destructive/30",
+const variantStyles: Record<EmptyStateVariant, React.CSSProperties> = {
+  search: { color: "hsl(var(--primary) / 0.3)" },
+  "no-results": { color: "hsl(var(--muted-foreground) / 0.3)" },
+  location: { color: "hsl(210 100% 50% / 0.3)" },
+  chat: { color: "hsl(142 76% 36% / 0.3)" },
+  legal: { color: "hsl(var(--primary) / 0.3)" },
+  community: { color: "hsl(270 76% 60% / 0.3)" },
+  documents: { color: "hsl(38 92% 50% / 0.3)" },
+  error: { color: "hsl(var(--destructive) / 0.3)" },
 };
 
 export function EmptyState({
@@ -64,13 +64,13 @@ export function EmptyState({
   children,
 }: EmptyStateProps) {
   const Icon = variantIcons[variant];
-  const iconColor = variantColors[variant];
+  const iconStyle = variantStyles[variant];
 
   return (
     <div className={cn("empty-state animate-fade-in", className)} data-testid="empty-state">
       <div className="relative mb-6">
         <div className="absolute inset-0 blur-3xl opacity-20 bg-primary rounded-full scale-150" />
-        <Icon className={cn("empty-state-icon relative", iconColor)} strokeWidth={1.5} />
+        <Icon className="empty-state-icon relative" style={iconStyle} strokeWidth={1.5} />
       </div>
       
       <h3 className="empty-state-title text-balance" data-testid="empty-state-title">

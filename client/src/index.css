@@ -490,8 +490,8 @@
 }
 
 .skeleton-card {
-  @apply rounded-xl p-6 border border-border/50;
-  @apply skeleton-shimmer;
+  @apply rounded-xl p-6 border skeleton-shimmer;
+  border-color: hsl(var(--border) / 0.5);
 }
 
 .skeleton-button {
@@ -543,7 +543,8 @@
 }
 
 .empty-state-icon {
-  @apply w-20 h-20 mb-6 text-muted-foreground/40;
+  @apply w-20 h-20 mb-6;
+  color: hsl(var(--muted-foreground) / 0.4);
 }
 
 .empty-state-title {
