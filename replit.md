@@ -21,6 +21,15 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 - Proper error handling for unsupported browsers and permission denial
 - Audio is never stored; transcription is client-side only; transcribed text flows through existing PII redaction pipeline
 
+**Visual Polish (Jan 2025)**: Enhanced UI/UX with polished interactions and animations:
+- **Card component**: Added `hoverable` prop for interactive lift effects with shadow transitions
+- **Micro-animations**: Fade-in, slide-in, scale-in animations with staggered delays (all respect `prefers-reduced-motion`)
+- **Loading skeletons**: Reusable skeleton components (`client/src/components/ui/loading-skeletons.tsx`) with shimmer effect
+- **Empty states**: EmptyState component (`client/src/components/ui/empty-state.tsx`) with variant-specific icons and colors
+- **Typography utilities**: Text-balance, text-pretty, heading-tight classes for refined typography
+- **CSS utilities in `index.css`**: card-elevated, card-interactive, hover-lift, hover-scale, btn-bounce classes
+- Note: Tailwind opacity modifiers (e.g., `text-primary/30`) don't work in @apply or as variable-based classes; use inline styles with `hsl(var(--css-var) / opacity)` instead
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.
