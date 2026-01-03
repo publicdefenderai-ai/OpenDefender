@@ -15,10 +15,55 @@ interface ChatInputProps {
   lockMessage?: string;
 }
 
+interface SpeechRecognitionEvent extends Event {
+  results: SpeechRecognitionResultList;
+  resultIndex: number;
+}
+
+interface SpeechRecognitionResultList {
+  length: number;
+  item(index: number): SpeechRecognitionResult;
+  [index: number]: SpeechRecognitionResult;
+}
+
+interface SpeechRecognitionResult {
+  isFinal: boolean;
+  length: number;
+  item(index: number): SpeechRecognitionAlternative;
+  [index: number]: SpeechRecognitionAlternative;
+}
+
+interface SpeechRecognitionAlternative {
+  transcript: string;
+  confidence: number;
+}
+
+interface SpeechRecognitionErrorEvent extends Event {
+  error: string;
+  message?: string;
+}
+
+interface SpeechRecognitionInstance extends EventTarget {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  onstart: ((this: SpeechRecognitionInstance, ev: Event) => void) | null;
+  onresult: ((this: SpeechRecognitionInstance, ev: SpeechRecognitionEvent) => void) | null;
+  onerror: ((this: SpeechRecognitionInstance, ev: SpeechRecognitionErrorEvent) => void) | null;
+  onend: ((this: SpeechRecognitionInstance, ev: Event) => void) | null;
+  start(): void;
+  stop(): void;
+  abort(): void;
+}
+
+interface SpeechRecognitionConstructor {
+  new(): SpeechRecognitionInstance;
+}
+
 declare global {
   interface Window {
-    SpeechRecognition: typeof SpeechRecognition;
-    webkitSpeechRecognition: typeof SpeechRecognition;
+    SpeechRecognition?: SpeechRecognitionConstructor;
+    webkitSpeechRecognition?: SpeechRecognitionConstructor;
   }
 }
 
@@ -35,7 +80,7 @@ export function ChatInput({
   const [isListening, setIsListening] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
 
   const isSpeechSupported = typeof window !== 'undefined' && 
     ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
@@ -66,6 +111,14 @@ export function ChatInput({
     }
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      toast({
+        title: t('chat.voice.notSupported', 'Voice input not supported'),
+        description: t('chat.voice.notSupportedDesc', 'Your browser does not support voice input.'),
+        variant: 'destructive'
+      });
+      return;
+    }
     const recognition = new SpeechRecognition();
     
     recognition.continuous = false;
@@ -104,6 +157,12 @@ export function ChatInput({
         toast({
           title: t('chat.voice.permissionDenied', 'Microphone access denied'),
           description: t('chat.voice.permissionDeniedDesc', 'Please allow microphone access in your browser settings.'),
+          variant: 'destructive'
+        });
+      } else if (event.error === 'network') {
+        toast({
+          title: t('chat.voice.networkError', 'Voice input unavailable'),
+          description: t('chat.voice.networkErrorDesc', 'Voice recognition requires an internet connection. Please type your message instead.'),
           variant: 'destructive'
         });
       } else if (event.error !== 'aborted') {

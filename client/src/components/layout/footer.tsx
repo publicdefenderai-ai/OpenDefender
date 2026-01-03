@@ -25,7 +25,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
                 </span>
               )}
               <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">
-                {office.distance} {t('home.publicDefenderSearch.miAway')}
+                {office.distance} {t('home.publicDefenderSearch.milesAway')}
               </span>
             </div>
           </div>
@@ -118,7 +118,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
                 </span>
               )}
               <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">
-                {organization.distance} {t('home.publicDefenderSearch.miAway')}
+                {organization.distance} {t('home.publicDefenderSearch.milesAway')}
               </span>
               <span className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
                 {organization.organizationType}
@@ -207,6 +207,7 @@ export function Footer() {
   const [pdSearching, setPdSearching] = useState(false);
   const [pdOffices, setPdOffices] = useState<PublicDefenderOffice[]>([]);
   const [pdError, setPdError] = useState("");
+  const [pdHasSearched, setPdHasSearched] = useState(false);
   
   // Legal Aid Organizations search state
   const [showLegalAidModal, setShowLegalAidModal] = useState(false);
@@ -214,6 +215,7 @@ export function Footer() {
   const [laSearching, setLaSearching] = useState(false);
   const [laOrganizations, setLaOrganizations] = useState<LegalAidOrganization[]>([]);
   const [laError, setLaError] = useState("");
+  const [laHasSearched, setLaHasSearched] = useState(false);
   
   const handlePublicDefenderSearch = async () => {
     if (!pdZipCode.trim() || pdZipCode.length !== 5) {
@@ -223,6 +225,7 @@ export function Footer() {
 
     setPdSearching(true);
     setPdError("");
+    setPdHasSearched(true);
     
     try {
       const offices = await searchPublicDefenderOffices(pdZipCode);
@@ -243,6 +246,7 @@ export function Footer() {
 
     setLaSearching(true);
     setLaError("");
+    setLaHasSearched(true);
     
     try {
       const organizations = await searchLegalAidOrganizations(laZipCode);
@@ -469,7 +473,7 @@ export function Footer() {
             </div>
           )}
 
-          {!pdSearching && pdOffices.length === 0 && !pdError && (
+          {!pdSearching && pdHasSearched && pdOffices.length === 0 && !pdError && (
             <p className="text-sm text-muted-foreground">
               {t('home.publicDefenderSearch.noResults')}
             </p>
@@ -521,7 +525,7 @@ export function Footer() {
             </div>
           )}
 
-          {!laSearching && laOrganizations.length === 0 && !laError && (
+          {!laSearching && laHasSearched && laOrganizations.length === 0 && !laError && (
             <p className="text-sm text-muted-foreground">
               {t('home.legalAidSearch.noResults')}
             </p>

@@ -2348,6 +2348,8 @@ i18n
             "notSupportedDesc": "Your browser does not support voice input. Please use a modern browser like Chrome, Edge, or Safari.",
             "permissionDenied": "Microphone access denied",
             "permissionDeniedDesc": "Please allow microphone access in your browser settings to use voice input.",
+            "networkError": "Voice input unavailable",
+            "networkErrorDesc": "Voice recognition requires an internet connection. Please type your message instead.",
             "error": "Voice input error",
             "errorDesc": "There was an error with voice input. Please try again."
           },
@@ -4742,6 +4744,8 @@ i18n
             "notSupportedDesc": "Su navegador no admite entrada de voz. Use un navegador moderno como Chrome, Edge o Safari.",
             "permissionDenied": "Acceso al micrófono denegado",
             "permissionDeniedDesc": "Permita el acceso al micrófono en la configuración de su navegador para usar la entrada de voz.",
+            "networkError": "Entrada de voz no disponible",
+            "networkErrorDesc": "El reconocimiento de voz requiere conexión a internet. Por favor escriba su mensaje.",
             "error": "Error de entrada de voz",
             "errorDesc": "Hubo un error con la entrada de voz. Intente de nuevo."
           },
