@@ -17,18 +17,7 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:", "blob:"],
-      // Allow connections to Google's speech recognition service and general HTTPS/WSS
-      connectSrc: [
-        "'self'", 
-        "https:", 
-        "wss:",
-        "https://*.google.com",
-        "https://*.googleapis.com",
-        "wss://*.google.com",
-        "wss://*.googleapis.com"
-      ],
-      // Allow media capture for voice input
-      mediaSrc: ["'self'", "blob:"],
+      connectSrc: ["'self'", "https:", "wss:"],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: [],
@@ -36,7 +25,6 @@ app.use(helmet({
   },
   crossOriginEmbedderPolicy: false, // Required for some external resources
   crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
-  crossOriginResourcePolicy: { policy: "cross-origin" }, // Allow cross-origin for speech API
   referrerPolicy: { policy: "strict-origin-when-cross-origin" },
   xFrameOptions: { action: "sameorigin" },
 }));

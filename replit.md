@@ -14,13 +14,6 @@ Preferred communication style: Simple, everyday language.
 
 The frontend is built with React 18 and TypeScript, utilizing shadcn/ui components, Wouter for routing, and Tailwind CSS for styling. It features a custom legal-themed design, Framer Motion for animations, and comprehensive bilingual support (English/Spanish) with `react-i18next`. All user-facing text is designed for a 6th-8th grade reading level, and the application is mobile-responsive. State management uses TanStack Query and React hooks.
 
-**Voice Input (Jan 2025)**: The chat interface supports voice input using the Web Speech API (`client/src/components/chat/chat-input.tsx`). Features include:
-- Microphone button next to send button (hidden if browser doesn't support)
-- Real-time transcription with bilingual support (en-US/es-US based on i18n language)
-- Visual feedback: red border and pulse animation when listening
-- Proper error handling for unsupported browsers and permission denial
-- Audio is never stored; transcription is client-side only; transcribed text flows through existing PII redaction pipeline
-
 **Visual Polish (Jan 2025)**: Enhanced UI/UX with polished interactions and animations:
 - **Card component**: Added `hoverable` prop for interactive lift effects with shadow transitions
 - **Micro-animations**: Fade-in, slide-in, scale-in animations with staggered delays (all respect `prefers-reduced-motion`)

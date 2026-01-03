@@ -1,11 +1,10 @@
-import { useState, useRef, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Send, Lock, Mic, MicOff, Loader2 } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Send, Lock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
@@ -15,58 +14,6 @@ interface ChatInputProps {
   lockMessage?: string;
 }
 
-interface SpeechRecognitionEvent extends Event {
-  results: SpeechRecognitionResultList;
-  resultIndex: number;
-}
-
-interface SpeechRecognitionResultList {
-  length: number;
-  item(index: number): SpeechRecognitionResult;
-  [index: number]: SpeechRecognitionResult;
-}
-
-interface SpeechRecognitionResult {
-  isFinal: boolean;
-  length: number;
-  item(index: number): SpeechRecognitionAlternative;
-  [index: number]: SpeechRecognitionAlternative;
-}
-
-interface SpeechRecognitionAlternative {
-  transcript: string;
-  confidence: number;
-}
-
-interface SpeechRecognitionErrorEvent extends Event {
-  error: string;
-  message?: string;
-}
-
-interface SpeechRecognitionInstance extends EventTarget {
-  continuous: boolean;
-  interimResults: boolean;
-  lang: string;
-  onstart: ((this: SpeechRecognitionInstance, ev: Event) => void) | null;
-  onresult: ((this: SpeechRecognitionInstance, ev: SpeechRecognitionEvent) => void) | null;
-  onerror: ((this: SpeechRecognitionInstance, ev: SpeechRecognitionErrorEvent) => void) | null;
-  onend: ((this: SpeechRecognitionInstance, ev: Event) => void) | null;
-  start(): void;
-  stop(): void;
-  abort(): void;
-}
-
-interface SpeechRecognitionConstructor {
-  new(): SpeechRecognitionInstance;
-}
-
-declare global {
-  interface Window {
-    SpeechRecognition?: SpeechRecognitionConstructor;
-    webkitSpeechRecognition?: SpeechRecognitionConstructor;
-  }
-}
-
 export function ChatInput({ 
   onSend, 
   disabled = false, 
@@ -74,16 +21,9 @@ export function ChatInput({
   isLocked = false,
   lockMessage 
 }: ChatInputProps) {
-  const { t, i18n } = useTranslation();
-  const { toast } = useToast();
+  const { t } = useTranslation();
   const [message, setMessage] = useState("");
-  const [isListening, setIsListening] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const recognitionRef = useRef<SpeechRecognitionInstance | null>(null);
-
-  const isSpeechSupported = typeof window !== 'undefined' && 
-    ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
 
   const handleSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -99,133 +39,6 @@ export function ChatInput({
       handleSubmit();
     }
   };
-
-  const startListening = useCallback(() => {
-    if (!isSpeechSupported) {
-      toast({
-        title: t('chat.voice.notSupported', 'Voice input not supported'),
-        description: t('chat.voice.notSupportedDesc', 'Your browser does not support voice input. Please use a modern browser like Chrome.'),
-        variant: 'destructive'
-      });
-      return;
-    }
-
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      toast({
-        title: t('chat.voice.notSupported', 'Voice input not supported'),
-        description: t('chat.voice.notSupportedDesc', 'Your browser does not support voice input.'),
-        variant: 'destructive'
-      });
-      return;
-    }
-    const recognition = new SpeechRecognition();
-    
-    recognition.continuous = false;
-    recognition.interimResults = true;
-    recognition.lang = i18n.language === 'es' ? 'es-US' : 'en-US';
-
-    recognition.onstart = () => {
-      setIsListening(true);
-      setIsProcessing(false);
-    };
-
-    recognition.onresult = (event) => {
-      let interimTranscript = '';
-      let finalTranscript = '';
-      
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        const result = event.results[i];
-        if (result.isFinal) {
-          finalTranscript += result[0].transcript;
-        } else {
-          interimTranscript += result[0].transcript;
-        }
-      }
-      
-      if (finalTranscript) {
-        setMessage(prev => prev + (prev ? ' ' : '') + finalTranscript.trim());
-      }
-    };
-
-    recognition.onerror = (event) => {
-      console.error('Speech recognition error:', event.error, event.message || '');
-      setIsListening(false);
-      setIsProcessing(false);
-      
-      const errorMessages: Record<string, { title: string; description: string }> = {
-        'not-allowed': {
-          title: t('chat.voice.permissionDenied', 'Microphone access denied'),
-          description: t('chat.voice.permissionDeniedDesc', 'Please allow microphone access in your browser settings and reload the page.')
-        },
-        'network': {
-          title: t('chat.voice.networkError', 'Voice service connection failed'),
-          description: t('chat.voice.networkErrorDesc', 'Could not connect to speech recognition service. Please check your internet connection and try again, or type your message instead.')
-        },
-        'no-speech': {
-          title: t('chat.voice.noSpeech', 'No speech detected'),
-          description: t('chat.voice.noSpeechDesc', 'We didn\'t hear anything. Please try speaking closer to your microphone.')
-        },
-        'audio-capture': {
-          title: t('chat.voice.audioCapture', 'Microphone not available'),
-          description: t('chat.voice.audioCaptureDesc', 'Could not access your microphone. Please check that it\'s connected and not being used by another application.')
-        },
-        'service-not-allowed': {
-          title: t('chat.voice.serviceNotAllowed', 'Speech service blocked'),
-          description: t('chat.voice.serviceNotAllowedDesc', 'Speech recognition is blocked. This may be due to browser settings or security policies.')
-        },
-        'language-not-supported': {
-          title: t('chat.voice.languageNotSupported', 'Language not supported'),
-          description: t('chat.voice.languageNotSupportedDesc', 'The selected language is not supported for voice input.')
-        }
-      };
-      
-      if (event.error !== 'aborted') {
-        const errorInfo = errorMessages[event.error] || {
-          title: t('chat.voice.error', 'Voice input error'),
-          description: t('chat.voice.errorDesc', `Speech recognition error: ${event.error}. Please try again or type your message.`)
-        };
-        
-        toast({
-          title: errorInfo.title,
-          description: errorInfo.description,
-          variant: 'destructive'
-        });
-      }
-    };
-
-    recognition.onend = () => {
-      setIsListening(false);
-      setIsProcessing(false);
-      recognitionRef.current = null;
-    };
-
-    recognitionRef.current = recognition;
-    recognition.start();
-  }, [isSpeechSupported, i18n.language, t, toast]);
-
-  const stopListening = useCallback(() => {
-    if (recognitionRef.current) {
-      setIsProcessing(true);
-      recognitionRef.current.stop();
-    }
-  }, []);
-
-  const toggleListening = useCallback(() => {
-    if (isListening) {
-      stopListening();
-    } else {
-      startListening();
-    }
-  }, [isListening, startListening, stopListening]);
-
-  useEffect(() => {
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.abort();
-      }
-    };
-  }, []);
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -251,21 +64,14 @@ export function ChatInput({
 
   return (
     <form onSubmit={handleSubmit} className="relative">
-      <div className={cn(
-        "flex items-end gap-2 p-2 bg-muted/30 rounded-xl border transition-colors",
-        isListening 
-          ? "border-red-500/50 bg-red-50/10 dark:bg-red-900/10" 
-          : "border-border/50 focus-within:border-primary/50"
-      )}>
+      <div className="flex items-end gap-2 p-2 bg-muted/30 rounded-xl border border-border/50 focus-within:border-primary/50 transition-colors">
         <Textarea
           ref={textareaRef}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder={isListening 
-            ? t('chat.voice.listening', 'Listening...') 
-            : placeholder || t('chat.input.placeholder', 'Type your message...')}
-          disabled={disabled || isListening}
+          placeholder={placeholder || t('chat.input.placeholder', 'Type your message...')}
+          disabled={disabled}
           rows={1}
           className={cn(
             "flex-1 min-h-[40px] max-h-[120px] resize-none bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-[15px]",
@@ -273,58 +79,6 @@ export function ChatInput({
           )}
           data-testid="input-chat-message"
         />
-        
-        {isSpeechSupported && (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button
-              type="button"
-              size="icon"
-              variant={isListening ? "destructive" : "outline"}
-              disabled={disabled || isProcessing}
-              onClick={toggleListening}
-              className={cn(
-                "h-9 w-9 rounded-lg shrink-0 relative",
-                isListening && "animate-pulse"
-              )}
-              data-testid="button-voice-input"
-              aria-label={isListening ? t('chat.voice.stopListening', 'Stop listening') : t('chat.voice.startListening', 'Start voice input')}
-            >
-              <AnimatePresence mode="wait">
-                {isProcessing ? (
-                  <motion.div
-                    key="processing"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                  >
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  </motion.div>
-                ) : isListening ? (
-                  <motion.div
-                    key="listening"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                  >
-                    <MicOff className="h-4 w-4" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="idle"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                  >
-                    <Mic className="h-4 w-4" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </Button>
-          </motion.div>
-        )}
 
         <motion.div
           whileHover={!disabled && message.trim() ? { scale: 1.05 } : {}}
@@ -333,7 +87,7 @@ export function ChatInput({
           <Button
             type="submit"
             size="icon"
-            disabled={disabled || !message.trim() || isListening}
+            disabled={disabled || !message.trim()}
             className="h-9 w-9 rounded-lg shrink-0"
             data-testid="button-send-message"
           >
@@ -341,17 +95,6 @@ export function ChatInput({
           </Button>
         </motion.div>
       </div>
-      
-      {isListening && (
-        <motion.p
-          initial={{ opacity: 0, y: -5 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-xs text-red-600 dark:text-red-400 mt-1 flex items-center gap-1"
-        >
-          <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-          {t('chat.voice.recordingHint', 'Speak now... Tap the microphone again when done.')}
-        </motion.p>
-      )}
     </form>
   );
 }
