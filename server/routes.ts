@@ -149,7 +149,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Legal Aid Organizations Proximity Search API - Find organizations near a ZIP code
   app.get("/api/legal-aid-organizations/proximity", async (req, res) => {
     try {
-      const { zipCode, radius = "50", organizationType } = req.query;
+      const { zipCode, radius = "50", organizationType, services } = req.query;
       
       if (!zipCode) {
         return res.status(400).json({ success: false, error: "ZIP code required" });
@@ -219,8 +219,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return R * c;
       };
 
+      // Filter by services if provided (comma-separated list)
+      let filteredOrgs = allOrgs;
+      if (services && typeof services === 'string') {
+        const requestedServices = services.split(',').map(s => s.trim().toLowerCase());
+        filteredOrgs = allOrgs.filter(org => {
+          if (!org.services || org.services.length === 0) return false;
+          const orgServices = org.services.map(s => s.toLowerCase());
+          return requestedServices.some(rs => 
+            orgServices.some(os => os.includes(rs) || rs.includes(os))
+          );
+        });
+        // Fallback: if no matches with services filter, include all orgs
+        if (filteredOrgs.length === 0) {
+          filteredOrgs = allOrgs;
+        }
+      }
+
       // Calculate distances for all organizations
-      const allOrgsWithDistance = allOrgs
+      const allOrgsWithDistance = filteredOrgs
         .filter(org => org.latitude && org.longitude) // Only include orgs with coordinates
         .map(org => {
           const distance = calculateDistance(

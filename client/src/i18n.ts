@@ -373,7 +373,9 @@ i18n
                 "completed": "Completed: {{count}} of {{total}} actions"
               },
               "caseTimeline": {
-                "title": "Case Timeline"
+                "title": "Case Timeline",
+                "progress": "Case Progress",
+                "current": "Current"
               },
               "nextSteps": {
                 "title": "Next Steps"
@@ -2337,6 +2339,18 @@ i18n
             "concernsPlaceholder": "What worries you most about your situation?",
             "zipPlaceholder": "Enter your 5-digit ZIP code..."
           },
+          "voice": {
+            "listening": "Listening...",
+            "startListening": "Start voice input",
+            "stopListening": "Stop listening",
+            "recordingHint": "Speak now... Tap the microphone again when done.",
+            "notSupported": "Voice input not supported",
+            "notSupportedDesc": "Your browser does not support voice input. Please use a modern browser like Chrome, Edge, or Safari.",
+            "permissionDenied": "Microphone access denied",
+            "permissionDeniedDesc": "Please allow microphone access in your browser settings to use voice input.",
+            "error": "Voice input error",
+            "errorDesc": "There was an error with voice input. Please try again."
+          },
           "footer": {
             "privacy": "Your information is private and deleted after your session"
           },
@@ -2753,7 +2767,9 @@ i18n
                 "completed": "Completadas: {{count}} de {{total}} acciones"
               },
               "caseTimeline": {
-                "title": "Cronología del Caso"
+                "title": "Cronología del Caso",
+                "progress": "Progreso del Caso",
+                "current": "Actual"
               },
               "nextSteps": {
                 "title": "Próximos Pasos"
@@ -4716,6 +4732,18 @@ i18n
             "descriptionPlaceholder": "Describa lo que pasó...",
             "concernsPlaceholder": "¿Qué es lo que más le preocupa de su situación?",
             "zipPlaceholder": "Ingrese su código postal de 5 dígitos..."
+          },
+          "voice": {
+            "listening": "Escuchando...",
+            "startListening": "Iniciar entrada de voz",
+            "stopListening": "Detener escucha",
+            "recordingHint": "Hable ahora... Toque el micrófono de nuevo cuando termine.",
+            "notSupported": "Entrada de voz no compatible",
+            "notSupportedDesc": "Su navegador no admite entrada de voz. Use un navegador moderno como Chrome, Edge o Safari.",
+            "permissionDenied": "Acceso al micrófono denegado",
+            "permissionDeniedDesc": "Permita el acceso al micrófono en la configuración de su navegador para usar la entrada de voz.",
+            "error": "Error de entrada de voz",
+            "errorDesc": "Hubo un error con la entrada de voz. Intente de nuevo."
           },
           "footer": {
             "privacy": "Su información es privada y se elimina después de su sesión"

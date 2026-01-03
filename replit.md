@@ -14,6 +14,13 @@ Preferred communication style: Simple, everyday language.
 
 The frontend is built with React 18 and TypeScript, utilizing shadcn/ui components, Wouter for routing, and Tailwind CSS for styling. It features a custom legal-themed design, Framer Motion for animations, and comprehensive bilingual support (English/Spanish) with `react-i18next`. All user-facing text is designed for a 6th-8th grade reading level, and the application is mobile-responsive. State management uses TanStack Query and React hooks.
 
+**Voice Input (Jan 2025)**: The chat interface supports voice input using the Web Speech API (`client/src/components/chat/chat-input.tsx`). Features include:
+- Microphone button next to send button (hidden if browser doesn't support)
+- Real-time transcription with bilingual support (en-US/es-US based on i18n language)
+- Visual feedback: red border and pulse animation when listening
+- Proper error handling for unsupported browsers and permission denial
+- Audio is never stored; transcription is client-side only; transcribed text flows through existing PII redaction pipeline
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.
@@ -69,6 +76,8 @@ The platform integrates various legal data sources, including databases for lega
 ### API Architecture
 
 The API provides endpoints for legal resources, court information, AI-powered legal guidance, detailed docket information, and comprehensive search capabilities including keyword, semantic, and hybrid search for case law and court records.
+
+**Intelligent Attorney Matching (Jan 2025)**: The proximity search API (`/api/legal-aid-organizations/proximity`) now supports optional `services` filtering to match legal aid organizations with user's specific legal needs. A charge-to-service mapping utility (`shared/charge-service-mapping.ts`) maps charge categories (DUI, theft, assault, etc.) to recommended legal services (DUI Defense, Criminal Defense, etc.) for intelligent resource recommendations.
 
 ### System Design Choices
 

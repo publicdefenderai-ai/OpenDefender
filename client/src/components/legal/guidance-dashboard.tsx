@@ -943,36 +943,79 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </CardContent>
       </Card>
 
-      {/* Case Timeline */}
+      {/* Enhanced Case Timeline */}
       <Card className="border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <Calendar className="h-5 w-5 text-muted-foreground" />
             {t('legalGuidance.dashboard.caseTimeline.title')}
           </CardTitle>
+          {/* Progress indicator */}
+          {guidance.timeline.length > 0 && (
+            <div className="mt-3">
+              <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
+                <span>{t('legalGuidance.dashboard.caseTimeline.progress', 'Case Progress')}</span>
+                <span>{Math.round((guidance.timeline.filter(s => s.completed).length / guidance.timeline.length) * 100)}%</span>
+              </div>
+              <Progress 
+                value={(guidance.timeline.filter(s => s.completed).length / guidance.timeline.length) * 100} 
+                className="h-2"
+              />
+            </div>
+          )}
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            {guidance.timeline.map((stage, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className={`w-3 h-3 rounded-full mt-2 ${
-                  stage.completed ? 'bg-primary' : 'bg-muted-foreground/30'
-                }`} />
-                <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <h4 className="font-medium text-foreground">
-                      {stage.stage}
-                    </h4>
-                    <Badge variant={stage.completed ? 'secondary' : 'outline'} className="text-xs">
-                      {stage.timeframe}
-                    </Badge>
+          <div className="relative">
+            {/* Vertical connecting line */}
+            <div className="absolute left-[11px] top-3 bottom-3 w-0.5 bg-muted-foreground/20" />
+            
+            <div className="space-y-0">
+              {guidance.timeline.map((stage, index) => {
+                const isCurrentStage = !stage.completed && (index === 0 || guidance.timeline[index - 1]?.completed);
+                const isCompleted = stage.completed;
+                
+                return (
+                  <div key={index} className="relative flex items-start gap-4 pb-6 last:pb-0" data-testid={`timeline-stage-${index}`}>
+                    {/* Stage indicator */}
+                    <div className={`relative z-10 flex items-center justify-center w-6 h-6 rounded-full border-2 ${
+                      isCompleted 
+                        ? 'bg-primary border-primary text-primary-foreground' 
+                        : isCurrentStage
+                          ? 'bg-background border-primary ring-4 ring-primary/20'
+                          : 'bg-background border-muted-foreground/30'
+                    }`}>
+                      {isCompleted ? (
+                        <CheckCircle className="h-4 w-4" />
+                      ) : (
+                        <span className={`text-xs font-semibold ${isCurrentStage ? 'text-primary' : 'text-muted-foreground'}`}>
+                          {index + 1}
+                        </span>
+                      )}
+                    </div>
+                    
+                    {/* Stage content */}
+                    <div className={`flex-1 ${isCurrentStage ? 'bg-primary/5 -ml-2 pl-4 pr-3 py-2 rounded-lg border border-primary/20' : ''}`}>
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <h4 className={`font-medium ${isCurrentStage ? 'text-primary' : isCompleted ? 'text-foreground' : 'text-muted-foreground'}`}>
+                          {stage.stage}
+                          {isCurrentStage && (
+                            <Badge variant="default" className="ml-2 text-xs">
+                              {t('legalGuidance.dashboard.caseTimeline.current', 'Current')}
+                            </Badge>
+                          )}
+                        </h4>
+                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className="text-xs">
+                          {stage.timeframe}
+                        </Badge>
+                      </div>
+                      <p className={`text-sm mt-1 ${isCurrentStage ? 'text-foreground' : 'text-muted-foreground'}`}>
+                        {stage.description}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {stage.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+                );
+              })}
+            </div>
           </div>
         </CardContent>
       </Card>
