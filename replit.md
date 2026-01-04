@@ -29,6 +29,12 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 - Applied to: Rights Info, Document Library, and all Immigration sub-pages (DACA/TPS, Workplace Raids, Family Planning, Bond Hearings, Find Attorney)
 - Respects navigation guard for unsaved changes warning
 
+**Page Transitions (Jan 2025)**: Smooth fade-in animations when navigating between pages (`client/src/components/ui/page-transition.tsx`):
+- Uses Framer Motion's AnimatePresence with "wait" mode for clean transitions
+- Subtle slide-up effect (8px) combined with opacity fade
+- Duration: 0.3s with custom easing curve
+- Respects `prefers-reduced-motion` (simpler, faster fade only)
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.
