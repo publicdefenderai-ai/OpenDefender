@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/accordion";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { EmptyState } from "@/components/ui/empty-state";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
   LEGAL_DOCUMENTS, 
@@ -167,6 +168,10 @@ export default function DocumentLibrary() {
   const { t, i18n } = useTranslation();
   const [selectedPhase, setSelectedPhase] = useState<CasePhase | 'all'>('all');
   const [selectedCategory, setSelectedCategory] = useState<DocumentCategory | 'all'>('all');
+  
+  const breadcrumbItems = [
+    { label: t('breadcrumb.home', 'Home'), href: '/' }
+  ];
 
   const filteredDocuments = LEGAL_DOCUMENTS.filter(doc => {
     const matchesPhase = selectedPhase === 'all' || doc.phases.includes(selectedPhase as CasePhase);
@@ -182,6 +187,10 @@ export default function DocumentLibrary() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <PageBreadcrumb 
+        items={breadcrumbItems} 
+        currentPage={t('documentLibrary.title', 'Case Documents Library')} 
+      />
       
       <section className="vivid-header py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">

@@ -23,6 +23,12 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 - **CSS utilities in `index.css`**: card-elevated, card-interactive, hover-lift, hover-scale, btn-bounce classes
 - Note: Tailwind opacity modifiers (e.g., `text-primary/30`) don't work in @apply or as variable-based classes; use inline styles with `hsl(var(--css-var) / opacity)` instead
 
+**Breadcrumb Navigation (Jan 2025)**: Added responsive breadcrumb component (`client/src/components/navigation/page-breadcrumb.tsx`) for improved navigation:
+- **Desktop**: Full trail (Home / Section / Current Page) with clickable links
+- **Mobile**: Collapsed back-link format (← Parent Page) to save space
+- Applied to: Rights Info, Document Library, and all Immigration sub-pages (DACA/TPS, Workplace Raids, Family Planning, Bond Hearings, Find Attorney)
+- Respects navigation guard for unsaved changes warning
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.

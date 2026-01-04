@@ -37,6 +37,7 @@ import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useLegalResources } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
@@ -49,6 +50,10 @@ export default function RightsInfo() {
   const [activeTab, setActiveTab] = useState("miranda");
   const [animationKey, setAnimationKey] = useState(0);
   
+  const breadcrumbItems = [
+    { label: t('breadcrumb.home', 'Home'), href: '/' }
+  ];
+  
   const handleTabChange = (value: string) => {
     setAnimationKey(prev => prev + 1);
     setActiveTab(value);
@@ -57,6 +62,10 @@ export default function RightsInfo() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <PageBreadcrumb 
+        items={breadcrumbItems} 
+        currentPage={t('rights.hero.title')} 
+      />
 
       {/* Hero Section - Vivid Header */}
       <section className="vivid-header-alt py-16 md:py-20">

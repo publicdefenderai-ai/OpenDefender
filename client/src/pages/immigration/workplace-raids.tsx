@@ -2,36 +2,37 @@ import { motion } from "framer-motion";
 import { 
   Building2, 
   AlertTriangle, 
-  ArrowLeft,
   Phone
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link } from "wouter";
 import { useTranslation } from 'react-i18next';
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export default function WorkplaceRaids() {
   useScrollToTop();
   const { t } = useTranslation();
   
+  const breadcrumbItems = [
+    { label: t('breadcrumb.home', 'Home'), href: '/' },
+    { label: t('breadcrumb.immigrationGuidance', 'Immigration Guidance'), href: '/immigration-guidance' }
+  ];
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <PageBreadcrumb 
+        items={breadcrumbItems} 
+        currentPage={t('immigration.raids.title')} 
+      />
 
       <section className="vivid-header text-white py-12 lg:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <Link href="/immigration-guidance">
-            <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 mb-4" data-testid="button-back-immigration">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              {t('immigration.hub.backButton')}
-            </Button>
-          </Link>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
