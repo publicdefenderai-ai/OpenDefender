@@ -35,6 +35,16 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 - Duration: 0.3s with custom easing curve
 - Respects `prefers-reduced-motion` (simpler, faster fade only)
 
+**Keyboard Shortcuts (Jan 2025)**: Power user keyboard shortcuts (`client/src/hooks/use-keyboard-shortcuts.ts`):
+- `/` - Focus first search input on page
+- `Esc` - Close dialogs or unfocus inputs
+- `Ctrl+K` (or `Cmd+K`) - Show keyboard shortcuts help dialog
+- `g` then `h` - Navigate to Home
+- `g` then `r` - Navigate to Rights Info
+- `g` then `d` - Navigate to Document Library
+- `g` then `c` - Navigate to Chat
+- Shortcuts dialog component: `client/src/components/ui/keyboard-shortcuts-dialog.tsx`
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.

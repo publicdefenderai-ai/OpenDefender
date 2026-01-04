@@ -10,6 +10,8 @@ import { PageTransition } from "@/components/ui/page-transition";
 import { NavigationGuardProvider } from "@/contexts/navigation-guard";
 import { ChatProvider } from "@/contexts/chat-context";
 import { ChatLauncher } from "@/components/chat/chat-launcher";
+import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
+import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { X } from "lucide-react";
 import "./i18n";
 import NotFound from "@/pages/not-found";
@@ -125,6 +127,7 @@ function SkipNavigation() {
 
 function App() {
   const [location] = useLocation();
+  useKeyboardShortcuts();
   
   return (
     <QueryClientProvider client={queryClient}>
@@ -143,6 +146,7 @@ function App() {
                 </AnimatePresence>
               </main>
               <ChatLauncher />
+              <KeyboardShortcutsDialog />
             </TooltipProvider>
           </ChatProvider>
         </NavigationGuardProvider>
