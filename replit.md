@@ -55,6 +55,12 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 - `g` then `c` - Navigate to Chat
 - Shortcuts dialog component: `client/src/components/ui/keyboard-shortcuts-dialog.tsx`
 
+**Mobile-First Features (Jan 2025)**: Enhanced mobile experience:
+- **Mobile Bottom Navigation** (`client/src/components/navigation/mobile-bottom-nav.tsx`): Fixed bottom nav with 4 main items (Home, Chat, Docs, Rights) + More menu. Only visible on mobile (md:hidden). Uses Sheet for "More" dropdown. Includes safe-area-bottom CSS for iOS notch devices.
+- **Click-to-Call** (`client/src/components/ui/click-to-call.tsx`): Green call buttons with `tel:` links. Applied to Court Locator (court phone numbers) and Find Attorney (NILF and Immigrant Defense hotlines).
+- **Share Functionality** (`client/src/components/ui/share-button.tsx`): Uses Web Share API on mobile, falls back to copy link/email dropdown on desktop. Applied to Document Library cards and Rights Info hero. Includes SSR guards for server rendering.
+- **Progressive Loading** (`client/src/components/ui/deferred-content.tsx`): DeferredContent and ProgressiveList components for staggered content loading. Applied to Document Library (first 4 items instant, remaining load progressively with skeleton placeholders). Note: Chat intentionally does NOT use progressive loading because messages are added incrementally in real-time and need instant display; the existing TypingIndicator provides appropriate loading feedback.
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.

@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ShareResource } from "@/components/ui/share-button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Select,
@@ -26,6 +27,8 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { EmptyState } from "@/components/ui/empty-state";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { DeferredContent } from "@/components/ui/deferred-content";
+import { CardSkeleton } from "@/components/ui/loading-skeletons";
 import { 
   LEGAL_DOCUMENTS, 
   getDocumentsForPhase, 
@@ -109,12 +112,19 @@ function DocumentCard({ document }: { document: LegalDocument }) {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {document.phases.map(phase => (
-              <Badge key={phase} variant="secondary" className="text-xs">
-                {i18n.language === 'es' ? PHASE_LABELS[phase].es : PHASE_LABELS[phase].en}
-              </Badge>
-            ))}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-wrap gap-2">
+              {document.phases.map(phase => (
+                <Badge key={phase} variant="secondary" className="text-xs">
+                  {i18n.language === 'es' ? PHASE_LABELS[phase].es : PHASE_LABELS[phase].en}
+                </Badge>
+              ))}
+            </div>
+            <ShareResource 
+              resourceTitle={t(document.titleKey)} 
+              resourceDescription={t(document.descriptionKey)}
+              resourceId={document.slug}
+            />
           </div>
 
           <Button
@@ -266,10 +276,16 @@ export default function DocumentLibrary() {
             
             <TabsContent value="criminal">
               <div className="grid gap-6 md:grid-cols-2">
-                {criminalDocs.map((doc) => (
-                  <ScrollReveal key={doc.id}>
-                    <DocumentCard document={doc} />
-                  </ScrollReveal>
+                {criminalDocs.map((doc, index) => (
+                  <DeferredContent 
+                    key={doc.id} 
+                    delay={index < 4 ? 0 : 100 + (index - 4) * 50}
+                    customSkeleton={<CardSkeleton />}
+                  >
+                    <ScrollReveal>
+                      <DocumentCard document={doc} />
+                    </ScrollReveal>
+                  </DeferredContent>
                 ))}
               </div>
               {criminalDocs.length === 0 && (
@@ -287,10 +303,16 @@ export default function DocumentLibrary() {
             
             <TabsContent value="immigration">
               <div className="grid gap-6 md:grid-cols-2">
-                {immigrationDocs.map((doc) => (
-                  <ScrollReveal key={doc.id}>
-                    <DocumentCard document={doc} />
-                  </ScrollReveal>
+                {immigrationDocs.map((doc, index) => (
+                  <DeferredContent 
+                    key={doc.id} 
+                    delay={index < 4 ? 0 : 100 + (index - 4) * 50}
+                    customSkeleton={<CardSkeleton />}
+                  >
+                    <ScrollReveal>
+                      <DocumentCard document={doc} />
+                    </ScrollReveal>
+                  </DeferredContent>
                 ))}
               </div>
               {immigrationDocs.length === 0 && (
@@ -308,10 +330,16 @@ export default function DocumentLibrary() {
           </Tabs>
         ) : (
           <div className="grid gap-6 md:grid-cols-2">
-            {filteredDocuments.map((doc) => (
-              <ScrollReveal key={doc.id}>
-                <DocumentCard document={doc} />
-              </ScrollReveal>
+            {filteredDocuments.map((doc, index) => (
+              <DeferredContent 
+                key={doc.id} 
+                delay={index < 4 ? 0 : 100 + (index - 4) * 50}
+                customSkeleton={<CardSkeleton />}
+              >
+                <ScrollReveal>
+                  <DocumentCard document={doc} />
+                </ScrollReveal>
+              </DeferredContent>
             ))}
             {filteredDocuments.length === 0 && (
               <div className="col-span-2">

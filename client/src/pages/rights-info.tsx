@@ -38,6 +38,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
+import { ShareButton } from "@/components/ui/share-button";
 import { useLegalResources } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
@@ -75,9 +76,16 @@ export default function RightsInfo() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white" data-testid="heading-rights-title">
                 {t('rights.hero.title')}
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto" data-testid="text-rights-subtitle">
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6" data-testid="text-rights-subtitle">
                 {t('rights.hero.subtitle')}
               </p>
+              <ShareButton 
+                title={t('rights.hero.title')}
+                text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
+                variant="outline"
+                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+                data-testid="button-share-rights"
+              />
             </div>
           </ScrollReveal>
         </div>

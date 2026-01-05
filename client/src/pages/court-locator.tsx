@@ -12,6 +12,7 @@ import {
   ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ClickToCall } from "@/components/ui/click-to-call";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -378,17 +379,17 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
               </div>
             </div>
 
-            {/* Phone */}
+            {/* Phone - Click to Call */}
             {court.phone && (
-              <div className="flex items-start gap-3">
-                <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="text-sm text-muted-foreground">{t('courtLocator.courtCard.phone')}</div>
-                  <div className="text-sm font-medium">
-                    <a href={`tel:${court.phone}`} className="hover:text-blue-600 transition-colors">
-                      {court.phone}
-                    </a>
-                  </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="text-sm text-muted-foreground mb-1">{t('courtLocator.courtCard.phone')}</div>
+                  <ClickToCall
+                    phoneNumber={court.phone}
+                    size="sm"
+                    data-testid={`button-call-${court.id}`}
+                  />
                 </div>
               </div>
             )}

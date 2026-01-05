@@ -13,6 +13,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { ClickToCall } from "@/components/ui/click-to-call";
 
 export default function FindAttorney() {
   useScrollToTop();
@@ -270,6 +271,24 @@ export default function FindAttorney() {
                       <li>{t('immigration.attorney.freeHelp.find2')}</li>
                       <li>{t('immigration.attorney.freeHelp.find3')}</li>
                     </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 pt-6 border-t border-blue-200 dark:border-blue-700">
+                  <h4 className="font-semibold mb-4 text-blue-900 dark:text-blue-200">
+                    {t('immigration.attorney.freeHelp.hotlines', 'Emergency Hotlines')}
+                  </h4>
+                  <div className="flex flex-wrap gap-3">
+                    <ClickToCall
+                      phoneNumber="1-800-354-0365"
+                      label={t('immigration.attorney.freeHelp.nilfHotline', 'NILF Hotline')}
+                      data-testid="button-call-nilf"
+                    />
+                    <ClickToCall
+                      phoneNumber="1-888-839-8682"
+                      label={t('immigration.attorney.freeHelp.immigrantDefense', 'Immigrant Defense')}
+                      data-testid="button-call-immigrant-defense"
+                    />
                   </div>
                 </div>
               </CardContent>

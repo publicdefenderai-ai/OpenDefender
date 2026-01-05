@@ -11,6 +11,7 @@ import { NavigationGuardProvider } from "@/contexts/navigation-guard";
 import { ChatProvider } from "@/contexts/chat-context";
 import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
+import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { X } from "lucide-react";
 import "./i18n";
@@ -138,7 +139,7 @@ function App() {
               <Toaster />
               <SkipNavigation />
               <BetaBanner />
-              <main id="main-content" tabIndex={-1}>
+              <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
                 <AnimatePresence mode="wait">
                   <PageTransition key={location}>
                     <Router />
@@ -146,6 +147,7 @@ function App() {
                 </AnimatePresence>
               </main>
               <ChatLauncher />
+              <MobileBottomNav />
               <KeyboardShortcutsDialog />
             </TooltipProvider>
           </ChatProvider>
