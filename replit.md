@@ -23,6 +23,16 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
 - **CSS utilities in `index.css`**: card-elevated, card-interactive, hover-lift, hover-scale, btn-bounce classes
 - Note: Tailwind opacity modifiers (e.g., `text-primary/30`) don't work in @apply or as variable-based classes; use inline styles with `hsl(var(--css-var) / opacity)` instead
 
+**Sophisticated Color Palette & Visual Design (Jan 2025)**: Premium legal tech visual identity:
+- **Color Palette**: Deep navy primary (hsl 222 47% 28%), warm gold accent (hsl 38 60% 50%), warm off-white background
+- **Dark Mode**: Complementary dark theme with navy backgrounds and gold accents
+- **Gradient Headers**: All vivid-header classes enhanced with radial gradient overlays via ::before pseudo-elements for depth
+- **Glassmorphism** (limited application):
+  - `.glass-fab`: Chat launcher button with backdrop blur, transparency, and inner glow
+  - `.glass-overlay`: Dialog modals with frosted glass effect
+  - `.glass-panel`: Popovers with translucent backgrounds
+  - Dialog overlay uses backdrop-blur-sm for subtle blur effect
+
 **Breadcrumb Navigation (Jan 2025)**: Added responsive breadcrumb component (`client/src/components/navigation/page-breadcrumb.tsx`) for improved navigation:
 - **Desktop**: Full trail (Home / Section / Current Page) with clickable links
 - **Mobile**: Collapsed back-link format (← Parent Page) to save space
