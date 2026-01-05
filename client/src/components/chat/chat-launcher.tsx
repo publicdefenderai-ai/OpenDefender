@@ -38,7 +38,7 @@ export function ChatLauncher() {
           <Button
             onClick={handleOpenChat}
             size="icon"
-            className="relative h-12 w-12 rounded-full shadow-lg hover:shadow-xl transition-shadow bg-primary hover:bg-primary/90"
+            className="relative h-14 w-14 rounded-full glass-fab text-white"
             data-testid="button-open-chat"
           >
             <MessageSquare className="h-5 w-5" />

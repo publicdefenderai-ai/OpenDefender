@@ -3,41 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(220 20% 14%);
+  /* Sophisticated Legal Tech Palette - Light Mode */
+  --background: hsl(40 20% 99%);
+  --foreground: hsl(222 35% 15%);
   --card: hsl(0 0% 100%);
-  --card-foreground: hsl(220 20% 14%);
+  --card-foreground: hsl(222 35% 15%);
   --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(220 20% 14%);
-  --primary: hsl(220 45% 45%);
+  --popover-foreground: hsl(222 35% 15%);
+  --primary: hsl(222 47% 28%);
   --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(220 20% 96%);
-  --secondary-foreground: hsl(220 20% 14%);
-  --muted: hsl(220 14% 96%);
-  --muted-foreground: hsl(220 10% 46%);
-  --accent: hsl(220 14% 96%);
-  --accent-foreground: hsl(220 20% 14%);
-  --destructive: hsl(0 55% 50%);
+  --secondary: hsl(40 15% 95%);
+  --secondary-foreground: hsl(222 35% 15%);
+  --muted: hsl(40 10% 94%);
+  --muted-foreground: hsl(222 15% 45%);
+  --accent: hsl(38 60% 50%);
+  --accent-foreground: hsl(222 35% 15%);
+  --destructive: hsl(0 65% 45%);
   --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(220 13% 90%);
-  --input: hsl(220 13% 90%);
-  --ring: hsl(220 45% 45%);
-  --chart-1: hsl(220 45% 45%);
-  --chart-2: hsl(160 45% 40%);
-  --chart-3: hsl(45 55% 50%);
-  --chart-4: hsl(150 40% 45%);
-  --chart-5: hsl(340 45% 50%);
+  --border: hsl(222 15% 88%);
+  --input: hsl(222 15% 88%);
+  --ring: hsl(222 47% 28%);
+  --chart-1: hsl(222 47% 28%);
+  --chart-2: hsl(160 45% 35%);
+  --chart-3: hsl(38 60% 50%);
+  --chart-4: hsl(150 40% 40%);
+  --chart-5: hsl(345 50% 45%);
   
-  /* Legal theme colors - muted palette */
-  --legal-blue: hsl(220 45% 45%);
-  --legal-blue-dark: hsl(220 45% 35%);
-  --urgent-red: hsl(0 55% 50%);
-  --urgent-red-dark: hsl(0 55% 40%);
-  --success-green: hsl(150 40% 38%);
-  --success-green-dark: hsl(150 40% 28%);
-  --neutral-dark: hsl(220 20% 14%);
-  --neutral-medium: hsl(220 10% 46%);
-  --neutral-light: hsl(220 14% 98%);
+  /* Legal theme colors - sophisticated warm palette */
+  --legal-navy: hsl(222 47% 28%);
+  --legal-navy-deep: hsl(222 50% 20%);
+  --legal-navy-light: hsl(222 40% 38%);
+  --legal-blue: hsl(222 47% 28%);
+  --legal-blue-dark: hsl(222 50% 20%);
+  --gold-accent: hsl(38 60% 50%);
+  --gold-accent-muted: hsl(38 40% 65%);
+  --urgent-red: hsl(0 65% 45%);
+  --urgent-red-dark: hsl(0 65% 35%);
+  --success-green: hsl(155 45% 32%);
+  --success-green-dark: hsl(155 50% 24%);
+  --neutral-dark: hsl(222 35% 15%);
+  --neutral-medium: hsl(222 15% 45%);
+  --neutral-light: hsl(40 15% 97%);
+  --warm-gray: hsl(30 10% 50%);
   
   --radius: 0.5rem;
   
@@ -47,32 +54,38 @@
 }
 
 .dark {
-  --background: hsl(220 20% 10%);
-  --foreground: hsl(220 14% 96%);
-  --card: hsl(220 20% 8%);
-  --card-foreground: hsl(220 14% 96%);
-  --popover: hsl(220 20% 8%);
-  --popover-foreground: hsl(220 14% 96%);
-  --primary: hsl(220 50% 60%);
+  /* Sophisticated Legal Tech Palette - Dark Mode */
+  --background: hsl(222 25% 8%);
+  --foreground: hsl(40 15% 95%);
+  --card: hsl(222 25% 11%);
+  --card-foreground: hsl(40 15% 95%);
+  --popover: hsl(222 25% 11%);
+  --popover-foreground: hsl(40 15% 95%);
+  --primary: hsl(222 45% 55%);
   --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(220 20% 18%);
-  --secondary-foreground: hsl(220 14% 96%);
-  --muted: hsl(220 20% 18%);
-  --muted-foreground: hsl(220 14% 65%);
-  --accent: hsl(220 20% 18%);
-  --accent-foreground: hsl(220 14% 96%);
-  --destructive: hsl(0 50% 40%);
-  --destructive-foreground: hsl(220 14% 96%);
-  --border: hsl(220 20% 20%);
-  --input: hsl(220 20% 20%);
-  --ring: hsl(220 50% 60%);
+  --secondary: hsl(222 20% 16%);
+  --secondary-foreground: hsl(40 15% 95%);
+  --muted: hsl(222 20% 16%);
+  --muted-foreground: hsl(222 15% 60%);
+  --accent: hsl(38 55% 55%);
+  --accent-foreground: hsl(40 15% 95%);
+  --destructive: hsl(0 55% 45%);
+  --destructive-foreground: hsl(40 15% 95%);
+  --border: hsl(222 20% 18%);
+  --input: hsl(222 20% 18%);
+  --ring: hsl(222 45% 55%);
   
-  /* Dark mode legal colors - muted */
-  --legal-blue: hsl(220 50% 60%);
-  --legal-blue-dark: hsl(220 50% 50%);
-  --neutral-dark: hsl(220 14% 96%);
-  --neutral-medium: hsl(220 14% 65%);
-  --neutral-light: hsl(220 20% 18%);
+  /* Dark mode legal colors - sophisticated */
+  --legal-navy: hsl(222 45% 55%);
+  --legal-navy-deep: hsl(222 45% 45%);
+  --legal-navy-light: hsl(222 40% 65%);
+  --legal-blue: hsl(222 45% 55%);
+  --legal-blue-dark: hsl(222 45% 45%);
+  --gold-accent: hsl(38 55% 55%);
+  --gold-accent-muted: hsl(38 35% 45%);
+  --neutral-dark: hsl(40 15% 95%);
+  --neutral-medium: hsl(222 15% 60%);
+  --neutral-light: hsl(222 20% 16%);
 }
 
 @layer base {
@@ -282,11 +295,24 @@
   transform-origin: top center;
 }
 
-/* Vivid contrast header blocks */
+/* ===== SOPHISTICATED GRADIENT HEADERS ===== */
+
+/* Primary Navy gradient - Authority and Trust */
 .vivid-header {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(220 60% 35%) 0%, hsl(220 55% 45%) 50%, hsl(220 50% 55%) 100%);
+  background: linear-gradient(135deg, hsl(222 50% 20%) 0%, hsl(222 47% 28%) 40%, hsl(222 40% 35%) 100%);
+}
+
+.vivid-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 30% 0%, hsl(38 60% 50% / 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .vivid-header-content {
@@ -302,45 +328,112 @@
   color: white;
 }
 
+/* Deep Navy variant - Elegant depth */
 .vivid-header-alt {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(240 30% 15%) 0%, hsl(230 25% 22%) 50%, hsl(220 20% 28%) 100%);
+  background: linear-gradient(135deg, hsl(222 55% 12%) 0%, hsl(222 45% 18%) 50%, hsl(222 40% 24%) 100%);
+}
+
+.vivid-header-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 70% 100%, hsl(222 45% 40% / 0.15) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 /* Teal/Cyan gradient - Court Procedures (calming, procedural) */
 .vivid-header-teal {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(185 70% 28%) 0%, hsl(180 60% 35%) 50%, hsl(175 55% 40%) 100%);
+  background: linear-gradient(135deg, hsl(190 55% 25%) 0%, hsl(185 50% 32%) 50%, hsl(180 45% 38%) 100%);
+}
+
+.vivid-header-teal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 80% 20%, hsl(38 50% 50% / 0.06) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 /* Purple/Indigo gradient - Legal Glossary (knowledge, wisdom) */
 .vivid-header-purple {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(270 50% 30%) 0%, hsl(265 45% 40%) 50%, hsl(260 40% 48%) 100%);
+  background: linear-gradient(135deg, hsl(260 45% 28%) 0%, hsl(255 40% 36%) 50%, hsl(250 35% 44%) 100%);
+}
+
+.vivid-header-purple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 20% 80%, hsl(280 40% 55% / 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 /* Amber/Warm gradient - Record Expungement (hope, fresh start) */
 .vivid-header-amber {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(25 80% 35%) 0%, hsl(30 75% 42%) 50%, hsl(35 70% 48%) 100%);
+  background: linear-gradient(135deg, hsl(28 65% 30%) 0%, hsl(32 60% 38%) 50%, hsl(36 55% 45%) 100%);
+}
+
+.vivid-header-amber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 90% 10%, hsl(45 70% 60% / 0.12) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 /* Rose/Supportive gradient - Friends & Family (caring, support) */
 .vivid-header-rose {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(345 60% 35%) 0%, hsl(350 55% 42%) 50%, hsl(355 50% 48%) 100%);
+  background: linear-gradient(135deg, hsl(345 50% 32%) 0%, hsl(350 45% 40%) 50%, hsl(355 40% 48%) 100%);
+}
+
+.vivid-header-rose::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 10% 90%, hsl(340 45% 55% / 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 /* Green/Growth gradient - Diversion Programs (second chances, rehabilitation) */
 .vivid-header-green {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, hsl(155 55% 28%) 0%, hsl(150 50% 35%) 50%, hsl(145 45% 42%) 100%);
+  background: linear-gradient(135deg, hsl(155 50% 24%) 0%, hsl(150 45% 32%) 50%, hsl(145 40% 40%) 100%);
+}
+
+.vivid-header-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 60% 0%, hsl(38 50% 50% / 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 /* ===== VISUAL POLISH ENHANCEMENTS ===== */
@@ -360,13 +453,92 @@
 }
 
 .card-glass {
-  @apply backdrop-blur-sm;
-  background: hsl(0 0% 100% / 0.8);
-  border-color: hsl(0 0% 100% / 0.2);
+  @apply backdrop-blur-md;
+  background: hsl(0 0% 100% / 0.75);
+  border: 1px solid hsl(0 0% 100% / 0.3);
+  box-shadow: 0 4px 30px hsl(222 50% 20% / 0.06);
 }
 
 .dark .card-glass {
-  background: hsl(var(--card) / 0.8);
+  background: hsl(222 25% 11% / 0.75);
+  border-color: hsl(0 0% 100% / 0.08);
+  box-shadow: 0 4px 30px hsl(0 0% 0% / 0.2);
+}
+
+/* Glassmorphism for modals/dialogs */
+.glass-overlay {
+  @apply backdrop-blur-lg;
+  background: hsl(0 0% 100% / 0.85);
+  border: 1px solid hsl(0 0% 100% / 0.4);
+  box-shadow: 
+    0 8px 32px hsl(222 50% 20% / 0.1),
+    0 2px 8px hsl(222 50% 20% / 0.05),
+    inset 0 1px 0 hsl(0 0% 100% / 0.5);
+}
+
+.dark .glass-overlay {
+  background: hsl(222 25% 11% / 0.85);
+  border-color: hsl(0 0% 100% / 0.1);
+  box-shadow: 
+    0 8px 32px hsl(0 0% 0% / 0.3),
+    0 2px 8px hsl(0 0% 0% / 0.2),
+    inset 0 1px 0 hsl(0 0% 100% / 0.05);
+}
+
+/* Glassmorphism for floating action buttons (chat launcher) */
+.glass-fab {
+  @apply backdrop-blur-md;
+  background: hsl(222 47% 28% / 0.9);
+  border: 1px solid hsl(0 0% 100% / 0.15);
+  box-shadow: 
+    0 8px 24px hsl(222 50% 20% / 0.25),
+    0 4px 8px hsl(222 50% 20% / 0.15),
+    inset 0 1px 0 hsl(0 0% 100% / 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.glass-fab:hover {
+  background: hsl(222 47% 32% / 0.95);
+  box-shadow: 
+    0 12px 32px hsl(222 50% 20% / 0.3),
+    0 6px 12px hsl(222 50% 20% / 0.2),
+    inset 0 1px 0 hsl(0 0% 100% / 0.15);
+  transform: translateY(-2px);
+}
+
+.dark .glass-fab {
+  background: hsl(222 45% 55% / 0.9);
+  border-color: hsl(0 0% 100% / 0.1);
+  box-shadow: 
+    0 8px 24px hsl(0 0% 0% / 0.4),
+    0 4px 8px hsl(0 0% 0% / 0.3),
+    inset 0 1px 0 hsl(0 0% 100% / 0.1);
+}
+
+.dark .glass-fab:hover {
+  background: hsl(222 45% 60% / 0.95);
+  box-shadow: 
+    0 12px 32px hsl(0 0% 0% / 0.5),
+    0 6px 12px hsl(0 0% 0% / 0.35),
+    inset 0 1px 0 hsl(0 0% 100% / 0.15);
+}
+
+/* Glass panel for popover content */
+.glass-panel {
+  @apply backdrop-blur-xl;
+  background: hsl(0 0% 100% / 0.92);
+  border: 1px solid hsl(222 15% 88% / 0.5);
+  box-shadow: 
+    0 10px 40px hsl(222 50% 20% / 0.12),
+    0 4px 12px hsl(222 50% 20% / 0.06);
+}
+
+.dark .glass-panel {
+  background: hsl(222 25% 11% / 0.92);
+  border-color: hsl(0 0% 100% / 0.08);
+  box-shadow: 
+    0 10px 40px hsl(0 0% 0% / 0.35),
+    0 4px 12px hsl(0 0% 0% / 0.25);
 }
 
 /* Micro-animations */
