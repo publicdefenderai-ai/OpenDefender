@@ -338,7 +338,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
         
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -348,7 +348,7 @@ export default function Home() {
               {t('home.hero.title1')}{' '}
               <span className="text-primary">{t('home.hero.title2')}</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-10 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
@@ -396,10 +396,10 @@ export default function Home() {
       </section>
 
       {/* Data Sources Section */}
-      <section className="py-16 md:py-20 bg-background border-t border-border/30">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="py-16 md:py-20 lg:py-24 bg-background border-t border-border/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-8">
+            <div className="text-center mb-10 md:mb-12">
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t('home.features.subtitle')}
               </p>
@@ -435,10 +435,10 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-16 md:py-20 bg-muted/20">
-        <div className="max-w-2xl mx-auto px-4">
+      <section className="py-16 md:py-20 lg:py-24 bg-muted/20">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-8">
+            <div className="text-center mb-10 md:mb-12">
               <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
                 {t('home.trust.title')}
               </h2>
@@ -451,7 +451,7 @@ export default function Home() {
           {/* Expandable Trust Items */}
           <ScrollReveal delay={0.1}>
             <Card className="border-border/50">
-              <CardContent className="p-4">
+              <CardContent className="p-5 md:p-6">
                 <TrustItem
                   title={t('home.trust.verifiedTitle')}
                   description={t('home.trust.verifiedDesc')}
@@ -470,7 +470,7 @@ export default function Home() {
 
           {/* Disclaimer */}
           <ScrollReveal delay={0.3}>
-            <p className="mt-8 text-xs text-muted-foreground text-center leading-relaxed">
+            <p className="mt-10 md:mt-12 text-xs text-muted-foreground text-center leading-relaxed">
               <span className="font-medium">{t('home.trust.disclaimerTitle')}</span>{' '}
               {t('home.trust.disclaimerText')}
             </p>

@@ -202,9 +202,9 @@ export default function DocumentLibrary() {
         currentPage={t('documentLibrary.title', 'Case Documents Library')} 
       />
       
-      <section className="vivid-header py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
+      <section className="vivid-header py-16 md:py-20 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-6 text-white">
             {t('documentLibrary.title', 'Case Documents Library')}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
@@ -213,10 +213,10 @@ export default function DocumentLibrary() {
         </div>
       </section>
 
-      <main className="max-w-6xl mx-auto px-4 py-8 md:py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14 lg:py-16">
         <ScrollReveal>
-          <Card className="mb-8">
-            <CardContent className="p-4 md:p-6">
+          <Card className="mb-10 md:mb-12">
+            <CardContent className="p-5 md:p-6">
               <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
                 <span className="text-sm font-medium text-muted-foreground">{t('documentLibrary.filter.label', 'Filter by:')}</span>
                 
@@ -265,7 +265,7 @@ export default function DocumentLibrary() {
 
         {selectedCategory === 'all' ? (
           <Tabs defaultValue="criminal" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-6">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
               <TabsTrigger value="criminal" data-testid="tab-criminal">
                 {t('documentLibrary.tabs.criminal', 'Criminal Justice')} ({criminalDocs.length})
               </TabsTrigger>
@@ -275,7 +275,7 @@ export default function DocumentLibrary() {
             </TabsList>
             
             <TabsContent value="criminal">
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 md:gap-8 md:grid-cols-2">
                 {criminalDocs.map((doc, index) => (
                   <DeferredContent 
                     key={doc.id} 
@@ -302,7 +302,7 @@ export default function DocumentLibrary() {
             </TabsContent>
             
             <TabsContent value="immigration">
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 md:gap-8 md:grid-cols-2">
                 {immigrationDocs.map((doc, index) => (
                   <DeferredContent 
                     key={doc.id} 
@@ -329,7 +329,7 @@ export default function DocumentLibrary() {
             </TabsContent>
           </Tabs>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
             {filteredDocuments.map((doc, index) => (
               <DeferredContent 
                 key={doc.id} 
