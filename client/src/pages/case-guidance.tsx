@@ -746,13 +746,13 @@ export default function CaseGuidance() {
       <Header />
 
       {/* Hero Section */}
-      <section className="vivid-header py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+      <section className="vivid-header py-16 md:py-20 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
           <ScrollReveal>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-case-title">
+            <h1 className="text-3xl md:text-4xl font-bold mb-5 md:mb-6" data-testid="heading-case-title">
               {t('case.hero.title')}
             </h1>
-            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8" data-testid="text-case-description">
+            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10" data-testid="text-case-description">
               {t('case.hero.description')}
             </p>
             
@@ -769,15 +769,15 @@ export default function CaseGuidance() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-16 md:py-20 lg:py-24 bg-muted/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center text-foreground mb-10" data-testid="heading-how-it-works">
+            <h2 className="text-2xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-how-it-works">
               {t('case.howItWorks.title')}
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <StepCard
                 number={1}
@@ -814,8 +814,8 @@ export default function CaseGuidance() {
       </section>
 
       {/* Privacy & Security */}
-      <section className="py-12 bg-background">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="py-14 md:py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="bg-muted/50 rounded-xl p-6 md:p-8">
               <div className="flex flex-col items-center text-center mb-6">

@@ -69,8 +69,8 @@ export default function RightsInfo() {
       />
 
       {/* Hero Section - Vivid Header */}
-      <section className="vivid-header-alt py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content">
+      <section className="vivid-header-alt py-16 md:py-20 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white" data-testid="heading-rights-title">
@@ -92,15 +92,15 @@ export default function RightsInfo() {
       </section>
 
       {/* Quick Rights Reference */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 md:py-20 lg:py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-quick-rights">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-quick-rights">
               {t('rights.quickRights.title')}
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <QuickRightCard
                 icon={<Shield className="h-5 w-5" />}
@@ -141,17 +141,17 @@ export default function RightsInfo() {
       </section>
 
       {/* Detailed Rights Information */}
-      <section className="py-16 bg-muted/30" id="constitutional-rights">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="constitutional-rights">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="heading-detailed-rights">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-detailed-rights">
               {t('rights.detailedRights.title')}
             </h2>
           </ScrollReveal>
 
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <ScrollReveal delay={0.1}>
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-background border border-border">
+              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-10 md:mb-12 bg-background border border-border">
                 <TabsTrigger 
                   value="miranda" 
                   data-testid="tab-miranda"

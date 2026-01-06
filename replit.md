@@ -63,6 +63,15 @@ The frontend is built with React 18 and TypeScript, utilizing shadcn/ui componen
   - Document Library uses `DeferredContent` (`client/src/components/ui/deferred-content.tsx`) for staggered card loading with skeleton placeholders
   - Chat uses `useProgressiveReveal` hook (`client/src/hooks/use-progressive-reveal.ts`) which reveals older messages in batches (5 initial, then 3 per 100ms) while keeping new messages instant for real-time UX; resets on array shrink (language toggle)
 
+**Generous White Space (Jan 2025)**: Enhanced layout spacing for a polished, breathable design:
+- **Section padding**: Increased vertical padding on all major sections (py-16 md:py-20 lg:py-24)
+- **Container padding**: Added responsive horizontal padding (px-4 sm:px-6) for better mobile margins
+- **Grid gaps**: Increased card grid gaps (gap-6 md:gap-8) for better visual separation
+- **Heading margins**: Larger margins below section headings (mb-10 md:mb-14)
+- **Card padding**: Increased internal card padding (p-5 md:p-6)
+- **Chat spacing**: Message spacing increased from space-y-1 to space-y-3, input area padding increased
+- **CSS utilities in `index.css`**: New spacing classes including section-padding, container-padding, card-padding, stack-relaxed, grid-gap-relaxed, content-width, heading-margin, section-title
+
 ### Technical Implementations
 
 The backend, developed with Express.js and TypeScript, provides a RESTful API. Drizzle ORM with PostgreSQL handles type-safe database operations, with legal case data designed to be ephemeral.
