@@ -769,3 +769,86 @@
   min-height: 44px;
   min-width: 44px;
 }
+
+/* ===== SPACING UTILITIES FOR BREATHING ROOM ===== */
+
+/* Section spacing - generous vertical padding */
+.section-padding {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.section-padding-lg {
+  @apply py-16 md:py-20 lg:py-24;
+}
+
+.section-padding-sm {
+  @apply py-8 md:py-12;
+}
+
+/* Container with comfortable horizontal padding */
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Card content with generous internal padding */
+.card-padding {
+  @apply p-5 md:p-6 lg:p-8;
+}
+
+.card-padding-sm {
+  @apply p-4 md:p-5;
+}
+
+/* Stack spacing for vertical lists */
+.stack-relaxed {
+  @apply space-y-4 md:space-y-6;
+}
+
+.stack-comfortable {
+  @apply space-y-3 md:space-y-4;
+}
+
+.stack-tight {
+  @apply space-y-2;
+}
+
+/* Grid gaps with breathing room */
+.grid-gap-relaxed {
+  @apply gap-6 md:gap-8;
+}
+
+.grid-gap-comfortable {
+  @apply gap-4 md:gap-6;
+}
+
+/* Content max-width with comfortable margins */
+.content-width {
+  @apply max-w-4xl mx-auto;
+}
+
+.content-width-lg {
+  @apply max-w-6xl mx-auto;
+}
+
+.content-width-sm {
+  @apply max-w-2xl mx-auto;
+}
+
+/* Heading margins */
+.heading-margin {
+  @apply mb-4 md:mb-6;
+}
+
+.heading-margin-lg {
+  @apply mb-6 md:mb-8;
+}
+
+/* Section title with proper spacing */
+.section-title {
+  @apply mb-6 md:mb-8 lg:mb-10;
+}
+
+/* Paragraph spacing */
+.prose-spacing {
+  @apply space-y-4 md:space-y-5;
+}

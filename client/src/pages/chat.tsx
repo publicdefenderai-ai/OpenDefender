@@ -905,8 +905,8 @@ export default function ChatPage() {
 
           <ProgressDots currentStep={state.currentStep} />
 
-          <ScrollArea className="flex-1 px-4 py-4 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
-            <div className="max-w-2xl mx-auto space-y-1" role="log" aria-live="polite" aria-label="Chat messages">
+          <ScrollArea className="flex-1 px-4 sm:px-6 py-6 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
+            <div className="max-w-2xl mx-auto space-y-3" role="log" aria-live="polite" aria-label="Chat messages">
               {pendingCount > 0 && (
                 <div className="text-center py-2 text-sm text-muted-foreground animate-pulse">
                   {t('chat.loadingHistory', 'Loading earlier messages...')}
@@ -960,7 +960,7 @@ export default function ChatPage() {
             </div>
           </ScrollArea>
 
-          <div className="p-4 border-t border-border bg-background">
+          <div className="p-4 sm:p-6 border-t border-border bg-background">
             <div className="max-w-2xl mx-auto">
               <ChatInput
                 onSend={handleFreeTextSubmit}
@@ -979,7 +979,7 @@ export default function ChatPage() {
                   : t('chat.input.placeholder', 'Ask a follow-up question...')
                 }
               />
-              <p className="text-xs text-muted-foreground text-center mt-2">
+              <p className="text-xs text-muted-foreground text-center mt-3">
                 {t('chat.footer.privacy', 'Your data is encrypted and deleted after this session')}
               </p>
             </div>
