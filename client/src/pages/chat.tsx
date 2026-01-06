@@ -4,6 +4,7 @@ import { X, Download, ArrowLeft, AlertTriangle, FileText, Globe, Moon, Sun } fro
 import { useTranslation } from "react-i18next";
 import i18nInstance from "@/i18n";
 import { useLocation } from "wouter";
+import { useProgressiveReveal } from "@/hooks/use-progressive-reveal";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useTheme } from "@/components/ui/theme-provider";
@@ -67,6 +68,11 @@ export default function ChatPage() {
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
+
+  const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
+    state.messages,
+    { initialCount: 5, batchSize: 3, batchDelayMs: 100 }
+  );
 
   const handleStillWorking = useCallback(() => {
     if (!stillWorkingShown) {
@@ -901,13 +907,18 @@ export default function ChatPage() {
 
           <ScrollArea className="flex-1 px-4 py-4 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
             <div className="max-w-2xl mx-auto space-y-1" role="log" aria-live="polite" aria-label="Chat messages">
-              {state.messages.map((message, index) => (
+              {pendingCount > 0 && (
+                <div className="text-center py-2 text-sm text-muted-foreground animate-pulse">
+                  {t('chat.loadingHistory', 'Loading earlier messages...')}
+                </div>
+              )}
+              {visibleMessages.map((message, index) => (
                 <div key={message.id}>
                   <MessageBubble 
                     message={message} 
-                    isLatest={index === state.messages.length - 1}
+                    isLatest={index === visibleMessages.length - 1}
                   />
-                  {message.quickReplies && index === state.messages.length - 1 && (
+                  {message.quickReplies && index === visibleMessages.length - 1 && (
                     <div className="ml-0 sm:ml-11">
                       <QuickReplyButtons
                         replies={message.quickReplies}
