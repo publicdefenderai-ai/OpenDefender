@@ -438,7 +438,7 @@ async function callClaudeWithRetry(
       const timeoutMs = 95000; // 95 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 2048,
+        max_tokens: 4096,
         temperature: 0.3,
         system: systemPrompt,
         messages: [
