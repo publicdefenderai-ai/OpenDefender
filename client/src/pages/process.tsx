@@ -9,10 +9,20 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { MockQASection } from "@/components/legal/mock-qa-section";
+import type { ProceedingType } from "@shared/mock-qa";
 
-// Process steps are now in i18n translations
+const STEP_TO_PROCEEDING: Record<number, ProceedingType | null> = {
+  1: null,
+  2: 'arraignment',
+  3: 'pretrial_hearing',
+  4: 'plea_hearing',
+  5: 'trial',
+  6: 'sentencing',
+  7: null
+};
 
-function ProcessStep({ number, title, description, timeframe, rights, isLast, t }: {
+function ProcessStep({ number, title, description, timeframe, rights, isLast, t, proceedingType }: {
   number: number;
   title: string;
   description: string;
@@ -20,6 +30,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
   rights: string[];
   isLast?: boolean;
   t: any;
+  proceedingType?: ProceedingType | null;
 }) {
   return (
     <div className="relative">
@@ -46,8 +57,8 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
                 </Badge>
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">{description}</p>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">{description}</p>
               
               <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
@@ -62,6 +73,14 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
                   ))}
                 </ul>
               </div>
+              
+              {proceedingType && (
+                <MockQASection 
+                  proceedingType={proceedingType} 
+                  compact={true}
+                  className="mt-4 border-t pt-4"
+                />
+              )}
             </CardContent>
           </Card>
         </div>
@@ -117,6 +136,7 @@ export default function Process() {
                   rights={t(`process.steps.step${stepNum}.rights`, { returnObjects: true }) as string[]}
                   isLast={stepNum === 7}
                   t={t}
+                  proceedingType={STEP_TO_PROCEEDING[stepNum]}
                 />
               </ScrollReveal>
             ))}
