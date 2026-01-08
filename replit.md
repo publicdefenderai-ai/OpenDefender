@@ -20,6 +20,12 @@ A multi-tier validation system ensures legal accuracy: Tier 1 validates statutor
 
 The platform integrates various legal data sources for criminal charges, diversion programs, and statutes (federal and state), with a "free-first" search strategy for court records.
 
+### Mock Q&A Practice Feature
+A dual-layer Mock Q&A system helps users prepare for court proceedings:
+- **Static Library** (`shared/mock-qa.ts`): 17 bilingual generic Q&A items covering 6 proceeding types (arraignment, bail hearing, pretrial, plea, trial, sentencing) with translations in `i18n.ts`
+- **AI-Generated Personalized Q&A**: Claude generates fact-specific practice questions tailored to user's case details, charges, and circumstances
+- **UI Component** (`MockQASection`): Collapsible Q&A items with suggested responses and explanations, integrated into `/process` page and guidance dashboard
+
 ### API Architecture
 The API provides endpoints for legal resources, court information, AI-powered legal guidance, detailed docket information, and comprehensive search capabilities. It also includes intelligent attorney matching based on proximity and specific legal service needs.
 
