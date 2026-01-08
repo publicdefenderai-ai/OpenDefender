@@ -76,6 +76,12 @@ export interface LegalGuidance {
     classification: string;
     code: string;
   }>;
+  mockQA?: Array<{
+    question: string;
+    suggestedResponse: string;
+    explanation: string;
+    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
+  }>;
 }
 
 export const legalDataApi = {

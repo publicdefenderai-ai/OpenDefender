@@ -429,6 +429,7 @@ export default function CaseGuidance() {
           timeline: guidance.timeline || [],
           validation: guidance.validation,
           chargeClassifications: guidance.chargeClassifications,
+          mockQA: guidance.mockQA,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges

@@ -32,6 +32,13 @@ export interface ImmediateAction {
   urgency: 'urgent' | 'high' | 'medium' | 'low';
 }
 
+interface MockQAItem {
+  question: string;
+  suggestedResponse: string;
+  explanation: string;
+  category: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
+}
+
 interface EnhancedGuidance {
   overview: string;
   criticalAlerts: string[];
@@ -50,6 +57,7 @@ interface EnhancedGuidance {
     timeframe: string;
     completed: boolean;
   }>;
+  mockQA?: MockQAItem[];
 }
 
 // Jurisdiction-specific legal procedures and timelines
@@ -505,10 +513,132 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     evidenceToGather: buildEvidenceForCharges(specificCharges, fallbackChargeData),
     courtPreparation: (stageData as any)?.courtPreparation || [],
     avoidActions: buildAvoidActionsForCharges(specificCharges, stageData),
-    timeline: buildCaseTimeline(caseStage, jurisdictionData)
+    timeline: buildCaseTimeline(caseStage, jurisdictionData),
+    mockQA: buildMockQA(caseData, specificCharges)
   };
   
   return guidance;
+}
+
+// Generate template-based mock Q&A for court preparation
+function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
+  const { caseStage, hasAttorney } = caseData;
+  const mockQA: MockQAItem[] = [];
+  
+  // Stage-specific template questions
+  const stageQuestions: Record<string, MockQAItem[]> = {
+    'arraignment': [
+      {
+        question: "What is your name and date of birth?",
+        suggestedResponse: "My name is [your full legal name] and my date of birth is [your date of birth].",
+        explanation: "The judge needs to verify your identity for the record. Answer clearly and directly.",
+        category: 'identity'
+      },
+      {
+        question: "Do you understand the charges against you?",
+        suggestedResponse: "Yes, Your Honor, I understand the charges.",
+        explanation: "If you don't fully understand, it's okay to say 'I would like my attorney to explain them to me.' Don't pretend to understand if you don't.",
+        category: 'charges'
+      },
+      {
+        question: "How do you plead to these charges?",
+        suggestedResponse: "Not guilty, Your Honor.",
+        explanation: "Most defendants plead not guilty at arraignment. This preserves your rights and gives you time to review the evidence with an attorney before making any decisions.",
+        category: 'plea'
+      },
+      {
+        question: "Do you have an attorney or do you need one appointed?",
+        suggestedResponse: hasAttorney ? "Yes, Your Honor, I have an attorney." : "I would like to request a public defender, Your Honor.",
+        explanation: hasAttorney ? "Confirm you have representation." : "If you cannot afford a lawyer, the court will appoint a public defender to represent you.",
+        category: 'procedural'
+      },
+      {
+        question: "Do you have any questions about your rights?",
+        suggestedResponse: "No, Your Honor, I understand my rights.",
+        explanation: "If you do have questions, this is a good time to ask. It's important you understand what rights you have during the legal process.",
+        category: 'procedural'
+      }
+    ],
+    'pre-trial': [
+      {
+        question: "Are you aware of the conditions of your release?",
+        suggestedResponse: "Yes, Your Honor, I understand and have been following all conditions.",
+        explanation: "This confirms you know what's expected of you while out on bail or pretrial release. Violations can result in your release being revoked.",
+        category: 'procedural'
+      },
+      {
+        question: "Have you had adequate time to prepare with your attorney?",
+        suggestedResponse: "Yes, Your Honor, I have been working with my attorney.",
+        explanation: "If you haven't had enough time, you can request more time. The court wants to ensure you're prepared.",
+        category: 'procedural'
+      },
+      {
+        question: "Are there any motions you would like to file?",
+        suggestedResponse: "I will defer to my attorney on any motions.",
+        explanation: "Your attorney should handle this. Don't try to file motions on your own without legal guidance.",
+        category: 'procedural'
+      },
+      {
+        question: "Are you interested in discussing a plea agreement?",
+        suggestedResponse: "I would like to continue discussions with my attorney before making any decisions.",
+        explanation: "Don't agree to anything on the spot. Always discuss plea offers thoroughly with your attorney.",
+        category: 'plea'
+      }
+    ],
+    'trial': [
+      {
+        question: "Do you swear to tell the truth, the whole truth, and nothing but the truth?",
+        suggestedResponse: "I do.",
+        explanation: "This is the oath taken before testifying. Once you take this oath, lying is perjury, which is a serious crime.",
+        category: 'procedural'
+      },
+      {
+        question: "In your own words, what happened on the day in question?",
+        suggestedResponse: "On that day, [give a clear, factual account as discussed with your attorney].",
+        explanation: "Stick to the facts as you remember them. Don't guess or speculate. It's okay to say 'I don't remember' if that's true.",
+        category: 'circumstances'
+      },
+      {
+        question: "Have you ever been convicted of a crime before?",
+        suggestedResponse: "[Answer honestly based on your record]",
+        explanation: "Answer truthfully. Your attorney should have prepared you for this question and how to answer it.",
+        category: 'general'
+      }
+    ],
+    'arrest': [
+      {
+        question: "Do you understand why you are being arrested?",
+        suggestedResponse: "I understand. I would like to speak with an attorney.",
+        explanation: "You don't need to agree or disagree with the charges. Simply acknowledge and request a lawyer.",
+        category: 'procedural'
+      },
+      {
+        question: "Would you like to make a statement?",
+        suggestedResponse: "I would like to speak with an attorney before answering any questions.",
+        explanation: "You have the right to remain silent. Use it. Anything you say can be used against you.",
+        category: 'procedural'
+      }
+    ]
+  };
+  
+  // Get questions for current stage
+  const stageQA = stageQuestions[caseStage] || stageQuestions['arraignment'];
+  mockQA.push(...stageQA);
+  
+  // Add charge-specific questions if available
+  if (specificCharges.length > 0) {
+    const charge = specificCharges[0];
+    const chargeName = charge.title || charge.name || 'the charges';
+    
+    mockQA.push({
+      question: `What do you know about the ${chargeName} charge against you?`,
+      suggestedResponse: "I understand the nature of the charge. I would like to defer to my attorney for any specific details.",
+      explanation: "Don't discuss details of your case without your attorney present. This protects your rights.",
+      category: 'charges'
+    });
+  }
+  
+  return mockQA.slice(0, 5); // Limit to 5 questions
 }
 
 function identifyChargeType(charges: string): string {
