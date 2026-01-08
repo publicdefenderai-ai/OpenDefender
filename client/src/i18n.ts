@@ -215,6 +215,106 @@ i18n
             "important": "Important",
             "privacyFirst": "Privacy First"
           },
+          "mockQA": {
+            "sectionTitle": "Practice Questions & Answers",
+            "sectionSubtitle": "Common questions you might hear during court proceedings",
+            "personalizedTitle": "Practice Questions for Your Case",
+            "showResponse": "Show Response",
+            "hideResponse": "Hide Response",
+            "practiceNote": "Practice saying these responses out loud to feel more prepared for your court appearance.",
+            "arraignment": {
+              "plea": {
+                "question": "How do you plead to the charges against you?",
+                "response": "Not guilty, Your Honor.",
+                "explanation": "Most attorneys recommend pleading not guilty at arraignment. This preserves all your options and gives time to review evidence."
+              },
+              "understand": {
+                "question": "Do you understand the charges against you?",
+                "response": "Yes, Your Honor, I understand the charges.",
+                "explanation": "If you don't fully understand, it's okay to say 'I would like my attorney to explain them to me.' Never say yes if you truly don't understand."
+              },
+              "attorney": {
+                "question": "Do you have an attorney or do you need one appointed?",
+                "response": "I would like to request a public defender, Your Honor.",
+                "explanation": "If you cannot afford an attorney, you have the right to have one appointed for you. Be honest about your financial situation."
+              },
+              "waiveTime": {
+                "question": "Do you waive your right to a speedy trial?",
+                "response": "I would like to discuss this with my attorney before answering.",
+                "explanation": "Never waive time without consulting your attorney. This affects important deadlines in your case."
+              }
+            },
+            "bail": {
+              "residence": {
+                "question": "What is your current address and how long have you lived there?",
+                "response": "I live at [address] and have lived there for [time period].",
+                "explanation": "Stable housing shows you have ties to the community and are less likely to flee."
+              },
+              "employment": {
+                "question": "Are you currently employed? Where do you work?",
+                "response": "Yes, I work at [employer] as a [job title].",
+                "explanation": "Employment demonstrates community ties and responsibility. Mention how long you've worked there."
+              },
+              "ties": {
+                "question": "Do you have family in the area?",
+                "response": "Yes, I have [family members] who live nearby.",
+                "explanation": "Family connections show you have reasons to stay in the area and appear for court dates."
+              }
+            },
+            "pretrial": {
+              "progress": {
+                "question": "Have you been meeting with your attorney to prepare your case?",
+                "response": "Yes, Your Honor, I have been in regular contact with my attorney.",
+                "explanation": "This shows you are taking your case seriously and actively participating in your defense."
+              },
+              "conditions": {
+                "question": "Have you been complying with all conditions of your release?",
+                "response": "Yes, Your Honor, I have followed all conditions.",
+                "explanation": "If you've had any difficulties, inform your attorney before the hearing so they can address it appropriately."
+              }
+            },
+            "plea": {
+              "voluntary": {
+                "question": "Is your plea being made freely and voluntarily?",
+                "response": "Yes, Your Honor.",
+                "explanation": "Only answer yes if this is truly your decision and no one is forcing you. If you have doubts, tell the judge."
+              },
+              "discussed": {
+                "question": "Have you fully discussed this plea with your attorney?",
+                "response": "Yes, Your Honor, I have discussed all aspects of this plea with my attorney.",
+                "explanation": "You should have had time to ask questions and understand all consequences before entering a plea."
+              },
+              "consequences": {
+                "question": "Do you understand the consequences of this plea, including potential jail time?",
+                "response": "Yes, Your Honor, I understand the possible consequences.",
+                "explanation": "Make sure you truly understand the maximum penalties, collateral consequences, and immigration effects if applicable."
+              }
+            },
+            "sentencing": {
+              "statement": {
+                "question": "Is there anything you would like to say to the court before I impose sentence?",
+                "response": "Yes, Your Honor. [Express genuine remorse, take responsibility, mention positive steps taken]",
+                "explanation": "This is your allocution. Be sincere, take responsibility, and mention any rehabilitation efforts you've made."
+              },
+              "understand": {
+                "question": "Do you understand the sentence I have just imposed?",
+                "response": "Yes, Your Honor, I understand.",
+                "explanation": "If anything is unclear about your sentence, conditions, or reporting requirements, ask for clarification."
+              }
+            },
+            "trial": {
+              "testify": {
+                "question": "Do you wish to testify in your own defense?",
+                "response": "I would like to discuss this further with my attorney before deciding.",
+                "explanation": "This is a major decision. You have the right not to testify, and the jury cannot hold your silence against you."
+              },
+              "juryWaiver": {
+                "question": "Do you waive your right to a jury trial?",
+                "response": "I would like to maintain my right to a jury trial, Your Honor.",
+                "explanation": "Only waive a jury trial after careful discussion with your attorney about whether a bench trial might be better for your specific case."
+              }
+            }
+          },
           "legalGuidance": {
             "qaFlow": {
               "title": "Get Personalized Legal Guidance",
@@ -2709,6 +2809,106 @@ i18n
             "save": "Guardar",
             "important": "Importante",
             "privacyFirst": "Privacidad Primero"
+          },
+          "mockQA": {
+            "sectionTitle": "Preguntas y Respuestas de Práctica",
+            "sectionSubtitle": "Preguntas comunes que podría escuchar durante los procedimientos judiciales",
+            "personalizedTitle": "Preguntas de Práctica para Su Caso",
+            "showResponse": "Mostrar Respuesta",
+            "hideResponse": "Ocultar Respuesta",
+            "practiceNote": "Practique decir estas respuestas en voz alta para sentirse más preparado para su audiencia en la corte.",
+            "arraignment": {
+              "plea": {
+                "question": "¿Cómo se declara respecto a los cargos en su contra?",
+                "response": "No culpable, Su Señoría.",
+                "explanation": "La mayoría de los abogados recomiendan declararse no culpable en la lectura de cargos. Esto preserva todas sus opciones y da tiempo para revisar la evidencia."
+              },
+              "understand": {
+                "question": "¿Entiende los cargos en su contra?",
+                "response": "Sí, Su Señoría, entiendo los cargos.",
+                "explanation": "Si no entiende completamente, está bien decir 'Me gustaría que mi abogado me los explique.' Nunca diga sí si realmente no entiende."
+              },
+              "attorney": {
+                "question": "¿Tiene abogado o necesita que se le asigne uno?",
+                "response": "Me gustaría solicitar un defensor público, Su Señoría.",
+                "explanation": "Si no puede pagar un abogado, tiene derecho a que le asignen uno. Sea honesto sobre su situación financiera."
+              },
+              "waiveTime": {
+                "question": "¿Renuncia a su derecho a un juicio rápido?",
+                "response": "Me gustaría discutir esto con mi abogado antes de responder.",
+                "explanation": "Nunca renuncie al tiempo sin consultar a su abogado. Esto afecta fechas límite importantes en su caso."
+              }
+            },
+            "bail": {
+              "residence": {
+                "question": "¿Cuál es su dirección actual y cuánto tiempo ha vivido allí?",
+                "response": "Vivo en [dirección] y he vivido allí por [período de tiempo].",
+                "explanation": "Una vivienda estable demuestra que tiene vínculos con la comunidad y es menos probable que huya."
+              },
+              "employment": {
+                "question": "¿Está empleado actualmente? ¿Dónde trabaja?",
+                "response": "Sí, trabajo en [empleador] como [puesto].",
+                "explanation": "El empleo demuestra vínculos comunitarios y responsabilidad. Mencione cuánto tiempo ha trabajado allí."
+              },
+              "ties": {
+                "question": "¿Tiene familia en el área?",
+                "response": "Sí, tengo [familiares] que viven cerca.",
+                "explanation": "Las conexiones familiares demuestran que tiene razones para quedarse en el área y presentarse a las fechas de corte."
+              }
+            },
+            "pretrial": {
+              "progress": {
+                "question": "¿Ha estado reuniéndose con su abogado para preparar su caso?",
+                "response": "Sí, Su Señoría, he estado en contacto regular con mi abogado.",
+                "explanation": "Esto demuestra que está tomando su caso en serio y participando activamente en su defensa."
+              },
+              "conditions": {
+                "question": "¿Ha cumplido con todas las condiciones de su libertad?",
+                "response": "Sí, Su Señoría, he seguido todas las condiciones.",
+                "explanation": "Si ha tenido alguna dificultad, informe a su abogado antes de la audiencia para que pueda abordarlo apropiadamente."
+              }
+            },
+            "plea": {
+              "voluntary": {
+                "question": "¿Su declaración se hace libre y voluntariamente?",
+                "response": "Sí, Su Señoría.",
+                "explanation": "Solo responda sí si esta es verdaderamente su decisión y nadie lo está forzando. Si tiene dudas, dígaselo al juez."
+              },
+              "discussed": {
+                "question": "¿Ha discutido completamente esta declaración con su abogado?",
+                "response": "Sí, Su Señoría, he discutido todos los aspectos de esta declaración con mi abogado.",
+                "explanation": "Debería haber tenido tiempo para hacer preguntas y entender todas las consecuencias antes de declararse."
+              },
+              "consequences": {
+                "question": "¿Entiende las consecuencias de esta declaración, incluyendo el posible tiempo en prisión?",
+                "response": "Sí, Su Señoría, entiendo las posibles consecuencias.",
+                "explanation": "Asegúrese de entender verdaderamente las penas máximas, consecuencias colaterales y efectos migratorios si aplican."
+              }
+            },
+            "sentencing": {
+              "statement": {
+                "question": "¿Hay algo que le gustaría decir al tribunal antes de que imponga la sentencia?",
+                "response": "Sí, Su Señoría. [Exprese arrepentimiento genuino, tome responsabilidad, mencione pasos positivos tomados]",
+                "explanation": "Esta es su alocución. Sea sincero, tome responsabilidad y mencione cualquier esfuerzo de rehabilitación que haya hecho."
+              },
+              "understand": {
+                "question": "¿Entiende la sentencia que acabo de imponer?",
+                "response": "Sí, Su Señoría, entiendo.",
+                "explanation": "Si algo no está claro sobre su sentencia, condiciones o requisitos de reporte, pida aclaración."
+              }
+            },
+            "trial": {
+              "testify": {
+                "question": "¿Desea testificar en su propia defensa?",
+                "response": "Me gustaría discutir esto más con mi abogado antes de decidir.",
+                "explanation": "Esta es una decisión importante. Tiene derecho a no testificar, y el jurado no puede usar su silencio en su contra."
+              },
+              "juryWaiver": {
+                "question": "¿Renuncia a su derecho a un juicio con jurado?",
+                "response": "Me gustaría mantener mi derecho a un juicio con jurado, Su Señoría.",
+                "explanation": "Solo renuncie a un juicio con jurado después de discutirlo cuidadosamente con su abogado sobre si un juicio de banco podría ser mejor para su caso específico."
+              }
+            }
           },
           "legalGuidance": {
             "qaFlow": {

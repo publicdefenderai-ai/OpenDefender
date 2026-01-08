@@ -99,6 +99,12 @@ interface ClaudeGuidance {
     classification: string;
     maxPenalty: string;
   }>;
+  mockQA?: Array<{
+    question: string;
+    suggestedResponse: string;
+    explanation: string;
+    category: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
+  }>;
   usageMetrics: {
     inputTokens: number;
     outputTokens: number;
@@ -162,6 +168,18 @@ Return a JSON object with these exact fields:
 - courtPreparation: Array of how to prepare for court appearances
 - avoidActions: Array of things NOT to do
 - timeline: Array of {stage, description, timeframe, completed: boolean}
+- mockQA: Array of 3-5 personalized practice Q&A items tailored to the user's specific case. Each item must have:
+  - question: A question the judge, prosecutor, or attorney might ask during the relevant proceeding (based on case stage)
+  - suggestedResponse: A recommended response tailored to their specific circumstances (speak as the defendant)
+  - explanation: Why this response is appropriate and what to be mindful of
+  - category: One of 'identity', 'charges', 'circumstances', 'plea', 'procedural', or 'general'
+  
+MOCK Q&A GUIDELINES:
+- Base questions on the user's specific charges, case stage, and circumstances
+- Responses should be honest, respectful, and protect the user's rights
+- Include questions about specific incidents only if the user provided those details
+- Focus on the upcoming court proceeding based on the case stage
+- Keep responses brief and direct - courts prefer concise answers
 
 TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system.`;
 }
@@ -557,6 +575,7 @@ export async function generateClaudeGuidance(
       avoidActions: parsedData.avoidActions,
       timeline: parsedData.timeline,
       chargeClassifications: parsedData.chargeClassifications,
+      mockQA: parsedData.mockQA,
       usageMetrics: {
         inputTokens: message.usage.input_tokens,
         outputTokens: message.usage.output_tokens,

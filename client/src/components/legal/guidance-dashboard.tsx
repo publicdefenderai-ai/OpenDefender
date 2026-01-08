@@ -41,6 +41,7 @@ import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { criminalCharges } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { MockQAList } from "@/components/legal/mock-qa-section";
 
 interface ImmediateAction {
   action: string;
@@ -109,6 +110,12 @@ interface EnhancedGuidanceData {
     name: string;
     classification: string;
     code: string;
+  }>;
+  mockQA?: Array<{
+    question: string;
+    suggestedResponse: string;
+    explanation: string;
+    category: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
   }>;
   validation?: {
     confidenceScore: number;
@@ -1257,6 +1264,14 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               </Card>
             </CollapsibleContent>
           </Collapsible>
+        )}
+
+        {/* Personalized Mock Q&A Practice */}
+        {guidance.mockQA && guidance.mockQA.length > 0 && (
+          <MockQAList 
+            items={guidance.mockQA}
+            title={t('mockQA.personalizedTitle', 'Practice Questions for Your Case')}
+          />
         )}
 
         {/* Actions to Avoid */}
