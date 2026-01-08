@@ -724,6 +724,17 @@ export default function ChatPage() {
       formattedContent += `**Resources**\n${data.resources.map(r => `• ${r.type}: ${r.description}`).join('\n')}`;
     }
     
+    // Add personalized practice Q&A if available
+    if (data.mockQA && data.mockQA.length > 0) {
+      formattedContent += `\n\n**${t('mockQA.personalizedTitle', 'Practice Questions for Your Case')}**\n`;
+      formattedContent += `${t('mockQA.sectionSubtitle', 'Questions you may be asked during your proceeding')}\n\n`;
+      data.mockQA.forEach((qa: { question: string; suggestedResponse: string; explanation: string }, index: number) => {
+        formattedContent += `**${index + 1}. ${qa.question}**\n`;
+        formattedContent += `> ${t('mockQA.suggestedResponse', 'Suggested Response')}: "${qa.suggestedResponse}"\n`;
+        formattedContent += `*${qa.explanation}*\n\n`;
+      });
+    }
+    
     // Add Documents You Should Have section based on case stage
     const casePhase = mapCaseStageToPhase(state.caseInfo.courtStage || 'just_arrested');
     const relevantDocuments = getDocumentsForPhase(casePhase, 'criminal');

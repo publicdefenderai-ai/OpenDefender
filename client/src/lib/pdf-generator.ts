@@ -43,6 +43,12 @@ interface EnhancedGuidanceData {
     classification: string;
     code: string;
   }>;
+  mockQA?: Array<{
+    question: string;
+    suggestedResponse: string;
+    explanation: string;
+    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
+  }>;
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -112,6 +118,10 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     timeline: 'Cronología y Proceso del Caso',
     status: 'Estado',
     stage: 'Etapa',
+    practiceQA: 'Preguntas de Práctica para su Caso',
+    practiceQASubtitle: 'Preguntas que le pueden hacer y respuestas sugeridas',
+    suggestedResponse: 'Respuesta Sugerida',
+    explanation: 'Por Qué Esto Importa',
     footer: 'Esto no es asesoría legal. Consulte con un abogado calificado para su situación específica.',
     page: 'Página',
     of: 'de',
@@ -157,6 +167,10 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     timeline: 'Case Timeline & Process',
     status: 'Status',
     stage: 'Stage',
+    practiceQA: 'Practice Questions for Your Case',
+    practiceQASubtitle: 'Questions you may be asked and suggested responses',
+    suggestedResponse: 'Suggested Response',
+    explanation: 'Why This Matters',
     footer: 'This is not legal advice. Consult with a qualified attorney for your specific situation.',
     page: 'Page',
     of: 'of',
@@ -627,6 +641,58 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     });
 
     yPosition = (doc as any).lastAutoTable.finalY + 10;
+  }
+
+  // Practice Q&A Section
+  if (guidance.mockQA && guidance.mockQA.length > 0) {
+    checkPageBreak(60);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(41, 128, 185);
+    doc.text(labels.practiceQA, margin, yPosition);
+    yPosition += 6;
+    
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(100, 100, 100);
+    doc.text(labels.practiceQASubtitle, margin, yPosition);
+    yPosition += 10;
+    
+    doc.setTextColor(0, 0, 0);
+    
+    guidance.mockQA.forEach((qa, index) => {
+      checkPageBreak(50);
+      
+      // Question number and text
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'bold');
+      const questionText = `${index + 1}. ${qa.question}`;
+      yPosition = addText(questionText, margin, yPosition);
+      yPosition += 3;
+      
+      // Suggested Response
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(41, 128, 185);
+      doc.text(labels.suggestedResponse + ':', margin + 5, yPosition);
+      yPosition += 5;
+      
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(0, 0, 0);
+      yPosition = addText(`"${qa.suggestedResponse}"`, margin + 10, yPosition);
+      yPosition += 3;
+      
+      // Explanation
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'italic');
+      doc.setTextColor(80, 80, 80);
+      yPosition = addText(qa.explanation, margin + 10, yPosition);
+      yPosition += 8;
+      
+      doc.setTextColor(0, 0, 0);
+    });
+    
+    yPosition += 5;
   }
 
   // Footer on all pages

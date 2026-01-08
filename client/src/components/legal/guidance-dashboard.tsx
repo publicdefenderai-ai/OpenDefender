@@ -115,7 +115,7 @@ interface EnhancedGuidanceData {
     question: string;
     suggestedResponse: string;
     explanation: string;
-    category: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
+    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
   }>;
   validation?: {
     confidenceScore: number;

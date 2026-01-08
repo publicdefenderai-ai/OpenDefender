@@ -84,6 +84,12 @@ interface GuidanceData {
   courtPreparation: string[];
   avoidActions: string[];
   timeline: Array<{ stage: string; description: string; timeframe: string; completed: boolean }>;
+  mockQA?: Array<{
+    question: string;
+    suggestedResponse: string;
+    explanation: string;
+    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
+  }>;
   validation?: {
     confidenceScore: number;
     isValid: boolean;
