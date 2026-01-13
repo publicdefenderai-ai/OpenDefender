@@ -2512,8 +2512,20 @@ i18n
               "no": "Not in Custody"
             }
           }
+        },
+        "exportWarning": {
+          "title": "Important: Before You Export",
+          "intro": "This document contains details about your legal situation that you provided. Please be aware:",
+          "notLegalAdvice": "This is not legal advice",
+          "notLegalAdviceDesc": "It's general legal information only",
+          "notPrivileged": "Not protected by attorney-client privilege",
+          "notPrivilegedDesc": "Documents you create and share may be requested by opposing parties in legal proceedings",
+          "shareWithAttorney": "Share only with your attorney",
+          "shareWithAttorneyDesc": "If you have a lawyer, share this with them first before anyone else",
+          "recommendation": "We recommend discussing this guidance with a licensed attorney before taking any action.",
+          "confirmButton": "I Understand, Export PDF"
         }
-        }
+      }
       },
       es: {
         translation: {
@@ -5008,6 +5020,18 @@ i18n
               "no": "No Bajo Custodia"
             }
           }
+        },
+        "exportWarning": {
+          "title": "Importante: Antes de Exportar",
+          "intro": "Este documento contiene detalles sobre su situación legal que usted proporcionó. Por favor tenga en cuenta:",
+          "notLegalAdvice": "Esto no es asesoría legal",
+          "notLegalAdviceDesc": "Es solo información legal general",
+          "notPrivileged": "No está protegido por el privilegio abogado-cliente",
+          "notPrivilegedDesc": "Los documentos que cree y comparta pueden ser solicitados por las partes contrarias en procedimientos legales",
+          "shareWithAttorney": "Comparta solo con su abogado",
+          "shareWithAttorneyDesc": "Si tiene un abogado, comparta esto primero con él antes que con cualquier otra persona",
+          "recommendation": "Le recomendamos discutir esta orientación con un abogado licenciado antes de tomar cualquier acción.",
+          "confirmButton": "Entiendo, Exportar PDF"
         }
         }
       }

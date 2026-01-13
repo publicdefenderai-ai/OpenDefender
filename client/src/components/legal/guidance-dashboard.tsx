@@ -37,6 +37,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Checkbox } from "@/components/ui/checkbox";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { criminalCharges } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
@@ -602,6 +603,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   const { t, i18n } = useTranslation();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
+  const [showExportWarning, setShowExportWarning] = useState(false);
 
   const toggleAction = (action: string) => {
     const newCompleted = new Set(completedActions);
@@ -635,7 +637,12 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
     );
   };
 
-  const handleExportPDF = () => {
+  const handleExportClick = () => {
+    setShowExportWarning(true);
+  };
+
+  const handleConfirmExport = () => {
+    setShowExportWarning(false);
     // Generate PDF entirely on client-side - no data sent to external servers
     generateGuidancePDF(guidance, i18n.language);
     // Notify parent that export has been completed
@@ -656,7 +663,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
                 {t('legalGuidance.dashboard.close')}
               </Button>
-              <Button variant="outline" onClick={handleExportPDF} className="gap-2 flex-1 md:flex-none" data-testid="button-export-pdf">
+              <Button variant="outline" onClick={handleExportClick} className="gap-2 flex-1 md:flex-none" data-testid="button-export-pdf">
                 <Download className="h-4 w-4" />
                 {t('legalGuidance.dashboard.exportPDF')}
               </Button>
@@ -1333,6 +1340,46 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </div>
         </CardContent>
       </Card>
+
+      {/* Export Warning Dialog */}
+      <AlertDialog open={showExportWarning} onOpenChange={setShowExportWarning}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-amber-500" />
+              {t('exportWarning.title', 'Important: Before You Export')}
+            </AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="space-y-3 text-left">
+                <p>{t('exportWarning.intro', 'This document contains details about your legal situation that you provided. Please be aware:')}</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold">•</span>
+                    <span><strong>{t('exportWarning.notLegalAdvice', 'This is not legal advice')}</strong> — {t('exportWarning.notLegalAdviceDesc', "It's general legal information only")}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold">•</span>
+                    <span><strong>{t('exportWarning.notPrivileged', 'Not protected by attorney-client privilege')}</strong> — {t('exportWarning.notPrivilegedDesc', 'Documents you create and share may be requested by opposing parties in legal proceedings')}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold">•</span>
+                    <span><strong>{t('exportWarning.shareWithAttorney', 'Share only with your attorney')}</strong> — {t('exportWarning.shareWithAttorneyDesc', 'If you have a lawyer, share this with them first before anyone else')}</span>
+                  </li>
+                </ul>
+                <p className="text-sm text-muted-foreground italic">
+                  {t('exportWarning.recommendation', 'We recommend discussing this guidance with a licensed attorney before taking any action.')}
+                </p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t('common.cancel', 'Cancel')}</AlertDialogCancel>
+            <AlertDialogAction onClick={handleConfirmExport} data-testid="button-confirm-export">
+              {t('exportWarning.confirmButton', 'I Understand, Export PDF')}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

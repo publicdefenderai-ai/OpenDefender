@@ -14,6 +14,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { useChat, QuickReply, ConversationStep, CompletedFlow } from "@/contexts/chat-context";
 import { MessageBubble, TypingIndicator } from "@/components/chat/message-bubble";
 import { QuickReplyButtons, FullWidthReply } from "@/components/chat/quick-replies";
@@ -68,6 +78,7 @@ export default function ChatPage() {
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
+  const [showExportWarning, setShowExportWarning] = useState(false);
 
   const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
     state.messages,
@@ -276,7 +287,7 @@ export default function ChatPage() {
           addBotMessageWithKey('chat.messages.enterZipLegalAid');
           actions.setCurrentStep('legal_aid_zip_search');
         } else if (reply.value === 'export_pdf') {
-          handleExportPdf();
+          handleExportClick();
         }
         break;
 
@@ -501,7 +512,7 @@ export default function ChatPage() {
         if (reply.value === 'view_guidance') {
           handleViewGuidance();
         } else if (reply.value === 'export_pdf') {
-          handleExportPdf();
+          handleExportClick();
         } else if (reply.value === 'find_public_defender') {
           // "What To Do Now" action - Find a Public Defender
           addBotMessageWithKey('chat.messages.enterZipPD');
@@ -777,12 +788,17 @@ export default function ChatPage() {
     actions.setCurrentStep('guidance_ready');
   }, [state.guidanceData, state.caseInfo, addBotMessage, actions, t]);
 
-  const handleExportPdf = useCallback(async () => {
+  const handleExportClick = useCallback(() => {
     if (!state.guidanceData) {
       toast({ title: t('chat.export.noData', 'No guidance to export'), variant: "destructive" });
       return;
     }
+    setShowExportWarning(true);
+  }, [state.guidanceData, toast, t]);
 
+  const handleConfirmExport = useCallback(async () => {
+    setShowExportWarning(false);
+    
     try {
       const { generateGuidancePDF } = await import('@/lib/pdf-generator');
       
@@ -852,7 +868,7 @@ export default function ChatPage() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={handleExportPdf}
+                  onClick={handleExportClick}
                   data-testid="button-export-pdf"
                 >
                   <Download className="h-4 w-4 mr-2" />
@@ -1004,6 +1020,46 @@ export default function ChatPage() {
           />
         </aside>
       </motion.div>
+
+      {/* Export Warning Dialog */}
+      <AlertDialog open={showExportWarning} onOpenChange={setShowExportWarning}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-amber-500" />
+              {t('exportWarning.title', 'Important: Before You Export')}
+            </AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="space-y-3 text-left">
+                <p>{t('exportWarning.intro', 'This document contains details about your legal situation that you provided. Please be aware:')}</p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold">•</span>
+                    <span><strong>{t('exportWarning.notLegalAdvice', 'This is not legal advice')}</strong> — {t('exportWarning.notLegalAdviceDesc', "It's general legal information only")}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold">•</span>
+                    <span><strong>{t('exportWarning.notPrivileged', 'Not protected by attorney-client privilege')}</strong> — {t('exportWarning.notPrivilegedDesc', 'Documents you create and share may be requested by opposing parties in legal proceedings')}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold">•</span>
+                    <span><strong>{t('exportWarning.shareWithAttorney', 'Share only with your attorney')}</strong> — {t('exportWarning.shareWithAttorneyDesc', 'If you have a lawyer, share this with them first before anyone else')}</span>
+                  </li>
+                </ul>
+                <p className="text-sm text-muted-foreground italic">
+                  {t('exportWarning.recommendation', 'We recommend discussing this guidance with a licensed attorney before taking any action.')}
+                </p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{t('common.cancel', 'Cancel')}</AlertDialogCancel>
+            <AlertDialogAction onClick={handleConfirmExport} data-testid="button-confirm-export">
+              {t('exportWarning.confirmButton', 'I Understand, Export PDF')}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
