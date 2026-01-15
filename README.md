@@ -18,7 +18,9 @@ To democratize access to legal information and resources, particularly for indiv
 
 ### 📚 Comprehensive Legal Database
 - **4,146 Criminal Charges** with detailed information and statute citations
-- **Federal & State Statutes** searchable database across all 50 states
+- **1,385+ State Statutes** curated seed data covering all 51 jurisdictions (50 states + DC)
+- **4.3M+ Live Statutes** via OpenLaws API across 53 jurisdictions (50 states + DC + PR + Federal)
+- **Complete Federal Criminal Code** via GovInfo API (Title 18 USC)
 - **73 Diversion Programs** directory covering major U.S. metropolitan areas
 - **153 Legal Aid Organizations** (123 public defender offices, 12 immigration, 18 civil)
 

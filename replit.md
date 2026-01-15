@@ -39,21 +39,41 @@ Session-based authentication with PostgreSQL session storage is configured for a
 -   **Drizzle ORM**: Type-safe database management.
 
 ### Legal Data Sources
--   **CourtListener API**: Legal opinions, court data, case law (includes AI-Powered Semantic Search).
--   **RECAP Archive**: Federal court documents.
--   **PACER Fetch API**: On-demand access to PACER documents (fallback).
--   **GovInfo.gov API**: Federal criminal statutes (Title 18 USC).
--   **OpenLaws API**: For statute text retrieval across 53 jurisdictions.
--   **LegiScan API**: For quarterly statute change monitoring.
--   **Bureau of Justice Statistics (BJS) API**: For crime statistics.
+
+#### Case Law & Court Records
+-   **CourtListener API**: 18M+ legal opinions, court data, case law with AI-powered semantic search.
+-   **RECAP Archive**: Federal court documents (free PACER access).
+-   **PACER Fetch API**: On-demand access to federal court documents (fallback).
+
+#### Statutes & Laws
+-   **GovInfo.gov API**: Complete federal criminal statutes (Title 18 USC). Free government API.
+-   **OpenLaws API**: Live statute retrieval across 53 jurisdictions (50 states + DC + PR + Federal). Supports citation-based lookup with 4.3M+ sections.
+-   **Curated Seed Data**: 1,385+ verified statutes across all 51 jurisdictions (50 states + DC) for offline/fast access.
+-   **LegiScan API**: Bill tracking for quarterly statute change monitoring.
+
+#### Rights Information & Legal Resources
+-   **Legal Services Corporation (LSC)**: Civil legal aid organizations nationwide.
 -   **EOIR.gov**: Immigration legal service providers.
--   **Legal Services Corporation (LSC)**: Civil legal aid organizations.
+-   **Bureau of Justice Statistics (BJS) API**: Crime statistics and sentencing data.
 -   **Center for Health and Justice**: Diversion program research.
 -   **NDAA Diversion Programs Directory**: Reference for diversion programs.
 
 ### AI and Machine Learning
--   **Anthropic Claude API**: AI-powered legal guidance generation using Claude Sonnet 4.5.
+-   **Anthropic Claude API**: AI-powered legal guidance generation using Claude Sonnet 4.
+-   **Legal Accuracy Validator (Tier 1)**: Validates AI guidance against statutory citations and penalty ranges.
+-   **Case Law Validator (Tier 2)**: Cross-references guidance with CourtListener's semantic search.
+-   **Rule-Based Fallback Engine**: Provides guidance when AI is unavailable.
 
 ### Third-Party Services
 -   **Neon Database**: Serverless PostgreSQL hosting.
 -   **OpenStreetMap/Nominatim**: Geocoding and location-based search.
+
+### Data Coverage Summary
+| Category | Count | Source |
+|----------|-------|--------|
+| Criminal Charges | 4,146 | All 50 states + DC + Federal |
+| State Statutes | 1,385+ | Seed data (51 jurisdictions) |
+| Live Statutes | 4.3M+ | OpenLaws API (53 jurisdictions) |
+| Federal Statutes | Complete | GovInfo API (Title 18 USC) |
+| Diversion Programs | 73 | Major U.S. metros |
+| Legal Aid Orgs | 153 | Public defenders, immigration, civil |
