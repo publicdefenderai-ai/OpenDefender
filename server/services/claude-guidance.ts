@@ -632,10 +632,10 @@ export async function generateClaudeGuidance(
     // Cross-reference diversion program recommendations against geographic availability
     try {
       const allGuidanceText = [
-        guidance.overview,
-        ...guidance.nextSteps,
-        ...guidance.warnings,
-        ...guidance.resources.map(r => r.description),
+        guidance.overview || '',
+        ...(guidance.nextSteps || []),
+        ...(guidance.warnings || []),
+        ...(guidance.resources || []).map(r => r.description || ''),
       ].join(' ');
       
       const mentionedDiversions = extractDiversionMentions(allGuidanceText);
@@ -649,7 +649,7 @@ export async function generateClaudeGuidance(
         // Add warnings about unavailable diversion programs
         if (diversionValidation.warnings.length > 0) {
           guidance.warnings = [
-            ...guidance.warnings,
+            ...(guidance.warnings || []),
             ...diversionValidation.warnings,
           ];
           devLog(`[Guidance] Added ${diversionValidation.warnings.length} diversion availability warnings`);
