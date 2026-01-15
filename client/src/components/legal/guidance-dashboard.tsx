@@ -43,6 +43,7 @@ import { criminalCharges } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
+import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
 
 interface ImmediateAction {
   action: string;
@@ -191,6 +192,41 @@ const getCourtLevelBadge = (level: string) => {
       return { variant: 'outline' as const, label: 'Court' };
   }
 };
+
+// Local Court Variation Disclaimer Component
+function LocalCourtDisclaimer({ jurisdiction }: { jurisdiction: string }) {
+  const { t } = useTranslation();
+  const courtInfo = getStateCourtInfo(jurisdiction);
+  const courtLocatorUrl = getCourtLocatorUrl(jurisdiction);
+  
+  if (!courtInfo) return null;
+  
+  return (
+    <div className="mt-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+      <div className="flex items-start gap-2">
+        <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+        <div className="text-sm">
+          <p className="text-amber-800 dark:text-amber-200">
+            <strong>{t('guidance.courtDisclaimer.title', 'Important:')}</strong>{' '}
+            {t('guidance.courtDisclaimer.text', 'Court rules and deadlines vary by county. Check your local court to verify all deadlines and procedures.')}
+          </p>
+          {courtLocatorUrl && (
+            <a 
+              href={courtLocatorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 mt-2 text-amber-700 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-100 underline font-medium"
+            >
+              <Building className="h-3.5 w-3.5" />
+              {t('guidance.courtDisclaimer.findCourt', 'Find your {{state}} court', { state: courtInfo.stateName })}
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Precedent Cases Section with Feedback
 function PrecedentCasesSection({ 
@@ -918,6 +954,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 </div>
               ))}
             </div>
+            
+            {/* Local Court Variation Disclaimer */}
+            <LocalCourtDisclaimer jurisdiction={guidance.caseData.jurisdiction} />
           </CardContent>
         </Card>
       )}

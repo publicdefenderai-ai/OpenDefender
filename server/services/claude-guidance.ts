@@ -5,6 +5,7 @@ import crypto from 'crypto';
 import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
 import { validateLegalGuidance, ValidationResult } from './legal-accuracy-validator';
 import { devLog } from '../utils/dev-logger';
+import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 
 // Validate Anthropic API credentials
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -626,6 +627,37 @@ export async function generateClaudeGuidance(
     } catch (validationError) {
       devLog('[Guidance] Validation failed, returning guidance without validation:', validationError);
       // Continue without validation - guidance is still useful
+    }
+
+    // Cross-reference diversion program recommendations against geographic availability
+    try {
+      const allGuidanceText = [
+        guidance.overview,
+        ...guidance.nextSteps,
+        ...guidance.warnings,
+        ...guidance.resources.map(r => r.description),
+      ].join(' ');
+      
+      const mentionedDiversions = extractDiversionMentions(allGuidanceText);
+      
+      if (mentionedDiversions.length > 0) {
+        const diversionValidation = checkDiversionAvailability(
+          processedDetails.jurisdiction,
+          mentionedDiversions
+        );
+        
+        // Add warnings about unavailable diversion programs
+        if (diversionValidation.warnings.length > 0) {
+          guidance.warnings = [
+            ...guidance.warnings,
+            ...diversionValidation.warnings,
+          ];
+          devLog(`[Guidance] Added ${diversionValidation.warnings.length} diversion availability warnings`);
+        }
+      }
+    } catch (diversionError) {
+      devLog('[Guidance] Diversion availability check failed:', diversionError);
+      // Continue without diversion validation
     }
 
     // Cache the successful response (including validation)
