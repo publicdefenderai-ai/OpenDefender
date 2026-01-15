@@ -60,7 +60,21 @@ Simply visit [justice-guard-sa.replit.app](https://justice-guard-sa.replit.app/)
 **Prerequisites:**
 - Node.js 18+
 - PostgreSQL database
-- Anthropic API key (for AI features)
+
+**Required API Keys:**
+
+To run this application with full functionality, you'll need to obtain your own API keys from the following services:
+
+| API Key | Service | Purpose | Required? |
+|---------|---------|---------|-----------|
+| `ANTHROPIC_API_KEY` | [Anthropic](https://console.anthropic.com/) | AI-powered legal guidance using Claude | **Required** for AI features |
+| `DATABASE_URL` | PostgreSQL | Database connection string | **Required** |
+| `COURTLISTENER_API_TOKEN` | [CourtListener](https://www.courtlistener.com/help/api/) | Case law search, court records, RECAP archive | Optional (enables court records) |
+| `OPENLAWS_API_KEY` | [OpenLaws](https://openlaws.com/) | Live statute retrieval across 53 jurisdictions | Optional (enables live statutes) |
+| `GOVINFO_API_KEY` | [GovInfo.gov](https://api.govinfo.gov/docs/) | Federal statutes (Title 18 USC) | Optional (free government API) |
+| `LEGISCAN_API_KEY` | [LegiScan](https://legiscan.com/legiscan) | Bill tracking and statute change monitoring | Optional (enables bill tracking) |
+
+> **Note**: The application will function with reduced features if optional API keys are not provided. The AI guidance and rule-based fallback systems will still work with just the Anthropic API key.
 
 **Installation:**
 
@@ -73,7 +87,13 @@ cd PublicDefenderAI
 npm install
 
 # Set up environment variables
-# Create a .env file with required API keys and database URL
+# Create a .env file with your API keys:
+# DATABASE_URL=postgresql://...
+# ANTHROPIC_API_KEY=sk-ant-...
+# COURTLISTENER_API_TOKEN=... (optional)
+# OPENLAWS_API_KEY=... (optional)
+# GOVINFO_API_KEY=... (optional)
+# LEGISCAN_API_KEY=... (optional)
 
 # Run database migrations
 npm run db:push
