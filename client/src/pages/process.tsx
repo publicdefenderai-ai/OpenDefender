@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { Calendar, Clock, Shield, Scale, AlertTriangle, DollarSign, FileText, ChevronDown, HelpCircle, CheckCircle2, XCircle, Users } from "lucide-react";
+import { Calendar, Clock, Shield, Scale, AlertTriangle, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -141,8 +141,7 @@ export default function Process() {
             <ScrollReveal delay={0.1}>
               <Card className="border-2 border-green-200 dark:border-green-800">
                 <CardHeader className="bg-green-50 dark:bg-green-950/50">
-                  <CardTitle className="flex items-center text-green-800 dark:text-green-200">
-                    <DollarSign className="h-6 w-6 mr-3" />
+                  <CardTitle className="text-green-800 dark:text-green-200">
                     {t('process.guides.bail.title')}
                   </CardTitle>
                   <p className="text-sm text-green-700 dark:text-green-300 mt-2">
@@ -153,10 +152,7 @@ export default function Process() {
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="bail-what">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <HelpCircle className="h-4 w-4 mr-2 text-green-600" />
-                          {t('process.guides.bail.whatIs.title')}
-                        </span>
+                        {t('process.guides.bail.whatIs.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.bail.whatIs.description')}</p>
@@ -170,10 +166,7 @@ export default function Process() {
 
                     <AccordionItem value="bail-set">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <Scale className="h-4 w-4 mr-2 text-green-600" />
-                          {t('process.guides.bail.howSet.title')}
-                        </span>
+                        {t('process.guides.bail.howSet.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.bail.howSet.description')}</p>
@@ -187,10 +180,7 @@ export default function Process() {
 
                     <AccordionItem value="bail-options">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <CheckCircle2 className="h-4 w-4 mr-2 text-green-600" />
-                          {t('process.guides.bail.options.title')}
-                        </span>
+                        {t('process.guides.bail.options.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-4 pl-6">
                         {(t('process.guides.bail.options.types', { returnObjects: true }) as { name: string; description: string }[]).map((option, idx) => (
@@ -204,10 +194,7 @@ export default function Process() {
 
                     <AccordionItem value="bail-afford">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <AlertTriangle className="h-4 w-4 mr-2 text-amber-600" />
-                          {t('process.guides.bail.cantAfford.title')}
-                        </span>
+                        {t('process.guides.bail.cantAfford.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.bail.cantAfford.description')}</p>
@@ -221,10 +208,7 @@ export default function Process() {
 
                     <AccordionItem value="bail-conditions">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <FileText className="h-4 w-4 mr-2 text-green-600" />
-                          {t('process.guides.bail.conditions.title')}
-                        </span>
+                        {t('process.guides.bail.conditions.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.bail.conditions.description')}</p>
@@ -238,10 +222,7 @@ export default function Process() {
 
                     <AccordionItem value="bail-miss">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <XCircle className="h-4 w-4 mr-2 text-red-600" />
-                          {t('process.guides.bail.missCourt.title')}
-                        </span>
+                        {t('process.guides.bail.missCourt.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.bail.missCourt.description')}</p>
@@ -261,8 +242,7 @@ export default function Process() {
             <ScrollReveal delay={0.2}>
               <Card className="border-2 border-blue-200 dark:border-blue-800">
                 <CardHeader className="bg-blue-50 dark:bg-blue-950/50">
-                  <CardTitle className="flex items-center text-blue-800 dark:text-blue-200">
-                    <FileText className="h-6 w-6 mr-3" />
+                  <CardTitle className="text-blue-800 dark:text-blue-200">
                     {t('process.guides.plea.title')}
                   </CardTitle>
                   <p className="text-sm text-blue-700 dark:text-blue-300 mt-2">
@@ -273,10 +253,7 @@ export default function Process() {
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="plea-what">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <HelpCircle className="h-4 w-4 mr-2 text-blue-600" />
-                          {t('process.guides.plea.whatIs.title')}
-                        </span>
+                        {t('process.guides.plea.whatIs.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.plea.whatIs.description')}</p>
@@ -290,10 +267,7 @@ export default function Process() {
 
                     <AccordionItem value="plea-types">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <Scale className="h-4 w-4 mr-2 text-blue-600" />
-                          {t('process.guides.plea.types.title')}
-                        </span>
+                        {t('process.guides.plea.types.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-4 pl-6">
                         {(t('process.guides.plea.types.deals', { returnObjects: true }) as { name: string; description: string }[]).map((deal, idx) => (
@@ -307,10 +281,7 @@ export default function Process() {
 
                     <AccordionItem value="plea-rights">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <Shield className="h-4 w-4 mr-2 text-blue-600" />
-                          {t('process.guides.plea.rights.title')}
-                        </span>
+                        {t('process.guides.plea.rights.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.plea.rights.description')}</p>
@@ -324,10 +295,7 @@ export default function Process() {
 
                     <AccordionItem value="plea-questions">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <HelpCircle className="h-4 w-4 mr-2 text-blue-600" />
-                          {t('process.guides.plea.questions.title')}
-                        </span>
+                        {t('process.guides.plea.questions.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.plea.questions.description')}</p>
@@ -341,10 +309,7 @@ export default function Process() {
 
                     <AccordionItem value="plea-collateral">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <AlertTriangle className="h-4 w-4 mr-2 text-amber-600" />
-                          {t('process.guides.plea.collateral.title')}
-                        </span>
+                        {t('process.guides.plea.collateral.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.plea.collateral.description')}</p>
@@ -358,10 +323,7 @@ export default function Process() {
 
                     <AccordionItem value="plea-decide">
                       <AccordionTrigger className="text-left hover:no-underline">
-                        <span className="flex items-center">
-                          <Users className="h-4 w-4 mr-2 text-blue-600" />
-                          {t('process.guides.plea.decide.title')}
-                        </span>
+                        {t('process.guides.plea.decide.title')}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground space-y-3 pl-6">
                         <p>{t('process.guides.plea.decide.description')}</p>
