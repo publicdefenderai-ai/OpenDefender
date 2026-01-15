@@ -1480,6 +1480,186 @@ i18n
                 "text": "Bail is money paid to the court to ensure you return for trial. If you can't afford bail, you may remain in custody or request a bail hearing. Some jurisdictions offer release on recognizance (ROR) for low-risk defendants."
               }
             },
+            "guides": {
+              "title": "Understanding Key Legal Processes",
+              "subtitle": "Learn about important decisions you may face during your case. Click each section to expand and learn more.",
+              "bail": {
+                "title": "Understanding Cash Bail",
+                "intro": "Bail is money held by the court to make sure you come back for your court dates. Here's what you need to know as a defendant.",
+                "whatIs": {
+                  "title": "What is bail?",
+                  "description": "Bail is a way to get out of jail while waiting for your case to be finished. You pay money (or someone pays for you), and the court holds it until your case ends.",
+                  "points": [
+                    "Bail is not a fine or punishment - it's like a deposit",
+                    "If you go to all your court dates, you get the money back (minus any fees)",
+                    "The purpose is to make sure you don't run away before trial"
+                  ]
+                },
+                "howSet": {
+                  "title": "How bail amounts are set",
+                  "description": "A judge decides your bail amount based on several things:",
+                  "factors": [
+                    "How serious your charges are",
+                    "Your criminal history (if any)",
+                    "Whether you have strong ties to the community (job, family, home)",
+                    "Whether you're considered a flight risk",
+                    "Your ability to pay",
+                    "Public safety concerns"
+                  ]
+                },
+                "options": {
+                  "title": "Your bail options",
+                  "types": [
+                    {
+                      "name": "Cash Bail",
+                      "description": "You pay the full bail amount to the court. You get it all back when the case ends (if you showed up to court)."
+                    },
+                    {
+                      "name": "Bail Bond (through a bondsman)",
+                      "description": "You pay a bail bondsman about 10-15% of the bail amount. They pay the full bail. You don't get your payment back - it's their fee."
+                    },
+                    {
+                      "name": "Property Bond",
+                      "description": "You use property (like a house) as collateral instead of cash. If you don't show up, the court can take the property."
+                    },
+                    {
+                      "name": "Release on Recognizance (ROR)",
+                      "description": "You're released with just a promise to return - no money required. This is for lower-risk defendants with strong community ties."
+                    }
+                  ]
+                },
+                "cantAfford": {
+                  "title": "What if you can't afford bail?",
+                  "description": "Don't lose hope. There are steps you can take:",
+                  "options": [
+                    "Ask your lawyer to request a bail reduction hearing",
+                    "Gather evidence of community ties (job letter, family support, lease)",
+                    "Look into bail funds - nonprofit organizations that help pay bail",
+                    "Ask family or friends if they can help with a bail bond",
+                    "In some areas, there are pretrial services programs as alternatives"
+                  ]
+                },
+                "conditions": {
+                  "title": "Conditions of release",
+                  "description": "Even if you post bail, the judge may set rules you must follow while out:",
+                  "examples": [
+                    "Check in with a pretrial officer regularly",
+                    "Stay in the area (no travel without permission)",
+                    "Avoid contact with certain people (like witnesses or victims)",
+                    "No alcohol or drugs, possibly with testing",
+                    "Wear an ankle monitor",
+                    "Keep or find a job",
+                    "Obey a curfew"
+                  ]
+                },
+                "missCourt": {
+                  "title": "What happens if you miss court?",
+                  "description": "Missing a court date is serious. Here's what can happen:",
+                  "consequences": [
+                    "A warrant will be issued for your arrest",
+                    "You'll lose your bail money (or the bondsman will look for you)",
+                    "You could face additional criminal charges for failure to appear",
+                    "It will be much harder to get bail again",
+                    "The judge may view you as less trustworthy when deciding your case"
+                  ]
+                }
+              },
+              "plea": {
+                "title": "Understanding Plea Bargains",
+                "intro": "About 90-95% of criminal cases are resolved through plea bargains. Understanding this process helps you make informed decisions.",
+                "whatIs": {
+                  "title": "What is a plea bargain?",
+                  "description": "A plea bargain is an agreement between you (the defendant) and the prosecutor. You agree to plead guilty to a charge, and in return, you get something - usually a lighter sentence or fewer charges.",
+                  "points": [
+                    "It's a negotiation - your lawyer bargains on your behalf",
+                    "The judge must approve the agreement",
+                    "You give up your right to a trial when you accept",
+                    "Once accepted, it's very hard to take back"
+                  ]
+                },
+                "types": {
+                  "title": "Types of plea deals",
+                  "deals": [
+                    {
+                      "name": "Charge Bargaining",
+                      "description": "You plead guilty to a less serious charge. For example, a felony might be reduced to a misdemeanor."
+                    },
+                    {
+                      "name": "Sentence Bargaining",
+                      "description": "You plead guilty to the original charge, but the prosecutor recommends a lighter sentence to the judge."
+                    },
+                    {
+                      "name": "Count Bargaining",
+                      "description": "If you face multiple charges, some are dropped in exchange for pleading guilty to others."
+                    },
+                    {
+                      "name": "Fact Bargaining",
+                      "description": "Certain facts are left out of the case, which can affect sentencing (less common)."
+                    }
+                  ]
+                },
+                "rights": {
+                  "title": "Your rights during plea negotiations",
+                  "description": "Remember, you have important rights in this process:",
+                  "list": [
+                    "You can ALWAYS reject any plea offer - nobody can force you to accept",
+                    "You have the right to go to trial instead",
+                    "You must be told about immigration consequences before pleading (if applicable)",
+                    "You can ask for time to think about an offer",
+                    "You should always talk to a lawyer before deciding"
+                  ]
+                },
+                "questions": {
+                  "title": "Questions to ask before accepting",
+                  "description": "Before you agree to any plea deal, make sure you understand:",
+                  "list": [
+                    "Exactly what am I pleading guilty to?",
+                    "What is the maximum sentence I could get?",
+                    "What sentence is the prosecutor recommending?",
+                    "Is the judge required to follow the recommendation?",
+                    "Will I have a criminal record? Can it ever be expunged?",
+                    "How will this affect my immigration status (if applicable)?",
+                    "Will I be able to own firearms?",
+                    "Will I have to register as a sex offender (if applicable)?",
+                    "What happens if I violate probation?"
+                  ]
+                },
+                "collateral": {
+                  "title": "Collateral consequences",
+                  "description": "Pleading guilty can affect your life beyond the sentence. These are called 'collateral consequences':",
+                  "consequences": [
+                    "Immigration: Can lead to deportation, denial of citizenship, or visa problems",
+                    "Employment: Some jobs require background checks; certain professions may be off-limits",
+                    "Housing: Public housing and some landlords may reject you",
+                    "Education: May affect financial aid or admission to schools",
+                    "Voting: In some states, felons lose voting rights",
+                    "Gun rights: Felonies and some misdemeanors prevent gun ownership",
+                    "Professional licenses: Some convictions prevent becoming a nurse, teacher, etc.",
+                    "Child custody: May be considered in family court decisions"
+                  ]
+                },
+                "decide": {
+                  "title": "Accept the deal or go to trial?",
+                  "description": "This is one of the most important decisions in your case. Here are factors to consider:",
+                  "acceptTitle": "Consider accepting if:",
+                  "acceptReasons": [
+                    "The evidence against you is strong",
+                    "The deal significantly reduces your potential sentence",
+                    "Going to trial could result in much worse consequences",
+                    "The deal allows you to avoid certain charges with serious collateral consequences",
+                    "Your lawyer strongly recommends it"
+                  ],
+                  "trialTitle": "Consider going to trial if:",
+                  "trialReasons": [
+                    "You are truly innocent",
+                    "The evidence against you is weak",
+                    "Your constitutional rights were violated (illegal search, coerced confession)",
+                    "The plea offer isn't much better than what you'd get at trial",
+                    "You're willing to accept the risk for a chance at acquittal"
+                  ]
+                }
+              }
+            },
             "legalDisclaimer": {
               "title": "Legal Disclaimer:",
               "text": "This information is for educational purposes only and does not constitute legal advice. Laws and procedures vary by state and federal jurisdiction. Always consult with a qualified attorney for advice specific to your situation."
@@ -3987,6 +4167,186 @@ i18n
               "bondBail": {
                 "title": "Fianza y Libertad Bajo Fianza",
                 "text": "La fianza es el dinero pagado a la corte para asegurar que regrese para el juicio. Si no puede pagar la fianza, puede permanecer bajo custodia o solicitar una audiencia de fianza. Algunas jurisdicciones ofrecen liberación bajo palabra (ROR) para acusados de bajo riesgo."
+              }
+            },
+            "guides": {
+              "title": "Entendiendo Procesos Legales Clave",
+              "subtitle": "Aprenda sobre decisiones importantes que puede enfrentar durante su caso. Haga clic en cada sección para expandir y aprender más.",
+              "bail": {
+                "title": "Entendiendo la Fianza en Efectivo",
+                "intro": "La fianza es dinero que el tribunal retiene para asegurar que usted regrese a sus citas en la corte. Esto es lo que necesita saber como acusado.",
+                "whatIs": {
+                  "title": "¿Qué es la fianza?",
+                  "description": "La fianza es una forma de salir de la cárcel mientras espera que termine su caso. Usted paga dinero (o alguien paga por usted), y el tribunal lo retiene hasta que termine su caso.",
+                  "points": [
+                    "La fianza no es una multa ni un castigo - es como un depósito",
+                    "Si asiste a todas sus fechas de corte, recupera el dinero (menos cualquier tarifa)",
+                    "El propósito es asegurar que no huya antes del juicio"
+                  ]
+                },
+                "howSet": {
+                  "title": "Cómo se establece el monto de la fianza",
+                  "description": "Un juez decide el monto de su fianza basándose en varias cosas:",
+                  "factors": [
+                    "Qué tan serios son sus cargos",
+                    "Su historial criminal (si lo tiene)",
+                    "Si tiene lazos fuertes con la comunidad (trabajo, familia, hogar)",
+                    "Si se le considera un riesgo de fuga",
+                    "Su capacidad de pago",
+                    "Preocupaciones de seguridad pública"
+                  ]
+                },
+                "options": {
+                  "title": "Sus opciones de fianza",
+                  "types": [
+                    {
+                      "name": "Fianza en Efectivo",
+                      "description": "Usted paga el monto total de la fianza al tribunal. Recupera todo cuando termina el caso (si se presentó a la corte)."
+                    },
+                    {
+                      "name": "Fianza con Fiador (a través de un fiador)",
+                      "description": "Usted paga a un fiador aproximadamente 10-15% del monto de la fianza. Ellos pagan la fianza completa. No recupera su pago - es su tarifa."
+                    },
+                    {
+                      "name": "Fianza con Propiedad",
+                      "description": "Usa propiedad (como una casa) como garantía en lugar de efectivo. Si no se presenta, el tribunal puede tomar la propiedad."
+                    },
+                    {
+                      "name": "Liberación Bajo Palabra (ROR)",
+                      "description": "Es liberado solo con una promesa de regresar - no se requiere dinero. Esto es para acusados de bajo riesgo con fuertes lazos comunitarios."
+                    }
+                  ]
+                },
+                "cantAfford": {
+                  "title": "¿Qué pasa si no puede pagar la fianza?",
+                  "description": "No pierda la esperanza. Hay pasos que puede tomar:",
+                  "options": [
+                    "Pida a su abogado que solicite una audiencia de reducción de fianza",
+                    "Reúna evidencia de lazos comunitarios (carta de empleo, apoyo familiar, contrato de arrendamiento)",
+                    "Busque fondos de fianza - organizaciones sin fines de lucro que ayudan a pagar fianzas",
+                    "Pregunte a familiares o amigos si pueden ayudar con un fiador",
+                    "En algunas áreas, hay programas de servicios previos al juicio como alternativas"
+                  ]
+                },
+                "conditions": {
+                  "title": "Condiciones de liberación",
+                  "description": "Aunque pague la fianza, el juez puede establecer reglas que debe seguir mientras está fuera:",
+                  "examples": [
+                    "Presentarse con un oficial de servicios previos al juicio regularmente",
+                    "Permanecer en el área (no viajar sin permiso)",
+                    "Evitar contacto con ciertas personas (como testigos o víctimas)",
+                    "No alcohol ni drogas, posiblemente con pruebas",
+                    "Usar un monitor de tobillo",
+                    "Mantener o encontrar un trabajo",
+                    "Obedecer un toque de queda"
+                  ]
+                },
+                "missCourt": {
+                  "title": "¿Qué pasa si falta a la corte?",
+                  "description": "Faltar a una fecha de corte es serio. Esto es lo que puede pasar:",
+                  "consequences": [
+                    "Se emitirá una orden de arresto en su contra",
+                    "Perderá su dinero de fianza (o el fiador lo buscará)",
+                    "Podría enfrentar cargos criminales adicionales por no comparecer",
+                    "Será mucho más difícil obtener fianza nuevamente",
+                    "El juez puede verlo como menos confiable al decidir su caso"
+                  ]
+                }
+              },
+              "plea": {
+                "title": "Entendiendo los Acuerdos de Culpabilidad",
+                "intro": "Aproximadamente 90-95% de los casos criminales se resuelven mediante acuerdos de culpabilidad. Entender este proceso le ayuda a tomar decisiones informadas.",
+                "whatIs": {
+                  "title": "¿Qué es un acuerdo de culpabilidad?",
+                  "description": "Un acuerdo de culpabilidad es un convenio entre usted (el acusado) y el fiscal. Usted acepta declararse culpable de un cargo, y a cambio, obtiene algo - usualmente una sentencia más leve o menos cargos.",
+                  "points": [
+                    "Es una negociación - su abogado negocia en su nombre",
+                    "El juez debe aprobar el acuerdo",
+                    "Renuncia a su derecho a un juicio cuando acepta",
+                    "Una vez aceptado, es muy difícil retractarse"
+                  ]
+                },
+                "types": {
+                  "title": "Tipos de acuerdos",
+                  "deals": [
+                    {
+                      "name": "Negociación de Cargos",
+                      "description": "Se declara culpable de un cargo menos serio. Por ejemplo, un delito grave podría reducirse a un delito menor."
+                    },
+                    {
+                      "name": "Negociación de Sentencia",
+                      "description": "Se declara culpable del cargo original, pero el fiscal recomienda una sentencia más leve al juez."
+                    },
+                    {
+                      "name": "Negociación de Cantidad",
+                      "description": "Si enfrenta múltiples cargos, algunos se retiran a cambio de declararse culpable de otros."
+                    },
+                    {
+                      "name": "Negociación de Hechos",
+                      "description": "Ciertos hechos se omiten del caso, lo que puede afectar la sentencia (menos común)."
+                    }
+                  ]
+                },
+                "rights": {
+                  "title": "Sus derechos durante las negociaciones",
+                  "description": "Recuerde, tiene derechos importantes en este proceso:",
+                  "list": [
+                    "SIEMPRE puede rechazar cualquier oferta - nadie puede obligarlo a aceptar",
+                    "Tiene derecho a ir a juicio en su lugar",
+                    "Debe ser informado sobre consecuencias migratorias antes de declararse (si aplica)",
+                    "Puede pedir tiempo para pensar sobre una oferta",
+                    "Siempre debe hablar con un abogado antes de decidir"
+                  ]
+                },
+                "questions": {
+                  "title": "Preguntas antes de aceptar",
+                  "description": "Antes de aceptar cualquier acuerdo, asegúrese de entender:",
+                  "list": [
+                    "¿Exactamente de qué me estoy declarando culpable?",
+                    "¿Cuál es la sentencia máxima que podría recibir?",
+                    "¿Qué sentencia está recomendando el fiscal?",
+                    "¿El juez está obligado a seguir la recomendación?",
+                    "¿Tendré antecedentes penales? ¿Se pueden borrar alguna vez?",
+                    "¿Cómo afectará esto mi estatus migratorio (si aplica)?",
+                    "¿Podré tener armas de fuego?",
+                    "¿Tendré que registrarme como delincuente sexual (si aplica)?",
+                    "¿Qué pasa si violo la libertad condicional?"
+                  ]
+                },
+                "collateral": {
+                  "title": "Consecuencias colaterales",
+                  "description": "Declararse culpable puede afectar su vida más allá de la sentencia. Estas se llaman 'consecuencias colaterales':",
+                  "consequences": [
+                    "Inmigración: Puede llevar a deportación, negación de ciudadanía, o problemas de visa",
+                    "Empleo: Algunos trabajos requieren verificación de antecedentes; ciertas profesiones pueden estar prohibidas",
+                    "Vivienda: Vivienda pública y algunos arrendadores pueden rechazarlo",
+                    "Educación: Puede afectar ayuda financiera o admisión a escuelas",
+                    "Votación: En algunos estados, los delincuentes pierden el derecho al voto",
+                    "Derechos de armas: Delitos graves y algunos menores impiden poseer armas",
+                    "Licencias profesionales: Algunas condenas impiden ser enfermero, maestro, etc.",
+                    "Custodia de menores: Puede considerarse en decisiones del tribunal de familia"
+                  ]
+                },
+                "decide": {
+                  "title": "¿Aceptar el acuerdo o ir a juicio?",
+                  "description": "Esta es una de las decisiones más importantes en su caso. Aquí hay factores a considerar:",
+                  "acceptTitle": "Considere aceptar si:",
+                  "acceptReasons": [
+                    "La evidencia en su contra es fuerte",
+                    "El acuerdo reduce significativamente su sentencia potencial",
+                    "Ir a juicio podría resultar en consecuencias mucho peores",
+                    "El acuerdo le permite evitar ciertos cargos con consecuencias colaterales serias",
+                    "Su abogado lo recomienda fuertemente"
+                  ],
+                  "trialTitle": "Considere ir a juicio si:",
+                  "trialReasons": [
+                    "Es verdaderamente inocente",
+                    "La evidencia en su contra es débil",
+                    "Sus derechos constitucionales fueron violados (registro ilegal, confesión forzada)",
+                    "La oferta no es mucho mejor que lo que obtendría en juicio",
+                    "Está dispuesto a aceptar el riesgo por una oportunidad de absolución"
+                  ]
+                }
               }
             },
             "legalDisclaimer": {
