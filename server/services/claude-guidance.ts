@@ -4,6 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import crypto from 'crypto';
 import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
 import { validateLegalGuidance, ValidationResult } from './legal-accuracy-validator';
+import { devLog } from '../utils/dev-logger';
 
 // Validate Anthropic API credentials
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -41,7 +42,7 @@ setInterval(() => {
   
   if (keysToDelete.length > 0) {
     keysToDelete.forEach(key => responseCache.delete(key));
-    console.log(`[Privacy] Cleared ${keysToDelete.length} expired cache entries`);
+    devLog(`[Privacy] Cleared ${keysToDelete.length} expired cache entries`);
   }
 }, 5 * 60 * 1000); // Run cleanup every 5 minutes
 
@@ -49,13 +50,13 @@ setInterval(() => {
 export function clearSessionCache(sessionId?: string): void {
   if (!sessionId) {
     responseCache.clear();
-    console.log('[Privacy] All guidance cache cleared');
+    devLog('[Privacy] All guidance cache cleared');
   } else {
     // Clear entries that might contain this session's data
     // Since cache keys are hashes, we clear all as a safety measure
     const sizeBefore = responseCache.size;
     responseCache.clear();
-    console.log(`[Privacy] Cleared ${sizeBefore} cache entries for session cleanup`);
+    devLog(`[Privacy] Cleared ${sizeBefore} cache entries for session cleanup`);
   }
 }
 
@@ -447,7 +448,7 @@ async function callClaudeWithRetry(
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       if (attempt > 0) {
-        console.log(`Retrying Claude API call (attempt ${attempt + 1}/${maxRetries + 1})...`);
+        devLog(`Retrying Claude API call (attempt ${attempt + 1}/${maxRetries + 1})...`);
       }
       
       const startTime = Date.now();
@@ -473,8 +474,8 @@ async function callClaudeWithRetry(
       
       const message = await Promise.race([apiCallPromise, timeoutPromise]);
       
-      console.log('Claude API responded in', Date.now() - startTime, 'ms');
-      console.log('Response usage:', message.usage);
+      devLog('Claude API responded in', Date.now() - startTime, 'ms');
+      devLog('Response usage:', message.usage);
       
       return message;
     } catch (error: any) {
@@ -517,7 +518,7 @@ export async function generateClaudeGuidance(
     
     // Log redaction stats for observability (NOT the actual redacted values)
     if (stats.total > 0) {
-      console.log('[PII Protection] Redacted sensitive information:', {
+      devLog('[PII Protection] Redacted sensitive information:', {
         total: stats.total,
         breakdown: {
           names: stats.name,
@@ -537,7 +538,7 @@ export async function generateClaudeGuidance(
   const cachedEntry = responseCache.get(cacheKey);
   
   if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_TTL) {
-    console.log('Cache hit for guidance request');
+    devLog('Cache hit for guidance request');
     return cachedEntry.response;
   }
 
@@ -545,11 +546,9 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt(processedDetails.language);
     const userPrompt = buildUserPrompt(processedDetails);
 
-    console.log('Generating personalized guidance with Claude Sonnet 4...');
-    console.log('Using direct Anthropic API');
-    console.log('Prompt length:', userPrompt.length, 'characters');
-
-    console.log('Making API request to Claude (with retry on timeout)...');
+    devLog('Generating personalized guidance with Claude Sonnet 4...');
+    devLog('Prompt length:', userPrompt.length, 'characters');
+    devLog('Making API request to Claude (with retry on timeout)...');
     
     const message = await callClaudeWithRetry(systemPrompt, userPrompt, 1);
 
@@ -623,9 +622,9 @@ export async function generateClaudeGuidance(
         })),
       };
       
-      console.log(`[Guidance] Validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+      devLog(`[Guidance] Validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
     } catch (validationError) {
-      console.warn('[Guidance] Validation failed, returning guidance without validation:', validationError);
+      devLog('[Guidance] Validation failed, returning guidance without validation:', validationError);
       // Continue without validation - guidance is still useful
     }
 

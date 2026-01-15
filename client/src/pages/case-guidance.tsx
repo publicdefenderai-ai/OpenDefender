@@ -400,9 +400,7 @@ export default function CaseGuidance() {
 
   const handleQAComplete = async (data: any) => {
     try {
-      console.log("Sending guidance request with data:", data);
       const result = await generateGuidance.mutateAsync(data);
-      console.log("Received guidance result:", result);
       
       if (result && result.success) {
         // Wait a tick to ensure the API response is fully processed
@@ -411,7 +409,6 @@ export default function CaseGuidance() {
         
         // The guidance is directly the EnhancedGuidance object
         const guidance = result.guidance;
-        console.log("Processing guidance data:", guidance);
         
         // Build the complete guidance data object synchronously
         const guidanceData: EnhancedGuidanceResult = {

@@ -17,6 +17,7 @@ import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
 import { statuteSeeder } from "./services/statute-seeder";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
+import { devLog, opsLog, errLog } from "./utils/dev-logger";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Rate limiter for AI-powered endpoints (expensive operations)
@@ -382,11 +383,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Seed database with stateStatutesSeed data
   app.post("/api/statutes/seed", async (req, res) => {
     try {
-      console.log('[API] Starting statute database seeding...');
+      devLog('[API] Starting statute database seeding...');
       const result = await statuteSeeder.seedDatabase();
       res.json(result);
     } catch (error) {
-      console.error("Seeding failed:", error);
+      errLog("Seeding failed", error);
       res.status(500).json({ success: false, error: "Seeding failed" });
     }
   });
@@ -620,7 +621,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         caseStage: caseStage || null,
       });
       
-      console.log(`[Feedback] User ${isHelpful ? 'found helpful' : 'did not find helpful'}: ${caseName}`);
+      opsLog(`[Feedback] Vote received: ${isHelpful ? 'helpful' : 'not helpful'}`);
       
       res.json({ success: true, feedback });
     } catch (error) {
@@ -684,7 +685,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         userAgent: req.headers['user-agent'] || null,
       });
       
-      console.log(`[Privacy] Consent recorded: ${consentType} v${consentVersion} - ${granted ? 'granted' : 'denied'}`);
+      opsLog(`[Privacy] Consent recorded: ${consentType} v${consentVersion} - ${granted ? 'granted' : 'denied'}`);
       
       res.json({ success: true, recorded: true });
     } catch (error) {
@@ -1010,12 +1011,11 @@ async function generateLegalGuidance(caseData: any) {
   
   if (useAI && (caseData.incidentDescription || caseData.concernsQuestions)) {
     try {
-      console.log('Generating AI-powered guidance with Claude...');
+      devLog('Generating AI-powered guidance with Claude...');
       const claudeGuidance = await generateClaudeGuidance(caseData);
       
-      // Log usage metrics
-      console.log(`Claude usage: ${claudeGuidance.usageMetrics.inputTokens} input + ${claudeGuidance.usageMetrics.outputTokens} output tokens`);
-      console.log(`Estimated cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);
+      // Log usage metrics (safe aggregates only)
+      opsLog(`[AI] Tokens: ${claudeGuidance.usageMetrics.inputTokens}+${claudeGuidance.usageMetrics.outputTokens}, Cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);
       
       return {
         ...claudeGuidance,
@@ -1029,7 +1029,7 @@ async function generateLegalGuidance(caseData: any) {
   }
   
   // Fallback to rule-based guidance engine
-  console.log('Generating rule-based guidance...');
+  devLog('Generating rule-based guidance...');
   const guidance = generateEnhancedGuidance(caseData);
   
   // Run validation for rule-based guidance as well
@@ -1055,9 +1055,9 @@ async function generateLegalGuidance(caseData: any) {
       })),
     };
     
-    console.log(`[Guidance] Rule-based validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+    opsLog(`[Guidance] Validation: ${(validationResult.confidenceScore * 100).toFixed(1)}% confidence`);
   } catch (validationError) {
-    console.warn('[Guidance] Rule-based validation failed:', validationError);
+    devLog('[Guidance] Rule-based validation failed:', validationError);
   }
   
   return {

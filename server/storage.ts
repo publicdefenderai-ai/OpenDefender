@@ -4,6 +4,7 @@ import { randomUUID } from "crypto";
 import { legalAidOrganizationsSeed } from "./data/legal-aid-organizations-seed";
 import { federalStatutesSeed } from "./data/federal-statutes-seed";
 import { stateStatutesSeed } from "./data/state-statutes-seed";
+import { opsLog, devLog } from "./utils/dev-logger";
 
 export interface IStorage {
   // User management
@@ -103,7 +104,7 @@ export class MemStorage implements IStorage {
     }
     
     if (cleanedCases > 0 || cleanedFeedback > 0) {
-      console.log(`[Privacy Cleanup] Removed ${cleanedCases} expired cases, ${cleanedFeedback} old feedback entries`);
+      opsLog(`[Privacy Cleanup] Removed ${cleanedCases} expired cases, ${cleanedFeedback} old feedback entries`);
     }
   }
 
@@ -120,7 +121,7 @@ export class MemStorage implements IStorage {
       }
     }
     
-    console.log(`[Privacy] Session data deleted for session: ${sessionId.substring(0, 8)}...`);
+    devLog(`[Privacy] Session data deleted for session: ${sessionId.substring(0, 8)}...`);
   }
 
   stopCleanup() {
