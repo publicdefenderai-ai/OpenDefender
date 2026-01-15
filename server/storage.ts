@@ -52,6 +52,7 @@ export class MemStorage implements IStorage {
   private statutes: Map<string, Statute>;
   private caseFeedback: Map<string, CaseFeedback>;
   private privacyConsents: Map<string, PrivacyConsent>;
+  private cleanupInterval: NodeJS.Timeout | null = null;
 
   constructor() {
     this.users = new Map();
@@ -65,6 +66,68 @@ export class MemStorage implements IStorage {
     
     // Initialize with sample legal resources and organizations
     this.initializeSampleData();
+    
+    // Start periodic cleanup of expired session data (every 15 minutes)
+    this.startPeriodicCleanup();
+  }
+
+  private startPeriodicCleanup() {
+    // Run cleanup every 15 minutes
+    this.cleanupInterval = setInterval(() => {
+      this.cleanupExpiredSessions();
+    }, 15 * 60 * 1000);
+  }
+
+  private cleanupExpiredSessions() {
+    const now = new Date();
+    let cleanedCases = 0;
+    let cleanedFeedback = 0;
+    
+    // Clean up expired legal cases
+    const caseEntries = Array.from(this.legalCases.entries());
+    for (const [sessionId, legalCase] of caseEntries) {
+      if (legalCase.expiresAt && legalCase.expiresAt <= now) {
+        this.legalCases.delete(sessionId);
+        cleanedCases++;
+      }
+    }
+    
+    // Clean up feedback older than 24 hours (associated with expired sessions)
+    const expiryThreshold = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+    const feedbackEntries = Array.from(this.caseFeedback.entries());
+    for (const [id, feedback] of feedbackEntries) {
+      if (feedback.createdAt && feedback.createdAt <= expiryThreshold) {
+        this.caseFeedback.delete(id);
+        cleanedFeedback++;
+      }
+    }
+    
+    if (cleanedCases > 0 || cleanedFeedback > 0) {
+      console.log(`[Privacy Cleanup] Removed ${cleanedCases} expired cases, ${cleanedFeedback} old feedback entries`);
+    }
+  }
+
+  // Delete all session-related data for a specific session (for explicit cleanup)
+  async deleteSessionData(sessionId: string): Promise<void> {
+    // Delete legal case
+    this.legalCases.delete(sessionId);
+    
+    // Delete associated feedback
+    const feedbackEntries = Array.from(this.caseFeedback.entries());
+    for (const [id, feedback] of feedbackEntries) {
+      if (feedback.sessionId === sessionId) {
+        this.caseFeedback.delete(id);
+      }
+    }
+    
+    console.log(`[Privacy] Session data deleted for session: ${sessionId.substring(0, 8)}...`);
+  }
+
+  stopCleanup() {
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+      this.cleanupInterval = null;
+    }
   }
 
   private initializeSampleData() {

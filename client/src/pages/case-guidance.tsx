@@ -44,6 +44,7 @@ interface ImmediateAction {
 interface EnhancedGuidanceResult {
   sessionId: string;
   overview: string;
+  generatedAt?: string; // ISO timestamp when guidance was generated
   criticalAlerts: string[];
   immediateActions: ImmediateAction[];
   nextSteps: string[];
@@ -416,6 +417,7 @@ export default function CaseGuidance() {
         const guidanceData: EnhancedGuidanceResult = {
           sessionId: result.sessionId,
           overview: guidance.overview || '',
+          generatedAt: guidance.generatedAt, // Include timestamp for transparency
           criticalAlerts: guidance.criticalAlerts || [],
           immediateActions: guidance.immediateActions || [],
           nextSteps: guidance.nextSteps || [],

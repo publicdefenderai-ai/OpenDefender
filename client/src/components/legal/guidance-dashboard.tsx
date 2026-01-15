@@ -79,6 +79,7 @@ interface TierValidation {
 interface EnhancedGuidanceData {
   sessionId: string;
   overview: string;
+  generatedAt?: string; // ISO timestamp when guidance was generated
   criticalAlerts: string[];
   immediateActions: ImmediateAction[];
   nextSteps: string[];
@@ -655,9 +656,23 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       <Card className="border-l-4 border-l-primary">
         <CardHeader>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <Scale className="h-5 w-5 text-muted-foreground" />
-              <CardTitle className="text-xl text-foreground">{t('legalGuidance.dashboard.title')}</CardTitle>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2">
+                <Scale className="h-5 w-5 text-muted-foreground" />
+                <CardTitle className="text-xl text-foreground">{t('legalGuidance.dashboard.title')}</CardTitle>
+              </div>
+              {guidance.generatedAt && (
+                <div className="text-xs text-muted-foreground flex items-center gap-1" data-testid="guidance-timestamp">
+                  <Clock className="h-3 w-3" />
+                  {t('legalGuidance.dashboard.generatedOn', 'Generated on')}: {new Date(guidance.generatedAt).toLocaleString(i18n.language === 'es' ? 'es-ES' : 'en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                  })}
+                </div>
+              )}
             </div>
             <div className="flex gap-2 flex-wrap md:flex-nowrap">
               <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">

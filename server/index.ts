@@ -32,6 +32,28 @@ app.use(helmet({
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Privacy-safe logging middleware - excludes sensitive data from logs
+const SENSITIVE_PATHS = ['/api/legal-guidance', '/api/guidance', '/api/chat', '/api/legal-case', '/api/session'];
+const SENSITIVE_FIELDS = ['incidentDescription', 'policeStatement', 'evidenceNotes', 'priorConvictions', 
+  'employmentStatus', 'familySituation', 'concernsQuestions', 'arrestLocation', 'arrestDate',
+  'guidance', 'response', 'content', 'message', 'details'];
+
+function sanitizeForLogging(obj: any): any {
+  if (!obj || typeof obj !== 'object') return obj;
+  
+  const sanitized: Record<string, any> = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (SENSITIVE_FIELDS.some(field => key.toLowerCase().includes(field.toLowerCase()))) {
+      sanitized[key] = '[REDACTED]';
+    } else if (typeof value === 'object' && value !== null) {
+      sanitized[key] = Array.isArray(value) ? '[Array]' : '[Object]';
+    } else {
+      sanitized[key] = value;
+    }
+  }
+  return sanitized;
+}
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -47,12 +69,16 @@ app.use((req, res, next) => {
     const duration = Date.now() - start;
     if (path.startsWith("/api")) {
       let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
-      if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+      
+      // NEVER log response bodies for sensitive endpoints - privacy protection
+      const isSensitivePath = SENSITIVE_PATHS.some(p => path.startsWith(p));
+      if (capturedJsonResponse && !isSensitivePath) {
+        const sanitized = sanitizeForLogging(capturedJsonResponse);
+        logLine += ` :: ${JSON.stringify(sanitized)}`;
       }
 
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
+      if (logLine.length > 120) {
+        logLine = logLine.slice(0, 119) + "…";
       }
 
       log(logLine);

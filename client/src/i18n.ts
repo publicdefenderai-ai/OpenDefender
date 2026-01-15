@@ -450,6 +450,7 @@ i18n
             },
             "dashboard": {
               "title": "Legal Guidance Dashboard",
+              "generatedOn": "Generated on",
               "hideDetails": "Hide Details",
               "showDetails": "Show Details",
               "close": "Close",
@@ -2958,6 +2959,7 @@ i18n
             },
             "dashboard": {
               "title": "Panel de Orientación Legal",
+              "generatedOn": "Generado el",
               "hideDetails": "Ocultar Detalles",
               "showDetails": "Mostrar Detalles",
               "close": "Cerrar",

@@ -8,7 +8,7 @@ import { bjsStatisticsService } from "./services/bjs-statistics";
 import { insertLegalCaseSchema, insertCaseFeedbackSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
-import { generateClaudeGuidance, testClaudeConnection } from "./services/claude-guidance.js";
+import { generateClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
@@ -532,10 +532,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidance,
       });
 
+      // Add generation timestamp to guidance for transparency
+      const guidanceWithTimestamp = {
+        ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
+        generatedAt: new Date().toISOString()
+      };
+
       res.json({ 
         success: true, 
         sessionId,
-        guidance: legalCase.guidance 
+        guidance: guidanceWithTimestamp
       });
     } catch (error) {
       console.error("Failed to generate legal guidance:", error);
@@ -553,9 +559,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(404).json({ success: false, error: "Session not found or expired" });
       }
 
+      // Add creation timestamp for transparency
+      const guidanceWithTimestamp = {
+        ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
+        generatedAt: legalCase.createdAt?.toISOString() || new Date().toISOString()
+      };
+
       res.json({ 
         success: true, 
-        guidance: legalCase.guidance,
+        guidance: guidanceWithTimestamp,
         case: legalCase 
       });
     } catch (error) {
@@ -689,6 +701,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Failed to get privacy consent stats:", error);
       res.status(500).json({ success: false, error: "Failed to get stats" });
+    }
+  });
+
+  // Session Data Cleanup - Delete all data for a session (privacy feature)
+  app.delete("/api/session/:sessionId", async (req, res) => {
+    try {
+      const { sessionId } = req.params;
+      
+      if (!sessionId || typeof sessionId !== 'string') {
+        return res.status(400).json({ success: false, error: "Valid session ID required" });
+      }
+      
+      // Delete session data from storage
+      await storage.deleteSessionData(sessionId);
+      
+      // Clear AI guidance cache (uses singleton already imported at top)
+      clearSessionCache(sessionId);
+      
+      res.json({ 
+        success: true, 
+        message: "Session data deleted",
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("Failed to delete session data:", error);
+      res.status(500).json({ success: false, error: "Failed to delete session data" });
     }
   });
 

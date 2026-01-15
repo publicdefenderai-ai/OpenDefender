@@ -19,15 +19,16 @@ const anthropic = new Anthropic({
   timeout: 90000, // 90 second timeout for the SDK - generous time for complex legal guidance
 });
 
-// Simple in-memory cache for identical requests (expires after 1 hour)
+// Simple in-memory cache for identical requests (expires after 15 minutes for privacy)
+// Shorter TTL reduces risk of data persistence while maintaining performance
 interface CacheEntry {
   response: ClaudeGuidance;
   timestamp: number;
 }
 const responseCache = new Map<string, CacheEntry>();
-const CACHE_TTL = 60 * 60 * 1000; // 1 hour in milliseconds
+const CACHE_TTL = 15 * 60 * 1000; // 15 minutes in milliseconds (privacy-focused)
 
-// Clean up expired cache entries periodically
+// Clean up expired cache entries periodically (every 5 minutes)
 setInterval(() => {
   const now = Date.now();
   const keysToDelete: string[] = [];
@@ -38,8 +39,25 @@ setInterval(() => {
     }
   });
   
-  keysToDelete.forEach(key => responseCache.delete(key));
-}, 10 * 60 * 1000); // Run cleanup every 10 minutes
+  if (keysToDelete.length > 0) {
+    keysToDelete.forEach(key => responseCache.delete(key));
+    console.log(`[Privacy] Cleared ${keysToDelete.length} expired cache entries`);
+  }
+}, 5 * 60 * 1000); // Run cleanup every 5 minutes
+
+// Function to clear cache for a specific session (call on session end)
+export function clearSessionCache(sessionId?: string): void {
+  if (!sessionId) {
+    responseCache.clear();
+    console.log('[Privacy] All guidance cache cleared');
+  } else {
+    // Clear entries that might contain this session's data
+    // Since cache keys are hashes, we clear all as a safety measure
+    const sizeBefore = responseCache.size;
+    responseCache.clear();
+    console.log(`[Privacy] Cleared ${sizeBefore} cache entries for session cleanup`);
+  }
+}
 
 interface CaseDetails {
   jurisdiction: string;
