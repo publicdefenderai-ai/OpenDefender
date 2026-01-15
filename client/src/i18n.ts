@@ -1484,7 +1484,7 @@ i18n
               "title": "Understanding Key Legal Processes",
               "subtitle": "Learn about important decisions you may face during your case. Click each section to expand and learn more.",
               "bail": {
-                "title": "Understanding Cash Bail",
+                "title": "Cash Bail",
                 "intro": "Bail is money held by the court to make sure you come back for your court dates. Here's what you need to know as a defendant.",
                 "whatIs": {
                   "title": "What is bail?",
@@ -1565,7 +1565,7 @@ i18n
                 }
               },
               "plea": {
-                "title": "Understanding Plea Bargains",
+                "title": "Plea Bargains",
                 "intro": "About 90-95% of criminal cases are resolved through plea bargains. Understanding this process helps you make informed decisions.",
                 "whatIs": {
                   "title": "What is a plea bargain?",
@@ -4173,7 +4173,7 @@ i18n
               "title": "Entendiendo Procesos Legales Clave",
               "subtitle": "Aprenda sobre decisiones importantes que puede enfrentar durante su caso. Haga clic en cada sección para expandir y aprender más.",
               "bail": {
-                "title": "Entendiendo la Fianza en Efectivo",
+                "title": "Fianza en Efectivo",
                 "intro": "La fianza es dinero que el tribunal retiene para asegurar que usted regrese a sus citas en la corte. Esto es lo que necesita saber como acusado.",
                 "whatIs": {
                   "title": "¿Qué es la fianza?",
@@ -4254,7 +4254,7 @@ i18n
                 }
               },
               "plea": {
-                "title": "Entendiendo los Acuerdos de Culpabilidad",
+                "title": "Acuerdos de Culpabilidad",
                 "intro": "Aproximadamente 90-95% de los casos criminales se resuelven mediante acuerdos de culpabilidad. Entender este proceso le ayuda a tomar decisiones informadas.",
                 "whatIs": {
                   "title": "¿Qué es un acuerdo de culpabilidad?",
