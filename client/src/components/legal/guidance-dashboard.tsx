@@ -44,6 +44,7 @@ import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
 import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
+import { CaseOutcomeStatistics } from "@/components/legal/case-outcome-statistics";
 
 interface ImmediateAction {
   action: string;
@@ -1110,6 +1111,14 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             </div>
           </CardContent>
         </Card>
+      )}
+
+      {/* Case Outcome Statistics - What Happens in Cases Like Yours */}
+      {guidance.caseData?.charges && (
+        <CaseOutcomeStatistics 
+          charges={guidance.caseData.charges}
+          jurisdiction={guidance.caseData?.jurisdiction}
+        />
       )}
 
       {/* Expandable Sections */}

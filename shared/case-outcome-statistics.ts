@@ -481,82 +481,107 @@ const CASE_OUTCOME_DATA: Record<string, CaseOutcomeStatistic> = {
   },
 };
 
-const CHARGE_TO_CATEGORY_MAP: Record<string, string> = {
-  'possession': 'drug_possession_simple',
-  'simple possession': 'drug_possession_simple',
-  'drug possession': 'drug_possession_simple',
-  'marijuana possession': 'drug_possession_simple',
-  'cannabis possession': 'drug_possession_simple',
-  'controlled substance': 'drug_possession_felony',
-  'possession with intent': 'drug_trafficking',
-  'distribution': 'drug_trafficking',
-  'trafficking': 'drug_trafficking',
-  'dui': 'dui_first',
-  'dwi': 'dui_first',
-  'driving under the influence': 'dui_first',
-  'driving while intoxicated': 'dui_first',
-  'owi': 'dui_first',
-  'oui': 'dui_first',
-  'assault': 'assault_simple',
-  'simple assault': 'assault_simple',
-  'battery': 'assault_simple',
-  'aggravated assault': 'assault_aggravated',
-  'assault with deadly weapon': 'assault_aggravated',
-  'felonious assault': 'assault_aggravated',
-  'domestic violence': 'domestic_violence',
-  'domestic assault': 'domestic_violence',
-  'domestic battery': 'domestic_violence',
-  'spousal abuse': 'domestic_violence',
-  'theft': 'theft_petty',
-  'petty theft': 'theft_petty',
-  'shoplifting': 'theft_petty',
-  'larceny': 'theft_petty',
-  'grand theft': 'theft_felony',
-  'grand larceny': 'theft_felony',
-  'felony theft': 'theft_felony',
-  'burglary': 'burglary',
-  'breaking and entering': 'burglary',
-  'robbery': 'robbery',
-  'armed robbery': 'robbery',
-  'fraud': 'fraud',
-  'forgery': 'fraud',
-  'identity theft': 'fraud',
-  'check fraud': 'fraud',
-  'weapons': 'weapons_possession',
-  'firearm possession': 'weapons_possession',
-  'unlawful possession of weapon': 'weapons_possession',
-  'concealed weapon': 'weapons_possession',
-  'trespassing': 'trespassing',
-  'criminal trespass': 'trespassing',
-  'disorderly conduct': 'disorderly_conduct',
-  'disturbing the peace': 'disorderly_conduct',
-  'public intoxication': 'disorderly_conduct',
-  'resisting arrest': 'resisting_arrest',
-  'obstruction': 'resisting_arrest',
-  'evading arrest': 'resisting_arrest',
-};
+interface ChargeMatcher {
+  pattern: RegExp;
+  category: string;
+  priority: number;
+}
+
+const CHARGE_MATCHERS: ChargeMatcher[] = [
+  { pattern: /\b(marijuana|cannabis|weed|pot)\s*(possession|poss\.?)\b/i, category: 'drug_possession_simple', priority: 100 },
+  { pattern: /\bpossession\s*(of\s*)?(marijuana|cannabis|weed)\b/i, category: 'drug_possession_simple', priority: 100 },
+  { pattern: /\b(simple\s+)?drug\s+possession\b/i, category: 'drug_possession_simple', priority: 90 },
+  { pattern: /\bpossession\s*(of\s*)?controlled\s+substance\b/i, category: 'drug_possession_felony', priority: 85 },
+  { pattern: /\bpossession\s+with\s+intent\b/i, category: 'drug_trafficking', priority: 95 },
+  { pattern: /\bdrug\s+(distribution|trafficking)\b/i, category: 'drug_trafficking', priority: 90 },
+  { pattern: /\b(distribution|trafficking)\s*(of\s*)?(drugs?|narcotics?|controlled)\b/i, category: 'drug_trafficking', priority: 90 },
+  
+  { pattern: /\b(firearm|gun|weapon)\s*possession\b/i, category: 'weapons_possession', priority: 100 },
+  { pattern: /\bpossession\s*(of\s*)?(a\s+)?(firearm|gun|weapon)\b/i, category: 'weapons_possession', priority: 100 },
+  { pattern: /\bunlawful\s+possession\s+of\s+weapon\b/i, category: 'weapons_possession', priority: 100 },
+  { pattern: /\bconcealed\s+(carry|weapon)\b/i, category: 'weapons_possession', priority: 95 },
+  { pattern: /\bcarrying\s+a\s+concealed\b/i, category: 'weapons_possession', priority: 95 },
+  
+  { pattern: /\bdui\b/i, category: 'dui_first', priority: 90 },
+  { pattern: /\bdwi\b/i, category: 'dui_first', priority: 90 },
+  { pattern: /\bdriving\s+(under|while)\s+(the\s+)?influence\b/i, category: 'dui_first', priority: 90 },
+  { pattern: /\bdriving\s+while\s+intoxicated\b/i, category: 'dui_first', priority: 90 },
+  { pattern: /\b(owi|oui)\b/i, category: 'dui_first', priority: 90 },
+  
+  { pattern: /\bdomestic\s+(violence|assault|battery)\b/i, category: 'domestic_violence', priority: 95 },
+  { pattern: /\bspousal\s+(abuse|assault)\b/i, category: 'domestic_violence', priority: 95 },
+  { pattern: /\bintimate\s+partner\s+violence\b/i, category: 'domestic_violence', priority: 95 },
+  
+  { pattern: /\baggravated\s+assault\b/i, category: 'assault_aggravated', priority: 95 },
+  { pattern: /\bassault\s+with\s+(a\s+)?deadly\s+weapon\b/i, category: 'assault_aggravated', priority: 95 },
+  { pattern: /\bfelonious\s+assault\b/i, category: 'assault_aggravated', priority: 95 },
+  { pattern: /\bsimple\s+assault\b/i, category: 'assault_simple', priority: 90 },
+  { pattern: /\b(assault|battery)\b/i, category: 'assault_simple', priority: 50 },
+  
+  { pattern: /\bgrand\s+(theft|larceny)\b/i, category: 'theft_felony', priority: 95 },
+  { pattern: /\bfelony\s+theft\b/i, category: 'theft_felony', priority: 95 },
+  { pattern: /\bpetty\s+theft\b/i, category: 'theft_petty', priority: 90 },
+  { pattern: /\bshoplifting\b/i, category: 'theft_petty', priority: 90 },
+  { pattern: /\b(theft|larceny)\b/i, category: 'theft_petty', priority: 40 },
+  
+  { pattern: /\bburglary\b/i, category: 'burglary', priority: 85 },
+  { pattern: /\bbreaking\s+and\s+entering\b/i, category: 'burglary', priority: 85 },
+  
+  { pattern: /\barmed\s+robbery\b/i, category: 'robbery', priority: 95 },
+  { pattern: /\brobbery\b/i, category: 'robbery', priority: 85 },
+  
+  { pattern: /\bidentity\s+theft\b/i, category: 'fraud', priority: 90 },
+  { pattern: /\bcheck\s+fraud\b/i, category: 'fraud', priority: 90 },
+  { pattern: /\b(fraud|forgery)\b/i, category: 'fraud', priority: 75 },
+  
+  { pattern: /\bcriminal\s+trespass(ing)?\b/i, category: 'trespassing', priority: 90 },
+  { pattern: /\btrespass(ing)?\b/i, category: 'trespassing', priority: 80 },
+  
+  { pattern: /\bdisorderly\s+conduct\b/i, category: 'disorderly_conduct', priority: 90 },
+  { pattern: /\bdisturbing\s+the\s+peace\b/i, category: 'disorderly_conduct', priority: 90 },
+  { pattern: /\bpublic\s+intoxication\b/i, category: 'disorderly_conduct', priority: 85 },
+  
+  { pattern: /\bresisting\s+arrest\b/i, category: 'resisting_arrest', priority: 90 },
+  { pattern: /\bevading\s+arrest\b/i, category: 'resisting_arrest', priority: 90 },
+  { pattern: /\bobstruction\s+(of\s+)?(justice|officer)\b/i, category: 'resisting_arrest', priority: 85 },
+];
 
 export function mapChargeToCategory(charge: string): string | null {
-  const lowerCharge = charge.toLowerCase().trim();
+  const chargeText = charge.trim();
   
-  if (CHARGE_TO_CATEGORY_MAP[lowerCharge]) {
-    return CHARGE_TO_CATEGORY_MAP[lowerCharge];
+  if (!chargeText) {
+    return null;
   }
   
-  for (const [pattern, category] of Object.entries(CHARGE_TO_CATEGORY_MAP)) {
-    if (lowerCharge.includes(pattern)) {
-      return category;
+  let bestMatch: { category: string; priority: number } | null = null;
+  
+  for (const matcher of CHARGE_MATCHERS) {
+    if (matcher.pattern.test(chargeText)) {
+      if (!bestMatch || matcher.priority > bestMatch.priority) {
+        bestMatch = { category: matcher.category, priority: matcher.priority };
+      }
     }
   }
   
-  return null;
+  return bestMatch?.category || null;
+}
+
+function normalizeCharges(charges: string | string[]): string[] {
+  if (Array.isArray(charges)) {
+    return charges.map(c => c.trim()).filter(c => c.length > 0);
+  }
+  
+  return charges
+    .split(/[,;]|\band\b/i)
+    .map(c => c.trim())
+    .filter(c => c.length > 0);
 }
 
 export function getCaseOutcomeStatistics(
   charges: string | string[],
   jurisdiction?: string
 ): CaseOutcomeStatistic[] {
-  const chargeList = Array.isArray(charges) ? charges : [charges];
+  const chargeList = normalizeCharges(charges);
   const results: CaseOutcomeStatistic[] = [];
   const seenCategories = new Set<string>();
   
