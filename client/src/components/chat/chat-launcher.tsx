@@ -40,8 +40,9 @@ export function ChatLauncher() {
             size="icon"
             className="relative h-14 w-14 rounded-full glass-fab text-white"
             data-testid="button-open-chat"
+            aria-label={t('chat.openChat')}
           >
-            <MessageSquare className="h-5 w-5" />
+            <MessageSquare className="h-5 w-5" aria-hidden="true" />
             
             {state.hasUnsavedGuidance && (
               <span className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-background" />

@@ -126,43 +126,43 @@
 
 @layer components {
   .legal-blue {
-    @apply bg-[hsl(var(--legal-blue))] text-white;
+    @apply bg-[var(--legal-blue)] text-white;
   }
   
   .legal-blue-hover {
-    @apply hover:bg-[hsl(var(--legal-blue-dark))];
+    @apply hover:bg-[var(--legal-blue-dark)];
   }
   
   .success-green {
-    @apply bg-[hsl(var(--success-green))] text-white;
+    @apply bg-[var(--success-green)] text-white;
   }
   
   .success-green-hover {
-    @apply hover:bg-[hsl(var(--success-green-dark))];
+    @apply hover:bg-[var(--success-green-dark)];
   }
   
   .urgent-red {
-    @apply bg-[hsl(var(--urgent-red))] text-white;
+    @apply bg-[var(--urgent-red)] text-white;
   }
   
   .urgent-red-hover {
-    @apply hover:bg-[hsl(var(--urgent-red-dark))];
+    @apply hover:bg-[var(--urgent-red-dark)];
   }
   
   .text-neutral-dark {
-    @apply text-[hsl(var(--neutral-dark))];
+    @apply text-[var(--neutral-dark)];
   }
   
   .text-neutral-medium {
-    @apply text-[hsl(var(--neutral-medium))];
+    @apply text-[var(--neutral-medium)];
   }
   
   .bg-neutral-light {
-    @apply bg-[hsl(var(--neutral-light))];
+    @apply bg-[var(--neutral-light)];
   }
   
   .gradient-hero {
-    @apply bg-gradient-to-br from-[hsl(var(--legal-blue))] to-[hsl(var(--legal-blue-dark))];
+    @apply bg-gradient-to-br from-[var(--legal-blue)] to-[var(--legal-blue-dark)];
   }
   
   .scroll-reveal {

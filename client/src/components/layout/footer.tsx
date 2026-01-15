@@ -272,7 +272,7 @@ export function Footer() {
               </div>
               <span className="font-bold text-lg">Public Defender AI</span>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-200 text-sm mb-4">
               {t('footer.tagline')}
             </p>
             <div className="flex space-x-3">
@@ -280,10 +280,11 @@ export function Footer() {
                 href="https://github.com/shahabasghar/PublicDefenderAI" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-200 hover:text-white transition-colors"
                 data-testid="link-github"
+                aria-label="Public Defender AI on GitHub"
               >
-                <Github className="h-4 w-4" />
+                <Github className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -291,7 +292,7 @@ export function Footer() {
           {/* Legal Resources */}
           <div>
             <h4 className="font-semibold mb-4">{t('footer.legalResources')}</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-200">
               <li>
                 <Link href="/rights-info" className="hover:text-white transition-colors">
                   {t('footer.knowYourRights')}
@@ -328,7 +329,7 @@ export function Footer() {
           {/* Get Help */}
           <div>
             <h4 className="font-semibold mb-4">{t('footer.getHelp')}</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-200">
               <li>
                 <Link href="/case-guidance" className="hover:text-white transition-colors">
                   {t('footer.getCaseGuidance')}
@@ -373,7 +374,7 @@ export function Footer() {
           {/* About */}
           <div>
             <h4 className="font-semibold mb-4">{t('footer.about')}</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-200">
               <li>
                 <Link href="/mission-statement" className="hover:text-white transition-colors">
                   {t('footer.ourMission')}
@@ -412,19 +413,19 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
+          <p className="text-gray-200 text-sm mb-4 md:mb-0">
             {t('footer.copyright')}
           </p>
-          <div className="flex space-x-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition-colors">
+          <div className="flex space-x-6 text-sm text-gray-200">
+            <span className="cursor-default">
               Accessibility
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </span>
+            <span className="cursor-default">
               Contact
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </span>
+            <span className="cursor-default">
               Feedback
-            </a>
+            </span>
           </div>
         </div>
       </div>
