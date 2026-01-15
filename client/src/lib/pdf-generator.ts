@@ -1,6 +1,8 @@
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
+import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { getOutcomeStatisticsForDisplay, type CaseOutcomeStatistic } from "@shared/case-outcome-statistics";
 
 interface ImmediateAction {
   action: string;
@@ -66,6 +68,142 @@ const formatChargeName = (name: string): string => {
     .join(' ');
 };
 
+// Document titles and descriptions for PDF export (hardcoded to avoid i18n dependency)
+const DOCUMENT_LABELS: Record<string, { en: { title: string; description: string }; es: { title: string; description: string } }> = {
+  'citation-ticket': {
+    en: { title: 'Citation / Ticket', description: 'Official document showing charges and court date' },
+    es: { title: 'Citación / Multa', description: 'Documento oficial mostrando cargos y fecha de corte' }
+  },
+  'arrest-warrant': {
+    en: { title: 'Arrest Warrant', description: 'Court order authorizing your arrest' },
+    es: { title: 'Orden de Arresto', description: 'Orden judicial autorizando su arresto' }
+  },
+  'property-voucher': {
+    en: { title: 'Property Voucher', description: 'Receipt for items taken during arrest' },
+    es: { title: 'Comprobante de Propiedad', description: 'Recibo de artículos tomados durante el arresto' }
+  },
+  'booking-papers': {
+    en: { title: 'Booking Papers', description: 'Processing documents from jail intake' },
+    es: { title: 'Documentos de Registro', description: 'Documentos de procesamiento de ingreso a cárcel' }
+  },
+  'miranda-acknowledgment': {
+    en: { title: 'Miranda Acknowledgment', description: 'Form showing you were read your rights' },
+    es: { title: 'Reconocimiento Miranda', description: 'Formulario mostrando que le leyeron sus derechos' }
+  },
+  'complaint-information': {
+    en: { title: 'Criminal Complaint', description: 'Formal charging document filed by prosecutor' },
+    es: { title: 'Denuncia Criminal', description: 'Documento formal de cargos presentado por fiscal' }
+  },
+  'bail-bond': {
+    en: { title: 'Bail Bond Documents', description: 'Paperwork related to your release conditions' },
+    es: { title: 'Documentos de Fianza', description: 'Papeles relacionados con sus condiciones de libertad' }
+  },
+  'arraignment-minutes': {
+    en: { title: 'Arraignment Minutes', description: 'Record of your first court appearance' },
+    es: { title: 'Acta de Lectura de Cargos', description: 'Registro de su primera comparecencia' }
+  },
+  'discovery-materials': {
+    en: { title: 'Discovery Materials', description: 'Evidence the prosecution plans to use' },
+    es: { title: 'Materiales de Descubrimiento', description: 'Evidencia que la fiscalía planea usar' }
+  },
+  'motion-papers': {
+    en: { title: 'Motion Papers', description: 'Legal requests filed with the court' },
+    es: { title: 'Documentos de Moción', description: 'Solicitudes legales presentadas al tribunal' }
+  },
+  'plea-agreement': {
+    en: { title: 'Plea Agreement', description: 'Written deal with the prosecutor' },
+    es: { title: 'Acuerdo de Culpabilidad', description: 'Trato escrito con el fiscal' }
+  },
+  'pretrial-order': {
+    en: { title: 'Pretrial Order', description: 'Court rules for before trial' },
+    es: { title: 'Orden Prejuicio', description: 'Reglas del tribunal antes del juicio' }
+  },
+  'jury-instructions': {
+    en: { title: 'Jury Instructions', description: 'Rules given to jury about the law' },
+    es: { title: 'Instrucciones al Jurado', description: 'Reglas dadas al jurado sobre la ley' }
+  },
+  'verdict-form': {
+    en: { title: 'Verdict Form', description: 'Document recording jury decision' },
+    es: { title: 'Formulario de Veredicto', description: 'Documento registrando decisión del jurado' }
+  },
+  'sentencing-order': {
+    en: { title: 'Sentencing Order', description: 'Official record of your sentence' },
+    es: { title: 'Orden de Sentencia', description: 'Registro oficial de su sentencia' }
+  },
+  'criminal-complaint': {
+    en: { title: 'Criminal Complaint', description: 'Formal document listing charges against you' },
+    es: { title: 'Denuncia Criminal', description: 'Documento formal listando cargos en su contra' }
+  },
+  'arraignment-notice': {
+    en: { title: 'Arraignment Notice', description: 'Notice of your first court appearance' },
+    es: { title: 'Aviso de Lectura de Cargos', description: 'Aviso de su primera comparecencia' }
+  },
+  'bail-bond-order': {
+    en: { title: 'Bail Bond Order', description: 'Court order setting your bail conditions' },
+    es: { title: 'Orden de Fianza', description: 'Orden del tribunal estableciendo condiciones de fianza' }
+  },
+  'discovery-documents': {
+    en: { title: 'Discovery Documents', description: 'Evidence and information from prosecution' },
+    es: { title: 'Documentos de Descubrimiento', description: 'Evidencia e información de la fiscalía' }
+  },
+  'plea-offer': {
+    en: { title: 'Plea Offer', description: 'Written deal offered by the prosecutor' },
+    es: { title: 'Oferta de Declaración', description: 'Trato escrito ofrecido por el fiscal' }
+  },
+  'subpoena': {
+    en: { title: 'Subpoena', description: 'Court order requiring testimony or documents' },
+    es: { title: 'Citación Judicial', description: 'Orden del tribunal requiriendo testimonio o documentos' }
+  },
+  'notice-to-appear-i862': {
+    en: { title: 'Notice to Appear (I-862)', description: 'Immigration court charging document' },
+    es: { title: 'Aviso de Comparecencia (I-862)', description: 'Documento de cargos de corte de inmigración' }
+  },
+  'record-deportable-alien-i213': {
+    en: { title: 'Record of Deportable Alien (I-213)', description: 'ICE arrest and processing form' },
+    es: { title: 'Registro de Extranjero Deportable (I-213)', description: 'Formulario de arresto y procesamiento de ICE' }
+  },
+  'bond-hearing-notice': {
+    en: { title: 'Bond Hearing Notice', description: 'Notice of immigration bond hearing' },
+    es: { title: 'Aviso de Audiencia de Fianza', description: 'Aviso de audiencia de fianza de inmigración' }
+  },
+  'warrant-of-removal-i205': {
+    en: { title: 'Warrant of Removal (I-205)', description: 'Deportation order from immigration court' },
+    es: { title: 'Orden de Deportación (I-205)', description: 'Orden de deportación del tribunal de inmigración' }
+  },
+  'order-of-supervision-i220b': {
+    en: { title: 'Order of Supervision (I-220B)', description: 'Release conditions from ICE custody' },
+    es: { title: 'Orden de Supervisión (I-220B)', description: 'Condiciones de liberación de custodia de ICE' }
+  },
+  'expedited-removal-i860': {
+    en: { title: 'Expedited Removal (I-860)', description: 'Fast-track deportation order' },
+    es: { title: 'Deportación Acelerada (I-860)', description: 'Orden de deportación acelerada' }
+  },
+};
+
+function getDocumentTitle(docId: string, isSpanish: boolean): string {
+  const labels = DOCUMENT_LABELS[docId];
+  if (!labels) return docId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  return isSpanish ? labels.es.title : labels.en.title;
+}
+
+function getDocumentDescription(docId: string, isSpanish: boolean): string {
+  const labels = DOCUMENT_LABELS[docId];
+  if (!labels) return '';
+  return isSpanish ? labels.es.description : labels.en.description;
+}
+
+function formatSentenceLength(months: number): string {
+  if (months === 0) return 'No jail time';
+  if (months < 1) return 'Fine only';
+  if (months < 12) return `${months} months`;
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+  if (remainingMonths === 0) {
+    return years === 1 ? '1 year' : `${years} years`;
+  }
+  return `${years}y ${remainingMonths}m`;
+}
+
 /**
  * Generates a PDF document from legal guidance data.
  * All processing happens client-side - no data is sent to external servers.
@@ -130,6 +268,25 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     misdemeanorFallback: 'Este es un cargo de delito menor, que generalmente es menos grave que un delito mayor. Los delitos menores aún pueden resultar en tiempo en la cárcel, multas y antecedentes penales. Su abogado puede explicar lo que la fiscalía necesita probar.',
     howDegreesDiffer: 'Cómo difieren los grados:',
     example: 'Ejemplo:',
+    documentsYouNeed: 'Documentos que Debería Tener',
+    documentsSubtitle: 'Estos documentos son importantes para su etapa actual del proceso legal.',
+    documentName: 'Documento',
+    documentDescription: 'Para Qué Sirve',
+    caseOutcomes: 'Lo que Sucede en Casos Como el Suyo',
+    caseOutcomesSubtitle: 'Basado en casos similares. Cada caso es único. Estos son promedios, no predicciones.',
+    howCasesResolve: 'Cómo se Resuelven los Casos',
+    ifConvicted: 'Si se Condena',
+    dismissed: 'Desestimado',
+    pleaDeal: 'Acuerdo de Culpabilidad',
+    trialConviction: 'Juicio - Condena',
+    trialAcquittal: 'Juicio - Absolución',
+    probationOnly: 'Solo Probatoria',
+    incarceration: 'Encarcelamiento',
+    splitSentence: 'Sentencia Dividida',
+    avgSentence: 'Sentencia Promedio',
+    diversionEligibility: 'Elegibilidad para Programa de Desvío',
+    source: 'Fuente',
+    cases: 'casos',
   } : {
     title: 'Your Legal Help Guide',
     generated: 'Generated',
@@ -179,6 +336,25 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     misdemeanorFallback: 'This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.',
     howDegreesDiffer: 'How degrees differ:',
     example: 'Example:',
+    documentsYouNeed: 'Documents You Should Have',
+    documentsSubtitle: 'These documents are important for your current stage in the legal process.',
+    documentName: 'Document',
+    documentDescription: 'What It\'s For',
+    caseOutcomes: 'What Happens in Cases Like Yours',
+    caseOutcomesSubtitle: 'Based on similar cases. Every case is unique. These are averages, not predictions.',
+    howCasesResolve: 'How Cases Resolve',
+    ifConvicted: 'If Convicted',
+    dismissed: 'Dismissed',
+    pleaDeal: 'Plea Deal',
+    trialConviction: 'Trial - Conviction',
+    trialAcquittal: 'Trial - Acquittal',
+    probationOnly: 'Probation Only',
+    incarceration: 'Incarceration',
+    splitSentence: 'Split Sentence',
+    avgSentence: 'Avg. Sentence',
+    diversionEligibility: 'Diversion Program Eligibility',
+    source: 'Source',
+    cases: 'cases',
   };
 
   // Helper function to add text with word wrap
@@ -451,6 +627,45 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition = (doc as any).lastAutoTable.finalY + 10;
   }
 
+  // Documents You Should Have
+  const phase = mapCaseStageToPhase(guidance.caseData.caseStage);
+  const legalDocuments = getDocumentsForPhase(phase, 'criminal');
+  if (legalDocuments.length > 0) {
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0, 100, 200);
+    doc.text(labels.documentsYouNeed, margin, yPosition);
+    yPosition += 6;
+
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(100, 100, 100);
+    yPosition = addText(labels.documentsSubtitle, margin, yPosition);
+    yPosition += 8;
+
+    const documentData = legalDocuments.map(legalDoc => [
+      getDocumentTitle(legalDoc.id, isSpanish),
+      getDocumentDescription(legalDoc.id, isSpanish)
+    ]);
+
+    autoTable(doc, {
+      startY: yPosition,
+      head: [[labels.documentName, labels.documentDescription]],
+      body: documentData,
+      theme: 'striped',
+      headStyles: { fillColor: [41, 128, 185] },
+      margin: { left: margin, right: margin },
+      styles: { fontSize: 9 },
+      columnStyles: {
+        0: { cellWidth: 50 },
+        1: { cellWidth: 'auto' }
+      }
+    });
+
+    yPosition = (doc as any).lastAutoTable.finalY + 10;
+  }
+
   // Your Rights
   if (guidance.rights.length > 0) {
     checkPageBreak(30);
@@ -490,6 +705,83 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       yPosition += 3;
     });
     yPosition += 5;
+  }
+
+  // Case Outcome Statistics - What Happens in Cases Like Yours
+  const { statistics: outcomeStats, disclaimer: statsDisclaimer } = getOutcomeStatisticsForDisplay(
+    guidance.caseData.charges,
+    guidance.caseData.jurisdiction
+  );
+  if (outcomeStats.length > 0) {
+    checkPageBreak(60);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0, 100, 200);
+    doc.text(labels.caseOutcomes, margin, yPosition);
+    yPosition += 6;
+
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(150, 100, 0);
+    yPosition = addText(statsDisclaimer, margin, yPosition);
+    yPosition += 8;
+
+    outcomeStats.forEach((stat, statIdx) => {
+      checkPageBreak(50);
+      
+      doc.setFontSize(11);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(0, 0, 0);
+      const statHeader = `${stat.chargeCategoryDisplay} (${stat.sampleSize.toLocaleString()} ${labels.cases})`;
+      doc.text(statHeader, margin, yPosition);
+      yPosition += 8;
+
+      const outcomeData = [
+        [labels.howCasesResolve, ''],
+        [labels.dismissed, `${stat.outcomes.dismissal}%`],
+        [labels.pleaDeal, `${stat.outcomes.pleaBargain}%`],
+        [labels.trialConviction, `${stat.outcomes.trialConviction}%`],
+        [labels.trialAcquittal, `${stat.outcomes.trialAcquittal}%`],
+        ['', ''],
+        [labels.ifConvicted, ''],
+        [labels.probationOnly, `${stat.sentencingIfConvicted.probationOnly}%`],
+        [labels.incarceration, `${stat.sentencingIfConvicted.incarceration}%`],
+        [labels.splitSentence, `${stat.sentencingIfConvicted.splitSentence}%`],
+        [labels.avgSentence, formatSentenceLength(stat.sentencingIfConvicted.avgSentenceMonths)],
+      ];
+
+      if (stat.diversionEligibility > 0) {
+        outcomeData.push([labels.diversionEligibility, `${stat.diversionEligibility}%`]);
+      }
+
+      autoTable(doc, {
+        startY: yPosition,
+        head: [],
+        body: outcomeData,
+        theme: 'plain',
+        margin: { left: margin + 5, right: margin },
+        styles: { fontSize: 9 },
+        columnStyles: {
+          0: { cellWidth: 60, fontStyle: 'normal' },
+          1: { cellWidth: 40, halign: 'right', fontStyle: 'bold' }
+        },
+        didParseCell: (data: any) => {
+          if (data.row.index === 0 || data.row.index === 6) {
+            data.cell.styles.fontStyle = 'bold';
+            data.cell.styles.fillColor = [240, 240, 240];
+          }
+        }
+      });
+
+      yPosition = (doc as any).lastAutoTable.finalY + 5;
+
+      doc.setFontSize(8);
+      doc.setFont('helvetica', 'italic');
+      doc.setTextColor(100, 100, 100);
+      doc.text(`${labels.source}: ${stat.source}`, margin + 5, yPosition);
+      yPosition += 10;
+      doc.setTextColor(0, 0, 0);
+    });
   }
 
   // Evidence to Gather
