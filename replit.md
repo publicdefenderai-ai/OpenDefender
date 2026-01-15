@@ -87,3 +87,9 @@ Session-based authentication with PostgreSQL session storage is configured for a
 | Federal Statutes | Complete | GovInfo API (Title 18 USC) |
 | Diversion Programs | 73 | Major U.S. metros |
 | Legal Aid Orgs | 153 | Public defenders, immigration, civil |
+
+## Future Enhancements
+
+### Planned Features
+- **Accessibility Statement Page**: Create a dedicated page describing WCAG 2.1 AA compliance, accessibility features (keyboard navigation, screen reader support, bilingual aria-labels), and how users can report accessibility issues
+- **Heading Order Optimization**: Minor accessibility improvement to ensure proper heading hierarchy across all pages
