@@ -7,20 +7,30 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
 import { generateStatuteCitation, getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
   onCancel: () => void;
+  onFindLawyer?: () => void;
 }
 
-export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
+export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
+  const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
+  const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
   const [formData, setFormData] = useState({
     jurisdiction: "",
     charges: [] as string[],
@@ -57,9 +67,37 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
+      const movingToAdditionalDetails = currentStep === 3;
+      const userHasNoAttorney = !formData.hasAttorney;
+      
+      if (movingToAdditionalDetails && userHasNoAttorney && !privilegeWarningAcknowledged) {
+        setShowPrivilegeWarning(true);
+        return;
+      }
       setCurrentStep(currentStep + 1);
     } else {
       onComplete(formData);
+    }
+  };
+
+  const handlePrivilegeWarningContinue = () => {
+    setPrivilegeWarningAcknowledged(true);
+    setShowPrivilegeWarning(false);
+    setCurrentStep(4);
+  };
+
+  const handleSkipAndGetGuidance = () => {
+    setPrivilegeWarningAcknowledged(true);
+    setShowPrivilegeWarning(false);
+    updateFormData("incidentDescription", "");
+    updateFormData("concernsQuestions", "");
+    onComplete(formData);
+  };
+
+  const handleFindLawyer = () => {
+    setShowPrivilegeWarning(false);
+    if (onFindLawyer) {
+      onFindLawyer();
     }
   };
 
@@ -137,6 +175,51 @@ export function QAFlow({ onComplete, onCancel }: QAFlowProps) {
           </p>
         </div>
       </CardContent>
+
+      {/* Privilege Warning Dialog */}
+      <Dialog open={showPrivilegeWarning} onOpenChange={setShowPrivilegeWarning}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 text-amber-600">
+              <AlertTriangle className="h-5 w-5" />
+              {t('legalGuidance.qaFlow.privilegeWarning.title')}
+            </DialogTitle>
+            <DialogDescription className="pt-4 space-y-4">
+              <p>
+                {t('legalGuidance.qaFlow.privilegeWarning.notPrivate')}
+              </p>
+              <p>
+                {t('legalGuidance.qaFlow.privilegeWarning.recommendation')}
+              </p>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col gap-3 mt-4">
+            <Button
+              onClick={handlePrivilegeWarningContinue}
+              variant="outline"
+              data-testid="button-privilege-continue"
+            >
+              {t('legalGuidance.qaFlow.privilegeWarning.continueAnyway')}
+            </Button>
+            <Button
+              onClick={handleSkipAndGetGuidance}
+              className="bg-blue-600 hover:bg-blue-700"
+              data-testid="button-privilege-skip"
+            >
+              {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance')}
+            </Button>
+            {onFindLawyer && (
+              <Button
+                onClick={handleFindLawyer}
+                variant="secondary"
+                data-testid="button-privilege-find-lawyer"
+              >
+                {t('legalGuidance.qaFlow.privilegeWarning.findLawyer')}
+              </Button>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </Card>
   );
 }

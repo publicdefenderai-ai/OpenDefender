@@ -543,6 +543,10 @@ export default function CaseGuidance() {
           <QAFlow 
             onComplete={handleQAComplete}
             onCancel={() => setShowQAFlow(false)}
+            onFindLawyer={() => {
+              setShowQAFlow(false);
+              setShowPublicDefenderModal(true);
+            }}
           />
         </main>
         <Footer />

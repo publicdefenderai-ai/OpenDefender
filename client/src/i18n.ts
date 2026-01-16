@@ -446,6 +446,14 @@ i18n
                 "concernsLabel": "What are you most worried about? Any specific questions?",
                 "concernsPlaceholder": "Example: I'm worried about losing my job. I have kids and can't afford a lawyer. When do I have to go to court?",
                 "back": "Back"
+              },
+              "privilegeWarning": {
+                "title": "Before You Share Details",
+                "notPrivate": "Unlike talking to a lawyer, what you type here is not private and could be used against you if you're ever asked about it in court.",
+                "recommendation": "We recommend speaking with a lawyer first. This step is optional—skip it to still receive general guidance.",
+                "continueAnyway": "Continue Anyway",
+                "skipAndGetGuidance": "Skip & Get General Guidance",
+                "findLawyer": "Help Me Find a Lawyer"
               }
             },
             "dashboard": {
@@ -3136,6 +3144,14 @@ i18n
                 "concernsLabel": "¿Qué es lo que más le preocupa? ¿Alguna pregunta específica?",
                 "concernsPlaceholder": "Ejemplo: Me preocupa perder mi trabajo. Tengo hijos y no puedo pagar un abogado. ¿Cuándo tengo que ir a la corte?",
                 "back": "Volver"
+              },
+              "privilegeWarning": {
+                "title": "Antes de Compartir Detalles",
+                "notPrivate": "A diferencia de hablar con un abogado, lo que escriba aquí no es privado y podría usarse en su contra si alguna vez se le pregunta en la corte.",
+                "recommendation": "Recomendamos hablar primero con un abogado. Este paso es opcional—omítalo para recibir orientación general.",
+                "continueAnyway": "Continuar de Todos Modos",
+                "skipAndGetGuidance": "Omitir y Obtener Orientación General",
+                "findLawyer": "Ayúdeme a Encontrar un Abogado"
               }
             },
             "dashboard": {
