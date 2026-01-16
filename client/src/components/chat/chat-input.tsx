@@ -12,6 +12,7 @@ interface ChatInputProps {
   placeholder?: string;
   isLocked?: boolean;
   lockMessage?: string;
+  onInputChange?: (value: string) => void;
 }
 
 export function ChatInput({ 
@@ -19,7 +20,8 @@ export function ChatInput({
   disabled = false, 
   placeholder,
   isLocked = false,
-  lockMessage 
+  lockMessage,
+  onInputChange
 }: ChatInputProps) {
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
@@ -68,7 +70,10 @@ export function ChatInput({
         <Textarea
           ref={textareaRef}
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => {
+            setMessage(e.target.value);
+            onInputChange?.(e.target.value);
+          }}
           onKeyDown={handleKeyDown}
           placeholder={placeholder || t('chat.input.placeholder', 'Type your message...')}
           disabled={disabled}

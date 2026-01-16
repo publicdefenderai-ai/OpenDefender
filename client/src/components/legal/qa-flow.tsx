@@ -67,13 +67,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
-      const movingToAdditionalDetails = currentStep === 3;
-      const userHasNoAttorney = !formData.hasAttorney;
-      
-      if (movingToAdditionalDetails && userHasNoAttorney && !privilegeWarningAcknowledged) {
-        setShowPrivilegeWarning(true);
-        return;
-      }
       setCurrentStep(currentStep + 1);
     } else {
       onComplete(formData);
@@ -83,7 +76,12 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
   const handlePrivilegeWarningContinue = () => {
     setPrivilegeWarningAcknowledged(true);
     setShowPrivilegeWarning(false);
-    setCurrentStep(4);
+  };
+
+  const handleTextareaFocus = () => {
+    if (!formData.hasAttorney && !privilegeWarningAcknowledged) {
+      setShowPrivilegeWarning(true);
+    }
   };
 
   const handleSkipAndGetGuidance = () => {
@@ -92,13 +90,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
     updateFormData("incidentDescription", "");
     updateFormData("concernsQuestions", "");
     onComplete(formData);
-  };
-
-  const handleFindLawyer = () => {
-    setShowPrivilegeWarning(false);
-    if (onFindLawyer) {
-      onFindLawyer();
-    }
   };
 
   const prevStep = () => {
@@ -163,6 +154,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
               onPrev={prevStep}
               isFirst={currentStep === 0}
               isLast={currentStep === steps.length - 1}
+              onTextareaFocus={handleTextareaFocus}
             />
           </motion.div>
         </AnimatePresence>
@@ -208,15 +200,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
             >
               {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance')}
             </Button>
-            {onFindLawyer && (
-              <Button
-                onClick={handleFindLawyer}
-                variant="secondary"
-                data-testid="button-privilege-find-lawyer"
-              >
-                {t('legalGuidance.qaFlow.privilegeWarning.findLawyer')}
-              </Button>
-            )}
           </div>
         </DialogContent>
       </Dialog>
@@ -818,7 +801,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
   );
 }
 
-function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus }: any) {
   const { t } = useTranslation();
   
   return (
@@ -841,6 +824,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
               id="incidentDescription"
               value={formData.incidentDescription || ""}
               onChange={(e) => updateFormData("incidentDescription", e.target.value)}
+              onFocus={onTextareaFocus}
               placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
               rows={4}
               className="mt-2"
@@ -856,6 +840,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
               id="concernsQuestions"
               value={formData.concernsQuestions || ""}
               onChange={(e) => updateFormData("concernsQuestions", e.target.value)}
+              onFocus={onTextareaFocus}
               placeholder={t('legalGuidance.qaFlow.additionalDetails.concernsPlaceholder')}
               rows={4}
               className="mt-2"

@@ -80,6 +80,7 @@ export default function ChatPage() {
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
   const [showExportWarning, setShowExportWarning] = useState(false);
   const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
+  const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
 
   const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
     state.messages,
@@ -505,12 +506,8 @@ export default function ChatPage() {
 
       case 'attorney_status':
         actions.updateCaseInfo({ hasAttorney: reply.value === 'yes' });
-        if (reply.value === 'no') {
-          setShowPrivilegeWarning(true);
-        } else {
-          addBotMessageWithKey('chat.messages.descriptionPrompt');
-          actions.setCurrentStep('incident_description');
-        }
+        addBotMessageWithKey('chat.messages.descriptionPrompt');
+        actions.setCurrentStep('incident_description');
         break;
 
       default:
@@ -832,10 +829,9 @@ export default function ChatPage() {
   }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessageWithKey]);
 
   const handlePrivilegeContinue = useCallback(() => {
+    setPrivilegeWarningAcknowledged(true);
     setShowPrivilegeWarning(false);
-    addBotMessageWithKey('chat.messages.descriptionPrompt');
-    actions.setCurrentStep('incident_description');
-  }, [actions, addBotMessageWithKey]);
+  }, []);
 
   const handlePrivilegeSkip = useCallback(async () => {
     setShowPrivilegeWarning(false);
@@ -876,11 +872,14 @@ export default function ChatPage() {
     }
   }, [state.caseInfo, actions, addBotMessageWithKey, i18n.language]);
 
-  const handlePrivilegeFindLawyer = useCallback(() => {
-    setShowPrivilegeWarning(false);
-    addBotMessageWithKey('chat.messages.enterZipPD');
-    actions.setCurrentStep('pd_zip_search');
-  }, [actions, addBotMessageWithKey]);
+  const handleChatInputChange = useCallback((value: string) => {
+    if (state.currentStep === 'incident_description' && 
+        !state.caseInfo.hasAttorney && 
+        !privilegeWarningAcknowledged && 
+        value.length > 0) {
+      setShowPrivilegeWarning(true);
+    }
+  }, [state.currentStep, state.caseInfo.hasAttorney, privilegeWarningAcknowledged]);
 
   const canUseFreeText = state.currentStep === 'incident_description' || 
                           state.currentStep === 'concerns_question' ||
@@ -1061,6 +1060,7 @@ export default function ChatPage() {
                   ? t('chat.input.zipPlaceholder', 'Enter your 5-digit ZIP code...')
                   : t('chat.input.placeholder', 'Ask a follow-up question...')
                 }
+                onInputChange={handleChatInputChange}
               />
               <p className="text-xs text-muted-foreground text-center mt-3">
                 {t('chat.footer.privacy', 'Your data is encrypted and deleted after this session')}
@@ -1150,13 +1150,6 @@ export default function ChatPage() {
               data-testid="button-chat-privilege-skip"
             >
               {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance', 'Skip & Get General Guidance')}
-            </Button>
-            <Button
-              onClick={handlePrivilegeFindLawyer}
-              variant="secondary"
-              data-testid="button-chat-privilege-find-lawyer"
-            >
-              {t('legalGuidance.qaFlow.privilegeWarning.findLawyer', 'Help Me Find a Lawyer')}
             </Button>
           </div>
         </AlertDialogContent>
