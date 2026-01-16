@@ -79,6 +79,7 @@ export default function ChatPage() {
   const [showChargeSelector, setShowChargeSelector] = useState(false);
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
   const [showExportWarning, setShowExportWarning] = useState(false);
+  const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
 
   const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
     state.messages,
@@ -504,8 +505,12 @@ export default function ChatPage() {
 
       case 'attorney_status':
         actions.updateCaseInfo({ hasAttorney: reply.value === 'yes' });
-        addBotMessageWithKey('chat.messages.descriptionPrompt');
-        actions.setCurrentStep('incident_description');
+        if (reply.value === 'no') {
+          setShowPrivilegeWarning(true);
+        } else {
+          addBotMessageWithKey('chat.messages.descriptionPrompt');
+          actions.setCurrentStep('incident_description');
+        }
         break;
 
       default:
@@ -826,6 +831,57 @@ export default function ChatPage() {
     }
   }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessageWithKey]);
 
+  const handlePrivilegeContinue = useCallback(() => {
+    setShowPrivilegeWarning(false);
+    addBotMessageWithKey('chat.messages.descriptionPrompt');
+    actions.setCurrentStep('incident_description');
+  }, [actions, addBotMessageWithKey]);
+
+  const handlePrivilegeSkip = useCallback(async () => {
+    setShowPrivilegeWarning(false);
+    setIsTyping(true);
+    actions.setIsGenerating(true);
+    actions.setCurrentStep('generating_guidance');
+    
+    try {
+      const response = await apiRequest('POST', '/api/legal-guidance', {
+        jurisdiction: state.caseInfo.state,
+        charges: state.caseInfo.charges,
+        caseStage: state.caseInfo.courtStage,
+        custodyStatus: state.caseInfo.custodyStatus,
+        hasAttorney: false,
+        incidentDescription: '',
+        concerns: '',
+        language: i18n.language,
+      });
+
+      const data = await response.json();
+      
+      setIsTyping(false);
+      actions.setIsGenerating(false);
+      actions.setGuidanceData(data.guidance || data);
+      actions.markFlowCompleted('personalized_guidance');
+      
+      addBotMessageWithKey('chat.messages.guidanceReady', [
+        { id: 'view-guidance', labelKey: 'chat.replies.viewGuidance', value: 'view_guidance', color: 'blue' as const },
+        { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
+      ]);
+    } catch (error) {
+      console.error('Guidance generation error:', error);
+      setIsTyping(false);
+      actions.setIsGenerating(false);
+      addBotMessageWithKey('chat.messages.error', [
+        { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
+      ]);
+    }
+  }, [state.caseInfo, actions, addBotMessageWithKey, i18n.language]);
+
+  const handlePrivilegeFindLawyer = useCallback(() => {
+    setShowPrivilegeWarning(false);
+    addBotMessageWithKey('chat.messages.enterZipPD');
+    actions.setCurrentStep('pd_zip_search');
+  }, [actions, addBotMessageWithKey]);
+
   const canUseFreeText = state.currentStep === 'incident_description' || 
                           state.currentStep === 'concerns_question' ||
                           state.currentStep === 'pd_zip_search' ||
@@ -1058,6 +1114,51 @@ export default function ChatPage() {
               {t('exportWarning.confirmButton', 'I Understand, Export PDF')}
             </AlertDialogAction>
           </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      {/* Privilege Warning Dialog */}
+      <AlertDialog open={showPrivilegeWarning} onOpenChange={setShowPrivilegeWarning}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2 text-amber-600">
+              <AlertTriangle className="h-5 w-5" />
+              {t('legalGuidance.qaFlow.privilegeWarning.title', 'Before You Share Details')}
+            </AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div className="space-y-4 text-left">
+                <p>
+                  {t('legalGuidance.qaFlow.privilegeWarning.notPrivate', "Unlike talking to a lawyer, what you type here is not private and could be used against you if you're ever asked about it in court.")}
+                </p>
+                <p>
+                  {t('legalGuidance.qaFlow.privilegeWarning.recommendation', 'We recommend speaking with a lawyer first. This step is optional—skip it to still receive general guidance.')}
+                </p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <div className="flex flex-col gap-3 mt-4">
+            <Button
+              onClick={handlePrivilegeContinue}
+              variant="outline"
+              data-testid="button-chat-privilege-continue"
+            >
+              {t('legalGuidance.qaFlow.privilegeWarning.continueAnyway', 'Continue Anyway')}
+            </Button>
+            <Button
+              onClick={handlePrivilegeSkip}
+              className="bg-blue-600 hover:bg-blue-700"
+              data-testid="button-chat-privilege-skip"
+            >
+              {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance', 'Skip & Get General Guidance')}
+            </Button>
+            <Button
+              onClick={handlePrivilegeFindLawyer}
+              variant="secondary"
+              data-testid="button-chat-privilege-find-lawyer"
+            >
+              {t('legalGuidance.qaFlow.privilegeWarning.findLawyer', 'Help Me Find a Lawyer')}
+            </Button>
+          </div>
         </AlertDialogContent>
       </AlertDialog>
     </div>
