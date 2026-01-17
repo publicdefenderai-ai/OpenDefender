@@ -79,7 +79,6 @@ export default function ChatPage() {
   const [showChargeSelector, setShowChargeSelector] = useState(false);
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
   const [showExportWarning, setShowExportWarning] = useState(false);
-  const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
   const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
 
   const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
@@ -248,6 +247,7 @@ export default function ChatPage() {
 
       case 'main_menu':
         if (reply.value === 'menu_personalized') {
+          setPrivilegeWarningAcknowledged(false);
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_immigration') {
@@ -343,6 +343,7 @@ export default function ChatPage() {
 
       case 'emergency_options':
         if (reply.value === 'personalized_guidance') {
+          setPrivilegeWarningAcknowledged(false);
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'learn_rights') {
@@ -506,8 +507,30 @@ export default function ChatPage() {
 
       case 'attorney_status':
         actions.updateCaseInfo({ hasAttorney: reply.value === 'yes' });
-        addBotMessageWithKey('chat.messages.descriptionPrompt');
-        actions.setCurrentStep('incident_description');
+        if (reply.value === 'yes') {
+          addBotMessageWithKey('chat.messages.descriptionPrompt');
+          actions.setCurrentStep('incident_description');
+        } else {
+          addBotMessageWithKey('chat.messages.descriptionPrompt');
+          setTimeout(() => {
+            addBotMessageWithKey('chat.messages.privilegeWarning', [
+              { id: 'privilege-continue', labelKey: 'chat.replies.privilegeContinue', value: 'privilege_continue', color: 'slate' as const },
+              { id: 'privilege-skip', labelKey: 'chat.replies.privilegeSkip', value: 'privilege_skip', color: 'blue' as const },
+            ]);
+            actions.setCurrentStep('privilege_warning');
+          }, 500);
+        }
+        break;
+
+      case 'privilege_warning':
+        if (reply.value === 'privilege_continue') {
+          setPrivilegeWarningAcknowledged(true);
+          addBotMessageWithKey('chat.messages.privilegeAcknowledged');
+          actions.setCurrentStep('incident_description');
+        } else if (reply.value === 'privilege_skip') {
+          setPrivilegeWarningAcknowledged(true);
+          handlePrivilegeSkip();
+        }
         break;
 
       default:
@@ -828,13 +851,7 @@ export default function ChatPage() {
     }
   }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessageWithKey]);
 
-  const handlePrivilegeContinue = useCallback(() => {
-    setPrivilegeWarningAcknowledged(true);
-    setShowPrivilegeWarning(false);
-  }, []);
-
   const handlePrivilegeSkip = useCallback(async () => {
-    setShowPrivilegeWarning(false);
     setIsTyping(true);
     actions.setIsGenerating(true);
     actions.setCurrentStep('generating_guidance');
@@ -871,15 +888,6 @@ export default function ChatPage() {
       ]);
     }
   }, [state.caseInfo, actions, addBotMessageWithKey, i18n.language]);
-
-  const handleChatInputChange = useCallback((value: string) => {
-    if (state.currentStep === 'incident_description' && 
-        !state.caseInfo.hasAttorney && 
-        !privilegeWarningAcknowledged && 
-        value.length > 0) {
-      setShowPrivilegeWarning(true);
-    }
-  }, [state.currentStep, state.caseInfo.hasAttorney, privilegeWarningAcknowledged]);
 
   const canUseFreeText = state.currentStep === 'incident_description' || 
                           state.currentStep === 'concerns_question' ||
@@ -1060,7 +1068,6 @@ export default function ChatPage() {
                   ? t('chat.input.zipPlaceholder', 'Enter your 5-digit ZIP code...')
                   : t('chat.input.placeholder', 'Ask a follow-up question...')
                 }
-                onInputChange={handleChatInputChange}
               />
               <p className="text-xs text-muted-foreground text-center mt-3">
                 {t('chat.footer.privacy', 'Your data is encrypted and deleted after this session')}
@@ -1117,43 +1124,6 @@ export default function ChatPage() {
         </AlertDialogContent>
       </AlertDialog>
 
-      {/* Privilege Warning Dialog */}
-      <AlertDialog open={showPrivilegeWarning} onOpenChange={setShowPrivilegeWarning}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle className="flex items-center gap-2 text-amber-600">
-              <AlertTriangle className="h-5 w-5" />
-              {t('legalGuidance.qaFlow.privilegeWarning.title', 'Before You Share Details')}
-            </AlertDialogTitle>
-            <AlertDialogDescription asChild>
-              <div className="space-y-4 text-left">
-                <p>
-                  {t('legalGuidance.qaFlow.privilegeWarning.notPrivate', "Unlike talking to a lawyer, what you type here is not private and could be used against you if you're ever asked about it in court.")}
-                </p>
-                <p>
-                  {t('legalGuidance.qaFlow.privilegeWarning.recommendation', 'We recommend speaking with a lawyer first. This step is optional—skip it to still receive general guidance.')}
-                </p>
-              </div>
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <div className="flex flex-col gap-3 mt-4">
-            <Button
-              onClick={handlePrivilegeContinue}
-              variant="outline"
-              data-testid="button-chat-privilege-continue"
-            >
-              {t('legalGuidance.qaFlow.privilegeWarning.continueAnyway', 'Continue Anyway')}
-            </Button>
-            <Button
-              onClick={handlePrivilegeSkip}
-              className="bg-blue-600 hover:bg-blue-700"
-              data-testid="button-chat-privilege-skip"
-            >
-              {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance', 'Skip & Get General Guidance')}
-            </Button>
-          </div>
-        </AlertDialogContent>
-      </AlertDialog>
     </div>
   );
 }

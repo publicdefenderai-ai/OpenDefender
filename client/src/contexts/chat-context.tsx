@@ -56,6 +56,7 @@ export type ConversationStep =
   | 'court_stage'
   | 'custody_status'
   | 'attorney_status'
+  | 'privilege_warning'
   | 'incident_description'
   | 'concerns_question'
   | 'generating_guidance'
