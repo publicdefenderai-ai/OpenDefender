@@ -511,6 +511,7 @@ export default function ChatPage() {
           addBotMessageWithKey('chat.messages.descriptionPrompt');
           actions.setCurrentStep('incident_description');
         } else {
+          addBotMessageWithKey('chat.messages.descriptionPrompt');
           addBotMessageWithKey('chat.messages.privilegeWarning', [
             { id: 'privilege-continue', labelKey: 'chat.replies.privilegeContinue', value: 'privilege_continue', color: 'slate' as const },
             { id: 'privilege-skip', labelKey: 'chat.replies.privilegeSkip', value: 'privilege_skip', color: 'blue' as const },
