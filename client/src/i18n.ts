@@ -2165,7 +2165,7 @@ i18n
             "hero": {
               "title": "Privacy Policy",
               "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-              "lastUpdated": "Last Updated: December 5, 2025"
+              "lastUpdated": "Last Updated: January 21, 2026"
             },
             "notice": {
               "title": "Privacy-First Platform:",
@@ -4868,7 +4868,7 @@ i18n
             "hero": {
               "title": "Política de Privacidad",
               "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-              "lastUpdated": "Última actualización: 5 de diciembre de 2025"
+              "lastUpdated": "Última actualización: 21 de enero de 2026"
             },
             "notice": {
               "title": "Plataforma que prioriza la privacidad:",
