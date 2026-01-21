@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import type { Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { courtListenerService } from "./services/courtlistener";
@@ -20,6 +20,10 @@ import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // ============================================================================
+  // SECURITY: Rate Limiters
+  // ============================================================================
+
   // Rate limiter for AI-powered endpoints (expensive operations)
   const aiRateLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -28,16 +32,91 @@ export async function registerRoutes(app: Express): Promise<Server> {
       success: false,
       error: 'Too many guidance requests from this IP. Please try again in 15 minutes.'
     },
-    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-    // Skip rate limiting in development mode entirely
+    standardHeaders: true,
+    legacyHeaders: false,
     skip: (req) => process.env.NODE_ENV === 'development',
-    // Use a safer key generator that doesn't rely solely on IP
-    validate: {
-      trustProxy: false, // Disable trust proxy validation to avoid errors
-      xForwardedForHeader: false
-    }
+    validate: { trustProxy: false, xForwardedForHeader: false }
   });
+
+  // Rate limiter for search endpoints (moderate cost)
+  const searchRateLimiter = rateLimit({
+    windowMs: 1 * 60 * 1000, // 1 minute
+    max: 30, // 30 requests per minute
+    message: {
+      success: false,
+      error: 'Too many search requests. Please try again shortly.'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // Rate limiter for write operations (feedback, consent)
+  const writeRateLimiter = rateLimit({
+    windowMs: 1 * 60 * 1000, // 1 minute
+    max: 10, // 10 writes per minute
+    message: {
+      success: false,
+      error: 'Too many requests. Please slow down.'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // Strict rate limiter for admin operations
+  const adminRateLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 10, // 10 admin operations per hour
+    message: {
+      success: false,
+      error: 'Too many administrative requests. Please try again later.'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // ============================================================================
+  // SECURITY: Admin API Key Authentication Middleware
+  // ============================================================================
+
+  /**
+   * Middleware to protect administrative endpoints with API key authentication.
+   * Set ADMIN_API_KEY environment variable to enable protection.
+   * If not set, admin endpoints are disabled in production for security.
+   */
+  const requireAdminAuth = (req: Request, res: Response, next: NextFunction) => {
+    const adminApiKey = process.env.ADMIN_API_KEY;
+
+    // In development without ADMIN_API_KEY, allow access with warning
+    if (!adminApiKey) {
+      if (process.env.NODE_ENV === 'development') {
+        devLog('[Security] Admin endpoint accessed without ADMIN_API_KEY set (dev mode)');
+        return next();
+      }
+      // In production, require the key to be set
+      return res.status(503).json({
+        success: false,
+        error: 'Administrative endpoints are disabled. Set ADMIN_API_KEY to enable.'
+      });
+    }
+
+    // Check for API key in header
+    const providedKey = req.headers['x-admin-api-key'] || req.headers['authorization']?.replace('Bearer ', '');
+
+    if (!providedKey || providedKey !== adminApiKey) {
+      opsLog(`[Security] Unauthorized admin access attempt from ${req.ip}`);
+      return res.status(401).json({
+        success: false,
+        error: 'Unauthorized. Valid admin API key required.'
+      });
+    }
+
+    next();
+  };
 
   // Legal Resources API
   app.get("/api/legal-resources", async (req, res) => {
@@ -293,7 +372,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Case Law Search API - supports both keyword and semantic search
-  app.get("/api/case-law/search", async (req, res) => {
+  app.get("/api/case-law/search", searchRateLimiter, async (req, res) => {
     try {
       const { q: query, jurisdiction, search_type } = req.query;
       
@@ -317,7 +396,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Semantic Search API - natural language case law search
-  app.get("/api/case-law/semantic-search", async (req, res) => {
+  app.get("/api/case-law/semantic-search", searchRateLimiter, async (req, res) => {
     try {
       const { q: query, jurisdiction, keyword_filter } = req.query;
       
@@ -339,7 +418,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Hybrid Search API - combines keywords with natural language
-  app.get("/api/case-law/hybrid-search", async (req, res) => {
+  app.get("/api/case-law/hybrid-search", searchRateLimiter, async (req, res) => {
     try {
       const { natural_language, keywords, jurisdiction } = req.query;
       
@@ -381,7 +460,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Statute Database Seeding endpoints (must come before :jurisdiction)
   // Seed database with stateStatutesSeed data
-  app.post("/api/statutes/seed", async (req, res) => {
+  // SECURITY: Protected with admin auth and rate limiting
+  app.post("/api/statutes/seed", adminRateLimiter, requireAdminAuth, async (req, res) => {
     try {
       devLog('[API] Starting statute database seeding...');
       const result = await statuteSeeder.seedDatabase();
@@ -578,7 +658,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Case Feedback API - Submit feedback on precedent case helpfulness
-  app.post("/api/case-feedback", async (req, res) => {
+  app.post("/api/case-feedback", writeRateLimiter, async (req, res) => {
     try {
       // Use Zod schema for validation
       const parseResult = insertCaseFeedbackSchema.safeParse(req.body);
@@ -657,7 +737,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Privacy Consent Tracking - Record user consent (anonymous)
-  app.post("/api/privacy-consent", async (req, res) => {
+  app.post("/api/privacy-consent", writeRateLimiter, async (req, res) => {
     try {
       const { sessionId, consentType, consentVersion, granted } = req.body;
       
@@ -706,7 +786,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Session Data Cleanup - Delete all data for a session (privacy feature)
-  app.delete("/api/session/:sessionId", async (req, res) => {
+  app.delete("/api/session/:sessionId", writeRateLimiter, async (req, res) => {
     try {
       const { sessionId } = req.params;
       
@@ -761,7 +841,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // RECAP/Court Records Search API
-  app.get("/api/court-records/search", async (req, res) => {
+  app.get("/api/court-records/search", searchRateLimiter, async (req, res) => {
     try {
       const { 
         q: searchTerm, 
@@ -828,7 +908,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Statute Scraping API - Start scraping for a specific state
-  app.post("/api/scrape/statutes/:stateCode", async (req, res) => {
+  // SECURITY: Protected with admin auth and rate limiting
+  app.post("/api/scrape/statutes/:stateCode", adminRateLimiter, requireAdminAuth, async (req, res) => {
     try {
       const { stateCode } = req.params;
       
@@ -966,7 +1047,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // OpenLaws API - Bulk import jurisdiction
-  app.post("/api/openlaws/import/:jurisdictionCode", async (req, res) => {
+  // SECURITY: Protected with admin auth and rate limiting
+  app.post("/api/openlaws/import/:jurisdictionCode", adminRateLimiter, requireAdminAuth, async (req, res) => {
     try {
       const { jurisdictionCode } = req.params;
       const result = await openLawsClient.bulkImportJurisdiction(jurisdictionCode.toUpperCase());

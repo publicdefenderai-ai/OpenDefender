@@ -2225,7 +2225,7 @@ i18n
                 "title": "External Data Sources",
                 "description": "Our platform accesses public legal databases and services to provide you with information:",
                 "services": {
-                  "anthropic": "Anthropic Claude Sonnet 4 - for generating legal guidance (with PII redacted before processing)",
+                  "anthropic": "Anthropic Claude Sonnet 4 - for generating legal guidance. Your personal information is removed before processing. Anthropic may retain redacted data for up to 7 days for safety monitoring, then it is permanently deleted. This data is never used to train AI models.",
                   "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
@@ -4928,7 +4928,7 @@ i18n
                 "title": "Fuentes de Datos Externas",
                 "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
                 "services": {
-                  "anthropic": "Anthropic Claude Sonnet 4 - para generar orientación legal (con información personal eliminada antes del procesamiento)",
+                  "anthropic": "Anthropic Claude Sonnet 4 - para generar orientación legal. Su información personal se elimina antes del procesamiento. Anthropic puede retener los datos anonimizados hasta 7 días para monitoreo de seguridad, luego se eliminan permanentemente. Estos datos nunca se usan para entrenar modelos de IA.",
                   "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",

@@ -361,10 +361,20 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
 }
 
 /**
- * Check if PII redaction is enabled (can be controlled via env var)
+ * Check if PII redaction is enabled
+ *
+ * SECURITY: PII redaction is now MANDATORY and cannot be disabled.
+ * This protects user privacy by ensuring sensitive information is always
+ * scrubbed before being sent to external AI services.
+ *
+ * Previously this could be disabled via DISABLE_PII_REDACTION env var,
+ * but that option has been removed to prevent accidental exposure of
+ * personally identifiable information.
  */
 export function isPIIRedactionEnabled(): boolean {
-  return process.env.DISABLE_PII_REDACTION !== 'true';
+  // SECURITY: Always enabled - cannot be disabled
+  // Removed: process.env.DISABLE_PII_REDACTION check
+  return true;
 }
 
 /**

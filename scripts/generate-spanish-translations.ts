@@ -64,18 +64,16 @@ Return only the JSON array, no other text:`
 }
 
 async function main() {
-  const chargesPath = path.join(__dirname, '../shared/criminal-charges.ts');
-  const content = fs.readFileSync(chargesPath, 'utf-8');
-  
-  const arrayMatch = content.match(/export const criminalCharges: CriminalCharge\[\] = \[([\s\S]*)\];/);
-  if (!arrayMatch) {
-    console.error('Could not find criminalCharges array');
+  // SECURITY: Use dynamic import instead of eval() to safely load the charges module
+  // This avoids code execution vulnerabilities from parsing untrusted content
+  const chargesModule = await import('../shared/criminal-charges.js');
+  const charges: CriminalCharge[] = chargesModule.criminalCharges;
+
+  if (!charges || !Array.isArray(charges)) {
+    console.error('Could not load criminalCharges array from module');
     process.exit(1);
   }
-  
-  const evalContent = `[${arrayMatch[1]}]`;
-  const charges: CriminalCharge[] = eval(evalContent);
-  
+
   console.log(`Found ${charges.length} charges to translate`);
   
   const batchSize = 20;

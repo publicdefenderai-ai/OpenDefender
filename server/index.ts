@@ -9,11 +9,17 @@ const app = express();
 app.set('trust proxy', true);
 
 // Security headers with Helmet
+// SECURITY: Removed 'unsafe-eval' to prevent XSS attacks via eval()
+// Note: 'unsafe-inline' kept for styles due to CSS-in-JS libraries; consider nonces for production
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://replit.com"],
+      // Removed 'unsafe-eval' - React/Vite work without it
+      // Development mode may need relaxed CSP; production should be strict
+      scriptSrc: process.env.NODE_ENV === 'development'
+        ? ["'self'", "'unsafe-inline'", "'unsafe-eval'"]
+        : ["'self'", "'unsafe-inline'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:", "blob:"],
@@ -29,8 +35,57 @@ app.use(helmet({
   xFrameOptions: { action: "sameorigin" },
 }));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// SECURITY: Explicit request size limits to prevent DoS attacks
+app.use(express.json({ limit: '1mb' }));
+app.use(express.urlencoded({ extended: false, limit: '1mb' }));
+
+// ============================================================================
+// SECURITY: CSRF Protection for API endpoints
+// ============================================================================
+// For JSON APIs, we use a combination of:
+// 1. SameSite cookies (set on client-side cookies)
+// 2. Content-Type validation for state-changing requests
+// 3. Origin/Referer header checking
+//
+// This prevents cross-site request forgery without requiring CSRF tokens,
+// which is appropriate for JSON-based APIs that don't use cookies for auth.
+app.use((req, res, next) => {
+  // Only check state-changing methods
+  if (['POST', 'PUT', 'DELETE', 'PATCH'].includes(req.method)) {
+    const contentType = req.headers['content-type'] || '';
+
+    // For API endpoints, require JSON content type
+    if (req.path.startsWith('/api/')) {
+      // Allow requests with no body (e.g., DELETE) or with JSON content type
+      const hasBody = req.headers['content-length'] && parseInt(req.headers['content-length']) > 0;
+
+      if (hasBody && !contentType.includes('application/json')) {
+        return res.status(415).json({
+          success: false,
+          error: 'Content-Type must be application/json for API requests'
+        });
+      }
+
+      // Check Origin header for additional CSRF protection
+      const origin = req.headers['origin'];
+      const host = req.headers['host'];
+
+      // In production, verify origin matches host
+      if (process.env.NODE_ENV === 'production' && origin) {
+        const originHost = new URL(origin).host;
+        if (originHost !== host) {
+          console.warn(`[Security] Cross-origin request blocked: ${origin} -> ${host}`);
+          return res.status(403).json({
+            success: false,
+            error: 'Cross-origin requests not allowed'
+          });
+        }
+      }
+    }
+  }
+
+  next();
+});
 
 // Privacy-safe logging middleware - excludes sensitive data from logs
 const SENSITIVE_PATHS = ['/api/legal-guidance', '/api/guidance', '/api/chat', '/api/legal-case', '/api/session'];
