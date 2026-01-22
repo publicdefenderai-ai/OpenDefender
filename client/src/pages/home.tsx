@@ -78,9 +78,9 @@ function TrustItem({ title, description }: Omit<TrustItemProps, 'icon'>) {
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   const { t } = useTranslation();
-  
+
   return (
-    <Card className="hover:shadow-md transition-all duration-200">
+    <Card className="card-hover">
       <CardContent className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
@@ -171,9 +171,9 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
 
 function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrganization }) {
   const { t } = useTranslation();
-  
+
   return (
-    <Card className="hover:shadow-md transition-all duration-200">
+    <Card className="card-hover">
       <CardContent className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
@@ -334,9 +334,10 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 lg:py-28 overflow-hidden">
+      <section className="relative py-16 md:py-24 lg:py-28 overflow-hidden texture-grain">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 texture-mesh" />
         
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
@@ -359,7 +360,7 @@ export default function Home() {
               <Button
                 onClick={() => setGetStartedOpen(true)}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 font-semibold py-6 px-10 rounded-xl text-lg shadow-md hover:shadow-lg transition-all duration-200 w-full md:w-auto"
+                className="bg-primary hover:bg-primary/90 font-semibold py-6 px-10 rounded-xl text-lg shadow-md hover:shadow-lg transition-all duration-200 w-full md:w-auto btn-interactive"
                 data-testid="button-get-started"
               >
                 {t('home.hero.getStartedButton')}

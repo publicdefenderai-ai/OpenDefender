@@ -261,99 +261,72 @@ export function Footer() {
 
   return (
     <>
-    <footer className="bg-slate-600 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div>
+    <footer className="bg-slate-700 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-3 gap-10 lg:gap-16">
+          {/* Brand Column */}
+          <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 legal-blue rounded-lg flex items-center justify-center">
-                <Scale className="h-4 w-4 text-white" />
+              <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                <Scale className="h-5 w-5 text-white" />
               </div>
-              <span className="font-bold text-lg">Public Defender AI</span>
+              <span className="font-bold text-xl">Public Defender AI</span>
             </div>
-            <p className="text-gray-200 text-sm mb-4">
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
               {t('footer.tagline')}
             </p>
-            <div className="flex space-x-3">
-              <a 
-                href="https://github.com/shahabasghar/PublicDefenderAI" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-200 hover:text-white transition-colors"
-                data-testid="link-github"
-                aria-label="Public Defender AI on GitHub"
-              >
-                <Github className="h-4 w-4" aria-hidden="true" />
-              </a>
-            </div>
+            <a
+              href="https://github.com/shahabasghar/PublicDefenderAI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
+              data-testid="link-github"
+              aria-label="Public Defender AI on GitHub"
+            >
+              <Github className="h-5 w-5" aria-hidden="true" />
+              <span>View on GitHub</span>
+            </a>
           </div>
 
-          {/* Legal Resources */}
-          <div>
-            <h4 className="font-semibold mb-4">{t('footer.legalResources')}</h4>
-            <ul className="space-y-2 text-sm text-gray-200">
+          {/* Get Help Column */}
+          <div className="md:col-span-1">
+            <h4 className="font-semibold text-lg mb-5">{t('footer.getHelp')}</h4>
+            <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/rights-info" className="hover:text-white transition-colors">
-                  {t('footer.knowYourRights')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/process" className="hover:text-white transition-colors">
-                  {t('footer.courtProcedures')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/legal-glossary" className="hover:text-white transition-colors">
-                  {t('footer.legalGlossary')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/record-expungement" className="hover:text-white transition-colors">
-                  {t('footer.recordExpungement')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/friends-family" className="hover:text-white transition-colors">
-                  {t('footer.friendsFamily')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/court-records" className="hover:text-white transition-colors">
-                  {t('footer.courtRecords')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Get Help */}
-          <div>
-            <h4 className="font-semibold mb-4">{t('footer.getHelp')}</h4>
-            <ul className="space-y-2 text-sm text-gray-200">
-              <li>
-                <Link href="/case-guidance" className="hover:text-white transition-colors">
+                <Link href="/case-guidance" className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-2">
                   {t('footer.getCaseGuidance')}
                 </Link>
               </li>
               <li>
-                <Link href="/immigration-guidance" className="hover:text-white transition-colors">
+                <Link href="/rights-info" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.knowYourRights')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/process" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.courtProcedures')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/immigration-guidance" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.immigrationEnforcement')}
                 </Link>
               </li>
               <li>
-                <Link href="/diversion-programs" className="hover:text-white transition-colors">
-                  {t('footer.diversionPrograms')}
+                <Link href="/friends-family" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.friendsFamily')}
                 </Link>
               </li>
               <li>
-                <Link href="/court-locator" className="hover:text-white transition-colors">
-                  {t('footer.findLocalCourts')}
+                <Link href="/resources" className="text-gray-300 hover:text-white transition-colors font-medium">
+                  {t('footer.allResources', { defaultValue: 'All Resources' })}
                 </Link>
               </li>
-              <li>
+              <li className="pt-2 border-t border-gray-600 mt-2">
                 <button
                   onClick={() => setShowPublicDefenderModal(true)}
-                  className="hover:text-white transition-colors text-left"
+                  className="text-gray-300 hover:text-white transition-colors text-left"
                   data-testid="button-find-public-defender-footer"
                 >
                   {t('footer.findPublicDefender')}
@@ -362,7 +335,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => setShowLegalAidModal(true)}
-                  className="hover:text-white transition-colors text-left"
+                  className="text-gray-300 hover:text-white transition-colors text-left"
                   data-testid="button-legal-aid-organizations-footer"
                 >
                   {t('footer.legalAidOrgs')}
@@ -371,49 +344,51 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* About */}
-          <div>
-            <h4 className="font-semibold mb-4">{t('footer.about')}</h4>
-            <ul className="space-y-2 text-sm text-gray-200">
+          {/* About Column */}
+          <div className="md:col-span-1">
+            <h4 className="font-semibold text-lg mb-5">{t('footer.about')}</h4>
+            <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/mission-statement" className="hover:text-white transition-colors">
+                <Link href="/mission-statement" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.ourMission')}
                 </Link>
               </li>
               <li>
-                <Link href="/development-roadmap" className="hover:text-white transition-colors">
+                <Link href="/development-roadmap" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.developmentRoadmap')}
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.privacyPolicy')}
                 </Link>
               </li>
               <li>
-                <Link href="/disclaimers" className="hover:text-white transition-colors">
+                <Link href="/disclaimers" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.noticeDisclaimers')}
                 </Link>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Privacy Notice */}
-        <div className="mt-8">
-          <div className="legal-blue text-white py-4 px-6 rounded-lg">
-            <div className="flex items-center justify-center space-x-2">
-              <Shield className="h-4 w-4" />
-              <span className="text-sm font-medium">
-                {t('footer.privacyNotice')}
-              </span>
-            </div>
+      {/* Privacy Notice Bar */}
+      <div className="bg-slate-800/50 border-t border-slate-600">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-center gap-2 text-gray-300">
+            <Shield className="h-4 w-4 flex-shrink-0" />
+            <span className="text-sm">
+              {t('footer.privacyNotice')}
+            </span>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-200 text-sm">
+      {/* Copyright Bar */}
+      <div className="bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <p className="text-gray-400 text-sm text-center">
             {t('footer.copyright')}
           </p>
         </div>

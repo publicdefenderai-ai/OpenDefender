@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Scale } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
@@ -67,8 +66,8 @@ function RenderContent({ content }: { content: string }) {
 export function MessageBubble({ message, isLatest = false }: MessageBubbleProps) {
   const { t } = useTranslation();
   const isBot = message.role === 'bot';
-  
-  const displayContent = message.contentKey 
+
+  const displayContent = message.contentKey
     ? t(message.contentKey, message.contentParams || {})
     : message.content || '';
 
@@ -82,20 +81,14 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
         isBot ? "justify-start" : "justify-end"
       )}
       role="article"
-      aria-label={isBot ? "Assistant message" : "Your message"}
+      aria-label={isBot ? "Response" : "Your message"}
     >
-      {isBot && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
-          <Scale className="h-4 w-4 text-primary" />
-        </div>
-      )}
-      
       <div
         className={cn(
-          "rounded-2xl px-4 py-3 max-w-[80%]",
-          isBot 
-            ? "bg-muted text-foreground rounded-tl-sm" 
-            : "bg-primary/90 dark:bg-primary/80 text-white rounded-tr-sm max-w-[70%]"
+          "rounded-2xl px-4 py-3 max-w-[85%]",
+          isBot
+            ? "bg-muted text-foreground rounded-tl-md border border-border/50"
+            : "bg-primary/90 dark:bg-primary/80 text-white rounded-tr-md"
         )}
       >
         <div className="text-[15px] leading-relaxed whitespace-pre-wrap">
@@ -114,27 +107,17 @@ export function TypingIndicator() {
       exit={{ opacity: 0, y: -10 }}
       className="flex gap-3 mb-4 justify-start"
     >
-      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
-        <Scale className="h-4 w-4 text-primary" />
-      </div>
-      
-      <div className="bg-muted rounded-2xl rounded-tl-sm px-4 py-3">
-        <div className="flex gap-1.5 items-center h-5">
-          <motion.span
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 1.2, repeat: Infinity, delay: 0 }}
-            className="w-2 h-2 bg-muted-foreground/60 rounded-full"
-          />
-          <motion.span
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 1.2, repeat: Infinity, delay: 0.2 }}
-            className="w-2 h-2 bg-muted-foreground/60 rounded-full"
-          />
-          <motion.span
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 1.2, repeat: Infinity, delay: 0.4 }}
-            className="w-2 h-2 bg-muted-foreground/60 rounded-full"
-          />
+      <div className="bg-muted rounded-2xl rounded-tl-md px-4 py-3 border border-border/50">
+        <div className="flex items-center gap-2 h-5">
+          <span className="text-sm text-muted-foreground">Loading</span>
+          <div className="w-16 h-1 bg-muted-foreground/20 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-primary/60 rounded-full"
+              animate={{ x: ["-100%", "100%"] }}
+              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+              style={{ width: "50%" }}
+            />
+          </div>
         </div>
       </div>
     </motion.div>

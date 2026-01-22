@@ -1,10 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
 import { useChat } from "@/contexts/chat-context";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export function ChatLauncher() {
   const { t } = useTranslation();
@@ -40,10 +39,10 @@ export function ChatLauncher() {
             size="icon"
             className="relative h-14 w-14 rounded-full glass-fab text-white"
             data-testid="button-open-chat"
-            aria-label={t('chat.openChat')}
+            aria-label={t('chat.openChat', { defaultValue: 'Get Help' })}
           >
-            <MessageSquare className="h-5 w-5" aria-hidden="true" />
-            
+            <HelpCircle className="h-6 w-6" aria-hidden="true" />
+
             {state.hasUnsavedGuidance && (
               <span className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-background" />
             )}
