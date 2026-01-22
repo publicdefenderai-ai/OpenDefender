@@ -27,7 +27,7 @@ export function ChatLauncher() {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.8, y: 20 }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-20 right-4 z-50 md:bottom-6 md:right-6"
         data-testid="chat-launcher"
       >
         <motion.div
@@ -37,11 +37,11 @@ export function ChatLauncher() {
           <Button
             onClick={handleOpenChat}
             size="icon"
-            className="relative h-14 w-14 rounded-full glass-fab text-white"
+            className="relative h-12 w-12 md:h-14 md:w-14 rounded-full glass-fab text-white"
             data-testid="button-open-chat"
             aria-label={t('chat.openChat', { defaultValue: 'Get Help' })}
           >
-            <HelpCircle className="h-6 w-6" aria-hidden="true" />
+            <HelpCircle className="h-5 w-5 md:h-6 md:w-6" aria-hidden="true" />
 
             {state.hasUnsavedGuidance && (
               <span className="absolute -top-1 -right-1 h-3 w-3 bg-green-500 rounded-full border-2 border-background" />
