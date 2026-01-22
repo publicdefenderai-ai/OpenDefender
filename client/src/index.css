@@ -864,8 +864,12 @@
 /* Form input focus animation */
 .input-focus-ring {
   @apply transition-all duration-200 ease-out;
-  @apply focus:ring-2 focus:ring-primary/20 focus:border-primary;
-  @apply focus:shadow-[0_0_0_3px_rgba(var(--primary),0.1)];
+  @apply focus:ring-2 focus:ring-offset-0 focus:border-primary;
+  --tw-ring-color: hsl(var(--primary) / 0.2);
+}
+
+.input-focus-ring:focus {
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
 }
 
 /* Success checkmark animation */
@@ -926,7 +930,10 @@
 .card-hover {
   @apply transition-all duration-300 ease-out;
   @apply hover:-translate-y-1 hover:shadow-lg;
-  @apply hover:border-primary/20;
+}
+
+.card-hover:hover {
+  border-color: hsl(var(--primary) / 0.2);
 }
 
 /* Card with subtle border glow on hover */
@@ -1144,19 +1151,35 @@
 
 /* Toast variants */
 .toast-success {
-  @apply border-l-4 border-l-green-500 bg-green-50 dark:bg-green-950/30;
+  @apply border-l-4 border-l-green-500 bg-green-50;
+}
+
+.dark .toast-success {
+  background-color: rgb(5 46 22 / 0.3);
 }
 
 .toast-error {
-  @apply border-l-4 border-l-red-500 bg-red-50 dark:bg-red-950/30;
+  @apply border-l-4 border-l-red-500 bg-red-50;
+}
+
+.dark .toast-error {
+  background-color: rgb(69 10 10 / 0.3);
 }
 
 .toast-warning {
-  @apply border-l-4 border-l-amber-500 bg-amber-50 dark:bg-amber-950/30;
+  @apply border-l-4 border-l-amber-500 bg-amber-50;
+}
+
+.dark .toast-warning {
+  background-color: rgb(69 26 3 / 0.3);
 }
 
 .toast-info {
-  @apply border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-950/30;
+  @apply border-l-4 border-l-blue-500 bg-blue-50;
+}
+
+.dark .toast-info {
+  background-color: rgb(23 37 84 / 0.3);
 }
 
 /* ===== ENHANCED TYPOGRAPHY ===== */
