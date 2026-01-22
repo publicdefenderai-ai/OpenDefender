@@ -507,16 +507,13 @@ export default function ChatPage() {
 
       case 'attorney_status':
         actions.updateCaseInfo({ hasAttorney: reply.value === 'yes' });
-        if (reply.value === 'yes') {
-          addBotMessageWithKey('chat.messages.descriptionPrompt');
-          actions.setCurrentStep('incident_description');
-        } else {
-          addBotMessageWithKey('chat.messages.descriptionPromptWithWarning', [
-            { id: 'privilege-continue', labelKey: 'chat.replies.privilegeContinue', value: 'privilege_continue', color: 'slate' as const },
-            { id: 'privilege-skip', labelKey: 'chat.replies.privilegeSkip', value: 'privilege_skip', color: 'blue' as const },
-          ]);
-          actions.setCurrentStep('privilege_warning');
-        }
+        // Always show the privilege warning regardless of attorney status
+        // since what users type here is not protected by attorney-client privilege
+        addBotMessageWithKey('chat.messages.descriptionPromptWithWarning', [
+          { id: 'privilege-continue', labelKey: 'chat.replies.privilegeContinue', value: 'privilege_continue', color: 'slate' as const },
+          { id: 'privilege-skip', labelKey: 'chat.replies.privilegeSkip', value: 'privilege_skip', color: 'blue' as const },
+        ]);
+        actions.setCurrentStep('privilege_warning');
         break;
 
       case 'privilege_warning':
