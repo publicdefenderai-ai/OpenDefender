@@ -44,6 +44,7 @@ import Statutes from "@/pages/statutes";
 import Chat from "@/pages/chat";
 import DocumentLibrary from "@/pages/document-library";
 import Resources from "@/pages/resources";
+import AttorneyPortal from "@/pages/attorney/index";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -111,6 +112,7 @@ function Router() {
       <Route path="/chat" component={Chat} />
       <Route path="/document-library" component={DocumentLibrary} />
       <Route path="/resources" component={Resources} />
+      <Route path="/attorney" component={AttorneyPortal} />
       <Route component={NotFound} />
     </Switch>
   );

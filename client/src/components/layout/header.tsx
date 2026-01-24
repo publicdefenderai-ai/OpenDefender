@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
@@ -79,6 +79,13 @@ export function Header() {
       icon: MapPin,
       description: t('header.menu.findResourcesDesc'),
       testId: "menu-find-resources"
+    },
+    {
+      title: t('header.menu.attorneyTools', 'Attorney Tools'),
+      href: "/attorney",
+      icon: Briefcase,
+      description: t('header.menu.attorneyToolsDesc', 'Document drafting for legal professionals'),
+      testId: "menu-attorney-tools"
     }
   ];
 

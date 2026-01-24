@@ -1,17 +1,18 @@
-import { 
-  MessageSquare, 
-  Shield, 
-  Calendar, 
-  MapPin, 
-  Search, 
-  Users, 
-  FileText, 
-  Route, 
+import {
+  MessageSquare,
+  Shield,
+  Calendar,
+  MapPin,
+  Search,
+  Users,
+  FileText,
+  Route,
   Eraser,
   Book,
   Globe,
   HelpCircle,
-  ChevronRight
+  ChevronRight,
+  Briefcase
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -109,12 +110,6 @@ const sections: CategorySection[] = [
         title: "Record Expungement",
         description: "Learn about sealing criminal records.",
         link: "/record-expungement"
-      },
-      {
-        icon: <FileText className="h-5 w-5" />,
-        title: "Court Records Search",
-        description: "Search free federal court documents.",
-        link: "/court-records"
       }
     ]
   },
@@ -133,6 +128,36 @@ const sections: CategorySection[] = [
         title: "Court Locator",
         description: "Find court addresses and contact information.",
         link: "/court-locator"
+      },
+      {
+        icon: <Book className="h-5 w-5" />,
+        title: "Statute Lookup",
+        description: "Search state and federal laws.",
+        link: "/statutes"
+      },
+      {
+        icon: <FileText className="h-5 w-5" />,
+        title: "Document Library",
+        description: "Legal forms, templates, and guides.",
+        link: "/document-library"
+      }
+    ]
+  },
+  {
+    title: "Attorney Tools",
+    description: "Resources for licensed attorneys representing clients",
+    resources: [
+      {
+        icon: <Briefcase className="h-5 w-5" />,
+        title: "Attorney Portal",
+        description: "Document drafting and resources for legal professionals.",
+        link: "/attorney"
+      },
+      {
+        icon: <FileText className="h-5 w-5" />,
+        title: "Court Records Search",
+        description: "Search federal court documents via PACER/RECAP.",
+        link: "/court-records"
       }
     ]
   }

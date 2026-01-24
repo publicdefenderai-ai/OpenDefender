@@ -64,12 +64,13 @@ export type ConversationStep =
   | 'follow_up'
   | 'completed';
 
-export type CompletedFlow = 
+export type CompletedFlow =
   | 'personalized_guidance'
   | 'immigration'
   | 'rights_info'
   | 'resources'
-  | 'laws_records';
+  | 'laws_records'
+  | 'attorney_tools';
 
 interface GuidanceData {
   sessionId: string;
@@ -293,7 +294,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const getAvailableFlows = useCallback((): CompletedFlow[] => {
-    const allFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources', 'laws_records'];
+    const allFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources', 'laws_records', 'attorney_tools'];
     return allFlows.filter(flow => !state.completedFlows.includes(flow));
   }, [state.completedFlows]);
 

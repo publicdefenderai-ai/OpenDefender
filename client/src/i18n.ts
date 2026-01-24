@@ -540,6 +540,10 @@ i18n
               "lawsRecords": {
                 "title": "Laws & Documents",
                 "description": "Find statutes, case law, court records, and document guides"
+              },
+              "attorneyTools": {
+                "title": "Attorney Tools",
+                "description": "Document drafting and resources for legal professionals"
               }
             },
             "legalRightsSubmenu": {
@@ -2565,6 +2569,7 @@ i18n
             "rightsInfo": "Rights Info",
             "resources": "Resources",
             "lawsRecords": "Laws & Documents",
+            "attorneyTools": "Attorney Tools",
             "myRights": "My Rights",
             "criminalJusticeProcess": "Criminal Justice Process",
             "constitutionalRights": "Constitutional Rights",
@@ -3243,6 +3248,10 @@ i18n
               "lawsRecords": {
                 "title": "Leyes y Documentos",
                 "description": "Buscar estatutos, jurisprudencia, registros judiciales y guías de documentos"
+              },
+              "attorneyTools": {
+                "title": "Herramientas para Abogados",
+                "description": "Redacción de documentos y recursos para profesionales legales"
               }
             },
             "legalRightsSubmenu": {
@@ -5268,6 +5277,7 @@ i18n
             "rightsInfo": "Info de Derechos",
             "resources": "Recursos",
             "lawsRecords": "Leyes y Documentos",
+            "attorneyTools": "Herramientas para Abogados",
             "myRights": "Mis Derechos",
             "criminalJusticeProcess": "Proceso de Justicia Penal",
             "constitutionalRights": "Derechos Constitucionales",
