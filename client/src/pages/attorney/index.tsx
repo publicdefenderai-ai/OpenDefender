@@ -49,7 +49,7 @@ export default function AttorneyPortal() {
           <Alert className="mb-8 border-slate-200 bg-slate-50 dark:bg-slate-900/50">
             <Shield className="h-4 w-4" />
             <AlertDescription>
-              {t('attorney.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership and are protected by attorney-client privilege when used on behalf of clients.')}
+              {t('attorney.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.')}
             </AlertDescription>
           </Alert>
 
