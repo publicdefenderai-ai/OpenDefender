@@ -2019,6 +2019,11 @@ i18n
               "progress": "Progress"
             },
             "items": {
+              "attorneyTools": {
+                "title": "Attorney Tools Portal",
+                "description": "Dedicated section for licensed attorneys with court records lookup, document resources, and professional tools. Foundation for attorney-specific features.",
+                "impact": "Enables specialized features for legal professionals while maintaining shared access to core resources"
+              },
               "courtlistener": {
                 "title": "CourtListener API Integration",
                 "description": "Complete integration with Free Law Project's CourtListener API for 8.4+ million court opinions and federal dockets",
@@ -2041,13 +2046,28 @@ i18n
               },
               "aiGuidance": {
                 "title": "AI Legal Guidance Engine",
-                "description": "Advanced AI system for generating personalized legal guidance based on case parameters",
+                "description": "Advanced AI system for generating personalized legal guidance based on case parameters. Currently powered by Claude Sonnet 4 with jurisdiction-aware prompting.",
                 "impact": "Core functionality for personalized legal assistance",
                 "challenges": {
                   "accuracy": "Legal accuracy validation",
                   "bias": "Bias detection and mitigation",
                   "jurisdiction": "Jurisdiction-specific nuances"
                 }
+              },
+              "attorneyDocGen": {
+                "title": "Attorney Document Generation",
+                "description": "AI-powered document drafting for licensed attorneys. Motions, notices, and filings for criminal and immigration cases with jurisdiction-specific formatting (CA, NY, TX, FL initially).",
+                "impact": "Reduces time burden on public defenders and legal aid attorneys handling high caseloads"
+              },
+              "additionalLanguages": {
+                "title": "Additional Language Support",
+                "description": "Expand beyond English and Spanish to include Chinese, Vietnamese, Korean, Tagalog, and other languages common in immigrant communities.",
+                "impact": "Broader access for non-English speaking individuals navigating the justice system"
+              },
+              "expandedJurisdictions": {
+                "title": "Expanded Jurisdiction Coverage",
+                "description": "Add court-specific rules, local procedures, and jurisdiction-specific guidance for additional states and counties.",
+                "impact": "More accurate, locally-relevant guidance for users across the country"
               },
               "judgeAnalytics": {
                 "title": "Judge & Court Analytics",
@@ -2064,21 +2084,6 @@ i18n
                 "description": "Native mobile apps for iOS and Android with offline capabilities for emergency situations",
                 "impact": "Accessibility during arrest and emergency situations"
               },
-              "multilingual": {
-                "title": "Multi-language Support",
-                "description": "Translation system for Spanish, French, and other common languages in criminal justice",
-                "impact": "Expanded access for non-English speaking defendants"
-              },
-              "legalAidDirectory": {
-                "title": "Legal Aid Organization Directory",
-                "description": "Comprehensive database of public defenders and legal aid organizations nationwide",
-                "impact": "Direct connection to legal representation resources"
-              },
-              "realTimeAlerts": {
-                "title": "Real-time Case Alerts",
-                "description": "Notification system for court dates, deadline changes, and case updates",
-                "impact": "Prevention of missed court appearances and deadlines"
-              },
               "privacyEncryption": {
                 "title": "Advanced Privacy & Encryption",
                 "description": "Complete privacy protection: NLP-based PII detection, anonymous consent tracking, transport encryption (HTTPS), encryption at rest (database), and session-based ephemerality with user-controlled data deletion.",
@@ -2093,6 +2098,9 @@ i18n
                   "aiCompatibility": "AI processing requires plaintext - trade-off between encryption and guidance quality"
                 }
               }
+            },
+            "badges": {
+              "quickWin": "Quick Win"
             },
             "getInvolved": {
               "title": "Get Involved",
@@ -4727,6 +4735,11 @@ i18n
               "progress": "Progreso"
             },
             "items": {
+              "attorneyTools": {
+                "title": "Portal de Herramientas para Abogados",
+                "description": "Sección dedicada para abogados licenciados con búsqueda de registros judiciales, recursos de documentos y herramientas profesionales. Base para funciones específicas para abogados.",
+                "impact": "Permite funciones especializadas para profesionales legales mientras mantiene acceso compartido a recursos centrales"
+              },
               "courtlistener": {
                 "title": "Integración API CourtListener",
                 "description": "Integración completa con la API CourtListener del Proyecto Ley Libre para más de 8.4 millones de opiniones judiciales y expedientes federales",
@@ -4749,13 +4762,28 @@ i18n
               },
               "aiGuidance": {
                 "title": "Motor de Orientación Legal con IA",
-                "description": "Sistema avanzado de IA para generar orientación legal personalizada basada en parámetros de caso",
+                "description": "Sistema avanzado de IA para generar orientación legal personalizada basada en parámetros de caso. Actualmente impulsado por Claude Sonnet 4 con indicaciones conscientes de jurisdicción.",
                 "impact": "Funcionalidad central para asistencia legal personalizada",
                 "challenges": {
                   "accuracy": "Validación de precisión legal",
                   "bias": "Detección y mitigación de sesgos",
                   "jurisdiction": "Matices específicos de jurisdicción"
                 }
+              },
+              "attorneyDocGen": {
+                "title": "Generación de Documentos para Abogados",
+                "description": "Redacción de documentos impulsada por IA para abogados licenciados. Mociones, notificaciones y presentaciones para casos penales e inmigratorios con formato específico de jurisdicción (CA, NY, TX, FL inicialmente).",
+                "impact": "Reduce la carga de tiempo para defensores públicos y abogados de asistencia legal con altas cargas de casos"
+              },
+              "additionalLanguages": {
+                "title": "Soporte de Idiomas Adicionales",
+                "description": "Expandir más allá del inglés y español para incluir chino, vietnamita, coreano, tagalo y otros idiomas comunes en comunidades inmigrantes.",
+                "impact": "Acceso más amplio para personas que no hablan inglés navegando el sistema de justicia"
+              },
+              "expandedJurisdictions": {
+                "title": "Cobertura Jurisdiccional Ampliada",
+                "description": "Agregar reglas específicas de tribunales, procedimientos locales y orientación específica de jurisdicción para estados y condados adicionales.",
+                "impact": "Orientación más precisa y localmente relevante para usuarios en todo el país"
               },
               "judgeAnalytics": {
                 "title": "Análisis de Jueces y Tribunales",
@@ -4772,21 +4800,6 @@ i18n
                 "description": "Aplicaciones móviles nativas para iOS y Android con capacidades offline para situaciones de emergencia",
                 "impact": "Accesibilidad durante arresto y situaciones de emergencia"
               },
-              "multilingual": {
-                "title": "Soporte Multilingüe",
-                "description": "Sistema de traducción para español, francés y otros idiomas comunes en justicia penal",
-                "impact": "Acceso ampliado para acusados que no hablan inglés"
-              },
-              "legalAidDirectory": {
-                "title": "Directorio de Organizaciones de Asistencia Legal",
-                "description": "Base de datos completa de defensores públicos y organizaciones de asistencia legal a nivel nacional",
-                "impact": "Conexión directa a recursos de representación legal"
-              },
-              "realTimeAlerts": {
-                "title": "Alertas de Casos en Tiempo Real",
-                "description": "Sistema de notificaciones para fechas de audiencia, cambios de plazos y actualizaciones de casos",
-                "impact": "Prevención de ausencias a comparecencias judiciales y plazos vencidos"
-              },
               "privacyEncryption": {
                 "title": "Privacidad y Encriptación Avanzadas",
                 "description": "Protección de privacidad completa: detección de PII basada en NLP, seguimiento de consentimiento anónimo, encriptación en tránsito (HTTPS), encriptación en reposo (base de datos), y efimeralidad basada en sesión con eliminación de datos controlada por el usuario.",
@@ -4801,6 +4814,9 @@ i18n
                   "aiCompatibility": "El procesamiento de IA requiere texto sin encriptar - compromiso entre encriptación y calidad de orientación"
                 }
               }
+            },
+            "badges": {
+              "quickWin": "Ganancia Rápida"
             },
             "getInvolved": {
               "title": "Involúcrese",

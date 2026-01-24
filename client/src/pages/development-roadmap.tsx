@@ -57,6 +57,7 @@ interface RoadmapItem {
   progress?: number;
   challengesKeys?: string[];
   impactKey: string;
+  easyWin?: boolean;
 }
 
 export default function DevelopmentRoadmap() {
@@ -123,17 +124,17 @@ export default function DevelopmentRoadmap() {
   };
 
   const roadmapItems: RoadmapItem[] = [
+    // Completed items
     {
-      id: "pacer-authentication",
-      titleKey: "developmentRoadmap.items.pacer.title",
-      descriptionKey: "developmentRoadmap.items.pacer.description",
-      status: "in-progress",
+      id: "attorney-tools",
+      titleKey: "developmentRoadmap.items.attorneyTools.title",
+      descriptionKey: "developmentRoadmap.items.attorneyTools.description",
+      status: "completed",
       priority: "high",
-      category: "data",
-      estimatedCompletion: "Q4 2025",
-      progress: 45,
-      challengesKeys: ["developmentRoadmap.items.pacer.challenges.cost", "developmentRoadmap.items.pacer.challenges.rateLimit", "developmentRoadmap.items.pacer.challenges.bulk"],
-      impactKey: "developmentRoadmap.items.pacer.impact"
+      category: "features",
+      estimatedCompletion: "Completed Jan 2026",
+      progress: 100,
+      impactKey: "developmentRoadmap.items.attorneyTools.impact"
     },
     {
       id: "state-statutes-api",
@@ -147,51 +148,6 @@ export default function DevelopmentRoadmap() {
       impactKey: "developmentRoadmap.items.stateStatutes.impact"
     },
     {
-      id: "ai-guidance-engine",
-      titleKey: "developmentRoadmap.items.aiGuidance.title",
-      descriptionKey: "developmentRoadmap.items.aiGuidance.description",
-      status: "in-progress",
-      priority: "critical",
-      category: "ai",
-      estimatedCompletion: "Q1 2026",
-      progress: 78,
-      challengesKeys: ["developmentRoadmap.items.aiGuidance.challenges.accuracy", "developmentRoadmap.items.aiGuidance.challenges.bias", "developmentRoadmap.items.aiGuidance.challenges.jurisdiction"],
-      impactKey: "developmentRoadmap.items.aiGuidance.impact"
-    },
-    {
-      id: "judge-analytics",
-      titleKey: "developmentRoadmap.items.judgeAnalytics.title",
-      descriptionKey: "developmentRoadmap.items.judgeAnalytics.description",
-      status: "researching",
-      priority: "medium",
-      category: "data",
-      estimatedCompletion: "Q4 2025",
-      challengesKeys: ["developmentRoadmap.items.judgeAnalytics.challenges.privacy", "developmentRoadmap.items.judgeAnalytics.challenges.significance", "developmentRoadmap.items.judgeAnalytics.challenges.historicalBias"],
-      impactKey: "developmentRoadmap.items.judgeAnalytics.impact"
-    },
-    {
-      id: "mobile-app",
-      titleKey: "developmentRoadmap.items.mobileApp.title",
-      descriptionKey: "developmentRoadmap.items.mobileApp.description",
-      status: "planned",
-      priority: "high",
-      category: "features",
-      estimatedCompletion: "Q1 2026",
-      dependencies: ["ai-guidance-engine"],
-      impactKey: "developmentRoadmap.items.mobileApp.impact"
-    },
-    {
-      id: "real-time-alerts",
-      titleKey: "developmentRoadmap.items.realTimeAlerts.title",
-      descriptionKey: "developmentRoadmap.items.realTimeAlerts.description",
-      status: "planned",
-      priority: "medium",
-      category: "features",
-      estimatedCompletion: "Q4 2025",
-      dependencies: ["pacer-authentication", "mobile-app"],
-      impactKey: "developmentRoadmap.items.realTimeAlerts.impact"
-    },
-    {
       id: "privacy-encryption",
       titleKey: "developmentRoadmap.items.privacyEncryption.title",
       descriptionKey: "developmentRoadmap.items.privacyEncryption.description",
@@ -201,6 +157,88 @@ export default function DevelopmentRoadmap() {
       estimatedCompletion: "Completed Dec 2025",
       progress: 100,
       impactKey: "developmentRoadmap.items.privacyEncryption.impact"
+    },
+    // In progress items
+    {
+      id: "ai-guidance-engine",
+      titleKey: "developmentRoadmap.items.aiGuidance.title",
+      descriptionKey: "developmentRoadmap.items.aiGuidance.description",
+      status: "in-progress",
+      priority: "critical",
+      category: "ai",
+      estimatedCompletion: "Q1 2026",
+      progress: 85,
+      challengesKeys: ["developmentRoadmap.items.aiGuidance.challenges.accuracy", "developmentRoadmap.items.aiGuidance.challenges.bias", "developmentRoadmap.items.aiGuidance.challenges.jurisdiction"],
+      impactKey: "developmentRoadmap.items.aiGuidance.impact"
+    },
+    {
+      id: "pacer-authentication",
+      titleKey: "developmentRoadmap.items.pacer.title",
+      descriptionKey: "developmentRoadmap.items.pacer.description",
+      status: "in-progress",
+      priority: "high",
+      category: "data",
+      estimatedCompletion: "Q1 2026",
+      progress: 60,
+      challengesKeys: ["developmentRoadmap.items.pacer.challenges.cost", "developmentRoadmap.items.pacer.challenges.rateLimit", "developmentRoadmap.items.pacer.challenges.bulk"],
+      impactKey: "developmentRoadmap.items.pacer.impact"
+    },
+    // Planned items
+    {
+      id: "attorney-document-generation",
+      titleKey: "developmentRoadmap.items.attorneyDocGen.title",
+      descriptionKey: "developmentRoadmap.items.attorneyDocGen.description",
+      status: "planned",
+      priority: "high",
+      category: "features",
+      estimatedCompletion: "Q2 2026",
+      dependencies: ["ai-guidance-engine"],
+      impactKey: "developmentRoadmap.items.attorneyDocGen.impact"
+    },
+    {
+      id: "additional-languages",
+      titleKey: "developmentRoadmap.items.additionalLanguages.title",
+      descriptionKey: "developmentRoadmap.items.additionalLanguages.description",
+      status: "planned",
+      priority: "medium",
+      category: "features",
+      estimatedCompletion: "Q2 2026",
+      easyWin: true,
+      impactKey: "developmentRoadmap.items.additionalLanguages.impact"
+    },
+    {
+      id: "mobile-app",
+      titleKey: "developmentRoadmap.items.mobileApp.title",
+      descriptionKey: "developmentRoadmap.items.mobileApp.description",
+      status: "planned",
+      priority: "medium",
+      category: "features",
+      estimatedCompletion: "Q3 2026",
+      dependencies: ["ai-guidance-engine"],
+      impactKey: "developmentRoadmap.items.mobileApp.impact"
+    },
+    {
+      id: "expanded-jurisdictions",
+      titleKey: "developmentRoadmap.items.expandedJurisdictions.title",
+      descriptionKey: "developmentRoadmap.items.expandedJurisdictions.description",
+      status: "planned",
+      priority: "medium",
+      category: "data",
+      estimatedCompletion: "Ongoing",
+      easyWin: true,
+      impactKey: "developmentRoadmap.items.expandedJurisdictions.impact"
+    },
+    // Researching items
+    {
+      id: "judge-analytics",
+      titleKey: "developmentRoadmap.items.judgeAnalytics.title",
+      descriptionKey: "developmentRoadmap.items.judgeAnalytics.description",
+      status: "researching",
+      priority: "low",
+      category: "data",
+      estimatedCompletion: "TBD",
+      challengesKeys: ["developmentRoadmap.items.judgeAnalytics.challenges.privacy", "developmentRoadmap.items.judgeAnalytics.challenges.significance", "developmentRoadmap.items.judgeAnalytics.challenges.historicalBias"],
+      impactKey: "developmentRoadmap.items.judgeAnalytics.impact"
     },
     {
       id: "client-e2e-encryption",
@@ -617,7 +655,7 @@ function RoadmapCard({ item, t }: { item: RoadmapItem; t: any }) {
       <CardHeader>
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-2">
+            <div className="flex items-center flex-wrap gap-2 mb-2">
               <div className="flex items-center space-x-1">
                 {getStatusIcon(item.status)}
                 <Badge className={`${getStatusColor(item.status)} text-white text-xs`}>
@@ -631,6 +669,12 @@ function RoadmapCard({ item, t }: { item: RoadmapItem; t: any }) {
                 {getCategoryIcon(item.category)}
                 <span className="text-xs capitalize">{t(`developmentRoadmap.categories.${item.category}`)}</span>
               </div>
+              {item.easyWin && (
+                <Badge className="bg-emerald-500 text-white text-xs">
+                  <Zap className="h-3 w-3 mr-1" />
+                  {t('developmentRoadmap.badges.quickWin', 'Quick Win')}
+                </Badge>
+              )}
             </div>
             <CardTitle className="text-lg">{t(item.titleKey)}</CardTitle>
           </div>
