@@ -1113,8 +1113,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({
         success: true,
         sessionId: session.sessionId,
-        expiresAt: session.expiresAt,
-        barState: session.barState
+        expiresAt: session.expiresAt
       });
     } catch (error) {
       errLog("Attorney verification failed", error);
@@ -1150,7 +1149,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({
         success: true,
         isVerified: true,
-        barState: session.barState,
         expiresAt: session.expiresAt,
         timeRemaining: attorneySessionManager.getTimeRemaining(sessionId)
       });

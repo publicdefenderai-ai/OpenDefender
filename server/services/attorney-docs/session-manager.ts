@@ -6,7 +6,6 @@
  * Bar numbers are SHA-256 hashed before storage for privacy.
  */
 
-import crypto from "crypto";
 import { randomUUID } from "crypto";
 import type { AttorneySession, AttorneyVerificationRequest } from "@shared/attorney/types";
 import { attorneyVerificationRequestSchema } from "@shared/attorney/attestation-schema";
@@ -28,18 +27,11 @@ class AttorneySessionManager {
   }
 
   /**
-   * Hash a bar number using SHA-256
-   * Never stores or logs the plaintext bar number
-   */
-  private hashBarNumber(barNumber: string): string {
-    return crypto.createHash("sha256").update(barNumber.trim()).digest("hex");
-  }
-
-  /**
    * Create a new verified attorney session
+   * Only requires attestations - no bar credentials stored
    */
   createSession(request: AttorneyVerificationRequest): AttorneySession | null {
-    // Validate the request
+    // Validate the request (ensures all attestations are true)
     const validation = attorneyVerificationRequestSchema.safeParse(request);
     if (!validation.success) {
       devLog("[Attorney Session] Validation failed:", validation.error.errors);
@@ -53,8 +45,6 @@ class AttorneySessionManager {
     const session: AttorneySession = {
       sessionId,
       isVerified: true,
-      barState: request.barState.toUpperCase(),
-      barNumberHash: this.hashBarNumber(request.barNumber),
       createdAt: now,
       expiresAt,
       lastActivityAt: now,
@@ -65,7 +55,7 @@ class AttorneySessionManager {
     // Log audit entry (metadata only, no PII)
     auditLogger.logSessionCreated(session);
 
-    opsLog(`[Attorney Session] Created session for ${request.barState}, expires in 30 minutes`);
+    opsLog(`[Attorney Session] Created session, expires in 30 minutes`);
 
     return session;
   }
@@ -114,7 +104,7 @@ class AttorneySessionManager {
       devLog("[Attorney Session] Session expired:", sessionId.substring(0, 8));
     } else {
       auditLogger.logSessionTerminated(session);
-      opsLog(`[Attorney Session] User terminated session for ${session.barState}`);
+      opsLog(`[Attorney Session] User terminated session`);
     }
 
     return true;

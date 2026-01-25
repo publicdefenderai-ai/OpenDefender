@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -24,7 +24,7 @@ import { useAttorneySession } from "@/hooks/use-attorney-session";
 function DocumentsContent() {
   useScrollToTop();
   const { t } = useTranslation();
-  const { barState, endSession } = useAttorneySession();
+  const { endSession } = useAttorneySession();
 
   return (
     <div className="min-h-screen bg-background">
@@ -54,11 +54,6 @@ function DocumentsContent() {
                 "AI-powered document drafting for criminal and immigration matters."
               )}
             </p>
-            {barState && (
-              <Badge variant="secondary" className="mt-4">
-                {t("attorneyPortal.documents.barState", "Bar State")}: {barState}
-              </Badge>
-            )}
           </motion.div>
         </div>
       </section>

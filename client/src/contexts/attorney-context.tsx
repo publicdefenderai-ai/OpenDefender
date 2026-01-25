@@ -29,7 +29,6 @@ interface AttorneyState {
   isVerified: boolean;
   isLoading: boolean;
   sessionId: string | null;
-  barState: string | null;
   expiresAt: Date | null;
   timeRemaining: number; // seconds
   error: string | null;
@@ -38,11 +37,7 @@ interface AttorneyState {
 interface AttorneyContextValue {
   state: AttorneyState;
   actions: {
-    verify: (
-      barState: string,
-      barNumber: string,
-      attestations: AttorneyAttestation
-    ) => Promise<boolean>;
+    verify: (attestations: AttorneyAttestation) => Promise<boolean>;
     endSession: () => Promise<void>;
     checkSession: () => Promise<void>;
     clearError: () => void;
@@ -53,7 +48,6 @@ const initialState: AttorneyState = {
   isVerified: false,
   isLoading: true, // Start loading to check session
   sessionId: null,
-  barState: null,
   expiresAt: null,
   timeRemaining: 0,
   error: null,
@@ -118,7 +112,6 @@ export function AttorneyProvider({ children }: { children: ReactNode }) {
         isVerified: true,
         isLoading: false,
         sessionId: null, // We don't expose session ID to client
-        barState: response.barState || null,
         expiresAt: response.expiresAt || null,
         timeRemaining: response.timeRemaining || 0,
         error: null,
@@ -128,7 +121,6 @@ export function AttorneyProvider({ children }: { children: ReactNode }) {
         isVerified: false,
         isLoading: false,
         sessionId: null,
-        barState: null,
         expiresAt: null,
         timeRemaining: 0,
         error: null,
@@ -137,16 +129,10 @@ export function AttorneyProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const verify = useCallback(
-    async (
-      barState: string,
-      barNumber: string,
-      attestations: AttorneyAttestation
-    ): Promise<boolean> => {
+    async (attestations: AttorneyAttestation): Promise<boolean> => {
       setState((prev) => ({ ...prev, isLoading: true, error: null }));
 
       const request: AttorneyVerificationRequest = {
-        barState,
-        barNumber,
         attestations,
       };
 
@@ -157,7 +143,6 @@ export function AttorneyProvider({ children }: { children: ReactNode }) {
           isVerified: true,
           isLoading: false,
           sessionId: response.sessionId || null,
-          barState,
           expiresAt: response.expiresAt || null,
           timeRemaining: response.expiresAt
             ? Math.floor((response.expiresAt.getTime() - Date.now()) / 1000)
@@ -186,7 +171,6 @@ export function AttorneyProvider({ children }: { children: ReactNode }) {
       isVerified: false,
       isLoading: false,
       sessionId: null,
-      barState: null,
       expiresAt: null,
       timeRemaining: 0,
       error: null,

@@ -27,7 +27,6 @@ export function useAttorneySession() {
     // State
     isVerified: state.isVerified,
     isLoading: state.isLoading,
-    barState: state.barState,
     expiresAt: state.expiresAt,
     timeRemaining: state.timeRemaining,
     error: state.error,

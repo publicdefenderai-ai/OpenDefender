@@ -23,7 +23,6 @@ class AttorneyAuditLogger {
     return {
       timestamp: new Date(),
       action,
-      barState: session.barState,
       sessionIdPrefix: session.sessionId.substring(0, 8),
     };
   }
@@ -34,7 +33,7 @@ class AttorneyAuditLogger {
   logSessionCreated(session: AttorneySession): void {
     const entry = this.createEntry(session, "session_created");
     this.addEntry(entry);
-    devLog(`[Attorney Audit] Session created: ${entry.barState}, ID: ${entry.sessionIdPrefix}...`);
+    devLog(`[Attorney Audit] Session created, ID: ${entry.sessionIdPrefix}...`);
   }
 
   /**
@@ -52,7 +51,7 @@ class AttorneyAuditLogger {
   logSessionTerminated(session: AttorneySession): void {
     const entry = this.createEntry(session, "session_terminated");
     this.addEntry(entry);
-    devLog(`[Attorney Audit] Session terminated: ${entry.barState}, ID: ${entry.sessionIdPrefix}...`);
+    devLog(`[Attorney Audit] Session terminated, ID: ${entry.sessionIdPrefix}...`);
   }
 
   /**
@@ -61,7 +60,7 @@ class AttorneyAuditLogger {
   logSessionExpired(session: AttorneySession): void {
     const entry = this.createEntry(session, "session_expired");
     this.addEntry(entry);
-    devLog(`[Attorney Audit] Session expired: ${entry.barState}, ID: ${entry.sessionIdPrefix}...`);
+    devLog(`[Attorney Audit] Session expired, ID: ${entry.sessionIdPrefix}...`);
   }
 
   /**
@@ -81,19 +80,14 @@ class AttorneyAuditLogger {
    */
   getStats(): {
     totalSessions: number;
-    byState: Record<string, number>;
     byAction: Record<string, number>;
     lastHour: number;
   } {
     const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
-    const byState: Record<string, number> = {};
     const byAction: Record<string, number> = {};
     let lastHour = 0;
 
     for (const entry of this.auditLog) {
-      // Count by state
-      byState[entry.barState] = (byState[entry.barState] || 0) + 1;
-
       // Count by action
       byAction[entry.action] = (byAction[entry.action] || 0) + 1;
 
@@ -105,7 +99,6 @@ class AttorneyAuditLogger {
 
     return {
       totalSessions: this.auditLog.filter(e => e.action === "session_created").length,
-      byState,
       byAction,
       lastHour,
     };
