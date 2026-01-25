@@ -3,7 +3,7 @@
  *
  * Manages verified attorney sessions with 30-minute TTL.
  * Sessions are stored in memory only (no database persistence).
- * Bar numbers are SHA-256 hashed before storage for privacy.
+ * Only attestation status is tracked - no personal data is collected.
  */
 
 import { randomUUID } from "crypto";
