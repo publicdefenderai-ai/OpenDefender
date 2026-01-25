@@ -5,7 +5,7 @@
  * Metadata only - never logs PII or bar numbers.
  */
 
-import type { AttorneySession, AttorneyAuditEntry } from "@shared/attorney/types";
+import type { AttorneySession, AttorneyAuditEntry } from "../../../shared/attorney/types";
 import { opsLog, devLog } from "../../utils/dev-logger";
 
 class AttorneyAuditLogger {

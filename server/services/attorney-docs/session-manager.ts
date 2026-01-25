@@ -7,8 +7,8 @@
  */
 
 import { randomUUID } from "crypto";
-import type { AttorneySession, AttorneyVerificationRequest } from "@shared/attorney/types";
-import { attorneyVerificationRequestSchema } from "@shared/attorney/attestation-schema";
+import type { AttorneySession, AttorneyVerificationRequest } from "../../../shared/attorney/types";
+import { attorneyVerificationRequestSchema } from "../../../shared/attorney/attestation-schema";
 import { auditLogger } from "./audit-logger";
 import { opsLog, devLog, errLog } from "../../utils/dev-logger";
 

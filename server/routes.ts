@@ -19,7 +19,7 @@ import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
 import { attorneySessionManager } from "./services/attorney-docs/session-manager";
-import { attorneyVerificationRequestSchema } from "@shared/attorney/attestation-schema";
+import { attorneyVerificationRequestSchema } from "../shared/attorney/attestation-schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
