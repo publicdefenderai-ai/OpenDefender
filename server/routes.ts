@@ -18,6 +18,8 @@ import { statuteSeeder } from "./services/statute-seeder";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
+import { attorneySessionManager } from "./services/attorney-docs/session-manager";
+import { attorneyVerificationRequestSchema } from "@shared/attorney/attestation-schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -76,6 +78,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
     },
     standardHeaders: true,
     legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // Rate limiter for attorney verification (10 attempts per hour per IP)
+  const attorneyVerificationRateLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 10, // 10 verification attempts per hour
+    message: {
+      success: false,
+      error: 'Too many verification attempts. Please try again in an hour.'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
     validate: { trustProxy: false, xForwardedForHeader: false }
   });
 
@@ -1056,6 +1072,113 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("OpenLaws bulk import failed:", error);
       res.status(500).json({ success: false, error: "Import failed" });
+    }
+  });
+
+  // ============================================================================
+  // Attorney Document Generation API
+  // ============================================================================
+
+  // Create verified attorney session
+  app.post("/api/attorney/verify", attorneyVerificationRateLimiter, async (req, res) => {
+    try {
+      const validation = attorneyVerificationRequestSchema.safeParse(req.body);
+
+      if (!validation.success) {
+        const errorMessages = validation.error.errors.map(e => `${e.path.join('.')}: ${e.message}`);
+        return res.status(400).json({
+          success: false,
+          error: `Validation failed: ${errorMessages.join(', ')}`
+        });
+      }
+
+      const session = attorneySessionManager.createSession(validation.data);
+
+      if (!session) {
+        return res.status(400).json({
+          success: false,
+          error: 'Failed to create attorney session'
+        });
+      }
+
+      // Set httpOnly cookie with session ID
+      res.cookie(attorneySessionManager.getCookieName(), session.sessionId, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'strict',
+        maxAge: attorneySessionManager.getSessionTTL(),
+        path: '/'
+      });
+
+      res.json({
+        success: true,
+        sessionId: session.sessionId,
+        expiresAt: session.expiresAt,
+        barState: session.barState
+      });
+    } catch (error) {
+      errLog("Attorney verification failed", error);
+      res.status(500).json({ success: false, error: "Verification failed" });
+    }
+  });
+
+  // Validate existing attorney session
+  app.get("/api/attorney/session", async (req, res) => {
+    try {
+      const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
+
+      if (!sessionId) {
+        return res.json({
+          success: true,
+          isVerified: false,
+          error: 'No session found'
+        });
+      }
+
+      const session = attorneySessionManager.validateSession(sessionId);
+
+      if (!session) {
+        // Clear invalid/expired cookie
+        res.clearCookie(attorneySessionManager.getCookieName(), { path: '/' });
+        return res.json({
+          success: true,
+          isVerified: false,
+          error: 'Session expired or invalid'
+        });
+      }
+
+      res.json({
+        success: true,
+        isVerified: true,
+        barState: session.barState,
+        expiresAt: session.expiresAt,
+        timeRemaining: attorneySessionManager.getTimeRemaining(sessionId)
+      });
+    } catch (error) {
+      errLog("Attorney session validation failed", error);
+      res.status(500).json({ success: false, error: "Session validation failed" });
+    }
+  });
+
+  // Terminate attorney session
+  app.delete("/api/attorney/session", async (req, res) => {
+    try {
+      const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
+
+      if (sessionId) {
+        attorneySessionManager.terminateSession(sessionId, 'user');
+      }
+
+      // Clear cookie regardless
+      res.clearCookie(attorneySessionManager.getCookieName(), { path: '/' });
+
+      res.json({
+        success: true,
+        message: 'Session terminated'
+      });
+    } catch (error) {
+      errLog("Attorney session termination failed", error);
+      res.status(500).json({ success: false, error: "Session termination failed" });
     }
   });
 

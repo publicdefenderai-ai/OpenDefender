@@ -143,6 +143,34 @@ export default function Disclaimers() {
           </div>
         </ScrollReveal>
 
+        {/* Attorney Tools */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Attorney Tools
+            </h2>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Licensed attorneys may use our document generation tools to draft legal filings. By using these tools, attorneys acknowledge and agree that:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Documents are generated as drafts only and require professional review before filing</li>
+                  <li>Attorneys are solely responsible for verifying accuracy before filing</li>
+                  <li>Attorneys must provide truthful attestation of bar membership</li>
+                  <li>We are not liable for false attestations or unauthorized use</li>
+                  <li>We do not verify bar credentials against external databases</li>
+                  <li>Attorney-client privilege protections depend on proper use by the attorney</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Warning:</strong> Misrepresenting bar membership or using these tools without authorization may violate state bar rules and applicable laws.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
         {/* About Third-Party Tools */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">

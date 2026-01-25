@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { PageTransition } from "@/components/ui/page-transition";
 import { NavigationGuardProvider } from "@/contexts/navigation-guard";
 import { ChatProvider } from "@/contexts/chat-context";
+import { AttorneyProvider } from "@/contexts/attorney-context";
 import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
 import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav";
@@ -45,6 +46,8 @@ import Chat from "@/pages/chat";
 import DocumentLibrary from "@/pages/document-library";
 import Resources from "@/pages/resources";
 import AttorneyPortal from "@/pages/attorney/index";
+import AttorneyVerify from "@/pages/attorney/verify";
+import AttorneyDocuments from "@/pages/attorney/documents";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -113,6 +116,8 @@ function Router() {
       <Route path="/document-library" component={DocumentLibrary} />
       <Route path="/resources" component={Resources} />
       <Route path="/attorney" component={AttorneyPortal} />
+      <Route path="/attorney/verify" component={AttorneyVerify} />
+      <Route path="/attorney/documents" component={AttorneyDocuments} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -139,21 +144,23 @@ function App() {
       <ThemeProvider defaultTheme="light" storageKey="public-defender-theme">
         <NavigationGuardProvider>
           <ChatProvider>
-            <TooltipProvider>
-              <Toaster />
-              <SkipNavigation />
-              <BetaBanner />
-              <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
-                <AnimatePresence mode="wait">
-                  <PageTransition key={location}>
-                    <Router />
-                  </PageTransition>
-                </AnimatePresence>
-              </main>
-              <ChatLauncher />
-              <MobileBottomNav />
-              <KeyboardShortcutsDialog />
-            </TooltipProvider>
+            <AttorneyProvider>
+              <TooltipProvider>
+                <Toaster />
+                <SkipNavigation />
+                <BetaBanner />
+                <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
+                  <AnimatePresence mode="wait">
+                    <PageTransition key={location}>
+                      <Router />
+                    </PageTransition>
+                  </AnimatePresence>
+                </main>
+                <ChatLauncher />
+                <MobileBottomNav />
+                <KeyboardShortcutsDialog />
+              </TooltipProvider>
+            </AttorneyProvider>
           </ChatProvider>
         </NavigationGuardProvider>
       </ThemeProvider>

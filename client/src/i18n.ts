@@ -2732,6 +2732,90 @@ i18n
           "shareWithAttorneyDesc": "If you have a lawyer, share this with them first before anyone else",
           "recommendation": "We recommend discussing this guidance with a licensed attorney before taking any action.",
           "confirmButton": "I Understand, Export PDF"
+        },
+        "attorneyPortal": {
+          "hero": {
+            "title": "Attorney Tools",
+            "subtitle": "Resources and tools for licensed attorneys representing clients in criminal and immigration matters."
+          },
+          "disclaimer": "These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.",
+          "comingSoon": "Coming Soon",
+          "documentGeneration": {
+            "title": "Document Generation",
+            "description": "AI-powered drafting for common criminal and immigration filings. Generate motions, notices, and other documents tailored to your client's case.",
+            "feature1": "Motions to Continue, Discovery, Bail Reduction",
+            "feature2": "Immigration court filings (EOIR-28, Bond Memos)",
+            "feature3": "Jurisdiction-specific formatting (CA, NY, TX, FL)",
+            "getStarted": "Get Started",
+            "button": "Coming Soon"
+          },
+          "courtRecords": {
+            "title": "Court Records Lookup",
+            "description": "Search federal court records through PACER and access free documents via RECAP. Research case history, docket entries, and filed documents.",
+            "feature1": "PACER integration for federal courts",
+            "feature2": "Free access via RECAP archive",
+            "feature3": "Docket search and document retrieval",
+            "button": "Search Court Records"
+          },
+          "sharedResources": {
+            "title": "Shared Resources",
+            "description": "These resources are available to everyone and may be useful for your practice.",
+            "statutes": "Statute Lookup",
+            "statutesDesc": "Search state and federal laws",
+            "documents": "Document Library",
+            "documentsDesc": "Legal forms and templates",
+            "glossary": "Legal Glossary",
+            "glossaryDesc": "Legal term definitions",
+            "courts": "Court Locator",
+            "courtsDesc": "Find court locations"
+          },
+          "guidanceNote": {
+            "title": "Personalized Guidance",
+            "description": "Our AI-powered guidance chat is also available for attorneys to quickly understand a client's situation or research rights and procedures.",
+            "button": "Get Guidance"
+          },
+          "verify": {
+            "title": "Attorney Verification",
+            "subtitle": "Please verify your bar membership to access document generation tools.",
+            "backToPortal": "Back to Attorney Portal",
+            "formTitle": "Bar Membership Verification",
+            "formDescription": "Enter your bar association information and confirm the required attestations to continue.",
+            "barState": "Bar Association State",
+            "selectState": "Select your bar association state",
+            "stateBarWebsite": "State Bar Website",
+            "barNumber": "Bar Number",
+            "barNumberPlaceholder": "e.g., 123456",
+            "barNumberNote": "Your bar number is hashed before storage and never stored in plaintext.",
+            "attestationsTitle": "Required Attestations",
+            "attestation1": "I am a licensed attorney in good standing with my state bar association.",
+            "attestation2": "I am accessing these tools on behalf of a client I represent.",
+            "attestation3": "I understand that attorney-client privilege protections depend on proper use of these tools.",
+            "attestation4": "I accept the",
+            "termsOfService": "Terms of Service",
+            "tosTitle": "Attorney Tools Terms of Service",
+            "tosSubtitle": "Please review before accepting.",
+            "tosContent": "By using these attorney tools, you acknowledge and agree to the following:",
+            "privacyNotice": "Your session data will be automatically deleted after 30 minutes. We do not store bar numbers in plaintext.",
+            "verifying": "Verifying...",
+            "submit": "Verify and Continue"
+          },
+          "session": {
+            "expiresIn": "Session expires in",
+            "checking": "Checking session...",
+            "redirecting": "Redirecting to verification..."
+          },
+          "documents": {
+            "title": "Document Generation",
+            "subtitle": "AI-powered document drafting for criminal and immigration matters.",
+            "barState": "Bar State",
+            "criminal": "Criminal",
+            "immigration": "Immigration",
+            "sessionNote": "Your session will automatically end after 30 minutes of inactivity.",
+            "endSession": "End Session",
+            "comingSoonTitle": "Templates Coming Soon",
+            "criminalComingSoon": "Criminal law templates including Motions to Continue, Discovery Requests, and Bail Reduction motions are being developed.",
+            "immigrationComingSoon": "Immigration templates including EOIR-28 forms, Bond Memoranda, and Change of Venue motions are being developed."
+          }
         }
       }
       },
@@ -5448,6 +5532,90 @@ i18n
           "shareWithAttorneyDesc": "Si tiene un abogado, comparta esto primero con él antes que con cualquier otra persona",
           "recommendation": "Le recomendamos discutir esta orientación con un abogado licenciado antes de tomar cualquier acción.",
           "confirmButton": "Entiendo, Exportar PDF"
+        },
+        "attorneyPortal": {
+          "hero": {
+            "title": "Herramientas para Abogados",
+            "subtitle": "Recursos y herramientas para abogados con licencia que representan clientes en asuntos penales e inmigratorios."
+          },
+          "disclaimer": "Estas herramientas están diseñadas para abogados con licencia. Las funciones de generación de documentos requieren certificación de membresía al colegio de abogados.",
+          "comingSoon": "Próximamente",
+          "documentGeneration": {
+            "title": "Generación de Documentos",
+            "description": "Redacción impulsada por IA para presentaciones penales e inmigratorias comunes. Genere mociones, avisos y otros documentos adaptados al caso de su cliente.",
+            "feature1": "Mociones de Continuación, Descubrimiento, Reducción de Fianza",
+            "feature2": "Presentaciones de tribunal de inmigración (EOIR-28, Memorandos de Fianza)",
+            "feature3": "Formato específico por jurisdicción (CA, NY, TX, FL)",
+            "getStarted": "Comenzar",
+            "button": "Próximamente"
+          },
+          "courtRecords": {
+            "title": "Búsqueda de Registros Judiciales",
+            "description": "Busque registros de tribunales federales a través de PACER y acceda a documentos gratuitos vía RECAP. Investigue historial de casos, entradas de expedientes y documentos presentados.",
+            "feature1": "Integración PACER para tribunales federales",
+            "feature2": "Acceso gratuito vía archivo RECAP",
+            "feature3": "Búsqueda de expedientes y recuperación de documentos",
+            "button": "Buscar Registros Judiciales"
+          },
+          "sharedResources": {
+            "title": "Recursos Compartidos",
+            "description": "Estos recursos están disponibles para todos y pueden ser útiles para su práctica.",
+            "statutes": "Búsqueda de Estatutos",
+            "statutesDesc": "Buscar leyes estatales y federales",
+            "documents": "Biblioteca de Documentos",
+            "documentsDesc": "Formularios y plantillas legales",
+            "glossary": "Glosario Legal",
+            "glossaryDesc": "Definiciones de términos legales",
+            "courts": "Localizador de Tribunales",
+            "courtsDesc": "Encontrar ubicaciones de tribunales"
+          },
+          "guidanceNote": {
+            "title": "Orientación Personalizada",
+            "description": "Nuestro chat de orientación impulsado por IA también está disponible para que los abogados comprendan rápidamente la situación de un cliente o investiguen derechos y procedimientos.",
+            "button": "Obtener Orientación"
+          },
+          "verify": {
+            "title": "Verificación de Abogado",
+            "subtitle": "Por favor verifique su membresía al colegio de abogados para acceder a las herramientas de generación de documentos.",
+            "backToPortal": "Volver al Portal de Abogados",
+            "formTitle": "Verificación de Membresía del Colegio de Abogados",
+            "formDescription": "Ingrese su información del colegio de abogados y confirme las certificaciones requeridas para continuar.",
+            "barState": "Estado del Colegio de Abogados",
+            "selectState": "Seleccione el estado de su colegio de abogados",
+            "stateBarWebsite": "Sitio Web del Colegio Estatal",
+            "barNumber": "Número de Colegiado",
+            "barNumberPlaceholder": "ej., 123456",
+            "barNumberNote": "Su número de colegiado se cifra antes de almacenarse y nunca se guarda en texto plano.",
+            "attestationsTitle": "Certificaciones Requeridas",
+            "attestation1": "Soy un abogado con licencia en buena posición con mi colegio de abogados estatal.",
+            "attestation2": "Estoy accediendo a estas herramientas en nombre de un cliente que represento.",
+            "attestation3": "Entiendo que las protecciones del privilegio abogado-cliente dependen del uso adecuado de estas herramientas.",
+            "attestation4": "Acepto los",
+            "termsOfService": "Términos de Servicio",
+            "tosTitle": "Términos de Servicio de Herramientas para Abogados",
+            "tosSubtitle": "Por favor revise antes de aceptar.",
+            "tosContent": "Al usar estas herramientas para abogados, usted reconoce y acepta lo siguiente:",
+            "privacyNotice": "Los datos de su sesión se eliminarán automáticamente después de 30 minutos. No almacenamos números de colegiado en texto plano.",
+            "verifying": "Verificando...",
+            "submit": "Verificar y Continuar"
+          },
+          "session": {
+            "expiresIn": "La sesión expira en",
+            "checking": "Verificando sesión...",
+            "redirecting": "Redirigiendo a verificación..."
+          },
+          "documents": {
+            "title": "Generación de Documentos",
+            "subtitle": "Redacción de documentos impulsada por IA para asuntos penales e inmigratorios.",
+            "barState": "Estado del Colegio",
+            "criminal": "Penal",
+            "immigration": "Inmigración",
+            "sessionNote": "Su sesión terminará automáticamente después de 30 minutos de inactividad.",
+            "endSession": "Terminar Sesión",
+            "comingSoonTitle": "Plantillas Próximamente",
+            "criminalComingSoon": "Las plantillas de derecho penal incluyendo Mociones de Continuación, Solicitudes de Descubrimiento y mociones de Reducción de Fianza están siendo desarrolladas.",
+            "immigrationComingSoon": "Las plantillas de inmigración incluyendo formularios EOIR-28, Memorandos de Fianza y mociones de Cambio de Sede están siendo desarrolladas."
+          }
         }
         }
       }

@@ -1,5 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import helmet from "helmet";
+import cookieParser from "cookie-parser";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import { runStartupValidation } from "./services/charge-statute-validator";
@@ -38,6 +39,9 @@ app.use(helmet({
 // SECURITY: Explicit request size limits to prevent DoS attacks
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: false, limit: '1mb' }));
+
+// Cookie parser for attorney session management
+app.use(cookieParser());
 
 // ============================================================================
 // SECURITY: CSRF Protection for API endpoints

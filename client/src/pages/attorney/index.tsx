@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, FileText, Clock, Shield, ArrowRight } from "lucide-react";
+import { Briefcase, FileText, Shield, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -33,10 +33,10 @@ export default function AttorneyPortal() {
               <Briefcase className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
-              {t('attorney.hero.title', 'Attorney Tools')}
+              {t('attorneyPortal.hero.title', 'Attorney Tools')}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('attorney.hero.subtitle', 'Resources and tools for licensed attorneys representing clients in criminal and immigration matters.')}
+              {t('attorneyPortal.hero.subtitle', 'Resources and tools for licensed attorneys representing clients in criminal and immigration matters.')}
             </p>
           </motion.div>
         </div>
@@ -49,47 +49,44 @@ export default function AttorneyPortal() {
           <Alert className="mb-8 border-slate-200 bg-slate-50 dark:bg-slate-900/50">
             <Shield className="h-4 w-4" />
             <AlertDescription>
-              {t('attorney.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.')}
+              {t('attorneyPortal.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.')}
             </AlertDescription>
           </Alert>
 
           {/* Tools Grid */}
           <div className="grid gap-6 md:grid-cols-2">
-            {/* Document Generation - Coming Soon */}
-            <Card className="relative overflow-hidden border-slate-200">
-              <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200">
-                  <Clock className="h-3 w-3 mr-1" />
-                  {t('attorney.comingSoon', 'Coming Soon')}
-                </span>
-              </div>
+            {/* Document Generation - Available */}
+            <Card className="border-slate-200 hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center mb-3">
                   <FileText className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                <CardTitle>{t('attorney.documentGeneration.title', 'Document Generation')}</CardTitle>
+                <CardTitle>{t('attorneyPortal.documentGeneration.title', 'Document Generation')}</CardTitle>
                 <CardDescription>
-                  {t('attorney.documentGeneration.description', 'AI-powered drafting for common criminal and immigration filings. Generate motions, notices, and other documents tailored to your client\'s case.')}
+                  {t('attorneyPortal.documentGeneration.description', 'AI-powered drafting for common criminal and immigration filings. Generate motions, notices, and other documents tailored to your client\'s case.')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-muted-foreground space-y-2 mb-4">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorney.documentGeneration.feature1', 'Motions to Continue, Discovery, Bail Reduction')}
+                    {t('attorneyPortal.documentGeneration.feature1', 'Motions to Continue, Discovery, Bail Reduction')}
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorney.documentGeneration.feature2', 'Immigration court filings (EOIR-28, Bond Memos)')}
+                    {t('attorneyPortal.documentGeneration.feature2', 'Immigration court filings (EOIR-28, Bond Memos)')}
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorney.documentGeneration.feature3', 'Jurisdiction-specific formatting (CA, NY, TX, FL)')}
+                    {t('attorneyPortal.documentGeneration.feature3', 'Jurisdiction-specific formatting (CA, NY, TX, FL)')}
                   </li>
                 </ul>
-                <Button disabled className="w-full" variant="outline">
-                  {t('attorney.documentGeneration.button', 'Coming Soon')}
-                </Button>
+                <Link href="/attorney/verify">
+                  <Button className="w-full">
+                    {t('attorneyPortal.documentGeneration.getStarted', 'Get Started')}
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -99,29 +96,29 @@ export default function AttorneyPortal() {
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center mb-3">
                   <Briefcase className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
-                <CardTitle>{t('attorney.courtRecords.title', 'Court Records Lookup')}</CardTitle>
+                <CardTitle>{t('attorneyPortal.courtRecords.title', 'Court Records Lookup')}</CardTitle>
                 <CardDescription>
-                  {t('attorney.courtRecords.description', 'Search federal court records through PACER and access free documents via RECAP. Research case history, docket entries, and filed documents.')}
+                  {t('attorneyPortal.courtRecords.description', 'Search federal court records through PACER and access free documents via RECAP. Research case history, docket entries, and filed documents.')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="text-sm text-muted-foreground space-y-2 mb-4">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorney.courtRecords.feature1', 'PACER integration for federal courts')}
+                    {t('attorneyPortal.courtRecords.feature1', 'PACER integration for federal courts')}
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorney.courtRecords.feature2', 'Free access via RECAP archive')}
+                    {t('attorneyPortal.courtRecords.feature2', 'Free access via RECAP archive')}
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorney.courtRecords.feature3', 'Docket search and document retrieval')}
+                    {t('attorneyPortal.courtRecords.feature3', 'Docket search and document retrieval')}
                   </li>
                 </ul>
                 <Link href="/court-records">
                   <Button className="w-full">
-                    {t('attorney.courtRecords.button', 'Search Court Records')}
+                    {t('attorneyPortal.courtRecords.button', 'Search Court Records')}
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 </Link>
@@ -132,18 +129,18 @@ export default function AttorneyPortal() {
           {/* Shared Resources Section */}
           <div className="mt-12">
             <h2 className="text-xl font-semibold mb-4 text-foreground">
-              {t('attorney.sharedResources.title', 'Shared Resources')}
+              {t('attorneyPortal.sharedResources.title', 'Shared Resources')}
             </h2>
             <p className="text-muted-foreground mb-6">
-              {t('attorney.sharedResources.description', 'These resources are available to everyone and may be useful for your practice.')}
+              {t('attorneyPortal.sharedResources.description', 'These resources are available to everyone and may be useful for your practice.')}
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <Link href="/statutes">
                 <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
                   <CardContent className="p-4">
-                    <h3 className="font-medium mb-1">{t('attorney.sharedResources.statutes', 'Statute Lookup')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('attorney.sharedResources.statutesDesc', 'Search state and federal laws')}</p>
+                    <h3 className="font-medium mb-1">{t('attorneyPortal.sharedResources.statutes', 'Statute Lookup')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('attorneyPortal.sharedResources.statutesDesc', 'Search state and federal laws')}</p>
                   </CardContent>
                 </Card>
               </Link>
@@ -151,8 +148,8 @@ export default function AttorneyPortal() {
               <Link href="/document-library">
                 <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
                   <CardContent className="p-4">
-                    <h3 className="font-medium mb-1">{t('attorney.sharedResources.documents', 'Document Library')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('attorney.sharedResources.documentsDesc', 'Legal forms and templates')}</p>
+                    <h3 className="font-medium mb-1">{t('attorneyPortal.sharedResources.documents', 'Document Library')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('attorneyPortal.sharedResources.documentsDesc', 'Legal forms and templates')}</p>
                   </CardContent>
                 </Card>
               </Link>
@@ -160,8 +157,8 @@ export default function AttorneyPortal() {
               <Link href="/legal-glossary">
                 <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
                   <CardContent className="p-4">
-                    <h3 className="font-medium mb-1">{t('attorney.sharedResources.glossary', 'Legal Glossary')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('attorney.sharedResources.glossaryDesc', 'Legal term definitions')}</p>
+                    <h3 className="font-medium mb-1">{t('attorneyPortal.sharedResources.glossary', 'Legal Glossary')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('attorneyPortal.sharedResources.glossaryDesc', 'Legal term definitions')}</p>
                   </CardContent>
                 </Card>
               </Link>
@@ -169,8 +166,8 @@ export default function AttorneyPortal() {
               <Link href="/court-locator">
                 <Card className="hover:shadow-md transition-shadow cursor-pointer h-full">
                   <CardContent className="p-4">
-                    <h3 className="font-medium mb-1">{t('attorney.sharedResources.courts', 'Court Locator')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('attorney.sharedResources.courtsDesc', 'Find court locations')}</p>
+                    <h3 className="font-medium mb-1">{t('attorneyPortal.sharedResources.courts', 'Court Locator')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('attorneyPortal.sharedResources.courtsDesc', 'Find court locations')}</p>
                   </CardContent>
                 </Card>
               </Link>
@@ -180,14 +177,14 @@ export default function AttorneyPortal() {
           {/* Personalized Guidance Note */}
           <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-100 dark:border-blue-900">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
-              {t('attorney.guidanceNote.title', 'Personalized Guidance')}
+              {t('attorneyPortal.guidanceNote.title', 'Personalized Guidance')}
             </h3>
             <p className="text-sm text-blue-800 dark:text-blue-200 mb-4">
-              {t('attorney.guidanceNote.description', 'Our AI-powered guidance chat is also available for attorneys to quickly understand a client\'s situation or research rights and procedures.')}
+              {t('attorneyPortal.guidanceNote.description', 'Our AI-powered guidance chat is also available for attorneys to quickly understand a client\'s situation or research rights and procedures.')}
             </p>
             <Link href="/chat">
               <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-100 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/50">
-                {t('attorney.guidanceNote.button', 'Get Guidance')}
+                {t('attorneyPortal.guidanceNote.button', 'Get Guidance')}
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
             </Link>
