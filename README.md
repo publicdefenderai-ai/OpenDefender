@@ -36,6 +36,14 @@ To democratize access to legal information and resources, particularly for indiv
 - **Privacy-First**: All user data is ephemeral and deleted after session
 - **Automatic Timeout Handling**: Reliable service with retry logic
 
+### ⚖️ Attorney Document Generation (NEW)
+- **Verified Attorney Portal** with attestation-based access
+- **Motion to Continue Template** with California-specific variant (LA Superior Court format)
+- **AI-Generated Content**: Good cause statements and legal arguments with proper citations
+- **Word (.docx) Export** with California Rules of Court formatting (CRC 2.104-2.111)
+- **Multi-Step Wizard** for guided document creation
+- **Session-Protected**: 30-minute secure sessions with automatic cleanup
+
 ### 🌍 Accessibility
 - **Bilingual Support**: Full English and Spanish translations
 - **Mobile-Optimized**: Responsive design works on all devices
@@ -100,3 +108,67 @@ npm run db:push
 
 # Start the development server
 npm run dev
+```
+
+---
+
+## 📋 Attorney Portal
+
+The Attorney Portal provides verified attorneys with AI-powered document generation tools.
+
+### Available Templates
+| Template | Jurisdiction | Status |
+|----------|--------------|--------|
+| Motion to Continue | California (LA Superior Court) | ✅ Available |
+| Motion to Continue | Generic (all states) | ✅ Available |
+| Discovery Request | Coming Soon | 🚧 Planned |
+| Bail Reduction Motion | Coming Soon | 🚧 Planned |
+
+### Document Features
+- **California Formatting**: Compliant with California Rules of Court (CRC 2.104-2.111)
+- **Line Numbers**: Automatic line numbering for California pleading paper
+- **AI Sections**: Claude-generated good cause statements and legal arguments
+- **Penal Code Citations**: Automatic inclusion of PC § 1050, § 1382 for CA motions
+- **DOCX Export**: Professional Word document ready for filing
+
+### Security
+- Attestation-based verification (no bar credentials stored)
+- 30-minute session timeout with automatic cleanup
+- Rate-limited AI generation (10 requests per 15 minutes)
+- PII never sent to AI - only case metadata
+
+---
+
+## 🏗️ Architecture
+
+```
+├── client/                 # React frontend (Vite)
+│   ├── components/         # Reusable UI components
+│   │   └── attorney/       # Attorney portal components
+│   ├── pages/              # Page components
+│   └── lib/                # API clients and utilities
+├── server/                 # Express backend
+│   ├── routes.ts           # API endpoints
+│   └── services/           # Business logic
+│       └── attorney-docs/  # Document generation services
+├── shared/                 # Shared types and data
+│   ├── templates/          # Document template definitions
+│   └── attorney/           # Attorney types and schemas
+└── db/                     # Database schema (Drizzle ORM)
+```
+
+---
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) for details.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting a pull request.
+
+---
+
+**Disclaimer**: This platform provides legal information, not legal advice. Always consult with a licensed attorney for legal matters.

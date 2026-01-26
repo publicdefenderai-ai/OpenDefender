@@ -128,6 +128,7 @@ function renderInputControl(input: TemplateInput, field: any) {
           {...field}
           type="date"
           placeholder={input.placeholder}
+          className="[&::-webkit-calendar-picker-indicator]:dark:invert [&::-webkit-calendar-picker-indicator]:dark:opacity-70 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
         />
       );
 
