@@ -33,7 +33,6 @@ import {
   WidthType,
   VerticalAlign,
   convertInchesToTwip,
-  LineNumberRestartType,
 } from "docx";
 import type { GeneratedDocument, GeneratedSection } from "./document-generator";
 import { devLog, errLog } from "../../utils/dev-logger";
@@ -193,7 +192,7 @@ export async function generateDocx(
               ? {
                   lineNumbers: {
                     countBy: 1,
-                    restart: LineNumberRestartType.NEW_PAGE,
+                    restart: "newPage" as const,
                   },
                 }
               : {}),
