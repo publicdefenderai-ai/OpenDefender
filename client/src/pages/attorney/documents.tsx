@@ -1,12 +1,13 @@
 /**
  * Attorney Documents Page
  *
- * Document generation shell page for verified attorneys.
- * Templates will be added in Phase 1B.
+ * Document generation page for verified attorneys.
+ * Displays available templates organized by category.
  */
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FileText, Folder, LogOut, Clock, Scale, Plane } from "lucide-react";
+import { FileText, Folder, LogOut, Clock, Scale, Plane, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -20,6 +21,8 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { VerificationGuard } from "@/components/attorney/verification-guard";
 import { SessionTimer } from "@/components/attorney/session-timer";
 import { useAttorneySession } from "@/hooks/use-attorney-session";
+import { TemplateCard, TemplateGrid } from "@/components/attorney/template-card";
+import { fetchTemplates, type DocumentTemplateSummary } from "@/lib/attorney-api";
 
 function DocumentsContent() {
   useScrollToTop();
@@ -75,11 +78,11 @@ function DocumentsContent() {
             </TabsList>
 
             <TabsContent value="criminal" className="space-y-6">
-              <TemplateGrid category="criminal" />
+              <CategoryTemplateGrid category="criminal" />
             </TabsContent>
 
             <TabsContent value="immigration" className="space-y-6">
-              <TemplateGrid category="immigration" />
+              <CategoryTemplateGrid category="immigration" />
             </TabsContent>
           </Tabs>
 
@@ -113,15 +116,68 @@ function DocumentsContent() {
   );
 }
 
-interface TemplateGridProps {
+interface CategoryTemplateGridProps {
   category: "criminal" | "immigration";
 }
 
-function TemplateGrid({ category }: TemplateGridProps) {
+function CategoryTemplateGrid({ category }: CategoryTemplateGridProps) {
   const { t } = useTranslation();
+  const [templates, setTemplates] = useState<DocumentTemplateSummary[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Phase 1A: Show empty state with coming soon message
-  // Templates will be added in Phase 1B
+  useEffect(() => {
+    async function loadTemplates() {
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const result = await fetchTemplates(category);
+
+        if (result.success && result.templates) {
+          setTemplates(result.templates);
+        } else {
+          setError(result.error || "Failed to load templates");
+        }
+      } catch (err: any) {
+        setError(err.message || "Failed to load templates");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    loadTemplates();
+  }, [category]);
+
+  // Show loading state
+  if (isLoading) {
+    return (
+      <Card>
+        <CardContent className="flex flex-col items-center justify-center py-16">
+          <Loader2 className="h-8 w-8 text-blue-600 animate-spin mb-4" />
+          <p className="text-muted-foreground">Loading templates...</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <Card className="border-red-200">
+        <CardContent className="flex flex-col items-center justify-center py-16 text-center">
+          <p className="text-red-600">{error}</p>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  // Show templates if available
+  if (templates.length > 0) {
+    return <TemplateGrid templates={templates} />;
+  }
+
+  // Show coming soon for categories without templates yet
   return (
     <Card className="border-dashed">
       <CardContent className="flex flex-col items-center justify-center py-16 text-center">
@@ -135,7 +191,7 @@ function TemplateGrid({ category }: TemplateGridProps) {
           {category === "criminal"
             ? t(
                 "attorney.documents.criminalComingSoon",
-                "Criminal law templates including Motions to Continue, Discovery Requests, and Bail Reduction motions are being developed."
+                "Additional criminal law templates including Discovery Requests and Bail Reduction motions are being developed."
               )
             : t(
                 "attorney.documents.immigrationComingSoon",
@@ -145,7 +201,6 @@ function TemplateGrid({ category }: TemplateGridProps) {
         <div className="mt-6 flex flex-wrap gap-2 justify-center">
           {category === "criminal" ? (
             <>
-              <Badge variant="outline">Motion to Continue</Badge>
               <Badge variant="outline">Discovery Request</Badge>
               <Badge variant="outline">Bail Reduction</Badge>
               <Badge variant="outline">Suppression Motion</Badge>

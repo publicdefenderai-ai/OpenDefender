@@ -20,6 +20,9 @@ import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
 import { attorneySessionManager } from "./services/attorney-docs/session-manager";
 import { attorneyVerificationRequestSchema } from "../shared/attorney/attestation-schema";
+import { getTemplates, getTemplate, generateDocument, getGeneratedDocument } from "./services/attorney-docs/document-generator";
+import { generateDocx } from "./services/attorney-docs/docx-generator";
+import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -1177,6 +1180,202 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Attorney session termination failed", error);
       res.status(500).json({ success: false, error: "Session termination failed" });
+    }
+  });
+
+  // ============================================================================
+  // Attorney Session Middleware
+  // ============================================================================
+
+  /**
+   * Middleware to validate attorney session for protected endpoints
+   */
+  const requireAttorneySession = (req: Request, res: Response, next: NextFunction) => {
+    const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
+
+    if (!sessionId) {
+      return res.status(401).json({
+        success: false,
+        error: 'Attorney session required'
+      });
+    }
+
+    const session = attorneySessionManager.validateSession(sessionId);
+
+    if (!session) {
+      res.clearCookie(attorneySessionManager.getCookieName(), { path: '/' });
+      return res.status(401).json({
+        success: false,
+        error: 'Session expired or invalid'
+      });
+    }
+
+    // Attach session info to request for use in handlers
+    (req as any).attorneySession = session;
+    next();
+  };
+
+  // ============================================================================
+  // Attorney Document Templates API
+  // ============================================================================
+
+  // List available templates
+  app.get("/api/attorney/templates", requireAttorneySession, async (req, res) => {
+    try {
+      const { category } = req.query;
+      const templates = getTemplates(category as string);
+
+      res.json({
+        success: true,
+        templates
+      });
+    } catch (error) {
+      errLog("Failed to fetch templates", error);
+      res.status(500).json({ success: false, error: "Failed to fetch templates" });
+    }
+  });
+
+  // Get specific template
+  app.get("/api/attorney/templates/:templateId", requireAttorneySession, async (req, res) => {
+    try {
+      const { templateId } = req.params;
+      const { jurisdiction } = req.query;
+
+      const template = getTemplate(templateId, jurisdiction as string);
+
+      if (!template) {
+        return res.status(404).json({
+          success: false,
+          error: 'Template not found'
+        });
+      }
+
+      res.json({
+        success: true,
+        template
+      });
+    } catch (error) {
+      errLog("Failed to fetch template", error);
+      res.status(500).json({ success: false, error: "Failed to fetch template" });
+    }
+  });
+
+  // Generate document (AI sections) - rate limited
+  const generateDocumentSchema = z.object({
+    templateId: z.string(),
+    jurisdiction: z.string(),
+    formData: z.record(z.string(), z.string())
+  });
+
+  app.post("/api/attorney/documents/generate", requireAttorneySession, aiRateLimiter, async (req, res) => {
+    try {
+      const validation = generateDocumentSchema.safeParse(req.body);
+
+      if (!validation.success) {
+        const errorMessages = validation.error.errors.map(e => `${e.path.join('.')}: ${e.message}`);
+        return res.status(400).json({
+          success: false,
+          error: `Validation failed: ${errorMessages.join(', ')}`
+        });
+      }
+
+      const { templateId, jurisdiction, formData } = validation.data;
+      const session = (req as any).attorneySession;
+
+      const document = await generateDocument({
+        templateId,
+        jurisdiction,
+        formData,
+        sessionId: session.sessionId
+      });
+
+      res.json({
+        success: true,
+        document: {
+          documentId: document.documentId,
+          templateId: document.templateId,
+          templateName: document.templateName,
+          jurisdiction: document.jurisdiction,
+          sections: document.sections,
+          generatedAt: document.generatedAt.toISOString(),
+          expiresAt: document.expiresAt.toISOString()
+        }
+      });
+    } catch (error: any) {
+      errLog("Document generation failed", error);
+      res.status(500).json({
+        success: false,
+        error: error.message || "Document generation failed"
+      });
+    }
+  });
+
+  // Export document to DOCX
+  app.post("/api/attorney/documents/export", requireAttorneySession, async (req, res) => {
+    try {
+      const { documentId, formData } = req.body;
+
+      if (!documentId) {
+        return res.status(400).json({
+          success: false,
+          error: 'Document ID required'
+        });
+      }
+
+      const document = getGeneratedDocument(documentId);
+
+      if (!document) {
+        return res.status(404).json({
+          success: false,
+          error: 'Document not found or expired'
+        });
+      }
+
+      // Generate DOCX
+      const docxBuffer = await generateDocx(document, formData || {});
+
+      // Set headers for file download
+      const filename = `${document.templateName.replace(/\s+/g, '_')}_${document.documentId.substring(0, 8)}.docx`;
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      res.setHeader('Content-Length', docxBuffer.length);
+
+      res.send(docxBuffer);
+    } catch (error) {
+      errLog("Document export failed", error);
+      res.status(500).json({ success: false, error: "Document export failed" });
+    }
+  });
+
+  // Get generated document by ID
+  app.get("/api/attorney/documents/:documentId", requireAttorneySession, async (req, res) => {
+    try {
+      const { documentId } = req.params;
+
+      const document = getGeneratedDocument(documentId);
+
+      if (!document) {
+        return res.status(404).json({
+          success: false,
+          error: 'Document not found or expired'
+        });
+      }
+
+      res.json({
+        success: true,
+        document: {
+          documentId: document.documentId,
+          templateId: document.templateId,
+          templateName: document.templateName,
+          jurisdiction: document.jurisdiction,
+          sections: document.sections,
+          generatedAt: document.generatedAt.toISOString(),
+          expiresAt: document.expiresAt.toISOString()
+        }
+      });
+    } catch (error) {
+      errLog("Failed to fetch document", error);
+      res.status(500).json({ success: false, error: "Failed to fetch document" });
     }
   });
 

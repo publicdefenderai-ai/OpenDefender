@@ -48,6 +48,7 @@ import Resources from "@/pages/resources";
 import AttorneyPortal from "@/pages/attorney/index";
 import AttorneyVerify from "@/pages/attorney/verify";
 import AttorneyDocuments from "@/pages/attorney/documents";
+import DocumentWizard from "@/pages/attorney/document-wizard";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -118,6 +119,7 @@ function Router() {
       <Route path="/attorney" component={AttorneyPortal} />
       <Route path="/attorney/verify" component={AttorneyVerify} />
       <Route path="/attorney/documents" component={AttorneyDocuments} />
+      <Route path="/attorney/documents/:templateId" component={DocumentWizard} />
       <Route component={NotFound} />
     </Switch>
   );
