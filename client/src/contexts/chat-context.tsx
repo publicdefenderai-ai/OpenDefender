@@ -43,6 +43,7 @@ export type ConversationStep =
   | 'resources_menu'
   | 'laws_records_menu'
   | 'immigration_info'
+  | 'immigration_submenu'
   | 'immigration_situation'
   | 'immigration_urgent_location'
   | 'immigration_planning_who'

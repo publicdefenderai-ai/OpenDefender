@@ -251,13 +251,13 @@ export default function ChatPage() {
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_immigration') {
-          addBotMessageWithKey('chat.messages.immigrationSituation', [
-            { id: 'imm-urgent', labelKey: 'chat.replies.immUrgent', value: 'imm_urgent', color: 'rose' as const },
-            { id: 'imm-planning', labelKey: 'chat.replies.immPlanning', value: 'imm_planning', color: 'blue' as const },
-            { id: 'imm-detained', labelKey: 'chat.replies.immDetained', value: 'imm_detained', color: 'amber' as const },
-            { id: 'imm-general', labelKey: 'chat.replies.immGeneralInfo', value: 'imm_general', color: 'slate' as const },
+          addBotMessageWithKey('chat.messages.immigrationMenu', [
+            { id: 'imm-know-rights', labelKey: 'chat.replies.immKnowYourRights', value: 'imm_know_rights', color: 'green' as const },
+            { id: 'imm-situational', labelKey: 'chat.replies.immSituationalGuides', value: 'imm_situational', color: 'blue' as const },
+            { id: 'imm-find-detained', labelKey: 'chat.replies.immFindDetained', value: 'imm_find_detained', color: 'amber' as const },
+            { id: 'imm-find-lawyer', labelKey: 'chat.replies.immFindLawyer', value: 'imm_find_lawyer', color: 'rose' as const },
           ]);
-          actions.setCurrentStep('immigration_situation');
+          actions.setCurrentStep('immigration_submenu');
         } else if (reply.value === 'menu_rights') {
           addBotMessageWithKey('chat.messages.rightsMenu', [
             { id: 'rights-constitutional', labelKey: 'chat.replies.constitutionalRights', value: 'rights_constitutional', color: 'slate' as const },
@@ -384,6 +384,28 @@ export default function ChatPage() {
             { id: 'process-personalized', labelKey: 'chat.replies.personalizedGuidance', value: 'personalized_guidance', color: 'blue' as const },
             { id: 'process-rights', labelKey: 'chat.replies.myRights', value: 'learn_rights', color: 'slate' as const },
           ]);
+        }
+        break;
+
+      case 'immigration_submenu':
+        if (reply.value === 'imm_know_rights') {
+          setLocation('/immigration-guidance');
+          actions.markFlowCompleted('immigration');
+        } else if (reply.value === 'imm_situational') {
+          setLocation('/immigration-guidance');
+          actions.markFlowCompleted('immigration');
+          setTimeout(() => {
+            const el = document.getElementById('detailed-guides');
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 200);
+        } else if (reply.value === 'imm_find_detained') {
+          setLocation('/immigration-guidance/find-detained');
+          actions.markFlowCompleted('immigration');
+        } else if (reply.value === 'imm_find_lawyer') {
+          setLocation('/immigration-guidance/find-attorney');
+          actions.markFlowCompleted('immigration');
         }
         break;
 

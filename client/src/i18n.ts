@@ -579,6 +579,14 @@ i18n
               "courtRecords": "Court Records Search",
               "statutes": "Statutes Search",
               "documentLibrary": "Document Library"
+            },
+            "immigrationSubmenu": {
+              "title": "Immigration Enforcement",
+              "backButton": "Back to Main Menu",
+              "knowYourRights": "Know Your Rights",
+              "situationalGuides": "Situational Guides",
+              "findDetained": "Find a Detained Person",
+              "findLawyer": "Find a Lawyer"
             }
           },
           "case": {
@@ -2547,6 +2555,7 @@ i18n
             "guidanceReady": "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records.",
             "error": "I'm sorry, I encountered an issue generating your guidance. Please try again or contact support if the problem continues.",
             "immigrationSummary": "**Immigration Enforcement Information**\n\nIf you're worried about immigration enforcement, here's what you should know:\n\n**Your Rights:**\n• You have the right to remain silent about your immigration status\n• You don't have to open your door to immigration officers without a judicial warrant\n• You have the right to speak to a lawyer before answering questions\n\n**If Approached by ICE:**\n• Stay calm and don't run\n• Ask if you are free to leave\n• Don't sign any documents without speaking to a lawyer\n• Remember details about the encounter\n\nFor comprehensive immigration guidance, visit our full [Immigration Guidance](/immigration-guidance) page.\n\n**What else can I help you with?**",
+            "immigrationMenu": "How can we help with immigration?",
             "immigrationSituation": "I can help you with immigration-related questions. **What best describes your situation?**",
             "immigrationUrgent": {
               "reminder": "🚨 **Immediate Rights Reminder:**\n\n• **Stay calm** - Don't run or resist\n• **You have the right to remain silent** - You don't have to answer questions about your status\n• **Ask if you're free to leave** - If yes, calmly walk away\n• **Don't sign anything** without understanding it fully\n• **Request a lawyer** before answering questions\n\n**Where is this happening?**",
@@ -2657,7 +2666,11 @@ i18n
             "immFamilyPlanning": "Family Planning Guide",
             "immWorkplaceRaids": "Workplace Raids Guide",
             "immBondHearings": "Bond Hearings Info",
-            "immBackToHub": "Back to Immigration Hub"
+            "immBackToHub": "Back to Immigration Hub",
+            "immKnowYourRights": "Know Your Rights",
+            "immSituationalGuides": "Situational Guides",
+            "immFindDetained": "Find a Detained Person",
+            "immFindLawyer": "Find a Lawyer"
           },
           "header": {
             "title": "Legal Guidance Chat",
@@ -3397,6 +3410,14 @@ i18n
               "courtRecords": "Búsqueda de Registros Judiciales",
               "statutes": "Búsqueda de Estatutos",
               "documentLibrary": "Biblioteca de Documentos"
+            },
+            "immigrationSubmenu": {
+              "title": "Aplicación de Inmigración",
+              "backButton": "Volver al Menú Principal",
+              "knowYourRights": "Conozca Sus Derechos",
+              "situationalGuides": "Guías Situacionales",
+              "findDetained": "Encontrar a una Persona Detenida",
+              "findLawyer": "Encontrar un Abogado"
             }
           },
           "case": {
@@ -5365,6 +5386,7 @@ i18n
             "guidanceReady": "¡Su orientación legal está lista! He preparado un resumen de su situación, plazos importantes, sus derechos y próximos pasos recomendados.\n\nPuede exportar esto para guardarlo en sus registros.",
             "error": "Lo siento, encontré un problema al generar su orientación. Por favor intente de nuevo o contacte soporte si el problema continúa.",
             "immigrationSummary": "**Información sobre Aplicación de Inmigración**\n\nSi le preocupa la aplicación de inmigración, esto es lo que debe saber:\n\n**Sus Derechos:**\n• Tiene derecho a permanecer en silencio sobre su estatus migratorio\n• No tiene que abrir su puerta a oficiales de inmigración sin una orden judicial\n• Tiene derecho a hablar con un abogado antes de responder preguntas\n\n**Si es Abordado por ICE:**\n• Mantenga la calma y no corra\n• Pregunte si es libre de irse\n• No firme ningún documento sin hablar con un abogado\n• Recuerde detalles sobre el encuentro\n\nPara orientación completa sobre inmigración, visite nuestra página de [Guía de Inmigración](/immigration-guidance).\n\n**¿En qué más puedo ayudarle?**",
+            "immigrationMenu": "¿Cómo podemos ayudarle con inmigración?",
             "immigrationSituation": "Puedo ayudarle con preguntas relacionadas con inmigración. **¿Qué describe mejor su situación?**",
             "immigrationUrgent": {
               "reminder": "🚨 **Recordatorio Inmediato de Derechos:**\n\n• **Mantenga la calma** - No corra ni resista\n• **Tiene derecho a permanecer en silencio** - No tiene que responder preguntas sobre su estatus\n• **Pregunte si es libre de irse** - Si sí, aléjese calmadamente\n• **No firme nada** sin entenderlo completamente\n• **Solicite un abogado** antes de responder preguntas\n\n**¿Dónde está ocurriendo esto?**",
@@ -5475,7 +5497,11 @@ i18n
             "immFamilyPlanning": "Guía de Planificación Familiar",
             "immWorkplaceRaids": "Guía de Redadas en el Trabajo",
             "immBondHearings": "Info de Audiencias de Fianza",
-            "immBackToHub": "Volver al Centro de Inmigración"
+            "immBackToHub": "Volver al Centro de Inmigración",
+            "immKnowYourRights": "Conozca Sus Derechos",
+            "immSituationalGuides": "Guías Situacionales",
+            "immFindDetained": "Encontrar a una Persona Detenida",
+            "immFindLawyer": "Encontrar un Abogado"
           },
           "header": {
             "title": "Chat de Orientación Legal",

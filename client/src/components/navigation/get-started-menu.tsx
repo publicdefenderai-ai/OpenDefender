@@ -19,7 +19,10 @@ import {
   Home as HomeIcon,
   FileSearch,
   FileText,
-  Briefcase
+  Briefcase,
+  Eye,
+  UserCheck,
+  BookOpen
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -31,7 +34,7 @@ interface GetStartedMenuProps {
   onShowLegalAid?: () => void;
 }
 
-type MenuLevel = "main" | "resources" | "legal-rights" | "legal-aid" | "laws-records";
+type MenuLevel = "main" | "resources" | "legal-rights" | "legal-aid" | "laws-records" | "immigration";
 
 export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLegalAid }: GetStartedMenuProps) {
   const [, setLocation] = useLocation();
@@ -39,11 +42,24 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
   const { t } = useTranslation();
 
   const handleNavigate = (path: string) => {
-    setLocation(path);
+    const hashIndex = path.indexOf('#');
+    const basePath = hashIndex >= 0 ? path.substring(0, hashIndex) : path;
+    const hash = hashIndex >= 0 ? path.substring(hashIndex + 1) : null;
+
+    setLocation(basePath);
     onClose();
     setCurrentMenu("main");
-    // Scroll to top after navigation
-    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 200);
+    } else {
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+    }
   };
 
   const handleShowPublicDefender = () => {
@@ -100,7 +116,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/immigration-guidance')}
+        onClick={() => setCurrentMenu("immigration")}
         className="w-full"
         data-testid="menu-item-immigration"
       >
@@ -499,6 +515,89 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
     </div>
   );
 
+  // Immigration submenu
+  const immigrationMenu = (
+    <div className="space-y-3">
+      <Button
+        variant="ghost"
+        onClick={goBack}
+        className="mb-2"
+        data-testid="button-back-immigration"
+      >
+        <ArrowLeft className="h-4 w-4 mr-2" />
+        {t('getStartedMenu.immigrationSubmenu.backButton')}
+      </Button>
+
+      <button
+        onClick={() => handleNavigate('/immigration-guidance')}
+        className="w-full"
+        data-testid="submenu-item-know-your-rights"
+      >
+        <Card className="hover:shadow-md hover:border-green-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Shield className="h-5 w-5 text-green-600" />
+              <span className="font-medium group-hover:text-green-600 transition-colors">
+                {t('getStartedMenu.immigrationSubmenu.knowYourRights')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/immigration-guidance#detailed-guides')}
+        className="w-full"
+        data-testid="submenu-item-situational-guides"
+      >
+        <Card className="hover:shadow-md hover:border-blue-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <BookOpen className="h-5 w-5 text-blue-600" />
+              <span className="font-medium group-hover:text-blue-600 transition-colors">
+                {t('getStartedMenu.immigrationSubmenu.situationalGuides')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/immigration-guidance/find-detained')}
+        className="w-full"
+        data-testid="submenu-item-find-detained"
+      >
+        <Card className="hover:shadow-md hover:border-cyan-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Eye className="h-5 w-5 text-cyan-600" />
+              <span className="font-medium group-hover:text-cyan-600 transition-colors">
+                {t('getStartedMenu.immigrationSubmenu.findDetained')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/immigration-guidance/find-attorney')}
+        className="w-full"
+        data-testid="submenu-item-find-lawyer"
+      >
+        <Card className="hover:shadow-md hover:border-red-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <UserCheck className="h-5 w-5 text-red-600" />
+              <span className="font-medium group-hover:text-red-600 transition-colors">
+                {t('getStartedMenu.immigrationSubmenu.findLawyer')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+    </div>
+  );
+
   const getMenuTitle = () => {
     switch (currentMenu) {
       case "resources":
@@ -509,6 +608,8 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         return t('getStartedMenu.legalAidSubmenu.title');
       case "laws-records":
         return t('getStartedMenu.lawsRecordsSubmenu.title');
+      case "immigration":
+        return t('getStartedMenu.immigrationSubmenu.title');
       default:
         return t('getStartedMenu.main.title');
     }
@@ -524,6 +625,8 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         return legalAidMenu;
       case "laws-records":
         return lawsRecordsMenu;
+      case "immigration":
+        return immigrationMenu;
       default:
         return mainMenu;
     }

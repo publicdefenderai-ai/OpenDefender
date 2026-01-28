@@ -357,7 +357,7 @@ export default function ImmigrationGuidance() {
       </section>
 
       {/* Topic Navigation Cards */}
-      <section className="py-16 bg-background">
+      <section id="detailed-guides" className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
