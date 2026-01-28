@@ -544,7 +544,17 @@ i18n
               "attorneyTools": {
                 "title": "Attorney Tools",
                 "description": "Document drafting and resources for legal professionals"
+              },
+              "resources": {
+                "title": "Resources",
+                "description": "Legal aid, support services, laws, court records, and documents"
               }
+            },
+            "resourcesSubmenu": {
+              "title": "Resources",
+              "backButton": "Back to Main Menu",
+              "legalAid": "Legal Aid Resources & Support",
+              "lawsRecords": "Laws & Documents"
             },
             "legalRightsSubmenu": {
               "title": "Legal Rights Info",
@@ -557,7 +567,7 @@ i18n
             },
             "legalAidSubmenu": {
               "title": "Legal Aid Resources & Support",
-              "backButton": "Back to Main Menu",
+              "backButton": "Back to Resources",
               "publicDefender": "Find Public Defender",
               "legalAidOrgs": "Legal Aid Organizations",
               "diversionPrograms": "Diversion Programs",
@@ -565,7 +575,7 @@ i18n
             },
             "lawsRecordsSubmenu": {
               "title": "Laws & Documents",
-              "backButton": "Back to Main Menu",
+              "backButton": "Back to Resources",
               "courtRecords": "Court Records Search",
               "statutes": "Statutes Search",
               "documentLibrary": "Document Library"
@@ -984,6 +994,18 @@ i18n
                 "attorneyCard": {
                   "title": "Find & Verify an Attorney",
                   "description": "Avoid fraud, verify credentials, find free legal help"
+                },
+                "findDetainedCard": {
+                  "title": "Find a Detained Person",
+                  "description": "Use the ICE Detainee Locator, understand A-Numbers, bond information, and facility contacts"
+                },
+                "kyrCard": {
+                  "title": "Know Your Rights Materials",
+                  "description": "Printable red cards, ICE encounter scripts, warrant recognition guides"
+                },
+                "raidsToolkitCard": {
+                  "title": "Community Raids Toolkit",
+                  "description": "Safety checklists, emergency contact cards, scenario-specific preparedness guides"
                 }
               },
               "backButton": "Back to Immigration Hub"
@@ -2548,6 +2570,7 @@ i18n
             "rightsMenu": "Which rights topic would you like to learn about?",
             "rightsInfo": "**Your Key Constitutional Rights:**\n\n🛡️ **Right to Remain Silent** (5th Amendment)\nYou cannot be forced to testify against yourself. Anything you say can be used against you in court.\n\n⚖️ **Right to an Attorney** (6th Amendment)\nYou have the right to a lawyer. If you can't afford one, the court will appoint a public defender.\n\n📞 **Right to a Phone Call**\nMost states allow at least one phone call after booking to contact family or an attorney.\n\n📜 **Right to Know the Charges**\nYou must be told what crimes you're accused of.\n\n---\nFor more detailed information, visit our [Know Your Rights](/rights-info) page.\n\n**What would you like to do next?**",
             "processInfo": "**The Criminal Justice Process:**\n\n**1. Arrest & Booking** (0-48 hours)\nYou're taken into custody, fingerprinted, and photographed. You may be held until arraignment.\n\n**2. Arraignment** (24-72 hours after arrest)\nFirst court appearance where charges are read, you enter a plea, and bail is set.\n\n**3. Pre-Trial** (Weeks to months)\nDiscovery of evidence, plea negotiations, and motions are filed.\n\n**4. Trial** (If no plea deal)\nEvidence is presented before a judge or jury who decides guilt.\n\n**5. Sentencing** (If convicted)\nJudge determines punishment based on guidelines and circumstances.\n\n**6. Appeal** (Optional)\nYou can challenge the verdict or sentence through higher courts.\n\n---\nFor a complete guide, visit our [Criminal Justice Process](/process) page.\n\n**What would you like to do next?**",
+            "resourcesCategoryMenu": "What type of resource are you looking for?",
             "resourcesMenu": "What type of resource are you looking for?",
             "lawsMenu": "What would you like to search?",
             "enterZipPD": "Please enter your ZIP code to find Public Defender offices near you:",
@@ -2572,6 +2595,7 @@ i18n
             "getHelp": "Get Help with My Case",
             "knowRights": "Know My Rights",
             "findResources": "Find Resources",
+            "legalAidResources": "Legal Aid Resources & Support",
             "personalizedGuidance": "Personalized Guidance",
             "immigrationEnforcement": "Immigration Enforcement",
             "rightsInfo": "Rights Info",
@@ -3338,7 +3362,17 @@ i18n
               "attorneyTools": {
                 "title": "Herramientas para Abogados",
                 "description": "Redacción de documentos y recursos para profesionales legales"
+              },
+              "resources": {
+                "title": "Recursos",
+                "description": "Asistencia legal, servicios de apoyo, leyes, registros judiciales y documentos"
               }
+            },
+            "resourcesSubmenu": {
+              "title": "Recursos",
+              "backButton": "Volver al Menú Principal",
+              "legalAid": "Recursos y Apoyo de Asistencia Legal",
+              "lawsRecords": "Leyes y Documentos"
             },
             "legalRightsSubmenu": {
               "title": "Información de Derechos Legales",
@@ -3351,7 +3385,7 @@ i18n
             },
             "legalAidSubmenu": {
               "title": "Recursos y Apoyo de Asistencia Legal",
-              "backButton": "Volver al Menú Principal",
+              "backButton": "Volver a Recursos",
               "publicDefender": "Encontrar Defensor Público",
               "legalAidOrgs": "Organizaciones de Asistencia Legal",
               "diversionPrograms": "Programas de Desviación",
@@ -3359,7 +3393,7 @@ i18n
             },
             "lawsRecordsSubmenu": {
               "title": "Leyes y Documentos",
-              "backButton": "Volver al Menú Principal",
+              "backButton": "Volver a Recursos",
               "courtRecords": "Búsqueda de Registros Judiciales",
               "statutes": "Búsqueda de Estatutos",
               "documentLibrary": "Biblioteca de Documentos"
@@ -3778,6 +3812,18 @@ i18n
                 "attorneyCard": {
                   "title": "Encontrar y Verificar un Abogado",
                   "description": "Evitar fraudes, verificar credenciales, encontrar ayuda legal gratuita"
+                },
+                "findDetainedCard": {
+                  "title": "Encontrar a una Persona Detenida",
+                  "description": "Use el Localizador de Detenidos de ICE, entienda los Números A, información de fianza y contactos de instalaciones"
+                },
+                "kyrCard": {
+                  "title": "Materiales Conozca Sus Derechos",
+                  "description": "Tarjetas rojas imprimibles, guiones para encuentros con ICE, guías de reconocimiento de órdenes judiciales"
+                },
+                "raidsToolkitCard": {
+                  "title": "Kit de Herramientas Comunitario para Redadas",
+                  "description": "Listas de seguridad, tarjetas de contacto de emergencia, guías de preparación por escenario"
                 }
               },
               "backButton": "Volver al Centro de Inmigración"
@@ -5342,6 +5388,7 @@ i18n
             "rightsMenu": "¿Sobre qué tema de derechos le gustaría aprender?",
             "rightsInfo": "**Sus Derechos Constitucionales Clave:**\n\n🛡️ **Derecho a Permanecer en Silencio** (5ta Enmienda)\nNo puede ser obligado a testificar contra sí mismo. Todo lo que diga puede usarse en su contra en la corte.\n\n⚖️ **Derecho a un Abogado** (6ta Enmienda)\nTiene derecho a un abogado. Si no puede pagar uno, la corte le asignará un defensor público.\n\n📞 **Derecho a una Llamada Telefónica**\nLa mayoría de los estados permiten al menos una llamada después del registro para contactar a la familia o un abogado.\n\n📜 **Derecho a Conocer los Cargos**\nDebe ser informado de qué crímenes se le acusa.\n\n---\nPara información más detallada, visite nuestra página [Conozca sus Derechos](/rights-info).\n\n**¿Qué le gustaría hacer ahora?**",
             "processInfo": "**El Proceso de Justicia Penal:**\n\n**1. Arresto y Registro** (0-48 horas)\nEs llevado a custodia, le toman huellas y fotografías. Puede ser retenido hasta la lectura de cargos.\n\n**2. Lectura de Cargos** (24-72 horas después del arresto)\nPrimera comparecencia ante el tribunal donde se leen los cargos, usted declara y se fija la fianza.\n\n**3. Pre-Juicio** (Semanas a meses)\nDescubrimiento de evidencia, negociaciones de acuerdo y se presentan mociones.\n\n**4. Juicio** (Si no hay acuerdo)\nSe presenta evidencia ante un juez o jurado que decide la culpabilidad.\n\n**5. Sentencia** (Si es condenado)\nEl juez determina el castigo basándose en guías y circunstancias.\n\n**6. Apelación** (Opcional)\nPuede impugnar el veredicto o sentencia a través de tribunales superiores.\n\n---\nPara una guía completa, visite nuestra página [Proceso de Justicia Penal](/process).\n\n**¿Qué le gustaría hacer ahora?**",
+            "resourcesCategoryMenu": "¿Qué tipo de recurso está buscando?",
             "resourcesMenu": "¿Qué tipo de recurso está buscando?",
             "lawsMenu": "¿Qué le gustaría buscar?",
             "enterZipPD": "Por favor ingrese su código postal para encontrar oficinas de Defensor Público cerca de usted:",
@@ -5366,6 +5413,7 @@ i18n
             "getHelp": "Ayuda con Mi Caso",
             "knowRights": "Conocer Mis Derechos",
             "findResources": "Encontrar Recursos",
+            "legalAidResources": "Recursos y Apoyo de Asistencia Legal",
             "personalizedGuidance": "Orientación Personalizada",
             "immigrationEnforcement": "Aplicación de Inmigración",
             "rightsInfo": "Info de Derechos",

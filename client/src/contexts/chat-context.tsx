@@ -39,6 +39,7 @@ export type ConversationStep =
   | 'emergency_options'
   | 'main_menu'
   | 'rights_info_menu'
+  | 'resources_category_menu'
   | 'resources_menu'
   | 'laws_records_menu'
   | 'immigration_info'

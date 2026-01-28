@@ -56,13 +56,13 @@ const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; v
   personalized_guidance: { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' },
   immigration: { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' },
   rights_info: { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' },
-  resources: { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' },
+  resources: { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources_category', color: 'purple' },
   laws_records: { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' },
   attorney_tools: { id: 'menu-attorney', labelKey: 'chat.replies.attorneyTools', value: 'menu_attorney', color: 'slate' },
 };
 
 function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: CompletedFlow[] = []): QuickReply[] {
-  // 4 main journeys: Get Help, Immigration Enforcement, Know Your Rights, Find Resources
+  // 4 main journeys: Get Help, Immigration Enforcement, Know Your Rights, Resources
   const mainFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources'];
   return mainFlows
     .filter(flow => flow !== excludeFlow && !completedFlows.includes(flow))
@@ -166,8 +166,7 @@ export default function ChatPage() {
         quickReplies: [
           { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
           { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
-          { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
-          { id: 'menu-laws', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
+          { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources_category', color: 'purple' as const },
         ],
       });
       actions.setCurrentStep('main_menu');
@@ -239,8 +238,8 @@ export default function ChatPage() {
             { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
             { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
             { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
-            { id: 'menu-resources', labelKey: 'chat.replies.findResources', value: 'menu_resources', color: 'green' as const },
             { id: 'menu-attorney', labelKey: 'chat.replies.attorneyTools', value: 'menu_attorney', color: 'slate' as const },
+            { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources_category', color: 'purple' as const },
           ]);
           actions.setCurrentStep('main_menu');
         }
@@ -268,6 +267,12 @@ export default function ChatPage() {
             { id: 'rights-glossary', labelKey: 'chat.replies.legalGlossary', value: 'rights_glossary', color: 'slate' as const },
           ]);
           actions.setCurrentStep('rights_info_menu');
+        } else if (reply.value === 'menu_resources_category') {
+          addBotMessageWithKey('chat.messages.resourcesCategoryMenu', [
+            { id: 'resources-legal-aid-cat', labelKey: 'chat.replies.legalAidResources', value: 'menu_resources', color: 'purple' as const },
+            { id: 'resources-laws-cat', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
+          ]);
+          actions.setCurrentStep('resources_category_menu');
         } else if (reply.value === 'menu_resources') {
           addBotMessageWithKey('chat.messages.resourcesMenu', [
             { id: 'resources-pd', labelKey: 'chat.replies.findPublicDefender', value: 'resources_pd', color: 'green' as const },
@@ -294,6 +299,25 @@ export default function ChatPage() {
           actions.setCurrentStep('legal_aid_zip_search');
         } else if (reply.value === 'export_pdf') {
           handleExportClick();
+        }
+        break;
+
+      case 'resources_category_menu':
+        if (reply.value === 'menu_resources') {
+          addBotMessageWithKey('chat.messages.resourcesMenu', [
+            { id: 'resources-pd', labelKey: 'chat.replies.findPublicDefender', value: 'resources_pd', color: 'green' as const },
+            { id: 'resources-legal-aid', labelKey: 'chat.replies.legalAidOrgs', value: 'resources_legal_aid', color: 'green' as const },
+            { id: 'resources-diversion', labelKey: 'chat.replies.diversionPrograms', value: 'resources_diversion', color: 'green' as const },
+            { id: 'resources-expungement', labelKey: 'chat.replies.recordExpungement', value: 'resources_expungement', color: 'green' as const },
+          ]);
+          actions.setCurrentStep('resources_menu');
+        } else if (reply.value === 'menu_laws') {
+          addBotMessageWithKey('chat.messages.lawsMenu', [
+            { id: 'laws-court', labelKey: 'chat.replies.courtRecords', value: 'laws_court', color: 'purple' as const },
+            { id: 'laws-statutes', labelKey: 'chat.replies.statutesSearch', value: 'laws_statutes', color: 'purple' as const },
+            { id: 'laws-documents', labelKey: 'chat.replies.documentLibrary', value: 'laws_documents', color: 'purple' as const },
+          ]);
+          actions.setCurrentStep('laws_records_menu');
         }
         break;
 

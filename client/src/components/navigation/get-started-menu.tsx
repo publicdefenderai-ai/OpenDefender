@@ -31,7 +31,7 @@ interface GetStartedMenuProps {
   onShowLegalAid?: () => void;
 }
 
-type MenuLevel = "main" | "legal-rights" | "legal-aid" | "laws-records";
+type MenuLevel = "main" | "resources" | "legal-rights" | "legal-aid" | "laws-records";
 
 export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLegalAid }: GetStartedMenuProps) {
   const [, setLocation] = useLocation();
@@ -150,56 +150,6 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => setCurrentMenu("legal-aid")}
-        className="w-full"
-        data-testid="menu-item-legal-aid-resources"
-      >
-        <Card className="hover:shadow-lg hover:border-purple-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <Users className="h-6 w-6 text-white" />
-              </div>
-              <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors">
-                  {t('getStartedMenu.main.legalAid.title')}
-                </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
-                  {t('getStartedMenu.main.legalAid.description')}
-                </p>
-              </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
-            </div>
-          </CardContent>
-        </Card>
-      </button>
-
-      <button
-        onClick={() => setCurrentMenu("laws-records")}
-        className="w-full"
-        data-testid="menu-item-laws-records"
-      >
-        <Card className="hover:shadow-lg hover:border-indigo-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <FileSearch className="h-6 w-6 text-white" />
-              </div>
-              <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-indigo-600 transition-colors">
-                  {t('getStartedMenu.main.lawsRecords.title')}
-                </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
-                  {t('getStartedMenu.main.lawsRecords.description')}
-                </p>
-              </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-indigo-600 transition-colors flex-shrink-0" />
-            </div>
-          </CardContent>
-        </Card>
-      </button>
-
-      <button
         onClick={() => handleNavigate('/attorney')}
         className="w-full"
         data-testid="menu-item-attorney-tools"
@@ -219,6 +169,31 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
                 </p>
               </div>
               <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-slate-600 transition-colors flex-shrink-0" />
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => setCurrentMenu("resources")}
+        className="w-full"
+        data-testid="menu-item-resources"
+      >
+        <Card className="hover:shadow-lg hover:border-purple-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-4">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1 text-left min-w-0">
+                <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors">
+                  {t('getStartedMenu.main.resources.title')}
+                </h3>
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                  {t('getStartedMenu.main.resources.description')}
+                </p>
+              </div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -331,7 +306,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
     <div className="space-y-3">
       <Button
         variant="ghost"
-        onClick={goBack}
+        onClick={() => setCurrentMenu("resources")}
         className="mb-2"
         data-testid="button-back-aid"
       >
@@ -414,7 +389,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
     <div className="space-y-3">
       <Button
         variant="ghost"
-        onClick={goBack}
+        onClick={() => setCurrentMenu("resources")}
         className="mb-2"
         data-testid="button-back-laws"
       >
@@ -475,8 +450,59 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
     </div>
   );
 
+  // Resources submenu (Legal Aid + Laws & Documents)
+  const resourcesMenu = (
+    <div className="space-y-3">
+      <Button
+        variant="ghost"
+        onClick={goBack}
+        className="mb-2"
+        data-testid="button-back-resources"
+      >
+        <ArrowLeft className="h-4 w-4 mr-2" />
+        {t('getStartedMenu.resourcesSubmenu.backButton')}
+      </Button>
+
+      <button
+        onClick={() => setCurrentMenu("legal-aid")}
+        className="w-full"
+        data-testid="submenu-item-legal-aid"
+      >
+        <Card className="hover:shadow-md hover:border-purple-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Users className="h-5 w-5 text-purple-600" />
+              <span className="font-medium group-hover:text-purple-600 transition-colors">
+                {t('getStartedMenu.resourcesSubmenu.legalAid')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => setCurrentMenu("laws-records")}
+        className="w-full"
+        data-testid="submenu-item-laws-records"
+      >
+        <Card className="hover:shadow-md hover:border-indigo-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <FileSearch className="h-5 w-5 text-indigo-600" />
+              <span className="font-medium group-hover:text-indigo-600 transition-colors">
+                {t('getStartedMenu.resourcesSubmenu.lawsRecords')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+    </div>
+  );
+
   const getMenuTitle = () => {
     switch (currentMenu) {
+      case "resources":
+        return t('getStartedMenu.resourcesSubmenu.title');
       case "legal-rights":
         return t('getStartedMenu.legalRightsSubmenu.title');
       case "legal-aid":
@@ -490,6 +516,8 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
 
   const getMenuContent = () => {
     switch (currentMenu) {
+      case "resources":
+        return resourcesMenu;
       case "legal-rights":
         return legalRightsMenu;
       case "legal-aid":
