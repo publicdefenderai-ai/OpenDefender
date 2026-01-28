@@ -488,6 +488,75 @@ export default function ImmigrationGuidance() {
                 </Card>
               </Link>
             </ScrollReveal>
+
+            <ScrollReveal delay={0.35}>
+              <Link href="/immigration-guidance/find-detained">
+                <Card className="h-full hover:shadow-lg hover:border-cyan-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent flex items-center justify-center ring-1 ring-cyan-500/20 flex-shrink-0">
+                        <Eye className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-cyan-600 transition-colors" data-testid="link-find-detained">
+                          {t('immigration.hub.detailedGuides.findDetainedCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.findDetainedCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-cyan-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Link href="/immigration-guidance/know-your-rights">
+                <Card className="h-full hover:shadow-lg hover:border-emerald-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 via-emerald-500/10 to-transparent flex items-center justify-center ring-1 ring-emerald-500/20 flex-shrink-0">
+                        <FileText className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-emerald-600 transition-colors" data-testid="link-know-your-rights">
+                          {t('immigration.hub.detailedGuides.kyrCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.kyrCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-emerald-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.45}>
+              <Link href="/immigration-guidance/raids-toolkit">
+                <Card className="h-full hover:shadow-lg hover:border-amber-500/50 transition-all duration-200 cursor-pointer group">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-transparent flex items-center justify-center ring-1 ring-amber-500/20 flex-shrink-0">
+                        <Flag className="h-6 w-6 text-amber-600 dark:text-amber-400" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg group-hover:text-amber-600 transition-colors" data-testid="link-raids-toolkit">
+                          {t('immigration.hub.detailedGuides.raidsToolkitCard.title')}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {t('immigration.hub.detailedGuides.raidsToolkitCard.description')}
+                        </p>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-amber-600 transition-colors flex-shrink-0" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </ScrollReveal>
           </div>
         </div>
       </section>

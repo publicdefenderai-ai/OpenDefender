@@ -29,6 +29,9 @@ import WorkplaceRaids from "@/pages/immigration/workplace-raids";
 import FamilyPlanning from "@/pages/immigration/family-planning";
 import BondHearings from "@/pages/immigration/bond-hearings";
 import FindAttorney from "@/pages/immigration/find-attorney";
+import FindDetained from "@/pages/immigration/find-detained";
+import KnowYourRights from "@/pages/immigration/know-your-rights";
+import RaidsToolkit from "@/pages/immigration/raids-toolkit";
 import LegalGlossary from "@/pages/legal-glossary";
 import DiversionPrograms from "@/pages/diversion-programs";
 import RecordExpungement from "@/pages/record-expungement";
@@ -100,6 +103,9 @@ function Router() {
       <Route path="/immigration-guidance/family-planning" component={FamilyPlanning} />
       <Route path="/immigration-guidance/bond-hearings" component={BondHearings} />
       <Route path="/immigration-guidance/find-attorney" component={FindAttorney} />
+      <Route path="/immigration-guidance/find-detained" component={FindDetained} />
+      <Route path="/immigration-guidance/know-your-rights" component={KnowYourRights} />
+      <Route path="/immigration-guidance/raids-toolkit" component={RaidsToolkit} />
       <Route path="/legal-glossary" component={LegalGlossary} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
       <Route path="/record-expungement" component={RecordExpungement} />
