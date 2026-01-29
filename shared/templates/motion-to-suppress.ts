@@ -7,6 +7,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
+import { CA_COUNTIES, NY_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -44,13 +45,7 @@ const captionInputs: TemplateInput[] = [
     required: false,
     helpText: "The county where the court is located (used in caption for state courts)",
     validation: {
-      options: [
-        { value: "Los Angeles", label: "Los Angeles" },
-        { value: "San Diego", label: "San Diego" },
-        { value: "San Francisco", label: "San Francisco" },
-        { value: "Alameda", label: "Alameda" },
-        { value: "other", label: "Other" },
-      ],
+      options: CA_COUNTIES,
     },
   },
   {
@@ -436,6 +431,29 @@ ____________________________
   },
 ];
 
+// NY-specific caption inputs (same fields but with NY counties)
+const nyCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, validation: { ...input.validation, options: NY_COUNTIES } }
+    : input
+);
+
+// NY base sections (uses NY counties in caption)
+const nyBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: nyCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // evidenceInfo
+  baseSections[2], // constitutionalBasis
+  baseSections[3], // hearingInfo
+];
+
 // ============================================================================
 // California-Specific Sections
 // ============================================================================
@@ -716,6 +734,292 @@ ____________________________
 ];
 
 // ============================================================================
+// New York State Sections
+// ============================================================================
+
+const newYorkSections: TemplateSection[] = [
+  ...nyBaseSections,
+
+  // NY statement of facts (CPL Article 710)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (CPL Article 710) in a New York criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under New York CPL \u00A7 710.20, a defendant may move to suppress:
+(1) Evidence obtained by unlawful search or seizure
+(2) Eavesdropping evidence unlawfully obtained
+(3) Identification testimony tainted by suggestive procedures
+(4) Statements involuntarily made or obtained in violation of constitutional rights
+(5) Evidence obtained in violation of defendant's rights under N.Y. Const. Art. I, \u00A7 12
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense. Do not include legal argument \u2014 only facts.`,
+    aiInstructions: "Generate a factual narrative for a New York CPL Article 710 motion. Present facts chronologically.",
+    helpText: "AI will generate a New York-specific statement of facts",
+  },
+
+  // NY legal argument (CPL \u00A7 710.20)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under New York Criminal Procedure Law Article 710.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable New York law includes:
+- CPL \u00A7 710.20: Grounds for suppression (search/seizure, eavesdropping, identification, statements)
+- CPL \u00A7 710.60: Court's determination of motion; when hearing required
+- CPL \u00A7 710.30: Notice requirements for prosecution's intended evidence
+- N.Y. Const. Art. I, \u00A7 12: Protection against unreasonable searches and seizures
+- People v. P.J. Video, 68 N.Y.2d 296 (1986): New York's independent interpretation of search and seizure (broader than federal Fourth Amendment)
+- People v. Griminger, 71 N.Y.2d 635 (1988): Burden of proof on suppression motions
+- People v. De Bour, 40 N.Y.2d 210 (1976): Four-tier framework for police encounters
+- People v. Cantor, 36 N.Y.2d 106 (1975): Standing requirements
+
+Generate 3-5 paragraphs that:
+1. Cite CPL \u00A7 710.20 as the statutory basis and identify the specific subsection
+2. State the burden of proof (People bear burden of showing legality for warrantless searches; presumption of unreasonableness)
+3. Apply the specific constitutional violation to the facts using New York case law
+4. Note that New York provides broader protections under N.Y. Const. Art. I, \u00A7 12 than the federal Fourth Amendment
+5. Address any potential government arguments (consent, exigent circumstances, inevitable discovery)
+
+Use proper New York legal citation format (e.g., "CPL \u00A7 710.20").`,
+    aiInstructions: "Must cite CPL \u00A7 710.20 and relevant New York case law. Note New York's broader constitutional protections where applicable. Use New York citation format.",
+    helpText: "AI will generate New York-specific legal arguments",
+  },
+
+  // NY prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to New York Criminal Procedure Law \u00A7 710.20 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Section 12 of the New York State Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution and Article I, Sections 6 and 12 of the New York State Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion pursuant to CPL \u00A7 710.60;
+
+5. Dismiss or reduce the charges if suppression of the evidence renders the prosecution's case insufficient;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "New York prayer for relief citing CPL Article 710",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // NY certificate of service
+  {
+    id: "certificateOfService",
+    name: "Affidavit of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `AFFIDAVIT OF SERVICE
+
+STATE OF NEW YORK, COUNTY OF ____________________
+
+I, the undersigned, being duly sworn, depose and say that I am over the age of eighteen years and not a party to this action. I am employed in the County of ____________, State of New York.
+
+On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE (CPL \u00A7 710.20) upon all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in a post office official depository under the exclusive care and custody of the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via NYSCEF to the email address(es) of record.
+
+PEOPLE OF THE STATE OF NEW YORK
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+Sworn to before me this _____ day of ______________, 20___
+
+____________________________
+Notary Public
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "New York-specific affidavit of service format",
+  },
+];
+
+// ============================================================================
+// New York Federal Sections
+// ============================================================================
+
+const nyFederalSections: TemplateSection[] = [
+  ...nyBaseSections,
+
+  // Federal statement of facts
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of New York.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial. The motion must state the grounds for suppression with particularity.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers and agencies involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence under the Fourth, Fifth, and/or Sixth Amendments.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes:
+- Federal Rule of Criminal Procedure 12(b)(3): Pre-trial motions to suppress
+- Mapp v. Ohio, 367 U.S. 643 (1961): Exclusionary rule applies to states
+- Wong Sun v. United States, 371 U.S. 471 (1963): Fruit of the poisonous tree
+- United States v. Leon, 468 U.S. 897 (1984): Good faith exception
+- Miranda v. Arizona, 384 U.S. 436 (1966): Fifth Amendment warnings
+- Katz v. United States, 389 U.S. 347 (1967): Reasonable expectation of privacy
+- Second Circuit precedent on suppression motions
+
+Generate 3-5 paragraphs that:
+1. Cite Federal Rule of Criminal Procedure 12(b)(3) as the procedural basis
+2. State the applicable constitutional standard and burden of proof
+3. Apply the facts to the legal standard, showing why suppression is required
+4. Cite controlling Supreme Court and Second Circuit precedent
+5. Address potential government arguments (good faith, inevitable discovery, independent source)
+
+Use proper federal legal citation format (e.g., "Mapp v. Ohio, 367 U.S. 643, 655 (1961)").`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and controlling Supreme Court and Second Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine established in Wong Sun v. United States, 371 U.S. 471 (1963);
+
+4. Grant an evidentiary hearing on this motion pursuant to Franks v. Delaware, 438 U.S. 154 (1978), if applicable;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Federal Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // Federal certificate of service (NY)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -762,11 +1066,45 @@ export const motionToSuppressTemplate: DocumentTemplate = {
       sections: federalSections,
       courtSpecificRules: "S.D. Cal.: 14pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial.",
     },
+    {
+      jurisdiction: "NY",
+      courtType: "state",
+      sections: newYorkSections,
+      courtSpecificRules: "Filed under CPL \u00A7 710.20. Must be filed within 45 days of arraignment (CPL \u00A7 255.20). New York provides broader search and seizure protections under N.Y. Const. Art. I, \u00A7 12.",
+    },
+    {
+      jurisdiction: "NY",
+      courtType: "federal",
+      district: "SDNY",
+      sections: nyFederalSections,
+      courtSpecificRules: "S.D.N.Y.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "NY",
+      courtType: "federal",
+      district: "EDNY",
+      sections: nyFederalSections,
+      courtSpecificRules: "E.D.N.Y.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "NY",
+      courtType: "federal",
+      district: "NDNY",
+      sections: nyFederalSections,
+      courtSpecificRules: "N.D.N.Y.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "NY",
+      courtType: "federal",
+      district: "WDNY",
+      sections: nyFederalSections,
+      courtSpecificRules: "W.D.N.Y.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required.",
+    },
   ],
   estimatedCompletionTime: "15-25 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "CACD", "NDCA", "EDCA", "SDCA"],
+  supportedJurisdictions: ["CA", "NY", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY"],
 };
 
 export default motionToSuppressTemplate;

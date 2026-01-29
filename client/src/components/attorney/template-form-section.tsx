@@ -200,19 +200,28 @@ export function JurisdictionSelector({
   onChange,
   supportedJurisdictions,
 }: JurisdictionSelectorProps) {
-  const hasFederalSupport = supportedJurisdictions.some(
-    (j) => ["CACD", "NDCA", "EDCA", "SDCA"].includes(j)
+  const allDistricts = [
+    { code: "CACD", label: "Central District of California (CACD)", rules: "L.R. 11-3 formatting, 14pt font", jurisdiction: "CA" },
+    { code: "NDCA", label: "Northern District of California (NDCA)", rules: "N.D. Cal. rules, 14pt font", jurisdiction: "CA" },
+    { code: "EDCA", label: "Eastern District of California (EDCA)", rules: "E.D. Cal. rules, 12pt font", jurisdiction: "CA" },
+    { code: "SDCA", label: "Southern District of California (SDCA)", rules: "S.D. Cal. rules, 14pt font", jurisdiction: "CA" },
+    { code: "SDNY", label: "Southern District of New York (SDNY)", rules: "Local Civil Rule 11.1, 12pt font", jurisdiction: "NY" },
+    { code: "EDNY", label: "Eastern District of New York (EDNY)", rules: "Local Civil Rule 11.1, 12pt font", jurisdiction: "NY" },
+    { code: "NDNY", label: "Northern District of New York (NDNY)", rules: "Local Rule 10.1, 12pt font", jurisdiction: "NY" },
+    { code: "WDNY", label: "Western District of New York (WDNY)", rules: "Local Rule 10(a), 12pt font", jurisdiction: "NY" },
+  ];
+
+  const availableDistricts = allDistricts.filter(
+    (d) => supportedJurisdictions.includes(d.code) && d.jurisdiction === value.jurisdiction
   );
 
-  const availableDistricts = [
-    { code: "CACD", label: "Central District of California (CACD)", rules: "L.R. 11-3 formatting, 14pt font" },
-    { code: "NDCA", label: "Northern District of California (NDCA)", rules: "N.D. Cal. rules, 14pt font" },
-    { code: "EDCA", label: "Eastern District of California (EDCA)", rules: "E.D. Cal. rules, 12pt font" },
-    { code: "SDCA", label: "Southern District of California (SDCA)", rules: "S.D. Cal. rules, 14pt font" },
-  ].filter((d) => supportedJurisdictions.includes(d.code));
+  const hasFederalSupport = allDistricts.some(
+    (d) => supportedJurisdictions.includes(d.code) && d.jurisdiction === value.jurisdiction
+  );
 
   const jurisdictions = [
     { value: "CA", label: "California", description: "Uses CA Penal Code citations" },
+    { value: "NY", label: "New York", description: "Uses NY Criminal Procedure Law citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
@@ -272,14 +281,14 @@ export function JurisdictionSelector({
         </div>
       ))}
 
-      {/* Court type selector — shown when CA is selected and federal districts are supported */}
-      {value.jurisdiction === "CA" && hasFederalSupport && (
+      {/* Court type selector — shown when jurisdiction has federal district support */}
+      {value.jurisdiction !== "generic" && hasFederalSupport && (
         <div className="ml-7 mt-2 space-y-2">
           <p className="text-sm font-medium text-muted-foreground">Court Type</p>
           <div className="flex gap-3">
             {[
-              { type: "state" as const, label: "State Court", desc: "CA Superior Court (CRC formatting)" },
-              { type: "federal" as const, label: "Federal Court", desc: "U.S. District Court (14pt font)" },
+              { type: "state" as const, label: "State Court", desc: value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" : "CA Superior Court (CRC formatting)" },
+              { type: "federal" as const, label: "Federal Court", desc: value.jurisdiction === "NY" ? "U.S. District Court (12pt font)" : "U.S. District Court" },
             ].map((ct) => (
               <div
                 key={ct.type}

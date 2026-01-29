@@ -80,7 +80,7 @@ export function DocumentPreview({
             >
               {/* Caption Section */}
               {sections.find((s) => s.id === "caption") && (
-                <DocumentCaption formData={formData} courtType={courtType} district={district} />
+                <DocumentCaption formData={formData} jurisdiction={jurisdiction} courtType={courtType} district={district} />
               )}
 
               {/* Document Title */}
@@ -134,16 +134,26 @@ export function DocumentPreview({
   );
 }
 
-function DocumentCaption({ formData, courtType, district }: { formData: Record<string, string>; courtType?: "state" | "federal"; district?: string }) {
-  const plaintiffLabel = courtType === "federal"
-    ? "UNITED STATES OF AMERICA,"
-    : "THE PEOPLE OF THE STATE,";
+function DocumentCaption({ formData, jurisdiction, courtType, district }: { formData: Record<string, string>; jurisdiction: string; courtType?: "state" | "federal"; district?: string }) {
+  const getPlaintiffLabel = () => {
+    if (courtType === "federal") return "UNITED STATES OF AMERICA,";
+    if (jurisdiction === "CA") return "THE PEOPLE OF THE STATE OF CALIFORNIA,";
+    if (jurisdiction === "NY") return "THE PEOPLE OF THE STATE OF NEW YORK,";
+    return "THE PEOPLE OF THE STATE,";
+  };
+
+  const getDefaultCourtName = () => {
+    if (courtType === "federal") return "UNITED STATES DISTRICT COURT";
+    if (jurisdiction === "CA") return "SUPERIOR COURT OF CALIFORNIA";
+    if (jurisdiction === "NY") return "SUPREME COURT OF THE STATE OF NEW YORK";
+    return "SUPERIOR COURT";
+  };
 
   return (
     <div className="text-center space-y-2">
       {/* Court Name */}
       <div className="font-bold uppercase">
-        {formData.courtName || (courtType === "federal" ? "UNITED STATES DISTRICT COURT" : "SUPERIOR COURT")}
+        {formData.courtName || getDefaultCourtName()}
       </div>
       {courtType === "federal" && (
         <div className="font-bold uppercase">{getDistrictName(district)}</div>
@@ -159,7 +169,7 @@ function DocumentCaption({ formData, courtType, district }: { formData: Record<s
 
       {/* Case Caption */}
       <div className="mt-6 text-left">
-        <div>{plaintiffLabel}</div>
+        <div>{getPlaintiffLabel()}</div>
         <div className="ml-8">Plaintiff,</div>
         <div className="flex justify-between">
           <span />
@@ -213,8 +223,12 @@ function getDistrictName(district?: string): string {
     NDCA: "NORTHERN DISTRICT OF CALIFORNIA",
     EDCA: "EASTERN DISTRICT OF CALIFORNIA",
     SDCA: "SOUTHERN DISTRICT OF CALIFORNIA",
+    SDNY: "SOUTHERN DISTRICT OF NEW YORK",
+    EDNY: "EASTERN DISTRICT OF NEW YORK",
+    NDNY: "NORTHERN DISTRICT OF NEW YORK",
+    WDNY: "WESTERN DISTRICT OF NEW YORK",
   };
-  return names[district || ""] || "DISTRICT OF CALIFORNIA";
+  return names[district || ""] || district || "";
 }
 
 function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal", district?: string): string {
@@ -224,11 +238,18 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal",
       NDCA: "N.D. Cal. Federal Format (14pt)",
       EDCA: "E.D. Cal. Federal Format (12pt)",
       SDCA: "S.D. Cal. Federal Format (14pt)",
+      SDNY: "S.D.N.Y. Federal Format (12pt)",
+      EDNY: "E.D.N.Y. Federal Format (12pt)",
+      NDNY: "N.D.N.Y. Federal Format (12pt)",
+      WDNY: "W.D.N.Y. Federal Format (12pt)",
     };
     return districtLabels[district] || `${district} Federal Format`;
   }
   if (jurisdiction === "CA") {
     return "California State Format";
+  }
+  if (jurisdiction === "NY") {
+    return "New York State Format";
   }
   return "Standard Format";
 }

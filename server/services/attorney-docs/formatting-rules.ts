@@ -342,6 +342,233 @@ export const SDCA_RULES: CourtFormattingRules = {
 };
 
 // ============================================================================
+// New York Rules
+// ============================================================================
+
+/**
+ * New York state court rules (22 NYCRR).
+ * - 12pt font (22 NYCRR § 202.5(a))
+ * - 1" margins all sides
+ * - Double-spaced
+ * - No line numbers
+ * - Court title: "SUPREME COURT OF THE STATE OF NEW YORK" for criminal/felony
+ * - County line below court title
+ * - No attorney header block (unlike CA)
+ */
+export const NY_STATE_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "SUPREME COURT OF THE STATE OF NEW YORK",
+  courtSubtitle: "COUNTY OF _______________",
+  plaintiffLabel: "THE PEOPLE OF THE STATE OF NEW YORK,",
+  includeCountyLine: true,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "New York Uniform Rules for Trial Courts (22 NYCRR)",
+  rulesCited: [
+    "22 NYCRR § 202.5(a)",
+    "22 NYCRR § 202.7",
+  ],
+};
+
+/**
+ * Southern District of New York federal court rules.
+ * - 12pt font (SDNY Local Civil Rule 11.1)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - Pages numbered at bottom
+ */
+export const SDNY_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt (Local Civil Rule 11.1)
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "SOUTHERN DISTRICT OF NEW YORK",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: true,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Southern District of New York Local Rules",
+  rulesCited: [
+    "SDNY Local Civil Rule 11.1",
+    "SDNY Local Criminal Rule 16.1",
+  ],
+};
+
+/**
+ * Eastern District of New York federal court rules.
+ * - 12pt font
+ * - 1" margins all sides
+ * - Double-spaced
+ */
+export const EDNY_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "EASTERN DISTRICT OF NEW YORK",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: true,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Eastern District of New York Local Rules",
+  rulesCited: [
+    "EDNY Local Civil Rule 11.1",
+    "EDNY Local Criminal Rule 16.1",
+  ],
+};
+
+/**
+ * Northern District of New York federal court rules.
+ * - 12pt font (N.D.N.Y. Local Rule 10.1)
+ * - 1" margins all sides
+ * - Double-spaced
+ */
+export const NDNY_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt (Local Rule 10.1)
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "NORTHERN DISTRICT OF NEW YORK",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: true,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Northern District of New York Local Rules",
+  rulesCited: [
+    "N.D.N.Y. Local Rule 10.1",
+  ],
+};
+
+/**
+ * Western District of New York federal court rules.
+ * - 12pt font
+ * - 1" margins all sides
+ * - Double-spaced
+ */
+export const WDNY_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "WESTERN DISTRICT OF NEW YORK",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: true,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Western District of New York Local Rules",
+  rulesCited: [
+    "W.D.N.Y. Local Rule 10(a)",
+  ],
+};
+
+// ============================================================================
 // Registry
 // ============================================================================
 
@@ -355,6 +582,11 @@ const COURT_RULES_REGISTRY: Map<string, CourtFormattingRules> = new Map([
   ["NDCA", NDCA_RULES],
   ["EDCA", EDCA_RULES],
   ["SDCA", SDCA_RULES],
+  ["NY-state", NY_STATE_RULES],
+  ["SDNY", SDNY_RULES],
+  ["EDNY", EDNY_RULES],
+  ["NDNY", NDNY_RULES],
+  ["WDNY", WDNY_RULES],
 ]);
 
 /**
