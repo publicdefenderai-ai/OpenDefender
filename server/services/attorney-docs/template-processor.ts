@@ -150,14 +150,28 @@ function isValidDate(dateString: string): boolean {
 /**
  * Apply jurisdiction-specific variant to a template
  * Returns a new template with the variant's sections merged in
+ *
+ * When courtType/district are provided, matches on all specified fields.
+ * When omitted, falls back to jurisdiction-only matching (backward compat).
  */
 export function applyJurisdictionVariant(
   template: DocumentTemplate,
-  jurisdiction: string
+  jurisdiction: string,
+  courtType?: string,
+  district?: string
 ): DocumentTemplate {
-  // Find matching variant
-  const variant = template.jurisdictionVariants?.find(
-    (v) => v.jurisdiction.toUpperCase() === jurisdiction.toUpperCase()
+  // Find matching variant — most specific match first
+  const variant = template.jurisdictionVariants?.find((v) => {
+    if (v.jurisdiction.toUpperCase() !== jurisdiction.toUpperCase()) return false;
+    if (courtType && v.courtType && v.courtType !== courtType) return false;
+    if (district && v.district && v.district.toUpperCase() !== district.toUpperCase()) return false;
+    // If caller specified courtType/district, prefer variants that have them
+    if (courtType && !v.courtType) return false;
+    if (district && !v.district) return false;
+    return true;
+  }) || template.jurisdictionVariants?.find(
+    // Fallback: match on jurisdiction alone if no courtType-specific variant found
+    (v) => v.jurisdiction.toUpperCase() === jurisdiction.toUpperCase() && !courtType
   );
 
   if (!variant) {

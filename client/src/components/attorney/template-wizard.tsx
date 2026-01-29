@@ -23,6 +23,7 @@ import { Progress } from "@/components/ui/progress";
 import {
   TemplateFormSection,
   JurisdictionSelector,
+  type JurisdictionSelection,
 } from "./template-form-section";
 import { AIGenerationStatus } from "./ai-generation-status";
 import { DocumentPreview, PreviewPlaceholder } from "./document-preview";
@@ -43,9 +44,9 @@ type WizardStep = "jurisdiction" | "form" | "generate" | "preview";
 
 export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
   const [step, setStep] = useState<WizardStep>("jurisdiction");
-  const [jurisdiction, setJurisdiction] = useState<string>(
-    template.supportedJurisdictions[0] || "generic"
-  );
+  const [jurisdictionSelection, setJurisdictionSelection] = useState<JurisdictionSelection>({
+    jurisdiction: template.supportedJurisdictions[0] || "generic",
+  });
   const [currentFormSectionIndex, setCurrentFormSectionIndex] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationError, setGenerationError] = useState<string | null>(null);
@@ -171,7 +172,9 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
 
       const result = await generateDocument({
         templateId: template.id,
-        jurisdiction,
+        jurisdiction: jurisdictionSelection.jurisdiction,
+        courtType: jurisdictionSelection.courtType,
+        district: jurisdictionSelection.district,
         formData,
       });
 
@@ -222,8 +225,8 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
               </p>
             </div>
             <JurisdictionSelector
-              value={jurisdiction}
-              onChange={setJurisdiction}
+              value={jurisdictionSelection}
+              onChange={setJurisdictionSelection}
               supportedJurisdictions={template.supportedJurisdictions}
             />
           </div>
@@ -285,7 +288,9 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
         return (
           <DocumentPreview
             templateName={generatedDocument.templateName}
-            jurisdiction={jurisdiction}
+            jurisdiction={jurisdictionSelection.jurisdiction}
+            courtType={jurisdictionSelection.courtType}
+            district={jurisdictionSelection.district}
             sections={generatedDocument.sections}
             formData={form.getValues()}
             onDownload={handleDownload}

@@ -2,39 +2,24 @@
  * DOCX Generator Service
  *
  * Generates Word documents (.docx) from generated document sections.
- * Follows California Rules of Court formatting requirements:
- * - CRC 2.104: Font not smaller than 12 points
- * - CRC 2.105: Font equivalent to Courier, Times New Roman, or Arial
- * - CRC 2.107: Margins at least 1 inch left, 0.5 inch right
- * - CRC 2.108: Double-spaced, line numbers at left margin (at least 3 per inch)
- * - CRC 2.111: First page format with attorney info, clerk space, court title
- *
- * Los Angeles Superior Court specific formatting applied for CA jurisdiction.
+ * Uses centralized CourtFormattingRules from formatting-rules.ts
+ * to drive all court-specific formatting decisions.
  */
 
 import {
   Document,
   Paragraph,
   TextRun,
-  HeadingLevel,
   AlignmentType,
   PageNumber,
-  NumberFormat,
   Footer,
   Header,
-  Tab,
-  TabStopPosition,
   TabStopType,
   BorderStyle,
   Packer,
-  Table,
-  TableRow,
-  TableCell,
-  WidthType,
-  VerticalAlign,
-  convertInchesToTwip,
 } from "docx";
 import type { GeneratedDocument, GeneratedSection } from "./document-generator";
+import { resolveFormattingRules, type CourtFormattingRules } from "./formatting-rules";
 import { devLog, errLog } from "../../utils/dev-logger";
 
 // ============================================================================
@@ -52,32 +37,6 @@ export interface DocxOptions {
   marginRight?: number;
 }
 
-// Default options (generic jurisdictions)
-const DEFAULT_OPTIONS: Required<DocxOptions> = {
-  includeLineNumbers: false,
-  fontFamily: "Times New Roman",
-  fontSize: 24, // 12pt in half-points
-  lineSpacing: 480, // Double spacing in twips (240 twips = 1 line, 480 = double)
-  marginTop: 1440, // 1 inch in twips (1440 twips = 1 inch)
-  marginBottom: 1440,
-  marginLeft: 1440,
-  marginRight: 1440,
-};
-
-// California / Los Angeles Superior Court specific options
-// Per CRC 2.107: at least 1" left margin, 0.5" right
-// Per CRC 2.108: line numbers required, at least 3 per vertical inch
-const CALIFORNIA_OPTIONS: Required<DocxOptions> = {
-  includeLineNumbers: true,
-  fontFamily: "Times New Roman",
-  fontSize: 24, // 12pt (CRC 2.104 minimum)
-  lineSpacing: 480, // Double spacing (CRC 2.108)
-  marginTop: 1440, // 1 inch
-  marginBottom: 720, // 0.5 inch
-  marginLeft: 1800, // 1.25 inch (extra space for line numbers)
-  marginRight: 720, // 0.5 inch minimum per CRC 2.107
-};
-
 // ============================================================================
 // Document Generation
 // ============================================================================
@@ -90,14 +49,26 @@ export async function generateDocx(
   formData: Record<string, string>,
   options?: DocxOptions
 ): Promise<Buffer> {
-  const isCaliforniaFormat = document.jurisdiction === "CA";
-  const opts = {
-    ...DEFAULT_OPTIONS,
-    ...(isCaliforniaFormat ? CALIFORNIA_OPTIONS : {}),
-    ...options,
+  // Resolve formatting rules from the centralized registry
+  const rules = resolveFormattingRules(
+    document.jurisdiction,
+    document.courtType || "state",
+    document.district
+  );
+
+  // Build opts from rules, with optional user overrides
+  const opts: Required<DocxOptions> = {
+    includeLineNumbers: options?.includeLineNumbers ?? rules.includeLineNumbers,
+    fontFamily: options?.fontFamily ?? rules.fontFamily,
+    fontSize: options?.fontSize ?? rules.fontSize,
+    lineSpacing: options?.lineSpacing ?? rules.lineSpacing,
+    marginTop: options?.marginTop ?? rules.marginTop,
+    marginBottom: options?.marginBottom ?? rules.marginBottom,
+    marginLeft: options?.marginLeft ?? rules.marginLeft,
+    marginRight: options?.marginRight ?? rules.marginRight,
   };
 
-  devLog(`[DOCX] Generating document for ${document.templateId} (${document.jurisdiction})`);
+  devLog(`[DOCX] Generating document for ${document.templateId} (${document.jurisdiction}, ${rules.ruleSource})`);
 
   try {
     const doc = new Document({
@@ -110,6 +81,7 @@ export async function generateDocx(
             run: {
               font: opts.fontFamily,
               size: opts.fontSize,
+              color: rules.fontColor,
             },
             paragraph: {
               spacing: {
@@ -186,13 +158,12 @@ export async function generateDocx(
                 right: opts.marginRight,
               },
             },
-            // California pleading paper has 28 lines per page with line numbers
-            // Line numbers restart at 1 on each page per CRC 2.108
-            ...(isCaliforniaFormat && opts.includeLineNumbers
+            // Line numbers driven by rules
+            ...(rules.includeLineNumbers && opts.includeLineNumbers
               ? {
                   lineNumbers: {
                     countBy: 1,
-                    restart: "newPage" as const,
+                    restart: rules.lineNumberRestart as "newPage" | "continuous",
                   },
                 }
               : {}),
@@ -201,9 +172,9 @@ export async function generateDocx(
             default: createHeader(),
           },
           footers: {
-            default: createFooter(),
+            default: createFooter(rules, document.templateName),
           },
-          children: generateDocumentContent(document, formData, opts, isCaliforniaFormat),
+          children: generateDocumentContent(document, formData, opts, rules),
         },
       ],
     });
@@ -233,11 +204,47 @@ function createHeader(): Header {
 }
 
 /**
- * Create document footer with page numbers
+ * Create document footer based on formatting rules.
+ * CRC 2.110: footer must include document title (>= 10pt) with separator line.
  */
-function createFooter(): Footer {
-  return new Footer({
-    children: [
+function createFooter(rules: CourtFormattingRules, documentTitle: string): Footer {
+  const children: Paragraph[] = [];
+
+  // Separator line above footer (CRC 2.110)
+  if (rules.footer.includeSeparatorLine) {
+    children.push(
+      new Paragraph({
+        border: {
+          bottom: {
+            style: BorderStyle.SINGLE,
+            size: 6,
+            color: "000000",
+          },
+        },
+        children: [],
+      })
+    );
+  }
+
+  // Document title in footer (CRC 2.110)
+  if (rules.footer.includeDocumentTitle) {
+    children.push(
+      new Paragraph({
+        alignment: AlignmentType.LEFT,
+        children: [
+          new TextRun({
+            text: documentTitle.toUpperCase(),
+            font: rules.fontFamily,
+            size: rules.footer.documentTitleFontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Page number
+  if (rules.footer.includePageNumber) {
+    children.push(
       new Paragraph({
         alignment: AlignmentType.CENTER,
         children: [
@@ -245,9 +252,16 @@ function createFooter(): Footer {
             children: [PageNumber.CURRENT],
           }),
         ],
-      }),
-    ],
-  });
+      })
+    );
+  }
+
+  // Fallback: ensure footer has at least one paragraph
+  if (children.length === 0) {
+    children.push(new Paragraph({ children: [] }));
+  }
+
+  return new Footer({ children });
 }
 
 /**
@@ -257,20 +271,20 @@ function generateDocumentContent(
   document: GeneratedDocument,
   formData: Record<string, string>,
   options: Required<DocxOptions>,
-  isCaliforniaFormat: boolean = false
+  rules: CourtFormattingRules
 ): Paragraph[] {
   const paragraphs: Paragraph[] = [];
 
-  // For California format, add attorney header block first (CRC 2.111)
-  if (isCaliforniaFormat) {
-    paragraphs.push(...generateCaliforniaAttorneyHeader(formData, options));
+  // Add attorney header block when rules require it (CA state + CACD federal)
+  if (rules.includeAttorneyHeader) {
+    paragraphs.push(...generateAttorneyHeader(formData, options));
   }
 
   for (const section of document.sections) {
     // Add section content based on type
     switch (section.id) {
       case "caption":
-        paragraphs.push(...generateCaptionSection(formData, options, isCaliforniaFormat));
+        paragraphs.push(...generateCaptionSection(formData, options, rules, document.templateName));
         break;
 
       case "signatureBlock":
@@ -298,10 +312,10 @@ function generateDocumentContent(
 }
 
 /**
- * Generate California attorney header block per CRC 2.111
- * Lines 1-7: Attorney information on left, clerk's filing space on right
+ * Generate attorney header block (lines 1-7).
+ * Used by both CA state (CRC 2.111) and CACD federal (L.R. 11-3.8).
  */
-function generateCaliforniaAttorneyHeader(
+function generateAttorneyHeader(
   formData: Record<string, string>,
   options: Required<DocxOptions>
 ): Paragraph[] {
@@ -402,30 +416,31 @@ function generateCaliforniaAttorneyHeader(
     })
   );
 
-  // Blank line before court title (line 8 per CRC 2.111)
+  // Blank line before court title (line 8)
   paragraphs.push(new Paragraph({ children: [], spacing: { after: 120 } }));
 
   return paragraphs;
 }
 
 /**
- * Generate court caption section
- * California format includes case number on right side per CRC 2.111
+ * Generate court caption section.
+ * Uses rules for court title, subtitle, plaintiff label, and separator line.
  */
 function generateCaptionSection(
   formData: Record<string, string>,
   options: Required<DocxOptions>,
-  isCaliforniaFormat: boolean = false
+  rules: CourtFormattingRules,
+  templateName: string
 ): Paragraph[] {
   const paragraphs: Paragraph[] = [];
 
-  // Court name (centered, all caps)
+  // Court title (centered, all caps) — from rules or user input
   paragraphs.push(
     new Paragraph({
       alignment: AlignmentType.CENTER,
       children: [
         new TextRun({
-          text: (formData.courtName || "SUPERIOR COURT OF CALIFORNIA").toUpperCase(),
+          text: (formData.courtName || rules.courtTitle).toUpperCase(),
           bold: true,
           font: options.fontFamily,
           size: options.fontSize,
@@ -434,14 +449,37 @@ function generateCaptionSection(
     })
   );
 
-  // For California, add county if in court name or separately
-  if (isCaliforniaFormat && !formData.courtName?.toLowerCase().includes("county")) {
+  // Court subtitle (county or district)
+  // For state courts with county line: use formData.county if available, else rules default
+  // For federal courts: always show district name from rules
+  if (rules.includeCountyLine && !formData.courtName?.toLowerCase().includes("county")) {
+    const effectiveCounty = formData.county === "other"
+      ? formData.countyOther
+      : formData.county;
+    const countySubtitle = effectiveCounty
+      ? `COUNTY OF ${effectiveCounty.toUpperCase()}`
+      : (rules.courtSubtitle || "").toUpperCase();
     paragraphs.push(
       new Paragraph({
         alignment: AlignmentType.CENTER,
         children: [
           new TextRun({
-            text: "COUNTY OF LOS ANGELES",
+            text: countySubtitle,
+            bold: true,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  } else if (rules.courtSubtitle && !rules.includeCountyLine) {
+    // Federal courts always show subtitle (district name)
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.CENTER,
+        children: [
+          new TextRun({
+            text: rules.courtSubtitle.toUpperCase(),
             bold: true,
             font: options.fontFamily,
             size: options.fontSize,
@@ -470,17 +508,12 @@ function generateCaptionSection(
   // Spacing
   paragraphs.push(new Paragraph({ children: [] }));
 
-  // California uses "THE PEOPLE OF THE STATE OF CALIFORNIA"
-  const peopleText = isCaliforniaFormat
-    ? "THE PEOPLE OF THE STATE OF CALIFORNIA,"
-    : "THE PEOPLE OF THE STATE,";
-
-  // Case caption - People v. Defendant format
+  // Plaintiff label from rules
   paragraphs.push(
     new Paragraph({
       children: [
         new TextRun({
-          text: peopleText,
+          text: rules.plaintiffLabel,
           font: options.fontFamily,
           size: options.fontSize,
         }),
@@ -501,7 +534,7 @@ function generateCaptionSection(
     })
   );
 
-  // Case number line - positioned to the right in California format
+  // Case number line - positioned to the right
   paragraphs.push(
     new Paragraph({
       tabStops: [
@@ -537,8 +570,8 @@ function generateCaptionSection(
     })
   );
 
-  // Hearing date/time on right if California
-  if (isCaliforniaFormat && formData.currentHearingDate) {
+  // Hearing date/time on right if attorney header is present (formatted courts)
+  if (rules.includeAttorneyHeader && formData.currentHearingDate) {
     const hearingType = formatHearingTypeForDocument(formData.hearingType);
     paragraphs.push(
       new Paragraph({
@@ -638,8 +671,8 @@ function generateCaptionSection(
     })
   );
 
-  // Horizontal line separator (common in CA pleadings)
-  if (isCaliforniaFormat) {
+  // Horizontal line separator (driven by rules)
+  if (rules.includeSeparatorLine) {
     paragraphs.push(
       new Paragraph({
         border: {
@@ -657,15 +690,14 @@ function generateCaptionSection(
   // Spacing
   paragraphs.push(new Paragraph({ children: [] }));
 
-  // Document title
+  // Document title (from template name)
   paragraphs.push(
     new Paragraph({
       alignment: AlignmentType.CENTER,
       children: [
         new TextRun({
-          text: "MOTION TO CONTINUE",
+          text: templateName.toUpperCase(),
           bold: true,
-          allCaps: true,
           font: options.fontFamily,
           size: options.fontSize,
         }),
@@ -673,8 +705,8 @@ function generateCaptionSection(
     })
   );
 
-  // Non-California format shows hearing info below title
-  if (!isCaliforniaFormat && formData.currentHearingDate) {
+  // Non-formatted courts show hearing info below title
+  if (!rules.includeAttorneyHeader && formData.currentHearingDate) {
     const hearingType = formatHearingTypeForDocument(formData.hearingType);
     paragraphs.push(
       new Paragraph({
@@ -738,7 +770,7 @@ function generateTextSection(
         if (!trimmedLine) continue;
 
         // Check if this is a list item
-        const listMatch = trimmedLine.match(/^(\d+\.|[-•])\s*(.*)$/);
+        const listMatch = trimmedLine.match(/^(\d+\.|[-\u2022])\s*(.*)$/);
 
         if (listMatch) {
           isInList = true;

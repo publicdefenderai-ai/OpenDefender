@@ -183,9 +183,15 @@ function renderInputControl(input: TemplateInput, field: any) {
   }
 }
 
+export interface JurisdictionSelection {
+  jurisdiction: string;
+  courtType?: "state" | "federal";
+  district?: string;
+}
+
 interface JurisdictionSelectorProps {
-  value: string;
-  onChange: (value: string) => void;
+  value: JurisdictionSelection;
+  onChange: (value: JurisdictionSelection) => void;
   supportedJurisdictions: string[];
 }
 
@@ -194,6 +200,17 @@ export function JurisdictionSelector({
   onChange,
   supportedJurisdictions,
 }: JurisdictionSelectorProps) {
+  const hasFederalSupport = supportedJurisdictions.some(
+    (j) => ["CACD", "NDCA", "EDCA", "SDCA"].includes(j)
+  );
+
+  const availableDistricts = [
+    { code: "CACD", label: "Central District of California (CACD)", rules: "L.R. 11-3 formatting, 14pt font" },
+    { code: "NDCA", label: "Northern District of California (NDCA)", rules: "N.D. Cal. rules, 14pt font" },
+    { code: "EDCA", label: "Eastern District of California (EDCA)", rules: "E.D. Cal. rules, 12pt font" },
+    { code: "SDCA", label: "Southern District of California (SDCA)", rules: "S.D. Cal. rules, 14pt font" },
+  ].filter((d) => supportedJurisdictions.includes(d.code));
+
   const jurisdictions = [
     { value: "CA", label: "California", description: "Uses CA Penal Code citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
@@ -204,14 +221,31 @@ export function JurisdictionSelector({
     (j) => j.value === "generic" || supportedJurisdictions.includes(j.value)
   );
 
+  const handleJurisdictionSelect = (jurisdictionValue: string) => {
+    if (jurisdictionValue === "generic") {
+      onChange({ jurisdiction: jurisdictionValue });
+    } else {
+      onChange({ jurisdiction: jurisdictionValue, courtType: value.courtType || "state" });
+    }
+  };
+
+  const handleCourtTypeChange = (courtType: "state" | "federal") => {
+    if (courtType === "federal") {
+      const defaultDistrict = availableDistricts[0]?.code || "CACD";
+      onChange({ jurisdiction: value.jurisdiction, courtType, district: defaultDistrict });
+    } else {
+      onChange({ jurisdiction: value.jurisdiction, courtType });
+    }
+  };
+
   return (
     <div className="space-y-3">
       {availableJurisdictions.map((jurisdiction) => (
         <div
           key={jurisdiction.value}
-          onClick={() => onChange(jurisdiction.value)}
+          onClick={() => handleJurisdictionSelect(jurisdiction.value)}
           className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-            value === jurisdiction.value
+            value.jurisdiction === jurisdiction.value
               ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
               : "border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600"
           }`}
@@ -219,12 +253,12 @@ export function JurisdictionSelector({
           <div className="flex items-center gap-3">
             <div
               className={`w-4 h-4 rounded-full border-2 ${
-                value === jurisdiction.value
+                value.jurisdiction === jurisdiction.value
                   ? "border-blue-500 bg-blue-500"
                   : "border-slate-300"
               }`}
             >
-              {value === jurisdiction.value && (
+              {value.jurisdiction === jurisdiction.value && (
                 <div className="w-full h-full rounded-full flex items-center justify-center">
                   <div className="w-1.5 h-1.5 bg-white rounded-full" />
                 </div>
@@ -237,6 +271,58 @@ export function JurisdictionSelector({
           </div>
         </div>
       ))}
+
+      {/* Court type selector — shown when CA is selected and federal districts are supported */}
+      {value.jurisdiction === "CA" && hasFederalSupport && (
+        <div className="ml-7 mt-2 space-y-2">
+          <p className="text-sm font-medium text-muted-foreground">Court Type</p>
+          <div className="flex gap-3">
+            {[
+              { type: "state" as const, label: "State Court", desc: "CA Superior Court (CRC formatting)" },
+              { type: "federal" as const, label: "Federal Court", desc: "U.S. District Court (14pt font)" },
+            ].map((ct) => (
+              <div
+                key={ct.type}
+                onClick={(e) => { e.stopPropagation(); handleCourtTypeChange(ct.type); }}
+                className={`flex-1 p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                  (value.courtType || "state") === ct.type
+                    ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
+                    : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
+                }`}
+              >
+                <p className="font-medium text-sm">{ct.label}</p>
+                <p className="text-xs text-muted-foreground">{ct.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* District selector — shown when federal is selected */}
+          {(value.courtType === "federal") && availableDistricts.length > 0 && (
+            <div className="mt-2">
+              <p className="text-sm font-medium text-muted-foreground mb-1">District</p>
+              <div className="space-y-2">
+                {availableDistricts.map((d) => (
+                  <div
+                    key={d.code}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onChange({ jurisdiction: value.jurisdiction, courtType: "federal", district: d.code });
+                    }}
+                    className={`p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+                      value.district === d.code
+                        ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
+                        : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
+                    }`}
+                  >
+                    <p className="font-medium text-sm">{d.label}</p>
+                    <p className="text-xs text-muted-foreground">{d.rules}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

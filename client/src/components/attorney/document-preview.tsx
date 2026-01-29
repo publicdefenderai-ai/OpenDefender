@@ -15,6 +15,8 @@ import type { GeneratedSection } from "@/lib/attorney-api";
 interface DocumentPreviewProps {
   templateName: string;
   jurisdiction: string;
+  courtType?: "state" | "federal";
+  district?: string;
   sections: GeneratedSection[];
   formData: Record<string, string>;
   onDownload: () => void;
@@ -24,6 +26,8 @@ interface DocumentPreviewProps {
 export function DocumentPreview({
   templateName,
   jurisdiction,
+  courtType,
+  district,
   sections,
   formData,
   onDownload,
@@ -39,7 +43,7 @@ export function DocumentPreview({
           <div>
             <CardTitle className="text-lg">{templateName}</CardTitle>
             <p className="text-sm text-muted-foreground">
-              {jurisdiction === "CA" ? "California Format" : "Standard Format"}
+              {formatCourtLabel(jurisdiction, courtType, district)}
             </p>
           </div>
         </div>
@@ -76,7 +80,7 @@ export function DocumentPreview({
             >
               {/* Caption Section */}
               {sections.find((s) => s.id === "caption") && (
-                <DocumentCaption formData={formData} />
+                <DocumentCaption formData={formData} courtType={courtType} district={district} />
               )}
 
               {/* Document Title */}
@@ -130,20 +134,32 @@ export function DocumentPreview({
   );
 }
 
-function DocumentCaption({ formData }: { formData: Record<string, string> }) {
+function DocumentCaption({ formData, courtType, district }: { formData: Record<string, string>; courtType?: "state" | "federal"; district?: string }) {
+  const plaintiffLabel = courtType === "federal"
+    ? "UNITED STATES OF AMERICA,"
+    : "THE PEOPLE OF THE STATE,";
+
   return (
     <div className="text-center space-y-2">
       {/* Court Name */}
       <div className="font-bold uppercase">
-        {formData.courtName || "SUPERIOR COURT"}
+        {formData.courtName || (courtType === "federal" ? "UNITED STATES DISTRICT COURT" : "SUPERIOR COURT")}
       </div>
+      {courtType === "federal" && (
+        <div className="font-bold uppercase">{getDistrictName(district)}</div>
+      )}
+      {courtType !== "federal" && formData.county && (
+        <div className="font-bold uppercase">
+          COUNTY OF {(formData.county === "other" ? formData.countyOther || "" : formData.county).toUpperCase()}
+        </div>
+      )}
       {formData.department && (
         <div className="uppercase">{formData.department}</div>
       )}
 
       {/* Case Caption */}
       <div className="mt-6 text-left">
-        <div>THE PEOPLE OF THE STATE,</div>
+        <div>{plaintiffLabel}</div>
         <div className="ml-8">Plaintiff,</div>
         <div className="flex justify-between">
           <span />
@@ -189,6 +205,32 @@ function formatSectionContent(content: string): string {
 
   // Replace template variables that weren't filled
   return content.replace(/\{\{(\w+)\}\}/g, "_______________");
+}
+
+function getDistrictName(district?: string): string {
+  const names: Record<string, string> = {
+    CACD: "CENTRAL DISTRICT OF CALIFORNIA",
+    NDCA: "NORTHERN DISTRICT OF CALIFORNIA",
+    EDCA: "EASTERN DISTRICT OF CALIFORNIA",
+    SDCA: "SOUTHERN DISTRICT OF CALIFORNIA",
+  };
+  return names[district || ""] || "DISTRICT OF CALIFORNIA";
+}
+
+function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal", district?: string): string {
+  if (courtType === "federal" && district) {
+    const districtLabels: Record<string, string> = {
+      CACD: "C.D. Cal. Federal Format (14pt)",
+      NDCA: "N.D. Cal. Federal Format (14pt)",
+      EDCA: "E.D. Cal. Federal Format (12pt)",
+      SDCA: "S.D. Cal. Federal Format (14pt)",
+    };
+    return districtLabels[district] || `${district} Federal Format`;
+  }
+  if (jurisdiction === "CA") {
+    return "California State Format";
+  }
+  return "Standard Format";
 }
 
 function formatHearingType(value: string): string {

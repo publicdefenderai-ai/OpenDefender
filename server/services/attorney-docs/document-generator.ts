@@ -8,6 +8,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { randomUUID } from "crypto";
 import { motionToContinueTemplate } from "../../../shared/templates/motion-to-continue";
+import { motionToSuppressTemplate } from "../../../shared/templates/motion-to-suppress";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -19,6 +20,8 @@ import type { DocumentTemplate, TemplateSection } from "../../../shared/template
 export interface GenerateDocumentRequest {
   templateId: string;
   jurisdiction: string;
+  courtType?: "state" | "federal";
+  district?: string;
   formData: Record<string, string>;
   sessionId: string;
 }
@@ -35,6 +38,8 @@ export interface GeneratedDocument {
   templateId: string;
   templateName: string;
   jurisdiction: string;
+  courtType: "state" | "federal";
+  district?: string;
   sections: GeneratedSection[];
   generatedAt: Date;
   expiresAt: Date;
@@ -49,6 +54,7 @@ export interface DocumentGenerationError {
 // Template registry
 const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-continue", motionToContinueTemplate],
+  ["motion-to-suppress", motionToSuppressTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -121,13 +127,18 @@ export function getTemplates(category?: string): Array<{
 /**
  * Get a specific template by ID
  */
-export function getTemplate(templateId: string, jurisdiction?: string): DocumentTemplate | null {
+export function getTemplate(
+  templateId: string,
+  jurisdiction?: string,
+  courtType?: string,
+  district?: string
+): DocumentTemplate | null {
   const template = templateRegistry.get(templateId);
   if (!template) return null;
 
   // Apply jurisdiction variant if available
   if (jurisdiction) {
-    return applyJurisdictionVariant(template, jurisdiction);
+    return applyJurisdictionVariant(template, jurisdiction, courtType, district);
   }
 
   return template;
@@ -186,6 +197,7 @@ async function generateAISection(
   // Form data that gets sent to AI should be limited to non-PII metadata
   const safeFormData: Record<string, string> = {
     jurisdiction,
+    // Motion to continue fields
     hearingType: formData.hearingType || "hearing",
     primaryReason: formData.primaryReason || "good cause",
     reasonExplanation: formData.reasonExplanation || "",
@@ -193,6 +205,16 @@ async function generateAISection(
     custodyStatus: formData.custodyStatus || "unknown",
     speedyTrialWaiver: formData.speedyTrialWaiver || "unknown",
     oppositionPosition: formData.oppositionPosition || "unknown",
+    // Motion to suppress fields
+    evidenceType: formData.evidenceType || "physical",
+    evidenceDescription: formData.evidenceDescription || "",
+    dateObtained: formData.dateObtained || "",
+    locationObtained: formData.locationObtained || "",
+    constitutionalBasis: formData.constitutionalBasis || "",
+    factualBasis: formData.factualBasis || "",
+    warrantIssued: formData.warrantIssued || "not_applicable",
+    mirandaGiven: formData.mirandaGiven || "not_applicable",
+    consentGiven: formData.consentGiven || "not_applicable",
   };
 
   // Process template with safe data
@@ -241,10 +263,10 @@ async function generateAISection(
 export async function generateDocument(
   request: GenerateDocumentRequest
 ): Promise<GeneratedDocument> {
-  const { templateId, jurisdiction, formData, sessionId } = request;
+  const { templateId, jurisdiction, courtType, district, formData, sessionId } = request;
 
   // Get template with jurisdiction variant
-  const template = getTemplate(templateId, jurisdiction);
+  const template = getTemplate(templateId, jurisdiction, courtType, district);
   if (!template) {
     throw new Error(`Template not found: ${templateId}`);
   }
@@ -302,6 +324,8 @@ export async function generateDocument(
     templateId,
     templateName: template.name,
     jurisdiction,
+    courtType: courtType || "state",
+    district,
     sections: generatedSections,
     generatedAt: now,
     expiresAt: new Date(now.getTime() + DOCUMENT_TTL_MS),

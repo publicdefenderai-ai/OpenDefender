@@ -1264,6 +1264,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const generateDocumentSchema = z.object({
     templateId: z.string(),
     jurisdiction: z.string(),
+    courtType: z.enum(["state", "federal"]).optional(),
+    district: z.string().optional(),
     formData: z.record(z.string(), z.string())
   });
 
@@ -1279,12 +1281,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      const { templateId, jurisdiction, formData } = validation.data;
+      const { templateId, jurisdiction, courtType, district, formData } = validation.data;
       const session = (req as any).attorneySession;
 
       const document = await generateDocument({
         templateId,
         jurisdiction,
+        courtType,
+        district,
         formData,
         sessionId: session.sessionId
       });
@@ -1296,6 +1300,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           templateId: document.templateId,
           templateName: document.templateName,
           jurisdiction: document.jurisdiction,
+          courtType: document.courtType,
+          district: document.district,
           sections: document.sections,
           generatedAt: document.generatedAt.toISOString(),
           expiresAt: document.expiresAt.toISOString()
@@ -1368,6 +1374,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           templateId: document.templateId,
           templateName: document.templateName,
           jurisdiction: document.jurisdiction,
+          courtType: document.courtType,
+          district: document.district,
           sections: document.sections,
           generatedAt: document.generatedAt.toISOString(),
           expiresAt: document.expiresAt.toISOString()

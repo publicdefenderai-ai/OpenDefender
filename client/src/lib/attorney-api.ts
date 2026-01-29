@@ -40,6 +40,8 @@ export interface GeneratedDocument {
   templateId: string;
   templateName: string;
   jurisdiction: string;
+  courtType?: "state" | "federal";
+  district?: string;
   sections: GeneratedSection[];
   generatedAt: string;
   expiresAt: string;
@@ -48,6 +50,8 @@ export interface GeneratedDocument {
 export interface GenerateDocumentRequest {
   templateId: string;
   jurisdiction: string;
+  courtType?: "state" | "federal";
+  district?: string;
   formData: Record<string, string>;
 }
 

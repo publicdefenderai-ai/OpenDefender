@@ -60,17 +60,10 @@ export interface TemplateSection {
 }
 
 export interface JurisdictionVariant {
-  jurisdiction: string;  // State code or 'federal'
+  jurisdiction: string;  // State code (e.g., "CA")
+  courtType?: "state" | "federal";
+  district?: string;     // Federal district code (e.g., "CACD")
   sections: TemplateSection[];
-  formattingRules?: {
-    fontFamily?: string;
-    fontSize?: string;
-    lineSpacing?: number;
-    marginTop?: string;
-    marginBottom?: string;
-    marginLeft?: string;
-    marginRight?: string;
-  };
   courtSpecificRules?: string;
 }
 
@@ -142,16 +135,9 @@ export const documentTemplateSchema = z.object({
   baseSections: z.array(templateSectionSchema),
   jurisdictionVariants: z.array(z.object({
     jurisdiction: z.string(),
+    courtType: z.enum(["state", "federal"]).optional(),
+    district: z.string().optional(),
     sections: z.array(templateSectionSchema),
-    formattingRules: z.object({
-      fontFamily: z.string().optional(),
-      fontSize: z.string().optional(),
-      lineSpacing: z.number().optional(),
-      marginTop: z.string().optional(),
-      marginBottom: z.string().optional(),
-      marginLeft: z.string().optional(),
-      marginRight: z.string().optional(),
-    }).optional(),
     courtSpecificRules: z.string().optional(),
   })).optional(),
   estimatedCompletionTime: z.string(),
