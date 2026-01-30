@@ -64,6 +64,19 @@ export function AttorneyProvider({ children }: { children: ReactNode }) {
     checkSession();
   }, []);
 
+  // Clean up session on page unload (tab close, navigation away)
+  useEffect(() => {
+    const handleUnload = () => {
+      if (state.isVerified) {
+        // Use sendBeacon for reliable delivery during page unload
+        navigator.sendBeacon("/api/attorney/session/cleanup");
+      }
+    };
+
+    window.addEventListener("beforeunload", handleUnload);
+    return () => window.removeEventListener("beforeunload", handleUnload);
+  }, [state.isVerified]);
+
   // Countdown timer - updates every second when session is active
   useEffect(() => {
     if (!state.isVerified || !state.expiresAt) return;

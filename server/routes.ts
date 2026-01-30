@@ -20,7 +20,7 @@ import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
 import { attorneySessionManager } from "./services/attorney-docs/session-manager";
 import { attorneyVerificationRequestSchema } from "../shared/attorney/attestation-schema";
-import { getTemplates, getTemplate, generateDocument, getGeneratedDocument } from "./services/attorney-docs/document-generator";
+import { getTemplates, getTemplate, generateDocument, getGeneratedDocument, clearSessionDocuments } from "./services/attorney-docs/document-generator";
 import { generateDocx } from "./services/attorney-docs/docx-generator";
 import { z } from "zod";
 
@@ -1161,12 +1161,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Cleanup attorney session on page unload (via sendBeacon)
+  // sendBeacon sends a POST with cookies but no custom headers,
+  // so this is a separate endpoint from the DELETE route.
+  app.post("/api/attorney/session/cleanup", async (req, res) => {
+    try {
+      const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
+
+      if (sessionId) {
+        const clearedDocs = clearSessionDocuments(sessionId);
+        if (clearedDocs > 0) {
+          opsLog(`[Attorney Session] Cleared ${clearedDocs} document(s) on page unload`);
+        }
+        attorneySessionManager.terminateSession(sessionId, 'user');
+      }
+
+      res.clearCookie(attorneySessionManager.getCookieName(), { path: '/' });
+      res.status(200).json({ success: true });
+    } catch (error) {
+      errLog("Attorney session cleanup failed:", error);
+      res.status(500).json({ success: false });
+    }
+  });
+
   // Terminate attorney session
   app.delete("/api/attorney/session", async (req, res) => {
     try {
       const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
 
       if (sessionId) {
+        // Clear generated documents for this session before terminating
+        const clearedDocs = clearSessionDocuments(sessionId);
+        if (clearedDocs > 0) {
+          opsLog(`[Attorney Session] Cleared ${clearedDocs} document(s) on session termination`);
+        }
         attorneySessionManager.terminateSession(sessionId, 'user');
       }
 
@@ -1308,7 +1336,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       });
     } catch (error: any) {
-      errLog("Document generation failed", error);
+      errLog("Document generation failed:", error.message);
       res.status(500).json({
         success: false,
         error: error.message || "Document generation failed"
@@ -1347,8 +1375,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.setHeader('Content-Length', docxBuffer.length);
 
       res.send(docxBuffer);
-    } catch (error) {
-      errLog("Document export failed", error);
+    } catch (error: any) {
+      errLog("Document export failed:", error.message);
       res.status(500).json({ success: false, error: "Document export failed" });
     }
   });

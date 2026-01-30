@@ -37,6 +37,7 @@ export interface GeneratedSection {
 
 export interface GeneratedDocument {
   documentId: string;
+  sessionId: string;
   templateId: string;
   templateName: string;
   jurisdiction: string;
@@ -353,6 +354,7 @@ export async function generateDocument(
 
   const document: GeneratedDocument = {
     documentId,
+    sessionId,
     templateId,
     templateName: template.name,
     jurisdiction,
@@ -406,12 +408,17 @@ export function deleteGeneratedDocument(documentId: string): boolean {
 }
 
 /**
- * Clear all documents for a session
+ * Clear all documents for a specific session
  */
 export function clearSessionDocuments(sessionId: string): number {
-  // In a production system, we'd track documents by session
-  // For now, this clears all documents (since we don't track session-document mapping)
-  const count = generatedDocuments.size;
-  generatedDocuments.clear();
-  return count;
+  const keysToDelete: string[] = [];
+
+  generatedDocuments.forEach((doc, key) => {
+    if (doc.sessionId === sessionId) {
+      keysToDelete.push(key);
+    }
+  });
+
+  keysToDelete.forEach((key) => generatedDocuments.delete(key));
+  return keysToDelete.length;
 }
