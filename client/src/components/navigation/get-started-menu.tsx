@@ -531,14 +531,14 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       <button
         onClick={() => handleNavigate('/immigration-guidance')}
         className="w-full"
-        data-testid="submenu-item-know-your-rights"
+        data-testid="submenu-item-general-info"
       >
         <Card className="hover:shadow-md hover:border-green-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-3">
             <div className="flex items-center gap-3">
-              <Shield className="h-5 w-5 text-green-600" />
+              <Globe className="h-5 w-5 text-green-600" />
               <span className="font-medium group-hover:text-green-600 transition-colors">
-                {t('getStartedMenu.immigrationSubmenu.knowYourRights')}
+                {t('getStartedMenu.immigrationSubmenu.generalInfo')}
               </span>
             </div>
           </CardContent>
@@ -556,6 +556,23 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               <BookOpen className="h-5 w-5 text-blue-600" />
               <span className="font-medium group-hover:text-blue-600 transition-colors">
                 {t('getStartedMenu.immigrationSubmenu.situationalGuides')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/immigration-guidance/know-your-rights')}
+        className="w-full"
+        data-testid="submenu-item-know-your-rights"
+      >
+        <Card className="hover:shadow-md hover:border-amber-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Shield className="h-5 w-5 text-amber-600" />
+              <span className="font-medium group-hover:text-amber-600 transition-colors">
+                {t('getStartedMenu.immigrationSubmenu.knowYourRights')}
               </span>
             </div>
           </CardContent>

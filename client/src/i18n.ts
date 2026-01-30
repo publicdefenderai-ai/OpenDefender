@@ -583,8 +583,9 @@ i18n
             "immigrationSubmenu": {
               "title": "Immigration Enforcement",
               "backButton": "Back to Main Menu",
-              "knowYourRights": "Know Your Rights",
+              "generalInfo": "General Information",
               "situationalGuides": "Situational Guides",
+              "knowYourRights": "Know Your Rights",
               "findDetained": "Find a Detained Person",
               "findLawyer": "Find a Lawyer"
             }
@@ -2667,8 +2668,9 @@ i18n
             "immWorkplaceRaids": "Workplace Raids Guide",
             "immBondHearings": "Bond Hearings Info",
             "immBackToHub": "Back to Immigration Hub",
-            "immKnowYourRights": "Know Your Rights",
+            "immGeneralHub": "General Information",
             "immSituationalGuides": "Situational Guides",
+            "immKnowYourRights": "Know Your Rights",
             "immFindDetained": "Find a Detained Person",
             "immFindLawyer": "Find a Lawyer"
           },
@@ -3414,8 +3416,9 @@ i18n
             "immigrationSubmenu": {
               "title": "Aplicación de Inmigración",
               "backButton": "Volver al Menú Principal",
-              "knowYourRights": "Conozca Sus Derechos",
+              "generalInfo": "Información General",
               "situationalGuides": "Guías Situacionales",
+              "knowYourRights": "Conozca Sus Derechos",
               "findDetained": "Encontrar a una Persona Detenida",
               "findLawyer": "Encontrar un Abogado"
             }
@@ -5498,8 +5501,9 @@ i18n
             "immWorkplaceRaids": "Guía de Redadas en el Trabajo",
             "immBondHearings": "Info de Audiencias de Fianza",
             "immBackToHub": "Volver al Centro de Inmigración",
-            "immKnowYourRights": "Conozca Sus Derechos",
+            "immGeneralHub": "Información General",
             "immSituationalGuides": "Guías Situacionales",
+            "immKnowYourRights": "Conozca Sus Derechos",
             "immFindDetained": "Encontrar a una Persona Detenida",
             "immFindLawyer": "Encontrar un Abogado"
           },

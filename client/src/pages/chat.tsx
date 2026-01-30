@@ -252,8 +252,9 @@ export default function ChatPage() {
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_immigration') {
           addBotMessageWithKey('chat.messages.immigrationMenu', [
-            { id: 'imm-know-rights', labelKey: 'chat.replies.immKnowYourRights', value: 'imm_know_rights', color: 'green' as const },
+            { id: 'imm-general-info', labelKey: 'chat.replies.immGeneralHub', value: 'imm_general_info', color: 'green' as const },
             { id: 'imm-situational', labelKey: 'chat.replies.immSituationalGuides', value: 'imm_situational', color: 'blue' as const },
+            { id: 'imm-know-rights', labelKey: 'chat.replies.immKnowYourRights', value: 'imm_know_rights', color: 'amber' as const },
             { id: 'imm-find-detained', labelKey: 'chat.replies.immFindDetained', value: 'imm_find_detained', color: 'amber' as const },
             { id: 'imm-find-lawyer', labelKey: 'chat.replies.immFindLawyer', value: 'imm_find_lawyer', color: 'rose' as const },
           ]);
@@ -388,8 +389,11 @@ export default function ChatPage() {
         break;
 
       case 'immigration_submenu':
-        if (reply.value === 'imm_know_rights') {
+        if (reply.value === 'imm_general_info') {
           setLocation('/immigration-guidance');
+          actions.markFlowCompleted('immigration');
+        } else if (reply.value === 'imm_know_rights') {
+          setLocation('/immigration-guidance/know-your-rights');
           actions.markFlowCompleted('immigration');
         } else if (reply.value === 'imm_situational') {
           setLocation('/immigration-guidance');

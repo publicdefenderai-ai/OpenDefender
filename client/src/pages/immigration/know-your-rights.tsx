@@ -13,7 +13,8 @@ import {
   ChevronDown,
   ChevronUp,
   Scale,
-  FileText
+  FileText,
+  Gavel
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -254,8 +255,200 @@ export default function KnowYourRights() {
         </div>
       </section>
 
+      {/* Blackie's Warrants Section */}
+      <section className="py-12 bg-muted/30" id="blackies-warrants">
+        <div className="max-w-7xl mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold mb-2 flex items-center gap-3">
+              <Gavel className="h-6 w-6 text-primary" />
+              {lang === 'es' ? '"Blackie\'s Warrants": Lo Que Debe Saber' : '"Blackie\'s Warrants": What You Should Know'}
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              {lang === 'es'
+                ? 'Comprenda los diferentes tipos de ordenes que los agentes de ICE pueden presentar en su lugar de trabajo o hogar, y cuáles le dan derecho a negar la entrada.'
+                : 'Understand the different types of warrants ICE agents may present at your workplace or home, and which ones give you the right to deny entry.'}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid lg:grid-cols-2 gap-6 mb-8">
+            <ScrollReveal delay={0.1}>
+              <Card className="h-full border-green-200 dark:border-green-800">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <Scale className="h-5 w-5 text-green-600" />
+                    {lang === 'es' ? 'Orden Judicial' : 'Judicial Warrant'}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
+                    <p className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
+                      {lang === 'es'
+                        ? 'Emitida por un tribunal federal y firmada por un juez federal (no un juez de inmigración).'
+                        : 'Issued by a federal court and signed by a federal judge (not an immigration judge).'}
+                    </p>
+                    <ul className="space-y-1.5 text-sm text-green-700 dark:text-green-300">
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'Requiere causa probable de que se cometió un delito'
+                          : 'Requires probable cause that a crime was committed'}
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'Permite a los agentes entrar en áreas privadas'
+                          : 'Allows officers to enter private areas'}
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'Solo pueden registrar los lugares indicados en la orden'
+                          : 'Officers can only search the places listed on the warrant'}
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'Inmigración casi nunca usa órdenes judiciales'
+                          : 'Immigration almost never uses judicial warrants'}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {lang === 'es'
+                      ? 'Identificación: Menciona "búsqueda e incautación" o "arresto"; emitida por un tribunal; firmada por un juez no-migratorio.'
+                      : 'How to identify: Says "search and seizure" or "arrest"; issued by a court; signed by a non-immigration judge.'}
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Card className="h-full border-red-200 dark:border-red-800">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <FileText className="h-5 w-5 text-red-600" />
+                    {lang === 'es' ? 'Orden Administrativa (ICE)' : 'Administrative Warrant (ICE)'}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="bg-red-50 dark:bg-red-950/30 rounded-lg p-4">
+                    <p className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">
+                      {lang === 'es'
+                        ? 'Emitida por una agencia federal como ICE o CBP — NO por un tribunal.'
+                        : 'Issued by a federal agency like ICE or CBP — NOT by a court.'}
+                    </p>
+                    <ul className="space-y-1.5 text-sm text-red-700 dark:text-red-300">
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'NO permite la entrada a espacios privados sin su permiso'
+                          : 'Does NOT allow entry to private spaces without your permission'}
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'Usualmente usada para arrestar personas en público'
+                          : 'Usually used to arrest a person in public'}
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span>•</span>
+                        {lang === 'es'
+                          ? 'Puede estar firmada por un juez de inmigración, pero eso NO la convierte en una orden judicial'
+                          : 'May be signed by an immigration judge, but that does NOT make it a judicial warrant'}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {lang === 'es'
+                      ? 'Identificación: Sello de DHS; formularios I-200 (Orden de Arresto) o I-205 (Orden de Deportación).'
+                      : 'How to identify: DHS seal; Form I-200 (Warrant for Arrest) or I-205 (Warrant of Removal/Deportation).'}
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.3}>
+            <Card className="border-amber-200 dark:border-amber-800">
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Gavel className="h-5 w-5 text-amber-600" />
+                  {lang === 'es' ? '¿Qué es una "Blackie\'s Warrant"?' : 'What Is a "Blackie\'s Warrant"?'}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  {lang === 'es'
+                    ? 'Una "Blackie\'s warrant" es una orden de inspección administrativa que ICE ha utilizado históricamente para ingresar a lugares de trabajo. El nombre proviene del caso Blackie\'s House of Beef, Inc. v. Castillo (1981), donde un tribunal federal permitió una inspección de inmigración en el lugar de trabajo con un estándar menor que la causa probable requerida para órdenes judiciales penales.'
+                    : 'A "Blackie\'s warrant" is an administrative inspection warrant that ICE has historically used to enter workplaces. The name comes from Blackie\'s House of Beef, Inc. v. Castillo (1981), where a federal court allowed a workplace immigration inspection under a lower standard than the probable cause required for criminal judicial warrants.'}
+                </p>
+
+                <Alert className="bg-amber-50 border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
+                  <AlertTriangle className="h-5 w-5 text-amber-600" />
+                  <AlertDescription className="text-amber-800 dark:text-amber-200">
+                    <strong>{lang === 'es' ? 'Desarrollo reciente (2025):' : 'Recent development (2025):'}</strong>{' '}
+                    {lang === 'es'
+                      ? 'En mayo de 2025, un juez magistrado federal en el Distrito Sur de Texas denegó la solicitud del gobierno para una orden de inspección administrativa, dictaminando que los agentes de ICE deben obtener una orden judicial que cumpla con la Cuarta Enmienda para buscar en las áreas privadas de un negocio personas indocumentadas sospechosas. Sin embargo, los agentes de ICE aún pueden presentar "Blackie\'s warrants" u órdenes bajo la Regla 41.'
+                      : 'In May 2025, a federal magistrate judge in the Southern District of Texas denied the government\'s application for an administrative inspection warrant, ruling that ICE agents must obtain a Fourth Amendment judicial warrant to search a business\'s private areas for suspected undocumented immigrants. However, ICE agents may still present "Blackie\'s warrants" or Rule 41 warrants.'}
+                  </AlertDescription>
+                </Alert>
+
+                <div className="bg-blue-50 dark:bg-blue-950/30 rounded-lg p-4">
+                  <h4 className="font-semibold text-sm mb-2 text-blue-800 dark:text-blue-200">
+                    {lang === 'es' ? 'Qué verificar en cualquier orden:' : 'What to verify on any warrant:'}
+                  </h4>
+                  <ul className="space-y-1.5 text-sm text-blue-700 dark:text-blue-300">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold">1.</span>
+                      {lang === 'es'
+                        ? '¿Fue emitida por un tribunal federal?'
+                        : 'Was it issued by a federal court?'}
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold">2.</span>
+                      {lang === 'es'
+                        ? '¿Fue firmada por un juez federal (no un juez de inmigración)?'
+                        : 'Was it signed by a federal judge (not an immigration judge)?'}
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold">3.</span>
+                      {lang === 'es'
+                        ? '¿Especifica el tiempo, lugar y objetivos de la búsqueda?'
+                        : 'Does it specify the time, location, and targets of the search?'}
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold">4.</span>
+                      {lang === 'es'
+                        ? '¿Está acompañada de una declaración jurada con base creíble?'
+                        : 'Is it accompanied by an affidavit with a plausible basis?'}
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
+                  <h4 className="font-semibold text-sm mb-2 text-green-800 dark:text-green-200">
+                    {lang === 'es' ? 'Qué decir si ICE se presenta con una orden:' : 'What to say if ICE shows up with a warrant:'}
+                  </h4>
+                  <p className="text-sm font-medium text-green-800 dark:text-green-200 italic">
+                    {lang === 'es'
+                      ? '"Esta es un área privada. No pueden entrar sin una orden judicial firmada por un juez. ¿Tiene una orden judicial?"'
+                      : '"This is a private area. You cannot enter without a judicial warrant signed by a judge. Do you have a judicial warrant?"'}
+                  </p>
+                </div>
+
+                <p className="text-xs text-muted-foreground">
+                  {lang === 'es'
+                    ? 'Fuente: National Immigration Law Center (NILC), "Know Your Rights: Warrants" (diciembre 2025). Esta información es solo educativa y no constituye asesoramiento legal.'
+                    : 'Source: National Immigration Law Center (NILC), "Know Your Rights: Warrants" (December 2025). This information is educational only and does not constitute legal advice.'}
+                </p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Common Mistakes Section */}
-      <section className="py-12 bg-muted/30">
+      <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-2xl font-bold mb-2">
