@@ -20,7 +20,8 @@ export type TemplateInputType =
   | 'checkbox'
   | 'party-name'      // Special handling for party names
   | 'case-number'     // Special handling for case numbers
-  | 'court-name';     // Special handling for court names
+  | 'court-name'      // Special handling for court names
+  | 'a-number';       // Special handling for A-Numbers (immigration)
 
 export interface TemplateInput {
   id: string;
@@ -61,7 +62,7 @@ export interface TemplateSection {
 
 export interface JurisdictionVariant {
   jurisdiction: string;  // State code (e.g., "CA")
-  courtType?: "state" | "federal";
+  courtType?: "state" | "federal" | "immigration";
   district?: string;     // Federal district code (e.g., "CACD")
   sections: TemplateSection[];
   courtSpecificRules?: string;
@@ -96,7 +97,7 @@ export interface DocumentTemplate {
 export const templateInputSchema = z.object({
   id: z.string(),
   label: z.string(),
-  type: z.enum(['text', 'textarea', 'date', 'select', 'number', 'checkbox', 'party-name', 'case-number', 'court-name']),
+  type: z.enum(['text', 'textarea', 'date', 'select', 'number', 'checkbox', 'party-name', 'case-number', 'court-name', 'a-number']),
   placeholder: z.string().optional(),
   required: z.boolean(),
   helpText: z.string().optional(),
@@ -135,7 +136,7 @@ export const documentTemplateSchema = z.object({
   baseSections: z.array(templateSectionSchema),
   jurisdictionVariants: z.array(z.object({
     jurisdiction: z.string(),
-    courtType: z.enum(["state", "federal"]).optional(),
+    courtType: z.enum(["state", "federal", "immigration"]).optional(),
     district: z.string().optional(),
     sections: z.array(templateSectionSchema),
     courtSpecificRules: z.string().optional(),

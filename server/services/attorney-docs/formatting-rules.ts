@@ -14,7 +14,7 @@
 // Types
 // ============================================================================
 
-export type CourtType = "state" | "federal";
+export type CourtType = "state" | "federal" | "immigration";
 
 export interface CourtIdentifier {
   jurisdiction: string;
@@ -57,6 +57,12 @@ export interface CourtFormattingRules {
 
   // Proof of service
   proofOfServicePreamble: string;
+
+  // Immigration court caption style
+  captionStyle?: "adversarial" | "in-matter-of";
+  respondentLabel?: string;
+  identifierLabel?: string;
+  proceedingLabel?: string;
 
   // Metadata
   ruleSource: string;
@@ -569,6 +575,64 @@ export const WDNY_RULES: CourtFormattingRules = {
 };
 
 // ============================================================================
+// Immigration Court Rules (EOIR)
+// ============================================================================
+
+/**
+ * Immigration court rules (EOIR / ICPM).
+ * Nationally uniform formatting — applies to all 68+ immigration courts.
+ * - 12pt TNR, double-spaced (ICPM Ch. 3.3)
+ * - 1" margins all sides
+ * - No line numbers, no attorney header block
+ * - "In the Matter of" caption style with A-Number
+ * - Cover page required for all filings
+ * - Two-hole punch binding for paper filings, single-sided
+ */
+export const IMMIGRATION_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt (ICPM Ch. 3.3)
+  fontColor: "000000",
+  lineSpacing: 480, // double spacing
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DEPARTMENT OF JUSTICE",
+  courtSubtitle: "EXECUTIVE OFFICE FOR IMMIGRATION REVIEW",
+  plaintiffLabel: "", // Not used — immigration uses "In the Matter of" format
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  captionStyle: "in-matter-of",
+  respondentLabel: "In the Matter of:",
+  identifierLabel: "A-Number:",
+  proceedingLabel: "In Removal Proceedings",
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "EOIR Immigration Court Practice Manual",
+  rulesCited: [
+    "ICPM Ch. 3.3",
+    "8 CFR 1003.17",
+    "8 CFR 1003.32",
+  ],
+};
+
+// ============================================================================
 // Registry
 // ============================================================================
 
@@ -587,6 +651,7 @@ const COURT_RULES_REGISTRY: Map<string, CourtFormattingRules> = new Map([
   ["EDNY", EDNY_RULES],
   ["NDNY", NDNY_RULES],
   ["WDNY", WDNY_RULES],
+  ["EOIR-immigration", IMMIGRATION_RULES],
 ]);
 
 /**
@@ -599,6 +664,9 @@ export function getCourtKey(
   courtType: CourtType = "state",
   district?: string
 ): string {
+  if (courtType === "immigration") {
+    return "EOIR-immigration";
+  }
   if (courtType === "federal" && district) {
     return district;
   }

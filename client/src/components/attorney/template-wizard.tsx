@@ -44,9 +44,12 @@ type WizardStep = "jurisdiction" | "form" | "generate" | "preview";
 
 export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
   const [step, setStep] = useState<WizardStep>("jurisdiction");
-  const [jurisdictionSelection, setJurisdictionSelection] = useState<JurisdictionSelection>({
-    jurisdiction: template.supportedJurisdictions[0] || "generic",
-  });
+  const isImmigrationTemplate = template.supportedJurisdictions.includes("EOIR");
+  const [jurisdictionSelection, setJurisdictionSelection] = useState<JurisdictionSelection>(
+    isImmigrationTemplate
+      ? { jurisdiction: "EOIR", courtType: "immigration" }
+      : { jurisdiction: template.supportedJurisdictions[0] || "generic" }
+  );
   const [currentFormSectionIndex, setCurrentFormSectionIndex] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationError, setGenerationError] = useState<string | null>(null);

@@ -40,7 +40,7 @@ export interface GeneratedDocument {
   templateId: string;
   templateName: string;
   jurisdiction: string;
-  courtType?: "state" | "federal";
+  courtType?: "state" | "federal" | "immigration";
   district?: string;
   sections: GeneratedSection[];
   generatedAt: string;
@@ -50,7 +50,7 @@ export interface GeneratedDocument {
 export interface GenerateDocumentRequest {
   templateId: string;
   jurisdiction: string;
-  courtType?: "state" | "federal";
+  courtType?: "state" | "federal" | "immigration";
   district?: string;
   formData: Record<string, string>;
 }

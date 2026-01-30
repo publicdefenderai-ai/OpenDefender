@@ -160,6 +160,11 @@ export function applyJurisdictionVariant(
   courtType?: string,
   district?: string
 ): DocumentTemplate {
+  // Immigration courts are nationally uniform — no variants needed
+  if (courtType === "immigration") {
+    return template;
+  }
+
   // Find matching variant — most specific match first
   const variant = template.jurisdictionVariants?.find((v) => {
     if (v.jurisdiction.toUpperCase() !== jurisdiction.toUpperCase()) return false;

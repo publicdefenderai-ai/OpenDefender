@@ -274,6 +274,12 @@ function generateDocumentContent(
   rules: CourtFormattingRules
 ): Paragraph[] {
   const paragraphs: Paragraph[] = [];
+  const isImmigration = rules.captionStyle === "in-matter-of";
+
+  // Immigration cover page (ICPM requires cover page for all filings)
+  if (isImmigration) {
+    paragraphs.push(...generateImmigrationCoverPage(formData, options, rules, document.templateName));
+  }
 
   // Add attorney header block when rules require it (CA state + CACD federal)
   if (rules.includeAttorneyHeader) {
@@ -284,14 +290,23 @@ function generateDocumentContent(
     // Add section content based on type
     switch (section.id) {
       case "caption":
-        paragraphs.push(...generateCaptionSection(formData, options, rules, document.templateName));
+        if (isImmigration) {
+          paragraphs.push(...generateImmigrationCaption(formData, options, rules, document.templateName));
+        } else {
+          paragraphs.push(...generateCaptionSection(formData, options, rules, document.templateName));
+        }
         break;
 
       case "signatureBlock":
-        paragraphs.push(...generateSignatureBlock(formData, options));
+        if (isImmigration) {
+          paragraphs.push(...generateImmigrationSignatureBlock(formData, options));
+        } else {
+          paragraphs.push(...generateSignatureBlock(formData, options));
+        }
         break;
 
       case "certificateOfService":
+      case "proofOfService":
         paragraphs.push(...generateCertificateOfService(section, options));
         break;
 
@@ -1082,6 +1097,576 @@ function generateCertificateOfService(
   }
 
   return paragraphs;
+}
+
+// ============================================================================
+// Immigration Court Document Generators
+// ============================================================================
+
+/**
+ * Generate immigration court cover page (ICPM required for all filings).
+ * Contains preparer info, filing title, respondent/A-Number, proceeding type, hearing date/time.
+ */
+function generateImmigrationCoverPage(
+  formData: Record<string, string>,
+  options: Required<DocxOptions>,
+  rules: CourtFormattingRules,
+  templateName: string
+): Paragraph[] {
+  const paragraphs: Paragraph[] = [];
+
+  // Court hierarchy
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [
+        new TextRun({
+          text: rules.courtTitle.toUpperCase(),
+          bold: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  if (rules.courtSubtitle) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.CENTER,
+        children: [
+          new TextRun({
+            text: rules.courtSubtitle.toUpperCase(),
+            bold: true,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Immigration court city
+  const courtCity = formatImmigrationCourtName(formData.immigrationCourt, formData.immigrationCourtOther);
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [
+        new TextRun({
+          text: `IMMIGRATION COURT, ${courtCity.toUpperCase()}`,
+          bold: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  paragraphs.push(new Paragraph({ children: [] }));
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // Filing title
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [
+        new TextRun({
+          text: "COVER PAGE",
+          bold: true,
+          font: options.fontFamily,
+          size: 28, // 14pt
+        }),
+      ],
+      spacing: { after: 240 },
+    })
+  );
+
+  // Preparer info
+  const coverFields = [
+    { label: "Filed by", value: formData.attorneyName || "[Attorney Name]" },
+    { label: "Firm", value: formData.firmName || "" },
+    { label: "Address", value: formData.address || "" },
+    { label: "Telephone", value: formData.phone || "" },
+    { label: "Email", value: formData.email || "" },
+  ];
+
+  for (const field of coverFields) {
+    if (!field.value) continue;
+    paragraphs.push(
+      new Paragraph({
+        children: [
+          new TextRun({ text: `${field.label}: `, bold: true, font: options.fontFamily, size: options.fontSize }),
+          new TextRun({ text: field.value, font: options.fontFamily, size: options.fontSize }),
+        ],
+        spacing: { line: 240 },
+      })
+    );
+  }
+
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // Filing title
+  paragraphs.push(
+    new Paragraph({
+      children: [
+        new TextRun({ text: "Filing: ", bold: true, font: options.fontFamily, size: options.fontSize }),
+        new TextRun({ text: templateName, font: options.fontFamily, size: options.fontSize }),
+      ],
+    })
+  );
+
+  // Respondent
+  paragraphs.push(
+    new Paragraph({
+      children: [
+        new TextRun({ text: "Respondent: ", bold: true, font: options.fontFamily, size: options.fontSize }),
+        new TextRun({ text: formData.respondentName || "[Respondent Name]", font: options.fontFamily, size: options.fontSize }),
+      ],
+    })
+  );
+
+  // A-Number
+  paragraphs.push(
+    new Paragraph({
+      children: [
+        new TextRun({ text: "A-Number: ", bold: true, font: options.fontFamily, size: options.fontSize }),
+        new TextRun({ text: formData.aNumber || "___-___-___", font: options.fontFamily, size: options.fontSize }),
+      ],
+    })
+  );
+
+  // Proceeding type
+  paragraphs.push(
+    new Paragraph({
+      children: [
+        new TextRun({ text: "Proceeding Type: ", bold: true, font: options.fontFamily, size: options.fontSize }),
+        new TextRun({ text: formatProceedingType(formData.proceedingType), font: options.fontFamily, size: options.fontSize }),
+      ],
+    })
+  );
+
+  // Hearing date/time
+  if (formData.hearingDate) {
+    paragraphs.push(
+      new Paragraph({
+        children: [
+          new TextRun({ text: "Hearing Date: ", bold: true, font: options.fontFamily, size: options.fontSize }),
+          new TextRun({
+            text: `${formData.hearingDate}${formData.hearingTime ? ` at ${formData.hearingTime}` : ""}`,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Page break after cover page
+  paragraphs.push(
+    new Paragraph({
+      pageBreakBefore: true,
+      children: [],
+    })
+  );
+
+  return paragraphs;
+}
+
+/**
+ * Generate immigration court caption (In the Matter of format).
+ * Three-line court hierarchy, "In the Matter of:", respondent name with A-Number, proceeding type.
+ */
+function generateImmigrationCaption(
+  formData: Record<string, string>,
+  options: Required<DocxOptions>,
+  rules: CourtFormattingRules,
+  templateName: string
+): Paragraph[] {
+  const paragraphs: Paragraph[] = [];
+
+  // Court hierarchy — three lines
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [
+        new TextRun({
+          text: rules.courtTitle.toUpperCase(),
+          bold: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  if (rules.courtSubtitle) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.CENTER,
+        children: [
+          new TextRun({
+            text: rules.courtSubtitle.toUpperCase(),
+            bold: true,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  const courtCity = formatImmigrationCourtName(formData.immigrationCourt, formData.immigrationCourtOther);
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [
+        new TextRun({
+          text: `IMMIGRATION COURT, ${courtCity.toUpperCase()}`,
+          bold: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Spacing
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // "In the Matter of:" label
+  paragraphs.push(
+    new Paragraph({
+      children: [
+        new TextRun({
+          text: rules.respondentLabel || "In the Matter of:",
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Respondent name with A-Number on right
+  paragraphs.push(
+    new Paragraph({
+      tabStops: [
+        {
+          type: TabStopType.RIGHT,
+          position: 9360,
+        },
+      ],
+      children: [
+        new TextRun({
+          text: (formData.respondentName || "[RESPONDENT NAME]").toUpperCase(),
+          bold: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+        new TextRun({ text: "\t" }),
+        new TextRun({
+          text: `${rules.identifierLabel || "A-Number:"} ${formData.aNumber || "___-___-___"}`,
+          font: options.fontFamily,
+          size: options.fontSize,
+          bold: true,
+        }),
+      ],
+    })
+  );
+
+  // Proceeding type label (indented)
+  paragraphs.push(
+    new Paragraph({
+      indent: { left: 1440 },
+      children: [
+        new TextRun({
+          text: rules.proceedingLabel || "In Removal Proceedings",
+          italics: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Separator line
+  if (rules.includeSeparatorLine) {
+    paragraphs.push(
+      new Paragraph({
+        border: {
+          bottom: {
+            style: BorderStyle.SINGLE,
+            size: 6,
+            color: "000000",
+          },
+        },
+        children: [],
+      })
+    );
+  }
+
+  // Spacing
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // Document title
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      children: [
+        new TextRun({
+          text: templateName.toUpperCase(),
+          bold: true,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Hearing info below title
+  if (formData.hearingDate) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.CENTER,
+        children: [
+          new TextRun({
+            text: `[Hearing: ${formData.hearingDate}${formData.hearingTime ? ` at ${formData.hearingTime}` : ""}]`,
+            italics: true,
+            font: options.fontFamily,
+            size: options.fontSize - 2,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Spacing before body
+  paragraphs.push(new Paragraph({ children: [] }));
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  return paragraphs;
+}
+
+/**
+ * Generate immigration court signature block.
+ * Uses conformed /S/ signature for ECAS filings, blank line for paper.
+ * Uses "Attorney for Respondent" (not "Defendant").
+ */
+function generateImmigrationSignatureBlock(
+  formData: Record<string, string>,
+  options: Required<DocxOptions>
+): Paragraph[] {
+  const paragraphs: Paragraph[] = [];
+  const isEcas = formData.filingMethod === "ecas";
+  const sigName = formData.signatureAttorneyName || formData.attorneyName || "[Attorney Name]";
+
+  // Spacing before signature
+  paragraphs.push(new Paragraph({ children: [] }));
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // Date line
+  paragraphs.push(
+    new Paragraph({
+      children: [
+        new TextRun({
+          text: "Dated: _______________",
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Spacing
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // Respectfully submitted
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.RIGHT,
+      children: [
+        new TextRun({
+          text: "Respectfully submitted,",
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Spacing for signature
+  paragraphs.push(new Paragraph({ children: [] }));
+
+  // Signature line — conformed /S/ for ECAS, blank line for paper
+  if (isEcas) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        children: [
+          new TextRun({
+            text: `/S/ ${sigName}`,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  } else {
+    paragraphs.push(new Paragraph({ children: [] }));
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        children: [
+          new TextRun({
+            text: "_________________________________",
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Attorney name
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.RIGHT,
+      children: [
+        new TextRun({
+          text: sigName,
+          font: options.fontFamily,
+          size: options.fontSize,
+        }),
+      ],
+    })
+  );
+
+  // Firm name
+  if (formData.firmName) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        children: [
+          new TextRun({
+            text: formData.firmName,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Address
+  if (formData.address) {
+    const addressLines = formData.address.split("\n");
+    for (const line of addressLines) {
+      paragraphs.push(
+        new Paragraph({
+          alignment: AlignmentType.RIGHT,
+          children: [
+            new TextRun({
+              text: line.trim(),
+              font: options.fontFamily,
+              size: options.fontSize,
+            }),
+          ],
+        })
+      );
+    }
+  }
+
+  // Phone
+  if (formData.phone) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        children: [
+          new TextRun({
+            text: `Tel: ${formData.phone}`,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Email
+  if (formData.email) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        children: [
+          new TextRun({
+            text: `Email: ${formData.email}`,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // EOIR ID (if provided)
+  if (formData.eoirId) {
+    paragraphs.push(
+      new Paragraph({
+        alignment: AlignmentType.RIGHT,
+        children: [
+          new TextRun({
+            text: `EOIR ID: ${formData.eoirId}`,
+            font: options.fontFamily,
+            size: options.fontSize,
+          }),
+        ],
+      })
+    );
+  }
+
+  // Attorney for Respondent (not Defendant)
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.RIGHT,
+      children: [
+        new TextRun({
+          text: `Attorney for Respondent ${(formData.respondentName || "").toUpperCase()}`,
+          font: options.fontFamily,
+          size: options.fontSize,
+          italics: true,
+        }),
+      ],
+    })
+  );
+
+  return paragraphs;
+}
+
+/**
+ * Format immigration court name from select value.
+ */
+function formatImmigrationCourtName(courtValue?: string, otherName?: string): string {
+  if (courtValue === "other" && otherName) return otherName;
+  if (!courtValue) return "[City]";
+
+  // Convert value like "los_angeles" to "Los Angeles"
+  return courtValue
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+/**
+ * Format proceeding type code to display label.
+ */
+function formatProceedingType(value?: string): string {
+  const types: Record<string, string> = {
+    removal: "Removal Proceedings (INA \u00A7 240)",
+    deportation: "Deportation Proceedings (INA \u00A7 242)",
+    exclusion: "Exclusion Proceedings (INA \u00A7 236)",
+    bond: "Bond Proceedings (INA \u00A7 236)",
+    withholding_only: "Withholding-Only Proceedings (8 CFR 1208.2(c)(2))",
+  };
+  return types[value || ""] || value || "Removal Proceedings";
 }
 
 /**

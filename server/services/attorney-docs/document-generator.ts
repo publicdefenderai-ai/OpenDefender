@@ -9,6 +9,8 @@ import Anthropic from "@anthropic-ai/sdk";
 import { randomUUID } from "crypto";
 import { motionToContinueTemplate } from "../../../shared/templates/motion-to-continue";
 import { motionToSuppressTemplate } from "../../../shared/templates/motion-to-suppress";
+import { noticeOfAppearanceTemplate } from "../../../shared/templates/notice-of-appearance";
+import { ntaPleadingsTemplate } from "../../../shared/templates/nta-pleadings";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -20,7 +22,7 @@ import type { DocumentTemplate, TemplateSection } from "../../../shared/template
 export interface GenerateDocumentRequest {
   templateId: string;
   jurisdiction: string;
-  courtType?: "state" | "federal";
+  courtType?: "state" | "federal" | "immigration";
   district?: string;
   formData: Record<string, string>;
   sessionId: string;
@@ -38,7 +40,7 @@ export interface GeneratedDocument {
   templateId: string;
   templateName: string;
   jurisdiction: string;
-  courtType: "state" | "federal";
+  courtType: "state" | "federal" | "immigration";
   district?: string;
   sections: GeneratedSection[];
   generatedAt: Date;
@@ -55,6 +57,8 @@ export interface DocumentGenerationError {
 const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-continue", motionToContinueTemplate],
   ["motion-to-suppress", motionToSuppressTemplate],
+  ["notice-of-appearance", noticeOfAppearanceTemplate],
+  ["nta-pleadings", ntaPleadingsTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -177,13 +181,22 @@ Use formal legal writing style. Cite relevant authorities when appropriate.
 Be concise but thorough. Focus on facts and applicable law.
 Do not include any preamble or explanation - return only the requested content.`;
 
+const AI_IMMIGRATION_SYSTEM_PROMPT = `You are an expert legal document drafter for immigration defense matters before EOIR immigration courts.
+Generate professional content for immigration court filings.
+Use formal legal writing style consistent with the EOIR Immigration Court Practice Manual.
+Always use "Respondent" (never "Defendant"), "DHS" (never "Plaintiff"), "A-Number" (never "Case Number"), "Immigration Judge" (never "the Court"), and "Notice to Appear / NTA" (never "Complaint").
+Cite INA sections, 8 CFR regulations, and EOIR rules as appropriate.
+Be concise but thorough. Focus on facts and applicable immigration law.
+Do not include any preamble or explanation - return only the requested content.`;
+
 /**
  * Generate AI content for a section
  */
 async function generateAISection(
   section: TemplateSection,
   formData: Record<string, string>,
-  jurisdiction: string
+  jurisdiction: string,
+  courtType?: "state" | "federal" | "immigration"
 ): Promise<string> {
   if (!anthropic) {
     throw new Error("AI service not configured (ANTHROPIC_API_KEY missing)");
@@ -215,10 +228,29 @@ async function generateAISection(
     warrantIssued: formData.warrantIssued || "not_applicable",
     mirandaGiven: formData.mirandaGiven || "not_applicable",
     consentGiven: formData.consentGiven || "not_applicable",
+    // Immigration court fields
+    proceedingType: formData.proceedingType || "removal",
+    detainedStatus: formData.detainedStatus || "released",
+    filingMethod: formData.filingMethod || "ecas",
+    detentionFacility: formData.detentionFacility || "",
+    ntaServiceResponse: formData.ntaServiceResponse || "",
+    admittedAllegations: formData.admittedAllegations || "",
+    deniedAllegations: formData.deniedAllegations || "",
+    allegationExplanation: formData.allegationExplanation || "",
+    chargesResponse: formData.chargesResponse || "",
+    chargesExplanation: formData.chargesExplanation || "",
+    selectedRelief: formData.selectedRelief || "",
+    reliefExplanation: formData.reliefExplanation || "",
+    countryDesignation: formData.countryDesignation || "",
   };
 
   // Process template with safe data
   const prompt = processTemplate(section.aiPromptTemplate, safeFormData);
+
+  // Select system prompt based on court type
+  const systemPrompt = courtType === "immigration"
+    ? AI_IMMIGRATION_SYSTEM_PROMPT
+    : AI_SYSTEM_PROMPT;
 
   devLog(`[AI] Generating content for section: ${section.id}`);
   devLog(`[AI] Prompt length: ${prompt.length} characters`);
@@ -228,7 +260,7 @@ async function generateAISection(
       model: "claude-sonnet-4-20250514",
       max_tokens: 2000,
       temperature: 0.3, // Low temperature for legal accuracy
-      system: AI_SYSTEM_PROMPT,
+      system: systemPrompt,
       messages: [
         {
           role: "user",
@@ -300,7 +332,7 @@ export async function generateDocument(
 
       case "ai-generated":
         // Generate AI content
-        content = await generateAISection(section, formData, jurisdiction);
+        content = await generateAISection(section, formData, jurisdiction, courtType);
         break;
 
       default:

@@ -111,6 +111,15 @@ function renderInputControl(input: TemplateInput, field: any) {
         />
       );
 
+    case "a-number":
+      return (
+        <Input
+          {...field}
+          placeholder={input.placeholder || "XXX-XXX-XXX"}
+          maxLength={11}
+        />
+      );
+
     case "textarea":
       return (
         <Textarea
@@ -185,7 +194,7 @@ function renderInputControl(input: TemplateInput, field: any) {
 
 export interface JurisdictionSelection {
   jurisdiction: string;
-  courtType?: "state" | "federal";
+  courtType?: "state" | "federal" | "immigration";
   district?: string;
 }
 
@@ -200,6 +209,33 @@ export function JurisdictionSelector({
   onChange,
   supportedJurisdictions,
 }: JurisdictionSelectorProps) {
+  // Immigration court templates — show simplified EOIR display
+  const isImmigrationTemplate = supportedJurisdictions.includes("EOIR");
+
+  if (isImmigrationTemplate) {
+    return (
+      <div className="space-y-3">
+        <div
+          className="p-4 rounded-lg border-2 border-blue-500 bg-blue-50 dark:bg-blue-950/30"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-4 h-4 rounded-full border-2 border-blue-500 bg-blue-500">
+              <div className="w-full h-full rounded-full flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-white rounded-full" />
+              </div>
+            </div>
+            <div>
+              <p className="font-medium">Immigration Court (EOIR)</p>
+              <p className="text-sm text-muted-foreground">
+                Nationally uniform EOIR format (12pt TNR, ICPM rules)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const allDistricts = [
     { code: "CACD", label: "Central District of California (CACD)", rules: "L.R. 11-3 formatting, 14pt font", jurisdiction: "CA" },
     { code: "NDCA", label: "Northern District of California (NDCA)", rules: "N.D. Cal. rules, 14pt font", jurisdiction: "CA" },

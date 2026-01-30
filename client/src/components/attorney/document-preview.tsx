@@ -15,7 +15,7 @@ import type { GeneratedSection } from "@/lib/attorney-api";
 interface DocumentPreviewProps {
   templateName: string;
   jurisdiction: string;
-  courtType?: "state" | "federal";
+  courtType?: "state" | "federal" | "immigration";
   district?: string;
   sections: GeneratedSection[];
   formData: Record<string, string>;
@@ -125,7 +125,7 @@ export function DocumentPreview({
               })}
 
               {/* Signature Block */}
-              <DocumentSignature formData={formData} />
+              <DocumentSignature formData={formData} courtType={courtType} />
             </div>
           </div>
         </ScrollArea>
@@ -134,7 +134,31 @@ export function DocumentPreview({
   );
 }
 
-function DocumentCaption({ formData, jurisdiction, courtType, district }: { formData: Record<string, string>; jurisdiction: string; courtType?: "state" | "federal"; district?: string }) {
+function DocumentCaption({ formData, jurisdiction, courtType, district }: { formData: Record<string, string>; jurisdiction: string; courtType?: "state" | "federal" | "immigration"; district?: string }) {
+  // Immigration court caption — "In the Matter of" format
+  if (courtType === "immigration") {
+    return (
+      <div className="text-center space-y-2">
+        <div className="font-bold uppercase">UNITED STATES DEPARTMENT OF JUSTICE</div>
+        <div className="font-bold uppercase">EXECUTIVE OFFICE FOR IMMIGRATION REVIEW</div>
+        <div className="font-bold uppercase">
+          IMMIGRATION COURT, {formatImmigrationCourtNamePreview(formData.immigrationCourt, formData.immigrationCourtOther)}
+        </div>
+
+        <div className="mt-6 text-left">
+          <div>In the Matter of:</div>
+          <div className="flex justify-between mt-1">
+            <span className="font-bold uppercase">{formData.respondentName || "[RESPONDENT NAME]"}</span>
+            <span className="font-bold">A-Number: {formData.aNumber || "___-___-___"}</span>
+          </div>
+          <div className="ml-8 italic">{formatProceedingTypePreview(formData.proceedingType)}</div>
+        </div>
+
+        <div className="border-b border-black dark:border-white mt-2" />
+      </div>
+    );
+  }
+
   const getPlaintiffLabel = () => {
     if (courtType === "federal") return "UNITED STATES OF AMERICA,";
     if (jurisdiction === "CA") return "THE PEOPLE OF THE STATE OF CALIFORNIA,";
@@ -183,7 +207,15 @@ function DocumentCaption({ formData, jurisdiction, courtType, district }: { form
   );
 }
 
-function DocumentSignature({ formData }: { formData: Record<string, string> }) {
+function DocumentSignature({ formData, courtType }: { formData: Record<string, string>; courtType?: "state" | "federal" | "immigration" }) {
+  const isImmigration = courtType === "immigration";
+  const isEcas = formData.filingMethod === "ecas";
+  const sigName = formData.signatureAttorneyName || formData.attorneyName || "[Attorney Name]";
+  const partyName = isImmigration
+    ? (formData.respondentName || "").toUpperCase()
+    : (formData.defendantName || "").toUpperCase();
+  const partyLabel = isImmigration ? "Respondent" : "Defendant";
+
   return (
     <div className="mt-12 space-y-4">
       <Separator />
@@ -194,16 +226,23 @@ function DocumentSignature({ formData }: { formData: Record<string, string> }) {
 
       <div className="text-right space-y-1 mt-8">
         <div>Respectfully submitted,</div>
-        <div className="mt-8">_________________________________</div>
-        <div>{formData.attorneyName || "[Attorney Name]"}</div>
+        {isImmigration && isEcas ? (
+          <div className="mt-4">/S/ {sigName}</div>
+        ) : (
+          <div className="mt-8">_________________________________</div>
+        )}
+        <div>{sigName}</div>
         {formData.firmName && <div>{formData.firmName}</div>}
         {formData.address && (
           <div className="whitespace-pre-line text-sm">{formData.address}</div>
         )}
         {formData.phone && <div className="text-sm">Tel: {formData.phone}</div>}
         {formData.email && <div className="text-sm">Email: {formData.email}</div>}
+        {isImmigration && formData.eoirId && (
+          <div className="text-sm">EOIR ID: {formData.eoirId}</div>
+        )}
         <div className="italic text-sm mt-2">
-          Attorney for Defendant {(formData.defendantName || "").toUpperCase()}
+          Attorney for {partyLabel} {partyName}
         </div>
       </div>
     </div>
@@ -231,7 +270,10 @@ function getDistrictName(district?: string): string {
   return names[district || ""] || district || "";
 }
 
-function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal", district?: string): string {
+function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" | "immigration", district?: string): string {
+  if (courtType === "immigration") {
+    return "EOIR Immigration Court Format (12pt)";
+  }
   if (courtType === "federal" && district) {
     const districtLabels: Record<string, string> = {
       CACD: "C.D. Cal. Federal Format (14pt)",
@@ -283,6 +325,27 @@ function formatDate(dateString: string): string {
   } catch {
     return dateString;
   }
+}
+
+function formatImmigrationCourtNamePreview(courtValue?: string, otherName?: string): string {
+  if (courtValue === "other" && otherName) return otherName.toUpperCase();
+  if (!courtValue) return "[CITY]";
+  return courtValue
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ")
+    .toUpperCase();
+}
+
+function formatProceedingTypePreview(value?: string): string {
+  const types: Record<string, string> = {
+    removal: "In Removal Proceedings",
+    deportation: "In Deportation Proceedings",
+    exclusion: "In Exclusion Proceedings",
+    bond: "In Bond Proceedings",
+    withholding_only: "In Withholding-Only Proceedings",
+  };
+  return types[value || ""] || "In Removal Proceedings";
 }
 
 interface PreviewPlaceholderProps {

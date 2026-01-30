@@ -1264,7 +1264,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const generateDocumentSchema = z.object({
     templateId: z.string(),
     jurisdiction: z.string(),
-    courtType: z.enum(["state", "federal"]).optional(),
+    courtType: z.enum(["state", "federal", "immigration"]).optional(),
     district: z.string().optional(),
     formData: z.record(z.string(), z.string())
   });
