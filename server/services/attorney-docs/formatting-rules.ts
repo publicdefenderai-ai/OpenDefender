@@ -575,6 +575,235 @@ export const WDNY_RULES: CourtFormattingRules = {
 };
 
 // ============================================================================
+// Texas Rules
+// ============================================================================
+
+/**
+ * Texas state court rules (TX Supreme Court Order 13-9165).
+ * - 14pt font minimum for computer-generated documents
+ * - 1" margins all sides
+ * - Double-spaced
+ * - No line numbers (unlike California)
+ * - No attorney header block (unlike California)
+ * - Court title: "IN THE DISTRICT COURT" with judicial district subtitle
+ * - County line below court title
+ * - Page numbers at bottom right, Arabic numerals
+ */
+export const TX_STATE_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 28, // 14pt (TX Supreme Court Order 13-9165)
+  fontColor: "000000",
+  lineSpacing: 480, // double spacing
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "IN THE DISTRICT COURT",
+  courtSubtitle: "_____ JUDICIAL DISTRICT",
+  plaintiffLabel: "THE STATE OF TEXAS,",
+  includeCountyLine: true,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "STATE OF TEXAS, COUNTY OF ____________________",
+
+  ruleSource: "Texas Rules of Civil Procedure / TX Supreme Court Order 13-9165",
+  rulesCited: [
+    "Tex. R. Civ. P. 45",
+    "Tex. R. App. P. 9.4",
+  ],
+};
+
+/**
+ * Northern District of Texas federal court rules (Dallas).
+ * - 12pt font (TXND L.R. 5.1)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ */
+export const TXND_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "NORTHERN DISTRICT OF TEXAS",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Northern District of Texas Local Rules",
+  rulesCited: [
+    "TXND L.R. 5.1",
+  ],
+};
+
+/**
+ * Southern District of Texas federal court rules (Houston).
+ * - 12pt font (TXSD L.R. 5)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ */
+export const TXSD_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "SOUTHERN DISTRICT OF TEXAS",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Southern District of Texas Local Rules",
+  rulesCited: [
+    "TXSD L.R. 5",
+  ],
+};
+
+/**
+ * Eastern District of Texas federal court rules (Tyler).
+ * - 12pt font (TXED L.R. CV-10)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ */
+export const TXED_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "EASTERN DISTRICT OF TEXAS",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Eastern District of Texas Local Rules",
+  rulesCited: [
+    "TXED L.R. CV-10",
+  ],
+};
+
+/**
+ * Western District of Texas federal court rules (San Antonio/Austin).
+ * - 12pt font (TXWD L.R. CV-10)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ */
+export const TXWD_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "WESTERN DISTRICT OF TEXAS",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Western District of Texas Local Rules",
+  rulesCited: [
+    "TXWD L.R. CV-10",
+  ],
+};
+
+// ============================================================================
 // Immigration Court Rules (EOIR)
 // ============================================================================
 
@@ -651,6 +880,11 @@ const COURT_RULES_REGISTRY: Map<string, CourtFormattingRules> = new Map([
   ["EDNY", EDNY_RULES],
   ["NDNY", NDNY_RULES],
   ["WDNY", WDNY_RULES],
+  ["TX-state", TX_STATE_RULES],
+  ["TXND", TXND_RULES],
+  ["TXSD", TXSD_RULES],
+  ["TXED", TXED_RULES],
+  ["TXWD", TXWD_RULES],
   ["EOIR-immigration", IMMIGRATION_RULES],
 ]);
 

@@ -163,6 +163,7 @@ function DocumentCaption({ formData, jurisdiction, courtType, district }: { form
     if (courtType === "federal") return "UNITED STATES OF AMERICA,";
     if (jurisdiction === "CA") return "THE PEOPLE OF THE STATE OF CALIFORNIA,";
     if (jurisdiction === "NY") return "THE PEOPLE OF THE STATE OF NEW YORK,";
+    if (jurisdiction === "TX") return "THE STATE OF TEXAS,";
     return "THE PEOPLE OF THE STATE,";
   };
 
@@ -170,6 +171,7 @@ function DocumentCaption({ formData, jurisdiction, courtType, district }: { form
     if (courtType === "federal") return "UNITED STATES DISTRICT COURT";
     if (jurisdiction === "CA") return "SUPERIOR COURT OF CALIFORNIA";
     if (jurisdiction === "NY") return "SUPREME COURT OF THE STATE OF NEW YORK";
+    if (jurisdiction === "TX") return "IN THE DISTRICT COURT";
     return "SUPERIOR COURT";
   };
 
@@ -266,6 +268,10 @@ function getDistrictName(district?: string): string {
     EDNY: "EASTERN DISTRICT OF NEW YORK",
     NDNY: "NORTHERN DISTRICT OF NEW YORK",
     WDNY: "WESTERN DISTRICT OF NEW YORK",
+    TXND: "NORTHERN DISTRICT OF TEXAS",
+    TXSD: "SOUTHERN DISTRICT OF TEXAS",
+    TXED: "EASTERN DISTRICT OF TEXAS",
+    TXWD: "WESTERN DISTRICT OF TEXAS",
   };
   return names[district || ""] || district || "";
 }
@@ -284,6 +290,10 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" 
       EDNY: "E.D.N.Y. Federal Format (12pt)",
       NDNY: "N.D.N.Y. Federal Format (12pt)",
       WDNY: "W.D.N.Y. Federal Format (12pt)",
+      TXND: "N.D. Tex. Federal Format (12pt)",
+      TXSD: "S.D. Tex. Federal Format (12pt)",
+      TXED: "E.D. Tex. Federal Format (12pt)",
+      TXWD: "W.D. Tex. Federal Format (12pt)",
     };
     return districtLabels[district] || `${district} Federal Format`;
   }
@@ -292,6 +302,9 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" 
   }
   if (jurisdiction === "NY") {
     return "New York State Format";
+  }
+  if (jurisdiction === "TX") {
+    return "Texas State Format (14pt)";
   }
   return "Standard Format";
 }

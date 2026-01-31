@@ -7,7 +7,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -1020,6 +1020,310 @@ ____________________________
 ];
 
 // ============================================================================
+// Texas-Specific Sections
+// ============================================================================
+
+// TX-specific caption inputs (same fields but with TX counties)
+const txCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, validation: { ...input.validation, options: TX_COUNTIES } }
+    : input
+);
+
+// TX base sections (uses TX counties in caption)
+const txBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: txCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // evidenceInfo
+  baseSections[2], // constitutionalBasis
+  baseSections[3], // hearingInfo
+];
+
+const texasSections: TemplateSection[] = [
+  ...txBaseSections,
+
+  // TX statement of facts (Art. 38.23)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence under Texas Code of Criminal Procedure Article 38.23 in a Texas criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Texas Code of Criminal Procedure Article 38.23, Texas is one of few states with a statutory exclusionary rule independent of the federal Fourth Amendment. Article 38.23(a) provides that no evidence obtained in violation of any provision of the Constitution or laws of the State of Texas, or of the Constitution or laws of the United States, shall be admitted in evidence against the accused.
+
+Key Texas cases:
+- Carmouche v. State, 10 S.W.3d 323 (Tex. Crim. App. 2000): Standard for reviewing suppression motions
+- State v. Ross, 32 S.W.3d 853 (Tex. Crim. App. 2000): Burden of proof framework
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense. Do not include legal argument \u2014 only facts.`,
+    aiInstructions: "Generate a factual narrative for a Texas Art. 38.23 motion. Present facts chronologically.",
+    helpText: "AI will generate a Texas-specific statement of facts",
+  },
+
+  // TX legal argument (Art. 38.23)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Texas Code of Criminal Procedure Article 38.23.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Texas law includes:
+- Tex. Code Crim. Proc. Art. 38.23(a): "No evidence obtained by an officer or other person in violation of any provisions of the Constitution or laws of the State of Texas, or of the Constitution or laws of the United States of America, shall be admitted in evidence against the accused on the trial of any criminal case."
+- Tex. Const. Art. I, \u00A7 9: Protection against unreasonable searches and seizures
+- Carmouche v. State, 10 S.W.3d 323 (Tex. Crim. App. 2000): Standard for reviewing suppression rulings; totality of circumstances test
+- State v. Ross, 32 S.W.3d 853 (Tex. Crim. App. 2000): Burden of proof; if warrantless search, State bears burden of proving reasonableness
+- Franks v. Delaware, 438 U.S. 154 (1978): Challenge to warrant affidavit veracity
+- Art. 38.23(a) provides an independent statutory exclusionary rule broader than the federal exclusionary rule
+
+Generate 3-5 paragraphs that:
+1. Cite Tex. Code Crim. Proc. Art. 38.23(a) as the statutory basis — quote the key language
+2. State the burden of proof (State bears burden when warrantless; totality of circumstances review)
+3. Apply the specific constitutional violation to the facts using Texas case law
+4. Note that Texas provides an independent statutory exclusionary rule under Art. 38.23, separate from the federal exclusionary rule
+5. Address any potential government arguments (consent, exigent circumstances, good faith — note that Texas courts have been skeptical of the Leon good faith exception)
+
+Use proper Texas legal citation format (e.g., "Tex. Code Crim. Proc. art. 38.23").`,
+    aiInstructions: "Must cite Tex. Code Crim. Proc. Art. 38.23 and relevant Texas Court of Criminal Appeals case law. Note Texas's independent statutory exclusionary rule. Use Texas citation format.",
+    helpText: "AI will generate Texas-specific legal arguments",
+  },
+
+  // TX prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Texas Code of Criminal Procedure Article 38.23 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Section 9 of the Texas Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution and Article I, Sections 10 and 19 of the Texas Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Dismiss or reduce the charges if suppression of the evidence renders the prosecution's case insufficient;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Texas prayer for relief citing Article 38.23",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // TX certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF TEXAS, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE (Tex. Code Crim. Proc. Art. 38.23) on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via eFileTexas.gov to the email address(es) of record.
+
+THE STATE OF TEXAS
+c/o District Attorney / County Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Texas that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Texas.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Texas-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Texas Federal Sections
+// ============================================================================
+
+const txFederalSections: TemplateSection[] = [
+  ...txBaseSections,
+
+  // Federal statement of facts (Fifth Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Texas.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial. The motion must state the grounds for suppression with particularity.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers and agencies involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Fifth Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence under the Fourth, Fifth, and/or Sixth Amendments.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes:
+- Federal Rule of Criminal Procedure 12(b)(3): Pre-trial motions to suppress
+- Mapp v. Ohio, 367 U.S. 643 (1961): Exclusionary rule applies to states
+- Wong Sun v. United States, 371 U.S. 471 (1963): Fruit of the poisonous tree
+- United States v. Leon, 468 U.S. 897 (1984): Good faith exception
+- Miranda v. Arizona, 384 U.S. 436 (1966): Fifth Amendment warnings
+- Katz v. United States, 389 U.S. 347 (1967): Reasonable expectation of privacy
+- Fifth Circuit precedent on suppression motions
+
+Generate 3-5 paragraphs that:
+1. Cite Federal Rule of Criminal Procedure 12(b)(3) as the procedural basis
+2. State the applicable constitutional standard and burden of proof
+3. Apply the facts to the legal standard, showing why suppression is required
+4. Cite controlling Supreme Court and Fifth Circuit precedent
+5. Address potential government arguments (good faith, inevitable discovery, independent source)
+
+Use proper federal legal citation format (e.g., "Mapp v. Ohio, 367 U.S. 643, 655 (1961)").`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and controlling Supreme Court and Fifth Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine established in Wong Sun v. United States, 371 U.S. 471 (1963);
+
+4. Grant an evidentiary hearing on this motion pursuant to Franks v. Delaware, 438 U.S. 154 (1978), if applicable;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Federal Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // Federal certificate of service (TX)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -1100,11 +1404,45 @@ export const motionToSuppressTemplate: DocumentTemplate = {
       sections: nyFederalSections,
       courtSpecificRules: "W.D.N.Y.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required.",
     },
+    {
+      jurisdiction: "TX",
+      courtType: "state",
+      sections: texasSections,
+      courtSpecificRules: "Filed under Tex. Code Crim. Proc. Art. 38.23. Texas has an independent statutory exclusionary rule. 14pt font required for computer-generated documents. E-filing via eFileTexas.gov mandatory for attorneys in most counties.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXND",
+      sections: txFederalSections,
+      courtSpecificRules: "N.D. Tex.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. TXND L.R. 5.1.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXSD",
+      sections: txFederalSections,
+      courtSpecificRules: "S.D. Tex.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. TXSD L.R. 5.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXED",
+      sections: txFederalSections,
+      courtSpecificRules: "E.D. Tex.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. TXED L.R. CV-10.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXWD",
+      sections: txFederalSections,
+      courtSpecificRules: "W.D. Tex.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. TXWD L.R. CV-10.",
+    },
   ],
   estimatedCompletionTime: "15-25 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY"],
+  supportedJurisdictions: ["CA", "NY", "TX", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD"],
 };
 
 export default motionToSuppressTemplate;

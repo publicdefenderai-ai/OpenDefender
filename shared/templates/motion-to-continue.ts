@@ -6,7 +6,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -965,6 +965,293 @@ ____________________________
 ];
 
 // ============================================================================
+// Texas-Specific Sections
+// ============================================================================
+
+// TX-specific caption inputs (same fields but with TX counties)
+const txCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, validation: { ...input.validation, options: TX_COUNTIES } }
+    : input
+);
+
+// TX base sections (uses TX counties in caption)
+const txBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: txCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+const texasSections: TemplateSection[] = [
+  ...txBaseSections,
+
+  // TX good cause statement
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Texas criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Texas Code of Criminal Procedure Articles 29.03 through 29.13, courts may grant continuances for "sufficient cause." Texas has no statutory speedy trial act, but the Sixth Amendment right to a speedy trial applies. If the defendant is in custody, address the Barker v. Wingo factors.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes "sufficient cause" under Tex. Code Crim. Proc. Art. 29.03
+3. Address any concerns about delay, particularly if the defendant is in custody, referencing Barker v. Wingo, 407 U.S. 514 (1972)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Tex. Code Crim. Proc. Art. 29.03-29.13 where appropriate. Note that Texas has no statutory speedy trial act but Sixth Amendment applies.",
+    helpText: "AI will generate a Texas-specific good cause statement",
+  },
+
+  // TX legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Texas criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Texas law includes:
+- Tex. Code Crim. Proc. Art. 29.03: Continuance for "sufficient cause"
+- Tex. Code Crim. Proc. Art. 29.06: First-term continuance by consent
+- Tex. Code Crim. Proc. Art. 29.07: Sworn motion required for continuance after first term
+- Tex. Code Crim. Proc. Art. 29.08: Continuance by agreement of parties
+- Tex. Code Crim. Proc. Art. 29.13: Continuance after trial commenced
+- Barker v. Wingo, 407 U.S. 514 (1972): Four-factor balancing test for Sixth Amendment speedy trial analysis
+- Texas has no statutory speedy trial act (unlike California or New York)
+
+Generate 2-3 paragraphs that:
+1. Cite Art. 29.03's "sufficient cause" standard
+2. Apply the applicable article (Art. 29.06 for first-term consent, Art. 29.07 for sworn motion, Art. 29.08 for agreed continuances) to this specific case
+3. If the defendant is in custody, analyze the Barker v. Wingo four factors: (1) length of delay, (2) reason for delay, (3) defendant's assertion of the right, (4) prejudice to defendant
+4. Reference the trial court's broad discretion in granting continuances under Texas law
+5. If applicable, cite Art. 29.13 regarding continuances after trial has commenced
+
+Use proper Texas legal citation format (e.g., "Tex. Code Crim. Proc. art. 29.03").`,
+    aiInstructions: "Must cite Tex. Code Crim. Proc. Art. 29.03 and related articles. Reference Barker v. Wingo if defendant is in custody. Use Texas citation format throughout.",
+    helpText: "AI will generate Texas-specific legal arguments with proper citations",
+  },
+
+  // TX prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Texas Code of Criminal Procedure Articles 29.03 through 29.13 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Texas prayer for relief citing Code of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // TX certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF TEXAS, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via eFileTexas.gov to the email address(es) of record.
+
+THE STATE OF TEXAS
+c/o District Attorney / County Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Texas that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Texas.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Texas-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Texas Federal Sections
+// ============================================================================
+
+const txFederalSections: TemplateSection[] = [
+  ...txBaseSections,
+
+  // Federal good cause statement (Fifth Circuit)
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Texas.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. \u00A7 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. \u00A7 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. \u00A7 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Fifth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  // Federal legal argument (Fifth Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Texas.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under \u00A7 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. \u00A7 3161(h)(7)(B)(iv): Factors court must consider
+- Fifth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Fifth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7 3161 and Federal Rules of Criminal Procedure. Reference Fifth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. \u00A7 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. \u00A7 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // Federal certificate of service (TX)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -1045,11 +1332,45 @@ export const motionToContinueTemplate: DocumentTemplate = {
       sections: nyFederalSections,
       courtSpecificRules: "W.D.N.Y.: 12pt font. Double-spaced. CM/ECF electronic filing required. Local Rule 10(a).",
     },
+    {
+      jurisdiction: "TX",
+      courtType: "state",
+      sections: texasSections,
+      courtSpecificRules: "Texas courts require 14pt font for computer-generated documents. Motions for continuance must comply with Tex. Code Crim. Proc. Art. 29.03-29.13. E-filing via eFileTexas.gov mandatory for attorneys in most counties.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXND",
+      sections: txFederalSections,
+      courtSpecificRules: "N.D. Tex.: 12pt font. Double-spaced. CM/ECF electronic filing required. TXND L.R. 5.1.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXSD",
+      sections: txFederalSections,
+      courtSpecificRules: "S.D. Tex.: 12pt font. Double-spaced. CM/ECF electronic filing required. TXSD L.R. 5.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXED",
+      sections: txFederalSections,
+      courtSpecificRules: "E.D. Tex.: 12pt font. Double-spaced. CM/ECF electronic filing required. TXED L.R. CV-10.",
+    },
+    {
+      jurisdiction: "TX",
+      courtType: "federal",
+      district: "TXWD",
+      sections: txFederalSections,
+      courtSpecificRules: "W.D. Tex.: 12pt font. Double-spaced. CM/ECF electronic filing required. TXWD L.R. CV-10.",
+    },
   ],
   estimatedCompletionTime: "10-15 minutes",
   difficultyLevel: "basic",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY"],
+  supportedJurisdictions: ["CA", "NY", "TX", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD"],
 };
 
 // Export for use in template registry
