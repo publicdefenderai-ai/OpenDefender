@@ -6,7 +6,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -1286,6 +1286,296 @@ ____________________________
 ];
 
 // ============================================================================
+// Florida-Specific Sections
+// ============================================================================
+
+// FL-specific caption inputs (same fields but with FL counties)
+const flCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: FL_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court, Eleventh Judicial Circuit, Miami-Dade County" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., F24-012345" }
+    : input
+);
+
+// FL base sections (uses FL counties in caption)
+const flBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: flCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+const floridaSections: TemplateSection[] = [
+  ...flBaseSections,
+
+  // FL good cause statement
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Florida criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Florida Rule of Criminal Procedure 3.190(g), courts may grant continuances for good cause shown. The speedy trial rule under Fla. R. Crim. P. 3.191 provides 175 days for felonies and 90 days for misdemeanors. Courts must also consider Fla. R. Jud. Admin. 2.545 regarding case management and time standards.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes "good cause" under Fla. R. Crim. P. 3.190(g)
+3. Address any concerns about delay, particularly regarding Fla. R. Crim. P. 3.191 speedy trial requirements and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Fla. R. Crim. P. 3.190(g) and 3.191 where appropriate. Note Florida's speedy trial rule time limits.",
+    helpText: "AI will generate a Florida-specific good cause statement",
+  },
+
+  // FL legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Florida criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Florida law includes:
+- Fla. R. Crim. P. 3.190(g): Continuances for good cause shown
+- Fla. R. Crim. P. 3.191: Speedy trial (175 days for felonies, 90 days for misdemeanors)
+- Fla. R. Crim. P. 3.191(l): Defendant may waive speedy trial in writing
+- Fla. R. Jud. Admin. 2.545: Case management and time standards
+- Bennett v. State, 587 So. 2d 657 (Fla. 3d DCA 1991): Standard for reviewing continuance rulings
+- State v. Agee, 622 So. 2d 473 (Fla. 1993): Speedy trial rule analysis
+
+Generate 2-3 paragraphs that:
+1. Cite Fla. R. Crim. P. 3.190(g)'s "good cause" standard
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Fla. R. Crim. P. 3.191 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Florida law
+5. Cite Fla. R. Jud. Admin. 2.545 regarding case management standards
+
+Use proper Florida legal citation format (e.g., "Fla. R. Crim. P. 3.190(g)").`,
+    aiInstructions: "Must cite Fla. R. Crim. P. 3.190(g) and 3.191. Use Florida citation format throughout.",
+    helpText: "AI will generate Florida-specific legal arguments with proper citations",
+  },
+
+  // FL prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Florida Rule of Criminal Procedure 3.190(g) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. If the defendant is in custody, set the continued hearing date within the time limits prescribed by Florida Rule of Criminal Procedure 3.191, unless time is waived;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Florida prayer for relief citing Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // FL certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF FLORIDA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Florida Courts E-Filing Portal to the email address(es) of record.
+
+STATE OF FLORIDA
+c/o State Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Florida that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Florida.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Florida-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Florida Federal Sections
+// ============================================================================
+
+const flFederalSections: TemplateSection[] = [
+  ...flBaseSections,
+
+  // Federal good cause statement (Eleventh Circuit)
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Florida.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. \u00A7 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. \u00A7 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. \u00A7 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Eleventh Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  // Federal legal argument (Eleventh Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Florida.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under \u00A7 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. \u00A7 3161(h)(7)(B)(iv): Factors court must consider
+- Eleventh Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Eleventh Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7 3161 and Federal Rules of Criminal Procedure. Reference Eleventh Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. \u00A7 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. \u00A7 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // Federal certificate of service (FL)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -1400,11 +1690,38 @@ export const motionToContinueTemplate: DocumentTemplate = {
       sections: txFederalSections,
       courtSpecificRules: "W.D. Tex.: 12pt font. Double-spaced. CM/ECF electronic filing required. TXWD L.R. CV-10.",
     },
+    {
+      jurisdiction: "FL",
+      courtType: "state",
+      sections: floridaSections,
+      courtSpecificRules: "Florida courts use 12pt font. Motions for continuance must comply with Fla. R. Crim. P. 3.190(g). Speedy trial under Fla. R. Crim. P. 3.191 (175 days felony, 90 days misdemeanor). E-filing via Florida Courts E-Filing Portal mandatory.",
+    },
+    {
+      jurisdiction: "FL",
+      courtType: "federal",
+      district: "FLSD",
+      sections: flFederalSections,
+      courtSpecificRules: "S.D. Fla.: 12pt font. Double-spaced. CM/ECF electronic filing required. FLSD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "FL",
+      courtType: "federal",
+      district: "FLMD",
+      sections: flFederalSections,
+      courtSpecificRules: "M.D. Fla.: 12pt font. Double-spaced. CM/ECF electronic filing required. FLMD L.R. 1.05.",
+    },
+    {
+      jurisdiction: "FL",
+      courtType: "federal",
+      district: "FLND",
+      sections: flFederalSections,
+      courtSpecificRules: "N.D. Fla.: 12pt font. Double-spaced. CM/ECF electronic filing required. FLND L.R. 5.1.",
+    },
   ],
   estimatedCompletionTime: "10-15 minutes",
   difficultyLevel: "basic",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND"],
 };
 
 // Export for use in template registry

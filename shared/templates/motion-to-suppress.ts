@@ -7,7 +7,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -1359,6 +1359,311 @@ ____________________________
 ];
 
 // ============================================================================
+// Florida-Specific Sections
+// ============================================================================
+
+// FL-specific caption inputs (same fields but with FL counties)
+const flCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: FL_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court, Eleventh Judicial Circuit, Miami-Dade County" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., F24-012345" }
+    : input
+);
+
+// FL base sections (uses FL counties in caption)
+const flBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: flCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // evidenceInfo
+  baseSections[2], // constitutionalBasis
+  baseSections[3], // hearingInfo
+];
+
+const floridaSections: TemplateSection[] = [
+  ...flBaseSections,
+
+  // FL statement of facts (Fla. R. Crim. P. 3.190(g)-(h))
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence under Florida Rule of Criminal Procedure 3.190(h) in a Florida criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Florida Rule of Criminal Procedure 3.190(h), a defendant may move to suppress evidence, including confessions and admissions obtained illegally. Florida Constitution Article I, Section 12 provides that the right against unreasonable searches and seizures shall be construed in conformity with the Fourth Amendment as interpreted by the United States Supreme Court.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense. Do not include legal argument \u2014 only facts.`,
+    aiInstructions: "Generate a factual narrative for a Florida Fla. R. Crim. P. 3.190(h) motion. Present facts chronologically.",
+    helpText: "AI will generate a Florida-specific statement of facts",
+  },
+
+  // FL legal argument (Fla. R. Crim. P. 3.190(h))
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Florida Rule of Criminal Procedure 3.190(h).
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Florida law includes:
+- Fla. R. Crim. P. 3.190(g): Motions to suppress confessions and admissions
+- Fla. R. Crim. P. 3.190(h): Motions to suppress evidence
+- Fla. Const. Art. I, \u00A7 12: Right against unreasonable searches and seizures (construed in conformity with Fourth Amendment per amendment adopted in 1982)
+- State v. Hume, 512 So. 2d 185 (Fla. 1987): Standard for reviewing suppression motions
+- Connor v. State, 803 So. 2d 598 (Fla. 2001): Burden of proof on suppression motions
+- Bernie v. State, 524 So. 2d 988 (Fla. 1988): Warrantless search standards
+- \u00A7 933.18, Fla. Stat.: Grounds for issuance of search warrants
+
+Generate 3-5 paragraphs that:
+1. Cite Fla. R. Crim. P. 3.190(h) as the procedural basis for the motion
+2. State the burden of proof (State bears burden of demonstrating legality of warrantless searches; defendant bears burden when challenging a warrant)
+3. Apply the specific constitutional violation to the facts using Florida case law
+4. Note that Fla. Const. Art. I, \u00A7 12 is construed in conformity with the Fourth Amendment
+5. Address any potential government arguments (consent, exigent circumstances, good faith)
+
+Use proper Florida legal citation format (e.g., "Fla. R. Crim. P. 3.190(h)").`,
+    aiInstructions: "Must cite Fla. R. Crim. P. 3.190(h) and relevant Florida case law. Note Florida's conformity clause under Art. I, \u00A7 12. Use Florida citation format.",
+    helpText: "AI will generate Florida-specific legal arguments",
+  },
+
+  // FL prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Florida Rule of Criminal Procedure 3.190(h) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Section 12 of the Florida Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution and Article I, Sections 9 and 16 of the Florida Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Dismiss or reduce the charges if suppression of the evidence renders the prosecution's case insufficient;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Florida prayer for relief citing Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // FL certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF FLORIDA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE (Fla. R. Crim. P. 3.190(h)) on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Florida Courts E-Filing Portal to the email address(es) of record.
+
+STATE OF FLORIDA
+c/o State Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Florida that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Florida.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Florida-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Florida Federal Sections
+// ============================================================================
+
+const flFederalSections: TemplateSection[] = [
+  ...flBaseSections,
+
+  // Federal statement of facts (Eleventh Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Florida.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial. The motion must state the grounds for suppression with particularity.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers and agencies involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Eleventh Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence under the Fourth, Fifth, and/or Sixth Amendments.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes:
+- Federal Rule of Criminal Procedure 12(b)(3): Pre-trial motions to suppress
+- Mapp v. Ohio, 367 U.S. 643 (1961): Exclusionary rule applies to states
+- Wong Sun v. United States, 371 U.S. 471 (1963): Fruit of the poisonous tree
+- United States v. Leon, 468 U.S. 897 (1984): Good faith exception
+- Miranda v. Arizona, 384 U.S. 436 (1966): Fifth Amendment warnings
+- Katz v. United States, 389 U.S. 347 (1967): Reasonable expectation of privacy
+- Eleventh Circuit precedent on suppression motions
+
+Generate 3-5 paragraphs that:
+1. Cite Federal Rule of Criminal Procedure 12(b)(3) as the procedural basis
+2. State the applicable constitutional standard and burden of proof
+3. Apply the facts to the legal standard, showing why suppression is required
+4. Cite controlling Supreme Court and Eleventh Circuit precedent
+5. Address potential government arguments (good faith, inevitable discovery, independent source)
+
+Use proper federal legal citation format (e.g., "Mapp v. Ohio, 367 U.S. 643, 655 (1961)").`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and controlling Supreme Court and Eleventh Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine established in Wong Sun v. United States, 371 U.S. 471 (1963);
+
+4. Grant an evidentiary hearing on this motion pursuant to Franks v. Delaware, 438 U.S. 154 (1978), if applicable;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Federal Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // Federal certificate of service (FL)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -1473,11 +1778,38 @@ export const motionToSuppressTemplate: DocumentTemplate = {
       sections: txFederalSections,
       courtSpecificRules: "W.D. Tex.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. TXWD L.R. CV-10.",
     },
+    {
+      jurisdiction: "FL",
+      courtType: "state",
+      sections: floridaSections,
+      courtSpecificRules: "Filed under Fla. R. Crim. P. 3.190(h). Florida Constitution Art. I, \u00A7 12 is construed in conformity with the Fourth Amendment. 12pt font. E-filing via Florida Courts E-Filing Portal mandatory.",
+    },
+    {
+      jurisdiction: "FL",
+      courtType: "federal",
+      district: "FLSD",
+      sections: flFederalSections,
+      courtSpecificRules: "S.D. Fla.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. FLSD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "FL",
+      courtType: "federal",
+      district: "FLMD",
+      sections: flFederalSections,
+      courtSpecificRules: "M.D. Fla.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. FLMD L.R. 1.05.",
+    },
+    {
+      jurisdiction: "FL",
+      courtType: "federal",
+      district: "FLND",
+      sections: flFederalSections,
+      courtSpecificRules: "N.D. Fla.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. FLND L.R. 5.1.",
+    },
   ],
   estimatedCompletionTime: "15-25 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND"],
 };
 
 export default motionToSuppressTemplate;

@@ -164,6 +164,7 @@ function DocumentCaption({ formData, jurisdiction, courtType, district }: { form
     if (jurisdiction === "CA") return "THE PEOPLE OF THE STATE OF CALIFORNIA,";
     if (jurisdiction === "NY") return "THE PEOPLE OF THE STATE OF NEW YORK,";
     if (jurisdiction === "TX") return "THE STATE OF TEXAS,";
+    if (jurisdiction === "FL") return "STATE OF FLORIDA,";
     return "THE PEOPLE OF THE STATE,";
   };
 
@@ -172,6 +173,7 @@ function DocumentCaption({ formData, jurisdiction, courtType, district }: { form
     if (jurisdiction === "CA") return "SUPERIOR COURT OF CALIFORNIA";
     if (jurisdiction === "NY") return "SUPREME COURT OF THE STATE OF NEW YORK";
     if (jurisdiction === "TX") return "IN THE DISTRICT COURT";
+    if (jurisdiction === "FL") return "IN THE CIRCUIT COURT";
     return "SUPERIOR COURT";
   };
 
@@ -272,6 +274,9 @@ function getDistrictName(district?: string): string {
     TXSD: "SOUTHERN DISTRICT OF TEXAS",
     TXED: "EASTERN DISTRICT OF TEXAS",
     TXWD: "WESTERN DISTRICT OF TEXAS",
+    FLSD: "SOUTHERN DISTRICT OF FLORIDA",
+    FLMD: "MIDDLE DISTRICT OF FLORIDA",
+    FLND: "NORTHERN DISTRICT OF FLORIDA",
   };
   return names[district || ""] || district || "";
 }
@@ -294,6 +299,9 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" 
       TXSD: "S.D. Tex. Federal Format (12pt)",
       TXED: "E.D. Tex. Federal Format (12pt)",
       TXWD: "W.D. Tex. Federal Format (12pt)",
+      FLSD: "S.D. Fla. Federal Format (12pt)",
+      FLMD: "M.D. Fla. Federal Format (12pt)",
+      FLND: "N.D. Fla. Federal Format (12pt)",
     };
     return districtLabels[district] || `${district} Federal Format`;
   }
@@ -305,6 +313,9 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" 
   }
   if (jurisdiction === "TX") {
     return "Texas State Format (14pt)";
+  }
+  if (jurisdiction === "FL") {
+    return "Florida State Format (12pt)";
   }
   return "Standard Format";
 }

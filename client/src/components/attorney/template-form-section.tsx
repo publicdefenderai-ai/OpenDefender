@@ -249,6 +249,9 @@ export function JurisdictionSelector({
     { code: "TXSD", label: "Southern District of Texas (TXSD)", rules: "TXSD local rules, 12pt font", jurisdiction: "TX" },
     { code: "TXED", label: "Eastern District of Texas (TXED)", rules: "TXED local rules, 12pt font", jurisdiction: "TX" },
     { code: "TXWD", label: "Western District of Texas (TXWD)", rules: "TXWD local rules, 12pt font", jurisdiction: "TX" },
+    { code: "FLSD", label: "Southern District of Florida (FLSD)", rules: "FLSD local rules, 12pt font", jurisdiction: "FL" },
+    { code: "FLMD", label: "Middle District of Florida (FLMD)", rules: "FLMD local rules, 12pt font", jurisdiction: "FL" },
+    { code: "FLND", label: "Northern District of Florida (FLND)", rules: "FLND local rules, 12pt font", jurisdiction: "FL" },
   ];
 
   const availableDistricts = allDistricts.filter(
@@ -263,6 +266,7 @@ export function JurisdictionSelector({
     { value: "CA", label: "California", description: "Uses CA Penal Code citations" },
     { value: "NY", label: "New York", description: "Uses NY Criminal Procedure Law citations" },
     { value: "TX", label: "Texas", description: "Uses TX Code of Criminal Procedure citations" },
+    { value: "FL", label: "Florida", description: "Uses FL Rules of Criminal Procedure citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
@@ -328,8 +332,8 @@ export function JurisdictionSelector({
           <p className="text-sm font-medium text-muted-foreground">Court Type</p>
           <div className="flex gap-3">
             {[
-              { type: "state" as const, label: "State Court", desc: value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" : value.jurisdiction === "TX" ? "TX District Court (14pt font)" : "CA Superior Court (CRC formatting)" },
-              { type: "federal" as const, label: "Federal Court", desc: value.jurisdiction === "NY" ? "U.S. District Court (12pt font)" : value.jurisdiction === "TX" ? "U.S. District Court (12pt font)" : "U.S. District Court" },
+              { type: "state" as const, label: "State Court", desc: value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" : value.jurisdiction === "TX" ? "TX District Court (14pt font)" : value.jurisdiction === "FL" ? "FL Circuit Court (12pt font)" : "CA Superior Court (CRC formatting)" },
+              { type: "federal" as const, label: "Federal Court", desc: value.jurisdiction === "NY" ? "U.S. District Court (12pt font)" : value.jurisdiction === "TX" ? "U.S. District Court (12pt font)" : value.jurisdiction === "FL" ? "U.S. District Court (12pt font)" : "U.S. District Court" },
             ].map((ct) => (
               <div
                 key={ct.type}

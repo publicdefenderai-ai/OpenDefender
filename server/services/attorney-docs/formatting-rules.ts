@@ -804,6 +804,196 @@ export const TXWD_RULES: CourtFormattingRules = {
 };
 
 // ============================================================================
+// Florida Rules
+// ============================================================================
+
+/**
+ * Florida state court rules (Fla. R. Jud. Admin. 2.520).
+ * - 12pt font (standard practice for e-filed documents)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - No line numbers
+ * - No attorney header block
+ * - Court title: "IN THE CIRCUIT COURT" with judicial circuit and county
+ * - County subtitle: "IN AND FOR _____ COUNTY, FLORIDA"
+ * - Page numbers required
+ * - E-filing mandatory via Florida Courts E-Filing Portal
+ */
+export const FL_STATE_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt (Fla. R. Jud. Admin. 2.520)
+  fontColor: "000000",
+  lineSpacing: 480, // double spacing
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "IN THE CIRCUIT COURT",
+  courtSubtitle: "IN AND FOR _____ COUNTY, FLORIDA",
+  plaintiffLabel: "STATE OF FLORIDA,",
+  includeCountyLine: true,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "STATE OF FLORIDA, COUNTY OF ____________________",
+
+  ruleSource: "Florida Rules of Judicial Administration",
+  rulesCited: [
+    "Fla. R. Jud. Admin. 2.520",
+    "Fla. R. Jud. Admin. 2.545",
+    "Fla. R. Crim. P. 3.190",
+  ],
+};
+
+/**
+ * Southern District of Florida federal court rules (Miami).
+ * - 12pt font (FLSD L.R. 5.1)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ * - Eleventh Circuit precedent
+ */
+export const FLSD_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "SOUTHERN DISTRICT OF FLORIDA",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Southern District of Florida Local Rules",
+  rulesCited: [
+    "FLSD L.R. 5.1",
+  ],
+};
+
+/**
+ * Middle District of Florida federal court rules (Tampa/Orlando).
+ * - 12pt font (FLMD L.R. 1.05)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ * - Eleventh Circuit precedent
+ */
+export const FLMD_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "MIDDLE DISTRICT OF FLORIDA",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Middle District of Florida Local Rules",
+  rulesCited: [
+    "FLMD L.R. 1.05",
+  ],
+};
+
+/**
+ * Northern District of Florida federal court rules (Pensacola/Tallahassee).
+ * - 12pt font (FLND L.R. 5.1)
+ * - 1" margins all sides
+ * - Double-spaced
+ * - CM/ECF required
+ * - Eleventh Circuit precedent
+ */
+export const FLND_RULES: CourtFormattingRules = {
+  marginTop: 1440,
+  marginBottom: 1440,
+  marginLeft: 1440,
+  marginRight: 1440,
+
+  fontFamily: "Times New Roman",
+  fontSize: 24, // 12pt
+  fontColor: "000000",
+  lineSpacing: 480,
+
+  includeLineNumbers: false,
+  lineNumberRestart: "newPage",
+
+  courtTitle: "UNITED STATES DISTRICT COURT",
+  courtSubtitle: "NORTHERN DISTRICT OF FLORIDA",
+  plaintiffLabel: "UNITED STATES OF AMERICA,",
+  includeCountyLine: false,
+  includeAttorneyHeader: false,
+  includeSeparatorLine: true,
+
+  footer: {
+    includePageNumber: true,
+    includeDocumentTitle: false,
+    documentTitleFontSize: 20,
+    includeSeparatorLine: false,
+  },
+
+  proofOfServicePreamble:
+    "I, the undersigned, declare that I am over the age of eighteen years and not a party to this action.",
+
+  ruleSource: "Northern District of Florida Local Rules",
+  rulesCited: [
+    "FLND L.R. 5.1",
+  ],
+};
+
+// ============================================================================
 // Immigration Court Rules (EOIR)
 // ============================================================================
 
@@ -885,6 +1075,10 @@ const COURT_RULES_REGISTRY: Map<string, CourtFormattingRules> = new Map([
   ["TXSD", TXSD_RULES],
   ["TXED", TXED_RULES],
   ["TXWD", TXWD_RULES],
+  ["FL-state", FL_STATE_RULES],
+  ["FLSD", FLSD_RULES],
+  ["FLMD", FLMD_RULES],
+  ["FLND", FLND_RULES],
   ["EOIR-immigration", IMMIGRATION_RULES],
 ]);
 
