@@ -3,7 +3,7 @@
  *
  * Criminal law document template for requesting suppression of evidence
  * obtained in violation of constitutional rights (Fourth, Fifth, Sixth Amendments).
- * Includes California-specific variant and federal court variants.
+ * Includes jurisdiction-specific variants (CA, NY, TX) and federal court variants.
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
@@ -18,7 +18,7 @@ const captionInputs: TemplateInput[] = [
     id: "courtName",
     label: "Court Name",
     type: "court-name",
-    placeholder: "e.g., Superior Court of California, County of Los Angeles",
+    placeholder: "e.g., District Court, Superior Court",
     required: true,
     helpText: "The full name of the court where the case is pending",
   },
@@ -26,7 +26,7 @@ const captionInputs: TemplateInput[] = [
     id: "caseNumber",
     label: "Case Number",
     type: "case-number",
-    placeholder: "e.g., BA123456",
+    placeholder: "e.g., 2024-CR-001234",
     required: true,
     helpText: "The assigned case or docket number",
   },
@@ -43,16 +43,16 @@ const captionInputs: TemplateInput[] = [
     label: "County",
     type: "select",
     required: false,
-    helpText: "The county where the court is located (used in caption for state courts)",
+    helpText: "The county where the court is located (select jurisdiction first for county list)",
     validation: {
-      options: CA_COUNTIES,
+      options: [],
     },
   },
   {
     id: "countyOther",
     label: "County Name",
     type: "text",
-    placeholder: "e.g., Sacramento",
+    placeholder: "Enter county name",
     required: false,
     helpText: "Enter the county name if not listed above",
   },
@@ -431,10 +431,41 @@ ____________________________
   },
 ];
 
+// CA-specific caption inputs (same fields but with CA counties)
+const caCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: CA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of California, County of Los Angeles" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., BA123456" }
+    : input
+);
+
+// CA base sections (uses CA counties in caption)
+const caBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: caCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // evidenceInfo
+  baseSections[2], // constitutionalBasis
+  baseSections[3], // hearingInfo
+];
+
 // NY-specific caption inputs (same fields but with NY counties)
 const nyCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
   input.id === "county"
-    ? { ...input, validation: { ...input.validation, options: NY_COUNTIES } }
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: NY_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Supreme Court of the State of New York, County of Kings" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., IND-2024-00123" }
     : input
 );
 
@@ -459,8 +490,8 @@ const nyBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const californiaSections: TemplateSection[] = [
-  // Caption, evidence info, constitutional basis, and hearing sections are the same
-  ...baseSections.slice(0, 4),
+  // CA caption with CA counties, evidence info, constitutional basis, and hearing sections
+  ...caBaseSections,
 
   // California-specific statement of facts
   {
@@ -602,8 +633,8 @@ ____________________________
 // ============================================================================
 
 const federalSections: TemplateSection[] = [
-  // Caption, evidence info, constitutional basis, and hearing sections are the same
-  ...baseSections.slice(0, 4),
+  // CA caption with CA counties, evidence info, constitutional basis, and hearing sections
+  ...caBaseSections,
 
   // Federal statement of facts
   {
@@ -1026,7 +1057,11 @@ ____________________________
 // TX-specific caption inputs (same fields but with TX counties)
 const txCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
   input.id === "county"
-    ? { ...input, validation: { ...input.validation, options: TX_COUNTIES } }
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: TX_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, Harris County, Texas" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., 2024-CR-12345" }
     : input
 );
 

@@ -48,7 +48,7 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
   const [jurisdictionSelection, setJurisdictionSelection] = useState<JurisdictionSelection>(
     isImmigrationTemplate
       ? { jurisdiction: "EOIR", courtType: "immigration" }
-      : { jurisdiction: template.supportedJurisdictions[0] || "generic" }
+      : { jurisdiction: "generic" }
   );
   const [currentFormSectionIndex, setCurrentFormSectionIndex] = useState(0);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -56,12 +56,45 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
   const [generatedDocument, setGeneratedDocument] = useState<GeneratedDocument | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
 
+  // Apply jurisdiction variant to get the correct sections (county dropdowns, placeholders, etc.)
+  const activeSections = useMemo(() => {
+    const { jurisdiction, courtType, district } = jurisdictionSelection;
+
+    if (!jurisdiction || jurisdiction === "generic") {
+      return template.baseSections;
+    }
+
+    // Find matching variant — most specific match first
+    const variant = template.jurisdictionVariants?.find((v) => {
+      if (v.jurisdiction.toUpperCase() !== jurisdiction.toUpperCase()) return false;
+      if (courtType && v.courtType && v.courtType !== courtType) return false;
+      if (district && v.district && v.district.toUpperCase() !== district.toUpperCase()) return false;
+      if (courtType && !v.courtType) return false;
+      if (district && !v.district) return false;
+      return true;
+    }) || template.jurisdictionVariants?.find(
+      (v) => v.jurisdiction.toUpperCase() === jurisdiction.toUpperCase() && v.courtType === "state"
+    );
+
+    if (!variant) return template.baseSections;
+
+    // Merge variant sections over base sections
+    const sectionMap = new Map<string, TemplateSection>();
+    for (const section of template.baseSections) {
+      sectionMap.set(section.id, section);
+    }
+    for (const section of variant.sections) {
+      sectionMap.set(section.id, section);
+    }
+    return Array.from(sectionMap.values()).sort((a, b) => a.order - b.order);
+  }, [template, jurisdictionSelection]);
+
   // Get user-input sections for form steps
   const formSections = useMemo(() => {
-    return template.baseSections.filter(
+    return activeSections.filter(
       (section) => section.type === "user-input"
     );
-  }, [template.baseSections]);
+  }, [activeSections]);
 
   // Build validation schema from template inputs
   const formSchema = useMemo(() => {
