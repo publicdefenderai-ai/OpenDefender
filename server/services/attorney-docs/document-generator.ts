@@ -8,6 +8,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { randomUUID } from "crypto";
 import { motionToContinueTemplate } from "../../../shared/templates/motion-to-continue";
+import { motionToReduceBailTemplate } from "../../../shared/templates/motion-to-reduce-bail";
 import { motionToSuppressTemplate } from "../../../shared/templates/motion-to-suppress";
 import { noticeOfAppearanceTemplate } from "../../../shared/templates/notice-of-appearance";
 import { ntaPleadingsTemplate } from "../../../shared/templates/nta-pleadings";
@@ -57,6 +58,7 @@ export interface DocumentGenerationError {
 // Template registry
 const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-continue", motionToContinueTemplate],
+  ["motion-to-reduce-bail", motionToReduceBailTemplate],
   ["motion-to-suppress", motionToSuppressTemplate],
   ["notice-of-appearance", noticeOfAppearanceTemplate],
   ["nta-pleadings", ntaPleadingsTemplate],
@@ -243,6 +245,33 @@ async function generateAISection(
     selectedRelief: formData.selectedRelief || "",
     reliefExplanation: formData.reliefExplanation || "",
     countryDesignation: formData.countryDesignation || "",
+    // Motion to reduce bail fields
+    currentBailAmount: formData.currentBailAmount || "",
+    bailType: formData.bailType || "",
+    bailSetBy: formData.bailSetBy || "",
+    bailSetDate: formData.bailSetDate || "",
+    charges: formData.charges || "",
+    chargeLevel: formData.chargeLevel || "",
+    currentlyInCustody: formData.currentlyInCustody || "",
+    timeInCustody: formData.timeInCustody || "",
+    priorBailRequests: formData.priorBailRequests || "none",
+    employmentStatus: formData.employmentStatus || "",
+    employmentDetails: formData.employmentDetails || "",
+    residenceStatus: formData.residenceStatus || "",
+    residenceDetails: formData.residenceDetails || "",
+    familyTies: formData.familyTies || "",
+    communityInvolvement: formData.communityInvolvement || "",
+    criminalHistory: formData.criminalHistory || "",
+    criminalHistoryDetails: formData.criminalHistoryDetails || "",
+    substanceTreatment: formData.substanceTreatment || "not_applicable",
+    mentalHealthTreatment: formData.mentalHealthTreatment || "not_applicable",
+    flightRiskFactors: formData.flightRiskFactors || "",
+    defendantIncome: formData.defendantIncome || "",
+    defendantAssets: formData.defendantAssets || "",
+    abilityToPayExplanation: formData.abilityToPayExplanation || "",
+    proposedAlternative: formData.proposedAlternative || "",
+    proposedBailAmount: formData.proposedBailAmount || "",
+    proposedConditions: formData.proposedConditions || "",
   };
 
   // Process template with safe data
