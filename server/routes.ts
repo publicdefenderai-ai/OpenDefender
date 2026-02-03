@@ -22,6 +22,7 @@ import { attorneySessionManager } from "./services/attorney-docs/session-manager
 import { attorneyVerificationRequestSchema } from "../shared/attorney/attestation-schema";
 import { getTemplates, getTemplate, generateDocument, getGeneratedDocument, clearSessionDocuments } from "./services/attorney-docs/document-generator";
 import { generateDocx } from "./services/attorney-docs/docx-generator";
+import { search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -458,6 +459,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Hybrid search failed:", error);
       res.status(500).json({ success: false, error: "Hybrid search failed" });
+    }
+  });
+
+  // ============================================================================
+  // SITE-WIDE SEARCH API
+  // ============================================================================
+
+  // Initialize search index on startup
+  buildSearchIndex();
+
+  // Site-wide search - searches all site content (glossary, charges, programs, etc.)
+  app.get("/api/site-search", searchRateLimiter, async (req, res) => {
+    try {
+      const { q: query, lang, types, jurisdiction, limit, offset } = req.query;
+      
+      if (!query || typeof query !== 'string' || query.trim().length === 0) {
+        return res.status(400).json({ success: false, error: "Query parameter 'q' is required" });
+      }
+
+      const language = (lang === 'es' ? 'es' : 'en') as 'en' | 'es';
+      const typeFilters = types ? (types as string).split(',') : undefined;
+      
+      const searchResult = search({
+        query: query.trim(),
+        language,
+        filters: {
+          types: typeFilters as any,
+          jurisdiction: jurisdiction as string,
+        },
+        limit: limit ? parseInt(limit as string, 10) : 20,
+        offset: offset ? parseInt(offset as string, 10) : 0,
+      });
+
+      res.json({
+        success: true,
+        ...searchResult,
+      });
+    } catch (error) {
+      console.error("Site search failed:", error);
+      res.status(500).json({ success: false, error: "Search failed" });
+    }
+  });
+
+  // Get search index statistics
+  app.get("/api/site-search/stats", async (req, res) => {
+    try {
+      const stats = getSearchIndexStats();
+      res.json({ success: true, ...stats });
+    } catch (error) {
+      console.error("Failed to get search stats:", error);
+      res.status(500).json({ success: false, error: "Failed to get stats" });
     }
   });
 
