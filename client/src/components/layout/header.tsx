@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText, Briefcase } from "lucide-react";
+import { SearchButton } from "@/components/search/site-search";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
@@ -117,6 +118,9 @@ export function Header() {
           )}
           
           <div className="flex items-center space-x-2">
+            {/* Site Search - All sizes */}
+            <SearchButton />
+            
             {/* Language Selector - Desktop */}
             <div className="hidden md:block">
               <Select value={i18n.language} onValueChange={changeLanguage}>
