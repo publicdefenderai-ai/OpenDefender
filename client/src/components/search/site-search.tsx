@@ -49,7 +49,13 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
   }, [open]);
 
   const { data, isLoading, error } = useQuery<SearchResponse>({
-    queryKey: ['/api/site-search', debouncedQuery, language],
+    queryKey: ['/api/site-search', { q: debouncedQuery, lang: language }],
+    queryFn: async () => {
+      const params = new URLSearchParams({ q: debouncedQuery, lang: language });
+      const res = await fetch(`/api/site-search?${params}`);
+      if (!res.ok) throw new Error('Search failed');
+      return res.json();
+    },
     enabled: debouncedQuery.length >= 2,
     staleTime: 60000,
   });

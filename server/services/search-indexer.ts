@@ -139,7 +139,7 @@ export function buildSearchIndex(): void {
       content: term.definition,
       tags: term.tags || [],
       aliases: term.aliases || [],
-      url: `/glossary/${term.slug}`,
+      url: `/legal-glossary#${term.slug}`,
     });
   }
   devLog('search', `Indexed ${legalGlossaryTerms.length} glossary terms`);
@@ -155,7 +155,7 @@ export function buildSearchIndex(): void {
       tags: [charge.category, charge.jurisdiction],
       aliases: [],
       jurisdiction: charge.jurisdiction,
-      url: `/resources?charge=${encodeURIComponent(charge.id)}`,
+      url: `/case-guidance?charge=${encodeURIComponent(charge.name)}`,
     });
   }
   devLog('search', `Indexed ${criminalCharges.length} criminal charges`);
@@ -169,7 +169,7 @@ export function buildSearchIndex(): void {
       tags: [...program.programTypes, program.state, program.jurisdictionType],
       aliases: [],
       jurisdiction: program.state,
-      url: `/resources/diversion?program=${encodeURIComponent(program.id)}`,
+      url: `/diversion-programs#${program.id}`,
     });
   }
   devLog('search', `Indexed ${diversionPrograms.length} diversion programs`);
@@ -185,7 +185,7 @@ export function buildSearchIndex(): void {
       tags: ['expungement', 'record clearing', rule.state],
       aliases: ['expunction', 'record sealing', 'record clearing'],
       jurisdiction: rule.state,
-      url: `/resources/expungement?state=${rule.state}`,
+      url: `/record-expungement#${rule.state.toLowerCase().replace(/\s+/g, '-')}`,
     });
   }
   devLog('search', `Indexed ${expungementRules.length} expungement rules`);
@@ -208,11 +208,11 @@ export function buildSearchIndex(): void {
   devLog('search', `Indexed ${GENERIC_MOCK_QA.length} mock QA items`);
 
   const rightsPages = [
-    { id: 'miranda', title: 'Miranda Rights', titleEs: 'Derechos Miranda', content: 'Your right to remain silent. Anything you say can be used against you. Right to an attorney. If you cannot afford one, one will be provided.', url: '/rights/miranda' },
-    { id: 'search-seizure', title: 'Search and Seizure Rights', titleEs: 'Derechos de Registro e Incautación', content: 'Fourth Amendment protections against unreasonable searches. When police can search. Your right to refuse consent.', url: '/rights' },
-    { id: 'attorney', title: 'Right to an Attorney', titleEs: 'Derecho a un Abogado', content: 'Sixth Amendment right to counsel. Public defender eligibility. When to request an attorney.', url: '/rights' },
-    { id: 'speedy-trial', title: 'Right to a Speedy Trial', titleEs: 'Derecho a un Juicio Rápido', content: 'Sixth Amendment speedy trial rights. Time limits for prosecution.', url: '/rights' },
-    { id: 'jury', title: 'Right to a Jury Trial', titleEs: 'Derecho a un Juicio con Jurado', content: 'Sixth Amendment right to trial by jury. When jury trial is available.', url: '/rights' },
+    { id: 'miranda', title: 'Miranda Rights', titleEs: 'Derechos Miranda', content: 'Your right to remain silent. Anything you say can be used against you. Right to an attorney. If you cannot afford one, one will be provided.', url: '/rights-info#miranda' },
+    { id: 'search-seizure', title: 'Search and Seizure Rights', titleEs: 'Derechos de Registro e Incautación', content: 'Fourth Amendment protections against unreasonable searches. When police can search. Your right to refuse consent.', url: '/search-seizure' },
+    { id: 'attorney', title: 'Right to an Attorney', titleEs: 'Derecho a un Abogado', content: 'Sixth Amendment right to counsel. Public defender eligibility. When to request an attorney.', url: '/rights-info#attorney' },
+    { id: 'speedy-trial', title: 'Right to a Speedy Trial', titleEs: 'Derecho a un Juicio Rápido', content: 'Sixth Amendment speedy trial rights. Time limits for prosecution.', url: '/rights-info#speedy-trial' },
+    { id: 'jury', title: 'Right to a Jury Trial', titleEs: 'Derecho a un Juicio con Jurado', content: 'Sixth Amendment right to trial by jury. When jury trial is available.', url: '/rights-info#jury' },
   ];
   
   for (const page of rightsPages) {
