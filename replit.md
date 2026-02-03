@@ -30,6 +30,14 @@ A multi-tier validation system ensures legal accuracy: Tier 1 validates statutor
 
 The platform integrates various legal data sources for criminal charges, diversion programs, and statutes (federal and state), with a "free-first" search strategy for court records.
 
+### Site-Wide Search Feature
+A comprehensive search system indexes 4,275+ documents for instant, bilingual legal content discovery:
+- **Search Index** (`server/services/search-indexer.ts`): Aggregates glossary terms (30), criminal charges (4,144), diversion programs (73), expungement rules (7), mock Q&A items (16), and rights info pages (5)
+- **Legal Synonym Expansion** (`shared/search-types.ts`): Expands queries using legal aliases (e.g., "DUI" → "DWI", "OUI"; "bail" → "bond")
+- **Relevance Scoring**: Weighted scoring based on title matches, alias matches, tag matches, and content frequency
+- **UI Component** (`client/src/components/search/site-search.tsx`): Modal with debounced search, type badges, keyboard shortcuts (Cmd/Ctrl+K), and bilingual support
+- **API Endpoints**: GET `/api/site-search` with query, language, filters; GET `/api/site-search/stats` for index statistics
+
 ### Mock Q&A Practice Feature
 A dual-layer Mock Q&A system helps users prepare for court proceedings:
 - **Static Library** (`shared/mock-qa.ts`): 17 bilingual generic Q&A items covering 6 proceeding types (arraignment, bail hearing, pretrial, plea, trial, sentencing) with translations in `i18n.ts`
