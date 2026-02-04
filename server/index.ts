@@ -59,12 +59,20 @@ app.use((req, res, next) => {
   if (['POST', 'PUT', 'DELETE', 'PATCH'].includes(req.method)) {
     const contentType = req.headers['content-type'] || '';
 
-    // For API endpoints, require JSON content type
+    // For API endpoints, require JSON content type (with exceptions for file uploads)
     if (req.path.startsWith('/api/')) {
-      // Allow requests with no body (e.g., DELETE) or with JSON content type
+      // Allow multipart/form-data for file upload endpoints
+      const fileUploadPaths = [
+        '/api/document-summary/summarize',
+        '/api/attorney/document-summary/summarize'
+      ];
+      const isFileUpload = fileUploadPaths.some(p => req.path === p);
+      
+      // Allow requests with no body (e.g., DELETE), JSON, or file uploads with multipart
       const hasBody = req.headers['content-length'] && parseInt(req.headers['content-length']) > 0;
 
-      if (hasBody && !contentType.includes('application/json')) {
+      if (hasBody && !contentType.includes('application/json') && 
+          !(isFileUpload && contentType.includes('multipart/form-data'))) {
         return res.status(415).json({
           success: false,
           error: 'Content-Type must be application/json for API requests'

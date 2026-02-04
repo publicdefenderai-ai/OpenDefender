@@ -165,6 +165,17 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragEnter = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
   }, []);
 
   const handleSubmit = async () => {
@@ -396,6 +407,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 onClick={() => fileInputRef.current?.click()}
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
+                onDragEnter={handleDragEnter}
+                onDragLeave={handleDragLeave}
                 className={`
                   border-2 border-dashed rounded-lg p-8 text-center cursor-pointer
                   transition-colors duration-200
