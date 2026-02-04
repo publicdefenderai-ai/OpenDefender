@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, FileText, Shield, ArrowRight, FileSearch } from "lucide-react";
+import { Briefcase, FileText, Shield, ArrowRight, FileSearch, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -12,12 +12,89 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { DocumentSummarizer } from "@/components/document-summarizer";
+import { VerificationForm } from "@/components/attorney/verification-form";
+import { useAttorneySession } from "@/hooks/use-attorney-session";
 
 export default function AttorneyPortal() {
   useScrollToTop();
   const { t } = useTranslation();
   const [showDocumentSummarizerModal, setShowDocumentSummarizerModal] = useState(false);
+  const { isVerified, isLoading } = useAttorneySession();
 
+  // Show loading state while checking verification
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="flex items-center justify-center py-32">
+          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Show verification form if not verified
+  if (!isVerified) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+
+        {/* Hero Section */}
+        <section className="relative py-12 md:py-16 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950" />
+
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-6">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
+                {t("attorneyPortal.verify.title", "Attorney Verification")}
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {t(
+                  "attorney.verify.subtitle",
+                  "Please verify your bar membership to access attorney tools."
+                )}
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Verification Form */}
+        <section className="py-8 md:py-12">
+          <div className="max-w-xl mx-auto px-4 sm:px-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>
+                  {t("attorneyPortal.verify.formTitle", "Bar Membership Verification")}
+                </CardTitle>
+                <CardDescription>
+                  {t(
+                    "attorney.verify.formDescription",
+                    "Confirm the required attestations to access attorney tools."
+                  )}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <VerificationForm />
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    );
+  }
+
+  // Show attorney tools if verified
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -85,7 +162,7 @@ export default function AttorneyPortal() {
                     {t('attorneyPortal.documentGeneration.feature3', 'Jurisdiction-specific formatting (CA, NY, TX, FL)')}
                   </li>
                 </ul>
-                <Link href="/attorney/verify">
+                <Link href="/attorney/documents">
                   <Button className="w-full">
                     {t('attorneyPortal.documentGeneration.getStarted', 'Get Started')}
                     <ArrowRight className="h-4 w-4 ml-2" />
