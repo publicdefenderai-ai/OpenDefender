@@ -318,6 +318,167 @@ export function buildSearchIndex(): void {
   }
   devLog('search', `Indexed ${immigrationPages.length} immigration guidance pages`);
 
+  const sitePages = [
+    {
+      id: 'home',
+      title: 'Public Defender AI - Legal Guidance',
+      titleEs: 'Defensor Público AI - Orientación Legal',
+      content: 'Free legal guidance and rights information. AI-powered assistance for criminal defense. Know your rights. Find legal resources.',
+      tags: ['home', 'legal aid', 'public defender', 'rights'],
+      aliases: ['main', 'start'],
+      url: '/'
+    },
+    {
+      id: 'rights-info',
+      title: 'Know Your Rights',
+      titleEs: 'Conozca Sus Derechos',
+      content: 'Understanding your constitutional rights. Miranda rights. Right to remain silent. Right to an attorney. Protection against unreasonable searches.',
+      tags: ['rights', 'constitution', 'miranda', 'attorney'],
+      aliases: ['constitutional rights', 'civil rights'],
+      url: '/rights-info'
+    },
+    {
+      id: 'court-locator',
+      title: 'Court and Resource Locator',
+      titleEs: 'Localizador de Tribunales y Recursos',
+      content: 'Find courts, legal aid offices, and public defender offices near you. Locate legal resources in your area.',
+      tags: ['court', 'locator', 'legal aid', 'public defender'],
+      aliases: ['find court', 'courthouse', 'legal help near me'],
+      url: '/court-locator'
+    },
+    {
+      id: 'immigration-hub',
+      title: 'Immigration Guidance Hub',
+      titleEs: 'Centro de Orientación de Inmigración',
+      content: 'Comprehensive immigration resources. Know your rights. ICE encounters. DACA and TPS. Finding legal help.',
+      tags: ['immigration', 'ICE', 'DACA', 'TPS', 'deportation'],
+      aliases: ['immigrant rights', 'undocumented'],
+      url: '/immigration-guidance'
+    },
+    {
+      id: 'mission',
+      title: 'Our Mission',
+      titleEs: 'Nuestra Misión',
+      content: 'Public Defender AI mission statement. Democratizing access to legal information. Helping those who cannot afford attorneys.',
+      tags: ['mission', 'about', 'purpose'],
+      aliases: ['about us', 'who we are'],
+      url: '/mission-statement'
+    },
+    {
+      id: 'court-records',
+      title: 'Court Records Search',
+      titleEs: 'Búsqueda de Registros Judiciales',
+      content: 'Search federal court records. PACER and RECAP access. Find case documents and dockets.',
+      tags: ['court records', 'PACER', 'RECAP', 'docket', 'case search'],
+      aliases: ['case lookup', 'docket search', 'federal courts'],
+      url: '/court-records'
+    },
+    {
+      id: 'recap',
+      title: 'RECAP Browser Extensions',
+      titleEs: 'Extensiones de Navegador RECAP',
+      content: 'Free access to federal court documents. RECAP browser extension for Chrome and Firefox. Save money on PACER fees.',
+      tags: ['RECAP', 'PACER', 'browser extension', 'free court documents'],
+      aliases: ['free PACER', 'court documents'],
+      url: '/recap-extensions'
+    },
+    {
+      id: 'friends-family',
+      title: 'Resources for Friends and Family',
+      titleEs: 'Recursos para Amigos y Familia',
+      content: 'How to support a loved one facing charges. Bail information. Court dates. Finding an attorney. Emotional support resources.',
+      tags: ['family', 'support', 'loved one', 'bail', 'visiting'],
+      aliases: ['help family member', 'loved one arrested'],
+      url: '/friends-family'
+    },
+    {
+      id: 'how-to',
+      title: 'How to Use This App',
+      titleEs: 'Cómo Usar Esta Aplicación',
+      content: 'Guide to using Public Defender AI. Getting legal guidance. Understanding your case. Preparing for court.',
+      tags: ['guide', 'tutorial', 'help', 'instructions'],
+      aliases: ['getting started', 'user guide'],
+      url: '/how-to'
+    },
+    {
+      id: 'statutes',
+      title: 'Statute Search',
+      titleEs: 'Búsqueda de Estatutos',
+      content: 'Search federal and state criminal statutes. Find laws by jurisdiction. Penalty information. Legal definitions.',
+      tags: ['statutes', 'laws', 'criminal code', 'penalties'],
+      aliases: ['criminal law', 'penal code', 'legal code'],
+      url: '/statutes'
+    },
+    {
+      id: 'chat',
+      title: 'Legal Guidance Chat',
+      titleEs: 'Chat de Orientación Legal',
+      content: 'Get AI-powered legal guidance. Discuss your situation. Understand your options. Prepare for court proceedings.',
+      tags: ['chat', 'guidance', 'AI', 'help', 'advice'],
+      aliases: ['talk to AI', 'get help', 'legal advice'],
+      url: '/chat'
+    },
+    {
+      id: 'document-library',
+      title: 'Legal Document Library',
+      titleEs: 'Biblioteca de Documentos Legales',
+      content: 'Legal document templates and forms. Court forms. Legal letters. Document preparation resources.',
+      tags: ['documents', 'forms', 'templates', 'court forms'],
+      aliases: ['legal forms', 'court paperwork'],
+      url: '/document-library'
+    },
+    {
+      id: 'resources',
+      title: 'Legal Resources',
+      titleEs: 'Recursos Legales',
+      content: 'Comprehensive legal resources. Legal aid organizations. Pro bono attorneys. Self-help legal information.',
+      tags: ['resources', 'legal aid', 'help', 'assistance'],
+      aliases: ['legal help', 'free legal'],
+      url: '/resources'
+    },
+    {
+      id: 'case-guidance',
+      title: 'Case Guidance',
+      titleEs: 'Orientación de Caso',
+      content: 'Get guidance for your specific case. Understand charges. Learn about defenses. Prepare for court.',
+      tags: ['case', 'guidance', 'charges', 'defense'],
+      aliases: ['my case', 'case help'],
+      url: '/case-guidance'
+    },
+    {
+      id: 'process',
+      title: 'Court Process Guide',
+      titleEs: 'Guía del Proceso Judicial',
+      content: 'Understanding the court process. Arraignment. Bail hearings. Pretrial. Plea deals. Trial. Sentencing. Mock Q&A practice.',
+      tags: ['court process', 'arraignment', 'trial', 'sentencing', 'plea'],
+      aliases: ['what to expect', 'court steps'],
+      url: '/process'
+    },
+    {
+      id: 'search-seizure-page',
+      title: 'Search and Seizure Guide',
+      titleEs: 'Guía de Registro e Incautación',
+      content: 'Your Fourth Amendment rights. When police can search. Consent searches. Warrant requirements. Traffic stops. Home searches.',
+      tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police'],
+      aliases: ['police search', 'can police search'],
+      url: '/search-seizure'
+    },
+  ];
+
+  for (const page of sitePages) {
+    documents.push({
+      id: `page-${page.id}`,
+      type: 'rights_info',
+      title: page.title,
+      titleEs: page.titleEs,
+      content: page.content,
+      tags: page.tags,
+      aliases: page.aliases,
+      url: page.url,
+    });
+  }
+  devLog('search', `Indexed ${sitePages.length} site pages`);
+
   searchIndex = documents;
   indexReady = true;
   const elapsed = Date.now() - startTime;
