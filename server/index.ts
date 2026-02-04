@@ -2,6 +2,7 @@ import express, { type Request, Response, NextFunction } from "express";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import { registerRoutes } from "./routes";
+import { registerV1Routes } from "./routes-v1";
 import { setupVite, serveStatic, log } from "./vite";
 import { runStartupValidation } from "./services/charge-statute-validator";
 
@@ -148,6 +149,7 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  registerV1Routes(app);
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {

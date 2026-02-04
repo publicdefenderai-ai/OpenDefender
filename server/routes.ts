@@ -1117,18 +1117,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // OpenLaws API - Bulk import jurisdiction
-  // SECURITY: Protected with admin auth and rate limiting
-  app.post("/api/openlaws/import/:jurisdictionCode", adminRateLimiter, requireAdminAuth, async (req, res) => {
-    try {
-      const { jurisdictionCode } = req.params;
-      const result = await openLawsClient.bulkImportJurisdiction(jurisdictionCode.toUpperCase());
-      res.json(result);
-    } catch (error) {
-      console.error("OpenLaws bulk import failed:", error);
-      res.status(500).json({ success: false, error: "Import failed" });
-    }
-  });
+  // OpenLaws API - Bulk import jurisdiction (disabled - method not implemented)
+  // TODO: Implement bulkImportJurisdiction in openlaws-client if needed
 
   // ============================================================================
   // Attorney Document Generation API
