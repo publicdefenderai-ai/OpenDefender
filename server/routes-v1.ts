@@ -6,6 +6,7 @@ import { search, getSearchIndexStats } from "./services/search-indexer";
 import { criminalCharges, getChargeById } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
 import { openApiSpec } from "./openapi";
+import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
 import { diversionPrograms } from "../client/src/lib/diversion-programs-data";
 import { legalGlossaryTerms } from "../client/src/lib/legal-glossary-data";
 import { expungementRules } from "../client/src/lib/expungement-data";
@@ -266,6 +267,26 @@ export function registerV1Routes(app: Express): void {
       devLog('api-v1', `Stats error: ${error}`);
       res.status(500).json({ success: false, error: 'Failed to retrieve stats' });
     }
+  });
+
+  router.get('/schemas', (req: Request, res: Response) => {
+    res.json({
+      success: true,
+      schemas: getSchemaList()
+    });
+  });
+
+  router.get('/schemas/:name', (req: Request, res: Response) => {
+    const name = req.params.name.replace('.json', '');
+    const schemaKey = Object.keys(jsonSchemas).find(
+      k => k.toLowerCase() === name.toLowerCase()
+    );
+    
+    if (!schemaKey || !(jsonSchemas as any)[schemaKey]) {
+      return res.status(404).json({ success: false, error: 'Schema not found' });
+    }
+    
+    res.json((jsonSchemas as any)[schemaKey]);
   });
 
   app.use('/api/v1', router);

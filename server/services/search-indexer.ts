@@ -486,6 +486,15 @@ export function buildSearchIndex(): void {
       aliases: ['developer docs', 'api reference', 'data export', 'integration'],
       url: '/api-docs'
     },
+    {
+      id: 'widgets',
+      title: 'Embeddable Widgets',
+      titleEs: 'Widgets Integrables',
+      content: 'Embed legal resources on your website. Search widget. Know Your Rights card. Legal glossary widget. JavaScript embed. iframe embed. Customizable themes. Bilingual support.',
+      tags: ['widgets', 'embed', 'integration', 'javascript', 'iframe'],
+      aliases: ['embed code', 'website widget', 'integration tools'],
+      url: '/widgets'
+    },
   ];
 
   for (const page of sitePages) {

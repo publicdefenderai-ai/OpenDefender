@@ -20,7 +20,8 @@ import {
   ChevronRight,
   Zap,
   Shield,
-  Globe
+  Globe,
+  Layout
 } from "lucide-react";
 
 interface Endpoint {
@@ -290,7 +291,19 @@ export default function ApiDocs() {
             <Button asChild>
               <a href="/api/v1/openapi.json" target="_blank">
                 <FileText className="h-4 w-4 mr-2" />
-                OpenAPI Spec (JSON)
+                OpenAPI Spec
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="/api/v1/schemas" target="_blank">
+                <Code className="h-4 w-4 mr-2" />
+                JSON Schemas
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="/widgets">
+                <Zap className="h-4 w-4 mr-2" />
+                Embeddable Widgets
               </a>
             </Button>
             <Button variant="outline" asChild>
