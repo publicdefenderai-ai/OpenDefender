@@ -107,6 +107,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const [documentType, setDocumentType] = useState('general');
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const [summary, setSummary] = useState<DocumentSummary | null>(null);
 
@@ -147,6 +148,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+    
     const file = e.dataTransfer.files?.[0];
     if (file) {
       const isSupported = SUPPORTED_TYPES.some(t => t.mime === file.type);
@@ -171,11 +175,19 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const handleDragEnter = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    setIsDragging(true);
   }, []);
 
   const handleDragLeave = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    // Only set isDragging to false if we're leaving the drop zone itself
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX;
+    const y = e.clientY;
+    if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
+      setIsDragging(false);
+    }
   }, []);
 
   const handleSubmit = async () => {
@@ -411,10 +423,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 onDragLeave={handleDragLeave}
                 className={`
                   border-2 border-dashed rounded-lg p-8 text-center cursor-pointer
-                  transition-colors duration-200
+                  transition-all duration-200
                   ${selectedFile
                     ? 'border-green-500 bg-green-50'
-                    : 'border-gray-300 hover:border-blue-500 hover:bg-blue-50'
+                    : isDragging
+                      ? 'border-blue-500 bg-blue-100 scale-[1.02] shadow-lg'
+                      : 'border-gray-300 hover:border-blue-500 hover:bg-blue-50'
                   }
                 `}
               >
@@ -443,6 +457,16 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                     >
                       Choose Different File
                     </Button>
+                  </div>
+                ) : isDragging ? (
+                  <div className="space-y-3">
+                    <Upload className="h-12 w-12 text-blue-500 mx-auto animate-bounce" />
+                    <div>
+                      <p className="font-medium text-blue-600">Drop your file here</p>
+                      <p className="text-sm text-blue-500 mt-1">
+                        Release to upload
+                      </p>
+                    </div>
                   </div>
                 ) : (
                   <div className="space-y-3">

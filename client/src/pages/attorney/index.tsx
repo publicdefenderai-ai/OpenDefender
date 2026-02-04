@@ -229,11 +229,11 @@ export default function AttorneyPortal() {
         </div>
       </section>
 
-      {/* Document Summarizer Modal */}
+      {/* Document Summarizer Modal - Uses public endpoint, shows privacy disclosure */}
       <Dialog open={showDocumentSummarizerModal} onOpenChange={setShowDocumentSummarizerModal}>
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0">
           <DocumentSummarizer
-            isAttorneyMode={true}
+            isAttorneyMode={false}
             onClose={() => setShowDocumentSummarizerModal(false)}
           />
         </DialogContent>
