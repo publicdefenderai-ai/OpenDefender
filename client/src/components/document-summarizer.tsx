@@ -100,28 +100,17 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
   const [step, setStep] = useState<Step>(isAttorneyMode ? 'upload' : 'disclosure');
   const [consentGiven, setConsentGiven] = useState(false);
-  const [courtWarningAcknowledged, setCourtWarningAcknowledged] = useState(isAttorneyMode);
-  const [showCourtWarning, setShowCourtWarning] = useState(false);
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [documentType, setDocumentType] = useState('general');
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const dragCounter = useRef(0);
 
   const [summary, setSummary] = useState<DocumentSummary | null>(null);
 
   const handleConsentContinue = () => {
-    if (!courtWarningAcknowledged && !isAttorneyMode) {
-      setShowCourtWarning(true);
-    } else {
-      setStep('upload');
-    }
-  };
-
-  const handleCourtWarningAcknowledge = () => {
-    setCourtWarningAcknowledged(true);
-    setShowCourtWarning(false);
     setStep('upload');
   };
 
@@ -150,6 +139,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(false);
+    dragCounter.current = 0;
     
     const file = e.dataTransfer.files?.[0];
     if (file) {
@@ -170,22 +160,26 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-  }, []);
+    // Ensure dragging state stays true while hovering
+    if (!isDragging) {
+      setIsDragging(true);
+    }
+  }, [isDragging]);
 
   const handleDragEnter = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsDragging(true);
+    dragCounter.current++;
+    if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
   }, []);
 
   const handleDragLeave = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    // Only set isDragging to false if we're leaving the drop zone itself
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX;
-    const y = e.clientY;
-    if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
+    dragCounter.current--;
+    if (dragCounter.current === 0) {
       setIsDragging(false);
     }
   }, []);
@@ -251,9 +245,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
     setError(null);
     setStep(isAttorneyMode ? 'upload' : 'disclosure');
     setConsentGiven(false);
-    if (!isAttorneyMode) {
-      setCourtWarningAcknowledged(false);
-    }
+    setIsDragging(false);
+    dragCounter.current = 0;
   };
 
   const generateSummaryText = (s: DocumentSummary): string => {
@@ -340,7 +333,6 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
             >
               <Alert>
                 <Shield className="h-4 w-4" />
-                <AlertTitle>Privacy Notice</AlertTitle>
                 <AlertDescription className="space-y-3 mt-2">
                   <p>
                     <strong>Before you upload a document, please understand:</strong>
@@ -358,19 +350,13 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                     <li>
                       <strong>Anthropic does not store your document permanently or use it for AI training.</strong> For operational and safety purposes, data may be temporarily retained for up to 30 days before automatic deletion.
                     </li>
+                    <li>
+                      <strong>Court proceedings:</strong> If you are involved in a legal case, you might be asked in court about resources you used to understand legal documents, including this resource.
+                    </li>
+                    <li>
+                      <strong>Not legal advice:</strong> This tool provides informational summaries only, not legal advice. The AI may make mistakes or miss important details. Always have an attorney review important legal documents.
+                    </li>
                   </ul>
-                </AlertDescription>
-              </Alert>
-
-              <Alert variant="destructive" className="border-amber-500 bg-amber-50 text-amber-900">
-                <AlertTriangle className="h-4 w-4 text-amber-600" />
-                <AlertTitle className="text-amber-900">Important Reminder</AlertTitle>
-                <AlertDescription className="text-amber-800">
-                  <p className="mt-1">
-                    This tool provides <strong>informational summaries only</strong>, not legal advice.
-                    The AI may make mistakes or miss important details. Always have an attorney review
-                    important legal documents.
-                  </p>
                 </AlertDescription>
               </Alert>
 
@@ -381,7 +367,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   onCheckedChange={(checked) => setConsentGiven(checked === true)}
                 />
                 <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer">
-                  I understand and agree to the privacy notice above. I understand this tool provides
+                  I understand and agree to the information above. I understand this tool provides
                   informational summaries only, not legal advice, and I should consult with an attorney
                   for legal guidance.
                 </Label>
@@ -746,38 +732,6 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
         </AnimatePresence>
       </CardContent>
 
-      {/* Court Warning Dialog */}
-      <Dialog open={showCourtWarning} onOpenChange={setShowCourtWarning}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5 text-amber-500" />
-              Important Notice About Court Proceedings
-            </DialogTitle>
-          </DialogHeader>
-          <DialogDescription className="space-y-4">
-            <p>
-              If you are involved in a legal case, you may be asked in court about:
-            </p>
-            <ul className="list-disc list-inside space-y-1 text-sm">
-              <li>What information you have reviewed about your case</li>
-              <li>Resources you have used to understand legal documents</li>
-              <li>Whether you have used AI tools to analyze legal materials</li>
-            </ul>
-            <p className="font-medium">
-              Be prepared to honestly disclose your use of this tool if asked during legal proceedings.
-            </p>
-          </DialogDescription>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setShowCourtWarning(false)}>
-              Go Back
-            </Button>
-            <Button onClick={handleCourtWarningAcknowledge}>
-              I Understand, Continue
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </Card>
   );
 }
