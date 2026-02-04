@@ -545,12 +545,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               className="space-y-6"
             >
               {/* Document Info Header */}
-              <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
+              <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-950/50 border border-green-200 dark:border-green-800 rounded-lg">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-green-600" />
+                  <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
                   <div>
-                    <p className="font-medium text-green-800">Summary Generated</p>
-                    <p className="text-sm text-green-600">
+                    <p className="font-medium text-green-800 dark:text-green-200">Summary Generated</p>
+                    <p className="text-sm text-green-600 dark:text-green-400">
                       {summary.documentType}
                       {summary.pageCount && ` - ${summary.pageCount} page${summary.pageCount > 1 ? 's' : ''}`}
                     </p>
@@ -568,7 +568,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   <FileText className="h-4 w-4" />
                   Summary
                 </h3>
-                <p className="text-sm leading-relaxed bg-gray-50 p-4 rounded-lg">
+                <p className="text-sm leading-relaxed bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 p-4 rounded-lg text-foreground">
                   {summary.summary}
                 </p>
               </div>
@@ -585,7 +585,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   <ul className="space-y-2">
                     {summary.keyPoints.map((point, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="bg-blue-100 text-blue-800 rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">
+                        <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">
                           {i + 1}
                         </span>
                         <span>{point}</span>
@@ -610,8 +610,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                           key={i}
                           className={`p-3 rounded-lg text-sm ${
                             date.isDeadline
-                              ? 'bg-red-50 border border-red-200'
-                              : 'bg-gray-50'
+                              ? 'bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-800'
+                              : 'bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800'
                           }`}
                         >
                           <div className="flex items-center gap-2">
@@ -641,9 +641,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                     </h3>
                     <div className="grid gap-3">
                       {summary.legalTermsExplained.map((term, i) => (
-                        <div key={i} className="p-3 bg-blue-50 rounded-lg text-sm">
-                          <p className="font-medium text-blue-900">{term.term}</p>
-                          <p className="mt-1 text-blue-800">{term.explanation}</p>
+                        <div key={i} className="p-3 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
+                          <p className="font-medium text-blue-900 dark:text-blue-200">{term.term}</p>
+                          <p className="mt-1 text-blue-800 dark:text-blue-300">{term.explanation}</p>
                         </div>
                       ))}
                     </div>
@@ -656,14 +656,14 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 <>
                   <Separator />
                   <div className="space-y-2">
-                    <h3 className="font-semibold flex items-center gap-2 text-amber-700">
+                    <h3 className="font-semibold flex items-center gap-2 text-amber-700 dark:text-amber-400">
                       <AlertCircle className="h-4 w-4" />
                       Potential Concerns
                     </h3>
                     <ul className="space-y-2">
                       {summary.potentialConcerns.map((concern, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm bg-amber-50 p-3 rounded-lg">
-                          <AlertTriangle className="h-4 w-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                        <li key={i} className="flex items-start gap-2 text-sm bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 p-3 rounded-lg text-foreground">
+                          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
                           <span>{concern}</span>
                         </li>
                       ))}
@@ -705,12 +705,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               </Alert>
 
               {/* Privacy Confirmation */}
-              <div className="p-4 bg-gray-50 rounded-lg text-sm text-muted-foreground">
-                <div className="flex items-center gap-2 mb-2">
+              <div className="p-4 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
+                <div className="flex items-center gap-2 mb-2 text-foreground">
                   <Shield className="h-4 w-4" />
                   <span className="font-medium">Privacy Confirmation</span>
                 </div>
-                <p>
+                <p className="text-muted-foreground">
                   Your document and this summary have not been stored on our servers.
                   This data exists only in your browser session. Download the summary
                   if you want to keep it.
