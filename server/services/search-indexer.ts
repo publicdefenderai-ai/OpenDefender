@@ -190,22 +190,36 @@ export function buildSearchIndex(): void {
   }
   devLog('search', `Indexed ${expungementRules.length} expungement rules`);
 
+  const proceedingGroups = new Map<string, { label: typeof PROCEEDING_LABELS[ProceedingType], tags: string[], count: number }>();
   for (const qa of GENERIC_MOCK_QA) {
     const proceedingType = qa.proceedingType as ProceedingType;
-    const proceedingLabel = PROCEEDING_LABELS[proceedingType];
-    documents.push({
-      id: `mockqa-${qa.id}`,
-      type: 'mock_qa',
-      title: `${proceedingLabel.en} Preparation`,
-      titleEs: `Preparación para ${proceedingLabel.es}`,
-      content: `Court preparation for ${proceedingLabel.en}. Question: ${qa.questionKey}`,
-      contentEs: `Preparación para ${proceedingLabel.es}`,
-      tags: [qa.proceedingType, qa.casePhase, ...(qa.tags || [])],
-      aliases: [],
-      url: `/process?proceeding=${qa.proceedingType}`,
-    });
+    const existing = proceedingGroups.get(proceedingType);
+    if (existing) {
+      existing.tags.push(...(qa.tags || []));
+      existing.count++;
+    } else {
+      proceedingGroups.set(proceedingType, {
+        label: PROCEEDING_LABELS[proceedingType],
+        tags: [qa.proceedingType, qa.casePhase, ...(qa.tags || [])],
+        count: 1
+      });
+    }
   }
-  devLog('search', `Indexed ${GENERIC_MOCK_QA.length} mock QA items`);
+  
+  Array.from(proceedingGroups.entries()).forEach(([proceedingType, group]) => {
+    documents.push({
+      id: `mockqa-${proceedingType}`,
+      type: 'mock_qa',
+      title: `${group.label.en} Preparation`,
+      titleEs: `Preparación para ${group.label.es}`,
+      content: `Practice questions and answers to prepare for your ${group.label.en}. Includes ${group.count} sample questions covering what the judge may ask.`,
+      contentEs: `Preguntas y respuestas de práctica para prepararse para su ${group.label.es}. Incluye ${group.count} preguntas de ejemplo.`,
+      tags: Array.from(new Set(group.tags)),
+      aliases: [],
+      url: `/process?proceeding=${proceedingType}`,
+    });
+  });
+  devLog('search', `Indexed ${proceedingGroups.size} mock QA proceeding types`);
 
   const rightsPages = [
     { id: 'miranda', title: 'Miranda Rights', titleEs: 'Derechos Miranda', content: 'Your right to remain silent. Anything you say can be used against you. Right to an attorney. If you cannot afford one, one will be provided.', url: '/rights-info#miranda' },
