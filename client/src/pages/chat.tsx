@@ -280,6 +280,7 @@ export default function ChatPage() {
             { id: 'resources-legal-aid', labelKey: 'chat.replies.legalAidOrgs', value: 'resources_legal_aid', color: 'green' as const },
             { id: 'resources-diversion', labelKey: 'chat.replies.diversionPrograms', value: 'resources_diversion', color: 'green' as const },
             { id: 'resources-expungement', labelKey: 'chat.replies.recordExpungement', value: 'resources_expungement', color: 'green' as const },
+            { id: 'resources-doc-summarizer', labelKey: 'chat.replies.documentSummarizer', value: 'resources_doc_summarizer', color: 'cyan' as const },
           ]);
           actions.setCurrentStep('resources_menu');
         } else if (reply.value === 'menu_laws') {
@@ -310,6 +311,7 @@ export default function ChatPage() {
             { id: 'resources-legal-aid', labelKey: 'chat.replies.legalAidOrgs', value: 'resources_legal_aid', color: 'green' as const },
             { id: 'resources-diversion', labelKey: 'chat.replies.diversionPrograms', value: 'resources_diversion', color: 'green' as const },
             { id: 'resources-expungement', labelKey: 'chat.replies.recordExpungement', value: 'resources_expungement', color: 'green' as const },
+            { id: 'resources-doc-summarizer', labelKey: 'chat.replies.documentSummarizer', value: 'resources_doc_summarizer', color: 'cyan' as const },
           ]);
           actions.setCurrentStep('resources_menu');
         } else if (reply.value === 'menu_laws') {
@@ -353,6 +355,9 @@ export default function ChatPage() {
           actions.markFlowCompleted('resources');
         } else if (reply.value === 'resources_expungement') {
           setLocation('/record-expungement');
+          actions.markFlowCompleted('resources');
+        } else if (reply.value === 'resources_doc_summarizer') {
+          setLocation('/document-summarizer');
           actions.markFlowCompleted('resources');
         }
         break;

@@ -48,6 +48,7 @@ import Statutes from "@/pages/statutes";
 import Chat from "@/pages/chat";
 import DocumentLibrary from "@/pages/document-library";
 import Resources from "@/pages/resources";
+import DocumentSummarizerPage from "@/pages/document-summarizer";
 import AttorneyPortal from "@/pages/attorney/index";
 import AttorneyVerify from "@/pages/attorney/verify";
 import AttorneyDocuments from "@/pages/attorney/documents";
@@ -128,6 +129,7 @@ function Router() {
       <Route path="/chat" component={Chat} />
       <Route path="/document-library" component={DocumentLibrary} />
       <Route path="/resources" component={Resources} />
+      <Route path="/document-summarizer" component={DocumentSummarizerPage} />
       <Route path="/attorney" component={AttorneyPortal} />
       <Route path="/attorney/verify" component={AttorneyVerify} />
       <Route path="/attorney/documents" component={AttorneyDocuments} />

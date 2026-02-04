@@ -15,7 +15,8 @@ import {
   Navigation,
   Clock,
   UserCheck,
-  Heart
+  Heart,
+  FileSearch
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,6 +30,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
+import { DocumentSummarizer } from "@/components/document-summarizer";
 
 interface ResourceCardProps {
   icon: React.ReactNode;
@@ -276,6 +278,9 @@ export default function Resources() {
   const [laError, setLaError] = useState("");
   const [laHasSearched, setLaHasSearched] = useState(false);
 
+  // Document Summarizer state
+  const [showDocumentSummarizerModal, setShowDocumentSummarizerModal] = useState(false);
+
   const handlePublicDefenderSearch = async () => {
     if (!pdZipCode.trim() || pdZipCode.length !== 5) {
       setPdError(t('home.publicDefenderSearch.error'));
@@ -367,6 +372,13 @@ export default function Resources() {
       description: t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community.' }),
       onClick: () => setShowLegalAidModal(true),
       color: "bg-gradient-to-br from-rose-500 to-rose-700"
+    },
+    {
+      icon: <FileSearch className="h-7 w-7 text-white" />,
+      title: t('resources.documentSummarizer.title', { defaultValue: 'Document Summarizer' }),
+      description: t('resources.documentSummarizer.description', { defaultValue: 'Upload legal documents and get AI-powered plain-English summaries. Your documents are never stored.' }),
+      onClick: () => setShowDocumentSummarizerModal(true),
+      color: "bg-gradient-to-br from-cyan-500 to-cyan-700"
     }
   ];
 
@@ -546,6 +558,16 @@ export default function Resources() {
               </p>
             )}
           </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Document Summarizer Modal */}
+      <Dialog open={showDocumentSummarizerModal} onOpenChange={setShowDocumentSummarizerModal}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0">
+          <DocumentSummarizer
+            isAttorneyMode={false}
+            onClose={() => setShowDocumentSummarizerModal(false)}
+          />
         </DialogContent>
       </Dialog>
     </div>

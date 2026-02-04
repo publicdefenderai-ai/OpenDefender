@@ -24,6 +24,8 @@ import { getTemplates, getTemplate, generateDocument, getGeneratedDocument, clea
 import { generateDocx } from "./services/attorney-docs/docx-generator";
 import { search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
 import { z } from "zod";
+import multer from "multer";
+import { summarizeDocument, validateFile, getSupportedFileTypes } from "./services/document-summarizer";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -1509,6 +1511,220 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch document", error);
       res.status(500).json({ success: false, error: "Failed to fetch document" });
+    }
+  });
+
+  // ============================================================================
+  // Document Summarization API (Session-based, no storage)
+  // ============================================================================
+
+  /**
+   * Configure multer for in-memory file handling only.
+   * Files are NEVER written to disk - processed in memory and discarded.
+   * Maximum file size: 10MB
+   */
+  const documentUpload = multer({
+    storage: multer.memoryStorage(),
+    limits: {
+      fileSize: 10 * 1024 * 1024, // 10MB max
+      files: 1, // Only one file at a time
+    },
+    fileFilter: (req, file, cb) => {
+      const error = validateFile(file.mimetype, 0); // Size check done by limits
+      if (error && error.code === 'UNSUPPORTED_TYPE') {
+        cb(new Error(error.message));
+      } else {
+        cb(null, true);
+      }
+    },
+  });
+
+  /**
+   * Get supported file types for document summarization
+   * Public endpoint - no auth required
+   */
+  app.get("/api/document-summary/supported-types", (req, res) => {
+    res.json({
+      success: true,
+      supportedTypes: getSupportedFileTypes(),
+      maxFileSizeMB: 10,
+      privacyNotice: {
+        weStore: false,
+        anthropicTrains: false,
+        anthropicRetention: "Anthropic may temporarily retain data for up to 30 days for operational and safety purposes, then it is automatically deleted.",
+        recommendation: "For maximum privacy, avoid including unnecessary personal information in documents you upload."
+      }
+    });
+  });
+
+  /**
+   * Summarize a document using Claude AI
+   *
+   * PRIVACY GUARANTEES:
+   * - Document is processed in memory only - never saved to disk or database
+   * - No caching of documents or summaries
+   * - Response is returned and all data is garbage collected
+   * - Anthropic does not use API data for training
+   * - Anthropic may retain data for up to 30 days for operational purposes
+   */
+  app.post("/api/document-summary/summarize", aiRateLimiter, (req, res, next) => {
+    documentUpload.single('document')(req, res, (err) => {
+      if (err) {
+        if (err instanceof multer.MulterError) {
+          if (err.code === 'LIMIT_FILE_SIZE') {
+            return res.status(400).json({
+              success: false,
+              error: 'File too large. Maximum size is 10MB.'
+            });
+          }
+          return res.status(400).json({
+            success: false,
+            error: `Upload error: ${err.message}`
+          });
+        }
+        return res.status(400).json({
+          success: false,
+          error: err.message || 'Invalid file'
+        });
+      }
+      next();
+    });
+  }, async (req: Request, res: Response) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({
+          success: false,
+          error: 'No document provided'
+        });
+      }
+
+      // Validate consent was given
+      const consentGiven = req.body.consentGiven === 'true' || req.body.consentGiven === true;
+      if (!consentGiven) {
+        // Clear file from memory immediately
+        (req as any).file = null;
+        return res.status(400).json({
+          success: false,
+          error: 'Consent required before processing document'
+        });
+      }
+
+      const language = (req.body.language as 'en' | 'es') || 'en';
+      const summaryType = req.body.summaryType || 'general';
+
+      devLog(`[DocumentSummary] Processing ${file.originalname} (${file.size} bytes)`);
+
+      // Summarize the document (no storage, processed in memory)
+      const summary = await summarizeDocument({
+        file: file.buffer,
+        mimeType: file.mimetype,
+        filename: file.originalname,
+        language,
+        summaryType,
+      });
+
+      // IMPORTANT: Clear file buffer from memory after processing
+      // This ensures the document is not retained in server memory
+      (req as any).file = null;
+
+      // Log anonymized metrics only (no content)
+      opsLog(`[DocumentSummary] Completed: type=${summary.documentType}, pages=${summary.pageCount || 'N/A'}, tokens=${summary.usageMetrics.inputTokens}+${summary.usageMetrics.outputTokens}`);
+
+      res.json({
+        success: true,
+        summary,
+        privacyConfirmation: {
+          documentStored: false,
+          summaryStored: false,
+          message: "Your document and this summary have not been stored. This data exists only in your browser session."
+        }
+      });
+
+    } catch (error) {
+      // Clear file from memory on error
+      (req as any).file = null;
+
+      errLog('[DocumentSummary] Error:', error);
+
+      const message = error instanceof Error ? error.message : 'Failed to summarize document';
+      res.status(500).json({
+        success: false,
+        error: message
+      });
+    }
+  });
+
+  /**
+   * Attorney-specific document summarization endpoint
+   * Requires valid attorney session, uses same privacy guarantees
+   */
+  app.post("/api/attorney/document-summary/summarize", requireAttorneySession, aiRateLimiter, (req, res, next) => {
+    documentUpload.single('document')(req, res, (err) => {
+      if (err) {
+        if (err instanceof multer.MulterError) {
+          if (err.code === 'LIMIT_FILE_SIZE') {
+            return res.status(400).json({
+              success: false,
+              error: 'File too large. Maximum size is 10MB.'
+            });
+          }
+        }
+        return res.status(400).json({
+          success: false,
+          error: err.message || 'Invalid file'
+        });
+      }
+      next();
+    });
+  }, async (req: Request, res: Response) => {
+    try {
+      const file = req.file;
+
+      if (!file) {
+        return res.status(400).json({
+          success: false,
+          error: 'No document provided'
+        });
+      }
+
+      const language = (req.body.language as 'en' | 'es') || 'en';
+      const summaryType = req.body.summaryType || 'legal_document';
+
+      devLog(`[AttorneyDocSummary] Processing ${file.originalname} (${file.size} bytes)`);
+
+      const summary = await summarizeDocument({
+        file: file.buffer,
+        mimeType: file.mimetype,
+        filename: file.originalname,
+        language,
+        summaryType,
+      });
+
+      // Clear file buffer
+      (req as any).file = null;
+
+      opsLog(`[AttorneyDocSummary] Completed: type=${summary.documentType}, pages=${summary.pageCount || 'N/A'}`);
+
+      res.json({
+        success: true,
+        summary,
+        privacyConfirmation: {
+          documentStored: false,
+          summaryStored: false,
+        }
+      });
+
+    } catch (error) {
+      (req as any).file = null;
+      errLog('[AttorneyDocSummary] Error:', error);
+
+      const message = error instanceof Error ? error.message : 'Failed to summarize document';
+      res.status(500).json({
+        success: false,
+        error: message
+      });
     }
   });
 

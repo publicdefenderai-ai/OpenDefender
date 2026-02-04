@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, FileText, Shield, ArrowRight } from "lucide-react";
+import { Briefcase, FileText, Shield, ArrowRight, FileSearch } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -8,11 +9,14 @@ import { Footer } from "@/components/layout/footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { DocumentSummarizer } from "@/components/document-summarizer";
 
 export default function AttorneyPortal() {
   useScrollToTop();
   const { t } = useTranslation();
+  const [showDocumentSummarizerModal, setShowDocumentSummarizerModal] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -54,7 +58,7 @@ export default function AttorneyPortal() {
           </Alert>
 
           {/* Tools Grid */}
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* Document Generation - Available */}
             <Card className="border-slate-200 hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -124,6 +128,39 @@ export default function AttorneyPortal() {
                 </Link>
               </CardContent>
             </Card>
+
+            {/* Document Summarizer - Available */}
+            <Card className="border-slate-200 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/50 rounded-lg flex items-center justify-center mb-3">
+                  <FileSearch className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
+                </div>
+                <CardTitle>{t('attorneyPortal.documentSummarizer.title', 'Document Summarizer')}</CardTitle>
+                <CardDescription>
+                  {t('attorneyPortal.documentSummarizer.description', 'Upload client documents and get AI-powered summaries to quickly understand filings, reports, and evidence. Documents are never stored.')}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="text-sm text-muted-foreground space-y-2 mb-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">•</span>
+                    {t('attorneyPortal.documentSummarizer.feature1', 'PDF, DOCX, and image support')}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">•</span>
+                    {t('attorneyPortal.documentSummarizer.feature2', 'Extracts key dates and deadlines')}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">•</span>
+                    {t('attorneyPortal.documentSummarizer.feature3', 'Privacy-first: no document storage')}
+                  </li>
+                </ul>
+                <Button className="w-full" onClick={() => setShowDocumentSummarizerModal(true)}>
+                  {t('attorneyPortal.documentSummarizer.button', 'Summarize Document')}
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Shared Resources Section */}
@@ -191,6 +228,16 @@ export default function AttorneyPortal() {
           </div>
         </div>
       </section>
+
+      {/* Document Summarizer Modal */}
+      <Dialog open={showDocumentSummarizerModal} onOpenChange={setShowDocumentSummarizerModal}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0">
+          <DocumentSummarizer
+            isAttorneyMode={true}
+            onClose={() => setShowDocumentSummarizerModal(false)}
+          />
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>
