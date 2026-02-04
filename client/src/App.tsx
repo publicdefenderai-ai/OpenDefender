@@ -54,6 +54,7 @@ import AttorneyDocuments from "@/pages/attorney/documents";
 import DocumentWizard from "@/pages/attorney/document-wizard";
 import ApiDocs from "@/pages/api-docs";
 import Widgets from "@/pages/widgets";
+import TechDocs from "@/pages/tech-docs";
 import EmbedSearch from "@/pages/embed/search";
 import EmbedRights from "@/pages/embed/rights";
 import EmbedGlossary from "@/pages/embed/glossary";
@@ -133,6 +134,7 @@ function Router() {
       <Route path="/attorney/documents/:templateId" component={DocumentWizard} />
       <Route path="/api-docs" component={ApiDocs} />
       <Route path="/widgets" component={Widgets} />
+      <Route path="/tech-docs" component={TechDocs} />
       <Route path="/embed/search" component={EmbedSearch} />
       <Route path="/embed/rights" component={EmbedRights} />
       <Route path="/embed/glossary" component={EmbedGlossary} />

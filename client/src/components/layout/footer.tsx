@@ -1,4 +1,4 @@
-import { Scale, Github, Shield, Code } from "lucide-react";
+import { Scale, Github, Shield } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -81,9 +81,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/api-docs" className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-1.5">
-                  <Code className="h-3.5 w-3.5" aria-hidden="true" />
-                  API Documentation
+                <Link href="/tech-docs" className="text-gray-300 hover:text-white transition-colors">
+                  Technical Documentation
                 </Link>
               </li>
               <li>

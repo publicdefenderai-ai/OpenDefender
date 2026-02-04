@@ -478,6 +478,15 @@ export function buildSearchIndex(): void {
       url: '/search-seizure'
     },
     {
+      id: 'tech-docs',
+      title: 'Technical Documentation',
+      titleEs: 'Documentación Técnica',
+      content: 'Technical documentation hub for developers. API documentation. Embeddable widgets. JSON schemas. OpenAPI specification. Integration tools. Developer resources.',
+      tags: ['technical', 'developer', 'api', 'integration', 'documentation'],
+      aliases: ['tech docs', 'developer docs', 'developer hub'],
+      url: '/tech-docs'
+    },
+    {
       id: 'api-docs',
       title: 'API Documentation',
       titleEs: 'Documentación de API',
