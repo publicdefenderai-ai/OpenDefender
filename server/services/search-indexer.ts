@@ -229,6 +229,95 @@ export function buildSearchIndex(): void {
   }
   devLog('search', `Indexed ${rightsPages.length} rights info pages`);
 
+  const immigrationPages = [
+    { 
+      id: 'know-your-rights', 
+      title: 'Immigration Know Your Rights', 
+      titleEs: 'Conozca Sus Derechos de Inmigración',
+      content: 'Know your rights during ICE encounters. Judicial warrants vs administrative warrants. You have the right to remain silent. Do not open the door without a judicial warrant signed by a judge. Administrative warrants (Form I-200, I-205) do not allow entry into your home. Ask to see the warrant through the window or slipped under the door.',
+      tags: ['immigration', 'ICE', 'warrant', 'judicial warrant', 'administrative warrant', 'rights'],
+      aliases: ['ICE raid', 'immigration enforcement', 'deportation'],
+      url: '/immigration-guidance/know-your-rights'
+    },
+    {
+      id: 'workplace-raids',
+      title: 'Workplace Raids',
+      titleEs: 'Redadas en el Lugar de Trabajo',
+      content: 'What to do during a workplace ICE raid. Your rights at work. Do not run. Remain calm. You have the right to remain silent. Do not sign anything without an attorney.',
+      tags: ['immigration', 'ICE', 'workplace', 'raid', 'employer'],
+      aliases: ['ICE raid', 'work raid'],
+      url: '/immigration-guidance/workplace-raids'
+    },
+    {
+      id: 'daca-tps',
+      title: 'DACA and TPS Information',
+      titleEs: 'Información sobre DACA y TPS',
+      content: 'Deferred Action for Childhood Arrivals (DACA) and Temporary Protected Status (TPS). Eligibility requirements, renewal process, and current status updates.',
+      tags: ['immigration', 'DACA', 'TPS', 'dreamers', 'work permit'],
+      aliases: ['dreamers', 'deferred action', 'temporary protected status'],
+      url: '/immigration-guidance/daca-tps'
+    },
+    {
+      id: 'bond-hearings',
+      title: 'Immigration Bond Hearings',
+      titleEs: 'Audiencias de Fianza de Inmigración',
+      content: 'Immigration bond hearing process. How to request bond. Factors judges consider. Preparing for your bond hearing.',
+      tags: ['immigration', 'bond', 'detention', 'hearing', 'release'],
+      aliases: ['immigration bail', 'detention release'],
+      url: '/immigration-guidance/bond-hearings'
+    },
+    {
+      id: 'family-planning',
+      title: 'Family Immigration Planning',
+      titleEs: 'Planificación Familiar de Inmigración',
+      content: 'Emergency family planning for immigration enforcement. Power of attorney. Childcare arrangements. Document preparation.',
+      tags: ['immigration', 'family', 'children', 'emergency plan'],
+      aliases: ['family separation', 'child custody'],
+      url: '/immigration-guidance/family-planning'
+    },
+    {
+      id: 'find-attorney',
+      title: 'Find an Immigration Attorney',
+      titleEs: 'Encontrar un Abogado de Inmigración',
+      content: 'How to find free or low-cost immigration legal help. Legal aid organizations. Pro bono attorneys. Avoiding notario fraud.',
+      tags: ['immigration', 'attorney', 'lawyer', 'legal aid'],
+      aliases: ['immigration lawyer', 'legal help'],
+      url: '/immigration-guidance/find-attorney'
+    },
+    {
+      id: 'find-detained',
+      title: 'Find a Detained Person',
+      titleEs: 'Encontrar a una Persona Detenida',
+      content: 'How to locate someone in immigration detention. ICE detainee locator. Detention facility information. Visitation rights.',
+      tags: ['immigration', 'detention', 'ICE', 'locator'],
+      aliases: ['ICE detention', 'detained immigrant'],
+      url: '/immigration-guidance/find-detained'
+    },
+    {
+      id: 'raids-toolkit',
+      title: 'ICE Raids Toolkit',
+      titleEs: 'Kit de Herramientas para Redadas de ICE',
+      content: 'Complete toolkit for ICE raid preparation. Red cards. Emergency contacts. Family safety plan. Community rapid response.',
+      tags: ['immigration', 'ICE', 'raid', 'emergency', 'toolkit'],
+      aliases: ['raid preparation', 'ICE enforcement'],
+      url: '/immigration-guidance/raids-toolkit'
+    },
+  ];
+
+  for (const page of immigrationPages) {
+    documents.push({
+      id: `immigration-${page.id}`,
+      type: 'rights_info',
+      title: page.title,
+      titleEs: page.titleEs,
+      content: page.content,
+      tags: page.tags,
+      aliases: page.aliases,
+      url: page.url,
+    });
+  }
+  devLog('search', `Indexed ${immigrationPages.length} immigration guidance pages`);
+
   searchIndex = documents;
   indexReady = true;
   const elapsed = Date.now() - startTime;
