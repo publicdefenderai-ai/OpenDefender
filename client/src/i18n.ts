@@ -2208,7 +2208,7 @@ i18n
             "hero": {
               "title": "Privacy Policy",
               "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-              "lastUpdated": "Last Updated: January 21, 2026"
+              "lastUpdated": "Last Updated: February 4, 2026"
             },
             "notice": {
               "title": "Privacy-First Platform:",
@@ -2268,7 +2268,7 @@ i18n
                 "title": "External Data Sources",
                 "description": "Our platform accesses public legal databases and services to provide you with information:",
                 "services": {
-                  "anthropic": "Anthropic Claude Sonnet 4 - for generating legal guidance. Your personal information is removed before processing. Anthropic may retain redacted data for up to 7 days for safety monitoring, then it is permanently deleted. This data is never used to train AI models.",
+                  "anthropic": "Anthropic Claude Sonnet 4 - for generating legal guidance and document summaries. Your personal information is removed before processing. Anthropic may retain data for up to 30 days for operational and safety purposes, then it is automatically deleted. This data is never used to train AI models.",
                   "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
@@ -5042,7 +5042,7 @@ i18n
             "hero": {
               "title": "Política de Privacidad",
               "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-              "lastUpdated": "Última actualización: 21 de enero de 2026"
+              "lastUpdated": "Última actualización: 4 de febrero de 2026"
             },
             "notice": {
               "title": "Plataforma que prioriza la privacidad:",
@@ -5102,7 +5102,7 @@ i18n
                 "title": "Fuentes de Datos Externas",
                 "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
                 "services": {
-                  "anthropic": "Anthropic Claude Sonnet 4 - para generar orientación legal. Su información personal se elimina antes del procesamiento. Anthropic puede retener los datos anonimizados hasta 7 días para monitoreo de seguridad, luego se eliminan permanentemente. Estos datos nunca se usan para entrenar modelos de IA.",
+                  "anthropic": "Anthropic Claude Sonnet 4 - para generar orientación legal y resúmenes de documentos. Su información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad, luego se eliminan automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
                   "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",

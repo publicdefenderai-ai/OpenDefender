@@ -145,6 +145,75 @@ export default function PrivacyPolicy() {
           </div>
         </ScrollReveal>
 
+        {/* Document Summarizer Data Protection */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              {t('privacyPolicy.documentSummarizer.title', 'Document Summarizer Privacy')}
+            </h2>
+
+            <p className="text-muted-foreground mb-6">
+              {t('privacyPolicy.documentSummarizer.summary', 'Our Document Summarizer allows you to upload legal documents for AI-powered analysis. Here\'s how we protect your uploaded documents:')}
+            </p>
+
+            <div className="space-y-4">
+              {/* No Storage */}
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t('privacyPolicy.documentSummarizer.noStorage.title', 'Documents Are Never Stored')}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('privacyPolicy.documentSummarizer.noStorage.description', 'Your uploaded documents are processed entirely in server memory and are never written to disk or saved in any database. The file data is immediately discarded after your summary is generated. We do not keep copies of your documents.')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Summary Not Stored */}
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t('privacyPolicy.documentSummarizer.summaryNotStored.title', 'Summaries Are Not Stored')}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('privacyPolicy.documentSummarizer.summaryNotStored.description', 'The AI-generated summary exists only in your browser session. We do not save or cache summaries on our servers. If you want to keep your summary, use the download button - otherwise it will be lost when you close or refresh the page.')}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Anthropic Processing */}
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t('privacyPolicy.documentSummarizer.anthropicProcessing.title', 'AI Processing by Anthropic')}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('privacyPolicy.documentSummarizer.anthropicProcessing.description', 'To generate summaries, your document content is sent to Anthropic\'s Claude AI. Important privacy protections apply:')}
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2 mt-3">
+                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.noTraining', 'Anthropic does not use your documents to train AI models')}</li>
+                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.retention', 'Anthropic may temporarily retain data for up to 30 days for operational and safety purposes')}</li>
+                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.autoDelete', 'After 30 days, any retained data is automatically and permanently deleted')}</li>
+                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.piiRedaction', 'We remove personal information (SSN, phone numbers, emails) before sending to Anthropic')}</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Supported Files */}
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t('privacyPolicy.documentSummarizer.supportedFiles.title', 'What You Can Upload')}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('privacyPolicy.documentSummarizer.supportedFiles.description', 'We support PDF, DOCX, TXT, and image files (PNG, JPEG) up to 10MB. For your privacy, we recommend removing any unnecessary personal information from documents before uploading.')}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* Technical Details */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
