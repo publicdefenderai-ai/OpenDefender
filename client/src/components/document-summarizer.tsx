@@ -360,13 +360,13 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 </AlertDescription>
               </Alert>
 
-              <div className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
+              <div className="flex items-start space-x-3 p-4 bg-blue-50 dark:bg-blue-950/50 rounded-lg border border-blue-200 dark:border-blue-800">
                 <Checkbox
                   id="consent"
                   checked={consentGiven}
                   onCheckedChange={(checked) => setConsentGiven(checked === true)}
                 />
-                <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer">
+                <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer text-foreground">
                   I understand and agree to the information above. I understand this tool provides
                   informational summaries only, not legal advice, and I should consult with an attorney
                   for legal guidance.
