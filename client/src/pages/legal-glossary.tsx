@@ -275,9 +275,9 @@ export default function LegalGlossary() {
               <Card>
                 <CardContent className="p-12 text-center">
                   <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">{t('courtRecords.results.noResults')}</h3>
+                  <h3 className="text-lg font-semibold mb-2">{t('legalGlossary.results.noResults', { defaultValue: 'No terms found' })}</h3>
                   <p className="text-muted-foreground mb-4">
-                    {t('courtRecords.results.searchFailed')}
+                    {t('legalGlossary.results.tryDifferentSearch', { defaultValue: 'Try a different search term or clear filters' })}
                   </p>
                   {hasActiveFilters && (
                     <Button variant="outline" onClick={clearFilters}>

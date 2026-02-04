@@ -100,6 +100,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // ============================================================================
+  // SECURITY: Input Validation Helpers
+  // ============================================================================
+
+  /**
+   * Validate search query parameters for length constraints.
+   * Prevents DoS via extremely long query strings.
+   */
+  const MAX_QUERY_LENGTH = 500;
+  const MIN_QUERY_LENGTH = 2;
+
+  function validateSearchQuery(query: unknown): { valid: boolean; error?: string } {
+    if (typeof query !== 'string') {
+      return { valid: false, error: 'Query parameter must be a string' };
+    }
+    if (query.length < MIN_QUERY_LENGTH) {
+      return { valid: false, error: `Query must be at least ${MIN_QUERY_LENGTH} characters` };
+    }
+    if (query.length > MAX_QUERY_LENGTH) {
+      return { valid: false, error: `Query exceeds maximum length of ${MAX_QUERY_LENGTH} characters` };
+    }
+    return { valid: true };
+  }
+
+  // ============================================================================
   // SECURITY: Admin API Key Authentication Middleware
   // ============================================================================
 
@@ -395,19 +419,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/case-law/search", searchRateLimiter, async (req, res) => {
     try {
       const { q: query, jurisdiction, search_type } = req.query;
-      
+
       if (!query) {
         return res.status(400).json({ success: false, error: "Query parameter required" });
       }
 
+      const validation = validateSearchQuery(query);
+      if (!validation.valid) {
+        return res.status(400).json({ success: false, error: validation.error });
+      }
+
       const searchType = (search_type as string) === 'semantic' ? 'semantic' : 'keyword';
-      
+
       const results = await legalDataService.searchCaseLaw(
         query as string,
         jurisdiction as string,
         searchType
       );
-      
+
       res.json(results);
     } catch (error) {
       console.error("Case law search failed:", error);
@@ -419,9 +448,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/case-law/semantic-search", searchRateLimiter, async (req, res) => {
     try {
       const { q: query, jurisdiction, keyword_filter } = req.query;
-      
+
       if (!query) {
         return res.status(400).json({ success: false, error: "Query parameter required" });
+      }
+
+      const validation = validateSearchQuery(query);
+      if (!validation.valid) {
+        return res.status(400).json({ success: false, error: validation.error });
       }
 
       const results = await legalDataService.semanticSearchCaseLaw(
@@ -429,7 +463,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         jurisdiction as string,
         keyword_filter as string
       );
-      
+
       res.json(results);
     } catch (error) {
       console.error("Semantic search failed:", error);
@@ -441,12 +475,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/case-law/hybrid-search", searchRateLimiter, async (req, res) => {
     try {
       const { natural_language, keywords, jurisdiction } = req.query;
-      
+
       if (!natural_language || !keywords) {
-        return res.status(400).json({ 
-          success: false, 
-          error: "Both natural_language and keywords parameters required" 
+        return res.status(400).json({
+          success: false,
+          error: "Both natural_language and keywords parameters required"
         });
+      }
+
+      const nlValidation = validateSearchQuery(natural_language);
+      if (!nlValidation.valid) {
+        return res.status(400).json({ success: false, error: `natural_language: ${nlValidation.error}` });
+      }
+
+      const kwValidation = validateSearchQuery(keywords);
+      if (!kwValidation.valid) {
+        return res.status(400).json({ success: false, error: `keywords: ${kwValidation.error}` });
       }
 
       const results = await legalDataService.hybridSearchCaseLaw(
@@ -454,7 +498,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         keywords as string,
         jurisdiction as string
       );
-      
+
       res.json(results);
     } catch (error) {
       console.error("Hybrid search failed:", error);
@@ -914,9 +958,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // RECAP/Court Records Search API
   app.get("/api/court-records/search", searchRateLimiter, async (req, res) => {
     try {
-      const { 
-        q: searchTerm, 
-        case_name: caseName, 
+      const {
+        q: searchTerm,
+        case_name: caseName,
         docket_number: docketNumber,
         court,
         date_from: dateFrom,
@@ -925,10 +969,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } = req.query;
 
       if (!searchTerm && !caseName && !docketNumber) {
-        return res.status(400).json({ 
-          success: false, 
-          error: "At least one search parameter required (search term, case name, or docket number)" 
+        return res.status(400).json({
+          success: false,
+          error: "At least one search parameter required (search term, case name, or docket number)"
         });
+      }
+
+      // Validate search parameters that are provided
+      if (searchTerm) {
+        const validation = validateSearchQuery(searchTerm);
+        if (!validation.valid) {
+          return res.status(400).json({ success: false, error: validation.error });
+        }
+      }
+      if (caseName && typeof caseName === 'string' && caseName.length > MAX_QUERY_LENGTH) {
+        return res.status(400).json({ success: false, error: `Case name exceeds maximum length of ${MAX_QUERY_LENGTH} characters` });
       }
 
       const results = await recapService.searchUnifiedCourtRecords({

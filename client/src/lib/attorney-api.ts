@@ -325,7 +325,11 @@ export async function exportDocument(
     if (contentDisposition) {
       const match = contentDisposition.match(/filename="?([^"]+)"?/);
       if (match) {
-        filename = match[1];
+        // Sanitize filename to prevent path traversal
+        filename = match[1]
+          .replace(/[\/\\]/g, '_')  // Replace path separators
+          .replace(/\.\./g, '_')    // Remove parent directory references
+          .replace(/[<>:"|?*]/g, '_'); // Remove other invalid characters
       }
     }
 

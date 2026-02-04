@@ -1,15 +1,29 @@
 import axios from 'axios';
 import { isViolentCrime, CRIME_CATEGORIES } from '@shared/bjs-code-mappings';
+import { devLog } from '../utils/dev-logger';
 
 /**
  * Bureau of Justice Statistics (BJS) API Integration
  * Provides access to National Crime Victimization Survey (NCVS) data
- * 
+ *
  * API Documentation: https://bjs.ojp.gov/national-crime-victimization-survey-ncvs-api
  * No API key required for basic access
+ *
+ * Caching: Results are cached in-memory for 24 hours since BJS data
+ * updates infrequently (annually). Cache contains only aggregate public
+ * statistics - no PII.
  */
 
 const BJS_BASE_URL = 'https://api.ojp.gov/bjsdataset/v1';
+
+// Cache configuration
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
+const MAX_CACHE_ENTRIES = 50; // Limit cache size to prevent memory exhaustion
+
+interface CacheEntry<T> {
+  data: T;
+  expires: number;
+}
 
 // NCVS Dataset IDs (updated July 2025)
 const DATASETS = {
@@ -50,6 +64,65 @@ interface CrimeStatistics {
 }
 
 class BJSStatisticsService {
+  // In-memory cache for aggregate statistics (public data only, no PII)
+  private cache: Map<string, CacheEntry<any>> = new Map();
+
+  /**
+   * Get cached data if valid, otherwise return null
+   */
+  private getCached<T>(key: string): T | null {
+    const entry = this.cache.get(key);
+    if (entry && Date.now() < entry.expires) {
+      devLog(`[BJS] Cache hit for key: ${key}`);
+      return entry.data as T;
+    }
+    if (entry) {
+      // Expired entry, remove it
+      this.cache.delete(key);
+    }
+    return null;
+  }
+
+  /**
+   * Store data in cache with TTL
+   */
+  private setCache<T>(key: string, data: T): void {
+    // Enforce max cache size with LRU-style eviction (remove oldest entries)
+    if (this.cache.size >= MAX_CACHE_ENTRIES) {
+      const oldestKey = this.cache.keys().next().value;
+      if (oldestKey) {
+        this.cache.delete(oldestKey);
+        devLog(`[BJS] Cache evicted oldest entry: ${oldestKey}`);
+      }
+    }
+
+    this.cache.set(key, {
+      data,
+      expires: Date.now() + CACHE_TTL_MS,
+    });
+    devLog(`[BJS] Cached data for key: ${key} (expires in 24h)`);
+  }
+
+  /**
+   * Clear all cached data (useful for testing or forced refresh)
+   */
+  clearCache(): void {
+    const size = this.cache.size;
+    this.cache.clear();
+    devLog(`[BJS] Cache cleared (${size} entries removed)`);
+  }
+
+  /**
+   * Get cache statistics for monitoring
+   */
+  getCacheStats(): { size: number; maxSize: number; keys: string[] } {
+    return {
+      size: this.cache.size,
+      maxSize: MAX_CACHE_ENTRIES,
+      keys: Array.from(this.cache.keys()),
+    };
+  }
+
   /**
    * Fetch data from BJS API
    */
@@ -76,9 +149,9 @@ class BJSStatisticsService {
       }
 
       const url = `${BJS_BASE_URL}/${datasetId}.json`;
-      
-      console.log(`Fetching BJS dataset ${datasetId} with params:`, queryParams);
-      
+
+      devLog(`[BJS] Fetching dataset ${datasetId} with params:`, queryParams);
+
       const response = await axios.get(url, {
         params: queryParams,
         timeout: 30000, // 30 second timeout
@@ -87,13 +160,13 @@ class BJSStatisticsService {
       return response.data;
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        console.error(`BJS API error for dataset ${datasetId}:`, {
+        devLog(`[BJS] API error for dataset ${datasetId}:`, {
           status: error.response?.status,
           message: error.message,
           data: error.response?.data,
         });
       } else {
-        console.error(`BJS API fetch failed for ${datasetId}:`, error);
+        devLog(`[BJS] API fetch failed for ${datasetId}:`, error);
       }
       throw error;
     }
@@ -106,11 +179,18 @@ class BJSStatisticsService {
     startYear?: number,
     endYear?: number
   ): Promise<CrimeStatistics> {
-    try {
-      const currentYear = new Date().getFullYear();
-      const start = startYear || currentYear - 5; // Default to last 5 years
-      const end = endYear || currentYear - 1; // Latest complete year
+    const currentYear = new Date().getFullYear();
+    const start = startYear || currentYear - 5; // Default to last 5 years
+    const end = endYear || currentYear - 1; // Latest complete year
 
+    // Check cache first
+    const cacheKey = `crime_stats_${start}_${end}`;
+    const cached = this.getCached<CrimeStatistics>(cacheKey);
+    if (cached) {
+      return cached;
+    }
+
+    try {
       const years = Array.from(
         { length: end - start + 1 },
         (_, i) => start + i
@@ -193,7 +273,7 @@ class BJSStatisticsService {
         motorVehicleTheft: Math.round(crimeStats.motorVehicleTheft),
       };
 
-      return {
+      const result: CrimeStatistics = {
         totalVictimizations,
         violentCrimeCount: violentCrimes,
         propertyCrimeCount: propertyCrimes,
@@ -209,8 +289,13 @@ class BJSStatisticsService {
         },
         lastUpdated: new Date().toISOString(),
       };
+
+      // Cache the result
+      this.setCache(cacheKey, result);
+
+      return result;
     } catch (error) {
-      console.error('Failed to get crime statistics:', error);
+      devLog('[BJS] Failed to get crime statistics:', error);
       throw new Error('Failed to fetch BJS crime statistics');
     }
   }
@@ -219,6 +304,14 @@ class BJSStatisticsService {
    * Get victimization trends over time
    */
   async getVictimizationTrends(years: number[]): Promise<any> {
+    // Check cache first
+    const sortedYears = [...years].sort();
+    const cacheKey = `trends_${sortedYears.join('_')}`;
+    const cached = this.getCached<any>(cacheKey);
+    if (cached) {
+      return cached;
+    }
+
     try {
       const data = await this.fetchDataset(
         DATASETS.PERSONAL_VICTIMIZATION,
@@ -253,12 +346,17 @@ class BJSStatisticsService {
         }
       });
 
-      return {
+      const result = {
         trends: Object.values(trendsByYear).sort((a: any, b: any) => a.year - b.year),
         source: 'Bureau of Justice Statistics - NCVS',
       };
+
+      // Cache the result
+      this.setCache(cacheKey, result);
+
+      return result;
     } catch (error) {
-      console.error('Failed to get victimization trends:', error);
+      devLog('[BJS] Failed to get victimization trends:', error);
       throw new Error('Failed to fetch victimization trends');
     }
   }
@@ -267,6 +365,13 @@ class BJSStatisticsService {
    * Get demographic breakdown of victimizations
    */
   async getDemographicBreakdown(year: number): Promise<any> {
+    // Check cache first
+    const cacheKey = `demographics_${year}`;
+    const cached = this.getCached<any>(cacheKey);
+    if (cached) {
+      return cached;
+    }
+
     try {
       // Fetch both victimization and population data
       const [victimizations, population] = await Promise.all([
@@ -296,13 +401,18 @@ class BJSStatisticsService {
         demographics.byRace[race] = (demographics.byRace[race] || 0) + 1;
       });
 
-      return {
+      const result = {
         year,
         demographics,
         source: 'Bureau of Justice Statistics - NCVS',
       };
+
+      // Cache the result
+      this.setCache(cacheKey, result);
+
+      return result;
     } catch (error) {
-      console.error('Failed to get demographic breakdown:', error);
+      devLog('[BJS] Failed to get demographic breakdown:', error);
       throw new Error('Failed to fetch demographic data');
     }
   }
@@ -310,7 +420,7 @@ class BJSStatisticsService {
   /**
    * Check API health status
    */
-  async checkHealth(): Promise<{ healthy: boolean; message: string }> {
+  async checkHealth(): Promise<{ healthy: boolean; message: string; cacheStats?: { size: number; maxSize: number } }> {
     try {
       // Try to fetch a small sample from the API
       const testData = await this.fetchDataset(
@@ -318,9 +428,15 @@ class BJSStatisticsService {
         { limit: 10, year: new Date().getFullYear() - 1 }
       );
 
+      const cacheStats = this.getCacheStats();
+
       return {
         healthy: true,
         message: `BJS API healthy. Sample data retrieved: ${testData.length} records`,
+        cacheStats: {
+          size: cacheStats.size,
+          maxSize: cacheStats.maxSize,
+        },
       };
     } catch (error) {
       return {
