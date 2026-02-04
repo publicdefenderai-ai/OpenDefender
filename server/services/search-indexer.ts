@@ -477,6 +477,15 @@ export function buildSearchIndex(): void {
       aliases: ['police search', 'can police search'],
       url: '/search-seizure'
     },
+    {
+      id: 'api-docs',
+      title: 'API Documentation',
+      titleEs: 'Documentación de API',
+      content: 'Public API for developers. REST API endpoints. Search API. Criminal charges data. Diversion programs data. Legal glossary. CSV and JSON export. Open source integration. Third-party developers.',
+      tags: ['api', 'developer', 'integration', 'data', 'export', 'open source'],
+      aliases: ['developer docs', 'api reference', 'data export', 'integration'],
+      url: '/api-docs'
+    },
   ];
 
   for (const page of sitePages) {

@@ -59,8 +59,8 @@ For integration support or to report issues, please open an issue on our GitHub 
             name: "q",
             in: "query",
             required: true,
-            description: "Search query (3-100 characters)",
-            schema: { type: "string", minLength: 3, maxLength: 100 },
+            description: "Search query (2-100 characters)",
+            schema: { type: "string", minLength: 2, maxLength: 100 },
             example: "DUI first offense"
           },
           {

@@ -47,6 +47,28 @@ A dual-layer Mock Q&A system helps users prepare for court proceedings:
 ### API Architecture
 The API provides endpoints for legal resources, court information, AI-powered legal guidance, detailed docket information, and comprehensive search capabilities. It also includes intelligent attorney matching based on proximity and specific legal service needs.
 
+### Public API v1 (Third-Party Integration)
+A public REST API (`/api/v1/`) enables third-party developers and legal aid organizations to integrate Public Defender AI's data into their own applications:
+- **OpenAPI Specification**: Available at `/api/v1/openapi.json` for machine-readable API documentation
+- **API Documentation Page**: Interactive docs at `/api-docs` with endpoint details, parameters, and examples
+- **CORS Enabled**: Cross-origin requests allowed for all v1 endpoints
+- **Rate Limiting**: 60 requests/minute per IP for fair use
+
+**Public Endpoints (Read-Only, No Auth Required)**:
+| Endpoint | Description |
+|----------|-------------|
+| GET `/api/v1/search?q={query}` | Full-text search across all legal content |
+| GET `/api/v1/charges` | List criminal charges (4,144 across 51 jurisdictions) |
+| GET `/api/v1/charges/:id` | Get specific charge details |
+| GET `/api/v1/diversion-programs` | List diversion programs (73 programs) |
+| GET `/api/v1/glossary` | List legal terms (30 terms) |
+| GET `/api/v1/expungement-rules` | List expungement eligibility rules |
+| GET `/api/v1/export/charges?format=csv` | Bulk export charges as CSV/JSON |
+| GET `/api/v1/export/diversion-programs?format=csv` | Bulk export programs as CSV/JSON |
+| GET `/api/v1/stats` | Get index statistics |
+
+**Security Notes**: AI-powered guidance endpoints remain private (no third-party access) to prevent API cost abuse and legal liability concerns.
+
 ### System Design Choices
 Session-based authentication with PostgreSQL session storage is configured for automatic expiration. Vite is used for frontend development, and ESBuild for server bundling. Drizzle Kit manages database migrations. Automated data quality assurance runs on server startup to validate criminal charge codes against verified statute citations.
 

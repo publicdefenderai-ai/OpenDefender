@@ -41,7 +41,7 @@ const endpoints: Endpoint[] = [
     description: "Full-text search across criminal charges, diversion programs, glossary, and more. Supports legal synonym expansion.",
     tag: "Search",
     parameters: [
-      { name: "q", required: true, description: "Search query (2-100 chars)", example: "DUI first offense" },
+      { name: "q", required: true, description: "Search query (2-100 characters)", example: "DUI first offense" },
       { name: "lang", required: false, description: "Language (en or es)", example: "en" },
       { name: "types", required: false, description: "Filter by types (comma-separated)", example: "charge,glossary" },
       { name: "limit", required: false, description: "Max results (1-50)", example: "20" }
