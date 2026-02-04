@@ -519,7 +519,8 @@ export function search(query: SearchQuery): SearchResponse {
 
     const { score, matchedTerms } = calculateScore(doc, queryTerms, query.language);
     
-    if (score > 0) {
+    const MIN_SCORE_THRESHOLD = 15;
+    if (score >= MIN_SCORE_THRESHOLD) {
       const content = query.language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
       const highlight = generateHighlight(content, matchedTerms);
       
