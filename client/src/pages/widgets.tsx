@@ -47,55 +47,53 @@ export default function Widgets() {
   const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://publicdefenderai.replit.app';
 
   const generateSearchEmbed = () => {
+    const params = new URLSearchParams({
+      theme: searchTheme,
+      lang: searchLanguage,
+      compact: searchCompact.toString()
+    }).toString();
     return `<!-- Public Defender AI Search Widget -->
-<div id="pdai-search-widget"></div>
-<script src="${baseUrl}/widgets/search.js"></script>
-<script>
-  PDSearchWidget.init({
-    container: '#pdai-search-widget',
-    theme: '${searchTheme}',
-    language: '${searchLanguage}',
-    compact: ${searchCompact}
-  });
-</script>`;
+<iframe 
+  src="${baseUrl}/embed/search?${params}"
+  width="400"
+  height="300"
+  frameborder="0"
+  style="border: none; border-radius: 8px;"
+  title="Public Defender AI search widget"
+></iframe>`;
   };
 
   const generateRightsEmbed = () => {
+    const params = new URLSearchParams({
+      theme: rightsTheme,
+      lang: rightsLanguage,
+      variant: rightsVariant
+    }).toString();
+    const height = rightsVariant === "mini" ? "60" : rightsVariant === "compact" ? "250" : "450";
     return `<!-- Public Defender AI Rights Card -->
-<div id="pdai-rights-widget"></div>
-<script src="${baseUrl}/widgets/rights.js"></script>
-<script>
-  PDRightsWidget.init({
-    container: '#pdai-rights-widget',
-    theme: '${rightsTheme}',
-    language: '${rightsLanguage}',
-    variant: '${rightsVariant}'
-  });
-</script>`;
+<iframe 
+  src="${baseUrl}/embed/rights?${params}"
+  width="420"
+  height="${height}"
+  frameborder="0"
+  style="border: none; border-radius: 8px;"
+  title="Public Defender AI Know Your Rights widget"
+></iframe>`;
   };
 
   const generateGlossaryEmbed = () => {
+    const params = new URLSearchParams({
+      theme: glossaryTheme,
+      lang: glossaryLanguage
+    }).toString();
     return `<!-- Public Defender AI Glossary Widget -->
-<div id="pdai-glossary-widget"></div>
-<script src="${baseUrl}/widgets/glossary.js"></script>
-<script>
-  PDGlossaryWidget.init({
-    container: '#pdai-glossary-widget',
-    theme: '${glossaryTheme}',
-    language: '${glossaryLanguage}'
-  });
-</script>`;
-  };
-
-  const generateIframeEmbed = (widget: string, params: Record<string, string>) => {
-    const queryString = new URLSearchParams(params).toString();
-    return `<iframe 
-  src="${baseUrl}/embed/${widget}?${queryString}"
-  width="400"
-  height="500"
+<iframe 
+  src="${baseUrl}/embed/glossary?${params}"
+  width="420"
+  height="450"
   frameborder="0"
   style="border: none; border-radius: 8px;"
-  title="Public Defender AI ${widget} widget"
+  title="Public Defender AI legal glossary widget"
 ></iframe>`;
   };
 
@@ -352,27 +350,40 @@ export default function Widgets() {
 
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle>Alternative: iframe Embedding</CardTitle>
-            <CardDescription>
-              If JavaScript embedding doesn't work for your site, use an iframe instead.
-            </CardDescription>
+            <CardTitle>Embedding Instructions</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="bg-muted rounded-lg p-4">
-              <p className="text-sm text-muted-foreground mb-4">
-                Replace <code>WIDGET_NAME</code> with: <Badge variant="secondary">search</Badge>, 
-                <Badge variant="secondary" className="ml-1">rights</Badge>, or 
-                <Badge variant="secondary" className="ml-1">glossary</Badge>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">
+                All widgets use iframe embedding, which works on any website without JavaScript compatibility issues.
+                Simply copy the embed code for your chosen widget and paste it into your HTML.
               </p>
-              <pre className="bg-slate-900 text-slate-100 rounded-lg p-4 overflow-x-auto text-sm">
-{`<iframe 
-  src="${baseUrl}/embed/WIDGET_NAME?theme=light&lang=en"
-  width="400"
-  height="500"
-  frameborder="0"
-  title="Public Defender AI widget"
-></iframe>`}
-              </pre>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="font-medium mb-2 flex items-center gap-2">
+                    <Search className="h-4 w-4" /> Search Widget
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Recommended size: 400x300px. Shows search results with links to full resources.
+                  </p>
+                </div>
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="font-medium mb-2 flex items-center gap-2">
+                    <Shield className="h-4 w-4" /> Rights Card
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Available in full (450px), compact (250px), or mini (60px) heights.
+                  </p>
+                </div>
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="font-medium mb-2 flex items-center gap-2">
+                    <BookOpen className="h-4 w-4" /> Glossary
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Recommended size: 420x450px. Shows expandable legal term definitions.
+                  </p>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
