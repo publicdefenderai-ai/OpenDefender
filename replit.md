@@ -66,6 +66,17 @@ A public REST API (`/api/v1/`) enables third-party developers and legal aid orga
 | GET `/api/v1/export/charges?format=csv` | Bulk export charges as CSV/JSON |
 | GET `/api/v1/export/diversion-programs?format=csv` | Bulk export programs as CSV/JSON |
 | GET `/api/v1/stats` | Get index statistics |
+| GET `/api/v1/schemas` | List available JSON schemas |
+| GET `/api/v1/schemas/:name` | Get specific JSON schema |
+
+**Embeddable Widgets** (iframe-based embedding for third-party websites):
+| Route | Description |
+|-------|-------------|
+| `/embed/search` | Embeddable search bar widget |
+| `/embed/rights` | "Know Your Rights" card widget |
+| `/embed/glossary` | Legal glossary widget |
+
+Query parameters: `theme` (light/dark), `lang` (en/es), `variant` (full/compact/mini for rights), `compact` (true/false for search)
 
 **Security Notes**: AI-powered guidance endpoints remain private (no third-party access) to prevent API cost abuse and legal liability concerns.
 
