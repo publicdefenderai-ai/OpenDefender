@@ -15,6 +15,7 @@ import {
   ChevronRight,
   Loader2,
   AlertCircle,
+  AlertTriangle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,6 +34,8 @@ import {
   downloadDocx,
   type GeneratedDocument,
 } from "@/lib/attorney-api";
+import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
+import { useAIAvailability } from "@/hooks/use-legal-data";
 import type { DocumentTemplate, TemplateSection } from "@shared/templates/schema";
 
 interface TemplateWizardProps {
@@ -55,6 +58,9 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
   const [generationError, setGenerationError] = useState<string | null>(null);
   const [generatedDocument, setGeneratedDocument] = useState<GeneratedDocument | null>(null);
   const [isDownloading, setIsDownloading] = useState(false);
+  const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
+  const { data: aiStatus } = useAIAvailability();
+  const aiUnavailable = aiStatus && aiStatus.available === false;
 
   // Apply jurisdiction variant to get the correct sections (county dropdowns, placeholders, etc.)
   const activeSections = useMemo(() => {
@@ -212,6 +218,7 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
         courtType: jurisdictionSelection.courtType,
         district: jurisdictionSelection.district,
         formData,
+        captchaToken,
       });
 
       if (result.success && result.document) {
@@ -270,6 +277,7 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
 
       case "form":
         const currentSection = formSections[currentFormSectionIndex];
+        const isLastFormSection = currentFormSectionIndex === formSections.length - 1;
         return (
           <FormProvider {...form}>
             <form onSubmit={(e) => e.preventDefault()}>
@@ -282,6 +290,11 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
                   transition={{ duration: 0.2 }}
                 >
                   <TemplateFormSection section={currentSection} />
+                  {isLastFormSection && (
+                    <div className="mt-6">
+                      <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
+                    </div>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </form>
@@ -341,6 +354,16 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
 
   return (
     <div className="space-y-6">
+      {/* AI Unavailable Banner */}
+      {aiUnavailable && (
+        <Alert className="border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/50">
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-800 dark:text-amber-200">
+            {aiStatus?.reason || 'AI features are temporarily unavailable due to high usage today. They will be restored at midnight UTC.'}
+          </AlertDescription>
+        </Alert>
+      )}
+
       {/* Progress Bar */}
       <div className="space-y-2">
         <div className="flex justify-between text-sm text-muted-foreground">
@@ -368,7 +391,16 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
             <ChevronLeft className="h-4 w-4 mr-2" />
             Back
           </Button>
-          <Button onClick={handleNext}>
+          <Button
+            onClick={handleNext}
+            disabled={
+              !!aiUnavailable ||
+              !!(step === "form" &&
+              currentFormSectionIndex === formSections.length - 1 &&
+              captchaRequired &&
+              !captchaToken)
+            }
+          >
             {step === "form" && currentFormSectionIndex === formSections.length - 1
               ? "Generate Document"
               : "Continue"}

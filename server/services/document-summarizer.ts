@@ -16,6 +16,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import * as pdfParse from 'pdf-parse';
 import mammoth from 'mammoth';
 import { devLog } from '../utils/dev-logger';
+import { recordAICost } from './cost-tracker';
 
 // Initialize Anthropic client
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -325,6 +326,9 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
     // Calculate costs (Sonnet 4 pricing: $3/MTok input, $15/MTok output)
     const inputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
     const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
+
+    // Record cost for daily budget tracking
+    recordAICost(inputCost + outputCost, 'document-summarizer');
 
     const summary: DocumentSummary = {
       summary: parsed.summary || 'Unable to generate summary',

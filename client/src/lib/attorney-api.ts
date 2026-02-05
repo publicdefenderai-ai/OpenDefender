@@ -53,6 +53,7 @@ export interface GenerateDocumentRequest {
   courtType?: "state" | "federal" | "immigration";
   district?: string;
   formData: Record<string, string>;
+  captchaToken?: string | null;
 }
 
 /**

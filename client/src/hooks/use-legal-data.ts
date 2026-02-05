@@ -43,6 +43,19 @@ export function useSentencingGuidelines(jurisdiction: string) {
   });
 }
 
+export function useAIAvailability() {
+  return useQuery({
+    queryKey: ['/api/ai/status'],
+    queryFn: async () => {
+      const res = await fetch('/api/ai/status');
+      if (!res.ok) return { available: true, reason: undefined };
+      return res.json();
+    },
+    staleTime: 1000 * 60 * 2, // 2 minutes
+    refetchInterval: 1000 * 60 * 5, // 5 minutes
+  });
+}
+
 export function useLegalGuidance() {
   const queryClient = useQueryClient();
 

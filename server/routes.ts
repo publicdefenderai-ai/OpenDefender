@@ -26,6 +26,10 @@ import { search, buildSearchIndex, getSearchIndexStats } from "./services/search
 import { z } from "zod";
 import multer from "multer";
 import { summarizeDocument, validateFile, getSupportedFileTypes } from "./services/document-summarizer";
+import { requireCaptcha } from "./middleware/captcha-middleware";
+import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verification";
+import { requireBudget } from "./middleware/budget-gate";
+import { getAICostStatus } from "./services/cost-tracker";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -84,6 +88,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
     },
     standardHeaders: true,
     legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // Daily rate limiter for AI endpoints (20 requests per day per IP)
+  const aiDailyLimiter = rateLimit({
+    windowMs: 24 * 60 * 60 * 1000, // 24 hours
+    max: 20, // 20 AI requests per day per IP
+    message: {
+      success: false,
+      error: 'Daily limit reached. You have used all 20 AI requests for today. Please try again tomorrow.',
+      code: 'DAILY_LIMIT_EXCEEDED'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
     validate: { trustProxy: false, xForwardedForHeader: false }
   });
 
@@ -163,6 +182,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
     next();
   };
+
+  // ============================================================================
+  // CAPTCHA Configuration Endpoint
+  // ============================================================================
+
+  /**
+   * Get CAPTCHA configuration for frontend
+   * Returns the site key (safe to expose) and whether CAPTCHA is required
+   */
+  app.get("/api/captcha/config", (req, res) => {
+    res.json({
+      success: true,
+      required: isCaptchaRequired(),
+      siteKey: getCaptchaSiteKey(),
+      provider: 'turnstile'
+    });
+  });
 
   // Legal Resources API
   app.get("/api/legal-resources", async (req, res) => {
@@ -704,7 +740,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Personalized Legal Guidance API (rate limited - expensive AI operations)
-  app.post("/api/legal-guidance", aiRateLimiter, async (req, res) => {
+  app.post("/api/legal-guidance", requireBudget, aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const sessionId = req.body.sessionId || randomUUID();
       
@@ -955,6 +991,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
         reason: "Connection test failed" 
       });
     }
+  });
+
+  // AI Availability Status (for frontend banners)
+  app.get("/api/ai/status", (req, res) => {
+    const hasApiKey = !!process.env.ANTHROPIC_API_KEY;
+    const costStatus = getAICostStatus();
+
+    res.json({
+      success: true,
+      available: hasApiKey && costStatus.available,
+      reason: !hasApiKey
+        ? 'AI service not configured'
+        : costStatus.message || undefined,
+      budget: {
+        dailyBudget: costStatus.dailyBudget,
+        remainingBudget: costStatus.remainingBudget,
+        requestCount: costStatus.requestCount,
+      },
+    });
   });
 
   // RECAP/Court Records Search API
@@ -1396,7 +1451,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     formData: z.record(z.string(), z.string())
   });
 
-  app.post("/api/attorney/documents/generate", requireAttorneySession, aiRateLimiter, async (req, res) => {
+  app.post("/api/attorney/documents/generate", requireAttorneySession, requireBudget, aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const validation = generateDocumentSchema.safeParse(req.body);
 
@@ -1567,7 +1622,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * - Anthropic does not use API data for training
    * - Anthropic may retain data for up to 30 days for operational purposes
    */
-  app.post("/api/document-summary/summarize", aiRateLimiter, (req, res, next) => {
+  app.post("/api/document-summary/summarize", requireBudget, aiRateLimiter, aiDailyLimiter, (req, res, next) => {
     documentUpload.single('document')(req, res, (err) => {
       if (err) {
         if (err instanceof multer.MulterError) {
@@ -1609,6 +1664,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
           success: false,
           error: 'Consent required before processing document'
         });
+      }
+
+      // Verify CAPTCHA token
+      const captchaToken = req.body.captchaToken || req.body['captcha-token'];
+      if (isCaptchaRequired() && !captchaToken) {
+        (req as any).file = null;
+        return res.status(400).json({
+          success: false,
+          error: 'CAPTCHA verification required',
+          code: 'CAPTCHA_REQUIRED'
+        });
+      }
+
+      if (captchaToken) {
+        const { verifyCaptcha } = await import('./services/captcha-verification');
+        const captchaResult = await verifyCaptcha(captchaToken, req.ip || req.socket.remoteAddress);
+        if (!captchaResult.success) {
+          (req as any).file = null;
+          return res.status(403).json({
+            success: false,
+            error: captchaResult.error || 'CAPTCHA verification failed',
+            code: 'CAPTCHA_FAILED'
+          });
+        }
       }
 
       const language = (req.body.language as 'en' | 'es') || 'en';
@@ -1660,7 +1739,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * Attorney-specific document summarization endpoint
    * Requires valid attorney session, uses same privacy guarantees
    */
-  app.post("/api/attorney/document-summary/summarize", requireAttorneySession, aiRateLimiter, (req, res, next) => {
+  app.post("/api/attorney/document-summary/summarize", requireAttorneySession, requireBudget, aiRateLimiter, aiDailyLimiter, (req, res, next) => {
     documentUpload.single('document')(req, res, (err) => {
       if (err) {
         if (err instanceof multer.MulterError) {
@@ -1687,6 +1766,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
           success: false,
           error: 'No document provided'
         });
+      }
+
+      // Verify CAPTCHA token (required even for attorneys to prevent session abuse)
+      const captchaToken = req.body.captchaToken || req.body['captcha-token'];
+      if (isCaptchaRequired() && !captchaToken) {
+        (req as any).file = null;
+        return res.status(400).json({
+          success: false,
+          error: 'CAPTCHA verification required',
+          code: 'CAPTCHA_REQUIRED'
+        });
+      }
+
+      if (captchaToken) {
+        const { verifyCaptcha } = await import('./services/captcha-verification');
+        const captchaResult = await verifyCaptcha(captchaToken, req.ip || req.socket.remoteAddress);
+        if (!captchaResult.success) {
+          (req as any).file = null;
+          return res.status(403).json({
+            success: false,
+            error: captchaResult.error || 'CAPTCHA verification failed',
+            code: 'CAPTCHA_FAILED'
+          });
+        }
       }
 
       const language = (req.body.language as 'en' | 'es') || 'en';

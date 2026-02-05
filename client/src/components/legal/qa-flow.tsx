@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
 import { generateStatuteCitation, getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
+import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import {
   Dialog,
   DialogContent,
@@ -31,6 +32,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
   const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
+  const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
   const [formData, setFormData] = useState({
     jurisdiction: "",
     charges: [] as string[],
@@ -69,7 +71,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      onComplete(formData);
+      onComplete({ ...formData, captchaToken });
     }
   };
 
@@ -89,7 +91,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
     setShowPrivilegeWarning(false);
     updateFormData("incidentDescription", "");
     updateFormData("concernsQuestions", "");
-    onComplete(formData);
+    onComplete({ ...formData, captchaToken });
   };
 
   const prevStep = () => {
@@ -155,6 +157,9 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
               isFirst={currentStep === 0}
               isLast={currentStep === steps.length - 1}
               onTextareaFocus={handleTextareaFocus}
+              captchaToken={captchaToken}
+              setCaptchaToken={setCaptchaToken}
+              captchaRequired={captchaRequired}
             />
           </motion.div>
         </AnimatePresence>
@@ -801,9 +806,10 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
   );
 }
 
-function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus }: any) {
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
-  
+  const captchaNeeded = captchaRequired && !captchaToken;
+
   return (
     <div className="space-y-6">
       <div>
@@ -814,7 +820,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         <p className="text-sm text-muted-foreground mb-4">
           {t('legalGuidance.qaFlow.additionalDetails.description')}
         </p>
-        
+
         <div className="space-y-4">
           <div>
             <Label htmlFor="incidentDescription">
@@ -850,6 +856,8 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         </div>
       </div>
 
+      {/* CAPTCHA verification */}
+      <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
 
       <div className="flex space-x-4">
         <Button
@@ -861,6 +869,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         </Button>
         <Button
           onClick={onNext}
+          disabled={captchaNeeded}
           className="flex-1 bg-green-600 text-white font-bold hover:bg-green-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-generate-guidance"
         >

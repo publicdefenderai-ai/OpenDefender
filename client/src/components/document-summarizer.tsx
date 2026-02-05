@@ -13,6 +13,8 @@
 import { useState, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
+import { useAIAvailability } from "@/hooks/use-legal-data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
@@ -110,6 +112,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
   const [summary, setSummary] = useState<DocumentSummary | null>(null);
 
+  // CAPTCHA state
+  const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
+  // AI availability
+  const { data: aiStatus } = useAIAvailability();
+  const aiUnavailable = aiStatus && aiStatus.available === false;
+
   const handleConsentContinue = () => {
     setStep('upload');
   };
@@ -187,6 +195,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const handleSubmit = async () => {
     if (!selectedFile) return;
 
+    // Check CAPTCHA if required
+    if (captchaRequired && !captchaToken) {
+      setError('Please complete the verification before submitting.');
+      return;
+    }
+
     setIsProcessing(true);
     setStep('processing');
     setError(null);
@@ -197,6 +211,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
       formData.append('consentGiven', 'true');
       formData.append('language', i18n.language === 'es' ? 'es' : 'en');
       formData.append('summaryType', documentType);
+      if (captchaToken && captchaToken !== 'not-required') {
+        formData.append('captchaToken', captchaToken);
+      }
 
       const endpoint = isAttorneyMode
         ? '/api/attorney/document-summary/summarize'
@@ -321,6 +338,16 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
       </CardHeader>
 
       <CardContent>
+        {/* AI Unavailable Banner */}
+        {aiUnavailable && (
+          <Alert className="mb-4 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/50">
+            <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+            <AlertDescription className="text-amber-800 dark:text-amber-200">
+              {aiStatus?.reason || 'AI features are temporarily unavailable due to high usage today. They will be restored at midnight UTC.'}
+            </AlertDescription>
+          </Alert>
+        )}
+
         <AnimatePresence mode="wait">
           {/* Disclosure Step */}
           {step === 'disclosure' && (
@@ -494,6 +521,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 ))}
               </div>
 
+              {/* CAPTCHA verification */}
+              <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
+
               <div className="flex gap-3">
                 {!isAttorneyMode && (
                   <Button variant="outline" onClick={handleReset} className="flex-1">
@@ -502,7 +532,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 )}
                 <Button
                   onClick={handleSubmit}
-                  disabled={!selectedFile}
+                  disabled={!selectedFile || (captchaRequired && !captchaToken) || !!aiUnavailable}
                   className="flex-1"
                 >
                   Summarize Document

@@ -5,6 +5,7 @@ import crypto from 'crypto';
 import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
 import { validateLegalGuidance, ValidationResult } from './legal-accuracy-validator';
 import { devLog } from '../utils/dev-logger';
+import { recordAICost } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 
 // Validate Anthropic API credentials
@@ -577,6 +578,9 @@ export async function generateClaudeGuidance(
     // Calculate costs (Sonnet 4.5 pricing: $3/MTok input, $15/MTok output)
     const inputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
     const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
+
+    // Record cost for daily budget tracking
+    recordAICost(inputCost + outputCost, 'claude-guidance');
 
     // Explicitly construct response with validated fields
     const guidance: ClaudeGuidance = {

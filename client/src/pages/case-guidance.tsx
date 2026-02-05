@@ -30,7 +30,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { QAFlow } from "@/components/legal/qa-flow";
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
-import { useLegalGuidance } from "@/hooks/use-legal-data";
+import { useLegalGuidance, useAIAvailability } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
@@ -301,6 +301,8 @@ export default function CaseGuidance() {
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
+  const { data: aiStatus } = useAIAvailability();
+  const aiUnavailable = aiStatus && aiStatus.available === false;
   const { registerGuard, unregisterGuard } = useNavigationGuard();
 
   // Exit warning state
@@ -755,6 +757,18 @@ export default function CaseGuidance() {
     <div className="min-h-screen bg-background">
       <Header />
 
+      {/* AI Unavailable Banner */}
+      {aiUnavailable && (
+        <div className="bg-amber-50 dark:bg-amber-950/50 border-b border-amber-200 dark:border-amber-800 px-4 py-3">
+          <div className="max-w-4xl mx-auto flex items-center gap-3">
+            <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0" />
+            <p className="text-sm text-amber-800 dark:text-amber-200">
+              {aiStatus?.reason || 'AI features are temporarily unavailable due to high usage today. They will be restored at midnight UTC.'}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="vivid-header py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
@@ -765,10 +779,11 @@ export default function CaseGuidance() {
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10" data-testid="text-case-description">
               {t('case.hero.description')}
             </p>
-            
+
             <Button
               onClick={handleStartQA}
               size="lg"
+              disabled={!!aiUnavailable}
               className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-lg shadow-lg"
               data-testid="button-start-guidance"
             >
@@ -842,6 +857,7 @@ export default function CaseGuidance() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
                 <Button
                   onClick={handleStartQA}
+                  disabled={!!aiUnavailable}
                   data-testid="button-start-guidance-bottom"
                 >
                   {t('case.privacy.getStartedButton')}
