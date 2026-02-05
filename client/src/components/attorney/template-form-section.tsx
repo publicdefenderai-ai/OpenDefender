@@ -252,6 +252,17 @@ export function JurisdictionSelector({
     { code: "FLSD", label: "Southern District of Florida (FLSD)", rules: "FLSD local rules, 12pt font", jurisdiction: "FL" },
     { code: "FLMD", label: "Middle District of Florida (FLMD)", rules: "FLMD local rules, 12pt font", jurisdiction: "FL" },
     { code: "FLND", label: "Northern District of Florida (FLND)", rules: "FLND local rules, 12pt font", jurisdiction: "FL" },
+    { code: "PAED", label: "Eastern District of Pennsylvania (PAED)", rules: "PAED local rules, 12pt font", jurisdiction: "PA" },
+    { code: "PAMD", label: "Middle District of Pennsylvania (PAMD)", rules: "PAMD local rules, 12pt font", jurisdiction: "PA" },
+    { code: "PAWD", label: "Western District of Pennsylvania (PAWD)", rules: "PAWD local rules, 12pt font", jurisdiction: "PA" },
+    { code: "ILND", label: "Northern District of Illinois (ILND)", rules: "ILND local rules, 12pt font", jurisdiction: "IL" },
+    { code: "ILCD", label: "Central District of Illinois (ILCD)", rules: "ILCD local rules, 12pt font", jurisdiction: "IL" },
+    { code: "ILSD", label: "Southern District of Illinois (ILSD)", rules: "ILSD local rules, 12pt font", jurisdiction: "IL" },
+    { code: "OHND", label: "Northern District of Ohio (OHND)", rules: "OHND local rules, 12pt font", jurisdiction: "OH" },
+    { code: "OHSD", label: "Southern District of Ohio (OHSD)", rules: "OHSD local rules, 12pt font", jurisdiction: "OH" },
+    { code: "GAND", label: "Northern District of Georgia (GAND)", rules: "GAND local rules, 12pt font", jurisdiction: "GA" },
+    { code: "GAMD", label: "Middle District of Georgia (GAMD)", rules: "GAMD local rules, 12pt font", jurisdiction: "GA" },
+    { code: "GASD", label: "Southern District of Georgia (GASD)", rules: "GASD local rules, 12pt font", jurisdiction: "GA" },
   ];
 
   const availableDistricts = allDistricts.filter(
@@ -267,6 +278,10 @@ export function JurisdictionSelector({
     { value: "NY", label: "New York", description: "Uses NY Criminal Procedure Law citations" },
     { value: "TX", label: "Texas", description: "Uses TX Code of Criminal Procedure citations" },
     { value: "FL", label: "Florida", description: "Uses FL Rules of Criminal Procedure citations" },
+    { value: "PA", label: "Pennsylvania", description: "Uses PA Rules of Criminal Procedure citations" },
+    { value: "IL", label: "Illinois", description: "Uses Illinois Compiled Statutes citations" },
+    { value: "OH", label: "Ohio", description: "Uses Ohio Revised Code citations" },
+    { value: "GA", label: "Georgia", description: "Uses Official Code of Georgia citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
@@ -332,8 +347,8 @@ export function JurisdictionSelector({
           <p className="text-sm font-medium text-muted-foreground">Court Type</p>
           <div className="flex gap-3">
             {[
-              { type: "state" as const, label: "State Court", desc: value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" : value.jurisdiction === "TX" ? "TX District Court (14pt font)" : value.jurisdiction === "FL" ? "FL Circuit Court (12pt font)" : "CA Superior Court (CRC formatting)" },
-              { type: "federal" as const, label: "Federal Court", desc: value.jurisdiction === "NY" ? "U.S. District Court (12pt font)" : value.jurisdiction === "TX" ? "U.S. District Court (12pt font)" : value.jurisdiction === "FL" ? "U.S. District Court (12pt font)" : "U.S. District Court" },
+              { type: "state" as const, label: "State Court", desc: value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" : value.jurisdiction === "TX" ? "TX District Court (14pt font)" : value.jurisdiction === "FL" ? "FL Circuit Court (12pt font)" : value.jurisdiction === "PA" ? "PA Court of Common Pleas (Pa.R.Crim.P. formatting)" : value.jurisdiction === "IL" ? "IL Circuit Court (Ill. S. Ct. Rules formatting)" : value.jurisdiction === "OH" ? "OH Court of Common Pleas (Ohio Crim.R. formatting)" : value.jurisdiction === "GA" ? "GA Superior Court (Uniform Superior Court Rules)" : "CA Superior Court (CRC formatting)" },
+              { type: "federal" as const, label: "Federal Court", desc: value.jurisdiction === "NY" ? "U.S. District Court (12pt font)" : value.jurisdiction === "TX" ? "U.S. District Court (12pt font)" : value.jurisdiction === "FL" ? "U.S. District Court (12pt font)" : value.jurisdiction === "PA" ? "U.S. District Court (12pt font)" : value.jurisdiction === "IL" ? "U.S. District Court (12pt font)" : value.jurisdiction === "OH" ? "U.S. District Court (12pt font)" : value.jurisdiction === "GA" ? "U.S. District Court (12pt font)" : "U.S. District Court" },
             ].map((ct) => (
               <div
                 key={ct.type}

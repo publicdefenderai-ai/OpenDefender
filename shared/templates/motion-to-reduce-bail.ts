@@ -8,7 +8,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES, PA_COUNTIES, IL_COUNTIES, OH_COUNTIES, GA_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -789,6 +789,126 @@ const flBaseSections: TemplateSection[] = [
     type: "user-input",
     order: 1,
     inputs: flCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // currentBailInfo
+  baseSections[2], // defendantBackground
+  baseSections[3], // financialInfo
+  baseSections[4], // hearingInfo
+];
+
+// ============================================================================
+// PA-specific caption inputs (same fields but with PA counties)
+// ============================================================================
+
+const paCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: PA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Court of Common Pleas, Philadelphia County" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CP-XX-CR-XXXXXXX-YYYY" }
+    : input
+);
+
+const paBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: paCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // currentBailInfo
+  baseSections[2], // defendantBackground
+  baseSections[3], // financialInfo
+  baseSections[4], // hearingInfo
+];
+
+// ============================================================================
+// IL-specific caption inputs (same fields but with IL counties)
+// ============================================================================
+
+const ilCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: IL_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of Cook County, Illinois" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY-CF-XXXXXX" }
+    : input
+);
+
+const ilBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ilCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // currentBailInfo
+  baseSections[2], // defendantBackground
+  baseSections[3], // financialInfo
+  baseSections[4], // hearingInfo
+];
+
+// ============================================================================
+// OH-specific caption inputs (same fields but with OH counties)
+// ============================================================================
+
+const ohCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: OH_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Court of Common Pleas, Cuyahoga County, Ohio" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CR-YYYY-XXXXXX" }
+    : input
+);
+
+const ohBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ohCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // currentBailInfo
+  baseSections[2], // defendantBackground
+  baseSections[3], // financialInfo
+  baseSections[4], // hearingInfo
+];
+
+// ============================================================================
+// GA-specific caption inputs (same fields but with GA counties)
+// ============================================================================
+
+const gaCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: GA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of Fulton County, Georgia" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY-X-XXXXX" }
+    : input
+);
+
+const gaBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: gaCaptionInputs,
     required: true,
     helpText: "Enter the court and case information for the document caption",
   },
@@ -2111,6 +2231,1306 @@ ____________________________
 ];
 
 // ============================================================================
+// Pennsylvania State Sections
+// ============================================================================
+
+const pennsylvaniaSections: TemplateSection[] = [
+  ...paBaseSections,
+
+  // PA statement of facts (Pa.R.Crim.P. 520, 524, 525)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under Pennsylvania Rules of Criminal Procedure 520, 524, and 525 in a Pennsylvania criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Note: Under Pa.R.Crim.P. 520, 524, and 525, Pennsylvania courts use a 10-factor bail analysis to determine appropriate bail conditions. Pa.R.Crim.P. 524 sets forth types of release on bail, and Pa.R.Crim.P. 525 addresses bail after trial.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail was set and at what amount
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Address the 10-factor bail analysis through the factual narrative
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a Pennsylvania bail reduction motion. Reference the 10-factor bail analysis context. Present facts chronologically.",
+    helpText: "AI will generate a Pennsylvania-specific statement of facts",
+  },
+
+  // PA legal argument (Pa.R.Crim.P. 520, 524, 525)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion for bail reduction under Pennsylvania law.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable Pennsylvania law includes:
+- Pa.R.Crim.P. 520: Bail before verdict — conditions and standards for setting bail in criminal cases
+- Pa.R.Crim.P. 524: Types of release on bail — release on recognizance, release on nonmonetary conditions, release on unsecured bail bond, release on nominal bail, release on a bail bond secured by deposit or collateral
+- Pa.R.Crim.P. 525: Bail after trial — standards for bail pending sentencing and appeal
+- PA Const. Art. I, \u00A7 14: Excessive bail shall not be required
+- Commonwealth v. Truesdale: 10-FACTOR BAIL TEST — (1) nature of offense, (2) defendant's employment status and history, (3) financial resources, (4) character and mental condition, (5) length of residence in community, (6) criminal record, (7) prior bail jumping or flight, (8) ties to community including family, (9) length of time in custody, (10) any other relevant factors
+- The court must impose the least restrictive conditions necessary to ensure appearance and public safety
+
+Generate 3-5 paragraphs that:
+1. Cite Pa.R.Crim.P. 520 and 524 as the statutory basis for bail determination
+2. Apply ALL TEN Commonwealth v. Truesdale factors to the facts
+3. Argue the current bail is excessive under PA Const. Art. I, \u00A7 14 and the Eighth Amendment
+4. Cite Pa.R.Crim.P. 524 types of release and argue for less restrictive conditions
+5. Propose specific alternative conditions of release
+
+Use proper Pennsylvania legal citation format (e.g., "Pa.R.Crim.P. 520").`,
+    aiInstructions: "Must cite Pa.R.Crim.P. 520, 524, 525, PA Const. Art. I, \u00A7 14, and Commonwealth v. Truesdale with all ten factors. Use Pennsylvania citation format.",
+    helpText: "AI will generate Pennsylvania-specific legal arguments",
+  },
+
+  // PA prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Pennsylvania Rules of Criminal Procedure 520, 524, and 525 to:
+
+1. Reduce the current bail to a reasonable amount that the Defendant can afford, consistent with the Eighth Amendment to the United States Constitution and Article I, Section 14 of the Pennsylvania Constitution;
+
+2. In the alternative, release the Defendant on recognizance or nonmonetary conditions of release pursuant to Pa.R.Crim.P. 524;
+
+3. In the alternative, impose the least restrictive conditions of release necessary to reasonably assure the Defendant's appearance in court and the safety of the community, considering all ten factors set forth in Commonwealth v. Truesdale;
+
+4. Consider the Defendant's financial resources and ability to post bail as required by the Rules of Criminal Procedure;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Pennsylvania prayer for relief citing Pa.R.Crim.P. 520, 524, and 525",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // PA certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+COMMONWEALTH OF PENNSYLVANIA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via PACFile to the email address(es) of record.
+
+COMMONWEALTH OF PENNSYLVANIA
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the Commonwealth of Pennsylvania that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Pennsylvania.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Pennsylvania-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// PA Federal Sections (Third Circuit)
+// ============================================================================
+
+const paFederalSections: TemplateSection[] = [
+  ...paBaseSections,
+
+  // Federal statement of facts (Third Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail/bond reduction in a federal criminal matter in the District of Pennsylvania (Third Circuit).
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under 18 U.S.C. \u00A7 3142 (Bail Reform Act), the court must consider the nature and circumstances of the offense, the weight of the evidence, the history and characteristics of the person, and the nature and seriousness of the danger to the community.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail/detention was set
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Describe any changed circumstances since bail was originally set
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal bail reduction motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Third Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion for bail/bond reduction under the Bail Reform Act.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3142: Release or detention of a defendant pending trial (Bail Reform Act)
+- 18 U.S.C. \u00A7 3142(b): Release on personal recognizance or unsecured bond
+- 18 U.S.C. \u00A7 3142(c): Release on conditions
+- 18 U.S.C. \u00A7 3142(e): Detention \u2014 rebuttable presumption for certain offenses (drug offenses with 10+ year max, firearms offenses, etc.)
+- 18 U.S.C. \u00A7 3142(g): Factors to be considered (nature of offense, weight of evidence, history/characteristics of person, danger to community)
+- 18 U.S.C. \u00A7 3145(b): Review of detention order by district court
+- United States v. Salerno, 481 U.S. 739 (1987): Bail Reform Act is facially valid; detention must be based on clear and convincing evidence of danger or flight risk
+- Third Circuit precedent on pretrial release
+
+Generate 3-5 paragraphs that:
+1. Cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b) as the statutory basis
+2. Analyze the \u00A7 3142(g) factors (nature of offense, weight of evidence, history/characteristics, danger to community)
+3. If applicable, address the rebuttable presumption under \u00A7 3142(e)(3) and show it has been rebutted
+4. Argue that conditions of release under \u00A7 3142(c) can reasonably assure appearance and community safety
+5. Cite United States v. Salerno and relevant Third Circuit precedent
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3142").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b), United States v. Salerno, and Third Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief (Third Circuit)
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. \u00A7\u00A7 3142 and 3145(b) to:
+
+1. Reduce the current bail/bond to an amount that the Defendant can reasonably afford, consistent with the Eighth Amendment prohibition against excessive bail and the Bail Reform Act's preference for the least restrictive conditions;
+
+2. In the alternative, release the Defendant on personal recognizance or unsecured appearance bond pursuant to 18 U.S.C. \u00A7 3142(b);
+
+3. In the alternative, release the Defendant on conditions pursuant to 18 U.S.C. \u00A7 3142(c), including any combination of conditions reasonably necessary to assure the Defendant's appearance and the safety of the community;
+
+4. Consider the factors set forth in 18 U.S.C. \u00A7 3142(g) in determining appropriate conditions of release;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing the Bail Reform Act",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // Federal certificate of service (PA)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Illinois State Sections
+// ============================================================================
+
+const illinoisSections: TemplateSection[] = [
+  ...ilBaseSections,
+
+  // IL statement of facts (725 ILCS 5/110 - Pretrial Fairness Act)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for pretrial release under 725 ILCS 5/110 and the 2023 Pretrial Fairness Act (SAFE-T Act) in an Illinois criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Note: Illinois is the FIRST STATE to abolish cash bail. The 2023 Pretrial Fairness Act (part of the SAFE-T Act) ELIMINATED CASH BAIL for most offenses. Under the new system, pretrial release is presumed and pretrial detention is only permitted for specific offenses where the State proves by clear and convincing evidence that the defendant poses a danger or flight risk.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when detention/conditions were set
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's circumstances and the presumption of pretrial release
+4. Address the Pretrial Fairness Act's elimination of cash bail and its impact on this case
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for an Illinois pretrial release motion. Reference the Pretrial Fairness Act's elimination of cash bail. Present facts chronologically.",
+    helpText: "AI will generate an Illinois-specific statement of facts",
+  },
+
+  // IL legal argument (725 ILCS 5/110)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion for pretrial release under Illinois law.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable Illinois law includes:
+- 725 ILCS 5/110-5: Conditions of pretrial release \u2014 court shall impose the least restrictive conditions necessary
+- 725 ILCS 5/110-6.1: Detention hearings \u2014 detention only for specific offenses where State proves by clear and convincing evidence that defendant poses a real and present threat or willful flight risk
+- IL Const. Art. I, \u00A7 9: Excessive bail shall not be required
+- 2023 Pretrial Fairness Act (part of the SAFE-T Act): ELIMINATED CASH BAIL for most offenses \u2014 Illinois is the first state to abolish cash bail; creates a presumption of pretrial release; detention only permitted for specific qualifying offenses
+- The presumption of release means that pretrial detention is the exception, not the rule; the State bears the burden of proving by clear and convincing evidence that detention is necessary
+
+Generate 3-5 paragraphs that:
+1. Cite 725 ILCS 5/110 and the Pretrial Fairness Act as the statutory basis
+2. Argue the presumption of pretrial release \u2014 cash bail has been eliminated in Illinois; detention is only permitted for specific offenses with clear and convincing evidence
+3. Apply 725 ILCS 5/110-5 conditions and argue for least restrictive conditions
+4. Argue excessive bail/detention violates IL Const. Art. I, \u00A7 9 and the Eighth Amendment
+5. Propose specific alternative conditions of release consistent with the Pretrial Fairness Act
+
+Use proper Illinois legal citation format (e.g., "725 ILCS 5/110-5").`,
+    aiInstructions: "Must cite 725 ILCS 5/110-5, 725 ILCS 5/110-6.1, IL Const. Art. I, \u00A7 9, and the 2023 Pretrial Fairness Act. Emphasize that Illinois abolished cash bail. Use Illinois citation format.",
+    helpText: "AI will generate Illinois-specific legal arguments",
+  },
+
+  // IL prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 725 ILCS 5/110 and the Illinois Pretrial Fairness Act to:
+
+1. Release the Defendant on pretrial release with the least restrictive conditions necessary, consistent with the elimination of cash bail under the Pretrial Fairness Act and Article I, Section 9 of the Illinois Constitution;
+
+2. In the alternative, modify the current conditions of pretrial release to impose less restrictive conditions pursuant to 725 ILCS 5/110-5;
+
+3. In the alternative, vacate any order of pretrial detention as the State has not met its burden of proving by clear and convincing evidence that detention is necessary pursuant to 725 ILCS 5/110-6.1;
+
+4. Consider the Defendant's ties to the community, employment, and circumstances as required by statute;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Illinois prayer for relief citing 725 ILCS 5/110 and the Pretrial Fairness Act",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // IL certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF ILLINOIS, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Court's e-filing system to the email address(es) of record.
+
+STATE OF ILLINOIS
+c/o State's Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Illinois that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Illinois.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Illinois-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// IL Federal Sections (Seventh Circuit)
+// ============================================================================
+
+const ilFederalSections: TemplateSection[] = [
+  ...ilBaseSections,
+
+  // Federal statement of facts (Seventh Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail/bond reduction in a federal criminal matter in the District of Illinois (Seventh Circuit).
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under 18 U.S.C. \u00A7 3142 (Bail Reform Act), the court must consider the nature and circumstances of the offense, the weight of the evidence, the history and characteristics of the person, and the nature and seriousness of the danger to the community.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail/detention was set
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Describe any changed circumstances since bail was originally set
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal bail reduction motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Seventh Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion for bail/bond reduction under the Bail Reform Act.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3142: Release or detention of a defendant pending trial (Bail Reform Act)
+- 18 U.S.C. \u00A7 3142(b): Release on personal recognizance or unsecured bond
+- 18 U.S.C. \u00A7 3142(c): Release on conditions
+- 18 U.S.C. \u00A7 3142(e): Detention \u2014 rebuttable presumption for certain offenses (drug offenses with 10+ year max, firearms offenses, etc.)
+- 18 U.S.C. \u00A7 3142(g): Factors to be considered (nature of offense, weight of evidence, history/characteristics of person, danger to community)
+- 18 U.S.C. \u00A7 3145(b): Review of detention order by district court
+- United States v. Salerno, 481 U.S. 739 (1987): Bail Reform Act is facially valid; detention must be based on clear and convincing evidence of danger or flight risk
+- Seventh Circuit precedent on pretrial release
+
+Generate 3-5 paragraphs that:
+1. Cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b) as the statutory basis
+2. Analyze the \u00A7 3142(g) factors (nature of offense, weight of evidence, history/characteristics, danger to community)
+3. If applicable, address the rebuttable presumption under \u00A7 3142(e)(3) and show it has been rebutted
+4. Argue that conditions of release under \u00A7 3142(c) can reasonably assure appearance and community safety
+5. Cite United States v. Salerno and relevant Seventh Circuit precedent
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3142").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b), United States v. Salerno, and Seventh Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief (Seventh Circuit)
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. \u00A7\u00A7 3142 and 3145(b) to:
+
+1. Reduce the current bail/bond to an amount that the Defendant can reasonably afford, consistent with the Eighth Amendment prohibition against excessive bail and the Bail Reform Act's preference for the least restrictive conditions;
+
+2. In the alternative, release the Defendant on personal recognizance or unsecured appearance bond pursuant to 18 U.S.C. \u00A7 3142(b);
+
+3. In the alternative, release the Defendant on conditions pursuant to 18 U.S.C. \u00A7 3142(c), including any combination of conditions reasonably necessary to assure the Defendant's appearance and the safety of the community;
+
+4. Consider the factors set forth in 18 U.S.C. \u00A7 3142(g) in determining appropriate conditions of release;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing the Bail Reform Act",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // Federal certificate of service (IL)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Ohio State Sections
+// ============================================================================
+
+const ohioSections: TemplateSection[] = [
+  ...ohBaseSections,
+
+  // OH statement of facts (Ohio Crim.R. 46; ORC \u00A7 2937.222)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under Ohio Criminal Rule 46 and ORC \u00A7 2937.222 in an Ohio criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Note: Under Ohio law, Ohio Crim.R. 46 governs bail in criminal cases. Ohio uses a bail schedule combined with judicial discretion. ORC \u00A7 2937.222 addresses denial of bail for certain offenses. The court must consider factors including nature of offense, weight of evidence, financial ability, character, and community ties.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail was set and at what amount
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Address the bail schedule and judicial discretion factors through the factual narrative
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for an Ohio bail reduction motion. Reference Ohio Crim.R. 46 and bail schedule context. Present facts chronologically.",
+    helpText: "AI will generate an Ohio-specific statement of facts",
+  },
+
+  // OH legal argument (Ohio Crim.R. 46; ORC \u00A7 2937.222)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion for bail reduction under Ohio law.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable Ohio law includes:
+- Ohio Crim.R. 46: Bail \u2014 governs bail in criminal cases; court shall consider nature and circumstances of the offense, weight of evidence, financial ability to give bail, character and community ties
+- ORC \u00A7 2937.222: Denial of bail for certain offenses \u2014 bail may be denied for specific serious offenses where proof is evident or presumption great
+- ORC \u00A7 2937.23: Amount of bail \u2014 bail shall be set at an amount reasonably calculated to ensure appearance; court must consider financial ability
+- OH Const. Art. I, \u00A7 9: All persons shall be bailable by sufficient sureties, except for capital offenses where proof is evident or presumption great; excessive bail shall not be required
+- DuBose v. McGuffey: Ohio bail reform \u2014 addresses constitutional concerns with money bail and the impact on indigent defendants
+
+Generate 3-5 paragraphs that:
+1. Cite Ohio Crim.R. 46 and ORC \u00A7 2937.222 as the statutory basis
+2. Apply the Ohio Crim.R. 46 factors (nature of offense, weight of evidence, financial ability, character, community ties)
+3. Argue the current bail is excessive under OH Const. Art. I, \u00A7 9 and the Eighth Amendment
+4. Cite DuBose v. McGuffey and argue that money bail that results in detention due to inability to pay raises constitutional concerns
+5. Propose specific alternative conditions of release
+
+Use proper Ohio legal citation format (e.g., "Ohio Crim.R. 46").`,
+    aiInstructions: "Must cite Ohio Crim.R. 46, ORC \u00A7\u00A7 2937.222, 2937.23, OH Const. Art. I, \u00A7 9, and DuBose v. McGuffey. Use Ohio citation format.",
+    helpText: "AI will generate Ohio-specific legal arguments",
+  },
+
+  // OH prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Ohio Criminal Rule 46 and ORC \u00A7 2937.222 to:
+
+1. Reduce the current bail to a reasonable amount that the Defendant can afford, consistent with the Eighth Amendment to the United States Constitution and Article I, Section 9 of the Ohio Constitution;
+
+2. In the alternative, release the Defendant on recognizance or personal bond with appropriate conditions of release pursuant to Ohio Crim.R. 46;
+
+3. In the alternative, impose the least restrictive conditions of release necessary to reasonably assure the Defendant's appearance in court and the safety of the community, considering the factors set forth in Ohio Crim.R. 46;
+
+4. Consider the Defendant's financial ability to post bail as required by ORC \u00A7 2937.23;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Ohio prayer for relief citing Ohio Crim.R. 46 and ORC \u00A7 2937.222",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // OH certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF OHIO, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Court's e-filing system to the email address(es) of record.
+
+STATE OF OHIO
+c/o Prosecuting Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Ohio that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Ohio.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Ohio-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// OH Federal Sections (Sixth Circuit)
+// ============================================================================
+
+const ohFederalSections: TemplateSection[] = [
+  ...ohBaseSections,
+
+  // Federal statement of facts (Sixth Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail/bond reduction in a federal criminal matter in the District of Ohio (Sixth Circuit).
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under 18 U.S.C. \u00A7 3142 (Bail Reform Act), the court must consider the nature and circumstances of the offense, the weight of the evidence, the history and characteristics of the person, and the nature and seriousness of the danger to the community.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail/detention was set
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Describe any changed circumstances since bail was originally set
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal bail reduction motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Sixth Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion for bail/bond reduction under the Bail Reform Act.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3142: Release or detention of a defendant pending trial (Bail Reform Act)
+- 18 U.S.C. \u00A7 3142(b): Release on personal recognizance or unsecured bond
+- 18 U.S.C. \u00A7 3142(c): Release on conditions
+- 18 U.S.C. \u00A7 3142(e): Detention \u2014 rebuttable presumption for certain offenses (drug offenses with 10+ year max, firearms offenses, etc.)
+- 18 U.S.C. \u00A7 3142(g): Factors to be considered (nature of offense, weight of evidence, history/characteristics of person, danger to community)
+- 18 U.S.C. \u00A7 3145(b): Review of detention order by district court
+- United States v. Salerno, 481 U.S. 739 (1987): Bail Reform Act is facially valid; detention must be based on clear and convincing evidence of danger or flight risk
+- Sixth Circuit precedent on pretrial release
+
+Generate 3-5 paragraphs that:
+1. Cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b) as the statutory basis
+2. Analyze the \u00A7 3142(g) factors (nature of offense, weight of evidence, history/characteristics, danger to community)
+3. If applicable, address the rebuttable presumption under \u00A7 3142(e)(3) and show it has been rebutted
+4. Argue that conditions of release under \u00A7 3142(c) can reasonably assure appearance and community safety
+5. Cite United States v. Salerno and relevant Sixth Circuit precedent
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3142").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b), United States v. Salerno, and Sixth Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief (Sixth Circuit)
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. \u00A7\u00A7 3142 and 3145(b) to:
+
+1. Reduce the current bail/bond to an amount that the Defendant can reasonably afford, consistent with the Eighth Amendment prohibition against excessive bail and the Bail Reform Act's preference for the least restrictive conditions;
+
+2. In the alternative, release the Defendant on personal recognizance or unsecured appearance bond pursuant to 18 U.S.C. \u00A7 3142(b);
+
+3. In the alternative, release the Defendant on conditions pursuant to 18 U.S.C. \u00A7 3142(c), including any combination of conditions reasonably necessary to assure the Defendant's appearance and the safety of the community;
+
+4. Consider the factors set forth in 18 U.S.C. \u00A7 3142(g) in determining appropriate conditions of release;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing the Bail Reform Act",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // Federal certificate of service (OH)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Georgia State Sections
+// ============================================================================
+
+const georgiaSections: TemplateSection[] = [
+  ...gaBaseSections,
+
+  // GA statement of facts (O.C.G.A. \u00A7 17-6-1)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under O.C.G.A. \u00A7 17-6-1 in a Georgia criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Note: Under Georgia law, O.C.G.A. \u00A7 17-6-1 governs bail in felony cases. The superior court has discretion to set bail in most cases. O.C.G.A. \u00A7 17-6-12 sets forth the factors the court must consider in determining bail amount.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail was set and at what amount
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Address the superior court's discretion and bail factors through the factual narrative
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a Georgia bail reduction motion. Reference O.C.G.A. \u00A7 17-6-1 and superior court discretion context. Present facts chronologically.",
+    helpText: "AI will generate a Georgia-specific statement of facts",
+  },
+
+  // GA legal argument (O.C.G.A. \u00A7 17-6-1)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion for bail reduction under Georgia law.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable Georgia law includes:
+- O.C.G.A. \u00A7 17-6-1: Bail in felony cases \u2014 offenses bailable; procedure; schedule of bails; superior court discretion to set bail in most cases
+- O.C.G.A. \u00A7 17-6-12: Factors for bail determination \u2014 court shall consider the nature and circumstances of the offense, weight of evidence, defendant's family ties, employment, financial resources, character and mental condition, length of residence in community, criminal record, record of appearance at court proceedings, whether at time of arrest defendant was on probation/parole, and any other relevant factors
+- GA Const. Art. I, \u00A7 I, Para. XVII: Excessive bail shall not be required
+- Ayala v. State: Georgia bail factors \u2014 court must consider all statutory factors; bail set without consideration of relevant factors constitutes abuse of discretion
+
+Generate 3-5 paragraphs that:
+1. Cite O.C.G.A. \u00A7 17-6-1 as the statutory basis for bail in felony cases
+2. Apply the O.C.G.A. \u00A7 17-6-12 factors to the facts (nature of offense, evidence, family ties, employment, financial resources, character, residence, criminal record, court appearances, probation/parole status)
+3. Argue the current bail is excessive under GA Const. Art. I, \u00A7 I, Para. XVII and the Eighth Amendment
+4. Cite Ayala v. State and argue that failure to consider all statutory factors is an abuse of discretion
+5. Propose specific alternative conditions of release
+
+Use proper Georgia legal citation format (e.g., "O.C.G.A. \u00A7 17-6-1").`,
+    aiInstructions: "Must cite O.C.G.A. \u00A7\u00A7 17-6-1, 17-6-12, GA Const. Art. I, \u00A7 I, Para. XVII, and Ayala v. State. Use Georgia citation format.",
+    helpText: "AI will generate Georgia-specific legal arguments",
+  },
+
+  // GA prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to O.C.G.A. \u00A7 17-6-1 to:
+
+1. Reduce the current bail to a reasonable amount that the Defendant can afford, consistent with the Eighth Amendment to the United States Constitution and Article I, Section I, Paragraph XVII of the Georgia Constitution;
+
+2. In the alternative, release the Defendant on recognizance or personal bond with appropriate conditions of release;
+
+3. In the alternative, impose the least restrictive conditions of release necessary to reasonably assure the Defendant's appearance in court and the safety of the community, considering all factors set forth in O.C.G.A. \u00A7 17-6-12;
+
+4. Consider the Defendant's financial resources and ability to post bail as required by O.C.G.A. \u00A7 17-6-12;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Georgia prayer for relief citing O.C.G.A. \u00A7 17-6-1",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // GA certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF GEORGIA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Court's e-filing system to the email address(es) of record.
+
+STATE OF GEORGIA
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Georgia that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Georgia.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Georgia-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// GA Federal Sections (Eleventh Circuit)
+// ============================================================================
+
+const gaFederalSections: TemplateSection[] = [
+  ...gaBaseSections,
+
+  // Federal statement of facts (Eleventh Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail/bond reduction in a federal criminal matter in the District of Georgia (Eleventh Circuit).
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+- Prior Bail Requests: {{priorBailRequests}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Substance Treatment: {{substanceTreatment}}
+- Mental Health: {{mentalHealthTreatment}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under 18 U.S.C. \u00A7 3142 (Bail Reform Act), the court must consider the nature and circumstances of the offense, the weight of the evidence, the history and characteristics of the person, and the nature and seriousness of the danger to the community.
+
+Generate 3-4 paragraphs that:
+1. Describe the procedural history including when bail/detention was set
+2. Present the defendant's background, ties to the community, and employment
+3. Detail the defendant's financial circumstances and inability to afford current bail
+4. Describe any changed circumstances since bail was originally set
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal bail reduction motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Eleventh Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion for bail/bond reduction under the Bail Reform Act.
+
+Current Bail Amount: {{currentBailAmount}}
+Charges: {{charges}}
+Charge Level: {{chargeLevel}}
+Employment Status: {{employmentStatus}}
+Residence Status: {{residenceStatus}}
+Criminal History: {{criminalHistory}}
+Income: {{defendantIncome}}
+Inability to Pay: {{abilityToPayExplanation}}
+Proposed Alternative: {{proposedAlternative}}
+Proposed Amount: {{proposedBailAmount}}
+Flight Risk Factors: {{flightRiskFactors}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3142: Release or detention of a defendant pending trial (Bail Reform Act)
+- 18 U.S.C. \u00A7 3142(b): Release on personal recognizance or unsecured bond
+- 18 U.S.C. \u00A7 3142(c): Release on conditions
+- 18 U.S.C. \u00A7 3142(e): Detention \u2014 rebuttable presumption for certain offenses (drug offenses with 10+ year max, firearms offenses, etc.)
+- 18 U.S.C. \u00A7 3142(g): Factors to be considered (nature of offense, weight of evidence, history/characteristics of person, danger to community)
+- 18 U.S.C. \u00A7 3145(b): Review of detention order by district court
+- United States v. Salerno, 481 U.S. 739 (1987): Bail Reform Act is facially valid; detention must be based on clear and convincing evidence of danger or flight risk
+- Eleventh Circuit precedent on pretrial release
+
+Generate 3-5 paragraphs that:
+1. Cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b) as the statutory basis
+2. Analyze the \u00A7 3142(g) factors (nature of offense, weight of evidence, history/characteristics, danger to community)
+3. If applicable, address the rebuttable presumption under \u00A7 3142(e)(3) and show it has been rebutted
+4. Argue that conditions of release under \u00A7 3142(c) can reasonably assure appearance and community safety
+5. Cite United States v. Salerno and relevant Eleventh Circuit precedent
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3142").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7\u00A7 3142, 3145(b), United States v. Salerno, and Eleventh Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief (Eleventh Circuit)
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. \u00A7\u00A7 3142 and 3145(b) to:
+
+1. Reduce the current bail/bond to an amount that the Defendant can reasonably afford, consistent with the Eighth Amendment prohibition against excessive bail and the Bail Reform Act's preference for the least restrictive conditions;
+
+2. In the alternative, release the Defendant on personal recognizance or unsecured appearance bond pursuant to 18 U.S.C. \u00A7 3142(b);
+
+3. In the alternative, release the Defendant on conditions pursuant to 18 U.S.C. \u00A7 3142(c), including any combination of conditions reasonably necessary to assure the Defendant's appearance and the safety of the community;
+
+4. Consider the factors set forth in 18 U.S.C. \u00A7 3142(g) in determining appropriate conditions of release;
+
+5. Grant a hearing on this motion;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing the Bail Reform Act",
+  },
+
+  // Signature block same as base
+  baseSections[8],
+
+  // Federal certificate of service (GA)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION FOR BOND/BAIL REDUCTION on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -2252,11 +3672,112 @@ export const motionToReduceBailTemplate: DocumentTemplate = {
       sections: flFederalSections,
       courtSpecificRules: "N.D. Fla.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Eleventh Circuit precedent applies. CM/ECF electronic filing required.",
     },
+    {
+      jurisdiction: "PA",
+      courtType: "state",
+      sections: pennsylvaniaSections,
+      courtSpecificRules: "Filed under Pa.R.Crim.P. 520, 524, 525. Commonwealth v. Truesdale 10-factor bail test applies. PA Const. Art. I, \u00A7 14. E-filing via PACFile mandatory.",
+    },
+    {
+      jurisdiction: "PA",
+      courtType: "federal",
+      district: "PAED",
+      sections: paFederalSections,
+      courtSpecificRules: "E.D. Pa.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Third Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "PA",
+      courtType: "federal",
+      district: "PAMD",
+      sections: paFederalSections,
+      courtSpecificRules: "M.D. Pa.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Third Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "PA",
+      courtType: "federal",
+      district: "PAWD",
+      sections: paFederalSections,
+      courtSpecificRules: "W.D. Pa.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Third Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "state",
+      sections: illinoisSections,
+      courtSpecificRules: "Filed under 725 ILCS 5/110. 2023 Pretrial Fairness Act eliminated cash bail for most offenses. IL Const. Art. I, \u00A7 9. Presumption of pretrial release.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "federal",
+      district: "ILND",
+      sections: ilFederalSections,
+      courtSpecificRules: "N.D. Ill.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Seventh Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "federal",
+      district: "ILCD",
+      sections: ilFederalSections,
+      courtSpecificRules: "C.D. Ill.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Seventh Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "federal",
+      district: "ILSD",
+      sections: ilFederalSections,
+      courtSpecificRules: "S.D. Ill.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Seventh Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "OH",
+      courtType: "state",
+      sections: ohioSections,
+      courtSpecificRules: "Filed under Ohio Crim.R. 46 and ORC \u00A7 2937.222. OH Const. Art. I, \u00A7 9. Bail schedule plus judicial discretion. DuBose v. McGuffey bail reform precedent.",
+    },
+    {
+      jurisdiction: "OH",
+      courtType: "federal",
+      district: "OHND",
+      sections: ohFederalSections,
+      courtSpecificRules: "N.D. Ohio: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Sixth Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "OH",
+      courtType: "federal",
+      district: "OHSD",
+      sections: ohFederalSections,
+      courtSpecificRules: "S.D. Ohio: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Sixth Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "state",
+      sections: georgiaSections,
+      courtSpecificRules: "Filed under O.C.G.A. \u00A7 17-6-1. GA Const. Art. I, \u00A7 I, Para. XVII. O.C.G.A. \u00A7 17-6-12 bail factors. Superior court discretion. Ayala v. State bail factors precedent.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "federal",
+      district: "GAND",
+      sections: gaFederalSections,
+      courtSpecificRules: "N.D. Ga.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Eleventh Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "federal",
+      district: "GAMD",
+      sections: gaFederalSections,
+      courtSpecificRules: "M.D. Ga.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Eleventh Circuit precedent applies. CM/ECF electronic filing required.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "federal",
+      district: "GASD",
+      sections: gaFederalSections,
+      courtSpecificRules: "S.D. Ga.: 12pt font. Filed under 18 U.S.C. \u00A7\u00A7 3142, 3145(b). Eleventh Circuit precedent applies. CM/ECF electronic filing required.",
+    },
   ],
   estimatedCompletionTime: "20-30 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "FL", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD"],
 };
 
 export default motionToReduceBailTemplate;

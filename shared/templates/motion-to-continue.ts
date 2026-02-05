@@ -6,7 +6,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES, PA_COUNTIES, IL_COUNTIES, OH_COUNTIES, GA_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -1315,6 +1315,110 @@ const flBaseSections: TemplateSection[] = [
   baseSections[2], // reason
 ];
 
+// PA-specific caption inputs (same fields but with PA counties)
+const paCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: PA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Court of Common Pleas, Philadelphia County" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CP-XX-CR-XXXXXXX-YYYY" }
+    : input
+);
+
+// PA base sections (uses PA counties in caption)
+const paBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: paCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// IL-specific caption inputs (same fields but with IL counties)
+const ilCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: IL_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of Cook County, Illinois" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY-CF-XXXXXX" }
+    : input
+);
+
+// IL base sections (uses IL counties in caption)
+const ilBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ilCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// OH-specific caption inputs (same fields but with OH counties)
+const ohCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: OH_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Court of Common Pleas, Cuyahoga County, Ohio" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CR-YYYY-XXXXXX" }
+    : input
+);
+
+// OH base sections (uses OH counties in caption)
+const ohBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ohCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// GA-specific caption inputs (same fields but with GA counties)
+const gaCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: GA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of Fulton County, Georgia" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY-X-XXXXX" }
+    : input
+);
+
+// GA base sections (uses GA counties in caption)
+const gaBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: gaCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
 const floridaSections: TemplateSection[] = [
   ...flBaseSections,
 
@@ -1576,6 +1680,1059 @@ ____________________________
 ];
 
 // ============================================================================
+// Pennsylvania-Specific Sections
+// ============================================================================
+
+const pennsylvaniaSections: TemplateSection[] = [
+  ...paBaseSections,
+
+  // PA good cause statement
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Pennsylvania criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Pennsylvania Rule of Criminal Procedure 106, courts may grant continuances in criminal cases for good cause shown. Pa.R.Crim.P. 106 requires that a motion for continuance be made to the court and that the court consider all relevant factors including the impact on the administration of justice.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes "good cause" under Pa.R.Crim.P. 106
+3. Address any concerns about delay, particularly regarding speedy trial rights under Pa.R.Crim.P. 600 and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Pa.R.Crim.P. 106 and Pa.R.Crim.P. 600 where appropriate. Use Pennsylvania legal citation format.",
+    helpText: "AI will generate a Pennsylvania-specific good cause statement",
+  },
+
+  // PA legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Pennsylvania criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Pennsylvania law includes:
+- Pa.R.Crim.P. 106: Continuances in criminal cases for good cause shown
+- 42 Pa.C.S. \u00A7 5505: Modification of orders
+- PA Const. Art. I, \u00A7 9: Rights of accused in criminal prosecutions, including speedy trial
+- Pa.R.Crim.P. 600: Prompt trial (365 days for commencement of trial)
+- Commonwealth v. Hunt, 858 A.2d 1234 (Pa. Super. 2004): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite Pa.R.Crim.P. 106's "good cause" standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Pa.R.Crim.P. 600 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Pennsylvania law
+5. Address PA Const. Art. I, \u00A7 9 speedy trial protections
+
+Use proper Pennsylvania legal citation format (e.g., "Pa.R.Crim.P. 106").`,
+    aiInstructions: "Must cite Pa.R.Crim.P. 106, 42 Pa.C.S. \u00A7 5505, and PA Const. Art. I, \u00A7 9. Use Pennsylvania citation format throughout.",
+    helpText: "AI will generate Pennsylvania-specific legal arguments with proper citations",
+  },
+
+  // PA prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Pennsylvania Rule of Criminal Procedure 106 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. If the defendant is in custody, set the continued hearing date within the time limits prescribed by Pa.R.Crim.P. 600, unless time is waived;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Pennsylvania prayer for relief citing Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // PA certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+COMMONWEALTH OF PENNSYLVANIA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via PACFile to the email address(es) of record.
+
+COMMONWEALTH OF PENNSYLVANIA
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the Commonwealth of Pennsylvania that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Pennsylvania.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Pennsylvania-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Pennsylvania Federal Sections
+// ============================================================================
+
+const paFederalSections: TemplateSection[] = [
+  ...paBaseSections,
+
+  // Federal good cause statement (Third Circuit)
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Pennsylvania.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. \u00A7 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. \u00A7 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. \u00A7 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Third Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  // Federal legal argument (Third Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Pennsylvania.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under \u00A7 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. \u00A7 3161(h)(7)(B)(iv): Factors court must consider
+- Third Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Third Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7 3161 and Federal Rules of Criminal Procedure. Reference Third Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. \u00A7 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. \u00A7 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // Federal certificate of service (PA)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Illinois-Specific Sections
+// ============================================================================
+
+const illinoisSections: TemplateSection[] = [
+  ...ilBaseSections,
+
+  // IL good cause statement
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in an Illinois criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under 725 ILCS 5/114-4, courts may grant continuances in criminal cases. The speedy trial statute, 725 ILCS 5/103-5, provides that every person in custody for an alleged offense shall be tried within 120 days from the date of custody. For defendants on bail, the speedy trial term is 160 days if a demand for trial has been filed.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under 725 ILCS 5/114-4
+3. Address any concerns about delay, particularly regarding 725 ILCS 5/103-5 speedy trial requirements (120 days felony in custody, 160 days if demand not filed) and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 725 ILCS 5/114-4 and 725 ILCS 5/103-5 where appropriate. Use Illinois legal citation format.",
+    helpText: "AI will generate an Illinois-specific good cause statement",
+  },
+
+  // IL legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in an Illinois criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Illinois law includes:
+- 725 ILCS 5/114-4: Continuances in criminal cases
+- 725 ILCS 5/103-5: Speedy trial (120 days in custody for felony, 160 days if demand for trial not filed)
+- Ill. S. Ct. Rule 231: Continuances in general
+- People v. Bowman, 138 Ill. 2d 131 (1990): Standard for reviewing continuance rulings
+- IL Const. Art. I, \u00A7 8: Right to speedy trial
+
+Generate 2-3 paragraphs that:
+1. Cite 725 ILCS 5/114-4's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address 725 ILCS 5/103-5 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Illinois law
+5. Cite Ill. S. Ct. Rule 231 regarding continuance procedures
+
+Use proper Illinois legal citation format (e.g., "725 ILCS 5/114-4").`,
+    aiInstructions: "Must cite 725 ILCS 5/114-4, 725 ILCS 5/103-5, and Ill. S. Ct. Rule 231. Use Illinois citation format throughout.",
+    helpText: "AI will generate Illinois-specific legal arguments with proper citations",
+  },
+
+  // IL prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to 725 ILCS 5/114-4 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. If the defendant is in custody, set the continued hearing date within the time limits prescribed by 725 ILCS 5/103-5, unless time is waived;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Illinois prayer for relief citing Illinois Compiled Statutes",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // IL certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF ILLINOIS, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Illinois e-filing system to the email address(es) of record.
+
+PEOPLE OF THE STATE OF ILLINOIS
+c/o State's Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Illinois that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Illinois.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Illinois-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Illinois Federal Sections
+// ============================================================================
+
+const ilFederalSections: TemplateSection[] = [
+  ...ilBaseSections,
+
+  // Federal good cause statement (Seventh Circuit)
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Illinois.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. \u00A7 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. \u00A7 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. \u00A7 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Seventh Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  // Federal legal argument (Seventh Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Illinois.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under \u00A7 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. \u00A7 3161(h)(7)(B)(iv): Factors court must consider
+- Seventh Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Seventh Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7 3161 and Federal Rules of Criminal Procedure. Reference Seventh Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. \u00A7 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. \u00A7 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // Federal certificate of service (IL)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Ohio-Specific Sections
+// ============================================================================
+
+const ohioSections: TemplateSection[] = [
+  ...ohBaseSections,
+
+  // OH good cause statement
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in an Ohio criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Ohio Criminal Rule 10, courts may grant continuances for good cause shown. The speedy trial statute, ORC \u00A7 2945.71, provides that a person charged with a felony must be brought to trial within 90 days after arrest or service of summons, or 270 days if the defendant is out on bail for a felony. ORC \u00A7 2945.72 sets forth excludable time periods.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Ohio Crim.R. 10
+3. Address any concerns about delay, particularly regarding ORC \u00A7 2945.71 speedy trial requirements (90 days felony, 270 days if out on bail for felony) and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Ohio Crim.R. 10, ORC \u00A7 2945.71, and ORC \u00A7 2945.72 where appropriate. Use Ohio legal citation format.",
+    helpText: "AI will generate an Ohio-specific good cause statement",
+  },
+
+  // OH legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in an Ohio criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Ohio law includes:
+- Ohio Crim.R. 10: Continuances for good cause shown
+- ORC \u00A7 2945.71: Speedy trial (90 days for felony, 270 days if out on bail for felony)
+- ORC \u00A7 2945.72: Excludable time periods for speedy trial computation
+- OH Const. Art. I, \u00A7 10: Right to speedy trial
+- State v. Pachay, 64 Ohio St. 2d 218 (1980): Standard for reviewing continuance rulings
+- State v. Singer, 50 Ohio St. 2d 103 (1977): Speedy trial analysis
+
+Generate 2-3 paragraphs that:
+1. Cite Ohio Crim.R. 10's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address ORC \u00A7 2945.71 speedy trial implications
+4. Reference ORC \u00A7 2945.72 regarding excludable time periods
+5. Address OH Const. Art. I, \u00A7 10 speedy trial protections
+
+Use proper Ohio legal citation format (e.g., "Ohio Crim.R. 10").`,
+    aiInstructions: "Must cite Ohio Crim.R. 10, ORC \u00A7 2945.71, ORC \u00A7 2945.72, and OH Const. Art. I, \u00A7 10. Use Ohio citation format throughout.",
+    helpText: "AI will generate Ohio-specific legal arguments with proper citations",
+  },
+
+  // OH prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Ohio Criminal Rule 10 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. If the defendant is in custody, set the continued hearing date within the time limits prescribed by ORC \u00A7 2945.71, unless time is waived;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Ohio prayer for relief citing Criminal Rules",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // OH certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF OHIO, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF OHIO
+c/o Prosecuting Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Ohio that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Ohio.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Ohio-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Ohio Federal Sections
+// ============================================================================
+
+const ohFederalSections: TemplateSection[] = [
+  ...ohBaseSections,
+
+  // Federal good cause statement (Sixth Circuit)
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Ohio.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. \u00A7 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. \u00A7 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. \u00A7 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Sixth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  // Federal legal argument (Sixth Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Ohio.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under \u00A7 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. \u00A7 3161(h)(7)(B)(iv): Factors court must consider
+- Sixth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Sixth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7 3161 and Federal Rules of Criminal Procedure. Reference Sixth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. \u00A7 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. \u00A7 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // Federal certificate of service (OH)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Georgia-Specific Sections
+// ============================================================================
+
+const georgiaSections: TemplateSection[] = [
+  ...gaBaseSections,
+
+  // GA good cause statement
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Georgia criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under O.C.G.A. \u00A7 17-8-22, courts may grant continuances in criminal proceedings upon sufficient showing. The court has discretion to grant or deny continuances based on the circumstances of the case.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes sufficient cause under O.C.G.A. \u00A7 17-8-22
+3. Address any concerns about delay, particularly regarding O.C.G.A. \u00A7 17-7-170 speedy trial demand and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference O.C.G.A. \u00A7 17-8-22 and O.C.G.A. \u00A7 17-7-170 where appropriate. Use Georgia legal citation format.",
+    helpText: "AI will generate a Georgia-specific good cause statement",
+  },
+
+  // GA legal argument
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Georgia criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Georgia law includes:
+- O.C.G.A. \u00A7 17-8-22: Continuances in criminal proceedings
+- O.C.G.A. \u00A7 17-7-170: Speedy trial demand (defendant may demand trial at the term of court when the indictment is found or at the next succeeding regular term)
+- GA Const. Art. I, \u00A7 I, Para. XII: Right to speedy trial
+- Horne v. State, 262 Ga. 170 (1992): Standard for reviewing continuance rulings
+- Ruffin v. State, 243 Ga. 95 (1979): Speedy trial analysis
+
+Generate 2-3 paragraphs that:
+1. Cite O.C.G.A. \u00A7 17-8-22's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address O.C.G.A. \u00A7 17-7-170 speedy trial demand implications
+4. Reference the trial court's discretion in granting continuances under Georgia law
+5. Address GA Const. Art. I, \u00A7 I, Para. XII speedy trial protections
+
+Use proper Georgia legal citation format (e.g., "O.C.G.A. \u00A7 17-8-22").`,
+    aiInstructions: "Must cite O.C.G.A. \u00A7 17-8-22, O.C.G.A. \u00A7 17-7-170, and GA Const. Art. I, \u00A7 I, Para. XII. Use Georgia citation format throughout.",
+    helpText: "AI will generate Georgia-specific legal arguments with proper citations",
+  },
+
+  // GA prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to O.C.G.A. \u00A7 17-8-22 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Georgia prayer for relief citing O.C.G.A.",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // GA certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF GEORGIA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF GEORGIA
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Georgia that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Georgia.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Georgia-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Georgia Federal Sections
+// ============================================================================
+
+const gaFederalSections: TemplateSection[] = [
+  ...gaBaseSections,
+
+  // Federal good cause statement (Eleventh Circuit)
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Georgia.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. \u00A7 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. \u00A7 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. \u00A7 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Eleventh Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  // Federal legal argument (Eleventh Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Georgia.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. \u00A7 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under \u00A7 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. \u00A7 3161(h)(7)(B)(iv): Factors court must consider
+- Eleventh Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Eleventh Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. \u00A7 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. \u00A7 3161 and Federal Rules of Criminal Procedure. Reference Eleventh Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. \u00A7 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. \u00A7 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  // Signature block same as base
+  baseSections[6],
+
+  // Federal certificate of service (GA)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -1717,11 +2874,112 @@ export const motionToContinueTemplate: DocumentTemplate = {
       sections: flFederalSections,
       courtSpecificRules: "N.D. Fla.: 12pt font. Double-spaced. CM/ECF electronic filing required. FLND L.R. 5.1.",
     },
+    {
+      jurisdiction: "PA",
+      courtType: "state",
+      sections: pennsylvaniaSections,
+      courtSpecificRules: "Pennsylvania courts use 12pt font. Motions for continuance must comply with Pa.R.Crim.P. 106. Speedy trial under Pa.R.Crim.P. 600 (365 days for commencement of trial). E-filing via PACFile mandatory for attorneys in most counties.",
+    },
+    {
+      jurisdiction: "PA",
+      courtType: "federal",
+      district: "PAED",
+      sections: paFederalSections,
+      courtSpecificRules: "E.D. Pa.: 12pt font. Double-spaced. CM/ECF electronic filing required. PAED L.R. 5.1.2.",
+    },
+    {
+      jurisdiction: "PA",
+      courtType: "federal",
+      district: "PAMD",
+      sections: paFederalSections,
+      courtSpecificRules: "M.D. Pa.: 12pt font. Double-spaced. CM/ECF electronic filing required. PAMD L.R. 5.2.",
+    },
+    {
+      jurisdiction: "PA",
+      courtType: "federal",
+      district: "PAWD",
+      sections: paFederalSections,
+      courtSpecificRules: "W.D. Pa.: 12pt font. Double-spaced. CM/ECF electronic filing required. PAWD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "state",
+      sections: illinoisSections,
+      courtSpecificRules: "Illinois courts use 12pt font. Motions for continuance must comply with 725 ILCS 5/114-4. Speedy trial under 725 ILCS 5/103-5 (120 days in custody, 160 days if demand not filed). E-filing mandatory in most counties.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "federal",
+      district: "ILND",
+      sections: ilFederalSections,
+      courtSpecificRules: "N.D. Ill.: 12pt font. Double-spaced. CM/ECF electronic filing required. ILND L.R. 5.2.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "federal",
+      district: "ILCD",
+      sections: ilFederalSections,
+      courtSpecificRules: "C.D. Ill.: 12pt font. Double-spaced. CM/ECF electronic filing required. ILCD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "IL",
+      courtType: "federal",
+      district: "ILSD",
+      sections: ilFederalSections,
+      courtSpecificRules: "S.D. Ill.: 12pt font. Double-spaced. CM/ECF electronic filing required. ILSD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "OH",
+      courtType: "state",
+      sections: ohioSections,
+      courtSpecificRules: "Ohio courts use 12pt font. Motions for continuance must comply with Ohio Crim.R. 10. Speedy trial under ORC \u00A7 2945.71 (90 days felony, 270 days if out on bail for felony). E-filing via court e-filing system in most counties.",
+    },
+    {
+      jurisdiction: "OH",
+      courtType: "federal",
+      district: "OHND",
+      sections: ohFederalSections,
+      courtSpecificRules: "N.D. Ohio: 12pt font. Double-spaced. CM/ECF electronic filing required. OHND L.R. 5.1.",
+    },
+    {
+      jurisdiction: "OH",
+      courtType: "federal",
+      district: "OHSD",
+      sections: ohFederalSections,
+      courtSpecificRules: "S.D. Ohio: 12pt font. Double-spaced. CM/ECF electronic filing required. OHSD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "state",
+      sections: georgiaSections,
+      courtSpecificRules: "Georgia courts use 12pt font. Motions for continuance must comply with O.C.G.A. \u00A7 17-8-22. Speedy trial demand under O.C.G.A. \u00A7 17-7-170. E-filing via court e-filing system in most counties.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "federal",
+      district: "GAND",
+      sections: gaFederalSections,
+      courtSpecificRules: "N.D. Ga.: 12pt font. Double-spaced. CM/ECF electronic filing required. GAND L.R. 5.1.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "federal",
+      district: "GAMD",
+      sections: gaFederalSections,
+      courtSpecificRules: "M.D. Ga.: 12pt font. Double-spaced. CM/ECF electronic filing required. GAMD L.R. 5.1.",
+    },
+    {
+      jurisdiction: "GA",
+      courtType: "federal",
+      district: "GASD",
+      sections: gaFederalSections,
+      courtSpecificRules: "S.D. Ga.: 12pt font. Double-spaced. CM/ECF electronic filing required. GASD L.R. 5.1.",
+    },
   ],
   estimatedCompletionTime: "10-15 minutes",
   difficultyLevel: "basic",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "FL", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD"],
 };
 
 // Export for use in template registry
