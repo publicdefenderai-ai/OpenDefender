@@ -7,6 +7,7 @@ import { validateLegalGuidance, ValidationResult } from './legal-accuracy-valida
 import { devLog } from '../utils/dev-logger';
 import { recordAICost } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
+import { CLAUDE_MODEL } from '../config/ai-model';
 
 // Validate Anthropic API credentials
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -458,7 +459,7 @@ async function callClaudeWithRetry(
       // Wrap the API call in a timeout promise to ensure it actually times out
       const timeoutMs = 95000; // 95 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
-        model: 'claude-sonnet-4-20250514',
+        model: CLAUDE_MODEL,
         max_tokens: 4096,
         temperature: 0.3,
         system: systemPrompt,
@@ -702,7 +703,7 @@ export async function generateClaudeGuidance(
 export async function testClaudeConnection(): Promise<boolean> {
   try {
     await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514', // Claude Sonnet 4 (May 2025)
+      model: CLAUDE_MODEL,
       max_tokens: 10,
       messages: [{ role: 'user', content: 'test' }],
     });

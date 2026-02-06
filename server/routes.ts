@@ -1,4 +1,5 @@
 import type { Express, Request, Response, NextFunction } from "express";
+import { CLAUDE_MODEL_DISPLAY_NAME } from "./config/ai-model";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { courtListenerService } from "./services/courtlistener";
@@ -980,7 +981,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ 
         success: true, 
         available: isConnected,
-        model: "claude-sonnet-4-20250514",
+        model: CLAUDE_MODEL_DISPLAY_NAME,
         features: ["personalized-guidance", "natural-language-processing"]
       });
     } catch (error) {

@@ -6,6 +6,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import { CLAUDE_MODEL } from "../../config/ai-model";
 import { randomUUID } from "crypto";
 import { motionToContinueTemplate } from "../../../shared/templates/motion-to-continue";
 import { motionToReduceBailTemplate } from "../../../shared/templates/motion-to-reduce-bail";
@@ -287,7 +288,7 @@ async function generateAISection(
 
   try {
     const response = await anthropic.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: CLAUDE_MODEL,
       max_tokens: 2000,
       temperature: 0.3, // Low temperature for legal accuracy
       system: systemPrompt,

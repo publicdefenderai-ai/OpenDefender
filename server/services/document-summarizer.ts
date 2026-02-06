@@ -13,6 +13,7 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk';
+import { CLAUDE_MODEL } from '../config/ai-model';
 import * as pdfParse from 'pdf-parse';
 import mammoth from 'mammoth';
 import { devLog } from '../utils/dev-logger';
@@ -282,7 +283,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
     const startTime = Date.now();
 
     const message = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: CLAUDE_MODEL,
       max_tokens: 4096,
       temperature: 0.2,
       system: systemPrompt,
