@@ -263,6 +263,34 @@ export function JurisdictionSelector({
     { code: "GAND", label: "Northern District of Georgia (GAND)", rules: "GAND local rules, 12pt font", jurisdiction: "GA" },
     { code: "GAMD", label: "Middle District of Georgia (GAMD)", rules: "GAMD local rules, 12pt font", jurisdiction: "GA" },
     { code: "GASD", label: "Southern District of Georgia (GASD)", rules: "GASD local rules, 12pt font", jurisdiction: "GA" },
+    // North Carolina
+    { code: "EDNC", label: "Eastern District of North Carolina (EDNC)", rules: "EDNC local rules, 12pt font", jurisdiction: "NC" },
+    { code: "MDNC", label: "Middle District of North Carolina (MDNC)", rules: "MDNC local rules, 12pt font", jurisdiction: "NC" },
+    { code: "WDNC", label: "Western District of North Carolina (WDNC)", rules: "WDNC local rules, 12pt font", jurisdiction: "NC" },
+    // Michigan
+    { code: "EDMI", label: "Eastern District of Michigan (EDMI)", rules: "EDMI local rules, 12pt font", jurisdiction: "MI" },
+    { code: "WDMI", label: "Western District of Michigan (WDMI)", rules: "WDMI local rules, 12pt font", jurisdiction: "MI" },
+    // New Jersey
+    { code: "DNJ", label: "District of New Jersey (DNJ)", rules: "DNJ local rules, 12pt font", jurisdiction: "NJ" },
+    // Virginia
+    { code: "EDVA", label: "Eastern District of Virginia (EDVA)", rules: "EDVA local rules, 12pt font", jurisdiction: "VA" },
+    { code: "WDVA", label: "Western District of Virginia (WDVA)", rules: "WDVA local rules, 12pt font", jurisdiction: "VA" },
+    // Washington
+    { code: "EDWA", label: "Eastern District of Washington (EDWA)", rules: "EDWA local rules, 12pt font", jurisdiction: "WA" },
+    { code: "WDWA", label: "Western District of Washington (WDWA)", rules: "WDWA local rules, 12pt font", jurisdiction: "WA" },
+    // Arizona
+    { code: "DAZ", label: "District of Arizona (DAZ)", rules: "DAZ local rules, 12pt font", jurisdiction: "AZ" },
+    // Massachusetts
+    { code: "DMA", label: "District of Massachusetts (DMA)", rules: "DMA local rules, 12pt font", jurisdiction: "MA" },
+    // Tennessee
+    { code: "EDTN", label: "Eastern District of Tennessee (EDTN)", rules: "EDTN local rules, 12pt font", jurisdiction: "TN" },
+    { code: "MDTN", label: "Middle District of Tennessee (MDTN)", rules: "MDTN local rules, 12pt font", jurisdiction: "TN" },
+    { code: "WDTN", label: "Western District of Tennessee (WDTN)", rules: "WDTN local rules, 12pt font", jurisdiction: "TN" },
+    // Indiana
+    { code: "NDIN", label: "Northern District of Indiana (NDIN)", rules: "NDIN local rules, 12pt font", jurisdiction: "IN" },
+    { code: "SDIN", label: "Southern District of Indiana (SDIN)", rules: "SDIN local rules, 12pt font", jurisdiction: "IN" },
+    // Maryland
+    { code: "DMD", label: "District of Maryland (DMD)", rules: "DMD local rules, 12pt font", jurisdiction: "MD" },
   ];
 
   const availableDistricts = allDistricts.filter(
@@ -282,6 +310,16 @@ export function JurisdictionSelector({
     { value: "IL", label: "Illinois", description: "Uses Illinois Compiled Statutes citations" },
     { value: "OH", label: "Ohio", description: "Uses Ohio Revised Code citations" },
     { value: "GA", label: "Georgia", description: "Uses Official Code of Georgia citations" },
+    { value: "NC", label: "North Carolina", description: "Uses NC General Statutes citations" },
+    { value: "MI", label: "Michigan", description: "Uses Michigan Court Rules citations" },
+    { value: "NJ", label: "New Jersey", description: "Uses NJ Court Rules citations" },
+    { value: "VA", label: "Virginia", description: "Uses Virginia Code citations" },
+    { value: "WA", label: "Washington", description: "Uses Washington Court Rules citations" },
+    { value: "AZ", label: "Arizona", description: "Uses Arizona Revised Statutes citations" },
+    { value: "MA", label: "Massachusetts", description: "Uses MA General Laws citations" },
+    { value: "TN", label: "Tennessee", description: "Uses Tennessee Code Annotated citations" },
+    { value: "IN", label: "Indiana", description: "Uses Indiana Code citations" },
+    { value: "MD", label: "Maryland", description: "Uses Maryland Code citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
@@ -347,8 +385,26 @@ export function JurisdictionSelector({
           <p className="text-sm font-medium text-muted-foreground">Court Type</p>
           <div className="flex gap-3">
             {[
-              { type: "state" as const, label: "State Court", desc: value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" : value.jurisdiction === "TX" ? "TX District Court (14pt font)" : value.jurisdiction === "FL" ? "FL Circuit Court (12pt font)" : value.jurisdiction === "PA" ? "PA Court of Common Pleas (Pa.R.Crim.P. formatting)" : value.jurisdiction === "IL" ? "IL Circuit Court (Ill. S. Ct. Rules formatting)" : value.jurisdiction === "OH" ? "OH Court of Common Pleas (Ohio Crim.R. formatting)" : value.jurisdiction === "GA" ? "GA Superior Court (Uniform Superior Court Rules)" : "CA Superior Court (CRC formatting)" },
-              { type: "federal" as const, label: "Federal Court", desc: value.jurisdiction === "NY" ? "U.S. District Court (12pt font)" : value.jurisdiction === "TX" ? "U.S. District Court (12pt font)" : value.jurisdiction === "FL" ? "U.S. District Court (12pt font)" : value.jurisdiction === "PA" ? "U.S. District Court (12pt font)" : value.jurisdiction === "IL" ? "U.S. District Court (12pt font)" : value.jurisdiction === "OH" ? "U.S. District Court (12pt font)" : value.jurisdiction === "GA" ? "U.S. District Court (12pt font)" : "U.S. District Court" },
+              { type: "state" as const, label: "State Court", desc:
+                value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" :
+                value.jurisdiction === "TX" ? "TX District Court (14pt font)" :
+                value.jurisdiction === "FL" ? "FL Circuit Court (12pt font)" :
+                value.jurisdiction === "PA" ? "PA Court of Common Pleas (Pa.R.Crim.P. formatting)" :
+                value.jurisdiction === "IL" ? "IL Circuit Court (Ill. S. Ct. Rules formatting)" :
+                value.jurisdiction === "OH" ? "OH Court of Common Pleas (Ohio Crim.R. formatting)" :
+                value.jurisdiction === "GA" ? "GA Superior Court (Uniform Superior Court Rules)" :
+                value.jurisdiction === "NC" ? "NC Superior Court (NC Gen. Stat. formatting)" :
+                value.jurisdiction === "MI" ? "MI Circuit Court (MCR formatting)" :
+                value.jurisdiction === "NJ" ? "NJ Superior Court (NJ Ct. R. formatting)" :
+                value.jurisdiction === "VA" ? "VA Circuit Court (VA Code formatting)" :
+                value.jurisdiction === "WA" ? "WA Superior Court (CrR formatting)" :
+                value.jurisdiction === "AZ" ? "AZ Superior Court (ARS formatting)" :
+                value.jurisdiction === "MA" ? "MA Superior Court (Mass. R. Crim. P. formatting)" :
+                value.jurisdiction === "TN" ? "TN Criminal Court (Tenn. R. Crim. P. formatting)" :
+                value.jurisdiction === "IN" ? "IN Circuit/Superior Court (IC formatting)" :
+                value.jurisdiction === "MD" ? "MD Circuit Court (Md. Rule formatting)" :
+                "CA Superior Court (CRC formatting)" },
+              { type: "federal" as const, label: "Federal Court", desc: "U.S. District Court (12pt font)" },
             ].map((ct) => (
               <div
                 key={ct.type}

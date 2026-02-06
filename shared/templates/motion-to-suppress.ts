@@ -7,7 +7,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES, PA_COUNTIES, IL_COUNTIES, OH_COUNTIES, GA_COUNTIES } from "./county-data";
+import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES, PA_COUNTIES, IL_COUNTIES, OH_COUNTIES, GA_COUNTIES, NC_COUNTIES, MI_COUNTIES, NJ_COUNTIES, VA_COUNTIES, WA_COUNTIES, AZ_COUNTIES, MA_COUNTIES, TN_COUNTIES, IN_COUNTIES, MD_COUNTIES } from "./county-data";
 
 // ============================================================================
 // Section Inputs
@@ -2876,6 +2876,2345 @@ ____________________________
 ];
 
 // ============================================================================
+// North Carolina-Specific Sections
+// ============================================================================
+
+// NC-specific caption inputs (same fields but with NC counties)
+const ncCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: NC_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of [County], North Carolina" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY CRS XXXXXX" }
+    : input
+);
+
+// NC base sections (uses NC counties in caption)
+const ncBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ncCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // evidenceInfo
+  baseSections[2], // constitutionalBasis
+  baseSections[3], // hearingInfo
+];
+
+const northCarolinaSections: TemplateSection[] = [
+  ...ncBaseSections,
+
+  // NC statement of facts (N.C. Gen. Stat. § 15A-974)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (N.C. Gen. Stat. § 15A-974) in a North Carolina criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under N.C. Gen. Stat. § 15A-974, a defendant may move to suppress evidence obtained as a result of a substantial violation of the provisions of Chapter 15A. NC Const. Art. I, § 20 provides protections against unreasonable searches and seizures.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense. Do not include legal argument — only facts.`,
+    aiInstructions: "Generate a factual narrative for a North Carolina N.C. Gen. Stat. § 15A-974 motion. Present facts chronologically.",
+    helpText: "AI will generate a North Carolina-specific statement of facts",
+  },
+
+  // NC legal argument (N.C. Gen. Stat. § 15A-974)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under N.C. Gen. Stat. § 15A-974.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable North Carolina law includes:
+- N.C. Gen. Stat. § 15A-974: Exclusion or suppression of unlawfully obtained evidence
+- NC Const. Art. I, § 20: Protection against unreasonable searches and seizures
+- State v. Carter, 322 N.C. 709 (1988): North Carolina constitutional analysis of search and seizure
+- State v. Cooke, 306 N.C. 132 (1982): Burden of proof on suppression motions
+- N.C. Gen. Stat. § 15A-974(a)(2): Evidence must be suppressed if obtained as result of substantial violation
+
+Generate 3-5 paragraphs that:
+1. Cite N.C. Gen. Stat. § 15A-974 as the statutory basis for the motion
+2. State the burden of proof and applicable standards under North Carolina law
+3. Apply the specific constitutional violation to the facts using North Carolina case law
+4. Cite NC Const. Art. I, § 20 for North Carolina constitutional analysis
+5. Address any potential government arguments (consent, exigent circumstances, good faith)
+
+Use proper North Carolina legal citation format (e.g., "N.C. Gen. Stat. § 15A-974").`,
+    aiInstructions: "Must cite N.C. Gen. Stat. § 15A-974, NC Const. Art. I, § 20, and State v. Carter. Use North Carolina citation format.",
+    helpText: "AI will generate North Carolina-specific legal arguments",
+  },
+
+  // NC prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to N.C. Gen. Stat. § 15A-974 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Section 20 of the North Carolina Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution and Article I, Sections 19 and 23 of the North Carolina Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Dismiss or reduce the charges if suppression of the evidence renders the prosecution's case insufficient;
+
+6. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "North Carolina prayer for relief citing N.C. Gen. Stat. § 15A-974",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // NC certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF NORTH CAROLINA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE (N.C. Gen. Stat. § 15A-974) on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Court's e-filing system to the email address(es) of record.
+
+STATE OF NORTH CAROLINA
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of North Carolina that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, North Carolina.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "North Carolina-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// North Carolina Federal Sections
+// ============================================================================
+
+const ncFederalSections: TemplateSection[] = [
+  ...ncBaseSections,
+
+  // Federal statement of facts (Fourth Circuit)
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of North Carolina.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial. The motion must state the grounds for suppression with particularity.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers and agencies involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  // Federal legal argument (Fourth Circuit)
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence under the Fourth, Fifth, and/or Sixth Amendments.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes:
+- Federal Rule of Criminal Procedure 12(b)(3): Pre-trial motions to suppress
+- Mapp v. Ohio, 367 U.S. 643 (1961): Exclusionary rule applies to states
+- Wong Sun v. United States, 371 U.S. 471 (1963): Fruit of the poisonous tree
+- United States v. Leon, 468 U.S. 897 (1984): Good faith exception
+- Miranda v. Arizona, 384 U.S. 436 (1966): Fifth Amendment warnings
+- Katz v. United States, 389 U.S. 347 (1967): Reasonable expectation of privacy
+- Fourth Circuit precedent on suppression motions
+
+Generate 3-5 paragraphs that:
+1. Cite Federal Rule of Criminal Procedure 12(b)(3) as the procedural basis
+2. State the applicable constitutional standard and burden of proof
+3. Apply the facts to the legal standard, showing why suppression is required
+4. Cite controlling Supreme Court and Fourth Circuit precedent
+5. Address potential government arguments (good faith, inevitable discovery, independent source)
+
+Use proper federal legal citation format (e.g., "Mapp v. Ohio, 367 U.S. 643, 655 (1961)").`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and controlling Supreme Court and Fourth Circuit precedent. Use federal citation format.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  // Federal prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine established in Wong Sun v. United States, 371 U.S. 471 (1963);
+
+4. Grant an evidentiary hearing on this motion pursuant to Franks v. Delaware, 438 U.S. 154 (1978), if applicable;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Federal Rules of Criminal Procedure",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // Federal certificate of service (NC)
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Michigan Sections
+// ============================================================================
+
+// MI-specific caption inputs (same fields but with MI counties)
+const miCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: MI_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., [County] Circuit Court" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY-XXXXXX-FH" }
+    : input
+);
+
+// MI base sections (uses MI counties in caption)
+const miBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: miCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // evidenceInfo
+  baseSections[2], // constitutionalBasis
+  baseSections[3], // hearingInfo
+];
+
+const michiganSections: TemplateSection[] = [
+  ...miBaseSections,
+
+  // MI statement of facts (MCR 6.101(C))
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (MCR 6.101(C)) in a Michigan criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under MCR 6.101(C), a defendant may move to suppress evidence obtained as a result of an unlawful search or seizure. MI Const. Art. I, § 11 provides protections against unreasonable searches and seizures.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense. Do not include legal argument — only facts.`,
+    aiInstructions: "Generate a factual narrative for a Michigan MCR 6.101(C) motion. Present facts chronologically.",
+    helpText: "AI will generate a Michigan-specific statement of facts",
+  },
+
+  // MI legal argument (MCR 6.101(C))
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under MCR 6.101(C).
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Michigan law includes:
+- MCR 6.101(C): Motions to suppress evidence
+- MI Const. Art. I, § 11: Protection against unreasonable searches and seizures
+- People v. Kazmierczak, 461 Mich. 411 (2000): Michigan constitutional analysis
+- People v. Dagwan, 269 Mich. App. 338 (2005): Burden of proof on suppression motions
+- MCL 780.653: Search warrant requirements
+
+Generate 3-5 paragraphs that:
+1. Cite MCR 6.101(C) as the procedural basis for the motion
+2. State the burden of proof and applicable standards under Michigan law
+3. Apply the specific constitutional violation to the facts using Michigan case law
+4. Cite MI Const. Art. I, § 11 for Michigan constitutional analysis
+5. Address any potential government arguments (consent, exigent circumstances, good faith)
+
+Use proper Michigan legal citation format (e.g., "MCR 6.101(C)").`,
+    aiInstructions: "Must cite MCR 6.101(C), MI Const. Art. I, § 11, and People v. Kazmierczak. Use Michigan citation format.",
+    helpText: "AI will generate Michigan-specific legal arguments",
+  },
+
+  // MI prayer for relief
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to MCR 6.101(C) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Section 11 of the Michigan Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution and Article I, Sections 17 and 20 of the Michigan Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Michigan prayer for relief citing MCR 6.101(C)",
+  },
+
+  // Signature block same as base
+  baseSections[7],
+
+  // MI certificate of service
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF MICHIGAN, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE (MCR 6.101(C)) on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via the Court's e-filing system to the email address(es) of record.
+
+STATE OF MICHIGAN
+c/o Prosecuting Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Michigan that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Michigan.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Michigan-specific certificate of service format",
+  },
+];
+
+// Michigan Federal Sections
+const miFederalSections: TemplateSection[] = [
+  ...miBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Michigan.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers and agencies involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence under the Fourth, Fifth, and/or Sixth Amendments.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes:
+- Federal Rule of Criminal Procedure 12(b)(3): Pre-trial motions to suppress
+- Mapp v. Ohio, 367 U.S. 643 (1961): Exclusionary rule
+- Wong Sun v. United States, 371 U.S. 471 (1963): Fruit of the poisonous tree
+- United States v. Leon, 468 U.S. 897 (1984): Good faith exception
+- Sixth Circuit precedent on suppression motions
+
+Generate 3-5 paragraphs that:
+1. Cite Federal Rule of Criminal Procedure 12(b)(3) as the procedural basis
+2. State the applicable constitutional standard and burden of proof
+3. Apply the facts to the legal standard, showing why suppression is required
+4. Cite controlling Supreme Court and Sixth Circuit precedent
+5. Address potential government arguments
+
+Use proper federal legal citation format.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and controlling Supreme Court and Sixth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Federal Rules of Criminal Procedure",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// New Jersey Sections
+// ============================================================================
+
+const njCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: NJ_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of New Jersey, [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-XX-XXXXXX" }
+    : input
+);
+
+const njBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: njCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const newJerseySections: TemplateSection[] = [
+  ...njBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (N.J. Ct. R. 3:5-7) in a New Jersey criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under N.J. Ct. R. 3:5-7, a defendant may move to suppress evidence. NJ Const. Art. I, § 7 provides broader protections than the federal Fourth Amendment.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style. Present facts objectively but in a manner favorable to the defense.`,
+    aiInstructions: "Generate a factual narrative for a New Jersey N.J. Ct. R. 3:5-7 motion. Present facts chronologically.",
+    helpText: "AI will generate a New Jersey-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under N.J. Ct. R. 3:5-7.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable New Jersey law includes:
+- N.J. Ct. R. 3:5-7: Motions to suppress evidence
+- NJ Const. Art. I, § 7: Protection against unreasonable searches (broader than federal)
+- State v. Hunt, 91 N.J. 338 (1982): New Jersey constitutional analysis
+- State v. Novembrino, 105 N.J. 95 (1987): No good faith exception under NJ Constitution
+- N.J.S.A. 2A:84A-21: Exclusionary rule
+
+Generate 3-5 paragraphs that:
+1. Cite N.J. Ct. R. 3:5-7 as the procedural basis for the motion
+2. State the burden of proof and applicable standards under New Jersey law
+3. Apply the specific constitutional violation using New Jersey case law
+4. Cite NJ Const. Art. I, § 7 for New Jersey constitutional analysis
+5. Note that New Jersey does not recognize the good faith exception
+
+Use proper New Jersey legal citation format.`,
+    aiInstructions: "Must cite N.J. Ct. R. 3:5-7, NJ Const. Art. I, § 7, and State v. Novembrino. Use New Jersey citation format.",
+    helpText: "AI will generate New Jersey-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to N.J. Ct. R. 3:5-7 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Paragraph 7 of the New Jersey Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein, obtained in violation of the Fifth and Sixth Amendments to the United States Constitution and Article I, Paragraphs 1 and 10 of the New Jersey Constitution;
+
+3. Suppress and exclude any evidence derived from or obtained as a result of the illegally obtained evidence described herein, pursuant to the fruit of the poisonous tree doctrine;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "New Jersey prayer for relief citing N.J. Ct. R. 3:5-7",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF NEW JERSEY, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE (N.J. Ct. R. 3:5-7) on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ECOURTS: By transmitting a true copy via the eCourts system.
+
+STATE OF NEW JERSEY
+c/o County Prosecutor
+________________________________
+________________________________
+________________________________
+
+I certify that the foregoing statements made by me are true. I am aware that if any of the foregoing statements made by me are willfully false, I am subject to punishment.
+
+Dated: __________________, 20___
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "New Jersey-specific certificate of service format",
+  },
+];
+
+const njFederalSections: TemplateSection[] = [
+  ...njBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of New Jersey.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers and agencies involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion. Present facts chronologically.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes:
+- Federal Rule of Criminal Procedure 12(b)(3)
+- Mapp v. Ohio, 367 U.S. 643 (1961)
+- Wong Sun v. United States, 371 U.S. 471 (1963)
+- United States v. Leon, 468 U.S. 897 (1984)
+- Third Circuit precedent on suppression motions
+
+Generate 3-5 paragraphs applying federal constitutional standards with Third Circuit precedent.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Third Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to:
+
+1. Suppress and exclude from evidence all items seized as described herein;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein;
+
+3. Suppress and exclude any evidence derived from the illegally obtained evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties via CM/ECF electronic filing.
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+________________________________
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Virginia Sections
+// ============================================================================
+
+const vaCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county or independent city where the court is located", validation: { ...input.validation, options: VA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of [County/City]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CRXXXXX-XX" }
+    : input
+);
+
+const vaBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: vaCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const virginiaSections: TemplateSection[] = [
+  ...vaBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (Va. Code § 19.2-60) in a Virginia criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Va. Code § 19.2-60, a defendant may challenge evidence obtained in violation of constitutional rights. VA Const. Art. I, § 10 provides protections against unreasonable searches and seizures.
+
+Generate 3-4 paragraphs that:
+1. Set forth the factual circumstances of the search, seizure, or questioning in chronological order
+2. Identify the law enforcement officers involved (using generic references)
+3. Describe the specific actions that constitute the constitutional violation
+4. State what evidence was obtained as a result
+
+Use formal legal writing style.`,
+    aiInstructions: "Generate a factual narrative for a Virginia Va. Code § 19.2-60 motion.",
+    helpText: "AI will generate a Virginia-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Virginia law.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Virginia law includes:
+- Va. Code § 19.2-60: Search warrants
+- VA Const. Art. I, § 10: Protection against unreasonable searches
+- Lowe v. Commonwealth, 218 Va. 670 (1977): Virginia constitutional analysis
+- McCain v. Commonwealth, 261 Va. 483 (2001): Suppression standards
+
+Generate 3-5 paragraphs that:
+1. State the applicable constitutional and statutory standards
+2. Apply the specific constitutional violation to the facts
+3. Cite VA Const. Art. I, § 10 for Virginia constitutional analysis
+4. Address any potential government arguments
+
+Use proper Virginia legal citation format.`,
+    aiInstructions: "Must cite Va. Code § 19.2-60 and VA Const. Art. I, § 10.",
+    helpText: "AI will generate Virginia-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court to:
+
+1. Suppress and exclude from evidence all items seized as described herein, as fruits of an unlawful search and/or seizure in violation of the Fourth Amendment to the United States Constitution and Article I, Section 10 of the Virginia Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein;
+
+3. Suppress and exclude any evidence derived from the illegally obtained evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Virginia prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, certify that on the date below, I served a copy of the foregoing MOTION TO SUPPRESS EVIDENCE on all parties in this action by the following method:
+
+[ ] BY MAIL
+[ ] BY PERSONAL SERVICE
+[ ] BY ELECTRONIC SERVICE
+
+COMMONWEALTH OF VIRGINIA
+c/o Commonwealth's Attorney
+________________________________
+________________________________
+
+Executed on __________________, 20___.
+
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Virginia-specific certificate of service format",
+  },
+];
+
+const vaFederalSections: TemplateSection[] = [
+  ...vaBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Virginia.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Federal Rule of Criminal Procedure 12(b)(3), a defendant may move to suppress evidence before trial.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable federal law includes Fourth Circuit precedent on suppression motions.
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Fourth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Washington Sections
+// ============================================================================
+
+const waCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located", validation: { ...input.validation, options: WA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of Washington, [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-X-XXXXX-X" }
+    : input
+);
+
+const waBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: waCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const washingtonSections: TemplateSection[] = [
+  ...waBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (CrR 3.6) in a Washington criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under CrR 3.6, a defendant may move to suppress evidence. WA Const. Art. I, § 7 provides broader protections than the federal Fourth Amendment.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Washington CrR 3.6 motion.",
+    helpText: "AI will generate a Washington-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under CrR 3.6.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Washington law includes:
+- CrR 3.6: Suppression hearing
+- WA Const. Art. I, § 7: Private affairs clause (broader than federal)
+- State v. Gunwall, 106 Wn.2d 54 (1986): Independent state constitutional analysis
+- State v. Ferrier, 136 Wn.2d 103 (1998): Knock and talk doctrine
+
+Generate 3-5 paragraphs emphasizing Washington's broader privacy protections under Article I, Section 7.`,
+    aiInstructions: "Must cite CrR 3.6, WA Const. Art. I, § 7, and State v. Gunwall.",
+    helpText: "AI will generate Washington-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to CrR 3.6 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, in violation of the Fourth Amendment and Article I, Section 7 of the Washington Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant as described herein;
+
+3. Suppress and exclude any evidence derived from the illegally obtained evidence;
+
+4. Grant a CrR 3.6 hearing on this motion;
+
+5. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Washington prayer for relief citing CrR 3.6",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I caused to be served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF WASHINGTON
+c/o Prosecuting Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Washington-specific certificate of service format",
+  },
+];
+
+const waFederalSections: TemplateSection[] = [
+  ...waBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Washington.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence with Ninth Circuit precedent.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Ninth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Arizona Sections
+// ============================================================================
+
+const azCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located", validation: { ...input.validation, options: AZ_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of Arizona, [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CR YYYY-XXXXXX" }
+    : input
+);
+
+const azBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: azCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const arizonaSections: TemplateSection[] = [
+  ...azBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (Ariz. R. Crim. P. 16) in an Arizona criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Ariz. R. Crim. P. 16, a defendant may move to suppress evidence. AZ Const. Art. II, § 8 provides protections against unreasonable searches.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for an Arizona Ariz. R. Crim. P. 16 motion.",
+    helpText: "AI will generate an Arizona-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Ariz. R. Crim. P. 16.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Arizona law includes:
+- Ariz. R. Crim. P. 16: Discovery; disclosure
+- AZ Const. Art. II, § 8: Right to privacy
+- State v. Ault, 150 Ariz. 459 (1986): Arizona constitutional analysis
+- A.R.S. § 13-3925: Search warrant requirements
+
+Generate 3-5 paragraphs applying Arizona constitutional standards.`,
+    aiInstructions: "Must cite Ariz. R. Crim. P. 16 and AZ Const. Art. II, § 8.",
+    helpText: "AI will generate Arizona-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Ariz. R. Crim. P. 16 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, in violation of the Fourth Amendment and Article II, Section 8 of the Arizona Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant;
+
+3. Suppress and exclude any derivative evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other relief as this Court deems just and proper.`,
+    helpText: "Arizona prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF ARIZONA
+c/o County Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Arizona-specific certificate of service format",
+  },
+];
+
+const azFederalSections: TemplateSection[] = [
+  ...azBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Arizona.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence with Ninth Circuit precedent.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Ninth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Massachusetts Sections
+// ============================================================================
+
+const maCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located", validation: { ...input.validation, options: MA_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., [County] Superior Court" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXXX CR XXXXX" }
+    : input
+);
+
+const maBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: maCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const massachusettsSections: TemplateSection[] = [
+  ...maBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (Mass. R. Crim. P. 13) in a Massachusetts criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Mass. R. Crim. P. 13, a defendant may move to suppress evidence. MA Const. Part I, Art. XIV provides broader protections than the federal Fourth Amendment.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Massachusetts Mass. R. Crim. P. 13 motion.",
+    helpText: "AI will generate a Massachusetts-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Mass. R. Crim. P. 13.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Massachusetts law includes:
+- Mass. R. Crim. P. 13: Pre-trial motions
+- MA Const. Part I, Art. XIV: Protection against unreasonable searches
+- Commonwealth v. Upton, 394 Mass. 363 (1985): Massachusetts rejects Gates totality test
+- Commonwealth v. Blood, 400 Mass. 61 (1987): Massachusetts search and seizure law
+
+Generate 3-5 paragraphs emphasizing Massachusetts' broader privacy protections.`,
+    aiInstructions: "Must cite Mass. R. Crim. P. 13 and MA Const. Part I, Art. XIV.",
+    helpText: "AI will generate Massachusetts-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Mass. R. Crim. P. 13 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, in violation of the Fourth Amendment and Article XIV of the Massachusetts Declaration of Rights;
+
+2. Suppress and exclude any and all statements made by the Defendant;
+
+3. Suppress and exclude any derivative evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other relief as this Court deems just and proper.`,
+    helpText: "Massachusetts prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+COMMONWEALTH OF MASSACHUSETTS
+c/o District Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Massachusetts-specific certificate of service format",
+  },
+];
+
+const maFederalSections: TemplateSection[] = [
+  ...maBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Massachusetts.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence with First Circuit precedent.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and First Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Tennessee Sections
+// ============================================================================
+
+const tnCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located", validation: { ...input.validation, options: TN_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Criminal Court of [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., YYYY-CR-XXXX" }
+    : input
+);
+
+const tnBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: tnCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const tennesseeSections: TemplateSection[] = [
+  ...tnBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (Tenn. R. Crim. P. 12) in a Tennessee criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Tenn. R. Crim. P. 12, a defendant may move to suppress evidence. TN Const. Art. I, § 7 provides protections against unreasonable searches.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Tennessee Tenn. R. Crim. P. 12 motion.",
+    helpText: "AI will generate a Tennessee-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Tenn. R. Crim. P. 12.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Tennessee law includes:
+- Tenn. R. Crim. P. 12: Pleadings and motions before trial
+- TN Const. Art. I, § 7: Protection against unreasonable searches
+- State v. Downey, 945 S.W.2d 102 (Tenn. 1997): Tennessee constitutional analysis
+- T.C.A. § 40-6-103: Search warrant requirements
+
+Generate 3-5 paragraphs applying Tennessee constitutional standards.`,
+    aiInstructions: "Must cite Tenn. R. Crim. P. 12 and TN Const. Art. I, § 7.",
+    helpText: "AI will generate Tennessee-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Tenn. R. Crim. P. 12 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, in violation of the Fourth Amendment and Article I, Section 7 of the Tennessee Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant;
+
+3. Suppress and exclude any derivative evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other relief as this Court deems just and proper.`,
+    helpText: "Tennessee prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF TENNESSEE
+c/o District Attorney General
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Tennessee-specific certificate of service format",
+  },
+];
+
+const tnFederalSections: TemplateSection[] = [
+  ...tnBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Tennessee.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence with Sixth Circuit precedent.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Sixth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Indiana Sections
+// ============================================================================
+
+const inCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county where the court is located", validation: { ...input.validation, options: IN_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., [County] Superior/Circuit Court" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-XX-XXXX-F-XXXX" }
+    : input
+);
+
+const inBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: inCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const indianaSections: TemplateSection[] = [
+  ...inBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (Ind. R. Crim. P. 12) in an Indiana criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Ind. R. Crim. P. 12, a defendant may move to suppress evidence. IN Const. Art. I, § 11 provides protections against unreasonable searches, and Indiana uses the Litchfield reasonableness test.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for an Indiana Ind. R. Crim. P. 12 motion.",
+    helpText: "AI will generate an Indiana-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Ind. R. Crim. P. 12.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Indiana law includes:
+- Ind. R. Crim. P. 12: Pleadings and motions before trial
+- IN Const. Art. I, § 11: Protection against unreasonable searches
+- Litchfield v. State, 824 N.E.2d 356 (Ind. 2005): Indiana's reasonableness test
+- IC 35-33-5: Search warrant requirements
+
+Generate 3-5 paragraphs applying the Litchfield reasonableness analysis.`,
+    aiInstructions: "Must cite Ind. R. Crim. P. 12, IN Const. Art. I, § 11, and Litchfield v. State.",
+    helpText: "AI will generate Indiana-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Ind. R. Crim. P. 12 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, in violation of the Fourth Amendment and Article I, Section 11 of the Indiana Constitution;
+
+2. Suppress and exclude any and all statements made by the Defendant;
+
+3. Suppress and exclude any derivative evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other relief as this Court deems just and proper.`,
+    helpText: "Indiana prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF INDIANA
+c/o Prosecuting Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Indiana-specific certificate of service format",
+  },
+];
+
+const inFederalSections: TemplateSection[] = [
+  ...inBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Indiana.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence with Seventh Circuit precedent.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Seventh Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Maryland Sections
+// ============================================================================
+
+const mdCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "county"
+    ? { ...input, helpText: "The county or Baltimore City where the court is located", validation: { ...input.validation, options: MD_COUNTIES } }
+    : input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court for [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXXXXXXX" }
+    : input
+);
+
+const mdBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: mdCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+];
+
+const marylandSections: TemplateSection[] = [
+  ...mdBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence (Md. Rule 4-252) in a Maryland criminal matter.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Under Md. Rule 4-252, a defendant may file a motion to suppress evidence. MD Const. Decl. of Rights, Art. 26 provides protections against unreasonable searches.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Maryland Md. Rule 4-252 motion.",
+    helpText: "AI will generate a Maryland-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to suppress evidence under Md. Rule 4-252.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Applicable Maryland law includes:
+- Md. Rule 4-252: Motions in circuit court
+- MD Const. Decl. of Rights, Art. 26: Protection against unreasonable searches
+- Dashiell v. State, 374 Md. 85 (2003): Maryland constitutional analysis
+- Md. Code, Crim. Proc. § 1-203: Exclusionary rule
+
+Generate 3-5 paragraphs applying Maryland constitutional standards.`,
+    aiInstructions: "Must cite Md. Rule 4-252 and MD Const. Decl. of Rights, Art. 26.",
+    helpText: "AI will generate Maryland-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Md. Rule 4-252 to:
+
+1. Suppress and exclude from evidence all items seized as described herein, in violation of the Fourth Amendment and Article 26 of the Maryland Declaration of Rights;
+
+2. Suppress and exclude any and all statements made by the Defendant;
+
+3. Suppress and exclude any derivative evidence;
+
+4. Grant an evidentiary hearing on this motion;
+
+5. Grant such other relief as this Court deems just and proper.`,
+    helpText: "Maryland prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By MDEC electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF MARYLAND
+c/o State's Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Maryland-specific certificate of service format",
+  },
+];
+
+const mdFederalSections: TemplateSection[] = [
+  ...mdBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion to suppress evidence in a federal criminal matter in the District of Maryland.
+
+Evidence Details:
+- Type of Evidence: {{evidenceType}}
+- Description: {{evidenceDescription}}
+- Date Obtained: {{dateObtained}}
+- Location: {{locationObtained}}
+- Constitutional Basis: {{constitutionalBasis}}
+- Factual Basis: {{factualBasis}}
+- Warrant Status: {{warrantIssued}}
+- Miranda Status: {{mirandaGiven}}
+- Consent Status: {{consentGiven}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal suppression motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a federal motion to suppress evidence with Fourth Circuit precedent.
+
+Evidence Type: {{evidenceType}}
+Constitutional Basis: {{constitutionalBasis}}
+Factual Basis: {{factualBasis}}
+Warrant Status: {{warrantIssued}}
+Miranda Status: {{mirandaGiven}}
+Consent Status: {{consentGiven}}
+
+Generate 3-5 paragraphs applying federal constitutional standards.`,
+    aiInstructions: "Must cite Fed. R. Crim. P. 12(b)(3) and Fourth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 7,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Federal Rule of Criminal Procedure 12(b)(3) to suppress and exclude the evidence described herein and grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[7],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 9,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I hereby certify that on the date below, I served a copy of the foregoing via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -3118,11 +5457,207 @@ export const motionToSuppressTemplate: DocumentTemplate = {
       sections: gaFederalSections,
       courtSpecificRules: "S.D. Ga.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Must be filed before trial. CM/ECF electronic filing required. GASD L.R. 5.1.",
     },
+    // North Carolina
+    {
+      jurisdiction: "NC",
+      courtType: "state",
+      sections: northCarolinaSections,
+      courtSpecificRules: "Filed under N.C. Gen. Stat. § 15A-974. NC Const. Art. I, § 20 provides protections against unreasonable searches.",
+    },
+    {
+      jurisdiction: "NC",
+      courtType: "federal",
+      district: "EDNC",
+      sections: ncFederalSections,
+      courtSpecificRules: "E.D.N.C.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Fourth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "NC",
+      courtType: "federal",
+      district: "MDNC",
+      sections: ncFederalSections,
+      courtSpecificRules: "M.D.N.C.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Fourth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "NC",
+      courtType: "federal",
+      district: "WDNC",
+      sections: ncFederalSections,
+      courtSpecificRules: "W.D.N.C.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Fourth Circuit. CM/ECF required.",
+    },
+    // Michigan
+    {
+      jurisdiction: "MI",
+      courtType: "state",
+      sections: michiganSections,
+      courtSpecificRules: "Filed under MCR 6.101(C). MI Const. Art. I, § 11 provides protections against unreasonable searches.",
+    },
+    {
+      jurisdiction: "MI",
+      courtType: "federal",
+      district: "EDMI",
+      sections: miFederalSections,
+      courtSpecificRules: "E.D. Mich.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Sixth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "MI",
+      courtType: "federal",
+      district: "WDMI",
+      sections: miFederalSections,
+      courtSpecificRules: "W.D. Mich.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Sixth Circuit. CM/ECF required.",
+    },
+    // New Jersey
+    {
+      jurisdiction: "NJ",
+      courtType: "state",
+      sections: newJerseySections,
+      courtSpecificRules: "Filed under N.J. Ct. R. 3:5-7. NJ Const. Art. I, § 7 provides broader protections than federal. No good faith exception.",
+    },
+    {
+      jurisdiction: "NJ",
+      courtType: "federal",
+      district: "DNJ",
+      sections: njFederalSections,
+      courtSpecificRules: "D.N.J.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Third Circuit. CM/ECF required.",
+    },
+    // Virginia
+    {
+      jurisdiction: "VA",
+      courtType: "state",
+      sections: virginiaSections,
+      courtSpecificRules: "Filed under Va. Code § 19.2-60. VA Const. Art. I, § 10 provides protections against unreasonable searches.",
+    },
+    {
+      jurisdiction: "VA",
+      courtType: "federal",
+      district: "EDVA",
+      sections: vaFederalSections,
+      courtSpecificRules: "E.D. Va.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Fourth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "VA",
+      courtType: "federal",
+      district: "WDVA",
+      sections: vaFederalSections,
+      courtSpecificRules: "W.D. Va.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Fourth Circuit. CM/ECF required.",
+    },
+    // Washington
+    {
+      jurisdiction: "WA",
+      courtType: "state",
+      sections: washingtonSections,
+      courtSpecificRules: "Filed under CrR 3.6. WA Const. Art. I, § 7 provides broader protections than federal Fourth Amendment.",
+    },
+    {
+      jurisdiction: "WA",
+      courtType: "federal",
+      district: "EDWA",
+      sections: waFederalSections,
+      courtSpecificRules: "E.D. Wash.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Ninth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "WA",
+      courtType: "federal",
+      district: "WDWA",
+      sections: waFederalSections,
+      courtSpecificRules: "W.D. Wash.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Ninth Circuit. CM/ECF required.",
+    },
+    // Arizona
+    {
+      jurisdiction: "AZ",
+      courtType: "state",
+      sections: arizonaSections,
+      courtSpecificRules: "Filed under Ariz. R. Crim. P. 16. AZ Const. Art. II, § 8 provides protections against unreasonable searches.",
+    },
+    {
+      jurisdiction: "AZ",
+      courtType: "federal",
+      district: "DAZ",
+      sections: azFederalSections,
+      courtSpecificRules: "D. Ariz.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Ninth Circuit. CM/ECF required.",
+    },
+    // Massachusetts
+    {
+      jurisdiction: "MA",
+      courtType: "state",
+      sections: massachusettsSections,
+      courtSpecificRules: "Filed under Mass. R. Crim. P. 13. MA Const. Part I, Art. XIV provides broader protections than federal.",
+    },
+    {
+      jurisdiction: "MA",
+      courtType: "federal",
+      district: "DMA",
+      sections: maFederalSections,
+      courtSpecificRules: "D. Mass.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). First Circuit. CM/ECF required.",
+    },
+    // Tennessee
+    {
+      jurisdiction: "TN",
+      courtType: "state",
+      sections: tennesseeSections,
+      courtSpecificRules: "Filed under Tenn. R. Crim. P. 12. TN Const. Art. I, § 7 provides protections against unreasonable searches.",
+    },
+    {
+      jurisdiction: "TN",
+      courtType: "federal",
+      district: "EDTN",
+      sections: tnFederalSections,
+      courtSpecificRules: "E.D. Tenn.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Sixth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "TN",
+      courtType: "federal",
+      district: "MDTN",
+      sections: tnFederalSections,
+      courtSpecificRules: "M.D. Tenn.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Sixth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "TN",
+      courtType: "federal",
+      district: "WDTN",
+      sections: tnFederalSections,
+      courtSpecificRules: "W.D. Tenn.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Sixth Circuit. CM/ECF required.",
+    },
+    // Indiana
+    {
+      jurisdiction: "IN",
+      courtType: "state",
+      sections: indianaSections,
+      courtSpecificRules: "Filed under Ind. R. Crim. P. 12. IN Const. Art. I, § 11 uses Litchfield reasonableness test.",
+    },
+    {
+      jurisdiction: "IN",
+      courtType: "federal",
+      district: "NDIN",
+      sections: inFederalSections,
+      courtSpecificRules: "N.D. Ind.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Seventh Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "IN",
+      courtType: "federal",
+      district: "SDIN",
+      sections: inFederalSections,
+      courtSpecificRules: "S.D. Ind.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Seventh Circuit. CM/ECF required.",
+    },
+    // Maryland
+    {
+      jurisdiction: "MD",
+      courtType: "state",
+      sections: marylandSections,
+      courtSpecificRules: "Filed under Md. Rule 4-252. MD Const. Decl. of Rights, Art. 26 provides protections against unreasonable searches.",
+    },
+    {
+      jurisdiction: "MD",
+      courtType: "federal",
+      district: "DMD",
+      sections: mdFederalSections,
+      courtSpecificRules: "D. Md.: 12pt font. Filed under Fed. R. Crim. P. 12(b)(3). Fourth Circuit. CM/ECF required.",
+    },
   ],
   estimatedCompletionTime: "15-25 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD"],
 };
 
 export default motionToSuppressTemplate;
