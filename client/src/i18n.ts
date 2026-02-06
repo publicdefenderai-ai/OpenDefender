@@ -2785,7 +2785,7 @@ i18n
             "description": "AI-powered drafting for common criminal and immigration filings. Generate motions, notices, and other documents tailored to your client's case.",
             "feature1": "Motions to Continue, Discovery, Bail Reduction",
             "feature2": "Immigration court filings (EOIR-28, Bond Memos)",
-            "feature3": "Jurisdiction-specific formatting (CA, NY, TX, FL)",
+            "feature3": "Jurisdiction-specific formatting",
             "getStarted": "Get Started",
             "button": "Coming Soon"
           },
@@ -5619,7 +5619,7 @@ i18n
             "description": "Redacción impulsada por IA para presentaciones penales e inmigratorias comunes. Genere mociones, avisos y otros documentos adaptados al caso de su cliente.",
             "feature1": "Mociones de Continuación, Descubrimiento, Reducción de Fianza",
             "feature2": "Presentaciones de tribunal de inmigración (EOIR-28, Memorandos de Fianza)",
-            "feature3": "Formato específico por jurisdicción (CA, NY, TX, FL)",
+            "feature3": "Formato específico por jurisdicción",
             "getStarted": "Comenzar",
             "button": "Próximamente"
           },

@@ -159,7 +159,7 @@ export default function AttorneyPortal() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    {t('attorneyPortal.documentGeneration.feature3', 'Jurisdiction-specific formatting (CA, NY, TX, FL)')}
+                    {t('attorneyPortal.documentGeneration.feature3', 'Jurisdiction-specific formatting')}
                   </li>
                 </ul>
                 <Link href="/attorney/documents">
