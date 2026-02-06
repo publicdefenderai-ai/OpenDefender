@@ -212,6 +212,16 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
     try {
       const formData = form.getValues();
 
+      if (jurisdictionSelection.county) {
+        formData.county = jurisdictionSelection.county;
+        if (jurisdictionSelection.county === "other" && jurisdictionSelection.countyOther) {
+          formData.countyOther = jurisdictionSelection.countyOther;
+        }
+      }
+      if (jurisdictionSelection.division) {
+        formData.department = jurisdictionSelection.division;
+      }
+
       const result = await generateDocument({
         templateId: template.id,
         jurisdiction: jurisdictionSelection.jurisdiction,
@@ -289,7 +299,7 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <TemplateFormSection section={currentSection} />
+                  <TemplateFormSection section={currentSection} jurisdictionContext={jurisdictionSelection} />
                   {isLastFormSection && (
                     <div className="mt-6">
                       <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />

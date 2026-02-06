@@ -8,7 +8,7 @@
  */
 
 import type { DocumentTemplate, TemplateSection, TemplateInput } from "./schema";
-import { CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES, PA_COUNTIES, IL_COUNTIES, OH_COUNTIES, GA_COUNTIES, NC_COUNTIES, MI_COUNTIES, NJ_COUNTIES, VA_COUNTIES, WA_COUNTIES, AZ_COUNTIES, MA_COUNTIES, TN_COUNTIES, IN_COUNTIES, MD_COUNTIES } from "./county-data";
+
 
 // ============================================================================
 // Section Inputs
@@ -38,32 +38,6 @@ const captionInputs: TemplateInput[] = [
     placeholder: "Full legal name",
     required: true,
     helpText: "The defendant's full legal name as it appears in court records",
-  },
-  {
-    id: "county",
-    label: "County",
-    type: "select",
-    required: false,
-    helpText: "The county where the court is located (select jurisdiction first for county list)",
-    validation: {
-      options: [],
-    },
-  },
-  {
-    id: "countyOther",
-    label: "County Name",
-    type: "text",
-    placeholder: "Enter county name",
-    required: false,
-    helpText: "Enter the county name if not listed above",
-  },
-  {
-    id: "department",
-    label: "Department/Division",
-    type: "text",
-    placeholder: "e.g., Department 100",
-    required: false,
-    helpText: "The court department or division, if applicable",
   },
 ];
 
@@ -683,9 +657,7 @@ ____________________________
 // ============================================================================
 
 const caCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: CA_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Superior Court of California, County of Los Angeles" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., BA123456" }
@@ -713,9 +685,7 @@ const caBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const nyCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: NY_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Supreme Court of the State of New York, County of Kings" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., IND-2024-00123" }
@@ -743,9 +713,7 @@ const nyBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const txCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: TX_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., District Court, Harris County, Texas" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., 2024-CR-12345" }
@@ -773,9 +741,7 @@ const txBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const flCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: FL_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Circuit Court, Eleventh Judicial Circuit, Miami-Dade County" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., F24-012345" }
@@ -803,9 +769,7 @@ const flBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const paCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: PA_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Court of Common Pleas, Philadelphia County" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., CP-XX-CR-XXXXXXX-YYYY" }
@@ -833,9 +797,7 @@ const paBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const ilCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: IL_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Circuit Court of Cook County, Illinois" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., YYYY-CF-XXXXXX" }
@@ -863,9 +825,7 @@ const ilBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const ohCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: OH_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Court of Common Pleas, Cuyahoga County, Ohio" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., CR-YYYY-XXXXXX" }
@@ -893,9 +853,7 @@ const ohBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const gaCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: GA_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Superior Court of Fulton County, Georgia" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., YYYY-X-XXXXX" }
@@ -923,9 +881,7 @@ const gaBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const ncCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: NC_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Superior Court of [County], North Carolina" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., YYYY-CRS-XXXXX" }
@@ -953,9 +909,7 @@ const ncBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const miCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: MI_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., [County] Circuit Court" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., YYYY-XXXXXX-FH" }
@@ -983,9 +937,7 @@ const miBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const njCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: NJ_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Superior Court of New Jersey, [County]" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., XX-XX-XXXXXX" }
@@ -1013,9 +965,7 @@ const njBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const vaCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: VA_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Circuit Court of [County/City], Virginia" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., CRXXXXX-XX" }
@@ -1043,9 +993,7 @@ const vaBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const waCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: WA_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Superior Court of Washington, [County]" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., XX-X-XXXXX-X" }
@@ -1073,9 +1021,7 @@ const waBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const azCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: AZ_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Superior Court of Arizona, [County]" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., CR-YYYY-XXXXXX" }
@@ -1103,9 +1049,7 @@ const azBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const maCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: MA_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., [County] Superior Court" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., XXXX-CRXXXXXX" }
@@ -1133,9 +1077,7 @@ const maBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const tnCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: TN_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Criminal Court of [County], Tennessee" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., YYYY-X-XXXXX" }
@@ -1163,9 +1105,7 @@ const tnBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const inCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: IN_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., [County] Superior/Circuit Court" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., XX-FXXXXXX" }
@@ -1193,9 +1133,7 @@ const inBaseSections: TemplateSection[] = [
 // ============================================================================
 
 const mdCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
-  input.id === "county"
-    ? { ...input, helpText: "The county where the court is located (used in caption for state courts)", validation: { ...input.validation, options: MD_COUNTIES } }
-    : input.id === "courtName"
+  input.id === "courtName"
     ? { ...input, placeholder: "e.g., Circuit Court for [County], Maryland" }
     : input.id === "caseNumber"
     ? { ...input, placeholder: "e.g., XXX-K-XX-XXXXXX" }
