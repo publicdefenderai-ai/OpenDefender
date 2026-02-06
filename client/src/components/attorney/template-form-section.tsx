@@ -345,105 +345,81 @@ export function JurisdictionSelector({
     }
   };
 
+  const selectedJurisdiction = availableJurisdictions.find((j) => j.value === value.jurisdiction);
+
   return (
-    <div className="space-y-3">
-      {availableJurisdictions.map((jurisdiction) => (
-        <div
-          key={jurisdiction.value}
-          onClick={() => handleJurisdictionSelect(jurisdiction.value)}
-          className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-            value.jurisdiction === jurisdiction.value
-              ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
-              : "border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600"
-          }`}
+    <div className="space-y-4">
+      <div>
+        <label className="text-sm font-medium mb-1.5 block">Jurisdiction</label>
+        <Select
+          value={value.jurisdiction || ""}
+          onValueChange={(val) => handleJurisdictionSelect(val)}
         >
-          <div className="flex items-center gap-3">
-            <div
-              className={`w-4 h-4 rounded-full border-2 ${
-                value.jurisdiction === jurisdiction.value
-                  ? "border-blue-500 bg-blue-500"
-                  : "border-slate-300"
-              }`}
-            >
-              {value.jurisdiction === jurisdiction.value && (
-                <div className="w-full h-full rounded-full flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full" />
-                </div>
-              )}
-            </div>
-            <div>
-              <p className="font-medium">{jurisdiction.label}</p>
-              <p className="text-sm text-muted-foreground">{jurisdiction.description}</p>
-            </div>
-          </div>
-        </div>
-      ))}
-
-      {/* Court type selector — shown when jurisdiction has federal district support */}
-      {value.jurisdiction !== "generic" && hasFederalSupport && (
-        <div className="ml-7 mt-2 space-y-2">
-          <p className="text-sm font-medium text-muted-foreground">Court Type</p>
-          <div className="flex gap-3">
-            {[
-              { type: "state" as const, label: "State Court", desc:
-                value.jurisdiction === "NY" ? "NY Supreme Court (22 NYCRR formatting)" :
-                value.jurisdiction === "TX" ? "TX District Court (14pt font)" :
-                value.jurisdiction === "FL" ? "FL Circuit Court (12pt font)" :
-                value.jurisdiction === "PA" ? "PA Court of Common Pleas (Pa.R.Crim.P. formatting)" :
-                value.jurisdiction === "IL" ? "IL Circuit Court (Ill. S. Ct. Rules formatting)" :
-                value.jurisdiction === "OH" ? "OH Court of Common Pleas (Ohio Crim.R. formatting)" :
-                value.jurisdiction === "GA" ? "GA Superior Court (Uniform Superior Court Rules)" :
-                value.jurisdiction === "NC" ? "NC Superior Court (NC Gen. Stat. formatting)" :
-                value.jurisdiction === "MI" ? "MI Circuit Court (MCR formatting)" :
-                value.jurisdiction === "NJ" ? "NJ Superior Court (NJ Ct. R. formatting)" :
-                value.jurisdiction === "VA" ? "VA Circuit Court (VA Code formatting)" :
-                value.jurisdiction === "WA" ? "WA Superior Court (CrR formatting)" :
-                value.jurisdiction === "AZ" ? "AZ Superior Court (ARS formatting)" :
-                value.jurisdiction === "MA" ? "MA Superior Court (Mass. R. Crim. P. formatting)" :
-                value.jurisdiction === "TN" ? "TN Criminal Court (Tenn. R. Crim. P. formatting)" :
-                value.jurisdiction === "IN" ? "IN Circuit/Superior Court (IC formatting)" :
-                value.jurisdiction === "MD" ? "MD Circuit Court (Md. Rule formatting)" :
-                "CA Superior Court (CRC formatting)" },
-              { type: "federal" as const, label: "Federal Court", desc: "U.S. District Court (12pt font)" },
-            ].map((ct) => (
-              <div
-                key={ct.type}
-                onClick={(e) => { e.stopPropagation(); handleCourtTypeChange(ct.type); }}
-                className={`flex-1 p-3 rounded-lg border-2 cursor-pointer transition-colors ${
-                  (value.courtType || "state") === ct.type
-                    ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
-                    : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
-                }`}
-              >
-                <p className="font-medium text-sm">{ct.label}</p>
-                <p className="text-xs text-muted-foreground">{ct.desc}</p>
-              </div>
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select a jurisdiction..." />
+          </SelectTrigger>
+          <SelectContent>
+            {availableJurisdictions.map((jurisdiction) => (
+              <SelectItem key={jurisdiction.value} value={jurisdiction.value}>
+                {jurisdiction.label}
+              </SelectItem>
             ))}
+          </SelectContent>
+        </Select>
+        {selectedJurisdiction && (
+          <p className="text-sm text-muted-foreground mt-1.5">{selectedJurisdiction.description}</p>
+        )}
+      </div>
+
+      {value.jurisdiction !== "generic" && value.jurisdiction && hasFederalSupport && (
+        <div className="space-y-3">
+          <div>
+            <label className="text-sm font-medium mb-1.5 block">Court Type</label>
+            <div className="flex gap-3">
+              {[
+                { type: "state" as const, label: "State Court" },
+                { type: "federal" as const, label: "Federal Court" },
+              ].map((ct) => (
+                <div
+                  key={ct.type}
+                  onClick={() => handleCourtTypeChange(ct.type)}
+                  className={`flex-1 p-3 rounded-lg border-2 cursor-pointer transition-colors text-center ${
+                    (value.courtType || "state") === ct.type
+                      ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
+                      : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
+                  }`}
+                >
+                  <p className="font-medium text-sm">{ct.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* District selector — shown when federal is selected */}
           {(value.courtType === "federal") && availableDistricts.length > 0 && (
-            <div className="mt-2">
-              <p className="text-sm font-medium text-muted-foreground mb-1">District</p>
-              <div className="space-y-2">
-                {availableDistricts.map((d) => (
-                  <div
-                    key={d.code}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onChange({ jurisdiction: value.jurisdiction, courtType: "federal", district: d.code });
-                    }}
-                    className={`p-3 rounded-lg border-2 cursor-pointer transition-colors ${
-                      value.district === d.code
-                        ? "border-blue-500 bg-blue-50 dark:bg-blue-950/30"
-                        : "border-slate-200 dark:border-slate-700 hover:border-slate-300"
-                    }`}
-                  >
-                    <p className="font-medium text-sm">{d.label}</p>
-                    <p className="text-xs text-muted-foreground">{d.rules}</p>
-                  </div>
-                ))}
-              </div>
+            <div>
+              <label className="text-sm font-medium mb-1.5 block">Federal District</label>
+              <Select
+                value={value.district || ""}
+                onValueChange={(val) => {
+                  onChange({ jurisdiction: value.jurisdiction, courtType: "federal", district: val });
+                }}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a federal district..." />
+                </SelectTrigger>
+                <SelectContent>
+                  {availableDistricts.map((d) => (
+                    <SelectItem key={d.code} value={d.code}>
+                      {d.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              {value.district && (
+                <p className="text-sm text-muted-foreground mt-1.5">
+                  {availableDistricts.find((d) => d.code === value.district)?.rules}
+                </p>
+              )}
             </div>
           )}
         </div>
