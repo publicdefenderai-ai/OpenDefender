@@ -10,7 +10,9 @@ import {
   CA_COUNTIES, NY_COUNTIES, TX_COUNTIES, FL_COUNTIES, PA_COUNTIES,
   IL_COUNTIES, OH_COUNTIES, GA_COUNTIES, NC_COUNTIES, MI_COUNTIES,
   NJ_COUNTIES, VA_COUNTIES, WA_COUNTIES, AZ_COUNTIES, MA_COUNTIES,
-  TN_COUNTIES, IN_COUNTIES, MD_COUNTIES,
+  TN_COUNTIES, IN_COUNTIES, MD_COUNTIES, MO_COUNTIES, WI_COUNTIES,
+  CO_COUNTIES, MN_COUNTIES, SC_COUNTIES, AL_COUNTIES, LA_PARISHES,
+  KY_COUNTIES, OR_COUNTIES, OK_COUNTIES,
 } from "@shared/templates/county-data";
 import {
   FormControl,
@@ -241,7 +243,9 @@ const COUNTY_MAP: Record<string, { value: string; label: string }[]> = {
   PA: PA_COUNTIES, IL: IL_COUNTIES, OH: OH_COUNTIES, GA: GA_COUNTIES,
   NC: NC_COUNTIES, MI: MI_COUNTIES, NJ: NJ_COUNTIES, VA: VA_COUNTIES,
   WA: WA_COUNTIES, AZ: AZ_COUNTIES, MA: MA_COUNTIES, TN: TN_COUNTIES,
-  IN: IN_COUNTIES, MD: MD_COUNTIES,
+  IN: IN_COUNTIES, MD: MD_COUNTIES, MO: MO_COUNTIES, WI: WI_COUNTIES,
+  CO: CO_COUNTIES, MN: MN_COUNTIES, SC: SC_COUNTIES, AL: AL_COUNTIES,
+  LA: LA_PARISHES, KY: KY_COUNTIES, OR: OR_COUNTIES, OK: OK_COUNTIES,
 };
 
 const DISTRICT_DIVISIONS: Record<string, { value: string; label: string }[]> = {
@@ -405,6 +409,35 @@ const ALL_DISTRICTS = [
   { code: "NDIN", label: "Northern District of Indiana (NDIN)", rules: "NDIN local rules, 12pt font", jurisdiction: "IN" },
   { code: "SDIN", label: "Southern District of Indiana (SDIN)", rules: "SDIN local rules, 12pt font", jurisdiction: "IN" },
   { code: "DMD", label: "District of Maryland (DMD)", rules: "DMD local rules, 12pt font", jurisdiction: "MD" },
+  // Missouri
+  { code: "EDMO", label: "Eastern District of Missouri (EDMO)", rules: "EDMO local rules, 12pt font", jurisdiction: "MO" },
+  { code: "WDMO", label: "Western District of Missouri (WDMO)", rules: "WDMO local rules, 12pt font", jurisdiction: "MO" },
+  // Wisconsin
+  { code: "EDWI", label: "Eastern District of Wisconsin (EDWI)", rules: "EDWI local rules, 12pt font", jurisdiction: "WI" },
+  { code: "WDWI", label: "Western District of Wisconsin (WDWI)", rules: "WDWI local rules, 12pt font", jurisdiction: "WI" },
+  // Colorado
+  { code: "DCO", label: "District of Colorado (DCO)", rules: "DCO local rules, 12pt font", jurisdiction: "CO" },
+  // Minnesota
+  { code: "DMN", label: "District of Minnesota (DMN)", rules: "DMN local rules, 12pt font", jurisdiction: "MN" },
+  // South Carolina
+  { code: "DSC", label: "District of South Carolina (DSC)", rules: "DSC local rules, 12pt font", jurisdiction: "SC" },
+  // Alabama
+  { code: "NDAL", label: "Northern District of Alabama (NDAL)", rules: "NDAL local rules, 12pt font", jurisdiction: "AL" },
+  { code: "MDAL", label: "Middle District of Alabama (MDAL)", rules: "MDAL local rules, 12pt font", jurisdiction: "AL" },
+  { code: "SDAL", label: "Southern District of Alabama (SDAL)", rules: "SDAL local rules, 12pt font", jurisdiction: "AL" },
+  // Louisiana
+  { code: "EDLA", label: "Eastern District of Louisiana (EDLA)", rules: "EDLA local rules, 12pt font", jurisdiction: "LA" },
+  { code: "MDLA", label: "Middle District of Louisiana (MDLA)", rules: "MDLA local rules, 12pt font", jurisdiction: "LA" },
+  { code: "WDLA", label: "Western District of Louisiana (WDLA)", rules: "WDLA local rules, 12pt font", jurisdiction: "LA" },
+  // Kentucky
+  { code: "EDKY", label: "Eastern District of Kentucky (EDKY)", rules: "EDKY local rules, 12pt font", jurisdiction: "KY" },
+  { code: "WDKY", label: "Western District of Kentucky (WDKY)", rules: "WDKY local rules, 12pt font", jurisdiction: "KY" },
+  // Oregon
+  { code: "DOR", label: "District of Oregon (DOR)", rules: "DOR local rules, 12pt font", jurisdiction: "OR" },
+  // Oklahoma
+  { code: "NDOK", label: "Northern District of Oklahoma (NDOK)", rules: "NDOK local rules, 12pt font", jurisdiction: "OK" },
+  { code: "EDOK", label: "Eastern District of Oklahoma (EDOK)", rules: "EDOK local rules, 12pt font", jurisdiction: "OK" },
+  { code: "WDOK", label: "Western District of Oklahoma (WDOK)", rules: "WDOK local rules, 12pt font", jurisdiction: "OK" },
 ];
 
 export function JurisdictionSelector({
@@ -465,6 +498,16 @@ export function JurisdictionSelector({
     { value: "TN", label: "Tennessee", description: "Uses Tennessee Code Annotated citations" },
     { value: "IN", label: "Indiana", description: "Uses Indiana Code citations" },
     { value: "MD", label: "Maryland", description: "Uses Maryland Code citations" },
+    { value: "MO", label: "Missouri", description: "Uses Missouri Revised Statutes citations" },
+    { value: "WI", label: "Wisconsin", description: "Uses Wisconsin Statutes citations" },
+    { value: "CO", label: "Colorado", description: "Uses Colorado Revised Statutes citations" },
+    { value: "MN", label: "Minnesota", description: "Uses Minnesota Statutes citations" },
+    { value: "SC", label: "South Carolina", description: "Uses SC Code Annotated citations" },
+    { value: "AL", label: "Alabama", description: "Uses Alabama Code citations" },
+    { value: "LA", label: "Louisiana", description: "Uses Louisiana Code of Criminal Procedure citations" },
+    { value: "KY", label: "Kentucky", description: "Uses Kentucky Revised Statutes citations" },
+    { value: "OR", label: "Oregon", description: "Uses Oregon Revised Statutes citations" },
+    { value: "OK", label: "Oklahoma", description: "Uses Oklahoma Statutes citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
