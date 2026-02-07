@@ -1857,6 +1857,236 @@ const okBaseSections: TemplateSection[] = [
   baseSections[2], // reason
 ];
 
+// CT-specific caption inputs
+const ctCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court, Judicial District of [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXX-CR-XX-XXXXXXX" }
+    : input
+);
+
+const ctBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ctCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// UT-specific caption inputs
+const utCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, [County] County, State of Utah" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXXXXX-XXXX" }
+    : input
+);
+
+const utBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: utCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// IA-specific caption inputs
+const iaCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Iowa District Court for [County] County" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXCR-XXXXXX" }
+    : input
+);
+
+const iaBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: iaCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// NV-specific caption inputs
+const nvCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, [County] County, State of Nevada" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-CR-XXXXX" }
+    : input
+);
+
+const nvBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: nvCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// AR-specific caption inputs
+const arCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of [County] County, State of Arkansas" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-CR-XXXX" }
+    : input
+);
+
+const arBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: arCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// MS-specific caption inputs
+const msCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of [County] County, State of Mississippi" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXXX-XX-XXXX-CR" }
+    : input
+);
+
+const msBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: msCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// KS-specific caption inputs
+const ksCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court of [County] County, State of Kansas" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXCR-XXXX" }
+    : input
+);
+
+const ksBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ksCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// NM-specific caption inputs
+const nmCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, [County] County, State of New Mexico" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., D-XXX-CR-XXXX-XXXXX" }
+    : input
+);
+
+const nmBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: nmCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// NE-specific caption inputs
+const neCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court of [County] County, State of Nebraska" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CR XX-XXXX" }
+    : input
+);
+
+const neBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: neCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
+// ID-specific caption inputs
+const idCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court of the [Number] Judicial District, [County] County, State of Idaho" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., CR-XX-XXXXX" }
+    : input
+);
+
+const idBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: idCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1], // hearingInfo
+  baseSections[2], // reason
+];
+
 const floridaSections: TemplateSection[] = [
   ...flBaseSections,
 
@@ -8418,6 +8648,2536 @@ ____________________________
 ];
 
 // ============================================================================
+// Connecticut State Sections
+// ============================================================================
+
+const connecticutSections: TemplateSection[] = [
+  ...ctBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Connecticut criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Conn. Gen. Stat. § 54-82, courts may grant continuances in criminal proceedings upon a showing of good cause. The court has discretion to grant or deny continuances based on the circumstances of the case. The Connecticut Constitution, Art. I, § 8, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Conn. Gen. Stat. § 54-82
+3. Address any concerns about delay, particularly regarding speedy trial rights and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Conn. Gen. Stat. § 54-82 and CT Practice Book § 43-10 where appropriate. Use Connecticut legal citation format.",
+    helpText: "AI will generate a Connecticut-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Connecticut criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Connecticut law includes:
+- Conn. Gen. Stat. § 54-82: Continuances in criminal proceedings
+- Conn. Const. Art. I, § 8: Right to speedy trial
+- CT Practice Book § 43-10: Scheduling and continuance procedures
+- State v. Lloyd, 199 Conn. 359 (1986): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite Conn. Gen. Stat. § 54-82's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Conn. Const. Art. I, § 8 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Connecticut law
+5. Address CT Practice Book § 43-10 scheduling requirements
+
+Use proper Connecticut legal citation format (e.g., "Conn. Gen. Stat. § 54-82").`,
+    aiInstructions: "Must cite Conn. Gen. Stat. § 54-82 and Conn. Const. Art. I, § 8. Use Connecticut citation format throughout.",
+    helpText: "AI will generate Connecticut-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Conn. Gen. Stat. § 54-82 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Connecticut prayer for relief citing Connecticut General Statutes",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF CONNECTICUT
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF CONNECTICUT
+c/o State's Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Connecticut that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Connecticut.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Connecticut-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Connecticut Federal Sections
+// ============================================================================
+
+const ctFederalSections: TemplateSection[] = [
+  ...ctBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Connecticut.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Second Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Connecticut.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Second Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Second Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Second Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Connecticut
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Utah State Sections
+// ============================================================================
+
+const utahSections: TemplateSection[] = [
+  ...utBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Utah criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Utah R. Crim. P. 12(d), courts may grant continuances in criminal proceedings upon a showing of good cause. Utah Code § 77-29-1 (the Disposition of Detainers Act) provides speedy trial protections. The Utah Constitution, Art. I, § 12, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Utah R. Crim. P. 12(d)
+3. Address any concerns about delay, particularly regarding speedy trial rights under Utah Code § 77-29-1 and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Utah R. Crim. P. 12(d) and Utah Code § 77-29-1 where appropriate. Use Utah legal citation format.",
+    helpText: "AI will generate a Utah-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Utah criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Utah law includes:
+- Utah R. Crim. P. 12(d): Continuances in criminal proceedings
+- Utah Const. Art. I, § 12: Right to speedy trial
+- Utah Code § 77-29-1: Disposition of Detainers Act (speedy trial)
+- State v. Trafny, 2007 UT 9: Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite Utah R. Crim. P. 12(d)'s standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Utah Code § 77-29-1 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Utah law
+5. Address Utah Const. Art. I, § 12 speedy trial protections
+
+Use proper Utah legal citation format (e.g., "Utah R. Crim. P. 12(d)").`,
+    aiInstructions: "Must cite Utah R. Crim. P. 12(d) and Utah Const. Art. I, § 12. Use Utah citation format throughout.",
+    helpText: "AI will generate Utah-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Utah R. Crim. P. 12(d) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Utah prayer for relief citing Utah Rules of Criminal Procedure",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF UTAH, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF UTAH
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Utah that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Utah.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Utah-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Utah Federal Sections
+// ============================================================================
+
+const utFederalSections: TemplateSection[] = [
+  ...utBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Utah.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Tenth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Utah.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Tenth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Tenth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Tenth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Utah
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Iowa State Sections
+// ============================================================================
+
+const iowaSections: TemplateSection[] = [
+  ...iaBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in an Iowa criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Iowa R. Crim. P. 2.9, courts may grant continuances in criminal proceedings upon a showing of good cause. Iowa Code § 795.2 provides speedy trial protections requiring trial within 90 days. The Iowa Constitution, Art. I, § 10, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Iowa R. Crim. P. 2.9
+3. Address any concerns about delay, particularly regarding speedy trial rights under Iowa Code § 795.2 and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Iowa R. Crim. P. 2.9 and Iowa Code § 795.2 where appropriate. Use Iowa legal citation format.",
+    helpText: "AI will generate an Iowa-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in an Iowa criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Iowa law includes:
+- Iowa R. Crim. P. 2.9: Continuances in criminal proceedings
+- Iowa Const. Art. I, § 10: Right to speedy trial
+- Iowa Code § 795.2: Speedy trial (90 days)
+- State v. Miller, 637 N.W.2d 201 (Iowa 2001): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite Iowa R. Crim. P. 2.9's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Iowa Code § 795.2 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Iowa law
+5. Address Iowa Const. Art. I, § 10 speedy trial protections
+
+Use proper Iowa legal citation format (e.g., "Iowa R. Crim. P. 2.9").`,
+    aiInstructions: "Must cite Iowa R. Crim. P. 2.9 and Iowa Const. Art. I, § 10. Use Iowa citation format throughout.",
+    helpText: "AI will generate Iowa-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Iowa R. Crim. P. 2.9 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Iowa prayer for relief citing Iowa Rules of Criminal Procedure",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF IOWA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF IOWA
+c/o County Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Iowa that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Iowa.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Iowa-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Iowa Federal Sections
+// ============================================================================
+
+const iaFederalSections: TemplateSection[] = [
+  ...iaBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Iowa.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Eighth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Iowa.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Eighth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Eighth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Eighth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Iowa
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Nevada State Sections
+// ============================================================================
+
+const nevadaSections: TemplateSection[] = [
+  ...nvBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Nevada criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under NRS 174.515, courts may grant continuances in criminal proceedings upon a showing of good cause. NRS 178.556 provides speedy trial protections. The Nevada Constitution, Art. 1, § 8, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under NRS 174.515
+3. Address any concerns about delay, particularly regarding speedy trial rights under NRS 178.556 and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference NRS 174.515 and NRS 178.556 where appropriate. Use Nevada legal citation format.",
+    helpText: "AI will generate a Nevada-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Nevada criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Nevada law includes:
+- NRS 174.515: Continuances in criminal proceedings
+- Nev. Const. Art. 1, § 8: Right to speedy trial
+- NRS 178.556: Speedy trial requirements
+- Bustos v. State, 107 Nev. 752 (1991): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite NRS 174.515's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address NRS 178.556 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Nevada law
+5. Address Nev. Const. Art. 1, § 8 speedy trial protections
+
+Use proper Nevada legal citation format (e.g., "NRS 174.515").`,
+    aiInstructions: "Must cite NRS 174.515 and Nev. Const. Art. 1, § 8. Use Nevada citation format throughout.",
+    helpText: "AI will generate Nevada-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to NRS 174.515 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Nevada prayer for relief citing Nevada Revised Statutes",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF NEVADA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF NEVADA
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Nevada that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Nevada.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Nevada-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Nevada Federal Sections
+// ============================================================================
+
+const nvFederalSections: TemplateSection[] = [
+  ...nvBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Nevada.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Ninth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Nevada.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Ninth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Ninth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Ninth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Nevada
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Arkansas State Sections
+// ============================================================================
+
+const arkansasSections: TemplateSection[] = [
+  ...arBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in an Arkansas criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Ark. R. Crim. P. 27.3, courts may grant continuances in criminal proceedings upon a showing of good cause. Ark. R. Crim. P. 28.1 provides speedy trial protections. The Arkansas Constitution, Art. 2, § 10, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Ark. R. Crim. P. 27.3
+3. Address any concerns about delay, particularly regarding speedy trial rights under Ark. R. Crim. P. 28.1 and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Ark. R. Crim. P. 27.3 and Ark. R. Crim. P. 28.1 where appropriate. Use Arkansas legal citation format.",
+    helpText: "AI will generate an Arkansas-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in an Arkansas criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Arkansas law includes:
+- Ark. R. Crim. P. 27.3: Continuances in criminal proceedings
+- Ark. Const. Art. 2, § 10: Right to speedy trial
+- Ark. R. Crim. P. 28.1: Speedy trial requirements
+- Woolbright v. State, 357 Ark. 63 (2004): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite Ark. R. Crim. P. 27.3's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Ark. R. Crim. P. 28.1 speedy trial implications
+4. Reference the trial court's discretion in granting continuances under Arkansas law
+5. Address Ark. Const. Art. 2, § 10 speedy trial protections
+
+Use proper Arkansas legal citation format (e.g., "Ark. R. Crim. P. 27.3").`,
+    aiInstructions: "Must cite Ark. R. Crim. P. 27.3 and Ark. Const. Art. 2, § 10. Use Arkansas citation format throughout.",
+    helpText: "AI will generate Arkansas-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Ark. R. Crim. P. 27.3 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Arkansas prayer for relief citing Arkansas Rules of Criminal Procedure",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF ARKANSAS, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF ARKANSAS
+c/o Prosecuting Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Arkansas that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Arkansas.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Arkansas-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Arkansas Federal Sections
+// ============================================================================
+
+const arFederalSections: TemplateSection[] = [
+  ...arBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Arkansas.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Eighth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Arkansas.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Eighth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Eighth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Eighth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Arkansas
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Mississippi State Sections
+// ============================================================================
+
+const mississippiSections: TemplateSection[] = [
+  ...msBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Mississippi criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Miss. Code Ann. § 99-17-1, the defendant must be tried within 270 days of arraignment. URCCC 2.04 governs continuance procedures. The Mississippi Constitution, Art. 3, § 26, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Mississippi law
+3. Address any concerns about delay, particularly regarding the 270-day speedy trial requirement under Miss. Code Ann. § 99-17-1 and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Miss. Code Ann. § 99-17-1 and URCCC 2.04 where appropriate. Use Mississippi legal citation format.",
+    helpText: "AI will generate a Mississippi-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Mississippi criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Mississippi law includes:
+- Miss. Code Ann. § 99-17-1: Speedy trial (270 days from arraignment)
+- Miss. Const. Art. 3, § 26: Right to speedy trial
+- URCCC 2.04: Continuance procedures
+- Perry v. State, 637 So. 2d 871 (Miss. 1994): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable Mississippi standard for continuances under URCCC 2.04
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Miss. Code Ann. § 99-17-1 speedy trial implications (270 days)
+4. Reference the trial court's discretion in granting continuances under Mississippi law
+5. Address Miss. Const. Art. 3, § 26 speedy trial protections
+
+Use proper Mississippi legal citation format (e.g., "Miss. Code Ann. § 99-17-1").`,
+    aiInstructions: "Must cite Miss. Code Ann. § 99-17-1 and Miss. Const. Art. 3, § 26. Use Mississippi citation format throughout.",
+    helpText: "AI will generate Mississippi-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to URCCC 2.04 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Mississippi prayer for relief citing Uniform Rules of Circuit and County Court Practice",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF MISSISSIPPI, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF MISSISSIPPI
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Mississippi that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Mississippi.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Mississippi-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Mississippi Federal Sections
+// ============================================================================
+
+const msFederalSections: TemplateSection[] = [
+  ...msBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Mississippi.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Fifth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Mississippi.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Fifth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Fifth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Fifth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Mississippi
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Kansas State Sections
+// ============================================================================
+
+const kansasSections: TemplateSection[] = [
+  ...ksBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Kansas criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under K.S.A. 22-3401, courts may grant continuances in criminal proceedings upon a showing of good cause. K.S.A. 22-3402 provides speedy trial protections (150 days for out-of-custody defendants, 90 days for in-custody defendants). The Kansas Constitution, Bill of Rights, § 10, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under K.S.A. 22-3401
+3. Address any concerns about delay, particularly regarding speedy trial rights under K.S.A. 22-3402 (150/90 days) and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference K.S.A. 22-3401 and K.S.A. 22-3402 where appropriate. Use Kansas legal citation format.",
+    helpText: "AI will generate a Kansas-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Kansas criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Kansas law includes:
+- K.S.A. 22-3401: Continuances in criminal proceedings
+- Kan. Const. Bill of Rights, § 10: Right to speedy trial
+- K.S.A. 22-3402: Speedy trial requirements (150 days out-of-custody, 90 days in-custody)
+- State v. Vaughn, 288 Kan. 140 (2009): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite K.S.A. 22-3401's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address K.S.A. 22-3402 speedy trial implications (90 days in-custody, 150 days out-of-custody)
+4. Reference the trial court's discretion in granting continuances under Kansas law
+5. Address Kan. Const. Bill of Rights, § 10 speedy trial protections
+
+Use proper Kansas legal citation format (e.g., "K.S.A. 22-3401").`,
+    aiInstructions: "Must cite K.S.A. 22-3401 and Kan. Const. Bill of Rights, § 10. Use Kansas citation format throughout.",
+    helpText: "AI will generate Kansas-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to K.S.A. 22-3401 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Kansas prayer for relief citing Kansas Statutes Annotated",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF KANSAS, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF KANSAS
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Kansas that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Kansas.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Kansas-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Kansas Federal Sections
+// ============================================================================
+
+const ksFederalSections: TemplateSection[] = [
+  ...ksBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Kansas.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Tenth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Kansas.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Tenth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Tenth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Tenth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Kansas
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// New Mexico State Sections
+// ============================================================================
+
+const newMexicoSections: TemplateSection[] = [
+  ...nmBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a New Mexico criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under NMRA Rule 5-604, courts may grant continuances in criminal proceedings upon a showing of good cause. State v. Garza, 2009-NMSC-038 establishes a six-month rule for speedy trial. The New Mexico Constitution, Art. II, § 14, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under NMRA Rule 5-604
+3. Address any concerns about delay, particularly regarding speedy trial rights under State v. Garza (six-month rule) and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference NMRA Rule 5-604 and State v. Garza, 2009-NMSC-038 where appropriate. Use New Mexico legal citation format.",
+    helpText: "AI will generate a New Mexico-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a New Mexico criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable New Mexico law includes:
+- NMRA Rule 5-604: Continuances in criminal proceedings
+- N.M. Const. Art. II, § 14: Right to speedy trial
+- State v. Garza, 2009-NMSC-038: Six-month rule for speedy trial
+- State v. Spearman, 2012-NMSC-023: Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite NMRA Rule 5-604's standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address State v. Garza six-month rule implications
+4. Reference the trial court's discretion in granting continuances under New Mexico law
+5. Address N.M. Const. Art. II, § 14 speedy trial protections
+
+Use proper New Mexico legal citation format (e.g., "NMRA Rule 5-604").`,
+    aiInstructions: "Must cite NMRA Rule 5-604 and N.M. Const. Art. II, § 14. Use New Mexico citation format throughout.",
+    helpText: "AI will generate New Mexico-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to NMRA Rule 5-604 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "New Mexico prayer for relief citing New Mexico Rules Annotated",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF NEW MEXICO, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF NEW MEXICO
+c/o District Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of New Mexico that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, New Mexico.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "New Mexico-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// New Mexico Federal Sections
+// ============================================================================
+
+const nmFederalSections: TemplateSection[] = [
+  ...nmBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of New Mexico.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Tenth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of New Mexico.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Tenth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Tenth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Tenth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of New Mexico
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Nebraska State Sections
+// ============================================================================
+
+const nebraskaSections: TemplateSection[] = [
+  ...neBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a Nebraska criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under Nebraska law, courts may grant continuances in criminal proceedings upon a showing of good cause. Neb. Rev. Stat. § 29-1207 provides speedy trial protections requiring trial within 6 months. The Nebraska Constitution, Art. I, § 11, guarantees the right to a speedy trial. State v. Gibbs, 238 Neb. 268, establishes the standard for continuances.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under Nebraska law
+3. Address any concerns about delay, particularly regarding speedy trial rights under Neb. Rev. Stat. § 29-1207 (6 months) and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference Neb. Rev. Stat. § 29-1207 and State v. Gibbs, 238 Neb. 268 where appropriate. Use Nebraska legal citation format.",
+    helpText: "AI will generate a Nebraska-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a Nebraska criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Nebraska law includes:
+- Neb. Rev. Stat. § 29-1207: Speedy trial (6 months)
+- Neb. Const. Art. I, § 11: Right to speedy trial
+- State v. Gibbs, 238 Neb. 268: Standard for continuances
+- State v. Alvarez, 297 Neb. 593 (2017): Continuance and speedy trial analysis
+
+Generate 2-3 paragraphs that:
+1. Cite Neb. Rev. Stat. § 29-1207's speedy trial framework and continuance standard from State v. Gibbs
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address Neb. Rev. Stat. § 29-1207 speedy trial implications (6 months)
+4. Reference the trial court's discretion in granting continuances under Nebraska law
+5. Address Neb. Const. Art. I, § 11 speedy trial protections
+
+Use proper Nebraska legal citation format (e.g., "Neb. Rev. Stat. § 29-1207").`,
+    aiInstructions: "Must cite Neb. Rev. Stat. § 29-1207 and Neb. Const. Art. I, § 11. Use Nebraska citation format throughout.",
+    helpText: "AI will generate Nebraska-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to Neb. Rev. Stat. § 29-1207 and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Nebraska prayer for relief citing Nebraska Revised Statutes",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF NEBRASKA, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF NEBRASKA
+c/o County Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Nebraska that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Nebraska.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Nebraska-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Nebraska Federal Sections
+// ============================================================================
+
+const neFederalSections: TemplateSection[] = [
+  ...neBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Nebraska.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Eighth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Nebraska.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Eighth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Eighth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Eighth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Nebraska
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Idaho State Sections
+// ============================================================================
+
+const idahoSections: TemplateSection[] = [
+  ...idBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in an Idaho criminal matter.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under I.C.R. 12(d), courts may grant continuances in criminal proceedings upon a showing of good cause. I.C. § 19-3501 provides speedy trial protections requiring trial within 6 months. The Idaho Constitution, Art. I, § 13, guarantees the right to a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under I.C.R. 12(d)
+3. Address any concerns about delay, particularly regarding speedy trial rights under I.C. § 19-3501 (6 months) and custody status
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference I.C.R. 12(d) and I.C. § 19-3501 where appropriate. Use Idaho legal citation format.",
+    helpText: "AI will generate an Idaho-specific good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in an Idaho criminal matter.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable Idaho law includes:
+- I.C.R. 12(d): Continuances in criminal proceedings
+- Idaho Const. Art. I, § 13: Right to speedy trial
+- I.C. § 19-3501: Speedy trial requirements (6 months)
+- State v. Clark, 135 Idaho 255 (2000): Standard for reviewing continuance rulings
+
+Generate 2-3 paragraphs that:
+1. Cite I.C.R. 12(d)'s standard for continuances
+2. Apply the standard to the facts of this case
+3. If the defendant is in custody, address I.C. § 19-3501 speedy trial implications (6 months)
+4. Reference the trial court's discretion in granting continuances under Idaho law
+5. Address Idaho Const. Art. I, § 13 speedy trial protections
+
+Use proper Idaho legal citation format (e.g., "I.C.R. 12(d)").`,
+    aiInstructions: "Must cite I.C.R. 12(d) and Idaho Const. Art. I, § 13. Use Idaho citation format throughout.",
+    helpText: "AI will generate Idaho-specific legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to I.C.R. 12(d) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Set the continued hearing date at the Court's earliest convenience that allows sufficient time for the reasons set forth herein;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Idaho prayer for relief citing Idaho Criminal Rules",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+STATE OF IDAHO, COUNTY OF ____________________
+
+I, the undersigned, certify that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] BY MAIL: By depositing a true copy in a sealed envelope in the United States Postal Service, with postage prepaid, addressed as indicated below.
+
+[ ] BY PERSONAL SERVICE: By personally delivering a true copy to the person(s) at the address(es) indicated below.
+
+[ ] BY ELECTRONIC SERVICE: By transmitting a true copy via court e-filing to the email address(es) of record.
+
+STATE OF IDAHO
+c/o Prosecuting Attorney
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the State of Idaho that the foregoing is true and correct.
+
+Executed on __________________, 20___, at ________________, Idaho.
+
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Idaho-specific certificate of service format",
+  },
+];
+
+// ============================================================================
+// Idaho Federal Sections
+// ============================================================================
+
+const idFederalSections: TemplateSection[] = [
+  ...idBaseSections,
+
+  {
+    id: "goodCauseStatement",
+    name: "Good Cause Statement",
+    type: "ai-generated",
+    order: 4,
+    required: true,
+    aiPromptTemplate: `Generate a persuasive good cause statement for a motion to continue in a federal criminal matter in the District of Idaho.
+
+Case Details:
+- Hearing Type: {{hearingType}}
+- Primary Reason: {{primaryReason}}
+- Detailed Explanation: {{reasonExplanation}}
+- Prior Continuances: {{priorContinuances}}
+- Custody Status: {{custodyStatus}}
+- Speedy Trial Waiver: {{speedyTrialWaiver}}
+- Prosecution Position: {{oppositionPosition}}
+
+Under the Speedy Trial Act (18 U.S.C. § 3161), courts may grant continuances when the ends of justice served by granting a continuance outweigh the best interests of the public and the defendant in a speedy trial.
+
+Generate 2-3 paragraphs that:
+1. Clearly state the specific factual basis for the continuance request
+2. Explain why this constitutes good cause under federal standards
+3. Address Speedy Trial Act implications, particularly 18 U.S.C. § 3161(h)(7)
+4. Note if this is stipulated by the prosecution
+5. If prior continuances exist, distinguish this request
+
+Use formal legal writing style. Be persuasive but factual.`,
+    aiInstructions: "Reference 18 U.S.C. § 3161 (Speedy Trial Act) and Federal Rules of Criminal Procedure. Reference Ninth Circuit precedent where applicable. Use federal citation format.",
+    helpText: "AI will generate a federal good cause statement",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 5,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to continue in a federal criminal matter in the District of Idaho.
+
+Hearing Type: {{hearingType}}
+Primary Reason: {{primaryReason}}
+Prior Continuances: {{priorContinuances}}
+Custody Status: {{custodyStatus}}
+Prosecution Position: {{oppositionPosition}}
+Speedy Trial Status: {{speedyTrialWaiver}}
+
+Applicable federal law includes:
+- 18 U.S.C. § 3161 (Speedy Trial Act): 70-day limit for trial after indictment/information; excludable delay under § 3161(h)(7) for ends-of-justice continuances
+- Federal Rules of Criminal Procedure, Rule 50: Prompt disposition
+- 18 U.S.C. § 3161(h)(7)(B)(iv): Factors court must consider
+- Ninth Circuit precedent on Speedy Trial Act continuances
+
+Generate 2-3 paragraphs that:
+1. Cite the applicable federal legal standard for granting continuances
+2. Address the Speedy Trial Act's ends-of-justice balancing test
+3. Apply the legal standard to the facts of this case
+4. Reference Ninth Circuit precedent where applicable
+5. Address any Sixth Amendment speedy trial concerns if defendant is in custody
+
+Use proper federal legal citation format (e.g., "18 U.S.C. § 3161").`,
+    aiInstructions: "Must cite 18 U.S.C. § 3161 and Federal Rules of Criminal Procedure. Reference Ninth Circuit case law. Use federal citation format throughout.",
+    helpText: "AI will generate federal legal arguments with proper citations",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 6,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully requests that this Honorable Court grant this Motion to Continue pursuant to the Federal Rules of Criminal Procedure and 18 U.S.C. § 3161(h)(7) and:
+
+1. Continue the {{hearingType}} hearing currently scheduled for {{currentHearingDate}} at {{currentHearingTime}} to a date convenient for the Court;
+
+2. Find that the ends of justice served by granting such continuance outweigh the best interests of the public and the defendant in a speedy trial, pursuant to 18 U.S.C. § 3161(h)(7)(A);
+
+3. Exclude the resulting delay from computation under the Speedy Trial Act;
+
+4. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Federal prayer for relief citing Speedy Trial Act",
+  },
+
+  baseSections[6],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I, the undersigned, declare that I am over the age of eighteen years and not a party to this action. On the date below, I served a copy of the foregoing MOTION TO CONTINUE on all parties in this action by the following method:
+
+[ ] CM/ECF electronic filing and service
+[ ] U.S. Mail, first class, postage prepaid
+[ ] Personal service
+[ ] Facsimile transmission
+
+UNITED STATES OF AMERICA
+c/o United States Attorney
+District of Idaho
+________________________________
+________________________________
+________________________________
+
+I declare under penalty of perjury under the laws of the United States that the foregoing is true and correct.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]
+
+____________________________
+[Declarant's Name - Printed]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -9059,11 +11819,172 @@ export const motionToContinueTemplate: DocumentTemplate = {
       sections: okFederalSections,
       courtSpecificRules: "W.D. Okla.: 12pt font. Tenth Circuit. CM/ECF required.",
     },
+    // Connecticut
+    {
+      jurisdiction: "CT",
+      courtType: "state",
+      sections: connecticutSections,
+      courtSpecificRules: "Conn. Gen. Stat. § 54-82 governs continuances. CT Practice Book § 43-10 addresses scheduling.",
+    },
+    {
+      jurisdiction: "CT",
+      courtType: "federal",
+      district: "DCT",
+      sections: ctFederalSections,
+      courtSpecificRules: "D. Conn.: 12pt font. Second Circuit. CM/ECF required.",
+    },
+    // Utah
+    {
+      jurisdiction: "UT",
+      courtType: "state",
+      sections: utahSections,
+      courtSpecificRules: "Utah R. Crim. P. 12(d) governs continuances. Utah Code § 77-29-1 addresses speedy trial.",
+    },
+    {
+      jurisdiction: "UT",
+      courtType: "federal",
+      district: "DUT",
+      sections: utFederalSections,
+      courtSpecificRules: "D. Utah: 12pt font. Tenth Circuit. CM/ECF required.",
+    },
+    // Iowa
+    {
+      jurisdiction: "IA",
+      courtType: "state",
+      sections: iowaSections,
+      courtSpecificRules: "Iowa R. Crim. P. 2.9 governs continuances. Iowa Code § 795.2 addresses speedy trial.",
+    },
+    {
+      jurisdiction: "IA",
+      courtType: "federal",
+      district: "NDIA",
+      sections: iaFederalSections,
+      courtSpecificRules: "N.D. Iowa: 12pt font. Eighth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "IA",
+      courtType: "federal",
+      district: "SDIA",
+      sections: iaFederalSections,
+      courtSpecificRules: "S.D. Iowa: 12pt font. Eighth Circuit. CM/ECF required.",
+    },
+    // Nevada
+    {
+      jurisdiction: "NV",
+      courtType: "state",
+      sections: nevadaSections,
+      courtSpecificRules: "NRS 174.515 governs continuances. NRS 178.556 addresses speedy trial.",
+    },
+    {
+      jurisdiction: "NV",
+      courtType: "federal",
+      district: "DNV",
+      sections: nvFederalSections,
+      courtSpecificRules: "D. Nev.: 12pt font. Ninth Circuit. CM/ECF required.",
+    },
+    // Arkansas
+    {
+      jurisdiction: "AR",
+      courtType: "state",
+      sections: arkansasSections,
+      courtSpecificRules: "Ark. R. Crim. P. 27.3 governs continuances. Ark. R. Crim. P. 28.1 addresses speedy trial.",
+    },
+    {
+      jurisdiction: "AR",
+      courtType: "federal",
+      district: "EDAR",
+      sections: arFederalSections,
+      courtSpecificRules: "E.D. Ark.: 12pt font. Eighth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "AR",
+      courtType: "federal",
+      district: "WDAR",
+      sections: arFederalSections,
+      courtSpecificRules: "W.D. Ark.: 12pt font. Eighth Circuit. CM/ECF required.",
+    },
+    // Mississippi
+    {
+      jurisdiction: "MS",
+      courtType: "state",
+      sections: mississippiSections,
+      courtSpecificRules: "Miss. Code Ann. § 99-17-1 governs continuances and speedy trial (270 days). URCCC 2.04 addresses continuance procedures.",
+    },
+    {
+      jurisdiction: "MS",
+      courtType: "federal",
+      district: "NDMS",
+      sections: msFederalSections,
+      courtSpecificRules: "N.D. Miss.: 12pt font. Fifth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "MS",
+      courtType: "federal",
+      district: "SDMS",
+      sections: msFederalSections,
+      courtSpecificRules: "S.D. Miss.: 12pt font. Fifth Circuit. CM/ECF required.",
+    },
+    // Kansas
+    {
+      jurisdiction: "KS",
+      courtType: "state",
+      sections: kansasSections,
+      courtSpecificRules: "K.S.A. 22-3401 governs continuances. K.S.A. 22-3402 addresses speedy trial (150/90 days).",
+    },
+    {
+      jurisdiction: "KS",
+      courtType: "federal",
+      district: "DKS",
+      sections: ksFederalSections,
+      courtSpecificRules: "D. Kan.: 12pt font. Tenth Circuit. CM/ECF required.",
+    },
+    // New Mexico
+    {
+      jurisdiction: "NM",
+      courtType: "state",
+      sections: newMexicoSections,
+      courtSpecificRules: "NMRA Rule 5-604 governs continuances. State v. Garza, 2009-NMSC-038 establishes six-month rule.",
+    },
+    {
+      jurisdiction: "NM",
+      courtType: "federal",
+      district: "DNM",
+      sections: nmFederalSections,
+      courtSpecificRules: "D.N.M.: 12pt font. Tenth Circuit. CM/ECF required.",
+    },
+    // Nebraska
+    {
+      jurisdiction: "NE",
+      courtType: "state",
+      sections: nebraskaSections,
+      courtSpecificRules: "Neb. Rev. Stat. § 29-1207 governs speedy trial (6 months). State v. Gibbs establishes continuance standard.",
+    },
+    {
+      jurisdiction: "NE",
+      courtType: "federal",
+      district: "DNE",
+      sections: neFederalSections,
+      courtSpecificRules: "D. Neb.: 12pt font. Eighth Circuit. CM/ECF required.",
+    },
+    // Idaho
+    {
+      jurisdiction: "ID",
+      courtType: "state",
+      sections: idahoSections,
+      courtSpecificRules: "I.C.R. 12(d) governs continuances. I.C. § 19-3501 addresses speedy trial (6 months).",
+    },
+    {
+      jurisdiction: "ID",
+      courtType: "federal",
+      district: "DID",
+      sections: idFederalSections,
+      courtSpecificRules: "D. Idaho: 12pt font. Ninth Circuit. CM/ECF required.",
+    },
   ],
   estimatedCompletionTime: "10-15 minutes",
   difficultyLevel: "basic",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "MO", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD", "EDMO", "WDMO", "EDWI", "WDWI", "DCO", "DMN", "DSC", "NDAL", "MDAL", "SDAL", "EDLA", "MDLA", "WDLA", "EDKY", "WDKY", "DOR", "NDOK", "EDOK", "WDOK"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "MO", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "ID", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD", "EDMO", "WDMO", "EDWI", "WDWI", "DCO", "DMN", "DSC", "NDAL", "MDAL", "SDAL", "EDLA", "MDLA", "WDLA", "EDKY", "WDKY", "DOR", "NDOK", "EDOK", "WDOK", "DCT", "DUT", "NDIA", "SDIA", "DNV", "EDAR", "WDAR", "NDMS", "SDMS", "DKS", "DNM", "DNE", "DID"],
 };
 
 // Export for use in template registry

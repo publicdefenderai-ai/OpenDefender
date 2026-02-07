@@ -12,7 +12,9 @@ import {
   NJ_COUNTIES, VA_COUNTIES, WA_COUNTIES, AZ_COUNTIES, MA_COUNTIES,
   TN_COUNTIES, IN_COUNTIES, MD_COUNTIES, MO_COUNTIES, WI_COUNTIES,
   CO_COUNTIES, MN_COUNTIES, SC_COUNTIES, AL_COUNTIES, LA_PARISHES,
-  KY_COUNTIES, OR_COUNTIES, OK_COUNTIES,
+  KY_COUNTIES, OR_COUNTIES, OK_COUNTIES, CT_COUNTIES, UT_COUNTIES,
+  IA_COUNTIES, NV_COUNTIES, AR_COUNTIES, MS_COUNTIES, KS_COUNTIES,
+  NM_COUNTIES, NE_COUNTIES, ID_COUNTIES,
 } from "@shared/templates/county-data";
 import {
   FormControl,
@@ -246,6 +248,9 @@ const COUNTY_MAP: Record<string, { value: string; label: string }[]> = {
   IN: IN_COUNTIES, MD: MD_COUNTIES, MO: MO_COUNTIES, WI: WI_COUNTIES,
   CO: CO_COUNTIES, MN: MN_COUNTIES, SC: SC_COUNTIES, AL: AL_COUNTIES,
   LA: LA_PARISHES, KY: KY_COUNTIES, OR: OR_COUNTIES, OK: OK_COUNTIES,
+  CT: CT_COUNTIES, UT: UT_COUNTIES, IA: IA_COUNTIES, NV: NV_COUNTIES,
+  AR: AR_COUNTIES, MS: MS_COUNTIES, KS: KS_COUNTIES, NM: NM_COUNTIES,
+  NE: NE_COUNTIES, ID: ID_COUNTIES,
 };
 
 const DISTRICT_DIVISIONS: Record<string, { value: string; label: string }[]> = {
@@ -438,6 +443,29 @@ const ALL_DISTRICTS = [
   { code: "NDOK", label: "Northern District of Oklahoma (NDOK)", rules: "NDOK local rules, 12pt font", jurisdiction: "OK" },
   { code: "EDOK", label: "Eastern District of Oklahoma (EDOK)", rules: "EDOK local rules, 12pt font", jurisdiction: "OK" },
   { code: "WDOK", label: "Western District of Oklahoma (WDOK)", rules: "WDOK local rules, 12pt font", jurisdiction: "OK" },
+  // Connecticut
+  { code: "DCT", label: "District of Connecticut (DCT)", rules: "DCT local rules, 12pt font", jurisdiction: "CT" },
+  // Utah
+  { code: "DUT", label: "District of Utah (DUT)", rules: "DUT local rules, 12pt font", jurisdiction: "UT" },
+  // Iowa
+  { code: "NDIA", label: "Northern District of Iowa (NDIA)", rules: "NDIA local rules, 12pt font", jurisdiction: "IA" },
+  { code: "SDIA", label: "Southern District of Iowa (SDIA)", rules: "SDIA local rules, 12pt font", jurisdiction: "IA" },
+  // Nevada
+  { code: "DNV", label: "District of Nevada (DNV)", rules: "DNV local rules, 12pt font", jurisdiction: "NV" },
+  // Arkansas
+  { code: "EDAR", label: "Eastern District of Arkansas (EDAR)", rules: "EDAR local rules, 12pt font", jurisdiction: "AR" },
+  { code: "WDAR", label: "Western District of Arkansas (WDAR)", rules: "WDAR local rules, 12pt font", jurisdiction: "AR" },
+  // Mississippi
+  { code: "NDMS", label: "Northern District of Mississippi (NDMS)", rules: "NDMS local rules, 12pt font", jurisdiction: "MS" },
+  { code: "SDMS", label: "Southern District of Mississippi (SDMS)", rules: "SDMS local rules, 12pt font", jurisdiction: "MS" },
+  // Kansas
+  { code: "DKS", label: "District of Kansas (DKS)", rules: "DKS local rules, 12pt font", jurisdiction: "KS" },
+  // New Mexico
+  { code: "DNM", label: "District of New Mexico (DNM)", rules: "DNM local rules, 12pt font", jurisdiction: "NM" },
+  // Nebraska
+  { code: "DNE", label: "District of Nebraska (DNE)", rules: "DNE local rules, 12pt font", jurisdiction: "NE" },
+  // Idaho
+  { code: "DID", label: "District of Idaho (DID)", rules: "DID local rules, 12pt font", jurisdiction: "ID" },
 ];
 
 export function JurisdictionSelector({
@@ -508,6 +536,16 @@ export function JurisdictionSelector({
     { value: "KY", label: "Kentucky", description: "Uses Kentucky Revised Statutes citations" },
     { value: "OR", label: "Oregon", description: "Uses Oregon Revised Statutes citations" },
     { value: "OK", label: "Oklahoma", description: "Uses Oklahoma Statutes citations" },
+    { value: "CT", label: "Connecticut", description: "Uses Connecticut General Statutes citations" },
+    { value: "UT", label: "Utah", description: "Uses Utah Code Annotated citations" },
+    { value: "IA", label: "Iowa", description: "Uses Iowa Code citations" },
+    { value: "NV", label: "Nevada", description: "Uses Nevada Revised Statutes citations" },
+    { value: "AR", label: "Arkansas", description: "Uses Arkansas Code Annotated citations" },
+    { value: "MS", label: "Mississippi", description: "Uses Mississippi Code Annotated citations" },
+    { value: "KS", label: "Kansas", description: "Uses Kansas Statutes Annotated citations" },
+    { value: "NM", label: "New Mexico", description: "Uses New Mexico Statutes Annotated citations" },
+    { value: "NE", label: "Nebraska", description: "Uses Nebraska Revised Statutes citations" },
+    { value: "ID", label: "Idaho", description: "Uses Idaho Code citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
