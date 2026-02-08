@@ -1717,6 +1717,342 @@ const idBaseSections: TemplateSection[] = [
 ];
 
 // ============================================================================
+// AK-specific caption inputs
+// ============================================================================
+
+const akCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court, Third Judicial District at Anchorage" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., 3AN-XX-XXXXX CR" }
+    : input
+);
+
+const akBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: akCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// DE-specific caption inputs
+// ============================================================================
+
+const deCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of the State of Delaware, [County]" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., ID No. XXXX-XX-XXXX" }
+    : input
+);
+
+const deBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: deCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// HI-specific caption inputs
+// ============================================================================
+
+const hiCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of the First Circuit, State of Hawaii" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., X-CPC-XX-XXXXXXX" }
+    : input
+);
+
+const hiBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: hiCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// ME-specific caption inputs
+// ============================================================================
+
+const meCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court, [County], State of Maine" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXXXX-CR-XXXX-XXXXX" }
+    : input
+);
+
+const meBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: meCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// MT-specific caption inputs
+// ============================================================================
+
+const mtCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, [Number] Judicial District, [County] County, Montana" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., DC-XX-XXXX" }
+    : input
+);
+
+const mtBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: mtCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// NH-specific caption inputs
+// ============================================================================
+
+const nhCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court, [County], New Hampshire" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXX-XXXX-CR-XXXXX" }
+    : input
+);
+
+const nhBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: nhCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// ND-specific caption inputs
+// ============================================================================
+
+const ndCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, [County], State of North Dakota" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-XXXX-CR-XXXXX" }
+    : input
+);
+
+const ndBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: ndCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// RI-specific caption inputs
+// ============================================================================
+
+const riCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of [County], State of Rhode Island" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-XXXX-XXXXX" }
+    : input
+);
+
+const riBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: riCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// SD-specific caption inputs
+// ============================================================================
+
+const sdCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court, [Number] Judicial Circuit, [County] County, South Dakota" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-XXX" }
+    : input
+);
+
+const sdBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: sdCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// VT-specific caption inputs
+// ============================================================================
+
+const vtCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court, [County] Unit, Criminal Division" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XXXX-X-XXXX-XXcr" }
+    : input
+);
+
+const vtBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: vtCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// WV-specific caption inputs
+// ============================================================================
+
+const wvCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Circuit Court of [County] County, West Virginia" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-F-XXX" }
+    : input
+);
+
+const wvBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: wvCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
+// WY-specific caption inputs
+// ============================================================================
+
+const wyCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., District Court, [Number] Judicial District, [County] County, Wyoming" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., XX-XX-XXXX" }
+    : input
+);
+
+const wyBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: wyCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+// ============================================================================
 // California State Sections
 // ============================================================================
 
@@ -9962,6 +10298,2449 @@ ____________________________
 ];
 
 // ============================================================================
+// Alaska State Sections
+// ============================================================================
+
+const alaskaSections: TemplateSection[] = [
+  ...akBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under Alaska Crim. R. 41, AS 12.30.011, and Alaska Const. Art. I, § 11 in an Alaska criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under Alaska Crim. R. 41 and AS 12.30.011, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for an Alaska bail reduction motion.",
+    helpText: "AI will generate an Alaska-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Alaska law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Alaska law includes:
+- Alaska Crim. R. 41: Bail provisions
+- AS 12.30.011: Pretrial release
+- Alaska Const. Art. I, § 11: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite Alaska Crim. R. 41 and AS 12.30.011.",
+    helpText: "AI will generate Alaska-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Alaska Crim. R. 41 and AS 12.30.011 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Alaska prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF ALASKA
+c/o District Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Alaska certificate of service format",
+  },
+];
+
+const akFederalSections: TemplateSection[] = [
+  ...akBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Alaska.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Ninth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Ninth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Delaware State Sections
+// ============================================================================
+
+const delawareSections: TemplateSection[] = [
+  ...deBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under Del. Super. Ct. Crim. R. 46, 11 Del. C. § 2105, and Del. Const. Art. I, § 12 in a Delaware criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under Del. Super. Ct. Crim. R. 46 and 11 Del. C. § 2105, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Delaware bail reduction motion.",
+    helpText: "AI will generate a Delaware-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Delaware law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Delaware law includes:
+- Del. Super. Ct. Crim. R. 46: Bail provisions
+- 11 Del. C. § 2105: Bail procedures
+- Del. Const. Art. I, § 12: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite Del. Super. Ct. Crim. R. 46 and 11 Del. C. § 2105.",
+    helpText: "AI will generate Delaware-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to Del. Super. Ct. Crim. R. 46 and 11 Del. C. § 2105 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Delaware prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing via File & ServeXpress
+[ ] By mail
+[ ] By personal service
+
+STATE OF DELAWARE
+c/o Attorney General
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Delaware certificate of service format",
+  },
+];
+
+const deFederalSections: TemplateSection[] = [
+  ...deBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Delaware.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Third Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Third Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Hawaii State Sections
+// ============================================================================
+
+const hawaiiSections: TemplateSection[] = [
+  ...hiBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under HRPP Rule 46, HRS § 804-3, and Hawaii Const. Art. I, § 12 in a Hawaii criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under HRPP Rule 46 and HRS § 804-3, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Hawaii bail reduction motion.",
+    helpText: "AI will generate a Hawaii-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Hawaii law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Hawaii law includes:
+- HRPP Rule 46: Bail provisions
+- HRS § 804-3: Bail procedures
+- Hawaii Const. Art. I, § 12: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite HRPP Rule 46 and HRS § 804-3.",
+    helpText: "AI will generate Hawaii-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to HRPP Rule 46 and HRS § 804-3 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Hawaii prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing via JEFS
+[ ] By mail
+[ ] By personal service
+
+STATE OF HAWAII
+c/o Prosecuting Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Hawaii certificate of service format",
+  },
+];
+
+const hiFederalSections: TemplateSection[] = [
+  ...hiBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Hawaii.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Ninth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Ninth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Maine State Sections
+// ============================================================================
+
+const maineSections: TemplateSection[] = [
+  ...meBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under 15 M.R.S. § 1003 et seq. and Maine Const. Art. I, § 10 in a Maine criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under 15 M.R.S. § 1003 et seq., courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Maine bail reduction motion.",
+    helpText: "AI will generate a Maine-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Maine law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Maine law includes:
+- 15 M.R.S. § 1003 et seq.: Bail provisions
+- Maine Const. Art. I, § 10: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite 15 M.R.S. § 1003 et seq.",
+    helpText: "AI will generate Maine-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 15 M.R.S. § 1003 et seq. to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Maine prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF MAINE
+c/o District Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Maine certificate of service format",
+  },
+];
+
+const meFederalSections: TemplateSection[] = [
+  ...meBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Maine.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply First Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and First Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Montana State Sections
+// ============================================================================
+
+const montanaSections: TemplateSection[] = [
+  ...mtBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under MCA § 46-9-102 and Montana Const. Art. II, § 21 in a Montana criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under MCA § 46-9-102, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Montana bail reduction motion.",
+    helpText: "AI will generate a Montana-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Montana law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Montana law includes:
+- MCA § 46-9-102: Bail provisions
+- Montana Const. Art. II, § 21: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite MCA § 46-9-102.",
+    helpText: "AI will generate Montana-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to MCA § 46-9-102 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Montana prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF MONTANA
+c/o County Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Montana certificate of service format",
+  },
+];
+
+const mtFederalSections: TemplateSection[] = [
+  ...mtBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Montana.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Ninth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Ninth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// New Hampshire State Sections
+// ============================================================================
+
+const newHampshireSections: TemplateSection[] = [
+  ...nhBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under RSA 597:2 and N.H. Const. Part I, Art. 33 in a New Hampshire criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under RSA 597:2, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a New Hampshire bail reduction motion.",
+    helpText: "AI will generate a New Hampshire-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under New Hampshire law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable New Hampshire law includes:
+- RSA 597:2: Bail provisions
+- N.H. Const. Part I, Art. 33: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite RSA 597:2.",
+    helpText: "AI will generate New Hampshire-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to RSA 597:2 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "New Hampshire prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF NEW HAMPSHIRE
+c/o County Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "New Hampshire certificate of service format",
+  },
+];
+
+const nhFederalSections: TemplateSection[] = [
+  ...nhBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of New Hampshire.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply First Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and First Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// North Dakota State Sections
+// ============================================================================
+
+const northDakotaSections: TemplateSection[] = [
+  ...ndBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under N.D.R.Crim.P. 46, NDCC § 29-08-02, and N.D. Const. Art. I, § 11 in a North Dakota criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under N.D.R.Crim.P. 46 and NDCC § 29-08-02, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a North Dakota bail reduction motion.",
+    helpText: "AI will generate a North Dakota-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under North Dakota law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable North Dakota law includes:
+- N.D.R.Crim.P. 46: Bail provisions
+- NDCC § 29-08-02: Bail procedures
+- N.D. Const. Art. I, § 11: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite N.D.R.Crim.P. 46 and NDCC § 29-08-02.",
+    helpText: "AI will generate North Dakota-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to N.D.R.Crim.P. 46 and NDCC § 29-08-02 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "North Dakota prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing via Odyssey
+[ ] By mail
+[ ] By personal service
+
+STATE OF NORTH DAKOTA
+c/o State's Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "North Dakota certificate of service format",
+  },
+];
+
+const ndFederalSections: TemplateSection[] = [
+  ...ndBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of North Dakota.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Eighth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Eighth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Rhode Island State Sections
+// ============================================================================
+
+const rhodeIslandSections: TemplateSection[] = [
+  ...riBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under R.I. Gen. Laws § 12-13-1 et seq. and R.I. Const. Art. I, § 9 in a Rhode Island criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under R.I. Gen. Laws § 12-13-1 et seq., courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Rhode Island bail reduction motion.",
+    helpText: "AI will generate a Rhode Island-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Rhode Island law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Rhode Island law includes:
+- R.I. Gen. Laws § 12-13-1 et seq.: Bail provisions
+- R.I. Const. Art. I, § 9: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite R.I. Gen. Laws § 12-13-1 et seq.",
+    helpText: "AI will generate Rhode Island-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to R.I. Gen. Laws § 12-13-1 et seq. to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Rhode Island prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF RHODE ISLAND
+c/o Attorney General
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Rhode Island certificate of service format",
+  },
+];
+
+const riFederalSections: TemplateSection[] = [
+  ...riBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Rhode Island.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply First Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and First Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// South Dakota State Sections
+// ============================================================================
+
+const southDakotaSections: TemplateSection[] = [
+  ...sdBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under SDCL § 23A-43 and S.D. Const. Art. VI, § 8 in a South Dakota criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under SDCL § 23A-43, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a South Dakota bail reduction motion.",
+    helpText: "AI will generate a South Dakota-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under South Dakota law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable South Dakota law includes:
+- SDCL § 23A-43: Bail provisions
+- S.D. Const. Art. VI, § 8: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite SDCL § 23A-43.",
+    helpText: "AI will generate South Dakota-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to SDCL § 23A-43 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "South Dakota prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing via Odyssey
+[ ] By mail
+[ ] By personal service
+
+STATE OF SOUTH DAKOTA
+c/o State's Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "South Dakota certificate of service format",
+  },
+];
+
+const sdFederalSections: TemplateSection[] = [
+  ...sdBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of South Dakota.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Eighth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Eighth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Vermont State Sections
+// ============================================================================
+
+const vermontSections: TemplateSection[] = [
+  ...vtBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under V.R.Cr.P. 46, 13 V.S.A. § 7553, and Vermont Const. Ch. II, § 40 in a Vermont criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under V.R.Cr.P. 46 and 13 V.S.A. § 7553, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Vermont bail reduction motion.",
+    helpText: "AI will generate a Vermont-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Vermont law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Vermont law includes:
+- V.R.Cr.P. 46: Bail provisions
+- 13 V.S.A. § 7553: Bail procedures
+- Vermont Const. Ch. II, § 40: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite V.R.Cr.P. 46 and 13 V.S.A. § 7553.",
+    helpText: "AI will generate Vermont-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to V.R.Cr.P. 46 and 13 V.S.A. § 7553 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Vermont prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing via Odyssey
+[ ] By mail
+[ ] By personal service
+
+STATE OF VERMONT
+c/o State's Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Vermont certificate of service format",
+  },
+];
+
+const vtFederalSections: TemplateSection[] = [
+  ...vtBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Vermont.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Second Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Second Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// West Virginia State Sections
+// ============================================================================
+
+const westVirginiaSections: TemplateSection[] = [
+  ...wvBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under W. Va. R. Crim. P. 46, W. Va. Code § 62-1C-1, and W. Va. Const. Art. III, § 5 in a West Virginia criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under W. Va. R. Crim. P. 46 and W. Va. Code § 62-1C-1, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a West Virginia bail reduction motion.",
+    helpText: "AI will generate a West Virginia-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under West Virginia law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable West Virginia law includes:
+- W. Va. R. Crim. P. 46: Bail provisions
+- W. Va. Code § 62-1C-1: Bail procedures
+- W. Va. Const. Art. III, § 5: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite W. Va. R. Crim. P. 46 and W. Va. Code § 62-1C-1.",
+    helpText: "AI will generate West Virginia-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to W. Va. R. Crim. P. 46 and W. Va. Code § 62-1C-1 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "West Virginia prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing via e-filing system
+[ ] By mail
+[ ] By personal service
+
+STATE OF WEST VIRGINIA
+c/o Prosecuting Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "West Virginia certificate of service format",
+  },
+];
+
+const wvFederalSections: TemplateSection[] = [
+  ...wvBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the federal District of West Virginia.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Fourth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Fourth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
+// Wyoming State Sections
+// ============================================================================
+
+const wyomingSections: TemplateSection[] = [
+  ...wyBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under W.R.Cr.P. 46, Wyo. Stat. § 7-10-101 et seq., and Wyoming Const. Art. I, § 14 in a Wyoming criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under W.R.Cr.P. 46 and Wyo. Stat. § 7-10-101 et seq., courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a Wyoming bail reduction motion.",
+    helpText: "AI will generate a Wyoming-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under Wyoming law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable Wyoming law includes:
+- W.R.Cr.P. 46: Bail provisions
+- Wyo. Stat. § 7-10-101 et seq.: Bail procedures
+- Wyoming Const. Art. I, § 14: Right to bail
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite W.R.Cr.P. 46 and Wyo. Stat. § 7-10-101 et seq.",
+    helpText: "AI will generate Wyoming-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to W.R.Cr.P. 46 and Wyo. Stat. § 7-10-101 et seq. to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "Wyoming prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+STATE OF WYOMING
+c/o County & Prosecuting Attorney
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Wyoming certificate of service format",
+  },
+];
+
+const wyFederalSections: TemplateSection[] = [
+  ...wyBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the District of Wyoming.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply Tenth Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and Tenth Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -10764,11 +13543,186 @@ export const motionToReduceBailTemplate: DocumentTemplate = {
       sections: idFederalSections,
       courtSpecificRules: "D. Idaho: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Ninth Circuit. CM/ECF required.",
     },
+    // Alaska
+    {
+      jurisdiction: "AK",
+      courtType: "state",
+      sections: alaskaSections,
+      courtSpecificRules: "Filed under Alaska Crim. R. 41 and AS 12.30.011. Alaska Const. Art. I, § 11. Bail provisions.",
+    },
+    {
+      jurisdiction: "AK",
+      courtType: "federal",
+      district: "DAK",
+      sections: akFederalSections,
+      courtSpecificRules: "D. Alaska: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Ninth Circuit. CM/ECF required.",
+    },
+    // Delaware
+    {
+      jurisdiction: "DE",
+      courtType: "state",
+      sections: delawareSections,
+      courtSpecificRules: "Filed under Del. Super. Ct. Crim. R. 46 and 11 Del. C. § 2105. Del. Const. Art. I, § 12. Bail provisions.",
+    },
+    {
+      jurisdiction: "DE",
+      courtType: "federal",
+      district: "DDE",
+      sections: deFederalSections,
+      courtSpecificRules: "D. Del.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Third Circuit. CM/ECF required.",
+    },
+    // Hawaii
+    {
+      jurisdiction: "HI",
+      courtType: "state",
+      sections: hawaiiSections,
+      courtSpecificRules: "Filed under HRPP Rule 46 and HRS § 804-3. Hawaii Const. Art. I, § 12. Bail provisions.",
+    },
+    {
+      jurisdiction: "HI",
+      courtType: "federal",
+      district: "DHI",
+      sections: hiFederalSections,
+      courtSpecificRules: "D. Haw.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Ninth Circuit. CM/ECF required.",
+    },
+    // Maine
+    {
+      jurisdiction: "ME",
+      courtType: "state",
+      sections: maineSections,
+      courtSpecificRules: "Filed under 15 M.R.S. § 1003 et seq. Maine Const. Art. I, § 10. Bail provisions.",
+    },
+    {
+      jurisdiction: "ME",
+      courtType: "federal",
+      district: "DME",
+      sections: meFederalSections,
+      courtSpecificRules: "D. Me.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). First Circuit. CM/ECF required.",
+    },
+    // Montana
+    {
+      jurisdiction: "MT",
+      courtType: "state",
+      sections: montanaSections,
+      courtSpecificRules: "Filed under MCA § 46-9-102. Montana Const. Art. II, § 21. Bail provisions.",
+    },
+    {
+      jurisdiction: "MT",
+      courtType: "federal",
+      district: "DMT",
+      sections: mtFederalSections,
+      courtSpecificRules: "D. Mont.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Ninth Circuit. CM/ECF required.",
+    },
+    // New Hampshire
+    {
+      jurisdiction: "NH",
+      courtType: "state",
+      sections: newHampshireSections,
+      courtSpecificRules: "Filed under RSA 597:2. N.H. Const. Part I, Art. 33. Bail provisions.",
+    },
+    {
+      jurisdiction: "NH",
+      courtType: "federal",
+      district: "DNH",
+      sections: nhFederalSections,
+      courtSpecificRules: "D.N.H.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). First Circuit. CM/ECF required.",
+    },
+    // North Dakota
+    {
+      jurisdiction: "ND",
+      courtType: "state",
+      sections: northDakotaSections,
+      courtSpecificRules: "Filed under N.D.R.Crim.P. 46 and NDCC § 29-08-02. N.D. Const. Art. I, § 11. Bail provisions.",
+    },
+    {
+      jurisdiction: "ND",
+      courtType: "federal",
+      district: "DND",
+      sections: ndFederalSections,
+      courtSpecificRules: "D.N.D.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Eighth Circuit. CM/ECF required.",
+    },
+    // Rhode Island
+    {
+      jurisdiction: "RI",
+      courtType: "state",
+      sections: rhodeIslandSections,
+      courtSpecificRules: "Filed under R.I. Gen. Laws § 12-13-1 et seq. R.I. Const. Art. I, § 9. Bail provisions.",
+    },
+    {
+      jurisdiction: "RI",
+      courtType: "federal",
+      district: "DRI",
+      sections: riFederalSections,
+      courtSpecificRules: "D.R.I.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). First Circuit. CM/ECF required.",
+    },
+    // South Dakota
+    {
+      jurisdiction: "SD",
+      courtType: "state",
+      sections: southDakotaSections,
+      courtSpecificRules: "Filed under SDCL § 23A-43. S.D. Const. Art. VI, § 8. Bail provisions.",
+    },
+    {
+      jurisdiction: "SD",
+      courtType: "federal",
+      district: "DSD",
+      sections: sdFederalSections,
+      courtSpecificRules: "D.S.D.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Eighth Circuit. CM/ECF required.",
+    },
+    // Vermont
+    {
+      jurisdiction: "VT",
+      courtType: "state",
+      sections: vermontSections,
+      courtSpecificRules: "Filed under V.R.Cr.P. 46 and 13 V.S.A. § 7553. Vermont Const. Ch. II, § 40. Bail provisions.",
+    },
+    {
+      jurisdiction: "VT",
+      courtType: "federal",
+      district: "DVT",
+      sections: vtFederalSections,
+      courtSpecificRules: "D. Vt.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Second Circuit. CM/ECF required.",
+    },
+    // West Virginia
+    {
+      jurisdiction: "WV",
+      courtType: "state",
+      sections: westVirginiaSections,
+      courtSpecificRules: "Filed under W. Va. R. Crim. P. 46 and W. Va. Code § 62-1C-1. W. Va. Const. Art. III, § 5. Bail provisions.",
+    },
+    {
+      jurisdiction: "WV",
+      courtType: "federal",
+      district: "NDWV",
+      sections: wvFederalSections,
+      courtSpecificRules: "N.D. W. Va.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Fourth Circuit. CM/ECF required.",
+    },
+    {
+      jurisdiction: "WV",
+      courtType: "federal",
+      district: "SDWV",
+      sections: wvFederalSections,
+      courtSpecificRules: "S.D. W. Va.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Fourth Circuit. CM/ECF required.",
+    },
+    // Wyoming
+    {
+      jurisdiction: "WY",
+      courtType: "state",
+      sections: wyomingSections,
+      courtSpecificRules: "Filed under W.R.Cr.P. 46 and Wyo. Stat. § 7-10-101 et seq. Wyoming Const. Art. I, § 14. Bail provisions.",
+    },
+    {
+      jurisdiction: "WY",
+      courtType: "federal",
+      district: "DWY",
+      sections: wyFederalSections,
+      courtSpecificRules: "D. Wyo.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Tenth Circuit. CM/ECF required.",
+    },
   ],
   estimatedCompletionTime: "20-30 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "MO", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "ID", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD", "EDMO", "WDMO", "EDWI", "WDWI", "DCO", "DMN", "DSC", "NDAL", "MDAL", "SDAL", "EDLA", "MDLA", "WDLA", "EDKY", "WDKY", "DOR", "NDOK", "EDOK", "WDOK", "DCT", "DUT", "NDIA", "SDIA", "DNV", "EDAR", "WDAR", "NDMS", "SDMS", "DKS", "DNM", "DNE", "DID"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "MO", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "ID", "AK", "DE", "HI", "ME", "MT", "NH", "ND", "RI", "SD", "VT", "WV", "WY", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD", "EDMO", "WDMO", "EDWI", "WDWI", "DCO", "DMN", "DSC", "NDAL", "MDAL", "SDAL", "EDLA", "MDLA", "WDLA", "EDKY", "WDKY", "DOR", "NDOK", "EDOK", "WDOK", "DCT", "DUT", "NDIA", "SDIA", "DNV", "EDAR", "WDAR", "NDMS", "SDMS", "DKS", "DNM", "DNE", "DID", "DAK", "DDE", "DHI", "DME", "DMT", "DNH", "DND", "DRI", "DSD", "DVT", "NDWV", "SDWV", "DWY"],
 };
 
 export default motionToReduceBailTemplate;

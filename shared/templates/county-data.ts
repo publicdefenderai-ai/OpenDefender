@@ -3117,3 +3117,433 @@ export const ID_COUNTIES: { value: string; label: string }[] = [
   { value: "Washington", label: "Washington" },
   { value: "other", label: "Other" },
 ];
+
+// ============================================================================
+// Alaska Boroughs/Census Areas (29)
+// ============================================================================
+
+export const AK_BOROUGHS: { value: string; label: string }[] = [
+  { value: "Aleutians East", label: "Aleutians East" },
+  { value: "Aleutians West", label: "Aleutians West" },
+  { value: "Anchorage", label: "Anchorage" },
+  { value: "Bethel", label: "Bethel" },
+  { value: "Bristol Bay", label: "Bristol Bay" },
+  { value: "Denali", label: "Denali" },
+  { value: "Dillingham", label: "Dillingham" },
+  { value: "Fairbanks North Star", label: "Fairbanks North Star" },
+  { value: "Haines", label: "Haines" },
+  { value: "Hoonah-Angoon", label: "Hoonah-Angoon" },
+  { value: "Juneau", label: "Juneau" },
+  { value: "Kenai Peninsula", label: "Kenai Peninsula" },
+  { value: "Ketchikan Gateway", label: "Ketchikan Gateway" },
+  { value: "Kodiak Island", label: "Kodiak Island" },
+  { value: "Kusilvak", label: "Kusilvak" },
+  { value: "Lake and Peninsula", label: "Lake and Peninsula" },
+  { value: "Matanuska-Susitna", label: "Matanuska-Susitna" },
+  { value: "Nome", label: "Nome" },
+  { value: "North Slope", label: "North Slope" },
+  { value: "Northwest Arctic", label: "Northwest Arctic" },
+  { value: "Petersburg", label: "Petersburg" },
+  { value: "Prince of Wales-Hyder", label: "Prince of Wales-Hyder" },
+  { value: "Sitka", label: "Sitka" },
+  { value: "Skagway", label: "Skagway" },
+  { value: "Southeast Fairbanks", label: "Southeast Fairbanks" },
+  { value: "Valdez-Cordova", label: "Valdez-Cordova" },
+  { value: "Wrangell", label: "Wrangell" },
+  { value: "Yakutat", label: "Yakutat" },
+  { value: "Yukon-Koyukuk", label: "Yukon-Koyukuk" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Delaware Counties (3)
+// ============================================================================
+
+export const DE_COUNTIES: { value: string; label: string }[] = [
+  { value: "Kent", label: "Kent" },
+  { value: "New Castle", label: "New Castle" },
+  { value: "Sussex", label: "Sussex" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Hawaii Counties (4)
+// ============================================================================
+
+export const HI_COUNTIES: { value: string; label: string }[] = [
+  { value: "Hawaii", label: "Hawaii" },
+  { value: "Honolulu", label: "Honolulu" },
+  { value: "Kauai", label: "Kauai" },
+  { value: "Maui", label: "Maui" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Maine Counties (16)
+// ============================================================================
+
+export const ME_COUNTIES: { value: string; label: string }[] = [
+  { value: "Androscoggin", label: "Androscoggin" },
+  { value: "Aroostook", label: "Aroostook" },
+  { value: "Cumberland", label: "Cumberland" },
+  { value: "Franklin", label: "Franklin" },
+  { value: "Hancock", label: "Hancock" },
+  { value: "Kennebec", label: "Kennebec" },
+  { value: "Knox", label: "Knox" },
+  { value: "Lincoln", label: "Lincoln" },
+  { value: "Oxford", label: "Oxford" },
+  { value: "Penobscot", label: "Penobscot" },
+  { value: "Piscataquis", label: "Piscataquis" },
+  { value: "Sagadahoc", label: "Sagadahoc" },
+  { value: "Somerset", label: "Somerset" },
+  { value: "Waldo", label: "Waldo" },
+  { value: "Washington", label: "Washington" },
+  { value: "York", label: "York" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Montana Counties (56)
+// ============================================================================
+
+export const MT_COUNTIES: { value: string; label: string }[] = [
+  { value: "Beaverhead", label: "Beaverhead" },
+  { value: "Big Horn", label: "Big Horn" },
+  { value: "Blaine", label: "Blaine" },
+  { value: "Broadwater", label: "Broadwater" },
+  { value: "Carbon", label: "Carbon" },
+  { value: "Carter", label: "Carter" },
+  { value: "Cascade", label: "Cascade" },
+  { value: "Chouteau", label: "Chouteau" },
+  { value: "Custer", label: "Custer" },
+  { value: "Daniels", label: "Daniels" },
+  { value: "Dawson", label: "Dawson" },
+  { value: "Deer Lodge", label: "Deer Lodge" },
+  { value: "Fallon", label: "Fallon" },
+  { value: "Fergus", label: "Fergus" },
+  { value: "Flathead", label: "Flathead" },
+  { value: "Gallatin", label: "Gallatin" },
+  { value: "Garfield", label: "Garfield" },
+  { value: "Glacier", label: "Glacier" },
+  { value: "Golden Valley", label: "Golden Valley" },
+  { value: "Granite", label: "Granite" },
+  { value: "Hill", label: "Hill" },
+  { value: "Jefferson", label: "Jefferson" },
+  { value: "Judith Basin", label: "Judith Basin" },
+  { value: "Lake", label: "Lake" },
+  { value: "Lewis and Clark", label: "Lewis and Clark" },
+  { value: "Liberty", label: "Liberty" },
+  { value: "Lincoln", label: "Lincoln" },
+  { value: "Madison", label: "Madison" },
+  { value: "McCone", label: "McCone" },
+  { value: "Meagher", label: "Meagher" },
+  { value: "Mineral", label: "Mineral" },
+  { value: "Missoula", label: "Missoula" },
+  { value: "Musselshell", label: "Musselshell" },
+  { value: "Park", label: "Park" },
+  { value: "Petroleum", label: "Petroleum" },
+  { value: "Phillips", label: "Phillips" },
+  { value: "Pondera", label: "Pondera" },
+  { value: "Powder River", label: "Powder River" },
+  { value: "Powell", label: "Powell" },
+  { value: "Prairie", label: "Prairie" },
+  { value: "Ravalli", label: "Ravalli" },
+  { value: "Richland", label: "Richland" },
+  { value: "Roosevelt", label: "Roosevelt" },
+  { value: "Rosebud", label: "Rosebud" },
+  { value: "Sanders", label: "Sanders" },
+  { value: "Sheridan", label: "Sheridan" },
+  { value: "Silver Bow", label: "Silver Bow" },
+  { value: "Stillwater", label: "Stillwater" },
+  { value: "Sweet Grass", label: "Sweet Grass" },
+  { value: "Teton", label: "Teton" },
+  { value: "Toole", label: "Toole" },
+  { value: "Treasure", label: "Treasure" },
+  { value: "Valley", label: "Valley" },
+  { value: "Wheatland", label: "Wheatland" },
+  { value: "Wibaux", label: "Wibaux" },
+  { value: "Yellowstone", label: "Yellowstone" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// New Hampshire Counties (10)
+// ============================================================================
+
+export const NH_COUNTIES: { value: string; label: string }[] = [
+  { value: "Belknap", label: "Belknap" },
+  { value: "Carroll", label: "Carroll" },
+  { value: "Cheshire", label: "Cheshire" },
+  { value: "Coos", label: "Coos" },
+  { value: "Grafton", label: "Grafton" },
+  { value: "Hillsborough", label: "Hillsborough" },
+  { value: "Merrimack", label: "Merrimack" },
+  { value: "Rockingham", label: "Rockingham" },
+  { value: "Strafford", label: "Strafford" },
+  { value: "Sullivan", label: "Sullivan" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// North Dakota Counties (53)
+// ============================================================================
+
+export const ND_COUNTIES: { value: string; label: string }[] = [
+  { value: "Adams", label: "Adams" },
+  { value: "Barnes", label: "Barnes" },
+  { value: "Benson", label: "Benson" },
+  { value: "Billings", label: "Billings" },
+  { value: "Bottineau", label: "Bottineau" },
+  { value: "Bowman", label: "Bowman" },
+  { value: "Burke", label: "Burke" },
+  { value: "Burleigh", label: "Burleigh" },
+  { value: "Cass", label: "Cass" },
+  { value: "Cavalier", label: "Cavalier" },
+  { value: "Dickey", label: "Dickey" },
+  { value: "Divide", label: "Divide" },
+  { value: "Dunn", label: "Dunn" },
+  { value: "Eddy", label: "Eddy" },
+  { value: "Emmons", label: "Emmons" },
+  { value: "Foster", label: "Foster" },
+  { value: "Golden Valley", label: "Golden Valley" },
+  { value: "Grand Forks", label: "Grand Forks" },
+  { value: "Grant", label: "Grant" },
+  { value: "Griggs", label: "Griggs" },
+  { value: "Hettinger", label: "Hettinger" },
+  { value: "Kidder", label: "Kidder" },
+  { value: "LaMoure", label: "LaMoure" },
+  { value: "Logan", label: "Logan" },
+  { value: "McHenry", label: "McHenry" },
+  { value: "McIntosh", label: "McIntosh" },
+  { value: "McKenzie", label: "McKenzie" },
+  { value: "McLean", label: "McLean" },
+  { value: "Mercer", label: "Mercer" },
+  { value: "Morton", label: "Morton" },
+  { value: "Mountrail", label: "Mountrail" },
+  { value: "Nelson", label: "Nelson" },
+  { value: "Oliver", label: "Oliver" },
+  { value: "Pembina", label: "Pembina" },
+  { value: "Pierce", label: "Pierce" },
+  { value: "Ramsey", label: "Ramsey" },
+  { value: "Ransom", label: "Ransom" },
+  { value: "Renville", label: "Renville" },
+  { value: "Richland", label: "Richland" },
+  { value: "Rolette", label: "Rolette" },
+  { value: "Sargent", label: "Sargent" },
+  { value: "Sheridan", label: "Sheridan" },
+  { value: "Sioux", label: "Sioux" },
+  { value: "Slope", label: "Slope" },
+  { value: "Stark", label: "Stark" },
+  { value: "Steele", label: "Steele" },
+  { value: "Stutsman", label: "Stutsman" },
+  { value: "Towner", label: "Towner" },
+  { value: "Traill", label: "Traill" },
+  { value: "Walsh", label: "Walsh" },
+  { value: "Ward", label: "Ward" },
+  { value: "Wells", label: "Wells" },
+  { value: "Williams", label: "Williams" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Rhode Island Counties (5)
+// ============================================================================
+
+export const RI_COUNTIES: { value: string; label: string }[] = [
+  { value: "Bristol", label: "Bristol" },
+  { value: "Kent", label: "Kent" },
+  { value: "Newport", label: "Newport" },
+  { value: "Providence", label: "Providence" },
+  { value: "Washington", label: "Washington" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// South Dakota Counties (66)
+// ============================================================================
+
+export const SD_COUNTIES: { value: string; label: string }[] = [
+  { value: "Aurora", label: "Aurora" },
+  { value: "Beadle", label: "Beadle" },
+  { value: "Bennett", label: "Bennett" },
+  { value: "Bon Homme", label: "Bon Homme" },
+  { value: "Brookings", label: "Brookings" },
+  { value: "Brown", label: "Brown" },
+  { value: "Brule", label: "Brule" },
+  { value: "Buffalo", label: "Buffalo" },
+  { value: "Butte", label: "Butte" },
+  { value: "Campbell", label: "Campbell" },
+  { value: "Charles Mix", label: "Charles Mix" },
+  { value: "Clark", label: "Clark" },
+  { value: "Clay", label: "Clay" },
+  { value: "Codington", label: "Codington" },
+  { value: "Corson", label: "Corson" },
+  { value: "Custer", label: "Custer" },
+  { value: "Davison", label: "Davison" },
+  { value: "Day", label: "Day" },
+  { value: "Deuel", label: "Deuel" },
+  { value: "Dewey", label: "Dewey" },
+  { value: "Douglas", label: "Douglas" },
+  { value: "Edmunds", label: "Edmunds" },
+  { value: "Fall River", label: "Fall River" },
+  { value: "Faulk", label: "Faulk" },
+  { value: "Grant", label: "Grant" },
+  { value: "Gregory", label: "Gregory" },
+  { value: "Haakon", label: "Haakon" },
+  { value: "Hamlin", label: "Hamlin" },
+  { value: "Hand", label: "Hand" },
+  { value: "Hanson", label: "Hanson" },
+  { value: "Harding", label: "Harding" },
+  { value: "Hughes", label: "Hughes" },
+  { value: "Hutchinson", label: "Hutchinson" },
+  { value: "Hyde", label: "Hyde" },
+  { value: "Jackson", label: "Jackson" },
+  { value: "Jerauld", label: "Jerauld" },
+  { value: "Jones", label: "Jones" },
+  { value: "Kingsbury", label: "Kingsbury" },
+  { value: "Lake", label: "Lake" },
+  { value: "Lawrence", label: "Lawrence" },
+  { value: "Lincoln", label: "Lincoln" },
+  { value: "Lyman", label: "Lyman" },
+  { value: "Marshall", label: "Marshall" },
+  { value: "McCook", label: "McCook" },
+  { value: "McPherson", label: "McPherson" },
+  { value: "Meade", label: "Meade" },
+  { value: "Mellette", label: "Mellette" },
+  { value: "Miner", label: "Miner" },
+  { value: "Minnehaha", label: "Minnehaha" },
+  { value: "Moody", label: "Moody" },
+  { value: "Oglala Lakota", label: "Oglala Lakota" },
+  { value: "Pennington", label: "Pennington" },
+  { value: "Perkins", label: "Perkins" },
+  { value: "Potter", label: "Potter" },
+  { value: "Roberts", label: "Roberts" },
+  { value: "Sanborn", label: "Sanborn" },
+  { value: "Spink", label: "Spink" },
+  { value: "Stanley", label: "Stanley" },
+  { value: "Sully", label: "Sully" },
+  { value: "Todd", label: "Todd" },
+  { value: "Tripp", label: "Tripp" },
+  { value: "Turner", label: "Turner" },
+  { value: "Union", label: "Union" },
+  { value: "Walworth", label: "Walworth" },
+  { value: "Yankton", label: "Yankton" },
+  { value: "Ziebach", label: "Ziebach" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Vermont Counties (14)
+// ============================================================================
+
+export const VT_COUNTIES: { value: string; label: string }[] = [
+  { value: "Addison", label: "Addison" },
+  { value: "Bennington", label: "Bennington" },
+  { value: "Caledonia", label: "Caledonia" },
+  { value: "Chittenden", label: "Chittenden" },
+  { value: "Essex", label: "Essex" },
+  { value: "Franklin", label: "Franklin" },
+  { value: "Grand Isle", label: "Grand Isle" },
+  { value: "Lamoille", label: "Lamoille" },
+  { value: "Orange", label: "Orange" },
+  { value: "Orleans", label: "Orleans" },
+  { value: "Rutland", label: "Rutland" },
+  { value: "Washington", label: "Washington" },
+  { value: "Windham", label: "Windham" },
+  { value: "Windsor", label: "Windsor" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// West Virginia Counties (55)
+// ============================================================================
+
+export const WV_COUNTIES: { value: string; label: string }[] = [
+  { value: "Barbour", label: "Barbour" },
+  { value: "Berkeley", label: "Berkeley" },
+  { value: "Boone", label: "Boone" },
+  { value: "Braxton", label: "Braxton" },
+  { value: "Brooke", label: "Brooke" },
+  { value: "Cabell", label: "Cabell" },
+  { value: "Calhoun", label: "Calhoun" },
+  { value: "Clay", label: "Clay" },
+  { value: "Doddridge", label: "Doddridge" },
+  { value: "Fayette", label: "Fayette" },
+  { value: "Gilmer", label: "Gilmer" },
+  { value: "Grant", label: "Grant" },
+  { value: "Greenbrier", label: "Greenbrier" },
+  { value: "Hampshire", label: "Hampshire" },
+  { value: "Hancock", label: "Hancock" },
+  { value: "Hardy", label: "Hardy" },
+  { value: "Harrison", label: "Harrison" },
+  { value: "Jackson", label: "Jackson" },
+  { value: "Jefferson", label: "Jefferson" },
+  { value: "Kanawha", label: "Kanawha" },
+  { value: "Lewis", label: "Lewis" },
+  { value: "Lincoln", label: "Lincoln" },
+  { value: "Logan", label: "Logan" },
+  { value: "Marion", label: "Marion" },
+  { value: "Marshall", label: "Marshall" },
+  { value: "Mason", label: "Mason" },
+  { value: "McDowell", label: "McDowell" },
+  { value: "Mercer", label: "Mercer" },
+  { value: "Mineral", label: "Mineral" },
+  { value: "Mingo", label: "Mingo" },
+  { value: "Monongalia", label: "Monongalia" },
+  { value: "Monroe", label: "Monroe" },
+  { value: "Morgan", label: "Morgan" },
+  { value: "Nicholas", label: "Nicholas" },
+  { value: "Ohio", label: "Ohio" },
+  { value: "Pendleton", label: "Pendleton" },
+  { value: "Pleasants", label: "Pleasants" },
+  { value: "Pocahontas", label: "Pocahontas" },
+  { value: "Preston", label: "Preston" },
+  { value: "Putnam", label: "Putnam" },
+  { value: "Raleigh", label: "Raleigh" },
+  { value: "Randolph", label: "Randolph" },
+  { value: "Ritchie", label: "Ritchie" },
+  { value: "Roane", label: "Roane" },
+  { value: "Summers", label: "Summers" },
+  { value: "Taylor", label: "Taylor" },
+  { value: "Tucker", label: "Tucker" },
+  { value: "Tyler", label: "Tyler" },
+  { value: "Upshur", label: "Upshur" },
+  { value: "Wayne", label: "Wayne" },
+  { value: "Webster", label: "Webster" },
+  { value: "Wetzel", label: "Wetzel" },
+  { value: "Wirt", label: "Wirt" },
+  { value: "Wood", label: "Wood" },
+  { value: "Wyoming", label: "Wyoming" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// Wyoming Counties (23)
+// ============================================================================
+
+export const WY_COUNTIES: { value: string; label: string }[] = [
+  { value: "Albany", label: "Albany" },
+  { value: "Big Horn", label: "Big Horn" },
+  { value: "Campbell", label: "Campbell" },
+  { value: "Carbon", label: "Carbon" },
+  { value: "Converse", label: "Converse" },
+  { value: "Crook", label: "Crook" },
+  { value: "Fremont", label: "Fremont" },
+  { value: "Goshen", label: "Goshen" },
+  { value: "Hot Springs", label: "Hot Springs" },
+  { value: "Johnson", label: "Johnson" },
+  { value: "Laramie", label: "Laramie" },
+  { value: "Lincoln", label: "Lincoln" },
+  { value: "Natrona", label: "Natrona" },
+  { value: "Niobrara", label: "Niobrara" },
+  { value: "Park", label: "Park" },
+  { value: "Platte", label: "Platte" },
+  { value: "Sheridan", label: "Sheridan" },
+  { value: "Sublette", label: "Sublette" },
+  { value: "Sweetwater", label: "Sweetwater" },
+  { value: "Teton", label: "Teton" },
+  { value: "Uinta", label: "Uinta" },
+  { value: "Washakie", label: "Washakie" },
+  { value: "Weston", label: "Weston" },
+  { value: "other", label: "Other" },
+];

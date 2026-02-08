@@ -15,6 +15,9 @@ import {
   KY_COUNTIES, OR_COUNTIES, OK_COUNTIES, CT_COUNTIES, UT_COUNTIES,
   IA_COUNTIES, NV_COUNTIES, AR_COUNTIES, MS_COUNTIES, KS_COUNTIES,
   NM_COUNTIES, NE_COUNTIES, ID_COUNTIES,
+  AK_BOROUGHS, DE_COUNTIES, HI_COUNTIES, ME_COUNTIES, MT_COUNTIES,
+  NH_COUNTIES, ND_COUNTIES, RI_COUNTIES, SD_COUNTIES, VT_COUNTIES,
+  WV_COUNTIES, WY_COUNTIES,
 } from "@shared/templates/county-data";
 import {
   FormControl,
@@ -251,6 +254,9 @@ const COUNTY_MAP: Record<string, { value: string; label: string }[]> = {
   CT: CT_COUNTIES, UT: UT_COUNTIES, IA: IA_COUNTIES, NV: NV_COUNTIES,
   AR: AR_COUNTIES, MS: MS_COUNTIES, KS: KS_COUNTIES, NM: NM_COUNTIES,
   NE: NE_COUNTIES, ID: ID_COUNTIES,
+  AK: AK_BOROUGHS, DE: DE_COUNTIES, HI: HI_COUNTIES, ME: ME_COUNTIES,
+  MT: MT_COUNTIES, NH: NH_COUNTIES, ND: ND_COUNTIES, RI: RI_COUNTIES,
+  SD: SD_COUNTIES, VT: VT_COUNTIES, WV: WV_COUNTIES, WY: WY_COUNTIES,
 };
 
 const DISTRICT_DIVISIONS: Record<string, { value: string; label: string }[]> = {
@@ -466,6 +472,31 @@ const ALL_DISTRICTS = [
   { code: "DNE", label: "District of Nebraska (DNE)", rules: "DNE local rules, 12pt font", jurisdiction: "NE" },
   // Idaho
   { code: "DID", label: "District of Idaho (DID)", rules: "DID local rules, 12pt font", jurisdiction: "ID" },
+  // Alaska
+  { code: "DAK", label: "District of Alaska (DAK)", rules: "DAK local rules, 12pt font", jurisdiction: "AK" },
+  // Delaware
+  { code: "DDE", label: "District of Delaware (DDE)", rules: "DDE local rules, 12pt font", jurisdiction: "DE" },
+  // Hawaii
+  { code: "DHI", label: "District of Hawaii (DHI)", rules: "DHI local rules, 12pt font", jurisdiction: "HI" },
+  // Maine
+  { code: "DME", label: "District of Maine (DME)", rules: "DME local rules, 12pt font", jurisdiction: "ME" },
+  // Montana
+  { code: "DMT", label: "District of Montana (DMT)", rules: "DMT local rules, 12pt font", jurisdiction: "MT" },
+  // New Hampshire
+  { code: "DNH", label: "District of New Hampshire (DNH)", rules: "DNH local rules, 12pt font", jurisdiction: "NH" },
+  // North Dakota
+  { code: "DND", label: "District of North Dakota (DND)", rules: "DND local rules, 12pt font", jurisdiction: "ND" },
+  // Rhode Island
+  { code: "DRI", label: "District of Rhode Island (DRI)", rules: "DRI local rules, 12pt font", jurisdiction: "RI" },
+  // South Dakota
+  { code: "DSD", label: "District of South Dakota (DSD)", rules: "DSD local rules, 12pt font", jurisdiction: "SD" },
+  // Vermont
+  { code: "DVT", label: "District of Vermont (DVT)", rules: "DVT local rules, 12pt font", jurisdiction: "VT" },
+  // West Virginia
+  { code: "NDWV", label: "Northern District of West Virginia (NDWV)", rules: "NDWV local rules, 12pt font", jurisdiction: "WV" },
+  { code: "SDWV", label: "Southern District of West Virginia (SDWV)", rules: "SDWV local rules, 12pt font", jurisdiction: "WV" },
+  // Wyoming
+  { code: "DWY", label: "District of Wyoming (DWY)", rules: "DWY local rules, 12pt font", jurisdiction: "WY" },
 ];
 
 export function JurisdictionSelector({
@@ -546,6 +577,18 @@ export function JurisdictionSelector({
     { value: "NM", label: "New Mexico", description: "Uses New Mexico Statutes Annotated citations" },
     { value: "NE", label: "Nebraska", description: "Uses Nebraska Revised Statutes citations" },
     { value: "ID", label: "Idaho", description: "Uses Idaho Code citations" },
+    { value: "AK", label: "Alaska", description: "Uses Alaska Statutes citations" },
+    { value: "DE", label: "Delaware", description: "Uses Delaware Code citations" },
+    { value: "HI", label: "Hawaii", description: "Uses Hawaii Revised Statutes citations" },
+    { value: "ME", label: "Maine", description: "Uses Maine Revised Statutes citations" },
+    { value: "MT", label: "Montana", description: "Uses Montana Code Annotated citations" },
+    { value: "NH", label: "New Hampshire", description: "Uses New Hampshire Revised Statutes citations" },
+    { value: "ND", label: "North Dakota", description: "Uses North Dakota Century Code citations" },
+    { value: "RI", label: "Rhode Island", description: "Uses Rhode Island General Laws citations" },
+    { value: "SD", label: "South Dakota", description: "Uses South Dakota Codified Laws citations" },
+    { value: "VT", label: "Vermont", description: "Uses Vermont Statutes Annotated citations" },
+    { value: "WV", label: "West Virginia", description: "Uses West Virginia Code citations" },
+    { value: "WY", label: "Wyoming", description: "Uses Wyoming Statutes citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 
