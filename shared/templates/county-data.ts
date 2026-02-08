@@ -3547,3 +3547,19 @@ export const WY_COUNTIES: { value: string; label: string }[] = [
   { value: "Weston", label: "Weston" },
   { value: "other", label: "Other" },
 ];
+
+// ============================================================================
+// District of Columbia Wards (8)
+// ============================================================================
+
+export const DC_WARDS: { value: string; label: string }[] = [
+  { value: "Ward 1", label: "Ward 1" },
+  { value: "Ward 2", label: "Ward 2" },
+  { value: "Ward 3", label: "Ward 3" },
+  { value: "Ward 4", label: "Ward 4" },
+  { value: "Ward 5", label: "Ward 5" },
+  { value: "Ward 6", label: "Ward 6" },
+  { value: "Ward 7", label: "Ward 7" },
+  { value: "Ward 8", label: "Ward 8" },
+  { value: "other", label: "Other" },
+];

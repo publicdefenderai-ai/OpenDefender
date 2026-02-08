@@ -17,7 +17,7 @@ import {
   NM_COUNTIES, NE_COUNTIES, ID_COUNTIES,
   AK_BOROUGHS, DE_COUNTIES, HI_COUNTIES, ME_COUNTIES, MT_COUNTIES,
   NH_COUNTIES, ND_COUNTIES, RI_COUNTIES, SD_COUNTIES, VT_COUNTIES,
-  WV_COUNTIES, WY_COUNTIES,
+  WV_COUNTIES, WY_COUNTIES, DC_WARDS,
 } from "@shared/templates/county-data";
 import {
   FormControl,
@@ -257,6 +257,7 @@ const COUNTY_MAP: Record<string, { value: string; label: string }[]> = {
   AK: AK_BOROUGHS, DE: DE_COUNTIES, HI: HI_COUNTIES, ME: ME_COUNTIES,
   MT: MT_COUNTIES, NH: NH_COUNTIES, ND: ND_COUNTIES, RI: RI_COUNTIES,
   SD: SD_COUNTIES, VT: VT_COUNTIES, WV: WV_COUNTIES, WY: WY_COUNTIES,
+  DC: DC_WARDS,
 };
 
 const DISTRICT_DIVISIONS: Record<string, { value: string; label: string }[]> = {
@@ -497,6 +498,8 @@ const ALL_DISTRICTS = [
   { code: "SDWV", label: "Southern District of West Virginia (SDWV)", rules: "SDWV local rules, 12pt font", jurisdiction: "WV" },
   // Wyoming
   { code: "DWY", label: "District of Wyoming (DWY)", rules: "DWY local rules, 12pt font", jurisdiction: "WY" },
+  // District of Columbia
+  { code: "DDC", label: "U.S. District Court for the District of Columbia (DDC)", rules: "DDC local rules, 12pt font", jurisdiction: "DC" },
 ];
 
 export function JurisdictionSelector({
@@ -589,6 +592,7 @@ export function JurisdictionSelector({
     { value: "VT", label: "Vermont", description: "Uses Vermont Statutes Annotated citations" },
     { value: "WV", label: "West Virginia", description: "Uses West Virginia Code citations" },
     { value: "WY", label: "Wyoming", description: "Uses Wyoming Statutes citations" },
+    { value: "DC", label: "District of Columbia", description: "Uses D.C. Code citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 

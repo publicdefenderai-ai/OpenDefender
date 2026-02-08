@@ -12741,6 +12741,235 @@ ____________________________
 ];
 
 // ============================================================================
+// District of Columbia State Sections
+// ============================================================================
+
+const dcCaptionInputs: TemplateInput[] = captionInputs.map((input) =>
+  input.id === "courtName"
+    ? { ...input, placeholder: "e.g., Superior Court of the District of Columbia, Criminal Division" }
+    : input.id === "caseNumber"
+    ? { ...input, placeholder: "e.g., 2024 CF2 001234" }
+    : input
+);
+
+const dcBaseSections: TemplateSection[] = [
+  {
+    id: "caption",
+    name: "Caption",
+    type: "user-input",
+    order: 1,
+    inputs: dcCaptionInputs,
+    required: true,
+    helpText: "Enter the court and case information for the document caption",
+  },
+  baseSections[1],
+  baseSections[2],
+  baseSections[3],
+  baseSections[4],
+];
+
+const dcSections: TemplateSection[] = [
+  ...dcBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a motion for bail reduction under D.C. Super. Ct. Crim. R. 46, D.C. Code § 23-1321, D.C. Code § 23-1322, and D.C. Code § 23-1325 in a District of Columbia criminal matter.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Bail Type: {{bailType}}
+- Bail Set By: {{bailSetBy}}
+- Bail Set Date: {{bailSetDate}}
+- Charges: {{charges}}
+- Charge Level: {{chargeLevel}}
+- Custody Status: {{currentlyInCustody}}
+- Time in Custody: {{timeInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Community Involvement: {{communityInvolvement}}
+- Criminal History: {{criminalHistory}} - {{criminalHistoryDetails}}
+- Flight Risk Factors: {{flightRiskFactors}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Assets: {{defendantAssets}}
+- Inability to Pay: {{abilityToPayExplanation}}
+- Proposed Alternative: {{proposedAlternative}}
+- Proposed Amount: {{proposedBailAmount}}
+- Proposed Conditions: {{proposedConditions}}
+
+Under D.C. Super. Ct. Crim. R. 46, D.C. Code § 23-1321, and D.C. Code § 23-1322, courts must consider nature of offense, defendant's ties to the community, and ability to post bail.
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a D.C. bail reduction motion.",
+    helpText: "AI will generate a D.C.-specific statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument section for a motion to reduce bail under District of Columbia law.
+
+Current Bail: {{currentBailAmount}}
+Proposed Bail: {{proposedBailAmount}}
+Charges: {{charges}}
+Criminal History: {{criminalHistory}}
+Community Ties: {{familyTies}}, {{communityInvolvement}}
+Financial Situation: {{abilityToPayExplanation}}
+
+Applicable D.C. law includes:
+- D.C. Super. Ct. Crim. R. 46: Bail provisions
+- D.C. Code § 23-1321: Release conditions
+- D.C. Code § 23-1322: Pretrial detention
+- D.C. Code § 23-1325: Bail review
+- 8th Amendment: Prohibition against excessive bail
+
+Generate 3-5 paragraphs arguing for bail reduction.`,
+    aiInstructions: "Must cite D.C. Super. Ct. Crim. R. 46 and D.C. Code § 23-1321.",
+    helpText: "AI will generate D.C.-specific legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to D.C. Super. Ct. Crim. R. 46 and D.C. Code § 23-1321 to:
+
+1. Reduce the current bail from the amount set to a reasonable amount that the Defendant can afford;
+
+2. In the alternative, modify the conditions of release to allow for personal recognizance or supervised release;
+
+3. Grant such other and further relief as this Court deems just and proper.`,
+    helpText: "D.C. prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy of the foregoing on all parties:
+
+[ ] By electronic filing
+[ ] By mail
+[ ] By personal service
+
+DISTRICT OF COLUMBIA
+c/o Office of the Attorney General
+________________________________
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "District of Columbia certificate of service format",
+  },
+];
+
+const dcFederalSections: TemplateSection[] = [
+  ...dcBaseSections,
+
+  {
+    id: "statementOfFacts",
+    name: "Statement of Facts",
+    type: "ai-generated",
+    order: 6,
+    required: true,
+    aiPromptTemplate: `Generate a detailed statement of facts for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b) in the U.S. District Court for the District of Columbia.
+
+Current Bail Information:
+- Current Bail Amount: {{currentBailAmount}}
+- Charges: {{charges}}
+- Custody Status: {{currentlyInCustody}}
+
+Defendant Background:
+- Employment: {{employmentStatus}} - {{employmentDetails}}
+- Residence: {{residenceStatus}} - {{residenceDetails}}
+- Family Ties: {{familyTies}}
+- Criminal History: {{criminalHistory}}
+
+Financial Information:
+- Income: {{defendantIncome}}
+- Proposed Conditions: {{proposedConditions}}
+
+Generate 3-4 paragraphs presenting facts chronologically.`,
+    aiInstructions: "Generate a factual narrative for a federal detention review motion.",
+    helpText: "AI will generate a federal statement of facts",
+  },
+
+  {
+    id: "legalArgument",
+    name: "Legal Argument",
+    type: "ai-generated",
+    order: 7,
+    required: true,
+    aiPromptTemplate: `Generate the legal argument for a federal motion to review detention under 18 U.S.C. §§ 3142, 3145(b).
+
+Charges: {{charges}}
+Proposed Conditions: {{proposedConditions}}
+Community Ties: {{familyTies}}
+
+Apply D.C. Circuit precedent on detention review.
+
+Generate 3-5 paragraphs arguing for release or modified conditions.`,
+    aiInstructions: "Must cite 18 U.S.C. §§ 3142, 3145(b) and D.C. Circuit precedent.",
+    helpText: "AI will generate federal legal arguments",
+  },
+
+  {
+    id: "prayerForRelief",
+    name: "Prayer for Relief",
+    type: "static",
+    order: 8,
+    required: true,
+    staticContent: `WHEREFORE, Defendant respectfully moves this Honorable Court pursuant to 18 U.S.C. §§ 3142, 3145(b) to:
+
+1. Revoke or amend the current detention order;
+
+2. Release Defendant on reasonable conditions;
+
+3. Grant such other relief as is just and proper.`,
+    helpText: "Federal prayer for relief",
+  },
+
+  baseSections[8],
+
+  {
+    id: "certificateOfService",
+    name: "Certificate of Service",
+    type: "static",
+    order: 10,
+    required: true,
+    staticContent: `CERTIFICATE OF SERVICE
+
+I certify that on the date below, I served a copy via CM/ECF electronic filing.
+
+Dated: _______________
+
+____________________________
+[Declarant's Signature]`,
+    helpText: "Federal certificate of service format",
+  },
+];
+
+// ============================================================================
 // Template Definition
 // ============================================================================
 
@@ -13718,11 +13947,25 @@ export const motionToReduceBailTemplate: DocumentTemplate = {
       sections: wyFederalSections,
       courtSpecificRules: "D. Wyo.: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). Tenth Circuit. CM/ECF required.",
     },
+    // District of Columbia
+    {
+      jurisdiction: "DC",
+      courtType: "state",
+      sections: dcSections,
+      courtSpecificRules: "Filed under D.C. Super. Ct. Crim. R. 46 and D.C. Code § 23-1321. D.C. Code § 23-1322 pretrial detention. D.C. Code § 23-1325 bail review.",
+    },
+    {
+      jurisdiction: "DC",
+      courtType: "federal",
+      district: "DDC",
+      sections: dcFederalSections,
+      courtSpecificRules: "DDC: 12pt font. Filed under 18 U.S.C. §§ 3142, 3145(b). D.C. Circuit. CM/ECF required.",
+    },
   ],
   estimatedCompletionTime: "20-30 minutes",
   difficultyLevel: "intermediate",
   requiresAttorneyVerification: true,
-  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "MO", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "ID", "AK", "DE", "HI", "ME", "MT", "NH", "ND", "RI", "SD", "VT", "WV", "WY", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD", "EDMO", "WDMO", "EDWI", "WDWI", "DCO", "DMN", "DSC", "NDAL", "MDAL", "SDAL", "EDLA", "MDLA", "WDLA", "EDKY", "WDKY", "DOR", "NDOK", "EDOK", "WDOK", "DCT", "DUT", "NDIA", "SDIA", "DNV", "EDAR", "WDAR", "NDMS", "SDMS", "DKS", "DNM", "DNE", "DID", "DAK", "DDE", "DHI", "DME", "DMT", "DNH", "DND", "DRI", "DSD", "DVT", "NDWV", "SDWV", "DWY"],
+  supportedJurisdictions: ["CA", "NY", "TX", "FL", "PA", "IL", "OH", "GA", "NC", "MI", "NJ", "VA", "WA", "AZ", "MA", "TN", "IN", "MD", "MO", "WI", "CO", "MN", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS", "NM", "NE", "ID", "AK", "DE", "HI", "ME", "MT", "NH", "ND", "RI", "SD", "VT", "WV", "WY", "DC", "CACD", "NDCA", "EDCA", "SDCA", "SDNY", "EDNY", "NDNY", "WDNY", "TXND", "TXSD", "TXED", "TXWD", "FLSD", "FLMD", "FLND", "PAED", "PAMD", "PAWD", "ILND", "ILCD", "ILSD", "OHND", "OHSD", "GAND", "GAMD", "GASD", "EDNC", "MDNC", "WDNC", "EDMI", "WDMI", "DNJ", "EDVA", "WDVA", "EDWA", "WDWA", "DAZ", "DMA", "EDTN", "MDTN", "WDTN", "NDIN", "SDIN", "DMD", "EDMO", "WDMO", "EDWI", "WDWI", "DCO", "DMN", "DSC", "NDAL", "MDAL", "SDAL", "EDLA", "MDLA", "WDLA", "EDKY", "WDKY", "DOR", "NDOK", "EDOK", "WDOK", "DCT", "DUT", "NDIA", "SDIA", "DNV", "EDAR", "WDAR", "NDMS", "SDMS", "DKS", "DNM", "DNE", "DID", "DAK", "DDE", "DHI", "DME", "DMT", "DNH", "DND", "DRI", "DSD", "DVT", "NDWV", "SDWV", "DWY", "DDC"],
 };
 
 export default motionToReduceBailTemplate;
