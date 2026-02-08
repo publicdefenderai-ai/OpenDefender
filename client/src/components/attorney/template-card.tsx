@@ -41,9 +41,9 @@ export function TemplateCard({ template }: TemplateCardProps) {
               </Badge>
               {template.supportedJurisdictions.length > 0 && (
                 <Badge variant="secondary">
-                  {template.supportedJurisdictions
-                    .filter((j) => j.length === 2 || j === "EOIR")
-                    .join(", ") || "Multi-jurisdiction"}
+                  {template.supportedJurisdictions.includes("EOIR")
+                    ? "Immigration (EOIR)"
+                    : "All 50 States + DC"}
                 </Badge>
               )}
             </div>
