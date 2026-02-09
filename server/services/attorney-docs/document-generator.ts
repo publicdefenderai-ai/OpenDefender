@@ -15,6 +15,8 @@ import { motionToDismissTemplate } from "../../../shared/templates/motion-to-dis
 import { noticeOfAppearanceTemplate } from "../../../shared/templates/notice-of-appearance";
 import { ntaPleadingsTemplate } from "../../../shared/templates/nta-pleadings";
 import { motionForContinuanceEoirTemplate } from "../../../shared/templates/motion-for-continuance-eoir";
+import { motionForDiscoveryTemplate } from "../../../shared/templates/motion-for-discovery";
+import { bondMotionEoirTemplate } from "../../../shared/templates/bond-motion-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -67,6 +69,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["notice-of-appearance", noticeOfAppearanceTemplate],
   ["nta-pleadings", ntaPleadingsTemplate],
   ["motion-for-continuance-eoir", motionForContinuanceEoirTemplate],
+  ["motion-for-discovery", motionForDiscoveryTemplate],
+  ["bond-motion-eoir", bondMotionEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
