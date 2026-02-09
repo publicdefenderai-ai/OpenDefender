@@ -11,8 +11,10 @@ import { randomUUID } from "crypto";
 import { motionToContinueTemplate } from "../../../shared/templates/motion-to-continue";
 import { motionToReduceBailTemplate } from "../../../shared/templates/motion-to-reduce-bail";
 import { motionToSuppressTemplate } from "../../../shared/templates/motion-to-suppress";
+import { motionToDismissTemplate } from "../../../shared/templates/motion-to-dismiss";
 import { noticeOfAppearanceTemplate } from "../../../shared/templates/notice-of-appearance";
 import { ntaPleadingsTemplate } from "../../../shared/templates/nta-pleadings";
+import { motionForContinuanceEoirTemplate } from "../../../shared/templates/motion-for-continuance-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -61,8 +63,10 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-continue", motionToContinueTemplate],
   ["motion-to-reduce-bail", motionToReduceBailTemplate],
   ["motion-to-suppress", motionToSuppressTemplate],
+  ["motion-to-dismiss", motionToDismissTemplate],
   ["notice-of-appearance", noticeOfAppearanceTemplate],
   ["nta-pleadings", ntaPleadingsTemplate],
+  ["motion-for-continuance-eoir", motionForContinuanceEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)

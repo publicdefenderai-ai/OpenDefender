@@ -44,6 +44,26 @@ A dual-layer Mock Q&A system helps users prepare for court proceedings:
 - **AI-Generated Personalized Q&A**: Claude generates fact-specific practice questions tailored to user's case details, charges, and circumstances
 - **UI Component** (`MockQASection`): Collapsible Q&A items with suggested responses and explanations, integrated into `/process` page and guidance dashboard
 
+### Attorney Portal - Document Generation
+The Attorney Portal (`/attorney`) provides verified attorneys with jurisdiction-specific document generation tools. Templates are registered in `server/services/attorney-docs/document-generator.ts` and follow the `DocumentTemplate` interface from `shared/templates/schema.ts`.
+
+**Criminal Motion Templates** (All 50 States + DC, state + federal court variants):
+| Template | File | Difficulty |
+|----------|------|------------|
+| Motion to Continue | `shared/templates/motion-to-continue.ts` | Basic |
+| Motion to Suppress Evidence | `shared/templates/motion-to-suppress.ts` | Advanced |
+| Motion to Reduce Bail | `shared/templates/motion-to-reduce-bail.ts` | Intermediate |
+| Motion to Dismiss | `shared/templates/motion-to-dismiss.ts` | Intermediate |
+
+**Immigration Templates** (EOIR format, nationally uniform):
+| Template | File | Difficulty |
+|----------|------|------------|
+| Notice of Appearance | `shared/templates/notice-of-appearance.ts` | Basic |
+| Written Pleadings to NTA | `shared/templates/nta-pleadings.ts` | Intermediate |
+| Motion for Continuance | `shared/templates/motion-for-continuance-eoir.ts` | Basic |
+
+**Coverage**: 143 total jurisdictions (51 state/territory + 92 federal districts) for criminal templates. Immigration templates use EOIR national format.
+
 ### API Architecture
 The API provides endpoints for legal resources, court information, AI-powered legal guidance, detailed docket information, and comprehensive search capabilities. It also includes intelligent attorney matching based on proximity and specific legal service needs.
 
