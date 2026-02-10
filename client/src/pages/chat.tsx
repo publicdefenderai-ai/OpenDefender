@@ -27,7 +27,7 @@ import {
 import { useChat, QuickReply, ConversationStep, CompletedFlow } from "@/contexts/chat-context";
 import { MessageBubble, TypingIndicator } from "@/components/chat/message-bubble";
 import { QuickReplyButtons, FullWidthReply } from "@/components/chat/quick-replies";
-import { ProgressDots, GeneratingProgress } from "@/components/chat/progress-indicator";
+import { ProgressBreadcrumbs, GeneratingProgress } from "@/components/chat/progress-indicator";
 import { CaseStatusPanel } from "@/components/chat/case-status-panel";
 import { ChatInput } from "@/components/chat/chat-input";
 import { StateSelector } from "@/components/chat/state-selector";
@@ -1046,7 +1046,7 @@ export default function ChatPage() {
             </div>
           </header>
 
-          <ProgressDots currentStep={state.currentStep} />
+          <ProgressBreadcrumbs currentStep={state.currentStep} />
 
           <ScrollArea className="flex-1 px-4 sm:px-6 py-6 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
             <div className="max-w-2xl mx-auto space-y-3" role="log" aria-live="polite" aria-label="Chat messages">

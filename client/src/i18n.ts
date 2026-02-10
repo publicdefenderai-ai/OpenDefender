@@ -2826,6 +2826,19 @@ i18n
           },
           "chat": {
           "openChat": "Open legal guidance chat",
+          "progress": {
+            "step": "Step {{current}} of {{total}}",
+            "safety": "Safety",
+            "safetyDesc": "Checking if you need immediate help",
+            "location": "Location",
+            "locationDesc": "Tell us where your case is",
+            "charges": "Charges",
+            "chargesDesc": "Select the charges you're facing",
+            "situation": "Situation",
+            "situationDesc": "Your case stage and current status",
+            "details": "Details",
+            "detailsDesc": "Describe what happened for personalized guidance"
+          },
           "messages": {
             "welcome": "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
             "emergencyAdviceFull": "🚨 **If you're being arrested or detained right now:**\n\n**✅ Stay Calm**\nDo not resist, run, or argue. Keep your hands visible. Resisting can lead to additional charges, even if the original arrest is later found to be unlawful.\n\n**🔇 Exercise Your Right to Remain Silent**\nSay clearly: \"I am exercising my right to remain silent.\"\nYou do NOT have to answer questions about where you're going, what you're doing, or where you live.\n\n**⚖️ Request an Attorney**\nSay: \"I want a lawyer.\" Police must stop questioning you once you ask for an attorney.\nIf you can't afford one, you can request a public defender at your first court appearance.\n\n**🚫 Do Not Consent to Searches**\nSay: \"I do not consent to any searches.\"\nPolice may search anyway, but stating this protects your rights for later.\n\n**📝 Remember These Details**\nNote the officers' badge numbers, patrol car numbers, and any witness information. This can help your case later.\n\n---\n**What would you like to do next?**",
@@ -5949,6 +5962,19 @@ i18n
           },
           "chat": {
           "openChat": "Abrir chat de orientación legal",
+          "progress": {
+            "step": "Paso {{current}} de {{total}}",
+            "safety": "Seguridad",
+            "safetyDesc": "Verificando si necesita ayuda inmediata",
+            "location": "Ubicación",
+            "locationDesc": "Díganos dónde está su caso",
+            "charges": "Cargos",
+            "chargesDesc": "Seleccione los cargos que enfrenta",
+            "situation": "Situación",
+            "situationDesc": "La etapa y estado actual de su caso",
+            "details": "Detalles",
+            "detailsDesc": "Describa lo que pasó para orientación personalizada"
+          },
           "messages": {
             "welcome": "¡Hola! Estoy aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?",
             "emergencyAdviceFull": "🚨 **Si está siendo arrestado o detenido ahora mismo:**\n\n**✅ Mantenga la Calma**\nNo resista, corra ni discuta. Mantenga las manos visibles. Resistirse puede resultar en cargos adicionales, incluso si el arresto original luego se considera ilegal.\n\n**🔇 Ejerza su Derecho a Permanecer en Silencio**\nDiga claramente: \"Estoy ejerciendo mi derecho a permanecer en silencio.\"\nNO tiene que responder preguntas sobre adónde va, qué está haciendo o dónde vive.\n\n**⚖️ Solicite un Abogado**\nDiga: \"Quiero un abogado.\" La policía debe dejar de interrogarlo una vez que pida un abogado.\nSi no puede pagar uno, puede solicitar un defensor público en su primera comparecencia ante el tribunal.\n\n**🚫 No Consienta Registros**\nDiga: \"No consiento ningún registro.\"\nLa policía puede registrar de todos modos, pero decir esto protege sus derechos para después.\n\n**📝 Recuerde Estos Detalles**\nAnote los números de placa de los oficiales, números de patrulla y cualquier información de testigos. Esto puede ayudar su caso después.\n\n---\n**¿Qué le gustaría hacer ahora?**",
