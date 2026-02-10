@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FileText, Folder, LogOut, Clock, Scale, Plane, Loader2 } from "lucide-react";
+import { FileText, Folder, LogOut, Clock, Scale, Landmark, Loader2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
@@ -60,7 +60,7 @@ function DocumentsContent() {
                 {t("attorneyPortal.documents.criminal", "Criminal")}
               </TabsTrigger>
               <TabsTrigger value="immigration" className="gap-2">
-                <Plane className="h-4 w-4" />
+                <Landmark className="h-4 w-4" />
                 {t("attorneyPortal.documents.immigration", "Immigration")}
               </TabsTrigger>
             </TabsList>
