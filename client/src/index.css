@@ -1246,28 +1246,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   cursor: pointer;
   text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: hsl(217, 60%, 55%);
-  text-decoration-thickness: 1.5px;
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+  transition: opacity 0.15s ease;
   border-radius: 2px;
   color: inherit;
 }
 
 .legal-term-highlight:hover,
 .legal-term-highlight:focus-visible {
-  text-decoration-style: solid;
-  text-decoration-color: hsl(217, 70%, 45%);
-}
-
-.dark .legal-term-highlight {
-  text-decoration-color: hsl(217, 50%, 55%);
-}
-
-.dark .legal-term-highlight:hover,
-.dark .legal-term-highlight:focus-visible {
-  text-decoration-color: hsl(217, 60%, 65%);
+  opacity: 0.75;
 }
 
 .legal-term-highlight:focus-visible {
