@@ -5,7 +5,7 @@
  */
 
 import { Link } from "wouter";
-import { Clock, ArrowRight, Scale, FileText } from "lucide-react";
+import { Clock, ArrowRight, Scale } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -25,28 +25,23 @@ export function TemplateCard({ template }: TemplateCardProps) {
   return (
     <Card className="flex flex-col h-full hover:shadow-md transition-shadow">
       <CardHeader className="pb-3">
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
-            <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg leading-tight">{template.name}</h3>
-            <div className="flex flex-wrap gap-2 mt-2">
-              <Badge
-                variant="outline"
-                className={difficultyColors[template.difficultyLevel] || ""}
-              >
-                {template.difficultyLevel.charAt(0).toUpperCase() +
-                  template.difficultyLevel.slice(1)}
+        <div>
+          <h3 className="font-semibold text-lg leading-tight">{template.name}</h3>
+          <div className="flex flex-wrap gap-2 mt-2">
+            <Badge
+              variant="outline"
+              className={difficultyColors[template.difficultyLevel] || ""}
+            >
+              {template.difficultyLevel.charAt(0).toUpperCase() +
+                template.difficultyLevel.slice(1)}
+            </Badge>
+            {template.supportedJurisdictions.length > 0 && (
+              <Badge variant="secondary">
+                {template.supportedJurisdictions.includes("EOIR")
+                  ? "Immigration (EOIR)"
+                  : "All 50 States + DC"}
               </Badge>
-              {template.supportedJurisdictions.length > 0 && (
-                <Badge variant="secondary">
-                  {template.supportedJurisdictions.includes("EOIR")
-                    ? "Immigration (EOIR)"
-                    : "All 50 States + DC"}
-                </Badge>
-              )}
-            </div>
+            )}
           </div>
         </div>
       </CardHeader>
