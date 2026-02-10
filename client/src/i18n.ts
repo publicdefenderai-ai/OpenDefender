@@ -1425,6 +1425,10 @@ i18n
               "title": "Criminal Justice Process Timeline",
               "subtitle": "Step-by-step guide through arrest, first court appearance, trial, and sentencing"
             },
+            "crossLinks": {
+              "timeline": "Interactive guide — select your stage to see rights and tips",
+              "quickRef": "Printable cards with your rights at every stage"
+            },
             "alert": {
               "important": "Important:",
               "text": "The exact timing and steps can be different in each state and for different cases. Always talk to a real lawyer for help with your specific situation."
@@ -4543,6 +4547,10 @@ i18n
             "hero": {
               "title": "Cronología del Proceso de Justicia Penal",
               "subtitle": "Guía paso a paso a través del arresto, acusación formal, juicio y procedimientos de sentencia"
+            },
+            "crossLinks": {
+              "timeline": "Guía interactiva — seleccione su etapa para ver derechos y consejos",
+              "quickRef": "Tarjetas imprimibles con sus derechos en cada etapa"
             },
             "alert": {
               "important": "Importante:",

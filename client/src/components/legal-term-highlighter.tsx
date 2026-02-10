@@ -130,6 +130,7 @@ function LegalTermPopover({
   const { i18n } = useTranslation();
   const isSpanish = i18n.language === "es";
   const displayDefinition = isSpanish && definitionEs ? definitionEs : definition;
+  const isDark = typeof document !== 'undefined' && document.documentElement.classList.contains('dark');
 
   return (
     <Tooltip delayDuration={200}>
@@ -145,18 +146,29 @@ function LegalTermPopover({
       </TooltipTrigger>
       <TooltipContent
         side="top"
-        className="legal-term-tooltip max-w-xs p-3 z-[100]"
-        sideOffset={6}
+        className="max-w-xs z-[100] rounded-lg border-0 bg-transparent p-0 shadow-none"
+        sideOffset={8}
       >
-        <div className="flex items-start gap-2">
-          <BookOpen className="h-3.5 w-3.5 text-blue-500 dark:text-blue-400 mt-0.5 shrink-0" aria-hidden="true" />
-          <div>
-            <p className="font-semibold text-xs text-blue-700 dark:text-blue-300 mb-1">
-              {term}
-            </p>
-            <p className="text-xs leading-relaxed text-popover-foreground">
-              {displayDefinition}
-            </p>
+        <div
+          className="p-3 rounded-lg"
+          style={{
+            backgroundColor: isDark ? '#1e2a3d' : '#ffffff',
+            border: isDark ? '1px solid #334155' : '1px solid #d4d4d8',
+            boxShadow: isDark
+              ? '0 4px 20px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.3)'
+              : '0 4px 16px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.08)',
+          }}
+        >
+          <div className="flex items-start gap-2">
+            <BookOpen className="h-3.5 w-3.5 mt-0.5 shrink-0" style={{ color: isDark ? '#60a5fa' : '#3b82f6' }} aria-hidden="true" />
+            <div>
+              <span className="font-semibold text-xs mb-1 block" style={{ color: isDark ? '#93c5fd' : '#1d4ed8' }}>
+                {term}
+              </span>
+              <span className="text-xs leading-relaxed block" style={{ color: isDark ? '#e2e8f0' : '#1e293b' }}>
+                {displayDefinition}
+              </span>
+            </div>
           </div>
         </div>
       </TooltipContent>

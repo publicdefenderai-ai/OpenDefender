@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { Calendar, Clock, Shield, Scale, AlertTriangle, Users } from "lucide-react";
+import { Calendar, Clock, Shield, Scale, AlertTriangle, Users, ArrowRight, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -90,6 +92,51 @@ export default function Process() {
               <p className="text-xl text-white/85 max-w-3xl mx-auto">
                 {t('process.hero.subtitle')}
               </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-8 bg-muted/30">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link href="/case-timeline">
+                <Card className="hover:shadow-md hover:border-teal-400 dark:hover:border-teal-600 transition-all duration-200 cursor-pointer group h-full">
+                  <CardContent className="p-5 flex items-center gap-4">
+                    <div className="bg-teal-100 dark:bg-teal-900/40 p-3 rounded-lg shrink-0">
+                      <Clock className="h-6 w-6 text-teal-600 dark:text-teal-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">
+                        {t('caseTimeline.title', 'Case Timeline')}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {t('process.crossLinks.timeline', 'Interactive guide — select your stage to see rights and tips')}
+                      </p>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors shrink-0" />
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href="/quick-reference">
+                <Card className="hover:shadow-md hover:border-rose-400 dark:hover:border-rose-600 transition-all duration-200 cursor-pointer group h-full">
+                  <CardContent className="p-5 flex items-center gap-4">
+                    <div className="bg-rose-100 dark:bg-rose-900/40 p-3 rounded-lg shrink-0">
+                      <FileText className="h-6 w-6 text-rose-600 dark:text-rose-400" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-foreground group-hover:text-rose-700 dark:group-hover:text-rose-300 transition-colors">
+                        {t('quickRef.title', 'Quick-Reference Cards')}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {t('process.crossLinks.quickRef', 'Printable cards with your rights at every stage')}
+                      </p>
+                    </div>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors shrink-0" />
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
