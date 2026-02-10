@@ -19,6 +19,8 @@ import { motionForDiscoveryTemplate } from "../../../shared/templates/motion-for
 import { bondMotionEoirTemplate } from "../../../shared/templates/bond-motion-eoir";
 import { motionForPretrialReleaseTemplate } from "../../../shared/templates/motion-for-pretrial-release";
 import { motionToChangeVenueEoirTemplate } from "../../../shared/templates/motion-to-change-venue-eoir";
+import { motionInLimineTemplate } from "../../../shared/templates/motion-in-limine";
+import { motionToReopenEoirTemplate } from "../../../shared/templates/motion-to-reopen-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -75,6 +77,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["bond-motion-eoir", bondMotionEoirTemplate],
   ["motion-for-pretrial-release", motionForPretrialReleaseTemplate],
   ["motion-to-change-venue-eoir", motionToChangeVenueEoirTemplate],
+  ["motion-in-limine", motionInLimineTemplate],
+  ["motion-to-reopen-eoir", motionToReopenEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -318,6 +322,33 @@ async function generateAISection(
     transportationHardship: formData.transportationHardship || "",
     dhsPosition: formData.dhsPosition || "",
     dhsPositionDetails: formData.dhsPositionDetails || "",
+    // Motion in limine fields
+    trialDate: formData.trialDate || "",
+    trialType: formData.trialType || "",
+    evidenceCategory: formData.evidenceCategory || "",
+    prejudiceExplanation: formData.prejudiceExplanation || "",
+    evidenceRelevance: formData.evidenceRelevance || "",
+    additionalEvidenceItems: formData.additionalEvidenceItems || "",
+    primaryRule: formData.primaryRule || "",
+    legalBasisExplanation: formData.legalBasisExplanation || "",
+    prosecutionLikelyArgument: formData.prosecutionLikelyArgument || "",
+    applicableExceptions: formData.applicableExceptions || "",
+    // Motion to reopen (EOIR) fields
+    dateOfFinalOrder: formData.dateOfFinalOrder || "",
+    typeOfFinalOrder: formData.typeOfFinalOrder || "",
+    daysSinceOrder: formData.daysSinceOrder || "",
+    motionDeadlineAwareness: formData.motionDeadlineAwareness || "",
+    reopenBasis: formData.reopenBasis || "",
+    reopenBasisExplanation: formData.reopenBasisExplanation || "",
+    newEvidenceDescription: formData.newEvidenceDescription || "",
+    whyNotPreviouslyAvailable: formData.whyNotPreviouslyAvailable || "",
+    priorMotionsToReopen: formData.priorMotionsToReopen || "none",
+    priorMotionDetails: formData.priorMotionDetails || "",
+    wasInAbsentia: formData.wasInAbsentia || "",
+    noticeDetails: formData.noticeDetails || "",
+    addressHistory: formData.addressHistory || "",
+    exceptionalCircumstances: formData.exceptionalCircumstances || "",
+    reliefSought: formData.reliefSought || "",
   };
 
   // Process template with safe data

@@ -56,6 +56,7 @@ The Attorney Portal (`/attorney`) provides verified attorneys with jurisdiction-
 | Motion to Dismiss | `shared/templates/motion-to-dismiss.ts` | Intermediate |
 | Motion for Discovery / Brady Motion | `shared/templates/motion-for-discovery.ts` | Intermediate |
 | Motion for Pretrial Release | `shared/templates/motion-for-pretrial-release.ts` | Intermediate |
+| Motion in Limine | `shared/templates/motion-in-limine.ts` | Intermediate |
 
 **Immigration Templates** (EOIR format, nationally uniform):
 | Template | File | Difficulty |
@@ -65,6 +66,7 @@ The Attorney Portal (`/attorney`) provides verified attorneys with jurisdiction-
 | Motion for Continuance | `shared/templates/motion-for-continuance-eoir.ts` | Basic |
 | Motion for Bond Redetermination | `shared/templates/bond-motion-eoir.ts` | Intermediate |
 | Motion to Change Venue | `shared/templates/motion-to-change-venue-eoir.ts` | Basic |
+| Motion to Reopen | `shared/templates/motion-to-reopen-eoir.ts` | Intermediate |
 
 **Coverage**: 143 total jurisdictions (51 state/territory + 92 federal districts) for criminal templates. Immigration templates use EOIR national format.
 
