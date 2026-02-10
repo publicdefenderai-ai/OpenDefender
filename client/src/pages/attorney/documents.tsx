@@ -1,10 +1,3 @@
-/**
- * Attorney Documents Page
- *
- * Document generation page for verified attorneys.
- * Displays available templates organized by category.
- */
-
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FileText, Folder, LogOut, Clock, Scale, Plane, Loader2 } from "lucide-react";
@@ -21,7 +14,7 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { VerificationGuard } from "@/components/attorney/verification-guard";
 import { SessionTimer } from "@/components/attorney/session-timer";
 import { useAttorneySession } from "@/hooks/use-attorney-session";
-import { TemplateCard, TemplateGrid } from "@/components/attorney/template-card";
+import { StagedTemplateList } from "@/components/attorney/template-card";
 import { fetchTemplates, type DocumentTemplateSummary } from "@/lib/attorney-api";
 
 function DocumentsContent() {
@@ -34,7 +27,6 @@ function DocumentsContent() {
       <Header />
       <SessionTimer />
 
-      {/* Hero Section */}
       <section className="relative py-12 md:py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-50 to-blue-50 dark:from-blue-950/20 dark:via-slate-950 dark:to-blue-950/20" />
 
@@ -61,10 +53,8 @@ function DocumentsContent() {
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          {/* Category Tabs */}
           <Tabs defaultValue="criminal" className="space-y-6">
             <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto">
               <TabsTrigger value="criminal" className="gap-2">
@@ -78,15 +68,14 @@ function DocumentsContent() {
             </TabsList>
 
             <TabsContent value="criminal" className="space-y-6">
-              <CategoryTemplateGrid category="criminal" />
+              <CategoryTemplates category="criminal" />
             </TabsContent>
 
             <TabsContent value="immigration" className="space-y-6">
-              <CategoryTemplateGrid category="immigration" />
+              <CategoryTemplates category="immigration" />
             </TabsContent>
           </Tabs>
 
-          {/* Session Controls */}
           <div className="mt-12 pt-8 border-t">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -116,11 +105,11 @@ function DocumentsContent() {
   );
 }
 
-interface CategoryTemplateGridProps {
+interface CategoryTemplatesProps {
   category: "criminal" | "immigration";
 }
 
-function CategoryTemplateGrid({ category }: CategoryTemplateGridProps) {
+function CategoryTemplates({ category }: CategoryTemplatesProps) {
   const { t } = useTranslation();
   const [templates, setTemplates] = useState<DocumentTemplateSummary[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -149,7 +138,6 @@ function CategoryTemplateGrid({ category }: CategoryTemplateGridProps) {
     loadTemplates();
   }, [category]);
 
-  // Show loading state
   if (isLoading) {
     return (
       <Card>
@@ -161,7 +149,6 @@ function CategoryTemplateGrid({ category }: CategoryTemplateGridProps) {
     );
   }
 
-  // Show error state
   if (error) {
     return (
       <Card className="border-red-200">
@@ -172,12 +159,15 @@ function CategoryTemplateGrid({ category }: CategoryTemplateGridProps) {
     );
   }
 
-  // Show templates if available
   if (templates.length > 0) {
-    return <TemplateGrid templates={templates} />;
+    return (
+      <StagedTemplateList
+        templates={templates}
+        category={category}
+      />
+    );
   }
 
-  // Show coming soon for categories without templates yet
   return (
     <Card className="border-dashed">
       <CardContent className="flex flex-col items-center justify-center py-16 text-center">
@@ -191,29 +181,13 @@ function CategoryTemplateGrid({ category }: CategoryTemplateGridProps) {
           {category === "criminal"
             ? t(
                 "attorney.documents.criminalComingSoon",
-                "Additional criminal law templates including Discovery Requests and Bail Reduction motions are being developed."
+                "Additional criminal law templates are being developed."
               )
             : t(
                 "attorney.documents.immigrationComingSoon",
-                "Immigration templates including EOIR-28 forms, Bond Memoranda, and Change of Venue motions are being developed."
+                "Additional immigration templates are being developed."
               )}
         </p>
-        <div className="mt-6 flex flex-wrap gap-2 justify-center">
-          {category === "criminal" ? (
-            <>
-              <Badge variant="outline">Discovery Request</Badge>
-              <Badge variant="outline">Bail Reduction</Badge>
-              <Badge variant="outline">Suppression Motion</Badge>
-            </>
-          ) : (
-            <>
-              <Badge variant="outline">EOIR-28</Badge>
-              <Badge variant="outline">Bond Memo</Badge>
-              <Badge variant="outline">Change of Venue</Badge>
-              <Badge variant="outline">Stay of Removal</Badge>
-            </>
-          )}
-        </div>
       </CardContent>
     </Card>
   );

@@ -1,87 +1,127 @@
-/**
- * Template Card Component
- *
- * Displays a document template card for selection in the attorney documents page.
- */
-
 import { Link } from "wouter";
-import { Clock, ArrowRight, Scale } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Clock, ArrowRight, Scale, ChevronRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 import type { DocumentTemplateSummary } from "@/lib/attorney-api";
 
-interface TemplateCardProps {
-  template: DocumentTemplateSummary;
+const difficultyColors: Record<string, string> = {
+  basic: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  intermediate: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+  advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+};
+
+interface CaseStage {
+  id: string;
+  label: string;
+  description: string;
+  templateIds: string[];
 }
 
-export function TemplateCard({ template }: TemplateCardProps) {
-  const difficultyColors: Record<string, string> = {
-    basic: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-    intermediate: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-    advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-  };
+const criminalStages: CaseStage[] = [
+  {
+    id: "early-case",
+    label: "Early Case (Arrest \u2192 Arraignment)",
+    description: "Motions typically filed immediately after arrest or at arraignment",
+    templateIds: [
+      "motion-for-pretrial-release",
+      "motion-to-reduce-bail",
+      "motion-to-continue",
+    ],
+  },
+  {
+    id: "pretrial",
+    label: "Pre-Trial Motions",
+    description: "Motions filed during the discovery and pre-trial phase",
+    templateIds: [
+      "motion-for-discovery",
+      "motion-to-suppress",
+      "motion-in-limine",
+      "motion-to-dismiss",
+    ],
+  },
+];
 
+const immigrationStages: CaseStage[] = [
+  {
+    id: "initial-filings",
+    label: "Initial Filings",
+    description: "First documents filed when a case begins in immigration court",
+    templateIds: ["notice-of-appearance", "nta-pleadings"],
+  },
+  {
+    id: "pre-hearing",
+    label: "Pre-Hearing Motions",
+    description: "Motions filed before or between hearings",
+    templateIds: [
+      "motion-for-continuance-eoir",
+      "bond-motion-eoir",
+      "motion-to-change-venue-eoir",
+    ],
+  },
+  {
+    id: "post-decision",
+    label: "Post-Decision",
+    description: "Motions filed after an immigration judge\u2019s decision",
+    templateIds: ["motion-to-reopen-eoir"],
+  },
+];
+
+function TemplateRow({ template }: { template: DocumentTemplateSummary }) {
   return (
-    <Card className="flex flex-col h-full hover:shadow-md transition-shadow">
-      <CardHeader className="pb-3">
-        <div>
-          <h3 className="font-semibold text-lg leading-tight">{template.name}</h3>
-          <div className="flex flex-wrap gap-2 mt-2">
+    <Link href={`/attorney/documents/${template.id}`}>
+      <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-colors cursor-pointer border border-transparent hover:border-border">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
+              {template.name}
+            </span>
             <Badge
               variant="outline"
-              className={difficultyColors[template.difficultyLevel] || ""}
+              className={`text-xs px-1.5 py-0 ${difficultyColors[template.difficultyLevel] || ""}`}
             >
               {template.difficultyLevel.charAt(0).toUpperCase() +
                 template.difficultyLevel.slice(1)}
             </Badge>
-            {template.supportedJurisdictions.length > 0 && (
-              <Badge variant="secondary">
-                {template.supportedJurisdictions.includes("EOIR")
-                  ? "Immigration (EOIR)"
-                  : "All 50 States + DC"}
-              </Badge>
-            )}
           </div>
+          <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
+            {template.description}
+          </p>
         </div>
-      </CardHeader>
-
-      <CardContent className="flex-1">
-        <p className="text-sm text-muted-foreground">{template.description}</p>
-      </CardContent>
-
-      <CardFooter className="flex items-center justify-between pt-4 border-t">
-        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-          <Clock className="h-4 w-4" />
-          <span>{template.estimatedCompletionTime}</span>
+        <div className="flex items-center gap-3 shrink-0">
+          <span className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground">
+            <Clock className="h-3 w-3" />
+            {template.estimatedCompletionTime}
+          </span>
+          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </div>
-        <Link href={`/attorney/documents/${template.id}`}>
-          <Button size="sm" className="gap-1">
-            Start
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </Link>
-      </CardFooter>
-    </Card>
+      </div>
+    </Link>
   );
 }
 
-interface TemplateGridProps {
+interface StagedTemplateListProps {
   templates: DocumentTemplateSummary[];
+  category: "criminal" | "immigration";
   isLoading?: boolean;
-  emptyMessage?: string;
 }
 
-export function TemplateGrid({ templates, isLoading, emptyMessage }: TemplateGridProps) {
+export function StagedTemplateList({
+  templates,
+  category,
+  isLoading,
+}: StagedTemplateListProps) {
   if (isLoading) {
     return (
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="space-y-3">
         {[1, 2].map((i) => (
-          <Card key={i} className="h-48 animate-pulse">
-            <CardContent className="flex items-center justify-center h-full">
-              <div className="w-3/4 h-4 bg-slate-200 dark:bg-slate-700 rounded" />
-            </CardContent>
-          </Card>
+          <div key={i} className="h-16 bg-muted/50 rounded-lg animate-pulse" />
         ))}
       </div>
     );
@@ -93,18 +133,83 @@ export function TemplateGrid({ templates, isLoading, emptyMessage }: TemplateGri
         <CardContent className="flex flex-col items-center justify-center py-12 text-center">
           <Scale className="h-12 w-12 text-slate-400 mb-4" />
           <p className="text-muted-foreground">
-            {emptyMessage || "No templates available in this category."}
+            No templates available in this category.
           </p>
         </CardContent>
       </Card>
     );
   }
 
+  const stages = category === "criminal" ? criminalStages : immigrationStages;
+  const templateMap = new Map(templates.map((t) => [t.id, t]));
+
+  const populatedStages = stages
+    .map((stage) => ({
+      ...stage,
+      templates: stage.templateIds
+        .map((id) => templateMap.get(id))
+        .filter((t): t is DocumentTemplateSummary => !!t),
+    }))
+    .filter((stage) => stage.templates.length > 0);
+
+  const stagedIds = new Set(stages.flatMap((s) => s.templateIds));
+  const uncategorized = templates.filter((t) => !stagedIds.has(t.id));
+
+  const defaultOpen = populatedStages.map((s) => s.id);
+
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
-      {templates.map((template) => (
-        <TemplateCard key={template.id} template={template} />
+    <Accordion type="multiple" defaultValue={defaultOpen} className="space-y-2">
+      {populatedStages.map((stage) => (
+        <AccordionItem
+          key={stage.id}
+          value={stage.id}
+          className="border rounded-lg px-2 bg-card"
+        >
+          <AccordionTrigger className="hover:no-underline py-3 gap-3">
+            <div className="flex items-center gap-3 text-left">
+              <span className="font-semibold text-base">{stage.label}</span>
+              <Badge variant="secondary" className="text-xs font-normal">
+                {stage.templates.length}
+              </Badge>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="pb-2 pt-0">
+            <p className="text-xs text-muted-foreground mb-2 px-4">
+              {stage.description}
+            </p>
+            <div className="space-y-0.5">
+              {stage.templates.map((template) => (
+                <TemplateRow key={template.id} template={template} />
+              ))}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
       ))}
-    </div>
+
+      {uncategorized.length > 0 && (
+        <AccordionItem
+          value="other"
+          className="border rounded-lg px-2 bg-card"
+        >
+          <AccordionTrigger className="hover:no-underline py-3 gap-3">
+            <div className="flex items-center gap-3 text-left">
+              <span className="font-semibold text-base">Other</span>
+              <Badge variant="secondary" className="text-xs font-normal">
+                {uncategorized.length}
+              </Badge>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="pb-2 pt-0">
+            <div className="space-y-0.5">
+              {uncategorized.map((template) => (
+                <TemplateRow key={template.id} template={template} />
+              ))}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      )}
+    </Accordion>
   );
 }
+
+export { TemplateRow };
