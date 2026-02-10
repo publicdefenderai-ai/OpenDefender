@@ -17,6 +17,8 @@ import { ntaPleadingsTemplate } from "../../../shared/templates/nta-pleadings";
 import { motionForContinuanceEoirTemplate } from "../../../shared/templates/motion-for-continuance-eoir";
 import { motionForDiscoveryTemplate } from "../../../shared/templates/motion-for-discovery";
 import { bondMotionEoirTemplate } from "../../../shared/templates/bond-motion-eoir";
+import { motionForPretrialReleaseTemplate } from "../../../shared/templates/motion-for-pretrial-release";
+import { motionToChangeVenueEoirTemplate } from "../../../shared/templates/motion-to-change-venue-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -71,6 +73,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-for-continuance-eoir", motionForContinuanceEoirTemplate],
   ["motion-for-discovery", motionForDiscoveryTemplate],
   ["bond-motion-eoir", bondMotionEoirTemplate],
+  ["motion-for-pretrial-release", motionForPretrialReleaseTemplate],
+  ["motion-to-change-venue-eoir", motionToChangeVenueEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -281,6 +285,39 @@ async function generateAISection(
     proposedAlternative: formData.proposedAlternative || "",
     proposedBailAmount: formData.proposedBailAmount || "",
     proposedConditions: formData.proposedConditions || "",
+    // Motion for pretrial release fields
+    arrestDate: formData.arrestDate || "",
+    currentFacility: formData.currentFacility || "",
+    chargesDescription: formData.chargesDescription || "",
+    priorReleaseRequests: formData.priorReleaseRequests || "none",
+    bailSet: formData.bailSet || "",
+    residenceYears: formData.residenceYears || "",
+    residenceType: formData.residenceType || "",
+    dependents: formData.dependents || "",
+    militaryService: formData.militaryService || "none",
+    educationStatus: formData.educationStatus || "",
+    courtAppearanceHistory: formData.courtAppearanceHistory || "",
+    fta_history: formData.fta_history || "none",
+    passportStatus: formData.passportStatus || "",
+    releaseType: formData.releaseType || "",
+    electronicMonitoring: formData.electronicMonitoring || "",
+    pretrial_services: formData.pretrial_services || "",
+    thirdPartyCustodian: formData.thirdPartyCustodian || "",
+    surrenderPassport: formData.surrenderPassport || "",
+    stayAwayOrders: formData.stayAwayOrders || "",
+    // Motion to change venue (EOIR) fields
+    immigrationCourt: formData.immigrationCourt || "",
+    requestedCourt: formData.requestedCourt || "",
+    changeReason: formData.changeReason || "",
+    changeReasonExplanation: formData.changeReasonExplanation || "",
+    currentAddress: formData.currentAddress || "",
+    dateOfRelocation: formData.dateOfRelocation || "",
+    priorAddress: formData.priorAddress || "",
+    distanceToCurrentCourt: formData.distanceToCurrentCourt || "",
+    distanceToRequestedCourt: formData.distanceToRequestedCourt || "",
+    transportationHardship: formData.transportationHardship || "",
+    dhsPosition: formData.dhsPosition || "",
+    dhsPositionDetails: formData.dhsPositionDetails || "",
   };
 
   // Process template with safe data
