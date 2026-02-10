@@ -1243,51 +1243,36 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== LEGAL TERM TOOLTIPS ===== */
 
 .legal-term-highlight {
-  text-decoration: none;
-  cursor: help;
-  transition: background-color 0.15s ease, box-shadow 0.15s ease;
-  border-radius: 3px;
-  padding: 1px 3px;
-  margin: 0 -1px;
-  background-color: hsl(45, 80%, 92%);
-  border-bottom: 1.5px solid hsl(45, 70%, 72%);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: hsl(217, 60%, 55%);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+  border-radius: 2px;
+  color: inherit;
 }
 
 .legal-term-highlight:hover,
 .legal-term-highlight:focus-visible {
-  background-color: hsl(45, 85%, 85%);
-  border-bottom-color: hsl(45, 75%, 58%);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-decoration-style: solid;
+  text-decoration-color: hsl(217, 70%, 45%);
 }
 
 .dark .legal-term-highlight {
-  background-color: hsl(45, 40%, 20%);
-  border-bottom-color: hsl(45, 50%, 35%);
+  text-decoration-color: hsl(217, 50%, 55%);
 }
 
 .dark .legal-term-highlight:hover,
 .dark .legal-term-highlight:focus-visible {
-  background-color: hsl(45, 45%, 25%);
-  border-bottom-color: hsl(45, 55%, 45%);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-decoration-color: hsl(217, 60%, 65%);
 }
 
 .legal-term-highlight:focus-visible {
   outline: 2px solid hsl(217, 91%, 60%);
   outline-offset: 2px;
-}
-
-.legal-term-tooltip {
-  background-color: hsl(0 0% 100%) !important;
-  border: 1px solid hsl(40 10% 82%) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.1) !important;
-  opacity: 1 !important;
-}
-
-.dark .legal-term-tooltip {
-  background-color: hsl(222 25% 14%) !important;
-  border: 1px solid hsl(222 15% 28%) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 @media print {
