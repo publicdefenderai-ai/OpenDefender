@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FileText, Folder, LogOut, Clock, Scale, Plane, Loader2 } from "lucide-react";
-import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
@@ -9,7 +8,6 @@ import { Footer } from "@/components/layout/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { VerificationGuard } from "@/components/attorney/verification-guard";
 import { SessionTimer } from "@/components/attorney/session-timer";

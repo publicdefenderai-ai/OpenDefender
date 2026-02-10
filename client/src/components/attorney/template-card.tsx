@@ -1,8 +1,7 @@
 import { Link } from "wouter";
-import { Clock, ArrowRight, Scale, ChevronRight } from "lucide-react";
+import { Clock, Scale, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionItem,
@@ -75,7 +74,11 @@ const immigrationStages: CaseStage[] = [
 
 function TemplateRow({ template }: { template: DocumentTemplateSummary }) {
   return (
-    <Link href={`/attorney/documents/${template.id}`}>
+    <Link
+      href={`/attorney/documents/${template.id}`}
+      aria-label={`Draft ${template.name}`}
+      className="block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    >
       <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent/50 transition-colors cursor-pointer border border-transparent hover:border-border">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
@@ -109,24 +112,12 @@ function TemplateRow({ template }: { template: DocumentTemplateSummary }) {
 interface StagedTemplateListProps {
   templates: DocumentTemplateSummary[];
   category: "criminal" | "immigration";
-  isLoading?: boolean;
 }
 
 export function StagedTemplateList({
   templates,
   category,
-  isLoading,
 }: StagedTemplateListProps) {
-  if (isLoading) {
-    return (
-      <div className="space-y-3">
-        {[1, 2].map((i) => (
-          <div key={i} className="h-16 bg-muted/50 rounded-lg animate-pulse" />
-        ))}
-      </div>
-    );
-  }
-
   if (templates.length === 0) {
     return (
       <Card className="border-dashed">
