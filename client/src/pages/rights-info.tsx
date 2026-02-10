@@ -41,6 +41,7 @@ import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { ShareButton } from "@/components/ui/share-button";
 import { useLegalResources } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
 
 export default function RightsInfo() {
   useScrollToTop();
@@ -362,17 +363,17 @@ function MirandaRightsSection() {
         <div>
           <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.miranda.whenApply')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• {t('rights.detailedRights.miranda.apply1')}</li>
-            <li>• {t('rights.detailedRights.miranda.apply2')}</li>
-            <li>• {t('rights.detailedRights.miranda.apply3')}</li>
-            <li>• {t('rights.detailedRights.miranda.apply4')}</li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.miranda.apply1')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.miranda.apply2')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.miranda.apply3')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.miranda.apply4')} /></li>
           </ul>
         </div>
 
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>{t('rights.detailedRights.miranda.alertTitle')}</strong> {t('rights.detailedRights.miranda.alertText')}
+            <strong>{t('rights.detailedRights.miranda.alertTitle')}</strong> <LegalTextHighlighter text={t('rights.detailedRights.miranda.alertText')} />
           </AlertDescription>
         </Alert>
       </CardContent>
@@ -396,22 +397,22 @@ function ArrestRightsSection() {
           <div>
             <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldDo')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• {t('rights.detailedRights.arrest.do1')}</li>
-              <li>• {t('rights.detailedRights.arrest.do2')}</li>
-              <li>• {t('rights.detailedRights.arrest.do3')}</li>
-              <li>• {t('rights.detailedRights.arrest.do4')}</li>
-              <li>• {t('rights.detailedRights.arrest.do5')}</li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do1')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do2')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do3')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do4')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do5')} /></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldNotDo')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• {t('rights.detailedRights.arrest.dont1')}</li>
-              <li>• {t('rights.detailedRights.arrest.dont2')}</li>
-              <li>• {t('rights.detailedRights.arrest.dont3')}</li>
-              <li>• {t('rights.detailedRights.arrest.dont4')}</li>
-              <li>• {t('rights.detailedRights.arrest.dont5')}</li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont1')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont2')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont3')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont4')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont5')} /></li>
             </ul>
           </div>
         </div>
@@ -419,10 +420,10 @@ function ArrestRightsSection() {
         <div>
           <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.policePowers')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• {t('rights.detailedRights.arrest.power1')}</li>
-            <li>• {t('rights.detailedRights.arrest.power2')}</li>
-            <li>• {t('rights.detailedRights.arrest.power3')}</li>
-            <li>• {t('rights.detailedRights.arrest.power4')}</li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.power1')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.power2')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.power3')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.power4')} /></li>
           </ul>
         </div>
       </CardContent>
@@ -446,21 +447,21 @@ function CourtRightsSection() {
           <div>
             <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.court.constitutional')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• {t('rights.detailedRights.court.right1')}</li>
-              <li>• {t('rights.detailedRights.court.right2')}</li>
-              <li>• {t('rights.detailedRights.court.right3')}</li>
-              <li>• {t('rights.detailedRights.court.right4')}</li>
-              <li>• {t('rights.detailedRights.court.right5')}</li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.right1')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.right2')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.right3')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.right4')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.right5')} /></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.court.burdenProof')}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• {t('rights.detailedRights.court.burden1')}</li>
-              <li>• {t('rights.detailedRights.court.burden2')}</li>
-              <li>• {t('rights.detailedRights.court.burden3')}</li>
-              <li>• {t('rights.detailedRights.court.burden4')}</li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.burden1')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.burden2')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.burden3')} /></li>
+              <li>• <LegalTextHighlighter text={t('rights.detailedRights.court.burden4')} /></li>
             </ul>
           </div>
         </div>
@@ -468,7 +469,7 @@ function CourtRightsSection() {
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>{t('rights.detailedRights.court.etiquetteTitle')}</strong> {t('rights.detailedRights.court.etiquetteText')}
+            <strong>{t('rights.detailedRights.court.etiquetteTitle')}</strong> <LegalTextHighlighter text={t('rights.detailedRights.court.etiquetteText')} />
           </AlertDescription>
         </Alert>
       </CardContent>
@@ -491,30 +492,30 @@ function PrisonRightsSection() {
         <div>
           <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.prison.continuing')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• {t('rights.detailedRights.prison.right1')}</li>
-            <li>• {t('rights.detailedRights.prison.right2')}</li>
-            <li>• {t('rights.detailedRights.prison.right3')}</li>
-            <li>• {t('rights.detailedRights.prison.right4')}</li>
-            <li>• {t('rights.detailedRights.prison.right5')}</li>
-            <li>• {t('rights.detailedRights.prison.right6')}</li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.right1')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.right2')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.right3')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.right4')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.right5')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.right6')} /></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.prison.afterRelease')}</h4>
           <ul className="space-y-2 text-muted-foreground">
-            <li>• {t('rights.detailedRights.prison.after1')}</li>
-            <li>• {t('rights.detailedRights.prison.after2')}</li>
-            <li>• {t('rights.detailedRights.prison.after3')}</li>
-            <li>• {t('rights.detailedRights.prison.after4')}</li>
-            <li>• {t('rights.detailedRights.prison.after5')}</li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.after1')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.after2')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.after3')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.after4')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.prison.after5')} /></li>
           </ul>
         </div>
 
         <Alert>
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
-            <strong>{t('rights.detailedRights.prison.collateralTitle')}</strong> {t('rights.detailedRights.prison.collateralText')}
+            <strong>{t('rights.detailedRights.prison.collateralTitle')}</strong> <LegalTextHighlighter text={t('rights.detailedRights.prison.collateralText')} />
           </AlertDescription>
         </Alert>
       </CardContent>

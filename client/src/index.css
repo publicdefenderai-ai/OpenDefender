@@ -1239,3 +1239,44 @@ h1, h2, h3, h4, h5, h6 {
   @apply tabular-nums font-bold;
   font-feature-settings: 'tnum' 1;
 }
+
+/* ===== LEGAL TERM TOOLTIPS ===== */
+
+.legal-term-highlight {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: hsl(217, 91%, 60%);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  cursor: help;
+  transition: background-color 0.15s ease, text-decoration-color 0.15s ease;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.legal-term-highlight:hover,
+.legal-term-highlight:focus-visible {
+  background-color: hsl(217, 91%, 60%, 0.1);
+  text-decoration-color: hsl(217, 91%, 50%);
+}
+
+.dark .legal-term-highlight {
+  text-decoration-color: hsl(217, 91%, 70%);
+}
+
+.dark .legal-term-highlight:hover,
+.dark .legal-term-highlight:focus-visible {
+  background-color: hsl(217, 91%, 60%, 0.15);
+  text-decoration-color: hsl(217, 91%, 75%);
+}
+
+.legal-term-highlight:focus-visible {
+  outline: 2px solid hsl(217, 91%, 60%);
+  outline-offset: 2px;
+}
+
+.legal-term-tooltip {
+  background-color: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

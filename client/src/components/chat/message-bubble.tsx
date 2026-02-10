@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import type { Message } from "@/contexts/chat-context";
+import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
 
 interface MessageBubbleProps {
   message: Message;
@@ -46,7 +47,7 @@ function RenderContent({ content }: { content: string }) {
     <>
       {parts.map((part, index) => {
         if (typeof part === 'string') {
-          return <span key={index}>{part}</span>;
+          return <LegalTextHighlighter key={index} text={part} />;
         }
         return (
           <Link

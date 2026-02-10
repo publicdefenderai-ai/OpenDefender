@@ -10,6 +10,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
 
 function ProcessStep({ number, title, description, timeframe, rights, isLast, t }: {
   number: number;
@@ -46,7 +47,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-muted-foreground">{description}</p>
+              <LegalTextHighlighter text={description} as="p" className="text-muted-foreground" />
               
               <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
@@ -56,7 +57,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
                 <ul className="space-y-1">
                   {rights.map((right, index) => (
                     <li key={index} className="text-sm text-blue-800 dark:text-blue-200">
-                      • {right}
+                      • <LegalTextHighlighter text={right} />
                     </li>
                   ))}
                 </ul>
@@ -362,9 +363,7 @@ export default function Process() {
                     <Clock className="h-5 w-5 text-green-600 mr-2" />
                     {t('process.additionalInfo.speedyTrial.title')}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('process.additionalInfo.speedyTrial.text')}
-                  </p>
+                  <LegalTextHighlighter text={t('process.additionalInfo.speedyTrial.text')} as="p" className="text-sm text-muted-foreground" />
                 </CardContent>
               </Card>
               <Card>
@@ -373,9 +372,7 @@ export default function Process() {
                     <Users className="h-5 w-5 text-blue-600 mr-2" />
                     {t('process.additionalInfo.publicDefender.title')}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('process.additionalInfo.publicDefender.text')}
-                  </p>
+                  <LegalTextHighlighter text={t('process.additionalInfo.publicDefender.text')} as="p" className="text-sm text-muted-foreground" />
                 </CardContent>
               </Card>
             </div>
