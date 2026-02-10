@@ -1243,31 +1243,33 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== LEGAL TERM TOOLTIPS ===== */
 
 .legal-term-highlight {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: hsl(217, 91%, 60%);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1.5px;
+  text-decoration: none;
   cursor: help;
-  transition: background-color 0.15s ease, text-decoration-color 0.15s ease;
-  border-radius: 2px;
-  padding: 0 1px;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  border-radius: 3px;
+  padding: 1px 3px;
+  margin: 0 -1px;
+  background-color: hsl(45, 80%, 92%);
+  border-bottom: 1.5px solid hsl(45, 70%, 72%);
 }
 
 .legal-term-highlight:hover,
 .legal-term-highlight:focus-visible {
-  background-color: hsl(217, 91%, 60%, 0.1);
-  text-decoration-color: hsl(217, 91%, 50%);
+  background-color: hsl(45, 85%, 85%);
+  border-bottom-color: hsl(45, 75%, 58%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .dark .legal-term-highlight {
-  text-decoration-color: hsl(217, 91%, 70%);
+  background-color: hsl(45, 40%, 20%);
+  border-bottom-color: hsl(45, 50%, 35%);
 }
 
 .dark .legal-term-highlight:hover,
 .dark .legal-term-highlight:focus-visible {
-  background-color: hsl(217, 91%, 60%, 0.15);
-  text-decoration-color: hsl(217, 91%, 75%);
+  background-color: hsl(45, 45%, 25%);
+  border-bottom-color: hsl(45, 55%, 45%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .legal-term-highlight:focus-visible {
