@@ -561,6 +561,8 @@ i18n
               "backButton": "Back to Main Menu",
               "constitutionalRights": "Your Legal Rights",
               "criminalJusticeProcess": "Criminal Justice Process",
+              "caseTimeline": "Case Timeline",
+              "quickReference": "Quick-Reference Cards",
               "searchSeizure": "Search and Seizure",
               "assistingFriends": "Assisting Friends or Family",
               "legalGlossary": "Legal Glossary"
@@ -1706,6 +1708,289 @@ i18n
             "legalDisclaimer": {
               "title": "Legal Disclaimer:",
               "text": "This information is for educational purposes only and does not constitute legal advice. Laws and procedures vary by state and federal jurisdiction. Always consult with a qualified attorney for advice specific to your situation."
+            }
+          },
+          "caseTimeline": {
+            "title": "Case Timeline",
+            "subtitle": "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.",
+            "selectStage": "Select a stage to learn what happens and what your rights are",
+            "yourRights": "Your Rights",
+            "whatToKnow": "What to Know",
+            "viewQuickRef": "Quick-Reference Card",
+            "disclaimer": {
+              "title": "Important:",
+              "text": "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation."
+            },
+            "stages": {
+              "arrest": {
+                "title": "Arrest",
+                "timeframe": "Minutes to hours",
+                "description": "An arrest happens when police take you into custody. You may be handcuffed and taken to a police station. This can happen with or without a warrant. Officers must have probable cause to believe you committed a crime.",
+                "rights": [
+                  "You have the right to remain silent",
+                  "You have the right to an attorney",
+                  "You do not have to consent to a search",
+                  "You have the right to know why you are being arrested"
+                ],
+                "tips": [
+                  "Stay calm and do not resist, even if the arrest feels unfair",
+                  "Clearly state: 'I am exercising my right to remain silent'",
+                  "Say: 'I want a lawyer' — then stop talking",
+                  "Remember officer badge numbers and patrol car numbers",
+                  "Do not sign anything without a lawyer present"
+                ]
+              },
+              "booking": {
+                "title": "Booking",
+                "timeframe": "1-4 hours",
+                "description": "After arrest, you are taken to a jail or police station for booking. This is the administrative process of recording your information. Your personal belongings will be taken and stored.",
+                "rights": [
+                  "You still have the right to remain silent",
+                  "You have the right to a phone call (usually within a few hours)",
+                  "You can request medical attention if needed",
+                  "Your belongings must be returned when you are released"
+                ],
+                "tips": [
+                  "You will be fingerprinted and photographed",
+                  "Use your phone call to contact a lawyer or family member",
+                  "Do not discuss your case with anyone in the holding area",
+                  "Be polite to booking officers — it does not hurt your case",
+                  "Ask when you will see a judge"
+                ]
+              },
+              "firstAppearance": {
+                "title": "First Appearance",
+                "timeframe": "24-72 hours after arrest",
+                "description": "Your first time before a judge. The charges are formally read, and the judge decides about bail. If you cannot afford an attorney, you can request a public defender at this stage.",
+                "rights": [
+                  "Right to be informed of the charges",
+                  "Right to an attorney (public defender if you can't afford one)",
+                  "Right to request reasonable bail",
+                  "Right to plead not guilty"
+                ],
+                "tips": [
+                  "Almost always plead 'not guilty' at this stage",
+                  "Request a public defender if you cannot afford a lawyer",
+                  "Dress appropriately and address the judge as 'Your Honor'",
+                  "Do not discuss facts of your case in open court",
+                  "Bring information about your ties to the community for bail arguments"
+                ]
+              },
+              "pretrial": {
+                "title": "Pretrial",
+                "timeframe": "Weeks to months",
+                "description": "The period between your first appearance and trial. Your attorney reviews evidence, files motions, and may negotiate with the prosecutor. Plea bargain discussions often happen during this phase.",
+                "rights": [
+                  "Right to see all evidence the prosecution has (discovery)",
+                  "Right to a speedy trial",
+                  "Right to have your attorney file motions on your behalf",
+                  "Right to reject any plea deal offered"
+                ],
+                "tips": [
+                  "Stay in close contact with your attorney",
+                  "Attend every court date — missing one leads to a bench warrant",
+                  "Follow all bail conditions carefully",
+                  "Do not post about your case on social media",
+                  "About 90-95% of cases are resolved through plea bargains"
+                ]
+              },
+              "discovery": {
+                "title": "Discovery",
+                "timeframe": "Part of pretrial phase",
+                "description": "Both sides exchange evidence. The prosecution must share all evidence with your defense attorney, including anything that might help prove your innocence (this is called the Brady Rule).",
+                "rights": [
+                  "Right to see all evidence against you",
+                  "Right to evidence that could prove your innocence (Brady material)",
+                  "Right to challenge evidence through motions",
+                  "Right to have your attorney review all discovery materials"
+                ],
+                "tips": [
+                  "Share all information with your attorney — attorney-client privilege protects you",
+                  "Help your attorney identify potential witnesses",
+                  "Gather any documents, texts, or records that support your case",
+                  "Your attorney may file motions to suppress improperly obtained evidence",
+                  "Keep notes of anything you remember about the incident"
+                ]
+              },
+              "trial": {
+                "title": "Trial",
+                "timeframe": "Days to weeks",
+                "description": "If your case goes to trial, both sides present their case before a judge or jury. The prosecution must prove your guilt beyond a reasonable doubt. You have the right to testify or remain silent.",
+                "rights": [
+                  "Right to a trial by jury (for most criminal cases)",
+                  "Right to confront and cross-examine witnesses",
+                  "Right to present your own evidence and witnesses",
+                  "Right to testify or to remain silent (cannot be held against you)",
+                  "Presumption of innocence until proven guilty"
+                ],
+                "tips": [
+                  "Trust your attorney's strategy — they know the process",
+                  "Dress professionally and be respectful in court",
+                  "Do not react emotionally to testimony or evidence",
+                  "Your attorney decides whether you should testify",
+                  "The burden of proof is on the prosecution, not on you"
+                ]
+              },
+              "sentencing": {
+                "title": "Sentencing",
+                "timeframe": "Immediately or weeks after verdict",
+                "description": "If found guilty, the judge determines your punishment based on sentencing guidelines, the severity of the crime, your criminal history, and other factors. You have the right to speak before sentencing.",
+                "rights": [
+                  "Right to speak at your sentencing (allocution)",
+                  "Right to have your attorney present mitigating factors",
+                  "Right to appeal the conviction or sentence",
+                  "Right to fair and proportional punishment (8th Amendment)"
+                ],
+                "tips": [
+                  "Show genuine accountability — judges notice",
+                  "Highlight rehabilitation steps (counseling, employment, education)",
+                  "Have family or community members write support letters",
+                  "Ask your attorney about sentencing alternatives (probation, community service)",
+                  "Understand your right to appeal — there are deadlines"
+                ]
+              }
+            }
+          },
+          "quickRef": {
+            "title": "Quick-Reference Cards",
+            "subtitle": "Compact, printable guides for your rights at every stage. Save them to your phone or print them out.",
+            "printAll": "Print All Cards",
+            "tabs": {
+              "police": "Police Encounters",
+              "court": "Court Stages",
+              "all": "All Cards"
+            },
+            "disclaimer": {
+              "title": "Important:",
+              "text": "These cards provide general information about your rights. Laws vary by state and situation. This is not legal advice. Always consult with an attorney about your specific case."
+            },
+            "police": {
+              "title": "If You Are Stopped by Police",
+              "stay": "Stay Calm & Remember",
+              "stay1": "You have the right to remain silent. Say: \"I am exercising my right to remain silent.\"",
+              "stay2": "You have the right to refuse searches. Say: \"I do not consent to a search.\"",
+              "stay3": "Ask: \"Am I free to leave?\" If yes, walk away calmly.",
+              "stay4": "You have the right to an attorney. Say: \"I want to speak to a lawyer.\"",
+              "doHeading": "Do",
+              "do1": "Keep your hands visible at all times",
+              "do2": "Provide your name and ID if asked",
+              "do3": "Stay calm and speak clearly",
+              "do4": "Remember badge numbers and patrol car numbers",
+              "do5": "Write down everything immediately after",
+              "dontHeading": "Don't",
+              "dont1": "Don't resist arrest, even if you believe it's unfair",
+              "dont2": "Don't run, argue, or make sudden movements",
+              "dont3": "Don't consent to a search of your person, car, or home",
+              "dont4": "Don't answer questions without a lawyer present",
+              "dont5": "Don't sign anything without reading it and consulting an attorney",
+              "ifArrested": "If You Are Arrested",
+              "arrested1": "Say clearly: \"I want a lawyer\" — then stop talking",
+              "arrested2": "You get at least one phone call — use it to call a lawyer or family",
+              "arrested3": "Do not discuss your case with anyone except your attorney",
+              "arrested4": "You must be brought before a judge within 48-72 hours"
+            },
+            "arraignment": {
+              "title": "Arraignment",
+              "expect": "What to Expect",
+              "expect1": "The judge reads the charges against you",
+              "expect2": "You enter a plea: guilty, not guilty, or no contest",
+              "expect3": "Bail amount may be set or modified",
+              "expect4": "Your attorney can request a public defender if needed",
+              "say": "What to Say",
+              "say1": "\"Not guilty\" — this is almost always the best initial plea",
+              "say2": "\"I would like a court-appointed attorney\" — if you can't afford one",
+              "say3": "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge",
+              "dontSay": "Don't Say",
+              "dontSay1": "Don't discuss the facts of your case in open court",
+              "dontSay2": "Don't plead guilty without talking to a lawyer first",
+              "dontSay3": "Don't argue with the judge or prosecutor",
+              "rights": "Your Rights",
+              "right1": "Right to an attorney (free if you can't afford one)",
+              "right2": "Right to know the charges against you",
+              "right3": "Right to reasonable bail",
+              "right4": "Right to a speedy trial"
+            },
+            "bail": {
+              "title": "Bail Hearing",
+              "expect": "What to Expect",
+              "expect1": "Judge decides whether to grant bail and how much",
+              "expect2": "Factors: severity of charge, flight risk, community ties, criminal history",
+              "expect3": "You or your attorney can argue for lower bail or release",
+              "expect4": "Conditions of release may be set (curfew, no contact orders, etc.)",
+              "say": "What to Say",
+              "say1": "Emphasize community ties: family, job, length of residence",
+              "say2": "Mention you will comply with all court dates",
+              "say3": "Offer alternatives if bail is too high (ankle monitor, check-ins)",
+              "dontSay": "Don't Say",
+              "dontSay1": "Don't discuss the details of your case",
+              "dontSay2": "Don't make promises you can't keep",
+              "dontSay3": "Don't show frustration or anger toward the court",
+              "rights": "Your Rights",
+              "right1": "Right to reasonable bail (8th Amendment)",
+              "right2": "Right to a bail hearing",
+              "right3": "Right to appeal a bail decision"
+            },
+            "pretrial": {
+              "title": "Pretrial / Discovery",
+              "expect": "What to Expect",
+              "expect1": "Both sides exchange evidence (discovery process)",
+              "expect2": "Your attorney may file motions to suppress evidence or dismiss charges",
+              "expect3": "Plea bargain negotiations often happen during this phase",
+              "expect4": "This phase can take weeks to months",
+              "say": "What to Do",
+              "do1": "Stay in close contact with your attorney",
+              "do2": "Attend every court date — missing one can result in a bench warrant",
+              "do3": "Follow all bail conditions strictly",
+              "do4": "Gather any evidence or witnesses that help your case",
+              "dontSay": "Don't Do",
+              "dont1": "Don't discuss your case on social media or with others",
+              "dont2": "Don't contact witnesses or victims directly",
+              "dont3": "Don't accept a plea deal without fully understanding the consequences",
+              "rights": "Your Rights",
+              "right1": "Right to see all evidence against you (Brady Rule)",
+              "right2": "Right to a speedy trial",
+              "right3": "Right to present your own evidence and witnesses"
+            },
+            "plea": {
+              "title": "Plea Hearing",
+              "expect": "What to Expect",
+              "expect1": "The judge asks if you understand the plea and its consequences",
+              "expect2": "You must confirm the plea is voluntary and not coerced",
+              "expect3": "The judge explains the maximum possible sentence",
+              "expect4": "Sentencing may happen immediately or be scheduled later",
+              "say": "What to Say",
+              "say1": "\"Yes, I understand\" — when the judge explains the plea terms",
+              "say2": "\"Yes, this is my voluntary decision\" — confirm you were not forced",
+              "say3": "Ask your lawyer to explain anything you don't understand",
+              "dontSay": "Don't Say",
+              "dontSay1": "Don't say \"I didn't do it\" while pleading guilty — the judge may reject the plea",
+              "dontSay2": "Don't agree to a plea if you don't understand the collateral consequences (immigration, housing, employment)",
+              "dontSay3": "Don't rush — you can ask for more time to decide",
+              "rights": "Your Rights",
+              "right1": "Right to withdraw a guilty plea in certain circumstances",
+              "right2": "Right to know the full consequences before pleading",
+              "right3": "Right to reject any plea deal and go to trial"
+            },
+            "sentencing": {
+              "title": "Sentencing",
+              "expect": "What to Expect",
+              "expect1": "The judge considers sentencing guidelines, victim impact statements, and your background",
+              "expect2": "Your attorney can present mitigating factors (first offense, employment, family responsibilities)",
+              "expect3": "Possible outcomes: fines, probation, community service, imprisonment, or combination",
+              "expect4": "You may have the opportunity to address the court",
+              "say": "What to Say",
+              "say1": "Express genuine remorse if you have been found guilty",
+              "say2": "Mention rehabilitation steps you've taken (counseling, classes, employment)",
+              "say3": "Describe your responsibilities (children, family, community)",
+              "dontSay": "Don't Say",
+              "dontSay1": "Don't blame the victim or minimize the offense",
+              "dontSay2": "Don't argue with the judge's questions",
+              "dontSay3": "Don't make excuses — take responsibility where appropriate",
+              "rights": "Your Rights",
+              "right1": "Right to speak at your sentencing (allocution)",
+              "right2": "Right to appeal the sentence",
+              "right3": "Right to fair and proportional punishment (8th Amendment)",
+              "right4": "Right to have your attorney present"
             }
           },
           "diversionPrograms": {
@@ -3395,6 +3680,8 @@ i18n
               "backButton": "Volver al Menú Principal",
               "constitutionalRights": "Sus Derechos Legales",
               "criminalJusticeProcess": "Proceso de Justicia Criminal",
+              "caseTimeline": "Línea de Tiempo del Caso",
+              "quickReference": "Tarjetas de Referencia Rápida",
               "searchSeizure": "Registro e Incautación",
               "assistingFriends": "Ayudar a Amigos o Familiares",
               "legalGlossary": "Glosario Legal"
@@ -4540,6 +4827,289 @@ i18n
             "legalDisclaimer": {
               "title": "Aviso Legal:",
               "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes y procedimientos varían según el estado y la jurisdicción federal. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación."
+            }
+          },
+          "caseTimeline": {
+            "title": "Línea de Tiempo del Caso",
+            "subtitle": "Siga las etapas de un caso penal de principio a fin. Seleccione su etapa actual para ver qué esperar y cuáles son sus derechos.",
+            "selectStage": "Seleccione una etapa para saber qué sucede y cuáles son sus derechos",
+            "yourRights": "Sus Derechos",
+            "whatToKnow": "Lo Que Debe Saber",
+            "viewQuickRef": "Tarjeta de Referencia Rápida",
+            "disclaimer": {
+              "title": "Importante:",
+              "text": "Cada caso es diferente. Las etapas mostradas son una guía general para un caso penal típico. Su caso puede tener pasos adicionales o menos. Siempre consulte con su abogado sobre su situación específica."
+            },
+            "stages": {
+              "arrest": {
+                "title": "Arresto",
+                "timeframe": "Minutos a horas",
+                "description": "Un arresto ocurre cuando la policía lo toma bajo custodia. Pueden esposarlo y llevarlo a una estación de policía. Esto puede suceder con o sin una orden judicial. Los oficiales deben tener causa probable para creer que usted cometió un delito.",
+                "rights": [
+                  "Tiene derecho a guardar silencio",
+                  "Tiene derecho a un abogado",
+                  "No tiene que consentir a un registro",
+                  "Tiene derecho a saber por qué lo están arrestando"
+                ],
+                "tips": [
+                  "Mantenga la calma y no resista, incluso si el arresto parece injusto",
+                  "Diga claramente: 'Estoy ejerciendo mi derecho a guardar silencio'",
+                  "Diga: 'Quiero un abogado' — luego deje de hablar",
+                  "Recuerde los números de placa de los oficiales y los números de patrulla",
+                  "No firme nada sin un abogado presente"
+                ]
+              },
+              "booking": {
+                "title": "Registro",
+                "timeframe": "1-4 horas",
+                "description": "Después del arresto, lo llevan a una cárcel o estación de policía para el registro. Este es el proceso administrativo de registrar su información. Sus pertenencias personales serán tomadas y almacenadas.",
+                "rights": [
+                  "Todavía tiene derecho a guardar silencio",
+                  "Tiene derecho a una llamada telefónica (generalmente dentro de unas horas)",
+                  "Puede solicitar atención médica si la necesita",
+                  "Sus pertenencias deben ser devueltas cuando sea liberado"
+                ],
+                "tips": [
+                  "Le tomarán huellas dactilares y fotografías",
+                  "Use su llamada telefónica para contactar a un abogado o familiar",
+                  "No discuta su caso con nadie en el área de detención",
+                  "Sea cortés con los oficiales de registro — no perjudica su caso",
+                  "Pregunte cuándo verá a un juez"
+                ]
+              },
+              "firstAppearance": {
+                "title": "Primera Comparecencia",
+                "timeframe": "24-72 horas después del arresto",
+                "description": "Su primera vez ante un juez. Los cargos se leen formalmente y el juez decide sobre la fianza. Si no puede pagar un abogado, puede solicitar un defensor público en esta etapa.",
+                "rights": [
+                  "Derecho a ser informado de los cargos",
+                  "Derecho a un abogado (defensor público si no puede pagar uno)",
+                  "Derecho a solicitar una fianza razonable",
+                  "Derecho a declararse inocente"
+                ],
+                "tips": [
+                  "Casi siempre declare 'no culpable' en esta etapa",
+                  "Solicite un defensor público si no puede pagar un abogado",
+                  "Vístase apropiadamente y diríjase al juez como 'Su Señoría'",
+                  "No discuta los hechos de su caso en audiencia pública",
+                  "Traiga información sobre sus vínculos con la comunidad para argumentos de fianza"
+                ]
+              },
+              "pretrial": {
+                "title": "Prejuicio",
+                "timeframe": "Semanas a meses",
+                "description": "El período entre su primera comparecencia y el juicio. Su abogado revisa la evidencia, presenta mociones y puede negociar con el fiscal. Las discusiones de acuerdo de culpabilidad a menudo ocurren durante esta fase.",
+                "rights": [
+                  "Derecho a ver toda la evidencia que tiene la fiscalía (descubrimiento)",
+                  "Derecho a un juicio rápido",
+                  "Derecho a que su abogado presente mociones en su nombre",
+                  "Derecho a rechazar cualquier acuerdo de culpabilidad ofrecido"
+                ],
+                "tips": [
+                  "Manténgase en contacto cercano con su abogado",
+                  "Asista a cada fecha de audiencia — faltar lleva a una orden de arresto",
+                  "Siga todas las condiciones de fianza cuidadosamente",
+                  "No publique sobre su caso en redes sociales",
+                  "Aproximadamente el 90-95% de los casos se resuelven mediante acuerdos de culpabilidad"
+                ]
+              },
+              "discovery": {
+                "title": "Descubrimiento",
+                "timeframe": "Parte de la fase prejuicio",
+                "description": "Ambas partes intercambian evidencia. La fiscalía debe compartir toda la evidencia con su abogado defensor, incluyendo cualquier cosa que pueda ayudar a probar su inocencia (esto se llama la Regla Brady).",
+                "rights": [
+                  "Derecho a ver toda la evidencia en su contra",
+                  "Derecho a evidencia que pueda probar su inocencia (material Brady)",
+                  "Derecho a impugnar evidencia mediante mociones",
+                  "Derecho a que su abogado revise todos los materiales de descubrimiento"
+                ],
+                "tips": [
+                  "Comparta toda la información con su abogado — el privilegio abogado-cliente lo protege",
+                  "Ayude a su abogado a identificar posibles testigos",
+                  "Reúna cualquier documento, mensaje o registro que apoye su caso",
+                  "Su abogado puede presentar mociones para suprimir evidencia obtenida ilegalmente",
+                  "Mantenga notas de todo lo que recuerde sobre el incidente"
+                ]
+              },
+              "trial": {
+                "title": "Juicio",
+                "timeframe": "Días a semanas",
+                "description": "Si su caso va a juicio, ambas partes presentan su caso ante un juez o jurado. La fiscalía debe probar su culpabilidad más allá de una duda razonable. Tiene derecho a testificar o guardar silencio.",
+                "rights": [
+                  "Derecho a un juicio por jurado (para la mayoría de casos penales)",
+                  "Derecho a confrontar e interrogar testigos",
+                  "Derecho a presentar su propia evidencia y testigos",
+                  "Derecho a testificar o guardar silencio (no puede ser usado en su contra)",
+                  "Presunción de inocencia hasta que se pruebe la culpabilidad"
+                ],
+                "tips": [
+                  "Confíe en la estrategia de su abogado — ellos conocen el proceso",
+                  "Vístase profesionalmente y sea respetuoso en la corte",
+                  "No reaccione emocionalmente al testimonio o evidencia",
+                  "Su abogado decide si usted debe testificar",
+                  "La carga de la prueba recae sobre la fiscalía, no sobre usted"
+                ]
+              },
+              "sentencing": {
+                "title": "Sentencia",
+                "timeframe": "Inmediatamente o semanas después del veredicto",
+                "description": "Si es declarado culpable, el juez determina su castigo basándose en las guías de sentencia, la gravedad del delito, su historial criminal y otros factores. Tiene derecho a hablar antes de la sentencia.",
+                "rights": [
+                  "Derecho a hablar en su sentencia (alocución)",
+                  "Derecho a que su abogado presente factores atenuantes",
+                  "Derecho a apelar la condena o sentencia",
+                  "Derecho a un castigo justo y proporcionado (8va Enmienda)"
+                ],
+                "tips": [
+                  "Muestre responsabilidad genuina — los jueces lo notan",
+                  "Destaque pasos de rehabilitación (consejería, empleo, educación)",
+                  "Pida a familiares o miembros de la comunidad que escriban cartas de apoyo",
+                  "Pregunte a su abogado sobre alternativas de sentencia (probatoria, servicio comunitario)",
+                  "Entienda su derecho a apelar — hay plazos"
+                ]
+              }
+            }
+          },
+          "quickRef": {
+            "title": "Tarjetas de Referencia Rápida",
+            "subtitle": "Guías compactas e imprimibles para sus derechos en cada etapa. Guárdelas en su teléfono o imprimalas.",
+            "printAll": "Imprimir Todas las Tarjetas",
+            "tabs": {
+              "police": "Encuentros Policiales",
+              "court": "Etapas de la Corte",
+              "all": "Todas las Tarjetas"
+            },
+            "disclaimer": {
+              "title": "Importante:",
+              "text": "Estas tarjetas proporcionan información general sobre sus derechos. Las leyes varían según el estado y la situación. Esto no es asesoramiento legal. Siempre consulte con un abogado sobre su caso específico."
+            },
+            "police": {
+              "title": "Si la Policía lo Detiene",
+              "stay": "Mantenga la Calma y Recuerde",
+              "stay1": "Tiene derecho a guardar silencio. Diga: \"Estoy ejerciendo mi derecho a guardar silencio.\"",
+              "stay2": "Tiene derecho a rechazar registros. Diga: \"No doy mi consentimiento para un registro.\"",
+              "stay3": "Pregunte: \"¿Soy libre de irme?\" Si la respuesta es sí, aléjese con calma.",
+              "stay4": "Tiene derecho a un abogado. Diga: \"Quiero hablar con un abogado.\"",
+              "doHeading": "Haga",
+              "do1": "Mantenga sus manos visibles en todo momento",
+              "do2": "Proporcione su nombre e identificación si se lo piden",
+              "do3": "Mantenga la calma y hable claramente",
+              "do4": "Recuerde los números de placa y de patrulla",
+              "do5": "Escriba todo inmediatamente después",
+              "dontHeading": "No Haga",
+              "dont1": "No resista el arresto, incluso si cree que es injusto",
+              "dont2": "No corra, discuta ni haga movimientos bruscos",
+              "dont3": "No consienta un registro de su persona, auto o casa",
+              "dont4": "No responda preguntas sin un abogado presente",
+              "dont5": "No firme nada sin leerlo y consultar a un abogado",
+              "ifArrested": "Si lo Arrestan",
+              "arrested1": "Diga claramente: \"Quiero un abogado\" — luego deje de hablar",
+              "arrested2": "Tiene al menos una llamada telefónica — úsela para llamar a un abogado o familiar",
+              "arrested3": "No discuta su caso con nadie excepto su abogado",
+              "arrested4": "Deben llevarlo ante un juez dentro de 48-72 horas"
+            },
+            "arraignment": {
+              "title": "Lectura de Cargos",
+              "expect": "Qué Esperar",
+              "expect1": "El juez lee los cargos en su contra",
+              "expect2": "Usted declara: culpable, no culpable o nolo contendere",
+              "expect3": "Se puede establecer o modificar el monto de la fianza",
+              "expect4": "Su abogado puede solicitar un defensor público si es necesario",
+              "say": "Qué Decir",
+              "say1": "\"No culpable\" — casi siempre es la mejor declaración inicial",
+              "say2": "\"Me gustaría un abogado designado por la corte\" — si no puede pagar uno",
+              "say3": "\"Sí, Su Señoría\" / \"No, Su Señoría\" — al dirigirse al juez",
+              "dontSay": "No Diga",
+              "dontSay1": "No discuta los hechos de su caso en audiencia abierta",
+              "dontSay2": "No se declare culpable sin hablar primero con un abogado",
+              "dontSay3": "No discuta con el juez o fiscal",
+              "rights": "Sus Derechos",
+              "right1": "Derecho a un abogado (gratis si no puede pagarlo)",
+              "right2": "Derecho a conocer los cargos en su contra",
+              "right3": "Derecho a una fianza razonable",
+              "right4": "Derecho a un juicio rápido"
+            },
+            "bail": {
+              "title": "Audiencia de Fianza",
+              "expect": "Qué Esperar",
+              "expect1": "El juez decide si otorga fianza y cuánto",
+              "expect2": "Factores: gravedad del cargo, riesgo de fuga, vínculos comunitarios, historial criminal",
+              "expect3": "Usted o su abogado pueden argumentar por una fianza más baja o liberación",
+              "expect4": "Se pueden establecer condiciones de liberación (toque de queda, órdenes de no contacto, etc.)",
+              "say": "Qué Decir",
+              "say1": "Enfatice vínculos comunitarios: familia, trabajo, tiempo de residencia",
+              "say2": "Mencione que cumplirá con todas las fechas de audiencia",
+              "say3": "Ofrezca alternativas si la fianza es muy alta (tobillera electrónica, reportes)",
+              "dontSay": "No Diga",
+              "dontSay1": "No discuta los detalles de su caso",
+              "dontSay2": "No haga promesas que no puede cumplir",
+              "dontSay3": "No muestre frustración o enojo hacia la corte",
+              "rights": "Sus Derechos",
+              "right1": "Derecho a una fianza razonable (8va Enmienda)",
+              "right2": "Derecho a una audiencia de fianza",
+              "right3": "Derecho a apelar una decisión de fianza"
+            },
+            "pretrial": {
+              "title": "Prejuicio / Descubrimiento",
+              "expect": "Qué Esperar",
+              "expect1": "Ambas partes intercambian evidencia (proceso de descubrimiento)",
+              "expect2": "Su abogado puede presentar mociones para suprimir evidencia o desestimar cargos",
+              "expect3": "Las negociaciones de acuerdo de culpabilidad a menudo ocurren durante esta fase",
+              "expect4": "Esta fase puede tomar semanas a meses",
+              "say": "Qué Hacer",
+              "do1": "Manténgase en contacto cercano con su abogado",
+              "do2": "Asista a cada fecha de audiencia — faltar puede resultar en una orden de arresto",
+              "do3": "Siga todas las condiciones de fianza estrictamente",
+              "do4": "Reúna cualquier evidencia o testigos que ayuden a su caso",
+              "dontSay": "No Haga",
+              "dont1": "No discuta su caso en redes sociales o con otros",
+              "dont2": "No contacte testigos o víctimas directamente",
+              "dont3": "No acepte un acuerdo de culpabilidad sin entender completamente las consecuencias",
+              "rights": "Sus Derechos",
+              "right1": "Derecho a ver toda la evidencia en su contra (Regla Brady)",
+              "right2": "Derecho a un juicio rápido",
+              "right3": "Derecho a presentar su propia evidencia y testigos"
+            },
+            "plea": {
+              "title": "Audiencia de Declaración",
+              "expect": "Qué Esperar",
+              "expect1": "El juez pregunta si entiende la declaración y sus consecuencias",
+              "expect2": "Debe confirmar que la declaración es voluntaria y no fue coaccionada",
+              "expect3": "El juez explica la sentencia máxima posible",
+              "expect4": "La sentencia puede ocurrir inmediatamente o programarse para después",
+              "say": "Qué Decir",
+              "say1": "\"Sí, entiendo\" — cuando el juez explica los términos de la declaración",
+              "say2": "\"Sí, esta es mi decisión voluntaria\" — confirme que no fue forzado",
+              "say3": "Pida a su abogado que le explique cualquier cosa que no entienda",
+              "dontSay": "No Diga",
+              "dontSay1": "No diga \"No lo hice\" mientras se declara culpable — el juez puede rechazar la declaración",
+              "dontSay2": "No acepte una declaración si no entiende las consecuencias colaterales (inmigración, vivienda, empleo)",
+              "dontSay3": "No se apresure — puede pedir más tiempo para decidir",
+              "rights": "Sus Derechos",
+              "right1": "Derecho a retirar una declaración de culpabilidad en ciertas circunstancias",
+              "right2": "Derecho a conocer las consecuencias completas antes de declarar",
+              "right3": "Derecho a rechazar cualquier acuerdo de culpabilidad e ir a juicio"
+            },
+            "sentencing": {
+              "title": "Sentencia",
+              "expect": "Qué Esperar",
+              "expect1": "El juez considera las guías de sentencia, declaraciones de impacto de la víctima y su historial",
+              "expect2": "Su abogado puede presentar factores atenuantes (primer delito, empleo, responsabilidades familiares)",
+              "expect3": "Resultados posibles: multas, probatoria, servicio comunitario, encarcelamiento o combinación",
+              "expect4": "Puede tener la oportunidad de dirigirse a la corte",
+              "say": "Qué Decir",
+              "say1": "Exprese arrepentimiento genuino si ha sido declarado culpable",
+              "say2": "Mencione pasos de rehabilitación que ha tomado (consejería, clases, empleo)",
+              "say3": "Describa sus responsabilidades (hijos, familia, comunidad)",
+              "dontSay": "No Diga",
+              "dontSay1": "No culpe a la víctima ni minimice el delito",
+              "dontSay2": "No discuta con las preguntas del juez",
+              "dontSay3": "No ponga excusas — asuma responsabilidad cuando sea apropiado",
+              "rights": "Sus Derechos",
+              "right1": "Derecho a hablar en su sentencia (alocución)",
+              "right2": "Derecho a apelar la sentencia",
+              "right3": "Derecho a un castigo justo y proporcionado (8va Enmienda)",
+              "right4": "Derecho a que su abogado esté presente"
             }
           },
           "diversionPrograms": {

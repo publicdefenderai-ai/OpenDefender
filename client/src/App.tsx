@@ -59,6 +59,8 @@ import TechDocs from "@/pages/tech-docs";
 import EmbedSearch from "@/pages/embed/search";
 import EmbedRights from "@/pages/embed/rights";
 import EmbedGlossary from "@/pages/embed/glossary";
+import CaseTimeline from "@/pages/case-timeline";
+import QuickReference from "@/pages/quick-reference";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -120,6 +122,8 @@ function Router() {
       <Route path="/court-records" component={CourtRecords} />
       <Route path="/recap-extensions" component={RecapExtensions} />
       <Route path="/process" component={Process} />
+      <Route path="/case-timeline" component={CaseTimeline} />
+      <Route path="/quick-reference" component={QuickReference} />
       <Route path="/search-seizure" component={SearchSeizure} />
       <Route path="/friends-family" component={FriendsFamily} />
       <Route path="/how-to" component={HowTo} />

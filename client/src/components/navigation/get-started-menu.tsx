@@ -22,7 +22,8 @@ import {
   Briefcase,
   Eye,
   UserCheck,
-  BookOpen
+  BookOpen,
+  Clock
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -258,6 +259,40 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               <Calendar className="h-5 w-5 text-green-600" />
               <span className="font-medium group-hover:text-green-600 transition-colors">
                 {t('getStartedMenu.legalRightsSubmenu.criminalJusticeProcess')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/case-timeline')}
+        className="w-full"
+        data-testid="submenu-item-case-timeline"
+      >
+        <Card className="hover:shadow-md hover:border-teal-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Clock className="h-5 w-5 text-teal-600" />
+              <span className="font-medium group-hover:text-teal-600 transition-colors">
+                {t('getStartedMenu.legalRightsSubmenu.caseTimeline', 'Case Timeline')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/quick-reference')}
+        className="w-full"
+        data-testid="submenu-item-quick-reference"
+      >
+        <Card className="hover:shadow-md hover:border-rose-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <FileText className="h-5 w-5 text-rose-600" />
+              <span className="font-medium group-hover:text-rose-600 transition-colors">
+                {t('getStartedMenu.legalRightsSubmenu.quickReference', 'Quick-Reference Cards')}
               </span>
             </div>
           </CardContent>

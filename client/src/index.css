@@ -1280,3 +1280,26 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid hsl(var(--border));
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+@media print {
+  header, footer, nav, .print\\:hidden,
+  [class*="chat-launcher"], [class*="mobile-bottom-nav"],
+  [class*="beta-banner"] {
+    display: none !important;
+  }
+  .print-section {
+    padding: 0 !important;
+  }
+  .quick-ref-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  body {
+    font-size: 11pt;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  .print\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

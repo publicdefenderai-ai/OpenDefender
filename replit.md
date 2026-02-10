@@ -38,6 +38,22 @@ A comprehensive search system indexes 4,275+ documents for instant, bilingual le
 - **UI Component** (`client/src/components/search/site-search.tsx`): Modal with debounced search, type badges, keyboard shortcuts (Cmd/Ctrl+K), and bilingual support
 - **API Endpoints**: GET `/api/site-search` with query, language, filters; GET `/api/site-search/stats` for index statistics
 
+### Visual Case Timeline
+An interactive 7-stage criminal case timeline (`client/src/pages/case-timeline.tsx`) at `/case-timeline`:
+- **Stages**: Arrest → Booking → First Appearance → Pretrial → Discovery → Trial → Sentencing
+- **Interactive Navigation**: Clickable stage circles with animated progress bar, previous/next buttons
+- **Per-Stage Content**: Description, rights (green panel), and tips (amber panel) with legal term highlighting
+- **Bilingual**: Full English and Spanish translations in `i18n.ts`
+- **Cross-linking**: Links to Quick-Reference Cards for each stage
+
+### Quick-Reference Cards
+Printable/saveable rights reference cards (`client/src/pages/quick-reference.tsx`) at `/quick-reference`:
+- **Police Encounter Card**: ACLU-format "Know Your Rights" card with Do/Don't sections and arrest guidance
+- **Court Stage Cards**: Arraignment, Bail Hearing, Pretrial/Discovery, Plea Hearing, Sentencing
+- **Print Support**: CSS print styles in `index.css`, "Print All Cards" button, page-break-inside avoidance
+- **Tabbed UI**: Police Encounters, Court Stages, All Cards tabs
+- **Bilingual**: Full English and Spanish translations
+
 ### Mock Q&A Practice Feature
 A dual-layer Mock Q&A system helps users prepare for court proceedings:
 - **Static Library** (`shared/mock-qa.ts`): 17 bilingual generic Q&A items covering 6 proceeding types (arraignment, bail hearing, pretrial, plea, trial, sentencing) with translations in `i18n.ts`
