@@ -27,6 +27,8 @@ import { motionForSentenceModificationTemplate } from "../../../shared/templates
 import { motionToReconsiderEoirTemplate } from "../../../shared/templates/motion-to-reconsider-eoir";
 import { motionForNewTrialTemplate } from "../../../shared/templates/motion-for-new-trial";
 import { motionForStayOfRemovalEoirTemplate } from "../../../shared/templates/motion-for-stay-of-removal-eoir";
+import { habeasCorpusPetitionTemplate } from "../../../shared/templates/habeas-corpus-petition";
+import { motionToSeverTemplate } from "../../../shared/templates/motion-to-sever";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -91,6 +93,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-reconsider-eoir", motionToReconsiderEoirTemplate],
   ["motion-for-new-trial", motionForNewTrialTemplate],
   ["motion-for-stay-of-removal-eoir", motionForStayOfRemovalEoirTemplate],
+  ["habeas-corpus-petition", habeasCorpusPetitionTemplate],
+  ["motion-to-sever", motionToSeverTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -361,6 +365,37 @@ async function generateAISection(
     addressHistory: formData.addressHistory || "",
     exceptionalCircumstances: formData.exceptionalCircumstances || "",
     reliefSought: formData.reliefSought || "",
+    // Habeas corpus petition fields
+    convictionDate: formData.convictionDate || "",
+    convictionCourt: formData.convictionCourt || "",
+    originalCaseNumber: formData.originalCaseNumber || "",
+    convictionCharges: formData.convictionCharges || "",
+    sentenceImposed: formData.sentenceImposed || "",
+    sentenceDate: formData.sentenceDate || "",
+    currentCustodyStatus: formData.currentCustodyStatus || "",
+    petitionType: formData.petitionType || "",
+    directAppealFiled: formData.directAppealFiled || "",
+    directAppealResult: formData.directAppealResult || "",
+    directAppealDate: formData.directAppealDate || "",
+    priorHabeasPetitions: formData.priorHabeasPetitions || "none",
+    priorPetitionDetails: formData.priorPetitionDetails || "",
+    stateRemediesExhausted: formData.stateRemediesExhausted || "",
+    exhaustionExplanation: formData.exhaustionExplanation || "",
+    aepdaTimeliness: formData.aepdaTimeliness || "",
+    primaryGround: formData.primaryGround || "",
+    groundsDescription: formData.groundsDescription || "",
+    additionalGrounds: formData.additionalGrounds || "",
+    prejudiceDescription: formData.prejudiceDescription || "",
+    supportingEvidence: formData.supportingEvidence || "",
+    coaRequested: formData.coaRequested || "",
+    hearingRequested: formData.hearingRequested || "",
+    // Motion to sever fields
+    severanceType: formData.severanceType || "",
+    numberOfCodefendants: formData.numberOfCodefendants || "",
+    codefendantNames: formData.codefendantNames || "",
+    chargesToSever: formData.chargesToSever || "",
+    curingInstructions: formData.curingInstructions || "",
+    prosecutionPosition: formData.prosecutionPosition || "",
   };
 
   // Process template with safe data

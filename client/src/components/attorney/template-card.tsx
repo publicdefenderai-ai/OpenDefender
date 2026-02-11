@@ -43,6 +43,7 @@ const criminalStages: CaseStage[] = [
       "motion-to-suppress",
       "motion-in-limine",
       "motion-to-dismiss",
+      "motion-to-sever",
     ],
   },
   {
@@ -57,9 +58,10 @@ const criminalStages: CaseStage[] = [
   {
     id: "post-sentencing",
     label: "Post-Sentencing",
-    description: "Motions filed after sentencing to modify or reduce the sentence",
+    description: "Motions filed after sentencing to modify or reduce the sentence, or to challenge the conviction",
     templateIds: [
       "motion-for-sentence-modification",
+      "habeas-corpus-petition",
     ],
   },
 ];

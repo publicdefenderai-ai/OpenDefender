@@ -76,6 +76,8 @@ The Attorney Portal (`/attorney`) provides verified attorneys with jurisdiction-
 | Motion to Withdraw Guilty Plea | `shared/templates/motion-to-withdraw-plea.ts` | Intermediate |
 | Motion for Sentence Modification / Reduction | `shared/templates/motion-for-sentence-modification.ts` | Advanced |
 | Motion for New Trial | `shared/templates/motion-for-new-trial.ts` | Advanced |
+| Petition for Writ of Habeas Corpus | `shared/templates/habeas-corpus-petition.ts` | Advanced |
+| Motion to Sever Defendants / Charges | `shared/templates/motion-to-sever.ts` | Intermediate |
 
 **Immigration Templates** (EOIR format, nationally uniform):
 | Template | File | Difficulty |
