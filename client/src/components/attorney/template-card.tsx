@@ -53,6 +53,14 @@ const criminalStages: CaseStage[] = [
       "motion-to-withdraw-plea",
     ],
   },
+  {
+    id: "post-sentencing",
+    label: "Post-Sentencing",
+    description: "Motions filed after sentencing to modify or reduce the sentence",
+    templateIds: [
+      "motion-for-sentence-modification",
+    ],
+  },
 ];
 
 const immigrationStages: CaseStage[] = [
@@ -76,7 +84,7 @@ const immigrationStages: CaseStage[] = [
     id: "post-decision",
     label: "Post-Decision",
     description: "Motions filed after an immigration judge\u2019s decision",
-    templateIds: ["motion-to-reopen-eoir"],
+    templateIds: ["motion-to-reopen-eoir", "motion-to-reconsider-eoir"],
   },
   {
     id: "defensive",

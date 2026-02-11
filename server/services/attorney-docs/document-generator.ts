@@ -23,6 +23,8 @@ import { motionInLimineTemplate } from "../../../shared/templates/motion-in-limi
 import { motionToReopenEoirTemplate } from "../../../shared/templates/motion-to-reopen-eoir";
 import { motionToWithdrawPleaTemplate } from "../../../shared/templates/motion-to-withdraw-plea";
 import { motionToTerminateEoirTemplate } from "../../../shared/templates/motion-to-terminate-eoir";
+import { motionForSentenceModificationTemplate } from "../../../shared/templates/motion-for-sentence-modification";
+import { motionToReconsiderEoirTemplate } from "../../../shared/templates/motion-to-reconsider-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -83,6 +85,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-reopen-eoir", motionToReopenEoirTemplate],
   ["motion-to-withdraw-plea", motionToWithdrawPleaTemplate],
   ["motion-to-terminate-eoir", motionToTerminateEoirTemplate],
+  ["motion-for-sentence-modification", motionForSentenceModificationTemplate],
+  ["motion-to-reconsider-eoir", motionToReconsiderEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
