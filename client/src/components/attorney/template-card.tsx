@@ -46,10 +46,11 @@ const criminalStages: CaseStage[] = [
     ],
   },
   {
-    id: "post-plea",
-    label: "Post-Plea Motions",
-    description: "Motions filed after a guilty or no-contest plea has been entered",
+    id: "post-trial",
+    label: "Post-Trial",
+    description: "Motions filed after a verdict or conviction but before or after sentencing",
     templateIds: [
+      "motion-for-new-trial",
       "motion-to-withdraw-plea",
     ],
   },
@@ -91,6 +92,12 @@ const immigrationStages: CaseStage[] = [
     label: "Defensive Motions",
     description: "Motions challenging the proceedings or seeking termination",
     templateIds: ["motion-to-terminate-eoir"],
+  },
+  {
+    id: "emergency-protective",
+    label: "Emergency / Protective",
+    description: "Urgent filings to prevent removal while appeals or motions are pending",
+    templateIds: ["motion-for-stay-of-removal-eoir"],
   },
 ];
 

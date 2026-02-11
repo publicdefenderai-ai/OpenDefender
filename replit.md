@@ -75,6 +75,7 @@ The Attorney Portal (`/attorney`) provides verified attorneys with jurisdiction-
 | Motion in Limine | `shared/templates/motion-in-limine.ts` | Intermediate |
 | Motion to Withdraw Guilty Plea | `shared/templates/motion-to-withdraw-plea.ts` | Intermediate |
 | Motion for Sentence Modification / Reduction | `shared/templates/motion-for-sentence-modification.ts` | Advanced |
+| Motion for New Trial | `shared/templates/motion-for-new-trial.ts` | Advanced |
 
 **Immigration Templates** (EOIR format, nationally uniform):
 | Template | File | Difficulty |
@@ -87,6 +88,7 @@ The Attorney Portal (`/attorney`) provides verified attorneys with jurisdiction-
 | Motion to Reopen | `shared/templates/motion-to-reopen-eoir.ts` | Intermediate |
 | Motion to Reconsider | `shared/templates/motion-to-reconsider-eoir.ts` | Intermediate |
 | Motion to Terminate Proceedings | `shared/templates/motion-to-terminate-eoir.ts` | Intermediate |
+| Motion for Stay of Removal | `shared/templates/motion-for-stay-of-removal-eoir.ts` | Intermediate |
 
 **Coverage**: 143 total jurisdictions (51 state/territory + 92 federal districts) for criminal templates. Immigration templates use EOIR national format.
 

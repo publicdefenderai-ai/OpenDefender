@@ -25,6 +25,8 @@ import { motionToWithdrawPleaTemplate } from "../../../shared/templates/motion-t
 import { motionToTerminateEoirTemplate } from "../../../shared/templates/motion-to-terminate-eoir";
 import { motionForSentenceModificationTemplate } from "../../../shared/templates/motion-for-sentence-modification";
 import { motionToReconsiderEoirTemplate } from "../../../shared/templates/motion-to-reconsider-eoir";
+import { motionForNewTrialTemplate } from "../../../shared/templates/motion-for-new-trial";
+import { motionForStayOfRemovalEoirTemplate } from "../../../shared/templates/motion-for-stay-of-removal-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -87,6 +89,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-to-terminate-eoir", motionToTerminateEoirTemplate],
   ["motion-for-sentence-modification", motionForSentenceModificationTemplate],
   ["motion-to-reconsider-eoir", motionToReconsiderEoirTemplate],
+  ["motion-for-new-trial", motionForNewTrialTemplate],
+  ["motion-for-stay-of-removal-eoir", motionForStayOfRemovalEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
