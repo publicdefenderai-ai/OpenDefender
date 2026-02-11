@@ -29,6 +29,13 @@ import { motionForNewTrialTemplate } from "../../../shared/templates/motion-for-
 import { motionForStayOfRemovalEoirTemplate } from "../../../shared/templates/motion-for-stay-of-removal-eoir";
 import { habeasCorpusPetitionTemplate } from "../../../shared/templates/habeas-corpus-petition";
 import { motionToSeverTemplate } from "../../../shared/templates/motion-to-sever";
+import { motionForJudgmentOfAcquittalTemplate } from "../../../shared/templates/motion-for-judgment-of-acquittal";
+import { motionForMistrialTemplate } from "../../../shared/templates/motion-for-mistrial";
+import { motionForChangeOfVenueTemplate } from "../../../shared/templates/motion-for-change-of-venue";
+import { motionToCompelDiscoveryTemplate } from "../../../shared/templates/motion-to-compel-discovery";
+import { motionForBailPendingAppealTemplate } from "../../../shared/templates/motion-for-bail-pending-appeal";
+import { motionToSuppressImmigrationEoirTemplate } from "../../../shared/templates/motion-to-suppress-immigration-eoir";
+import { motionForVoluntaryDepartureEoirTemplate } from "../../../shared/templates/motion-for-voluntary-departure-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
@@ -95,6 +102,13 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-for-stay-of-removal-eoir", motionForStayOfRemovalEoirTemplate],
   ["habeas-corpus-petition", habeasCorpusPetitionTemplate],
   ["motion-to-sever", motionToSeverTemplate],
+  ["motion-for-judgment-of-acquittal", motionForJudgmentOfAcquittalTemplate],
+  ["motion-for-mistrial", motionForMistrialTemplate],
+  ["motion-for-change-of-venue", motionForChangeOfVenueTemplate],
+  ["motion-to-compel-discovery", motionToCompelDiscoveryTemplate],
+  ["motion-for-bail-pending-appeal", motionForBailPendingAppealTemplate],
+  ["motion-to-suppress-immigration-eoir", motionToSuppressImmigrationEoirTemplate],
+  ["motion-for-voluntary-departure-eoir", motionForVoluntaryDepartureEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -396,6 +410,79 @@ async function generateAISection(
     chargesToSever: formData.chargesToSever || "",
     curingInstructions: formData.curingInstructions || "",
     prosecutionPosition: formData.prosecutionPosition || "",
+    // Motion for judgment of acquittal fields
+    trialStartDate: formData.trialStartDate || "",
+    trialPhase: formData.trialPhase || "",
+    judgeAssigned: formData.judgeAssigned || "",
+    insufficientElements: formData.insufficientElements || "",
+    missingEvidence: formData.missingEvidence || "",
+    weaknessesInProsecution: formData.weaknessesInProsecution || "",
+    credibilityIssues: formData.credibilityIssues || "",
+    // Motion for mistrial fields
+    mistrialBasis: formData.mistrialBasis || "",
+    incidentDescription: formData.incidentDescription || "",
+    dateOfIncident: formData.dateOfIncident || "",
+    curativeAction: formData.curativeAction || "",
+    curingAttemptDetails: formData.curingAttemptDetails || "",
+    prejudiceToDefendant: formData.prejudiceToDefendant || "",
+    // Motion for change of venue fields
+    currentVenue: formData.currentVenue || "",
+    requestedVenue: formData.requestedVenue || "",
+    chargeLevel: formData.chargeLevel || "",
+    primaryBasis: formData.primaryBasis || "",
+    publicityDescription: formData.publicityDescription || "",
+    publicityExamples: formData.publicityExamples || "",
+    juryPoolConcerns: formData.juryPoolConcerns || "",
+    priorVoirDireAttempts: formData.priorVoirDireAttempts || "",
+    communityImpact: formData.communityImpact || "",
+    // Motion to compel discovery fields
+    originalRequestDate: formData.originalRequestDate || "",
+    originalRequestMethod: formData.originalRequestMethod || "",
+    discoveryRequested: formData.discoveryRequested || "",
+    prosecutionResponse: formData.prosecutionResponse || "",
+    whatRemains: formData.whatRemains || "",
+    relevanceOfMaterials: formData.relevanceOfMaterials || "",
+    sanctionsRequested: formData.sanctionsRequested || "",
+    sanctionJustification: formData.sanctionJustification || "",
+    // Motion for bail pending appeal fields
+    convictionCharges: formData.convictionCharges || "",
+    sentenceImposed: formData.sentenceImposed || "",
+    sentenceDate: formData.sentenceDate || "",
+    custodyFacility: formData.custodyFacility || "",
+    noticeOfAppealFiled: formData.noticeOfAppealFiled || "",
+    appealFilingDate: formData.appealFilingDate || "",
+    appellateIssues: formData.appellateIssues || "",
+    likelihoodOfSuccess: formData.likelihoodOfSuccess || "",
+    flightRisk: formData.flightRisk || "",
+    flightRiskExplanation: formData.flightRiskExplanation || "",
+    communityTies: formData.communityTies || "",
+    dangerToCommunity: formData.dangerToCommunity || "",
+    proposedConditions: formData.proposedConditions || "",
+    priorCourtAppearances: formData.priorCourtAppearances || "",
+    // Immigration: motion to suppress evidence fields
+    obtainingAgency: formData.obtainingAgency || "",
+    violationType: formData.violationType || "",
+    egregiousnessFactors: formData.egregiousnessFactors || "",
+    witnessesPresent: formData.witnessesPresent || "",
+    bodycamOrDocumentation: formData.bodycamOrDocumentation || "",
+    reliefSought: formData.reliefSought || "",
+    additionalRelief: formData.additionalRelief || "",
+    // Immigration: motion for voluntary departure fields
+    departureStage: formData.departureStage || "",
+    requestedPeriod: formData.requestedPeriod || "",
+    destinationCountry: formData.destinationCountry || "",
+    meansOfDeparture: formData.meansOfDeparture || "",
+    financialAbility: formData.financialAbility || "",
+    departureArrangements: formData.departureArrangements || "",
+    physicalPresenceYears: formData.physicalPresenceYears || "",
+    goodMoralCharacter: formData.goodMoralCharacter || "",
+    noAggravatedFelony: formData.noAggravatedFelony || "",
+    noTerrorismCharges: formData.noTerrorismCharges || "",
+    priorVoluntaryDeparture: formData.priorVoluntaryDeparture || "",
+    taxCompliance: formData.taxCompliance || "",
+    voluntaryDepartureBond: formData.voluntaryDepartureBond || "",
+    bondAmount: formData.bondAmount || "",
+    financialResources: formData.financialResources || "",
   };
 
   // Process template with safe data

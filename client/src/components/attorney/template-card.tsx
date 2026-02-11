@@ -40,10 +40,21 @@ const criminalStages: CaseStage[] = [
     description: "Motions filed during the discovery and pre-trial phase",
     templateIds: [
       "motion-for-discovery",
+      "motion-to-compel-discovery",
       "motion-to-suppress",
       "motion-in-limine",
       "motion-to-dismiss",
       "motion-to-sever",
+      "motion-for-change-of-venue",
+    ],
+  },
+  {
+    id: "trial",
+    label: "Trial Motions",
+    description: "Motions filed during trial proceedings",
+    templateIds: [
+      "motion-for-judgment-of-acquittal",
+      "motion-for-mistrial",
     ],
   },
   {
@@ -61,6 +72,7 @@ const criminalStages: CaseStage[] = [
     description: "Motions filed after sentencing to modify or reduce the sentence, or to challenge the conviction",
     templateIds: [
       "motion-for-sentence-modification",
+      "motion-for-bail-pending-appeal",
       "habeas-corpus-petition",
     ],
   },
@@ -93,7 +105,11 @@ const immigrationStages: CaseStage[] = [
     id: "defensive",
     label: "Defensive Motions",
     description: "Motions challenging the proceedings or seeking termination",
-    templateIds: ["motion-to-terminate-eoir"],
+    templateIds: [
+      "motion-to-terminate-eoir",
+      "motion-to-suppress-immigration-eoir",
+      "motion-for-voluntary-departure-eoir",
+    ],
   },
   {
     id: "emergency-protective",
