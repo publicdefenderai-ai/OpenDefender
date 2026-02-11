@@ -45,6 +45,14 @@ const criminalStages: CaseStage[] = [
       "motion-to-dismiss",
     ],
   },
+  {
+    id: "post-plea",
+    label: "Post-Plea Motions",
+    description: "Motions filed after a guilty or no-contest plea has been entered",
+    templateIds: [
+      "motion-to-withdraw-plea",
+    ],
+  },
 ];
 
 const immigrationStages: CaseStage[] = [
@@ -69,6 +77,12 @@ const immigrationStages: CaseStage[] = [
     label: "Post-Decision",
     description: "Motions filed after an immigration judge\u2019s decision",
     templateIds: ["motion-to-reopen-eoir"],
+  },
+  {
+    id: "defensive",
+    label: "Defensive Motions",
+    description: "Motions challenging the proceedings or seeking termination",
+    templateIds: ["motion-to-terminate-eoir"],
   },
 ];
 
