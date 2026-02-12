@@ -112,8 +112,8 @@ export default function ChatPage() {
       });
       actions.setCurrentStep('emergency_check');
       toast({
-        title: lng === 'es' ? 'Idioma cambiado' : 'Language changed',
-        description: lng === 'es' ? 'El chat se ha reiniciado en español' : 'Chat has been restarted in English',
+        title: lng === 'zh' ? '语言已更改' : lng === 'es' ? 'Idioma cambiado' : 'Language changed',
+        description: lng === 'zh' ? '聊天已重新开始，使用中文' : lng === 'es' ? 'El chat se ha reiniciado en español' : 'Chat has been restarted in English',
       });
     }, 100);
   }, [actions, toast]);
@@ -1018,6 +1018,13 @@ export default function ChatPage() {
                     data-testid="menu-item-spanish"
                   >
                     🇪🇸 Español
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => handleLanguageChange('zh')}
+                    className={i18n.language === 'zh' ? 'bg-accent' : ''}
+                    data-testid="menu-item-chinese"
+                  >
+                    🇨🇳 中文
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

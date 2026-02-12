@@ -6363,6 +6363,3156 @@ i18n
         }
         }
       }
+      ,
+      zh: {
+        translation: {
+          "header": {
+            "title": "Public Defender AI",
+            "subtitle": "免费法律指导与权利信息",
+            "menu": {
+              "getHelp": "获取帮助",
+              "getHelpDesc": "与我们的AI对话，获取个性化的法律指导",
+              "knowRights": "了解你的权利",
+              "knowRightsDesc": "了解你的宪法保护",
+              "documentLibrary": "文件库",
+              "documentLibraryDesc": "了解你案件中的法律文件",
+              "findResources": "查找资源",
+              "findResourcesDesc": "查找法院、公设辩护人和法律援助"
+            },
+            "language": "语言",
+            "theme": "主题",
+            "darkMode": "深色模式",
+            "lightMode": "浅色模式"
+          },
+          "home": {
+            "hero": {
+              "title1": "了解你的权利。",
+              "title2": "保护你的未来。",
+              "subtitle": "获取免费的法律指导，了解法庭流程，获取资源帮助你应对刑事司法系统。",
+              "urgentHelpButton": "紧急求助",
+              "getStartedButton": "开始使用",
+              "navigatingToolButton": "如何使用这个工具",
+              "urgentHelpNotice": "如果你正在被逮捕或正在出庭，请点击\"紧急求助\"获取即时指导。"
+            },
+            "features": {
+              "title": "基于真实法律数据",
+              "subtitle": "我们的AI使用全面的法律数据库和法院记录，提供准确、最新的信息。",
+              "federalCourts": "法院记录",
+              "federalCourtsDesc": "通过CourtListener API获取数百万联邦和州法院判例。RECAP Archive整合提供免费联邦法院文件访问（PACER整合即将推出）。",
+              "federalCourtsStatus": "部分完成",
+              "stateLaws": "州和联邦法律",
+              "stateLawsDesc": "涵盖全部50个州加华盛顿特区，包含1,255项刑事法规和713项经过验证的指控匹配，涵盖12个犯罪类别。联邦法规来自GovInfo.gov。所有辖区都链接到官方立法机构网站。",
+              "stateLawsStatus": "已启用 - 51个辖区",
+              "analytics": "刑事司法数据分析",
+              "analyticsDesc": "司法统计局（BJS）整合正在推进中。NCVS/NIBRS API实现及适当加权和分页功能正在验证中。",
+              "analyticsStatus": "部分完成"
+            },
+            "trust": {
+              "title": "建立在信任和透明之上",
+              "subtitle": "每一条法律信息都有可靠来源支持",
+              "verifiedTitle": "经过验证的引用",
+              "verifiedDesc": "所有法律声明都包含对法律、法院案件和法规的正确引用",
+              "privacyTitle": "隐私受到保护",
+              "privacyDesc": "不存储个人信息，所有会话数据自动删除",
+              "currentTitle": "最新信息",
+              "currentDesc": "法律数据库定期更新，以反映最新的法律和程序",
+              "disclaimerTitle": "法律免责声明：",
+              "disclaimerText": "本AI仅提供一般性法律信息，不能替代专业法律建议。请务必就你的具体情况咨询合格的律师。所提供的信息可能未反映最新的法律动态，不应作为法律意见依赖。"
+            },
+            "urgentHelp": {
+              "modalTitle": "紧急法律情况",
+              "arrestWarning": "如果你正在被逮捕：",
+              "arrestWarningText": "你有权保持沉默，有权请律师。请立即行使这些权利。",
+              "immediateActions": "现在该怎么做：",
+              "stayCalmTitle": "1. 保持冷静",
+              "stayCalmText": "不要反抗。让警察看到你的双手。冷静地配合他们的指示。",
+              "assertRightsTitle": "2. 声明你的权利",
+              "assertRightsText1": "清楚地说：\"我要保持沉默。我要和律师谈话。\"",
+              "assertRightsText2": "然后停止和警察说话。在有律师之前不要回答任何问题。",
+              "noConsentTitle": "3. 不要同意搜查",
+              "noConsentText": "说：\"我不同意搜查。\"不要反抗，但要明确表示你不同意。",
+              "publicDefenderTitle": "4. 要求公设辩护人",
+              "publicDefenderText": "如果你请不起律师，你可以免费获得一位。第一次出庭时要求公设辩护人。",
+              "rememberTitle": "请记住：",
+              "rememberText": "你说的任何话都可能在法庭上被用作对你不利的证据。保护自己的最好方式就是在有律师之前保持沉默。"
+            },
+            "whatWeDo": {
+              "title": "我们做什么",
+              "subtitle": "Public Defender AI帮助人们了解自己的法律权利，并在刑事司法系统中获得指引。",
+              "card1Title": "AI法律指导",
+              "card1Desc": "根据你的具体情况获取个性化的法律信息",
+              "card2Title": "权利信息",
+              "card2Desc": "了解你在逮捕和法庭程序中的法律权利",
+              "card3Title": "查找资源",
+              "card3Desc": "查找公设辩护人、法律援助组织和法院信息"
+            },
+            "cta": {
+              "title": "准备好开始了吗？",
+              "subtitle": "为你的情况获取免费的法律帮助和信息。",
+              "button": "开始使用"
+            },
+            "knowRights": {
+              "title": "了解你的权利",
+              "subtitle": "了解你的法律权利是保护自己的第一步。",
+              "rightToRemainSilent": "沉默权",
+              "rightToRemainSilentDesc": "没有律师在场时，你不需要回答问题",
+              "rightToAttorney": "律师权",
+              "rightToAttorneyDesc": "你有权获得法律代理，即使你负担不起",
+              "rightToFairTrial": "公正审判权",
+              "rightToFairTrialDesc": "你有权获得公正的法律程序和不偏不倚的陪审团",
+              "searchWarrantRights": "搜查和扣押保护",
+              "searchWarrantRightsDesc": "在大多数情况下，警察需要搜查令才能搜查你或你的财产",
+              "selfIncrimination": "免于自证其罪的保护",
+              "selfIncriminationDesc": "你不能被迫提供对自己不利的证词",
+              "speedyTrial": "快速审判权",
+              "speedyTrialDesc": "你有权在没有不合理延误的情况下接受审判",
+              "learnMore": "了解更多关于你的权利",
+              "showMore": "显示更多",
+              "showLess": "收起"
+            },
+            "dataSources": {
+              "title": "数据来源",
+              "subtitle": "我们的信息来自值得信赖的权威法律数据库。",
+              "courtlistener": "CourtListener API",
+              "courtlistenerDesc": "来自Free Law Project的840多万份法院判例和联邦案卷",
+              "recap": "RECAP Archive",
+              "recapDesc": "由PACER用户众包共享的免费联邦法院记录",
+              "cornell": "Cornell Legal Institute",
+              "cornellDesc": "美国宪法、联邦法律和法律资源"
+            },
+            "publicDefenderSearch": {
+              "title": "查找公设辩护人办公室",
+              "inputLabel": "输入邮政编码",
+              "inputPlaceholder": "输入5位邮政编码",
+              "searchButton": "搜索",
+              "searching": "搜索中...",
+              "noResults": "50英里内未找到公设辩护人办公室。请尝试其他邮政编码或联系当地法院获取信息。",
+              "error": "请输入有效的5位邮政编码",
+              "errorGeneral": "无法搜索办公室。请重试或联系当地法院获取信息。",
+              "county": "县",
+              "milesAway": "英里",
+              "address": "地址",
+              "phone": "电话",
+              "email": "邮箱",
+              "hours": "工作时间",
+              "services": "服务",
+              "directions": "路线"
+            },
+            "legalAidSearch": {
+              "title": "查找法律援助组织",
+              "inputLabel": "输入邮政编码",
+              "inputPlaceholder": "输入5位邮政编码",
+              "searchButton": "搜索",
+              "searching": "搜索中...",
+              "noResults": "100英里内未找到法律援助组织。请尝试其他邮政编码或联系你所在州的律师协会。",
+              "error": "请输入有效的5位邮政编码",
+              "errorGeneral": "无法搜索组织。请重试或联系当地律师协会。",
+              "servicesOffered": "提供的服务",
+              "alertMessage": "这些组织专注于刑事司法和移民法律援助。符合条件的人通常可以获得免费或低价服务。",
+              "resultsFound": "在你附近找到了{{count}}个组织{{plural}}"
+            },
+            "searchResults": {
+              "foundOffices": "在你附近找到了{{count}}个办公室{{plural}}"
+            }
+          },
+          "footer": {
+            "tagline": "通过AI驱动的法律指导和资源，扩大司法公正的覆盖面。",
+            "legalResources": "法律资源",
+            "knowYourRights": "了解你的权利",
+            "courtProcedures": "法庭程序",
+            "legalGlossary": "法律术语表",
+            "recordExpungement": "犯罪记录消除",
+            "friendsFamily": "亲友帮助指南",
+            "courtRecords": "查找法院记录",
+            "getHelp": "获取帮助",
+            "getCaseGuidance": "获取案件指导",
+            "immigrationEnforcement": "移民执法",
+            "diversionPrograms": "转处计划",
+            "findLocalCourts": "查找当地法院",
+            "findPublicDefender": "查找公设辩护人",
+            "legalAidOrgs": "法律援助组织",
+            "about": "关于",
+            "ourMission": "我们的使命",
+            "developmentRoadmap": "开发路线图",
+            "privacyPolicy": "隐私政策",
+            "noticeDisclaimers": "通知与免责声明",
+            "privacyNotice": "隐私优先：我们不存储你的个人数据——所有输入在会话结束后删除。",
+            "copyright": "© 2025 Public Defender AI。不能替代专业法律建议。"
+          },
+          "common": {
+            "close": "关闭",
+            "cancel": "取消",
+            "submit": "提交",
+            "search": "搜索",
+            "loading": "加载中...",
+            "error": "错误",
+            "success": "成功",
+            "email": "邮箱",
+            "phone": "电话",
+            "address": "地址",
+            "name": "姓名",
+            "description": "描述",
+            "learnMore": "了解更多",
+            "getStarted": "开始使用",
+            "back": "返回",
+            "next": "下一步",
+            "save": "保存",
+            "important": "重要",
+            "privacyFirst": "隐私优先"
+          },
+          "mockQA": {
+            "sectionTitle": "练习问答",
+            "sectionSubtitle": "法庭上你可能会听到的常见问题",
+            "personalizedTitle": "针对你案件的练习问题",
+            "showResponse": "显示回答",
+            "hideResponse": "隐藏回答",
+            "practiceNote": "大声练习这些回答，这样你在出庭时会更有准备。",
+            "arraignment": {
+              "plea": {
+                "question": "对于你被指控的罪名，你作何答辩？",
+                "response": "不认罪，法官大人。",
+                "explanation": "大多数律师建议在提审时作无罪答辩。这样可以保留你所有的选择，并有时间审查证据。"
+              },
+              "understand": {
+                "question": "你是否理解你被指控的罪名？",
+                "response": "是的，法官大人，我理解这些指控。",
+                "explanation": "如果你没有完全理解，可以说'我希望我的律师向我解释一下。'如果你真的不理解，千万不要说是。"
+              },
+              "attorney": {
+                "question": "你有律师吗，还是需要指定一位？",
+                "response": "法官大人，我想申请一位公设辩护人。",
+                "explanation": "如果你请不起律师，你有权获得一位免费指定的律师。请如实说明你的经济状况。"
+              },
+              "waiveTime": {
+                "question": "你是否放弃快速审判的权利？",
+                "response": "我想先和我的律师讨论后再回答。",
+                "explanation": "在未咨询律师的情况下，不要放弃时间权利。这会影响你案件中的重要期限。"
+              }
+            },
+            "bail": {
+              "residence": {
+                "question": "你目前的地址是什么？你在那里住了多久？",
+                "response": "我住在[地址]，已经住了[时间]。",
+                "explanation": "稳定的住所表明你与社区有联系，不太可能逃跑。"
+              },
+              "employment": {
+                "question": "你目前有工作吗？在哪里工作？",
+                "response": "是的，我在[雇主]担任[职位]。",
+                "explanation": "有工作说明你与社区有联系，有责任心。提一下你在那里工作了多久。"
+              },
+              "ties": {
+                "question": "你在这个地区有家人吗？",
+                "response": "是的，我有[家人]住在附近。",
+                "explanation": "家庭关系表明你有留在这个地区并按时出庭的理由。"
+              }
+            },
+            "pretrial": {
+              "progress": {
+                "question": "你有定期与律师会面准备案件吗？",
+                "response": "是的，法官大人，我一直与律师保持联系。",
+                "explanation": "这表明你认真对待自己的案件，并积极参与辩护。"
+              },
+              "conditions": {
+                "question": "你是否遵守了所有释放条件？",
+                "response": "是的，法官大人，我遵守了所有条件。",
+                "explanation": "如果你遇到了任何困难，在听证会之前告诉你的律师，让他们能够妥善处理。"
+              }
+            },
+            "plea": {
+              "voluntary": {
+                "question": "你的认罪是自愿的吗？",
+                "response": "是的，法官大人。",
+                "explanation": "只有在这确实是你自己的决定、没有人强迫你的情况下才回答是。如果你有疑虑，告诉法官。"
+              },
+              "discussed": {
+                "question": "你是否已经和律师充分讨论了这个认罪协议？",
+                "response": "是的，法官大人，我已经和律师讨论了认罪的各个方面。",
+                "explanation": "你应该有时间提问并了解所有后果，然后再作认罪答辩。"
+              },
+              "consequences": {
+                "question": "你是否了解认罪的后果，包括可能的监禁？",
+                "response": "是的，法官大人，我了解可能的后果。",
+                "explanation": "确保你真正了解最高刑罚、附带后果，以及如果适用的话，对移民身份的影响。"
+              }
+            },
+            "sentencing": {
+              "statement": {
+                "question": "在我宣判之前，你有什么要对法庭说的吗？",
+                "response": "是的，法官大人。[表达真诚的悔意，承担责任，提及已采取的积极措施]",
+                "explanation": "这是你的陈述机会。要真诚，承担责任，提及你已经做出的改过努力。"
+              },
+              "understand": {
+                "question": "你是否理解我刚才宣布的判决？",
+                "response": "是的，法官大人，我理解了。",
+                "explanation": "如果你对判决、条件或报到要求有任何不清楚的地方，请要求澄清。"
+              }
+            },
+            "trial": {
+              "testify": {
+                "question": "你是否愿意为自己辩护作证？",
+                "response": "我想先和律师进一步讨论后再决定。",
+                "explanation": "这是一个重大决定。你有权不作证，陪审团不能因为你的沉默而对你不利。"
+              },
+              "juryWaiver": {
+                "question": "你是否放弃接受陪审团审判的权利？",
+                "response": "法官大人，我想保留我的陪审团审判权利。",
+                "explanation": "只有在与律师仔细讨论后，确定法官审判对你的具体案件可能更有利时，才放弃陪审团审判。"
+              }
+            }
+          },
+          "legalGuidance": {
+            "qaFlow": {
+              "title": "获取个性化法律指导",
+              "cancel": "取消",
+              "stepProgress": "第{{current}}步，共{{total}}步：{{title}}",
+              "privacyNotice": "你的回答不会被保存，会在你关闭会话时删除",
+              "steps": {
+                "consent": "隐私与同意",
+                "jurisdiction": "你的州",
+                "caseDetails": "你的案件",
+                "status": "当前状态",
+                "additionalDetails": "补充信息（可选）"
+              },
+              "consent": {
+                "title": "隐私免责声明与同意",
+                "important": "重要：",
+                "generalInfo": "本工具仅提供一般性法律信息，不能替代专业法律建议。",
+                "noStorage": "我们不存储你的个人信息。所有数据在你关闭会话时删除。",
+                "consultAttorney": "如需具体的法律建议，请咨询合格的律师。",
+                "checkboxLabel": "我理解并同意继续",
+                "continueButton": "继续"
+              },
+              "jurisdiction": {
+                "title": "你的案件在哪个州？",
+                "label": "你的州",
+                "placeholder": "选择你的州...",
+                "states": {
+                  "AL": "Alabama",
+                  "AK": "Alaska",
+                  "AZ": "Arizona",
+                  "AR": "Arkansas",
+                  "CA": "California",
+                  "CO": "Colorado",
+                  "CT": "Connecticut",
+                  "DE": "Delaware",
+                  "FL": "Florida",
+                  "GA": "Georgia",
+                  "HI": "Hawaii",
+                  "ID": "Idaho",
+                  "IL": "Illinois",
+                  "IN": "Indiana",
+                  "IA": "Iowa",
+                  "KS": "Kansas",
+                  "KY": "Kentucky",
+                  "LA": "Louisiana",
+                  "ME": "Maine",
+                  "MD": "Maryland",
+                  "MA": "Massachusetts",
+                  "MI": "Michigan",
+                  "MN": "Minnesota",
+                  "MS": "Mississippi",
+                  "MO": "Missouri",
+                  "MT": "Montana",
+                  "NE": "Nebraska",
+                  "NV": "Nevada",
+                  "NH": "New Hampshire",
+                  "NJ": "New Jersey",
+                  "NM": "New Mexico",
+                  "NY": "New York",
+                  "NC": "North Carolina",
+                  "ND": "North Dakota",
+                  "OH": "Ohio",
+                  "OK": "Oklahoma",
+                  "OR": "Oregon",
+                  "PA": "Pennsylvania",
+                  "RI": "Rhode Island",
+                  "SC": "South Carolina",
+                  "SD": "South Dakota",
+                  "TN": "Tennessee",
+                  "TX": "Texas",
+                  "UT": "Utah",
+                  "VT": "Vermont",
+                  "VA": "Virginia",
+                  "WA": "Washington",
+                  "WV": "West Virginia",
+                  "WI": "Wisconsin",
+                  "WY": "Wyoming",
+                  "DC": "District of Columbia",
+                  "federal": "联邦"
+                },
+                "back": "返回",
+                "continue": "继续"
+              },
+              "caseDetails": {
+                "title": "你面临什么指控？",
+                "selectedCharges": "已选择的指控：",
+                "filterLabel": "按类别筛选（可选）",
+                "filterPlaceholder": "所有类别",
+                "allCategories": "所有类别",
+                "selectLabel": "选择所有适用于你案件的指控：",
+                "stateCharges": "州指控",
+                "federalCharges": "联邦指控",
+                "maxPenalty": "最高刑罚：",
+                "showMore": "显示更多{{count}}项指控...",
+                "hasAttorneyLabel": "我已经有律师或公设辩护人",
+                "back": "返回",
+                "continue": "继续"
+              },
+              "status": {
+                "title": "当前状态",
+                "caseStageLabel": "你的案件处于哪个阶段？",
+                "caseStageplaceholder": "选择当前阶段...",
+                "stages": {
+                  "arrest": "刚被逮捕 / 调查阶段",
+                  "arraignment": "提审已安排/已完成",
+                  "pretrial": "审前程序",
+                  "trial": "审判已安排/进行中",
+                  "sentencing": "量刑阶段",
+                  "appeal": "上诉程序",
+                  "unsure": "不确定"
+                },
+                "custodyLabel": "你目前是否被拘留？",
+                "custodyPlaceholder": "选择拘留状态...",
+                "custodyOptions": {
+                  "yes": "是的，正在被拘留",
+                  "bail": "已缴纳保释金释放",
+                  "recognizance": "自行具结释放（无需保释金）",
+                  "no": "不，未被拘留"
+                },
+                "back": "返回",
+                "submitButton": "获取我的法律指导",
+                "continue": "继续"
+              },
+              "additionalDetails": {
+                "title": "补充信息（可选）",
+                "description": "你提供的细节越多，我们的AI就能为你的具体情况提供越好的指导。所有字段都是可选的——你可以跳过不想回答的问题。",
+                "incidentLabel": "发生了什么？用你自己的话描述事件经过",
+                "incidentPlaceholder": "例如：我下班开车回家时被警察拦下了。他们说我在左右摇晃，但我只是为了避开一个坑洞才转了一下方向...",
+                "concernsLabel": "你最担心什么？有什么具体问题吗？",
+                "concernsPlaceholder": "例如：我担心会丢掉工作。我有孩子，请不起律师。我什么时候要上法庭？",
+                "back": "返回"
+              },
+              "privilegeWarning": {
+                "title": "分享信息之前请注意",
+                "notPrivate": "和律师交谈不同，你在这里输入的内容不受保密特权保护，如果在法庭上被问到，可能会被用作对你不利的证据。",
+                "recommendation": "我们建议你先咨询律师。这一步是可选的——跳过它你仍然可以获得一般性指导。",
+                "continueAnyway": "仍然继续",
+                "skipAndGetGuidance": "跳过并获取一般性指导",
+                "findLawyer": "帮我找一位律师"
+              }
+            },
+            "dashboard": {
+              "title": "法律指导仪表盘",
+              "generatedOn": "生成日期",
+              "hideDetails": "隐藏详情",
+              "showDetails": "显示详情",
+              "close": "关闭",
+              "exportPDF": "导出PDF",
+              "summary": {
+                "charges": "指控",
+                "jurisdiction": "你的州",
+                "currentStage": "当前阶段",
+                "progress": "进度",
+                "actionsCompleted": "已完成的操作",
+                "protected": "已保护"
+              },
+              "criticalAlerts": {
+                "title": "紧急提醒 - 需要立即行动"
+              },
+              "upcomingDeadlines": {
+                "title": "即将到来的截止日期"
+              },
+              "immediateActions": {
+                "title": "立即行动（48小时内）",
+                "completed": "已完成：{{count}}/{{total}}项操作"
+              },
+              "caseTimeline": {
+                "title": "案件时间线",
+                "progress": "案件进展",
+                "current": "当前"
+              },
+              "nextSteps": {
+                "title": "下一步"
+              },
+              "yourRights": {
+                "title": "你的权利"
+              },
+              "localResources": {
+                "title": "当地资源"
+              },
+              "evidenceToGather": {
+                "title": "需要收集的证据"
+              },
+              "importantWarnings": {
+                "title": "重要警告"
+              },
+              "courtPreparation": {
+                "title": "出庭准备"
+              },
+              "actionsToAvoid": {
+                "title": "应避免的行为"
+              },
+              "privacyNotice": {
+                "title": "你的隐私受到保护",
+                "text": "本指导根据你的输入生成，会在你的会话结束后自动删除。不会永久存储任何个人信息。",
+                "encrypted": "所有数据在传输和存储时均已加密",
+                "autoDelete": "会话数据在24小时后自动删除",
+                "piiRedacted": "个人信息在AI处理前已脱敏",
+                "deleteNow": "立即删除我的数据",
+                "deleteNote": "永久删除所有会话数据"
+              }
+            }
+          },
+          "getStartedMenu": {
+            "main": {
+              "title": "你需要什么帮助？",
+              "caseGuidance": {
+                "title": "获取案件指导",
+                "description": "基于你的情况提供个性化法律指导"
+              },
+              "immigration": {
+                "title": "移民执法",
+                "description": "ICE遭遇和驱逐出境时的权利"
+              },
+              "legalRights": {
+                "title": "法律权利信息",
+                "description": "宪法权利和法律程序"
+              },
+              "legalAid": {
+                "title": "法律援助资源与支持",
+                "description": "查找法律帮助和支持服务"
+              },
+              "lawsRecords": {
+                "title": "法律与文件",
+                "description": "查找法规、判例法、法院记录和文件指南"
+              },
+              "attorneyTools": {
+                "title": "律师工具",
+                "description": "面向法律专业人士的文件起草和资源"
+              },
+              "resources": {
+                "title": "资源",
+                "description": "法律援助、支持服务、法律、法院记录和文件"
+              }
+            },
+            "resourcesSubmenu": {
+              "title": "资源",
+              "backButton": "返回主菜单",
+              "legalAid": "法律援助资源与支持",
+              "lawsRecords": "法律与文件"
+            },
+            "legalRightsSubmenu": {
+              "title": "法律权利信息",
+              "backButton": "返回主菜单",
+              "constitutionalRights": "你的法律权利",
+              "criminalJusticeProcess": "刑事司法流程",
+              "caseTimeline": "案件时间线",
+              "quickReference": "快速参考卡",
+              "searchSeizure": "搜查与扣押",
+              "assistingFriends": "帮助亲友",
+              "legalGlossary": "法律术语表"
+            },
+            "legalAidSubmenu": {
+              "title": "法律援助资源与支持",
+              "backButton": "返回资源页",
+              "publicDefender": "查找公设辩护人",
+              "legalAidOrgs": "法律援助组织",
+              "diversionPrograms": "转处计划",
+              "recordsExpungement": "犯罪记录消除"
+            },
+            "lawsRecordsSubmenu": {
+              "title": "法律与文件",
+              "backButton": "返回资源页",
+              "courtRecords": "法院记录搜索",
+              "statutes": "法规搜索",
+              "documentLibrary": "文件库"
+            },
+            "immigrationSubmenu": {
+              "title": "移民执法",
+              "backButton": "返回主菜单",
+              "generalInfo": "一般信息",
+              "situationalGuides": "情景指南",
+              "knowYourRights": "了解你的权利",
+              "findDetained": "查找被拘留的人",
+              "findLawyer": "查找律师"
+            }
+          },
+          "case": {
+            "hero": {
+              "title": "案件指导",
+              "subtitle": "获取个性化法律指导",
+              "description": "回答几个关于你情况的问题，获取法律帮助、下一步建议和案件相关资源。",
+              "startButton": "开始使用",
+              "privacyNote": "你的回答是私密的，会在会话结束后自动删除"
+            },
+            "howItWorks": {
+              "title": "个性化指导是如何运作的",
+              "step1Title": "回答问题",
+              "step1Desc": "告诉我们你的州、指控和目前的法律程序阶段",
+              "step2Title": "我们分析你的情况",
+              "step2Desc": "我们的系统使用法律数据库和以往案例来分析你的情况",
+              "step3Title": "获取指导",
+              "step3Desc": "获得针对性的下一步建议、截止日期和相关法律信息",
+              "step4Title": "连接帮助",
+              "step4Desc": "获取当地资源、律师和支持组织的信息"
+            },
+            "benefits": {
+              "title": "你将获得什么",
+              "nextStepsTitle": "下一步行动",
+              "nextStepsDesc": "基于你案件阶段和情况的清晰、可执行的步骤",
+              "deadlinesTitle": "重要截止日期",
+              "deadlinesDesc": "你需要了解的你所在州的重要日期和截止日期",
+              "rightsTitle": "你的权利",
+              "rightsDesc": "适用于你情况的权利以及如何行使这些权利",
+              "resourcesTitle": "当地资源",
+              "resourcesDesc": "你所在地区的公设辩护人、法律援助组织和支持服务",
+              "warningsTitle": "重要警告",
+              "warningsDesc": "针对你情况的注意事项和需要避免的问题",
+              "legalInfoTitle": "法律信息",
+              "legalInfoDesc": "适用于你情况的法律和以往案例"
+            },
+            "privacy": {
+              "title": "你的隐私受到保护",
+              "subtitle": "我们重视你的隐私。以下是我们如何保护你的信息。",
+              "noStorageTitle": "不存储数据",
+              "noStorageDesc": "个人信息不会保存到我们的服务器",
+              "sessionOnlyTitle": "仅限会话期间",
+              "sessionOnlyDesc": "数据仅在你的活跃会话期间存在",
+              "autoDeleteTitle": "自动删除",
+              "autoDeleteDesc": "当你离开时，所有信息自动删除",
+              "anonymousTitle": "匿名使用",
+              "anonymousDesc": "不需要创建账户，完全匿名使用",
+              "disclaimer": "本工具仅提供一般性法律信息和指导。它不能替代专业法律建议。请务必就你案件的具体情况咨询合格的律师。",
+              "getStartedButton": "立即开始",
+              "learnRightsButton": "先了解你的权利",
+              "footerBanner": "我们不存储你的个人数据——所有输入在会话结束后删除。"
+            },
+            "exitWarning": {
+              "title": "离开之前",
+              "message": "你的个性化指导还没有导出。为了保护你的隐私，我们不保存这些信息。如果你现在离开，它将会丢失。",
+              "export": "导出",
+              "proceed": "继续离开"
+            }
+          },
+          "rights": {
+            "hero": {
+              "title": "了解你的法律权利",
+              "subtitle": "了解你的法律权利是在法律系统中保护自己的第一步。"
+            },
+            "quickRights": {
+              "title": "每个人都应知道的基本权利",
+              "silent": {
+                "title": "沉默权",
+                "description": "除了基本身份信息外，你不需要回答问题",
+                "detailedExplanation": "法律保护你免于被迫说出对你案件不利的话。你只需要提供姓名和地址等基本信息——除此之外，你可以在没有律师在场的情况下拒绝回答警察的任何问题。你说的任何话都可能在法庭上被用来对付你，所以行使这项权利可以保护你不会说出可能损害你辩护的话，即使你认为自己是无辜的。"
+              },
+              "attorney": {
+                "title": "律师权",
+                "description": "如果你负担不起，可以获得免费的法律代理",
+                "detailedExplanation": "法律保障你在刑事案件中有权获得律师。如果你请不起律师，法院必须为你免费指定一位公设辩护人——这适用于任何你可能面临监禁的刑事案件。你应该在被逮捕后立即要求律师，在回答任何问题之前就这样做，因为从一开始就有律师能大大提高你获得公正结果的机会。"
+              },
+              "phoneCall": {
+                "title": "打电话的权利",
+                "description": "被捕后可以联系家人、律师或保释担保人",
+                "detailedExplanation": "在被逮捕和登记后，你有权打合理数量的电话联系律师、家人或保释担保人。由于律师-客户特权，警察不能监听你与律师的通话，但他们可能会监听其他通话。明智地使用这项权利很重要——如果可能的话，先联系你的律师，并避免在可能被录音的电话中讨论你案件的细节。"
+              },
+              "knowCharges": {
+                "title": "知情权",
+                "description": "必须被告知对你的指控",
+                "detailedExplanation": "法律要求你被正式告知对你的刑事指控，通常是在被捕后48-72小时内的第一次出庭时。你有权知道你被指控的具体罪行、他们说你违反了哪些法律，以及你可能面临的处罚。这些信息让你和你的律师能够准备辩护，并确保你不会因为未被正式告知的罪行而受审。"
+              }
+            },
+            "detailedRights": {
+              "title": "你的法律权利详解",
+              "tabs": {
+                "miranda": "米兰达警告",
+                "arrest": "逮捕期间",
+                "court": "在法庭上",
+                "prison": "如果被定罪"
+              },
+              "miranda": {
+                "title": "米兰达警告",
+                "completeWarning": "完整的米兰达警告：",
+                "warning1": "你有权保持沉默。",
+                "warning2": "你所说的一切都可以而且将会在法庭上被用作对你不利的证据。",
+                "warning3": "你有权请律师。",
+                "warning4": "如果你请不起律师，将为你指定一位。",
+                "warning5": "你是否理解我刚才宣读的这些权利？",
+                "warning6": "了解这些权利后，你是否愿意与我交谈？",
+                "whenApply": "米兰达警告的适用情况：",
+                "apply1": "当你被警方拘留并且正在接受讯问时",
+                "apply2": "不适用于交通拦停或自愿回答问题",
+                "apply3": "必须在拘留讯问开始之前告知",
+                "apply4": "你可以在讯问过程中随时行使这些权利",
+                "alertTitle": "重要：",
+                "alertText": "如果警察没有向你宣读米兰达警告，你在拘留期间所说的话可能不被法庭采纳，但这并不会自动撤销你的案件。"
+              },
+              "arrest": {
+                "title": "逮捕期间的权利",
+                "shouldDo": "你应该做的：",
+                "do1": "保持冷静，不要抗拒逮捕",
+                "do2": "让你的双手保持可见",
+                "do3": "行使你的沉默权",
+                "do4": "立即要求律师",
+                "do5": "记住细节，之后告诉你的律师",
+                "shouldNotDo": "你不应该做的：",
+                "dont1": "不要跑或进行身体反抗",
+                "dont2": "不要和警察争论",
+                "dont3": "不要同意搜查",
+                "dont4": "没有律师不要回答问题",
+                "dont5": "不要签署任何文件",
+                "policePowers": "逮捕期间的警察权力：",
+                "power1": "可以搜查你和你身边区域以寻找武器/证据",
+                "power2": "可以扣押视线范围内的物品",
+                "power3": "如果在交通拦停中被逮捕，可以搜查你的车辆",
+                "power4": "在大多数情况下，未经搜查令不能搜查你的手机"
+              },
+              "court": {
+                "title": "法庭上的权利",
+                "constitutional": "法律权利：",
+                "right1": "获得公正和快速审判的权利",
+                "right2": "获得公正、不偏不倚的陪审团的权利",
+                "right3": "质询证人的权利",
+                "right4": "提出辩护的权利",
+                "right5": "对定罪提出上诉的权利",
+                "burdenProof": "举证责任：",
+                "burden1": "检察官必须证明有罪达到排除合理怀疑的标准",
+                "burden2": "在被证明有罪之前，你被推定为无罪",
+                "burden3": "你不需要证明自己的清白",
+                "burden4": "你有权不出庭作证",
+                "etiquetteTitle": "法庭礼仪：",
+                "etiquetteText": "穿着得体，准时到达，法官进场时起立，称呼法官为\"法官大人\"，让你的律师代你发言。"
+              },
+              "prison": {
+                "title": "被定罪后的权利",
+                "continuing": "持续享有的权利：",
+                "right1": "对定罪提出上诉的权利",
+                "right2": "上诉时获得律师代理的权利",
+                "right3": "在监狱中获得人道待遇的权利",
+                "right4": "获得医疗服务的权利",
+                "right5": "宗教信仰自由的权利",
+                "right6": "与家人联络的权利（有一定限制）",
+                "afterRelease": "释放后：",
+                "after1": "可能需要接受缓刑或假释监管",
+                "after2": "可能面临就业限制",
+                "after3": "可能失去某些公民权利（投票权、持枪权）",
+                "after4": "对非公民可能产生移民方面的后果",
+                "after5": "可能申请犯罪记录消除或封存",
+                "collateralTitle": "附带后果：",
+                "collateralText": "刑事定罪可能影响就业、住房、专业执照、学生资助和移民身份。请与你的律师讨论这些问题。"
+              }
+            },
+            "disclaimer": {
+              "title": "重要：",
+              "text": "本信息仅供学习参考，不构成法律建议。各州法律不同，且会随时变化。请务必就你的具体情况咨询真正的律师。",
+              "needHelp": "需要紧急法律帮助？",
+              "emergencyAid": "紧急法律援助",
+              "caseGuidance": "获取案件指导"
+            }
+          },
+          "immigration": {
+            "common": {
+              "importantLabel": "重要："
+            },
+            "hero": {
+              "title1": "移民执法",
+              "title2": "了解你的权利",
+              "subtitle": "在ICE遭遇和驱逐出境程序中，公民和非公民都需要了解的基本权利信息"
+            },
+            "criticalAlert": {
+              "title": "关键提示：",
+              "text": "这些权利适用于在美国的所有人，无论你的公民身份如何。即使在移民执法行动中，你也享有法律保护。"
+            },
+            "emergencyRights": {
+              "title": "ICE遭遇时的即时权利",
+              "subtitle": "这些权利适用于所有人——公民、非公民、有身份者和无身份者",
+              "constitutionalTitle": "你的法律权利",
+              "constitutionalRights": {
+                "silent": {
+                  "title": "沉默权：",
+                  "text": "你不必回答关于你的移民身份、国籍或出生地的问题。"
+                },
+                "refuseSearch": {
+                  "title": "拒绝搜查的权利：",
+                  "text": "你可以拒绝同意对你本人、随身物品、汽车或住宅的搜查。"
+                },
+                "attorney": {
+                  "title": "律师权：",
+                  "text": "你有权在回答问题之前与律师交谈。"
+                },
+                "interpreter": {
+                  "title": "翻译权：",
+                  "text": "你在诉讼程序中有权获得翻译。"
+                }
+              },
+              "whatNotToDoTitle": "不要做什么",
+              "whatNotToDo": {
+                "lie": {
+                  "title": "不要撒谎或提供虚假文件：",
+                  "text": "这可能在移民法庭上被用来对你不利。"
+                },
+                "run": {
+                  "title": "不要逃跑或反抗：",
+                  "text": "这可能导致额外的刑事指控。"
+                },
+                "sign": {
+                  "title": "不要签署任何文件：",
+                  "text": "在理解文件内容或与律师交谈之前不要签字。"
+                },
+                "carryDocuments": {
+                  "title": "不要携带外国证件：",
+                  "text": "除非法律要求（如驾驶执照）。"
+                }
+              }
+            },            "deportationPhases": {
+              "title": "驱逐出境流程阶段",
+              "subtitle": "了解移民执法程序的每个阶段",
+              "phase1": {
+                "title": "第一阶段：初次遇到 ICE",
+                "rightsTitle": "您的权利：",
+                "rights": {
+                  "askLeave": "询问您是否可以自由离开",
+                  "warrant": "在允许进入您的住所之前，要求查看搜查令",
+                  "silent": "对您的移民身份保持沉默",
+                  "attorney": "立即要求律师"
+                },
+                "expectTitle": "可能会发生什么：",
+                "expect": {
+                  "approach": "ICE 探员可能会在您家、工作地点或公共场所接近您",
+                  "documents": "他们可能会要求您出示身份证件和移民文件",
+                  "adminWarrant": "行政令 ≠ 司法令",
+                  "detention": "如果他们认为您可以被驱逐，您可能会被拘留"
+                }
+              },
+              "phase2": {
+                "title": "第二阶段：移民拘留",
+                "rightsTitle": "您在拘留中的权利：",
+                "rights": {
+                  "phone": "有权打电话给家人和律师",
+                  "consulate": "有权联系您的领事馆（非公民）",
+                  "interpreter": "在程序中有权获得翻译",
+                  "charges": "有权被告知对您的指控",
+                  "bond": "有权要求保释金听证会（大多数情况下）"
+                },
+                "importantTitle": "重要须知：",
+                "important": {
+                  "duration": "拘留可能持续数周、数月或更长时间",
+                  "nta": "您将收到出庭通知 (NTA)",
+                  "mandatory": "某些人必须被强制拘留",
+                  "bondAmount": "保释金金额差异很大（$1,500 - $25,000+）",
+                  "criminal": "某些刑事定罪会影响保释金资格"
+                }
+              },
+              "phase3": {
+                "title": "第三阶段：移民法庭诉讼",
+                "rightsTitle": "法庭权利：",
+                "rights": {
+                  "attorney": "有权聘请律师（自费）",
+                  "interpreter": "有权获得翻译",
+                  "examine": "有权查看对您不利的证据",
+                  "present": "有权提出证据和证人",
+                  "appeal": "有权对不利裁决提出上诉"
+                },
+                "outcomesTitle": "可能的结果：",
+                "outcomes": {
+                  "relief": "免除驱逐：庇护、取消驱逐、身份调整",
+                  "voluntary": "自愿离境：自费离开美国",
+                  "removal": "驱逐令：强制驱逐出境",
+                  "continuances": "延期：案件因各种原因被推迟",
+                  "closure": "行政关闭：案件暂时关闭"
+                }
+              },
+              "phase4": {
+                "title": "第四阶段：上诉和最终驱逐",
+                "rightsTitle": "上诉权利：",
+                "rights": {
+                  "deadline": "必须在30天内向移民上诉委员会 (BIA) 提交上诉",
+                  "federal": "BIA 裁决后可能进行联邦法院审查",
+                  "stay": "上诉期间暂停驱逐（如已申请）",
+                  "motions": "在特定情况下可以提出重新审理/重新考虑的动议"
+                },
+                "processTitle": "最终驱逐流程：",
+                "process": {
+                  "schedule": "最终命令下达后，ICE 安排驱逐日期",
+                  "period": "90天驱逐期（可延长）",
+                  "refusal": "某些国家可能拒绝接收被遣返者",
+                  "supervision": "部分人可能在监管下被释放",
+                  "bar": "未来可能被禁止入境美国数年"
+                }
+              }
+            },
+            "specialProtections": {
+              "title": "特殊保护",
+              "subtitle": "针对弱势群体的额外权利和保护",
+              "usCitizens": {
+                "title": "美国公民",
+                "items": {
+                  "noDeportation": "不能被驱逐出境（宪法保护）",
+                  "detained": "如果身份受到质疑，可能会被拘留",
+                  "proof": "应随身携带公民身份证明",
+                  "contact": "如被拘留，立即联系家人/律师",
+                  "complaints": "如果权利受到侵犯，可以投诉"
+                }
+              },
+              "vulnerable": {
+                "title": "弱势群体",
+                "pregnant": "孕妇：特殊羁押裁定",
+                "nursing": "哺乳期母亲：扩展的家庭拘留替代方案",
+                "minors": "未成年人：特殊程序和保护",
+                "mentallyIll": "精神疾病患者：需要进行行为能力评估",
+                "trafficking": "人口贩卖受害者：特殊签证保护"
+              },
+              "sanctuary": {
+                "title": "庇护管辖区",
+                "items": {
+                  "policies": "限制与 ICE 合作的地方政策",
+                  "notice": "ICE 行动的提前通知（某些地区）",
+                  "know": "了解您所在地区的政策",
+                  "canOperate": "ICE 仍然可以在庇护区域内执法",
+                  "contact": "联系当地移民权利组织"
+                }
+              }
+            },
+            "resources": {
+              "title": "紧急资源和联系方式",
+              "subtitle": "移民紧急情况的重要电话号码和资源",
+              "hotlines": {
+                "title": "全国热线",
+                "nif": {
+                  "name": "National Immigration Forum",
+                  "number": "1-800-954-6287",
+                  "description": "24/7 驱逐防御热线"
+                },
+                "aclu": {
+                  "name": "ACLU",
+                  "number": "Text \"IMMIGRANT\" to 88823",
+                  "description": "了解您的权利信息"
+                },
+                "doj": {
+                  "name": "DOJ Executive Office for Immigration Review",
+                  "number": "1-800-898-7180",
+                  "description": "律师名单和听证会信息"
+                }
+              },
+              "locators": {
+                "title": "查找服务",
+                "iceDetainee": {
+                  "name": "ICE 被拘留者查找",
+                  "url": "ice.gov/detain/ice-ero/locate-detainee",
+                  "description": "查找被 ICE 拘留的人员"
+                },
+                "legalServices": {
+                  "name": "Immigration Advocates Network",
+                  "url": "immigrationadvocates.org/nonprofit/legaldirectory",
+                  "description": "查找免费和低费用的移民法律服务"
+                },
+                "consulate": {
+                  "name": "领事馆查找",
+                  "url": "state.gov/foreign-embassies",
+                  "description": "查找您所在国家在美国的领事馆"
+                }
+              },
+              "prepareTitle": "提前准备",
+              "prepare": {
+                "plan": "制定家庭紧急计划",
+                "documents": "将重要文件存放在安全的地方",
+                "attorney": "记住移民律师的联系方式",
+                "redCard": "随身携带写有您权利的移民\"红卡\"",
+                "trustee": "指定一位信任的人来做儿童照顾决定"
+              }
+            },
+            "finalCta": {
+              "title": "获取更多帮助",
+              "rights": "了解您的基本权利",
+              "local": "查找当地资源"
+            },
+            "hub": {
+              "detailedGuides": {
+                "title": "详细指南",
+                "subtitle": "关于特定移民主题的深入信息",
+                "dacaCard": {
+                  "title": "DACA 和 TPS 信息",
+                  "description": "资格要求、续期截止日期以及身份失效后怎么办"
+                },
+                "raidsCard": {
+                  "title": "工作场所搜查",
+                  "description": "ICE 执法期间您的权利，以及雇主必须做什么"
+                },
+                "familyCard": {
+                  "title": "混合身份家庭规划",
+                  "description": "紧急计划、看护人授权、文件准备"
+                },
+                "bondCard": {
+                  "title": "保释金听证会",
+                  "description": "资格、听证流程以及被拒后怎么办"
+                },
+                "attorneyCard": {
+                  "title": "寻找和验证律师",
+                  "description": "避免欺诈、验证资质、寻找免费法律帮助"
+                },
+                "findDetainedCard": {
+                  "title": "查找被拘留者",
+                  "description": "使用 ICE 被拘留者查找工具，了解 A-Number、保释金信息和设施联系方式"
+                },
+                "kyrCard": {
+                  "title": "了解您的权利资料",
+                  "description": "可打印的红卡、ICE 遭遇应对脚本、搜查令识别指南"
+                },
+                "raidsToolkitCard": {
+                  "title": "社区搜查应对工具包",
+                  "description": "安全检查清单、紧急联系卡、针对不同情况的应对指南"
+                }
+              },
+              "backButton": "返回移民中心"
+            },
+            "daca": {
+              "badge": "移民保护",
+              "title": "DACA 和 TPS 信息",
+              "subtitle": "了解童年入境暂缓遣返 (DACA) 和临时保护身份 (TPS) 计划、资格要求和续期流程。",
+              "disclaimer": "移民法经常变化。在采取行动之前，请务必在 USCIS.gov 或向移民律师确认当前要求。",
+              "dacaSection": {
+                "title": "DACA（童年入境暂缓遣返）",
+                "whatIs": "什么是 DACA？",
+                "whatIsText": "DACA 为儿童时期来到美国的个人提供临时免驱逐保护和工作许可。它不提供入籍或合法永久居留的途径。",
+                "eligibility": "基本资格要求",
+                "req1": "截至2012年6月15日未满31岁",
+                "req2": "16岁之前来到美国",
+                "req3": "自2007年6月15日以来持续居住在美国",
+                "req4": "2012年6月15日在美国境内",
+                "req5": "目前在校、已毕业或拥有 GED",
+                "req6": "无重罪、重大轻罪或3次以上轻罪",
+                "renewal": "续期时间表",
+                "renewalText": "在当前 DACA 到期前120-150天提交续期申请。处理通常需要3-6个月。"
+              },
+              "tpsSection": {
+                "title": "TPS（临时保护身份）",
+                "whatIs": "什么是 TPS？",
+                "whatIsText": "TPS 授予正在经历持续武装冲突、环境灾害或其他特殊情况的指定国家的公民。它提供临时合法身份和工作许可。",
+                "countries": "当前指定国家",
+                "countriesNote": "*名单可能会变化。请在 USCIS.gov 确认最新指定国家",
+                "benefits": "TPS 福利",
+                "benefit1": "TPS 有效期内免受驱逐",
+                "benefit2": "就业授权文件 (EAD)",
+                "benefit3": "可以申请旅行授权",
+                "reregistration": "重新注册",
+                "reregistrationText": "TPS 持有者必须在 USCIS 公布的每个重新注册期间进行重新注册。错过截止日期可能导致身份丧失。"
+              },
+              "statusLapse": {
+                "title": "如果您的身份失效了怎么办？",
+                "dontPanic": "不要慌张",
+                "dontPanicText": "身份失效并不意味着会立即被驱逐。请立即咨询移民律师，了解您的选择。",
+                "gatherDocs": "收集文件",
+                "gatherDocsText": "收集您所有的移民文件、持续居留证明以及 USCIS 的任何通信。这些对于任何补救措施都至关重要。",
+                "seekHelp": "寻求法律帮助",
+                "seekHelpText": "联系经认证的代表或移民律师。许多组织为 DACA/TPS 持有者提供免费或低费用咨询。"
+              },
+              "resources": "官方资源"
+            },
+            "raids": {
+              "badge": "工作场所权利",
+              "title": "工作场所搜查和您的权利",
+              "subtitle": "了解 ICE 工作场所执法行动期间您的权利。了解执法人员能做什么和不能做什么有助于保护您。",
+              "criticalAlert": "如果 ICE 现在在您的工作场所：",
+              "criticalAlertText": "保持冷静。您有权利。不要逃跑。不要提供虚假文件。",
+              "yourRights": {
+                "title": "工作场所搜查期间您的权利",
+                "silent": "沉默权",
+                "silentText": "您不必回答关于您出生地、移民身份或如何进入美国的问题。",
+                "refuse": "拒绝同意的权利",
+                "refuseText": "除了就业验证所需的文件外，您可以拒绝出示其他文件。",
+                "attorney": "律师权",
+                "attorneyText": "在回答任何问题之前，您可以要求与律师交谈。",
+                "basis": "知情权",
+                "basisText": "如果被拘留，您可以询问原因并要求查看逮捕令或相关文件。"
+              },
+              "whatNotToDo": {
+                "title": "不应该做什么",
+                "run": "不要逃跑或躲藏",
+                "runText": "逃跑可能被用来对您不利，并可能导致额外的指控。",
+                "falseDocs": "不要提供虚假文件",
+                "falseDocsText": "使用假文件是联邦犯罪，可能导致监禁并阻碍未来的移民救济。",
+                "lie": "不要谎报身份",
+                "lieText": "向联邦执法人员提供虚假信息是犯罪。保持沉默更好。",
+                "sign": "不要签署您不理解的文件",
+                "signText": "某些表格可能是自愿离境协议。要求有时间咨询律师。"
+              },
+              "employer": {
+                "title": "雇主的义务",
+                "mustProvide": "雇主必须提供的",
+                "must1": "只有持有司法令（非行政令）才能进入非公共区域",
+                "must2": "给员工合理时间咨询律师（如有）",
+                "must3": "如被要求审计，在3天通知期（72小时）内提供 I-9 表格",
+                "canDo": "雇主可以做的",
+                "can1": "要求查看搜查令并确认其由法官签署",
+                "can2": "在允许进入非公共区域之前联系自己的律师",
+                "can3": "记录搜查过程（执法人员姓名、警徽号码、采取的行动）",
+                "can4": "在工作场所张贴\"了解您的权利\"信息"
+              },
+              "afterRaid": {
+                "title": "工作场所搜查之后",
+                "detained": "如果您被拘留",
+                "detained1": "记住或写下您的 A-Number",
+                "detained2": "联系家人告知您的位置",
+                "detained3": "要求打电话 - 这是您的权利",
+                "detained4": "不理解的文件不要签字",
+                "detained5": "如果符合条件，要求保释金听证会",
+                "notDetained": "如果您没有被拘留",
+                "notDetained1": "记录您所目击的一切",
+                "notDetained2": "记下警徽号码和执法人员姓名",
+                "notDetained3": "咨询移民律师",
+                "notDetained4": "向社区组织报告民权侵犯行为",
+                "notDetained5": "制定家庭紧急计划"
+              },
+              "emergency": {
+                "title": "紧急联系方式",
+                "subtitle": "将这些号码保存在您的手机中",
+                "nilc": "National Immigration Law Center",
+                "aclu": "ACLU Immigrants' Rights"
+              }
+            },
+            "family": {
+              "badge": "家庭保护",
+              "title": "混合身份家庭规划",
+              "subtitle": "通过提前规划来保护您的家人。制定紧急计划、指定看护人并整理重要文件。",
+              "planningAlert": "提前规划保护您的家人。",
+              "planningAlertText": "即使什么都没有发生，有一个计划也能减轻压力，确保您的孩子得到照顾。",
+              "documents": {
+                "title": "需要准备的重要文件",
+                "poa": {
+                  "title": "委托书",
+                  "description": "如果您被拘留，指定某人代您做出法律和财务决定。",
+                  "item1": "用于财务事项的一般委托书",
+                  "item2": "持久委托书（在丧失行为能力后仍然有效）",
+                  "item3": "必须经过公证才有效"
+                },
+                "caregiver": {
+                  "title": "看护人授权书",
+                  "description": "允许信任的人照顾您的孩子并做出日常决定。",
+                  "item1": "授权入学登记",
+                  "item2": "允许同意医疗治疗",
+                  "item3": "临时性的（通常6-12个月）"
+                },
+                "guardianship": {
+                  "title": "监护人提名",
+                  "description": "如果您无法长期照顾孩子，指定您希望的监护人。",
+                  "item1": "法院会考虑但不一定遵循",
+                  "item2": "也要指定备选监护人",
+                  "item3": "应经过公证"
+                }
+              },
+              "emergencyPlan": {
+                "title": "制定家庭紧急计划",
+                "communication": {
+                  "title": "通讯计划",
+                  "step1": "记住重要电话号码",
+                  "step1Text": "让孩子记住一位信任的成年人的电话号码，以防你们分开。",
+                  "step2": "建立联系人名单",
+                  "step2Text": "列出3-5位可以在紧急情况下联系的信任的人。将此名单分享给孩子的学校。",
+                  "step3": "暗号",
+                  "step3Text": "制定一个家庭暗号，信任的成年人在接孩子时使用。"
+                },
+                "documentPrep": {
+                  "title": "文件准备",
+                  "step1": "收集出生证明",
+                  "step1Text": "备份所有家庭成员的出生证明，包括美国公民子女的。",
+                  "step2": "护照信息",
+                  "step2Text": "将所有护照（母国和美国（如适用））的副本保存在安全的地方。",
+                  "step3": "移民记录",
+                  "step3Text": "保存所有移民文件的副本，包括被拘留家庭成员的 A-Number。"
+                }
+              },
+              "financial": {
+                "title": "财务和实际考虑事项",
+                "bank": "银行账户",
+                "bankText": "将信任的人添加到您的银行账户，或开设联名账户，以便您被拘留时可以支付账单。",
+                "property": "房屋使用",
+                "propertyText": "将备用钥匙留给信任的邻居或朋友。记录家中重要物品的位置。",
+                "medical": "医疗信息",
+                "medicalText": "将孩子的药物、过敏情况和医生联系方式清单与看护人授权书放在一起。"
+              },
+              "freeHelp": "可获得的免费帮助：",
+              "freeHelpText": "许多移民援助组织提供免费的家庭紧急规划帮助。请联系您当地的法律援助组织或移民权利团体，获取帮助来准备这些文件。"
+            },
+            "bond": {
+              "badge": "拘留与释放",
+              "title": "移民保释金听证会",
+              "subtitle": "了解保释金流程、资格要求以及如何为移民法庭的保释金听证会做准备。",
+              "importantAlert": "并非所有人都有资格获得保释金。某些人必须被强制拘留。移民律师可以帮助确定资格。",
+              "whatIsBond": {
+                "title": "什么是移民保释金？",
+                "delivery": {
+                  "title": "交付保释金",
+                  "description": "允许在移民案件审理期间从拘留中释放。当事人必须出席所有听证会。",
+                  "amount": "典型金额：",
+                  "amountValue": "$1,500 - $25,000+",
+                  "setter": "由谁设定：",
+                  "setterValue": "ICE 或移民法官"
+                },
+                "voluntary": {
+                  "title": "自愿离境保释金",
+                  "description": "允许某人自费自愿离开美国。如果在截止日期前离境，保释金将退还。",
+                  "amount": "典型金额：",
+                  "amountValue": "$500 - $5,000",
+                  "benefit": "好处：",
+                  "benefitValue": "避免被驱逐令"
+                }
+              },
+              "eligibility": {
+                "title": "保释金资格",
+                "mayBeEligible": "可能有资格",
+                "eligible1": "没有严重犯罪记录的人",
+                "eligible2": "不被视为逃跑风险的人",
+                "eligible3": "与社区有紧密联系的人",
+                "eligible4": "有美国公民家庭成员的人",
+                "eligible5": "有稳定就业历史的人",
+                "mandatoryDetention": "强制拘留（不可保释）",
+                "mandatory1": "严重重罪定罪",
+                "mandatory2": "某些毒品犯罪",
+                "mandatory3": "枪支犯罪",
+                "mandatory4": "与恐怖主义相关的指控",
+                "mandatory5": "先前的驱逐令（在某些情况下）"
+              },
+              "process": {
+                "title": "保释金听证会流程",
+                "step1": "申请保释金听证会",
+                "step1Text": "您或您的律师必须向移民法官申请保释金听证会。ICE 也可能设定初始保释金金额，该金额可以被质疑。",
+                "step2": "收集证据",
+                "step2Text": "准备证明社区联系的文件：家人的信、就业证明、租约、水电费账单、税单和品格证明信。",
+                "step3": "出席听证会",
+                "step3Text": "法官将考虑您是否有逃跑风险或对社区构成威胁。有律师代理会显著改善结果。",
+                "step4": "支付保释金",
+                "step4Text": "如果获批，保释金必须通过 ICE（而非法庭）支付。家人或朋友可以代您支付。一些组织提供保释金基金。"
+              },
+              "denied": {
+                "title": "如果保释金被拒",
+                "options": "您还有其他选择",
+                "option1": "向移民上诉委员会 (BIA) 提出上诉",
+                "option2": "如果情况发生变化，申请重新考虑",
+                "option3": "向联邦法院提交人身保护令申请",
+                "timeline": "时间线",
+                "time1": "BIA 上诉必须在30天内提交",
+                "time2": "BIA 裁决可能需要数月",
+                "time3": "请立即咨询律师"
+              },
+              "resources": {
+                "title": "保释金基金资源",
+                "subtitle": "付不起保释金？这些组织也许可以帮助您：",
+                "bailFund": "National Bail Fund Network",
+                "bailFundText": "帮助家庭支付移民保释金的地方保释金基金目录。",
+                "raices": "RAICES Bond Fund",
+                "raicesText": "为在德克萨斯州及其他地区被拘留的移民提供保释金援助。"
+              }
+            },
+            "attorney": {
+              "badge": "法律代理",
+              "title": "寻找和验证移民律师",
+              "subtitle": "如何找到合法的移民法律帮助并保护自己免受欺诈。",
+              "scamWarning": "小心 Notario 欺诈！",
+              "scamWarningText": "在美国，\"notarios\" 没有资格提供法律建议。只有持牌律师和 DOJ 认证的代表才能在移民法庭代表您。",
+              "whoCanHelp": {
+                "title": "谁可以合法帮助处理移民案件？",
+                "attorneys": {
+                  "title": "持牌律师",
+                  "description": "获得任何美国州律师执照的律师都可以在移民事务中代表您，即使他们是在另一个州获得执照的。",
+                  "item1": "可以在法庭上代表您",
+                  "item2": "可以向 USCIS 提交申请",
+                  "item3": "受职业道德规则和纪律约束"
+                },
+                "accredited": {
+                  "title": "DOJ 认证代表",
+                  "description": "经过培训并获得司法部授权代表移民的非律师。他们在认可的组织中工作。",
+                  "item1": "通常提供免费或低费用服务",
+                  "item2": "可以在移民法庭代表您",
+                  "item3": "在非营利组织工作"
+                }
+              },
+              "verify": {
+                "title": "如何验证移民律师",
+                "stateBar": {
+                  "title": "查询州律师协会",
+                  "description": "每个州都有律师协会网站，您可以在那里验证律师是否持有执照且信誉良好。",
+                  "link": "ABA Bar Directory"
+                },
+                "eoir": {
+                  "title": "EOIR 认可名单",
+                  "description": "DOJ 维护着一份获授权提供移民服务的认可组织和认证代表名单。",
+                  "link": "EOIR Roster"
+                },
+                "aila": {
+                  "title": "AILA 律师搜索",
+                  "description": "美国移民律师协会 (AILA) 有一个专门从事移民法的会员律师目录。",
+                  "link": "AILA Lawyer Search"
+                }
+              },
+              "redFlags": {
+                "title": "危险信号：移民欺诈的迹象",
+                "warnings": {
+                  "title": "警告信号",
+                  "item1": "保证特定结果或批准",
+                  "item2": "声称与 USCIS 或法官有特殊关系",
+                  "item3": "要求您签署空白表格",
+                  "item4": "不提供书面合同",
+                  "item5": "鼓励您在申请中撒谎",
+                  "item6": "扣留您的原始文件",
+                  "item7": "使用 \"notario\" 或 \"移民顾问\" 的头衔"
+                },
+                "legitimate": {
+                  "title": "合法律师的特征",
+                  "item1": "提供书面收费协议",
+                  "item2": "诚实地解释风险和可能的结果",
+                  "item3": "给您所有提交文件的副本",
+                  "item4": "归还您的原始文件",
+                  "item5": "回复您的问题和电话",
+                  "item6": "可以通过州律师协会或 EOIR 验证",
+                  "item7": "让您自己审查和签署表格"
+                }
+              },
+              "freeHelp": {
+                "title": "免费和低费用法律帮助",
+                "organizations": "法律援助组织",
+                "org1": "Catholic Charities 移民服务",
+                "org2": "CLINIC (Catholic Legal Immigration Network)",
+                "org3": "当地法律援助协会",
+                "org4": "法学院移民诊所",
+                "findingHelp": "寻找帮助",
+                "find1": "搜索 ImmigrationAdvocates.org",
+                "find2": "联系您当地的律师协会",
+                "find3": "咨询社区组织"
+              },
+              "reportFraud": {
+                "title": "举报移民欺诈",
+                "subtitle": "如果您是移民欺诈的受害者，请举报：",
+                "ftc": "FTC Complaint",
+                "eoir": "EOIR Complaint"
+              }
+            }
+          },
+          "courtRecords": {
+            "hero": {
+              "title": "法庭记录搜索",
+              "subtitle": "从 RECAP Archive 和判例法数据库中搜索免费的法庭记录"
+            },
+            "freeFirstAlert": {
+              "title": "免费优先政策：",
+              "text1": "我们首先搜索免费的 RECAP Archive。如果文件无法免费获取，我们会告诉您在 PACER（收费）上哪里可以找到。安装",
+              "linkText": "RECAP 浏览器扩展",
+              "text2": "可以将您的 PACER 购买内容自动保存到免费档案中。"
+            },
+            "searchParams": {
+              "title": "搜索条件",
+              "description": "请至少输入一个搜索条件",
+              "searchTerm": "搜索词",
+              "searchTermPlaceholder": "关键词、当事人名称...",
+              "caseName": "案件名称",
+              "caseNamePlaceholder": "Smith v. Jones",
+              "docketNumber": "案卷编号",
+              "docketNumberPlaceholder": "1:20-cv-12345",
+              "searchButton": "搜索法庭记录"
+            },
+            "results": {
+              "title": "搜索结果",
+              "totalResults": "{{count}} 条结果",
+              "noResults": "未找到结果",
+              "searchFailed": "搜索失败。请重试或调整搜索条件。",
+              "recapSection": "RECAP Archive - 联邦法庭文件 ({{count}})",
+              "opinionsSection": "判例法意见 ({{count}})",
+              "filed": "提交日期：{{date}}",
+              "decided": "裁决日期：{{date}}",
+              "free": "免费",
+              "viewOnPacer": "在 PACER 上查看",
+              "viewOpinion": "查看意见书",
+              "downloadFree": "免费下载 PDF",
+              "natureOfSuit": "诉讼性质：",
+              "assignedTo": "指派给：",
+              "referredTo": "转交给：",
+              "dateTerminated": "结案日期：",
+              "citedBy": "被 {{count}} 个案件引用",
+              "citations": "引用：",
+              "status": "状态：",
+              "precedentialStatus": "法院判决类型："
+            },
+            "partialFailure": {
+              "title": "部分搜索失败：",
+              "text": "某些搜索服务暂时不可用。",
+              "recapFailed": "RECAP 案卷搜索失败。",
+              "opinionsFailed": "判例法意见搜索失败。",
+              "incomplete": "显示的结果可能不完整。"
+            }
+          },
+          "legalGlossary": {
+            "hero": {
+              "title": "法律术语表",
+              "subtitle": "了解法律术语和概念，帮助您理解刑事司法系统"
+            },
+            "navigation": {
+              "backToHome": "返回首页",
+              "termsCount": "{{total}} 个术语中的第 {{count}} 个"
+            },
+            "search": {
+              "placeholder": "搜索法律术语、定义或关键词...",
+              "browseByLetter": "按字母浏览：",
+              "filterByCategory": "按类别筛选：",
+              "clearFilters": "清除所有筛选"
+            },
+            "terms": {
+              "title": "法律术语和定义",
+              "relatedTerms": "相关术语：",
+              "commonUsage": "常见用法：",
+              "examples": "示例：",
+              "legalContext": "法律语境：",
+              "aliases": "又称：",
+              "categories": "类别："
+            }
+          },
+          "process": {
+            "hero": {
+              "title": "刑事司法流程时间线",
+              "subtitle": "逮捕、首次出庭、审判和量刑的详细步骤指南"
+            },
+            "crossLinks": {
+              "timeline": "互动指南 — 选择您的阶段查看权利和建议",
+              "quickRef": "可打印的卡片，列出每个阶段的权利"
+            },
+            "alert": {
+              "important": "重要提示：",
+              "text": "具体的时间和步骤在每个州和不同案件中可能有所不同。请务必咨询真正的律师来获取针对您具体情况的帮助。"
+            },
+            "steps": {
+              "yourRights": "您在此阶段的权利：",
+              "whatToExpect": "需要了解的内容：",
+              "step1": {
+                "title": "逮捕",
+                "description": "执法人员根据合理理由或逮捕令将您拘留。",
+                "timeframe": "即时",
+                "rights": [
+                  "沉默权",
+                  "律师权",
+                  "打电话的权利",
+                  "被告知指控的权利"
+                ]
+              },
+              "step2": {
+                "title": "登记入册",
+                "description": "在警察局进行处理，包括指纹采集、拍照和个人信息登记。",
+                "timeframe": "1-3小时",
+                "rights": [
+                  "有需要时获得医疗救助的权利",
+                  "联系律师或家人的权利",
+                  "获得人道对待的权利"
+                ]
+              },
+              "step3": {
+                "title": "首次出庭",
+                "description": "第一次出庭，正式宣读指控并由您做出答辩。",
+                "timeframe": "24-72小时",
+                "rights": [
+                  "被告知指控的权利",
+                  "律师在场的权利",
+                  "要求公设辩护人的权利",
+                  "获得合理保释的权利"
+                ]
+              },
+              "step4": {
+                "title": "初步听证",
+                "description": "法庭确定是否有合理理由认为您犯了罪。",
+                "timeframe": "1-2周",
+                "rights": [
+                  "质疑证据的权利",
+                  "盘问证人的权利",
+                  "律师代理的权利"
+                ]
+              },
+              "step5": {
+                "title": "证据开示",
+                "description": "双方交换证据、证人名单和其他案件信息。",
+                "timeframe": "数周到数月",
+                "rights": [
+                  "查看控方证据的权利",
+                  "提出辩护证据的权利",
+                  "聘请专家证人的权利"
+                ]
+              },
+              "step6": {
+                "title": "审判",
+                "description": "在法官或陪审团面前正式出示证据，以确定有罪或无罪。",
+                "timeframe": "视情况而定",
+                "rights": [
+                  "陪审团审判的权利",
+                  "与证人对质的权利",
+                  "沉默权",
+                  "提出辩护的权利"
+                ]
+              },
+              "step7": {
+                "title": "量刑",
+                "description": "如果被定罪，法庭决定适当的处罚。",
+                "timeframe": "审判后2-6周",
+                "rights": [
+                  "在量刑时发言的权利",
+                  "上诉权",
+                  "获得公正和适当处罚的权利"
+                ]
+              }
+            },
+            "additionalInfo": {
+              "title": "重要说明",
+              "pleaBargains": {
+                "title": "认罪协议",
+                "text": "大多数刑事案件（约90-95%）通过认罪协议而非审判来解决。这通常发生在证据开示阶段，检察官和辩护律师就减少指控或量刑进行谈判，以换取认罪。"
+              },
+              "speedyTrial": {
+                "title": "快速审判权",
+                "text": "法律保障您获得快速审判的权利。联邦案件通常必须在被起诉或首次出庭后70天内开庭。各州规定不同，通常为60到180天。"
+              },
+              "publicDefender": {
+                "title": "获得公设辩护人",
+                "text": "如果您请不起律师，您有合法权利获得一位。公设辩护人在您第一次出庭时被指派。您可能需要填写一份表格来证明您无力负担律师费。"
+              },
+              "bondBail": {
+                "title": "保释金",
+                "text": "保释金是向法院支付的金额，以确保您会回来出庭。如果您付不起保释金，您可能需要留在拘留所或申请保释听证会。一些司法管辖区为低风险被告提供具结释放（ROR）。"
+              }
+            },
+            "guides": {
+              "title": "了解关键法律程序",
+              "subtitle": "了解您在案件中可能面临的重要决定。点击每个部分展开了解更多。",
+              "bail": {
+                "title": "现金保释",
+                "intro": "保释金是法院持有的金额，用来确保您会回来出庭。以下是作为被告您需要知道的信息。",
+                "whatIs": {
+                  "title": "什么是保释金？",
+                  "description": "保释金是在等待案件结案期间从监狱释放的一种方式。您支付金额（或由他人代付），法院持有该金额直到案件结束。",
+                  "points": [
+                    "保释金不是罚款或处罚 - 它就像一笔押金",
+                    "如果您每次出庭都到场，您可以拿回这笔钱（扣除手续费）",
+                    "目的是确保您在审判前不会逃跑"
+                  ]
+                },
+                "howSet": {
+                  "title": "保释金金额如何确定",
+                  "description": "法官根据以下几个因素决定您的保释金金额：",
+                  "factors": [
+                    "指控的严重程度",
+                    "您的犯罪记录（如有）",
+                    "您是否与社区有紧密联系（工作、家庭、住所）",
+                    "您是否被视为逃跑风险",
+                    "您的支付能力",
+                    "公共安全考虑"
+                  ]
+                },
+                "options": {
+                  "title": "您的保释选项",
+                  "types": [
+                    {
+                      "name": "现金保释",
+                      "description": "您向法院支付全部保释金额。案件结束后如果您每次都到庭，您可以拿回全部金额。"
+                    },
+                    {
+                      "name": "保释担保（通过保释担保人）",
+                      "description": "您向保释担保人支付保释金额的约10-15%。他们支付全部保释金。您的付款不退还 - 那是他们的费用。"
+                    },
+                    {
+                      "name": "财产保释",
+                      "description": "您用财产（如房屋）作为抵押代替现金。如果您不出庭，法院可以没收该财产。"
+                    },
+                    {
+                      "name": "具结释放 (ROR)",
+                      "description": "仅凭承诺回来出庭就可被释放 - 无需支付金额。这适用于低风险且与社区有紧密联系的被告。"
+                    }
+                  ]
+                },
+                "cantAfford": {
+                  "title": "如果付不起保释金怎么办？",
+                  "description": "不要失去希望。您可以采取以下步骤：",
+                  "options": [
+                    "让您的律师申请降低保释金的听证会",
+                    "收集社区联系的证据（工作证明信、家庭支持、租约）",
+                    "了解保释金基金 - 帮助支付保释金的非营利组织",
+                    "询问家人或朋友是否可以帮助支付保释担保",
+                    "在某些地区，有审前服务项目作为替代方案"
+                  ]
+                },
+                "conditions": {
+                  "title": "释放条件",
+                  "description": "即使您缴纳了保释金，法官也可能设定您在外期间必须遵守的规则：",
+                  "examples": [
+                    "定期向审前官员报到",
+                    "留在本地区（未经许可不得外出）",
+                    "避免与某些人接触（如证人或受害者）",
+                    "禁止饮酒或吸毒，可能需要接受检测",
+                    "佩戴电子脚镣",
+                    "保持或找到工作",
+                    "遵守宵禁"
+                  ]
+                },
+                "missCourt": {
+                  "title": "如果您错过出庭会怎样？",
+                  "description": "缺席出庭是很严重的事。以下是可能发生的后果：",
+                  "consequences": [
+                    "法院将发出逮捕令",
+                    "您将失去保释金（或保释担保人会来找您）",
+                    "您可能面临因未到庭而被追加的刑事指控",
+                    "再次获得保释会变得更加困难",
+                    "法官在审理您的案件时可能认为您不可信赖"
+                  ]
+                }
+              },
+              "plea": {
+                "title": "认罪协议",
+                "intro": "大约90-95%的刑事案件通过认罪协议解决。了解这个过程有助于您做出明智的决定。",
+                "whatIs": {
+                  "title": "什么是认罪协议？",
+                  "description": "认罪协议是您（被告）和检察官之间的协议。您同意对某项指控认罪，作为交换，您可以获得一些好处 - 通常是较轻的判决或更少的指控。",
+                  "points": [
+                    "这是一种谈判 - 您的律师代表您进行协商",
+                    "法官必须批准这个协议",
+                    "接受后，您就放弃了审判的权利",
+                    "一旦接受，很难撤回"
+                  ]
+                },
+                "types": {
+                  "title": "认罪协议的类型",
+                  "deals": [
+                    {
+                      "name": "指控协商",
+                      "description": "您对较轻的指控认罪。例如，重罪可能被降为轻罪。"
+                    },
+                    {
+                      "name": "刑期协商",
+                      "description": "您对原始指控认罪，但检察官向法官建议较轻的判决。"
+                    },
+                    {
+                      "name": "罪名数量协商",
+                      "description": "如果您面临多项指控，部分指控会被撤销以换取您对其他指控认罪。"
+                    },
+                    {
+                      "name": "事实协商",
+                      "description": "某些事实从案件中省略，这可能影响量刑（较不常见）。"
+                    }
+                  ]
+                },
+                "rights": {
+                  "title": "认罪谈判中的权利",
+                  "description": "请记住，您在这个过程中有重要的权利：",
+                  "list": [
+                    "您始终可以拒绝任何认罪协议 - 没人能强迫您接受",
+                    "您有权选择去审判",
+                    "在认罪之前必须被告知移民后果（如适用）",
+                    "您可以要求时间来考虑提议",
+                    "做决定之前应该咨询律师"
+                  ]
+                },
+                "questions": {
+                  "title": "接受前应该问的问题",
+                  "description": "在同意任何认罪协议之前，确保您理解：",
+                  "list": [
+                    "我到底要对什么认罪？",
+                    "我可能面临的最高刑罚是什么？",
+                    "检察官建议的刑期是什么？",
+                    "法官是否必须遵循这个建议？",
+                    "我会有犯罪记录吗？能否被消除？",
+                    "这会如何影响我的移民身份（如适用）？",
+                    "我还能拥有枪支吗？",
+                    "我是否需要登记为性犯罪者（如适用）？",
+                    "如果我违反缓刑会怎样？"
+                  ]
+                },
+                "collateral": {
+                  "title": "附带后果",
+                  "description": "认罪可能会在判决之外影响您的生活。这些被称为「附带后果」：",
+                  "consequences": [
+                    "移民：可能导致驱逐、拒绝入籍或签证问题",
+                    "就业：某些工作需要背景调查；某些职业可能不允许从事",
+                    "住房：公共住房和某些房东可能拒绝您",
+                    "教育：可能影响助学金或学校录取",
+                    "投票权：在某些州，重罪犯失去投票权",
+                    "枪支权利：重罪和某些轻罪会阻止拥有枪支",
+                    "专业执照：某些定罪会阻止成为护士、教师等",
+                    "子女监护权：可能在家事法庭裁决中被考虑"
+                  ]
+                },
+                "decide": {
+                  "title": "接受协议还是去审判？",
+                  "description": "这是您案件中最重要的决定之一。以下是需要考虑的因素：",
+                  "acceptTitle": "考虑接受如果：",
+                  "acceptReasons": [
+                    "对您不利的证据很强",
+                    "该协议大幅减少了您可能面临的刑罚",
+                    "去审判可能导致更严重的后果",
+                    "该协议让您避免某些有严重附带后果的指控",
+                    "您的律师强烈建议接受"
+                  ],
+                  "trialTitle": "考虑去审判如果：",
+                  "trialReasons": [
+                    "您确实是无辜的",
+                    "对您不利的证据很弱",
+                    "您的宪法权利被侵犯了（非法搜查、被迫供述）",
+                    "认罪协议并不比审判结果好多少",
+                    "您愿意为争取无罪的机会承担风险"
+                  ]
+                }
+              }
+            },
+            "legalDisclaimer": {
+              "title": "法律免责声明：",
+              "text": "本信息仅供教育目的，不构成法律建议。各州和联邦管辖区的法律和程序各有不同。请务必咨询合格的律师以获取针对您具体情况的建议。"
+            }
+          },
+          "caseTimeline": {
+            "title": "案件时间线",
+            "subtitle": "从头到尾跟踪刑事案件的各个阶段。选择您当前的阶段，了解会发生什么以及您的权利。",
+            "selectStage": "选择一个阶段，了解会发生什么以及您有什么权利",
+            "yourRights": "您的权利",
+            "whatToKnow": "须知事项",
+            "viewQuickRef": "速查卡片",
+            "disclaimer": {
+              "title": "重要提示：",
+              "text": "每个案件都不一样。这里展示的阶段是典型刑事案件的一般指南。您的案件可能有更多或更少的步骤。请务必就您的具体情况咨询您的律师。"
+            },
+            "stages": {
+              "arrest": {
+                "title": "逮捕",
+                "timeframe": "几分钟到几小时",
+                "description": "逮捕是指警方将您拘留。您可能会被戴上手铐并带到警察局。这可以在有或没有逮捕令的情况下发生。警察必须有合理理由相信您犯了罪。",
+                "rights": [
+                  "您有权保持沉默",
+                  "您有权聘请律师",
+                  "您不必同意搜查",
+                  "您有权知道为什么被逮捕"
+                ],
+                "tips": [
+                  "保持冷静，不要反抗，即使您觉得逮捕不公平",
+                  "明确说出：'我行使我的沉默权'",
+                  "说：'我要找律师'——然后停止说话",
+                  "记住警察的警徽号码和巡逻车号码",
+                  "没有律师在场，不要签署任何文件"
+                ]
+              },
+              "booking": {
+                "title": "入案登记",
+                "timeframe": "1-4小时",
+                "description": "逮捕后，您会被带到看守所或警察局进行入案登记。这是记录您信息的行政程序。您的个人物品会被收走保管。",
+                "rights": [
+                  "您仍然有权保持沉默",
+                  "您有权打电话（通常在几小时内）",
+                  "如果需要，您可以要求医疗救治",
+                  "您被释放时，您的物品必须归还给您"
+                ],
+                "tips": [
+                  "您会被按指纹和拍照",
+                  "利用您的电话机会联系律师或家人",
+                  "不要在拘留区与任何人讨论您的案件",
+                  "对登记人员保持礼貌——这不会影响您的案件",
+                  "询问什么时候能见到法官"
+                ]
+              },
+              "firstAppearance": {
+                "title": "首次出庭",
+                "timeframe": "逮捕后24-72小时",
+                "description": "您第一次出现在法官面前。正式宣读指控，法官决定保释事宜。如果您请不起律师，您可以在这个阶段申请公设辩护人。",
+                "rights": [
+                  "有权被告知指控内容",
+                  "有权聘请律师（如果请不起可以申请公设辩护人）",
+                  "有权要求合理的保释金",
+                  "有权做无罪答辩"
+                ],
+                "tips": [
+                  "在这个阶段几乎总是应该做'无罪'答辩",
+                  "如果您请不起律师，就申请公设辩护人",
+                  "穿着得体，称呼法官为'法官大人'",
+                  "不要在公开法庭上讨论案件事实",
+                  "带上您与社区联系的相关信息，用于保释辩论"
+                ]
+              },
+              "pretrial": {
+                "title": "审前阶段",
+                "timeframe": "数周到数月",
+                "description": "从首次出庭到审判之间的时期。您的律师审查证据、提交动议，并可能与检察官协商。认罪协商通常在这个阶段进行。",
+                "rights": [
+                  "有权查看检方掌握的所有证据（证据开示）",
+                  "有权获得快速审判",
+                  "有权让律师代您提交动议",
+                  "有权拒绝任何认罪协议"
+                ],
+                "tips": [
+                  "与您的律师保持密切联系",
+                  "每次开庭日期都要到场——缺席会导致法院签发逮捕令",
+                  "仔细遵守所有保释条件",
+                  "不要在社交媒体上发布与案件有关的内容",
+                  "大约90-95%的案件通过认罪协商解决"
+                ]
+              },
+              "discovery": {
+                "title": "证据开示",
+                "timeframe": "审前阶段的一部分",
+                "description": "双方交换证据。检方必须将所有证据与您的辩护律师共享，包括任何可能有助于证明您无罪的证据（这叫做Brady规则）。",
+                "rights": [
+                  "有权查看所有不利于您的证据",
+                  "有权获得可能证明您无罪的证据（Brady材料）",
+                  "有权通过动议对证据提出质疑",
+                  "有权让律师审查所有证据开示材料"
+                ],
+                "tips": [
+                  "与律师分享所有信息——律师-客户保密特权保护您",
+                  "帮助律师找到可能的证人",
+                  "收集任何支持您案件的文件、短信或记录",
+                  "您的律师可能会提交动议，排除非法获取的证据",
+                  "记下您对事件的所有记忆"
+                ]
+              },
+              "trial": {
+                "title": "审判",
+                "timeframe": "数天到数周",
+                "description": "如果您的案件进入审判，双方在法官或陪审团面前陈述案情。检方必须排除合理怀疑地证明您有罪。您有权作证或保持沉默。",
+                "rights": [
+                  "有权接受陪审团审判（适用于大多数刑事案件）",
+                  "有权与证人对质和交叉询问",
+                  "有权提出自己的证据和证人",
+                  "有权作证或保持沉默（不能因此对您不利）",
+                  "在被证明有罪之前推定无罪"
+                ],
+                "tips": [
+                  "信任律师的策略——他们了解流程",
+                  "穿着正式，在法庭上保持礼貌",
+                  "不要对证词或证据做出情绪化反应",
+                  "由律师决定您是否应该作证",
+                  "举证责任在检方，不在您"
+                ]
+              },
+              "sentencing": {
+                "title": "量刑",
+                "timeframe": "判决后立即或数周后",
+                "description": "如果被判有罪，法官会根据量刑指南、犯罪严重程度、犯罪记录和其他因素来决定您的处罚。您有权在量刑前发言。",
+                "rights": [
+                  "有权在量刑时发言（最后陈述权）",
+                  "有权让律师提出从轻情节",
+                  "有权对定罪或刑期提起上诉",
+                  "有权获得公正、适当的处罚（第八修正案）"
+                ],
+                "tips": [
+                  "表现出真诚的悔过——法官会注意到",
+                  "强调改过自新的步骤（心理咨询、就业、教育）",
+                  "让家人或社区成员写支持信",
+                  "询问律师是否有替代刑罚选项（缓刑、社区服务）",
+                  "了解您的上诉权利——有截止日期"
+                ]
+              }
+            }
+          },
+          "quickRef": {
+            "title": "速查卡片",
+            "subtitle": "简洁、可打印的权利指南，涵盖每个阶段。保存到手机或打印出来。",
+            "printAll": "打印所有卡片",
+            "tabs": {
+              "police": "警察盘问",
+              "court": "法庭阶段",
+              "all": "所有卡片"
+            },
+            "disclaimer": {
+              "title": "重要提示：",
+              "text": "这些卡片提供关于您权利的一般信息。各州法律和具体情况有所不同。这不是法律建议。请务必就您的具体案件咨询律师。"
+            },
+            "police": {
+              "title": "如果您被警察拦下",
+              "stay": "保持冷静并记住",
+              "stay1": "您有权保持沉默。说：\"我行使我的沉默权。\"",
+              "stay2": "您有权拒绝搜查。说：\"我不同意搜查。\"",
+              "stay3": "问：\"我可以离开吗？\"如果可以，冷静地走开。",
+              "stay4": "您有权聘请律师。说：\"我要找律师。\"",
+              "doHeading": "应该做的",
+              "do1": "始终让双手保持在可见位置",
+              "do2": "如果被要求，提供您的姓名和身份证件",
+              "do3": "保持冷静，说话清楚",
+              "do4": "记住警察的警徽号码和巡逻车号码",
+              "do5": "事后立即写下所有经过",
+              "dontHeading": "不应该做的",
+              "dont1": "不要抗拒逮捕，即使您认为不公平",
+              "dont2": "不要逃跑、争论或做突然的动作",
+              "dont3": "不要同意搜查您的人身、车辆或住所",
+              "dont4": "没有律师在场不要回答问题",
+              "dont5": "没有阅读并咨询律师，不要签署任何文件",
+              "ifArrested": "如果您被逮捕",
+              "arrested1": "明确说出：\"我要找律师\"——然后停止说话",
+              "arrested2": "您至少有一次打电话的机会——用来联系律师或家人",
+              "arrested3": "除了律师以外，不要与任何人讨论您的案件",
+              "arrested4": "您必须在48-72小时内被带到法官面前"
+            },
+            "arraignment": {
+              "title": "传讯",
+              "expect": "会发生什么",
+              "expect1": "法官宣读对您的指控",
+              "expect2": "您做出答辩：有罪、无罪或不争辩",
+              "expect3": "可能会设定或调整保释金额",
+              "expect4": "如果需要，您的律师可以申请公设辩护人",
+              "say": "应该说什么",
+              "say1": "\"无罪\"——这几乎总是最好的初始答辩",
+              "say2": "\"我想申请法庭指定的律师\"——如果您请不起律师",
+              "say3": "\"是的，法官大人\" / \"不是，法官大人\"——称呼法官时使用",
+              "dontSay": "不应该说什么",
+              "dontSay1": "不要在公开法庭上讨论案件事实",
+              "dontSay2": "没有先和律师谈过，不要做有罪答辩",
+              "dontSay3": "不要与法官或检察官争论",
+              "rights": "您的权利",
+              "right1": "有权聘请律师（请不起可以免费获得）",
+              "right2": "有权知道对您的指控",
+              "right3": "有权获得合理的保释",
+              "right4": "有权获得快速审判"
+            },
+            "bail": {
+              "title": "保释听证",
+              "expect": "会发生什么",
+              "expect1": "法官决定是否准予保释以及金额",
+              "expect2": "考虑因素：指控严重程度、逃跑风险、社区联系、犯罪记录",
+              "expect3": "您或您的律师可以争取降低保释金或释放",
+              "expect4": "可能会设定释放条件（宵禁、禁止接触令等）",
+              "say": "应该说什么",
+              "say1": "强调社区联系：家庭、工作、居住时间",
+              "say2": "表示您会遵守所有出庭日期",
+              "say3": "如果保释金太高，提出替代方案（电子脚环、定期报到）",
+              "dontSay": "不应该说什么",
+              "dontSay1": "不要讨论案件细节",
+              "dontSay2": "不要做出无法兑现的承诺",
+              "dontSay3": "不要对法庭表现出沮丧或愤怒",
+              "rights": "您的权利",
+              "right1": "有权获得合理的保释（第八修正案）",
+              "right2": "有权参加保释听证",
+              "right3": "有权对保释决定提出上诉"
+            },
+            "pretrial": {
+              "title": "审前 / 证据开示",
+              "expect": "会发生什么",
+              "expect1": "双方交换证据（证据开示程序）",
+              "expect2": "您的律师可能会提交动议，要求排除证据或撤销指控",
+              "expect3": "认罪协商通常在这个阶段进行",
+              "expect4": "这个阶段可能持续数周到数月",
+              "say": "应该怎么做",
+              "do1": "与律师保持密切联系",
+              "do2": "每次开庭都要到场——缺席可能导致法院签发逮捕令",
+              "do3": "严格遵守所有保释条件",
+              "do4": "收集任何有助于案件的证据或证人",
+              "dontSay": "不应该做的",
+              "dont1": "不要在社交媒体上或与他人讨论您的案件",
+              "dont2": "不要直接联系证人或受害者",
+              "dont3": "不要在没有完全了解后果的情况下接受认罪协议",
+              "rights": "您的权利",
+              "right1": "有权查看所有不利于您的证据（Brady规则）",
+              "right2": "有权获得快速审判",
+              "right3": "有权提出自己的证据和证人"
+            },
+            "plea": {
+              "title": "认罪听证",
+              "expect": "会发生什么",
+              "expect1": "法官询问您是否理解认罪及其后果",
+              "expect2": "您必须确认认罪是自愿的，不是被强迫的",
+              "expect3": "法官说明可能的最高刑期",
+              "expect4": "量刑可能立即进行或安排在以后",
+              "say": "应该说什么",
+              "say1": "\"是的，我理解\"——当法官解释认罪条款时",
+              "say2": "\"是的，这是我自愿的决定\"——确认您没有被强迫",
+              "say3": "让律师解释您不理解的任何内容",
+              "dontSay": "不应该说什么",
+              "dontSay1": "在做有罪答辩时不要说\"我没有做\"——法官可能会驳回认罪",
+              "dontSay2": "如果您不了解附带后果（移民、住房、就业），不要同意认罪",
+              "dontSay3": "不要着急——您可以要求更多时间来决定",
+              "rights": "您的权利",
+              "right1": "在某些情况下有权撤回有罪答辩",
+              "right2": "在认罪前有权知道全部后果",
+              "right3": "有权拒绝任何认罪协议并选择审判"
+            },
+            "sentencing": {
+              "title": "量刑",
+              "expect": "会发生什么",
+              "expect1": "法官考虑量刑指南、受害者影响陈述和您的背景",
+              "expect2": "您的律师可以提出从轻情节（初犯、就业、家庭责任）",
+              "expect3": "可能的结果：罚款、缓刑、社区服务、监禁或组合处罚",
+              "expect4": "您可能有机会向法庭陈述",
+              "say": "应该说什么",
+              "say1": "如果被判有罪，表达真诚的悔意",
+              "say2": "提到您采取的改过步骤（心理咨询、课程、就业）",
+              "say3": "描述您的责任（子女、家庭、社区）",
+              "dontSay": "不应该说什么",
+              "dontSay1": "不要指责受害者或淡化犯罪行为",
+              "dontSay2": "不要与法官的提问争论",
+              "dontSay3": "不要找借口——在适当的时候承担责任",
+              "rights": "您的权利",
+              "right1": "有权在量刑时发言（最后陈述权）",
+              "right2": "有权对刑期提出上诉",
+              "right3": "有权获得公正、适当的处罚（第八修正案）",
+              "right4": "有权让律师在场"
+            }
+          },
+          "diversionPrograms": {
+            "hero": {
+              "title": "转处计划",
+              "subtitle": "寻找替代方案，避免定罪并获得所需帮助"
+            },
+            "navigation": {
+              "backToHome": "返回首页",
+              "programsCount": "{{total}} 个计划中的 {{count}} 个"
+            },
+            "search": {
+              "placeholder": "输入您的邮编、县或城市...",
+              "filterByState": "按州筛选：",
+              "allStates": "所有州",
+              "federalPrograms": "联邦计划",
+              "filterByProgramType": "按计划类型筛选：",
+              "allProgramTypes": "所有计划类型",
+              "clearAllFilters": "清除所有筛选条件"
+            },
+            "infoBanner": {
+              "title": "什么是转处计划？",
+              "description": "转处计划允许符合条件的被告通过完成治疗、社区服务或其他要求来避免传统起诉。成功完成后通常会撤销指控或减轻处罚。"
+            },
+            "programCard": {
+              "location": "地点",
+              "county": "县",
+              "moreLocations": "+{{count}} 个更多地点",
+              "programTypes": "计划类型",
+              "eligibility": "资格条件",
+              "contactInformation": "联系信息",
+              "visitWebsite": "访问网站"
+            },
+            "emptyState": {
+              "title": "未找到计划",
+              "description": "请尝试调整您的搜索位置或筛选条件，以查找您所在地区的计划。",
+              "clearFilters": "清除筛选条件"
+            },
+            "quickNav": {
+              "legalGuidanceTitle": "需要法律指导？",
+              "legalGuidanceDesc": "获取针对您的具体指控和情况的个性化法律建议。",
+              "legalGuidanceButton": "获取法律指导",
+              "recordClearingTitle": "了解消除记录",
+              "recordClearingDesc": "检查您是否有资格消除或封存犯罪记录。",
+              "recordClearingButton": "检查资格"
+            }
+          },
+          "recordExpungement": {
+            "hero": {
+              "title": "犯罪记录消除",
+              "subtitle": "检查您是否有资格清除犯罪记录，获得全新开始"
+            },
+            "navigation": {
+              "backToHome": "返回首页"
+            },
+            "infoBanner": {
+              "title": "什么是犯罪记录消除？",
+              "description": "犯罪记录消除是将犯罪记录从公开查询中删除或封存，帮助您不再因过去的定罪影响就业、住房或其他机会而继续前行。",
+              "stateNote": "每个州有不同的规定、等待期和资格要求。"
+            },
+            "eligibilityForm": {
+              "title": "检查您的资格",
+              "stateQuestion": "您的定罪是在哪个州？",
+              "statePlaceholder": "选择您所在的州...",
+              "federalCourt": "联邦法院",
+              "offenseTypeQuestion": "犯罪类型是什么？",
+              "misdemeanor": "轻罪",
+              "felony": "重罪",
+              "completionDateQuestion": "您何时完成了刑期/缓刑？",
+              "offenseCategoryQuestion": "犯罪类别是什么？（如持有毒品、酒驾、盗窃、人身伤害）",
+              "offenseCategoryPlaceholder": "如持有毒品、盗窃、酒驾、人身伤害",
+              "multipleConvictions": "我有多次定罪记录",
+              "checkEligibility": "检查资格",
+              "reset": "重置"
+            },
+            "eligibilityResult": {
+              "likelyEligible": "很可能符合资格",
+              "possiblyEligible": "可能符合资格",
+              "unlikelyEligible": "不太可能符合资格",
+              "nextSteps": "下一步",
+              "stateInfo": "{{state}} 犯罪记录消除信息",
+              "overview": "概述",
+              "commonExclusions": "常见排除情况",
+              "moreExclusions": "+{{count}} 个更多",
+              "legalSources": "法律来源",
+              "disclaimerTitle": "重要提示：",
+              "disclaimerText": "这只是初步评估。资格取决于许多因素，包括具体情况、当地规定和法官裁量权。请咨询合格律师，获取关于您情况的明确法律建议。"
+            },
+            "quickNav": {
+              "legalHelpTitle": "需要法律帮助？",
+              "legalHelpDesc": "获取针对您具体情况的个性化法律指导。",
+              "legalHelpButton": "获取法律指导",
+              "diversionProgramsTitle": "查找转处计划",
+              "diversionProgramsDesc": "探索可能帮助避免定罪的替代方案。",
+              "diversionProgramsButton": "探索选项"
+            }
+          },
+          "friendsFamily": {
+            "hero": {
+              "title": "帮助被捕的亲友",
+              "subtitle": "您可以采取的实际步骤，帮助被逮捕或拘留的人"
+            },
+            "criticalAlert": {
+              "title": "最初24小时至关重要：",
+              "text": "迅速行动可以对帮助您的亲人产生重大影响。重点收集信息、确保法律代理和提供支持。"
+            },
+            "sectionTitle": "分步行动计划",
+            "step1": {
+              "title": "找到他们被关在哪里",
+              "description": "第一步是找到关押您亲人的设施。",
+              "howToFindTitle": "如何找到他们：",
+              "howToFind1": "致电当地警察局或县看守所",
+              "howToFind2": "在线查看在押人员查询系统（县治安官网站）",
+              "howToFind3": "致电法院书记官办公室",
+              "howToFind4": "联邦逮捕：致电联邦监狱局",
+              "infoToProvideTitle": "需要提供的信息：",
+              "infoToProvide1": "完整法定姓名",
+              "infoToProvide2": "出生日期",
+              "infoToProvide3": "大约逮捕日期/时间",
+              "infoToProvide4": "逮捕地点（如果知道的话）"
+            },
+            "step2": {
+              "title": "确保法律代理",
+              "description": "尽早让律师介入是您能做的最重要的事情之一。",
+              "alertTitle": "重要提示：",
+              "alertText": "如果他们请不起律师，他们有权获得公设辩护人。不要拖延——在他们第一次见法官时就提出申请。",
+              "publicDefenderTitle": "公设辩护人",
+              "publicDefenderDesc": "请不起律师的人可以免费获得。在首次出庭时或通过法院书记官申请。",
+              "legalAidTitle": "法律援助机构",
+              "legalAidDesc": "为符合条件的个人提供免费或低价法律服务。",
+              "privateAttorneyTitle": "私人律师",
+              "privateAttorneyDesc": "聘请的代理人。费用可能较高，但可能提供更个性化的服务。"
+            },
+            "step3": {
+              "title": "收集重要信息",
+              "description": "收集有助于律师和法庭程序准备的详细信息。",
+              "keyInfoTitle": "需要记录的关键信息：",
+              "keyInfo1": "入案编号/在押人员编号",
+              "keyInfo2": "对他们提出的指控",
+              "keyInfo3": "开庭日期和时间",
+              "keyInfo4": "保释金额（如果已设定）",
+              "keyInfo5": "逮捕警察的姓名",
+              "keyInfo6": "案件编号",
+              "keyInfo7": "指定公设辩护人的姓名（如适用）",
+              "keyInfo8": "证人联系方式"
+            },
+            "step4": {
+              "title": "了解保释和担保",
+              "description": "保释允许在等待审判期间从看守所临时释放。",
+              "bailOptionsTitle": "保释选项：",
+              "cashBailTitle": "现金保释：",
+              "cashBailDesc": "向法院支付全额（案件结束后退还）",
+              "bailBondTitle": "保释担保：",
+              "bailBondDesc": "向保释担保人支付10-15%（不退还）",
+              "propertyBondTitle": "财产担保：",
+              "propertyBondDesc": "用财产作为抵押",
+              "rorTitle": "自行具结释放：",
+              "rorDesc": "无需付款即可释放（逃跑风险低）",
+              "warningTitle": "保释担保人警告：",
+              "warningText": "如果您使用保释担保人，当事人不出庭时您要承担责任。您可能会失去抵押品或被要求支付全额保释金。"
+            },
+            "step5": {
+              "title": "提供持续支持",
+              "description": "被逮捕是一件压力很大的事。以下是您在整个过程中可以提供帮助的方式。",
+              "practicalHelpTitle": "实际帮助：",
+              "practicalHelp1": "参加法庭听证以表示支持",
+              "practicalHelp2": "帮助收集品格证明",
+              "practicalHelp3": "收集就业记录",
+              "practicalHelp4": "保管重要文件",
+              "practicalHelp5": "在拘留期间代为处理事务",
+              "practicalHelp6": "为狱中消费账户/电话充值",
+              "emotionalSupportTitle": "情感支持：",
+              "emotionalSupport1": "通过批准的渠道保持联系",
+              "emotionalSupport2": "如果无法探视，就写信",
+              "emotionalSupport3": "保持积极和鼓励的态度",
+              "emotionalSupport4": "不要在监控电话中讨论案件细节",
+              "emotionalSupport5": "帮助他们与家人保持联系",
+              "emotionalSupport6": "关注心理健康需求"
+            },
+            "warnings": {
+              "title": "重要提醒",
+              "jailCallsTitle": "绝对不要在看守所电话中讨论案件细节：",
+              "jailCallsText": "看守所的所有电话都会被录音，并可作为证据使用。只通过批准的保密渠道与律师讨论案件。",
+              "interferenceTitle": "不要试图干预：",
+              "interferenceText": "绝不要试图联系证人、销毁证据或干预调查。这可能导致您和您的亲人面临额外的指控。"
+            },
+            "disclaimer": {
+              "title": "法律免责声明：",
+              "text": "此信息仅供教育目的，不构成法律建议。每种情况都不同。请咨询合格律师，获取针对您亲人案件的具体指导。"
+            },
+            "privacyBanner": {
+              "title": "隐私优先：",
+              "text": "我们不存储您的个人数据——所有输入在会话结束后删除。"
+            }
+          },
+          "courtLocator": {
+            "hero": {
+              "title": "查找您当地的法院",
+              "subtitle": "使用免费的政府数据源和OpenStreetMap查找附近的法院。获取联系信息、办公时间和您所在地区可用的服务。"
+            },
+            "search": {
+              "inputPlaceholder": "输入邮编",
+              "searchButton": "搜索",
+              "searching": "搜索中...",
+              "error": "请输入有效的5位数邮编",
+              "errorGeneral": "无法搜索法院。请重试或联系您当地法院获取信息。",
+              "limitedData": "该地区的法院数据有限。显示示例结果。",
+              "sampleData": "使用示例数据。该地区的部分法院信息可能有限。"
+            },
+            "results": {
+              "title": "法院搜索结果",
+              "foundCourts": "在您所在地区找到 {{count}} 个法院{{plural}}",
+              "noCourts": "未找到法院",
+              "tryDifferent": "请尝试使用不同的邮编搜索"
+            },
+            "sections": {
+              "stateTitle": "州和地方法院 ({{count}})",
+              "stateDesc": "按县组织的法院，同县法院排在前面",
+              "federalTitle": "联邦法院 ({{count}})",
+              "federalDesc": "联邦法院处理联邦犯罪和民事案件"
+            },
+            "courtTypes": {
+              "federal": "联邦法院",
+              "state": "州法院",
+              "municipal": "市法院",
+              "traffic": "交通法院",
+              "bankruptcy": "破产法院",
+              "court": "法院"
+            },
+            "courtCard": {
+              "phone": "电话",
+              "hours": "办公时间",
+              "services": "服务",
+              "directions": "获取路线",
+              "milesAway": "{{distance}} 英里"
+            },
+            "info": {
+              "title": "了解法院类型",
+              "subtitle": "不同的法院处理不同类型的案件。以下是您需要了解的内容。",
+              "federal": {
+                "title": "联邦法院",
+                "desc": "处理违反联邦法律的案件，包括联邦犯罪、破产以及涉及联邦机构或宪法问题的案件。",
+                "examples": "银行抢劫、跨州贩毒、联邦逃税、移民违规"
+              },
+              "state": {
+                "title": "州法院",
+                "desc": "处理大多数刑事和民事案件，包括重罪、轻罪、家庭法和违反州法律的案件。",
+                "examples": "人身伤害、盗窃、酒驾、家庭暴力、遗嘱认证、家庭法院事务"
+              },
+              "municipal": {
+                "title": "市法院",
+                "desc": "处理市区范围内的地方法规违规和轻微犯罪。",
+                "examples": "噪音投诉、分区违规、轻微交通违规、市政法规违规"
+              }
+            },
+            "faq": {
+              "title": "常见问题",
+              "q1": "我怎么知道哪个法院处理我的案件？",
+              "a1": "指控的类型决定了哪个法院有管辖权。联邦犯罪由联邦法院审理，州犯罪由州法院审理。如果不确定，请查看您的传票或联系法院书记官。",
+              "q2": "我可以在开庭日之前去法院看看吗？",
+              "a2": "可以，大多数法院在工作时间对公众开放。这可以帮助您找到正确的法庭，让您在正式开庭时更加自在。",
+              "q3": "去法院应该带什么？",
+              "a3": "带上您的传票、有效身份证件、与案件相关的任何文件，以及记事用的纸笔。穿着正式并提前到达。"
+            },
+            "courtInformation": {
+              "title": "重要法院信息",
+              "courtTypesCard": {
+                "title": "法院类型",
+                "description": "不同的法院处理不同类型的案件。联邦法院处理联邦犯罪，州法院处理大多数刑事案件，市法院处理地方违规。"
+              },
+              "courtHoursCard": {
+                "title": "法院办公时间",
+                "description": "大多数法院在工作日的工作时间内运作。部分法院针对特定事务有延长时间或周末开放。"
+              },
+              "dataSourcesCard": {
+                "title": "数据来源",
+                "description": "法院位置来自OpenStreetMap和CourtListener（Free Law Project）。请务必提前致电确认时间和流程，因为数据可能有所不同。"
+              }
+            }
+          },
+          "developmentRoadmap": {
+            "hero": {
+              "title": "开发路线图",
+              "subtitle": "我们的未来愿景",
+              "description": "跟踪我们构建最全面的免费法律援助平台的进展。这个路线图是透明的、数据驱动的，专注于扩大司法公正的可及性。",
+              "openSourceNote": "本项目是开源的（代码采用MIT许可证，文档采用CC0许可证），公开开发。我们致力于开发和决策过程中的透明性。"
+            },
+            "mission": {
+              "title": "我们的使命与原则",
+              "accessToJustice": {
+                "title": "司法公正",
+                "description": "让每个人都能获得法律指导，无论经济状况或所在位置"
+              },
+              "privacyFirst": {
+                "title": "隐私优先",
+                "description": "通过临时会话和不保留数据来保护用户隐私"
+              },
+              "continuousImprovement": {
+                "title": "持续改进",
+                "description": "根据用户反馈和不断变化的法律环境持续迭代"
+              }
+            },
+            "stats": {
+              "completed": "已完成",
+              "inProgress": "进行中",
+              "planned": "已规划",
+              "researching": "研究中"
+            },
+            "categories": {
+              "all": "所有类别",
+              "data": "数据来源",
+              "features": "功能",
+              "infrastructure": "基础设施",
+              "ai": "AI 与机器学习",
+              "legal": "法律内容"
+            },
+            "filters": {
+              "title": "按类别筛选",
+              "viewAll": "查看全部"
+            },
+            "progress": {
+              "overall": "总体进度",
+              "completion": "{{percent}}% 完成"
+            },
+            "status": {
+              "completed": "已完成",
+              "inProgress": "进行中",
+              "planned": "已规划",
+              "researching": "研究中"
+            },
+            "priority": {
+              "critical": "关键",
+              "high": "高",
+              "medium": "中",
+              "low": "低"
+            },
+            "roadmapItem": {
+              "estimatedCompletion": "预计完成时间",
+              "dependencies": "依赖项",
+              "challenges": "挑战",
+              "impact": "影响",
+              "progress": "进度"
+            },
+            "items": {
+              "attorneyTools": {
+                "title": "律师工具门户",
+                "description": "为持牌律师提供的专属板块，包含法院记录查询、文件资源和专业工具。律师专属功能的基础。",
+                "impact": "为法律专业人士提供专属功能，同时保持核心资源的共享访问"
+              },
+              "courtlistener": {
+                "title": "CourtListener API 集成",
+                "description": "与 Free Law Project 的 CourtListener API 完整集成，可访问840万+法院意见和联邦案卷",
+                "impact": "提供对联邦判例法和法院记录的基础访问"
+              },
+              "pacer": {
+                "title": "PACER 认证与数据访问",
+                "description": "实现 PACER 认证 API 和经济高效的文件检索系统",
+                "impact": "访问5亿+联邦法院文件和实时案件更新",
+                "challenges": {
+                  "cost": "每页$0.10的成本管理",
+                  "rateLimit": "速率限制合规",
+                  "bulk": "批量数据优化"
+                }
+              },
+              "stateStatutes": {
+                "title": "州法律数据库",
+                "description": "已实现50个州加哥伦比亚特区的完整覆盖，涵盖12个犯罪类别的1,255项刑事法规，包括杀人、人身伤害、盗窃、欺诈、毒品犯罪等。713个经验证的指控-法规匹配，链接至官方立法网站。",
+                "impact": "全国范围内州刑事法规的完整覆盖"
+              },
+              "aiGuidance": {
+                "title": "AI 法律指导引擎",
+                "description": "基于案件参数生成个性化法律指导的先进AI系统。目前由 Claude Sonnet 4 驱动，支持管辖区感知提示。",
+                "impact": "个性化法律援助的核心功能",
+                "challenges": {
+                  "accuracy": "法律准确性验证",
+                  "bias": "偏见检测和缓解",
+                  "jurisdiction": "管辖区特定的细微差别"
+                }
+              },
+              "attorneyDocGen": {
+                "title": "律师文件生成",
+                "description": "为持牌律师提供28个AI驱动的文件模板：17个刑事动议（覆盖50个州加哥伦比亚特区，按县/区划分）和11个移民动议（EOIR格式，按区/分区划分）。涵盖从初始文件到量刑后的所有案件阶段。",
+                "impact": "减轻处理大量案件的公设辩护人和法律援助律师的时间负担"
+              },
+              "publicApiV1": {
+                "title": "公共 REST API v1",
+                "description": "开放API，为第三方提供法律内容、刑事指控、转处计划、术语表和犯罪记录消除规则的访问。包括OpenAPI规范、可嵌入组件、CORS支持和速率限制。",
+                "impact": "使法律援助机构和开发者能够将我们的数据集成到他们自己的工具中"
+              },
+              "securityAudit": {
+                "title": "安全与代码审计",
+                "description": "全面的安全加固：从AI提示中移除个人信息、将API密钥从URL迁移至安全头部、结构化生产安全日志、移除1,400多行无用代码并卸载未使用的依赖项。",
+                "impact": "更强的数据隐私保护和更干净、更易维护的代码库"
+              },
+              "bilingualSupport": {
+                "title": "英语/西班牙语双语支持",
+                "description": "在整个平台上提供完整的双语支持，包括案件指导、权利信息、刑事指控、术语表、移民指导、案件时间线、速查卡片和全站搜索。",
+                "impact": "为使用西班牙语的社区提供可访问的法律信息，帮助他们了解司法系统"
+              },
+              "additionalLanguages": {
+                "title": "更多语言支持",
+                "description": "在英语和西班牙语之外扩展到中文、越南语、韩语、他加禄语以及移民社区中常用的其他语言。",
+                "impact": "为不讲英语的个人提供更广泛的司法系统导航支持"
+              },
+              "expandedJurisdictions": {
+                "title": "扩展管辖区覆盖",
+                "description": "增加法院专属规则、当地程序和针对更多州和县的管辖区特定指导。",
+                "impact": "为全国各地用户提供更准确、更贴近当地的指导"
+              },
+              "judgeAnalytics": {
+                "title": "法官与法院分析",
+                "description": "对量刑模式、认罪协议和司法决策的统计分析",
+                "impact": "为案件策略和结果提供预测性见解",
+                "challenges": {
+                  "privacy": "数据隐私问题",
+                  "significance": "统计显著性",
+                  "historicalBias": "历史数据中的偏见"
+                }
+              },
+              "mobileApp": {
+                "title": "移动应用",
+                "description": "适用于iOS和Android的原生移动应用，具备紧急情况下的离线功能",
+                "impact": "在逮捕和紧急情况下的可及性"
+              },
+              "privacyEncryption": {
+                "title": "高级隐私与加密",
+                "description": "完整的隐私保护：基于NLP的个人信息检测、匿名同意跟踪、传输加密（HTTPS）、静态加密（数据库）以及基于会话的临时性和用户可控的数据删除。",
+                "impact": "为弱势用户提供最大程度的隐私保护"
+              },
+              "clientE2E": {
+                "title": "客户端端到端加密",
+                "description": "高级未来功能：基于浏览器的加密，用户数据在离开设备前即被加密，确保零知识架构。",
+                "impact": "为极其敏感的咨询提供终极隐私保护",
+                "challenges": {
+                  "keyManagement": "在浏览器中安全生成和存储密钥，无需服务器访问",
+                  "aiCompatibility": "AI处理需要明文——加密与指导质量之间的权衡"
+                }
+              }
+            },
+            "badges": {
+              "quickWin": "速赢"
+            },
+            "getInvolved": {
+              "title": "参与其中",
+              "subtitle": "这是一个社区驱动的项目。以下是您可以贡献的方式：",
+              "contribute": {
+                "title": "在GitHub上贡献",
+                "description": "提交代码、报告错误或提出改进建议"
+              },
+              "feedback": {
+                "title": "分享反馈",
+                "description": "告诉我们哪些功能对您最有帮助"
+              },
+              "spread": {
+                "title": "帮助传播",
+                "description": "将此工具分享给需要法律援助的人"
+              }
+            },
+            "featureRequest": {
+              "modalTitle": "请求新功能",
+              "description": "对于如何更好地服务正在了解法律系统的个人，您有什么想法吗？我们很乐意听取您的意见。",
+              "nameLabel": "您的姓名",
+              "namePlaceholder": "输入您的姓名",
+              "emailLabel": "邮箱地址",
+              "emailPlaceholder": "输入您的邮箱",
+              "descriptionLabel": "功能描述",
+              "descriptionPlaceholder": "描述您想看到的功能...",
+              "submitButton": "提交请求",
+              "cancelButton": "取消",
+              "requestButton": "请求新功能",
+              "validationName": "信息不完整",
+              "validationNameDesc": "请填写所有字段。",
+              "validationEmail": "邮箱无效",
+              "validationEmailDesc": "请输入有效的邮箱地址。",
+              "successTitle": "邮件客户端已打开",
+              "successDesc": "您的默认邮件客户端应该已打开。请发送邮件以提交您的请求。",
+              "disclaimer": "提交功能请求即表示您同意我们就您的建议与您联系。我们尊重您的隐私，不会分享您的信息。"
+            },
+            "transparency": {
+              "title": "透明承诺",
+              "description": "我们相信开放式开发。所有进展、挑战和决策都会公开分享，以保持问责制并与我们服务的社区建立信任。"
+            }
+          },
+          "missionStatement": {
+            "hero": {
+              "title": "使命宣言",
+              "subtitle": "Public Defender AI 是一项公益服务，致力于利用人工智能、法律数据和自动化技术，为美国境内被指控犯罪且可能无法立即获得法律顾问的个人提供及时、准确、便捷的帮助。本平台基于开源原则构建，代码采用 MIT 许可证，文档采用 CC0（知识共享零权利）许可证，确保所有需要帮助的人都能免费使用。"
+            },
+            "goals": {
+              "title": "我们的主要目标",
+              "expandAccess": {
+                "title": "扩大司法服务覆盖面",
+                "description": "免费为被告提供初步法律信息、指导和案件相关分析，减少弱势群体获取法律帮助的障碍。"
+              },
+              "supportDefenders": {
+                "title": "支持公设辩护人的工作",
+                "description": "帮助公设辩护人快速获取汇总的法律数据、案件统计和程序要求，协助他们制定更有效的辩护策略。"
+              },
+              "empowerDecisions": {
+                "title": "帮助做出明智的决定",
+                "description": "通过基于可靠数据的清晰易懂的解释，帮助被告更好地了解自己的权利、法律选项和可能的结果。"
+              },
+              "increaseFairness": {
+                "title": "提高效率和公平性",
+                "description": "自动收集和整合公共法律数据，帮助被告和律师快速找到相关判例、程序规则以及认罪协议或量刑趋势。"
+              }
+            },
+            "principles": {
+              "title": "指导原则",
+              "description": "本项目以公平、透明、数据隐私以及遵守适用法律和法律执业道德准则为指导原则。",
+              "disclaimer": "本 AI 工具不能替代持证律师，而是作为辅助工具来补充人工法律咨询，并改善获得公平辩护资源的途径。"
+            }
+          },
+          "privacyPolicy": {
+            "hero": {
+              "title": "隐私政策",
+              "subtitle": "我们致力于保护您的隐私。本政策说明我们如何处理您的信息。",
+              "lastUpdated": "最后更新：2026年2月4日"
+            },
+            "notice": {
+              "title": "隐私优先平台：",
+              "description": "我们不收集或存储个人数据。您的隐私默认受到保护。"
+            },
+            "principles": {
+              "title": "我们的隐私原则",
+              "noPersonalData": {
+                "title": "不收集个人数据",
+                "description": "我们不收集、存储或保留任何可识别个人身份的信息。这包括姓名、地址、案件详情、指控或任何其他可能识别您个人身份的信息。您与本平台的所有互动都是匿名的。"
+              },
+              "anonymizedData": {
+                "title": "仅使用匿名数据",
+                "description": "我们可能会收集匿名的汇总数据，用于以下目的：",
+                "usage": {
+                  "metrics": "了解平台使用情况以改善用户体验",
+                  "improvements": "确定哪些功能和资源最有帮助",
+                  "integrations": "为希望将我们的服务集成到其平台的第三方提供匿名分析"
+                }
+              },
+              "noSharing": {
+                "title": "不分享或出售数据",
+                "description": "我们不会向任何第三方分享、出售或提供您的数据。由于我们不收集个人数据，即使想分享也做不到。任何共享的匿名数据都已完全去除识别信息。"
+              }
+            },
+            "caseData": {
+              "title": "我们如何保护您的案件信息",
+              "summary": "当您使用我们的法律指导工具时，您的案件信息受到多层保护。以下是您的数据处理方式的详细说明：",
+              "memoryOnly": {
+                "title": "仅内存存储",
+                "description": "您的案件信息仅存储在临时服务器内存中——不会写入数据库或保存到磁盘。这意味着您的数据仅在处理期间存在，会话结束后无法恢复。"
+              },
+              "piiRedaction": {
+                "title": "自动移除个人信息",
+                "description": "在您的案件详情被我们的 AI 处理之前，我们会自动检测并移除姓名、电话号码、电子邮件地址和社会安全号码等个人信息。此脱敏处理在我们的服务器上通过机器学习本地完成——您的个人详细信息不会发送到外部 AI 服务。"
+              },
+              "autoDelete": {
+                "title": "24小时自动删除",
+                "description": "即使在内存中，您的案件数据最长保留时间也只有24小时。之后将自动永久删除。您不需要采取任何操作——删除会自动进行。"
+              },
+              "serverRestart": {
+                "title": "服务器重启时清除",
+                "description": "由于数据仅存储在内存中，任何服务器重启或更新都会完全清除所有会话数据。这在我们改进平台时会定期发生，提供了额外的数据短暂性保护层。"
+              }
+            },
+            "technical": {
+              "title": "技术详情",
+              "sessions": {
+                "title": "会话数据",
+                "description": "临时会话数据用于在单次访问期间维护您的浏览体验。当您关闭浏览器或结束会话时，此数据会自动删除。不会永久存储任何会话信息。"
+              },
+              "logs": {
+                "title": "服务器日志",
+                "description": "我们的网络服务器可能会临时收集标准技术信息，如 IP 地址、浏览器类型和访问时间，用于安全和故障排除目的。这些日志保留时间有限，不会用于识别个人用户。"
+              },
+              "external": {
+                "title": "外部数据源",
+                "description": "我们的平台访问公共法律数据库和服务来为您提供信息：",
+                "services": {
+                  "anthropic": "Anthropic Claude Sonnet 4 - 用于生成法律指导和文件摘要。您的个人信息在处理前会被移除。Anthropic 可能会出于运营和安全目的保留数据最多30天，之后自动删除。这些数据不会用于训练 AI 模型。",
+                  "govInfo": "GovInfo.gov API - 用于联邦刑事法规（美国法典第18编）",
+                  "courtListener": "CourtListener API - 用于判例法和法院数据",
+                  "recap": "RECAP Archive - 用于联邦法院文件",
+                  "cornell": "Cornell Legal Information Institute - 用于法律法规",
+                  "openLaws": "OpenLaws API - 用于州法规文本和法律数据"
+                },
+                "note": "当您使用我们的平台搜索这些数据库时，您的查询可能会被传输到这些服务。个人信息在发送到 AI 服务之前会自动脱敏。如果您对外部数据访问有疑虑，我们建议您查阅它们的隐私政策。"
+              }
+            },
+            "rights": {
+              "title": "您的隐私权利",
+              "description": "由于我们不收集或存储个人数据，您自动享有以下保护：",
+              "list": {
+                "noDataStored": "没有需要访问、修改或删除的数据——我们从一开始就不存储它",
+                "sessionControl": "完全控制会话数据——只需关闭浏览器即可结束所有追踪",
+                "noTracking": "没有跨站追踪、Cookie 或持久性标识符"
+              }
+            },
+            "changes": {
+              "title": "本政策的变更",
+              "description": "我们可能会不时更新本隐私政策。最后更新日期显示在本页顶部。在变更后继续使用我们的平台即表示接受更新后的政策。"
+            },
+            "contact": {
+              "title": "关于隐私的问题？",
+              "description": "如果您对我们如何保护您的隐私有疑问，请通过我们的公开 GitHub 仓库或社区渠道联系我们。"
+            }
+          },
+          "documentLibrary": {
+            "title": "案件文件库",
+            "subtitle": "了解您在案件过程中可能收到的文件。每个部分都用通俗易懂的语言进行了解释。",
+            "importance": {
+              "critical": "关键",
+              "important": "重要",
+              "informational": "参考信息"
+            },
+            "card": {
+              "purpose": "用途",
+              "whatToDo": "收到这份文件后该怎么做",
+              "sections": "文件各部分"
+            },
+            "filter": {
+              "label": "筛选条件：",
+              "phase": "案件阶段",
+              "category": "类别",
+              "allPhases": "所有阶段",
+              "allCategories": "所有类别",
+              "criminal": "刑事司法",
+              "immigration": "移民",
+              "showing": "{{count}} 份文件"
+            },
+            "tabs": {
+              "criminal": "刑事司法",
+              "immigration": "移民"
+            },
+            "noDocuments": "没有符合您筛选条件的文件。",
+            "cta": {
+              "title": "需要个性化指导？",
+              "description": "我们的 AI 助手可以帮助您了解在您的具体情况下应该拥有哪些文件。",
+              "button": "获取指导"
+            }
+          },
+          "documents": {
+            "citationTicket": {
+              "title": "传票/罚单",
+              "description": "针对轻微违法行为发出的书面通知，代替实际逮捕。",
+              "purpose": "本文件正式通知您被指控的罪名，并告诉您何时何地出庭。它相当于法院传唤通知。",
+              "whatToDo": "妥善保管这份文件！记下开庭日期和案件编号。如果在规定日期未到庭，可能会被发出逮捕令。",
+              "sections": {
+                "charges": { "label": "罪名/指控", "explanation": "这部分显示了您被指控的行为。它引用了您涉嫌违反的具体法律或法规。" },
+                "courtDate": { "label": "出庭日期", "explanation": "这是您必须出庭的日期和时间。错过这个日期可能会导致额外指控和逮捕令。" },
+                "caseNumber": { "label": "案件/传票编号", "explanation": "您案件的唯一标识号。您在网上查询案件或致电法院时需要用到这个编号。" },
+                "bailAmount": { "label": "保释金金额", "explanation": "您可能需要支付的释放或免于入狱的金额。并非所有传票都包含此项。" }
+              }
+            },
+            "arrestWarrant": {
+              "title": "逮捕令",
+              "description": "授权警察逮捕您的法院命令。",
+              "purpose": "这份由法官签署的文件赋予警察逮捕您的法律权力。它意味着法官发现有足够证据（合理理由）相信您实施了犯罪。",
+              "whatToDo": "如果有人向您出示逮捕令，不要抗拒。要求获得副本并记下法官姓名和所列指控。立即联系律师。",
+              "sections": {
+                "probableCause": { "label": "合理理由陈述", "explanation": "这解释了法官为什么认为您可能犯了罪。它概述了针对您的证据或指控。" },
+                "judgeSignature": { "label": "法官签名", "explanation": "有效的逮捕令必须由法官或地方法官签署。没有签名，逮捕令可能无效。" },
+                "chargesListed": { "label": "所列指控", "explanation": "您被指控的具体犯罪。这决定了您案件的严重程度以及您可能面临的处罚。" }
+              }
+            },
+            "propertyVoucher": {
+              "title": "财物收据",
+              "description": "列出逮捕时从您身上没收的所有个人物品的收据。",
+              "purpose": "这是警察在逮捕您时拿走的物品的证明。案件结案后，您需要凭此取回财物。",
+              "whatToDo": "保管好这份文件！检查所有物品是否正确列出。您需要凭收据编号取回财物。如有物品遗漏请立即报告。",
+              "sections": {
+                "itemsList": { "label": "物品清单", "explanation": "从您身上没收的所有物品的详细清单——钱包、手机、首饰、现金等。签字前请核实是否准确。" },
+                "voucherNumber": { "label": "收据编号", "explanation": "取回财物时需要的唯一编号。请另外记下，以防丢失原件。" },
+                "officerInfo": { "label": "警官信息", "explanation": "没收您财物的警官的姓名和警号。如果对物品有争议，这些信息会有帮助。" }
+              }
+            },
+            "bookingPapers": {
+              "title": "入监文件",
+              "description": "您被送入看守所时创建的文件。",
+              "purpose": "这些文件记录了您的逮捕信息、针对您的指控和您的个人信息。它们将成为您逮捕记录的一部分。",
+              "whatToDo": "检查是否准确。入监文件中的错误可能会在以后造成问题。记下您的入监编号——家人可以用它来找到您或办理保释。",
+              "sections": {
+                "personalInfo": { "label": "个人信息", "explanation": "您的姓名、地址、出生日期和体貌特征。请确保这些信息准确，以避免身份问题。" },
+                "arrestDetails": { "label": "逮捕详情", "explanation": "您被逮捕的时间、地点和原因。这些信息对您的辩护很重要。" },
+                "bookingNumber": { "label": "入监编号", "explanation": "您在看守所的唯一标识号。家人可以用它在看守所系统中找到您或安排保释。" }
+              }
+            },
+            "mirandaAcknowledgment": {
+              "title": "米兰达权利告知书",
+              "description": "记录您已被告知权利的表格。",
+              "purpose": "此文件证明警察在询问您之前已告知您享有沉默权和获得律师帮助的权利。",
+              "whatToDo": "您不必签署此文件。即使签了，也不代表您放弃了权利——您仍然可以随时保持沉默并要求律师。",
+              "sections": {
+                "rightsListed": { "label": "所列权利", "explanation": "您的米兰达权利：沉默权、您所说的任何话都可能在法庭上被用作不利于您的证据、获得律师帮助的权利、如果无力负担可获得免费律师的权利。" },
+                "waiverSection": { "label": "弃权部分", "explanation": "这询问您是否自愿放弃这些权利。您不必签署。即使签了，在讯问过程中您也可以随时行使这些权利。" }
+              }
+            },
+            "criminalComplaint": {
+              "title": "刑事起诉书",
+              "description": "正式指控您犯罪的文件。",
+              "purpose": "这是检察官对您被指控的犯罪及其声称证明您有罪的基本事实的正式陈述。它开启了您的刑事案件。",
+              "whatToDo": "与您的律师仔细阅读此文件。它会准确告诉您被指控的罪名。您的辩护策略将围绕回应这些指控来制定。",
+              "sections": {
+                "charges": { "label": "刑事指控", "explanation": "您被指控的具体犯罪，包括程度（轻罪与重罪）。每项指控有不同的潜在处罚。" },
+                "factsAlleged": { "label": "事实陈述", "explanation": "检察官版本的事件经过。这是他们在审判中将试图证明的内容。您的律师会寻找这个叙述中的漏洞。" },
+                "statuteCitations": { "label": "法规引用", "explanation": "您涉嫌违反的具体法律条文。这些法规定义了检察官必须证明什么才能给您定罪。" }
+              }
+            },
+            "arraignmentNotice": {
+              "title": "提审通知",
+              "description": "逮捕后首次出庭的通知。",
+              "purpose": "此通知告诉您何时何地参加提审——在提审中您将被正式告知指控并被要求做出答辩。",
+              "whatToDo": "不要错过这个日期！提早到达。如果没有律师，告诉法官您想要一名公设辩护人。在这个阶段通常会做「无罪「答辩。",
+              "sections": {
+                "courtLocation": { "label": "法院地点", "explanation": "您必须出席的具体法院、房间号和地址。提早到达以通过安检并找到正确的法庭。" },
+                "dateTime": { "label": "日期和时间", "explanation": "您必须出庭的确切时间。错过这个日期很可能会导致发出逮捕令。" },
+                "caseNumber": { "label": "案件编号", "explanation": "您的唯一案件标识号。到达时用此号码向法院书记员报到。" }
+              }
+            },
+            "bailBondOrder": {
+              "title": "保释/担保令",
+              "description": "法院关于保释和释放条件的决定。",
+              "purpose": "本文件说明您需要支付多少保释金、释放期间必须遵守的条件以及违反这些条件的后果。",
+              "whatToDo": "严格遵守所有条件。违反可能导致重新逮捕和保释被撤销。保管好这份文件——上面列有您的下次开庭日期。",
+              "sections": {
+                "bailAmount": { "label": "保释金金额", "explanation": "释放您所需的金额。您可以支付全额（案件结束后退还），也可以找保释担保人（通常需支付10%的不可退还费用）。" },
+                "conditions": { "label": "释放条件", "explanation": "保释期间必须遵守的规则——比如不得联系某些人、不得离开本州或接受药物检测。违反这些规定可能会让您重新入狱。" },
+                "nextCourtDate": { "label": "下次开庭日期", "explanation": "您下次必须出庭的时间。缺席将导致保释金被没收并发出逮捕令。" }
+              }
+            },
+            "discoveryDocuments": {
+              "title": "证据开示文件",
+              "description": "检方必须与辩方分享的证据。",
+              "purpose": "这些是检察官计划在审判中用来指控您的所有材料。您的律师有权查看这些证据以准备辩护。",
+              "whatToDo": "与您的律师仔细审阅这些文件。证据开示可以揭示检方案件中的薄弱环节或支持您无罪的证据。",
+              "sections": {
+                "policeReports": { "label": "警察报告", "explanation": "警官对事件的书面描述。这些报告中通常包含可以被质疑或被其他证据反驳的细节。" },
+                "witnessStatements": { "label": "证人陈述", "explanation": "证人对警察所说的话。您的律师将分析这些内容的不一致之处，并为交叉询问做准备。" },
+                "evidenceList": { "label": "证据清单", "explanation": "实物证据、视频、照片、实验室结果等。您的律师可以质疑这些证据的收集或解读方式。" }
+              }
+            },
+            "pleaOffer": {
+              "title": "认罪协议",
+              "description": "检察官提出的不经审判解决案件的书面提议。",
+              "purpose": "这是一项交易提议：对某些指控认罪以换取减轻处罚或撤销部分指控。大约90%的案件是通过认罪协议解决的。",
+              "whatToDo": "在回复前与律师仔细讨论。考虑证据的强度、可能的审判结果和个人情况。您不必接受。",
+              "sections": {
+                "offeredCharges": { "label": "认罪的指控", "explanation": "您将承认有罪的具体指控。这些可能比您最初的指控轻。" },
+                "recommendedSentence": { "label": "建议刑罚", "explanation": "检察官建议的处罚。注意：法官不一定要遵循这个建议。" },
+                "deadline": { "label": "提议截止日期", "explanation": "您有多长时间接受这个协议。截止日期过后，提议可能会被撤回或变得更不利。" }
+              }
+            },
+            "subpoena": {
+              "title": "传票",
+              "description": "要求您出庭或提供文件的法院命令。",
+              "purpose": "这在法律上强制您作为证人作证或提交文件/记录。无视传票可能导致藐视法庭的指控。",
+              "whatToDo": "请认真对待！如果您对作证有顾虑，请联系律师。除非法官准许，您必须在规定日期出庭。",
+              "sections": {
+                "appearanceRequired": { "label": "出庭要求", "explanation": "您必须出庭的时间和地点。这不是可选的——未出庭可能导致被逮捕。" },
+                "documentsRequested": { "label": "要求提供的文件", "explanation": "您必须携带的具体记录或物品。「文件传票「要求您提交相关文件。" }
+              }
+            },
+            "sentencingOrder": {
+              "title": "判决令/判决书",
+              "description": "定罪后写明您刑罚的正式文件。",
+              "purpose": "这是法院对您处罚的最终决定——监禁时间、罚款、缓刑、社区服务等。它将成为您永久记录的一部分。",
+              "whatToDo": "检查是否准确。了解您必须遵守的所有条件。知道上诉截止日期（通常为30天）。保管好这份文件。",
+              "sections": {
+                "sentenceImposed": { "label": "判处的刑罚", "explanation": "您的具体处罚——监禁时间、是否缓期执行，以及执行方式（直接服刑 vs. 工作释放等）。" },
+                "finesRestitution": { "label": "罚款和赔偿", "explanation": "您需要支付的费用——法庭费用、罚款和对受害者的赔偿。这些是具有法律约束力的债务。" },
+                "probationTerms": { "label": "缓刑条件", "explanation": "缓刑期间必须遵守的规则——向缓刑监督官报到、药物检测、旅行限制等。违反可能导致入狱。" },
+                "appealRights": { "label": "上诉权利", "explanation": "关于您对定罪或刑罚提出上诉的权利的信息。您通常有30天时间提起上诉。" }
+              }
+            },
+            "noticeToAppearI862": {
+              "title": "出庭通知 (NTA)",
+              "description": "启动驱逐程序的主要指控文件。",
+              "purpose": "这是 ICE 正式通知您他们要驱逐您的文件。它要求您在移民法官面前出庭，并列出他们声称可以将您从美国遣返的理由。",
+              "whatToDo": "立即找移民律师！记下您的 A 号码和听证日期。查看提供的免费法律服务清单。千万不要错过听证——缺席会导致自动驱逐令。",
+              "sections": {
+                "aNumber": { "label": "外国人登记号 (A-Number)", "explanation": "您在移民系统中的唯一9位数标识号。您需要用它在网上或电话查询案件状态。" },
+                "charges": { "label": "移民指控", "explanation": "ICE 声称可以驱逐您的法律理由——签证过期、未经检查入境、刑事定罪等。" },
+                "hearingInfo": { "label": "听证信息", "explanation": "移民法庭听证的日期、时间和地点。有时会显示「待定」，届时您会收到单独通知。" },
+                "legalServices": { "label": "免费法律服务清单", "explanation": "您所在地区免费或低成本移民律师的联系信息。请立即联系。" }
+              }
+            },
+            "recordDeportableAlienI213": {
+              "title": "可驱逐/不可入境外国人记录",
+              "description": "ICE 对您被逮捕和拘留原因的记录。",
+              "purpose": "此文件记录了移民官员逮捕您的方式和原因，包括您所做的任何陈述。它经常被用作不利于您的证据。",
+              "whatToDo": "与律师仔细审查此文件。检查事实中的错误。如果您未被适当告知权利，您所做的任何陈述都可以被质疑。",
+              "sections": {
+                "arrestCircumstances": { "label": "逮捕情况", "explanation": "ICE 逮捕您的方式、时间和地点。这可能包括他们是否持有适当的逮捕令。" },
+                "statementsRecorded": { "label": "记录的陈述", "explanation": "ICE 说您在被逮捕时告诉他们的话。这些陈述可能被用来对付您，因此请与律师核实其准确性。" }
+              }
+            },
+            "bondHearingNotice": {
+              "title": "保释听证通知",
+              "description": "关于您请求从移民拘留中释放的听证通知。",
+              "purpose": "此通知告诉您何时可以请求移民法官设定保释金，以便在案件审理期间被释放。",
+              "whatToDo": "准备证明您不会逃跑或构成危险的证据——社区关系、就业情况、在美国的家人等。律师可以大大提高您的机会。",
+              "sections": {
+                "hearingDate": { "label": "听证日期", "explanation": "您可以提出释放申请的时间。错过此日期意味着您将被拘留直到遣返听证。" },
+                "eligibilityInfo": { "label": "资格信息", "explanation": "由于犯罪记录或其他因素，有些人可能没有资格获得保释。律师可以解释您的具体情况。" }
+              }
+            },
+            "warrantOfRemovalI205": {
+              "title": "遣返/驱逐令",
+              "description": "授权 ICE 实际驱逐您的命令。",
+              "purpose": "这意味着移民法官已下令遣返您，ICE 现在可以执行驱逐。此令在您败诉或放弃抗辩权之后发出。",
+              "whatToDo": "立即联系律师了解上诉选项。您可能只有有限的时间（向 BIA 上诉的期限为30天）。查看您是否有资格获得任何救济或保护。",
+              "sections": {
+                "removalOrder": { "label": "遣返令", "explanation": "要求您离开美国的正式命令。它包括遣返您的法律依据。" },
+                "appealDeadline": { "label": "上诉截止日期", "explanation": "您有多长时间来质疑此命令。错过截止日期可能会失去留下来抗辩的机会。" }
+              }
+            },
+            "orderOfSupervisionI220B": {
+              "title": "监管令",
+              "description": "当您有遣返令但无法立即被驱逐时的释放条件。",
+              "purpose": "如果您有最终驱逐令，但您的祖国不接受您或存在其他障碍，ICE 可能会在严格条件下释放您并进行监管。",
+              "whatToDo": "严格遵守所有条件。按要求报到。违规可能导致重新拘留。继续与律师合作寻找其他选项。",
+              "sections": {
+                "reportingRequirements": { "label": "报到要求", "explanation": "您需要多久以及在哪里向 ICE 报到。错过报到可能导致立即被拘留。" },
+                "travelRestrictions": { "label": "旅行限制", "explanation": "对您旅行范围的限制。通常未经许可不能离开所在地区，绝对不能离开美国。" }
+              }
+            },
+            "expeditedRemovalI860": {
+              "title": "快速遣返通知",
+              "description": "无需法庭听证即可快速驱逐的命令。",
+              "purpose": "此命令适用于在边境或边境附近被截获的没有有效入境文件的人。它允许在不见移民法官的情况下进行驱逐。",
+              "whatToDo": "如果您担心回国后会受到迫害，您必须立即告诉官员。说「我害怕回到我的国家。「这将触发可信恐惧面谈。",
+              "sections": {
+                "removalGrounds": { "label": "遣返理由", "explanation": "ICE 声称可以快速遣返您的原因——通常是未经检查入境或使用伪造文件。" },
+                "fearClaim": { "label": "恐惧申诉", "explanation": "如果您害怕回到自己的国家（担心暴力、迫害等），您必须表达这种恐惧才能获得听证机会。这是您避免立即被遣返的唯一机会。" }
+              }
+            },
+            "guidance": {
+              "documentsSection": {
+                "title": "您应该拥有的文件",
+                "description": "根据您的案件阶段，您应该已经收到了这些重要文件。点击任何文件了解更多。",
+                "noneFound": "此阶段没有特定的预期文件。",
+                "learnMore": "了解更多",
+                "viewLibrary": "查看所有文件"
+              }
+            }
+          },
+          "chat": {
+            "openChat": "打开法律指导对话",
+            "progress": {
+              "step": "第 {{current}} 步，共 {{total}} 步",
+              "safety": "安全",
+              "safetyDesc": "检查您是否需要紧急帮助",
+              "location": "地点",
+              "locationDesc": "告诉我们您的案件在哪里",
+              "charges": "指控",
+              "chargesDesc": "选择您面临的指控",
+              "situation": "情况",
+              "situationDesc": "您的案件阶段和当前状态",
+              "details": "详情",
+              "detailsDesc": "描述发生了什么以获取个性化指导"
+            },
+            "messages": {
+              "welcome": "您好！我可以帮您了解您的法律状况。我们的对话内容是保密的，会在您的会话结束后被删除。\n\n您现在是否处于紧急情况？",
+              "emergencyAdviceFull": "🚨 **如果您现在正在被逮捕或拘留：**\n\n**✅ 保持冷静**\n不要抗拒、逃跑或争辩。保持双手可见。抗拒可能导致额外指控，即使原来的逮捕后来被认定为不合法。\n\n**🔇 行使沉默权**\n清楚地说：「我行使我的沉默权。「\n您不需要回答关于您要去哪里、在做什么或住在哪里的问题。\n\n**⚖️ 要求律师**\n说：「我要找律师。「一旦您要求律师，警察必须停止对您的讯问。\n如果您负担不起律师费，可以在首次出庭时要求公设辩护人。\n\n**🚫 不要同意搜查**\n说：「我不同意任何搜查。「\n警察可能仍会搜查，但表明态度可以在以后保护您的权利。\n\n**📝 记住这些细节**\n记下警官的警号、巡逻车号和任何目击者信息。这些以后可能对您的案件有帮助。\n\n---\n**您接下来想做什么？**",
+              "mainMenu": "有什么我可以帮助您的？",
+              "stateQuestion": "让我为您提供个性化的指导。首先，您的案件在哪个州？",
+              "chargeQuestion": "收到，{{state}}。您面临什么指控？请选择所有适用的。",
+              "stageQuestion": "您的案件目前处于什么阶段？",
+              "custodyQuestion": "您目前是被拘留还是已被释放？",
+              "attorneyQuestion": "您是否已有律师或公设辩护人？",
+              "descriptionPrompt": "感谢您提供的信息。现在，请简要描述发生了什么——这有助于我给您更有针对性的指导。\n\n（您的信息将由 AI 分析以提供指导。个人详细信息在处理前会被自动移除。会话结束后不会保存任何内容。）",
+              "descriptionPromptWithWarning": "感谢您提供的信息。\n\n⚠️ **在您分享细节之前**\n\n我们希望您分享案件的具体信息以获得个性化指导。与和律师交谈不同，您在这里输入的内容不受保密特权保护，如果您在法庭上被问到，可能会被用来对付您。\n\n我们建议您先咨询律师。这一步是可选的——跳过此步仍然可以获得一般性指导。",
+              "privilegeWarning": "⚠️ **在您分享细节之前**\n\n与和律师交谈不同，您在这里输入的内容不受保密特权保护，如果您在法庭上被问到，可能会被用来对付您。\n\n我们建议您先咨询律师。这一步是可选的——跳过此步仍然可以获得一般性指导。",
+              "privilegeAcknowledged": "明白了。请描述发生了什么——不用着急。",
+              "concernsQuestion": "您最担心什么？有什么具体问题吗？\n\n（例如：担心失去工作、负担不起律师费、什么时候必须出庭）",
+              "generating": "谢谢。我现在正在分析您的情况并准备个性化指导。这可能需要一些时间……",
+              "stillWorking": "仍在准备您的指导……复杂的法律情况需要仔细分析。感谢您的耐心。",
+              "guidanceReady": "您的法律指导已准备好！我为您整理了情况摘要、重要截止日期、您的权利和建议的下一步行动。\n\n您可以导出保存以备记录。",
+              "error": "抱歉，生成指导时遇到了问题。请重试或在问题持续时联系支持。",
+              "immigrationSummary": "**移民执法信息**\n\n如果您担心移民执法，以下是您应该了解的：\n\n**您的权利：**\n• 您有权对自己的移民身份保持沉默\n• 没有司法搜查令，您不必给移民官员开门\n• 在回答问题之前，您有权与律师交谈\n\n**如果被 ICE 接触：**\n• 保持冷静，不要跑\n• 询问您是否可以自由离开\n• 未与律师交谈前不要签署任何文件\n• 记住接触过程的细节\n\n如需全面的移民指导，请访问我们的 [移民指导](/immigration-guidance) 页面。\n\n**还有什么我可以帮您的？**",
+              "immigrationMenu": "关于移民方面有什么可以帮助您的？",
+              "immigrationSituation": "我可以帮助您解答移民相关问题。**哪个最符合您的情况？**",
+              "immigrationUrgent": {
+                "reminder": "🚨 **紧急权利提醒：**\n\n• **保持冷静** - 不要跑或抗拒\n• **您有权保持沉默** - 您不必回答有关身份的问题\n• **询问您是否可以自由离开** - 如果可以，平静地走开\n• **不要签署任何东西** 除非您完全理解\n• **要求律师** 然后再回答问题\n\n**这发生在哪里？**",
+                "atHome": "🏠 **您在家中的权利：**\n\n• **不要开门** 除非他们出示司法搜查令（由法官签署）\n• ICE 行政令（I-200 表格）不赋予他们进入的权利\n• 说：「我不同意你们进入我的家」\n• 如果他们强行进入，不要抗拒但声明您不同意\n• 如果可能，收集姓名和警号\n\n📞 **紧急联系方式：**\n• National Immigration Forum: 1-800-954-6287\n• ACLU: 发短信 \"IMMIGRANT\" 到 88823\n\n**立即联系移民律师：**",
+                "atWork": "💼 **您在工作场所的权利：**\n\n• 您有权保持沉默\n• 要求查看搜查令——仔细阅读\n• 不要逃跑、撒谎或使用假证件\n• 您可以拒绝回答有关身份的问题\n• 记住：您可以要求律师在场\n\n📋 您的雇主不能因为您行使权利而报复您。\n\n**了解更多关于工作场所突袭和雇主责任的信息：**",
+                "inPublic": "🚶 **您在公共场所/检查站的权利：**\n\n• 保持冷静，不要跑\n• 在检查站，可能会被问到公民身份\n• 您可以对移民身份保持沉默\n• 不要携带假证件\n• 如果被拘留，立即要求律师\n\n📞 **紧急联系方式：**\n• National Immigration Forum: 1-800-954-6287\n• DOJ Immigration Review: 1-800-898-7180\n\n**联系移民律师：**"
+              },
+              "immigrationPlanning": {
+                "question": "**您在为谁做准备？**\n\n我们有资源帮助您做好准备：",
+                "myself": "个人准备方面，请考虑：\n\n• 在任何接触之前**了解您的权利**\n• **准备一张紧急联系卡** 上面有律师信息\n• **将重要文件** 保存在安全且方便取用的地方\n• **制定家庭沟通计划**\n\n如果您有 DACA、TPS 或其他受保护身份，请关注续期和截止日期：",
+                "family": "**家庭计划资源：**\n\n为家庭准备应对可能的移民执法：\n\n• 指定一个可信赖的人负责子女照顾决策\n• 准备授权委托书\n• 将重要文件的副本放在方便取用的地方\n• 制定家庭应急计划\n• 了解您孩子在学校的权利\n\n访问我们全面的家庭计划指南：",
+                "workplace": "**工作场所准备：**\n\n为工作场所准备应对可能的 ICE 执法：\n\n• 了解司法搜查令和行政令的区别\n• 了解雇主和雇员的权利\n• 制定工作场所应对计划\n• 知道在哪里获得法律帮助\n\n访问我们的工作场所突袭指南："
+              },
+              "immigrationDetained": {
+                "question": "**目前的拘留情况是什么？**",
+                "iceDetention": "**如果在 ICE 拘留中：**\n\n📞 **您在拘留中的权利：**\n• 有权给家人和律师打电话\n• 有权联系您的领事馆\n• 有权要求保释听证（在大多数情况下）\n• 有权获得翻译\n\n💰 **保释信息：**\n• 保释金通常在 $1,500 到 $25,000 以上\n• 某些刑事定罪可能使您没有资格获得保释\n• 法官会考虑社区关系、逃跑风险和危险性\n\n**了解保释听证及如何准备：**",
+                "countyJail": "**如果因移民拘押在县看守所：**\n\n📋 **这意味着什么：**\n• ICE 已要求看守所在您的刑事案件结束后将您拘留最多48小时\n• 这是一个请求，不是命令（在许多州）\n• 一些看守所拒绝执行这些拘留请求\n\n⚖️ **您的权利：**\n• 您仍然可以在刑事案件中申请保释\n• 询问您的刑事辩护律师关于移民后果\n• 您有权与移民律师交谈\n\n**了解保释听证：",
+                "portOfEntry": "**在入境口岸（机场/边境）：**\n\n🛂 **重要信息：**\n• 在入境口岸适用不同的规则\n• CBP 在边境有更大的权力\n• 您仍然可以要求与律师交谈\n• 不要在不理解的情况下签署任何文件\n\n📞 **如果您是美国公民/绿卡持有者：**\n不能拒绝您入境，但可能会有延误。\n\n**立即联系移民律师：**",
+                "result": "**重要提示：** 移民法非常复杂。一位有经验的移民律师可以对您的案件产生重大影响。\n\n📍 **查找经过验证的移民律师：**"
+              },
+              "rightsMenu": "您想了解哪个权利话题？",
+              "rightsInfo": "**您的主要宪法权利：**\n\n🛡️ **沉默权**（第五修正案）\n您不能被强迫自证其罪。您所说的任何话都可能在法庭上被用作不利于您的证据。\n\n⚖️ **获得律师帮助的权利**（第六修正案）\n您有权获得律师帮助。如果您负担不起，法院将指定一名公设辩护人。\n\n📞 **打电话的权利**\n大多数州允许被登记入监后至少打一个电话联系家人或律师。\n\n📜 **知悉指控的权利**\n您必须被告知被指控的罪名。\n\n---\n如需更详细的信息，请访问我们的 [了解您的权利](/rights-info) 页面。\n\n**您接下来想做什么？**",
+              "processInfo": "**刑事司法流程：**\n\n**1. 逮捕和入监**（0-48小时）\n您被拘留、采集指纹和拍照。可能被关押直到提审。\n\n**2. 提审**（逮捕后24-72小时）\n首次出庭，宣读指控，您做出答辩，设定保释金。\n\n**3. 审前阶段**（数周到数月）\n证据开示、认罪协商以及提交各种动议。\n\n**4. 审判**（如果没有认罪协议）\n在法官或陪审团面前出示证据，由他们决定是否有罪。\n\n**5. 量刑**（如果被定罪）\n法官根据量刑指南和案件情况决定处罚。\n\n**6. 上诉**（可选）\n您可以通过上级法院对判决或刑罚提出质疑。\n\n---\n如需完整指南，请访问我们的 [刑事司法流程](/process) 页面。\n\n**您接下来想做什么？**",
+              "resourcesCategoryMenu": "您在寻找什么类型的资源？",
+              "resourcesMenu": "您在寻找什么类型的资源？",
+              "lawsMenu": "您想搜索什么？",
+              "enterZipPD": "请输入您的邮政编码以查找附近的公设辩护人办公室：",
+              "enterZipLegalAid": "请输入您的邮政编码以查找附近的法律援助组织：",
+              "invalidZip": "请输入有效的5位数邮政编码。",
+              "noPDFound": "未能在 {{zip}} 附近找到公设辩护人办公室。请尝试其他邮政编码或访问我们的 [资源页面](/diversion-programs) 了解更多选项。\n\n**还有什么我可以帮您的？**",
+              "noLegalAidFound": "未能在 {{zip}} 附近找到法律援助组织。请尝试其他邮政编码或访问我们的 [资源页面](/diversion-programs) 了解更多选项。\n\n**还有什么我可以帮您的？**",
+              "pdResults": "以下是 {{zip}} 附近的公设辩护人办公室：\n\n{{results}}\n\n**还有什么我可以帮您的？**",
+              "legalAidResults": "以下是 {{zip}} 附近的法律援助组织：\n\n{{results}}\n\n**还有什么我可以帮您的？**",
+              "searchError": "搜索时遇到了问题。您可以重试或查看其他选项。",
+              "whatElse": "还有什么我可以帮您的？",
+              "exportedWhatElse": "您的 PDF 已下载。\n\n**还有什么我可以帮您的？**",
+              "followUpResponse": "这是个很好的问题。根据您告诉我的情况，以下是我的建议……",
+              "whatToDoNow": "**您接下来想做什么？**",
+              "verifiedAgainst": "✓ 已根据 {{state}} 刑事法规验证",
+              "verifiedGeneric": "✓ 已根据官方刑事法规验证",
+              "askFollowUpPrompt": "您现在可以在下方输入任何后续问题。"
+            },
+            "replies": {
+              "urgentYes": "是的，我现在需要帮助",
+              "urgentNo": "不急，我有时间慢慢说",
+              "getHelp": "获取案件帮助",
+              "knowRights": "了解我的权利",
+              "findResources": "查找资源",
+              "legalAidResources": "法律援助资源和支持",
+              "personalizedGuidance": "个性化指导",
+              "immigrationEnforcement": "移民执法",
+              "rightsInfo": "权利信息",
+              "resources": "资源",
+              "lawsRecords": "法律和文件",
+              "attorneyTools": "律师工具",
+              "myRights": "我的权利",
+              "criminalJusticeProcess": "刑事司法流程",
+              "constitutionalRights": "宪法权利",
+              "justiceProcess": "司法流程",
+              "searchSeizure": "搜查和扣押",
+              "helpingFamily": "帮助家人",
+              "legalGlossary": "法律词汇表",
+              "findPublicDefender": "查找公设辩护人",
+              "legalAidOrgs": "法律援助机构",
+              "diversionPrograms": "转处计划",
+              "recordExpungement": "前科消除",
+              "documentSummarizer": "文件摘要工具",
+              "courtRecords": "法院记录搜索",
+              "statutesSearch": "法规搜索",
+              "documentLibrary": "文件库",
+              "stageArrest": "刚被逮捕/正在调查中",
+              "stageArraignment": "即将提审",
+              "stagePretrial": "审前程序",
+              "stageTrial": "已安排审判/审判进行中",
+              "stageSentencing": "量刑阶段",
+              "stageUnsure": "我不确定",
+              "inCustody": "是的，在押中",
+              "onBail": "已保释",
+              "ownRecognizance": "自行释放",
+              "notInCustody": "未被拘留",
+              "hasAttorney": "是的，我有律师代理",
+              "noAttorney": "没有，我需要找一个",
+              "privilegeContinue": "我理解了，继续",
+              "privilegeSkip": "跳过，获取一般性指导",
+              "viewGuidance": "查看我的指导",
+              "exportPdf": "导出为 PDF",
+              "saveGuidance": "保存此指导",
+              "findPublicDefenderAction": "查找公设辩护人",
+              "findLegalAidAction": "查找附近的法律援助",
+              "askFollowUp": "提出后续问题",
+              "moreOptions": "探索其他话题",
+              "retry": "重试",
+              "tryAgain": "尝试其他邮政编码",
+              "immUrgent": "正在经历执法行动",
+              "immPlanning": "计划/准备中",
+              "immDetained": "已被拘留/在诉讼中",
+              "immGeneralInfo": "只想了解一般信息",
+              "immAtHome": "在家中",
+              "immAtWork": "在工作中",
+              "immInPublic": "在公共场所/检查站",
+              "immMyself": "我自己",
+              "immFamily": "我的家人",
+              "immWorkplace": "我的工作场所",
+              "immIceDetention": "在 ICE 拘留中",
+              "immCountyJail": "因移民拘押在县看守所",
+              "immPortOfEntry": "在入境口岸",
+              "immFindAttorney": "查找移民律师",
+              "immDacaTps": "DACA/TPS 信息",
+              "immFamilyPlanning": "家庭计划指南",
+              "immWorkplaceRaids": "工作场所突袭指南",
+              "immBondHearings": "保释听证信息",
+              "immBackToHub": "返回移民中心",
+              "immGeneralHub": "一般信息",
+              "immSituationalGuides": "情景指南",
+              "immKnowYourRights": "了解您的权利",
+              "immFindDetained": "查找被拘留人员",
+              "immFindLawyer": "查找律师"
+            },
+            "header": {
+              "title": "法律指导对话",
+              "subtitle": "私密且安全"
+            },
+            "input": {
+              "placeholder": "提出后续问题……",
+              "selectOption": "选择上方的选项以继续",
+              "answering": "完成当前步骤以继续",
+              "descriptionPlaceholder": "描述发生了什么……",
+              "concernsPlaceholder": "您最担心什么？",
+              "zipPlaceholder": "输入5位数邮政编码……"
+            },
+            "voice": {
+              "listening": "正在听……",
+              "startListening": "开始语音输入",
+              "stopListening": "停止语音输入",
+              "recordingHint": "请说话……完成后再次点击麦克风。",
+              "notSupported": "不支持语音输入",
+              "notSupportedDesc": "您的浏览器不支持语音输入。请使用 Chrome、Edge 或 Safari 等现代浏览器。",
+              "permissionDenied": "麦克风权限被拒绝",
+              "permissionDeniedDesc": "请在浏览器设置中允许麦克风权限以使用语音输入。",
+              "networkError": "语音输入不可用",
+              "networkErrorDesc": "语音识别需要网络连接。请改为输入文字。",
+              "error": "语音输入错误",
+              "errorDesc": "语音输入出现错误，请重试。"
+            },
+            "footer": {
+              "privacy": "您的信息是私密的，会话结束后将被删除"
+            },
+            "exitWarning": {
+              "title": "您有尚未导出的指导内容",
+              "description": "如果您在未导出的情况下离开，您的指导内容将丢失。"
+            },
+            "export": {
+              "noData": "没有可导出的指导内容",
+              "success": "PDF 下载成功",
+              "error": "导出 PDF 失败"
+            },
+            "stateSelector": {
+              "placeholder": "搜索您所在的州……",
+              "noResults": "未找到相关州"
+            },
+            "chargeSelector": {
+              "title": "选择指控",
+              "selected": "已选",
+              "available": "可选",
+              "searchPlaceholder": "搜索所有指控……",
+              "loading": "正在加载指控……",
+              "noResults": "未找到匹配的指控",
+              "noCharges": "没有可用的指控",
+              "selectAtLeast": "请至少选择一项指控",
+              "continue": "继续，已选 {{count}} 项指控",
+              "categories": {
+                "all": "全部",
+                "felony": "重罪",
+                "misdemeanor": "轻罪",
+                "infraction": "违章"
+              }
+            },
+            "casePanel": {
+              "title": "您的案件信息",
+              "state": "州",
+              "charges": "指控",
+              "stage": "阶段",
+              "custody": "拘留状态",
+              "attorney": "律师",
+              "hasAttorney": "有",
+              "noAttorney": "没有",
+              "urgentSituation": "紧急情况",
+              "stages": {
+                "arrest": "调查/逮捕",
+                "arraignment": "提审",
+                "pretrial": "审前",
+                "trial": "审判",
+                "sentencing": "量刑",
+                "appeal": "上诉",
+                "unsure": "未知"
+              },
+              "custody_status": {
+                "yes": "在押中",
+                "bail": "已保释",
+                "recognizance": "自行释放",
+                "no": "未被拘留"
+              }
+            }
+          },
+          "exportWarning": {
+            "title": "重要提示：导出前请注意",
+            "intro": "本文件包含您提供的法律情况详情。请注意以下事项：",
+            "notLegalAdvice": "这不是法律建议",
+            "notLegalAdviceDesc": "仅为一般性法律信息",
+            "notPrivileged": "不受律师-客户保密特权保护",
+            "notPrivilegedDesc": "您创建和分享的文件可能会在法律诉讼中被对方要求提供",
+            "shareWithAttorney": "仅与您的律师分享",
+            "shareWithAttorneyDesc": "如果您有律师，请先与他们分享，然后再给其他人",
+            "recommendation": "我们建议在采取任何行动之前，先与持证律师讨论此指导内容。",
+            "confirmButton": "我已了解，导出 PDF"
+          },
+          "attorneyPortal": {
+            "hero": {
+              "title": "律师工具",
+              "subtitle": "为代理刑事和移民案件的持证律师提供的资源和工具。"
+            },
+            "disclaimer": "这些工具专为持证律师设计。文件生成功能需要确认律师执照资格。",
+            "comingSoon": "即将推出",
+            "documentGeneration": {
+              "title": "文件生成",
+              "description": "AI 驱动的常见刑事和移民文书起草工具。生成针对您客户案件量身定制的动议、通知和其他文件。",
+              "feature1": "延期动议、证据开示动议、减少保释金动议",
+              "feature2": "移民法庭文书（EOIR-28、保释备忘录）",
+              "feature3": "特定管辖区格式",
+              "getStarted": "开始使用",
+              "button": "即将推出"
+            },
+            "courtRecords": {
+              "title": "法院记录查询",
+              "description": "通过 PACER 搜索联邦法院记录，并通过 RECAP 免费获取文件。研究案件历史、案卷条目和已提交的文件。",
+              "feature1": "联邦法院 PACER 集成",
+              "feature2": "通过 RECAP 档案免费访问",
+              "feature3": "案卷搜索和文件检索",
+              "button": "搜索法院记录"
+            },
+            "sharedResources": {
+              "title": "共享资源",
+              "description": "这些资源对所有人开放，可能对您的执业有所帮助。",
+              "statutes": "法规查询",
+              "statutesDesc": "搜索州和联邦法律",
+              "documents": "文件库",
+              "documentsDesc": "法律表格和模板",
+              "glossary": "法律词汇表",
+              "glossaryDesc": "法律术语定义",
+              "courts": "法院定位",
+              "courtsDesc": "查找法院位置"
+            },
+            "guidanceNote": {
+              "title": "个性化指导",
+              "description": "我们的 AI 指导对话也面向律师开放，可以快速了解客户情况或查询权利和程序。",
+              "button": "获取指导"
+            },
+            "verify": {
+              "title": "律师身份验证",
+              "subtitle": "请验证您的律师执照以使用文件生成工具。",
+              "backToPortal": "返回律师门户",
+              "formTitle": "律师身份验证",
+              "formDescription": "确认所需的认证声明以使用律师文件工具。",
+              "attestationsTitle": "所需认证声明",
+              "attestation1": "我是一名持有有效执照的律师，目前在州律师协会中信誉良好，我正在代表我的客户使用这些工具。",
+              "attestation2": "我正在代表我的客户使用这些工具。",
+              "attestation3": "我理解律师-客户保密特权的保护取决于对这些工具的正确使用。",
+              "attestation4": "我接受",
+              "termsOfService": "服务条款",
+              "tosTitle": "律师工具服务条款",
+              "tosSubtitle": "请在接受前仔细阅读。",
+              "tosContent": "使用这些律师工具即表示您确认并同意以下内容：",
+              "privacyNotice": "您的会话数据将在30分钟后自动删除。",
+              "verifying": "正在验证……",
+              "submit": "验证并继续"
+            },
+            "session": {
+              "expiresIn": "会话到期时间",
+              "checking": "正在检查会话……",
+              "redirecting": "正在跳转到验证页面……"
+            },
+            "documents": {
+              "title": "文件生成",
+              "subtitle": "AI 驱动的刑事和移民案件文书起草工具。",
+              "barState": "执照所在州",
+              "criminal": "刑事",
+              "immigration": "移民",
+              "sessionNote": "您的会话将在30分钟无活动后自动结束。",
+              "endSession": "结束会话",
+              "comingSoonTitle": "模板即将推出",
+              "criminalComingSoon": "刑事法律模板包括延期动议、证据开示请求和减少保释金动议，正在开发中。",
+              "immigrationComingSoon": "移民模板包括 EOIR-28 表格、保释备忘录和变更审理地点动议，正在开发中。"
+            }
+          }        }
+      }
     }
   });
 
