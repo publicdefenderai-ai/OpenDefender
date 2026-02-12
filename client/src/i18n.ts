@@ -320,7 +320,7 @@ i18n
               "title": "Get Personalized Legal Guidance",
               "cancel": "Cancel",
               "stepProgress": "Step {{current}} of {{total}}: {{title}}",
-              "privacyNotice": "Your responses are not stored and are deleted when you close your session",
+              "privacyNotice": "Your data is encrypted and auto-deleted within 24 hours. However, AI prompts may be retained by our provider for up to 30 days and could be subject to legal process during that time.",
               "steps": {
                 "consent": "Privacy & Consent",
                 "jurisdiction": "Your State",
@@ -334,6 +334,9 @@ i18n
                 "generalInfo": "This tool provides general legal information only and is not a substitute for professional legal advice.",
                 "noStorage": "We do not store your personal information. All data is deleted when you close your session.",
                 "consultAttorney": "For specific legal advice, consult with a qualified attorney.",
+                "notPrivileged": "Your conversations with this AI are NOT protected by attorney-client privilege and could be requested by law enforcement or through legal process.",
+                "governmentDisclosure": "Our AI provider (Anthropic) may retain your prompts for up to 30 days. During this time, if the government issues a valid subpoena or court order, your conversations may be disclosed.",
+                "criminalWarning": "If you are under investigation or facing criminal charges, speak with a licensed attorney for confidential advice before sharing case details here.",
                 "checkboxLabel": "I understand and consent to continue",
                 "continueButton": "Continue"
               },
@@ -449,11 +452,19 @@ i18n
               },
               "privilegeWarning": {
                 "title": "Before You Share Details",
-                "notPrivate": "Unlike talking to a lawyer, what you type here is not private and could be used against you if you're ever asked about it in court.",
-                "recommendation": "We recommend speaking with a lawyer first. This step is optional—skip it to still receive general guidance.",
+                "notPrivate": "What you type here is NOT protected by attorney-client privilege. Your prompts are processed by Anthropic's AI and could be disclosed if requested through legal process (such as a subpoena or court order).",
+                "recommendation": "If you are under investigation or facing charges, we strongly recommend consulting a licensed attorney first. They can provide truly confidential advice. This step is optional—skip it to receive general guidance without sharing details.",
+                "governmentWarning": "Important: Anthropic may retain prompts for up to 30 days. During this time, your conversations could be disclosed pursuant to a valid legal request.",
                 "continueAnyway": "Continue Anyway",
                 "skipAndGetGuidance": "Skip & Get General Guidance",
                 "findLawyer": "Help Me Find a Lawyer"
+              },
+              "clearSession": {
+                "button": "Clear My Session",
+                "confirm": "Clear all data?",
+                "description": "This will delete all your case information from our servers immediately. This cannot be undone.",
+                "cancel": "Cancel",
+                "cleared": "Session cleared successfully"
               }
             },
             "dashboard": {
@@ -647,6 +658,16 @@ i18n
               "message": "Your personalized guidance has not been exported. To protect your privacy, we don't store this information. If you leave now, it will be lost.",
               "export": "Export",
               "proceed": "Proceed"
+            },
+            "clearSession": {
+              "title": "Clear Session Data",
+              "message": "This will permanently delete all your case information and guidance from memory. This action cannot be undone.",
+              "confirm": "Clear Session",
+              "cancel": "Cancel",
+              "successTitle": "Session Cleared",
+              "successMessage": "All session data has been cleared from memory.",
+              "errorTitle": "Error",
+              "errorMessage": "Failed to clear session. Please try again."
             }
           },
           "rights": {
@@ -3471,7 +3492,7 @@ i18n
               "title": "Obtenga Orientación Legal Personalizada",
               "cancel": "Cancelar",
               "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
-              "privacyNotice": "Sus respuestas no se almacenan y se eliminan cuando cierra su sesión",
+              "privacyNotice": "Sus datos están encriptados y se eliminan automáticamente dentro de 24 horas. Sin embargo, los mensajes de IA pueden ser retenidos por nuestro proveedor hasta por 30 días y podrían estar sujetos a procesos legales durante ese tiempo.",
               "steps": {
                 "consent": "Privacidad y Consentimiento",
                 "jurisdiction": "Su Estado",
@@ -3485,6 +3506,9 @@ i18n
                 "generalInfo": "Esta herramienta proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional.",
                 "noStorage": "No almacenamos su información personal. Todos los datos se eliminan cuando cierra su sesión.",
                 "consultAttorney": "Para asesoramiento legal específico, consulte con un abogado calificado.",
+                "notPrivileged": "Sus conversaciones con esta IA NO están protegidas por el privilegio abogado-cliente y podrían ser solicitadas por las autoridades o mediante un proceso legal.",
+                "governmentDisclosure": "Nuestro proveedor de IA (Anthropic) puede retener sus mensajes hasta por 30 días. Durante este tiempo, si el gobierno emite una citación válida u orden judicial, sus conversaciones podrían ser divulgadas.",
+                "criminalWarning": "Si está bajo investigación o enfrenta cargos criminales, hable con un abogado licenciado para recibir asesoramiento confidencial antes de compartir detalles de su caso aquí.",
                 "checkboxLabel": "Entiendo y acepto continuar",
                 "continueButton": "Continuar"
               },
@@ -3600,11 +3624,19 @@ i18n
               },
               "privilegeWarning": {
                 "title": "Antes de Compartir Detalles",
-                "notPrivate": "A diferencia de hablar con un abogado, lo que escriba aquí no es privado y podría usarse en su contra si alguna vez se le pregunta en la corte.",
-                "recommendation": "Recomendamos hablar primero con un abogado. Este paso es opcional—omítalo para recibir orientación general.",
+                "notPrivate": "Lo que escriba aquí NO está protegido por el privilegio abogado-cliente. Sus mensajes son procesados por la IA de Anthropic y podrían ser divulgados si se solicitan mediante un proceso legal (como una citación u orden judicial).",
+                "recommendation": "Si está bajo investigación o enfrenta cargos, recomendamos encarecidamente consultar primero con un abogado licenciado. Ellos pueden brindar asesoramiento verdaderamente confidencial. Este paso es opcional—omítalo para recibir orientación general sin compartir detalles.",
+                "governmentWarning": "Importante: Anthropic puede retener los mensajes hasta por 30 días. Durante este tiempo, sus conversaciones podrían ser divulgadas en respuesta a una solicitud legal válida.",
                 "continueAnyway": "Continuar de Todos Modos",
                 "skipAndGetGuidance": "Omitir y Obtener Orientación General",
                 "findLawyer": "Ayúdeme a Encontrar un Abogado"
+              },
+              "clearSession": {
+                "button": "Borrar Mi Sesión",
+                "confirm": "¿Borrar todos los datos?",
+                "description": "Esto eliminará toda la información de su caso de nuestros servidores inmediatamente. Esta acción no se puede deshacer.",
+                "cancel": "Cancelar",
+                "cleared": "Sesión borrada exitosamente"
               }
             },
             "dashboard": {
@@ -3798,6 +3830,16 @@ i18n
               "message": "Su orientación personalizada no ha sido exportada. Para proteger su privacidad, no almacenamos esta información. Si se va ahora, se perderá.",
               "export": "Exportar",
               "proceed": "Continuar"
+            },
+            "clearSession": {
+              "title": "Borrar Datos de Sesión",
+              "message": "Esto eliminará permanentemente toda la información de su caso y orientación de la memoria. Esta acción no se puede deshacer.",
+              "confirm": "Borrar Sesión",
+              "cancel": "Cancelar",
+              "successTitle": "Sesión Borrada",
+              "successMessage": "Todos los datos de la sesión han sido borrados de la memoria.",
+              "errorTitle": "Error",
+              "errorMessage": "No se pudo borrar la sesión. Por favor intente de nuevo."
             }
           },
           "rights": {

@@ -25,9 +25,10 @@ interface QAFlowProps {
   onComplete: (data: any) => void;
   onCancel: () => void;
   onFindLawyer?: () => void;
+  onClearSession?: () => void;
 }
 
-export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
+export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
@@ -165,11 +166,21 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
         </AnimatePresence>
 
         {/* Privacy Notice */}
-        <div className="flex items-center space-x-2 mt-6 p-4 bg-muted rounded-lg">
-          <Lock className="h-4 w-4 text-muted-foreground" />
-          <p className="text-xs text-muted-foreground">
-            {t('legalGuidance.qaFlow.privacyNotice')}
-          </p>
+        <div className="flex items-center justify-between mt-6 p-4 bg-muted rounded-lg">
+          <div className="flex items-center space-x-2">
+            <Lock className="h-4 w-4 text-muted-foreground" />
+            <p className="text-xs text-muted-foreground">
+              {t('legalGuidance.qaFlow.privacyNotice')}
+            </p>
+          </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onClearSession}
+            className="text-xs text-red-600 hover:text-red-700"
+          >
+            {t('legalGuidance.qaFlow.clearSession.button')}
+          </Button>
         </div>
       </CardContent>
 
@@ -177,6 +188,12 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
       <Dialog open={showPrivilegeWarning} onOpenChange={setShowPrivilegeWarning}>
         <DialogContent className="max-w-md">
           <DialogHeader>
+            <div className="flex items-center gap-2 p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-lg mb-4">
+              <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
+              <p className="text-sm font-medium text-red-700 dark:text-red-300">
+                {t('legalGuidance.qaFlow.privilegeWarning.criminalWarning')}
+              </p>
+            </div>
             <DialogTitle className="flex items-center gap-2 text-amber-600">
               <AlertTriangle className="h-5 w-5" />
               {t('legalGuidance.qaFlow.privilegeWarning.title')}
@@ -187,6 +204,9 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer }: QAFlowProps) {
               </p>
               <p>
                 {t('legalGuidance.qaFlow.privilegeWarning.recommendation')}
+              </p>
+              <p className="text-amber-700 dark:text-amber-300 font-medium">
+                {t('legalGuidance.qaFlow.privilegeWarning.governmentWarning')}
               </p>
             </DialogDescription>
           </DialogHeader>
@@ -229,6 +249,19 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
           <p>
             {t('legalGuidance.qaFlow.consent.consultAttorney')}
           </p>
+
+          {/* Warning disclosures */}
+          <div className="p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg space-y-2">
+            <p>
+              {t('legalGuidance.qaFlow.consent.notPrivileged')}
+            </p>
+            <p>
+              {t('legalGuidance.qaFlow.consent.governmentDisclosure')}
+            </p>
+            <p>
+              {t('legalGuidance.qaFlow.consent.criminalWarning')}
+            </p>
+          </div>
         </div>
       </div>
 

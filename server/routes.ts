@@ -941,25 +941,42 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.delete("/api/session/:sessionId", writeRateLimiter, async (req, res) => {
     try {
       const { sessionId } = req.params;
-      
+
       if (!sessionId || typeof sessionId !== 'string') {
         return res.status(400).json({ success: false, error: "Valid session ID required" });
       }
-      
+
       // Delete session data from storage
       await storage.deleteSessionData(sessionId);
-      
+
       // Clear AI guidance cache (uses singleton already imported at top)
       clearSessionCache(sessionId);
-      
-      res.json({ 
-        success: true, 
+
+      res.json({
+        success: true,
         message: "Session data deleted",
         timestamp: new Date().toISOString()
       });
     } catch (error) {
       console.error("Failed to delete session data:", error);
       res.status(500).json({ success: false, error: "Failed to delete session data" });
+    }
+  });
+
+  // Clear Session - Clear all cached guidance data (privacy feature)
+  app.post("/api/session/clear", writeRateLimiter, (_req, res) => {
+    try {
+      // Clear all AI guidance cache
+      clearSessionCache();
+
+      res.json({
+        success: true,
+        message: "Session cleared",
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error("Failed to clear session:", error);
+      res.status(500).json({ success: false, error: "Failed to clear session" });
     }
   });
 

@@ -15,9 +15,6 @@ import {
   KY_COUNTIES, OR_COUNTIES, OK_COUNTIES, CT_COUNTIES, UT_COUNTIES,
   IA_COUNTIES, NV_COUNTIES, AR_COUNTIES, MS_COUNTIES, KS_COUNTIES,
   NM_COUNTIES, NE_COUNTIES, ID_COUNTIES,
-  AK_BOROUGHS, DE_COUNTIES, HI_COUNTIES, ME_COUNTIES, MT_COUNTIES,
-  NH_COUNTIES, ND_COUNTIES, RI_COUNTIES, SD_COUNTIES, VT_COUNTIES,
-  WV_COUNTIES, WY_COUNTIES, DC_WARDS,
 } from "@shared/templates/county-data";
 import {
   FormControl,
@@ -254,10 +251,6 @@ const COUNTY_MAP: Record<string, { value: string; label: string }[]> = {
   CT: CT_COUNTIES, UT: UT_COUNTIES, IA: IA_COUNTIES, NV: NV_COUNTIES,
   AR: AR_COUNTIES, MS: MS_COUNTIES, KS: KS_COUNTIES, NM: NM_COUNTIES,
   NE: NE_COUNTIES, ID: ID_COUNTIES,
-  AK: AK_BOROUGHS, DE: DE_COUNTIES, HI: HI_COUNTIES, ME: ME_COUNTIES,
-  MT: MT_COUNTIES, NH: NH_COUNTIES, ND: ND_COUNTIES, RI: RI_COUNTIES,
-  SD: SD_COUNTIES, VT: VT_COUNTIES, WV: WV_COUNTIES, WY: WY_COUNTIES,
-  DC: DC_WARDS,
 };
 
 const DISTRICT_DIVISIONS: Record<string, { value: string; label: string }[]> = {
@@ -473,33 +466,6 @@ const ALL_DISTRICTS = [
   { code: "DNE", label: "District of Nebraska (DNE)", rules: "DNE local rules, 12pt font", jurisdiction: "NE" },
   // Idaho
   { code: "DID", label: "District of Idaho (DID)", rules: "DID local rules, 12pt font", jurisdiction: "ID" },
-  // Alaska
-  { code: "DAK", label: "District of Alaska (DAK)", rules: "DAK local rules, 12pt font", jurisdiction: "AK" },
-  // Delaware
-  { code: "DDE", label: "District of Delaware (DDE)", rules: "DDE local rules, 12pt font", jurisdiction: "DE" },
-  // Hawaii
-  { code: "DHI", label: "District of Hawaii (DHI)", rules: "DHI local rules, 12pt font", jurisdiction: "HI" },
-  // Maine
-  { code: "DME", label: "District of Maine (DME)", rules: "DME local rules, 12pt font", jurisdiction: "ME" },
-  // Montana
-  { code: "DMT", label: "District of Montana (DMT)", rules: "DMT local rules, 12pt font", jurisdiction: "MT" },
-  // New Hampshire
-  { code: "DNH", label: "District of New Hampshire (DNH)", rules: "DNH local rules, 12pt font", jurisdiction: "NH" },
-  // North Dakota
-  { code: "DND", label: "District of North Dakota (DND)", rules: "DND local rules, 12pt font", jurisdiction: "ND" },
-  // Rhode Island
-  { code: "DRI", label: "District of Rhode Island (DRI)", rules: "DRI local rules, 12pt font", jurisdiction: "RI" },
-  // South Dakota
-  { code: "DSD", label: "District of South Dakota (DSD)", rules: "DSD local rules, 12pt font", jurisdiction: "SD" },
-  // Vermont
-  { code: "DVT", label: "District of Vermont (DVT)", rules: "DVT local rules, 12pt font", jurisdiction: "VT" },
-  // West Virginia
-  { code: "NDWV", label: "Northern District of West Virginia (NDWV)", rules: "NDWV local rules, 12pt font", jurisdiction: "WV" },
-  { code: "SDWV", label: "Southern District of West Virginia (SDWV)", rules: "SDWV local rules, 12pt font", jurisdiction: "WV" },
-  // Wyoming
-  { code: "DWY", label: "District of Wyoming (DWY)", rules: "DWY local rules, 12pt font", jurisdiction: "WY" },
-  // District of Columbia
-  { code: "DDC", label: "U.S. District Court for the District of Columbia (DDC)", rules: "DDC local rules, 12pt font", jurisdiction: "DC" },
 ];
 
 export function JurisdictionSelector({
@@ -542,57 +508,44 @@ export function JurisdictionSelector({
   );
 
   const jurisdictions = [
-    { value: "AL", label: "Alabama", description: "Uses Alabama Code citations" },
-    { value: "AK", label: "Alaska", description: "Uses Alaska Statutes citations" },
-    { value: "AZ", label: "Arizona", description: "Uses Arizona Revised Statutes citations" },
-    { value: "AR", label: "Arkansas", description: "Uses Arkansas Code Annotated citations" },
     { value: "CA", label: "California", description: "Uses CA Penal Code citations" },
-    { value: "CO", label: "Colorado", description: "Uses Colorado Revised Statutes citations" },
-    { value: "CT", label: "Connecticut", description: "Uses Connecticut General Statutes citations" },
-    { value: "DE", label: "Delaware", description: "Uses Delaware Code citations" },
-    { value: "DC", label: "District of Columbia", description: "Uses D.C. Code citations" },
-    { value: "FL", label: "Florida", description: "Uses FL Rules of Criminal Procedure citations" },
-    { value: "GA", label: "Georgia", description: "Uses Official Code of Georgia citations" },
-    { value: "HI", label: "Hawaii", description: "Uses Hawaii Revised Statutes citations" },
-    { value: "ID", label: "Idaho", description: "Uses Idaho Code citations" },
-    { value: "IL", label: "Illinois", description: "Uses Illinois Compiled Statutes citations" },
-    { value: "IN", label: "Indiana", description: "Uses Indiana Code citations" },
-    { value: "IA", label: "Iowa", description: "Uses Iowa Code citations" },
-    { value: "KS", label: "Kansas", description: "Uses Kansas Statutes Annotated citations" },
-    { value: "KY", label: "Kentucky", description: "Uses Kentucky Revised Statutes citations" },
-    { value: "LA", label: "Louisiana", description: "Uses Louisiana Code of Criminal Procedure citations" },
-    { value: "ME", label: "Maine", description: "Uses Maine Revised Statutes citations" },
-    { value: "MD", label: "Maryland", description: "Uses Maryland Code citations" },
-    { value: "MA", label: "Massachusetts", description: "Uses MA General Laws citations" },
-    { value: "MI", label: "Michigan", description: "Uses Michigan Court Rules citations" },
-    { value: "MN", label: "Minnesota", description: "Uses Minnesota Statutes citations" },
-    { value: "MS", label: "Mississippi", description: "Uses Mississippi Code Annotated citations" },
-    { value: "MO", label: "Missouri", description: "Uses Missouri Revised Statutes citations" },
-    { value: "MT", label: "Montana", description: "Uses Montana Code Annotated citations" },
-    { value: "NE", label: "Nebraska", description: "Uses Nebraska Revised Statutes citations" },
-    { value: "NV", label: "Nevada", description: "Uses Nevada Revised Statutes citations" },
-    { value: "NH", label: "New Hampshire", description: "Uses New Hampshire Revised Statutes citations" },
-    { value: "NJ", label: "New Jersey", description: "Uses NJ Court Rules citations" },
-    { value: "NM", label: "New Mexico", description: "Uses New Mexico Statutes Annotated citations" },
     { value: "NY", label: "New York", description: "Uses NY Criminal Procedure Law citations" },
-    { value: "NC", label: "North Carolina", description: "Uses NC General Statutes citations" },
-    { value: "ND", label: "North Dakota", description: "Uses North Dakota Century Code citations" },
-    { value: "OH", label: "Ohio", description: "Uses Ohio Revised Code citations" },
-    { value: "OK", label: "Oklahoma", description: "Uses Oklahoma Statutes citations" },
-    { value: "OR", label: "Oregon", description: "Uses Oregon Revised Statutes citations" },
-    { value: "PA", label: "Pennsylvania", description: "Uses PA Rules of Criminal Procedure citations" },
-    { value: "RI", label: "Rhode Island", description: "Uses Rhode Island General Laws citations" },
-    { value: "SC", label: "South Carolina", description: "Uses SC Code Annotated citations" },
-    { value: "SD", label: "South Dakota", description: "Uses South Dakota Codified Laws citations" },
-    { value: "TN", label: "Tennessee", description: "Uses Tennessee Code Annotated citations" },
     { value: "TX", label: "Texas", description: "Uses TX Code of Criminal Procedure citations" },
-    { value: "UT", label: "Utah", description: "Uses Utah Code Annotated citations" },
-    { value: "VT", label: "Vermont", description: "Uses Vermont Statutes Annotated citations" },
+    { value: "FL", label: "Florida", description: "Uses FL Rules of Criminal Procedure citations" },
+    { value: "PA", label: "Pennsylvania", description: "Uses PA Rules of Criminal Procedure citations" },
+    { value: "IL", label: "Illinois", description: "Uses Illinois Compiled Statutes citations" },
+    { value: "OH", label: "Ohio", description: "Uses Ohio Revised Code citations" },
+    { value: "GA", label: "Georgia", description: "Uses Official Code of Georgia citations" },
+    { value: "NC", label: "North Carolina", description: "Uses NC General Statutes citations" },
+    { value: "MI", label: "Michigan", description: "Uses Michigan Court Rules citations" },
+    { value: "NJ", label: "New Jersey", description: "Uses NJ Court Rules citations" },
     { value: "VA", label: "Virginia", description: "Uses Virginia Code citations" },
     { value: "WA", label: "Washington", description: "Uses Washington Court Rules citations" },
-    { value: "WV", label: "West Virginia", description: "Uses West Virginia Code citations" },
+    { value: "AZ", label: "Arizona", description: "Uses Arizona Revised Statutes citations" },
+    { value: "MA", label: "Massachusetts", description: "Uses MA General Laws citations" },
+    { value: "TN", label: "Tennessee", description: "Uses Tennessee Code Annotated citations" },
+    { value: "IN", label: "Indiana", description: "Uses Indiana Code citations" },
+    { value: "MD", label: "Maryland", description: "Uses Maryland Code citations" },
+    { value: "MO", label: "Missouri", description: "Uses Missouri Revised Statutes citations" },
     { value: "WI", label: "Wisconsin", description: "Uses Wisconsin Statutes citations" },
-    { value: "WY", label: "Wyoming", description: "Uses Wyoming Statutes citations" },
+    { value: "CO", label: "Colorado", description: "Uses Colorado Revised Statutes citations" },
+    { value: "MN", label: "Minnesota", description: "Uses Minnesota Statutes citations" },
+    { value: "SC", label: "South Carolina", description: "Uses SC Code Annotated citations" },
+    { value: "AL", label: "Alabama", description: "Uses Alabama Code citations" },
+    { value: "LA", label: "Louisiana", description: "Uses Louisiana Code of Criminal Procedure citations" },
+    { value: "KY", label: "Kentucky", description: "Uses Kentucky Revised Statutes citations" },
+    { value: "OR", label: "Oregon", description: "Uses Oregon Revised Statutes citations" },
+    { value: "OK", label: "Oklahoma", description: "Uses Oklahoma Statutes citations" },
+    { value: "CT", label: "Connecticut", description: "Uses Connecticut General Statutes citations" },
+    { value: "UT", label: "Utah", description: "Uses Utah Code citations" },
+    { value: "IA", label: "Iowa", description: "Uses Iowa Code citations" },
+    { value: "NV", label: "Nevada", description: "Uses Nevada Revised Statutes citations" },
+    { value: "AR", label: "Arkansas", description: "Uses Arkansas Code citations" },
+    { value: "MS", label: "Mississippi", description: "Uses Mississippi Code citations" },
+    { value: "KS", label: "Kansas", description: "Uses Kansas Statutes citations" },
+    { value: "NM", label: "New Mexico", description: "Uses New Mexico Statutes citations" },
+    { value: "NE", label: "Nebraska", description: "Uses Nebraska Revised Statutes citations" },
+    { value: "ID", label: "Idaho", description: "Uses Idaho Code citations" },
     { value: "generic", label: "Other / Generic", description: "Standard legal language" },
   ];
 

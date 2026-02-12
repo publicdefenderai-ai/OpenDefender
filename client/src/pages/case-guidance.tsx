@@ -35,6 +35,7 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
 import { AnimatedProgressBar } from "@/components/chat/progress-indicator";
+import { useToast } from "@/hooks/use-toast";
 
 interface ImmediateAction {
   action: string;
@@ -298,6 +299,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 export default function CaseGuidance() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
+  const { toast } = useToast();
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const { generateGuidance, deleteGuidance } = useLegalGuidance();
@@ -309,6 +311,9 @@ export default function CaseGuidance() {
   const [showExitWarning, setShowExitWarning] = useState(false);
   const [hasExported, setHasExported] = useState(false);
   const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null);
+
+  // Clear session confirmation state
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
 
   // Navigation guard callbacks - memoized to prevent recreation
   const shouldBlockNavigation = useCallback(() => {
@@ -468,6 +473,34 @@ export default function CaseGuidance() {
     setShowQAFlow(true);
   };
 
+  // Clear session handlers
+  const handleClearSession = () => {
+    setShowClearConfirm(true);
+  };
+
+  const confirmClearSession = async () => {
+    try {
+      await fetch('/api/session/clear', { method: 'POST' });
+      // Reset all local state
+      setGuidanceResult(null);
+      setShowQAFlow(false);
+      setHasExported(false);
+      setShowClearConfirm(false);
+      // Show success toast
+      toast({
+        title: t('case.clearSession.successTitle'),
+        description: t('case.clearSession.successMessage'),
+      });
+    } catch (error) {
+      console.error('Failed to clear session:', error);
+      toast({
+        title: t('case.clearSession.errorTitle'),
+        description: t('case.clearSession.errorMessage'),
+        variant: 'destructive',
+      });
+    }
+  };
+
   const handlePDSearch = async () => {
     if (!pdZipCode || pdZipCode.length !== 5) {
       setPdError("Please enter a valid 5-digit ZIP code");
@@ -542,13 +575,14 @@ export default function CaseGuidance() {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="max-w-7xl mx-auto px-4 py-8">
-          <QAFlow 
+          <QAFlow
             onComplete={handleQAComplete}
             onCancel={() => setShowQAFlow(false)}
             onFindLawyer={() => {
               setShowQAFlow(false);
               setShowPublicDefenderModal(true);
             }}
+            onClearSession={handleClearSession}
           />
         </main>
         <Footer />
@@ -747,7 +781,40 @@ export default function CaseGuidance() {
             </div>
           </DialogContent>
         </Dialog>
-        
+
+        {/* Clear Session Confirmation Dialog */}
+        <Dialog open={showClearConfirm} onOpenChange={setShowClearConfirm}>
+          <DialogContent className="max-w-md">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <AlertTriangle className="h-5 w-5 text-red-500" />
+                {t('case.clearSession.title')}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="space-y-4">
+              <p className="text-muted-foreground">
+                {t('case.clearSession.message')}
+              </p>
+              <div className="flex gap-3 justify-end">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowClearConfirm(false)}
+                  data-testid="button-cancel-clear-session"
+                >
+                  {t('case.clearSession.cancel')}
+                </Button>
+                <Button
+                  variant="destructive"
+                  onClick={confirmClearSession}
+                  data-testid="button-confirm-clear-session"
+                >
+                  {t('case.clearSession.confirm')}
+                </Button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+
         <Footer />
       </div>
     );
