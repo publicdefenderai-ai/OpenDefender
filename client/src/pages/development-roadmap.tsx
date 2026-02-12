@@ -191,13 +191,13 @@ export default function DevelopmentRoadmap() {
       impactKey: "developmentRoadmap.items.securityAudit.impact"
     },
     {
-      id: "bilingual-support",
+      id: "trilingual-support",
       titleKey: "developmentRoadmap.items.bilingualSupport.title",
       descriptionKey: "developmentRoadmap.items.bilingualSupport.description",
       status: "completed",
       priority: "high",
       category: "features",
-      estimatedCompletion: "Completed Jan 2026",
+      estimatedCompletion: "Completed Feb 2026",
       progress: 100,
       impactKey: "developmentRoadmap.items.bilingualSupport.impact"
     },

@@ -2411,13 +2411,13 @@ i18n
                 "impact": "Stronger data privacy protections and a cleaner, more maintainable codebase"
               },
               "bilingualSupport": {
-                "title": "Bilingual English/Spanish Support",
-                "description": "Full bilingual support across the entire platform including case guidance, rights information, criminal charges, glossary terms, immigration guidance, case timeline, quick-reference cards, and site-wide search.",
-                "impact": "Accessible legal information for Spanish-speaking communities navigating the justice system"
+                "title": "Trilingual English/Spanish/Chinese Support",
+                "description": "Full trilingual support across the entire platform including case guidance, rights information, criminal charges, glossary terms, immigration guidance, case timeline, quick-reference cards, and site-wide search. Over 3,150 translation keys in each language.",
+                "impact": "Accessible legal information for Spanish-speaking and Chinese-speaking communities navigating the justice system"
               },
               "additionalLanguages": {
                 "title": "Additional Language Support",
-                "description": "Expand beyond English and Spanish to include Chinese, Vietnamese, Korean, Tagalog, and other languages common in immigrant communities.",
+                "description": "Expand beyond English, Spanish, and Chinese to include Vietnamese, Korean, Tagalog, and other languages common in immigrant communities.",
                 "impact": "Broader access for non-English speaking individuals navigating the justice system"
               },
               "expandedJurisdictions": {
@@ -5583,13 +5583,13 @@ i18n
                 "impact": "Protecciones de privacidad de datos más fuertes y un código más limpio y mantenible"
               },
               "bilingualSupport": {
-                "title": "Soporte Bilingüe Inglés/Español",
-                "description": "Soporte bilingüe completo en toda la plataforma incluyendo orientación de casos, información de derechos, cargos penales, términos del glosario, orientación migratoria, línea de tiempo de casos, tarjetas de referencia rápida y búsqueda en todo el sitio.",
-                "impact": "Información legal accesible para comunidades hispanohablantes que navegan el sistema de justicia"
+                "title": "Soporte Trilingüe Inglés/Español/Chino",
+                "description": "Soporte trilingüe completo en toda la plataforma incluyendo orientación de casos, información de derechos, cargos penales, términos del glosario, orientación migratoria, línea de tiempo de casos, tarjetas de referencia rápida y búsqueda en todo el sitio. Más de 3,150 claves de traducción en cada idioma.",
+                "impact": "Información legal accesible para comunidades hispanohablantes y de habla china que navegan el sistema de justicia"
               },
               "additionalLanguages": {
                 "title": "Soporte de Idiomas Adicionales",
-                "description": "Expandir más allá del inglés y español para incluir chino, vietnamita, coreano, tagalo y otros idiomas comunes en comunidades inmigrantes.",
+                "description": "Expandir más allá del inglés, español y chino para incluir vietnamita, coreano, tagalo y otros idiomas comunes en comunidades inmigrantes.",
                 "impact": "Acceso más amplio para personas que no hablan inglés navegando el sistema de justicia"
               },
               "expandedJurisdictions": {
@@ -8734,13 +8734,13 @@ i18n
                 "impact": "更强的数据隐私保护和更干净、更易维护的代码库"
               },
               "bilingualSupport": {
-                "title": "英语/西班牙语双语支持",
-                "description": "在整个平台上提供完整的双语支持，包括案件指导、权利信息、刑事指控、术语表、移民指导、案件时间线、速查卡片和全站搜索。",
-                "impact": "为使用西班牙语的社区提供可访问的法律信息，帮助他们了解司法系统"
+                "title": "英语/西班牙语/中文三语支持",
+                "description": "在整个平台上提供完整的三语支持，包括案件指导、权利信息、刑事指控、术语表、移民指导、案件时间线、速查卡片和全站搜索。每种语言超过3,150个翻译键。",
+                "impact": "为使用西班牙语和中文的社区提供可访问的法律信息，帮助他们了解司法系统"
               },
               "additionalLanguages": {
                 "title": "更多语言支持",
-                "description": "在英语和西班牙语之外扩展到中文、越南语、韩语、他加禄语以及移民社区中常用的其他语言。",
+                "description": "在英语、西班牙语和中文之外扩展到越南语、韩语、他加禄语以及移民社区中常用的其他语言。",
                 "impact": "为不讲英语的个人提供更广泛的司法系统导航支持"
               },
               "expandedJurisdictions": {

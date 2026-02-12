@@ -43,7 +43,7 @@ const endpoints: Endpoint[] = [
     tag: "Search",
     parameters: [
       { name: "q", required: true, description: "Search query (2-100 characters)", example: "DUI first offense" },
-      { name: "lang", required: false, description: "Language (en or es)", example: "en" },
+      { name: "lang", required: false, description: "Language (en, es, or zh)", example: "en" },
       { name: "types", required: false, description: "Filter by types (comma-separated)", example: "charge,glossary" },
       { name: "limit", required: false, description: "Max results (1-50)", example: "20" }
     ],
@@ -79,7 +79,7 @@ const endpoints: Endpoint[] = [
     tag: "Data",
     parameters: [
       { name: "id", required: true, description: "Charge ID", example: "ca-dui-first-offense" },
-      { name: "lang", required: false, description: "Language for translations", example: "es" }
+      { name: "lang", required: false, description: "Language for translations (en, es, or zh)", example: "es" }
     ]
   },
   {
@@ -98,10 +98,10 @@ const endpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/glossary",
     summary: "List legal terms",
-    description: "Get legal terminology definitions written at a 6th-8th grade reading level. Bilingual support.",
+    description: "Get legal terminology definitions written at a 6th-8th grade reading level. Trilingual support (English, Spanish, Chinese).",
     tag: "Data",
     parameters: [
-      { name: "lang", required: false, description: "Language (en or es)", example: "en" }
+      { name: "lang", required: false, description: "Language (en, es, or zh)", example: "en" }
     ]
   },
   {

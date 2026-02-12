@@ -71,7 +71,7 @@ export default function TechDocs() {
             <CardContent>
               <p className="text-sm text-muted-foreground mb-4">
                 Embed search, Know Your Rights cards, and legal glossary widgets on your website 
-                with customizable themes and bilingual support.
+                with customizable themes and trilingual support (English, Spanish, Chinese).
               </p>
               <Button asChild>
                 <Link href="/widgets">
