@@ -80,8 +80,8 @@ function BetaBanner() {
             Beta
           </span>
           <p className="text-sm text-muted-foreground truncate sm:whitespace-normal">
-            <span className="hidden sm:inline">Beta Version — Our guidance is carefully researched, but we're still refining features based on user feedback.</span>
-            <span className="sm:hidden">Beta — We're still refining features based on feedback.</span>
+            <span className="hidden sm:inline">Our guidance is carefully researched, but we're still refining features based on user feedback.</span>
+            <span className="sm:hidden">We're still refining features based on feedback.</span>
           </p>
         </div>
         <button
