@@ -246,17 +246,6 @@ export default function DevelopmentRoadmap() {
       impactKey: "developmentRoadmap.items.mobileApp.impact"
     },
     {
-      id: "expanded-jurisdictions",
-      titleKey: "developmentRoadmap.items.expandedJurisdictions.title",
-      descriptionKey: "developmentRoadmap.items.expandedJurisdictions.description",
-      status: "planned",
-      priority: "medium",
-      category: "data",
-      estimatedCompletion: "Ongoing",
-      easyWin: true,
-      impactKey: "developmentRoadmap.items.expandedJurisdictions.impact"
-    },
-    {
       id: "judge-analytics",
       titleKey: "developmentRoadmap.items.judgeAnalytics.title",
       descriptionKey: "developmentRoadmap.items.judgeAnalytics.description",
