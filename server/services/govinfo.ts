@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { devLog, errLog } from '../utils/dev-logger';
 
 const GOVINFO_BASE_URL = 'https://api.govinfo.gov';
 const API_KEY = process.env.GOVINFO_API_KEY;
@@ -43,7 +44,7 @@ class GovInfoService {
 
   constructor() {
     if (!API_KEY) {
-      console.warn('GOVINFO_API_KEY not set - GovInfo integration will not work');
+      devLog('GOVINFO_API_KEY not set - GovInfo integration will not work');
       this.apiKey = '';
     } else {
       this.apiKey = API_KEY;
@@ -55,7 +56,7 @@ class GovInfoService {
    */
   async search(query: string, collection?: string, pageSize: number = 100): Promise<GovInfoSearchResult | null> {
     if (!this.apiKey) {
-      console.error('GovInfo API key not configured');
+      errLog('GovInfo API key not configured');
       return null;
     }
 
@@ -97,7 +98,7 @@ class GovInfoService {
         packages: response.data.packages || [],
       };
     } catch (error) {
-      console.error('GovInfo search failed:', error);
+      errLog('GovInfo search failed', error);
       return null;
     }
   }
@@ -107,21 +108,22 @@ class GovInfoService {
    */
   async getPackageDetails(packageId: string): Promise<GovInfoPackageDetails | null> {
     if (!this.apiKey) {
-      console.error('GovInfo API key not configured');
+      errLog('GovInfo API key not configured');
       return null;
     }
 
     try {
       const response = await axios.get(
-        `${GOVINFO_BASE_URL}/packages/${packageId}/summary?api_key=${this.apiKey}`,
+        `${GOVINFO_BASE_URL}/packages/${packageId}/summary`,
         {
+          headers: { 'X-Api-Key': this.apiKey },
           timeout: 15000,
         }
       );
 
       return response.data;
     } catch (error) {
-      console.error(`GovInfo package details fetch failed for ${packageId}:`, error);
+      errLog(`GovInfo package details fetch failed for ${packageId}`, error);
       return null;
     }
   }
@@ -131,14 +133,15 @@ class GovInfoService {
    */
   async getPackageText(packageId: string): Promise<string | null> {
     if (!this.apiKey) {
-      console.error('GovInfo API key not configured');
+      errLog('GovInfo API key not configured');
       return null;
     }
 
     try {
       const response = await axios.get(
-        `${GOVINFO_BASE_URL}/packages/${packageId}/htm?api_key=${this.apiKey}`,
+        `${GOVINFO_BASE_URL}/packages/${packageId}/htm`,
         {
+          headers: { 'X-Api-Key': this.apiKey },
           timeout: 30000,
           responseType: 'text',
         }
@@ -146,7 +149,7 @@ class GovInfoService {
 
       return response.data;
     } catch (error) {
-      console.error(`GovInfo package text fetch failed for ${packageId}:`, error);
+      errLog(`GovInfo package text fetch failed for ${packageId}`, error);
       return null;
     }
   }
@@ -183,21 +186,22 @@ class GovInfoService {
    */
   async getRelatedDocuments(packageId: string): Promise<any> {
     if (!this.apiKey) {
-      console.error('GovInfo API key not configured');
+      errLog('GovInfo API key not configured');
       return null;
     }
 
     try {
       const response = await axios.get(
-        `${GOVINFO_BASE_URL}/related/${packageId}?api_key=${this.apiKey}`,
+        `${GOVINFO_BASE_URL}/related/${packageId}`,
         {
+          headers: { 'X-Api-Key': this.apiKey },
           timeout: 15000,
         }
       );
 
       return response.data;
     } catch (error) {
-      console.error(`GovInfo related documents fetch failed for ${packageId}:`, error);
+      errLog(`GovInfo related documents fetch failed for ${packageId}`, error);
       return null;
     }
   }

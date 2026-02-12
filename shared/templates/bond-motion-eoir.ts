@@ -402,7 +402,6 @@ Present facts favorably for bond release.`,
       helpText: "AI generates the legal argument for bond redetermination.",
       aiPromptTemplate: `Generate a legal argument for a bond redetermination motion in EOIR immigration court.
 
-Respondent name: {{respondentName}}
 Immigration court: {{immigrationCourt}}
 Detention facility: {{detentionFacility}}
 Date of arrest: {{dateOfArrest}}

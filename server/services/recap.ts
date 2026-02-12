@@ -1,10 +1,11 @@
 import axios from 'axios';
+import { devLog, errLog } from '../utils/dev-logger';
 
 const COURTLISTENER_BASE_URL = 'https://www.courtlistener.com/api/rest/v4';
 const COURTLISTENER_TOKEN = process.env.COURTLISTENER_API_TOKEN;
 
 if (!COURTLISTENER_TOKEN) {
-  console.warn('Warning: COURTLISTENER_API_TOKEN not set. RECAP features will be limited.');
+  devLog('Warning: COURTLISTENER_API_TOKEN not set. RECAP features will be limited.');
 }
 
 interface CourtListenerSearchParams {
@@ -102,7 +103,7 @@ export class RecapService {
       });
       return response.data;
     } catch (error) {
-      console.error('Error searching RECAP dockets:', error);
+      errLog('Error searching RECAP dockets', error);
       throw new Error('Failed to search RECAP archive');
     }
   }
@@ -131,7 +132,7 @@ export class RecapService {
       });
       return response.data;
     } catch (error) {
-      console.error('Error searching opinions:', error);
+      errLog('Error searching opinions', error);
       throw new Error('Failed to search case law opinions');
     }
   }
@@ -144,7 +145,7 @@ export class RecapService {
       });
       return response.data;
     } catch (error) {
-      console.error('Error fetching docket:', error);
+      errLog('Error fetching docket', error);
       throw new Error('Failed to fetch docket details');
     }
   }
@@ -160,7 +161,7 @@ export class RecapService {
       });
       return response.data;
     } catch (error) {
-      console.error('Error fetching docket documents:', error);
+      errLog('Error fetching docket documents', error);
       throw new Error('Failed to fetch docket documents');
     }
   }

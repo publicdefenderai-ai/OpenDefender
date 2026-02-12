@@ -428,7 +428,6 @@ async function generateAISection(
     // Motion for change of venue fields
     currentVenue: formData.currentVenue || "",
     requestedVenue: formData.requestedVenue || "",
-    chargeLevel: formData.chargeLevel || "",
     primaryBasis: formData.primaryBasis || "",
     publicityDescription: formData.publicityDescription || "",
     publicityExamples: formData.publicityExamples || "",
@@ -445,9 +444,6 @@ async function generateAISection(
     sanctionsRequested: formData.sanctionsRequested || "",
     sanctionJustification: formData.sanctionJustification || "",
     // Motion for bail pending appeal fields
-    convictionCharges: formData.convictionCharges || "",
-    sentenceImposed: formData.sentenceImposed || "",
-    sentenceDate: formData.sentenceDate || "",
     custodyFacility: formData.custodyFacility || "",
     noticeOfAppealFiled: formData.noticeOfAppealFiled || "",
     appealFilingDate: formData.appealFilingDate || "",
@@ -455,9 +451,7 @@ async function generateAISection(
     likelihoodOfSuccess: formData.likelihoodOfSuccess || "",
     flightRisk: formData.flightRisk || "",
     flightRiskExplanation: formData.flightRiskExplanation || "",
-    communityTies: formData.communityTies || "",
     dangerToCommunity: formData.dangerToCommunity || "",
-    proposedConditions: formData.proposedConditions || "",
     priorCourtAppearances: formData.priorCourtAppearances || "",
     // Immigration: motion to suppress evidence fields
     obtainingAgency: formData.obtainingAgency || "",
@@ -465,7 +459,6 @@ async function generateAISection(
     egregiousnessFactors: formData.egregiousnessFactors || "",
     witnessesPresent: formData.witnessesPresent || "",
     bodycamOrDocumentation: formData.bodycamOrDocumentation || "",
-    reliefSought: formData.reliefSought || "",
     additionalRelief: formData.additionalRelief || "",
     // Immigration: motion for voluntary departure fields
     departureStage: formData.departureStage || "",

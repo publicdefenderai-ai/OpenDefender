@@ -13,8 +13,6 @@ import { generateClaudeGuidance, testClaudeConnection, clearSessionCache } from 
 import { getChargeById, getChargesByJurisdiction, criminalCharges } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
-import { scrapingCoordinator } from "./services/scraping-coordinator";
-import { auditRobotsTxt, printAuditSummary } from "./services/robots-audit";
 import { statuteSeeder } from "./services/statute-seeder";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
@@ -1091,76 +1089,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Statute Scraping API - Start scraping for a specific state
-  // SECURITY: Protected with admin auth and rate limiting
-  app.post("/api/scrape/statutes/:stateCode", adminRateLimiter, requireAdminAuth, async (req, res) => {
-    try {
-      const { stateCode } = req.params;
-      
-      // Validate state code
-      const validStates = ['CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI'];
-      if (!validStates.includes(stateCode.toUpperCase())) {
-        return res.status(400).json({ 
-          success: false, 
-          error: `Invalid state code. Currently supported: ${validStates.join(', ')}` 
-        });
-      }
-
-      const result = await scrapingCoordinator.scrapeState(stateCode.toUpperCase());
-      res.json(result);
-    } catch (error) {
-      console.error("Scraping failed:", error);
-      res.status(500).json({ success: false, error: "Scraping failed" });
-    }
-  });
-
-  // Get scraping status for a specific state
-  app.get("/api/scrape/status/:stateCode", async (req, res) => {
-    try {
-      const { stateCode } = req.params;
-      const status = await scrapingCoordinator.getLatestScrapeStatus(stateCode.toUpperCase());
-      res.json({ success: true, status });
-    } catch (error) {
-      console.error("Failed to fetch scraping status:", error);
-      res.status(500).json({ success: false, error: "Failed to fetch status" });
-    }
-  });
-
-  // Get scraping history (all states or specific state)
-  app.get("/api/scrape/history", async (req, res) => {
-    try {
-      const { stateCode } = req.query;
-      const history = await scrapingCoordinator.getScrapeHistory(stateCode as string);
-      res.json({ success: true, history });
-    } catch (error) {
-      console.error("Failed to fetch scraping history:", error);
-      res.status(500).json({ success: false, error: "Failed to fetch history" });
-    }
-  });
-
-  // Get scraping statistics
-  app.get("/api/scrape/stats", async (req, res) => {
-    try {
-      const stats = await scrapingCoordinator.getScrapingStats();
-      res.json({ success: true, stats });
-    } catch (error) {
-      console.error("Failed to fetch scraping stats:", error);
-      res.status(500).json({ success: false, error: "Failed to fetch stats" });
-    }
-  });
-
-  // Robots.txt audit - Check which states allow scraping
-  app.get("/api/scrape/robots-audit", async (req, res) => {
-    try {
-      console.log('[API] Starting robots.txt audit...');
-      const results = await auditRobotsTxt();
-      printAuditSummary(results);
-      res.json({ success: true, results });
-    } catch (error) {
-      console.error("Robots.txt audit failed:", error);
-      res.status(500).json({ success: false, error: "Audit failed" });
-    }
-  });
 
   // BJS Statistics API - Get crime statistics
   app.get("/api/statistics/bjs/crime", async (req, res) => {

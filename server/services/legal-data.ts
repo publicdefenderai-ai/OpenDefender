@@ -1,6 +1,7 @@
 import { courtListenerService } from './courtlistener';
 import { govInfoService } from './govinfo';
 import { storage } from '../storage';
+import { errLog } from '../utils/dev-logger';
 
 interface LegalDataService {
   searchCaseLaw(query: string, jurisdiction?: string, searchType?: 'keyword' | 'semantic'): Promise<any>;
@@ -30,7 +31,7 @@ class LegalDataServiceImpl implements LegalDataService {
         searchType,
       };
     } catch (error) {
-      console.error('Case law search failed:', error);
+      errLog('Case law search failed', error);
       return {
         success: false,
         error: 'Failed to search case law',
@@ -52,7 +53,7 @@ class LegalDataServiceImpl implements LegalDataService {
         searchType: 'semantic',
       };
     } catch (error) {
-      console.error('Semantic case law search failed:', error);
+      errLog('Semantic case law search failed', error);
       return {
         success: false,
         error: 'Failed to perform semantic search',
@@ -76,7 +77,7 @@ class LegalDataServiceImpl implements LegalDataService {
         naturalLanguage,
       };
     } catch (error) {
-      console.error('Hybrid case law search failed:', error);
+      errLog('Hybrid case law search failed', error);
       return {
         success: false,
         error: 'Failed to perform hybrid search',
@@ -113,7 +114,7 @@ class LegalDataServiceImpl implements LegalDataService {
           : 'State Laws Seed Data',
       };
     } catch (error) {
-      console.error('Statute search failed:', error);
+      errLog('Statute search failed', error);
       return {
         success: false,
         error: 'Failed to fetch statutes',
@@ -152,7 +153,7 @@ class LegalDataServiceImpl implements LegalDataService {
         source: 'GovInfo.gov',
       };
     } catch (error) {
-      console.error('Federal statute search failed:', error);
+      errLog('Federal statute search failed', error);
       return {
         success: false,
         error: 'Failed to search federal statutes',
@@ -190,7 +191,7 @@ class LegalDataServiceImpl implements LegalDataService {
 
       return mockGuidelines;
     } catch (error) {
-      console.error('Sentencing guidelines fetch failed:', error);
+      errLog('Sentencing guidelines fetch failed', error);
       return {
         success: false,
         error: 'Failed to fetch sentencing guidelines',
@@ -225,7 +226,7 @@ class LegalDataServiceImpl implements LegalDataService {
 
       return mockCourtInfo;
     } catch (error) {
-      console.error('Local court info fetch failed:', error);
+      errLog('Local court info fetch failed', error);
       return {
         success: false,
         error: 'Failed to fetch local court information',
@@ -256,7 +257,7 @@ class LegalDataServiceImpl implements LegalDataService {
         note: stats.metadata.note,
       };
     } catch (error) {
-      console.error('BJS statistics fetch failed:', error);
+      errLog('BJS statistics fetch failed', error);
       return {
         success: false,
         error: 'Failed to fetch crime statistics',

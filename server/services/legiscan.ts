@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { devLog, errLog } from '../utils/dev-logger';
 
 const LEGISCAN_BASE_URL = 'https://api.legiscan.com/';
 const API_KEY = process.env.LEGISCAN_API_KEY;
@@ -86,7 +87,7 @@ class LegiScanService {
 
   constructor() {
     if (!API_KEY) {
-      console.warn('LEGISCAN_API_KEY not set - LegiScan integration will not work');
+      devLog('LEGISCAN_API_KEY not set - LegiScan integration will not work');
       this.apiKey = '';
     } else {
       this.apiKey = API_KEY;
@@ -101,7 +102,7 @@ class LegiScanService {
    */
   async searchBills(query: string, state: string = 'ALL', year: number = 2): Promise<LegiScanSearchResult | null> {
     if (!this.apiKey) {
-      console.error('LegiScan API key not configured');
+      errLog('LegiScan API key not configured');
       return null;
     }
 
@@ -120,11 +121,11 @@ class LegiScanService {
       if (response.data.status === 'OK') {
         return response.data.searchresult;
       } else {
-        console.error('LegiScan search error:', response.data);
+        errLog('LegiScan search error', response.data);
         return null;
       }
     } catch (error) {
-      console.error('LegiScan search failed:', error);
+      errLog('LegiScan search failed', error);
       return null;
     }
   }
@@ -159,7 +160,7 @@ class LegiScanService {
             if (bill && typeof bill === 'object' && bill.bill_id && !seenBillIds.has(bill.bill_id)) {
               seenBillIds.add(bill.bill_id);
               allResults.push(bill);
-              console.log(`Found enacted bill: ${bill.state} ${bill.bill_number} - ${bill.title}`);
+              devLog(`Found enacted bill: ${bill.state} ${bill.bill_number} - ${bill.title}`);
             }
           }
         });
@@ -169,7 +170,7 @@ class LegiScanService {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
-    console.log(`Found ${allResults.length} total enacted criminal bills for ${state}`);
+    devLog(`Found ${allResults.length} total enacted criminal bills for ${state}`);
     return allResults;
   }
 
@@ -179,7 +180,7 @@ class LegiScanService {
    */
   async getBillDetails(billId: number): Promise<LegiScanBillDetail | null> {
     if (!this.apiKey) {
-      console.error('LegiScan API key not configured');
+      errLog('LegiScan API key not configured');
       return null;
     }
 
@@ -196,11 +197,11 @@ class LegiScanService {
       if (response.data.status === 'OK') {
         return response.data.bill;
       } else {
-        console.error('LegiScan getBill error:', response.data);
+        errLog('LegiScan getBill error', response.data);
         return null;
       }
     } catch (error) {
-      console.error(`LegiScan getBill failed for bill ${billId}:`, error);
+      errLog(`LegiScan getBill failed for bill ${billId}`, error);
       return null;
     }
   }
@@ -213,7 +214,7 @@ class LegiScanService {
    */
   async getMasterList(state: string, sessionId?: number): Promise<any> {
     if (!this.apiKey) {
-      console.error('LegiScan API key not configured');
+      errLog('LegiScan API key not configured');
       return null;
     }
 
@@ -236,11 +237,11 @@ class LegiScanService {
       if (response.data.status === 'OK') {
         return response.data.masterlist;
       } else {
-        console.error('LegiScan getMasterList error:', response.data);
+        errLog('LegiScan getMasterList error', response.data);
         return null;
       }
     } catch (error) {
-      console.error(`LegiScan getMasterList failed for ${state}:`, error);
+      errLog(`LegiScan getMasterList failed for ${state}`, error);
       return null;
     }
   }
@@ -251,7 +252,7 @@ class LegiScanService {
    */
   async getSessionList(state: string): Promise<any> {
     if (!this.apiKey) {
-      console.error('LegiScan API key not configured');
+      errLog('LegiScan API key not configured');
       return null;
     }
 
@@ -268,11 +269,11 @@ class LegiScanService {
       if (response.data.status === 'OK') {
         return response.data.sessions;
       } else {
-        console.error('LegiScan getSessionList error:', response.data);
+        errLog('LegiScan getSessionList error', response.data);
         return null;
       }
     } catch (error) {
-      console.error(`LegiScan getSessionList failed for ${state}:`, error);
+      errLog(`LegiScan getSessionList failed for ${state}`, error);
       return null;
     }
   }
