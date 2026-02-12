@@ -2376,8 +2376,23 @@ i18n
               },
               "attorneyDocGen": {
                 "title": "Attorney Document Generation",
-                "description": "AI-powered document drafting for licensed attorneys. Motions, notices, and filings for criminal and immigration cases with jurisdiction-specific formatting (CA, NY, TX, FL initially).",
+                "description": "28 AI-powered document templates for licensed attorneys: 17 criminal motions (all 50 states + DC, by county/ward) and 11 immigration motions (EOIR format, by district/division). Covers all case phases from initial filings through post-sentencing.",
                 "impact": "Reduces time burden on public defenders and legal aid attorneys handling high caseloads"
+              },
+              "publicApiV1": {
+                "title": "Public REST API v1",
+                "description": "Open API providing third-party access to legal content, criminal charges, diversion programs, glossary terms, and expungement rules. Includes OpenAPI specification, embeddable widgets, CORS support, and rate limiting.",
+                "impact": "Enables legal aid organizations and developers to integrate our data into their own tools"
+              },
+              "securityAudit": {
+                "title": "Security & Code Audit",
+                "description": "Comprehensive security hardening: removed PII from AI prompts, moved API keys from URLs to secure headers, structured production-safe logging, removed 1,400+ lines of dead code, and uninstalled unused dependencies.",
+                "impact": "Stronger data privacy protections and a cleaner, more maintainable codebase"
+              },
+              "bilingualSupport": {
+                "title": "Bilingual English/Spanish Support",
+                "description": "Full bilingual support across the entire platform including case guidance, rights information, criminal charges, glossary terms, immigration guidance, case timeline, quick-reference cards, and site-wide search.",
+                "impact": "Accessible legal information for Spanish-speaking communities navigating the justice system"
               },
               "additionalLanguages": {
                 "title": "Additional Language Support",
@@ -5512,8 +5527,23 @@ i18n
               },
               "attorneyDocGen": {
                 "title": "Generación de Documentos para Abogados",
-                "description": "Redacción de documentos impulsada por IA para abogados licenciados. Mociones, notificaciones y presentaciones para casos penales e inmigratorios con formato específico de jurisdicción (CA, NY, TX, FL inicialmente).",
+                "description": "28 plantillas de documentos impulsadas por IA para abogados licenciados: 17 mociones penales (los 50 estados + DC, por condado/distrito) y 11 mociones de inmigración (formato EOIR, por distrito/división). Cubre todas las fases del caso desde presentaciones iniciales hasta post-sentencia.",
                 "impact": "Reduce la carga de tiempo para defensores públicos y abogados de asistencia legal con altas cargas de casos"
+              },
+              "publicApiV1": {
+                "title": "API REST Pública v1",
+                "description": "API abierta que proporciona acceso de terceros a contenido legal, cargos penales, programas de desvío, términos del glosario y reglas de eliminación de antecedentes. Incluye especificación OpenAPI, widgets integrables, soporte CORS y limitación de velocidad.",
+                "impact": "Permite a organizaciones de asistencia legal y desarrolladores integrar nuestros datos en sus propias herramientas"
+              },
+              "securityAudit": {
+                "title": "Auditoría de Seguridad y Código",
+                "description": "Fortalecimiento integral de seguridad: eliminación de PII de prompts de IA, traslado de claves API de URLs a encabezados seguros, registro estructurado seguro para producción, eliminación de más de 1,400 líneas de código muerto y desinstalación de dependencias no utilizadas.",
+                "impact": "Protecciones de privacidad de datos más fuertes y un código más limpio y mantenible"
+              },
+              "bilingualSupport": {
+                "title": "Soporte Bilingüe Inglés/Español",
+                "description": "Soporte bilingüe completo en toda la plataforma incluyendo orientación de casos, información de derechos, cargos penales, términos del glosario, orientación migratoria, línea de tiempo de casos, tarjetas de referencia rápida y búsqueda en todo el sitio.",
+                "impact": "Información legal accesible para comunidades hispanohablantes que navegan el sistema de justicia"
               },
               "additionalLanguages": {
                 "title": "Soporte de Idiomas Adicionales",

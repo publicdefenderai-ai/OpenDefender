@@ -12,7 +12,14 @@ import {
   Globe,
   HelpCircle,
   ChevronRight,
-  Briefcase
+  Briefcase,
+  Bot,
+  ClipboardList,
+  CreditCard,
+  Code,
+  FileScan,
+  Compass,
+  Milestone
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -46,10 +53,22 @@ const sections: CategorySection[] = [
         link: "/case-guidance"
       },
       {
+        icon: <Bot className="h-5 w-5" />,
+        title: "AI Legal Chat",
+        description: "Ask legal questions and get plain-language answers from our AI assistant.",
+        link: "/chat"
+      },
+      {
         icon: <Globe className="h-5 w-5" />,
         title: "Immigration Rights",
         description: "Know your rights during ICE encounters and deportation proceedings.",
         link: "/immigration-guidance"
+      },
+      {
+        icon: <FileScan className="h-5 w-5" />,
+        title: "Document Summarizer",
+        description: "Upload a legal document and get a plain-language summary.",
+        link: "/document-summarizer"
       }
     ]
   },
@@ -62,6 +81,18 @@ const sections: CategorySection[] = [
         title: "Constitutional Rights",
         description: "Miranda rights, rights during arrest, and in court.",
         link: "/rights-info"
+      },
+      {
+        icon: <Milestone className="h-5 w-5" />,
+        title: "Interactive Case Timeline",
+        description: "Walk through the 7 stages of a criminal case from arrest to appeal.",
+        link: "/case-timeline"
+      },
+      {
+        icon: <CreditCard className="h-5 w-5" />,
+        title: "Quick-Reference Cards",
+        description: "Printable rights cards for police encounters and court appearances.",
+        link: "/quick-reference"
       },
       {
         icon: <Calendar className="h-5 w-5" />,
@@ -80,6 +111,12 @@ const sections: CategorySection[] = [
         title: "Helping Friends & Family",
         description: "Support someone who has been arrested.",
         link: "/friends-family"
+      },
+      {
+        icon: <ClipboardList className="h-5 w-5" />,
+        title: "Mock Q&A Practice",
+        description: "Practice answering questions you might face in court proceedings.",
+        link: "/resources"
       }
     ]
   },
@@ -87,6 +124,12 @@ const sections: CategorySection[] = [
     title: "Find Resources",
     description: "Connect with legal support services",
     resources: [
+      {
+        icon: <Compass className="h-5 w-5" />,
+        title: "Resources Hub",
+        description: "Browse all legal resources, guides, and support services.",
+        link: "/resources"
+      },
       {
         icon: <MapPin className="h-5 w-5" />,
         title: "Find Public Defenders",
@@ -150,7 +193,7 @@ const sections: CategorySection[] = [
       {
         icon: <Briefcase className="h-5 w-5" />,
         title: "Attorney Portal",
-        description: "Document drafting and resources for legal professionals.",
+        description: "Verified attorney access to 28 document templates for criminal and immigration cases.",
         link: "/attorney"
       },
       {
@@ -158,6 +201,24 @@ const sections: CategorySection[] = [
         title: "Court Records Search",
         description: "Search federal court documents via PACER/RECAP.",
         link: "/court-records"
+      }
+    ]
+  },
+  {
+    title: "Developers & Partners",
+    description: "Integration tools for organizations and developers",
+    resources: [
+      {
+        icon: <Code className="h-5 w-5" />,
+        title: "API Documentation",
+        description: "Public REST API v1 for accessing legal data, charges, and programs.",
+        link: "/api-docs"
+      },
+      {
+        icon: <Globe className="h-5 w-5" />,
+        title: "Embeddable Widgets",
+        description: "Add legal search and charge lookup to your own website.",
+        link: "/widgets"
       }
     ]
   }

@@ -124,7 +124,6 @@ export default function DevelopmentRoadmap() {
   };
 
   const roadmapItems: RoadmapItem[] = [
-    // Completed items
     {
       id: "attorney-tools",
       titleKey: "developmentRoadmap.items.attorneyTools.title",
@@ -135,6 +134,17 @@ export default function DevelopmentRoadmap() {
       estimatedCompletion: "Completed Jan 2026",
       progress: 100,
       impactKey: "developmentRoadmap.items.attorneyTools.impact"
+    },
+    {
+      id: "attorney-document-generation",
+      titleKey: "developmentRoadmap.items.attorneyDocGen.title",
+      descriptionKey: "developmentRoadmap.items.attorneyDocGen.description",
+      status: "completed",
+      priority: "high",
+      category: "features",
+      estimatedCompletion: "Completed Feb 2026",
+      progress: 100,
+      impactKey: "developmentRoadmap.items.attorneyDocGen.impact"
     },
     {
       id: "state-statutes-api",
@@ -158,17 +168,48 @@ export default function DevelopmentRoadmap() {
       progress: 100,
       impactKey: "developmentRoadmap.items.privacyEncryption.impact"
     },
-    // In progress items
+    {
+      id: "public-api-v1",
+      titleKey: "developmentRoadmap.items.publicApiV1.title",
+      descriptionKey: "developmentRoadmap.items.publicApiV1.description",
+      status: "completed",
+      priority: "high",
+      category: "infrastructure",
+      estimatedCompletion: "Completed Jan 2026",
+      progress: 100,
+      impactKey: "developmentRoadmap.items.publicApiV1.impact"
+    },
+    {
+      id: "security-audit",
+      titleKey: "developmentRoadmap.items.securityAudit.title",
+      descriptionKey: "developmentRoadmap.items.securityAudit.description",
+      status: "completed",
+      priority: "critical",
+      category: "infrastructure",
+      estimatedCompletion: "Completed Feb 2026",
+      progress: 100,
+      impactKey: "developmentRoadmap.items.securityAudit.impact"
+    },
+    {
+      id: "bilingual-support",
+      titleKey: "developmentRoadmap.items.bilingualSupport.title",
+      descriptionKey: "developmentRoadmap.items.bilingualSupport.description",
+      status: "completed",
+      priority: "high",
+      category: "features",
+      estimatedCompletion: "Completed Jan 2026",
+      progress: 100,
+      impactKey: "developmentRoadmap.items.bilingualSupport.impact"
+    },
     {
       id: "ai-guidance-engine",
       titleKey: "developmentRoadmap.items.aiGuidance.title",
       descriptionKey: "developmentRoadmap.items.aiGuidance.description",
-      status: "in-progress",
+      status: "completed",
       priority: "critical",
       category: "ai",
-      estimatedCompletion: "Q1 2026",
-      progress: 85,
-      challengesKeys: ["developmentRoadmap.items.aiGuidance.challenges.accuracy", "developmentRoadmap.items.aiGuidance.challenges.bias", "developmentRoadmap.items.aiGuidance.challenges.jurisdiction"],
+      estimatedCompletion: "Completed Feb 2026",
+      progress: 100,
       impactKey: "developmentRoadmap.items.aiGuidance.impact"
     },
     {
@@ -182,18 +223,6 @@ export default function DevelopmentRoadmap() {
       progress: 60,
       challengesKeys: ["developmentRoadmap.items.pacer.challenges.cost", "developmentRoadmap.items.pacer.challenges.rateLimit", "developmentRoadmap.items.pacer.challenges.bulk"],
       impactKey: "developmentRoadmap.items.pacer.impact"
-    },
-    // Planned items
-    {
-      id: "attorney-document-generation",
-      titleKey: "developmentRoadmap.items.attorneyDocGen.title",
-      descriptionKey: "developmentRoadmap.items.attorneyDocGen.description",
-      status: "planned",
-      priority: "high",
-      category: "features",
-      estimatedCompletion: "Q2 2026",
-      dependencies: ["ai-guidance-engine"],
-      impactKey: "developmentRoadmap.items.attorneyDocGen.impact"
     },
     {
       id: "additional-languages",
@@ -214,7 +243,6 @@ export default function DevelopmentRoadmap() {
       priority: "medium",
       category: "features",
       estimatedCompletion: "Q3 2026",
-      dependencies: ["ai-guidance-engine"],
       impactKey: "developmentRoadmap.items.mobileApp.impact"
     },
     {
@@ -228,7 +256,6 @@ export default function DevelopmentRoadmap() {
       easyWin: true,
       impactKey: "developmentRoadmap.items.expandedJurisdictions.impact"
     },
-    // Researching items
     {
       id: "judge-analytics",
       titleKey: "developmentRoadmap.items.judgeAnalytics.title",
@@ -341,24 +368,24 @@ export default function DevelopmentRoadmap() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900 dark:text-white">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 {t('developmentRoadmap.hero.title')}
               </h1>
-              <p className="text-xl text-blue-900 dark:text-blue-100 max-w-4xl mx-auto mb-8">
+              <p className="text-xl text-white/90 max-w-4xl mx-auto mb-8">
                 {t('developmentRoadmap.hero.description')}
               </p>
               <div className="flex items-center justify-center space-x-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">{overallProgress}%</div>
-                  <div className="text-blue-900 dark:text-blue-200 text-sm">{t('developmentRoadmap.progress.overall')}</div>
+                  <div className="text-3xl font-bold text-white">{overallProgress}%</div>
+                  <div className="text-white/80 text-sm">{t('developmentRoadmap.progress.overall')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">{roadmapItems.filter(item => item.status === "completed").length}</div>
-                  <div className="text-blue-900 dark:text-blue-200 text-sm">{t('developmentRoadmap.stats.completed')}</div>
+                  <div className="text-3xl font-bold text-white">{roadmapItems.filter(item => item.status === "completed").length}</div>
+                  <div className="text-white/80 text-sm">{t('developmentRoadmap.stats.completed')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold">{roadmapItems.filter(item => item.status === "in-progress").length}</div>
-                  <div className="text-blue-900 dark:text-blue-200 text-sm">{t('developmentRoadmap.stats.inProgress')}</div>
+                  <div className="text-3xl font-bold text-white">{roadmapItems.filter(item => item.status === "in-progress").length}</div>
+                  <div className="text-white/80 text-sm">{t('developmentRoadmap.stats.inProgress')}</div>
                 </div>
               </div>
             </div>
