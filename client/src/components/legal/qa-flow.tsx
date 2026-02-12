@@ -186,16 +186,16 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
 
       {/* Privilege Warning Dialog */}
       <Dialog open={showPrivilegeWarning} onOpenChange={setShowPrivilegeWarning}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <div className="flex items-center gap-2 p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-lg mb-4">
-              <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
-              <p className="text-sm font-medium text-red-700 dark:text-red-300">
+        <DialogContent className="max-w-md w-[calc(100%-2rem)] overflow-hidden">
+          <DialogHeader className="overflow-hidden">
+            <div className="flex items-start gap-2 p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-lg mb-4">
+              <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
+              <p className="text-sm font-medium text-red-700 dark:text-red-300 break-words">
                 {t('legalGuidance.qaFlow.privilegeWarning.criminalWarning')}
               </p>
             </div>
             <DialogTitle className="flex items-center gap-2 text-amber-600">
-              <AlertTriangle className="h-5 w-5" />
+              <AlertTriangle className="h-5 w-5 shrink-0" />
               {t('legalGuidance.qaFlow.privilegeWarning.title')}
             </DialogTitle>
             <DialogDescription className="pt-4 space-y-4">
@@ -210,17 +210,18 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
               </p>
             </DialogDescription>
           </DialogHeader>
-          <div className="flex flex-col gap-3 mt-4">
+          <div className="flex flex-col gap-3 mt-4 w-full">
             <Button
               onClick={handlePrivilegeWarningContinue}
               variant="outline"
+              className="w-full whitespace-normal text-center"
               data-testid="button-privilege-continue"
             >
               {t('legalGuidance.qaFlow.privilegeWarning.continueAnyway')}
             </Button>
             <Button
               onClick={handleSkipAndGetGuidance}
-              className="bg-blue-600 hover:bg-blue-700"
+              className="w-full bg-blue-600 hover:bg-blue-700 whitespace-normal text-center"
               data-testid="button-privilege-skip"
             >
               {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance')}

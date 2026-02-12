@@ -452,6 +452,7 @@ i18n
               },
               "privilegeWarning": {
                 "title": "Before You Share Details",
+                "criminalWarning": "If you are facing criminal charges, anything you share here could potentially be used against you.",
                 "notPrivate": "What you type here is NOT protected by attorney-client privilege. Your prompts are processed by Anthropic's AI and could be disclosed if requested through legal process (such as a subpoena or court order).",
                 "recommendation": "If you are under investigation or facing charges, we strongly recommend consulting a licensed attorney first. They can provide truly confidential advice. This step is optional—skip it to receive general guidance without sharing details.",
                 "governmentWarning": "Important: Anthropic may retain prompts for up to 30 days. During this time, your conversations could be disclosed pursuant to a valid legal request.",
@@ -3752,6 +3753,7 @@ i18n
               },
               "privilegeWarning": {
                 "title": "Antes de Compartir Detalles",
+                "criminalWarning": "Si enfrenta cargos penales, cualquier información que comparta aquí podría usarse en su contra.",
                 "notPrivate": "Lo que escriba aquí NO está protegido por el privilegio abogado-cliente. Sus mensajes son procesados por la IA de Anthropic y podrían ser divulgados si se solicitan mediante un proceso legal (como una citación u orden judicial).",
                 "recommendation": "Si está bajo investigación o enfrenta cargos, recomendamos encarecidamente consultar primero con un abogado licenciado. Ellos pueden brindar asesoramiento verdaderamente confidencial. Este paso es opcional—omítalo para recibir orientación general sin compartir detalles.",
                 "governmentWarning": "Importante: Anthropic puede retener los mensajes hasta por 30 días. Durante este tiempo, sus conversaciones podrían ser divulgadas en respuesta a una solicitud legal válida.",
@@ -7050,8 +7052,10 @@ i18n
               },
               "privilegeWarning": {
                 "title": "分享信息之前请注意",
+                "criminalWarning": "如果您面临刑事指控，您在此分享的任何信息都可能被用来对您不利。",
                 "notPrivate": "和律师交谈不同，你在这里输入的内容不受保密特权保护，如果在法庭上被问到，可能会被用作对你不利的证据。",
                 "recommendation": "我们建议你先咨询律师。这一步是可选的——跳过它你仍然可以获得一般性指导。",
+                "governmentWarning": "重要提示：Anthropic可能会保留消息长达30天。在此期间，您的对话可能会根据有效的法律请求被披露。",
                 "continueAnyway": "仍然继续",
                 "skipAndGetGuidance": "跳过并获取一般性指导",
                 "findLawyer": "帮我找一位律师"
