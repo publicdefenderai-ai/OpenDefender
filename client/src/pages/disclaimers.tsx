@@ -24,7 +24,7 @@ export default function Disclaimers() {
             Important information about using PublicDefenderAI
           </p>
           <p className="text-sm text-white/60 mt-2">
-            Last updated: November 9, 2025
+            Last updated: February 12, 2026
           </p>
         </div>
       </section>
@@ -138,6 +138,117 @@ export default function Disclaimers() {
                   </Link>{" "}
                   for details.
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Immigration Guidance */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Immigration Guidance
+            </h2>
+            
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Our platform provides general information about immigration topics including Know Your Rights materials, DACA/TPS guidance, workplace raid preparedness, bond hearings, and Red Card resources. Please be aware that:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Immigration law is highly complex and changes frequently through executive orders, policy memos, and court rulings</li>
+                  <li>Know Your Rights cards and related materials are informational resources, not a legal shield — presenting them does not guarantee any particular outcome during an encounter with immigration authorities</li>
+                  <li>Information about DACA, TPS, bond hearings, and other immigration programs may become outdated as policies change</li>
+                  <li>Every immigration case is unique, and general guidance cannot account for the specific facts of your situation</li>
+                  <li>You should consult with a qualified immigration attorney before making any decisions that could affect your immigration status</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Important:</strong> If you are in removal proceedings or facing immigration enforcement, seek legal counsel immediately. Our{" "}
+                  <Link href="/immigration-guidance/find-attorney" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
+                    Find an Attorney
+                  </Link>{" "}
+                  page can help you locate immigration legal services in your area.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Trilingual Content */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Translations & Multilingual Content
+            </h2>
+            
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  PublicDefenderAI provides content in English, Spanish, and Simplified Chinese to make legal information more accessible. Please note:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Translations are provided for accessibility purposes and may not be word-for-word legal translations</li>
+                  <li>Legal terms can have specific meanings that do not translate precisely between languages</li>
+                  <li>In the event of any discrepancy between language versions, the English version should be considered authoritative</li>
+                  <li>Court filings, legal documents, and official proceedings in the United States generally require English</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  We strive to make our translations as accurate as possible, but we recommend consulting a bilingual attorney if you need legal guidance in a language other than English.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Document Summarizer Accuracy */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Document Summarizer
+            </h2>
+            
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Our Document Summarizer uses AI to create condensed summaries of legal documents you upload. When using this feature, please understand that:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Summaries are AI-generated interpretations and may omit important details, nuances, or qualifications present in the original document</li>
+                  <li>A summary is not a substitute for reading the full document, especially for court filings, plea agreements, or contracts</li>
+                  <li>Legal documents often contain interconnected clauses where context matters — a summary may not capture these relationships</li>
+                  <li>Always review the original document with your attorney before making decisions based on a summary</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  See our{" "}
+                  <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
+                    Privacy Policy
+                  </Link>{" "}
+                  for details on how uploaded documents are handled and protected.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Court Records & RECAP */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Court Records & Case Law
+            </h2>
+            
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  PublicDefenderAI retrieves court records, case law, and docket information from external sources including the RECAP Archive, CourtListener, and PACER. Please be aware that:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Court records retrieved through these services may be incomplete, delayed, or contain errors</li>
+                  <li>Not all federal or state court records are available through these databases</li>
+                  <li>Docket entries and case documents may not reflect the most recent filings or rulings</li>
+                  <li>Case law search results are provided for informational purposes and should not be relied upon as a comprehensive legal research tool</li>
+                  <li>Always verify court records directly with the relevant court clerk's office for official and up-to-date information</li>
+                </ul>
               </CardContent>
             </Card>
           </div>

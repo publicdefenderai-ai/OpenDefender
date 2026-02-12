@@ -350,9 +350,23 @@ export default function PrivacyPolicy() {
                     <li>{t('privacyPolicy.technical.external.services.recap')}</li>
                     <li>{t('privacyPolicy.technical.external.services.cornell')}</li>
                     <li>{t('privacyPolicy.technical.external.services.openLaws')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.legiScan')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.bjs')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.lsc')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.eoir')}</li>
+                    <li>{t('privacyPolicy.technical.external.services.nominatim')}</li>
                   </ul>
                   <p className="text-muted-foreground leading-relaxed mt-2">
                     {t('privacyPolicy.technical.external.note')}
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {t('privacyPolicy.technical.captcha.title')}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('privacyPolicy.technical.captcha.description')}
                   </p>
                 </div>
               </CardContent>

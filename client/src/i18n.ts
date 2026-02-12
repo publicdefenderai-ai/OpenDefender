@@ -2534,7 +2534,7 @@ i18n
             "hero": {
               "title": "Privacy Policy",
               "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-              "lastUpdated": "Last Updated: February 4, 2026"
+              "lastUpdated": "Last Updated: February 12, 2026"
             },
             "notice": {
               "title": "Privacy-First Platform:",
@@ -2599,9 +2599,18 @@ i18n
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
                   "cornell": "Cornell Legal Information Institute - for legal statutes",
-                  "openLaws": "OpenLaws API - for state statute text and legal data"
+                  "openLaws": "OpenLaws API - for state statute text and legal data",
+                  "legiScan": "LegiScan API - for tracking legislative bill changes and statute updates across jurisdictions",
+                  "bjs": "Bureau of Justice Statistics (BJS) API - for crime statistics and victimization trends",
+                  "lsc": "Legal Services Corporation (LSC) - for locating civil legal aid organizations near you",
+                  "eoir": "EOIR.gov - for finding immigration legal service providers in your area",
+                  "nominatim": "OpenStreetMap Nominatim - for locating nearby courthouses and public defender offices based on your ZIP code. Your location query is sent to this free, open-source mapping service."
                 },
                 "note": "When you use our platform to search these databases, your queries may be transmitted to these services. Personal information is automatically redacted before being sent to AI services. We recommend reviewing their privacy policies if you have concerns about external data access."
+              },
+              "captcha": {
+                "title": "CAPTCHA Verification",
+                "description": "We use Cloudflare Turnstile to protect our AI-powered features from automated abuse. When you submit a request for legal guidance, Turnstile may collect limited browser information (such as browser type and interaction patterns) to verify you are a real person. This data is processed by Cloudflare and is subject to their privacy policy. We do not receive or store any personal data from this process."
               }
             },
             "rights": {
@@ -5835,7 +5844,7 @@ i18n
             "hero": {
               "title": "Política de Privacidad",
               "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-              "lastUpdated": "Última actualización: 4 de febrero de 2026"
+              "lastUpdated": "Última actualización: 12 de febrero de 2026"
             },
             "notice": {
               "title": "Plataforma que prioriza la privacidad:",
@@ -5900,9 +5909,18 @@ i18n
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",
                   "cornell": "Instituto de Información Legal de Cornell - para estatutos legales",
-                  "openLaws": "API de OpenLaws - para texto de estatutos estatales y datos legales"
+                  "openLaws": "API de OpenLaws - para texto de estatutos estatales y datos legales",
+                  "legiScan": "API de LegiScan - para rastrear cambios legislativos y actualizaciones de estatutos en diferentes jurisdicciones",
+                  "bjs": "API de la Oficina de Estadísticas de Justicia (BJS) - para estadísticas de criminalidad y tendencias de victimización",
+                  "lsc": "Corporación de Servicios Legales (LSC) - para localizar organizaciones de asistencia legal civil cerca de usted",
+                  "eoir": "EOIR.gov - para encontrar proveedores de servicios legales de inmigración en su área",
+                  "nominatim": "OpenStreetMap Nominatim - para localizar tribunales y oficinas de defensores públicos cercanos según su código postal. Su consulta de ubicación se envía a este servicio de mapeo gratuito y de código abierto."
                 },
                 "note": "Cuando usa nuestra plataforma para buscar en estas bases de datos, sus consultas pueden transmitirse a estos servicios. La información personal se elimina automáticamente antes de enviarse a los servicios de IA. Recomendamos revisar sus políticas de privacidad si tiene inquietudes sobre el acceso a datos externos."
+              },
+              "captcha": {
+                "title": "Verificación CAPTCHA",
+                "description": "Utilizamos Cloudflare Turnstile para proteger nuestras funciones impulsadas por IA contra el abuso automatizado. Cuando envía una solicitud de orientación legal, Turnstile puede recopilar información limitada del navegador (como el tipo de navegador y patrones de interacción) para verificar que usted es una persona real. Estos datos son procesados por Cloudflare y están sujetos a su política de privacidad. No recibimos ni almacenamos ningún dato personal de este proceso."
               }
             },
             "rights": {
@@ -9116,7 +9134,7 @@ i18n
             "hero": {
               "title": "隐私政策",
               "subtitle": "我们致力于保护您的隐私。本政策说明我们如何处理您的信息。",
-              "lastUpdated": "最后更新：2026年2月4日"
+              "lastUpdated": "最后更新：2026年2月12日"
             },
             "notice": {
               "title": "隐私优先平台：",
@@ -9181,9 +9199,18 @@ i18n
                   "courtListener": "CourtListener API - 用于判例法和法院数据",
                   "recap": "RECAP Archive - 用于联邦法院文件",
                   "cornell": "Cornell Legal Information Institute - 用于法律法规",
-                  "openLaws": "OpenLaws API - 用于州法规文本和法律数据"
+                  "openLaws": "OpenLaws API - 用于州法规文本和法律数据",
+                  "legiScan": "LegiScan API - 用于跟踪各司法管辖区的立法法案变更和法规更新",
+                  "bjs": "司法统计局 (BJS) API - 用于犯罪统计和受害趋势数据",
+                  "lsc": "法律服务公司 (LSC) - 用于查找您附近的民事法律援助组织",
+                  "eoir": "EOIR.gov - 用于查找您所在地区的移民法律服务提供者",
+                  "nominatim": "OpenStreetMap Nominatim - 用于根据您的邮政编码查找附近的法院和公设辩护人办公室。您的位置查询将发送到此免费开源地图服务。"
                 },
                 "note": "当您使用我们的平台搜索这些数据库时，您的查询可能会被传输到这些服务。个人信息在发送到 AI 服务之前会自动脱敏。如果您对外部数据访问有疑虑，我们建议您查阅它们的隐私政策。"
+              },
+              "captcha": {
+                "title": "验证码验证",
+                "description": "我们使用 Cloudflare Turnstile 来保护我们的 AI 功能免受自动化滥用。当您提交法律指导请求时，Turnstile 可能会收集有限的浏览器信息（例如浏览器类型和交互模式）以验证您是真人。此数据由 Cloudflare 处理，受其隐私政策约束。我们不会从此过程中接收或存储任何个人数据。"
               }
             },
             "rights": {
