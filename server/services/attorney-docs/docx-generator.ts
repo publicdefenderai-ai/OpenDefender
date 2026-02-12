@@ -68,7 +68,7 @@ export async function generateDocx(
     marginRight: options?.marginRight ?? rules.marginRight,
   };
 
-  devLog(`[DOCX] Generating document for ${document.templateId} (${document.jurisdiction}, ${rules.ruleSource})`);
+  devLog('docx', `Generating document for ${document.templateId} (${document.jurisdiction}, ${rules.ruleSource})`);
 
   try {
     const doc = new Document({
@@ -181,7 +181,7 @@ export async function generateDocx(
 
     // Generate buffer
     const buffer = await Packer.toBuffer(doc);
-    devLog(`[DOCX] Generated document: ${buffer.length} bytes`);
+    devLog('docx', `Generated document: ${buffer.length} bytes`);
 
     return buffer;
   } catch (error) {

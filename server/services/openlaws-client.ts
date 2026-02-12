@@ -2,6 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { eq, ilike } from 'drizzle-orm';
 import { db } from '../db';
 import { statutes } from '@shared/schema';
+import { devLog, opsLog, errLog } from '../utils/dev-logger';
 
 /**
  * OpenLaws API Client
@@ -428,7 +429,7 @@ export class OpenLawsClient {
       }
     }
 
-    console.log(`[OpenLaws] Could not parse citation: ${citation}`);
+    devLog('openlaws', `Could not parse citation: ${citation}`);
     return null;
   }
 
@@ -508,7 +509,7 @@ export class OpenLawsClient {
       const root = await this.getDivisions(jurisdictionKey, lawKey, undefined, 2);
       
       if (!root.display_children || root.display_children.length === 0) {
-        console.log(`[OpenLaws] No divisions found for ${jurisdictionKey}/${lawKey}`);
+        devLog('openlaws', `No divisions found for ${jurisdictionKey}/${lawKey}`);
         return null;
       }
 
@@ -527,7 +528,7 @@ export class OpenLawsClient {
       for (const compilation of compilationsToSearch) {
         if (totalApiCalls >= maxApiCalls) break;
         
-        console.log(`[OpenLaws] Searching in ${compilation.display_name}...`);
+        devLog('openlaws', `Searching in ${compilation.display_name}...`);
         
         // Level-by-level search within this compilation
         let currentLevel: string[] = [compilation.path];
@@ -550,7 +551,7 @@ export class OpenLawsClient {
                     // Found it! Fetch full content
                     const fullSection = await this.getStatuteByPath(jurisdictionKey, lawKey, child.path);
                     if (fullSection && (fullSection.markdown_content || fullSection.plaintext_content)) {
-                      console.log(`[OpenLaws] Found section ${sectionNum} at depth ${depth + 1}: ${child.path}`);
+                      devLog('openlaws', `Found section ${sectionNum} at depth ${depth + 1}: ${child.path}`);
                       return fullSection;
                     }
                   }
@@ -573,10 +574,10 @@ export class OpenLawsClient {
         }
       }
 
-      console.log(`[OpenLaws] Section ${sectionNum} not found after ${totalApiCalls} API calls`);
+      devLog('openlaws', `Section ${sectionNum} not found after ${totalApiCalls} API calls`);
       return null;
     } catch (error) {
-      console.error(`[OpenLaws] Error searching for section ${sectionNum}:`, error);
+      errLog(`[OpenLaws] Error searching for section ${sectionNum}`, error);
       return null;
     }
   }
@@ -625,7 +626,7 @@ export class OpenLawsClient {
     const { jurisdiction, section, codeHint } = parsed;
     const lawKey = STATE_STATUTE_KEYS[jurisdiction];
     if (!lawKey) {
-      console.log(`[OpenLaws] Unknown jurisdiction: ${jurisdiction}`);
+      devLog('openlaws', `Unknown jurisdiction: ${jurisdiction}`);
       return null;
     }
 
@@ -636,7 +637,7 @@ export class OpenLawsClient {
       }
       return null;
     } catch (error) {
-      console.error(`[OpenLaws] Error searching for citation "${citation}":`, error);
+      errLog(`[OpenLaws] Error searching for citation "${citation}"`, error);
       return null;
     }
   }
@@ -680,7 +681,7 @@ export class OpenLawsClient {
       });
       
       if (dbStatute && dbStatute.content) {
-        console.log(`[OpenLaws] Found in database: ${citation}`);
+        devLog('openlaws', `Found in database: ${citation}`);
         return {
           id: String(dbStatute.id),
           citation: dbStatute.citation,
@@ -692,26 +693,26 @@ export class OpenLawsClient {
         };
       }
     } catch (error) {
-      console.error(`[OpenLaws] Database lookup error:`, error);
+      errLog(`[OpenLaws] Database lookup error`, error);
       // Continue to API fallback
     }
 
     // Step 2: Not in database, try OpenLaws API
     if (!this.isConfigured) {
-      console.log(`[OpenLaws] API not configured, database lookup only`);
+      devLog('openlaws', `API not configured, database lookup only`);
       return null;
     }
 
-    console.log(`[OpenLaws] Not in database, searching API: ${citation}`);
+    devLog('openlaws', `Not in database, searching API: ${citation}`);
     const apiResult = await this.searchByCitation(citation);
     
     // Step 3: Optionally import to database for future lookups
     if (apiResult && options.importIfFound) {
       try {
         await this.importStatute(apiResult);
-        console.log(`[OpenLaws] Imported to database: ${citation}`);
+        opsLog('openlaws', `Imported to database: ${citation}`);
       } catch (error) {
-        console.error(`[OpenLaws] Import error:`, error);
+        errLog(`[OpenLaws] Import error`, error);
       }
     }
 
@@ -769,7 +770,7 @@ export class OpenLawsClient {
 
           if (status === 429 || (status && status >= 500)) {
             const backoffMs = Math.pow(2, attempt) * 1000;
-            console.warn(`[OpenLaws] ${status} error, retrying in ${backoffMs}ms (attempt ${attempt + 1}/${maxRetries})`);
+            devLog('openlaws', `${status} error, retrying in ${backoffMs}ms (attempt ${attempt + 1}/${maxRetries})`);
             await new Promise(resolve => setTimeout(resolve, backoffMs));
             continue;
           }
@@ -779,7 +780,7 @@ export class OpenLawsClient {
           }
         }
 
-        console.warn(`[OpenLaws] Network error, retrying (attempt ${attempt + 1}/${maxRetries})`);
+        devLog('openlaws', `Network error, retrying (attempt ${attempt + 1}/${maxRetries})`);
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
     }
@@ -819,10 +820,10 @@ export class OpenLawsClient {
         },
       });
       
-      console.log(`[OpenLaws] Imported statute: ${openLawsStatute.citation} (${openLawsStatute.jurisdiction})`);
+      opsLog('openlaws', `Imported statute: ${openLawsStatute.citation} (${openLawsStatute.jurisdiction})`);
       return true;
     } catch (error) {
-      console.error(`[OpenLaws] Error importing statute ${openLawsStatute.citation}:`, error);
+      errLog(`[OpenLaws] Error importing statute ${openLawsStatute.citation}`, error);
       return false;
     }
   }

@@ -23,8 +23,8 @@ export class StatuteSeeder {
    * Seed the database with stateStatutesSeed data
    */
   async seedDatabase(): Promise<SeedResult> {
-    opsLog('[Seeder] Starting database seeding...');
-    opsLog(`[Seeder] Found ${stateStatutesSeed.length} statutes in seed data`);
+    opsLog('seeder', 'Starting database seeding...');
+    opsLog('seeder', `Found ${stateStatutesSeed.length} statutes in seed data`);
 
     let inserted = 0;
     let updated = 0;
@@ -56,7 +56,7 @@ export class StatuteSeeder {
             .where(eq(statutes.citation, statute.citation));
           
           updated++;
-          devLog(`[Seeder] Updated: ${statute.citation}`);
+          devLog('seeder', `Updated: ${statute.citation}`);
         } else {
           // Insert new statute
           await db.insert(statutes).values({
@@ -77,7 +77,7 @@ export class StatuteSeeder {
           });
           
           inserted++;
-          devLog(`[Seeder] Inserted: ${statute.citation}`);
+          devLog('seeder', `Inserted: ${statute.citation}`);
         }
       } catch (error) {
         errors++;
@@ -86,7 +86,7 @@ export class StatuteSeeder {
     }
 
     const message = `Seeding complete: ${inserted} inserted, ${updated} updated, ${skipped} skipped, ${errors} errors`;
-    opsLog(`[Seeder] ${message}`);
+    opsLog('seeder', message);
 
     return {
       success: errors === 0,
@@ -125,9 +125,9 @@ export class StatuteSeeder {
    * Clear all statutes from the database (use with caution!)
    */
   async clearDatabase(): Promise<number> {
-    opsLog('[Seeder] WARNING: Clearing all statutes from database...');
+    opsLog('seeder', 'WARNING: Clearing all statutes from database...');
     const result = await db.delete(statutes);
-    opsLog('[Seeder] Deleted all statutes from database');
+    opsLog('seeder', 'Deleted all statutes from database');
     return 0; // Drizzle doesn't return count for delete operations
   }
 }

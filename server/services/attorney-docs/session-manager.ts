@@ -34,7 +34,7 @@ class AttorneySessionManager {
     // Validate the request (ensures all attestations are true)
     const validation = attorneyVerificationRequestSchema.safeParse(request);
     if (!validation.success) {
-      devLog("[Attorney Session] Validation failed:", validation.error.errors);
+      devLog('attorney-session', 'Validation failed', validation.error.errors);
       return null;
     }
 
@@ -55,7 +55,7 @@ class AttorneySessionManager {
     // Log audit entry (metadata only, no PII)
     auditLogger.logSessionCreated(session);
 
-    opsLog(`[Attorney Session] Created session, expires in 30 minutes`);
+    opsLog('attorney-session', 'Created session, expires in 30 minutes');
 
     return session;
   }
@@ -68,7 +68,7 @@ class AttorneySessionManager {
     const session = this.sessions.get(sessionId);
 
     if (!session) {
-      devLog("[Attorney Session] Session not found:", sessionId.substring(0, 8));
+      devLog('attorney-session', `Session not found: ${sessionId.substring(0, 8)}`);
       return null;
     }
 
@@ -101,10 +101,10 @@ class AttorneySessionManager {
 
     if (reason === "expired") {
       auditLogger.logSessionExpired(session);
-      devLog("[Attorney Session] Session expired:", sessionId.substring(0, 8));
+      devLog('attorney-session', `Session expired: ${sessionId.substring(0, 8)}`);
     } else {
       auditLogger.logSessionTerminated(session);
-      opsLog(`[Attorney Session] User terminated session`);
+      opsLog('attorney-session', 'User terminated session');
     }
 
     return true;
@@ -143,7 +143,7 @@ class AttorneySessionManager {
     });
 
     if (cleanedCount > 0) {
-      opsLog(`[Attorney Session] Cleaned up ${cleanedCount} expired sessions`);
+      opsLog('attorney-session', `Cleaned up ${cleanedCount} expired sessions`);
     }
   }
 

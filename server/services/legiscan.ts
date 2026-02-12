@@ -87,7 +87,7 @@ class LegiScanService {
 
   constructor() {
     if (!API_KEY) {
-      devLog('LEGISCAN_API_KEY not set - LegiScan integration will not work');
+      devLog('legiscan', 'LEGISCAN_API_KEY not set - LegiScan integration will not work');
       this.apiKey = '';
     } else {
       this.apiKey = API_KEY;
@@ -160,7 +160,7 @@ class LegiScanService {
             if (bill && typeof bill === 'object' && bill.bill_id && !seenBillIds.has(bill.bill_id)) {
               seenBillIds.add(bill.bill_id);
               allResults.push(bill);
-              devLog(`Found enacted bill: ${bill.state} ${bill.bill_number} - ${bill.title}`);
+              devLog('legiscan', `Found enacted bill: ${bill.state} ${bill.bill_number} - ${bill.title}`);
             }
           }
         });
@@ -170,7 +170,7 @@ class LegiScanService {
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
-    devLog(`Found ${allResults.length} total enacted criminal bills for ${state}`);
+    devLog('legiscan', `Found ${allResults.length} total enacted criminal bills for ${state}`);
     return allResults;
   }
 

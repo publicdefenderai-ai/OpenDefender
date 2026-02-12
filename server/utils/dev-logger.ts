@@ -15,9 +15,13 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
  * Development-only logging - completely silent in production
  * Use for: API request/response details, prompt lengths, cache keys, etc.
  */
-export function devLog(...args: unknown[]): void {
+export function devLog(category: string, message: string, data?: unknown): void {
   if (isDevelopment) {
-    console.log(...args);
+    if (data !== undefined) {
+      console.log(`[${category}] ${message}`, data);
+    } else {
+      console.log(`[${category}] ${message}`);
+    }
   }
 }
 
@@ -26,8 +30,8 @@ export function devLog(...args: unknown[]): void {
  * Use for: Cleanup counts, validation scores, cache hit rates, timing metrics
  * NEVER include: User input, PII, session content, guidance text
  */
-export function opsLog(message: string): void {
-  console.log(`[${new Date().toISOString()}] ${message}`);
+export function opsLog(category: string, message: string): void {
+  console.log(`[${new Date().toISOString()}] [${category}] ${message}`);
 }
 
 /**

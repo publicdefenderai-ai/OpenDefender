@@ -38,7 +38,7 @@ function ensureCurrentDay(): void {
   if (currentDay.date !== today) {
     // Log previous day's totals before resetting
     if (currentDay.requestCount > 0) {
-      opsLog(`[CostTracker] Daily summary for ${currentDay.date}: $${currentDay.totalCost.toFixed(4)} across ${currentDay.requestCount} requests`);
+      opsLog('cost-tracker', `Daily summary for ${currentDay.date}: $${currentDay.totalCost.toFixed(4)} across ${currentDay.requestCount} requests`);
     }
     currentDay = createNewDay();
   }
@@ -54,10 +54,10 @@ export function recordAICost(cost: number, service: string): void {
   currentDay.breakdown[service] = (currentDay.breakdown[service] || 0) + cost;
   currentDay.requestCount += 1;
 
-  opsLog(`[CostTracker] +$${cost.toFixed(4)} (${service}) | Day total: $${currentDay.totalCost.toFixed(4)} / $${DAILY_BUDGET_USD}`);
+  opsLog('cost-tracker', `+$${cost.toFixed(4)} (${service}) | Day total: $${currentDay.totalCost.toFixed(4)} / $${DAILY_BUDGET_USD}`);
 
   if (currentDay.totalCost >= DAILY_BUDGET_USD) {
-    opsLog(`[CostTracker] BUDGET LIMIT REACHED: $${currentDay.totalCost.toFixed(4)} >= $${DAILY_BUDGET_USD}`);
+    opsLog('cost-tracker', `BUDGET LIMIT REACHED: $${currentDay.totalCost.toFixed(4)} >= $${DAILY_BUDGET_USD}`);
   }
 }
 

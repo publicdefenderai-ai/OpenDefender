@@ -44,7 +44,7 @@ class GovInfoService {
 
   constructor() {
     if (!API_KEY) {
-      devLog('GOVINFO_API_KEY not set - GovInfo integration will not work');
+      devLog('govinfo', 'GOVINFO_API_KEY not set - GovInfo integration will not work');
       this.apiKey = '';
     } else {
       this.apiKey = API_KEY;

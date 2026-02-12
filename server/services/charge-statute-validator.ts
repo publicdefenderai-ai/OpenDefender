@@ -10,6 +10,7 @@
 import { db } from '../db';
 import { statutes } from '@shared/schema';
 import { criminalCharges } from '@shared/criminal-charges';
+import { devLog, opsLog, errLog } from '../utils/dev-logger';
 
 interface ValidationResult {
   matches: number;
@@ -173,26 +174,26 @@ export async function validateChargeStatuteConsistency(): Promise<ValidationResu
 }
 
 export async function runStartupValidation(): Promise<void> {
-  console.log('[Validator] Running charge-statute consistency check...');
+  opsLog('validator', 'Running charge-statute consistency check...');
   
   try {
     const result = await validateChargeStatuteConsistency();
     
     if (result.mismatches === 0) {
-      console.log(`[Validator] All ${result.matches} charge codes are consistent with database statutes`);
+      opsLog('validator', `All ${result.matches} charge codes are consistent with database statutes`);
     } else {
-      console.warn(`[Validator] Found ${result.mismatches} charge-statute mismatches:`);
+      opsLog('validator', `Found ${result.mismatches} charge-statute mismatches:`);
       for (const issue of result.issues.slice(0, 5)) {
-        console.warn(`  - ${issue.chargeId}: code '${issue.oldCode}' should be '${issue.expectedCode}'`);
+        opsLog('validator', `  - ${issue.chargeId}: code '${issue.oldCode}' should be '${issue.expectedCode}'`);
       }
       if (result.issues.length > 5) {
-        console.warn(`  ... and ${result.issues.length - 5} more. Run 'npx tsx scripts/validate-charge-statute-consistency.ts' for full report.`);
+        opsLog('validator', `  ... and ${result.issues.length - 5} more. Run 'npx tsx scripts/validate-charge-statute-consistency.ts' for full report.`);
       }
-      console.warn(`[Validator] Run 'npx tsx scripts/fix-charge-codes.ts' to auto-fix these issues.`);
+      opsLog('validator', `Run 'npx tsx scripts/fix-charge-codes.ts' to auto-fix these issues.`);
     }
     
-    console.log(`[Validator] Stats: ${result.matches} matches, ${result.noDbRecord} charges without DB records`);
+    opsLog('validator', `Stats: ${result.matches} matches, ${result.noDbRecord} charges without DB records`);
   } catch (error) {
-    console.error('[Validator] Failed to run consistency check:', error);
+    errLog('[Validator] Failed to run consistency check', error);
   }
 }

@@ -104,7 +104,7 @@ export class MemStorage implements IStorage {
     }
     
     if (cleanedCases > 0 || cleanedFeedback > 0) {
-      opsLog(`[Privacy Cleanup] Removed ${cleanedCases} expired cases, ${cleanedFeedback} old feedback entries`);
+      opsLog('privacy', `Removed ${cleanedCases} expired cases, ${cleanedFeedback} old feedback entries`);
     }
   }
 
@@ -121,7 +121,7 @@ export class MemStorage implements IStorage {
       }
     }
     
-    devLog(`[Privacy] Session data deleted for session: ${sessionId.substring(0, 8)}...`);
+    devLog('privacy', `Session data deleted for session: ${sessionId.substring(0, 8)}...`);
   }
 
   stopCleanup() {

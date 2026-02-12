@@ -158,7 +158,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     // In development without ADMIN_API_KEY, allow access with warning
     if (!adminApiKey) {
       if (process.env.NODE_ENV === 'development') {
-        devLog('[Security] Admin endpoint accessed without ADMIN_API_KEY set (dev mode)');
+        devLog('security', 'Admin endpoint accessed without ADMIN_API_KEY set (dev mode)');
         return next();
       }
       // In production, require the key to be set
@@ -172,7 +172,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     const providedKey = req.headers['x-admin-api-key'] || req.headers['authorization']?.replace('Bearer ', '');
 
     if (!providedKey || providedKey !== adminApiKey) {
-      opsLog(`[Security] Unauthorized admin access attempt from ${req.ip}`);
+      opsLog('security', `Unauthorized admin access attempt from ${req.ip}`);
       return res.status(401).json({
         success: false,
         error: 'Unauthorized. Valid admin API key required.'
@@ -209,7 +209,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       );
       res.json({ success: true, resources });
     } catch (error) {
-      console.error("Failed to fetch legal resources:", error);
+      errLog("Failed to fetch legal resources", error);
       res.status(500).json({ success: false, error: "Failed to fetch legal resources" });
     }
   });
@@ -229,7 +229,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         sources: ["EOIR", "LSC", "usa.gov"]
       });
     } catch (error) {
-      console.error("Failed to fetch legal aid organizations:", error);
+      errLog("Failed to fetch legal aid organizations", error);
       res.status(500).json({ success: false, error: "Failed to fetch legal aid organizations" });
     }
   });
@@ -302,7 +302,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           : criminalCharges.length
       });
     } catch (error) {
-      console.error("Failed to fetch criminal charges:", error);
+      errLog("Failed to fetch criminal charges", error);
       res.status(500).json({ success: false, error: "Failed to fetch criminal charges" });
     }
   });
@@ -429,7 +429,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         fallbackUsed: organizationsWithDistance.length === 1 && allOrgsWithDistance.length > 0 && organizationsWithDistance[0].distance > radiusMiles
       });
     } catch (error) {
-      console.error("Failed to fetch organizations by proximity:", error);
+      errLog("Failed to fetch organizations by proximity", error);
       res.status(500).json({ success: false, error: "Proximity search failed" });
     }
   });
@@ -447,7 +447,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         localInfo: localInfo.success ? localInfo : null
       });
     } catch (error) {
-      console.error("Failed to fetch court data:", error);
+      errLog("Failed to fetch court data", error);
       res.status(500).json({ success: false, error: "Failed to fetch court data" });
     }
   });
@@ -476,7 +476,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(results);
     } catch (error) {
-      console.error("Case law search failed:", error);
+      errLog("Case law search failed", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
@@ -503,7 +503,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(results);
     } catch (error) {
-      console.error("Semantic search failed:", error);
+      errLog("Semantic search failed", error);
       res.status(500).json({ success: false, error: "Semantic search failed" });
     }
   });
@@ -538,7 +538,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(results);
     } catch (error) {
-      console.error("Hybrid search failed:", error);
+      errLog("Hybrid search failed", error);
       res.status(500).json({ success: false, error: "Hybrid search failed" });
     }
   });
@@ -578,7 +578,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ...searchResult,
       });
     } catch (error) {
-      console.error("Site search failed:", error);
+      errLog("Site search failed", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
@@ -589,7 +589,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const stats = getSearchIndexStats();
       res.json({ success: true, ...stats });
     } catch (error) {
-      console.error("Failed to get search stats:", error);
+      errLog("Failed to get search stats", error);
       res.status(500).json({ success: false, error: "Failed to get stats" });
     }
   });
@@ -605,7 +605,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       );
       res.json(results);
     } catch (error) {
-      console.error("Federal statute search failed:", error);
+      errLog("Federal statute search failed", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
@@ -615,7 +615,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // SECURITY: Protected with admin auth and rate limiting
   app.post("/api/statutes/seed", adminRateLimiter, requireAdminAuth, async (req, res) => {
     try {
-      devLog('[API] Starting statute database seeding...');
+      devLog('api', 'Starting statute database seeding...');
       const result = await statuteSeeder.seedDatabase();
       res.json(result);
     } catch (error) {
@@ -630,7 +630,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const status = await statuteSeeder.getSeedingStatus();
       res.json({ success: true, ...status });
     } catch (error) {
-      console.error("Failed to fetch seeding status:", error);
+      errLog("Failed to fetch seeding status", error);
       res.status(500).json({ success: false, error: "Failed to fetch status" });
     }
   });
@@ -643,7 +643,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const statutes = await legalDataService.getStatutes(jurisdiction, searchQuery as string);
       res.json(statutes);
     } catch (error) {
-      console.error("Failed to fetch statutes:", error);
+      errLog("Failed to fetch statutes", error);
       res.status(500).json({ success: false, error: "Failed to fetch statutes" });
     }
   });
@@ -655,12 +655,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const guidelines = await legalDataService.getSentencingGuidelines(jurisdiction);
       res.json(guidelines);
     } catch (error) {
-      console.error("Failed to fetch sentencing guidelines:", error);
+      errLog("Failed to fetch sentencing guidelines", error);
       res.status(500).json({ success: false, error: "Failed to fetch sentencing guidelines" });
     }
   });
 
-  // Local Resources API - Public Defenders
+  // Local Resources API - Public Defenders (uses real legal-aid-organizations database)
   app.get("/api/local-resources/public-defenders", async (req, res) => {
     try {
       const { zip } = req.query;
@@ -669,32 +669,70 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ success: false, error: "Valid 5-digit ZIP code required" });
       }
 
-      // Mock data for demonstration - in production this would call a real API
-      const mockResults = [
-        {
-          name: "County Public Defender Office",
-          address: `123 Justice St, City ${zip}`,
-          phone: "(555) 123-4567",
-          hours: "Mon-Fri 8:00 AM - 5:00 PM",
-          distance: "2.1 miles"
-        },
-        {
-          name: "State Public Defender Regional Office",
-          address: `456 Legal Ave, City ${zip}`,
-          phone: "(555) 987-6543", 
-          hours: "Mon-Fri 9:00 AM - 4:00 PM",
-          distance: "5.3 miles"
-        }
-      ];
+      const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zip}&country=us&format=json&limit=1&addressdetails=1`;
+      const geocodeResponse = await fetch(geocodeUrl, {
+        headers: { 'User-Agent': 'PublicDefenderAI/1.0' }
+      });
 
-      res.json({ success: true, results: mockResults });
+      if (!geocodeResponse.ok) {
+        return res.status(500).json({ success: false, error: "Location lookup failed" });
+      }
+
+      const geocodeData = await geocodeResponse.json();
+      if (!geocodeData || geocodeData.length === 0) {
+        return res.status(404).json({ success: false, error: "ZIP code not found" });
+      }
+
+      const { lat: userLat, lon: userLon, address } = geocodeData[0];
+
+      let userState: string | undefined;
+      if (address?.['ISO3166-2-lvl4']) {
+        userState = address['ISO3166-2-lvl4'].split('-')[1];
+      }
+
+      const allOrgs = await storage.getLegalAidOrganizations(userState, 'public_defender');
+
+      const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
+        const R = 3959;
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+          Math.sin(dLon/2) * Math.sin(dLon/2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      };
+
+      const results = allOrgs
+        .filter(org => org.latitude && org.longitude)
+        .map(org => ({
+          name: org.name,
+          address: [org.address, org.city, org.state, org.zipCode].filter(Boolean).join(', '),
+          phone: org.phone || 'Contact for information',
+          website: org.website || null,
+          hours: 'Mon-Fri 8:00 AM - 5:00 PM',
+          services: org.services || [],
+          eligibility: org.eligibility || null,
+          distance: `${calculateDistance(parseFloat(userLat), parseFloat(userLon), parseFloat(org.latitude!), parseFloat(org.longitude!)).toFixed(1)} miles`,
+          distanceValue: calculateDistance(parseFloat(userLat), parseFloat(userLon), parseFloat(org.latitude!), parseFloat(org.longitude!))
+        }))
+        .sort((a, b) => a.distanceValue - b.distanceValue)
+        .slice(0, 10);
+
+      res.json({
+        success: true,
+        results,
+        count: results.length,
+        source: "Public Defender AI Legal Aid Database",
+        zipCode: zip,
+        state: userState
+      });
     } catch (error) {
-      console.error("Failed to search public defenders:", error);
+      errLog("Failed to search public defenders", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
 
-  // Local Resources API - Courthouses
+  // Local Resources API - Courthouses (uses OpenStreetMap Nominatim for real courthouse data)
   app.get("/api/local-resources/courthouses", async (req, res) => {
     try {
       const { zip } = req.query;
@@ -703,37 +741,71 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ success: false, error: "Valid 5-digit ZIP code required" });
       }
 
-      // Mock data for demonstration - in production this would call a real API
-      const mockResults = [
-        {
-          name: "County District Court",
-          address: `789 Court St, City ${zip}`,
-          phone: "(555) 234-5678",
-          website: "https://example-court.gov",
-          hours: "Mon-Fri 8:30 AM - 4:30 PM",
-          distance: "1.8 miles"
-        },
-        {
-          name: "Municipal Court Self-Help Center", 
-          address: `321 City Hall Dr, City ${zip}`,
-          phone: "(555) 345-6789",
-          website: "https://example-city.gov/court",
-          hours: "Mon-Thu 9:00 AM - 3:00 PM",
-          distance: "3.2 miles"
-        },
-        {
-          name: "Superior Court Complex",
-          address: `654 Justice Blvd, City ${zip}`,
-          phone: "(555) 456-7890",
-          website: "https://example-superior.gov",
-          hours: "Mon-Fri 8:00 AM - 5:00 PM",
-          distance: "6.1 miles"
-        }
-      ];
+      const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zip}&country=us&format=json&limit=1`;
+      const geocodeResponse = await fetch(geocodeUrl, {
+        headers: { 'User-Agent': 'PublicDefenderAI/1.0' }
+      });
 
-      res.json({ success: true, results: mockResults });
+      if (!geocodeResponse.ok) {
+        return res.status(500).json({ success: false, error: "Location lookup failed" });
+      }
+
+      const geocodeData = await geocodeResponse.json();
+      if (!geocodeData || geocodeData.length === 0) {
+        return res.status(404).json({ success: false, error: "ZIP code not found" });
+      }
+
+      const { lat, lon } = geocodeData[0];
+
+      const searchUrl = `https://nominatim.openstreetmap.org/search?q=courthouse&format=json&limit=10&addressdetails=1&viewbox=${parseFloat(lon)-0.5},${parseFloat(lat)+0.5},${parseFloat(lon)+0.5},${parseFloat(lat)-0.5}&bounded=0`;
+      const searchResponse = await fetch(searchUrl, {
+        headers: { 'User-Agent': 'PublicDefenderAI/1.0' }
+      });
+
+      const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
+        const R = 3959;
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+          Math.sin(dLon/2) * Math.sin(dLon/2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      };
+
+      let results: any[] = [];
+
+      if (searchResponse.ok) {
+        const searchData = await searchResponse.json();
+        results = searchData
+          .filter((place: any) => place.type === 'courthouse' || place.class === 'amenity' || place.display_name?.toLowerCase().includes('court'))
+          .map((place: any) => {
+            const dist = calculateDistance(parseFloat(lat), parseFloat(lon), parseFloat(place.lat), parseFloat(place.lon));
+            const addr = place.address || {};
+            const addressParts = [addr.house_number, addr.road, addr.city || addr.town || addr.village, addr.state, addr.postcode].filter(Boolean);
+            return {
+              name: place.display_name?.split(',')[0] || 'Courthouse',
+              address: addressParts.join(', ') || place.display_name?.split(',').slice(0, 3).join(',').trim(),
+              phone: 'Contact courthouse for information',
+              website: null,
+              hours: 'Mon-Fri 8:30 AM - 4:30 PM (typical hours, verify with courthouse)',
+              distance: `${dist.toFixed(1)} miles`,
+              distanceValue: dist
+            };
+          })
+          .sort((a: any, b: any) => a.distanceValue - b.distanceValue)
+          .slice(0, 10);
+      }
+
+      res.json({
+        success: true,
+        results,
+        count: results.length,
+        source: "OpenStreetMap",
+        zipCode: zip,
+        note: results.length === 0 ? "No courthouses found near this ZIP code. Try contacting your local bar association for court information." : undefined
+      });
     } catch (error) {
-      console.error("Failed to search courthouses:", error);
+      errLog("Failed to search courthouses", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
@@ -777,7 +849,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidance: guidanceWithTimestamp
       });
     } catch (error) {
-      console.error("Failed to generate legal guidance:", error);
+      errLog("Failed to generate legal guidance", error);
       res.status(500).json({ success: false, error: "Failed to generate guidance" });
     }
   });
@@ -804,7 +876,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         case: legalCase 
       });
     } catch (error) {
-      console.error("Failed to fetch legal guidance:", error);
+      errLog("Failed to fetch legal guidance", error);
       res.status(500).json({ success: false, error: "Failed to fetch guidance" });
     }
   });
@@ -853,11 +925,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         caseStage: caseStage || null,
       });
       
-      opsLog(`[Feedback] Vote received: ${isHelpful ? 'helpful' : 'not helpful'}`);
+      opsLog('feedback', `Vote received: ${isHelpful ? 'helpful' : 'not helpful'}`);
       
       res.json({ success: true, feedback });
     } catch (error) {
-      console.error("Failed to submit case feedback:", error);
+      errLog("Failed to submit case feedback", error);
       res.status(500).json({ success: false, error: "Failed to submit feedback" });
     }
   });
@@ -870,7 +942,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json({ success: true, stats });
     } catch (error) {
-      console.error("Failed to get case feedback stats:", error);
+      errLog("Failed to get case feedback stats", error);
       res.status(500).json({ success: false, error: "Failed to get feedback stats" });
     }
   });
@@ -883,7 +955,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json({ success: true, feedback });
     } catch (error) {
-      console.error("Failed to get session feedback:", error);
+      errLog("Failed to get session feedback", error);
       res.status(500).json({ success: false, error: "Failed to get feedback" });
     }
   });
@@ -917,11 +989,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         userAgent: req.headers['user-agent'] || null,
       });
       
-      opsLog(`[Privacy] Consent recorded: ${consentType} v${consentVersion} - ${granted ? 'granted' : 'denied'}`);
+      opsLog('privacy', `Consent recorded: ${consentType} v${consentVersion} - ${granted ? 'granted' : 'denied'}`);
       
       res.json({ success: true, recorded: true });
     } catch (error) {
-      console.error("Failed to record privacy consent:", error);
+      errLog("Failed to record privacy consent", error);
       res.status(500).json({ success: false, error: "Failed to record consent" });
     }
   });
@@ -932,7 +1004,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const stats = await storage.getPrivacyConsentStats();
       res.json({ success: true, stats });
     } catch (error) {
-      console.error("Failed to get privacy consent stats:", error);
+      errLog("Failed to get privacy consent stats", error);
       res.status(500).json({ success: false, error: "Failed to get stats" });
     }
   });
@@ -958,7 +1030,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         timestamp: new Date().toISOString()
       });
     } catch (error) {
-      console.error("Failed to delete session data:", error);
+      errLog("Failed to delete session data", error);
       res.status(500).json({ success: false, error: "Failed to delete session data" });
     }
   });
@@ -1000,7 +1072,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         features: ["personalized-guidance", "natural-language-processing"]
       });
     } catch (error) {
-      console.error("AI health check failed:", error);
+      errLog("AI health check failed", error);
       res.json({ 
         success: true, 
         available: false, 
@@ -1077,7 +1149,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           : 'Limited results - API token required for full RECAP access'
       });
     } catch (error) {
-      console.error("Court records search failed:", error);
+      errLog("Court records search failed", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
@@ -1101,7 +1173,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         documentCount: documents.count
       });
     } catch (error) {
-      console.error("Failed to fetch docket details:", error);
+      errLog("Failed to fetch docket details", error);
       res.status(500).json({ success: false, error: "Failed to fetch docket details" });
     }
   });
@@ -1117,7 +1189,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       );
       res.json({ success: true, ...stats });
     } catch (error) {
-      console.error("BJS statistics fetch failed:", error);
+      errLog("BJS statistics fetch failed", error);
       res.status(500).json({ success: false, error: "Failed to fetch BJS crime statistics" });
     }
   });
@@ -1133,7 +1205,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const trends = await bjsStatisticsService.getVictimizationTrends(yearArray);
       res.json({ success: true, ...trends });
     } catch (error) {
-      console.error("BJS trends fetch failed:", error);
+      errLog("BJS trends fetch failed", error);
       res.status(500).json({ success: false, error: "Failed to fetch victimization trends" });
     }
   });
@@ -1154,7 +1226,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const status = await openLawsClient.checkAvailability();
       res.json(status);
     } catch (error) {
-      console.error("OpenLaws status check failed:", error);
+      errLog("OpenLaws status check failed", error);
       res.status(500).json({ available: false, message: "Status check failed" });
     }
   });
@@ -1170,7 +1242,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         res.status(404).json({ success: false, error: "Statute not found" });
       }
     } catch (error) {
-      console.error("OpenLaws citation search failed:", error);
+      errLog("OpenLaws citation search failed", error);
       res.status(500).json({ success: false, error: "Search failed" });
     }
   });
@@ -1271,7 +1343,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (sessionId) {
         const clearedDocs = clearSessionDocuments(sessionId);
         if (clearedDocs > 0) {
-          opsLog(`[Attorney Session] Cleared ${clearedDocs} document(s) on page unload`);
+          opsLog('attorney-session', `Cleared ${clearedDocs} document(s) on page unload`);
         }
         attorneySessionManager.terminateSession(sessionId, 'user');
       }
@@ -1293,7 +1365,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Clear generated documents for this session before terminating
         const clearedDocs = clearSessionDocuments(sessionId);
         if (clearedDocs > 0) {
-          opsLog(`[Attorney Session] Cleared ${clearedDocs} document(s) on session termination`);
+          opsLog('attorney-session', `Cleared ${clearedDocs} document(s) on session termination`);
         }
         attorneySessionManager.terminateSession(sessionId, 'user');
       }
@@ -1639,7 +1711,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const language = (req.body.language as 'en' | 'es') || 'en';
       const summaryType = req.body.summaryType || 'general';
 
-      devLog(`[DocumentSummary] Processing ${file.originalname} (${file.size} bytes)`);
+      devLog('doc-summary', `Processing ${file.originalname} (${file.size} bytes)`);
 
       // Summarize the document (no storage, processed in memory)
       const summary = await summarizeDocument({
@@ -1655,7 +1727,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       (req as any).file = null;
 
       // Log anonymized metrics only (no content)
-      opsLog(`[DocumentSummary] Completed: type=${summary.documentType}, pages=${summary.pageCount || 'N/A'}, tokens=${summary.usageMetrics.inputTokens}+${summary.usageMetrics.outputTokens}`);
+      opsLog('doc-summary', `Completed: type=${summary.documentType}, pages=${summary.pageCount || 'N/A'}, tokens=${summary.usageMetrics.inputTokens}+${summary.usageMetrics.outputTokens}`);
 
       res.json({
         success: true,
@@ -1741,7 +1813,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const language = (req.body.language as 'en' | 'es') || 'en';
       const summaryType = req.body.summaryType || 'legal_document';
 
-      devLog(`[AttorneyDocSummary] Processing ${file.originalname} (${file.size} bytes)`);
+      devLog('attorney-doc-summary', `Processing ${file.originalname} (${file.size} bytes)`);
 
       const summary = await summarizeDocument({
         file: file.buffer,
@@ -1754,7 +1826,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Clear file buffer
       (req as any).file = null;
 
-      opsLog(`[AttorneyDocSummary] Completed: type=${summary.documentType}, pages=${summary.pageCount || 'N/A'}`);
+      opsLog('attorney-doc-summary', `Completed: type=${summary.documentType}, pages=${summary.pageCount || 'N/A'}`);
 
       res.json({
         success: true,
@@ -1788,7 +1860,7 @@ async function generateLegalGuidance(caseData: any) {
     .map((id: string) => {
       const charge = getChargeById(id);
       if (!charge) {
-        console.warn(`Warning: Charge ID "${id}" not found in database`);
+        opsLog('guidance', `Warning: Charge ID "${id}" not found in database`);
         return null;
       }
       return { 
@@ -1803,7 +1875,7 @@ async function generateLegalGuidance(caseData: any) {
   
   // Log if we couldn't find all charges
   if (chargeClassifications.length !== chargeIds.length) {
-    console.warn(`Warning: Could not find all charges. Found ${chargeClassifications.length} of ${chargeIds.length}`);
+    opsLog('guidance', `Warning: Could not find all charges. Found ${chargeClassifications.length} of ${chargeIds.length}`);
   }
   
   // Try Claude AI first if API key is available
@@ -1811,11 +1883,11 @@ async function generateLegalGuidance(caseData: any) {
   
   if (useAI && (caseData.incidentDescription || caseData.concernsQuestions)) {
     try {
-      devLog('Generating AI-powered guidance with Claude...');
+      devLog('guidance', 'Generating AI-powered guidance with Claude...');
       const claudeGuidance = await generateClaudeGuidance(caseData);
       
       // Log usage metrics (safe aggregates only)
-      opsLog(`[AI] Tokens: ${claudeGuidance.usageMetrics.inputTokens}+${claudeGuidance.usageMetrics.outputTokens}, Cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);
+      opsLog('ai', `Tokens: ${claudeGuidance.usageMetrics.inputTokens}+${claudeGuidance.usageMetrics.outputTokens}, Cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);
       
       return {
         ...claudeGuidance,
@@ -1823,13 +1895,13 @@ async function generateLegalGuidance(caseData: any) {
         generatedBy: 'claude-ai'
       };
     } catch (error) {
-      console.error('Claude AI failed, falling back to rule-based system:', error);
+      errLog('Claude AI failed, falling back to rule-based system', error);
       // Fall through to rule-based system
     }
   }
   
   // Fallback to rule-based guidance engine
-  devLog('Generating rule-based guidance...');
+  devLog('guidance', 'Generating rule-based guidance...');
   const guidance = generateEnhancedGuidance(caseData);
   
   // Run validation for rule-based guidance as well
@@ -1855,9 +1927,9 @@ async function generateLegalGuidance(caseData: any) {
       })),
     };
     
-    opsLog(`[Guidance] Validation: ${(validationResult.confidenceScore * 100).toFixed(1)}% confidence`);
+    opsLog('guidance', `Validation: ${(validationResult.confidenceScore * 100).toFixed(1)}% confidence`);
   } catch (validationError) {
-    devLog('[Guidance] Rule-based validation failed:', validationError);
+    devLog('guidance', 'Rule-based validation failed', validationError);
   }
   
   return {

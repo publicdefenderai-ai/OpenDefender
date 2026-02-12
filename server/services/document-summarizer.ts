@@ -16,13 +16,13 @@ import Anthropic from '@anthropic-ai/sdk';
 import { CLAUDE_MODEL } from '../config/ai-model';
 import * as pdfParse from 'pdf-parse';
 import mammoth from 'mammoth';
-import { devLog } from '../utils/dev-logger';
+import { devLog, errLog } from '../utils/dev-logger';
 import { recordAICost } from './cost-tracker';
 
 // Initialize Anthropic client
 const apiKey = process.env.ANTHROPIC_API_KEY;
 if (!apiKey) {
-  console.error('CRITICAL: Anthropic API key not set for document summarizer');
+  errLog('Anthropic API key not set for document summarizer');
 }
 
 const anthropic = apiKey ? new Anthropic({
@@ -140,7 +140,7 @@ async function extractText(file: Buffer, mimeType: string): Promise<{ text: stri
         throw new Error(`Unsupported mime type: ${mimeType}`);
     }
   } catch (error) {
-    devLog('[DocumentSummarizer] Text extraction failed:', error);
+    devLog('summarizer', 'Text extraction failed', error);
     throw new Error(`Failed to extract text from document: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
@@ -226,7 +226,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
 
   const { file, mimeType, filename, language = 'en', summaryType = 'general' } = request;
 
-  devLog(`[DocumentSummarizer] Processing ${filename} (${mimeType}, ${file.length} bytes)`);
+  devLog('summarizer', `Processing ${filename} (${mimeType}, ${file.length} bytes)`);
 
   // Validate file
   const validationError = validateFile(mimeType, file.length);
@@ -279,7 +279,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
   }
 
   try {
-    devLog('[DocumentSummarizer] Calling Claude API...');
+    devLog('summarizer', 'Calling Claude API...');
     const startTime = Date.now();
 
     const message = await anthropic.messages.create({
@@ -295,7 +295,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
       ],
     });
 
-    devLog(`[DocumentSummarizer] Claude responded in ${Date.now() - startTime}ms`);
+    devLog('summarizer', `Claude responded in ${Date.now() - startTime}ms`);
 
     // Extract response text
     const textContent = message.content.find(block => block.type === 'text');
@@ -347,7 +347,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
       },
     };
 
-    devLog(`[DocumentSummarizer] Summary generated successfully. Document type: ${summary.documentType}`);
+    devLog('summarizer', `Summary generated successfully. Document type: ${summary.documentType}`);
 
     // IMPORTANT: Do not cache or store the summary - return immediately
     // The buffer and all data will be garbage collected after response is sent
@@ -355,7 +355,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
     return summary;
 
   } catch (error) {
-    devLog('[DocumentSummarizer] Error:', error);
+    devLog('summarizer', 'Error', error);
 
     if (error instanceof Anthropic.APIError) {
       if (error.status === 429) {

@@ -19,6 +19,7 @@
 import { storage } from '../storage';
 import { criminalCharges, getChargeById, getChargesByJurisdiction } from '@shared/criminal-charges';
 import { caseLawValidator, type PrecedentCase, type CaseLawValidationResult } from './case-law-validator';
+import { devLog, opsLog, errLog } from '../utils/dev-logger';
 
 export interface ValidationIssue {
   type: 'citation_not_found' | 'penalty_mismatch' | 'jurisdiction_mismatch' | 'timeline_issue' | 'charge_not_found' | 'no_precedents' | 'weak_precedents' | 'contrary_precedent';
@@ -477,7 +478,7 @@ export async function validateLegalGuidance(
   guidance: GuidanceToValidate,
   context: CaseContext
 ): Promise<ValidationResult> {
-  console.log('[Validator] Starting legal accuracy validation...');
+  opsLog('validator', 'Starting legal accuracy validation...');
   const startTime = Date.now();
   
   const tier1Issues: ValidationIssue[] = [];
@@ -518,7 +519,7 @@ export async function validateLegalGuidance(
   let tier2ChecksPassed = 0;
   
   try {
-    console.log('[Validator] Starting Tier 2 case law validation...');
+    devLog('validator', 'Starting Tier 2 case law validation...');
     caseLawResult = await caseLawValidator.validateWithCaseLaw(guidance, context);
     
     if (caseLawResult.isAvailable) {
@@ -538,7 +539,7 @@ export async function validateLegalGuidance(
       }));
     }
   } catch (error) {
-    console.warn('[Validator] Tier 2 case law validation failed:', error);
+    opsLog('validator', 'Tier 2 case law validation failed');
     tier2Issues.push({
       type: 'no_precedents',
       severity: 'info',
@@ -618,9 +619,9 @@ export async function validateLegalGuidance(
   };
   
   const duration = Date.now() - startTime;
-  console.log(`[Validator] Validation completed in ${duration}ms - Combined Confidence: ${(confidenceScore * 100).toFixed(1)}%`);
+  opsLog('validator', `Validation completed in ${duration}ms - Combined Confidence: ${(confidenceScore * 100).toFixed(1)}%`);
   if (caseLawResult?.isAvailable) {
-    console.log(`[Validator] Tier 2: ${caseLawResult.precedentsFound} precedents, ${caseLawResult.corroboratingCases} corroborating`);
+    opsLog('validator', `Tier 2: ${caseLawResult.precedentsFound} precedents, ${caseLawResult.corroboratingCases} corroborating`);
   }
   
   return result;

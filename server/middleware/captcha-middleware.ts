@@ -20,7 +20,7 @@ import { devLog } from '../utils/dev-logger';
 export function requireCaptcha(req: Request, res: Response, next: NextFunction) {
   // Skip in development if not configured
   if (!isCaptchaRequired() && process.env.NODE_ENV === 'development') {
-    devLog('[CAPTCHA Middleware] Skipping - not configured in development');
+    devLog('captcha', 'Skipping - not configured in development');
     return next();
   }
 
@@ -55,7 +55,7 @@ export function requireCaptcha(req: Request, res: Response, next: NextFunction) 
       }
     })
     .catch(error => {
-      devLog('[CAPTCHA Middleware] Error:', error);
+      devLog('captcha', 'Error', error);
       res.status(500).json({
         success: false,
         error: 'CAPTCHA verification error',

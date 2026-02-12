@@ -5,7 +5,7 @@ const COURTLISTENER_BASE_URL = 'https://www.courtlistener.com/api/rest/v4';
 const COURTLISTENER_TOKEN = process.env.COURTLISTENER_API_TOKEN;
 
 if (!COURTLISTENER_TOKEN) {
-  devLog('Warning: COURTLISTENER_API_TOKEN not set. RECAP features will be limited.');
+  devLog('recap', 'COURTLISTENER_API_TOKEN not set. RECAP features will be limited.');
 }
 
 interface CourtListenerSearchParams {

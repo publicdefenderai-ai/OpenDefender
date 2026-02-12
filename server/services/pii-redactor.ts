@@ -23,6 +23,7 @@
 
 import { Redactor } from '@redactpii/node';
 import nlp from 'compromise';
+import { errLog } from '../utils/dev-logger';
 
 /**
  * Redaction statistics for observability
@@ -190,7 +191,7 @@ function detectNamesWithNLP(text: string): Array<{ text: string; start: number; 
     });
     
   } catch (error) {
-    console.error('[PII Redactor] NLP name detection error:', error);
+    errLog('[PII Redactor] NLP name detection error', error);
   }
   
   // Sort by position (reverse order for safe replacement)

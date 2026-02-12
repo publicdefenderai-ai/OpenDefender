@@ -12,6 +12,8 @@
  * Sources: Official state legislature websites, verified Nov 2025
  */
 
+import { devLog, errLog } from '../utils/dev-logger';
+
 export interface StateStatuteUrlConfig {
   state: string;
   stateName: string;
@@ -1588,20 +1590,20 @@ export function parseCitation(citation: string): ParsedCitation | null {
 export function generateStatuteUrl(citation: string): string | null {
   const parsed = parseCitation(citation);
   if (!parsed) {
-    console.warn(`[StatuteUrls] Could not parse citation: ${citation}`);
+    devLog('statute-urls', `Could not parse citation: ${citation}`);
     return null;
   }
 
   const config = stateStatuteConfigs[parsed.state];
   if (!config) {
-    console.warn(`[StatuteUrls] No URL config for state: ${parsed.state}`);
+    devLog('statute-urls', `No URL config for state: ${parsed.state}`);
     return null;
   }
 
   try {
     return config.generateUrl(parsed.code, parsed.section);
   } catch (error) {
-    console.error(`[StatuteUrls] Error generating URL for ${citation}:`, error);
+    errLog(`[StatuteUrls] Error generating URL for ${citation}`, error);
     return null;
   }
 }

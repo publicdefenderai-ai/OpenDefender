@@ -4,7 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import crypto from 'crypto';
 import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
 import { validateLegalGuidance, ValidationResult } from './legal-accuracy-validator';
-import { devLog } from '../utils/dev-logger';
+import { devLog, opsLog, errLog } from '../utils/dev-logger';
 import { recordAICost } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { CLAUDE_MODEL } from '../config/ai-model';
@@ -13,8 +13,7 @@ import { CLAUDE_MODEL } from '../config/ai-model';
 const apiKey = process.env.ANTHROPIC_API_KEY;
 
 if (!apiKey) {
-  console.error('CRITICAL: Anthropic API key not set');
-  console.error('Missing: ANTHROPIC_API_KEY');
+  errLog('Anthropic API key not set');
   throw new Error('ANTHROPIC_API_KEY required for AI guidance features');
 }
 
@@ -45,7 +44,7 @@ setInterval(() => {
   
   if (keysToDelete.length > 0) {
     keysToDelete.forEach(key => responseCache.delete(key));
-    devLog(`[Privacy] Cleared ${keysToDelete.length} expired cache entries`);
+    devLog('privacy', `Cleared ${keysToDelete.length} expired cache entries`);
   }
 }, 5 * 60 * 1000); // Run cleanup every 5 minutes
 
@@ -53,13 +52,13 @@ setInterval(() => {
 export function clearSessionCache(sessionId?: string): void {
   if (!sessionId) {
     responseCache.clear();
-    devLog('[Privacy] All guidance cache cleared');
+    devLog('privacy', 'All guidance cache cleared');
   } else {
     // Clear entries that might contain this session's data
     // Since cache keys are hashes, we clear all as a safety measure
     const sizeBefore = responseCache.size;
     responseCache.clear();
-    devLog(`[Privacy] Cleared ${sizeBefore} cache entries for session cleanup`);
+    devLog('privacy', `Cleared ${sizeBefore} cache entries for session cleanup`);
   }
 }
 
@@ -451,7 +450,7 @@ async function callClaudeWithRetry(
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       if (attempt > 0) {
-        devLog(`Retrying Claude API call (attempt ${attempt + 1}/${maxRetries + 1})...`);
+        devLog('claude', `Retrying API call (attempt ${attempt + 1}/${maxRetries + 1})...`);
       }
       
       const startTime = Date.now();
@@ -477,8 +476,8 @@ async function callClaudeWithRetry(
       
       const message = await Promise.race([apiCallPromise, timeoutPromise]);
       
-      devLog('Claude API responded in', Date.now() - startTime, 'ms');
-      devLog('Response usage:', message.usage);
+      devLog('claude', `API responded in ${Date.now() - startTime}ms`);
+      devLog('claude', 'Response usage', message.usage);
       
       return message;
     } catch (error: any) {
@@ -492,7 +491,7 @@ async function callClaudeWithRetry(
       const isOverloaded = error instanceof Anthropic.APIError && error.status === 529;
       
       if ((isTimeout || isOverloaded) && attempt < maxRetries) {
-        console.warn(`Claude API ${isOverloaded ? 'overloaded' : 'timed out'} on attempt ${attempt + 1}, will retry...`);
+        devLog('claude', `API ${isOverloaded ? 'overloaded' : 'timed out'} on attempt ${attempt + 1}, will retry...`);
         // Add a delay before retry (3 seconds for overloaded, 1 second for timeout)
         const delay = isOverloaded ? 3000 : 1000;
         await new Promise(resolve => setTimeout(resolve, delay));
@@ -521,7 +520,7 @@ export async function generateClaudeGuidance(
     
     // Log redaction stats for observability (NOT the actual redacted values)
     if (stats.total > 0) {
-      devLog('[PII Protection] Redacted sensitive information:', {
+      devLog('pii', 'Redacted sensitive information', {
         total: stats.total,
         breakdown: {
           names: stats.name,
@@ -541,7 +540,7 @@ export async function generateClaudeGuidance(
   const cachedEntry = responseCache.get(cacheKey);
   
   if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_TTL) {
-    devLog('Cache hit for guidance request');
+    devLog('claude', 'Cache hit for guidance request');
     return cachedEntry.response;
   }
 
@@ -549,9 +548,9 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt(processedDetails.language);
     const userPrompt = buildUserPrompt(processedDetails);
 
-    devLog('Generating personalized guidance with Claude Sonnet 4...');
-    devLog('Prompt length:', userPrompt.length, 'characters');
-    devLog('Making API request to Claude (with retry on timeout)...');
+    devLog('claude', 'Generating personalized guidance...');
+    devLog('claude', `Prompt length: ${userPrompt.length} characters`);
+    devLog('claude', 'Making API request to Claude (with retry on timeout)...');
     
     const message = await callClaudeWithRetry(systemPrompt, userPrompt, 1);
 
@@ -628,9 +627,9 @@ export async function generateClaudeGuidance(
         })),
       };
       
-      devLog(`[Guidance] Validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+      devLog('guidance', `Validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
     } catch (validationError) {
-      devLog('[Guidance] Validation failed, returning guidance without validation:', validationError);
+      devLog('guidance', 'Validation failed, returning guidance without validation', validationError);
       // Continue without validation - guidance is still useful
     }
 
@@ -657,11 +656,11 @@ export async function generateClaudeGuidance(
             ...(guidance.warnings || []),
             ...diversionValidation.warnings,
           ];
-          devLog(`[Guidance] Added ${diversionValidation.warnings.length} diversion availability warnings`);
+          devLog('guidance', `Added ${diversionValidation.warnings.length} diversion availability warnings`);
         }
       }
     } catch (diversionError) {
-      devLog('[Guidance] Diversion availability check failed:', diversionError);
+      devLog('guidance', 'Diversion availability check failed', diversionError);
       // Continue without diversion validation
     }
 
@@ -673,7 +672,7 @@ export async function generateClaudeGuidance(
 
     return guidance;
   } catch (error) {
-    console.error('Claude AI error:', error);
+    errLog('Claude AI error', error);
     
     // Provide specific error messages based on error type
     if (error instanceof Anthropic.APIError) {
@@ -709,7 +708,7 @@ export async function testClaudeConnection(): Promise<boolean> {
     });
     return true;
   } catch (error) {
-    console.error('Claude connection test failed:', error);
+    errLog('Claude connection test failed', error);
     return false;
   }
 }

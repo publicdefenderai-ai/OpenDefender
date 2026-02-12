@@ -73,7 +73,7 @@ class BJSStatisticsService {
   private getCached<T>(key: string): T | null {
     const entry = this.cache.get(key);
     if (entry && Date.now() < entry.expires) {
-      devLog(`[BJS] Cache hit for key: ${key}`);
+      devLog('bjs', `Cache hit for key: ${key}`);
       return entry.data as T;
     }
     if (entry) {
@@ -92,7 +92,7 @@ class BJSStatisticsService {
       const oldestKey = this.cache.keys().next().value;
       if (oldestKey) {
         this.cache.delete(oldestKey);
-        devLog(`[BJS] Cache evicted oldest entry: ${oldestKey}`);
+        devLog('bjs', `Cache evicted oldest entry: ${oldestKey}`);
       }
     }
 
@@ -100,7 +100,7 @@ class BJSStatisticsService {
       data,
       expires: Date.now() + CACHE_TTL_MS,
     });
-    devLog(`[BJS] Cached data for key: ${key} (expires in 24h)`);
+    devLog('bjs', `Cached data for key: ${key} (expires in 24h)`);
   }
 
   /**
@@ -109,7 +109,7 @@ class BJSStatisticsService {
   clearCache(): void {
     const size = this.cache.size;
     this.cache.clear();
-    devLog(`[BJS] Cache cleared (${size} entries removed)`);
+    devLog('bjs', `Cache cleared (${size} entries removed)`);
   }
 
   /**
@@ -150,7 +150,7 @@ class BJSStatisticsService {
 
       const url = `${BJS_BASE_URL}/${datasetId}.json`;
 
-      devLog(`[BJS] Fetching dataset ${datasetId} with params:`, queryParams);
+      devLog('bjs', `Fetching dataset ${datasetId} with params`, queryParams);
 
       const response = await axios.get(url, {
         params: queryParams,
@@ -160,13 +160,13 @@ class BJSStatisticsService {
       return response.data;
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        devLog(`[BJS] API error for dataset ${datasetId}:`, {
+        devLog('bjs', `API error for dataset ${datasetId}`, {
           status: error.response?.status,
           message: error.message,
           data: error.response?.data,
         });
       } else {
-        devLog(`[BJS] API fetch failed for ${datasetId}:`, error);
+        devLog('bjs', `API fetch failed for ${datasetId}`, error);
       }
       throw error;
     }
@@ -295,7 +295,7 @@ class BJSStatisticsService {
 
       return result;
     } catch (error) {
-      devLog('[BJS] Failed to get crime statistics:', error);
+      devLog('bjs', 'Failed to get crime statistics', error);
       throw new Error('Failed to fetch BJS crime statistics');
     }
   }
@@ -356,7 +356,7 @@ class BJSStatisticsService {
 
       return result;
     } catch (error) {
-      devLog('[BJS] Failed to get victimization trends:', error);
+      devLog('bjs', 'Failed to get victimization trends', error);
       throw new Error('Failed to fetch victimization trends');
     }
   }
@@ -412,7 +412,7 @@ class BJSStatisticsService {
 
       return result;
     } catch (error) {
-      devLog('[BJS] Failed to get demographic breakdown:', error);
+      devLog('bjs', 'Failed to get demographic breakdown', error);
       throw new Error('Failed to fetch demographic data');
     }
   }

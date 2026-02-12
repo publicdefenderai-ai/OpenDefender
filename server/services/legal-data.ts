@@ -174,22 +174,13 @@ class LegalDataServiceImpl implements LegalDataService {
 
   async getSentencingGuidelines(jurisdiction: string) {
     try {
-      // This would integrate with US Sentencing Commission API
-      const mockGuidelines = {
+      return {
         success: true,
         jurisdiction,
-        guidelines: [
-          {
-            offense: 'Drug Trafficking',
-            baseLevel: 12,
-            enhancements: ['Criminal History', 'Leadership Role'],
-            source: 'US Sentencing Commission',
-          },
-        ],
+        guidelines: [],
         source: 'US Sentencing Commission',
+        note: 'Sentencing guidelines vary by jurisdiction and case specifics. Consult the US Sentencing Commission (ussc.gov) or a licensed attorney for guidance specific to your case.',
       };
-
-      return mockGuidelines;
     } catch (error) {
       errLog('Sentencing guidelines fetch failed', error);
       return {
@@ -202,29 +193,13 @@ class LegalDataServiceImpl implements LegalDataService {
 
   async getLocalCourtInfo(jurisdiction: string) {
     try {
-      // This would scrape or use APIs from state court administration sites
-      const mockCourtInfo = {
+      return {
         success: true,
         jurisdiction,
-        courts: [
-          {
-            name: 'Superior Court',
-            address: '123 Court St, City, State 12345',
-            phone: '(555) 123-4567',
-            hours: 'Mon-Fri 9:00 AM - 5:00 PM',
-            services: ['Criminal', 'Civil', 'Family'],
-          },
-        ],
-        publicDefenders: [
-          {
-            office: 'Public Defender Office',
-            phone: '(555) 987-6543',
-            address: '456 Legal Ave, City, State 12345',
-          },
-        ],
+        courts: [],
+        publicDefenders: [],
+        note: 'Use the court locator or public defender search features on this site to find real court and public defender information by ZIP code.',
       };
-
-      return mockCourtInfo;
     } catch (error) {
       errLog('Local court info fetch failed', error);
       return {

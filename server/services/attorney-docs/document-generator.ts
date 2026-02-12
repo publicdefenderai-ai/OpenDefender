@@ -131,7 +131,7 @@ setInterval(() => {
 
   if (keysToDelete.length > 0) {
     keysToDelete.forEach((key) => generatedDocuments.delete(key));
-    opsLog(`[Document Generator] Cleaned up ${keysToDelete.length} expired documents`);
+    opsLog('doc-generator', `Cleaned up ${keysToDelete.length} expired documents`);
   }
 }, CLEANUP_INTERVAL_MS);
 
@@ -486,8 +486,8 @@ async function generateAISection(
     ? AI_IMMIGRATION_SYSTEM_PROMPT
     : AI_SYSTEM_PROMPT;
 
-  devLog(`[AI] Generating content for section: ${section.id}`);
-  devLog(`[AI] Prompt length: ${prompt.length} characters`);
+  devLog('ai', `Generating content for section: ${section.id}`);
+  devLog('ai', `Prompt length: ${prompt.length} characters`);
 
   try {
     const response = await anthropic.messages.create({
@@ -508,9 +508,7 @@ async function generateAISection(
       throw new Error("No text content in AI response");
     }
 
-    opsLog(
-      `[AI] Section ${section.id}: ${response.usage.input_tokens}+${response.usage.output_tokens} tokens`
-    );
+    opsLog('ai', `Section ${section.id}: ${response.usage.input_tokens}+${response.usage.output_tokens} tokens`);
 
     return textContent.text.trim();
   } catch (error) {
@@ -543,7 +541,7 @@ export async function generateDocument(
     throw new Error(`Invalid form data: ${validation.errors.join(", ")}`);
   }
 
-  devLog(`[Document Generator] Generating ${templateId} for jurisdiction ${jurisdiction}`);
+  devLog('doc-generator', `Generating ${templateId} for jurisdiction ${jurisdiction}`);
 
   // Process each section
   const generatedSections: GeneratedSection[] = [];
@@ -570,7 +568,7 @@ export async function generateDocument(
         break;
 
       default:
-        devLog(`[Document Generator] Unknown section type: ${section.type}`);
+        devLog('doc-generator', `Unknown section type: ${section.type}`);
     }
 
     generatedSections.push({
@@ -601,7 +599,7 @@ export async function generateDocument(
   // Store document
   generatedDocuments.set(documentId, document);
 
-  opsLog(`[Document Generator] Generated document ${documentId.substring(0, 8)} for session ${sessionId.substring(0, 8)}`);
+  opsLog('doc-generator', `Generated document ${documentId.substring(0, 8)} for session ${sessionId.substring(0, 8)}`);
 
   return document;
 }

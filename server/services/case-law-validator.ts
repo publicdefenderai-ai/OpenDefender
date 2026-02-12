@@ -14,6 +14,7 @@
 
 import { courtListenerService } from './courtlistener';
 import { getChargeById } from '@shared/criminal-charges';
+import { devLog, opsLog, errLog } from '../utils/dev-logger';
 
 export interface PrecedentCase {
   id: string;
@@ -391,7 +392,7 @@ class CaseLawValidator {
     // Check cache first
     const cached = this.cache.get(cacheKey);
     if (cached && Date.now() - cached.timestamp < this.cacheMaxAge) {
-      console.log('[CaseLawValidator] Returning cached result');
+      devLog('case-law', 'Returning cached result');
       return cached.result;
     }
     
@@ -423,9 +424,9 @@ class CaseLawValidator {
         enhancedQuery = `${query} ${statuteSearchTerms.slice(0, 2).join(' ')}`;
       }
       
-      console.log(`[CaseLawValidator] Searching CourtListener: "${enhancedQuery}" in ${context.jurisdiction}`);
+      devLog('case-law', `Searching CourtListener: "${enhancedQuery}" in ${context.jurisdiction}`);
       if (statuteSearchTerms.length > 0) {
-        console.log(`[CaseLawValidator] Statute search terms: ${statuteSearchTerms.join(', ')}`);
+        devLog('case-law', `Statute search terms: ${statuteSearchTerms.join(', ')}`);
       }
       
       // Use hybrid search for best results
@@ -437,7 +438,7 @@ class CaseLawValidator {
       
       // Fallback 1: Try without jurisdiction filter if no results
       if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && courtFilter) {
-        console.log(`[CaseLawValidator] No results with jurisdiction filter, trying broader search...`);
+        devLog('case-law', `No results with jurisdiction filter, trying broader search...`);
         await this.throttleRequest();
         searchResult = await courtListenerService.hybridSearchOpinions(
           enhancedQuery,
@@ -449,7 +450,7 @@ class CaseLawValidator {
       // Fallback 2: Try statute-specific search if we have statute terms
       if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && statuteSearchTerms.length > 0) {
         const statuteQuery = statuteSearchTerms.join(' ');
-        console.log(`[CaseLawValidator] Trying statute-specific search: "${statuteQuery}"`);
+        devLog('case-law', `Trying statute-specific search: "${statuteQuery}"`);
         await this.throttleRequest();
         searchResult = await courtListenerService.searchOpinions(
           statuteQuery,
@@ -461,7 +462,7 @@ class CaseLawValidator {
       if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
         const fallbackQuery = this.buildFallbackQuery(chargeArray);
         if (fallbackQuery && fallbackQuery !== keywords) {
-          console.log(`[CaseLawValidator] Trying category fallback query: "${fallbackQuery}"`);
+          devLog('case-law', `Trying category fallback query: "${fallbackQuery}"`);
           await this.throttleRequest();
           searchResult = await courtListenerService.semanticSearchOpinions(
             fallbackQuery,
@@ -490,7 +491,7 @@ class CaseLawValidator {
       // Process and score results (limit to top 10)
       const opinions = searchResult.results.slice(0, 10);
       
-      console.log(`[CaseLawValidator] Processing ${opinions.length} results from CourtListener`);
+      devLog('case-law', `Processing ${opinions.length} results from CourtListener`);
       
       for (const opinion of opinions) {
         // Use actual semantic score from CourtListener if available, otherwise use conservative default of 0.1
@@ -505,7 +506,7 @@ class CaseLawValidator {
           statuteCitations // Pass statute codes for matching
         );
         
-        console.log(`[CaseLawValidator] Case "${opinion.caseName || 'Unknown'}" scored ${(relevanceScore * 100).toFixed(1)}% (semantic: ${(semanticScore * 100).toFixed(1)}%)`);
+        devLog('case-law', `Case "${opinion.caseName || 'Unknown'}" scored ${(relevanceScore * 100).toFixed(1)}% (semantic: ${(semanticScore * 100).toFixed(1)}%)`);
         
         // Lowered threshold to include more cases (was 0.3, now 0.2)
         if (relevanceScore < 0.2) continue;
@@ -590,12 +591,12 @@ class CaseLawValidator {
       // Cache the result
       this.cache.set(cacheKey, { result, timestamp: Date.now() });
       
-      console.log(`[CaseLawValidator] Found ${result.precedentsFound} precedents, Tier 2 score: ${(result.tier2Score * 100).toFixed(1)}%`);
+      opsLog('case-law', `Found ${result.precedentsFound} precedents, Tier 2 score: ${(result.tier2Score * 100).toFixed(1)}%`);
       
       return result;
       
     } catch (error) {
-      console.error('[CaseLawValidator] Error querying CourtListener:', error);
+      errLog('[CaseLawValidator] Error querying CourtListener', error);
       result.summary = 'Case law validation temporarily unavailable.';
       result.issues.push({
         type: 'no_precedents',
@@ -608,7 +609,7 @@ class CaseLawValidator {
 
   clearCache(): void {
     this.cache.clear();
-    console.log('[CaseLawValidator] Cache cleared');
+    devLog('case-law', 'Cache cleared');
   }
 
   getCacheStats(): { size: number; maxAge: string } {

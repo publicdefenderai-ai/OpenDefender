@@ -33,7 +33,7 @@ class AttorneyAuditLogger {
   logSessionCreated(session: AttorneySession): void {
     const entry = this.createEntry(session, "session_created");
     this.addEntry(entry);
-    devLog(`[Attorney Audit] Session created, ID: ${entry.sessionIdPrefix}...`);
+    devLog('attorney-audit', `Session created, ID: ${entry.sessionIdPrefix}...`);
   }
 
   /**
@@ -51,7 +51,7 @@ class AttorneyAuditLogger {
   logSessionTerminated(session: AttorneySession): void {
     const entry = this.createEntry(session, "session_terminated");
     this.addEntry(entry);
-    devLog(`[Attorney Audit] Session terminated, ID: ${entry.sessionIdPrefix}...`);
+    devLog('attorney-audit', `Session terminated, ID: ${entry.sessionIdPrefix}...`);
   }
 
   /**
@@ -60,7 +60,7 @@ class AttorneyAuditLogger {
   logSessionExpired(session: AttorneySession): void {
     const entry = this.createEntry(session, "session_expired");
     this.addEntry(entry);
-    devLog(`[Attorney Audit] Session expired, ID: ${entry.sessionIdPrefix}...`);
+    devLog('attorney-audit', `Session expired, ID: ${entry.sessionIdPrefix}...`);
   }
 
   /**

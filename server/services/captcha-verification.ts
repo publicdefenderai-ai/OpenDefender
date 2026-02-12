@@ -43,7 +43,7 @@ export async function verifyCaptcha(token: string, remoteIp?: string): Promise<V
   // If no secret key configured, skip verification in development
   if (!secretKey) {
     if (process.env.NODE_ENV === 'development') {
-      devLog('[CAPTCHA] No TURNSTILE_SECRET_KEY set, skipping verification in development');
+      devLog('captcha', 'No TURNSTILE_SECRET_KEY set, skipping verification in development');
       return { success: true };
     }
     errLog('[CAPTCHA] TURNSTILE_SECRET_KEY not configured');
@@ -88,13 +88,13 @@ export async function verifyCaptcha(token: string, remoteIp?: string): Promise<V
     const result: TurnstileVerifyResponse = await response.json();
 
     if (result.success) {
-      devLog('[CAPTCHA] Verification successful');
+      devLog('captcha', 'Verification successful');
       return { success: true };
     }
 
     // Handle specific error codes
     const errorCodes = result['error-codes'] || [];
-    devLog('[CAPTCHA] Verification failed:', errorCodes);
+    devLog('captcha', 'Verification failed', errorCodes);
 
     if (errorCodes.includes('timeout-or-duplicate')) {
       return {

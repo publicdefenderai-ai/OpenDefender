@@ -5,6 +5,7 @@ import { registerRoutes } from "./routes";
 import { registerV1Routes } from "./routes-v1";
 import { setupVite, serveStatic, log } from "./vite";
 import { runStartupValidation } from "./services/charge-statute-validator";
+import { opsLog } from "./utils/dev-logger";
 
 const app = express();
 // Enable trust proxy for rate limiting to work correctly with X-Forwarded-For header
@@ -87,7 +88,7 @@ app.use((req, res, next) => {
       if (process.env.NODE_ENV === 'production' && origin) {
         const originHost = new URL(origin).host;
         if (originHost !== host) {
-          console.warn(`[Security] Cross-origin request blocked: ${origin} -> ${host}`);
+          opsLog('security', `Cross-origin request blocked: ${origin} -> ${host}`);
           return res.status(403).json({
             success: false,
             error: 'Cross-origin requests not allowed'

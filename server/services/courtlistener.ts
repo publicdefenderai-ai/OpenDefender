@@ -1,3 +1,5 @@
+import { errLog } from '../utils/dev-logger';
+
 interface CourtListenerAPI {
   searchOpinions(query: string, jurisdiction?: string): Promise<any>;
   semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string): Promise<any>;
@@ -37,7 +39,7 @@ class CourtListenerService implements CourtListenerAPI {
       }
       return await response.json();
     } catch (error) {
-      console.error('CourtListener API request failed:', error);
+      errLog('CourtListener API request failed', error);
       throw error;
     }
   }
@@ -113,7 +115,7 @@ class CourtListenerService implements CourtListenerAPI {
 
       return this.makeRequest('/dockets/', params);
     } catch (error) {
-      console.error('Failed to get case statistics:', error);
+      errLog('Failed to get case statistics', error);
       return { results: [], count: 0 };
     }
   }
