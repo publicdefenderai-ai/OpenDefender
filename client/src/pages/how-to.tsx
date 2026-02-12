@@ -22,6 +22,7 @@ import {
   Milestone
 } from "lucide-react";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -40,189 +41,6 @@ interface CategorySection {
   description: string;
   resources: ResourceItem[];
 }
-
-const sections: CategorySection[] = [
-  {
-    title: "Get Help",
-    description: "Start here if you need guidance on your situation",
-    resources: [
-      {
-        icon: <MessageSquare className="h-5 w-5" />,
-        title: "Personalized Case Guidance",
-        description: "Get tailored legal guidance based on your charges and jurisdiction.",
-        link: "/case-guidance"
-      },
-      {
-        icon: <Bot className="h-5 w-5" />,
-        title: "AI Legal Chat",
-        description: "Ask legal questions and get plain-language answers from our AI assistant.",
-        link: "/chat"
-      },
-      {
-        icon: <Globe className="h-5 w-5" />,
-        title: "Immigration Rights",
-        description: "Know your rights during ICE encounters and deportation proceedings.",
-        link: "/immigration-guidance"
-      },
-      {
-        icon: <FileScan className="h-5 w-5" />,
-        title: "Document Summarizer",
-        description: "Upload a legal document and get a plain-language summary.",
-        link: "/document-summarizer"
-      }
-    ]
-  },
-  {
-    title: "Know Your Rights",
-    description: "Understand your legal protections",
-    resources: [
-      {
-        icon: <Shield className="h-5 w-5" />,
-        title: "Constitutional Rights",
-        description: "Miranda rights, rights during arrest, and in court.",
-        link: "/rights-info"
-      },
-      {
-        icon: <Milestone className="h-5 w-5" />,
-        title: "Interactive Case Timeline",
-        description: "Walk through the 7 stages of a criminal case from arrest to appeal.",
-        link: "/case-timeline"
-      },
-      {
-        icon: <CreditCard className="h-5 w-5" />,
-        title: "Quick-Reference Cards",
-        description: "Printable rights cards for police encounters and court appearances.",
-        link: "/quick-reference"
-      },
-      {
-        icon: <Calendar className="h-5 w-5" />,
-        title: "Criminal Justice Process",
-        description: "Timeline from arrest through sentencing.",
-        link: "/process"
-      },
-      {
-        icon: <Search className="h-5 w-5" />,
-        title: "Search & Seizure Rights",
-        description: "Fourth Amendment rights during police stops.",
-        link: "/search-seizure"
-      },
-      {
-        icon: <Users className="h-5 w-5" />,
-        title: "Helping Friends & Family",
-        description: "Support someone who has been arrested.",
-        link: "/friends-family"
-      },
-      {
-        icon: <ClipboardList className="h-5 w-5" />,
-        title: "Mock Q&A Practice",
-        description: "Practice answering questions you might face in court proceedings.",
-        link: "/resources"
-      }
-    ]
-  },
-  {
-    title: "Find Resources",
-    description: "Connect with legal support services",
-    resources: [
-      {
-        icon: <Compass className="h-5 w-5" />,
-        title: "Resources Hub",
-        description: "Browse all legal resources, guides, and support services.",
-        link: "/resources"
-      },
-      {
-        icon: <MapPin className="h-5 w-5" />,
-        title: "Find Public Defenders",
-        description: "Search by ZIP code for free legal representation.",
-        link: "/"
-      },
-      {
-        icon: <HelpCircle className="h-5 w-5" />,
-        title: "Legal Aid Organizations",
-        description: "Free or low-cost legal services in your area.",
-        link: "/"
-      },
-      {
-        icon: <Route className="h-5 w-5" />,
-        title: "Diversion Programs",
-        description: "Alternative sentencing options like drug courts.",
-        link: "/diversion-programs"
-      },
-      {
-        icon: <Eraser className="h-5 w-5" />,
-        title: "Record Expungement",
-        description: "Learn about sealing criminal records.",
-        link: "/record-expungement"
-      }
-    ]
-  },
-  {
-    title: "Reference",
-    description: "Look up legal terms and locations",
-    resources: [
-      {
-        icon: <Book className="h-5 w-5" />,
-        title: "Legal Glossary",
-        description: "Plain-language definitions of legal terms.",
-        link: "/legal-glossary"
-      },
-      {
-        icon: <MapPin className="h-5 w-5" />,
-        title: "Court Locator",
-        description: "Find court addresses and contact information.",
-        link: "/court-locator"
-      },
-      {
-        icon: <Book className="h-5 w-5" />,
-        title: "Statute Lookup",
-        description: "Search state and federal laws.",
-        link: "/statutes"
-      },
-      {
-        icon: <FileText className="h-5 w-5" />,
-        title: "Document Library",
-        description: "Legal forms, templates, and guides.",
-        link: "/document-library"
-      }
-    ]
-  },
-  {
-    title: "Attorney Tools",
-    description: "Resources for licensed attorneys representing clients",
-    resources: [
-      {
-        icon: <Briefcase className="h-5 w-5" />,
-        title: "Attorney Portal",
-        description: "Verified attorney access to 28 document templates for criminal and immigration cases.",
-        link: "/attorney"
-      },
-      {
-        icon: <FileText className="h-5 w-5" />,
-        title: "Court Records Search",
-        description: "Search federal court documents via PACER/RECAP.",
-        link: "/court-records"
-      }
-    ]
-  },
-  {
-    title: "Developers & Partners",
-    description: "Integration tools for organizations and developers",
-    resources: [
-      {
-        icon: <Code className="h-5 w-5" />,
-        title: "API Documentation",
-        description: "Public REST API v1 for accessing legal data, charges, and programs.",
-        link: "/api-docs"
-      },
-      {
-        icon: <Globe className="h-5 w-5" />,
-        title: "Embeddable Widgets",
-        description: "Add legal search and charge lookup to your own website.",
-        link: "/widgets"
-      }
-    ]
-  }
-];
 
 function ResourceLink({ resource }: { resource: ResourceItem }) {
   return (
@@ -249,6 +67,191 @@ function ResourceLink({ resource }: { resource: ResourceItem }) {
 
 export default function HowTo() {
   useScrollToTop();
+  const { t } = useTranslation();
+
+  const sections: CategorySection[] = [
+    {
+      title: t('howTo.sections.getHelp.title'),
+      description: t('howTo.sections.getHelp.description'),
+      resources: [
+        {
+          icon: <MessageSquare className="h-5 w-5" />,
+          title: t('howTo.sections.getHelp.caseGuidance.title'),
+          description: t('howTo.sections.getHelp.caseGuidance.description'),
+          link: "/case-guidance"
+        },
+        {
+          icon: <Bot className="h-5 w-5" />,
+          title: t('howTo.sections.getHelp.aiChat.title'),
+          description: t('howTo.sections.getHelp.aiChat.description'),
+          link: "/chat"
+        },
+        {
+          icon: <Globe className="h-5 w-5" />,
+          title: t('howTo.sections.getHelp.immigrationRights.title'),
+          description: t('howTo.sections.getHelp.immigrationRights.description'),
+          link: "/immigration-guidance"
+        },
+        {
+          icon: <FileScan className="h-5 w-5" />,
+          title: t('howTo.sections.getHelp.documentSummarizer.title'),
+          description: t('howTo.sections.getHelp.documentSummarizer.description'),
+          link: "/document-summarizer"
+        }
+      ]
+    },
+    {
+      title: t('howTo.sections.knowYourRights.title'),
+      description: t('howTo.sections.knowYourRights.description'),
+      resources: [
+        {
+          icon: <Shield className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.constitutionalRights.title'),
+          description: t('howTo.sections.knowYourRights.constitutionalRights.description'),
+          link: "/rights-info"
+        },
+        {
+          icon: <Milestone className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.caseTimeline.title'),
+          description: t('howTo.sections.knowYourRights.caseTimeline.description'),
+          link: "/case-timeline"
+        },
+        {
+          icon: <CreditCard className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.quickReference.title'),
+          description: t('howTo.sections.knowYourRights.quickReference.description'),
+          link: "/quick-reference"
+        },
+        {
+          icon: <Calendar className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.criminalJusticeProcess.title'),
+          description: t('howTo.sections.knowYourRights.criminalJusticeProcess.description'),
+          link: "/process"
+        },
+        {
+          icon: <Search className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.searchSeizure.title'),
+          description: t('howTo.sections.knowYourRights.searchSeizure.description'),
+          link: "/search-seizure"
+        },
+        {
+          icon: <Users className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.friendsFamily.title'),
+          description: t('howTo.sections.knowYourRights.friendsFamily.description'),
+          link: "/friends-family"
+        },
+        {
+          icon: <ClipboardList className="h-5 w-5" />,
+          title: t('howTo.sections.knowYourRights.mockQA.title'),
+          description: t('howTo.sections.knowYourRights.mockQA.description'),
+          link: "/resources"
+        }
+      ]
+    },
+    {
+      title: t('howTo.sections.findResources.title'),
+      description: t('howTo.sections.findResources.description'),
+      resources: [
+        {
+          icon: <Compass className="h-5 w-5" />,
+          title: t('howTo.sections.findResources.resourcesHub.title'),
+          description: t('howTo.sections.findResources.resourcesHub.description'),
+          link: "/resources"
+        },
+        {
+          icon: <MapPin className="h-5 w-5" />,
+          title: t('howTo.sections.findResources.publicDefenders.title'),
+          description: t('howTo.sections.findResources.publicDefenders.description'),
+          link: "/"
+        },
+        {
+          icon: <HelpCircle className="h-5 w-5" />,
+          title: t('howTo.sections.findResources.legalAid.title'),
+          description: t('howTo.sections.findResources.legalAid.description'),
+          link: "/"
+        },
+        {
+          icon: <Route className="h-5 w-5" />,
+          title: t('howTo.sections.findResources.diversionPrograms.title'),
+          description: t('howTo.sections.findResources.diversionPrograms.description'),
+          link: "/diversion-programs"
+        },
+        {
+          icon: <Eraser className="h-5 w-5" />,
+          title: t('howTo.sections.findResources.recordExpungement.title'),
+          description: t('howTo.sections.findResources.recordExpungement.description'),
+          link: "/record-expungement"
+        }
+      ]
+    },
+    {
+      title: t('howTo.sections.reference.title'),
+      description: t('howTo.sections.reference.description'),
+      resources: [
+        {
+          icon: <Book className="h-5 w-5" />,
+          title: t('howTo.sections.reference.legalGlossary.title'),
+          description: t('howTo.sections.reference.legalGlossary.description'),
+          link: "/legal-glossary"
+        },
+        {
+          icon: <MapPin className="h-5 w-5" />,
+          title: t('howTo.sections.reference.courtLocator.title'),
+          description: t('howTo.sections.reference.courtLocator.description'),
+          link: "/court-locator"
+        },
+        {
+          icon: <Book className="h-5 w-5" />,
+          title: t('howTo.sections.reference.statuteLookup.title'),
+          description: t('howTo.sections.reference.statuteLookup.description'),
+          link: "/statutes"
+        },
+        {
+          icon: <FileText className="h-5 w-5" />,
+          title: t('howTo.sections.reference.documentLibrary.title'),
+          description: t('howTo.sections.reference.documentLibrary.description'),
+          link: "/document-library"
+        }
+      ]
+    },
+    {
+      title: t('howTo.sections.attorneyTools.title'),
+      description: t('howTo.sections.attorneyTools.description'),
+      resources: [
+        {
+          icon: <Briefcase className="h-5 w-5" />,
+          title: t('howTo.sections.attorneyTools.attorneyPortal.title'),
+          description: t('howTo.sections.attorneyTools.attorneyPortal.description'),
+          link: "/attorney"
+        },
+        {
+          icon: <FileText className="h-5 w-5" />,
+          title: t('howTo.sections.attorneyTools.courtRecords.title'),
+          description: t('howTo.sections.attorneyTools.courtRecords.description'),
+          link: "/court-records"
+        }
+      ]
+    },
+    {
+      title: t('howTo.sections.developersPartners.title'),
+      description: t('howTo.sections.developersPartners.description'),
+      resources: [
+        {
+          icon: <Code className="h-5 w-5" />,
+          title: t('howTo.sections.developersPartners.apiDocs.title'),
+          description: t('howTo.sections.developersPartners.apiDocs.description'),
+          link: "/api-docs"
+        },
+        {
+          icon: <Globe className="h-5 w-5" />,
+          title: t('howTo.sections.developersPartners.widgets.title'),
+          description: t('howTo.sections.developersPartners.widgets.description'),
+          link: "/widgets"
+        }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -258,10 +261,10 @@ export default function HowTo() {
           <ScrollReveal>
             <div className="text-center">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white">
-                Navigate This Tool
+                {t('howTo.pageTitle')}
               </h1>
               <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-                Find legal resources, understand your rights, and get the support you need
+                {t('howTo.pageSubtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -295,7 +298,7 @@ export default function HowTo() {
           <div className="flex items-center justify-center space-x-2">
             <Shield className="h-4 w-4" />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              <strong>{t('howTo.privacyLabel')}</strong> {t('howTo.privacyText')}
             </span>
           </div>
         </div>

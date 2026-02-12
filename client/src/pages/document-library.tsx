@@ -116,7 +116,7 @@ function DocumentCard({ document }: { document: LegalDocument }) {
             <div className="flex flex-wrap gap-2">
               {document.phases.map(phase => (
                 <Badge key={phase} variant="secondary" className="text-xs">
-                  {i18n.language === 'es' ? PHASE_LABELS[phase].es : PHASE_LABELS[phase].en}
+                  {i18n.language === 'es' ? PHASE_LABELS[phase].es : i18n.language?.startsWith('zh') ? PHASE_LABELS[phase].zh : PHASE_LABELS[phase].en}
                 </Badge>
               ))}
             </div>
@@ -231,7 +231,7 @@ export default function DocumentLibrary() {
                       </SelectItem>
                       {phases.filter(p => p !== 'all').map(phase => (
                         <SelectItem key={phase} value={phase} data-testid={`option-phase-${phase}`}>
-                          {i18n.language === 'es' ? PHASE_LABELS[phase as CasePhase].es : PHASE_LABELS[phase as CasePhase].en}
+                          {i18n.language === 'es' ? PHASE_LABELS[phase as CasePhase].es : i18n.language?.startsWith('zh') ? PHASE_LABELS[phase as CasePhase].zh : PHASE_LABELS[phase as CasePhase].en}
                         </SelectItem>
                       ))}
                     </SelectContent>

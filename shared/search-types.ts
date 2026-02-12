@@ -13,8 +13,10 @@ export interface SearchDocument {
   type: SearchContentType;
   title: string;
   titleEs?: string;
+  titleZh?: string;
   content: string;
   contentEs?: string;
+  contentZh?: string;
   tags: string[];
   aliases: string[];
   jurisdiction?: string;
@@ -43,7 +45,7 @@ export interface SearchResponse {
 
 export interface SearchQuery {
   query: string;
-  language: 'en' | 'es';
+  language: 'en' | 'es' | 'zh';
   filters?: {
     types?: SearchContentType[];
     jurisdiction?: string;
@@ -80,13 +82,13 @@ export const LEGAL_SYNONYMS: Record<string, string[]> = {
   'deportation': ['removal', 'immigration', 'ice detention'],
 };
 
-export const CONTENT_TYPE_LABELS: Record<SearchContentType, { en: string; es: string }> = {
-  glossary: { en: 'Legal Terms', es: 'Términos Legales' },
-  charge: { en: 'Criminal Charges', es: 'Cargos Criminales' },
-  diversion_program: { en: 'Diversion Programs', es: 'Programas de Diversión' },
-  expungement: { en: 'Expungement', es: 'Eliminación de Antecedentes' },
-  legal_resource: { en: 'Legal Resources', es: 'Recursos Legales' },
-  court: { en: 'Court Information', es: 'Información del Tribunal' },
-  mock_qa: { en: 'Court Preparation', es: 'Preparación para el Tribunal' },
-  rights_info: { en: 'Know Your Rights', es: 'Conozca Sus Derechos' },
+export const CONTENT_TYPE_LABELS: Record<SearchContentType, { en: string; es: string; zh: string }> = {
+  glossary: { en: 'Legal Terms', es: 'Términos Legales', zh: '法律术语' },
+  charge: { en: 'Criminal Charges', es: 'Cargos Criminales', zh: '刑事指控' },
+  diversion_program: { en: 'Diversion Programs', es: 'Programas de Diversión', zh: '转移计划' },
+  expungement: { en: 'Expungement', es: 'Eliminación de Antecedentes', zh: '记录清除' },
+  legal_resource: { en: 'Legal Resources', es: 'Recursos Legales', zh: '法律资源' },
+  court: { en: 'Court Information', es: 'Información del Tribunal', zh: '法院信息' },
+  mock_qa: { en: 'Court Preparation', es: 'Preparación para el Tribunal', zh: '法庭准备' },
+  rights_info: { en: 'Know Your Rights', es: 'Conozca Sus Derechos', zh: '了解您的权利' },
 };

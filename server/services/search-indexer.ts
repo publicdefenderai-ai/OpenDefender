@@ -44,11 +44,13 @@ function expandSynonyms(query: string): string[] {
   return expanded;
 }
 
-function calculateScore(doc: SearchDocument, queryTerms: string[], language: 'en' | 'es'): { score: number; matchedTerms: string[] } {
+function calculateScore(doc: SearchDocument, queryTerms: string[], language: 'en' | 'es' | 'zh'): { score: number; matchedTerms: string[] } {
   let score = 0;
   const matchedTerms: string[] = [];
-  const title = language === 'es' && doc.titleEs ? doc.titleEs : doc.title;
-  const content = language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
+  const title = language === 'zh' && doc.titleZh ? doc.titleZh : 
+                language === 'es' && doc.titleEs ? doc.titleEs : doc.title;
+  const content = language === 'zh' && doc.contentZh ? doc.contentZh :
+                  language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
   const normalizedTitle = normalizeText(title);
   const normalizedContent = normalizeText(content);
   const normalizedAliases = doc.aliases.map(a => normalizeText(a));
@@ -206,12 +208,23 @@ export function buildSearchIndex(): void {
     }
   }
   
+  const PROCEEDING_LABELS_ZH: Record<string, string> = {
+    arraignment: '提审准备',
+    bail_hearing: '保释听证准备',
+    pretrial_hearing: '庭前会议准备',
+    plea_hearing: '认罪听证准备',
+    trial: '审判准备',
+    sentencing: '量刑听证准备',
+    probation_violation: '缓刑违规听证准备',
+  };
+
   Array.from(proceedingGroups.entries()).forEach(([proceedingType, group]) => {
     documents.push({
       id: `mockqa-${proceedingType}`,
       type: 'mock_qa',
       title: `${group.label.en} Preparation`,
       titleEs: `Preparación para ${group.label.es}`,
+      titleZh: PROCEEDING_LABELS_ZH[proceedingType] || `${group.label.en} Preparation`,
       content: `Practice questions and answers to prepare for your ${group.label.en}. Includes ${group.count} sample questions covering what the judge may ask.`,
       contentEs: `Preguntas y respuestas de práctica para prepararse para su ${group.label.es}. Incluye ${group.count} preguntas de ejemplo.`,
       tags: Array.from(new Set(group.tags)),
@@ -222,11 +235,11 @@ export function buildSearchIndex(): void {
   devLog('search', `Indexed ${proceedingGroups.size} mock QA proceeding types`);
 
   const rightsPages = [
-    { id: 'miranda', title: 'Miranda Rights', titleEs: 'Derechos Miranda', content: 'Your right to remain silent. Anything you say can be used against you. Right to an attorney. If you cannot afford one, one will be provided.', url: '/rights-info#miranda' },
-    { id: 'search-seizure', title: 'Search and Seizure Rights', titleEs: 'Derechos de Registro e Incautación', content: 'Fourth Amendment protections against unreasonable searches. When police can search. Your right to refuse consent.', url: '/search-seizure' },
-    { id: 'attorney', title: 'Right to an Attorney', titleEs: 'Derecho a un Abogado', content: 'Sixth Amendment right to counsel. Public defender eligibility. When to request an attorney.', url: '/rights-info#attorney' },
-    { id: 'speedy-trial', title: 'Right to a Speedy Trial', titleEs: 'Derecho a un Juicio Rápido', content: 'Sixth Amendment speedy trial rights. Time limits for prosecution.', url: '/rights-info#speedy-trial' },
-    { id: 'jury', title: 'Right to a Jury Trial', titleEs: 'Derecho a un Juicio con Jurado', content: 'Sixth Amendment right to trial by jury. When jury trial is available.', url: '/rights-info#jury' },
+    { id: 'miranda', title: 'Miranda Rights', titleEs: 'Derechos Miranda', titleZh: '米兰达权利', content: 'Your right to remain silent. Anything you say can be used against you. Right to an attorney. If you cannot afford one, one will be provided.', url: '/rights-info#miranda' },
+    { id: 'search-seizure', title: 'Search and Seizure Rights', titleEs: 'Derechos de Registro e Incautación', titleZh: '搜查与扣押权利', content: 'Fourth Amendment protections against unreasonable searches. When police can search. Your right to refuse consent.', url: '/search-seizure' },
+    { id: 'attorney', title: 'Right to an Attorney', titleEs: 'Derecho a un Abogado', titleZh: '获得律师的权利', content: 'Sixth Amendment right to counsel. Public defender eligibility. When to request an attorney.', url: '/rights-info#attorney' },
+    { id: 'speedy-trial', title: 'Right to a Speedy Trial', titleEs: 'Derecho a un Juicio Rápido', titleZh: '快速审判的权利', content: 'Sixth Amendment speedy trial rights. Time limits for prosecution.', url: '/rights-info#speedy-trial' },
+    { id: 'jury', title: 'Right to a Jury Trial', titleEs: 'Derecho a un Juicio con Jurado', titleZh: '陪审团审判的权利', content: 'Sixth Amendment right to trial by jury. When jury trial is available.', url: '/rights-info#jury' },
   ];
   
   for (const page of rightsPages) {
@@ -235,6 +248,7 @@ export function buildSearchIndex(): void {
       type: 'rights_info',
       title: page.title,
       titleEs: page.titleEs,
+      titleZh: page.titleZh,
       content: page.content,
       tags: ['rights', 'constitution', 'legal rights'],
       aliases: [],
@@ -248,6 +262,7 @@ export function buildSearchIndex(): void {
       id: 'know-your-rights', 
       title: 'Immigration Know Your Rights', 
       titleEs: 'Conozca Sus Derechos de Inmigración',
+      titleZh: '移民知权指南',
       content: 'Know your rights during ICE encounters. Judicial warrants vs administrative warrants. You have the right to remain silent. Do not open the door without a judicial warrant signed by a judge. Administrative warrants (Form I-200, I-205) do not allow entry into your home. Ask to see the warrant through the window or slipped under the door.',
       tags: ['immigration', 'ICE', 'warrant', 'judicial warrant', 'administrative warrant', 'rights'],
       aliases: ['ICE raid', 'immigration enforcement', 'deportation'],
@@ -257,6 +272,7 @@ export function buildSearchIndex(): void {
       id: 'workplace-raids',
       title: 'Workplace Raids',
       titleEs: 'Redadas en el Lugar de Trabajo',
+      titleZh: '工作场所搜查',
       content: 'What to do during a workplace ICE raid. Your rights at work. Do not run. Remain calm. You have the right to remain silent. Do not sign anything without an attorney.',
       tags: ['immigration', 'ICE', 'workplace', 'raid', 'employer'],
       aliases: ['ICE raid', 'work raid'],
@@ -266,6 +282,7 @@ export function buildSearchIndex(): void {
       id: 'daca-tps',
       title: 'DACA and TPS Information',
       titleEs: 'Información sobre DACA y TPS',
+      titleZh: 'DACA和TPS信息',
       content: 'Deferred Action for Childhood Arrivals (DACA) and Temporary Protected Status (TPS). Eligibility requirements, renewal process, and current status updates.',
       tags: ['immigration', 'DACA', 'TPS', 'dreamers', 'work permit'],
       aliases: ['dreamers', 'deferred action', 'temporary protected status'],
@@ -275,6 +292,7 @@ export function buildSearchIndex(): void {
       id: 'bond-hearings',
       title: 'Immigration Bond Hearings',
       titleEs: 'Audiencias de Fianza de Inmigración',
+      titleZh: '移民保释听证会',
       content: 'Immigration bond hearing process. How to request bond. Factors judges consider. Preparing for your bond hearing.',
       tags: ['immigration', 'bond', 'detention', 'hearing', 'release'],
       aliases: ['immigration bail', 'detention release'],
@@ -284,6 +302,7 @@ export function buildSearchIndex(): void {
       id: 'family-planning',
       title: 'Family Immigration Planning',
       titleEs: 'Planificación Familiar de Inmigración',
+      titleZh: '家庭移民规划',
       content: 'Emergency family planning for immigration enforcement. Power of attorney. Childcare arrangements. Document preparation.',
       tags: ['immigration', 'family', 'children', 'emergency plan'],
       aliases: ['family separation', 'child custody'],
@@ -293,6 +312,7 @@ export function buildSearchIndex(): void {
       id: 'find-attorney',
       title: 'Find an Immigration Attorney',
       titleEs: 'Encontrar un Abogado de Inmigración',
+      titleZh: '查找移民律师',
       content: 'How to find free or low-cost immigration legal help. Legal aid organizations. Pro bono attorneys. Avoiding notario fraud.',
       tags: ['immigration', 'attorney', 'lawyer', 'legal aid'],
       aliases: ['immigration lawyer', 'legal help'],
@@ -302,6 +322,7 @@ export function buildSearchIndex(): void {
       id: 'find-detained',
       title: 'Find a Detained Person',
       titleEs: 'Encontrar a una Persona Detenida',
+      titleZh: '查找被拘留者',
       content: 'How to locate someone in immigration detention. ICE detainee locator. Detention facility information. Visitation rights.',
       tags: ['immigration', 'detention', 'ICE', 'locator'],
       aliases: ['ICE detention', 'detained immigrant'],
@@ -311,6 +332,7 @@ export function buildSearchIndex(): void {
       id: 'raids-toolkit',
       title: 'ICE Raids Toolkit',
       titleEs: 'Kit de Herramientas para Redadas de ICE',
+      titleZh: 'ICE搜查工具包',
       content: 'Complete toolkit for ICE raid preparation. Red cards. Emergency contacts. Family safety plan. Community rapid response.',
       tags: ['immigration', 'ICE', 'raid', 'emergency', 'toolkit'],
       aliases: ['raid preparation', 'ICE enforcement'],
@@ -324,6 +346,7 @@ export function buildSearchIndex(): void {
       type: 'rights_info',
       title: page.title,
       titleEs: page.titleEs,
+      titleZh: page.titleZh,
       content: page.content,
       tags: page.tags,
       aliases: page.aliases,
@@ -337,6 +360,7 @@ export function buildSearchIndex(): void {
       id: 'home',
       title: 'Public Defender AI - Legal Guidance',
       titleEs: 'Defensor Público AI - Orientación Legal',
+      titleZh: 'Public Defender AI - 法律指导',
       content: 'Free legal guidance and rights information. AI-powered assistance for criminal defense. Know your rights. Find legal resources.',
       tags: ['home', 'legal aid', 'public defender', 'rights'],
       aliases: ['main', 'start'],
@@ -346,6 +370,7 @@ export function buildSearchIndex(): void {
       id: 'rights-info',
       title: 'Know Your Rights',
       titleEs: 'Conozca Sus Derechos',
+      titleZh: '了解您的权利',
       content: 'Understanding your constitutional rights. Miranda rights. Right to remain silent. Right to an attorney. Protection against unreasonable searches.',
       tags: ['rights', 'constitution', 'miranda', 'attorney'],
       aliases: ['constitutional rights', 'civil rights'],
@@ -355,6 +380,7 @@ export function buildSearchIndex(): void {
       id: 'court-locator',
       title: 'Court and Resource Locator',
       titleEs: 'Localizador de Tribunales y Recursos',
+      titleZh: '法院和资源定位',
       content: 'Find courts, legal aid offices, and public defender offices near you. Locate legal resources in your area.',
       tags: ['court', 'locator', 'legal aid', 'public defender'],
       aliases: ['find court', 'courthouse', 'legal help near me'],
@@ -364,6 +390,7 @@ export function buildSearchIndex(): void {
       id: 'immigration-hub',
       title: 'Immigration Guidance Hub',
       titleEs: 'Centro de Orientación de Inmigración',
+      titleZh: '移民指导中心',
       content: 'Comprehensive immigration resources. Know your rights. ICE encounters. DACA and TPS. Finding legal help.',
       tags: ['immigration', 'ICE', 'DACA', 'TPS', 'deportation'],
       aliases: ['immigrant rights', 'undocumented'],
@@ -373,6 +400,7 @@ export function buildSearchIndex(): void {
       id: 'mission',
       title: 'Our Mission',
       titleEs: 'Nuestra Misión',
+      titleZh: '我们的使命',
       content: 'Public Defender AI mission statement. Democratizing access to legal information. Helping those who cannot afford attorneys.',
       tags: ['mission', 'about', 'purpose'],
       aliases: ['about us', 'who we are'],
@@ -382,6 +410,7 @@ export function buildSearchIndex(): void {
       id: 'court-records',
       title: 'Court Records Search',
       titleEs: 'Búsqueda de Registros Judiciales',
+      titleZh: '法院记录搜索',
       content: 'Search federal court records. PACER and RECAP access. Find case documents and dockets.',
       tags: ['court records', 'PACER', 'RECAP', 'docket', 'case search'],
       aliases: ['case lookup', 'docket search', 'federal courts'],
@@ -391,6 +420,7 @@ export function buildSearchIndex(): void {
       id: 'recap',
       title: 'RECAP Browser Extensions',
       titleEs: 'Extensiones de Navegador RECAP',
+      titleZh: 'RECAP浏览器扩展',
       content: 'Free access to federal court documents. RECAP browser extension for Chrome and Firefox. Save money on PACER fees.',
       tags: ['RECAP', 'PACER', 'browser extension', 'free court documents'],
       aliases: ['free PACER', 'court documents'],
@@ -400,6 +430,7 @@ export function buildSearchIndex(): void {
       id: 'friends-family',
       title: 'Resources for Friends and Family',
       titleEs: 'Recursos para Amigos y Familia',
+      titleZh: '亲友资源',
       content: 'How to support a loved one facing charges. Bail information. Court dates. Finding an attorney. Emotional support resources.',
       tags: ['family', 'support', 'loved one', 'bail', 'visiting'],
       aliases: ['help family member', 'loved one arrested'],
@@ -409,6 +440,7 @@ export function buildSearchIndex(): void {
       id: 'how-to',
       title: 'How to Use This App',
       titleEs: 'Cómo Usar Esta Aplicación',
+      titleZh: '如何使用本应用',
       content: 'Guide to using Public Defender AI. Getting legal guidance. Understanding your case. Preparing for court.',
       tags: ['guide', 'tutorial', 'help', 'instructions'],
       aliases: ['getting started', 'user guide'],
@@ -418,6 +450,7 @@ export function buildSearchIndex(): void {
       id: 'statutes',
       title: 'Statute Search',
       titleEs: 'Búsqueda de Estatutos',
+      titleZh: '法规搜索',
       content: 'Search federal and state criminal statutes. Find laws by jurisdiction. Penalty information. Legal definitions.',
       tags: ['statutes', 'laws', 'criminal code', 'penalties'],
       aliases: ['criminal law', 'penal code', 'legal code'],
@@ -427,6 +460,7 @@ export function buildSearchIndex(): void {
       id: 'chat',
       title: 'Legal Guidance Chat',
       titleEs: 'Chat de Orientación Legal',
+      titleZh: '法律指导聊天',
       content: 'Get AI-powered legal guidance. Discuss your situation. Understand your options. Prepare for court proceedings.',
       tags: ['chat', 'guidance', 'AI', 'help', 'advice'],
       aliases: ['talk to AI', 'get help', 'legal advice'],
@@ -436,6 +470,7 @@ export function buildSearchIndex(): void {
       id: 'document-library',
       title: 'Legal Document Library',
       titleEs: 'Biblioteca de Documentos Legales',
+      titleZh: '法律文件库',
       content: 'Legal document templates and forms. Court forms. Legal letters. Document preparation resources.',
       tags: ['documents', 'forms', 'templates', 'court forms'],
       aliases: ['legal forms', 'court paperwork'],
@@ -445,6 +480,7 @@ export function buildSearchIndex(): void {
       id: 'resources',
       title: 'Legal Resources',
       titleEs: 'Recursos Legales',
+      titleZh: '法律资源',
       content: 'Comprehensive legal resources. Legal aid organizations. Pro bono attorneys. Self-help legal information.',
       tags: ['resources', 'legal aid', 'help', 'assistance'],
       aliases: ['legal help', 'free legal'],
@@ -454,6 +490,7 @@ export function buildSearchIndex(): void {
       id: 'case-guidance',
       title: 'Case Guidance',
       titleEs: 'Orientación de Caso',
+      titleZh: '案件指导',
       content: 'Get guidance for your specific case. Understand charges. Learn about defenses. Prepare for court.',
       tags: ['case', 'guidance', 'charges', 'defense'],
       aliases: ['my case', 'case help'],
@@ -463,6 +500,7 @@ export function buildSearchIndex(): void {
       id: 'process',
       title: 'Court Process Guide',
       titleEs: 'Guía del Proceso Judicial',
+      titleZh: '法庭流程指南',
       content: 'Understanding the court process. Arraignment. Bail hearings. Pretrial. Plea deals. Trial. Sentencing. Mock Q&A practice.',
       tags: ['court process', 'arraignment', 'trial', 'sentencing', 'plea'],
       aliases: ['what to expect', 'court steps'],
@@ -472,6 +510,7 @@ export function buildSearchIndex(): void {
       id: 'search-seizure-page',
       title: 'Search and Seizure Guide',
       titleEs: 'Guía de Registro e Incautación',
+      titleZh: '搜查与扣押指南',
       content: 'Your Fourth Amendment rights. When police can search. Consent searches. Warrant requirements. Traffic stops. Home searches.',
       tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police'],
       aliases: ['police search', 'can police search'],
@@ -481,6 +520,7 @@ export function buildSearchIndex(): void {
       id: 'tech-docs',
       title: 'Technical Documentation',
       titleEs: 'Documentación Técnica',
+      titleZh: '技术文档',
       content: 'Technical documentation hub for developers. API documentation. Embeddable widgets. JSON schemas. OpenAPI specification. Integration tools. Developer resources.',
       tags: ['technical', 'developer', 'api', 'integration', 'documentation'],
       aliases: ['tech docs', 'developer docs', 'developer hub'],
@@ -490,6 +530,7 @@ export function buildSearchIndex(): void {
       id: 'api-docs',
       title: 'API Documentation',
       titleEs: 'Documentación de API',
+      titleZh: 'API文档',
       content: 'Public API for developers. REST API endpoints. Search API. Criminal charges data. Diversion programs data. Legal glossary. CSV and JSON export. Open source integration. Third-party developers.',
       tags: ['api', 'developer', 'integration', 'data', 'export', 'open source'],
       aliases: ['developer docs', 'api reference', 'data export', 'integration'],
@@ -499,6 +540,7 @@ export function buildSearchIndex(): void {
       id: 'widgets',
       title: 'Embeddable Widgets',
       titleEs: 'Widgets Integrables',
+      titleZh: '可嵌入组件',
       content: 'Embed legal resources on your website. Search widget. Know Your Rights card. Legal glossary widget. JavaScript embed. iframe embed. Customizable themes. Bilingual support.',
       tags: ['widgets', 'embed', 'integration', 'javascript', 'iframe'],
       aliases: ['embed code', 'website widget', 'integration tools'],
@@ -512,6 +554,7 @@ export function buildSearchIndex(): void {
       type: 'rights_info',
       title: page.title,
       titleEs: page.titleEs,
+      titleZh: page.titleZh,
       content: page.content,
       tags: page.tags,
       aliases: page.aliases,
@@ -548,7 +591,8 @@ export function search(query: SearchQuery): SearchResponse {
     
     const MIN_SCORE_THRESHOLD = 15;
     if (score >= MIN_SCORE_THRESHOLD) {
-      const content = query.language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
+      const content = query.language === 'zh' && doc.contentZh ? doc.contentZh :
+                      query.language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
       const highlight = generateHighlight(content, matchedTerms);
       
       results.push({

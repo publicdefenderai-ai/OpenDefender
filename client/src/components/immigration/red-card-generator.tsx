@@ -11,18 +11,22 @@ interface RedCardContent {
   title: {
     en: string;
     es: string;
+    zh: string;
   };
   frontText: {
     en: string[];
     es: string[];
+    zh: string[];
   };
   backText: {
     en: string[];
     es: string[];
+    zh: string[];
   };
   instructions: {
     en: string;
     es: string;
+    zh: string;
   };
 }
 
@@ -32,7 +36,7 @@ interface RedCardGeneratorProps {
 
 export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
   const { t, i18n } = useTranslation();
-  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  const lang = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
   const [selectedCard, setSelectedCard] = useState<string>('wallet');
   const [printBilingual, setPrintBilingual] = useState(true);
   const printRef = useRef<HTMLDivElement>(null);
@@ -50,9 +54,9 @@ export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
 
   const getCardLabel = (type: string) => {
     switch (type) {
-      case 'wallet': return lang === 'es' ? 'Tarjeta de Billetera' : 'Wallet Card';
-      case 'door': return lang === 'es' ? 'Colgador de Puerta' : 'Door Hanger';
-      case 'window': return lang === 'es' ? 'Letrero de Ventana' : 'Window Sign';
+      case 'wallet': return lang === 'es' ? 'Tarjeta de Billetera' : lang === 'zh' ? '钱包卡' : 'Wallet Card';
+      case 'door': return lang === 'es' ? 'Colgador de Puerta' : lang === 'zh' ? '门挂牌' : 'Door Hanger';
+      case 'window': return lang === 'es' ? 'Letrero de Ventana' : lang === 'zh' ? '窗户标识' : 'Window Sign';
       default: return type;
     }
   };
@@ -156,7 +160,7 @@ export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
     if (currentCard.backText.en.length > 0) {
       cardHtml += `
         <div class="print-card ${cardClass}">
-          <div class="card-title">${lang === 'es' ? 'REVERSO' : 'BACK'}</div>
+          <div class="card-title">${lang === 'es' ? 'REVERSO' : lang === 'zh' ? '背面' : 'BACK'}</div>
           <div class="card-content">
             ${currentCard.backText.en.map(text => `<p>${text}</p>`).join('')}
           </div>
@@ -198,14 +202,14 @@ export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20">
             <CreditCard className="h-5 w-5 text-red-600 dark:text-red-400" />
           </div>
-          {lang === 'es' ? 'Generador de Tarjetas Rojas' : 'Red Card Generator'}
+          {lang === 'es' ? 'Generador de Tarjetas Rojas' : lang === 'zh' ? '红卡生成器' : 'Red Card Generator'}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         {/* Card type selector */}
         <div>
           <label className="text-sm font-medium text-foreground mb-2 block">
-            {lang === 'es' ? 'Seleccione el tipo de tarjeta:' : 'Select card type:'}
+            {lang === 'es' ? 'Seleccione el tipo de tarjeta:' : lang === 'zh' ? '选择卡片类型：' : 'Select card type:'}
           </label>
           <div className="grid grid-cols-3 gap-2">
             {cards.map((card) => (
@@ -237,7 +241,7 @@ export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
           >
             {printBilingual && <Check className="h-4 w-4" />}
             <span className="text-sm font-medium">
-              {lang === 'es' ? 'Imprimir bilingüe (EN/ES)' : 'Print bilingual (EN/ES)'}
+              {lang === 'es' ? 'Imprimir bilingüe (EN/ES)' : lang === 'zh' ? '打印双语 (EN/ES)' : 'Print bilingual (EN/ES)'}
             </span>
           </button>
         </div>
@@ -284,7 +288,7 @@ export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
         <div className="flex gap-3">
           <Button onClick={handlePrint} className="flex-1 bg-red-600 hover:bg-red-700">
             <Printer className="h-4 w-4 mr-2" />
-            {lang === 'es' ? 'Imprimir Tarjeta' : 'Print Card'}
+            {lang === 'es' ? 'Imprimir Tarjeta' : lang === 'zh' ? '打印卡片' : 'Print Card'}
           </Button>
         </div>
 
@@ -292,6 +296,8 @@ export function RedCardGenerator({ cards }: RedCardGeneratorProps) {
         <p className="text-xs text-muted-foreground text-center">
           {lang === 'es'
             ? 'Basado en materiales del ILRC (Immigrant Legal Resource Center)'
+            : lang === 'zh'
+            ? '基于ILRC（移民法律资源中心）的材料'
             : 'Based on materials from the ILRC (Immigrant Legal Resource Center)'}
         </p>
       </CardContent>

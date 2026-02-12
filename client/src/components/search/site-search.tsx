@@ -33,7 +33,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-  const language = i18n.language === 'es' ? 'es' : 'en';
+  const language = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -74,7 +74,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
   const getTypeLabel = (type: SearchContentType) => {
     const labels = CONTENT_TYPE_LABELS[type];
-    return language === 'es' ? labels.es : labels.en;
+    return language === 'es' ? labels.es : language === 'zh' ? labels.zh : labels.en;
   };
 
   const hasResults = data && data.results && data.results.length > 0;
@@ -169,7 +169,9 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                 
                 {data.results.map((result) => {
                   const Icon = TYPE_ICONS[result.document.type];
-                  const title = language === 'es' && result.document.titleEs 
+                  const title = language === 'zh' && result.document.titleZh 
+                    ? result.document.titleZh 
+                    : language === 'es' && result.document.titleEs 
                     ? result.document.titleEs 
                     : result.document.title;
                   

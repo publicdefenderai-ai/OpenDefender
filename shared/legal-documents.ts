@@ -378,11 +378,11 @@ export function mapCaseStageToPhase(caseStage: string): CasePhase {
   return stageMap[caseStage.toLowerCase()] || 'just_arrested';
 }
 
-export const PHASE_LABELS: Record<CasePhase, { en: string; es: string }> = {
-  just_arrested: { en: 'Just Arrested / Investigation', es: 'Recién Arrestado / Investigación' },
-  arraignment: { en: 'Arraignment', es: 'Lectura de Cargos' },
-  pretrial: { en: 'Pre-Trial Proceedings', es: 'Procedimientos Previos al Juicio' },
-  trial: { en: 'Trial', es: 'Juicio' },
-  sentencing: { en: 'Sentencing', es: 'Sentencia' },
-  post_conviction: { en: 'Post-Conviction / Appeals', es: 'Post-Condena / Apelaciones' },
+export const PHASE_LABELS: Record<CasePhase, { en: string; es: string; zh: string }> = {
+  just_arrested: { en: 'Just Arrested / Investigation', es: 'Recién Arrestado / Investigación', zh: '刚被逮捕 / 调查阶段' },
+  arraignment: { en: 'Arraignment', es: 'Lectura de Cargos', zh: '提审' },
+  pretrial: { en: 'Pre-Trial Proceedings', es: 'Procedimientos Previos al Juicio', zh: '庭前程序' },
+  trial: { en: 'Trial', es: 'Juicio', zh: '审判' },
+  sentencing: { en: 'Sentencing', es: 'Sentencia', zh: '量刑' },
+  post_conviction: { en: 'Post-Conviction / Appeals', es: 'Post-Condena / Apelaciones', zh: '定罪后 / 上诉' },
 };

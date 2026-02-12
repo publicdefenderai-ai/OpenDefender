@@ -34,18 +34,22 @@ export interface RedCardContent {
   title: {
     en: string;
     es: string;
+    zh: string;
   };
   frontText: {
     en: string[];
     es: string[];
+    zh: string[];
   };
   backText: {
     en: string[];
     es: string[];
+    zh: string[];
   };
   instructions: {
     en: string;
     es: string;
+    zh: string;
   };
 }
 
@@ -367,7 +371,8 @@ export const redCardContent: RedCardContent[] = [
     type: 'wallet',
     title: {
       en: 'Know Your Rights Card',
-      es: 'Tarjeta Conozca Sus Derechos'
+      es: 'Tarjeta Conozca Sus Derechos',
+      zh: '了解您的权利卡'
     },
     frontText: {
       en: [
@@ -377,6 +382,10 @@ export const redCardContent: RedCardContent[] = [
       es: [
         'No deseo hablar con usted, contestar sus preguntas, ni firmar o entregarle ningún documento basándome en mis derechos de la 5ta Enmienda.',
         'No doy mi consentimiento para que usted o cualquier otro agente entre a mi casa basándome en mis derechos de la 4ta Enmienda.'
+      ],
+      zh: [
+        '根据第五修正案的权利，我不愿意与您交谈、回答您的问题、或签署或交给您任何文件。',
+        '根据第四修正案的权利，我不同意您或任何其他执法人员进入我的住所。'
       ]
     },
     backText: {
@@ -389,11 +398,17 @@ export const redCardContent: RedCardContent[] = [
         'Estoy eligiendo ejercer mis derechos constitucionales.',
         'Si tiene una orden firmada por un juez, por favor deslícela por debajo de la puerta.',
         'No abriré la puerta a menos que me muestre una orden firmada por un juez.'
+      ],
+      zh: [
+        '我选择行使我的宪法权利。',
+        '如果您有法官签署的搜查令，请从门缝下方递进来。',
+        '除非您出示法官签署的搜查令，否则我不会开门。'
       ]
     },
     instructions: {
       en: 'Keep this card with you at all times. Show it through a window or slide it under the door if approached by immigration agents.',
-      es: 'Mantenga esta tarjeta con usted en todo momento. Muéstrela a través de una ventana o deslícela por debajo de la puerta si se le acercan agentes de inmigración.'
+      es: 'Mantenga esta tarjeta con usted en todo momento. Muéstrela a través de una ventana o deslícela por debajo de la puerta si se le acercan agentes de inmigración.',
+      zh: '请随身携带这张卡片。如果移民执法人员接近您，请通过窗户展示或从门缝下方递出。'
     }
   },
   {
@@ -401,7 +416,8 @@ export const redCardContent: RedCardContent[] = [
     type: 'door',
     title: {
       en: 'Door Hanger - Know Your Rights',
-      es: 'Colgador de Puerta - Conozca Sus Derechos'
+      es: 'Colgador de Puerta - Conozca Sus Derechos',
+      zh: '门挂牌 - 了解您的权利'
     },
     frontText: {
       en: [
@@ -413,6 +429,11 @@ export const redCardContent: RedCardContent[] = [
         'Los residentes de este hogar no dan su consentimiento para entrar sin una orden judicial.',
         'Por favor deslice cualquier orden judicial por debajo de la puerta.',
         'Elegimos ejercer nuestros derechos constitucionales.'
+      ],
+      zh: [
+        '本住宅居民不同意在没有司法搜查令的情况下进入。',
+        '请将任何搜查令从门缝下方递入。',
+        '我们选择行使我们的宪法权利。'
       ]
     },
     backText: {
@@ -423,11 +444,16 @@ export const redCardContent: RedCardContent[] = [
       es: [
         'Cuarta Enmienda: "El derecho del pueblo a la seguridad de sus personas, domicilios, papeles y efectos, contra registros y detenciones arbitrarias, no será violado."',
         'Quinta Enmienda: "Nadie estará obligado a testificar contra sí mismo en ningún caso criminal."'
+      ],
+      zh: [
+        '第四修正案："人民的人身、住宅、文件和财产不受不合理搜查和扣押的权利，不得侵犯。"',
+        '第五修正案："任何人不得在刑事案件中被迫自证其罪。"'
       ]
     },
     instructions: {
       en: 'Hang this on your door as a reminder of your rights. It can be shown to officers through a window.',
-      es: 'Cuelgue esto en su puerta como recordatorio de sus derechos. Puede mostrarse a los oficiales a través de una ventana.'
+      es: 'Cuelgue esto en su puerta como recordatorio de sus derechos. Puede mostrarse a los oficiales a través de una ventana.',
+      zh: '将此挂在您的门上，作为您权利的提醒。可以通过窗户向执法人员展示。'
     }
   },
   {
@@ -435,7 +461,8 @@ export const redCardContent: RedCardContent[] = [
     type: 'window',
     title: {
       en: 'Window Sign - Know Your Rights',
-      es: 'Letrero de Ventana - Conozca Sus Derechos'
+      es: 'Letrero de Ventana - Conozca Sus Derechos',
+      zh: '窗户标识 - 了解您的权利'
     },
     frontText: {
       en: [
@@ -451,15 +478,24 @@ export const redCardContent: RedCardContent[] = [
         'NO damos consentimiento para entrar sin una orden JUDICIAL firmada por un juez.',
         'NO damos consentimiento para registros.',
         'Elegimos guardar silencio.'
+      ],
+      zh: [
+        '致任何政府执法人员：',
+        '我们行使第四和第五修正案赋予的权利。',
+        '未经法官签署的司法搜查令，我们不同意进入。',
+        '我们不同意搜查。',
+        '我们选择保持沉默。'
       ]
     },
     backText: {
       en: [],
-      es: []
+      es: [],
+      zh: []
     },
     instructions: {
       en: 'Post this sign in a visible window near your main entrance.',
-      es: 'Coloque este letrero en una ventana visible cerca de su entrada principal.'
+      es: 'Coloque este letrero en una ventana visible cerca de su entrada principal.',
+      zh: '将此标识张贴在您主入口附近的可见窗户上。'
     }
   }
 ];

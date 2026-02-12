@@ -3188,7 +3188,135 @@ i18n
             "criminalComingSoon": "Criminal law templates including Motions to Continue, Discovery Requests, and Bail Reduction motions are being developed.",
             "immigrationComingSoon": "Immigration templates including EOIR-28 forms, Bond Memoranda, and Change of Venue motions are being developed."
           }
-        }
+        },
+          "howTo": {
+            "pageTitle": "Navigate This Tool",
+            "pageSubtitle": "Find legal resources, understand your rights, and get the support you need",
+            "privacyLabel": "Privacy First:",
+            "privacyText": "We do not store your personal data — all input deleted after session.",
+            "sections": {
+              "getHelp": {
+                "title": "Get Help",
+                "description": "Start here if you need guidance on your situation",
+                "caseGuidance": {
+                  "title": "Personalized Case Guidance",
+                  "description": "Get tailored legal guidance based on your charges and jurisdiction."
+                },
+                "aiChat": {
+                  "title": "AI Legal Chat",
+                  "description": "Ask legal questions and get plain-language answers from our AI assistant."
+                },
+                "immigrationRights": {
+                  "title": "Immigration Rights",
+                  "description": "Know your rights during ICE encounters and deportation proceedings."
+                },
+                "documentSummarizer": {
+                  "title": "Document Summarizer",
+                  "description": "Upload a legal document and get a plain-language summary."
+                }
+              },
+              "knowYourRights": {
+                "title": "Know Your Rights",
+                "description": "Understand your legal protections",
+                "constitutionalRights": {
+                  "title": "Constitutional Rights",
+                  "description": "Miranda rights, rights during arrest, and in court."
+                },
+                "caseTimeline": {
+                  "title": "Interactive Case Timeline",
+                  "description": "Walk through the 7 stages of a criminal case from arrest to appeal."
+                },
+                "quickReference": {
+                  "title": "Quick-Reference Cards",
+                  "description": "Printable rights cards for police encounters and court appearances."
+                },
+                "criminalJusticeProcess": {
+                  "title": "Criminal Justice Process",
+                  "description": "Timeline from arrest through sentencing."
+                },
+                "searchSeizure": {
+                  "title": "Search & Seizure Rights",
+                  "description": "Fourth Amendment rights during police stops."
+                },
+                "friendsFamily": {
+                  "title": "Helping Friends & Family",
+                  "description": "Support someone who has been arrested."
+                },
+                "mockQA": {
+                  "title": "Mock Q&A Practice",
+                  "description": "Practice answering questions you might face in court proceedings."
+                }
+              },
+              "findResources": {
+                "title": "Find Resources",
+                "description": "Connect with legal support services",
+                "resourcesHub": {
+                  "title": "Resources Hub",
+                  "description": "Browse all legal resources, guides, and support services."
+                },
+                "publicDefenders": {
+                  "title": "Find Public Defenders",
+                  "description": "Search by ZIP code for free legal representation."
+                },
+                "legalAid": {
+                  "title": "Legal Aid Organizations",
+                  "description": "Free or low-cost legal services in your area."
+                },
+                "diversionPrograms": {
+                  "title": "Diversion Programs",
+                  "description": "Alternative sentencing options like drug courts."
+                },
+                "recordExpungement": {
+                  "title": "Record Expungement",
+                  "description": "Learn about sealing criminal records."
+                }
+              },
+              "reference": {
+                "title": "Reference",
+                "description": "Look up legal terms and locations",
+                "legalGlossary": {
+                  "title": "Legal Glossary",
+                  "description": "Plain-language definitions of legal terms."
+                },
+                "courtLocator": {
+                  "title": "Court Locator",
+                  "description": "Find court addresses and contact information."
+                },
+                "statuteLookup": {
+                  "title": "Statute Lookup",
+                  "description": "Search state and federal laws."
+                },
+                "documentLibrary": {
+                  "title": "Document Library",
+                  "description": "Legal forms, templates, and guides."
+                }
+              },
+              "attorneyTools": {
+                "title": "Attorney Tools",
+                "description": "Resources for licensed attorneys representing clients",
+                "attorneyPortal": {
+                  "title": "Attorney Portal",
+                  "description": "Verified attorney access to 28 document templates for criminal and immigration cases."
+                },
+                "courtRecords": {
+                  "title": "Court Records Search",
+                  "description": "Search federal court documents via PACER/RECAP."
+                }
+              },
+              "developersPartners": {
+                "title": "Developers & Partners",
+                "description": "Integration tools for organizations and developers",
+                "apiDocs": {
+                  "title": "API Documentation",
+                  "description": "Public REST API v1 for accessing legal data, charges, and programs."
+                },
+                "widgets": {
+                  "title": "Embeddable Widgets",
+                  "description": "Add legal search and charge lookup to your own website."
+                }
+              }
+            }
+          }
       }
       },
       es: {
@@ -6360,7 +6488,135 @@ i18n
             "criminalComingSoon": "Las plantillas de derecho penal incluyendo Mociones de Continuación, Solicitudes de Descubrimiento y mociones de Reducción de Fianza están siendo desarrolladas.",
             "immigrationComingSoon": "Las plantillas de inmigración incluyendo formularios EOIR-28, Memorandos de Fianza y mociones de Cambio de Sede están siendo desarrolladas."
           }
-        }
+        },
+          "howTo": {
+            "pageTitle": "Guía de Navegación",
+            "pageSubtitle": "Encuentre recursos legales, entienda sus derechos y obtenga el apoyo que necesita",
+            "privacyLabel": "Privacidad Primero:",
+            "privacyText": "No almacenamos sus datos personales — toda la información se elimina al finalizar la sesión.",
+            "sections": {
+              "getHelp": {
+                "title": "Obtener Ayuda",
+                "description": "Comience aquí si necesita orientación sobre su situación",
+                "caseGuidance": {
+                  "title": "Orientación Personalizada de Caso",
+                  "description": "Obtenga orientación legal personalizada según sus cargos y jurisdicción."
+                },
+                "aiChat": {
+                  "title": "Chat Legal con IA",
+                  "description": "Haga preguntas legales y obtenga respuestas en lenguaje sencillo de nuestro asistente de IA."
+                },
+                "immigrationRights": {
+                  "title": "Derechos de Inmigración",
+                  "description": "Conozca sus derechos durante encuentros con ICE y procedimientos de deportación."
+                },
+                "documentSummarizer": {
+                  "title": "Resumen de Documentos",
+                  "description": "Suba un documento legal y obtenga un resumen en lenguaje sencillo."
+                }
+              },
+              "knowYourRights": {
+                "title": "Conozca Sus Derechos",
+                "description": "Comprenda sus protecciones legales",
+                "constitutionalRights": {
+                  "title": "Derechos Constitucionales",
+                  "description": "Derechos Miranda, derechos durante el arresto y en el tribunal."
+                },
+                "caseTimeline": {
+                  "title": "Línea de Tiempo Interactiva del Caso",
+                  "description": "Recorra las 7 etapas de un caso penal desde el arresto hasta la apelación."
+                },
+                "quickReference": {
+                  "title": "Tarjetas de Referencia Rápida",
+                  "description": "Tarjetas de derechos imprimibles para encuentros con la policía y comparecencias en tribunal."
+                },
+                "criminalJusticeProcess": {
+                  "title": "Proceso de Justicia Penal",
+                  "description": "Línea de tiempo desde el arresto hasta la sentencia."
+                },
+                "searchSeizure": {
+                  "title": "Derechos de Registro e Incautación",
+                  "description": "Derechos de la Cuarta Enmienda durante paradas policiales."
+                },
+                "friendsFamily": {
+                  "title": "Ayudando a Amigos y Familia",
+                  "description": "Apoye a alguien que ha sido arrestado."
+                },
+                "mockQA": {
+                  "title": "Práctica de Preguntas y Respuestas",
+                  "description": "Practique respondiendo preguntas que podría enfrentar en procedimientos judiciales."
+                }
+              },
+              "findResources": {
+                "title": "Encontrar Recursos",
+                "description": "Conéctese con servicios de apoyo legal",
+                "resourcesHub": {
+                  "title": "Centro de Recursos",
+                  "description": "Explore todos los recursos legales, guías y servicios de apoyo."
+                },
+                "publicDefenders": {
+                  "title": "Encontrar Defensores Públicos",
+                  "description": "Busque por código postal representación legal gratuita."
+                },
+                "legalAid": {
+                  "title": "Organizaciones de Ayuda Legal",
+                  "description": "Servicios legales gratuitos o de bajo costo en su área."
+                },
+                "diversionPrograms": {
+                  "title": "Programas de Diversión",
+                  "description": "Opciones alternativas de sentencia como tribunales de drogas."
+                },
+                "recordExpungement": {
+                  "title": "Limpieza de Antecedentes",
+                  "description": "Aprenda sobre el sellado de antecedentes penales."
+                }
+              },
+              "reference": {
+                "title": "Referencia",
+                "description": "Busque términos legales y ubicaciones",
+                "legalGlossary": {
+                  "title": "Glosario Legal",
+                  "description": "Definiciones en lenguaje sencillo de términos legales."
+                },
+                "courtLocator": {
+                  "title": "Localizador de Tribunales",
+                  "description": "Encuentre direcciones y contactos de tribunales."
+                },
+                "statuteLookup": {
+                  "title": "Búsqueda de Leyes",
+                  "description": "Busque leyes estatales y federales."
+                },
+                "documentLibrary": {
+                  "title": "Biblioteca de Documentos",
+                  "description": "Formularios legales, plantillas y guías."
+                }
+              },
+              "attorneyTools": {
+                "title": "Herramientas para Abogados",
+                "description": "Recursos para abogados licenciados que representan clientes",
+                "attorneyPortal": {
+                  "title": "Portal de Abogados",
+                  "description": "Acceso verificado para abogados a 28 plantillas de documentos para casos penales y de inmigración."
+                },
+                "courtRecords": {
+                  "title": "Búsqueda de Registros Judiciales",
+                  "description": "Busque documentos de tribunales federales vía PACER/RECAP."
+                }
+              },
+              "developersPartners": {
+                "title": "Desarrolladores y Socios",
+                "description": "Herramientas de integración para organizaciones y desarrolladores",
+                "apiDocs": {
+                  "title": "Documentación de API",
+                  "description": "API REST pública v1 para acceder a datos legales, cargos y programas."
+                },
+                "widgets": {
+                  "title": "Componentes Integrables",
+                  "description": "Agregue búsqueda legal y consulta de cargos a su propio sitio web."
+                }
+              }
+            }
+          }
         }
       }
       ,
@@ -9511,7 +9767,136 @@ i18n
               "criminalComingSoon": "刑事法律模板包括延期动议、证据开示请求和减少保释金动议，正在开发中。",
               "immigrationComingSoon": "移民模板包括 EOIR-28 表格、保释备忘录和变更审理地点动议，正在开发中。"
             }
-          }        }
+          },
+          "howTo": {
+            "pageTitle": "使用指南",
+            "pageSubtitle": "查找法律资源，了解您的权利，获取所需的支持",
+            "privacyLabel": "隐私优先：",
+            "privacyText": "我们不存储您的个人数据——所有输入在会话结束后删除。",
+            "sections": {
+              "getHelp": {
+                "title": "获取帮助",
+                "description": "如果您需要关于自身情况的指导，请从这里开始",
+                "caseGuidance": {
+                  "title": "个性化案件指导",
+                  "description": "根据您的指控和管辖区获取量身定制的法律指导。"
+                },
+                "aiChat": {
+                  "title": "AI法律聊天",
+                  "description": "向我们的AI助手提问法律问题，获取通俗易懂的回答。"
+                },
+                "immigrationRights": {
+                  "title": "移民权利",
+                  "description": "了解您在ICE执法和驱逐程序中的权利。"
+                },
+                "documentSummarizer": {
+                  "title": "文件摘要",
+                  "description": "上传法律文件，获取通俗易懂的摘要。"
+                }
+              },
+              "knowYourRights": {
+                "title": "了解您的权利",
+                "description": "了解您的法律保护",
+                "constitutionalRights": {
+                  "title": "宪法权利",
+                  "description": "米兰达权利、逮捕期间的权利以及在法庭上的权利。"
+                },
+                "caseTimeline": {
+                  "title": "互动案件时间线",
+                  "description": "逐步了解刑事案件从逮捕到上诉的7个阶段。"
+                },
+                "quickReference": {
+                  "title": "快速参考卡片",
+                  "description": "可打印的权利卡片，用于警察接触和出庭。"
+                },
+                "criminalJusticeProcess": {
+                  "title": "刑事司法流程",
+                  "description": "从逮捕到判决的时间线。"
+                },
+                "searchSeizure": {
+                  "title": "搜查与扣押权利",
+                  "description": "警察拦停时的第四修正案权利。"
+                },
+                "friendsFamily": {
+                  "title": "帮助亲友",
+                  "description": "帮助被逮捕的人。"
+                },
+                "mockQA": {
+                  "title": "模拟问答练习",
+                  "description": "练习回答您在法庭程序中可能面对的问题。"
+                }
+              },
+              "findResources": {
+                "title": "查找资源",
+                "description": "连接法律支持服务",
+                "resourcesHub": {
+                  "title": "资源中心",
+                  "description": "浏览所有法律资源、指南和支持服务。"
+                },
+                "publicDefenders": {
+                  "title": "查找公设辩护人",
+                  "description": "按邮政编码搜索免费法律代理。"
+                },
+                "legalAid": {
+                  "title": "法律援助组织",
+                  "description": "您所在地区的免费或低成本法律服务。"
+                },
+                "diversionPrograms": {
+                  "title": "转移计划",
+                  "description": "如毒品法庭等替代量刑选择。"
+                },
+                "recordExpungement": {
+                  "title": "记录清除",
+                  "description": "了解如何封存犯罪记录。"
+                }
+              },
+              "reference": {
+                "title": "参考资料",
+                "description": "查找法律术语和位置",
+                "legalGlossary": {
+                  "title": "法律词汇表",
+                  "description": "法律术语的通俗定义。"
+                },
+                "courtLocator": {
+                  "title": "法院定位",
+                  "description": "查找法院地址和联系信息。"
+                },
+                "statuteLookup": {
+                  "title": "法规查询",
+                  "description": "搜索州和联邦法律。"
+                },
+                "documentLibrary": {
+                  "title": "文件库",
+                  "description": "法律表格、模板和指南。"
+                }
+              },
+              "attorneyTools": {
+                "title": "律师工具",
+                "description": "持证律师代理客户的资源",
+                "attorneyPortal": {
+                  "title": "律师门户",
+                  "description": "经验证律师可访问28个刑事和移民案件文件模板。"
+                },
+                "courtRecords": {
+                  "title": "法院记录搜索",
+                  "description": "通过PACER/RECAP搜索联邦法院文件。"
+                }
+              },
+              "developersPartners": {
+                "title": "开发者与合作伙伴",
+                "description": "面向组织和开发者的集成工具",
+                "apiDocs": {
+                  "title": "API文档",
+                  "description": "用于访问法律数据、指控和项目的公共REST API v1。"
+                },
+                "widgets": {
+                  "title": "可嵌入组件",
+                  "description": "将法律搜索和指控查询添加到您自己的网站。"
+                }
+              }
+            }
+          }
+        }
       }
     }
   });

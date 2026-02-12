@@ -559,7 +559,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ success: false, error: "Query parameter 'q' is required" });
       }
 
-      const language = (lang === 'es' ? 'es' : 'en') as 'en' | 'es';
+      const language = (lang === 'es' ? 'es' : lang === 'zh' ? 'zh' : 'en') as 'en' | 'es' | 'zh';
       const typeFilters = types ? (types as string).split(',') : undefined;
       
       const searchResult = search({
