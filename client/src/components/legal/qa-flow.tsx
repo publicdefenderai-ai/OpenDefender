@@ -557,10 +557,10 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                 <SelectItem value="all">{t('legalGuidance.qaFlow.caseDetails.allCategories')}</SelectItem>
                 {Object.keys(chargeCategories)
                   .filter(category => {
-                    // Filter out state/jurisdiction codes (2-letter uppercase codes)
                     const isStateCode = /^[A-Z]{2}$/.test(category);
                     return !isStateCode;
                   })
+                  .sort((a, b) => a.localeCompare(b))
                   .map(category => (
                     <SelectItem key={category} value={category}>
                       {category}

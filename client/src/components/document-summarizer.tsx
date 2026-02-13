@@ -89,11 +89,11 @@ const SUPPORTED_TYPES = [
 ];
 
 const DOCUMENT_TYPES = [
-  { value: 'general', label: 'General Legal Document' },
-  { value: 'court_filing', label: 'Court Filing/Motion' },
-  { value: 'police_report', label: 'Police Report' },
   { value: 'legal_document', label: 'Contract/Agreement' },
+  { value: 'court_filing', label: 'Court Filing/Motion' },
   { value: 'evidence', label: 'Evidence Document' },
+  { value: 'general', label: 'General Legal Document' },
+  { value: 'police_report', label: 'Police Report' },
 ];
 
 export function DocumentSummarizer({ isAttorneyMode = false, onClose }: DocumentSummarizerProps) {
