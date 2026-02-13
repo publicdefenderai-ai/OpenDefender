@@ -82,10 +82,10 @@ export function Header() {
       testId: "menu-find-resources"
     },
     {
-      title: t('header.menu.attorneyTools', 'Attorney Tools'),
+      title: t('header.menu.attorneyTools'),
       href: "/attorney",
       icon: Briefcase,
-      description: t('header.menu.attorneyToolsDesc', 'Document drafting for legal professionals'),
+      description: t('header.menu.attorneyToolsDesc'),
       testId: "menu-attorney-tools"
     }
   ];
@@ -177,7 +177,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[90%] sm:w-[400px]">
                 <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
+                  <SheetTitle>{t('header.mobileMenu')}</SheetTitle>
                 </SheetHeader>
                 
                 {/* Language Selector - Mobile */}

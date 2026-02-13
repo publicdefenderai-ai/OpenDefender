@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -64,6 +65,7 @@ import QuickReference from "@/pages/quick-reference";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
+  const { t } = useTranslation();
 
   if (isDismissed) {
     return null;
@@ -77,17 +79,17 @@ function BetaBanner() {
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 flex-1 min-w-0">
           <span className="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-            Beta
+            {t('beta.label')}
           </span>
           <p className="text-sm text-muted-foreground truncate sm:whitespace-normal">
-            <span className="hidden sm:inline">Our guidance is carefully researched, but we're still refining features based on user feedback.</span>
-            <span className="sm:hidden">We're still refining features based on feedback.</span>
+            <span className="hidden sm:inline">{t('beta.messageFull')}</span>
+            <span className="sm:hidden">{t('beta.messageShort')}</span>
           </p>
         </div>
         <button
           onClick={() => setIsDismissed(true)}
           className="shrink-0 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-          aria-label="Dismiss beta banner"
+          aria-label={t('common.close')}
           data-testid="beta-banner-dismiss"
         >
           <X className="h-4 w-4" />

@@ -30,7 +30,7 @@ export function Footer() {
               aria-label="Public Defender AI on GitHub"
             >
               <Github className="h-5 w-5" aria-hidden="true" />
-              <span>View on GitHub</span>
+              <span>{t('footer.viewOnGithub')}</span>
             </a>
           </div>
 
@@ -60,7 +60,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/how-to" className="text-gray-300 hover:text-white transition-colors font-medium">
-                  {t('footer.allResources', { defaultValue: 'All Resources' })}
+                  {t('footer.allResources')}
                 </Link>
               </li>
             </ul>
@@ -82,7 +82,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/tech-docs" className="text-gray-300 hover:text-white transition-colors">
-                  Technical Documentation
+                  {t('footer.technicalDocs')}
                 </Link>
               </li>
               <li>

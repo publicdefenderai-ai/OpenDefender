@@ -32,12 +32,15 @@ i18n
               "documentLibrary": "Document Library",
               "documentLibraryDesc": "Understand the legal documents in your case",
               "findResources": "Find Resources",
-              "findResourcesDesc": "Locate courts, public defenders, and legal aid"
+              "findResourcesDesc": "Locate courts, public defenders, and legal aid",
+              "attorneyTools": "Attorney Tools",
+              "attorneyToolsDesc": "Document drafting for legal professionals"
             },
             "language": "Language",
             "theme": "Theme",
             "darkMode": "Dark Mode",
-            "lightMode": "Light Mode"
+            "lightMode": "Light Mode",
+            "mobileMenu": "Menu"
           },
           "home": {
             "hero": {
@@ -191,8 +194,16 @@ i18n
             "developmentRoadmap": "Development Roadmap",
             "privacyPolicy": "Privacy Policy",
             "noticeDisclaimers": "Notice & Disclaimers",
+            "technicalDocs": "Technical Documentation",
+            "viewOnGithub": "View on GitHub",
+            "allResources": "All Resources",
             "privacyNotice": "Privacy First: We do not store your personal data — all input deleted after session.",
-            "copyright": "© 2025 Public Defender AI. Not a substitute for professional legal advice."
+            "copyright": "© 2026 Public Defender AI. Not a substitute for professional legal advice."
+          },
+          "beta": {
+            "label": "Beta",
+            "messageFull": "Our guidance is carefully researched, but we're still refining features based on user feedback.",
+            "messageShort": "We're still refining features based on feedback."
           },
           "common": {
             "close": "Close",
@@ -3342,10 +3353,13 @@ i18n
               "documentLibrary": "Biblioteca de Documentos",
               "documentLibraryDesc": "Entienda los documentos legales de su caso",
               "findResources": "Encontrar Recursos",
-              "findResourcesDesc": "Localice tribunales, defensores públicos y ayuda legal"
+              "findResourcesDesc": "Localice tribunales, defensores públicos y ayuda legal",
+              "attorneyTools": "Herramientas para Abogados",
+              "attorneyToolsDesc": "Redacción de documentos para profesionales legales"
             },
             "language": "Idioma",
             "theme": "Tema",
+            "mobileMenu": "Menú",
             "darkMode": "Modo Oscuro",
             "lightMode": "Modo Claro"
           },
@@ -3501,8 +3515,16 @@ i18n
             "developmentRoadmap": "Hoja de Ruta de Desarrollo",
             "privacyPolicy": "Política de Privacidad",
             "noticeDisclaimers": "Avisos y Exenciones",
+            "technicalDocs": "Documentación Técnica",
+            "viewOnGithub": "Ver en GitHub",
+            "allResources": "Todos los Recursos",
             "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales — toda información se elimina después de la sesión.",
-            "copyright": "© 2025 Defensor Público IA. No sustituye el asesoramiento legal profesional."
+            "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional."
+          },
+          "beta": {
+            "label": "Beta",
+            "messageFull": "Nuestra orientación está cuidadosamente investigada, pero seguimos mejorando las funciones según los comentarios de los usuarios.",
+            "messageShort": "Seguimos mejorando las funciones según los comentarios."
           },
           "common": {
             "close": "Cerrar",
@@ -6653,12 +6675,15 @@ i18n
               "documentLibrary": "文件库",
               "documentLibraryDesc": "了解你案件中的法律文件",
               "findResources": "查找资源",
-              "findResourcesDesc": "查找法院、公设辩护人和法律援助"
+              "findResourcesDesc": "查找法院、公设辩护人和法律援助",
+              "attorneyTools": "律师工具",
+              "attorneyToolsDesc": "为法律专业人士提供文件起草工具"
             },
             "language": "语言",
             "theme": "主题",
             "darkMode": "深色模式",
-            "lightMode": "浅色模式"
+            "lightMode": "浅色模式",
+            "mobileMenu": "菜单"
           },
           "home": {
             "hero": {
@@ -6812,8 +6837,16 @@ i18n
             "developmentRoadmap": "开发路线图",
             "privacyPolicy": "隐私政策",
             "noticeDisclaimers": "通知与免责声明",
+            "technicalDocs": "技术文档",
+            "viewOnGithub": "在 GitHub 上查看",
+            "allResources": "所有资源",
             "privacyNotice": "隐私优先：我们不存储你的个人数据——所有输入在会话结束后删除。",
-            "copyright": "© 2025 Public Defender AI。不能替代专业法律建议。"
+            "copyright": "© 2026 Public Defender AI。不能替代专业法律建议。"
+          },
+          "beta": {
+            "label": "Beta",
+            "messageFull": "我们的指导经过仔细研究，但我们仍在根据用户反馈改进功能。",
+            "messageShort": "我们仍在根据反馈改进功能。"
           },
           "common": {
             "close": "关闭",
