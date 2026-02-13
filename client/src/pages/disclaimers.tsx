@@ -153,22 +153,12 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Our platform provides general information about immigration topics including Know Your Rights materials, DACA/TPS guidance, workplace raid preparedness, bond hearings, and Red Card resources. Please be aware that:
+                  Our immigration resources — including Know Your Rights materials, Red Cards, and program information — are for general informational purposes only.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Immigration law is highly complex and changes frequently through executive orders, policy memos, and court rulings</li>
-                  <li>Know Your Rights cards and related materials are informational resources, not a legal shield — presenting them does not guarantee any particular outcome during an encounter with immigration authorities</li>
-                  <li>Information about DACA, TPS, bond hearings, and other immigration programs may become outdated as policies change</li>
-                  <li>Every immigration case is unique, and general guidance cannot account for the specific facts of your situation</li>
-                  <li>You should consult with a qualified immigration attorney before making any decisions that could affect your immigration status</li>
+                  <li>Immigration law changes frequently and our information may not reflect the latest policies</li>
+                  <li>These materials are not legal advice and are not a substitute for consulting with a qualified immigration attorney</li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Important:</strong> If you are in removal proceedings or facing immigration enforcement, seek legal counsel immediately. Our{" "}
-                  <Link href="/immigration-guidance/find-attorney" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
-                    Find an Attorney
-                  </Link>{" "}
-                  page can help you locate immigration legal services in your area.
-                </p>
               </CardContent>
             </Card>
           </div>
@@ -184,17 +174,12 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI provides content in English, Spanish, and Simplified Chinese to make legal information more accessible. Please note:
+                  We provide content in English, Spanish, and Simplified Chinese to make legal information more accessible.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Translations are provided for accessibility purposes and may not be word-for-word legal translations</li>
-                  <li>Legal terms can have specific meanings that do not translate precisely between languages</li>
-                  <li>In the event of any discrepancy between language versions, the English version should be considered authoritative</li>
-                  <li>Court filings, legal documents, and official proceedings in the United States generally require English</li>
+                  <li>Translations may not capture the precise legal meaning of every term — the English version is authoritative</li>
+                  <li>If you need legal guidance in a language other than English, we recommend consulting a bilingual attorney</li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  We strive to make our translations as accurate as possible, but we recommend consulting a bilingual attorney if you need legal guidance in a language other than English.
-                </p>
               </CardContent>
             </Card>
           </div>
@@ -210,21 +195,12 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Our Document Summarizer uses AI to create condensed summaries of legal documents you upload. When using this feature, please understand that:
+                  Our Document Summarizer uses AI to create condensed summaries of legal documents you upload.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Summaries are AI-generated interpretations and may omit important details, nuances, or qualifications present in the original document</li>
-                  <li>A summary is not a substitute for reading the full document, especially for court filings, plea agreements, or contracts</li>
-                  <li>Legal documents often contain interconnected clauses where context matters — a summary may not capture these relationships</li>
-                  <li>Always review the original document with your attorney before making decisions based on a summary</li>
+                  <li>Summaries are AI-generated and may omit important details — they are not a substitute for reading the full document</li>
+                  <li>Always review the original document with your attorney before making any decisions based on a summary</li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  See our{" "}
-                  <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
-                    Privacy Policy
-                  </Link>{" "}
-                  for details on how uploaded documents are handled and protected.
-                </p>
               </CardContent>
             </Card>
           </div>
@@ -240,14 +216,11 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI retrieves court records, case law, and docket information from external sources including the RECAP Archive, CourtListener, and PACER. Please be aware that:
+                  We retrieve court records and case law from third-party sources including CourtListener, the RECAP Archive, and PACER.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Court records retrieved through these services may be incomplete, delayed, or contain errors</li>
-                  <li>Not all federal or state court records are available through these databases</li>
-                  <li>Docket entries and case documents may not reflect the most recent filings or rulings</li>
-                  <li>Case law search results are provided for informational purposes and should not be relied upon as a comprehensive legal research tool</li>
-                  <li>Always verify court records directly with the relevant court clerk's office for official and up-to-date information</li>
+                  <li>Records from these sources may be incomplete, delayed, or contain errors</li>
+                  <li>Always verify court records directly with the relevant court clerk's office for official information</li>
                 </ul>
               </CardContent>
             </Card>
@@ -264,19 +237,13 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Licensed attorneys may use our document generation tools to draft legal filings. By using these tools, attorneys acknowledge and agree that:
+                  Our document generation tools produce draft legal filings for use by licensed attorneys.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Documents are generated as drafts only and require professional review before filing</li>
-                  <li>Attorneys are solely responsible for verifying accuracy before filing</li>
-                  <li>Attorneys must provide truthful attestation of bar membership</li>
-                  <li>We are not liable for false attestations or unauthorized use</li>
-                  <li>We do not verify bar credentials against external databases</li>
-                  <li>Attorney-client privilege protections depend on proper use by the attorney</li>
+                  <li>All generated documents are drafts only — attorneys are solely responsible for reviewing and verifying accuracy before filing</li>
+                  <li>We do not collect or store bar credentials, and we do not verify bar membership</li>
+                  <li>Generated documents rely on jurisdiction-specific templates and third-party legal data that may contain errors or be outdated</li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Warning:</strong> Misrepresenting bar membership or using these tools without authorization may violate state bar rules and applicable laws.
-                </p>
               </CardContent>
             </Card>
           </div>
