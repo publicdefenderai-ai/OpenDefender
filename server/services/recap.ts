@@ -84,8 +84,8 @@ export class RecapService {
 
   async searchRECAPDockets(params: CourtListenerSearchParams): Promise<SearchResponse<RecapDocket>> {
     try {
-      // Remove undefined values to avoid API errors
       const cleanParams: Record<string, string> = {
+        type: 'r',
         format: 'json'
       };
       
@@ -95,13 +95,38 @@ export class RecapService {
       if (params.court) cleanParams.court = params.court;
       if (params.filed_after) cleanParams.filed_after = params.filed_after;
       if (params.filed_before) cleanParams.filed_before = params.filed_before;
-      if (params.order_by) cleanParams.order_by = params.order_by;
+      if (params.search_type) cleanParams.search_type = params.search_type;
       
-      const response = await axios.get(`${COURTLISTENER_BASE_URL}/dockets/`, {
+      const response = await axios.get(`${COURTLISTENER_BASE_URL}/search/`, {
         headers: this.headers,
         params: cleanParams
       });
-      return response.data;
+
+      const data = response.data;
+      const normalized = {
+        count: data.count,
+        next: data.next || null,
+        previous: data.previous || null,
+        results: (data.results || []).map((r: any) => ({
+          id: r.docket_id || r.id,
+          absolute_url: r.docket_absolute_url || r.absolute_url || '',
+          case_name: r.caseName || r.case_name || '',
+          case_name_short: r.caseNameShort || r.case_name_short || '',
+          court: r.court || '',
+          court_id: r.court_id || '',
+          docket_number: r.docketNumber || r.docket_number || '',
+          date_filed: r.dateFiled || r.date_filed || '',
+          date_last_filing: r.dateTerminated || r.date_last_filing || '',
+          jurisdiction_type: r.jurisdictionType || r.jurisdiction_type || '',
+          nature_of_suit: r.suitNature || r.nature_of_suit || '',
+          cause: r.cause || '',
+          assigned_to_str: r.assignedTo || r.assigned_to_str || '',
+          referred_to_str: r.referredTo || r.referred_to_str || '',
+          pacer_case_id: r.pacer_case_id || '',
+          snippet: r.recap_documents?.[0]?.snippet || '',
+        }))
+      };
+      return normalized;
     } catch (error) {
       errLog('Error searching RECAP dockets', error);
       throw new Error('Failed to search RECAP archive');
@@ -182,7 +207,6 @@ export class RecapService {
       court: query.court,
       filed_after: query.dateFrom,
       filed_before: query.dateTo,
-      order_by: '-date_created', // For dockets API
       search_type: query.searchType === 'semantic' ? 'semantic' : undefined
     };
 
