@@ -102,14 +102,14 @@ export default function CourtRecords() {
                   <div className="flex items-center gap-2 mb-1">
                     <Sparkles className="w-4 h-4 text-primary" />
                     <Label htmlFor="semantic-search" className="text-sm font-semibold">
-                      AI-Powered Semantic Search
+                      {t('courtRecords.searchParams.semanticSearchLabel')}
                     </Label>
-                    <Badge variant="secondary" className="text-xs">NEW</Badge>
+                    <Badge variant="secondary" className="text-xs">{t('courtRecords.searchParams.semanticSearchNew')}</Badge>
                   </div>
                   <p className="text-xs text-muted-foreground">
                     {useSemanticSearch 
-                      ? "Using natural language to find cases by meaning and intent" 
-                      : "Using keyword matching to search case names and docket numbers"}
+                      ? t('courtRecords.searchParams.semanticSearchOnDesc')
+                      : t('courtRecords.searchParams.semanticSearchOffDesc')}
                   </p>
                 </div>
                 <Switch
@@ -125,7 +125,7 @@ export default function CourtRecords() {
               <div>
                 <label className="text-sm font-medium mb-2 block">{t('courtRecords.searchParams.searchTerm')}</label>
                 <Input
-                  placeholder={useSemanticSearch ? "Describe what you're looking for..." : t('courtRecords.searchParams.searchTermPlaceholder')}
+                  placeholder={useSemanticSearch ? t('courtRecords.searchParams.semanticSearchPlaceholder') : t('courtRecords.searchParams.searchTermPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onKeyPress={handleKeyPress}
@@ -229,7 +229,7 @@ export default function CourtRecords() {
                 </h3>
                 <div className="space-y-4">
                   {(data as any).recap.results.map((result: any, idx: number) => (
-                    <Card key={result.id} className="hover:shadow-lg transition-shadow">
+                    <Card key={`recap-${result.id}-${idx}`} className="hover:shadow-lg transition-shadow">
                       <CardHeader>
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
@@ -301,7 +301,7 @@ export default function CourtRecords() {
                 </h3>
                 <div className="space-y-4">
                   {(data as any).opinions.results.map((result: any, idx: number) => (
-                    <Card key={result.id} className="hover:shadow-lg transition-shadow">
+                    <Card key={`opinion-${result.id}-${idx}`} className="hover:shadow-lg transition-shadow">
                       <CardHeader>
                         <CardTitle className="text-lg mb-2" data-testid={`text-opinion-name-${idx}`}>
                           {result.caseName || result.caseNameFull || result.case_name}

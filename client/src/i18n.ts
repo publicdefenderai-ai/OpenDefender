@@ -1396,7 +1396,12 @@ i18n
               "caseNamePlaceholder": "Smith v. Jones",
               "docketNumber": "Docket Number",
               "docketNumberPlaceholder": "1:20-cv-12345",
-              "searchButton": "Search Court Records"
+              "searchButton": "Search Court Records",
+              "semanticSearchLabel": "AI-Powered Semantic Search",
+              "semanticSearchNew": "NEW",
+              "semanticSearchOnDesc": "Using natural language to find cases by meaning and intent",
+              "semanticSearchOffDesc": "Using keyword matching to search case names and docket numbers",
+              "semanticSearchPlaceholder": "Describe what you're looking for..."
             },
             "results": {
               "title": "Search Results",
@@ -4717,7 +4722,12 @@ i18n
               "caseNamePlaceholder": "Smith v. Jones",
               "docketNumber": "Número de Expediente",
               "docketNumberPlaceholder": "1:20-cv-12345",
-              "searchButton": "Buscar Registros Judiciales"
+              "searchButton": "Buscar Registros Judiciales",
+              "semanticSearchLabel": "Búsqueda Semántica con IA",
+              "semanticSearchNew": "NUEVO",
+              "semanticSearchOnDesc": "Usando lenguaje natural para encontrar casos por significado e intención",
+              "semanticSearchOffDesc": "Usando coincidencia de palabras clave para buscar nombres de casos y números de expediente",
+              "semanticSearchPlaceholder": "Describa lo que está buscando..."
             },
             "results": {
               "title": "Resultados de Búsqueda",
@@ -8018,7 +8028,12 @@ i18n
               "caseNamePlaceholder": "Smith v. Jones",
               "docketNumber": "案卷编号",
               "docketNumberPlaceholder": "1:20-cv-12345",
-              "searchButton": "搜索法庭记录"
+              "searchButton": "搜索法庭记录",
+              "semanticSearchLabel": "AI 语义搜索",
+              "semanticSearchNew": "新功能",
+              "semanticSearchOnDesc": "使用自然语言按含义和意图查找案件",
+              "semanticSearchOffDesc": "使用关键词匹配搜索案件名称和案卷编号",
+              "semanticSearchPlaceholder": "描述您要查找的内容..."
             },
             "results": {
               "title": "搜索结果",
