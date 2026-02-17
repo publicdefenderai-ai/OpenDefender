@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -13,124 +14,124 @@ import {
   FileText,
   CheckCircle
 } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
+import { useScrollToTop } from '@/hooks/use-scroll-to-top';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
 
 export default function RecapExtensions() {
+  useScrollToTop();
+  const { t } = useTranslation();
+
   const browsers = [
     {
       name: 'Google Chrome',
       icon: Chrome,
       url: 'https://chrome.google.com/webstore/detail/recap/oiillickanjlaeghobeeknbddaonmjnc',
-      description: 'Chrome Web Store'
+      descKey: 'recapExtensions.install.chromeDesc'
     },
     {
       name: 'Microsoft Edge',
       icon: Chrome,
       url: 'https://chrome.google.com/webstore/detail/recap/oiillickanjlaeghobeeknbddaonmjnc',
-      description: 'Via Chrome Web Store'
+      descKey: 'recapExtensions.install.edgeDesc'
     },
     {
       name: 'Firefox',
       icon: Download,
       url: 'https://addons.mozilla.org/en-US/firefox/addon/recap-195534/',
-      description: 'Firefox Add-ons'
+      descKey: 'recapExtensions.install.firefoxDesc'
     },
     {
       name: 'Safari',
       icon: Download,
       url: 'https://apps.apple.com/us/app/recap/id1600281788',
-      description: 'Mac App Store'
+      descKey: 'recapExtensions.install.safariDesc'
     }
   ];
 
   const benefits = [
     {
       icon: DollarSign,
-      title: 'Save Money',
-      description: 'Access documents others have already purchased, reducing your PACER costs'
+      titleKey: 'recapExtensions.benefits.saveMoney',
+      descKey: 'recapExtensions.benefits.saveMoneyDesc'
     },
     {
       icon: Users,
-      title: 'Help the Community',
-      description: 'Every document you buy from PACER is automatically saved to the free archive'
+      titleKey: 'recapExtensions.benefits.helpCommunity',
+      descKey: 'recapExtensions.benefits.helpCommunityDesc'
     },
     {
       icon: FileText,
-      title: 'Instant Access',
-      description: 'See which documents are free directly in PACER before you buy'
+      titleKey: 'recapExtensions.benefits.instantAccess',
+      descKey: 'recapExtensions.benefits.instantAccessDesc'
     },
     {
       icon: Shield,
-      title: 'Open Source & Privacy Focused',
-      description: 'Maintained by Free Law Project, a nonprofit dedicated to legal transparency'
+      titleKey: 'recapExtensions.benefits.openSource',
+      descKey: 'recapExtensions.benefits.openSourceDesc'
     }
   ];
 
-  const howItWorks = [
-    'Install the RECAP extension for your browser',
-    'When you search PACER, free documents from RECAP are highlighted',
-    'If you purchase a document from PACER, RECAP automatically saves it to the archive',
-    'Other RECAP users can then access that document for free'
+  const howItWorksSteps = [
+    'recapExtensions.howItWorks.step1',
+    'recapExtensions.howItWorks.step2',
+    'recapExtensions.howItWorks.step3',
+    'recapExtensions.howItWorks.step4'
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-3">
-            RECAP Browser Extensions
+      <Header />
+
+      <section className="vivid-header-alt py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            {t('recapExtensions.hero.title')}
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Free browser tools to make court records more accessible and affordable
+          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
+            {t('recapExtensions.hero.subtitle')}
           </p>
         </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-8 max-w-5xl">
         <Alert variant="destructive" className="mb-8">
           <AlertTriangle className="h-5 w-5" />
-          <AlertTitle className="text-lg font-semibold">Third-Party Tool Disclaimer</AlertTitle>
+          <AlertTitle className="text-lg font-semibold">{t('recapExtensions.disclaimer.title')}</AlertTitle>
           <AlertDescription className="mt-2">
             <p className="mb-2">
-              <strong>Important:</strong> RECAP browser extensions are developed and maintained by 
-              Free Law Project, an independent nonprofit organization. While we provide these links 
-              for your convenience, please note:
+              <strong>{t('recapExtensions.disclaimer.important')}</strong> {t('recapExtensions.disclaimer.text')}
             </p>
             <ul className="list-disc ml-5 space-y-1">
-              <li>We are not responsible for the security, functionality, or privacy practices of the RECAP extensions</li>
-              <li>Installation and use of these extensions is at your own risk</li>
-              <li>We do not guarantee the availability or performance of these third-party tools</li>
-              <li>Please review Free Law Project's own terms of service and privacy policy before installing</li>
+              <li>{t('recapExtensions.disclaimer.items.security')}</li>
+              <li>{t('recapExtensions.disclaimer.items.risk')}</li>
+              <li>{t('recapExtensions.disclaimer.items.availability')}</li>
+              <li>{t('recapExtensions.disclaimer.items.review')}</li>
             </ul>
             <p className="mt-3 font-medium">
-              By clicking the links below, you acknowledge that you are leaving our site and accessing 
-              a third-party service.
+              {t('recapExtensions.disclaimer.acknowledge')}
             </p>
           </AlertDescription>
         </Alert>
 
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">What is RECAP?</CardTitle>
+            <CardTitle className="text-2xl">{t('recapExtensions.whatIsRecap.title')}</CardTitle>
             <CardDescription>
-              RECAP turns PACER around (it's PACER spelled backwards!)
+              {t('recapExtensions.whatIsRecap.subtitle')}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              RECAP is a suite of browser extensions that makes federal court records free and accessible. 
-              When you use PACER (the federal court records system that charges per page), RECAP automatically 
-              saves your purchases to a free, public archive. Anyone with RECAP installed can then access 
-              those documents for free.
+              {t('recapExtensions.whatIsRecap.description1')}
             </p>
             <p className="text-muted-foreground">
-              With tens of thousands of users contributing, the RECAP Archive now contains millions of 
-              federal court documents that would otherwise cost money to access. It's a crowdsourced 
-              solution to making justice more accessible.
+              {t('recapExtensions.whatIsRecap.description2')}
             </p>
             <div className="bg-muted/50 p-4 rounded-lg mt-4">
-              <p className="text-sm font-medium mb-2">Developed by Free Law Project</p>
+              <p className="text-sm font-medium mb-2">{t('recapExtensions.whatIsRecap.developedBy')}</p>
               <p className="text-sm text-muted-foreground">
-                RECAP is maintained by Free Law Project, a 501(c)(3) nonprofit dedicated to making 
-                legal materials more accessible through technology, data, and advocacy.
+                {t('recapExtensions.whatIsRecap.nonprofitDesc')}
               </p>
             </div>
           </CardContent>
@@ -138,7 +139,7 @@ export default function RecapExtensions() {
 
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">Why Use RECAP?</CardTitle>
+            <CardTitle className="text-2xl">{t('recapExtensions.benefits.title')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-6">
@@ -150,8 +151,8 @@ export default function RecapExtensions() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">{benefit.title}</h3>
-                    <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    <h3 className="font-semibold mb-1">{t(benefit.titleKey)}</h3>
+                    <p className="text-sm text-muted-foreground">{t(benefit.descKey)}</p>
                   </div>
                 </div>
               ))}
@@ -161,18 +162,18 @@ export default function RecapExtensions() {
 
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">How It Works</CardTitle>
+            <CardTitle className="text-2xl">{t('recapExtensions.howItWorks.title')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {howItWorks.map((step, idx) => (
+              {howItWorksSteps.map((stepKey, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
                   <div className="flex-shrink-0">
                     <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold">
                       {idx + 1}
                     </div>
                   </div>
-                  <p className="text-muted-foreground pt-1">{step}</p>
+                  <p className="text-muted-foreground pt-1">{t(stepKey)}</p>
                 </div>
               ))}
             </div>
@@ -181,9 +182,9 @@ export default function RecapExtensions() {
 
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-2xl">Install RECAP</CardTitle>
+            <CardTitle className="text-2xl">{t('recapExtensions.install.title')}</CardTitle>
             <CardDescription>
-              Choose your browser to install the extension
+              {t('recapExtensions.install.subtitle')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -195,7 +196,7 @@ export default function RecapExtensions() {
                       <browser.icon className="w-8 h-8 text-primary" />
                       <div>
                         <CardTitle className="text-lg">{browser.name}</CardTitle>
-                        <CardDescription className="text-xs">{browser.description}</CardDescription>
+                        <CardDescription className="text-xs">{t(browser.descKey)}</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -211,7 +212,7 @@ export default function RecapExtensions() {
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Install for {browser.name}
+                        {t('recapExtensions.install.installFor', { browser: browser.name })}
                       </a>
                     </Button>
                   </CardContent>
@@ -222,9 +223,7 @@ export default function RecapExtensions() {
             <Alert className="mt-6">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>
-                <strong>After installing:</strong> The extension works automatically in the background. 
-                Just use PACER normally, and RECAP will show you which documents are free and save 
-                your purchases to the archive.
+                <strong>{t('recapExtensions.install.afterInstalling')}</strong> {t('recapExtensions.install.afterInstallingDesc')}
               </AlertDescription>
             </Alert>
           </CardContent>
@@ -232,7 +231,7 @@ export default function RecapExtensions() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Learn More</CardTitle>
+            <CardTitle className="text-2xl">{t('recapExtensions.learnMore.title')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
@@ -243,7 +242,7 @@ export default function RecapExtensions() {
                   rel="noopener noreferrer"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  RECAP Official Website
+                  {t('recapExtensions.learnMore.officialWebsite')}
                 </a>
               </Button>
               <Button variant="outline" asChild>
@@ -253,7 +252,7 @@ export default function RecapExtensions() {
                   rel="noopener noreferrer"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Browse RECAP Archive
+                  {t('recapExtensions.learnMore.browseArchive')}
                 </a>
               </Button>
               <Button variant="outline" asChild>
@@ -263,7 +262,7 @@ export default function RecapExtensions() {
                   rel="noopener noreferrer"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  About Free Law Project
+                  {t('recapExtensions.learnMore.aboutFreeLaw')}
                 </a>
               </Button>
               <Button variant="outline" asChild>
@@ -272,13 +271,14 @@ export default function RecapExtensions() {
                   data-testid="link-search-recap"
                 >
                   <FileText className="w-4 h-4 mr-2" />
-                  Search RECAP Archive
+                  {t('recapExtensions.learnMore.searchArchive')}
                 </a>
               </Button>
             </div>
           </CardContent>
         </Card>
       </div>
+      <Footer />
     </div>
   );
 }

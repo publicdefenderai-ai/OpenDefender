@@ -1433,6 +1433,68 @@ i18n
               "incomplete": "Results shown may be incomplete."
             }
           },
+          "recapExtensions": {
+            "hero": {
+              "title": "RECAP Browser Extensions",
+              "subtitle": "Free browser tools to make court records more accessible and affordable"
+            },
+            "disclaimer": {
+              "title": "Third-Party Tool Disclaimer",
+              "important": "Important:",
+              "text": "RECAP browser extensions are developed and maintained by Free Law Project, an independent nonprofit organization. While we provide these links for your convenience, please note:",
+              "items": {
+                "security": "We are not responsible for the security, functionality, or privacy practices of the RECAP extensions",
+                "risk": "Installation and use of these extensions is at your own risk",
+                "availability": "We do not guarantee the availability or performance of these third-party tools",
+                "review": "Please review Free Law Project's own terms of service and privacy policy before installing"
+              },
+              "acknowledge": "By clicking the links below, you acknowledge that you are leaving our site and accessing a third-party service."
+            },
+            "whatIsRecap": {
+              "title": "What is RECAP?",
+              "subtitle": "RECAP turns PACER around (it's PACER spelled backwards!)",
+              "description1": "RECAP is a suite of browser extensions that makes federal court records free and accessible. When you use PACER (the federal court records system that charges per page), RECAP automatically saves your purchases to a free, public archive. Anyone with RECAP installed can then access those documents for free.",
+              "description2": "With tens of thousands of users contributing, the RECAP Archive now contains millions of federal court documents that would otherwise cost money to access. It's a crowdsourced solution to making justice more accessible.",
+              "developedBy": "Developed by Free Law Project",
+              "nonprofitDesc": "RECAP is maintained by Free Law Project, a 501(c)(3) nonprofit dedicated to making legal materials more accessible through technology, data, and advocacy."
+            },
+            "benefits": {
+              "title": "Why Use RECAP?",
+              "saveMoney": "Save Money",
+              "saveMoneyDesc": "Access documents others have already purchased, reducing your PACER costs",
+              "helpCommunity": "Help the Community",
+              "helpCommunityDesc": "Every document you buy from PACER is automatically saved to the free archive",
+              "instantAccess": "Instant Access",
+              "instantAccessDesc": "See which documents are free directly in PACER before you buy",
+              "openSource": "Open Source & Privacy Focused",
+              "openSourceDesc": "Maintained by Free Law Project, a nonprofit dedicated to legal transparency"
+            },
+            "howItWorks": {
+              "title": "How It Works",
+              "step1": "Install the RECAP extension for your browser",
+              "step2": "When you search PACER, free documents from RECAP are highlighted",
+              "step3": "If you purchase a document from PACER, RECAP automatically saves it to the archive",
+              "step4": "Other RECAP users can then access that document for free"
+            },
+            "install": {
+              "title": "Install RECAP",
+              "subtitle": "Choose your browser to install the extension",
+              "installFor": "Install for {{browser}}",
+              "chromeDesc": "Chrome Web Store",
+              "edgeDesc": "Via Chrome Web Store",
+              "firefoxDesc": "Firefox Add-ons",
+              "safariDesc": "Mac App Store",
+              "afterInstalling": "After installing:",
+              "afterInstallingDesc": "The extension works automatically in the background. Just use PACER normally, and RECAP will show you which documents are free and save your purchases to the archive."
+            },
+            "learnMore": {
+              "title": "Learn More",
+              "officialWebsite": "RECAP Official Website",
+              "browseArchive": "Browse RECAP Archive",
+              "aboutFreeLaw": "About Free Law Project",
+              "searchArchive": "Search RECAP Archive"
+            }
+          },
           "legalGlossary": {
             "hero": {
               "title": "Legal Glossary",
@@ -4759,6 +4821,68 @@ i18n
               "incomplete": "Los resultados mostrados pueden estar incompletos."
             }
           },
+          "recapExtensions": {
+            "hero": {
+              "title": "Extensiones de Navegador RECAP",
+              "subtitle": "Herramientas gratuitas de navegador para hacer los registros judiciales más accesibles y económicos"
+            },
+            "disclaimer": {
+              "title": "Aviso de Herramienta de Terceros",
+              "important": "Importante:",
+              "text": "Las extensiones de navegador RECAP son desarrolladas y mantenidas por Free Law Project, una organización sin fines de lucro independiente. Si bien proporcionamos estos enlaces para su conveniencia, tenga en cuenta:",
+              "items": {
+                "security": "No somos responsables de la seguridad, funcionalidad o prácticas de privacidad de las extensiones RECAP",
+                "risk": "La instalación y el uso de estas extensiones es bajo su propio riesgo",
+                "availability": "No garantizamos la disponibilidad o el rendimiento de estas herramientas de terceros",
+                "review": "Por favor revise los términos de servicio y la política de privacidad de Free Law Project antes de instalar"
+              },
+              "acknowledge": "Al hacer clic en los enlaces a continuación, usted reconoce que está saliendo de nuestro sitio y accediendo a un servicio de terceros."
+            },
+            "whatIsRecap": {
+              "title": "¿Qué es RECAP?",
+              "subtitle": "RECAP invierte PACER (¡es PACER escrito al revés!)",
+              "description1": "RECAP es un conjunto de extensiones de navegador que hace que los registros de tribunales federales sean gratuitos y accesibles. Cuando usa PACER (el sistema de registros judiciales federales que cobra por página), RECAP guarda automáticamente sus compras en un archivo público y gratuito. Cualquier persona con RECAP instalado puede acceder a esos documentos de forma gratuita.",
+              "description2": "Con decenas de miles de usuarios contribuyendo, el Archivo RECAP ahora contiene millones de documentos de tribunales federales que de otro modo costarían dinero para acceder. Es una solución colaborativa para hacer la justicia más accesible.",
+              "developedBy": "Desarrollado por Free Law Project",
+              "nonprofitDesc": "RECAP es mantenido por Free Law Project, una organización sin fines de lucro 501(c)(3) dedicada a hacer los materiales legales más accesibles a través de la tecnología, los datos y la promoción."
+            },
+            "benefits": {
+              "title": "¿Por Qué Usar RECAP?",
+              "saveMoney": "Ahorre Dinero",
+              "saveMoneyDesc": "Acceda a documentos que otros ya compraron, reduciendo sus costos de PACER",
+              "helpCommunity": "Ayude a la Comunidad",
+              "helpCommunityDesc": "Cada documento que compra en PACER se guarda automáticamente en el archivo gratuito",
+              "instantAccess": "Acceso Instantáneo",
+              "instantAccessDesc": "Vea qué documentos son gratuitos directamente en PACER antes de comprar",
+              "openSource": "Código Abierto y Enfocado en Privacidad",
+              "openSourceDesc": "Mantenido por Free Law Project, una organización sin fines de lucro dedicada a la transparencia legal"
+            },
+            "howItWorks": {
+              "title": "Cómo Funciona",
+              "step1": "Instale la extensión RECAP para su navegador",
+              "step2": "Cuando busque en PACER, los documentos gratuitos de RECAP se destacan",
+              "step3": "Si compra un documento en PACER, RECAP lo guarda automáticamente en el archivo",
+              "step4": "Otros usuarios de RECAP pueden acceder a ese documento de forma gratuita"
+            },
+            "install": {
+              "title": "Instalar RECAP",
+              "subtitle": "Elija su navegador para instalar la extensión",
+              "installFor": "Instalar para {{browser}}",
+              "chromeDesc": "Chrome Web Store",
+              "edgeDesc": "Vía Chrome Web Store",
+              "firefoxDesc": "Complementos de Firefox",
+              "safariDesc": "Mac App Store",
+              "afterInstalling": "Después de instalar:",
+              "afterInstallingDesc": "La extensión funciona automáticamente en segundo plano. Simplemente use PACER normalmente, y RECAP le mostrará qué documentos son gratuitos y guardará sus compras en el archivo."
+            },
+            "learnMore": {
+              "title": "Más Información",
+              "officialWebsite": "Sitio Web Oficial de RECAP",
+              "browseArchive": "Explorar Archivo RECAP",
+              "aboutFreeLaw": "Sobre Free Law Project",
+              "searchArchive": "Buscar en el Archivo RECAP"
+            }
+          },
           "legalGlossary": {
             "hero": {
               "title": "Glosario Legal",
@@ -8063,6 +8187,68 @@ i18n
               "recapFailed": "RECAP 案卷搜索失败。",
               "opinionsFailed": "判例法意见搜索失败。",
               "incomplete": "显示的结果可能不完整。"
+            }
+          },
+          "recapExtensions": {
+            "hero": {
+              "title": "RECAP 浏览器扩展",
+              "subtitle": "免费的浏览器工具，让法院记录更容易获取且更经济实惠"
+            },
+            "disclaimer": {
+              "title": "第三方工具免责声明",
+              "important": "重要提示：",
+              "text": "RECAP 浏览器扩展由 Free Law Project（一个独立的非营利组织）开发和维护。虽然我们提供这些链接方便您使用，但请注意：",
+              "items": {
+                "security": "我们不对 RECAP 扩展的安全性、功能或隐私做法负责",
+                "risk": "安装和使用这些扩展的风险由您自行承担",
+                "availability": "我们不保证这些第三方工具的可用性或性能",
+                "review": "请在安装前查阅 Free Law Project 的服务条款和隐私政策"
+              },
+              "acknowledge": "点击以下链接即表示您确认正在离开我们的网站并访问第三方服务。"
+            },
+            "whatIsRecap": {
+              "title": "什么是 RECAP？",
+              "subtitle": "RECAP 是 PACER 的倒写！",
+              "description1": "RECAP 是一套浏览器扩展，使联邦法院记录免费且易于访问。当您使用 PACER（按页收费的联邦法院记录系统）时，RECAP 会自动将您购买的文件保存到免费的公共档案中。任何安装了 RECAP 的人都可以免费访问这些文件。",
+              "description2": "数万名用户的贡献使得 RECAP 档案现在包含了数百万份联邦法院文件，否则需要付费才能访问。这是一个众包解决方案，使司法更加公开透明。",
+              "developedBy": "由 Free Law Project 开发",
+              "nonprofitDesc": "RECAP 由 Free Law Project 维护，这是一个 501(c)(3) 非营利组织，致力于通过技术、数据和倡导使法律材料更易于获取。"
+            },
+            "benefits": {
+              "title": "为什么使用 RECAP？",
+              "saveMoney": "节省费用",
+              "saveMoneyDesc": "访问其他人已经购买的文件，减少您的 PACER 费用",
+              "helpCommunity": "帮助社区",
+              "helpCommunityDesc": "您从 PACER 购买的每份文件都会自动保存到免费档案中",
+              "instantAccess": "即时访问",
+              "instantAccessDesc": "在购买前直接在 PACER 中查看哪些文件是免费的",
+              "openSource": "开源且注重隐私",
+              "openSourceDesc": "由 Free Law Project 维护，这是一个致力于法律透明度的非营利组织"
+            },
+            "howItWorks": {
+              "title": "工作原理",
+              "step1": "为您的浏览器安装 RECAP 扩展",
+              "step2": "当您搜索 PACER 时，来自 RECAP 的免费文件会被高亮显示",
+              "step3": "如果您从 PACER 购买文件，RECAP 会自动将其保存到档案中",
+              "step4": "其他 RECAP 用户可以免费访问该文件"
+            },
+            "install": {
+              "title": "安装 RECAP",
+              "subtitle": "选择您的浏览器安装扩展",
+              "installFor": "为 {{browser}} 安装",
+              "chromeDesc": "Chrome 网上应用店",
+              "edgeDesc": "通过 Chrome 网上应用店",
+              "firefoxDesc": "Firefox 附加组件",
+              "safariDesc": "Mac App Store",
+              "afterInstalling": "安装后：",
+              "afterInstallingDesc": "扩展在后台自动运行。只需正常使用 PACER，RECAP 就会显示哪些文件是免费的，并将您的购买保存到档案中。"
+            },
+            "learnMore": {
+              "title": "了解更多",
+              "officialWebsite": "RECAP 官方网站",
+              "browseArchive": "浏览 RECAP 档案",
+              "aboutFreeLaw": "关于 Free Law Project",
+              "searchArchive": "搜索 RECAP 档案"
             }
           },
           "legalGlossary": {
