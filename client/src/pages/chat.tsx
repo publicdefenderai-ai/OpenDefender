@@ -284,7 +284,7 @@ export default function ChatPage() {
           actions.setCurrentStep('rights_info_menu');
         } else if (reply.value === 'menu_resources_category') {
           addBotMessageWithKey('chat.messages.resourcesCategoryMenu', [
-            { id: 'resources-legal-aid-cat', labelKey: 'chat.replies.legalAidResources', value: 'menu_resources', color: 'purple' as const },
+            { id: 'resources-legal-aid-cat', labelKey: 'chat.replies.legalAidResources', value: 'menu_resources', color: 'green' as const },
             { id: 'resources-laws-cat', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
             { id: 'resources-life-support-cat', labelKey: 'chat.replies.lifeSupportResources', value: 'menu_life_support', color: 'rose' as const },
           ]);
