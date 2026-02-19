@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
@@ -15,9 +14,10 @@ import {
   Scale,
   ArrowRight,
   ChevronLeft,
-  ExternalLink,
+  Sparkles,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -27,25 +27,28 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 interface SupportCategoryProps {
   id: string;
   icon: React.ElementType;
-  color: string;
+  iconBg: string;
+  iconText: string;
+  borderColor: string;
   href: string;
   available: boolean;
+  emoji: string;
 }
 
 const supportCategories: SupportCategoryProps[] = [
-  { id: "employment", icon: Briefcase, color: "bg-blue-500/10 text-blue-600 dark:text-blue-400", href: "/support/employment", available: true },
-  { id: "finances", icon: DollarSign, color: "bg-green-500/10 text-green-600 dark:text-green-400", href: "/support/finances", available: true },
-  { id: "courtLogistics", icon: Calendar, color: "bg-purple-500/10 text-purple-600 dark:text-purple-400", href: "/support/court-logistics", available: true },
-  { id: "mentalHealth", icon: Heart, color: "bg-rose-500/10 text-rose-600 dark:text-rose-400", href: "/support/mental-health", available: true },
-  { id: "housing", icon: Home, color: "bg-amber-500/10 text-amber-600 dark:text-amber-400", href: "/support/housing", available: false },
-  { id: "transportation", icon: Car, color: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400", href: "/support/transportation", available: false },
-  { id: "childcare", icon: Baby, color: "bg-pink-500/10 text-pink-600 dark:text-pink-400", href: "/support/childcare", available: false },
-  { id: "familyCare", icon: Users, color: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400", href: "/support/family-care", available: false },
-  { id: "immigration", icon: Shield, color: "bg-teal-500/10 text-teal-600 dark:text-teal-400", href: "/immigration-guidance", available: true },
-  { id: "reputation", icon: Scale, color: "bg-slate-500/10 text-slate-600 dark:text-slate-400", href: "/support/reputation", available: false },
+  { id: "employment", icon: Briefcase, iconBg: "bg-blue-100 dark:bg-blue-900/40", iconText: "text-blue-600 dark:text-blue-400", borderColor: "border-l-blue-500", href: "/support/employment", available: true, emoji: "💼" },
+  { id: "finances", icon: DollarSign, iconBg: "bg-emerald-100 dark:bg-emerald-900/40", iconText: "text-emerald-600 dark:text-emerald-400", borderColor: "border-l-emerald-500", href: "/support/finances", available: true, emoji: "💰" },
+  { id: "courtLogistics", icon: Calendar, iconBg: "bg-purple-100 dark:bg-purple-900/40", iconText: "text-purple-600 dark:text-purple-400", borderColor: "border-l-purple-500", href: "/support/court-logistics", available: true, emoji: "⚖️" },
+  { id: "mentalHealth", icon: Heart, iconBg: "bg-rose-100 dark:bg-rose-900/40", iconText: "text-rose-600 dark:text-rose-400", borderColor: "border-l-rose-500", href: "/support/mental-health", available: true, emoji: "🧠" },
+  { id: "housing", icon: Home, iconBg: "bg-amber-100 dark:bg-amber-900/40", iconText: "text-amber-600 dark:text-amber-400", borderColor: "border-l-amber-500", href: "/support/housing", available: false, emoji: "🏠" },
+  { id: "transportation", icon: Car, iconBg: "bg-cyan-100 dark:bg-cyan-900/40", iconText: "text-cyan-600 dark:text-cyan-400", borderColor: "border-l-cyan-500", href: "/support/transportation", available: false, emoji: "🚗" },
+  { id: "childcare", icon: Baby, iconBg: "bg-pink-100 dark:bg-pink-900/40", iconText: "text-pink-600 dark:text-pink-400", borderColor: "border-l-pink-500", href: "/support/childcare", available: false, emoji: "👶" },
+  { id: "familyCare", icon: Users, iconBg: "bg-indigo-100 dark:bg-indigo-900/40", iconText: "text-indigo-600 dark:text-indigo-400", borderColor: "border-l-indigo-500", href: "/support/family-care", available: false, emoji: "👨‍👩‍👧" },
+  { id: "immigration", icon: Shield, iconBg: "bg-teal-100 dark:bg-teal-900/40", iconText: "text-teal-600 dark:text-teal-400", borderColor: "border-l-teal-500", href: "/immigration-guidance", available: true, emoji: "🌍" },
+  { id: "reputation", icon: Scale, iconBg: "bg-slate-100 dark:bg-slate-900/40", iconText: "text-slate-600 dark:text-slate-400", borderColor: "border-l-slate-500", href: "/support/reputation", available: false, emoji: "🔒" },
 ];
 
-function CategoryCard({ category }: { category: SupportCategoryProps }) {
+function CategoryCard({ category, index }: { category: SupportCategoryProps; index: number }) {
   const { t } = useTranslation();
   const Icon = category.icon;
 
@@ -53,33 +56,48 @@ function CategoryCard({ category }: { category: SupportCategoryProps }) {
   const description = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${category.id}.description`);
 
   const content = (
-    <Card className={`group h-full border-2 border-transparent transition-all duration-200 ${
-      category.available
-        ? "card-interactive cursor-pointer hover:border-primary/20"
-        : "opacity-60 cursor-not-allowed"
-    }`}>
-      <CardContent className="p-5 h-full flex flex-col">
-        <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${category.color} transition-transform duration-300 ${category.available ? "group-hover:scale-110" : ""}`}>
-          <Icon className="h-6 w-6" />
-        </div>
-        <h3 className={`text-lg font-semibold mb-2 text-foreground ${category.available ? "group-hover:text-primary" : ""} transition-colors`}>
-          {label}
-        </h3>
-        <p className="text-sm leading-relaxed flex-1 text-slate-600 dark:text-slate-300">
-          {description}
-        </p>
-        {category.available ? (
-          <div className="flex items-center gap-2 mt-4 text-primary font-medium text-sm">
-            <span>{t('support.viewResources')}</span>
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.06, duration: 0.4 }}
+      className="h-full"
+    >
+      <Card className={`group h-full border-l-4 ${category.borderColor} transition-all duration-300 ${
+        category.available
+          ? "hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+          : "opacity-50 cursor-not-allowed"
+      }`}>
+        <CardContent className="p-5 h-full flex flex-col">
+          <div className="flex items-start gap-4 mb-3">
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${category.iconBg} transition-transform duration-300 ${category.available ? "group-hover:scale-110" : ""}`}>
+              <Icon className={`h-6 w-6 ${category.iconText}`} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-lg" aria-hidden="true">{category.emoji}</span>
+                <h3 className={`text-lg font-bold text-foreground leading-snug ${category.available ? "group-hover:text-primary" : ""} transition-colors`}>
+                  {label}
+                </h3>
+              </div>
+              {!category.available && (
+                <Badge variant="secondary" className="text-xs mt-1">
+                  {t('support.comingSoon')}
+                </Badge>
+              )}
+            </div>
           </div>
-        ) : (
-          <div className="mt-4 text-xs text-muted-foreground italic">
-            {t('support.comingSoon')}
-          </div>
-        )}
-      </CardContent>
-    </Card>
+          <p className="text-sm leading-relaxed flex-1 text-slate-600 dark:text-slate-300">
+            {description}
+          </p>
+          {category.available && (
+            <div className={`flex items-center gap-2 mt-4 pt-3 border-t border-border/50 ${category.iconText} font-medium text-sm`}>
+              <span>{t('support.viewResources')}</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 
   if (category.available) {
@@ -92,11 +110,13 @@ export default function SupportHub() {
   useScrollToTop();
   const { t } = useTranslation();
 
+  const availableCategories = supportCategories.filter(c => c.available);
+  const comingSoonCategories = supportCategories.filter(c => !c.available);
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="vivid-header-alt py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
             <Link href="/">
@@ -108,7 +128,7 @@ export default function SupportHub() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               {t('support.title')}
             </h1>
-            <p className="text-lg md:text-xl text-white/80 mb-4">
+            <p className="text-lg md:text-xl text-white/80 mb-4 max-w-2xl mx-auto">
               {t('support.subtitle')}
             </p>
             <p className="text-sm text-white/70 max-w-2xl mx-auto">
@@ -117,27 +137,45 @@ export default function SupportHub() {
           </div>
         </section>
 
-        {/* Categories Grid */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <ScrollReveal>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                {supportCategories.map((category) => (
-                  <CategoryCard key={category.id} category={category} />
+              <div className="flex items-center gap-3 mb-8">
+                <Sparkles className="h-5 w-5 text-primary" />
+                <h2 className="text-xl font-bold text-foreground">{t('support.availableNow', 'Available Now')}</h2>
+                <Badge variant="secondary" className="text-xs">{availableCategories.length}</Badge>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {availableCategories.map((category, index) => (
+                  <CategoryCard key={category.id} category={category} index={index} />
                 ))}
               </div>
             </ScrollReveal>
           </div>
         </section>
 
-        {/* Note Section */}
+        {comingSoonCategories.length > 0 && (
+          <section className="py-8 md:py-12 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <ScrollReveal>
+                <h2 className="text-lg font-semibold text-muted-foreground mb-6">{t('support.comingSoon')}</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                  {comingSoonCategories.map((category, index) => (
+                    <CategoryCard key={category.id} category={category} index={index} />
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+          </section>
+        )}
+
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-2xl mx-auto">
-                <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
+                <Card className="border-amber-200 dark:border-amber-800 bg-gradient-to-br from-amber-50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/10">
                   <CardContent className="p-5">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       <strong className="text-foreground">{t('support.note.title')}</strong>{" "}
                       {t('support.note.content')}
                     </p>
