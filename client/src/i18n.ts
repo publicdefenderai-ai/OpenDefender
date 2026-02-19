@@ -224,7 +224,363 @@ i18n
             "next": "Next",
             "save": "Save",
             "important": "Important",
-            "privacyFirst": "Privacy First"
+            "privacyFirst": "Privacy First",
+            "backToHome": "Back to Home"
+          },
+          "support": {
+            "title": "Support Resources",
+            "subtitle": "Practical help for life challenges during your case",
+            "description": "Facing legal challenges affects every part of your life. These resources can help you manage day-to-day concerns so you can focus on your case.",
+            "viewResources": "View resources",
+            "comingSoon": "Coming soon",
+            "backToSupport": "Back to Support",
+            "startHere": "Start Here",
+            "practicalSteps": "Practical steps",
+            "helpfulResources": "Helpful Resources",
+            "relatedResources": "Related Resources",
+            "visitWebsite": "Visit website",
+            "free": "Free",
+            "resourceType": {
+              "national": "National",
+              "state": "State",
+              "local": "Local",
+              "online": "Online"
+            },
+            "priority": {
+              "high": "Priority",
+              "medium": "Helpful",
+              "low": "Optional"
+            },
+            "faq": {
+              "title": "Common Questions"
+            },
+            "tips": {
+              "title": "Helpful Tips"
+            },
+            "note": {
+              "title": "Note:",
+              "content": "These resources are for general information only and do not constitute legal advice. Every situation is different. If you have specific questions, please consult with a licensed attorney."
+            },
+            "disclaimer": "This information is for general educational purposes only and does not constitute legal, financial, medical, or professional advice. Resources listed are third-party organizations not affiliated with PublicDefenderAI. We do not guarantee the accuracy or availability of external resources. Always verify information and consult appropriate professionals for your specific situation.",
+            "relatedLinks": {
+              "employment": "Employment Support",
+              "finances": "Financial Help",
+              "courtLogistics": "Court Logistics",
+              "mentalHealth": "Mental Health",
+              "process": "Criminal Process",
+              "rights": "Your Rights",
+              "courtLocator": "Find Your Court",
+              "publicDefender": "Find Legal Aid",
+              "familyFriends": "For Family & Friends"
+            },
+            "employment": {
+              "overview": "Facing criminal charges can create uncertainty about your job. Understanding your rights and planning ahead can help protect your employment while you focus on your case.",
+              "actions": {
+                "knowRights": {
+                  "title": "Know your workplace rights",
+                  "description": "In most states, employers cannot automatically fire you for being arrested (an arrest is not a conviction). However, policies vary. Review your employment contract and company handbook.",
+                  "timeframe": "This week"
+                },
+                "reviewPolicy": {
+                  "title": "Review your company's policy",
+                  "description": "Look for policies on background checks, absences, and how your employer handles pending charges. HR can provide this information without you disclosing details.",
+                  "timeframe": "This week"
+                },
+                "document": {
+                  "title": "Document everything",
+                  "description": "Keep records of any work-related communications, performance reviews, and attendance. This protects you if issues arise later."
+                },
+                "planAbsence": {
+                  "title": "Plan for court absences",
+                  "description": "You may need time off for court dates. Consider using PTO, requesting unpaid leave, or working with your attorney to schedule hearings when possible."
+                }
+              },
+              "resources": {
+                "eeoc": {
+                  "description": "Federal agency enforcing workplace discrimination laws. Provides guidance on your rights if you face employment discrimination."
+                },
+                "nelp": {
+                  "description": "Advocates for policies that create good jobs and improve employment standards, especially for low-wage workers."
+                },
+                "workplaceFairness": {
+                  "description": "Free information about employment rights, including wrongful termination, discrimination, and leave policies."
+                },
+                "legalAidWork": {
+                  "description": "Provides free legal assistance on employment issues including wrongful termination and workplace discrimination."
+                },
+                "careerOneStop": {
+                  "description": "U.S. Department of Labor resource for job searching, training, and career development if you need to find new employment."
+                },
+                "jobCenters": {
+                  "description": "Free local services including job search assistance, resume help, and connections to training programs."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "Can I be fired for being arrested?",
+                  "answer": "It depends on your state and employer. Most states are 'at-will' employment, meaning employers can fire for many reasons. However, some states have laws protecting employees from discrimination based on arrest records (not convictions). Public sector jobs often have more protections. Check your state's laws and your employment contract."
+                },
+                "q2": {
+                  "question": "Do I have to tell my employer about my case?",
+                  "answer": "Generally, you're not required to volunteer information about pending charges unless your employment contract or company policy specifically requires it. However, if asked directly on a job application or by HR, lying could be grounds for termination. Consult an attorney if you're unsure."
+                },
+                "q3": {
+                  "question": "What if my job requires a background check?",
+                  "answer": "Many employers conduct background checks. Arrests (not convictions) may not appear on all checks, and some states limit what employers can consider. If your case is dismissed or you're acquitted, you may be able to have records sealed. An attorney can advise on your specific situation."
+                },
+                "q4": {
+                  "question": "Can I get time off for court appearances?",
+                  "answer": "Many states have laws protecting employees who are summoned to court as jurors or witnesses. Some also protect defendants. Check your state's laws and consider using PTO, FMLA (if applicable), or negotiating with your employer."
+                }
+              },
+              "tips": {
+                "tip1": "Don't discuss your case details with coworkers — keep conversations professional",
+                "tip2": "Save copies of performance reviews and positive feedback from before your case",
+                "tip3": "If you're job hunting, research 'ban the box' laws in your state that limit when employers can ask about criminal history",
+                "tip4": "Consider consulting an employment attorney if you believe you're being treated unfairly at work"
+              }
+            },
+            "finances": {
+              "overview": "Legal cases can strain your finances through attorney fees, fines, lost work time, and more. Understanding your options for managing these costs can reduce stress and help you focus on your case.",
+              "actions": {
+                "assessCosts": {
+                  "title": "Assess potential costs",
+                  "description": "Common expenses include bail/bond, attorney fees, court fees, fines, probation costs, and lost wages. Making a list helps you plan and prioritize.",
+                  "timeframe": "This week"
+                },
+                "explorePD": {
+                  "title": "Explore public defender or legal aid",
+                  "description": "If you can't afford an attorney, you may qualify for a free public defender. Income limits vary by jurisdiction. Legal aid organizations also provide free help for some cases.",
+                  "timeframe": "Immediately"
+                },
+                "feeWaiver": {
+                  "title": "Ask about fee waivers",
+                  "description": "Many courts offer fee waivers for filing fees, fines, and other costs if you demonstrate financial hardship. Ask the court clerk for waiver forms."
+                },
+                "paymentPlan": {
+                  "title": "Request a payment plan",
+                  "description": "Courts often allow payment plans for fines and fees. This can make costs more manageable and help you avoid additional penalties for non-payment."
+                },
+                "emergencyAid": {
+                  "title": "Look into emergency assistance",
+                  "description": "Local nonprofits, churches, and community organizations may offer emergency assistance for rent, utilities, or food while you're dealing with legal issues."
+                },
+                "incomeLoss": {
+                  "title": "Plan for potential income loss",
+                  "description": "If you may lose work time, look into unemployment benefits, disability benefits (if applicable), or assistance programs to help bridge gaps."
+                }
+              },
+              "resources": {
+                "findLaw": {
+                  "description": "Directory of free and low-cost legal aid providers in your area, organized by state and practice area."
+                },
+                "lawHelp": {
+                  "description": "State-by-state directory of legal aid organizations that provide free legal assistance to low-income individuals."
+                },
+                "benefits": {
+                  "description": "Official U.S. government tool to check eligibility for federal, state, and local benefit programs including food assistance, healthcare, and housing."
+                },
+                "unitedWay": {
+                  "description": "Call or text 211 to connect with local resources for food, utilities, rent assistance, and other basic needs in your community."
+                },
+                "modestMeans": {
+                  "description": "State bar programs connecting moderate-income clients with attorneys who offer reduced-rate services."
+                },
+                "cfpb": {
+                  "description": "Federal agency offering tools and guides for managing debt, understanding credit, and dealing with debt collectors."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "How do I know if I qualify for a public defender?",
+                  "answer": "Eligibility is based on income and assets, typically at or below 125-200% of the federal poverty level, though it varies by jurisdiction. The court will ask about your finances at your first appearance. Be prepared with pay stubs, tax returns, or proof of benefits."
+                },
+                "q2": {
+                  "question": "What if I can't pay fines or fees?",
+                  "answer": "Courts cannot jail you simply for being unable to pay. If you genuinely cannot afford payments, ask for a fee waiver, payment plan, or community service alternative. Document your financial hardship and bring proof to court."
+                },
+                "q3": {
+                  "question": "Can legal costs affect my credit?",
+                  "answer": "Court fines and fees sent to collections can affect your credit. Some jurisdictions are moving away from this practice. If you're struggling, ask about payment plans before accounts go to collections."
+                },
+                "q4": {
+                  "question": "Are there programs to help pay bail?",
+                  "answer": "Yes, bail funds and community bail organizations exist in many areas. Some provide assistance for those who cannot afford bail. Search for 'bail fund' plus your city or state to find local options."
+                }
+              },
+              "tips": {
+                "tip1": "Keep all receipts and documentation of payments made toward your case",
+                "tip2": "Don't borrow from predatory lenders or take on high-interest debt — explore all other options first",
+                "tip3": "If you receive a bill you can't pay, contact the court immediately rather than ignoring it",
+                "tip4": "Ask your attorney about expungement options that might help with future employment and housing"
+              }
+            },
+            "courtLogistics": {
+              "overview": "Knowing what to expect on your court date can help reduce anxiety and ensure you make a good impression. Here's practical guidance for navigating court appearances.",
+              "actions": {
+                "findCourt": {
+                  "title": "Find your court location",
+                  "description": "Verify the exact address and building. Many areas have multiple courthouses. Check your paperwork or call the clerk's office to confirm.",
+                  "timeframe": "Days before"
+                },
+                "checkDate": {
+                  "title": "Confirm your court date and time",
+                  "description": "Double-check your date, time, and courtroom number. Arrive 30-45 minutes early to allow time for parking, security, and finding your courtroom.",
+                  "timeframe": "Week before"
+                },
+                "planArrival": {
+                  "title": "Plan your arrival",
+                  "description": "Research parking options, public transit routes, and traffic patterns. Plan to arrive early — being late can result in a warrant for your arrest."
+                },
+                "dressCode": {
+                  "title": "Dress appropriately",
+                  "description": "Wear clean, conservative clothing. Business casual is appropriate. Avoid shorts, tank tops, flip-flops, hats, or clothing with offensive messages."
+                },
+                "whatToBring": {
+                  "title": "Know what to bring (and what not to)",
+                  "description": "Bring your ID, any court papers, and a notebook. Leave weapons, large bags, and prohibited items at home. Most courts prohibit cell phones in courtrooms."
+                },
+                "whatToExpect": {
+                  "title": "Understand the process",
+                  "description": "Check in with the court clerk when you arrive. Cases may not be heard in order. Be patient, stay quiet, and stand when the judge enters."
+                }
+              },
+              "resources": {
+                "courtLocator": {
+                  "description": "Our tool to find state and federal courts near you with addresses, hours, and contact information."
+                },
+                "usCourts": {
+                  "description": "Official directory of federal court websites with local rules, forms, and contact information."
+                },
+                "ncsc": {
+                  "description": "Information about state court systems including self-help resources and court process guides."
+                },
+                "selfHelp": {
+                  "description": "Many courts have self-help centers with staff who can answer procedural questions (but not give legal advice)."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "What happens if I'm late to court?",
+                  "answer": "Being late to court is serious. The judge may issue a bench warrant for your arrest, revoke bail, or proceed without you. If you're running late due to emergency, call the court clerk immediately. If possible, have someone appear on your behalf to explain."
+                },
+                "q2": {
+                  "question": "Can I bring my phone to court?",
+                  "answer": "Most courts allow phones in the building but require them to be silenced or off in courtrooms. Some courts prohibit phones entirely. Check your court's rules before going. Never use your phone in the courtroom."
+                },
+                "q3": {
+                  "question": "What should I say to the judge?",
+                  "answer": "Address the judge as 'Your Honor.' Speak clearly and politely. Answer questions directly without volunteering extra information. If you don't understand something, say so. Your attorney will guide you on what to say."
+                },
+                "q4": {
+                  "question": "Can family members come to court?",
+                  "answer": "Most court proceedings are open to the public, so family can attend. Having supportive people present can help, and judges may view it positively. They should follow the same dress code and behavior rules."
+                },
+                "q5": {
+                  "question": "What if I need an interpreter?",
+                  "answer": "Courts provide free interpreters for those who need them. Request an interpreter in advance by contacting the court clerk. You have a right to understand all proceedings in your case."
+                }
+              },
+              "tips": {
+                "tip1": "Do a practice drive or transit trip to the courthouse before your court date",
+                "tip2": "Bring something to read — you may wait several hours before your case is called",
+                "tip3": "Eat before you go — you may not be able to leave the courtroom once proceedings start",
+                "tip4": "Turn off your phone completely before entering the courtroom, not just silence it",
+                "tip5": "If you feel overwhelmed, it's okay to ask the judge if you can have a moment to compose yourself"
+              }
+            },
+            "mentalHealth": {
+              "overview": "Facing legal challenges is stressful and can affect your mental health. It's normal to feel anxious, overwhelmed, or depressed. Taking care of your mental health isn't a luxury — it's essential for getting through this difficult time.",
+              "crisis": {
+                "title": "If You're in Crisis",
+                "description": "If you're having thoughts of suicide or self-harm, or are in emotional distress, help is available 24/7:",
+                "hotline": {
+                  "name": "Suicide & Crisis Lifeline",
+                  "availability": "24/7, free, confidential"
+                },
+                "text": {
+                  "name": "Crisis Text Line",
+                  "number": "Text HOME to 741741",
+                  "instruction": "Text HOME to 741741"
+                },
+                "chat": {
+                  "name": "Online Chat",
+                  "link": "988lifeline.org/chat",
+                  "availability": "24/7, free, confidential"
+                }
+              },
+              "actions": {
+                "acknowledge": {
+                  "title": "Acknowledge your feelings",
+                  "description": "It's normal to feel scared, angry, ashamed, or hopeless. These feelings don't define you. Recognizing them is the first step to managing them."
+                },
+                "reachOut": {
+                  "title": "Reach out to someone you trust",
+                  "description": "Don't go through this alone. Talk to a friend, family member, faith leader, or counselor. Sharing your burden can provide relief and perspective."
+                },
+                "routine": {
+                  "title": "Maintain daily routines",
+                  "description": "Structure helps. Try to keep regular sleep schedules, eat well, exercise, and maintain work or school routines when possible."
+                },
+                "counseling": {
+                  "title": "Consider counseling",
+                  "description": "A therapist can provide tools for managing stress, anxiety, and depression. Many offer sliding-scale fees. Some specialize in clients facing legal issues."
+                },
+                "limitNews": {
+                  "title": "Limit case-related stress",
+                  "description": "It's okay to take breaks from thinking about your case. Set boundaries on how much time you spend researching or worrying. Trust your attorney to handle details."
+                },
+                "supportGroup": {
+                  "title": "Find a support group",
+                  "description": "Connecting with others who've been through similar experiences can reduce isolation. Look for local or online support groups."
+                }
+              },
+              "resources": {
+                "lifeline988": {
+                  "description": "Free, confidential crisis support available 24/7 by phone, text, or chat. Trained counselors help with emotional distress and suicidal thoughts."
+                },
+                "samhsa": {
+                  "description": "Free, confidential helpline for mental health and substance abuse information and treatment referrals, available 24/7."
+                },
+                "nami": {
+                  "description": "Nation's largest grassroots mental health organization providing support, education, and advocacy. Local chapters offer support groups and resources."
+                },
+                "openPath": {
+                  "description": "Nonprofit network of therapists offering sessions at reduced rates ($30-$80) for those without adequate insurance coverage."
+                },
+                "sevenCups": {
+                  "description": "Free online chat with trained listeners for emotional support. Also offers affordable online therapy options."
+                },
+                "psychToday": {
+                  "description": "Searchable directory of therapists by location, specialty, and insurance. Many list sliding scale options."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "Is it normal to feel this stressed?",
+                  "answer": "Yes, absolutely. Facing criminal charges is one of life's most stressful experiences. Anxiety, trouble sleeping, difficulty concentrating, and mood changes are common reactions. If symptoms persist or worsen, consider talking to a mental health professional."
+                },
+                "q2": {
+                  "question": "How can I find affordable counseling?",
+                  "answer": "Options include: community mental health centers (sliding scale fees), Open Path Collective ($30-80 sessions), university training clinics (reduced rates), employee assistance programs (if employed), and online therapy platforms. Many therapists offer sliding scales — ask."
+                },
+                "q3": {
+                  "question": "What if I don't have insurance?",
+                  "answer": "Community mental health centers serve people regardless of insurance. SAMHSA's helpline can connect you with local options. Crisis lines are always free. Some areas have free walk-in counseling services."
+                },
+                "q4": {
+                  "question": "Can stress affect my case?",
+                  "answer": "Chronic stress can impair decision-making and memory, making it harder to participate in your defense. Taking care of your mental health isn't selfish — it helps you be more present and effective in dealing with your case."
+                }
+              },
+              "tips": {
+                "tip1": "Physical activity — even a short walk — can significantly reduce stress and anxiety",
+                "tip2": "Limit alcohol and caffeine, which can worsen anxiety and interfere with sleep",
+                "tip3": "Practice simple breathing exercises: breathe in for 4 counts, hold for 4, out for 4",
+                "tip4": "Write down your worries — getting them out of your head can provide relief",
+                "tip5": "Remember: your current situation is temporary. Many people have gone through this and come out the other side"
+              }
+            }
           },
           "mockQA": {
             "sectionTitle": "Practice Questions & Answers",
@@ -572,6 +928,11 @@ i18n
               },
               "actionsToAvoid": {
                 "title": "Actions to Avoid"
+              },
+              "supportResources": {
+                "title": "Support Resources For You",
+                "subtitle": "Based on what you told us you're worried about, here are resources that may help:",
+                "viewAll": "View All Support Resources"
               },
               "privacyNotice": {
                 "title": "Your Privacy is Protected",
@@ -3091,6 +3452,7 @@ i18n
             "knowRights": "Know My Rights",
             "findResources": "Find Resources",
             "legalAidResources": "Legal Aid Resources & Support",
+            "lifeSupportResources": "Life Support (Job, Finances, Mental Health)",
             "personalizedGuidance": "Personalized Guidance",
             "immigrationEnforcement": "Immigration Enforcement",
             "rightsInfo": "Rights Info",
@@ -3671,7 +4033,363 @@ i18n
             "next": "Siguiente",
             "save": "Guardar",
             "important": "Importante",
-            "privacyFirst": "Privacidad Primero"
+            "privacyFirst": "Privacidad Primero",
+            "backToHome": "Volver al Inicio"
+          },
+          "support": {
+            "title": "Recursos de Apoyo",
+            "subtitle": "Ayuda práctica para los desafíos de la vida durante su caso",
+            "description": "Enfrentar desafíos legales afecta cada parte de su vida. Estos recursos pueden ayudarle a manejar las preocupaciones del día a día para que pueda concentrarse en su caso.",
+            "viewResources": "Ver recursos",
+            "comingSoon": "Próximamente",
+            "backToSupport": "Volver a Apoyo",
+            "startHere": "Comience Aquí",
+            "practicalSteps": "Pasos prácticos",
+            "helpfulResources": "Recursos Útiles",
+            "relatedResources": "Recursos Relacionados",
+            "visitWebsite": "Visitar sitio web",
+            "free": "Gratis",
+            "resourceType": {
+              "national": "Nacional",
+              "state": "Estatal",
+              "local": "Local",
+              "online": "En Línea"
+            },
+            "priority": {
+              "high": "Prioridad",
+              "medium": "Útil",
+              "low": "Opcional"
+            },
+            "faq": {
+              "title": "Preguntas Frecuentes"
+            },
+            "tips": {
+              "title": "Consejos Útiles"
+            },
+            "note": {
+              "title": "Nota:",
+              "content": "Estos recursos son solo para información general y no constituyen asesoramiento legal. Cada situación es diferente. Si tiene preguntas específicas, consulte con un abogado licenciado."
+            },
+            "disclaimer": "Esta información es solo para propósitos educativos generales y no constituye asesoramiento legal, financiero, médico o profesional. Los recursos listados son organizaciones de terceros no afiliadas con PublicDefenderAI. No garantizamos la exactitud o disponibilidad de recursos externos. Siempre verifique la información y consulte con los profesionales apropiados para su situación específica.",
+            "relatedLinks": {
+              "employment": "Apoyo Laboral",
+              "finances": "Ayuda Financiera",
+              "courtLogistics": "Logística de la Corte",
+              "mentalHealth": "Salud Mental",
+              "process": "Proceso Penal",
+              "rights": "Sus Derechos",
+              "courtLocator": "Encontrar Su Corte",
+              "publicDefender": "Encontrar Ayuda Legal",
+              "familyFriends": "Para Familia y Amigos"
+            },
+            "employment": {
+              "overview": "Enfrentar cargos penales puede crear incertidumbre sobre su trabajo. Entender sus derechos y planificar con anticipación puede ayudar a proteger su empleo mientras se concentra en su caso.",
+              "actions": {
+                "knowRights": {
+                  "title": "Conozca sus derechos laborales",
+                  "description": "En la mayoría de los estados, los empleadores no pueden despedirlo automáticamente por ser arrestado (un arresto no es una condena). Sin embargo, las políticas varían. Revise su contrato de empleo y el manual de la empresa.",
+                  "timeframe": "Esta semana"
+                },
+                "reviewPolicy": {
+                  "title": "Revise la política de su empresa",
+                  "description": "Busque políticas sobre verificaciones de antecedentes, ausencias y cómo su empleador maneja cargos pendientes. Recursos Humanos puede proporcionar esta información sin que usted revele detalles.",
+                  "timeframe": "Esta semana"
+                },
+                "document": {
+                  "title": "Documente todo",
+                  "description": "Mantenga registros de cualquier comunicación relacionada con el trabajo, evaluaciones de desempeño y asistencia. Esto le protege si surgen problemas más adelante."
+                },
+                "planAbsence": {
+                  "title": "Planifique para ausencias por corte",
+                  "description": "Puede necesitar tiempo libre para fechas de corte. Considere usar PTO, solicitar licencia sin pago, o trabajar con su abogado para programar audiencias cuando sea posible."
+                }
+              },
+              "resources": {
+                "eeoc": {
+                  "description": "Agencia federal que hace cumplir las leyes de discriminación laboral. Proporciona orientación sobre sus derechos si enfrenta discriminación laboral."
+                },
+                "nelp": {
+                  "description": "Aboga por políticas que crean buenos empleos y mejoran los estándares laborales, especialmente para trabajadores de bajos salarios."
+                },
+                "workplaceFairness": {
+                  "description": "Información gratuita sobre derechos laborales, incluyendo despido injustificado, discriminación y políticas de licencia."
+                },
+                "legalAidWork": {
+                  "description": "Proporciona asistencia legal gratuita en asuntos laborales incluyendo despido injustificado y discriminación laboral."
+                },
+                "careerOneStop": {
+                  "description": "Recurso del Departamento de Trabajo de EE.UU. para búsqueda de empleo, capacitación y desarrollo profesional si necesita encontrar nuevo empleo."
+                },
+                "jobCenters": {
+                  "description": "Servicios locales gratuitos incluyendo asistencia en búsqueda de empleo, ayuda con currículum y conexiones con programas de capacitación."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Me pueden despedir por ser arrestado?",
+                  "answer": "Depende de su estado y empleador. La mayoría de los estados tienen empleo 'a voluntad', lo que significa que los empleadores pueden despedir por muchas razones. Sin embargo, algunos estados tienen leyes que protegen a los empleados de discriminación basada en registros de arresto (no condenas). Los trabajos del sector público a menudo tienen más protecciones. Verifique las leyes de su estado y su contrato de empleo."
+                },
+                "q2": {
+                  "question": "¿Tengo que decirle a mi empleador sobre mi caso?",
+                  "answer": "Generalmente, no está obligado a ofrecer información voluntariamente sobre cargos pendientes a menos que su contrato de empleo o política de la empresa lo requiera específicamente. Sin embargo, si le preguntan directamente en una solicitud de empleo o por Recursos Humanos, mentir podría ser motivo de despido. Consulte a un abogado si no está seguro."
+                },
+                "q3": {
+                  "question": "¿Qué pasa si mi trabajo requiere verificación de antecedentes?",
+                  "answer": "Muchos empleadores realizan verificaciones de antecedentes. Los arrestos (no condenas) pueden no aparecer en todas las verificaciones, y algunos estados limitan lo que los empleadores pueden considerar. Si su caso es desestimado o es absuelto, puede ser posible sellar los registros. Un abogado puede asesorarle sobre su situación específica."
+                },
+                "q4": {
+                  "question": "¿Puedo obtener tiempo libre para citas en la corte?",
+                  "answer": "Muchos estados tienen leyes que protegen a los empleados citados a la corte como jurados o testigos. Algunos también protegen a los acusados. Verifique las leyes de su estado y considere usar PTO, FMLA (si aplica), o negociar con su empleador."
+                }
+              },
+              "tips": {
+                "tip1": "No discuta los detalles de su caso con compañeros de trabajo — mantenga las conversaciones profesionales",
+                "tip2": "Guarde copias de evaluaciones de desempeño y comentarios positivos de antes de su caso",
+                "tip3": "Si está buscando trabajo, investigue las leyes 'ban the box' en su estado que limitan cuándo los empleadores pueden preguntar sobre historial criminal",
+                "tip4": "Considere consultar a un abogado laboral si cree que está siendo tratado injustamente en el trabajo"
+              }
+            },
+            "finances": {
+              "overview": "Los casos legales pueden afectar sus finanzas a través de honorarios de abogados, multas, tiempo de trabajo perdido y más. Entender sus opciones para manejar estos costos puede reducir el estrés y ayudarle a concentrarse en su caso.",
+              "actions": {
+                "assessCosts": {
+                  "title": "Evalúe los costos potenciales",
+                  "description": "Los gastos comunes incluyen fianza, honorarios de abogado, tarifas judiciales, multas, costos de libertad condicional e ingresos perdidos. Hacer una lista le ayuda a planificar y priorizar.",
+                  "timeframe": "Esta semana"
+                },
+                "explorePD": {
+                  "title": "Explore defensor público o ayuda legal",
+                  "description": "Si no puede pagar un abogado, puede calificar para un defensor público gratuito. Los límites de ingresos varían según la jurisdicción. Las organizaciones de ayuda legal también brindan ayuda gratuita para algunos casos.",
+                  "timeframe": "Inmediatamente"
+                },
+                "feeWaiver": {
+                  "title": "Pregunte sobre exenciones de tarifas",
+                  "description": "Muchas cortes ofrecen exenciones de tarifas para costos de presentación, multas y otros cargos si demuestra dificultades financieras. Pida los formularios de exención al secretario de la corte."
+                },
+                "paymentPlan": {
+                  "title": "Solicite un plan de pago",
+                  "description": "Las cortes a menudo permiten planes de pago para multas y tarifas. Esto puede hacer los costos más manejables y ayudarle a evitar penalidades adicionales por falta de pago."
+                },
+                "emergencyAid": {
+                  "title": "Busque asistencia de emergencia",
+                  "description": "Organizaciones sin fines de lucro locales, iglesias y organizaciones comunitarias pueden ofrecer asistencia de emergencia para alquiler, servicios públicos o comida mientras enfrenta problemas legales."
+                },
+                "incomeLoss": {
+                  "title": "Planifique para posible pérdida de ingresos",
+                  "description": "Si puede perder tiempo de trabajo, investigue beneficios de desempleo, beneficios por discapacidad (si aplica), o programas de asistencia para ayudar a cubrir brechas."
+                }
+              },
+              "resources": {
+                "findLaw": {
+                  "description": "Directorio de proveedores de ayuda legal gratuita y de bajo costo en su área, organizado por estado y área de práctica."
+                },
+                "lawHelp": {
+                  "description": "Directorio estado por estado de organizaciones de ayuda legal que brindan asistencia legal gratuita a personas de bajos ingresos."
+                },
+                "benefits": {
+                  "description": "Herramienta oficial del gobierno de EE.UU. para verificar elegibilidad para programas de beneficios federales, estatales y locales incluyendo asistencia alimentaria, atención médica y vivienda."
+                },
+                "unitedWay": {
+                  "description": "Llame o envíe un mensaje de texto al 211 para conectarse con recursos locales para comida, servicios públicos, asistencia de alquiler y otras necesidades básicas en su comunidad."
+                },
+                "modestMeans": {
+                  "description": "Programas del colegio de abogados estatal que conectan clientes de ingresos moderados con abogados que ofrecen servicios a tarifas reducidas."
+                },
+                "cfpb": {
+                  "description": "Agencia federal que ofrece herramientas y guías para manejar deudas, entender el crédito y tratar con cobradores de deudas."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Cómo sé si califico para un defensor público?",
+                  "answer": "La elegibilidad se basa en ingresos y activos, típicamente al 125-200% del nivel federal de pobreza o menos, aunque varía según la jurisdicción. La corte le preguntará sobre sus finanzas en su primera comparecencia. Esté preparado con recibos de pago, declaraciones de impuestos o prueba de beneficios."
+                },
+                "q2": {
+                  "question": "¿Qué pasa si no puedo pagar multas o tarifas?",
+                  "answer": "Las cortes no pueden encarcelarle simplemente por no poder pagar. Si genuinamente no puede pagar, pida una exención de tarifas, plan de pago, o alternativa de servicio comunitario. Documente sus dificultades financieras y traiga pruebas a la corte."
+                },
+                "q3": {
+                  "question": "¿Los costos legales pueden afectar mi crédito?",
+                  "answer": "Las multas y tarifas judiciales enviadas a cobranzas pueden afectar su crédito. Algunas jurisdicciones están alejándose de esta práctica. Si tiene dificultades, pregunte sobre planes de pago antes de que las cuentas vayan a cobranzas."
+                },
+                "q4": {
+                  "question": "¿Hay programas para ayudar a pagar la fianza?",
+                  "answer": "Sí, existen fondos de fianza y organizaciones comunitarias de fianza en muchas áreas. Algunos brindan asistencia a quienes no pueden pagar la fianza. Busque 'fondo de fianza' más su ciudad o estado para encontrar opciones locales."
+                }
+              },
+              "tips": {
+                "tip1": "Guarde todos los recibos y documentación de pagos realizados para su caso",
+                "tip2": "No pida prestado a prestamistas abusivos ni asuma deudas de alto interés — explore todas las otras opciones primero",
+                "tip3": "Si recibe una factura que no puede pagar, contacte a la corte inmediatamente en lugar de ignorarla",
+                "tip4": "Pregunte a su abogado sobre opciones de eliminación de antecedentes que podrían ayudar con empleo y vivienda futuros"
+              }
+            },
+            "courtLogistics": {
+              "overview": "Saber qué esperar en su fecha de corte puede ayudar a reducir la ansiedad y asegurar que cause una buena impresión. Aquí hay orientación práctica para navegar las comparecencias en corte.",
+              "actions": {
+                "findCourt": {
+                  "title": "Encuentre la ubicación de su corte",
+                  "description": "Verifique la dirección exacta y el edificio. Muchas áreas tienen múltiples juzgados. Revise sus documentos o llame a la oficina del secretario para confirmar.",
+                  "timeframe": "Días antes"
+                },
+                "checkDate": {
+                  "title": "Confirme su fecha y hora de corte",
+                  "description": "Verifique dos veces su fecha, hora y número de sala. Llegue 30-45 minutos antes para permitir tiempo para estacionamiento, seguridad y encontrar su sala.",
+                  "timeframe": "Semana antes"
+                },
+                "planArrival": {
+                  "title": "Planifique su llegada",
+                  "description": "Investigue opciones de estacionamiento, rutas de transporte público y patrones de tráfico. Planifique llegar temprano — llegar tarde puede resultar en una orden de arresto."
+                },
+                "dressCode": {
+                  "title": "Vista apropiadamente",
+                  "description": "Use ropa limpia y conservadora. Ropa casual de negocios es apropiada. Evite shorts, camisetas sin mangas, chancletas, sombreros o ropa con mensajes ofensivos."
+                },
+                "whatToBring": {
+                  "title": "Sepa qué traer (y qué no)",
+                  "description": "Traiga su identificación, cualquier documento de la corte y un cuaderno. Deje armas, bolsas grandes y artículos prohibidos en casa. La mayoría de las cortes prohíben teléfonos celulares en las salas."
+                },
+                "whatToExpect": {
+                  "title": "Entienda el proceso",
+                  "description": "Regístrese con el secretario de la corte cuando llegue. Los casos pueden no escucharse en orden. Sea paciente, permanezca callado y póngase de pie cuando entre el juez."
+                }
+              },
+              "resources": {
+                "courtLocator": {
+                  "description": "Nuestra herramienta para encontrar cortes estatales y federales cerca de usted con direcciones, horarios e información de contacto."
+                },
+                "usCourts": {
+                  "description": "Directorio oficial de sitios web de cortes federales con reglas locales, formularios e información de contacto."
+                },
+                "ncsc": {
+                  "description": "Información sobre sistemas de cortes estatales incluyendo recursos de autoayuda y guías del proceso judicial."
+                },
+                "selfHelp": {
+                  "description": "Muchas cortes tienen centros de autoayuda con personal que puede responder preguntas procedimentales (pero no dar asesoramiento legal)."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Qué pasa si llego tarde a la corte?",
+                  "answer": "Llegar tarde a la corte es serio. El juez puede emitir una orden de arresto, revocar la fianza o proceder sin usted. Si llega tarde debido a una emergencia, llame al secretario de la corte inmediatamente. Si es posible, haga que alguien comparezca en su nombre para explicar."
+                },
+                "q2": {
+                  "question": "¿Puedo llevar mi teléfono a la corte?",
+                  "answer": "La mayoría de las cortes permiten teléfonos en el edificio pero requieren que estén en silencio o apagados en las salas. Algunas cortes prohíben teléfonos completamente. Verifique las reglas de su corte antes de ir. Nunca use su teléfono en la sala de la corte."
+                },
+                "q3": {
+                  "question": "¿Qué debo decirle al juez?",
+                  "answer": "Diríjase al juez como 'Su Señoría'. Hable clara y cortésmente. Responda las preguntas directamente sin ofrecer información extra. Si no entiende algo, dígalo. Su abogado le guiará sobre qué decir."
+                },
+                "q4": {
+                  "question": "¿Pueden los familiares ir a la corte?",
+                  "answer": "La mayoría de los procedimientos judiciales están abiertos al público, así que la familia puede asistir. Tener personas de apoyo presentes puede ayudar, y los jueces pueden verlo positivamente. Deben seguir las mismas reglas de vestimenta y comportamiento."
+                },
+                "q5": {
+                  "question": "¿Qué pasa si necesito un intérprete?",
+                  "answer": "Las cortes proporcionan intérpretes gratuitos para quienes los necesiten. Solicite un intérprete con anticipación contactando al secretario de la corte. Tiene derecho a entender todos los procedimientos en su caso."
+                }
+              },
+              "tips": {
+                "tip1": "Haga un viaje de práctica en carro o transporte público al juzgado antes de su fecha de corte",
+                "tip2": "Traiga algo para leer — puede esperar varias horas antes de que llamen su caso",
+                "tip3": "Coma antes de ir — puede que no pueda salir de la sala una vez que comiencen los procedimientos",
+                "tip4": "Apague su teléfono completamente antes de entrar a la sala de la corte, no solo siléncielo",
+                "tip5": "Si se siente abrumado, está bien pedirle al juez un momento para calmarse"
+              }
+            },
+            "mentalHealth": {
+              "overview": "Enfrentar desafíos legales es estresante y puede afectar su salud mental. Es normal sentirse ansioso, abrumado o deprimido. Cuidar su salud mental no es un lujo — es esencial para superar este momento difícil.",
+              "crisis": {
+                "title": "Si Está en Crisis",
+                "description": "Si tiene pensamientos de suicidio o autolesión, o está en angustia emocional, hay ayuda disponible 24/7:",
+                "hotline": {
+                  "name": "Línea de Crisis y Suicidio",
+                  "availability": "24/7, gratis, confidencial"
+                },
+                "text": {
+                  "name": "Línea de Crisis por Texto",
+                  "number": "Envíe HOLA al 741741",
+                  "instruction": "Envíe HOLA al 741741"
+                },
+                "chat": {
+                  "name": "Chat en Línea",
+                  "link": "988lifeline.org/chat",
+                  "availability": "24/7, gratis, confidencial"
+                }
+              },
+              "actions": {
+                "acknowledge": {
+                  "title": "Reconozca sus sentimientos",
+                  "description": "Es normal sentir miedo, enojo, vergüenza o desesperanza. Estos sentimientos no le definen. Reconocerlos es el primer paso para manejarlos."
+                },
+                "reachOut": {
+                  "title": "Contacte a alguien de su confianza",
+                  "description": "No pase por esto solo. Hable con un amigo, familiar, líder religioso o consejero. Compartir su carga puede proporcionar alivio y perspectiva."
+                },
+                "routine": {
+                  "title": "Mantenga rutinas diarias",
+                  "description": "La estructura ayuda. Trate de mantener horarios regulares de sueño, coma bien, haga ejercicio y mantenga rutinas de trabajo o escuela cuando sea posible."
+                },
+                "counseling": {
+                  "title": "Considere consejería",
+                  "description": "Un terapeuta puede proporcionar herramientas para manejar el estrés, ansiedad y depresión. Muchos ofrecen tarifas de escala móvil. Algunos se especializan en clientes que enfrentan problemas legales."
+                },
+                "limitNews": {
+                  "title": "Limite el estrés relacionado con el caso",
+                  "description": "Está bien tomar descansos de pensar en su caso. Establezca límites sobre cuánto tiempo pasa investigando o preocupándose. Confíe en su abogado para manejar los detalles."
+                },
+                "supportGroup": {
+                  "title": "Encuentre un grupo de apoyo",
+                  "description": "Conectarse con otros que han pasado por experiencias similares puede reducir el aislamiento. Busque grupos de apoyo locales o en línea."
+                }
+              },
+              "resources": {
+                "lifeline988": {
+                  "description": "Apoyo de crisis gratuito y confidencial disponible 24/7 por teléfono, texto o chat. Consejeros capacitados ayudan con angustia emocional y pensamientos suicidas."
+                },
+                "samhsa": {
+                  "description": "Línea de ayuda gratuita y confidencial para información y referencias de tratamiento de salud mental y abuso de sustancias, disponible 24/7."
+                },
+                "nami": {
+                  "description": "La organización de salud mental de base más grande del país que proporciona apoyo, educación y defensa. Los capítulos locales ofrecen grupos de apoyo y recursos."
+                },
+                "openPath": {
+                  "description": "Red sin fines de lucro de terapeutas que ofrecen sesiones a tarifas reducidas ($30-$80) para quienes no tienen cobertura de seguro adecuada."
+                },
+                "sevenCups": {
+                  "description": "Chat en línea gratuito con oyentes capacitados para apoyo emocional. También ofrece opciones de terapia en línea asequibles."
+                },
+                "psychToday": {
+                  "description": "Directorio buscable de terapeutas por ubicación, especialidad y seguro. Muchos listan opciones de escala móvil."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Es normal sentirse tan estresado?",
+                  "answer": "Sí, absolutamente. Enfrentar cargos penales es una de las experiencias más estresantes de la vida. Ansiedad, problemas para dormir, dificultad para concentrarse y cambios de humor son reacciones comunes. Si los síntomas persisten o empeoran, considere hablar con un profesional de salud mental."
+                },
+                "q2": {
+                  "question": "¿Cómo puedo encontrar consejería asequible?",
+                  "answer": "Las opciones incluyen: centros de salud mental comunitarios (tarifas de escala móvil), Open Path Collective (sesiones de $30-80), clínicas de capacitación universitarias (tarifas reducidas), programas de asistencia al empleado (si está empleado), y plataformas de terapia en línea. Muchos terapeutas ofrecen escalas móviles — pregunte."
+                },
+                "q3": {
+                  "question": "¿Qué pasa si no tengo seguro?",
+                  "answer": "Los centros de salud mental comunitarios atienden a personas independientemente del seguro. La línea de ayuda de SAMHSA puede conectarle con opciones locales. Las líneas de crisis siempre son gratuitas. Algunas áreas tienen servicios de consejería gratuitos sin cita."
+                },
+                "q4": {
+                  "question": "¿El estrés puede afectar mi caso?",
+                  "answer": "El estrés crónico puede afectar la toma de decisiones y la memoria, dificultando la participación en su defensa. Cuidar su salud mental no es egoísta — le ayuda a estar más presente y efectivo al tratar con su caso."
+                }
+              },
+              "tips": {
+                "tip1": "La actividad física — incluso una caminata corta — puede reducir significativamente el estrés y la ansiedad",
+                "tip2": "Limite el alcohol y la cafeína, que pueden empeorar la ansiedad e interferir con el sueño",
+                "tip3": "Practique ejercicios de respiración simples: inhale por 4 tiempos, sostenga por 4, exhale por 4",
+                "tip4": "Escriba sus preocupaciones — sacarlas de su cabeza puede proporcionar alivio",
+                "tip5": "Recuerde: su situación actual es temporal. Muchas personas han pasado por esto y han salido adelante"
+              }
+            }
           },
           "mockQA": {
             "sectionTitle": "Preguntas y Respuestas de Práctica",
@@ -4019,6 +4737,11 @@ i18n
               },
               "actionsToAvoid": {
                 "title": "Acciones a Evitar"
+              },
+              "supportResources": {
+                "title": "Recursos de Apoyo Para Usted",
+                "subtitle": "Basado en lo que nos dijo que le preocupa, aquí hay recursos que pueden ayudar:",
+                "viewAll": "Ver Todos los Recursos de Apoyo"
               },
               "privacyNotice": {
                 "title": "Su Privacidad está Protegida",
@@ -6538,6 +7261,7 @@ i18n
             "knowRights": "Conocer Mis Derechos",
             "findResources": "Encontrar Recursos",
             "legalAidResources": "Recursos y Apoyo de Asistencia Legal",
+            "lifeSupportResources": "Apoyo de Vida (Trabajo, Finanzas, Salud Mental)",
             "personalizedGuidance": "Orientación Personalizada",
             "immigrationEnforcement": "Aplicación de Inmigración",
             "rightsInfo": "Info de Derechos",

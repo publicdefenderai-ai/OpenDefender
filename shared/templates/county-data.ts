@@ -3467,3 +3467,57 @@ export const WY_COUNTIES: { value: string; label: string }[] = [
   { value: "Weston", label: "Weston" },
   { value: "other", label: "Other" },
 ];
+
+// ============================================================================
+// Alaska Boroughs and Census Areas (30)
+// ============================================================================
+
+export const AK_BOROUGHS: { value: string; label: string }[] = [
+  { value: "Aleutians East", label: "Aleutians East Borough" },
+  { value: "Aleutians West", label: "Aleutians West Census Area" },
+  { value: "Anchorage", label: "Municipality of Anchorage" },
+  { value: "Bethel", label: "Bethel Census Area" },
+  { value: "Bristol Bay", label: "Bristol Bay Borough" },
+  { value: "Chugach", label: "Chugach Census Area" },
+  { value: "Copper River", label: "Copper River Census Area" },
+  { value: "Denali", label: "Denali Borough" },
+  { value: "Dillingham", label: "Dillingham Census Area" },
+  { value: "Fairbanks North Star", label: "Fairbanks North Star Borough" },
+  { value: "Haines", label: "Haines Borough" },
+  { value: "Hoonah-Angoon", label: "Hoonah-Angoon Census Area" },
+  { value: "Juneau", label: "City and Borough of Juneau" },
+  { value: "Kenai Peninsula", label: "Kenai Peninsula Borough" },
+  { value: "Ketchikan Gateway", label: "Ketchikan Gateway Borough" },
+  { value: "Kodiak Island", label: "Kodiak Island Borough" },
+  { value: "Kusilvak", label: "Kusilvak Census Area" },
+  { value: "Lake and Peninsula", label: "Lake and Peninsula Borough" },
+  { value: "Matanuska-Susitna", label: "Matanuska-Susitna Borough" },
+  { value: "Nome", label: "Nome Census Area" },
+  { value: "North Slope", label: "North Slope Borough" },
+  { value: "Northwest Arctic", label: "Northwest Arctic Borough" },
+  { value: "Petersburg", label: "Petersburg Borough" },
+  { value: "Prince of Wales-Hyder", label: "Prince of Wales-Hyder Census Area" },
+  { value: "Sitka", label: "City and Borough of Sitka" },
+  { value: "Skagway", label: "Municipality of Skagway" },
+  { value: "Southeast Fairbanks", label: "Southeast Fairbanks Census Area" },
+  { value: "Wrangell", label: "City and Borough of Wrangell" },
+  { value: "Yakutat", label: "City and Borough of Yakutat" },
+  { value: "Yukon-Koyukuk", label: "Yukon-Koyukuk Census Area" },
+  { value: "other", label: "Other" },
+];
+
+// ============================================================================
+// District of Columbia Wards (8)
+// ============================================================================
+
+export const DC_WARDS: { value: string; label: string }[] = [
+  { value: "Ward 1", label: "Ward 1" },
+  { value: "Ward 2", label: "Ward 2" },
+  { value: "Ward 3", label: "Ward 3" },
+  { value: "Ward 4", label: "Ward 4" },
+  { value: "Ward 5", label: "Ward 5" },
+  { value: "Ward 6", label: "Ward 6" },
+  { value: "Ward 7", label: "Ward 7" },
+  { value: "Ward 8", label: "Ward 8" },
+  { value: "other", label: "Other" },
+];

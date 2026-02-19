@@ -286,8 +286,12 @@ export default function ChatPage() {
           addBotMessageWithKey('chat.messages.resourcesCategoryMenu', [
             { id: 'resources-legal-aid-cat', labelKey: 'chat.replies.legalAidResources', value: 'menu_resources', color: 'purple' as const },
             { id: 'resources-laws-cat', labelKey: 'chat.replies.lawsRecords', value: 'menu_laws', color: 'purple' as const },
+            { id: 'resources-life-support-cat', labelKey: 'chat.replies.lifeSupportResources', value: 'menu_life_support', color: 'rose' as const },
           ]);
           actions.setCurrentStep('resources_category_menu');
+        } else if (reply.value === 'menu_life_support') {
+          setLocation('/support');
+          actions.markFlowCompleted('resources');
         } else if (reply.value === 'menu_resources') {
           addBotMessageWithKey('chat.messages.resourcesMenu', [
             { id: 'resources-pd', labelKey: 'chat.replies.findPublicDefender', value: 'resources_pd', color: 'green' as const },
@@ -325,7 +329,7 @@ export default function ChatPage() {
             { id: 'resources-legal-aid', labelKey: 'chat.replies.legalAidOrgs', value: 'resources_legal_aid', color: 'green' as const },
             { id: 'resources-diversion', labelKey: 'chat.replies.diversionPrograms', value: 'resources_diversion', color: 'green' as const },
             { id: 'resources-expungement', labelKey: 'chat.replies.recordExpungement', value: 'resources_expungement', color: 'green' as const },
-            { id: 'resources-doc-summarizer', labelKey: 'chat.replies.documentSummarizer', value: 'resources_doc_summarizer', color: 'cyan' as const },
+            { id: 'resources-doc-summarizer', labelKey: 'chat.replies.documentSummarizer', value: 'resources_doc_summarizer', color: 'green' as const },
           ]);
           actions.setCurrentStep('resources_menu');
         } else if (reply.value === 'menu_laws') {
@@ -335,6 +339,9 @@ export default function ChatPage() {
             { id: 'laws-documents', labelKey: 'chat.replies.documentLibrary', value: 'laws_documents', color: 'purple' as const },
           ]);
           actions.setCurrentStep('laws_records_menu');
+        } else if (reply.value === 'menu_life_support') {
+          setLocation('/support');
+          actions.markFlowCompleted('resources');
         }
         break;
 

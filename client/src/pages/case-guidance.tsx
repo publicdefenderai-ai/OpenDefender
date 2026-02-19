@@ -104,6 +104,7 @@ interface EnhancedGuidanceResult {
     caseStage: string;
     custodyStatus: string;
     hasAttorney: boolean;
+    selectedConcerns?: string[];
   };
 }
 

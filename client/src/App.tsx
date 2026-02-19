@@ -62,6 +62,11 @@ import EmbedRights from "@/pages/embed/rights";
 import EmbedGlossary from "@/pages/embed/glossary";
 import CaseTimeline from "@/pages/case-timeline";
 import QuickReference from "@/pages/quick-reference";
+import SupportHub from "@/pages/support/index";
+import EmploymentSupport from "@/pages/support/employment";
+import FinancesSupport from "@/pages/support/finances";
+import CourtLogisticsSupport from "@/pages/support/court-logistics";
+import MentalHealthSupport from "@/pages/support/mental-health";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -135,6 +140,11 @@ function Router() {
       <Route path="/chat" component={Chat} />
       <Route path="/document-library" component={DocumentLibrary} />
       <Route path="/resources" component={Resources} />
+      <Route path="/support" component={SupportHub} />
+      <Route path="/support/employment" component={EmploymentSupport} />
+      <Route path="/support/finances" component={FinancesSupport} />
+      <Route path="/support/court-logistics" component={CourtLogisticsSupport} />
+      <Route path="/support/mental-health" component={MentalHealthSupport} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
       <Route path="/attorney" component={AttorneyPortal} />
       <Route path="/attorney/verify" component={AttorneyVerify} />

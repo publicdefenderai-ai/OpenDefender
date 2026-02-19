@@ -26,7 +26,14 @@ import {
   ThumbsDown,
   BookOpen,
   Bookmark,
-  Lock
+  Lock,
+  Briefcase,
+  DollarSign,
+  Heart,
+  Home,
+  Car,
+  Baby,
+  LifeBuoy
 } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -145,6 +152,7 @@ interface EnhancedGuidanceData {
     caseStage: string;
     custodyStatus: string;
     hasAttorney: boolean;
+    selectedConcerns?: string[];
   };
 }
 
@@ -1377,6 +1385,83 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </Collapsible>
         )}
       </div>
+
+      {/* Concern-Based Support Resources */}
+      {guidance.caseData?.selectedConcerns && guidance.caseData.selectedConcerns.length > 0 && (
+        <Card className="border-rose-200 dark:border-rose-800">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <LifeBuoy className="h-5 w-5 text-rose-600" />
+              {t('legalGuidance.dashboard.supportResources.title', 'Support Resources For You')}
+            </CardTitle>
+            <p className="text-sm text-muted-foreground">
+              {t('legalGuidance.dashboard.supportResources.subtitle', 'Based on what you told us you\'re worried about, here are resources that may help:')}
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {guidance.caseData.selectedConcerns.map((concernId) => {
+                const concernConfig: Record<string, { icon: React.ElementType; color: string; href: string; available: boolean }> = {
+                  employment: { icon: Briefcase, color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400', href: '/support/employment', available: true },
+                  finances: { icon: DollarSign, color: 'bg-green-500/10 text-green-600 dark:text-green-400', href: '/support/finances', available: true },
+                  courtLogistics: { icon: Calendar, color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400', href: '/support/court-logistics', available: true },
+                  mentalHealth: { icon: Heart, color: 'bg-rose-500/10 text-rose-600 dark:text-rose-400', href: '/support/mental-health', available: true },
+                  housing: { icon: Home, color: 'bg-amber-500/10 text-amber-600 dark:text-amber-400', href: '/support/housing', available: false },
+                  transportation: { icon: Car, color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400', href: '/support/transportation', available: false },
+                  childcare: { icon: Baby, color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400', href: '/support/childcare', available: false },
+                  familyCare: { icon: Users, color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400', href: '/support/family-care', available: false },
+                  immigration: { icon: Shield, color: 'bg-teal-500/10 text-teal-600 dark:text-teal-400', href: '/immigration-guidance', available: true },
+                  reputation: { icon: Scale, color: 'bg-slate-500/10 text-slate-600 dark:text-slate-400', href: '/support/reputation', available: false },
+                };
+
+                const config = concernConfig[concernId];
+                if (!config) return null;
+
+                const Icon = config.icon;
+                const label = t(`legalGuidance.qaFlow.concernsStep.concernsCategories.${concernId}.label`);
+                const description = t(`legalGuidance.qaFlow.concernsStep.concernsCategories.${concernId}.description`);
+
+                if (config.available) {
+                  return (
+                    <Link key={concernId} href={config.href}>
+                      <div className="group flex items-start gap-3 p-3 rounded-lg border hover:border-primary/40 hover:bg-muted/50 transition-all cursor-pointer">
+                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${config.color} flex-shrink-0 transition-transform group-hover:scale-105`}>
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-sm group-hover:text-primary transition-colors">{label}</div>
+                          <div className="text-xs text-muted-foreground truncate">{description}</div>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                      </div>
+                    </Link>
+                  );
+                }
+
+                return (
+                  <div key={concernId} className="flex items-start gap-3 p-3 rounded-lg border opacity-60">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${config.color} flex-shrink-0`}>
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium text-sm">{label}</div>
+                      <div className="text-xs text-muted-foreground">{t('support.comingSoon', 'Coming soon')}</div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-4 pt-3 border-t">
+              <Link href="/support">
+                <Button variant="outline" size="sm" className="w-full sm:w-auto group">
+                  {t('legalGuidance.dashboard.supportResources.viewAll', 'View All Support Resources')}
+                  <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Privacy Notice */}
       <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
