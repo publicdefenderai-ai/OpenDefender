@@ -867,6 +867,21 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
   return (
     <div className="space-y-6">
       <div>
+        <Label htmlFor="incidentDescription">
+          {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
+        </Label>
+        <Textarea
+          id="incidentDescription"
+          value={formData.incidentDescription || ""}
+          onChange={(e) => updateFormData("incidentDescription", e.target.value)}
+          onFocus={onTextareaFocus}
+          placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
+          rows={4}
+          className="mt-2"
+        />
+      </div>
+
+      <div className="pt-4 border-t">
         <h3 className="text-lg font-semibold mb-2">
           {t('legalGuidance.qaFlow.additionalDetails.concernsLabel')}
         </h3>
@@ -910,22 +925,6 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         <p className="text-xs text-muted-foreground mt-4 text-center">
           {t('legalGuidance.qaFlow.additionalDetails.noConcernsSelected')}
         </p>
-      </div>
-
-      {/* Keep the incident description textarea but with the privilege warning */}
-      <div className="pt-4 border-t">
-        <Label htmlFor="incidentDescription">
-          {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
-        </Label>
-        <Textarea
-          id="incidentDescription"
-          value={formData.incidentDescription || ""}
-          onChange={(e) => updateFormData("incidentDescription", e.target.value)}
-          onFocus={onTextareaFocus}
-          placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
-          rows={4}
-          className="mt-2"
-        />
       </div>
 
       {/* CAPTCHA if required */}

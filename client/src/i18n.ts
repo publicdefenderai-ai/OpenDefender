@@ -858,7 +858,8 @@ i18n
                   }
                 },
                 "noConcernsSelected": "You can skip this if none apply",
-                "back": "Back"
+                "back": "Back",
+                "submit": "Get My Legal Guidance"
               },
               "privilegeWarning": {
                 "title": "Before You Share Details",
@@ -4667,7 +4668,8 @@ i18n
                   }
                 },
                 "noConcernsSelected": "Puede omitir esto si ninguna aplica",
-                "back": "Volver"
+                "back": "Volver",
+                "submit": "Obtener Mi Orientación Legal"
               },
               "privilegeWarning": {
                 "title": "Antes de Compartir Detalles",
@@ -8073,9 +8075,53 @@ i18n
                 "description": "你提供的细节越多，我们的AI就能为你的具体情况提供越好的指导。所有字段都是可选的——你可以跳过不想回答的问题。",
                 "incidentLabel": "发生了什么？用你自己的话描述事件经过",
                 "incidentPlaceholder": "例如：我下班开车回家时被警察拦下了。他们说我在左右摇晃，但我只是为了避开一个坑洞才转了一下方向...",
-                "concernsLabel": "你最担心什么？有什么具体问题吗？",
-                "concernsPlaceholder": "例如：我担心会丢掉工作。我有孩子，请不起律师。我什么时候要上法庭？",
-                "back": "返回"
+                "concernsLabel": "你最担心什么？",
+                "concernsSubtitle": "选择所有适用的选项。这有助于我们提供相关资源。",
+                "concernsCategories": {
+                  "employment": {
+                    "label": "工作影响",
+                    "description": "失业、工作安排、背景调查"
+                  },
+                  "childcare": {
+                    "label": "儿童照顾",
+                    "description": "监护权问题、儿童福利介入"
+                  },
+                  "familyCare": {
+                    "label": "家庭照顾",
+                    "description": "照顾年迈父母或家属"
+                  },
+                  "housing": {
+                    "label": "住房",
+                    "description": "被驱逐风险、租约问题、住房稳定"
+                  },
+                  "finances": {
+                    "label": "财务",
+                    "description": "法律费用、罚款、收入损失"
+                  },
+                  "transportation": {
+                    "label": "交通",
+                    "description": "驾照暂停、上班或上庭出行"
+                  },
+                  "mentalHealth": {
+                    "label": "心理健康",
+                    "description": "压力、焦虑、需要心理咨询"
+                  },
+                  "immigration": {
+                    "label": "移民身份",
+                    "description": "签证、绿卡、驱逐出境担忧"
+                  },
+                  "reputation": {
+                    "label": "名誉",
+                    "description": "公开记录、社会或职业影响"
+                  },
+                  "courtLogistics": {
+                    "label": "法庭事务",
+                    "description": "何时何地出庭、需要准备什么"
+                  }
+                },
+                "noConcernsSelected": "如果没有适用的选项可以跳过",
+                "back": "返回",
+                "submit": "获取我的法律指导"
               },
               "privilegeWarning": {
                 "title": "分享信息之前请注意",
