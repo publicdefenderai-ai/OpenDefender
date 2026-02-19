@@ -49,8 +49,8 @@ function CategoryCard({ category }: { category: SupportCategoryProps }) {
   const { t } = useTranslation();
   const Icon = category.icon;
 
-  const label = t(`legalGuidance.qaFlow.concernsStep.concernsCategories.${category.id}.label`);
-  const description = t(`legalGuidance.qaFlow.concernsStep.concernsCategories.${category.id}.description`);
+  const label = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${category.id}.label`);
+  const description = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${category.id}.description`);
 
   const content = (
     <Card className={`group h-full border-2 border-transparent transition-all duration-200 ${
@@ -62,10 +62,10 @@ function CategoryCard({ category }: { category: SupportCategoryProps }) {
         <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${category.color} transition-transform duration-300 ${category.available ? "group-hover:scale-110" : ""}`}>
           <Icon className="h-6 w-6" />
         </div>
-        <h3 className={`text-lg font-semibold mb-2 ${category.available ? "group-hover:text-primary" : ""} transition-colors`}>
+        <h3 className={`text-lg font-semibold mb-2 text-foreground ${category.available ? "group-hover:text-primary" : ""} transition-colors`}>
           {label}
         </h3>
-        <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+        <p className="text-sm leading-relaxed flex-1 text-slate-600 dark:text-slate-300">
           {description}
         </p>
         {category.available ? (
@@ -97,28 +97,23 @@ export default function SupportHub() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
-          <div className="container mx-auto px-4 relative">
-            <ScrollReveal>
-              <div className="max-w-3xl mx-auto text-center">
-                <Link href="/">
-                  <Button variant="ghost" size="sm" className="mb-6">
-                    <ChevronLeft className="h-4 w-4 mr-1" />
-                    {t('common.backToHome')}
-                  </Button>
-                </Link>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                  {t('support.title')}
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground mb-4">
-                  {t('support.subtitle')}
-                </p>
-                <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-                  {t('support.description')}
-                </p>
-              </div>
-            </ScrollReveal>
+        <section className="vivid-header-alt py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+            <Link href="/">
+              <Button variant="ghost" size="sm" className="mb-6 text-white/80 hover:text-white hover:bg-white/10">
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                {t('common.backToHome')}
+              </Button>
+            </Link>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              {t('support.title')}
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 mb-4">
+              {t('support.subtitle')}
+            </p>
+            <p className="text-sm text-white/70 max-w-2xl mx-auto">
+              {t('support.description')}
+            </p>
           </div>
         </section>
 
