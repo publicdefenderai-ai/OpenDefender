@@ -103,8 +103,8 @@ app.use((req, res, next) => {
 
 // Privacy-safe logging middleware - excludes sensitive data from logs
 const SENSITIVE_PATHS = ['/api/legal-guidance', '/api/guidance', '/api/chat', '/api/legal-case', '/api/session'];
-const SENSITIVE_FIELDS = ['incidentDescription', 'policeStatement', 'evidenceNotes', 'priorConvictions', 
-  'employmentStatus', 'familySituation', 'concernsQuestions', 'arrestLocation', 'arrestDate',
+const SENSITIVE_FIELDS = ['incidentDescription', 'policeStatement', 'evidenceNotes', 'priorConvictions',
+  'employmentStatus', 'familySituation', 'arrestLocation', 'arrestDate',
   'guidance', 'response', 'content', 'message', 'details'];
 
 function sanitizeForLogging(obj: any): any {

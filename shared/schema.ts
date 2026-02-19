@@ -19,7 +19,7 @@ export const legalCases = pgTable("legal_cases", {
   hasAttorney: boolean("has_attorney"),
   consentGiven: boolean("consent_given"),
   incidentDescription: text("incident_description"),
-  concernsQuestions: text("concerns_questions"),
+  selectedConcerns: text("selected_concerns").array(),
   guidance: jsonb("guidance"),
   createdAt: timestamp("created_at").defaultNow(),
   expiresAt: timestamp("expires_at").notNull(),

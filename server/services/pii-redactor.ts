@@ -57,7 +57,7 @@ interface CaseDetails {
   priorConvictions?: string;
   employmentStatus?: string;
   familySituation?: string;
-  concernsQuestions?: string;
+  selectedConcerns?: string[];
   language?: string;
 }
 
@@ -339,7 +339,7 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
     priorConvictions: redactField(caseDetails.priorConvictions),
     employmentStatus: redactField(caseDetails.employmentStatus),
     familySituation: redactField(caseDetails.familySituation),
-    concernsQuestions: redactField(caseDetails.concernsQuestions),
+    selectedConcerns: caseDetails.selectedConcerns, // No PII in category IDs, pass through
   };
   
   const total = Object.values(allStats).reduce((sum, count) => sum + (count || 0), 0);

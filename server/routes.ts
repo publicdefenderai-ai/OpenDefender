@@ -1881,7 +1881,7 @@ async function generateLegalGuidance(caseData: any) {
   // Try Claude AI first if API key is available
   const useAI = !!process.env.ANTHROPIC_API_KEY;
   
-  if (useAI && (caseData.incidentDescription || caseData.concernsQuestions)) {
+  if (useAI && (caseData.incidentDescription || (caseData.selectedConcerns && caseData.selectedConcerns.length > 0))) {
     try {
       devLog('guidance', 'Generating AI-powered guidance with Claude...');
       const claudeGuidance = await generateClaudeGuidance(caseData);

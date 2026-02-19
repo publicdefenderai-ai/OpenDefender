@@ -30,6 +30,7 @@ export interface CaseInfo {
   hasAttorney?: boolean;
   incidentDescription?: string;
   concerns?: string;
+  selectedConcerns?: string[];
   isEmergency?: boolean;
 }
 

@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
@@ -42,7 +42,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     hasAttorney: false,
     consentGiven: false,
     incidentDescription: "",
-    concernsQuestions: "",
+    selectedConcerns: [] as string[],
   });
 
   const steps = [
@@ -91,7 +91,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     setPrivilegeWarningAcknowledged(true);
     setShowPrivilegeWarning(false);
     updateFormData("incidentDescription", "");
-    updateFormData("concernsQuestions", "");
+    updateFormData("selectedConcerns", []);
     onComplete({ ...formData, captchaToken });
   };
 
@@ -842,72 +842,109 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
 
 function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
-  const captchaNeeded = captchaRequired && !captchaToken;
+
+  const concernsCategories = [
+    { id: 'employment', icon: Briefcase },
+    { id: 'childcare', icon: Users },
+    { id: 'familyCare', icon: Users },
+    { id: 'housing', icon: Home },
+    { id: 'finances', icon: DollarSign },
+    { id: 'transportation', icon: Car },
+    { id: 'mentalHealth', icon: Heart },
+    { id: 'immigration', icon: Globe },
+    { id: 'reputation', icon: Shield },
+    { id: 'courtLogistics', icon: Scale },
+  ];
+
+  const handleConcernToggle = (concernId: string) => {
+    const current = formData.selectedConcerns || [];
+    const updated = current.includes(concernId)
+      ? current.filter((id: string) => id !== concernId)
+      : [...current, concernId];
+    updateFormData("selectedConcerns", updated);
+  };
 
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-          <MessageSquare className="h-5 w-5" />
-          {t('legalGuidance.qaFlow.additionalDetails.title')}
+        <h3 className="text-lg font-semibold mb-2">
+          {t('legalGuidance.qaFlow.additionalDetails.concernsLabel')}
         </h3>
         <p className="text-sm text-muted-foreground mb-4">
-          {t('legalGuidance.qaFlow.additionalDetails.description')}
+          {t('legalGuidance.qaFlow.additionalDetails.concernsSubtitle')}
         </p>
 
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="incidentDescription">
-              {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
-            </Label>
-            <Textarea
-              id="incidentDescription"
-              value={formData.incidentDescription || ""}
-              onChange={(e) => updateFormData("incidentDescription", e.target.value)}
-              onFocus={onTextareaFocus}
-              placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
-              rows={4}
-              className="mt-2"
-              data-testid="textarea-incident-description"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="concernsQuestions">
-              {t('legalGuidance.qaFlow.additionalDetails.concernsLabel')}
-            </Label>
-            <Textarea
-              id="concernsQuestions"
-              value={formData.concernsQuestions || ""}
-              onChange={(e) => updateFormData("concernsQuestions", e.target.value)}
-              onFocus={onTextareaFocus}
-              placeholder={t('legalGuidance.qaFlow.additionalDetails.concernsPlaceholder')}
-              rows={4}
-              className="mt-2"
-              data-testid="textarea-concerns-questions"
-            />
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {concernsCategories.map(({ id, icon: Icon }) => {
+            const isSelected = (formData.selectedConcerns || []).includes(id);
+            return (
+              <div
+                key={id}
+                onClick={() => handleConcernToggle(id)}
+                className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all ${
+                  isSelected
+                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/30'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                }`}
+              >
+                <Checkbox
+                  checked={isSelected}
+                  className="mt-0.5 pointer-events-none"
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <Icon className="h-4 w-4 text-muted-foreground" />
+                    <span className="font-medium text-sm">
+                      {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.label`)}
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.description`)}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
+
+        <p className="text-xs text-muted-foreground mt-4 text-center">
+          {t('legalGuidance.qaFlow.additionalDetails.noConcernsSelected')}
+        </p>
       </div>
 
-      {/* CAPTCHA verification */}
-      <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
+      {/* Keep the incident description textarea but with the privilege warning */}
+      <div className="pt-4 border-t">
+        <Label htmlFor="incidentDescription">
+          {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
+        </Label>
+        <Textarea
+          id="incidentDescription"
+          value={formData.incidentDescription || ""}
+          onChange={(e) => updateFormData("incidentDescription", e.target.value)}
+          onFocus={onTextareaFocus}
+          placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
+          rows={4}
+          className="mt-2"
+        />
+      </div>
+
+      {/* CAPTCHA if required */}
+      {captchaRequired && (
+        <div className="flex justify-center">
+          <TurnstileCaptcha onVerify={setCaptchaToken} />
+        </div>
+      )}
 
       <div className="flex space-x-4">
-        <Button
-          variant="outline"
-          onClick={onPrev}
-          data-testid="button-prev-additional"
-        >
+        <Button variant="outline" onClick={onPrev}>
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.additionalDetails.back')}
         </Button>
         <Button
           onClick={onNext}
-          disabled={captchaNeeded}
-          className="flex-1 bg-green-600 text-white font-bold hover:bg-green-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
-          data-testid="button-generate-guidance"
+          disabled={captchaRequired && !captchaToken}
+          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
         >
-          {t('legalGuidance.qaFlow.status.submitButton')} <ArrowRight className="ml-2 h-4 w-4" />
+          {t('legalGuidance.qaFlow.additionalDetails.submit')} <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>

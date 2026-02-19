@@ -77,7 +77,7 @@ interface CaseDetails {
   priorConvictions?: string;
   employmentStatus?: string;
   familySituation?: string;
-  concernsQuestions?: string;
+  selectedConcerns?: string[];
   language?: string;
 }
 
@@ -269,8 +269,9 @@ BASIC CASE INFORMATION:
     prompt += `\n\nFamily Situation: ${sanitizeInput(caseDetails.familySituation)}`;
   }
 
-  if (caseDetails.concernsQuestions) {
-    prompt += `\n\nSPECIFIC CONCERNS/QUESTIONS:\n${sanitizeInput(caseDetails.concernsQuestions)}`;
+  if (caseDetails.selectedConcerns && caseDetails.selectedConcerns.length > 0) {
+    const concernsList = caseDetails.selectedConcerns.join(', ');
+    prompt += `\n\nSPECIFIC CONCERNS: The person is particularly worried about: ${concernsList}. Please address these specific concerns in your guidance and recommend relevant resources.`;
   }
 
   prompt += `\n\nProvide comprehensive guidance tailored to these specific facts. Focus on:
@@ -309,7 +310,7 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     priorConvictions: caseDetails.priorConvictions,
     employmentStatus: caseDetails.employmentStatus,
     familySituation: caseDetails.familySituation,
-    concernsQuestions: caseDetails.concernsQuestions,
+    selectedConcerns: caseDetails.selectedConcerns,
     language: caseDetails.language,
   }));
   return hash.digest('hex');

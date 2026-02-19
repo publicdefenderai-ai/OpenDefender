@@ -52,6 +52,19 @@ const US_STATES: Record<string, string> = {
   DC: "District of Columbia"
 };
 
+const concernsCategories = [
+  { id: 'employment', labelKey: 'chat.concerns.employment' },
+  { id: 'childcare', labelKey: 'chat.concerns.childcare' },
+  { id: 'familyCare', labelKey: 'chat.concerns.familyCare' },
+  { id: 'housing', labelKey: 'chat.concerns.housing' },
+  { id: 'finances', labelKey: 'chat.concerns.finances' },
+  { id: 'transportation', labelKey: 'chat.concerns.transportation' },
+  { id: 'mentalHealth', labelKey: 'chat.concerns.mentalHealth' },
+  { id: 'immigration', labelKey: 'chat.concerns.immigration' },
+  { id: 'reputation', labelKey: 'chat.concerns.reputation' },
+  { id: 'courtLogistics', labelKey: 'chat.concerns.courtLogistics' },
+];
+
 const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; value: string; color: 'blue' | 'rose' | 'slate' | 'green' | 'purple' | 'amber' }> = {
   personalized_guidance: { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' },
   immigration: { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' },
@@ -81,6 +94,7 @@ export default function ChatPage() {
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
   const [showExportWarning, setShowExportWarning] = useState(false);
   const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
+  const [selectedConcerns, setSelectedConcerns] = useState<string[]>([]);
 
   const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
     state.messages,
@@ -146,19 +160,19 @@ export default function ChatPage() {
   useEffect(() => {
     const latestMsg = state.messages[state.messages.length - 1];
     const hasReplies = latestMsg?.quickReplies && latestMsg.quickReplies.length > 0;
-    const isFreeTextStep = state.currentStep === 'incident_description' || 
-                           state.currentStep === 'concerns_question' ||
+    const isFreeTextStep = state.currentStep === 'incident_description' ||
                            state.currentStep === 'pd_zip_search' ||
                            state.currentStep === 'legal_aid_zip_search' ||
-                           state.currentStep === 'follow_up' || 
+                           state.currentStep === 'follow_up' ||
                            state.currentStep === 'guidance_ready';
     const isWelcome = state.currentStep === 'welcome';
     const isGenerating = state.currentStep === 'generating_guidance';
     const isChargeSelection = state.currentStep === 'charge_selection';
     const isStateSelection = state.currentStep === 'state_selection';
-    
+    const isConcernsQuestion = state.currentStep === 'concerns_question';
+
     // If chat is stuck (no quick replies, can't use free text, not in special states)
-    if (state.messages.length > 0 && !hasReplies && !isFreeTextStep && !isWelcome && !isGenerating && !isChargeSelection && !isStateSelection) {
+    if (state.messages.length > 0 && !hasReplies && !isFreeTextStep && !isWelcome && !isGenerating && !isChargeSelection && !isStateSelection && !isConcernsQuestion) {
       // Show "What else can I help you with?" with 3 main journey options
       actions.addMessage({
         role: 'bot',
@@ -644,56 +658,76 @@ export default function ChatPage() {
     actions.setCurrentStep('court_stage');
   }, [actions, addBotMessageWithKey]);
 
+  const handleConcernToggle = useCallback((concernId: string) => {
+    setSelectedConcerns(prev =>
+      prev.includes(concernId)
+        ? prev.filter(id => id !== concernId)
+        : [...prev, concernId]
+    );
+  }, []);
+
+  const handleConcernsSubmit = useCallback(async () => {
+    // Display selected concerns as user message
+    const selectedLabels = selectedConcerns.map(id => {
+      const category = concernsCategories.find(c => c.id === id);
+      return category ? t(category.labelKey) : id;
+    });
+    actions.addMessage({ role: 'user', content: selectedLabels.join(', ') || t('chat.concerns.none', 'None selected') });
+    actions.updateCaseInfo({ selectedConcerns: [...selectedConcerns] });
+
+    setIsTyping(true);
+    actions.setIsGenerating(true);
+    actions.setCurrentStep('generating_guidance');
+    setStillWorkingShown(false);
+
+    try {
+      const response = await apiRequest('POST', '/api/legal-guidance', {
+        jurisdiction: state.caseInfo.state,
+        charges: state.caseInfo.charges,
+        caseStage: state.caseInfo.courtStage,
+        custodyStatus: state.caseInfo.custodyStatus,
+        hasAttorney: state.caseInfo.hasAttorney,
+        incidentDescription: state.caseInfo.incidentDescription,
+        selectedConcerns: selectedConcerns,
+        language: i18n.language,
+      });
+
+      const data = await response.json();
+
+      setIsTyping(false);
+      actions.setIsGenerating(false);
+      actions.setGuidanceData(data.guidance || data);
+      actions.markFlowCompleted('personalized_guidance');
+
+      addBotMessageWithKey('chat.messages.guidanceReady', [
+        { id: 'view-guidance', labelKey: 'chat.replies.viewGuidance', value: 'view_guidance', color: 'blue' as const },
+        { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
+      ]);
+
+      // Reset selected concerns for next time
+      setSelectedConcerns([]);
+
+    } catch (error) {
+      console.error('Guidance generation error:', error);
+      setIsTyping(false);
+      actions.setIsGenerating(false);
+
+      addBotMessageWithKey('chat.messages.error', [
+        { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
+      ]);
+    }
+  }, [selectedConcerns, state.caseInfo, actions, addBotMessageWithKey, t, i18n.language]);
+
   const handleFreeTextSubmit = useCallback(async (message: string) => {
     if (state.currentStep === 'incident_description') {
       actions.addMessage({ role: 'user', content: message });
       actions.updateCaseInfo({ incidentDescription: message });
-      
+
+      // Reset selected concerns when entering concerns step
+      setSelectedConcerns([]);
       addBotMessageWithKey('chat.messages.concernsQuestion');
       actions.setCurrentStep('concerns_question');
-      
-    } else if (state.currentStep === 'concerns_question') {
-      actions.addMessage({ role: 'user', content: message });
-      actions.updateCaseInfo({ concerns: message });
-      
-      setIsTyping(true);
-      actions.setIsGenerating(true);
-      actions.setCurrentStep('generating_guidance');
-      setStillWorkingShown(false);
 
-      try {
-        const response = await apiRequest('POST', '/api/legal-guidance', {
-          jurisdiction: state.caseInfo.state,
-          charges: state.caseInfo.charges,
-          caseStage: state.caseInfo.courtStage,
-          custodyStatus: state.caseInfo.custodyStatus,
-          hasAttorney: state.caseInfo.hasAttorney,
-          incidentDescription: state.caseInfo.incidentDescription,
-          concerns: message,
-          language: i18n.language,
-        });
-
-        const data = await response.json();
-        
-        setIsTyping(false);
-        actions.setIsGenerating(false);
-        actions.setGuidanceData(data.guidance || data);
-        actions.markFlowCompleted('personalized_guidance');
-        
-        addBotMessageWithKey('chat.messages.guidanceReady', [
-          { id: 'view-guidance', labelKey: 'chat.replies.viewGuidance', value: 'view_guidance', color: 'blue' as const },
-          { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
-        ]);
-        
-      } catch (error) {
-        console.error('Guidance generation error:', error);
-        setIsTyping(false);
-        actions.setIsGenerating(false);
-        
-        addBotMessageWithKey('chat.messages.error', [
-          { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
-        ]);
-      }
     } else if (state.currentStep === 'pd_zip_search') {
       const zipCode = message.trim();
       if (!/^\d{5}$/.test(zipCode)) {
@@ -942,11 +976,10 @@ export default function ChatPage() {
     }
   }, [state.caseInfo, actions, addBotMessageWithKey, i18n.language]);
 
-  const canUseFreeText = state.currentStep === 'incident_description' || 
-                          state.currentStep === 'concerns_question' ||
+  const canUseFreeText = state.currentStep === 'incident_description' ||
                           state.currentStep === 'pd_zip_search' ||
                           state.currentStep === 'legal_aid_zip_search' ||
-                          state.currentStep === 'follow_up' || 
+                          state.currentStep === 'follow_up' ||
                           state.currentStep === 'guidance_ready';
 
   const latestMessage = state.messages[state.messages.length - 1];
@@ -1104,7 +1137,54 @@ export default function ChatPage() {
                   <StateSelector onSelect={handleStateSelect} />
                 </div>
               )}
-              
+
+              {state.currentStep === 'concerns_question' && (
+                <div className="ml-0 sm:ml-11 mt-3">
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {t('chat.concerns.selectPrompt', 'Tap all that apply, then Continue')}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {concernsCategories.map((category) => (
+                      <Button
+                        key={category.id}
+                        variant={selectedConcerns.includes(category.id) ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => handleConcernToggle(category.id)}
+                        className={`transition-all ${
+                          selectedConcerns.includes(category.id)
+                            ? 'bg-primary text-primary-foreground'
+                            : 'hover:bg-accent'
+                        }`}
+                      >
+                        {selectedConcerns.includes(category.id) && (
+                          <span className="mr-1">✓</span>
+                        )}
+                        {t(category.labelKey)}
+                      </Button>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Button
+                      onClick={handleConcernsSubmit}
+                      disabled={state.isGenerating}
+                      className="min-w-[120px]"
+                    >
+                      {t('chat.concerns.done', 'Continue')}
+                      {selectedConcerns.length > 0 && (
+                        <span className="ml-2 bg-primary-foreground text-primary rounded-full px-2 py-0.5 text-xs">
+                          {selectedConcerns.length}
+                        </span>
+                      )}
+                    </Button>
+                    {selectedConcerns.length > 0 && (
+                      <span className="text-sm text-muted-foreground">
+                        {selectedConcerns.length} {t('chat.concerns.selected', 'selected')}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {/* Scroll anchor - always at the bottom */}
               <div ref={messagesEndRef} />
             </div>
@@ -1120,10 +1200,8 @@ export default function ChatPage() {
                   ? t('chat.input.selectOption', 'Select an option above to continue')
                   : t('chat.input.answering', 'Complete the current step to continue')
                 }
-                placeholder={state.currentStep === 'incident_description' 
+                placeholder={state.currentStep === 'incident_description'
                   ? t('chat.input.descriptionPlaceholder', 'Describe what happened...')
-                  : state.currentStep === 'concerns_question'
-                  ? t('chat.input.concernsPlaceholder', 'What worries you most about your situation?')
                   : (state.currentStep === 'pd_zip_search' || state.currentStep === 'legal_aid_zip_search')
                   ? t('chat.input.zipPlaceholder', 'Enter your 5-digit ZIP code...')
                   : t('chat.input.placeholder', 'Ask a follow-up question...')

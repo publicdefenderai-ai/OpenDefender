@@ -457,8 +457,51 @@ i18n
                 "description": "The more details you provide, the better our AI can tailor guidance to your specific situation. All fields are optional - skip any you're not comfortable sharing.",
                 "incidentLabel": "What happened? Describe the incident in your own words",
                 "incidentPlaceholder": "Example: I was driving home from work when the police pulled me over. They said I was swerving but I had just swerved to avoid a pothole...",
-                "concernsLabel": "What are you most worried about? Any specific questions?",
-                "concernsPlaceholder": "Example: I'm worried about losing my job. I have kids and can't afford a lawyer. When do I have to go to court?",
+                "concernsLabel": "What are you most worried about?",
+                "concernsSubtitle": "Select all that apply. This helps us provide relevant resources.",
+                "concernsCategories": {
+                  "employment": {
+                    "label": "Employment Impact",
+                    "description": "Job loss, work schedule, background checks"
+                  },
+                  "childcare": {
+                    "label": "Childcare",
+                    "description": "Custody concerns, child welfare involvement"
+                  },
+                  "familyCare": {
+                    "label": "Family Care",
+                    "description": "Caring for elderly parents or dependents"
+                  },
+                  "housing": {
+                    "label": "Housing",
+                    "description": "Eviction risk, lease issues, housing stability"
+                  },
+                  "finances": {
+                    "label": "Finances",
+                    "description": "Legal costs, fines, lost income"
+                  },
+                  "transportation": {
+                    "label": "Transportation",
+                    "description": "License suspension, getting to work or court"
+                  },
+                  "mentalHealth": {
+                    "label": "Mental Health",
+                    "description": "Stress, anxiety, need for counseling"
+                  },
+                  "immigration": {
+                    "label": "Immigration Status",
+                    "description": "Visa, green card, deportation concerns"
+                  },
+                  "reputation": {
+                    "label": "Reputation",
+                    "description": "Public records, social or professional stigma"
+                  },
+                  "courtLogistics": {
+                    "label": "Court Logistics",
+                    "description": "When and where to appear, what to expect"
+                  }
+                },
+                "noConcernsSelected": "You can skip this if none apply",
                 "back": "Back"
               },
               "privilegeWarning": {
@@ -2963,6 +3006,22 @@ i18n
             "details": "Details",
             "detailsDesc": "Describe what happened for personalized guidance"
           },
+          "concerns": {
+            "employment": "Employment Impact",
+            "childcare": "Childcare",
+            "familyCare": "Family Care",
+            "housing": "Housing",
+            "finances": "Finances",
+            "transportation": "Transportation",
+            "mentalHealth": "Mental Health",
+            "immigration": "Immigration Status",
+            "reputation": "Reputation",
+            "courtLogistics": "Court Logistics",
+            "done": "Continue",
+            "selectPrompt": "Tap all that apply, then Continue",
+            "selected": "selected",
+            "none": "None selected"
+          },
           "messages": {
             "welcome": "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
             "emergencyAdviceFull": "🚨 **If you're being arrested or detained right now:**\n\n**✅ Stay Calm**\nDo not resist, run, or argue. Keep your hands visible. Resisting can lead to additional charges, even if the original arrest is later found to be unlawful.\n\n**🔇 Exercise Your Right to Remain Silent**\nSay clearly: \"I am exercising my right to remain silent.\"\nYou do NOT have to answer questions about where you're going, what you're doing, or where you live.\n\n**⚖️ Request an Attorney**\nSay: \"I want a lawyer.\" Police must stop questioning you once you ask for an attorney.\nIf you can't afford one, you can request a public defender at your first court appearance.\n\n**🚫 Do Not Consent to Searches**\nSay: \"I do not consent to any searches.\"\nPolice may search anyway, but stating this protects your rights for later.\n\n**📝 Remember These Details**\nNote the officers' badge numbers, patrol car numbers, and any witness information. This can help your case later.\n\n---\n**What would you like to do next?**",
@@ -2976,7 +3035,7 @@ i18n
             "descriptionPromptWithWarning": "Thanks for that information.\n\n⚠️ **Before You Share Details**\n\nWe would like you to share specifics about your case to receive personalized guidance. Unlike talking to a lawyer, what you type here is not private and could be used against you if you're ever asked about it in court.\n\nWe recommend speaking with a lawyer first. This step is optional—skip it to still receive general guidance.",
             "privilegeWarning": "⚠️ **Before You Share Details**\n\nUnlike talking to a lawyer, what you type here is not private and could be used against you if you're ever asked about it in court.\n\nWe recommend speaking with a lawyer first. This step is optional—skip it to still receive general guidance.",
             "privilegeAcknowledged": "Understood. Go ahead and describe what happened—take your time.",
-            "concernsQuestion": "What are you most worried about? Any specific questions?\n\n(For example: losing your job, affording a lawyer, when you have to go to court)",
+            "concernsQuestion": "What are you most worried about? Select all that apply:",
             "generating": "Thank you. I'm now reviewing your situation and preparing your personalized guidance. This may take a moment...",
             "stillWorking": "Still working on your guidance... Complex legal situations require careful analysis. Thank you for your patience.",
             "guidanceReady": "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records.",
@@ -3845,8 +3904,51 @@ i18n
                 "description": "Entre más detalles proporcione, mejor podrá nuestra IA adaptar la orientación a su situación específica. Todos los campos son opcionales - omita cualquiera que no se sienta cómodo compartiendo.",
                 "incidentLabel": "¿Qué pasó? Describa el incidente en sus propias palabras",
                 "incidentPlaceholder": "Ejemplo: Iba manejando a casa del trabajo cuando la policía me detuvo. Dijeron que estaba zigzagueando pero acababa de esquivar un bache...",
-                "concernsLabel": "¿Qué es lo que más le preocupa? ¿Alguna pregunta específica?",
-                "concernsPlaceholder": "Ejemplo: Me preocupa perder mi trabajo. Tengo hijos y no puedo pagar un abogado. ¿Cuándo tengo que ir a la corte?",
+                "concernsLabel": "¿Qué es lo que más le preocupa?",
+                "concernsSubtitle": "Seleccione todas las que apliquen. Esto nos ayuda a proporcionar recursos relevantes.",
+                "concernsCategories": {
+                  "employment": {
+                    "label": "Impacto Laboral",
+                    "description": "Pérdida de trabajo, horario laboral, verificación de antecedentes"
+                  },
+                  "childcare": {
+                    "label": "Cuidado de Niños",
+                    "description": "Preocupaciones de custodia, participación de bienestar infantil"
+                  },
+                  "familyCare": {
+                    "label": "Cuidado Familiar",
+                    "description": "Cuidado de padres ancianos o dependientes"
+                  },
+                  "housing": {
+                    "label": "Vivienda",
+                    "description": "Riesgo de desalojo, problemas de arrendamiento"
+                  },
+                  "finances": {
+                    "label": "Finanzas",
+                    "description": "Costos legales, multas, pérdida de ingresos"
+                  },
+                  "transportation": {
+                    "label": "Transporte",
+                    "description": "Suspensión de licencia, llegar al trabajo o corte"
+                  },
+                  "mentalHealth": {
+                    "label": "Salud Mental",
+                    "description": "Estrés, ansiedad, necesidad de consejería"
+                  },
+                  "immigration": {
+                    "label": "Estatus Migratorio",
+                    "description": "Visa, tarjeta verde, preocupaciones de deportación"
+                  },
+                  "reputation": {
+                    "label": "Reputación",
+                    "description": "Registros públicos, estigma social o profesional"
+                  },
+                  "courtLogistics": {
+                    "label": "Logística de la Corte",
+                    "description": "Cuándo y dónde presentarse, qué esperar"
+                  }
+                },
+                "noConcernsSelected": "Puede omitir esto si ninguna aplica",
                 "back": "Volver"
               },
               "privilegeWarning": {
@@ -6351,6 +6453,22 @@ i18n
             "details": "Detalles",
             "detailsDesc": "Describa lo que pasó para orientación personalizada"
           },
+          "concerns": {
+            "employment": "Impacto Laboral",
+            "childcare": "Cuidado de Niños",
+            "familyCare": "Cuidado Familiar",
+            "housing": "Vivienda",
+            "finances": "Finanzas",
+            "transportation": "Transporte",
+            "mentalHealth": "Salud Mental",
+            "immigration": "Estatus Migratorio",
+            "reputation": "Reputación",
+            "courtLogistics": "Logística del Tribunal",
+            "done": "Continuar",
+            "selectPrompt": "Toque todas las que apliquen, luego Continuar",
+            "selected": "seleccionadas",
+            "none": "Ninguna seleccionada"
+          },
           "messages": {
             "welcome": "¡Hola! Estoy aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?",
             "emergencyAdviceFull": "🚨 **Si está siendo arrestado o detenido ahora mismo:**\n\n**✅ Mantenga la Calma**\nNo resista, corra ni discuta. Mantenga las manos visibles. Resistirse puede resultar en cargos adicionales, incluso si el arresto original luego se considera ilegal.\n\n**🔇 Ejerza su Derecho a Permanecer en Silencio**\nDiga claramente: \"Estoy ejerciendo mi derecho a permanecer en silencio.\"\nNO tiene que responder preguntas sobre adónde va, qué está haciendo o dónde vive.\n\n**⚖️ Solicite un Abogado**\nDiga: \"Quiero un abogado.\" La policía debe dejar de interrogarlo una vez que pida un abogado.\nSi no puede pagar uno, puede solicitar un defensor público en su primera comparecencia ante el tribunal.\n\n**🚫 No Consienta Registros**\nDiga: \"No consiento ningún registro.\"\nLa policía puede registrar de todos modos, pero decir esto protege sus derechos para después.\n\n**📝 Recuerde Estos Detalles**\nAnote los números de placa de los oficiales, números de patrulla y cualquier información de testigos. Esto puede ayudar su caso después.\n\n---\n**¿Qué le gustaría hacer ahora?**",
@@ -6364,7 +6482,7 @@ i18n
             "descriptionPromptWithWarning": "Gracias por esa información.\n\n⚠️ **Antes de Compartir Detalles**\n\nNos gustaría que comparta detalles específicos sobre su caso para recibir orientación personalizada. A diferencia de hablar con un abogado, lo que escriba aquí no es privado y podría usarse en su contra si alguna vez se lo preguntan en la corte.\n\nRecomendamos hablar primero con un abogado. Este paso es opcional—omítalo para recibir orientación general.",
             "privilegeWarning": "⚠️ **Antes de Compartir Detalles**\n\nA diferencia de hablar con un abogado, lo que escriba aquí no es privado y podría usarse en su contra si alguna vez se lo preguntan en la corte.\n\nRecomendamos hablar primero con un abogado. Este paso es opcional—omítalo para recibir orientación general.",
             "privilegeAcknowledged": "Entendido. Adelante, describa lo que pasó—tómese su tiempo.",
-            "concernsQuestion": "¿Qué es lo que más le preocupa? ¿Alguna pregunta específica?\n\n(Por ejemplo: perder su trabajo, pagar un abogado, cuándo tiene que ir a la corte)",
+            "concernsQuestion": "¿Qué es lo que más le preocupa? Seleccione todas las que apliquen:",
             "generating": "Gracias. Ahora estoy revisando su situación y preparando su orientación personalizada. Esto puede tomar un momento...",
             "stillWorking": "Todavía trabajando en su orientación... Las situaciones legales complejas requieren un análisis cuidadoso. Gracias por su paciencia.",
             "guidanceReady": "¡Su orientación legal está lista! He preparado un resumen de su situación, plazos importantes, sus derechos y próximos pasos recomendados.\n\nPuede exportar esto para guardarlo en sus registros.",
