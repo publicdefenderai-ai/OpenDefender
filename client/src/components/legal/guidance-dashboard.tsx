@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigationGuard } from "@/contexts/navigation-guard";
 import {
   AlertTriangle,
   Clock,
@@ -557,7 +558,7 @@ function YourChargesSection({
   );
 }
 
-function DocumentsSection({ caseStage }: { caseStage: string }) {
+function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; guardedNavigate: (href: string) => void }) {
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   
@@ -586,10 +587,10 @@ function DocumentsSection({ caseStage }: { caseStage: string }) {
       <CardContent className="pt-0">
         <div className="space-y-2">
           {documents.slice(0, isExpanded ? undefined : 4).map((doc: LegalDocument) => (
-            <Link
+            <button
               key={doc.id}
-              href={`/document-library#${doc.slug}`}
-              className="block"
+              onClick={() => guardedNavigate(`/document-library#${doc.slug}`)}
+              className="block w-full text-left"
             >
               <div 
                 className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors cursor-pointer"
@@ -610,7 +611,7 @@ function DocumentsSection({ caseStage }: { caseStage: string }) {
                   <ChevronRight className="h-4 w-4 text-muted-foreground" />
                 </div>
               </div>
-            </Link>
+            </button>
           ))}
         </div>
         
@@ -630,16 +631,17 @@ function DocumentsSection({ caseStage }: { caseStage: string }) {
           </Button>
         )}
         
-        <Link href="/document-library" className="block mt-4">
+        <div className="block mt-4">
           <Button 
             variant="outline" 
             className="w-full"
             data-testid="button-view-document-library"
+            onClick={() => guardedNavigate('/document-library')}
           >
             <BookOpen className="h-4 w-4 mr-2" />
             {t('documents.guidance.documentsSection.viewLibrary', 'View All Documents')}
           </Button>
-        </Link>
+        </div>
       </CardContent>
     </Card>
   );
@@ -647,9 +649,15 @@ function DocumentsSection({ caseStage }: { caseStage: string }) {
 
 export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport }: GuidanceDashboardProps) {
   const { t, i18n } = useTranslation();
+  const [, setLocation] = useLocation();
+  const { attemptNavigation } = useNavigationGuard();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showExportWarning, setShowExportWarning] = useState(false);
+
+  const guardedNavigate = useCallback((href: string) => {
+    attemptNavigation(() => setLocation(href));
+  }, [attemptNavigation, setLocation]);
 
   const toggleAction = (action: string) => {
     const newCompleted = new Set(completedActions);
@@ -791,11 +799,12 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   public defender
                 </button>
               ) : (
-                <Link href="/public-defender">
-                  <span className="underline hover:text-red-900 dark:hover:text-red-100 font-bold cursor-pointer">
-                    public defender
-                  </span>
-                </Link>
+                <button
+                  onClick={() => guardedNavigate('/public-defender')}
+                  className="underline hover:text-red-900 dark:hover:text-red-100 font-bold cursor-pointer"
+                >
+                  public defender
+                </button>
               )}{' '}
               immediately if you cannot afford attorney
             </div>
@@ -936,7 +945,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       )}
 
       {/* Documents You Should Have Section */}
-      <DocumentsSection caseStage={guidance.caseData.caseStage} />
+      <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
       {/* Urgent Deadlines */}
       {getUrgentDeadlines().length > 0 && (
@@ -1222,23 +1231,22 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   )}
 
                   {/* Court Self-Help Center */}
-                  <Link href="/court-locator">
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start h-auto py-4 px-4"
-                    >
-                      <div className="flex items-start gap-3 w-full">
-                        <Building className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                        <div className="flex-1 text-left">
-                          <div className="font-semibold text-base mb-1">Court Self-Help Center</div>
-                          <p className="text-sm text-muted-foreground">
-                            Find local courthouses and court information
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start h-auto py-4 px-4"
+                    onClick={() => guardedNavigate('/court-locator')}
+                  >
+                    <div className="flex items-start gap-3 w-full">
+                      <Building className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <div className="flex-1 text-left">
+                        <div className="font-semibold text-base mb-1">Court Self-Help Center</div>
+                        <p className="text-sm text-muted-foreground">
+                          Find local courthouses and court information
+                        </p>
                       </div>
-                    </Button>
-                  </Link>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    </div>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -1423,7 +1431,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
                 if (config.available) {
                   return (
-                    <Link key={concernId} href={config.href}>
+                    <button key={concernId} onClick={() => guardedNavigate(config.href)} className="w-full text-left">
                       <div className="group flex items-start gap-3 p-3 rounded-lg border hover:border-primary/40 hover:bg-muted/50 transition-all cursor-pointer">
                         <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${config.color} flex-shrink-0 transition-transform group-hover:scale-105`}>
                           <Icon className="h-5 w-5" />
@@ -1434,7 +1442,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                         </div>
                         <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                       </div>
-                    </Link>
+                    </button>
                   );
                 }
 
@@ -1452,12 +1460,10 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               })}
             </div>
             <div className="mt-4 pt-3 border-t">
-              <Link href="/support">
-                <Button variant="outline" size="sm" className="w-full sm:w-auto group">
-                  {t('legalGuidance.dashboard.supportResources.viewAll', 'View All Support Resources')}
-                  <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+              <Button variant="outline" size="sm" className="w-full sm:w-auto group" onClick={() => guardedNavigate('/support')}>
+                {t('legalGuidance.dashboard.supportResources.viewAll', 'View All Support Resources')}
+                <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
             </div>
           </CardContent>
         </Card>
