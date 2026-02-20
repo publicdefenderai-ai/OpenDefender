@@ -442,7 +442,7 @@ export default function DevelopmentRoadmap() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-4 md:mb-0">Development Progress</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-4 md:mb-0">{t('developmentRoadmap.hero.progressTitle')}</h2>
               
               <div className="flex flex-wrap gap-2">
                 <Button

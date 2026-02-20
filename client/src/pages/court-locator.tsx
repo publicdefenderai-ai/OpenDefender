@@ -353,15 +353,15 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
                 </Badge>
                 {court.county && (
                   <Badge variant="outline" className="text-xs">
-                    {court.county} County
+                    {t('courtLocator.courtCard.county', { county: court.county })}
                   </Badge>
                 )}
               </div>
             </div>
             <div className="text-right">
-              <div className="text-sm text-muted-foreground mb-1">Distance</div>
+              <div className="text-sm text-muted-foreground mb-1">{t('courtLocator.courtCard.distance')}</div>
               <div className="font-semibold text-blue-600">
-                {court.distance} mi
+                {court.distance} {t('courtLocator.courtCard.miles')}
               </div>
             </div>
           </div>
@@ -372,7 +372,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
             <div className="flex items-start gap-3">
               <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
-                <div className="text-sm text-muted-foreground">Address</div>
+                <div className="text-sm text-muted-foreground">{t('courtLocator.courtCard.address')}</div>
                 <div className="text-sm font-medium">{court.address}</div>
               </div>
             </div>

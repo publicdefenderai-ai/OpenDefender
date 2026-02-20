@@ -27,6 +27,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useToast } from "@/hooks/use-toast";
 import { Link } from "wouter";
 
 import { Header } from "@/components/layout/header";
@@ -153,6 +154,7 @@ function DiversionProgramCard({ program }: DiversionProgramCardProps) {
 export default function DiversionPrograms() {
   useScrollToTop();
   const { t } = useTranslation();
+  const { toast } = useToast();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [selectedProgramType, setSelectedProgramType] = useState("");
@@ -199,6 +201,11 @@ export default function DiversionPrograms() {
           if (latestQueryRef.current === currentQuery) {
             setExpandedSearchResult({ programs: searchDiversionPrograms(currentQuery) });
             setIsSearching(false);
+            toast({
+              title: t('diversionPrograms.search.extendedSearchFailed', 'Extended search unavailable'),
+              description: t('diversionPrograms.search.showingLocalResults', 'Showing local results instead. Try again later for expanded search.'),
+              variant: "default",
+            });
           }
         }
       } else {

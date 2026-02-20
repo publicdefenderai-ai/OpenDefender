@@ -225,7 +225,8 @@ i18n
             "save": "Save",
             "important": "Important",
             "privacyFirst": "Privacy First",
-            "backToHome": "Back to Home"
+            "backToHome": "Back to Home",
+            "skipToContent": "Skip to main content"
           },
           "support": {
             "title": "Support Resources",
@@ -2736,7 +2737,11 @@ i18n
               "hours": "Hours",
               "services": "Services",
               "directions": "Get Directions",
-              "milesAway": "{{distance}} mi away"
+              "milesAway": "{{distance}} mi away",
+              "distance": "Distance",
+              "address": "Address",
+              "county": "{{county}} County",
+              "miles": "mi"
             },
             "info": {
               "title": "Understanding Court Types",
@@ -2787,7 +2792,8 @@ i18n
               "title": "Development Roadmap",
               "subtitle": "Our Vision for the Future",
               "description": "Track our progress as we build the most comprehensive free legal assistance platform. This roadmap is transparent, data-driven, and focused on expanding access to justice.",
-              "openSourceNote": "This project is open-source (MIT License for code, CC0 for documentation) and built in public. We're committed to transparency in development and decision-making."
+              "openSourceNote": "This project is open-source (MIT License for code, CC0 for documentation) and built in public. We're committed to transparency in development and decision-making.",
+              "progressTitle": "Development Progress"
             },
             "mission": {
               "title": "Our Mission & Principles",
@@ -4037,7 +4043,8 @@ i18n
             "save": "Guardar",
             "important": "Importante",
             "privacyFirst": "Privacidad Primero",
-            "backToHome": "Volver al Inicio"
+            "backToHome": "Volver al Inicio",
+            "skipToContent": "Saltar al contenido principal"
           },
           "support": {
             "title": "Recursos de Apoyo",
@@ -6548,7 +6555,11 @@ i18n
               "hours": "Horario",
               "services": "Servicios",
               "directions": "Obtener Direcciones",
-              "milesAway": "{{distance}} mi de distancia"
+              "milesAway": "{{distance}} mi de distancia",
+              "distance": "Distancia",
+              "address": "Dirección",
+              "county": "Condado de {{county}}",
+              "miles": "mi"
             },
             "info": {
               "title": "Entendiendo Tipos de Tribunales",
@@ -6599,7 +6610,8 @@ i18n
               "title": "Hoja de Ruta de Desarrollo",
               "subtitle": "Nuestra Visión para el Futuro",
               "description": "Siga nuestro progreso mientras construimos la plataforma de asistencia legal gratuita más completa. Esta hoja de ruta es transparente, basada en datos y enfocada en expandir el acceso a la justicia.",
-              "openSourceNote": "Este proyecto es de código abierto (Licencia MIT para código, CC0 para documentación) y se construye en público. Estamos comprometidos con la transparencia en el desarrollo y la toma de decisiones."
+              "openSourceNote": "Este proyecto es de código abierto (Licencia MIT para código, CC0 para documentación) y se construye en público. Estamos comprometidos con la transparencia en el desarrollo y la toma de decisiones.",
+              "progressTitle": "Progreso de Desarrollo"
             },
             "mission": {
               "title": "Nuestra Misión y Principios",
@@ -7849,7 +7861,8 @@ i18n
             "next": "下一步",
             "save": "保存",
             "important": "重要",
-            "privacyFirst": "隐私优先"
+            "privacyFirst": "隐私优先",
+            "skipToContent": "跳转到主要内容"
           },
           "mockQA": {
             "sectionTitle": "练习问答",
@@ -9978,7 +9991,11 @@ i18n
               "hours": "办公时间",
               "services": "服务",
               "directions": "获取路线",
-              "milesAway": "{{distance}} 英里"
+              "milesAway": "{{distance}} 英里",
+              "distance": "距离",
+              "address": "地址",
+              "county": "{{county}}县",
+              "miles": "英里"
             },
             "info": {
               "title": "了解法院类型",
@@ -10029,7 +10046,8 @@ i18n
               "title": "开发路线图",
               "subtitle": "我们的未来愿景",
               "description": "跟踪我们构建最全面的免费法律援助平台的进展。这个路线图是透明的、数据驱动的，专注于扩大司法公正的可及性。",
-              "openSourceNote": "本项目是开源的（代码采用MIT许可证，文档采用CC0许可证），公开开发。我们致力于开发和决策过程中的透明性。"
+              "openSourceNote": "本项目是开源的（代码采用MIT许可证，文档采用CC0许可证），公开开发。我们致力于开发和决策过程中的透明性。",
+              "progressTitle": "开发进度"
             },
             "mission": {
               "title": "我们的使命与原则",
