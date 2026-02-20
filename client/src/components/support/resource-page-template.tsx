@@ -13,6 +13,11 @@ import {
   ArrowRight,
   Lightbulb,
   ChevronDown,
+  Landmark,
+  MapPin,
+  Monitor,
+  Map,
+  type LucideIcon,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -171,22 +176,25 @@ function ActionCard({ item, index, theme }: { item: ActionItem; index: number; t
 function ResourceCard({ resource, theme }: { resource: ExternalResource; theme: typeof categoryThemes[string] }) {
   const { t } = useTranslation();
 
-  const typeConfig: Record<string, { color: string; icon: string }> = {
-    national: { color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400", icon: "🏛️" },
-    state: { color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400", icon: "🗺️" },
-    local: { color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400", icon: "📍" },
-    online: { color: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400", icon: "💻" },
+  const typeConfig: Record<string, { color: string; badgeColor: string; IconComponent: LucideIcon }> = {
+    national: { color: "bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400", badgeColor: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400", IconComponent: Landmark },
+    state: { color: "bg-purple-50 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400", badgeColor: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400", IconComponent: Map },
+    local: { color: "bg-green-50 text-green-600 dark:bg-green-900/30 dark:text-green-400", badgeColor: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400", IconComponent: MapPin },
+    online: { color: "bg-cyan-50 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400", badgeColor: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400", IconComponent: Monitor },
   };
 
   const config = typeConfig[resource.type] || typeConfig.online;
+  const TypeIcon = config.IconComponent;
 
   return (
     <Card className="h-full hover:shadow-lg transition-all duration-300 group">
       <CardContent className="p-5 h-full flex flex-col">
         <div className="flex items-start justify-between gap-3 mb-3">
           <div className="flex items-start gap-3 min-w-0 flex-1">
-            <span className="text-xl flex-shrink-0 mt-0.5">{config.icon}</span>
-            <h4 className="font-semibold text-base text-foreground leading-snug">{resource.name}</h4>
+            <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${config.color}`}>
+              <TypeIcon className="h-[18px] w-[18px]" strokeWidth={1.75} />
+            </div>
+            <h4 className="font-semibold text-base text-foreground leading-snug mt-1">{resource.name}</h4>
           </div>
           <div className="flex gap-1.5 flex-shrink-0 flex-wrap justify-end">
             {resource.free && (
@@ -194,7 +202,7 @@ function ResourceCard({ resource, theme }: { resource: ExternalResource; theme: 
                 {t('support.free')}
               </Badge>
             )}
-            <Badge variant="secondary" className={`text-xs whitespace-nowrap ${config.color}`}>
+            <Badge variant="secondary" className={`text-xs whitespace-nowrap ${config.badgeColor}`}>
               {t(`support.resourceType.${resource.type}`)}
             </Badge>
           </div>

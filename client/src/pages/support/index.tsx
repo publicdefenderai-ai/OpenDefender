@@ -3,15 +3,15 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
   Briefcase,
-  DollarSign,
-  Calendar,
-  Heart,
+  Wallet,
+  Gavel,
+  HeartPulse,
   Home,
   Car,
   Baby,
   Users,
-  Shield,
-  Scale,
+  Globe2,
+  ShieldCheck,
   ArrowRight,
   ChevronLeft,
   Sparkles,
@@ -32,20 +32,19 @@ interface SupportCategoryProps {
   borderColor: string;
   href: string;
   available: boolean;
-  emoji: string;
 }
 
 const supportCategories: SupportCategoryProps[] = [
-  { id: "employment", icon: Briefcase, iconBg: "bg-blue-100 dark:bg-blue-900/40", iconText: "text-blue-600 dark:text-blue-400", borderColor: "border-l-blue-500", href: "/support/employment", available: true, emoji: "💼" },
-  { id: "finances", icon: DollarSign, iconBg: "bg-emerald-100 dark:bg-emerald-900/40", iconText: "text-emerald-600 dark:text-emerald-400", borderColor: "border-l-emerald-500", href: "/support/finances", available: true, emoji: "💰" },
-  { id: "courtLogistics", icon: Calendar, iconBg: "bg-purple-100 dark:bg-purple-900/40", iconText: "text-purple-600 dark:text-purple-400", borderColor: "border-l-purple-500", href: "/support/court-logistics", available: true, emoji: "⚖️" },
-  { id: "mentalHealth", icon: Heart, iconBg: "bg-rose-100 dark:bg-rose-900/40", iconText: "text-rose-600 dark:text-rose-400", borderColor: "border-l-rose-500", href: "/support/mental-health", available: true, emoji: "🧠" },
-  { id: "housing", icon: Home, iconBg: "bg-amber-100 dark:bg-amber-900/40", iconText: "text-amber-600 dark:text-amber-400", borderColor: "border-l-amber-500", href: "/support/housing", available: false, emoji: "🏠" },
-  { id: "transportation", icon: Car, iconBg: "bg-cyan-100 dark:bg-cyan-900/40", iconText: "text-cyan-600 dark:text-cyan-400", borderColor: "border-l-cyan-500", href: "/support/transportation", available: false, emoji: "🚗" },
-  { id: "childcare", icon: Baby, iconBg: "bg-pink-100 dark:bg-pink-900/40", iconText: "text-pink-600 dark:text-pink-400", borderColor: "border-l-pink-500", href: "/support/childcare", available: false, emoji: "👶" },
-  { id: "familyCare", icon: Users, iconBg: "bg-indigo-100 dark:bg-indigo-900/40", iconText: "text-indigo-600 dark:text-indigo-400", borderColor: "border-l-indigo-500", href: "/support/family-care", available: false, emoji: "👨‍👩‍👧" },
-  { id: "immigration", icon: Shield, iconBg: "bg-teal-100 dark:bg-teal-900/40", iconText: "text-teal-600 dark:text-teal-400", borderColor: "border-l-teal-500", href: "/immigration-guidance", available: true, emoji: "🌍" },
-  { id: "reputation", icon: Scale, iconBg: "bg-slate-100 dark:bg-slate-900/40", iconText: "text-slate-600 dark:text-slate-400", borderColor: "border-l-slate-500", href: "/support/reputation", available: false, emoji: "🔒" },
+  { id: "employment", icon: Briefcase, iconBg: "bg-blue-100 dark:bg-blue-900/40", iconText: "text-blue-600 dark:text-blue-400", borderColor: "border-l-blue-500", href: "/support/employment", available: true },
+  { id: "finances", icon: Wallet, iconBg: "bg-emerald-100 dark:bg-emerald-900/40", iconText: "text-emerald-600 dark:text-emerald-400", borderColor: "border-l-emerald-500", href: "/support/finances", available: true },
+  { id: "courtLogistics", icon: Gavel, iconBg: "bg-purple-100 dark:bg-purple-900/40", iconText: "text-purple-600 dark:text-purple-400", borderColor: "border-l-purple-500", href: "/support/court-logistics", available: true },
+  { id: "mentalHealth", icon: HeartPulse, iconBg: "bg-rose-100 dark:bg-rose-900/40", iconText: "text-rose-600 dark:text-rose-400", borderColor: "border-l-rose-500", href: "/support/mental-health", available: true },
+  { id: "housing", icon: Home, iconBg: "bg-amber-100 dark:bg-amber-900/40", iconText: "text-amber-600 dark:text-amber-400", borderColor: "border-l-amber-500", href: "/support/housing", available: false },
+  { id: "transportation", icon: Car, iconBg: "bg-cyan-100 dark:bg-cyan-900/40", iconText: "text-cyan-600 dark:text-cyan-400", borderColor: "border-l-cyan-500", href: "/support/transportation", available: false },
+  { id: "childcare", icon: Baby, iconBg: "bg-pink-100 dark:bg-pink-900/40", iconText: "text-pink-600 dark:text-pink-400", borderColor: "border-l-pink-500", href: "/support/childcare", available: false },
+  { id: "familyCare", icon: Users, iconBg: "bg-indigo-100 dark:bg-indigo-900/40", iconText: "text-indigo-600 dark:text-indigo-400", borderColor: "border-l-indigo-500", href: "/support/family-care", available: false },
+  { id: "immigration", icon: Globe2, iconBg: "bg-teal-100 dark:bg-teal-900/40", iconText: "text-teal-600 dark:text-teal-400", borderColor: "border-l-teal-500", href: "/immigration-guidance", available: true },
+  { id: "reputation", icon: ShieldCheck, iconBg: "bg-slate-100 dark:bg-slate-900/40", iconText: "text-slate-600 dark:text-slate-400", borderColor: "border-l-slate-500", href: "/support/reputation", available: false },
 ];
 
 function CategoryCard({ category, index }: { category: SupportCategoryProps; index: number }) {
@@ -69,16 +68,13 @@ function CategoryCard({ category, index }: { category: SupportCategoryProps; ind
       }`}>
         <CardContent className="p-5 h-full flex flex-col">
           <div className="flex items-start gap-4 mb-3">
-            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${category.iconBg} transition-transform duration-300 ${category.available ? "group-hover:scale-110" : ""}`}>
-              <Icon className={`h-6 w-6 ${category.iconText}`} />
+            <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${category.iconBg} transition-transform duration-300 ${category.available ? "group-hover:scale-110" : ""}`}>
+              <Icon className={`h-5 w-5 ${category.iconText}`} strokeWidth={1.75} />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-0.5">
-                <span className="text-lg" aria-hidden="true">{category.emoji}</span>
-                <h3 className={`text-lg font-bold text-foreground leading-snug ${category.available ? "group-hover:text-primary" : ""} transition-colors`}>
-                  {label}
-                </h3>
-              </div>
+              <h3 className={`text-lg font-bold text-foreground leading-snug ${category.available ? "group-hover:text-primary" : ""} transition-colors`}>
+                {label}
+              </h3>
               {!category.available && (
                 <Badge variant="secondary" className="text-xs mt-1">
                   {t('support.comingSoon')}
