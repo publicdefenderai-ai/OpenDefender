@@ -73,14 +73,16 @@ export function EmbeddableSearch({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder || (language === "es" ? "Buscar recursos legales..." : "Search legal resources...")}
+          aria-label={language === "es" ? "Buscar recursos legales" : "Search legal resources"}
           className={`w-full pl-10 pr-10 py-2 rounded-md border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-blue-500`}
         />
         {query && (
           <button
             onClick={() => setQuery("")}
             className={`absolute right-3 top-1/2 -translate-y-1/2 ${mutedClass} hover:${textClass}`}
+            aria-label={language === "es" ? "Borrar búsqueda" : "Clear search"}
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4" aria-hidden="true" />
           </button>
         )}
       </div>

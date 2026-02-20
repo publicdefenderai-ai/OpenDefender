@@ -74,6 +74,7 @@ export function GlossaryWidget({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={language === "es" ? "Buscar términos..." : "Search terms..."}
+            aria-label={language === "es" ? "Buscar términos legales" : "Search legal terms"}
             className={`w-full px-3 py-1.5 text-sm rounded border ${borderClass} ${bgClass} ${textClass} focus:outline-none focus:ring-2 focus:ring-blue-500`}
           />
         </div>

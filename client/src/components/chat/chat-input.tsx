@@ -95,8 +95,9 @@ export function ChatInput({
             disabled={disabled || !message.trim()}
             className="h-9 w-9 rounded-lg shrink-0"
             data-testid="button-send-message"
+            aria-label="Send message"
           >
-            <Send className="h-4 w-4" />
+            <Send className="h-4 w-4" aria-hidden="true" />
           </Button>
         </motion.div>
       </div>

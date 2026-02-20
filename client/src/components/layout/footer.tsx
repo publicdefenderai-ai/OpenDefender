@@ -14,7 +14,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-                <Scale className="h-5 w-5 text-white" />
+                <Scale className="h-5 w-5 text-white" aria-hidden="true" />
               </div>
               <span className="font-bold text-xl">Public Defender AI</span>
             </div>
@@ -104,7 +104,7 @@ export function Footer() {
       <div className="bg-slate-800/50 border-t border-slate-600">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-center gap-2 text-gray-300">
-            <Shield className="h-4 w-4 flex-shrink-0" />
+            <Shield className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
             <span className="text-sm">
               {t('footer.privacyNotice')}
             </span>

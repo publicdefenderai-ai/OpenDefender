@@ -451,6 +451,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   accept=".pdf,.docx,.txt,.png,.jpg,.jpeg,.webp"
                   onChange={handleFileSelect}
                   className="hidden"
+                  aria-label="Upload legal document for summarization"
                 />
 
                 {selectedFile ? (

@@ -92,12 +92,12 @@ export function Header() {
 
   return (
     <header className="bg-background shadow-sm border-b">
-      <nav className="max-w-7xl mx-auto px-4 py-4">
+      <nav className="max-w-7xl mx-auto px-4 py-4" aria-label="Main navigation">
         <div className="flex items-center justify-between">
           {isHomePage ? (
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 legal-blue rounded-lg flex items-center justify-center">
-                <Scale className="h-5 w-5 text-white" />
+                <Scale className="h-5 w-5 text-white" aria-hidden="true" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
