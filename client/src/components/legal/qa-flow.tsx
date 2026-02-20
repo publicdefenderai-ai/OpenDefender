@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
@@ -158,6 +158,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
               isFirst={currentStep === 0}
               isLast={currentStep === steps.length - 1}
               onTextareaFocus={handleTextareaFocus}
+              privilegeAcknowledged={privilegeWarningAcknowledged}
               captchaToken={captchaToken}
               setCaptchaToken={setCaptchaToken}
               captchaRequired={captchaRequired}
@@ -841,8 +842,21 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
   );
 }
 
-function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus, captchaToken, setCaptchaToken, captchaRequired }: any) {
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus, privilegeAcknowledged, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
+  const [concernsOpen, setConcernsOpen] = useState(false);
+  const concernsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!concernsOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (concernsRef.current && !concernsRef.current.contains(e.target as Node)) {
+        setConcernsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [concernsOpen]);
 
   const concernsCategories = [
     { id: 'employment', icon: Briefcase },
@@ -865,21 +879,44 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
     updateFormData("selectedConcerns", updated);
   };
 
+  const handleRemoveConcern = (concernId: string) => {
+    const current = formData.selectedConcerns || [];
+    updateFormData("selectedConcerns", current.filter((id: string) => id !== concernId));
+  };
+
+  const needsPrivilegeAck = !formData.hasAttorney && !privilegeAcknowledged;
+
+  const selectedConcerns = formData.selectedConcerns || [];
+  const unselectedConcerns = concernsCategories.filter(c => !selectedConcerns.includes(c.id));
+
   return (
     <div className="space-y-6">
       <div>
         <Label htmlFor="incidentDescription">
           {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
         </Label>
-        <Textarea
-          id="incidentDescription"
-          value={formData.incidentDescription || ""}
-          onChange={(e) => updateFormData("incidentDescription", e.target.value)}
-          onFocus={onTextareaFocus}
-          placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
-          rows={4}
-          className="mt-2"
-        />
+        <div className="relative mt-2">
+          {needsPrivilegeAck && (
+            <div
+              className="absolute inset-0 z-10 cursor-pointer rounded-md bg-muted/30"
+              onClick={onTextareaFocus}
+              onTouchEnd={(e) => { e.preventDefault(); onTextareaFocus(); }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onTextareaFocus(); }}
+              aria-label={t('legalGuidance.qaFlow.additionalDetails.tapToUnlock', 'Tap to review privacy notice before entering details')}
+            />
+          )}
+          <Textarea
+            id="incidentDescription"
+            value={formData.incidentDescription || ""}
+            onChange={(e) => updateFormData("incidentDescription", e.target.value)}
+            placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
+            rows={4}
+            disabled={needsPrivilegeAck}
+            className="placeholder:text-muted-foreground/40 placeholder:italic"
+          />
+        </div>
       </div>
 
       <div className="pt-4 border-t">
@@ -890,42 +927,85 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
           {t('legalGuidance.qaFlow.additionalDetails.concernsSubtitle')}
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {concernsCategories.map(({ id, icon: Icon }) => {
-            const isSelected = (formData.selectedConcerns || []).includes(id);
-            return (
-              <div
-                key={id}
-                onClick={() => handleConcernToggle(id)}
-                className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all ${
-                  isSelected
-                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/30'
-                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
-                }`}
-              >
-                <Checkbox
-                  checked={isSelected}
-                  className="mt-0.5 pointer-events-none"
-                />
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <Icon className="h-4 w-4 text-muted-foreground" />
-                    <span className="font-medium text-sm">
-                      {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.label`)}
-                    </span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.description`)}
-                  </p>
+        {selectedConcerns.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-3">
+            {selectedConcerns.map((id: string) => {
+              const cat = concernsCategories.find(c => c.id === id);
+              if (!cat) return null;
+              const Icon = cat.icon;
+              return (
+                <Badge
+                  key={id}
+                  variant="secondary"
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-sm bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300"
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                  {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.label`)}
+                  <button
+                    onClick={() => handleRemoveConcern(id)}
+                    className="ml-1 hover:text-red-500 transition-colors"
+                    aria-label={`Remove ${t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.label`)}`}
+                  >
+                    <X className="h-3.5 w-3.5" />
+                  </button>
+                </Badge>
+              );
+            })}
+          </div>
+        )}
+
+        <div className="relative" ref={concernsRef}>
+          <button
+            type="button"
+            onClick={() => setConcernsOpen(!concernsOpen)}
+            className="w-full flex items-center justify-between px-3 py-2.5 rounded-md border border-input bg-background text-sm hover:bg-muted/50 transition-colors"
+          >
+            <span className="flex items-center gap-2 text-muted-foreground">
+              <Plus className="h-4 w-4" />
+              {selectedConcerns.length === 0
+                ? t('legalGuidance.qaFlow.additionalDetails.selectConcerns', 'Select concerns...')
+                : t('legalGuidance.qaFlow.additionalDetails.addMoreConcerns', 'Add more concerns...')}
+            </span>
+            <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${concernsOpen ? 'rotate-180' : ''}`} />
+          </button>
+
+          {concernsOpen && (
+            <div className="absolute z-20 w-full mt-1 rounded-md border border-input bg-background shadow-lg max-h-60 overflow-y-auto">
+              {unselectedConcerns.length === 0 ? (
+                <div className="px-3 py-3 text-sm text-muted-foreground text-center">
+                  {t('legalGuidance.qaFlow.additionalDetails.allConcernsSelected', 'All concerns selected')}
                 </div>
-              </div>
-            );
-          })}
+              ) : (
+                unselectedConcerns.map(({ id, icon: Icon }) => (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => {
+                      handleConcernToggle(id);
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2.5 text-sm hover:bg-muted/50 transition-colors text-left"
+                  >
+                    <Icon className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium">
+                        {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.label`)}
+                      </div>
+                      <div className="text-xs text-muted-foreground truncate">
+                        {t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${id}.description`)}
+                      </div>
+                    </div>
+                  </button>
+                ))
+              )}
+            </div>
+          )}
         </div>
 
-        <p className="text-xs text-muted-foreground mt-4 text-center">
-          {t('legalGuidance.qaFlow.additionalDetails.noConcernsSelected')}
-        </p>
+        {selectedConcerns.length === 0 && (
+          <p className="text-xs text-muted-foreground mt-3 text-center">
+            {t('legalGuidance.qaFlow.additionalDetails.noConcernsSelected')}
+          </p>
+        )}
       </div>
 
       {/* CAPTCHA if required */}
