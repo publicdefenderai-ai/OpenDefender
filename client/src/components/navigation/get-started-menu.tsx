@@ -23,7 +23,8 @@ import {
   Eye,
   UserCheck,
   BookOpen,
-  Clock
+  Clock,
+  Heart
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -542,6 +543,23 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               <FileSearch className="h-5 w-5 text-indigo-600" />
               <span className="font-medium group-hover:text-indigo-600 transition-colors">
                 {t('getStartedMenu.resourcesSubmenu.lawsRecords')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/support')}
+        className="w-full"
+        data-testid="submenu-item-life-support"
+      >
+        <Card className="hover:shadow-md hover:border-rose-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <Heart className="h-5 w-5 text-rose-600" />
+              <span className="font-medium group-hover:text-rose-600 transition-colors">
+                {t('getStartedMenu.resourcesSubmenu.lifeSupport')}
               </span>
             </div>
           </CardContent>

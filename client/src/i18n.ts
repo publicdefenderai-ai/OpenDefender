@@ -982,7 +982,8 @@ i18n
               "title": "Resources",
               "backButton": "Back to Main Menu",
               "legalAid": "Legal Aid Resources & Support",
-              "lawsRecords": "Laws & Documents"
+              "lawsRecords": "Laws & Documents",
+              "lifeSupport": "Life Support Resources"
             },
             "legalRightsSubmenu": {
               "title": "Legal Rights Info",
@@ -4792,7 +4793,8 @@ i18n
               "title": "Recursos",
               "backButton": "Volver al Menú Principal",
               "legalAid": "Recursos y Apoyo de Asistencia Legal",
-              "lawsRecords": "Leyes y Documentos"
+              "lawsRecords": "Leyes y Documentos",
+              "lifeSupport": "Recursos de Apoyo para la Vida"
             },
             "legalRightsSubmenu": {
               "title": "Información de Derechos Legales",
@@ -8232,7 +8234,8 @@ i18n
               "title": "资源",
               "backButton": "返回主菜单",
               "legalAid": "法律援助资源与支持",
-              "lawsRecords": "法律与文件"
+              "lawsRecords": "法律与文件",
+              "lifeSupport": "生活支持资源"
             },
             "legalRightsSubmenu": {
               "title": "法律权利信息",
