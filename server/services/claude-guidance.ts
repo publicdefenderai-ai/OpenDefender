@@ -9,18 +9,18 @@ import { recordAICost } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { CLAUDE_MODEL } from '../config/ai-model';
 
-// Validate Anthropic API credentials
+// Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
+let anthropic: Anthropic | null = null;
 
 if (!apiKey) {
-  errLog('Anthropic API key not set');
-  throw new Error('ANTHROPIC_API_KEY required for AI guidance features');
+  errLog('Anthropic API key not set - AI guidance will use rule-based fallback');
+} else {
+  anthropic = new Anthropic({
+    apiKey,
+    timeout: 90000, // 90 second timeout for the SDK - generous time for complex legal guidance
+  });
 }
-
-const anthropic = new Anthropic({
-  apiKey,
-  timeout: 90000, // 90 second timeout for the SDK - generous time for complex legal guidance
-});
 
 // Simple in-memory cache for identical requests (expires after 15 minutes for privacy)
 // Shorter TTL reduces risk of data persistence while maintaining performance
@@ -446,8 +446,13 @@ async function callClaudeWithRetry(
   userPrompt: string,
   maxRetries: number = 1
 ): Promise<Anthropic.Messages.Message> {
+  // Check if API is configured
+  if (!anthropic) {
+    throw new Error('AI guidance service is not configured. Please contact support or try again later.');
+  }
+
   let lastError: Error | null = null;
-  
+
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       if (attempt > 0) {
@@ -701,6 +706,11 @@ export async function generateClaudeGuidance(
 
 // Health check function to verify API key is working
 export async function testClaudeConnection(): Promise<boolean> {
+  if (!anthropic) {
+    errLog('Claude connection test failed - API not configured');
+    return false;
+  }
+
   try {
     await anthropic.messages.create({
       model: CLAUDE_MODEL,
@@ -712,4 +722,9 @@ export async function testClaudeConnection(): Promise<boolean> {
     errLog('Claude connection test failed', error);
     return false;
   }
+}
+
+// Check if AI guidance is available
+export function isAIGuidanceAvailable(): boolean {
+  return anthropic !== null;
 }

@@ -25,7 +25,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { RotatingCardCarousel } from "@/components/ui/rotating-card-carousel";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { searchCourthousesWithFederalData, getMockCourtData, CourtLocation } from "@/lib/court-services";
+import { searchCourthousesWithFederalData, CourtLocation } from "@/lib/court-services";
 
 export default function CourtLocator() {
   useScrollToTop();
@@ -50,21 +50,19 @@ export default function CourtLocator() {
       const courtData = await searchCourthousesWithFederalData(zipCode);
       
       if (courtData.length === 0) {
-        // Fallback to mock data if no real results
-        const mockData = getMockCourtData(zipCode);
-        setCourts(mockData);
-        setError(t('courtLocator.search.limitedData'));
+        // No results found - show helpful message instead of fake data
+        setCourts([]);
+        setError(t('courtLocator.search.noResults', 'No courthouses found for this ZIP code. Try searching on Google Maps for "courthouse near [your ZIP]" or visit uscourts.gov for federal court locations.'));
       } else {
         setCourts(courtData);
       }
-      
+
       setSearchPerformed(true);
     } catch (err) {
       console.error('Court search error:', err);
-      // Use mock data as fallback
-      const mockData = getMockCourtData(zipCode);
-      setCourts(mockData);
-      setError(t('courtLocator.search.sampleData'));
+      // Show error instead of fake data
+      setCourts([]);
+      setError(t('courtLocator.search.searchError', 'Unable to search for courthouses. Please try again later, or search on Google Maps for "courthouse near [your ZIP]".'));
       setSearchPerformed(true);
     } finally {
       setIsSearching(false);

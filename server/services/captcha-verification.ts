@@ -126,9 +126,10 @@ export async function verifyCaptcha(token: string, remoteIp?: string): Promise<V
 
 /**
  * Check if CAPTCHA is required (i.e., properly configured)
+ * Only require CAPTCHA if both keys are set - otherwise gracefully disable
  */
 export function isCaptchaRequired(): boolean {
-  return !!process.env.TURNSTILE_SECRET_KEY || process.env.NODE_ENV !== 'development';
+  return !!process.env.TURNSTILE_SECRET_KEY && !!process.env.TURNSTILE_SITE_KEY;
 }
 
 /**

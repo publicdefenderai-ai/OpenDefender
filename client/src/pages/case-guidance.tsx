@@ -453,12 +453,20 @@ export default function CaseGuidance() {
         setHasExported(false);
       } else {
         console.error("API returned unsuccessful result:", result);
-        alert("Failed to generate guidance. Please try again.");
+        toast({
+          title: t('caseGuidance.errors.generationFailed', 'Generation Failed'),
+          description: t('caseGuidance.errors.tryAgain', 'Failed to generate guidance. Please try again.'),
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error("Failed to generate guidance:", error);
       console.error("Error details:", error);
-      alert("An error occurred while generating guidance. Please try again.");
+      toast({
+        title: t('caseGuidance.errors.errorOccurred', 'Error'),
+        description: t('caseGuidance.errors.tryAgain', 'An error occurred while generating guidance. Please try again.'),
+        variant: "destructive",
+      });
     }
   };
 
