@@ -546,6 +546,146 @@ export function buildSearchIndex(): void {
       aliases: ['embed code', 'website widget', 'integration tools'],
       url: '/widgets'
     },
+    {
+      id: 'case-timeline',
+      title: 'Criminal Case Timeline',
+      titleEs: 'Cronología del Caso Penal',
+      titleZh: '刑事案件时间线',
+      content: 'Interactive 7-stage criminal case timeline. Arrest, arraignment, pretrial, plea bargaining, trial, sentencing, and appeal. Understand each stage of a criminal proceeding, your rights, and what to expect.',
+      tags: ['timeline', 'case stages', 'criminal process', 'arraignment', 'trial', 'sentencing', 'appeal', 'arrest'],
+      aliases: ['case stages', 'criminal procedure', 'court process timeline', 'what happens after arrest'],
+      url: '/case-timeline'
+    },
+    {
+      id: 'quick-reference',
+      title: 'Quick Reference Rights Cards',
+      titleEs: 'Tarjetas de Referencia Rápida de Derechos',
+      titleZh: '快速参考权利卡',
+      content: 'Printable and saveable rights reference cards. Know your rights during police encounters, traffic stops, arrests, arraignment, bail hearings, and court appearances. Pocket-sized legal rights cards.',
+      tags: ['quick reference', 'rights cards', 'printable', 'police encounter', 'traffic stop', 'arrest rights'],
+      aliases: ['rights card', 'pocket card', 'printable rights', 'cheat sheet'],
+      url: '/quick-reference'
+    },
+    {
+      id: 'diversion-programs-hub',
+      title: 'Diversion Programs Directory',
+      titleEs: 'Directorio de Programas de Diversión',
+      titleZh: '转移计划目录',
+      content: 'Find diversion and alternative sentencing programs in your area. Drug courts, mental health courts, veteran courts, community service, and pretrial intervention programs. Avoid jail and get help.',
+      tags: ['diversion', 'alternative sentencing', 'drug court', 'mental health court', 'veteran court', 'community service'],
+      aliases: ['alternative to jail', 'drug program', 'first offender program', 'pretrial diversion'],
+      url: '/diversion-programs'
+    },
+    {
+      id: 'record-expungement-hub',
+      title: 'Record Expungement Guide',
+      titleEs: 'Guía de Eliminación de Antecedentes',
+      titleZh: '记录清除指南',
+      content: 'Learn how to clear your criminal record. Expungement eligibility by state. Record sealing. Certificates of rehabilitation. Clean slate laws. Start fresh after a conviction.',
+      tags: ['expungement', 'record clearing', 'record sealing', 'clean slate', 'rehabilitation'],
+      aliases: ['clear record', 'erase criminal record', 'second chance', 'record removal'],
+      url: '/record-expungement'
+    },
+    {
+      id: 'legal-glossary-hub',
+      title: 'Legal Glossary',
+      titleEs: 'Glosario Legal',
+      titleZh: '法律术语表',
+      content: 'Comprehensive legal glossary with plain-language definitions. Understand legal terms, court terminology, and criminal justice vocabulary. Search legal definitions.',
+      tags: ['glossary', 'legal terms', 'definitions', 'vocabulary', 'terminology'],
+      aliases: ['legal dictionary', 'law terms', 'court terms', 'legal definitions'],
+      url: '/legal-glossary'
+    },
+    {
+      id: 'document-summarizer',
+      title: 'Legal Document Summarizer',
+      titleEs: 'Resumidor de Documentos Legales',
+      titleZh: '法律文件摘要器',
+      content: 'Upload and summarize legal documents using AI. Understand court papers, legal notices, police reports, and other legal documents in plain language. Private and secure document analysis.',
+      tags: ['document', 'summarizer', 'upload', 'AI', 'court papers', 'police report'],
+      aliases: ['summarize document', 'understand court papers', 'read legal document'],
+      url: '/document-summarizer'
+    },
+    {
+      id: 'support-hub',
+      title: 'Support Resources Hub',
+      titleEs: 'Centro de Recursos de Apoyo',
+      titleZh: '支持资源中心',
+      content: 'Find support resources for people involved in the criminal justice system. Employment, finances, court logistics, mental health, housing, and more.',
+      tags: ['support', 'resources', 'help', 'assistance', 'reentry'],
+      aliases: ['get help', 'support services', 'reentry resources'],
+      url: '/support'
+    },
+    {
+      id: 'support-employment',
+      title: 'Employment Support Resources',
+      titleEs: 'Recursos de Apoyo para el Empleo',
+      titleZh: '就业支持资源',
+      content: 'Find employment resources for people with criminal records. Job training, resume help, ban the box employers, second chance hiring, workforce development programs.',
+      tags: ['employment', 'jobs', 'work', 'hiring', 'career', 'ban the box', 'criminal record'],
+      aliases: ['find a job', 'jobs for felons', 'employment with record', 'second chance employers'],
+      url: '/support/employment'
+    },
+    {
+      id: 'support-finances',
+      title: 'Financial Support Resources',
+      titleEs: 'Recursos de Apoyo Financiero',
+      titleZh: '财务支持资源',
+      content: 'Financial assistance for people in the criminal justice system. Help with fines, fees, court costs, bail funds, financial literacy, and benefits enrollment.',
+      tags: ['finances', 'money', 'fines', 'fees', 'court costs', 'bail fund', 'financial aid'],
+      aliases: ['pay fines', 'court fees help', 'financial assistance', 'bail money'],
+      url: '/support/finances'
+    },
+    {
+      id: 'support-court-logistics',
+      title: 'Court Logistics Support',
+      titleEs: 'Apoyo Logístico para el Tribunal',
+      titleZh: '法院后勤支持',
+      content: 'Help with court logistics. Transportation to court, childcare during hearings, what to wear, what to bring, courthouse navigation, interpreter services.',
+      tags: ['court logistics', 'transportation', 'childcare', 'courthouse', 'interpreter', 'what to wear'],
+      aliases: ['getting to court', 'court preparation', 'courthouse help', 'court day'],
+      url: '/support/court-logistics'
+    },
+    {
+      id: 'support-mental-health',
+      title: 'Mental Health Support Resources',
+      titleEs: 'Recursos de Apoyo de Salud Mental',
+      titleZh: '心理健康支持资源',
+      content: 'Mental health resources for people in the criminal justice system. Counseling, crisis hotlines, substance abuse treatment, trauma support, anxiety and stress management.',
+      tags: ['mental health', 'counseling', 'therapy', 'crisis', 'substance abuse', 'anxiety', 'stress'],
+      aliases: ['therapy', 'counseling', 'crisis hotline', 'substance abuse help', 'emotional support'],
+      url: '/support/mental-health'
+    },
+    {
+      id: 'attorney-portal',
+      title: 'Attorney Portal',
+      titleEs: 'Portal de Abogados',
+      titleZh: '律师门户',
+      content: 'Verified attorney portal for document generation. Criminal motion templates, immigration motions, jurisdiction-specific legal documents for all 50 states and DC.',
+      tags: ['attorney', 'lawyer', 'portal', 'documents', 'motions', 'templates'],
+      aliases: ['lawyer portal', 'attorney tools', 'legal document generator'],
+      url: '/attorney'
+    },
+    {
+      id: 'privacy-policy',
+      title: 'Privacy Policy',
+      titleEs: 'Política de Privacidad',
+      titleZh: '隐私政策',
+      content: 'Privacy policy for Public Defender AI. How we protect your data. Data ephemerality. No personal information stored. Session-based privacy.',
+      tags: ['privacy', 'policy', 'data', 'security'],
+      aliases: ['data privacy', 'privacy statement'],
+      url: '/privacy-policy'
+    },
+    {
+      id: 'disclaimers',
+      title: 'Legal Disclaimers',
+      titleEs: 'Descargos de Responsabilidad',
+      titleZh: '法律免责声明',
+      content: 'Legal disclaimers for Public Defender AI. Not a substitute for legal counsel. Educational purposes only. Limitation of liability.',
+      tags: ['disclaimer', 'legal notice', 'terms'],
+      aliases: ['terms of use', 'legal notice', 'not legal advice'],
+      url: '/disclaimers'
+    },
   ];
 
   for (const page of sitePages) {
