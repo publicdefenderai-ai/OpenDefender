@@ -18,9 +18,9 @@ import { devLog } from '../utils/dev-logger';
  * - req.headers['x-captcha-token'] (for any request type)
  */
 export function requireCaptcha(req: Request, res: Response, next: NextFunction) {
-  // Skip in development if not configured
-  if (!isCaptchaRequired() && process.env.NODE_ENV === 'development') {
-    devLog('captcha', 'Skipping - not configured in development');
+  // Skip if CAPTCHA is not configured (no Turnstile keys set)
+  if (!isCaptchaRequired()) {
+    devLog('captcha', 'Skipping - not configured');
     return next();
   }
 
