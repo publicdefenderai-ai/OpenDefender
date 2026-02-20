@@ -61,7 +61,7 @@ export function GlossaryWidget({
       style={{ fontFamily: "system-ui, -apple-system, sans-serif", maxWidth: "400px" }}
     >
       <div className={`px-4 py-3 border-b ${borderClass} flex items-center gap-2`}>
-        <BookOpen className="h-5 w-5 text-blue-600" />
+        <BookOpen className="h-5 w-5 text-blue-600" aria-hidden="true" />
         <h3 className="font-bold">
           {language === "es" ? "Glosario Legal" : "Legal Glossary"}
         </h3>

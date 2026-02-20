@@ -115,7 +115,7 @@ export function Footer() {
       {/* Copyright Bar */}
       <div className="bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <p className="text-gray-400 text-sm text-center">
+          <p className="text-gray-300 text-sm text-center">
             {t('footer.copyright')}
           </p>
         </div>

@@ -1265,6 +1265,13 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 2px;
 }
 
+a:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
 @media print {
   header, footer, nav, .print\\:hidden,
   [class*="chat-launcher"], [class*="mobile-bottom-nav"],

@@ -67,7 +67,7 @@ export function EmbeddableSearch({
       style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
     >
       <div className="relative">
-        <Search className={`absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 ${mutedClass}`} />
+        <Search className={`absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 ${mutedClass}`} aria-hidden="true" />
         <input
           type="text"
           value={query}
