@@ -1426,8 +1426,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 if (!config) return null;
 
                 const Icon = config.icon;
-                const label = t(`legalGuidance.qaFlow.concernsStep.concernsCategories.${concernId}.label`);
-                const description = t(`legalGuidance.qaFlow.concernsStep.concernsCategories.${concernId}.description`);
+                const label = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${concernId}.label`);
+                const description = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${concernId}.description`);
 
                 if (config.available) {
                   return (
