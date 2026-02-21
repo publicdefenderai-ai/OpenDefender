@@ -202,7 +202,14 @@ MOCK Q&A GUIDELINES:
 - Focus on the upcoming court proceeding based on the case stage
 - Keep responses brief and direct - courts prefer concise answers
 
-TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system.`;
+TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system.
+
+JSON FORMATTING RULES:
+- Return ONLY a valid JSON object, no markdown code blocks, no explanatory text before or after
+- Escape all special characters in strings properly (double quotes, backslashes, newlines)
+- Do NOT use literal newlines inside JSON string values - use \\n instead
+- Do NOT include trailing commas after the last item in arrays or objects
+- Ensure all property names are double-quoted`;
 }
 
 // Input sanitization to prevent prompt injection and limit excessive input
@@ -317,27 +324,72 @@ function generateCacheKey(caseDetails: CaseDetails): string {
 }
 
 // Improved JSON extraction with multiple fallback strategies
+function repairJSON(jsonText: string): string {
+  let repaired = jsonText;
+  repaired = repaired.replace(/,\s*([}\]])/g, '$1');
+  repaired = repaired.replace(/([{,]\s*)(\w+)\s*:/g, '$1"$2":');
+  repaired = repaired.replace(/\t/g, '  ');
+  repaired = repaired.replace(/[\x00-\x1f]/g, (ch) => {
+    if (ch === '\n' || ch === '\r') return '\\n';
+    return '';
+  });
+  return repaired;
+}
+
 function extractJSON(responseText: string): string {
   // Strategy 1: Try to extract from markdown code block
   const markdownMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
   if (markdownMatch) {
-    return markdownMatch[1].trim();
+    const extracted = markdownMatch[1].trim();
+    try {
+      JSON.parse(extracted);
+      return extracted;
+    } catch {
+      const repaired = repairJSON(extracted);
+      try {
+        JSON.parse(repaired);
+        return repaired;
+      } catch {
+        // Fall through to other strategies
+      }
+    }
   }
 
-  // Strategy 2: Look for JSON object with balanced braces
-  const braceStack: number[] = [];
+  // Strategy 2: Look for JSON object with balanced braces (string-aware)
+  let depth = 0;
   let jsonStart = -1;
   let jsonEnd = -1;
+  let inString = false;
+  let escapeNext = false;
 
   for (let i = 0; i < responseText.length; i++) {
-    if (responseText[i] === '{') {
-      if (braceStack.length === 0) {
+    const ch = responseText[i];
+
+    if (escapeNext) {
+      escapeNext = false;
+      continue;
+    }
+
+    if (ch === '\\' && inString) {
+      escapeNext = true;
+      continue;
+    }
+
+    if (ch === '"') {
+      inString = !inString;
+      continue;
+    }
+
+    if (inString) continue;
+
+    if (ch === '{') {
+      if (depth === 0) {
         jsonStart = i;
       }
-      braceStack.push(i);
-    } else if (responseText[i] === '}') {
-      braceStack.pop();
-      if (braceStack.length === 0 && jsonStart !== -1) {
+      depth++;
+    } else if (ch === '}') {
+      depth--;
+      if (depth === 0 && jsonStart !== -1) {
         jsonEnd = i;
         break;
       }
@@ -345,14 +397,38 @@ function extractJSON(responseText: string): string {
   }
 
   if (jsonStart !== -1 && jsonEnd !== -1) {
-    return responseText.slice(jsonStart, jsonEnd + 1);
+    const candidate = responseText.slice(jsonStart, jsonEnd + 1);
+    try {
+      JSON.parse(candidate);
+      return candidate;
+    } catch {
+      const repaired = repairJSON(candidate);
+      try {
+        JSON.parse(repaired);
+        return repaired;
+      } catch {
+        // Fall through
+      }
+    }
   }
 
   // Strategy 3: Try simple indexOf/lastIndexOf as last resort
   const simpleStart = responseText.indexOf('{');
   const simpleEnd = responseText.lastIndexOf('}');
   if (simpleStart !== -1 && simpleEnd !== -1 && simpleEnd > simpleStart) {
-    return responseText.slice(simpleStart, simpleEnd + 1);
+    const candidate = responseText.slice(simpleStart, simpleEnd + 1);
+    try {
+      JSON.parse(candidate);
+      return candidate;
+    } catch {
+      const repaired = repairJSON(candidate);
+      try {
+        JSON.parse(repaired);
+        return repaired;
+      } catch {
+        return candidate;
+      }
+    }
   }
 
   throw new Error('No valid JSON structure found in Claude response');
