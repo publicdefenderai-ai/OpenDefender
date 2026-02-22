@@ -686,7 +686,7 @@ i18n
           },
           "legalGuidance": {
             "qaFlow": {
-              "title": "Get Personalized Legal Guidance",
+              "title": "Get Personalized Guidance",
               "cancel": "Cancel",
               "stepProgress": "Step {{current}} of {{total}}: {{title}}",
               "privacyNotice": "Your data is encrypted and auto-deleted within 24 hours. However, AI prompts may be retained by our provider for up to 30 days and could be subject to legal process during that time.",
@@ -1026,7 +1026,7 @@ i18n
           "case": {
             "hero": {
               "title": "Case Guidance",
-              "subtitle": "Get Personalized Legal Guidance",
+              "subtitle": "Get Personalized Guidance",
               "description": "Answer a few questions about your situation to get legal help, next steps, and resources for your case.",
               "startButton": "Get Started",
               "privacyNote": "Your responses are private and automatically deleted after your session"
@@ -4504,7 +4504,7 @@ i18n
           },
           "legalGuidance": {
             "qaFlow": {
-              "title": "Obtenga Orientación Legal Personalizada",
+              "title": "Obtenga Orientación Personalizada",
               "cancel": "Cancelar",
               "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
               "privacyNotice": "Sus datos están encriptados y se eliminan automáticamente dentro de 24 horas. Sin embargo, los mensajes de IA pueden ser retenidos por nuestro proveedor hasta por 30 días y podrían estar sujetos a procesos legales durante ese tiempo.",
@@ -4844,7 +4844,7 @@ i18n
           "case": {
             "hero": {
               "title": "Orientación de Caso",
-              "subtitle": "Obtenga Orientación Legal Personalizada",
+              "subtitle": "Obtenga Orientación Personalizada",
               "description": "Responda algunas preguntas sobre su situación para recibir orientación legal personalizada, próximos pasos y recursos específicos para su caso y jurisdicción.",
               "startButton": "Iniciar Evaluación Personalizada",
               "privacyNote": "Sus respuestas son privadas y se eliminan automáticamente después de su sesión"
@@ -7966,7 +7966,7 @@ i18n
           },
           "legalGuidance": {
             "qaFlow": {
-              "title": "获取个性化法律指导",
+              "title": "获取个性化指导",
               "cancel": "取消",
               "stepProgress": "第{{current}}步，共{{total}}步：{{title}}",
               "privacyNotice": "你的回答不会被保存，会在你关闭会话时删除",
@@ -8291,7 +8291,7 @@ i18n
           "case": {
             "hero": {
               "title": "案件指导",
-              "subtitle": "获取个性化法律指导",
+              "subtitle": "获取个性化指导",
               "description": "回答几个关于你情况的问题，获取法律帮助、下一步建议和案件相关资源。",
               "startButton": "开始使用",
               "privacyNote": "你的回答是私密的，会在会话结束后自动删除"
