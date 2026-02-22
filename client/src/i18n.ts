@@ -340,6 +340,66 @@ i18n
                 "tip2": "Save copies of performance reviews and positive feedback from before your case",
                 "tip3": "If you're job hunting, research 'ban the box' laws in your state that limit when employers can ask about criminal history",
                 "tip4": "Consider consulting an employment attorney if you believe you're being treated unfairly at work"
+              },
+              "courtTimeOff": {
+                "sectionTitle": "Court Time Off Templates",
+                "sectionDescription": "Use these ready-made templates to request time off from work for court appearances. Copy and personalize them with your details.",
+                "tipLabel": "Tip",
+                "copyButton": "Copy to Clipboard",
+                "copied": "Copied!",
+                "printButton": "Print",
+                "personalizeNote": "Replace the [bracketed] text with your own information before sending.",
+                "emailTemplates": {
+                  "title": "Email Templates",
+                  "formal": {
+                    "label": "Formal Email to Manager/HR",
+                    "subject": "Subject: Request for Time Off — Court Appearance on [Date]",
+                    "body": "Dear [Manager's Name / HR Department],\n\nI am writing to request time off on [date(s)] due to a required court appearance. I anticipate being unavailable from [start time] to [end time].\n\nI understand this may affect my regular duties and am happy to:\n• Complete any urgent tasks before my absence\n• Arrange coverage with a colleague\n• Make up the time on [alternative date/time]\n\nPlease let me know what documentation you may need. I can provide a court notice or summons if required.\n\nThank you for your understanding. I am committed to minimizing any disruption to the team.\n\nSincerely,\n[Your Name]\n[Your Position]\n[Date]"
+                  },
+                  "brief": {
+                    "label": "Brief Email to Direct Supervisor",
+                    "subject": "Subject: Time Off Needed — [Date]",
+                    "body": "Hi [Supervisor's Name],\n\nI need to request [the day off / a few hours off] on [date] for a personal legal matter that requires my presence at the courthouse.\n\nI plan to [arrive late / leave early / be out all day] and will make sure my work is covered. I can [come in early the next day / stay late / work remotely] to make up the time.\n\nPlease let me know if you need anything from me ahead of time.\n\nThank you,\n[Your Name]"
+                  },
+                  "multipleDate": {
+                    "label": "Multiple Court Dates Request",
+                    "subject": "Subject: Upcoming Scheduled Absences — Court Obligations",
+                    "body": "Dear [Manager's Name / HR Department],\n\nI am writing to let you know about several upcoming dates when I will need time off for required court appearances:\n\n• [Date 1] — [estimated time away, e.g., full day or morning only]\n• [Date 2] — [estimated time away]\n• [Date 3] — [estimated time away]\n\nThese dates are set by the court and I am unable to reschedule them. I want to plan ahead so my responsibilities are covered:\n\n• I will complete any urgent assignments before each absence\n• I can coordinate with [colleague's name] for coverage\n• I am available to make up time as needed\n\nPlease let me know what documentation or advance notice you require. I appreciate your flexibility and will keep you updated if any dates change.\n\nSincerely,\n[Your Name]\n[Your Position]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Phone Call Scripts",
+                  "description": "If you prefer to call rather than email, here are scripts to guide your conversation.",
+                  "manager": {
+                    "label": "Calling Your Manager",
+                    "script": "Hi [Manager's Name], this is [Your Name]. Do you have a minute to talk?\n\nI need to let you know that I have a required court appearance on [date] and will need [the day off / time off from ___ to ___].\n\nI wanted to give you as much notice as possible so we can plan for coverage. I can [finish my current tasks early / ask a coworker to cover / make up the hours].\n\nIs there a form I need to fill out or anything you need from me?\n\nThank you for understanding. I'll keep you posted if anything changes."
+                  },
+                  "hr": {
+                    "label": "Calling HR / Human Resources",
+                    "script": "Hello, my name is [Your Name] from [department]. I'm calling because I need to request time off for a court appearance on [date].\n\nCould you let me know:\n• What is the process for requesting this type of leave?\n• Do I need to submit any documentation, like a court notice?\n• Will this be taken from my PTO, or is there a separate policy for court appearances?\n\nI appreciate your help. Could you also email me any forms I need to fill out? My email is [your email]."
+                  },
+                  "tips": {
+                    "label": "Tips for the Call",
+                    "items": {
+                      "tip1": "Keep it brief — you do not need to share details about your case",
+                      "tip2": "Focus on logistics: when you'll be out and how you'll handle your work",
+                      "tip3": "Ask about the leave policy — you may be covered by state law",
+                      "tip4": "Take notes on what they tell you and follow up in writing",
+                      "tip5": "Stay calm and professional — this is a normal workplace request"
+                    }
+                  }
+                },
+                "legalRights": {
+                  "title": "Know Your Rights",
+                  "description": "Many states have laws that protect employees who need time off for court. Here are key things to know:",
+                  "rights": {
+                    "r1": "Most states require employers to give time off for jury duty and witness subpoenas — check if your state also covers defendants",
+                    "r2": "Your employer generally cannot fire you for responding to a court order or subpoena",
+                    "r3": "Some states require employers to provide paid leave for court appearances",
+                    "r4": "If your employer retaliates against you for attending court, document everything and contact an employment attorney",
+                    "r5": "You can ask your attorney to help schedule hearings around your work schedule when possible"
+                  }
+                }
               }
             },
             "finances": {
@@ -4158,6 +4218,66 @@ i18n
                 "tip2": "Guarde copias de evaluaciones de desempeño y comentarios positivos de antes de su caso",
                 "tip3": "Si está buscando trabajo, investigue las leyes 'ban the box' en su estado que limitan cuándo los empleadores pueden preguntar sobre historial criminal",
                 "tip4": "Considere consultar a un abogado laboral si cree que está siendo tratado injustamente en el trabajo"
+              },
+              "courtTimeOff": {
+                "sectionTitle": "Plantillas para Tiempo Libre por Corte",
+                "sectionDescription": "Use estas plantillas listas para solicitar tiempo libre del trabajo para comparecencias en la corte. Cópielas y personalícelas con sus datos.",
+                "tipLabel": "Consejo",
+                "copyButton": "Copiar al Portapapeles",
+                "copied": "¡Copiado!",
+                "printButton": "Imprimir",
+                "personalizeNote": "Reemplace el texto [entre corchetes] con su propia información antes de enviar.",
+                "emailTemplates": {
+                  "title": "Plantillas de Correo Electrónico",
+                  "formal": {
+                    "label": "Correo Formal al Gerente/Recursos Humanos",
+                    "subject": "Asunto: Solicitud de Tiempo Libre — Comparecencia en Corte el [Fecha]",
+                    "body": "Estimado/a [Nombre del Gerente / Departamento de Recursos Humanos],\n\nLe escribo para solicitar tiempo libre el [fecha(s)] debido a una comparecencia obligatoria en la corte. Anticipo estar no disponible desde [hora de inicio] hasta [hora de fin].\n\nEntiendo que esto puede afectar mis deberes regulares y estoy dispuesto/a a:\n• Completar cualquier tarea urgente antes de mi ausencia\n• Coordinar cobertura con un colega\n• Recuperar el tiempo el [fecha/hora alternativa]\n\nPor favor déjeme saber qué documentación pueda necesitar. Puedo proporcionar un aviso de la corte o citación si es necesario.\n\nGracias por su comprensión. Estoy comprometido/a a minimizar cualquier interrupción al equipo.\n\nAtentamente,\n[Su Nombre]\n[Su Puesto]\n[Fecha]"
+                  },
+                  "brief": {
+                    "label": "Correo Breve al Supervisor Directo",
+                    "subject": "Asunto: Tiempo Libre Necesario — [Fecha]",
+                    "body": "Hola [Nombre del Supervisor],\n\nNecesito solicitar [el día libre / unas horas libres] el [fecha] por un asunto legal personal que requiere mi presencia en el juzgado.\n\nPlaneo [llegar tarde / salir temprano / estar fuera todo el día] y me aseguraré de que mi trabajo esté cubierto. Puedo [llegar temprano al día siguiente / quedarme tarde / trabajar remotamente] para recuperar el tiempo.\n\nPor favor déjeme saber si necesita algo de mi parte con anticipación.\n\nGracias,\n[Su Nombre]"
+                  },
+                  "multipleDate": {
+                    "label": "Solicitud de Múltiples Fechas de Corte",
+                    "subject": "Asunto: Próximas Ausencias Programadas — Obligaciones de Corte",
+                    "body": "Estimado/a [Nombre del Gerente / Departamento de Recursos Humanos],\n\nLe escribo para informarle sobre varias fechas próximas en las que necesitaré tiempo libre para comparecencias obligatorias en la corte:\n\n• [Fecha 1] — [tiempo estimado de ausencia, ej., día completo o solo la mañana]\n• [Fecha 2] — [tiempo estimado de ausencia]\n• [Fecha 3] — [tiempo estimado de ausencia]\n\nEstas fechas están establecidas por la corte y no puedo reprogramarlas. Quiero planificar con anticipación para que mis responsabilidades estén cubiertas:\n\n• Completaré cualquier asignación urgente antes de cada ausencia\n• Puedo coordinar con [nombre del colega] para cobertura\n• Estoy disponible para recuperar el tiempo según sea necesario\n\nPor favor déjeme saber qué documentación o aviso previo requiere. Agradezco su flexibilidad y le mantendré informado/a si alguna fecha cambia.\n\nAtentamente,\n[Su Nombre]\n[Su Puesto]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Guiones para Llamadas Telefónicas",
+                  "description": "Si prefiere llamar en vez de enviar correo electrónico, aquí hay guiones para guiar su conversación.",
+                  "manager": {
+                    "label": "Llamando a Su Gerente",
+                    "script": "Hola [Nombre del Gerente], soy [Su Nombre]. ¿Tiene un minuto para hablar?\n\nNecesito informarle que tengo una comparecencia obligatoria en la corte el [fecha] y necesitaré [el día libre / tiempo libre de ___ a ___].\n\nQuería darle el mayor aviso posible para que podamos planificar la cobertura. Puedo [terminar mis tareas actuales antes / pedir a un compañero que me cubra / recuperar las horas].\n\n¿Hay algún formulario que necesite llenar o algo que necesite de mi parte?\n\nGracias por su comprensión. Le mantendré informado/a si algo cambia."
+                  },
+                  "hr": {
+                    "label": "Llamando a Recursos Humanos",
+                    "script": "Hola, mi nombre es [Su Nombre] del departamento de [departamento]. Llamo porque necesito solicitar tiempo libre para una comparecencia en la corte el [fecha].\n\n¿Podría informarme:\n• ¿Cuál es el proceso para solicitar este tipo de licencia?\n• ¿Necesito presentar alguna documentación, como un aviso de la corte?\n• ¿Se descontará de mi PTO, o hay una política separada para comparecencias en corte?\n\nAgradezco su ayuda. ¿Podría también enviarme por correo electrónico los formularios que necesite llenar? Mi correo es [su correo electrónico]."
+                  },
+                  "tips": {
+                    "label": "Consejos para la Llamada",
+                    "items": {
+                      "tip1": "Sea breve — no necesita compartir detalles sobre su caso",
+                      "tip2": "Enfóquese en la logística: cuándo estará fuera y cómo manejará su trabajo",
+                      "tip3": "Pregunte sobre la política de licencias — puede estar cubierto por la ley estatal",
+                      "tip4": "Tome notas de lo que le digan y haga seguimiento por escrito",
+                      "tip5": "Mantenga la calma y sea profesional — esta es una solicitud laboral normal"
+                    }
+                  }
+                },
+                "legalRights": {
+                  "title": "Conozca Sus Derechos",
+                  "description": "Muchos estados tienen leyes que protegen a los empleados que necesitan tiempo libre para la corte. Aquí hay puntos clave:",
+                  "rights": {
+                    "r1": "La mayoría de los estados requieren que los empleadores den tiempo libre para el servicio de jurado y citaciones de testigos — verifique si su estado también cubre a los acusados",
+                    "r2": "Su empleador generalmente no puede despedirlo por responder a una orden judicial o citación",
+                    "r3": "Algunos estados requieren que los empleadores proporcionen licencia pagada para comparecencias en corte",
+                    "r4": "Si su empleador toma represalias contra usted por asistir a la corte, documente todo y contacte a un abogado laboral",
+                    "r5": "Puede pedirle a su abogado que ayude a programar audiencias alrededor de su horario de trabajo cuando sea posible"
+                  }
+                }
               }
             },
             "finances": {
