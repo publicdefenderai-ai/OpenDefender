@@ -38,6 +38,7 @@ import { motionToSuppressImmigrationEoirTemplate } from "../../../shared/templat
 import { motionForVoluntaryDepartureEoirTemplate } from "../../../shared/templates/motion-for-voluntary-departure-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
+import { isRequestCostAcceptable } from "../cost-tracker";
 import type { DocumentTemplate, TemplateSection } from "../../../shared/templates/schema";
 
 // ============================================================================
@@ -488,6 +489,10 @@ async function generateAISection(
 
   devLog('ai', `Generating content for section: ${section.id}`);
   devLog('ai', `Prompt length: ${prompt.length} characters`);
+
+  if (!isRequestCostAcceptable(systemPrompt.length + prompt.length)) {
+    throw new Error('Document section prompt is too large to process.');
+  }
 
   try {
     const response = await anthropic.messages.create({

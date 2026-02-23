@@ -27,7 +27,7 @@ import multer from "multer";
 import { summarizeDocument, validateFile, getSupportedFileTypes } from "./services/document-summarizer";
 import { requireCaptcha } from "./middleware/captcha-middleware";
 import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verification";
-import { requireBudget } from "./middleware/budget-gate";
+import { requireServiceBudget } from "./middleware/budget-gate";
 import { getAICostStatus } from "./services/cost-tracker";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -811,7 +811,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Personalized Legal Guidance API (rate limited - expensive AI operations)
-  app.post("/api/legal-guidance", requireBudget, aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+  app.post("/api/legal-guidance", requireServiceBudget('claude-guidance'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const sessionId = req.body.sessionId || randomUUID();
       
@@ -1469,7 +1469,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     formData: z.record(z.string(), z.string())
   });
 
-  app.post("/api/attorney/documents/generate", requireAttorneySession, requireBudget, aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+  app.post("/api/attorney/documents/generate", requireAttorneySession, requireServiceBudget('attorney-docs'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const validation = generateDocumentSchema.safeParse(req.body);
 
@@ -1640,7 +1640,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * - Anthropic does not use API data for training
    * - Anthropic may retain data for up to 30 days for operational purposes
    */
-  app.post("/api/document-summary/summarize", requireBudget, aiRateLimiter, aiDailyLimiter, (req, res, next) => {
+  app.post("/api/document-summary/summarize", requireServiceBudget('document-summarizer'), aiRateLimiter, aiDailyLimiter, (req, res, next) => {
     documentUpload.single('document')(req, res, (err) => {
       if (err) {
         if (err instanceof multer.MulterError) {
@@ -1757,7 +1757,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * Attorney-specific document summarization endpoint
    * Requires valid attorney session, uses same privacy guarantees
    */
-  app.post("/api/attorney/document-summary/summarize", requireAttorneySession, requireBudget, aiRateLimiter, aiDailyLimiter, (req, res, next) => {
+  app.post("/api/attorney/document-summary/summarize", requireAttorneySession, requireServiceBudget('document-summarizer'), aiRateLimiter, aiDailyLimiter, (req, res, next) => {
     documentUpload.single('document')(req, res, (err) => {
       if (err) {
         if (err instanceof multer.MulterError) {

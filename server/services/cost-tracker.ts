@@ -69,6 +69,46 @@ export function isAIAvailable(): boolean {
   return currentDay.totalCost < DAILY_BUDGET_USD;
 }
 
+// Per-service daily caps (configurable via env vars)
+const SERVICE_BUDGET_USD: Record<string, number> = {
+  'claude-guidance': parseFloat(process.env.AI_BUDGET_GUIDANCE || '30'),
+  'document-summarizer': parseFloat(process.env.AI_BUDGET_SUMMARIZER || '15'),
+  'attorney-docs': parseFloat(process.env.AI_BUDGET_ATTORNEY || '5'),
+};
+
+// Maximum allowed estimated cost for a single request
+const MAX_REQUEST_COST_USD = parseFloat(process.env.AI_MAX_REQUEST_COST || '0.15');
+
+// Sonnet 4 input cost: $3 per 1M tokens, ~4 chars per token
+const INPUT_COST_PER_CHAR = 3.0 / (1_000_000 * 4);
+
+/**
+ * Estimate the input cost for a request given total prompt character count.
+ * Uses ~4 chars/token heuristic with Sonnet 4 input pricing ($3/MTok).
+ */
+export function estimateRequestCost(inputChars: number): number {
+  return inputChars * INPUT_COST_PER_CHAR;
+}
+
+/**
+ * Returns false if the estimated pre-flight cost exceeds the per-request ceiling.
+ * Call this before making a Claude API request to reject oversized inputs early.
+ */
+export function isRequestCostAcceptable(inputChars: number): boolean {
+  return estimateRequestCost(inputChars) <= MAX_REQUEST_COST_USD;
+}
+
+/**
+ * Check if a specific service still has budget remaining (global cap + per-service cap).
+ */
+export function isServiceAvailable(service: string): boolean {
+  ensureCurrentDay();
+  if (currentDay.totalCost >= DAILY_BUDGET_USD) return false;
+  const cap = SERVICE_BUDGET_USD[service];
+  if (cap === undefined) return true;
+  return (currentDay.breakdown[service] || 0) < cap;
+}
+
 /**
  * Get current cost status for the API status endpoint
  */

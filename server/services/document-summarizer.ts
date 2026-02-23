@@ -17,7 +17,7 @@ import { CLAUDE_MODEL } from '../config/ai-model';
 import * as pdfParse from 'pdf-parse';
 import mammoth from 'mammoth';
 import { devLog, errLog } from '../utils/dev-logger';
-import { recordAICost } from './cost-tracker';
+import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 
 // Initialize Anthropic client
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -40,8 +40,8 @@ const SUPPORTED_TYPES = {
   'image/webp': { ext: 'webp', maxSize: 5 * 1024 * 1024 },
 };
 
-// Maximum text length to send to Claude (roughly 100k tokens worth)
-const MAX_TEXT_LENGTH = 400000;
+// Maximum text length to send to Claude (~25k tokens at ~4 chars/token)
+const MAX_TEXT_LENGTH = 100_000;
 
 export interface DocumentSummaryRequest {
   file: Buffer;
@@ -241,6 +241,11 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
   const redactedText = text ? redactDocumentPII(text) : '';
 
   const systemPrompt = buildSystemPrompt(language, summaryType);
+
+  // Pre-flight cost check for text-based documents (images use vision pricing, not char-based)
+  if (!mimeType.startsWith('image/') && !isRequestCostAcceptable(systemPrompt.length + redactedText.length)) {
+    throw new Error('Document content is too large to process. Please use a shorter document or select specific pages.');
+  }
 
   // Build the message content based on file type
   let messageContent: Anthropic.Messages.ContentBlockParam[];

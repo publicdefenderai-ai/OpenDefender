@@ -5,7 +5,7 @@ import crypto from 'crypto';
 import { redactCaseDetails, isPIIRedactionEnabled } from './pii-redactor';
 import { validateLegalGuidance, ValidationResult } from './legal-accuracy-validator';
 import { devLog, opsLog, errLog } from '../utils/dev-logger';
-import { recordAICost } from './cost-tracker';
+import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { CLAUDE_MODEL } from '../config/ai-model';
 
@@ -630,10 +630,14 @@ export async function generateClaudeGuidance(
     const systemPrompt = buildSystemPrompt(processedDetails.language);
     const userPrompt = buildUserPrompt(processedDetails);
 
+    if (!isRequestCostAcceptable(systemPrompt.length + userPrompt.length)) {
+      throw new Error('Request input is too large to process. Please reduce the amount of detail provided.');
+    }
+
     devLog('claude', 'Generating personalized guidance...');
     devLog('claude', `Prompt length: ${userPrompt.length} characters`);
     devLog('claude', 'Making API request to Claude (with retry on timeout)...');
-    
+
     const message = await callClaudeWithRetry(systemPrompt, userPrompt, 1);
 
     // Extract the text content
