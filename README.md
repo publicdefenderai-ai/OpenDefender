@@ -161,7 +161,12 @@ The Attorney Portal provides verified attorneys with AI-powered document generat
 
 ## 📄 License
 
-MIT License - See [LICENSE](LICENSE) for details.
+This project uses a dual-license structure:
+
+- **Code** (MIT License): All source code is licensed under the MIT License. See [LICENSE](LICENSE).
+- **Content** (CC0 1.0): All non-code content (legal information, educational materials, templates) is released to the public domain under CC0. See [LICENSE-CONTENT](LICENSE-CONTENT).
+
+This means you can freely use, modify, and distribute both the code and content. The CC0 license for content maximizes adoption for access to justice initiatives.
 
 ---
 

@@ -274,20 +274,27 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Open Source Freedom
+              Open Source Licensing
             </h2>
-            
+
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Because PublicDefenderAI is open source and public domain under CC0, anyone can freely use or change it without any restrictions or promises. The public repository is available{" "}
-                  <a 
-                    href="https://github.com/shahabasghar/PublicDefenderAI" 
-                    target="_blank" 
+                  PublicDefenderAI uses a dual-license structure to maximize both code reuse and access to justice:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li><strong className="text-foreground">Code (MIT License):</strong> All source code is open source under the MIT License, allowing free use, modification, and distribution with attribution.</li>
+                  <li><strong className="text-foreground">Content (CC0 Public Domain):</strong> All non-code content — legal information, educational materials, and templates — is released to the public domain under CC0, meaning anyone can use it without restrictions or attribution requirements.</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  The public repository is available{" "}
+                  <a
+                    href="https://github.com/shahabasghar/PublicDefenderAI"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
                   >
-                    here
+                    on GitHub
                   </a>.
                 </p>
               </CardContent>
