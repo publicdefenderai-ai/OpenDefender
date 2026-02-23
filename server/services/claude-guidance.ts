@@ -543,7 +543,13 @@ async function callClaudeWithRetry(
         model: CLAUDE_MODEL,
         max_tokens: 4096,
         temperature: 0.3,
-        system: systemPrompt,
+        system: [
+          {
+            type: 'text' as const,
+            text: systemPrompt,
+            cache_control: { type: 'ephemeral' as const },
+          },
+        ],
         messages: [
           {
             role: 'user',
@@ -661,8 +667,12 @@ export async function generateClaudeGuidance(
     // Validate response structure
     validateClaudeResponse(parsedData);
 
-    // Calculate costs (Sonnet 4.5 pricing: $3/MTok input, $15/MTok output)
-    const inputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
+    // Calculate costs (Sonnet 4 pricing: $3/MTok input, $15/MTok output)
+    // With prompt caching: cache writes = $3.75/MTok (+25%), cache reads = $0.30/MTok (-90%)
+    const regularInputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
+    const cacheWriteCost = ((message.usage.cache_creation_input_tokens ?? 0) / 1_000_000) * 3.75;
+    const cacheReadCost = ((message.usage.cache_read_input_tokens ?? 0) / 1_000_000) * 0.30;
+    const inputCost = regularInputCost + cacheWriteCost + cacheReadCost;
     const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
 
     // Record cost for daily budget tracking

@@ -499,7 +499,13 @@ async function generateAISection(
       model: CLAUDE_MODEL,
       max_tokens: 2000,
       temperature: 0.3, // Low temperature for legal accuracy
-      system: systemPrompt,
+      system: [
+        {
+          type: "text" as const,
+          text: systemPrompt,
+          cache_control: { type: "ephemeral" as const },
+        },
+      ],
       messages: [
         {
           role: "user",
