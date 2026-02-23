@@ -16,7 +16,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { CLAUDE_MODEL } from '../config/ai-model';
 import * as pdfParse from 'pdf-parse';
 import mammoth from 'mammoth';
-import { devLog, errLog } from '../utils/dev-logger';
+import { devLog, errLog, opsLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 
 // Initialize Anthropic client
@@ -393,4 +393,310 @@ export function getSupportedFileTypes(): Array<{ mimeType: string; extension: st
     extension: config.ext,
     maxSizeMB: config.maxSize / (1024 * 1024),
   }));
+}
+
+// ============================================================================
+// Batch API — asynchronous multi-document summarization at 50% cost
+// ============================================================================
+
+const MAX_BATCH_DOCUMENTS = 10;
+
+// Batch pricing for Sonnet 4 (50% of standard rates)
+const BATCH_INPUT_COST_PER_MTOKEN = 1.5;    // vs $3.00 standard
+const BATCH_OUTPUT_COST_PER_MTOKEN = 7.5;   // vs $15.00 standard
+const BATCH_CACHE_WRITE_PER_MTOKEN = 1.875; // vs $3.75 standard
+const BATCH_CACHE_READ_PER_MTOKEN = 0.15;   // vs $0.30 standard
+
+/**
+ * In-memory registry of submitted batch jobs.
+ * Stores only metadata (filenames, page counts) — not document content.
+ * Anthropic stores batch results for 29 days, so results are retrievable
+ * by batch ID even after a server restart (filenames will be unavailable).
+ */
+interface BatchJobMetadata {
+  filenames: string[];
+  pageCounts: (number | undefined)[];
+  createdAt: number;
+  resultsRecorded: boolean;
+}
+
+const batchRegistry = new Map<string, BatchJobMetadata>();
+
+// Purge registry entries older than 25 hours every 30 minutes
+setInterval(() => {
+  const cutoff = Date.now() - 25 * 60 * 60 * 1000;
+  for (const [id, job] of Array.from(batchRegistry.entries())) {
+    if (job.createdAt < cutoff) batchRegistry.delete(id);
+  }
+}, 30 * 60 * 1000);
+
+export interface BatchDocumentItem {
+  file: Buffer;
+  mimeType: string;
+  filename: string;
+  language?: 'en' | 'es';
+  summaryType?: 'general' | 'legal_document' | 'court_filing' | 'police_report' | 'evidence';
+}
+
+export interface BatchSubmissionResult {
+  batchId: string;
+  requestCount: number;
+  filenames: string[];
+  createdAt: string;
+}
+
+export interface BatchResultItem {
+  filename: string;
+  index: number;
+  summary?: DocumentSummary;
+  error?: string;
+}
+
+export interface BatchStatusResult {
+  batchId: string;
+  status: 'processing' | 'ended' | 'canceling' | 'expired';
+  requestCounts: {
+    processing: number;
+    succeeded: number;
+    errored: number;
+    canceled: number;
+    expired: number;
+  };
+  results?: BatchResultItem[];
+}
+
+/**
+ * Extract text and build Claude message content for a single document.
+ * Shared between sync and batch pipelines.
+ */
+async function prepareDocumentContent(
+  file: Buffer,
+  mimeType: string,
+  filename: string,
+): Promise<{ messageContent: Anthropic.Messages.ContentBlockParam[]; pageCount?: number }> {
+  const { text, pageCount } = await extractText(file, mimeType);
+  const redactedText = text ? redactDocumentPII(text) : '';
+
+  if (mimeType.startsWith('image/')) {
+    const base64Data = file.toString('base64');
+    const mediaType = mimeType as 'image/png' | 'image/jpeg' | 'image/webp' | 'image/gif';
+    return {
+      messageContent: [
+        { type: 'image', source: { type: 'base64', media_type: mediaType, data: base64Data } },
+        {
+          type: 'text',
+          text: `Please analyze this document image and provide a summary. The file is named "${filename}". Extract all visible text and provide the structured analysis.`,
+        },
+      ],
+    };
+  }
+
+  if (!redactedText || redactedText.trim().length < 50) {
+    throw new Error(`Document "${filename}": Could not extract sufficient text. The file may be empty or corrupted.`);
+  }
+
+  return {
+    messageContent: [
+      {
+        type: 'text',
+        text: `Please analyze this legal document and provide a summary. The file is named "${filename}".\n\nDOCUMENT CONTENT:\n\n${redactedText}`,
+      },
+    ],
+    pageCount,
+  };
+}
+
+/**
+ * Submit multiple documents for asynchronous summarization via the Batch API.
+ * Returns immediately with a batchId; poll getSummaryBatchStatus() for results.
+ * Cost is ~50% of the synchronous endpoint.
+ */
+export async function createSummaryBatch(documents: BatchDocumentItem[]): Promise<BatchSubmissionResult> {
+  if (!anthropic) {
+    throw new Error('Document summarization service is not configured');
+  }
+  if (documents.length === 0) {
+    throw new Error('At least one document is required');
+  }
+  if (documents.length > MAX_BATCH_DOCUMENTS) {
+    throw new Error(`Maximum ${MAX_BATCH_DOCUMENTS} documents per batch`);
+  }
+
+  const filenames: string[] = [];
+  const pageCounts: (number | undefined)[] = [];
+  const batchRequests: Array<{ custom_id: string; params: Record<string, unknown> }> = [];
+
+  for (let i = 0; i < documents.length; i++) {
+    const { file, mimeType, filename, language = 'en', summaryType = 'general' } = documents[i];
+
+    const validationError = validateFile(mimeType, file.length);
+    if (validationError) {
+      throw new Error(`Document "${filename}": ${validationError.message}`);
+    }
+
+    const systemPrompt = buildSystemPrompt(language, summaryType);
+    const { messageContent, pageCount } = await prepareDocumentContent(file, mimeType, filename);
+
+    if (!mimeType.startsWith('image/')) {
+      const textBlock = messageContent[0] as Anthropic.Messages.TextBlockParam;
+      if (!isRequestCostAcceptable(systemPrompt.length + textBlock.text.length)) {
+        throw new Error(`Document "${filename}" is too large to process. Please use a shorter document.`);
+      }
+    }
+
+    filenames.push(filename);
+    pageCounts.push(pageCount);
+
+    batchRequests.push({
+      custom_id: `doc-${i}`,
+      params: {
+        model: CLAUDE_MODEL,
+        max_tokens: 4096,
+        temperature: 0.2,
+        system: [
+          {
+            type: 'text',
+            text: systemPrompt,
+            cache_control: { type: 'ephemeral' },
+          },
+        ],
+        messages: [{ role: 'user', content: messageContent }],
+      },
+    });
+  }
+
+  const batch = await anthropic.messages.batches.create({ requests: batchRequests as any });
+
+  batchRegistry.set(batch.id, {
+    filenames,
+    pageCounts,
+    createdAt: Date.now(),
+    resultsRecorded: false,
+  });
+
+  devLog('batch-summarizer', `Created batch ${batch.id} with ${documents.length} documents`);
+  opsLog('batch-summarizer', `Batch submitted: id=${batch.id}, docs=${documents.length}`);
+
+  return {
+    batchId: batch.id,
+    requestCount: documents.length,
+    filenames,
+    createdAt: batch.created_at,
+  };
+}
+
+/**
+ * Poll for the status of a submitted batch.
+ * When status is 'ended', results are included in the response.
+ * Costs are recorded on the first successful result retrieval.
+ */
+export async function getSummaryBatchStatus(batchId: string): Promise<BatchStatusResult> {
+  if (!anthropic) {
+    throw new Error('Document summarization service is not configured');
+  }
+
+  const batch = await anthropic.messages.batches.retrieve(batchId);
+  const metadata = batchRegistry.get(batchId);
+
+  const base: BatchStatusResult = {
+    batchId,
+    status: batch.processing_status as BatchStatusResult['status'],
+    requestCounts: batch.request_counts,
+  };
+
+  if (batch.processing_status !== 'ended') {
+    return base;
+  }
+
+  // Collect and parse results
+  const resultMap = new Map<string, BatchResultItem>();
+  let totalCost = 0;
+
+  for await (const result of await anthropic.messages.batches.results(batchId)) {
+    const index = parseInt(result.custom_id.replace('doc-', ''), 10);
+    const filename = metadata?.filenames[index] ?? result.custom_id;
+    const pageCount = metadata?.pageCounts[index];
+
+    if (result.result.type === 'succeeded') {
+      const message = result.result.message;
+      const textBlock = message.content.find((b: any) => b.type === 'text');
+
+      if (!textBlock || textBlock.type !== 'text') {
+        resultMap.set(result.custom_id, { filename, index, error: 'No text content in response' });
+        continue;
+      }
+
+      try {
+        const responseText = textBlock.text;
+        let jsonText: string;
+        const markdownMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+        if (markdownMatch) {
+          jsonText = markdownMatch[1].trim();
+        } else {
+          const jsonStart = responseText.indexOf('{');
+          const jsonEnd = responseText.lastIndexOf('}');
+          if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
+            jsonText = responseText.slice(jsonStart, jsonEnd + 1);
+          } else {
+            throw new Error('Could not extract JSON from response');
+          }
+        }
+
+        const parsed = JSON.parse(jsonText);
+
+        const regularInputCost = (message.usage.input_tokens / 1_000_000) * BATCH_INPUT_COST_PER_MTOKEN;
+        const cacheWriteCost = ((message.usage.cache_creation_input_tokens ?? 0) / 1_000_000) * BATCH_CACHE_WRITE_PER_MTOKEN;
+        const cacheReadCost = ((message.usage.cache_read_input_tokens ?? 0) / 1_000_000) * BATCH_CACHE_READ_PER_MTOKEN;
+        const outputCost = (message.usage.output_tokens / 1_000_000) * BATCH_OUTPUT_COST_PER_MTOKEN;
+        const itemCost = regularInputCost + cacheWriteCost + cacheReadCost + outputCost;
+        totalCost += itemCost;
+
+        const summary: DocumentSummary = {
+          summary: parsed.summary || 'Unable to generate summary',
+          keyPoints: parsed.keyPoints || [],
+          importantDates: parsed.importantDates || [],
+          legalTermsExplained: parsed.legalTermsExplained || [],
+          potentialConcerns: parsed.potentialConcerns || [],
+          recommendedActions: parsed.recommendedActions || [],
+          documentType: parsed.documentType || 'Unknown Document Type',
+          pageCount,
+          usageMetrics: {
+            inputTokens: message.usage.input_tokens,
+            outputTokens: message.usage.output_tokens,
+            estimatedCost: itemCost,
+          },
+        };
+
+        resultMap.set(result.custom_id, { filename, index, summary });
+      } catch {
+        resultMap.set(result.custom_id, { filename, index, error: 'Failed to parse AI response' });
+      }
+    } else if (result.result.type === 'errored') {
+      resultMap.set(result.custom_id, { filename, index, error: result.result.error.type });
+    } else {
+      resultMap.set(result.custom_id, { filename, index, error: 'Request expired before processing' });
+    }
+  }
+
+  // Record costs once, on first retrieval of completed results
+  if (metadata && !metadata.resultsRecorded && totalCost > 0) {
+    recordAICost(totalCost, 'document-summarizer');
+    metadata.resultsRecorded = true;
+    opsLog('batch-summarizer', `Batch ${batchId} complete: $${totalCost.toFixed(4)} (batch pricing, ~50% saving vs sync)`);
+  }
+
+  const results = Array.from(resultMap.values()).sort((a, b) => a.index - b.index);
+  return { ...base, results };
+}
+
+/**
+ * Cancel a pending batch. Has no effect if the batch has already ended.
+ */
+export async function cancelSummaryBatch(batchId: string): Promise<void> {
+  if (!anthropic) {
+    throw new Error('Document summarization service is not configured');
+  }
+  await anthropic.messages.batches.cancel(batchId);
+  batchRegistry.delete(batchId);
+  devLog('batch-summarizer', `Cancelled batch ${batchId}`);
 }

@@ -24,7 +24,7 @@ import { generateDocx } from "./services/attorney-docs/docx-generator";
 import { search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
 import { z } from "zod";
 import multer from "multer";
-import { summarizeDocument, validateFile, getSupportedFileTypes } from "./services/document-summarizer";
+import { summarizeDocument, validateFile, getSupportedFileTypes, createSummaryBatch, getSummaryBatchStatus, cancelSummaryBatch } from "./services/document-summarizer";
 import { requireCaptcha } from "./middleware/captcha-middleware";
 import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verification";
 import { requireServiceBudget } from "./middleware/budget-gate";
@@ -98,6 +98,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       success: false,
       error: 'Daily limit reached. You have used all 20 AI requests for today. Please try again tomorrow.',
       code: 'DAILY_LIMIT_EXCEEDED'
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // Strict rate limiter for batch document submissions (expensive, multi-doc operations)
+  const batchSubmitRateLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 3, // 3 batch submissions per hour per IP
+    message: {
+      success: false,
+      error: 'Too many batch submissions. Please try again later.'
     },
     standardHeaders: true,
     legacyHeaders: false,
@@ -1612,6 +1626,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     },
   });
 
+  // Multi-file upload for batch summarization (max 10 documents, 10MB each)
+  const batchDocumentUpload = multer({
+    storage: multer.memoryStorage(),
+    limits: {
+      fileSize: 10 * 1024 * 1024, // 10MB per file
+      files: 10,                   // max 10 documents per batch
+    },
+    fileFilter: (req, file, cb) => {
+      const error = validateFile(file.mimetype, 0);
+      if (error && error.code === 'UNSUPPORTED_TYPE') {
+        cb(new Error(error.message));
+      } else {
+        cb(null, true);
+      }
+    },
+  });
+
   /**
    * Get supported file types for document summarization
    * Public endpoint - no auth required
@@ -1848,6 +1879,181 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+
+  // ============================================================================
+  // Batch Document Summarization API
+  // Asynchronous multi-document summarization at ~50% cost via Anthropic Batch API.
+  // Submit → receive batchId → poll for status → retrieve results when ended.
+  // ============================================================================
+
+  /**
+   * Submit a batch of documents for asynchronous summarization (public).
+   * Accepts up to 10 files via multipart/form-data field "documents".
+   */
+  app.post("/api/document-summary/batch",
+    requireServiceBudget('document-summarizer'),
+    batchSubmitRateLimiter,
+    requireCaptcha,
+    (req, res, next) => {
+      batchDocumentUpload.array('documents')(req, res, (err) => {
+        if (err instanceof multer.MulterError && err.code === 'LIMIT_FILE_SIZE') {
+          return res.status(400).json({ success: false, error: 'One or more files exceed the 10MB limit.' });
+        }
+        if (err instanceof multer.MulterError && err.code === 'LIMIT_UNEXPECTED_FILE') {
+          return res.status(400).json({ success: false, error: 'Maximum 10 documents per batch.' });
+        }
+        if (err) {
+          return res.status(400).json({ success: false, error: err.message || 'Invalid file upload.' });
+        }
+        next();
+      });
+    },
+    async (req: Request, res: Response) => {
+      try {
+        const files = req.files as Express.Multer.File[] | undefined;
+        if (!files || files.length === 0) {
+          return res.status(400).json({ success: false, error: 'No documents provided.' });
+        }
+
+        const consentGiven = req.body.consentGiven === 'true' || req.body.consentGiven === true;
+        if (!consentGiven) {
+          (req as any).files = null;
+          return res.status(400).json({ success: false, error: 'Consent required before processing documents.' });
+        }
+
+        const language = (req.body.language as 'en' | 'es') || 'en';
+        const summaryType = req.body.summaryType || 'general';
+
+        const documents = files.map((f) => ({
+          file: f.buffer,
+          mimeType: f.mimetype,
+          filename: f.originalname,
+          language,
+          summaryType,
+        }));
+
+        const result = await createSummaryBatch(documents);
+        (req as any).files = null;
+
+        res.json({
+          success: true,
+          ...result,
+          message: 'Batch submitted. Poll /api/document-summary/batch/:batchId for status and results.',
+          privacyConfirmation: {
+            documentsStored: false,
+            message: 'Your documents have not been stored. Only anonymized batch metadata is retained temporarily.',
+          },
+        });
+      } catch (error) {
+        (req as any).files = null;
+        errLog('[BatchSummary] Submission error:', error);
+        const message = error instanceof Error ? error.message : 'Failed to submit batch.';
+        res.status(500).json({ success: false, error: message });
+      }
+    }
+  );
+
+  /**
+   * Poll for batch status and retrieve results when complete (public).
+   */
+  app.get("/api/document-summary/batch/:batchId",
+    searchRateLimiter,
+    async (req: Request, res: Response) => {
+      try {
+        const { batchId } = req.params;
+        if (!batchId || typeof batchId !== 'string') {
+          return res.status(400).json({ success: false, error: 'Invalid batch ID.' });
+        }
+
+        const status = await getSummaryBatchStatus(batchId);
+        res.json({ success: true, ...status });
+      } catch (error) {
+        errLog('[BatchSummary] Status error:', error);
+        const message = error instanceof Error ? error.message : 'Failed to retrieve batch status.';
+        res.status(500).json({ success: false, error: message });
+      }
+    }
+  );
+
+  /**
+   * Submit a batch of documents for asynchronous summarization (attorney).
+   */
+  app.post("/api/attorney/document-summary/batch",
+    requireAttorneySession,
+    requireServiceBudget('document-summarizer'),
+    batchSubmitRateLimiter,
+    requireCaptcha,
+    (req, res, next) => {
+      batchDocumentUpload.array('documents')(req, res, (err) => {
+        if (err instanceof multer.MulterError && err.code === 'LIMIT_FILE_SIZE') {
+          return res.status(400).json({ success: false, error: 'One or more files exceed the 10MB limit.' });
+        }
+        if (err instanceof multer.MulterError && err.code === 'LIMIT_UNEXPECTED_FILE') {
+          return res.status(400).json({ success: false, error: 'Maximum 10 documents per batch.' });
+        }
+        if (err) {
+          return res.status(400).json({ success: false, error: err.message || 'Invalid file upload.' });
+        }
+        next();
+      });
+    },
+    async (req: Request, res: Response) => {
+      try {
+        const files = req.files as Express.Multer.File[] | undefined;
+        if (!files || files.length === 0) {
+          return res.status(400).json({ success: false, error: 'No documents provided.' });
+        }
+
+        const language = (req.body.language as 'en' | 'es') || 'en';
+        const summaryType = req.body.summaryType || 'legal_document';
+
+        const documents = files.map((f) => ({
+          file: f.buffer,
+          mimeType: f.mimetype,
+          filename: f.originalname,
+          language,
+          summaryType,
+        }));
+
+        const result = await createSummaryBatch(documents);
+        (req as any).files = null;
+
+        res.json({
+          success: true,
+          ...result,
+          message: 'Batch submitted. Poll /api/attorney/document-summary/batch/:batchId for status and results.',
+        });
+      } catch (error) {
+        (req as any).files = null;
+        errLog('[AttorneyBatchSummary] Submission error:', error);
+        const message = error instanceof Error ? error.message : 'Failed to submit batch.';
+        res.status(500).json({ success: false, error: message });
+      }
+    }
+  );
+
+  /**
+   * Poll for batch status and retrieve results when complete (attorney).
+   */
+  app.get("/api/attorney/document-summary/batch/:batchId",
+    requireAttorneySession,
+    searchRateLimiter,
+    async (req: Request, res: Response) => {
+      try {
+        const { batchId } = req.params;
+        if (!batchId || typeof batchId !== 'string') {
+          return res.status(400).json({ success: false, error: 'Invalid batch ID.' });
+        }
+
+        const status = await getSummaryBatchStatus(batchId);
+        res.json({ success: true, ...status });
+      } catch (error) {
+        errLog('[AttorneyBatchSummary] Status error:', error);
+        const message = error instanceof Error ? error.message : 'Failed to retrieve batch status.';
+        res.status(500).json({ success: false, error: message });
+      }
+    }
+  );
 
   const httpServer = createServer(app);
   return httpServer;
