@@ -21,3 +21,6 @@ vite.config.ts.*
 # IDE
 .vscode/
 .idea/
+
+# Data review script output (ephemeral CI artifacts)
+scripts/data-review/output/

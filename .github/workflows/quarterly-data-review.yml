@@ -1,0 +1,191 @@
+name: Quarterly Data Review
+
+on:
+  # Runs at 08:00 UTC on January 1, April 1, July 1, and October 1
+  schedule:
+    - cron: '0 8 1 1,4,7,10 *'
+
+  # Allow manual trigger from the Actions tab with optional category filter
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Which category to check (leave blank for all)'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - detention-facilities
+          - consulates
+          - legal-aid
+
+# Minimal permissions — only issues:write for the report job
+permissions:
+  contents: read
+
+jobs:
+  # ──────────────────────────────────────────────────────────────────────────────
+  # Job 1: ICE Detention Facilities
+  # ──────────────────────────────────────────────────────────────────────────────
+  check-detention-facilities:
+    name: Check ICE Detention Facilities
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'detention-facilities'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run detention facility checker
+        run: npx tsx scripts/data-review/check-detention-facilities.ts
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: detention-diff
+          path: scripts/data-review/output/detention-diff.json
+          if-no-files-found: error
+          retention-days: 7
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # Job 2: Consulate Information
+  # ──────────────────────────────────────────────────────────────────────────────
+  check-consulates:
+    name: Check Consulate Information
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'consulates'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run consulate checker
+        run: npx tsx scripts/data-review/check-consulates.ts
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: consulate-diff
+          path: scripts/data-review/output/consulate-diff.json
+          if-no-files-found: error
+          retention-days: 7
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # Job 3: Legal Aid Organizations
+  # ──────────────────────────────────────────────────────────────────────────────
+  check-legal-aid:
+    name: Check Legal Aid Organizations
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'legal-aid'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run legal aid checker
+        run: npx tsx scripts/data-review/check-legal-aid.ts
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: legal-aid-diff
+          path: scripts/data-review/output/legal-aid-diff.json
+          if-no-files-found: error
+          retention-days: 7
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # Job 4: Generate Report & Create GitHub Issue
+  # Runs after all checkers complete, even if some were skipped.
+  # ──────────────────────────────────────────────────────────────────────────────
+  generate-report:
+    name: Generate Review Report
+    runs-on: ubuntu-latest
+    needs: [check-detention-facilities, check-consulates, check-legal-aid]
+    # Run even if some checker jobs were skipped (due to category filter)
+    if: always() && !cancelled()
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Download each artifact separately with continue-on-error so that a
+      # skipped or failed checker job doesn't block report generation.
+      - name: Download detention-facilities diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: detention-diff
+          path: scripts/data-review/output
+
+      - name: Download consulates diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: consulate-diff
+          path: scripts/data-review/output
+
+      - name: Download legal-aid diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: legal-aid-diff
+          path: scripts/data-review/output
+
+      - name: Create GitHub Issue
+        run: npx tsx scripts/data-review/generate-report.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
