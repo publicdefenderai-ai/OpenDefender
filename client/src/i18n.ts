@@ -3651,6 +3651,23 @@ i18n
               "felony": "Felony",
               "misdemeanor": "Misdemeanor",
               "infraction": "Infraction"
+            },
+            "allGroups": "All crime types",
+            "groups": {
+              "All Groups": "All crime types",
+              "Violent Crimes": "Violent Crimes",
+              "Assault Crimes": "Assault Crimes",
+              "Homicide Crimes": "Homicide Crimes",
+              "Sexual Offenses": "Sexual Offenses",
+              "Theft & Property": "Theft & Property",
+              "Burglary Crimes": "Burglary Crimes",
+              "Robbery Crimes": "Robbery Crimes",
+              "Drug Offenses": "Drug Offenses",
+              "Weapons": "Weapons",
+              "Fraud": "Fraud",
+              "Public Order": "Public Order",
+              "DUI & Traffic": "DUI & Traffic",
+              "Other": "Other"
             }
           },
           "casePanel": {
@@ -7532,6 +7549,23 @@ i18n
               "felony": "Delito Grave",
               "misdemeanor": "Delito Menor",
               "infraction": "Infracción"
+            },
+            "allGroups": "Todos los tipos de delitos",
+            "groups": {
+              "All Groups": "Todos los tipos de delitos",
+              "Violent Crimes": "Delitos Violentos",
+              "Assault Crimes": "Delitos de Agresión",
+              "Homicide Crimes": "Homicidios",
+              "Sexual Offenses": "Delitos Sexuales",
+              "Theft & Property": "Robo y Propiedad",
+              "Burglary Crimes": "Allanamiento",
+              "Robbery Crimes": "Robo con Violencia",
+              "Drug Offenses": "Delitos de Drogas",
+              "Weapons": "Armas",
+              "Fraud": "Fraude",
+              "Public Order": "Orden Público",
+              "DUI & Traffic": "DUI y Tráfico",
+              "Other": "Otros"
             }
           },
           "casePanel": {
@@ -10954,6 +10988,23 @@ i18n
                 "felony": "重罪",
                 "misdemeanor": "轻罪",
                 "infraction": "违章"
+              },
+              "allGroups": "所有犯罪类型",
+              "groups": {
+                "All Groups": "所有犯罪类型",
+                "Violent Crimes": "暴力犯罪",
+                "Assault Crimes": "伤害犯罪",
+                "Homicide Crimes": "杀人犯罪",
+                "Sexual Offenses": "性犯罪",
+                "Theft & Property": "盗窃与财产",
+                "Burglary Crimes": "入室盗窃",
+                "Robbery Crimes": "抢劫犯罪",
+                "Drug Offenses": "毒品犯罪",
+                "Weapons": "武器犯罪",
+                "Fraud": "欺诈",
+                "Public Order": "公共秩序",
+                "DUI & Traffic": "醉驾与交通",
+                "Other": "其他"
               }
             },
             "casePanel": {

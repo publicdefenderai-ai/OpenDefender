@@ -1,12 +1,13 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2 } from "lucide-react";
+import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
 interface Charge {
@@ -25,6 +26,23 @@ interface ChargeSelectorProps {
 
 const CATEGORY_KEYS = ['All', 'felony', 'misdemeanor', 'infraction'] as const;
 
+const CHARGE_GROUPS = [
+  'All Groups',
+  'Violent Crimes',
+  'Assault Crimes',
+  'Homicide Crimes',
+  'Sexual Offenses',
+  'Theft & Property',
+  'Burglary Crimes',
+  'Robbery Crimes',
+  'Drug Offenses',
+  'Weapons',
+  'Fraud',
+  'Public Order',
+  'DUI & Traffic',
+  'Other',
+] as const;
+
 export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) {
   const { t, i18n } = useTranslation();
   
@@ -35,6 +53,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedGroup, setSelectedGroup] = useState("All Groups");
   const [selectedCharges, setSelectedCharges] = useState<Array<{ id: string; code: string; name: string }>>([]);
   const [isExpanded, setIsExpanded] = useState(true);
 
@@ -44,15 +63,16 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   }, [search]);
 
   const { data, isLoading } = useQuery<{ charges: Charge[]; count: number; totalAvailable: number }>({
-    queryKey: ['/api/criminal-charges', jurisdiction, debouncedSearch, selectedCategory, i18n.language],
+    queryKey: ['/api/criminal-charges', jurisdiction, debouncedSearch, selectedCategory, selectedGroup, i18n.language],
     queryFn: async () => {
       const params = new URLSearchParams({
         jurisdiction,
-        limit: '100',
+        limit: '200',
         language: i18n.language,
       });
       if (debouncedSearch) params.append('search', debouncedSearch);
       if (selectedCategory !== 'All') params.append('category', selectedCategory);
+      if (selectedGroup !== 'All Groups') params.append('group', selectedGroup);
       
       const res = await fetch(`/api/criminal-charges?${params}`);
       if (!res.ok) throw new Error('Failed to fetch charges');
@@ -116,9 +136,10 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
               <Input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder={t('chat.chargeSelector.searchPlaceholder', 'Search all charges...')}
+                placeholder={t('chat.chargeSelector.searchPlaceholder', 'Search charges (e.g. fare evasion, DUI, theft...)')}
                 className="pl-9"
                 data-testid="input-charge-search"
+                aria-label="Search charges by name, code, or description"
               />
             </div>
             
@@ -138,6 +159,22 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                   {getCategoryLabel(key)}
                 </button>
               ))}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Filter className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+              <Select value={selectedGroup} onValueChange={setSelectedGroup}>
+                <SelectTrigger className="h-8 text-xs" data-testid="select-charge-group">
+                  <SelectValue placeholder={t('chat.chargeSelector.allGroups', 'All crime types')} />
+                </SelectTrigger>
+                <SelectContent>
+                  {CHARGE_GROUPS.map((group) => (
+                    <SelectItem key={group} value={group}>
+                      {t(`chat.chargeSelector.groups.${group}`, group)}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </div>
 

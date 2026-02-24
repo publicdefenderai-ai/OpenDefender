@@ -10,7 +10,7 @@ import { insertLegalCaseSchema, insertCaseFeedbackSchema } from "@shared/schema"
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
-import { getChargeById, getChargesByJurisdiction, criminalCharges } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -251,7 +251,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Criminal Charges API - Get charges by jurisdiction
   app.get("/api/criminal-charges", async (req, res) => {
     try {
-      const { jurisdiction, search, category, limit, language } = req.query;
+      const { jurisdiction, search, category, group, limit, language } = req.query;
       const isSpanish = language === 'es';
       
       let charges = jurisdiction 
@@ -262,13 +262,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (search && typeof search === 'string') {
         const searchLower = search.toLowerCase();
         charges = charges.filter(charge => {
-          // Search in English
           if (charge.name.toLowerCase().includes(searchLower) ||
-              charge.description.toLowerCase().includes(searchLower)) {
+              charge.description.toLowerCase().includes(searchLower) ||
+              charge.code.toLowerCase().includes(searchLower)) {
             return true;
           }
           
-          // Search in Spanish - use direct fields or translate on-the-fly
           const nameEs = charge.nameEs || translateChargeName(charge.name) || '';
           const descriptionEs = charge.descriptionEs || translateDescription(charge.description) || '';
           
@@ -280,6 +279,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Filter by category (felony, misdemeanor, infraction)
       if (category && typeof category === 'string') {
         charges = charges.filter(charge => charge.category === category);
+      }
+
+      // Filter by named charge group (e.g. "Public Order", "Violent Crimes")
+      if (group && typeof group === 'string' && chargeCategories[group]) {
+        const groupIds = new Set(chargeCategories[group]);
+        charges = charges.filter(charge => groupIds.has(charge.id));
       }
       
       // Limit results
