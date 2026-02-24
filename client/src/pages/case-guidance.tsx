@@ -422,7 +422,7 @@ export default function CaseGuidance() {
         const guidanceData: EnhancedGuidanceResult = {
           sessionId: result.sessionId,
           overview: guidance.overview || '',
-          generatedAt: guidance.generatedAt, // Include timestamp for transparency
+          generatedAt: (guidance as unknown as Record<string, unknown>).generatedAt as string | undefined, // Include timestamp for transparency
           criticalAlerts: guidance.criticalAlerts || [],
           immediateActions: guidance.immediateActions || [],
           nextSteps: guidance.nextSteps || [],

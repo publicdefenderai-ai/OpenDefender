@@ -190,6 +190,16 @@ export class MemStorage implements IStorage {
         id,
         lastUpdated: new Date(),
         isActive: org.isActive ?? true,
+        address: org.address ?? null,
+        zipCode: org.zipCode ?? null,
+        county: org.county ?? null,
+        phone: org.phone ?? null,
+        email: org.email ?? null,
+        website: org.website ?? null,
+        latitude: org.latitude ?? null,
+        longitude: org.longitude ?? null,
+        services: org.services ?? null,
+        eligibility: org.eligibility ?? null,
       };
       this.legalAidOrganizations.set(id, organization);
     });
@@ -202,6 +212,13 @@ export class MemStorage implements IStorage {
         id,
         lastUpdated: new Date(),
         isActive: statute.isActive ?? true,
+        chapter: statute.chapter ?? null,
+        summary: statute.summary ?? null,
+        category: statute.category ?? null,
+        relatedCharges: statute.relatedCharges ?? null,
+        penalties: statute.penalties ?? null,
+        url: statute.url ?? null,
+        sourceApi: statute.sourceApi ?? null,
       };
       this.statutes.set(id, statuteWithId);
     });
@@ -234,6 +251,12 @@ export class MemStorage implements IStorage {
       id,
       createdAt: now,
       expiresAt,
+      custodyStatus: insertCase.custodyStatus ?? null,
+      hasAttorney: insertCase.hasAttorney ?? null,
+      consentGiven: insertCase.consentGiven ?? null,
+      incidentDescription: insertCase.incidentDescription ?? null,
+      selectedConcerns: insertCase.selectedConcerns ?? null,
+      guidance: insertCase.guidance ?? null,
     };
     
     this.legalCases.set(insertCase.sessionId, legalCase);
@@ -278,6 +301,8 @@ export class MemStorage implements IStorage {
       id,
       lastUpdated: new Date(),
       isActive: true,
+      jurisdiction: insertResource.jurisdiction ?? null,
+      url: insertResource.url ?? null,
     };
     this.legalResources.set(id, resource);
     return resource;
@@ -295,6 +320,11 @@ export class MemStorage implements IStorage {
       ...insertCourtData,
       id,
       lastUpdated: new Date(),
+      address: insertCourtData.address ?? null,
+      phone: insertCourtData.phone ?? null,
+      website: insertCourtData.website ?? null,
+      hours: insertCourtData.hours ?? null,
+      services: insertCourtData.services ?? null,
     };
     this.courtData.set(id, courtData);
     return courtData;
@@ -316,6 +346,16 @@ export class MemStorage implements IStorage {
       id,
       lastUpdated: new Date(),
       isActive: insertOrganization.isActive ?? true,
+      address: insertOrganization.address ?? null,
+      zipCode: insertOrganization.zipCode ?? null,
+      county: insertOrganization.county ?? null,
+      phone: insertOrganization.phone ?? null,
+      email: insertOrganization.email ?? null,
+      website: insertOrganization.website ?? null,
+      latitude: insertOrganization.latitude ?? null,
+      longitude: insertOrganization.longitude ?? null,
+      services: insertOrganization.services ?? null,
+      eligibility: insertOrganization.eligibility ?? null,
     };
     this.legalAidOrganizations.set(id, organization);
     return organization;
@@ -363,6 +403,13 @@ export class MemStorage implements IStorage {
       id,
       lastUpdated: new Date(),
       isActive: insertStatute.isActive ?? true,
+      chapter: insertStatute.chapter ?? null,
+      summary: insertStatute.summary ?? null,
+      category: insertStatute.category ?? null,
+      relatedCharges: insertStatute.relatedCharges ?? null,
+      penalties: insertStatute.penalties ?? null,
+      url: insertStatute.url ?? null,
+      sourceApi: insertStatute.sourceApi ?? null,
     };
     this.statutes.set(id, statute);
     return statute;

@@ -59,10 +59,11 @@ interface TurnstileCaptchaProps {
 }
 
 // Cache for CAPTCHA configuration
-let captchaConfig: { required: boolean; siteKey: string | null } | null = null;
-let configPromise: Promise<typeof captchaConfig> | null = null;
+type CaptchaConfig = { required: boolean; siteKey: string | null } | null;
+let captchaConfig: CaptchaConfig = null;
+let configPromise: Promise<CaptchaConfig> | null = null;
 
-async function fetchCaptchaConfig(): Promise<typeof captchaConfig> {
+async function fetchCaptchaConfig(): Promise<CaptchaConfig> {
   if (captchaConfig) return captchaConfig;
   if (configPromise) return configPromise;
 

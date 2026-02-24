@@ -14,7 +14,8 @@
 
 import Anthropic from '@anthropic-ai/sdk';
 import { CLAUDE_MODEL } from '../config/ai-model';
-import * as pdfParse from 'pdf-parse';
+// @ts-ignore — pdf-parse ships CJS; default import works at runtime with esModuleInterop
+import pdfParse from 'pdf-parse';
 import mammoth from 'mammoth';
 import { devLog, errLog, opsLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
