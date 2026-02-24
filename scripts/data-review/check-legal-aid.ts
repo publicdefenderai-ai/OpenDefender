@@ -4,13 +4,17 @@
  * Compares stored legal aid org data against:
  *   1. EOIR Free Legal Services Provider list (PDF from justice.gov)
  *   2. LSC Grantee Finder data (lsc.gov)
- *   3. Google Places API (phone verification for active orgs)
- *   4. HTTP HEAD checks on stored website URLs
+ *   3. HTTP HEAD checks on stored website URLs
+ *
+ * No external API key required. All data is sourced from public government pages.
+ *
+ * Note: Nominatim / OSM is intentionally not used here — coverage for small
+ * nonprofits is too sparse and would generate excessive false-positive flags.
+ * Phone verification relies on EOIR/LSC cross-referencing plus website checks.
  *
  * Outputs: scripts/data-review/output/legal-aid-diff.json
  *
  * Run: npx tsx scripts/data-review/check-legal-aid.ts
- * Env: GOOGLE_PLACES_API_KEY
  */
 
 // @ts-ignore — pdf-parse types are incomplete; runtime import works correctly
@@ -24,11 +28,10 @@ import {
   phonesMatch,
   writeDiff,
 } from './utils/diff.js';
-import { verifyWithPlaces, placesDelay, checkWebsite } from './utils/google-places.js';
+import { checkWebsite } from './utils/nominatim.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = resolve(__dirname, 'output/legal-aid-diff.json');
-const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY ?? '';
 
 const EOIR_PAGE_URL =
   'https://www.justice.gov/eoir/list-of-free-legal-services-providers';
@@ -240,52 +243,6 @@ async function main(): Promise<void> {
       }
     }
 
-    // 4. Google Places phone verification (for orgs with phone numbers)
-    if (GOOGLE_API_KEY && org.phone && org.isActive !== false) {
-      try {
-        await placesDelay();
-        const placesResult = await verifyWithPlaces(
-          GOOGLE_API_KEY,
-          org.name,
-          org.phone,
-          locationStr,
-        );
-
-        if (placesResult.found) {
-          if (placesResult.permanentlyClosed) {
-            items.push({
-              id,
-              name: org.name,
-              changeType: 'not_found_on_source',
-              notes: 'Google Places marks this organization as permanently closed.',
-              verifyUrl: org.website ?? EOIR_PAGE_URL,
-              severity: 'high',
-            });
-          } else if (placesResult.phoneMismatch) {
-            // Only add if not already flagged by LSC comparison
-            const alreadyFlagged = items.some(
-              (i) => i.id === id && i.changeType === 'phone_changed',
-            );
-            if (!alreadyFlagged) {
-              items.push({
-                id,
-                name: org.name,
-                changeType: 'phone_changed',
-                storedValue: placesResult.phoneMismatch.stored,
-                sourceValue: placesResult.phoneMismatch.places,
-                verifyUrl: org.website ?? EOIR_PAGE_URL,
-                severity: 'high',
-                notes: `Phone mismatch via Google Places. Places address: ${placesResult.placesAddress ?? 'not returned'}.`,
-              });
-            }
-          }
-        }
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        errors.push(`Google Places error for "${org.name}": ${msg}`);
-        console.warn(`  ⚠ Google Places error: ${msg}`);
-      }
-    }
   }
 
   // ── Check for new LSC grantees not in our data ─────────────────────────────

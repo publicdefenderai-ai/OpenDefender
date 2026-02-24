@@ -50,8 +50,6 @@ jobs:
 
       - name: Run detention facility checker
         run: npx tsx scripts/data-review/check-detention-facilities.ts
-        env:
-          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
 
       - name: Upload diff artifact
         uses: actions/upload-artifact@v4
@@ -87,8 +85,6 @@ jobs:
 
       - name: Run consulate checker
         run: npx tsx scripts/data-review/check-consulates.ts
-        env:
-          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
 
       - name: Upload diff artifact
         uses: actions/upload-artifact@v4
@@ -124,8 +120,6 @@ jobs:
 
       - name: Run legal aid checker
         run: npx tsx scripts/data-review/check-legal-aid.ts
-        env:
-          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
 
       - name: Upload diff artifact
         uses: actions/upload-artifact@v4

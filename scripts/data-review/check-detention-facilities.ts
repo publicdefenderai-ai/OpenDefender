@@ -2,13 +2,14 @@
  * ICE Detention Facility Checker
  *
  * Compares stored detention facility data against:
- *   1. ICE's public detention facility page (ice.gov)
- *   2. Google Places API (phone / permanently-closed verification)
+ *   1. ICE's public detention facility page (ice.gov) — authoritative source
+ *      for phone numbers, facility status, and new/closed facilities.
+ *
+ * No external API key required. All data is sourced from public government pages.
  *
  * Outputs: scripts/data-review/output/detention-diff.json
  *
  * Run: npx tsx scripts/data-review/check-detention-facilities.ts
- * Env: GOOGLE_PLACES_API_KEY
  */
 
 // @ts-ignore — no @types/jsdom in this project; jsdom is used only for HTML parsing at runtime
@@ -26,12 +27,10 @@ import {
 // jsdom ships without @types/jsdom in this project; type as any to stay runtime-safe
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type AnyDoc = any;
-import { verifyWithPlaces, placesDelay } from './utils/google-places.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = resolve(__dirname, 'output/detention-diff.json');
 const ICE_URL = 'https://www.ice.gov/detain/detention-facilities';
-const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY ?? '';
 
 // ─── ICE Page Scraper ──────────────────────────────────────────────────────────
 
@@ -147,68 +146,7 @@ async function main(): Promise<void> {
       });
     }
 
-    // 2. Verify with Google Places (primary check for phone accuracy)
-    if (GOOGLE_API_KEY) {
-      try {
-        await placesDelay();
-        const placesResult = await verifyWithPlaces(
-          GOOGLE_API_KEY,
-          facility.name,
-          facility.phone,
-          `${facility.city}, ${facility.state}`,
-        );
-
-        if (!placesResult.found) {
-          // Only add as not-found if ICE source also didn't find it
-          if (!iceSourceAvailable || !iceMatch) {
-            items.push({
-              id: facility.id,
-              name: facility.name,
-              changeType: 'not_found_on_source',
-              notes: 'Not found on ICE page or Google Places. Verify manually.',
-              verifyUrl: ICE_URL,
-              severity: 'high',
-            });
-          }
-        } else {
-          if (placesResult.permanentlyClosed) {
-            items.push({
-              id: facility.id,
-              name: facility.name,
-              changeType: 'not_found_on_source',
-              notes: 'Google Places marks this location as permanently closed.',
-              verifyUrl: ICE_URL,
-              severity: 'critical',
-            });
-          }
-
-          if (placesResult.phoneMismatch) {
-            // Only add Places phone mismatch if ICE page didn't already flag it
-            const alreadyFlagged = items.some(
-              (i) => i.id === facility.id && i.changeType === 'phone_changed',
-            );
-            if (!alreadyFlagged) {
-              items.push({
-                id: facility.id,
-                name: facility.name,
-                changeType: 'phone_changed',
-                storedValue: placesResult.phoneMismatch.stored,
-                sourceValue: placesResult.phoneMismatch.places,
-                verifyUrl: ICE_URL,
-                severity: 'critical',
-                notes: `Phone mismatch detected via Google Places (${placesResult.placesAddress ?? 'address not returned'}).`,
-              });
-            }
-          }
-        }
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        errors.push(`Google Places error for ${facility.name}: ${msg}`);
-        console.warn(`  ⚠ Google Places error: ${msg}`);
-      }
-    }
-
-    // 3. Visitation info — always flag for manual verification
+    // 2. Visitation info — always flag for manual verification
     //    (no automated source for current visitation hours)
     items.push({
       id: facility.id,

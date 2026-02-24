@@ -2,16 +2,18 @@
  * Consulate Information Checker
  *
  * Compares stored consulate data against:
- *   1. Google Places API (main consulate phone verification)
- *   2. HTTP HEAD check on stored website URLs
+ *   1. Official consulate website — scraped for US phone numbers (no API key required)
+ *   2. Nominatim / OpenStreetMap — existence check for the consulate address
+ *   3. HTTP HEAD check on stored website URLs
  *
  * Emergency phone numbers are always flagged for manual verification —
  * there is no automated authoritative source for after-hours lines.
  *
+ * No external API key required. Uses open-source tools only.
+ *
  * Outputs: scripts/data-review/output/consulate-diff.json
  *
  * Run: npx tsx scripts/data-review/check-consulates.ts
- * Env: GOOGLE_PLACES_API_KEY
  */
 
 import { resolve, dirname } from 'path';
@@ -22,11 +24,17 @@ import {
   type DiffReport,
   writeDiff,
 } from './utils/diff.js';
-import { verifyWithPlaces, placesDelay, checkWebsite } from './utils/google-places.js';
+import {
+  checkWebsite,
+  scrapeWebsitePhones,
+  checkWithNominatim,
+  nominatimDelay,
+  scrapeDelay,
+} from './utils/nominatim.js';
+import { phonesMatch } from './utils/diff.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = resolve(__dirname, 'output/consulate-diff.json');
-const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY ?? '';
 const STATE_DEPT_URL = 'https://www.state.gov/foreign-embassies-in-the-united-states/';
 
 // ─── Main ──────────────────────────────────────────────────────────────────────
@@ -59,88 +67,105 @@ async function main(): Promise<void> {
       });
     }
 
-    // 2. Google Places verification for main consulate phone
-    if (GOOGLE_API_KEY) {
+    // 2. Scrape official consulate website for phone numbers
+    //    This is more authoritative than a third-party index: phones come directly
+    //    from the consulate's own pages.
+    if (siteCheck.ok) {
       try {
-        await placesDelay();
-        const query = `${country} Consulate General ${mainConsulate.city}`;
-        const placesResult = await verifyWithPlaces(
-          GOOGLE_API_KEY,
-          query,
-          mainConsulate.phone,
-          mainConsulate.city,
-        );
+        await scrapeDelay();
+        const scrapedPhones = await scrapeWebsitePhones(website);
 
-        if (!placesResult.found) {
-          // Try broader search without "General"
-          await placesDelay();
-          const broader = await verifyWithPlaces(
-            GOOGLE_API_KEY,
-            `${country} Consulate ${mainConsulate.city}`,
-            mainConsulate.phone,
-            mainConsulate.city,
+        if (scrapedPhones.length > 0) {
+          // Check whether stored main consulate phone appears on the site
+          const consultatePhoneFound = scrapedPhones.some((p) =>
+            phonesMatch(mainConsulate.phone, p),
           );
-
-          if (broader.found && broader.phoneMismatch) {
+          if (!consultatePhoneFound) {
+            // Report the first scraped phone as the candidate replacement
             items.push({
               id: locationId,
               name: `${country} Consulate (${mainConsulate.city})`,
               changeType: 'phone_changed',
               storedValue: mainConsulate.phone,
-              sourceValue: broader.phoneMismatch.places,
+              sourceValue: scrapedPhones[0],
               verifyUrl: website,
               severity: 'critical',
-              notes: 'Main consulate phone differs from Google Places. Verify on official website.',
+              notes: `Stored phone not found on official website. Site shows: ${scrapedPhones.join(', ')}. Verify manually.`,
             });
+          }
+
+          // Check main/national phone line if different from consulate phone
+          if (mainPhone && mainPhone !== mainConsulate.phone) {
+            const mainPhoneFound = scrapedPhones.some((p) => phonesMatch(mainPhone, p));
+            if (!mainPhoneFound) {
+              items.push({
+                id: `${locationId}-main`,
+                name: `${country} — National / Main Phone`,
+                changeType: 'phone_changed',
+                storedValue: mainPhone,
+                sourceValue: scrapedPhones[0],
+                verifyUrl: website,
+                severity: 'high',
+                notes: `Stored main/national phone not found on official website. Verify manually.`,
+              });
+            }
           }
         } else {
-          if (placesResult.phoneMismatch) {
-            items.push({
-              id: locationId,
-              name: `${country} Consulate (${mainConsulate.city})`,
-              changeType: 'phone_changed',
-              storedValue: placesResult.phoneMismatch.stored,
-              sourceValue: placesResult.phoneMismatch.places,
-              verifyUrl: website,
-              severity: 'critical',
-              notes: `Main consulate phone differs from Google Places. Places address: ${placesResult.placesAddress ?? 'not returned'}.`,
-            });
-          }
+          // Could not scrape phones — flag for manual check
+          items.push({
+            id: locationId,
+            name: `${country} Consulate`,
+            changeType: 'manual_required',
+            notes: 'Could not extract phone numbers from official website (may use JavaScript rendering). Verify phone manually.',
+            verifyUrl: website,
+            severity: 'medium',
+          });
         }
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
-        errors.push(`Google Places error for ${country}: ${msg}`);
-        console.warn(`  ⚠ Google Places error: ${msg}`);
+        errors.push(`Phone scrape error for ${country}: ${msg}`);
+        console.warn(`  ⚠ Phone scrape error: ${msg}`);
       }
+    }
 
-      // 3. Verify main/national phone line (toll-free or DC line)
-      if (mainPhone && mainPhone !== mainConsulate.phone) {
-        try {
-          await placesDelay();
-          const embassy = await verifyWithPlaces(
-            GOOGLE_API_KEY,
-            `${country} Embassy Washington DC`,
-            mainPhone,
-            'Washington, DC',
-          );
+    // 3. Nominatim existence check — verifies the consulate is still listed on OSM
+    //    OSM coverage for consulates is generally good; a miss may indicate relocation.
+    try {
+      await nominatimDelay();
+      // mainConsulate.city already includes the state abbreviation, e.g. "Los Angeles, CA"
+      const [osmCity, osmState = ''] = mainConsulate.city.split(',').map((s) => s.trim());
+      const osmCheck = await checkWithNominatim(
+        `${country} Consulate`,
+        osmCity,
+        osmState,
+      );
 
-          if (embassy.found && embassy.phoneMismatch) {
-            items.push({
-              id: `${locationId}-embassy`,
-              name: `${country} Embassy / Main Phone`,
-              changeType: 'phone_changed',
-              storedValue: embassy.phoneMismatch.stored,
-              sourceValue: embassy.phoneMismatch.places,
-              verifyUrl: website,
-              severity: 'high',
-              notes: 'National/main phone line differs from Google Places. Verify on official website.',
-            });
-          }
-        } catch (err) {
-          const msg = err instanceof Error ? err.message : String(err);
-          errors.push(`Google Places error for ${country} embassy: ${msg}`);
-        }
+      if (!osmCheck.found) {
+        items.push({
+          id: `${locationId}-osm`,
+          name: `${country} Consulate (${mainConsulate.city})`,
+          changeType: 'not_found_on_source',
+          notes:
+            'Not found on OpenStreetMap via Nominatim. May have moved or been removed from map data. Verify address on official website.',
+          verifyUrl: website,
+          severity: 'medium',
+        });
+      } else if (!osmCheck.cityMatch) {
+        items.push({
+          id: `${locationId}-osm-city`,
+          name: `${country} Consulate`,
+          changeType: 'address_changed',
+          storedValue: mainConsulate.city,
+          sourceValue: osmCheck.displayName,
+          verifyUrl: website,
+          severity: 'medium',
+          notes: 'Nominatim result does not match expected city. May indicate relocation.',
+        });
       }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      errors.push(`Nominatim error for ${country}: ${msg}`);
+      console.warn(`  ⚠ Nominatim error: ${msg}`);
     }
 
     // 4. Emergency phone — always manual (no automated source)
@@ -172,7 +197,7 @@ async function main(): Promise<void> {
       manualOnly: items.filter((i) => i.changeType === 'manual_required').length,
     },
     items,
-    sourceAvailable: GOOGLE_API_KEY.length > 0,
+    sourceAvailable: true,
     errors,
   };
 

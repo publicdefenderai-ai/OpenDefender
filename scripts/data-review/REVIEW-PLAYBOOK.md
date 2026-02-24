@@ -74,12 +74,34 @@ These require a phone call for each facility.
 
 **File to edit:** `shared/data/consulates.ts`
 
+### How automated checks work (no API key required)
+The consulate checker uses three open-source methods:
+- **Website phone scraping** — fetches the official consulate website and extracts US-formatted phone numbers directly from the HTML. This is the primary phone verification source.
+- **Nominatim / OpenStreetMap** — checks whether the consulate still appears in OSM at the expected city. A miss is a soft signal to verify the address manually.
+- **HTTP HEAD check** — confirms the website URL is reachable.
+
 ### "Phone Changed" items
+The automated scraper found a US phone number on the official website that does not match what we have stored.
+
 1. Open the consulate's official website (the `website` field in the data file).
 2. Go to their Contact or Consular Services page.
 3. **If the website confirms the new number:** update `mainConsulate.phone` (or `mainPhone`). Check the box.
 4. **If the website is down** (also flagged as "Website Down"): search `[country] consulate [city] contact` and use the first `.gov` or official-looking result. Document the source in a code comment.
 5. **If you cannot confirm with confidence:** set the field to the value you can best verify and add a `// UNVERIFIED — recheck next quarter` comment. Check the box.
+
+### "Manual Verification Required" items (phone scrape failed)
+The official website loaded but no US-formatted phone numbers could be extracted automatically (common when the site uses JavaScript rendering or unconventional formats).
+
+1. Open the official website directly.
+2. Find the phone number on the Contact page.
+3. Update if it differs from our stored value. Check the box.
+
+### "Not Found on Source" / "Address Changed" items (Nominatim)
+The consulate was not found in OpenStreetMap, or was found in a different city than expected.
+
+1. Check the consulate's official website for a current address.
+2. **If the address has changed:** update the address fields in the data file. If the city changed, update `mainConsulate.city` and `mainConsulate.state`. Check the box.
+3. **If the address appears correct and OSM simply lacks the listing:** add a comment in the issue: *"OSM data gap; address confirmed via official site."* Check the box.
 
 ### "Website Down" items
 1. Try the URL in a browser.
