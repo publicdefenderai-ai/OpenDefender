@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
@@ -388,16 +388,25 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [showAllCharges, setShowAllCharges] = useState(true);
+  const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
   const availableCharges = getChargesByJurisdiction(formData.jurisdiction);
   
-  // Filter charges by category if selected
-  const filteredCharges = selectedCategory && selectedCategory !== 'all'
+  const categoryFiltered = selectedCategory && selectedCategory !== 'all'
     ? availableCharges.filter(charge => 
         chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id)
       )
     : availableCharges;
+
+  const filteredCharges = chargeSearchQuery.trim()
+    ? categoryFiltered.filter(charge => {
+        const q = chargeSearchQuery.toLowerCase();
+        return charge.name.toLowerCase().includes(q) ||
+          charge.code.toLowerCase().includes(q) ||
+          charge.description.toLowerCase().includes(q);
+      })
+    : categoryFiltered;
   
   // Custom sorting function to group crimes with degrees together
   const sortChargesWithDegrees = (charges: any[]) => {
@@ -545,6 +554,22 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
             </div>
           )}
           
+          {/* Charge Search */}
+          <div>
+            <Label htmlFor="charge-search">{t('legalGuidance.qaFlow.caseDetails.searchLabel', 'Search charges')}</Label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                id="charge-search"
+                placeholder={t('legalGuidance.qaFlow.caseDetails.searchPlaceholder', 'Type to search (e.g. fare evasion, DUI, theft...)')}
+                value={chargeSearchQuery}
+                onChange={(e) => setChargeSearchQuery(e.target.value)}
+                className="pl-9"
+                aria-label="Search charges by name, code, or description"
+              />
+            </div>
+          </div>
+
           {/* Category Filter */}
           <div>
             <Label htmlFor="category">{t('legalGuidance.qaFlow.caseDetails.filterLabel')}</Label>
@@ -576,10 +601,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           {/* Charge Selection */}
           <div>
             <Label className="text-sm font-medium mb-2 block">
-              {t('legalGuidance.qaFlow.caseDetails.selectLabel')}
+              {t('legalGuidance.qaFlow.caseDetails.selectLabel')} ({totalFilteredCharges} {totalFilteredCharges === 1 ? 'charge' : 'charges'})
             </Label>
             <div className="max-h-64 overflow-y-auto border rounded-md p-3 space-y-4">
               
+              {totalFilteredCharges === 0 && (
+                <p className="text-sm text-muted-foreground text-center py-4">
+                  {t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
+                </p>
+              )}
+
               {/* State Charges Section */}
               {stateCharges.length > 0 && (
                 <div>

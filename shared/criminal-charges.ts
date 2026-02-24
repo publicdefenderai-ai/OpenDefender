@@ -61928,7 +61928,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Cease all contact with the alleged victim immediately', 'Contact an attorney', 'Preserve all communications that show context', 'Do not delete any messages or social media posts', 'Comply with any temporary orders']
   },
   {
-    id: 'ca-contempt-of-court',
+    id: 'ca-contempt-of-court-misdemeanor',
     name: 'Contempt of Court',
     code: '166',
     jurisdiction: 'CA',
@@ -65321,7 +65321,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Do not pour out or destroy the container during a stop', 'Cooperate with officer but exercise your rights', 'Note the exact location of the container', 'Contact attorney if cited']
   },
   {
-    id: 'ne-minor-in-possession',
+    id: 'ne-minor-in-possession-alcohol',
     name: 'Minor in Possession of Alcohol',
     code: '53-180.02',
     jurisdiction: 'NE',
@@ -65464,7 +65464,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Cease all contact with protected party immediately', 'Contact attorney immediately', 'Review exact terms of the order', 'Document any contact initiated by the other party', 'Stay away from prohibited locations']
   },
   {
-    id: 'nv-open-container',
+    id: 'nv-open-container-violation',
     name: 'Open Container Violation',
     code: '484B.150',
     jurisdiction: 'NV',
@@ -65815,7 +65815,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Stop providing any further information', 'Invoke your right to remain silent', 'Request an attorney', 'Do not attempt to correct the false information without attorney present']
   },
   {
-    id: 'nj-harassment',
+    id: 'nj-harassment-stalking',
     name: 'Harassment / Stalking',
     code: '2C:33-4',
     jurisdiction: 'NJ',
@@ -66088,7 +66088,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Cease all contact with protected party immediately', 'Contact attorney immediately', 'Review exact terms of the order', 'Document any contact initiated by the other party', 'Stay away from prohibited locations']
   },
   {
-    id: 'ny-open-container',
+    id: 'ny-open-container-violation',
     name: 'Open Container Violation',
     code: '1227-a',
     jurisdiction: 'NY',
@@ -66127,7 +66127,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Stop providing any further information', 'Invoke your right to remain silent', 'Request an attorney', 'Do not attempt to correct the false information without attorney present']
   },
   {
-    id: 'ny-harassment',
+    id: 'ny-harassment-stalking',
     name: 'Harassment / Stalking',
     code: '240.26',
     jurisdiction: 'NY',
@@ -66907,7 +66907,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Stop providing any further information', 'Invoke your right to remain silent', 'Request an attorney', 'Do not attempt to correct the false information without attorney present']
   },
   {
-    id: 'or-harassment',
+    id: 'or-harassment-stalking',
     name: 'Harassment / Stalking',
     code: '166.065',
     jurisdiction: 'OR',
@@ -67063,7 +67063,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Stop providing any further information', 'Invoke your right to remain silent', 'Request an attorney', 'Do not attempt to correct the false information without attorney present']
   },
   {
-    id: 'pa-harassment',
+    id: 'pa-harassment-stalking',
     name: 'Harassment / Stalking',
     code: '18-2709',
     jurisdiction: 'PA',
@@ -67622,7 +67622,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact your probation officer immediately', 'Contact your attorney before the hearing', 'Gather evidence of compliance efforts', 'Do not miss the revocation hearing']
   },
   {
-    id: 'tn-resisting-arrest',
+    id: 'tn-resisting-arrest-obstruction',
     name: 'Resisting Arrest / Obstruction',
     code: '39-16-602',
     jurisdiction: 'TN',
