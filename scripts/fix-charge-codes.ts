@@ -24,7 +24,7 @@ function extractSectionFromCitation(citation: string): string | null {
     const ilcsMatch = citation.match(/ILCS\s+([\d\w\-.:\/]+)/);
     return ilcsMatch ? ilcsMatch[1] : null;
   }
-  const match = citation.match(/§\s*([\d\w\-.:\/()]+)/);
+  const match = citation.match(/§\s*([\d\w\-.:\/]+(?:\([A-Za-z0-9]+\))*\d*)/);
   return match ? match[1] : null;
 }
 

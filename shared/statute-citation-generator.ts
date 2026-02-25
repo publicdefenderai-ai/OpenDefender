@@ -399,7 +399,97 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
       // DC: Official code site
       return `https://code.dccouncil.gov/us/dc/council/code/sections/${code}`;
     
-    // Add more states as URL patterns are confirmed
+    case 'AK':
+      return `https://www.akleg.gov/basis/statutes.asp#${code}`;
+    
+    case 'AZ':
+      return `https://www.azleg.gov/ars/${code.split('-')[0]}/${code.replace('-', '')}.htm`;
+    
+    case 'CT':
+      return `https://www.cga.ct.gov/current/pub/chap_952.htm#sec_${code}`;
+    
+    case 'KS':
+      return `https://www.ksrevisor.org/statutes/chapters/ch${code.split('-')[0]}/article${code.split('-')[1]?.substring(0, 2) || ''}/statut_${code.replace(/-/g, '_')}.html`;
+    
+    case 'KY':
+      return `https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=${code}`;
+    
+    case 'LA':
+      return `https://legis.la.gov/legis/Law.aspx?d=${code.replace(':', '_')}`;
+    
+    case 'ME':
+      return `https://legislature.maine.gov/statutes/17-A/title17-Asec${code}.html`;
+    
+    case 'MD':
+      return `https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcr&section=${code}`;
+    
+    case 'MA':
+      if (code.includes('-')) {
+        const maParts = code.split('-');
+        return `https://malegislature.gov/Laws/GeneralLaws/PartIV/TitleI/Chapter${maParts[0]}/Section${maParts[1]}`;
+      }
+      return `https://malegislature.gov/Laws/GeneralLaws/PartIV/TitleI/Chapter265/Section${code}`;
+    
+    case 'MN':
+      return `https://www.revisor.mn.gov/statutes/cite/${code}`;
+    
+    case 'MS':
+      return `https://law.justia.com/codes/mississippi/2022/title-97/chapter-${code.split('-')[1] || '3'}/section-${code.split('(')[0]}/`;
+    
+    case 'MO':
+      return `https://revisor.mo.gov/main/OneSection.aspx?section=${code}`;
+    
+    case 'MT':
+      return `https://leg.mt.gov/bills/mca/${code.split('-')[0]}/${code.split('-')[1] || '5'}/${code.replace(/-/g, '')}.htm`;
+    
+    case 'NV':
+      return `https://www.leg.state.nv.us/nrs/NRS-${code.split('.')[0]}.html#NRS${code.replace('.', 'Sec')}`;
+    
+    case 'NH':
+      return `https://www.gencourt.state.nh.us/rsa/html/LXII/${code.split(':')[0]}/${code.replace(':', '-')}.htm`;
+    
+    case 'NJ':
+      return `https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&sn=${code}`;
+    
+    case 'NM':
+      return `https://nmonesource.com/nmos/nmsa/en/item/${code.split('-')[0]}/index.do#!fragment/${code}`;
+    
+    case 'ND':
+      return `https://www.ndlegis.gov/cencode/t${code.split('-')[0] || '12'}c${code.split('-')[1]?.substring(0, 2) || '01'}.html#${code.replace(/-/g, '_')}`;
+    
+    case 'OK':
+      return `https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=${code}`;
+    
+    case 'OR':
+      return `https://www.oregonlegislature.gov/bills_laws/ors/ors${code.split('.')[0]}.html`;
+    
+    case 'RI':
+      return `https://law.justia.com/codes/rhode-island/2022/title-${code.split('-')[0]}/chapter-${code.split('-')[0]}-${code.split('-')[1] || '5'}/section-${code}/`;
+    
+    case 'SC':
+      return `https://www.scstatehouse.gov/code/t${code.split('-')[0]}c${code.split('-')[1] || '011'}.php#${code}`;
+    
+    case 'SD':
+      return `https://sdlegislature.gov/Statutes/Codified_Laws/DisplayStatute.aspx?Type=Statute&Statute=${code}`;
+    
+    case 'TN':
+      return `https://law.justia.com/codes/tennessee/2022/title-${code.split('-')[0]}/chapter-${code.split('-')[1] || '5'}/section-${code}/`;
+    
+    case 'UT':
+      return `https://le.utah.gov/xcode/Title${code.split('-')[0]}/Chapter${code.split('-')[1] || '5'}/C${code.split('-')[0]}-${code.split('-')[1] || '5'}_${code.split('-')[2] || ''}`;
+    
+    case 'VT':
+      return `https://legislature.vermont.gov/statutes/section/13/${code.split('/')[0] || code}`;
+    
+    case 'VA':
+      return `https://law.lis.virginia.gov/vacode/title${code.split('.')[0]?.split('-')[0] || '18'}/chapter${code.split('.')[0]?.split('-')[1] || '4'}/section${code}/`;
+    
+    case 'WV':
+      return `https://code.wvlegislature.gov/chapter-${code.split('-')[0]}/article-${code.split('-')[1] || '2'}/section-${code}/`;
+    
+    case 'WY':
+      return `https://law.justia.com/codes/wyoming/2022/title-${code.split('-')[0]}/chapter-${code.split('-')[1] || '2'}/section-${code}/`;
+    
     default:
       return null;
   }
