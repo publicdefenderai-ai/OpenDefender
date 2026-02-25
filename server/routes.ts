@@ -288,7 +288,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       
       // Limit results
-      const maxResults = Math.min(parseInt(limit as string) || 100, 500);
+      const maxResults = Math.min(parseInt(limit as string) || 200, 500);
       charges = charges.slice(0, maxResults);
       
       // Return simplified charge data for the selector with localized fields
