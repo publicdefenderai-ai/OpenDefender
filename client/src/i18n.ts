@@ -8279,6 +8279,38 @@ i18n
                   "description": "Aprenda sobre el sellado de antecedentes penales."
                 }
               },
+              "lifeSupport": {
+                "title": "Recursos de Apoyo para la Vida",
+                "description": "Ayuda práctica para los desafíos que vienen con un caso penal",
+                "supportHub": {
+                  "title": "Centro de Recursos de Apoyo",
+                  "description": "Explore todas las categorías de apoyo en un solo lugar."
+                },
+                "employment": {
+                  "title": "Ayuda con Empleo",
+                  "description": "Apoyo en búsqueda de trabajo, ayuda con currículum y derechos laborales."
+                },
+                "finances": {
+                  "title": "Asistencia Financiera",
+                  "description": "Fondos de emergencia, ayuda con presupuesto y programas de beneficios."
+                },
+                "courtLogistics": {
+                  "title": "Logística del Tribunal",
+                  "description": "Qué esperar, qué llevar y cómo prepararse para el tribunal."
+                },
+                "mentalHealth": {
+                  "title": "Apoyo de Salud Mental",
+                  "description": "Líneas de crisis, recursos de consejería y manejo del estrés."
+                },
+                "transportation": {
+                  "title": "Ayuda con Transporte",
+                  "description": "Cómo llegar al tribunal, información de transporte público y programas de viaje."
+                },
+                "childcare": {
+                  "title": "Recursos de Cuidado Infantil",
+                  "description": "Encontrar cuidado infantil durante fechas de tribunal y citas legales."
+                }
+              },
               "reference": {
                 "title": "Referencia",
                 "description": "Busque términos legales y ubicaciones",
@@ -11716,6 +11748,38 @@ i18n
                 "recordExpungement": {
                   "title": "记录清除",
                   "description": "了解如何封存犯罪记录。"
+                }
+              },
+              "lifeSupport": {
+                "title": "生活支持资源",
+                "description": "应对刑事案件带来的生活挑战的实用帮助",
+                "supportHub": {
+                  "title": "支持资源中心",
+                  "description": "在一个地方浏览所有生活支持类别。"
+                },
+                "employment": {
+                  "title": "就业帮助",
+                  "description": "求职支持、简历帮助和工作场所权利。"
+                },
+                "finances": {
+                  "title": "财务援助",
+                  "description": "紧急资金、预算帮助和福利计划。"
+                },
+                "courtLogistics": {
+                  "title": "法庭后勤",
+                  "description": "预期情况、需要携带的物品以及如何准备出庭。"
+                },
+                "mentalHealth": {
+                  "title": "心理健康支持",
+                  "description": "危机热线、咨询资源和压力管理。"
+                },
+                "transportation": {
+                  "title": "交通帮助",
+                  "description": "如何到达法院、公共交通信息和出行计划。"
+                },
+                "childcare": {
+                  "title": "儿童看护资源",
+                  "description": "在出庭日期和法律预约期间寻找儿童看护。"
                 }
               },
               "reference": {
