@@ -3137,7 +3137,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-contempt-of-court',
     name: 'Contempt of Court (Violation of Court Order)',
-    code: '166(a)(4)',
+    code: '166',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, including violation of restraining orders or protective orders under California Penal Code § 166(a)(4)',
@@ -32868,7 +32868,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-open-container',
     name: 'Open Container Violation',
-    code: 'AC 10-125',
+    code: '1227',
     jurisdiction: 'NY',
     category: 'infraction',
     description: 'Consuming alcohol or possessing an open container of alcohol in a public place in New York City under NYC Administrative Code § 10-125',
@@ -61202,7 +61202,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-failure-to-appear',
     name: 'Failure to Appear',
-    code: '15-13-3',
+    code: '13A-10-39',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under AL law',
@@ -61215,7 +61215,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-probation-violation',
     name: 'Probation Violation',
-    code: '15-22-31',
+    code: '15-22-50',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under AL law',
@@ -61254,7 +61254,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-open-container',
     name: 'Open Container Violation',
-    code: '32-5A-190',
+    code: '32-5A-330',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under AL law',
@@ -61332,7 +61332,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '13A-12-121',
+    code: '13A-12-120',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under AL law',
@@ -61410,7 +61410,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-open-container',
     name: 'Open Container Violation',
-    code: '04.16.050',
+    code: '04.16.052',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under AK law',
@@ -61566,7 +61566,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-open-container',
     name: 'Open Container Violation',
-    code: '4-244',
+    code: '4-244.34',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under AZ law',
@@ -61709,7 +61709,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '5-53-134',
+    code: '9-15-207',
     jurisdiction: 'AR',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under AR law',
@@ -61865,7 +61865,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '273.6',
+    code: '166',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under CA law',
@@ -61995,7 +61995,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-probation-violation',
     name: 'Probation Violation',
-    code: '16-11-206',
+    code: '18-1.3-204',
     jurisdiction: 'CO',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under CO law',
@@ -62086,7 +62086,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-contempt-of-court',
     name: 'Contempt of Court',
-    code: '18-8-707',
+    code: '16-4-201',
     jurisdiction: 'CO',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under CO law',
@@ -62190,7 +62190,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-open-container',
     name: 'Open Container Violation',
-    code: '30-89a',
+    code: '30-89',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under CT law',
@@ -62294,7 +62294,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-failure-to-appear',
     name: 'Failure to Appear',
-    code: '11-2113',
+    code: '11-1244',
     jurisdiction: 'DE',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under DE law',
@@ -62333,7 +62333,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '11-1112A',
+    code: '11-1271A',
     jurisdiction: 'DE',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under DE law',
@@ -62346,7 +62346,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-open-container',
     name: 'Open Container Violation',
-    code: '4-713',
+    code: '4-901',
     jurisdiction: 'DE',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under DE law',
@@ -62619,7 +62619,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-probation-violation',
     name: 'Probation Violation',
-    code: '42-8-38',
+    code: '42-8-34.1',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under GA law',
@@ -62749,7 +62749,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '40-6-10',
+    code: '33-34-12',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under GA law',
@@ -62905,7 +62905,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '431:10C-117',
+    code: '431:10C-104',
     jurisdiction: 'HI',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under HI law',
@@ -62918,7 +62918,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-failure-to-appear',
     name: 'Failure to Appear',
-    code: '18-7011',
+    code: '18-7009',
     jurisdiction: 'ID',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under ID law',
@@ -63204,7 +63204,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '720-5/11-14.1',
+    code: '720-5/11-14',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under IL law',
@@ -63334,7 +63334,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-contempt-of-court',
     name: 'Contempt of Court',
-    code: '34-47-3-6',
+    code: '34-47-3-1',
     jurisdiction: 'IN',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under IN law',
@@ -63425,7 +63425,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '664A.7',
+    code: '236.8',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under IA law',
@@ -63529,7 +63529,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '321A.32A',
+    code: '321A.21',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under IA law',
@@ -63542,7 +63542,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-failure-to-appear',
     name: 'Failure to Appear',
-    code: '21-5914',
+    code: '21-5910',
     jurisdiction: 'KS',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under KS law',
@@ -63711,7 +63711,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-probation-violation',
     name: 'Probation Violation',
-    code: '533.050',
+    code: '439.3106',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under KY law',
@@ -63737,7 +63737,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '403.763',
+    code: '456.180',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under KY law',
@@ -63802,7 +63802,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-contempt-of-court',
     name: 'Contempt of Court',
-    code: '432.264',
+    code: '432.260',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under KY law',
@@ -63841,7 +63841,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '304.99-060',
+    code: '304.39-080',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under KY law',
@@ -63854,7 +63854,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-failure-to-appear',
     name: 'Failure to Appear',
-    code: '14:228',
+    code: '14:69.1',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under LA law',
@@ -63867,7 +63867,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-probation-violation',
     name: 'Probation Violation',
-    code: '14:900.1',
+    code: '15:574.9',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under LA law',
@@ -63958,7 +63958,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-contempt-of-court',
     name: 'Contempt of Court',
-    code: '14:130',
+    code: '14:69.1',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under LA law',
@@ -64010,7 +64010,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-failure-to-appear',
     name: 'Failure to Appear',
-    code: '15-1091',
+    code: '17-A-756',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under ME law',
@@ -64023,7 +64023,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-probation-violation',
     name: 'Probation Violation',
-    code: '17A-1205',
+    code: '17-A-1206',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under ME law',
@@ -64036,7 +64036,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '17A-751',
+    code: '17-A-751',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under ME law',
@@ -64049,7 +64049,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '19-4011',
+    code: '19-A-4011',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under ME law',
@@ -64062,7 +64062,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-open-container',
     name: 'Open Container Violation',
-    code: '29-2112-A',
+    code: '29-A-2112-A',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under ME law',
@@ -64114,7 +64114,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-contempt-of-court',
     name: 'Contempt of Court',
-    code: '14-254',
+    code: '17-A-705',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under ME law',
@@ -64127,7 +64127,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '17A-708',
+    code: '17-A-708',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under ME law',
@@ -64140,7 +64140,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '17A-853',
+    code: '17-A-853-A',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under ME law',
@@ -64153,7 +64153,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '29A-1601',
+    code: '29-A-1601',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under ME law',
@@ -64166,7 +64166,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-failure-to-appear',
     name: 'Failure to Appear',
-    code: '7-301',
+    code: '5-212',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under MD law',
@@ -64179,7 +64179,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-probation-violation',
     name: 'Probation Violation',
-    code: '6-234',
+    code: '6-221',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under MD law',
@@ -64205,7 +64205,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '4-508',
+    code: '4-509',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under MD law',
@@ -64270,7 +64270,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-contempt-of-court',
     name: 'Contempt of Court',
-    code: '1-202',
+    code: '9-103',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under MD law',
@@ -64426,7 +64426,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-contempt-of-court',
     name: 'Contempt of Court',
-    code: '268-1',
+    code: '209A-7',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under MA law',
@@ -64491,7 +64491,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-probation-violation',
     name: 'Probation Violation',
-    code: '771.4',
+    code: '771.4a',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under MI law',
@@ -64517,7 +64517,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '750.81e',
+    code: '750.81',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under MI law',
@@ -64582,7 +64582,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-contempt-of-court',
     name: 'Contempt of Court',
-    code: '600.1715',
+    code: '600.1701',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under MI law',
@@ -64790,7 +64790,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-failure-to-appear',
     name: 'Failure to Appear',
-    code: '99-5-9',
+    code: '99-19-37',
     jurisdiction: 'MS',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under MS law',
@@ -64998,7 +64998,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-open-container',
     name: 'Open Container Violation',
-    code: '577.017',
+    code: '311.727',
     jurisdiction: 'MO',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under MO law',
@@ -65102,7 +65102,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-failure-to-appear',
     name: 'Failure to Appear',
-    code: '46-9-502',
+    code: '45-7-302',
     jurisdiction: 'MT',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under MT law',
@@ -65245,7 +65245,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '61-6-301',
+    code: '61-6-302',
     jurisdiction: 'MT',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under MT law',
@@ -65271,7 +65271,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-probation-violation',
     name: 'Probation Violation',
-    code: '29-2267',
+    code: '29-2268',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under NE law',
@@ -65401,7 +65401,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '60-3.304',
+    code: '60-528',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under NE law',
@@ -65570,7 +65570,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-failure-to-appear',
     name: 'Failure to Appear',
-    code: '597-7-a',
+    code: '597:6-d',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under NH law',
@@ -65583,7 +65583,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-probation-violation',
     name: 'Probation Violation',
-    code: '504-A:4',
+    code: '504:1',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under NH law',
@@ -65674,7 +65674,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-contempt-of-court',
     name: 'Contempt of Court',
-    code: '514:8',
+    code: '517:16',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under NH law',
@@ -65817,7 +65817,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-harassment-stalking',
     name: 'Harassment / Stalking',
-    code: '2C:33-4',
+    code: '2C:12-10',
     jurisdiction: 'NJ',
     category: 'misdemeanor',
     description: 'A pattern of conduct directed at a specific person that would cause a reasonable person to feel fear, intimidation, or substantial emotional distress under NJ law',
@@ -66038,7 +66038,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-failure-to-appear',
     name: 'Failure to Appear',
-    code: '215.58',
+    code: '215.59',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under NY law',
@@ -66129,7 +66129,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-harassment-stalking',
     name: 'Harassment / Stalking',
-    code: '240.26',
+    code: '120.45',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'A pattern of conduct directed at a specific person that would cause a reasonable person to feel fear, intimidation, or substantial emotional distress under NY law',
@@ -66142,7 +66142,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-contempt-of-court',
     name: 'Contempt of Court',
-    code: '215.50',
+    code: '750',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under NY law',
@@ -66350,7 +66350,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-failure-to-appear',
     name: 'Failure to Appear',
-    code: '29-03-30',
+    code: '12.1-08-04',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under ND law',
@@ -66389,7 +66389,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '14-07.1-06',
+    code: '12.1-31-02',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under ND law',
@@ -66467,7 +66467,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '06-09-10',
+    code: '6-08-16',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under ND law',
@@ -66480,7 +66480,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '12.1-29-06',
+    code: '12.1-29-03',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under ND law',
@@ -66506,7 +66506,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-failure-to-appear',
     name: 'Failure to Appear',
-    code: '2937.29',
+    code: '2937.99',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under OH law',
@@ -66662,7 +66662,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-failure-to-appear',
     name: 'Failure to Appear',
-    code: '22-1115',
+    code: '22-1115.4',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under OK law',
@@ -66857,7 +66857,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '107.720',
+    code: '163.750',
     jurisdiction: 'OR',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under OR law',
@@ -66909,7 +66909,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-harassment-stalking',
     name: 'Harassment / Stalking',
-    code: '166.065',
+    code: '163.732',
     jurisdiction: 'OR',
     category: 'misdemeanor',
     description: 'A pattern of conduct directed at a specific person that would cause a reasonable person to feel fear, intimidation, or substantial emotional distress under OR law',
@@ -67143,7 +67143,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-probation-violation',
     name: 'Probation Violation',
-    code: '12-19-20',
+    code: '12-19-9',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under RI law',
@@ -67182,7 +67182,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-open-container',
     name: 'Open Container Violation',
-    code: '31-22-21',
+    code: '31-22-22',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under RI law',
@@ -67234,7 +67234,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-contempt-of-court',
     name: 'Contempt of Court',
-    code: '12-1-9',
+    code: '8-6-1',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under RI law',
@@ -67247,7 +67247,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '6-13.1-1',
+    code: '6-12-1',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under RI law',
@@ -67260,7 +67260,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '11-34-8',
+    code: '11-34.1-2',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under RI law',
@@ -67273,7 +67273,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '31-47-9',
+    code: '31-47-7',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under RI law',
@@ -67286,7 +67286,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-failure-to-appear',
     name: 'Failure to Appear',
-    code: '38-53-70',
+    code: '17-15-100',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under SC law',
@@ -67299,7 +67299,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-probation-violation',
     name: 'Probation Violation',
-    code: '24-21-640',
+    code: '24-21-460',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under SC law',
@@ -67390,7 +67390,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-contempt-of-court',
     name: 'Contempt of Court',
-    code: '14-5-320',
+    code: '14-25-15',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under SC law',
@@ -67429,7 +67429,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '56-10-520',
+    code: '56-10-20',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under SC law',
@@ -67442,7 +67442,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-failure-to-appear',
     name: 'Failure to Appear',
-    code: '23A-43-32',
+    code: '23A-43-29',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under SD law',
@@ -67455,7 +67455,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-probation-violation',
     name: 'Probation Violation',
-    code: '23A-31-4',
+    code: '23A-31-2',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under SD law',
@@ -67494,7 +67494,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-open-container',
     name: 'Open Container Violation',
-    code: '35-1-8.2',
+    code: '35-1-14',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under SD law',
@@ -67546,7 +67546,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-contempt-of-court',
     name: 'Contempt of Court',
-    code: '15-25-1',
+    code: '21-29-1',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under SD law',
@@ -67897,7 +67897,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '601.191',
+    code: '601.051',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under TX law',
@@ -67949,7 +67949,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '77-36-2.4',
+    code: '76-5-108',
     jurisdiction: 'UT',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under UT law',
@@ -68066,7 +68066,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-failure-to-appear',
     name: 'Failure to Appear',
-    code: '7553a',
+    code: '13-7559',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under VT law',
@@ -68118,7 +68118,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-open-container',
     name: 'Open Container Violation',
-    code: '23-1134',
+    code: '23-1134a',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under VT law',
@@ -68196,7 +68196,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '13-2632',
+    code: '13-2631',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under VT law',
@@ -68378,7 +68378,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-failure-to-appear',
     name: 'Failure to Appear',
-    code: '9A.76.170',
+    code: '10.19.130',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under WA law',
@@ -68391,7 +68391,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-probation-violation',
     name: 'Probation Violation',
-    code: '9.94A.631',
+    code: '9.94A.634',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under WA law',
@@ -68534,7 +68534,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-failure-to-appear',
     name: 'Failure to Appear',
-    code: '62-1C-17',
+    code: '62-1C-17a',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under WV law',
@@ -68586,7 +68586,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-open-container',
     name: 'Open Container Violation',
-    code: '60-6-9',
+    code: '17C-14-9',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under WV law',
@@ -68690,7 +68690,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-failure-to-appear',
     name: 'Failure to Appear',
-    code: '946.49',
+    code: '968.09',
     jurisdiction: 'WI',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under WI law',
@@ -68846,7 +68846,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-failure-to-appear',
     name: 'Failure to Appear',
-    code: '7-11-509',
+    code: '7-10-102',
     jurisdiction: 'WY',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under WY law',
@@ -68950,7 +68950,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-contempt-of-court',
     name: 'Contempt of Court',
-    code: '1-21-101',
+    code: '1-21-901',
     jurisdiction: 'WY',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under WY law',
@@ -69028,7 +69028,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '22-405',
+    code: '22-405.01',
     jurisdiction: 'DC',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under DC law',
@@ -69145,7 +69145,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '31-2413',
+    code: '50-1301.03',
     jurisdiction: 'DC',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under DC law',
@@ -69158,7 +69158,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-failure-to-appear',
     name: 'Failure to Appear',
-    code: '34-4501',
+    code: '34-1741',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under PR law',
@@ -69171,7 +69171,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-probation-violation',
     name: 'Probation Violation',
-    code: '34-4601',
+    code: '34-1742',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under PR law',
@@ -69184,7 +69184,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '34-4101',
+    code: '33-4063',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under PR law',
@@ -69197,7 +69197,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '34-4201',
+    code: '8-602',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under PR law',
@@ -69210,7 +69210,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-open-container',
     name: 'Open Container Violation',
-    code: '34-4301',
+    code: '13-2501',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under PR law',
@@ -69262,7 +69262,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-contempt-of-court',
     name: 'Contempt of Court',
-    code: '34-4202',
+    code: '34-1743',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under PR law',
@@ -69275,7 +69275,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '34-4303',
+    code: '33-4066',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under PR law',
@@ -69288,7 +69288,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '34-4304',
+    code: '33-4067',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under PR law',
@@ -69301,7 +69301,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pr-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '34-4305',
+    code: '9-1056',
     jurisdiction: 'PR',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under PR law',
@@ -69327,7 +69327,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-probation-violation',
     name: 'Probation Violation',
-    code: '5-3601',
+    code: '5-3532',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under VI law',
@@ -69340,7 +69340,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '5-3101',
+    code: '14-1081',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under VI law',
@@ -69353,7 +69353,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '5-3201',
+    code: '16-99',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under VI law',
@@ -69366,7 +69366,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-open-container',
     name: 'Open Container Violation',
-    code: '5-3301',
+    code: '14-621',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under VI law',
@@ -69418,7 +69418,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-contempt-of-court',
     name: 'Contempt of Court',
-    code: '5-3202',
+    code: '5-3533',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under VI law',
@@ -69431,7 +69431,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '5-3303',
+    code: '14-1084',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under VI law',
@@ -69444,7 +69444,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '5-3304',
+    code: '14-1085',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under VI law',
@@ -69457,7 +69457,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '5-3305',
+    code: '20-496',
     jurisdiction: 'VI',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under VI law',
@@ -69470,7 +69470,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-failure-to-appear',
     name: 'Failure to Appear',
-    code: '8-85.30',
+    code: '8-69.20',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under GU law',
@@ -69483,7 +69483,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-probation-violation',
     name: 'Probation Violation',
-    code: '8-90.10',
+    code: '8-69.30',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under GU law',
@@ -69496,7 +69496,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '8-80.10',
+    code: '9-68.10',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under GU law',
@@ -69509,7 +69509,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '8-82.10',
+    code: '30-401',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under GU law',
@@ -69522,7 +69522,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-open-container',
     name: 'Open Container Violation',
-    code: '8-83.10',
+    code: '11-103.10',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under GU law',
@@ -69574,7 +69574,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-contempt-of-court',
     name: 'Contempt of Court',
-    code: '8-82.20',
+    code: '8-69.40',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under GU law',
@@ -69587,7 +69587,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '8-83.30',
+    code: '9-68.40',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under GU law',
@@ -69600,7 +69600,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '8-83.40',
+    code: '9-68.50',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under GU law',
@@ -69613,7 +69613,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '8-83.50',
+    code: '16-30106',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under GU law',
@@ -69626,7 +69626,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-failure-to-appear',
     name: 'Failure to Appear',
-    code: '46.0830',
+    code: '46.0801',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under AS law',
@@ -69639,7 +69639,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-probation-violation',
     name: 'Probation Violation',
-    code: '46.0901',
+    code: '46.0802',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under AS law',
@@ -69652,7 +69652,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '46.0701',
+    code: '46.0803',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under AS law',
@@ -69665,7 +69665,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '46.0501',
+    code: '46.0804',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under AS law',
@@ -69678,7 +69678,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-open-container',
     name: 'Open Container Violation',
-    code: '46.0601',
+    code: '4.1401',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under AS law',
@@ -69730,7 +69730,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-contempt-of-court',
     name: 'Contempt of Court',
-    code: '46.0502',
+    code: '46.0807',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under AS law',
@@ -69743,7 +69743,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '46.0603',
+    code: '46.0808',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under AS law',
@@ -69756,7 +69756,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '46.0604',
+    code: '46.0809',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under AS law',
@@ -69769,7 +69769,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '46.0605',
+    code: '22.0906',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under AS law',
@@ -69782,7 +69782,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-failure-to-appear',
     name: 'Failure to Appear',
-    code: '6-3301',
+    code: '6-3201',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under MP law',
@@ -69795,7 +69795,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-probation-violation',
     name: 'Probation Violation',
-    code: '6-3401',
+    code: '6-3202',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Violation of conditions of probation including missed check-ins, failed drug tests, new arrests, or other non-compliance under MP law',
@@ -69808,7 +69808,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '6-3101',
+    code: '6-3203',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under MP law',
@@ -69821,7 +69821,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-protective-order-violation',
     name: 'Violation of Protective Order',
-    code: '6-3201',
+    code: '6-3204',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Knowingly violating a domestic violence protective order, restraining order, or no-contact order issued by a court under MP law',
@@ -69834,7 +69834,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-open-container',
     name: 'Open Container Violation',
-    code: '6-3501',
+    code: '4-1101',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under MP law',
@@ -69886,7 +69886,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-contempt-of-court',
     name: 'Contempt of Court',
-    code: '6-3202',
+    code: '6-3207',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under MP law',
@@ -69899,7 +69899,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '6-3503',
+    code: '6-3208',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under MP law',
@@ -69912,7 +69912,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '6-3504',
+    code: '6-3209',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under MP law',
@@ -69925,7 +69925,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mp-driving-without-insurance',
     name: 'Driving Without Insurance',
-    code: '6-3505',
+    code: '9-2106',
     jurisdiction: 'MP',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without the required minimum liability insurance coverage under MP law',
@@ -70069,7 +70069,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '13A-11-9.1',
+    code: '13A-11-9',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under AL law',
@@ -70095,7 +70095,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-curfew-violation',
     name: 'Curfew Violation',
-    code: '13A-11-9.2',
+    code: '13A-11-9',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under AL law',
@@ -70108,7 +70108,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '13A-7-2.1',
+    code: '13A-7-2',
     jurisdiction: 'AL',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under AL law',
@@ -70121,7 +70121,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '32-5-240.1',
+    code: '32-5-240',
     jurisdiction: 'AL',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under AL law',
@@ -70251,7 +70251,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '11.61.116',
+    code: '29.35.070',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under AK law',
@@ -70264,7 +70264,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '11.61.117',
+    code: '11.61.116',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under AK law',
@@ -70277,7 +70277,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '28.10.471',
+    code: '28.10.011',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under AK law',
@@ -70290,7 +70290,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ak-curfew-violation',
     name: 'Curfew Violation',
-    code: '11.61.118',
+    code: '47.10.010',
     jurisdiction: 'AK',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under AK law',
@@ -70446,7 +70446,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '13-2905.01',
+    code: '13-2905',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under AZ law',
@@ -70459,7 +70459,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '13-2905.02',
+    code: '13-2905',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under AZ law',
@@ -70498,7 +70498,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'az-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '13-1504.1',
+    code: '13-1504',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under AZ law',
@@ -70654,7 +70654,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ar-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '5-71-214',
+    code: '5-71-213',
     jurisdiction: 'AR',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under AR law',
@@ -70810,7 +70810,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '7-1.26',
+    code: '7.1.26',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under CA law',
@@ -70862,7 +70862,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '4000a',
+    code: '4000',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under CA law',
@@ -70888,7 +70888,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '602.1',
+    code: '602',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under CA law',
@@ -71044,7 +71044,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'co-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '18-9-118',
+    code: '18-9-112',
     jurisdiction: 'CO',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under CO law',
@@ -71239,7 +71239,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '53a-182b',
+    code: '53a-182',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under CT law',
@@ -71252,7 +71252,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '14-12a',
+    code: '14-12',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under CT law',
@@ -71265,7 +71265,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-curfew-violation',
     name: 'Curfew Violation',
-    code: '53a-182c',
+    code: '10-200',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under CT law',
@@ -71278,7 +71278,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ct-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '53a-109a',
+    code: '53a-109',
     jurisdiction: 'CT',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under CT law',
@@ -71434,7 +71434,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'de-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '11-1322',
+    code: '11-1321',
     jurisdiction: 'DE',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under DE law',
@@ -71629,7 +71629,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '856.025',
+    code: '856.021',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under FL law',
@@ -71824,7 +71824,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '16-11-37',
+    code: '16-11-36',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under GA law',
@@ -71863,7 +71863,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ga-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '16-7-21.1',
+    code: '16-7-21',
     jurisdiction: 'GA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under GA law',
@@ -72019,7 +72019,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '711-1106.6',
+    code: '711-1106.5',
     jurisdiction: 'HI',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under HI law',
@@ -72032,7 +72032,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '286-47.5',
+    code: '286-47',
     jurisdiction: 'HI',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under HI law',
@@ -72058,7 +72058,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'hi-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '708-814.5',
+    code: '708-814',
     jurisdiction: 'HI',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under HI law',
@@ -72201,7 +72201,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '18-7008.2',
+    code: '18-7008',
     jurisdiction: 'ID',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under ID law',
@@ -72214,7 +72214,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'id-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '18-7008.3',
+    code: '18-7008',
     jurisdiction: 'ID',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under ID law',
@@ -72396,7 +72396,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '720-5/26-1.5',
+    code: '720-5/26-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under IL law',
@@ -72409,7 +72409,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '720-5/26-1.6',
+    code: '720-5/26-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under IL law',
@@ -72448,7 +72448,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '720-5/21-3.1',
+    code: '720-5/21-3',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under IL law',
@@ -72591,7 +72591,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '35-45-1-4.5',
+    code: '35-45-1-4',
     jurisdiction: 'IN',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under IN law',
@@ -72604,7 +72604,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '35-45-1-4.6',
+    code: '35-45-1-3',
     jurisdiction: 'IN',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under IN law',
@@ -72643,7 +72643,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'in-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '35-43-2-2.5',
+    code: '35-43-2-2',
     jurisdiction: 'IN',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under IN law',
@@ -72786,7 +72786,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '727.1A',
+    code: '727.1',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under IA law',
@@ -72799,7 +72799,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '727.1B',
+    code: '723A.1',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under IA law',
@@ -72838,7 +72838,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ia-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '716.7A',
+    code: '716.7',
     jurisdiction: 'IA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under IA law',
@@ -72994,7 +72994,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '21-6205',
+    code: '21-6203',
     jurisdiction: 'KS',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under KS law',
@@ -73033,7 +73033,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ks-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '21-5809.1',
+    code: '21-5808',
     jurisdiction: 'KS',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under KS law',
@@ -73189,7 +73189,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '525.085',
+    code: '525.080',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under KY law',
@@ -73228,7 +73228,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ky-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '511.080.1',
+    code: '511.080',
     jurisdiction: 'KY',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under KY law',
@@ -73254,7 +73254,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-reckless-driving-criminal',
     name: 'Reckless/Careless Driving (Criminal)',
-    code: '32:58',
+    code: '14:99',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under LA law',
@@ -73345,7 +73345,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '14-102.14',
+    code: '14:102.14',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under LA law',
@@ -73423,7 +73423,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '14:63.4',
+    code: '14:63.3',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under LA law',
@@ -73449,7 +73449,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-reckless-driving-criminal',
     name: 'Reckless/Careless Driving (Criminal)',
-    code: '29A-2073',
+    code: '29-A-2073',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under ME law',
@@ -73462,7 +73462,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-expired-registration',
     name: 'Driving with Expired Registration',
-    code: '29A-351',
+    code: '29-A-351',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle with an expired registration or without valid registration tags under ME law',
@@ -73475,7 +73475,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-expired-inspection',
     name: 'Driving with Expired/No Inspection',
-    code: '29A-1751',
+    code: '29-A-1751',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle without a valid safety inspection sticker or with an expired inspection under ME law',
@@ -73488,7 +73488,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-failure-to-pay-child-support',
     name: 'Criminal Nonsupport / Failure to Pay Child Support',
-    code: '19A-2601',
+    code: '19-A-2601',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Willful failure to provide court-ordered financial support for a child or dependent under ME law',
@@ -73501,7 +73501,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-noise-violation',
     name: 'Noise Violation / Disturbing the Peace by Noise',
-    code: '17A-501',
+    code: '17-A-501',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Creating excessive, unreasonable, or prohibited noise that disturbs the peace and quiet of a neighborhood or community under ME law',
@@ -73514,7 +73514,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-indecent-exposure',
     name: 'Indecent Exposure / Public Urination',
-    code: '17A-854',
+    code: '17-A-854',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Exposing private body parts in a public place or urinating in public view under ME law',
@@ -73527,7 +73527,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-fake-id',
     name: 'Possession of Fake/Fraudulent ID',
-    code: '17A-460',
+    code: '17-A-460',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Possessing, displaying, or using a fraudulent, altered, or counterfeit identification document under ME law',
@@ -73566,7 +73566,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '17A-506',
+    code: '17-A-506',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under ME law',
@@ -73579,7 +73579,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '17A-507',
+    code: '17-A-506',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under ME law',
@@ -73592,7 +73592,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '29A-352',
+    code: '29-A-352',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under ME law',
@@ -73605,7 +73605,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-curfew-violation',
     name: 'Curfew Violation',
-    code: '17A-508',
+    code: '17-A-508',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under ME law',
@@ -73618,7 +73618,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '17A-402.1',
+    code: '17-A-402',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under ME law',
@@ -73631,7 +73631,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '29A-1903',
+    code: '29-A-1903',
     jurisdiction: 'ME',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under ME law',
@@ -73761,7 +73761,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '10-201.1',
+    code: '10-201',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under MD law',
@@ -73774,7 +73774,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '10-201.2',
+    code: '10-201',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MD law',
@@ -73800,7 +73800,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'md-curfew-violation',
     name: 'Curfew Violation',
-    code: '10-201.3',
+    code: '10-201',
     jurisdiction: 'MD',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under MD law',
@@ -73969,7 +73969,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '272-60',
+    code: '272-59',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MA law',
@@ -73995,7 +73995,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-curfew-violation',
     name: 'Curfew Violation',
-    code: '272-60A',
+    code: '272-59',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under MA law',
@@ -74008,7 +74008,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '266-120.1',
+    code: '266-120',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under MA law',
@@ -74151,7 +74151,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '750.552b',
+    code: '750.552',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under MI law',
@@ -74164,7 +74164,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '750.552c',
+    code: '750.167',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MI law',
@@ -74190,7 +74190,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-curfew-violation',
     name: 'Curfew Violation',
-    code: '750.552d',
+    code: '722.751',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under MI law',
@@ -74203,7 +74203,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mi-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '750.552e',
+    code: '750.552',
     jurisdiction: 'MI',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under MI law',
@@ -74346,7 +74346,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '609.745',
+    code: '609.605',
     jurisdiction: 'MN',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under MN law',
@@ -74359,7 +74359,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '609.746',
+    code: '609.605',
     jurisdiction: 'MN',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MN law',
@@ -74398,7 +74398,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mn-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '609.605.1',
+    code: '609.605',
     jurisdiction: 'MN',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under MN law',
@@ -74554,7 +74554,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '97-35-7.1',
+    code: '97-35-37',
     jurisdiction: 'MS',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MS law',
@@ -74593,7 +74593,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ms-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '97-17-87.1',
+    code: '97-17-87',
     jurisdiction: 'MS',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under MS law',
@@ -74749,7 +74749,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '574.076',
+    code: '574.010',
     jurisdiction: 'MO',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MO law',
@@ -74788,7 +74788,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mo-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '569.145',
+    code: '569.140',
     jurisdiction: 'MO',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under MO law',
@@ -74944,7 +74944,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '45-8-111',
+    code: '45-8-101',
     jurisdiction: 'MT',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MT law',
@@ -74983,7 +74983,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'mt-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '45-6-203.1',
+    code: '45-6-203',
     jurisdiction: 'MT',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under MT law',
@@ -75009,7 +75009,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-reckless-driving-criminal',
     name: 'Reckless/Careless Driving (Criminal)',
-    code: '60-6.214',
+    code: '60-6,214',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under NE law',
@@ -75139,7 +75139,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '28-1327',
+    code: '28-1322',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under NE law',
@@ -75178,7 +75178,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '28-522.1',
+    code: '28-522',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NE law',
@@ -75191,7 +75191,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '60-6.219',
+    code: '60-6,219',
     jurisdiction: 'NE',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under NE law',
@@ -75334,7 +75334,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '207.211',
+    code: '207.200',
     jurisdiction: 'NV',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under NV law',
@@ -75373,7 +75373,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nv-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '207.200.1',
+    code: '207.200',
     jurisdiction: 'NV',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NV law',
@@ -75516,7 +75516,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '644:3-a',
+    code: '644:3',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under NH law',
@@ -75529,7 +75529,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '644:3-b',
+    code: '644:2',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under NH law',
@@ -75555,7 +75555,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-curfew-violation',
     name: 'Curfew Violation',
-    code: '644:3-c',
+    code: '169-B:34',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under NH law',
@@ -75568,7 +75568,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '635:2-a',
+    code: '635:2',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NH law',
@@ -75711,7 +75711,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '2C:33-2.2',
+    code: '2C:33-2',
     jurisdiction: 'NJ',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under NJ law',
@@ -75724,7 +75724,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '2C:33-2.3',
+    code: '2C:33-2',
     jurisdiction: 'NJ',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under NJ law',
@@ -75750,7 +75750,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-curfew-violation',
     name: 'Curfew Violation',
-    code: '2C:33-2.4',
+    code: '2C:33-2',
     jurisdiction: 'NJ',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under NJ law',
@@ -75763,7 +75763,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nj-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '2C:18-3.1',
+    code: '2C:18-3',
     jurisdiction: 'NJ',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NJ law',
@@ -75906,7 +75906,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '30-20-3.1',
+    code: '30-20-3',
     jurisdiction: 'NM',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under NM law',
@@ -75919,7 +75919,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '30-20-3.2',
+    code: '30-20-1',
     jurisdiction: 'NM',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under NM law',
@@ -75945,7 +75945,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-curfew-violation',
     name: 'Curfew Violation',
-    code: '30-20-3.3',
+    code: '30-20-3',
     jurisdiction: 'NM',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under NM law',
@@ -75958,7 +75958,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nm-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '30-14-1.1',
+    code: '30-14-1',
     jurisdiction: 'NM',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NM law',
@@ -76127,7 +76127,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '401.1',
+    code: '401',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under NY law',
@@ -76140,7 +76140,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-curfew-violation',
     name: 'Curfew Violation',
-    code: '240.38',
+    code: '722',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under NY law',
@@ -76153,7 +76153,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '140.05.1',
+    code: '140.05',
     jurisdiction: 'NY',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NY law',
@@ -76296,7 +76296,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '14-288.4A',
+    code: '14-288.4',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under NC law',
@@ -76309,7 +76309,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '14-288.4B',
+    code: '14-288.4',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under NC law',
@@ -76335,7 +76335,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-curfew-violation',
     name: 'Curfew Violation',
-    code: '14-288.4C',
+    code: '14-288.4',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under NC law',
@@ -76348,7 +76348,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '14-159.12.1',
+    code: '14-159.12',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NC law',
@@ -76491,7 +76491,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '12.1-31-01.2',
+    code: '12.1-31-01',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under ND law',
@@ -76504,7 +76504,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '12.1-31-01.3',
+    code: '12.1-31-01',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under ND law',
@@ -76530,7 +76530,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-curfew-violation',
     name: 'Curfew Violation',
-    code: '12.1-31-01.4',
+    code: '12.1-31-01',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under ND law',
@@ -76543,7 +76543,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nd-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '12.1-22-03.1',
+    code: '12.1-22-03',
     jurisdiction: 'ND',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under ND law',
@@ -76699,7 +76699,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '2917.13',
+    code: '2917.11',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under OH law',
@@ -76738,7 +76738,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '2911.21.1',
+    code: '2911.21',
     jurisdiction: 'OH',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under OH law',
@@ -76894,7 +76894,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '21-1366',
+    code: '21-1361',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under OK law',
@@ -76933,7 +76933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '21-1835.1',
+    code: '21-1835',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under OK law',
@@ -77076,7 +77076,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '166.055',
+    code: '166.025',
     jurisdiction: 'OR',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under OR law',
@@ -77089,7 +77089,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '166.056',
+    code: '166.025',
     jurisdiction: 'OR',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under OR law',
@@ -77128,7 +77128,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'or-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '164.245.1',
+    code: '164.245',
     jurisdiction: 'OR',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under OR law',
@@ -77284,7 +77284,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '18-5506',
+    code: '18-5503',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under PA law',
@@ -77297,7 +77297,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '75-1301.1',
+    code: '75-1301',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under PA law',
@@ -77323,7 +77323,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '18-3503.1',
+    code: '18-3503',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under PA law',
@@ -77466,7 +77466,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '11-45-1.1',
+    code: '11-45-1',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under RI law',
@@ -77479,7 +77479,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '11-45-1.2',
+    code: '11-45-1',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under RI law',
@@ -77505,7 +77505,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-curfew-violation',
     name: 'Curfew Violation',
-    code: '11-45-1.3',
+    code: '14-1-57',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under RI law',
@@ -77518,7 +77518,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ri-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '11-44-26.1',
+    code: '11-44-26',
     jurisdiction: 'RI',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under RI law',
@@ -77661,7 +77661,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '16-17-535',
+    code: '16-17-530',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under SC law',
@@ -77674,7 +77674,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '16-17-536',
+    code: '16-17-530',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under SC law',
@@ -77713,7 +77713,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '16-11-620.1',
+    code: '16-11-620',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under SC law',
@@ -77869,7 +77869,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '22-36-23',
+    code: '22-36-21',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under SD law',
@@ -77895,7 +77895,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-curfew-violation',
     name: 'Curfew Violation',
-    code: '22-36-24',
+    code: '26-8C-5',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under SD law',
@@ -77908,7 +77908,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sd-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '22-35-6.1',
+    code: '22-35-6',
     jurisdiction: 'SD',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under SD law',
@@ -78064,7 +78064,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '39-17-312',
+    code: '39-17-305',
     jurisdiction: 'TN',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under TN law',
@@ -78103,7 +78103,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tn-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '39-14-405.1',
+    code: '39-14-405',
     jurisdiction: 'TN',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under TN law',
@@ -78259,7 +78259,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '48.06',
+    code: '42.03',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under TX law',
@@ -78298,7 +78298,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'tx-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '30.05.1',
+    code: '30.05',
     jurisdiction: 'TX',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under TX law',
@@ -78441,7 +78441,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '76-9-102.5',
+    code: '76-9-102',
     jurisdiction: 'UT',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under UT law',
@@ -78454,7 +78454,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '76-9-102.6',
+    code: '76-9-102',
     jurisdiction: 'UT',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under UT law',
@@ -78493,7 +78493,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '76-6-206.1',
+    code: '76-6-206',
     jurisdiction: 'UT',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under UT law',
@@ -78506,7 +78506,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ut-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '41-6a-1601.1',
+    code: '41-6a-1601',
     jurisdiction: 'UT',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under UT law',
@@ -78649,7 +78649,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '13-1024',
+    code: '13-1022',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under VT law',
@@ -78675,7 +78675,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-curfew-violation',
     name: 'Curfew Violation',
-    code: '13-1025',
+    code: '33-5102',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under VT law',
@@ -78688,7 +78688,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vt-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '13-3705.1',
+    code: '13-3705',
     jurisdiction: 'VT',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under VT law',
@@ -78831,7 +78831,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '18.2-415.1',
+    code: '18.2-415',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under VA law',
@@ -78844,7 +78844,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '18.2-415.2',
+    code: '18.2-415',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under VA law',
@@ -78870,7 +78870,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-curfew-violation',
     name: 'Curfew Violation',
-    code: '18.2-415.3',
+    code: '16.1-301.1',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under VA law',
@@ -78883,7 +78883,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '18.2-119.1',
+    code: '18.2-119',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under VA law',
@@ -79026,7 +79026,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '9A.84.015',
+    code: '9A.84.010',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under WA law',
@@ -79039,7 +79039,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '9A.84.016',
+    code: '9A.84.010',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under WA law',
@@ -79078,7 +79078,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wa-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '9A.52.080.1',
+    code: '9A.52.080',
     jurisdiction: 'WA',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under WA law',
@@ -79221,7 +79221,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '61-6-14a',
+    code: '61-6-14',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under WV law',
@@ -79234,7 +79234,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '61-6-14b',
+    code: '61-6-14',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under WV law',
@@ -79260,7 +79260,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-curfew-violation',
     name: 'Curfew Violation',
-    code: '61-6-14c',
+    code: '49-4-716',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under WV law',
@@ -79273,7 +79273,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wv-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '61-3B-2.1',
+    code: '61-3B-2',
     jurisdiction: 'WV',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under WV law',
@@ -79416,7 +79416,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '947.015',
+    code: '947.01',
     jurisdiction: 'WI',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under WI law',
@@ -79429,7 +79429,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '947.016',
+    code: '947.01',
     jurisdiction: 'WI',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under WI law',
@@ -79468,7 +79468,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wi-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '943.13.1',
+    code: '943.13',
     jurisdiction: 'WI',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under WI law',
@@ -79624,7 +79624,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '6-6-104',
+    code: '6-6-102',
     jurisdiction: 'WY',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under WY law',
@@ -79663,7 +79663,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'wy-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '6-3-303.1',
+    code: '6-3-303',
     jurisdiction: 'WY',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under WY law',
@@ -79819,7 +79819,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '22-1307.01',
+    code: '22-1307',
     jurisdiction: 'DC',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under DC law',
@@ -79858,7 +79858,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'dc-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '22-3302.1',
+    code: '22-3302',
     jurisdiction: 'DC',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under DC law',
@@ -82016,7 +82016,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'la-hunting-fishing-no-license',
     name: 'Fishing / Hunting Without a License',
-    code: '56-30.1',
+    code: '56:30.1',
     jurisdiction: 'LA',
     category: 'misdemeanor',
     description: 'Fishing, hunting, or trapping wildlife without the required state license, permit, or tag under LA law',
@@ -82068,7 +82068,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'me-alcohol-in-park',
     name: 'Possession of Alcohol in Park / Prohibited Area',
-    code: '28A-2073',
+    code: '28-A-2073',
     jurisdiction: 'ME',
     category: 'misdemeanor',
     description: 'Possessing or consuming alcoholic beverages in a public park, beach, playground, or other designated alcohol-free zone under ME law',
@@ -82679,7 +82679,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-truancy',
     name: 'Truancy / Chronic Absenteeism',
-    code: '193-1',
+    code: '193:1',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'A minor failing to attend school as required by compulsory education laws, or a parent/guardian failing to ensure school attendance under NH law',
@@ -82718,7 +82718,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nh-alcohol-in-park',
     name: 'Possession of Alcohol in Park / Prohibited Area',
-    code: '179-44',
+    code: '179:44',
     jurisdiction: 'NH',
     category: 'misdemeanor',
     description: 'Possessing or consuming alcoholic beverages in a public park, beach, playground, or other designated alcohol-free zone under NH law',
