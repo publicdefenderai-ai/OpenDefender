@@ -190,6 +190,54 @@ export default function HowTo() {
       ]
     },
     {
+      title: t('howTo.sections.lifeSupport.title'),
+      description: t('howTo.sections.lifeSupport.description'),
+      resources: [
+        {
+          icon: <HeartPulse className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.supportHub.title'),
+          description: t('howTo.sections.lifeSupport.supportHub.description'),
+          link: "/support"
+        },
+        {
+          icon: <Briefcase className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.employment.title'),
+          description: t('howTo.sections.lifeSupport.employment.description'),
+          link: "/support/employment"
+        },
+        {
+          icon: <Wallet className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.finances.title'),
+          description: t('howTo.sections.lifeSupport.finances.description'),
+          link: "/support/finances"
+        },
+        {
+          icon: <Gavel className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.courtLogistics.title'),
+          description: t('howTo.sections.lifeSupport.courtLogistics.description'),
+          link: "/support/court-logistics"
+        },
+        {
+          icon: <HeartPulse className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.mentalHealth.title'),
+          description: t('howTo.sections.lifeSupport.mentalHealth.description'),
+          link: "/support/mental-health"
+        },
+        {
+          icon: <Car className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.transportation.title'),
+          description: t('howTo.sections.lifeSupport.transportation.description'),
+          link: "/support/transportation"
+        },
+        {
+          icon: <Baby className="h-5 w-5" />,
+          title: t('howTo.sections.lifeSupport.childcare.title'),
+          description: t('howTo.sections.lifeSupport.childcare.description'),
+          link: "/support/childcare"
+        }
+      ]
+    },
+    {
       title: t('howTo.sections.reference.title'),
       description: t('howTo.sections.reference.description'),
       resources: [

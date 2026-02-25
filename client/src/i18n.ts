@@ -4109,6 +4109,38 @@ i18n
                   "description": "Learn about sealing criminal records."
                 }
               },
+              "lifeSupport": {
+                "title": "Life Support Resources",
+                "description": "Practical help for challenges that come with a criminal case",
+                "supportHub": {
+                  "title": "Support Resources Hub",
+                  "description": "Browse all life support categories in one place."
+                },
+                "employment": {
+                  "title": "Employment Help",
+                  "description": "Job search support, resume help, and workplace rights."
+                },
+                "finances": {
+                  "title": "Financial Assistance",
+                  "description": "Emergency funds, budgeting help, and benefit programs."
+                },
+                "courtLogistics": {
+                  "title": "Court Logistics",
+                  "description": "What to expect, what to bring, and how to prepare for court."
+                },
+                "mentalHealth": {
+                  "title": "Mental Health Support",
+                  "description": "Crisis hotlines, counseling resources, and stress management."
+                },
+                "transportation": {
+                  "title": "Transportation Help",
+                  "description": "Getting to court, public transit info, and ride programs."
+                },
+                "childcare": {
+                  "title": "Childcare Resources",
+                  "description": "Finding childcare during court dates and legal appointments."
+                }
+              },
               "reference": {
                 "title": "Reference",
                 "description": "Look up legal terms and locations",
