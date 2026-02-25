@@ -15,7 +15,7 @@ The frontend is built with React 18, TypeScript, shadcn/ui, Wouter for routing, 
 The backend uses Express.js and TypeScript, exposing a RESTful API. Drizzle ORM with PostgreSQL manages database interactions. A dual-mode AI guidance system intelligently switches between Anthropic's Claude AI and a rule-based engine, with robust error handling. Data privacy is ensured through encryption, session-based ephemerality (legal case data expires after 24 hours or server restart), and NLP-based PII redaction. A multi-tier validation system ensures legal accuracy by validating statutory citations and case law using CourtListener's semantic search. The platform integrates various legal data sources for criminal charges, diversion programs, and statutes.
 
 ### Site-Wide Search
-A comprehensive, multilingual search system indexes over 6,300 legal documents, including glossary terms, criminal charges, and diversion programs. It uses legal synonym expansion and weighted relevance scoring for accurate results.
+A comprehensive, multilingual search system indexes over 6,600 legal documents, including glossary terms, criminal charges, and diversion programs. It uses legal synonym expansion and weighted relevance scoring for accurate results.
 
 ### Visual Case Timeline
 An interactive 7-stage criminal case timeline provides descriptions, rights, and tips for each stage of a criminal proceeding, available in English, Spanish, and Chinese.
