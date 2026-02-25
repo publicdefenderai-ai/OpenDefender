@@ -19,7 +19,12 @@ import {
   Code,
   FileScan,
   Compass,
-  Milestone
+  Milestone,
+  HeartPulse,
+  Wallet,
+  Gavel,
+  Car,
+  Baby
 } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";

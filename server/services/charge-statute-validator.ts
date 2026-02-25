@@ -86,6 +86,10 @@ function extractSectionFromCitation(citation: string): string | null {
     const ilcsMatch = citation.match(/ILCS\s+([\d\w\-.:\/()]+)/);
     return ilcsMatch ? ilcsMatch[1] : null;
   }
+  if (citation.includes('Mass. Gen. Laws ch.')) {
+    const maMatch = citation.match(/ch\.\s*([\d\w\-]+)/);
+    return maMatch ? maMatch[1] : null;
+  }
   const match = citation.match(/§\s*([\d\w\-.:\/]+(?:\([A-Za-z0-9]+\))*\d*)/);
   return match ? match[1] : null;
 }
@@ -108,6 +112,12 @@ export async function validateChargeStatuteConsistency(): Promise<ValidationResu
     if (section) {
       const key = `${statute.jurisdiction}:${section}`;
       statutesByJurisdictionAndSection.set(key, statute);
+    }
+    if (statute.section) {
+      const sectionKey = `${statute.jurisdiction}:${statute.section}`;
+      if (!statutesByJurisdictionAndSection.has(sectionKey)) {
+        statutesByJurisdictionAndSection.set(sectionKey, statute);
+      }
     }
     const titleKey = `${statute.jurisdiction}:${normalizeChargeName(statute.title)}`;
     statutesByJurisdictionAndTitle.set(titleKey, statute);
@@ -136,7 +146,9 @@ export async function validateChargeStatuteConsistency(): Promise<ValidationResu
     
     if (statuteByTitle && !dbStatute) {
       const dbSection = extractSectionFromCitation(statuteByTitle.citation);
-      if (dbSection && dbSection !== charge.code) {
+      if (dbSection === charge.code || statuteByTitle.section === charge.code) {
+        result.matches++;
+      } else if (dbSection && dbSection !== charge.code) {
         result.mismatches++;
         result.issues.push({
           chargeId: charge.id,
@@ -156,7 +168,7 @@ export async function validateChargeStatuteConsistency(): Promise<ValidationResu
     
     const dbSection = extractSectionFromCitation(dbStatute.citation);
     
-    if (dbSection === charge.code) {
+    if (dbSection === charge.code || dbStatute.section === charge.code) {
       result.matches++;
     } else if (dbSection) {
       result.mismatches++;
