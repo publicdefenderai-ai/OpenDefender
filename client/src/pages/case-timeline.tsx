@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -51,6 +51,16 @@ export default function CaseTimeline() {
   useScrollToTop();
   const { t } = useTranslation();
   const [selectedStage, setSelectedStage] = useState<string>("arrest");
+  const [direction, setDirection] = useState<number>(1);
+  const prevStageRef = useRef<string>("arrest");
+
+  const handleStageSelect = (stageId: string) => {
+    const prevIdx = stages.findIndex(s => s.id === prevStageRef.current);
+    const nextIdx = stages.findIndex(s => s.id === stageId);
+    setDirection(nextIdx >= prevIdx ? 1 : -1);
+    prevStageRef.current = stageId;
+    setSelectedStage(stageId);
+  };
 
   const breadcrumbItems = [
     { label: t("breadcrumb.home", "Home"), href: "/" },
@@ -106,7 +116,7 @@ export default function CaseTimeline() {
                   return (
                     <button
                       key={stage.id}
-                      onClick={() => setSelectedStage(stage.id)}
+                      onClick={() => handleStageSelect(stage.id)}
                       className="flex md:flex-col items-center gap-3 md:gap-2 group focus-visible:outline-none"
                       aria-label={t(`caseTimeline.stages.${stage.id}.title`, stage.id)}
                       aria-current={isActive ? "step" : undefined}
@@ -140,13 +150,19 @@ export default function CaseTimeline() {
             </div>
           </ScrollReveal>
 
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={selectedStage}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
+              custom={direction}
+              variants={{
+                enter: (d: number) => ({ opacity: 0, x: d * 60 }),
+                center: { opacity: 1, x: 0 },
+                exit: (d: number) => ({ opacity: 0, x: d * -60 }),
+              }}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
               <Card className={`border-2 ${currentStage.borderColor}`}>
                 <CardHeader className={currentStage.bgColor}>
@@ -209,7 +225,7 @@ export default function CaseTimeline() {
                       <Button
                         variant="outline"
                         size="sm"
-                        onClick={() => setSelectedStage(stages[stageIndex - 1].id)}
+                        onClick={() => handleStageSelect(stages[stageIndex - 1].id)}
                       >
                         ← {t(`caseTimeline.stages.${stages[stageIndex - 1].id}.title`, "Previous")}
                       </Button>
@@ -218,7 +234,7 @@ export default function CaseTimeline() {
                       <Button
                         variant="outline"
                         size="sm"
-                        onClick={() => setSelectedStage(stages[stageIndex + 1].id)}
+                        onClick={() => handleStageSelect(stages[stageIndex + 1].id)}
                       >
                         {t(`caseTimeline.stages.${stages[stageIndex + 1].id}.title`, "Next")} →
                       </Button>

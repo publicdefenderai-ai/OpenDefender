@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   Shield, 
   Calendar, 
@@ -184,54 +184,29 @@ export default function RightsInfo() {
               </TabsList>
             </ScrollReveal>
 
-            <div style={{ perspective: "1000px" }}>
-              <TabsContent value="miranda" className="mt-0">
+            <div>
+              <AnimatePresence mode="wait">
                 <motion.div
-                  key={`miranda-${animationKey}`}
-                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
-                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
-                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  style={{ transformStyle: "preserve-3d" }}
+                  key={`tab-${activeTab}-${animationKey}`}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                 >
-                  <MirandaRightsSection />
+                  <TabsContent value="miranda" className="mt-0" forceMount={activeTab === "miranda" ? true : undefined}>
+                    {activeTab === "miranda" && <MirandaRightsSection />}
+                  </TabsContent>
+                  <TabsContent value="arrest" className="mt-0" forceMount={activeTab === "arrest" ? true : undefined}>
+                    {activeTab === "arrest" && <ArrestRightsSection />}
+                  </TabsContent>
+                  <TabsContent value="court" className="mt-0" forceMount={activeTab === "court" ? true : undefined}>
+                    {activeTab === "court" && <CourtRightsSection />}
+                  </TabsContent>
+                  <TabsContent value="prison" className="mt-0" forceMount={activeTab === "prison" ? true : undefined}>
+                    {activeTab === "prison" && <PrisonRightsSection />}
+                  </TabsContent>
                 </motion.div>
-              </TabsContent>
-
-              <TabsContent value="arrest" className="mt-0">
-                <motion.div
-                  key={`arrest-${animationKey}`}
-                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
-                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
-                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  <ArrestRightsSection />
-                </motion.div>
-              </TabsContent>
-
-              <TabsContent value="court" className="mt-0">
-                <motion.div
-                  key={`court-${animationKey}`}
-                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
-                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
-                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  <CourtRightsSection />
-                </motion.div>
-              </TabsContent>
-
-              <TabsContent value="prison" className="mt-0">
-                <motion.div
-                  key={`prison-${animationKey}`}
-                  initial={{ opacity: 0, rotateY: -15, z: -50 }}
-                  animate={{ opacity: 1, rotateY: 0, z: 0 }}
-                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  <PrisonRightsSection />
-                </motion.div>
-              </TabsContent>
+              </AnimatePresence>
             </div>
           </Tabs>
         </div>
@@ -321,7 +296,7 @@ function QuickRightCard({ icon, title, description, onClick }: {
 }) {
   return (
     <Card 
-      className="text-center hover:shadow-lg transition-all duration-200 cursor-pointer border hover:border-primary hover:ring-2 hover:ring-primary/30 ring-offset-2 ring-offset-background" 
+      className="text-center hover:shadow-lg transition-all duration-200 cursor-pointer border hover:border-primary hover:ring-2 hover:ring-primary/30 ring-offset-2 ring-offset-background card-press" 
       onClick={onClick}
       data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
     >

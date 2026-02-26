@@ -89,6 +89,7 @@ export default function ChatPage() {
   const { toast } = useToast();
   const { theme, setTheme } = useTheme();
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isTyping, setIsTyping] = useState(false);
   const [showChargeSelector, setShowChargeSelector] = useState(false);
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
@@ -153,6 +154,9 @@ export default function ChatPage() {
       });
       actions.setCurrentStep('emergency_check');
     }
+    return () => {
+      if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+    };
   }, []);
 
   // Detect "stuck" state when user returns from another page
@@ -228,12 +232,18 @@ export default function ChatPage() {
   }, [actions]);
 
   const addBotMessageWithKey = useCallback((contentKey: string, quickReplies?: QuickReply[], contentParams?: Record<string, string | number>) => {
-    actions.addMessage({
-      role: 'bot',
-      contentKey,
-      contentParams,
-      quickReplies,
-    });
+    setIsTyping(true);
+    if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
+    typingTimeoutRef.current = setTimeout(() => {
+      typingTimeoutRef.current = null;
+      setIsTyping(false);
+      actions.addMessage({
+        role: 'bot',
+        contentKey,
+        contentParams,
+        quickReplies,
+      });
+    }, 1000);
   }, [actions]);
 
   const handleQuickReply = useCallback(async (reply: QuickReply) => {

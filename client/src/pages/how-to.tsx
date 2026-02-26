@@ -28,6 +28,7 @@ import {
 } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -47,26 +48,32 @@ interface CategorySection {
   resources: ResourceItem[];
 }
 
-function ResourceLink({ resource }: { resource: ResourceItem }) {
+function ResourceLink({ resource, index = 0 }: { resource: ResourceItem; index?: number }) {
   return (
-    <Link href={resource.link}>
-      <div className="flex items-center justify-between p-4 rounded-lg border border-border hover:border-primary/30 hover:bg-muted/50 transition-all cursor-pointer group">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0">
-            {resource.icon}
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.06, ease: "easeOut" }}
+    >
+      <Link href={resource.link}>
+        <div className="flex items-center justify-between p-4 rounded-lg border border-border hover:border-primary/30 hover:bg-muted/50 transition-all cursor-pointer group card-press">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0">
+              {resource.icon}
+            </div>
+            <div className="min-w-0">
+              <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">
+                {resource.title}
+              </h3>
+              <p className="text-sm text-muted-foreground truncate">
+                {resource.description}
+              </p>
+            </div>
           </div>
-          <div className="min-w-0">
-            <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">
-              {resource.title}
-            </h3>
-            <p className="text-sm text-muted-foreground truncate">
-              {resource.description}
-            </p>
-          </div>
+          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-active:translate-x-1 transition-all flex-shrink-0 ml-2" />
         </div>
-        <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 ml-2" />
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }
 
@@ -334,8 +341,8 @@ export default function HowTo() {
                   <p className="text-sm text-muted-foreground">{section.description}</p>
                 </div>
                 <div className="space-y-2">
-                  {section.resources.map((resource) => (
-                    <ResourceLink key={resource.title} resource={resource} />
+                  {section.resources.map((resource, idx) => (
+                    <ResourceLink key={resource.title} resource={resource} index={idx} />
                   ))}
                 </div>
               </div>

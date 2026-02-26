@@ -108,17 +108,21 @@ export function TypingIndicator() {
       exit={{ opacity: 0, y: -10 }}
       className="flex gap-3 mb-4 justify-start"
     >
-      <div className="bg-muted rounded-2xl rounded-tl-md px-4 py-3 border border-border/50">
-        <div className="flex items-center gap-2 h-5">
-          <span className="text-sm text-muted-foreground">Loading</span>
-          <div className="w-16 h-1 bg-muted-foreground/20 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-primary/60 rounded-full"
-              animate={{ x: ["-100%", "100%"] }}
-              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-              style={{ width: "50%" }}
+      <div className="bg-muted rounded-2xl rounded-tl-md px-5 py-3 border border-border/50">
+        <div className="flex items-center gap-1.5 h-5">
+          {[0, 1, 2].map((i) => (
+            <motion.span
+              key={i}
+              className="w-2 h-2 rounded-full bg-muted-foreground/50"
+              animate={{ y: [0, -6, 0], opacity: [0.4, 1, 0.4] }}
+              transition={{
+                duration: 0.8,
+                repeat: Infinity,
+                delay: i * 0.15,
+                ease: "easeInOut",
+              }}
             />
-          </div>
+          ))}
         </div>
       </div>
     </motion.div>
