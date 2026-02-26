@@ -39,7 +39,7 @@ const supportCategories: SupportCategoryProps[] = [
   { id: "finances", icon: Wallet, iconBg: "bg-emerald-100 dark:bg-emerald-900/40", iconText: "text-emerald-600 dark:text-emerald-400", borderColor: "border-l-emerald-500", href: "/support/finances", available: true },
   { id: "courtLogistics", icon: Gavel, iconBg: "bg-purple-100 dark:bg-purple-900/40", iconText: "text-purple-600 dark:text-purple-400", borderColor: "border-l-purple-500", href: "/support/court-logistics", available: true },
   { id: "mentalHealth", icon: HeartPulse, iconBg: "bg-rose-100 dark:bg-rose-900/40", iconText: "text-rose-600 dark:text-rose-400", borderColor: "border-l-rose-500", href: "/support/mental-health", available: true },
-  { id: "housing", icon: Home, iconBg: "bg-amber-100 dark:bg-amber-900/40", iconText: "text-amber-600 dark:text-amber-400", borderColor: "border-l-amber-500", href: "/support/housing", available: false },
+  { id: "housing", icon: Home, iconBg: "bg-amber-100 dark:bg-amber-900/40", iconText: "text-amber-600 dark:text-amber-400", borderColor: "border-l-amber-500", href: "/support/housing", available: true },
   { id: "transportation", icon: Car, iconBg: "bg-cyan-100 dark:bg-cyan-900/40", iconText: "text-cyan-600 dark:text-cyan-400", borderColor: "border-l-cyan-500", href: "/support/transportation", available: true },
   { id: "childcare", icon: Baby, iconBg: "bg-pink-100 dark:bg-pink-900/40", iconText: "text-pink-600 dark:text-pink-400", borderColor: "border-l-pink-500", href: "/support/childcare", available: true },
   { id: "familyCare", icon: Users, iconBg: "bg-indigo-100 dark:bg-indigo-900/40", iconText: "text-indigo-600 dark:text-indigo-400", borderColor: "border-l-indigo-500", href: "/support/family-care", available: false },

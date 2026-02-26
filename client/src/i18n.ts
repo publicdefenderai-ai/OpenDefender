@@ -275,7 +275,8 @@ i18n
               "publicDefender": "Find Legal Aid",
               "familyFriends": "For Family & Friends",
               "transportation": "Transportation Help",
-              "childcare": "Childcare Support"
+              "childcare": "Childcare Support",
+              "housing": "Housing Help"
             },
             "employment": {
               "overview": "Facing criminal charges can create uncertainty about your job. Understanding your rights and planning ahead can help protect your employment while you focus on your case.",
@@ -881,6 +882,136 @@ i18n
                 "tip3": "Let your attorney know you have young children — it can be relevant to bail conditions, sentencing, and what support services are available to you",
                 "tip4": "Maintaining your children's daily routines as much as possible is one of the best things you can do for their sense of security",
                 "tip5": "If you're worried about child welfare involvement, speak with your attorney early — they can help you understand your rights and what proactive steps to take"
+              }
+            },
+            "housing": {
+              "overview": "A legal case can create real uncertainty about your home — through missed rent, lease concerns, or fear of what comes next. But you have more rights and more options than it may feel like right now. This guide helps you understand where you stand, have honest conversations with people in your support network, and connect with organizations that can provide real help.",
+              "actions": {
+                "reviewLease": {
+                  "title": "Read your lease and know your rights",
+                  "description": "Look at your lease carefully — particularly any clauses about criminal charges or convictions. An arrest alone is often not grounds for eviction. Most leases require an actual conviction, and even then your landlord must follow a formal legal process. Knowing what your lease actually says puts you in a stronger position.",
+                  "timeframe": "This week",
+                  "priority": "high"
+                },
+                "talkLandlord": {
+                  "title": "Get ahead of any rent difficulty — contact your landlord early",
+                  "description": "If you expect to miss or be late on rent due to lost income or legal costs, reach out before it happens. Landlords are far more likely to work with tenants who communicate proactively than those who go silent. A brief, honest message explaining a temporary hardship — without legal details — can open the door to a payment plan or grace period.",
+                  "timeframe": "This week",
+                  "priority": "high"
+                },
+                "knowEvictionProcess": {
+                  "title": "Understand the eviction process — it takes time and you have rights",
+                  "description": "Receiving a late notice or even an eviction notice is not the end. Your landlord cannot remove you, change your locks, or shut off utilities without a court order. You have the right to respond to any eviction filing and to seek legal help before a hearing. Do not leave voluntarily without understanding your options.",
+                  "priority": "high"
+                },
+                "talkNetwork": {
+                  "title": "Reach out to someone in your personal network",
+                  "description": "A trusted family member or friend may be able to help — with a temporary place to stay, help covering rent, or moral support while you get things sorted. Many people want to help but don't know how to offer. Being specific about what you need makes it easier for them to say yes. The templates below can help you start that conversation with dignity.",
+                  "priority": "medium"
+                },
+                "applyAssistance": {
+                  "title": "Apply for emergency rental assistance programs",
+                  "description": "Many cities, counties, and nonprofits have emergency rental assistance funds available. Call 211 or visit 211.org to find programs near you. Apply as early as possible — many programs have limited funding and waiting lists. You do not need to have received an eviction notice to apply.",
+                  "priority": "medium"
+                },
+                "tenantLegalAid": {
+                  "title": "Contact a tenant legal aid organization",
+                  "description": "If eviction is being threatened or has been filed, free or low-cost legal help may be available. Tenant attorneys can advise you on your rights, help you respond to eviction filings, and represent you at hearings. Many legal aid organizations prioritize housing cases because stable housing is foundational to everything else.",
+                  "priority": "medium"
+                }
+              },
+              "networkSection": {
+                "sectionTitle": "Talking to Your Support Network",
+                "sectionDescription": "Reaching out for help can feel difficult — but most people in your life want to support you and just need to know how. These templates give you a starting point for honest, dignified conversations about what you need right now.",
+                "tipLabel": "Remember",
+                "personalizeNote": "Replace the [bracketed] text with your own details before sending. You do not need to share information about your legal case — focus on the practical ask.",
+                "copyButton": "Copy to Clipboard",
+                "copied": "Copied!",
+                "printButton": "Print",
+                "emailTemplates": {
+                  "title": "Written Messages",
+                  "friendFamily": {
+                    "label": "Message to Family or Friend — Asking for Temporary Support",
+                    "subject": "Subject: Going through a hard time — would love your support",
+                    "body": "Hi [Name],\n\nI hope you're doing well. I'm reaching out because I'm going through a difficult personal situation right now and could really use some support.\n\nI wanted to ask if [you might have a spare room I could stay in for a few weeks / you'd be able to help me with rent this month / we could talk soon about my options]. I understand completely if that's not possible — I just wanted to ask someone I trust.\n\nI'm doing my best to work through this and I have a plan, but things are tight right now. Any help would mean a lot.\n\nI'm happy to talk more over the phone or in person if that's easier. And of course, if there's ever anything I can do for you, please don't hesitate to ask.\n\nThank you for being in my life.\n\n[Your Name]"
+                  },
+                  "landlordHardship": {
+                    "label": "Message to Landlord — Heads-Up About a Temporary Hardship",
+                    "subject": "Subject: Temporary Financial Difficulty — [Your Unit/Address]",
+                    "body": "Dear [Landlord's Name / Property Manager],\n\nI'm writing to let you know that I am going through a temporary financial hardship and wanted to be upfront with you about my situation rather than letting it become a problem without communication.\n\nI have always made an effort to pay on time and I intend to honor my obligations under our lease. I am currently [working to resolve the situation / pursuing assistance / expecting things to stabilize by approximately (date)].\n\nI would like to ask whether we could discuss a short-term arrangement — such as a brief grace period or a temporary payment plan — while I work through this. I am committed to making things right and want to handle this responsibly.\n\nI can be reached at [your phone number] or [your email] and am happy to talk at your convenience. Thank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Unit Number / Address]\n[Date]"
+                  },
+                  "landlordPaymentPlan": {
+                    "label": "Letter to Landlord — Requesting a Formal Payment Plan",
+                    "subject": "Subject: Request for Payment Plan — [Your Unit/Address]",
+                    "body": "Dear [Landlord's Name / Property Manager],\n\nI am writing to formally request a payment plan for [the amount owed / my upcoming rent] due to a temporary financial hardship I am currently navigating.\n\nI am proposing the following arrangement:\n• [Date]: Payment of $[amount]\n• [Date]: Payment of $[amount]\n• [Date]: Remaining balance of $[amount]\n\nI am committed to this plan and to maintaining my tenancy in good standing. I would appreciate your written agreement to this arrangement so that we both have a clear record.\n\nThank you for your willingness to work with me. I value my tenancy here and want to resolve this in a way that works for both of us. Please feel free to contact me at [your phone / email] if you would like to discuss further.\n\nSincerely,\n[Your Name]\n[Your Unit Number / Address]\n[Date]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Phone Call Scripts",
+                  "description": "Sometimes a phone call is easier than a written message. These scripts give you a framework so you don't have to figure out what to say in the moment.",
+                  "network": {
+                    "label": "Calling a Family Member or Friend",
+                    "script": "Hi [Name], do you have a few minutes to talk?\n\nI'm going through a difficult time right now — I don't want to get into all the details, but things are challenging financially and I'm working through it.\n\nI wanted to reach out to someone I trust. I was hoping to ask if [you might have space for me to stay temporarily / there's any way you could help me with rent / we could sit down and talk through some options together].\n\nI completely understand if you're not in a position to help — I just didn't want to not ask. You're someone I trust and I know I'd want to know if the situation were reversed.\n\n[Pause and listen]\n\nThank you for listening. It means a lot."
+                  },
+                  "landlord": {
+                    "label": "Calling Your Landlord",
+                    "script": "Hi, this is [Your Name] calling from unit [number / your address]. Is this a good time to talk for a few minutes?\n\nI wanted to call you directly because I believe in being upfront. I'm going through a temporary personal situation and I'm concerned about [this month's rent / an upcoming payment]. I didn't want to just go quiet — I wanted to communicate with you early.\n\nI'm hoping we can work something out — even a brief extension or a payment plan — while I get things sorted. I've been a reliable tenant and I want to stay that way.\n\nWould you be open to discussing options? I can also follow up in writing with a specific proposal if that would be helpful."
+                  },
+                  "tips": {
+                    "label": "Tips Before You Make the Call",
+                    "items": {
+                      "tip1": "Write down the key points you want to make before you call — it helps you stay calm and clear",
+                      "tip2": "You do not need to explain your legal situation to anyone — focus on the practical need",
+                      "tip3": "If the landlord says no to a payment plan, ask what your options are — and follow up in writing",
+                      "tip4": "After any call with your landlord, send a brief email summarizing what was discussed — this creates a record"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "unitedWay": {
+                  "description": "Call or text 211 to connect with local emergency rental assistance programs, utility help, and housing services in your area. This is the single fastest way to find what's available locally."
+                },
+                "era": {
+                  "description": "The federal Emergency Rental Assistance program distributes funds through local governments and nonprofits. Use the HUD locator to find the program serving your area."
+                },
+                "nlihc": {
+                  "description": "National Low Income Housing Coalition provides state-by-state guides to rental assistance programs and housing rights resources."
+                },
+                "hud": {
+                  "description": "HUD-approved housing counselors offer free or low-cost advice on rental assistance, avoiding eviction, and navigating housing challenges. Available nationally."
+                },
+                "tenantLegal": {
+                  "description": "Many areas have free tenant legal aid for eviction defense. Search for 'tenant legal aid' plus your city, or contact your local legal aid society."
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org helps you identify federal, state, and local programs you may qualify for — including housing assistance, utility help, and food support."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "Can my landlord evict me because I was arrested?",
+                  "answer": "In most cases, an arrest alone is not a valid reason for eviction. Most leases require a criminal conviction, and even then only if it relates to conduct that affects the property or other tenants. Your landlord must follow the formal eviction process through the courts — they cannot remove you, change your locks, or shut off utilities without a court order. Read your lease and contact a tenant legal aid organization if you receive any notice."
+                },
+                "q2": {
+                  "question": "I'm already behind on rent. Is it too late to get help?",
+                  "answer": "It's not too late. Contact your landlord and look for rental assistance at the same time. Many landlords prefer a payment plan over a lengthy eviction process. Emergency rental assistance programs may be able to help even after a late notice is issued. Call 211 today to find what's available in your area — the earlier you act, the more options you have."
+                },
+                "q3": {
+                  "question": "I received an eviction notice. Do I have to leave?",
+                  "answer": "No. An eviction notice starts a legal process — it does not mean you have to leave immediately. You have the right to respond to the eviction filing in court, request a hearing, and seek legal assistance. Many cases are resolved through payment plans or negotiation before a court order is issued. Do not leave voluntarily before understanding your options. Contact a tenant legal aid organization as soon as possible."
+                },
+                "q4": {
+                  "question": "Can a landlord refuse to rent to me or deny my application because of my charges?",
+                  "answer": "Possibly, but protections vary by location. Many jurisdictions have laws limiting when landlords can consider criminal records — for example, restricting consideration of arrests versus convictions, or requiring individual assessment. HUD guidelines limit criminal record screening for federally assisted housing. A local tenant legal aid organization can tell you what protections apply in your area."
+                }
+              },
+              "tips": {
+                "tip1": "Always communicate with your landlord in writing — email is fine — so you have a record of what was said and agreed to",
+                "tip2": "Keep copies of all rent receipts, payment confirmations, and your lease in a safe place",
+                "tip3": "If you receive any notice from your landlord, respond to it — ignoring it leads to a default judgment that makes things much harder",
+                "tip4": "Emergency rental assistance programs often have limited funding — apply as soon as you know you may need help, not after you've already fallen behind",
+                "tip5": "Asking for help is a sign of strength, not weakness — most people in your life want to support you if they know what's needed"
               }
             }
           },
@@ -4445,7 +4576,8 @@ i18n
               "publicDefender": "Encontrar Ayuda Legal",
               "familyFriends": "Para Familia y Amigos",
               "transportation": "Ayuda con Transporte",
-              "childcare": "Apoyo para el Cuidado Infantil"
+              "childcare": "Apoyo para el Cuidado Infantil",
+              "housing": "Ayuda con Vivienda"
             },
             "employment": {
               "overview": "Enfrentar cargos penales puede crear incertidumbre sobre su trabajo. Entender sus derechos y planificar con anticipación puede ayudar a proteger su empleo mientras se concentra en su caso.",
@@ -5051,6 +5183,136 @@ i18n
                 "tip3": "Informe a su abogado que tiene hijos pequeños — puede ser relevante para las condiciones de fianza, la sentencia y los servicios de apoyo disponibles",
                 "tip4": "Mantener las rutinas diarias de sus hijos tanto como sea posible es una de las mejores cosas que puede hacer por su sentido de seguridad",
                 "tip5": "Si le preocupa la intervención del bienestar infantil, hable con su abogado pronto — puede ayudarle a entender sus derechos y qué medidas proactivas tomar"
+              }
+            },
+            "housing": {
+              "overview": "Un caso legal puede crear incertidumbre real sobre su hogar — a través de renta atrasada, preocupaciones sobre el contrato de arrendamiento, o el miedo a lo que viene. Pero usted tiene más derechos y más opciones de lo que puede sentir en este momento. Esta guía le ayuda a entender dónde se encuentra, tener conversaciones honestas con personas en su red de apoyo, y conectarse con organizaciones que pueden brindar ayuda real.",
+              "actions": {
+                "reviewLease": {
+                  "title": "Lea su contrato de arrendamiento y conozca sus derechos",
+                  "description": "Lea su contrato detenidamente — especialmente cualquier cláusula sobre cargos o condenas penales. Un arresto por sí solo generalmente no es motivo de desalojo. La mayoría de los contratos requieren una condena real, y aun así el arrendador debe seguir un proceso legal formal. Saber lo que dice realmente su contrato le pone en una posición más sólida.",
+                  "timeframe": "Esta semana",
+                  "priority": "high"
+                },
+                "talkLandlord": {
+                  "title": "Anticípese a cualquier dificultad con la renta — comuníquese con su arrendador pronto",
+                  "description": "Si prevé no poder pagar o pagar tarde la renta debido a ingresos reducidos o costos legales, comuníquese antes de que suceda. Los arrendadores son mucho más propensos a trabajar con inquilinos que se comunican proactivamente que con aquellos que guardan silencio. Un mensaje breve y honesto sobre una dificultad temporal — sin detalles legales — puede abrir la puerta a un plan de pago o período de gracia.",
+                  "timeframe": "Esta semana",
+                  "priority": "high"
+                },
+                "knowEvictionProcess": {
+                  "title": "Entienda el proceso de desalojo — toma tiempo y usted tiene derechos",
+                  "description": "Recibir un aviso de retraso o incluso uno de desalojo no es el fin. Su arrendador no puede sacarlo, cambiar sus cerraduras ni cortar los servicios sin una orden judicial. Tiene derecho a responder a cualquier solicitud de desalojo y a buscar ayuda legal antes de una audiencia. No se vaya voluntariamente sin entender sus opciones.",
+                  "priority": "high"
+                },
+                "talkNetwork": {
+                  "title": "Comuníquese con alguien en su red personal",
+                  "description": "Un familiar o amigo de confianza puede estar dispuesto a ayudar — con un lugar temporal para quedarse, ayuda con la renta, o apoyo moral mientras resuelve las cosas. Muchas personas quieren ayudar pero no saben cómo ofrecerse. Ser específico sobre lo que necesita les facilita decir que sí. Las plantillas a continuación pueden ayudarle a iniciar esa conversación con dignidad.",
+                  "priority": "medium"
+                },
+                "applyAssistance": {
+                  "title": "Solicite programas de asistencia de renta de emergencia",
+                  "description": "Muchas ciudades, condados y organizaciones sin fines de lucro tienen fondos de asistencia de renta de emergencia disponibles. Llame al 211 o visite 211.org para encontrar programas cerca de usted. Solicite lo antes posible — muchos programas tienen fondos limitados y listas de espera. No necesita haber recibido un aviso de desalojo para solicitar.",
+                  "priority": "medium"
+                },
+                "tenantLegalAid": {
+                  "title": "Contacte a una organización de ayuda legal para inquilinos",
+                  "description": "Si se amenaza con desalojo o ya se ha presentado uno, puede haber ayuda legal gratuita o de bajo costo disponible. Los abogados de inquilinos pueden asesorarle sobre sus derechos, ayudarle a responder a solicitudes de desalojo y representarle en audiencias. Muchas organizaciones de ayuda legal priorizan los casos de vivienda porque un hogar estable es la base de todo lo demás.",
+                  "priority": "medium"
+                }
+              },
+              "networkSection": {
+                "sectionTitle": "Cómo Hablar con su Red de Apoyo",
+                "sectionDescription": "Pedir ayuda puede sentirse difícil — pero la mayoría de las personas en su vida quieren apoyarle y solo necesitan saber cómo. Estas plantillas le dan un punto de partida para conversaciones honestas y dignas sobre lo que necesita ahora mismo.",
+                "tipLabel": "Recuerde",
+                "personalizeNote": "Reemplace el texto [entre corchetes] con sus propios datos antes de enviar. No necesita compartir información sobre su caso legal — enfóquese en la solicitud práctica.",
+                "copyButton": "Copiar al Portapapeles",
+                "copied": "¡Copiado!",
+                "printButton": "Imprimir",
+                "emailTemplates": {
+                  "title": "Mensajes Escritos",
+                  "friendFamily": {
+                    "label": "Mensaje a Familiar o Amigo — Pidiendo Apoyo Temporal",
+                    "subject": "Asunto: Pasando por un momento difícil — me gustaría tu apoyo",
+                    "body": "Hola [Nombre],\n\nEspero que estés bien. Te escribo porque estoy pasando por una situación personal difícil y realmente podría usar algo de apoyo.\n\nQuería preguntarte si [podrías tener un cuarto disponible donde pueda quedarme unas semanas / podrías ayudarme con la renta este mes / podríamos hablar pronto sobre mis opciones]. Entiendo completamente si no es posible — solo quería preguntarle a alguien en quien confío.\n\nEstoy haciendo todo lo que puedo para superar esto y tengo un plan, pero las cosas están ajustadas ahora mismo. Cualquier ayuda significaría mucho.\n\nPuedo hablar más por teléfono o en persona si es más fácil. Y por supuesto, si alguna vez hay algo que pueda hacer por ti, no dudes en pedirlo.\n\nGracias por estar en mi vida.\n\n[Tu Nombre]"
+                  },
+                  "landlordHardship": {
+                    "label": "Mensaje al Arrendador — Aviso sobre una Dificultad Temporal",
+                    "subject": "Asunto: Dificultad Financiera Temporal — [Su Unidad/Dirección]",
+                    "body": "Estimado/a [Nombre del Arrendador / Administrador de la Propiedad],\n\nLe escribo para informarle que estoy atravesando una dificultad financiera temporal y quería ser transparente con usted sobre mi situación antes de que se convierta en un problema sin comunicación.\n\nSiempre he procurado pagar a tiempo y tengo la intención de cumplir con mis obligaciones bajo nuestro contrato de arrendamiento. Actualmente estoy [trabajando para resolver la situación / buscando asistencia / esperando que las cosas se estabilicen aproximadamente para (fecha)].\n\nMe gustaría preguntar si podríamos hablar sobre un arreglo a corto plazo — como un breve período de gracia o un plan de pago temporal — mientras resuelvo esto. Estoy comprometido/a a hacer las cosas bien y quiero manejar esto de manera responsable.\n\nPuede comunicarse conmigo al [su número de teléfono] o [su correo electrónico] y estoy disponible para hablar cuando le sea conveniente. Gracias por su consideración.\n\nAtentamente,\n[Su Nombre]\n[Número de Unidad / Dirección]\n[Fecha]"
+                  },
+                  "landlordPaymentPlan": {
+                    "label": "Carta al Arrendador — Solicitud de Plan de Pago Formal",
+                    "subject": "Asunto: Solicitud de Plan de Pago — [Su Unidad/Dirección]",
+                    "body": "Estimado/a [Nombre del Arrendador / Administrador de la Propiedad],\n\nLe escribo para solicitar formalmente un plan de pago para [la cantidad adeudada / mi próxima renta] debido a una dificultad financiera temporal que estoy atravesando.\n\nLe propongo el siguiente arreglo:\n• [Fecha]: Pago de $[monto]\n• [Fecha]: Pago de $[monto]\n• [Fecha]: Saldo restante de $[monto]\n\nEstoy comprometido/a con este plan y con mantener mi arrendamiento en buen estado. Apreciaría su acuerdo por escrito a este arreglo para que ambos tengamos un registro claro.\n\nGracias por su disposición a trabajar conmigo. Valoro mi arrendamiento aquí y quiero resolver esto de una manera que funcione para ambos. Puede contactarme al [su teléfono / correo] si desea hablar más.\n\nAtentamente,\n[Su Nombre]\n[Número de Unidad / Dirección]\n[Fecha]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Guiones para Llamadas Telefónicas",
+                  "description": "A veces una llamada telefónica es más fácil que un mensaje escrito. Estos guiones le dan un marco para no tener que improvisar lo que va a decir.",
+                  "network": {
+                    "label": "Llamando a un Familiar o Amigo",
+                    "script": "Hola [Nombre], ¿tienes unos minutos para hablar?\n\nEstoy pasando por un momento difícil — no quiero entrar en todos los detalles, pero las cosas están complicadas financieramente y estoy trabajando para resolverlo.\n\nQuería comunicarme con alguien en quien confío. Quería preguntarte si [podrías tener espacio para que me quede temporalmente / hay alguna manera en que puedas ayudarme con la renta / podríamos sentarnos a hablar sobre algunas opciones juntos].\n\nEntiendo completamente si no estás en posición de ayudar — solo no quería no preguntar. Eres alguien en quien confío y sé que yo querría saberlo si la situación fuera al revés.\n\n[Pausa y escucha]\n\nGracias por escucharme. Significa mucho."
+                  },
+                  "landlord": {
+                    "label": "Llamando a su Arrendador",
+                    "script": "Hola, le llama [Su Nombre] de la unidad [número / su dirección]. ¿Es buen momento para hablar unos minutos?\n\nQuería llamarle directamente porque creo en ser transparente. Estoy pasando por una situación personal temporal y me preocupa [la renta de este mes / un pago próximo]. No quería quedarme en silencio — quería comunicarme con usted con anticipación.\n\nEspero que podamos encontrar algo — incluso una breve prórroga o un plan de pago — mientras resuelvo las cosas. He sido un inquilino/a confiable y quiero seguir siéndolo.\n\n¿Estaría dispuesto/a a hablar sobre las opciones? También puedo hacer un seguimiento por escrito con una propuesta específica si eso le resulta más útil."
+                  },
+                  "tips": {
+                    "label": "Consejos Antes de Hacer la Llamada",
+                    "items": {
+                      "tip1": "Anote los puntos clave que quiere transmitir antes de llamar — le ayudará a mantener la calma y la claridad",
+                      "tip2": "No necesita explicar su situación legal a nadie — enfóquese en la necesidad práctica",
+                      "tip3": "Si el arrendador dice que no a un plan de pago, pregunte cuáles son sus opciones — y haga un seguimiento por escrito",
+                      "tip4": "Después de cualquier llamada con su arrendador, envíe un breve correo electrónico resumiendo lo que se habló — esto crea un registro"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "unitedWay": {
+                  "description": "Llame o envíe un mensaje al 211 para conectarse con programas locales de asistencia de renta de emergencia, ayuda con servicios públicos y servicios de vivienda en su área. Es la manera más rápida de encontrar lo que está disponible localmente."
+                },
+                "era": {
+                  "description": "El programa federal de Asistencia de Renta de Emergencia distribuye fondos a través de gobiernos locales y organizaciones sin fines de lucro. Use el localizador de HUD para encontrar el programa que sirve su área."
+                },
+                "nlihc": {
+                  "description": "La Coalición Nacional de Vivienda para Personas de Bajos Ingresos ofrece guías estado por estado sobre programas de asistencia de renta y recursos sobre derechos de vivienda."
+                },
+                "hud": {
+                  "description": "Los consejeros de vivienda aprobados por HUD ofrecen asesoramiento gratuito o de bajo costo sobre asistencia de renta, cómo evitar el desalojo y cómo navegar los desafíos de vivienda. Disponibles a nivel nacional."
+                },
+                "tenantLegal": {
+                  "description": "Muchas áreas tienen ayuda legal gratuita para inquilinos en casos de desalojo. Busque 'ayuda legal para inquilinos' más su ciudad, o contacte a su organización local de asistencia legal."
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org le ayuda a identificar programas federales, estatales y locales para los que puede calificar — incluida asistencia de vivienda, ayuda con servicios públicos y apoyo alimentario."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Puede mi arrendador desalojarme porque fui arrestado/a?",
+                  "answer": "En la mayoría de los casos, un arresto por sí solo no es un motivo válido para el desalojo. La mayoría de los contratos de arrendamiento requieren una condena penal, y aun así solo si se relaciona con conductas que afectan la propiedad u otros inquilinos. Su arrendador debe seguir el proceso formal de desalojo a través de los tribunales — no puede sacarlo, cambiar sus cerraduras ni cortar los servicios sin una orden judicial. Lea su contrato y contacte a una organización de ayuda legal para inquilinos si recibe cualquier aviso."
+                },
+                "q2": {
+                  "question": "Ya estoy atrasado/a en la renta. ¿Es demasiado tarde para obtener ayuda?",
+                  "answer": "No es demasiado tarde. Contacte a su arrendador y busque asistencia de renta al mismo tiempo. Muchos arrendadores prefieren un plan de pago a un largo proceso de desalojo. Los programas de asistencia de renta de emergencia pueden ayudar incluso después de emitido un aviso de retraso. Llame al 211 hoy para encontrar qué hay disponible en su área — cuanto antes actúe, más opciones tiene."
+                },
+                "q3": {
+                  "question": "Recibí un aviso de desalojo. ¿Tengo que irme?",
+                  "answer": "No. Un aviso de desalojo inicia un proceso legal — no significa que tenga que irse de inmediato. Tiene derecho a responder a la solicitud de desalojo en el tribunal, solicitar una audiencia y buscar asistencia legal. Muchos casos se resuelven mediante planes de pago o negociación antes de que se emita una orden judicial. No se vaya voluntariamente antes de entender sus opciones. Contacte a una organización de ayuda legal para inquilinos lo antes posible."
+                },
+                "q4": {
+                  "question": "¿Puede un arrendador negarme la vivienda o rechazar mi solicitud por mis cargos?",
+                  "answer": "Posiblemente, pero las protecciones varían según la ubicación. Muchas jurisdicciones tienen leyes que limitan cuándo los arrendadores pueden considerar antecedentes penales — por ejemplo, restringiendo la consideración de arrestos versus condenas, o requiriendo una evaluación individual. Las directrices de HUD limitan el uso de antecedentes penales en viviendas con asistencia federal. Una organización local de ayuda legal para inquilinos puede decirle qué protecciones aplican en su área."
+                }
+              },
+              "tips": {
+                "tip1": "Siempre comuníquese con su arrendador por escrito — el correo electrónico está bien — para tener un registro de lo que se dijo y acordó",
+                "tip2": "Guarde copias de todos los recibos de renta, confirmaciones de pago y su contrato de arrendamiento en un lugar seguro",
+                "tip3": "Si recibe cualquier aviso de su arrendador, respóndale — ignorarlo lleva a un fallo en rebeldía que hace las cosas mucho más difíciles",
+                "tip4": "Los programas de asistencia de renta de emergencia a menudo tienen fondos limitados — solicite tan pronto como sepa que puede necesitar ayuda, no después de ya haberse atrasado",
+                "tip5": "Pedir ayuda es una señal de fortaleza, no de debilidad — la mayoría de las personas en su vida quieren apoyarle si saben lo que se necesita"
               }
             }
           },
