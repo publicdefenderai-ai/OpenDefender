@@ -276,7 +276,8 @@ i18n
               "familyFriends": "For Family & Friends",
               "transportation": "Transportation Help",
               "childcare": "Childcare Support",
-              "housing": "Housing Help"
+              "housing": "Housing Help",
+              "familyCare": "Family Care Support"
             },
             "employment": {
               "overview": "Facing criminal charges can create uncertainty about your job. Understanding your rights and planning ahead can help protect your employment while you focus on your case.",
@@ -1012,6 +1013,136 @@ i18n
                 "tip3": "If you receive any notice from your landlord, respond to it — ignoring it leads to a default judgment that makes things much harder",
                 "tip4": "Emergency rental assistance programs often have limited funding — apply as soon as you know you may need help, not after you've already fallen behind",
                 "tip5": "Asking for help is a sign of strength, not weakness — most people in your life want to support you if they know what's needed"
+              }
+            },
+            "familyCare": {
+              "overview": "If you're a primary caregiver for an aging parent, a family member with a disability, or another dependent, your legal situation doesn't change their needs — but it may change your ability to meet them. This guide helps you organize your dependent's care, line up support from your personal network, communicate clearly with providers, and find community resources — so you can navigate your case knowing the person you care for is in good hands.",
+              "actions": {
+                "needsSheet": {
+                  "title": "Write down your dependent's care needs",
+                  "description": "Create a written reference covering everything another caregiver would need to know: daily assistance needs, medications and dosages, meal requirements, mobility or cognitive needs, scheduled appointments, emergency contacts, and insurance information. This document is the single most important thing you can prepare — it's what makes someone else stepping in actually workable.",
+                  "timeframe": "This week",
+                  "priority": "high"
+                },
+                "identifyCaregiver": {
+                  "title": "Identify and confirm someone who can step in",
+                  "description": "Think through who in your life — a sibling, other family member, close friend, or neighbor — could take on a temporary caregiving role. Have a direct conversation with them about what the role involves and whether they're willing and able. Be specific. Identify a second person as a backup. People often want to help but need to be asked clearly.",
+                  "timeframe": "This week",
+                  "priority": "high"
+                },
+                "notifyProviders": {
+                  "title": "Notify your dependent's healthcare providers of any changes",
+                  "description": "Doctors, home health aides, physical therapists, day program coordinators, and pharmacy staff need to know who is now the point of contact and who is authorized to make care decisions. You don't need to share your legal situation — a simple update noting a temporary caregiver change is sufficient.",
+                  "priority": "high"
+                },
+                "contactAAA": {
+                  "title": "Contact your local Area Agency on Aging",
+                  "description": "Area Agencies on Aging (AAAs) are local organizations funded to connect families with home health aides, meal delivery, transportation, adult day programs, respite care, and more. They are specifically designed for situations like yours. Call 211 or the Eldercare Locator (1-800-677-1116) to find your local AAA.",
+                  "priority": "medium"
+                },
+                "respiteCare": {
+                  "title": "Ask about respite care programs",
+                  "description": "Respite care provides temporary, professional care for your dependent so another caregiver can step back. Some programs offer in-home respite care; others provide short stays at adult day centers or care facilities. Many programs are free or subsidized. Your local AAA can help you find what's available.",
+                  "priority": "medium"
+                },
+                "legalDocuments": {
+                  "title": "Review any legal authority documents you hold",
+                  "description": "If you have power of attorney, guardianship, or are a representative payee or benefits manager for your dependent, understand what those documents authorize — and speak with your attorney about whether any contingency steps are needed if you're temporarily less available. In most cases these remain valid, but it's worth confirming.",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "Communicating About Care Changes",
+                "sectionDescription": "These templates help you ask for help from family and friends, and update care providers — clearly and without having to share details about your legal situation.",
+                "tipLabel": "Remember",
+                "personalizeNote": "Replace the [bracketed] text with your own details before sending. You don't need to explain your legal situation to anyone — focus on what the caregiver or provider needs to know.",
+                "copyButton": "Copy to Clipboard",
+                "copied": "Copied!",
+                "printButton": "Print",
+                "emailTemplates": {
+                  "title": "Written Messages",
+                  "primaryHelper": {
+                    "label": "Message to Family Member — Asking Them to Step In",
+                    "subject": "Subject: Need your help with [Mom's / Dad's / Name's] care",
+                    "body": "Hi [Name],\n\nI hope you're doing well. I'm reaching out because I'm going through a difficult personal situation and I need help making sure [Mom / Dad / Name] is well taken care of while I work through it.\n\nI was hoping you'd be willing to take on the primary caregiving role temporarily — [for the next few weeks / starting around (date)]. Here's what that would look like day-to-day:\n\n• [Key daily task, e.g., making sure they take their medications at 8am and 8pm]\n• [Key daily task, e.g., preparing or picking up meals]\n• [Key daily task, e.g., driving to physical therapy on Tuesdays]\n• I'll put together a full written reference with all the details, contacts, and routines\n\nI know this is a significant ask. I wouldn't ask if I didn't trust you completely and if I had another option. Please let me know if we can talk — even a short call would help me feel like things are covered.\n\nThank you for being someone I can turn to.\n\n[Your Name]"
+                  },
+                  "secondaryHelper": {
+                    "label": "Message to Another Family Member — Asking for a Supporting Role",
+                    "subject": "Subject: Could you help out with [Name] while I handle something?",
+                    "body": "Hi [Name],\n\nI'm going through a difficult stretch right now and I'm trying to make sure [Mom / Dad / Name] has solid coverage while I deal with it.\n\n[Other family member's name] is stepping in as the main caregiver, but I'm hoping you might be able to help with a few specific things:\n\n• [Specific task, e.g., stopping by on weekends]\n• [Specific task, e.g., picking up prescriptions when needed]\n• [Specific task, e.g., being a backup contact if something comes up]\n\nI've put together a written reference with all of [Name]'s routines, medications, and contacts that I'll share with you. I just want to make sure there's a solid support system in place.\n\nI know your time is valuable and I'm grateful for whatever you can offer.\n\n[Your Name]"
+                  },
+                  "provider": {
+                    "label": "Letter to Healthcare Provider — Notifying of Temporary Care Change",
+                    "subject": "Subject: Temporary Change in Caregiver Contact — [Dependent's Full Name]",
+                    "body": "Dear [Doctor's Name / Provider / Care Coordinator],\n\nI am writing to let you know that I will be temporarily less available to serve as the primary caregiver and contact for [Dependent's Full Name] (Date of Birth: [DOB]).\n\nEffective [date], the temporary primary contact for [Dependent's Name]'s care will be:\n\nName: [Caregiver's Full Name]\nRelationship: [e.g., sibling, adult child, family friend]\nPhone: [Caregiver's phone]\nEmail: [Caregiver's email]\n\n[Caregiver's Name] is authorized to:\n• Attend appointments with [Dependent's Name]\n• Receive medical information and updates\n• Make routine care decisions on [Dependent's Name]'s behalf\n\nI remain reachable at [your phone / email] for anything that requires my direct involvement. Please update your records accordingly. If a signed authorization form is required, please send it to me at [your email] and I will return it promptly.\n\nThank you for the care you provide to [Dependent's Name].\n\nSincerely,\n[Your Name]\n[Your Phone]\n[Your Email]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Phone Call Scripts",
+                  "description": "These scripts give you a starting point for two of the most important calls you may need to make.",
+                  "family": {
+                    "label": "Calling a Family Member to Ask for Help",
+                    "script": "Hi [Name], do you have a few minutes? I need to talk to you about something important.\n\nI'm going through a difficult personal situation and I'm worried about making sure [Mom / Dad / Name] is properly cared for while I deal with it.\n\nI want to ask if you'd be willing to step in as the primary caregiver — or at least be a main support — for [a few weeks / starting around (date)]. I know it's a lot to ask. I'd put together everything in writing so you'd have all the information you need.\n\n[Pause and give them space to respond]\n\nI completely understand if this isn't possible right now. Even knowing who might be available would help me figure out the plan. Is there anyone else in the family you think might be able to help?\n\nI just want [Name] to be taken care of, and you're someone I trust."
+                  },
+                  "aaa": {
+                    "label": "Calling the Area Agency on Aging (or 211)",
+                    "script": "Hello, my name is [Your Name] and I'm calling because I'm the primary caregiver for [my mother / my father / a family member] and I'm going through a personal situation that may temporarily affect my ability to provide care.\n\nI'm trying to understand what services or programs might be available to help with:\n• [Home health aide / in-home care support]\n• [Meal delivery]\n• [Transportation to medical appointments]\n• [Temporary respite care]\n\nCan you tell me what programs are available in [city/county] and whether my [family member] might qualify?\n\n[Take notes on what they say and ask for any relevant phone numbers or websites]"
+                  },
+                  "tips": {
+                    "label": "Tips Before You Make the Call",
+                    "items": {
+                      "tip1": "Have your dependent's basic information ready: their name, age, health conditions, and current care needs",
+                      "tip2": "You do not need to explain your legal situation to care agencies — you can simply say you're a caregiver in need of temporary support",
+                      "tip3": "Ask specifically about sliding-scale fees, Medicaid coverage, and free programs — costs vary widely",
+                      "tip4": "After a helpful call, ask if they can send information by email — it helps you remember and share with others"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "eldercareLocator": {
+                  "description": "Free national service connecting caregivers with local Area Agencies on Aging, which offer home care, meal programs, transportation, adult day services, and caregiver support."
+                },
+                "aarp": {
+                  "description": "AARP's Caregiver Support Line provides free one-on-one support, guidance, and referrals for caregivers navigating difficult situations."
+                },
+                "can": {
+                  "description": "Caregiver Action Network offers education, peer support, and connections to resources for family caregivers across all types of care situations."
+                },
+                "archRespite": {
+                  "description": "National Respite Network helps caregivers find local respite care programs — temporary relief care for your dependent so you can address your own needs."
+                },
+                "unitedWay": {
+                  "description": "Call or text 211 to connect with local programs for home health, meal delivery, transportation, and caregiver support. The fastest way to find what's available near you."
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org can help you identify programs your dependent may qualify for — including Medicaid home care, meal assistance, and utility support."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "What if I'm the only person who can care for my dependent?",
+                  "answer": "You are not as alone as it may feel right now. Area Agencies on Aging, 211, and community nonprofits exist specifically to step in when primary caregivers have an interruption. Medicaid may cover in-home aide services. Respite care programs can provide short-term professional care. Start with a call to 211 or the Eldercare Locator (1-800-677-1116) — they can map out what's available locally."
+                },
+                "q2": {
+                  "question": "Do I need to tell care providers about my legal situation?",
+                  "answer": "No. Care providers — doctors, home health aides, day program coordinators — don't need to know your legal situation. What they need is a practical update: who the temporary contact person is, who is authorized to receive information and make decisions, and whether anything about the care routine is changing. A brief, factual letter or call is all that's required."
+                },
+                "q3": {
+                  "question": "What if my dependent gets benefits I manage for them?",
+                  "answer": "If you are a representative payee for Social Security benefits, a Medicaid authorized representative, or manage other government benefits on behalf of your dependent, speak with your attorney to understand the implications. In most cases these arrangements remain intact, but if your availability changes significantly, a contingency plan may be worth putting in place."
+                },
+                "q4": {
+                  "question": "I have power of attorney for my dependent. Does my legal case affect that?",
+                  "answer": "In most cases, a power of attorney remains valid regardless of your own legal situation unless a court specifically rules otherwise. However, you should confirm this with your attorney based on your specific documents and jurisdiction. If there is any uncertainty, your attorney can advise on whether a backup agent or alternate arrangement should be put in place."
+                }
+              },
+              "tips": {
+                "tip1": "Write down everything about your dependent's care — routines, preferences, quirks, triggers — so whoever steps in can do it well and with confidence",
+                "tip2": "A temporary caregiver with clear written instructions is far more effective than one who has to figure it out as they go",
+                "tip3": "Call 211 or the Eldercare Locator to find local services — they specialize in exactly this kind of situation and can often move quickly",
+                "tip4": "Let your attorney know you are a primary caregiver — it can be relevant to bail conditions, hearing scheduling, and sentencing considerations",
+                "tip5": "Continuing to care for your dependent, even through a hard time, is something to be proud of — and making a plan for their care is one of the most responsible things you can do right now"
               }
             }
           },
@@ -4577,7 +4708,8 @@ i18n
               "familyFriends": "Para Familia y Amigos",
               "transportation": "Ayuda con Transporte",
               "childcare": "Apoyo para el Cuidado Infantil",
-              "housing": "Ayuda con Vivienda"
+              "housing": "Ayuda con Vivienda",
+              "familyCare": "Apoyo para el Cuidado Familiar"
             },
             "employment": {
               "overview": "Enfrentar cargos penales puede crear incertidumbre sobre su trabajo. Entender sus derechos y planificar con anticipación puede ayudar a proteger su empleo mientras se concentra en su caso.",
@@ -5313,6 +5445,136 @@ i18n
                 "tip3": "Si recibe cualquier aviso de su arrendador, respóndale — ignorarlo lleva a un fallo en rebeldía que hace las cosas mucho más difíciles",
                 "tip4": "Los programas de asistencia de renta de emergencia a menudo tienen fondos limitados — solicite tan pronto como sepa que puede necesitar ayuda, no después de ya haberse atrasado",
                 "tip5": "Pedir ayuda es una señal de fortaleza, no de debilidad — la mayoría de las personas en su vida quieren apoyarle si saben lo que se necesita"
+              }
+            },
+            "familyCare": {
+              "overview": "Si usted es el cuidador principal de un padre anciano, un familiar con discapacidad u otro dependiente, su situación legal no cambia las necesidades de ellos — pero puede afectar su capacidad para satisfacerlas. Esta guía le ayuda a organizar el cuidado de su dependiente, obtener apoyo de su red personal, comunicarse claramente con los proveedores y encontrar recursos comunitarios — para que pueda navegar su caso sabiendo que la persona que cuida está en buenas manos.",
+              "actions": {
+                "needsSheet": {
+                  "title": "Anote las necesidades de cuidado de su dependiente",
+                  "description": "Cree una referencia escrita que cubra todo lo que otro cuidador necesitaría saber: necesidades de asistencia diaria, medicamentos y dosis, requisitos alimentarios, necesidades de movilidad o cognitivas, citas programadas, contactos de emergencia e información de seguro. Este documento es lo más importante que puede preparar — es lo que hace posible que alguien más pueda intervenir.",
+                  "timeframe": "Esta semana",
+                  "priority": "high"
+                },
+                "identifyCaregiver": {
+                  "title": "Identifique y confirme a alguien que pueda intervenir",
+                  "description": "Piense en quién en su vida — un hermano/a, otro familiar, un amigo cercano o vecino — podría asumir un papel temporal de cuidador. Tenga una conversación directa con ellos sobre lo que implica el papel y si están dispuestos y disponibles. Sea específico. Identifique una segunda persona como respaldo. Las personas a menudo quieren ayudar pero necesitan que se les pida claramente.",
+                  "timeframe": "Esta semana",
+                  "priority": "high"
+                },
+                "notifyProviders": {
+                  "title": "Notifique a los proveedores de salud de su dependiente sobre los cambios",
+                  "description": "Los médicos, auxiliares de salud a domicilio, fisioterapeutas, coordinadores de programas diurnos y el personal de farmacia necesitan saber quién es ahora el punto de contacto y quién está autorizado para tomar decisiones de atención. No necesita compartir su situación legal — una simple actualización indicando un cambio temporal de cuidador es suficiente.",
+                  "priority": "high"
+                },
+                "contactAAA": {
+                  "title": "Contacte a su Agencia Local de Área en Envejecimiento",
+                  "description": "Las Agencias de Área en Envejecimiento (AAA) son organizaciones locales financiadas para conectar a las familias con auxiliares de salud a domicilio, entrega de comidas, transporte, programas de día para adultos, cuidado de relevo y más. Están diseñadas específicamente para situaciones como la suya. Llame al 211 o al Localizador de Cuidado para Adultos Mayores (1-800-677-1116) para encontrar su AAA local.",
+                  "priority": "medium"
+                },
+                "respiteCare": {
+                  "title": "Pregunte sobre programas de cuidado de relevo",
+                  "description": "El cuidado de relevo proporciona atención profesional temporal para su dependiente para que otro cuidador pueda descansar. Algunos programas ofrecen cuidado de relevo en el hogar; otros proporcionan estancias cortas en centros de día para adultos o instalaciones de cuidado. Muchos programas son gratuitos o subsidiados. Su AAA local puede ayudarle a encontrar lo que está disponible.",
+                  "priority": "medium"
+                },
+                "legalDocuments": {
+                  "title": "Revise cualquier documento de autoridad legal que posea",
+                  "description": "Si tiene poder notarial, tutela, o es representante o administrador de beneficios para su dependiente, entienda lo que esos documentos autorizan — y hable con su abogado sobre si se necesitan medidas de contingencia en caso de que esté temporalmente menos disponible. En la mayoría de los casos estos permanecen válidos, pero vale la pena confirmarlo.",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "Cómo Comunicar los Cambios en el Cuidado",
+                "sectionDescription": "Estas plantillas le ayudan a pedir ayuda a familiares y amigos, y a actualizar a los proveedores de atención — claramente y sin tener que compartir detalles sobre su situación legal.",
+                "tipLabel": "Recuerde",
+                "personalizeNote": "Reemplace el texto [entre corchetes] con sus propios datos antes de enviar. No necesita explicar su situación legal a nadie — enfóquese en lo que el cuidador o proveedor necesita saber.",
+                "copyButton": "Copiar al Portapapeles",
+                "copied": "¡Copiado!",
+                "printButton": "Imprimir",
+                "emailTemplates": {
+                  "title": "Mensajes Escritos",
+                  "primaryHelper": {
+                    "label": "Mensaje a Familiar — Pidiéndole que Intervenga",
+                    "subject": "Asunto: Necesito tu ayuda con el cuidado de [Mamá / Papá / Nombre]",
+                    "body": "Hola [Nombre],\n\nEspero que estés bien. Te escribo porque estoy pasando por una situación personal difícil y necesito ayuda para asegurarme de que [Mamá / Papá / Nombre] esté bien cuidado/a mientras la resuelvo.\n\nEsperaba que estuvieras dispuesto/a a asumir el papel de cuidador/a principal temporalmente — [durante las próximas semanas / a partir del (fecha)]. Esto es lo que implicaría día a día:\n\n• [Tarea principal, ej. asegurarse de que tome sus medicamentos a las 8am y 8pm]\n• [Tarea principal, ej. preparar o recoger las comidas]\n• [Tarea principal, ej. llevar a terapia física los martes]\n• Prepararé una referencia escrita completa con todos los detalles, contactos y rutinas\n\nSé que es mucho pedir. No lo pediría si no confiara completamente en ti y si tuviera otra opción. Por favor dime si podemos hablar — incluso una llamada corta me ayudaría a sentir que las cosas están cubiertas.\n\nGracias por ser alguien a quien puedo acudir.\n\n[Tu Nombre]"
+                  },
+                  "secondaryHelper": {
+                    "label": "Mensaje a Otro Familiar — Pidiendo un Papel de Apoyo",
+                    "subject": "Asunto: ¿Podrías ayudar con [Nombre] mientras manejo algo?",
+                    "body": "Hola [Nombre],\n\nEstoy pasando por un momento difícil y estoy tratando de asegurarme de que [Mamá / Papá / Nombre] tenga buena cobertura mientras lo resuelvo.\n\n[Nombre del otro familiar] está interviniendo como cuidador/a principal, pero espero que puedas ayudar con algunas cosas específicas:\n\n• [Tarea específica, ej. pasar los fines de semana]\n• [Tarea específica, ej. recoger las recetas cuando sea necesario]\n• [Tarea específica, ej. ser contacto de respaldo si surge algo]\n\nHe preparado una referencia escrita con todas las rutinas, medicamentos y contactos de [Nombre] que compartiré contigo. Solo quiero asegurarme de que haya un sistema de apoyo sólido.\n\nSé que tu tiempo es valioso y agradezco lo que puedas ofrecer.\n\n[Tu Nombre]"
+                  },
+                  "provider": {
+                    "label": "Carta al Proveedor de Salud — Notificando Cambio Temporal de Cuidador",
+                    "subject": "Asunto: Cambio Temporal en el Contacto de Cuidador — [Nombre Completo del Dependiente]",
+                    "body": "Estimado/a [Nombre del Médico / Proveedor / Coordinador de Atención],\n\nLe escribo para informarle que estaré temporalmente menos disponible para servir como cuidador/a principal y contacto para [Nombre Completo del Dependiente] (Fecha de Nacimiento: [fecha]).\n\nA partir del [fecha], el contacto principal temporal para el cuidado de [Nombre del Dependiente] será:\n\nNombre: [Nombre Completo del Cuidador]\nRelación: [ej. hermano/a, hijo/a adulto/a, amigo/a de la familia]\nTeléfono: [Teléfono del Cuidador]\nCorreo: [Correo del Cuidador]\n\n[Nombre del Cuidador] está autorizado/a para:\n• Acompañar a [Nombre del Dependiente] a citas\n• Recibir información médica y actualizaciones\n• Tomar decisiones de atención rutinarias en nombre de [Nombre del Dependiente]\n\nSigo siendo accesible en [su teléfono / correo] para cualquier asunto que requiera mi participación directa. Por favor actualice sus registros en consecuencia. Si se requiere un formulario de autorización firmado, envíemelo a [su correo] y lo devolveré de inmediato.\n\nGracias por la atención que brinda a [Nombre del Dependiente].\n\nAtentamente,\n[Su Nombre]\n[Su Teléfono]\n[Su Correo]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Guiones para Llamadas Telefónicas",
+                  "description": "Estos guiones le dan un punto de partida para dos de las llamadas más importantes que puede necesitar hacer.",
+                  "family": {
+                    "label": "Llamando a un Familiar para Pedir Ayuda",
+                    "script": "Hola [Nombre], ¿tienes unos minutos? Necesito hablar contigo sobre algo importante.\n\nEstoy pasando por una situación personal difícil y me preocupa asegurarme de que [Mamá / Papá / Nombre] esté bien cuidado/a mientras la resuelvo.\n\nQuiero preguntarte si estarías dispuesto/a a intervenir como cuidador/a principal — o al menos ser un apoyo principal — durante [unas semanas / a partir del (fecha)]. Sé que es mucho pedir. Prepararía todo por escrito para que tengas toda la información que necesitas.\n\n[Pausa y dale espacio para responder]\n\nEntiendo completamente si esto no es posible ahora. Incluso saber quién podría estar disponible me ayudaría a elaborar el plan. ¿Hay alguien más en la familia que crees que podría ayudar?\n\nSolo quiero que [Nombre] esté bien cuidado/a, y tú eres alguien en quien confío."
+                  },
+                  "aaa": {
+                    "label": "Llamando a la Agencia de Área en Envejecimiento (o al 211)",
+                    "script": "Hola, mi nombre es [Su Nombre] y llamo porque soy el/la cuidador/a principal de [mi madre / mi padre / un familiar] y estoy pasando por una situación personal que puede afectar temporalmente mi capacidad de proporcionar cuidado.\n\nEstoy tratando de entender qué servicios o programas podrían estar disponibles para ayudar con:\n• [Auxiliar de salud a domicilio / apoyo de cuidado en el hogar]\n• [Entrega de comidas]\n• [Transporte a citas médicas]\n• [Cuidado de relevo temporal]\n\n¿Puede decirme qué programas están disponibles en [ciudad/condado] y si mi [familiar] podría calificar?\n\n[Tome notas de lo que digan y pida números de teléfono o sitios web relevantes]"
+                  },
+                  "tips": {
+                    "label": "Consejos Antes de Hacer la Llamada",
+                    "items": {
+                      "tip1": "Tenga lista la información básica de su dependiente: nombre, edad, condiciones de salud y necesidades actuales de cuidado",
+                      "tip2": "No necesita explicar su situación legal a las agencias de cuidado — puede simplemente decir que es un cuidador que necesita apoyo temporal",
+                      "tip3": "Pregunte específicamente sobre tarifas según ingresos, cobertura de Medicaid y programas gratuitos — los costos varían mucho",
+                      "tip4": "Después de una llamada útil, pida que le envíen información por correo electrónico — le ayuda a recordar y compartir con otros"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "eldercareLocator": {
+                  "description": "Servicio nacional gratuito que conecta a los cuidadores con Agencias Locales de Área en Envejecimiento, que ofrecen atención domiciliaria, programas de comidas, transporte, servicios de día para adultos y apoyo para cuidadores."
+                },
+                "aarp": {
+                  "description": "La Línea de Apoyo para Cuidadores de AARP ofrece apoyo individual gratuito, orientación y referencias para cuidadores que navegan situaciones difíciles."
+                },
+                "can": {
+                  "description": "La Red de Acción de Cuidadores ofrece educación, apoyo entre pares y conexiones a recursos para cuidadores familiares en todo tipo de situaciones de cuidado."
+                },
+                "archRespite": {
+                  "description": "La Red Nacional de Relevo ayuda a los cuidadores a encontrar programas locales de cuidado de relevo — atención temporal profesional para su dependiente para que usted pueda atender sus propias necesidades."
+                },
+                "unitedWay": {
+                  "description": "Llame o envíe un mensaje al 211 para conectarse con programas locales de salud en el hogar, entrega de comidas, transporte y apoyo para cuidadores. La manera más rápida de encontrar lo que está disponible cerca de usted."
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org puede ayudarle a identificar programas para los que su dependiente puede calificar — incluyendo atención domiciliaria de Medicaid, asistencia alimentaria y apoyo para servicios públicos."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Qué pasa si soy la única persona que puede cuidar a mi dependiente?",
+                  "answer": "No está tan solo/a como puede sentirse ahora. Las Agencias de Área en Envejecimiento, el 211 y las organizaciones sin fines de lucro comunitarias existen específicamente para intervenir cuando los cuidadores principales tienen una interrupción. Medicaid puede cubrir servicios de auxiliar en el hogar. Los programas de cuidado de relevo pueden proporcionar atención profesional a corto plazo. Comience con una llamada al 211 o al Localizador de Cuidado para Adultos Mayores (1-800-677-1116) — pueden mapear lo que está disponible localmente."
+                },
+                "q2": {
+                  "question": "¿Necesito decirles a los proveedores de atención sobre mi situación legal?",
+                  "answer": "No. Los proveedores de atención — médicos, auxiliares de salud a domicilio, coordinadores de programas diurnos — no necesitan conocer su situación legal. Lo que necesitan es una actualización práctica: quién es la persona de contacto temporal, quién está autorizado para recibir información y tomar decisiones, y si algo en la rutina de atención está cambiando. Una carta o llamada breve y objetiva es todo lo que se requiere."
+                },
+                "q3": {
+                  "question": "¿Qué pasa si mi dependiente recibe beneficios que yo administro para ellos?",
+                  "answer": "Si usted es el representante pagador de los beneficios del Seguro Social, un representante autorizado de Medicaid, o administra otros beneficios gubernamentales en nombre de su dependiente, hable con su abogado para entender las implicaciones. En la mayoría de los casos estos arreglos permanecen intactos, pero si su disponibilidad cambia significativamente, puede valer la pena establecer un plan de contingencia."
+                },
+                "q4": {
+                  "question": "Tengo poder notarial para mi dependiente. ¿Afecta mi caso legal eso?",
+                  "answer": "En la mayoría de los casos, un poder notarial sigue siendo válido independientemente de su propia situación legal, a menos que un tribunal específicamente dictamine lo contrario. Sin embargo, debe confirmarlo con su abogado según sus documentos específicos y jurisdicción. Si hay alguna incertidumbre, su abogado puede asesorarle sobre si se debe establecer un agente de respaldo o un arreglo alternativo."
+                }
+              },
+              "tips": {
+                "tip1": "Anote todo sobre el cuidado de su dependiente — rutinas, preferencias, particularidades — para que quien intervenga pueda hacerlo bien y con confianza",
+                "tip2": "Un cuidador temporal con instrucciones escritas claras es mucho más efectivo que uno que tiene que averiguarlo sobre la marcha",
+                "tip3": "Llame al 211 o al Localizador de Cuidado para Adultos Mayores para encontrar servicios locales — se especializan exactamente en este tipo de situación y a menudo pueden moverse rápidamente",
+                "tip4": "Informe a su abogado que es el cuidador principal — puede ser relevante para las condiciones de fianza, la programación de audiencias y las consideraciones de sentencia",
+                "tip5": "Continuar cuidando a su dependiente, incluso en un momento difícil, es algo de lo que estar orgulloso/a — y hacer un plan para su cuidado es una de las cosas más responsables que puede hacer ahora mismo"
               }
             }
           },

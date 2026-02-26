@@ -69,6 +69,7 @@ import MentalHealthSupport from "@/pages/support/mental-health";
 import TransportationSupport from "@/pages/support/transportation";
 import ChildcareSupport from "@/pages/support/childcare";
 import HousingSupport from "@/pages/support/housing";
+import FamilyCareSupport from "@/pages/support/family-care";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -149,6 +150,7 @@ function Router() {
       <Route path="/support/transportation" component={TransportationSupport} />
       <Route path="/support/childcare" component={ChildcareSupport} />
       <Route path="/support/housing" component={HousingSupport} />
+      <Route path="/support/family-care" component={FamilyCareSupport} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
       <Route path="/attorney" component={AttorneyPortal} />
       <Route path="/attorney/verify" component={AttorneyVerify} />
