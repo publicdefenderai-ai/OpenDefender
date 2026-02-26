@@ -40,6 +40,34 @@ function parseMarkdownLinks(content: string) {
   return parts;
 }
 
+function renderInlineMarkdown(text: string): (string | JSX.Element)[] {
+  const result: (string | JSX.Element)[] = [];
+  const inlineRegex = /(\*\*(.+?)\*\*|\*(.+?)\*|__(.+?)__|_(.+?)_)/g;
+  let lastIndex = 0;
+  let match;
+  let keyIdx = 0;
+
+  while ((match = inlineRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      result.push(text.slice(lastIndex, match.index));
+    }
+    const boldContent = match[2] || match[4];
+    const italicContent = match[3] || match[5];
+    if (boldContent) {
+      result.push(<strong key={`b-${keyIdx++}`} className="font-semibold">{boldContent}</strong>);
+    } else if (italicContent) {
+      result.push(<em key={`i-${keyIdx++}`} className="italic">{italicContent}</em>);
+    }
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    result.push(text.slice(lastIndex));
+  }
+
+  return result;
+}
+
 function RenderContent({ content }: { content: string }) {
   const parts = parseMarkdownLinks(content);
   
@@ -47,7 +75,13 @@ function RenderContent({ content }: { content: string }) {
     <>
       {parts.map((part, index) => {
         if (typeof part === 'string') {
-          return <LegalTextHighlighter key={index} text={part} />;
+          const inlineParts = renderInlineMarkdown(part);
+          return inlineParts.map((inline, i) => {
+            if (typeof inline === 'string') {
+              return <LegalTextHighlighter key={`${index}-${i}`} text={inline} />;
+            }
+            return inline;
+          });
         }
         return (
           <Link
@@ -92,8 +126,28 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
             : "bg-primary/90 dark:bg-primary/80 text-white rounded-tr-md"
         )}
       >
-        <div className="text-[15px] leading-relaxed whitespace-pre-wrap">
-          <RenderContent content={displayContent} />
+        <div className="text-[15px] leading-relaxed">
+          {displayContent.split('\n').map((line, lineIdx) => {
+            const trimmed = line.trim();
+            if (trimmed === '---' || trimmed === '***') {
+              return <hr key={lineIdx} className="my-3 border-border/50" />;
+            }
+            if (trimmed.startsWith('> ')) {
+              return (
+                <div key={lineIdx} className="border-l-2 border-primary/40 pl-3 my-1 text-muted-foreground italic">
+                  <RenderContent content={trimmed.slice(2)} />
+                </div>
+              );
+            }
+            if (trimmed === '') {
+              return <div key={lineIdx} className="h-2" />;
+            }
+            return (
+              <div key={lineIdx}>
+                <RenderContent content={line} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </motion.div>
