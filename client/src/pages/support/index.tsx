@@ -44,7 +44,7 @@ const supportCategories: SupportCategoryProps[] = [
   { id: "childcare", icon: Baby, iconBg: "bg-pink-100 dark:bg-pink-900/40", iconText: "text-pink-600 dark:text-pink-400", borderColor: "border-l-pink-500", href: "/support/childcare", available: true },
   { id: "familyCare", icon: Users, iconBg: "bg-indigo-100 dark:bg-indigo-900/40", iconText: "text-indigo-600 dark:text-indigo-400", borderColor: "border-l-indigo-500", href: "/support/family-care", available: true },
   { id: "immigration", icon: Globe2, iconBg: "bg-teal-100 dark:bg-teal-900/40", iconText: "text-teal-600 dark:text-teal-400", borderColor: "border-l-teal-500", href: "/immigration-guidance", available: true },
-  { id: "reputation", icon: ShieldCheck, iconBg: "bg-slate-100 dark:bg-slate-900/40", iconText: "text-slate-600 dark:text-slate-400", borderColor: "border-l-slate-500", href: "/support/reputation", available: false },
+  { id: "reputation", icon: ShieldCheck, iconBg: "bg-slate-100 dark:bg-slate-900/40", iconText: "text-slate-600 dark:text-slate-400", borderColor: "border-l-slate-500", href: "/support/reputation", available: true },
 ];
 
 function CategoryCard({ category, index }: { category: SupportCategoryProps; index: number }) {

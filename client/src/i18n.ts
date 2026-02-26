@@ -277,7 +277,8 @@ i18n
               "transportation": "Transportation Help",
               "childcare": "Childcare Support",
               "housing": "Housing Help",
-              "familyCare": "Family Care Support"
+              "familyCare": "Family Care Support",
+              "reputation": "Reputation & Records"
             },
             "employment": {
               "overview": "Facing criminal charges can create uncertainty about your job. Understanding your rights and planning ahead can help protect your employment while you focus on your case.",
@@ -1143,6 +1144,136 @@ i18n
                 "tip3": "Call 211 or the Eldercare Locator to find local services — they specialize in exactly this kind of situation and can often move quickly",
                 "tip4": "Let your attorney know you are a primary caregiver — it can be relevant to bail conditions, hearing scheduling, and sentencing considerations",
                 "tip5": "Continuing to care for your dependent, even through a hard time, is something to be proud of — and making a plan for their care is one of the most responsible things you can do right now"
+              }
+            },
+            "reputation": {
+              "overview": "Charges — even pending ones — can feel like they define you to the world. They don't. You are not your charges, and many people navigate this with their relationships, careers, and communities intact. This guide helps you understand what is actually in your public record, take control of the conversations you choose to have, and plan for protecting and rebuilding your reputation over time.",
+              "actions": {
+                "controlNarrative": {
+                  "title": "Decide who you tell — and what you say",
+                  "description": "You are not obligated to disclose your charges to anyone. Being intentional about who you confide in protects you from rumors and lets you build a support network of people who know the full picture. Share selectively and purposefully — close friends and family who will support you, not gossip. The templates below can help you start those conversations on your own terms.",
+                  "timeframe": "This week",
+                  "priority": "high"
+                },
+                "understandRecord": {
+                  "title": "Understand what is actually in your public record right now",
+                  "description": "Arrest records may or may not appear on background checks depending on your state. A pending charge is not a conviction. Many states restrict employers from considering arrests that didn't result in conviction. Knowing exactly what shows up — and what your state's laws say about it — lets you respond accurately and confidently when asked.",
+                  "timeframe": "This week",
+                  "priority": "high"
+                },
+                "socialMedia": {
+                  "title": "Pause and review your social media",
+                  "description": "Anything posted publicly can be found, screenshot, and misinterpreted. During your case, avoid posting about the situation, your frustration, or anything emotionally charged. Review your existing posts and privacy settings. Your attorney should advise on anything specific — but the general rule is: when in doubt, don't post.",
+                  "priority": "high"
+                },
+                "prepareResponse": {
+                  "title": "Prepare a calm, brief response for when it comes up",
+                  "description": "Professionally — for background checks, employer questions, or licensing disclosures — being prepared with a measured, factual response is far better than being caught off guard. You don't need to over-explain. A short statement that your case is pending and you're handling it responsibly is usually sufficient. The scripts below can help you practice.",
+                  "priority": "medium"
+                },
+                "documentPositives": {
+                  "title": "Gather documentation of your positive character",
+                  "description": "Employment records, performance reviews, volunteer involvement, community ties, awards, and character references all matter — both for your case and for your long-term reputation. Now is a good time to start collecting them. Character letters from people who know you well can carry real weight with judges and employers alike.",
+                  "priority": "medium"
+                },
+                "planRecordRelief": {
+                  "title": "Plan for record relief after your case",
+                  "description": "Depending on your outcome and your state, you may be eligible for expungement, record sealing, or other forms of record clearing after your case resolves. These can meaningfully limit what shows up on future background checks. Ask your attorney early, or contact a legal aid organization — many offer free record clearing services.",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "Handling These Conversations",
+                "sectionDescription": "Some of the hardest moments aren't in the courtroom — they're when someone you know finds out. These templates give you language for the conversations you didn't plan for, so you're not left searching for words.",
+                "tipLabel": "Remember",
+                "personalizeNote": "You control how much you share and with whom. These templates are starting points — adjust the level of detail to match your comfort and your relationship with the person.",
+                "copyButton": "Copy to Clipboard",
+                "copied": "Copied!",
+                "printButton": "Print",
+                "emailTemplates": {
+                  "title": "Written Messages",
+                  "closeFriend": {
+                    "label": "Message to a Close Friend — Telling Them on Your Own Terms",
+                    "subject": "Subject: Something I wanted you to hear from me directly",
+                    "body": "Hi [Name],\n\nI wanted to reach out because I'd rather you hear this from me than through someone else.\n\nI'm dealing with a legal matter right now. I'm not going to go into all the details, but I want you to know that I'm taking it seriously and working through it with my attorney. This has been one of the hardest periods of my life and I'm doing my best to handle it responsibly.\n\nI'm not looking for pity — I just didn't want there to be a wall between us, and I trust you. If you have questions, I'm happy to talk, though there are limits to what I can share right now.\n\nMost of all, I just wanted you to know. Having people in my corner means everything.\n\n[Your Name]"
+                  },
+                  "professional": {
+                    "label": "Written Response for an Employer or Background Check Inquiry",
+                    "subject": "Subject: Regarding Background Check Results — [Your Name]",
+                    "body": "Dear [Hiring Manager / HR Department],\n\nI am writing to address the pending legal matter that may appear in my background check results.\n\nI want to be transparent: I am currently facing [a charge / charges] that I am contesting with the assistance of legal counsel. The matter is unresolved and I am not able to share specifics at this time. I want to emphasize that this is a pending case — not a conviction — and I am committed to resolving it through the proper legal process.\n\nI have consistently performed [at a high level / with integrity / responsibly] in my professional life and I am happy to provide references who can speak to my character and work ethic. I would welcome the opportunity to discuss this further if you feel it is necessary.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]"
+                  },
+                  "mugshot": {
+                    "label": "Request to Remove a Mugshot or Record from a Website",
+                    "subject": "Subject: Removal Request — [Your Full Name] — [Date of Arrest]",
+                    "body": "To Whom It May Concern,\n\nI am writing to formally request the removal of my personal information and photograph from your website.\n\nName: [Your Full Name]\nDate of birth: [DOB]\nDate of arrest: [Date]\nURL of the page containing my information: [URL]\n\nThis listing is causing significant harm to my professional and personal reputation. [If applicable: My state's law (cite state, e.g., California Civil Code § 1798.91.1) requires the removal of this content upon request without a fee.]\n\nI request that you remove this content within [30 days / the timeframe required by law]. Please confirm receipt of this request and the expected removal date.\n\nIf you require any additional information, please contact me at [your email / phone].\n\nSincerely,\n[Your Full Name]\n[Your Contact Information]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Conversation Scripts",
+                  "description": "These give you a framework for some of the most uncomfortable conversations — so you're prepared rather than caught off guard.",
+                  "unexpected": {
+                    "label": "When Someone Brings It Up Unexpectedly",
+                    "script": "If a coworker, acquaintance, or someone you don't know well brings it up:\n\n\"I appreciate you mentioning it. It's a situation I'm working through and I don't really want to get into the details — but I'm doing okay and taking it seriously. I'd appreciate keeping it between us.\"\n\n— or, if you want to shut it down quickly —\n\n\"I'm not really able to talk about that right now. I hope you understand.\"\n\nYou don't owe anyone an explanation. A calm, brief response signals that you're composed and not inviting further discussion."
+                  },
+                  "interview": {
+                    "label": "Addressing It in a Job Interview or with an Employer",
+                    "script": "If asked directly about a background check result or charges:\n\n\"Yes, there is a pending legal matter that I want to address directly. It's an open case that I'm contesting with legal counsel — it has not been resolved and there has been no conviction. I'm committed to handling it through the proper process.\n\nWhat I can tell you is that it doesn't reflect how I conduct myself professionally or personally, and I'm happy to provide references who can speak to that. I don't want it to be a surprise to you, and I appreciate the opportunity to address it directly.\"\n\nThen pause. Let them respond. Don't over-explain."
+                  },
+                  "tips": {
+                    "label": "Principles for All of These Conversations",
+                    "items": {
+                      "tip1": "Brief and calm is always more effective than lengthy and defensive — over-explaining can make things worse",
+                      "tip2": "You never have to share more than you're comfortable with — 'I'm not able to go into detail right now' is a complete sentence",
+                      "tip3": "Charges are allegations, not convictions — you are entitled to say so clearly and accurately",
+                      "tip4": "After the conversation, write down what was said and when — especially in professional contexts where it may be relevant later"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "recordClear": {
+                  "description": "Free legal aid for expungement and record clearing in many states. Search by state for organizations offering free record relief services."
+                },
+                "nelp": {
+                  "description": "National Employment Law Project publishes state-by-state guides on 'ban the box' laws and employer restrictions on using criminal records in hiring decisions."
+                },
+                "eeoc": {
+                  "description": "The EEOC provides guidance on when employers can and cannot use criminal background check results under federal anti-discrimination law."
+                },
+                "mugRemoval": {
+                  "description": "Many states now require mugshot websites to remove photos upon request. Search '[your state] mugshot removal law' to find the process and whether fees can be charged."
+                },
+                "repDefender": {
+                  "description": "Online reputation management services can help suppress or remove harmful search results. Costs vary — free options include direct requests to websites and search engines."
+                },
+                "lawHelp": {
+                  "description": "LawHelp.org connects you to free legal aid for expungement, record sealing, and other post-case record relief by state."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "Is my arrest public record? Can anyone see it?",
+                  "answer": "In most states, arrest records are technically public, but what actually shows up on a background check varies significantly. Many background check companies don't report arrests that are older than a certain period or that didn't lead to conviction. Additionally, many states have laws restricting employers from asking about or considering arrests that didn't result in conviction. Check your state's specific laws — a legal aid organization can help you understand what applies to you."
+                },
+                "q2": {
+                  "question": "Can I get my record expunged or sealed?",
+                  "answer": "Possibly — and it's worth finding out. Eligibility depends on the charge, the outcome of your case, how much time has passed, and your state's laws. Many states allow expungement for dismissed charges, first offenses, or cases resolved through diversion programs. Many legal aid organizations offer free expungement clinics. Ask your attorney about your options early — some steps need to be taken at the right point in your case."
+                },
+                "q3": {
+                  "question": "What do I say when someone asks about my case?",
+                  "answer": "You are not required to discuss your case with anyone other than your attorney. A calm, brief response — 'I'm dealing with a legal matter and I can't get into the details right now' — is complete and professional. In employment contexts, you may be required to disclose pending charges on certain applications, but you can frame your response factually: it's pending, it's not a conviction, and you're handling it properly."
+                },
+                "q4": {
+                  "question": "Can I get my mugshot removed from the internet?",
+                  "answer": "Many states have passed laws requiring mugshot websites to remove photos upon request, often without charging a fee. Search for your state's mugshot removal law. For sites that don't comply or aren't covered by state law, you can submit removal requests directly to Google to de-index pages. Organizations like those listed below can also assist. This won't erase records from official law enforcement systems, but it can significantly reduce what people find through general searches."
+                }
+              },
+              "tips": {
+                "tip1": "You are not your charges — charges are allegations, and many people move through this period with their relationships and careers fully intact",
+                "tip2": "Be very selective about who you confide in during your case — information shared casually can spread in ways you don't anticipate",
+                "tip3": "Your attorney should advise you on what, if anything, to say publicly about your case — follow their guidance closely",
+                "tip4": "Start collecting positive documentation now: performance reviews, reference letters, volunteer records, community involvement",
+                "tip5": "After your case resolves, explore record clearing options — expungement or sealing can make a real difference in housing and employment going forward"
               }
             }
           },
@@ -4709,7 +4840,8 @@ i18n
               "transportation": "Ayuda con Transporte",
               "childcare": "Apoyo para el Cuidado Infantil",
               "housing": "Ayuda con Vivienda",
-              "familyCare": "Apoyo para el Cuidado Familiar"
+              "familyCare": "Apoyo para el Cuidado Familiar",
+              "reputation": "Reputación y Registros"
             },
             "employment": {
               "overview": "Enfrentar cargos penales puede crear incertidumbre sobre su trabajo. Entender sus derechos y planificar con anticipación puede ayudar a proteger su empleo mientras se concentra en su caso.",
@@ -5575,6 +5707,136 @@ i18n
                 "tip3": "Llame al 211 o al Localizador de Cuidado para Adultos Mayores para encontrar servicios locales — se especializan exactamente en este tipo de situación y a menudo pueden moverse rápidamente",
                 "tip4": "Informe a su abogado que es el cuidador principal — puede ser relevante para las condiciones de fianza, la programación de audiencias y las consideraciones de sentencia",
                 "tip5": "Continuar cuidando a su dependiente, incluso en un momento difícil, es algo de lo que estar orgulloso/a — y hacer un plan para su cuidado es una de las cosas más responsables que puede hacer ahora mismo"
+              }
+            },
+            "reputation": {
+              "overview": "Los cargos — incluso los pendientes — pueden sentirse como si lo definieran ante el mundo. No es así. Usted no es sus cargos, y muchas personas navegan esto con sus relaciones, carreras y comunidades intactas. Esta guía le ayuda a entender qué hay realmente en su expediente público, tomar control de las conversaciones que elige tener, y planificar la protección y reconstrucción de su reputación a lo largo del tiempo.",
+              "actions": {
+                "controlNarrative": {
+                  "title": "Decida a quién le cuenta — y qué dice",
+                  "description": "No está obligado/a a divulgar sus cargos a nadie. Ser intencional sobre a quién confía le protege de rumores y le permite construir una red de apoyo de personas que conocen el panorama completo. Comparta de manera selectiva y con propósito — amigos cercanos y familiares que le apoyarán, no que hablarán. Las plantillas a continuación pueden ayudarle a iniciar esas conversaciones en sus propios términos.",
+                  "timeframe": "Esta semana",
+                  "priority": "high"
+                },
+                "understandRecord": {
+                  "title": "Entienda qué hay realmente en su expediente público ahora mismo",
+                  "description": "Los registros de arresto pueden o no aparecer en verificaciones de antecedentes dependiendo de su estado. Un cargo pendiente no es una condena. Muchos estados restringen a los empleadores de considerar arrestos que no resultaron en condena. Saber exactamente qué aparece — y qué dicen las leyes de su estado al respecto — le permite responder con precisión y confianza cuando le pregunten.",
+                  "timeframe": "Esta semana",
+                  "priority": "high"
+                },
+                "socialMedia": {
+                  "title": "Pause y revise sus redes sociales",
+                  "description": "Cualquier cosa publicada públicamente puede encontrarse, capturarse en pantalla y malinterpretarse. Durante su caso, evite publicar sobre la situación, su frustración, o cualquier cosa emocionalmente cargada. Revise sus publicaciones existentes y la configuración de privacidad. Su abogado debe asesorarle sobre algo específico — pero la regla general es: en caso de duda, no publique.",
+                  "priority": "high"
+                },
+                "prepareResponse": {
+                  "title": "Prepare una respuesta calmada y breve para cuando surja el tema",
+                  "description": "Profesionalmente — para verificaciones de antecedentes, preguntas de empleadores o divulgaciones de licencias — estar preparado/a con una respuesta medida y objetiva es mucho mejor que que le tomen desprevenido/a. No necesita dar demasiadas explicaciones. Una declaración breve de que su caso está pendiente y lo está manejando responsablemente suele ser suficiente. Los guiones a continuación pueden ayudarle a practicar.",
+                  "priority": "medium"
+                },
+                "documentPositives": {
+                  "title": "Recopile documentación de su carácter positivo",
+                  "description": "Los registros de empleo, evaluaciones de desempeño, participación voluntaria, vínculos comunitarios, premios y referencias de carácter importan — tanto para su caso como para su reputación a largo plazo. Ahora es un buen momento para comenzar a recopilarlos. Las cartas de carácter de personas que le conocen bien pueden tener un peso real tanto ante jueces como ante empleadores.",
+                  "priority": "medium"
+                },
+                "planRecordRelief": {
+                  "title": "Planifique la eliminación de registros después de su caso",
+                  "description": "Dependiendo de su resultado y su estado, puede ser elegible para la eliminación (expungement), el sellado de registros u otras formas de alivio de registros después de que su caso se resuelva. Estas pueden limitar significativamente lo que aparece en futuras verificaciones de antecedentes. Pregúntele a su abogado con anticipación, o contacte a una organización de asistencia legal — muchas ofrecen servicios gratuitos de eliminación de registros.",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "Cómo Manejar Estas Conversaciones",
+                "sectionDescription": "Algunos de los momentos más difíciles no están en el tribunal — son cuando alguien que conoce se entera. Estas plantillas le dan el lenguaje para las conversaciones que no planeó, para que no se quede buscando palabras.",
+                "tipLabel": "Recuerde",
+                "personalizeNote": "Usted controla cuánto comparte y con quién. Estas plantillas son puntos de partida — ajuste el nivel de detalle según su comodidad y su relación con la persona.",
+                "copyButton": "Copiar al Portapapeles",
+                "copied": "¡Copiado!",
+                "printButton": "Imprimir",
+                "emailTemplates": {
+                  "title": "Mensajes Escritos",
+                  "closeFriend": {
+                    "label": "Mensaje a un Amigo Cercano — Contándoselo en Sus Propios Términos",
+                    "subject": "Asunto: Algo que quería que escucharas directamente de mí",
+                    "body": "Hola [Nombre],\n\nQuería escribirte porque prefiero que lo escuches de mí que de otra persona.\n\nEstoy enfrentando una situación legal en este momento. No voy a entrar en todos los detalles, pero quiero que sepas que la estoy tomando en serio y trabajando en ella con mi abogado. Este ha sido uno de los períodos más difíciles de mi vida y estoy haciendo lo mejor que puedo para manejarlo responsablemente.\n\nNo busco lástima — simplemente no quería que hubiera una barrera entre nosotros, y confío en ti. Si tienes preguntas, estoy dispuesto/a a hablar, aunque hay límites en lo que puedo compartir ahora mismo.\n\nSobre todo, solo quería que lo supieras. Tener personas de mi lado significa todo.\n\n[Tu Nombre]"
+                  },
+                  "professional": {
+                    "label": "Respuesta Escrita para un Empleador o Consulta de Verificación de Antecedentes",
+                    "subject": "Asunto: Regarding Background Check Results — [Su Nombre]",
+                    "body": "Estimado/a [Gerente de Contratación / Departamento de Recursos Humanos],\n\nLe escribo para abordar el asunto legal pendiente que puede aparecer en los resultados de mi verificación de antecedentes.\n\nQuiero ser transparente: actualmente enfrento [un cargo / cargos] que estoy contestando con la asistencia de asesoría legal. El asunto no está resuelto y no puedo compartir detalles específicos en este momento. Quiero enfatizar que este es un caso pendiente — no una condena — y estoy comprometido/a a resolverlo a través del proceso legal apropiado.\n\nHe desempeñado [a un alto nivel / con integridad / responsablemente] en mi vida profesional y estoy dispuesto/a a proporcionar referencias que puedan hablar de mi carácter y ética de trabajo. Agradecería la oportunidad de hablar sobre esto más si lo considera necesario.\n\nGracias por su consideración.\n\nAtentamente,\n[Su Nombre]\n[Su Información de Contacto]"
+                  },
+                  "mugshot": {
+                    "label": "Solicitud de Eliminación de una Foto de Arresto o Registro de un Sitio Web",
+                    "subject": "Asunto: Solicitud de Eliminación — [Su Nombre Completo] — [Fecha de Arresto]",
+                    "body": "A quien corresponda,\n\nLe escribo para solicitar formalmente la eliminación de mi información personal y fotografía de su sitio web.\n\nNombre: [Su Nombre Completo]\nFecha de nacimiento: [Fecha]\nFecha de arresto: [Fecha]\nURL de la página con mi información: [URL]\n\nEsta publicación está causando un daño significativo a mi reputación profesional y personal. [Si aplica: La ley de mi estado (cite el estado y ley, ej. California Civil Code § 1798.91.1) requiere la eliminación de este contenido a solicitud sin cargo alguno.]\n\nSolicito que elimine este contenido en un plazo de [30 días / el plazo requerido por la ley]. Por favor confirme la recepción de esta solicitud y la fecha esperada de eliminación.\n\nSi requiere información adicional, puede contactarme en [su correo / teléfono].\n\nAtentamente,\n[Su Nombre Completo]\n[Su Información de Contacto]"
+                  }
+                },
+                "callScripts": {
+                  "title": "Guiones para Conversaciones",
+                  "description": "Estos le dan un marco para algunas de las conversaciones más incómodas — para que esté preparado/a en lugar de ser tomado/a por sorpresa.",
+                  "unexpected": {
+                    "label": "Cuando Alguien lo Menciona Inesperadamente",
+                    "script": "Si un compañero de trabajo, conocido o alguien que no conoce bien lo menciona:\n\n\"Agradezco que lo menciones. Es una situación que estoy manejando y realmente no quiero entrar en los detalles — pero estoy bien y lo estoy tomando en serio. Apreciaría que lo mantuviéramos entre nosotros.\"\n\n— o, si quiere cerrar el tema rápidamente —\n\n\"Realmente no puedo hablar de eso ahora mismo. Espero que lo entiendas.\"\n\nNo le debe a nadie una explicación. Una respuesta calmada y breve indica que está tranquilo/a y no invita a más discusión."
+                  },
+                  "interview": {
+                    "label": "Abordarlo en una Entrevista de Trabajo o con un Empleador",
+                    "script": "Si le preguntan directamente sobre un resultado de verificación de antecedentes o cargos:\n\n\"Sí, hay un asunto legal pendiente que quiero abordar directamente. Es un caso abierto que estoy contestando con asesoría legal — no ha sido resuelto y no ha habido condena. Estoy comprometido/a a manejarlo a través del proceso apropiado.\n\nLo que puedo decirle es que no refleja cómo me conduzco profesional o personalmente, y estoy dispuesto/a a proporcionar referencias que puedan hablar de ello. No quiero que sea una sorpresa para usted, y aprecio la oportunidad de abordarlo directamente.\"\n\nLuego haga una pausa. Deje que respondan. No dé demasiadas explicaciones."
+                  },
+                  "tips": {
+                    "label": "Principios para Todas Estas Conversaciones",
+                    "items": {
+                      "tip1": "Breve y calmado/a siempre es más efectivo que extenso y defensivo — dar demasiadas explicaciones puede empeorar las cosas",
+                      "tip2": "Nunca tiene que compartir más de lo que se siente cómodo/a — 'No puedo entrar en detalles ahora mismo' es una respuesta completa",
+                      "tip3": "Los cargos son alegaciones, no condenas — tiene derecho a decirlo claramente y con precisión",
+                      "tip4": "Después de la conversación, anote lo que se dijo y cuándo — especialmente en contextos profesionales donde pueda ser relevante más adelante"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "recordClear": {
+                  "description": "Asistencia legal gratuita para la eliminación y el sellado de registros en muchos estados. Busque por estado las organizaciones que ofrecen servicios gratuitos de alivio de registros."
+                },
+                "nelp": {
+                  "description": "El Proyecto Nacional de Derecho Laboral publica guías estado por estado sobre las leyes de 'ban the box' y las restricciones para empleadores sobre el uso de registros penales en decisiones de contratación."
+                },
+                "eeoc": {
+                  "description": "La EEOC proporciona orientación sobre cuándo los empleadores pueden y no pueden usar los resultados de verificaciones de antecedentes penales bajo la ley federal antidiscriminación."
+                },
+                "mugRemoval": {
+                  "description": "Muchos estados han aprobado leyes que requieren que los sitios web de fotos de arresto eliminen fotos a solicitud. Busque 'ley de eliminación de fotos de arresto [su estado]' para encontrar el proceso."
+                },
+                "repDefender": {
+                  "description": "Los servicios de gestión de reputación en línea pueden ayudar a suprimir o eliminar resultados de búsqueda perjudiciales. Los costos varían — las opciones gratuitas incluyen solicitudes directas a sitios web y motores de búsqueda."
+                },
+                "lawHelp": {
+                  "description": "LawHelp.org le conecta con asistencia legal gratuita para la eliminación, el sellado de registros y otro alivio de registros posterior al caso por estado."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Mi arresto es un expediente público? ¿Puede verlo cualquiera?",
+                  "answer": "En la mayoría de los estados, los registros de arresto son técnicamente públicos, pero lo que realmente aparece en una verificación de antecedentes varía significativamente. Muchas empresas de verificación de antecedentes no reportan arrestos que son más antiguos de cierto período o que no llevaron a una condena. Además, muchos estados tienen leyes que restringen a los empleadores de preguntar sobre o considerar arrestos que no resultaron en condena. Verifique las leyes específicas de su estado — una organización de asistencia legal puede ayudarle a entender qué aplica a usted."
+                },
+                "q2": {
+                  "question": "¿Puedo eliminar o sellar mi expediente?",
+                  "answer": "Posiblemente — y vale la pena averiguarlo. La elegibilidad depende del cargo, el resultado de su caso, cuánto tiempo ha pasado y las leyes de su estado. Muchos estados permiten la eliminación de cargos desestimados, primeras ofensas o casos resueltos a través de programas de diversión. Muchas organizaciones de asistencia legal ofrecen clínicas gratuitas de eliminación de registros. Pregúntele a su abogado sobre sus opciones con anticipación — algunos pasos deben tomarse en el momento correcto de su caso."
+                },
+                "q3": {
+                  "question": "¿Qué digo cuando alguien me pregunta sobre mi caso?",
+                  "answer": "No está obligado/a a discutir su caso con nadie más que su abogado. Una respuesta calmada y breve — 'Estoy manejando un asunto legal y no puedo entrar en detalles ahora mismo' — es completa y profesional. En contextos de empleo, puede ser requerido/a a divulgar cargos pendientes en ciertas solicitudes, pero puede enmarcar su respuesta objetivamente: está pendiente, no es una condena, y lo está manejando adecuadamente."
+                },
+                "q4": {
+                  "question": "¿Puedo hacer que eliminen mi foto de arresto de internet?",
+                  "answer": "Muchos estados han aprobado leyes que requieren que los sitios web de fotos de arresto eliminen fotos a solicitud, a menudo sin cobrar una tarifa. Busque la ley de eliminación de fotos de arresto de su estado. Para sitios que no cumplen o no están cubiertos por la ley estatal, puede enviar solicitudes de eliminación directamente a Google para desindexar páginas. Las organizaciones listadas a continuación también pueden ayudar. Esto no borrará los registros de los sistemas oficiales de la policía, pero puede reducir significativamente lo que las personas encuentran en búsquedas generales."
+                }
+              },
+              "tips": {
+                "tip1": "Usted no es sus cargos — los cargos son alegaciones, y muchas personas atraviesan este período con sus relaciones y carreras completamente intactas",
+                "tip2": "Sea muy selectivo/a sobre a quién confía durante su caso — la información compartida casualmente puede propagarse de maneras que no anticipa",
+                "tip3": "Su abogado debe asesorarle sobre qué, si algo, decir públicamente sobre su caso — siga su orientación de cerca",
+                "tip4": "Comience a recopilar documentación positiva ahora: evaluaciones de desempeño, cartas de referencia, registros de voluntariado, participación comunitaria",
+                "tip5": "Después de que su caso se resuelva, explore las opciones de eliminación de registros — la eliminación o el sellado puede marcar una diferencia real en el acceso a vivienda y empleo en el futuro"
               }
             }
           },
