@@ -49,14 +49,23 @@ export const STATE_CITATION_PATTERNS: Record<string, CitationPattern> = {
     notes: 'New York Penal Law'
   },
   'PA': {
-    pattern: (code) => `18 Pa.C.S. § ${code}`,
+    pattern: (code) => {
+      const titleMatch = code.match(/^(18|23|35|42|75)-(.+)/);
+      if (titleMatch) return `${titleMatch[1]} Pa.C.S. § ${titleMatch[2]}`;
+      return `18 Pa.C.S. § ${code}`;
+    },
     officialSite: 'https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18',
-    notes: 'Pennsylvania Consolidated Statutes Title 18'
+    notes: 'Pennsylvania Consolidated Statutes (Title 18 default; supports 23/35/42/75 prefix)'
   },
   'IL': {
-    pattern: (code) => `720 ILCS 5/${code}`,
+    pattern: (code) => {
+      const chapterMatch = code.match(/^(\d{3,})-(.+)/);
+      if (chapterMatch) return `${chapterMatch[1]} ILCS ${chapterMatch[2]}`;
+      if (code.includes('/')) return `720 ILCS ${code}`;
+      return `720 ILCS 5/${code}`;
+    },
     officialSite: 'https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ChapterID=53&ActID=1876',
-    notes: 'Illinois Compiled Statutes'
+    notes: 'Illinois Compiled Statutes (multi-chapter: 720/730/625/235/etc.)'
   },
   'OH': {
     pattern: (code) => `Ohio Rev. Code Ann. § ${code}`,
@@ -85,7 +94,11 @@ export const STATE_CITATION_PATTERNS: Record<string, CitationPattern> = {
   'AR': { pattern: (code) => `Ark. Code Ann. § ${code}` },
   'CO': { pattern: (code) => `Colo. Rev. Stat. § ${code}` },
   'CT': { pattern: (code) => `Conn. Gen. Stat. § ${code}` },
-  'DE': { pattern: (code) => `Del. Code Ann. tit. 11, § ${code}` },
+  'DE': { pattern: (code) => {
+    const m = code.match(/^(\d+)-(.+)/);
+    if (m) return `Del. Code Ann. tit. ${m[1]}, § ${m[2]}`;
+    return `Del. Code Ann. tit. 11, § ${code}`;
+  } },
   'HI': { pattern: (code) => `Haw. Rev. Stat. § ${code}` },
   'ID': { pattern: (code) => `Idaho Code § ${code}` },
   'IN': { pattern: (code) => `Ind. Code § ${code}` },
@@ -93,7 +106,13 @@ export const STATE_CITATION_PATTERNS: Record<string, CitationPattern> = {
   'KS': { pattern: (code) => `Kan. Stat. Ann. § ${code}` },
   'KY': { pattern: (code) => `Ky. Rev. Stat. Ann. § ${code}` },
   'LA': { pattern: (code) => `La. Rev. Stat. Ann. § ${code}` },
-  'ME': { pattern: (code) => `Me. Rev. Stat. Ann. tit. 17-A, § ${code}` },
+  'ME': { pattern: (code) => {
+    const letterTitle = code.match(/^(\d+-[A-Z])-(.+)/);
+    if (letterTitle) return `Me. Rev. Stat. Ann. tit. ${letterTitle[1]}, § ${letterTitle[2]}`;
+    const numTitle = code.match(/^(\d+)-(.+)/);
+    if (numTitle) return `Me. Rev. Stat. Ann. tit. ${numTitle[1]}, § ${numTitle[2]}`;
+    return `Me. Rev. Stat. Ann. tit. 17-A, § ${code}`;
+  } },
   'MD': { pattern: (code) => `Md. Code Ann., Crim. Law § ${code}` },
   'MA': { pattern: (code) => `Mass. Gen. Laws ch. ${code}` },
   'MN': { pattern: (code) => `Minn. Stat. § ${code}` },
@@ -113,7 +132,11 @@ export const STATE_CITATION_PATTERNS: Record<string, CitationPattern> = {
   'SD': { pattern: (code) => `S.D. Codified Laws § ${code}` },
   'TN': { pattern: (code) => `Tenn. Code Ann. § ${code}` },
   'UT': { pattern: (code) => `Utah Code Ann. § ${code}` },
-  'VT': { pattern: (code) => `Vt. Stat. Ann. tit. 13, § ${code}` },
+  'VT': { pattern: (code) => {
+    const m = code.match(/^(\d+)-(.+)/);
+    if (m) return `Vt. Stat. Ann. tit. ${m[1]}, § ${m[2]}`;
+    return `Vt. Stat. Ann. tit. 13, § ${code}`;
+  } },
   'VA': { pattern: (code) => `Va. Code Ann. § ${code}` },
   'WA': { pattern: (code) => `Wash. Rev. Code § ${code}` },
   'WV': { pattern: (code) => `W. Va. Code § ${code}` },
@@ -122,9 +145,21 @@ export const STATE_CITATION_PATTERNS: Record<string, CitationPattern> = {
   
   // Territories
   'DC': { pattern: (code) => `D.C. Code § ${code}` },
-  'PR': { pattern: (code) => `P.R. Laws Ann. tit. 33, § ${code}` },
-  'VI': { pattern: (code) => `V.I. Code Ann. tit. 14, § ${code}` },
-  'GU': { pattern: (code) => `Guam Code Ann. tit. 9, § ${code}` },
+  'PR': { pattern: (code) => {
+    const m = code.match(/^(\d+)-(.+)/);
+    if (m) return `P.R. Laws Ann. tit. ${m[1]}, § ${m[2]}`;
+    return `P.R. Laws Ann. tit. 33, § ${code}`;
+  } },
+  'VI': { pattern: (code) => {
+    const m = code.match(/^(\d+)-(.+)/);
+    if (m) return `V.I. Code Ann. tit. ${m[1]}, § ${m[2]}`;
+    return `V.I. Code Ann. tit. 14, § ${code}`;
+  } },
+  'GU': { pattern: (code) => {
+    const m = code.match(/^(\d+)-(.+)/);
+    if (m) return `Guam Code Ann. tit. ${m[1]}, § ${m[2]}`;
+    return `Guam Code Ann. tit. 9, § ${code}`;
+  } },
   'AS': { pattern: (code) => `Am. Samoa Code Ann. § ${code}` },
   'MP': { pattern: (code) => `N. Mar. I. Code § ${code}` },
 };
@@ -248,80 +283,78 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'NY':
       return `https://www.nysenate.gov/legislation/laws/PEN/${code}`;
     
-    case 'IL':
-      // Illinois: 720 ILCS 5/article-section format
-      // Handle both "5/9-1" and "720-5/9-1" formats
-      let ilCode = code;
-      if (code.startsWith('720-5/')) {
-        ilCode = code.substring(6); // Remove "720-5/" prefix
-      } else if (code.startsWith('5/')) {
-        ilCode = code.substring(2); // Remove "5/" prefix
+    case 'IL': {
+      // Handle chapter-prefixed ILCS codes: "730-5/5-6-4" or "625-5/3-707"
+      // DocName format: chapter(4 digits) + act(4 digits) + 0K + section
+      const ilChapterMatch = code.match(/^(\d{3,})-(\d+)\/(.*)/);
+      if (ilChapterMatch) {
+        const [, ch, act, sec] = ilChapterMatch;
+        const docName = ch.padStart(4, '0') + act.padStart(4, '0') + '0K' + sec;
+        return `https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=${docName}`;
       }
+      // Legacy "720-5/xxx" (normalizeCode strips to plain section)
+      let ilCode = code;
+      if (code.startsWith('720-5/')) ilCode = code.substring(6);
+      else if (code.startsWith('5/')) ilCode = code.substring(2);
       return `https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072000050K${ilCode}`;
+    }
     
-    case 'PA':
-      // Pennsylvania: Different Titles (18, 35, 75)
+    case 'PA': {
+      // Pennsylvania: Different Titles (18, 23, 35, 42, 75)
       // Determine title and extract the section code
       let title = '18';
       let sectionCode = code;
-      
-      if (code.startsWith('35-')) {
+
+      // Handle explicit title prefixes: "42-9771", "23-6114", "18-5124", "75-3809"
+      const paTitleMatch = code.match(/^(18|23|42|75)-(.+)/);
+      if (paTitleMatch) {
+        title = paTitleMatch[1];
+        sectionCode = paTitleMatch[2];
+      } else if (code.startsWith('35-')) {
         title = '35';
         sectionCode = code.replace('35-', '');
         // Title 35 uses hyphenated format: 780-113(a)(16) or 780-113.1(a)(16)
         // Split on hyphen: chapter-section(subsection)
-        const parts = sectionCode.split('(')[0].split('-'); // Remove subsection, then split
-        if (parts.length >= 2) {
-          const chapter = parts[0];
-          let section = parts[1];
-          
-          // Handle decimal sections (e.g., 113.1 → 113.001)
+        const parts35 = sectionCode.split('(')[0].split('-');
+        if (parts35.length >= 2) {
+          const chapter = parts35[0];
+          let section = parts35[1];
           if (section.includes('.')) {
             const [mainSec, decimal] = section.split('.');
             section = `${mainSec}.${decimal.padStart(3, '0')}`;
             return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter}.${section}..HTM`;
           }
-          
           return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter}.${section}..HTM`;
         }
-        // Fallback if format is unexpected
         return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${sectionCode.split('(')[0]}..HTM`;
-      } else if (code.startsWith('75-')) {
-        title = '75';
-        sectionCode = code.replace('75-', '');
       }
       
-      // Remove subsection markers like (a) for Title 18 and 75
+      // Remove subsection markers like (a) for all titles
       const baseCode = sectionCode.split('(')[0];
       
-      // Handle decimal statutes (e.g., 2709.1 → 00.027.009.001..HTM)
+      // Handle decimal statutes (e.g., 2709.1)
       if (baseCode.includes('.')) {
         const parts = baseCode.split('.');
-        const mainCode = parts[0]; // e.g., "2709"
-        const decimal = parts.slice(1).join('.'); // e.g., "1" or "1.2"
-        
-        // Split main code into chapter and section
+        const mainCode = parts[0];
+        const decimal = parts.slice(1).join('.');
         if (mainCode.length >= 3) {
           const chapterLen = mainCode.length - 2;
           const chapter = mainCode.substring(0, chapterLen);
           const section = mainCode.substring(chapterLen);
-          // Add decimal parts
           return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter.padStart(3, '0')}.${section.padStart(3, '0')}.${decimal.padStart(3, '0')}..HTM`;
         }
       }
       
       // Numeric code - split into chapter and section
       if (baseCode.length >= 3) {
-        // 3-digit (908 → ch 9, sec 08, or 143 → ch 1, sec 43)
-        // 4-digit (2502 → ch 25, sec 02, or 3802 → ch 38, sec 02)
         const chapterLen = baseCode.length - 2;
         const chapter = baseCode.substring(0, chapterLen);
         const section = baseCode.substring(chapterLen);
         return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${chapter.padStart(3, '0')}.${section.padStart(3, '0')}..HTM`;
       }
       
-      // Fallback for shorter codes or unusual formats
       return `https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/${title}/00.${baseCode.padStart(3, '0')}..HTM`;
+    }
     
     case 'OH':
       return `https://codes.ohio.gov/ohio-revised-code/section-${code}`;
@@ -360,9 +393,14 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
       // Colorado: Official legislature site
       return `https://law.justia.com/codes/colorado/2022/title-${code.split('-')[0]}/article-${code.split('-')[1]}/section-${code}/`;
     
-    case 'DE':
-      // Delaware: Official legislature
-      return `https://delcode.delaware.gov/title11/c0${code.padStart(2, '0')}/index.html`;
+    case 'DE': {
+      // Delaware: multi-title codes like "11-1244" → title 11, section 1244
+      const deMatch = code.match(/^(\d+)-(.+)/);
+      if (deMatch) {
+        return `https://delcode.delaware.gov/title${deMatch[1]}/index.html#${deMatch[2]}`;
+      }
+      return `https://delcode.delaware.gov/title11/index.html#${code}`;
+    }
     
     case 'HI':
       // Hawaii: Capitol.hawaii.gov
@@ -417,8 +455,21 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'LA':
       return `https://legis.la.gov/legis/Law.aspx?d=${code.replace(':', '_')}`;
     
-    case 'ME':
+    case 'ME': {
+      // Maine multi-title codes: "17-A-756", "29-A-2073", "7-3911"
+      // URL format: /statutes/17-A/title17-Asec756.html
+      const meLetterTitle = code.match(/^(\d+-[A-Z])-(.+)/);
+      if (meLetterTitle) {
+        const t = meLetterTitle[1]; // e.g. "17-A"
+        const s = meLetterTitle[2]; // e.g. "756"
+        return `https://legislature.maine.gov/statutes/${t}/title${t}sec${s}.html`;
+      }
+      const meNumTitle = code.match(/^(\d+)-(.+)/);
+      if (meNumTitle) {
+        return `https://legislature.maine.gov/statutes/${meNumTitle[1]}/title${meNumTitle[1]}sec${meNumTitle[2]}.html`;
+      }
       return `https://legislature.maine.gov/statutes/17-A/title17-Asec${code}.html`;
+    }
     
     case 'MD':
       return `https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcr&section=${code}`;
@@ -426,9 +477,9 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'MA':
       if (code.includes('-')) {
         const maParts = code.split('-');
-        return `https://malegislature.gov/Laws/GeneralLaws/PartIV/TitleI/Chapter${maParts[0]}/Section${maParts[1]}`;
+        return `https://malegislature.gov/Laws/GeneralLaws/Chapter${maParts[0]}/Section${maParts[1]}`;
       }
-      return `https://malegislature.gov/Laws/GeneralLaws/PartIV/TitleI/Chapter265/Section${code}`;
+      return `https://malegislature.gov/Laws/GeneralLaws/Chapter265/Section${code}`;
     
     case 'MN':
       return `https://www.revisor.mn.gov/statutes/cite/${code}`;
@@ -478,8 +529,14 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'UT':
       return `https://le.utah.gov/xcode/Title${code.split('-')[0]}/Chapter${code.split('-')[1] || '5'}/C${code.split('-')[0]}-${code.split('-')[1] || '5'}_${code.split('-')[2] || ''}`;
     
-    case 'VT':
-      return `https://legislature.vermont.gov/statutes/section/13/${code.split('/')[0] || code}`;
+    case 'VT': {
+      // Vermont multi-title codes: "13-7559" → title 13, section 7559
+      const vtMatch = code.match(/^(\d+)-(.+)/);
+      if (vtMatch) {
+        return `https://legislature.vermont.gov/statutes/section/${vtMatch[1]}/${vtMatch[2]}`;
+      }
+      return `https://legislature.vermont.gov/statutes/section/13/${code}`;
+    }
     
     case 'VA':
       return `https://law.lis.virginia.gov/vacode/title${code.split('.')[0]?.split('-')[0] || '18'}/chapter${code.split('.')[0]?.split('-')[1] || '4'}/section${code}/`;

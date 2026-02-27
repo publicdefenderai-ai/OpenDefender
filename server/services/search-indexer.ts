@@ -657,6 +657,56 @@ export function buildSearchIndex(): void {
       url: '/support/mental-health'
     },
     {
+      id: 'support-transportation',
+      title: 'Transportation Support Resources',
+      titleEs: 'Recursos de Apoyo de Transporte',
+      titleZh: '交通支持资源',
+      content: 'Transportation assistance for court appearances and legal appointments. Free or low-cost rides to court, bus passes, rideshare programs, and transportation for people with limited mobility.',
+      tags: ['transportation', 'rides', 'court transportation', 'bus pass', 'rideshare', 'getting to court'],
+      aliases: ['ride to court', 'free transportation', 'bus pass help', 'court ride'],
+      url: '/support/transportation'
+    },
+    {
+      id: 'support-childcare',
+      title: 'Childcare Support Resources',
+      titleEs: 'Recursos de Apoyo para el Cuidado de Niños',
+      titleZh: '儿童照顾支持资源',
+      content: 'Childcare resources during court hearings and legal proceedings. Emergency childcare, subsidized childcare programs, and support for parents involved in the justice system.',
+      tags: ['childcare', 'child care', 'kids', 'children', 'parenting', 'court hearing childcare'],
+      aliases: ['childcare during court', 'babysitter help', 'child care assistance', 'kids during hearings'],
+      url: '/support/childcare'
+    },
+    {
+      id: 'support-housing',
+      title: 'Housing Support Resources',
+      titleEs: 'Recursos de Apoyo de Vivienda',
+      titleZh: '住房支持资源',
+      content: 'Housing assistance for people with criminal records. Transitional housing, reentry housing programs, fair chance housing policies, tenant rights, and homelessness prevention.',
+      tags: ['housing', 'shelter', 'reentry housing', 'fair chance housing', 'eviction', 'homelessness'],
+      aliases: ['find housing', 'reentry housing', 'housing with record', 'fair chance apartment', 'homeless shelter'],
+      url: '/support/housing'
+    },
+    {
+      id: 'support-family-care',
+      title: 'Family Care Support Resources',
+      titleEs: 'Recursos de Apoyo para el Cuidado Familiar',
+      titleZh: '家庭照顾支持资源',
+      content: 'Support for families affected by the criminal justice system. Visitation rights, maintaining family bonds, parental rights during incarceration, and family counseling.',
+      tags: ['family', 'family care', 'visitation', 'parental rights', 'incarceration family', 'family counseling'],
+      aliases: ['visit someone in jail', 'parental rights', 'family support', 'maintain family contact'],
+      url: '/support/family-care'
+    },
+    {
+      id: 'support-reputation',
+      title: 'Reputation and Record Support',
+      titleEs: 'Apoyo para la Reputación y el Registro',
+      titleZh: '声誉和记录支持',
+      content: 'Resources to rebuild reputation after a criminal record. Expungement assistance, record sealing, background check disputes, digital reputation management, and employer reference guidance.',
+      tags: ['reputation', 'record', 'expungement', 'record sealing', 'background check', 'digital reputation'],
+      aliases: ['clear criminal record', 'expunge record', 'seal record', 'background check dispute', 'reputation repair'],
+      url: '/support/reputation'
+    },
+    {
       id: 'attorney-portal',
       title: 'Attorney Portal',
       titleEs: 'Portal de Abogados',
