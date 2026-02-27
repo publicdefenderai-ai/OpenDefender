@@ -760,13 +760,13 @@ export default function ChatPage() {
         setIsTyping(false);
         
         if (offices.length === 0) {
-          addBotMessageWithKey('chat.messages.noPDFound', getNextMenuOptions('resources', state.completedFlows), { zipCode });
+          addBotMessageWithKey('chat.messages.noPDFound', getNextMenuOptions('resources', state.completedFlows), { zip: zipCode });
         } else {
           const resultsText = offices.slice(0, 3).map((office, i) => 
             `**${i + 1}. ${office.name}**\n📍 ${office.address}${office.phone ? `\n📞 ${office.phone}` : ''}${office.distance ? `\n📏 ${office.distance} miles away` : ''}`
           ).join('\n\n');
           
-          addBotMessage(t('chat.messages.pdResults', `Here are Public Defender offices near {{zipCode}}:\n\n${resultsText}\n\n**What else can I help you with?**`, { zipCode }), getNextMenuOptions('resources', state.completedFlows));
+          addBotMessage(t('chat.messages.pdResults', { zip: zipCode, results: resultsText }), getNextMenuOptions('resources', state.completedFlows));
         }
         
         actions.markFlowCompleted('resources');
@@ -795,13 +795,13 @@ export default function ChatPage() {
         setIsTyping(false);
         
         if (orgs.length === 0) {
-          addBotMessageWithKey('chat.messages.noLegalAidFound', getNextMenuOptions('resources', state.completedFlows), { zipCode });
+          addBotMessageWithKey('chat.messages.noLegalAidFound', getNextMenuOptions('resources', state.completedFlows), { zip: zipCode });
         } else {
           const resultsText = orgs.slice(0, 3).map((org, i) => 
             `**${i + 1}. ${org.name}**\n📍 ${org.address}${org.phone ? `\n📞 ${org.phone}` : ''}${org.distance ? `\n📏 ${org.distance} miles away` : ''}`
           ).join('\n\n');
           
-          addBotMessage(t('chat.messages.legalAidResults', `Here are Legal Aid organizations near {{zipCode}}:\n\n${resultsText}\n\n**What else can I help you with?**`, { zipCode }), getNextMenuOptions('resources', state.completedFlows));
+          addBotMessage(t('chat.messages.legalAidResults', { zip: zipCode, results: resultsText }), getNextMenuOptions('resources', state.completedFlows));
         }
         
         actions.markFlowCompleted('resources');
