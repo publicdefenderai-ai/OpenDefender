@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import { registerRoutes } from "./routes";
 import { registerV1Routes } from "./routes-v1";
 import { setupVite, serveStatic, log } from "./vite";
-import { runStartupValidation } from "./services/charge-statute-validator";
 import { opsLog } from "./utils/dev-logger";
 
 const app = express();
@@ -190,10 +189,5 @@ app.use((req, res, next) => {
     reusePort: true,
   }, () => {
     log(`serving on port ${port}`);
-    
-    // Run charge-statute consistency check on startup
-    runStartupValidation().catch(err => {
-      log(`Startup validation error: ${err.message}`);
-    });
   });
 })();
