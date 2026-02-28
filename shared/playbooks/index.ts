@@ -27,6 +27,19 @@ import { workplaceRaidPlaybook } from "./immigration/workplace-raid";
 import { withholdingCatPlaybook } from "./immigration/withholding-cat";
 import { dacaTpsLapsePlaybook } from "./immigration/daca-tps-lapse";
 
+// Tier 3 — Criminal
+import { felonyAssaultPlaybook } from "./criminal/felony-assault";
+import { weaponsFirearmsPlaybook } from "./criminal/weapons-firearms";
+import { resistingObstructionPlaybook } from "./criminal/resisting-obstruction";
+import { postConvictionReliefPlaybook } from "./criminal/post-conviction-relief";
+import { sentencingMitigationPlaybook } from "./criminal/sentencing-mitigation";
+
+// Tier 3 — Immigration
+import { uVisaTVisaPlaybook } from "./immigration/u-visa-t-visa";
+import { adjustmentOfStatusPlaybook } from "./immigration/adjustment-of-status";
+import { expeditedRemovalPlaybook } from "./immigration/expedited-removal";
+import { vawaPlaybook } from "./immigration/vawa-self-petition";
+
 const ALL_PLAYBOOKS: Playbook[] = [
   // Criminal — Tier 1
   arraignmentPlaybook,
@@ -51,6 +64,17 @@ const ALL_PLAYBOOKS: Playbook[] = [
   workplaceRaidPlaybook,
   withholdingCatPlaybook,
   dacaTpsLapsePlaybook,
+  // Criminal — Tier 3
+  felonyAssaultPlaybook,
+  weaponsFirearmsPlaybook,
+  resistingObstructionPlaybook,
+  postConvictionReliefPlaybook,
+  sentencingMitigationPlaybook,
+  // Immigration — Tier 3
+  uVisaTVisaPlaybook,
+  adjustmentOfStatusPlaybook,
+  expeditedRemovalPlaybook,
+  vawaPlaybook,
 ];
 
 function toSummary(p: Playbook): PlaybookSummary {
