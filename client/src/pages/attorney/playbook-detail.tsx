@@ -2,17 +2,10 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
-  Clock,
-  BarChart2,
   AlertTriangle,
-  ChevronDown,
   FileText,
-  Globe,
   Loader2,
   LogOut,
-  User,
-  Scale,
-  Landmark,
 } from "lucide-react";
 import { Link, useParams } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -56,21 +49,21 @@ const difficultyLabels = {
 };
 
 const actionPriorityStyles: Record<KeyAction["priority"], string> = {
-  critical: "border-l-4 border-red-500 bg-red-50 dark:bg-red-950/30 pl-3 py-1",
-  high: "border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-950/30 pl-3 py-1",
-  standard: "border-l-4 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/30 pl-3 py-1",
+  critical: "border-l-2 border-red-400 pl-3 py-1.5",
+  high: "border-l-2 border-amber-400 pl-3 py-1.5",
+  standard: "border-l-2 border-slate-200 dark:border-slate-700 pl-3 py-1.5",
 };
 
-const actionPriorityBadge: Record<KeyAction["priority"], string> = {
-  critical: "bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300",
-  high: "bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300",
-  standard: "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300",
+const actionPriorityLabel: Record<KeyAction["priority"], string> = {
+  critical: "Critical",
+  high: "High",
+  standard: "",
 };
 
-const actionTypeIcon: Record<KeyAction["type"], React.ReactNode> = {
-  attorney: <Scale className="h-3 w-3" />,
-  client: <User className="h-3 w-3" />,
-  court: <Landmark className="h-3 w-3" />,
+const actionPriorityLabelColor: Record<KeyAction["priority"], string> = {
+  critical: "text-red-600 dark:text-red-400",
+  high: "text-amber-600 dark:text-amber-400",
+  standard: "text-muted-foreground",
 };
 
 function PlaybookDetailContent() {
@@ -147,32 +140,30 @@ function PlaybookDetailContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="flex flex-wrap gap-2 mb-3">
-              <span
-                className={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${difficultyColors[playbook.difficultyLevel]}`}
-              >
-                <BarChart2 className="h-3 w-3" />
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className={`text-xs font-medium px-2.5 py-1 rounded ${difficultyColors[playbook.difficultyLevel]}`}>
                 {difficultyLabels[playbook.difficultyLevel]}
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 rounded-full">
-                <Clock className="h-3 w-3" />
-                {t("attorney.playbooks.timeline", "Typical Timeline")}: {playbook.typicalTimeline}
+              <span className="text-xs text-muted-foreground">
+                {playbook.typicalTimeline}
               </span>
-              <Badge variant="secondary" className="capitalize">
+              <span className="text-xs text-muted-foreground capitalize">
                 {playbook.category}
-              </Badge>
+              </span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-foreground">{playbook.name}</h1>
             <p className="text-lg text-muted-foreground mb-4">{playbook.tagline}</p>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">{playbook.overview}</p>
 
-            <div className="flex flex-wrap gap-1.5 mt-4">
-              {playbook.tags.map((tag) => (
-                <Badge key={tag} variant="outline" className="text-xs font-normal">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
+            {playbook.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-4">
+                {playbook.tags.map((tag) => (
+                  <Badge key={tag} variant="outline" className="text-xs font-normal">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
@@ -190,19 +181,19 @@ function PlaybookDetailContent() {
               <Card className="border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base flex items-center gap-2 text-amber-800 dark:text-amber-200">
-                    <AlertTriangle className="h-5 w-5" />
+                    <AlertTriangle className="h-4 w-4 shrink-0" />
                     {t("attorney.playbooks.keyConsiderations", "Key Considerations")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
+                  <ol className="space-y-2 list-none">
                     {playbook.keyConsiderations.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-amber-800 dark:text-amber-200">
-                        <span className="font-bold shrink-0 mt-0.5">{i + 1}.</span>
+                      <li key={i} className="flex items-start gap-2.5 text-sm text-amber-800 dark:text-amber-200">
+                        <span className="font-semibold shrink-0 tabular-nums mt-0.5">{i + 1}.</span>
                         <span>{item}</span>
                       </li>
                     ))}
-                  </ul>
+                  </ol>
                 </CardContent>
               </Card>
             </motion.div>
@@ -217,7 +208,7 @@ function PlaybookDetailContent() {
             <h2 className="text-xl font-semibold mb-4">
               {t("attorney.playbooks.stage", "Stages")}
             </h2>
-            <Accordion type="multiple" defaultValue={[playbook.stages[0]?.id]} className="space-y-3">
+            <Accordion type="multiple" defaultValue={[playbook.stages[0]?.id]} className="space-y-2">
               {playbook.stages.map((stage, stageIndex) => (
                 <AccordionItem
                   key={stage.id}
@@ -235,32 +226,32 @@ function PlaybookDetailContent() {
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-4">
-                    <div className="pt-2 space-y-5">
+                  <AccordionContent className="px-4 pb-5">
+                    <div className="pt-3 space-y-5">
                       {/* Description */}
                       <p className="text-sm text-muted-foreground">{stage.description}</p>
 
                       {/* Key Actions */}
                       {stage.keyActions.length > 0 && (
                         <div>
-                          <h4 className="text-sm font-semibold mb-2 flex items-center gap-1.5">
+                          <h4 className="text-sm font-semibold mb-2 text-foreground">
                             {t("attorney.playbooks.actions", "Key Actions")}
                           </h4>
                           <ul className="space-y-2">
                             {stage.keyActions.map((action, i) => (
                               <li key={i} className={`rounded text-sm ${actionPriorityStyles[action.priority]}`}>
                                 <div className="flex items-start gap-2">
-                                  <span className={`inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded shrink-0 mt-0.5 ${actionPriorityBadge[action.priority]}`}>
-                                    {actionTypeIcon[action.type]}
-                                    {action.priority}
-                                  </span>
-                                  <span className="flex-1">{action.text}</span>
+                                  {actionPriorityLabel[action.priority] && (
+                                    <span className={`text-xs font-semibold shrink-0 mt-0.5 ${actionPriorityLabelColor[action.priority]}`}>
+                                      {actionPriorityLabel[action.priority]}
+                                    </span>
+                                  )}
+                                  <span className="flex-1 text-foreground">{action.text}</span>
                                 </div>
                                 {action.deadline && (
-                                  <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1 ml-0.5">
-                                    <Clock className="h-3 w-3" />
-                                    {action.deadline}
-                                  </div>
+                                  <p className="text-xs text-muted-foreground mt-1 ml-0.5">
+                                    Deadline: {action.deadline}
+                                  </p>
                                 )}
                               </li>
                             ))}
@@ -271,8 +262,7 @@ function PlaybookDetailContent() {
                       {/* Relevant Templates */}
                       {stage.relevantTemplates.length > 0 && (
                         <div>
-                          <h4 className="text-sm font-semibold mb-2 flex items-center gap-1.5">
-                            <FileText className="h-4 w-4 text-blue-600" />
+                          <h4 className="text-sm font-semibold mb-2 text-foreground">
                             {t("attorney.playbooks.templates", "Relevant Templates")}
                           </h4>
                           <div className="space-y-2">
@@ -281,14 +271,14 @@ function PlaybookDetailContent() {
                                 key={ref.templateId}
                                 className="flex items-start gap-3 bg-blue-50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900 rounded-lg p-3"
                               >
-                                <FileText className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
+                                <FileText className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
                                 <div className="flex-1 min-w-0">
                                   <div className="font-medium text-sm text-blue-900 dark:text-blue-100">{ref.name}</div>
                                   <div className="text-xs text-blue-700 dark:text-blue-300 mt-0.5">{ref.relevance}</div>
                                 </div>
                                 <Link href={`/attorney/documents/${ref.templateId}`}>
-                                  <Button size="sm" variant="outline" className="shrink-0 text-xs border-blue-300 text-blue-700 hover:bg-blue-100 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/50">
-                                    {t("attorney.playbooks.openTemplate", "Open Template")}
+                                  <Button size="sm" variant="outline" className="shrink-0 text-xs border-blue-200 text-blue-700 hover:bg-blue-100 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/50">
+                                    {t("attorney.playbooks.openTemplate", "Open")}
                                   </Button>
                                 </Link>
                               </div>
@@ -300,25 +290,23 @@ function PlaybookDetailContent() {
                       {/* Client Guidance */}
                       {stage.clientGuidance && (
                         <div className="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-lg p-3">
-                          <h4 className="text-sm font-semibold mb-1 flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-                            <User className="h-4 w-4" />
+                          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-1.5">
                             {t("attorney.playbooks.clientGuidance", "Client Guidance")}
                           </h4>
-                          <p className="text-sm text-muted-foreground italic">{stage.clientGuidance}</p>
+                          <p className="text-sm text-foreground">{stage.clientGuidance}</p>
                         </div>
                       )}
 
                       {/* Pitfalls */}
                       {stage.pitfalls.length > 0 && (
                         <div>
-                          <h4 className="text-sm font-semibold mb-2 flex items-center gap-1.5 text-red-700 dark:text-red-400">
-                            <AlertTriangle className="h-4 w-4" />
+                          <h4 className="text-xs font-semibold uppercase tracking-wide text-red-600 dark:text-red-400 mb-2">
                             {t("attorney.playbooks.pitfalls", "Common Pitfalls")}
                           </h4>
                           <ul className="space-y-1.5">
                             {stage.pitfalls.map((pitfall, i) => (
                               <li key={i} className="flex items-start gap-2 text-sm text-red-700 dark:text-red-300">
-                                <span className="shrink-0 mt-0.5">⚠️</span>
+                                <span className="shrink-0 mt-1 w-1 h-1 rounded-full bg-red-400 dark:bg-red-500" />
                                 <span>{pitfall}</span>
                               </li>
                             ))}
@@ -328,18 +316,17 @@ function PlaybookDetailContent() {
 
                       {/* Stage Jurisdiction Variations */}
                       {stage.jurisdictionVariations && stage.jurisdictionVariations.length > 0 && (
-                        <div className="bg-purple-50 dark:bg-purple-950/20 border border-purple-100 dark:border-purple-900 rounded-lg p-3">
-                          <h4 className="text-sm font-semibold mb-2 flex items-center gap-1.5 text-purple-800 dark:text-purple-200">
-                            <Globe className="h-4 w-4" />
+                        <div className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-700 rounded-lg p-3">
+                          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
                             State Variations
                           </h4>
                           <ul className="space-y-2">
                             {stage.jurisdictionVariations.map((v, i) => (
                               <li key={i} className="text-sm">
-                                <span className="font-medium text-purple-700 dark:text-purple-300">
+                                <span className="font-medium text-foreground">
                                   {v.states.join(", ")}:
                                 </span>{" "}
-                                <span className="text-purple-700 dark:text-purple-300">{v.note}</span>
+                                <span className="text-muted-foreground">{v.note}</span>
                               </li>
                             ))}
                           </ul>
@@ -359,28 +346,21 @@ function PlaybookDetailContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                <Globe className="h-5 w-5 text-purple-600" />
+              <h2 className="text-xl font-semibold mb-4">
                 {t("attorney.playbooks.jurisdictionNotes", "Jurisdiction Notes")}
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {playbook.jurisdictionNotes.map((note, i) => (
-                  <Card key={i} className="border-purple-100 dark:border-purple-900">
+                  <Card key={i} className="border-slate-200 dark:border-slate-700">
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm text-purple-800 dark:text-purple-200">{note.topic}</CardTitle>
+                      <CardTitle className="text-sm font-semibold text-foreground">{note.topic}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2">
+                      <ul className="space-y-3">
                         {note.variations.map((v, j) => (
                           <li key={j} className="text-sm">
-                            <span className="inline-flex flex-wrap gap-1 mb-1">
-                              {v.states.map((s) => (
-                                <Badge key={s} variant="secondary" className="text-xs font-mono">
-                                  {s}
-                                </Badge>
-                              ))}
-                            </span>
-                            <p className="text-muted-foreground mt-1">{v.note}</p>
+                            <p className="font-medium text-foreground mb-0.5">{v.states.join(", ")}</p>
+                            <p className="text-muted-foreground">{v.note}</p>
                           </li>
                         ))}
                       </ul>
