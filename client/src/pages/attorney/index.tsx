@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, FileText, Shield, ArrowRight, FileSearch, Loader2 } from "lucide-react";
+import { Briefcase, FileText, Shield, ArrowRight, FileSearch, Loader2, BookOpen } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -135,7 +135,7 @@ export default function AttorneyPortal() {
           </Alert>
 
           {/* Tools Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {/* Document Generation - Available */}
             <Card className="border-slate-200 hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -236,6 +236,41 @@ export default function AttorneyPortal() {
                   {t('attorneyPortal.documentSummarizer.button', 'Summarize Document')}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
+              </CardContent>
+            </Card>
+
+            {/* Case Playbooks - Available */}
+            <Card className="border-slate-200 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center mb-3">
+                  <BookOpen className="h-6 w-6 text-green-600 dark:text-green-400" />
+                </div>
+                <CardTitle>{t('attorneyPortal.playbooks.title', 'Case Playbooks')}</CardTitle>
+                <CardDescription>
+                  {t('attorneyPortal.playbooks.subtitle', 'Stage-by-stage strategic roadmaps for criminal and immigration defense.')}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="text-sm text-muted-foreground space-y-2 mb-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">•</span>
+                    {t('attorneyPortal.playbooks.feature1', 'Stage-by-stage case roadmaps')}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">•</span>
+                    {t('attorneyPortal.playbooks.feature2', 'Criminal & immigration defense')}
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-0.5">•</span>
+                    {t('attorneyPortal.playbooks.feature3', 'Jurisdiction variation callouts')}
+                  </li>
+                </ul>
+                <Link href="/attorney/playbooks">
+                  <Button className="w-full bg-green-600 hover:bg-green-700">
+                    {t('attorneyPortal.playbooks.button', 'Browse Playbooks')}
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>

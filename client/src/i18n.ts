@@ -4418,6 +4418,31 @@ i18n
             "comingSoonTitle": "Templates Coming Soon",
             "criminalComingSoon": "Criminal law templates including Motions to Continue, Discovery Requests, and Bail Reduction motions are being developed.",
             "immigrationComingSoon": "Immigration templates including EOIR-28 forms, Bond Memoranda, and Change of Venue motions are being developed."
+          },
+          "playbooks": {
+            "title": "Case Playbooks",
+            "subtitle": "Stage-by-stage strategic roadmaps for criminal and immigration defense.",
+            "feature1": "Stage-by-stage case roadmaps",
+            "feature2": "Criminal & immigration defense",
+            "feature3": "Jurisdiction variation callouts",
+            "button": "Browse Playbooks"
+          }
+        },
+        "attorney": {
+          "playbooks": {
+            "criminal": "Criminal",
+            "immigration": "Immigration",
+            "back": "Back to Playbooks",
+            "timeline": "Typical Timeline",
+            "difficulty": "Difficulty",
+            "keyConsiderations": "Key Considerations",
+            "stage": "Stage",
+            "actions": "Key Actions",
+            "templates": "Relevant Templates",
+            "clientGuidance": "Client Guidance",
+            "pitfalls": "Common Pitfalls",
+            "jurisdictionNotes": "Jurisdiction Notes",
+            "openTemplate": "Open Template"
           }
         },
           "howTo": {
@@ -8981,6 +9006,31 @@ i18n
             "comingSoonTitle": "Plantillas Próximamente",
             "criminalComingSoon": "Las plantillas de derecho penal incluyendo Mociones de Continuación, Solicitudes de Descubrimiento y mociones de Reducción de Fianza están siendo desarrolladas.",
             "immigrationComingSoon": "Las plantillas de inmigración incluyendo formularios EOIR-28, Memorandos de Fianza y mociones de Cambio de Sede están siendo desarrolladas."
+          },
+          "playbooks": {
+            "title": "Guías de Casos",
+            "subtitle": "Hojas de ruta estratégicas etapa por etapa para la defensa penal e inmigratoria.",
+            "feature1": "Hojas de ruta del caso por etapas",
+            "feature2": "Defensa penal e inmigratoria",
+            "feature3": "Variaciones por jurisdicción",
+            "button": "Ver Guías"
+          }
+        },
+        "attorney": {
+          "playbooks": {
+            "criminal": "Penal",
+            "immigration": "Inmigración",
+            "back": "Volver a Guías",
+            "timeline": "Tiempo Típico",
+            "difficulty": "Dificultad",
+            "keyConsiderations": "Consideraciones Clave",
+            "stage": "Etapa",
+            "actions": "Acciones Clave",
+            "templates": "Plantillas Relevantes",
+            "clientGuidance": "Orientación al Cliente",
+            "pitfalls": "Errores Comunes",
+            "jurisdictionNotes": "Notas de Jurisdicción",
+            "openTemplate": "Abrir Plantilla"
           }
         },
           "howTo": {

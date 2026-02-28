@@ -53,6 +53,8 @@ import AttorneyPortal from "@/pages/attorney/index";
 import AttorneyVerify from "@/pages/attorney/verify";
 import AttorneyDocuments from "@/pages/attorney/documents";
 import DocumentWizard from "@/pages/attorney/document-wizard";
+import AttorneyPlaybooks from "@/pages/attorney/playbooks";
+import PlaybookDetail from "@/pages/attorney/playbook-detail";
 import ApiDocs from "@/pages/api-docs";
 import Widgets from "@/pages/widgets";
 import TechDocs from "@/pages/tech-docs";
@@ -158,6 +160,8 @@ function Router() {
       <Route path="/attorney/verify" component={AttorneyVerify} />
       <Route path="/attorney/documents" component={AttorneyDocuments} />
       <Route path="/attorney/documents/:templateId" component={DocumentWizard} />
+      <Route path="/attorney/playbooks" component={AttorneyPlaybooks} />
+      <Route path="/attorney/playbooks/:playbookId" component={PlaybookDetail} />
       <Route path="/api-docs" component={ApiDocs} />
       <Route path="/widgets" component={Widgets} />
       <Route path="/tech-docs" component={TechDocs} />

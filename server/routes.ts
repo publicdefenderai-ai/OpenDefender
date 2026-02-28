@@ -20,6 +20,7 @@ import { devLog, opsLog, errLog } from "./utils/dev-logger";
 import { attorneySessionManager } from "./services/attorney-docs/session-manager";
 import { attorneyVerificationRequestSchema } from "../shared/attorney/attestation-schema";
 import { getTemplates, getTemplate, generateDocument, getGeneratedDocument, clearSessionDocuments } from "./services/attorney-docs/document-generator";
+import { getPlaybooks, getPlaybook } from "../shared/playbooks/index";
 import { generateDocx } from "./services/attorney-docs/docx-generator";
 import { search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
 import { z } from "zod";
@@ -1603,6 +1604,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch document", error);
       res.status(500).json({ success: false, error: "Failed to fetch document" });
+    }
+  });
+
+  // ============================================================================
+  // Attorney Playbooks API (Read-only, no AI generation)
+  // ============================================================================
+
+  // List playbooks (optionally filtered by category)
+  app.get("/api/attorney/playbooks", requireAttorneySession, (req, res) => {
+    try {
+      const { category } = req.query;
+      const playbooks = getPlaybooks(category as string | undefined);
+      res.json({ success: true, playbooks });
+    } catch (error) {
+      errLog("Failed to fetch playbooks", error);
+      res.status(500).json({ success: false, error: "Failed to fetch playbooks" });
+    }
+  });
+
+  // Get single playbook by ID
+  app.get("/api/attorney/playbooks/:playbookId", requireAttorneySession, (req, res) => {
+    try {
+      const playbook = getPlaybook(req.params.playbookId);
+      if (!playbook) {
+        return res.status(404).json({ success: false, error: "Playbook not found" });
+      }
+      res.json({ success: true, playbook });
+    } catch (error) {
+      errLog("Failed to fetch playbook", error);
+      res.status(500).json({ success: false, error: "Failed to fetch playbook" });
     }
   });
 
