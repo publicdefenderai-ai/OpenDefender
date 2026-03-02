@@ -648,6 +648,105 @@ i18n
                 "tip5": "Remember: your current situation is temporary. Many people have gone through this and come out the other side"
               }
             },
+            "personalHealth": {
+              "overview": "A legal case can disrupt your healthcare routines — especially if there is any chance of jail time. Planning ahead for your medications and health needs is one of the most important steps you can take right now.",
+              "actions": {
+                "listMedications": {
+                  "title": "Make a complete medication list",
+                  "description": "Write down every prescription medication you take — name, dose, frequency, and the prescribing doctor. Include vitamins and supplements. Keep a copy with your attorney and a trusted family member.",
+                  "priority": "high",
+                  "timeframe": "This week"
+                },
+                "contactDoctor": {
+                  "title": "Talk to your doctor before any court date",
+                  "description": "Let your doctor know about your legal situation. They can write a letter confirming medical necessity, issue extra refills, and advise what happens if doses are missed. This is especially important for psychiatric medications, seizure medications, and insulin.",
+                  "priority": "high",
+                  "timeframe": "Before your next court date"
+                },
+                "notifyJailHealth": {
+                  "title": "Notify jail health staff immediately upon intake",
+                  "description": "If you are booked into jail, tell the medical staff your medications as soon as possible during intake. Ask about the facility's policy for continuing prescriptions. Jails are required to provide medically necessary medications.",
+                  "priority": "high"
+                },
+                "getRefills": {
+                  "title": "Fill prescriptions before critical dates",
+                  "description": "Make sure your prescriptions are filled at least 30 days before any court date where incarceration is possible. Ask your pharmacy about medication synchronization to get all prescriptions on the same refill cycle.",
+                  "priority": "medium",
+                  "timeframe": "At least 30 days ahead"
+                },
+                "substanceSupport": {
+                  "title": "Get substance use support if needed",
+                  "description": "If alcohol or drug use is part of your situation, proactively entering treatment can help your case and your health. Courts often look favorably on defendants who take initiative. SAMHSA's helpline can connect you with free local treatment programs.",
+                  "priority": "medium"
+                },
+                "medicationStorage": {
+                  "title": "Understand what happens to medications upon arrest",
+                  "description": "You typically cannot bring personal medications into a jail — they must go through the jail pharmacy or be provided by family through official channels. Your attorney can help you understand what to expect and advocate for your medication continuity.",
+                  "priority": "medium"
+                }
+              },
+              "resources": {
+                "samhsa": {
+                  "description": "Free, confidential 24/7 helpline for substance use and mental health information and treatment referrals. Available in English and Spanish."
+                },
+                "partnership": {
+                  "description": "Free helpline for families dealing with substance use disorders — call, text, or chat online. Evidence-based guidance for getting loved ones into treatment."
+                },
+                "smartRecovery": {
+                  "description": "Science-based, non-12-step addiction recovery support with in-person and online meetings. Free to attend."
+                },
+                "nar": {
+                  "description": "Free peer support for people affected by someone else's addiction. In-person and online groups available nationwide."
+                },
+                "nami": {
+                  "description": "The nation's largest mental health organization — local chapters offer support groups, education, and advocacy. NAMI Helpline available Monday through Friday."
+                },
+                "goodRx": {
+                  "description": "Free tool to compare prescription drug prices and find coupons. Can significantly reduce out-of-pocket costs if your insurance is disrupted during your case."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "Can jail refuse to give me my medications?",
+                  "answer": "No. Jails and prisons are required by the Eighth Amendment to provide medically necessary care, including medications. However, there may be delays, substitutions to generic equivalents, or administrative hurdles. Bring your medication list and doctor's letter to intake. If you are denied medications, your attorney can file an emergency motion."
+                },
+                "q2": {
+                  "question": "What if I take controlled substances like ADHD medication or opioids?",
+                  "answer": "Controlled substances require additional documentation. Ask your doctor to provide a detailed letter explaining your diagnosis and medical necessity. Some facilities may substitute non-controlled alternatives — discuss this with your doctor in advance. Medication-assisted treatment (MAT) for opioid use disorder is legally protected."
+                },
+                "q3": {
+                  "question": "Can entering treatment help my criminal case?",
+                  "answer": "Yes, in many cases. Proactively entering substance use treatment, mental health counseling, or a diversion program shows the court you are taking responsibility. Many jurisdictions have drug courts, mental health courts, and diversion programs that can reduce or dismiss charges in exchange for completing treatment."
+                },
+                "q4": {
+                  "question": "What if I lose my health insurance because of my case?",
+                  "answer": "Losing a job due to an arrest may affect your employer-provided insurance. You may qualify for a Special Enrollment Period for marketplace insurance. Medicaid may be available if your income drops. Community health centers provide care on a sliding-scale basis regardless of insurance status. GoodRx can lower prescription costs significantly."
+                }
+              },
+              "tips": {
+                "tip1": "Carry a written medication list in your wallet — if you are arrested, this helps medical staff at booking",
+                "tip2": "Ask your pharmacist about blister packs or pill organizers to make your medication routine easier to document",
+                "tip3": "If you are in a drug court or diversion program, keep all appointment records and drug test results",
+                "tip4": "Mental health conditions like depression and PTSD are common during legal cases — do not wait for a crisis to seek help",
+                "tip5": "SAMHSA's findtreatment.gov lets you search for nearby treatment programs by type and insurance accepted"
+              },
+              "medicationSection": {
+                "title": "Preparing Your Medications",
+                "description": "If there is any possibility of jail time — even for a short period — take these steps now to protect your health.",
+                "step1": {
+                  "title": "Document everything",
+                  "body": "Create a written medication list with: full medication name, dose, prescribing doctor's name and phone number, pharmacy name and phone number, and your diagnosis or a general description. Keep a copy in your wallet, give one to your attorney, and leave one with a trusted family member."
+                },
+                "step2": {
+                  "title": "Get a letter from your doctor",
+                  "body": "Ask your doctor to write a letter on letterhead confirming your diagnoses and medications as medically necessary. This letter can be presented at jail intake, to your attorney, and to the court. For mental health and chronic conditions, this is especially important."
+                },
+                "step3": {
+                  "title": "Fill prescriptions before court dates",
+                  "body": "Do not let prescriptions lapse before a court date where incarceration is possible. Ask for a 90-day supply if your insurance allows. If cost is a concern, use GoodRx or ask your doctor for samples."
+                }
+              }
+            },
             "transportation": {
               "overview": "Your case may affect your ability to drive or get around — but it doesn't have to stop your life. Understanding your license status, planning alternatives, and communicating proactively with the people who depend on you will help you stay on track.",
               "actions": {
@@ -1541,6 +1640,10 @@ i18n
                   "mentalHealth": {
                     "label": "Mental Health",
                     "description": "Stress, anxiety, need for counseling"
+                  },
+                  "personalHealth": {
+                    "label": "Personal Health",
+                    "description": "Managing medications, health conditions during your case"
                   },
                   "immigration": {
                     "label": "Immigration Status",
@@ -5236,6 +5339,105 @@ i18n
                 "tip5": "Recuerde: su situación actual es temporal. Muchas personas han pasado por esto y han salido adelante"
               }
             },
+            "personalHealth": {
+              "overview": "Un caso legal puede interrumpir sus rutinas de salud — especialmente si existe la posibilidad de ir a la cárcel. Planificar con anticipación para sus medicamentos y necesidades de salud es uno de los pasos más importantes que puede tomar ahora mismo.",
+              "actions": {
+                "listMedications": {
+                  "title": "Haga una lista completa de sus medicamentos",
+                  "description": "Anote cada medicamento recetado que toma — nombre, dosis, frecuencia y el médico que lo recetó. Incluya vitaminas y suplementos. Guarde una copia con su abogado y un familiar de confianza.",
+                  "priority": "high",
+                  "timeframe": "Esta semana"
+                },
+                "contactDoctor": {
+                  "title": "Hable con su médico antes de cualquier fecha judicial",
+                  "description": "Informe a su médico sobre su situación legal. Puede escribir una carta confirmando la necesidad médica, emitir recargas adicionales y aconsejar qué ocurre si se omiten dosis. Esto es especialmente importante para medicamentos psiquiátricos, anticonvulsivos e insulina.",
+                  "priority": "high",
+                  "timeframe": "Antes de su próxima fecha en corte"
+                },
+                "notifyJailHealth": {
+                  "title": "Notifique al personal de salud del centro de detención al ingresar",
+                  "description": "Si es detenido, informe al personal médico sobre sus medicamentos lo antes posible durante el registro. Pregunte sobre la política del centro para continuar con las recetas. Los centros de detención están obligados a proporcionar medicamentos médicamente necesarios.",
+                  "priority": "high"
+                },
+                "getRefills": {
+                  "title": "Surta sus recetas antes de fechas importantes",
+                  "description": "Asegúrese de que sus recetas estén surtidas al menos 30 días antes de cualquier fecha judicial donde sea posible la detención. Pregunte a su farmacia sobre la sincronización de medicamentos para tener todas las recetas en el mismo ciclo de recarga.",
+                  "priority": "medium",
+                  "timeframe": "Al menos 30 días antes"
+                },
+                "substanceSupport": {
+                  "title": "Busque apoyo para el uso de sustancias si lo necesita",
+                  "description": "Si el alcohol o las drogas son parte de su situación, ingresar proactivamente a tratamiento puede ayudar a su caso y a su salud. Los tribunales suelen ver favorablemente a los acusados que toman la iniciativa. La línea de ayuda de SAMHSA puede conectarle con programas locales gratuitos.",
+                  "priority": "medium"
+                },
+                "medicationStorage": {
+                  "title": "Entienda qué ocurre con sus medicamentos al ser detenido",
+                  "description": "Por lo general no puede llevar medicamentos personales a la cárcel — deben pasar por la farmacia del centro o ser entregados por familiares a través de canales oficiales. Su abogado puede ayudarle a entender qué esperar y abogar por la continuidad de sus medicamentos.",
+                  "priority": "medium"
+                }
+              },
+              "resources": {
+                "samhsa": {
+                  "description": "Línea de ayuda gratuita y confidencial las 24 horas para información sobre uso de sustancias y salud mental, y referencias a tratamiento. Disponible en inglés y español."
+                },
+                "partnership": {
+                  "description": "Línea de ayuda gratuita para familias con problemas de uso de sustancias — llame, envíe un mensaje de texto o chatee en línea. Orientación basada en evidencia para conectar a sus seres queridos con tratamiento."
+                },
+                "smartRecovery": {
+                  "description": "Apoyo para la recuperación de adicciones basado en ciencia, sin el modelo de los 12 pasos. Reuniones presenciales y en línea. Gratuito para asistir."
+                },
+                "nar": {
+                  "description": "Apoyo entre pares gratuito para personas afectadas por la adicción de un ser querido. Grupos presenciales y en línea disponibles en todo el país."
+                },
+                "nami": {
+                  "description": "La organización de salud mental más grande del país — los capítulos locales ofrecen grupos de apoyo, educación y defensa. Línea de ayuda de NAMI disponible de lunes a viernes."
+                },
+                "goodRx": {
+                  "description": "Herramienta gratuita para comparar precios de medicamentos y encontrar cupones. Puede reducir significativamente los costos de bolsillo si su seguro se ve afectado durante su caso."
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "¿Puede la cárcel negarme mis medicamentos?",
+                  "answer": "No. Las cárceles y prisiones están obligadas por la Octava Enmienda a proporcionar atención médica necesaria, incluidos los medicamentos. Sin embargo, puede haber demoras, sustituciones por equivalentes genéricos o trámites administrativos. Lleve su lista de medicamentos y la carta de su médico al registro. Si le niegan los medicamentos, su abogado puede presentar una moción de emergencia."
+                },
+                "q2": {
+                  "question": "¿Qué pasa si tomo sustancias controladas como medicamentos para el TDAH u opioides?",
+                  "answer": "Las sustancias controladas requieren documentación adicional. Pida a su médico que escriba una carta detallada explicando su diagnóstico y necesidad médica. Algunas instalaciones pueden sustituir por alternativas no controladas — discuta esto con su médico con anticipación. El tratamiento asistido con medicamentos (MAT) para el trastorno por uso de opioides está legalmente protegido."
+                },
+                "q3": {
+                  "question": "¿Puede ingresar a tratamiento ayudar a mi caso penal?",
+                  "answer": "Sí, en muchos casos. Ingresar proactivamente a tratamiento por uso de sustancias, consejería de salud mental o un programa de derivación muestra al tribunal que está asumiendo responsabilidad. Muchas jurisdicciones tienen tribunales de drogas, tribunales de salud mental y programas de derivación que pueden reducir o desestimar los cargos a cambio de completar el tratamiento."
+                },
+                "q4": {
+                  "question": "¿Qué pasa si pierdo mi seguro de salud debido a mi caso?",
+                  "answer": "Perder un trabajo debido a un arresto puede afectar su seguro de salud proporcionado por el empleador. Puede calificar para un Período de Inscripción Especial en el mercado de seguros. Medicaid puede estar disponible si sus ingresos disminuyen. Los centros de salud comunitarios brindan atención según una escala variable sin importar si tiene seguro. GoodRx puede reducir significativamente los costos de medicamentos."
+                }
+              },
+              "tips": {
+                "tip1": "Lleve una lista escrita de medicamentos en su billetera — si es detenido, esto ayuda al personal médico durante el registro",
+                "tip2": "Pida a su farmacéutico sobre organizadores de pastillas para que su rutina de medicamentos sea más fácil de documentar",
+                "tip3": "Si está en un tribunal de drogas o programa de derivación, guarde todos los registros de citas y resultados de pruebas de drogas",
+                "tip4": "Las condiciones de salud mental como la depresión y el PTSD son comunes durante casos legales — no espere una crisis para buscar ayuda",
+                "tip5": "El sitio findtreatment.gov de SAMHSA le permite buscar programas de tratamiento cercanos por tipo y seguro aceptado"
+              },
+              "medicationSection": {
+                "title": "Preparando Sus Medicamentos",
+                "description": "Si existe alguna posibilidad de tiempo en la cárcel — incluso por un período corto — tome estos pasos ahora para proteger su salud.",
+                "step1": {
+                  "title": "Documente todo",
+                  "body": "Cree una lista escrita de medicamentos con: nombre completo del medicamento, dosis, nombre y teléfono del médico que lo recetó, nombre y teléfono de la farmacia, y su diagnóstico o una descripción general. Guarde una copia en su billetera, dé una a su abogado y deje una con un familiar de confianza."
+                },
+                "step2": {
+                  "title": "Obtenga una carta de su médico",
+                  "body": "Pida a su médico que escriba una carta en papel membretado confirmando sus diagnósticos y medicamentos como médicamente necesarios. Esta carta puede presentarse al ingresar a la cárcel, a su abogado y al tribunal. Para condiciones de salud mental y crónicas, esto es especialmente importante."
+                },
+                "step3": {
+                  "title": "Surta las recetas antes de las fechas judiciales",
+                  "body": "No deje que las recetas venzan antes de una fecha judicial donde sea posible la detención. Pida un suministro de 90 días si su seguro lo permite. Si el costo es una preocupación, use GoodRx o pida muestras a su médico."
+                }
+              }
+            },
             "transportation": {
               "overview": "Su caso puede afectar su capacidad para conducir o moverse, pero no tiene por qué paralizar su vida. Entender el estado de su licencia, planificar alternativas y comunicarse proactivamente con quienes dependen de usted le ayudará a seguir adelante.",
               "actions": {
@@ -6129,6 +6331,10 @@ i18n
                   "mentalHealth": {
                     "label": "Salud Mental",
                     "description": "Estrés, ansiedad, necesidad de consejería"
+                  },
+                  "personalHealth": {
+                    "label": "Salud Personal",
+                    "description": "Manejo de medicamentos y condiciones de salud durante su caso"
                   },
                   "immigration": {
                     "label": "Estatus Migratorio",
@@ -9665,6 +9871,10 @@ i18n
                   "mentalHealth": {
                     "label": "心理健康",
                     "description": "压力、焦虑、需要心理咨询"
+                  },
+                  "personalHealth": {
+                    "label": "个人健康",
+                    "description": "在案件期间管理药物和健康状况"
                   },
                   "immigration": {
                     "label": "移民身份",

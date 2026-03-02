@@ -18,7 +18,7 @@ The frontend is built with React 18, TypeScript, shadcn/ui, Wouter for routing, 
 The backend uses Express.js and TypeScript, exposing a RESTful API. Drizzle ORM with PostgreSQL manages database interactions. A dual-mode AI guidance system intelligently switches between Anthropic's Claude AI and a rule-based engine, with robust error handling. Data privacy is ensured through encryption, session-based ephemerality (legal case data expires after 24 hours or server restart), and NLP-based PII redaction. A multi-tier validation system ensures legal accuracy by validating statutory citations and case law using CourtListener's semantic search. The platform integrates various legal data sources for criminal charges (6,496 across 56 jurisdictions with 5,916 verified statute codes — 100% match rate for 51 state/DC jurisdictions, zero mismatches; 580 territory charges flagged separately), diversion programs, and statutes (5,956 records in PostgreSQL with citation links to all 51 state legislature websites). The 32 newly added charge types (failure-to-appear, probation violation, resisting arrest, open container, MIP, harassment/stalking, noise violation, indecent exposure, fake ID, contempt of court, and more) have been fully seeded with 300 verified statute records and confirmed via URL spot-checks (50/50 URLs resolve correctly, 100%). A TX Code of Criminal Procedure URL fix was applied for chapter-alphanumeric codes (e.g., 42A for community supervision). MA citation extractor updated to preserve chapter-section format (e.g., `265-13A`) preventing regression.
 
 ### Site-Wide Search
-A comprehensive, multilingual search system indexes 6,663 legal documents, including glossary terms, criminal charges, diversion programs, and all 38 site pages (including all 10 `/support/*` pages). It uses legal synonym expansion and weighted relevance scoring for accurate results.
+A comprehensive, multilingual search system indexes 6,663 legal documents, including glossary terms, criminal charges, diversion programs, and all 38 site pages (including all 11 `/support/*` pages). It uses legal synonym expansion and weighted relevance scoring for accurate results.
 
 ### Visual Case Timeline
 An interactive 7-stage criminal case timeline provides descriptions, rights, and tips for each stage of a criminal proceeding, available in English, Spanish, and Chinese.
@@ -36,7 +36,7 @@ The Attorney Portal provides verified attorneys with jurisdiction-specific docum
 A public REST API (`/api/v1/`) allows third-party integration, offering read-only access to legal content, charges, and programs via endpoints and embeddable widgets. It provides an OpenAPI Specification and interactive documentation, with CORS enabled and rate limiting for fair use. AI-powered guidance endpoints remain private for security and liability reasons.
 
 ### System Design Choices
-The application uses session-based authentication with PostgreSQL for session storage. Vite is used for frontend development and ESBuild for server bundling. Drizzle Kit manages database migrations, and automated data quality assurance runs on server startup.
+The application uses session-based authentication with PostgreSQL for session storage. Vite is used for frontend development and ESBuild for server bundling. Drizzle Kit manages database migrations. Charge validation scripts are manual-only tools (run via CLI on request) and do NOT run at server startup.
 
 ## External Dependencies
 

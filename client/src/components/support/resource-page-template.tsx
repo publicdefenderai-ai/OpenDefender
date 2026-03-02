@@ -89,6 +89,12 @@ const categoryThemes: Record<string, { accent: string; accentBg: string; accentB
     accentBorder: "border-rose-200 dark:border-rose-800",
     heroClass: "vivid-header-alt",
   },
+  personalHealth: {
+    accent: "text-green-600 dark:text-green-400",
+    accentBg: "bg-green-50 dark:bg-green-950/30",
+    accentBorder: "border-green-200 dark:border-green-800",
+    heroClass: "vivid-header-alt",
+  },
   housing: {
     accent: "text-amber-600 dark:text-amber-400",
     accentBg: "bg-amber-50 dark:bg-amber-950/30",
