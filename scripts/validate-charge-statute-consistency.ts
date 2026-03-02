@@ -96,9 +96,13 @@ function extractSectionFromCitation(citation: string): string | null {
     const ilcsMatch = citation.match(/ILCS\s+([\d\w\-.:\/()]+)/);
     return ilcsMatch ? ilcsMatch[1] : null;
   }
+  // Massachusetts: preserve chapter-section format (e.g., "ch. 265, § 13A" → "265-13A")
   if (citation.includes('Mass. Gen. Laws ch.')) {
-    const maMatch = citation.match(/ch\.\s*([\d\w\-]+)/);
-    return maMatch ? maMatch[1] : null;
+    const maMatch = citation.match(/ch\.\s*([\d\w\-]+)(?:,?\s*§\s*([\d\w\-]+(?:\([A-Za-z0-9]+\))*))?/);
+    if (maMatch) {
+      return maMatch[2] ? `${maMatch[1]}-${maMatch[2]}` : maMatch[1];
+    }
+    return null;
   }
   const match = citation.match(/§\s*([\d\w\-.:\/]+(?:\([A-Za-z0-9]+\))*\d*)/);
   return match ? match[1] : null;

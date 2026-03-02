@@ -1,85 +1,99 @@
 import { generateStatuteCitation, getStatuteUrl } from '../shared/statute-citation-generator';
 
 const CHECKS = [
-  // New charge types across varied states
+  // Original charges — spot check
   { state: 'AL', code: '13A-11-8', name: 'Harassment' },
-  { state: 'AL', code: '13A-6-132', name: 'Stalking' },
-  { state: 'AL', code: '13A-11-10', name: 'Noise' },
-  { state: 'AL', code: '13A-11-150', name: 'Fake ID' },
-  { state: 'AL', code: '13A-11-1', name: 'Disorderly' },
-  
   { state: 'AK', code: '11.61.120', name: 'Harassment' },
-  { state: 'AK', code: '11.76.105', name: 'MIP' },
-  { state: 'AK', code: '28.15.011', name: 'No Insurance' },
-  { state: 'AK', code: '12.55.110', name: 'Probation Viol' },
-  { state: 'AK', code: '11.46.330', name: 'Criminal Mischief' },
-
   { state: 'CO', code: '18-3-602', name: 'Stalking' },
-  { state: 'CO', code: '42-4-1301', name: 'DUI' },
-  { state: 'CO', code: '18-6-803.5', name: 'DV' },
-  { state: 'CO', code: '18-4-501', name: 'Criminal Mischief' },
-  { state: 'CO', code: '18-9-106', name: 'Disorderly' },
-
   { state: 'CT', code: '53a-181', name: 'Disorderly' },
-  { state: 'CT', code: '14-215', name: 'Driving Suspended' },
-  { state: 'CT', code: '53a-119', name: 'Larceny' },
-  { state: 'CT', code: '53a-100', name: 'Burglary' },
-  { state: 'CT', code: '53a-96', name: 'Fake ID' },
-  
-  { state: 'HI', code: '707-712', name: 'Assault 3rd' },
-  { state: 'HI', code: '712-1249', name: 'Drug Para' },
   { state: 'HI', code: '291E-61', name: 'DUI' },
-  { state: 'HI', code: '708-836', name: 'Trespass' },
-  { state: 'HI', code: '711-1101', name: 'Disorderly' },
-
   { state: 'KS', code: '21-5413', name: 'Battery' },
-  { state: 'KS', code: '21-6412', name: 'Bad Checks' },
-  { state: 'KS', code: '21-5514', name: 'Fake ID' },
-  { state: 'KS', code: '21-5812', name: 'Trespass' },
-  { state: 'KS', code: '21-5705', name: 'Drug Possession' },
-
   { state: 'LA', code: '14:35', name: 'Battery' },
-  { state: 'LA', code: '14:108', name: 'Resisting' },
-  { state: 'LA', code: '14:67.26', name: 'Identity Theft' },
-  { state: 'LA', code: '14:95.1', name: 'Felon w/Weapon' },
-  { state: 'LA', code: '14:63', name: 'Trespass' },
-  
   { state: 'MN', code: '609.2242', name: 'DV Assault' },
-  { state: 'MN', code: '609.749', name: 'Stalking' },
-  { state: 'MN', code: '609.72', name: 'Disorderly' },
-  { state: 'MN', code: '609.535', name: 'Bad Checks' },
-  { state: 'MN', code: '152.025', name: 'Drug 5th Degree' },
-
   { state: 'SC', code: '16-25-20', name: 'DV 3rd' },
-  { state: 'SC', code: '56-5-2930', name: 'DUI' },
-  { state: 'SC', code: '16-13-110', name: 'Shoplifting' },
-  { state: 'SC', code: '16-11-600', name: 'Trespass' },
-  { state: 'SC', code: '16-17-530', name: 'Disorderly' },
-
   { state: 'UT', code: '76-5-102', name: 'Assault' },
-  { state: 'UT', code: '41-6a-502', name: 'DUI' },
-  { state: 'UT', code: '76-6-206', name: 'Criminal Mischief' },
-  { state: 'UT', code: '76-6-206', name: 'Trespass' },
-  { state: 'UT', code: '76-8-305', name: 'Resisting' },
+
+  // New charge types — failure-to-appear
+  { state: 'CA', code: '1320', name: 'FTA (CA)' },
+  { state: 'TX', code: '38.10', name: 'FTA (TX)' },
+  { state: 'FL', code: '843.15', name: 'FTA (FL)' },
+  { state: 'NY', code: '215.59', name: 'FTA (NY)' },
+  { state: 'IL', code: '720-5/32-10', name: 'FTA (IL)' },
+
+  // New charge types — probation-violation
+  { state: 'CA', code: '1203.2', name: 'Probation Viol (CA)' },
+  { state: 'TX', code: '42A.751', name: 'Probation Viol (TX)' },
+  { state: 'FL', code: '948.06', name: 'Probation Viol (FL)' },
+  { state: 'OH', code: '2951.08', name: 'Probation Viol (OH)' },
+  { state: 'NC', code: '15A-1344', name: 'Probation Viol (NC)' },
+
+  // New charge types — resisting-arrest
+  { state: 'CA', code: '148', name: 'Resisting (CA)' },
+  { state: 'TX', code: '38.03', name: 'Resisting (TX)' },
+  { state: 'FL', code: '843.01', name: 'Resisting (FL)' },
+  { state: 'VA', code: '18.2-460', name: 'Resisting (VA)' },
+  { state: 'WA', code: '9A.76.040', name: 'Resisting (WA)' },
+
+  // New charge types — protective-order-violation
+  { state: 'CA', code: '166', name: 'Prot Order Viol (CA)' },
+  { state: 'TX', code: '25.07', name: 'Prot Order Viol (TX)' },
+  { state: 'FL', code: '741.31', name: 'Prot Order Viol (FL)' },
+  { state: 'NY', code: '215.51', name: 'Prot Order Viol (NY)' },
+  { state: 'PA', code: '23-6114', name: 'Prot Order Viol (PA)' },
+
+  // New charge types — open-container
+  { state: 'CA', code: '23222', name: 'Open Container (CA)' },
+  { state: 'TX', code: '49.031', name: 'Open Container (TX)' },
+  { state: 'FL', code: '316.1936', name: 'Open Container (FL)' },
+  { state: 'IL', code: '625-5/11-502', name: 'Open Container (IL)' },
+  { state: 'NC', code: '20-138.7', name: 'Open Container (NC)' },
+
+  // New charge types — mip-alcohol
+  { state: 'CA', code: '25662', name: 'MIP (CA)' },
+  { state: 'TX', code: '106.04', name: 'MIP (TX)' },
+  { state: 'FL', code: '562.111', name: 'MIP (FL)' },
+  { state: 'GA', code: '3-3-23', name: 'MIP (GA)' },
+  { state: 'MI', code: '436.1703', name: 'MIP (MI)' },
+
+  // New charge types — harassment-stalking
+  { state: 'CA', code: '653m', name: 'Harassment (CA)' },
+  { state: 'TX', code: '42.07', name: 'Harassment (TX)' },
+  { state: 'FL', code: '784.048', name: 'Stalking (FL)' },
+  { state: 'NY', code: '240.26', name: 'Harassment (NY)' },
+  { state: 'NJ', code: '2C:33-4', name: 'Harassment (NJ)' },
+
+  // New charge types — noise-violation / disorderly conduct
+  { state: 'CA', code: '415', name: 'Disturbing Peace (CA)' },
+  { state: 'TX', code: '42.01', name: 'Disorderly Cond (TX)' },
+  { state: 'FL', code: '877.03', name: 'Disturbing Peace (FL)' },
+  { state: 'NY', code: '240.20', name: 'Disorderly Cond (NY)' },
+  { state: 'IL', code: '720-5/26-1', name: 'Disorderly Cond (IL)' },
 ];
 
 let validLinks = 0;
 let emptyLinks = 0;
+const errors: string[] = [];
 
 for (const check of CHECKS) {
   const citation = generateStatuteCitation(check.state, check.code);
   const url = getStatuteUrl(check.state, check.code);
-  
+
   if (url && url.startsWith('http')) {
     validLinks++;
-    console.log(`✓ ${check.state} ${check.name}: ${citation}`);
+    console.log(`✓ ${check.state} ${check.name.padEnd(25)} ${citation}`);
     console.log(`  → ${url}`);
   } else {
     emptyLinks++;
+    errors.push(`${check.state} ${check.name}: ${citation}`);
     console.log(`✗ ${check.state} ${check.name}: ${citation} → NO URL`);
   }
 }
 
-console.log(`\n========================================`);
-console.log(`Results: ${validLinks}/${CHECKS.length} have valid URLs (${((validLinks/CHECKS.length)*100).toFixed(1)}%)`);
+console.log(`\n${'='.repeat(60)}`);
+console.log(`Results: ${validLinks}/${CHECKS.length} have valid URLs (${((validLinks / CHECKS.length) * 100).toFixed(1)}%)`);
 console.log(`Missing URLs: ${emptyLinks}`);
+
+if (errors.length > 0) {
+  console.log('\nEntries missing URLs:');
+  for (const e of errors) console.log(`  - ${e}`);
+}

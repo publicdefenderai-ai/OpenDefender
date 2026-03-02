@@ -2253,7 +2253,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '243',
+    code: '243(e)',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Assault against family/household member under California law',
@@ -3072,7 +3072,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-domestic-battery',
     name: 'Domestic Battery',
-    code: '243(e)',
+    code: '243(e)(1)',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Battery committed against a spouse, cohabitant, or dating partner under California Penal Code § 243(e)(1)',
@@ -13251,7 +13251,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '625-5/11-501',
+    code: '5/11-501',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Illinois law',
@@ -13264,7 +13264,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '625-5/11-501',
+    code: '5/11-501',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Driving under influence, felony level under Illinois law',
@@ -57428,7 +57428,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-dui-misdemeanor',
     name: 'DUI - First Offense',
-    code: '47-11-902',
+    code: '11-902',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Driving under the influence of alcohol or drugs under Oklahoma law',
@@ -63165,7 +63165,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-harassment',
     name: 'Harassment / Stalking',
-    code: '720-5/26.5-2',
+    code: '5/12-7.3',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'A pattern of conduct directed at a specific person that would cause a reasonable person to feel fear, intimidation, or substantial emotional distress under IL law',
@@ -76894,7 +76894,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '21-1361',
+    code: '1361',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under OK law',
@@ -76933,7 +76933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '21-1835',
+    code: '1835',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under OK law',

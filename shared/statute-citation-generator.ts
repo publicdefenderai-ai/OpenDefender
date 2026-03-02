@@ -257,15 +257,20 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'CA':
       return `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=${code}&lawCode=PEN`;
     
-    case 'TX':
+    case 'TX': {
       // Texas: Official site serves chapter pages with anchor fragments
       // e.g., 19.02 → PE.19.htm#19.02, 481.115 → HS.481.htm#481.115
-      if (code.startsWith('481.')) {
-        const chapter = code.split('.')[0];
-        return `https://statutes.capitol.texas.gov/Docs/HS/htm/HS.${chapter}.htm#${code}`;
+      // 42A.751 → CR.42A.htm#42A.751 (Code of Criminal Procedure)
+      const txChapter = code.split('.')[0];
+      if (code.startsWith('481.') || code.startsWith('482.') || code.startsWith('483.')) {
+        return `https://statutes.capitol.texas.gov/Docs/HS/htm/HS.${txChapter}.htm#${code}`;
       }
-      const chapter = code.split('.')[0];
-      return `https://statutes.capitol.texas.gov/Docs/PE/htm/PE.${chapter}.htm#${code}`;
+      // CCP chapters contain letters (e.g., 42A) or are known CCP chapter ranges
+      if (/[A-Za-z]/.test(txChapter)) {
+        return `https://statutes.capitol.texas.gov/Docs/CR/htm/CR.${txChapter}.htm#${code}`;
+      }
+      return `https://statutes.capitol.texas.gov/Docs/PE/htm/PE.${txChapter}.htm#${code}`;
+    }
     
     case 'FL':
       // Florida URLs: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/0782.html
