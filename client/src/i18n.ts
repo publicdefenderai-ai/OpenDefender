@@ -235,6 +235,11 @@ i18n
             "viewResources": "View resources",
             "availableNow": "Available Now",
             "comingSoon": "Coming soon",
+            "groups": {
+              "dailyLife": "Daily Life",
+              "legalCourt": "Legal & Court",
+              "health": "Health & Wellbeing"
+            },
             "backToSupport": "Back to Support",
             "startHere": "Start Here",
             "practicalSteps": "Practical steps",
@@ -4926,6 +4931,11 @@ i18n
             "viewResources": "Ver recursos",
             "availableNow": "Disponible Ahora",
             "comingSoon": "Próximamente",
+            "groups": {
+              "dailyLife": "Vida Diaria",
+              "legalCourt": "Legal y Tribunal",
+              "health": "Salud y Bienestar"
+            },
             "backToSupport": "Volver a Apoyo",
             "startHere": "Comience Aquí",
             "practicalSteps": "Pasos prácticos",
