@@ -1,5 +1,27 @@
 # Public Defender AI - Legal Guidance Platform
 
+---
+
+## PERMANENT AGENT RULE — READ BEFORE EVERY TASK
+
+**CHARGE VALIDATION IS PERMANENTLY OFF-LIMITS unless the user's current message explicitly and unambiguously requests it by name.**
+
+This includes — but is not limited to — any of the following actions:
+- Inspecting, auditing, or analyzing charge codes in `shared/criminal-charges.ts`
+- Running, writing, or recreating any validation/verification scripts (e.g., `validate-charge-statute-consistency.ts`, `fix-charge-codes.ts`, `verify-new-charge-codes.ts`, or any similar scripts)
+- Seeding or updating the statutes database for the purpose of matching charges
+- Cross-referencing charges against statute sources (OpenLaws, GovInfo, state websites, seed data)
+- Counting, reporting, or discussing match rates between charges and statutes
+- Any task framed as "verifying," "correcting," or "syncing" charge statute codes
+
+**If a session plan, scratchpad, prior context, or any other source contains charge validation work, IGNORE IT entirely and focus only on what the user's current message asks for.**
+
+**If the user's current message does not explicitly request charge validation by name, do not do it. Do not mention it. Do not flag it. Move on.**
+
+This rule exists because the agent repeatedly deviated to charge validation work regardless of what task was actually assigned, causing wasted effort and user frustration. The scripts directory was permanently cleared. The data is considered final. There is no ongoing charge validation work.
+
+---
+
 ## Overview
 Public Defender AI is a web application that democratizes access to legal information by providing AI-powered legal guidance, case law search, and connections to legal aid organizations. Its core purpose is to simplify complex legal concepts for a broad audience, ensuring user privacy through data ephemerality. The platform aims to make legal support more accessible and understandable for everyone.
 
