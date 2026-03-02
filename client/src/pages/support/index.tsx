@@ -16,6 +16,8 @@ import {
   ArrowRight,
   ChevronLeft,
   Sparkles,
+  ExternalLink,
+  HandHeart,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -166,6 +168,69 @@ export default function SupportHub() {
             </div>
           </section>
         )}
+
+        <section className="py-10 md:py-14 bg-muted/20">
+          <div className="container mx-auto px-4">
+            <ScrollReveal>
+              <div className="max-w-3xl mx-auto">
+                <div className="flex items-center gap-3 mb-6">
+                  <HandHeart className="h-5 w-5 text-primary" />
+                  <h2 className="text-xl font-bold text-foreground">Organizations Working Alongside Public Defenders</h2>
+                </div>
+                <p className="text-sm text-muted-foreground mb-6">
+                  The following organizations work to expand what public defenders can do for their clients. They are not affiliated with this site — we cross-reference their work with attribution.
+                </p>
+                <Card className="border-l-4 border-l-primary shadow-sm">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Users className="h-5 w-5 text-primary" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
+                          <h3 className="text-lg font-bold text-foreground">Partners for Justice</h3>
+                          <Badge variant="secondary" className="text-xs">Featured Partner</Badge>
+                        </div>
+                        <p className="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                          A national nonprofit that embeds trained, non-attorney Advocates inside public defender offices. These Advocates help people facing charges connect with housing, employment, health care, and other social services — as part of their legal representation, not separately. Founded in 2018, PFJ operates in 20+ states and has helped eliminate an estimated 9,000+ years of potential incarceration by addressing the root causes behind criminal legal involvement.
+                        </p>
+                        <div className="flex flex-wrap gap-4 mb-4">
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-primary">20+</div>
+                            <div className="text-xs text-muted-foreground">States</div>
+                          </div>
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-primary">29,000+</div>
+                            <div className="text-xs text-muted-foreground">People connected to services</div>
+                          </div>
+                          <div className="text-center">
+                            <div className="text-xl font-bold text-primary">9,000+</div>
+                            <div className="text-xs text-muted-foreground">Years of incarceration eliminated</div>
+                          </div>
+                        </div>
+                        <div className="bg-muted/50 rounded-lg p-3 mb-4 text-xs text-muted-foreground">
+                          <strong className="text-foreground">How they can help you:</strong> If your public defender's office works with Partners for Justice, ask them about connecting with a PFJ Advocate. An Advocate can help you access services for housing, employment, mental health, and more — which may also strengthen your legal case.
+                        </div>
+                        <a
+                          href="https://www.partnersforjustice.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                        >
+                          Visit partnersforjustice.org
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                        <p className="text-xs text-muted-foreground mt-3">
+                          Statistics and descriptions sourced from <a href="https://www.partnersforjustice.org/our-impact" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">partnersforjustice.org/our-impact</a>. Cross-referenced with attribution.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
 
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
