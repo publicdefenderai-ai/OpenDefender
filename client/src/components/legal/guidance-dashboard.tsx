@@ -9,6 +9,7 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronRight,
+  ChevronUp,
   Download,
   Phone,
   MapPin,
@@ -34,7 +35,8 @@ import {
   Home,
   Car,
   Baby,
-  LifeBuoy
+  LifeBuoy,
+  Loader2
 } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -436,10 +438,107 @@ function PrecedentCasesSection({
 }
 
 // Your Charges Section - Plain English explanation of charges
-function YourChargesSection({ 
-  chargeClassifications
-}: { 
+interface LiveStatuteResult {
+  success: boolean;
+  statute?: {
+    title: string;
+    content: string;
+    citation: string;
+    jurisdiction: string;
+    url?: string;
+    section: string;
+  };
+  error?: string;
+}
+
+function ChargeReadTheLaw({ jurisdiction, code }: { jurisdiction: string; code: string }) {
+  const [showStatute, setShowStatute] = useState(false);
+  const [fetchEnabled, setFetchEnabled] = useState(false);
+
+  const citation = `${jurisdiction.toUpperCase()} § ${code}`;
+  const encodedCitation = encodeURIComponent(citation);
+
+  const { data: liveData, isLoading } = useQuery<LiveStatuteResult>({
+    queryKey: [`/api/openlaws/citation/${encodedCitation}`],
+    enabled: fetchEnabled,
+  });
+
+  const handleToggle = () => {
+    if (!showStatute) setFetchEnabled(true);
+    setShowStatute(prev => !prev);
+  };
+
+  return (
+    <div className="mt-3">
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={handleToggle}
+        className="text-primary hover:text-primary/80 p-0 h-auto font-medium text-sm"
+        aria-expanded={showStatute}
+      >
+        <BookOpen className="h-3.5 w-3.5 mr-1.5" />
+        {showStatute ? (
+          <>
+            <ChevronUp className="h-3.5 w-3.5 mr-1" />
+            Hide Statute Text
+          </>
+        ) : (
+          <>
+            <ChevronDown className="h-3.5 w-3.5 mr-1" />
+            Read the Law
+          </>
+        )}
+      </Button>
+
+      {showStatute && (
+        <div className="mt-3 rounded-lg border border-border bg-muted/30 p-4">
+          {isLoading ? (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              Fetching statute from OpenLaws...
+            </div>
+          ) : liveData?.success && liveData.statute ? (
+            <div className="space-y-2">
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <p className="text-sm font-semibold text-foreground">{liveData.statute.title}</p>
+                  <p className="text-xs text-muted-foreground">{liveData.statute.citation}</p>
+                </div>
+                {liveData.statute.url && (
+                  <a
+                    href={liveData.statute.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 shrink-0"
+                    aria-label="View on OpenLaws"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
+              <div className="text-xs text-muted-foreground leading-relaxed whitespace-pre-wrap max-h-48 overflow-y-auto font-mono bg-background rounded p-2 border border-border/50">
+                {liveData.statute.content}
+              </div>
+              <p className="text-xs text-muted-foreground">Source: OpenLaws · Live statute text</p>
+            </div>
+          ) : (
+            <p className="text-sm text-muted-foreground">
+              Full statute text not available for this citation ({citation}). Check with your attorney for the exact statute language.
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function YourChargesSection({
+  chargeClassifications,
+  jurisdiction,
+}: {
   chargeClassifications?: Array<{ name: string; classification: string; code: string }>;
+  jurisdiction?: string;
 }) {
   const { t } = useTranslation();
   
@@ -539,9 +638,14 @@ function YourChargesSection({
               </div>
             )}
 
+            {/* Read the Law — live statute text from OpenLaws */}
+            {jurisdiction && charge.code && (
+              <ChargeReadTheLaw jurisdiction={jurisdiction} code={charge.code} />
+            )}
+
             {/* Separator between charges */}
             {index < chargesWithExplanations.length - 1 && (
-              <div className="border-t border-border pt-4" />
+              <div className="border-t border-border pt-4 mt-4" />
             )}
           </div>
         ))}
@@ -830,8 +934,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       )}
 
       {/* Your Charges Section */}
-      <YourChargesSection 
+      <YourChargesSection
         chargeClassifications={guidance.chargeClassifications}
+        jurisdiction={guidance.caseData?.jurisdiction}
       />
 
       {/* Simple Reassurance Message with Hidden Technical Details */}
