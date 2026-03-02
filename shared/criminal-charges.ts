@@ -32868,7 +32868,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ny-open-container',
     name: 'Open Container Violation',
-    code: '1227-a',
+    code: '1227',
     jurisdiction: 'NY',
     category: 'infraction',
     description: 'Consuming alcohol or possessing an open container of alcohol in a public place in New York City under NYC Administrative Code § 10-125',
@@ -63126,7 +63126,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-open-container',
     name: 'Open Container Violation',
-    code: '5/625-5/11-502',
+    code: '625-5/11-502',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Possessing an open container of alcohol in a motor vehicle or in a public area where prohibited under IL law',
@@ -63178,7 +63178,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-contempt-of-court',
     name: 'Contempt of Court',
-    code: '5/32-1',
+    code: '720-5/32-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under IL law',
@@ -63191,7 +63191,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '5/17-1',
+    code: '720-5/17-1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under IL law',
@@ -66688,7 +66688,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-resisting-arrest',
     name: 'Resisting Arrest / Obstruction',
-    code: '268',
+    code: '21-268',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Physically resisting, obstructing, or interfering with a law enforcement officer performing official duties under OK law',
@@ -66766,7 +66766,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-contempt-of-court',
     name: 'Contempt of Court',
-    code: '565',
+    code: '21-565',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under OK law',
@@ -66779,7 +66779,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-bad-checks',
     name: 'Writing Bad Checks / Worthless Checks',
-    code: '1541',
+    code: '21-1541',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Knowingly writing or passing a check with insufficient funds or on a closed account under OK law',
@@ -66792,7 +66792,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-solicitation',
     name: 'Solicitation / Prostitution',
-    code: '1029',
+    code: '21-1029',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Offering, agreeing to, or engaging in sexual conduct for compensation under OK law',
@@ -72305,7 +72305,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-expired-inspection',
     name: 'Driving with Expired/No Inspection',
-    code: '5/625-5/13-101',
+    code: '625-5/13-101',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle without a valid safety inspection sticker or with an expired inspection under IL law',
@@ -72370,7 +72370,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '5/510-5/15',
+    code: '510-5/15',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under IL law',
@@ -72422,7 +72422,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-unregistered-vehicle',
     name: 'Operating Unregistered / Uninsured Vehicle',
-    code: '5/625-5/3-702',
+    code: '625-5/3-702',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle on public roads without valid registration plates or without proper vehicle registration under IL law',
@@ -72435,7 +72435,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-curfew-violation',
     name: 'Curfew Violation',
-    code: '5/720-555/1',
+    code: '720-555/1',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under IL law',
@@ -72461,7 +72461,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '5/625-5/12-201',
+    code: '625-5/12-201',
     jurisdiction: 'IL',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under IL law',
@@ -73865,7 +73865,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-expired-inspection',
     name: 'Driving with Expired/No Inspection',
-    code: '90-20',
+    code: '90-7A',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle without a valid safety inspection sticker or with an expired inspection under MA law',
@@ -73969,7 +73969,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '272-53',
+    code: '272-59',
     jurisdiction: 'MA',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under MA law',
@@ -74021,7 +74021,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '90-7A',
+    code: '90-7',
     jurisdiction: 'MA',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under MA law',
@@ -75009,7 +75009,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-reckless-driving-criminal',
     name: 'Reckless/Careless Driving (Criminal)',
-    code: '60-6',
+    code: '60-6,214',
     jurisdiction: 'NE',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under NE law',
@@ -75191,7 +75191,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ne-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '60-6',
+    code: '60-6,219',
     jurisdiction: 'NE',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under NE law',
@@ -76803,7 +76803,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-failure-to-pay-child-support',
     name: 'Criminal Nonsupport / Failure to Pay Child Support',
-    code: '852',
+    code: '21-852',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Willful failure to provide court-ordered financial support for a child or dependent under OK law',
@@ -76816,7 +76816,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-noise-violation',
     name: 'Noise Violation / Disturbing the Peace by Noise',
-    code: '1361',
+    code: '21-1361',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Creating excessive, unreasonable, or prohibited noise that disturbs the peace and quiet of a neighborhood or community under OK law',
@@ -76829,7 +76829,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-indecent-exposure',
     name: 'Indecent Exposure / Public Urination',
-    code: '1021',
+    code: '21-1021',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Exposing private body parts in a public place or urinating in public view under OK law',
@@ -76842,7 +76842,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-fake-id',
     name: 'Possession of Fake/Fraudulent ID',
-    code: '1533.2',
+    code: '21-1533.2',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Possessing, displaying, or using a fraudulent, altered, or counterfeit identification document under OK law',
@@ -76868,7 +76868,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-animal-cruelty-misdemeanor',
     name: 'Animal Cruelty (Misdemeanor)',
-    code: '1685',
+    code: '21-1685',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Negligent or intentional mistreatment, neglect, or abuse of an animal under OK law',
@@ -76881,7 +76881,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-illegal-camping',
     name: 'Illegal Camping / Sleeping in Public',
-    code: '1365',
+    code: '21-1365',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Sleeping, camping, or establishing a living space in a public area, park, or right-of-way where prohibited under OK law',
@@ -76894,7 +76894,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-panhandling',
     name: 'Panhandling / Aggressive Solicitation',
-    code: '1361',
+    code: '21-1361',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Aggressively asking for money or donations in a public place, near ATMs, or in a manner that causes fear or intimidation under OK law',
@@ -76920,7 +76920,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-curfew-violation',
     name: 'Curfew Violation',
-    code: '1367',
+    code: '21-1367',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'A juvenile being present in a public place during designated curfew hours without a parent, guardian, or valid exemption under OK law',
@@ -76933,7 +76933,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '1835',
+    code: '21-1835',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under OK law',
@@ -81665,7 +81665,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-illegal-fireworks',
     name: 'Illegal Discharge of Fireworks',
-    code: '5/425-35/2',
+    code: '425-35/2',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Possessing, selling, or discharging fireworks in violation of local or state fireworks regulations under IL law',
@@ -81678,7 +81678,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-alcohol-in-park',
     name: 'Possession of Alcohol in Park / Prohibited Area',
-    code: '5/235-5/5-12',
+    code: '235-5/5-12',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Possessing or consuming alcoholic beverages in a public park, beach, playground, or other designated alcohol-free zone under IL law',
@@ -83147,7 +83147,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ok-littering',
     name: 'Littering / Illegal Dumping',
-    code: '1752',
+    code: '21-1752',
     jurisdiction: 'OK',
     category: 'misdemeanor',
     description: 'Disposing of trash, waste, or debris on public or private property without authorization, or illegally dumping materials in prohibited areas under OK law',
