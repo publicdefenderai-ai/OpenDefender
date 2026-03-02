@@ -232,22 +232,6 @@ export default function SupportHub() {
           </div>
         </section>
 
-        <section className="py-8 md:py-12">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="max-w-2xl mx-auto">
-                <Card className="border-amber-200 dark:border-amber-800 bg-gradient-to-br from-amber-50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/10">
-                  <CardContent className="p-5">
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
-                      <strong className="text-foreground">{t('support.note.title')}</strong>{" "}
-                      {t('support.note.content')}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
