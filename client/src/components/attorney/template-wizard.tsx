@@ -13,14 +13,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
   Loader2,
   AlertCircle,
   AlertTriangle,
+  BookOpen,
+  ExternalLink,
+  Zap,
 } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
+import { Separator } from "@/components/ui/separator";
 import {
   TemplateFormSection,
   JurisdictionSelector,
@@ -44,6 +52,126 @@ interface TemplateWizardProps {
 }
 
 type WizardStep = "jurisdiction" | "form" | "generate" | "preview";
+
+interface LiveStatuteResult {
+  success: boolean;
+  statute?: {
+    title: string;
+    content: string;
+    citation: string;
+    jurisdiction: string;
+    url?: string;
+    section: string;
+  };
+}
+
+function StatuteLookupWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [citationInput, setCitationInput] = useState('');
+  const [activeCitation, setActiveCitation] = useState('');
+
+  const { data: liveData, isLoading } = useQuery<LiveStatuteResult>({
+    queryKey: [`/api/openlaws/citation/${encodeURIComponent(activeCitation)}`],
+    enabled: !!activeCitation,
+  });
+
+  const handleLookup = () => {
+    if (citationInput.trim()) {
+      setActiveCitation(citationInput.trim());
+    }
+  };
+
+  return (
+    <div className="mt-6 rounded-lg border border-border bg-muted/20">
+      <button
+        type="button"
+        onClick={() => setIsOpen(prev => !prev)}
+        className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-foreground hover:bg-muted/40 transition-colors rounded-lg"
+        aria-expanded={isOpen}
+      >
+        <span className="flex items-center gap-2">
+          <BookOpen className="h-4 w-4 text-primary" />
+          Statute Reference Tool
+        </span>
+        {isOpen ? <ChevronUp className="h-4 w-4 text-muted-foreground" /> : <ChevronDown className="h-4 w-4 text-muted-foreground" />}
+      </button>
+
+      {isOpen && (
+        <div className="px-4 pb-4 space-y-3">
+          <Separator />
+          <p className="text-xs text-muted-foreground">
+            Verify any citation before including it in your motion. Enter a citation to retrieve the live statute text.
+          </p>
+          <div className="flex gap-2">
+            <Input
+              placeholder="e.g. Cal. Penal Code § 187"
+              value={citationInput}
+              onChange={(e) => setCitationInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleLookup()}
+              className="text-sm h-8"
+            />
+            <Button
+              type="button"
+              size="sm"
+              variant="secondary"
+              onClick={handleLookup}
+              disabled={!citationInput.trim()}
+              className="h-8 shrink-0"
+            >
+              <Zap className="h-3.5 w-3.5 mr-1" />
+              Verify
+            </Button>
+          </div>
+
+          {isLoading && (
+            <div className="flex items-center gap-2 text-xs text-muted-foreground py-1">
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+              Looking up citation...
+            </div>
+          )}
+
+          {liveData && !isLoading && (
+            liveData.success && liveData.statute ? (
+              <div className="rounded-md border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/20 p-3 space-y-1.5">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <p className="text-xs font-semibold text-green-800 dark:text-green-300">
+                      ✓ Citation verified
+                    </p>
+                    <p className="text-xs text-foreground font-medium mt-0.5">{liveData.statute.title}</p>
+                    <p className="text-xs text-muted-foreground">{liveData.statute.citation}</p>
+                  </div>
+                  {liveData.statute.url && (
+                    <a
+                      href={liveData.statute.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 shrink-0"
+                      aria-label="View on OpenLaws"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  )}
+                </div>
+                {liveData.statute.content && (
+                  <div className="text-xs text-muted-foreground leading-relaxed whitespace-pre-wrap max-h-32 overflow-y-auto font-mono bg-background rounded p-1.5 border border-border/50 mt-1">
+                    {liveData.statute.content}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="rounded-md border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20 p-3">
+                <p className="text-xs text-amber-800 dark:text-amber-300">
+                  ⚠ Citation not found for "{activeCitation}". Double-check the format or consult a primary source.
+                </p>
+              </div>
+            )
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
   const [step, setStep] = useState<WizardStep>("jurisdiction");
@@ -289,26 +417,29 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
         const currentSection = formSections[currentFormSectionIndex];
         const isLastFormSection = currentFormSectionIndex === formSections.length - 1;
         return (
-          <FormProvider {...form}>
-            <form onSubmit={(e) => e.preventDefault()}>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentSection.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <TemplateFormSection section={currentSection} jurisdictionContext={jurisdictionSelection} />
-                  {isLastFormSection && (
-                    <div className="mt-6">
-                      <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
-                    </div>
-                  )}
-                </motion.div>
-              </AnimatePresence>
-            </form>
-          </FormProvider>
+          <>
+            <FormProvider {...form}>
+              <form onSubmit={(e) => e.preventDefault()}>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSection.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <TemplateFormSection section={currentSection} jurisdictionContext={jurisdictionSelection} />
+                    {isLastFormSection && (
+                      <div className="mt-6">
+                        <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </form>
+            </FormProvider>
+            <StatuteLookupWidget />
+          </>
         );
 
       case "generate":
