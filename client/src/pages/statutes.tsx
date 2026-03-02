@@ -10,7 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, BookOpen, ExternalLink, AlertCircle, Loader2 } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { Search, BookOpen, ExternalLink, AlertCircle, Loader2, ChevronDown, ChevronUp, Zap, FileText } from "lucide-react";
 
 interface Statute {
   packageId?: string;
@@ -22,6 +23,7 @@ interface Statute {
   summary?: string;
   penalties?: string;
   category?: string;
+  content?: string;
 }
 
 interface StatuteSearchResult {
@@ -30,6 +32,22 @@ interface StatuteSearchResult {
   count?: number;
   statutes: Statute[];
   source?: string;
+  error?: string;
+}
+
+interface LiveStatuteLookup {
+  success: boolean;
+  statute?: {
+    id: string;
+    citation: string;
+    jurisdiction: string;
+    title: string;
+    content: string;
+    effectiveDate?: string;
+    url?: string;
+    chapter?: string;
+    section: string;
+  };
   error?: string;
 }
 
@@ -94,7 +112,10 @@ export default function StatutesPage() {
   const [activeSearchQuery, setActiveSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState<string>('federal');
 
-  const federalUrl = activeSearchQuery 
+  const [citationInput, setCitationInput] = useState('');
+  const [activeCitation, setActiveCitation] = useState('');
+
+  const federalUrl = activeSearchQuery
     ? `/api/statutes/federal?q=${encodeURIComponent(activeSearchQuery)}`
     : '/api/statutes/federal';
 
@@ -113,8 +134,19 @@ export default function StatutesPage() {
     enabled: !!selectedState,
   });
 
+  const { data: citationResult, isLoading: loadingCitation } = useQuery<LiveStatuteLookup>({
+    queryKey: [`/api/openlaws/citation/${encodeURIComponent(activeCitation)}`],
+    enabled: !!activeCitation,
+  });
+
   const handleSearch = () => {
     setActiveSearchQuery(searchQuery);
+  };
+
+  const handleCitationLookup = () => {
+    if (citationInput.trim()) {
+      setActiveCitation(citationInput.trim());
+    }
   };
 
   const displayStatutes = activeTab === 'federal' ? federalStatutes : stateStatutes;
@@ -125,7 +157,7 @@ export default function StatutesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      
+
       <main className="flex-1 container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="heading-statutes">
@@ -155,9 +187,13 @@ export default function StatutesPage() {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full max-w-md grid-cols-2">
+          <TabsList className="grid w-full max-w-lg grid-cols-3">
             <TabsTrigger value="federal" data-testid="tab-federal">Federal Laws</TabsTrigger>
             <TabsTrigger value="state" data-testid="tab-state">State Laws</TabsTrigger>
+            <TabsTrigger value="lookup" data-testid="tab-lookup">
+              <Zap className="h-3.5 w-3.5 mr-1.5" />
+              Live Lookup
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="federal" className="mt-6">
@@ -233,6 +269,109 @@ export default function StatutesPage() {
               </>
             )}
           </TabsContent>
+
+          <TabsContent value="lookup" className="mt-6">
+            <div className="max-w-2xl">
+              <div className="mb-6">
+                <h2 className="text-xl font-semibold mb-2">Live Citation Lookup</h2>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Enter any statute citation to retrieve the full official text directly from OpenLaws. 
+                  Try formats like <span className="font-mono text-xs bg-muted px-1 py-0.5 rounded">Cal. Penal Code § 242</span>, <span className="font-mono text-xs bg-muted px-1 py-0.5 rounded">18 U.S.C. § 1343</span>, or <span className="font-mono text-xs bg-muted px-1 py-0.5 rounded">Tex. Penal Code § 22.01</span>.
+                </p>
+                <div className="flex gap-3">
+                  <Input
+                    placeholder="e.g. Cal. Penal Code § 242"
+                    value={citationInput}
+                    onChange={(e) => setCitationInput(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleCitationLookup()}
+                    data-testid="input-citation-lookup"
+                    className="flex-1"
+                  />
+                  <Button
+                    onClick={handleCitationLookup}
+                    disabled={!citationInput.trim()}
+                    data-testid="button-citation-lookup"
+                  >
+                    <Zap className="h-4 w-4 mr-2" />
+                    Look Up
+                  </Button>
+                </div>
+              </div>
+
+              {loadingCitation && (
+                <div className="flex items-center gap-3 py-8 text-muted-foreground">
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                  <span>Fetching from OpenLaws...</span>
+                </div>
+              )}
+
+              {citationResult && !loadingCitation && (
+                citationResult.success && citationResult.statute ? (
+                  <Card data-testid="card-citation-result">
+                    <CardHeader>
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1">
+                          <CardTitle className="text-xl mb-2">
+                            <BookOpen className="inline h-5 w-5 mr-2 text-primary" />
+                            {citationResult.statute.title}
+                          </CardTitle>
+                          <div className="flex flex-wrap gap-2 items-center">
+                            <Badge variant="secondary">{citationResult.statute.citation}</Badge>
+                            <Badge variant="outline">{citationResult.statute.jurisdiction}</Badge>
+                            {citationResult.statute.section && (
+                              <Badge variant="outline">§ {citationResult.statute.section}</Badge>
+                            )}
+                          </div>
+                        </div>
+                        {citationResult.statute.url && (
+                          <Button variant="ghost" size="sm" asChild>
+                            <a href={citationResult.statute.url} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      {citationResult.statute.content && (
+                        <div>
+                          <h4 className="font-semibold text-sm mb-2 flex items-center gap-1.5">
+                            <FileText className="h-4 w-4 text-primary" />
+                            Statute Text
+                          </h4>
+                          <div className="bg-muted/50 rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap font-mono border border-border/50">
+                            {citationResult.statute.content}
+                          </div>
+                        </div>
+                      )}
+                      {citationResult.statute.effectiveDate && (
+                        <p className="text-xs text-muted-foreground mt-3">
+                          Effective: {new Date(citationResult.statute.effectiveDate).toLocaleDateString()}
+                        </p>
+                      )}
+                      <p className="text-xs text-muted-foreground mt-2">
+                        Source: OpenLaws · {citationResult.statute.jurisdiction} Statutes
+                      </p>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  <Alert variant="destructive">
+                    <AlertCircle className="h-4 w-4" />
+                    <AlertDescription>
+                      No statute found for "{activeCitation}". Try adjusting the citation format or check that the citation is correct.
+                    </AlertDescription>
+                  </Alert>
+                )
+              )}
+
+              {!activeCitation && !loadingCitation && (
+                <div className="rounded-lg border border-dashed border-border p-8 text-center text-muted-foreground">
+                  <BookOpen className="h-10 w-10 mx-auto mb-3 opacity-40" />
+                  <p className="text-sm">Enter a citation above to retrieve live statute text from OpenLaws</p>
+                </div>
+              )}
+            </div>
+          </TabsContent>
         </Tabs>
       </main>
 
@@ -242,8 +381,26 @@ export default function StatutesPage() {
 }
 
 function StatuteCard({ statute }: { statute: Statute }) {
+  const [showFullText, setShowFullText] = useState(false);
+  const [fetchEnabled, setFetchEnabled] = useState(false);
+
   const citationKey = (statute.citation || 'unknown').replace(/[^a-z0-9]/gi, '-').toLowerCase();
-  
+
+  const { data: liveData, isLoading: loadingLive } = useQuery<LiveStatuteLookup>({
+    queryKey: [`/api/openlaws/citation/${encodeURIComponent(statute.citation || '')}`],
+    enabled: fetchEnabled && !!statute.citation,
+  });
+
+  const handleToggleFullText = () => {
+    if (!showFullText) {
+      setFetchEnabled(true);
+    }
+    setShowFullText(prev => !prev);
+  };
+
+  const liveContent = liveData?.statute?.content;
+  const hasContent = statute.content || liveContent;
+
   return (
     <Card data-testid={`card-statute-${citationKey}`}>
       <CardHeader>
@@ -288,15 +445,71 @@ function StatuteCard({ statute }: { statute: Statute }) {
           </div>
         )}
         {statute.penalties && (
-          <div className="mb-2">
+          <div className="mb-4">
             <h4 className="font-semibold text-sm mb-1">Penalties:</h4>
             <p className="text-sm text-muted-foreground">{statute.penalties}</p>
           </div>
         )}
         {statute.dateIssued && (
-          <div className="text-xs text-muted-foreground mt-2">
+          <div className="text-xs text-muted-foreground mb-3">
             Date Issued: {new Date(statute.dateIssued).toLocaleDateString()}
           </div>
+        )}
+
+        {statute.citation && (
+          <>
+            <Separator className="my-3" />
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleToggleFullText}
+              className="text-primary hover:text-primary/80 p-0 h-auto font-medium"
+              data-testid={`button-full-text-${citationKey}`}
+            >
+              {showFullText ? (
+                <>
+                  <ChevronUp className="h-4 w-4 mr-1" />
+                  Hide Full Text
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="h-4 w-4 mr-1" />
+                  Read Full Statute Text
+                </>
+              )}
+            </Button>
+
+            {showFullText && (
+              <div className="mt-3">
+                {loadingLive ? (
+                  <div className="flex items-center gap-2 py-4 text-muted-foreground text-sm">
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    <span>Fetching from OpenLaws...</span>
+                  </div>
+                ) : liveContent ? (
+                  <div>
+                    <div className="bg-muted/50 rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap border border-border/50 max-h-80 overflow-y-auto">
+                      {liveContent}
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-2">
+                      Live text via OpenLaws · {liveData?.statute?.jurisdiction} Statutes
+                    </p>
+                  </div>
+                ) : statute.content ? (
+                  <div className="bg-muted/50 rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap border border-border/50 max-h-80 overflow-y-auto">
+                    {statute.content}
+                  </div>
+                ) : liveData && !liveData.success ? (
+                  <p className="text-sm text-muted-foreground py-2">
+                    Full text not available for this citation. 
+                    {statute.url && (
+                      <> View it at <a href={statute.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">the official source</a>.</>
+                    )}
+                  </p>
+                ) : null}
+              </div>
+            )}
+          </>
         )}
       </CardContent>
     </Card>
