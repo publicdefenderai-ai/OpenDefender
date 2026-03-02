@@ -16,18 +16,18 @@ export function Footer() {
               <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
                 <Scale className="h-5 w-5 text-white" aria-hidden="true" />
               </div>
-              <span className="font-bold text-xl">Public Defender AI</span>
+              <span className="font-bold text-xl">OpenDefender</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
               {t('footer.tagline')}
             </p>
             <a
-              href="https://github.com/shahabasghar/PublicDefenderAI"
+              href="https://github.com/publicdefenderai-ai/OpenDefender"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
               data-testid="link-github"
-              aria-label="Public Defender AI on GitHub"
+              aria-label="OpenDefender on GitHub"
             >
               <Github className="h-5 w-5" aria-hidden="true" />
               <span>{t('footer.viewOnGithub')}</span>

@@ -340,7 +340,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zipCode}&country=us&format=json&limit=1&addressdetails=1`;
       const geocodeResponse = await fetch(geocodeUrl, {
         headers: {
-          'User-Agent': 'PublicDefenderAI/1.0'
+          'User-Agent': 'OpenDefender/1.0'
         }
       });
       
@@ -691,7 +691,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zip}&country=us&format=json&limit=1&addressdetails=1`;
       const geocodeResponse = await fetch(geocodeUrl, {
-        headers: { 'User-Agent': 'PublicDefenderAI/1.0' }
+        headers: { 'User-Agent': 'OpenDefender/1.0' }
       });
 
       if (!geocodeResponse.ok) {
@@ -742,7 +742,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true,
         results,
         count: results.length,
-        source: "Public Defender AI Legal Aid Database",
+        source: "OpenDefender Legal Aid Database",
         zipCode: zip,
         state: userState
       });
@@ -763,7 +763,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const geocodeUrl = `https://nominatim.openstreetmap.org/search?postalcode=${zip}&country=us&format=json&limit=1`;
       const geocodeResponse = await fetch(geocodeUrl, {
-        headers: { 'User-Agent': 'PublicDefenderAI/1.0' }
+        headers: { 'User-Agent': 'OpenDefender/1.0' }
       });
 
       if (!geocodeResponse.ok) {
@@ -779,7 +779,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const searchUrl = `https://nominatim.openstreetmap.org/search?q=courthouse&format=json&limit=10&addressdetails=1&viewbox=${parseFloat(lon)-0.5},${parseFloat(lat)+0.5},${parseFloat(lon)+0.5},${parseFloat(lat)-0.5}&bounded=0`;
       const searchResponse = await fetch(searchUrl, {
-        headers: { 'User-Agent': 'PublicDefenderAI/1.0' }
+        headers: { 'User-Agent': 'OpenDefender/1.0' }
       });
 
       const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {

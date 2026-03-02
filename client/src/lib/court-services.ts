@@ -38,7 +38,7 @@ export async function getZipCodeCoordinates(zipCode: string): Promise<{ lat: num
       `https://nominatim.openstreetmap.org/search?q=${zipCode}&format=json&countrycodes=us&addressdetails=1&limit=1`,
       {
         headers: {
-          'User-Agent': 'PublicDefenderAI/1.0 (legal-guidance-app)'
+          'User-Agent': 'OpenDefender/1.0 (legal-guidance-app)'
         }
       }
     );
@@ -92,7 +92,7 @@ export async function searchNearbyCourthouses(lat: number, lng: number, radiusMi
       `limit=20`,
       {
         headers: {
-          'User-Agent': 'PublicDefenderAI/1.0 (legal-guidance-app)'
+          'User-Agent': 'OpenDefender/1.0 (legal-guidance-app)'
         }
       }
     );
@@ -180,7 +180,7 @@ export async function searchCourthousesWithFederalData(zipCode: string): Promise
         'https://www.courtlistener.com/api/rest/v4/courts/?format=json&ordering=position',
         {
           headers: {
-            'User-Agent': 'PublicDefenderAI/1.0 (legal-guidance-app)',
+            'User-Agent': 'OpenDefender/1.0 (legal-guidance-app)',
             'Accept': 'application/json'
           }
         }

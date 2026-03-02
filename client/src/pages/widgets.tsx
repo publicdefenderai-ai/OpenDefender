@@ -44,7 +44,7 @@ export default function Widgets() {
   const [glossaryTheme, setGlossaryTheme] = useState<"light" | "dark">("light");
   const [glossaryLanguage, setGlossaryLanguage] = useState<"en" | "es">("en");
 
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://publicdefenderai.replit.app';
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://opendefender.net';
 
   const generateSearchEmbed = () => {
     const params = new URLSearchParams({
@@ -52,14 +52,14 @@ export default function Widgets() {
       lang: searchLanguage,
       compact: searchCompact.toString()
     }).toString();
-    return `<!-- Public Defender AI Search Widget -->
+    return `<!-- OpenDefender Search Widget -->
 <iframe 
   src="${baseUrl}/embed/search?${params}"
   width="400"
   height="300"
   frameborder="0"
   style="border: none; border-radius: 8px;"
-  title="Public Defender AI search widget"
+  title="OpenDefender search widget"
 ></iframe>`;
   };
 
@@ -70,14 +70,14 @@ export default function Widgets() {
       variant: rightsVariant
     }).toString();
     const height = rightsVariant === "mini" ? "60" : rightsVariant === "compact" ? "250" : "450";
-    return `<!-- Public Defender AI Rights Card -->
+    return `<!-- OpenDefender Rights Card -->
 <iframe 
   src="${baseUrl}/embed/rights?${params}"
   width="420"
   height="${height}"
   frameborder="0"
   style="border: none; border-radius: 8px;"
-  title="Public Defender AI Know Your Rights widget"
+  title="OpenDefender Know Your Rights widget"
 ></iframe>`;
   };
 
@@ -86,14 +86,14 @@ export default function Widgets() {
       theme: glossaryTheme,
       lang: glossaryLanguage
     }).toString();
-    return `<!-- Public Defender AI Glossary Widget -->
+    return `<!-- OpenDefender Glossary Widget -->
 <iframe 
   src="${baseUrl}/embed/glossary?${params}"
   width="420"
   height="450"
   frameborder="0"
   style="border: none; border-radius: 8px;"
-  title="Public Defender AI legal glossary widget"
+  title="OpenDefender legal glossary widget"
 ></iframe>`;
   };
 
@@ -114,7 +114,7 @@ export default function Widgets() {
           </div>
           
           <p className="text-lg text-muted-foreground max-w-3xl">
-            Embed Public Defender AI widgets on your website to provide legal resources to your visitors. 
+            Embed OpenDefender widgets on your website to provide legal resources to your visitors.
             Customize appearance, language, and more.
           </p>
         </div>

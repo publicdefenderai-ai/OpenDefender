@@ -126,7 +126,7 @@ export function EmbeddableSearch({
 
       <div className={`mt-3 pt-2 border-t ${borderClass} flex items-center justify-between`}>
         <span className={`text-xs ${mutedClass}`}>
-          Powered by Public Defender AI
+          Powered by OpenDefender
         </span>
         <a
           href={`${baseUrl}/`}

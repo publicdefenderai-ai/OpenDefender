@@ -1,10 +1,10 @@
-# Public Defender AI
+# OpenDefender
 
 **Expanding access to justice through AI-powered legal guidance and resources.**
 
-Public Defender AI is a free, open-source platform that helps people understand and navigate the U.S. criminal justice and immigration systems. Think of it as a public defender in your pocket.
+OpenDefender is a free, open-source platform that helps people understand and navigate the U.S. criminal justice and immigration systems. Think of it as a public defender in your pocket.
 
-🌐 **Live Platform**: [Visit Public Defender AI](https://justice-guard-sa.replit.app/)
+🌐 **Live Platform**: [Visit OpenDefender](https://justice-guard-sa.replit.app/)
 
 ---
 
@@ -88,8 +88,8 @@ To run this application with full functionality, you'll need to obtain your own 
 
 ```bash
 # Clone the repository
-git clone https://github.com/shahabasghar/PublicDefenderAI.git
-cd PublicDefenderAI
+git clone https://github.com/publicdefenderai-ai/OpenDefender.git
+cd OpenDefender
 
 # Install dependencies
 npm install

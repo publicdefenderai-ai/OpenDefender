@@ -19,7 +19,7 @@ const rightsContent = {
     ],
     emergency: "If arrested, ask for a lawyer immediately",
     cta: "Learn more about your rights",
-    powered: "Powered by Public Defender AI"
+    powered: "Powered by OpenDefender"
   },
   es: {
     title: "Conozca Sus Derechos",
@@ -32,7 +32,7 @@ const rightsContent = {
     ],
     emergency: "Si lo arrestan, pida un abogado inmediatamente",
     cta: "Aprenda más sobre sus derechos",
-    powered: "Desarrollado por Public Defender AI"
+    powered: "Desarrollado por OpenDefender"
   }
 };
 

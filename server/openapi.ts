@@ -1,10 +1,10 @@
 export const openApiSpec = {
   openapi: "3.0.3",
   info: {
-    title: "Public Defender AI - Open API",
+    title: "OpenDefender — Open API",
     description: `
 ## Overview
-Public Defender AI provides free, open access to legal information and resources. This API enables third-party developers, legal aid organizations, and civil rights groups to integrate our datasets into their own applications.
+OpenDefender provides free, open access to legal information and resources. This API enables third-party developers, legal aid organizations, and civil rights groups to integrate our datasets into their own applications.
 
 ## Rate Limits
 - **Search endpoints**: 30 requests per minute
@@ -13,7 +13,7 @@ Public Defender AI provides free, open access to legal information and resources
 
 ## Data Attribution
 When using this data, please include attribution:
-> Data provided by Public Defender AI (publicdefenderai.org)
+> Data provided by OpenDefender (opendefender.net)
 
 ## Security Notes
 - All endpoints are read-only (GET requests only)
@@ -30,8 +30,8 @@ For integration support or to report issues, please open an issue on our GitHub 
       url: "https://opensource.org/licenses/MIT"
     },
     contact: {
-      name: "Public Defender AI",
-      url: "https://github.com/publicdefenderai"
+      name: "OpenDefender",
+      url: "https://github.com/publicdefenderai-ai/OpenDefender"
     }
   },
   servers: [

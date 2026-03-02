@@ -278,7 +278,7 @@ export default function ApiDocs() {
             </div>
             <div>
               <h1 className="text-3xl font-bold">API Documentation</h1>
-              <p className="text-muted-foreground">Public Defender AI - Open API v1</p>
+              <p className="text-muted-foreground">OpenDefender — Open API v1</p>
             </div>
           </div>
           
@@ -307,7 +307,7 @@ export default function ApiDocs() {
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href="https://github.com/publicdefenderai" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/publicdefenderai-ai/OpenDefender" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-2" />
                 GitHub Repository
               </a>
@@ -434,21 +434,21 @@ export default function ApiDocs() {
               <div>
                 <h4 className="font-semibold text-sm mb-2">1. Search for legal content</h4>
                 <div className="bg-slate-900 text-slate-100 rounded-lg p-3">
-                  <code className="text-sm">curl "https://publicdefenderai.replit.app/api/v1/search?q=DUI&lang=en"</code>
+                  <code className="text-sm">curl "https://opendefender.net/api/v1/search?q=DUI&lang=en"</code>
                 </div>
               </div>
               
               <div>
                 <h4 className="font-semibold text-sm mb-2">2. Get charges for a state</h4>
                 <div className="bg-slate-900 text-slate-100 rounded-lg p-3">
-                  <code className="text-sm">curl "https://publicdefenderai.replit.app/api/v1/charges?jurisdiction=CA&limit=10"</code>
+                  <code className="text-sm">curl "https://opendefender.net/api/v1/charges?jurisdiction=CA&limit=10"</code>
                 </div>
               </div>
               
               <div>
                 <h4 className="font-semibold text-sm mb-2">3. Export data as CSV</h4>
                 <div className="bg-slate-900 text-slate-100 rounded-lg p-3">
-                  <code className="text-sm">curl "https://publicdefenderai.replit.app/api/v1/export/charges?format=csv" -o charges.csv</code>
+                  <code className="text-sm">curl "https://opendefender.net/api/v1/export/charges?format=csv" -o charges.csv</code>
                 </div>
               </div>
             </div>
@@ -465,7 +465,7 @@ export default function ApiDocs() {
             </p>
             <div className="bg-muted rounded-lg p-4 border-l-4 border-primary">
               <p className="text-sm font-medium">
-                Data provided by <a href="https://publicdefenderai.replit.app" className="text-primary hover:underline">Public Defender AI</a>
+                Data provided by <a href="https://opendefender.net" className="text-primary hover:underline">OpenDefender</a>
               </p>
             </div>
           </CardContent>

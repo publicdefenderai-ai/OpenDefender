@@ -1,4 +1,4 @@
-# Public Defender AI - Legal Guidance Platform
+# OpenDefender - Legal Guidance Platform
 
 ---
 
@@ -23,7 +23,7 @@ This rule exists because the agent repeatedly deviated to charge validation work
 ---
 
 ## Overview
-Public Defender AI is a web application that democratizes access to legal information by providing AI-powered legal guidance, case law search, and connections to legal aid organizations. Its core purpose is to simplify complex legal concepts for a broad audience, ensuring user privacy through data ephemerality. The platform aims to make legal support more accessible and understandable for everyone.
+OpenDefender is a web application that democratizes access to legal information by providing AI-powered legal guidance, case law search, and connections to legal aid organizations. Its core purpose is to simplify complex legal concepts for a broad audience, ensuring user privacy through data ephemerality. The platform aims to make legal support more accessible and understandable for everyone.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.

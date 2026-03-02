@@ -21,7 +21,7 @@ export default function Disclaimers() {
             Legal Notice & Disclaimers
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Important information about using PublicDefenderAI
+            Important information about using OpenDefender
           </p>
           <p className="text-sm text-white/60 mt-2">
             Last updated: February 12, 2026
@@ -41,7 +41,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI is a free, open source tool that helps people understand and navigate the U.S. criminal justice and immigration systems. Think of it as a "public defender in your pocket." You're welcome to use it, share it, change it, or build on it however you'd like.
+                  OpenDefender is a free, open source tool that helps people understand and navigate the U.S. criminal justice and immigration systems. Think of it as a "public defender in your pocket." You're welcome to use it, share it, change it, or build on it however you'd like.
                 </p>
               </CardContent>
             </Card>
@@ -58,7 +58,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI is not the same as getting advice from a lawyer and does not establish an attorney-client relationship. We provide general information only. If you have a specific legal problem, it's best to talk to a qualified attorney.
+                  OpenDefender is not the same as getting advice from a lawyer and does not establish an attorney-client relationship. We provide general information only. If you have a specific legal problem, it's best to talk to a qualified attorney.
                 </p>
               </CardContent>
             </Card>
@@ -92,7 +92,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  We try to keep PublicDefenderAI working well, but it might not always be updated or available. Things can change without notice.
+                  We try to keep OpenDefender working well, but it might not always be updated or available. Things can change without notice.
                 </p>
               </CardContent>
             </Card>
@@ -109,7 +109,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Use PublicDefenderAI at your own risk, and we are not responsible if something doesn't go as expected, or for any other problems or losses you might have from using this site.
+                  Use OpenDefender at your own risk, and we are not responsible if something doesn't go as expected, or for any other problems or losses you might have from using this site.
                 </p>
               </CardContent>
             </Card>
@@ -126,7 +126,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI uses artificial intelligence to help generate legal guidance. Specifically, we use <strong className="text-foreground">Anthropic's Claude Sonnet 4</strong>, a large language model, to analyze your situation and provide information.
+                  OpenDefender uses artificial intelligence to help generate legal guidance. Specifically, we use <strong className="text-foreground">Anthropic's Claude Sonnet 4</strong>, a large language model, to analyze your situation and provide information.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   <strong className="text-foreground">Important:</strong> AI-generated guidance is not a substitute for advice from a licensed attorney. While we verify responses against legal databases, AI can make mistakes. Always consult with a qualified lawyer for legal decisions.
@@ -280,7 +280,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI uses a dual-license structure to maximize both code reuse and access to justice:
+                  OpenDefender uses a dual-license structure to maximize both code reuse and access to justice:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                   <li><strong className="text-foreground">Code (MIT License):</strong> All source code is open source under the MIT License, allowing free use, modification, and distribution with attribution.</li>
@@ -289,7 +289,7 @@ export default function Disclaimers() {
                 <p className="text-muted-foreground leading-relaxed">
                   The public repository is available{" "}
                   <a
-                    href="https://github.com/shahabasghar/PublicDefenderAI"
+                    href="https://github.com/publicdefenderai-ai/OpenDefender"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"

@@ -290,7 +290,7 @@ export default function PrivacyPolicy() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  PublicDefenderAI uses Anthropic's Claude API (not the consumer Claude.ai product). Key differences:
+                  OpenDefender uses Anthropic's Claude API (not the consumer Claude.ai product). Key differences:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2">
                   <li><strong className="text-foreground">No training:</strong> Your data is not used to train Anthropic's AI models</li>

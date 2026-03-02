@@ -22,7 +22,7 @@ i18n
       en: {
         translation: {
           "header": {
-            "title": "Public Defender AI",
+            "title": "OpenDefender",
             "subtitle": "Free Legal Guidance & Rights Information",
             "menu": {
               "getHelp": "Get Help",
@@ -96,7 +96,7 @@ i18n
             },
             "whatWeDo": {
               "title": "What We Do",
-              "subtitle": "Public Defender AI helps individuals understand their legal rights and navigate the criminal justice system.",
+              "subtitle": "OpenDefender helps individuals understand their legal rights and navigate the criminal justice system.",
               "card1Title": "AI Legal Guidance",
               "card1Desc": "Get personalized legal information based on your specific situation",
               "card2Title": "Rights Information",
@@ -198,7 +198,7 @@ i18n
             "viewOnGithub": "View on GitHub",
             "allResources": "All Resources",
             "privacyNotice": "Privacy First: We do not store your personal data — all input deleted after session.",
-            "copyright": "© 2026 Public Defender AI. Not a substitute for professional legal advice."
+            "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice."
           },
           "beta": {
             "label": "Beta",
@@ -268,7 +268,7 @@ i18n
               "title": "Note:",
               "content": "These resources are for general information only and do not constitute legal advice. Every situation is different. If you have specific questions, please consult with a licensed attorney."
             },
-            "disclaimer": "This information is for general educational purposes only and does not constitute legal, financial, medical, or professional advice. Resources listed are third-party organizations not affiliated with PublicDefenderAI. We do not guarantee the accuracy or availability of external resources. Always verify information and consult appropriate professionals for your specific situation.",
+            "disclaimer": "This information is for general educational purposes only and does not constitute legal, financial, medical, or professional advice. Resources listed are third-party organizations not affiliated with OpenDefender. We do not guarantee the accuracy or availability of external resources. Always verify information and consult appropriate professionals for your specific situation.",
             "relatedLinks": {
               "employment": "Employment Support",
               "finances": "Financial Help",
@@ -3798,7 +3798,7 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Mission Statement",
-              "subtitle": "Public Defender AI is a public good dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and CC0 (Creative Commons Zero) for documentation, ensuring it remains free and accessible to all who need it."
+              "subtitle": "OpenDefender is a public good dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and CC0 (Creative Commons Zero) for documentation, ensuring it remains free and accessible to all who need it."
             },
             "goals": {
               "title": "Our Primary Goals",
@@ -4964,7 +4964,7 @@ i18n
               "title": "Nota:",
               "content": "Estos recursos son solo para información general y no constituyen asesoramiento legal. Cada situación es diferente. Si tiene preguntas específicas, consulte con un abogado licenciado."
             },
-            "disclaimer": "Esta información es solo para propósitos educativos generales y no constituye asesoramiento legal, financiero, médico o profesional. Los recursos listados son organizaciones de terceros no afiliadas con PublicDefenderAI. No garantizamos la exactitud o disponibilidad de recursos externos. Siempre verifique la información y consulte con los profesionales apropiados para su situación específica.",
+            "disclaimer": "Esta información es solo para propósitos educativos generales y no constituye asesoramiento legal, financiero, médico o profesional. Los recursos listados son organizaciones de terceros no afiliadas con OpenDefender. No garantizamos la exactitud o disponibilidad de recursos externos. Siempre verifique la información y consulte con los profesionales apropiados para su situación específica.",
             "relatedLinks": {
               "employment": "Apoyo Laboral",
               "finances": "Ayuda Financiera",
@@ -9415,7 +9415,7 @@ i18n
       zh: {
         translation: {
           "header": {
-            "title": "Public Defender AI",
+            "title": "OpenDefender",
             "subtitle": "免费法律指导与权利信息",
             "menu": {
               "getHelp": "获取帮助",
@@ -9489,7 +9489,7 @@ i18n
             },
             "whatWeDo": {
               "title": "我们做什么",
-              "subtitle": "Public Defender AI帮助人们了解自己的法律权利，并在刑事司法系统中获得指引。",
+              "subtitle": "OpenDefender帮助人们了解自己的法律权利，并在刑事司法系统中获得指引。",
               "card1Title": "AI法律指导",
               "card1Desc": "根据你的具体情况获取个性化的法律信息",
               "card2Title": "权利信息",
@@ -9591,7 +9591,7 @@ i18n
             "viewOnGithub": "在 GitHub 上查看",
             "allResources": "所有资源",
             "privacyNotice": "隐私优先：我们不存储你的个人数据——所有输入在会话结束后删除。",
-            "copyright": "© 2026 Public Defender AI。不能替代专业法律建议。"
+            "copyright": "© 2026 OpenDefender。不能替代专业法律建议。"
           },
           "beta": {
             "label": "Beta",
@@ -12011,7 +12011,7 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "使命宣言",
-              "subtitle": "Public Defender AI 是一项公益服务，致力于利用人工智能、法律数据和自动化技术，为美国境内被指控犯罪且可能无法立即获得法律顾问的个人提供及时、准确、便捷的帮助。本平台基于开源原则构建，代码采用 MIT 许可证，文档采用 CC0（知识共享零权利）许可证，确保所有需要帮助的人都能免费使用。"
+              "subtitle": "OpenDefender 是一项公益服务，致力于利用人工智能、法律数据和自动化技术，为美国境内被指控犯罪且可能无法立即获得法律顾问的个人提供及时、准确、便捷的帮助。本平台基于开源原则构建，代码采用 MIT 许可证，文档采用 CC0（知识共享零权利）许可证，确保所有需要帮助的人都能免费使用。"
             },
             "goals": {
               "title": "我们的主要目标",

@@ -138,7 +138,7 @@ export function GlossaryWidget({
 
       <div className={`px-4 py-3 border-t ${borderClass} ${isDark ? "bg-gray-800" : "bg-gray-50"} flex items-center justify-between`}>
         <span className={`text-xs ${mutedClass}`}>
-          Powered by Public Defender AI
+          Powered by OpenDefender
         </span>
         <a
           href={`${baseUrl}/legal-glossary`}
