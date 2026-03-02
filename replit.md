@@ -6,6 +6,9 @@ Public Defender AI is a web application that democratizes access to legal inform
 ## User Preferences
 Preferred communication style: Simple, everyday language.
 
+## Standing Rules — DO NOT VIOLATE
+- **NEVER run charge validation scripts automatically.** The scripts `scripts/validate-charge-statute-consistency.ts`, `scripts/fix-charge-codes.ts`, `scripts/verify-new-charge-codes.ts`, `scripts/verify-remaining-jurisdictions.ts`, `scripts/spot-check-links.ts`, and `scripts/add-new-statute-seeds.ts` are **manual-only tools**. They must ONLY be run when the user explicitly asks for validation or statute code verification. Running them without being asked wastes significant platform resources.
+
 ## System Architecture
 
 ### UI/UX Decisions
