@@ -479,9 +479,9 @@ export function buildSearchIndex(): void {
   const sitePages = [
     {
       id: 'home',
-      title: 'Public Defender AI - Legal Guidance',
-      titleEs: 'Defensor Público AI - Orientación Legal',
-      titleZh: 'Public Defender AI - 法律指导',
+      title: 'OpenDefender - Legal Guidance',
+      titleEs: 'OpenDefender - Orientación Legal',
+      titleZh: 'OpenDefender - 法律指导',
       content: 'Free legal guidance and rights information. AI-powered assistance for criminal defense. Know your rights. Find legal resources.',
       tags: ['home', 'legal aid', 'public defender', 'rights'],
       aliases: ['main', 'start'],
@@ -522,7 +522,7 @@ export function buildSearchIndex(): void {
       title: 'Our Mission',
       titleEs: 'Nuestra Misión',
       titleZh: '我们的使命',
-      content: 'Public Defender AI mission statement. Democratizing access to legal information. Helping those who cannot afford attorneys.',
+      content: 'OpenDefender mission statement. Democratizing access to legal information. Helping those who cannot afford attorneys.',
       tags: ['mission', 'about', 'purpose'],
       aliases: ['about us', 'who we are'],
       url: '/mission-statement'
@@ -562,7 +562,7 @@ export function buildSearchIndex(): void {
       title: 'How to Use This App',
       titleEs: 'Cómo Usar Esta Aplicación',
       titleZh: '如何使用本应用',
-      content: 'Guide to using Public Defender AI. Getting legal guidance. Understanding your case. Preparing for court.',
+      content: 'Guide to using OpenDefender. Getting legal guidance. Understanding your case. Preparing for court.',
       tags: ['guide', 'tutorial', 'help', 'instructions'],
       aliases: ['getting started', 'user guide'],
       url: '/how-to'
@@ -862,7 +862,7 @@ export function buildSearchIndex(): void {
       title: 'Privacy Policy',
       titleEs: 'Política de Privacidad',
       titleZh: '隐私政策',
-      content: 'Privacy policy for Public Defender AI. How we protect your data. Data ephemerality. No personal information stored. Session-based privacy.',
+      content: 'Privacy policy for OpenDefender. How we protect your data. Data ephemerality. No personal information stored. Session-based privacy.',
       tags: ['privacy', 'policy', 'data', 'security'],
       aliases: ['data privacy', 'privacy statement'],
       url: '/privacy-policy'
@@ -872,7 +872,7 @@ export function buildSearchIndex(): void {
       title: 'Legal Disclaimers',
       titleEs: 'Descargos de Responsabilidad',
       titleZh: '法律免责声明',
-      content: 'Legal disclaimers for Public Defender AI. Not a substitute for legal counsel. Educational purposes only. Limitation of liability.',
+      content: 'Legal disclaimers for OpenDefender. Not a substitute for legal counsel. Educational purposes only. Limitation of liability.',
       tags: ['disclaimer', 'legal notice', 'terms'],
       aliases: ['terms of use', 'legal notice', 'not legal advice'],
       url: '/disclaimers'

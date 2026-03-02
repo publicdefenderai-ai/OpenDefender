@@ -26,7 +26,7 @@ export default function TechDocs() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Technical Documentation</h1>
           <p className="text-lg text-muted-foreground">
-            Resources for developers and organizations integrating with Public Defender AI
+            Resources for developers and organizations integrating with OpenDefender
           </p>
         </div>
 

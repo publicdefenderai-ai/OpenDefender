@@ -60,7 +60,7 @@ export default function CourtLogisticsSupport() {
       free: true,
     },
     {
-      name: "Court Locator (PublicDefenderAI)",
+      name: "Court Locator (OpenDefender)",
       description: t('support.courtLogistics.resources.courtLocator.description'),
       url: "/court-locator",
       type: "online",

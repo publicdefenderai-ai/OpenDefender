@@ -190,7 +190,7 @@ function buildSystemPrompt(language: 'en' | 'es', summaryType: string): string {
     evidence: 'This document may be used as evidence. Identify what it proves or disproves and its relevance.',
   };
 
-  return `You are a legal document analyst for Public Defender AI. Your role is to help people understand legal documents they have received in simple, clear language (6th-8th grade reading level).
+  return `You are a legal document analyst for OpenDefender. Your role is to help people understand legal documents they have received in simple, clear language (6th-8th grade reading level).
 
 ${languageInstruction}
 

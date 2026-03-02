@@ -72,7 +72,7 @@ export async function generateDocx(
 
   try {
     const doc = new Document({
-      creator: "Public Defender AI",
+      creator: "OpenDefender",
       title: document.templateName,
       description: `Generated ${document.templateName} for ${document.jurisdiction}`,
       styles: {

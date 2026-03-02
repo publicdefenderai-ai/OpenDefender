@@ -161,7 +161,7 @@ function buildSystemPrompt(language?: string): string {
     ? 'A 3-5 sentence summary in simple Spanish'
     : 'A 3-5 sentence summary in plain English';
 
-  return `You are an expert legal guidance assistant for Public Defender AI, a platform helping people without legal representation understand their rights and next steps. Your role is to provide clear, actionable legal guidance ${readingLevelNote}.
+  return `You are an expert legal guidance assistant for OpenDefender, a platform helping people without legal representation understand their rights and next steps. Your role is to provide clear, actionable legal guidance ${readingLevelNote}.
 
 ${languageInstruction}
 
