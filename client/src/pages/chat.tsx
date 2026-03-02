@@ -1027,6 +1027,7 @@ export default function ChatPage() {
                 </Button>
               )}
               <h1 className="text-sm font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
+              <span className="text-[10px] font-semibold tracking-wide uppercase bg-muted text-muted-foreground px-1.5 py-0.5 rounded select-none">AI</span>
             </div>
             
             <div className="flex items-center gap-1">

@@ -4197,7 +4197,7 @@ i18n
             "none": "None selected"
           },
           "messages": {
-            "welcome": "Hi! I'm here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
+            "welcome": "Hi! I'm an AI assistant here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
             "emergencyAdviceFull": "🚨 **If you're being arrested or detained right now:**\n\n**✅ Stay Calm**\nDo not resist, run, or argue. Keep your hands visible. Resisting can lead to additional charges, even if the original arrest is later found to be unlawful.\n\n**🔇 Exercise Your Right to Remain Silent**\nSay clearly: \"I am exercising my right to remain silent.\"\nYou do NOT have to answer questions about where you're going, what you're doing, or where you live.\n\n**⚖️ Request an Attorney**\nSay: \"I want a lawyer.\" Police must stop questioning you once you ask for an attorney.\nIf you can't afford one, you can request a public defender at your first court appearance.\n\n**🚫 Do Not Consent to Searches**\nSay: \"I do not consent to any searches.\"\nPolice may search anyway, but stating this protects your rights for later.\n\n**📝 Remember These Details**\nNote the officers' badge numbers, patrol car numbers, and any witness information. This can help your case later.\n\n---\n**What would you like to do next?**",
             "mainMenu": "What can I help you with?",
             "stateQuestion": "Let's get you personalized guidance. First, what state is your case in?",
@@ -8893,7 +8893,7 @@ i18n
             "none": "Ninguna seleccionada"
           },
           "messages": {
-            "welcome": "¡Hola! Estoy aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?",
+            "welcome": "¡Hola! Soy un asistente de inteligencia artificial aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?",
             "emergencyAdviceFull": "🚨 **Si está siendo arrestado o detenido ahora mismo:**\n\n**✅ Mantenga la Calma**\nNo resista, corra ni discuta. Mantenga las manos visibles. Resistirse puede resultar en cargos adicionales, incluso si el arresto original luego se considera ilegal.\n\n**🔇 Ejerza su Derecho a Permanecer en Silencio**\nDiga claramente: \"Estoy ejerciendo mi derecho a permanecer en silencio.\"\nNO tiene que responder preguntas sobre adónde va, qué está haciendo o dónde vive.\n\n**⚖️ Solicite un Abogado**\nDiga: \"Quiero un abogado.\" La policía debe dejar de interrogarlo una vez que pida un abogado.\nSi no puede pagar uno, puede solicitar un defensor público en su primera comparecencia ante el tribunal.\n\n**🚫 No Consienta Registros**\nDiga: \"No consiento ningún registro.\"\nLa policía puede registrar de todos modos, pero decir esto protege sus derechos para después.\n\n**📝 Recuerde Estos Detalles**\nAnote los números de placa de los oficiales, números de patrulla y cualquier información de testigos. Esto puede ayudar su caso después.\n\n---\n**¿Qué le gustaría hacer ahora?**",
             "mainMenu": "¿En qué puedo ayudarle?",
             "stateQuestion": "Vamos a darle orientación personalizada. Primero, ¿en qué estado está su caso?",
@@ -12394,7 +12394,7 @@ i18n
               "detailsDesc": "描述发生了什么以获取个性化指导"
             },
             "messages": {
-              "welcome": "您好！我可以帮您了解您的法律状况。我们的对话内容是保密的，会在您的会话结束后被删除。\n\n您现在是否处于紧急情况？",
+              "welcome": "您好！我是一个人工智能助手，可以帮您了解您的法律状况。我们的对话内容是保密的，会在您的会话结束后被删除。\n\n您现在是否处于紧急情况？",
               "emergencyAdviceFull": "🚨 **如果您现在正在被逮捕或拘留：**\n\n**✅ 保持冷静**\n不要抗拒、逃跑或争辩。保持双手可见。抗拒可能导致额外指控，即使原来的逮捕后来被认定为不合法。\n\n**🔇 行使沉默权**\n清楚地说：「我行使我的沉默权。「\n您不需要回答关于您要去哪里、在做什么或住在哪里的问题。\n\n**⚖️ 要求律师**\n说：「我要找律师。「一旦您要求律师，警察必须停止对您的讯问。\n如果您负担不起律师费，可以在首次出庭时要求公设辩护人。\n\n**🚫 不要同意搜查**\n说：「我不同意任何搜查。「\n警察可能仍会搜查，但表明态度可以在以后保护您的权利。\n\n**📝 记住这些细节**\n记下警官的警号、巡逻车号和任何目击者信息。这些以后可能对您的案件有帮助。\n\n---\n**您接下来想做什么？**",
               "mainMenu": "有什么我可以帮助您的？",
               "stateQuestion": "让我为您提供个性化的指导。首先，您的案件在哪个州？",
