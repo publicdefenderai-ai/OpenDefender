@@ -74021,7 +74021,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ma-defective-vehicle-equipment',
     name: 'Defective Vehicle Equipment / Broken Taillight',
-    code: '90-7',
+    code: '90-7A',
     jurisdiction: 'MA',
     category: 'infraction',
     description: 'Operating a vehicle with defective equipment such as broken taillights, headlights, turn signals, or other required safety equipment under MA law',

@@ -53,6 +53,13 @@ export default function CourtLogisticsSupport() {
 
   const externalResources: ExternalResource[] = [
     {
+      name: "Partners for Justice",
+      description: "A national nonprofit that embeds trained, non-attorney Advocates inside public defender offices to help clients navigate their cases and connect to social services — housing, employment, health, and more. If your public defender's office partners with PFJ, ask them about wraparound support. Operating in 20+ states. (Source: partnersforjustice.org)",
+      url: "https://www.partnersforjustice.org/",
+      type: "national",
+      free: true,
+    },
+    {
       name: "Court Locator (PublicDefenderAI)",
       description: t('support.courtLogistics.resources.courtLocator.description'),
       url: "/court-locator",

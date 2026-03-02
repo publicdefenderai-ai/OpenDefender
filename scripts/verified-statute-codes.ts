@@ -540,7 +540,7 @@ export const verifiedStatuteCodes: ChargeCodeMap = {
     FL: { code: '316.234' }, GA: { code: '40-8-20' }, HI: { code: '291-31' }, ID: { code: '49-906' },
     IL: { code: '625-5/12-201' }, IN: { code: '9-19-6-3' }, IA: { code: '321.387' }, KS: { code: '8-1701' },
     KY: { code: '189.020' }, LA: { code: '32:53' }, ME: { code: '29-A-1903' }, MD: { code: '22-201' },
-    MA: { code: '90-7' }, MI: { code: '257.686' }, MN: { code: '169.48' }, MS: { code: '63-7-1' },
+    MA: { code: '90-7A' }, MI: { code: '257.686' }, MN: { code: '169.48' }, MS: { code: '63-7-1' },
     MO: { code: '307.010' }, MT: { code: '61-9-201' }, NE: { code: '60-6,219' }, NV: { code: '484D.100' },
     NH: { code: '266:22' }, NJ: { code: '39:3-61' }, NM: { code: '66-3-801' }, NY: { code: '375' },
     NC: { code: '20-129' }, ND: { code: '39-21-01' }, OH: { code: '4513.01' }, OK: { code: '47-12-201' },

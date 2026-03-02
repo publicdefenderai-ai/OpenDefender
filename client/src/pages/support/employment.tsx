@@ -352,6 +352,13 @@ export default function EmploymentSupport() {
 
   const externalResources: ExternalResource[] = [
     {
+      name: "Partners for Justice",
+      description: "A national nonprofit working inside public defender offices to connect clients to employment, housing, health, and other services. Their trained Advocates help clients access job support as part of holistic case representation. Ask your public defender if their office works with PFJ. Operating in 20+ states. (Source: partnersforjustice.org)",
+      url: "https://www.partnersforjustice.org/",
+      type: "national",
+      free: true,
+    },
+    {
       name: "U.S. Equal Employment Opportunity Commission (EEOC)",
       description: t('support.employment.resources.eeoc.description'),
       url: "https://www.eeoc.gov/",
