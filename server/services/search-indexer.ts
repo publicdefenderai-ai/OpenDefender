@@ -18,17 +18,30 @@ function normalizeText(text: string): string {
     .trim();
 }
 
+// Common words that add noise if scored individually
+const STOP_WORDS = new Set(['the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'can', 'her', 'was', 'one', 'our', 'out', 'day', 'get', 'has', 'him', 'his', 'how', 'its', 'may', 'new', 'now', 'own', 'say', 'she', 'two', 'who', 'did', 'use', 'way', 'had', 'let', 'put', 'set', 'too', 'any', 'few', 'far', 'off', 'old', 'why', 'ask', 'men', 'ran', 'run', 'see', 'try', 'yes', 'yet', 'ago', 'did', 'due', 'via', 'per', 'etc']);
+
 function expandSynonyms(query: string): string[] {
   const normalized = normalizeText(query);
   const words = normalized.split(' ');
   const expanded: string[] = [normalized];
   const seen = new Set<string>([normalized]);
-  
+
+  // For multi-word queries, also score meaningful individual words so that
+  // e.g. "phone search" finds both "phone" and "search" documents separately
   for (const word of words) {
-    const synonyms = LEGAL_SYNONYMS[word];
+    if (word.length >= 4 && !STOP_WORDS.has(word) && !seen.has(word)) {
+      expanded.push(word);
+      seen.add(word);
+    }
+  }
+
+  // Expand synonyms for each word and for the full phrase
+  for (const term of [...words, normalized]) {
+    const synonyms = LEGAL_SYNONYMS[term];
     if (synonyms) {
       for (const syn of synonyms) {
-        const replacement = normalized.replace(word, syn);
+        const replacement = normalized.replace(term, syn);
         if (!seen.has(replacement)) {
           expanded.push(replacement);
           seen.add(replacement);
@@ -40,7 +53,7 @@ function expandSynonyms(query: string): string[] {
       }
     }
   }
-  
+
   return expanded;
 }
 
@@ -235,13 +248,58 @@ export function buildSearchIndex(): void {
   devLog('search', `Indexed ${proceedingGroups.size} mock QA proceeding types`);
 
   const rightsPages = [
-    { id: 'miranda', title: 'Miranda Rights', titleEs: 'Derechos Miranda', titleZh: '米兰达权利', content: 'Your right to remain silent. Anything you say can be used against you. Right to an attorney. If you cannot afford one, one will be provided.', url: '/rights-info#miranda' },
-    { id: 'search-seizure', title: 'Search and Seizure Rights', titleEs: 'Derechos de Registro e Incautación', titleZh: '搜查与扣押权利', content: 'Fourth Amendment protections against unreasonable searches. When police can search. Your right to refuse consent.', url: '/search-seizure' },
-    { id: 'attorney', title: 'Right to an Attorney', titleEs: 'Derecho a un Abogado', titleZh: '获得律师的权利', content: 'Sixth Amendment right to counsel. Public defender eligibility. When to request an attorney.', url: '/rights-info#attorney' },
-    { id: 'speedy-trial', title: 'Right to a Speedy Trial', titleEs: 'Derecho a un Juicio Rápido', titleZh: '快速审判的权利', content: 'Sixth Amendment speedy trial rights. Time limits for prosecution.', url: '/rights-info#speedy-trial' },
-    { id: 'jury', title: 'Right to a Jury Trial', titleEs: 'Derecho a un Juicio con Jurado', titleZh: '陪审团审判的权利', content: 'Sixth Amendment right to trial by jury. When jury trial is available.', url: '/rights-info#jury' },
+    {
+      id: 'miranda',
+      title: 'Miranda Rights',
+      titleEs: 'Derechos Miranda',
+      titleZh: '米兰达权利',
+      content: 'Your right to remain silent — anything you say can and will be used against you in a court of law. Right to an attorney. If you cannot afford an attorney, one will be appointed for you. Invoke your right to remain silent by clearly saying "I am invoking my right to remain silent." Do not answer police questions without an attorney. Miranda warning must be given before custodial interrogation. Fifth Amendment protection against self-incrimination. Sixth Amendment right to counsel.',
+      tags: ['miranda', 'right to remain silent', 'fifth amendment', 'sixth amendment', 'attorney', 'custodial interrogation', 'police questioning'],
+      aliases: ['miranda rights', 'miranda warning', 'right to remain silent', 'plead the fifth', 'remain silent', 'do not talk to police', 'police questioning rights'],
+      url: '/rights-info#miranda',
+    },
+    {
+      id: 'search-seizure',
+      title: 'Search and Seizure Rights',
+      titleEs: 'Derechos de Registro e Incautación',
+      titleZh: '搜查与扣押权利',
+      content: 'Fourth Amendment protections against unreasonable searches and seizures. Police generally need a warrant signed by a judge to search your home, your phone, or your belongings. You have the right to refuse consent to a search. Stop and frisk: police can briefly stop you on the street if they have reasonable suspicion, and pat down for weapons only. Vehicle search: police can search your car without a warrant if they have probable cause. Phone search: police need a warrant to search your cell phone — Riley v. California (2014). Home search: refuse entry without a warrant signed by a judge. Search of person: you have privacy rights during searches. Do not physically resist a search even if it is unlawful — object verbally and raise it in court.',
+      tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police', 'phone search', 'cell phone', 'digital privacy', 'stop and frisk', 'vehicle search', 'home search', 'consent', 'traffic stop', 'refuse search'],
+      aliases: ['police search', 'can police search', 'phone search', 'cell phone search', 'can police search my phone', 'stop and frisk', 'traffic stop search', 'home search warrant', 'search my car', 'refuse search', 'fourth amendment rights'],
+      url: '/search-seizure',
+    },
+    {
+      id: 'attorney',
+      title: 'Right to an Attorney',
+      titleEs: 'Derecho a un Abogado',
+      titleZh: '获得律师的权利',
+      content: 'Sixth Amendment right to counsel. You have the right to an attorney at all critical stages of a criminal prosecution. If you cannot afford an attorney, a public defender will be appointed. Request an attorney immediately upon arrest or during questioning. Say clearly: "I want a lawyer." Do not answer questions until your attorney is present. Public defender offices provide free legal representation to those who qualify financially.',
+      tags: ['attorney', 'lawyer', 'public defender', 'sixth amendment', 'right to counsel', 'free attorney'],
+      aliases: ['right to attorney', 'right to a lawyer', 'public defender', 'free lawyer', 'can I get a free lawyer', 'appointed attorney', 'I want a lawyer'],
+      url: '/rights-info#attorney',
+    },
+    {
+      id: 'speedy-trial',
+      title: 'Right to a Speedy Trial',
+      titleEs: 'Derecho a un Juicio Rápido',
+      titleZh: '快速审判的权利',
+      content: 'Sixth Amendment speedy trial rights. The government must bring your case to trial within a reasonable time. The Speedy Trial Act sets time limits in federal cases. State laws vary. Unreasonable delay can result in dismissal of charges. Speedy trial rights protect against prolonged pretrial detention.',
+      tags: ['speedy trial', 'sixth amendment', 'trial rights', 'time limits', 'dismissal'],
+      aliases: ['speedy trial rights', 'how long can they hold me', 'trial delay', 'right to fast trial'],
+      url: '/rights-info#speedy-trial',
+    },
+    {
+      id: 'jury',
+      title: 'Right to a Jury Trial',
+      titleEs: 'Derecho a un Juicio con Jurado',
+      titleZh: '陪审团审判的权利',
+      content: 'Sixth Amendment right to trial by jury for serious offenses. The jury must unanimously agree on a verdict. You can waive your right to a jury trial and elect a bench trial before a judge only. In federal court and most state courts, felony charges carry the right to a jury trial. Misdemeanor right to jury trial varies by state.',
+      tags: ['jury trial', 'sixth amendment', 'trial rights', 'bench trial', 'verdict'],
+      aliases: ['jury trial rights', 'right to jury', 'bench trial', 'trial by jury'],
+      url: '/rights-info#jury',
+    },
   ];
-  
+
   for (const page of rightsPages) {
     documents.push({
       id: `rights-${page.id}`,
@@ -250,12 +308,75 @@ export function buildSearchIndex(): void {
       titleEs: page.titleEs,
       titleZh: page.titleZh,
       content: page.content,
-      tags: ['rights', 'constitution', 'legal rights'],
-      aliases: [],
+      tags: page.tags,
+      aliases: page.aliases,
       url: page.url,
     });
   }
   devLog('search', `Indexed ${rightsPages.length} rights info pages`);
+
+  // Dedicated sub-documents for each search-seizure scenario
+  const searchSeizureScenarios = [
+    {
+      id: 'phone-search',
+      title: 'Phone Search Rights',
+      titleEs: 'Derechos en Registro de Teléfono',
+      content: 'Police need a warrant to search your cell phone or smartphone. Riley v. California (2014): the Supreme Court unanimously ruled that police cannot search your phone without a warrant. You are not required to provide your passcode or PIN to police. Biometric unlock (fingerprint or face scan) — police may attempt to compel biometric unlock, but your passcode is protected. Digital privacy: your phone contains deeply personal information and has stronger Fourth Amendment protection than physical items. Do not voluntarily hand over your phone. You can say: "I do not consent to a search of my phone."',
+      tags: ['phone search', 'cell phone', 'digital privacy', 'fourth amendment', 'warrant', 'passcode', 'biometric', 'smartphone', 'riley v california'],
+      aliases: ['can police search my phone', 'cell phone search', 'phone passcode', 'digital device search', 'phone privacy', 'search my phone', 'unlock phone for police', 'phone warrant'],
+      url: '/search-seizure#phone-search',
+    },
+    {
+      id: 'stop-frisk',
+      title: 'Stop and Frisk Rights',
+      titleEs: 'Derechos en Parada y Cacheo',
+      content: 'Terry stop: police can briefly detain you on the street if they have reasonable suspicion of criminal activity — a hunch or your appearance alone is not enough. Pat-down for weapons: police may pat down your outer clothing only if they have reasonable suspicion you are armed and dangerous. You have the right to ask "Am I free to go?" — if yes, calmly walk away. Do not physically resist the stop even if it is unlawful. You can say: "I do not consent to this search." State your name if your state requires it. Terry v. Ohio established stop-and-frisk law.',
+      tags: ['stop and frisk', 'terry stop', 'pat down', 'police stop', 'reasonable suspicion', 'fourth amendment', 'street stop'],
+      aliases: ['stop and frisk', 'pat down', 'police pat down', 'can police stop me', 'terry stop', 'street stop', 'am i free to go', 'police detain me'],
+      url: '/search-seizure#stop-frisk',
+    },
+    {
+      id: 'vehicle-search',
+      title: 'Vehicle Search Rights',
+      titleEs: 'Derechos en Registro de Vehículo',
+      content: 'During a traffic stop, police can search your car without a warrant if they have probable cause — for example, if they see contraband in plain view (plain view doctrine), smell marijuana, or have other specific facts suggesting evidence of a crime. You have the right to refuse consent to a vehicle search. Refusing consent is not grounds for arrest. Do not physically resist. If you consent, you cannot take it back. Do not leave drugs, weapons, or contraband in plain view. You can say: "I do not consent to a search of my vehicle."',
+      tags: ['vehicle search', 'car search', 'traffic stop', 'probable cause', 'consent', 'fourth amendment', 'plain view', 'automobile'],
+      aliases: ['can police search my car', 'car search', 'vehicle search rights', 'traffic stop search', 'pulled over search', 'search my vehicle', 'car stopped by police'],
+      url: '/search-seizure#vehicle-search',
+    },
+    {
+      id: 'home-search',
+      title: 'Home Search Rights',
+      titleEs: 'Derechos en Registro del Hogar',
+      content: 'Police need a search warrant signed by a judge to enter and search your home. You have the right to refuse entry without a valid judicial warrant. Ask to see the warrant through the window or have it slipped under the door. Exigent circumstances — police may enter without a warrant in genuine emergencies (hot pursuit, imminent destruction of evidence, risk to life). Do not consent to a home search. An ICE administrative warrant (Form I-200 or I-205) is NOT a judicial warrant and does not give police the right to enter. Anything you say at the door can be used against you.',
+      tags: ['home search', 'house search', 'warrant', 'fourth amendment', 'search warrant', 'residence', 'door', 'judicial warrant', 'exigent circumstances'],
+      aliases: ['can police enter my home', 'home search warrant', 'house search', 'search my home', 'police at my door', 'do i have to let police in', 'police knock door'],
+      url: '/search-seizure#home-search',
+    },
+    {
+      id: 'person-search',
+      title: 'Search of Person Rights',
+      titleEs: 'Derechos en Registro Personal',
+      content: 'Police may search your person incident to a lawful arrest — they do not need a separate warrant. Strip search: policies vary by jurisdiction; strip searches require more than an ordinary arrest and must be conducted by an officer of the same sex and in private. Body cavity search: requires a warrant or court order except in very limited circumstances. Do not physically resist a search. You can object verbally: "I do not consent to this search." Document everything afterward and raise it with your attorney.',
+      tags: ['search of person', 'strip search', 'body search', 'fourth amendment', 'search incident to arrest', 'pat down', 'personal search'],
+      aliases: ['can police search me', 'search my body', 'strip search rights', 'personal search rights', 'being searched by police'],
+      url: '/search-seizure#person-search',
+    },
+  ];
+
+  for (const scenario of searchSeizureScenarios) {
+    documents.push({
+      id: `rights-${scenario.id}`,
+      type: 'rights_info',
+      title: scenario.title,
+      titleEs: scenario.titleEs,
+      content: scenario.content,
+      tags: scenario.tags,
+      aliases: scenario.aliases,
+      url: scenario.url,
+    });
+  }
+  devLog('search', `Indexed ${searchSeizureScenarios.length} search & seizure scenario pages`);
 
   const immigrationPages = [
     { 
@@ -511,9 +632,9 @@ export function buildSearchIndex(): void {
       title: 'Search and Seizure Guide',
       titleEs: 'Guía de Registro e Incautación',
       titleZh: '搜查与扣押指南',
-      content: 'Your Fourth Amendment rights. When police can search. Consent searches. Warrant requirements. Traffic stops. Home searches.',
-      tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police'],
-      aliases: ['police search', 'can police search'],
+      content: 'Your Fourth Amendment rights against unreasonable searches and seizures. Phone search and digital privacy — police need a warrant to search your cell phone. Stop and frisk rights during police encounters. Vehicle search rights during traffic stops. Home search — how to respond when police come to your door. Search of person rights including pat-downs and strip searches. When police need a warrant. How to refuse consent. What to say when police ask to search.',
+      tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police', 'phone search', 'stop and frisk', 'vehicle search', 'home search', 'traffic stop', 'consent', 'digital privacy'],
+      aliases: ['police search', 'can police search', 'phone search', 'cell phone search', 'stop and frisk', 'traffic stop', 'search my car', 'search my home', 'refuse search'],
       url: '/search-seizure'
     },
     {
@@ -705,6 +826,26 @@ export function buildSearchIndex(): void {
       tags: ['reputation', 'record', 'expungement', 'record sealing', 'background check', 'digital reputation'],
       aliases: ['clear criminal record', 'expunge record', 'seal record', 'background check dispute', 'reputation repair'],
       url: '/support/reputation'
+    },
+    {
+      id: 'support-personal-health',
+      title: 'Personal Health Support Resources',
+      titleEs: 'Recursos de Apoyo de Salud Personal',
+      titleZh: '个人健康支持资源',
+      content: 'Personal health resources for people involved in the criminal justice system. Access to healthcare, medical appointments, prescription medications, insurance coverage, and managing health needs during your case. Free clinics, community health centers, and Medicaid enrollment assistance.',
+      tags: ['personal health', 'healthcare', 'medical', 'health insurance', 'medicaid', 'free clinic', 'prescription', 'health care'],
+      aliases: ['health care help', 'free medical care', 'doctor help', 'health insurance help', 'medicaid enrollment', 'medical assistance'],
+      url: '/support/personal-health'
+    },
+    {
+      id: 'attorney-playbooks',
+      title: 'Attorney Case Playbooks',
+      titleEs: 'Guías de Casos para Abogados',
+      titleZh: '律师案例手册',
+      content: 'Strategic case roadmaps for criminal defense and immigration attorneys. Stage-by-stage guidance for arraignment, DUI, drug possession, probation violations, bail, domestic violence, felony assault, weapons charges, sentencing, post-conviction relief, asylum, ICE detention, VAWA, U visa, adjustment of status, and more. Includes jurisdiction variations and template references.',
+      tags: ['attorney', 'playbooks', 'case guidance', 'criminal defense', 'immigration defense', 'strategy', 'stages'],
+      aliases: ['case roadmap', 'attorney guide', 'defense strategy', 'case playbook', 'lawyer guide'],
+      url: '/attorney/playbooks'
     },
     {
       id: 'attorney-portal',
