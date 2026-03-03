@@ -926,26 +926,39 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         <Label htmlFor="incidentDescription">
           {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
         </Label>
-        <div className="relative mt-2">
+        <div className="mt-2 space-y-2">
           {needsPrivilegeAck && (
-            <div
-              className="absolute inset-0 z-10 cursor-pointer rounded-md bg-muted/30"
+            <button
+              type="button"
               onClick={onTextareaFocus}
               onTouchEnd={(e) => { e.preventDefault(); onTextareaFocus(); }}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onTextareaFocus(); }}
+              className="w-full flex items-center gap-3 p-3 rounded-lg border-2 border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/30 cursor-pointer text-left hover:bg-amber-100 dark:hover:bg-amber-950/50 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
               aria-label={t('legalGuidance.qaFlow.additionalDetails.tapToUnlock', 'Tap to review privacy notice before entering details')}
-            />
+            >
+              <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-amber-800 dark:text-amber-300">
+                  {t('legalGuidance.qaFlow.additionalDetails.tapToUnlock', 'Tap to review privacy notice before entering details')}
+                </p>
+                <p className="text-xs text-amber-700 dark:text-amber-400 mt-0.5">
+                  {t('legalGuidance.qaFlow.additionalDetails.privacyFirst', 'Your details are not protected by attorney-client privilege — tap to learn more')}
+                </p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0" />
+            </button>
           )}
           <Textarea
             id="incidentDescription"
             value={formData.incidentDescription || ""}
-            onChange={(e) => updateFormData("incidentDescription", e.target.value)}
-            placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
+            onChange={(e) => !needsPrivilegeAck && updateFormData("incidentDescription", e.target.value)}
+            onClick={needsPrivilegeAck ? onTextareaFocus : undefined}
+            onFocus={needsPrivilegeAck ? (e) => { e.currentTarget.blur(); onTextareaFocus(); } : undefined}
+            placeholder={needsPrivilegeAck
+              ? t('legalGuidance.qaFlow.additionalDetails.lockedPlaceholder', 'Tap the warning above to review privacy notice first...')
+              : t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
             rows={4}
-            disabled={needsPrivilegeAck}
-            className="placeholder:text-muted-foreground/40 placeholder:italic"
+            readOnly={needsPrivilegeAck}
+            className={`placeholder:text-muted-foreground/40 placeholder:italic ${needsPrivilegeAck ? 'cursor-pointer bg-muted/20 text-muted-foreground' : ''}`}
           />
         </div>
       </div>
