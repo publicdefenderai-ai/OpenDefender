@@ -82,7 +82,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
   };
 
   const handleTextareaFocus = () => {
-    if (!formData.hasAttorney && !privilegeWarningAcknowledged) {
+    if (!privilegeWarningAcknowledged) {
       setShowPrivilegeWarning(true);
     }
   };
@@ -915,7 +915,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
     updateFormData("selectedConcerns", current.filter((id: string) => id !== concernId));
   };
 
-  const needsPrivilegeAck = !formData.hasAttorney && !privilegeAcknowledged;
+  const needsPrivilegeAck = !privilegeAcknowledged;
 
   const selectedConcerns = formData.selectedConcerns || [];
   const unselectedConcerns = concernsCategories.filter(c => !selectedConcerns.includes(c.id));
