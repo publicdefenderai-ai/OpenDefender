@@ -294,13 +294,13 @@ export default function LegalGlossary() {
             <div className="mt-12 grid md:grid-cols-2 gap-6">
               <Card className="hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Need Legal Help?</h3>
+                  <h3 className="font-semibold mb-3">Need Case Support?</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Get personalized legal guidance for your specific situation.
+                    Get personalized case support for your specific situation.
                   </p>
                   <Link href="/case-guidance">
                     <Button variant="outline" className="w-full">
-                      Get Legal Guidance
+                      Get Case Support
                     </Button>
                   </Link>
                 </CardContent>

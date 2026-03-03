@@ -890,7 +890,7 @@ export default function ChatPage() {
     }
     
     if (!formattedContent) {
-      formattedContent = "Your legal guidance is ready. Please export as PDF for full details.";
+      formattedContent = "Your case support summary is ready. Please export as PDF for full details.";
     }
     
     // Add confidence badge
