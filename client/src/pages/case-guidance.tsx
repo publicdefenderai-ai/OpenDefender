@@ -566,7 +566,7 @@ export default function CaseGuidance() {
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold">Generating Your Personalized Guidance</h3>
                   <p className="text-sm text-muted-foreground">
-                    Our AI is analyzing your case details and creating customized legal guidance. This may take up to a minute...
+                    Our AI is analyzing your case details and creating customized case support. This may take up to a minute...
                   </p>
                 </div>
                 <AnimatedProgressBar duration={30} maxProgress={80} />

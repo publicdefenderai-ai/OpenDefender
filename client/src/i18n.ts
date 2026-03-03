@@ -23,10 +23,10 @@ i18n
         translation: {
           "header": {
             "title": "OpenDefender",
-            "subtitle": "Free Legal Guidance & Rights Information",
+            "subtitle": "Free Case Support & Legal Rights Information",
             "menu": {
               "getHelp": "Get Help",
-              "getHelpDesc": "Chat with our AI for personalized legal guidance",
+              "getHelpDesc": "Chat with our AI for personalized case support",
               "knowRights": "Know Your Rights",
               "knowRightsDesc": "Learn about your constitutional protections",
               "documentLibrary": "Document Library",
@@ -46,7 +46,7 @@ i18n
             "hero": {
               "title1": "Know Your Rights.",
               "title2": "Protect Your Future.",
-              "subtitle": "Get free legal guidance, understand court processes, and access resources to help navigate the criminal justice system.",
+              "subtitle": "Get free case support, understand court processes, and access resources to help navigate the criminal justice system.",
               "urgentHelpButton": "URGENT HELP NEEDED",
               "getStartedButton": "GET STARTED",
               "navigatingToolButton": "Navigating This Tool",
@@ -97,7 +97,7 @@ i18n
             "whatWeDo": {
               "title": "What We Do",
               "subtitle": "OpenDefender helps individuals understand their legal rights and navigate the criminal justice system.",
-              "card1Title": "AI Legal Guidance",
+              "card1Title": "AI Case Support",
               "card1Desc": "Get personalized legal information based on your specific situation",
               "card2Title": "Rights Information",
               "card2Desc": "Learn about your legal rights during arrest and court proceedings",
@@ -106,7 +106,7 @@ i18n
             },
             "cta": {
               "title": "Ready to Get Started?",
-              "subtitle": "Get free legal help and information for your situation.",
+              "subtitle": "Get free case support and information for your situation.",
               "button": "Get Started"
             },
             "knowRights": {
@@ -174,7 +174,7 @@ i18n
             }
           },
           "footer": {
-            "tagline": "Expanding access to justice through AI-powered legal guidance and resources.",
+            "tagline": "Expanding access to justice through AI-powered case support and legal resources.",
             "legalResources": "Legal Resources",
             "knowYourRights": "Know Your Rights",
             "courtProcedures": "Court Procedures",
@@ -1607,7 +1607,7 @@ i18n
                   "no": "No, not in custody"
                 },
                 "back": "Back",
-                "submitButton": "Get My Legal Guidance",
+                "submitButton": "Get My Case Support",
                 "continue": "Continue"
               },
               "additionalDetails": {
@@ -1665,7 +1665,7 @@ i18n
                 },
                 "noConcernsSelected": "You can skip this if none apply",
                 "back": "Back",
-                "submit": "Get My Legal Guidance"
+                "submit": "Get My Case Support"
               },
               "privilegeWarning": {
                 "title": "Before You Share Details",
@@ -1686,7 +1686,7 @@ i18n
               }
             },
             "dashboard": {
-              "title": "Legal Guidance Dashboard",
+              "title": "Case Support Dashboard",
               "generatedOn": "Generated on",
               "hideDetails": "Hide Details",
               "showDetails": "Show Details",
@@ -1757,7 +1757,7 @@ i18n
               "title": "What Do You Need?",
               "caseGuidance": {
                 "title": "Get Guidance For My Case",
-                "description": "Personalized legal guidance based on your situation"
+                "description": "Personalized case support based on your situation"
               },
               "immigration": {
                 "title": "Immigration Enforcement",
@@ -1831,7 +1831,7 @@ i18n
             "hero": {
               "title": "Case Guidance",
               "subtitle": "Get Personalized Guidance",
-              "description": "Answer a few questions about your situation to get legal help, next steps, and resources for your case.",
+              "description": "Answer a few questions about your situation to get case support, next steps, and resources for your case.",
               "startButton": "Get Started",
               "privacyNote": "Your responses are private and automatically deleted after your session"
             },
@@ -2005,7 +2005,7 @@ i18n
             "disclaimer": {
               "title": "Important:",
               "text": "This information is for learning only and is not legal advice. Laws are different in each state and change over time. Always talk to a real lawyer for help with your specific situation.",
-              "needHelp": "Need Immediate Legal Help?",
+              "needHelp": "Need Immediate Case Support?",
               "emergencyAid": "Emergency Legal Aid",
               "caseGuidance": "Get Case Guidance"
             }
@@ -3346,9 +3346,9 @@ i18n
               "clearFilters": "Clear Filters"
             },
             "quickNav": {
-              "legalGuidanceTitle": "Need Legal Guidance?",
-              "legalGuidanceDesc": "Get personalized legal advice for your specific charges and situation.",
-              "legalGuidanceButton": "Get Legal Guidance",
+              "legalGuidanceTitle": "Need Case Support?",
+              "legalGuidanceDesc": "Get personalized case support for your specific charges and situation.",
+              "legalGuidanceButton": "Get Case Support",
               "recordClearingTitle": "Learn About Record Clearing",
               "recordClearingDesc": "Check if you're eligible to expunge or seal your criminal record.",
               "recordClearingButton": "Check Eligibility"
@@ -3396,9 +3396,9 @@ i18n
               "disclaimerText": "This is a preliminary assessment only. Eligibility depends on many factors including specific circumstances, local rules, and judicial discretion. Consult with a qualified attorney for definitive legal advice about your situation."
             },
             "quickNav": {
-              "legalHelpTitle": "Need Legal Help?",
-              "legalHelpDesc": "Get personalized legal guidance for your specific situation.",
-              "legalHelpButton": "Get Legal Guidance",
+              "legalHelpTitle": "Need Case Support?",
+              "legalHelpDesc": "Get personalized case support for your specific situation.",
+              "legalHelpButton": "Get Case Support",
               "diversionProgramsTitle": "Find Diversion Programs",
               "diversionProgramsDesc": "Explore alternative programs that may help avoid conviction.",
               "diversionProgramsButton": "Explore Options"
@@ -3603,7 +3603,7 @@ i18n
               "title": "Our Mission & Principles",
               "accessToJustice": {
                 "title": "Access to Justice",
-                "description": "Making legal guidance accessible to everyone, regardless of economic status or location"
+                "description": "Making case support accessible to everyone, regardless of economic status or location"
               },
               "privacyFirst": {
                 "title": "Privacy First",
@@ -3682,8 +3682,8 @@ i18n
                 "impact": "Full nationwide coverage of state criminal statutes"
               },
               "aiGuidance": {
-                "title": "AI Legal Guidance Engine",
-                "description": "Advanced AI system for generating personalized legal guidance based on case parameters. Currently powered by Claude Sonnet 4 with jurisdiction-aware prompting.",
+                "title": "AI Case Support Engine",
+                "description": "Advanced AI system for generating personalized case support based on case parameters. Currently powered by Claude Sonnet 4 with jurisdiction-aware prompting.",
                 "impact": "Core functionality for personalized legal assistance",
                 "challenges": {
                   "accuracy": "Legal accuracy validation",
@@ -3857,7 +3857,7 @@ i18n
             },
             "caseData": {
               "title": "How We Protect Your Case Information",
-              "summary": "When you use our legal guidance tool, your case information receives multiple layers of protection. Here's exactly what happens to your data:",
+              "summary": "When you use our case support tool, your case information receives multiple layers of protection. Here's exactly what happens to your data:",
               "memoryOnly": {
                 "title": "Memory-Only Storage",
                 "description": "Your case information is stored only in temporary server memory - it is never written to a database or saved to disk. This means your data exists only while being processed and cannot be recovered after your session ends."
@@ -4166,7 +4166,7 @@ i18n
             }
           },
           "chat": {
-          "openChat": "Open legal guidance chat",
+          "openChat": "Open case support chat",
           "progress": {
             "step": "Step {{current}} of {{total}}",
             "safety": "Safety",
@@ -4212,7 +4212,7 @@ i18n
             "concernsQuestion": "What are you most worried about? Select all that apply:",
             "generating": "Thank you. I'm now reviewing your situation and preparing your personalized guidance. This may take a moment...",
             "stillWorking": "Still working on your guidance... Complex legal situations require careful analysis. Thank you for your patience.",
-            "guidanceReady": "Your legal guidance is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records.",
+            "guidanceReady": "Your case support summary is ready! I've put together a summary of your situation, important deadlines, your rights, and recommended next steps.\n\nYou can export this to keep for your records.",
             "error": "I'm sorry, I encountered an issue generating your guidance. Please try again or contact support if the problem continues.",
             "immigrationSummary": "**Immigration Enforcement Information**\n\nIf you're worried about immigration enforcement, here's what you should know:\n\n**Your Rights:**\n• You have the right to remain silent about your immigration status\n• You don't have to open your door to immigration officers without a judicial warrant\n• You have the right to speak to a lawyer before answering questions\n\n**If Approached by ICE:**\n• Stay calm and don't run\n• Ask if you are free to leave\n• Don't sign any documents without speaking to a lawyer\n• Remember details about the encounter\n\nFor comprehensive immigration guidance, visit our full [Immigration Guidance](/immigration-guidance) page.\n\n**What else can I help you with?**",
             "immigrationMenu": "How can we help with immigration?",
@@ -4336,7 +4336,7 @@ i18n
             "immFindLawyer": "Find a Lawyer"
           },
           "header": {
-            "title": "Legal Guidance Chat",
+            "title": "Case Support Chat",
             "subtitle": "Private and secure"
           },
           "input": {
@@ -4564,7 +4564,7 @@ i18n
                 "description": "Start here if you need guidance on your situation",
                 "caseGuidance": {
                   "title": "Personalized Case Guidance",
-                  "description": "Get tailored legal guidance based on your charges and jurisdiction."
+                  "description": "Get tailored case support based on your charges and jurisdiction."
                 },
                 "aiChat": {
                   "title": "AI Legal Chat",
