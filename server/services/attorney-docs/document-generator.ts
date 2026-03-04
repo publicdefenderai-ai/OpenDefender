@@ -36,6 +36,8 @@ import { motionToCompelDiscoveryTemplate } from "../../../shared/templates/motio
 import { motionForBailPendingAppealTemplate } from "../../../shared/templates/motion-for-bail-pending-appeal";
 import { motionToSuppressImmigrationEoirTemplate } from "../../../shared/templates/motion-to-suppress-immigration-eoir";
 import { motionForVoluntaryDepartureEoirTemplate } from "../../../shared/templates/motion-for-voluntary-departure-eoir";
+import { motionForSpeedyTrialDemandTemplate } from "../../../shared/templates/motion-for-speedy-trial-demand";
+import { motionToAcceptLateFilingEoirTemplate } from "../../../shared/templates/motion-to-accept-late-filing-eoir";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import { isRequestCostAcceptable } from "../cost-tracker";
@@ -110,6 +112,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-for-bail-pending-appeal", motionForBailPendingAppealTemplate],
   ["motion-to-suppress-immigration-eoir", motionToSuppressImmigrationEoirTemplate],
   ["motion-for-voluntary-departure-eoir", motionForVoluntaryDepartureEoirTemplate],
+  ["motion-for-speedy-trial-demand", motionForSpeedyTrialDemandTemplate],
+  ["motion-to-accept-late-filing-eoir", motionToAcceptLateFilingEoirTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
