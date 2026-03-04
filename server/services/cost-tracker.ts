@@ -7,7 +7,10 @@
  * Resets automatically at midnight UTC.
  */
 
-import { opsLog } from '../utils/dev-logger';
+import { opsLog, errLog } from '../utils/dev-logger';
+import { db } from '../db';
+import { aiDailyCosts } from '@shared/schema';
+import { eq } from 'drizzle-orm';
 
 const DAILY_BUDGET_USD = parseFloat(process.env.AI_DAILY_BUDGET || '50');
 
@@ -45,6 +48,30 @@ function ensureCurrentDay(): void {
 }
 
 /**
+ * Load today's accumulated cost from the database on server startup.
+ * Falls back to zero if the DB is unavailable or no record exists yet.
+ */
+export async function initializeCostTracker(): Promise<void> {
+  try {
+    const today = getUTCDateString();
+    const existing = await db.query.aiDailyCosts.findFirst({
+      where: eq(aiDailyCosts.date, today),
+    });
+    if (existing) {
+      currentDay = {
+        date: existing.date,
+        totalCost: existing.totalCost,
+        breakdown: existing.breakdown as Record<string, number>,
+        requestCount: existing.requestCount,
+      };
+      opsLog('cost-tracker', `Restored daily cost from DB: $${currentDay.totalCost.toFixed(4)} (${currentDay.requestCount} requests)`);
+    }
+  } catch (err) {
+    errLog('[cost-tracker] Failed to restore from DB — starting fresh', err);
+  }
+}
+
+/**
  * Record an AI cost after a successful API call
  */
 export function recordAICost(cost: number, service: string): void {
@@ -59,6 +86,26 @@ export function recordAICost(cost: number, service: string): void {
   if (currentDay.totalCost >= DAILY_BUDGET_USD) {
     opsLog('cost-tracker', `BUDGET LIMIT REACHED: $${currentDay.totalCost.toFixed(4)} >= $${DAILY_BUDGET_USD}`);
   }
+
+  // Persist to DB non-blocking — survives server restarts
+  db.insert(aiDailyCosts)
+    .values({
+      date: currentDay.date,
+      totalCost: currentDay.totalCost,
+      breakdown: currentDay.breakdown,
+      requestCount: currentDay.requestCount,
+      updatedAt: new Date(),
+    })
+    .onConflictDoUpdate({
+      target: aiDailyCosts.date,
+      set: {
+        totalCost: currentDay.totalCost,
+        breakdown: currentDay.breakdown,
+        requestCount: currentDay.requestCount,
+        updatedAt: new Date(),
+      },
+    })
+    .catch((err) => errLog('[cost-tracker] DB persist failed', err));
 }
 
 /**

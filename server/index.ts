@@ -6,6 +6,7 @@ import { registerRoutes } from "./routes";
 import { registerV1Routes } from "./routes-v1";
 import { setupVite, serveStatic, log } from "./vite";
 import { opsLog } from "./utils/dev-logger";
+import { initializeCostTracker } from "./services/cost-tracker";
 
 const app = express();
 // Enable trust proxy for rate limiting to work correctly with X-Forwarded-For header
@@ -158,6 +159,7 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  await initializeCostTracker();
   registerV1Routes(app);
   const server = await registerRoutes(app);
 
