@@ -356,3 +356,12 @@ export const insertPrivacyConsentSchema = createInsertSchema(privacyConsents).om
 
 export type InsertPrivacyConsent = z.infer<typeof insertPrivacyConsentSchema>;
 export type PrivacyConsent = typeof privacyConsents.$inferSelect;
+
+// AI daily cost tracking — persisted to survive server restarts
+export const aiDailyCosts = pgTable("ai_daily_costs", {
+  date: text("date").primaryKey(), // YYYY-MM-DD UTC
+  totalCost: real("total_cost").notNull().default(0),
+  breakdown: jsonb("breakdown").$type<Record<string, number>>().notNull().default({}),
+  requestCount: integer("request_count").notNull().default(0),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
