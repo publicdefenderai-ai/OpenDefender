@@ -14,6 +14,7 @@ import {
   Search,
   BookOpen,
   HandMetal,
+  DollarSign,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -219,6 +220,26 @@ export default function CaseTimeline() {
                       </ul>
                     </div>
                   </div>
+
+                  {selectedStage === 'sentencing' && (
+                    <div className="mt-4 p-4 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/60 dark:bg-amber-950/30 flex items-start gap-3">
+                      <DollarSign className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-sm font-medium text-foreground mb-1">
+                          Court fines and fees are set at sentencing
+                        </p>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Fines, probation fees, restitution, and surcharges are typically ordered here.
+                          Many courts offer fee waivers and payment plans for those who qualify.
+                        </p>
+                        <Link href="/support/finances">
+                          <Button variant="link" size="sm" className="p-0 h-auto text-amber-700 dark:text-amber-400 font-medium">
+                            Learn about managing court costs →
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
 
                   <div className="flex flex-wrap gap-3 pt-2">
                     {stageIndex > 0 && (

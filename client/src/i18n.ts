@@ -485,6 +485,67 @@ i18n
                 "tip2": "Don't borrow from predatory lenders or take on high-interest debt — explore all other options first",
                 "tip3": "If you receive a bill you can't pay, contact the court immediately rather than ignoring it",
                 "tip4": "Ask your attorney about expungement options that might help with future employment and housing"
+              },
+              "courtFees": {
+                "sectionTitle": "Court Fees & Fines",
+                "stateSelector": {
+                  "label": "Look up fees for your state",
+                  "placeholder": "Select a state",
+                  "disclaimer": "These are general ranges only. Contact your court clerk for the exact amounts that apply to your case."
+                },
+                "types": {
+                  "filing": {
+                    "title": "Court Filing Fees",
+                    "description": "Charged when a case is filed or a document submitted to the court. Applies at arraignment and various hearings.",
+                    "note": "Typical range: $30–$435 depending on charge type and court level."
+                  },
+                  "probation": {
+                    "title": "Probation Supervision Fees",
+                    "description": "Monthly fees charged while on probation to cover supervision costs. Some states have eliminated these fees for low-income individuals.",
+                    "note": "Typical range: $20–$120 per month."
+                  },
+                  "publicDefender": {
+                    "title": "Public Defender Fees",
+                    "description": "Some states charge an application fee or co-pay for public defender services. You cannot be denied a public defender solely because you can't pay this fee.",
+                    "note": "Range: $0–$250 depending on state and case outcome."
+                  },
+                  "restitution": {
+                    "title": "Restitution",
+                    "description": "Court-ordered payment to victims to compensate for their losses. Set at sentencing — unlike other fees, it cannot be waived, though payment plans are available.",
+                    "note": "Amount varies — determined by the judge based on victim's documented losses."
+                  },
+                  "labFees": {
+                    "title": "Crime Lab & Processing Fees",
+                    "description": "Fees for DNA collection, drug testing, booking, and other law enforcement processing. Often added automatically.",
+                    "note": "Typical range: $25–$200 per test or procedure."
+                  },
+                  "surcharges": {
+                    "title": "Fines & Surcharges",
+                    "description": "Courts impose base fines set in statute, plus mandatory state and county surcharges (penalty assessments) that can multiply the base fine significantly.",
+                    "note": "In some states, surcharges add 150–300% on top of the base fine amount."
+                  }
+                },
+                "waiver": {
+                  "title": "Getting a Fee Waiver",
+                  "description": "Courts must reduce or waive fees if you genuinely cannot afford them. You have to ask — it is rarely automatic.",
+                  "steps": [
+                    "Ask the court clerk for a fee waiver form. It may be called an IFP (In Forma Pauperis) application or a hardship waiver.",
+                    "Gather proof of income: recent pay stubs, a tax return, or a letter showing benefits (SNAP, SSI, Medicaid, etc.).",
+                    "Submit the form at or before your first hearing — ideally as early as possible.",
+                    "Courts generally approve waivers for incomes at or below 125% of the federal poverty level."
+                  ]
+                },
+                "paymentPlan": {
+                  "title": "Setting Up a Payment Plan",
+                  "description": "Most courts allow payment plans — but you need to ask, usually at sentencing.",
+                  "tips": [
+                    "Request a payment plan at sentencing, before you leave the courtroom.",
+                    "Bring a basic written budget showing what you can realistically pay each month.",
+                    "Get the payment schedule in writing and keep a copy.",
+                    "If you miss a payment, contact the court immediately — do not wait for a warrant to be issued.",
+                    "You can often request a modification if your financial situation changes."
+                  ]
+                }
               }
             },
             "courtLogistics": {
@@ -5182,6 +5243,67 @@ i18n
                 "tip2": "No pida prestado a prestamistas abusivos ni asuma deudas de alto interés — explore todas las otras opciones primero",
                 "tip3": "Si recibe una factura que no puede pagar, contacte a la corte inmediatamente en lugar de ignorarla",
                 "tip4": "Pregunte a su abogado sobre opciones de eliminación de antecedentes que podrían ayudar con empleo y vivienda futuros"
+              },
+              "courtFees": {
+                "sectionTitle": "Tarifas y Multas de la Corte",
+                "stateSelector": {
+                  "label": "Busque las tarifas para su estado",
+                  "placeholder": "Seleccione un estado",
+                  "disclaimer": "Estos son rangos generales únicamente. Contacte al secretario de su corte para los montos exactos que aplican a su caso."
+                },
+                "types": {
+                  "filing": {
+                    "title": "Tarifas de Presentación",
+                    "description": "Se cobran cuando se presenta un caso o un documento a la corte. Aplica en la lectura de cargos y varias audiencias.",
+                    "note": "Rango típico: $30–$435 dependiendo del tipo de cargo y nivel de la corte."
+                  },
+                  "probation": {
+                    "title": "Tarifas de Supervisión de Libertad Condicional",
+                    "description": "Tarifas mensuales cobradas mientras está en libertad condicional para cubrir los costos de supervisión. Algunos estados han eliminado estas tarifas para personas de bajos ingresos.",
+                    "note": "Rango típico: $20–$120 por mes."
+                  },
+                  "publicDefender": {
+                    "title": "Tarifas del Defensor Público",
+                    "description": "Algunos estados cobran una tarifa de solicitud por los servicios del defensor público. No se le puede negar un defensor público únicamente porque no pueda pagar esta tarifa.",
+                    "note": "Rango: $0–$250 dependiendo del estado y el resultado del caso."
+                  },
+                  "restitution": {
+                    "title": "Restitución",
+                    "description": "Pago ordenado por la corte a las víctimas para compensar sus pérdidas. Se establece en la sentencia — a diferencia de otras tarifas, no puede ser exonerado, aunque hay planes de pago disponibles.",
+                    "note": "El monto varía — determinado por el juez según las pérdidas documentadas de la víctima."
+                  },
+                  "labFees": {
+                    "title": "Tarifas de Laboratorio Criminal y Procesamiento",
+                    "description": "Tarifas por recolección de ADN, pruebas de drogas, procesamiento de detenidos y otros procedimientos. A menudo se agregan automáticamente.",
+                    "note": "Rango típico: $25–$200 por prueba o procedimiento."
+                  },
+                  "surcharges": {
+                    "title": "Multas y Recargos",
+                    "description": "Las cortes imponen multas base establecidas por ley, más recargos estatales y del condado obligatorios que pueden multiplicar significativamente la multa base.",
+                    "note": "En algunos estados, los recargos agregan un 150–300% sobre el monto de la multa base."
+                  }
+                },
+                "waiver": {
+                  "title": "Cómo Obtener una Exoneración de Tarifas",
+                  "description": "Las cortes deben reducir o exonerar las tarifas si genuinamente no puede pagarlas. Debe pedirlo — rara vez es automático.",
+                  "steps": [
+                    "Pida al secretario de la corte un formulario de exoneración de tarifas. Puede llamarse solicitud IFP (In Forma Pauperis) o exoneración por dificultades económicas.",
+                    "Reúna prueba de ingresos: recibos de pago recientes, una declaración de impuestos o una carta que muestre beneficios (SNAP, SSI, Medicaid, etc.).",
+                    "Presente el formulario en o antes de su primera audiencia — idealmente lo antes posible.",
+                    "Las cortes generalmente aprueban exoneraciones para ingresos al o por debajo del 125% del nivel federal de pobreza."
+                  ]
+                },
+                "paymentPlan": {
+                  "title": "Establecer un Plan de Pago",
+                  "description": "La mayoría de las cortes permiten planes de pago — pero debe pedirlo, generalmente en la sentencia.",
+                  "tips": [
+                    "Solicite un plan de pago en la sentencia, antes de salir de la sala.",
+                    "Traiga un presupuesto básico escrito que muestre lo que puede pagar cada mes.",
+                    "Obtenga el cronograma de pagos por escrito y guarde una copia.",
+                    "Si pierde un pago, contacte a la corte inmediatamente — no espere a que se emita una orden de arresto.",
+                    "A menudo puede solicitar una modificación si su situación financiera cambia."
+                  ]
+                }
               }
             },
             "courtLogistics": {

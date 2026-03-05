@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { Calendar, Clock, Shield, Scale, AlertTriangle, Users, ArrowRight, FileText } from "lucide-react";
+import { Calendar, Clock, Shield, Scale, AlertTriangle, Users, ArrowRight, FileText, DollarSign } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -168,6 +168,26 @@ export default function Process() {
                 />
               </ScrollReveal>
             ))}
+          </div>
+
+          {/* Court Fees callout — after sentencing (last step) */}
+          <div className="ml-8 md:ml-16 mb-10">
+            <Card className="border-emerald-200 dark:border-emerald-800 bg-emerald-50/40 dark:bg-emerald-950/20">
+              <CardContent className="p-4 flex items-start gap-3">
+                <DollarSign className="h-4 w-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-foreground">Fines and fees are assessed at sentencing</p>
+                  <p className="text-sm text-muted-foreground mt-0.5">
+                    Know what fees to expect, who qualifies for waivers, and how to find financial assistance.
+                  </p>
+                  <Link href="/support/finances">
+                    <Button variant="link" size="sm" className="p-0 h-auto mt-1 text-emerald-700 dark:text-emerald-400 font-medium">
+                      Court Fees & Financial Help →
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
