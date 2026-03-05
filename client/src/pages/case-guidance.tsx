@@ -135,7 +135,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
             <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
             <div>
               <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.address')}</div>
-              <div className="text-sm font-medium">{office.address}</div>
+              <div className="text-sm font-medium break-words">{office.address}</div>
             </div>
           </div>
 
@@ -616,7 +616,7 @@ export default function CaseGuidance() {
         
         {/* Public Defender Search Modal */}
         <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
-          <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogContent className="max-w-[95vw] md:max-w-4xl max-h-[80vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
@@ -685,7 +685,7 @@ export default function CaseGuidance() {
 
         {/* Legal Aid Organizations Search Modal */}
         <Dialog open={showLegalAidModal} onOpenChange={setShowLegalAidModal}>
-          <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+          <DialogContent className="max-w-[95vw] md:max-w-4xl max-h-[80vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="flex items-center gap-2">
                 <HelpCircle className="h-5 w-5" />

@@ -457,7 +457,7 @@ export default function Resources() {
 
       {/* Public Defender Search Modal */}
       <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t('home.publicDefenderSearch.title')}</DialogTitle>
           </DialogHeader>
@@ -510,7 +510,7 @@ export default function Resources() {
 
       {/* Legal Aid Organizations Search Modal */}
       <Dialog open={showLegalAidModal} onOpenChange={setShowLegalAidModal}>
-        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t('home.legalAidSearch.title')}</DialogTitle>
           </DialogHeader>
