@@ -1,4 +1,4 @@
-import { ChevronRight, Shield } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -164,17 +164,6 @@ export default function HowTo() {
       </section>
 
       <Footer />
-
-      <div className="legal-blue text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2">
-            <Shield className="h-4 w-4" />
-            <span className="text-sm font-medium">
-              <strong>{t('howTo.privacyLabel')}</strong> {t('howTo.privacyText')}
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
