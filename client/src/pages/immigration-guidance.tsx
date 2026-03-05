@@ -193,19 +193,21 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
         </motion.div>
       </div>
 
-      <div className="flex justify-center gap-3 mt-8">
+      <div className="flex justify-center gap-0 mt-8">
         {phases.map((phase, index) => (
           <button
             key={phase.id}
             onClick={() => setActiveIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${
+            className="flex items-center justify-center w-11 h-11"
+            aria-label={`Go to phase ${index + 1}`}
+            data-testid={`dot-phase-${index + 1}`}
+          >
+            <span className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${
               index === activeIndex
                 ? 'bg-primary border-primary ring-2 ring-primary/30 ring-offset-2 ring-offset-background'
                 : 'bg-transparent border-muted-foreground/50 hover:border-primary/50'
-            }`}
-            aria-label={`Go to phase ${index + 1}`}
-            data-testid={`dot-phase-${index + 1}`}
-          />
+            }`} />
+          </button>
         ))}
       </div>
     </div>

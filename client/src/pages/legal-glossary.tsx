@@ -157,7 +157,7 @@ export default function LegalGlossary() {
                           variant={selectedLetter === letter ? "default" : "outline"}
                           size="sm"
                           onClick={() => setSelectedLetter(selectedLetter === letter ? "" : letter)}
-                          className="w-8 h-8 p-0"
+                          className="w-10 h-10 p-0 min-w-[2.5rem]"
                           data-testid={`button-letter-${letter}`}
                         >
                           {letter.toUpperCase()}
