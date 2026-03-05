@@ -1519,12 +1519,12 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   finances: { icon: DollarSign, color: 'bg-green-500/10 text-green-600 dark:text-green-400', href: '/support/finances', available: true },
                   courtLogistics: { icon: Calendar, color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400', href: '/support/court-logistics', available: true },
                   mentalHealth: { icon: Heart, color: 'bg-rose-500/10 text-rose-600 dark:text-rose-400', href: '/support/mental-health', available: true },
-                  housing: { icon: Home, color: 'bg-amber-500/10 text-amber-600 dark:text-amber-400', href: '/support/housing', available: false },
-                  transportation: { icon: Car, color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400', href: '/support/transportation', available: false },
-                  childcare: { icon: Baby, color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400', href: '/support/childcare', available: false },
-                  familyCare: { icon: Users, color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400', href: '/support/family-care', available: false },
+                  housing: { icon: Home, color: 'bg-amber-500/10 text-amber-600 dark:text-amber-400', href: '/support/housing', available: true },
+                  transportation: { icon: Car, color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400', href: '/support/transportation', available: true },
+                  childcare: { icon: Baby, color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400', href: '/support/childcare', available: true },
+                  familyCare: { icon: Users, color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400', href: '/support/family-care', available: true },
                   immigration: { icon: Shield, color: 'bg-teal-500/10 text-teal-600 dark:text-teal-400', href: '/immigration-guidance', available: true },
-                  reputation: { icon: Scale, color: 'bg-slate-500/10 text-slate-600 dark:text-slate-400', href: '/support/reputation', available: false },
+                  reputation: { icon: Scale, color: 'bg-slate-500/10 text-slate-600 dark:text-slate-400', href: '/support/reputation', available: true },
                 };
 
                 const config = concernConfig[concernId];
