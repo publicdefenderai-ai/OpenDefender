@@ -1072,31 +1072,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Claude AI Health Check
+  // Claude AI Health Check — cached 5 minutes to prevent repeated live Claude calls
+  const HEALTH_CACHE_TTL_MS = 5 * 60 * 1000;
+  let healthCache: { available: boolean; checkedAt: number } | null = null;
+
   app.get("/api/ai/health", async (req, res) => {
     try {
       const hasApiKey = !!process.env.ANTHROPIC_API_KEY;
       if (!hasApiKey) {
-        return res.json({ 
-          success: true, 
-          available: false, 
-          reason: "API key not configured" 
+        return res.json({
+          success: true,
+          available: false,
+          reason: "API key not configured"
+        });
+      }
+
+      // Return cached result if still fresh
+      if (healthCache && Date.now() - healthCache.checkedAt < HEALTH_CACHE_TTL_MS) {
+        return res.json({
+          success: true,
+          available: healthCache.available,
+          model: CLAUDE_MODEL_DISPLAY_NAME,
+          features: ["personalized-guidance", "natural-language-processing"],
+          cached: true,
         });
       }
 
       const isConnected = await testClaudeConnection();
-      res.json({ 
-        success: true, 
+      healthCache = { available: isConnected, checkedAt: Date.now() };
+
+      res.json({
+        success: true,
         available: isConnected,
         model: CLAUDE_MODEL_DISPLAY_NAME,
         features: ["personalized-guidance", "natural-language-processing"]
       });
     } catch (error) {
       errLog("AI health check failed", error);
-      res.json({ 
-        success: true, 
-        available: false, 
-        reason: "Connection test failed" 
+      res.json({
+        success: true,
+        available: false,
+        reason: "Connection test failed"
       });
     }
   });

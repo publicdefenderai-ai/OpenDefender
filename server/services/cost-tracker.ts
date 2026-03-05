@@ -49,25 +49,51 @@ function ensureCurrentDay(): void {
 
 /**
  * Load today's accumulated cost from the database on server startup.
- * Falls back to zero if the DB is unavailable or no record exists yet.
+ *
+ * Retries up to 3 times with a 5-second per-attempt timeout to handle
+ * Neon cold-start latency. If all attempts fail, assumes the budget is
+ * fully exhausted (pessimistic fallback) so no AI spend can occur until
+ * a successful restart — preventing runaway costs from restart loops.
  */
 export async function initializeCostTracker(): Promise<void> {
-  try {
-    const today = getUTCDateString();
-    const existing = await db.query.aiDailyCosts.findFirst({
-      where: eq(aiDailyCosts.date, today),
-    });
-    if (existing) {
-      currentDay = {
-        date: existing.date,
-        totalCost: existing.totalCost,
-        breakdown: existing.breakdown as Record<string, number>,
-        requestCount: existing.requestCount,
-      };
-      opsLog('cost-tracker', `Restored daily cost from DB: $${currentDay.totalCost.toFixed(4)} (${currentDay.requestCount} requests)`);
+  const MAX_ATTEMPTS = 3;
+  const ATTEMPT_TIMEOUT_MS = 5_000;
+  const RETRY_DELAY_MS = 2_000;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const today = getUTCDateString();
+      const existing = await Promise.race([
+        db.query.aiDailyCosts.findFirst({ where: eq(aiDailyCosts.date, today) }),
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('DB query timed out')), ATTEMPT_TIMEOUT_MS)
+        ),
+      ]);
+
+      if (existing) {
+        currentDay = {
+          date: existing.date,
+          totalCost: existing.totalCost,
+          breakdown: existing.breakdown as Record<string, number>,
+          requestCount: existing.requestCount,
+        };
+        opsLog('cost-tracker', `Restored daily cost from DB: $${currentDay.totalCost.toFixed(4)} (${currentDay.requestCount} requests)`);
+      } else {
+        opsLog('cost-tracker', 'No existing cost record for today — starting at $0.00');
+      }
+      return; // Success — exit retry loop
+
+    } catch (err) {
+      errLog(`[cost-tracker] DB restore attempt ${attempt}/${MAX_ATTEMPTS} failed`, err);
+      if (attempt < MAX_ATTEMPTS) {
+        await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
+      } else {
+        // All attempts failed — block AI spend rather than silently resetting to $0.
+        // This prevents a DB outage on restart from granting a fresh daily budget.
+        currentDay.totalCost = DAILY_BUDGET_USD;
+        errLog('[cost-tracker] Could not restore cost from DB after all retries — AI spend blocked for safety. Restart when DB is reachable.');
+      }
     }
-  } catch (err) {
-    errLog('[cost-tracker] Failed to restore from DB — starting fresh', err);
   }
 }
 
