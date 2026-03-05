@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { 
-  AlertTriangle, 
+import {
+  AlertTriangle,
   ArrowRight,
   Shield,
   Phone,
@@ -11,7 +11,6 @@ import {
   Book,
   FileText,
   BarChart3,
-  ChevronDown,
   Search,
   HelpCircle,
   Compass
@@ -21,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -35,44 +33,14 @@ import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-a
 import { GetStartedMenu } from "@/components/navigation/get-started-menu";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
-interface TrustItemProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-function TrustItem({ title, description }: Omit<TrustItemProps, 'icon'>) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function TrustItem({ title, description }: { title: string; description: string }) {
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <div className="border-b border-border/50 last:border-b-0" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-        <CollapsibleTrigger className="w-full py-4 px-2" data-testid={`button-toggle-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-          <div className="flex items-center justify-between gap-3">
-            <h3 className="font-medium text-foreground text-left">{title}</h3>
-            <ChevronDown 
-              className={`h-4 w-4 text-muted-foreground transition-transform duration-300 ease-out flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
-            />
-          </div>
-        </CollapsibleTrigger>
-        <CollapsibleContent asChild forceMount>
-          <motion.div
-            initial={false}
-            animate={isOpen ? "open" : "collapsed"}
-            variants={{
-              open: { height: "auto", opacity: 1 },
-              collapsed: { height: 0, opacity: 0 }
-            }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden px-2"
-          >
-            <p className="pb-4 text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-              {description}
-            </p>
-          </motion.div>
-        </CollapsibleContent>
-      </div>
-    </Collapsible>
+    <div className="border-b border-border/50 last:border-b-0 py-4 px-2" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+      <h3 className="font-medium text-foreground mb-1">{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+        {description}
+      </p>
+    </div>
   );
 }
 
@@ -500,41 +468,39 @@ export default function Home() {
             </Alert>
 
             <Card>
-              <CardContent className="p-6 space-y-4">
-                <h3 className="font-bold text-lg text-red-600">{t('home.urgentHelp.immediateActions')}</h3>
-                
-                <div className="space-y-3">
-                  <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-green-900 dark:text-green-100 mb-2">{t('home.urgentHelp.stayCalmTitle')}</h4>
-                    <p className="text-sm text-green-800 dark:text-green-200">
-                      {t('home.urgentHelp.stayCalmText')}
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-2">{t('home.urgentHelp.assertRightsTitle')}</h4>
-                    <p className="text-sm text-blue-800 dark:text-blue-200 mb-2">
-                      {t('home.urgentHelp.assertRightsText1')}
-                    </p>
-                    <p className="text-sm text-blue-800 dark:text-blue-200">
-                      {t('home.urgentHelp.assertRightsText2')}
-                    </p>
-                  </div>
-
-                  <div className="bg-purple-50 dark:bg-purple-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-purple-900 dark:text-purple-100 mb-2">{t('home.urgentHelp.noConsentTitle')}</h4>
-                    <p className="text-sm text-purple-800 dark:text-purple-200">
-                      {t('home.urgentHelp.noConsentText')}
-                    </p>
-                  </div>
-
-                  <div className="bg-amber-50 dark:bg-amber-950 p-4 rounded-lg">
-                    <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-2">{t('home.urgentHelp.publicDefenderTitle')}</h4>
-                    <p className="text-sm text-amber-800 dark:text-amber-200">
-                      {t('home.urgentHelp.publicDefenderText')}
-                    </p>
-                  </div>
-                </div>
+              <CardContent className="p-6">
+                <h3 className="font-bold text-base mb-4">{t('home.urgentHelp.immediateActions')}</h3>
+                <ol className="space-y-4">
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+                    <div>
+                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.stayCalmTitle')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.stayCalmText')}</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+                    <div>
+                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.assertRightsTitle')}</h4>
+                      <p className="text-sm text-muted-foreground mb-1">{t('home.urgentHelp.assertRightsText1')}</p>
+                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.assertRightsText2')}</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+                    <div>
+                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.noConsentTitle')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.noConsentText')}</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">4</span>
+                    <div>
+                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.publicDefenderTitle')}</h4>
+                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.publicDefenderText')}</p>
+                    </div>
+                  </li>
+                </ol>
               </CardContent>
             </Card>
 

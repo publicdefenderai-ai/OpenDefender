@@ -18,8 +18,12 @@ export function Footer() {
               </div>
               <span className="font-bold text-xl">OpenDefender</span>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">
               {t('footer.tagline')}
+            </p>
+            <p className="text-gray-400 text-xs leading-relaxed mb-6">
+              <Shield className="h-3 w-3 inline mr-1" aria-hidden="true" />
+              {t('footer.privacyNotice')}
             </p>
             <a
               href="https://github.com/publicdefenderai-ai/OpenDefender"
@@ -96,18 +100,6 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Privacy Notice Bar */}
-      <div className="bg-slate-800/50 border-t border-slate-600">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-center gap-2 text-gray-300">
-            <Shield className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-            <span className="text-sm">
-              {t('footer.privacyNotice')}
-            </span>
           </div>
         </div>
       </div>

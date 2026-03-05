@@ -49,7 +49,7 @@ i18n
               "subtitle": "Get free case support, understand court processes, and access resources to help navigate the criminal justice system.",
               "urgentHelpButton": "URGENT HELP NEEDED",
               "getStartedButton": "GET STARTED",
-              "navigatingToolButton": "Navigating This Tool",
+              "navigatingToolButton": "How to use this site",
               "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance."
             },
             "features": {
@@ -174,7 +174,7 @@ i18n
             }
           },
           "footer": {
-            "tagline": "Expanding access to justice through AI-powered case support and legal resources.",
+            "tagline": "We help people understand their rights and find free legal help.",
             "legalResources": "Legal Resources",
             "knowYourRights": "Know Your Rights",
             "courtProcedures": "Court Procedures",
@@ -4675,7 +4675,7 @@ i18n
                   "description": "Plain-language definitions of legal terms."
                 },
                 "courtLocator": {
-                  "title": "Court Locator",
+                  "title": "Find Your Court",
                   "description": "Find court addresses and contact information."
                 },
                 "statuteLookup": {
