@@ -60,6 +60,7 @@ const concernsCategories = [
   { id: 'finances', labelKey: 'chat.concerns.finances' },
   { id: 'transportation', labelKey: 'chat.concerns.transportation' },
   { id: 'mentalHealth', labelKey: 'chat.concerns.mentalHealth' },
+  { id: 'personalHealth', labelKey: 'chat.concerns.personalHealth' },
   { id: 'immigration', labelKey: 'chat.concerns.immigration' },
   { id: 'reputation', labelKey: 'chat.concerns.reputation' },
   { id: 'courtLogistics', labelKey: 'chat.concerns.courtLogistics' },

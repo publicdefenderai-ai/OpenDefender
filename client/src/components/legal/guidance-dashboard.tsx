@@ -36,6 +36,7 @@ import {
   Car,
   Baby,
   LifeBuoy,
+  Activity,
   Loader2
 } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -1523,6 +1524,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   transportation: { icon: Car, color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400', href: '/support/transportation', available: true },
                   childcare: { icon: Baby, color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400', href: '/support/childcare', available: true },
                   familyCare: { icon: Users, color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400', href: '/support/family-care', available: true },
+                  personalHealth: { icon: Activity, color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400', href: '/support/personal-health', available: true },
                   immigration: { icon: Shield, color: 'bg-teal-500/10 text-teal-600 dark:text-teal-400', href: '/immigration-guidance', available: true },
                   reputation: { icon: Scale, color: 'bg-slate-500/10 text-slate-600 dark:text-slate-400', href: '/support/reputation', available: true },
                 };
