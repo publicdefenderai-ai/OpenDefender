@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
@@ -897,6 +897,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
     { id: 'finances', icon: DollarSign },
     { id: 'transportation', icon: Car },
     { id: 'mentalHealth', icon: Heart },
+    { id: 'personalHealth', icon: Activity },
     { id: 'immigration', icon: Globe },
     { id: 'reputation', icon: Shield },
     { id: 'courtLogistics', icon: Scale },
