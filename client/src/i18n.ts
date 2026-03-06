@@ -3860,7 +3860,7 @@ i18n
             "hero": {
               "title": "Mission Statement",
               "subtitle1": "Public defense in America is underfunded and overstretched. Public defenders and their allies are asked to do the impossible with almost nothing. The gap between what people need and what the system provides is structural, and has gone unaddressed for too long. If you can afford a private attorney, you already know how the system works differently for you. If, like most people, you can't, you've been left to figure it out on your own. OpenDefender was built to change that.",
-              "subtitle2": "OpenDefender is a public good dedicated to leveraging AI, legal data, and automation to provide timely, useful, and accessible assistance to individuals who are up against the US criminal justice or immigration enforcement systems and may not have access to legal counsel or case support. The site and all content is fully open source, ensuring it remains free and accessible for all who need it."
+              "subtitle2": "OpenDefender is a public good dedicated to leveraging AI and online resources to provide timely, useful, and accessible assistance to individuals facing the US criminal justice or immigration enforcement systems without help. The site is fully open source, ensuring it remains free and accessible for all who need it."
             },
             "publicGood": {
               "text": "Free to use · No account required · No paywall · No data sold, ever"
