@@ -51,8 +51,11 @@ export default function MissionStatement() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               {t('missionStatement.hero.title')}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              {t('missionStatement.hero.subtitle')}
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-4">
+              {t('missionStatement.hero.subtitle1')}
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              {t('missionStatement.hero.subtitle2')}
             </p>
           </motion.div>
         </ScrollReveal>
