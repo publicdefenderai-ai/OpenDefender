@@ -43,20 +43,26 @@ export default function MissionStatement() {
         {/* Hero Section */}
         <ScrollReveal>
           <motion.div
-            className="text-center mb-10"
+            className="mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
               {t('missionStatement.hero.title')}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-4">
-              {t('missionStatement.hero.subtitle1')}
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              {t('missionStatement.hero.subtitle2')}
-            </p>
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <div className="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-7 py-6">
+                <p className="text-base md:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">
+                  {t('missionStatement.hero.subtitle1')}
+                </p>
+              </div>
+              <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900 rounded-xl px-7 py-6">
+                <p className="text-base md:text-lg text-slate-700 dark:text-slate-200 leading-relaxed">
+                  {t('missionStatement.hero.subtitle2')}
+                </p>
+              </div>
+            </div>
           </motion.div>
         </ScrollReveal>
 
