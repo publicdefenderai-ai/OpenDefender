@@ -57,7 +57,7 @@ export default function MissionStatement() {
                   {t('missionStatement.hero.subtitle1')}
                 </p>
               </div>
-              <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-xl px-7 py-6">
+              <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl px-7 py-6">
                 <p className="text-base md:text-lg text-slate-700 dark:text-slate-200 leading-relaxed">
                   {t('missionStatement.hero.subtitle2')}
                 </p>
