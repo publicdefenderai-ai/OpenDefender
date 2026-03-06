@@ -12,7 +12,7 @@ import { db } from '../db';
 import { aiDailyCosts } from '@shared/schema';
 import { eq } from 'drizzle-orm';
 
-const DAILY_BUDGET_USD = parseFloat(process.env.AI_DAILY_BUDGET || '50');
+const DAILY_BUDGET_USD = parseFloat(process.env.AI_DAILY_BUDGET || '0');
 
 interface DailyCostRecord {
   date: string; // YYYY-MM-DD in UTC
@@ -144,13 +144,13 @@ export function isAIAvailable(): boolean {
 
 // Per-service daily caps (configurable via env vars)
 const SERVICE_BUDGET_USD: Record<string, number> = {
-  'claude-guidance': parseFloat(process.env.AI_BUDGET_GUIDANCE || '30'),
-  'document-summarizer': parseFloat(process.env.AI_BUDGET_SUMMARIZER || '15'),
-  'attorney-docs': parseFloat(process.env.AI_BUDGET_ATTORNEY || '5'),
+  'claude-guidance': parseFloat(process.env.AI_BUDGET_GUIDANCE || '0'),
+  'document-summarizer': parseFloat(process.env.AI_BUDGET_SUMMARIZER || '0'),
+  'attorney-docs': parseFloat(process.env.AI_BUDGET_ATTORNEY || '0'),
 };
 
 // Maximum allowed estimated cost for a single request
-const MAX_REQUEST_COST_USD = parseFloat(process.env.AI_MAX_REQUEST_COST || '0.15');
+const MAX_REQUEST_COST_USD = parseFloat(process.env.AI_MAX_REQUEST_COST || '0');
 
 // Sonnet 4 input cost: $3 per 1M tokens, ~4 chars per token
 const INPUT_COST_PER_CHAR = 3.0 / (1_000_000 * 4);
