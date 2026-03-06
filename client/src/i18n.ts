@@ -3859,7 +3859,8 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Mission Statement",
-              "subtitle": "If you can afford a private attorney, you already know how the system works. You get someone who knows the rules, knows the judges, and fights for you. If you can't — and most people can't — you've been left to figure it out alone. OpenDefender was built to change that. Not as a charity project. As something that should have existed a long time ago."
+              "subtitle1": "Public defense in America is underfunded and overstretched. Public defenders and their allies are asked to do the impossible with almost nothing. The gap between what people need and what the system provides is structural, and has gone unaddressed for too long. If you can afford a private attorney, you already know how the system works differently for you. If, like most people, you can't, you've been left to figure it out on your own. OpenDefender was built to change that.",
+              "subtitle2": "OpenDefender is a public good dedicated to leveraging AI, legal data, and automation to provide timely, useful, and accessible assistance to individuals who are up against the US criminal justice or immigration enforcement systems and may not have access to legal counsel or case support. The site and all content is fully open source, ensuring it remains free and accessible for all who need it."
             },
             "publicGood": {
               "text": "Free to use · No account required · No paywall · No data sold, ever"
@@ -3885,8 +3886,8 @@ i18n
             },
             "philosophy": {
               "title": "Why We Built This",
-              "opening": "Most legal technology is built for law firms and the clients they represent. We built OpenDefender for the people those law firms are usually hired to oppose.",
-              "body": "AI has the potential to be a genuine public resource — free, accessible, and actually useful to people who have nothing to gain from paying for it. Not a trial period. Not a freemium tier. Not data harvesting dressed up as a public service. For working people who have spent years navigating a complex legal system with nothing in their corner, that potential matters. This is what we built, and it will stay free."
+              "opening": "Most legal technology is built for powerful governments, law firms, and the clients they represent. We built OpenDefender for the people.",
+              "body": "Tech doesn't have to be extractive and profit driven. AI has the potential to be a genuine public resource. It can create public goods that are free, accessible, and actually useful. No gimmicks. Not data harvesting dressed up as a public service. For working people who have spent years navigating a complex legal system weighed against them with little to no help in their corner, that potential matters."
             },
             "principles": {
               "title": "Guiding Principles",
@@ -8625,7 +8626,8 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Declaración de Misión",
-              "subtitle": "Si puede pagar a un abogado privado, ya sabe cómo funciona el sistema. Tiene a alguien que conoce las reglas, conoce a los jueces y lucha por usted. Si no puede — y la mayoría no puede — se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso. No como un proyecto de caridad. Como algo que debería haber existido hace mucho tiempo."
+              "subtitle1": "La defensa pública en Estados Unidos está subfinanciada y sobrecargada. Los defensores públicos y sus aliados son llamados a hacer lo imposible con casi nada. La brecha entre lo que las personas necesitan y lo que el sistema ofrece es estructural, y ha quedado sin resolver por demasiado tiempo. Si puede pagar a un abogado privado, ya sabe cómo el sistema funciona diferente para usted. Si, como la mayoría de las personas, no puede, se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso.",
+              "subtitle2": "OpenDefender es un bien público dedicado a aprovechar la IA, datos legales y automatización para brindar asistencia oportuna, útil y accesible a personas que se enfrentan al sistema de justicia penal o de aplicación de inmigración de EE.UU. y que pueden no tener acceso a asesoramiento legal o apoyo en su caso. El sitio y todo su contenido son completamente de código abierto, asegurando que permanezca gratuito y accesible para todos los que lo necesiten."
             },
             "publicGood": {
               "text": "Gratis · Sin cuenta requerida · Sin suscripción · Sin venta de datos, nunca"
@@ -8651,8 +8653,8 @@ i18n
             },
             "philosophy": {
               "title": "Por Qué Lo Construimos",
-              "opening": "La mayoría de la tecnología legal está diseñada para los despachos de abogados y los clientes que los representan. Construimos OpenDefender para las personas a las que esos despachos generalmente son contratados para oponerse.",
-              "body": "La IA tiene el potencial de ser un recurso público genuino — gratuito, accesible y realmente útil para personas que no tienen nada que ganar pagando por él. No un período de prueba. No un nivel freemium. No una recopilación de datos disfrazada de servicio público. Para las personas trabajadoras que han pasado años navegando un complejo sistema legal sin nadie de su lado, ese potencial importa. Esto es lo que construimos, y se mantendrá gratuito."
+              "opening": "La mayoría de la tecnología legal está diseñada para gobiernos poderosos, despachos de abogados y los clientes que representan. Construimos OpenDefender para la gente.",
+              "body": "La tecnología no tiene que ser extractiva y orientada a las ganancias. La IA tiene el potencial de ser un recurso público genuino. Puede crear bienes públicos que sean gratuitos, accesibles y realmente útiles. Sin trucos. Sin recopilación de datos disfrazada de servicio público. Para las personas trabajadoras que han pasado años navegando un complejo sistema legal en su contra con poca o ninguna ayuda de su lado, ese potencial importa."
             },
             "principles": {
               "title": "Principios Rectores",
