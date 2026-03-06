@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 export default function MissionStatement() {
   useScrollToTop();
   const { t } = useTranslation();
-  
+
   const goals = [
     {
       icon: Users,
@@ -37,12 +37,13 @@ export default function MissionStatement() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main className="container mx-auto px-4 py-12 max-w-5xl">
+
         {/* Hero Section */}
         <ScrollReveal>
-          <motion.div 
-            className="text-center mb-12"
+          <motion.div
+            className="text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -54,6 +55,15 @@ export default function MissionStatement() {
               {t('missionStatement.hero.subtitle')}
             </p>
           </motion.div>
+        </ScrollReveal>
+
+        {/* Public Good Callout Band */}
+        <ScrollReveal>
+          <div className="border-y border-border py-5 mb-12 text-center">
+            <p className="text-sm font-semibold text-foreground tracking-wide">
+              {t('missionStatement.publicGood.text')}
+            </p>
+          </div>
         </ScrollReveal>
 
         {/* Primary Goals Section */}
@@ -96,6 +106,26 @@ export default function MissionStatement() {
           </div>
         </ScrollReveal>
 
+        {/* Philosophy Section */}
+        <ScrollReveal>
+          <motion.div
+            className="bg-slate-900 dark:bg-slate-950 rounded-xl px-8 py-10 md:px-12 md:py-12 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <h2 className="text-2xl font-bold text-white mb-5">
+              {t('missionStatement.philosophy.title')}
+            </h2>
+            <p className="text-slate-200 leading-relaxed text-lg font-medium mb-4">
+              {t('missionStatement.philosophy.opening')}
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              {t('missionStatement.philosophy.body')}
+            </p>
+          </motion.div>
+        </ScrollReveal>
+
         {/* Guiding Principles */}
         <ScrollReveal>
           <motion.div
@@ -120,6 +150,7 @@ export default function MissionStatement() {
             </div>
           </motion.div>
         </ScrollReveal>
+
       </main>
 
       <Footer />

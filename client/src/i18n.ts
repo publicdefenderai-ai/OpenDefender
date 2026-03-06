@@ -3859,13 +3859,16 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Mission Statement",
-              "subtitle": "OpenDefender is a public good dedicated to leveraging artificial intelligence, legal data, and automation to provide timely, accurate, and accessible assistance to individuals in the United States who are accused of crimes and may not have immediate access to legal counsel. This platform is built on open-source principles with MIT licensing for code and CC0 (Creative Commons Zero) for documentation, ensuring it remains free and accessible to all who need it."
+              "subtitle": "If you can afford a private attorney, you already know how the system works. You get someone who knows the rules, knows the judges, and fights for you. If you can't — and most people can't — you've been left to figure it out alone. OpenDefender was built to change that. Not as a charity project. As something that should have existed a long time ago."
+            },
+            "publicGood": {
+              "text": "Free to use · No account required · No paywall · No data sold, ever"
             },
             "goals": {
               "title": "Our Primary Goals",
               "expandAccess": {
                 "title": "Expand Access to Justice",
-                "description": "Deliver preliminary legal information, guidance, and case-relevant insights to defendants at no cost, reducing barriers for underserved populations."
+                "description": "Deliver preliminary case support, guidance, and relevant insights to anyone who needs them — at no cost. The people who need this most are the ones who have always been expected to navigate the system alone."
               },
               "supportDefenders": {
                 "title": "Support Public Defender Workflows",
@@ -3879,6 +3882,11 @@ i18n
                 "title": "Increase Efficiency and Fairness",
                 "description": "Automate collection and synthesis of public legal datasets so that defendants and attorneys can quickly identify relevant precedents, procedural rules, and plea or sentencing trends."
               }
+            },
+            "philosophy": {
+              "title": "Why We Built This",
+              "opening": "Most legal technology is built for law firms and the clients they represent. We built OpenDefender for the people those law firms are usually hired to oppose.",
+              "body": "AI has the potential to be a genuine public resource — free, accessible, and actually useful to people who have nothing to gain from paying for it. Not a trial period. Not a freemium tier. Not data harvesting dressed up as a public service. For working people who have spent years navigating a complex legal system with nothing in their corner, that potential matters. This is what we built, and it will stay free."
             },
             "principles": {
               "title": "Guiding Principles",
@@ -8617,13 +8625,16 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Declaración de Misión",
-              "subtitle": "Defensor Público IA es un bien público dedicado a aprovechar la inteligencia artificial, datos legales y automatización para proporcionar asistencia oportuna, precisa y accesible a personas en los Estados Unidos acusadas de crímenes y que pueden no tener acceso inmediato a asesoramiento legal. Esta plataforma se construye sobre principios de código abierto con licencia MIT para el código y CC0 (Creative Commons Zero) para la documentación, asegurando que permanezca gratuita y accesible para todos los que la necesiten."
+              "subtitle": "Si puede pagar a un abogado privado, ya sabe cómo funciona el sistema. Tiene a alguien que conoce las reglas, conoce a los jueces y lucha por usted. Si no puede — y la mayoría no puede — se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso. No como un proyecto de caridad. Como algo que debería haber existido hace mucho tiempo."
+            },
+            "publicGood": {
+              "text": "Gratis · Sin cuenta requerida · Sin suscripción · Sin venta de datos, nunca"
             },
             "goals": {
               "title": "Nuestros Objetivos Principales",
               "expandAccess": {
                 "title": "Expandir el Acceso a la Justicia",
-                "description": "Entregar información legal preliminar, orientación y perspectivas relevantes al caso a los acusados sin costo, reduciendo barreras para poblaciones desatendidas."
+                "description": "Brindar apoyo preliminar al caso, orientación y perspectivas relevantes a quien lo necesite — sin costo alguno. Quienes más necesitan esto son quienes siempre han tenido que enfrentar el sistema solos."
               },
               "supportDefenders": {
                 "title": "Apoyar Flujos de Trabajo de Defensores Públicos",
@@ -8637,6 +8648,11 @@ i18n
                 "title": "Aumentar la Eficiencia y Equidad",
                 "description": "Automatizar la recopilación y síntesis de conjuntos de datos legales públicos para que los acusados y abogados puedan identificar rápidamente precedentes relevantes, reglas procedimentales y tendencias de acuerdos o sentencias."
               }
+            },
+            "philosophy": {
+              "title": "Por Qué Lo Construimos",
+              "opening": "La mayoría de la tecnología legal está diseñada para los despachos de abogados y los clientes que los representan. Construimos OpenDefender para las personas a las que esos despachos generalmente son contratados para oponerse.",
+              "body": "La IA tiene el potencial de ser un recurso público genuino — gratuito, accesible y realmente útil para personas que no tienen nada que ganar pagando por él. No un período de prueba. No un nivel freemium. No una recopilación de datos disfrazada de servicio público. Para las personas trabajadoras que han pasado años navegando un complejo sistema legal sin nadie de su lado, ese potencial importa. Esto es lo que construimos, y se mantendrá gratuito."
             },
             "principles": {
               "title": "Principios Rectores",
