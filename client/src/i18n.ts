@@ -9817,7 +9817,1222 @@ i18n
             "save": "保存",
             "important": "重要",
             "privacyFirst": "隐私优先",
+            "backToHome": "返回首页",
             "skipToContent": "跳转到主要内容"
+          },
+          "support": {
+            "title": "支持资源",
+            "subtitle": "案件期间生活挑战的实用帮助",
+            "description": "面对法律挑战会影响你生活的方方面面。这些资源可以帮助你处理日常事务，让你专注于案件。",
+            "viewResources": "查看资源",
+            "availableNow": "现已提供",
+            "comingSoon": "即将推出",
+            "groups": {
+              "dailyLife": "日常生活",
+              "legalCourt": "法律与法庭",
+              "health": "健康与身心健康"
+            },
+            "backToSupport": "返回支持资源",
+            "startHere": "从这里开始",
+            "practicalSteps": "实用步骤",
+            "helpfulResources": "有用资源",
+            "relatedResources": "相关资源",
+            "visitWebsite": "访问网站",
+            "free": "免费",
+            "resourceType": {
+              "national": "全国性",
+              "state": "州级",
+              "local": "本地",
+              "online": "线上"
+            },
+            "priority": {
+              "high": "优先",
+              "medium": "有帮助",
+              "low": "可选"
+            },
+            "faq": {
+              "title": "常见问题"
+            },
+            "tips": {
+              "title": "实用建议"
+            },
+            "note": {
+              "title": "注意：",
+              "content": "这些资源仅供一般参考，不构成法律建议。每种情况各不相同。如有具体问题，请咨询持牌律师。"
+            },
+            "disclaimer": "本信息仅供一般教育目的，不构成法律、财务、医疗或专业建议。所列资源为第三方组织，与OpenDefender无关。我们不保证外部资源的准确性或可用性。请务必核实信息并就你的具体情况咨询相关专业人士。",
+            "relatedLinks": {
+              "employment": "就业支持",
+              "finances": "财务帮助",
+              "courtLogistics": "法庭事务",
+              "mentalHealth": "心理健康",
+              "process": "刑事流程",
+              "rights": "你的权利",
+              "courtLocator": "查找法院",
+              "publicDefender": "查找法律援助",
+              "familyFriends": "给家人和朋友",
+              "transportation": "交通帮助",
+              "childcare": "儿童照顾支持",
+              "housing": "住房帮助",
+              "familyCare": "家庭照顾支持",
+              "reputation": "声誉与记录"
+            },
+            "employment": {
+              "overview": "面临刑事指控可能会对你的工作产生不确定性。了解你的权利并提前规划，可以帮助你在专注于案件的同时保护自己的就业。",
+              "actions": {
+                "knowRights": {
+                  "title": "了解你的工作权利",
+                  "description": "在大多数州，雇主不能因为你被逮捕而自动解雇你（逮捕不等于定罪）。但各公司政策不同。请查阅你的劳动合同和公司手册。",
+                  "timeframe": "本周"
+                },
+                "reviewPolicy": {
+                  "title": "查阅公司政策",
+                  "description": "查找关于背景调查、缺勤及雇主如何处理未决指控的政策。人事部门可以提供这些信息，无需你披露细节。",
+                  "timeframe": "本周"
+                },
+                "document": {
+                  "title": "记录所有事项",
+                  "description": "保存所有工作相关的通讯记录、绩效评估和出勤记录。如果日后出现问题，这些记录可以保护你。"
+                },
+                "planAbsence": {
+                  "title": "为法庭缺席做计划",
+                  "description": "你可能需要请假出庭。考虑使用带薪假、申请无薪假，或尽可能与律师配合安排听证时间。"
+                }
+              },
+              "resources": {
+                "eeoc": {
+                  "description": "负责执行工作场所歧视法律的联邦机构。如果你遭遇就业歧视，可获取权利方面的指导。"
+                },
+                "nelp": {
+                  "description": "倡导创造优质就业机会和改善就业标准的政策，尤其关注低薪工人。"
+                },
+                "workplaceFairness": {
+                  "description": "提供免费的就业权利信息，包括不当解雇、歧视和假期政策。"
+                },
+                "legalAidWork": {
+                  "description": "就就业问题提供免费法律援助，包括不当解雇和工作场所歧视。"
+                },
+                "careerOneStop": {
+                  "description": "美国劳工部资源，提供求职、培训和职业发展支持，适合需要重新就业的人。"
+                },
+                "jobCenters": {
+                  "description": "免费本地服务，包括求职协助、简历帮助和培训项目连接。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "我可以因为被逮捕而被解雇吗？",
+                  "answer": "取决于你所在的州和雇主。大多数州实行'随意雇佣'制度，雇主可以因多种原因解雇员工。但某些州有法律保护员工不受基于逮捕记录（而非定罪）歧视的影响。公共部门职位通常有更多保护。请查阅你所在州的法律和劳动合同。"
+                },
+                "q2": {
+                  "question": "我必须告诉雇主我的案件吗？",
+                  "answer": "一般来说，你没有义务主动透露未决指控，除非你的劳动合同或公司政策明确要求。但如果在求职申请或人事询问时被直接问到，撒谎可能成为解雇的理由。如不确定，请咨询律师。"
+                },
+                "q3": {
+                  "question": "如果我的工作需要背景调查怎么办？",
+                  "answer": "许多雇主会进行背景调查。逮捕记录（非定罪）不一定出现在所有调查中，部分州限制雇主可考虑的内容。如果你的案件被撤销或你被宣告无罪，你可能可以申请封存记录。律师可以就你的具体情况提供建议。"
+                },
+                "q4": {
+                  "question": "我可以请假出庭吗？",
+                  "answer": "许多州有法律保护被传唤担任陪审员或证人的员工。部分州也保护被告。请查阅你所在州的法律，考虑使用带薪假、家庭和医疗假（如适用）或与雇主协商。"
+                }
+              },
+              "tips": {
+                "tip1": "不要与同事讨论案件细节——保持专业的对话",
+                "tip2": "保存案件发生前的绩效评估和正面反馈副本",
+                "tip3": "如果你在求职，研究你所在州的'禁止询问犯罪记录'法律，了解雇主何时可以询问犯罪历史",
+                "tip4": "如果你认为自己在工作中受到不公平对待，考虑咨询就业律师"
+              },
+              "courtTimeOff": {
+                "sectionTitle": "法庭请假模板",
+                "sectionDescription": "使用这些现成模板向工作单位申请出庭假期。复制并根据你的情况进行修改。",
+                "tipLabel": "建议",
+                "copyButton": "复制到剪贴板",
+                "copied": "已复制！",
+                "printButton": "打印",
+                "personalizeNote": "发送前，请将[括号内]的文字替换为你自己的信息。",
+                "emailTemplates": {
+                  "title": "邮件模板",
+                  "formal": {
+                    "label": "致经理/人事部门的正式邮件",
+                    "subject": "Subject: Request for Time Off — Court Appearance on [Date]",
+                    "body": "Dear [Manager's Name / HR Department],\n\nI am writing to request time off on [date(s)] due to a required court appearance. I anticipate being unavailable from [start time] to [end time].\n\nI understand this may affect my regular duties and am happy to:\n• Complete any urgent tasks before my absence\n• Arrange coverage with a colleague\n• Make up the time on [alternative date/time]\n\nPlease let me know what documentation you may need. I can provide a court notice or summons if required.\n\nThank you for your understanding. I am committed to minimizing any disruption to the team.\n\nSincerely,\n[Your Name]\n[Your Position]\n[Date]"
+                  },
+                  "brief": {
+                    "label": "致直属上司的简短邮件",
+                    "subject": "Subject: Time Off Needed — [Date]",
+                    "body": "Hi [Supervisor's Name],\n\nI need to request [the day off / a few hours off] on [date] for a personal legal matter that requires my presence at the courthouse.\n\nI plan to [arrive late / leave early / be out all day] and will make sure my work is covered. I can [come in early the next day / stay late / work remotely] to make up the time.\n\nPlease let me know if you need anything from me ahead of time.\n\nThank you,\n[Your Name]"
+                  },
+                  "multipleDate": {
+                    "label": "多次出庭请假申请",
+                    "subject": "Subject: Upcoming Scheduled Absences — Court Obligations",
+                    "body": "Dear [Manager's Name / HR Department],\n\nI am writing to let you know about several upcoming dates when I will need time off for required court appearances:\n\n• [Date 1] — [estimated time away, e.g., full day or morning only]\n• [Date 2] — [estimated time away]\n• [Date 3] — [estimated time away]\n\nThese dates are set by the court and I am unable to reschedule them. I want to plan ahead so my responsibilities are covered:\n\n• I will complete any urgent assignments before each absence\n• I can coordinate with [colleague's name] for coverage\n• I am available to make up time as needed\n\nPlease let me know what documentation or advance notice you require. I appreciate your flexibility and will keep you updated if any dates change.\n\nSincerely,\n[Your Name]\n[Your Position]"
+                  }
+                },
+                "callScripts": {
+                  "title": "电话沟通脚本",
+                  "description": "如果你更倾向于打电话而非发邮件，以下脚本可以引导你的对话。",
+                  "manager": {
+                    "label": "致电经理",
+                    "script": "Hi [Manager's Name], this is [Your Name]. Do you have a minute to talk?\n\nI need to let you know that I have a required court appearance on [date] and will need [the day off / time off from ___ to ___].\n\nI wanted to give you as much notice as possible so we can plan for coverage. I can [finish my current tasks early / ask a coworker to cover / make up the hours].\n\nIs there a form I need to fill out or anything you need from me?\n\nThank you for understanding. I'll keep you posted if anything changes."
+                  },
+                  "hr": {
+                    "label": "致电人事部门",
+                    "script": "Hello, my name is [Your Name] from [department]. I'm calling because I need to request time off for a court appearance on [date].\n\nCould you let me know:\n• What is the process for requesting this type of leave?\n• Do I need to submit any documentation, like a court notice?\n• Will this be taken from my PTO, or is there a separate policy for court appearances?\n\nI appreciate your help. Could you also email me any forms I need to fill out? My email is [your email]."
+                  },
+                  "tips": {
+                    "label": "通话建议",
+                    "items": {
+                      "tip1": "保持简短——你不需要分享案件细节",
+                      "tip2": "专注于实际事务：你何时不在及如何处理工作",
+                      "tip3": "询问假期政策——你可能受到州法律保护",
+                      "tip4": "记下对方告诉你的内容，并以书面形式跟进",
+                      "tip5": "保持冷静和专业——这是正常的工作场所请求"
+                    }
+                  }
+                },
+                "legalRights": {
+                  "title": "了解你的权利",
+                  "description": "许多州有法律保护需要请假出庭的员工。以下是需要了解的关键内容：",
+                  "rights": {
+                    "r1": "大多数州要求雇主为陪审义务和证人传票提供假期——查阅你的州是否也保护被告",
+                    "r2": "雇主一般不能因你响应法庭命令或传票而解雇你",
+                    "r3": "部分州要求雇主为出庭提供带薪假",
+                    "r4": "如果雇主因你出庭而打击报复你，记录所有情况并联系就业律师",
+                    "r5": "你可以请律师尽可能根据你的工作安排来安排听证时间"
+                  }
+                }
+              }
+            },
+            "finances": {
+              "overview": "法律案件可能通过律师费、罚款、误工损失等多种方式给财务带来压力。了解管理这些费用的方案，可以减轻压力，帮助你专注于案件。",
+              "actions": {
+                "assessCosts": {
+                  "title": "评估潜在费用",
+                  "description": "常见费用包括保释金/担保金、律师费、法庭费、罚款、缓刑费用和误工损失。列清单有助于规划和确定优先次序。",
+                  "timeframe": "本周"
+                },
+                "explorePD": {
+                  "title": "了解公设辩护人或法律援助",
+                  "description": "如果你请不起律师，你可能有资格获得免费公设辩护人。收入上限因辖区而异。法律援助组织也为部分案件提供免费帮助。",
+                  "timeframe": "立即"
+                },
+                "feeWaiver": {
+                  "title": "申请费用豁免",
+                  "description": "许多法院对立案费、罚款和其他费用提供豁免，前提是你能证明经济困难。向法院书记官索取豁免申请表格。"
+                },
+                "paymentPlan": {
+                  "title": "申请分期付款计划",
+                  "description": "法院通常允许对罚款和费用制定分期付款计划。这可以使费用更易于承担，并帮助你避免因未付款而产生额外罚款。"
+                },
+                "emergencyAid": {
+                  "title": "了解紧急援助",
+                  "description": "当地非营利组织、教会和社区组织可能在你处理法律问题期间提供租金、水电费或食物的紧急援助。"
+                },
+                "incomeLoss": {
+                  "title": "为潜在收入损失做计划",
+                  "description": "如果你可能失去工作时间，了解失业救济金、伤残救济金（如适用）或援助计划，以帮助填补收入缺口。"
+                }
+              },
+              "resources": {
+                "findLaw": {
+                  "description": "按州和执业领域整理的当地免费及低价法律援助机构目录。"
+                },
+                "lawHelp": {
+                  "description": "按州整理的法律援助组织目录，为低收入人群提供免费法律援助。"
+                },
+                "benefits": {
+                  "description": "美国政府官方工具，用于查询联邦、州和地方福利项目的资格，包括食物援助、医疗保健和住房。"
+                },
+                "unitedWay": {
+                  "description": "拨打或发短信至211，连接当地食物、水电费、房租援助及其他基本需求资源。"
+                },
+                "modestMeans": {
+                  "description": "州律师协会项目，将中等收入客户与提供优惠收费服务的律师联系起来。"
+                },
+                "cfpb": {
+                  "description": "联邦机构，提供管理债务、了解信用及应对债务催收的工具和指南。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "我如何知道自己是否有资格获得公设辩护人？",
+                  "answer": "资格依据收入和资产确定，通常在联邦贫困线的125-200%以下，但因辖区而异。法院会在你第一次出庭时询问你的财务状况。请准备好工资单、纳税申报表或福利证明。"
+                },
+                "q2": {
+                  "question": "如果我无法支付罚款或费用怎么办？",
+                  "answer": "法院不能仅仅因为你无力支付而将你监禁。如果你确实无力支付，申请费用豁免、分期付款计划或社区服务替代方案。记录你的经济困难并携带证明出庭。"
+                },
+                "q3": {
+                  "question": "法律费用会影响我的信用评分吗？",
+                  "answer": "发送至催收机构的法庭罚款和费用可能影响你的信用。部分辖区正在改变这一做法。如果你有困难，在账户进入催收之前申请分期付款计划。"
+                },
+                "q4": {
+                  "question": "是否有帮助支付保释金的项目？",
+                  "answer": "是的，许多地区存在保释基金和社区保释组织。部分为无力缴纳保释金的人提供援助。搜索'bail fund'加上你所在城市或州，即可找到当地资源。"
+                }
+              },
+              "tips": {
+                "tip1": "保留所有案件相关付款的收据和文件",
+                "tip2": "不要向掠夺性放贷机构借款或承担高利率债务——先探索所有其他选择",
+                "tip3": "如果收到无力支付的账单，立即联系法院，而不是置之不理",
+                "tip4": "询问律师关于消除记录的选项，这可能有助于未来的就业和住房"
+              },
+              "courtFees": {
+                "sectionTitle": "法庭费用与罚款",
+                "stateSelector": {
+                  "label": "查询你所在州的费用",
+                  "placeholder": "选择州",
+                  "disclaimer": "以下仅为一般范围。请联系法院书记官了解适用于你案件的确切金额。"
+                },
+                "types": {
+                  "filing": {
+                    "title": "法庭立案费",
+                    "description": "在案件立案或向法庭提交文件时收取。适用于提审及各类听证会。",
+                    "note": "典型范围：30至435美元，取决于指控类型和法庭级别。"
+                  },
+                  "probation": {
+                    "title": "缓刑监管费",
+                    "description": "缓刑期间每月收取的费用，用于支付监管成本。部分州已为低收入人群取消这些费用。",
+                    "note": "典型范围：每月20至120美元。"
+                  },
+                  "publicDefender": {
+                    "title": "公设辩护人费用",
+                    "description": "部分州收取公设辩护人服务的申请费或共付额。不能仅因无法支付此费用而拒绝提供公设辩护人。",
+                    "note": "范围：0至250美元，取决于州和案件结果。"
+                  },
+                  "restitution": {
+                    "title": "赔偿金",
+                    "description": "法院命令向受害者支付的赔偿金，以补偿其损失。在量刑时确定——与其他费用不同，不能豁免，但可制定付款计划。",
+                    "note": "金额不定——由法官根据受害者的记录损失确定。"
+                  },
+                  "labFees": {
+                    "title": "犯罪实验室及处理费",
+                    "description": "DNA采集、毒品检测、登记及其他执法处理的费用。通常自动添加。",
+                    "note": "典型范围：每次测试或程序25至200美元。"
+                  },
+                  "surcharges": {
+                    "title": "罚款与附加费",
+                    "description": "法院征收法规规定的基本罚款，加上强制性州和县附加费（罚款评估），可能使基本罚款大幅增加。",
+                    "note": "在某些州，附加费在基本罚款金额上再增加150至300%。"
+                  }
+                },
+                "waiver": {
+                  "title": "申请费用豁免",
+                  "description": "如果你确实无力支付，法院必须减免费用。你必须主动申请——这很少是自动的。",
+                  "steps": [
+                    "向法院书记官索取费用豁免申请表。可能称为贫困申请或经济困难豁免。",
+                    "收集收入证明：近期工资单、纳税申报表或显示福利（SNAP、SSI、医疗补助等）的信件。",
+                    "在第一次听证会时或之前提交表格——越早越好。",
+                    "法院通常批准收入在联邦贫困线125%以下的豁免申请。"
+                  ]
+                },
+                "paymentPlan": {
+                  "title": "制定分期付款计划",
+                  "description": "大多数法院允许分期付款计划——但你需要主动申请，通常在量刑时提出。",
+                  "tips": [
+                    "在量刑时、离开法庭之前申请分期付款计划。",
+                    "带上一份基本预算，显示你每月实际可以支付的金额。",
+                    "以书面形式获取付款时间表并保留副本。",
+                    "如果错过付款，立即联系法院——不要等到逮捕令被签发。",
+                    "如果你的财务状况发生变化，通常可以申请修改计划。"
+                  ]
+                }
+              }
+            },
+            "courtLogistics": {
+              "overview": "了解出庭当天会发生什么，可以帮助减轻焦虑并确保你给人留下良好印象。以下是应对法庭出庭的实用指南。",
+              "actions": {
+                "findCourt": {
+                  "title": "找到法院位置",
+                  "description": "核实确切地址和建筑。许多地区有多个法院。查阅你的文件或致电书记官办公室确认。",
+                  "timeframe": "提前数日"
+                },
+                "checkDate": {
+                  "title": "确认出庭日期和时间",
+                  "description": "再次核实你的日期、时间和法庭编号。提前30至45分钟到达，留出停车、安检和找法庭的时间。",
+                  "timeframe": "提前一周"
+                },
+                "planArrival": {
+                  "title": "规划抵达方式",
+                  "description": "研究停车选项、公共交通路线和交通状况。计划提早到达——迟到可能导致法院签发逮捕令。"
+                },
+                "dressCode": {
+                  "title": "着装得体",
+                  "description": "穿着整洁、保守的服装。商务休闲装合适。避免短裤、背心、人字拖、帽子或有冒犯性内容的服装。"
+                },
+                "whatToBring": {
+                  "title": "了解该带什么（和不该带什么）",
+                  "description": "携带你的身份证件、法庭文件和笔记本。武器、大包和禁止物品留在家中。大多数法庭禁止携带手机。"
+                },
+                "whatToExpect": {
+                  "title": "了解流程",
+                  "description": "到达时向法院书记官报到。案件可能不按顺序审理。保持耐心，保持安静，法官进场时站立。"
+                }
+              },
+              "resources": {
+                "courtLocator": {
+                  "description": "我们的工具，用于查找你附近的州和联邦法院，包括地址、工作时间和联系信息。"
+                },
+                "usCourts": {
+                  "description": "联邦法院官方网站目录，包含当地规则、表格和联系信息。"
+                },
+                "ncsc": {
+                  "description": "州法院系统信息，包括自助资源和法庭流程指南。"
+                },
+                "selfHelp": {
+                  "description": "许多法院有自助中心，工作人员可以回答程序问题（但不能提供法律建议）。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "如果我出庭迟到会怎样？",
+                  "answer": "出庭迟到很严重。法官可能签发逮捕令、撤销保释或在你缺席的情况下继续审理。如果因紧急情况迟到，立即致电法院书记官。如可能，请人代为出庭说明情况。"
+                },
+                "q2": {
+                  "question": "我可以带手机去法院吗？",
+                  "answer": "大多数法院允许在建筑内携带手机，但要求在法庭内静音或关机。部分法院完全禁止手机。出发前查阅你所在法院的规定。在法庭内绝对不要使用手机。"
+                },
+                "q3": {
+                  "question": "我应该对法官说什么？",
+                  "answer": "称呼法官为'法官大人'。说话清晰、礼貌。直接回答问题，不要主动提供额外信息。如果你不理解某事，请说明。你的律师会指导你该说什么。"
+                },
+                "q4": {
+                  "question": "家人可以去旁听吗？",
+                  "answer": "大多数法庭程序对公众开放，家人可以旁听。有支持者在场可能有帮助，法官也可能对此持正面看法。他们应遵守同样的着装规范和行为规则。"
+                },
+                "q5": {
+                  "question": "如果我需要翻译怎么办？",
+                  "answer": "法院为需要翻译的人提供免费口译员。提前通过联系法院书记官申请口译员。你有权在案件的所有程序中完全理解所发生的事情。"
+                }
+              },
+              "tips": {
+                "tip1": "在出庭日之前提前驾车或乘坐公共交通去法院试一次",
+                "tip2": "带上可以阅读的东西——在你的案件被叫到之前，你可能要等候数小时",
+                "tip3": "出发前吃东西——一旦程序开始，你可能无法离开法庭",
+                "tip4": "进入法庭前完全关闭手机，不仅仅是静音",
+                "tip5": "如果感到不知所措，可以请求法官给你片刻时间平复情绪"
+              }
+            },
+            "mentalHealth": {
+              "overview": "面对法律挑战压力巨大，可能影响你的心理健康。感到焦虑、不知所措或沮丧是正常的。照顾好心理健康不是奢侈——这对渡过这段艰难时期至关重要。",
+              "crisis": {
+                "title": "如果你正处于危机中",
+                "description": "如果你有自杀或自伤的念头，或处于情绪危机中，24小时均可获得帮助：",
+                "hotline": {
+                  "name": "自杀与危机热线",
+                  "availability": "24小时全天，免费，保密"
+                },
+                "text": {
+                  "name": "危机短信热线",
+                  "number": "发送 HOME 到 741741",
+                  "instruction": "发送 HOME 到 741741"
+                },
+                "chat": {
+                  "name": "在线聊天",
+                  "link": "988lifeline.org/chat",
+                  "availability": "24小时全天，免费，保密"
+                }
+              },
+              "actions": {
+                "acknowledge": {
+                  "title": "承认你的感受",
+                  "description": "感到恐惧、愤怒、羞耻或绝望是正常的。这些感受不能定义你。承认它们是管理它们的第一步。"
+                },
+                "reachOut": {
+                  "title": "向你信任的人倾诉",
+                  "description": "不要独自承受。与朋友、家人、宗教领袖或心理咨询师交谈。分担负担可以带来释然和新的视角。"
+                },
+                "routine": {
+                  "title": "保持日常规律",
+                  "description": "规律性有所帮助。尽量保持规律的睡眠时间，好好饮食、锻炼，并在可能的情况下维持工作或学习的日常。"
+                },
+                "counseling": {
+                  "title": "考虑心理咨询",
+                  "description": "治疗师可以提供管理压力、焦虑和抑郁的工具。许多人提供按收入浮动的收费标准。部分人专注于面临法律问题的客户。"
+                },
+                "limitNews": {
+                  "title": "减少案件相关压力",
+                  "description": "可以暂时不去想案件。设定你花多少时间在研究或担忧上的界限。相信你的律师来处理细节。"
+                },
+                "supportGroup": {
+                  "title": "寻找支持团体",
+                  "description": "与有过类似经历的人建立联系可以减少孤独感。寻找当地或线上的支持团体。"
+                }
+              },
+              "resources": {
+                "lifeline988": {
+                  "description": "通过电话、短信或聊天24小时提供免费、保密的危机支持。受训辅导员帮助处理情绪困扰和自杀念头。"
+                },
+                "samhsa": {
+                  "description": "免费、保密的心理健康和药物滥用信息及治疗转介热线，24小时可用。"
+                },
+                "nami": {
+                  "description": "全国最大的草根心理健康组织，提供支持、教育和倡导。当地分会提供支持团体和资源。"
+                },
+                "openPath": {
+                  "description": "非营利治疗师网络，为没有足够保险的人提供优惠费率（每次30至80美元）的咨询。"
+                },
+                "sevenCups": {
+                  "description": "与受训倾听者进行免费在线聊天，获得情感支持。也提供经济实惠的在线治疗选项。"
+                },
+                "psychToday": {
+                  "description": "可按地点、专业和保险类型搜索的治疗师目录。许多人列出了浮动收费选项。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "感到如此压力大是正常的吗？",
+                  "answer": "是的，完全正常。面临刑事指控是人生中最有压力的经历之一。焦虑、睡眠困难、注意力难以集中和情绪变化都是常见反应。如果症状持续或加重，考虑与心理健康专业人士交谈。"
+                },
+                "q2": {
+                  "question": "如何找到经济实惠的心理咨询？",
+                  "answer": "选项包括：社区心理健康中心（浮动收费）、Open Path Collective（每次30至80美元）、大学培训诊所（优惠费率）、员工援助计划（如在职）和在线治疗平台。许多治疗师提供浮动收费——主动询问。"
+                },
+                "q3": {
+                  "question": "如果我没有保险怎么办？",
+                  "answer": "社区心理健康中心不论保险情况均提供服务。SAMHSA热线可以连接你当地的资源。危机热线始终免费。部分地区有免费的即走式心理咨询服务。"
+                },
+                "q4": {
+                  "question": "压力会影响我的案件吗？",
+                  "answer": "长期压力会损害决策和记忆能力，使参与辩护变得更加困难。照顾好心理健康不是自私——这有助于你在处理案件时更专注和有效。"
+                }
+              },
+              "tips": {
+                "tip1": "体育活动——即使是短暂的散步——也可以显著减轻压力和焦虑",
+                "tip2": "减少酒精和咖啡因摄入，它们会加剧焦虑并干扰睡眠",
+                "tip3": "练习简单的呼吸练习：吸气4拍，屏住4拍，呼气4拍",
+                "tip4": "写下你的担忧——将它们从脑海中释放出来可以带来释然",
+                "tip5": "记住：你目前的处境是暂时的。许多人经历过这一切，并走了出来"
+              }
+            },
+            "personalHealth": {
+              "overview": "法律案件可能打乱你的医疗保健常规——尤其是如果存在任何被监禁的可能。现在提前为你的药物和健康需求做计划，是你目前能采取的最重要步骤之一。",
+              "actions": {
+                "listMedications": {
+                  "title": "制作完整的药物清单",
+                  "description": "写下你服用的每种处方药——名称、剂量、频率和开药医生。包括维生素和补充剂。将副本交给你的律师和一位可信赖的家庭成员。",
+                  "priority": "high",
+                  "timeframe": "本周"
+                },
+                "contactDoctor": {
+                  "title": "在任何出庭日之前与医生交谈",
+                  "description": "让你的医生了解你的法律状况。他们可以写一封确认医疗必要性的信，开额外的处方，并建议如果漏服会发生什么。这对精神科药物、癫痫药物和胰岛素尤其重要。",
+                  "priority": "high",
+                  "timeframe": "下次出庭前"
+                },
+                "notifyJailHealth": {
+                  "title": "入所时立即通知监狱医务人员",
+                  "description": "如果你被关押入狱，尽快在入所期间告知医务人员你的药物。询问该设施继续处方的政策。监狱有义务提供医疗必需的药物。",
+                  "priority": "high"
+                },
+                "getRefills": {
+                  "title": "在关键日期前配齐处方药",
+                  "description": "确保在任何可能被监禁的出庭日至少提前30天配齐处方药。询问药房关于药物同步化，将所有处方调整到同一补药周期。",
+                  "priority": "medium",
+                  "timeframe": "至少提前30天"
+                },
+                "substanceSupport": {
+                  "title": "如有需要，寻求药物滥用支持",
+                  "description": "如果酒精或毒品使用与你的案件有关，主动开始治疗可以帮助你的案件和健康。法院通常对主动采取行动的被告持正面看法。SAMHSA热线可以连接你当地的免费治疗项目。",
+                  "priority": "medium"
+                },
+                "medicationStorage": {
+                  "title": "了解被捕时药物的处理方式",
+                  "description": "通常你无法将个人药物带入监狱——必须通过监狱药房处理，或由家人通过官方渠道提供。你的律师可以帮助你了解预期情况，并为你的药物连续性进行辩护。",
+                  "priority": "medium"
+                }
+              },
+              "resources": {
+                "samhsa": {
+                  "description": "免费、保密的24小时药物使用和心理健康信息及治疗转介热线。提供英语和西班牙语服务。"
+                },
+                "partnership": {
+                  "description": "为处理药物使用障碍的家庭提供的免费热线——可致电、发短信或在线聊天。提供循证指导，帮助你的亲人接受治疗。"
+                },
+                "smartRecovery": {
+                  "description": "基于科学的非十二步戒瘾康复支持，提供面对面和线上会议。免费参加。"
+                },
+                "nar": {
+                  "description": "为受他人成瘾影响的人提供免费同伴支持。在全国各地提供面对面和线上团体。"
+                },
+                "nami": {
+                  "description": "全国最大的心理健康组织——当地分会提供支持团体、教育和倡导。NAMI帮助热线周一至周五可用。"
+                },
+                "goodRx": {
+                  "description": "免费工具，用于比较处方药价格和寻找优惠券。如果你在案件期间保险中断，可以显著降低自付费用。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "监狱可以拒绝给我服药吗？",
+                  "answer": "不可以。监狱和监狱设施根据第八修正案有义务提供医疗必要的护理，包括药物。但可能存在延误、替换为通用等效药物或行政障碍。将你的药物清单和医生信件带到入所时。如果你被拒绝用药，你的律师可以提出紧急动议。"
+                },
+                "q2": {
+                  "question": "如果我服用管制药物，如ADHD药物或阿片类药物怎么办？",
+                  "answer": "管制药物需要额外的文件。请你的医生提供一封详细的信，解释你的诊断和医疗必要性。部分设施可能会替换为非管制替代品——提前与你的医生讨论。阿片类药物使用障碍的药物辅助治疗（MAT）受法律保护。"
+                },
+                "q3": {
+                  "question": "参加治疗能帮助我的刑事案件吗？",
+                  "answer": "是的，在许多情况下可以。主动参加药物使用治疗、心理健康咨询或转处计划向法院表明你正在承担责任。许多辖区有毒品法庭、心理健康法庭和转处计划，可以减少或撤销指控，以换取完成治疗。"
+                },
+                "q4": {
+                  "question": "如果我因案件失去健康保险怎么办？",
+                  "answer": "因逮捕而失业可能影响你的雇主提供的保险。你可能有资格在市场保险的特殊注册期内投保。如果收入下降，可能有资格申请医疗补助。社区健康中心无论保险状况如何，都按浮动收费提供护理。GoodRx可以显著降低处方费用。"
+                }
+              },
+              "tips": {
+                "tip1": "将书面药物清单放在钱包里——如果你被逮捕，这有助于登记时的医务人员",
+                "tip2": "询问药房关于泡罩包装或药盒，使你的用药例行更易于记录",
+                "tip3": "如果你在毒品法庭或转处计划中，保留所有预约记录和毒品检测结果",
+                "tip4": "抑郁和创伤后应激障碍等心理健康状况在法律案件期间很常见——不要等到危机时才寻求帮助",
+                "tip5": "SAMHSA的findtreatment.gov让你按类型和接受的保险搜索附近的治疗计划"
+              },
+              "medicationSection": {
+                "title": "准备你的药物",
+                "description": "如果有任何被监禁的可能性——即使是短期的——现在就采取这些步骤来保护你的健康。",
+                "step1": {
+                  "title": "记录所有事项",
+                  "body": "创建一份书面药物清单，包含：完整的药物名称、剂量、开药医生的姓名和电话、药房名称和电话，以及你的诊断或一般描述。将副本放在你的钱包里，给你的律师一份，并将一份留给可信赖的家庭成员。"
+                },
+                "step2": {
+                  "title": "获取医生信件",
+                  "body": "请你的医生在信头纸上写一封信，确认你的诊断和药物作为医疗必需品。这封信可以在入所时、向律师和法庭出示。对于心理健康和慢性疾病，这尤其重要。"
+                },
+                "step3": {
+                  "title": "在出庭日前配齐处方",
+                  "body": "在有可能被监禁的出庭日之前，不要让处方过期。如果你的保险允许，申请90天的供应量。如果费用有问题，使用GoodRx或请医生提供样品。"
+                }
+              }
+            },
+            "transportation": {
+              "overview": "你的案件可能影响你的驾驶或出行能力——但不必因此停止生活。了解你的驾照状态、规划替代方案，以及主动与依赖你的人沟通，将帮助你保持正常生活。",
+              "actions": {
+                "checkLicense": {
+                  "title": "立即查询你的驾照状态",
+                  "description": "某些指控——尤其是酒驾、鲁莽驾驶或与驾驶相关的违规——可能在定罪前触发驾照的自动或行政暂停。在线或致电你所在州的机动车管理局（DMV）确认你的当前状态。不要猜测。",
+                  "timeframe": "立即",
+                  "priority": "high"
+                },
+                "hardshipLicense": {
+                  "title": "询问限制性或困难驾照",
+                  "description": "许多州允许你申请限制性驾照，允许你为特定目的驾车——上班、出庭、医疗预约或接送孩子上学。你的律师可以帮助你提交申请。即使没有保证，也值得尝试。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "planCourtTravel": {
+                  "title": "安排可靠的出庭交通",
+                  "description": "缺席出庭有严重后果——可能签发逮捕令，保释金可能被撤销。将出庭交通列为首要任务。确定一个备用方案，以防主要计划失败。",
+                  "priority": "high"
+                },
+                "notifyDependents": {
+                  "title": "通知依赖你出行的人",
+                  "description": "如果你定期开车送孩子上学、与同事拼车或送家人去看病，让他们知道你的情况发生了变化。给他们时间做其他安排。坦诚告知，但不要透露过多细节。",
+                  "priority": "medium"
+                },
+                "exploreAlternatives": {
+                  "title": "研究公共交通和网约车选项",
+                  "description": "查询当地的公交和地铁路线、时刻表和票价。网约车应用（Lyft、Uber）和出租车可以填补空白。许多社区也有为医疗或法庭出行提供的志愿交通项目——致电211询问。",
+                  "priority": "medium"
+                },
+                "budgetTransport": {
+                  "title": "将交通费用纳入预算",
+                  "description": "网约车、公交月票和停车费会迅速累积。在财务规划中考虑这些费用，以免被意外情况打乱。询问律师当地是否有交通援助计划。",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "就交通变化进行沟通",
+                "sectionDescription": "这些模板帮助你告知雇主、家人或其他人交通变化——无需透露你的法律状况细节。",
+                "tipLabel": "建议",
+                "personalizeNote": "发送前，请将[括号内]的文字替换为你自己的信息。",
+                "copyButton": "复制到剪贴板",
+                "copied": "已复制！",
+                "printButton": "打印",
+                "emailTemplates": {
+                  "title": "邮件模板",
+                  "employer": {
+                    "label": "致雇主——时间安排调整",
+                    "subject": "Subject: Temporary Schedule Adjustment — [Date(s)]",
+                    "body": "Dear [Manager's Name / HR],\n\nI wanted to give you advance notice that I am currently dealing with a personal transportation matter and may need to make temporary adjustments to my schedule on [date(s)].\n\nI am committed to fulfilling my responsibilities and plan to:\n• Arrange a ride or use public transit to arrive by [time]\n• Notify you immediately if there are any changes\n• Make up any missed time as needed\n\nI appreciate your understanding. Please let me know if you have any questions or need anything from me in advance.\n\nSincerely,\n[Your Name]\n[Your Position]"
+                  },
+                  "family": {
+                    "label": "致家人或朋友——请求搭车",
+                    "subject": "",
+                    "body": "Hi [Name],\n\nI hope you're doing well. I'm reaching out because I'm going through a personal situation and my transportation is temporarily affected. I was hoping I could ask for your help getting to [court / work / an appointment] on [date] around [time].\n\nI completely understand if you're not available — no pressure at all. If you are able to help, I would really appreciate it and would be happy to return the favor.\n\nPlease let me know either way. Thank you so much.\n\n[Your Name]"
+                  }
+                },
+                "callScripts": {
+                  "title": "电话沟通脚本",
+                  "description": "如果你需要致电DMV了解驾照状态，以下简单脚本可以引导你的对话。",
+                  "dmv": {
+                    "label": "致电DMV了解驾照情况",
+                    "script": "Hello, my name is [Your Name] and my driver's license number is [license number].\n\nI'm calling to:\n1. Confirm the current status of my license\n2. Find out if there are any pending suspensions or restrictions\n3. Ask about the process to apply for a restricted or hardship license if needed\n\nCould you please look up my record and let me know what my options are?\n\n[If they say a suspension is pending or active:]\nThank you. Can you tell me what steps I need to take, and whether I should submit a hardship license application? Is there a form I can download from your website?"
+                  },
+                  "tips": {
+                    "label": "通话建议",
+                    "items": {
+                      "tip1": "通话前准备好你的驾照号码、社会安全号码和出生日期",
+                      "tip2": "记录他们告诉你的所有内容——询问与你交谈的人的姓名",
+                      "tip3": "要求以书面形式提供任何说明，或告知他们你将在线跟进",
+                      "tip4": "将你了解到的信息告知你的律师——这可能影响案件策略"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "ncmm": {
+                  "description": "交通解决方案的国家资源，包括帮助行动不便人士获取医疗、法律和基本出行的计划。"
+                },
+                "transit": {
+                  "description": "使用Google地图、Transit App或你所在城市的交通网站查找附近的公交和地铁路线。大多数提供实时时刻表和行程规划。"
+                },
+                "unitedWay": {
+                  "description": "拨打或发短信至211，连接当地交通援助计划、志愿驾驶员网络和社区资源。"
+                },
+                "lyft": {
+                  "description": "Lyft的医疗保健交通计划为医疗和法庭预约提供补贴乘车服务。向当地非营利组织或社会工作者询问如何获取。"
+                },
+                "dmv": {
+                  "description": "你所在州的DMV网站是查询驾照状态、申请困难或限制性驾照，以及了解恢复流程的地方。"
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org可以帮助你根据你的情况识别可能符合条件的当地交通援助计划。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "在没有被定罪之前，我的驾照可以被暂停吗？",
+                  "answer": "可以。对于某些指控——尤其是酒驾或与驾驶相关的违规——你的驾照可能在刑事定罪之前由DMV行政暂停。你通常有很短的时间窗口（通常是逮捕后7至10天）申请DMV听证会。如果你面临与驾驶相关的指控，立即联系你的律师。"
+                },
+                "q2": {
+                  "question": "什么是困难或限制性驾照？",
+                  "answer": "限制性驾照允许你在暂停期间仅为特定目的驾车——通常是工作、上学、医疗预约和法庭听证。并非所有州都对所有违规类型提供这种驾照，资格可能取决于你的驾驶记录。你的律师或DMV可以引导你完成申请流程。"
+                },
+                "q3": {
+                  "question": "如果驾车是我工作的一部分怎么办？",
+                  "answer": "如果你的工作需要驾驶——包括送货、网约车或商业货车——暂停可能直接威胁你的生计。立即告知你的律师。对于商业驾照（CDL）持有人，规定更为严格，后果可能更为严重。"
+                },
+                "q4": {
+                  "question": "如果我无法驾车，如何确保我能出庭？",
+                  "answer": "提前计划并准备备用方案。选项包括：网约车应用（Lyft、Uber）、公共交通、可信赖的家庭成员或朋友，或提供交通援助的当地非营利组织。永远不要依赖单一选项。缺席出庭可能导致签发逮捕令，使一切更加困难。"
+                }
+              },
+              "tips": {
+                "tip1": "驾照暂停期间绝对不要驾车——新的指控会使你的处境大幅恶化",
+                "tip2": "告知你的律师任何驾驶限制；这可能影响保释条件或案件策略",
+                "tip3": "致电211询问你社区中针对医疗或法律预约的免费或补贴交通项目",
+                "tip4": "保持网约车应用已下载并充值，作为准时出庭的备用方案"
+              }
+            },
+            "childcare": {
+              "overview": "孩子的安全和稳定是最重要的。本指南帮助你清晰地整理孩子的需求，确认可信赖的照料者，与学校和服务提供者沟通，并确保不遗漏任何重要事项——让你在专注于案件的同时放心孩子得到妥善照顾。",
+              "actions": {
+                "needsSheet": {
+                  "title": "为孩子的照料者创建参考表",
+                  "description": "写下照料者需要了解的所有信息：孩子的药物和剂量、食物和药物过敏、学校时间表、日常作息、紧急联系人、儿科医生姓名和电话，以及任何特殊需求或偏好。将副本放在可及之处并交给照料者。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "confirmCaregiver": {
+                  "title": "确认可信赖的照料者",
+                  "description": "与能够在你不在时接手的人（或几个人）交谈。确保他们理解所需内容，真正愿意且能够提供帮助，并拥有所需的所有信息。同时确定一个备用照料者，以防主要照料者无法到场。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "notifySchool": {
+                  "title": "通知孩子的学校或日托",
+                  "description": "学校和日托需要知道谁被授权接孩子，以及紧急情况下联系谁。尽快更新紧急联系人和授权接人信息。你不需要解释你的法律状况——只需传达后勤信息。",
+                  "priority": "high"
+                },
+                "scheduleAppointments": {
+                  "title": "查看即将到来的医疗和牙科预约",
+                  "description": "查看孩子日历上即将到来的例行检查、随访、治疗预约或疫苗接种。现在安排好，或向照料者说明如何处理。在压力期间错过医疗护理会给你和孩子都带来额外压力。",
+                  "priority": "medium"
+                },
+                "talkToChild": {
+                  "title": "与孩子进行适合年龄的对话",
+                  "description": "孩子会感知到出了什么问题，即使你什么都不说。简短、平静的安慰大有帮助。你不需要分享法律细节——专注于传达这样的信息：他们是安全的、被爱的，生命中的大人在照顾一切。年龄较小的孩子需要非常简单的语言；年龄较大的孩子可能需要稍多一些。",
+                  "priority": "medium"
+                },
+                "knowCustodyRules": {
+                  "title": "了解你的抚养权利和义务",
+                  "description": "如果有抚养令，仔细查阅它对你的要求。任何抚养安排的更改——无论临时与否——都应与另一方家长沟通，最好有律师参与。未经法律指导，不要对正式抚养令做非正式更改。",
+                  "priority": "medium"
+                }
+              },
+              "needsCard": {
+                "sectionTitle": "儿童照顾参考卡",
+                "sectionDescription": "填写此卡并将副本交给孩子的照料者。将这些信息书面记录——而非仅口头传达——在紧急情况下会有很大帮助。",
+                "printInstructions": "打印此卡并手写填写，或将提示内容复制到文档中并以数字方式分享。",
+                "copyButton": "复制模板",
+                "copied": "已复制！",
+                "printButton": "打印卡片",
+                "template": "CHILD CARE REFERENCE CARD\n——————————————————————————\nChild's full name: ___________________________\nDate of birth: ___________________________\nSchool / Daycare name: ___________________________\nGrade / Room: ___________________________\nTeacher / Provider: ___________________________\nSchool phone: ___________________________\n\nPEDIATRICIAN / DOCTOR\nName: ___________________________\nPhone: ___________________________\nHealth insurance carrier: ___________________________\nMember ID / Card location: ___________________________\n\nMEDICATIONS\n(Name, dose, time of day)\n1. ___________________________\n2. ___________________________\n3. ___________________________\n\nALLERGIES\nFood: ___________________________\nMedication: ___________________________\nOther: ___________________________\n\nEMERGENCY CONTACTS (besides parent)\n1. Name: _______________ Relationship: _______________ Phone: _______________\n2. Name: _______________ Relationship: _______________ Phone: _______________\n\nDAILY ROUTINE\nMorning: ___________________________\nAfter school: ___________________________\nBedtime: ___________________________\n\nSPECIAL NOTES\n(IEP, behavioral notes, comfort items, preferences)\n___________________________\n___________________________\n\nPARENT CONTACT\nName: ___________________________\nPhone: ___________________________\nEmail: ___________________________"
+              },
+              "commsSection": {
+                "sectionTitle": "与孩子照料者沟通",
+                "sectionDescription": "这些模板帮助你清晰、专业地更新学校、日托和医疗服务提供者——在保护孩子照顾的同时无需分享你的法律状况细节。",
+                "tipLabel": "建议",
+                "personalizeNote": "发送前，请将[括号内]的文字替换为你自己的信息。",
+                "copyButton": "复制到剪贴板",
+                "copied": "已复制！",
+                "printButton": "打印",
+                "emailTemplates": {
+                  "title": "邮件模板",
+                  "school": {
+                    "label": "致学校——更新紧急联系人",
+                    "subject": "Subject: Emergency Contact Update — [Child's Full Name], Grade [X]",
+                    "body": "Dear [Teacher's Name / School Office],\n\nI am writing to update the emergency contact information for my child, [Child's Full Name] (Grade [X], in [Teacher's Name]'s class).\n\nEffective immediately, the primary emergency contact should be:\n\nName: [Caregiver's Full Name]\nRelationship to child: [e.g., grandmother, aunt, family friend]\nPhone: [Caregiver's phone number]\nEmail: [Caregiver's email]\n\n[Caregiver's Full Name] is also authorized to pick up [Child's Name] from school.\n\nIf you are unable to reach me, please contact [Caregiver's Name] directly. I remain available at [your phone number] and will do my best to respond promptly.\n\nThank you for your care and attention to [Child's Name]. Please let me know if there are any forms I need to complete.\n\nSincerely,\n[Your Name]\n[Your Phone Number]"
+                  },
+                  "daycare": {
+                    "label": "致日托——临时照料者安排",
+                    "subject": "Subject: Temporary Caregiver Update — [Child's Name]",
+                    "body": "Dear [Caregiver's Name / Director's Name],\n\nI hope this message finds you well. I wanted to let you know that [Child's Name] will be dropped off and/or picked up by [Caregiver's Full Name] ([relationship, e.g., aunt]) for the next [time period, e.g., two to four weeks].\n\n[Caregiver's Full Name] is fully authorized to:\n• Drop off and pick up [Child's Name]\n• Receive updates about [Child's Name]'s day\n• Make decisions regarding [Child's Name]'s care if I cannot be reached\n\nThey can be reached at: [Caregiver's phone] / [Caregiver's email]\n\n[Child's Name]'s routine, dietary needs, and any special instructions remain the same. I have shared all relevant information with [Caregiver's Name] to ensure a smooth transition.\n\nI am reachable at [your phone number / email] for any questions. Thank you for your continued care — it means a great deal to me.\n\nSincerely,\n[Your Name]"
+                  },
+                  "doctor": {
+                    "label": "致儿科医生——授权照料者",
+                    "subject": "Subject: Authorized Representative for [Child's Name]'s Care — [Your Name]",
+                    "body": "Dear [Doctor's Name / Office Staff],\n\nI am writing to inform you that I have authorized [Caregiver's Full Name] ([relationship to child, e.g., grandmother]) to accompany my child [Child's Full Name] (Date of Birth: [DOB]) to medical appointments and to consent to routine care on my behalf during my temporary unavailability.\n\n[Caregiver's Name] can be reached at: [phone] / [email]\n\nPlease update your records accordingly. If a signed authorization form is required, please send it to me at [your email / mailing address] and I will return it as quickly as possible.\n\nThank you for the wonderful care you provide to [Child's Name]. I appreciate your flexibility during this time.\n\nSincerely,\n[Your Name]\n[Your Phone Number]\n[Your Email]"
+                  }
+                }
+              },
+              "resources": {
+                "childCareAware": {
+                  "description": "帮助家庭寻找优质、经济实惠的儿童照顾的全国性非营利组织。搜索你所在地区的服务提供者并了解经济援助选项。"
+                },
+                "childWelfare": {
+                  "description": "美国政府资源中心，为家庭提供儿童福利、寄养及困难时期育儿的指导。"
+                },
+                "unitedWay": {
+                  "description": "拨打或发短信至211，连接当地紧急儿童照顾转介、家庭支持服务和社区资源。"
+                },
+                "headStart": {
+                  "description": "联邦资助的早期儿童计划，为符合条件的0至5岁儿童提供免费教育、健康和家庭支持服务。"
+                },
+                "parentHelp": {
+                  "description": "全国家长支持和危机帮助热线，为压力下的家庭提供资源。受训专家可为你连接当地服务。"
+                },
+                "childSupport": {
+                  "description": "你所在州的子女抚养费执行机构可提供有关义务、修改和执行的信息，如果子女抚养费是一个问题的话。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "我需要告诉孩子的学校我的法律状况吗？",
+                  "answer": "你没有义务与孩子的学校分享你法律案件的细节。重要的是保持紧急联系人和授权接人信息的更新，确保孩子始终安全得到照顾。只需简单地更新学校办公室即可。"
+                },
+                "q2": {
+                  "question": "如果我与另一方共同抚养怎么办？",
+                  "answer": "任何对抚养或探视安排的更改都应遵循你现有的抚养令，并最好与共同抚养方沟通。在没有首先咨询律师的情况下，不要对正式抚养安排做非正式更改——这样做可能产生意想不到的法律后果。"
+                },
+                "q3": {
+                  "question": "我的逮捕或指控会影响我的抚养权吗？",
+                  "answer": "取决于指控的性质和你的现有安排。主动确保孩子得到妥善照顾和日常生活维持正常，可以体现负责任的育儿行为。如果你担心抚养权影响，请咨询家庭法律师。你的公设辩护人处理刑事案件，但可能能够为你转介。"
+                },
+                "q4": {
+                  "question": "如果我的孩子有特殊医疗或发育需求怎么办？",
+                  "answer": "确保你的照料者有书面说明、当前用药、孩子的个别教育计划（IEP）或护理计划（如适用）、紧急程序，以及所有医疗服务提供者的联系信息。考虑起草一封签署的医疗授权书，使照料者能够在紧急情况下同意护理。孩子的医生办公室可以建议他们需要什么形式的授权。"
+                }
+              },
+              "tips": {
+                "tip1": "给照料者书面说明——而非仅口头交代——这样在压力时刻不会遗忘任何事情",
+                "tip2": "将孩子保险卡和关键文件的备用副本交给照料者",
+                "tip3": "让你的律师知道你有年幼的孩子——这可能与保释条件、量刑及可用的支持服务相关",
+                "tip4": "尽可能维持孩子的日常生活规律，是你能为他们的安全感做的最好事情之一",
+                "tip5": "如果你担心儿童福利介入，提早与你的律师交谈——他们可以帮助你了解你的权利以及可以采取哪些主动措施"
+              }
+            },
+            "housing": {
+              "overview": "法律案件可能通过错过房租、租约问题或对未来的担忧，对你的住所造成真实的不确定性。但你拥有的权利和选择，可能比你现在感觉到的要多。本指南帮助你了解自己的处境，与支持网络中的人进行诚实的对话，并联系能够提供实际帮助的组织。",
+              "actions": {
+                "reviewLease": {
+                  "title": "阅读租约并了解你的权利",
+                  "description": "仔细查阅你的租约——尤其是任何关于刑事指控或定罪的条款。仅仅被逮捕通常不是驱逐的理由。大多数租约要求实际定罪，即便如此，房东也必须遵循正式法律程序。了解租约的实际内容，会让你处于更有利的地位。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "talkLandlord": {
+                  "title": "提前解决任何租金困难——提早联系房东",
+                  "description": "如果你预计因收入损失或法律费用而错过或延迟支付租金，在发生之前主动联系。主动沟通的租客比沉默不语的租客更容易获得房东的配合。一条简短、诚实的信息，解释暂时的经济困难——不透露法律细节——可以开启分期付款计划或宽限期的谈判。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "knowEvictionProcess": {
+                  "title": "了解驱逐程序——这需要时间，而且你有权利",
+                  "description": "收到逾期通知甚至驱逐通知并不是终点。未经法院命令，房东不能驱逐你、更换锁具或切断水电。你有权回应任何驱逐申请，并在听证会前寻求法律帮助。在了解你的选择之前，不要自愿离开。",
+                  "priority": "high"
+                },
+                "talkNetwork": {
+                  "title": "向你个人网络中的人求助",
+                  "description": "可信赖的家庭成员或朋友可能能够提供帮助——临时住所、协助支付房租或在你解决问题期间给予精神支持。许多人想帮忙，但不知道如何主动提出。明确说明你需要什么，让他们更容易说是。下面的模板可以帮助你体面地开始这些对话。",
+                  "priority": "medium"
+                },
+                "applyAssistance": {
+                  "title": "申请紧急租房援助计划",
+                  "description": "许多城市、县和非营利组织设有紧急租房援助基金。致电211或访问211.org查找你附近的计划。尽早申请——许多计划资金有限，有等待名单。你不需要收到驱逐通知才能申请。",
+                  "priority": "medium"
+                },
+                "tenantLegalAid": {
+                  "title": "联系房客法律援助组织",
+                  "description": "如果面临驱逐威胁或已收到驱逐申请，可能有免费或低价的法律帮助。房客律师可以就你的权利提供建议，帮助你回应驱逐申请，并在听证会上代表你。许多法律援助组织优先处理住房案件，因为稳定的住房是一切的基础。",
+                  "priority": "medium"
+                }
+              },
+              "networkSection": {
+                "sectionTitle": "与支持网络交谈",
+                "sectionDescription": "寻求帮助可能很困难——但你生命中的大多数人都希望支持你，只需要知道如何做。这些模板为你提供开口点，开展诚实、有尊严的关于你现在需要什么的对话。",
+                "tipLabel": "记住",
+                "personalizeNote": "发送前，请将[括号内]的文字替换为你自己的详细信息。你不需要分享你的法律案件信息——专注于实际需求。",
+                "copyButton": "复制到剪贴板",
+                "copied": "已复制！",
+                "printButton": "打印",
+                "emailTemplates": {
+                  "title": "书面信息",
+                  "friendFamily": {
+                    "label": "致家人或朋友——寻求临时支持",
+                    "subject": "Subject: Going through a hard time — would love your support",
+                    "body": "Hi [Name],\n\nI hope you're doing well. I'm reaching out because I'm going through a difficult personal situation right now and could really use some support.\n\nI wanted to ask if [you might have a spare room I could stay in for a few weeks / you'd be able to help me with rent this month / we could talk soon about my options]. I understand completely if that's not possible — I just wanted to ask someone I trust.\n\nI'm doing my best to work through this and I have a plan, but things are tight right now. Any help would mean a lot.\n\nI'm happy to talk more over the phone or in person if that's easier. And of course, if there's ever anything I can do for you, please don't hesitate to ask.\n\nThank you for being in my life.\n\n[Your Name]"
+                  },
+                  "landlordHardship": {
+                    "label": "致房东——提前告知临时经济困难",
+                    "subject": "Subject: Temporary Financial Difficulty — [Your Unit/Address]",
+                    "body": "Dear [Landlord's Name / Property Manager],\n\nI'm writing to let you know that I am going through a temporary financial hardship and wanted to be upfront with you about my situation rather than letting it become a problem without communication.\n\nI have always made an effort to pay on time and I intend to honor my obligations under our lease. I am currently [working to resolve the situation / pursuing assistance / expecting things to stabilize by approximately (date)].\n\nI would like to ask whether we could discuss a short-term arrangement — such as a brief grace period or a temporary payment plan — while I work through this. I am committed to making things right and want to handle this responsibly.\n\nI can be reached at [your phone number] or [your email] and am happy to talk at your convenience. Thank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Unit Number / Address]\n[Date]"
+                  },
+                  "landlordPaymentPlan": {
+                    "label": "致房东——申请正式分期付款计划",
+                    "subject": "Subject: Request for Payment Plan — [Your Unit/Address]",
+                    "body": "Dear [Landlord's Name / Property Manager],\n\nI am writing to formally request a payment plan for [the amount owed / my upcoming rent] due to a temporary financial hardship I am currently navigating.\n\nI am proposing the following arrangement:\n• [Date]: Payment of $[amount]\n• [Date]: Payment of $[amount]\n• [Date]: Remaining balance of $[amount]\n\nI am committed to this plan and to maintaining my tenancy in good standing. I would appreciate your written agreement to this arrangement so that we both have a clear record.\n\nThank you for your willingness to work with me. I value my tenancy here and want to resolve this in a way that works for both of us. Please feel free to contact me at [your phone / email] if you would like to discuss further.\n\nSincerely,\n[Your Name]\n[Your Unit Number / Address]\n[Date]"
+                  }
+                },
+                "callScripts": {
+                  "title": "电话沟通脚本",
+                  "description": "有时打电话比发书面信息更容易。这些脚本提供框架，让你不必临时想该说什么。",
+                  "network": {
+                    "label": "致电家人或朋友",
+                    "script": "Hi [Name], do you have a few minutes to talk?\n\nI'm going through a difficult time right now — I don't want to get into all the details, but things are challenging financially and I'm working through it.\n\nI wanted to reach out to someone I trust. I was hoping to ask if [you might have space for me to stay temporarily / there's any way you could help me with rent / we could sit down and talk through some options together].\n\nI completely understand if you're not in a position to help — I just didn't want to not ask. You're someone I trust and I know I'd want to know if the situation were reversed.\n\n[Pause and listen]\n\nThank you for listening. It means a lot."
+                  },
+                  "landlord": {
+                    "label": "致电房东",
+                    "script": "Hi, this is [Your Name] calling from unit [number / your address]. Is this a good time to talk for a few minutes?\n\nI wanted to call you directly because I believe in being upfront. I'm going through a temporary personal situation and I'm concerned about [this month's rent / an upcoming payment]. I didn't want to just go quiet — I wanted to communicate with you early.\n\nI'm hoping we can work something out — even a brief extension or a payment plan — while I get things sorted. I've been a reliable tenant and I want to stay that way.\n\nWould you be open to discussing options? I can also follow up in writing with a specific proposal if that would be helpful."
+                  },
+                  "tips": {
+                    "label": "致电前的建议",
+                    "items": {
+                      "tip1": "通话前写下你想说的关键点——这有助于你保持冷静和清晰",
+                      "tip2": "你不需要向任何人解释你的法律状况——专注于实际需求",
+                      "tip3": "如果房东拒绝分期付款计划，询问你的选择——并以书面形式跟进",
+                      "tip4": "与房东的任何通话后，发一封简短的邮件总结所讨论的内容——这可以创建记录"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "unitedWay": {
+                  "description": "拨打或发短信至211，连接当地紧急租房援助计划、水电费帮助和住房服务。这是找到当地可用资源最快的方式。"
+                },
+                "era": {
+                  "description": "联邦紧急租房援助计划通过地方政府和非营利组织分配资金。使用HUD定位器查找服务你所在地区的计划。"
+                },
+                "nlihc": {
+                  "description": "全国低收入住房联盟提供按州整理的租房援助计划和住房权利资源指南。"
+                },
+                "hud": {
+                  "description": "HUD批准的住房顾问提供免费或低价的租房援助、避免驱逐和应对住房挑战的建议。在全国范围内提供。"
+                },
+                "tenantLegal": {
+                  "description": "许多地区为驱逐辩护提供免费房客法律援助。搜索'tenant legal aid'加上你所在城市，或联系当地法律援助协会。"
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org帮助你识别可能符合条件的联邦、州和地方计划——包括住房援助、水电费帮助和食物支持。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "房东可以因为我被逮捕而驱逐我吗？",
+                  "answer": "在大多数情况下，仅仅被逮捕不是驱逐的有效理由。大多数租约要求刑事定罪，即便如此，也只有当其与影响房产或其他租客的行为有关时才适用。房东必须通过法院遵循正式驱逐程序——未经法院命令，他们不能驱逐你、更换锁具或切断水电。查阅你的租约并在收到任何通知时联系房客法律援助组织。"
+                },
+                "q2": {
+                  "question": "我已经拖欠房租了。现在还来得及获得帮助吗？",
+                  "answer": "还来得及。同时联系房东并寻找租房援助。许多房东更倾向于制定付款计划，而不是漫长的驱逐过程。即使在发出逾期通知后，紧急租房援助计划也可能提供帮助。今天就致电211，了解你所在地区有哪些资源——越早行动，选择越多。"
+                },
+                "q3": {
+                  "question": "我收到了驱逐通知。我必须离开吗？",
+                  "answer": "不必。驱逐通知是开始一个法律程序的通知——不意味着你必须立即离开。你有权在法庭上回应驱逐申请、申请听证会，并在法院命令签发前寻求法律援助。许多案件在法院命令签发前通过付款计划或谈判解决。在了解你的选择之前，不要自愿离开。尽快联系房客法律援助组织。"
+                },
+                "q4": {
+                  "question": "房东可以因为我的指控而拒绝租给我或拒绝我的申请吗？",
+                  "answer": "可能，但保护措施因地而异。许多辖区有限制房东考虑犯罪记录的法律——例如，限制考虑逮捕记录与定罪的区别，或要求个别评估。HUD准则限制联邦援助住房的犯罪记录筛查。当地房客法律援助组织可以告知你所在地区适用哪些保护措施。"
+                }
+              },
+              "tips": {
+                "tip1": "始终以书面形式与房东沟通——电子邮件即可——这样你就有了所说所议的记录",
+                "tip2": "将所有租金收据、付款确认和租约的副本保存在安全的地方",
+                "tip3": "如果你收到房东的任何通知，回应它——忽视它会导致缺席判决，使情况更加困难",
+                "tip4": "紧急租房援助计划往往资金有限——一旦知道可能需要帮助就尽早申请，而不是等到已经拖欠之后",
+                "tip5": "寻求帮助是力量的表现，而非软弱——你生命中的大多数人都希望在了解需求后支持你"
+              }
+            },
+            "familyCare": {
+              "overview": "如果你是年迈父母、残疾家庭成员或其他被赡养人的主要照顾者，你的法律状况不会改变他们的需求——但可能会影响你满足这些需求的能力。本指南帮助你整理被赡养人的护理需求，从个人网络中获得支持，清晰地与服务提供者沟通，寻找社区资源——让你在应对案件的同时放心所关心的人得到妥善照顾。",
+              "actions": {
+                "needsSheet": {
+                  "title": "写下被赡养人的护理需求",
+                  "description": "创建一份书面参考资料，涵盖另一个照顾者需要了解的所有内容：日常援助需求、药物和剂量、饮食要求、行动或认知需求、预约安排、紧急联系人和保险信息。这份文件是你能准备的最重要的东西——它是让别人真正能够接手的关键。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "identifyCaregiver": {
+                  "title": "确认能够接手的人",
+                  "description": "想想你生命中谁——兄弟姐妹、其他家庭成员、亲密朋友或邻居——可以承担临时照顾角色。与他们直接交谈，了解这个角色的要求以及他们是否愿意且能够承担。具体说明。确定第二个人作为备用。人们通常想帮忙，但需要被明确请求。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "notifyProviders": {
+                  "title": "通知被赡养人的医疗服务提供者任何变化",
+                  "description": "医生、家庭健康助理、物理治疗师、日间项目协调员和药房工作人员需要知道谁现在是联系人，谁被授权做出护理决定。你不需要分享你的法律状况——一封简单的信息说明临时照顾者变更就足够了。",
+                  "priority": "high"
+                },
+                "contactAAA": {
+                  "title": "联系当地老龄服务区域机构",
+                  "description": "老龄服务区域机构（AAA）是专门为家庭连接家庭健康助理、送餐、交通、成人日间项目、临时护理等资源的地方组织。它们专门为你这样的情况而设计。致电211或老年人照护定位服务（1-800-677-1116）找到你当地的AAA。",
+                  "priority": "medium"
+                },
+                "respiteCare": {
+                  "title": "询问临时护理计划",
+                  "description": "临时护理为你的被赡养人提供临时的专业护理，让另一个照顾者可以暂时休息。部分计划提供上门临时护理；其他提供在成人日间中心或护理设施的短期住留。许多计划是免费或补贴的。你当地的AAA可以帮助你找到可用的资源。",
+                  "priority": "medium"
+                },
+                "legalDocuments": {
+                  "title": "审查你持有的任何法律授权文件",
+                  "description": "如果你持有被赡养人的委托书、监护权，或是代表收款人或福利管理人，了解这些文件授权的内容——并与律师讨论如果你暂时不那么可用时是否需要任何应急步骤。在大多数情况下这些仍然有效，但值得确认。",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "就护理变化进行沟通",
+                "sectionDescription": "这些模板帮助你向家人和朋友寻求帮助，并更新护理提供者——清晰而无需分享你的法律状况细节。",
+                "tipLabel": "记住",
+                "personalizeNote": "发送前，请将[括号内]的文字替换为你自己的详细信息。你不需要向任何人解释你的法律状况——专注于照料者或提供者需要了解的内容。",
+                "copyButton": "复制到剪贴板",
+                "copied": "已复制！",
+                "printButton": "打印",
+                "emailTemplates": {
+                  "title": "书面信息",
+                  "primaryHelper": {
+                    "label": "致家庭成员——请求接手",
+                    "subject": "Subject: Need your help with [Mom's / Dad's / Name's] care",
+                    "body": "Hi [Name],\n\nI hope you're doing well. I'm reaching out because I'm going through a difficult personal situation and I need help making sure [Mom / Dad / Name] is well taken care of while I work through it.\n\nI was hoping you'd be willing to take on the primary caregiving role temporarily — [for the next few weeks / starting around (date)]. Here's what that would look like day-to-day:\n\n• [Key daily task, e.g., making sure they take their medications at 8am and 8pm]\n• [Key daily task, e.g., preparing or picking up meals]\n• [Key daily task, e.g., driving to physical therapy on Tuesdays]\n• I'll put together a full written reference with all the details, contacts, and routines\n\nI know this is a significant ask. I wouldn't ask if I didn't trust you completely and if I had another option. Please let me know if we can talk — even a short call would help me feel like things are covered.\n\nThank you for being someone I can turn to.\n\n[Your Name]"
+                  },
+                  "secondaryHelper": {
+                    "label": "致其他家庭成员——寻求支持性角色",
+                    "subject": "Subject: Could you help out with [Name] while I handle something?",
+                    "body": "Hi [Name],\n\nI'm going through a difficult stretch right now and I'm trying to make sure [Mom / Dad / Name] has solid coverage while I deal with it.\n\n[Other family member's name] is stepping in as the main caregiver, but I'm hoping you might be able to help with a few specific things:\n\n• [Specific task, e.g., stopping by on weekends]\n• [Specific task, e.g., picking up prescriptions when needed]\n• [Specific task, e.g., being a backup contact if something comes up]\n\nI've put together a written reference with all of [Name]'s routines, medications, and contacts that I'll share with you. I just want to make sure there's a solid support system in place.\n\nI know your time is valuable and I'm grateful for whatever you can offer.\n\n[Your Name]"
+                  },
+                  "provider": {
+                    "label": "致医疗服务提供者——通知临时护理变化",
+                    "subject": "Subject: Temporary Change in Caregiver Contact — [Dependent's Full Name]",
+                    "body": "Dear [Doctor's Name / Provider / Care Coordinator],\n\nI am writing to let you know that I will be temporarily less available to serve as the primary caregiver and contact for [Dependent's Full Name] (Date of Birth: [DOB]).\n\nEffective [date], the temporary primary contact for [Dependent's Name]'s care will be:\n\nName: [Caregiver's Full Name]\nRelationship: [e.g., sibling, adult child, family friend]\nPhone: [Caregiver's phone]\nEmail: [Caregiver's email]\n\n[Caregiver's Name] is authorized to:\n• Attend appointments with [Dependent's Name]\n• Receive medical information and updates\n• Make routine care decisions on [Dependent's Name]'s behalf\n\nI remain reachable at [your phone / email] for anything that requires my direct involvement. Please update your records accordingly. If a signed authorization form is required, please send it to me at [your email] and I will return it promptly.\n\nThank you for the care you provide to [Dependent's Name].\n\nSincerely,\n[Your Name]\n[Your Phone]\n[Your Email]"
+                  }
+                },
+                "callScripts": {
+                  "title": "电话沟通脚本",
+                  "description": "这些脚本为你提供两个最重要的电话的出发点。",
+                  "family": {
+                    "label": "致电家庭成员寻求帮助",
+                    "script": "Hi [Name], do you have a few minutes? I need to talk to you about something important.\n\nI'm going through a difficult personal situation and I'm worried about making sure [Mom / Dad / Name] is properly cared for while I deal with it.\n\nI want to ask if you'd be willing to step in as the primary caregiver — or at least be a main support — for [a few weeks / starting around (date)]. I know it's a lot to ask. I'd put together everything in writing so you'd have all the information you need.\n\n[Pause and give them space to respond]\n\nI completely understand if this isn't possible right now. Even knowing who might be available would help me figure out the plan. Is there anyone else in the family you think might be able to help?\n\nI just want [Name] to be taken care of, and you're someone I trust."
+                  },
+                  "aaa": {
+                    "label": "致电老龄服务区域机构（或211）",
+                    "script": "Hello, my name is [Your Name] and I'm calling because I'm the primary caregiver for [my mother / my father / a family member] and I'm going through a personal situation that may temporarily affect my ability to provide care.\n\nI'm trying to understand what services or programs might be available to help with:\n• [Home health aide / in-home care support]\n• [Meal delivery]\n• [Transportation to medical appointments]\n• [Temporary respite care]\n\nCan you tell me what programs are available in [city/county] and whether my [family member] might qualify?\n\n[Take notes on what they say and ask for any relevant phone numbers or websites]"
+                  },
+                  "tips": {
+                    "label": "致电前的建议",
+                    "items": {
+                      "tip1": "准备好被赡养人的基本信息：姓名、年龄、健康状况和当前护理需求",
+                      "tip2": "你不需要向护理机构解释你的法律状况——你可以简单地说你是需要临时支持的照顾者",
+                      "tip3": "具体询问浮动收费、医疗补助覆盖和免费项目——费用差异很大",
+                      "tip4": "在有益的通话后，询问他们是否可以通过电子邮件发送信息——这有助于你记住并与他人分享"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "eldercareLocator": {
+                  "description": "免费的全国性服务，将照顾者与当地老龄服务区域机构连接，提供家庭护理、送餐计划、交通、成人日间服务和照顾者支持。"
+                },
+                "aarp": {
+                  "description": "AARP照顾者支持热线为照顾者提供免费的一对一支持、指导和转介。"
+                },
+                "can": {
+                  "description": "照顾者行动网络为各类护理情况下的家庭照顾者提供教育、同伴支持和资源连接。"
+                },
+                "archRespite": {
+                  "description": "全国临时护理网络帮助照顾者找到当地临时护理计划——为你的被赡养人提供临时护理，让你能够处理自己的需求。"
+                },
+                "unitedWay": {
+                  "description": "拨打或发短信至211，连接当地家庭健康、送餐、交通和照顾者支持计划。这是找到你附近可用资源最快的方式。"
+                },
+                "benefits": {
+                  "description": "BenefitsCheckup.org帮助你识别被赡养人可能符合条件的计划——包括医疗补助家庭护理、餐饮援助和水电费支持。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "如果我是唯一能照顾被赡养人的人怎么办？",
+                  "answer": "你现在感觉到的并不像实际那么孤立无援。老龄服务区域机构、211和社区非营利组织的存在，正是为了在主要照顾者遇到中断时介入。医疗补助可能覆盖家庭助理服务。临时护理计划可以提供短期专业护理。从致电211或老年人照护定位服务（1-800-677-1116）开始——他们可以梳理出当地有哪些资源。"
+                },
+                "q2": {
+                  "question": "我需要告诉护理提供者我的法律状况吗？",
+                  "answer": "不需要。护理提供者——医生、家庭健康助理、日间项目协调员——不需要了解你的法律状况。他们需要的是实际更新：临时联系人是谁，谁被授权接收信息和做出决定，以及护理例行是否有任何变化。一封简短、实际的信件或电话就足够了。"
+                },
+                "q3": {
+                  "question": "如果我的被赡养人领取的福利由我管理怎么办？",
+                  "answer": "如果你是社会保障福利的代理收款人、医疗补助授权代表，或代表被赡养人管理其他政府福利，请与律师讨论相关影响。在大多数情况下，这些安排保持不变，但如果你的可用性发生重大变化，制定应急计划可能值得考虑。"
+                },
+                "q4": {
+                  "question": "我持有被赡养人的委托书。我的法律案件会影响它吗？",
+                  "answer": "在大多数情况下，委托书在你自己的法律状况不受影响的情况下保持有效，除非法院特别裁定。但你应该根据你的具体文件和辖区向律师确认这一点。如果有任何不确定性，律师可以就是否应设立备用代理人或替代安排提供建议。"
+                }
+              },
+              "tips": {
+                "tip1": "写下关于被赡养人护理的所有内容——日常、偏好、特点、触发因素——这样接手的人可以做好工作并充满信心",
+                "tip2": "有书面清晰说明的临时照顾者比需要边走边摸索的照顾者效果好得多",
+                "tip3": "致电211或老年人照护定位服务查找当地服务——他们专门处理这类情况，通常可以快速行动",
+                "tip4": "让你的律师知道你是主要照顾者——这可能与保释条件、听证会安排和量刑考量相关",
+                "tip5": "即使在艰难时期继续照顾被赡养人，是值得骄傲的事情——为他们的护理制定计划，是你目前能做的最负责任的事情之一"
+              }
+            },
+            "reputation": {
+              "overview": "指控——即使是未决的——可能让你感觉在外界眼中被定义了。其实不然。你不是你的指控，许多人在经历这一过程后，关系、职业和社区都完好无损。本指南帮助你了解你公开记录中实际有什么，掌控你选择进行的对话，并为长期保护和重建声誉制定计划。",
+              "actions": {
+                "controlNarrative": {
+                  "title": "决定告诉谁——以及说什么",
+                  "description": "你没有义务向任何人披露你的指控。有意识地选择信任的对象，可以保护你免受谣言影响，让你建立一个了解全貌的支持网络。有选择性地、有目的性地分享——与会支持你的亲密朋友和家人，而非流言蜚语者。下面的模板可以帮助你按照自己的方式开始这些对话。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "understandRecord": {
+                  "title": "了解你的公开记录中现在实际有什么",
+                  "description": "逮捕记录可能出现在背景调查中，也可能不出现，取决于你所在的州。未决指控不等于定罪。许多州限制雇主考虑未导致定罪的逮捕记录。准确了解什么会显示出来——以及你所在州的法律对此有何规定——让你在被询问时能够准确自信地回应。",
+                  "timeframe": "本周",
+                  "priority": "high"
+                },
+                "socialMedia": {
+                  "title": "暂停并审查你的社交媒体",
+                  "description": "任何公开发布的内容都可能被找到、截图并被误解。在案件期间，避免发布关于情况、你的沮丧情绪或任何情绪激动内容的帖子。审查你现有的帖子和隐私设置。你的律师应该就任何具体问题提供建议——但一般规则是：如有疑虑，不要发布。",
+                  "priority": "high"
+                },
+                "prepareResponse": {
+                  "title": "准备一个冷静、简短的回应",
+                  "description": "在职业场合——背景调查、雇主询问或执照披露——准备好一个平和、客观的回应远比被问个措手不及要好。你不需要过度解释。说明你的案件正在等待审判、你正在负责任地处理，通常就足够了。下面的脚本可以帮助你练习。",
+                  "priority": "medium"
+                },
+                "documentPositives": {
+                  "title": "收集体现你积极品格的文件",
+                  "description": "就业记录、绩效评估、志愿者参与、社区联系、奖项和品格证明，对你的案件和长期声誉都很重要。现在是开始收集它们的好时机。来自了解你的人的品格证明信，对法官和雇主都可能产生真实的影响。",
+                  "priority": "medium"
+                },
+                "planRecordRelief": {
+                  "title": "为案件结束后的记录救济做计划",
+                  "description": "取决于你的结果和所在州，案件解决后你可能有资格申请消除记录、封存记录或其他形式的记录清除。这些可以有意义地限制未来背景调查中显示的内容。提早询问你的律师，或联系法律援助组织——许多提供免费记录清除服务。",
+                  "priority": "medium"
+                }
+              },
+              "commsSection": {
+                "sectionTitle": "处理这些对话",
+                "sectionDescription": "最难的时刻有时不在法庭上——而是当你认识的人发现时。这些模板为你提供未预料到的对话所需的语言，让你不必临时寻找措辞。",
+                "tipLabel": "记住",
+                "personalizeNote": "你控制分享多少内容以及与谁分享。这些模板只是起点——根据你的舒适度和与对方的关系调整细节程度。",
+                "copyButton": "复制到剪贴板",
+                "copied": "已复制！",
+                "printButton": "打印",
+                "emailTemplates": {
+                  "title": "书面信息",
+                  "closeFriend": {
+                    "label": "致亲密朋友——按你自己的方式告知",
+                    "subject": "Subject: Something I wanted you to hear from me directly",
+                    "body": "Hi [Name],\n\nI wanted to reach out because I'd rather you hear this from me than through someone else.\n\nI'm dealing with a legal matter right now. I'm not going to go into all the details, but I want you to know that I'm taking it seriously and working through it with my attorney. This has been one of the hardest periods of my life and I'm doing my best to handle it responsibly.\n\nI'm not looking for pity — I just didn't want there to be a wall between us, and I trust you. If you have questions, I'm happy to talk, though there are limits to what I can share right now.\n\nMost of all, I just wanted you to know. Having people in my corner means everything.\n\n[Your Name]"
+                  },
+                  "professional": {
+                    "label": "致雇主或背景调查询问的书面回应",
+                    "subject": "Subject: Regarding Background Check Results — [Your Name]",
+                    "body": "Dear [Hiring Manager / HR Department],\n\nI am writing to address the pending legal matter that may appear in my background check results.\n\nI want to be transparent: I am currently facing [a charge / charges] that I am contesting with the assistance of legal counsel. The matter is unresolved and I am not able to share specifics at this time. I want to emphasize that this is a pending case — not a conviction — and I am committed to resolving it through the proper legal process.\n\nI have consistently performed [at a high level / with integrity / responsibly] in my professional life and I am happy to provide references who can speak to my character and work ethic. I would welcome the opportunity to discuss this further if you feel it is necessary.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]"
+                  },
+                  "mugshot": {
+                    "label": "申请从网站删除照片或记录",
+                    "subject": "Subject: Removal Request — [Your Full Name] — [Date of Arrest]",
+                    "body": "To Whom It May Concern,\n\nI am writing to formally request the removal of my personal information and photograph from your website.\n\nName: [Your Full Name]\nDate of birth: [DOB]\nDate of arrest: [Date]\nURL of the page containing my information: [URL]\n\nThis listing is causing significant harm to my professional and personal reputation. [If applicable: My state's law (cite state, e.g., California Civil Code § 1798.91.1) requires the removal of this content upon request without a fee.]\n\nI request that you remove this content within [30 days / the timeframe required by law]. Please confirm receipt of this request and the expected removal date.\n\nIf you require any additional information, please contact me at [your email / phone].\n\nSincerely,\n[Your Full Name]\n[Your Contact Information]"
+                  }
+                },
+                "callScripts": {
+                  "title": "对话脚本",
+                  "description": "这些为你提供一些最不舒适的对话框架——让你有所准备，而非被打个措手不及。",
+                  "unexpected": {
+                    "label": "当有人意外提起时",
+                    "script": "如果同事、熟人或不太熟的人提起：\n\n\"我很感激你提到这件事。这是我正在处理的情况，我真的不想深入细节——但我还好，正在认真对待。我希望这件事就留在我们之间。\"\n\n——或者，如果你想快速结束——\n\n\"我现在真的无法谈论这件事。希望你理解。\"\n\n你不欠任何人解释。冷静、简短的回应表明你沉着，而非邀请进一步讨论。"
+                  },
+                  "interview": {
+                    "label": "在工作面试或与雇主交谈时说明情况",
+                    "script": "如果被直接问及背景调查结果或指控：\n\n\"是的，有一个我想直接说明的未决法律事项。这是一个我正在通过法律途径争辩的公开案件——尚未解决，目前没有定罪。我致力于通过适当的法律程序处理它。\n\n我可以告诉你的是，这并不反映我在职业或个人生活中的行为方式，我很乐意提供能够证明这一点的参考人。我不想让这成为你的意外，我很感激有机会直接说明。\"\n\n然后停顿。让他们回应。不要过度解释。"
+                  },
+                  "tips": {
+                    "label": "所有这些对话的原则",
+                    "items": {
+                      "tip1": "简短和冷静始终比冗长和防御性更有效——过度解释可能使情况更糟",
+                      "tip2": "你永远不必分享超出你舒适范围的内容——'我现在无法详细说明'是一个完整的句子",
+                      "tip3": "指控是指控，不是定罪——你有权清晰准确地这样说",
+                      "tip4": "对话结束后，写下所说的内容和时间——尤其是在可能日后相关的职业场合"
+                    }
+                  }
+                }
+              },
+              "resources": {
+                "recordClear": {
+                  "description": "许多州提供免费法律援助用于消除记录和清除犯罪记录。按州搜索提供免费记录救济服务的组织。"
+                },
+                "nelp": {
+                  "description": "全国就业法律项目发布按州整理的'禁止询问犯罪记录'法律和雇主在招聘决定中使用犯罪记录的限制指南。"
+                },
+                "eeoc": {
+                  "description": "EEOC就雇主何时可以及不可以根据联邦反歧视法律使用犯罪背景调查结果提供指导。"
+                },
+                "mugRemoval": {
+                  "description": "许多州现在要求照片网站应要求删除照片，通常不收取费用。搜索'[你的州] mugshot removal law'了解流程和是否可以收取费用。"
+                },
+                "repDefender": {
+                  "description": "在线声誉管理服务可以帮助压制或删除有害搜索结果。费用不同——免费选项包括直接向网站和搜索引擎提出请求。"
+                },
+                "lawHelp": {
+                  "description": "LawHelp.org按州连接你与消除记录、封存记录和其他案件后记录救济的免费法律援助。"
+                }
+              },
+              "faq": {
+                "q1": {
+                  "question": "我的逮捕是公开记录吗？任何人都能看到吗？",
+                  "answer": "在大多数州，逮捕记录在技术上是公开的，但实际上在背景调查中显示什么差异很大。许多背景调查公司不报告超过一定年限或未导致定罪的逮捕记录。此外，许多州有法律限制雇主询问或考虑未导致定罪的逮捕记录。查阅你所在州的具体法律——法律援助组织可以帮助你了解适用于你的内容。"
+                },
+                "q2": {
+                  "question": "我可以消除或封存我的记录吗？",
+                  "answer": "可能——值得了解一下。资格取决于指控、案件结果、经过的时间和你所在州的法律。许多州允许对撤销的指控、初次违规或通过转处计划解决的案件申请消除记录。许多法律援助组织提供免费的消除记录诊所。提早询问你的律师关于你的选择——有些步骤需要在案件的正确时间点采取。"
+                },
+                "q3": {
+                  "question": "当有人询问我的案件时我该说什么？",
+                  "answer": "你没有义务与律师以外的任何人讨论你的案件。一个冷静、简短的回应——'我正在处理一个法律事项，现在无法详细说明'——是完整和专业的。在就业环境中，你可能需要在某些申请中披露未决指控，但你可以客观地表述：这是未决的，不是定罪，你正在正当处理。"
+                },
+                "q4": {
+                  "question": "我可以让我的照片从互联网上删除吗？",
+                  "answer": "许多州已通过法律要求照片网站应要求删除照片，通常不收取费用。搜索你所在州的照片删除法律。对于不合规或不在州法律覆盖范围内的网站，你可以直接向谷歌提交删除请求以取消索引页面。以下列出的组织也可以提供帮助。这不会从官方执法系统中删除记录，但可以显著减少人们通过一般搜索找到的内容。"
+                }
+              },
+              "tips": {
+                "tip1": "你不是你的指控——指控是指控，许多人经历这段时期后关系和职业都完好无损",
+                "tip2": "在案件期间对你信任的人非常谨慎——随意分享的信息可能以你无法预料的方式传播",
+                "tip3": "你的律师应该就你的案件公开说什么（如果有的话）向你提供建议——密切遵循他们的指导",
+                "tip4": "现在开始收集积极的文件：绩效评估、推荐信、志愿者记录、社区参与",
+                "tip5": "案件解决后，探索记录清除选项——消除记录或封存记录可以在住房和就业方面产生真实的影响"
+              }
+            }
           },
           "mockQA": {
             "sectionTitle": "练习问答",
@@ -12592,6 +13807,23 @@ i18n
               "details": "详情",
               "detailsDesc": "描述发生了什么以获取个性化指导"
             },
+            "concerns": {
+              "employment": "工作影响",
+              "childcare": "儿童照顾",
+              "familyCare": "家庭照顾",
+              "housing": "住房",
+              "finances": "财务",
+              "transportation": "交通",
+              "mentalHealth": "心理健康",
+              "personalHealth": "个人健康",
+              "immigration": "移民身份",
+              "reputation": "名誉",
+              "courtLogistics": "法庭事务",
+              "done": "继续",
+              "selectPrompt": "点击所有适用项，然后继续",
+              "selected": "已选",
+              "none": "未选择"
+            },
             "messages": {
               "welcome": "您好！我是一个人工智能助手，可以帮您了解您的法律状况。我们的对话内容是保密的，会在您的会话结束后被删除。\n\n您现在是否处于紧急情况？",
               "emergencyAdviceFull": "🚨 **如果您现在正在被逮捕或拘留：**\n\n**✅ 保持冷静**\n不要抗拒、逃跑或争辩。保持双手可见。抗拒可能导致额外指控，即使原来的逮捕后来被认定为不合法。\n\n**🔇 行使沉默权**\n清楚地说：「我行使我的沉默权。「\n您不需要回答关于您要去哪里、在做什么或住在哪里的问题。\n\n**⚖️ 要求律师**\n说：「我要找律师。「一旦您要求律师，警察必须停止对您的讯问。\n如果您负担不起律师费，可以在首次出庭时要求公设辩护人。\n\n**🚫 不要同意搜查**\n说：「我不同意任何搜查。「\n警察可能仍会搜查，但表明态度可以在以后保护您的权利。\n\n**📝 记住这些细节**\n记下警官的警号、巡逻车号和任何目击者信息。这些以后可能对您的案件有帮助。\n\n---\n**您接下来想做什么？**",
@@ -12661,6 +13893,7 @@ i18n
               "knowRights": "了解我的权利",
               "findResources": "查找资源",
               "legalAidResources": "法律援助资源和支持",
+              "lifeSupportResources": "生活支持（工作、财务、心理健康）",
               "personalizedGuidance": "个性化指导",
               "immigrationEnforcement": "移民执法",
               "rightsInfo": "权利信息",
@@ -12921,6 +14154,31 @@ i18n
               "comingSoonTitle": "模板即将推出",
               "criminalComingSoon": "刑事法律模板包括延期动议、证据开示请求和减少保释金动议，正在开发中。",
               "immigrationComingSoon": "移民模板包括 EOIR-28 表格、保释备忘录和变更审理地点动议，正在开发中。"
+            },
+            "playbooks": {
+              "title": "案件操作手册",
+              "subtitle": "刑事和移民辩护的分阶段战略路线图。",
+              "feature1": "分阶段案件路线图",
+              "feature2": "刑事和移民辩护",
+              "feature3": "司法管辖区差异说明",
+              "button": "浏览操作手册"
+            }
+          },
+          "attorney": {
+            "playbooks": {
+              "criminal": "刑事",
+              "immigration": "移民",
+              "back": "返回操作手册",
+              "timeline": "典型时间线",
+              "difficulty": "难度",
+              "keyConsiderations": "关键注意事项",
+              "stage": "阶段",
+              "actions": "关键行动",
+              "templates": "相关模板",
+              "clientGuidance": "当事人指导",
+              "pitfalls": "常见误区",
+              "jurisdictionNotes": "司法管辖区说明",
+              "openTemplate": "打开模板"
             }
           },
           "howTo": {

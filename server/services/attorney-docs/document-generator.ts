@@ -38,6 +38,10 @@ import { motionToSuppressImmigrationEoirTemplate } from "../../../shared/templat
 import { motionForVoluntaryDepartureEoirTemplate } from "../../../shared/templates/motion-for-voluntary-departure-eoir";
 import { motionForSpeedyTrialDemandTemplate } from "../../../shared/templates/motion-for-speedy-trial-demand";
 import { motionToAcceptLateFilingEoirTemplate } from "../../../shared/templates/motion-to-accept-late-filing-eoir";
+import { sentencingMemorandumTemplate } from "../../../shared/templates/sentencing-memorandum";
+import { motionForCompetencyEvaluationTemplate } from "../../../shared/templates/motion-for-competency-evaluation";
+import { motionToAdministrativelyCloseEoirTemplate } from "../../../shared/templates/motion-to-administratively-close-eoir";
+import { noticeOfAppealBiaTemplate } from "../../../shared/templates/notice-of-appeal-bia";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import { isRequestCostAcceptable } from "../cost-tracker";
@@ -114,6 +118,10 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-for-voluntary-departure-eoir", motionForVoluntaryDepartureEoirTemplate],
   ["motion-for-speedy-trial-demand", motionForSpeedyTrialDemandTemplate],
   ["motion-to-accept-late-filing-eoir", motionToAcceptLateFilingEoirTemplate],
+  ["sentencing-memorandum", sentencingMemorandumTemplate],
+  ["motion-for-competency-evaluation", motionForCompetencyEvaluationTemplate],
+  ["motion-to-administratively-close-eoir", motionToAdministrativelyCloseEoirTemplate],
+  ["notice-of-appeal-bia", noticeOfAppealBiaTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
