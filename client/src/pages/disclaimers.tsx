@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import { Shield, Info } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Header } from "@/components/layout/header";
@@ -6,9 +6,23 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
+
+const TRANSLATION_NOTICES: Record<string, { title: string; text: string }> = {
+  es: {
+    title: "Aviso de traducción",
+    text: "Esta página se proporciona en español únicamente por conveniencia. La versión oficial y autorizada de estos avisos legales es la versión en inglés. Las traducciones pueden no reflejar el significado legal exacto del texto en inglés.",
+  },
+  zh: {
+    title: "翻译声明",
+    text: "本页面提供中文版本仅供参考。这些法律声明的官方权威版本为英文版本。翻译可能无法完全反映英文文本的确切法律含义。",
+  },
+};
 
 export default function Disclaimers() {
   useScrollToTop();
+  const { i18n } = useTranslation();
+  const notice = TRANSLATION_NOTICES[i18n.language] ?? null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,6 +44,17 @@ export default function Disclaimers() {
       </section>
       
       <main className="max-w-4xl mx-auto px-4 py-12 md:py-16">
+
+        {/* Translation notice — shown only for non-English languages */}
+        {notice && (
+          <Alert className="mb-10 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+            <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+            <AlertDescription className="text-amber-800 dark:text-amber-200">
+              <strong className="font-semibold">{notice.title}: </strong>
+              {notice.text}
+            </AlertDescription>
+          </Alert>
+        )}
 
         {/* About This Project */}
         <ScrollReveal>
