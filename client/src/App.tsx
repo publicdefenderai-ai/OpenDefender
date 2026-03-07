@@ -22,7 +22,6 @@ import Home from "@/pages/home";
 import RightsInfo from "@/pages/rights-info";
 import CaseGuidance from "@/pages/case-guidance";
 import CourtLocator from "@/pages/court-locator";
-import DevelopmentRoadmap from "@/pages/development-roadmap";
 import ImmigrationGuidance from "@/pages/immigration-guidance";
 import DacaTps from "@/pages/immigration/daca-tps";
 import WorkplaceRaids from "@/pages/immigration/workplace-raids";
@@ -118,7 +117,6 @@ function Router() {
       <Route path="/rights-info" component={RightsInfo} />
       <Route path="/case-guidance" component={CaseGuidance} />
       <Route path="/court-locator" component={CourtLocator} />
-      <Route path="/development-roadmap" component={DevelopmentRoadmap} />
       <Route path="/immigration-guidance" component={ImmigrationGuidance} />
       <Route path="/immigration-guidance/daca-tps" component={DacaTps} />
       <Route path="/immigration-guidance/workplace-raids" component={WorkplaceRaids} />
