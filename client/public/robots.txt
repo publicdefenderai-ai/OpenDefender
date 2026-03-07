@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /embed/
+Disallow: /attorney/
+Disallow: /api-docs
+Disallow: /widgets
+Disallow: /tech-docs
+
+Sitemap: https://opendefender.ai/sitemap.xml
