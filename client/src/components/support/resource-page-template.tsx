@@ -56,6 +56,7 @@ export interface ResourcePageProps {
   tips?: string[];
   relatedLinks?: { label: string; href: string }[];
   customSections?: ReactNode;
+  heroImage?: string;
 }
 
 const categoryThemes: Record<string, { accent: string; accentBg: string; accentBorder: string; heroClass: string }> = {
@@ -263,6 +264,7 @@ export function ResourcePageTemplate({
   tips,
   relatedLinks,
   customSections,
+  heroImage,
 }: ResourcePageProps) {
   useScrollToTop();
   const { t } = useTranslation();
@@ -276,21 +278,34 @@ export function ResourcePageTemplate({
       <main className="flex-1">
 
         {/* Hero */}
-        <section className={`${theme.heroClass} py-10 md:py-14`}>
-          <div className="max-w-4xl mx-auto px-4 vivid-header-content">
-            <Link href="/support">
-              <Button variant="ghost" size="sm" className="mb-5 text-white/70 hover:text-white hover:bg-white/10">
-                <ChevronLeft className="h-4 w-4 mr-1" />
-                {t('support.backToSupport')}
-              </Button>
-            </Link>
-            <div className="flex items-center gap-3 mb-3">
-              <Icon className="h-6 w-6 text-white/80" strokeWidth={1.75} />
-              <h1 className="text-3xl md:text-4xl font-bold text-white">{categoryLabel}</h1>
+        <section className={`${theme.heroClass} overflow-hidden`}>
+          <div className={`max-w-6xl mx-auto px-4 vivid-header-content flex items-stretch gap-0 ${heroImage ? 'min-h-[220px] md:min-h-[260px]' : 'py-10 md:py-14'}`}>
+            <div className={`flex flex-col justify-center py-10 md:py-14 ${heroImage ? 'flex-1 md:max-w-[58%]' : 'w-full max-w-4xl'}`}>
+              <Link href="/support">
+                <Button variant="ghost" size="sm" className="mb-5 text-white/70 hover:text-white hover:bg-white/10 self-start">
+                  <ChevronLeft className="h-4 w-4 mr-1" />
+                  {t('support.backToSupport')}
+                </Button>
+              </Link>
+              <div className="flex items-center gap-3 mb-3">
+                <Icon className="h-6 w-6 text-white/80" strokeWidth={1.75} />
+                <h1 className="text-3xl md:text-4xl font-bold text-white">{categoryLabel}</h1>
+              </div>
+              <p className="text-base md:text-lg text-white/75 leading-relaxed max-w-2xl">
+                {overview}
+              </p>
             </div>
-            <p className="text-base md:text-lg text-white/75 leading-relaxed max-w-3xl">
-              {overview}
-            </p>
+            {heroImage && (
+              <div className="hidden md:block flex-shrink-0 w-[42%] relative">
+                <div className="absolute inset-y-0 left-0 w-16 z-10" style={{ background: 'linear-gradient(to right, hsl(222 55% 12%), transparent)' }} />
+                <img
+                  src={heroImage}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+            )}
           </div>
         </section>
 

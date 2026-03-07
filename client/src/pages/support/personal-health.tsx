@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import personalHealthHero from "@assets/stock_images/personal-health.jpg";
 import { Activity, Pill, AlertTriangle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -188,6 +189,7 @@ export default function PersonalHealthSupport() {
   return (
     <ResourcePageTemplate
       categoryId="personalHealth"
+      heroImage={personalHealthHero}
       icon={Activity}
       iconColor="bg-green-500/10 text-green-600 dark:text-green-400"
       heroGradient="bg-gradient-to-br from-green-500/5 via-background to-background"

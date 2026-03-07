@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import transportationHero from "@assets/stock_images/transportation.jpg";
 import { Car, Copy, Check, Printer, Phone, Mail, ChevronDown, AlertTriangle } from "lucide-react";
 import {
   ResourcePageTemplate,
@@ -439,6 +440,7 @@ export default function TransportationSupport() {
   return (
     <ResourcePageTemplate
       categoryId="transportation"
+      heroImage={transportationHero}
       icon={Car}
       iconColor="bg-cyan-500/10 text-cyan-600 dark:text-cyan-400"
       heroGradient="bg-gradient-to-br from-cyan-500/5 via-background to-background"

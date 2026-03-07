@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import reputationHero from "@assets/stock_images/reputation.jpg";
 import {
   ShieldCheck,
   Copy,
@@ -441,6 +442,7 @@ export default function ReputationSupport() {
   return (
     <ResourcePageTemplate
       categoryId="reputation"
+      heroImage={reputationHero}
       icon={ShieldCheck}
       iconColor="bg-slate-500/10 text-slate-600 dark:text-slate-400"
       heroGradient="bg-gradient-to-br from-slate-500/5 via-background to-background"

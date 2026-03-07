@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import familyCareHero from "@assets/stock_images/family-care.jpg";
 import {
   Users,
   Copy,
@@ -445,6 +446,7 @@ export default function FamilyCareSupport() {
   return (
     <ResourcePageTemplate
       categoryId="familyCare"
+      heroImage={familyCareHero}
       icon={Users}
       iconColor="bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
       heroGradient="bg-gradient-to-br from-indigo-500/5 via-background to-background"

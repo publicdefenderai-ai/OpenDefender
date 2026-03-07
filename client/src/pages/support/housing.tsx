@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import housingHero from "@assets/stock_images/housing.jpg";
 import {
   Home,
   Copy,
@@ -454,6 +455,7 @@ export default function HousingSupport() {
   return (
     <ResourcePageTemplate
       categoryId="housing"
+      heroImage={housingHero}
       icon={Home}
       iconColor="bg-amber-500/10 text-amber-600 dark:text-amber-400"
       heroGradient="bg-gradient-to-br from-amber-500/5 via-background to-background"

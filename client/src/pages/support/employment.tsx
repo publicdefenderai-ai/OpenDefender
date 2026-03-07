@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import employmentHero from "@assets/stock_images/employment.jpg";
 import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, Shield, FileText } from "lucide-react";
 import {
   ResourcePageTemplate,
@@ -433,6 +434,7 @@ export default function EmploymentSupport() {
   return (
     <ResourcePageTemplate
       categoryId="employment"
+      heroImage={employmentHero}
       icon={Briefcase}
       iconColor="bg-blue-500/10 text-blue-600 dark:text-blue-400"
       heroGradient="bg-gradient-to-br from-blue-500/5 via-background to-background"

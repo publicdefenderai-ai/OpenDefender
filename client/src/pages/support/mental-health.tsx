@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import mentalHealthHero from "@assets/stock_images/mental-health.jpg";
 import { Heart, Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -188,6 +189,7 @@ export default function MentalHealthSupport() {
   return (
     <ResourcePageTemplate
       categoryId="mentalHealth"
+      heroImage={mentalHealthHero}
       icon={Heart}
       iconColor="bg-rose-500/10 text-rose-600 dark:text-rose-400"
       heroGradient="bg-gradient-to-br from-rose-500/5 via-background to-background"
