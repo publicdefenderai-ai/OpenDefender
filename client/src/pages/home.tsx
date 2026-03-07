@@ -335,7 +335,7 @@ export default function Home() {
 
             <div className="mb-8 text-xl sm:text-2xl md:text-3xl font-medium text-foreground/80">
               {t('home.hero.rotatingPrefix')}{' '}
-              <span className="inline-block relative" style={{ minWidth: '7rem' }}>
+              <span className="inline-block" style={{ minWidth: '9ch', verticalAlign: 'baseline' }}>
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={wordIndex}
@@ -345,11 +345,10 @@ export default function Home() {
                     transition={{ duration: 0.28 }}
                     className="text-primary font-bold inline-block"
                   >
-                    {rotatingWords[wordIndex]}
+                    {rotatingWords[wordIndex]}.
                   </motion.span>
                 </AnimatePresence>
               </span>
-              .
             </div>
 
             <p className="text-base sm:text-lg md:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
