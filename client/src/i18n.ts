@@ -77,6 +77,20 @@ i18n
               "disclaimerTitle": "Legal Disclaimer:",
               "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
+            "commitment": {
+              "title": "Our Commitment to You",
+              "subtitle": "These are not marketing promises. They are the principles we build every feature around.",
+              "pledge1Title": "Free. Always.",
+              "pledge1Desc": "Access to legal information should not depend on your income. OpenDefender is free today, and we will keep it free.",
+              "pledge2Title": "Your Privacy, Protected",
+              "pledge2Desc": "Your session data is encrypted and auto-deleted when you leave. We never store, sell, or share your information.",
+              "pledge3Title": "Plain Language, Not Legal Jargon",
+              "pledge3Desc": "Every explanation is written to be understood — not to impress. Accurate legal information in words that make sense.",
+              "pledge4Title": "Verified, Not Guessed",
+              "pledge4Desc": "Every statute we cite is sourced. Every legal claim is checked against real databases — not generated from memory.",
+              "pledge5Title": "Available in Your Language",
+              "pledge5Desc": "English, Spanish, and Chinese — because understanding your rights should never require a translator."
+            },
             "urgentHelp": {
               "modalTitle": "Urgent Legal Situation",
               "arrestWarning": "If you are being arrested RIGHT NOW:",
@@ -4843,6 +4857,20 @@ i18n
               "currentDesc": "Bases de datos legales actualizadas regularmente para reflejar las leyes y procedimientos más recientes",
               "disclaimerTitle": "Descargo de Responsabilidad Legal:",
               "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
+            },
+            "commitment": {
+              "title": "Nuestro Compromiso con Usted",
+              "subtitle": "Estas no son promesas de marketing. Son los principios alrededor de los cuales construimos cada función.",
+              "pledge1Title": "Gratis. Siempre.",
+              "pledge1Desc": "El acceso a información legal no debe depender de sus ingresos. OpenDefender es gratuito hoy, y así lo mantendremos.",
+              "pledge2Title": "Su Privacidad, Protegida",
+              "pledge2Desc": "Los datos de su sesión se cifran y eliminan automáticamente al salir. Nunca almacenamos, vendemos ni compartimos su información.",
+              "pledge3Title": "Lenguaje Claro, No Jerga Legal",
+              "pledge3Desc": "Cada explicación está escrita para ser entendida, no para impresionar. Información legal precisa en palabras que tienen sentido.",
+              "pledge4Title": "Verificado, No Adivinado",
+              "pledge4Desc": "Cada estatuto que citamos tiene fuente. Cada afirmación legal se verifica con bases de datos reales, no se genera de memoria.",
+              "pledge5Title": "Disponible en Su Idioma",
+              "pledge5Desc": "Inglés, español y chino — porque entender sus derechos nunca debería requerir un traductor."
             },
             "urgentHelp": {
               "modalTitle": "Situación Legal Urgente",
@@ -9611,6 +9639,20 @@ i18n
               "currentDesc": "法律数据库定期更新，以反映最新的法律和程序",
               "disclaimerTitle": "法律免责声明：",
               "disclaimerText": "本AI仅提供一般性法律信息，不能替代专业法律建议。请务必就你的具体情况咨询合格的律师。所提供的信息可能未反映最新的法律动态，不应作为法律意见依赖。"
+            },
+            "commitment": {
+              "title": "我们对您的承诺",
+              "subtitle": "这些不是营销口号，而是我们构建每一项功能所遵循的原则。",
+              "pledge1Title": "永远免费",
+              "pledge1Desc": "获取法律信息不应取决于您的收入。OpenDefender今天是免费的，我们将保持免费。",
+              "pledge2Title": "您的隐私受到保护",
+              "pledge2Desc": "您的会话数据经过加密，离开时自动删除。我们从不存储、出售或分享您的信息。",
+              "pledge3Title": "通俗语言，而非法律术语",
+              "pledge3Desc": "每一项解释都是为了让人理解而写的，而不是为了显示专业性。准确的法律信息，用通俗易懂的语言表达。",
+              "pledge4Title": "经过核实，而非猜测",
+              "pledge4Desc": "我们引用的每一条法规都有来源。每一项法律主张都经过真实数据库的核实——而非凭记忆生成。",
+              "pledge5Title": "支持您的语言",
+              "pledge5Desc": "英语、西班牙语和中文——因为理解您的权利永远不应需要翻译。"
             },
             "urgentHelp": {
               "modalTitle": "紧急法律情况",

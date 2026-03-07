@@ -13,7 +13,8 @@ import {
   BarChart3,
   Search,
   HelpCircle,
-  Compass
+  Compass,
+  Check
 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -364,6 +365,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Commitment Section */}
+      <section className="py-20 md:py-28 bg-slate-900 dark:bg-slate-950">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <ScrollReveal>
+            <div className="text-center mb-14 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {t('home.commitment.title')}
+              </h2>
+              <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                {t('home.commitment.subtitle')}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <ScrollReveal key={i} delay={i * 0.08}>
+                <div className="flex gap-4 group">
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center mt-0.5 group-hover:bg-primary/30 transition-colors">
+                    <Check className="h-4 w-4 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2 text-base leading-snug">
+                      {t(`home.commitment.pledge${i}Title`)}
+                    </h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      {t(`home.commitment.pledge${i}Desc`)}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Data Sources Section */}
       <section className="py-16 md:py-20 lg:py-24 bg-background border-t border-border/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -404,7 +441,7 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-muted/20">
+      <section className="py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900/60 border-t border-border/30">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-12">
