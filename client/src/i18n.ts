@@ -85,7 +85,7 @@ i18n
             "commitment": {
               "title": "Our Commitment",
               "subtitle": "",
-              "pledge1Title": "Free.",
+              "pledge1Title": "Free Access",
               "pledge1Desc": "Access to legal information should not depend on your income. OpenDefender is Free.",
               "pledge2Title": "Your Privacy, Protected",
               "pledge2Desc": "Your session data is encrypted and auto-deleted when you leave. We never store, sell, or share your information.",
@@ -4871,7 +4871,7 @@ i18n
             "commitment": {
               "title": "Nuestro Compromiso",
               "subtitle": "",
-              "pledge1Title": "Gratuito.",
+              "pledge1Title": "Acceso Gratuito",
               "pledge1Desc": "El acceso a información legal no debe depender de sus ingresos. OpenDefender es gratuito.",
               "pledge2Title": "Su Privacidad, Protegida",
               "pledge2Desc": "Los datos de su sesión se cifran y eliminan automáticamente al salir. Nunca almacenamos, vendemos ni compartimos su información.",
@@ -9658,7 +9658,7 @@ i18n
             "commitment": {
               "title": "我们的承诺",
               "subtitle": "",
-              "pledge1Title": "免费",
+              "pledge1Title": "免费使用",
               "pledge1Desc": "获取法律信息不应取决于您的收入。OpenDefender是免费的。",
               "pledge2Title": "您的隐私受到保护",
               "pledge2Desc": "您的会话数据经过加密，离开时自动删除。我们从不存储、出售或分享您的信息。",
