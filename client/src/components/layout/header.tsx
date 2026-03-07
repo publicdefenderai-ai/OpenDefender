@@ -133,7 +133,6 @@ export function Header() {
                 <SelectContent>
                   <SelectItem value="en" data-testid="option-english">English</SelectItem>
                   <SelectItem value="es" data-testid="option-spanish">Español</SelectItem>
-                  <SelectItem value="zh" data-testid="option-chinese">中文</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -193,7 +192,6 @@ export function Header() {
                     <SelectContent>
                       <SelectItem value="en" data-testid="option-english-mobile">English</SelectItem>
                       <SelectItem value="es" data-testid="option-spanish-mobile">Español</SelectItem>
-                      <SelectItem value="zh" data-testid="option-chinese-mobile">中文</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
