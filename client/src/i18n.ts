@@ -50,7 +50,12 @@ i18n
               "urgentHelpButton": "URGENT HELP NEEDED",
               "getStartedButton": "GET STARTED",
               "navigatingToolButton": "How to use this site",
-              "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance."
+              "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance.",
+              "rotatingPrefix": "Case support that is",
+              "rotatingWord1": "Clear",
+              "rotatingWord2": "Free",
+              "rotatingWord3": "Tailored",
+              "rotatingWord4": "Accurate"
             },
             "features": {
               "title": "Powered by Real Legal Data",
@@ -78,16 +83,16 @@ i18n
               "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
             "commitment": {
-              "title": "Our Commitment to You",
-              "subtitle": "These are not marketing promises. They are the principles we build every feature around.",
-              "pledge1Title": "Free. Always.",
-              "pledge1Desc": "Access to legal information should not depend on your income. OpenDefender is free today, and we will keep it free.",
+              "title": "Our Commitment",
+              "subtitle": "",
+              "pledge1Title": "Free.",
+              "pledge1Desc": "OpenDefender is free.",
               "pledge2Title": "Your Privacy, Protected",
               "pledge2Desc": "Your session data is encrypted and auto-deleted when you leave. We never store, sell, or share your information.",
               "pledge3Title": "Plain Language, Not Legal Jargon",
               "pledge3Desc": "Every explanation is written to be understood — not to impress. Accurate legal information in words that make sense.",
               "pledge4Title": "Verified, Not Guessed",
-              "pledge4Desc": "Every statute we cite is sourced. Every legal claim is checked against real databases — not generated from memory.",
+              "pledge4Desc": "Every statute we cite is sourced. Every legal claim is checked against real databases, not generated from memory.",
               "pledge5Title": "Available in Your Language",
               "pledge5Desc": "English, Spanish, and Chinese — because understanding your rights should never require a translator."
             },
@@ -4831,7 +4836,12 @@ i18n
               "urgentHelpButton": "AYUDA URGENTE NECESARIA",
               "getStartedButton": "COMENZAR",
               "navigatingToolButton": "Cómo Usar Esta Herramienta",
-              "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata."
+              "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata.",
+              "rotatingPrefix": "Apoyo de caso que es",
+              "rotatingWord1": "Claro",
+              "rotatingWord2": "Gratuito",
+              "rotatingWord3": "Personalizado",
+              "rotatingWord4": "Preciso"
             },
             "features": {
               "title": "Respaldado por Datos Legales Reales",
@@ -4859,10 +4869,10 @@ i18n
               "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
             },
             "commitment": {
-              "title": "Nuestro Compromiso con Usted",
-              "subtitle": "Estas no son promesas de marketing. Son los principios alrededor de los cuales construimos cada función.",
-              "pledge1Title": "Gratis. Siempre.",
-              "pledge1Desc": "El acceso a información legal no debe depender de sus ingresos. OpenDefender es gratuito hoy, y así lo mantendremos.",
+              "title": "Nuestro Compromiso",
+              "subtitle": "",
+              "pledge1Title": "Gratuito.",
+              "pledge1Desc": "OpenDefender es gratuito.",
               "pledge2Title": "Su Privacidad, Protegida",
               "pledge2Desc": "Los datos de su sesión se cifran y eliminan automáticamente al salir. Nunca almacenamos, vendemos ni compartimos su información.",
               "pledge3Title": "Lenguaje Claro, No Jerga Legal",
@@ -9613,7 +9623,12 @@ i18n
               "urgentHelpButton": "紧急求助",
               "getStartedButton": "开始使用",
               "navigatingToolButton": "如何使用这个工具",
-              "urgentHelpNotice": "如果你正在被逮捕或正在出庭，请点击\"紧急求助\"获取即时指导。"
+              "urgentHelpNotice": "如果你正在被逮捕或正在出庭，请点击\"紧急求助\"获取即时指导。",
+              "rotatingPrefix": "案件支持，做到",
+              "rotatingWord1": "清晰",
+              "rotatingWord2": "免费",
+              "rotatingWord3": "专属",
+              "rotatingWord4": "精准"
             },
             "features": {
               "title": "基于真实法律数据",
@@ -9641,10 +9656,10 @@ i18n
               "disclaimerText": "本AI仅提供一般性法律信息，不能替代专业法律建议。请务必就你的具体情况咨询合格的律师。所提供的信息可能未反映最新的法律动态，不应作为法律意见依赖。"
             },
             "commitment": {
-              "title": "我们对您的承诺",
-              "subtitle": "这些不是营销口号，而是我们构建每一项功能所遵循的原则。",
-              "pledge1Title": "永远免费",
-              "pledge1Desc": "获取法律信息不应取决于您的收入。OpenDefender今天是免费的，我们将保持免费。",
+              "title": "我们的承诺",
+              "subtitle": "",
+              "pledge1Title": "免费",
+              "pledge1Desc": "OpenDefender是免费的。",
               "pledge2Title": "您的隐私受到保护",
               "pledge2Desc": "您的会话数据经过加密，离开时自动删除。我们从不存储、出售或分享您的信息。",
               "pledge3Title": "通俗语言，而非法律术语",

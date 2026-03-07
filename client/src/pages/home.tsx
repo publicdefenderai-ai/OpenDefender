@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
   ArrowRight,
@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Header } from "@/components/layout/header";
@@ -254,6 +254,20 @@ export default function Home() {
   const [laOrganizations, setLaOrganizations] = useState<LegalAidOrganization[]>([]);
   const [laError, setLaError] = useState("");
 
+  const rotatingWords = [
+    t('home.hero.rotatingWord1'),
+    t('home.hero.rotatingWord2'),
+    t('home.hero.rotatingWord3'),
+    t('home.hero.rotatingWord4'),
+  ];
+  const [wordIndex, setWordIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex(i => (i + 1) % rotatingWords.length);
+    }, 2200);
+    return () => clearInterval(interval);
+  }, [rotatingWords.length]);
+
   const handleUrgentHelp = () => {
     setUrgentHelpOpen(true);
   };
@@ -318,7 +332,27 @@ export default function Home() {
               {t('home.hero.title1')}{' '}
               <span className="text-primary">{t('home.hero.title2')}</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-12 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+
+            <div className="mb-8 text-xl sm:text-2xl md:text-3xl font-medium text-foreground/80">
+              {t('home.hero.rotatingPrefix')}{' '}
+              <span className="inline-block relative" style={{ minWidth: '7rem' }}>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={wordIndex}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.28 }}
+                    className="text-primary font-bold inline-block"
+                  >
+                    {rotatingWords[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              .
+            </div>
+
+            <p className="text-base sm:text-lg md:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
@@ -373,9 +407,6 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 {t('home.commitment.title')}
               </h2>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                {t('home.commitment.subtitle')}
-              </p>
             </div>
           </ScrollReveal>
 
