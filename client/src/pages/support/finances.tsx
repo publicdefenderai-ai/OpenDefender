@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import financesHero from "@assets/stock_images/finances.jpg";
 import { DollarSign, CheckCircle, CheckCircle2, Calendar, ExternalLink } from "lucide-react";
 import {
   ResourcePageTemplate,
@@ -296,6 +297,7 @@ export default function FinancesSupport() {
   return (
     <ResourcePageTemplate
       categoryId="finances"
+      heroImage={financesHero}
       icon={DollarSign}
       iconColor="bg-green-500/10 text-green-600 dark:text-green-400"
       heroGradient="bg-gradient-to-br from-green-500/5 via-background to-background"

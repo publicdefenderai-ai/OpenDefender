@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import courtLogisticsHero from "@assets/stock_images/court-logistics.jpg";
 import { Calendar } from "lucide-react";
 import {
   ResourcePageTemplate,
@@ -123,6 +124,7 @@ export default function CourtLogisticsSupport() {
   return (
     <ResourcePageTemplate
       categoryId="courtLogistics"
+      heroImage={courtLogisticsHero}
       icon={Calendar}
       iconColor="bg-purple-500/10 text-purple-600 dark:text-purple-400"
       heroGradient="bg-gradient-to-br from-purple-500/5 via-background to-background"
