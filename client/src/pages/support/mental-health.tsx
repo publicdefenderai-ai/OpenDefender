@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import mentalHealthHero from "@assets/stock_images/mental-health.jpg";
+import mentalHealthHero from "@assets/stock_images/mental-health.png";
 import { Heart, Phone, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {

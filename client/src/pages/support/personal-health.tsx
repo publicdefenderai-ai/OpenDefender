@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import personalHealthHero from "@assets/stock_images/personal-health.jpg";
+import personalHealthHero from "@assets/stock_images/personal-health.png";
 import { Activity, Pill, AlertTriangle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {

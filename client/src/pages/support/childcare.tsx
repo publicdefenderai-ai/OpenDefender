@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import childcareHero from "@assets/stock_images/childcare.jpg";
+import childcareHero from "@assets/stock_images/childcare.png";
 import {
   Baby,
   Copy,
