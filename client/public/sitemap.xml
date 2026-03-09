@@ -33,6 +33,9 @@
   <url><loc>https://opendefender.ai/support/family-care</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://opendefender.ai/support/reputation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://opendefender.ai/support/personal-health</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://opendefender.ai/collateral-consequences</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://opendefender.ai/first-24-hours</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://opendefender.ai/jail-phone-call</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://opendefender.ai/friends-family</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://opendefender.ai/how-to</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://opendefender.ai/document-library</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

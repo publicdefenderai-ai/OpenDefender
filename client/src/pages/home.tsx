@@ -14,7 +14,9 @@ import {
   Search,
   HelpCircle,
   Compass,
-  Check
+  Check,
+  Scale,
+  Users,
 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -238,6 +240,7 @@ export default function Home() {
   useScrollToTop();
   const { t } = useTranslation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
+  const [urgentSituation, setUrgentSituation] = useState<"arrested" | "charged" | "family" | null>(null);
   const [getStartedOpen, setGetStartedOpen] = useState(false);
   
   // Public Defender search state
@@ -517,7 +520,7 @@ export default function Home() {
       <Footer />
 
       {/* Urgent Help Modal */}
-      <Dialog open={urgentHelpOpen} onOpenChange={setUrgentHelpOpen}>
+      <Dialog open={urgentHelpOpen} onOpenChange={(open) => { setUrgentHelpOpen(open); if (!open) setUrgentSituation(null); }}>
         <DialogContent className="max-w-[95vw] md:max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-red-600">
@@ -525,58 +528,207 @@ export default function Home() {
               {t('home.urgentHelp.modalTitle')}
             </DialogTitle>
           </DialogHeader>
-          
-          <div className="space-y-6 mt-4">
-            <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
-              <AlertTriangle className="h-4 w-4 text-red-600" />
-              <AlertDescription className="text-red-800 dark:text-red-200">
-                <strong>{t('home.urgentHelp.arrestWarning')}</strong> {t('home.urgentHelp.arrestWarningText')}
-              </AlertDescription>
-            </Alert>
 
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="font-bold text-base mb-4">{t('home.urgentHelp.immediateActions')}</h3>
-                <ol className="space-y-4">
-                  <li className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">1</span>
-                    <div>
-                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.stayCalmTitle')}</h4>
-                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.stayCalmText')}</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">2</span>
-                    <div>
-                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.assertRightsTitle')}</h4>
-                      <p className="text-sm text-muted-foreground mb-1">{t('home.urgentHelp.assertRightsText1')}</p>
-                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.assertRightsText2')}</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">3</span>
-                    <div>
-                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.noConsentTitle')}</h4>
-                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.noConsentText')}</p>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">4</span>
-                    <div>
-                      <h4 className="font-semibold text-sm mb-0.5">{t('home.urgentHelp.publicDefenderTitle')}</h4>
-                      <p className="text-sm text-muted-foreground">{t('home.urgentHelp.publicDefenderText')}</p>
-                    </div>
-                  </li>
-                </ol>
-              </CardContent>
-            </Card>
+          <div className="space-y-4 mt-4">
+            {/* ── Triage step ── */}
+            {urgentSituation === null && (
+              <>
+                <p className="text-sm text-muted-foreground">What best describes your situation right now?</p>
+                <div className="space-y-3">
+                  <button className="w-full text-left" onClick={() => setUrgentSituation("arrested")}>
+                    <Card className="hover:shadow-md hover:border-red-400 dark:hover:border-red-600 transition-all cursor-pointer group border-red-200 dark:border-red-900 bg-red-50/40 dark:bg-red-950/20">
+                      <CardContent className="p-4 flex items-start gap-3">
+                        <div className="w-9 h-9 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <AlertTriangle className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm text-foreground group-hover:text-red-700 dark:group-hover:text-red-300">I was just arrested or am currently in custody</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">What to do in the next few hours</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </button>
 
-            <Alert>
-              <Shield className="h-4 w-4" />
-              <AlertDescription>
-                <strong>{t('home.urgentHelp.rememberTitle')}</strong> {t('home.urgentHelp.rememberText')}
-              </AlertDescription>
-            </Alert>
+                  <button className="w-full text-left" onClick={() => setUrgentSituation("charged")}>
+                    <Card className="hover:shadow-md hover:border-amber-400 dark:hover:border-amber-600 transition-all cursor-pointer group">
+                      <CardContent className="p-4 flex items-start gap-3">
+                        <div className="w-9 h-9 bg-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Scale className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm text-foreground group-hover:text-amber-700 dark:group-hover:text-amber-300">I've been charged and released — I have a court date coming up</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">What you need to do before your first appearance</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </button>
+
+                  <button className="w-full text-left" onClick={() => setUrgentSituation("family")}>
+                    <Card className="hover:shadow-md hover:border-blue-400 dark:hover:border-blue-600 transition-all cursor-pointer group">
+                      <CardContent className="p-4 flex items-start gap-3">
+                        <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Users className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm text-foreground group-hover:text-blue-700 dark:group-hover:text-blue-300">Someone I know was arrested and I'm trying to help</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">How to find them and what to do</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </button>
+                </div>
+              </>
+            )}
+
+            {/* ── Just arrested ── */}
+            {urgentSituation === "arrested" && (
+              <>
+                <button onClick={() => setUrgentSituation(null)} className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 -mb-1">
+                  ← Back
+                </button>
+                <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
+                  <AlertTriangle className="h-4 w-4 text-red-600" />
+                  <AlertDescription className="text-red-800 dark:text-red-200">
+                    <strong>{t('home.urgentHelp.arrestWarning')}</strong> {t('home.urgentHelp.arrestWarningText')}
+                  </AlertDescription>
+                </Alert>
+                <Card>
+                  <CardContent className="p-5">
+                    <h3 className="font-bold text-sm mb-3">{t('home.urgentHelp.immediateActions')}</h3>
+                    <ol className="space-y-3">
+                      {[
+                        { title: t('home.urgentHelp.stayCalmTitle'), body: t('home.urgentHelp.stayCalmText') },
+                        { title: t('home.urgentHelp.assertRightsTitle'), body: `${t('home.urgentHelp.assertRightsText1')} ${t('home.urgentHelp.assertRightsText2')}` },
+                        { title: t('home.urgentHelp.noConsentTitle'), body: t('home.urgentHelp.noConsentText') },
+                        { title: t('home.urgentHelp.publicDefenderTitle'), body: t('home.urgentHelp.publicDefenderText') },
+                      ].map((step, i) => (
+                        <li key={i} className="flex gap-3">
+                          <span className="flex-shrink-0 w-5 h-5 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                          <div>
+                            <h4 className="font-semibold text-sm">{step.title}</h4>
+                            <p className="text-xs text-muted-foreground mt-0.5">{step.body}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ol>
+                  </CardContent>
+                </Card>
+                <div className="grid grid-cols-2 gap-3 pt-1">
+                  <Link href="/first-24-hours" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">Full 24-Hour Guide</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">Step-by-step through arrest, bail, and arraignment</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                  <Link href="/jail-phone-call" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">Jail Phone Call Guide</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">What to say — and what never to say</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </div>
+              </>
+            )}
+
+            {/* ── Charged and released ── */}
+            {urgentSituation === "charged" && (
+              <>
+                <button onClick={() => setUrgentSituation(null)} className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 -mb-1">
+                  ← Back
+                </button>
+                <Card>
+                  <CardContent className="p-5">
+                    <h3 className="font-bold text-sm mb-3">Before your first court date</h3>
+                    <ol className="space-y-3">
+                      {[
+                        { title: "Get a lawyer before you appear", body: "If you cannot afford one, contact the public defender's office in the county where you were charged immediately. Do not go to your first appearance without representation if you can avoid it." },
+                        { title: "Don't discuss your case", body: "Do not talk about the charges with friends, family, or on social media. Prosecutors can subpoena anyone you speak to." },
+                        { title: "Understand your bail conditions", body: "If you were released on bail, read every condition carefully. Violating any condition — even accidentally — results in immediate re-arrest." },
+                        { title: "Don't miss your court date", body: "Missing a hearing results in an arrest warrant being issued. Set multiple reminders." },
+                      ].map((step, i) => (
+                        <li key={i} className="flex gap-3">
+                          <span className="flex-shrink-0 w-5 h-5 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                          <div>
+                            <h4 className="font-semibold text-sm">{step.title}</h4>
+                            <p className="text-xs text-muted-foreground mt-0.5">{step.body}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ol>
+                  </CardContent>
+                </Card>
+                <div className="grid grid-cols-2 gap-3 pt-1">
+                  <Link href="/case-guidance" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">Get Case Guidance</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">Personalized guidance for your situation</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                  <Link href="/process" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">What Happens Next</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">The full criminal process explained</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </div>
+              </>
+            )}
+
+            {/* ── Helping family ── */}
+            {urgentSituation === "family" && (
+              <>
+                <button onClick={() => setUrgentSituation(null)} className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 -mb-1">
+                  ← Back
+                </button>
+                <Card>
+                  <CardContent className="p-5">
+                    <h3 className="font-bold text-sm mb-3">How to help someone who was arrested</h3>
+                    <ol className="space-y-3">
+                      {[
+                        { title: "Find out where they are", body: "Call the county jail or use an online inmate locator. You'll need their full legal name and ideally their date of birth." },
+                        { title: "Get them legal representation", body: "Contact a criminal defense attorney or the public defender's office in the county where they were arrested. Do this before the bail hearing if at all possible." },
+                        { title: "Learn their booking number and the charges", body: "You'll need this to post bail, contact their attorney, and stay informed about court dates." },
+                        { title: "Be careful what you say on phone calls", body: "Jail phone calls are recorded. Don't discuss the case, the facts of what happened, or ask them to do anything related to the incident." },
+                      ].map((step, i) => (
+                        <li key={i} className="flex gap-3">
+                          <span className="flex-shrink-0 w-5 h-5 rounded-full bg-foreground text-background text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+                          <div>
+                            <h4 className="font-semibold text-sm">{step.title}</h4>
+                            <p className="text-xs text-muted-foreground mt-0.5">{step.body}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ol>
+                  </CardContent>
+                </Card>
+                <div className="grid grid-cols-2 gap-3 pt-1">
+                  <Link href="/friends-family" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">Full Family Guide</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">Finding, contacting, and supporting someone in custody</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                  <Link href="/jail-phone-call" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">Jail Phone Calls</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">What to say and what to avoid</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
         </DialogContent>
       </Dialog>

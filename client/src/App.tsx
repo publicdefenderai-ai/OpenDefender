@@ -73,6 +73,9 @@ import HousingSupport from "@/pages/support/housing";
 import FamilyCareSupport from "@/pages/support/family-care";
 import ReputationSupport from "@/pages/support/reputation";
 import PersonalHealthSupport from "@/pages/support/personal-health";
+import FirstTwentyFourHours from "@/pages/first-24-hours";
+import JailPhoneCall from "@/pages/jail-phone-call";
+import CollateralConsequences from "@/pages/collateral-consequences";
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -137,6 +140,9 @@ function Router() {
       <Route path="/quick-reference" component={QuickReference} />
       <Route path="/search-seizure" component={SearchSeizure} />
       <Route path="/friends-family" component={FriendsFamily} />
+      <Route path="/first-24-hours" component={FirstTwentyFourHours} />
+      <Route path="/jail-phone-call" component={JailPhoneCall} />
+      <Route path="/collateral-consequences" component={CollateralConsequences} />
       <Route path="/how-to" component={HowTo} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimers" component={Disclaimers} />

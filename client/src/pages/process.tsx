@@ -166,6 +166,14 @@ export default function Process() {
                   isLast={stepNum === 7}
                   t={t}
                 />
+                {stepNum === 2 && (
+                  <div className="ml-[4.5rem] -mt-4 mb-6">
+                    <a href="#bail-guide" className="inline-flex items-center gap-2 text-sm text-green-700 dark:text-green-400 hover:underline font-medium">
+                      <DollarSign className="h-4 w-4" />
+                      How bail works — types, options if you can't pay, and conditions ↓
+                    </a>
+                  </div>
+                )}
               </ScrollReveal>
             ))}
           </div>
@@ -207,6 +215,7 @@ export default function Process() {
           <div className="space-y-8">
             {/* Cash Bail Guide */}
             <ScrollReveal delay={0.1}>
+              <div id="bail-guide" className="scroll-mt-20">
               <Card className="border-2 border-green-200 dark:border-green-800">
                 <CardHeader className="bg-green-50 dark:bg-green-950/50">
                   <CardTitle className="text-green-800 dark:text-green-200">
@@ -304,6 +313,7 @@ export default function Process() {
                   </Accordion>
                 </CardContent>
               </Card>
+              </div>
             </ScrollReveal>
 
             {/* Plea Bargain Guide */}

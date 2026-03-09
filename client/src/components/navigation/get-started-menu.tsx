@@ -24,7 +24,8 @@ import {
   UserCheck,
   BookOpen,
   Clock,
-  Heart
+  Heart,
+  AlertTriangle,
 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -92,6 +93,31 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
   // Main menu
   const mainMenu = (
     <div className="space-y-3">
+      <button
+        onClick={() => handleNavigate('/first-24-hours')}
+        className="w-full"
+        data-testid="menu-item-just-arrested"
+      >
+        <Card className="hover:shadow-lg hover:border-red-500 transition-all duration-200 cursor-pointer group border-red-200 dark:border-red-900 bg-red-50/40 dark:bg-red-950/20">
+          <CardContent className="p-4">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <AlertTriangle className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1 text-left min-w-0">
+                <h3 className="font-semibold text-lg group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
+                  Just arrested or charged?
+                </h3>
+                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                  Step-by-step guide for the first 24 hours
+                </p>
+              </div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors flex-shrink-0" />
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
       <button
         onClick={() => handleNavigate('/case-guidance')}
         className="w-full"
