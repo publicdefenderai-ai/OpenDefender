@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText, Briefcase } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText, Briefcase, Users } from "lucide-react";
 import { SearchButton } from "@/components/search/site-search";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
@@ -87,6 +87,13 @@ export function Header() {
       icon: Briefcase,
       description: t('header.menu.attorneyToolsDesc'),
       testId: "menu-attorney-tools"
+    },
+    {
+      title: t('header.menu.friendsFamily'),
+      href: "/friends-family",
+      icon: Users,
+      description: t('header.menu.friendsFamilyDesc'),
+      testId: "menu-friends-family"
     }
   ];
 

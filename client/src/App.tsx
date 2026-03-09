@@ -47,6 +47,7 @@ import Statutes from "@/pages/statutes";
 import Chat from "@/pages/chat";
 import DocumentLibrary from "@/pages/document-library";
 import Resources from "@/pages/resources";
+import LegalAid from "@/pages/legal-aid";
 import DocumentSummarizerPage from "@/pages/document-summarizer";
 import AttorneyPortal from "@/pages/attorney/index";
 import AttorneyVerify from "@/pages/attorney/verify";
@@ -150,6 +151,7 @@ function Router() {
       <Route path="/chat" component={Chat} />
       <Route path="/document-library" component={DocumentLibrary} />
       <Route path="/resources" component={Resources} />
+      <Route path="/legal-aid" component={LegalAid} />
       <Route path="/support" component={SupportHub} />
       <Route path="/support/employment" component={EmploymentSupport} />
       <Route path="/support/finances" component={FinancesSupport} />

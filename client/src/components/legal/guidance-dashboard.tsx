@@ -1338,24 +1338,22 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   )}
 
                   {/* Legal Aid Organizations */}
-                  {onShowLegalAid && (
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start h-auto py-4 px-4"
-                      onClick={onShowLegalAid}
-                    >
-                      <div className="flex items-start gap-3 w-full">
-                        <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                        <div className="flex-1 text-left">
-                          <div className="font-semibold text-base mb-1">Legal Aid</div>
-                          <p className="text-sm text-muted-foreground">
-                            Find legal aid organizations and free legal services
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start h-auto py-4 px-4"
+                    onClick={() => guardedNavigate('/legal-aid')}
+                  >
+                    <div className="flex items-start gap-3 w-full">
+                      <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <div className="flex-1 text-left">
+                        <div className="font-semibold text-base mb-1">Legal Aid</div>
+                        <p className="text-sm text-muted-foreground">
+                          Find legal aid organizations and free legal services
+                        </p>
                       </div>
-                    </Button>
-                  )}
+                      <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    </div>
+                  </Button>
 
                   {/* Court Self-Help Center */}
                   <Button

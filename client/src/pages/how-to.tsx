@@ -77,8 +77,8 @@ export default function HowTo() {
       description: t('howTo.sections.findResources.description'),
       resources: [
         { title: t('howTo.sections.findResources.resourcesHub.title'), description: t('howTo.sections.findResources.resourcesHub.description'), link: "/resources" },
-        { title: t('howTo.sections.findResources.publicDefenders.title'), description: t('howTo.sections.findResources.publicDefenders.description'), link: "/" },
-        { title: t('howTo.sections.findResources.legalAid.title'), description: t('howTo.sections.findResources.legalAid.description'), link: "/" },
+        { title: t('howTo.sections.findResources.publicDefenders.title'), description: t('howTo.sections.findResources.publicDefenders.description'), link: "/resources" },
+        { title: t('howTo.sections.findResources.legalAid.title'), description: t('howTo.sections.findResources.legalAid.description'), link: "/legal-aid" },
         { title: t('howTo.sections.findResources.diversionPrograms.title'), description: t('howTo.sections.findResources.diversionPrograms.description'), link: "/diversion-programs" },
         { title: t('howTo.sections.findResources.recordExpungement.title'), description: t('howTo.sections.findResources.recordExpungement.description'), link: "/record-expungement" },
       ]

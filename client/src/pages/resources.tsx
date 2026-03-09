@@ -370,7 +370,7 @@ export default function Resources() {
       icon: <Heart className="h-7 w-7 text-white" />,
       title: t('resources.legalAid.title', { defaultValue: 'Legal Aid Organizations' }),
       description: t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community.' }),
-      onClick: () => setShowLegalAidModal(true),
+      href: "/legal-aid",
       color: "bg-gradient-to-br from-rose-500 to-rose-700"
     },
     {

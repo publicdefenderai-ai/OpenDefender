@@ -34,7 +34,9 @@ i18n
               "findResources": "Find Resources",
               "findResourcesDesc": "Locate courts, public defenders, and legal aid",
               "attorneyTools": "Attorney Tools",
-              "attorneyToolsDesc": "Document drafting for legal professionals"
+              "attorneyToolsDesc": "Document drafting for legal professionals",
+              "friendsFamily": "For Families",
+              "friendsFamilyDesc": "Support guide if a family member has been charged or detained"
             },
             "language": "Language",
             "theme": "Theme",
@@ -4820,7 +4822,9 @@ i18n
               "findResources": "Encontrar Recursos",
               "findResourcesDesc": "Localice tribunales, defensores públicos y ayuda legal",
               "attorneyTools": "Herramientas para Abogados",
-              "attorneyToolsDesc": "Redacción de documentos para profesionales legales"
+              "attorneyToolsDesc": "Redacción de documentos para profesionales legales",
+              "friendsFamily": "Para Familias",
+              "friendsFamilyDesc": "Guía de apoyo si un familiar fue acusado o detenido"
             },
             "language": "Idioma",
             "theme": "Tema",
@@ -9607,7 +9611,9 @@ i18n
               "findResources": "查找资源",
               "findResourcesDesc": "查找法院、公设辩护人和法律援助",
               "attorneyTools": "律师工具",
-              "attorneyToolsDesc": "为法律专业人士提供文件起草工具"
+              "attorneyToolsDesc": "为法律专业人士提供文件起草工具",
+              "friendsFamily": "家庭支持",
+              "friendsFamilyDesc": "家庭成员被指控或拘留时的支持指南"
             },
             "language": "语言",
             "theme": "主题",
