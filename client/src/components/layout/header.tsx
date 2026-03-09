@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Briefcase, Users } from "lucide-react";
+import { HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Briefcase, Users } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
@@ -111,24 +112,23 @@ export function Header() {
           {/* Left: Logo + Desktop nav */}
           <div className="flex items-center gap-5">
             {isHomePage ? (
-              <Link href="/" className="flex items-center space-x-3">
-                <div className="w-10 h-10 legal-blue rounded-lg flex items-center justify-center">
-                  <Scale className="h-5 w-5 text-white" aria-hidden="true" />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
-                  <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
+              <Link href="/" className="flex items-center gap-3" aria-label="OpenDefender home">
+                <BrandLogo size="md" />
+                <div className="hidden lg:flex items-center gap-3">
+                  <div className="h-6 border-l border-slate-300 dark:border-slate-600" />
+                  <span className="text-xs text-muted-foreground font-medium leading-snug max-w-[160px]">
+                    Free Case Support &amp; Legal Rights Information
+                  </span>
                 </div>
               </Link>
             ) : (
               <button
                 onClick={() => handleNavigate("/")}
-                className="flex items-center gap-2 hover:opacity-75 transition-opacity"
+                className="hover:opacity-75 transition-opacity"
                 aria-label="Go to home page"
                 data-testid="button-home"
               >
-                <img src="/favicon.svg" alt="" aria-hidden="true" className="w-7 h-7" />
-                <span className="font-bold text-foreground text-base hidden sm:block">OpenDefender</span>
+                <BrandLogo size="sm" />
               </button>
             )}
 

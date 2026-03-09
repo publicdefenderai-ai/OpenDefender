@@ -35,7 +35,6 @@ import {
   FileText,
   Download,
   AlertTriangle,
-  Shield,
   Loader2,
   CheckCircle,
   XCircle,
@@ -47,6 +46,7 @@ import {
   Info,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { BrandShieldIcon } from "@/components/brand-logo";
 
 interface DocumentSummary {
   summary: string;
@@ -359,8 +359,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               className="space-y-6"
             >
               <Alert>
-                <Shield className="h-4 w-4" />
-                <AlertDescription className="space-y-3 mt-2">
+                <BrandShieldIcon size={16} />
+                <AlertDescription className="space-y-3">
                   <p>
                     <strong>Before you upload a document, please understand:</strong>
                   </p>
@@ -738,7 +738,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               {/* Privacy Confirmation */}
               <div className="p-4 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
                 <div className="flex items-center gap-2 mb-2 text-foreground">
-                  <Shield className="h-4 w-4" />
+                  <BrandShieldIcon size={16} />
                   <span className="font-medium">Privacy Confirmation</span>
                 </div>
                 <p className="text-muted-foreground">

@@ -1,4 +1,5 @@
-import { Scale, Github, Shield } from "lucide-react";
+import { Github } from "lucide-react";
+import { BrandLogo, BrandShieldIcon } from "@/components/brand-logo";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -12,19 +13,16 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-10 lg:gap-16">
           {/* Brand Column */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-                <Scale className="h-5 w-5 text-white" aria-hidden="true" />
-              </div>
-              <span className="font-bold text-xl">OpenDefender</span>
+            <div className="mb-4">
+              <BrandLogo variant="light" size="md" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
               {t('footer.tagline')}
             </p>
-            <p className="text-gray-400 text-xs leading-relaxed mb-6">
-              <Shield className="h-3 w-3 inline mr-1" aria-hidden="true" />
-              {t('footer.privacyNotice')}
-            </p>
+            <div className="flex items-start gap-1.5 text-gray-400 text-xs leading-relaxed mb-6">
+              <BrandShieldIcon size={13} light className="mt-0.5 opacity-60" />
+              <span>{t('footer.privacyNotice')}</span>
+            </div>
             <a
               href="https://github.com/publicdefenderai-ai/OpenDefender"
               target="_blank"

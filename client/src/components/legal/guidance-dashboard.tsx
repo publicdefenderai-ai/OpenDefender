@@ -56,6 +56,7 @@ import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@
 import { MockQAList } from "@/components/legal/mock-qa-section";
 import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
 import { CaseOutcomeStatistics } from "@/components/legal/case-outcome-statistics";
+import { BrandShieldIcon } from "@/components/brand-logo";
 
 interface ImmediateAction {
   action: string;
@@ -1610,7 +1611,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
         <CardContent className="pt-6">
           <div className="flex items-center gap-2 mb-3">
-            <Shield className="h-5 w-5 text-blue-600" />
+            <BrandShieldIcon size={20} />
             <h3 className="font-semibold text-blue-800 dark:text-blue-200">
               {t('legalGuidance.dashboard.privacyNotice.title', 'Your Privacy is Protected')}
             </h3>
@@ -1625,7 +1626,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               <span>{t('legalGuidance.dashboard.privacyNotice.autoDelete', 'Auto-deletes in 24 hours')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="h-4 w-4 text-blue-600 flex-shrink-0" />
+              <BrandShieldIcon size={16} />
               <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal info redacted')}</span>
             </div>
           </div>
