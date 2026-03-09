@@ -123,7 +123,7 @@ export default function PersonalHealthSupport() {
     {
       name: "Partnership to End Addiction Helpline",
       description: t('support.personalHealth.resources.partnership.description'),
-      url: "https://drugfree.org/article/get-help-and-find-treatment/",
+      url: "https://drugfree.org/help/",
       phone: "1-855-378-4373",
       type: "national",
       free: true,
