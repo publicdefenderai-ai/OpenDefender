@@ -1341,7 +1341,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <Button
                     variant="outline"
                     className="w-full justify-start h-auto py-4 px-4"
-                    onClick={() => guardedNavigate('/legal-aid')}
+                    onClick={() => guardedNavigate('/resources')}
                   >
                     <div className="flex items-start gap-3 w-full">
                       <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />

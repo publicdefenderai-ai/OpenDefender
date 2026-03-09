@@ -60,17 +60,17 @@ export interface ResourcePageProps {
 }
 
 const categoryThemes: Record<string, { accent: string; accentBg: string; accentBorder: string; heroClass: string }> = {
-  employment:     { accent: "text-blue-600 dark:text-blue-400",    accentBg: "bg-blue-50 dark:bg-blue-950/30",    accentBorder: "border-blue-200 dark:border-blue-800",    heroClass: "vivid-header-alt" },
-  finances:       { accent: "text-emerald-600 dark:text-emerald-400", accentBg: "bg-emerald-50 dark:bg-emerald-950/30", accentBorder: "border-emerald-200 dark:border-emerald-800", heroClass: "vivid-header-alt" },
-  courtLogistics: { accent: "text-purple-600 dark:text-purple-400",  accentBg: "bg-purple-50 dark:bg-purple-950/30",  accentBorder: "border-purple-200 dark:border-purple-800",  heroClass: "vivid-header-alt" },
-  mentalHealth:   { accent: "text-rose-600 dark:text-rose-400",     accentBg: "bg-rose-50 dark:bg-rose-950/30",     accentBorder: "border-rose-200 dark:border-rose-800",     heroClass: "vivid-header-alt" },
-  personalHealth: { accent: "text-green-600 dark:text-green-400",   accentBg: "bg-green-50 dark:bg-green-950/30",   accentBorder: "border-green-200 dark:border-green-800",   heroClass: "vivid-header-alt" },
-  housing:        { accent: "text-amber-600 dark:text-amber-400",   accentBg: "bg-amber-50 dark:bg-amber-950/30",   accentBorder: "border-amber-200 dark:border-amber-800",   heroClass: "vivid-header-alt" },
-  transportation: { accent: "text-cyan-600 dark:text-cyan-400",     accentBg: "bg-cyan-50 dark:bg-cyan-950/30",     accentBorder: "border-cyan-200 dark:border-cyan-800",     heroClass: "vivid-header-alt" },
-  childcare:      { accent: "text-pink-600 dark:text-pink-400",     accentBg: "bg-pink-50 dark:bg-pink-950/30",     accentBorder: "border-pink-200 dark:border-pink-800",     heroClass: "vivid-header-alt" },
-  familyCare:     { accent: "text-indigo-600 dark:text-indigo-400", accentBg: "bg-indigo-50 dark:bg-indigo-950/30", accentBorder: "border-indigo-200 dark:border-indigo-800", heroClass: "vivid-header-alt" },
-  immigration:    { accent: "text-teal-600 dark:text-teal-400",     accentBg: "bg-teal-50 dark:bg-teal-950/30",     accentBorder: "border-teal-200 dark:border-teal-800",     heroClass: "vivid-header-alt" },
-  reputation:     { accent: "text-slate-600 dark:text-slate-400",   accentBg: "bg-slate-50 dark:bg-slate-950/30",   accentBorder: "border-slate-200 dark:border-slate-800",   heroClass: "vivid-header-alt" },
+  employment:     { accent: "text-blue-600 dark:text-blue-400",    accentBg: "bg-blue-50 dark:bg-blue-950/30",    accentBorder: "border-blue-200 dark:border-blue-800",    heroClass: "vivid-header-rose" },
+  finances:       { accent: "text-emerald-600 dark:text-emerald-400", accentBg: "bg-emerald-50 dark:bg-emerald-950/30", accentBorder: "border-emerald-200 dark:border-emerald-800", heroClass: "vivid-header-rose" },
+  courtLogistics: { accent: "text-purple-600 dark:text-purple-400",  accentBg: "bg-purple-50 dark:bg-purple-950/30",  accentBorder: "border-purple-200 dark:border-purple-800",  heroClass: "vivid-header-rose" },
+  mentalHealth:   { accent: "text-rose-600 dark:text-rose-400",     accentBg: "bg-rose-50 dark:bg-rose-950/30",     accentBorder: "border-rose-200 dark:border-rose-800",     heroClass: "vivid-header-rose" },
+  personalHealth: { accent: "text-green-600 dark:text-green-400",   accentBg: "bg-green-50 dark:bg-green-950/30",   accentBorder: "border-green-200 dark:border-green-800",   heroClass: "vivid-header-rose" },
+  housing:        { accent: "text-amber-600 dark:text-amber-400",   accentBg: "bg-amber-50 dark:bg-amber-950/30",   accentBorder: "border-amber-200 dark:border-amber-800",   heroClass: "vivid-header-rose" },
+  transportation: { accent: "text-cyan-600 dark:text-cyan-400",     accentBg: "bg-cyan-50 dark:bg-cyan-950/30",     accentBorder: "border-cyan-200 dark:border-cyan-800",     heroClass: "vivid-header-rose" },
+  childcare:      { accent: "text-pink-600 dark:text-pink-400",     accentBg: "bg-pink-50 dark:bg-pink-950/30",     accentBorder: "border-pink-200 dark:border-pink-800",     heroClass: "vivid-header-rose" },
+  familyCare:     { accent: "text-indigo-600 dark:text-indigo-400", accentBg: "bg-indigo-50 dark:bg-indigo-950/30", accentBorder: "border-indigo-200 dark:border-indigo-800", heroClass: "vivid-header-rose" },
+  immigration:    { accent: "text-teal-600 dark:text-teal-400",     accentBg: "bg-teal-50 dark:bg-teal-950/30",     accentBorder: "border-teal-200 dark:border-teal-800",     heroClass: "vivid-header-rose" },
+  reputation:     { accent: "text-slate-600 dark:text-slate-400",   accentBg: "bg-slate-50 dark:bg-slate-950/30",   accentBorder: "border-slate-200 dark:border-slate-800",   heroClass: "vivid-header-rose" },
 };
 
 function SectionHeading({ title }: { title: string }) {

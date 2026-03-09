@@ -224,7 +224,7 @@ export default function RecordExpungement() {
       <Header />
 
       {/* Hero Section - Amber Vivid Header */}
-      <section className="vivid-header-amber py-12 lg:py-16">
+      <section className="vivid-header-green py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

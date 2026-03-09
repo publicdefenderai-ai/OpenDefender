@@ -202,7 +202,7 @@ export default function DocumentLibrary() {
         currentPage={t('documentLibrary.title', 'Case Documents Library')} 
       />
       
-      <section className="vivid-header py-16 md:py-20 lg:py-24">
+      <section className="vivid-header-teal py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-6 text-white">
             {t('documentLibrary.title', 'Case Documents Library')}
