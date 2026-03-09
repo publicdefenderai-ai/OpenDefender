@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
-import { Phone, Calendar, Scale, MessageSquare } from "lucide-react";
+import { Phone, Shield, Scale, MessageSquare } from "lucide-react";
 
 interface StepProps {
   number: number;

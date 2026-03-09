@@ -6,6 +6,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useTranslation } from "react-i18next";
+import { Shield, Scale, Clock, FileText } from "lucide-react";
 
 const SECTIONS = [
   { id: "immigration", label: "Immigration" },
@@ -52,6 +54,7 @@ function BeforePlea({ children }: { children: React.ReactNode }) {
 
 export default function CollateralConsequences() {
   useScrollToTop();
+  const { t } = useTranslation();
   const mainRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = (id: string) => {
@@ -67,10 +70,10 @@ export default function CollateralConsequences() {
       <section className="vivid-header-alt py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-            Hidden Consequences of a Criminal Record
+            {t('collateralConsequences.title')}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            A conviction — or even a guilty plea — triggers consequences that extend far beyond the sentence itself. Many of these are never explained in court.
+            {t('collateralConsequences.subtitle')}
           </p>
         </div>
       </section>
@@ -383,36 +386,30 @@ export default function CollateralConsequences() {
 
         {/* Cross-links */}
         <ScrollReveal>
-          <div className="border-t border-border pt-10">
-            <h2 className="text-xl font-semibold mb-4">Related guides</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/process" className="text-sm underline hover:text-foreground transition-colors">
-                  Plea Bargains — understanding the full consequences before you sign
+          <div className="mt-4 border-t border-border pt-10">
+            <h2 className="text-lg font-semibold mb-3">{t('collateralConsequences.relatedGuides')}</h2>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {[
+                { href: "/process", icon: Scale, title: "Plea Bargains" },
+                { href: "/immigration-guidance", icon: FileText, title: "Immigration Guidance" },
+                { href: "/record-expungement", icon: Shield, title: "Record Expungement" },
+                { href: "/first-24-hours", icon: Clock, title: "Your First 24 Hours" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
+                    <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                    <span className="text-sm font-medium">{item.title}</span>
+                  </div>
                 </Link>
-              </li>
-              <li>
-                <Link href="/immigration-guidance" className="text-sm underline hover:text-foreground transition-colors">
-                  Immigration Guidance — immigration consequences of criminal charges in detail
-                </Link>
-              </li>
-              <li>
-                <Link href="/record-expungement" className="text-sm underline hover:text-foreground transition-colors">
-                  Record Expungement — which convictions can be cleared and how
-                </Link>
-              </li>
-              <li>
-                <Link href="/first-24-hours" className="text-sm underline hover:text-foreground transition-colors">
-                  Your First 24 Hours — immediate steps after arrest that affect your case
-                </Link>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
         </ScrollReveal>
 
         {/* Disclaimer */}
         <ScrollReveal>
-          <Alert className="border-slate-200 dark:border-slate-700">
+          <Alert className="mt-8 border-slate-200 dark:border-slate-700">
+            <Shield className="h-4 w-4 text-muted-foreground" />
             <AlertDescription className="text-muted-foreground text-sm">
               This page provides general information about collateral consequences and does not constitute legal advice. Laws vary significantly by state, offense type, and individual circumstances. Consult a licensed attorney — and an immigration attorney if you are a non-citizen — before making any decisions about your case.
             </AlertDescription>

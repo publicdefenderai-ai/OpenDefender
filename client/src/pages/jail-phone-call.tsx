@@ -5,22 +5,25 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useTranslation } from "react-i18next";
+import { Shield, Clock, Scale, Users } from "lucide-react";
 
 export default function JailPhoneCall() {
   useScrollToTop();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
       {/* Hero */}
-      <section className="vivid-header-alt py-16 md:py-20">
+      <section className="vivid-header-teal py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-            Making Your First Call from Jail
+            {t('jailPhoneCall.title')}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Phone calls from jail are recorded and routinely reviewed by prosecutors. What you say — and what you don't — matters.
+            {t('jailPhoneCall.subtitle')}
           </p>
         </div>
       </section>
@@ -222,36 +225,30 @@ export default function JailPhoneCall() {
 
         {/* Related */}
         <ScrollReveal>
-          <div className="border-t border-border pt-8">
-            <h2 className="text-lg font-semibold mb-4">Related guides</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/first-24-hours" className="text-sm underline hover:text-foreground transition-colors">
-                  Your First 24 Hours — step-by-step guide from arrest through arraignment
+          <div className="mt-4 border-t border-border pt-10">
+            <h2 className="text-lg font-semibold mb-3">{t('jailPhoneCall.relatedGuides')}</h2>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {[
+                { href: "/first-24-hours", icon: Clock, title: "Your First 24 Hours" },
+                { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
+                { href: "/process", icon: Scale, title: "Criminal Justice Process" },
+                { href: "/friends-family", icon: Users, title: "Guide for Friends & Family" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
+                    <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                    <span className="text-sm font-medium">{item.title}</span>
+                  </div>
                 </Link>
-              </li>
-              <li>
-                <Link href="/rights-info" className="text-sm underline hover:text-foreground transition-colors">
-                  Your Constitutional Rights — Miranda, right to counsel, and more
-                </Link>
-              </li>
-              <li>
-                <Link href="/process" className="text-sm underline hover:text-foreground transition-colors">
-                  Criminal Justice Process — bail, arraignment, plea bargains, and the full timeline
-                </Link>
-              </li>
-              <li>
-                <Link href="/friends-family" className="text-sm underline hover:text-foreground transition-colors">
-                  Guide for Friends & Family — how to find someone who was arrested and how to help
-                </Link>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
         </ScrollReveal>
 
         {/* Disclaimer */}
         <ScrollReveal>
-          <Alert className="border-slate-200 dark:border-slate-700">
+          <Alert className="mt-8 border-slate-200 dark:border-slate-700">
+            <Shield className="h-4 w-4 text-muted-foreground" />
             <AlertDescription className="text-muted-foreground text-sm">
               This guide provides general information only and does not constitute legal advice. Laws and practices vary by jurisdiction. Consult a licensed attorney about your specific situation.
             </AlertDescription>
