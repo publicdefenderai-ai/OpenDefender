@@ -362,7 +362,7 @@ export default function ChildcareSupport() {
     {
       name: "Child Welfare Information Gateway",
       description: t("support.childcare.resources.childWelfare.description"),
-      url: "https://www.childwelfare.gov/",
+      url: "https://www.childwelfare.gov/topics/",
       type: "national",
       free: true,
     },

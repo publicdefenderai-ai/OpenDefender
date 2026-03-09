@@ -920,7 +920,7 @@ i18n
                   "description": "Call or text 211 to connect with local transportation assistance programs, volunteer driver networks, and community resources in your area."
                 },
                 "lyft": {
-                  "description": "Lyft's Healthcare Transportation program offers subsidized rides to medical and court appointments. Ask local nonprofits or social workers about access."
+                  "description": "Medicaid covers free, non-emergency medical transportation (NEMT) for eligible members — including rides to doctor visits, dialysis, and mental health appointments. Contact your state Medicaid office or call 211 to arrange a ride."
                 },
                 "dmv": {
                   "description": "Your state's DMV website is where you can check your license status, apply for a hardship or restricted license, and understand the reinstatement process."
@@ -5708,7 +5708,7 @@ i18n
                   "description": "Llame o envíe un mensaje al 211 para conectarse con programas locales de asistencia de transporte, redes de conductores voluntarios y recursos comunitarios."
                 },
                 "lyft": {
-                  "description": "El programa de Transporte de Atención Médica de Lyft ofrece viajes subsidiados a citas médicas y judiciales. Consulte con organizaciones sin fines de lucro o trabajadores sociales sobre cómo acceder."
+                  "description": "Medicaid cubre el transporte médico no urgente (NEMT) gratuito para miembros elegibles — incluyendo traslados a citas médicas, diálisis y salud mental. Comuníquese con la oficina de Medicaid de su estado o llame al 211 para coordinar un viaje."
                 },
                 "dmv": {
                   "description": "El sitio web del DMV de su estado es donde puede verificar el estado de su licencia, solicitar una licencia de necesidad o restringida, y entender el proceso de reinstalación."
@@ -10497,7 +10497,7 @@ i18n
                   "description": "拨打或发短信至211，连接当地交通援助计划、志愿驾驶员网络和社区资源。"
                 },
                 "lyft": {
-                  "description": "Lyft的医疗保健交通计划为医疗和法庭预约提供补贴乘车服务。向当地非营利组织或社会工作者询问如何获取。"
+                  "description": "医疗补助计划（Medicaid）为符合条件的成员提供免费的非紧急医疗交通（NEMT）——包括前往医生诊所、透析中心和心理健康预约的交通。请联系您所在州的Medicaid办公室或拨打211安排出行。"
                 },
                 "dmv": {
                   "description": "你所在州的DMV网站是查询驾照状态、申请困难或限制性驾照，以及了解恢复流程的地方。"

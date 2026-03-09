@@ -388,9 +388,9 @@ export default function HousingSupport() {
       free: true,
     },
     {
-      name: "Emergency Rental Assistance (HUD Locator)",
+      name: "HUD Rental Assistance Programs",
       description: t("support.housing.resources.era.description"),
-      url: "https://www.hudexchange.info/programs/era/",
+      url: "https://www.hud.gov/topics/rental_assistance",
       type: "national",
       free: true,
     },

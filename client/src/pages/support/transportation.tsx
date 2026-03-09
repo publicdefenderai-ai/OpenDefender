@@ -390,11 +390,11 @@ export default function TransportationSupport() {
       free: true,
     },
     {
-      name: "Lyft Healthcare Transportation",
+      name: "Medicaid Non-Emergency Transportation (NEMT)",
       description: t("support.transportation.resources.lyft.description"),
-      url: "https://www.lyft.com/rider/lyft-healthcare",
+      url: "https://www.medicaid.gov/medicaid/benefits/non-emergency-medical-transportation/index.html",
       type: "national",
-      free: false,
+      free: true,
     },
     {
       name: "Your State DMV",
