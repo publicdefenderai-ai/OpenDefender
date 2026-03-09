@@ -253,6 +253,11 @@ export default function LegalAid() {
                     description: "The national voice for public defense and civil legal aid. Includes a program finder.",
                     url: "https://www.nlada.org",
                   },
+                  {
+                    name: "Partners for Justice",
+                    description: "Embeds social workers and legal advocates alongside public defenders to address the full range of needs people face when charged with a crime.",
+                    url: "https://www.partnersforjustice.org",
+                  },
                 ].map((resource) => (
                   <Card key={resource.name} className="hover:shadow-md transition-shadow duration-200">
                     <CardContent className="p-5 flex flex-col h-full">
