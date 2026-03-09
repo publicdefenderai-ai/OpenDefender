@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Check, X } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -35,26 +36,37 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, children 
             <span className="text-xs text-muted-foreground">{timeframe}</span>
           </div>
 
-          <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{context}</p>
+          <p className="text-muted-foreground mb-5 leading-relaxed text-sm">{context}</p>
 
           <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-2">Do</p>
-              <ul className="space-y-2">
+            <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-4">
+              <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-emerald-200 dark:border-emerald-800/60">
+                <div className="w-5 h-5 rounded-full bg-emerald-500 dark:bg-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                </div>
+                <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
+              </div>
+              <ul className="space-y-2.5">
                 {dos.map((item, i) => (
-                  <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                    <span className="flex-shrink-0 mt-0.5">–</span>
+                  <li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-2">Don't</p>
-              <ul className="space-y-2">
+
+            <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-4">
+              <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-rose-200 dark:border-rose-800/60">
+                <div className="w-5 h-5 rounded-full bg-rose-500 dark:bg-rose-600 flex items-center justify-center flex-shrink-0">
+                  <X className="w-3 h-3 text-white" strokeWidth={3} />
+                </div>
+                <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
+              </div>
+              <ul className="space-y-2.5">
                 {donts.map((item, i) => (
-                  <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                    <span className="flex-shrink-0 mt-0.5">–</span>
+                  <li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5">
+                    <X className="w-4 h-4 text-rose-500 dark:text-rose-400 flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
