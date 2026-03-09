@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Outer shield - right half -->
+  <path d="M16.5 4 C20 3 25 6.5 27 12 C28.5 17 27 23 23 27 C20.5 28.5 18 30 16 30"
+        stroke="#263A69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Outer shield - left half -->
+  <path d="M15.5 4 C12 3 7 6.5 5 12 C3.5 17 5 23 9 27 C11.5 28.5 14 30 16 30"
+        stroke="#263A69" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner shield - right half -->
+  <path d="M16.5 9 C19 8.5 22 11 23 14.5 C24 18 22.5 22 16 25.5"
+        stroke="#263A69" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner shield - left half -->
+  <path d="M15.5 9 C13 8.5 10 11 9 14.5 C8 18 9.5 22 16 25.5"
+        stroke="#263A69" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

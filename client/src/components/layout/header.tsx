@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Home, Moon, Sun, FileText, Briefcase, Users } from "lucide-react";
+import { Scale, HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Briefcase, Users } from "lucide-react";
 import { SearchButton } from "@/components/search/site-search";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "wouter";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
+import { cn } from "@/lib/utils";
 import {
   Sheet,
   SheetContent,
@@ -37,8 +38,6 @@ export function Header() {
       }
       setLocation(href);
     });
-    // If blocked, we still need to close the menu (user will see warning dialog)
-    // But they can reopen menu after dismissing the dialog
     if (wasBlocked && closeMobileMenu) {
       setMobileMenuOpen(false);
     }
@@ -51,6 +50,13 @@ export function Header() {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
+
+  const desktopNavLinks = [
+    { href: "/case-guidance", label: t('header.nav.caseGuidance', 'Case Guidance') },
+    { href: "/immigration-guidance", label: t('header.nav.immigration', 'Immigration') },
+    { href: "/resources", label: t('header.nav.resources', 'Resources') },
+    { href: "/support", label: t('header.nav.support', 'Support') },
+  ];
 
   const menuItems = [
     {
@@ -101,33 +107,55 @@ export function Header() {
     <header className="bg-background shadow-sm border-b">
       <nav className="max-w-7xl mx-auto px-4 py-4" aria-label="Main navigation">
         <div className="flex items-center justify-between">
-          {isHomePage ? (
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 legal-blue rounded-lg flex items-center justify-center">
-                <Scale className="h-5 w-5 text-white" aria-hidden="true" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
-                <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
-              </div>
-            </Link>
-          ) : (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground hover:text-foreground"
-              data-testid="button-home"
-              onClick={() => handleNavigate("/")}
-              aria-label="Go to home page"
-            >
-              <Home className="h-6 w-6" />
-            </Button>
-          )}
-          
+
+          {/* Left: Logo + Desktop nav */}
+          <div className="flex items-center gap-5">
+            {isHomePage ? (
+              <Link href="/" className="flex items-center space-x-3">
+                <div className="w-10 h-10 legal-blue rounded-lg flex items-center justify-center">
+                  <Scale className="h-5 w-5 text-white" aria-hidden="true" />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-foreground">{t('header.title')}</h1>
+                  <p className="text-sm text-muted-foreground">{t('header.subtitle')}</p>
+                </div>
+              </Link>
+            ) : (
+              <button
+                onClick={() => handleNavigate("/")}
+                className="flex items-center gap-2 hover:opacity-75 transition-opacity"
+                aria-label="Go to home page"
+                data-testid="button-home"
+              >
+                <img src="/favicon.svg" alt="" aria-hidden="true" className="w-7 h-7" />
+                <span className="font-bold text-foreground text-base hidden sm:block">OpenDefender</span>
+              </button>
+            )}
+
+            {/* Desktop nav links */}
+            <nav className="hidden md:flex items-center gap-0.5 ml-2" aria-label="Section navigation">
+              {desktopNavLinks.map((link) => (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavigate(link.href)}
+                  className={cn(
+                    "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+                    location === link.href || location.startsWith(link.href + "/")
+                      ? "text-foreground bg-muted"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                  )}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          {/* Right: Controls */}
           <div className="flex items-center space-x-2">
-            {/* Site Search - All sizes */}
+            {/* Site Search */}
             <SearchButton />
-            
+
             {/* Language Selector - Desktop */}
             <div className="hidden md:block">
               <Select value={i18n.language} onValueChange={changeLanguage}>
@@ -144,7 +172,7 @@ export function Header() {
                 </SelectContent>
               </Select>
             </div>
-            
+
             {/* Theme Toggle - Desktop */}
             <Button
               variant="ghost"
@@ -156,7 +184,7 @@ export function Header() {
             >
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-            
+
             {!isHowToPage && (
               <Button
                 variant="ghost"
@@ -169,7 +197,7 @@ export function Header() {
                 <HelpCircle className="h-5 w-5" />
               </Button>
             )}
-            
+
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button
@@ -186,7 +214,7 @@ export function Header() {
                 <SheetHeader>
                   <SheetTitle>{t('header.mobileMenu')}</SheetTitle>
                 </SheetHeader>
-                
+
                 {/* Language Selector - Mobile */}
                 <div className="mt-4 mb-4">
                   <label className="text-sm font-medium mb-2 block">{t('header.language')}</label>
@@ -204,7 +232,7 @@ export function Header() {
                     </SelectContent>
                   </Select>
                 </div>
-                
+
                 {/* Theme Toggle - Mobile */}
                 <div className="mb-4">
                   <label className="text-sm font-medium mb-2 block">{t('header.theme')}</label>
@@ -227,7 +255,7 @@ export function Header() {
                     )}
                   </Button>
                 </div>
-                
+
                 <div className="mt-6 flex flex-col space-y-3">
                   {menuItems.map((item) => {
                     const Icon = item.icon;
