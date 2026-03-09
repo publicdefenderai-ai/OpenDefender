@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
@@ -16,66 +16,67 @@ import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dial
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { X } from "lucide-react";
 import "./i18n";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/home";
-import RightsInfo from "@/pages/rights-info";
-import CaseGuidance from "@/pages/case-guidance";
-import CourtLocator from "@/pages/court-locator";
-import ImmigrationGuidance from "@/pages/immigration-guidance";
-import DacaTps from "@/pages/immigration/daca-tps";
-import WorkplaceRaids from "@/pages/immigration/workplace-raids";
-import FamilyPlanning from "@/pages/immigration/family-planning";
-import BondHearings from "@/pages/immigration/bond-hearings";
-import FindAttorney from "@/pages/immigration/find-attorney";
-import FindDetained from "@/pages/immigration/find-detained";
-import KnowYourRights from "@/pages/immigration/know-your-rights";
-import RaidsToolkit from "@/pages/immigration/raids-toolkit";
-import LegalGlossary from "@/pages/legal-glossary";
-import DiversionPrograms from "@/pages/diversion-programs";
-import RecordExpungement from "@/pages/record-expungement";
-import MissionStatement from "@/pages/mission-statement";
-import CourtRecords from "@/pages/court-records";
-import RecapExtensions from "@/pages/recap-extensions";
-import Process from "@/pages/process";
-import SearchSeizure from "@/pages/search-seizure";
-import FriendsFamily from "@/pages/friends-family";
-import HowTo from "@/pages/how-to";
-import PrivacyPolicy from "@/pages/privacy-policy";
-import Disclaimers from "@/pages/disclaimers";
-import Statutes from "@/pages/statutes";
-import Chat from "@/pages/chat";
-import DocumentLibrary from "@/pages/document-library";
-import Resources from "@/pages/resources";
-import LegalAid from "@/pages/legal-aid";
-import DocumentSummarizerPage from "@/pages/document-summarizer";
-import AttorneyPortal from "@/pages/attorney/index";
-import AttorneyVerify from "@/pages/attorney/verify";
-import AttorneyDocuments from "@/pages/attorney/documents";
-import DocumentWizard from "@/pages/attorney/document-wizard";
-import AttorneyPlaybooks from "@/pages/attorney/playbooks";
-import PlaybookDetail from "@/pages/attorney/playbook-detail";
-import ApiDocs from "@/pages/api-docs";
-import Widgets from "@/pages/widgets";
-import TechDocs from "@/pages/tech-docs";
-import EmbedSearch from "@/pages/embed/search";
-import EmbedRights from "@/pages/embed/rights";
-import EmbedGlossary from "@/pages/embed/glossary";
-import CaseTimeline from "@/pages/case-timeline";
-import QuickReference from "@/pages/quick-reference";
-import SupportHub from "@/pages/support/index";
-import EmploymentSupport from "@/pages/support/employment";
-import FinancesSupport from "@/pages/support/finances";
-import CourtLogisticsSupport from "@/pages/support/court-logistics";
-import MentalHealthSupport from "@/pages/support/mental-health";
-import TransportationSupport from "@/pages/support/transportation";
-import ChildcareSupport from "@/pages/support/childcare";
-import HousingSupport from "@/pages/support/housing";
-import FamilyCareSupport from "@/pages/support/family-care";
-import ReputationSupport from "@/pages/support/reputation";
-import PersonalHealthSupport from "@/pages/support/personal-health";
-import FirstTwentyFourHours from "@/pages/first-24-hours";
-import JailPhoneCall from "@/pages/jail-phone-call";
-import CollateralConsequences from "@/pages/collateral-consequences";
+
+const NotFound = lazy(() => import("@/pages/not-found"));
+const Home = lazy(() => import("@/pages/home"));
+const RightsInfo = lazy(() => import("@/pages/rights-info"));
+const CaseGuidance = lazy(() => import("@/pages/case-guidance"));
+const CourtLocator = lazy(() => import("@/pages/court-locator"));
+const ImmigrationGuidance = lazy(() => import("@/pages/immigration-guidance"));
+const DacaTps = lazy(() => import("@/pages/immigration/daca-tps"));
+const WorkplaceRaids = lazy(() => import("@/pages/immigration/workplace-raids"));
+const FamilyPlanning = lazy(() => import("@/pages/immigration/family-planning"));
+const BondHearings = lazy(() => import("@/pages/immigration/bond-hearings"));
+const FindAttorney = lazy(() => import("@/pages/immigration/find-attorney"));
+const FindDetained = lazy(() => import("@/pages/immigration/find-detained"));
+const KnowYourRights = lazy(() => import("@/pages/immigration/know-your-rights"));
+const RaidsToolkit = lazy(() => import("@/pages/immigration/raids-toolkit"));
+const LegalGlossary = lazy(() => import("@/pages/legal-glossary"));
+const DiversionPrograms = lazy(() => import("@/pages/diversion-programs"));
+const RecordExpungement = lazy(() => import("@/pages/record-expungement"));
+const MissionStatement = lazy(() => import("@/pages/mission-statement"));
+const CourtRecords = lazy(() => import("@/pages/court-records"));
+const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
+const Process = lazy(() => import("@/pages/process"));
+const SearchSeizure = lazy(() => import("@/pages/search-seizure"));
+const FriendsFamily = lazy(() => import("@/pages/friends-family"));
+const HowTo = lazy(() => import("@/pages/how-to"));
+const PrivacyPolicy = lazy(() => import("@/pages/privacy-policy"));
+const Disclaimers = lazy(() => import("@/pages/disclaimers"));
+const Statutes = lazy(() => import("@/pages/statutes"));
+const Chat = lazy(() => import("@/pages/chat"));
+const DocumentLibrary = lazy(() => import("@/pages/document-library"));
+const Resources = lazy(() => import("@/pages/resources"));
+const LegalAid = lazy(() => import("@/pages/legal-aid"));
+const DocumentSummarizerPage = lazy(() => import("@/pages/document-summarizer"));
+const AttorneyPortal = lazy(() => import("@/pages/attorney/index"));
+const AttorneyVerify = lazy(() => import("@/pages/attorney/verify"));
+const AttorneyDocuments = lazy(() => import("@/pages/attorney/documents"));
+const DocumentWizard = lazy(() => import("@/pages/attorney/document-wizard"));
+const AttorneyPlaybooks = lazy(() => import("@/pages/attorney/playbooks"));
+const PlaybookDetail = lazy(() => import("@/pages/attorney/playbook-detail"));
+const ApiDocs = lazy(() => import("@/pages/api-docs"));
+const Widgets = lazy(() => import("@/pages/widgets"));
+const TechDocs = lazy(() => import("@/pages/tech-docs"));
+const EmbedSearch = lazy(() => import("@/pages/embed/search"));
+const EmbedRights = lazy(() => import("@/pages/embed/rights"));
+const EmbedGlossary = lazy(() => import("@/pages/embed/glossary"));
+const CaseTimeline = lazy(() => import("@/pages/case-timeline"));
+const QuickReference = lazy(() => import("@/pages/quick-reference"));
+const SupportHub = lazy(() => import("@/pages/support/index"));
+const EmploymentSupport = lazy(() => import("@/pages/support/employment"));
+const FinancesSupport = lazy(() => import("@/pages/support/finances"));
+const CourtLogisticsSupport = lazy(() => import("@/pages/support/court-logistics"));
+const MentalHealthSupport = lazy(() => import("@/pages/support/mental-health"));
+const TransportationSupport = lazy(() => import("@/pages/support/transportation"));
+const ChildcareSupport = lazy(() => import("@/pages/support/childcare"));
+const HousingSupport = lazy(() => import("@/pages/support/housing"));
+const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
+const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
+const PersonalHealthSupport = lazy(() => import("@/pages/support/personal-health"));
+const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
+const JailPhoneCall = lazy(() => import("@/pages/jail-phone-call"));
+const CollateralConsequences = lazy(() => import("@/pages/collateral-consequences"));
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -86,7 +87,7 @@ function BetaBanner() {
   }
 
   return (
-    <div 
+    <div
       className="w-full bg-muted/80 border-b border-border py-2.5 px-4"
       data-testid="beta-banner"
     >
@@ -196,7 +197,7 @@ function SkipNavigation() {
 function App() {
   const [location] = useLocation();
   useKeyboardShortcuts();
-  
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="light" storageKey="public-defender-theme">
@@ -208,11 +209,13 @@ function App() {
                 <SkipNavigation />
                 <BetaBanner />
                 <main id="main-content" tabIndex={-1}>
-                  <AnimatePresence mode="wait">
-                    <PageTransition key={location}>
-                      <Router />
-                    </PageTransition>
-                  </AnimatePresence>
+                  <Suspense fallback={<div className="min-h-screen bg-background" />}>
+                    <AnimatePresence mode="wait">
+                      <PageTransition key={location}>
+                        <Router />
+                      </PageTransition>
+                    </AnimatePresence>
+                  </Suspense>
                 </main>
                 <ChatLauncher />
                 <KeyboardShortcutsDialog />

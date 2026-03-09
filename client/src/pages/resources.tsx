@@ -370,7 +370,7 @@ export default function Resources() {
       icon: <Heart className="h-7 w-7 text-white" />,
       title: t('resources.legalAid.title', { defaultValue: 'Legal Aid Organizations' }),
       description: t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community.' }),
-      href: "/legal-aid",
+      onClick: () => setShowLegalAidModal(true),
       color: "bg-gradient-to-br from-rose-500 to-rose-700"
     },
     {
@@ -387,7 +387,7 @@ export default function Resources() {
       <Header />
 
       {/* Hero Section */}
-      <section className="vivid-header py-12 lg:py-16">
+      <section className="vivid-header-teal py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -40,7 +40,7 @@ export default function RaidsToolkit() {
       />
 
       {/* Hero Section */}
-      <section className="vivid-header text-white py-12 lg:py-16 relative overflow-hidden">
+      <section className="vivid-header-amber text-white py-12 lg:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div

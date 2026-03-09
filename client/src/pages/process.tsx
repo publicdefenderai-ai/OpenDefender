@@ -81,7 +81,7 @@ export default function Process() {
       <Header />
 
       {/* Hero Section - Teal Vivid Header */}
-      <section className="vivid-header-teal py-16 md:py-20">
+      <section className="vivid-header py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">

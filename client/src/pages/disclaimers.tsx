@@ -1,4 +1,4 @@
-import { Shield, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Header } from "@/components/layout/header";
@@ -29,7 +29,7 @@ export default function Disclaimers() {
       <Header />
       
       {/* Hero Section with Colored Header */}
-      <section className="vivid-header-alt py-16 md:py-20">
+      <section className="vivid-header py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
             Legal Notice & Disclaimers
@@ -330,7 +330,7 @@ export default function Disclaimers() {
         {/* Acknowledgement */}
         <ScrollReveal>
           <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-            <Shield className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+            <img src="/favicon.svg" className="h-4 w-4" alt="" aria-hidden="true" />
             <AlertDescription className="text-blue-800 dark:text-blue-200">
               <strong className="font-semibold">Acknowledgement of Disclosures:</strong> By using this site, you acknowledge these disclaimers and understand the open source nature and limits of the platform.
             </AlertDescription>

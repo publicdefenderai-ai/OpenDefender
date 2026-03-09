@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
       <Header />
       
       {/* Hero Section with Colored Header */}
-      <section className="vivid-header-purple py-16 md:py-20">
+      <section className="vivid-header py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
             {t('privacyPolicy.hero.title')}

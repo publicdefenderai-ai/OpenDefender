@@ -64,7 +64,7 @@ export default function CourtRecords() {
       <Header />
       
       {/* Hero Section */}
-      <section className="vivid-header-alt py-16 md:py-20">
+      <section className="vivid-header-teal py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('courtRecords.hero.title')}</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">

@@ -4645,6 +4645,22 @@ i18n
             "openTemplate": "Open Template"
           }
         },
+          "first24Hours": {
+            "title": "Your First 24 Hours",
+            "subtitle": "From arrest through your first court appearance — decisions made early in a case can have lasting consequences.",
+            "alert": "One rule applies to every step below: Do not discuss the facts of your case with anyone except your attorney — not police, not family, not cellmates, and not on the jail phone.",
+            "relatedGuides": "Related guides"
+          },
+          "jailPhoneCall": {
+            "title": "Making Your First Call from Jail",
+            "subtitle": "Phone calls from jail are recorded and routinely reviewed by prosecutors. What you say — and what you don't — matters.",
+            "relatedGuides": "Related guides"
+          },
+          "collateralConsequences": {
+            "title": "Hidden Consequences of a Criminal Record",
+            "subtitle": "A conviction — or even a guilty plea — triggers consequences that extend far beyond the sentence itself. Many of these are never explained in court.",
+            "relatedGuides": "Related guides"
+          },
           "howTo": {
             "pageTitle": "Navigate This Tool",
             "pageSubtitle": "Find legal resources, understand your rights, and get the support you need",
@@ -9433,6 +9449,22 @@ i18n
             "openTemplate": "Abrir Plantilla"
           }
         },
+          "first24Hours": {
+            "title": "Sus Primeras 24 Horas",
+            "subtitle": "Desde el arresto hasta su primera comparecencia ante el tribunal — las decisiones tomadas al inicio de un caso pueden tener consecuencias duraderas.",
+            "alert": "Una regla aplica a cada paso a continuación: No discuta los hechos de su caso con nadie excepto su abogado — ni con la policía, ni con familiares, ni con compañeros de celda, ni por teléfono de la cárcel.",
+            "relatedGuides": "Guías relacionadas"
+          },
+          "jailPhoneCall": {
+            "title": "Su Primera Llamada desde la Cárcel",
+            "subtitle": "Las llamadas telefónicas desde la cárcel son grabadas y revisadas regularmente por los fiscales. Lo que usted diga — y lo que no diga — importa.",
+            "relatedGuides": "Guías relacionadas"
+          },
+          "collateralConsequences": {
+            "title": "Consecuencias Ocultas de un Antecedente Penal",
+            "subtitle": "Una condena — o incluso una declaración de culpabilidad — desencadena consecuencias que van mucho más allá de la sentencia en sí. Muchas de estas nunca se explican en el tribunal.",
+            "relatedGuides": "Guías relacionadas"
+          },
           "howTo": {
             "pageTitle": "Guía de Navegación",
             "pageSubtitle": "Encuentre recursos legales, entienda sus derechos y obtenga el apoyo que necesita",
@@ -14186,6 +14218,22 @@ i18n
               "jurisdictionNotes": "司法管辖区说明",
               "openTemplate": "打开模板"
             }
+          },
+          "first24Hours": {
+            "title": "逮捕后的前24小时",
+            "subtitle": "从逮捕到第一次出庭——案件初期做出的决定可能产生深远的后果。",
+            "alert": "以下每个步骤都适用一条规则：除您的律师外，不要与任何人讨论案件事实——不要与警察、家人、狱友交谈，也不要通过监狱电话透露任何信息。",
+            "relatedGuides": "相关指南"
+          },
+          "jailPhoneCall": {
+            "title": "在押期间的第一个电话",
+            "subtitle": "监狱电话会被录音，并由检察官定期审查。您说的话——以及您不说的话——都至关重要。",
+            "relatedGuides": "相关指南"
+          },
+          "collateralConsequences": {
+            "title": "犯罪记录的隐性后果",
+            "subtitle": "定罪——甚至认罪——会引发远超刑期本身的后果。其中许多从未在法庭上得到解释。",
+            "relatedGuides": "相关指南"
           },
           "howTo": {
             "pageTitle": "使用指南",

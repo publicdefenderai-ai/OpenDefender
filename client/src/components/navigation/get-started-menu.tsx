@@ -410,7 +410,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/legal-aid')}
+        onClick={() => handleNavigate('/resources')}
         className="w-full"
         data-testid="submenu-item-legal-aid-orgs"
       >

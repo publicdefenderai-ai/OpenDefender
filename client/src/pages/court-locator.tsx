@@ -103,7 +103,7 @@ export default function CourtLocator() {
       <Header />
 
       {/* Hero Section */}
-      <section className="vivid-header-alt py-16 md:py-20">
+      <section className="vivid-header-teal py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center mb-12">

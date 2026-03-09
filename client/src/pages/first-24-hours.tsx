@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useTranslation } from "react-i18next";
+import { Phone, Calendar, Scale, MessageSquare } from "lucide-react";
 
 interface StepProps {
   number: number;
@@ -83,6 +85,7 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, children 
 
 export default function FirstTwentyFourHours() {
   useScrollToTop();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background">
@@ -91,10 +94,10 @@ export default function FirstTwentyFourHours() {
       <section className="vivid-header-alt py-14 md:py-18">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-white">
-            Your First 24 Hours
+            {t('first24Hours.title')}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            From arrest through your first court appearance — decisions made early in a case can have lasting consequences.
+            {t('first24Hours.subtitle')}
           </p>
         </div>
       </section>
@@ -104,7 +107,7 @@ export default function FirstTwentyFourHours() {
         <ScrollReveal>
           <Alert className="mb-10 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
             <AlertDescription className="text-amber-800 dark:text-amber-200">
-              <strong>One rule applies to every step below:</strong> Do not discuss the facts of your case with anyone except your attorney — not police, not family, not cellmates, and not on the jail phone.
+              <strong>One rule applies to every step below:</strong> {t('first24Hours.alert')}
             </AlertDescription>
           </Alert>
         </ScrollReveal>
@@ -267,34 +270,28 @@ export default function FirstTwentyFourHours() {
 
         <ScrollReveal delay={0.4}>
           <div className="mt-4 border-t border-border pt-10">
-            <h2 className="text-lg font-semibold mb-4">Related guides</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/jail-phone-call" className="text-sm underline hover:text-foreground transition-colors">
-                  Jail Phone Call Guide — what to say, what not to say, and how to use your call effectively
+            <h2 className="text-lg font-semibold mb-3">{t('first24Hours.relatedGuides')}</h2>
+            <div className="grid sm:grid-cols-2 gap-2">
+              {[
+                { href: "/jail-phone-call", icon: Phone, title: "Jail Phone Call Guide" },
+                { href: "/process", icon: Scale, title: "Criminal Justice Process" },
+                { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
+                { href: "/case-guidance", icon: MessageSquare, title: "Get Personalized Guidance" },
+              ].map((item) => (
+                <Link key={item.href} href={item.href}>
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
+                    <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                    <span className="text-sm font-medium">{item.title}</span>
+                  </div>
                 </Link>
-              </li>
-              <li>
-                <Link href="/process" className="text-sm underline hover:text-foreground transition-colors">
-                  Criminal Justice Process — how bail works, plea bargains, and the full case timeline
-                </Link>
-              </li>
-              <li>
-                <Link href="/rights-info" className="text-sm underline hover:text-foreground transition-colors">
-                  Your Constitutional Rights — Miranda, search and seizure, and your rights at every stage
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-guidance" className="text-sm underline hover:text-foreground transition-colors">
-                  Get Personalized Guidance — answer a few questions and get guidance specific to your situation
-                </Link>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.5}>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
+            <img src="/favicon.svg" className="h-4 w-4 opacity-60" alt="" aria-hidden="true" />
             <AlertDescription className="text-muted-foreground text-sm">
               This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.
             </AlertDescription>

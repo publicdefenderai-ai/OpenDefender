@@ -57,6 +57,8 @@ export default function HowTo() {
         { title: t('howTo.sections.getHelp.aiChat.title'), description: t('howTo.sections.getHelp.aiChat.description'), link: "/chat" },
         { title: t('howTo.sections.getHelp.immigrationRights.title'), description: t('howTo.sections.getHelp.immigrationRights.description'), link: "/immigration-guidance" },
         { title: t('howTo.sections.getHelp.documentSummarizer.title'), description: t('howTo.sections.getHelp.documentSummarizer.description'), link: "/document-summarizer" },
+        { title: "Your First 24 Hours", description: "Step-by-step guide from arrest through your first court appearance", link: "/first-24-hours" },
+        { title: "Jail Phone Call Guide", description: "What to say and what never to say on jail calls", link: "/jail-phone-call" },
       ]
     },
     {
@@ -70,6 +72,7 @@ export default function HowTo() {
         { title: t('howTo.sections.knowYourRights.searchSeizure.title'), description: t('howTo.sections.knowYourRights.searchSeizure.description'), link: "/search-seizure" },
         { title: t('howTo.sections.knowYourRights.friendsFamily.title'), description: t('howTo.sections.knowYourRights.friendsFamily.description'), link: "/friends-family" },
         { title: t('howTo.sections.knowYourRights.mockQA.title'), description: t('howTo.sections.knowYourRights.mockQA.description'), link: "/resources" },
+        { title: "Collateral Consequences", description: "Hidden consequences of a conviction beyond the sentence", link: "/collateral-consequences" },
       ]
     },
     {
@@ -78,7 +81,7 @@ export default function HowTo() {
       resources: [
         { title: t('howTo.sections.findResources.resourcesHub.title'), description: t('howTo.sections.findResources.resourcesHub.description'), link: "/resources" },
         { title: t('howTo.sections.findResources.publicDefenders.title'), description: t('howTo.sections.findResources.publicDefenders.description'), link: "/resources" },
-        { title: t('howTo.sections.findResources.legalAid.title'), description: t('howTo.sections.findResources.legalAid.description'), link: "/legal-aid" },
+        { title: t('howTo.sections.findResources.legalAid.title'), description: t('howTo.sections.findResources.legalAid.description'), link: "/resources" },
         { title: t('howTo.sections.findResources.diversionPrograms.title'), description: t('howTo.sections.findResources.diversionPrograms.description'), link: "/diversion-programs" },
         { title: t('howTo.sections.findResources.recordExpungement.title'), description: t('howTo.sections.findResources.recordExpungement.description'), link: "/record-expungement" },
       ]

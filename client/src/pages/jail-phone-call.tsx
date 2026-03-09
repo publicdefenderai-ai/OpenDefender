@@ -14,7 +14,7 @@ export default function JailPhoneCall() {
       <Header />
 
       {/* Hero */}
-      <section className="vivid-header-teal py-16 md:py-20">
+      <section className="vivid-header-alt py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Making Your First Call from Jail

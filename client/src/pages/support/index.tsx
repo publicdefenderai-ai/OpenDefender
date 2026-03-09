@@ -111,7 +111,7 @@ export default function SupportHub() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="vivid-header-alt py-12 md:py-16">
+        <section className="vivid-header-rose py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 text-center vivid-header-content">
             <Link href="/">
               <Button variant="ghost" size="sm" className="mb-5 text-white/70 hover:text-white hover:bg-white/10">

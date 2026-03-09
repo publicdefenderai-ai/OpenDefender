@@ -260,7 +260,7 @@ export default function SearchSeizure() {
       <Header />
 
       {/* Hero Section - Vivid Header */}
-      <section className="vivid-header py-16 md:py-20">
+      <section className="vivid-header-alt py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
