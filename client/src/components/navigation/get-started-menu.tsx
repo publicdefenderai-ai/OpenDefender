@@ -92,27 +92,27 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
 
   // Main menu
   const mainMenu = (
-    <div className="space-y-3">
+    <div className="space-y-2 sm:space-y-3">
       <button
         onClick={() => handleNavigate('/first-24-hours')}
         className="w-full"
         data-testid="menu-item-just-arrested"
       >
         <Card className="hover:shadow-lg hover:border-red-500 transition-all duration-200 cursor-pointer group border-red-200 dark:border-red-900 bg-red-50/40 dark:bg-red-950/20">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <AlertTriangle className="h-6 w-6 text-white" />
+          <CardContent className="p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-red-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <AlertTriangle className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
+                <h3 className="font-semibold text-sm sm:text-lg group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                   Just arrested or charged?
                 </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                <p className="hidden sm:block text-sm text-muted-foreground">
                   Step-by-step guide for the first 24 hours
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -124,20 +124,20 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="menu-item-case-guidance"
       >
         <Card className="hover:shadow-lg hover:border-blue-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <MessageSquare className="h-6 w-6 text-white" />
+          <CardContent className="p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <MessageSquare className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors">
+                <h3 className="font-semibold text-sm sm:text-lg group-hover:text-blue-600 transition-colors">
                   {t('getStartedMenu.main.caseGuidance.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                <p className="hidden sm:block text-sm text-muted-foreground">
                   {t('getStartedMenu.main.caseGuidance.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-blue-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -149,20 +149,20 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="menu-item-immigration"
       >
         <Card className="hover:shadow-lg hover:border-amber-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <Globe className="h-6 w-6 text-white" />
+          <CardContent className="p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-amber-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-amber-600 transition-colors">
+                <h3 className="font-semibold text-sm sm:text-lg group-hover:text-amber-600 transition-colors">
                   {t('getStartedMenu.main.immigration.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                <p className="hidden sm:block text-sm text-muted-foreground">
                   {t('getStartedMenu.main.immigration.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-amber-600 transition-colors flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-amber-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -174,20 +174,20 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="menu-item-legal-rights"
       >
         <Card className="hover:shadow-lg hover:border-green-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <Shield className="h-6 w-6 text-white" />
+          <CardContent className="p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-green-600 transition-colors">
+                <h3 className="font-semibold text-sm sm:text-lg group-hover:text-green-600 transition-colors">
                   {t('getStartedMenu.main.legalRights.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                <p className="hidden sm:block text-sm text-muted-foreground">
                   {t('getStartedMenu.main.legalRights.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 transition-colors flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-green-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -199,20 +199,20 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="menu-item-attorney-tools"
       >
         <Card className="hover:shadow-lg hover:border-slate-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-slate-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <Briefcase className="h-6 w-6 text-white" />
+          <CardContent className="p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-slate-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <Briefcase className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-slate-600 transition-colors">
+                <h3 className="font-semibold text-sm sm:text-lg group-hover:text-slate-600 transition-colors">
                   {t('getStartedMenu.main.attorneyTools.title', 'Attorney Tools')}
                 </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                <p className="hidden sm:block text-sm text-muted-foreground">
                   {t('getStartedMenu.main.attorneyTools.description', 'Document drafting and resources for legal professionals')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-slate-600 transition-colors flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-slate-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -224,20 +224,20 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         data-testid="menu-item-resources"
       >
         <Card className="hover:shadow-lg hover:border-purple-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-4">
-            <div className="flex items-start gap-3">
-              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <Users className="h-6 w-6 text-white" />
+          <CardContent className="p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div className="flex-1 text-left min-w-0">
-                <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors">
+                <h3 className="font-semibold text-sm sm:text-lg group-hover:text-purple-600 transition-colors">
                   {t('getStartedMenu.main.resources.title')}
                 </h3>
-                <p className="text-sm text-muted-foreground whitespace-normal break-words">
+                <p className="hidden sm:block text-sm text-muted-foreground">
                   {t('getStartedMenu.main.resources.description')}
                 </p>
               </div>
-              <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -732,7 +732,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl">
+          <DialogTitle className="text-xl sm:text-2xl">
             {getMenuTitle()}
           </DialogTitle>
         </DialogHeader>

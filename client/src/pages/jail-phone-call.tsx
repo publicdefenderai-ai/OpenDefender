@@ -1,14 +1,3 @@
-import {
-  Phone,
-  AlertTriangle,
-  X,
-  Check,
-  Shield,
-  Mic,
-  MessageSquare,
-  ArrowRight,
-  Lock,
-} from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -41,7 +30,6 @@ export default function JailPhoneCall() {
         {/* Big warning */}
         <ScrollReveal>
           <Alert className="border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
-            <Mic className="h-4 w-4 text-red-600 dark:text-red-400" />
             <AlertDescription className="text-red-800 dark:text-red-200">
               <strong className="block mb-1">Every call is monitored and recorded — assume so without exception.</strong>
               Jails are required to notify you that calls are recorded, but this warning is easy to miss. Prosecutors have used jail calls as key evidence in countless cases, including statements made to family members.
@@ -54,10 +42,7 @@ export default function JailPhoneCall() {
         <ScrollReveal>
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-slate-600" />
-                Your First Call — Priorities
-              </CardTitle>
+              <CardTitle>Your First Call — Priorities</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
@@ -90,10 +75,7 @@ export default function JailPhoneCall() {
         <ScrollReveal>
           <Card className="border-slate-200 dark:border-slate-700">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-base">
-                <MessageSquare className="h-5 w-5 text-slate-600" />
-                Sample Script
-              </CardTitle>
+              <CardTitle className="text-base">Sample Script</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-5 border border-slate-200 dark:border-slate-700 font-mono text-sm leading-relaxed text-foreground space-y-3">
@@ -115,8 +97,7 @@ export default function JailPhoneCall() {
         <ScrollReveal>
           <Card className="border-red-200 dark:border-red-900">
             <CardHeader className="bg-red-50/60 dark:bg-red-950/30 rounded-t-lg">
-              <CardTitle className="flex items-center gap-2 text-red-800 dark:text-red-300">
-                <X className="h-5 w-5" />
+              <CardTitle className="text-red-800 dark:text-red-300">
                 What Never to Say — On Any Jail Call
               </CardTitle>
             </CardHeader>
@@ -152,7 +133,7 @@ export default function JailPhoneCall() {
                   },
                 ].map(({ category, examples }) => (
                   <li key={category} className="flex items-start gap-3">
-                    <X className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                    <span className="flex-shrink-0 mt-0.5 text-red-500 font-medium">–</span>
                     <div>
                       <p className="text-sm font-semibold text-foreground">{category}</p>
                       <p className="text-sm text-muted-foreground mt-0.5">{examples}</p>
@@ -161,7 +142,6 @@ export default function JailPhoneCall() {
                 ))}
               </ul>
               <Alert className="border-red-300 bg-red-50 dark:bg-red-950/20 mt-2">
-                <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400" />
                 <AlertDescription className="text-red-800 dark:text-red-200 text-sm">
                   <strong>Speaking in code doesn't work.</strong> Law enforcement investigators are specifically trained to interpret coded language, and a jury can draw adverse inferences from evasive speech.
                 </AlertDescription>
@@ -174,43 +154,39 @@ export default function JailPhoneCall() {
         <ScrollReveal>
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-slate-600" />
-                Ongoing Calls While in Custody
-              </CardTitle>
+              <CardTitle>Ongoing Calls While in Custody</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground text-sm">
                 Every subsequent call is subject to the same rules. Some guidelines for ongoing communication:
               </p>
               <div className="space-y-3">
-                {[
-                  {
-                    icon: <Check className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />,
-                    text: "Keep calls to practical matters: court dates, money for commissary, updates on legal counsel, family wellbeing.",
-                  },
-                  {
-                    icon: <Check className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />,
-                    text: "Ask your attorney which topics are safe to discuss with family, and which should only go through them.",
-                  },
-                  {
-                    icon: <X className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />,
-                    text: "Don't vent about the case, the charges, or the police — even when you're frustrated.",
-                  },
-                  {
-                    icon: <X className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />,
-                    text: "Don't ask for case updates via phone — prosecutors can subpoena information your family relays back to you.",
-                  },
-                  {
-                    icon: <X className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />,
-                    text: "Don't assume that text messages, letters, or emails from jail are any more private than phone calls — they aren't.",
-                  },
-                ].map(({ icon, text }, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    {icon}
-                    <p className="text-sm text-muted-foreground">{text}</p>
-                  </div>
-                ))}
+                <p className="text-xs font-semibold uppercase tracking-wide text-foreground">Do</p>
+                <ul className="space-y-2 mb-3">
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 mt-0.5">–</span>
+                    <span>Keep calls to practical matters: court dates, money for commissary, updates on legal counsel, family wellbeing.</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 mt-0.5">–</span>
+                    <span>Ask your attorney which topics are safe to discuss with family, and which should only go through them.</span>
+                  </li>
+                </ul>
+                <p className="text-xs font-semibold uppercase tracking-wide text-foreground">Avoid</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 mt-0.5">–</span>
+                    <span>Don't vent about the case, the charges, or the police — even when you're frustrated.</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 mt-0.5">–</span>
+                    <span>Don't ask for case updates via phone — prosecutors can subpoena information your family relays back to you.</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 mt-0.5">–</span>
+                    <span>Don't assume that text messages, letters, or emails from jail are any more private than phone calls — they aren't.</span>
+                  </li>
+                </ul>
               </div>
             </CardContent>
           </Card>
@@ -220,8 +196,7 @@ export default function JailPhoneCall() {
         <ScrollReveal>
           <Card className="border-blue-200 dark:border-blue-800 bg-blue-50/30 dark:bg-blue-950/20">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-blue-800 dark:text-blue-300">
-                <Lock className="h-5 w-5" />
+              <CardTitle className="text-blue-800 dark:text-blue-300">
                 Calls with Your Attorney
               </CardTitle>
             </CardHeader>
@@ -236,7 +211,7 @@ export default function JailPhoneCall() {
                   "If you believe your attorney calls are being recorded, tell your attorney immediately — this can be grounds for a serious legal challenge.",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <Shield className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span className="flex-shrink-0 mt-0.5">–</span>
                     {text}
                   </li>
                 ))}
@@ -249,53 +224,34 @@ export default function JailPhoneCall() {
         <ScrollReveal>
           <div className="border-t border-border pt-8">
             <h2 className="text-lg font-semibold mb-4">Related guides</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                {
-                  href: "/first-24-hours",
-                  icon: <AlertTriangle className="h-4 w-4 text-amber-500" />,
-                  title: "What to Do in Your First 24 Hours",
-                  desc: "Step-by-step guide from arrest through arraignment",
-                },
-                {
-                  href: "/rights-info",
-                  icon: <Shield className="h-4 w-4 text-blue-500" />,
-                  title: "Your Constitutional Rights",
-                  desc: "Miranda, right to counsel, and more",
-                },
-                {
-                  href: "/process",
-                  icon: <ArrowRight className="h-4 w-4 text-teal-500" />,
-                  title: "Criminal Justice Process",
-                  desc: "Bail, arraignment, plea bargains, and the full timeline",
-                },
-                {
-                  href: "/friends-family",
-                  icon: <Phone className="h-4 w-4 text-slate-500" />,
-                  title: "Guide for Friends & Family",
-                  desc: "How to find someone who was arrested and how to help",
-                },
-              ].map((item) => (
-                <Link key={item.href} href={item.href}>
-                  <Card className="hover:shadow-md hover:border-slate-400 transition-all cursor-pointer group h-full">
-                    <CardContent className="p-4 flex items-start gap-3">
-                      <div className="mt-0.5 flex-shrink-0">{item.icon}</div>
-                      <div>
-                        <p className="font-medium text-sm group-hover:text-primary transition-colors">{item.title}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/first-24-hours" className="text-sm underline hover:text-foreground transition-colors">
+                  Your First 24 Hours — step-by-step guide from arrest through arraignment
                 </Link>
-              ))}
-            </div>
+              </li>
+              <li>
+                <Link href="/rights-info" className="text-sm underline hover:text-foreground transition-colors">
+                  Your Constitutional Rights — Miranda, right to counsel, and more
+                </Link>
+              </li>
+              <li>
+                <Link href="/process" className="text-sm underline hover:text-foreground transition-colors">
+                  Criminal Justice Process — bail, arraignment, plea bargains, and the full timeline
+                </Link>
+              </li>
+              <li>
+                <Link href="/friends-family" className="text-sm underline hover:text-foreground transition-colors">
+                  Guide for Friends & Family — how to find someone who was arrested and how to help
+                </Link>
+              </li>
+            </ul>
           </div>
         </ScrollReveal>
 
         {/* Disclaimer */}
         <ScrollReveal>
           <Alert className="border-slate-200 dark:border-slate-700">
-            <Shield className="h-4 w-4 text-muted-foreground" />
             <AlertDescription className="text-muted-foreground text-sm">
               This guide provides general information only and does not constitute legal advice. Laws and practices vary by jurisdiction. Consult a licensed attorney about your specific situation.
             </AlertDescription>

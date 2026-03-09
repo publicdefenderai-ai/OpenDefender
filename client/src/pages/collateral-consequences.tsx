@@ -1,79 +1,40 @@
 import { useRef } from "react";
-import {
-  AlertTriangle,
-  Globe,
-  Home as HomeIcon,
-  Briefcase,
-  DollarSign,
-  Heart,
-  Shield,
-  Star,
-  Users,
-  Ban,
-  Scale,
-  Info,
-  ChevronRight,
-  ArrowRight,
-  Check,
-  X,
-} from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 const SECTIONS = [
-  { id: "immigration", label: "Immigration", icon: Globe, color: "red" },
-  { id: "housing", label: "Housing", icon: HomeIcon, color: "blue" },
-  { id: "employment", label: "Employment", icon: Briefcase, color: "indigo" },
-  { id: "benefits", label: "Public Benefits", icon: DollarSign, color: "green" },
-  { id: "family", label: "Family & Custody", icon: Heart, color: "pink" },
-  { id: "civil-rights", label: "Civil Rights", icon: Shield, color: "slate" },
-  { id: "sex-offender", label: "Sex Offender Registry", icon: Star, color: "orange" },
-  { id: "gang-designation", label: "Gang Designation", icon: Users, color: "purple" },
+  { id: "immigration", label: "Immigration" },
+  { id: "housing", label: "Housing" },
+  { id: "employment", label: "Employment" },
+  { id: "benefits", label: "Public Benefits" },
+  { id: "family", label: "Family & Custody" },
+  { id: "civil-rights", label: "Civil Rights" },
+  { id: "sex-offender", label: "Sex Offender Registry" },
+  { id: "gang-designation", label: "Gang Designation" },
 ];
 
-const colorMap: Record<string, string> = {
-  red: "text-red-600 dark:text-red-400 bg-red-100 dark:bg-red-900/30",
-  blue: "text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30",
-  indigo: "text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-900/30",
-  green: "text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30",
-  pink: "text-pink-600 dark:text-pink-400 bg-pink-100 dark:bg-pink-900/30",
-  slate: "text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/50",
-  orange: "text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/30",
-  purple: "text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30",
-};
-
-function SectionHeader({ id, icon: Icon, label, color, children }: {
+function SectionHeader({ id, label, children }: {
   id: string;
-  icon: React.ElementType;
   label: string;
-  color: string;
   children?: React.ReactNode;
 }) {
   return (
     <div id={id} className="scroll-mt-24">
-      <div className="flex items-center gap-3 mb-4">
-        <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${colorMap[color]}`}>
-          <Icon className="h-5 w-5" />
-        </div>
-        <h2 className="text-2xl font-bold text-foreground">{label}</h2>
-      </div>
+      <h2 className="text-2xl font-bold text-foreground mb-4">{label}</h2>
       {children}
     </div>
   );
 }
 
-function Impact({ text, critical }: { text: string; critical?: boolean }) {
+function Impact({ text }: { text: string; critical?: boolean }) {
   return (
     <li className="flex items-start gap-2.5 text-sm text-muted-foreground">
-      {critical
-        ? <AlertTriangle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
-        : <ChevronRight className="h-4 w-4 text-muted-foreground/50 flex-shrink-0 mt-0.5" />}
+      <span className="flex-shrink-0 mt-0.5">–</span>
       <span>{text}</span>
     </li>
   );
@@ -82,7 +43,6 @@ function Impact({ text, critical }: { text: string; critical?: boolean }) {
 function BeforePlea({ children }: { children: React.ReactNode }) {
   return (
     <Alert className="mt-5 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-      <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
       <AlertDescription className="text-amber-800 dark:text-amber-200 text-sm">
         <strong>Before accepting any plea deal: </strong>{children}
       </AlertDescription>
@@ -119,13 +79,12 @@ export default function CollateralConsequences() {
       <div className="sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex gap-2 overflow-x-auto py-2.5 scrollbar-hide no-scrollbar">
-            {SECTIONS.map(({ id, label, icon: Icon }) => (
+            {SECTIONS.map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => scrollTo(id)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border border-border hover:bg-muted hover:border-foreground/20 transition-colors flex-shrink-0"
+                className="px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border border-border hover:bg-muted hover:border-foreground/20 transition-colors flex-shrink-0"
               >
-                <Icon className="h-3.5 w-3.5" />
                 {label}
               </button>
             ))}
@@ -138,7 +97,6 @@ export default function CollateralConsequences() {
         {/* Intro alert */}
         <ScrollReveal>
           <Alert className="border-red-300 bg-red-50 dark:bg-red-900/20 dark:border-red-800">
-            <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400" />
             <AlertDescription className="text-red-800 dark:text-red-200">
               <strong>This matters before any plea.</strong> Collateral consequences are often permanent and apply immediately upon conviction. Many defendants only learn about them after they've already pleaded guilty. Review this page — and consult an attorney — before making any decisions about your case.
             </AlertDescription>
@@ -147,7 +105,7 @@ export default function CollateralConsequences() {
 
         {/* ── IMMIGRATION ─────────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="immigration" icon={Globe} label="Immigration" color="red">
+          <SectionHeader id="immigration" label="Immigration">
             <Card className="border-red-200 dark:border-red-900">
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -171,7 +129,7 @@ export default function CollateralConsequences() {
 
         {/* ── HOUSING ─────────────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="housing" icon={HomeIcon} label="Housing" color="blue">
+          <SectionHeader id="housing" label="Housing">
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -192,7 +150,7 @@ export default function CollateralConsequences() {
 
         {/* ── EMPLOYMENT ──────────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="employment" icon={Briefcase} label="Employment" color="indigo">
+          <SectionHeader id="employment" label="Employment">
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -213,7 +171,7 @@ export default function CollateralConsequences() {
 
         {/* ── PUBLIC BENEFITS ──────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="benefits" icon={DollarSign} label="Public Benefits" color="green">
+          <SectionHeader id="benefits" label="Public Benefits">
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -234,7 +192,7 @@ export default function CollateralConsequences() {
 
         {/* ── FAMILY & CUSTODY ─────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="family" icon={Heart} label="Family & Custody" color="pink">
+          <SectionHeader id="family" label="Family & Custody">
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -255,7 +213,7 @@ export default function CollateralConsequences() {
 
         {/* ── CIVIL RIGHTS ─────────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="civil-rights" icon={Shield} label="Civil Rights" color="slate">
+          <SectionHeader id="civil-rights" label="Civil Rights">
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -275,7 +233,7 @@ export default function CollateralConsequences() {
 
         {/* ── SEX OFFENDER REGISTRY ────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="sex-offender" icon={Ban} label="Sex Offender Registration" color="orange">
+          <SectionHeader id="sex-offender" label="Sex Offender Registration">
             <Card className="border-orange-200 dark:border-orange-900">
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -300,10 +258,9 @@ export default function CollateralConsequences() {
 
         {/* ── GANG DESIGNATION ─────────────────────────────────── */}
         <ScrollReveal>
-          <SectionHeader id="gang-designation" icon={Users} label="Gang Designation" color="purple">
+          <SectionHeader id="gang-designation" label="Gang Designation">
             <div className="space-y-5">
               <Alert className="border-purple-300 bg-purple-50 dark:bg-purple-900/20 dark:border-purple-800">
-                <Info className="h-4 w-4 text-purple-600 dark:text-purple-400" />
                 <AlertDescription className="text-purple-800 dark:text-purple-200 text-sm">
                   Being labeled a gang member by law enforcement is not a criminal conviction — but it carries serious legal consequences regardless. In many states, designation can happen without notice, without a hearing, and without any requirement of criminal activity.
                 </AlertDescription>
@@ -327,10 +284,7 @@ export default function CollateralConsequences() {
               {/* Consequences for you */}
               <Card className="border-purple-200 dark:border-purple-900">
                 <CardHeader>
-                  <CardTitle className="text-base flex items-center gap-2">
-                    <Shield className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                    Consequences for You
-                  </CardTitle>
+                  <CardTitle className="text-base">Consequences for You</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <ul className="space-y-3">
@@ -365,10 +319,7 @@ export default function CollateralConsequences() {
               {/* Consequences for associates */}
               <Card className="border-purple-200 dark:border-purple-900">
                 <CardHeader>
-                  <CardTitle className="text-base flex items-center gap-2">
-                    <Users className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                    Consequences for People Who Associate With You
-                  </CardTitle>
+                  <CardTitle className="text-base">Consequences for People Who Associate With You</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-sm text-muted-foreground">
@@ -419,7 +370,7 @@ export default function CollateralConsequences() {
                       "Raising constitutional challenges to designation (due process, First Amendment association) — these have had mixed success but have resulted in significant database reforms in several jurisdictions.",
                     ].map((text, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <Check className="h-4 w-4 text-purple-500 flex-shrink-0 mt-0.5" />
+                        <span className="flex-shrink-0 mt-0.5">–</span>
                         {text}
                       </li>
                     ))}
@@ -433,54 +384,35 @@ export default function CollateralConsequences() {
         {/* Cross-links */}
         <ScrollReveal>
           <div className="border-t border-border pt-10">
-            <h2 className="text-xl font-semibold mb-5">Related guides</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                {
-                  href: "/process",
-                  icon: <Scale className="h-4 w-4 text-teal-500" />,
-                  title: "Plea Bargains — What You're Agreeing To",
-                  desc: "Understanding the full consequences before you sign",
-                },
-                {
-                  href: "/immigration-guidance",
-                  icon: <Globe className="h-4 w-4 text-amber-500" />,
-                  title: "Immigration Guidance",
-                  desc: "Immigration consequences of criminal charges in detail",
-                },
-                {
-                  href: "/record-expungement",
-                  icon: <ArrowRight className="h-4 w-4 text-blue-500" />,
-                  title: "Record Expungement",
-                  desc: "Which convictions can be cleared and how",
-                },
-                {
-                  href: "/first-24-hours",
-                  icon: <AlertTriangle className="h-4 w-4 text-red-500" />,
-                  title: "What to Do in Your First 24 Hours",
-                  desc: "Immediate steps after arrest that affect your case",
-                },
-              ].map((item) => (
-                <Link key={item.href} href={item.href}>
-                  <Card className="hover:shadow-md hover:border-slate-400 transition-all cursor-pointer group h-full">
-                    <CardContent className="p-4 flex items-start gap-3">
-                      <div className="mt-0.5 flex-shrink-0">{item.icon}</div>
-                      <div>
-                        <p className="font-medium text-sm group-hover:text-primary transition-colors">{item.title}</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
+            <h2 className="text-xl font-semibold mb-4">Related guides</h2>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/process" className="text-sm underline hover:text-foreground transition-colors">
+                  Plea Bargains — understanding the full consequences before you sign
                 </Link>
-              ))}
-            </div>
+              </li>
+              <li>
+                <Link href="/immigration-guidance" className="text-sm underline hover:text-foreground transition-colors">
+                  Immigration Guidance — immigration consequences of criminal charges in detail
+                </Link>
+              </li>
+              <li>
+                <Link href="/record-expungement" className="text-sm underline hover:text-foreground transition-colors">
+                  Record Expungement — which convictions can be cleared and how
+                </Link>
+              </li>
+              <li>
+                <Link href="/first-24-hours" className="text-sm underline hover:text-foreground transition-colors">
+                  Your First 24 Hours — immediate steps after arrest that affect your case
+                </Link>
+              </li>
+            </ul>
           </div>
         </ScrollReveal>
 
         {/* Disclaimer */}
         <ScrollReveal>
           <Alert className="border-slate-200 dark:border-slate-700">
-            <Shield className="h-4 w-4 text-muted-foreground" />
             <AlertDescription className="text-muted-foreground text-sm">
               This page provides general information about collateral consequences and does not constitute legal advice. Laws vary significantly by state, offense type, and individual circumstances. Consult a licensed attorney — and an immigration attorney if you are a non-citizen — before making any decisions about your case.
             </AlertDescription>
