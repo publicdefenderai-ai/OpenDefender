@@ -291,7 +291,7 @@ export default function FirstTwentyFourHours() {
 
         <ScrollReveal delay={0.5}>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <img src="/favicon.svg" className="h-4 w-4 opacity-60" alt="" aria-hidden="true" />
+            <img src="/favicon-32x32.png" className="h-4 w-4 opacity-60" alt="" aria-hidden="true" />
             <AlertDescription className="text-muted-foreground text-sm">
               This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.
             </AlertDescription>
