@@ -88,10 +88,14 @@ export async function initializeCostTracker(): Promise<void> {
       if (attempt < MAX_ATTEMPTS) {
         await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
       } else {
-        // All attempts failed — block AI spend rather than silently resetting to $0.
-        // This prevents a DB outage on restart from granting a fresh daily budget.
-        currentDay.totalCost = DAILY_BUDGET_USD;
-        errLog('[cost-tracker] Could not restore cost from DB after all retries — AI spend blocked for safety. Restart when DB is reachable.');
+        // All attempts failed — block AI spend only if a budget cap is configured.
+        // When no budget is set (0), silently proceed rather than blocking everything.
+        if (DAILY_BUDGET_USD > 0) {
+          currentDay.totalCost = DAILY_BUDGET_USD;
+          errLog('[cost-tracker] Could not restore cost from DB after all retries — AI spend blocked for safety. Restart when DB is reachable.');
+        } else {
+          errLog('[cost-tracker] Could not restore cost from DB after all retries — no budget cap configured, proceeding without history.');
+        }
       }
     }
   }
@@ -135,10 +139,12 @@ export function recordAICost(cost: number, service: string): void {
 }
 
 /**
- * Check if AI features are still available (under budget)
+ * Check if AI features are still available (under budget).
+ * A budget of 0 means no cap is configured — always available.
  */
 export function isAIAvailable(): boolean {
   ensureCurrentDay();
+  if (DAILY_BUDGET_USD <= 0) return true;
   return currentDay.totalCost < DAILY_BUDGET_USD;
 }
 
@@ -165,20 +171,22 @@ export function estimateRequestCost(inputChars: number): number {
 
 /**
  * Returns false if the estimated pre-flight cost exceeds the per-request ceiling.
- * Call this before making a Claude API request to reject oversized inputs early.
+ * A ceiling of 0 means no per-request cap is configured — always acceptable.
  */
 export function isRequestCostAcceptable(inputChars: number): boolean {
+  if (MAX_REQUEST_COST_USD <= 0) return true;
   return estimateRequestCost(inputChars) <= MAX_REQUEST_COST_USD;
 }
 
 /**
  * Check if a specific service still has budget remaining (global cap + per-service cap).
+ * A budget/cap of 0 means no cap is configured — always available.
  */
 export function isServiceAvailable(service: string): boolean {
   ensureCurrentDay();
-  if (currentDay.totalCost >= DAILY_BUDGET_USD) return false;
+  if (DAILY_BUDGET_USD > 0 && currentDay.totalCost >= DAILY_BUDGET_USD) return false;
   const cap = SERVICE_BUDGET_USD[service];
-  if (cap === undefined) return true;
+  if (!cap || cap <= 0) return true;
   return (currentDay.breakdown[service] || 0) < cap;
 }
 
@@ -195,14 +203,14 @@ export function getAICostStatus(): {
 } {
   ensureCurrentDay();
 
-  const available = currentDay.totalCost < DAILY_BUDGET_USD;
-  const remaining = Math.max(0, DAILY_BUDGET_USD - currentDay.totalCost);
+  const available = DAILY_BUDGET_USD <= 0 || currentDay.totalCost < DAILY_BUDGET_USD;
+  const remaining = DAILY_BUDGET_USD <= 0 ? null : Math.max(0, DAILY_BUDGET_USD - currentDay.totalCost);
 
   return {
     available,
     dailyBudget: DAILY_BUDGET_USD,
     currentSpend: Math.round(currentDay.totalCost * 10000) / 10000,
-    remainingBudget: Math.round(remaining * 10000) / 10000,
+    remainingBudget: remaining === null ? null : Math.round(remaining * 10000) / 10000,
     requestCount: currentDay.requestCount,
     message: available
       ? undefined
