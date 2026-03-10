@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Check, X } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -291,7 +292,7 @@ export default function FirstTwentyFourHours() {
 
         <ScrollReveal delay={0.5}>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <img src="/favicon-32x32.png" className="h-4 w-4 opacity-60" alt="" aria-hidden="true" />
+            <BrandShieldIcon size={16} className="opacity-60" />
             <AlertDescription className="text-muted-foreground text-sm">
               This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.
             </AlertDescription>
