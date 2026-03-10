@@ -9,6 +9,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { Shield, Scale, Clock, FileText } from "lucide-react";
+import { LegalTerm } from "@/components/ui/legal-term";
 
 const SECTIONS = [
   { id: "immigration", label: "Immigration" },
@@ -102,7 +103,7 @@ export default function CollateralConsequences() {
         <ScrollReveal>
           <Alert className="border-red-300 bg-red-50 dark:bg-red-900/20 dark:border-red-800">
             <AlertDescription className="text-red-800 dark:text-red-200">
-              <strong>This matters before any plea.</strong> Collateral consequences are often permanent and apply immediately upon conviction. Many defendants only learn about them after they've already pleaded guilty. Review this page — and consult an attorney — before making any decisions about your case.
+              <strong>This matters before any plea.</strong> <LegalTerm term="collateral consequences">Collateral consequences</LegalTerm> are often permanent and apply immediately upon conviction. Many defendants only learn about them after they've already pleaded guilty. Review this page — and consult an attorney — before making any decisions about your case.
             </AlertDescription>
           </Alert>
         </ScrollReveal>
