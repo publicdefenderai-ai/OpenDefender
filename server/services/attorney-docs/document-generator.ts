@@ -133,7 +133,7 @@ const generatedDocuments: Map<string, GeneratedDocument> = new Map();
 
 // Cleanup interval (every 5 minutes)
 const CLEANUP_INTERVAL_MS = 5 * 60 * 1000;
-const DOCUMENT_TTL_MS = 30 * 60 * 1000; // 30 minutes (matches session TTL)
+const DOCUMENT_TTL_MS = 60 * 60 * 1000; // 60 minutes (matches session TTL)
 
 // Start cleanup interval
 setInterval(() => {
