@@ -146,7 +146,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
           <AlertDescription className="text-blue-800 dark:text-blue-200">
             {t(
               "attorneyPortal.verify.privacyNotice",
-              "Your session data will be automatically deleted after 30 minutes."
+              "Your session data will be automatically deleted after 1 hour."
             )}
           </AlertDescription>
         </Alert>

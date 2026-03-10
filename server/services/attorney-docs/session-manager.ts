@@ -1,7 +1,7 @@
 /**
  * Attorney Session Manager
  *
- * Manages verified attorney sessions with 30-minute TTL.
+ * Manages verified attorney sessions with 60-minute TTL.
  * Sessions are stored in memory only (no database persistence).
  * Only attestation status is tracked - no personal data is collected.
  */
@@ -13,7 +13,7 @@ import { auditLogger } from "./audit-logger";
 import { opsLog, devLog, errLog } from "../../utils/dev-logger";
 
 // Session configuration
-const SESSION_TTL_MS = 30 * 60 * 1000; // 30 minutes
+const SESSION_TTL_MS = 60 * 60 * 1000; // 60 minutes
 const CLEANUP_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
 const SESSION_COOKIE_NAME = "attorney_session";
 
@@ -55,7 +55,7 @@ class AttorneySessionManager {
     // Log audit entry (metadata only, no PII)
     auditLogger.logSessionCreated(session);
 
-    opsLog('attorney-session', 'Created session, expires in 30 minutes');
+    opsLog('attorney-session', 'Created session, expires in 60 minutes');
 
     return session;
   }

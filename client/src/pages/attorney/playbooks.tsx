@@ -307,7 +307,7 @@ function PlaybooksContent() {
               <span>
                 {t(
                   "attorney.documents.sessionNote",
-                  "Your session will automatically end after 30 minutes of inactivity."
+                  "Your session will automatically end after 1 hour of inactivity."
                 )}
               </span>
             </div>
