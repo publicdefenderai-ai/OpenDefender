@@ -57,7 +57,7 @@ i18n
               "rotatingWord1": "Clear",
               "rotatingWord2": "Free",
               "rotatingWord3": "Tailored",
-              "rotatingWord4": "Accurate"
+              "rotatingWord4": "Practical"
             },
             "features": {
               "title": "Powered by Real Legal Data",
@@ -4861,7 +4861,7 @@ i18n
               "rotatingWord1": "Claro",
               "rotatingWord2": "Gratuito",
               "rotatingWord3": "Personalizado",
-              "rotatingWord4": "Preciso"
+              "rotatingWord4": "Práctico"
             },
             "features": {
               "title": "Respaldado por Datos Legales Reales",
@@ -9666,7 +9666,7 @@ i18n
               "rotatingWord1": "清晰",
               "rotatingWord2": "免费",
               "rotatingWord3": "专属",
-              "rotatingWord4": "精准"
+              "rotatingWord4": "实用"
             },
             "features": {
               "title": "基于真实法律数据",
