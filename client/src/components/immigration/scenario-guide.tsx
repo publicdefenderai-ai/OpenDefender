@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +12,7 @@ import {
   AlertTriangle,
   CheckCircle2,
   XCircle,
-  Shield,
+  
   Phone,
   ChevronRight
 } from 'lucide-react';
@@ -679,7 +680,7 @@ export function ScenarioGuide({ scenarioId }: ScenarioGuideProps) {
         <Card className="bg-primary/5 border-primary/20">
           <CardHeader>
             <CardTitle className="flex items-center gap-3">
-              <Shield className="h-6 w-6 text-primary" />
+              <BrandShieldIcon size={24} />
               {lang === 'es' ? 'Después del Encuentro' : 'After the Encounter'}
             </CardTitle>
           </CardHeader>

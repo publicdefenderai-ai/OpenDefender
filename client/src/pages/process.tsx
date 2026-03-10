@@ -1,6 +1,7 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { Calendar, Clock, Shield, Scale, AlertTriangle, Users, ArrowRight, FileText, DollarSign } from "lucide-react";
+import { Calendar, Clock, Scale, AlertTriangle, Users, ArrowRight, FileText, DollarSign } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -53,7 +54,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
               
               <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
-                  <Shield className="h-4 w-4 mr-2" />
+                  <BrandShieldIcon size={16} className="mr-2" />
                   {t('process.steps.yourRights')}
                 </h4>
                 <ul className="space-y-1">
@@ -472,7 +473,7 @@ export default function Process() {
       <div className="legal-blue text-white py-3 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2">
-            <Shield className="h-4 w-4" />
+            <BrandShieldIcon size={16} />
             <span className="text-sm font-medium">
               <strong>{t('common.privacyFirst')}:</strong> {t('footer.privacyNotice')}
             </span>

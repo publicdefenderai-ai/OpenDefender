@@ -1,5 +1,6 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { Target, Users, Scale, TrendingUp, Shield, FileText } from "lucide-react";
+import { Target, Users, Scale, TrendingUp, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -144,7 +145,7 @@ export default function MissionStatement() {
             transition={{ delay: 0.4 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <Shield className="h-8 w-8 text-blue-600" />
+              <BrandShieldIcon size={32} />
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                 {t('missionStatement.principles.title')}
               </h2>

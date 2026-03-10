@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -248,7 +249,7 @@ export default function JailPhoneCall() {
         {/* Disclaimer */}
         <ScrollReveal>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <Shield className="h-4 w-4 text-muted-foreground" />
+            <BrandShieldIcon size={16} />
             <AlertDescription className="text-muted-foreground text-sm">
               This guide provides general information only and does not constitute legal advice. Laws and practices vary by jurisdiction. Consult a licensed attorney about your specific situation.
             </AlertDescription>

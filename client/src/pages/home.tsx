@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
@@ -822,7 +823,7 @@ export default function Home() {
           
           <div className="space-y-6">
             <Alert className="border-blue-200 bg-blue-50">
-              <Shield className="h-4 w-4 text-blue-600" />
+              <BrandShieldIcon size={16} />
               <AlertDescription className="text-blue-800">
                 {t('home.legalAidSearch.alertMessage')}
               </AlertDescription>

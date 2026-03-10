@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   MessageSquare,
   Globe,
-  Shield,
+  
   Calendar,
   Search,
   Users,
@@ -177,7 +178,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
           <CardContent className="p-3 sm:p-4">
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="w-9 h-9 sm:w-12 sm:h-12 bg-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                <BrandShieldIcon size={20} light />
               </div>
               <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-sm sm:text-lg group-hover:text-green-600 transition-colors">
@@ -266,7 +267,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         <Card className="hover:shadow-md hover:border-blue-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-3">
             <div className="flex items-center gap-3">
-              <Shield className="h-5 w-5 text-blue-600" />
+              <BrandShieldIcon size={20} />
               <span className="font-medium group-hover:text-blue-600 transition-colors">
                 {t('getStartedMenu.legalRightsSubmenu.constitutionalRights')}
               </span>
@@ -649,7 +650,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
         <Card className="hover:shadow-md hover:border-amber-500 transition-all duration-200 cursor-pointer group">
           <CardContent className="p-3">
             <div className="flex items-center gap-3">
-              <Shield className="h-5 w-5 text-amber-600" />
+              <BrandShieldIcon size={20} />
               <span className="font-medium group-hover:text-amber-600 transition-colors">
                 {t('getStartedMenu.immigrationSubmenu.knowYourRights')}
               </span>

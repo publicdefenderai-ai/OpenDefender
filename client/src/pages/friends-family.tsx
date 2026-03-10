@@ -1,5 +1,6 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { Users, Phone, FileText, Clock, MapPin, AlertCircle, Shield, AlertTriangle, CheckCircle } from "lucide-react";
+import { Users, Phone, FileText, Clock, MapPin, AlertCircle, AlertTriangle, CheckCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -319,7 +320,7 @@ export default function FriendsFamily() {
 
           <ScrollReveal delay={0.3}>
             <Alert className="mt-6 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-              <Shield className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              <BrandShieldIcon size={16} />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
                 <strong>{t('friendsFamily.disclaimer.title')}</strong> {t('friendsFamily.disclaimer.text')}
               </AlertDescription>
@@ -334,7 +335,7 @@ export default function FriendsFamily() {
       <div className="legal-blue text-white py-3 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2">
-            <Shield className="h-4 w-4" />
+            <BrandShieldIcon size={16} />
             <span className="text-sm font-medium">
               <strong>{t('friendsFamily.privacyBanner.title')}</strong> {t('friendsFamily.privacyBanner.text')}
             </span>

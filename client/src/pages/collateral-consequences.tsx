@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useRef } from "react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -409,7 +410,7 @@ export default function CollateralConsequences() {
         {/* Disclaimer */}
         <ScrollReveal>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <Shield className="h-4 w-4 text-muted-foreground" />
+            <BrandShieldIcon size={16} />
             <AlertDescription className="text-muted-foreground text-sm">
               This page provides general information about collateral consequences and does not constitute legal advice. Laws vary significantly by state, offense type, and individual circumstances. Consult a licensed attorney — and an immigration attorney if you are a non-citizen — before making any decisions about your case.
             </AlertDescription>

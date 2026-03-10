@@ -1275,7 +1275,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               <CardHeader>
                 <CardTitle className="flex items-center justify-between text-foreground">
                   <div className="flex items-center gap-2">
-                    <Shield className="h-5 w-5 text-muted-foreground" />
+                    <BrandShieldIcon size={20} />
                     {t('legalGuidance.dashboard.yourRights.title')}
                   </div>
                   <ChevronDown className="h-4 w-4 text-muted-foreground" />

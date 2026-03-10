@@ -1,7 +1,8 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Shield,
+  
   AlertTriangle,
   Phone,
   Home,
@@ -54,7 +55,7 @@ export default function KnowYourRights() {
       case 'workplace': return <Building2 className="h-5 w-5" />;
       case 'public': return <Users className="h-5 w-5" />;
       case 'checkpoint': return <MapPin className="h-5 w-5" />;
-      default: return <Shield className="h-5 w-5" />;
+      default: return <BrandShieldIcon size={20} />;
     }
   };
 
@@ -77,7 +78,7 @@ export default function KnowYourRights() {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <Shield className="h-8 w-8 text-white" />
+                <BrandShieldIcon size={32} light />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-white">
                 {lang === 'es' ? 'Conozca Sus Derechos' : 'Know Your Rights'}

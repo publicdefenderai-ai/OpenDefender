@@ -1,8 +1,9 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Shield, 
+  
   Calendar, 
   MapPin, 
   Book, 
@@ -104,7 +105,7 @@ export default function RightsInfo() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <ScrollReveal delay={0.1}>
               <QuickRightCard
-                icon={<Shield className="h-5 w-5" />}
+                icon={<BrandShieldIcon size={20} />}
                 title={t('rights.quickRights.silent.title')}
                 description={t('rights.quickRights.silent.description')}
                 onClick={() => setSelectedRight('silent')}
@@ -270,7 +271,7 @@ export default function RightsInfo() {
         <DialogContent className="max-w-[95vw] md:max-w-2xl">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              {selectedRight === 'silent' && <Shield className="h-5 w-5 text-blue-600" />}
+              {selectedRight === 'silent' && <BrandShieldIcon size={20} />}
               {selectedRight === 'attorney' && <Scale className="h-5 w-5 text-green-600" />}
               {selectedRight === 'phoneCall' && <Phone className="h-5 w-5 text-blue-500" />}
               {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-purple-600" />}
@@ -318,7 +319,7 @@ function MirandaRightsSection() {
     <Card>
       <CardHeader className="animate-rights-header">
         <CardTitle className="flex items-center space-x-2">
-          <Shield className="h-5 w-5 text-primary" />
+          <BrandShieldIcon size={20} />
           <span>{t('rights.detailedRights.miranda.title')}</span>
         </CardTitle>
       </CardHeader>
