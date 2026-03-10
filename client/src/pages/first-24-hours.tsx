@@ -8,6 +8,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { Phone, Shield, Scale, MessageSquare } from "lucide-react";
+import { LegalTerm } from "@/components/ui/legal-term";
 
 interface StepProps {
   number: number;
@@ -113,6 +114,20 @@ export default function FirstTwentyFourHours() {
           </Alert>
         </ScrollReveal>
 
+        <ScrollReveal delay={0.02}>
+          <div className="mb-8 rounded-lg border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 p-5">
+            <h3 className="text-base font-bold text-amber-800 dark:text-amber-200 mb-3">If the person arrested is under 18</h3>
+            <p className="text-sm text-amber-900 dark:text-amber-100 mb-3">The juvenile justice system works differently in important ways:</p>
+            <ul className="space-y-2 text-sm text-amber-900 dark:text-amber-100">
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Police must notify parents or guardians</strong> before questioning a juvenile. If you are a minor, ask for your parent immediately.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>You may be held in a juvenile facility</strong> rather than an adult jail, depending on the charges and your age.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Juvenile court is separate</strong> from adult criminal court — the process, rights, and outcomes differ significantly.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Do not waive your rights</strong> — juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>If charges are serious, prosecutors may seek to try you as an adult — your attorney must fight this.</span></li>
+            </ul>
+          </div>
+        </ScrollReveal>
+
         <div>
           <ScrollReveal delay={0.05}>
             <Step
@@ -132,7 +147,7 @@ export default function FirstTwentyFourHours() {
               ]}
             >
               <p className="text-sm text-muted-foreground mt-2">
-                Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest — you don't need to wait for Miranda warnings.{" "}
+                Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest — you don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>.{" "}
                 <Link href="/rights-info" className="underline hover:text-foreground transition-colors">Learn more about your rights →</Link>
               </p>
             </Step>
@@ -148,11 +163,17 @@ export default function FirstTwentyFourHours() {
                 "Cooperate with the mechanical booking process (fingerprints, photos, property).",
                 "Note the name of the facility, your booking number, and the charges — you'll need this information.",
                 "Ask how family can find out where you are being held and how to contact you.",
+                "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication — document every request.",
+                "In most states you have the right to a phone call within 3 hours of booking.",
+                'If you don\'t speak English fluently, clearly say "I need an interpreter" — you have the right to one at no cost.',
+                'Invoke your right to remain silent for anything beyond your name and date of birth. Booking intake questions ("where were you tonight?") are interrogation.',
               ]}
               donts={[
                 "Don't discuss your case with anyone — other detainees, intake officers, or jail staff.",
                 "Don't sign anything you don't understand. You can ask what a form is for.",
                 "Don't assume booking staff are neutral — everything is documented.",
+                "Don't answer questions about the incident, your whereabouts, or anyone else involved — even questions that seem routine or unrelated to the crime.",
+                "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
               ]}
             />
           </ScrollReveal>
@@ -197,9 +218,20 @@ export default function FirstTwentyFourHours() {
                 "Don't assume bail will be unaffordable — there are options if you can't pay.",
               ]}
             >
-              <p className="text-sm text-muted-foreground mt-2">
-                <a href="/process#bail-guide" className="underline hover:text-foreground transition-colors">How bail works — types, options if you can't afford it, and conditions →</a>
-              </p>
+              <div className="mt-2">
+                <p className="text-sm font-semibold text-foreground mb-3">If you can't afford <LegalTerm term="bail" /> — your options:</p>
+                <ol className="space-y-2.5 text-sm text-foreground/80 dark:text-foreground/75 list-none">
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">1.</span><span><strong>Request OR release</strong> (<LegalTerm term="release on own recognizance" />) — ask your attorney to argue you are not a flight risk. No money required. Judge considers ties to community, employment, family.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">2.</span><span><strong>Request reduced bail</strong> — your attorney can argue bail is excessive relative to your income. Courts are required to consider your ability to pay.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">3.</span><span><strong>Bail fund</strong> — nonprofit organizations that pay bail for people who can't afford it. Search "[your city] bail fund" or ask your attorney. Money is typically recycled after your case ends.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">4.</span><span><strong>Bail bond company</strong> — a bondsman pays your full bail for a non-refundable fee (usually 10–15%). <strong>Warning:</strong> if you miss court, the bondsman can pursue you and take any collateral you pledged.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">5.</span><span><strong>Property bond</strong> — use home equity as collateral instead of cash. Risk: the court can place a lien on the property if you miss a hearing.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily</strong> — sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
+                </ol>
+                <p className="text-sm text-muted-foreground mt-3">
+                  <a href="/process#bail-guide" className="underline hover:text-foreground transition-colors">How bail works — types, options if you can't afford it, and conditions →</a>
+                </p>
+              </div>
             </Step>
           </ScrollReveal>
 

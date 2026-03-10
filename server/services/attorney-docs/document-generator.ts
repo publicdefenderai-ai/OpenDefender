@@ -42,6 +42,8 @@ import { sentencingMemorandumTemplate } from "../../../shared/templates/sentenci
 import { motionForCompetencyEvaluationTemplate } from "../../../shared/templates/motion-for-competency-evaluation";
 import { motionToAdministrativelyCloseEoirTemplate } from "../../../shared/templates/motion-to-administratively-close-eoir";
 import { noticeOfAppealBiaTemplate } from "../../../shared/templates/notice-of-appeal-bia";
+import { motionToExcludeExpertTemplate } from "../../../shared/templates/motion-to-exclude-expert";
+import { motionForWithholdingRemovalCatTemplate } from "../../../shared/templates/motion-for-withholding-removal-cat";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import { isRequestCostAcceptable } from "../cost-tracker";
@@ -122,6 +124,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["motion-for-competency-evaluation", motionForCompetencyEvaluationTemplate],
   ["motion-to-administratively-close-eoir", motionToAdministrativelyCloseEoirTemplate],
   ["notice-of-appeal-bia", noticeOfAppealBiaTemplate],
+  ["motion-to-exclude-expert", motionToExcludeExpertTemplate],
+  ["motion-for-withholding-removal-cat", motionForWithholdingRemovalCatTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
@@ -489,6 +493,44 @@ async function generateAISection(
     voluntaryDepartureBond: formData.voluntaryDepartureBond || "",
     bondAmount: formData.bondAmount || "",
     financialResources: formData.financialResources || "",
+    // Motion to exclude expert witness fields
+    expertFieldOfTestimony: formData.expertFieldOfTestimony || "",
+    expertTestimonySummary: formData.expertTestimonySummary || "",
+    admissibilityStandard: formData.admissibilityStandard || "",
+    groundNotQualified: formData.groundNotQualified || "false",
+    groundMethodologyUnreliable: formData.groundMethodologyUnreliable || "false",
+    groundNotPeerReviewed: formData.groundNotPeerReviewed || "false",
+    groundHighErrorRate: formData.groundHighErrorRate || "false",
+    groundNotGenerallyAccepted: formData.groundNotGenerallyAccepted || "false",
+    groundNotRelevant: formData.groundNotRelevant || "false",
+    groundUnfairlyPrejudicial: formData.groundUnfairlyPrejudicial || "false",
+    qualificationDeficiencies: formData.qualificationDeficiencies || "",
+    methodologyFlaws: formData.methodologyFlaws || "",
+    scientificCommunityRejection: formData.scientificCommunityRejection || "",
+    relevanceAndPrejudice: formData.relevanceAndPrejudice || "",
+    daubertHearingRequested: formData.daubertHearingRequested || "in_alternative",
+    defenseExpertName: formData.defenseExpertName || "",
+    defenseExpertCredentials: formData.defenseExpertCredentials || "",
+    // Motion for withholding of removal / CAT protection fields
+    countryOfOrigin: formData.countryOfOrigin || "",
+    countryOfProposedRemoval: formData.countryOfProposedRemoval || "",
+    judgeName: formData.judgeName || "",
+    dhsAttorneyName: formData.dhsAttorneyName || "",
+    protectedGround: formData.protectedGround || "",
+    fearedHarmDescription: formData.fearedHarmDescription || "",
+    pastPersecution: formData.pastPersecution || "",
+    pastPersecutionDescription: formData.pastPersecutionDescription || "",
+    govtProtectionStatus: formData.govtProtectionStatus || "",
+    govtProtectionExplanation: formData.govtProtectionExplanation || "",
+    catClaim: formData.catClaim || "",
+    catTortureDescription: formData.catTortureDescription || "",
+    criminalConviction: formData.criminalConviction || "",
+    criminalConvictionDetails: formData.criminalConvictionDetails || "",
+    reasonWhyAsylumUnavailable: formData.reasonWhyAsylumUnavailable || "",
+    countryConditionsNarrative: formData.countryConditionsNarrative || "",
+    supportingDocuments: formData.supportingDocuments || "",
+    dhsCounselOffice: formData.dhsCounselOffice || "",
+    serviceMethod: formData.serviceMethod || "",
   };
 
   // Process template with safe data
