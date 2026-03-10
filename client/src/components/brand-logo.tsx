@@ -18,19 +18,35 @@ function ShieldIcon({ color, size }: { color: string; size: "sm" | "md" }) {
       aria-hidden="true"
       style={{ flexShrink: 0 }}
     >
-      {/* Outer shield — top arch at y≈6 */}
+      {/* Outer shield left half */}
       <path
-        d="M16 5.5C11 5.5 5 8.5 4 13.5L4 18C4 24 8.5 28 16 30.5C23.5 28 28 24 28 18L28 13.5C27 8.5 21 5.5 16 5.5Z"
+        d="M16 5 C13 4 9 5 7 7.5 C4.5 10.5 4.5 15 4.5 17 C4.5 23 9 27.5 16 30"
         stroke={color}
-        strokeWidth="2.2"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* Inner shield — top peak at y≈2, rises above outer arch */}
+      {/* Outer shield right half */}
       <path
-        d="M16 2C12.5 2 8 5 7.5 10L7.5 14.5C7.5 20 11 23.5 16 25.5C21 23.5 24.5 20 24.5 14.5L24.5 10C24 5 19.5 2 16 2Z"
+        d="M16 5 C19 4 23 5 25 7.5 C27.5 10.5 27.5 15 27.5 17 C27.5 23 23 27.5 16 30"
         stroke={color}
-        strokeWidth="1.9"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Inner shield left half */}
+      <path
+        d="M16 10 C14 9.5 11.5 10 10 12 C8.5 14 8 17 8 19.5 C8 23 11 26.5 16 28"
+        stroke={color}
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Inner shield right half */}
+      <path
+        d="M16 10 C18 9.5 20.5 10 22 12 C23.5 14 24 17 24 19.5 C24 23 21 26.5 16 28"
+        stroke={color}
+        strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -76,19 +92,35 @@ export function BrandShieldIcon({
       className={className}
       style={{ flexShrink: 0 }}
     >
-      {/* Outer shield */}
+      {/* Outer shield left half */}
       <path
-        d="M16 5.5C11 5.5 5 8.5 4 13.5L4 18C4 24 8.5 28 16 30.5C23.5 28 28 24 28 18L28 13.5C27 8.5 21 5.5 16 5.5Z"
+        d="M16 5 C13 4 9 5 7 7.5 C4.5 10.5 4.5 15 4.5 17 C4.5 23 9 27.5 16 30"
         stroke={color}
-        strokeWidth="2.2"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      {/* Inner shield — top peaks above outer */}
+      {/* Outer shield right half */}
       <path
-        d="M16 2C12.5 2 8 5 7.5 10L7.5 14.5C7.5 20 11 23.5 16 25.5C21 23.5 24.5 20 24.5 14.5L24.5 10C24 5 19.5 2 16 2Z"
+        d="M16 5 C19 4 23 5 25 7.5 C27.5 10.5 27.5 15 27.5 17 C27.5 23 23 27.5 16 30"
         stroke={color}
-        strokeWidth="1.9"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Inner shield left half */}
+      <path
+        d="M16 10 C14 9.5 11.5 10 10 12 C8.5 14 8 17 8 19.5 C8 23 11 26.5 16 28"
+        stroke={color}
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Inner shield right half */}
+      <path
+        d="M16 10 C18 9.5 20.5 10 22 12 C23.5 14 24 17 24 19.5 C24 23 21 26.5 16 28"
+        stroke={color}
+        strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
