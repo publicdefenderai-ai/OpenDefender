@@ -282,9 +282,11 @@ export default function SearchSeizure() {
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <Alert className="mb-12 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-              <BrandShieldIcon size={16} />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
-                <strong>Key Principle:</strong> The law protects you from unfair searches. Police usually need a warrant (court order) or your permission to search you, unless there's an emergency or they can see something illegal in plain sight. You have the right to say no, even if it doesn't stop the search.
+                <div className="flex items-start gap-3">
+                  <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+                  <span><strong>Key Principle:</strong> The law protects you from unfair searches. Police usually need a warrant (court order) or your permission to search you, unless there's an emergency or they can see something illegal in plain sight. You have the right to say no, even if it doesn't stop the search.</span>
+                </div>
               </AlertDescription>
             </Alert>
           </ScrollReveal>

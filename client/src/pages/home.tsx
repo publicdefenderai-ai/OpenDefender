@@ -823,9 +823,11 @@ export default function Home() {
           
           <div className="space-y-6">
             <Alert className="border-blue-200 bg-blue-50">
-              <BrandShieldIcon size={16} />
               <AlertDescription className="text-blue-800">
-                {t('home.legalAidSearch.alertMessage')}
+                <div className="flex items-start gap-3">
+                  <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+                  <span>{t('home.legalAidSearch.alertMessage')}</span>
+                </div>
               </AlertDescription>
             </Alert>
 

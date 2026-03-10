@@ -320,9 +320,11 @@ export default function FriendsFamily() {
 
           <ScrollReveal delay={0.3}>
             <Alert className="mt-6 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-              <BrandShieldIcon size={16} />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
-                <strong>{t('friendsFamily.disclaimer.title')}</strong> {t('friendsFamily.disclaimer.text')}
+                <div className="flex items-start gap-3">
+                  <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+                  <span><strong>{t('friendsFamily.disclaimer.title')}</strong> {t('friendsFamily.disclaimer.text')}</span>
+                </div>
               </AlertDescription>
             </Alert>
           </ScrollReveal>

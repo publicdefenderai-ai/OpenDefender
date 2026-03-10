@@ -292,9 +292,11 @@ export default function FirstTwentyFourHours() {
 
         <ScrollReveal delay={0.5}>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <BrandShieldIcon size={16} className="opacity-60" />
             <AlertDescription className="text-muted-foreground text-sm">
-              This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.
+              <div className="flex items-start gap-3">
+                <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0 opacity-60" />
+                <span>This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.</span>
+              </div>
             </AlertDescription>
           </Alert>
         </ScrollReveal>
