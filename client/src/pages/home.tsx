@@ -416,8 +416,8 @@ export default function Home() {
             {[1, 2, 3, 4, 5].map((i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center mt-0.5 group-hover:bg-primary/30 transition-colors">
-                    <Check className="h-4 w-4 text-primary" />
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-teal-400/20 border border-teal-400/40 flex items-center justify-center mt-0.5 group-hover:bg-teal-400/30 transition-colors">
+                    <Check className="h-4 w-4 text-teal-300" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-2 text-base leading-snug">
