@@ -14,7 +14,14 @@
     "review:legal-aid": "tsx scripts/data-review/check-legal-aid.ts",
     "review:report": "tsx scripts/data-review/generate-report.ts",
     "review:all": "npm run review:detention && npm run review:consulates && npm run review:legal-aid && npm run review:report",
-    "review:check": "tsc --project tsconfig.scripts.json"
+    "review:check": "tsc --project tsconfig.scripts.json",
+    "content:review": "tsx scripts/content-review/review-content.ts",
+    "content:review:guidance": "tsx scripts/content-review/review-content.ts guidance",
+    "content:review:immigration": "tsx scripts/content-review/review-content.ts immigration",
+    "content:review:support": "tsx scripts/content-review/review-content.ts support",
+    "content:review:resources": "tsx scripts/content-review/review-content.ts resources",
+    "content:report": "tsx scripts/content-review/generate-report.ts",
+    "content:all": "npm run content:review && npm run content:report"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.37.0",

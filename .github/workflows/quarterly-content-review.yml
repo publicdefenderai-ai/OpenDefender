@@ -1,0 +1,225 @@
+name: Quarterly Content Review
+
+on:
+  # Runs at 09:00 UTC on January 1, April 1, July 1, and October 1
+  schedule:
+    - cron: '0 9 1 1,4,7,10 *'
+
+  # Manual trigger from Actions tab — optionally filter to one category
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Category to review (leave blank for all)'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - guidance
+          - immigration
+          - support
+          - resources
+
+# ─── Permissions ──────────────────────────────────────────────────────────────
+# contents:read to check out code; issues:write only on the report job
+permissions:
+  contents: read
+
+jobs:
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 1: Criminal Justice Guidance
+  # ────────────────────────────────────────────────────────────────────────────
+  review-guidance:
+    name: Review Criminal Justice Guidance
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'guidance'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run guidance content review
+        run: npx tsx scripts/content-review/review-content.ts guidance
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Upload guidance diff
+        uses: actions/upload-artifact@v4
+        with:
+          name: guidance-diff
+          path: scripts/content-review/output/guidance-diff.json
+          if-no-files-found: error
+          retention-days: 30
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 2: Immigration Guidance
+  # ────────────────────────────────────────────────────────────────────────────
+  review-immigration:
+    name: Review Immigration Guidance
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'immigration'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run immigration content review
+        run: npx tsx scripts/content-review/review-content.ts immigration
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Upload immigration diff
+        uses: actions/upload-artifact@v4
+        with:
+          name: immigration-diff
+          path: scripts/content-review/output/immigration-diff.json
+          if-no-files-found: error
+          retention-days: 30
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 3: Support Resources
+  # ────────────────────────────────────────────────────────────────────────────
+  review-support:
+    name: Review Support Resources
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'support'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run support resources review
+        run: npx tsx scripts/content-review/review-content.ts support
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Upload support diff
+        uses: actions/upload-artifact@v4
+        with:
+          name: support-diff
+          path: scripts/content-review/output/support-diff.json
+          if-no-files-found: error
+          retention-days: 30
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 4: Life Resources & Legal Reference
+  # ────────────────────────────────────────────────────────────────────────────
+  review-resources:
+    name: Review Life Resources & Legal Reference
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'resources'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run life resources review
+        run: npx tsx scripts/content-review/review-content.ts resources
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Upload resources diff
+        uses: actions/upload-artifact@v4
+        with:
+          name: resources-diff
+          path: scripts/content-review/output/resources-diff.json
+          if-no-files-found: error
+          retention-days: 30
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 5: Generate GitHub Issue
+  # Runs after all review jobs complete (even if some were skipped)
+  # ────────────────────────────────────────────────────────────────────────────
+  generate-report:
+    name: Create GitHub Issue with Suggestions
+    runs-on: ubuntu-latest
+    needs: [review-guidance, review-immigration, review-support, review-resources]
+    if: always() && !cancelled()
+    permissions:
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download guidance diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: guidance-diff
+          path: scripts/content-review/output
+
+      - name: Download immigration diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: immigration-diff
+          path: scripts/content-review/output
+
+      - name: Download support diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: support-diff
+          path: scripts/content-review/output
+
+      - name: Download resources diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: resources-diff
+          path: scripts/content-review/output
+
+      - name: Create GitHub Issue
+        run: npx tsx scripts/content-review/generate-report.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
