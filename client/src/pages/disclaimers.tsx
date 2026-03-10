@@ -331,9 +331,11 @@ export default function Disclaimers() {
         {/* Acknowledgement */}
         <ScrollReveal>
           <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-            <BrandShieldIcon size={16} />
             <AlertDescription className="text-blue-800 dark:text-blue-200">
-              <strong className="font-semibold">Acknowledgement of Disclosures:</strong> By using this site, you acknowledge these disclaimers and understand the open source nature and limits of the platform.
+              <div className="flex items-start gap-3">
+                <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+                <span><strong className="font-semibold">Acknowledgement of Disclosures:</strong> By using this site, you acknowledge these disclaimers and understand the open source nature and limits of the platform.</span>
+              </div>
             </AlertDescription>
           </Alert>
         </ScrollReveal>

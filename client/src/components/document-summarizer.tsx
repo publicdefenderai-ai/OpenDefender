@@ -359,11 +359,11 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               className="space-y-6"
             >
               <Alert>
-                <BrandShieldIcon size={16} />
                 <AlertDescription className="space-y-3">
-                  <p>
-                    <strong>Before you upload a document, please understand:</strong>
-                  </p>
+                  <div className="flex items-center gap-3">
+                    <BrandShieldIcon size={16} className="flex-shrink-0" />
+                    <p><strong>Before you upload a document, please understand:</strong></p>
+                  </div>
                   <ul className="list-disc list-inside space-y-2 text-sm">
                     <li>
                       <strong>We do not store your document</strong> - It is processed in memory and immediately discarded after generating your summary.

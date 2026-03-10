@@ -410,9 +410,11 @@ export default function CollateralConsequences() {
         {/* Disclaimer */}
         <ScrollReveal>
           <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <BrandShieldIcon size={16} />
             <AlertDescription className="text-muted-foreground text-sm">
-              This page provides general information about collateral consequences and does not constitute legal advice. Laws vary significantly by state, offense type, and individual circumstances. Consult a licensed attorney — and an immigration attorney if you are a non-citizen — before making any decisions about your case.
+              <div className="flex items-start gap-3">
+                <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+                <span>This page provides general information about collateral consequences and does not constitute legal advice. Laws vary significantly by state, offense type, and individual circumstances. Consult a licensed attorney — and an immigration attorney if you are a non-citizen — before making any decisions about your case.</span>
+              </div>
             </AlertDescription>
           </Alert>
         </ScrollReveal>

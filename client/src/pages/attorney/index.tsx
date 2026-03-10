@@ -129,9 +129,11 @@ export default function AttorneyPortal() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Disclaimer */}
           <Alert className="mb-8 border-slate-200 bg-slate-50 dark:bg-slate-900/50">
-            <BrandShieldIcon size={16} />
             <AlertDescription>
-              {t('attorneyPortal.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.')}
+              <div className="flex items-start gap-3">
+                <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+                <span>{t('attorneyPortal.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.')}</span>
+              </div>
             </AlertDescription>
           </Alert>
 
