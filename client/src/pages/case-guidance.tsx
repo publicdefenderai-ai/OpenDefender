@@ -1,8 +1,8 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Shield, 
   AlertTriangle,
   Clock,
   Phone,
@@ -695,7 +695,7 @@ export default function CaseGuidance() {
             
             <div className="space-y-6">
               <Alert className="border-blue-200 bg-blue-50">
-                <Shield className="h-4 w-4 text-blue-600" />
+                <BrandShieldIcon size={16} />
                 <AlertDescription className="text-blue-800">
                   {t('home.legalAidSearch.alertMessage')}
                 </AlertDescription>
@@ -921,7 +921,7 @@ export default function CaseGuidance() {
             <div className="bg-muted/50 rounded-xl p-6 md:p-8">
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 ring-1 ring-primary/20">
-                  <Shield className="h-6 w-6 text-primary" />
+                  <BrandShieldIcon size={24} />
                 </div>
                 <h2 className="text-xl font-semibold text-foreground" data-testid="heading-privacy">
                   {t('case.privacy.title')}

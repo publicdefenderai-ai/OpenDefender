@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
@@ -362,7 +363,7 @@ export default function ApiDocs() {
         <Card className="mb-8 border-amber-200 bg-amber-50/50 dark:border-amber-800 dark:bg-amber-950/20">
           <CardContent className="pt-6">
             <div className="flex gap-3">
-              <Shield className="h-5 w-5 text-amber-600 mt-0.5" />
+              <BrandShieldIcon size={20} />
               <div>
                 <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-1">Security & Fair Use</h3>
                 <ul className="text-sm text-amber-700 dark:text-amber-300 space-y-1">

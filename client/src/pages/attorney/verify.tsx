@@ -4,9 +4,10 @@
  * Page for attorneys to verify their bar membership before accessing document generation tools.
  */
 
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Shield, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -51,7 +52,7 @@ export default function AttorneyVerify() {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-6">
-              <Shield className="h-8 w-8 text-white" />
+              <BrandShieldIcon size={32} light />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
               {t("attorneyPortal.verify.title", "Attorney Verification")}

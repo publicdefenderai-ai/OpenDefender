@@ -1,7 +1,8 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import employmentHero from "@assets/stock_images/employment.jpg";
-import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, Shield, FileText } from "lucide-react";
+import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, FileText } from "lucide-react";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -265,7 +266,7 @@ function CourtTimeOffSection() {
           <Card className="border border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/20 shadow-sm mt-8">
             <CardHeader className="pb-3">
               <CardTitle className="text-base font-semibold flex items-center gap-2">
-                <Shield className="h-4 w-4 text-green-600 dark:text-green-400" />
+                <BrandShieldIcon size={16} />
                 {t('support.employment.courtTimeOff.legalRights.title')}
               </CardTitle>
               <p className="text-sm text-muted-foreground">

@@ -1,6 +1,7 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, FileText, Shield, ArrowRight, FileSearch, Loader2, BookOpen } from "lucide-react";
+import { Briefcase, FileText, ArrowRight, FileSearch, Loader2, BookOpen } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -52,7 +53,7 @@ export default function AttorneyPortal() {
               className="text-center"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-6">
-                <Shield className="h-8 w-8 text-white" />
+                <BrandShieldIcon size={32} light />
               </div>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
                 {t("attorneyPortal.verify.title", "Attorney Verification")}
@@ -128,7 +129,7 @@ export default function AttorneyPortal() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Disclaimer */}
           <Alert className="mb-8 border-slate-200 bg-slate-50 dark:bg-slate-900/50">
-            <Shield className="h-4 w-4" />
+            <BrandShieldIcon size={16} />
             <AlertDescription>
               {t('attorneyPortal.disclaimer', 'These tools are designed for licensed attorneys. Document generation features require attestation of bar membership.')}
             </AlertDescription>

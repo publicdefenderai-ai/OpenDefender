@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -50,7 +51,7 @@ export default function RaidsToolkit() {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <Shield className="h-8 w-8 text-white" />
+                <BrandShieldIcon size={32} light />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-white">
                 {lang === 'es' ? 'Kit de Preparación para Redadas' : 'Raids Preparedness Toolkit'}
@@ -82,7 +83,7 @@ export default function RaidsToolkit() {
           <ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <a href="#scenarios" className="flex flex-col items-center gap-2 p-4 rounded-lg border hover:border-primary hover:bg-primary/5 transition-all">
-                <Shield className="h-8 w-8 text-primary" />
+                <BrandShieldIcon size={32} />
                 <span className="text-sm font-medium text-center">
                   {lang === 'es' ? 'Guías por Escenario' : 'Scenario Guides'}
                 </span>

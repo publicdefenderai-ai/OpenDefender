@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
 import {
   Building2,
@@ -232,7 +233,7 @@ export default function WorkplaceRaids() {
               <Card className="h-full">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-lg">
-                    <Shield className="h-5 w-5 text-green-600" />
+                    <BrandShieldIcon size={20} />
                     {lang === 'es' ? 'Derechos del Trabajador' : 'Worker Rights'}
                   </CardTitle>
                 </CardHeader>

@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
@@ -9,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { Copy, Check, Search, Shield, BookOpen, Code } from "lucide-react";
+import { Copy, Check, Search, BookOpen, Code } from "lucide-react";
 import { EmbeddableSearch } from "@/components/widgets/embeddable-search";
 import { RightsCard } from "@/components/widgets/rights-card";
 import { GlossaryWidget } from "@/components/widgets/glossary-widget";
@@ -126,7 +127,7 @@ export default function Widgets() {
               Search
             </TabsTrigger>
             <TabsTrigger value="rights" className="flex items-center gap-2">
-              <Shield className="h-4 w-4" />
+              <BrandShieldIcon size={16} />
               Rights Card
             </TabsTrigger>
             <TabsTrigger value="glossary" className="flex items-center gap-2">
@@ -369,7 +370,7 @@ export default function Widgets() {
                 </div>
                 <div className="bg-muted rounded-lg p-4">
                   <h4 className="font-medium mb-2 flex items-center gap-2">
-                    <Shield className="h-4 w-4" /> Rights Card
+                    <BrandShieldIcon size={16} /> Rights Card
                   </h4>
                   <p className="text-sm text-muted-foreground">
                     Available in full (450px), compact (250px), or mini (60px) heights.
