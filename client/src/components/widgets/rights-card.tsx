@@ -1,4 +1,5 @@
-import { Shield, AlertTriangle, Phone } from "lucide-react";
+import { BrandShieldIcon } from "@/components/brand-logo";
+import { AlertTriangle, Phone } from "lucide-react";
 
 interface RightsCardProps {
   language?: "en" | "es";
@@ -61,7 +62,7 @@ export function RightsCard({
         className={`pdai-widget inline-flex items-center gap-2 px-4 py-2 rounded-lg ${bgClass} border ${borderClass} ${textClass} hover:shadow-md transition-shadow`}
         style={{ fontFamily: "system-ui, -apple-system, sans-serif", textDecoration: "none" }}
       >
-        <Shield className="h-4 w-4 text-blue-600" />
+        <BrandShieldIcon size={16} />
         <span className="font-medium text-sm">{content.title}</span>
       </a>
     );
@@ -74,7 +75,7 @@ export function RightsCard({
         style={{ fontFamily: "system-ui, -apple-system, sans-serif", maxWidth: "320px" }}
       >
         <div className="flex items-center gap-2 mb-3">
-          <Shield className="h-5 w-5 text-blue-600" />
+          <BrandShieldIcon size={20} />
           <h3 className="font-bold">{content.title}</h3>
         </div>
         <ul className="space-y-2 text-sm mb-3">
@@ -105,7 +106,7 @@ export function RightsCard({
       <div className={`${accentBg} border-b ${accentBorder} px-5 py-4`}>
         <div className="flex items-center gap-3">
           <div className="p-2 bg-blue-600 rounded-lg">
-            <Shield className="h-6 w-6 text-white" />
+            <BrandShieldIcon size={24} light />
           </div>
           <div>
             <h3 className="font-bold text-lg">{content.title}</h3>
@@ -121,7 +122,7 @@ export function RightsCard({
               {right.icon === "alert" ? (
                 <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
               ) : (
-                <Shield className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                <BrandShieldIcon size={20} className="flex-shrink-0 mt-0.5" />
               )}
               <span>{right.text}</span>
             </li>

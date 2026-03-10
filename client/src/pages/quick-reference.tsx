@@ -1,8 +1,9 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
-  Shield,
+  
   Printer,
   AlertTriangle,
   Gavel,
@@ -235,7 +236,7 @@ function PoliceEncounterCard() {
         sections={[
           {
             heading: t("quickRef.police.stay", "Stay Calm & Remember"),
-            headingIcon: <Shield className="h-4 w-4 text-blue-600" />,
+            headingIcon: <BrandShieldIcon size={16} />,
             items: [
               t("quickRef.police.stay1", "You have the right to remain silent. Say: \"I am exercising my right to remain silent.\""),
               t("quickRef.police.stay2", "You have the right to refuse searches. Say: \"I do not consent to a search.\""),
@@ -327,7 +328,7 @@ function ArraignmentCard() {
         },
         {
           heading: t("quickRef.arraignment.rights", "Your Rights"),
-          headingIcon: <Shield className="h-4 w-4 text-blue-600" />,
+          headingIcon: <BrandShieldIcon size={16} />,
           items: [
             t("quickRef.arraignment.right1", "Right to an attorney (free if you can't afford one)"),
             t("quickRef.arraignment.right2", "Right to know the charges against you"),
@@ -383,7 +384,7 @@ function BailHearingCard() {
         },
         {
           heading: t("quickRef.bail.rights", "Your Rights"),
-          headingIcon: <Shield className="h-4 w-4 text-blue-600" />,
+          headingIcon: <BrandShieldIcon size={16} />,
           items: [
             t("quickRef.bail.right1", "Right to reasonable bail (8th Amendment)"),
             t("quickRef.bail.right2", "Right to a bail hearing"),
@@ -439,7 +440,7 @@ function PretrialCard() {
         },
         {
           heading: t("quickRef.pretrial.rights", "Your Rights"),
-          headingIcon: <Shield className="h-4 w-4 text-blue-600" />,
+          headingIcon: <BrandShieldIcon size={16} />,
           items: [
             t("quickRef.pretrial.right1", "Right to see all evidence against you (Brady Rule)"),
             t("quickRef.pretrial.right2", "Right to a speedy trial"),
@@ -494,7 +495,7 @@ function PleaCard() {
         },
         {
           heading: t("quickRef.plea.rights", "Your Rights"),
-          headingIcon: <Shield className="h-4 w-4 text-blue-600" />,
+          headingIcon: <BrandShieldIcon size={16} />,
           items: [
             t("quickRef.plea.right1", "Right to withdraw a guilty plea in certain circumstances"),
             t("quickRef.plea.right2", "Right to know the full consequences before pleading"),
@@ -549,7 +550,7 @@ function SentencingCard() {
         },
         {
           heading: t("quickRef.sentencing.rights", "Your Rights"),
-          headingIcon: <Shield className="h-4 w-4 text-blue-600" />,
+          headingIcon: <BrandShieldIcon size={16} />,
           items: [
             t("quickRef.sentencing.right1", "Right to speak at your sentencing (allocution)"),
             t("quickRef.sentencing.right2", "Right to appeal the sentence"),

@@ -1,7 +1,8 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { 
-  Shield, 
+  
   AlertTriangle, 
   Phone, 
   FileText, 
@@ -278,7 +279,7 @@ export default function ImmigrationGuidance() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-constitutional-rights-title">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
-                      <Shield className="h-5 w-5 text-green-600 dark:text-green-400" />
+                      <BrandShieldIcon size={20} />
                     </div>
                     {t('immigration.emergencyRights.constitutionalTitle')}
                   </CardTitle>
@@ -382,7 +383,7 @@ export default function ImmigrationGuidance() {
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20 flex-shrink-0">
-                        <Shield className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                        <BrandShieldIcon size={24} />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors" data-testid="link-daca-tps">
@@ -590,7 +591,7 @@ export default function ImmigrationGuidance() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-green-500/20">
-                <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
+                <BrandShieldIcon size={32} />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-special-protections-title">
                 {t('immigration.specialProtections.title')}
@@ -804,7 +805,7 @@ export default function ImmigrationGuidance() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/rights-info">
                 <Button variant="default" size="lg" className="w-full sm:w-auto" data-testid="button-learn-rights">
-                  <Shield className="mr-2 h-5 w-5" />
+                  <BrandShieldIcon size={20} className="mr-2" />
                   {t('immigration.finalCta.rights')}
                 </Button>
               </Link>

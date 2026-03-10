@@ -1,5 +1,6 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { Search, Home, Car, User, Smartphone, Shield, AlertTriangle, CheckCircle } from "lucide-react";
+import { Search, Home, Car, User, Smartphone, AlertTriangle, CheckCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -103,7 +104,7 @@ const scenarios: RightsScenario[] = [
     ]
   },
   {
-    icon: <Shield className="h-6 w-6 text-white" />,
+    icon: <BrandShieldIcon size={24} light />,
     title: "Search of Your Person",
     description: "When police want to conduct a body search",
     iconBgColor: "bg-red-600",
@@ -203,7 +204,7 @@ function ScenarioCard({ scenario, index }: { scenario: RightsScenario; index: nu
             {/* Your Rights */}
             <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3 flex items-center">
-                <Shield className="h-4 w-4 mr-2" />
+                <BrandShieldIcon size={16} className="mr-2" />
                 Your Rights:
               </h4>
               <ul className="space-y-2">
@@ -281,7 +282,7 @@ export default function SearchSeizure() {
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <Alert className="mb-12 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-              <Shield className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              <BrandShieldIcon size={16} />
               <AlertDescription className="text-blue-800 dark:text-blue-200">
                 <strong>Key Principle:</strong> The law protects you from unfair searches. Police usually need a warrant (court order) or your permission to search you, unless there's an emergency or they can see something illegal in plain sight. You have the right to say no, even if it doesn't stop the search.
               </AlertDescription>
@@ -369,7 +370,7 @@ export default function SearchSeizure() {
       <div className="legal-blue text-white py-3 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2">
-            <Shield className="h-4 w-4" />
+            <BrandShieldIcon size={16} />
             <span className="text-sm font-medium">
               <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
             </span>

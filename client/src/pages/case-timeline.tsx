@@ -1,8 +1,9 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Shield,
+  
   Clock,
   ChevronRight,
   AlertTriangle,
@@ -188,7 +189,7 @@ export default function CaseTimeline() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-green-50 dark:bg-green-950/30 p-5 rounded-lg border border-green-200 dark:border-green-800">
                       <h3 className="font-semibold text-green-800 dark:text-green-200 mb-3 flex items-center gap-2">
-                        <Shield className="h-4 w-4" />
+                        <BrandShieldIcon size={16} />
                         {t("caseTimeline.yourRights", "Your Rights")}
                       </h3>
                       <ul className="space-y-2">

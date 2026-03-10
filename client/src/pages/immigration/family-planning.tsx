@@ -1,7 +1,8 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
 import { 
   Heart, 
-  Shield,
+  
   AlertTriangle
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,7 +55,7 @@ export default function FamilyPlanning() {
       </section>
 
       <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
-        <Shield className="h-5 w-5 text-blue-600" />
+        <BrandShieldIcon size={20} />
         <AlertDescription className="text-blue-800 dark:text-blue-200" data-testid="alert-family-planning">
           <strong>{t('immigration.family.planningAlert')}</strong> {t('immigration.family.planningAlertText')}
         </AlertDescription>

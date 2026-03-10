@@ -5,11 +5,12 @@
  * No bar credentials are collected or stored - only attestations.
  */
 
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
-import { Loader2, Shield, Info } from "lucide-react";
+import { Loader2, Info } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -83,7 +84,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
         {/* Attestation Checkboxes */}
         <div className="space-y-4 rounded-lg border p-4 bg-slate-50 dark:bg-slate-900/50">
           <div className="flex items-center gap-2 mb-3">
-            <Shield className="h-4 w-4 text-slate-600" />
+            <BrandShieldIcon size={16} />
             <span className="font-medium text-sm">
               {t("attorneyPortal.verify.attestationsTitle", "Required Attestations")}
             </span>

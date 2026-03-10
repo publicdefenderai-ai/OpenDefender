@@ -1,3 +1,4 @@
+import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,7 +15,7 @@ import {
   Heart,
   Scale,
   DollarSign,
-  Shield,
+  
   AlertTriangle
 } from 'lucide-react';
 
@@ -80,7 +81,7 @@ const documentCategories: DocumentCategory[] = [
   {
     id: 'immigration',
     title: { en: 'Immigration Documents', es: 'Documentos de Inmigración' },
-    icon: <Shield className="h-5 w-5" />,
+    icon: <BrandShieldIcon size={20} />,
     documents: [
       {
         id: 'imm-1',
