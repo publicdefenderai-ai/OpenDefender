@@ -57,8 +57,8 @@ export default function HowTo() {
         { title: t('howTo.sections.getHelp.aiChat.title'), description: t('howTo.sections.getHelp.aiChat.description'), link: "/chat" },
         { title: t('howTo.sections.getHelp.immigrationRights.title'), description: t('howTo.sections.getHelp.immigrationRights.description'), link: "/immigration-guidance" },
         { title: t('howTo.sections.getHelp.documentSummarizer.title'), description: t('howTo.sections.getHelp.documentSummarizer.description'), link: "/document-summarizer" },
-        { title: "Your First 24 Hours", description: "Step-by-step guide from arrest through your first court appearance", link: "/first-24-hours" },
-        { title: "Jail Phone Call Guide", description: "What to say and what never to say on jail calls", link: "/jail-phone-call" },
+        { title: t('howTo.sections.getHelp.first24Hours.title'), description: t('howTo.sections.getHelp.first24Hours.description'), link: "/first-24-hours" },
+        { title: t('howTo.sections.getHelp.jailPhoneCall.title'), description: t('howTo.sections.getHelp.jailPhoneCall.description'), link: "/jail-phone-call" },
       ]
     },
     {

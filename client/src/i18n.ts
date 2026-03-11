@@ -4615,9 +4615,9 @@ i18n
             "immigration": "Immigration",
             "sessionNote": "Your session will automatically end after 1 hour of inactivity.",
             "endSession": "End Session",
-            "comingSoonTitle": "Templates Coming Soon",
-            "criminalComingSoon": "Criminal law templates including Motions to Continue, Discovery Requests, and Bail Reduction motions are being developed.",
-            "immigrationComingSoon": "Immigration templates including EOIR-28 forms, Bond Memoranda, and Change of Venue motions are being developed."
+            "comingSoonTitle": "No Templates Found",
+            "criminalComingSoon": "No criminal law templates match the current filter. Try selecting a different category or clearing your search.",
+            "immigrationComingSoon": "No immigration templates match the current filter. Try selecting a different category or clearing your search."
           },
           "playbooks": {
             "title": "Case Playbooks",
@@ -4685,6 +4685,14 @@ i18n
                 "documentSummarizer": {
                   "title": "Document Summarizer",
                   "description": "Upload a legal document and get a plain-language summary."
+                },
+                "first24Hours": {
+                  "title": "Your First 24 Hours",
+                  "description": "Step-by-step guide from arrest through your first court appearance."
+                },
+                "jailPhoneCall": {
+                  "title": "Jail Phone Call Guide",
+                  "description": "What to say and what never to say on jail calls."
                 }
               },
               "knowYourRights": {
@@ -9419,9 +9427,9 @@ i18n
             "immigration": "Inmigración",
             "sessionNote": "Su sesión terminará automáticamente después de 1 hora de inactividad.",
             "endSession": "Terminar Sesión",
-            "comingSoonTitle": "Plantillas Próximamente",
-            "criminalComingSoon": "Las plantillas de derecho penal incluyendo Mociones de Continuación, Solicitudes de Descubrimiento y mociones de Reducción de Fianza están siendo desarrolladas.",
-            "immigrationComingSoon": "Las plantillas de inmigración incluyendo formularios EOIR-28, Memorandos de Fianza y mociones de Cambio de Sede están siendo desarrolladas."
+            "comingSoonTitle": "No se encontraron plantillas",
+            "criminalComingSoon": "Ninguna plantilla de derecho penal coincide con el filtro actual. Intente seleccionar una categoría diferente o borrar su búsqueda.",
+            "immigrationComingSoon": "Ninguna plantilla de inmigración coincide con el filtro actual. Intente seleccionar una categoría diferente o borrar su búsqueda."
           },
           "playbooks": {
             "title": "Guías de Casos",
@@ -9489,6 +9497,14 @@ i18n
                 "documentSummarizer": {
                   "title": "Resumen de Documentos",
                   "description": "Suba un documento legal y obtenga un resumen en lenguaje sencillo."
+                },
+                "first24Hours": {
+                  "title": "Sus Primeras 24 Horas",
+                  "description": "Guía paso a paso desde el arresto hasta su primera comparecencia en el tribunal."
+                },
+                "jailPhoneCall": {
+                  "title": "Guía de Llamadas desde la Cárcel",
+                  "description": "Qué decir y qué nunca decir en llamadas desde la cárcel."
                 }
               },
               "knowYourRights": {
@@ -14189,9 +14205,9 @@ i18n
               "immigration": "移民",
               "sessionNote": "您的会话将在1小时无活动后自动结束。",
               "endSession": "结束会话",
-              "comingSoonTitle": "模板即将推出",
-              "criminalComingSoon": "刑事法律模板包括延期动议、证据开示请求和减少保释金动议，正在开发中。",
-              "immigrationComingSoon": "移民模板包括 EOIR-28 表格、保释备忘录和变更审理地点动议，正在开发中。"
+              "comingSoonTitle": "未找到模板",
+              "criminalComingSoon": "没有刑事法律模板匹配当前筛选条件。请尝试选择其他类别或清除搜索内容。",
+              "immigrationComingSoon": "没有移民模板匹配当前筛选条件。请尝试选择其他类别或清除搜索内容。"
             },
             "playbooks": {
               "title": "案件操作手册",
@@ -14259,6 +14275,14 @@ i18n
                 "documentSummarizer": {
                   "title": "文件摘要",
                   "description": "上传法律文件，获取通俗易懂的摘要。"
+                },
+                "first24Hours": {
+                  "title": "被捕后的首个24小时",
+                  "description": "从逮捕到首次出庭的逐步指南。"
+                },
+                "jailPhoneCall": {
+                  "title": "监狱电话指南",
+                  "description": "在监狱电话中该说什么、绝对不能说什么。"
                 }
               },
               "knowYourRights": {

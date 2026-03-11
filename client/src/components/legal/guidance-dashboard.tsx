@@ -1556,43 +1556,29 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 const label = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${concernId}.label`);
                 const description = t(`legalGuidance.qaFlow.additionalDetails.concernsCategories.${concernId}.description`);
 
-                if (config.available) {
-                  return (
-                    <div key={concernId} className="flex flex-col gap-1">
-                      <button onClick={() => guardedNavigate(config.href)} className="w-full text-left">
-                        <div className="group flex items-start gap-3 p-3 rounded-lg border hover:border-primary/40 hover:bg-muted/50 transition-all cursor-pointer">
-                          <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${config.color} flex-shrink-0 transition-transform group-hover:scale-105`}>
-                            <Icon className="h-5 w-5" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="font-medium text-sm group-hover:text-primary transition-colors">{label}</div>
-                            <div className="text-xs text-muted-foreground truncate">{description}</div>
-                          </div>
-                          <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
-                        </div>
-                      </button>
-                      {concernId === 'finances' && (
-                        <button
-                          onClick={() => guardedNavigate('/support/finances')}
-                          className="text-xs text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1 px-3"
-                        >
-                          <DollarSign className="h-3 w-3" />
-                          Court Fees & Fines guide →
-                        </button>
-                      )}
-                    </div>
-                  );
-                }
-
                 return (
-                  <div key={concernId} className="flex items-start gap-3 p-3 rounded-lg border opacity-60">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${config.color} flex-shrink-0`}>
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-medium text-sm">{label}</div>
-                      <div className="text-xs text-muted-foreground">{t('support.comingSoon', 'Coming soon')}</div>
-                    </div>
+                  <div key={concernId} className="flex flex-col gap-1">
+                    <button onClick={() => guardedNavigate(config.href)} className="w-full text-left">
+                      <div className="group flex items-start gap-3 p-3 rounded-lg border hover:border-primary/40 hover:bg-muted/50 transition-all cursor-pointer">
+                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${config.color} flex-shrink-0 transition-transform group-hover:scale-105`}>
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-sm group-hover:text-primary transition-colors">{label}</div>
+                          <div className="text-xs text-muted-foreground truncate">{description}</div>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                      </div>
+                    </button>
+                    {concernId === 'finances' && (
+                      <button
+                        onClick={() => guardedNavigate('/support/finances')}
+                        className="text-xs text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1 px-3"
+                      >
+                        <DollarSign className="h-3 w-3" />
+                        Court Fees & Fines guide →
+                      </button>
+                    )}
                   </div>
                 );
               })}

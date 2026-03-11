@@ -173,7 +173,7 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
           <Folder className="h-8 w-8 text-slate-400" />
         </div>
         <h3 className="text-lg font-semibold mb-2">
-          {t("attorneyPortal.documents.comingSoonTitle", "Templates Coming Soon")}
+          {t("attorneyPortal.documents.comingSoonTitle", "No Templates Found")}
         </h3>
         <p className="text-muted-foreground max-w-md">
           {category === "criminal"
