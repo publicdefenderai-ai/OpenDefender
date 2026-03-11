@@ -52,8 +52,6 @@ export const LEGAL_DEFINITIONS: Record<string, string> = {
     "A court-appointed attorney provided at no cost to defendants who cannot afford a private lawyer. Guaranteed by the Sixth Amendment.",
   "attorney-client privilege":
     "A legal protection that keeps conversations between you and your attorney private. Your attorney cannot be forced to testify about what you told them.",
-  arraignment: // alias
-    "Your first court appearance. The judge reads the charges against you and you enter a plea: guilty, not guilty, or no contest.",
   "no contest":
     "A plea meaning you do not admit guilt but accept the punishment. Has the same legal effect as guilty in most cases but cannot be used against you in a civil lawsuit.",
   "OR release":

@@ -44,6 +44,8 @@ import { motionToAdministrativelyCloseEoirTemplate } from "../../../shared/templ
 import { noticeOfAppealBiaTemplate } from "../../../shared/templates/notice-of-appeal-bia";
 import { motionToExcludeExpertTemplate } from "../../../shared/templates/motion-to-exclude-expert";
 import { motionForWithholdingRemovalCatTemplate } from "../../../shared/templates/motion-for-withholding-removal-cat";
+import { noticOfAppealCriminalTemplate } from "../../../shared/templates/notice-of-appeal-criminal";
+import { motionProbationViolationResponseTemplate } from "../../../shared/templates/motion-probation-violation-response";
 import { processTemplate, validateFormData, applyJurisdictionVariant } from "./template-processor";
 import { devLog, errLog, opsLog } from "../../utils/dev-logger";
 import { isRequestCostAcceptable } from "../cost-tracker";
@@ -126,6 +128,8 @@ const templateRegistry: Map<string, DocumentTemplate> = new Map([
   ["notice-of-appeal-bia", noticeOfAppealBiaTemplate],
   ["motion-to-exclude-expert", motionToExcludeExpertTemplate],
   ["motion-for-withholding-removal-cat", motionForWithholdingRemovalCatTemplate],
+  ["notice-of-appeal-criminal", noticOfAppealCriminalTemplate],
+  ["motion-probation-violation-response", motionProbationViolationResponseTemplate],
 ]);
 
 // Document storage (in-memory, expires with session)
