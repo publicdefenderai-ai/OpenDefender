@@ -149,8 +149,8 @@ function PhaseSection({ phase, playbooks }: { phase: Phase; playbooks: PlaybookS
     <div>
       {/* Phase header */}
       <div className="mb-3">
-        <div className="flex items-baseline gap-2">
-          <h3 className="text-sm font-semibold text-foreground">{phase.label}</h3>
+        <div className="flex items-baseline gap-2.5">
+          <h3 className="text-base font-semibold text-foreground">{phase.label}</h3>
           <span className="text-xs text-muted-foreground">
             {phasePlaybooks.length} {phasePlaybooks.length === 1 ? "playbook" : "playbooks"}
           </span>
