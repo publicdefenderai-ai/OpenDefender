@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { BookOpen, Scale, Landmark, LogOut, Clock, Loader2, ChevronRight } from "lucide-react";
+import { BookOpen, Scale, Landmark, LogOut, Clock, Loader2, ChevronRight, Timer } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
@@ -28,25 +28,25 @@ const CRIMINAL_PHASES: Phase[] = [
   {
     id: "arrest",
     label: "Arrest & Initial Proceedings",
-    description: "First court appearances, bail setting, and early case strategy",
+    description: "First appearances, bail, and early case strategy",
     ids: ["arraignment", "bail-bond"],
   },
   {
     id: "misdemeanor",
     label: "Misdemeanor Cases",
-    description: "Lower-level offenses, traffic matters, and minor criminal charges",
+    description: "Traffic matters, minor criminal charges, and lower-level offenses",
     ids: ["fare-evasion", "disorderly-conduct", "reckless-driving-dwls", "theft-shoplifting", "misdemeanor-dv"],
   },
   {
     id: "drug-dui",
     label: "Drug & DUI Cases",
-    description: "Controlled substance charges, impaired driving, and diversion pathways",
+    description: "Controlled substances, impaired driving, and diversion pathways",
     ids: ["drug-possession", "drug-distribution", "dui-dwi"],
   },
   {
     id: "felony",
     label: "Felony Cases",
-    description: "Serious violent and weapons charges requiring intensive defense preparation",
+    description: "Serious violent and weapons charges requiring intensive preparation",
     ids: ["felony-assault", "weapons-firearms", "resisting-obstruction"],
   },
   {
@@ -61,76 +61,76 @@ const IMMIGRATION_PHASES: Phase[] = [
   {
     id: "detention",
     label: "Detention & Enforcement",
-    description: "ICE detention, emergency bond hearings, and workplace enforcement responses",
+    description: "ICE detention, emergency bond hearings, and workplace enforcement",
     ids: ["ice-detention-bond", "workplace-raid"],
   },
   {
     id: "proceedings",
     label: "Removal Proceedings",
-    description: "Immigration court hearings, master calendar, and expedited removal challenges",
+    description: "Immigration court hearings, master calendar, and expedited removal",
     ids: ["master-calendar", "expedited-removal"],
   },
   {
     id: "asylum",
     label: "Asylum & Protection Claims",
-    description: "Defensive asylum applications, withholding of removal, and CAT protection",
+    description: "Defensive asylum, withholding of removal, and CAT protection",
     ids: ["defensive-asylum", "withholding-cat"],
   },
   {
     id: "relief",
     label: "Relief & Status Applications",
-    description: "Cancellation, adjustment of status, DACA/TPS, and victim-based forms of relief",
+    description: "Cancellation, adjustment, DACA/TPS, and victim-based relief",
     ids: ["cancellation-of-removal", "adjustment-of-status", "daca-tps-lapse", "u-visa-t-visa", "vawa-self-petition"],
   },
   {
     id: "appeals",
     label: "Post-Order & Appeals",
-    description: "Motions to reopen or reconsider, and appellate strategy after a final order",
+    description: "Motions to reopen or reconsider after a final order",
     ids: ["motion-to-reopen"],
   },
 ];
 
 // ─── Difficulty styling ───────────────────────────────────────────────────────
 
-const difficultyDot: Record<string, string> = {
-  basic: "bg-green-500",
-  intermediate: "bg-amber-500",
-  advanced: "bg-red-500",
+const difficultyConfig: Record<string, { label: string; className: string }> = {
+  basic:        { label: "Basic",        className: "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300" },
+  intermediate: { label: "Intermediate", className: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300" },
+  advanced:     { label: "Advanced",     className: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300" },
 };
 
-const difficultyLabel: Record<string, string> = {
-  basic: "Basic",
-  intermediate: "Intermediate",
-  advanced: "Advanced",
-};
+// ─── Playbook card ────────────────────────────────────────────────────────────
 
-// ─── Playbook row ─────────────────────────────────────────────────────────────
+function PlaybookCard({ playbook }: { playbook: PlaybookSummary }) {
+  const diff = difficultyConfig[playbook.difficultyLevel] ?? difficultyConfig.basic;
 
-function PlaybookRow({ playbook }: { playbook: PlaybookSummary }) {
   return (
     <Link href={`/attorney/playbooks/${playbook.id}`}>
-      <div className="flex items-center gap-3 px-4 py-3 hover:bg-muted/40 transition-colors cursor-pointer group">
-        {/* Difficulty dot */}
-        <span
-          className={`w-2 h-2 rounded-full shrink-0 ${difficultyDot[playbook.difficultyLevel]}`}
-          title={difficultyLabel[playbook.difficultyLevel]}
-        />
-
-        {/* Name + tagline */}
-        <div className="flex-1 min-w-0">
-          <span className="font-medium text-sm group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors">
-            {playbook.name}
+      <div className="group h-full flex flex-col border rounded-xl p-4 bg-card hover:border-green-400 hover:shadow-sm transition-all cursor-pointer">
+        {/* Top row: difficulty badge + chevron */}
+        <div className="flex items-center justify-between mb-3">
+          <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${diff.className}`}>
+            {diff.label}
           </span>
-          <span className="hidden sm:inline text-xs text-muted-foreground ml-2">
-            — {playbook.tagline}
-          </span>
+          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-green-600 transition-colors" />
         </div>
 
-        {/* Timeline + chevron */}
-        <div className="flex items-center gap-2 shrink-0 text-muted-foreground">
-          <span className="text-xs hidden md:block">{playbook.typicalTimeline}</span>
-          <ChevronRight className="h-4 w-4 group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors" />
-        </div>
+        {/* Name */}
+        <p className="font-semibold text-sm leading-snug mb-1.5 group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors">
+          {playbook.name}
+        </p>
+
+        {/* Tagline */}
+        <p className="text-xs text-muted-foreground leading-relaxed flex-1">
+          {playbook.tagline}
+        </p>
+
+        {/* Timeline footer */}
+        {playbook.typicalTimeline && (
+          <div className="flex items-center gap-1.5 mt-3 pt-3 border-t">
+            <Timer className="h-3 w-3 text-muted-foreground shrink-0" />
+            <span className="text-[11px] text-muted-foreground">{playbook.typicalTimeline}</span>
+          </div>
+        )}
       </div>
     </Link>
   );
@@ -148,18 +148,20 @@ function PhaseSection({ phase, playbooks }: { phase: Phase; playbooks: PlaybookS
   return (
     <div>
       {/* Phase header */}
-      <div className="flex items-baseline gap-2 mb-2 px-1">
-        <h3 className="text-sm font-semibold text-foreground">{phase.label}</h3>
-        <span className="text-xs text-muted-foreground hidden sm:inline">— {phase.description}</span>
-        <span className="ml-auto text-xs text-muted-foreground shrink-0">
-          {phasePlaybooks.length} {phasePlaybooks.length === 1 ? "playbook" : "playbooks"}
-        </span>
+      <div className="mb-3">
+        <div className="flex items-baseline gap-2">
+          <h3 className="text-sm font-semibold text-foreground">{phase.label}</h3>
+          <span className="text-xs text-muted-foreground">
+            {phasePlaybooks.length} {phasePlaybooks.length === 1 ? "playbook" : "playbooks"}
+          </span>
+        </div>
+        <p className="text-xs text-muted-foreground mt-0.5">{phase.description}</p>
       </div>
 
-      {/* Playbook rows */}
-      <div className="border rounded-lg divide-y overflow-hidden bg-card">
+      {/* Card grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {phasePlaybooks.map((playbook) => (
-          <PlaybookRow key={playbook.id} playbook={playbook} />
+          <PlaybookCard key={playbook.id} playbook={playbook} />
         ))}
       </div>
     </div>
@@ -219,19 +221,7 @@ function CategoryPlaybooks({ category }: CategoryPlaybooksProps) {
   const phases = category === "criminal" ? CRIMINAL_PHASES : IMMIGRATION_PHASES;
 
   return (
-    <div className="space-y-6">
-      {/* Difficulty legend */}
-      <div className="flex items-center gap-4 text-xs text-muted-foreground px-1">
-        <span className="font-medium text-foreground">Difficulty:</span>
-        {Object.entries(difficultyLabel).map(([key, label]) => (
-          <span key={key} className="flex items-center gap-1.5">
-            <span className={`w-2 h-2 rounded-full ${difficultyDot[key]}`} />
-            {label}
-          </span>
-        ))}
-      </div>
-
-      {/* Phase sections */}
+    <div className="space-y-8">
       {phases.map((phase) => (
         <PhaseSection key={phase.id} phase={phase} playbooks={playbooks} />
       ))}
@@ -279,7 +269,7 @@ function PlaybooksContent() {
       {/* Content */}
       <section className="py-6 md:py-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <Tabs defaultValue="criminal" className="space-y-6">
+          <Tabs defaultValue="criminal" className="space-y-8">
             <TabsList className="grid w-full grid-cols-2 max-w-xs mx-auto">
               <TabsTrigger value="criminal" className="gap-2">
                 <Scale className="h-4 w-4" />
