@@ -217,6 +217,7 @@ i18n
             "noticeDisclaimers": "Notice & Disclaimers",
             "technicalDocs": "Technical Documentation",
             "viewOnGithub": "View on GitHub",
+            "viewOnX": "Follow on X",
             "allResources": "All Resources",
             "privacyNotice": "Privacy First: We do not store your personal data — all input deleted after session.",
             "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice."
@@ -5029,6 +5030,7 @@ i18n
             "noticeDisclaimers": "Avisos y Exenciones",
             "technicalDocs": "Documentación Técnica",
             "viewOnGithub": "Ver en GitHub",
+            "viewOnX": "Seguir en X",
             "allResources": "Todos los Recursos",
             "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales — toda información se elimina después de la sesión.",
             "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional."
@@ -9842,6 +9844,7 @@ i18n
             "noticeDisclaimers": "通知与免责声明",
             "technicalDocs": "技术文档",
             "viewOnGithub": "在 GitHub 上查看",
+            "viewOnX": "在 X 上关注",
             "allResources": "所有资源",
             "privacyNotice": "隐私优先：我们不存储你的个人数据——所有输入在会话结束后删除。",
             "copyright": "© 2026 OpenDefender。不能替代专业法律建议。"

@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 import { BrandLogo, BrandShieldIcon } from "@/components/brand-logo";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -23,17 +23,29 @@ export function Footer() {
               <BrandShieldIcon size={13} light className="mt-0.5 opacity-60" />
               <span>{t('footer.privacyNotice')}</span>
             </div>
-            <a
-              href="https://github.com/publicdefenderai-ai/OpenDefender"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
-              data-testid="link-github"
-              aria-label="OpenDefender on GitHub"
-            >
-              <Github className="h-5 w-5" aria-hidden="true" />
-              <span>{t('footer.viewOnGithub')}</span>
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://github.com/publicdefenderai-ai/OpenDefender"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
+                data-testid="link-github"
+                aria-label="OpenDefender on GitHub"
+              >
+                <Github className="h-5 w-5" aria-hidden="true" />
+                <span>{t('footer.viewOnGithub')}</span>
+              </a>
+              <a
+                href="https://x.com/OpenDefenderAI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm"
+                aria-label="OpenDefender on X (Twitter)"
+              >
+                <Twitter className="h-5 w-5" aria-hidden="true" />
+                <span>{t('footer.viewOnX')}</span>
+              </a>
+            </div>
           </div>
 
           {/* Get Help Column */}
