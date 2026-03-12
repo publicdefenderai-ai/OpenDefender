@@ -25,6 +25,11 @@ externalPort = 3001
 
 [env]
 PORT = "5000"
+AI_DAILY_BUDGET = "15"
+AI_BUDGET_GUIDANCE = "10"
+AI_BUDGET_SUMMARIZER = "3"
+AI_BUDGET_ATTORNEY = "5"
+AI_MAX_REQUEST_COST = "0.50"
 
 [workflows]
 runButton = "Project"
