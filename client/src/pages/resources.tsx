@@ -16,7 +16,10 @@ import {
   Clock,
   UserCheck,
   Heart,
-  FileSearch
+  FileSearch,
+  Gavel,
+  Library,
+  Wrench
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -67,6 +70,20 @@ function ResourceCard({ icon, title, description, href, onClick, color }: Resour
   }
 
   return <Link href={href || "/"}>{content}</Link>;
+}
+
+function SectionHeader({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="flex items-start gap-3 mb-6">
+      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+        {icon}
+      </div>
+      <div>
+        <h2 className="text-lg font-semibold text-foreground">{title}</h2>
+        <p className="text-sm text-muted-foreground">{description}</p>
+      </div>
+    </div>
+  );
 }
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
@@ -286,11 +303,9 @@ export default function Resources() {
       setPdError(t('home.publicDefenderSearch.error'));
       return;
     }
-
     setPdSearching(true);
     setPdError("");
     setPdHasSearched(true);
-
     try {
       const offices = await searchPublicDefenderOffices(pdZipCode);
       setPdOffices(offices);
@@ -307,11 +322,9 @@ export default function Resources() {
       setLaError(t('home.legalAidSearch.error'));
       return;
     }
-
     setLaSearching(true);
     setLaError("");
     setLaHasSearched(true);
-
     try {
       const organizations = await searchLegalAidOrganizations(laZipCode);
       setLaOrganizations(organizations);
@@ -323,20 +336,32 @@ export default function Resources() {
     }
   };
 
-  const resources = [
+  // ── Section 1: Find Legal Help ──────────────────────────────────────────────
+  const legalHelpResources = [
     {
-      icon: <BookOpen className="h-7 w-7 text-white" />,
-      title: t('resources.glossary.title', { defaultValue: 'Legal Glossary' }),
-      description: t('resources.glossary.description', { defaultValue: 'Understand legal terminology with our comprehensive glossary of terms commonly used in criminal proceedings.' }),
-      href: "/legal-glossary",
-      color: "bg-gradient-to-br from-purple-500 to-purple-700"
+      icon: <Heart className="h-7 w-7 text-white" />,
+      title: t('resources.legalAid.title', { defaultValue: 'Legal Aid Organizations' }),
+      description: t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community.' }),
+      onClick: () => setShowLegalAidModal(true),
+      color: "bg-gradient-to-br from-rose-500 to-rose-700"
     },
     {
-      icon: <FileText className="h-7 w-7 text-white" />,
-      title: t('resources.expungement.title', { defaultValue: 'Record Expungement' }),
-      description: t('resources.expungement.description', { defaultValue: 'Learn about clearing your criminal record, eligibility requirements, and the expungement process in your state.' }),
-      href: "/record-expungement",
-      color: "bg-gradient-to-br from-amber-500 to-amber-700"
+      icon: <UserCheck className="h-7 w-7 text-white" />,
+      title: t('resources.publicDefender.title', { defaultValue: 'Find a Public Defender' }),
+      description: t('resources.publicDefender.description', { defaultValue: 'Search for public defender offices in your area by zip code to get free legal representation.' }),
+      onClick: () => setShowPublicDefenderModal(true),
+      color: "bg-gradient-to-br from-indigo-500 to-indigo-700"
+    },
+  ];
+
+  // ── Section 2: Courts & Records ─────────────────────────────────────────────
+  const courtsResources = [
+    {
+      icon: <MapPin className="h-7 w-7 text-white" />,
+      title: t('resources.courtLocator.title', { defaultValue: 'Find Local Courts' }),
+      description: t('resources.courtLocator.description', { defaultValue: 'Locate courts in your area, find addresses, phone numbers, and directions to courthouses.' }),
+      href: "/court-locator",
+      color: "bg-gradient-to-br from-teal-500 to-teal-700"
     },
     {
       icon: <Search className="h-7 w-7 text-white" />,
@@ -345,12 +370,16 @@ export default function Resources() {
       href: "/court-records",
       color: "bg-gradient-to-br from-blue-500 to-blue-700"
     },
+  ];
+
+  // ── Section 3: Legal Information ────────────────────────────────────────────
+  const infoResources = [
     {
-      icon: <MapPin className="h-7 w-7 text-white" />,
-      title: t('resources.courtLocator.title', { defaultValue: 'Find Local Courts' }),
-      description: t('resources.courtLocator.description', { defaultValue: 'Locate courts in your area, find addresses, phone numbers, and directions to courthouses.' }),
-      href: "/court-locator",
-      color: "bg-gradient-to-br from-teal-500 to-teal-700"
+      icon: <BookOpen className="h-7 w-7 text-white" />,
+      title: t('resources.glossary.title', { defaultValue: 'Legal Glossary' }),
+      description: t('resources.glossary.description', { defaultValue: 'Understand legal terminology with our comprehensive glossary of terms commonly used in criminal proceedings.' }),
+      href: "/legal-glossary",
+      color: "bg-gradient-to-br from-purple-500 to-purple-700"
     },
     {
       icon: <Users className="h-7 w-7 text-white" />,
@@ -360,26 +389,58 @@ export default function Resources() {
       color: "bg-gradient-to-br from-green-500 to-green-700"
     },
     {
-      icon: <UserCheck className="h-7 w-7 text-white" />,
-      title: t('resources.publicDefender.title', { defaultValue: 'Find a Public Defender' }),
-      description: t('resources.publicDefender.description', { defaultValue: 'Search for public defender offices in your area by zip code to get free legal representation.' }),
-      onClick: () => setShowPublicDefenderModal(true),
-      color: "bg-gradient-to-br from-indigo-500 to-indigo-700"
+      icon: <FileText className="h-7 w-7 text-white" />,
+      title: t('resources.expungement.title', { defaultValue: 'Record Expungement' }),
+      description: t('resources.expungement.description', { defaultValue: 'Learn about clearing your criminal record, eligibility requirements, and the expungement process in your state.' }),
+      href: "/record-expungement",
+      color: "bg-gradient-to-br from-amber-500 to-amber-700"
     },
-    {
-      icon: <Heart className="h-7 w-7 text-white" />,
-      title: t('resources.legalAid.title', { defaultValue: 'Legal Aid Organizations' }),
-      description: t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community.' }),
-      onClick: () => setShowLegalAidModal(true),
-      color: "bg-gradient-to-br from-rose-500 to-rose-700"
-    },
+  ];
+
+  // ── Section 4: Tools ────────────────────────────────────────────────────────
+  const toolsResources = [
     {
       icon: <FileSearch className="h-7 w-7 text-white" />,
       title: t('resources.documentSummarizer.title', { defaultValue: 'Document Summarizer' }),
       description: t('resources.documentSummarizer.description', { defaultValue: 'Upload legal documents and get AI-powered plain-English summaries. Your documents are never stored.' }),
       onClick: () => setShowDocumentSummarizerModal(true),
       color: "bg-gradient-to-br from-cyan-500 to-cyan-700"
-    }
+    },
+  ];
+
+  const sections = [
+    {
+      key: "legal-help",
+      icon: <Heart className="h-5 w-5 text-primary" />,
+      title: t('resources.sections.legalHelp.title', { defaultValue: 'Find Legal Help' }),
+      description: t('resources.sections.legalHelp.description', { defaultValue: 'Free and low-cost legal representation near you' }),
+      resources: legalHelpResources,
+      cols: "md:grid-cols-2",
+    },
+    {
+      key: "courts",
+      icon: <Gavel className="h-5 w-5 text-primary" />,
+      title: t('resources.sections.courts.title', { defaultValue: 'Courts & Records' }),
+      description: t('resources.sections.courts.description', { defaultValue: 'Locate courthouses and search public court records' }),
+      resources: courtsResources,
+      cols: "md:grid-cols-2",
+    },
+    {
+      key: "info",
+      icon: <Library className="h-5 w-5 text-primary" />,
+      title: t('resources.sections.info.title', { defaultValue: 'Legal Information' }),
+      description: t('resources.sections.info.description', { defaultValue: 'Reference guides, glossary, and process explanations' }),
+      resources: infoResources,
+      cols: "md:grid-cols-2 lg:grid-cols-3",
+    },
+    {
+      key: "tools",
+      icon: <Wrench className="h-5 w-5 text-primary" />,
+      title: t('resources.sections.tools.title', { defaultValue: 'Tools' }),
+      description: t('resources.sections.tools.description', { defaultValue: 'AI-powered tools to help you understand your documents' }),
+      resources: toolsResources,
+      cols: "md:grid-cols-2 lg:grid-cols-3",
+    },
   ];
 
   return (
@@ -411,6 +472,7 @@ export default function Resources() {
       {/* Main Content */}
       <section className="py-12 lg:py-16">
         <div className="max-w-6xl mx-auto px-4">
+
           <ScrollReveal>
             <div className="flex items-center gap-4 mb-10">
               <Link href="/">
@@ -422,18 +484,36 @@ export default function Resources() {
             </div>
           </ScrollReveal>
 
-          {/* Resource Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resources.map((resource, index) => (
-              <ScrollReveal key={resource.title} delay={index * 0.1}>
-                <ResourceCard {...resource} />
+          {/* Grouped Sections */}
+          <div className="space-y-14">
+            {sections.map((section, sectionIndex) => (
+              <ScrollReveal key={section.key} delay={sectionIndex * 0.08}>
+                <div>
+                  <SectionHeader
+                    icon={section.icon}
+                    title={section.title}
+                    description={section.description}
+                  />
+                  <div className={`grid ${section.cols} gap-6`}>
+                    {section.resources.map((resource, index) => (
+                      <motion.div
+                        key={resource.title}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.35, delay: index * 0.07 }}
+                      >
+                        <ResourceCard {...resource} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </ScrollReveal>
             ))}
           </div>
 
-          {/* Additional Info Section */}
-          <ScrollReveal delay={0.5}>
-            <Card className="mt-12 bg-muted/50 border-dashed">
+          {/* CTA */}
+          <ScrollReveal delay={0.4}>
+            <Card className="mt-14 bg-muted/50 border-dashed">
               <CardContent className="p-8 text-center">
                 <h3 className="text-xl font-semibold mb-3">
                   {t('resources.needHelp.title', { defaultValue: 'Need Personalized Guidance?' })}
@@ -450,6 +530,7 @@ export default function Resources() {
               </CardContent>
             </Card>
           </ScrollReveal>
+
         </div>
       </section>
 
@@ -484,9 +565,7 @@ export default function Resources() {
               </Button>
             </div>
 
-            {pdError && (
-              <div className="text-red-600 text-sm">{pdError}</div>
-            )}
+            {pdError && <div className="text-red-600 text-sm">{pdError}</div>}
 
             {pdOffices.length > 0 && (
               <div className="space-y-4">
@@ -537,9 +616,7 @@ export default function Resources() {
               </Button>
             </div>
 
-            {laError && (
-              <div className="text-red-600 text-sm">{laError}</div>
-            )}
+            {laError && <div className="text-red-600 text-sm">{laError}</div>}
 
             {laOrganizations.length > 0 && (
               <div className="space-y-4">
@@ -563,11 +640,11 @@ export default function Resources() {
 
       {/* Document Summarizer Modal */}
       <Dialog open={showDocumentSummarizerModal} onOpenChange={setShowDocumentSummarizerModal}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0">
-          <DocumentSummarizer
-            isAttorneyMode={false}
-            onClose={() => setShowDocumentSummarizerModal(false)}
-          />
+        <DialogContent className="max-w-[95vw] md:max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>{t('resources.documentSummarizer.title', { defaultValue: 'Document Summarizer' })}</DialogTitle>
+          </DialogHeader>
+          <DocumentSummarizer />
         </DialogContent>
       </Dialog>
     </div>
