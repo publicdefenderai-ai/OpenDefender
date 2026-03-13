@@ -2,7 +2,7 @@ import { type InsertLegalAidOrganization } from "@shared/schema";
 
 // Comprehensive legal aid organizations database
 // Sources: EOIR Pro Bono List, Legal Services Corporation (LSC), State/County PD Offices, Federal Defender Directory
-// Last Updated: November 2025
+// Last Updated: March 2026 (quarterly refresh — 13 corrections applied)
 
 export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   // ========== IMMIGRATION LEGAL AID - EOIR PRO BONO LIST ==========
@@ -36,14 +36,14 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Alameda County Public Defender - Immigration Representation Unit",
     organizationType: "immigration",
-    address: "1401 Lakeside Drive, 12th Floor",
+    address: "1401 Lakeside Drive, Suite 400",
     city: "Oakland",
     state: "CA",
     zipCode: "94612",
     county: "Alameda",
-    phone: "(510) 272-6611",
+    phone: "(510) 272-6600",
     email: null,
-    website: "https://www.acgov.org/defender/",
+    website: "https://publicdefender.acgov.org",
     latitude: "37.8058",
     longitude: "-122.2631",
     services: [
@@ -179,10 +179,10 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Catholic Charities Community Services - Immigration Legal Services",
     organizationType: "immigration",
-    address: "1011 First Avenue, 11th Floor",
+    address: "80 Maiden Lane, 13th Floor",
     city: "New York",
     state: "NY",
-    zipCode: "10022",
+    zipCode: "10038",
     county: "New York",
     phone: "(212) 419-3700",
     email: null,
@@ -205,12 +205,12 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "RAICES (Refugee and Immigrant Center for Education and Legal Services)",
     organizationType: "immigration",
-    address: "500 6th Street",
+    address: "131 Interpark Blvd",
     city: "San Antonio",
     state: "TX",
-    zipCode: "78215",
+    zipCode: "78216",
     county: "Bexar",
-    phone: "(210) 375-9673",
+    phone: "(833) 372-4237",
     email: "info@raicestexas.org",
     website: "https://www.raicestexas.org",
     latitude: "29.4222",
@@ -229,11 +229,11 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "American Gateways",
     organizationType: "immigration",
-    address: "2900 Live Oak Street",
-    city: "Dallas",
+    address: "314 E. Highland Mall Boulevard, Suite 501",
+    city: "Austin",
     state: "TX",
-    zipCode: "75204",
-    county: "Dallas",
+    zipCode: "78752",
+    county: "Travis",
     phone: "(512) 478-0546",
     email: "info@americangateways.org",
     website: "https://www.americangateways.org",
@@ -358,10 +358,10 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Greater Bakersfield Legal Assistance",
     organizationType: "civil_legal_aid",
-    address: "2600 F Street, Suite 100",
+    address: "615 California Ave",
     city: "Bakersfield",
     state: "CA",
-    zipCode: "93301",
+    zipCode: "93304",
     county: "Kern",
     phone: "(661) 325-5943",
     email: null,
@@ -435,7 +435,7 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Lone Star Legal Aid",
     organizationType: "civil_legal_aid",
-    address: "800 Commerce Street, Suite 600",
+    address: "1415 Fannin Street",
     city: "Houston",
     state: "TX",
     zipCode: "77002",
@@ -459,10 +459,10 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Texas RioGrande Legal Aid (TRLA)",
     organizationType: "civil_legal_aid",
-    address: "300 S. Main, Suite 500",
+    address: "2929 Mossrock, Suite 121",
     city: "San Antonio",
     state: "TX",
-    zipCode: "78205",
+    zipCode: "78230",
     county: "Bexar",
     phone: "(210) 212-3700",
     email: null,
@@ -485,10 +485,10 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Legal Aid Chicago",
     organizationType: "civil_legal_aid",
-    address: "120 S. LaSalle Street, Suite 900",
+    address: "200 N. LaSalle Street, Suite 1400",
     city: "Chicago",
     state: "IL",
-    zipCode: "60603",
+    zipCode: "60601",
     county: "Cook",
     phone: "(312) 341-1070",
     email: null,
@@ -511,10 +511,10 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Legal Services of Greater Miami",
     organizationType: "civil_legal_aid",
-    address: "3000 Biscayne Boulevard, Suite 500",
+    address: "4343 West Flagler Street, Suite 100",
     city: "Miami",
     state: "FL",
-    zipCode: "33137",
+    zipCode: "33134",
     county: "Miami-Dade",
     phone: "(305) 576-0080",
     email: null,
