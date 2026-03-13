@@ -255,7 +255,7 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
   {
     name: "Americans for Immigrant Justice",
     organizationType: "immigration",
-    address: "6355 NW 36th Street, Suite 101",
+    address: "6355 NW 36th Street, Suite 2201",
     city: "Miami",
     state: "FL",
     zipCode: "33166",
@@ -339,7 +339,7 @@ export const legalAidOrganizationsSeed: InsertLegalAidOrganization[] = [
     state: "CA",
     zipCode: "94102",
     county: "San Francisco",
-    phone: "(800) 551-5554",
+    phone: "(415) 982-1300",
     email: "info@baylegal.org",
     website: "https://www.baylegal.org",
     latitude: "37.7733",
