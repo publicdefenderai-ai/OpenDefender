@@ -66,7 +66,7 @@ i18n
               "federalCourtsDesc": "Access to millions of federal and state court opinions through CourtListener API. RECAP Archive integration for free access to federal court documents (PACER integration pending).",
               "federalCourtsStatus": "Partial Completion",
               "stateLaws": "State & Federal Laws",
-              "stateLawsDesc": "Complete 50-state + DC coverage with 1,255 criminal statutes and 713 validated charge matches across 12 offense categories. Federal statutes from GovInfo.gov. All jurisdictions linked to official legislature websites.",
+              "stateLawsDesc": "Complete 50-state + DC coverage with 5,956 criminal statutes across all offense categories. Federal statutes from GovInfo.gov. All 51 jurisdictions linked to official legislature websites.",
               "stateLawsStatus": "Active - 51 Jurisdictions",
               "analytics": "Criminal Justice Analytics",
               "analyticsDesc": "Bureau of Justice Statistics (BJS) integration in progress. NCVS/NIBRS API implementation with proper weighting and pagination pending validation.",
@@ -3761,7 +3761,7 @@ i18n
               },
               "stateStatutes": {
                 "title": "State Laws Database",
-                "description": "Complete 50-state + DC coverage achieved with 1,255 criminal statutes across 12 offense categories including homicide, assault, theft, fraud, drug offenses, and more. 713 validated charge-statute matches with links to official legislature websites.",
+                "description": "Complete 50-state + DC coverage with 5,956 criminal statutes across all offense categories including homicide, assault, theft, fraud, drug offenses, and more. All 51 jurisdictions linked to official legislature websites.",
                 "impact": "Full nationwide coverage of state criminal statutes"
               },
               "aiGuidance": {
@@ -4879,7 +4879,7 @@ i18n
               "federalCourtsDesc": "Acceso a millones de opiniones judiciales federales y estatales a través de la API de CourtListener. Integración del Archivo RECAP para acceso gratuito a documentos judiciales federales (integración PACER pendiente).",
               "federalCourtsStatus": "Finalización Parcial",
               "stateLaws": "Leyes Estatales y Federales",
-              "stateLawsDesc": "Cobertura completa de 50 estados + DC con 1,255 estatutos penales y 713 coincidencias de cargos validadas en 12 categorías de delitos. Estatutos federales de GovInfo.gov. Todas las jurisdicciones vinculadas a sitios web oficiales de legislaturas.",
+              "stateLawsDesc": "Cobertura completa de 50 estados + DC con 5,956 estatutos penales en todas las categorías de delitos. Estatutos federales de GovInfo.gov. Las 51 jurisdicciones vinculadas a sitios web oficiales de legislaturas.",
               "stateLawsStatus": "Activo - 51 Jurisdicciones",
               "analytics": "Análisis de Justicia Penal",
               "analyticsDesc": "Integración de la Oficina de Estadísticas de Justicia (BJS) en progreso. Implementación de API NCVS/NIBRS con ponderación adecuada y paginación pendiente de validación.",
@@ -8574,7 +8574,7 @@ i18n
               },
               "stateStatutes": {
                 "title": "Base de Datos de Leyes Estatales",
-                "description": "Cobertura completa de 50 estados + DC lograda con 1,255 estatutos penales en 12 categorías de delitos incluyendo homicidio, asalto, robo, fraude, delitos de drogas y más. 713 coincidencias de cargos-estatutos validadas con enlaces a sitios web oficiales de legislaturas.",
+                "description": "Cobertura completa de 50 estados + DC con 5,956 estatutos penales en todas las categorías de delitos incluyendo homicidio, asalto, robo, fraude, delitos de drogas y más. Las 51 jurisdicciones vinculadas a sitios web oficiales de legislaturas.",
                 "impact": "Cobertura nacional completa de estatutos penales estatales"
               },
               "aiGuidance": {
@@ -9693,7 +9693,7 @@ i18n
               "federalCourtsDesc": "通过CourtListener API获取数百万联邦和州法院判例。RECAP Archive整合提供免费联邦法院文件访问（PACER整合即将推出）。",
               "federalCourtsStatus": "部分完成",
               "stateLaws": "州和联邦法律",
-              "stateLawsDesc": "涵盖全部50个州加华盛顿特区，包含1,255项刑事法规和713项经过验证的指控匹配，涵盖12个犯罪类别。联邦法规来自GovInfo.gov。所有辖区都链接到官方立法机构网站。",
+              "stateLawsDesc": "涵盖全部50个州加华盛顿特区，收录5,956项刑事法规，覆盖所有犯罪类别。联邦法规来自GovInfo.gov。全部51个辖区均链接至官方立法机构网站。",
               "stateLawsStatus": "已启用 - 51个辖区",
               "analytics": "刑事司法数据分析",
               "analyticsDesc": "司法统计局（BJS）整合正在推进中。NCVS/NIBRS API实现及适当加权和分页功能正在验证中。",
@@ -13362,7 +13362,7 @@ i18n
               },
               "stateStatutes": {
                 "title": "州法律数据库",
-                "description": "已实现50个州加哥伦比亚特区的完整覆盖，涵盖12个犯罪类别的1,255项刑事法规，包括杀人、人身伤害、盗窃、欺诈、毒品犯罪等。713个经验证的指控-法规匹配，链接至官方立法网站。",
+                "description": "已实现50个州加哥伦比亚特区的完整覆盖，收录5,956项刑事法规，涵盖所有犯罪类别，包括杀人、人身伤害、盗窃、欺诈、毒品犯罪等。全部51个辖区均链接至官方立法网站。",
                 "impact": "全国范围内州刑事法规的完整覆盖"
               },
               "aiGuidance": {

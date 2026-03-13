@@ -2,7 +2,26 @@
 
 ---
 
-## PERMANENT AGENT RULE — READ BEFORE EVERY TASK
+## PERMANENT AGENT RULES — READ BEFORE EVERY TASK
+
+### Rule 1 — Privacy & Security First
+**All features and changes must prioritize privacy and security.** This means:
+- Never log user-submitted case data, PII, or legal guidance content (devLog is dev-only; opsLog is aggregates only)
+- All attorney session cookies must remain `httpOnly`, `secure` in production, `sameSite: 'strict'`
+- Helmet CSP, CSRF protection, rate limiting, and input sanitization are non-negotiable — never weaken them
+- The `sanitizeInput()` function must be applied to all data sent to Claude
+- `sanitizeForLogging()` and `SENSITIVE_PATHS` must cover any new sensitive API endpoints
+
+### Rule 2 — Accuracy First
+**Never display dummy, stale, or fabricated data to users.** This means:
+- All statistics shown to users must match actual live database counts or properly sourced, labeled real-world data
+- If a number changes (e.g., statute count, charge count), update it everywhere: home page, about page, and all 3 language versions in `i18n.ts`
+- Case outcome statistics from BJS are appropriately labeled with `dataYear` and source — this is correct
+- Do not introduce placeholder or hardcoded numbers as stand-ins for real data
+
+---
+
+### Rule 3 — Charge Validation Permanent Ban
 
 **CHARGE VALIDATION IS PERMANENTLY OFF-LIMITS unless the user's current message explicitly and unambiguously requests it by name.**
 
