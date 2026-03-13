@@ -3595,9 +3595,7 @@ i18n
               "searchButton": "Search",
               "searching": "Searching...",
               "error": "Please enter a valid 5-digit ZIP code",
-              "errorGeneral": "Unable to search for offices. Please try again or contact your local court for information.",
-              "limitedData": "Limited court data available for this area. Showing sample results.",
-              "sampleData": "Using sample data. Some court information may be limited for this area."
+              "errorGeneral": "Unable to search for offices. Please try again or contact your local court for information."
             },
             "results": {
               "title": "Court Search Results",
@@ -8408,9 +8406,7 @@ i18n
               "searchButton": "Buscar",
               "searching": "Buscando...",
               "error": "Por favor ingrese un código postal válido de 5 dígitos",
-              "errorGeneral": "No se puede buscar oficinas. Por favor intente nuevamente o contacte a su tribunal local para información.",
-              "limitedData": "Datos limitados de tribunales disponibles para esta área. Mostrando resultados de muestra.",
-              "sampleData": "Usando datos de muestra. Cierta información de tribunales puede ser limitada para esta área."
+              "errorGeneral": "No se puede buscar oficinas. Por favor intente nuevamente o contacte a su tribunal local para información."
             },
             "results": {
               "title": "Resultados de Búsqueda de Tribunales",
@@ -13196,9 +13192,7 @@ i18n
               "searchButton": "搜索",
               "searching": "搜索中...",
               "error": "请输入有效的5位数邮编",
-              "errorGeneral": "无法搜索法院。请重试或联系您当地法院获取信息。",
-              "limitedData": "该地区的法院数据有限。显示示例结果。",
-              "sampleData": "使用示例数据。该地区的部分法院信息可能有限。"
+              "errorGeneral": "无法搜索法院。请重试或联系您当地法院获取信息。"
             },
             "results": {
               "title": "法院搜索结果",
