@@ -95,12 +95,13 @@ async function main() {
   const legalAid = readDiff('legal-aid-diff.json');
   const detention = readDiff('detention-diff.json');
   const consulates = readDiff('consulate-diff.json');
+  const statutes = readDiff('statutes-diff.json');
 
   const quarter = Math.ceil((new Date().getMonth() + 1) / 3);
   const year = new Date().getFullYear();
   const title = `Quarterly Data Review — Q${quarter} ${year}`;
 
-  const totalIssues = [legalAid, detention, consulates]
+  const totalIssues = [legalAid, detention, consulates, statutes]
     .filter(Boolean)
     .reduce((sum, d) => sum + (d?.needsReviewCount ?? 0), 0);
 
@@ -119,14 +120,17 @@ async function main() {
     '',
     formatSection('Consulate Information', consulates),
     '',
+    formatSection('Federal Statute URLs (Cornell LII)', statutes),
+    '',
     '---',
     '',
     '**Manual review checklist for flagged items:**',
-    '- [ ] Visit each flagged website and confirm the org is still active',
+    '- [ ] Visit each flagged website and confirm the org/statute is still active',
     '- [ ] Verify phone numbers via a test call or official directory',
     '- [ ] Update `server/data/legal-aid-organizations-seed.ts` with corrections',
+    '- [ ] If a statute URL has changed or statute was amended, update `server/data/federal-statutes-seed.ts` with the corrected URL and any updated statutory text',
     '- [ ] Re-run the seed against the database (`npm run db:seed`)',
-    '- [ ] Update the `// Last Updated` comment in the seed file',
+    '- [ ] Update the Last Updated comment in the seed file',
     '- [ ] Close this issue once all corrections are applied',
     '',
     '_Generated automatically by `.github/workflows/quarterly-data-review.yml`_',
