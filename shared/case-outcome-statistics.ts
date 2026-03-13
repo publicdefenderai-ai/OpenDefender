@@ -615,10 +615,14 @@ export function getOutcomeStatisticsForDisplay(
 } {
   const statistics = getCaseOutcomeStatistics(charges, jurisdiction);
   
+  const mostRecentYear = statistics.length > 0
+    ? Math.max(...statistics.map(s => s.dataYear))
+    : null;
+
   return {
     statistics,
     disclaimer: statistics.length > 0
-      ? `Based on ${statistics.reduce((sum, s) => sum + s.sampleSize, 0).toLocaleString()} similar cases. Every case is unique. These are averages, not predictions about your case.`
+      ? `Based on ${statistics.reduce((sum, s) => sum + s.sampleSize, 0).toLocaleString()} cases from ${mostRecentYear} national court records (BJS / U.S. Sentencing Commission). Every case is unique — these are national averages, not predictions. Outcomes vary significantly by jurisdiction, judge, and individual circumstances. Confirm all information with a licensed attorney.`
       : 'No statistical data available for these specific charges.',
   };
 }

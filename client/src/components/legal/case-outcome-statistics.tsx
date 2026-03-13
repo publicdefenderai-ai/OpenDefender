@@ -82,8 +82,8 @@ function StatisticCard({ statistic }: { statistic: CaseOutcomeStatistic }) {
           <Badge variant="outline" className="text-xs">
             {statistic.jurisdiction === 'federal' ? t('legalGuidance.dashboard.caseOutcomes.federal', 'Federal') : t('legalGuidance.dashboard.caseOutcomes.state', 'State')}
           </Badge>
-          <Badge variant="secondary" className="text-xs">
-            {statistic.dataYear}
+          <Badge variant="secondary" className="text-xs" title="Year this national dataset was published">
+            {statistic.dataYear} data
           </Badge>
         </div>
       </div>
