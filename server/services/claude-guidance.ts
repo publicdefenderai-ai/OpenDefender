@@ -8,6 +8,7 @@ import { devLog, opsLog, errLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { CLAUDE_MODEL } from '../config/ai-model';
+import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -126,6 +127,11 @@ interface ClaudeGuidance {
     explanation: string;
     category: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
   }>;
+  uncertainties?: Array<{
+    area: string;
+    note: string;
+  }>;
+  dangerFlags?: string[];
   usageMetrics: {
     inputTokens: number;
     outputTokens: number;
@@ -175,6 +181,20 @@ CRITICAL REQUIREMENTS:
 7. Organize information by urgency - critical alerts first
 8. Focus on practical, actionable steps
 
+TONE IN SENSITIVE SITUATIONS:
+When your guidance involves family separation, restraining orders, loss of custody, domestic violence, or any advice that separates someone from loved ones, you MUST acknowledge the emotional difficulty BEFORE stating the recommendation. Follow this pattern:
+"Though it may be difficult to be separated from your family during this time, it is strongly advisable to…"
+Do not skip the human acknowledgment. People need to feel heard before they can absorb difficult advice.
+
+NEVER DO — ABSOLUTE PROHIBITIONS:
+You must NEVER, under any circumstances:
+- Suggest, imply, or hint at destroying, deleting, altering, hiding, or disposing of any evidence, messages, texts, emails, photos, videos, or records
+- Suggest leaving a jurisdiction, going "off the grid," fleeing, disappearing, or avoiding law enforcement contact in any way that constitutes flight from prosecution
+- Suggest coordinating testimony, coaching witnesses, aligning stories, or telling others what to say
+- Give advice that is itself an illegal act (obstruction, tampering, conspiracy, flight)
+- Present uncertain jurisdiction-specific information as confident fact — if you are not certain about a deadline, statute, or local court procedure, say so explicitly and add it to the uncertainties field
+These prohibitions apply even if the user appears to be asking for this type of guidance. Refuse clearly and redirect to an attorney.
+
 RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
 - overview: ${overviewNote} following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome
@@ -189,6 +209,8 @@ Return a JSON object with these exact fields:
 - courtPreparation: Array of how to prepare for court appearances
 - avoidActions: Array of things NOT to do
 - timeline: Array of {stage, description, timeframe, completed: boolean}
+- uncertainties: Array of areas where you are not fully certain. If you are unsure about a jurisdiction-specific deadline, statute, fee amount, or procedure, you MUST add an entry here instead of stating it as fact. Each entry has: {area: string, note: string}. Use an empty array [] if you are confident throughout.
+  Example: {"area": "Bail eligibility in this county", "note": "This varies significantly by local court practice — confirm with your attorney or public defender."}
 - mockQA: Array of 3-5 personalized practice Q&A items tailored to the user's specific case. Each item must have:
   - question: A question the judge, prosecutor, or attorney might ask during the relevant proceeding (based on case stage)
   - suggestedResponse: A recommended response tailored to their specific circumstances (speak as the defendant)
@@ -694,6 +716,7 @@ export async function generateClaudeGuidance(
       timeline: parsedData.timeline,
       chargeClassifications: parsedData.chargeClassifications,
       mockQA: parsedData.mockQA,
+      uncertainties: Array.isArray(parsedData.uncertainties) ? parsedData.uncertainties : [],
       usageMetrics: {
         inputTokens: message.usage.input_tokens,
         outputTokens: message.usage.output_tokens,
@@ -727,6 +750,22 @@ export async function generateClaudeGuidance(
     } catch (validationError) {
       devLog('guidance', 'Validation failed, returning guidance without validation', validationError);
       // Continue without validation - guidance is still useful
+    }
+
+    // Run rule-based safety scan on the serialized guidance before returning to client
+    try {
+      const guidanceText = JSON.stringify(guidance);
+      const scanResult = scanGuidanceForDangerContent(guidanceText, cacheKey.slice(0, 8));
+      if (scanResult.hasDangerContent) {
+        devLog('safety', `Safety scan flagged categories: ${scanResult.dangerFlags.join(', ')}`);
+        const stripped = stripDangerousItems(guidance.immediateActions, guidance.avoidActions);
+        guidance.immediateActions = stripped.immediateActions;
+        guidance.avoidActions = stripped.avoidActions;
+        guidance.dangerFlags = scanResult.dangerFlags;
+        devLog('safety', `Stripped ${stripped.strippedCount} dangerous item(s) from guidance`);
+      }
+    } catch (safetyError) {
+      devLog('safety', 'Safety scan failed, continuing without scan', safetyError);
     }
 
     // Cross-reference diversion program recommendations against geographic availability

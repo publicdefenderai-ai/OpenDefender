@@ -133,6 +133,11 @@ interface EnhancedGuidanceData {
     explanation: string;
     category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
   }>;
+  uncertainties?: Array<{
+    area: string;
+    note: string;
+  }>;
+  dangerFlags?: string[];
   validation?: {
     confidenceScore: number;
     isValid: boolean;
@@ -918,6 +923,30 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </Alert>
       )}
 
+      {/* Low-confidence warning banner */}
+      {guidance.validation && (
+        guidance.validation.confidenceScore < 0.7 ||
+        guidance.validation.issues.some(i => i.severity === 'error' || i.severity === 'warning')
+      ) && (
+        <Alert className="border-amber-300 bg-amber-50 dark:bg-amber-900/20" data-testid="banner-low-confidence">
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-800 dark:text-amber-200">
+            <span className="font-semibold">Some guidance may be uncertain.</span>{' '}
+            Parts of this guidance could not be verified for your specific jurisdiction. Treat all deadlines and procedures as approximate — confirm with a licensed attorney.
+          </AlertDescription>
+        </Alert>
+      )}
+
+      {/* Safety flag notice — shown when server stripped dangerous content */}
+      {guidance.dangerFlags && guidance.dangerFlags.length > 0 && (
+        <Alert className="border-orange-300 bg-orange-50 dark:bg-orange-900/20" data-testid="banner-safety-flag">
+          <AlertTriangle className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+          <AlertDescription className="text-orange-800 dark:text-orange-200 italic">
+            Some specific recommendations were removed. Consult a licensed attorney for complete guidance.
+          </AlertDescription>
+        </Alert>
+      )}
+
       {/* Overview Section */}
       {guidance.overview && (
         <Card className="border-border">
@@ -1513,6 +1542,41 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                       </li>
                     ))}
                   </ul>
+                </CardContent>
+              </Card>
+            </CollapsibleContent>
+          </Collapsible>
+        )}
+
+        {/* Areas of Uncertainty */}
+        {guidance.uncertainties && guidance.uncertainties.length > 0 && (
+          <Collapsible>
+            <CollapsibleTrigger asChild>
+              <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800" data-testid="collapsible-uncertainties">
+                <CardHeader>
+                  <CardTitle className="flex items-center justify-between text-foreground">
+                    <div className="flex items-center gap-2">
+                      <HelpCircle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                      Areas of Uncertainty
+                      <Badge variant="secondary" className="text-xs">{guidance.uncertainties.length}</Badge>
+                    </div>
+                    <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                  </CardTitle>
+                </CardHeader>
+              </Card>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <Card className="mt-2 border-amber-200 dark:border-amber-800">
+                <CardContent className="pt-6 space-y-3">
+                  {guidance.uncertainties.map((item, index) => (
+                    <div key={index} className="p-3 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10">
+                      <p className="text-sm font-medium text-foreground">{item.area}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{item.note}</p>
+                    </div>
+                  ))}
+                  <p className="text-xs text-muted-foreground pt-1">
+                    These areas could not be confirmed for your specific jurisdiction. Verify with a licensed attorney before relying on them.
+                  </p>
                 </CardContent>
               </Card>
             </CollapsibleContent>
