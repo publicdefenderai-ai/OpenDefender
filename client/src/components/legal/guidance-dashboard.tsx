@@ -931,7 +931,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         <Alert className="border-amber-300 bg-amber-50 dark:bg-amber-900/20" data-testid="banner-low-confidence">
           <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
           <AlertDescription className="text-amber-800 dark:text-amber-200">
-            <span className="font-semibold">Some guidance may be uncertain.</span>{' '}
+            <span className="font-semibold">Some guidance requires confirmation.</span>{' '}
             Parts of this guidance could not be verified for your specific jurisdiction. Treat all deadlines and procedures as approximate — confirm with a licensed attorney.
           </AlertDescription>
         </Alert>
