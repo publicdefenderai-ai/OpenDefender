@@ -170,13 +170,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const requireAdminAuth = (req: Request, res: Response, next: NextFunction) => {
     const adminApiKey = process.env.ADMIN_API_KEY;
 
-    // In development without ADMIN_API_KEY, allow access with warning
+    // Without ADMIN_API_KEY, admin endpoints are disabled unless explicitly
+    // opted in via ADMIN_DISABLE_AUTH=true (never set this in production).
     if (!adminApiKey) {
-      if (process.env.NODE_ENV === 'development') {
-        devLog('security', 'Admin endpoint accessed without ADMIN_API_KEY set (dev mode)');
+      if (process.env.ADMIN_DISABLE_AUTH === 'true') {
+        devLog('security', 'Admin endpoint accessed with auth disabled via ADMIN_DISABLE_AUTH=true');
         return next();
       }
-      // In production, require the key to be set
       return res.status(503).json({
         success: false,
         error: 'Administrative endpoints are disabled. Set ADMIN_API_KEY to enable.'
@@ -356,6 +356,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const { lat: userLat, lon: userLon, address } = geocodeData[0];
       const radiusMiles = parseFloat(radius as string);
+      if (isNaN(radiusMiles) || radiusMiles <= 0 || radiusMiles > 500) {
+        return res.status(400).json({ success: false, error: "Invalid radius: must be a number between 1 and 500 miles" });
+      }
       
       // Extract state abbreviation from geocode result
       // Nominatim provides ISO3166-2-lvl4 like "US-CA" or full state name
@@ -685,7 +688,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { zip } = req.query;
       
-      if (!zip || typeof zip !== 'string' || zip.length !== 5) {
+      if (!zip || typeof zip !== 'string' || !/^\d{5}$/.test(zip)) {
         return res.status(400).json({ success: false, error: "Valid 5-digit ZIP code required" });
       }
 
@@ -757,7 +760,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { zip } = req.query;
       
-      if (!zip || typeof zip !== 'string' || zip.length !== 5) {
+      if (!zip || typeof zip !== 'string' || !/^\d{5}$/.test(zip)) {
         return res.status(400).json({ success: false, error: "Valid 5-digit ZIP code required" });
       }
 
@@ -925,9 +928,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      // Check for duplicate feedback (one vote per session per case)
-      const existingFeedback = await storage.getCaseFeedbackBySession(sessionId);
-      const alreadyVoted = existingFeedback.some(f => f.caseId === caseId);
+      // Check for duplicate feedback (one vote per session per case) — O(1) index lookup
+      const alreadyVoted = (storage as any).hasSessionVotedOnCase?.(sessionId, caseId)
+        ?? (await storage.getCaseFeedbackBySession(sessionId)).some(f => f.caseId === caseId);
       if (alreadyVoted) {
         return res.status(409).json({ 
           success: false, 
@@ -1234,9 +1237,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/statistics/bjs/trends", async (req, res) => {
     try {
       const { years } = req.query;
-      const yearArray = years 
-        ? (years as string).split(',').map(y => parseInt(y)) 
-        : [new Date().getFullYear() - 5, new Date().getFullYear() - 1];
+      const currentYear = new Date().getFullYear();
+      const yearArray = years
+        ? (years as string).split(',').map(y => {
+            const yr = parseInt(y.trim(), 10);
+            if (isNaN(yr) || yr < 1900 || yr > currentYear) {
+              throw new Error(`Invalid year: ${y}`);
+            }
+            return yr;
+          })
+        : [currentYear - 5, currentYear - 1];
       
       const trends = await bjsStatisticsService.getVictimizationTrends(yearArray);
       res.json({ success: true, ...trends });
@@ -1270,8 +1280,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // OpenLaws API - Search by citation
   app.get("/api/openlaws/citation/:citation", async (req, res) => {
     try {
-      const { citation } = req.params;
-      const statute = await openLawsClient.searchByCitation(decodeURIComponent(citation));
+      const rawCitation = decodeURIComponent(req.params.citation);
+      // Accept only characters found in valid legal citations; reject anything else.
+      if (!/^[A-Za-z0-9\s§.()\-:,/]+$/.test(rawCitation) || rawCitation.length > 120) {
+        return res.status(400).json({ success: false, error: "Invalid citation format" });
+      }
+      const citation = rawCitation;
+      const statute = await openLawsClient.searchByCitation(citation);
       if (statute) {
         res.json({ success: true, statute });
       } else {
@@ -2135,14 +2150,21 @@ async function generateLegalGuidance(caseData: any) {
   if (chargeClassifications.length !== chargeIds.length) {
     opsLog('guidance', `Warning: Could not find all charges. Found ${chargeClassifications.length} of ${chargeIds.length}`);
   }
-  
+
+  // Guard: if every charge ID was unrecognized, abort rather than generating
+  // context-free guidance that could mislead the user.
+  if (chargeClassifications.length === 0 && chargeIds.length > 0) {
+    throw new Error(`None of the provided charge IDs were recognized: ${chargeIds.join(', ')}`);
+  }
+
   // Try Claude AI first if API key is available
   const useAI = !!process.env.ANTHROPIC_API_KEY;
-  
+
   if (useAI && (caseData.incidentDescription || (caseData.selectedConcerns && caseData.selectedConcerns.length > 0))) {
     try {
       devLog('guidance', 'Generating AI-powered guidance with Claude...');
-      const claudeGuidance = await generateClaudeGuidance(caseData);
+      // Pass sessionId so the guidance cache supports precise per-session invalidation
+      const claudeGuidance = await generateClaudeGuidance(caseData, caseData.sessionId);
       
       // Log usage metrics (safe aggregates only)
       opsLog('ai', `Tokens: ${claudeGuidance.usageMetrics.inputTokens}+${claudeGuidance.usageMetrics.outputTokens}, Cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);

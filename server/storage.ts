@@ -52,7 +52,11 @@ export class MemStorage implements IStorage {
   private legalAidOrganizations: Map<string, LegalAidOrganization>;
   private statutes: Map<string, Statute>;
   private caseFeedback: Map<string, CaseFeedback>;
+  // Secondary index: sessionId -> Set<caseId> for O(1) dedup checks
+  private feedbackBySession: Map<string, Set<string>>;
   private privacyConsents: Map<string, PrivacyConsent>;
+  // Secondary index: "sessionHash_consentType" -> consent id for O(1) upserts
+  private consentIndex: Map<string, string>;
   private cleanupInterval: NodeJS.Timeout | null = null;
 
   constructor() {
@@ -63,7 +67,9 @@ export class MemStorage implements IStorage {
     this.legalAidOrganizations = new Map();
     this.statutes = new Map();
     this.caseFeedback = new Map();
+    this.feedbackBySession = new Map();
     this.privacyConsents = new Map();
+    this.consentIndex = new Map();
     
     // Initialize with sample legal resources and organizations
     this.initializeSampleData();
@@ -260,12 +266,6 @@ export class MemStorage implements IStorage {
     };
     
     this.legalCases.set(insertCase.sessionId, legalCase);
-    
-    // Auto-cleanup expired cases
-    setTimeout(() => {
-      this.legalCases.delete(insertCase.sessionId);
-    }, 24 * 60 * 60 * 1000);
-    
     return legalCase;
   }
 
@@ -429,6 +429,11 @@ export class MemStorage implements IStorage {
       createdAt: new Date(),
     };
     this.caseFeedback.set(id, feedback);
+    // Maintain secondary session index
+    if (!this.feedbackBySession.has(insertFeedback.sessionId)) {
+      this.feedbackBySession.set(insertFeedback.sessionId, new Set());
+    }
+    this.feedbackBySession.get(insertFeedback.sessionId)!.add(insertFeedback.caseId);
     return feedback;
   }
 
@@ -451,35 +456,38 @@ export class MemStorage implements IStorage {
   }
 
   async getCaseFeedbackBySession(sessionId: string): Promise<CaseFeedback[]> {
+    const caseIds = this.feedbackBySession.get(sessionId);
+    if (!caseIds || caseIds.size === 0) return [];
+    // Return only the feedback records matching this session via the index
     return Array.from(this.caseFeedback.values()).filter(
-      feedback => feedback.sessionId === sessionId
+      f => f.sessionId === sessionId
     );
   }
 
+  // O(1) check: has this session already voted on this case?
+  hasSessionVotedOnCase(sessionId: string, caseId: string): boolean {
+    return this.feedbackBySession.get(sessionId)?.has(caseId) ?? false;
+  }
+
   async recordPrivacyConsent(insertConsent: InsertPrivacyConsent): Promise<PrivacyConsent> {
-    const id = randomUUID();
-    
-    // Create unique key for deduplication (sessionHash + consentType)
     const uniqueKey = `${insertConsent.sessionHash}_${insertConsent.consentType}`;
-    
-    // Check if consent already exists for this session/type combo
-    const existing = Array.from(this.privacyConsents.values()).find(
-      c => c.sessionHash === insertConsent.sessionHash && c.consentType === insertConsent.consentType
-    );
-    
-    if (existing) {
-      // Update existing consent record
+
+    // O(1) lookup via secondary index (replaces O(n) Array.from scan)
+    const existingId = this.consentIndex.get(uniqueKey);
+    if (existingId) {
+      const existing = this.privacyConsents.get(existingId)!;
       const updated: PrivacyConsent = {
         ...existing,
         granted: insertConsent.granted,
         consentVersion: insertConsent.consentVersion,
         consentedAt: new Date(),
       };
-      this.privacyConsents.set(existing.id, updated);
+      this.privacyConsents.set(existingId, updated);
       return updated;
     }
-    
-    // Create new consent record
+
+    // Create new consent record and register in index
+    const id = randomUUID();
     const consent: PrivacyConsent = {
       id,
       sessionHash: insertConsent.sessionHash,
@@ -491,6 +499,7 @@ export class MemStorage implements IStorage {
       consentedAt: new Date(),
     };
     this.privacyConsents.set(id, consent);
+    this.consentIndex.set(uniqueKey, id);
     return consent;
   }
 

@@ -30,21 +30,28 @@ interface CacheEntry {
   timestamp: number;
 }
 const responseCache = new Map<string, CacheEntry>();
+// Reverse index: sessionId -> Set of cache keys belonging to that session
+const sessionCacheKeys = new Map<string, Set<string>>();
 const CACHE_TTL = 15 * 60 * 1000; // 15 minutes in milliseconds (privacy-focused)
 
 // Clean up expired cache entries periodically (every 5 minutes)
 setInterval(() => {
   const now = Date.now();
   const keysToDelete: string[] = [];
-  
+
   responseCache.forEach((entry, key) => {
     if (now - entry.timestamp > CACHE_TTL) {
       keysToDelete.push(key);
     }
   });
-  
+
   if (keysToDelete.length > 0) {
     keysToDelete.forEach(key => responseCache.delete(key));
+    // Also prune the reverse index
+    sessionCacheKeys.forEach((keys, sid) => {
+      keysToDelete.forEach(k => keys.delete(k));
+      if (keys.size === 0) sessionCacheKeys.delete(sid);
+    });
     devLog('privacy', `Cleared ${keysToDelete.length} expired cache entries`);
   }
 }, 5 * 60 * 1000); // Run cleanup every 5 minutes
@@ -53,13 +60,15 @@ setInterval(() => {
 export function clearSessionCache(sessionId?: string): void {
   if (!sessionId) {
     responseCache.clear();
+    sessionCacheKeys.clear();
     devLog('privacy', 'All guidance cache cleared');
   } else {
-    // Clear entries that might contain this session's data
-    // Since cache keys are hashes, we clear all as a safety measure
-    const sizeBefore = responseCache.size;
-    responseCache.clear();
-    devLog('privacy', `Cleared ${sizeBefore} cache entries for session cleanup`);
+    const keys = sessionCacheKeys.get(sessionId);
+    if (keys) {
+      keys.forEach(k => responseCache.delete(k));
+      sessionCacheKeys.delete(sessionId);
+      devLog('privacy', `Cleared ${keys.size} cache entries for session ${sessionId.slice(0, 8)}...`);
+    }
   }
 }
 
@@ -618,7 +627,8 @@ async function callClaudeWithRetry(
 }
 
 export async function generateClaudeGuidance(
-  caseDetails: CaseDetails
+  caseDetails: CaseDetails,
+  sessionId?: string
 ): Promise<ClaudeGuidance> {
   // CRITICAL: Redact PII before any processing (cache, API calls, logs)
   // This ensures no personally identifiable information reaches Claude or our systems
@@ -646,9 +656,11 @@ export async function generateClaudeGuidance(
   }
   
   // Check cache using redacted details (prevents PII in cache keys)
-  const cacheKey = generateCacheKey(processedDetails);
+  // Prefix with sessionId so per-session clearing is exact rather than clearing the whole cache
+  const baseKey = generateCacheKey(processedDetails);
+  const cacheKey = sessionId ? `${sessionId}:${baseKey}` : baseKey;
   const cachedEntry = responseCache.get(cacheKey);
-  
+
   if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_TTL) {
     devLog('claude', 'Cache hit for guidance request');
     return cachedEntry.response;
@@ -697,8 +709,8 @@ export async function generateClaudeGuidance(
     const inputCost = regularInputCost + cacheWriteCost + cacheReadCost;
     const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
 
-    // Record cost for daily budget tracking
-    recordAICost(inputCost + outputCost, 'claude-guidance');
+    // Record cost for daily budget tracking (awaited so it's durable before returning)
+    await recordAICost(inputCost + outputCost, 'claude-guidance');
 
     // Explicitly construct response with validated fields
     const guidance: ClaudeGuidance = {
@@ -804,6 +816,11 @@ export async function generateClaudeGuidance(
       response: guidance,
       timestamp: Date.now(),
     });
+    // Register in the reverse index so clearSessionCache(sessionId) can find this key
+    if (sessionId) {
+      if (!sessionCacheKeys.has(sessionId)) sessionCacheKeys.set(sessionId, new Set());
+      sessionCacheKeys.get(sessionId)!.add(cacheKey);
+    }
 
     return guidance;
   } catch (error) {

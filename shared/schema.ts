@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, jsonb, boolean, unique, real, integer } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, jsonb, boolean, unique, real, integer, index } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -23,7 +23,10 @@ export const legalCases = pgTable("legal_cases", {
   guidance: jsonb("guidance"),
   createdAt: timestamp("created_at").defaultNow(),
   expiresAt: timestamp("expires_at").notNull(),
-});
+}, (table) => ({
+  sessionIdIdx: index("legal_cases_session_id_idx").on(table.sessionId),
+  expiresAtIdx: index("legal_cases_expires_at_idx").on(table.expiresAt),
+}));
 
 export const legalResources = pgTable("legal_resources", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
@@ -35,7 +38,10 @@ export const legalResources = pgTable("legal_resources", {
   url: text("url"),
   lastUpdated: timestamp("last_updated").defaultNow(),
   isActive: boolean("is_active").default(true),
-});
+}, (table) => ({
+  jurisdictionIdx: index("legal_resources_jurisdiction_idx").on(table.jurisdiction),
+  categoryIdx: index("legal_resources_category_idx").on(table.category),
+}));
 
 export const courtData = pgTable("court_data", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
@@ -48,7 +54,9 @@ export const courtData = pgTable("court_data", {
   hours: jsonb("hours"),
   services: text("services").array(),
   lastUpdated: timestamp("last_updated").defaultNow(),
-});
+}, (table) => ({
+  jurisdictionIdx: index("court_data_jurisdiction_idx").on(table.jurisdiction),
+}));
 
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
@@ -194,7 +202,11 @@ export const legalAidOrganizations = pgTable("legal_aid_organizations", {
   dataSource: text("data_source").notNull(), // 'EOIR', 'LSC', 'usa.gov', 'manual'
   lastUpdated: timestamp("last_updated").defaultNow(),
   isActive: boolean("is_active").default(true),
-});
+}, (table) => ({
+  stateIdx: index("legal_aid_state_idx").on(table.state),
+  orgTypeIdx: index("legal_aid_org_type_idx").on(table.organizationType),
+  stateOrgTypeIdx: index("legal_aid_state_org_type_idx").on(table.state, table.organizationType),
+}));
 
 export const insertLegalAidOrganizationSchema = createInsertSchema(legalAidOrganizations).omit({
   id: true,
@@ -225,6 +237,9 @@ export const statutes = pgTable("statutes", {
 }, (table) => ({
   // Unique constraint: same citation can exist in different jurisdictions
   citationJurisdictionUnique: unique().on(table.citation, table.jurisdiction),
+  // Index for filtering by jurisdiction (common query pattern)
+  jurisdictionIdx: index("statutes_jurisdiction_idx").on(table.jurisdiction),
+  categoryIdx: index("statutes_category_idx").on(table.category),
 }));
 
 export const insertStatuteSchema = createInsertSchema(statutes).omit({
@@ -325,7 +340,12 @@ export const caseFeedback = pgTable("case_feedback", {
   isHelpful: boolean("is_helpful").notNull(),
   caseStage: text("case_stage"),
   createdAt: timestamp("created_at").defaultNow(),
-});
+}, (table) => ({
+  sessionIdIdx: index("case_feedback_session_id_idx").on(table.sessionId),
+  caseIdIdx: index("case_feedback_case_id_idx").on(table.caseId),
+  // Composite index for the dedup check (sessionId + caseId together)
+  sessionCaseIdx: index("case_feedback_session_case_idx").on(table.sessionId, table.caseId),
+}));
 
 export const insertCaseFeedbackSchema = createInsertSchema(caseFeedback).omit({
   id: true,

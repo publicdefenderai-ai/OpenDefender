@@ -102,9 +102,11 @@ export async function initializeCostTracker(): Promise<void> {
 }
 
 /**
- * Record an AI cost after a successful API call
+ * Record an AI cost after a successful API call.
+ * Returns a promise that resolves once the cost is persisted to the DB.
+ * Callers should await this to ensure budget tracking is durable across restarts.
  */
-export function recordAICost(cost: number, service: string): void {
+export async function recordAICost(cost: number, service: string): Promise<void> {
   ensureCurrentDay();
 
   currentDay.totalCost += cost;
@@ -113,29 +115,35 @@ export function recordAICost(cost: number, service: string): void {
 
   opsLog('cost-tracker', `+$${cost.toFixed(4)} (${service}) | Day total: $${currentDay.totalCost.toFixed(4)} / $${DAILY_BUDGET_USD}`);
 
-  if (currentDay.totalCost >= DAILY_BUDGET_USD) {
+  if (currentDay.totalCost >= DAILY_BUDGET_USD && DAILY_BUDGET_USD > 0) {
     opsLog('cost-tracker', `BUDGET LIMIT REACHED: $${currentDay.totalCost.toFixed(4)} >= $${DAILY_BUDGET_USD}`);
   }
 
-  // Persist to DB non-blocking — survives server restarts
-  db.insert(aiDailyCosts)
-    .values({
-      date: currentDay.date,
-      totalCost: currentDay.totalCost,
-      breakdown: currentDay.breakdown,
-      requestCount: currentDay.requestCount,
-      updatedAt: new Date(),
-    })
-    .onConflictDoUpdate({
-      target: aiDailyCosts.date,
-      set: {
+  // Persist to DB — await so that cost is durable before the caller returns.
+  // If the DB write fails the in-memory total is still correct for this session;
+  // log the error so ops can investigate, but do not throw (caller has already
+  // consumed the AI response and cannot undo that spend).
+  try {
+    await db.insert(aiDailyCosts)
+      .values({
+        date: currentDay.date,
         totalCost: currentDay.totalCost,
         breakdown: currentDay.breakdown,
         requestCount: currentDay.requestCount,
         updatedAt: new Date(),
-      },
-    })
-    .catch((err) => errLog('[cost-tracker] DB persist failed', err));
+      })
+      .onConflictDoUpdate({
+        target: aiDailyCosts.date,
+        set: {
+          totalCost: currentDay.totalCost,
+          breakdown: currentDay.breakdown,
+          requestCount: currentDay.requestCount,
+          updatedAt: new Date(),
+        },
+      });
+  } catch (err) {
+    errLog(`[cost-tracker] DB persist failed — $${cost.toFixed(4)} for ${service} may be lost on restart`, err);
+  }
 }
 
 /**
