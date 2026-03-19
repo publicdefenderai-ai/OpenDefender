@@ -213,19 +213,29 @@ export default function RightsInfo() {
         </div>
       </section>
 
-      {/* Learn More About Search Rights */}
+      {/* Learn More — Search Rights & Right to Counsel */}
       <section className="py-8 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center">
+            <div className="flex flex-wrap justify-center gap-3">
               <Link href="/search-seizure">
-                <Button 
-                  data-testid="button-search-rights" 
+                <Button
+                  data-testid="button-search-rights"
                   variant="outline"
                   className="py-4 px-8 bg-indigo-100 dark:bg-indigo-900/40 border-indigo-300 dark:border-indigo-700 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-200 dark:hover:bg-indigo-800/50"
                 >
                   <Search className="mr-2 h-5 w-5" />
                   Rights During a Search
+                </Button>
+              </Link>
+              <Link href="/right-to-counsel">
+                <Button
+                  data-testid="button-right-to-counsel"
+                  variant="outline"
+                  className="py-4 px-8 bg-green-100 dark:bg-green-900/40 border-green-300 dark:border-green-700 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800/50"
+                >
+                  <Scale className="mr-2 h-5 w-5" />
+                  Right to an Attorney — Full Guide
                 </Button>
               </Link>
             </div>
@@ -282,6 +292,19 @@ export default function RightsInfo() {
             <p className="text-muted-foreground">
               {selectedRight && t(`rights.quickRights.${selectedRight}.detailedExplanation`)}
             </p>
+            {selectedRight === 'attorney' && (
+              <div className="pt-2 border-t border-border">
+                <p className="text-sm text-muted-foreground mb-3">
+                  There's an important distinction between when your right to counsel begins during interrogation (5th Amendment) versus when it covers your full prosecution (6th Amendment). Many people don't know the right applies before formal charges are filed.
+                </p>
+                <Link href="/right-to-counsel" onClick={() => setSelectedRight(null)}>
+                  <Button variant="outline" size="sm" className="w-full border-green-300 text-green-700 hover:bg-green-50 dark:border-green-700 dark:text-green-300 dark:hover:bg-green-900/20">
+                    <Scale className="mr-2 h-4 w-4" />
+                    Full Guide: Right to an Attorney — When It Begins &amp; What It Covers
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </DialogContent>
       </Dialog>

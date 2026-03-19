@@ -148,7 +148,7 @@ export default function FirstTwentyFourHours() {
             >
               <p className="text-sm text-muted-foreground mt-2">
                 Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest — you don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>.{" "}
-                <Link href="/rights-info" className="underline hover:text-foreground transition-colors">Learn more about your rights →</Link>
+                <Link href="/right-to-counsel" className="underline hover:text-foreground transition-colors">When does the right to an attorney actually begin? →</Link>
               </p>
             </Step>
           </ScrollReveal>
@@ -255,6 +255,7 @@ export default function FirstTwentyFourHours() {
               <div className="flex gap-4 mt-2 flex-wrap">
                 <Link href="/?search=public-defender" className="text-sm underline hover:text-foreground transition-colors">Find a Public Defender →</Link>
                 <Link href="/case-guidance" className="text-sm underline hover:text-foreground transition-colors">Get Personalized Guidance →</Link>
+                <Link href="/right-to-counsel" className="text-sm underline hover:text-foreground transition-colors">Understanding your right to an attorney →</Link>
               </div>
             </Step>
           </ScrollReveal>

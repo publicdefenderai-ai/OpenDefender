@@ -77,6 +77,7 @@ const PersonalHealthSupport = lazy(() => import("@/pages/support/personal-health
 const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
 const JailPhoneCall = lazy(() => import("@/pages/jail-phone-call"));
 const CollateralConsequences = lazy(() => import("@/pages/collateral-consequences"));
+const RightToCounsel = lazy(() => import("@/pages/right-to-counsel"));
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -144,6 +145,7 @@ function Router() {
       <Route path="/first-24-hours" component={FirstTwentyFourHours} />
       <Route path="/jail-phone-call" component={JailPhoneCall} />
       <Route path="/collateral-consequences" component={CollateralConsequences} />
+      <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/how-to" component={HowTo} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimers" component={Disclaimers} />
