@@ -877,6 +877,56 @@ export function buildSearchIndex(): void {
       aliases: ['terms of use', 'legal notice', 'not legal advice'],
       url: '/disclaimers'
     },
+    {
+      id: 'right-to-counsel',
+      title: 'Right to an Attorney',
+      titleEs: 'Derecho a un Abogado',
+      titleZh: '获得律师的权利',
+      content: 'When does your right to an attorney begin? Fifth Amendment vs Sixth Amendment right to counsel. Custodial interrogation triggers 5th Amendment — you must be in custody and being questioned. Sixth Amendment kicks in after formal charges are filed at arraignment or indictment. Detention vs custody vs arrest — they are not the same. A brief police stop may not trigger Miranda rights. Voluntary encounter: you are free to leave. Custodial interrogation: you are not free to leave and are being questioned. Miranda warning required. Invoke your right clearly: "I want a lawyer. I will not answer questions without a lawyer present." All questioning must stop immediately. Police cannot try again later or send a different officer. Lawyer during questioning vs lawyer at trial — different protections. Public defender appointed if you cannot afford an attorney. Right to counsel does not apply in civil cases or immigration removal. Grand jury testimony: no right to have attorney in the room. Unclear situations: home visits, being in a police car, workplace questioning, juvenile questioning.',
+      tags: ['attorney', 'lawyer', 'right to counsel', 'fifth amendment', 'sixth amendment', 'miranda', 'custodial interrogation', 'custody', 'detention', 'arrest', 'public defender', 'invoke rights', 'interrogation'],
+      aliases: ['when does right to attorney start', 'right to counsel', 'do i need a lawyer', 'can i get a lawyer', 'fifth vs sixth amendment', 'miranda rights attorney', 'invoke right to counsel', 'ask for lawyer', 'attorney during questioning', 'lawyer during interrogation', 'when to ask for lawyer'],
+      url: '/right-to-counsel'
+    },
+    {
+      id: 'first-24-hours',
+      title: 'The First 24 Hours After Arrest',
+      titleEs: 'Las Primeras 24 Horas Después del Arresto',
+      titleZh: '被捕后的前24小时',
+      content: 'Step-by-step guide for the first 24 hours after arrest. At the moment of arrest: invoke your right to remain silent and ask for a lawyer immediately. Booking: cooperate with fingerprints and photos but do not answer questions about the incident. Your first phone call: call a family member, give them where you are held and your booking number, ask them to find a lawyer. Bail hearing: have your attorney argue for release, mention ties to community. Getting legal representation: request a public defender if you cannot afford an attorney. Arraignment: plead not guilty — preserve your options. Between now and your next court date: attend every hearing, follow bail conditions, do not contact victims or witnesses. Do not discuss your case on social media.',
+      tags: ['arrest', 'first 24 hours', 'booking', 'bail', 'arraignment', 'phone call', 'public defender', 'attorney', 'right to remain silent', 'miranda', 'custody'],
+      aliases: ['just arrested', 'what to do after arrest', 'arrested now what', 'first steps after arrest', 'arrested guide', 'what happens when arrested', 'after being arrested', 'booking process', 'bail hearing guide'],
+      url: '/first-24-hours'
+    },
+    {
+      id: 'jail-phone-call',
+      title: 'Jail Phone Call Guide',
+      titleEs: 'Guía de Llamadas desde la Cárcel',
+      titleZh: '监狱电话指南',
+      content: 'What to say and what never to say on a jail or prison phone call. Jail calls are recorded and monitored. Do not discuss your case, what happened, or anything about the charges. Do not ask anyone to destroy evidence, move items, or contact witnesses. Call a family member or attorney. Attorney calls are confidential and not recorded. Keep the call short. Give your location, booking number, and charges. Ask family to find you a lawyer.',
+      tags: ['jail phone call', 'prison call', 'recorded call', 'what to say', 'booking', 'attorney call'],
+      aliases: ['phone call from jail', 'calling from jail', 'jail call advice', 'prison phone call', 'what to say when arrested', 'call from detention'],
+      url: '/jail-phone-call'
+    },
+    {
+      id: 'collateral-consequences',
+      title: 'Collateral Consequences of a Conviction',
+      titleEs: 'Consecuencias Colaterales de una Condena',
+      titleZh: '定罪的附带后果',
+      content: 'Hidden consequences of a criminal conviction beyond jail and fines. Collateral consequences can affect employment, housing, professional licenses, voting rights, immigration status, public benefits, student loans, and child custody. Felony conviction can result in loss of voting rights in many states. Sex offender registration requirements. Deportation risk for non-citizens. Loss of occupational licenses. Difficulty finding housing with a criminal record. Drug conviction can affect eligibility for federal student aid.',
+      tags: ['collateral consequences', 'conviction', 'criminal record', 'voting rights', 'immigration', 'housing', 'employment', 'professional license', 'student loans', 'deportation'],
+      aliases: ['consequences of conviction', 'criminal record effects', 'felony consequences', 'hidden penalties', 'beyond jail time', 'conviction effects on life'],
+      url: '/collateral-consequences'
+    },
+    {
+      id: 'legal-aid',
+      title: 'Legal Aid Resources',
+      titleEs: 'Recursos de Ayuda Legal',
+      titleZh: '法律援助资源',
+      content: 'Find free or low-cost legal help. Legal aid organizations provide free civil and criminal legal assistance to people who qualify based on income. Public defender offices handle criminal cases for those who cannot afford an attorney. Law school clinics offer free legal services. Pro bono attorneys volunteer their services. How to apply for legal aid. Income eligibility guidelines. Types of cases legal aid handles.',
+      tags: ['legal aid', 'free lawyer', 'low cost attorney', 'pro bono', 'public defender', 'law clinic', 'income eligibility', 'free legal help'],
+      aliases: ['free attorney', 'free lawyer', 'legal help low income', 'cannot afford lawyer', 'pro bono attorney', 'free legal services', 'legal aid office'],
+      url: '/legal-aid'
+    },
   ];
 
   for (const page of sitePages) {
