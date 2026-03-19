@@ -23,7 +23,7 @@ const greyAreas: GreyAreaItem[] = [
   {
     title: "You're detained but not formally arrested",
     description: "Police stop you on the street, tell you not to leave, and begin questioning — but haven't said you're under arrest.",
-    answer: "If a reasonable person would not feel free to leave, courts may find this is 'custody' for 5th Amendment purposes, triggering your right to remain silent. However, the 6th Amendment has not attached because no formal charges have been filed. Ask: 'Am I free to go?' If not, clearly invoke your right to remain silent and your right to a lawyer before answering any questions."
+    answer: "If a reasonable person in your situation would not feel free to leave, courts may treat this as 'custody' — which means your right to remain silent applies. However, your 6th Amendment right to counsel has not kicked in yet because no formal charges have been filed. Ask clearly: 'Am I free to go?' If the answer is no, invoke your right to remain silent and your right to a lawyer before answering anything."
   },
   {
     title: "Police come to your home to 'talk'",
@@ -38,17 +38,17 @@ const greyAreas: GreyAreaItem[] = [
   {
     title: "Questioning in a workplace or school",
     description: "Police come to your workplace or school and question you in a private room.",
-    answer: "Courts use a fact-specific analysis. Generally, if you are free to leave and were not coerced to participate, this may not be custody. If your employer or school required your participation, or if officers indicated you could not leave, the analysis shifts toward custody. When in doubt, clearly state you will not answer questions without a lawyer."
+    answer: "Courts look at all the details of what happened. Generally, if you were free to leave and no one pressured you to stay, this may not count as custody. But if your employer or school required you to participate, or if officers made clear you could not leave, it becomes more likely courts would call it custody. When in doubt, clearly say you will not answer questions without a lawyer."
   },
   {
     title: "Questioning after charges are filed but before indictment",
     description: "You've been charged with a crime, released on bail, and officers want to interview you again without your lawyer present.",
-    answer: "Once formal charges are filed, your 6th Amendment right to counsel has attached to those specific charges. Police cannot deliberately elicit statements from you outside your lawyer's presence on the charged offense. This is a firm right — tell them to contact your attorney."
+    answer: "Once formal charges are filed, your 6th Amendment right to an attorney applies to those specific charges. Police cannot try to get statements from you about those charges without your lawyer present — whether directly or through other people. This is a firm right. Tell them to contact your attorney."
   },
   {
     title: "You're a juvenile being questioned",
     description: "You are under 18 and police question you, with or without your parents present.",
-    answer: "Courts apply a heightened scrutiny to juvenile custody determinations. Many states require parental notification before questioning a minor. A minor's age is a relevant factor in determining whether they reasonably felt free to leave. Juveniles should always invoke their rights clearly and ask for a parent and lawyer before answering any questions."
+    answer: "Courts look more closely at whether a young person was truly free to leave. Many states require police to notify parents before questioning someone under 18. A minor's age is an important factor in deciding whether they felt free to go. Juveniles should always clearly ask for a parent and a lawyer before answering any questions."
   }
 ];
 
@@ -111,7 +111,7 @@ export default function RightToCounsel() {
               Right to an Attorney
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Understanding when your right to counsel begins, what it covers, and how to protect it — including the critical difference between interrogation and trial counsel.
+              Learn when your right to an attorney begins, what it covers, and how to protect it — including the key difference between having a lawyer during questioning versus at trial.
             </p>
           </ScrollReveal>
         </div>
@@ -124,7 +124,7 @@ export default function RightToCounsel() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-2">Two Constitutional Sources, Two Different Triggers</h2>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              The right to an attorney in criminal cases comes from two separate constitutional amendments. They protect you at different points in time and in different situations. Understanding the difference matters because invoking one does not automatically invoke the other.
+              The right to an attorney in criminal cases comes from two different parts of the Constitution. They protect you at different times and in different situations. Using one does not automatically give you the other.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -152,7 +152,7 @@ export default function RightToCounsel() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">What it protects:</p>
-                    <p className="text-muted-foreground">Compelled self-incriminating statements. The Miranda warning is the vehicle through which police notify you of this right before custodial interrogation begins.</p>
+                    <p className="text-muted-foreground">Being forced to say things that hurt your own case. The Miranda warning is how police are required to tell you about this right before they start questioning you in custody.</p>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">The key case:</p>
@@ -180,12 +180,12 @@ export default function RightToCounsel() {
                     <p className="text-muted-foreground">Once formal criminal proceedings begin — meaning after arrest <strong>and</strong> the filing of formal charges (indictment, information, or arraignment). Not before.</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">What "attaches" means:</p>
-                    <p className="text-muted-foreground">Once this right attaches, government agents cannot deliberately elicit statements from you on the charged offense outside your lawyer's presence — even through informants.</p>
+                    <p className="font-semibold text-foreground mb-1">What "kicks in" means:</p>
+                    <p className="text-muted-foreground">Once this right kicks in, police and government agents cannot try to get statements from you about those charges without your lawyer present — even if they use an informant to do it.</p>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">What it protects:</p>
-                    <p className="text-muted-foreground">Your right to an attorney at every "critical stage" of prosecution: arraignment, preliminary hearings, plea bargaining, sentencing, and trial.</p>
+                    <p className="text-muted-foreground">Your right to an attorney at every important step of your case: arraignment, preliminary hearings, plea bargaining, sentencing, and trial.</p>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">The key cases:</p>
@@ -308,7 +308,7 @@ export default function RightToCounsel() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">If you invoke it, all questioning must stop immediately — police cannot try again later (Edwards rule)</p>
+                    <p className="text-muted-foreground">If you invoke it, all questioning must stop immediately — police cannot send in a different officer or try again later</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -348,7 +348,7 @@ export default function RightToCounsel() {
                   </div>
                   <div className="flex items-start gap-2">
                     <XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">Offense-specific: attaches to charged crimes, not uncharged related conduct (Blockburger rule)</p>
+                    <p className="text-muted-foreground">Covers the specific crimes you were charged with — police can still question you about other matters you have not been formally charged with</p>
                   </div>
                   <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-md">
                     <p className="font-semibold text-green-800 dark:text-green-300 text-xs mb-1">How to invoke:</p>
@@ -383,12 +383,12 @@ export default function RightToCounsel() {
                   body: "If you are charged with an offense for which no imprisonment is actually imposed (even if possible), the 6th Amendment right to appointed counsel may not require the court to provide one. This is narrow but real — Scott v. Illinois (1979)."
                 },
                 {
-                  title: "Investigative (pre-charge) lineups",
-                  body: "Before formal charges are filed, you generally do not have a 6th Amendment right to have counsel present at a lineup. After charges are filed, you do. The 5th Amendment does not apply to lineups because they are not 'testimonial.'"
+                  title: "Pre-charge lineups",
+                  body: "Before formal charges are filed, you generally do not have a 6th Amendment right to have a lawyer present at a lineup. After charges are filed, you do. The 5th Amendment doesn't apply to lineups because you aren't being asked to say anything."
                 },
                 {
                   title: "Post-conviction proceedings",
-                  body: "In most discretionary appeals and post-conviction proceedings (such as habeas corpus or parole hearings), there is no automatic right to court-appointed counsel under the 6th Amendment, though some statutes provide it."
+                  body: "In most optional appeals and post-conviction hearings (such as parole hearings or requests to reopen a case), there is no automatic right to a court-appointed attorney under the 6th Amendment, though some laws do provide one."
                 },
                 {
                   title: "Grand jury testimony",
@@ -416,9 +416,9 @@ export default function RightToCounsel() {
         {/* Grey Areas */}
         <ScrollReveal>
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-2">Grey Areas — Situations Courts Have Found Ambiguous</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Unclear Situations — When It's Hard to Tell</h2>
             <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
-              Whether a particular encounter constitutes "custody" — and therefore triggers your right to counsel under the 5th Amendment — is often the hardest question. Courts look at the totality of the circumstances. These are the scenarios that most commonly create confusion.
+              Whether you were in "custody" — and whether your 5th Amendment rights kicked in — is often the hardest question. Courts look at the full picture of what happened. These are the most common situations that cause confusion.
             </p>
             <div className="space-y-3">
               {greyAreas.map((item, i) => (
@@ -431,30 +431,30 @@ export default function RightToCounsel() {
         {/* What Happens When You Invoke */}
         <ScrollReveal>
           <section>
-            <h2 className="text-2xl font-bold text-foreground mb-5">What Happens When You Invoke Your Right to Counsel</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-5">What Happens When You Ask for a Lawyer</h2>
             <div className="space-y-4">
               <Card className="border-l-4 border-l-blue-500">
                 <CardContent className="p-5">
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">All questioning must stop immediately</h3>
-                  <p className="text-sm text-muted-foreground">Once you clearly invoke your right to a lawyer, police must stop all interrogation — not just the question they were currently asking, but all questioning. They cannot try again later. They cannot send in a different officer. They cannot try "friendly" conversation. (Edwards v. Arizona)</p>
+                  <h3 className="font-semibold text-foreground mb-2 text-sm">All questioning must stop right away</h3>
+                  <p className="text-sm text-muted-foreground">Once you clearly ask for a lawyer, police must stop all questioning — not just the current question, but all questioning. They cannot try again later, send in a different officer, or strike up a "friendly" conversation to get you talking. This protection lasts until you have a lawyer or you choose to restart the conversation yourself.</p>
                 </CardContent>
               </Card>
               <Card className="border-l-4 border-l-blue-500">
                 <CardContent className="p-5">
                   <h3 className="font-semibold text-foreground mb-2 text-sm">You must invoke clearly</h3>
-                  <p className="text-sm text-muted-foreground">Saying "maybe I should get a lawyer" or "do you think I need an attorney?" is not enough. Courts have held that an ambiguous or equivocal request for counsel does not trigger the full protection. Say it directly and clearly: "I want a lawyer. I am not answering any questions without a lawyer present."</p>
+                  <p className="text-sm text-muted-foreground">Saying "maybe I should get a lawyer" or "do you think I need an attorney?" is not enough. Courts have ruled that a vague or unclear request does not give you the full protection. You must say it directly: "I want a lawyer. I am not answering any questions without a lawyer present."</p>
                 </CardContent>
               </Card>
               <Card className="border-l-4 border-l-blue-500">
                 <CardContent className="p-5">
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">You remain in custody — invoking does not release you</h3>
-                  <p className="text-sm text-muted-foreground">Invoking your right to counsel does not end your detention or force your release. You will remain in custody while awaiting arraignment or bail. But you will no longer be questioned, which protects you from making statements that could harm your case.</p>
+                  <h3 className="font-semibold text-foreground mb-2 text-sm">You stay in custody — asking for a lawyer does not release you</h3>
+                  <p className="text-sm text-muted-foreground">Asking for a lawyer does not end your detention or get you released. You will remain in custody until arraignment or bail. But you will no longer be questioned, which protects you from saying something that could hurt your case.</p>
                 </CardContent>
               </Card>
               <Card className="border-l-4 border-l-amber-500">
                 <CardContent className="p-5">
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">Do not "un-invoke"</h3>
-                  <p className="text-sm text-muted-foreground">After invoking, officers may return hours later, behave casually, or suggest that talking would help you. Do not re-engage. Once you have invoked, any statement you make can be scrutinized closely. The safest course is to maintain your invocation until your attorney is present.</p>
+                  <h3 className="font-semibold text-foreground mb-2 text-sm">Do not take it back</h3>
+                  <p className="text-sm text-muted-foreground">After invoking, officers may come back hours later, act friendly, or suggest that talking would help your case. Do not engage. Once you have asked for a lawyer, anything you say can still be used against you. The safest thing to do is stay quiet until your attorney is there.</p>
                 </CardContent>
               </Card>
             </div>
@@ -477,7 +477,7 @@ export default function RightToCounsel() {
                 <tbody className="divide-y divide-border/50">
                   {[
                     ["Voluntary police conversation", "No", "No"],
-                    ["Terry stop / brief detention", "Disputed", "No"],
+                    ["Brief police stop (not arrested)", "Disputed", "No"],
                     ["Custodial interrogation (pre-charge)", "Yes", "No"],
                     ["After formal charges filed", "Yes", "Yes"],
                     ["At arraignment / bail hearing", "Yes", "Yes"],
