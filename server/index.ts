@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { execSync } from "child_process";
 import express, { type Request, Response, NextFunction } from "express";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
@@ -185,6 +186,15 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '5000', 10);
+
+  // Free the port if a previous process is still holding it (unclean shutdown)
+  try {
+    execSync(`fuser -k ${port}/tcp`, { stdio: 'ignore' });
+    await new Promise(resolve => setTimeout(resolve, 500));
+  } catch (_) {
+    // No process was holding the port — this is the normal case
+  }
+
   server.listen({
     port,
     host: "0.0.0.0",
