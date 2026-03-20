@@ -141,13 +141,13 @@ export default function FirstTwentyFourHours() {
                 "Try to remember badge numbers, officer names, and everything that happens.",
               ]}
               donts={[
-                'Don\'t try to explain, justify, or "clear things up" — anything you say can be used against you.',
+                'Don\'t try to explain, justify, or "clear things up." Anything you say can be used against you.',
                 "Don't consent to any search of your person, vehicle, or home.",
                 "Don't argue about whether the arrest is legal — that is your attorney's job.",
               ]}
             >
               <p className="text-sm text-muted-foreground mt-2">
-                Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest — you don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>.{" "}
+                Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest. You don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>.{" "}
                 <Link href="/right-to-counsel" className="underline hover:text-foreground transition-colors">When does the right to an attorney actually begin? →</Link>
               </p>
             </Step>
@@ -185,18 +185,18 @@ export default function FirstTwentyFourHours() {
               timeframe="During or shortly after booking"
               context="You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Use it wisely."
               dos={[
-                "Call a family member or trusted friend — give them: (1) where you are held, (2) your booking number, (3) the charges, (4) ask them to find a lawyer or contact the public defender's office.",
+                "Call a family member or trusted friend. Give them: (1) where you are held, (2) your booking number, (3) the charges, (4) ask them to find a lawyer or contact the public defender's office.",
                 "Keep the call short and practical.",
                 "Ask family to write everything down and start finding legal help immediately.",
               ]}
               donts={[
-                'Don\'t say anything about what happened — even "I didn\'t do it" can be used.',
+                'Don\'t say anything about what happened. Even "I didn\'t do it" can be used against you.',
                 "Don't ask anyone to destroy evidence, move your car, or warn other people.",
                 "Don't call the alleged victim, even to apologize.",
               ]}
             >
               <p className="text-sm text-muted-foreground mt-2">
-                <Link href="/jail-phone-call" className="underline hover:text-foreground transition-colors">Jail Phone Call Guide — what to say and what never to say →</Link>
+                <Link href="/jail-phone-call" className="underline hover:text-foreground transition-colors">Jail Phone Call Guide: what to say and what never to say →</Link>
               </p>
             </Step>
           </ScrollReveal>
@@ -206,7 +206,7 @@ export default function FirstTwentyFourHours() {
               number={4}
               title="Bail Hearing"
               timeframe="Usually within 24–48 hours"
-              context="A judge will set the conditions of your release — or deny bail. This is often one of the most important early hearings because it determines whether you go home or stay in custody while your case proceeds."
+              context="A judge will set the conditions of your release, or deny bail. This is often one of the most important early hearings because it determines whether you go home or stay in custody while your case proceeds."
               dos={[
                 "If you have an attorney, have them argue for release on your own recognizance (OR) or lower bail.",
                 "Be calm, respectful, and presentable. First impressions matter.",
@@ -221,7 +221,7 @@ export default function FirstTwentyFourHours() {
               <div className="mt-2">
                 <p className="text-sm font-semibold text-foreground mb-3">If you can't afford <LegalTerm term="bail" /> — your options:</p>
                 <ol className="space-y-2.5 text-sm text-foreground/80 dark:text-foreground/75 list-none">
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">1.</span><span><strong>Request OR release</strong> (<LegalTerm term="release on own recognizance" />) — ask your attorney to argue you are not a flight risk. No money required. Judge considers ties to community, employment, family.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">1.</span><span><strong>Request OR release</strong> (<LegalTerm term="release on own recognizance" />): ask your attorney to argue you are not a flight risk. No money required. Judge considers ties to community, employment, and family.</span></li>
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">2.</span><span><strong>Request reduced bail</strong> — your attorney can argue bail is excessive relative to your income. Courts are required to consider your ability to pay.</span></li>
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">3.</span><span><strong>Bail fund</strong> — nonprofit organizations that pay bail for people who can't afford it. Search "[your city] bail fund" or ask your attorney. Money is typically recycled after your case ends.</span></li>
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">4.</span><span><strong>Bail bond company</strong> — a bondsman pays your full bail for a non-refundable fee (usually 10–15%). <strong>Warning:</strong> if you miss court, the bondsman can pursue you and take any collateral you pledged.</span></li>
@@ -229,7 +229,7 @@ export default function FirstTwentyFourHours() {
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily</strong> — sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
                 </ol>
                 <p className="text-sm text-muted-foreground mt-3">
-                  <a href="/process#bail-guide" className="underline hover:text-foreground transition-colors">How bail works — types, options if you can't afford it, and conditions →</a>
+                  <a href="/process#bail-guide" className="underline hover:text-foreground transition-colors">How bail works: types, options if you can't afford it, and conditions →</a>
                 </p>
               </div>
             </Step>
