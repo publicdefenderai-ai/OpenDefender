@@ -121,9 +121,9 @@ export default function FirstTwentyFourHours() {
             <ul className="space-y-2 text-sm text-amber-900 dark:text-amber-100">
               <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Police must notify parents or guardians</strong> before questioning a juvenile. If you are a minor, ask for your parent immediately.</span></li>
               <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>You may be held in a juvenile facility</strong> rather than an adult jail, depending on the charges and your age.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Juvenile court is separate</strong> from adult criminal court — the process, rights, and outcomes differ significantly.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Do not waive your rights</strong> — juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>If charges are serious, prosecutors may seek to try you as an adult — your attorney must fight this.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Juvenile court is separate</strong> from adult criminal court. The process, rights, and outcomes differ significantly.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Do not waive your rights.</strong> Juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>If charges are serious, prosecutors may seek to try you as an adult. Your attorney must fight this.</span></li>
             </ul>
           </div>
         </ScrollReveal>
@@ -137,13 +137,13 @@ export default function FirstTwentyFourHours() {
               context="Police are detaining you. Your rights exist right now, but they only protect you if you use them."
               dos={[
                 'Say clearly: "I am invoking my right to remain silent" and "I want a lawyer."',
-                "Comply physically — do not resist, even if you believe the arrest is unlawful.",
+                "Comply physically. Do not resist, even if you believe the arrest is unlawful.",
                 "Try to remember badge numbers, officer names, and everything that happens.",
               ]}
               donts={[
                 'Don\'t try to explain, justify, or "clear things up." Anything you say can be used against you.',
                 "Don't consent to any search of your person, vehicle, or home.",
-                "Don't argue about whether the arrest is legal — that is your attorney's job.",
+                "Don't argue about whether the arrest is legal. That is your attorney's job.",
               ]}
             >
               <p className="text-sm text-muted-foreground mt-2">
@@ -161,18 +161,18 @@ export default function FirstTwentyFourHours() {
               context="You'll be taken to a police station or jail for processing: fingerprints, photographs, personal property inventoried, and charges entered into the system."
               dos={[
                 "Cooperate with the mechanical booking process (fingerprints, photos, property).",
-                "Note the name of the facility, your booking number, and the charges — you'll need this information.",
+                "Note the name of the facility, your booking number, and the charges. You'll need this information.",
                 "Ask how family can find out where you are being held and how to contact you.",
-                "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication — document every request.",
+                "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication. Document every request.",
                 "In most states you have the right to a phone call within 3 hours of booking.",
-                'If you don\'t speak English fluently, clearly say "I need an interpreter" — you have the right to one at no cost.',
+                'If you don\'t speak English fluently, clearly say "I need an interpreter." You have the right to one at no cost.',
                 'Invoke your right to remain silent for anything beyond your name and date of birth. Booking intake questions ("where were you tonight?") are interrogation.',
               ]}
               donts={[
-                "Don't discuss your case with anyone — other detainees, intake officers, or jail staff.",
+                "Don't discuss your case with anyone: other detainees, intake officers, or jail staff.",
                 "Don't sign anything you don't understand. You can ask what a form is for.",
-                "Don't assume booking staff are neutral — everything is documented.",
-                "Don't answer questions about the incident, your whereabouts, or anyone else involved — even questions that seem routine or unrelated to the crime.",
+                "Don't assume booking staff are neutral. Everything is documented.",
+                "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
                 "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
               ]}
             />
@@ -215,18 +215,18 @@ export default function FirstTwentyFourHours() {
               donts={[
                 "Don't say anything about the underlying facts of the case at the bail hearing.",
                 "Don't waive your right to a bail hearing.",
-                "Don't assume bail will be unaffordable — there are options if you can't pay.",
+                "Don't assume bail will be unaffordable. There are options if you can't pay.",
               ]}
             >
               <div className="mt-2">
-                <p className="text-sm font-semibold text-foreground mb-3">If you can't afford <LegalTerm term="bail" /> — your options:</p>
+                <p className="text-sm font-semibold text-foreground mb-3">If you can't afford <LegalTerm term="bail" />, here are your options:</p>
                 <ol className="space-y-2.5 text-sm text-foreground/80 dark:text-foreground/75 list-none">
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">1.</span><span><strong>Request OR release</strong> (<LegalTerm term="release on own recognizance" />): ask your attorney to argue you are not a flight risk. No money required. Judge considers ties to community, employment, and family.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">2.</span><span><strong>Request reduced bail</strong> — your attorney can argue bail is excessive relative to your income. Courts are required to consider your ability to pay.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">3.</span><span><strong>Bail fund</strong> — nonprofit organizations that pay bail for people who can't afford it. Search "[your city] bail fund" or ask your attorney. Money is typically recycled after your case ends.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">4.</span><span><strong>Bail bond company</strong> — a bondsman pays your full bail for a non-refundable fee (usually 10–15%). <strong>Warning:</strong> if you miss court, the bondsman can pursue you and take any collateral you pledged.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">5.</span><span><strong>Property bond</strong> — use home equity as collateral instead of cash. Risk: the court can place a lien on the property if you miss a hearing.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily</strong> — sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">2.</span><span><strong>Request reduced bail:</strong> your attorney can argue bail is excessive relative to your income. Courts are required to consider your ability to pay.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">3.</span><span><strong>Bail fund:</strong> nonprofit organizations that pay bail for people who can't afford it. Search "[your city] bail fund" or ask your attorney. Money is typically recycled after your case ends.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">4.</span><span><strong>Bail bond company:</strong> a bondsman pays your full bail for a non-refundable fee (usually 10–15%). <strong>Warning:</strong> if you miss court, the bondsman can pursue you and take any collateral you pledged.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">5.</span><span><strong>Property bond:</strong> use home equity as collateral instead of cash. Risk: the court can place a lien on the property if you miss a hearing.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily.</strong> Sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
                 </ol>
                 <p className="text-sm text-muted-foreground mt-3">
                   <a href="/process#bail-guide" className="underline hover:text-foreground transition-colors">How bail works: types, options if you can't afford it, and conditions →</a>
@@ -240,14 +240,14 @@ export default function FirstTwentyFourHours() {
               number={5}
               title="Getting Legal Representation"
               timeframe="Before your arraignment"
-              context="You have the right to an attorney at every critical stage of your case. If you cannot afford one, a public defender will be appointed. Do not wait — get this started immediately."
+              context="You have the right to an attorney at every critical stage of your case. If you cannot afford one, a public defender will be appointed. Do not wait. Get this started immediately."
               dos={[
                 "If you cannot afford an attorney, formally request a public defender at your first court appearance.",
-                "If you can afford an attorney, have family start calling private criminal defense attorneys right away — many offer emergency consultations.",
+                "If you can afford an attorney, have family start calling private criminal defense attorneys right away. Many offer emergency consultations.",
                 "When you do speak with your attorney, tell them everything. Those conversations are protected by attorney-client privilege.",
               ]}
               donts={[
-                "Don't waive your right to counsel — representing yourself in a criminal case is almost never a good idea.",
+                "Don't waive your right to counsel. Representing yourself in a criminal case is almost never a good idea.",
                 "Don't delay. The earlier an attorney is involved, the more they can do.",
                 "Don't make any deals or statements to prosecutors without a lawyer present.",
               ]}
@@ -263,18 +263,18 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.3}>
             <Step
               number={6}
-              title="Arraignment — Your First Court Appearance"
+              title="Arraignment: Your First Court Appearance"
               timeframe="Within 48–72 hours (some states longer)"
-              context="You will be formally read the charges against you and asked to enter a plea. This is not the time to fight your case — it is the time to preserve your options."
+              context="You will be formally read the charges against you and asked to enter a plea. This is not the time to fight your case. It is the time to preserve your options."
               dos={[
-                'Plead "not guilty" at arraignment — unless your attorney has specifically advised otherwise after reviewing your case.',
+                'Plead "not guilty" at arraignment, unless your attorney has specifically advised otherwise after reviewing your case.',
                 "This preserves every option available to you. You can always change a not-guilty plea later.",
                 "Appear in clean, appropriate clothing if you have been released on bail.",
               ]}
               donts={[
                 "Don't plead guilty at arraignment. You cannot take it back, and you haven't had time to evaluate the full case.",
                 "Don't speak to the judge about the facts of your case.",
-                "Don't miss this court date — a warrant will be issued for your arrest.",
+                "Don't miss this court date. A warrant will be issued for your arrest.",
               ]}
             />
           </ScrollReveal>
@@ -284,18 +284,18 @@ export default function FirstTwentyFourHours() {
               number={7}
               title="Between Now and Your Next Court Date"
               timeframe="Ongoing"
-              context="After arraignment, your case enters the pre-trial phase. What you do — and don't do — during this period matters."
+              context="After arraignment, your case enters the pre-trial phase. What you do and don't do during this period matters."
               dos={[
                 "Attend every court date without exception. Missing a hearing results in an arrest warrant and forfeiture of any bail.",
-                "Follow every condition of your bail or release exactly — violations result in immediate re-arrest.",
+                "Follow every condition of your bail or release exactly. Violations result in immediate re-arrest.",
                 "Write down everything you remember about the incident as soon as possible while it is fresh.",
                 "Communicate with your attorney promptly and honestly.",
               ]}
               donts={[
                 "Don't contact any alleged victims or witnesses, even to apologize or explain.",
-                "Don't post anything about your case on social media — prosecutors monitor this.",
+                "Don't post anything about your case on social media. Prosecutors monitor this.",
                 "Don't discuss your case with family or friends. Prosecutors can subpoena them to testify about what you said.",
-                "Don't pick up any new charges — even minor incidents can affect your bail status and case outcome.",
+                "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome.",
               ]}
               isLast
             />

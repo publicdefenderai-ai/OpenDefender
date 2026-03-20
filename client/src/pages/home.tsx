@@ -627,7 +627,7 @@ export default function Home() {
                     <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
                       <CardContent className="p-3 text-center">
                         <p className="text-xs font-semibold text-foreground">Jail Phone Call Guide</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">What to say — and what never to say</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">What to say, and what never to say</p>
                       </CardContent>
                     </Card>
                   </Link>
@@ -648,7 +648,7 @@ export default function Home() {
                       {[
                         { title: "Get a lawyer before you appear", body: "If you cannot afford one, contact the public defender's office in the county where you were charged immediately. Do not go to your first appearance without representation if you can avoid it." },
                         { title: "Don't discuss your case", body: "Do not talk about the charges with friends, family, or on social media. Prosecutors can subpoena anyone you speak to." },
-                        { title: "Understand your bail conditions", body: "If you were released on bail, read every condition carefully. Violating any condition — even accidentally — results in immediate re-arrest." },
+                        { title: "Understand your bail conditions", body: "If you were released on bail, read every condition carefully. Violating any condition, even accidentally, results in immediate re-arrest." },
                         { title: "Don't miss your court date", body: "Missing a hearing results in an arrest warrant being issued. Set multiple reminders." },
                       ].map((step, i) => (
                         <li key={i} className="flex gap-3">
