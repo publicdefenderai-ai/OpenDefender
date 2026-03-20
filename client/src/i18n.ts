@@ -94,7 +94,7 @@ i18n
               "pledge3Title": "Plain Language, Not Legal Jargon",
               "pledge3Desc": "Every explanation is written to be understood, not to impress. Accurate legal information in words that make sense.",
               "pledge4Title": "Verified, Not Guessed",
-              "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed, but like all legal information, you should always confirm with an attorney.",
+              "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed, but you should always confirm with an attorney.",
               "pledge5Title": "Available in Your Language",
               "pledge5Desc": "English, Spanish, and Chinese. Because understanding your rights should never require a translator."
             },
