@@ -195,7 +195,7 @@ i18n
             }
           },
           "footer": {
-            "tagline": "We help people understand their rights and find free legal help.",
+            "tagline": "We help people understand their rights and find free legal information.",
             "legalResources": "Legal Resources",
             "knowYourRights": "Know Your Rights",
             "courtProcedures": "Court Procedures",
