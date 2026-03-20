@@ -278,18 +278,20 @@ export default function RightsInfo() {
 
       {/* Right Detail Dialog */}
       <Dialog open={selectedRight !== null} onOpenChange={(open) => !open && setSelectedRight(null)}>
-        <DialogContent className="max-w-[95vw] md:max-w-2xl">
+        <DialogContent className="max-w-[92vw] sm:max-w-lg md:max-w-2xl overflow-hidden">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              {selectedRight === 'silent' && <BrandShieldIcon size={20} />}
-              {selectedRight === 'attorney' && <Scale className="h-5 w-5 text-green-600" />}
-              {selectedRight === 'phoneCall' && <Phone className="h-5 w-5 text-blue-500" />}
-              {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-purple-600" />}
-              {selectedRight && t(`rights.quickRights.${selectedRight}.title`)}
+            <DialogTitle className="flex items-center gap-2 min-w-0">
+              <span className="flex-shrink-0">
+                {selectedRight === 'silent' && <BrandShieldIcon size={20} />}
+                {selectedRight === 'attorney' && <Scale className="h-5 w-5 text-green-600" />}
+                {selectedRight === 'phoneCall' && <Phone className="h-5 w-5 text-blue-500" />}
+                {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-purple-600" />}
+              </span>
+              <span className="truncate">{selectedRight && t(`rights.quickRights.${selectedRight}.title`)}</span>
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-sm sm:text-base">
               {selectedRight && t(`rights.quickRights.${selectedRight}.detailedExplanation`)}
             </p>
             {selectedRight === 'attorney' && (
@@ -298,9 +300,13 @@ export default function RightsInfo() {
                   There's an important distinction between when your right to counsel begins during interrogation (5th Amendment) versus when it covers your full prosecution (6th Amendment). Many people don't know the right applies before formal charges are filed.
                 </p>
                 <Link href="/right-to-counsel" onClick={() => setSelectedRight(null)}>
-                  <Button variant="outline" size="sm" className="w-full border-green-300 text-green-700 hover:bg-green-50 dark:border-green-700 dark:text-green-300 dark:hover:bg-green-900/20">
-                    <Scale className="mr-2 h-4 w-4" />
-                    Full Guide: Right to an Attorney — When It Begins &amp; What It Covers
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full h-auto py-2.5 px-3 whitespace-normal text-left border-green-300 text-green-700 hover:bg-green-50 dark:border-green-700 dark:text-green-300 dark:hover:bg-green-900/20"
+                  >
+                    <Scale className="mr-2 h-4 w-4 flex-shrink-0 mt-0.5" />
+                    <span>Right to an Attorney: Full Guide →</span>
                   </Button>
                 </Link>
               </div>
