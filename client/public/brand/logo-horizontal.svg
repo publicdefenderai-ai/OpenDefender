@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737 150">
+  <title>OpenDefender Horizontal Logo</title>
+  <defs><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');</style></defs>
+  <svg x="5" y="15" width="120" height="120" viewBox="0 0 200 200">
+    <path d="M134,34 C156,34 178,56 178,88 C178,131 150,169 100,191 C50,169 22,131 22,88 C22,56 44,34 66,34 C78,34 91,31 100,25" fill="none" stroke="#2D8EA5" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M125,66 C141,66 153,81 153,103 C153,134 134,163 100,178 C66,163 47,134 47,103 C47,81 59,66 75,66 C84,66 94,59 100,53" fill="none" stroke="#2D8EA5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <text x="145" y="104"
+    font-family="Inter, system-ui, -apple-system, sans-serif"
+    font-weight="700" font-size="80" style="letter-spacing:-0.01em"
+    fill="#2D8EA5">OpenDefender</text>
+</svg>

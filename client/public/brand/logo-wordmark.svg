@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 96">
+  <title>OpenDefender Wordmark</title>
+  <defs><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');</style></defs>
+  <text x="310" y="76" text-anchor="middle"
+    font-family="Inter, system-ui, -apple-system, sans-serif"
+    font-weight="700" font-size="80" style="letter-spacing:-0.01em"
+    fill="#2D8EA5">OpenDefender</text>
+</svg>
