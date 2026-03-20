@@ -94,7 +94,7 @@ i18n
               "pledge3Title": "Plain Language, Not Legal Jargon",
               "pledge3Desc": "Every explanation is written to be understood, not to impress. Accurate legal information in words that make sense.",
               "pledge4Title": "Verified, Not Guessed",
-              "pledge4Desc": "Every statute we cite is sourced. Every legal claim is checked against real databases, not generated from memory.",
+              "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed — but like all legal information, you should always confirm with an attorney.",
               "pledge5Title": "Available in Your Language",
               "pledge5Desc": "English, Spanish, and Chinese — because understanding your rights should never require a translator."
             },
@@ -4905,7 +4905,7 @@ i18n
               "pledge3Title": "Lenguaje Claro, No Jerga Legal",
               "pledge3Desc": "Cada explicación está escrita para ser entendida, no para impresionar. Información legal precisa en palabras que tienen sentido.",
               "pledge4Title": "Verificado, No Adivinado",
-              "pledge4Desc": "Cada estatuto que citamos tiene fuente. Cada afirmación legal se verifica con bases de datos reales, no se genera de memoria.",
+              "pledge4Desc": "Nuestra orientación generada por IA se valida con bases de datos reales de leyes y jurisprudencia. Nuestro contenido educativo está cuidadosamente investigado y revisado, pero como toda información legal, siempre debes confirmarlo con un abogado.",
               "pledge5Title": "Disponible en Su Idioma",
               "pledge5Desc": "Inglés, español y chino — porque entender sus derechos nunca debería requerir un traductor."
             },
@@ -9717,7 +9717,7 @@ i18n
               "pledge3Title": "通俗语言，而非法律术语",
               "pledge3Desc": "每一项解释都是为了让人理解而写的，而不是为了显示专业性。准确的法律信息，用通俗易懂的语言表达。",
               "pledge4Title": "经过核实，而非猜测",
-              "pledge4Desc": "我们引用的每一条法规都有来源。每一项法律主张都经过真实数据库的核实——而非凭记忆生成。",
+              "pledge4Desc": "我们的AI生成指导经过真实法规数据库和判例法的验证。我们的教育内容经过认真研究和审核——但与所有法律信息一样，您应始终向律师确认。",
               "pledge5Title": "支持您的语言",
               "pledge5Desc": "英语、西班牙语和中文——因为理解您的权利永远不应需要翻译。"
             },
