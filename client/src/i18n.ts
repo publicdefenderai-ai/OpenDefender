@@ -94,9 +94,9 @@ i18n
               "pledge3Title": "Plain Language, Not Legal Jargon",
               "pledge3Desc": "Every explanation is written to be understood, not to impress. Accurate legal information in words that make sense.",
               "pledge4Title": "Verified, Not Guessed",
-              "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed — but like all legal information, you should always confirm with an attorney.",
+              "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed, but like all legal information, you should always confirm with an attorney.",
               "pledge5Title": "Available in Your Language",
-              "pledge5Desc": "English, Spanish, and Chinese — because understanding your rights should never require a translator."
+              "pledge5Desc": "English, Spanish, and Chinese. Because understanding your rights should never require a translator."
             },
             "urgentHelp": {
               "modalTitle": "Urgent Legal Situation",
@@ -219,7 +219,7 @@ i18n
             "viewOnGithub": "View on GitHub",
             "viewOnX": "Follow on X",
             "allResources": "All Resources",
-            "privacyNotice": "Privacy First: We do not store your personal data — all input deleted after session.",
+            "privacyNotice": "Privacy First: We do not store your personal data. All input is deleted after session.",
             "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice."
           },
           "beta": {
@@ -4907,7 +4907,7 @@ i18n
               "pledge4Title": "Verificado, No Adivinado",
               "pledge4Desc": "Nuestra orientación generada por IA se valida con bases de datos reales de leyes y jurisprudencia. Nuestro contenido educativo está cuidadosamente investigado y revisado, pero como toda información legal, siempre debes confirmarlo con un abogado.",
               "pledge5Title": "Disponible en Su Idioma",
-              "pledge5Desc": "Inglés, español y chino — porque entender sus derechos nunca debería requerir un traductor."
+              "pledge5Desc": "Inglés, español y chino. Porque entender sus derechos nunca debería requerir un traductor."
             },
             "urgentHelp": {
               "modalTitle": "Situación Legal Urgente",
@@ -5030,7 +5030,7 @@ i18n
             "viewOnGithub": "Ver en GitHub",
             "viewOnX": "Seguir en X",
             "allResources": "Todos los Recursos",
-            "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales — toda información se elimina después de la sesión.",
+            "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales. Toda información se elimina después de la sesión.",
             "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional."
           },
           "beta": {
@@ -9717,9 +9717,9 @@ i18n
               "pledge3Title": "通俗语言，而非法律术语",
               "pledge3Desc": "每一项解释都是为了让人理解而写的，而不是为了显示专业性。准确的法律信息，用通俗易懂的语言表达。",
               "pledge4Title": "经过核实，而非猜测",
-              "pledge4Desc": "我们的AI生成指导经过真实法规数据库和判例法的验证。我们的教育内容经过认真研究和审核——但与所有法律信息一样，您应始终向律师确认。",
+              "pledge4Desc": "我们的AI生成指导经过真实法规数据库和判例法的验证。我们的教育内容经过认真研究和审核，但与所有法律信息一样，您应始终向律师确认。",
               "pledge5Title": "支持您的语言",
-              "pledge5Desc": "英语、西班牙语和中文——因为理解您的权利永远不应需要翻译。"
+              "pledge5Desc": "英语、西班牙语和中文。因为理解您的权利永远不应需要翻译。"
             },
             "urgentHelp": {
               "modalTitle": "紧急法律情况",
@@ -9842,7 +9842,7 @@ i18n
             "viewOnGithub": "在 GitHub 上查看",
             "viewOnX": "在 X 上关注",
             "allResources": "所有资源",
-            "privacyNotice": "隐私优先：我们不存储你的个人数据——所有输入在会话结束后删除。",
+            "privacyNotice": "隐私优先：我们不存储你的个人数据。所有输入在会话结束后删除。",
             "copyright": "© 2026 OpenDefender。不能替代专业法律建议。"
           },
           "beta": {
