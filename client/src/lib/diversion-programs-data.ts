@@ -5,7 +5,7 @@ import { getZipCodeCoordinates } from "./court-services";
  * DIVERSION PROGRAMS DATABASE
  * 
  * Current Status: 73 diversion programs across major US metropolitan areas
- * Last Updated: November 2024
+ * Last Updated: March 2026
  * 
  * California Coverage (16 programs across 9 counties):
  * - Los Angeles County, San Francisco, Orange County, San Diego County
@@ -78,7 +78,7 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.lacourt.org/division/criminal/drugcourt"
     },
     sources: ["Los Angeles Superior Court"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -110,11 +110,11 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Community Service", "Mental Health Court", "Homeless Court"],
     eligibilityNotes: "Quality-of-life offenses, mental health issues, homelessness-related charges.",
     contact: {
-      phone: "(415) 551-5780",
-      url: "https://www.sfsuperiorcourt.org/divisions/collaborative-courts"
+      phone: "(628) 217-6400",
+      url: "https://sf.courts.ca.gov/divisions/collaborative-courts/community-justice-center"
     },
     sources: ["San Francisco Superior Court"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -132,14 +132,14 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.occourts.org/self-help/mentalhealthcourt/"
     },
     sources: ["Orange County Superior Court"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
   // Texas Programs
   {
     id: "tx-harris-drug-court",
-    name: "Harris County Drug Court",
+    name: "Harris County STAR (Success Through Addiction Recovery) Drug Court",
     jurisdictionType: "county",
     state: "TX",
     county: "Harris",
@@ -148,11 +148,12 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Drug Court", "DWI Court", "Felony Mental Health Court"],
     eligibilityNotes: "Drug-related offenses, DWI cases, mental health issues. Must be Harris County resident.",
     contact: {
-      phone: "(713) 755-6044",
-      url: "https://www.hcdistrictcourt.org/drug-court"
+      phone: "(713) 755-4610",
+      email: "star@justex.net",
+      url: "https://justex.net/adult"
     },
     sources: ["Harris County District Courts"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -166,11 +167,11 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Veterans Court", "PTSD Treatment", "Substance Abuse for Veterans"],
     eligibilityNotes: "Military veterans with service-connected mental health or substance abuse issues.",
     contact: {
-      phone: "(214) 653-7994",
-      url: "https://www.dallascounty.org/departments/dallascountycourts/veterans-court.php"
+      phone: "(214) 875-4939",
+      url: "https://www.dallascounty.org/government/veterans-court/"
     },
     sources: ["Dallas County Courts"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
@@ -190,7 +191,7 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.jud11.flcourts.org/Criminal-Division/Drug-Court"
     },
     sources: ["Miami-Dade County Court"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -208,7 +209,7 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.17th.flcourts.org/mental-health-court"
     },
     sources: ["Broward County Court"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
@@ -228,7 +229,7 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.nycourts.gov/courts/1jd/criminal/drug_treatment_court.shtml"
     },
     sources: ["New York State Unified Court System"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -246,7 +247,7 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.nycourts.gov/courts/2jd/kings/criminal/veteranscourt.shtml"
     },
     sources: ["Brooklyn Criminal Court"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -319,11 +320,11 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Drug Treatment Court", "Treatment Alternatives and Diversion (TAD)"],
     eligibilityNotes: "Part of Wisconsin's TAD program for non-violent offenders with substance abuse issues. Alternative to incarceration with judicial supervision.",
     contact: {
-      phone: "(414) 278-5362",
+      phone: "(414) 223-1341",
       url: "https://county.milwaukee.gov/EN/Courts/Court-Resources/Drug-Treatment-Court"
     },
     sources: ["Milwaukee County Courts", "Wisconsin DOJ TAD Program", "Center for Health and Justice Report"],
-    lastUpdated: new Date("2024-09-20"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
@@ -339,11 +340,12 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Drug Court", "Substance Abuse Treatment"],
     eligibilityNotes: "High-risk, high-need defendants with non-violent felony offenses eligible for probation. Diagnosed substance use disorder required. No conviction for violent crime in past 10 years. 18-24 month program duration.",
     contact: {
-      phone: "problemsolvingcourts@cookcountyil.gov",
-      url: "https://www.cookcountycourt.org/division/problem-solving-courts/drug-treatment-court-programs"
+      phone: "(312) 603-8000",
+      email: "problemsolvingcourts@cookcountyil.gov",
+      url: "https://www.cookcountycourtil.gov/division/problem-solving-courts/drug-treatment-court-programs"
     },
     sources: ["Cook County Circuit Court"],
-    lastUpdated: new Date("2024-11-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -357,11 +359,12 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Mental Health Court", "Crisis Intervention", "Intensive Probation"],
     eligibilityNotes: "High-risk, high-need repeat offenders with felony non-violent offenses. Diagnosed mental health disorder required. 24 months intensive probation. Capacity up to 35 participants per court.",
     contact: {
-      phone: "problemsolvingcourts@cookcountyil.gov",
-      url: "https://www.cookcountycourt.org/division/problem-solving-courts/mental-health-treatment-court-program"
+      phone: "(312) 603-8000",
+      email: "problemsolvingcourts@cookcountyil.gov",
+      url: "https://www.cookcountycourtil.gov/division/problem-solving-courts/mental-health-treatment-court-programs"
     },
     sources: ["Cook County Circuit Court"],
-    lastUpdated: new Date("2024-11-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
@@ -428,13 +431,13 @@ export const diversionPrograms: DiversionProgram[] = [
     cities: ["Seattle", "Burien"],
     zipCodes: ["98101", "98102", "98103", "98104", "98105", "98106", "98107", "98108", "98109", "98112", "98115", "98116", "98117", "98118", "98119", "98121", "98122", "98125", "98126", "98133", "98134", "98136", "98144", "98146", "98148", "98154", "98164", "98166", "98168", "98174", "98177", "98178", "98188", "98195", "98199"],
     programTypes: ["Pre-Booking Diversion", "Harm Reduction", "Case Management"],
-    eligibilityNotes: "Low-level drug possession/sales (≤3 grams), prostitution, property crimes. Cannot have felony convictions for serious violent crimes. Harm-reduction oriented, abstinence not required. Services provided as long as needed with no fixed end date.",
+    eligibilityNotes: "Low-level drug possession/sales (≤3 grams), prostitution, property crimes. Cannot have felony convictions for serious violent crimes. Harm-reduction oriented, abstinence not required. Services provided as long as needed with no fixed end date. Note: Program capacity was reduced in Q2 2025 due to funding cuts; referral acceptance rates are lower than in prior years.",
     contact: {
       phone: "(206) 392-0050",
       url: "https://kingcounty.gov/en/dept/dchs/human-social-services/behavioral-health-recovery/diversion-reentry-programs/lead"
     },
     sources: ["King County Department of Community and Human Services", "Purpose, Dignity, Action (PDA)"],
-    lastUpdated: new Date("2024-11-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
@@ -469,10 +472,10 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Pre-Arrest Diversion", "Crisis Services", "Sobering Center", "Case Management"],
     eligibilityNotes: "24/7 services. Age 18+. Voluntary participation required. Brought by law enforcement or first responders. Excludes violent crimes or substantial risk of harm. Offenses driven by mental health crises, substance use, extreme poverty, or homelessness.",
     contact: {
-      url: "http://fultoncourt.org/center-for-diversion-and-services"
+      url: "https://www.fultonsuperiorcourtga.gov/center-for-diversion-and-services"
     },
     sources: ["Fulton County Superior Court", "Grady Health System"],
-    lastUpdated: new Date("2024-11-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -487,10 +490,10 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Non-violent felony drug offenses. Substance abuse and/or mental health challenges. Age 17+, Fulton County resident. Voluntary participation. 18 months minimum program. $750 participation fee.",
     contact: {
       phone: "(404) 613-5313",
-      url: "http://www.fultonsuperiorcourtga.gov/accountability-courts"
+      url: "https://www.fultonsuperiorcourtga.gov/accountability-courts"
     },
     sources: ["Fulton County Superior Court"],
-    lastUpdated: new Date("2024-11-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
 
@@ -668,14 +671,14 @@ export const diversionPrograms: DiversionProgram[] = [
     cities: ["Portland"],
     zipCodes: ["97201", "97202", "97203", "97204", "97205", "97206", "97209", "97210", "97211", "97212", "97213", "97214", "97215", "97216", "97217", "97218", "97219", "97220", "97221", "97222", "97223", "97224", "97225", "97227", "97229", "97230", "97232", "97233", "97239"],
     programTypes: ["Drug Diversion", "Substance Abuse Treatment"],
-    eligibilityNotes: "First-time drug possession offenses. Post-plea model (participants plead guilty, charges dropped upon completion). 365 days in treatment required. Six consecutive clean drug tests needed. Charges can be removed from criminal record upon successful completion. Established 1991.",
+    eligibilityNotes: "First-time drug possession offenses. Post-plea model (participants plead guilty, charges dropped upon completion). 365 days in treatment required. Six consecutive clean drug tests needed. Charges can be removed from criminal record upon successful completion. Established 1991. Note: Oregon's Measure 110 (2020) decriminalized drug possession, effectively ending the STOP model. After Measure 110 was partially rolled back in September 2024, Multnomah County launched a new Deflection Center (October 2024) using a different model. The original STOP program described here is no longer operative.",
     contact: {
       phone: "(503) 988-4888",
       url: "https://www.multco.us/dcj-adult/stop-drug-diversion"
     },
     sources: ["Multnomah County Circuit Court"],
-    lastUpdated: new Date("2024-11-01"),
-    isActive: true,
+    lastUpdated: new Date("2026-03-01"),
+    isActive: false,
   },
   {
     id: "or-multnomah-mental-health-court",
@@ -1054,7 +1057,7 @@ export const diversionPrograms: DiversionProgram[] = [
   },
   {
     id: "ny-rockland-partnership-youth",
-    name: "Rockland County Partnership for Safe Youth",
+    name: "Rockland County Partnership for Safe and Healthy Youth",
     jurisdictionType: "county",
     state: "NY",
     county: "Rockland",
@@ -1067,7 +1070,7 @@ export const diversionPrograms: DiversionProgram[] = [
       url: "https://www.rocklandda.org/diversion"
     },
     sources: ["Rockland County District Attorney", "Rockland BOCES"],
-    lastUpdated: new Date("2024-11-01"),
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   },
   {
@@ -1383,10 +1386,102 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "First-time federal offenders, non-violent crimes, good candidates for rehabilitation.",
     contact: {
       phone: "(202) 514-2000",
-      url: "https://www.justice.gov/usao/justice-101/pretrial-diversion"
+      url: "https://www.justice.gov/jm/jm-9-22000-pretrial-diversion-program"
     },
     sources: ["U.S. Department of Justice"],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-03-01"),
+    isActive: true,
+  },
+
+  // New programs added March 2026
+  {
+    id: "ca-la-jcod-rdp",
+    name: "Los Angeles County Rapid Diversion Program (RDP)",
+    jurisdictionType: "county",
+    state: "CA",
+    county: "Los Angeles",
+    cities: ["Los Angeles", "Pasadena", "Compton", "Long Beach", "Pomona", "Van Nuys", "San Fernando", "Torrance"],
+    zipCodes: [],
+    programTypes: ["Pretrial Diversion", "Mental Health Diversion", "Substance Use Diversion"],
+    eligibilityNotes: "A mental health or substance use condition must have been a significant factor in the offense. Pre-plea; both misdemeanor and felony charges eligible. No fixed charge-type exclusions. Up to 2-year community-based treatment plan; case dismissed upon graduation. Currently operating at 8 courthouses countywide including San Fernando (added December 2025).",
+    contact: {
+      phone: "(833) 522-5263",
+      url: "https://jcod.lacounty.gov/program/rapid-diversion-program-rdp/"
+    },
+    sources: ["LA County Justice, Care and Opportunities Department (JCOD)", "RAND Corporation evaluation (2025)"],
+    lastUpdated: new Date("2026-01-26"),
+    isActive: true,
+  },
+  {
+    id: "tx-tarrant-mental-health-court",
+    name: "Tarrant County Mental Health Diversion Court",
+    jurisdictionType: "county",
+    state: "TX",
+    county: "Tarrant",
+    cities: ["Fort Worth", "Arlington", "Euless", "Bedford", "Haltom City", "North Richland Hills", "Mansfield"],
+    zipCodes: [],
+    programTypes: ["Mental Health Court", "Pretrial Diversion", "Post-Booking Diversion"],
+    eligibilityNotes: "Must have qualifying mental health diagnosis (major depression, bipolar disorder, schizophrenia, schizoaffective disorder, anxiety disorders). 4-phase program lasting 9 months to 2 years. Charges dismissed upon successful completion. Jail Diversion Center co-located for walk-in crisis support.",
+    contact: {
+      phone: "(817) 884-1774",
+      url: "https://www.tarrantcountytx.gov/en/criminal-courts/specialty-programs/mhdp.html"
+    },
+    sources: ["Tarrant County Criminal Courts", "Texas Indigent Defense Commission"],
+    lastUpdated: new Date("2026-03-01"),
+    isActive: true,
+  },
+  {
+    id: "wa-king-drug-diversion-court",
+    name: "King County Adult Drug Diversion Court",
+    jurisdictionType: "county",
+    state: "WA",
+    county: "King",
+    cities: ["Seattle", "Burien", "Renton", "Bellevue", "Kirkland", "Redmond"],
+    zipCodes: [],
+    programTypes: ["Drug Court", "Felony Property Diversion", "Substance Abuse Treatment"],
+    eligibilityNotes: "Adults charged with felony property crimes and drug-related crimes in King County. Voluntary participation. Minimum 10 months to complete (average 16 months). Must work with assigned treatment provider. Cannot have prior serious violent felony conviction.",
+    contact: {
+      phone: "(206) 477-0788",
+      email: "PAODrugCourt@kingcounty.gov",
+      url: "https://kingcounty.gov/en/dept/dja/courts-jails-legal-system/courts-drugcourt/drug-court"
+    },
+    sources: ["King County Department of Judicial Administration", "King County Prosecuting Attorney's Office"],
+    lastUpdated: new Date("2026-03-01"),
+    isActive: true,
+  },
+  {
+    id: "mn-hennepin-adult-diversion",
+    name: "Hennepin County Adult Diversion Program",
+    jurisdictionType: "county",
+    state: "MN",
+    county: "Hennepin",
+    cities: ["Minneapolis", "Bloomington", "Plymouth", "Brooklyn Park", "Minnetonka", "Eden Prairie", "Edina"],
+    zipCodes: [],
+    programTypes: ["Pretrial Diversion", "Drug Diversion", "Property Crime Diversion", "Restorative Justice"],
+    eligibilityNotes: "First-time, low-level nonviolent offenders. Qualifying offenses include property crimes and minor drug offenses. Requires community service, restitution, and/or treatment referral. 2025 expansion broadened charge eligibility and added restorative justice conferencing model.",
+    contact: {
+      url: "https://www.hennepinattorney.org/en/about/adult-diversion/adult-diversion"
+    },
+    sources: ["Hennepin County Attorney's Office", "University of Minnesota Medical School recidivism study (2025)"],
+    lastUpdated: new Date("2026-03-01"),
+    isActive: true,
+  },
+  {
+    id: "in-marion-behavioral-health-court",
+    name: "Marion County Behavioral Health Court",
+    jurisdictionType: "county",
+    state: "IN",
+    county: "Marion",
+    cities: ["Indianapolis", "Lawrence", "Beech Grove", "Speedway", "Southport"],
+    zipCodes: [],
+    programTypes: ["Mental Health Court", "Behavioral Health Diversion", "Crisis Intervention"],
+    eligibilityNotes: "Adults with qualifying mental health diagnoses where illness was a significant factor in the offense. Post-arrest diversion; voluntary. 1 to 3-year program including education/GED support, job coaching, psychiatric treatment, and medication compliance monitoring.",
+    contact: {
+      phone: "(317) 327-7853",
+      url: "https://www.indy.gov/activity/mental-health-alternative-courts"
+    },
+    sources: ["Marion Superior Court", "Indianapolis Office of Public Health and Safety"],
+    lastUpdated: new Date("2026-03-01"),
     isActive: true,
   }
 ];
