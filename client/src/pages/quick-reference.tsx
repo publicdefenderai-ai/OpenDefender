@@ -459,9 +459,9 @@ function PleaCard() {
     <PrintableCard
       title={t("quickRef.plea.title", "Plea Hearing")}
       icon={<Users className="h-5 w-5" />}
-      color="text-purple-700 dark:text-purple-300"
-      bgColor="bg-purple-50 dark:bg-purple-950/40"
-      borderColor="border-purple-300 dark:border-purple-700"
+      color="text-amber-700 dark:text-amber-300"
+      bgColor="bg-amber-50 dark:bg-amber-950/40"
+      borderColor="border-amber-300 dark:border-amber-700"
       sections={[
         {
           heading: t("quickRef.plea.expect", "What to Expect"),

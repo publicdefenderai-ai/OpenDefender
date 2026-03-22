@@ -23,7 +23,7 @@ const greyAreas: GreyAreaItem[] = [
   {
     title: "You're detained but not formally arrested",
     description: "Police stop you on the street, tell you not to leave, and begin questioning — but haven't said you're under arrest.",
-    answer: "If a reasonable person in your situation would not feel free to leave, courts may treat this as 'custody' — which means your right to remain silent applies. However, your 6th Amendment right to counsel has not kicked in yet because no formal charges have been filed. Ask clearly: 'Am I free to go?' If the answer is no, invoke your right to remain silent and your right to a lawyer before answering anything."
+    answer: "If a reasonable person in your situation would not feel free to leave, courts may treat this as 'custody', which means your right to remain silent applies. However, your 6th Amendment right to counsel has not kicked in yet because no formal charges have been filed. Ask clearly: 'Am I free to go?' If the answer is no, invoke your right to remain silent and your right to a lawyer before answering anything."
   },
   {
     title: "Police come to your home to 'talk'",
@@ -43,7 +43,7 @@ const greyAreas: GreyAreaItem[] = [
   {
     title: "Questioning after charges are filed but before indictment",
     description: "You've been charged with a crime, released on bail, and officers want to interview you again without your lawyer present.",
-    answer: "Once formal charges are filed, your 6th Amendment right to an attorney applies to those specific charges. Police cannot try to get statements from you about those charges without your lawyer present — whether directly or through other people. This is a firm right. Tell them to contact your attorney."
+    answer: "Once formal charges are filed, your 6th Amendment right to an attorney applies to those specific charges. Police cannot try to get statements from you about those charges without your lawyer present, whether directly or through other people. This is a firm right. Tell them to contact your attorney."
   },
   {
     title: "You're a juvenile being questioned",
@@ -148,7 +148,7 @@ export default function RightToCounsel() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">What "custody" means:</p>
-                    <p className="text-muted-foreground">A reasonable person in your situation would not feel free to end the encounter and leave. This is an objective test — it doesn't matter what you personally felt or what police told you.</p>
+                    <p className="text-muted-foreground">A reasonable person in your situation would not feel free to end the encounter and leave. This is an objective test. It doesn't matter what you personally felt or what police told you.</p>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">What it protects:</p>
@@ -181,7 +181,7 @@ export default function RightToCounsel() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">What "kicks in" means:</p>
-                    <p className="text-muted-foreground">Once this right kicks in, police and government agents cannot try to get statements from you about those charges without your lawyer present — even if they use an informant to do it.</p>
+                    <p className="text-muted-foreground">Once this right kicks in, police and government agents cannot try to get statements from you about those charges without your lawyer present, even if they use an informant to do it.</p>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">What it protects:</p>
@@ -198,7 +198,7 @@ export default function RightToCounsel() {
             <Alert className="mt-5 border-slate-300 dark:border-slate-700">
               <AlertTriangle className="h-4 w-4" />
               <AlertDescription className="text-sm">
-                <strong>The critical gap:</strong> Between arrest and formal charges, only the 5th Amendment applies. You have the right to remain silent and to refuse questioning — but the 6th Amendment's broader protections haven't begun yet. This is why invoking your right to counsel immediately upon arrest is essential.
+                <strong>The critical gap:</strong> Between arrest and formal charges, only the 5th Amendment applies. You have the right to remain silent and to refuse questioning, but the 6th Amendment's broader protections haven't begun yet. This is why invoking your right to counsel immediately upon arrest is essential.
               </AlertDescription>
             </Alert>
           </section>
@@ -209,7 +209,7 @@ export default function RightToCounsel() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-2">Detention, Custody, and Arrest — They're Not the Same</h2>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              Police interactions exist on a spectrum. Where you fall on that spectrum determines what rights are triggered. Many people believe their rights only begin when they are "under arrest" — this is a dangerous misunderstanding.
+              Police interactions exist on a spectrum. Where you fall on that spectrum determines what rights are triggered. Many people believe their rights only begin when they are "under arrest." This is a dangerous misunderstanding.
             </p>
 
             <div className="space-y-4">
@@ -241,7 +241,7 @@ export default function RightToCounsel() {
                         <Badge className="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border-0 text-xs">Limited restriction</Badge>
                       </div>
                       <p className="text-sm text-muted-foreground mb-2">Police have reasonable suspicion you're involved in criminal activity and briefly detain you to investigate. You are not free to leave but you have not been arrested.</p>
-                      <p className="text-sm text-foreground/80"><strong>Rights triggered:</strong> Courts are divided on whether a Terry stop alone constitutes "custody" for Miranda purposes — most courts say no. But you still have the right to refuse to answer questions beyond basic identification. Ask: "Am I under arrest?" If no, ask: "Am I free to go?" If neither, you are being detained.</p>
+                      <p className="text-sm text-foreground/80"><strong>Rights triggered:</strong> Courts are divided on whether a Terry stop alone constitutes "custody" for Miranda purposes. Most courts say no. But you still have the right to refuse to answer questions beyond basic identification. Ask: "Am I under arrest?" If no, ask: "Am I free to go?" If neither, you are being detained.</p>
                     </div>
                   </div>
                 </CardContent>
@@ -251,14 +251,14 @@ export default function RightToCounsel() {
               <Card>
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
-                    <div className="w-3 h-3 rounded-full bg-orange-500 flex-shrink-0 mt-1.5" />
+                    <div className="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0 mt-1.5" />
                     <div>
                       <div className="flex items-center gap-2 mb-1 flex-wrap">
                         <h3 className="font-semibold text-foreground">Custodial Interrogation</h3>
-                        <Badge className="bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 border-0 text-xs">Significant restriction</Badge>
+                        <Badge className="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border-0 text-xs">Significant restriction</Badge>
                       </div>
                       <p className="text-sm text-muted-foreground mb-2">You are in custody (not free to leave) and police are questioning you. This is the trigger point for your 5th Amendment right to counsel under Miranda.</p>
-                      <p className="text-sm text-foreground/80"><strong>Rights triggered:</strong> Police must advise you of your Miranda rights before questioning. If they don't and question you anyway, statements may be suppressed. You can invoke your right to remain silent and your right to an attorney — all questioning must stop immediately.</p>
+                      <p className="text-sm text-foreground/80"><strong>Rights triggered:</strong> Police must advise you of your Miranda rights before questioning. If they don't and question you anyway, statements may be suppressed. You can invoke your right to remain silent and your right to an attorney; all questioning must stop immediately.</p>
                     </div>
                   </div>
                 </CardContent>
@@ -289,7 +289,7 @@ export default function RightToCounsel() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-2">Interrogation Counsel vs. Trial Counsel</h2>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              The right to an attorney during interrogation and the right to an attorney at trial serve different functions and carry different protections. For most people charged with a crime, both will ultimately apply — but understanding the distinction helps you protect yourself at each stage.
+              The right to an attorney during interrogation and the right to an attorney at trial serve different functions and carry different protections. For most people charged with a crime, both will ultimately apply, but understanding the distinction helps you protect yourself at each stage.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -304,19 +304,19 @@ export default function RightToCounsel() {
                 <CardContent className="space-y-3 text-sm">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">Applies whenever you are in custody and being questioned — even before any charges are filed</p>
+                    <p className="text-muted-foreground">Applies whenever you are in custody and being questioned, even before any charges are filed</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">If you invoke it, all questioning must stop immediately — police cannot send in a different officer or try again later</p>
+                    <p className="text-muted-foreground">If you invoke it, all questioning must stop immediately. Police cannot send in a different officer or try again later</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">Does not require the government to appoint a lawyer on the spot — but they must stop all questioning until you have one</p>
+                    <p className="text-muted-foreground">Does not require the government to appoint a lawyer on the spot, but they must stop all questioning until you have one</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">Cannot be "reinitiated" by police — if you invoked, only you can restart the conversation, and even then cautiously</p>
+                    <p className="text-muted-foreground">Cannot be "reinitiated" by police: if you invoked, only you can restart the conversation, and even then cautiously</p>
                   </div>
                   <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-md">
                     <p className="font-semibold text-blue-800 dark:text-blue-300 text-xs mb-1">How to invoke:</p>
@@ -340,7 +340,7 @@ export default function RightToCounsel() {
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">If you cannot afford an attorney, the court must appoint one — this is the Gideon guarantee</p>
+                    <p className="text-muted-foreground">If you cannot afford an attorney, the court must appoint one. This is the Gideon guarantee</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -348,7 +348,7 @@ export default function RightToCounsel() {
                   </div>
                   <div className="flex items-start gap-2">
                     <XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground">Covers the specific crimes you were charged with — police can still question you about other matters you have not been formally charged with</p>
+                    <p className="text-muted-foreground">Covers the specific crimes you were charged with. Police can still question you about other matters you have not been formally charged with</p>
                   </div>
                   <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-md">
                     <p className="font-semibold text-green-800 dark:text-green-300 text-xs mb-1">How to invoke:</p>
@@ -526,7 +526,7 @@ export default function RightToCounsel() {
         <ScrollReveal>
           <Alert className="border-slate-200 dark:border-slate-700">
             <AlertDescription className="text-muted-foreground text-sm">
-              This page provides general legal information, not legal advice. Constitutional law is highly fact-specific and varies by jurisdiction. The cases cited represent federal constitutional minimums — your state may provide broader protections. Always consult a licensed criminal defense attorney about your specific situation.
+              This page provides general legal information, not legal advice. Constitutional law is highly fact-specific and varies by jurisdiction. The cases cited represent federal constitutional minimums. Your state may provide broader protections. Always consult a licensed criminal defense attorney about your specific situation.
             </AlertDescription>
           </Alert>
         </ScrollReveal>

@@ -117,10 +117,10 @@ export default function CollateralConsequences() {
                   For non-citizens — including lawful permanent residents with green cards — certain criminal convictions can result in mandatory deportation, bars to reentry, and denial of citizenship. These consequences apply regardless of how long you've lived in the United States or your family ties here.
                 </p>
                 <ul className="space-y-3">
-                  <Impact critical text="Aggravated felonies (a federal category that includes many state misdemeanors and felonies) trigger mandatory deportation with a permanent bar to reentry — there is no discretion for an immigration judge." />
+                  <Impact critical text="Aggravated felonies (a federal category that includes many state misdemeanors and felonies) trigger mandatory deportation with a permanent bar to reentry. There is no discretion for an immigration judge." />
                   <Impact critical text="Crimes Involving Moral Turpitude (CIMT), controlled substance offenses, domestic violence, and firearms offenses can all make a non-citizen deportable even with a green card." />
-                  <Impact text="A conviction for a deportable offense may bar you from applying for asylum, cancellation of removal, or adjustment of status — even if you would otherwise qualify." />
-                  <Impact text="A single drug possession conviction (other than a first offense for marijuana under 30g) can result in permanent inadmissibility — meaning you cannot return to the U.S. if you leave." />
+                  <Impact text="A conviction for a deportable offense may bar you from applying for asylum, cancellation of removal, or adjustment of status, even if you would otherwise qualify." />
+                  <Impact text="A single drug possession conviction (other than a first offense for marijuana under 30g) can result in permanent inadmissibility, meaning you cannot return to the U.S. if you leave." />
                   <Impact text="Even deferred adjudication, diversion programs, and expunged convictions may be treated as convictions under federal immigration law." />
                   <Impact text="A sentence of one year or more (even if suspended) on a qualifying offense can convert a misdemeanor into a deportable aggravated felony." />
                 </ul>
@@ -145,7 +145,7 @@ export default function CollateralConsequences() {
                   <Impact text="Existing public housing tenants can be evicted — along with their household — if a family member is convicted of drug activity or certain other crimes, even if the activity occurred off-site." />
                   <Impact text="Section 8 Housing Choice Vouchers can be terminated based on criminal history. Recipients who lose their voucher due to a criminal conviction face long waiting lists with no path to reinstatement." />
                   <Impact text="Private landlords in most states can use background checks to screen tenants. Many automatically reject applicants with felony convictions, and some reject any criminal record." />
-                  <Impact text="Several states and cities (including California, New York, and Illinois) have enacted laws limiting landlords' use of criminal history — but these protections vary widely and do not apply everywhere." />
+                  <Impact text="Several states and cities (including California, New York, and Illinois) have enacted laws limiting landlords' use of criminal history, but these protections vary widely and do not apply everywhere." />
                   <Impact text="Transitional and supportive housing programs also screen for criminal history; certain conviction types disqualify applicants from programs specifically designed to help people reenter society." />
                 </ul>
               </CardContent>
@@ -167,7 +167,7 @@ export default function CollateralConsequences() {
                   <Impact critical text="Many licensed professions — including nursing, teaching, social work, pharmacy, law, financial advising, and security — have mandatory disqualification or enhanced review for certain convictions. A conviction can permanently end a career in these fields." />
                   <Impact text="Federal contractor positions and jobs requiring security clearances apply strict disqualification standards; most felony convictions permanently bar federal employment in sensitive roles." />
                   <Impact text="Driving-related convictions (DUI, reckless driving) can affect commercial driver's license eligibility, permanently disqualifying individuals from trucking and transportation careers." />
-                  <Impact text="Conviction records appear on background checks for years — sometimes indefinitely. Expungement may remove the record from public access but may not remove it from all employer databases or FBI records." />
+                  <Impact text="Conviction records appear on background checks for years, sometimes indefinitely. Expungement may remove the record from public access but may not remove it from all employer databases or FBI records." />
                 </ul>
               </CardContent>
             </Card>
@@ -183,12 +183,12 @@ export default function CollateralConsequences() {
                   Several federal benefit programs have statutory restrictions tied to criminal convictions. State-level restrictions vary.
                 </p>
                 <ul className="space-y-3">
-                  <Impact text="Federal law imposes a lifetime ban on SNAP (food stamps) and TANF (cash assistance) for individuals convicted of a drug felony — though many states (including California, New York, and Illinois) have opted out of this ban and restored eligibility." />
+                  <Impact text="Federal law imposes a lifetime ban on SNAP (food stamps) and TANF (cash assistance) for individuals convicted of a drug felony, though many states (including California, New York, and Illinois) have opted out of this ban and restored eligibility." />
                   <Impact text="Texas retains the federal drug felony ban on SNAP benefits for individuals who have not completed their sentence, including probation." />
                   <Impact critical text="Federal student loans and Pell Grants are suspended for students convicted of drug offenses that occurred while receiving financial aid. Eligibility is restored after completing a drug rehabilitation program or after two years, depending on the offense." />
                   <Impact text="Individuals with drug felony convictions may be ineligible for subsidized federally-assisted housing (see Housing section)." />
                   <Impact text="Social Security Disability (SSDI) and Supplemental Security Income (SSI) benefits are suspended while an individual is incarcerated, and eligibility review is required upon release." />
-                  <Impact text="Conviction of certain crimes can affect eligibility for veterans' benefits, including VA healthcare and disability compensation — particularly for dishonorable discharges related to criminal conduct." />
+                  <Impact text="Conviction of certain crimes can affect eligibility for veterans' benefits, including VA healthcare and disability compensation, particularly for dishonorable discharges related to criminal conduct." />
                 </ul>
               </CardContent>
             </Card>
@@ -225,7 +225,7 @@ export default function CollateralConsequences() {
                   Felony convictions result in the loss of several civil rights. The extent and duration of these losses depends heavily on state law.
                 </p>
                 <ul className="space-y-3">
-                  <Impact text="Voting rights: Felony convictions result in disenfranchisement in most states. California, Illinois, and New York restore voting rights upon completion of the sentence (including parole). Texas restores rights only after completing the full sentence plus any probation or parole. Laws in this area change frequently — check current state law." />
+                  <Impact text="Voting rights: Felony convictions result in disenfranchisement in most states. California, Illinois, and New York restore voting rights upon completion of the sentence (including parole). Texas restores rights only after completing the full sentence plus any probation or parole. Laws in this area change frequently. Check current state law." />
                   <Impact critical text="Firearms rights: Federal law (18 U.S.C. § 922(g)) permanently prohibits felons from possessing firearms or ammunition. Some states extend this prohibition to certain misdemeanors (including domestic violence). This prohibition cannot be restored by state expungement alone." />
                   <Impact text="Jury service: Felony conviction disqualifies individuals from federal jury service permanently and from state jury service under most state laws, either permanently or until rights are restored." />
                   <Impact text="Public office: Individuals with felony convictions are ineligible for certain elected and appointed government positions, including law enforcement roles, at the federal and state level." />
@@ -239,7 +239,7 @@ export default function CollateralConsequences() {
         {/* ── SEX OFFENDER REGISTRY ────────────────────────────── */}
         <ScrollReveal>
           <SectionHeader id="sex-offender" label="Sex Offender Registration">
-            <Card className="border-orange-200 dark:border-orange-900">
+            <Card className="border-amber-200 dark:border-amber-900">
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground">
                   Sex offender registration requirements are among the most sweeping collateral consequences, imposing ongoing obligations that persist for years or decades after a sentence is completed.
@@ -248,9 +248,9 @@ export default function CollateralConsequences() {
                   <Impact critical text="SORNA (Sex Offender Registration and Notification Act) establishes a federal framework requiring registration for covered offenses. Failure to register is itself a federal felony." />
                   <Impact text="Most states use a tiered system (Tier I, II, III) based on offense severity. Tier III offenders typically must register for life; lower tiers require registration for 15-25 years with periodic in-person verification." />
                   <Impact critical text="Registration requirements restrict where registrants can live (not near schools, parks, or daycare centers), where they can work, and in some jurisdictions, where they can be present at any given time." />
-                  <Impact text="Registrants are listed on publicly searchable online databases that include name, photograph, address, and offense information — visible to neighbors, employers, landlords, and schools." />
+                  <Impact text="Registrants are listed on publicly searchable online databases that include name, photograph, address, and offense information, visible to neighbors, employers, landlords, and schools." />
                   <Impact text="Travel is significantly restricted. International travel requires advance notice to authorities, and many countries deny entry to registered sex offenders." />
-                  <Impact text="Some offenses trigger registration even without incarceration — including certain misdemeanors involving minors. This consequence is often not anticipated at the time of a plea." />
+                  <Impact text="Some offenses trigger registration even without incarceration, including certain misdemeanors involving minors. This consequence is often not anticipated at the time of a plea." />
                   <Impact text="California operates a three-tier system; New York requires registration for life for the most serious offenses; Texas requires annual verification and community notification for high-risk offenders." />
                 </ul>
                 <BeforePlea>
@@ -265,9 +265,9 @@ export default function CollateralConsequences() {
         <ScrollReveal>
           <SectionHeader id="gang-designation" label="Gang Designation">
             <div className="space-y-5">
-              <Alert className="border-purple-300 bg-purple-50 dark:bg-purple-900/20 dark:border-purple-800">
-                <AlertDescription className="text-purple-800 dark:text-purple-200 text-sm">
-                  Being labeled a gang member by law enforcement is not a criminal conviction — but it carries serious legal consequences regardless. In many states, designation can happen without notice, without a hearing, and without any requirement of criminal activity.
+              <Alert className="border-red-300 bg-red-50 dark:bg-red-900/20 dark:border-red-800">
+                <AlertDescription className="text-red-800 dark:text-red-200 text-sm">
+                  Being labeled a gang member by law enforcement is not a criminal conviction, but it carries serious legal consequences regardless. In many states, designation can happen without notice, without a hearing, and without any requirement of criminal activity.
                 </AlertDescription>
               </Alert>
 
@@ -287,7 +287,7 @@ export default function CollateralConsequences() {
               </Card>
 
               {/* Consequences for you */}
-              <Card className="border-purple-200 dark:border-purple-900">
+              <Card className="border-red-200 dark:border-red-900">
                 <CardHeader>
                   <CardTitle className="text-base">Consequences for You</CardTitle>
                 </CardHeader>
@@ -295,7 +295,7 @@ export default function CollateralConsequences() {
                   <ul className="space-y-3">
                     <Impact
                       critical
-                      text="Sentence enhancements: In California (Penal Code §186.22), Texas (Penal Code Ch. 71), New York, and Illinois, any crime found to be gang-related carries mandatory additional prison time — often 2 to 10 additional years depending on the offense. These enhancements are on top of the base sentence and are not subject to judicial discretion in many circumstances."
+                      text="Sentence enhancements: In California (Penal Code §186.22), Texas (Penal Code Ch. 71), New York, and Illinois, any crime found to be gang-related carries mandatory additional prison time, often 2 to 10 additional years depending on the offense. These enhancements are on top of the base sentence and are not subject to judicial discretion in many circumstances."
                     />
                     <Impact
                       critical
@@ -305,7 +305,7 @@ export default function CollateralConsequences() {
                       text="Supervision conditions: Probation and parole conditions for individuals with gang designations routinely prohibit associating with anyone else in the database — even if those individuals are childhood friends or neighbors. Violation of these conditions, even incidental contact, is grounds for immediate revocation."
                     />
                     <Impact
-                      text="Gang injunctions (primarily California, but also other states): Civil injunctions may restrict where you can go, who you can be with, what you can wear, and what time you can be outside in designated areas — regardless of whether you have been charged with any crime."
+                      text="Gang injunctions (primarily California, but also other states): Civil injunctions may restrict where you can go, who you can be with, what you can wear, and what time you can be outside in designated areas, regardless of whether you have been charged with any crime."
                     />
                     <Impact
                       critical
@@ -322,13 +322,13 @@ export default function CollateralConsequences() {
               </Card>
 
               {/* Consequences for associates */}
-              <Card className="border-purple-200 dark:border-purple-900">
+              <Card className="border-red-200 dark:border-red-900">
                 <CardHeader>
                   <CardTitle className="text-base">Consequences for People Who Associate With You</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-sm text-muted-foreground">
-                    Gang designation creates legal risk for the people around you — including family members who are not involved in any criminal activity.
+                    Gang designation creates legal risk for the people around you, including family members who are not involved in any criminal activity.
                   </p>
                   <ul className="space-y-3">
                     <Impact
@@ -369,10 +369,10 @@ export default function CollateralConsequences() {
                   </p>
                   <ul className="space-y-2">
                     {[
-                      "Requesting access to your gang file and the documentation used to designate you — this is not always available but should be requested through your attorney.",
+                      "Requesting access to your gang file and the documentation used to designate you, which is not always available but should be requested through your attorney.",
                       "Challenging designation as part of a criminal case in which a gang enhancement has been alleged — this is the most common forum for contesting gang evidence.",
                       "Petitioning for removal from the database in states that have created formal processes (California has a limited removal process).",
-                      "Raising constitutional challenges to designation (due process, First Amendment association) — these have had mixed success but have resulted in significant database reforms in several jurisdictions.",
+                      "Raising constitutional challenges to designation (due process, First Amendment association). These have had mixed success but have resulted in significant database reforms in several jurisdictions.",
                     ].map((text, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <span className="flex-shrink-0 mt-0.5">–</span>
