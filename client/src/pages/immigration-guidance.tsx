@@ -1,6 +1,6 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { 
   
   AlertTriangle, 
@@ -36,6 +36,7 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   
   const phases = [
     {
@@ -125,12 +126,22 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const startTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % phases.length);
     }, 6000);
-    return () => clearInterval(interval);
   }, [phases.length]);
+
+  useEffect(() => {
+    startTimer();
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [startTimer]);
+
+  const advance = () => {
+    setActiveIndex((prev) => (prev + 1) % phases.length);
+    startTimer();
+  };
 
   const getColorClasses = (color: string) => {
     const colors: Record<string, { bg: string; text: string; ring: string }> = {
@@ -155,7 +166,14 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-200">
+          <Card
+            onClick={advance}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") ? advance() : undefined}
+            aria-label={`Phase ${activeIndex + 1} of ${phases.length}: ${activePhase.title}. Tap to advance.`}
+            className="h-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer select-none group active:scale-[0.995]"
+          >
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-foreground" data-testid={`text-${activePhase.id}-title`}>
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${activeColors.bg} to-transparent flex items-center justify-center ring-1 ${activeColors.ring}`}>
@@ -189,6 +207,9 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
                   </ul>
                 </div>
               </div>
+              <p className="text-xs text-muted-foreground/50 text-right mt-4 group-hover:text-muted-foreground/70 transition-colors">
+                Tap to advance →
+              </p>
             </CardContent>
           </Card>
         </motion.div>
@@ -198,7 +219,7 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
         {phases.map((phase, index) => (
           <button
             key={phase.id}
-            onClick={() => setActiveIndex(index)}
+            onClick={(e) => { e.stopPropagation(); setActiveIndex(index); startTimer(); }}
             className="flex items-center justify-center w-11 h-11"
             aria-label={`Go to phase ${index + 1}`}
             data-testid={`dot-phase-${index + 1}`}

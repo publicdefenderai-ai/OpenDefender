@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CarouselItem {
@@ -19,19 +19,31 @@ export function RotatingCardCarousel({
 }: RotatingCardCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  const startTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % items.length);
     }, autoRotateInterval);
-
-    return () => clearInterval(timer);
   }, [items.length, autoRotateInterval]);
+
+  useEffect(() => {
+    startTimer();
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [startTimer]);
 
   const goToIndex = (index: number) => {
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
+    startTimer();
+  };
+
+  const advance = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % items.length);
+    startTimer();
   };
 
   const variants = {
@@ -73,7 +85,14 @@ export function RotatingCardCarousel({
             className="w-full"
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="bg-card border border-border/50 rounded-2xl px-6 py-5 shadow-lg backdrop-blur-sm">
+            <div
+              onClick={advance}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" || e.key === " " ? advance() : undefined}
+              aria-label={`Current: ${items[currentIndex].title}. Tap to advance.`}
+              className="bg-card border border-border/50 rounded-2xl px-6 py-5 shadow-lg backdrop-blur-sm cursor-pointer select-none group transition-shadow hover:shadow-xl active:scale-[0.99]"
+            >
               <div className="flex flex-col items-center text-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center text-primary ring-1 ring-primary/20">
                   {items[currentIndex].icon}
@@ -87,6 +106,9 @@ export function RotatingCardCarousel({
                   </p>
                 </div>
               </div>
+              <p className="text-xs text-muted-foreground/50 text-center mt-3 group-hover:text-muted-foreground/70 transition-colors">
+                Tap to advance
+              </p>
             </div>
           </motion.div>
         </AnimatePresence>
