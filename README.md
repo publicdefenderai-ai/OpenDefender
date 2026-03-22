@@ -182,6 +182,14 @@ This project uses a dual-license structure:
 
 The CC0 license for content is intentional: it maximizes adoption for access-to-justice initiatives so that other legal aid organizations can incorporate this material without restriction.
 
+### Trademark notice
+
+The CC0 dedication does **not** apply to the "OpenDefender" name or associated logos. Those are trademarks and are not included in the public domain dedication. You are free to use, adapt, and redistribute the content and code, but please do not use the OpenDefender name or logo in a way that implies your project is officially affiliated with or endorsed by this project.
+
+### No endorsement
+
+Using or redistributing this project's content or code does not imply endorsement by OpenDefender or its contributors. Please do not represent your use of this material as officially affiliated with, sponsored by, or backed by OpenDefender.
+
 ---
 
 ## Contributing
@@ -198,4 +206,4 @@ Please open an issue before submitting a large pull request.
 
 ---
 
-**Disclaimer**: This platform provides legal information, not legal advice. Always consult with a licensed attorney for legal matters specific to your situation.
+**Not legal advice.** This platform provides general legal information only. Using this site or code does not create an attorney-client relationship. For advice specific to your situation, consult a qualified attorney. See [full disclaimers](https://opendefender.io/disclaimers).

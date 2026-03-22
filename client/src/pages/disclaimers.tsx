@@ -39,7 +39,7 @@ export default function Disclaimers() {
             Important information about using OpenDefender
           </p>
           <p className="text-sm text-white/60 mt-2">
-            Last updated: February 12, 2026
+            Last updated: March 22, 2026
           </p>
         </div>
       </section>
@@ -322,6 +322,40 @@ export default function Disclaimers() {
                   >
                     on GitHub
                   </a>.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Trademark */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Trademark Notice
+            </h2>
+
+            <Card>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  The CC0 public domain dedication does not apply to the "OpenDefender" name or logo. Those are trademarks and are not included. You are free to use, adapt, and share the content and code, but please don't use the OpenDefender name or logo in a way that suggests your project is officially part of or affiliated with this one.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* No Endorsement */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              No Endorsement
+            </h2>
+
+            <Card>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  Using or sharing OpenDefender's content or code does not mean we endorse your project, organization, or legal position. Please don't suggest or imply that OpenDefender backs anything you're doing.
                 </p>
               </CardContent>
             </Card>
