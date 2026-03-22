@@ -18,6 +18,7 @@ OpenDefender is a public legal aid platform providing constitutional rights info
 - Never log, store, or surface user-identifying data beyond the session
 - Never expose test routes, admin bypasses, or debug endpoints in production
 - All session data must auto-delete; cost tracking must be durable (awaited writes)
+- **No secrets in the codebase.** API keys, database credentials, session secrets, and tokens must only ever come from `process.env`. Never assign a secret as a string literal in source code. If a value looks like a key or credential, it belongs in the hosting environment's secret manager, not in code. The `.env` file is gitignored and must never be committed. See `.env.example` for the full list of required variables.
 
 ### 2. Accuracy Above All — No Dummy, Stale, or Placeholder Data in Production
 This has been violated before. Never ship:
