@@ -888,6 +888,16 @@ export function buildSearchIndex(): void {
       url: '/right-to-counsel'
     },
     {
+      id: 'warrants',
+      title: 'Warrants & Your Rights',
+      titleEs: 'Órdenes Judiciales y Sus Derechos',
+      titleZh: '搜查令与您的权利',
+      content: 'What officers need to enter your home, search your belongings, or arrest you. Search warrants, arrest warrants, ICE administrative warrants vs. judicial warrants. Your rights when officers have a warrant and when they do not. When no warrant is needed. Documented concerns about immigration enforcement. What to do at the door.',
+      tags: ['warrant', 'search warrant', 'arrest warrant', 'ICE warrant', 'administrative warrant', 'judicial warrant', 'fourth amendment', 'home entry', 'immigration enforcement', 'consent', 'exigent circumstances', 'terry stop', 'no warrant', 'rights at home', 'I-200', 'I-205', 'border zone', 'expedited removal'],
+      aliases: ['can police enter without warrant', 'do I have to open door', 'ICE at my door', 'warrant requirements', 'when do police need warrant', 'administrative vs judicial warrant', 'ICE form I-200', 'search without warrant', 'what is a warrant'],
+      url: '/warrants'
+    },
+    {
       id: 'first-24-hours',
       title: 'The First 24 Hours After Arrest',
       titleEs: 'Las Primeras 24 Horas Después del Arresto',

@@ -300,6 +300,11 @@ export default function RaidsToolkit() {
                   {lang === 'es' ? 'Encontrar un Abogado' : 'Find an Attorney'}
                 </a>
               </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="/warrants">
+                  {lang === 'es' ? 'Órdenes Judiciales y Sus Derechos' : 'Warrants & Your Rights'}
+                </a>
+              </Button>
             </div>
           </ScrollReveal>
         </div>

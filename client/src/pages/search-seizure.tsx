@@ -363,6 +363,14 @@ export default function SearchSeizure() {
               </AlertDescription>
             </Alert>
           </ScrollReveal>
+          <ScrollReveal>
+            <p className="text-sm text-muted-foreground text-center mt-6">
+              Want to understand when officers need a warrant and how to tell the difference between a court warrant and an ICE administrative document?{" "}
+              <a href="/warrants" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 underline font-medium">
+                Warrants &amp; Your Rights →
+              </a>
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
