@@ -148,7 +148,9 @@ export default function FirstTwentyFourHours() {
             >
               <p className="text-sm text-muted-foreground mt-2">
                 Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest. You don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>.{" "}
-                <Link href="/right-to-counsel" className="underline hover:text-foreground transition-colors">When does the right to an attorney actually begin? →</Link>
+                <Link href="/right-to-counsel" className="underline hover:text-foreground transition-colors">When does the right to an attorney actually begin? →</Link>{" "}
+                Note that an arrest warrant does not give officers the right to search your home.{" "}
+                <Link href="/warrants" className="underline hover:text-foreground transition-colors">Understand what warrants do and don't allow →</Link>
               </p>
             </Step>
           </ScrollReveal>

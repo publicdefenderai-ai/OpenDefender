@@ -447,6 +447,11 @@ export default function KnowYourRights() {
                   {lang === 'es' ? 'Plan Familiar de Emergencia' : 'Family Emergency Plan'}
                 </a>
               </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="/warrants">
+                  {lang === 'es' ? 'Órdenes Judiciales y Sus Derechos' : 'Warrants & Your Rights'}
+                </a>
+              </Button>
             </div>
           </ScrollReveal>
         </div>

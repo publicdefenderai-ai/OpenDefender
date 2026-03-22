@@ -238,6 +238,16 @@ export default function RightsInfo() {
                   Right to an Attorney — Full Guide
                 </Button>
               </Link>
+              <Link href="/warrants">
+                <Button
+                  data-testid="button-warrants"
+                  variant="outline"
+                  className="py-4 px-8 bg-amber-100 dark:bg-amber-900/40 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-800/50"
+                >
+                  <FileText className="mr-2 h-5 w-5" />
+                  Warrants & Your Rights
+                </Button>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
