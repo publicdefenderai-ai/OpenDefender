@@ -487,7 +487,7 @@ i18n
               "faq": {
                 "q1": {
                   "question": "How do I know if I qualify for a public defender?",
-                  "answer": "Eligibility is based on income and assets, typically at or below 125-200% of the federal poverty level, though it varies by jurisdiction. The court will ask about your finances at your first appearance. Be prepared with pay stubs, tax returns, or proof of benefits."
+                  "answer": "Eligibility is based on income and assets. There is no single national standard — thresholds vary by state and court, generally ranging from 125% to 250% of the federal poverty level. The court will ask about your finances at your first appearance. Be prepared with pay stubs, tax returns, or proof of benefits. When in doubt, apply — courts determine eligibility individually."
                 },
                 "q2": {
                   "question": "What if I can't pay fines or fees?",
@@ -524,7 +524,7 @@ i18n
                   "probation": {
                     "title": "Probation Supervision Fees",
                     "description": "Monthly fees charged while on probation to cover supervision costs. Some states have eliminated these fees for low-income individuals.",
-                    "note": "Typical range: $20–$120 per month."
+                    "note": "Typical range: $10–$150 per month, depending on state (44 states charge supervision fees). Some states have eliminated fees for low-income individuals. (Source: Fines and Fees Justice Center, 2022)"
                   },
                   "publicDefender": {
                     "title": "Public Defender Fees",
@@ -554,7 +554,7 @@ i18n
                     "Ask the court clerk for a fee waiver form. It may be called an IFP (In Forma Pauperis) application or a hardship waiver.",
                     "Gather proof of income: recent pay stubs, a tax return, or a letter showing benefits (SNAP, SSI, Medicaid, etc.).",
                     "Submit the form at or before your first hearing — ideally as early as possible.",
-                    "Courts generally approve waivers for incomes at or below 125% of the federal poverty level."
+                    "Court fee waiver thresholds vary by state — commonly 125–200% of the federal poverty level, but some courts use higher thresholds. When in doubt, apply and explain your situation."
                   ]
                 },
                 "paymentPlan": {
@@ -2909,7 +2909,7 @@ i18n
               "title": "Important Notes",
               "pleaBargains": {
                 "title": "Plea Bargains",
-                "text": "Most criminal cases (about 90-95%) are resolved through plea bargains rather than going to trial. This happens during the discovery phase when prosecutors and defense attorneys negotiate reduced charges or sentencing in exchange for a guilty plea."
+                "text": "Most criminal cases are resolved through plea bargains rather than going to trial — approximately 97% in federal courts and an estimated 94–97% in state courts. This happens during the discovery phase when prosecutors and defense attorneys negotiate reduced charges or sentencing in exchange for a guilty plea. (Source: U.S. Sentencing Commission, 2024 Sourcebook of Federal Sentencing Statistics; BJS, Felony Defendants in Large Urban Counties, 2009)"
               },
               "speedyTrial": {
                 "title": "Speedy Trial Rights",
@@ -3010,7 +3010,7 @@ i18n
               },
               "plea": {
                 "title": "Plea Bargains",
-                "intro": "About 90-95% of criminal cases are resolved through plea bargains. Understanding this process helps you make informed decisions.",
+                "intro": "Approximately 97–98% of criminal convictions are resolved through guilty pleas rather than trials. Understanding this process helps you make informed decisions. (Source: U.S. Sentencing Commission, FY 2024; ABA Plea Bargain Task Force Report, 2023)",
                 "whatIs": {
                   "title": "What is a plea bargain?",
                   "description": "A plea bargain is an agreement between you (the defendant) and the prosecutor. You agree to plead guilty to a charge, and in return, you get something - usually a lighter sentence or fewer charges.",
@@ -3190,7 +3190,7 @@ i18n
                   "Attend every court date — missing one leads to a bench warrant",
                   "Follow all bail conditions carefully",
                   "Do not post about your case on social media",
-                  "About 90-95% of cases are resolved through plea bargains"
+                  "Approximately 97–98% of convictions result from guilty pleas, not trials (USSC, 2024)"
                 ]
               },
               "discovery": {
@@ -3919,7 +3919,7 @@ i18n
             "hero": {
               "title": "Privacy Policy",
               "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-              "lastUpdated": "Last Updated: February 12, 2026"
+              "lastUpdated": "Last Updated: March 20, 2026"
             },
             "notice": {
               "title": "Privacy-First Platform:",
@@ -4134,7 +4134,7 @@ i18n
               "purpose": "This document explains how much bail you owe, any conditions you must follow while released, and the consequences of violating those conditions.",
               "whatToDo": "Follow ALL conditions strictly. Violations can result in re-arrest and bail being revoked. Keep this document - it lists your next court date.",
               "sections": {
-                "bailAmount": { "label": "Bail Amount", "explanation": "The money required for your release. You may pay the full amount (refunded after case ends) or use a bail bondsman (typically 10% non-refundable fee)." },
+                "bailAmount": { "label": "Bail Amount", "explanation": "The money required for your release. You may pay the full amount (refunded after case ends) or use a bail bondsman (typically 10–15% non-refundable fee, varies by state)." },
                 "conditions": { "label": "Release Conditions", "explanation": "Rules you must follow while out on bail - like not contacting certain people, not leaving the state, or drug testing. Breaking these can send you back to jail." },
                 "nextCourtDate": { "label": "Next Court Date", "explanation": "Your next required court appearance. Missing this date forfeits your bail money and results in an arrest warrant." }
               }
@@ -5298,7 +5298,7 @@ i18n
               "faq": {
                 "q1": {
                   "question": "¿Cómo sé si califico para un defensor público?",
-                  "answer": "La elegibilidad se basa en ingresos y activos, típicamente al 125-200% del nivel federal de pobreza o menos, aunque varía según la jurisdicción. La corte le preguntará sobre sus finanzas en su primera comparecencia. Esté preparado con recibos de pago, declaraciones de impuestos o prueba de beneficios."
+                  "answer": "La elegibilidad se basa en ingresos y activos. No existe un estándar nacional único — los umbrales varían por estado y tribunal, generalmente entre el 125% y el 250% del nivel federal de pobreza. La corte le preguntará sobre sus finanzas en su primera comparecencia. Esté preparado con recibos de pago, declaraciones de impuestos o prueba de beneficios. En caso de duda, solicite — los tribunales determinan la elegibilidad de forma individual."
                 },
                 "q2": {
                   "question": "¿Qué pasa si no puedo pagar multas o tarifas?",
@@ -5335,7 +5335,7 @@ i18n
                   "probation": {
                     "title": "Tarifas de Supervisión de Libertad Condicional",
                     "description": "Tarifas mensuales cobradas mientras está en libertad condicional para cubrir los costos de supervisión. Algunos estados han eliminado estas tarifas para personas de bajos ingresos.",
-                    "note": "Rango típico: $20–$120 por mes."
+                    "note": "Rango típico: $10–$150 por mes, según el estado (44 estados cobran tarifas de supervisión). Algunos estados han eliminado las tarifas para personas de bajos ingresos. (Fuente: Centro de Justicia de Multas y Tarifas, 2022)"
                   },
                   "publicDefender": {
                     "title": "Tarifas del Defensor Público",
@@ -7720,7 +7720,7 @@ i18n
               "title": "Notas Importantes",
               "pleaBargains": {
                 "title": "Acuerdos de Culpabilidad",
-                "text": "La mayoría de los casos penales (aproximadamente 90-95%) se resuelven mediante acuerdos de culpabilidad en lugar de ir a juicio. Esto sucede durante la fase de descubrimiento cuando los fiscales y abogados defensores negocian cargos reducidos o sentencias a cambio de una declaración de culpabilidad."
+                "text": "La mayoría de los casos penales se resuelven mediante acuerdos de culpabilidad en lugar de ir a juicio — aproximadamente el 97% en tribunales federales y un estimado del 94–97% en tribunales estatales. Esto sucede durante la fase de descubrimiento cuando los fiscales y abogados defensores negocian cargos reducidos o sentencias a cambio de una declaración de culpabilidad. (Fuente: Comisión de Sentencias de EE.UU., Libro Fuente 2024; BJS, Acusados por Delitos Graves en Grandes Condados Urbanos, 2009)"
               },
               "speedyTrial": {
                 "title": "Derechos a Juicio Rápido",
@@ -7821,7 +7821,7 @@ i18n
               },
               "plea": {
                 "title": "Acuerdos de Culpabilidad",
-                "intro": "Aproximadamente 90-95% de los casos criminales se resuelven mediante acuerdos de culpabilidad. Entender este proceso le ayuda a tomar decisiones informadas.",
+                "intro": "Aproximadamente el 97–98% de las condenas penales se resuelven mediante declaraciones de culpabilidad en lugar de juicios. Entender este proceso le ayuda a tomar decisiones informadas. (Fuente: Comisión de Sentencias de EE.UU., año fiscal 2024; Informe del Grupo de Trabajo sobre Acuerdos de Culpabilidad de la ABA, 2023)",
                 "whatIs": {
                   "title": "¿Qué es un acuerdo de culpabilidad?",
                   "description": "Un acuerdo de culpabilidad es un convenio entre usted (el acusado) y el fiscal. Usted acepta declararse culpable de un cargo, y a cambio, obtiene algo - usualmente una sentencia más leve o menos cargos.",
@@ -8001,7 +8001,7 @@ i18n
                   "Asista a cada fecha de audiencia — faltar lleva a una orden de arresto",
                   "Siga todas las condiciones de fianza cuidadosamente",
                   "No publique sobre su caso en redes sociales",
-                  "Aproximadamente el 90-95% de los casos se resuelven mediante acuerdos de culpabilidad"
+                  "Aproximadamente el 97–98% de las condenas resultan de declaraciones de culpabilidad, no de juicios (USSC, 2024)"
                 ]
               },
               "discovery": {
@@ -8730,7 +8730,7 @@ i18n
             "hero": {
               "title": "Política de Privacidad",
               "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-              "lastUpdated": "Última actualización: 12 de febrero de 2026"
+              "lastUpdated": "Última actualización: 20 de marzo de 2026"
             },
             "notice": {
               "title": "Plataforma que prioriza la privacidad:",
@@ -8945,7 +8945,7 @@ i18n
               "purpose": "Este documento explica cuánta fianza debe, cualquier condición que debe seguir mientras esté liberado, y las consecuencias de violar esas condiciones.",
               "whatToDo": "Siga TODAS las condiciones estrictamente. Las violaciones pueden resultar en re-arresto y revocación de la fianza. Guarde este documento - lista su próxima fecha de corte.",
               "sections": {
-                "bailAmount": { "label": "Monto de Fianza", "explanation": "El dinero requerido para su liberación. Puede pagar el monto completo (reembolsado después del caso) o usar un fiador (típicamente 10% no reembolsable)." },
+                "bailAmount": { "label": "Monto de Fianza", "explanation": "El dinero requerido para su liberación. Puede pagar el monto completo (reembolsado después del caso) o usar un fiador (típicamente 10–15% no reembolsable, varía según el estado)." },
                 "conditions": { "label": "Condiciones de Liberación", "explanation": "Reglas que debe seguir mientras esté en libertad bajo fianza - como no contactar a ciertas personas, no salir del estado, o pruebas de drogas. Romper estas puede enviarlo de vuelta a la cárcel." },
                 "nextCourtDate": { "label": "Próxima Fecha de Corte", "explanation": "Su próxima comparecencia requerida. Faltar a esta fecha confisca su dinero de fianza y resulta en una orden de arresto." }
               }
@@ -10110,7 +10110,7 @@ i18n
               "faq": {
                 "q1": {
                   "question": "我如何知道自己是否有资格获得公设辩护人？",
-                  "answer": "资格依据收入和资产确定，通常在联邦贫困线的125-200%以下，但因辖区而异。法院会在你第一次出庭时询问你的财务状况。请准备好工资单、纳税申报表或福利证明。"
+                  "answer": "资格依据收入和资产确定。没有统一的全国标准——各州和法院的标准不同，通常在联邦贫困线的125%至250%之间。法院会在你第一次出庭时询问你的财务状况。请准备好工资单、纳税申报表或福利证明。如有疑问，请申请——法院会对每个人单独判定资格。"
                 },
                 "q2": {
                   "question": "如果我无法支付罚款或费用怎么办？",
@@ -10147,7 +10147,7 @@ i18n
                   "probation": {
                     "title": "缓刑监管费",
                     "description": "缓刑期间每月收取的费用，用于支付监管成本。部分州已为低收入人群取消这些费用。",
-                    "note": "典型范围：每月20至120美元。"
+                    "note": "典型范围：每月10至150美元，因州而异（44个州收取监督费）。部分州已为低收入人士免除此费用。（来源：罚款与费用司法中心，2022年）"
                   },
                   "publicDefender": {
                     "title": "公设辩护人费用",
@@ -12506,7 +12506,7 @@ i18n
               "title": "重要说明",
               "pleaBargains": {
                 "title": "认罪协议",
-                "text": "大多数刑事案件（约90-95%）通过认罪协议而非审判来解决。这通常发生在证据开示阶段，检察官和辩护律师就减少指控或量刑进行谈判，以换取认罪。"
+                "text": "大多数刑事案件通过认罪协议而非审判来解决——联邦法院约97%，州法院估计约94–97%。这通常发生在证据开示阶段，检察官和辩护律师就减少指控或量刑进行谈判，以换取认罪。（来源：美国量刑委员会2024年联邦量刑统计年鉴；司法统计局，2009年大城市县重罪被告数据）"
               },
               "speedyTrial": {
                 "title": "快速审判权",
@@ -12607,7 +12607,7 @@ i18n
               },
               "plea": {
                 "title": "认罪协议",
-                "intro": "大约90-95%的刑事案件通过认罪协议解决。了解这个过程有助于您做出明智的决定。",
+                "intro": "约97–98%的刑事定罪通过认罪协议而非审判解决。了解这个过程有助于您做出明智的决定。（来源：美国量刑委员会，2024财年；美国律师协会认罪协议工作组报告，2023年）",
                 "whatIs": {
                   "title": "什么是认罪协议？",
                   "description": "认罪协议是您（被告）和检察官之间的协议。您同意对某项指控认罪，作为交换，您可以获得一些好处 - 通常是较轻的判决或更少的指控。",
@@ -12787,7 +12787,7 @@ i18n
                   "每次开庭日期都要到场——缺席会导致法院签发逮捕令",
                   "仔细遵守所有保释条件",
                   "不要在社交媒体上发布与案件有关的内容",
-                  "大约90-95%的案件通过认罪协商解决"
+                  "约97–98%的定罪来自认罪协议而非审判（美国量刑委员会，2024年）"
                 ]
               },
               "discovery": {
@@ -13507,7 +13507,7 @@ i18n
             "hero": {
               "title": "隐私政策",
               "subtitle": "我们致力于保护您的隐私。本政策说明我们如何处理您的信息。",
-              "lastUpdated": "最后更新：2026年2月12日"
+              "lastUpdated": "最后更新：2026年3月20日"
             },
             "notice": {
               "title": "隐私优先平台：",
@@ -13722,7 +13722,7 @@ i18n
               "purpose": "本文件说明您需要支付多少保释金、释放期间必须遵守的条件以及违反这些条件的后果。",
               "whatToDo": "严格遵守所有条件。违反可能导致重新逮捕和保释被撤销。保管好这份文件——上面列有您的下次开庭日期。",
               "sections": {
-                "bailAmount": { "label": "保释金金额", "explanation": "释放您所需的金额。您可以支付全额（案件结束后退还），也可以找保释担保人（通常需支付10%的不可退还费用）。" },
+                "bailAmount": { "label": "保释金金额", "explanation": "释放您所需的金额。您可以支付全额（案件结束后退还），也可以找保释担保人（通常需支付10–15%的不可退还费用，因州而异）。" },
                 "conditions": { "label": "释放条件", "explanation": "保释期间必须遵守的规则——比如不得联系某些人、不得离开本州或接受药物检测。违反这些规定可能会让您重新入狱。" },
                 "nextCourtDate": { "label": "下次开庭日期", "explanation": "您下次必须出庭的时间。缺席将导致保释金被没收并发出逮捕令。" }
               }
