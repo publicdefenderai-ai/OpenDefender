@@ -50,7 +50,7 @@ export default function JailPhoneCall() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Your first call should go to a family member or trusted friend — not your attorney (they likely won't answer an unfamiliar collect call). The goal of this call is to transfer information and get the right people moving.
+                Your first call should go to a family member or trusted friend, not your attorney (they likely won't answer an unfamiliar collect call). The goal of this call is to transfer information and get the right people moving.
               </p>
               <div className="space-y-3">
                 <p className="font-semibold text-sm text-foreground">Tell the person you call:</p>
@@ -117,7 +117,7 @@ export default function JailPhoneCall() {
                   },
                   {
                     category: "Alibi information",
-                    examples: "Don't tell anyone where you were or who you were with — share that only with your attorney.",
+                    examples: "Don't tell anyone where you were or who you were with. Share that only with your attorney.",
                   },
                   {
                     category: "Other people involved",
@@ -180,15 +180,15 @@ export default function JailPhoneCall() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="flex-shrink-0 mt-0.5">–</span>
-                    <span>Don't vent about the case, the charges, or the police — even when you're frustrated.</span>
+                    <span>Don't vent about the case, the charges, or the police, even when you're frustrated.</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="flex-shrink-0 mt-0.5">–</span>
-                    <span>Don't ask for case updates via phone — prosecutors can subpoena information your family relays back to you.</span>
+                    <span>Don't ask for case updates via phone. Prosecutors can subpoena information your family relays back to you.</span>
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="flex-shrink-0 mt-0.5">–</span>
-                    <span>Don't assume that text messages, letters, or emails from jail are any more private than phone calls — they aren't.</span>
+                    <span>Don't assume that text messages, letters, or emails from jail are any more private than phone calls. They aren't.</span>
                   </li>
                 </ul>
               </div>
@@ -210,9 +210,9 @@ export default function JailPhoneCall() {
               </p>
               <ul className="space-y-2">
                 {[
-                  "Verify with your attorney that the line is designated as an attorney-client call — some facilities require advance registration of attorney phone numbers.",
+                  "Verify with your attorney that the line is designated as an attorney-client call. Some facilities require advance registration of attorney phone numbers.",
                   "Ask your attorney explicitly what is and isn't safe to discuss over the phone.",
-                  "If you believe your attorney calls are being recorded, tell your attorney immediately — this can be grounds for a serious legal challenge.",
+                  "If you believe your attorney calls are being recorded, tell your attorney immediately. This can be grounds for a serious legal challenge.",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="flex-shrink-0 mt-0.5">–</span>

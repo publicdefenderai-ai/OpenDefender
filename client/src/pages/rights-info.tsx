@@ -222,7 +222,7 @@ export default function RightsInfo() {
                 <Button
                   data-testid="button-search-rights"
                   variant="outline"
-                  className="py-4 px-8 bg-indigo-100 dark:bg-indigo-900/40 border-indigo-300 dark:border-indigo-700 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-200 dark:hover:bg-indigo-800/50"
+                  className="py-4 px-8 bg-blue-100 dark:bg-blue-900/40 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/50"
                 >
                   <Search className="mr-2 h-5 w-5" />
                   Rights During a Search
@@ -285,7 +285,7 @@ export default function RightsInfo() {
                 {selectedRight === 'silent' && <BrandShieldIcon size={20} />}
                 {selectedRight === 'attorney' && <Scale className="h-5 w-5 text-green-600" />}
                 {selectedRight === 'phoneCall' && <Phone className="h-5 w-5 text-blue-500" />}
-                {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-purple-600" />}
+                {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-blue-600" />}
               </span>
               <span className="truncate">{selectedRight && t(`rights.quickRights.${selectedRight}.title`)}</span>
             </DialogTitle>
