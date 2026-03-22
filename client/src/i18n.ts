@@ -701,7 +701,7 @@ i18n
                   "description": "Nation's largest grassroots mental health organization providing support, education, and advocacy. Local chapters offer support groups and resources."
                 },
                 "openPath": {
-                  "description": "Nonprofit network of therapists offering sessions at reduced rates ($30-$80) for those without adequate insurance coverage."
+                  "description": "Nonprofit network of therapists offering sessions at reduced rates for those without adequate insurance coverage. Check current session rates at openpathcollective.org."
                 },
                 "sevenCups": {
                   "description": "Free online chat with trained listeners for emotional support. Also offers affordable online therapy options."
@@ -717,7 +717,7 @@ i18n
                 },
                 "q2": {
                   "question": "How can I find affordable counseling?",
-                  "answer": "Options include: community mental health centers (sliding scale fees), Open Path Collective ($30-80 sessions), university training clinics (reduced rates), employee assistance programs (if employed), and online therapy platforms. Many therapists offer sliding scales — ask."
+                  "answer": "Options include: community mental health centers (sliding scale fees), Open Path Collective (reduced-rate sessions — check current pricing at openpathcollective.org), university training clinics (reduced rates), employee assistance programs (if employed), and online therapy platforms. Many therapists offer sliding scales — ask."
                 },
                 "q3": {
                   "question": "What if I don't have insurance?",
@@ -2358,15 +2358,15 @@ i18n
                 "title": "DACA (Deferred Action for Childhood Arrivals)",
                 "whatIs": "What is DACA?",
                 "whatIsText": "DACA provides temporary protection from deportation and work authorization for individuals who came to the U.S. as children. It does not provide a path to citizenship or legal permanent residence.",
-                "eligibility": "Basic Eligibility Requirements",
-                "req1": "Were under 31 years old as of June 15, 2012",
+                "eligibility": "Basic Eligibility Requirements (set in 2012 — these dates are fixed and do not move forward over time)",
+                "req1": "Were under 31 years old as of June 15, 2012 (meaning: born after June 15, 1981)",
                 "req2": "Came to the U.S. before age 16",
                 "req3": "Continuously resided in U.S. since June 15, 2007",
                 "req4": "Were present in U.S. on June 15, 2012",
                 "req5": "Currently in school, graduated, or have GED",
                 "req6": "No felony, significant misdemeanor, or 3+ misdemeanors",
                 "renewal": "Renewal Timeline",
-                "renewalText": "Submit renewal applications 120-150 days before your current DACA expires. Processing typically takes 3-6 months."
+                "renewalText": "Submit renewal applications 120-150 days before your current DACA expires. Processing times vary and change frequently — check current wait times at uscis.gov/i-821d-processing-times before submitting."
               },
               "tpsSection": {
                 "title": "TPS (Temporary Protected Status)",
@@ -5365,7 +5365,7 @@ i18n
                     "Pida al secretario de la corte un formulario de exoneración de tarifas. Puede llamarse solicitud IFP (In Forma Pauperis) o exoneración por dificultades económicas.",
                     "Reúna prueba de ingresos: recibos de pago recientes, una declaración de impuestos o una carta que muestre beneficios (SNAP, SSI, Medicaid, etc.).",
                     "Presente el formulario en o antes de su primera audiencia — idealmente lo antes posible.",
-                    "Las cortes generalmente aprueban exoneraciones para ingresos al o por debajo del 125% del nivel federal de pobreza."
+                    "El umbral varía por estado — comúnmente del 125 al 200% del nivel federal de pobreza, pero algunos tribunales usan umbrales más altos. En caso de duda, solicite y explique su situación."
                   ]
                 },
                 "paymentPlan": {
@@ -5512,7 +5512,7 @@ i18n
                   "description": "La organización de salud mental de base más grande del país que proporciona apoyo, educación y defensa. Los capítulos locales ofrecen grupos de apoyo y recursos."
                 },
                 "openPath": {
-                  "description": "Red sin fines de lucro de terapeutas que ofrecen sesiones a tarifas reducidas ($30-$80) para quienes no tienen cobertura de seguro adecuada."
+                  "description": "Red sin fines de lucro de terapeutas que ofrecen sesiones a tarifas reducidas para quienes no tienen cobertura de seguro adecuada. Consulte las tarifas actuales en openpathcollective.org."
                 },
                 "sevenCups": {
                   "description": "Chat en línea gratuito con oyentes capacitados para apoyo emocional. También ofrece opciones de terapia en línea asequibles."
@@ -5528,7 +5528,7 @@ i18n
                 },
                 "q2": {
                   "question": "¿Cómo puedo encontrar consejería asequible?",
-                  "answer": "Las opciones incluyen: centros de salud mental comunitarios (tarifas de escala móvil), Open Path Collective (sesiones de $30-80), clínicas de capacitación universitarias (tarifas reducidas), programas de asistencia al empleado (si está empleado), y plataformas de terapia en línea. Muchos terapeutas ofrecen escalas móviles — pregunte."
+                  "answer": "Las opciones incluyen: centros de salud mental comunitarios (tarifas de escala móvil), Open Path Collective (sesiones a tarifas reducidas — consulte precios actuales en openpathcollective.org), clínicas de capacitación universitarias (tarifas reducidas), programas de asistencia al empleado (si está empleado), y plataformas de terapia en línea. Muchos terapeutas ofrecen escalas móviles — pregunte."
                 },
                 "q3": {
                   "question": "¿Qué pasa si no tengo seguro?",
@@ -7169,15 +7169,15 @@ i18n
                 "title": "DACA (Acción Diferida para los Llegados en la Infancia)",
                 "whatIs": "¿Qué es DACA?",
                 "whatIsText": "DACA proporciona protección temporal contra la deportación y autorización de trabajo para personas que llegaron a EE.UU. siendo niños. No proporciona un camino hacia la ciudadanía o residencia permanente legal.",
-                "eligibility": "Requisitos Básicos de Elegibilidad",
-                "req1": "Tenía menos de 31 años a partir del 15 de junio de 2012",
+                "eligibility": "Requisitos Básicos de Elegibilidad (establecidos en 2012 — estas fechas son fijas y no avanzan con el tiempo)",
+                "req1": "Tenía menos de 31 años a partir del 15 de junio de 2012 (es decir: nacido después del 15 de junio de 1981)",
                 "req2": "Llegó a EE.UU. antes de los 16 años",
                 "req3": "Ha residido continuamente en EE.UU. desde el 15 de junio de 2007",
                 "req4": "Estaba presente en EE.UU. el 15 de junio de 2012",
                 "req5": "Actualmente en la escuela, graduado, o tiene GED",
                 "req6": "Sin delitos graves, delitos menores significativos, o 3+ delitos menores",
                 "renewal": "Cronograma de Renovación",
-                "renewalText": "Presente solicitudes de renovación 120-150 días antes de que expire su DACA actual. El procesamiento típicamente toma 3-6 meses."
+                "renewalText": "Presente solicitudes de renovación 120-150 días antes de que expire su DACA actual. Los tiempos de procesamiento varían y cambian con frecuencia — consulte los tiempos de espera actuales en uscis.gov/i-821d-processing-times antes de presentar."
               },
               "tpsSection": {
                 "title": "TPS (Estatus de Protección Temporal)",
@@ -10177,7 +10177,7 @@ i18n
                     "向法院书记官索取费用豁免申请表。可能称为贫困申请或经济困难豁免。",
                     "收集收入证明：近期工资单、纳税申报表或显示福利（SNAP、SSI、医疗补助等）的信件。",
                     "在第一次听证会时或之前提交表格——越早越好。",
-                    "法院通常批准收入在联邦贫困线125%以下的豁免申请。"
+                    "各州费用豁免门槛不同——通常为联邦贫困线的125–200%，但部分法院使用更高标准。如有疑问，申请并说明情况。"
                   ]
                 },
                 "paymentPlan": {
@@ -10324,7 +10324,7 @@ i18n
                   "description": "全国最大的草根心理健康组织，提供支持、教育和倡导。当地分会提供支持团体和资源。"
                 },
                 "openPath": {
-                  "description": "非营利治疗师网络，为没有足够保险的人提供优惠费率（每次30至80美元）的咨询。"
+                  "description": "非营利治疗师网络，为没有足够保险的人提供优惠费率的咨询。请在 openpathcollective.org 查看当前收费标准。"
                 },
                 "sevenCups": {
                   "description": "与受训倾听者进行免费在线聊天，获得情感支持。也提供经济实惠的在线治疗选项。"
@@ -10340,7 +10340,7 @@ i18n
                 },
                 "q2": {
                   "question": "如何找到经济实惠的心理咨询？",
-                  "answer": "选项包括：社区心理健康中心（浮动收费）、Open Path Collective（每次30至80美元）、大学培训诊所（优惠费率）、员工援助计划（如在职）和在线治疗平台。许多治疗师提供浮动收费——主动询问。"
+                  "answer": "选项包括：社区心理健康中心（浮动收费）、Open Path Collective（优惠费率咨询——请在 openpathcollective.org 查看当前价格）、大学培训诊所（优惠费率）、员工援助计划（如在职）和在线治疗平台。许多治疗师提供浮动收费——主动询问。"
                 },
                 "q3": {
                   "question": "如果我没有保险怎么办？",
@@ -11955,15 +11955,15 @@ i18n
                 "title": "DACA（童年入境暂缓遣返）",
                 "whatIs": "什么是 DACA？",
                 "whatIsText": "DACA 为儿童时期来到美国的个人提供临时免驱逐保护和工作许可。它不提供入籍或合法永久居留的途径。",
-                "eligibility": "基本资格要求",
-                "req1": "截至2012年6月15日未满31岁",
+                "eligibility": "基本资格要求（于2012年设定，这些日期是固定的，不会随时间推移而变化）",
+                "req1": "截至2012年6月15日未满31岁（即：1981年6月15日之后出生）",
                 "req2": "16岁之前来到美国",
                 "req3": "自2007年6月15日以来持续居住在美国",
                 "req4": "2012年6月15日在美国境内",
                 "req5": "目前在校、已毕业或拥有 GED",
                 "req6": "无重罪、重大轻罪或3次以上轻罪",
                 "renewal": "续期时间表",
-                "renewalText": "在当前 DACA 到期前120-150天提交续期申请。处理通常需要3-6个月。"
+                "renewalText": "在当前 DACA 到期前120-150天提交续期申请。处理时间因情况而异且经常变化——提交前请在 uscis.gov/i-821d-processing-times 查看最新等待时间。"
               },
               "tpsSection": {
                 "title": "TPS（临时保护身份）",
