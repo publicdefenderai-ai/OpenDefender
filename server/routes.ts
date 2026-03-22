@@ -233,6 +233,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/legal-aid-organizations", async (req, res) => {
     try {
       const { state, organizationType } = req.query;
+      if (state && (typeof state !== 'string' || state.length > 50)) {
+        return res.status(400).json({ success: false, error: "Invalid state parameter" });
+      }
+      if (organizationType && (typeof organizationType !== 'string' || organizationType.length > 100)) {
+        return res.status(400).json({ success: false, error: "Invalid organizationType parameter" });
+      }
       const organizations = await storage.getLegalAidOrganizations(
         state as string,
         organizationType as string
@@ -260,6 +266,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         : criminalCharges;
       
       // Filter by search term (search in both English and Spanish)
+      if (search && typeof search === 'string' && search.length > 100) {
+        return res.status(400).json({ success: false, error: "Search term too long" });
+      }
       if (search && typeof search === 'string') {
         const searchLower = search.toLowerCase();
         charges = charges.filter(charge => {
@@ -984,16 +993,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Privacy Consent Tracking - Record user consent (anonymous)
+  const privacyConsentSchema = z.object({
+    sessionId: z.string().min(10).max(100),
+    consentType: z.string().min(1).max(50),
+    consentVersion: z.string().min(1).max(20),
+    granted: z.boolean(),
+  });
+
   app.post("/api/privacy-consent", writeRateLimiter, async (req, res) => {
     try {
-      const { sessionId, consentType, consentVersion, granted } = req.body;
-      
-      if (!sessionId || !consentType || !consentVersion || granted === undefined) {
-        return res.status(400).json({ 
-          success: false, 
-          error: "Missing required fields: sessionId, consentType, consentVersion, granted" 
+      const parsed = privacyConsentSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({
+          success: false,
+          error: "Invalid request: " + parsed.error.issues.map(i => i.message).join(", ")
         });
       }
+      const { sessionId, consentType, consentVersion, granted } = parsed.data;
       
       // Hash the session ID for privacy (we don't store the actual session ID)
       const crypto = await import('crypto');
