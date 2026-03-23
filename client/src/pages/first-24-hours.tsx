@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
-import { Phone, Shield, Scale, MessageSquare } from "lucide-react";
+import { Phone, Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
 import { LegalTerm } from "@/components/ui/legal-term";
 
 interface StepProps {
@@ -312,6 +312,7 @@ export default function FirstTwentyFourHours() {
                 { href: "/jail-phone-call", icon: Phone, title: "Jail Phone Call Guide" },
                 { href: "/process", icon: Scale, title: "Criminal Justice Process" },
                 { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
+                { href: "/collateral-consequences", icon: BookOpen, title: "Hidden Consequences of a Conviction" },
                 { href: "/case-guidance", icon: MessageSquare, title: "Get Personalized Guidance" },
               ].map((item) => (
                 <Link key={item.href} href={item.href}>

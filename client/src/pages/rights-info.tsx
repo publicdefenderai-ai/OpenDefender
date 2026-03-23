@@ -248,6 +248,16 @@ export default function RightsInfo() {
                   Warrants & Your Rights
                 </Button>
               </Link>
+              <Link href="/collateral-consequences">
+                <Button
+                  data-testid="button-collateral-consequences"
+                  variant="outline"
+                  className="py-4 px-8 bg-slate-100 dark:bg-slate-800/40 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700/50"
+                >
+                  <FileX className="mr-2 h-5 w-5" />
+                  Hidden Consequences of a Conviction
+                </Button>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
