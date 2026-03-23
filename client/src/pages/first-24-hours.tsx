@@ -205,9 +205,11 @@ export default function FirstTwentyFourHours() {
                 "Don't call the alleged victim, even to apologize.",
               ]}
             >
-              <p className="text-sm text-muted-foreground mt-2">
-                <Link href="/jail-phone-call" className="underline hover:text-foreground transition-colors">Jail Phone Call Guide: what to say and what never to say →</Link>
-              </p>
+              <div className="flex gap-3 flex-wrap mt-2">
+                <Link href="/jail-phone-call">
+                  <Button variant="outline" size="sm">Jail Phone Call Guide</Button>
+                </Link>
+              </div>
             </Step>
           </ScrollReveal>
 
@@ -238,9 +240,11 @@ export default function FirstTwentyFourHours() {
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">5.</span><span><strong>Property bond:</strong> use home equity as collateral instead of cash. Risk: the court can place a lien on the property if you miss a hearing.</span></li>
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily.</strong> Sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
                 </ol>
-                <p className="text-sm text-muted-foreground mt-3">
-                  <a href="/process#bail-guide" className="underline hover:text-foreground transition-colors">How bail works: types, options if you can't afford it, and conditions →</a>
-                </p>
+                <div className="flex gap-3 flex-wrap mt-3">
+                  <Link href="/process#bail-guide">
+                    <Button variant="outline" size="sm">How Bail Works</Button>
+                  </Link>
+                </div>
               </div>
             </Step>
           </ScrollReveal>
@@ -262,10 +266,16 @@ export default function FirstTwentyFourHours() {
                 "Don't make any deals or statements to prosecutors without a lawyer present.",
               ]}
             >
-              <div className="flex gap-4 mt-2 flex-wrap">
-                <Link href="/?search=public-defender" className="text-sm underline hover:text-foreground transition-colors">Find a Public Defender →</Link>
-                <Link href="/case-guidance" className="text-sm underline hover:text-foreground transition-colors">Get Personalized Guidance →</Link>
-                <Link href="/right-to-counsel" className="text-sm underline hover:text-foreground transition-colors">Understanding your right to an attorney →</Link>
+              <div className="flex gap-3 flex-wrap mt-2">
+                <Link href="/?search=public-defender">
+                  <Button variant="outline" size="sm">Find a Public Defender</Button>
+                </Link>
+                <Link href="/case-guidance">
+                  <Button variant="outline" size="sm">Get Personalized Guidance</Button>
+                </Link>
+                <Link href="/right-to-counsel">
+                  <Button variant="outline" size="sm">Right to an Attorney</Button>
+                </Link>
               </div>
             </Step>
           </ScrollReveal>
