@@ -1,4 +1,6 @@
+import { useState, useRef } from "react";
 import { Link } from "wouter";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { AlertTriangle, CheckCircle, XCircle, Info } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -24,6 +26,127 @@ function SectionAnchor({ id, children }: { id: string; children: React.ReactNode
   return (
     <div id={id} className="scroll-mt-24">
       {children}
+    </div>
+  );
+}
+
+const AT_THE_DOOR_STEPS = [
+  "Do not open the door. You can speak through the door or a window.",
+  'Ask: "Do you have a warrant?" You have the right to ask this.',
+  "If they say yes: ask them to slide it under the door. Read it before doing anything else.",
+  "Check the document: look for a judge's signature and your address. If it is signed by an immigration officer rather than a judge, it does not allow officers to enter your home without your consent.",
+  'If it is a valid judicial warrant: say "I am invoking my right to remain silent" and contact your attorney as soon as possible. Do not physically resist.',
+  'If there is no judicial warrant: say "I do not consent to entry." You can say this calmly through the door.',
+  "After the encounter: write down officer names, badge numbers, what was said, and what documents you saw.",
+];
+
+function AtTheDoorSteps({ scrollToWhatToDo }: { scrollToWhatToDo: () => void }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
+  return (
+    <div className="relative" ref={ref}>
+      <motion.div
+        className="absolute left-[13px] top-[13px] bottom-[13px] w-0.5 bg-amber-200 dark:bg-amber-800 origin-top"
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: inView ? 1 : 0 }}
+        transition={{ duration: 1.4, ease: "easeOut" }}
+      />
+      <ol className="space-y-4">
+        {AT_THE_DOOR_STEPS.map((text, i) => (
+          <motion.li
+            key={i}
+            className="flex items-start gap-4"
+            initial={{ opacity: 0, x: -8 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.35, delay: i * 0.12 }}
+          >
+            <span className="w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-sm font-bold flex items-center justify-center flex-shrink-0 mt-0.5 relative z-10">
+              {i + 1}
+            </span>
+            <span className="text-sm text-muted-foreground leading-relaxed">{text}</span>
+          </motion.li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+const EXCEPTION_ITEMS = [
+  {
+    title: "Your consent",
+    description: "You gave officers permission to search or to enter. This is the most common way officers get around the warrant requirement.",
+    limit: "You have the right to refuse. Saying 'I do not consent' is legal and cannot be held against you. Consent obtained through pressure or deception may be challenged in court.",
+  },
+  {
+    title: "Emergency (exigent circumstances)",
+    description: "Officers face a real emergency: someone is in danger, a suspect is fleeing, or evidence is about to be destroyed.",
+    limit: "The emergency must be genuine and urgent, not invented after the fact. Courts look carefully at whether a real emergency existed.",
+  },
+  {
+    title: "Plain view",
+    description: "Officers are already legally present and can see contraband without searching for it.",
+    limit: "Officers must already be lawfully present. They cannot trespass to get a 'plain view' of something.",
+  },
+  {
+    title: "Search during a lawful arrest",
+    description: "When officers make a valid arrest, they can search the person and the area immediately around them for weapons or evidence.",
+    limit: "This does not extend to the whole house or vehicle. It covers the person and what's within arm's reach.",
+  },
+  {
+    title: "Vehicle searches",
+    description: "Cars have less privacy protection than homes under the law. Officers with probable cause can search a vehicle without a warrant.",
+    limit: "They still need a real reason. A hunch is not enough. The search must relate to that reason.",
+  },
+  {
+    title: "Brief investigative stop (Terry stop)",
+    description: "Officers with reasonable suspicion may briefly stop and question you, and may pat you down for weapons.",
+    limit: "A pat-down is for weapons only, not a full search. 'Reasonable suspicion' must be based on specific facts, not a general feeling.",
+  },
+];
+
+function ExceptionCards() {
+  const [visibleCount, setVisibleCount] = useState(1);
+
+  const advance = () => {
+    setVisibleCount((c) => Math.min(c + 1, EXCEPTION_ITEMS.length));
+  };
+
+  return (
+    <div className="space-y-3">
+      <AnimatePresence>
+        {EXCEPTION_ITEMS.slice(0, visibleCount).map((item, i) => {
+          const isActive = i === visibleCount - 1;
+          const hasMore = visibleCount < EXCEPTION_ITEMS.length;
+          return (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.38 }}
+            >
+              <Card
+                className={`transition-shadow ${isActive && hasMore ? "cursor-pointer hover:shadow-md ring-1 ring-amber-200 dark:ring-amber-800" : ""}`}
+                onClick={isActive && hasMore ? advance : undefined}
+              >
+                <CardContent className="p-5">
+                  <p className="text-sm font-semibold text-foreground mb-1">{item.title}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
+                  <p className="text-xs text-muted-foreground">
+                    <span className="font-medium text-foreground">The limit: </span>
+                    {item.limit}
+                  </p>
+                  {isActive && hasMore && (
+                    <p className="text-xs text-blue-600 dark:text-blue-400 mt-3 font-medium">
+                      Tap to see the next exception →
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            </motion.div>
+          );
+        })}
+      </AnimatePresence>
     </div>
   );
 }
@@ -93,24 +216,7 @@ export default function Warrants() {
             </Alert>
             <Card>
               <CardContent className="p-6">
-                <ol className="space-y-4">
-                  {[
-                    "Do not open the door. You can speak through the door or a window.",
-                    'Ask: "Do you have a warrant?" You have the right to ask this.',
-                    "If they say yes: ask them to slide it under the door. Read it before doing anything else.",
-                    "Check the document: look for a judge's signature and your address. If it is signed by an immigration officer rather than a judge, it does not allow officers to enter your home without your consent.",
-                    'If it is a valid judicial warrant: say "I am invoking my right to remain silent" and contact your attorney as soon as possible. Do not physically resist.',
-                    'If there is no judicial warrant: say "I do not consent to entry." You can say this calmly through the door.',
-                    "After the encounter: write down officer names, badge numbers, what was said, and what documents you saw.",
-                  ].map((text, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <span className="w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-sm font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                        {i + 1}
-                      </span>
-                      <span className="text-sm text-muted-foreground leading-relaxed">{text}</span>
-                    </li>
-                  ))}
-                </ol>
+                <AtTheDoorSteps scrollToWhatToDo={() => scrollTo("what-to-do")} />
                 <p className="text-xs text-muted-foreground mt-6 pt-4 border-t border-border">
                   See the{" "}
                   <button
@@ -288,51 +394,7 @@ export default function Warrants() {
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               Courts have approved certain situations where officers can act without a warrant. These exceptions are real and legal, but they have limits, and officers sometimes claim them more broadly than courts have approved.
             </p>
-            <div className="space-y-3">
-              {[
-                {
-                  title: "Your consent",
-                  description: "You gave officers permission to search or to enter. This is the most common way officers get around the warrant requirement.",
-                  limit: "You have the right to refuse. Saying 'I do not consent' is legal and cannot be held against you. Consent obtained through pressure or deception may be challenged in court.",
-                },
-                {
-                  title: "Emergency (exigent circumstances)",
-                  description: "Officers face a real emergency: someone is in danger, a suspect is fleeing, or evidence is about to be destroyed.",
-                  limit: "The emergency must be genuine and urgent, not invented after the fact. Courts look carefully at whether a real emergency existed.",
-                },
-                {
-                  title: "Plain view",
-                  description: "Officers are already legally present and can see contraband without searching for it.",
-                  limit: "Officers must already be lawfully present. They cannot trespass to get a 'plain view' of something.",
-                },
-                {
-                  title: "Search during a lawful arrest",
-                  description: "When officers make a valid arrest, they can search the person and the area immediately around them for weapons or evidence.",
-                  limit: "This does not extend to the whole house or vehicle. It covers the person and what's within arm's reach.",
-                },
-                {
-                  title: "Vehicle searches",
-                  description: "Cars have less privacy protection than homes under the law. Officers with probable cause can search a vehicle without a warrant.",
-                  limit: "They still need a real reason. A hunch is not enough. The search must relate to that reason.",
-                },
-                {
-                  title: "Brief investigative stop (Terry stop)",
-                  description: "Officers with reasonable suspicion may briefly stop and question you, and may pat you down for weapons.",
-                  limit: "A pat-down is for weapons only, not a full search. 'Reasonable suspicion' must be based on specific facts, not a general feeling.",
-                },
-              ].map((item, i) => (
-                <Card key={i}>
-                  <CardContent className="p-5">
-                    <p className="text-sm font-semibold text-foreground mb-1">{item.title}</p>
-                    <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
-                    <p className="text-xs text-muted-foreground">
-                      <span className="font-medium text-foreground">The limit: </span>
-                      {item.limit}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ExceptionCards />
             <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
               Knowing these exceptions matters: if officers claim one, you can clearly state that you do not consent. You may not be able to stop the search in the moment, but your objection on record gives your attorney something to work with.
             </p>
@@ -493,6 +555,22 @@ export default function Warrants() {
             </div>
           </SectionAnchor>
         </ScrollReveal>
+
+        {/* ── TONE DIVIDER ─────────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.55 }}
+          className="relative flex items-center justify-center py-2"
+        >
+          <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="w-full border-t border-border/50" />
+          </div>
+          <div className="relative bg-background px-5 py-2 rounded-full border border-border/60 shadow-sm">
+            <p className="text-xs font-medium text-muted-foreground tracking-wide">Now, what you can do</p>
+          </div>
+        </motion.div>
 
         {/* ── WHAT TO DO ───────────────────────────────────────── */}
         <ScrollReveal>
