@@ -1,15 +1,5 @@
 import { Link } from "wouter";
-import {
-  FileText,
-  Home,
-  Scale,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Info,
-  Shield,
-  User,
-} from "lucide-react";
+import { AlertTriangle, CheckCircle, XCircle, Info } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
@@ -63,7 +53,7 @@ export default function Warrants() {
             Warrants & Your Rights
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            What officers need to enter your home, search your belongings, or arrest you — and what you can do whether they have one or not
+            What officers need to enter your home, search your belongings, or arrest you, and what you can do whether they have one or not
           </p>
         </div>
       </section>
@@ -143,7 +133,7 @@ export default function Warrants() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  A warrant is a legal document signed by a judge that gives officers permission to do one specific thing — search a specific place, or arrest a specific person. Without a warrant, officers generally cannot enter your home or take you into custody unless you give permission or a legal exception applies.
+                  A warrant is a legal document signed by a judge that gives officers permission to do one specific thing: search a specific place, or arrest a specific person. Without a warrant, officers generally cannot enter your home or take you into custody unless you give permission or a legal exception applies.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Not every document an officer carries is the same. A document signed by an immigration agency supervisor is very different from one signed by a federal judge. The difference matters, and it is explained in detail in the ICE section below.
@@ -171,7 +161,7 @@ export default function Warrants() {
                       <tr>
                         <td className="py-2.5 pr-4 text-foreground font-medium">ICE administrative warrant</td>
                         <td className="py-2.5 pr-4 text-muted-foreground">ICE officer (not a court)</td>
-                        <td className="py-2.5 text-muted-foreground">Administrative arrest — does <strong>not</strong> authorize entry into a home without consent</td>
+                        <td className="py-2.5 text-muted-foreground">Administrative arrest. Does <strong>not</strong> authorize entry into a home without consent</td>
                       </tr>
                       <tr>
                         <td className="py-2.5 pr-4 text-foreground font-medium">ICE judicial warrant</td>
@@ -196,17 +186,19 @@ export default function Warrants() {
                   <CardTitle className="text-base">What a valid search warrant must include</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2.5">
-                  {[
-                    "A signature from a judge or magistrate — not a supervisor, not an agency head",
-                    "The specific address to be searched — not just a general area or building",
-                    "A description of what officers are looking for — not a blank permission to search everything",
-                    "A date — warrants can be challenged if they are old or stale",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                      <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
+                  <ul className="space-y-2">
+                    {[
+                      "A signature from a judge or magistrate, not a supervisor or agency head",
+                      "The specific address to be searched, not just a general area or building",
+                      "A description of what officers are looking for, not a blank permission to search everything",
+                      "A current date; warrants can be challenged if they are old or stale",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                        <span className="flex-shrink-0 mt-0.5">–</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
 
@@ -215,17 +207,14 @@ export default function Warrants() {
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm text-green-700 dark:text-green-400">What officers can do with one</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2">
+                  <CardContent className="space-y-1.5">
                     {[
                       "Enter the named location",
                       "Search the areas described in the warrant",
                       "Seize items listed in the warrant",
-                      "Also seize contraband they find in plain view while legally present",
+                      "Also seize contraband visible in plain view while legally present",
                     ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle className="h-3.5 w-3.5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </div>
+                      <p key={i} className="text-sm text-muted-foreground">– {item}</p>
                     ))}
                   </CardContent>
                 </Card>
@@ -234,17 +223,14 @@ export default function Warrants() {
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm text-red-700 dark:text-red-400">What they cannot do</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2">
+                  <CardContent className="space-y-1.5">
                     {[
                       "Search rooms or areas not named in the warrant",
                       "Search for items not described in the warrant",
                       "Use one address's warrant to search a different address",
                       "Expand the search beyond what the warrant specifies",
                     ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <XCircle className="h-3.5 w-3.5 text-red-500 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </div>
+                      <p key={i} className="text-sm text-muted-foreground">– {item}</p>
                     ))}
                   </CardContent>
                 </Card>
@@ -274,7 +260,7 @@ export default function Warrants() {
                     If officers say they have an arrest warrant for someone else and want to come inside, you do not have to let them in unless they also have a search warrant for your specific address.
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    If the arrest warrant names you: you will be taken into custody. Do not resist physically. Once arrested, your right to remain silent and your right to an attorney still apply from that moment forward — say clearly that you are invoking both.
+                    If the arrest warrant names you: you will be taken into custody. Do not resist physically. Once arrested, your right to remain silent and your right to an attorney still apply from that moment forward. Say clearly that you are invoking both.
                   </p>
                 </CardContent>
               </Card>
@@ -300,7 +286,7 @@ export default function Warrants() {
           <SectionAnchor id="no-warrant-needed">
             <h2 className="text-2xl font-bold text-foreground mb-2">When Officers Don't Need a Warrant</h2>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              Courts have approved certain situations where officers can act without a warrant. These exceptions are real and legal — but they have limits, and officers sometimes claim them more broadly than courts have approved.
+              Courts have approved certain situations where officers can act without a warrant. These exceptions are real and legal, but they have limits, and officers sometimes claim them more broadly than courts have approved.
             </p>
             <div className="space-y-3">
               {[
@@ -311,7 +297,7 @@ export default function Warrants() {
                 },
                 {
                   title: "Emergency (exigent circumstances)",
-                  description: "Officers face a real emergency — someone is in danger, a suspect is fleeing, or evidence is about to be destroyed.",
+                  description: "Officers face a real emergency: someone is in danger, a suspect is fleeing, or evidence is about to be destroyed.",
                   limit: "The emergency must be genuine and urgent, not invented after the fact. Courts look carefully at whether a real emergency existed.",
                 },
                 {
@@ -339,19 +325,16 @@ export default function Warrants() {
                   <CardContent className="p-5">
                     <p className="text-sm font-semibold text-foreground mb-1">{item.title}</p>
                     <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
-                    <div className="flex items-start gap-2">
-                      <Info className="h-3.5 w-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
-                      <p className="text-xs text-muted-foreground">
-                        <span className="font-medium text-foreground">The limit: </span>
-                        {item.limit}
-                      </p>
-                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      <span className="font-medium text-foreground">The limit: </span>
+                      {item.limit}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
-              Knowing these exceptions matters: if officers claim one, you can clearly state that you do not consent. You may not be able to stop the search in the moment — but your objection on record gives your attorney something to work with.
+              Knowing these exceptions matters: if officers claim one, you can clearly state that you do not consent. You may not be able to stop the search in the moment, but your objection on record gives your attorney something to work with.
             </p>
           </SectionAnchor>
         </ScrollReveal>
@@ -392,7 +375,7 @@ export default function Warrants() {
                   </div>
                   <div className="mt-3 p-3 bg-muted/50 rounded-md">
                     <p className="text-xs font-medium text-foreground mb-1">How to identify it:</p>
-                    <p className="text-xs text-muted-foreground">The top reads "U.S. Department of Homeland Security" and is signed by a "Deportation Officer" or "Immigration Enforcement Agent" — not a judge.</p>
+                    <p className="text-xs text-muted-foreground">The top reads "U.S. Department of Homeland Security" and is signed by a "Deportation Officer" or "Immigration Enforcement Agent," not a judge.</p>
                   </div>
                 </CardContent>
               </Card>
@@ -427,7 +410,7 @@ export default function Warrants() {
               <CardContent className="p-5 space-y-3">
                 <p className="text-sm font-semibold text-foreground">Your rights apply regardless of immigration status</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  The Fourth Amendment protects all people in the United States from unlawful searches and seizures — not just citizens. Your right to refuse warrantless entry into your home applies whether you are a citizen, a permanent resident, an undocumented person, or a visitor.
+                  The Fourth Amendment protects all people in the United States from unlawful searches and seizures, not just citizens. Your right to refuse warrantless entry into your home applies whether you are a citizen, a permanent resident, an undocumented person, or a visitor.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   You also have the right to remain silent. You are not required to answer questions about your immigration status, your country of origin, or how you entered the country.
@@ -453,14 +436,14 @@ export default function Warrants() {
           <SectionAnchor id="documented-concerns">
             <h2 className="text-2xl font-bold text-foreground mb-2">Documented Concerns</h2>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              Courts, legal organizations, and government oversight bodies have documented situations where enforcement practices did not follow standard warrant requirements. This section describes what has been found — not to suggest that every officer behaves this way, but so you know what to watch for and how to respond if it happens to you.
+              Courts, legal organizations, and government oversight bodies have documented situations where enforcement practices did not follow standard warrant requirements. This section describes what has been found, not to suggest that every officer behaves this way, but so you know what to watch for and how to respond if it happens to you.
             </p>
             <div className="space-y-4">
               <Card>
                 <CardContent className="p-5 space-y-2">
                   <p className="text-sm font-semibold text-foreground">Administrative warrants used to enter homes</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Multiple federal courts have ruled that an ICE administrative warrant (Form I-200 or I-205) does not satisfy the Fourth Amendment's requirement for a judicial warrant to enter a home. The ACLU and National Immigration Law Center have documented cases where officers entered homes presenting only administrative documents — without consent and without a court-issued warrant.
+                    Multiple federal courts have ruled that an ICE administrative warrant (Form I-200 or I-205) does not satisfy the Fourth Amendment's requirement for a judicial warrant to enter a home. The ACLU and National Immigration Law Center have documented cases where officers entered homes presenting only administrative documents, without consent and without a court-issued warrant.
                   </p>
                 </CardContent>
               </Card>
@@ -469,7 +452,7 @@ export default function Warrants() {
                 <CardContent className="p-5 space-y-2">
                   <p className="text-sm font-semibold text-foreground">Consent obtained under pressure</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Courts have recognized that consent may not be truly voluntary when it is obtained under coercion, fear, or when residents do not understand they have the right to refuse. The Vera Institute of Justice and ACLU have documented patterns of officers obtaining "consent" from people who did not know they could say no — including situations where officers were already positioned at all exits of a home or building before asking.
+                    Courts have recognized that consent may not be truly voluntary when it is obtained under coercion, fear, or when residents do not understand they have the right to refuse. The Vera Institute of Justice and ACLU have documented patterns of officers obtaining "consent" from people who did not know they could say no, including situations where officers were already positioned at all exits of a home or building before asking.
                   </p>
                 </CardContent>
               </Card>
@@ -496,7 +479,7 @@ export default function Warrants() {
                 <CardContent className="p-5 space-y-2">
                   <p className="text-sm font-semibold text-foreground">Expedited removal</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Federal immigration law allows for expedited removal — deportation without a court hearing — for people who cannot show they have been continuously present in the United States for at least two years. This process operates outside the normal judicial warrant framework. The scope of who is subject to expedited removal has changed through policy shifts over time. Consult an immigration attorney to understand the current rules.
+                    Federal immigration law allows for expedited removal (deportation without a court hearing) for people who cannot show they have been continuously present in the United States for at least two years. This process operates outside the normal judicial warrant framework. The scope of who is subject to expedited removal has changed through policy shifts over time. Consult an immigration attorney to understand the current rules.
                   </p>
                 </CardContent>
               </Card>
@@ -504,7 +487,7 @@ export default function Warrants() {
               <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
                 <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
-                  <strong>If you believe your rights were violated:</strong> Document everything — who was there, what was said, what documents were shown — and tell your attorney as soon as possible. A warrantless or non-consensual home entry may be grounds to suppress evidence or bring other legal challenges. The ACLU and NILC also have resources for people who want to report rights violations.
+                  <strong>If you believe your rights were violated:</strong> Document everything: who was there, what was said, what documents were shown. Tell your attorney as soon as possible. A warrantless or non-consensual home entry may be grounds to suppress evidence or bring other legal challenges. The ACLU and NILC also have resources for people who want to report rights violations.
                 </AlertDescription>
               </Alert>
             </div>
@@ -518,10 +501,7 @@ export default function Warrants() {
             <div className="space-y-5">
               <Card>
                 <CardHeader className="pb-3">
-                  <div className="flex items-center gap-2">
-                    <Home className="h-4 w-4 text-muted-foreground" />
-                    <CardTitle className="text-base">If officers come to your home</CardTitle>
-                  </div>
+                  <CardTitle className="text-base">If officers come to your home</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ol className="space-y-3">
@@ -531,7 +511,7 @@ export default function Warrants() {
                       "Ask them to slide the warrant under the door. Look for a judge's signature and your address.",
                       "If it is a valid judicial warrant: they may enter. Stay calm, say you are invoking your right to remain silent, and call your attorney as soon as possible.",
                       'If there is no judicial warrant, or officers have an ICE administrative form only: say "I do not consent to entry."',
-                      "Do not physically resist, even if entry is forced. Contest it in court afterward — your stated non-consent is your record.",
+                      "Do not physically resist, even if entry is forced. Contest it in court afterward. Your stated non-consent is your record.",
                       "Write down everything as soon as it is safe: names, badge numbers, what was said, and what documents you saw.",
                     ].map((step, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -547,10 +527,7 @@ export default function Warrants() {
 
               <Card>
                 <CardHeader className="pb-3">
-                  <div className="flex items-center gap-2">
-                    <User className="h-4 w-4 text-muted-foreground" />
-                    <CardTitle className="text-base">If you are stopped on the street</CardTitle>
-                  </div>
+                  <CardTitle className="text-base">If you are stopped on the street</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ol className="space-y-3">
@@ -558,7 +535,7 @@ export default function Warrants() {
                       'Ask: "Am I free to go?" If the answer is yes, you may leave.',
                       "If no: you are being detained. Stay calm. Do not run.",
                       'Say: "I am invoking my right to remain silent."',
-                      "Officers may pat you down for weapons during a lawful stop. This is not a full search. Say 'I do not consent to a search' regardless — your objection matters even if they proceed.",
+                      "Officers may pat you down for weapons during a lawful stop. This is not a full search. Say 'I do not consent to a search' regardless. Your objection matters even if they proceed.",
                       "You do not have to answer questions about where you are going, where you have been, or your immigration status.",
                     ].map((step, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -574,10 +551,7 @@ export default function Warrants() {
 
               <Card>
                 <CardHeader className="pb-3">
-                  <div className="flex items-center gap-2">
-                    <FileText className="h-4 w-4 text-muted-foreground" />
-                    <CardTitle className="text-base">If officers have an arrest warrant for you</CardTitle>
-                  </div>
+                  <CardTitle className="text-base">If officers have an arrest warrant for you</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ol className="space-y-3">
@@ -600,7 +574,7 @@ export default function Warrants() {
 
               <Alert className="border-slate-200 dark:border-slate-700">
                 <AlertDescription className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Always, in every situation:</strong> Write down what happened as soon as it is safe to do so — officer names, badge numbers, what they said, what documents they showed, and any witnesses. Your memory will fade. A written account is something your attorney can use.
+                  <strong className="text-foreground">Always, in every situation:</strong> Write down what happened as soon as it is safe to do so: officer names, badge numbers, what they said, what documents they showed, and any witnesses. Your memory will fade. A written account is something your attorney can use.
                 </AlertDescription>
               </Alert>
             </div>
@@ -621,8 +595,7 @@ export default function Warrants() {
                 { href: "/first-24-hours", title: "Your First 24 Hours" },
               ].map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
-                    <Shield className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                  <div className="px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
                     <span className="text-sm text-foreground">{item.title}</span>
                   </div>
                 </Link>
