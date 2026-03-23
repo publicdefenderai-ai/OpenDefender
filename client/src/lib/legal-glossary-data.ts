@@ -1,6 +1,29 @@
 import { GlossaryTerm } from "@shared/schema";
 
-export const legalGlossaryTerms: GlossaryTerm[] = [
+export type GlossaryTermWithLink = GlossaryTerm & {
+  learnMoreUrl?: string;
+};
+
+export const legalGlossaryTerms: GlossaryTermWithLink[] = [
+  {
+    id: "administrative-warrant",
+    term: "Administrative Warrant",
+    definition: "A document signed by a government agency official — not a judge — authorizing an administrative action. In immigration enforcement, ICE most commonly carries Form I-200 or I-205, which are administrative warrants. An administrative warrant does not give officers legal authority to enter your home without your consent. It is different from a judicial warrant, which is signed by a federal judge and does authorize home entry.",
+    aliases: ["ICE warrant", "Form I-200", "Form I-205", "immigration warrant"],
+    tags: ["warrant", "immigration", "ICE", "fourth amendment", "home entry"],
+    slug: "administrative-warrant",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/warrants",
+  },
+  {
+    id: "appeal",
+    term: "Appeal",
+    definition: "A request to a higher court to review a decision made by a lower court. An appeal is not a new trial — it is a review of whether legal errors were made during the original proceedings. There is generally a limited time window to file an appeal after sentencing. Not every error results in a reversal; courts look for errors that likely affected the outcome.",
+    aliases: ["appealing a conviction", "filing an appeal", "appellate review"],
+    tags: ["appeal", "court", "post-conviction", "procedure"],
+    slug: "appeal",
+    lastUpdated: new Date("2025-03-01"),
+  },
   {
     id: "arraignment",
     term: "Arraignment",
@@ -9,6 +32,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["court", "procedure", "criminal"],
     slug: "arraignment",
     lastUpdated: new Date("2024-01-01"),
+  },
+  {
+    id: "arrest-warrant",
+    term: "Arrest Warrant",
+    definition: "A court order signed by a judge that authorizes police to arrest a specific named person. An arrest warrant does not allow officers to search your home — for that, they need a separate search warrant. If you are the person named in an arrest warrant, you will be taken into custody. You still have the right to remain silent and the right to an attorney from that moment forward.",
+    aliases: ["warrant for arrest", "outstanding warrant", "active warrant"],
+    tags: ["warrant", "arrest", "court order", "police", "custody"],
+    slug: "arrest-warrant",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/warrants",
   },
   {
     id: "bail",
@@ -23,7 +56,7 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     id: "bench-warrant",
     term: "Bench Warrant",
     definition: "A court order issued by a judge directing law enforcement to arrest a person who has failed to appear in court as required or violated a court order.",
-    aliases: ["Arrest Warrant", "Capias"],
+    aliases: ["Capias"],
     tags: ["warrant", "court", "arrest"],
     slug: "bench-warrant",
     lastUpdated: new Date("2024-01-01"),
@@ -38,6 +71,26 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     lastUpdated: new Date("2024-01-01"),
   },
   {
+    id: "collateral-consequences",
+    term: "Collateral Consequences",
+    definition: "Legal penalties that follow a criminal conviction beyond the sentence itself — such as loss of voting rights, deportation risk, difficulty finding housing or employment, loss of professional licenses, and ineligibility for public benefits or student loans. These consequences can last years or a lifetime and are often not mentioned in plea negotiations.",
+    aliases: ["consequences of conviction", "hidden penalties", "criminal record effects", "after conviction impact"],
+    tags: ["conviction", "collateral consequences", "criminal record", "housing", "employment", "immigration"],
+    slug: "collateral-consequences",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/collateral-consequences",
+  },
+  {
+    id: "consent-to-search",
+    term: "Consent to Search",
+    definition: "When you voluntarily allow an officer to search you, your vehicle, or your home. Giving consent removes the officer's need for a warrant or probable cause. You have the right to refuse a search in most situations — saying 'I do not consent to this search' is legal and cannot by itself be used as grounds for arrest. Once you give consent, it is difficult to take back.",
+    aliases: ["police search consent", "refusing a search", "do not consent to search", "can I refuse police search"],
+    tags: ["consent", "search", "fourth amendment", "police", "warrant exception"],
+    slug: "consent-to-search",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/search-seizure",
+  },
+  {
     id: "continuance",
     term: "Continuance",
     definition: "A postponement or adjournment of a court hearing or trial to a later date. Either party can request a continuance, but the judge must approve it.",
@@ -45,6 +98,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["court", "scheduling", "delay"],
     slug: "continuance",
     lastUpdated: new Date("2024-01-01"),
+  },
+  {
+    id: "custodial-interrogation",
+    term: "Custodial Interrogation",
+    definition: "Questioning by police while you are in custody — meaning you are not free to leave. Custodial interrogation triggers Miranda rights: officers must inform you of your right to remain silent and your right to an attorney before questioning begins. Statements made during custodial interrogation without a Miranda warning may be inadmissible in court.",
+    aliases: ["police interrogation", "police questioning in custody", "miranda warning trigger", "questioning while detained"],
+    tags: ["interrogation", "custody", "miranda", "police questioning", "fifth amendment", "sixth amendment"],
+    slug: "custodial-interrogation",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/right-to-counsel",
   },
   {
     id: "defendant",
@@ -56,6 +119,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     lastUpdated: new Date("2024-01-01"),
   },
   {
+    id: "deportation",
+    term: "Deportation (Removal)",
+    definition: "The formal process by which a non-citizen is ordered to leave the United States. Deportation results from an order of removal issued by an immigration judge or, in some cases, through expedited removal without a hearing. A criminal conviction — even for a misdemeanor — can trigger removal proceedings for non-citizens.",
+    aliases: ["removal", "order of removal", "deported", "immigration removal", "forced deportation"],
+    tags: ["immigration", "deportation", "removal", "ICE", "non-citizen", "collateral consequences"],
+    slug: "deportation",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/collateral-consequences",
+  },
+  {
     id: "discovery",
     term: "Discovery",
     definition: "The pre-trial process where both the prosecution and defense exchange evidence, witness lists, and other information relevant to the case.",
@@ -63,6 +136,26 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["evidence", "pre-trial", "procedure"],
     slug: "discovery",
     lastUpdated: new Date("2024-01-01"),
+  },
+  {
+    id: "diversion-program",
+    term: "Diversion Program",
+    definition: "An alternative to prosecution where charges may be reduced or dismissed if you complete certain requirements — such as community service, counseling, or a treatment program. Diversion is commonly offered for first-time or non-violent offenses. Successfully completing a diversion program can keep the charge off your record entirely.",
+    aliases: ["pretrial diversion", "first offender program", "deferred prosecution", "alternative to prosecution"],
+    tags: ["diversion", "first offense", "charges", "record", "alternative sentencing"],
+    slug: "diversion-program",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/diversion-programs",
+  },
+  {
+    id: "exigent-circumstances",
+    term: "Exigent Circumstances",
+    definition: "An emergency situation that allows police to enter a home or conduct a search without a warrant. Examples include a credible belief that someone inside is in danger, a fleeing suspect, or evidence about to be destroyed. Courts look carefully at whether a real emergency existed — officers cannot manufacture an emergency after the fact to justify a warrantless entry.",
+    aliases: ["emergency entry", "warrantless emergency entry", "police emergency exception", "no warrant emergency"],
+    tags: ["exigent circumstances", "emergency", "warrant exception", "fourth amendment", "home entry"],
+    slug: "exigent-circumstances",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/warrants",
   },
   {
     id: "expungement",
@@ -81,6 +174,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["crime", "classification", "penalty"],
     slug: "felony",
     lastUpdated: new Date("2024-01-01"),
+  },
+  {
+    id: "fifth-amendment",
+    term: "Fifth Amendment",
+    definition: "The constitutional amendment that protects you from being forced to testify against yourself. It is the source of your right to remain silent during police questioning and at trial. 'Pleading the Fifth' means refusing to answer a question on the grounds that your answer could incriminate you. You must affirmatively invoke this right — silence alone may not be enough.",
+    aliases: ["plead the fifth", "right to remain silent", "self-incrimination privilege", "fifth amendment rights"],
+    tags: ["fifth amendment", "self-incrimination", "right to remain silent", "miranda", "constitutional rights"],
+    slug: "fifth-amendment",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/rights-info",
   },
   {
     id: "grand-jury",
@@ -119,6 +222,15 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     lastUpdated: new Date("2024-01-01"),
   },
   {
+    id: "mandatory-minimum",
+    term: "Mandatory Minimum",
+    definition: "A law that requires a judge to sentence a convicted person to at least a specified amount of prison time, regardless of individual circumstances. The judge cannot go below the minimum even if they want to. Mandatory minimums are common in drug cases and certain firearm offenses. They significantly reduce a judge's ability to tailor the sentence to the facts of the case.",
+    aliases: ["mandatory sentence", "minimum prison time", "drug mandatory minimum", "required minimum sentence"],
+    tags: ["mandatory minimum", "sentencing", "drug offense", "prison", "penalty"],
+    slug: "mandatory-minimum",
+    lastUpdated: new Date("2025-03-01"),
+  },
+  {
     id: "miranda-rights",
     term: "Miranda Rights",
     definition: "Rights that police must read to suspects before custodial interrogation, including the right to remain silent and the right to an attorney.",
@@ -137,6 +249,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     lastUpdated: new Date("2024-01-01"),
   },
   {
+    id: "motion-to-suppress",
+    term: "Motion to Suppress",
+    definition: "A request to the court to exclude evidence that police obtained illegally — for example, through an unlawful search or a Miranda violation. If the judge grants the motion, that evidence cannot be used at trial. A successful suppression motion can significantly weaken the prosecution's case and sometimes leads to a dismissal.",
+    aliases: ["suppress evidence", "exclude evidence", "illegal search evidence", "exclusionary rule motion", "throw out evidence"],
+    tags: ["motion to suppress", "evidence", "fourth amendment", "exclusionary rule", "illegal search", "miranda"],
+    slug: "motion-to-suppress",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/warrants",
+  },
+  {
     id: "no-contest",
     term: "No Contest (Nolo Contendere)",
     definition: "A plea where the defendant neither admits nor denies guilt but accepts punishment. It has the same legal effect as a guilty plea but cannot be used against the defendant in civil proceedings.",
@@ -144,6 +266,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["plea", "court", "civil"],
     slug: "no-contest",
     lastUpdated: new Date("2024-01-01"),
+  },
+  {
+    id: "order-of-removal",
+    term: "Order of Removal",
+    definition: "A formal order issued by an immigration judge directing a non-citizen to leave the United States. A final order of removal authorizes ICE to carry out deportation. Having a prior removal order on record can result in immediate deportation if you are encountered by immigration authorities again. An immigration attorney can advise you on whether you have a prior order and whether any relief applies.",
+    aliases: ["deportation order", "final order of removal", "removal order", "order of deportation"],
+    tags: ["immigration", "removal", "deportation", "order of removal", "ICE", "immigration court"],
+    slug: "order-of-removal",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/immigration-guidance",
   },
   {
     id: "parole",
@@ -155,6 +287,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     lastUpdated: new Date("2024-01-01"),
   },
   {
+    id: "plain-view",
+    term: "Plain View",
+    definition: "A legal doctrine that allows police to seize evidence of a crime they can clearly see while already lawfully present — without a warrant for those specific items. For example, if an officer executes a valid search warrant in your home and sees drugs on a table, they can seize them even if drugs were not listed in the warrant. Officers cannot trespass or enter without authorization in order to get a 'plain view.'",
+    aliases: ["plain view doctrine", "open view", "visible contraband", "plain sight rule"],
+    tags: ["plain view", "fourth amendment", "evidence", "warrant exception", "search", "contraband"],
+    slug: "plain-view",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/warrants",
+  },
+  {
     id: "plea-bargain",
     term: "Plea Bargain",
     definition: "An agreement between the prosecution and defense where the defendant pleads guilty or no contest to a reduced charge or receives a lighter sentence in exchange for avoiding trial.",
@@ -162,6 +304,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["agreement", "plea", "negotiation"],
     slug: "plea-bargain",
     lastUpdated: new Date("2024-01-01"),
+  },
+  {
+    id: "pretrial-detention",
+    term: "Pretrial Detention",
+    definition: "Being held in jail before trial because bail was denied or cannot be afforded. You are legally presumed innocent while in pretrial detention. Detention before trial can affect your job, housing, family, and the outcome of your case — studies show detained defendants face worse case outcomes. Your attorney can argue for release or lower bail at a bail hearing.",
+    aliases: ["held before trial", "no bail", "denied bail", "pretrial custody", "remanded"],
+    tags: ["pretrial detention", "bail", "detention", "custody", "held before trial"],
+    slug: "pretrial-detention",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/first-24-hours",
   },
   {
     id: "probable-cause",
@@ -200,6 +352,16 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     lastUpdated: new Date("2024-01-01"),
   },
   {
+    id: "reasonable-suspicion",
+    term: "Reasonable Suspicion",
+    definition: "A legal standard lower than probable cause. Police need only reasonable suspicion — a specific, articulable reason based on facts — to briefly stop and question you on the street (called a Terry stop). A hunch, your race, your appearance, or the neighborhood you are in alone does not meet this standard. Officers must point to specific observable facts that suggest criminal activity.",
+    aliases: ["terry stop standard", "police stop standard", "suspicious activity standard", "can police stop me"],
+    tags: ["reasonable suspicion", "terry stop", "stop and frisk", "fourth amendment", "police stop"],
+    slug: "reasonable-suspicion",
+    lastUpdated: new Date("2025-03-01"),
+    learnMoreUrl: "/search-seizure",
+  },
+  {
     id: "recidivism",
     term: "Recidivism",
     definition: "The tendency of a convicted criminal to reoffend. Often measured as the percentage of former prisoners who are rearrested within a certain period.",
@@ -225,6 +387,7 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
     tags: ["search", "warrant", "evidence"],
     slug: "search-warrant",
     lastUpdated: new Date("2024-01-01"),
+    learnMoreUrl: "/warrants",
   },
   {
     id: "statute-of-limitations",
@@ -274,12 +437,12 @@ export const legalGlossaryTerms: GlossaryTerm[] = [
 ];
 
 // Helper function to search glossary terms
-export function searchGlossaryTerms(query: string): GlossaryTerm[] {
+export function searchGlossaryTerms(query: string): GlossaryTermWithLink[] {
   if (!query.trim()) return legalGlossaryTerms;
-  
+
   const lowercaseQuery = query.toLowerCase();
-  
-  return legalGlossaryTerms.filter(term => 
+
+  return legalGlossaryTerms.filter(term =>
     term.term.toLowerCase().includes(lowercaseQuery) ||
     term.definition.toLowerCase().includes(lowercaseQuery) ||
     term.aliases?.some(alias => alias.toLowerCase().includes(lowercaseQuery)) ||
@@ -288,8 +451,8 @@ export function searchGlossaryTerms(query: string): GlossaryTerm[] {
 }
 
 // Helper function to get terms by letter
-export function getTermsByLetter(letter: string): GlossaryTerm[] {
-  return legalGlossaryTerms.filter(term => 
+export function getTermsByLetter(letter: string): GlossaryTermWithLink[] {
+  return legalGlossaryTerms.filter(term =>
     term.term.charAt(0).toLowerCase() === letter.toLowerCase()
   );
 }

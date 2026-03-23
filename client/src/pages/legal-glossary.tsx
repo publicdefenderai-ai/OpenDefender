@@ -25,11 +25,12 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { 
-  legalGlossaryTerms, 
-  searchGlossaryTerms, 
-  getTermsByLetter, 
-  getAvailableLetters 
+import {
+  legalGlossaryTerms,
+  searchGlossaryTerms,
+  getTermsByLetter,
+  getAvailableLetters,
+  type GlossaryTermWithLink,
 } from "@/lib/legal-glossary-data";
 
 export default function LegalGlossary() {
@@ -249,12 +250,20 @@ export default function LegalGlossary() {
                             <p className="text-muted-foreground leading-relaxed">
                               {term.definition}
                             </p>
+                            {(term as GlossaryTermWithLink).learnMoreUrl && (
+                              <Link
+                                href={(term as GlossaryTermWithLink).learnMoreUrl!}
+                                className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium underline"
+                              >
+                                Learn more →
+                              </Link>
+                            )}
                             {term.tags && term.tags.length > 0 && (
                               <div className="flex flex-wrap gap-2">
                                 {term.tags.map(tag => (
-                                  <Badge 
-                                    key={tag} 
-                                    variant="outline" 
+                                  <Badge
+                                    key={tag}
+                                    variant="outline"
                                     className="text-xs cursor-pointer hover:bg-muted"
                                     onClick={() => setSelectedTag(tag)}
                                     data-testid={`badge-tag-${tag}`}
