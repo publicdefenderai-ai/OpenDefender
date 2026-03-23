@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Check, X } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -146,12 +147,19 @@ export default function FirstTwentyFourHours() {
                 "Don't argue about whether the arrest is legal. That is your attorney's job.",
               ]}
             >
-              <p className="text-sm text-muted-foreground mt-2">
-                Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest. You don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>.{" "}
-                <Link href="/right-to-counsel" className="underline hover:text-foreground transition-colors">When does the right to an attorney actually begin? →</Link>{" "}
-                Note that an arrest warrant does not give officers the right to search your home.{" "}
-                <Link href="/warrants" className="underline hover:text-foreground transition-colors">Understand what warrants do and don't allow →</Link>
-              </p>
+              <div className="mt-2 space-y-3">
+                <p className="text-sm text-muted-foreground">
+                  Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest. You don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>. Note that an arrest warrant does not give officers the right to search your home.
+                </p>
+                <div className="flex gap-3 flex-wrap">
+                  <Link href="/right-to-counsel">
+                    <Button variant="outline" size="sm">Right to an Attorney</Button>
+                  </Link>
+                  <Link href="/warrants">
+                    <Button variant="outline" size="sm">Learn about Warrants</Button>
+                  </Link>
+                </div>
+              </div>
             </Step>
           </ScrollReveal>
 
