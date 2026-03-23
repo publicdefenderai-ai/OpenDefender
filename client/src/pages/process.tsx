@@ -311,6 +311,62 @@ export default function Process() {
                         </ul>
                       </AccordionContent>
                     </AccordionItem>
+
+                    <AccordionItem value="bail-deny">
+                      <AccordionTrigger className="text-left hover:no-underline">
+                        {t('process.guides.bail.preventiveDetention.title')}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.bail.preventiveDetention.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.bail.preventiveDetention.points', { returnObjects: true }) as string[]).map((point, idx) => (
+                            <li key={idx}>{point}</li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="bail-schedule">
+                      <AccordionTrigger className="text-left hover:no-underline">
+                        {t('process.guides.bail.schedule.title')}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.bail.schedule.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.bail.schedule.points', { returnObjects: true }) as string[]).map((point, idx) => (
+                            <li key={idx}>{point}</li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="bail-landscape">
+                      <AccordionTrigger className="text-left hover:no-underline">
+                        {t('process.guides.bail.landscape.title')}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.bail.landscape.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.bail.landscape.points', { returnObjects: true }) as string[]).map((point, idx) => (
+                            <li key={idx}>{point}</li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    <AccordionItem value="bail-risk">
+                      <AccordionTrigger className="text-left hover:no-underline">
+                        {t('process.guides.bail.riskAssessment.title')}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.bail.riskAssessment.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.bail.riskAssessment.points', { returnObjects: true }) as string[]).map((point, idx) => (
+                            <li key={idx}>{point}</li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
                   </Accordion>
                 </CardContent>
               </Card>

@@ -2960,7 +2960,7 @@ i18n
                     },
                     {
                       "name": "Bail Bond (through a bondsman)",
-                      "description": "You pay a bail bondsman about 10-15% of the bail amount. They pay the full bail. You don't get your payment back - it's their fee."
+                      "description": "You pay a bail bondsman about 10-15% of the bail amount. They pay the full bail. You do not get that fee back under any circumstances — not if your charges are dropped, not if you are found not guilty. It is gone the moment you pay it."
                     },
                     {
                       "name": "Property Bond",
@@ -3005,6 +3005,50 @@ i18n
                     "You could face additional criminal charges for failure to appear",
                     "It will be much harder to get bail again",
                     "The judge may view you as less trustworthy when deciding your case"
+                  ]
+                },
+                "preventiveDetention": {
+                  "title": "Can the judge deny bail entirely?",
+                  "description": "Yes. A judge can order you held until trial with no option for bail. This is called preventive detention. It happens when the judge decides that no bail amount would make it safe to release you, or that you are very likely to flee.",
+                  "points": [
+                    "Federal courts and many states allow judges to deny bail for serious charges like violent felonies, drug trafficking, and certain weapons offenses",
+                    "Some states have expanded preventive detention in recent years — others have limited it",
+                    "Being detained before trial does not mean you are guilty — you are still legally presumed innocent",
+                    "Your attorney can request a detention hearing to challenge the decision",
+                    "Even if bail is denied at first, your attorney may be able to ask again if your circumstances change"
+                  ]
+                },
+                "schedule": {
+                  "title": "What is a bail schedule, and can it be changed?",
+                  "description": "A bail schedule is a list set by the court that assigns a standard bail amount to each type of charge. It allows people to post bail quickly — sometimes before even seeing a judge.",
+                  "points": [
+                    "Bail schedules are common for misdemeanors and lower-level felonies",
+                    "The scheduled amount may not reflect your ability to pay or your personal situation",
+                    "You have the right to ask for a bail hearing before a judge, who can lower, raise, or remove the scheduled amount",
+                    "Bail schedules are being challenged in courts across the country — some judges have ruled they are unconstitutional if they don't account for what the defendant can actually afford",
+                    "Your attorney can request a bail hearing and argue for a lower amount or for release on recognizance"
+                  ]
+                },
+                "landscape": {
+                  "title": "The changing law around bail",
+                  "description": "Bail law is one of the fastest-changing areas in criminal justice right now. What is true in one state may not be true in another — and laws that were in effect last year may have changed.",
+                  "points": [
+                    "Several states (including New Jersey, Illinois, and others) have largely ended cash bail — defendants are released based on risk, not how much money they have",
+                    "Other states have expanded the power to detain defendants without bail",
+                    "Courts are actively debating whether bail schedules that ignore ability to pay are constitutional",
+                    "Federal bail law (the Bail Reform Act of 1984) has its own rules that differ from state law",
+                    "The safest approach: ask your attorney what the current rules are in your specific jurisdiction"
+                  ]
+                },
+                "riskAssessment": {
+                  "title": "Risk assessment tools and what they mean for you",
+                  "description": "Many courts now use software tools to help judges decide whether to release a defendant. These tools are called pretrial risk assessment instruments.",
+                  "points": [
+                    "They use factors like your age, charge type, and criminal history to predict the likelihood of missing court or re-arrest",
+                    "The tool gives the judge a score or recommendation — but the judge is not required to follow it",
+                    "These tools have been criticized for racial and economic bias, and their accuracy is disputed",
+                    "If a risk assessment is used in your case, ask your attorney to explain what it said and whether it can be challenged",
+                    "Being labeled \"high risk\" by a tool does not mean bail must be denied — it is one factor among many"
                   ]
                 }
               },
@@ -7817,6 +7861,50 @@ i18n
                     "Será mucho más difícil obtener fianza nuevamente",
                     "El juez puede verlo como menos confiable al decidir su caso"
                   ]
+                },
+                "preventiveDetention": {
+                  "title": "¿Puede el juez negar la fianza por completo?",
+                  "description": "Sí. Un juez puede ordenar que usted permanezca detenido hasta el juicio sin opción de fianza. Esto se llama detención preventiva. Ocurre cuando el juez decide que ninguna cantidad de fianza garantizaría su regreso, o que es muy probable que huya.",
+                  "points": [
+                    "Los tribunales federales y muchos estados permiten a los jueces negar la fianza para cargos graves como delitos violentos, tráfico de drogas y ciertos delitos con armas",
+                    "Algunos estados han ampliado la detención preventiva en años recientes — otros la han limitado",
+                    "Estar detenido antes del juicio no significa que sea culpable — aún se presume legalmente su inocencia",
+                    "Su abogado puede solicitar una audiencia de detención para impugnar la decisión",
+                    "Incluso si se niega la fianza al principio, su abogado puede volver a solicitarla si sus circunstancias cambian"
+                  ]
+                },
+                "schedule": {
+                  "title": "¿Qué es un horario de fianza y puede cambiar?",
+                  "description": "Un horario de fianza es una lista establecida por el tribunal que asigna un monto estándar de fianza a cada tipo de cargo. Permite a las personas pagar la fianza rápidamente, a veces antes de ver a un juez.",
+                  "points": [
+                    "Los horarios de fianza son comunes para delitos menores y delitos graves de menor nivel",
+                    "El monto programado puede no reflejar su capacidad de pago o su situación personal",
+                    "Tiene derecho a solicitar una audiencia de fianza ante un juez, quien puede reducir, aumentar o eliminar el monto programado",
+                    "Los horarios de fianza están siendo impugnados en tribunales de todo el país — algunos jueces han dictaminado que son inconstitucionales si no consideran lo que el acusado puede pagar",
+                    "Su abogado puede solicitar una audiencia de fianza y argumentar a favor de un monto menor o liberación bajo su propia custodia"
+                  ]
+                },
+                "landscape": {
+                  "title": "El cambiante panorama legal de la fianza",
+                  "description": "La ley de fianza es una de las áreas de más rápido cambio en la justicia penal ahora mismo. Lo que es válido en un estado puede no serlo en otro, y las leyes del año pasado pueden haber cambiado.",
+                  "points": [
+                    "Varios estados han eliminado en gran medida la fianza en efectivo — los acusados son liberados según el riesgo, no según cuánto dinero tienen",
+                    "Otros estados han ampliado el poder de detener a los acusados sin fianza",
+                    "Los tribunales debaten activamente si los horarios de fianza que ignoran la capacidad de pago son constitucionales",
+                    "La ley federal de fianza (Ley de Reforma de Fianza de 1984) tiene sus propias reglas que difieren de la ley estatal",
+                    "El enfoque más seguro: pregunte a su abogado cuáles son las reglas actuales en su jurisdicción específica"
+                  ]
+                },
+                "riskAssessment": {
+                  "title": "Herramientas de evaluación de riesgo y qué significan para usted",
+                  "description": "Muchos tribunales ahora usan herramientas de software para ayudar a los jueces a decidir si liberan a un acusado. Estas herramientas se llaman instrumentos de evaluación de riesgo previo al juicio.",
+                  "points": [
+                    "Usan factores como su edad, tipo de cargo e historial criminal para predecir la probabilidad de faltar a la corte o ser arrestado nuevamente",
+                    "La herramienta da al juez una puntuación o recomendación — pero el juez no está obligado a seguirla",
+                    "Estas herramientas han sido criticadas por sesgos raciales y económicos, y su precisión es disputada",
+                    "Si se usa una evaluación de riesgo en su caso, pida a su abogado que explique qué dijo y si puede ser impugnada",
+                    "Ser catalogado como de 'alto riesgo' por una herramienta no significa que se deba negar la fianza — es uno de muchos factores"
+                  ]
                 }
               },
               "plea": {
@@ -12602,6 +12690,50 @@ i18n
                     "您可能面临因未到庭而被追加的刑事指控",
                     "再次获得保释会变得更加困难",
                     "法官在审理您的案件时可能认为您不可信赖"
+                  ]
+                },
+                "preventiveDetention": {
+                  "title": "法官能完全拒绝保释吗？",
+                  "description": "可以。法官可以命令您在审判前被羁押，没有保释选项。这称为预防性羁押。当法官认为没有任何保释金额能确保您出庭，或您很可能逃跑时，就会发生这种情况。",
+                  "points": [
+                    "联邦法院和许多州允许法官对严重指控（如暴力重罪、毒品走私和某些武器犯罪）拒绝保释",
+                    "近年来，一些州扩大了预防性羁押，而另一些州则对其加以限制",
+                    "审判前被羁押并不意味着您有罪——法律上您仍被推定为无罪",
+                    "您的律师可以申请羁押听证会来对这一决定提出异议",
+                    "即使最初被拒绝保释，如果您的情况发生变化，您的律师可以再次提出申请"
+                  ]
+                },
+                "schedule": {
+                  "title": "什么是保释时间表，它可以更改吗？",
+                  "description": "保释时间表是法院设定的清单，为每种类型的指控规定标准保释金额。它允许人们快速缴纳保释金，有时甚至在见到法官之前就可以。",
+                  "points": [
+                    "保释时间表通常用于轻罪和较低级别的重罪",
+                    "规定的金额可能无法反映您的支付能力或个人情况",
+                    "您有权申请法官出席的保释听证会，法官可以降低、提高或取消规定的金额",
+                    "保释时间表在全国各地的法院受到挑战——一些法官裁定，如果不考虑被告实际能支付的金额，则违宪",
+                    "您的律师可以申请保释听证会，并争取降低金额或无条件释放"
+                  ]
+                },
+                "landscape": {
+                  "title": "不断变化的保释法律格局",
+                  "description": "保释法是刑事司法领域变化最快的领域之一。一个州适用的规定可能在另一个州并不适用，去年有效的法律可能已经改变。",
+                  "points": [
+                    "几个州已基本取消现金保释——被告根据风险而非金钱多少被释放",
+                    "其他州扩大了无需保释羁押被告的权力",
+                    "法院正积极讨论忽视支付能力的保释时间表是否违宪",
+                    "联邦保释法（1984年保释改革法）有其自己的规定，与州法不同",
+                    "最安全的做法：询问您的律师您所在具体司法管辖区的现行规定"
+                  ]
+                },
+                "riskAssessment": {
+                  "title": "风险评估工具及其对您意味着什么",
+                  "description": "许多法院现在使用软件工具帮助法官决定是否释放被告。这些工具称为审前风险评估工具。",
+                  "points": [
+                    "它们使用您的年龄、指控类型和犯罪记录等因素来预测您缺席出庭或再次被捕的可能性",
+                    "该工具向法官提供分数或建议——但法官不必遵循",
+                    "这些工具因种族和经济偏见受到批评，其准确性也受到质疑",
+                    "如果您的案件使用了风险评估，请让您的律师解释评估结果以及是否可以提出异议",
+                    "被工具标记为'高风险'并不意味着必须拒绝保释——这只是众多因素之一"
                   ]
                 }
               },
