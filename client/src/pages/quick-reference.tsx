@@ -24,6 +24,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -206,8 +207,17 @@ export default function QuickReference() {
             </TabsContent>
           </Tabs>
 
+          <ScrollReveal delay={0.25}>
+            <p className="text-sm text-center text-muted-foreground mt-8 print:hidden">
+              Before agreeing to any plea, make sure you understand all the consequences beyond jail time.{" "}
+              <Link href="/collateral-consequences" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 underline font-medium">
+                Hidden Consequences of a Conviction →
+              </Link>
+            </p>
+          </ScrollReveal>
+
           <ScrollReveal delay={0.3}>
-            <Alert className="mt-10 border-border print:hidden">
+            <Alert className="mt-6 border-border print:hidden">
               <AlertTriangle className="h-4 w-4" />
               <AlertDescription className="text-muted-foreground">
                 <strong>{t("quickRef.disclaimer.title", "Important:")}</strong>{" "}
