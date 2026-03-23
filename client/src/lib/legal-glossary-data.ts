@@ -46,10 +46,11 @@ export const legalGlossaryTerms: GlossaryTermWithLink[] = [
   {
     id: "bail",
     term: "Bail",
-    definition: "Money or property given to the court as security to ensure that a defendant will appear for trial. If the defendant appears as required, the bail is returned; if not, it is forfeited to the court.",
-    aliases: ["Bond", "Bail Bond"],
-    tags: ["money", "release", "court"],
+    definition: "Money or property held by the court to make sure you return for your hearings. There are several forms: Cash Bail (you pay the full amount and get it back if you appear), Bail Bond (a bondsman pays for you and keeps a 10-15% fee — you do not get that fee back, even if you are acquitted), Property Bond (real estate used as collateral), and Release on Recognizance/ROR (no money required — just your written promise to appear). A judge can also deny bail entirely and order you held until trial — this is called preventive detention. Courts are supposed to consider your ability to pay when setting bail, but practice varies widely by state. The law around bail is actively changing: many states have reformed or eliminated cash bail, while others have expanded the power to detain without bail. Ask your attorney what the current rules are in your jurisdiction.",
+    aliases: ["Bond", "Bail Bond", "Cash Bail", "Release on Recognizance", "ROR", "Preventive Detention"],
+    tags: ["money", "release", "court", "pretrial", "detention", "bond"],
     slug: "bail",
+    learnMoreUrl: "/process#bail-guide",
     lastUpdated: new Date("2024-01-01"),
   },
   {
@@ -308,7 +309,7 @@ export const legalGlossaryTerms: GlossaryTermWithLink[] = [
   {
     id: "pretrial-detention",
     term: "Pretrial Detention",
-    definition: "Being held in jail before trial because bail was denied or cannot be afforded. You are legally presumed innocent while in pretrial detention. Detention before trial can affect your job, housing, family, and the outcome of your case — studies show detained defendants face worse case outcomes. Your attorney can argue for release or lower bail at a bail hearing.",
+    definition: "Being held in jail before trial because bail was denied or cannot be afforded. You are legally presumed innocent while in pretrial detention. Detention before trial can affect your job, housing, family, and the outcome of your case — studies show detained defendants face worse case outcomes. Your attorney can argue for release or lower bail at a bail hearing. Being in custody also puts pressure on plea decisions: some people accept guilty pleas just to get out, even when they may have a strong defense. If you are detained, make sure your attorney explains all your options before agreeing to any plea.",
     aliases: ["held before trial", "no bail", "denied bail", "pretrial custody", "remanded"],
     tags: ["pretrial detention", "bail", "detention", "custody", "held before trial"],
     slug: "pretrial-detention",
