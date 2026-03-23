@@ -476,6 +476,54 @@ export function buildSearchIndex(): void {
   }
   devLog('search', `Indexed ${immigrationPages.length} immigration guidance pages`);
 
+  const warrantSubPages = [
+    {
+      id: 'ice-warrant-distinction',
+      title: 'ICE Administrative Warrant vs. Judicial Warrant',
+      titleEs: 'Orden Administrativa ICE vs. Orden Judicial',
+      titleZh: 'ICE行政令与司法令的区别',
+      content: 'An ICE administrative warrant (Form I-200 or I-205) is signed by an immigration enforcement officer, not a judge. It does NOT give officers the legal right to enter your home without your consent. A judicial warrant is signed by a U.S. District Court judge or magistrate and does authorize entry. ICE administrative warrants are the most common document ICE carries. You can identify an administrative warrant because it is on DHS letterhead and signed by a "Deportation Officer" or "Immigration Enforcement Agent" — not a judge. A judicial warrant will reference a specific federal court. If officers present only an administrative warrant, you may say "I do not consent to entry" through a closed door. Fourth Amendment protections apply to all people in the United States regardless of immigration status.',
+      tags: ['ICE warrant', 'administrative warrant', 'judicial warrant', 'Form I-200', 'Form I-205', 'DHS', 'fourth amendment', 'immigration enforcement', 'home entry', 'consent', 'deportation officer'],
+      aliases: ['ICE at my door', 'ICE administrative warrant', 'ICE warrant vs court warrant', 'is ICE warrant valid', 'form I-200', 'form I-205', 'administrative vs judicial warrant', 'do I have to let ICE in', 'ICE enter my home', 'immigration warrant'],
+      url: '/warrants#ice-warrants',
+    },
+    {
+      id: 'at-the-door-now',
+      title: 'Officers at Your Door — What to Do Right Now',
+      titleEs: 'Agentes en Su Puerta — Qué Hacer Ahora Mismo',
+      titleZh: '警察在门口 — 现在该怎么做',
+      content: 'Do not open the door. You can speak through the door or a window. Ask: "Do you have a warrant?" Ask them to slide any warrant under the door. Look for a judge\'s signature and your specific address. If it is signed by an immigration officer rather than a judge, it is an administrative warrant and does not authorize entry without your consent. If there is no judicial warrant: say "I do not consent to entry" calmly through the door. If there is a valid judicial warrant: remain calm, invoke your right to remain silent, and contact your attorney as soon as possible. Do not physically resist even if entry is forced. Write down officer names, badge numbers, and what documents were shown as soon as it is safe.',
+      tags: ['officers at door', 'police at door', 'ICE at door', 'what to do', 'warrant at door', 'do not open door', 'right now', 'emergency guidance'],
+      aliases: ['police knocking door', 'ICE at door right now', 'officers knocking', 'what to do if police at door', 'should I open door for police', 'police outside my home', 'knock at door police', 'police at my house', 'law enforcement at door'],
+      url: '/warrants#at-the-door',
+    },
+    {
+      id: 'warrant-exceptions',
+      title: 'When Police Don\'t Need a Warrant',
+      titleEs: 'Cuándo la Policía No Necesita una Orden',
+      titleZh: '警察不需要搜查令的情况',
+      content: 'Courts have recognized several exceptions where police may act without a warrant. Consent: if you give permission, no warrant is needed — you have the right to refuse. Exigent circumstances: a genuine emergency such as someone in danger, a fleeing suspect, or imminent destruction of evidence. Plain view: officers already lawfully present can seize contraband they can clearly see. Search incident to lawful arrest: officers can search the person and immediate area when making a valid arrest. Vehicle searches: officers with probable cause can search a car without a warrant. Terry stop: officers with reasonable suspicion can briefly stop and pat down for weapons only. These exceptions have limits and officers sometimes claim them more broadly than courts allow. You can always state "I do not consent" — your objection is on the record even if it does not stop the search.',
+      tags: ['warrant exceptions', 'exigent circumstances', 'plain view', 'consent search', 'terry stop', 'probable cause', 'fourth amendment', 'no warrant', 'search without warrant', 'reasonable suspicion'],
+      aliases: ['when police don\'t need warrant', 'warrantless search', 'exigent circumstances', 'plain view doctrine', 'consent to search', 'do police always need warrant', 'exceptions to warrant requirement', 'search without warrant legal'],
+      url: '/warrants#no-warrant-needed',
+    },
+  ];
+
+  for (const page of warrantSubPages) {
+    documents.push({
+      id: `warrant-${page.id}`,
+      type: 'rights_info',
+      title: page.title,
+      titleEs: page.titleEs,
+      titleZh: page.titleZh,
+      content: page.content,
+      tags: page.tags,
+      aliases: page.aliases,
+      url: page.url,
+    });
+  }
+  devLog('search', `Indexed ${warrantSubPages.length} warrant sub-pages`);
+
   const sitePages = [
     {
       id: 'home',
