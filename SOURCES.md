@@ -193,8 +193,10 @@ All statistics that appear in user-facing content are in `client/src/i18n.ts`. T
 - **Location in i18n.ts:** `support.financial.probationFees.note`
 
 ### Pretrial detention / case outcomes
-- **Claim:** "Studies show detained defendants face worse case outcomes."
-- **Source:** This is a widely documented finding. Primary references include BJS *Pretrial Detention and Misconduct in Federal District Courts* and Arnold Foundation pretrial research. The current content does not cite a specific study inline — this is flagged as an area to strengthen with a specific citation.
+- **Claim:** "People detained before trial are more likely to be convicted and receive longer sentences than similarly situated defendants who were released."
+- **Sources:**
+  - Laura and John Arnold Foundation, *Pretrial Criminal Justice Research*, 2013
+  - Bureau of Justice Statistics, *Pretrial Detention and Misconduct in Federal District Courts, 1995–2010*
 - **Location:** `client/src/lib/legal-glossary-data.ts`, Pretrial Detention entry
 
 **To update statistics:** Check the U.S. Sentencing Commission's annual Sourcebook (https://www.ussc.gov/research/sourcebook) and BJS data tools (https://bjs.ojp.gov/) for updated figures. When figures change materially, update both the EN string and the ES/ZH translations in `client/src/i18n.ts`.
