@@ -174,7 +174,7 @@ export default function FirstTwentyFourHours() {
                 "Note the name of the facility, your booking number, and the charges. You'll need this information.",
                 "Ask how family can find out where you are being held and how to contact you.",
                 "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication. Document every request.",
-                "In most states you have the right to a phone call within 3 hours of booking.",
+                "You have the right to at least one phone call. Timing varies by state — California sets a 3-hour limit; most other states require 'reasonable time.' Ask booking staff when you can make your call.",
                 'If you don\'t speak English fluently, clearly say "I need an interpreter." You have the right to one at no cost.',
                 'Invoke your right to remain silent for anything beyond your name and date of birth. Booking intake questions ("where were you tonight?") are interrogation.',
               ]}

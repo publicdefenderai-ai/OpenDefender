@@ -241,7 +241,7 @@ export default function RightToCounsel() {
                         <Badge className="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border-0 text-xs">Limited restriction</Badge>
                       </div>
                       <p className="text-sm text-muted-foreground mb-2">Police have reasonable suspicion you're involved in criminal activity and briefly detain you to investigate. You are not free to leave but you have not been arrested.</p>
-                      <p className="text-sm text-foreground/80"><strong>Rights triggered:</strong> Courts are divided on whether a Terry stop alone constitutes "custody" for Miranda purposes. Most courts say no. But you still have the right to refuse to answer questions beyond basic identification. Ask: "Am I under arrest?" If no, ask: "Am I free to go?" If neither, you are being detained.</p>
+                      <p className="text-sm text-foreground/80"><strong>Rights triggered:</strong> Courts are divided on whether a Terry stop alone constitutes "custody" for Miranda purposes. Most courts say no, but there is significant variation by circuit and state. You still have the right to refuse to answer questions beyond basic identification. Ask: "Am I under arrest?" If no, ask: "Am I free to go?" If neither, you are being detained.</p>
                     </div>
                   </div>
                 </CardContent>

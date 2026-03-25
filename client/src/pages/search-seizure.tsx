@@ -139,8 +139,8 @@ const scenarios: RightsScenario[] = [
       "Police usually need a warrant (court order) to search your phone",
       "You can refuse to unlock your phone",
       "You have the right not to help them build a case against you",
-      "Fingerprint/Face ID can be forced, but passcodes cannot",
-      "Police cannot make you give them your passcode"
+      "Courts are divided on biometrics: many have held police cannot force fingerprint/Face ID unlock without a warrant, but this is unsettled law that varies by jurisdiction",
+      "Passcodes are more protected — courts generally hold you cannot be compelled to reveal a passcode (5th Amendment)"
     ],
     whatToDo: [
       "Clearly state: 'I do not consent to a search of my phone'",
