@@ -281,7 +281,7 @@ export default function CollateralConsequences() {
                     Law enforcement agencies in California, Texas, New York, Illinois, and most other major states maintain gang databases. Entry criteria vary but typically require meeting two or more of the following: self-admission; being observed associating with known gang members; wearing gang-affiliated clothing, colors, or tattoos; or being identified by a reliable informant.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    California's CalGang database is one of the largest; a 2016 audit found significant errors, including minors and individuals with no gang ties being listed. Similar concerns have been raised about Chicago's database and New York's gang database. Many states do not require notification when someone is added, making it difficult to challenge the designation.
+                    California's CalGang database is one of the largest; a 2016 California State Auditor report (Report 2015-130) found significant errors, including minors and individuals with no gang ties being listed. Similar concerns have been raised about Chicago's database and New York's gang database. Many states do not require notification when someone is added, making it difficult to challenge the designation.
                   </p>
                 </CardContent>
               </Card>

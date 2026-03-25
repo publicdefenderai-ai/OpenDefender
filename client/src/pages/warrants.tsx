@@ -523,7 +523,7 @@ export default function Warrants() {
                 <CardContent className="p-5 space-y-2">
                   <p className="text-sm font-semibold text-foreground">Knock-and-announce requirements</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Even when officers have a valid judicial warrant, they are generally required to knock, announce their presence, and give occupants a brief moment to respond before forcing entry. Legal organization reports and lawsuits have documented instances in both criminal and immigration enforcement where this requirement was not followed.
+                    Even when officers have a valid judicial warrant, they are generally required to knock, announce their presence, and give occupants a brief moment to respond before forcing entry (18 U.S.C. § 3109 for federal officers; state law equivalents vary). Legal organization reports and lawsuits have documented instances in both criminal and immigration enforcement where this requirement was not followed.
                   </p>
                 </CardContent>
               </Card>
