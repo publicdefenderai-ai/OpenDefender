@@ -2929,7 +2929,7 @@ i18n
               "subtitle": "Learn about important decisions you may face during your case. Click each section to expand and learn more.",
               "bail": {
                 "title": "Cash Bail",
-                "intro": "Bail is money held by the court to make sure you come back for your court dates. Here's what you need to know as a defendant.",
+                "intro": "Bail is money held by the court to make sure you come back for your court dates. Here's what you need to know as a defendant. Note: bail law is changing rapidly across the United States. Some states have ended or restricted cash bail; others have expanded the power to hold defendants without bail. The information below reflects general principles — ask your attorney what applies in your jurisdiction. (Sources: Pretrial Justice Institute; Arnold Foundation Pretrial Research, 2013; Bail Reform Act of 1984, 18 U.S.C. § 3142)",
                 "whatIs": {
                   "title": "What is bail?",
                   "description": "Bail is a way to get out of jail while waiting for your case to be finished. You pay money (or someone pays for you), and the court holds it until your case ends.",
@@ -7784,7 +7784,7 @@ i18n
               "subtitle": "Aprenda sobre decisiones importantes que puede enfrentar durante su caso. Haga clic en cada sección para expandir y aprender más.",
               "bail": {
                 "title": "Fianza en Efectivo",
-                "intro": "La fianza es dinero que el tribunal retiene para asegurar que usted regrese a sus citas en la corte. Esto es lo que necesita saber como acusado.",
+                "intro": "La fianza es dinero que el tribunal retiene para asegurar que usted regrese a sus citas en la corte. Esto es lo que necesita saber como acusado. Nota: la ley de fianza está cambiando rápidamente en los Estados Unidos. Algunos estados han eliminado o restringido la fianza en efectivo; otros han ampliado el poder de detener a los acusados sin fianza. La información a continuación refleja principios generales — pregunte a su abogado qué aplica en su jurisdicción. (Fuentes: Pretrial Justice Institute; Arnold Foundation Pretrial Research, 2013; Ley de Reforma de Fianza de 1984, 18 U.S.C. § 3142)",
                 "whatIs": {
                   "title": "¿Qué es la fianza?",
                   "description": "La fianza es una forma de salir de la cárcel mientras espera que termine su caso. Usted paga dinero (o alguien paga por usted), y el tribunal lo retiene hasta que termine su caso.",
@@ -12614,7 +12614,7 @@ i18n
               "subtitle": "了解您在案件中可能面临的重要决定。点击每个部分展开了解更多。",
               "bail": {
                 "title": "现金保释",
-                "intro": "保释金是法院持有的金额，用来确保您会回来出庭。以下是作为被告您需要知道的信息。",
+                "intro": "保释金是法院持有的金额，用来确保您会回来出庭。以下是作为被告您需要知道的信息。注意：保释法在全美各地正在迅速变化。一些州已经取消或限制了现金保释；另一些州扩大了无需保释羁押被告的权力。以下信息反映的是一般原则——请询问您的律师您所在司法管辖区的具体规定。（来源：审前司法研究所；阿诺德基金会审前研究，2013年；1984年保释改革法，18 U.S.C. § 3142）",
                 "whatIs": {
                   "title": "什么是保释金？",
                   "description": "保释金是在等待案件结案期间从监狱释放的一种方式。您支付金额（或由他人代付），法院持有该金额直到案件结束。",
