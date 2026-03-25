@@ -4,7 +4,7 @@
 
 This index documents where every category of data on the OpenDefender platform comes from, what verification processes are in place, and where to look to update the data. It is intended for quality control reviewers, contributors, and maintainers.
 
-Last reviewed: March 2026
+Last reviewed: March 2026 (updated after editorial review pass)
 
 ---
 
@@ -67,10 +67,13 @@ This means:
 
 **Reference used during creation:** Model Penal Code (American Law Institute); FBI Uniform Crime Reporting (UCR) classifications for charge frequency ranking.
 
-**Optional live statute APIs (configured but not required):**
-- OpenLaws API — https://docs.openlaws.us/ (env var: `OPENLAWS_API_KEY`)
-- GovInfo API — https://api.govinfo.gov (env var: `GOVINFO_API_KEY`)
-- LegiScan API — https://api.legiscan.com/ (env var: `LEGISCAN_API_KEY`)
+**Live statute APIs:**
+
+| API | Role | Status | Env var |
+|-----|------|--------|---------|
+| OpenLaws — https://docs.openlaws.us/ | **Tier 3 citation fallback** in the legal accuracy validator. When a citation from AI guidance is not found in the local DB, OpenLaws is queried as a live authoritative source before the citation is flagged as unverified. Covers all 50 states + federal (4.3M+ sections). | Active (fails silently if key absent) | `OPENLAWS_API_KEY` |
+| GovInfo — https://api.govinfo.gov | Federal statute package search (metadata + document links, not full text). Used in `legal-data.ts` for `searchFederalStatutes()`. | Active | `GOVINFO_API_KEY` |
+| LegiScan — https://api.legiscan.com/ | Bill tracking — monitors new criminal legislation across states for staleness detection. Not part of the guidance or validation pipeline. | Configured, not actively called | `LEGISCAN_API_KEY` |
 
 **To update:** For a given state, cross-reference the synthesized charges against the state's current criminal code via its official legislature website. Any corrections to statute citations or penalty ranges should be applied in `shared/criminal-charges.ts`.
 
@@ -193,11 +196,21 @@ All statistics that appear in user-facing content are in `client/src/i18n.ts`. T
 - **Location in i18n.ts:** `support.financial.probationFees.note`
 
 ### Pretrial detention / case outcomes
-- **Claim:** "People detained before trial are more likely to be convicted and receive longer sentences than similarly situated defendants who were released."
+- **Claim:** "People detained before trial are more likely to be convicted and receive longer sentences than similarly situated defendants who were released — even after controlling for charge type and criminal history."
 - **Sources:**
   - Laura and John Arnold Foundation, *Pretrial Criminal Justice Research*, 2013
   - Bureau of Justice Statistics, *Pretrial Detention and Misconduct in Federal District Courts, 1995–2010*
 - **Location:** `client/src/lib/legal-glossary-data.ts`, Pretrial Detention entry
+- **Status:** Citation added inline — ✅ resolved
+
+### Bail guide sourcing
+- **Claim:** State bail reform trends, risk assessment tools, preventive detention, bail schedules.
+- **Sources:**
+  - Pretrial Justice Institute
+  - Laura and John Arnold Foundation Pretrial Research, 2013
+  - Bail Reform Act of 1984, 18 U.S.C. § 3142
+- **Location:** `client/src/i18n.ts`, `process.guides.bail.intro` (EN/ES/ZH)
+- **Status:** Source note added to bail guide intro — ✅ resolved
 
 **To update statistics:** Check the U.S. Sentencing Commission's annual Sourcebook (https://www.ussc.gov/research/sourcebook) and BJS data tools (https://bjs.ojp.gov/) for updated figures. When figures change materially, update both the EN string and the ES/ZH translations in `client/src/i18n.ts`.
 
@@ -207,29 +220,42 @@ All statistics that appear in user-facing content are in `client/src/i18n.ts`. T
 
 The following pages are manually authored and maintained by the platform team. They are not validated by the automated legal accuracy validator (which only applies to AI Case Guidance output).
 
-| Page | File |
-|------|------|
-| Your Constitutional Rights | `client/src/pages/rights-info.tsx` |
-| First 24 Hours After Arrest | `client/src/pages/first-24-hours.tsx` |
-| Right to an Attorney | `client/src/pages/right-to-counsel.tsx` |
-| Search and Seizure | `client/src/pages/search-seizure.tsx` |
-| Understanding Warrants | `client/src/pages/warrants.tsx` |
-| Collateral Consequences | `client/src/pages/collateral-consequences.tsx` |
-| Immigration Guidance | `client/src/pages/immigration-guidance.tsx` |
-| Quick Reference Card | `client/src/pages/quick-reference.tsx` |
-| Criminal Justice Process | `client/src/pages/process.tsx` |
+**Full editorial review log:** [EDITORIAL_REVIEW_LOG.md](./EDITORIAL_REVIEW_LOG.md) — contains per-page primary sources, issues found, fixes applied, last-reviewed dates, and next-review schedule.
 
-**Reference sources used during authorship of these pages** (not exhaustive — pages were researched at time of writing):
-- U.S. Constitution (First, Fourth, Fifth, Sixth, Eighth, Fourteenth Amendments)
-- Miranda v. Arizona, 384 U.S. 436 (1966) — right to remain silent
-- Gideon v. Wainwright, 372 U.S. 335 (1963) — right to counsel
-- Mapp v. Ohio, 367 U.S. 643 (1961) — exclusionary rule
-- Terry v. Ohio, 392 U.S. 1 (1968) — stop and frisk / reasonable suspicion
-- Illinois v. Gates, 462 U.S. 213 (1983) — probable cause standard
+**Last review pass:** March 2026. Five content corrections applied (see log for details).
+
+| Page | File | Last Reviewed | Next Review |
+|------|------|--------------|-------------|
+| Your Constitutional Rights | `client/src/pages/rights-info.tsx` | 2026-03 | 2027-01 |
+| First 24 Hours After Arrest | `client/src/pages/first-24-hours.tsx` | 2026-03 | 2027-01 |
+| Right to an Attorney | `client/src/pages/right-to-counsel.tsx` | 2026-03 | 2027-01 |
+| Search and Seizure | `client/src/pages/search-seizure.tsx` | 2026-03 | 2027-01 |
+| Understanding Warrants | `client/src/pages/warrants.tsx` | 2026-03 | 2027-01 |
+| Collateral Consequences | `client/src/pages/collateral-consequences.tsx` | 2026-03 | 2027-01 |
+| Immigration Guidance | `client/src/pages/immigration-guidance.tsx` | 2026-03 (partial) | 2026-09 |
+| Quick Reference Card | `client/src/pages/quick-reference.tsx` | 2026-03 | 2027-01 |
+| Criminal Justice Process | `client/src/pages/process.tsx` | 2026-03 | 2027-01 |
+
+**Key primary sources across these pages:**
+- U.S. Constitution, Amendments IV, V, VI, VIII, XIV
+- Miranda v. Arizona, 384 U.S. 436 (1966)
+- Gideon v. Wainwright, 372 U.S. 335 (1963)
+- Brewer v. Williams, 430 U.S. 387 (1977)
+- Scott v. Illinois, 440 U.S. 367 (1979)
+- Mapp v. Ohio, 367 U.S. 643 (1961)
+- Terry v. Ohio, 392 U.S. 1 (1968)
+- Riley v. California, 573 U.S. 373 (2014)
+- Brady v. Maryland, 373 U.S. 83 (1963)
+- Fare v. Michael C., 442 U.S. 707 (1979)
+- Wilson v. Arkansas, 514 U.S. 927 (1995)
+- 18 U.S.C. § 922(g) (firearms prohibition)
+- 18 U.S.C. § 3109 (knock-and-announce)
+- 34 U.S.C. § 20901 et seq. (SORNA)
+- California State Auditor Report 2015-130 (CalGang database)
 - ACLU Know Your Rights — https://www.aclu.org/know-your-rights
 - National Immigration Law Center — https://www.nilc.org/
 
-**To update:** Review the page content against the current constitutional and statutory landscape. For immigration pages, check USCIS policy updates at https://www.uscis.gov/ and EOIR at https://www.justice.gov/eoir.
+**To update:** Review the page content against the current constitutional and statutory landscape. For immigration pages, check USCIS policy updates at https://www.uscis.gov/ and EOIR at https://www.justice.gov/eoir. Record all reviews in `EDITORIAL_REVIEW_LOG.md`.
 
 ---
 
@@ -238,14 +264,19 @@ The following pages are manually authored and maintained by the platform team. T
 ### AI Case Guidance
 - **Provider:** Anthropic Claude Sonnet 4 (claude-sonnet-4-6)
 - **Purpose:** Generates personalized case guidance based on user-provided charge and jurisdiction
-- **Validation:** Output passes through the two-tier legal accuracy validator before delivery
+- **Validation:** Output passes through a three-tier legal accuracy validator before delivery
+- **Disclaimer:** Every guidance response includes a standard "Statute Citations" notice in the Areas of Uncertainty panel, directing users to verify citations with their attorney or at law.cornell.edu/uscode
 - **Env var:** `ANTHROPIC_API_KEY`
 
-### Case Law Validation (Tier 2)
-- **Service:** CourtListener API — https://www.courtlistener.com/api/rest/v4
-- **Purpose:** Semantic search for case law precedent to validate AI-generated guidance
-- **Authentication:** Optional (`COURTLISTENER_API_TOKEN`). Fails silently if unavailable.
-- **Note:** This validator runs only on AI output, not on static editorial pages.
+### Legal Accuracy Validator — Three Tiers
+
+| Tier | Service | Purpose | Fails silently? |
+|------|---------|---------|-----------------|
+| Tier 1 | Local statute DB + `shared/criminal-charges.ts` | Citation existence, penalty accuracy, jurisdiction match, timeline verification | No — always runs |
+| Tier 2 | CourtListener API — https://www.courtlistener.com/api/rest/v4 | Semantic case law precedent search; confidence boost | Yes (`COURTLISTENER_API_TOKEN` optional) |
+| Tier 3 | OpenLaws API — https://docs.openlaws.us/ | Live citation fallback: if not found in local DB, queries OpenLaws before flagging as unverified | Yes (`OPENLAWS_API_KEY` optional) |
+
+The validator runs only on AI-generated Case Guidance output, not on static editorial pages.
 
 ### Court and Legal Aid Geolocation
 - **Service:** OpenStreetMap Nominatim — https://nominatim.openstreetmap.org/search
@@ -309,21 +340,36 @@ The following external organizations are linked from support and resource pages.
 ### Known limitations
 
 **Criminal charges database is synthesized, not direct statute pulls.**
-The charges in `shared/criminal-charges.ts` are based on Model Penal Code patterns, not individually pulled from each state's legislature. Generated statute codes are used for consistency in the AI guidance system. Statute citations from this database should not be cited as authoritative without cross-referencing against the relevant state's official code.
-
-**Pretrial detention outcome statistic lacks inline citation.**
-The claim that "studies show detained defendants face worse case outcomes" in the Pretrial Detention glossary entry does not currently cite a specific study. This should be updated to reference a named BJS or Arnold Foundation study.
+The charges in `shared/criminal-charges.ts` are based on Model Penal Code patterns, not individually pulled from each state's legislature. Generated statute codes are used for consistency in the AI guidance system. Statute citations from this database should not be cited as authoritative without cross-referencing against the relevant state's official code. Tier 3 (OpenLaws) provides a live verification fallback for any citation that appears in AI guidance output.
 
 **Diversion program data changes frequently.**
 Eligibility criteria, operating hours, phone numbers, and even program existence change often. The quarterly URL check catches dead links but cannot verify whether the program details are still accurate. Diversion program entries should be re-verified against the source court or prosecutor's office at least annually.
 
-**Static editorial pages are author-maintained.**
-The legal accuracy validator only applies to AI-generated Case Guidance output. Static pages (rights-info, first-24-hours, warrants, etc.) are the responsibility of the platform authors. There is no automated check for stale content on these pages.
+**Immigration guidance requires accelerated review.**
+Immigration law and enforcement policy change rapidly. `immigration-guidance.tsx` is on a 6-month review cycle (next due 2026-09) and was only partially reviewed in the March 2026 pass due to file size. Full line-by-line review is outstanding.
 
 **BJS analytics integration is in progress.**
 References to Bureau of Justice Statistics (BJS) API integration for crime statistics and NCVS/NIBRS data appear in the codebase but are not yet live. Do not cite these as active data sources.
 
+**Attorney review not yet completed.**
+Platform content has not been formally reviewed by a licensed attorney as of March 2026. A legal review pass is recommended before public launch, particularly for the immigration guidance and collateral consequences pages.
+
+### Resolved since initial index
+
+| Issue | Resolution | Commit |
+|-------|-----------|--------|
+| Pretrial detention stat had no specific citation | Added Arnold Foundation 2013 + BJS citation inline | `8a96cbd` |
+| Bail guide claims uncited | Added Pretrial Justice Institute / Arnold Foundation / 18 U.S.C. § 3142 source note | `8a96cbd` |
+| Static editorial pages had no review audit trail | Created `EDITORIAL_REVIEW_LOG.md`; completed March 2026 review pass | `2b2f6fd` |
+| Phone call timing overstated (said "3 hours" universally) | Updated to note CA-specific rule; other states require "reasonable time" | `2b2f6fd` |
+| Biometrics/passcode law stated with false certainty | Updated to reflect unsettled law with circuit variation | `2b2f6fd` |
+| Terry stop custody analysis missing circuit caveat | Added "significant variation by circuit and state" | `2b2f6fd` |
+| Knock-and-announce lacked statutory citation | Added 18 U.S.C. § 3109 | `2b2f6fd` |
+| CalGang "2016 audit" had no auditor attribution | Added "California State Auditor report (Report 2015-130)" | `2b2f6fd` |
+| Synthesized statute codes could pass validator unchecked | Added OpenLaws Tier 3 live citation fallback to validator | `83f3d6c` |
+| No user-facing statute disclaimer on AI guidance | Added standard "Statute Citations" uncertainty entry to all guidance responses | `83f3d6c` |
+
 ### What has continuous automated validation
 - Federal statute URLs (quarterly)
 - Legal aid organization URLs (quarterly)
-- AI Case Guidance output against statute DB and CourtListener (at generation time)
+- AI Case Guidance output: citation existence (Tier 1 DB + Tier 3 OpenLaws), case law precedent (Tier 2 CourtListener), penalty accuracy, jurisdiction match, timeline verification — all at generation time
