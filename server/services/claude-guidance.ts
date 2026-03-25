@@ -826,6 +826,15 @@ export async function generateClaudeGuidance(
       // Continue without diversion validation
     }
 
+    // Inject statute citation disclaimer into uncertainties (always present)
+    guidance.uncertainties = [
+      ...(guidance.uncertainties || []),
+      {
+        area: 'Statute Citations',
+        note: 'Citations in this guidance are provided for reference and cross-checked where possible. Laws change frequently and vary by jurisdiction. Verify all statute citations with your attorney or at law.cornell.edu/uscode before relying on them.',
+      },
+    ];
+
     // Cache the successful response (including validation)
     responseCache.set(cacheKey, {
       response: guidance,

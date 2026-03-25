@@ -1,23 +1,30 @@
 /**
  * Legal Accuracy Validation Service
- * 
- * Multi-Tier Validation: Cross-references AI-generated legal guidance against 
+ *
+ * Multi-Tier Validation: Cross-references AI-generated legal guidance against
  * authoritative data sources to ensure accuracy.
- * 
+ *
  * Tier 1 - Statute Validation (Primary):
- * 1. Citation Validation - Verifies statute citations exist in our database
+ * 1. Citation Validation - Verifies statute citations exist in our database;
+ *    unverified citations fall through to Tier 3 before being flagged.
  * 2. Penalty Accuracy - Confirms penalty statements match official records
  * 3. Jurisdiction Match - Ensures guidance is appropriate for the specified state
  * 4. Timeline Verification - Validates deadlines are realistic for jurisdiction
- * 
+ *
  * Tier 2 - Case Law Validation (Secondary):
  * 1. Precedent Search - Finds similar cases via CourtListener semantic search
  * 2. Relevance Scoring - Weights cases by jurisdiction, charge category, court level
  * 3. Corroboration Check - Requires multiple precedents to boost confidence
+ *
+ * Tier 3 - Live Statute Lookup (Citation Fallback, requires OPENLAWS_API_KEY):
+ * When a citation is not found in the local statute database, OpenLaws API is
+ * queried as an authoritative live fallback covering all 50 states + federal.
+ * Fails silently if the API key is not configured.
  */
 
 import { storage } from '../storage';
 import { criminalCharges, getChargeById, getChargesByJurisdiction } from '@shared/criminal-charges';
+import { openLawsClient } from './openlaws-client';
 import { caseLawValidator, type PrecedentCase, type CaseLawValidationResult } from './case-law-validator';
 import { devLog, opsLog, errLog } from '../utils/dev-logger';
 
@@ -217,14 +224,29 @@ async function validateCitations(
     if (found) {
       verified++;
     } else {
-      issues.push({
-        type: 'citation_not_found',
-        severity: 'warning',
-        field: 'citations',
-        message: `Citation "${citation}" could not be verified in our statute database`,
-        aiValue: citation,
-        suggestion: 'This citation may be valid but is not in our current database. Consider manual verification.',
-      });
+      // Tier 3: OpenLaws live lookup as authoritative fallback before flagging
+      let confirmedByOpenLaws = false;
+      try {
+        const liveResult = await openLawsClient.searchByCitation(citation);
+        if (liveResult) {
+          verified++;
+          confirmedByOpenLaws = true;
+          devLog('validator', `Tier 3 OpenLaws confirmed: ${citation}`);
+        }
+      } catch {
+        // OpenLaws unavailable or not configured — proceed to flag
+      }
+
+      if (!confirmedByOpenLaws) {
+        issues.push({
+          type: 'citation_not_found',
+          severity: 'warning',
+          field: 'citations',
+          message: `Citation "${citation}" could not be verified in our database or via live statute lookup`,
+          aiValue: citation,
+          suggestion: 'This citation could not be confirmed. Have your attorney verify it before relying on it.',
+        });
+      }
     }
   }
   
