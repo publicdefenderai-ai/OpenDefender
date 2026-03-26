@@ -60,14 +60,20 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **Total charges:** 6,952 (as of 2026-03) — original base charges plus 456 inchoate/derivative charges added March 2026 (Phase 1: criminal attempt, conspiracy, aiding and abetting, accessory after the fact; Phase 2: attempted murder, attempted robbery, attempted sexual assault, criminal solicitation to commit a crime) across all 56 jurisdictions (50 states + DC + AS/GU/MP/PR/VI) plus federal.
 
-**Important caveat:** This database contains synthesized charges based on standard criminal law patterns and Model Penal Code principles. The statute codes used are generated for consistency, not pulled directly from individual state legislature websites. The file itself contains this disclosure in its header comments.
+**Two tiers of accuracy apply:**
 
-This means:
+| Tier | Charges | Accuracy approach |
+|------|---------|-------------------|
+| Base (original) | ~6,496 entries | Synthesized from MPC patterns; statute codes are generated placeholders, not pulled from state legislatures. Penalty ranges reflect common patterns. Do not cite statute numbers as authoritative without cross-referencing the actual state code. |
+| Inchoate / derivative (Phase 1 & 2) | 456 entries | Grounded in universal legal doctrine (MPC §§ 2.06, 2.07, 5.01, 5.02, 5.03), which has been adopted substantially by nearly all states. Federal entries cite actual statutes (18 U.S.C. §§ 2, 3, 371, 1113, 1349, 1373, 1951, 2242). State `code` fields reference the MPC section rather than fabricating a state-specific number, which is accurate across all jurisdictions. |
+
+**Important caveat (base charges):** The base charges contain synthesized statute codes used for consistency, not individual state legislature lookups. The file header contains this disclosure. Inchoate charges deliberately avoid this pattern by citing MPC doctrine instead.
+
 - Charge categories and penalty ranges reflect common patterns across US jurisdictions
-- Individual statute codes (e.g., "Cal. Penal Code § X") should be verified against the actual state code before being cited authoritatively
+- Individual statute codes in the base set (e.g., "Cal. Penal Code § X") should be verified against the actual state code before being cited authoritatively
 - This data powers the AI Case Guidance feature's charge classification and validation, not the static editorial pages
 
-**Reference used during creation:** Model Penal Code (American Law Institute); FBI Uniform Crime Reporting (UCR) classifications for charge frequency ranking.
+**References:** Model Penal Code (American Law Institute, §§ 2.06, 2.07, 5.01, 5.02, 5.03); 18 U.S.C. §§ 2, 3, 371, 1113, 1349, 1373, 1951, 2242; FBI Uniform Crime Reporting (UCR) classifications for charge frequency ranking.
 
 **Live statute APIs:**
 
