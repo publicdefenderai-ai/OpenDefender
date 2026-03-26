@@ -19,6 +19,7 @@ on:
           - consulates
           - legal-aid
           - federal-statutes
+          - public-defenders
 
 # Minimal permissions — only issues:write for the report job
 permissions:
@@ -166,13 +167,48 @@ jobs:
           retention-days: 7
 
   # ──────────────────────────────────────────────────────────────────────────────
-  # Job 5: Generate Report & Create GitHub Issue
+  # Job 5: Public Defender Office Verification
+  # ──────────────────────────────────────────────────────────────────────────────
+  check-public-defenders:
+    name: Check Public Defender Offices
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'public-defenders'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run public defender office checker
+        run: npx tsx scripts/data-review/check-public-defenders.ts
+
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-defenders-diff
+          path: scripts/data-review/output/public-defenders-diff.json
+          if-no-files-found: error
+          retention-days: 7
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # Job 6: Generate Report & Create GitHub Issue
   # Runs after all checkers complete, even if some were skipped.
   # ──────────────────────────────────────────────────────────────────────────────
   generate-report:
     name: Generate Review Report
     runs-on: ubuntu-latest
-    needs: [check-detention-facilities, check-consulates, check-legal-aid, check-federal-statutes]
+    needs: [check-detention-facilities, check-consulates, check-legal-aid, check-federal-statutes, check-public-defenders]
     # Run even if some checker jobs were skipped (due to category filter)
     if: always() && !cancelled()
     permissions:
@@ -219,6 +255,13 @@ jobs:
         continue-on-error: true
         with:
           name: statutes-diff
+          path: scripts/data-review/output
+
+      - name: Download public-defenders diff
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: public-defenders-diff
           path: scripts/data-review/output
 
       - name: Create GitHub Issue

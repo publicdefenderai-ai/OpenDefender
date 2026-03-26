@@ -206,6 +206,7 @@ export class MemStorage implements IStorage {
         longitude: org.longitude ?? null,
         services: org.services ?? null,
         eligibility: org.eligibility ?? null,
+        countyServed: org.countyServed ?? null,
       };
       this.legalAidOrganizations.set(id, organization);
     });
@@ -356,6 +357,7 @@ export class MemStorage implements IStorage {
       longitude: insertOrganization.longitude ?? null,
       services: insertOrganization.services ?? null,
       eligibility: insertOrganization.eligibility ?? null,
+      countyServed: insertOrganization.countyServed ?? null,
     };
     this.legalAidOrganizations.set(id, organization);
     return organization;

@@ -722,7 +722,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         userState = address['ISO3166-2-lvl4'].split('-')[1];
       }
 
-      const allOrgs = await storage.getLegalAidOrganizations(userState, 'public_defender');
+      // Include all public defender types: federal PD, local/county PD, and court-appointed programs
+      const [federalOrgs, countyOrgs, courtOrgs] = await Promise.all([
+        storage.getLegalAidOrganizations(userState, 'public_defender'),
+        storage.getLegalAidOrganizations(userState, 'county_public_defender'),
+        storage.getLegalAidOrganizations(userState, 'court_appointed_program'),
+      ]);
+      const allOrgs = [...federalOrgs, ...countyOrgs, ...courtOrgs];
 
       const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
         const R = 3959;
@@ -734,12 +740,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
       };
 
+      const orgTypeLabel = (type: string): string => {
+        switch (type) {
+          case 'county_public_defender': return 'Local Public Defender';
+          case 'court_appointed_program': return 'Court-Appointed Program';
+          default: return 'Federal Public Defender';
+        }
+      };
+
       const results = allOrgs
         .filter(org => org.latitude && org.longitude)
         .map(org => ({
           name: org.name,
+          orgType: org.organizationType,
+          orgTypeLabel: orgTypeLabel(org.organizationType),
           address: [org.address, org.city, org.state, org.zipCode].filter(Boolean).join(', '),
-          phone: org.phone || 'Contact for information',
+          phone: org.phone || null,
           website: org.website || null,
           hours: 'Mon-Fri 8:00 AM - 5:00 PM',
           services: org.services || [],

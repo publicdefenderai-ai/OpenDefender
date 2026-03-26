@@ -3,6 +3,8 @@
 export interface PublicDefenderOffice {
   id: string;
   name: string;
+  orgType: string;       // 'public_defender' | 'county_public_defender' | 'court_appointed_program'
+  orgTypeLabel: string;  // Human-readable: 'Federal Public Defender' | 'Local Public Defender' | 'Court-Appointed Program'
   address: string;
   county?: string;
   phone?: string;
@@ -10,49 +12,52 @@ export interface PublicDefenderOffice {
   website?: string;
   hours?: string;
   services: string[];
+  eligibility?: string;
   distance: number;
   lat: number;
   lng: number;
   jurisdiction: string; // State abbreviation
 }
 
-// Search for public defender offices using proximity API
+// Search for public defender offices using the local-resources API.
+// Returns all types: federal PDs, local/county PDs, and court-appointed programs,
+// sorted by distance from the provided ZIP code.
 export async function searchPublicDefenderOffices(zipCode: string): Promise<PublicDefenderOffice[]> {
   try {
-    // Use the proximity search API to find public defender offices near the ZIP code
-    const response = await fetch(`/api/legal-aid-organizations/proximity?zipCode=${zipCode}&radius=50&organizationType=public_defender`);
-    
+    const response = await fetch(`/api/local-resources/public-defenders?zip=${zipCode}`);
+
     if (!response.ok) {
       throw new Error('Failed to search for public defender offices');
     }
-    
+
     const data = await response.json();
-    
-    if (!data.success || !data.organizations || data.organizations.length === 0) {
+
+    if (!data.success || !data.results || data.results.length === 0) {
       throw new Error('No public defender offices found');
     }
-    
-    // Convert database organizations to PublicDefenderOffice format
-    const offices: PublicDefenderOffice[] = data.organizations.map((org: any) => ({
-      id: org.id,
+
+    const offices: PublicDefenderOffice[] = data.results.map((org: any) => ({
+      id: org.id || '',
       name: org.name,
-      address: [org.address, org.city, org.state, org.zipCode].filter(Boolean).join(', '),
+      orgType: org.orgType || 'public_defender',
+      orgTypeLabel: org.orgTypeLabel || 'Federal Public Defender',
+      address: org.address,
       county: org.county || undefined,
       phone: org.phone || undefined,
       email: org.email || undefined,
       website: org.website || undefined,
       hours: 'Call for hours',
       services: org.services || [],
-      distance: Math.round(org.distance * 10) / 10,
-      lat: parseFloat(org.latitude),
-      lng: parseFloat(org.longitude),
-      jurisdiction: org.state
+      eligibility: org.eligibility || undefined,
+      distance: org.distanceValue ?? 0,
+      lat: 0,
+      lng: 0,
+      jurisdiction: data.state || '',
     }));
-    
-    return offices.slice(0, 10); // Limit to 10 results
+
+    return offices.slice(0, 10);
   } catch (error) {
     console.error('Error searching for public defender offices:', error);
-    // Return empty array on error
     return [];
   }
 }
