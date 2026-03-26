@@ -58,6 +58,8 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **File:** `shared/criminal-charges.ts`
 
+**Total charges:** 6,952 (as of 2026-03) — original base charges plus 456 inchoate/derivative charges added March 2026 (Phase 1: criminal attempt, conspiracy, aiding and abetting, accessory after the fact; Phase 2: attempted murder, attempted robbery, attempted sexual assault, criminal solicitation to commit a crime) across all 56 jurisdictions (50 states + DC + AS/GU/MP/PR/VI) plus federal.
+
 **Important caveat:** This database contains synthesized charges based on standard criminal law patterns and Model Penal Code principles. The statute codes used are generated for consistency, not pulled directly from individual state legislature websites. The file itself contains this disclosure in its header comments.
 
 This means:
