@@ -108,19 +108,33 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | `LSC` | Legal Services Corporation grantees — federally funded civil and criminal legal aid |
 | `state_website` | State and county public defender offices — verified directly against official government websites |
 | `federal_defender` | Federal Public Defender offices — sourced from federal judiciary directory |
+| `state_pd_website` | Local/county public defender offices — verified against official state indigent defense commission or public defender websites |
+| `court_admin_website` | Court-appointed attorney programs — verified against court administrator or state judicial branch websites |
 
-**Coverage:** 170+ organizations across California, New York, Texas, Illinois, Florida, Arizona, Georgia, and other states. Each record includes name, address, phone, website, and service specialties.
+**Organization types** (tagged per record in `organizationType` field):
 
-**Verification:** Quarterly automated HTTP check via `.github/workflows/quarterly-data-review.yml` → `check-legal-aid.ts`. Script sends HTTP HEAD requests to all organization URLs and outputs `legal-aid-diff.json` flagging errors, redirects, and timeouts for manual review.
+| Type | Description |
+|------|-------------|
+| `public_defender` | Federal Public Defender offices (one per federal district) |
+| `county_public_defender` | Local or county public defender offices handling state criminal cases |
+| `court_appointed_program` | Court-administered programs that appoint private attorneys for indigent defendants |
 
-**Last manual verification pass:** March 2026 (13 corrections applied — addresses, phone numbers, and website URLs).
+**Coverage:** 170+ organizations including legal aid orgs, federal public defenders, local/county public defenders, and court-appointed programs. As of March 2026, Virginia county public defenders (25 offices) and Phase A state-level PD contacts (18 states) have been added. Coverage will expand quarterly.
 
-**To update:** For any organization flagged in the quarterly diff, visit the organization's official website directly to obtain current contact information, then update the corresponding record in `server/data/legal-aid-organizations-seed.ts`.
+**Verification:** Two automated quarterly HTTP checks:
+- `check-legal-aid.ts` → `legal-aid-diff.json` — checks legal aid org URLs
+- `check-public-defenders.ts` → `public-defenders-diff.json` — checks public defender and court-appointed program websites; also flags entries with missing phone numbers for manual lookup
+
+**Last manual verification pass:** March 2026 (13 corrections applied — addresses, phone numbers, and website URLs; Virginia and Phase A PD offices added).
+
+**To update:** For any organization flagged in the quarterly diff, visit the organization's official website directly to obtain current contact information, then update the corresponding record in `server/data/legal-aid-organizations-seed.ts`. Also update the matching entry in `scripts/data-review/check-public-defenders.ts` (the two lists must be kept in sync).
 
 **Key source directories to check during updates:**
 - EOIR Pro Bono List: https://www.justice.gov/eoir/pro-bono-legal-service-providers
 - LSC Grantee directory: https://www.lsc.gov/grants/grantee-directory
 - Federal Defender list: https://www.fd.org/federal-public-defenders
+- Virginia Indigent Defense Commission: https://indigentdefense.virginia.gov
+- State PD office lists: each state's indigent defense commission or judicial branch website
 
 ---
 
@@ -320,8 +334,9 @@ Two GitHub Actions workflows run on January 1, April 1, July 1, and October 1 at
 |--------|---------------|--------|
 | `check-legal-aid.ts` | HTTP HEAD requests to all legal aid org URLs — flags 404s, redirects, timeouts | `legal-aid-diff.json` |
 | `check-federal-statutes.ts` | HTTP HEAD requests to all Cornell LII statute URLs — flags redirects to different domains | `statutes-diff.json` |
-| `check-detention-facilities.ts` | Validates ICE detention facility data URLs | Diff output |
-| `check-consulates.ts` | Verifies consulate contact information and URLs | Diff output |
+| `check-detention-facilities.ts` | Validates ICE detention facility data URLs | `detention-diff.json` |
+| `check-consulates.ts` | Verifies consulate contact information and URLs | `consulate-diff.json` |
+| `check-public-defenders.ts` | HTTP HEAD requests to all public defender and court-appointed program websites; also flags entries with missing phone numbers | `public-defenders-diff.json` |
 | `generate-report.ts` | Reads all diff outputs and opens a GitHub Issue with items needing manual review | GitHub Issue |
 
 **What to do when a quarterly issue is filed:** Each item in the issue requires a human to visit the flagged URL or organization directly, verify the current correct information, and update the corresponding seed file or data file in the repository.
@@ -389,4 +404,5 @@ Platform content has not been formally reviewed by a licensed attorney as of Mar
 ### What has continuous automated validation
 - Federal statute URLs (quarterly)
 - Legal aid organization URLs (quarterly)
+- Public defender and court-appointed program websites (quarterly); missing phone numbers also flagged
 - AI Case Guidance output: citation existence (Tier 1 DB + Tier 3 OpenLaws), case law precedent (Tier 2 CourtListener), penalty accuracy, jurisdiction match, timeline verification — all at generation time

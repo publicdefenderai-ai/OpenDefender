@@ -186,12 +186,13 @@ export type CourtRecord = typeof courtRecords.$inferSelect;
 export const legalAidOrganizations = pgTable("legal_aid_organizations", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   name: text("name").notNull(),
-  organizationType: text("organization_type").notNull(), // 'immigration', 'criminal_defense', 'civil_legal_aid', 'public_defender'
+  organizationType: text("organization_type").notNull(), // 'immigration', 'criminal_defense', 'civil_legal_aid', 'public_defender', 'county_public_defender', 'court_appointed_program'
   address: text("address"),
   city: text("city").notNull(),
   state: text("state").notNull(), // Two-letter state code
   zipCode: text("zip_code"),
   county: text("county"),
+  countyServed: text("county_served").array(), // Counties served by this office (some offices cover multiple counties)
   phone: text("phone"),
   email: text("email"),
   website: text("website"),
@@ -199,7 +200,7 @@ export const legalAidOrganizations = pgTable("legal_aid_organizations", {
   longitude: text("longitude"), // Stored as text for precision
   services: text("services").array(), // e.g., ['Deportation Defense', 'Asylum Applications', 'Criminal Defense']
   eligibility: text("eligibility"), // Requirements/restrictions
-  dataSource: text("data_source").notNull(), // 'EOIR', 'LSC', 'usa.gov', 'manual'
+  dataSource: text("data_source").notNull(), // 'EOIR', 'LSC', 'usa.gov', 'manual', 'state_pd_website', 'court_admin_website'
   lastUpdated: timestamp("last_updated").defaultNow(),
   isActive: boolean("is_active").default(true),
 }, (table) => ({
