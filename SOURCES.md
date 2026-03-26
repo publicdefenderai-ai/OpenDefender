@@ -58,7 +58,14 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **File:** `shared/criminal-charges.ts`
 
-**Total charges:** 6,952 (as of 2026-03) — original base charges plus 456 inchoate/derivative charges added March 2026 (Phase 1: criminal attempt, conspiracy, aiding and abetting, accessory after the fact; Phase 2: attempted murder, attempted robbery, attempted sexual assault, criminal solicitation to commit a crime) across all 56 jurisdictions (50 states + DC + AS/GU/MP/PR/VI) plus federal.
+**Total charges:** 7,237 (as of 2026-03) — original base charges plus 456 inchoate/derivative charges (Phases 1 & 2) plus 285 sentencing enhancement charges (Phase 3) added March 2026.
+
+**Phase breakdown:**
+- Phase 1 (228 entries): Criminal attempt, conspiracy, aiding and abetting, accessory after the fact — MPC §§ 2.06, 2.07, 5.01, 5.03; federal 18 U.S.C. §§ 2, 3, 371
+- Phase 2 (228 entries): Attempted murder, attempted robbery, attempted sexual assault, criminal solicitation — federal 18 U.S.C. §§ 373, 1113, 1951, 2242
+- Phase 3 (285 entries): Sentencing enhancements — gang/RICO, hate crime, recidivist/three-strikes, firearm-in-felony, drug school zone — federal 18 U.S.C. §§ 249, 521, 924(c), 924(e), 1959; 21 U.S.C. § 860
+
+All phases cover 56 jurisdictions (50 states + DC + AS/GU/MP/PR/VI) plus federal.
 
 **Two tiers of accuracy apply:**
 
