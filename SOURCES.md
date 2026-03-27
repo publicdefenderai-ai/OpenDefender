@@ -20,6 +20,7 @@ Last reviewed: March 2026 (updated after editorial review pass)
 8. [Static Editorial Pages](#8-static-editorial-pages)
 9. [External APIs and Services](#9-external-apis-and-services)
 10a. [Jurisdiction Procedure Rules](#10a-jurisdiction-procedure-rules)
+10b. [Collateral Consequences Data](#10b-collateral-consequences-data)
 10. [Quarterly Automated Checks](#10-quarterly-automated-checks)
 11. [External Resource Links](#11-external-resource-links)
 12. [Data Quality Flags](#12-data-quality-flags)
@@ -396,6 +397,44 @@ Two GitHub Actions workflows run on January 1, April 1, July 1, and October 1 at
 | `generate-report.ts` | Reads all diff outputs and opens a GitHub Issue with items needing manual review | GitHub Issue |
 
 **What to do when a quarterly issue is filed:** Each item in the issue requires a human to visit the flagged URL or organization directly, verify the current correct information, and update the corresponding seed file or data file in the repository.
+
+---
+
+## 10b. Collateral Consequences Data
+
+**File:** `client/src/lib/collateral-consequences-data.ts`
+
+**Coverage (as of March 2026):** All 50 states + DC (51 entries). Each entry covers four consequence categories: voting rights, employment (ban-the-box + occupational licensing), public benefits (SNAP/TANF drug felony ban status), and housing (fair chance housing laws).
+
+**Primary sources per category:**
+
+| Category | Primary Sources |
+|---|---|
+| Voting rights restoration | State constitution, state election law statutes, CCRC state profiles, ProCon.org felon voting tracker |
+| Ban-the-box / fair chance hiring | State statutes, NELP fair chance hiring tracker (nelp.org), NCSL ban-the-box state law survey |
+| Occupational licensing nexus reform | CCRC licensing tracker, Institute for Justice occupational licensing database, state licensing board statutes |
+| SNAP/TANF drug felony ban | USDA FNS State Options Reports, CLASP state snapshots, 21 U.S.C. § 862a (federal baseline) |
+| Fair chance housing | State statutes, CCRC housing tracker, local ordinance text |
+
+**Data confidence tiers:**
+- `high` — verified against primary state statute text; specific citation exists
+- `medium` — verified against secondary source (NCSL, CCRC, NELP) with plausible citation; most entries are medium
+- `low` — inference or placeholder; not surfaced to users as authoritative
+
+**Notable state-specific rules captured:**
+- Voting: ME, VT, OR (2024): vote while incarcerated. MN (2024): vote while on parole/probation.
+- Voting: MS: requires 2/3 legislative vote or gubernatorial pardon for most crimes.
+- Voting: FL: Amendment 4 (2018) + SB 7066 financial obligation requirement.
+- Voting: VA: depends on executive order, not statute — subject to administration change.
+- SNAP: States fully opted out include CA, CO, CT, DC, DE, HI, IA, ID, IL, KS, KY, MA, MD, ME, MI, MN, MT, NE, NH, NJ, NM, NY, OH, OR, PA, RI, UT, VA, VT, WA, WV, WI.
+- SNAP: States with full ban or modified ban: AL, AR, AZ, FL, GA, LA, MS (TANF), MO (TANF), NC, OK, SC, SD, TN, TX, WY.
+- BTB private employers: CA, CO, CT, DC, HI, IL, MA, MD, MN, NJ, NM, NY, NV, OR, RI, VT, WA.
+- Fair chance housing (statewide): DC, NJ, OR, WA. Local ordinances in many others.
+
+**Quarterly review:** Re-verify entries with `lastVerified` dates older than 12 months. Key areas that change frequently:
+- State voting rights laws (executive orders are particularly volatile)
+- Ban-the-box expansions (many states active in this area)
+- SNAP opt-out status (some states have expanded opt-outs in recent legislative sessions)
 
 ---
 
