@@ -14,6 +14,9 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
+import { useJurisdiction } from "@/hooks/use-jurisdiction";
+import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
+import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 
 function ProcessStep({ number, title, description, timeframe, rights, isLast, t }: {
   number: number;
@@ -77,6 +80,7 @@ function ProcessStep({ number, title, description, timeframe, rights, isLast, t 
 export default function Process() {
   useScrollToTop();
   const { t } = useTranslation();
+  const { jurisdiction } = useJurisdiction();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -146,6 +150,8 @@ export default function Process() {
       {/* Process Timeline */}
       <section className="py-16 bg-background">
         <div className="max-w-5xl mx-auto px-4">
+          <JurisdictionSelector label="See rules for your state (optional)" />
+
           <ScrollReveal>
             <Alert className="mb-12 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
               <Scale className="h-4 w-4 text-blue-600 dark:text-blue-400" />
@@ -168,11 +174,21 @@ export default function Process() {
                   t={t}
                 />
                 {stepNum === 2 && (
-                  <div className="ml-[4.5rem] -mt-4 mb-6">
+                  <div className="ml-[4.5rem] -mt-4 mb-2">
                     <a href="#bail-guide" className="inline-flex items-center gap-2 text-sm text-green-700 dark:text-green-400 hover:underline font-medium">
                       <DollarSign className="h-4 w-4" />
                       How bail works — types, options if you can't pay, and conditions ↓
                     </a>
+                  </div>
+                )}
+                {stepNum === 2 && (
+                  <div className="ml-[4.5rem] mb-6">
+                    <JurisdictionCallout jurisdiction={jurisdiction} topic="bail" />
+                  </div>
+                )}
+                {stepNum === 3 && (
+                  <div className="ml-[4.5rem] mb-6">
+                    <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
                   </div>
                 )}
               </ScrollReveal>

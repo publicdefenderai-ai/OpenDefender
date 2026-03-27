@@ -10,6 +10,9 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { Phone, Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
 import { LegalTerm } from "@/components/ui/legal-term";
+import { useJurisdiction } from "@/hooks/use-jurisdiction";
+import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
+import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 
 interface StepProps {
   number: number;
@@ -89,6 +92,7 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, children 
 export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
+  const { jurisdiction } = useJurisdiction();
 
   return (
     <div className="min-h-screen bg-background">
@@ -116,6 +120,10 @@ export default function FirstTwentyFourHours() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.02}>
+          <JurisdictionSelector label="See state-specific rules for your location (optional)" />
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.03}>
           <div className="mb-8 rounded-lg border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 p-5">
             <h3 className="text-base font-bold text-amber-800 dark:text-amber-200 mb-3">If the person arrested is under 18</h3>
             <p className="text-sm text-amber-900 dark:text-amber-100 mb-3">The juvenile justice system works differently in important ways:</p>
@@ -185,7 +193,9 @@ export default function FirstTwentyFourHours() {
                 "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
                 "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
               ]}
-            />
+            >
+              <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
+            </Step>
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
@@ -245,6 +255,7 @@ export default function FirstTwentyFourHours() {
                     <Button variant="outline" size="sm">How Bail Works</Button>
                   </Link>
                 </div>
+                <JurisdictionCallout jurisdiction={jurisdiction} topic="bail" />
               </div>
             </Step>
           </ScrollReveal>
@@ -296,7 +307,9 @@ export default function FirstTwentyFourHours() {
                 "Don't speak to the judge about the facts of your case.",
                 "Don't miss this court date. A warrant will be issued for your arrest.",
               ]}
-            />
+            >
+              <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
+            </Step>
           </ScrollReveal>
 
           <ScrollReveal delay={0.35}>
