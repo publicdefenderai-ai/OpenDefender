@@ -143,24 +143,29 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **File:** `client/src/lib/expungement-data.ts`
 
-Each state entry in this file contains a `sources` array listing the exact legal citations used. Currently documented states:
+Each state entry in this file contains a `sources` array listing the exact legal citations used.
 
-**California**
-- California Penal Code Section 1203.4
-- California Courts Self-Help Center
+**Coverage (as of March 2026):** All 50 states + DC + Federal (52 entries total). Expanded from 7 entries (CA, TX, FL, NY, PA, GA, Federal) to full national coverage in March 2026.
 
-**Texas**
-- Texas Code of Criminal Procedure, Chapter 55
-- Texas Government Code, Chapter 411
+**Data methodology:**
+- Primary source for each state: state legislature website (state statute text) and/or state court administrative website
+- Secondary sources: NCSL Expungement/Sealing State Statutes Survey, Clean Slate Initiative state tracker, National Reentry Resource Center
+- Each entry documents the distinction between true expungement (record destruction) and record sealing (access restriction) where applicable
+- States with no felony expungement pathway omit `felonyMonths` from `waitingPeriods` rather than setting 0, to avoid misleading the eligibility calculator
+- States where expungement is only available at sentencing (not by post-sentence petition) — notably WI — are flagged in the `overview` field
+- States with set-aside statutes rather than true expungement — notably AZ, NM — are flagged in the `overview` field
 
-**Florida**
-- Florida Statute 943.0585 (Expungement)
-- Florida Statute 943.059 (Sealing)
-- Florida Department of Law Enforcement (FDLE)
+**Notable state-specific rules captured:**
+- IL: Cannabis offenses may be expunged immediately under Cannabis Regulation and Tax Act
+- NJ: Clean Slate Act (2020) — automatic expungement after 10 years
+- NE: No conviction expungement available; only non-conviction records (arrests, acquittals)
+- VA: Very limited — primarily dismissals and acquittals; HB 5076 added misdemeanor sealing (2021)
+- WI: Expungement only if judge orders it at sentencing; no post-sentence petition
+- AZ: Set-aside (not true expungement); separate Prop 207 marijuana pathway
+- HI: No felony conviction expungement; misdemeanors only after 5 years
+- DC: Misdemeanors and non-violent felonies eligible after waiting period
 
-Additional states are documented in the file with their respective source citations in the `sources` field of each entry.
-
-**To update:** Visit the official state legislature website for the relevant jurisdiction and compare the waiting periods, exclusions, and procedure steps against what is stored. Fees (e.g., FDLE's $75 processing fee) should be verified directly with the relevant agency.
+**To update:** Visit the official state legislature website for the relevant jurisdiction and compare the waiting periods, exclusions, and procedure steps against what is stored. Fees should be verified directly with the relevant state court administrative office. The `lastUpdated` field in each entry records the verification date — entries with dates older than 24 months should be prioritized for re-verification.
 
 ---
 

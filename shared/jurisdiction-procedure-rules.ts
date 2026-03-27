@@ -883,9 +883,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Utah R. Crim. P. 7',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Utah Rules of Criminal Procedure.',
   },
 
   // ── Iowa ──────────────────────────────────────────────────────────────────
@@ -909,9 +908,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Iowa R. Crim. P. 2.2',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Iowa Rules of Criminal Procedure.',
   },
 
   // ── Nevada ────────────────────────────────────────────────────────────────
@@ -988,9 +986,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Miss. R. Crim. P. 6.1',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Mississippi Rules of Criminal Procedure.',
   },
 
   // ── Kansas ────────────────────────────────────────────────────────────────
@@ -1069,9 +1066,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Neb. Rev. Stat. § 29-1819',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Nebraska statutes.',
   },
 
   // ── West Virginia ─────────────────────────────────────────────────────────
@@ -1095,35 +1091,34 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'W. Va. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current West Virginia statutes. Three-term rule timing is approximate and varies by county.',
+    notes: 'Three-term rule timing is approximate and varies by county; confirm current term schedule with the local circuit court clerk.',
   },
 
   // ── Idaho ─────────────────────────────────────────────────────────────────
   ID: {
     arraignment: '48 hours',
-    speedy_trial: 'No statutory deadline (constitutional right only)',
+    speedy_trial: '6 months (from filing of charge)',
     bail_hearing: '48 hours',
     arraignmentHours: 48,
     arraignmentSource: 'Idaho Crim. R. 5 — arraignment "without unnecessary delay"',
     bailHearingHours: 48,
     bailHearingSource: 'Idaho Crim. R. 46; bail reviewed at initial appearance',
     speedyTrialDays: {
-      felony: null,
-      misdemeanor: null,
-      notes: 'Idaho does not have a strict statutory speedy trial deadline. Constitutional rights apply. Idaho courts apply the Barker v. Wingo balancing test.',
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'Any person against whom criminal charges are pending who has not been brought to trial within 6 months is entitled to dismissal of the charges.',
     },
-    speedyTrialSource: 'Idaho Const. Art. I § 13; U.S. Const. amend. VI',
+    speedyTrialSource: 'Idaho Code § 19-3501',
     phoneCall: {
       limitHours: null,
       description: 'No statutory time limit.',
       source: 'Idaho Crim. R. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Idaho Criminal Rules.',
   },
 
   // ── Hawaii ────────────────────────────────────────────────────────────────
@@ -1147,9 +1142,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Haw. R. Penal P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Hawaii Rules of Penal Procedure.',
   },
 
   // ── New Hampshire ─────────────────────────────────────────────────────────
@@ -1173,9 +1167,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'N.H. Rev. Stat. Ann. § 594:20-a',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current New Hampshire court rules.',
   },
 
   // ── Maine ─────────────────────────────────────────────────────────────────
@@ -1199,9 +1192,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Me. R. U. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Maine Unified Criminal Rules.',
   },
 
   // ── Montana ───────────────────────────────────────────────────────────────
@@ -1225,9 +1217,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Mont. Code Ann. § 46-7-101',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Montana Code Annotated.',
   },
 
   // ── Rhode Island ──────────────────────────────────────────────────────────
@@ -1251,9 +1242,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'R.I. Super. Ct. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Rhode Island court rules.',
   },
 
   // ── Delaware ──────────────────────────────────────────────────────────────
@@ -1303,9 +1293,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'S.D. Codified Laws § 23A-40-1',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current South Dakota Codified Laws.',
   },
 
   // ── North Dakota ──────────────────────────────────────────────────────────
@@ -1329,9 +1318,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'N.D.R.Crim.P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current North Dakota Rules of Criminal Procedure.',
   },
 
   // ── Alaska ────────────────────────────────────────────────────────────────
@@ -1380,9 +1368,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Vt. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Vermont Rules of Criminal Procedure.',
   },
 
   // ── Wyoming ───────────────────────────────────────────────────────────────
@@ -1406,9 +1393,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Wyo. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Wyoming Rules of Criminal Procedure.',
   },
 
   // ── District of Columbia ──────────────────────────────────────────────────
