@@ -19,6 +19,7 @@ Last reviewed: March 2026 (updated after editorial review pass)
 7. [Statistics Cited in Content](#7-statistics-cited-in-content)
 8. [Static Editorial Pages](#8-static-editorial-pages)
 9. [External APIs and Services](#9-external-apis-and-services)
+10a. [Jurisdiction Procedure Rules](#10a-jurisdiction-procedure-rules)
 10. [Quarterly Automated Checks](#10-quarterly-automated-checks)
 11. [External Resource Links](#11-external-resource-links)
 12. [Data Quality Flags](#12-data-quality-flags)
@@ -317,6 +318,56 @@ The validator runs only on AI-generated Case Guidance output, not on static edit
 ### Immigration Bond Information
 - **Data source for bond fund directory:** National Bail Fund Network (referenced in content)
 - **URL in content:** https://www.nationalbailfund.org/
+
+---
+
+## 10a. Jurisdiction Procedure Rules
+
+**File:** `shared/jurisdiction-procedure-rules.ts`
+
+**What it covers:** Authoritative procedural timelines for all 50 US states + DC + federal, including:
+- Arraignment deadline (hours from arrest)
+- Bail hearing timing (hours from arrest)
+- Speedy trial window (days, by charge class and custody status where the rule varies)
+- Phone call rights (statutory limit in hours, or "reasonable time" where no limit exists)
+- Bail structure (cash bail, reform status, notable reform notes)
+
+**Consumers:**
+1. Legal accuracy validator (`server/services/legal-accuracy-validator.ts`) — imports `JURISDICTION_DEADLINE_RULES` for deadline validation of AI-generated guidance
+2. AI guidance prompt builder (`server/services/claude-guidance.ts`) — imports `buildJurisdictionContextBlock()` to inject verified state rules directly into the Claude prompt before generation
+
+**Data confidence tiers:**
+
+| Tier | States | How used |
+|------|--------|----------|
+| `high` | Federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ | Injected into AI prompts as authoritative cited fact |
+| `medium` | VA, WA, AZ, MA, TN, IN, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, NV, KS, NM, AK, DC | Injected with qualifying language ("generally") |
+| `low` | MO, UT, IA, AR, MS, WV, ID, HI, NH, ME, MT, RI, DE, SD, ND, VT, WY, NE | NOT injected into AI prompts; retained for quarterly review only |
+
+**Source methodology:** Each entry cites a specific statute, court rule, or case citation. High-confidence entries are based on well-established, widely-cited rules. Medium-confidence entries reflect best available knowledge from general legal references. Low-confidence entries require verification against current state statutes before being promoted.
+
+**Primary authoritative sources consulted:**
+- Federal Rules of Criminal Procedure (Fed. R. Crim. P. 5, 10)
+- 18 U.S.C. § 3161 (Speedy Trial Act)
+- Individual state criminal procedure codes and court rules (cited per-entry)
+- NCSC (National Center for State Courts) — comparative state court procedure reference
+- Westlaw state rule summaries (general knowledge basis for medium-confidence entries)
+
+**Key reform notes (as of 2026-03):**
+- Illinois: Cash bail eliminated statewide (SAFE-T Act / Pretrial Fairness Act, effective Sept. 18, 2023)
+- New Jersey: Cash bail eliminated for most defendants (Criminal Justice Reform Act, effective Jan. 1, 2017)
+- New York: Cash bail eliminated for most non-violent offenses (2019 reform, amended 2020 and 2022)
+- Washington D.C.: Operates largely without cash bail under the Bail Reform Act framework
+- New Mexico: 2016 constitutional amendment allowing non-monetary conditions of release
+
+**To update:** When a state legislature amends a speedy trial statute, bail reform passes, or a court rule is revised:
+1. Update the entry in `shared/jurisdiction-procedure-rules.ts`
+2. Bump the `lastVerified` date to the current month
+3. Promote the `dataConfidence` level if the entry was previously unverified
+4. Add a `bailReformNote` or `notes` field documenting the change
+5. Update this SOURCES.md entry with the reform note
+
+**Quarterly review:** Low-confidence entries are flagged for manual verification. To promote a low-confidence entry: visit the state's official legislature website (e.g., legislature.state.nm.us) or state court website, confirm the current rule, update the entry, and change `dataConfidence` to `'medium'` or `'high'`.
 
 ---
 

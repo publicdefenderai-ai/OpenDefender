@@ -24,6 +24,7 @@
 
 import { storage } from '../storage';
 import { criminalCharges, getChargeById, getChargesByJurisdiction } from '@shared/criminal-charges';
+import { JURISDICTION_DEADLINE_RULES } from '@shared/jurisdiction-procedure-rules';
 import { openLawsClient } from './openlaws-client';
 import { caseLawValidator, type PrecedentCase, type CaseLawValidationResult } from './case-law-validator';
 import { devLog, opsLog, errLog } from '../utils/dev-logger';
@@ -107,19 +108,8 @@ const PENALTY_PATTERNS = [
   /(misdemeanor|felony|infraction)/gi,
 ];
 
-const JURISDICTION_DEADLINE_RULES: Record<string, { arraignment: string; speedy_trial: string; bail_hearing: string }> = {
-  'CA': { arraignment: '48 hours', speedy_trial: '60 days (felony) / 30 days (misdemeanor)', bail_hearing: '48 hours' },
-  'NY': { arraignment: '24 hours', speedy_trial: '6 months (felony) / 90 days (misdemeanor)', bail_hearing: '24 hours' },
-  'TX': { arraignment: '48 hours', speedy_trial: 'No statutory limit', bail_hearing: '48 hours' },
-  'FL': { arraignment: '24 hours', speedy_trial: '175 days (felony) / 90 days (misdemeanor)', bail_hearing: '24 hours' },
-  'IL': { arraignment: '48 hours', speedy_trial: '120 days (felony) / 30 days (misdemeanor)', bail_hearing: '48 hours' },
-  'PA': { arraignment: '72 hours', speedy_trial: '365 days', bail_hearing: '72 hours' },
-  'OH': { arraignment: '48 hours', speedy_trial: '270 days (felony) / 90 days (misdemeanor)', bail_hearing: '48 hours' },
-  'GA': { arraignment: '48 hours', speedy_trial: 'Term of court rule', bail_hearing: '48 hours' },
-  'NC': { arraignment: '96 hours', speedy_trial: 'No statutory limit', bail_hearing: '48 hours' },
-  'MI': { arraignment: '48 hours', speedy_trial: '180 days', bail_hearing: '48 hours' },
-  'federal': { arraignment: '48 hours', speedy_trial: '70 days', bail_hearing: '48 hours' },
-};
+// JURISDICTION_DEADLINE_RULES is imported from @shared/jurisdiction-procedure-rules
+// That file covers all 50 states + DC + federal. Do not add rules inline here.
 
 function extractCitations(text: string): string[] {
   const citations: string[] = [];

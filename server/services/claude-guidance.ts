@@ -7,6 +7,7 @@ import { validateLegalGuidance, ValidationResult } from './legal-accuracy-valida
 import { devLog, opsLog, errLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
+import { buildJurisdictionContextBlock } from '@shared/jurisdiction-procedure-rules';
 import { CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 
@@ -274,12 +275,17 @@ function sanitizeInput(input: string | undefined, maxLength: number = 5000): str
 
 function buildUserPrompt(caseDetails: CaseDetails): string {
   // Sanitize charges array/string
-  const chargesText = Array.isArray(caseDetails.charges) 
-    ? caseDetails.charges.map(c => sanitizeInput(c, 200)).join(', ') 
+  const chargesText = Array.isArray(caseDetails.charges)
+    ? caseDetails.charges.map(c => sanitizeInput(c, 200)).join(', ')
     : sanitizeInput(caseDetails.charges, 200);
 
-  let prompt = `Provide legal guidance for this situation:
+  // Inject verified jurisdiction context when available (high/medium confidence states only)
+  const jurisdictionBlock = buildJurisdictionContextBlock(
+    sanitizeInput(caseDetails.jurisdiction, 100)
+  );
 
+  let prompt = `Provide legal guidance for this situation:
+${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}
 BASIC CASE INFORMATION:
 - Jurisdiction: ${sanitizeInput(caseDetails.jurisdiction, 100)}
 - Charges: ${chargesText}
