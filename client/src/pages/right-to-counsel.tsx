@@ -12,6 +12,9 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useJurisdiction } from "@/hooks/use-jurisdiction";
+import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
+import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 
 interface GreyAreaItem {
   title: string;
@@ -89,6 +92,7 @@ function GreyAreaCard({ item }: { item: GreyAreaItem }) {
 
 export default function RightToCounsel() {
   useScrollToTop();
+  const { jurisdiction } = useJurisdiction();
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
@@ -118,6 +122,8 @@ export default function RightToCounsel() {
       </section>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16 space-y-14">
+
+        <JurisdictionSelector label="See rules for your state (optional)" />
 
         {/* The Two Constitutional Foundations */}
         <ScrollReveal>
@@ -280,6 +286,8 @@ export default function RightToCounsel() {
                   </div>
                 </CardContent>
               </Card>
+
+              <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
             </div>
           </section>
         </ScrollReveal>
