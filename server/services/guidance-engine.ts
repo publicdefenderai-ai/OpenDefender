@@ -682,7 +682,7 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   // Add charge-specific critical alerts
   specificCharges.forEach(charge => {
     if (charge.urgentActions) {
-      alerts.push(...charge.urgentActions.map((action: string) => `URGENT (${charge.code}): ${action}`));
+      alerts.push(...charge.urgentActions.map((action: string) => `URGENT: ${action}`));
     }
   });
   
@@ -761,7 +761,7 @@ function buildRightsForCharges(specificCharges: any[], caseStage: string): strin
   // Add charge-specific rights
   specificCharges.forEach(charge => {
     if (charge.specificRights) {
-      rights.push(...charge.specificRights.map((right: string) => `${right} (${charge.code})`));
+      rights.push(...charge.specificRights);
     }
   });
   
@@ -792,7 +792,7 @@ function buildWarningsForCharges(caseData: CaseData, specificCharges: any[], fal
       warnings.push(`${charge.name}: Potential consequences include restitution requirements`);
     }
     if (charge.jurisdiction === 'Federal') {
-      warnings.push(`Federal charge (${charge.code}): Federal sentencing guidelines apply`);
+      warnings.push(`Federal charge: Federal sentencing guidelines apply`);
     }
   });
   

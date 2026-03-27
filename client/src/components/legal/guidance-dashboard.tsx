@@ -458,11 +458,10 @@ interface LiveStatuteResult {
   error?: string;
 }
 
-function ChargeReadTheLaw({ jurisdiction, code }: { jurisdiction: string; code: string }) {
+function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; citation: string }) {
   const [showStatute, setShowStatute] = useState(false);
   const [fetchEnabled, setFetchEnabled] = useState(false);
 
-  const citation = `${jurisdiction.toUpperCase()} § ${code}`;
   const encodedCitation = encodeURIComponent(citation);
 
   const { data: liveData, isLoading } = useQuery<LiveStatuteResult>({
@@ -553,14 +552,19 @@ function YourChargesSection({
     return null;
   }
 
-  // Get plain-language explanations for each charge
+  // Get plain-language explanations for each charge.
+  // Also look up the original DB entry to carry through dataConfidence and
+  // statuteCitations — required for the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
     const explanation = getChargeExplanation(classification.name);
+    const dbCharge = criminalCharges.find(c => c.code === classification.code);
     return {
       name: formatChargeName(classification.name),
       code: classification.code,
       classification: classification.classification,
-      explanation
+      explanation,
+      dataConfidence: dbCharge?.dataConfidence,
+      statuteCitations: dbCharge?.statuteCitations,
     };
   });
 
@@ -645,9 +649,12 @@ function YourChargesSection({
               </div>
             )}
 
-            {/* Read the Law — live statute text from OpenLaws */}
-            {jurisdiction && charge.code && (
-              <ChargeReadTheLaw jurisdiction={jurisdiction} code={charge.code} />
+            {/* Read the Law — only shown when citation is OpenLaws-verified (dataConfidence: 'high') */}
+            {jurisdiction && charge.dataConfidence === 'high' && charge.statuteCitations?.length && (
+              <ChargeReadTheLaw
+                jurisdiction={jurisdiction}
+                citation={charge.statuteCitations[0]}
+              />
             )}
 
             {/* Separator between charges */}
@@ -857,7 +864,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   {guidance.chargeClassifications && guidance.chargeClassifications.length > 0 ? (
                     guidance.chargeClassifications.map((charge, idx) => (
                       <div key={idx} className="flex items-center justify-center gap-2">
-                        <span>{formatChargeName(charge.name)} ({charge.code})</span>
+                        <span>{formatChargeName(charge.name)}</span>
                         <Badge 
                           variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
                           className="text-xs"

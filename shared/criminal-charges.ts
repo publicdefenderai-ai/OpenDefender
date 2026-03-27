@@ -3,10 +3,22 @@
 // Total Charges: 7579 (as of 2026-03; base + 456 inchoate P1/2 + 285 enhancement P3 + 117 white-collar/federal P4 + 225 juvenile P5 entries)
 // Jurisdictions: All 50 states + DC + US territories (AS, GU, MP, PR, VI) + federal
 //
-// NOTE: This database contains synthesized criminal charges based on standard criminal law
-// patterns and Model Penal Code principles for comprehensive coverage across all US jurisdictions.
-// The charges represent common crime categories found in state criminal codes but use
-// generated statute codes and standardized penalties for consistency in legal guidance.
+// DATA QUALITY NOTE:
+// The `code` field in each entry was originally synthesized for structural consistency and
+// has NOT been verified against actual state statutes. Do NOT surface `code` values to users
+// as authoritative citation references until the entry has been verified (dataConfidence: 'high').
+//
+// Citation verification status is tracked per entry:
+//   'unverified' — code was generated; no real statute lookup has been performed (default)
+//   'low'        — a candidate citation was found but not confirmed against primary statute text
+//   'medium'     — citation confirmed via secondary source (NCSL, Justia, state legislature site)
+//   'high'       — citation confirmed via OpenLaws API; statute text cached in DB; not repealed
+//
+// Only entries with dataConfidence: 'high' and a populated statuteCitations[] should have their
+// citation shown to users or used in OpenLaws "Read the Law" lookups.
+//
+// Verification is done in phases by charge category (see QC-PLAYBOOK.md Phase 3).
+// Run `npx tsx scripts/verify-charge-citations.ts` to check all entries with citations.
 
 export interface CriminalCharge {
   // Spanish translations (optional - populated incrementally)
@@ -14,6 +26,8 @@ export interface CriminalCharge {
   descriptionEs?: string;
   id: string;
   name: string;
+  /** Internal section number. Generated — NOT verified against real state statutes unless
+   *  dataConfidence is 'high'. Never display this to users unless confidence is 'high'. */
   code: string;
   jurisdiction: string;
   category: 'felony' | 'misdemeanor' | 'infraction';
@@ -23,7 +37,35 @@ export interface CriminalCharge {
   evidenceToGather: string[];
   specificRights: string[];
   urgentActions: string[];
-  statuteCitations?: string[]; // Link to underlying statutes (e.g., ["Cal. Penal Code § 242", "18 USC § 1001"])
+  /** Verified statute citations in standard legal format, e.g. "Ala. Code § 13A-6-2".
+   *  Only populated after verification. Use getVerifiedCitation() before displaying. */
+  statuteCitations?: string[];
+  /** Citation verification status. Absent or 'unverified' = never checked.
+   *  Only 'high' entries should have citations shown to users. */
+  dataConfidence?: 'unverified' | 'low' | 'medium' | 'high';
+  /** YYYY-MM when the citation was last verified against a primary source. */
+  lastVerified?: string;
+}
+
+// ── Citation helpers ──────────────────────────────────────────────────────────
+
+/** Returns the confidence level for a charge, defaulting to 'unverified'. */
+export function getChargeConfidence(
+  charge: CriminalCharge
+): 'unverified' | 'low' | 'medium' | 'high' {
+  return charge.dataConfidence ?? 'unverified';
+}
+
+/** True only when the entry has been OpenLaws-verified and has at least one citation. */
+export function isCitationVerified(charge: CriminalCharge): boolean {
+  return charge.dataConfidence === 'high' && (charge.statuteCitations?.length ?? 0) > 0;
+}
+
+/** Returns the first verified citation string, or null for unverified entries.
+ *  Use this instead of accessing charge.statuteCitations directly in UI code. */
+export function getVerifiedCitation(charge: CriminalCharge): string | null {
+  if (!isCitationVerified(charge)) return null;
+  return charge.statuteCitations![0];
 }
 
 export const criminalCharges: CriminalCharge[] = [

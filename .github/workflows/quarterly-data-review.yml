@@ -20,6 +20,7 @@ on:
           - legal-aid
           - federal-statutes
           - public-defenders
+          - charge-citations
 
 # Minimal permissions — only issues:write for the report job
 permissions:
@@ -202,13 +203,57 @@ jobs:
           retention-days: 7
 
   # ──────────────────────────────────────────────────────────────────────────────
-  # Job 6: Generate Report & Create GitHub Issue
+  # Job 6: Criminal Charge Citation Verification (OpenLaws API)
+  # Verifies statute citations in criminal-charges.ts via OpenLaws API.
+  # Only entries with statuteCitations[] populated are checked; entries without
+  # citations are counted as 'pending' and do not cause failures.
+  # ──────────────────────────────────────────────────────────────────────────────
+  verify-charge-citations:
+    name: Verify Criminal Charge Citations
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'schedule' ||
+      github.event.inputs.category == 'all' ||
+      github.event.inputs.category == 'charge-citations'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run charge citation verifier
+        run: npx tsx scripts/data-review/verify-charge-citations.ts
+        env:
+          OPENLAWS_API_KEY: ${{ secrets.OPENLAWS_API_KEY }}
+          OPENLAWS_API_URL: ${{ secrets.OPENLAWS_API_URL }}
+        # Allow failure: not_found/repealed exits 1, but we still want the artifact
+        # and report. The report generator will surface the issue.
+        continue-on-error: true
+
+      - name: Upload charge citations report
+        uses: actions/upload-artifact@v4
+        with:
+          name: charge-citations-report
+          path: scripts/data-review/output/charge-citations-report.json
+          if-no-files-found: warn
+          retention-days: 7
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # Job 7: Generate Report & Create GitHub Issue
   # Runs after all checkers complete, even if some were skipped.
   # ──────────────────────────────────────────────────────────────────────────────
   generate-report:
     name: Generate Review Report
     runs-on: ubuntu-latest
-    needs: [check-detention-facilities, check-consulates, check-legal-aid, check-federal-statutes, check-public-defenders]
+    needs: [check-detention-facilities, check-consulates, check-legal-aid, check-federal-statutes, check-public-defenders, verify-charge-citations]
     # Run even if some checker jobs were skipped (due to category filter)
     if: always() && !cancelled()
     permissions:
@@ -262,6 +307,13 @@ jobs:
         continue-on-error: true
         with:
           name: public-defenders-diff
+          path: scripts/data-review/output
+
+      - name: Download charge citations report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: charge-citations-report
           path: scripts/data-review/output
 
       - name: Create GitHub Issue
