@@ -548,28 +548,28 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
 
   // ── Missouri ──────────────────────────────────────────────────────────────
   MO: {
-    arraignment: '48 hours',
-    speedy_trial: 'No statutory deadline (constitutional right only)',
-    bail_hearing: '48 hours',
+    arraignment: '48 hours (excl. weekends and holidays) after confinement under warrant',
+    speedy_trial: 'No day-limit statute; Mo. Rev. Stat. § 545.780 requires trial "as soon as reasonably possible" after defendant demand — constitutional balancing applies',
+    bail_hearing: '48 hours at initial appearance; up to 7 days (excl. weekends/holidays) if detained further (Mo. R. Crim. P. 33.05)',
     arraignmentHours: 48,
-    arraignmentSource: 'Mo. R. Crim. P. 22.01 — initial appearance "without unnecessary delay"',
+    arraignmentSource: 'Mo. R. Crim. P. 22.08 (felony) and 21.10 (misdemeanor) — no later than 48 hours, excluding weekends and holidays, after confinement under warrant (amended Oct. 26, 2021, eff. July 1, 2022). Mo. Rev. Stat. § 544.170 caps warrantless detention at 24 hours.',
     bailHearingHours: 48,
-    bailHearingSource: 'Mo. R. Crim. P. 22.01; bail set at initial appearance',
+    bailHearingSource: 'Mo. R. Crim. P. 22.08, 21.10 (bail addressed at initial appearance); Mo. R. Crim. P. 33.05 (if still detained after initial appearance, release hearing within 7 days, excl. weekends/holidays)',
     speedyTrialDays: {
       felony: null,
       misdemeanor: null,
-      notes: 'Missouri has no statutory speedy trial deadline. Constitutional rights apply under Barker v. Wingo.',
+      notes: 'Mo. Rev. Stat. § 545.780 requires trial "as soon as reasonably possible" after the defendant files a demand — no specific day count. Violation is not automatic grounds for dismissal; court must separately find a constitutional speedy trial violation. Constitutional balancing under Barker v. Wingo, 407 U.S. 514 (1972) and Mo. Const. Art. I § 18(a) governs. Note: Mo. Rev. Stat. § 217.460 (Interstate Agreement on Detainers) imposes a 180-day clock only for defendants already imprisoned elsewhere with untried Missouri charges.',
     },
-    speedyTrialSource: 'Mo. Const. Art. I § 18(a); U.S. Const. amend. VI',
+    speedyTrialSource: 'Mo. Rev. Stat. § 545.780; Mo. Const. Art. I § 18(a); U.S. Const. amend. VI',
     phoneCall: {
       limitHours: null,
-      description: 'No statutory time limit.',
-      source: 'Mo. Const. Art. I § 18(a)',
+      description: 'No statutory hour limit. Mo. Rev. Stat. § 544.170(2) requires that confined persons be permitted "at any reasonable time" to consult with counsel or other persons acting on their behalf. Violation is a Class A misdemeanor.',
+      source: 'Mo. Rev. Stat. § 544.170(2)',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Missouri Rules of Criminal Procedure.',
+    notes: 'Non-monetary release conditions must be considered first under Mo. R. Crim. P. 33.01 before monetary bail is imposed. Cash bail remains available and widely used; no statewide reform enacted as of 2026.',
   },
 
   // ── Maryland ──────────────────────────────────────────────────────────────
@@ -941,28 +941,27 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
 
   // ── Arkansas ──────────────────────────────────────────────────────────────
   AR: {
-    arraignment: '48 hours',
-    speedy_trial: 'No statutory deadline (constitutional right only)',
-    bail_hearing: '48 hours',
+    arraignment: 'Without unnecessary delay (Ark. R. Crim. P. 8.1; 48-hour federal constitutional floor)',
+    speedy_trial: '12 months from arrest; 9 months if continuously held in custody (Ark. R. Crim. P. 28.1)',
+    bail_hearing: 'At initial appearance (Ark. R. Crim. P. 8.1, 9.2)',
     arraignmentHours: 48,
-    arraignmentSource: 'Ark. R. Crim. P. 8.1 — initial appearance "without unnecessary delay"',
+    arraignmentSource: 'Ark. R. Crim. P. 8.1 — "without unnecessary delay"; 48-hour federal floor from County of Riverside v. McLaughlin, 500 U.S. 44 (1991)',
     bailHearingHours: 48,
-    bailHearingSource: 'Ark. R. Crim. P. 9.2; bail reviewed at initial appearance',
+    bailHearingSource: 'Ark. R. Crim. P. 8.1, 9.2; bail set at initial appearance',
     speedyTrialDays: {
-      felony: null,
-      misdemeanor: null,
-      notes: 'Arkansas has no statutory speedy trial act with day limits. Constitutional rights apply.',
+      felony: 365,
+      misdemeanor: 365,
+      notes: 'Ark. R. Crim. P. 28.1(c): reduced to 274 days (9 months) if defendant is continuously held in custody from arrest to trial. Clock runs from the earliest of: date of arrest, date of information/indictment filing, or date of warrant issuance (Rule 28.2). Excluded periods under Rule 28.3 toll the clock. Violation remedy: dismissal with an absolute bar to prosecution (Ark. R. Crim. P. 30.1) — double jeopardy bars re-filing.',
     },
-    speedyTrialSource: 'Ark. Const. Art. II § 10; U.S. Const. amend. VI',
+    speedyTrialSource: 'Ark. R. Crim. P. 28.1(a)–(c), 28.2, 28.3, 30.1; Ark. Const. Art. II § 10; U.S. Const. amend. VI',
     phoneCall: {
       limitHours: null,
-      description: 'No statutory time limit.',
-      source: 'Ark. R. Crim. P. 8.1',
+      description: 'No statutory hour limit. Right to communicate with counsel and family within a "reasonable time" (Ark. R. Crim. P. 2.3; Ark. Code Ann. § 12-27-119 requires facilities to permit reasonable communication).',
+      source: 'Ark. R. Crim. P. 2.3; Ark. Code Ann. § 12-27-119',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    dataConfidence: 'high',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Arkansas Rules of Criminal Procedure.',
   },
 
   // ── Mississippi ───────────────────────────────────────────────────────────
@@ -1248,28 +1247,28 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
 
   // ── Delaware ──────────────────────────────────────────────────────────────
   DE: {
-    arraignment: '24 hours',
-    speedy_trial: 'No statutory deadline (constitutional right only)',
-    bail_hearing: '24 hours',
-    arraignmentHours: 24,
-    arraignmentSource: 'Del. Super. Ct. Crim. R. 5 — initial appearance "without unnecessary delay"',
-    bailHearingHours: 24,
-    bailHearingSource: 'Del. Super. Ct. Crim. R. 46; bail reviewed at initial appearance',
+    arraignment: 'Without unnecessary delay (Del. Super. Ct. Crim. R. 5; no statutory hour count)',
+    speedy_trial: 'No statutory deadline; Barker v. Wingo balancing test under Del. Const. Art. I § 7',
+    bail_hearing: 'At initial appearance; risk assessment required under 11 Del. C. § 2105 (SB 163, 2017)',
+    arraignmentHours: 48,
+    arraignmentSource: 'Del. Super. Ct. Crim. R. 5 — "without unnecessary delay"; no specific hour count in rule text. JP Court Criminal R. 5 governs first appearance (JP Court handles most arrested persons before Superior Court). 48-hour federal floor applies.',
+    bailHearingHours: 48,
+    bailHearingSource: 'Del. Super. Ct. Crim. R. 46; 11 Del. C. § 2105 (SB 163, 2017) — validated pretrial risk assessment required before setting monetary bail',
     speedyTrialDays: {
       felony: null,
       misdemeanor: null,
-      notes: 'Delaware has no statutory speedy trial deadline. Constitutional rights apply.',
+      notes: 'Delaware has no speedy trial statute with fixed day limits. Del. Super. Ct. Crim. R. 48 is a dismissal rule, not a speedy trial clock. Four-factor Barker v. Wingo, 407 U.S. 514 (1972) balancing test governs under both the Sixth Amendment and Del. Const. Art. I § 7. See Bailey v. State, 521 A.2d 1069 (Del. 1987); Middlebrook v. State, 802 A.2d 268 (Del. 2002).',
     },
-    speedyTrialSource: 'Del. Const. Art. I § 7; U.S. Const. amend. VI',
+    speedyTrialSource: 'Del. Const. Art. I § 7; Del. Super. Ct. Crim. R. 48; Middlebrook v. State, 802 A.2d 268 (Del. 2002); U.S. Const. amend. VI',
     phoneCall: {
       limitHours: null,
-      description: 'No statutory time limit.',
-      source: 'Del. Super. Ct. Crim. R. 5',
+      description: 'No statutory hour limit. Right to counsel under Del. Const. Art. I § 7 and Sixth Amendment governs access; no Delaware equivalent of a fixed-hour phone call statute.',
+      source: 'Del. Const. Art. I § 7; 11 Del. C. Title 11 Ch. 19 (no specific phone call provision found)',
     },
-    bailStructure: 'cash_bail',
-    dataConfidence: 'low',
+    bailStructure: 'reformed_limited_cash',
+    dataConfidence: 'medium',
     lastVerified: '2026-03',
-    notes: 'Data needs verification against current Delaware court rules.',
+    notes: 'Delaware bail reformed by SB 163 (2017), enacted as 81 Del. Laws ch. 356. Under 11 Del. C. § 2105, courts must consider a validated pretrial risk assessment before imposing monetary bail. Cash bail remains available but is disfavored for low-risk defendants. Delaware has not eliminated cash bail (unlike NJ), but it is no longer pure cash bail.',
   },
 
   // ── South Dakota ──────────────────────────────────────────────────────────
