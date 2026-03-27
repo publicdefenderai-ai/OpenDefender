@@ -10,8 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories } from "@shared/criminal-charges";
-import { generateStatuteCitation, getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified } from "@shared/criminal-charges";
+import { getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import {
   Dialog,
@@ -491,9 +491,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                 {formData.charges.map((chargeId: string) => {
                   const charge = getChargeById(chargeId);
                   if (!charge) return null;
-                  
-                  const statuteCitation = generateStatuteCitation(charge.jurisdiction, charge.code);
-                  const statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+
+                  const statuteCitation = getVerifiedCitation(charge);
+                  const statuteUrl = isCitationVerified(charge)
+                    ? getStatuteUrl(charge.jurisdiction, charge.code)
+                    : null;
                   const officialSite = getOfficialStatuteSite(charge.jurisdiction);
                   
                   return (
@@ -619,8 +621,10 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   </h4>
                   <div className="space-y-2">
                     {displayedStateCharges.map(charge => {
-                      const statuteCitation = generateStatuteCitation(charge.jurisdiction, charge.code);
-                      const statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                      const statuteCitation = getVerifiedCitation(charge);
+                      const statuteUrl = isCitationVerified(charge)
+                        ? getStatuteUrl(charge.jurisdiction, charge.code)
+                        : null;
                       
                       return (
                         <div
@@ -636,14 +640,8 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1">
                               <span className="font-medium text-sm">{charge.name}</span>
-                              <Badge 
+                              <Badge
                                 variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
-                                className="text-xs"
-                              >
-                                {charge.code}
-                              </Badge>
-                              <Badge 
-                                variant="outline"
                                 className="text-xs"
                               >
                                 {charge.category}
@@ -690,8 +688,10 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   </h4>
                   <div className="space-y-2">
                     {displayedFederalCharges.map(charge => {
-                      const statuteCitation = generateStatuteCitation(charge.jurisdiction, charge.code);
-                      const statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                      const statuteCitation = getVerifiedCitation(charge);
+                      const statuteUrl = isCitationVerified(charge)
+                        ? getStatuteUrl(charge.jurisdiction, charge.code)
+                        : null;
                       
                       return (
                         <div
@@ -707,14 +707,8 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1">
                               <span className="font-medium text-sm">{charge.name}</span>
-                              <Badge 
+                              <Badge
                                 variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
-                                className="text-xs"
-                              >
-                                {charge.code}
-                              </Badge>
-                              <Badge 
-                                variant="outline"
                                 className="text-xs"
                               >
                                 {charge.category}

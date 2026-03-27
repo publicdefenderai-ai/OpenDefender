@@ -27,6 +27,25 @@ interface DiffFile {
   }>;
 }
 
+interface ChargeCitationsReport {
+  runAt: string;
+  totalChecked: number;
+  okCount: number;
+  needsReviewCount: number;
+  pendingCount: number;
+  verifiedHighCount: number;
+  results: Array<{
+    name: string;
+    chargeId: string;
+    jurisdiction: string;
+    citation: string | null;
+    currentConfidence: string;
+    status: string;
+    needsManualReview: boolean;
+    reason?: string;
+  }>;
+}
+
 function readDiff(filename: string): DiffFile | null {
   const filePath = path.join(process.cwd(), 'scripts/data-review/output', filename);
   if (!fs.existsSync(filePath)) return null;
@@ -35,6 +54,50 @@ function readDiff(filename: string): DiffFile | null {
   } catch {
     return null;
   }
+}
+
+function readChargeCitationsReport(): ChargeCitationsReport | null {
+  const filePath = path.join(
+    process.cwd(),
+    'scripts/data-review/output',
+    'charge-citations-report.json'
+  );
+  if (!fs.existsSync(filePath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as ChargeCitationsReport;
+  } catch {
+    return null;
+  }
+}
+
+function formatChargeCitationsSection(report: ChargeCitationsReport | null): string {
+  if (!report) {
+    return '### Criminal Charge Citations (OpenLaws Verification)\n_Checker did not run or output not found._\n';
+  }
+
+  const reviewItems = report.results.filter(r => r.needsManualReview);
+  const lines = [
+    '### Criminal Charge Citations (OpenLaws Verification)',
+    `- **Checked (with citations):** ${report.totalChecked} | **OK:** ${report.okCount} | **Need review:** ${report.needsReviewCount}`,
+    `- **Pending (no citation yet):** ${report.pendingCount} — awaiting Phase 3 research passes`,
+    `- **Already high-confidence:** ${report.verifiedHighCount}`,
+    `- **Run at:** ${report.runAt}`,
+    '',
+  ];
+
+  if (reviewItems.length === 0) {
+    lines.push('✅ All entries with citations passed OpenLaws verification.');
+  } else {
+    lines.push('| Charge | Jurisdiction | Citation | Issue |');
+    lines.push('|---|---|---|---|');
+    for (const item of reviewItems) {
+      const citation = item.citation ?? '_(none)_';
+      const issue = item.reason ?? item.status;
+      lines.push(`| ${item.name} | ${item.jurisdiction} | \`${citation}\` | ${issue} |`);
+    }
+  }
+
+  return lines.join('\n');
 }
 
 function formatSection(title: string, diff: DiffFile | null): string {
@@ -97,14 +160,18 @@ async function main() {
   const consulates = readDiff('consulate-diff.json');
   const statutes = readDiff('statutes-diff.json');
   const publicDefenders = readDiff('public-defenders-diff.json');
+  const chargeCitations = readChargeCitationsReport();
 
   const quarter = Math.ceil((new Date().getMonth() + 1) / 3);
   const year = new Date().getFullYear();
   const title = `Quarterly Data Review — Q${quarter} ${year}`;
 
-  const totalIssues = [legalAid, detention, consulates, statutes, publicDefenders]
+  const standardIssues = [legalAid, detention, consulates, statutes, publicDefenders]
     .filter(Boolean)
     .reduce((sum, d) => sum + (d?.needsReviewCount ?? 0), 0);
+
+  const chargeIssues = chargeCitations?.needsReviewCount ?? 0;
+  const totalIssues = standardIssues + chargeIssues;
 
   const body = [
     `## Quarterly Data Accuracy Review — Q${quarter} ${year}`,
@@ -125,6 +192,8 @@ async function main() {
     '',
     formatSection('Public Defender Offices', publicDefenders),
     '',
+    formatChargeCitationsSection(chargeCitations),
+    '',
     '---',
     '',
     '**Manual review checklist for flagged items:**',
@@ -134,6 +203,7 @@ async function main() {
     '- [ ] If a statute URL has changed or statute was amended, update `server/data/federal-statutes-seed.ts` with the corrected URL and any updated statutory text',
     '- [ ] Re-run the seed against the database (`npm run db:seed`)',
     '- [ ] Update the Last Updated comment in the seed file',
+    '- [ ] For charge citation failures: look up the correct current statute, update `shared/criminal-charges.ts` with the corrected `statuteCitations[]` and promote `dataConfidence` accordingly',
     '- [ ] Close this issue once all corrections are applied',
     '',
     '_Generated automatically by `.github/workflows/quarterly-data-review.yml`_',
