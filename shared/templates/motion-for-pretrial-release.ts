@@ -73,7 +73,7 @@ const detentionInputs: TemplateInput[] = [
     required: true,
     helpText: "Provide a description of all current charges",
     validation: {
-      minLength: 10,
+      minLength: 2,
       maxLength: 2000,
     },
   },
@@ -198,7 +198,7 @@ const defendantBackgroundInputs: TemplateInput[] = [
     required: true,
     helpText: "Describe the defendant's family ties, dependents, and connections to the community",
     validation: {
-      minLength: 20,
+      minLength: 5,
       maxLength: 2000,
     },
   },
@@ -373,7 +373,7 @@ const proposedConditionsInputs: TemplateInput[] = [
     required: true,
     helpText: "Describe the conditions the defendant is willing to accept for release",
     validation: {
-      minLength: 20,
+      minLength: 3,
       maxLength: 2000,
     },
   },

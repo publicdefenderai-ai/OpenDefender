@@ -297,8 +297,11 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
   );
 }
 
+const TERRITORY_CODES = new Set(["PR", "GU", "VI", "AS", "MP"]);
+
 function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
   const { t } = useTranslation();
+  const isTerritory = TERRITORY_CODES.has(formData.jurisdiction);
   
   return (
     <div className="space-y-6">
@@ -365,8 +368,25 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
             <SelectItem value="WY">{t('legalGuidance.qaFlow.jurisdiction.states.WY')}</SelectItem>
             <SelectItem value="DC">{t('legalGuidance.qaFlow.jurisdiction.states.DC')}</SelectItem>
             <SelectItem value="federal">{t('legalGuidance.qaFlow.jurisdiction.states.federal')}</SelectItem>
+            <SelectItem value="PR">Puerto Rico</SelectItem>
+            <SelectItem value="GU">Guam</SelectItem>
+            <SelectItem value="VI">U.S. Virgin Islands</SelectItem>
+            <SelectItem value="AS">American Samoa</SelectItem>
+            <SelectItem value="MP">Northern Mariana Islands</SelectItem>
           </SelectContent>
         </Select>
+
+        {isTerritory && (
+          <div className="mt-3 flex items-start gap-2.5 rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-900/20 px-4 py-3 text-sm text-amber-800 dark:text-amber-200">
+            <AlertTriangle className="h-4 w-4 shrink-0 mt-0.5 text-amber-500" />
+            <div className="space-y-1">
+              <p className="font-medium">Limited coverage for U.S. territories</p>
+              <p className="text-xs leading-relaxed">
+                Our charge data and AI guidance are optimized for the 50 states and D.C. Territory criminal law — including local codes and federal applicability — differs significantly. The guidance you receive may not fully reflect your jurisdiction's specific statutes or procedures. We recommend verifying key details with a local attorney.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="flex space-x-4">
