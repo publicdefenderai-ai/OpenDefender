@@ -44,14 +44,25 @@ export function DocumentPreview({
   isDownloading,
 }: DocumentPreviewProps) {
   const [showReviewDialog, setShowReviewDialog] = useState(false);
+  const [pendingAction, setPendingAction] = useState<"download" | "print">("download");
 
   function handleDownloadClick() {
+    setPendingAction("download");
+    setShowReviewDialog(true);
+  }
+
+  function handlePrintClick() {
+    setPendingAction("print");
     setShowReviewDialog(true);
   }
 
   function handleConfirmDownload() {
     setShowReviewDialog(false);
-    onDownload();
+    if (pendingAction === "print") {
+      window.print();
+    } else {
+      onDownload();
+    }
   }
 
   return (
@@ -73,11 +84,11 @@ export function DocumentPreview({
             <Button
               variant="outline"
               size="sm"
-              onClick={() => window.print()}
+              onClick={handlePrintClick}
               className="hidden sm:flex"
             >
               <Printer className="h-4 w-4 mr-2" />
-              Print
+              Print / Save PDF
             </Button>
             <Button
               size="sm"
