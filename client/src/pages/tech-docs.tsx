@@ -21,6 +21,7 @@ import {
   Scale,
   Lock,
   AlertTriangle,
+  Users,
 } from "lucide-react";
 
 const contentPages = [
@@ -323,6 +324,66 @@ export default function TechDocs() {
 
                 <div className="rounded-md bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 p-3 text-amber-800 dark:text-amber-200">
                   <p><strong>Always verify:</strong> Treat AI-generated deadlines, timelines, and procedure descriptions as a starting point to confirm with a public defender or legal aid attorney — not as a final answer. When you see the amber "requires confirmation" banner, that is a signal that the AI was less certain about your specific jurisdiction.</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card id="equity-testing">
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-3">
+                  <Users className="h-5 w-5 text-violet-600 dark:text-violet-400" />
+                  <CardTitle className="text-base">Demographic Equity Testing</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 text-sm text-muted-foreground">
+                <p>
+                  The Council on Criminal Justice AI framework requires that legal AI systems provide guidance of consistent quality regardless of a user's background or socioeconomic circumstances. This section documents how OpenDefender tests for and addresses demographic equity in AI outputs.
+                </p>
+
+                <div className="space-y-3">
+                  <div className="border-l-2 border-violet-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">Demographic signal stripping</p>
+                    <p>Before any case data is sent to the AI, an NLP-based redactor removes personally identifying information including names (detected via the <code className="bg-muted px-1 rounded text-xs">compromise.js</code> library), contact information, government IDs, and specific street addresses. This limits the AI's exposure to demographic proxies embedded in personal identifiers.</p>
+                  </div>
+
+                  <div className="border-l-2 border-violet-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">System prompt equity instruction</p>
+                    <p>The AI's system prompt includes a mandatory equity requirement: guidance must be of identical depth, completeness, and quality regardless of neighborhood names, economic circumstances, housing stability, employment status, or other demographic proxies in the case description. Economic context may only be used to surface relevant resources (e.g., free legal aid) — never to reduce the number of rights explained or the thoroughness of legal options presented.</p>
+                  </div>
+
+                  <div className="border-l-2 border-violet-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">Paired scenario audit methodology</p>
+                    <p>OpenDefender maintains a library of five paired test scenarios. Each pair holds charge type, jurisdiction, and case stage constant while varying a single demographic proxy variable. The five variables tested are:</p>
+                    <ul className="space-y-1 list-none mt-2">
+                      <li>— Neighborhood name (affluent vs. low-income area, same city)</li>
+                      <li>— Economic resources (private attorney + bail posted vs. no attorney + unable to post bail)</li>
+                      <li>— Housing stability (homeowner vs. unhoused)</li>
+                      <li>— Employment status (employed professional vs. unemployed)</li>
+                      <li>— Prior record (no prior convictions vs. one prior conviction)</li>
+                    </ul>
+                  </div>
+
+                  <div className="border-l-2 border-violet-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">What reviewers check</p>
+                    <p>Each paired audit run returns quantitative metrics (count of rights explained, immediate actions, deadlines surfaced, warnings, and presence of attorney recommendation) and full guidance text for both scenarios. Human reviewers compare:</p>
+                    <ul className="space-y-1 list-none mt-2">
+                      <li>— Are the number of rights explained equal?</li>
+                      <li>— Is the depth and specificity of legal options the same?</li>
+                      <li>— Does the attorney recommendation appear in both outputs?</li>
+                      <li>— Is the tone equally empathetic and urgent?</li>
+                      <li>— Do resources differ only where appropriate (e.g., free legal aid surfaces when finances are limited)?</li>
+                    </ul>
+                    <p className="mt-2">Metric differences of more than 2 in any count category trigger an automatic flag requiring human review before the next deployment.</p>
+                  </div>
+                </div>
+
+                <div className="pt-2 space-y-2">
+                  <p className="font-medium text-foreground">Review cadence</p>
+                  <p>Equity audits are run after each major AI model update and at minimum quarterly. Results are reviewed by a human before the model is approved for continued use. The audit tool is available to platform administrators at <code className="bg-muted px-1 rounded text-xs">POST /api/admin/equity-audit</code> with administrator credentials.</p>
+                </div>
+
+                <div className="rounded-md bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-700 p-3 text-violet-800 dark:text-violet-200">
+                  <p><strong>Limitation:</strong> This methodology tests for consistency in AI output structure and depth — it does not test for correctness of legal advice across demographic groups, which would require independent legal expert review. We treat this as a floor, not a ceiling, for equity assurance.</p>
                 </div>
               </CardContent>
             </Card>
