@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute, type CaseFeedback, type InsertCaseFeedback, type PrivacyConsent, type InsertPrivacyConsent } from "@shared/schema";
+import { type User, type InsertUser, type LegalCase, type InsertLegalCase, type LegalResource, type InsertLegalResource, type CourtData, type InsertCourtData, type LegalAidOrganization, type InsertLegalAidOrganization, type Statute, type InsertStatute, type CaseFeedback, type InsertCaseFeedback, type PrivacyConsent, type InsertPrivacyConsent, type GuidanceFlag, type InsertGuidanceFlag } from "@shared/schema";
 import crypto from "crypto";
 import { randomUUID } from "crypto";
 import { legalAidOrganizationsSeed } from "./data/legal-aid-organizations-seed";
@@ -42,6 +42,11 @@ export interface IStorage {
   // Privacy consent tracking (anonymous)
   recordPrivacyConsent(consent: InsertPrivacyConsent): Promise<PrivacyConsent>;
   getPrivacyConsentStats(): Promise<{ total: number; granted: number; denied: number; byType: Record<string, number> }>;
+
+  // Anonymous guidance flags (admin-only, zero PII)
+  createGuidanceFlag(flag: InsertGuidanceFlag): Promise<GuidanceFlag>;
+  getGuidanceFlags(limit?: number): Promise<GuidanceFlag[]>;
+  getGuidanceFlagSummary(): Promise<{ total: number; byReason: Record<string, number>; byJurisdiction: Record<string, number>; byConfidence: Record<string, number> }>;
 }
 
 export class MemStorage implements IStorage {
@@ -57,6 +62,7 @@ export class MemStorage implements IStorage {
   private privacyConsents: Map<string, PrivacyConsent>;
   // Secondary index: "sessionHash_consentType" -> consent id for O(1) upserts
   private consentIndex: Map<string, string>;
+  private guidanceFlags: Map<string, GuidanceFlag>;
   private cleanupInterval: NodeJS.Timeout | null = null;
 
   constructor() {
@@ -70,6 +76,7 @@ export class MemStorage implements IStorage {
     this.feedbackBySession = new Map();
     this.privacyConsents = new Map();
     this.consentIndex = new Map();
+    this.guidanceFlags = new Map();
     
     // Initialize with sample legal resources and organizations
     this.initializeSampleData();
@@ -529,6 +536,41 @@ export class MemStorage implements IStorage {
       denied,
       byType,
     };
+  }
+
+  async createGuidanceFlag(insertFlag: InsertGuidanceFlag): Promise<GuidanceFlag> {
+    const id = randomUUID();
+    const flag: GuidanceFlag = {
+      id,
+      flaggedAt: new Date(),
+      jurisdiction: insertFlag.jurisdiction ?? null,
+      confidenceBucket: insertFlag.confidenceBucket ?? null,
+      flagReason: insertFlag.flagReason,
+      sessionIdHash: insertFlag.sessionIdHash ?? null,
+    };
+    this.guidanceFlags.set(id, flag);
+    return flag;
+  }
+
+  async getGuidanceFlags(limit = 500): Promise<GuidanceFlag[]> {
+    return Array.from(this.guidanceFlags.values())
+      .sort((a, b) => (b.flaggedAt?.getTime() ?? 0) - (a.flaggedAt?.getTime() ?? 0))
+      .slice(0, limit);
+  }
+
+  async getGuidanceFlagSummary(): Promise<{ total: number; byReason: Record<string, number>; byJurisdiction: Record<string, number>; byConfidence: Record<string, number> }> {
+    const flags = Array.from(this.guidanceFlags.values());
+    const byReason: Record<string, number> = {};
+    const byJurisdiction: Record<string, number> = {};
+    const byConfidence: Record<string, number> = {};
+
+    for (const flag of flags) {
+      byReason[flag.flagReason] = (byReason[flag.flagReason] || 0) + 1;
+      if (flag.jurisdiction) byJurisdiction[flag.jurisdiction] = (byJurisdiction[flag.jurisdiction] || 0) + 1;
+      if (flag.confidenceBucket) byConfidence[flag.confidenceBucket] = (byConfidence[flag.confidenceBucket] || 0) + 1;
+    }
+
+    return { total: flags.length, byReason, byJurisdiction, byConfidence };
   }
 }
 

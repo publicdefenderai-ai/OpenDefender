@@ -277,6 +277,56 @@ export default function TechDocs() {
               </CardContent>
             </Card>
 
+            <Card id="ai-validation">
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-3">
+                  <Shield className="h-5 w-5 text-teal-600 dark:text-teal-400" />
+                  <CardTitle className="text-base">AI Accuracy & Validation Methodology</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 text-sm text-muted-foreground">
+                <p>
+                  Every AI response is run through a two-tier validation pipeline before it reaches the user. This page explains what that pipeline checks, what it cannot catch, and what users should do when they see warnings.
+                </p>
+
+                <div className="space-y-3">
+                  <div className="border-l-2 border-teal-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">Tier 1 — Statute Database Check</p>
+                    <p>Every statutory citation in the AI response is cross-referenced against our database of 5,956 verified statutes across 51 jurisdictions (all 50 states + DC). The check verifies that cited code sections exist and that the AI's description of the penalty or element is consistent with the statute's text. This tier catches hallucinated or outdated statute numbers.</p>
+                  </div>
+
+                  <div className="border-l-2 border-blue-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">Tier 2 — Semantic Case Law Search</p>
+                    <p>Where relevant precedent exists, the response is compared against real court opinions from the CourtListener RECAP archive using semantic (meaning-based) search, not just keyword matching. This tier can surface contradictions between what the AI says and how courts have actually ruled. It is not available for every charge type or jurisdiction.</p>
+                  </div>
+
+                  <div className="border-l-2 border-orange-400 pl-4 space-y-1">
+                    <p className="font-medium text-foreground">Safety Scanner</p>
+                    <p>Before delivery, every response is processed by a rule-based safety scanner that strips specific instructions that could cause harm (e.g., suggestions to destroy evidence, resist arrest, or make false statements). When content is removed, the user sees a notice. The scanner does not edit or rewrite the AI's analysis — it only removes content that crosses defined harm thresholds.</p>
+                  </div>
+                </div>
+
+                <div className="pt-2 space-y-2">
+                  <p className="font-medium text-foreground">Confidence Score</p>
+                  <p>After both tiers run, each response receives a confidence score (0–100%). Scores above 80% mean both tiers validated successfully. Scores below 70% trigger a visible amber warning banner. The score reflects how well the AI's output matched verified legal sources — it does not measure whether the guidance is right for your specific situation, which only a licensed attorney can assess.</p>
+                </div>
+
+                <div className="pt-2 space-y-2">
+                  <p className="font-medium text-foreground">What validation cannot catch</p>
+                  <ul className="space-y-1 list-none">
+                    <li>— Local court rules that are not in any public database</li>
+                    <li>— Jurisdiction-specific procedural deadlines that change frequently (especially immigration)</li>
+                    <li>— How a statute is applied in practice versus its text on paper</li>
+                    <li>— Nuances of your specific facts that only an attorney reviewing your case documents can assess</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-md bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 p-3 text-amber-800 dark:text-amber-200">
+                  <p><strong>Always verify:</strong> Treat AI-generated deadlines, timelines, and procedure descriptions as a starting point to confirm with a public defender or legal aid attorney — not as a final answer. When you see the amber "requires confirmation" banner, that is a signal that the AI was less certain about your specific jurisdiction.</p>
+                </div>
+              </CardContent>
+            </Card>
+
             <Card>
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3">

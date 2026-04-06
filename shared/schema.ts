@@ -378,6 +378,26 @@ export const insertPrivacyConsentSchema = createInsertSchema(privacyConsents).om
 export type InsertPrivacyConsent = z.infer<typeof insertPrivacyConsentSchema>;
 export type PrivacyConsent = typeof privacyConsents.$inferSelect;
 
+// Anonymous AI guidance flags — zero case data stored, admin-only access
+export const guidanceFlags = pgTable("guidance_flags", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  flaggedAt: timestamp("flagged_at").defaultNow(),
+  jurisdiction: text("jurisdiction"),
+  confidenceBucket: text("confidence_bucket"), // 'high' | 'medium' | 'low'
+  flagReason: text("flag_reason").notNull(), // 'inaccurate' | 'unclear' | 'missing_info' | 'other'
+  sessionIdHash: text("session_id_hash"), // SHA-256 hash of session ID — dedup only, never reversible
+}, (table) => ({
+  flaggedAtIdx: index("guidance_flags_flagged_at_idx").on(table.flaggedAt),
+}));
+
+export const insertGuidanceFlagSchema = createInsertSchema(guidanceFlags).omit({
+  id: true,
+  flaggedAt: true,
+});
+
+export type InsertGuidanceFlag = z.infer<typeof insertGuidanceFlagSchema>;
+export type GuidanceFlag = typeof guidanceFlags.$inferSelect;
+
 // AI daily cost tracking — persisted to survive server restarts
 export const aiDailyCosts = pgTable("ai_daily_costs", {
   date: text("date").primaryKey(), // YYYY-MM-DD UTC

@@ -236,35 +236,41 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
 
 function ConsentStep({ formData, updateFormData, onNext }: any) {
   const { t } = useTranslation();
-  
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <div>
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.consent.title')}</h3>
-        <div className="space-y-4 text-sm text-muted-foreground">
-          <p>
-            <strong>{t('legalGuidance.qaFlow.consent.important')}</strong> {t('legalGuidance.qaFlow.consent.generalInfo')}
-          </p>
-          <p>
-            {t('legalGuidance.qaFlow.consent.noStorage')}
-          </p>
-          <p>
-            {t('legalGuidance.qaFlow.consent.consultAttorney')}
-          </p>
 
-          {/* Warning disclosures */}
-          <div className="p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg space-y-2">
-            <p>
-              {t('legalGuidance.qaFlow.consent.notPrivileged')}
-            </p>
-            <p>
-              {t('legalGuidance.qaFlow.consent.governmentDisclosure')}
-            </p>
-            <p>
-              {t('legalGuidance.qaFlow.consent.criminalWarning')}
-            </p>
-          </div>
-        </div>
+        <ul className="space-y-4 text-sm">
+          <li className="flex items-start gap-3">
+            <Scale className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+            <span className="text-muted-foreground">
+              <strong className="text-foreground">{t('legalGuidance.qaFlow.consent.bullet1Head')}</strong>{' '}
+              {t('legalGuidance.qaFlow.consent.bullet1Body')}
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Lock className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+            <span className="text-muted-foreground">
+              <strong className="text-foreground">{t('legalGuidance.qaFlow.consent.bullet2Head')}</strong>{' '}
+              {t('legalGuidance.qaFlow.consent.bullet2Body')}
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
+            <span className="text-muted-foreground">
+              <strong className="text-foreground">{t('legalGuidance.qaFlow.consent.bullet3Head')}</strong>{' '}
+              {t('legalGuidance.qaFlow.consent.bullet3Body')}
+            </span>
+          </li>
+        </ul>
+
+        <p className="text-xs text-muted-foreground mt-4">
+          <a href="/tech-docs#ai-validation" className="underline hover:text-foreground transition-colors">
+            {t('legalGuidance.qaFlow.consent.validationLink')}
+          </a>
+        </p>
       </div>
 
       <div className="flex items-center space-x-2">

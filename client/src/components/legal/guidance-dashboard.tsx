@@ -37,7 +37,9 @@ import {
   Baby,
   LifeBuoy,
   Activity,
-  Loader2
+  Loader2,
+  Flag,
+  Send
 } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -49,6 +51,9 @@ import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Checkbox } from "@/components/ui/checkbox";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { criminalCharges } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
@@ -772,6 +777,26 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showExportWarning, setShowExportWarning] = useState(false);
+  const [showFlagDialog, setShowFlagDialog] = useState(false);
+  const [flagReason, setFlagReason] = useState('');
+  const [flagSubmitted, setFlagSubmitted] = useState(false);
+
+  const flagMutation = useMutation({
+    mutationFn: async (reason: string) => {
+      const bucket = guidance.validation
+        ? guidance.validation.confidenceScore >= 0.8 ? 'high' : guidance.validation.confidenceScore >= 0.5 ? 'medium' : 'low'
+        : undefined;
+      return apiRequest('POST', '/api/guidance/flag', {
+        flagReason: reason,
+        jurisdiction: guidance.caseData?.jurisdiction,
+        confidenceBucket: bucket,
+        sessionIdHash: guidance.sessionId,
+      });
+    },
+    onSuccess: () => {
+      setFlagSubmitted(true);
+    },
+  });
 
   const guardedNavigate = useCallback((href: string) => {
     attemptNavigation(() => setLocation(href));
@@ -990,17 +1015,25 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             
             {/* Collapsible technical details for advanced users */}
             <Collapsible className="mt-3">
-              <CollapsibleTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-0 h-auto text-xs text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-transparent group"
-                  data-testid="btn-show-verification-details"
+              <div className="flex items-center gap-3 flex-wrap">
+                <CollapsibleTrigger asChild>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-0 h-auto text-xs text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-transparent group"
+                    data-testid="btn-show-verification-details"
+                  >
+                    <ChevronRight className="h-3 w-3 mr-1 transition-transform group-data-[state=open]:rotate-90" />
+                    {t('guidance.validation.showDetails', 'How we verified this')}
+                  </Button>
+                </CollapsibleTrigger>
+                <a
+                  href="/tech-docs#ai-validation"
+                  className="text-xs text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 underline underline-offset-2"
                 >
-                  <ChevronRight className="h-3 w-3 mr-1 transition-transform group-data-[state=open]:rotate-90" />
-                  {t('guidance.validation.showDetails', 'How we verified this')}
-                </Button>
-              </CollapsibleTrigger>
+                  {t('guidance.validation.methodologyLink', 'Full methodology')}
+                </a>
+              </div>
               <CollapsibleContent className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-600">
                 <div className="space-y-3 text-xs text-slate-600 dark:text-slate-400">
                   {/* What we checked */}
@@ -1667,28 +1700,105 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       {/* Privacy Notice */}
       <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
         <CardContent className="pt-6">
-          <div className="flex items-center gap-2 mb-3">
-            <BrandShieldIcon size={20} />
-            <h3 className="font-semibold text-blue-800 dark:text-blue-200">
-              {t('legalGuidance.dashboard.privacyNotice.title', 'Your Privacy is Protected')}
-            </h3>
-          </div>
-          <div className="flex flex-wrap gap-4 text-sm text-blue-800 dark:text-blue-200">
-            <div className="flex items-center gap-2">
-              <Lock className="h-4 w-4 text-blue-600 flex-shrink-0" />
-              <span>{t('legalGuidance.dashboard.privacyNotice.encrypted', 'Data encrypted')}</span>
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-3">
+                <BrandShieldIcon size={20} />
+                <h3 className="font-semibold text-blue-800 dark:text-blue-200">
+                  {t('legalGuidance.dashboard.privacyNotice.title', 'Your Privacy is Protected')}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-4 text-sm text-blue-800 dark:text-blue-200">
+                <div className="flex items-center gap-2">
+                  <Lock className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span>{t('legalGuidance.dashboard.privacyNotice.encrypted', 'Data encrypted')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span>{t('legalGuidance.dashboard.privacyNotice.autoDelete', 'Auto-deletes in 24 hours')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BrandShieldIcon size={16} />
+                  <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal info redacted')}</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4 text-blue-600 flex-shrink-0" />
-              <span>{t('legalGuidance.dashboard.privacyNotice.autoDelete', 'Auto-deletes in 24 hours')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BrandShieldIcon size={16} />
-              <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal info redacted')}</span>
-            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 shrink-0"
+              onClick={() => { setFlagSubmitted(false); setFlagReason(''); setShowFlagDialog(true); }}
+              data-testid="btn-flag-response"
+            >
+              <Flag className="h-3.5 w-3.5 mr-1" />
+              {t('guidance.flag.buttonLabel', 'Report an issue')}
+            </Button>
           </div>
         </CardContent>
       </Card>
+
+      {/* Flag Response Dialog */}
+      <Dialog open={showFlagDialog} onOpenChange={(open) => { setShowFlagDialog(open); if (!open) { setFlagReason(''); } }}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Flag className="h-4 w-4 text-muted-foreground" />
+              {t('guidance.flag.dialogTitle', 'Report an issue')}
+            </DialogTitle>
+            <DialogDescription>
+              {t('guidance.flag.dialogDesc', 'Help us improve. No case details are submitted — only the issue type and your jurisdiction.')}
+            </DialogDescription>
+          </DialogHeader>
+
+          {flagSubmitted ? (
+            <div className="flex flex-col items-center gap-3 py-4 text-center">
+              <CheckCircle className="h-8 w-8 text-green-500" />
+              <p className="text-sm font-medium">{t('guidance.flag.successTitle', 'Thank you')}</p>
+              <p className="text-xs text-muted-foreground">{t('guidance.flag.successDesc', 'Your report helps us improve accuracy for everyone.')}</p>
+              <Button size="sm" variant="outline" onClick={() => setShowFlagDialog(false)}>
+                {t('common.close', 'Close')}
+              </Button>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <RadioGroup value={flagReason} onValueChange={setFlagReason}>
+                {[
+                  { value: 'inaccurate', label: t('guidance.flag.reason.inaccurate', 'Information seems incorrect') },
+                  { value: 'unclear', label: t('guidance.flag.reason.unclear', 'Hard to understand') },
+                  { value: 'missing_info', label: t('guidance.flag.reason.missing_info', 'Important information is missing') },
+                  { value: 'other', label: t('guidance.flag.reason.other', 'Something else') },
+                ].map(({ value, label }) => (
+                  <div key={value} className="flex items-center space-x-2">
+                    <RadioGroupItem value={value} id={`flag-${value}`} />
+                    <Label htmlFor={`flag-${value}`} className="text-sm cursor-pointer">{label}</Label>
+                  </div>
+                ))}
+              </RadioGroup>
+              <div className="flex gap-2">
+                <Button variant="outline" size="sm" className="flex-1" onClick={() => setShowFlagDialog(false)}>
+                  {t('common.cancel', 'Cancel')}
+                </Button>
+                <Button
+                  size="sm"
+                  className="flex-1"
+                  disabled={!flagReason || flagMutation.isPending}
+                  onClick={() => flagMutation.mutate(flagReason)}
+                  data-testid="btn-submit-flag"
+                >
+                  {flagMutation.isPending ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <>
+                      <Send className="h-3.5 w-3.5 mr-1.5" />
+                      {t('guidance.flag.submitButton', 'Submit')}
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Export Warning Dialog */}
       <AlertDialog open={showExportWarning} onOpenChange={setShowExportWarning}>

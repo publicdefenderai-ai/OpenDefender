@@ -6,7 +6,7 @@ import { courtListenerService } from "./services/courtlistener";
 import { legalDataService } from "./services/legal-data";
 import { recapService } from "./services/recap";
 import { bjsStatisticsService } from "./services/bjs-statistics";
-import { insertLegalCaseSchema, insertCaseFeedbackSchema } from "@shared/schema";
+import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
@@ -2153,6 +2153,72 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
     }
   );
+
+  // ============================================================================
+  // GUIDANCE FLAGS — Anonymous quality feedback (zero PII stored)
+  // ============================================================================
+
+  const flagRateLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 10, // max 10 flags per IP per hour
+    message: { success: false, error: 'Too many flag requests. Please try again later.' },
+    standardHeaders: true,
+    legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  app.post("/api/guidance/flag", flagRateLimiter, async (req: Request, res: Response) => {
+    try {
+      const schema = insertGuidanceFlagSchema.extend({
+        flagReason: z.enum(['inaccurate', 'unclear', 'missing_info', 'other']),
+        confidenceBucket: z.enum(['high', 'medium', 'low']).optional(),
+      });
+      const parsed = schema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ success: false, error: 'Invalid flag data.' });
+      }
+
+      // Hash session ID if provided — never store raw session IDs
+      let sessionIdHash: string | undefined;
+      if (parsed.data.sessionIdHash) {
+        const { createHash } = await import('crypto');
+        sessionIdHash = createHash('sha256').update(parsed.data.sessionIdHash).digest('hex');
+      }
+
+      const flag = await storage.createGuidanceFlag({
+        ...parsed.data,
+        sessionIdHash,
+      });
+
+      opsLog('guidance-flag', `Flag submitted: ${parsed.data.flagReason} | ${parsed.data.jurisdiction ?? 'unknown'} | confidence: ${parsed.data.confidenceBucket ?? 'unknown'}`);
+      res.json({ success: true, id: flag.id });
+    } catch (error) {
+      errLog('[GuidanceFlag] Error storing flag:', error);
+      res.status(500).json({ success: false, error: 'Failed to record flag.' });
+    }
+  });
+
+  // Admin-only: view flag data. Requires Authorization: Bearer <ADMIN_TOKEN> header.
+  app.get("/api/admin/guidance-flags", async (req: Request, res: Response) => {
+    const adminToken = process.env.ADMIN_TOKEN;
+    if (!adminToken) {
+      return res.status(503).json({ success: false, error: 'Admin access not configured.' });
+    }
+    const authHeader = req.headers.authorization;
+    if (!authHeader || authHeader !== `Bearer ${adminToken}`) {
+      return res.status(401).json({ success: false, error: 'Unauthorized.' });
+    }
+    try {
+      const [flags, summary] = await Promise.all([
+        storage.getGuidanceFlags(200),
+        storage.getGuidanceFlagSummary(),
+      ]);
+      res.json({ success: true, summary, flags });
+    } catch (error) {
+      errLog('[Admin] Error fetching flags:', error);
+      res.status(500).json({ success: false, error: 'Failed to retrieve flags.' });
+    }
+  });
 
   const httpServer = createServer(app);
   return httpServer;

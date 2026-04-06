@@ -1578,15 +1578,15 @@ i18n
                 "additionalDetails": "Additional Details (Optional)"
               },
               "consent": {
-                "title": "Privacy Disclaimer & Consent",
-                "important": "Important:",
-                "generalInfo": "This tool provides general legal information only and is not a substitute for professional legal advice.",
-                "noStorage": "We do not store your personal information. All data is deleted when you close your session.",
-                "consultAttorney": "For specific legal advice, consult with a qualified attorney.",
-                "notPrivileged": "Your conversations with this AI are NOT protected by attorney-client privilege and could be requested by law enforcement or through legal process.",
-                "governmentDisclosure": "Our AI provider (Anthropic) may retain your prompts for up to 30 days. During this time, if the government issues a valid subpoena or court order, your conversations may be disclosed.",
-                "criminalWarning": "If you are under investigation or facing criminal charges, speak with a licensed attorney for confidential advice before sharing case details here.",
-                "checkboxLabel": "I understand and consent to continue",
+                "title": "Before you start",
+                "bullet1Head": "Legal information, not legal advice.",
+                "bullet1Body": "We explain your rights and what to expect — we don't tell you what to do. For advice on your specific case, a public defender or legal aid attorney is your best resource.",
+                "bullet2Head": "Private by design.",
+                "bullet2Body": "Your answers are deleted when you close this session. Nothing is stored on our servers beyond 24 hours.",
+                "bullet3Head": "Not attorney-client privileged.",
+                "bullet3Body": "Unlike a conversation with your lawyer, this AI session is not protected. Our AI provider (Anthropic) may retain prompts for up to 30 days. If served with a valid subpoena, those records could be disclosed.",
+                "validationLink": "Learn how we verify AI responses →",
+                "checkboxLabel": "I understand and want to continue",
                 "continueButton": "Continue"
               },
               "jurisdiction": {
@@ -6433,15 +6433,15 @@ i18n
                 "additionalDetails": "Detalles Adicionales (Opcional)"
               },
               "consent": {
-                "title": "Aviso de Privacidad y Consentimiento",
-                "important": "Importante:",
-                "generalInfo": "Esta herramienta proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional.",
-                "noStorage": "No almacenamos su información personal. Todos los datos se eliminan cuando cierra su sesión.",
-                "consultAttorney": "Para asesoramiento legal específico, consulte con un abogado calificado.",
-                "notPrivileged": "Sus conversaciones con esta IA NO están protegidas por el privilegio abogado-cliente y podrían ser solicitadas por las autoridades o mediante un proceso legal.",
-                "governmentDisclosure": "Nuestro proveedor de IA (Anthropic) puede retener sus mensajes hasta por 30 días. Durante este tiempo, si el gobierno emite una citación válida u orden judicial, sus conversaciones podrían ser divulgadas.",
-                "criminalWarning": "Si está bajo investigación o enfrenta cargos criminales, hable con un abogado licenciado para recibir asesoramiento confidencial antes de compartir detalles de su caso aquí.",
-                "checkboxLabel": "Entiendo y acepto continuar",
+                "title": "Antes de comenzar",
+                "bullet1Head": "Información legal, no asesoramiento legal.",
+                "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un defensor público o abogado de ayuda legal es su mejor recurso.",
+                "bullet2Head": "Privacidad por diseño.",
+                "bullet2Body": "Sus respuestas se eliminan cuando cierra esta sesión. Nada se almacena en nuestros servidores más de 24 horas.",
+                "bullet3Head": "No está protegido por privilegio abogado-cliente.",
+                "bullet3Body": "A diferencia de una conversación con su abogado, esta sesión de IA no está protegida. Nuestro proveedor de IA (Anthropic) puede retener sus mensajes hasta 30 días y podría divulgarlos ante una citación válida.",
+                "validationLink": "Conozca cómo verificamos las respuestas de IA →",
+                "checkboxLabel": "Entiendo y quiero continuar",
                 "continueButton": "Continuar"
               },
               "jurisdiction": {
@@ -11289,12 +11289,15 @@ i18n
                 "additionalDetails": "补充信息（可选）"
               },
               "consent": {
-                "title": "隐私免责声明与同意",
-                "important": "重要：",
-                "generalInfo": "本工具仅提供一般性法律信息，不能替代专业法律建议。",
-                "noStorage": "我们不存储你的个人信息。所有数据在你关闭会话时删除。",
-                "consultAttorney": "如需具体的法律建议，请咨询合格的律师。",
-                "checkboxLabel": "我理解并同意继续",
+                "title": "开始前请了解",
+                "bullet1Head": "法律信息，非法律建议。",
+                "bullet1Body": "我们解释您的权利和预期流程——我们不告诉您该怎么做。如需针对您案件的建议，公设辩护人或法律援助律师是您最好的资源。",
+                "bullet2Head": "隐私优先设计。",
+                "bullet2Body": "您的回答在关闭会话时即被删除，服务器保留不超过24小时。",
+                "bullet3Head": "不受律师-委托人特权保护。",
+                "bullet3Body": "与您的律师对话不同，本AI会话不受保护。我们的AI提供商（Anthropic）可能保留您的输入最多30天，若收到有效传票，可能予以披露。",
+                "validationLink": "了解我们如何验证AI回答 →",
+                "checkboxLabel": "我已理解并想继续",
                 "continueButton": "继续"
               },
               "jurisdiction": {
