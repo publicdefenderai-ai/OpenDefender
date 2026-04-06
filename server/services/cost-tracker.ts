@@ -205,7 +205,7 @@ export function getAICostStatus(): {
   available: boolean;
   dailyBudget: number;
   currentSpend: number;
-  remainingBudget: number;
+  remainingBudget: number | null;
   requestCount: number;
   message?: string;
 } {

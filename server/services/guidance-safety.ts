@@ -43,10 +43,7 @@ export function scanGuidanceForDangerContent(
   for (const { category, pattern } of DANGER_PATTERNS) {
     if (pattern.test(guidanceText)) {
       dangerFlags.push(category);
-      opsLog('safety-scan', 'Danger content detected in guidance', {
-        category,
-        caseId: caseId ?? 'unknown',
-      });
+      opsLog('safety-scan', `Danger content detected in guidance — category: ${category}, caseId: ${caseId ?? 'unknown'}`);
     }
   }
 
@@ -68,10 +65,10 @@ function itemMatchesDanger(text: string): boolean {
  * injecting the standard replacement notice once if anything was removed.
  */
 export function stripDangerousItems(
-  immediateActions: Array<{ action: string; urgency: string }>,
+  immediateActions: Array<{ action: string; urgency: 'low' | 'medium' | 'high' | 'urgent' }>,
   avoidActions: string[]
 ): {
-  immediateActions: Array<{ action: string; urgency: string }>;
+  immediateActions: Array<{ action: string; urgency: 'low' | 'medium' | 'high' | 'urgent' }>;
   avoidActions: string[];
   strippedCount: number;
 } {
