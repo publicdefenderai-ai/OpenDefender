@@ -22,7 +22,8 @@ on:
           - public-defenders
           - charge-citations
 
-# Minimal permissions — only issues:write for the report job
+# Default: read-only. The verify-charge-citations job needs contents:write to
+# commit promoted citations back to main. generate-report needs issues:write.
 permissions:
   contents: read
 
@@ -215,10 +216,14 @@ jobs:
       github.event_name == 'schedule' ||
       github.event.inputs.category == 'all' ||
       github.event.inputs.category == 'charge-citations'
+    permissions:
+      contents: write  # needed to commit promoted citations back to main
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -237,6 +242,23 @@ jobs:
         # Allow failure: not_found/repealed exits 1, but we still want the artifact
         # and report. The report generator will surface the issue.
         continue-on-error: true
+
+      - name: Promote verified citations to high confidence
+        run: npx tsx scripts/data-review/promote-verified-citations.ts
+
+      - name: Commit promoted citations (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet shared/criminal-charge-citations.ts; then
+            echo "No citations promoted — overlay file unchanged."
+          else
+            PROMOTED=$(git diff --unified=0 shared/criminal-charge-citations.ts | grep '^+' | grep -c '"high"' || true)
+            git add shared/criminal-charge-citations.ts
+            git commit -m "Promote ${PROMOTED} verified citation(s) to high confidence [quarterly review]"
+            git push origin main
+            echo "Committed and pushed ${PROMOTED} promotion(s)."
+          fi
 
       - name: Upload charge citations report
         uses: actions/upload-artifact@v4
