@@ -37,6 +37,7 @@ import fs from 'fs';
 import path from 'path';
 import { criminalCharges, getChargeConfidence, isCitationVerified } from '../../shared/criminal-charges';
 import type { CriminalCharge } from '../../shared/criminal-charges';
+import { CHARGE_CITATIONS } from '../../shared/criminal-charge-citations';
 
 // ── CLI argument parsing ──────────────────────────────────────────────────────
 
@@ -198,7 +199,8 @@ async function verifyCharge(
   total: number
 ): Promise<ChargeVerificationResult> {
   const confidence = getChargeConfidence(charge);
-  const citation = charge.statuteCitations?.[0] ?? null;
+  // Prefer overlay citation; fall back to inline statuteCitations[]
+  const citation = CHARGE_CITATIONS[charge.id]?.citation ?? charge.statuteCitations?.[0] ?? null;
   const checkedAt = new Date().toISOString();
   const label = `${charge.name} (${charge.jurisdiction})`;
 
@@ -356,11 +358,15 @@ async function main(): Promise<void> {
     return true;
   });
 
+  // A charge has a citation if the overlay OR inline statuteCitations[] has one
+  const hasCitation = (c: CriminalCharge) =>
+    !!(CHARGE_CITATIONS[c.id]?.citation || c.statuteCitations?.length);
+
   // Without --all, skip entries that have no citation (nothing to verify yet)
-  const pendingCharges = charges.filter(c => !c.statuteCitations?.length);
+  const pendingCharges = charges.filter(c => !hasCitation(c));
   const chargesToCheck = INCLUDE_PENDING
     ? charges
-    : charges.filter(c => c.statuteCitations?.length);
+    : charges.filter(c => hasCitation(c));
 
   const total = chargesToCheck.length;
   console.log(`\n=== Criminal Charge Citation Verifier ===`);
@@ -393,8 +399,8 @@ async function main(): Promise<void> {
     }
   }
 
-  // Verify entries that have citations
-  const withCitations = chargesToCheck.filter(c => c.statuteCitations?.length);
+  // Verify entries that have citations (overlay or inline)
+  const withCitations = chargesToCheck.filter(c => hasCitation(c));
   for (let i = 0; i < withCitations.length; i++) {
     const result = await verifyCharge(withCitations[i], i + 1, withCitations.length);
     results.push(result);

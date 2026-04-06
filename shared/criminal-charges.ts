@@ -48,24 +48,38 @@ export interface CriminalCharge {
 }
 
 // ── Citation helpers ──────────────────────────────────────────────────────────
+// These helpers check the citations overlay (criminal-charge-citations.ts) first,
+// then fall back to inline statuteCitations[] on the charge object.
+// Always use these functions — never access charge.statuteCitations directly in UI code.
 
-/** Returns the confidence level for a charge, defaulting to 'unverified'. */
+import { CHARGE_CITATIONS } from './criminal-charge-citations';
+
+/** Returns the confidence level for a charge, checking the overlay first. */
 export function getChargeConfidence(
   charge: CriminalCharge
 ): 'unverified' | 'low' | 'medium' | 'high' {
+  const overlay = CHARGE_CITATIONS[charge.id];
+  if (overlay) return overlay.confidence;
   return charge.dataConfidence ?? 'unverified';
 }
 
-/** True only when the entry has been OpenLaws-verified and has at least one citation. */
+/** True only when the entry has a 'high' confidence citation (overlay or inline). */
 export function isCitationVerified(charge: CriminalCharge): boolean {
+  const overlay = CHARGE_CITATIONS[charge.id];
+  if (overlay) return overlay.confidence === 'high';
   return charge.dataConfidence === 'high' && (charge.statuteCitations?.length ?? 0) > 0;
 }
 
 /** Returns the first verified citation string, or null for unverified entries.
+ *  Checks the overlay file first, then inline statuteCitations[].
  *  Use this instead of accessing charge.statuteCitations directly in UI code. */
 export function getVerifiedCitation(charge: CriminalCharge): string | null {
-  if (!isCitationVerified(charge)) return null;
-  return charge.statuteCitations![0];
+  const overlay = CHARGE_CITATIONS[charge.id];
+  if (overlay && overlay.confidence === 'high') return overlay.citation;
+  if (charge.dataConfidence === 'high' && (charge.statuteCitations?.length ?? 0) > 0) {
+    return charge.statuteCitations![0];
+  }
+  return null;
 }
 
 export const criminalCharges: CriminalCharge[] = [
