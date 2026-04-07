@@ -193,6 +193,18 @@ function parseCitationForVerifier(citation: string): ParsedCitation | null {
   const njM = s.match(/N\.?J\.?\s*(?:S\.?A\.?|Stat\.?\s*(?:Ann\.?)?)\s*§?\s*([\w:.-]+)/i);
   if (njM) return { jurisdiction: 'NJ', lawKey: 'NJ-STAT', section: njM[1] };
 
+  // Georgia: "O.C.G.A. § 16-5-1"
+  const gaM = s.match(/O\.C\.G\.A\.?\s*§?\s*([\d.:a-zA-Z/-]+(?:\([a-z0-9]+\))?)/i);
+  if (gaM) return { jurisdiction: 'GA', lawKey: 'GA-STAT', section: gaM[1] };
+
+  // West Virginia: "W. Va. Code § 61-2-1"
+  const wvM = s.match(/W\.?\s*Va\.?\s*Code\s*(?:Ann\.?)?\s*§?\s*([\d.:a-zA-Z/-]+(?:\([a-z0-9]+\))?)/i);
+  if (wvM) return { jurisdiction: 'WV', lawKey: 'WV-STAT', section: wvM[1] };
+
+  // Pennsylvania: "18 Pa.C.S. § 2502(a)" — title number before Pa.C.S. becomes codeHint
+  const paM = s.match(/(\d+)\s*Pa\.C\.S\.?\s*(?:Ann\.?)?\s*§?\s*([\d.:a-zA-Z/-]+(?:\([a-z0-9]+\))?)/i);
+  if (paM) return { jurisdiction: 'PA', lawKey: 'PA-STAT', section: paM[2], codeHint: `title_${paM[1]}` };
+
   // Illinois ILCS: "720 ILCS 5/9-1"
   const ilM = s.match(/\d+\s*ILCS\s*([\w/.-]+)/i);
   if (ilM) return { jurisdiction: 'IL', lawKey: 'IL-STAT', section: ilM[1] };
@@ -555,7 +567,8 @@ async function verifyCharge(
     };
   }
 
-  const jurisdictionKey = charge.jurisdiction === 'FED'
+  // Some charges use 'federal' (lowercase) instead of 'FED'
+  const jurisdictionKey = (charge.jurisdiction === 'FED' || charge.jurisdiction === 'federal')
     ? 'FED'
     : STATE_LAW_KEYS[charge.jurisdiction] ? charge.jurisdiction : null;
 
