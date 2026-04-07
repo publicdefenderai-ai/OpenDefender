@@ -164,7 +164,9 @@ function unverifiableReason(citation: string): string | null {
   }
 
   // Generic "State X statute / State X act" placeholders
-  if (/^State\s+\w[\w\s]*(?:statute|act|code|law|provision)/i.test(s)) {
+  // Allow hyphens, slashes, and spaces in the middle phrase
+  // e.g. "State firearm-in-felony enhancement statute", "State drug-free school zone statute"
+  if (/^State\s+[\w][\w\s/,-]*(?:statute|act|code|law|provision)/i.test(s)) {
     return 'Generic placeholder citation — replace with the specific state statute number for this jurisdiction.';
   }
 
