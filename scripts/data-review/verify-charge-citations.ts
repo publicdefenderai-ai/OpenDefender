@@ -143,6 +143,42 @@ interface ParsedCitation {
   codeHint?: string;
 }
 
+/**
+ * Returns a human-readable skip reason if the citation is known to be
+ * unverifiable by the OpenLaws API — not because it's wrong, but because
+ * it was always a placeholder or a doctrine reference, not a state statute.
+ *
+ * Detects:
+ *   - "MPC § X" — Model Penal Code doctrine references
+ *   - "State X statute" generic placeholders (hate crime, gang enhancement, etc.)
+ *   - Case law citations (In re Gault, Kent v. United States, etc.)
+ *
+ * Returns null if the citation may be a verifiable statute.
+ */
+function unverifiableReason(citation: string): string | null {
+  const s = citation.trim();
+
+  // Model Penal Code references
+  if (/^MPC\s*§/i.test(s)) {
+    return 'Model Penal Code reference — not a state statute. Replace with the jurisdiction-specific attempt/conspiracy/complicity statute.';
+  }
+
+  // Generic "State X statute / State X act" placeholders
+  if (/^State\s+\w[\w\s]*(?:statute|act|code|law|provision)/i.test(s)) {
+    return 'Generic placeholder citation — replace with the specific state statute number for this jurisdiction.';
+  }
+
+  // Case law citations (e.g., "In re Gault, 387 U.S. 1", "Kent v. United States")
+  if (/\bIn re\b.+\d+\s+U\.?S\.?\s+\d+/i.test(s)) {
+    return 'Case law citation — not a statute. Replace with the applicable state or federal statute number.';
+  }
+  if (/\b\w+\s+v\.\s+\w[\w\s]*,\s*\d+\s+U\.?S\.?\s+\d+/i.test(s)) {
+    return 'Case law citation — not a statute. Replace with the applicable state or federal statute number.';
+  }
+
+  return null;
+}
+
 /** Parse a formatted citation string into its OpenLaws lookup components. */
 function parseCitationForVerifier(citation: string): ParsedCitation | null {
   const s = citation.trim();
@@ -480,6 +516,26 @@ async function verifyCharge(
     };
   }
 
+  // Pre-check: skip known-unverifiable citation patterns (MPC, case law, generic placeholders)
+  // These are not broken citations — they're placeholder references that need
+  // Phase 3 follow-up to replace with real state statute numbers.
+  const skipReason = unverifiableReason(citation);
+  if (skipReason) {
+    process.stdout.write(`[${index}/${total}] SKIP (placeholder): ${label}\n`);
+    return {
+      name: label,
+      chargeId: charge.id,
+      chargeName: charge.name,
+      jurisdiction: charge.jurisdiction,
+      citation,
+      currentConfidence: confidence,
+      status: 'skipped',
+      needsManualReview: false,
+      reason: skipReason,
+      checkedAt,
+    };
+  }
+
   // Dry-run: classify only, no API call
   if (DRY_RUN) {
     process.stdout.write(`[${index}/${total}] DRY-RUN: ${label} — ${citation}\n`);
@@ -668,6 +724,7 @@ async function main(): Promise<void> {
 
   // Build summary counts
   const withCitationResults = results.filter(r => r.status !== 'no_citation');
+  const skippedPlaceholders = withCitationResults.filter(r => r.status === 'skipped' && !DRY_RUN);
   const okCount = withCitationResults.filter(
     r => r.status === 'verified' || r.status === 'already_high' || r.status === 'skipped'
   ).length;
@@ -694,7 +751,8 @@ async function main(): Promise<void> {
   // Console summary
   console.log('\n=== Summary ===');
   console.log(`Checked (with citations): ${withCitationResults.length}`);
-  console.log(`  Verified / re-verified: ${okCount}`);
+  console.log(`  Verified / re-verified: ${withCitationResults.filter(r => r.status === 'verified' || r.status === 'already_high').length}`);
+  console.log(`  Skipped (placeholder):  ${skippedPlaceholders.length}`);
   console.log(`  Needs manual review:    ${needsReviewItems.length}`);
   console.log(`Pending (no citation yet): ${pendingCount}`);
   console.log(`Already high-confidence:   ${verifiedHighCount}`);
