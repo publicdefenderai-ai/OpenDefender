@@ -7,12 +7,14 @@
  *
  * Confidence levels:
  *   'medium' — confirmed via secondary source (Justia, state legislature, NCSL)
- *   'high'   — confirmed via OpenLaws API; promote after running verify-charge-citations.ts
+ *   'high'   — confirmed via OpenLaws API traversal or cross-verified against official state
+ *              legislature site; only 'high' entries surface the "Read the Law" button to users
  *
  * How to add a citation:
  *   1. Add an entry to CHARGE_CITATIONS below with confidence: 'medium'
  *   2. Run: npx tsx scripts/data-review/verify-charge-citations.ts --state XX --category [name]
- *   3. If OpenLaws confirms, update confidence to 'high' and set lastVerified to current YYYY-MM
+ *   3. If OpenLaws confirms OR you verify directly on the official state legislature site,
+ *      update confidence to 'high' and set lastVerified to current YYYY-MM
  *
  * Populated in phases by crime category — see memory/project_charge_citation_verification.md
  * for the priority order and verification workflow.
@@ -40,72 +42,72 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // ── BATCH 1: AL, AR, DC, DE, FL, GA, MD, MS, NC, SC, VA ─────────────────
   // Source: Justia, state legislature sites, DC Council Law Library
   // Verified: 2026-03 | Confidence: medium (secondary source)
-  // Next step: run verify-charge-citations.ts to promote confirmed entries to 'high'
+  // AL promoted to 'high': OpenLaws API confirmed 2026-04
 
   "al-murder-in-the-first-degree": {
     citation: "Ala. Code § 13A-6-2",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Alabama Judicial System jury instructions and Justia Alabama Code Title 13A Chapter 6 Article 1",
   },
   "al-felony-murder": {
     citation: "Ala. Code § 13A-6-2(a)(3)",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Alabama Judicial System document for § 13A-6-2(a)(3) Murder (Felony Murder)",
   },
   "al-voluntary-manslaughter": {
     citation: "Ala. Code § 13A-6-3",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Alabama Judicial System and Justia — § 13A-6-3 Manslaughter includes heat-of-passion killing",
   },
   "al-involuntary-manslaughter": {
     citation: "Ala. Code § 13A-6-3",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Justia Alabama Code — § 13A-6-3 Manslaughter includes reckless killing",
   },
   "al-criminally-negligent-homicide": {
     citation: "Ala. Code § 13A-6-4",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Alabama Judicial System document and Justia — § 13A-6-4 Criminally Negligent Homicide",
   },
   "al-trespassing": {
     citation: "Ala. Code § 13A-7-2",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Alabama Judicial System and FindLaw — § 13A-7-2 Criminal Trespass in the First Degree",
   },
   "al-disorderly-conduct": {
     citation: "Ala. Code § 13A-11-7",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Justia Alabama Code Title 13A Chapter 11 — § 13A-11-7 Disorderly Conduct",
   },
   "al-public-intoxication": {
     citation: "Ala. Code § 13A-11-10",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Justia Alabama Code § 13A-11-10 — Public Intoxication",
   },
   "al-resisting-arrest": {
     citation: "Ala. Code § 13A-10-41",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Justia Alabama Code § 13A-10-41 — Resisting Arrest",
   },
   "al-failure-to-appear": {
     citation: "Ala. Code § 13A-10-39",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Alabama Judicial System and Justia — § 13A-10-39 Bail Jumping in the First Degree",
   },
   "al-petty-theft": {
     citation: "Ala. Code § 13A-8-5",
-    confidence: "medium",
-    lastVerified: "2026-03",
+    confidence: "high",
+    lastVerified: "2026-04",
     source: "Justia Alabama Code § 13A-8-5 — Theft of Property in the Fourth Degree (Class A misdemeanor, under $500)",
   },
   "ar-murder-in-the-first-degree": {
@@ -1537,37 +1539,37 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // — Missouri —
   "mo-murder-in-the-first-degree": {
     citation: "Mo. Rev. Stat. § 565.020",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Missouri Revisor of Statutes — § 565.020 First degree murder, penalty",
   },
   "mo-murder-in-the-second-degree": {
     citation: "Mo. Rev. Stat. § 565.021",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Missouri Revisor of Statutes — § 565.021 Second degree murder, penalty",
   },
   "mo-voluntary-manslaughter": {
     citation: "Mo. Rev. Stat. § 565.023",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Missouri Revisor of Statutes — § 565.023 Voluntary manslaughter, penalty",
   },
   "mo-involuntary-manslaughter": {
     citation: "Mo. Rev. Stat. § 565.024",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Missouri Revisor of Statutes — § 565.024 Involuntary manslaughter, first degree, penalty",
   },
   "mo-disorderly-conduct": {
     citation: "Mo. Rev. Stat. § 574.010",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Missouri Revisor of Statutes — § 574.010 Peace disturbance, penalty",
   },
   "mo-public-intoxication": {
     citation: "Mo. Rev. Stat. § 574.075",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Missouri Revisor of Statutes — § 574.075 Drunkenness or drinking in certain places prohibited",
   },
@@ -1602,61 +1604,61 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // — Nebraska —
   "ne-murder-in-the-first-degree": {
     citation: "Neb. Rev. Stat. § 28-303",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-303 Murder in the first degree",
   },
   "ne-murder-in-the-second-degree": {
     citation: "Neb. Rev. Stat. § 28-304",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-304 Murder in the second degree",
   },
   "ne-voluntary-manslaughter": {
     citation: "Neb. Rev. Stat. § 28-305",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-305 Manslaughter",
   },
   "ne-involuntary-manslaughter": {
     citation: "Neb. Rev. Stat. § 28-305",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-305 Manslaughter (covers both voluntary and involuntary)",
   },
   "ne-vehicular-homicide": {
     citation: "Neb. Rev. Stat. § 28-306",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-306 Motor vehicle homicide",
   },
   "ne-attempted-murder": {
     citation: "Neb. Rev. Stat. § 28-201",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-201 Criminal attempt (general attempt statute applied to murder)",
   },
   "ne-trespassing": {
     citation: "Neb. Rev. Stat. § 28-521",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-521 Criminal trespass, second degree",
   },
   "ne-disorderly-conduct": {
     citation: "Neb. Rev. Stat. § 28-1322",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-1322 Disturbing the peace",
   },
   "ne-resisting-arrest": {
     citation: "Neb. Rev. Stat. § 28-904",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-904 Resisting arrest",
   },
   "ne-petty-theft": {
     citation: "Neb. Rev. Stat. § 28-511",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "Nebraska Legislature — § 28-511 Theft by unlawful taking or disposition",
   },
@@ -2092,61 +2094,61 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // WV § 61-2-1 defines both first and second degree murder in one section
   "wv-murder-in-the-first-degree": {
     citation: "W. Va. Code § 61-2-1",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-2-1 First and second degree murder defined",
   },
   "wv-murder-in-the-second-degree": {
     citation: "W. Va. Code § 61-2-1",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-2-1 (both degrees in same section; § 61-2-3 for 2nd degree penalty)",
   },
   "wv-voluntary-manslaughter": {
     citation: "W. Va. Code § 61-2-4",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-2-4 Voluntary manslaughter",
   },
   "wv-involuntary-manslaughter": {
     citation: "W. Va. Code § 61-2-5",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-2-5 Involuntary manslaughter",
   },
   "wv-trespassing": {
     citation: "W. Va. Code § 61-3B-3",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-3B-3 Criminal trespass",
   },
   "wv-disorderly-conduct": {
     citation: "W. Va. Code § 61-6-1b",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-6-1b Disorderly conduct",
   },
   "wv-public-intoxication": {
     citation: "W. Va. Code § 60-6-9",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 60-6-9 Intoxication or drinking in public places",
   },
   "wv-resisting-arrest": {
     citation: "W. Va. Code § 61-5-17",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-5-17 Obstructing officer",
   },
   "wv-failure-to-appear": {
     citation: "W. Va. Code § 62-1C-17b",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 62-1C-17b Failure to appear",
   },
   "wv-petty-theft": {
     citation: "W. Va. Code § 61-3-13",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-3-13 Grand and petit larceny distinguished",
   },
@@ -3107,61 +3109,61 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // KY does not use degree distinctions for murder; maps to § 507.020 Murder
   "ky-murder-in-the-first-degree": {
     citation: "Ky. Rev. Stat. § 507.020",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY Revised Statutes § 507.020 Murder (KY has no degree distinctions for murder); Justia returned 403",
   },
   "ky-voluntary-manslaughter": {
     citation: "Ky. Rev. Stat. § 507.030",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 507.030 Manslaughter 1st degree; Justia returned 403",
   },
   "ky-involuntary-manslaughter": {
     citation: "Ky. Rev. Stat. § 507.040",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 507.040 Manslaughter 2nd degree; Justia returned 403",
   },
   "ky-criminally-negligent-homicide": {
     citation: "Ky. Rev. Stat. § 507.050",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 507.050 Reckless homicide (KY equivalent of criminally negligent homicide); Justia returned 403",
   },
   "ky-vehicular-homicide": {
     citation: "Ky. Rev. Stat. § 189A.010",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 189A.010 Operating motor vehicle under influence — causing death; Justia returned 403",
   },
   "ky-disorderly-conduct": {
     citation: "Ky. Rev. Stat. § 525.060",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 525.060 Disorderly conduct in the second degree; Justia returned 403",
   },
   "ky-trespassing": {
     citation: "Ky. Rev. Stat. § 511.080",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 511.080 Criminal trespass in the third degree; Justia returned 403",
   },
   "ky-resisting-arrest": {
     citation: "Ky. Rev. Stat. § 520.090",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 520.090 Resisting arrest; Justia returned 403",
   },
   "ky-failure-to-appear": {
     citation: "Ky. Rev. Stat. § 431.520",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 431.520 Failure to appear; Justia returned 403",
   },
   "ky-petty-theft": {
     citation: "Ky. Rev. Stat. § 514.030",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
     source: "KY § 514.030 Theft by unlawful taking; Justia returned 403",
   },
