@@ -229,44 +229,90 @@ interface OpenLawsCheckResult {
  * Bounded BFS: max depth 4, max 20 API calls per citation.
  */
 /**
- * Prioritise root-level compilations (titles) so we search the right one first.
+ * Extract the hierarchical parts of a section number so we can target
+ * the right title/chapter directly without BFS-ing every division.
  *
- * OpenLaws root returns an array of titles: title_1, title_2, ..., title_13a, ...
- * The section number prefix tells us which title to look in:
- *   "13A-6-2"  → title_13a  (leading "13a")
- *   "19.03"    → title_19   (leading "19")
- *   "187"      → no numeric prefix match; rely on codeHint ("penal")
- *   "5/9-1"    → ILCS format; leading "5" → look for the ILCS Act 5 compilation
- *
- * Scoring (higher = checked first):
- *   +100  codeHint matches compilation name (e.g. "penal" in "California Penal Code")
- *   +80   exact title_<id> path match     (e.g. "title_13a" for section "13A-6-2")
- *   +40   numeric-only prefix match       (e.g. "title_13" also tried for "13A-6-2")
+ * Examples:
+ *   "13A-6-2"   → { titleId: "13a", chapterId: "6" }   Alabama-style
+ *   "9A.32.030" → { chapterId: "9a" }                   Washington-style
+ *   "19.03"     → { chapterId: "19" }                   Texas dot-style
+ *   "22-16-4"   → { chapterId: "22" }                   three-part hyphen
+ *   "9-1"       → { chapterId: "9" }                    two-part hyphen
+ *   "187"       → {}                                     flat; rely on codeHint
  */
-function prioritiseCompilations(
-  children: Array<{ display_name: string; path: string }>,
+function sectionHierarchy(section: string): { titleId?: string; chapterId?: string } {
+  // Alabama-style: leading letters after digits → "13A-6-2", "13A-7-2"
+  const alM = section.match(/^(\d+[a-z]+)-(\d+)(?:-|$)/i);
+  if (alM) return { titleId: alM[1].toLowerCase(), chapterId: alM[2] };
+
+  // Three-part hyphen without letter: "22-16-4" → chapter "22"
+  const tri = section.match(/^(\d+)-\d+-\d+/);
+  if (tri) return { chapterId: tri[1] };
+
+  // Dot-separated (TX 19.03, WA 9A.32.030, NY 125.25): first numeric segment
+  const dotM = section.match(/^(\d+[a-z]?)\.(\d+)/i);
+  if (dotM) return { chapterId: dotM[1].toLowerCase() };
+
+  // Two-part hyphen: "9-1"
+  const hypM = section.match(/^(\d+)-\d+/);
+  if (hypM) return { chapterId: hypM[1] };
+
+  return {};
+}
+
+/**
+ * Check whether a fetched division is repealed.
+ */
+function checkRepealed(div: DivisionResponse): boolean {
+  return (
+    div.is_repealed === true ||
+    (!!div.effective_date_end &&
+      div.effective_date_end !== 'Infinity' &&
+      new Date(div.effective_date_end) < new Date())
+  );
+}
+
+/**
+ * Search the children (and one level of grandchildren) of a fetched division
+ * for a section match. Returns the result if found, null otherwise.
+ * Grandchild search handles states with an Article layer between chapter and section.
+ */
+async function searchChildren(
+  jurisdiction: string,
+  lawKey: string,
+  div: DivisionResponse,
   section: string,
-  codeHint?: string
-): Array<{ display_name: string; path: string }> {
-  // Extract leading identifier: "13A-6-2" → "13a", "19.03" → "19", "5/9-1" → "5"
-  const leadingMatch = section.match(/^(\d+[a-z]?)(?:[._\-/]|$)/i);
-  const titleId = leadingMatch ? leadingMatch[1].toLowerCase() : null;
-  const numOnly  = titleId ? titleId.replace(/[a-z]/gi, '') : null;
+  maxGrandchildFetches = 4
+): Promise<OpenLawsCheckResult | null> {
+  if (!div.display_children?.length) return null;
 
-  return [...children]
-    .map(c => {
-      const name = c.display_name.toLowerCase();
-      const p    = c.path.toLowerCase();
-      let score  = 0;
+  const directMatches = div.display_children.filter(
+    c => divisionMatchesSection(c.path, section) || divisionMatchesSection(c.display_name, section)
+  );
 
-      if (codeHint && (name.includes(codeHint) || p.includes(codeHint)))        score += 100;
-      if (titleId && p === `title_${titleId}`)                                   score += 80;
-      if (numOnly  && new RegExp(`title_${numOnly}(?:[^0-9]|$)`).test(p))        score += 40;
+  for (const child of directMatches) {
+    const found_div = await fetchDivision(jurisdiction, lawKey, child.path);
+    if (!found_div) continue;
+    return { found: true, isRepealed: checkRepealed(found_div), effectiveDate: found_div.effective_date_start };
+  }
 
-      return { c, score };
-    })
-    .sort((a, b) => b.score - a.score)
-    .map(({ c }) => c);
+  // One level deeper (article → section) — limit fetches to avoid runaway calls
+  let fetches = 0;
+  for (const child of div.display_children) {
+    if (fetches >= maxGrandchildFetches) break;
+    fetches++;
+    const grandDiv = await fetchDivision(jurisdiction, lawKey, child.path);
+    if (!grandDiv?.display_children) continue;
+    for (const gc of grandDiv.display_children) {
+      if (divisionMatchesSection(gc.path, section) || divisionMatchesSection(gc.display_name, section)) {
+        const found_div = await fetchDivision(jurisdiction, lawKey, gc.path);
+        if (!found_div) continue;
+        return { found: true, isRepealed: checkRepealed(found_div), effectiveDate: found_div.effective_date_start };
+      }
+    }
+  }
+
+  return null;
 }
 
 async function checkCitationViaOpenLaws(
@@ -283,89 +329,113 @@ async function checkCitationViaOpenLaws(
   }
 
   const { jurisdiction, lawKey, section, codeHint } = parsed;
+  const { titleId, chapterId } = sectionHierarchy(section);
 
   try {
-    const root = await fetchDivision(jurisdiction, lawKey);
-    if (!root?.display_children?.length) {
+    // Fetch root (array of all top-level titles/compilations)
+    const rawResp = await fetch(
+      `${OPENLAWS_API_URL}/jurisdictions/${jurisdiction}/laws/${lawKey}/divisions`,
+      { headers: { Authorization: `Bearer ${OPENLAWS_API_KEY}` }, signal: AbortSignal.timeout(20000) }
+    );
+    if (!rawResp.ok) {
+      return { found: false, isRepealed: false, error: `Root fetch HTTP ${rawResp.status}` };
+    }
+    const rawRoot = await rawResp.json() as Array<{
+      path: string;
+      display_name: string;
+      display_children?: Array<{ display_name: string; path: string }>;
+    }>;
+    if (!Array.isArray(rawRoot) || rawRoot.length === 0) {
       return { found: false, isRepealed: false, error: `No root divisions for ${jurisdiction}/${lawKey}` };
     }
 
-    // Sort all titles by relevance; search top 8 (enough fallback without runaway calls)
-    const compilations = prioritiseCompilations(root.display_children, section, codeHint);
+    // ── Strategy 1: Direct path construction ──────────────────────────────────
+    // We know exactly which title and chapter to look in from the section number.
+    // "13A-6-2" → title_13a → chapter_6 → search children. 2–5 API calls total.
 
-    // Also expose root-level objects' pre-fetched children so depth-1 costs 0 extra calls
-    // (OpenLaws includes display_children on each root title object)
-    const rootChildrenMap = new Map<string, Array<{ display_name: string; path: string }>>();
-    // We re-fetch root as raw to capture nested children
-    try {
-      const rawRoot = await fetch(
-        `${OPENLAWS_API_URL}/jurisdictions/${jurisdiction}/laws/${lawKey}/divisions`,
-        { headers: { Authorization: `Bearer ${OPENLAWS_API_KEY}` }, signal: AbortSignal.timeout(20000) }
-      );
-      if (rawRoot.ok) {
-        const rawData = await rawRoot.json() as Array<{ path: string; display_children?: Array<{ display_name: string; path: string }> }>;
-        if (Array.isArray(rawData)) {
-          for (const item of rawData) {
-            if (item.display_children?.length) rootChildrenMap.set(item.path, item.display_children);
-          }
-        }
+    if (titleId || (codeHint && chapterId)) {
+      // Find the right top-level compilation
+      let topPath: string | null = null;
+      if (titleId) {
+        const match = rawRoot.find(r => r.path.toLowerCase() === `title_${titleId}`);
+        topPath = match?.path ?? null;
       }
-    } catch { /* non-fatal */ }
+      if (!topPath && codeHint) {
+        const match = rawRoot.find(r =>
+          r.display_name.toLowerCase().includes(codeHint) || r.path.toLowerCase().includes(codeHint)
+        );
+        topPath = match?.path ?? null;
+      }
 
-    const MAX_CALLS = 25;
-    const MAX_DEPTH = 4;
-    let apiCalls = 1; // counted the root fetch above
+      if (topPath && chapterId) {
+        // Try the chapter path directly
+        const chapterPath = `${topPath}.chapter_${chapterId}`;
+        const chapterDiv = await fetchDivision(jurisdiction, lawKey, chapterPath);
+        if (chapterDiv) {
+          const result = await searchChildren(jurisdiction, lawKey, chapterDiv, section);
+          if (result) return result;
+        }
 
-    for (const compilation of compilations.slice(0, 8)) {
-      if (apiCalls >= MAX_CALLS) break;
-
-      // Use pre-fetched children for this title if available (saves one API call per title)
-      const prefetched = rootChildrenMap.get(compilation.path);
-      let currentLevel = prefetched
-        ? prefetched.map(c => c.path)
-        : [compilation.path];
-      if (prefetched) {
-        // Check if any prefetched chapter is already the section we want
-        for (const child of prefetched) {
-          if (divisionMatchesSection(child.path, section) || divisionMatchesSection(child.display_name, section)) {
-            apiCalls++;
-            const found_div = await fetchDivision(jurisdiction, lawKey, child.path);
-            if (!found_div) continue;
-            const isRepealed =
-              found_div.is_repealed === true ||
-              (!!found_div.effective_date_end && found_div.effective_date_end !== 'Infinity' && new Date(found_div.effective_date_end) < new Date());
-            return { found: true, isRepealed, effectiveDate: found_div.effective_date_start };
-          }
+        // Some states use "article_N" instead of "chapter_N"
+        const articlePath = `${topPath}.article_${chapterId}`;
+        const articleDiv = await fetchDivision(jurisdiction, lawKey, articlePath);
+        if (articleDiv) {
+          const result = await searchChildren(jurisdiction, lawKey, articleDiv, section);
+          if (result) return result;
         }
       }
 
-      for (let depth = 0; depth < MAX_DEPTH && currentLevel.length > 0 && apiCalls < MAX_CALLS; depth++) {
-        const nextLevel: string[] = [];
-
-        for (const divPath of currentLevel) {
-          if (apiCalls >= MAX_CALLS) break;
-          try {
-            apiCalls++;
-            const div = await fetchDivision(jurisdiction, lawKey, divPath);
-            if (!div?.display_children) continue;
-
-            for (const child of div.display_children) {
-              if (divisionMatchesSection(child.path, section) || divisionMatchesSection(child.display_name, section)) {
-                apiCalls++;
-                const found_div = await fetchDivision(jurisdiction, lawKey, child.path);
-                if (!found_div) continue;
-                const isRepealed =
-                  found_div.is_repealed === true ||
-                  (!!found_div.effective_date_end && found_div.effective_date_end !== 'Infinity' && new Date(found_div.effective_date_end) < new Date());
-                return { found: true, isRepealed, effectiveDate: found_div.effective_date_start };
-              }
-              nextLevel.push(child.path);
+      // Chapter path didn't work — search the title's pre-fetched chapters
+      if (topPath) {
+        const titleEntry = rawRoot.find(r => r.path === topPath);
+        if (titleEntry?.display_children?.length) {
+          // Check if section is directly in a top-level child (shallow code structures)
+          for (const child of titleEntry.display_children) {
+            if (divisionMatchesSection(child.path, section) || divisionMatchesSection(child.display_name, section)) {
+              const found_div = await fetchDivision(jurisdiction, lawKey, child.path);
+              if (!found_div) continue;
+              return { found: true, isRepealed: checkRepealed(found_div), effectiveDate: found_div.effective_date_start };
             }
-          } catch { /* ignore individual path errors */ }
-
-          if (apiCalls % 5 === 0) await sleep(100);
+          }
         }
-        currentLevel = nextLevel;
+      }
+    }
+
+    // ── Strategy 2: codeHint-guided search (flat section numbers like CA § 187) ─
+    // No explicit title/chapter in section number. Find the right compilation
+    // via codeHint and search shallowly within it.
+
+    if (codeHint) {
+      const compilation = rawRoot.find(r =>
+        r.display_name.toLowerCase().includes(codeHint) || r.path.toLowerCase().includes(codeHint)
+      );
+      if (compilation) {
+        // Check compilation's own children (depth 1)
+        const compDiv = await fetchDivision(jurisdiction, lawKey, compilation.path);
+        if (compDiv) {
+          const result = await searchChildren(jurisdiction, lawKey, compDiv, section, 6);
+          if (result) return result;
+        }
+      }
+    }
+
+    // ── Strategy 3: Numeric-prefix fallback ───────────────────────────────────
+    // No codeHint and no titleId — use the leading chapter number to find
+    // the right top-level division (e.g., "9-1" → look in title_9 or chapter_9).
+
+    if (chapterId && !titleId) {
+      const numId = chapterId.replace(/[a-z]/gi, '');
+      const topMatch = rawRoot.find(r =>
+        r.path.toLowerCase() === `title_${chapterId.toLowerCase()}` ||
+        r.path.toLowerCase() === `title_${numId}` ||
+        r.path.toLowerCase() === `chapter_${chapterId}`
+      );
+      if (topMatch) {
+        const topDiv = await fetchDivision(jurisdiction, lawKey, topMatch.path);
+        if (topDiv) {
+          const result = await searchChildren(jurisdiction, lawKey, topDiv, section, 6);
+          if (result) return result;
+        }
       }
     }
 
