@@ -695,9 +695,6 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             <p className="text-xs text-muted-foreground">
                               {charge.description}
                             </p>
-                            <p className="text-xs text-red-600 mt-1">
-                              {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
-                            </p>
                           </div>
                         </div>
                       );
@@ -705,7 +702,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   </div>
                 </div>
               )}
-              
+
               {/* Federal Charges Section */}
               {federalCharges.length > 0 && (
                 <div>
@@ -762,9 +759,6 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             <p className="text-xs text-muted-foreground">
                               {charge.description}
                             </p>
-                            <p className="text-xs text-red-600 mt-1">
-                              {t('legalGuidance.qaFlow.caseDetails.maxPenalty')} {charge.maxPenalty}
-                            </p>
                           </div>
                         </div>
                       );
@@ -772,7 +766,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   </div>
                 </div>
               )}
-              
+
               {/* Show More Button */}
               {!showAllCharges && totalFilteredCharges > totalDisplayedCharges && (
                 <Button
