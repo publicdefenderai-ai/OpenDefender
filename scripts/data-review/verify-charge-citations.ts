@@ -91,8 +91,18 @@ interface ReportOutput {
 }
 
 // ── OpenLaws citation lookup ──────────────────────────────────────────────────
+//
+// The OpenLaws API does NOT have a /citations/lookup endpoint.
+// It exposes a hierarchical division tree:
+//   GET /jurisdictions/{jx}/laws/{law}/divisions          → root chapters
+//   GET /jurisdictions/{jx}/laws/{law}/divisions/{path}   → section content
+//
+// We parse the citation to extract jurisdiction + section, then do a bounded
+// breadth-first search (max depth 4, max 20 API calls per citation) through
+// the division tree to find a matching section. This matches the approach used
+// in server/services/openlaws-client.ts.
 
-/** Mapping of state codes to their OpenLaws statute law keys */
+/** Maps 2-letter state codes to their OpenLaws statute law keys */
 const STATE_LAW_KEYS: Record<string, string> = {
   AL: 'AL-STAT', AK: 'AK-STAT', AZ: 'AZ-STAT', AR: 'AR-STAT',
   CA: 'CA-STAT', CO: 'CO-STAT', CT: 'CT-STAT', DE: 'DE-STAT',
@@ -110,6 +120,103 @@ const STATE_LAW_KEYS: Record<string, string> = {
   FED: 'FED-USC',
 };
 
+const STATE_ABBREV: Record<string, string> = {
+  'Ala.': 'AL', 'Alaska': 'AK', 'Ariz.': 'AZ', 'Ark.': 'AR',
+  'Cal.': 'CA', 'Colo.': 'CO', 'Conn.': 'CT', 'Del.': 'DE',
+  'Fla.': 'FL', 'Ga.': 'GA', 'Haw.': 'HI', 'Idaho': 'ID',
+  'Ill.': 'IL', 'Ind.': 'IN', 'Iowa': 'IA', 'Kan.': 'KS',
+  'Ky.': 'KY', 'La.': 'LA', 'Me.': 'ME', 'Md.': 'MD',
+  'Mass.': 'MA', 'Mich.': 'MI', 'Minn.': 'MN', 'Miss.': 'MS',
+  'Mo.': 'MO', 'Mont.': 'MT', 'Neb.': 'NE', 'Nev.': 'NV',
+  'N.H.': 'NH', 'N.J.': 'NJ', 'N.M.': 'NM', 'N.Y.': 'NY',
+  'N.C.': 'NC', 'N.D.': 'ND', 'Ohio': 'OH', 'Okla.': 'OK',
+  'Or.': 'OR', 'Pa.': 'PA', 'R.I.': 'RI', 'S.C.': 'SC',
+  'S.D.': 'SD', 'Tenn.': 'TN', 'Tex.': 'TX', 'Utah': 'UT',
+  'Vt.': 'VT', 'Va.': 'VA', 'Wash.': 'WA', 'W.Va.': 'WV',
+  'Wis.': 'WI', 'Wyo.': 'WY', 'D.C.': 'DC',
+};
+
+interface ParsedCitation {
+  jurisdiction: string;
+  lawKey: string;
+  section: string;
+  codeHint?: string;
+}
+
+/** Parse a formatted citation string into its OpenLaws lookup components. */
+function parseCitationForVerifier(citation: string): ParsedCitation | null {
+  const s = citation.trim();
+
+  // Federal: "18 U.S.C. § 1111"
+  const fedM = s.match(/(\d+)\s*U\.?S\.?C\.?A?\.?\s*§?\s*([\w.-]+)/i);
+  if (fedM) return { jurisdiction: 'FED', lawKey: 'FED-USC', section: fedM[2], codeHint: `title_${fedM[1]}` };
+
+  // NJ: "N.J. Stat. § 2C:11-3"
+  const njM = s.match(/N\.?J\.?\s*(?:S\.?A\.?|Stat\.?\s*(?:Ann\.?)?)\s*§?\s*([\w:.-]+)/i);
+  if (njM) return { jurisdiction: 'NJ', lawKey: 'NJ-STAT', section: njM[1] };
+
+  // Illinois ILCS: "720 ILCS 5/9-1"
+  const ilM = s.match(/\d+\s*ILCS\s*([\w/.-]+)/i);
+  if (ilM) return { jurisdiction: 'IL', lawKey: 'IL-STAT', section: ilM[1] };
+
+  // DC: "D.C. Code § 22-2101"
+  const dcM = s.match(/D\.?C\.?\s*(?:Code|Law)?\s*§?\s*([\w.-]+)/i);
+  if (dcM) return { jurisdiction: 'DC', lawKey: 'DC-STAT', section: dcM[1] };
+
+  // Standard state: "Ala. Code § 13A-6-2", "Cal. Penal Code § 187", etc.
+  const stM = s.match(/^([A-Za-z.]+)\s+(?:(Penal|Criminal|Vehicle|Health|Family|Rev(?:ised)?|Ann(?:otated)?|Transp(?:ortation)?)\s*)?(?:Code|Stat(?:utes)?|Laws?|Ann\.?)?\s*§?\s*([\d.:a-zA-Z/-]+(?:\([a-z0-9]+\))?)/i);
+  if (stM) {
+    const abbrev = stM[1].trim();
+    const stateCode = STATE_ABBREV[abbrev] ?? STATE_ABBREV[abbrev.replace(/\.$/, '') + '.'];
+    if (stateCode && STATE_LAW_KEYS[stateCode]) {
+      return { jurisdiction: stateCode, lawKey: STATE_LAW_KEYS[stateCode], section: stM[3], codeHint: stM[2]?.toLowerCase() };
+    }
+  }
+
+  return null;
+}
+
+/** Returns true if a division path or display name refers to the given section. */
+function divisionMatchesSection(pathOrName: string, section: string): boolean {
+  const lower = pathOrName.toLowerCase();
+  const base = section.split('(')[0].trim();
+  const norm = base.replace(/[.:]/g, '_').replace(/-/g, '_');
+  if (new RegExp(`section_${norm}(?:[^0-9a-z]|$)`, 'i').test(lower)) return true;
+  if (new RegExp(`section\\s+${base}(?:[^0-9]|$)`, 'i').test(lower)) return true;
+  if (new RegExp(`§\\s*${base}(?:[^0-9]|$)`, 'i').test(lower)) return true;
+  if (base.includes('-') || base.includes(':')) {
+    const flex = base.replace(/[:-]/g, '[_:-]').replace(/\./g, '[._]?');
+    if (new RegExp(`(?:section_?)?${flex}(?:[^0-9a-z]|$)`, 'i').test(lower)) return true;
+  }
+  return false;
+}
+
+type DivisionResponse = {
+  display_children?: Array<{ display_name: string; path: string }>;
+  is_repealed?: boolean;
+  effective_date_end?: string;
+  effective_date_start?: string;
+  plaintext_content?: string;
+  markdown_content?: string;
+};
+
+/** Fetch a single OpenLaws division endpoint; returns null on 404. */
+async function fetchDivision(jurisdiction: string, lawKey: string, path?: string): Promise<DivisionResponse | null> {
+  const base = `${OPENLAWS_API_URL}/jurisdictions/${jurisdiction}/laws/${lawKey}/divisions`;
+  const url = path ? `${base}/${encodeURIComponent(path)}` : base;
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${OPENLAWS_API_KEY}`, 'Content-Type': 'application/json' },
+    signal: AbortSignal.timeout(20000),
+  });
+  if (response.status === 404) return null;
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const data = await response.json();
+  if (Array.isArray(data)) {
+    return { display_children: data.map((d: any) => ({ display_name: d.display_name ?? d.name ?? '', path: d.path ?? '' })) };
+  }
+  return data as DivisionResponse;
+}
+
 interface OpenLawsCheckResult {
   found: boolean;
   isRepealed: boolean;
@@ -117,71 +224,82 @@ interface OpenLawsCheckResult {
   error?: string;
 }
 
+/**
+ * Verify a citation via the OpenLaws hierarchical division API.
+ * Bounded BFS: max depth 4, max 20 API calls per citation.
+ */
 async function checkCitationViaOpenLaws(
-  jurisdictionKey: string,
+  _unusedJurisdictionKey: string,
   citation: string
 ): Promise<OpenLawsCheckResult> {
   if (!OPENLAWS_API_KEY) {
-    return {
-      found: false,
-      isRepealed: false,
-      error: 'OPENLAWS_API_KEY not set — cannot verify via API',
-    };
+    return { found: false, isRepealed: false, error: 'OPENLAWS_API_KEY not set' };
   }
 
-  const encoded = encodeURIComponent(citation);
-  const url = `${OPENLAWS_API_URL}/citations/lookup?citation=${encoded}&jurisdiction=${jurisdictionKey}`;
+  const parsed = parseCitationForVerifier(citation);
+  if (!parsed) {
+    return { found: false, isRepealed: false, error: `Cannot parse citation: ${citation}` };
+  }
+
+  const { jurisdiction, lawKey, section, codeHint } = parsed;
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${OPENLAWS_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      signal: AbortSignal.timeout(15000),
-    });
-
-    if (response.status === 404) {
-      return { found: false, isRepealed: false };
+    const root = await fetchDivision(jurisdiction, lawKey);
+    if (!root?.display_children?.length) {
+      return { found: false, isRepealed: false, error: `No root divisions for ${jurisdiction}/${lawKey}` };
     }
 
-    if (!response.ok) {
-      const text = await response.text().catch(() => '');
-      return {
-        found: false,
-        isRepealed: false,
-        error: `HTTP ${response.status}: ${text.slice(0, 120)}`,
-      };
+    // Prioritise compilations matching the code hint (e.g. "penal")
+    const compilations = codeHint
+      ? [
+          ...root.display_children.filter(c => c.display_name.toLowerCase().includes(codeHint) || c.path.toLowerCase().includes(codeHint)),
+          ...root.display_children.filter(c => !c.display_name.toLowerCase().includes(codeHint) && !c.path.toLowerCase().includes(codeHint)),
+        ]
+      : root.display_children;
+
+    const MAX_CALLS = 20;
+    const MAX_DEPTH = 4;
+    let apiCalls = 0;
+
+    for (const compilation of compilations.slice(0, 3)) {
+      if (apiCalls >= MAX_CALLS) break;
+      let currentLevel = [compilation.path];
+
+      for (let depth = 0; depth < MAX_DEPTH && currentLevel.length > 0 && apiCalls < MAX_CALLS; depth++) {
+        const nextLevel: string[] = [];
+
+        for (const divPath of currentLevel) {
+          if (apiCalls >= MAX_CALLS) break;
+          try {
+            apiCalls++;
+            const div = await fetchDivision(jurisdiction, lawKey, divPath);
+            if (!div?.display_children) continue;
+
+            for (const child of div.display_children) {
+              if (divisionMatchesSection(child.path, section) || divisionMatchesSection(child.display_name, section)) {
+                apiCalls++;
+                const found_div = await fetchDivision(jurisdiction, lawKey, child.path);
+                if (!found_div) continue;
+                const isRepealed =
+                  found_div.is_repealed === true ||
+                  (!!found_div.effective_date_end &&
+                    found_div.effective_date_end !== 'Infinity' &&
+                    new Date(found_div.effective_date_end) < new Date());
+                return { found: true, isRepealed, effectiveDate: found_div.effective_date_start };
+              }
+              nextLevel.push(child.path);
+            }
+          } catch { /* ignore individual path errors */ }
+
+          if (apiCalls % 5 === 0) await sleep(100);
+        }
+        currentLevel = nextLevel;
+      }
     }
 
-    const data = await response.json() as {
-      is_repealed?: boolean;
-      effective_date_start?: string;
-      effective_date_end?: string;
-      plaintext_content?: string;
-      markdown_content?: string;
-    };
-
-    const hasContent = !!(data.plaintext_content || data.markdown_content);
-    const isRepealed = data.is_repealed === true;
-    const effectiveEnd = data.effective_date_end;
-    const appearsRepealed =
-      isRepealed ||
-      (effectiveEnd !== undefined &&
-        effectiveEnd !== 'Infinity' &&
-        new Date(effectiveEnd) < new Date());
-
-    return {
-      found: hasContent,
-      isRepealed: appearsRepealed,
-      effectiveDate: data.effective_date_start,
-    };
+    return { found: false, isRepealed: false };
   } catch (err) {
-    return {
-      found: false,
-      isRepealed: false,
-      error: err instanceof Error ? err.message : String(err),
-    };
+    return { found: false, isRepealed: false, error: err instanceof Error ? err.message : String(err) };
   }
 }
 
