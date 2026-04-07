@@ -228,6 +228,47 @@ interface OpenLawsCheckResult {
  * Verify a citation via the OpenLaws hierarchical division API.
  * Bounded BFS: max depth 4, max 20 API calls per citation.
  */
+/**
+ * Prioritise root-level compilations (titles) so we search the right one first.
+ *
+ * OpenLaws root returns an array of titles: title_1, title_2, ..., title_13a, ...
+ * The section number prefix tells us which title to look in:
+ *   "13A-6-2"  → title_13a  (leading "13a")
+ *   "19.03"    → title_19   (leading "19")
+ *   "187"      → no numeric prefix match; rely on codeHint ("penal")
+ *   "5/9-1"    → ILCS format; leading "5" → look for the ILCS Act 5 compilation
+ *
+ * Scoring (higher = checked first):
+ *   +100  codeHint matches compilation name (e.g. "penal" in "California Penal Code")
+ *   +80   exact title_<id> path match     (e.g. "title_13a" for section "13A-6-2")
+ *   +40   numeric-only prefix match       (e.g. "title_13" also tried for "13A-6-2")
+ */
+function prioritiseCompilations(
+  children: Array<{ display_name: string; path: string }>,
+  section: string,
+  codeHint?: string
+): Array<{ display_name: string; path: string }> {
+  // Extract leading identifier: "13A-6-2" → "13a", "19.03" → "19", "5/9-1" → "5"
+  const leadingMatch = section.match(/^(\d+[a-z]?)(?:[._\-/]|$)/i);
+  const titleId = leadingMatch ? leadingMatch[1].toLowerCase() : null;
+  const numOnly  = titleId ? titleId.replace(/[a-z]/gi, '') : null;
+
+  return [...children]
+    .map(c => {
+      const name = c.display_name.toLowerCase();
+      const p    = c.path.toLowerCase();
+      let score  = 0;
+
+      if (codeHint && (name.includes(codeHint) || p.includes(codeHint)))        score += 100;
+      if (titleId && p === `title_${titleId}`)                                   score += 80;
+      if (numOnly  && new RegExp(`title_${numOnly}(?:[^0-9]|$)`).test(p))        score += 40;
+
+      return { c, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .map(({ c }) => c);
+}
+
 async function checkCitationViaOpenLaws(
   _unusedJurisdictionKey: string,
   citation: string
@@ -249,21 +290,54 @@ async function checkCitationViaOpenLaws(
       return { found: false, isRepealed: false, error: `No root divisions for ${jurisdiction}/${lawKey}` };
     }
 
-    // Prioritise compilations matching the code hint (e.g. "penal")
-    const compilations = codeHint
-      ? [
-          ...root.display_children.filter(c => c.display_name.toLowerCase().includes(codeHint) || c.path.toLowerCase().includes(codeHint)),
-          ...root.display_children.filter(c => !c.display_name.toLowerCase().includes(codeHint) && !c.path.toLowerCase().includes(codeHint)),
-        ]
-      : root.display_children;
+    // Sort all titles by relevance; search top 8 (enough fallback without runaway calls)
+    const compilations = prioritiseCompilations(root.display_children, section, codeHint);
 
-    const MAX_CALLS = 20;
+    // Also expose root-level objects' pre-fetched children so depth-1 costs 0 extra calls
+    // (OpenLaws includes display_children on each root title object)
+    const rootChildrenMap = new Map<string, Array<{ display_name: string; path: string }>>();
+    // We re-fetch root as raw to capture nested children
+    try {
+      const rawRoot = await fetch(
+        `${OPENLAWS_API_URL}/jurisdictions/${jurisdiction}/laws/${lawKey}/divisions`,
+        { headers: { Authorization: `Bearer ${OPENLAWS_API_KEY}` }, signal: AbortSignal.timeout(20000) }
+      );
+      if (rawRoot.ok) {
+        const rawData = await rawRoot.json() as Array<{ path: string; display_children?: Array<{ display_name: string; path: string }> }>;
+        if (Array.isArray(rawData)) {
+          for (const item of rawData) {
+            if (item.display_children?.length) rootChildrenMap.set(item.path, item.display_children);
+          }
+        }
+      }
+    } catch { /* non-fatal */ }
+
+    const MAX_CALLS = 25;
     const MAX_DEPTH = 4;
-    let apiCalls = 0;
+    let apiCalls = 1; // counted the root fetch above
 
-    for (const compilation of compilations.slice(0, 3)) {
+    for (const compilation of compilations.slice(0, 8)) {
       if (apiCalls >= MAX_CALLS) break;
-      let currentLevel = [compilation.path];
+
+      // Use pre-fetched children for this title if available (saves one API call per title)
+      const prefetched = rootChildrenMap.get(compilation.path);
+      let currentLevel = prefetched
+        ? prefetched.map(c => c.path)
+        : [compilation.path];
+      if (prefetched) {
+        // Check if any prefetched chapter is already the section we want
+        for (const child of prefetched) {
+          if (divisionMatchesSection(child.path, section) || divisionMatchesSection(child.display_name, section)) {
+            apiCalls++;
+            const found_div = await fetchDivision(jurisdiction, lawKey, child.path);
+            if (!found_div) continue;
+            const isRepealed =
+              found_div.is_repealed === true ||
+              (!!found_div.effective_date_end && found_div.effective_date_end !== 'Infinity' && new Date(found_div.effective_date_end) < new Date());
+            return { found: true, isRepealed, effectiveDate: found_div.effective_date_start };
+          }
+        }
+      }
 
       for (let depth = 0; depth < MAX_DEPTH && currentLevel.length > 0 && apiCalls < MAX_CALLS; depth++) {
         const nextLevel: string[] = [];
@@ -282,9 +356,7 @@ async function checkCitationViaOpenLaws(
                 if (!found_div) continue;
                 const isRepealed =
                   found_div.is_repealed === true ||
-                  (!!found_div.effective_date_end &&
-                    found_div.effective_date_end !== 'Infinity' &&
-                    new Date(found_div.effective_date_end) < new Date());
+                  (!!found_div.effective_date_end && found_div.effective_date_end !== 'Infinity' && new Date(found_div.effective_date_end) < new Date());
                 return { found: true, isRepealed, effectiveDate: found_div.effective_date_start };
               }
               nextLevel.push(child.path);
