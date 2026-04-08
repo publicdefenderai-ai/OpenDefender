@@ -2,7 +2,6 @@ import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
-import { getOutcomeStatisticsForDisplay, type CaseOutcomeStatistic } from "@shared/case-outcome-statistics";
 
 interface ImmediateAction {
   action: string;
@@ -272,21 +271,6 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     documentsSubtitle: 'Estos documentos son importantes para su etapa actual del proceso legal.',
     documentName: 'Documento',
     documentDescription: 'Para Qué Sirve',
-    caseOutcomes: 'Lo que Sucede en Casos Como el Suyo',
-    caseOutcomesSubtitle: 'Basado en casos similares. Cada caso es único. Estos son promedios, no predicciones.',
-    howCasesResolve: 'Cómo se Resuelven los Casos',
-    ifConvicted: 'Si se Condena',
-    dismissed: 'Desestimado',
-    pleaDeal: 'Acuerdo de Culpabilidad',
-    trialConviction: 'Juicio - Condena',
-    trialAcquittal: 'Juicio - Absolución',
-    probationOnly: 'Solo Probatoria',
-    incarceration: 'Encarcelamiento',
-    splitSentence: 'Sentencia Dividida',
-    avgSentence: 'Sentencia Promedio',
-    diversionEligibility: 'Elegibilidad para Programa de Desvío',
-    source: 'Fuente',
-    cases: 'casos',
   } : {
     title: 'Your Legal Help Guide',
     generated: 'Generated',
@@ -340,21 +324,6 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     documentsSubtitle: 'These documents are important for your current stage in the legal process.',
     documentName: 'Document',
     documentDescription: 'What It\'s For',
-    caseOutcomes: 'What Happens in Cases Like Yours',
-    caseOutcomesSubtitle: 'Based on similar cases. Every case is unique. These are averages, not predictions.',
-    howCasesResolve: 'How Cases Resolve',
-    ifConvicted: 'If Convicted',
-    dismissed: 'Dismissed',
-    pleaDeal: 'Plea Deal',
-    trialConviction: 'Trial - Conviction',
-    trialAcquittal: 'Trial - Acquittal',
-    probationOnly: 'Probation Only',
-    incarceration: 'Incarceration',
-    splitSentence: 'Split Sentence',
-    avgSentence: 'Avg. Sentence',
-    diversionEligibility: 'Diversion Program Eligibility',
-    source: 'Source',
-    cases: 'cases',
   };
 
   // Helper function to add text with word wrap
@@ -705,83 +674,6 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       yPosition += 3;
     });
     yPosition += 5;
-  }
-
-  // Case Outcome Statistics - What Happens in Cases Like Yours
-  const { statistics: outcomeStats, disclaimer: statsDisclaimer } = getOutcomeStatisticsForDisplay(
-    guidance.caseData.charges,
-    guidance.caseData.jurisdiction
-  );
-  if (outcomeStats.length > 0) {
-    checkPageBreak(60);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(0, 100, 200);
-    doc.text(labels.caseOutcomes, margin, yPosition);
-    yPosition += 6;
-
-    doc.setFontSize(9);
-    doc.setFont('helvetica', 'italic');
-    doc.setTextColor(150, 100, 0);
-    yPosition = addText(statsDisclaimer, margin, yPosition);
-    yPosition += 8;
-
-    outcomeStats.forEach((stat, statIdx) => {
-      checkPageBreak(50);
-      
-      doc.setFontSize(11);
-      doc.setFont('helvetica', 'bold');
-      doc.setTextColor(0, 0, 0);
-      const statHeader = `${stat.chargeCategoryDisplay} (${stat.sampleSize.toLocaleString()} ${labels.cases})`;
-      doc.text(statHeader, margin, yPosition);
-      yPosition += 8;
-
-      const outcomeData = [
-        [labels.howCasesResolve, ''],
-        [labels.dismissed, `${stat.outcomes.dismissal}%`],
-        [labels.pleaDeal, `${stat.outcomes.pleaBargain}%`],
-        [labels.trialConviction, `${stat.outcomes.trialConviction}%`],
-        [labels.trialAcquittal, `${stat.outcomes.trialAcquittal}%`],
-        ['', ''],
-        [labels.ifConvicted, ''],
-        [labels.probationOnly, `${stat.sentencingIfConvicted.probationOnly}%`],
-        [labels.incarceration, `${stat.sentencingIfConvicted.incarceration}%`],
-        [labels.splitSentence, `${stat.sentencingIfConvicted.splitSentence}%`],
-        [labels.avgSentence, formatSentenceLength(stat.sentencingIfConvicted.avgSentenceMonths)],
-      ];
-
-      if (stat.diversionEligibility > 0) {
-        outcomeData.push([labels.diversionEligibility, `${stat.diversionEligibility}%`]);
-      }
-
-      autoTable(doc, {
-        startY: yPosition,
-        head: [],
-        body: outcomeData,
-        theme: 'plain',
-        margin: { left: margin + 5, right: margin },
-        styles: { fontSize: 9 },
-        columnStyles: {
-          0: { cellWidth: 60, fontStyle: 'normal' },
-          1: { cellWidth: 40, halign: 'right', fontStyle: 'bold' }
-        },
-        didParseCell: (data: any) => {
-          if (data.row.index === 0 || data.row.index === 6) {
-            data.cell.styles.fontStyle = 'bold';
-            data.cell.styles.fillColor = [240, 240, 240];
-          }
-        }
-      });
-
-      yPosition = (doc as any).lastAutoTable.finalY + 5;
-
-      doc.setFontSize(8);
-      doc.setFont('helvetica', 'italic');
-      doc.setTextColor(100, 100, 100);
-      doc.text(`${labels.source}: ${stat.source}`, margin + 5, yPosition);
-      yPosition += 10;
-      doc.setTextColor(0, 0, 0);
-    });
   }
 
   // Evidence to Gather

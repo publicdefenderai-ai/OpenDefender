@@ -4,22 +4,24 @@ export const expungementRules: ExpungementRule[] = [
   {
     id: "ca-expungement",
     state: "CA",
-    overview: "California allows expungement (dismissal) under Penal Code Section 1203.4 for most misdemeanors and some felonies after completing probation or serving sentence.",
+    overview: "California allows expungement (dismissal) under Penal Code § 1203.4 for most misdemeanors and many felonies after completing probation or serving sentence. AB 1599 (2024) expanded automatic expungement for marijuana-related convictions under HS § 11361.9. Note: even after expungement, an employer who specifically asks may still be entitled to know about the conviction in some licensing contexts.",
     waitingPeriods: {
       misdemeanorMonths: 12,
       felonyMonths: 12
     },
     exclusions: [
-      "Sex crimes requiring registration",
-      "Violent felonies with serious injury",
-      "Driving under the influence",
-      "Vehicular manslaughter"
+      "Sex crimes requiring registration under PC § 290",
+      "Violent felonies involving serious bodily injury (PC § 1192.7(c) offenses) — not eligible if sentenced to state prison",
+      "Vehicular manslaughter with gross negligence",
+      "Child abuse or elder abuse felonies",
+      "NOTE: Standard misdemeanor DUI convictions (VC § 23152) ARE eligible for expungement under PC § 1203.4 after probation completion — this is a common misconception"
     ],
     conditions: [
       "Successfully completed probation",
       "No current charges pending",
       "All fines and restitution paid",
-      "Not currently serving sentence for another offense"
+      "Not currently serving sentence for another offense",
+      "If sentenced to state prison (not county jail), expungement is not available — seek PC § 1203.4a (sentence served, no probation) or Certificate of Rehabilitation"
     ],
     steps: [
       "Obtain certified copy of conviction record",
@@ -31,9 +33,10 @@ export const expungementRules: ExpungementRule[] = [
     ],
     sources: [
       "California Penal Code Section 1203.4",
+      "AB 1599 (2024) — Expanded Marijuana Expungement",
       "California Courts Self-Help Center"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   },
   {
@@ -69,7 +72,7 @@ export const expungementRules: ExpungementRule[] = [
       "Texas Code of Criminal Procedure Chapter 55",
       "Texas Government Code Chapter 411"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   },
   {
@@ -108,13 +111,13 @@ export const expungementRules: ExpungementRule[] = [
       "Florida Statute 943.059 (Sealing)",
       "Florida Department of Law Enforcement"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   },
   {
     id: "ny-expungement",
     state: "NY",
-    overview: "New York offers sealing of criminal records under CPL Article 160.59 for certain convictions and automatic sealing for marijuana offenses.",
+    overview: "New York offers sealing of criminal records under CPL § 160.59 for certain convictions. The Marijuana Regulation and Taxation Act (MRTA, 2021) provides automatic expungement of prior marijuana convictions — no petition required. New York does not have general expungement; CPL § 160.59 is a sealing (not destruction) that keeps records accessible to law enforcement.",
     waitingPeriods: {
       misdemeanorMonths: 36,
       felonyMonths: 120
@@ -123,30 +126,31 @@ export const expungementRules: ExpungementRule[] = [
       "Sex offenses",
       "Violent felony offenses",
       "Class A felonies",
-      "More than two convictions (with exceptions)",
+      "More than two convictions (one of which may be a felony)",
       "Crimes against children under 18"
     ],
     conditions: [
       "No more than two eligible convictions",
       "No pending charges",
       "Sentence completed including parole/probation",
-      "Waiting period satisfied",
-      "Demonstrated rehabilitation"
+      "10-year waiting period from sentencing (or release if incarcerated) for felonies",
+      "3-year waiting period for misdemeanors"
     ],
     steps: [
-      "Obtain criminal history records",
-      "Complete application form",
+      "Obtain criminal history records from Division of Criminal Justice Services",
+      "Complete CPL § 160.59 application",
       "File motion with court of conviction",
-      "Pay filing fee ($200)",
-      "Serve prosecutor's office",
-      "Attend hearing",
+      "Pay filing fee ($200) or request waiver",
+      "Serve prosecutor's office (60-day response window)",
+      "Attend hearing if prosecution objects",
       "Receive sealing order if granted"
     ],
     sources: [
-      "New York Criminal Procedure Law Article 160.59",
+      "New York Criminal Procedure Law § 160.59",
+      "Marijuana Regulation and Taxation Act (MRTA) 2021 — Automatic Marijuana Expungement",
       "New York State Division of Criminal Justice Services"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   },
   {
@@ -183,7 +187,7 @@ export const expungementRules: ExpungementRule[] = [
       "Pennsylvania Title 18 Section 9122",
       "Clean Slate Law (Act 56 of 2018)"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   },
   {
@@ -219,7 +223,7 @@ export const expungementRules: ExpungementRule[] = [
       "Georgia Code § 35-3-37",
       "Georgia Crime Information Center"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   },
   // ── Illinois ──────────────────────────────────────────────────────────────
@@ -1864,7 +1868,7 @@ export const expungementRules: ExpungementRule[] = [
       "U.S. Department of Justice Office of the Pardon Attorney",
       "Federal Juvenile Delinquency Act"
     ],
-    lastUpdated: new Date("2024-01-01"),
+    lastUpdated: new Date("2026-04-01"),
     isActive: true,
   }
 ];

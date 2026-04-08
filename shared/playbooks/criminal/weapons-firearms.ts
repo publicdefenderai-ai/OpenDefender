@@ -5,7 +5,7 @@ export const weaponsFirearmsPlaybook: Playbook = {
   category: "criminal",
   name: "Weapons / Firearms Charges",
   tagline: "Constructive possession, unlawful search, and the federal nexus",
-  overview: "Weapons and firearms charges sit at the intersection of the Second Amendment, the Fourth Amendment, and some of the harshest mandatory minimums in American criminal law. Federal 18 U.S.C. § 922(g) — felon in possession — carries up to 10 years (and up to 15 under the Armed Career Criminal Act if three prior qualifying felonies exist). State charges vary widely. The defense must attack on three fronts simultaneously: (1) the legality of the search that discovered the weapon, (2) the constructive possession element if the weapon was not found on the client's person, and (3) the prior conviction predicate for felon-in-possession charges.",
+  overview: "Weapons and firearms charges sit at the intersection of the Second Amendment, the Fourth Amendment, and some of the harshest mandatory minimums in American criminal law. Federal 18 U.S.C. § 922(g) — felon in possession — carries up to 15 years (the Bipartisan Safer Communities Act of 2022, Pub. L. 117-159, raised the maximum from 10 to 15 years by amending § 924(a)(8)); for defendants with three qualifying prior felonies, the Armed Career Criminal Act mandates a minimum of 15 years. State charges vary widely. The defense must attack on three fronts simultaneously: (1) the legality of the search that discovered the weapon, (2) the constructive possession element if the weapon was not found on the client's person, and (3) the prior conviction predicate for felon-in-possession charges.",
   typicalTimeline: "6 months to 3 years",
   difficultyLevel: "advanced",
   keyConsiderations: [

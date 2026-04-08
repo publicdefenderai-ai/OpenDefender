@@ -215,7 +215,7 @@ export const drugPossessionPlaybook: Playbook = {
       variations: [
         {
           states: ["CA"],
-          note: "Prop 36 (PC § 1000) allows pretrial diversion for first and second-time simple possession offenses. Successful completion leads to dismissal. AB 1950 further expanded deferred entry of judgment."
+          note: "Two distinct diversion pathways exist: (1) PC § 1000 Pretrial Diversion — for qualifying possession offenses, charges are deferred; successful completion leads to dismissal. (2) Prop 36 (PC § 1210.1) — provides treatment-based sentencing as an alternative to incarceration for first and second non-violent possession offenses. Additionally, AB 1950 (2021) limited felony probation to a maximum of 2 years and misdemeanor probation to 1 year — important when evaluating any probationary sentence offered as part of a plea."
         },
         {
           states: ["NY"],
