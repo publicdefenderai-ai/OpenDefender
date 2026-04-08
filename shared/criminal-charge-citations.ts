@@ -1158,7 +1158,12 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "NY Legislature Penal Law Article 240 — § 240.20 Disorderly Conduct",
   },
-  // ny-public-intoxication: NY has no general public intoxication statute — omitted
+  "ny-public-intoxication": {
+    citation: "N.Y. Penal Law § 240.40",
+    confidence: "high",
+    lastVerified: "2026-04",
+    source: "NY Legislature Penal Law Article 240 — § 240.40 Appearing in public under the influence of narcotics or a drug other than alcohol (violation)",
+  },
   "ny-resisting-arrest": {
     citation: "N.Y. Penal Law § 205.30",
     confidence: "medium",
