@@ -1,0 +1,2537 @@
+{
+  "generatedAt": "2026-04-09T05:51:31.400Z",
+  "totalCharges": 7561,
+  "flaggedCharges": 242,
+  "totalFlags": 242,
+  "flagsBySeverity": {
+    "tier1": 0,
+    "tier2": 242,
+    "tier3": 0
+  },
+  "flagsByCode": {
+    "THIRD_DEGREE_MURDER": 52,
+    "DEGREE_ASSAULT_WRONG_STATE": 12,
+    "WRONG_TERMINOLOGY": 1,
+    "THIRD_DEGREE_GENERAL": 177
+  },
+  "flagsByState": {
+    "AL": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "AK": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "AZ": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "AR": {
+      "tier1": 0,
+      "tier2": 6,
+      "tier3": 0,
+      "total": 6
+    },
+    "CO": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "CT": {
+      "tier1": 0,
+      "tier2": 6,
+      "tier3": 0,
+      "total": 6
+    },
+    "DE": {
+      "tier1": 0,
+      "tier2": 5,
+      "tier3": 0,
+      "total": 5
+    },
+    "FL": {
+      "tier1": 0,
+      "tier2": 5,
+      "tier3": 0,
+      "total": 5
+    },
+    "GA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "HI": {
+      "tier1": 0,
+      "tier2": 5,
+      "tier3": 0,
+      "total": 5
+    },
+    "ID": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "IN": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "IA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "KS": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "KY": {
+      "tier1": 0,
+      "tier2": 7,
+      "tier3": 0,
+      "total": 7
+    },
+    "LA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "ME": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MD": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MI": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MN": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MS": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MO": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MT": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "NE": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "NV": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "NH": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "NJ": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "NM": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "NC": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "ND": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "OH": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "OK": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "OR": {
+      "tier1": 0,
+      "tier2": 5,
+      "tier3": 0,
+      "total": 5
+    },
+    "PA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "RI": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "SC": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "SD": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "TN": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "UT": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "VT": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "VA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "WA": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "WV": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "WI": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "WY": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "DC": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "AS": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "GU": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "MP": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "PR": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "VI": {
+      "tier1": 0,
+      "tier2": 4,
+      "tier3": 0,
+      "total": 4
+    },
+    "CA": {
+      "tier1": 0,
+      "tier2": 8,
+      "tier3": 0,
+      "total": 8
+    },
+    "IL": {
+      "tier1": 0,
+      "tier2": 9,
+      "tier3": 0,
+      "total": 9
+    },
+    "NY": {
+      "tier1": 0,
+      "tier2": 3,
+      "tier3": 0,
+      "total": 3
+    },
+    "TX": {
+      "tier1": 0,
+      "tier2": 3,
+      "tier3": 0,
+      "total": 3
+    }
+  },
+  "tier1and2Flags": [
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "al-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "AL",
+      "detail": "Unconfirmed: verify whether AL statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ak-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "AK",
+      "detail": "Unconfirmed: verify whether AK statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "az-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "AZ",
+      "detail": "Unconfirmed: verify whether AZ statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ar-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "AR",
+      "detail": "Unconfirmed: verify whether AR statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "co-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "CO",
+      "detail": "Unconfirmed: verify whether CO statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ct-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "CT",
+      "detail": "Unconfirmed: verify whether CT statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "de-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "DE",
+      "detail": "Unconfirmed: verify whether DE statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "fl-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "FL",
+      "detail": "CONFIRMED: FL does not have this offense. Remove this charge."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ga-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "GA",
+      "detail": "Unconfirmed: verify whether GA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "hi-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "HI",
+      "detail": "Unconfirmed: verify whether HI statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "id-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "ID",
+      "detail": "Unconfirmed: verify whether ID statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "in-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "IN",
+      "detail": "Unconfirmed: verify whether IN statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ia-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "IA",
+      "detail": "Unconfirmed: verify whether IA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ks-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "KS",
+      "detail": "Unconfirmed: verify whether KS statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ky-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Unconfirmed: verify whether KY statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "la-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "LA",
+      "detail": "Unconfirmed: verify whether LA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "me-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "ME",
+      "detail": "Unconfirmed: verify whether ME statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "md-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MD",
+      "detail": "Unconfirmed: verify whether MD statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ma-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MA",
+      "detail": "Unconfirmed: verify whether MA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "mi-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MI",
+      "detail": "Unconfirmed: verify whether MI statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "mn-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MN",
+      "detail": "Unconfirmed: verify whether MN statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ms-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MS",
+      "detail": "Unconfirmed: verify whether MS statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "mo-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MO",
+      "detail": "Unconfirmed: verify whether MO statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "mt-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MT",
+      "detail": "Unconfirmed: verify whether MT statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ne-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "NE",
+      "detail": "Unconfirmed: verify whether NE statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "nv-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "NV",
+      "detail": "Unconfirmed: verify whether NV statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "nh-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "NH",
+      "detail": "Unconfirmed: verify whether NH statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "nj-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "NJ",
+      "detail": "Unconfirmed: verify whether NJ statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "nm-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "NM",
+      "detail": "Unconfirmed: verify whether NM statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "nc-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "NC",
+      "detail": "Unconfirmed: verify whether NC statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "nd-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "ND",
+      "detail": "Unconfirmed: verify whether ND statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "oh-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "OH",
+      "detail": "Unconfirmed: verify whether OH statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ok-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "OK",
+      "detail": "Unconfirmed: verify whether OK statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "or-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "OR",
+      "detail": "Unconfirmed: verify whether OR statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "pa-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "PA",
+      "detail": "Unconfirmed: verify whether PA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ri-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "RI",
+      "detail": "Unconfirmed: verify whether RI statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "sc-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "SC",
+      "detail": "Unconfirmed: verify whether SC statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "sd-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "SD",
+      "detail": "Unconfirmed: verify whether SD statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "tn-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "TN",
+      "detail": "Unconfirmed: verify whether TN statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "ut-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "UT",
+      "detail": "Unconfirmed: verify whether UT statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "vt-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "VT",
+      "detail": "Unconfirmed: verify whether VT statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "va-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "VA",
+      "detail": "Unconfirmed: verify whether VA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "wa-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "WA",
+      "detail": "Unconfirmed: verify whether WA statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "wv-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "WV",
+      "detail": "Unconfirmed: verify whether WV statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "wi-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "WI",
+      "detail": "Unconfirmed: verify whether WI statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "wy-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "WY",
+      "detail": "Unconfirmed: verify whether WY statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "dc-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "DC",
+      "detail": "Unconfirmed: verify whether DC statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "as-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "AS",
+      "detail": "Unconfirmed: verify whether AS statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "gu-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "GU",
+      "detail": "Unconfirmed: verify whether GU statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "mp-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "MP",
+      "detail": "Unconfirmed: verify whether MP statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "pr-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "PR",
+      "detail": "Unconfirmed: verify whether PR statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_MURDER",
+      "message": "\"Murder in the Third Degree\" — almost certainly fabricated",
+      "chargeId": "vi-murder-in-the-third-degree",
+      "chargeName": "Murder in the Third Degree",
+      "jurisdiction": "VI",
+      "detail": "Unconfirmed: verify whether VI statute actually uses this name. MN (§ 609.195) is the primary state that does."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in CA (confirmed non-degree state)",
+      "chargeId": "ca-assault-in-the-first-degree",
+      "chargeName": "Assault in the First Degree",
+      "jurisdiction": "CA",
+      "detail": "CA uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in CA (confirmed non-degree state)",
+      "chargeId": "ca-assault-in-the-second-degree",
+      "chargeName": "Assault in the Second Degree",
+      "jurisdiction": "CA",
+      "detail": "CA uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in CA (confirmed non-degree state)",
+      "chargeId": "ca-assault-in-the-third-degree",
+      "chargeName": "Assault in the Third Degree",
+      "jurisdiction": "CA",
+      "detail": "CA uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in CA (confirmed non-degree state)",
+      "chargeId": "ca-sexual-assault-in-the-first-degree",
+      "chargeName": "Sexual Assault in the First Degree",
+      "jurisdiction": "CA",
+      "detail": "CA uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in CA (confirmed non-degree state)",
+      "chargeId": "ca-sexual-assault-in-the-second-degree",
+      "chargeName": "Sexual Assault in the Second Degree",
+      "jurisdiction": "CA",
+      "detail": "CA uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in CA (confirmed non-degree state)",
+      "chargeId": "ca-sexual-assault-in-the-third-degree",
+      "chargeName": "Sexual Assault in the Third Degree",
+      "jurisdiction": "CA",
+      "detail": "CA uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in IL (confirmed non-degree state)",
+      "chargeId": "il-assault-in-the-first-degree",
+      "chargeName": "Assault in the First Degree",
+      "jurisdiction": "IL",
+      "detail": "IL uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in IL (confirmed non-degree state)",
+      "chargeId": "il-assault-in-the-second-degree",
+      "chargeName": "Assault in the Second Degree",
+      "jurisdiction": "IL",
+      "detail": "IL uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in IL (confirmed non-degree state)",
+      "chargeId": "il-assault-in-the-third-degree",
+      "chargeName": "Assault in the Third Degree",
+      "jurisdiction": "IL",
+      "detail": "IL uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in IL (confirmed non-degree state)",
+      "chargeId": "il-sexual-assault-in-the-first-degree",
+      "chargeName": "Sexual Assault in the First Degree",
+      "jurisdiction": "IL",
+      "detail": "IL uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in IL (confirmed non-degree state)",
+      "chargeId": "il-sexual-assault-in-the-second-degree",
+      "chargeName": "Sexual Assault in the Second Degree",
+      "jurisdiction": "IL",
+      "detail": "IL uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "DEGREE_ASSAULT_WRONG_STATE",
+      "message": "Degree-based assault naming in IL (confirmed non-degree state)",
+      "chargeId": "il-sexual-assault-in-the-third-degree",
+      "chargeName": "Sexual Assault in the Third Degree",
+      "jurisdiction": "IL",
+      "detail": "IL uses Simple Assault / Aggravated Assault structure, not first/second/third degree. This charge was likely generated from a template."
+    },
+    {
+      "tier": 2,
+      "code": "WRONG_TERMINOLOGY",
+      "message": "\"Rape\" used as charge name in FL",
+      "chargeId": "fl-statutory-rape",
+      "chargeName": "Statutory Rape",
+      "jurisdiction": "FL",
+      "detail": "FL uses \"Sexual Battery\" (§ 794.011), not \"Rape\". This is a terminology mismatch with state law."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "al-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "AL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "al-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "AL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "al-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "AL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ak-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "AK",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ak-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "AK",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ak-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "AK",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ca-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "CA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ca-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "CA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "az-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "AZ",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "az-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "AZ",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "az-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "AZ",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ar-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "AR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ar-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "AR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ar-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "AR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "co-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "CO",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "co-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "CO",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "co-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "CO",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ct-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "CT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ct-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "CT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ct-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "CT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "de-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "DE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "de-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "DE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "de-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "DE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "fl-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "FL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "fl-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "FL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "fl-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "FL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ga-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "GA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ga-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "GA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ga-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "GA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "hi-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "HI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "hi-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "HI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "hi-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "HI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "id-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "ID",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "id-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "ID",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "id-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "ID",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "il-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "IL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "il-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "IL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "il-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "IL",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "in-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "IN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "in-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "IN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "in-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "IN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ia-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "IA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ia-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "IA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ia-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "IA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ks-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "KS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ks-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "KS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ks-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "KS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ky-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ky-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ky-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "la-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "LA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "la-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "LA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "la-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "LA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "me-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "ME",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "me-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "ME",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "me-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "ME",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "md-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MD",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "md-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MD",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "md-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MD",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ma-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ma-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ma-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mi-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mi-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mi-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mn-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mn-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mn-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ms-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ms-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ms-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mo-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MO",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mo-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MO",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mo-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MO",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mt-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mt-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mt-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ne-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ne-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ne-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nv-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NV",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nv-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NV",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nv-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NV",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nh-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NH",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nh-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NH",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nh-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NH",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nj-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NJ",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nj-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NJ",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nj-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NJ",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nm-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NM",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nm-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NM",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nm-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NM",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ny-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ny-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ny-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nc-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "NC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nc-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "NC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nc-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "NC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nd-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "ND",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nd-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "ND",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "nd-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "ND",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "oh-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "OH",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "oh-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "OH",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "oh-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "OH",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ok-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "OK",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ok-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "OK",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ok-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "OK",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "or-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "OR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "or-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "OR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "or-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "OR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "pa-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "PA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "pa-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "PA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "pa-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "PA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ri-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "RI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ri-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "RI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ri-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "RI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "sc-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "SC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "sc-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "SC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "sc-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "SC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "sd-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "SD",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "sd-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "SD",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "sd-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "SD",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "tn-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "TN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "tn-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "TN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "tn-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "TN",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "tx-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "TX",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "tx-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "TX",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "tx-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "TX",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ut-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "UT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ut-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "UT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ut-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "UT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "vt-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "VT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "vt-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "VT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "vt-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "VT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "va-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "VA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "va-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "VA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "va-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "VA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wa-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "WA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wa-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "WA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wa-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "WA",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wv-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "WV",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wv-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "WV",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wv-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "WV",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wi-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "WI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wi-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "WI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wi-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "WI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wy-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "WY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wy-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "WY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "wy-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "WY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "dc-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "DC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "dc-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "DC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "dc-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "DC",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "as-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "AS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "as-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "AS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "as-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "AS",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "gu-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "GU",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "gu-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "GU",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "gu-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "GU",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mp-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "MP",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mp-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "MP",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "mp-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "MP",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "pr-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "PR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "pr-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "PR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "pr-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "PR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "vi-grand-theft-in-the-third-degree",
+      "chargeName": "Grand Theft in the Third Degree",
+      "jurisdiction": "VI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "vi-burglary-in-the-third-degree",
+      "chargeName": "Burglary in the Third Degree",
+      "jurisdiction": "VI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "vi-robbery-in-the-third-degree",
+      "chargeName": "Robbery in the Third Degree",
+      "jurisdiction": "VI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ky-criminal-mischief-third-degree",
+      "chargeName": "Criminal Mischief in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ky-criminal-trespass-third-degree",
+      "chargeName": "Criminal Trespass in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ky-terroristic-threatening-third-degree",
+      "chargeName": "Terroristic Threatening in the Third Degree",
+      "jurisdiction": "KY",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "or-theft-third-degree",
+      "chargeName": "Theft in the Third Degree",
+      "jurisdiction": "OR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ct-criminal-trespass-third-degree",
+      "chargeName": "Criminal Trespass in the Third Degree",
+      "jurisdiction": "CT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ct-criminal-mischief-third-degree",
+      "chargeName": "Criminal Mischief in the Third Degree",
+      "jurisdiction": "CT",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ar-battery-third-degree",
+      "chargeName": "Battery in the Third Degree",
+      "jurisdiction": "AR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "ar-domestic-battering-third-degree",
+      "chargeName": "Domestic Battering in the Third Degree",
+      "jurisdiction": "AR",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "hi-promoting-detrimental-drug",
+      "chargeName": "Promoting a Detrimental Drug in the Third Degree",
+      "jurisdiction": "HI",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    },
+    {
+      "tier": 2,
+      "code": "THIRD_DEGREE_GENERAL",
+      "message": "\"In the Third Degree\" naming — verify this matches the actual statute",
+      "chargeId": "de-criminal-trespass-third",
+      "chargeName": "Criminal Trespass in the Third Degree",
+      "jurisdiction": "DE",
+      "detail": "Third-degree naming is state-specific. Confirm the statute text uses this exact language before keeping this entry."
+    }
+  ],
+  "tier3SummaryByState": {},
+  "tier3Flags": []
+}
