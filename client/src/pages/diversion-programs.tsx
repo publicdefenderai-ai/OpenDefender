@@ -471,12 +471,19 @@ export default function DiversionPrograms() {
                 <CardContent className="p-12 text-center">
                   <Users className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{t('diversionPrograms.emptyState.title')}</h3>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-muted-foreground mb-6">
                     {t('diversionPrograms.emptyState.description')}
                   </p>
-                  <Button variant="outline" onClick={clearFilters}>
-                    {t('diversionPrograms.emptyState.clearFilters')}
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    <Button variant="outline" onClick={clearFilters}>
+                      {t('diversionPrograms.emptyState.clearFilters')}
+                    </Button>
+                    <Button variant="default" asChild>
+                      <a href="https://diversion.ndaa.org/" target="_blank" rel="noopener noreferrer">
+                        {t('diversionPrograms.emptyState.ndaaLink')}
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             )}

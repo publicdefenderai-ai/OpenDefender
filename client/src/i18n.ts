@@ -3467,9 +3467,10 @@ i18n
               "visitWebsite": "Visit Website"
             },
             "emptyState": {
-              "title": "No programs found",
-              "description": "Try adjusting your search location or filters to find programs in your area.",
-              "clearFilters": "Clear Filters"
+              "title": "No programs found in this area",
+              "description": "Our database currently covers programs in 18 states and major metro areas. If your area isn't listed, the NDAA National Diversion Directory covers programs nationwide — use the link below to search there.",
+              "clearFilters": "Clear Filters",
+              "ndaaLink": "Search NDAA National Directory"
             },
             "quickNav": {
               "legalGuidanceTitle": "Need Case Support?",
@@ -8321,9 +8322,10 @@ i18n
               "visitWebsite": "Visitar Sitio Web"
             },
             "emptyState": {
-              "title": "No se encontraron programas",
-              "description": "Intente ajustar su búsqueda de ubicación o filtros para encontrar programas en su área.",
-              "clearFilters": "Limpiar Filtros"
+              "title": "No se encontraron programas en esta área",
+              "description": "Nuestra base de datos actualmente cubre programas en 18 estados y principales áreas metropolitanas. Si su área no aparece, el Directorio Nacional de Desvío de la NDAA cubre programas a nivel nacional — use el enlace a continuación para buscar allí.",
+              "clearFilters": "Limpiar Filtros",
+              "ndaaLink": "Buscar en el Directorio Nacional NDAA"
             },
             "quickNav": {
               "legalGuidanceTitle": "¿Necesita Orientación Legal?",
@@ -13153,9 +13155,10 @@ i18n
               "visitWebsite": "访问网站"
             },
             "emptyState": {
-              "title": "未找到计划",
-              "description": "请尝试调整您的搜索位置或筛选条件，以查找您所在地区的计划。",
-              "clearFilters": "清除筛选条件"
+              "title": "未在该地区找到计划",
+              "description": "我们的数据库目前涵盖18个州和主要都市区的项目。如果您所在的地区未列出，NDAA全国转介目录涵盖全国范围内的项目——请使用下方链接在那里搜索。",
+              "clearFilters": "清除筛选条件",
+              "ndaaLink": "搜索NDAA全国目录"
             },
             "quickNav": {
               "legalGuidanceTitle": "需要法律指导？",
