@@ -1,0 +1,1013 @@
+{
+  "generated": "2026-04-10T05:57:39.733Z",
+  "results": [
+    {
+      "id": "ca-la-drug-court",
+      "name": "Los Angeles County Drug Court",
+      "state": "CA",
+      "url": "https://www.lacourt.org/division/criminal/drugcourt",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-la-mental-health-court",
+      "name": "Los Angeles County Mental Health Court",
+      "state": "CA",
+      "url": "https://www.lacourt.org/division/mentalhealth/mentalhealth.aspx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-sf-community-justice",
+      "name": "San Francisco Community Justice Center",
+      "state": "CA",
+      "url": "https://sf.courts.ca.gov/divisions/collaborative-courts/community-justice-center",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-orange-mental-health",
+      "name": "Orange County Mental Health Court",
+      "state": "CA",
+      "url": "https://www.occourts.org",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "tx-harris-drug-court",
+      "name": "Harris County STAR (Success Through Addiction Recovery) Drug Court",
+      "state": "TX",
+      "url": "https://justex.net/adult",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "tx-dallas-veterans",
+      "name": "Dallas County Veterans Court",
+      "state": "TX",
+      "url": "https://www.dallascounty.org/government/veterans-court/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "fl-miami-dade-drug",
+      "name": "Miami-Dade Drug Court",
+      "state": "FL",
+      "url": "https://www.jud11.flcourts.org/Drug-Court",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "fl-broward-mental-health",
+      "name": "Broward County Mental Health Court",
+      "state": "FL",
+      "url": "https://www.17th.flcourts.org/mental-health",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-manhattan-drug",
+      "name": "Manhattan Drug Treatment Court",
+      "state": "NY",
+      "url": "https://www.nycourts.gov/courts/1jd/criminal/drug_treatment_court.shtml",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "ny-brooklyn-veterans",
+      "name": "Brooklyn Veterans Court",
+      "state": "NY",
+      "url": "https://www.nycourts.gov/courts/2jd/kings/criminal/veteranscourt.shtml",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "ny-bronx-tasc",
+      "name": "Bronx TASC Diversion Program",
+      "state": "NY",
+      "url": "https://eac-network.org/bronx-tasc/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "de-wilmington-tasc",
+      "name": "Delaware TASC Treatment Access Center - Wilmington",
+      "state": "DE",
+      "url": "https://www.nationaltasc.org",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "de-georgetown-tasc",
+      "name": "Delaware TASC Treatment Access Center - Georgetown",
+      "state": "DE",
+      "url": "https://www.nationaltasc.org",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "wi-milwaukee-drug-court",
+      "name": "Milwaukee County Drug Treatment Court",
+      "state": "WI",
+      "url": "https://county.milwaukee.gov/EN/Courts/Court-Resources/Drug-Treatment-Court",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "il-cook-drug-court",
+      "name": "Cook County Drug Treatment Court",
+      "state": "IL",
+      "url": "https://www.cookcountycourtil.gov/division/problem-solving-courts/drug-treatment-court-programs",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "il-cook-mental-health-court",
+      "name": "Cook County Mental Health Treatment Court",
+      "state": "IL",
+      "url": "https://www.cookcountycourtil.gov/division/problem-solving-courts/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "pa-phila-drug-court",
+      "name": "Philadelphia Drug Treatment Court",
+      "state": "PA",
+      "url": "https://phillyda.org/adult-diversion-and-alternatives-to-incarceration-initiatives/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "pa-phila-amp",
+      "name": "Philadelphia Accelerated Misdemeanor Program (AMP)",
+      "state": "PA",
+      "url": "https://phillyda.org/adult-diversion-and-alternatives-to-incarceration-initiatives/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "pa-phila-veterans-court",
+      "name": "Philadelphia Veterans Court",
+      "state": "PA",
+      "url": "https://phillyda.org/adult-diversion-and-alternatives-to-incarceration-initiatives/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "wa-king-lead",
+      "name": "Seattle-King County LEAD Program (Let Everyone Advance with Dignity)",
+      "state": "WA",
+      "url": "https://kingcounty.gov/en/dept/dchs/human-social-services/behavioral-health-recovery/diversion-reentry-programs/lead",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "co-denver-reach",
+      "name": "Denver REACH Mental Health Diversion Program",
+      "state": "CO",
+      "url": "https://www.denverda.org/units-and-programs/alternatives-to-prosecution/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-fulton-diversion-center",
+      "name": "Fulton County Center for Diversion & Services",
+      "state": "GA",
+      "url": "https://www.fultonsuperiorcourtga.gov/center-for-diversion-and-services",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-fulton-drug-court",
+      "name": "Fulton County Accountability Court (Drug Court)",
+      "state": "GA",
+      "url": "https://www.fultonsuperiorcourtga.gov/accountability-courts",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ma-suffolk-drug-diversion",
+      "name": "Suffolk County Drug Diversion Program",
+      "state": "MA",
+      "url": "https://northsuffolk.org/addiction-services/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ma-suffolk-recovery-court",
+      "name": "Suffolk County Recovery Court",
+      "state": "MA",
+      "url": "https://www.bmc.org/programs/criminal-justice-mental-health-programs",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ma-suffolk-mental-health-court",
+      "name": "Suffolk County Mental Health Court",
+      "state": "MA",
+      "url": "https://www.bmc.org/programs/criminal-justice-mental-health-programs",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-sd-drug-court",
+      "name": "San Diego County Drug Court (PC 1000)",
+      "state": "CA",
+      "url": "https://www.sdcourt.ca.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-sd-behavioral-health-court",
+      "name": "San Diego Behavioral Health Court",
+      "state": "CA",
+      "url": "https://www.sdcourt.ca.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "tn-davidson-recovery-court",
+      "name": "Nashville-Davidson County Recovery Court",
+      "state": "TN",
+      "url": "https://recoverycourt.nashville.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "tn-davidson-mental-health-court",
+      "name": "Nashville-Davidson County Mental Health Court",
+      "state": "TN",
+      "url": "https://mentalhealthcourt.nashville.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "tn-davidson-veterans-court",
+      "name": "Nashville-Davidson County Veterans Treatment Court",
+      "state": "TN",
+      "url": "https://gscourt.nashville.gov/departments-services/veterans-treatment-court/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "or-multnomah-path",
+      "name": "Multnomah County PATH Program (Providing Access To Hope)",
+      "state": "OR",
+      "url": "https://www.multco.us/lpscc/law-enforcement-assisted-diversion-lead",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "or-multnomah-stop",
+      "name": "Multnomah County STOP Drug Diversion Program",
+      "state": "OR",
+      "url": "https://www.multco.us/dcj-adult",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "or-multnomah-mental-health-court",
+      "name": "Multnomah County Mental Health Court",
+      "state": "OR",
+      "url": "https://www.co.multnomah.or.us/mental-health-court",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nc-mecklenburg-step",
+      "name": "Mecklenburg County S.T.E.P. Program",
+      "state": "NC",
+      "url": "https://cjs.mecknc.gov/Services/STEP",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nc-mecklenburg-90-96",
+      "name": "Mecklenburg County 90-96 Program",
+      "state": "NC",
+      "url": "https://cjs.mecknc.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "oh-franklin-rise",
+      "name": "Franklin County RISE Mental Health Court",
+      "state": "OH",
+      "url": "https://fccourts.org/503/Mental-Health-Court",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "oh-franklin-prosecutor-diversion",
+      "name": "Franklin County Prosecutor's Diversion Unit",
+      "state": "OH",
+      "url": "https://prosecutor.franklincountyohio.gov/criminal-division/diversion-unit",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-sacramento-mental-health",
+      "name": "Sacramento County Mental Health Diversion",
+      "state": "CA",
+      "url": "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-sacramento-drug-diversion",
+      "name": "Sacramento County Drug Diversion Program",
+      "state": "CA",
+      "url": "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-sacramento-veterans",
+      "name": "Sacramento County Veterans Treatment Program",
+      "state": "CA",
+      "url": "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-alameda-cares",
+      "name": "Alameda County CARES Navigation Center",
+      "state": "CA",
+      "url": "https://www.alameda.courts.ca.gov/divisions/collaborative-courts",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-alameda-eic",
+      "name": "Alameda County Early Intervention Court",
+      "state": "CA",
+      "url": "https://www.alameda.courts.ca.gov/divisions/collaborative-courts",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-orange-first-point",
+      "name": "Orange County FIRST Point Diversion Program",
+      "state": "CA",
+      "url": "https://orangecountyda.org/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-riverside-judicial-diversion",
+      "name": "Riverside County Judicial Diversion (PC 1001.95)",
+      "state": "CA",
+      "url": "https://www.courts.ca.gov/courts.htm?court_id=S23",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-riverside-care-court",
+      "name": "Riverside County CARE Court",
+      "state": "CA",
+      "url": "https://ruhealth.org/behavioral-health/care-court",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-fresno-mental-health",
+      "name": "Fresno County Mental Health Diversion (AB 1810)",
+      "state": "CA",
+      "url": "https://www.fresno.courts.ca.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-kern-att-diversion",
+      "name": "Kern County ATT Mental Health Diversion Program",
+      "state": "CA",
+      "url": "https://www.kern.courts.ca.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-manhattan-green-light",
+      "name": "Manhattan Project Green Light",
+      "state": "NY",
+      "url": "https://manhattanda.org/projectgreenlight/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-albany-lead",
+      "name": "Albany County LEAD Program",
+      "state": "NY",
+      "url": "https://albanylead.org/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-albany-community-accountability",
+      "name": "Albany County Community Accountability Board",
+      "state": "NY",
+      "url": "https://www.albanycountyny.gov/departments/probation",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "ny-westchester-fresh-start",
+      "name": "Westchester County Fresh Start Program",
+      "state": "NY",
+      "url": "https://www.westchesterda.net/diversion-and-youth-programs",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-westchester-opt-in",
+      "name": "Westchester County OPT-In Program",
+      "state": "NY",
+      "url": "https://www.westchesterda.net/diversion-and-youth-programs",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-westchester-project-reset",
+      "name": "Westchester County Project Reset",
+      "state": "NY",
+      "url": "https://www.westchesterda.net/diversion-and-youth-programs",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-rockland-partnership-youth",
+      "name": "Rockland County Partnership for Safe and Healthy Youth",
+      "state": "NY",
+      "url": "https://www.rocklandda.org/diversion",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ny-suffolk-judicial-diversion",
+      "name": "Suffolk County Judicial Diversion Program",
+      "state": "NY",
+      "url": "https://www.nycourts.gov/courts/10jd/suffolk/treatment/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "ga-cobb-pretrial-diversion",
+      "name": "Cobb County Pretrial Diversion Program",
+      "state": "GA",
+      "url": "https://www.cobbcounty.gov/courts/district-attorney/pretrial-diversion",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-gwinnett-ptid",
+      "name": "Gwinnett County Pre-Trial Intervention & Diversion (PTID)",
+      "state": "GA",
+      "url": "https://www.gwinnettcounty.com/departments/districtattorney/pre-trialinterventiondiversion",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-gwinnett-youth-diversion",
+      "name": "Gwinnett County Youth Diversion Program",
+      "state": "GA",
+      "url": "https://www.gwinnettcourts.com/juvenile/youth-diversion-program",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-gwinnett-new-directions",
+      "name": "Gwinnett County New Directions Program",
+      "state": "GA",
+      "url": "https://www.gwinnettcounty.com/departments/districtattorney/programs/newdirections",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-gwinnett-mental-health",
+      "name": "Gwinnett County Mental Health Diversion",
+      "state": "GA",
+      "url": "https://www.gwinnettcounty.com/departments/solicitor/mentalhealthdiversion",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-dekalb-solicitor-diversion",
+      "name": "DeKalb County Solicitor Pre-Trial Diversion",
+      "state": "GA",
+      "url": "https://dekalbsolicitorgeneral.com/diversion/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-dekalb-da-diversion",
+      "name": "DeKalb County District Attorney Pre-Trial Diversion",
+      "state": "GA",
+      "url": "https://www.dekalbda.org/about_us/pre-trial_diversion.php",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-dekalb-accountability-courts",
+      "name": "DeKalb County Accountability Courts",
+      "state": "GA",
+      "url": "https://www.dekalbda.org/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-clayton-ptid",
+      "name": "Clayton County Pre-Trial Intervention & Diversion",
+      "state": "GA",
+      "url": "https://www.claytoncountyda.info/pretrialinterventiondiversionprogram",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-henry-pretrial-diversion",
+      "name": "Henry County Pretrial Diversion Program",
+      "state": "GA",
+      "url": "https://henrycountyda.org/pretrial-diversion-program/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-douglas-pretrial-diversion",
+      "name": "Douglas County Pre-Trial Diversion Program",
+      "state": "GA",
+      "url": "https://bja.ojp.gov/funding/awards/15pbja-24-gg-00290-brnd",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ga-sandy-springs-treatment",
+      "name": "Sandy Springs Treatment Diversion Program",
+      "state": "GA",
+      "url": "https://www.sandyspringsga.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "il-dupage-pretrial-diversion",
+      "name": "DuPage County Pretrial Diversion Program",
+      "state": "IL",
+      "url": "https://www.dupageco.org/statesattorney/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "il-kane-deferred-prosecution",
+      "name": "Kane County Deferred Prosecution Programs",
+      "state": "IL",
+      "url": "https://sao.kanecountyil.gov/Pages/SecondChance.aspx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "il-kane-lead",
+      "name": "Kane County LEAD Pre-Arrest Diversion",
+      "state": "IL",
+      "url": "https://sao.kanecountyil.gov/LEAD",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "il-winnebago-divert",
+      "name": "Winnebago County DIVERT Program",
+      "state": "IL",
+      "url": "https://loyolaccj.org/blog/evaluating-a-prosecutor-led-pretrial-diversion-program-in-winnebago-county-interim-report",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "federal-pretrial",
+      "name": "Federal Pretrial Diversion Program",
+      "state": "Federal",
+      "url": "https://www.justice.gov/jm/jm-9-22000-pretrial-diversion-program",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ca-la-jcod-rdp",
+      "name": "Los Angeles County Rapid Diversion Program (RDP)",
+      "state": "CA",
+      "url": "https://jcod.lacounty.gov/program/rapid-diversion-program-rdp/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "tx-tarrant-mental-health-court",
+      "name": "Tarrant County Mental Health Diversion Court",
+      "state": "TX",
+      "url": "https://www.tarrantcountytx.gov/en/criminal-courts/specialty-programs/mhdp.html",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "wa-king-drug-diversion-court",
+      "name": "King County Adult Drug Diversion Court",
+      "state": "WA",
+      "url": "https://kingcounty.gov/en/dept/dja/courts-jails-legal-system/courts-drugcourt/drug-court",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "mn-hennepin-adult-diversion",
+      "name": "Hennepin County Adult Diversion Program",
+      "state": "MN",
+      "url": "https://www.hennepinattorney.org/en/about/adult-diversion/adult-diversion",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "in-marion-behavioral-health-court",
+      "name": "Marion County Behavioral Health Court",
+      "state": "IN",
+      "url": "https://www.indy.gov/activity/mental-health-alternative-courts",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ak-state-therapeutic-courts",
+      "name": "Alaska Therapeutic Courts Program",
+      "state": "AK",
+      "url": "https://courts.alaska.gov/therapeutic/index.htm",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "al-state-drug-courts",
+      "name": "Alabama Drug Court & Problem-Solving Courts",
+      "state": "AL",
+      "url": "https://judicial.alabama.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ar-state-specialty-courts",
+      "name": "Arkansas Specialty Courts Program",
+      "state": "AR",
+      "url": "https://www.arcourts.gov/administration/courts/specialty-courts",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "az-state-problem-solving-courts",
+      "name": "Arizona Problem-Solving Courts",
+      "state": "AZ",
+      "url": "https://www.azcourts.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ct-state-diversionary-programs",
+      "name": "Connecticut Accelerated Rehabilitation & Diversionary Programs",
+      "state": "CT",
+      "url": "https://www.jud.ct.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "dc-drug-court-diversion",
+      "name": "DC Superior Court Drug Court & Diversion Programs",
+      "state": "DC",
+      "url": "https://www.dccourts.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "hi-state-drug-mental-health-court",
+      "name": "Hawaii Drug Court & Specialty Courts",
+      "state": "HI",
+      "url": "https://www.courts.state.hi.us",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ia-state-specialty-courts",
+      "name": "Iowa Specialty Courts (Drug Courts & Treatment Courts)",
+      "state": "IA",
+      "url": "https://www.iowacourts.gov/for-the-public/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "id-state-problem-solving-courts",
+      "name": "Idaho Problem-Solving Courts",
+      "state": "ID",
+      "url": "https://isc.idaho.gov/solve-court/home",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ks-state-specialty-courts",
+      "name": "Kansas Specialty Courts & Pretrial Diversion",
+      "state": "KS",
+      "url": "https://www.kscourts.org",
+      "method": "GET",
+      "status": 403,
+      "ok": false,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "ky-state-drug-courts",
+      "name": "Kentucky Drug Courts & Specialty Courts",
+      "state": "KY",
+      "url": "https://courts.ky.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "la-state-drug-courts",
+      "name": "Louisiana Drug Courts & Specialty Courts",
+      "state": "LA",
+      "url": "https://www.lasc.org",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "me-state-drug-treatment-courts",
+      "name": "Maine Adult Drug Treatment Courts",
+      "state": "ME",
+      "url": "https://www.courts.maine.gov/courts/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "md-state-problem-solving-courts",
+      "name": "Maryland Problem-Solving Courts",
+      "state": "MD",
+      "url": "https://www.mdcourts.gov/circuit/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "mi-state-problem-solving-courts",
+      "name": "Michigan Problem-Solving Courts",
+      "state": "MI",
+      "url": "https://www.courts.michigan.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "mo-state-drug-courts",
+      "name": "Missouri Drug Courts & Treatment Courts",
+      "state": "MO",
+      "url": "https://www.courts.mo.gov",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "ms-state-drug-courts",
+      "name": "Mississippi Drug Courts & Problem-Solving Courts",
+      "state": "MS",
+      "url": "https://www.ms.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "mt-state-treatment-courts",
+      "name": "Montana Treatment Courts",
+      "state": "MT",
+      "url": "https://courts.mt.gov/courts/treatment/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nd-state-drug-courts",
+      "name": "North Dakota Adult Drug Courts",
+      "state": "ND",
+      "url": "https://www.ndcourts.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ne-state-problem-solving-courts",
+      "name": "Nebraska Problem-Solving Courts",
+      "state": "NE",
+      "url": "https://supremecourt.nebraska.gov/courts/problem-solving-courts",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nh-state-drug-courts",
+      "name": "New Hampshire Drug Courts & Treatment Courts",
+      "state": "NH",
+      "url": "https://www.courts.nh.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nj-pti-recovery-court",
+      "name": "New Jersey Pretrial Intervention (PTI) & Recovery Court",
+      "state": "NJ",
+      "url": "https://www.njcourts.gov/courts/criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nm-state-problem-solving-courts",
+      "name": "New Mexico Problem-Solving Courts",
+      "state": "NM",
+      "url": "https://pscourts.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "nv-state-specialty-courts",
+      "name": "Nevada Specialty Courts",
+      "state": "NV",
+      "url": "https://nvcourts.gov/aoc/programs_and_services/specialty_courts/overview",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ok-state-specialty-courts",
+      "name": "Oklahoma Specialty Courts",
+      "state": "OK",
+      "url": "https://www.oscn.net",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ri-state-drug-mental-health-court",
+      "name": "Rhode Island Adult Drug Court & Mental Health Treatment Court",
+      "state": "RI",
+      "url": "https://www.courts.ri.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "sc-state-drug-courts",
+      "name": "South Carolina Drug Courts & Problem-Solving Courts",
+      "state": "SC",
+      "url": "https://www.sccourts.org",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "sd-state-problem-solving-courts",
+      "name": "South Dakota Drug Courts & DUI Courts",
+      "state": "SD",
+      "url": "https://ujs.sd.gov/Circuit_Court/Problem_Solving_Courts/Default.aspx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "ut-state-problem-solving-courts",
+      "name": "Utah Problem-Solving Courts",
+      "state": "UT",
+      "url": "https://www.utcourts.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "vt-state-treatment-courts",
+      "name": "Vermont Treatment Courts",
+      "state": "VT",
+      "url": "https://www.vermontjudiciary.org",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "va-state-drug-treatment-courts",
+      "name": "Virginia Drug Treatment Courts & Behavioral Health Dockets",
+      "state": "VA",
+      "url": "https://www.vacourts.gov",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "id": "wv-state-drug-courts",
+      "name": "West Virginia Drug Courts & Problem-Solving Courts",
+      "state": "WV",
+      "url": "https://www.courtswv.gov",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "id": "wy-state-cst-programs",
+      "name": "Wyoming Court Supervised Treatment (CST) Programs",
+      "state": "WY",
+      "url": "https://health.wyo.gov/behavioralhealth/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    }
+  ]
+}

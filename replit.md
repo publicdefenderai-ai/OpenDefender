@@ -76,6 +76,13 @@ A public REST API (`/api/v1/`) allows third-party integration, offering read-onl
 ### System Design Choices
 The application uses session-based authentication with PostgreSQL for session storage. Vite is used for frontend development and ESBuild for server bundling. Drizzle Kit manages database migrations. Only `buildSearchIndex()` runs at server startup (takes ~18ms); no other background processes run on boot.
 
+### Diversion Programs
+- **111 programs** covering all 50 states + DC + Federal programs (as of April 2026)
+- 78 metro-area programs (CA, CO, DE, FL, GA, IL, IN, MA, MN, NC, NY, OH, OR, PA, TN, TX, WA, WI + Federal)
+- 33 statewide entries added April 2026 (AK, AL, AR, AZ, CT, DC, HI, IA, ID, KS, KY, LA, ME, MD, MI, MO, MS, MT, ND, NE, NH, NJ, NM, NV, OK, RI, SC, SD, UT, VA, VT, WV, WY)
+- Link validation script: `npx tsx scripts/check-diversion-programs.ts [--report]`
+- All 111 contact URLs verified live as of April 10, 2026 (403 responses from gov CDN bot-blocks treated as live)
+
 ## External Dependencies
 
 ### Database

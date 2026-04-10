@@ -3468,7 +3468,7 @@ i18n
             },
             "emptyState": {
               "title": "No programs found in this area",
-              "description": "Our database currently covers programs in 18 states and major metro areas. If your area isn't listed, the NDAA National Diversion Directory covers programs nationwide — use the link below to search there.",
+              "description": "We have programs listed for all 50 states and DC, but local metro-area coverage may be limited in some regions. Try searching by state name, or use the NDAA National Diversion Directory below for a more detailed local search.",
               "clearFilters": "Clear Filters",
               "ndaaLink": "Search NDAA National Directory"
             },
@@ -8323,7 +8323,7 @@ i18n
             },
             "emptyState": {
               "title": "No se encontraron programas en esta área",
-              "description": "Nuestra base de datos actualmente cubre programas en 18 estados y principales áreas metropolitanas. Si su área no aparece, el Directorio Nacional de Desvío de la NDAA cubre programas a nivel nacional — use el enlace a continuación para buscar allí.",
+              "description": "Tenemos programas listados para los 50 estados y DC, pero la cobertura de áreas metropolitanas locales puede ser limitada en algunas regiones. Intente buscar por nombre de estado o use el Directorio Nacional de la NDAA a continuación para una búsqueda local más detallada.",
               "clearFilters": "Limpiar Filtros",
               "ndaaLink": "Buscar en el Directorio Nacional NDAA"
             },
@@ -13156,7 +13156,7 @@ i18n
             },
             "emptyState": {
               "title": "未在该地区找到计划",
-              "description": "我们的数据库目前涵盖18个州和主要都市区的项目。如果您所在的地区未列出，NDAA全国转介目录涵盖全国范围内的项目——请使用下方链接在那里搜索。",
+              "description": "我们已收录全美50个州及哥伦比亚特区的项目，但部分地区的本地都市覆盖可能有限。请尝试按州名搜索，或使用下方的NDAA全国目录进行更详细的本地搜索。",
               "clearFilters": "清除筛选条件",
               "ndaaLink": "搜索NDAA全国目录"
             },

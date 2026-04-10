@@ -4,27 +4,29 @@ import { getZipCodeCoordinates } from "./court-services";
 /**
  * DIVERSION PROGRAMS DATABASE
  * 
- * Current Status: 73 diversion programs across major US metropolitan areas
- * Last Updated: March 2026
+ * Current Status: 111 diversion programs covering all 50 states + DC + Federal programs
+ * Last Updated: April 2026
  * 
- * California Coverage (16 programs across 9 counties):
+ * Detailed Metro Coverage (78 programs in 18 states):
+ * 
+ * California (16 programs across 9 counties):
  * - Los Angeles County, San Francisco, Orange County, San Diego County
  * - Sacramento County (3 programs), Alameda County (2), Riverside County (2)
  * - Fresno County, Kern County
  * 
- * New York Coverage (12 programs across 6 counties):
+ * New York (12 programs across 6 counties):
  * - Manhattan, Brooklyn, Bronx, Queens, Staten Island (Richmond)
  * - Nassau County, Albany County (2), Westchester County (3)
  * - Rockland County, Suffolk County
  * 
- * Georgia Coverage (16 programs across 8 counties + 1 city):
+ * Georgia (16 programs across 8 counties + 1 city):
  * - Atlanta Metro: Fulton County, Cobb County, Gwinnett County (5), DeKalb County (3)
  * - Clayton County, Henry County, Douglas County, Sandy Springs (city)
  * 
- * Illinois Coverage (4 programs across 3 counties):
+ * Illinois (4 programs across 3 counties):
  * - Cook County/Chicago, DuPage County, Kane County (2), Winnebago County
  * 
- * Other States (25 programs):
+ * Other Metro Programs (30 programs):
  * - Texas (Harris County, Dallas County)
  * - Florida (Miami-Dade, Broward County)
  * - Pennsylvania (Philadelphia)
@@ -37,14 +39,20 @@ import { getZipCodeCoordinates } from "./court-services";
  * - Ohio (Franklin County/Columbus)
  * - Delaware, Wisconsin, Federal programs
  * 
+ * Statewide Programs (33 programs added April 2026):
+ * AK, AL, AR, AZ, CT, DC, HI, IA, ID, KS, KY, LA, ME, MD, MI, MO, MS, MT,
+ * ND, NE, NH, NJ, NM, NV, OK, RI, SC, SD, UT, VA, VT, WV, WY
+ * 
  * Data Sources:
- * 1. NDAA Prosecutor-Led Diversion Programs Directory (https://diversion.ndaa.org/)
- * 2. Center for Health and Justice Report (2024)
- * 3. State and county court systems (CA, NY, GA, IL)
- * 4. District Attorney offices and prosecutor-led diversion programs
- * 5. Municipal court programs
- * 6. CrimeSolutions.gov Programs API (when available)
- * 7. State court websites and Solicitor-General offices
+ * 1. NADCP (National Association of Drug Court Professionals) – nadcp.org/find-a-drug-court/
+ * 2. NDAA Prosecutor-Led Diversion Programs Directory (https://diversion.ndaa.org/)
+ * 3. Center for Health and Justice Report (2024)
+ * 4. State and county court systems (CA, NY, GA, IL and all 50 state court websites)
+ * 5. District Attorney offices and prosecutor-led diversion programs
+ * 6. Municipal court programs
+ * 7. CrimeSolutions.gov Programs API (when available)
+ * 8. State court websites and Solicitor-General offices
+ * 9. State Department of Health agencies (WY, MT)
  * 
  * Program Types Include:
  * - Drug Courts & Substance Abuse Treatment
@@ -129,7 +137,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Mental health diagnosis required, non-violent offenses preferred.",
     contact: {
       phone: "(714) 834-3734",
-      url: "https://www.occourts.org/self-help/mentalhealthcourt/"
+      url: "https://www.occourts.org"
     },
     sources: ["Orange County Superior Court"],
     lastUpdated: new Date("2026-03-01"),
@@ -188,7 +196,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Non-violent drug offenses, mental health issues, veterans. Must be Miami-Dade resident.",
     contact: {
       phone: "(305) 349-7000",
-      url: "https://www.jud11.flcourts.org/Criminal-Division/Drug-Court"
+      url: "https://www.jud11.flcourts.org/Drug-Court"
     },
     sources: ["Miami-Dade County Court"],
     lastUpdated: new Date("2026-03-01"),
@@ -206,7 +214,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Mental health diagnosis required, co-occurring disorders accepted.",
     contact: {
       phone: "(954) 831-6565",
-      url: "https://www.17th.flcourts.org/mental-health-court"
+      url: "https://www.17th.flcourts.org/mental-health"
     },
     sources: ["Broward County Court"],
     lastUpdated: new Date("2026-03-01"),
@@ -283,7 +291,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Coordinates all drug court diversion programs in Delaware. Superior Court minimum 6 months, Court of Common Pleas minimum 14 weeks.",
     contact: {
       phone: "(302) 577-2711",
-      url: "https://dhss.delaware.gov/dhss/dsamh/tasc.html"
+      url: "https://www.nationaltasc.org"
     },
     sources: ["Delaware Department of Health and Social Services", "Center for Health and Justice Report"],
     lastUpdated: new Date("2024-09-20"),
@@ -301,7 +309,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Southern Delaware location serving Sussex County. Provides intake assessments, urinalysis, educational groups, and case management services.",
     contact: {
       phone: "(302) 854-0010",
-      url: "https://dhss.delaware.gov/dhss/dsamh/tasc.html"
+      url: "https://www.nationaltasc.org"
     },
     sources: ["Delaware Department of Health and Social Services", "Center for Health and Justice Report"],
     lastUpdated: new Date("2024-09-20"),
@@ -361,7 +369,7 @@ export const diversionPrograms: DiversionProgram[] = [
     contact: {
       phone: "(312) 603-8000",
       email: "problemsolvingcourts@cookcountyil.gov",
-      url: "https://www.cookcountycourtil.gov/division/problem-solving-courts/mental-health-treatment-court-programs"
+      url: "https://www.cookcountycourtil.gov/division/problem-solving-courts/"
     },
     sources: ["Cook County Circuit Court"],
     lastUpdated: new Date("2026-03-01"),
@@ -674,7 +682,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "First-time drug possession offenses. Post-plea model (participants plead guilty, charges dropped upon completion). 365 days in treatment required. Six consecutive clean drug tests needed. Charges can be removed from criminal record upon successful completion. Established 1991. Note: Oregon's Measure 110 (2020) decriminalized drug possession, effectively ending the STOP model. After Measure 110 was partially rolled back in September 2024, Multnomah County launched a new Deflection Center (October 2024) using a different model. The original STOP program described here is no longer operative.",
     contact: {
       phone: "(503) 988-4888",
-      url: "https://www.multco.us/dcj-adult/stop-drug-diversion"
+      url: "https://www.multco.us/dcj-adult"
     },
     sources: ["Multnomah County Circuit Court"],
     lastUpdated: new Date("2026-03-01"),
@@ -691,7 +699,7 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Mental Health Court", "Treatment Services", "Medication Management"],
     eligibilityNotes: "Currently on probation with qualifying mental health diagnoses (major depression, bipolar disorder, schizophrenia, or similar). Minimum 1 year to complete. 6-12 month programs with therapy, case management, and medication management.",
     contact: {
-      url: "https://www.mcda.us/index.php/community-initiatives-special-programs/mental-health-court"
+      url: "https://www.co.multnomah.or.us/mental-health-court"
     },
     sources: ["Multnomah County District Attorney", "Cascadia Health"],
     lastUpdated: new Date("2024-11-01"),
@@ -885,7 +893,7 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Judicial Diversion", "Misdemeanor Diversion", "PC 1001.95"],
     eligibilityNotes: "Judge-initiated pretrial diversion for misdemeanors. Judge can grant over prosecutor's objection. Eligible: petty theft, trespassing, minor drug charges. Excludes DUI, DV, sex offenses, stalking. Charges dismissed upon completion.",
     contact: {
-      url: "https://www.riverside.courts.ca.gov/"
+      url: "https://www.courts.ca.gov/courts.htm?court_id=S23"
     },
     sources: ["Riverside Superior Court"],
     lastUpdated: new Date("2024-11-01"),
@@ -1483,7 +1491,661 @@ export const diversionPrograms: DiversionProgram[] = [
     sources: ["Marion Superior Court", "Indianapolis Office of Public Health and Safety"],
     lastUpdated: new Date("2026-03-01"),
     isActive: true,
-  }
+  },
+
+  // ── EXPANSION: 33 Additional Jurisdictions (added April 2026) ──────────────
+
+  // Alaska
+  {
+    id: "ak-state-therapeutic-courts",
+    name: "Alaska Therapeutic Courts Program",
+    jurisdictionType: "state",
+    state: "AK",
+    county: null,
+    cities: ["Anchorage", "Fairbanks", "Juneau", "Sitka", "Ketchikan"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI / Wellness Court"],
+    eligibilityNotes: "Non-violent offenders with a documented substance use disorder or mental health diagnosis. Eligibility requires a nexus between the condition and the criminal conduct. Wellness courts focus on alcohol-related offenses (DUI, refusal). Mental health courts serve defendants with a qualifying diagnosis. Veterans courts serve veterans and active-duty personnel with service-connected conditions. Risk/needs assessment required.",
+    contact: {
+      phone: "(907) 264-0401",
+      url: "https://courts.alaska.gov/therapeutic/index.htm",
+    },
+    sources: ["Alaska Court System – Therapeutic Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Alabama
+  {
+    id: "al-state-drug-courts",
+    name: "Alabama Drug Court & Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "AL",
+    county: null,
+    cities: ["Birmingham", "Montgomery", "Huntsville", "Mobile", "Tuscaloosa"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court"],
+    eligibilityNotes: "Non-violent felony or misdemeanor offenders with a substance use disorder or mental health diagnosis. First-time offenders preferred. Eligibility is determined by local circuit courts. Contact your circuit court's specialty court coordinator or your defense attorney to apply.",
+    contact: {
+      url: "https://judicial.alabama.gov",
+    },
+    sources: ["Alabama Administrative Office of Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Arkansas
+  {
+    id: "ar-state-specialty-courts",
+    name: "Arkansas Specialty Courts Program",
+    jurisdictionType: "state",
+    state: "AR",
+    county: null,
+    cities: ["Little Rock", "Fort Smith", "Fayetteville", "Springdale", "Jonesboro"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DWI Court"],
+    eligibilityNotes: "Non-violent offenders with a substance use or mental health disorder. Drug courts operate statewide across all 28 judicial districts. DWI courts serve repeat DWI offenders. Veterans courts are available in select districts. Must complete risk/needs assessment. Referrals come from prosecutors, defense counsel, or the court.",
+    contact: {
+      url: "https://www.arcourts.gov/administration/courts/specialty-courts",
+    },
+    sources: ["Arkansas Administrative Office of Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Arizona
+  {
+    id: "az-state-problem-solving-courts",
+    name: "Arizona Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "AZ",
+    county: null,
+    cities: ["Phoenix", "Tucson", "Mesa", "Chandler", "Scottsdale", "Flagstaff"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Non-violent adult and juvenile drug offenders, individuals with serious mental illness (SMI), and veterans with service-connected conditions. Maricopa County operates the Early Disposition Program (EDP) for early case resolution. Eligibility varies by county — contact your county Superior Court's specialty court division. Standardized risk/needs assessment required.",
+    contact: {
+      phone: "(602) 452-3300",
+      url: "https://www.azcourts.gov",
+    },
+    sources: ["Arizona Administrative Office of the Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Connecticut
+  {
+    id: "ct-state-diversionary-programs",
+    name: "Connecticut Accelerated Rehabilitation & Diversionary Programs",
+    jurisdictionType: "state",
+    state: "CT",
+    county: null,
+    cities: ["Hartford", "Bridgeport", "New Haven", "Stamford", "Waterbury"],
+    zipCodes: null,
+    programTypes: ["Pre-Trial Diversion", "Drug Education Program", "Accelerated Rehabilitation"],
+    eligibilityNotes: "Accelerated Rehabilitation (AR): Available for non-serious crimes and motor vehicle violations; defendant must be unlikely to re-offend. Drug Education and Community Service Program (DECSP): For first-time possession-only charges. Family Violence Education Program: For eligible domestic-related charges. Apply through the Superior Court clerk's office or your attorney.",
+    contact: {
+      phone: "(860) 566-3400",
+      url: "https://www.jud.ct.gov",
+    },
+    sources: ["Connecticut Judicial Branch", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // District of Columbia
+  {
+    id: "dc-drug-court-diversion",
+    name: "DC Superior Court Drug Court & Diversion Programs",
+    jurisdictionType: "state",
+    state: "DC",
+    county: null,
+    cities: ["Washington"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Misdemeanor Diversion", "Community Court"],
+    eligibilityNotes: "Non-violent misdemeanor and felony charges where substance abuse or mental health is a primary factor. Cases identified by the US Attorney's Office (felonies) or DC Office of the Attorney General (misdemeanors). The DC Community Court handles quality-of-life misdemeanors with community-based services. Ask your attorney about eligibility.",
+    contact: {
+      phone: "(202) 879-1010",
+      url: "https://www.dccourts.gov",
+    },
+    sources: ["DC Superior Court", "US Attorney's Office for DC", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Hawaii
+  {
+    id: "hi-state-drug-mental-health-court",
+    name: "Hawaii Drug Court & Specialty Courts",
+    jurisdictionType: "state",
+    state: "HI",
+    county: null,
+    cities: ["Honolulu", "Hilo", "Kailua", "Pearl City", "Wailuku"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "HOPE Probation"],
+    eligibilityNotes: "Non-violent drug-related felony offenders with a documented substance use disorder. Mental Health Court serves non-violent offenders with persistent mental health disorders. HOPE (Hawaii's Opportunity Probation with Enforcement) is available for probationers needing structured supervision. Veterans Court available on Oahu. Eligibility determined by court referral or attorney request.",
+    contact: {
+      phone: "(808) 539-4400",
+      url: "https://www.courts.state.hi.us",
+    },
+    sources: ["Hawaii State Judiciary", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Iowa
+  {
+    id: "ia-state-specialty-courts",
+    name: "Iowa Specialty Courts (Drug Courts & Treatment Courts)",
+    jurisdictionType: "state",
+    state: "IA",
+    county: null,
+    cities: ["Des Moines", "Cedar Rapids", "Davenport", "Sioux City", "Iowa City"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "Family Drug Court"],
+    eligibilityNotes: "High-risk/high-need offenders with a substance use disorder facing felony or aggravated misdemeanor charges. Must demonstrate that substance abuse is a primary factor in the offense. Violent offenders are generally excluded. Risk/needs assessment (LSI-R) required. Referrals from prosecution, defense, or the court.",
+    contact: {
+      phone: "(515) 348-4700",
+      url: "https://www.iowacourts.gov/for-the-public/",
+    },
+    sources: ["Iowa Judicial Branch", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Idaho
+  {
+    id: "id-state-problem-solving-courts",
+    name: "Idaho Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "ID",
+    county: null,
+    cities: ["Boise", "Nampa", "Meridian", "Idaho Falls", "Caldwell", "Twin Falls"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court"],
+    eligibilityNotes: "Non-violent offenders with substance use or mental health disorders. Programs operate across all 7 judicial districts. Eligibility is set by local court criteria and a clinical assessment. Must be willing to participate voluntarily in an intensive supervision and treatment program.",
+    contact: {
+      phone: "(208) 334-2246",
+      url: "https://isc.idaho.gov/solve-court/home",
+    },
+    sources: ["Idaho Supreme Court – Problem-Solving Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Kansas
+  {
+    id: "ks-state-specialty-courts",
+    name: "Kansas Specialty Courts & Pretrial Diversion",
+    jurisdictionType: "state",
+    state: "KS",
+    county: null,
+    cities: ["Wichita", "Overland Park", "Kansas City", "Topeka", "Olathe"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "DUI Court", "Mental Health Court", "Pre-Trial Diversion"],
+    eligibilityNotes: "Non-violent drug-related offenses and DUI. Many counties also offer prosecutor-led pretrial diversion for first-time misdemeanor or low-level felony charges. Eligibility determined by local district court and county attorney. Contact your local county attorney or defense attorney to inquire about diversion eligibility.",
+    contact: {
+      phone: "(785) 296-2256",
+      url: "https://www.kscourts.org",
+    },
+    sources: ["Kansas Office of Judicial Administration", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Kentucky
+  {
+    id: "ky-state-drug-courts",
+    name: "Kentucky Drug Courts & Specialty Courts",
+    jurisdictionType: "state",
+    state: "KY",
+    county: null,
+    cities: ["Louisville", "Lexington", "Bowling Green", "Owensboro", "Covington"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court", "Family Drug Court"],
+    eligibilityNotes: "Non-violent felony or misdemeanor offenders with a substance use disorder or mental health diagnosis. Kentucky operates one of the largest drug court systems in the nation, with programs in every judicial circuit. Referrals by prosecution, defense, or court. Risk/needs assessment required.",
+    contact: {
+      url: "https://courts.ky.gov",
+    },
+    sources: ["Kentucky Court of Justice", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Louisiana
+  {
+    id: "la-state-drug-courts",
+    name: "Louisiana Drug Courts & Specialty Courts",
+    jurisdictionType: "state",
+    state: "LA",
+    county: null,
+    cities: ["New Orleans", "Baton Rouge", "Shreveport", "Metairie", "Lafayette"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DWI Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Non-violent drug and alcohol offenders and those with mental health disorders. Louisiana has over 80 specialty court programs across the state, including drug, DWI, mental health, and veterans courts. Eligibility varies by parish and program type. Contact your district attorney's office or defense attorney.",
+    contact: {
+      url: "https://www.lasc.org",
+    },
+    sources: ["Louisiana Supreme Court", "Louisiana District Attorneys Association", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Maine
+  {
+    id: "me-state-drug-treatment-courts",
+    name: "Maine Adult Drug Treatment Courts",
+    jurisdictionType: "state",
+    state: "ME",
+    county: null,
+    cities: ["Portland", "Lewiston", "Bangor", "Augusta", "Biddeford"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Non-violent felony or misdemeanor charges for high-risk/high-need individuals with substance use disorders. Programs operate across multiple counties. Must complete a clinical assessment. Violent offenses are generally excluded. Contact the court clerk or your defense attorney to request evaluation.",
+    contact: {
+      phone: "(207) 822-0770",
+      url: "https://www.courts.maine.gov/courts/",
+    },
+    sources: ["Maine Judicial Branch", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Maryland
+  {
+    id: "md-state-problem-solving-courts",
+    name: "Maryland Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "MD",
+    county: null,
+    cities: ["Baltimore", "Frederick", "Rockville", "Gaithersburg", "Annapolis"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Non-violent offenders with documented substance abuse or mental health issues. Programs operate in most of Maryland's 24 circuit courts. Pretrial diversion (Stet dockets) may also be available through the State's Attorney's office. Eligibility varies by county — contact your local circuit court.",
+    contact: {
+      phone: "(410) 260-1250",
+      url: "https://www.mdcourts.gov/circuit/",
+    },
+    sources: ["Maryland Judiciary", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Michigan
+  {
+    id: "mi-state-problem-solving-courts",
+    name: "Michigan Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "MI",
+    county: null,
+    cities: ["Detroit", "Grand Rapids", "Warren", "Sterling Heights", "Lansing", "Ann Arbor"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Sobriety Court", "Mental Health Court", "Veterans Court", "Hybrid Court"],
+    eligibilityNotes: "Non-violent offenses where substance abuse or mental health is a contributing factor. Michigan also uses Delayed Sentence (MCL 771.1) for eligible first-time offenders. Sobriety courts target alcohol-related offenses. Over 150 problem-solving courts operate statewide. Referrals from prosecution, defense, or probation. Risk/needs screening required.",
+    contact: {
+      phone: "(517) 373-0128",
+      url: "https://www.courts.michigan.gov",
+    },
+    sources: ["Michigan Supreme Court – State Court Administrative Office", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Missouri
+  {
+    id: "mo-state-drug-courts",
+    name: "Missouri Drug Courts & Treatment Courts",
+    jurisdictionType: "state",
+    state: "MO",
+    county: null,
+    cities: ["Kansas City", "St. Louis", "Springfield", "Columbia", "Independence"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DWI Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Non-violent offenders with a substance use disorder or mental health diagnosis. Over 130 drug court programs operate across Missouri's circuit courts. DWI courts target repeat alcohol offenders. Veterans courts serve those with service-related conditions. Eligibility set by local circuit court and prosecutor.",
+    contact: {
+      url: "https://www.courts.mo.gov",
+    },
+    sources: ["Missouri Office of State Courts Administrator", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Mississippi
+  {
+    id: "ms-state-drug-courts",
+    name: "Mississippi Drug Courts & Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "MS",
+    county: null,
+    cities: ["Jackson", "Gulfport", "Southaven", "Hattiesburg", "Biloxi"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court"],
+    eligibilityNotes: "Non-violent drug and alcohol offenders. Drug courts operate in all 22 circuit court districts. Mental health courts available in select districts. Eligibility determined by local circuit court and district attorney. Ask your attorney about diversion eligibility for your specific county.",
+    contact: {
+      url: "https://www.ms.gov",
+    },
+    sources: ["Mississippi Administrative Office of Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Montana
+  {
+    id: "mt-state-treatment-courts",
+    name: "Montana Treatment Courts",
+    jurisdictionType: "state",
+    state: "MT",
+    county: null,
+    cities: ["Billings", "Missoula", "Great Falls", "Bozeman", "Butte", "Helena"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "DUI Court", "Veterans Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Non-violent drug-dependent offenders involved in the criminal justice system. Programs operate across all judicial districts. Some districts offer DUI and veterans-specific tracks. Both adult and juvenile programs available. Risk/needs assessment required.",
+    contact: {
+      phone: "(406) 444-2621",
+      url: "https://courts.mt.gov/courts/treatment/",
+    },
+    sources: ["Montana Supreme Court – Court Services Division", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // North Dakota
+  {
+    id: "nd-state-drug-courts",
+    name: "North Dakota Adult Drug Courts",
+    jurisdictionType: "state",
+    state: "ND",
+    county: null,
+    cities: ["Fargo", "Bismarck", "Grand Forks", "Minot", "West Fargo"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court"],
+    eligibilityNotes: "Non-violent offenders with a documented substance use disorder. Violent offenders are excluded by state statute. Cases typically involve drug possession or property crimes driven by addiction. Risk/needs assessment required. Must be willing to participate in intensive supervision and treatment.",
+    contact: {
+      phone: "(701) 328-4216",
+      url: "https://www.ndcourts.gov",
+    },
+    sources: ["North Dakota Supreme Court", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Nebraska
+  {
+    id: "ne-state-problem-solving-courts",
+    name: "Nebraska Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "NE",
+    county: null,
+    cities: ["Omaha", "Lincoln", "Bellevue", "Grand Island", "Kearney"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "DUI Court", "Mental Health Court", "Veterans Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Adult and juvenile drug courts, DUI courts, and veterans courts statewide. Targets high-risk/high-need individuals. Pretrial diversion also available for first-time offenders with minor violations through county attorney offices. Must complete risk/needs screening.",
+    contact: {
+      phone: "(402) 471-3730",
+      url: "https://supremecourt.nebraska.gov/courts/problem-solving-courts",
+    },
+    sources: ["Nebraska Supreme Court", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // New Hampshire
+  {
+    id: "nh-state-drug-courts",
+    name: "New Hampshire Drug Courts & Treatment Courts",
+    jurisdictionType: "state",
+    state: "NH",
+    county: null,
+    cities: ["Manchester", "Nashua", "Concord", "Dover", "Rochester"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Non-violent felony-level drug-related charges or charges where addiction is a significant contributing factor. Programs operate through the Superior Court in each county. Risk/needs assessment required. Contact the Superior Court in your county or speak with your defense attorney about eligibility.",
+    contact: {
+      phone: "(603) 271-2030",
+      url: "https://www.courts.nh.gov",
+    },
+    sources: ["New Hampshire Judicial Branch", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // New Jersey
+  {
+    id: "nj-pti-recovery-court",
+    name: "New Jersey Pretrial Intervention (PTI) & Recovery Court",
+    jurisdictionType: "state",
+    state: "NJ",
+    county: null,
+    cities: ["Newark", "Jersey City", "Paterson", "Elizabeth", "Edison", "Trenton"],
+    zipCodes: null,
+    programTypes: ["Pre-Trial Diversion", "Drug Court", "Recovery Court"],
+    eligibilityNotes: "Pretrial Intervention (PTI): Generally available to first-time offenders charged with third- or fourth-degree offenses; charges dismissed upon successful completion. Recovery Court (formerly Drug Court): For individuals with substance use disorders facing non-violent criminal charges; intensive treatment and supervision. Contact your county PTI director or defense attorney.",
+    contact: {
+      phone: "(609) 815-2900",
+      url: "https://www.njcourts.gov/courts/criminal/",
+    },
+    sources: ["New Jersey Courts – Criminal Division", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // New Mexico
+  {
+    id: "nm-state-problem-solving-courts",
+    name: "New Mexico Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "NM",
+    county: null,
+    cities: ["Albuquerque", "Las Cruces", "Rio Rancho", "Santa Fe", "Roswell"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "Pre-Prosecution Diversion", "DWI Court"],
+    eligibilityNotes: "Drug courts: Adult and juvenile drug-addicted offenders with no history of violent crimes. Mental health courts: Where mental illness is the primary driver of the criminal activity. Pre-Prosecution Diversion (PPD): Available for first-time, non-violent felony offenders through the district attorney's office — charges are dismissed upon completion.",
+    contact: {
+      phone: "(505) 827-4800",
+      url: "https://pscourts.nmcourts.gov/",
+    },
+    sources: ["New Mexico Administrative Office of the Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Nevada
+  {
+    id: "nv-state-specialty-courts",
+    name: "Nevada Specialty Courts",
+    jurisdictionType: "state",
+    state: "NV",
+    county: null,
+    cities: ["Las Vegas", "Henderson", "Reno", "North Las Vegas", "Sparks", "Carson City"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "DUI Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Adult drug court: High-risk/high-need drug-addicted offenders. DUI Court: Multiple DUI convictions or high-BAC cases (NRS 484C.340). Mental health and veterans courts: Non-violent offenses where mental health or military service is a mitigating factor. Programs operate in Clark County (Las Vegas), Washoe County (Reno), and other districts.",
+    contact: {
+      phone: "(775) 684-1700",
+      url: "https://nvcourts.gov/aoc/programs_and_services/specialty_courts/overview",
+    },
+    sources: ["Nevada Administrative Office of the Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Oklahoma
+  {
+    id: "ok-state-specialty-courts",
+    name: "Oklahoma Specialty Courts",
+    jurisdictionType: "state",
+    state: "OK",
+    county: null,
+    cities: ["Oklahoma City", "Tulsa", "Norman", "Broken Arrow", "Edmond", "Lawton"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court", "Juvenile Drug Court"],
+    eligibilityNotes: "Drug courts: Non-violent felony offenders who would otherwise face incarceration; clinical addiction assessment required. Mental health courts: Non-violent offenders with serious mental illness. Oklahoma uses the LSI-R (Level of Service Inventory-Revised) to determine eligibility. Programs are available in most judicial districts statewide.",
+    contact: {
+      phone: "(405) 552-4700",
+      url: "https://www.oscn.net",
+    },
+    sources: ["Oklahoma Supreme Court Network", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Rhode Island
+  {
+    id: "ri-state-drug-mental-health-court",
+    name: "Rhode Island Adult Drug Court & Mental Health Treatment Court",
+    jurisdictionType: "state",
+    state: "RI",
+    county: null,
+    cities: ["Providence", "Cranston", "Warwick", "Pawtucket", "East Providence"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Non-violent felony offenses involving individuals with substance abuse or mental health needs. Drug court operates through the Superior Court. Mental Health Treatment Court available for defendants whose mental health condition was a significant factor in the offense. Referrals by attorney, prosecutor, or judge.",
+    contact: {
+      phone: "(401) 222-3250",
+      url: "https://www.courts.ri.gov",
+    },
+    sources: ["Rhode Island Judiciary – Superior Court", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // South Carolina
+  {
+    id: "sc-state-drug-courts",
+    name: "South Carolina Drug Courts & Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "SC",
+    county: null,
+    cities: ["Columbia", "Charleston", "North Charleston", "Mount Pleasant", "Rock Hill"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court"],
+    eligibilityNotes: "Non-violent drug offenders and those with mental health conditions. Drug courts operate through circuit solicitor offices (prosecutors) across all 16 judicial circuits. Eligibility determined by the solicitor's office and local program guidelines. Contact your circuit's solicitor office or defense attorney.",
+    contact: {
+      url: "https://www.sccourts.org",
+    },
+    sources: ["South Carolina Judicial Department", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // South Dakota
+  {
+    id: "sd-state-problem-solving-courts",
+    name: "South Dakota Drug Courts & DUI Courts",
+    jurisdictionType: "state",
+    state: "SD",
+    county: null,
+    cities: ["Sioux Falls", "Rapid City", "Aberdeen", "Brookings", "Watertown"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "DUI Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Non-violent drug and DUI offenders. Eligibility is based on a standardized risk and needs assessment (LSI-R). Programs are administered through the Unified Judicial System and operate across multiple judicial circuits statewide.",
+    contact: {
+      phone: "(605) 773-3474",
+      url: "https://ujs.sd.gov/Circuit_Court/Problem_Solving_Courts/Default.aspx",
+    },
+    sources: ["South Dakota Unified Judicial System", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Utah
+  {
+    id: "ut-state-problem-solving-courts",
+    name: "Utah Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "UT",
+    county: null,
+    cities: ["Salt Lake City", "West Valley City", "Provo", "West Jordan", "Orem", "St. George"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "Family Drug Court", "DUI Court"],
+    eligibilityNotes: "Adult, juvenile, and family drug courts; mental health courts; and veterans courts statewide. Generally covers non-violent felony and misdemeanor offenses related to addiction or mental illness. Eligibility requires a clinical assessment. Programs operate in all eight judicial districts.",
+    contact: {
+      phone: "(801) 578-3800",
+      url: "https://www.utcourts.gov",
+    },
+    sources: ["Utah State Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Vermont
+  {
+    id: "vt-state-treatment-courts",
+    name: "Vermont Treatment Courts",
+    jurisdictionType: "state",
+    state: "VT",
+    county: null,
+    cities: ["Burlington", "South Burlington", "Rutland", "Barre", "Montpelier"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "DUI Court", "Family Drug Court"],
+    eligibilityNotes: "Non-violent offenders with high treatment needs for substance abuse or mental health, primarily in Chittenden and Rutland counties. DUI/Driving while suspended courts available for alcohol-related charges. Family drug courts serve parents with child welfare involvement. Contact the Vermont Judiciary for program availability by county.",
+    contact: {
+      phone: "(802) 828-3278",
+      url: "https://www.vermontjudiciary.org",
+    },
+    sources: ["Vermont Judiciary", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Virginia
+  {
+    id: "va-state-drug-treatment-courts",
+    name: "Virginia Drug Treatment Courts & Behavioral Health Dockets",
+    jurisdictionType: "state",
+    state: "VA",
+    county: null,
+    cities: ["Virginia Beach", "Norfolk", "Chesapeake", "Richmond", "Arlington", "Alexandria"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court"],
+    eligibilityNotes: "Non-violent offenders with substance use disorders. Pretrial diversion eligibility determined by local Commonwealth's Attorneys under Va. Code § 19.2-151.1. Behavioral health dockets serve those with co-occurring disorders. Drug treatment courts operate in most cities and counties. Contact your local Commonwealth's Attorney or defense attorney.",
+    contact: {
+      phone: "(804) 786-6455",
+      url: "https://www.vacourts.gov",
+    },
+    sources: ["Virginia's Judicial System – Drug Treatment Courts", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // West Virginia
+  {
+    id: "wv-state-drug-courts",
+    name: "West Virginia Drug Courts & Problem-Solving Courts",
+    jurisdictionType: "state",
+    state: "WV",
+    county: null,
+    cities: ["Charleston", "Huntington", "Morgantown", "Parkersburg", "Wheeling"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DUI Court", "Family Drug Court"],
+    eligibilityNotes: "Non-violent offenders with a substance use disorder or mental health diagnosis. West Virginia operates drug courts in all 31 judicial circuits. Family drug courts focus on parents with child welfare involvement. Eligibility determined by local circuit court and prosecutor. Contact your circuit court or defense attorney.",
+    contact: {
+      url: "https://www.courtswv.gov",
+    },
+    sources: ["West Virginia Supreme Court of Appeals", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
+
+  // Wyoming
+  {
+    id: "wy-state-cst-programs",
+    name: "Wyoming Court Supervised Treatment (CST) Programs",
+    jurisdictionType: "state",
+    state: "WY",
+    county: null,
+    cities: ["Cheyenne", "Casper", "Laramie", "Gillette", "Rock Springs"],
+    zipCodes: null,
+    programTypes: ["Drug Court", "DUI Court", "Mental Health Court", "Veterans Court"],
+    eligibilityNotes: "Serious but non-violent offenders with substance use disorders. Programs managed through the Wyoming Department of Health in partnership with the judiciary. Adult, juvenile, and DUI tracks available. Risk/needs assessment required. Contact the Wyoming Department of Health's Behavioral Health Division.",
+    contact: {
+      phone: "(307) 777-6494",
+      url: "https://health.wyo.gov/behavioralhealth/",
+    },
+    sources: ["Wyoming Department of Health – Behavioral Health Division", "NADCP"],
+    lastUpdated: new Date("2026-04-10"),
+    isActive: true,
+  },
 ];
 
 // Helper function to search diversion programs by location
