@@ -180,11 +180,16 @@ function checkILDoubleSlash(charges: CriminalCharge[]): Flag[] {
 
 function checkTXHomicideCodes(charges: CriminalCharge[]): Flag[] {
   const homicidePattern = /murder|manslaughter|homicide|killing/i;
+  // Known TX death-related offenses that legitimately live outside § 19.xx:
+  //   tx-vehicular-homicide → Intoxication Manslaughter (§ 49.08, Chapter 49)
+  //   tx-attempted-murder   → Criminal Attempt (§ 15.01) applied to § 19.02 murder
+  const KNOWN_NON_19 = new Set(['tx-vehicular-homicide', 'tx-attempted-murder']);
   return charges
     .filter(c => {
       if (c.jurisdiction !== 'TX') return false;
       if (!homicidePattern.test(c.name)) return false;
       if (!c.code?.trim()) return false;
+      if (KNOWN_NON_19.has(c.id)) return false;
       // TX Penal Code homicide is entirely within § 19.xx (§§ 19.01–19.06).
       return !c.code.trim().match(/^19\./);
     })
