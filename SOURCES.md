@@ -4,7 +4,7 @@
 
 This index documents where every category of data on the OpenDefender platform comes from, what verification processes are in place, and where to look to update the data. It is intended for quality control reviewers, contributors, and maintainers.
 
-Last reviewed: March 2026 (updated after editorial review pass)
+Last reviewed: April 2026 (diversion programs section updated after national expansion)
 
 ---
 
@@ -176,23 +176,39 @@ Each state entry in this file contains a `sources` array listing the exact legal
 
 **Primary sources** (documented in file header and per-program `sources` fields):
 
-1. NDAA Prosecutor-Led Diversion Programs Directory — https://diversion.ndaa.org/
-2. Center for Health and Justice Report (2024)
-3. Individual county and state superior court websites
-4. District Attorney and prosecutor office websites
-5. CrimeSolutions.gov (when available)
+1. **NADCP** — National Association of Drug Court Professionals, Find-a-Drug-Court locator — https://www.nadcp.org/find-a-drug-court/
+2. **NDAA** — Prosecutor-Led Diversion Programs Directory — https://diversion.ndaa.org/
+3. **National TASC** — Treatment Accountability for Safer Communities (Delaware fallback) — https://www.nationaltasc.org
+4. Center for Health and Justice Report (2024)
+5. Individual state and county court system websites (official state judiciary portals for all 50 states)
+6. State Department of Health agencies (Wyoming, Montana)
+7. District Attorney and prosecutor office websites
+8. CrimeSolutions.gov (when available)
 
-Each program record carries a `sources` array. Example sources used:
-- Los Angeles Superior Court
-- Harris County District Courts
-- New York State Unified Court System
-- Milwaukee County Courts / Wisconsin DOJ TAD Program
-- EAC Network
-- Delaware Department of Health and Social Services
+Each program record carries a `sources` array listing the exact court system or organization the data was verified against.
 
-**Coverage:** 73 programs across California, New York, Texas, Florida, Georgia, Illinois, Delaware, Wisconsin, and additional states.
+**Coverage (as of April 2026):** 111 programs covering all 50 states + DC + Federal programs.
 
-**To update:** Check the NDAA directory first for additions and changes, then verify each program's eligibility criteria, contact information, and operating status directly with the court or prosecutor's office. Program availability changes frequently.
+| Tier | Programs | Coverage |
+|------|---------|---------|
+| Metro-area programs | 78 | CA, CO, DE, FL, GA, IL, IN, MA, MN, NC, NY, OH, OR, PA, TN, TX, WA, WI + Federal |
+| Statewide programs | 33 | AK, AL, AR, AZ, CT, DC, HI, IA, ID, KS, KY, LA, ME, MD, MI, MO, MS, MT, ND, NE, NH, NJ, NM, NV, OK, RI, SC, SD, UT, VA, VT, WV, WY |
+
+Metro programs represent detailed county- or city-level entries with specific program contacts. Statewide entries point to the official state court system's specialty/problem-solving courts portal, which lists all local programs in that state.
+
+**Link validation script:** `scripts/check-diversion-programs.ts`
+
+Run with:
+```bash
+npx tsx scripts/check-diversion-programs.ts          # console output only
+npx tsx scripts/check-diversion-programs.ts --report  # also writes scripts/output/diversion-link-report.json
+```
+
+The script makes HEAD requests to all 111 contact URLs, falls back to GET when HEAD is rejected (405/406), and treats 403/999 responses from government CDN bot-blocks as "live." Exit code 0 = all live, 1 = one or more broken links.
+
+**Last link validation:** April 10, 2026 — 110/111 live (1 intermittent CDN throttle on kscourts.org, which is confirmed live in browser). 9 broken URLs found in pre-existing data were fixed in this pass.
+
+**To update:** Check the NADCP locator (https://www.nadcp.org/find-a-drug-court/) first for additions and changes in specific states, then verify eligibility criteria and contact information directly with the court or prosecutor's office. Run `check-diversion-programs.ts` after any batch update to confirm all contact URLs are still live. Program availability changes frequently — re-run the link checker before each quarterly data review.
 
 ---
 
@@ -394,6 +410,7 @@ Two GitHub Actions workflows run on January 1, April 1, July 1, and October 1 at
 | `check-detention-facilities.ts` | Validates ICE detention facility data URLs | `detention-diff.json` |
 | `check-consulates.ts` | Verifies consulate contact information and URLs | `consulate-diff.json` |
 | `check-public-defenders.ts` | HTTP HEAD requests to all public defender and court-appointed program websites; also flags entries with missing phone numbers | `public-defenders-diff.json` |
+| `check-diversion-programs.ts` | HTTP HEAD/GET requests to all 111 diversion program contact URLs — treats 403/999 from gov CDNs as live; exits non-zero if any true 404/ERROR found | `diversion-link-report.json` |
 | `generate-report.ts` | Reads all diff outputs and opens a GitHub Issue with items needing manual review | GitHub Issue |
 
 **What to do when a quarterly issue is filed:** Each item in the issue requires a human to visit the flagged URL or organization directly, verify the current correct information, and update the corresponding seed file or data file in the repository.
@@ -458,6 +475,8 @@ The following external organizations are linked from support and resource pages.
 | EOIR Pro Bono List | https://www.justice.gov/eoir/pro-bono-legal-service-providers | Immigration legal aid directory |
 | LSC Grantee Directory | https://www.lsc.gov/grants/grantee-directory | Civil legal aid organizations |
 | NDAA Diversion Directory | https://diversion.ndaa.org/ | Prosecutor-led diversion programs |
+| NADCP Find-a-Drug-Court | https://www.nadcp.org/find-a-drug-court/ | Drug court and problem-solving court locator (all 50 states) |
+| National TASC | https://www.nationaltasc.org | Treatment Accountability for Safer Communities — fallback for states where DHSS sites block automated checks |
 | Cornell LII | https://www.law.cornell.edu/uscode | Federal statute text |
 
 ---
@@ -500,4 +519,5 @@ Platform content has not been formally reviewed by a licensed attorney as of Mar
 - Federal statute URLs (quarterly)
 - Legal aid organization URLs (quarterly)
 - Public defender and court-appointed program websites (quarterly); missing phone numbers also flagged
+- **Diversion program contact URLs (quarterly)** — all 111 programs via `check-diversion-programs.ts`; 403/999 CDN bot-blocks treated as live, true 404/ERROR responses flagged
 - AI Case Guidance output: citation existence (Tier 1 DB + Tier 3 OpenLaws), case law precedent (Tier 2 CourtListener), penalty accuracy, jurisdiction match, timeline verification — all at generation time

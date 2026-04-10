@@ -19,7 +19,7 @@ To democratize access to legal information and resources, particularly for indiv
 ### Comprehensive Legal Database
 - **6,496 Criminal Charges** with statute citations across all 56 U.S. jurisdictions (50 states, DC, and territories)
 - **5,956 State Statutes** with citation links to all 51 state legislature websites
-- **73 Diversion Programs** covering major U.S. metropolitan areas
+- **111 Diversion Programs** covering all 50 states, DC, and Federal programs
 - **Complete Federal Criminal Code** via GovInfo API (Title 18 USC)
 - **Live Statute Retrieval** via OpenLaws API across 53 jurisdictions
 
@@ -30,7 +30,7 @@ To democratize access to legal information and resources, particularly for indiv
 - **NLP-based PII redaction** before any data reaches the AI
 
 ### Site-Wide Search
-- Indexes **6,670+ legal documents** across charges, statutes, glossary terms, diversion programs, and all site pages
+- Indexes **7,850+ legal documents** across charges, statutes, glossary terms, diversion programs, and all site pages
 - Legal synonym expansion and weighted relevance scoring
 - Fully multilingual (EN / ES / ZH)
 
@@ -198,7 +198,7 @@ Contributions are welcome. Areas where help is especially valuable:
 
 - **Translations**: Improving or expanding EN/ES/ZH translations in `client/src/i18n.ts`
 - **Charge data**: Adding or correcting statute citations in `shared/criminal-charges.ts`
-- **Diversion programs**: Updating program availability in `server/data/`
+- **Diversion programs**: Updating program availability in `client/src/lib/diversion-programs-data.ts`
 - **Document templates**: Adding new motion templates in `server/services/attorney-docs/`
 - **Accessibility**: WCAG 2.1 AA improvements across the UI
 
