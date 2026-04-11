@@ -2812,6 +2812,10 @@ i18n
               "legalContext": "Legal Context:",
               "aliases": "Also known as:",
               "categories": "Categories:"
+            },
+            "results": {
+              "noResults": "No terms found",
+              "tryDifferentSearch": "Try a different search term or clear filters"
             }
           },
           "process": {
@@ -3442,7 +3446,8 @@ i18n
             },
             "navigation": {
               "backToHome": "Back to Home",
-              "programsCount": "{{count}} of {{total}} programs"
+              "programsCount": "{{count}} of {{total}} programs",
+              "totalPrograms": "{{total}} programs available"
             },
             "search": {
               "placeholder": "Enter your zip code, county, or city...",
@@ -3451,7 +3456,16 @@ i18n
               "federalPrograms": "Federal Programs",
               "filterByProgramType": "Filter by Program Type:",
               "allProgramTypes": "All program types",
-              "clearAllFilters": "Clear All Filters"
+              "clearAllFilters": "Clear All Filters",
+              "searching": "Searching for programs near you..."
+            },
+            "initialState": {
+              "title": "Search for Diversion Programs",
+              "description": "Enter your city, county, or state above to find diversion programs in your area.",
+              "programCount": "We have {{count}} programs across multiple states ready to help."
+            },
+            "expandedSearch": {
+              "message": "Showing all {{count}} programs in {{state}} for ZIP code {{zipCode}}. These programs may be available to you or accept referrals from your area."
             },
             "infoBanner": {
               "title": "What are Diversion Programs?",
@@ -4870,6 +4884,67 @@ i18n
                   "description": "Add legal search and charge lookup to your own website."
                 }
               }
+            }
+          },
+          "resources": {
+            "hero": {
+              "title": "Legal Resources",
+              "subtitle": "Tools and information to help you navigate the legal system"
+            },
+            "legalAid": {
+              "title": "Legal Aid Organizations",
+              "description": "Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community."
+            },
+            "publicDefender": {
+              "title": "Find a Public Defender",
+              "description": "Search for public defender offices in your area by zip code to get free legal representation."
+            },
+            "courtLocator": {
+              "title": "Find Local Courts",
+              "description": "Locate courts in your area, find addresses, phone numbers, and directions to courthouses."
+            },
+            "courtRecords": {
+              "title": "Find Court Records",
+              "description": "Access public court records, case information, and PACER resources for federal and state courts."
+            },
+            "glossary": {
+              "title": "Legal Glossary",
+              "description": "Understand legal terminology with our comprehensive glossary of terms commonly used in criminal proceedings."
+            },
+            "diversionPrograms": {
+              "title": "Diversion Programs",
+              "description": "Explore alternative sentencing programs that may help you avoid traditional prosecution and criminal records."
+            },
+            "expungement": {
+              "title": "Record Expungement",
+              "description": "Learn about clearing your criminal record, eligibility requirements, and the expungement process in your state."
+            },
+            "documentSummarizer": {
+              "title": "Document Summarizer",
+              "description": "Upload legal documents and get AI-powered plain-English summaries. Your documents are never stored."
+            },
+            "sections": {
+              "legalHelp": {
+                "title": "Find Legal Help",
+                "description": "Free and low-cost legal representation near you"
+              },
+              "courts": {
+                "title": "Courts & Records",
+                "description": "Locate courthouses and search public court records"
+              },
+              "info": {
+                "title": "Legal Information",
+                "description": "Reference guides, glossary, and process explanations"
+              },
+              "tools": {
+                "title": "Tools",
+                "description": "AI-powered tools to help you understand your documents"
+              }
+            },
+            "needHelp": {
+              "title": "Need Personalized Guidance?",
+              "description": "Our case guidance tool can help you understand your specific situation and provide tailored information based on your charges and jurisdiction.",
+              "cta": "Get Case Guidance"
             }
           }
       }
@@ -7667,6 +7742,10 @@ i18n
               "legalContext": "Contexto Legal:",
               "aliases": "También conocido como:",
               "categories": "Categorías:"
+            },
+            "results": {
+              "noResults": "No se encontraron términos",
+              "tryDifferentSearch": "Intente un término de búsqueda diferente o borre los filtros"
             }
           },
           "process": {
@@ -8297,7 +8376,8 @@ i18n
             },
             "navigation": {
               "backToHome": "Volver al Inicio",
-              "programsCount": "{{count}} de {{total}} programas"
+              "programsCount": "{{count}} de {{total}} programas",
+              "totalPrograms": "{{total}} programas disponibles"
             },
             "search": {
               "placeholder": "Ingrese su código postal, condado o ciudad...",
@@ -8306,7 +8386,16 @@ i18n
               "federalPrograms": "Programas Federales",
               "filterByProgramType": "Filtrar por Tipo de Programa:",
               "allProgramTypes": "Todos los tipos de programas",
-              "clearAllFilters": "Limpiar Todos los Filtros"
+              "clearAllFilters": "Limpiar Todos los Filtros",
+              "searching": "Buscando programas cerca de usted..."
+            },
+            "initialState": {
+              "title": "Buscar Programas de Desviación",
+              "description": "Ingrese su ciudad, condado o estado arriba para encontrar programas de desviación en su área.",
+              "programCount": "Tenemos {{count}} programas en múltiples estados listos para ayudar."
+            },
+            "expandedSearch": {
+              "message": "Mostrando los {{count}} programas en {{state}} para el código postal {{zipCode}}. Es posible que estos programas estén disponibles para usted o acepten referencias de su área."
             },
             "infoBanner": {
               "title": "¿Qué son los Programas de Desviación?",
@@ -9725,6 +9814,67 @@ i18n
                   "description": "Agregue búsqueda legal y consulta de cargos a su propio sitio web."
                 }
               }
+            }
+          },
+          "resources": {
+            "hero": {
+              "title": "Recursos Legales",
+              "subtitle": "Herramientas e información para ayudarle a navegar el sistema legal"
+            },
+            "legalAid": {
+              "title": "Organizaciones de Asistencia Legal",
+              "description": "Encuentre organizaciones de asistencia legal sin fines de lucro que brindan ayuda legal gratuita o de bajo costo en su comunidad."
+            },
+            "publicDefender": {
+              "title": "Encontrar un Defensor Público",
+              "description": "Busque oficinas de defensores públicos en su área por código postal para obtener representación legal gratuita."
+            },
+            "courtLocator": {
+              "title": "Encontrar Tribunales Locales",
+              "description": "Localice tribunales en su área, encuentre direcciones, números de teléfono e indicaciones a los juzgados."
+            },
+            "courtRecords": {
+              "title": "Encontrar Registros Judiciales",
+              "description": "Acceda a registros judiciales públicos, información de casos y recursos de PACER para tribunales federales y estatales."
+            },
+            "glossary": {
+              "title": "Glosario Legal",
+              "description": "Comprenda la terminología legal con nuestro glosario completo de términos utilizados comúnmente en procedimientos penales."
+            },
+            "diversionPrograms": {
+              "title": "Programas de Desviación",
+              "description": "Explore programas alternativos de sentencia que pueden ayudarle a evitar el procesamiento penal tradicional y los antecedentes criminales."
+            },
+            "expungement": {
+              "title": "Eliminación de Antecedentes",
+              "description": "Conozca los requisitos de elegibilidad y el proceso para limpiar su expediente criminal en su estado."
+            },
+            "documentSummarizer": {
+              "title": "Resumidor de Documentos",
+              "description": "Cargue documentos legales y obtenga resúmenes en lenguaje sencillo impulsados por IA. Sus documentos nunca se almacenan."
+            },
+            "sections": {
+              "legalHelp": {
+                "title": "Encontrar Ayuda Legal",
+                "description": "Representación legal gratuita y de bajo costo cerca de usted"
+              },
+              "courts": {
+                "title": "Tribunales y Registros",
+                "description": "Localice juzgados y busque registros judiciales públicos"
+              },
+              "info": {
+                "title": "Información Legal",
+                "description": "Guías de referencia, glosario y explicaciones del proceso"
+              },
+              "tools": {
+                "title": "Herramientas",
+                "description": "Herramientas impulsadas por IA para ayudarle a entender sus documentos"
+              }
+            },
+            "needHelp": {
+              "title": "¿Necesita Orientación Personalizada?",
+              "description": "Nuestra herramienta de orientación de casos puede ayudarle a entender su situación específica y proporcionar información adaptada a sus cargos y jurisdicción.",
+              "cta": "Obtener Orientación de Caso"
             }
           }
         }
@@ -12522,6 +12672,10 @@ i18n
               "legalContext": "法律语境：",
               "aliases": "又称：",
               "categories": "类别："
+            },
+            "results": {
+              "noResults": "未找到相关术语",
+              "tryDifferentSearch": "请尝试不同的搜索词或清除筛选条件"
             }
           },
           "process": {
@@ -13152,7 +13306,8 @@ i18n
             },
             "navigation": {
               "backToHome": "返回首页",
-              "programsCount": "{{total}} 个计划中的 {{count}} 个"
+              "programsCount": "{{total}} 个计划中的 {{count}} 个",
+              "totalPrograms": "{{total}} 个计划可用"
             },
             "search": {
               "placeholder": "输入您的邮编、县或城市...",
@@ -13161,7 +13316,16 @@ i18n
               "federalPrograms": "联邦计划",
               "filterByProgramType": "按计划类型筛选：",
               "allProgramTypes": "所有计划类型",
-              "clearAllFilters": "清除所有筛选条件"
+              "clearAllFilters": "清除所有筛选条件",
+              "searching": "正在搜索您附近的计划..."
+            },
+            "initialState": {
+              "title": "搜索转移计划",
+              "description": "在上方输入您的城市、县或州，以查找您所在地区的转移计划。",
+              "programCount": "我们在多个州共有 {{count}} 个计划，随时准备提供帮助。"
+            },
+            "expandedSearch": {
+              "message": "正在显示 {{state}} 中邮编 {{zipCode}} 的全部 {{count}} 个计划。这些计划可能适用于您，或接受来自您所在地区的转介。"
             },
             "infoBanner": {
               "title": "什么是转处计划？",
@@ -14581,6 +14745,67 @@ i18n
                   "description": "将法律搜索和指控查询添加到您自己的网站。"
                 }
               }
+            }
+          },
+          "resources": {
+            "hero": {
+              "title": "法律资源",
+              "subtitle": "帮助您了解法律体系的工具和信息"
+            },
+            "legalAid": {
+              "title": "法律援助组织",
+              "description": "查找在您社区提供免费或低成本法律援助的非营利性法律机构。"
+            },
+            "publicDefender": {
+              "title": "查找公设辩护人",
+              "description": "通过邮政编码搜索您所在地区的公设辩护人办公室，获得免费法律代理。"
+            },
+            "courtLocator": {
+              "title": "查找当地法院",
+              "description": "找到您所在地区的法院，查看地址、电话号码以及前往法院的路线。"
+            },
+            "courtRecords": {
+              "title": "查找法院记录",
+              "description": "访问联邦和州法院的公共法庭记录、案件信息及PACER资源。"
+            },
+            "glossary": {
+              "title": "法律词汇表",
+              "description": "通过我们全面的法律词汇表了解刑事诉讼中常用的法律术语。"
+            },
+            "diversionPrograms": {
+              "title": "转移计划",
+              "description": "了解可能帮助您避免传统起诉和犯罪记录的替代量刑计划。"
+            },
+            "expungement": {
+              "title": "记录清除",
+              "description": "了解您所在州的犯罪记录清除资格要求和申请流程。"
+            },
+            "documentSummarizer": {
+              "title": "文件摘要工具",
+              "description": "上传法律文件，获得AI驱动的通俗易懂摘要。您的文件永不保存。"
+            },
+            "sections": {
+              "legalHelp": {
+                "title": "寻找法律帮助",
+                "description": "您附近的免费和低成本法律代理"
+              },
+              "courts": {
+                "title": "法院与记录",
+                "description": "查找法院位置并搜索公共法庭记录"
+              },
+              "info": {
+                "title": "法律信息",
+                "description": "参考指南、词汇表和程序说明"
+              },
+              "tools": {
+                "title": "工具",
+                "description": "AI驱动的工具，帮助您理解法律文件"
+              }
+            },
+            "needHelp": {
+              "title": "需要个性化指导？",
+              "description": "我们的案件指导工具可以帮助您了解您的具体情况，并根据您的指控和管辖区提供量身定制的信息。",
+              "cta": "获取案件指导"
             }
           }
         }
