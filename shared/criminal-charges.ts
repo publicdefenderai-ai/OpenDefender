@@ -1857,12 +1857,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '11.61.110',
     jurisdiction: 'AK',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Alaska law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting or tumultuous behavior in public under Alaska law',
+    maxPenalty: 'Up to 10 days in jail and/or $500 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent', 'Provocation', 'Vagueness of statute'],
+    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
+    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
+    urgentActions: ['Document the circumstances', 'Gather witness information', 'Contact attorney']
   },
   {
     id: 'ak-public-intoxication',
@@ -3495,12 +3495,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '13-3415',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
-    description: 'Possession of drug-related equipment under Arizona law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Lack of knowledge', 'Illegal search and seizure', 'Entrapment', 'Medical necessity'],
-    evidenceToGather: ['Physical evidence', 'Chain of custody', 'Search warrant validity', 'Laboratory analysis'],
-    specificRights: ['Right to challenge search', 'Right to laboratory analysis', 'Right to treatment options'],
-    urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
+    description: 'Possession of items for drug use under A.R.S. § 13-3415',
+    maxPenalty: 'Class 6 felony but often charged as misdemeanor: up to 6 months',
+    commonDefenses: ['Unlawful search and seizure', 'Items not drug paraphernalia', 'Lack of knowledge', 'Constructive possession challenge'],
+    evidenceToGather: ['Search warrant documentation', 'Photos of items seized', 'Lab analysis results', 'Chain of custody records'],
+    specificRights: ['Right to challenge search legality', 'Right to lab testing', 'Right to Prop 200 diversion eligibility'],
+    urgentActions: ['Contact criminal defense attorney', 'Do not consent to searches', 'Inquire about TASC diversion program']
   },
   {
     id: 'az-maintaining-drug-house',
@@ -3664,12 +3664,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '13-2904',
     jurisdiction: 'AZ',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Arizona law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Disturbing peace, fighting, or unreasonable noise under A.R.S. § 13-2904',
+    maxPenalty: 'Class 1 misdemeanor: up to 6 months/$2,500',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to cause disruption', 'Provocation by others', 'Vague statute application'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police reports', 'Evidence of protected activity'],
+    specificRights: ['Right to free speech', 'Right to peaceful assembly', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Document circumstances of arrest', 'Identify witnesses']
   },
   {
     id: 'az-public-intoxication',
@@ -3815,19 +3815,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact qualified criminal defense attorney immediately']
   },
   {
-    id: 'az-shoplifting-misdemeanor',
-    name: 'Shoplifting',
-    code: '13-1805',
-    jurisdiction: 'AZ',
-    category: 'misdemeanor',
-    description: 'Concealing or removing merchandise under $1,000 under A.R.S. § 13-1805',
-    maxPenalty: 'Class 1 misdemeanor: up to 6 months/$2,500',
-    commonDefenses: ['Lack of intent to steal', 'Mistaken identity', 'Accidental failure to pay', 'Value dispute under threshold'],
-    evidenceToGather: ['Surveillance footage', 'Store loss prevention reports', 'Witness statements', 'Receipt or proof of purchase'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact criminal defense attorney', 'Do not discuss case with store employees', 'Preserve any receipts or proof of purchase']
-  },
-  {
     id: 'az-assault-misdemeanor',
     name: 'Assault',
     code: '13-1203',
@@ -3867,19 +3854,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney immediately', 'Comply with orders of protection', 'Do not contact alleged victim']
   },
   {
-    id: 'az-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '13-2904',
-    jurisdiction: 'AZ',
-    category: 'misdemeanor',
-    description: 'Disturbing peace, fighting, or unreasonable noise under A.R.S. § 13-2904',
-    maxPenalty: 'Class 1 misdemeanor: up to 6 months/$2,500',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to cause disruption', 'Provocation by others', 'Vague statute application'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police reports', 'Evidence of protected activity'],
-    specificRights: ['Right to free speech', 'Right to peaceful assembly', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Document circumstances of arrest', 'Identify witnesses']
-  },
-  {
     id: 'az-criminal-trespass-third-degree',
     name: 'Criminal Trespass Third Degree',
     code: '13-1502',
@@ -3891,19 +3865,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Property signage photos', 'Communication with property owner', 'Witness statements', 'Evidence of prior permission'],
     specificRights: ['Right to challenge adequacy of notice', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Document any evidence of permission', 'Do not return to the property']
-  },
-  {
-    id: 'az-possession-drug-paraphernalia-misdemeanor',
-    name: 'Possession of Drug Paraphernalia',
-    code: '13-3415',
-    jurisdiction: 'AZ',
-    category: 'misdemeanor',
-    description: 'Possession of items for drug use under A.R.S. § 13-3415',
-    maxPenalty: 'Class 6 felony but often charged as misdemeanor: up to 6 months',
-    commonDefenses: ['Unlawful search and seizure', 'Items not drug paraphernalia', 'Lack of knowledge', 'Constructive possession challenge'],
-    evidenceToGather: ['Search warrant documentation', 'Photos of items seized', 'Lab analysis results', 'Chain of custody records'],
-    specificRights: ['Right to challenge search legality', 'Right to lab testing', 'Right to Prop 200 diversion eligibility'],
-    urgentActions: ['Contact criminal defense attorney', 'Do not consent to searches', 'Inquire about TASC diversion program']
   },
   {
     id: 'az-criminal-damage-misdemeanor',
@@ -4704,12 +4665,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '5-71-207',
     jurisdiction: 'AR',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Arkansas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting or creating unreasonable noise in public under Arkansas law',
+    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ar-public-intoxication',
@@ -4717,12 +4678,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '5-71-212',
     jurisdiction: 'AR',
     category: 'misdemeanor',
-    description: 'Being intoxicated in public under Arkansas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Appearing in public place manifestly under the influence under Arkansas law',
+    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
+    commonDefenses: ['Not in public', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
   },
   {
     id: 'ar-disturbing-the-peace',
@@ -4977,12 +4938,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '18-3-204',
     jurisdiction: 'CO',
     category: 'misdemeanor',
-    description: 'Intentional bodily injury under Colorado law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
-    urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
+    description: 'Knowingly or recklessly causing bodily injury under C.R.S. § 18-3-204',
+    maxPenalty: 'Class 1 misdemeanor: up to 364 days jail and/or $1,000 fine',
+    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent', 'Consent'],
+    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Photos of injuries'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact criminal defense attorney immediately', 'Document any injuries or self-defense claims', 'Identify witnesses']
   },
   {
     id: 'co-aggravated-assault',
@@ -5614,12 +5575,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '18-9-106',
     jurisdiction: 'CO',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Colorado law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Fighting, unreasonable noise, or offensive gestures under C.R.S. § 18-9-106',
+    maxPenalty: 'Petty offense: up to $300 fine or 10 days jail',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
+    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'co-public-intoxication',
@@ -5778,19 +5739,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact criminal defense attorney', 'Do not make statements to police', 'Preserve any evidence of ownership']
   },
   {
-    id: 'co-assault-third-degree',
-    name: 'Assault Third Degree',
-    code: '18-3-204',
-    jurisdiction: 'CO',
-    category: 'misdemeanor',
-    description: 'Knowingly or recklessly causing bodily injury under C.R.S. § 18-3-204',
-    maxPenalty: 'Class 1 misdemeanor: up to 364 days jail and/or $1,000 fine',
-    commonDefenses: ['Self-defense', 'Defense of others', 'Lack of intent', 'Consent'],
-    evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Photos of injuries'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact criminal defense attorney immediately', 'Document any injuries or self-defense claims', 'Identify witnesses']
-  },
-  {
     id: 'co-dui',
     name: 'DUI',
     code: '42-4-1301',
@@ -5815,19 +5763,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos of injuries', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to contest protective order'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Comply with any protective orders', 'Do not contact alleged victim']
-  },
-  {
-    id: 'co-disorderly-conduct-petty',
-    name: 'Disorderly Conduct',
-    code: '18-9-106',
-    jurisdiction: 'CO',
-    category: 'misdemeanor',
-    description: 'Fighting, unreasonable noise, or offensive gestures under C.R.S. § 18-9-106',
-    maxPenalty: 'Petty offense: up to $300 fine or 10 days jail',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
-    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'co-trespass-first-degree',
@@ -5880,19 +5815,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['DMV records', 'Notice of restraint documentation', 'Driving record', 'Proof of reinstatement'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to challenge restraint validity'],
     urgentActions: ['Contact attorney', 'Obtain DMV driving record', 'Begin license reinstatement process']
-  },
-  {
-    id: 'co-shoplifting-petty',
-    name: 'Shoplifting',
-    code: '40-85',
-    jurisdiction: 'CO',
-    category: 'misdemeanor',
-    description: 'Taking retail merchandise under $300 under C.R.S. § 18-4-401',
-    maxPenalty: 'Petty offense: up to $300 fine',
-    commonDefenses: ['Lack of intent to steal', 'Mistaken identity', 'Accidental failure to pay', 'Incorrect merchandise value'],
-    evidenceToGather: ['Store surveillance footage', 'Receipt records', 'Witness statements', 'Loss prevention reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to challenge evidence'],
-    urgentActions: ['Contact criminal defense attorney', 'Do not sign any store documents', 'Do not make statements']
   },
   {
     id: 'ct-murder-in-the-first-degree',
@@ -7603,12 +7525,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '1301',
     jurisdiction: 'DE',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Delaware law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in violent or threatening behavior in public under Delaware law',
+    maxPenalty: 'Up to 30 days in jail',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'de-public-intoxication',
@@ -9410,12 +9332,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '16-11-39',
     jurisdiction: 'GA',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Georgia law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Acting in violent or tumultuous manner or using fighting words under Official Code of Georgia § 16-11-39',
+    maxPenalty: 'Misdemeanor: up to 12 months/$1,000',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent', 'Provocation by others', 'Conduct was not public'],
+    evidenceToGather: ['Video recordings', 'Witness statements', 'Police reports', 'Audio recordings'],
+    specificRights: ['Right to free speech defense', 'Right to challenge public nuisance claim', 'Right to jury trial'],
+    urgentActions: ['Cease disruptive behavior', 'Contact criminal defense attorney', 'Identify witnesses']
   },
   {
     id: 'ga-public-intoxication',
@@ -9611,19 +9533,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Search warrant documentation', 'Chain of custody records', 'Lab analysis results', 'Officer body camera footage'],
     specificRights: ['Right to challenge search legality', 'Right to suppress evidence', 'Right to conditional discharge consideration'],
     urgentActions: ['Do not consent to searches', 'Contact criminal defense attorney', 'Do not make statements about substance']
-  },
-  {
-    id: 'ga-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '16-11-39',
-    jurisdiction: 'GA',
-    category: 'misdemeanor',
-    description: 'Acting in violent or tumultuous manner or using fighting words under Official Code of Georgia § 16-11-39',
-    maxPenalty: 'Misdemeanor: up to 12 months/$1,000',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent', 'Provocation by others', 'Conduct was not public'],
-    evidenceToGather: ['Video recordings', 'Witness statements', 'Police reports', 'Audio recordings'],
-    specificRights: ['Right to free speech defense', 'Right to challenge public nuisance claim', 'Right to jury trial'],
-    urgentActions: ['Cease disruptive behavior', 'Contact criminal defense attorney', 'Identify witnesses']
   },
   {
     id: 'ga-criminal-trespass',
@@ -10450,12 +10359,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '711-1101',
     jurisdiction: 'HI',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Hawaii law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Intent to cause inconvenience or alarm by engaging in fighting or disruptive behavior under Hawaii law',
+    maxPenalty: 'Up to 30 days in jail and/or $1,000 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'hi-public-intoxication',
@@ -11386,12 +11295,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '18-6409',
     jurisdiction: 'ID',
     category: 'misdemeanor',
-    description: 'Disrupting public tranquility under Idaho law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in malicious or willful disturbance of peace under Idaho law',
+    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'id-trespassing',
@@ -13115,12 +13024,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '35-45-1-3',
     jurisdiction: 'IN',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Indiana law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Fighting, making unreasonable noise, or disrupting assembly under I.C. § 35-45-1-3',
+    maxPenalty: 'Class B misdemeanor: up to 180 days jail and/or $1,000 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
+    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'in-public-intoxication',
@@ -13258,12 +13167,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '9-24-19-2',
     jurisdiction: 'IN',
     category: 'misdemeanor',
-    description: 'Driving with suspended license under Indiana law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Operating vehicle while license suspended under I.C. § 9-24-19-2',
+    maxPenalty: 'Class A infraction or Class A misdemeanor: up to 1 year jail and/or $5,000 fine',
+    commonDefenses: ['Lack of notice of suspension', 'Driving out of necessity', 'License already reinstated', 'Mistaken identity'],
+    evidenceToGather: ['BMV records', 'Notice of suspension documentation', 'Driving record', 'Proof of reinstatement'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to challenge suspension validity'],
+    urgentActions: ['Contact attorney', 'Obtain BMV driving record', 'Begin license reinstatement process']
   },
   {
     id: 'in-theft-misdemeanor',
@@ -13318,19 +13227,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact criminal defense attorney immediately', 'Comply with any protective orders', 'Do not contact alleged victim']
   },
   {
-    id: 'in-disorderly-conduct-class-b',
-    name: 'Disorderly Conduct',
-    code: '35-45-1-3',
-    jurisdiction: 'IN',
-    category: 'misdemeanor',
-    description: 'Fighting, making unreasonable noise, or disrupting assembly under I.C. § 35-45-1-3',
-    maxPenalty: 'Class B misdemeanor: up to 180 days jail and/or $1,000 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
-    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
-  },
-  {
     id: 'in-criminal-trespass',
     name: 'Criminal Trespass',
     code: '35-43-2-2',
@@ -13368,19 +13264,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Photos of damage', 'Witness statements', 'Repair cost estimates', 'Surveillance footage'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to challenge damage valuation'],
     urgentActions: ['Contact attorney', 'Document damage with photos', 'Preserve evidence of accidental cause']
-  },
-  {
-    id: 'in-driving-while-suspended-misdemeanor',
-    name: 'Driving While Suspended',
-    code: '9-24-19-2',
-    jurisdiction: 'IN',
-    category: 'misdemeanor',
-    description: 'Operating vehicle while license suspended under I.C. § 9-24-19-2',
-    maxPenalty: 'Class A infraction or Class A misdemeanor: up to 1 year jail and/or $5,000 fine',
-    commonDefenses: ['Lack of notice of suspension', 'Driving out of necessity', 'License already reinstated', 'Mistaken identity'],
-    evidenceToGather: ['BMV records', 'Notice of suspension documentation', 'Driving record', 'Proof of reinstatement'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to challenge suspension validity'],
-    urgentActions: ['Contact attorney', 'Obtain BMV driving record', 'Begin license reinstatement process']
   },
   {
     id: 'in-resisting-law-enforcement',
@@ -14168,12 +14051,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '123.46',
     jurisdiction: 'IA',
     category: 'misdemeanor',
-    description: 'Being intoxicated in public under Iowa law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Being intoxicated in a public place under Iowa law',
+    maxPenalty: 'Up to 30 days in jail and/or $855 fine',
+    commonDefenses: ['Not in public', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
   },
   {
     id: 'ia-disturbing-the-peace',
@@ -15065,12 +14948,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '21-6203',
     jurisdiction: 'KS',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Kansas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting or creating unreasonable noise under Kansas law',
+    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ks-public-intoxication',
@@ -15208,12 +15091,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '8-262',
     jurisdiction: 'KS',
     category: 'misdemeanor',
-    description: 'Driving with suspended license under Kansas law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Operating motor vehicle with suspended license under Kansas law',
+    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
+    commonDefenses: ['Lack of notice', 'Emergency necessity', 'Expired suspension', 'Clerical error'],
+    evidenceToGather: ['DMV records', 'Notice of suspension', 'Driving record', 'Proof of reinstatement'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Check license status', 'Begin reinstatement']
   },
   {
     id: 'ky-murder-in-the-first-degree',
@@ -16898,12 +16781,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '14:103',
     jurisdiction: 'LA',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Louisiana law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in violent, abusive, or obscene behavior under La. R.S. § 14:103',
+    maxPenalty: 'Up to 90 days jail and/or $100 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
+    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'la-public-intoxication',
@@ -17099,19 +16982,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos of injuries', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to contest protective order'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Comply with any protective orders', 'Do not contact alleged victim']
-  },
-  {
-    id: 'la-disturbing-the-peace-misdemeanor',
-    name: 'Disturbing the Peace',
-    code: '14:103',
-    jurisdiction: 'LA',
-    category: 'misdemeanor',
-    description: 'Engaging in violent, abusive, or obscene behavior under La. R.S. § 14:103',
-    maxPenalty: 'Up to 90 days jail and/or $100 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
-    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'la-criminal-trespass',
@@ -18848,12 +18718,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '10-201',
     jurisdiction: 'MD',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Maryland law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Disturbing public peace by loud or unruly behavior under Md. Code, Crim. Law § 10-201',
+    maxPenalty: 'Up to 60 days jail and/or $500 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
+    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'md-public-intoxication',
@@ -19049,19 +18919,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos of injuries', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to contest protective order'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Comply with any protective orders', 'Do not contact alleged victim']
-  },
-  {
-    id: 'md-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '10-201',
-    jurisdiction: 'MD',
-    category: 'misdemeanor',
-    description: 'Disturbing public peace by loud or unruly behavior under Md. Code, Crim. Law § 10-201',
-    maxPenalty: 'Up to 60 days jail and/or $500 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Vagueness of statute', 'Provocation by others'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police body camera footage', 'Context of situation'],
-    specificRights: ['Right to free speech', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Gather witness contact information', 'Document circumstances of arrest']
   },
   {
     id: 'md-trespass',
@@ -22774,12 +22631,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '97-35-7',
     jurisdiction: 'MS',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Mississippi law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in violent or disorderly behavior in public under Mississippi law',
+    maxPenalty: 'Up to 6 months in jail and/or $500 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ms-public-intoxication',
@@ -23952,19 +23809,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact criminal defense attorney immediately', 'Obtain DMV driving record', 'Do not drive until license restored']
   },
   {
-    id: 'mo-shoplifting-misdemeanor',
-    name: 'Shoplifting',
-    code: '43-72',
-    jurisdiction: 'MO',
-    category: 'misdemeanor',
-    description: 'Concealing/removing merchandise under RSMo § 570.030',
-    maxPenalty: 'Class D misdemeanor if under $150: up to 15 days/$750',
-    commonDefenses: ['Lack of intent to steal', 'Mistaken identity', 'Accidentally left store', 'Ownership of property'],
-    evidenceToGather: ['Store surveillance footage', 'Receipt records', 'Witness statements', 'Loss prevention reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact criminal defense attorney immediately', 'Do not make statements to loss prevention', 'Preserve any receipts']
-  },
-  {
     id: 'mt-murder-in-the-first-degree',
     name: 'Murder in the First Degree',
     code: '5-78',
@@ -24724,12 +24568,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '45-8-101',
     jurisdiction: 'MT',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Montana law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Knowingly disturbing the peace by violent or threatening behavior under Montana law',
+    maxPenalty: 'Up to 10 days in jail and/or $100 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'mt-public-intoxication',
@@ -24737,12 +24581,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '53-24-108',
     jurisdiction: 'MT',
     category: 'misdemeanor',
-    description: 'Being intoxicated in public under Montana law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Being intoxicated in a public place to the degree of endangering self or others under Montana law',
+    maxPenalty: 'Up to 6 months in jail and/or $100 fine',
+    commonDefenses: ['Not in public', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
   },
   {
     id: 'mt-disturbing-the-peace',
@@ -25634,12 +25478,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '28-1322',
     jurisdiction: 'NE',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Nebraska law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting or creating public disturbance under Nebraska law',
+    maxPenalty: 'Up to 3 months in jail and/or $500 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ne-public-intoxication',
@@ -26544,12 +26388,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '203.010',
     jurisdiction: 'NV',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Nevada law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Breach of the peace or disorderly behavior in public under Nevada law',
+    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'nv-public-intoxication',
@@ -27454,12 +27298,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '644:2',
     jurisdiction: 'NH',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under New Hampshire law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting or creating hazardous conditions in public under New Hampshire law',
+    maxPenalty: 'Up to 1 year in jail and/or $2,000 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'nh-public-intoxication',
@@ -29365,12 +29209,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '30-20-1',
     jurisdiction: 'NM',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under New Mexico law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in violent or abusive behavior in public under New Mexico law',
+    maxPenalty: 'Up to 6 months in jail and/or $500 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'nm-public-intoxication',
@@ -32225,12 +32069,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '12.1-31-01',
     jurisdiction: 'ND',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under North Dakota law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting, threatening, or violent behavior in public under North Dakota law',
+    maxPenalty: 'Up to 30 days in jail and/or $1,500 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
+    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
+    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
+    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
   },
   {
     id: 'nd-public-intoxication',
@@ -33993,12 +33837,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '37-8',
     jurisdiction: 'OK',
     category: 'misdemeanor',
-    description: 'Being intoxicated in public under Oklahoma law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Being intoxicated in a public place under Oklahoma law',
+    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
+    commonDefenses: ['Not in public place', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
+    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
   },
   {
     id: 'ok-disturbing-the-peace',
@@ -36606,12 +36450,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '11-45-1',
     jurisdiction: 'RI',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Rhode Island law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in violent or threatening behavior in public under Rhode Island law',
+    maxPenalty: 'Up to 6 months in jail and/or $500 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ri-public-intoxication',
@@ -39427,12 +39271,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '39-17-305',
     jurisdiction: 'TN',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Tennessee law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Fighting, violent behavior, or unreasonable noise under T.C.A. § 39-17-305',
+    maxPenalty: 'Class C misdemeanor: up to 30 days/$50',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to cause disruption', 'Provocation by others', 'Vague statute application'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police reports', 'Evidence of protected activity'],
+    specificRights: ['Right to free speech', 'Right to peaceful assembly', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Document circumstances of arrest', 'Identify witnesses']
   },
   {
     id: 'tn-public-intoxication',
@@ -39628,19 +39472,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Communication records', 'Photos of scene and injuries'],
     specificRights: ['Right to protective order hearing', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney immediately', 'Comply with protective orders', 'Do not contact alleged victim']
-  },
-  {
-    id: 'tn-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '39-17-305',
-    jurisdiction: 'TN',
-    category: 'misdemeanor',
-    description: 'Fighting, violent behavior, or unreasonable noise under T.C.A. § 39-17-305',
-    maxPenalty: 'Class C misdemeanor: up to 30 days/$50',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to cause disruption', 'Provocation by others', 'Vague statute application'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police reports', 'Evidence of protected activity'],
-    specificRights: ['Right to free speech', 'Right to peaceful assembly', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Document circumstances of arrest', 'Identify witnesses']
   },
   {
     id: 'tn-criminal-trespass',
@@ -41273,12 +41104,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '76-9-102',
     jurisdiction: 'UT',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Utah law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in fighting or creating public disturbance under Utah law',
+    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ut-public-intoxication',
@@ -42183,12 +42014,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '1026',
     jurisdiction: 'VT',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Vermont law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in tumultuous behavior, making unreasonable noise, or obstructing traffic under Vermont law',
+    maxPenalty: 'Up to 60 days in jail and/or $500 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
+    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
+    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
+    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
   },
   {
     id: 'vt-public-intoxication',
@@ -43093,12 +42924,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '18.2-415',
     jurisdiction: 'VA',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Virginia law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Disrupting public peace under Va. Code § 18.2-415',
+    maxPenalty: 'Class 1 misdemeanor: up to 12 months/$2,500',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to cause disruption', 'Provocation by others', 'Vague statute application'],
+    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police reports', 'Evidence of protected activity'],
+    specificRights: ['Right to free speech', 'Right to peaceful assembly', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Document circumstances of arrest', 'Identify witnesses']
   },
   {
     id: 'va-public-intoxication',
@@ -43294,19 +43125,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Communication records', 'Photos of scene and injuries'],
     specificRights: ['Right to protective order hearing', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney immediately', 'Comply with protective orders', 'Do not contact alleged victim']
-  },
-  {
-    id: 'va-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '18.2-415',
-    jurisdiction: 'VA',
-    category: 'misdemeanor',
-    description: 'Disrupting public peace under Va. Code § 18.2-415',
-    maxPenalty: 'Class 1 misdemeanor: up to 12 months/$2,500',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to cause disruption', 'Provocation by others', 'Vague statute application'],
-    evidenceToGather: ['Video or audio recordings', 'Witness statements', 'Police reports', 'Evidence of protected activity'],
-    specificRights: ['Right to free speech', 'Right to peaceful assembly', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Document circumstances of arrest', 'Identify witnesses']
   },
   {
     id: 'va-trespass',
@@ -45108,12 +44926,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '61-6-1b',
     jurisdiction: 'WV',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under West Virginia law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in violent or tumultuous behavior in public under West Virginia law',
+    maxPenalty: 'Up to 6 months in jail and/or $100 fine',
+    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
+    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
+    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
+    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'wv-public-intoxication',
@@ -46018,12 +45836,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '947.01',
     jurisdiction: 'WI',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Wisconsin law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Violent, abusive, indecent, profane, boisterous, or unreasonably loud conduct under Wis. Stat. § 947.01',
+    maxPenalty: 'Class B misdemeanor: up to 90 days/$1,000',
+    commonDefenses: ['First Amendment protected speech', 'Conduct was not public', 'Provocation', 'Lack of intent to disturb'],
+    evidenceToGather: ['Witness statements', 'Video or audio recordings', 'Police reports', '911 call recordings'],
+    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to free speech defense'],
+    urgentActions: ['Contact criminal defense attorney', 'Document what occurred', 'Identify witnesses']
   },
   {
     id: 'wi-public-intoxication',
@@ -46219,19 +46037,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos of injuries', '911 call recordings', 'Prior domestic incident reports'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to no-contact order modification'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Comply with no-contact orders', 'Do not contact alleged victim']
-  },
-  {
-    id: 'wi-disorderly-conduct-class-b',
-    name: 'Disorderly Conduct',
-    code: '947.01',
-    jurisdiction: 'WI',
-    category: 'misdemeanor',
-    description: 'Violent, abusive, indecent, profane, boisterous, or unreasonably loud conduct under Wis. Stat. § 947.01',
-    maxPenalty: 'Class B misdemeanor: up to 90 days/$1,000',
-    commonDefenses: ['First Amendment protected speech', 'Conduct was not public', 'Provocation', 'Lack of intent to disturb'],
-    evidenceToGather: ['Witness statements', 'Video or audio recordings', 'Police reports', '911 call recordings'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to free speech defense'],
-    urgentActions: ['Contact criminal defense attorney', 'Document what occurred', 'Identify witnesses']
   },
   {
     id: 'wi-criminal-trespass-to-dwelling',
@@ -47058,12 +46863,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '6-6-102',
     jurisdiction: 'WY',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under Wyoming law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Disturbing the peace by violent, tumultuous, or threatening behavior under Wyoming law',
+    maxPenalty: 'Up to 6 months in jail and/or $750 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
+    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
+    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
+    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
   },
   {
     id: 'wy-public-intoxication',
@@ -47968,12 +47773,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '22-1321',
     jurisdiction: 'DC',
     category: 'misdemeanor',
-    description: 'Disrupting public peace under District of Columbia law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Engaging in loud, threatening, or tumultuous behavior in public under DC law',
+    maxPenalty: 'Up to 90 days in jail and/or $500 fine',
+    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
+    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
+    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
+    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
   },
   {
     id: 'dc-public-intoxication',
@@ -52971,19 +52776,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
   },
   {
-    id: 'ok-public-intoxication-misdemeanor',
-    name: 'Public Intoxication',
-    code: '37-8',
-    jurisdiction: 'OK',
-    category: 'misdemeanor',
-    description: 'Being intoxicated in a public place under Oklahoma law',
-    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
-    commonDefenses: ['Not in public place', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
-  },
-  {
     id: 'ok-possession-marijuana-misdemeanor',
     name: 'Possession of Marijuana (Without License)',
     code: '63-2-402',
@@ -53181,32 +52973,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Document injuries', 'Identify witnesses']
   },
   {
-    id: 'ut-domestic-violence-assault-misdemeanor',
-    name: 'Domestic Violence Assault',
-    code: '6-90',
-    jurisdiction: 'UT',
-    category: 'misdemeanor',
-    description: 'Assault against cohabitant or household member under Utah law',
-    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
-    commonDefenses: ['Self-defense', 'False accusation', 'Mutual combat', 'Lack of injury'],
-    evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
-  },
-  {
-    id: 'ut-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '76-9-102',
-    jurisdiction: 'UT',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting or creating public disturbance under Utah law',
-    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'ut-criminal-trespass-class-b',
     name: 'Criminal Trespass (Class B)',
     code: '76-6-206',
@@ -53389,19 +53155,6 @@ export const criminalCharges: CriminalCharge[] = [
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Check license status', 'Begin reinstatement']
   },
-  {
-    id: 'ia-public-intoxication-misdemeanor',
-    name: 'Public Intoxication',
-    code: '123.46',
-    jurisdiction: 'IA',
-    category: 'misdemeanor',
-    description: 'Being intoxicated in a public place under Iowa law',
-    maxPenalty: 'Up to 30 days in jail and/or $855 fine',
-    commonDefenses: ['Not in public', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
-  },
   // Nevada (NV) - State-Specific Misdemeanors
   {
     id: 'nv-petit-larceny',
@@ -53454,19 +53207,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
-  },
-  {
-    id: 'nv-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '203.010',
-    jurisdiction: 'NV',
-    category: 'misdemeanor',
-    description: 'Breach of the peace or disorderly behavior in public under Nevada law',
-    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'nv-trespass-misdemeanor',
@@ -53587,19 +53327,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
   },
   {
-    id: 'ar-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '5-71-207',
-    jurisdiction: 'AR',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting or creating unreasonable noise in public under Arkansas law',
-    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'ar-criminal-trespass-misdemeanor',
     name: 'Criminal Trespass',
     code: '5-39-203',
@@ -53650,19 +53377,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['DFA records', 'Notice of suspension', 'Driving record', 'Proof of reinstatement'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Check license status', 'Begin reinstatement']
-  },
-  {
-    id: 'ar-public-intoxication-misdemeanor',
-    name: 'Public Intoxication',
-    code: '5-71-212',
-    jurisdiction: 'AR',
-    category: 'misdemeanor',
-    description: 'Appearing in public place manifestly under the influence under Arkansas law',
-    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
-    commonDefenses: ['Not in public', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
   },
   // Mississippi (MS) - State-Specific Misdemeanors
   {
@@ -53716,19 +53430,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
-  },
-  {
-    id: 'ms-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '97-35-7',
-    jurisdiction: 'MS',
-    category: 'misdemeanor',
-    description: 'Engaging in violent or disorderly behavior in public under Mississippi law',
-    maxPenalty: 'Up to 6 months in jail and/or $500 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ms-trespass-misdemeanor',
@@ -53849,19 +53550,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
   },
   {
-    id: 'ks-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '21-6203',
-    jurisdiction: 'KS',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting or creating unreasonable noise under Kansas law',
-    maxPenalty: 'Up to 30 days in jail and/or $500 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'ks-criminal-trespass-misdemeanor',
     name: 'Criminal Trespass',
     code: '21-5808',
@@ -53899,32 +53587,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Search warrant', 'Chain of custody', 'Lab results', 'Officer body cam'],
     specificRights: ['Right against unreasonable search', 'Right to remain silent', 'Right to attorney'],
     urgentActions: ['Contact attorney', 'Do not consent to searches', 'Document circumstances']
-  },
-  {
-    id: 'ks-driving-while-suspended-misdemeanor',
-    name: 'Driving While Suspended',
-    code: '8-262',
-    jurisdiction: 'KS',
-    category: 'misdemeanor',
-    description: 'Operating motor vehicle with suspended license under Kansas law',
-    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
-    commonDefenses: ['Lack of notice', 'Emergency necessity', 'Expired suspension', 'Clerical error'],
-    evidenceToGather: ['DMV records', 'Notice of suspension', 'Driving record', 'Proof of reinstatement'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Check license status', 'Begin reinstatement']
-  },
-  {
-    id: 'ks-shoplifting-misdemeanor',
-    name: 'Shoplifting (Under $1,500)',
-    code: '21-5801',
-    jurisdiction: 'KS',
-    category: 'misdemeanor',
-    description: 'Concealing or taking merchandise without paying under Kansas law',
-    maxPenalty: 'Up to 1 year in jail and/or $2,500 fine',
-    commonDefenses: ['Lack of intent', 'Mistaken identity', 'Absent-mindedness', 'Wrong amount'],
-    evidenceToGather: ['Store surveillance', 'Receipt records', 'Witness statements', 'Loss prevention reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Do not return to store', 'Do not make statements']
   },
   // Nebraska (NE) - State-Specific Misdemeanors
   {
@@ -53978,19 +53640,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Comply with protection orders', 'Document evidence']
-  },
-  {
-    id: 'ne-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '28-1322',
-    jurisdiction: 'NE',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting or creating public disturbance under Nebraska law',
-    maxPenalty: 'Up to 3 months in jail and/or $500 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ne-criminal-trespass-second',
@@ -54111,19 +53760,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
   },
   {
-    id: 'nm-disorderly-conduct-petty',
-    name: 'Disorderly Conduct',
-    code: '30-20-1',
-    jurisdiction: 'NM',
-    category: 'misdemeanor',
-    description: 'Engaging in violent or abusive behavior in public under New Mexico law',
-    maxPenalty: 'Up to 6 months in jail and/or $500 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'nm-criminal-trespass-misdemeanor',
     name: 'Criminal Trespass',
     code: '30-14-1',
@@ -54240,19 +53876,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
-  },
-  {
-    id: 'wv-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '61-6-1b',
-    jurisdiction: 'WV',
-    category: 'misdemeanor',
-    description: 'Engaging in violent or tumultuous behavior in public under West Virginia law',
-    maxPenalty: 'Up to 6 months in jail and/or $100 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'wv-trespass-misdemeanor',
@@ -54373,19 +53996,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with no-contact orders', 'Document evidence']
   },
   {
-    id: 'id-disturbing-peace-misdemeanor',
-    name: 'Disturbing the Peace',
-    code: '18-6409',
-    jurisdiction: 'ID',
-    category: 'misdemeanor',
-    description: 'Engaging in malicious or willful disturbance of peace under Idaho law',
-    maxPenalty: 'Up to 6 months in jail and/or $1,000 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'id-criminal-trespass-misdemeanor',
     name: 'Criminal Trespass',
     code: '18-7008',
@@ -54502,19 +54112,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Comply with temporary restraining order', 'Document evidence']
-  },
-  {
-    id: 'hi-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '711-1101',
-    jurisdiction: 'HI',
-    category: 'misdemeanor',
-    description: 'Intent to cause inconvenience or alarm by engaging in fighting or disruptive behavior under Hawaii law',
-    maxPenalty: 'Up to 30 days in jail and/or $1,000 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'hi-criminal-trespass-second',
@@ -54635,19 +54232,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with protective orders', 'Document evidence']
   },
   {
-    id: 'nh-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '644:2',
-    jurisdiction: 'NH',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting or creating hazardous conditions in public under New Hampshire law',
-    maxPenalty: 'Up to 1 year in jail and/or $2,000 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'nh-criminal-trespass-misdemeanor',
     name: 'Criminal Trespass',
     code: '635:2',
@@ -54751,19 +54335,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Photos', 'Surveillance footage'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Document injuries', 'Identify witnesses']
-  },
-  {
-    id: 'me-dv-assault-misdemeanor',
-    name: 'Domestic Violence Assault',
-    code: '207-A',
-    jurisdiction: 'ME',
-    category: 'misdemeanor',
-    description: 'Assault against family or household member under Maine law',
-    maxPenalty: 'Up to 1 year in jail and/or $2,000 fine',
-    commonDefenses: ['Self-defense', 'False accusation', 'Mutual combat', 'Lack of injury'],
-    evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Comply with bail conditions', 'Document evidence']
   },
   {
     id: 'me-disorderly-conduct-class-e',
@@ -54897,19 +54468,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Comply with no-contact orders', 'Document evidence']
   },
   {
-    id: 'mt-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '45-8-101',
-    jurisdiction: 'MT',
-    category: 'misdemeanor',
-    description: 'Knowingly disturbing the peace by violent or threatening behavior under Montana law',
-    maxPenalty: 'Up to 10 days in jail and/or $100 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
-  },
-  {
     id: 'mt-criminal-trespass-misdemeanor',
     name: 'Criminal Trespass to Property',
     code: '45-6-203',
@@ -54960,19 +54518,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['MVD records', 'Notice of suspension', 'Driving record', 'Proof of reinstatement'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Check MVD status', 'Begin reinstatement']
-  },
-  {
-    id: 'mt-public-intoxication-misdemeanor',
-    name: 'Public Intoxication',
-    code: '53-24-108',
-    jurisdiction: 'MT',
-    category: 'misdemeanor',
-    description: 'Being intoxicated in a public place to the degree of endangering self or others under Montana law',
-    maxPenalty: 'Up to 6 months in jail and/or $100 fine',
-    commonDefenses: ['Not in public', 'Not intoxicated', 'Medical condition', 'Prescribed medication'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Medical records', 'Officer reports'],
-    specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
-    urgentActions: ['Contact attorney', 'Document medical conditions', 'Identify witnesses']
   },
   // Rhode Island (RI) - State-Specific Misdemeanors
   {
@@ -55026,19 +54571,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Photos', 'Communication records', 'Witness statements'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Comply with no-contact orders', 'Document evidence']
-  },
-  {
-    id: 'ri-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '11-45-1',
-    jurisdiction: 'RI',
-    category: 'misdemeanor',
-    description: 'Engaging in violent or threatening behavior in public under Rhode Island law',
-    maxPenalty: 'Up to 6 months in jail and/or $500 fine',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'ri-trespass-misdemeanor',
@@ -55157,19 +54689,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Witness statements', 'Video evidence', 'Medical records', 'Communication records'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial'],
     urgentActions: ['Contact attorney', 'Document circumstances', 'Identify witnesses']
-  },
-  {
-    id: 'de-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '1301',
-    jurisdiction: 'DE',
-    category: 'misdemeanor',
-    description: 'Engaging in violent or threatening behavior in public under Delaware law',
-    maxPenalty: 'Up to 30 days in jail',
-    commonDefenses: ['First Amendment', 'Not disorderly', 'Overreaction', 'Provocation'],
-    evidenceToGather: ['Video evidence', 'Witness statements', 'Officer reports', 'Audio recordings'],
-    specificRights: ['Right to free speech', 'Right to remain silent', 'Right to attorney'],
-    urgentActions: ['Contact attorney', 'Identify witnesses', 'Preserve recordings']
   },
   {
     id: 'de-criminal-trespass-third',
@@ -55419,19 +54938,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Preserve any receipts', 'Do not contact store or victim', 'Contact criminal defense attorney']
   },
   {
-    id: 'nd-disorderly-conduct-class-b',
-    name: 'Disorderly Conduct - Class B Misdemeanor',
-    code: '12.1-31-01',
-    jurisdiction: 'ND',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting, threatening, or violent behavior in public under North Dakota law',
-    maxPenalty: 'Up to 30 days in jail and/or $1,500 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
-    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
-    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
-    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
-  },
-  {
     id: 'nd-marijuana-possession-half-ounce',
     name: 'Possession of Marijuana - Half Ounce or Less',
     code: '19-03.1-23',
@@ -55547,19 +55053,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Surveillance footage', 'Receipt records', 'Property valuation', 'Witness statements'],
     specificRights: ['Right to challenge property valuation', 'Right to restitution hearing', 'Right to plea negotiations'],
     urgentActions: ['Preserve any receipts', 'Do not return to store', 'Contact criminal defense attorney']
-  },
-  {
-    id: 'ak-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '11.61.110',
-    jurisdiction: 'AK',
-    category: 'misdemeanor',
-    description: 'Engaging in fighting or tumultuous behavior in public under Alaska law',
-    maxPenalty: 'Up to 10 days in jail and/or $500 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent', 'Provocation', 'Vagueness of statute'],
-    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
-    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
-    urgentActions: ['Document the circumstances', 'Gather witness information', 'Contact attorney']
   },
   {
     id: 'ak-marijuana-possession-misdemeanor',
@@ -55679,19 +55172,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Do not return to the store', 'Preserve any receipts', 'Contact criminal defense attorney']
   },
   {
-    id: 'vt-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct - Misdemeanor',
-    code: '1026',
-    jurisdiction: 'VT',
-    category: 'misdemeanor',
-    description: 'Engaging in tumultuous behavior, making unreasonable noise, or obstructing traffic under Vermont law',
-    maxPenalty: 'Up to 60 days in jail and/or $500 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
-    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
-    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
-    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
-  },
-  {
     id: 'vt-marijuana-possession-over-limit',
     name: 'Marijuana Possession Over Legal Limit',
     code: '4230a',
@@ -55809,19 +55289,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Do not return to the store', 'Preserve any receipts', 'Contact criminal defense attorney']
   },
   {
-    id: 'wy-disorderly-conduct-misdemeanor',
-    name: 'Breach of Peace',
-    code: '6-6-102',
-    jurisdiction: 'WY',
-    category: 'misdemeanor',
-    description: 'Disturbing the peace by violent, tumultuous, or threatening behavior under Wyoming law',
-    maxPenalty: 'Up to 6 months in jail and/or $750 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
-    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
-    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
-    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
-  },
-  {
     id: 'wy-marijuana-possession-misdemeanor',
     name: 'Possession of Marijuana - Misdemeanor',
     code: '35-7-1031',
@@ -55937,19 +55404,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Surveillance footage', 'Receipt records', 'Property valuation', 'Witness statements'],
     specificRights: ['Right to challenge property valuation', 'Right to restitution hearing', 'Right to plea negotiations'],
     urgentActions: ['Preserve any receipts', 'Do not return to store', 'Contact criminal defense attorney']
-  },
-  {
-    id: 'dc-disorderly-conduct-misdemeanor',
-    name: 'Disorderly Conduct',
-    code: '22-1321',
-    jurisdiction: 'DC',
-    category: 'misdemeanor',
-    description: 'Engaging in loud, threatening, or tumultuous behavior in public under DC law',
-    maxPenalty: 'Up to 90 days in jail and/or $500 fine',
-    commonDefenses: ['First Amendment protected speech', 'Lack of intent to disturb', 'Provocation', 'Vagueness challenge'],
-    evidenceToGather: ['Video recordings', 'Audio recordings', 'Witness statements', 'Police body camera footage'],
-    specificRights: ['Right to free speech defense', 'Right to jury trial', 'Right to challenge vague charges'],
-    urgentActions: ['Document the circumstances', 'Gather witness contact information', 'Contact attorney']
   },
   {
     id: 'dc-possession-marijuana-misdemeanor',
@@ -65677,19 +65131,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Fix the defective equipment immediately', 'Keep the repair receipt', 'Many courts dismiss fix-it tickets with proof of repair', 'Take a photo of the completed repair with a timestamp']
   },
   {
-    id: 'az-reckless-driving-criminal',
-    name: 'Reckless/Careless Driving (Criminal)',
-    code: '28-693',
-    jurisdiction: 'AZ',
-    category: 'misdemeanor',
-    description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under AZ law',
-    maxPenalty: 'Up to 90 days jail and/or $1,000 fine, license points, possible suspension',
-    commonDefenses: ['Emergency circumstances requiring evasive action', 'Mechanical failure beyond driver control', 'Road conditions contributed to driving pattern', 'Inaccurate speed measurement', 'Mistaken identity of driver'],
-    evidenceToGather: ['Dashcam or traffic camera footage', 'Vehicle maintenance records', 'Weather and road condition reports', 'Witness statements', 'GPS or speed data', 'Officer training records for speed detection'],
-    specificRights: ['Right to contest traffic citation', 'Right to driving record review', 'Right to attorney', 'Right to jury trial for criminal traffic offenses'],
-    urgentActions: ['Do not admit fault at the scene', 'Note road and weather conditions', 'Take photos of the scene', 'Contact an attorney before your court date']
-  },
-  {
     id: 'az-expired-registration',
     name: 'Driving with Expired Registration',
     code: '28-2532',
@@ -66234,19 +65675,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Repair receipts', 'Photos of repaired equipment', 'Inspection records', 'Testimony about when defect occurred'],
     specificRights: ['Right to fix-it dismissal in many states (repair and show proof)', 'Right to contest citation', 'Right to reasonable time for repairs'],
     urgentActions: ['Fix the defective equipment immediately', 'Keep the repair receipt', 'Many courts dismiss fix-it tickets with proof of repair', 'Take a photo of the completed repair with a timestamp']
-  },
-  {
-    id: 'co-reckless-driving-criminal',
-    name: 'Reckless/Careless Driving (Criminal)',
-    code: '42-4-1401',
-    jurisdiction: 'CO',
-    category: 'misdemeanor',
-    description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under CO law',
-    maxPenalty: 'Up to 90 days jail and/or $1,000 fine, license points, possible suspension',
-    commonDefenses: ['Emergency circumstances requiring evasive action', 'Mechanical failure beyond driver control', 'Road conditions contributed to driving pattern', 'Inaccurate speed measurement', 'Mistaken identity of driver'],
-    evidenceToGather: ['Dashcam or traffic camera footage', 'Vehicle maintenance records', 'Weather and road condition reports', 'Witness statements', 'GPS or speed data', 'Officer training records for speed detection'],
-    specificRights: ['Right to contest traffic citation', 'Right to driving record review', 'Right to attorney', 'Right to jury trial for criminal traffic offenses'],
-    urgentActions: ['Do not admit fault at the scene', 'Note road and weather conditions', 'Take photos of the scene', 'Contact an attorney before your court date']
   },
   {
     id: 'co-expired-registration',
@@ -66975,19 +66403,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Repair receipts', 'Photos of repaired equipment', 'Inspection records', 'Testimony about when defect occurred'],
     specificRights: ['Right to fix-it dismissal in many states (repair and show proof)', 'Right to contest citation', 'Right to reasonable time for repairs'],
     urgentActions: ['Fix the defective equipment immediately', 'Keep the repair receipt', 'Many courts dismiss fix-it tickets with proof of repair', 'Take a photo of the completed repair with a timestamp']
-  },
-  {
-    id: 'ga-reckless-driving-criminal',
-    name: 'Reckless/Careless Driving (Criminal)',
-    code: '40-6-390',
-    jurisdiction: 'GA',
-    category: 'misdemeanor',
-    description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under GA law',
-    maxPenalty: 'Up to 90 days jail and/or $1,000 fine, license points, possible suspension',
-    commonDefenses: ['Emergency circumstances requiring evasive action', 'Mechanical failure beyond driver control', 'Road conditions contributed to driving pattern', 'Inaccurate speed measurement', 'Mistaken identity of driver'],
-    evidenceToGather: ['Dashcam or traffic camera footage', 'Vehicle maintenance records', 'Weather and road condition reports', 'Witness statements', 'GPS or speed data', 'Officer training records for speed detection'],
-    specificRights: ['Right to contest traffic citation', 'Right to driving record review', 'Right to attorney', 'Right to jury trial for criminal traffic offenses'],
-    urgentActions: ['Do not admit fault at the scene', 'Note road and weather conditions', 'Take photos of the scene', 'Contact an attorney before your court date']
   },
   {
     id: 'ga-expired-registration',
@@ -69304,19 +68719,6 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Fix the defective equipment immediately', 'Keep the repair receipt', 'Many courts dismiss fix-it tickets with proof of repair', 'Take a photo of the completed repair with a timestamp']
   },
   {
-    id: 'mi-reckless-driving-criminal',
-    name: 'Reckless/Careless Driving (Criminal)',
-    code: '257.626',
-    jurisdiction: 'MI',
-    category: 'misdemeanor',
-    description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under MI law',
-    maxPenalty: 'Up to 90 days jail and/or $1,000 fine, license points, possible suspension',
-    commonDefenses: ['Emergency circumstances requiring evasive action', 'Mechanical failure beyond driver control', 'Road conditions contributed to driving pattern', 'Inaccurate speed measurement', 'Mistaken identity of driver'],
-    evidenceToGather: ['Dashcam or traffic camera footage', 'Vehicle maintenance records', 'Weather and road condition reports', 'Witness statements', 'GPS or speed data', 'Officer training records for speed detection'],
-    specificRights: ['Right to contest traffic citation', 'Right to driving record review', 'Right to attorney', 'Right to jury trial for criminal traffic offenses'],
-    urgentActions: ['Do not admit fault at the scene', 'Note road and weather conditions', 'Take photos of the scene', 'Contact an attorney before your court date']
-  },
-  {
     id: 'mi-expired-registration',
     name: 'Driving with Expired Registration',
     code: '257.255',
@@ -71408,19 +70810,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Repair receipts', 'Photos of repaired equipment', 'Inspection records', 'Testimony about when defect occurred'],
     specificRights: ['Right to fix-it dismissal in many states (repair and show proof)', 'Right to contest citation', 'Right to reasonable time for repairs'],
     urgentActions: ['Fix the defective equipment immediately', 'Keep the repair receipt', 'Many courts dismiss fix-it tickets with proof of repair', 'Take a photo of the completed repair with a timestamp']
-  },
-  {
-    id: 'nc-reckless-driving-criminal',
-    name: 'Reckless/Careless Driving (Criminal)',
-    code: '20-140',
-    jurisdiction: 'NC',
-    category: 'misdemeanor',
-    description: 'Operating a motor vehicle with willful or wanton disregard for the safety of persons or property under NC law',
-    maxPenalty: 'Up to 90 days jail and/or $1,000 fine, license points, possible suspension',
-    commonDefenses: ['Emergency circumstances requiring evasive action', 'Mechanical failure beyond driver control', 'Road conditions contributed to driving pattern', 'Inaccurate speed measurement', 'Mistaken identity of driver'],
-    evidenceToGather: ['Dashcam or traffic camera footage', 'Vehicle maintenance records', 'Weather and road condition reports', 'Witness statements', 'GPS or speed data', 'Officer training records for speed detection'],
-    specificRights: ['Right to contest traffic citation', 'Right to driving record review', 'Right to attorney', 'Right to jury trial for criminal traffic offenses'],
-    urgentActions: ['Do not admit fault at the scene', 'Note road and weather conditions', 'Take photos of the scene', 'Contact an attorney before your court date']
   },
   {
     id: 'nc-expired-registration',
