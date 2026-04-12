@@ -13320,8 +13320,8 @@ i18n
               "searching": "正在搜索您附近的计划..."
             },
             "initialState": {
-              "title": "搜索转移计划",
-              "description": "在上方输入您的城市、县或州，以查找您所在地区的转移计划。",
+              "title": "搜索转处计划",
+              "description": "在上方输入您的城市、县或州，以查找您所在地区的转处计划。",
               "programCount": "我们在多个州共有 {{count}} 个计划，随时准备提供帮助。"
             },
             "expandedSearch": {
@@ -14661,7 +14661,7 @@ i18n
                   "description": "您所在地区的免费或低成本法律服务。"
                 },
                 "diversionPrograms": {
-                  "title": "转移计划",
+                  "title": "转处计划",
                   "description": "如毒品法庭等替代量刑选择。"
                 },
                 "recordExpungement": {
@@ -14773,11 +14773,11 @@ i18n
               "description": "通过我们全面的法律词汇表了解刑事诉讼中常用的法律术语。"
             },
             "diversionPrograms": {
-              "title": "转移计划",
+              "title": "转处计划",
               "description": "了解可能帮助您避免传统起诉和犯罪记录的替代量刑计划。"
             },
             "expungement": {
-              "title": "记录清除",
+              "title": "犯罪记录消除",
               "description": "了解您所在州的犯罪记录清除资格要求和申请流程。"
             },
             "documentSummarizer": {
