@@ -491,6 +491,9 @@ export function JurisdictionSelector({
               <p className="text-sm text-muted-foreground">
                 Nationally uniform EOIR format (12pt TNR, ICPM rules)
               </p>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Source: EOIR Practice Manual — uniform nationwide
+              </p>
             </div>
           </div>
         </div>
@@ -580,7 +583,7 @@ export function JurisdictionSelector({
   return (
     <div className="space-y-4">
       <div>
-        <label className="text-sm font-medium mb-1.5 block">Jurisdiction</label>
+        <label className="text-sm font-medium mb-1.5 block">State / Jurisdiction</label>
         <Select
           value={value.jurisdiction || ""}
           onValueChange={(val) => handleJurisdictionSelect(val)}
@@ -596,9 +599,9 @@ export function JurisdictionSelector({
             ))}
           </SelectContent>
         </Select>
-        {selectedJurisdiction && (
-          <p className="text-sm text-muted-foreground mt-1.5">{selectedJurisdiction.description}</p>
-        )}
+        <p className="text-xs text-muted-foreground mt-1.5">
+          Sets caption format and guides AI citation style. Does not guarantee compliance with your specific court's local rules — verify those separately.
+        </p>
       </div>
 
       {value.jurisdiction && value.jurisdiction !== "generic" && (

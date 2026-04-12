@@ -21,12 +21,15 @@ import {
   BookOpen,
   ExternalLink,
   Zap,
+  ClipboardCheck,
+  ShieldAlert,
 } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -51,7 +54,7 @@ interface TemplateWizardProps {
   onComplete?: () => void;
 }
 
-type WizardStep = "jurisdiction" | "form" | "generate" | "preview";
+type WizardStep = "jurisdiction" | "form" | "checklist" | "generate" | "preview";
 
 interface LiveStatuteResult {
   success: boolean;
@@ -182,6 +185,7 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
       : { jurisdiction: "generic" }
   );
   const [currentFormSectionIndex, setCurrentFormSectionIndex] = useState(0);
+  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationError, setGenerationError] = useState<string | null>(null);
   const [generatedDocument, setGeneratedDocument] = useState<GeneratedDocument | null>(null);
@@ -286,15 +290,18 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
     mode: "onBlur",
   });
 
-  // Calculate total steps
-  const totalSteps = 1 + formSections.length + 2; // jurisdiction + form sections + generate + preview
+  // Calculate total steps — criminal adds a "checklist" step before generate
+  const checklistStepCount = isImmigrationTemplate ? 0 : 1;
+  const totalSteps = 1 + formSections.length + checklistStepCount + 2; // jurisdiction + form sections + [checklist] + generate + preview
   const currentStepNumber =
     step === "jurisdiction"
       ? 1
       : step === "form"
       ? 2 + currentFormSectionIndex
+      : step === "checklist"
+      ? 1 + formSections.length + 1
       : step === "generate"
-      ? 2 + formSections.length
+      ? 1 + formSections.length + checklistStepCount + 1
       : totalSteps;
 
   const progress = (currentStepNumber / totalSteps) * 100;
@@ -315,23 +322,38 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
         if (currentFormSectionIndex < formSections.length - 1) {
           setCurrentFormSectionIndex(currentFormSectionIndex + 1);
         } else {
-          setStep("generate");
-          handleGenerate();
+          // Criminal templates go to checklist; immigration go directly to generate
+          if (isImmigrationTemplate) {
+            setStep("generate");
+            handleGenerate();
+          } else {
+            setStep("checklist");
+          }
         }
       }
+    } else if (step === "checklist") {
+      setStep("generate");
+      handleGenerate();
     }
-  }, [step, currentFormSectionIndex, formSections, form]);
+  }, [step, currentFormSectionIndex, formSections, form, isImmigrationTemplate]);
 
   const handleBack = useCallback(() => {
     if (step === "form" && currentFormSectionIndex > 0) {
       setCurrentFormSectionIndex(currentFormSectionIndex - 1);
     } else if (step === "form" && currentFormSectionIndex === 0) {
       setStep("jurisdiction");
-    } else if (step === "generate" || step === "preview") {
+    } else if (step === "checklist") {
       setStep("form");
       setCurrentFormSectionIndex(formSections.length - 1);
+    } else if (step === "generate" || step === "preview") {
+      if (isImmigrationTemplate) {
+        setStep("form");
+        setCurrentFormSectionIndex(formSections.length - 1);
+      } else {
+        setStep("checklist");
+      }
     }
-  }, [step, currentFormSectionIndex, formSections.length]);
+  }, [step, currentFormSectionIndex, formSections.length, isImmigrationTemplate]);
 
   const handleGenerate = async () => {
     setIsGenerating(true);
@@ -399,12 +421,23 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
         return (
           <div className="space-y-6">
             <div>
-              <h2 className="text-xl font-semibold mb-2">Select Jurisdiction</h2>
-              <p className="text-muted-foreground">
-                Choose the jurisdiction for this document. This determines the
-                legal citations and formatting used.
+              <h2 className="text-xl font-semibold mb-2">
+                {isImmigrationTemplate ? "Filing Court" : "Filing Context"}
+              </h2>
+              <p className="text-muted-foreground text-sm">
+                {isImmigrationTemplate
+                  ? "Immigration templates follow the EOIR Practice Manual, which is uniform nationwide."
+                  : "Select the state and court type where you plan to file. This shapes the caption format and guides the AI on citation style — it does not substitute for verifying your court's specific local rules, standing orders, or formatting requirements."}
               </p>
             </div>
+            {!isImmigrationTemplate && (
+              <div className="flex items-start gap-3 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 p-3">
+                <ShieldAlert className="h-4 w-4 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
+                <p className="text-xs text-amber-800 dark:text-amber-200 leading-relaxed">
+                  <strong>Starting drafts only.</strong> Every court, district, and judge may have different local rules, page limits, and standing orders. You will confirm verification steps before generating your draft.
+                </p>
+              </div>
+            )}
             <JurisdictionSelector
               value={jurisdictionSelection}
               onChange={setJurisdictionSelection}
@@ -442,13 +475,117 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
           </>
         );
 
+      case "checklist": {
+        const isFederal = jurisdictionSelection.courtType === "federal";
+
+        const checklistItems = [
+          {
+            id: "local_rules",
+            label: "I have located and reviewed my court's local rules for this motion type.",
+            link: isFederal
+              ? { text: "Find federal local rules (PACER)", href: "https://www.pacer.gov/psco/cgi-bin/links.pl" }
+              : { text: "Find state court rules (NCSC)", href: "https://www.ncsc.org/topics/court-management/court-technology/resource-guide" },
+          },
+          {
+            id: "standing_orders",
+            label: "I have checked the assigned judge's standing orders and individual practices.",
+          },
+          {
+            id: "page_limits",
+            label: "I have confirmed page/word limits and any briefing schedule requirements for this court.",
+          },
+          {
+            id: "caption_format",
+            label: "I have verified the caption format and case number format required by this specific court.",
+          },
+          {
+            id: "service_rules",
+            label: "I have confirmed the correct method of service and certificate-of-service requirements.",
+          },
+          {
+            id: "draft_understanding",
+            label: "I understand this is a professionally structured starting draft — I am responsible for all local-rule compliance before filing.",
+          },
+        ];
+
+        const allChecked = checklistItems.every((item) => checkedItems[item.id]);
+
+        return (
+          <div className="space-y-6">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <ClipboardCheck className="h-5 w-5 text-primary" />
+                <h2 className="text-xl font-semibold">Pre-Filing Verification</h2>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Before generating your draft, confirm you have completed these verification steps. Local rules vary by court and by individual judge — the AI cannot verify these for you.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-border divide-y divide-border">
+              {checklistItems.map((item) => (
+                <label
+                  key={item.id}
+                  htmlFor={`check-${item.id}`}
+                  className="flex items-start gap-3 p-4 cursor-pointer hover:bg-muted/30 transition-colors"
+                >
+                  <Checkbox
+                    id={`check-${item.id}`}
+                    checked={!!checkedItems[item.id]}
+                    onCheckedChange={(checked) =>
+                      setCheckedItems((prev) => ({ ...prev, [item.id]: !!checked }))
+                    }
+                    className="mt-0.5 shrink-0"
+                  />
+                  <div className="space-y-1">
+                    <span className="text-sm leading-snug">{item.label}</span>
+                    {item.link && (
+                      <a
+                        href={item.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
+                      >
+                        <ExternalLink className="h-3 w-3" />
+                        {item.link.text}
+                      </a>
+                    )}
+                  </div>
+                </label>
+              ))}
+            </div>
+
+            {!allChecked && (
+              <p className="text-xs text-muted-foreground italic">
+                Check all items above to proceed.
+              </p>
+            )}
+
+            <div className="flex justify-between pt-2">
+              <Button variant="outline" onClick={handleBack}>
+                <ChevronLeft className="h-4 w-4 mr-2" />
+                Back
+              </Button>
+              <Button
+                onClick={() => { setStep("generate"); handleGenerate(); }}
+                disabled={!allChecked || !!aiUnavailable}
+              >
+                Generate Draft
+                <ChevronRight className="h-4 w-4 ml-2" />
+              </Button>
+            </div>
+          </div>
+        );
+      }
+
       case "generate":
         return (
           <div className="space-y-6">
             <div>
-              <h2 className="text-xl font-semibold mb-2">Generating Document</h2>
+              <h2 className="text-xl font-semibold mb-2">Generating Draft</h2>
               <p className="text-muted-foreground">
-                AI is generating the legal content for your document.
+                AI is generating the legal content for your draft document.
               </p>
             </div>
             <AIGenerationStatus
@@ -521,8 +658,8 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
         </CardContent>
       </Card>
 
-      {/* Navigation Buttons */}
-      {step !== "generate" && step !== "preview" && (
+      {/* Navigation Buttons — the checklist step renders its own inline buttons */}
+      {step !== "generate" && step !== "preview" && step !== "checklist" && (
         <div className="flex justify-between">
           <Button
             variant="outline"
@@ -542,8 +679,8 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
               !captchaToken)
             }
           >
-            {step === "form" && currentFormSectionIndex === formSections.length - 1
-              ? "Generate Document"
+            {step === "form" && currentFormSectionIndex === formSections.length - 1 && isImmigrationTemplate
+              ? "Generate Draft"
               : "Continue"}
             <ChevronRight className="h-4 w-4 ml-2" />
           </Button>

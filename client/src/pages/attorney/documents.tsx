@@ -39,12 +39,12 @@ function DocumentsContent() {
               <FileText className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
-              {t("attorneyPortal.documents.title", "Document Generation")}
+              {t("attorneyPortal.documents.title", "Document Drafting")}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t(
                 "attorney.documents.subtitle",
-                "AI-powered document drafting for criminal and immigration matters."
+                "AI-assisted drafting for criminal and immigration matters. Generates professionally structured starting drafts — always verify local rules and standing orders before filing."
               )}
             </p>
           </motion.div>

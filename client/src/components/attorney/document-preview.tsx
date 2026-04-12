@@ -180,14 +180,15 @@ export function DocumentPreview({
 
           <div className="space-y-3 py-1">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Before downloading, confirm that you have reviewed this document for:
+              Before downloading, confirm you have personally reviewed this draft for:
             </p>
             <ul className="space-y-2 text-sm">
               {[
-                "Accurate client facts and case details",
-                "Correct statutory citations and case law",
-                "Compliance with local court rules and formatting",
-                "Proper signature block and service requirements",
+                "Accurate client facts, dates, and case details",
+                "Current and applicable statutory citations and case law",
+                "Compliance with your specific court's local rules, standing orders, and judge's individual practices",
+                "Correct page and word limits for this court",
+                "Proper signature block, service method, and certificate-of-service requirements",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
@@ -196,17 +197,17 @@ export function DocumentPreview({
               ))}
             </ul>
             <p className="text-xs text-muted-foreground pt-1 border-t">
-              You are responsible for the accuracy and completeness of any document filed with a court. AI-generated content must be reviewed by a licensed attorney before filing.
+              This is a starting draft. You are solely responsible for any document filed with a court. AI-generated drafts must be fully reviewed and edited by the filing attorney before filing.
             </p>
           </div>
 
           <DialogFooter className="flex-col sm:flex-row gap-2">
             <Button variant="outline" onClick={() => setShowReviewDialog(false)}>
-              Go back and review
+              Keep reviewing
             </Button>
             <Button onClick={handleConfirmDownload} disabled={isDownloading}>
               <Download className="h-4 w-4 mr-2" />
-              I've reviewed — Download DOCX
+              I've reviewed this draft — Download
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -359,29 +360,30 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" 
   if (courtType === "immigration") return "EOIR Immigration Court Format (12pt)";
   if (courtType === "federal" && district) {
     const districtLabels: Record<string, string> = {
-      CACD: "C.D. Cal. Federal Format (14pt)",
-      NDCA: "N.D. Cal. Federal Format (14pt)",
-      EDCA: "E.D. Cal. Federal Format (12pt)",
-      SDCA: "S.D. Cal. Federal Format (14pt)",
-      SDNY: "S.D.N.Y. Federal Format (12pt)",
-      EDNY: "E.D.N.Y. Federal Format (12pt)",
-      NDNY: "N.D.N.Y. Federal Format (12pt)",
-      WDNY: "W.D.N.Y. Federal Format (12pt)",
-      TXND: "N.D. Tex. Federal Format (12pt)",
-      TXSD: "S.D. Tex. Federal Format (12pt)",
-      TXED: "E.D. Tex. Federal Format (12pt)",
-      TXWD: "W.D. Tex. Federal Format (12pt)",
-      FLSD: "S.D. Fla. Federal Format (12pt)",
-      FLMD: "M.D. Fla. Federal Format (12pt)",
-      FLND: "N.D. Fla. Federal Format (12pt)",
+      CACD: "Draft — C.D. Cal. Federal Format (14pt)",
+      NDCA: "Draft — N.D. Cal. Federal Format (14pt)",
+      EDCA: "Draft — E.D. Cal. Federal Format (12pt)",
+      SDCA: "Draft — S.D. Cal. Federal Format (14pt)",
+      SDNY: "Draft — S.D.N.Y. Federal Format (12pt)",
+      EDNY: "Draft — E.D.N.Y. Federal Format (12pt)",
+      NDNY: "Draft — N.D.N.Y. Federal Format (12pt)",
+      WDNY: "Draft — W.D.N.Y. Federal Format (12pt)",
+      TXND: "Draft — N.D. Tex. Federal Format (12pt)",
+      TXSD: "Draft — S.D. Tex. Federal Format (12pt)",
+      TXED: "Draft — E.D. Tex. Federal Format (12pt)",
+      TXWD: "Draft — W.D. Tex. Federal Format (12pt)",
+      FLSD: "Draft — S.D. Fla. Federal Format (12pt)",
+      FLMD: "Draft — M.D. Fla. Federal Format (12pt)",
+      FLND: "Draft — N.D. Fla. Federal Format (12pt)",
     };
-    return districtLabels[district] || `${district} Federal Format`;
+    return districtLabels[district] || `Draft — ${district} Federal Format`;
   }
-  if (jurisdiction === "CA") return "California State Format";
-  if (jurisdiction === "NY") return "New York State Format";
-  if (jurisdiction === "TX") return "Texas State Format (14pt)";
-  if (jurisdiction === "FL") return "Florida State Format (12pt)";
-  return "Standard Format";
+  if (jurisdiction === "CA") return "Draft — California State Format";
+  if (jurisdiction === "NY") return "Draft — New York State Format";
+  if (jurisdiction === "TX") return "Draft — Texas State Format (14pt)";
+  if (jurisdiction === "FL") return "Draft — Florida State Format (12pt)";
+  if (jurisdiction && jurisdiction !== "generic") return `Draft — ${jurisdiction} State Format`;
+  return "Draft — Standard Format";
 }
 
 function formatHearingType(value: string): string {
