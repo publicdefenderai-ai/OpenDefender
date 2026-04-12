@@ -39349,12 +39349,12 @@ export const criminalCharges: CriminalCharge[] = [
     code: '31-5',
     jurisdiction: 'TN',
     category: 'misdemeanor',
-    description: 'Driving under influence, first offense under Tennessee law',
-    maxPenalty: 'Penalties vary by jurisdiction',
-    commonDefenses: ['Consult with attorney for applicable defenses'],
-    evidenceToGather: ['Gather all relevant documentation and evidence'],
-    specificRights: ['Constitutional rights apply to all criminal cases'],
-    urgentActions: ['Contact qualified criminal defense attorney immediately']
+    description: 'Driving under the influence of alcohol or drugs under T.C.A. § 55-10-401',
+    maxPenalty: 'Class A misdemeanor: 48 hours-11 months 29 days jail, $350-$1,500 fine',
+    commonDefenses: ['Improper traffic stop', 'Faulty breathalyzer calibration', 'Rising blood alcohol defense', 'Medical condition affecting test results'],
+    evidenceToGather: ['Breathalyzer/blood test results', 'Dashcam or bodycam footage', 'Field sobriety test records', 'Maintenance records for testing equipment'],
+    specificRights: ['Right to independent blood test', 'Right to challenge test results', 'Right to implied consent hearing'],
+    urgentActions: ['Contact DUI defense attorney immediately', 'Request implied consent hearing', 'Document everything about the stop']
   },
   {
     id: 'tn-dui-second-offense',
@@ -39446,19 +39446,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Photos of injuries'],
     specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
     urgentActions: ['Contact attorney immediately', 'Document any injuries', 'Identify and preserve witness information']
-  },
-  {
-    id: 'tn-dui-first',
-    name: 'DUI First Offense',
-    code: '31-5',
-    jurisdiction: 'TN',
-    category: 'misdemeanor',
-    description: 'Driving under the influence of alcohol or drugs under T.C.A. § 55-10-401',
-    maxPenalty: 'Class A misdemeanor: 48 hours-11 months 29 days jail, $350-$1,500 fine',
-    commonDefenses: ['Improper traffic stop', 'Faulty breathalyzer calibration', 'Rising blood alcohol defense', 'Medical condition affecting test results'],
-    evidenceToGather: ['Breathalyzer/blood test results', 'Dashcam or bodycam footage', 'Field sobriety test records', 'Maintenance records for testing equipment'],
-    specificRights: ['Right to independent blood test', 'Right to challenge test results', 'Right to implied consent hearing'],
-    urgentActions: ['Contact DUI defense attorney immediately', 'Request implied consent hearing', 'Document everything about the stop']
   },
   {
     id: 'tn-domestic-assault',
