@@ -17,6 +17,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 
 export default function WorkplaceRaids() {
   useScrollToTop();
@@ -59,12 +60,14 @@ export default function WorkplaceRaids() {
         </div>
       </section>
 
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-red-50 border-red-200 dark:bg-red-950/50 dark:border-red-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-red-50 border-red-200 dark:bg-red-950/50 dark:border-red-800">
         <AlertTriangle className="h-5 w-5 text-red-600" />
         <AlertDescription className="text-red-800 dark:text-red-200" data-testid="alert-workplace-critical">
           <strong>{t('immigration.raids.criticalAlert')}</strong> {t('immigration.raids.criticalAlertText')}
         </AlertDescription>
       </Alert>
+
+      <RapidlyEvolvingNotice />
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">

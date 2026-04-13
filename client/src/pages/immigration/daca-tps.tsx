@@ -7,13 +7,13 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
 import { useTranslation } from 'react-i18next';
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 
 export default function DacaTps() {
   useScrollToTop();
@@ -55,12 +55,14 @@ export default function DacaTps() {
         </div>
       </section>
 
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
         <AlertTriangle className="h-5 w-5 text-amber-600" />
         <AlertDescription className="text-amber-800 dark:text-amber-200" data-testid="alert-daca-disclaimer">
           <strong>{t('immigration.common.importantLabel')}</strong> {t('immigration.daca.disclaimer')}
         </AlertDescription>
       </Alert>
+
+      <RapidlyEvolvingNotice />
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">
@@ -92,6 +94,19 @@ export default function DacaTps() {
                     </ul>
                   </div>
 
+                  <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                    <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
+                      <AlertTriangle className="h-4 w-4" />
+                      Legal Framework — What DACA Is and Is Not
+                    </h4>
+                    <ul className="text-sm text-amber-800 dark:text-amber-300 space-y-1.5 list-disc list-inside">
+                      <li>DACA is a <strong>DHS enforcement policy</strong> established by a June 2012 memorandum — it is not a law passed by Congress and does not provide a path to citizenship or permanent legal status.</li>
+                      <li>The Supreme Court ruled in <em>DHS v. Regents of the Univ. of Cal.</em> (2020) that the 2017 attempt to rescind DACA was procedurally flawed — the Court did not rule that DHS must permanently maintain the program.</li>
+                      <li><strong>New DACA applications remain blocked</strong> by a federal court order (5th Circuit, <em>Texas v. U.S.</em>). Only current recipients can renew.</li>
+                      <li>Renewals have continued but the program's legal status is subject to ongoing litigation. Verify current status with an immigration attorney or <a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer" className="underline font-semibold">USCIS</a>.</li>
+                    </ul>
+                  </div>
+
                   <div className="bg-muted/50 rounded-lg p-4">
                     <h4 className="font-semibold text-foreground mb-2">{t('immigration.daca.dacaSection.renewal')}</h4>
                     <p className="text-sm text-muted-foreground">
@@ -119,16 +134,20 @@ export default function DacaTps() {
                   
                   <div>
                     <h4 className="font-semibold mb-3 text-foreground">{t('immigration.daca.tpsSection.countries')}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {['Afghanistan', 'Cameroon', 'El Salvador', 'Ethiopia', 'Haiti', 'Honduras', 'Myanmar', 'Nepal', 'Nicaragua', 'Somalia', 'South Sudan', 'Sudan', 'Syria', 'Ukraine', 'Venezuela', 'Yemen'].map((country) => (
-                        <Badge key={country} variant="outline" className="text-xs">
-                          {country}
-                        </Badge>
-                      ))}
+                    <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                      <p className="text-sm text-amber-800 dark:text-amber-300 mb-3">
+                        <strong>TPS country designations change frequently.</strong> Countries may be added, removed, or have their TPS extended or terminated at any time based on current conditions. A static list here would become inaccurate.
+                      </p>
+                      <a
+                        href="https://www.uscis.gov/humanitarian/temporary-protected-status"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-2 bg-amber-700 dark:bg-amber-800 text-white rounded-lg text-sm font-medium hover:bg-amber-800 dark:hover:bg-amber-700 transition-colors"
+                      >
+                        View Current TPS Country List on USCIS
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-2">
-                      {t('immigration.daca.tpsSection.countriesNote')}
-                    </p>
                   </div>
 
                   <div>

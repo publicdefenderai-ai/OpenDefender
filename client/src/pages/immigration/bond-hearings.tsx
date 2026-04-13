@@ -13,6 +13,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 
 export default function BondHearings() {
   useScrollToTop();
@@ -54,12 +55,14 @@ export default function BondHearings() {
         </div>
       </section>
 
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
         <Scale className="h-5 w-5 text-blue-600" />
         <AlertDescription className="text-blue-800 dark:text-blue-200" data-testid="alert-bond-info">
           <strong>{t('immigration.common.importantLabel')}</strong> {t('immigration.bond.importantAlert')}
         </AlertDescription>
       </Alert>
+
+      <RapidlyEvolvingNotice />
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">
@@ -69,7 +72,7 @@ export default function BondHearings() {
             </h2>
           </ScrollReveal>
           
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-8 mb-6">
             <ScrollReveal delay={0.1}>
               <Card className="h-full">
                 <CardHeader>
@@ -108,6 +111,15 @@ export default function BondHearings() {
               </Card>
             </ScrollReveal>
           </div>
+
+          <ScrollReveal delay={0.3}>
+            <Alert className="bg-amber-50 border-amber-200 dark:bg-amber-950/30 dark:border-amber-700 mb-4">
+              <AlertTriangle className="h-4 w-4 text-amber-600" />
+              <AlertDescription className="text-amber-800 dark:text-amber-200 text-sm">
+                <strong>About these amounts:</strong> The figures shown are typical historical starting ranges only. Immigration judges have broad discretion and may set bond significantly higher — or deny it entirely — based on flight risk, community ties, and danger to the community. Your actual bond will depend on your specific circumstances. Consult an immigration attorney for a realistic assessment.
+              </AlertDescription>
+            </Alert>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -154,6 +166,9 @@ export default function BondHearings() {
                     <li>{t('immigration.bond.eligibility.mandatory4')}</li>
                     <li>{t('immigration.bond.eligibility.mandatory5')}</li>
                   </ul>
+                  <p className="text-xs text-muted-foreground mt-4 border-t pt-3">
+                    <strong>Important:</strong> Mandatory detention categories are defined by statute (8 U.S.C. § 1226(c)) but enforcement interpretations can be broader than the categories listed here. Whether a specific conviction triggers mandatory detention depends on how the statute is applied to your case. An immigration attorney can evaluate your specific situation.
+                  </p>
                 </CardContent>
               </Card>
             </ScrollReveal>

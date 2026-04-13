@@ -23,6 +23,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { FacilitySearch } from '@/components/immigration/facility-search';
+import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
 
 export default function FindDetained() {
   useScrollToTop();
@@ -174,7 +175,7 @@ export default function FindDetained() {
       </section>
 
       {/* Critical Alert */}
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
         <Clock className="h-5 w-5 text-amber-600" />
         <AlertDescription className="text-amber-800 dark:text-amber-200">
           <strong>{lang === 'es' ? 'Actúe Rápido:' : 'Act Quickly:'}</strong>{' '}
@@ -183,6 +184,8 @@ export default function FindDetained() {
             : 'The first few days after arrest are critical. Locating the person quickly helps secure legal representation and may affect their bond eligibility.'}
         </AlertDescription>
       </Alert>
+
+      <RapidlyEvolvingNotice />
 
       {/* ICE Locator Steps */}
       <section className="py-12 bg-background">

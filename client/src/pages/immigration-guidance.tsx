@@ -33,6 +33,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 
 function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -268,7 +269,7 @@ export default function ImmigrationGuidance() {
       </section>
 
       {/* Critical Alert - Below Hero */}
-      <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-20 mb-8">
+      <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-20 mb-4">
         <Alert className="bg-red-600 border-red-700 text-white shadow-lg">
           <AlertTriangle className="h-5 w-5 text-white" />
           <AlertDescription className="text-white font-semibold" data-testid="alert-critical-rights">
@@ -276,6 +277,8 @@ export default function ImmigrationGuidance() {
           </AlertDescription>
         </Alert>
       </div>
+
+      <RapidlyEvolvingNotice />
 
       {/* Emergency Rights Section */}
       <section className="py-16 bg-muted/30">

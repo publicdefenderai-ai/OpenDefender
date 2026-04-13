@@ -13,6 +13,7 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 
 export default function FamilyPlanning() {
   useScrollToTop();
@@ -54,7 +55,7 @@ export default function FamilyPlanning() {
         </div>
       </section>
 
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
         <AlertDescription className="text-blue-800 dark:text-blue-200" data-testid="alert-family-planning">
           <div className="flex items-start gap-3">
             <BrandShieldIcon size={20} className="mt-0.5 flex-shrink-0" />
@@ -62,6 +63,8 @@ export default function FamilyPlanning() {
           </div>
         </AlertDescription>
       </Alert>
+
+      <RapidlyEvolvingNotice />
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">

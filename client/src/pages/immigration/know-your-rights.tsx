@@ -29,6 +29,7 @@ import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { RedCardGenerator } from '@/components/immigration/red-card-generator';
 import { WarrantGuide } from '@/components/immigration/warrant-guide';
+import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
 import {
   kyrScripts,
   redCardContent,
@@ -94,7 +95,7 @@ export default function KnowYourRights() {
       </section>
 
       {/* Critical Alert */}
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-8 bg-red-50 border-red-200 dark:bg-red-950/50 dark:border-red-800">
+      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-red-50 border-red-200 dark:bg-red-950/50 dark:border-red-800">
         <AlertTriangle className="h-5 w-5 text-red-600" />
         <AlertDescription className="text-red-800 dark:text-red-200">
           <strong>{lang === 'es' ? 'CRÍTICO:' : 'CRITICAL:'}</strong>{' '}
@@ -103,6 +104,8 @@ export default function KnowYourRights() {
             : 'These rights apply to ALL persons in the United States, regardless of immigration status. You have legal protections even during immigration enforcement actions.'}
         </AlertDescription>
       </Alert>
+
+      <RapidlyEvolvingNotice />
 
       {/* Red Card Generator Section */}
       <section className="py-12 bg-background">
