@@ -9112,6 +9112,1361 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wyoming public intoxication; verify against Justia before promoting to high",
   },
 
+  // ── BATCH 22: Cleanup — murder-2nd remaining states, manslaughter remaining states,
+  //    murder-1st/aggravated-assault/DV-assault/rape-1st/sexual-assault-1st territories ──
+
+  // murder-in-the-second-degree — remaining states not covered in earlier batches
+  "al-murder-in-the-second-degree": {
+    citation: "Ala. Code § 13A-6-3",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alabama murder in the second degree; verify against Justia before promoting to high",
+  },
+  "ga-murder-in-the-second-degree": {
+    citation: "Ga. Code Ann. § 16-5-1(b)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Georgia murder (felony murder / second degree variant; verify against Justia before promoting to high)",
+  },
+  "in-murder-in-the-second-degree": {
+    citation: "Ind. Code § 35-42-1-1(2)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Indiana murder (Level 45 felony — Indiana has one murder statute with degrees distinguished by facts; verify against Justia before promoting to high)",
+  },
+  "ky-murder-in-the-second-degree": {
+    citation: "Ky. Rev. Stat. Ann. § 507.020",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kentucky murder (KY does not formally subdivide into 1st/2nd degree — same statute; verify against Justia before promoting to high)",
+  },
+  "me-murder-in-the-second-degree": {
+    citation: "Me. Rev. Stat. tit. 17-A § 201",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Maine murder (ME uses a single murder statute; verify against Justia before promoting to high)",
+  },
+  "sc-murder-in-the-second-degree": {
+    citation: "S.C. Code Ann. § 16-3-10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Carolina murder (SC does not formally distinguish 1st/2nd degree by statute — same code; verify against Justia before promoting to high)",
+  },
+
+  // voluntary-manslaughter — remaining states
+  "mt-voluntary-manslaughter": {
+    citation: "Mont. Code Ann. § 45-5-103",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Montana mitigated deliberate homicide (equivalent to voluntary manslaughter); verify against Justia before promoting to high",
+  },
+  "nd-voluntary-manslaughter": {
+    citation: "N.D. Cent. Code § 12.1-16-02",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — North Dakota manslaughter; verify against Justia before promoting to high",
+  },
+  "ok-voluntary-manslaughter": {
+    citation: "Okla. Stat. tit. 21 § 711",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma manslaughter in the first degree; verify against Justia before promoting to high",
+  },
+  "wi-voluntary-manslaughter": {
+    citation: "Wis. Stat. § 940.01(2)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Wisconsin first-degree intentional homicide (mitigating circumstances = voluntary manslaughter equivalent); verify against Justia before promoting to high",
+  },
+
+  // involuntary-manslaughter — remaining states
+  "ak-involuntary-manslaughter": {
+    citation: "Alaska Stat. § 11.41.120",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alaska manslaughter; verify against Justia before promoting to high",
+  },
+  "hi-involuntary-manslaughter": {
+    citation: "Haw. Rev. Stat. § 707-702",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Hawaii manslaughter; verify against Justia before promoting to high",
+  },
+  "mt-involuntary-manslaughter": {
+    citation: "Mont. Code Ann. § 45-5-104",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Montana negligent homicide; verify against Justia before promoting to high",
+  },
+  "ok-involuntary-manslaughter": {
+    citation: "Okla. Stat. tit. 21 § 716",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma manslaughter in the second degree; verify against Justia before promoting to high",
+  },
+  "ut-involuntary-manslaughter": {
+    citation: "Utah Code Ann. § 76-5-206",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Utah negligent homicide; verify against Justia before promoting to high",
+  },
+  "wi-involuntary-manslaughter": {
+    citation: "Wis. Stat. § 940.06",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Wisconsin second-degree reckless homicide; verify against Justia before promoting to high",
+  },
+
+  // murder-in-the-first-degree — territories
+  "as-murder-in-the-first-degree": {
+    citation: "Am. Samoa Code Ann. § 46.3501",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa murder; territory codes inconsistently published online — verify manually before promoting to medium",
+  },
+  "gu-murder-in-the-first-degree": {
+    citation: "9 GCA § 16.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam criminal homicide; territory codes inconsistently published online — verify manually before promoting to medium",
+  },
+  "mp-murder-in-the-first-degree": {
+    citation: "6 CMC § 1301",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI murder; territory codes inconsistently published online — verify manually before promoting to medium",
+  },
+  "pr-murder-in-the-first-degree": {
+    citation: "P.R. Laws Ann. tit. 33, § 4733",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico murder in the first degree; territory codes inconsistently published online — verify manually before promoting to medium",
+  },
+  "vi-murder-in-the-first-degree": {
+    citation: "V.I. Code Ann. tit. 14, § 921",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands murder; territory codes inconsistently published online — verify manually before promoting to medium",
+  },
+
+  // aggravated-assault — territories
+  "as-aggravated-assault": {
+    citation: "Am. Samoa Code Ann. § 46.3505",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa aggravated assault; territory codes inconsistently published online — verify manually",
+  },
+  "gu-aggravated-assault": {
+    citation: "9 GCA § 19.20",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam aggravated assault; territory codes inconsistently published online — verify manually",
+  },
+  "mp-aggravated-assault": {
+    citation: "6 CMC § 1202",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI assault; territory codes inconsistently published online — verify manually",
+  },
+  "pr-aggravated-assault": {
+    citation: "P.R. Laws Ann. tit. 33, § 4737",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico aggravated assault; territory codes inconsistently published online — verify manually",
+  },
+  "vi-aggravated-assault": {
+    citation: "V.I. Code Ann. tit. 14, § 297",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands assault; territory codes inconsistently published online — verify manually",
+  },
+
+  // domestic-violence-assault — territories
+  "as-domestic-violence-assault": {
+    citation: "Am. Samoa Code Ann. § 46.4101",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa domestic violence; territory codes inconsistently published online — verify manually",
+  },
+  "gu-domestic-violence-assault": {
+    citation: "9 GCA § 30.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam domestic violence; territory codes inconsistently published online — verify manually",
+  },
+  "mp-domestic-violence-assault": {
+    citation: "6 CMC § 1302",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI domestic violence; territory codes inconsistently published online — verify manually",
+  },
+  "pr-domestic-violence-assault": {
+    citation: "P.R. Laws Ann. tit. 8, § 631",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico domestic violence; territory codes inconsistently published online — verify manually",
+  },
+  "vi-domestic-violence-assault": {
+    citation: "V.I. Code Ann. tit. 16, § 97",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands domestic violence; territory codes inconsistently published online — verify manually",
+  },
+
+  // rape-in-the-first-degree — territories
+  "as-rape-in-the-first-degree": {
+    citation: "Am. Samoa Code Ann. § 46.3506",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa rape / sexual assault; territory codes inconsistently published online — verify manually",
+  },
+  "gu-rape-in-the-first-degree": {
+    citation: "9 GCA § 25.15",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam criminal sexual conduct first degree; territory codes inconsistently published online — verify manually",
+  },
+  "mp-rape-in-the-first-degree": {
+    citation: "6 CMC § 1302(a)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI sexual assault first degree; territory codes inconsistently published online — verify manually",
+  },
+  "pr-rape-in-the-first-degree": {
+    citation: "P.R. Laws Ann. tit. 33, § 4770",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico sexual assault; territory codes inconsistently published online — verify manually",
+  },
+  "vi-rape-in-the-first-degree": {
+    citation: "V.I. Code Ann. tit. 14, § 1699",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands rape first degree; territory codes inconsistently published online — verify manually",
+  },
+
+  // sexual-assault-in-the-first-degree — territories
+  "as-sexual-assault-in-the-first-degree": {
+    citation: "Am. Samoa Code Ann. § 46.3507",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa sexual assault first degree; territory codes inconsistently published online — verify manually",
+  },
+  "gu-sexual-assault-in-the-first-degree": {
+    citation: "9 GCA § 25.15",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam criminal sexual conduct first degree; territory codes inconsistently published online — verify manually",
+  },
+  "mp-sexual-assault-in-the-first-degree": {
+    citation: "6 CMC § 1302(a)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI sexual assault; territory codes inconsistently published online — verify manually",
+  },
+  "pr-sexual-assault-in-the-first-degree": {
+    citation: "P.R. Laws Ann. tit. 33, § 4770",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico sexual assault first degree; territory codes inconsistently published online — verify manually",
+  },
+  "vi-sexual-assault-in-the-first-degree": {
+    citation: "V.I. Code Ann. tit. 14, § 1699",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands sexual assault first degree; territory codes inconsistently published online — verify manually",
+  },
+
+  // murder-in-the-second-degree / voluntary-manslaughter / involuntary-manslaughter — territories
+  "as-murder-in-the-second-degree": {
+    citation: "Am. Samoa Code Ann. § 46.3501",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa murder (territory uses a single homicide statute); territory codes inconsistently published — verify manually",
+  },
+  "gu-murder-in-the-second-degree": {
+    citation: "9 GCA § 16.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam criminal homicide; territory codes inconsistently published — verify manually",
+  },
+  "mp-murder-in-the-second-degree": {
+    citation: "6 CMC § 1301",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI murder; territory codes inconsistently published — verify manually",
+  },
+  "pr-murder-in-the-second-degree": {
+    citation: "P.R. Laws Ann. tit. 33, § 4734",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico murder second degree; territory codes inconsistently published — verify manually",
+  },
+  "vi-murder-in-the-second-degree": {
+    citation: "V.I. Code Ann. tit. 14, § 922",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands murder second degree; territory codes inconsistently published — verify manually",
+  },
+  "as-voluntary-manslaughter": {
+    citation: "Am. Samoa Code Ann. § 46.3502",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "gu-voluntary-manslaughter": {
+    citation: "9 GCA § 16.30",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam voluntary manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "mp-voluntary-manslaughter": {
+    citation: "6 CMC § 1302(b)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "pr-voluntary-manslaughter": {
+    citation: "P.R. Laws Ann. tit. 33, § 4736",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "vi-voluntary-manslaughter": {
+    citation: "V.I. Code Ann. tit. 14, § 924",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "as-involuntary-manslaughter": {
+    citation: "Am. Samoa Code Ann. § 46.3503",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa negligent homicide; territory codes inconsistently published — verify manually",
+  },
+  "gu-involuntary-manslaughter": {
+    citation: "9 GCA § 16.40",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam involuntary manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "mp-involuntary-manslaughter": {
+    citation: "6 CMC § 1303",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI negligent homicide; territory codes inconsistently published — verify manually",
+  },
+  "pr-involuntary-manslaughter": {
+    citation: "P.R. Laws Ann. tit. 33, § 4737",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico involuntary manslaughter; territory codes inconsistently published — verify manually",
+  },
+  "vi-involuntary-manslaughter": {
+    citation: "V.I. Code Ann. tit. 14, § 925",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands involuntary manslaughter; territory codes inconsistently published — verify manually",
+  },
+
+  // ── BATCH 23: DUI variants — remaining states + territories ──
+
+  // dui-first — states using this ID that were not in the main DUI batch
+  "la-dui-first": {
+    citation: "La. Rev. Stat. § 14:98",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Louisiana driving while intoxicated first offense; verify against Justia before promoting to high",
+  },
+  "ms-dui-first": {
+    citation: "Miss. Code Ann. § 63-11-30(1)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Mississippi DUI first offense; verify against Justia before promoting to high",
+  },
+  "ks-dui-first": {
+    citation: "Kan. Stat. Ann. § 8-1567(a)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kansas driving under the influence first offense; verify against Justia before promoting to high",
+  },
+  "ne-dui-first": {
+    citation: "Neb. Rev. Stat. § 60-6,196",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nebraska driving under the influence first offense; verify against Justia before promoting to high",
+  },
+  "ri-dui-first": {
+    citation: "R.I. Gen. Laws § 31-27-2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Rhode Island DUI first offense; verify against Justia before promoting to high",
+  },
+
+  // dui-first-misdemeanor — states using this ID
+  "ky-dui-first-misdemeanor": {
+    citation: "Ky. Rev. Stat. Ann. § 189A.010",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kentucky DUI first offense (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "ut-dui-first-misdemeanor": {
+    citation: "Utah Code Ann. § 41-6a-502",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Utah DUI first offense (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "nv-dui-first-misdemeanor": {
+    citation: "Nev. Rev. Stat. § 484C.400",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nevada DUI first offense (misdemeanor); verify against Justia before promoting to high",
+  },
+  "wv-dui-first-misdemeanor": {
+    citation: "W. Va. Code § 17C-5-2(d)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — West Virginia DUI first offense (misdemeanor); verify against Justia before promoting to high",
+  },
+  "id-dui-first-misdemeanor": {
+    citation: "Idaho Code § 18-8004",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Idaho DUI first offense (misdemeanor); verify against Justia before promoting to high",
+  },
+  "mt-dui-first-misdemeanor": {
+    citation: "Mont. Code Ann. § 61-8-401",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Montana DUI first offense (misdemeanor); verify against Justia before promoting to high",
+  },
+  "de-dui-first-misdemeanor": {
+    citation: "Del. Code Ann. tit. 21, § 4177",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Delaware DUI first offense (unclassified misdemeanor); verify against Justia before promoting to high",
+  },
+
+  // dui-misdemeanor — states using this specific ID
+  "az-dui-misdemeanor": {
+    citation: "Ariz. Rev. Stat. § 28-1381",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Arizona DUI (misdemeanor); verify against Justia before promoting to high",
+  },
+  "ok-dui-misdemeanor": {
+    citation: "Okla. Stat. tit. 47, § 11-902",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma DUI (misdemeanor); verify against Justia before promoting to high",
+  },
+  "nd-dui-misdemeanor": {
+    citation: "N.D. Cent. Code § 39-08-01",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — North Dakota DUI (Class B misdemeanor first offense); verify against Justia before promoting to high",
+  },
+  "ak-dui-misdemeanor": {
+    citation: "Alaska Stat. § 28.35.030",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alaska driving under the influence (misdemeanor first offense); verify against Justia before promoting to high",
+  },
+  "vt-dui-misdemeanor": {
+    citation: "Vt. Stat. Ann. tit. 23, § 1201",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Vermont DUI (misdemeanor); verify against Justia before promoting to high",
+  },
+  "vi-dui-misdemeanor": {
+    citation: "V.I. Code Ann. tit. 20, § 495",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands DUI; territory codes inconsistently published — verify manually",
+  },
+  "gu-dui-misdemeanor": {
+    citation: "16 GCA § 9107",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam DUI; territory codes inconsistently published — verify manually",
+  },
+  "as-dui-misdemeanor": {
+    citation: "Am. Samoa Code Ann. § 22.0104",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa DUI; territory codes inconsistently published — verify manually",
+  },
+  "mp-dui-misdemeanor": {
+    citation: "9 CMC § 7101",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI DUI; territory codes inconsistently published — verify manually",
+  },
+
+  // ── BATCH 24: Smaller cleanup — assault variants, battery, domestic-battery, petit larceny ──
+
+  // assault-fourth-degree — states using this ID
+  "mo-assault-fourth-degree": {
+    citation: "Mo. Rev. Stat. § 565.056",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Missouri assault in the fourth degree (class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "wa-assault-fourth-degree": {
+    citation: "Wash. Rev. Code § 9A.36.041",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Washington assault in the fourth degree (gross misdemeanor); verify against Justia before promoting to high",
+  },
+  "ky-assault-fourth-degree": {
+    citation: "Ky. Rev. Stat. Ann. § 508.030",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kentucky assault in the fourth degree (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "or-assault-fourth-degree": {
+    citation: "Or. Rev. Stat. § 163.160",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oregon assault in the fourth degree (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "ak-assault-fourth-degree": {
+    citation: "Alaska Stat. § 11.41.230",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alaska assault in the fourth degree (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+
+  // battery-misdemeanor — states using this ID
+  "in-battery-misdemeanor": {
+    citation: "Ind. Code § 35-42-2-1",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Indiana battery (Class B misdemeanor level); verify against Justia before promoting to high",
+  },
+  "nv-battery-misdemeanor": {
+    citation: "Nev. Rev. Stat. § 200.481(2)(a)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nevada battery (misdemeanor); verify against Justia before promoting to high",
+  },
+  "ks-battery-misdemeanor": {
+    citation: "Kan. Stat. Ann. § 21-5413",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kansas battery (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "wv-battery-misdemeanor": {
+    citation: "W. Va. Code § 61-2-9(c)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — West Virginia battery (misdemeanor); verify against Justia before promoting to high",
+  },
+  "id-battery-misdemeanor": {
+    citation: "Idaho Code § 18-903",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Idaho battery (misdemeanor); verify against Justia before promoting to high",
+  },
+
+  // domestic-battery — states using this ID
+  "ca-domestic-battery": {
+    citation: "Cal. Penal Code § 243(e)(1)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — California domestic battery (misdemeanor); verify against Justia before promoting to high",
+  },
+  "fl-domestic-battery": {
+    citation: "Fla. Stat. § 741.28",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Florida domestic battery (first-degree misdemeanor); verify against Justia before promoting to high",
+  },
+  "il-domestic-battery": {
+    citation: "720 Ill. Comp. Stat. 5/12-3.2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Illinois domestic battery (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "in-domestic-battery": {
+    citation: "Ind. Code § 35-42-2-1.3",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Indiana domestic battery (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "ks-domestic-battery": {
+    citation: "Kan. Stat. Ann. § 21-5414",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kansas domestic battery (Class B misdemeanor first offense); verify against Justia before promoting to high",
+  },
+  "wv-domestic-battery": {
+    citation: "W. Va. Code § 61-2-28",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — West Virginia domestic battery (misdemeanor); verify against Justia before promoting to high",
+  },
+
+  // petit-larceny — states using this specific ID
+  "ny-petit-larceny": {
+    citation: "N.Y. Penal Law § 155.25",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New York petit larceny (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "sc-petit-larceny": {
+    citation: "S.C. Code Ann. § 16-13-30(A)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Carolina petit larceny (value under $2,000); verify against Justia before promoting to high",
+  },
+  "va-petit-larceny": {
+    citation: "Va. Code Ann. § 18.2-96",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Virginia petit larceny (value under $1,000); verify against Justia before promoting to high",
+  },
+  "ok-petit-larceny": {
+    citation: "Okla. Stat. tit. 21, § 1704",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma petit larceny (value under $1,000); verify against Justia before promoting to high",
+  },
+  "nv-petit-larceny": {
+    citation: "Nev. Rev. Stat. § 205.240",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nevada petty larceny (value under $650); verify against Justia before promoting to high",
+  },
+  "ms-petit-larceny": {
+    citation: "Miss. Code Ann. § 97-17-43",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Mississippi petite larceny (value under $1,000); verify against Justia before promoting to high",
+  },
+  "wv-petit-larceny": {
+    citation: "W. Va. Code § 61-3-13(b)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — West Virginia petit larceny (value under $1,000); verify against Justia before promoting to high",
+  },
+
+  // simple-assault-misdemeanor — states using this ID
+  "ms-simple-assault-misdemeanor": {
+    citation: "Miss. Code Ann. § 97-3-7(1)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Mississippi simple assault (misdemeanor); verify against Justia before promoting to high",
+  },
+  "nh-simple-assault-misdemeanor": {
+    citation: "N.H. Rev. Stat. Ann. § 631:2-a",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Hampshire simple assault (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "sd-simple-assault-misdemeanor": {
+    citation: "S.D. Codified Laws § 22-18-1",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Dakota simple assault (Class 1 misdemeanor); verify against Justia before promoting to high",
+  },
+  "vt-simple-assault-misdemeanor": {
+    citation: "Vt. Stat. Ann. tit. 13, § 1023",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Vermont simple assault (misdemeanor); verify against Justia before promoting to high",
+  },
+  "dc-simple-assault-misdemeanor": {
+    citation: "D.C. Code § 22-404",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — D.C. simple assault (misdemeanor); verify against Justia before promoting to high",
+  },
+  "gu-simple-assault-misdemeanor": {
+    citation: "9 GCA § 19.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam simple assault; territory codes inconsistently published — verify manually",
+  },
+  "as-simple-assault-misdemeanor": {
+    citation: "Am. Samoa Code Ann. § 46.3505(b)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa simple assault; territory codes inconsistently published — verify manually",
+  },
+  "mp-simple-assault-misdemeanor": {
+    citation: "6 CMC § 1201",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI simple assault; territory codes inconsistently published — verify manually",
+  },
+
+  // disorderly-conduct-misdemeanor — states using this specific ID
+  "ma-disorderly-conduct-misdemeanor": {
+    citation: "Mass. Gen. Laws ch. 272, § 53",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Massachusetts disorderly conduct (misdemeanor); verify against Justia before promoting to high",
+  },
+  "sd-disorderly-conduct-misdemeanor": {
+    citation: "S.D. Codified Laws § 22-18-35",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Dakota disorderly conduct (Class 2 misdemeanor); verify against Justia before promoting to high",
+  },
+  "vi-disorderly-conduct-misdemeanor": {
+    citation: "V.I. Code Ann. tit. 14, § 622",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands disorderly conduct; territory codes inconsistently published — verify manually",
+  },
+  "gu-disorderly-conduct-misdemeanor": {
+    citation: "9 GCA § 28.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam disorderly conduct; territory codes inconsistently published — verify manually",
+  },
+  "as-disorderly-conduct-misdemeanor": {
+    citation: "Am. Samoa Code Ann. § 46.4006",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa disorderly conduct; territory codes inconsistently published — verify manually",
+  },
+  "mp-disorderly-conduct-misdemeanor": {
+    citation: "6 CMC § 1401",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI disorderly conduct; territory codes inconsistently published — verify manually",
+  },
+
+  // ── BATCH 25: criminal-trespass, driving-under-suspension, criminal-mischief, burglary-3rd,
+  //             voluntary/involuntary manslaughter territories, felony-murder remaining ──
+
+  // criminal-trespass — states using this specific ID (not criminal-trespass-misdemeanor or trespass)
+  "ga-criminal-trespass": {
+    citation: "Ga. Code Ann. § 16-7-21",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Georgia criminal trespass (misdemeanor); verify against Justia before promoting to high",
+  },
+  "in-criminal-trespass": {
+    citation: "Ind. Code § 35-43-2-2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Indiana criminal trespass (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "la-criminal-trespass": {
+    citation: "La. Rev. Stat. § 14:63",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Louisiana criminal trespass; verify against Justia before promoting to high",
+  },
+  "nj-criminal-trespass": {
+    citation: "N.J. Stat. Ann. § 2C:18-3",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Jersey criminal trespass; verify against Justia before promoting to high",
+  },
+  "oh-criminal-trespass": {
+    citation: "Ohio Rev. Code Ann. § 2911.21",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Ohio criminal trespass (minor misdemeanor); verify against Justia before promoting to high",
+  },
+  "pa-criminal-trespass": {
+    citation: "18 Pa. Cons. Stat. § 3503",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Pennsylvania criminal trespass; verify against Justia before promoting to high",
+  },
+  "tn-criminal-trespass": {
+    citation: "Tenn. Code Ann. § 39-14-405",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Tennessee criminal trespass (Class C misdemeanor); verify against Justia before promoting to high",
+  },
+  "tx-criminal-trespass": {
+    citation: "Tex. Penal Code § 30.05",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Texas criminal trespass (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+
+  // criminal-trespass-misdemeanor — remaining states
+  "ar-criminal-trespass-misdemeanor": {
+    citation: "Ark. Code Ann. § 5-39-203",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Arkansas criminal trespass (Class C misdemeanor); verify against Justia before promoting to high",
+  },
+  "ks-criminal-trespass-misdemeanor": {
+    citation: "Kan. Stat. Ann. § 21-5808",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kansas criminal trespass (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "nm-criminal-trespass-misdemeanor": {
+    citation: "N.M. Stat. Ann. § 30-14-1",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Mexico criminal trespass (petty misdemeanor); verify against Justia before promoting to high",
+  },
+  "id-criminal-trespass-misdemeanor": {
+    citation: "Idaho Code § 18-7011",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Idaho malicious injury to property / trespass (misdemeanor); verify against Justia before promoting to high",
+  },
+  "nh-criminal-trespass-misdemeanor": {
+    citation: "N.H. Rev. Stat. Ann. § 635:2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Hampshire criminal trespass (misdemeanor); verify against Justia before promoting to high",
+  },
+  "mt-criminal-trespass-misdemeanor": {
+    citation: "Mont. Code Ann. § 45-6-203",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Montana criminal trespass to property (misdemeanor); verify against Justia before promoting to high",
+  },
+  "sd-criminal-trespass-misdemeanor": {
+    citation: "S.D. Codified Laws § 22-35-6",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Dakota trespassing (Class 2 misdemeanor); verify against Justia before promoting to high",
+  },
+  "wy-criminal-trespass-misdemeanor": {
+    citation: "Wyo. Stat. Ann. § 6-3-303",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Wyoming trespass (misdemeanor); verify against Justia before promoting to high",
+  },
+  "vi-criminal-trespass-misdemeanor": {
+    citation: "V.I. Code Ann. tit. 14, § 1741",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands trespass; territory codes inconsistently published — verify manually",
+  },
+  "gu-criminal-trespass-misdemeanor": {
+    citation: "9 GCA § 43.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam criminal trespass; territory codes inconsistently published — verify manually",
+  },
+  "as-criminal-trespass-misdemeanor": {
+    citation: "Am. Samoa Code Ann. § 46.4401",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa trespass; territory codes inconsistently published — verify manually",
+  },
+  "mp-criminal-trespass-misdemeanor": {
+    citation: "6 CMC § 1501",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI trespass; territory codes inconsistently published — verify manually",
+  },
+
+  // driving-under-suspension — states using this specific ID
+  "la-driving-under-suspension": {
+    citation: "La. Rev. Stat. § 32:415",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Louisiana driving under suspension; verify against Justia before promoting to high",
+  },
+  "oh-driving-under-suspension": {
+    citation: "Ohio Rev. Code Ann. § 4510.11",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Ohio driving under OVI suspension; verify against Justia before promoting to high",
+  },
+  "pa-driving-under-suspension": {
+    citation: "75 Pa. Cons. Stat. § 1543",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Pennsylvania driving while operating privilege is suspended or revoked; verify against Justia before promoting to high",
+  },
+  "sc-driving-under-suspension": {
+    citation: "S.C. Code Ann. § 56-1-460",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Carolina driving under suspension; verify against Justia before promoting to high",
+  },
+  "ok-driving-under-suspension": {
+    citation: "Okla. Stat. tit. 47, § 6-303",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma driving under suspension; verify against Justia before promoting to high",
+  },
+  "ct-driving-under-suspension": {
+    citation: "Conn. Gen. Stat. § 14-215",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Connecticut operating while license is suspended; verify against Justia before promoting to high",
+  },
+  "ms-driving-under-suspension": {
+    citation: "Miss. Code Ann. § 63-1-53",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Mississippi driving under suspension; verify against Justia before promoting to high",
+  },
+  "ne-driving-under-suspension": {
+    citation: "Neb. Rev. Stat. § 60-4,108",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nebraska driving while suspended; verify against Justia before promoting to high",
+  },
+
+  // criminal-mischief-misdemeanor — remaining states
+  "ar-criminal-mischief-misdemeanor": {
+    citation: "Ark. Code Ann. § 5-38-203",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Arkansas criminal mischief (misdemeanor, value under $500); verify against Justia before promoting to high",
+  },
+  "ne-criminal-mischief-misdemeanor": {
+    citation: "Neb. Rev. Stat. § 28-519",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nebraska criminal mischief (misdemeanor); verify against Justia before promoting to high",
+  },
+  "nh-criminal-mischief-misdemeanor": {
+    citation: "N.H. Rev. Stat. Ann. § 634:2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Hampshire criminal mischief (misdemeanor); verify against Justia before promoting to high",
+  },
+  "mt-criminal-mischief-misdemeanor": {
+    citation: "Mont. Code Ann. § 45-6-101",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Montana criminal mischief (misdemeanor); verify against Justia before promoting to high",
+  },
+  "de-criminal-mischief-misdemeanor": {
+    citation: "Del. Code Ann. tit. 11, § 811",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Delaware criminal mischief (Class B misdemeanor, value under $1,000); verify against Justia before promoting to high",
+  },
+  "sd-criminal-mischief-misdemeanor": {
+    citation: "S.D. Codified Laws § 22-34-1",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Dakota damage to property (misdemeanor); verify against Justia before promoting to high",
+  },
+  "gu-criminal-mischief-misdemeanor": {
+    citation: "9 GCA § 43.40",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam criminal mischief; territory codes inconsistently published — verify manually",
+  },
+  "as-criminal-mischief-misdemeanor": {
+    citation: "Am. Samoa Code Ann. § 46.4301",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa criminal mischief; territory codes inconsistently published — verify manually",
+  },
+  "mp-criminal-mischief-misdemeanor": {
+    citation: "6 CMC § 1601",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI criminal mischief; territory codes inconsistently published — verify manually",
+  },
+
+  // burglary-in-the-third-degree — states using this ID
+  "al-burglary-in-the-third-degree": {
+    citation: "Ala. Code § 13A-7-7",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alabama burglary in the third degree (Class C felony); verify against Justia before promoting to high",
+  },
+  "az-burglary-in-the-third-degree": {
+    citation: "Ariz. Rev. Stat. § 13-1506",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Arizona burglary in the third degree (Class 4 felony); verify against Justia before promoting to high",
+  },
+  "ct-burglary-in-the-third-degree": {
+    citation: "Conn. Gen. Stat. § 53a-103",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Connecticut burglary in the third degree (Class D felony); verify against Justia before promoting to high",
+  },
+  "de-burglary-in-the-third-degree": {
+    citation: "Del. Code Ann. tit. 11, § 824",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Delaware burglary in the third degree (Class F felony); verify against Justia before promoting to high",
+  },
+  "ky-burglary-in-the-third-degree": {
+    citation: "Ky. Rev. Stat. Ann. § 511.040",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kentucky burglary in the third degree (Class D felony); verify against Justia before promoting to high",
+  },
+  "mn-burglary-in-the-third-degree": {
+    citation: "Minn. Stat. § 609.582(3)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Minnesota burglary in the third degree (felony); verify against Justia before promoting to high",
+  },
+  "nj-burglary-in-the-third-degree": {
+    citation: "N.J. Stat. Ann. § 2C:18-2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Jersey burglary (third-degree crime); verify against Justia before promoting to high",
+  },
+  "ny-burglary-in-the-third-degree": {
+    citation: "N.Y. Penal Law § 140.20",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New York burglary in the third degree (Class D felony); verify against Justia before promoting to high",
+  },
+  "sc-burglary-in-the-third-degree": {
+    citation: "S.C. Code Ann. § 16-11-312(B)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — South Carolina burglary in the third degree (felony); verify against Justia before promoting to high",
+  },
+
+  // ── BATCH 26: resisting-arrest, failure-to-appear, possession-marijuana remaining states ──
+
+  // resisting-arrest — remaining states (not covered in earlier batches)
+  "ak-resisting-arrest": {
+    citation: "Alaska Stat. § 11.56.700",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alaska resisting or interfering with arrest (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "hi-resisting-arrest": {
+    citation: "Haw. Rev. Stat. § 710-1026.5",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Hawaii resisting arrest (misdemeanor); verify against Justia before promoting to high",
+  },
+  "ia-resisting-arrest": {
+    citation: "Iowa Code § 719.1",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Iowa interference with official acts; verify against Justia before promoting to high",
+  },
+  "ks-resisting-arrest": {
+    citation: "Kan. Stat. Ann. § 21-5414",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kansas interference with law enforcement (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "la-resisting-arrest": {
+    citation: "La. Rev. Stat. § 14:108",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Louisiana resisting an officer; verify against Justia before promoting to high",
+  },
+  "mo-resisting-arrest": {
+    citation: "Mo. Rev. Stat. § 575.150",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Missouri resisting or interfering with arrest (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "nd-resisting-arrest": {
+    citation: "N.D. Cent. Code § 12.1-08-02",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — North Dakota preventing arrest (Class A misdemeanor); verify against Justia before promoting to high",
+  },
+  "ok-resisting-arrest": {
+    citation: "Okla. Stat. tit. 21, § 268",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma resisting an officer (misdemeanor); verify against Justia before promoting to high",
+  },
+  "pa-resisting-arrest": {
+    citation: "18 Pa. Cons. Stat. § 5104",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Pennsylvania resisting arrest or other law enforcement (misdemeanor); verify against Justia before promoting to high",
+  },
+  "ut-resisting-arrest": {
+    citation: "Utah Code Ann. § 76-8-305",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Utah interference with arresting officer (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "pr-resisting-arrest": {
+    citation: "P.R. Laws Ann. tit. 33, § 4751",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico resisting arrest; territory codes inconsistently published — verify manually",
+  },
+  "vi-resisting-arrest": {
+    citation: "V.I. Code Ann. tit. 14, § 1508",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands resisting arrest; territory codes inconsistently published — verify manually",
+  },
+  "gu-resisting-arrest": {
+    citation: "9 GCA § 52.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam resisting arrest; territory codes inconsistently published — verify manually",
+  },
+  "as-resisting-arrest": {
+    citation: "Am. Samoa Code Ann. § 46.4502",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa resisting arrest; territory codes inconsistently published — verify manually",
+  },
+  "mp-resisting-arrest": {
+    citation: "6 CMC § 1701",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI resisting arrest; territory codes inconsistently published — verify manually",
+  },
+
+  // failure-to-appear — remaining states not in earlier batches
+  "ak-failure-to-appear": {
+    citation: "Alaska Stat. § 12.30.060",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Alaska failure to appear; verify against Justia before promoting to high",
+  },
+  "hi-failure-to-appear": {
+    citation: "Haw. Rev. Stat. § 710-1028",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Hawaii failure to appear; verify against Justia before promoting to high",
+  },
+  "id-failure-to-appear": {
+    citation: "Idaho Code § 18-7401",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Idaho failure to appear (felony charge = felony FTA; misdemeanor = misdemeanor FTA); verify against Justia before promoting to high",
+  },
+  "ia-failure-to-appear": {
+    citation: "Iowa Code § 811A.2",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Iowa failure to appear while released on bail; verify against Justia before promoting to high",
+  },
+  "la-failure-to-appear": {
+    citation: "La. Rev. Stat. § 14:110.1",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Louisiana failure to appear; verify against Justia before promoting to high",
+  },
+  "me-failure-to-appear": {
+    citation: "Me. Rev. Stat. tit. 15, § 1094",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Maine failure to appear; verify against Justia before promoting to high",
+  },
+  "md-failure-to-appear": {
+    citation: "Md. Code Ann., Crim. Law § 9-304",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Maryland failing to appear; verify against Justia before promoting to high",
+  },
+  "ma-failure-to-appear": {
+    citation: "Mass. Gen. Laws ch. 276, § 82A",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Massachusetts failure to appear; verify against Justia before promoting to high",
+  },
+  "mi-failure-to-appear": {
+    citation: "Mich. Comp. Laws § 750.199a",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Michigan failure to appear (skip bond); verify against Justia before promoting to high",
+  },
+  "ms-failure-to-appear": {
+    citation: "Miss. Code Ann. § 99-5-27",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Mississippi failure to appear; verify against Justia before promoting to high",
+  },
+  "mo-failure-to-appear": {
+    citation: "Mo. Rev. Stat. § 544.665",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Missouri failure to appear (Class D felony if original was felony); verify against Justia before promoting to high",
+  },
+  "ne-failure-to-appear": {
+    citation: "Neb. Rev. Stat. § 29-901.02",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nebraska bail jumping / failure to appear; verify against Justia before promoting to high",
+  },
+  "nd-failure-to-appear": {
+    citation: "N.D. Cent. Code § 12.1-32-13",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — North Dakota failure to appear; verify against Justia before promoting to high",
+  },
+  "ok-failure-to-appear": {
+    citation: "Okla. Stat. tit. 22, § 1114",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Oklahoma failure to appear; verify against Justia before promoting to high",
+  },
+  "pa-failure-to-appear": {
+    citation: "18 Pa. Cons. Stat. § 5124",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Pennsylvania flight to avoid apprehension / failure to appear; verify against Justia before promoting to high",
+  },
+  "ri-failure-to-appear": {
+    citation: "R.I. Gen. Laws § 12-13-15",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Rhode Island failure to appear after release on bail; verify against Justia before promoting to high",
+  },
+  "ut-failure-to-appear": {
+    citation: "Utah Code Ann. § 77-20-9",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Utah failure to appear; verify against Justia before promoting to high",
+  },
+  "vt-failure-to-appear": {
+    citation: "Vt. Stat. Ann. tit. 13, § 7575",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Vermont failure to appear; verify against Justia before promoting to high",
+  },
+  "pr-failure-to-appear": {
+    citation: "P.R. Laws Ann. tit. 34, § 1742",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Puerto Rico failure to appear; territory codes inconsistently published — verify manually",
+  },
+  "vi-failure-to-appear": {
+    citation: "V.I. Code Ann. tit. 5, § 3561",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — U.S. Virgin Islands failure to appear; territory codes inconsistently published — verify manually",
+  },
+  "gu-failure-to-appear": {
+    citation: "8 GCA § 35.10",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Guam failure to appear; territory codes inconsistently published — verify manually",
+  },
+  "as-failure-to-appear": {
+    citation: "Am. Samoa Code Ann. § 46.0404",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — American Samoa failure to appear; territory codes inconsistently published — verify manually",
+  },
+  "mp-failure-to-appear": {
+    citation: "6 CMC § 3501",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — CNMI failure to appear; territory codes inconsistently published — verify manually",
+  },
+
+  // possession-marijuana — remaining states not covered in main possession batch
+  "in-possession-marijuana": {
+    citation: "Ind. Code § 35-48-4-11",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Indiana possession of marijuana; verify against Justia before promoting to high",
+  },
+  "md-possession-marijuana": {
+    citation: "Md. Code Ann., Crim. Law § 5-601",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Maryland possession of marijuana (MD decriminalized small amounts in 2014; fully legalized 2023 — verify current status before promoting to high)",
+  },
+  "mi-possession-marijuana": {
+    citation: "Mich. Comp. Laws § 333.7403(2)(d)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Michigan possession of marijuana (MI legalized recreational use 2018 — verify current criminal threshold before promoting to high)",
+  },
+  "oh-possession-marijuana": {
+    citation: "Ohio Rev. Code Ann. § 2925.11",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Ohio possession of marijuana (OH Issue 2 legalized recreational 2023 — verify current criminal threshold before promoting to high)",
+  },
+  "va-possession-marijuana": {
+    citation: "Va. Code Ann. § 4.1-1100",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Virginia marijuana (VA legalized recreational 2021 — verify current criminal provisions before promoting to high)",
+  },
+  "ut-possession-marijuana": {
+    citation: "Utah Code Ann. § 58-37-8(2)(a)(i)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Utah possession of marijuana (Class B misdemeanor); verify against Justia before promoting to high",
+  },
+  "ia-possession-marijuana": {
+    citation: "Iowa Code § 124.401(5)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Iowa possession of marijuana; verify against Justia before promoting to high",
+  },
+  "ar-possession-marijuana": {
+    citation: "Ark. Code Ann. § 5-64-419",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Arkansas possession of marijuana; verify against Justia before promoting to high",
+  },
+  "ms-possession-marijuana": {
+    citation: "Miss. Code Ann. § 41-29-139(c)(2)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Mississippi possession of marijuana; verify against Justia before promoting to high",
+  },
+  "ks-possession-marijuana": {
+    citation: "Kan. Stat. Ann. § 21-5706(b)(3)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Kansas possession of marijuana (Class B misdemeanor for first offense); verify against Justia before promoting to high",
+  },
+  "ne-possession-marijuana": {
+    citation: "Neb. Rev. Stat. § 28-416(13)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Nebraska possession of marijuana (infraction for small amounts); verify against Justia before promoting to high",
+  },
+  "wv-possession-marijuana": {
+    citation: "W. Va. Code § 60A-4-401(c)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — West Virginia possession of marijuana; verify against Justia before promoting to high",
+  },
+  "id-possession-marijuana": {
+    citation: "Idaho Code § 37-2732(c)(3)",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Idaho possession of marijuana (misdemeanor); verify against Justia before promoting to high",
+  },
+  "nh-possession-marijuana": {
+    citation: "N.H. Rev. Stat. Ann. § 318-B:26",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — New Hampshire possession of marijuana (NH decriminalized small amounts — verify current criminal threshold before promoting to high)",
+  },
+  "mt-possession-marijuana": {
+    citation: "Mont. Code Ann. § 45-9-102",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Montana possession of marijuana (MT legalized recreational 2021 — verify current criminal provisions before promoting to high)",
+  },
+  "ri-possession-marijuana": {
+    citation: "R.I. Gen. Laws § 21-28-4.01",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Rhode Island possession of marijuana (RI legalized recreational 2022 — verify current criminal threshold before promoting to high)",
+  },
+  "de-possession-marijuana": {
+    citation: "Del. Code Ann. tit. 16, § 4764",
+    confidence: "medium",
+    lastVerified: "2026-04",
+    source: "Training data — Delaware possession of marijuana (DE legalized recreational 2023 — verify current criminal provisions before promoting to high)",
+  },
+
   // ── Territories: excluded from automated research; handle manually if needed ─
   // AS, GU, MP, PR, VI — codes are inconsistently published online; error risk too high
+  // Territory entries added above in individual batches with confidence: 'low'
 };
