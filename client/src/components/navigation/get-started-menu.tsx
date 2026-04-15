@@ -6,8 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   MessageSquare,
   Globe,
-  
-  Calendar,
   Search,
   Users,
   ChevronRight,
@@ -270,23 +268,6 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               <BrandShieldIcon size={20} />
               <span className="font-medium group-hover:text-blue-600 transition-colors">
                 {t('getStartedMenu.legalRightsSubmenu.constitutionalRights')}
-              </span>
-            </div>
-          </CardContent>
-        </Card>
-      </button>
-
-      <button
-        onClick={() => handleNavigate('/process')}
-        className="w-full"
-        data-testid="submenu-item-criminal-justice-process"
-      >
-        <Card className="hover:shadow-md hover:border-green-500 transition-all duration-200 cursor-pointer group">
-          <CardContent className="p-3">
-            <div className="flex items-center gap-3">
-              <Calendar className="h-5 w-5 text-green-600" />
-              <span className="font-medium group-hover:text-green-600 transition-colors">
-                {t('getStartedMenu.legalRightsSubmenu.criminalJusticeProcess')}
               </span>
             </div>
           </CardContent>
