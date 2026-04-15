@@ -16025,4 +16025,85 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "hi-harassment-misdemeanor": { citation: "Haw. Rev. Stat. § 711-1106", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii harassment misdemeanor" },
   "de-harassment-misdemeanor": { citation: "Del. Code Ann. tit. 11, § 1311", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware harassment misdemeanor" },
   "ak-harassment-misdemeanor": { citation: "Alaska Stat. § 11.61.120", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska harassment misdemeanor" },
+
+  // --- Batch 53: state-specific charge variants (AL–MO) ---
+  "al-domestic-violence-third-degree": { citation: "Ala. Code § 13A-6-132", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama domestic violence in the third degree" },
+  "al-possession-marijuana-second-degree": { citation: "Ala. Code § 13A-12-214", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama possession of marijuana in the second degree" },
+
+  "ca-petty-theft-misdemeanor": { citation: "Cal. Penal Code § 484", confidence: "medium", lastVerified: "2026-04", source: "Training data — California petty theft misdemeanor" },
+  "ca-fare-evasion": { citation: "Cal. Penal Code § 640", confidence: "medium", lastVerified: "2026-04", source: "Training data — California fare evasion" },
+  "ca-prostitution-solicitation": { citation: "Cal. Penal Code § 647(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — California soliciting prostitution" },
+
+  "az-assault-misdemeanor": { citation: "Ariz. Rev. Stat. § 13-1203", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona assault misdemeanor" },
+  "az-dv-assault-misdemeanor": { citation: "Ariz. Rev. Stat. § 13-3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona domestic violence assault misdemeanor" },
+  "az-threatening-and-intimidating": { citation: "Ariz. Rev. Stat. § 13-1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona threatening and intimidating" },
+
+  "co-theft-under-2000": { citation: "Colo. Rev. Stat. § 18-4-401", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado theft under $2,000" },
+  "co-dv-assault-third-degree": { citation: "Colo. Rev. Stat. § 18-6-800.3", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado domestic violence / assault in the third degree" },
+  "co-trespass-first-degree": { citation: "Colo. Rev. Stat. § 18-4-502", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado first degree criminal trespass" },
+  "co-possession-marijuana-public": { citation: "Colo. Rev. Stat. § 18-18-406(3)(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado open/public marijuana consumption" },
+  "co-driving-under-restraint": { citation: "Colo. Rev. Stat. § 42-2-138", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado driving under restraint" },
+
+  "fl-grand-theft-in-the-third-degree": { citation: "Fla. Stat. § 812.014(2)(c)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida grand theft in the third degree" },
+  "fl-distribution-of-controlled-substance": { citation: "Fla. Stat. § 893.13(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida distribution of controlled substance" },
+  "fl-petit-theft": { citation: "Fla. Stat. § 812.014(3)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida petit theft" },
+  "fl-battery": { citation: "Fla. Stat. § 784.03", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida battery" },
+  "fl-driving-with-suspended-license": { citation: "Fla. Stat. § 322.34", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida driving with suspended license" },
+  "fl-disorderly-intoxication": { citation: "Fla. Stat. § 856.011", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida disorderly intoxication" },
+  "fl-possession-of-marijuana-under-20g": { citation: "Fla. Stat. § 893.13(6)(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida possession of marijuana under 20 grams" },
+  "fl-trespass-in-structure": { citation: "Fla. Stat. § 810.08", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida trespass in a structure or conveyance" },
+  "fl-resisting-officer-without-violence": { citation: "Fla. Stat. § 843.02", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida resisting officer without violence" },
+  "fl-violation-of-probation": { citation: "Fla. Stat. § 948.06", confidence: "medium", lastVerified: "2026-04", source: "Training data — Florida violation of probation" },
+
+  "ga-theft-by-shoplifting": { citation: "Ga. Code Ann. § 16-8-14", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia theft by shoplifting" },
+  "ga-simple-battery": { citation: "Ga. Code Ann. § 16-5-23", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia simple battery" },
+  "ga-dui-less-safe": { citation: "Ga. Code Ann. § 40-6-391(a)(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia DUI less safe" },
+  "ga-possession-marijuana-less-than-oz": { citation: "Ga. Code Ann. § 16-13-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia possession of marijuana less than 1 oz" },
+  "ga-family-violence-battery": { citation: "Ga. Code Ann. § 16-5-23.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia family violence battery" },
+  "ga-obstruction-of-officer": { citation: "Ga. Code Ann. § 16-10-24", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia obstruction of an officer" },
+  "ga-criminal-damage-second-degree": { citation: "Ga. Code Ann. § 16-7-23", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia criminal damage to property in the second degree" },
+
+  "il-assault-on-peace-officer": { citation: "720 Ill. Comp. Stat. 5/12-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois assault on a peace officer" },
+  "il-possession-of-cannabis": { citation: "720 Ill. Comp. Stat. 550/4", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois possession of cannabis" },
+  "il-criminal-trespass-to-land": { citation: "720 Ill. Comp. Stat. 5/21-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois criminal trespass to land" },
+  "il-aggravated-speeding": { citation: "625 Ill. Comp. Stat. 5/11-601.5", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois aggravated speeding" },
+  "il-reckless-conduct": { citation: "720 Ill. Comp. Stat. 5/12-5", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois reckless conduct" },
+  "il-violation-of-order-of-protection": { citation: "720 Ill. Comp. Stat. 5/12-3.4", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois violation of order of protection" },
+
+  "in-owi": { citation: "Ind. Code § 9-30-5-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Indiana operating while intoxicated" },
+  "in-resisting-law-enforcement": { citation: "Ind. Code § 35-44.1-3-1", confidence: "medium", lastVerified: "2026-04", source: "Training data — Indiana resisting law enforcement" },
+
+  "la-theft-under-1000": { citation: "La. Rev. Stat. Ann. § 14:67", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana theft under $1,000" },
+  "la-simple-battery": { citation: "La. Rev. Stat. Ann. § 14:35", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana simple battery" },
+  "la-domestic-abuse-battery": { citation: "La. Rev. Stat. Ann. § 14:35.3", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana domestic abuse battery" },
+  "la-possession-marijuana-first": { citation: "La. Rev. Stat. Ann. § 40:966(E)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana possession of marijuana first offense" },
+  "la-criminal-damage-under-1000": { citation: "La. Rev. Stat. Ann. § 14:56", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana simple criminal damage under $1,000" },
+
+  "md-theft-under-1500": { citation: "Md. Code Ann., Crim. Law § 7-104", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland theft under $1,500" },
+  "md-assault-second-degree": { citation: "Md. Code Ann., Crim. Law § 3-203", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland assault in the second degree" },
+  "md-dv-assault-second-degree": { citation: "Md. Code Ann., Crim. Law § 3-203", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland domestic violence assault in the second degree" },
+  "md-shoplifting-under-1500": { citation: "Md. Code Ann., Crim. Law § 7-104", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland shoplifting under $1,500" },
+
+  "ma-driving-with-suspended-license": { citation: "Mass. Gen. Laws ch. 90, § 23", confidence: "medium", lastVerified: "2026-04", source: "Training data — Massachusetts driving with suspended license" },
+  "ma-larceny-under-1200": { citation: "Mass. Gen. Laws ch. 266, § 30(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Massachusetts larceny under $1,200" },
+
+  "mi-retail-fraud-third-degree": { citation: "Mich. Comp. Laws § 750.356d", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan retail fraud in the third degree" },
+  "mi-owi": { citation: "Mich. Comp. Laws § 257.625", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan operating while intoxicated" },
+  "mi-domestic-violence": { citation: "Mich. Comp. Laws § 750.81(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan domestic violence" },
+  "mi-disorderly-person": { citation: "Mich. Comp. Laws § 750.167", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan disorderly person" },
+  "mi-driving-while-license-suspended": { citation: "Mich. Comp. Laws § 257.904", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan driving while license suspended" },
+  "mi-larceny-under-200": { citation: "Mich. Comp. Laws § 750.356(5)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan larceny under $200" },
+
+  "mn-theft-under-500": { citation: "Minn. Stat. § 609.52(3)(5)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota theft under $500" },
+  "mn-assault-fifth-degree": { citation: "Minn. Stat. § 609.224", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota assault in the fifth degree" },
+  "mn-possession-small-amount-marijuana": { citation: "Minn. Stat. § 152.027(4)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota possession of small amount of marijuana" },
+  "mn-driving-after-revocation": { citation: "Minn. Stat. § 171.24(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota driving after revocation" },
+
+  "mo-stealing-under-750": { citation: "Mo. Rev. Stat. § 570.030", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri stealing under $750" },
+  "mo-domestic-assault-fourth-degree": { citation: "Mo. Rev. Stat. § 565.076", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri domestic assault in the fourth degree" },
+  "mo-peace-disturbance": { citation: "Mo. Rev. Stat. § 574.010", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri peace disturbance" },
+  "mo-trespass-first-degree": { citation: "Mo. Rev. Stat. § 569.010", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri trespass in the first degree" },
+  "mo-possession-marijuana-10g-or-less": { citation: "Mo. Rev. Stat. § 579.015", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri possession of marijuana 10g or less" },
+  "mo-property-damage-second-degree": { citation: "Mo. Rev. Stat. § 569.120", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri property damage in the second degree" },
+  "mo-driving-while-revoked": { citation: "Mo. Rev. Stat. § 302.321", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri driving while revoked" },
 };
