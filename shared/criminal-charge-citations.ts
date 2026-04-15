@@ -15888,4 +15888,141 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "mp-harassment": { citation: "6 CMC § 1208", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "pr-harassment": { citation: "P.R. Laws Ann. tit. 33, § 4794", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "vi-harassment": { citation: "14 V.I.C. § 501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  // --- Batch 52: state-specific charge variants (4-count and 3-count categories) ---
+  "al-robbery-in-the-third-degree": { citation: "Ala. Code § 13A-8-43", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama robbery in the third degree" },
+  "ct-robbery-in-the-third-degree": { citation: "Conn. Gen. Stat. § 53a-136", confidence: "medium", lastVerified: "2026-04", source: "Training data — Connecticut robbery in the third degree" },
+  "ny-robbery-in-the-third-degree": { citation: "N.Y. Penal Law § 160.05", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York robbery in the third degree" },
+  "or-robbery-in-the-third-degree": { citation: "Or. Rev. Stat. § 164.395", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon robbery in the third degree" },
+
+  "al-dui": { citation: "Ala. Code § 32-5A-191", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama DUI" },
+  "md-dui": { citation: "Md. Code Ann., Transp. § 21-902", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland DUI" },
+  "va-dui": { citation: "Va. Code Ann. § 18.2-266", confidence: "medium", lastVerified: "2026-04", source: "Training data — Virginia DUI" },
+  "wa-dui": { citation: "Wash. Rev. Code § 46.61.502", confidence: "medium", lastVerified: "2026-04", source: "Training data — Washington DUI" },
+
+  "al-criminal-trespass-third-degree": { citation: "Ala. Code § 13A-7-4", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama criminal trespass in the third degree" },
+  "az-criminal-trespass-third-degree": { citation: "Ariz. Rev. Stat. § 13-1502", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona criminal trespass in the third degree" },
+  "ky-criminal-trespass-third-degree": { citation: "Ky. Rev. Stat. Ann. § 511.080", confidence: "medium", lastVerified: "2026-04", source: "Training data — Kentucky criminal trespass in the third degree" },
+  "ct-criminal-trespass-third-degree": { citation: "Conn. Gen. Stat. § 53a-110a", confidence: "medium", lastVerified: "2026-04", source: "Training data — Connecticut criminal trespass in the third degree" },
+
+  "ca-driving-without-license": { citation: "Cal. Veh. Code § 12500", confidence: "medium", lastVerified: "2026-04", source: "Training data — California driving without a license" },
+  "ga-driving-without-license": { citation: "Ga. Code Ann. § 40-5-20", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia driving without a license" },
+  "hi-driving-without-license": { citation: "Haw. Rev. Stat. § 286-102", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii driving without a license" },
+  "as-driving-without-license": { citation: "Am. Samoa Code Ann. § 22.0602", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  "co-criminal-mischief": { citation: "Colo. Rev. Stat. § 18-4-501", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado criminal mischief" },
+  "in-criminal-mischief": { citation: "Ind. Code § 35-43-1-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Indiana criminal mischief" },
+  "nj-criminal-mischief": { citation: "N.J. Stat. Ann. § 2C:17-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey criminal mischief" },
+  "tx-criminal-mischief": { citation: "Tex. Penal Code § 28.03", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas criminal mischief" },
+
+  "la-shoplifting-under-1000": { citation: "La. Rev. Stat. Ann. § 14:67.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana shoplifting under $1,000" },
+  "ok-shoplifting-under-1000": { citation: "Okla. Stat. tit. 21, § 1731", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma shoplifting under $1,000" },
+  "ms-shoplifting-under-1000": { citation: "Miss. Code Ann. § 97-23-93", confidence: "medium", lastVerified: "2026-04", source: "Training data — Mississippi shoplifting under $1,000" },
+  "de-shoplifting-under-1000": { citation: "Del. Code Ann. tit. 11, § 840", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware shoplifting under $1,000" },
+
+  "md-trespass": { citation: "Md. Code Ann., Crim. Law § 6-403", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland trespass" },
+  "mi-trespass": { citation: "Mich. Comp. Laws § 750.552", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan trespass" },
+  "mn-trespass": { citation: "Minn. Stat. § 609.605", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota trespass" },
+  "va-trespass": { citation: "Va. Code Ann. § 18.2-119", confidence: "medium", lastVerified: "2026-04", source: "Training data — Virginia trespass" },
+
+  "mn-dwi": { citation: "Minn. Stat. § 169A.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota driving while impaired" },
+  "mo-dwi": { citation: "Mo. Rev. Stat. § 577.010", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri driving while intoxicated" },
+  "nj-dwi": { citation: "N.J. Stat. Ann. § 39:4-50", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey driving while intoxicated" },
+  "nc-dwi": { citation: "N.C. Gen. Stat. § 20-138.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina impaired driving" },
+
+  "nj-simple-assault": { citation: "N.J. Stat. Ann. § 2C:12-1(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey simple assault" },
+  "nc-simple-assault": { citation: "N.C. Gen. Stat. § 14-33", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina simple assault" },
+  "pa-simple-assault": { citation: "18 Pa. Cons. Stat. § 2701", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania simple assault" },
+  "tn-simple-assault": { citation: "Tenn. Code Ann. § 39-13-101", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee simple assault" },
+
+  "ky-possession-marijuana-misdemeanor": { citation: "Ky. Rev. Stat. Ann. § 218A.1422", confidence: "medium", lastVerified: "2026-04", source: "Training data — Kentucky possession of marijuana (misdemeanor)" },
+  "ok-possession-marijuana-misdemeanor": { citation: "Okla. Stat. tit. 63, § 2-402", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma possession of marijuana (misdemeanor)" },
+  "nv-possession-marijuana-misdemeanor": { citation: "Nev. Rev. Stat. § 453.336", confidence: "medium", lastVerified: "2026-04", source: "Training data — Nevada possession of marijuana (misdemeanor)" },
+  "dc-possession-marijuana-misdemeanor": { citation: "D.C. Code § 48-1201", confidence: "medium", lastVerified: "2026-04", source: "Training data — DC possession of marijuana (misdemeanor)" },
+
+  "ky-shoplifting-misdemeanor": { citation: "Ky. Rev. Stat. Ann. § 433.234", confidence: "medium", lastVerified: "2026-04", source: "Training data — Kentucky shoplifting / theft by unlawful taking (misdemeanor)" },
+  "wv-shoplifting-misdemeanor": { citation: "W. Va. Code § 61-3A-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — West Virginia shoplifting misdemeanor" },
+  "ri-shoplifting-misdemeanor": { citation: "R.I. Gen. Laws § 11-41-20", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island shoplifting misdemeanor" },
+  "vi-shoplifting-misdemeanor": { citation: "14 V.I.C. § 1083a", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  "nv-trespass-misdemeanor": { citation: "Nev. Rev. Stat. § 207.200", confidence: "medium", lastVerified: "2026-04", source: "Training data — Nevada trespass misdemeanor" },
+  "ms-trespass-misdemeanor": { citation: "Miss. Code Ann. § 97-17-97", confidence: "medium", lastVerified: "2026-04", source: "Training data — Mississippi trespass misdemeanor" },
+  "wv-trespass-misdemeanor": { citation: "W. Va. Code § 61-3B-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — West Virginia trespass misdemeanor" },
+  "ri-trespass-misdemeanor": { citation: "R.I. Gen. Laws § 11-44-26", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island trespass misdemeanor" },
+
+  "wv-driving-suspended-misdemeanor": { citation: "W. Va. Code § 17B-4-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — West Virginia driving suspended misdemeanor" },
+  "mt-driving-suspended-misdemeanor": { citation: "Mont. Code Ann. § 61-5-212", confidence: "medium", lastVerified: "2026-04", source: "Training data — Montana driving suspended misdemeanor" },
+  "wy-driving-suspended-misdemeanor": { citation: "Wyo. Stat. Ann. § 31-7-134", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming driving suspended misdemeanor" },
+  "gu-driving-suspended-misdemeanor": { citation: "16 GCA § 9111", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  "ak-marijuana-possession-misdemeanor": { citation: "Alaska Stat. § 11.71.060", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska marijuana possession misdemeanor" },
+  "wy-marijuana-possession-misdemeanor": { citation: "Wyo. Stat. Ann. § 35-7-1031", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming marijuana possession misdemeanor" },
+  "gu-marijuana-possession-misdemeanor": { citation: "9 GCA § 67.401.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "mp-marijuana-possession-misdemeanor": { citation: "6 CMC § 3306", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  "vt-petit-larceny-misdemeanor": { citation: "Vt. Stat. Ann. tit. 13, § 2501", confidence: "medium", lastVerified: "2026-04", source: "Training data — Vermont petit larceny misdemeanor" },
+  "vi-petit-larceny-misdemeanor": { citation: "14 V.I.C. § 1084a", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-petit-larceny-misdemeanor": { citation: "Am. Samoa Code Ann. § 46.4203", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "mp-petit-larceny-misdemeanor": { citation: "6 CMC § 1804", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  "nj-harassment-stalking": { citation: "N.J. Stat. Ann. § 2C:33-4", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey harassment/stalking" },
+  "ny-harassment-stalking": { citation: "N.Y. Penal Law § 240.26", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York harassment/stalking" },
+  "or-harassment-stalking": { citation: "Or. Rev. Stat. § 166.065", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon harassment/stalking" },
+  "pa-harassment-stalking": { citation: "18 Pa. Cons. Stat. § 2709", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania harassment/stalking" },
+
+  "al-theft-fourth-degree": { citation: "Ala. Code § 13A-8-5", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama theft of property in the fourth degree" },
+  "hi-theft-fourth-degree": { citation: "Haw. Rev. Stat. § 708-833", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii theft in the fourth degree" },
+  "ak-theft-fourth-degree": { citation: "Alaska Stat. § 11.46.150", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska theft in the fourth degree" },
+
+  "al-criminal-mischief-third-degree": { citation: "Ala. Code § 13A-7-24", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama criminal mischief in the third degree" },
+  "ky-criminal-mischief-third-degree": { citation: "Ky. Rev. Stat. Ann. § 512.040", confidence: "medium", lastVerified: "2026-04", source: "Training data — Kentucky criminal mischief in the third degree" },
+  "ct-criminal-mischief-third-degree": { citation: "Conn. Gen. Stat. § 53a-117", confidence: "medium", lastVerified: "2026-04", source: "Training data — Connecticut criminal mischief in the third degree" },
+
+  "az-criminal-damage-misdemeanor": { citation: "Ariz. Rev. Stat. § 13-1602", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona criminal damage misdemeanor" },
+  "ks-criminal-damage-misdemeanor": { citation: "Kan. Stat. Ann. § 21-5813", confidence: "medium", lastVerified: "2026-04", source: "Training data — Kansas criminal damage to property misdemeanor" },
+  "wy-criminal-damage-misdemeanor": { citation: "Wyo. Stat. Ann. § 6-3-201", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming property destruction misdemeanor" },
+
+  "il-retail-theft": { citation: "720 Ill. Comp. Stat. 5/16-25", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois retail theft" },
+  "pa-retail-theft": { citation: "18 Pa. Cons. Stat. § 3929", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania retail theft" },
+  "wi-retail-theft": { citation: "Wis. Stat. § 943.50", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wisconsin retail theft" },
+
+  "il-criminal-damage-to-property": { citation: "720 Ill. Comp. Stat. 5/21-1", confidence: "medium", lastVerified: "2026-04", source: "Training data — Illinois criminal damage to property" },
+  "mn-criminal-damage-to-property": { citation: "Minn. Stat. § 609.595", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota criminal damage to property" },
+  "wi-criminal-damage-to-property": { citation: "Wis. Stat. § 943.01", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wisconsin criminal damage to property" },
+
+  "in-theft-misdemeanor": { citation: "Ind. Code § 35-43-4-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Indiana theft misdemeanor" },
+  "ks-theft-misdemeanor": { citation: "Kan. Stat. Ann. § 21-5801", confidence: "medium", lastVerified: "2026-04", source: "Training data — Kansas theft misdemeanor" },
+  "mt-theft-misdemeanor": { citation: "Mont. Code Ann. § 45-6-301", confidence: "medium", lastVerified: "2026-04", source: "Training data — Montana theft misdemeanor" },
+
+  "md-malicious-destruction-of-property": { citation: "Md. Code Ann., Crim. Law § 6-301", confidence: "medium", lastVerified: "2026-04", source: "Training data — Maryland malicious destruction of property" },
+  "ma-malicious-destruction-of-property": { citation: "Mass. Gen. Laws ch. 266, § 127", confidence: "medium", lastVerified: "2026-04", source: "Training data — Massachusetts malicious destruction of property" },
+  "mi-malicious-destruction-of-property": { citation: "Mich. Comp. Laws § 750.377a", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan malicious destruction of property" },
+
+  "ma-assault-and-battery": { citation: "Mass. Gen. Laws ch. 265, § 13A", confidence: "medium", lastVerified: "2026-04", source: "Training data — Massachusetts assault and battery" },
+  "mi-assault-and-battery": { citation: "Mich. Comp. Laws § 750.81", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan assault and battery" },
+  "va-assault-and-battery": { citation: "Va. Code Ann. § 18.2-57", confidence: "medium", lastVerified: "2026-04", source: "Training data — Virginia assault and battery" },
+
+  "ma-domestic-assault-battery": { citation: "Mass. Gen. Laws ch. 265, § 13M", confidence: "medium", lastVerified: "2026-04", source: "Training data — Massachusetts domestic assault and battery" },
+  "va-domestic-assault-battery": { citation: "Va. Code Ann. § 18.2-57.2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Virginia domestic assault and battery" },
+  "ok-domestic-assault-battery": { citation: "Okla. Stat. tit. 21, § 644", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma domestic assault and battery" },
+
+  "mn-domestic-assault": { citation: "Minn. Stat. § 609.2242", confidence: "medium", lastVerified: "2026-04", source: "Training data — Minnesota domestic assault" },
+  "tn-domestic-assault": { citation: "Tenn. Code Ann. § 39-13-111", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee domestic assault" },
+  "ri-domestic-assault": { citation: "R.I. Gen. Laws § 12-29-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island domestic assault" },
+
+  "ut-retail-theft-misdemeanor": { citation: "Utah Code Ann. § 76-6-602", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah retail theft misdemeanor" },
+  "vt-retail-theft-misdemeanor": { citation: "Vt. Stat. Ann. tit. 13, § 2557", confidence: "medium", lastVerified: "2026-04", source: "Training data — Vermont retail theft misdemeanor" },
+  "wy-retail-theft-misdemeanor": { citation: "Wyo. Stat. Ann. § 6-3-402", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming retail theft misdemeanor" },
+
+  "ne-assault-third-degree": { citation: "Neb. Rev. Stat. § 28-310", confidence: "medium", lastVerified: "2026-04", source: "Training data — Nebraska assault in the third degree" },
+  "hi-assault-third-degree": { citation: "Haw. Rev. Stat. § 707-712", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii assault in the third degree" },
+  "de-assault-third-degree": { citation: "Del. Code Ann. tit. 11, § 611", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware assault in the third degree" },
+
+  "ne-criminal-trespass-second": { citation: "Neb. Rev. Stat. § 28-521", confidence: "medium", lastVerified: "2026-04", source: "Training data — Nebraska criminal trespass in the second degree" },
+  "hi-criminal-trespass-second": { citation: "Haw. Rev. Stat. § 708-814", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii criminal trespass in the second degree" },
+  "ak-criminal-trespass-second": { citation: "Alaska Stat. § 11.46.330", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska criminal trespass in the second degree" },
+
+  "hi-harassment-misdemeanor": { citation: "Haw. Rev. Stat. § 711-1106", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii harassment misdemeanor" },
+  "de-harassment-misdemeanor": { citation: "Del. Code Ann. tit. 11, § 1311", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware harassment misdemeanor" },
+  "ak-harassment-misdemeanor": { citation: "Alaska Stat. § 11.61.120", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska harassment misdemeanor" },
 };
