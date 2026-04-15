@@ -16106,4 +16106,63 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "mo-possession-marijuana-10g-or-less": { citation: "Mo. Rev. Stat. § 579.015", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri possession of marijuana 10g or less" },
   "mo-property-damage-second-degree": { citation: "Mo. Rev. Stat. § 569.120", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri property damage in the second degree" },
   "mo-driving-while-revoked": { citation: "Mo. Rev. Stat. § 302.321", confidence: "medium", lastVerified: "2026-04", source: "Training data — Missouri driving while revoked" },
+
+  // --- Batch 54: state-specific variants NJ–WA ---
+  "nj-dv-simple-assault": { citation: "N.J. Stat. Ann. § 2C:12-1(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey domestic violence simple assault" },
+  "nj-possession-marijuana-under-50g": { citation: "N.J. Stat. Ann. § 2C:35-10(a)(4)", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey possession of marijuana under 50g" },
+
+  "ny-theft-of-services": { citation: "N.Y. Penal Law § 165.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York theft of services" },
+  "ny-aggravated-unlicensed-operation": { citation: "N.Y. Veh. & Traf. Law § 511", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York aggravated unlicensed operation" },
+  "ny-criminal-contempt": { citation: "N.Y. Penal Law § 215.50", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York criminal contempt in the second degree" },
+  "ny-criminal-possession-of-stolen-property": { citation: "N.Y. Penal Law § 165.40", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York criminal possession of stolen property" },
+  "ny-marijuana-unlawful-possession": { citation: "N.Y. Penal Law § 221.05", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York unlawful possession of marijuana" },
+  "ny-turnstile-jumping": { citation: "N.Y. Penal Law § 165.15(3)", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York theft of services / turnstile jumping" },
+  "ny-open-container-violation": { citation: "N.Y. Alco. Bev. Cont. Law § 65", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York open container violation" },
+
+  "nc-larceny-misdemeanor": { citation: "N.C. Gen. Stat. § 14-72", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina misdemeanor larceny" },
+  "nc-possession-marijuana-up-to-half-oz": { citation: "N.C. Gen. Stat. § 90-95(d)(4)", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina possession of marijuana up to half oz" },
+  "nc-disorderly-conduct-public": { citation: "N.C. Gen. Stat. § 14-288.4", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina disorderly conduct in public" },
+  "nc-second-degree-trespass": { citation: "N.C. Gen. Stat. § 14-159.13", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina second degree trespass" },
+  "nc-domestic-violence-protective-order-violation": { citation: "N.C. Gen. Stat. § 50B-4.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina violation of domestic violence protective order" },
+  "nc-driving-while-license-revoked": { citation: "N.C. Gen. Stat. § 20-28", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina driving while license revoked" },
+  "nc-resist-delay-obstruct": { citation: "N.C. Gen. Stat. § 14-223", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina resist/delay/obstruct a public officer" },
+  "nc-injury-to-personal-property": { citation: "N.C. Gen. Stat. § 14-160", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Carolina injury to personal property" },
+
+  "oh-residential-burglary": { citation: "Ohio Rev. Code Ann. § 2911.12", confidence: "medium", lastVerified: "2026-04", source: "Training data — Ohio residential burglary" },
+  "oh-commercial-burglary": { citation: "Ohio Rev. Code Ann. § 2911.12", confidence: "medium", lastVerified: "2026-04", source: "Training data — Ohio commercial burglary" },
+  "oh-assault-simple": { citation: "Ohio Rev. Code Ann. § 2903.13", confidence: "medium", lastVerified: "2026-04", source: "Training data — Ohio assault" },
+  "oh-ovi": { citation: "Ohio Rev. Code Ann. § 4511.19", confidence: "medium", lastVerified: "2026-04", source: "Training data — Ohio operating a vehicle impaired" },
+  "oh-domestic-violence": { citation: "Ohio Rev. Code Ann. § 2919.25", confidence: "medium", lastVerified: "2026-04", source: "Training data — Ohio domestic violence" },
+  "oh-criminal-damaging": { citation: "Ohio Rev. Code Ann. § 2909.06", confidence: "medium", lastVerified: "2026-04", source: "Training data — Ohio criminal damaging" },
+
+  "pa-dui-general-impairment": { citation: "75 Pa. Cons. Stat. § 3802(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania DUI general impairment" },
+  "pa-possession-small-amount-marijuana": { citation: "35 Pa. Cons. Stat. § 780-113(a)(31)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania possession of small amount of marijuana" },
+  "pa-theft-by-unlawful-taking": { citation: "18 Pa. Cons. Stat. § 3921", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania theft by unlawful taking" },
+  "pa-public-drunkenness": { citation: "18 Pa. Cons. Stat. § 5505", confidence: "medium", lastVerified: "2026-04", source: "Training data — Pennsylvania public drunkenness" },
+
+  "sc-assault-and-battery-third-degree": { citation: "S.C. Code Ann. § 16-3-600(E)", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina assault and battery in the third degree" },
+  "sc-domestic-violence-third-degree": { citation: "S.C. Code Ann. § 16-25-20(C)", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina domestic violence in the third degree" },
+  "sc-malicious-injury-to-property": { citation: "S.C. Code Ann. § 16-11-510", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina malicious injury to property" },
+  "sc-shoplifting-under-2000": { citation: "S.C. Code Ann. § 16-13-110", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina shoplifting under $2,000" },
+
+  "tn-theft-under-1000": { citation: "Tenn. Code Ann. § 39-14-103", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee theft under $1,000" },
+  "tn-simple-possession-casual-exchange": { citation: "Tenn. Code Ann. § 39-17-418", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee simple possession / casual exchange" },
+  "tn-vandalism-under-1000": { citation: "Tenn. Code Ann. § 39-14-408", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee vandalism under $1,000" },
+  "tn-driving-on-revoked-license": { citation: "Tenn. Code Ann. § 55-50-504", confidence: "medium", lastVerified: "2026-04", source: "Training data — Tennessee driving on revoked license" },
+
+  "tx-theft-under-2500": { citation: "Tex. Penal Code § 31.03", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas theft under $2,500" },
+  "tx-assault-bodily-injury-family": { citation: "Tex. Penal Code § 22.01(b)(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas assault bodily injury family member" },
+  "tx-driving-while-license-invalid": { citation: "Tex. Transp. Code § 521.457", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas driving while license invalid" },
+  "tx-possession-of-marijuana": { citation: "Tex. Health & Safety Code § 481.121", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas possession of marijuana" },
+  "tx-evading-arrest": { citation: "Tex. Penal Code § 38.04", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas evading arrest or detention" },
+  "tx-failure-to-identify": { citation: "Tex. Penal Code § 38.02", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas failure to identify" },
+  "tx-terroristic-threat": { citation: "Tex. Penal Code § 22.07", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas terroristic threat" },
+
+  "va-destruction-of-property": { citation: "Va. Code Ann. § 18.2-137", confidence: "medium", lastVerified: "2026-04", source: "Training data — Virginia destruction of property" },
+  "va-obstruction-of-justice": { citation: "Va. Code Ann. § 18.2-460", confidence: "medium", lastVerified: "2026-04", source: "Training data — Virginia obstruction of justice" },
+
+  "wa-theft-third-degree": { citation: "Wash. Rev. Code § 9A.56.050", confidence: "medium", lastVerified: "2026-04", source: "Training data — Washington theft in the third degree" },
+  "wa-criminal-trespass-second-degree": { citation: "Wash. Rev. Code § 9A.52.080", confidence: "medium", lastVerified: "2026-04", source: "Training data — Washington criminal trespass in the second degree" },
+  "wa-malicious-mischief-third-degree": { citation: "Wash. Rev. Code § 9A.48.090", confidence: "medium", lastVerified: "2026-04", source: "Training data — Washington malicious mischief in the third degree" },
+  "wa-driving-while-license-suspended": { citation: "Wash. Rev. Code § 46.20.342", confidence: "medium", lastVerified: "2026-04", source: "Training data — Washington driving while license suspended" },
 };
