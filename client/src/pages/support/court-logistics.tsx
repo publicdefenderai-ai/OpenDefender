@@ -134,7 +134,7 @@ export default function CourtLogisticsSupport() {
       faqs={faqs}
       tips={tips}
       relatedLinks={[
-        { label: t('support.relatedLinks.process'), href: "/process" },
+        { label: t('support.relatedLinks.process'), href: "/case-timeline" },
         { label: t('support.relatedLinks.rights'), href: "/rights-info" },
         { label: t('support.relatedLinks.courtLocator'), href: "/court-locator" },
       ]}

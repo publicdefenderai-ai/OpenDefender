@@ -251,7 +251,7 @@ export default function FirstTwentyFourHours() {
                   <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily.</strong> Sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
                 </ol>
                 <div className="flex gap-3 flex-wrap mt-3">
-                  <Link href="/process#bail-guide">
+                  <Link href="/case-timeline#bail-guide">
                     <Button variant="outline" size="sm">How Bail Works</Button>
                   </Link>
                 </div>
@@ -341,7 +341,7 @@ export default function FirstTwentyFourHours() {
             <div className="grid sm:grid-cols-2 gap-2">
               {[
                 { href: "/jail-phone-call", icon: Phone, title: "Jail Phone Call Guide" },
-                { href: "/process", icon: Scale, title: "Criminal Justice Process" },
+                { href: "/case-timeline", icon: Scale, title: "Criminal Justice Process" },
                 { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
                 { href: "/collateral-consequences", icon: BookOpen, title: "Hidden Consequences of a Conviction" },
                 { href: "/case-guidance", icon: MessageSquare, title: "Get Personalized Guidance" },

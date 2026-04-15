@@ -59,7 +59,7 @@ The backend uses Express.js and TypeScript, exposing a RESTful API. Drizzle ORM 
 A comprehensive, multilingual search system indexes 6,663 legal documents, including glossary terms, criminal charges, diversion programs, and all 38 site pages (including all 11 `/support/*` pages). It uses legal synonym expansion and weighted relevance scoring for accurate results.
 
 ### Visual Case Timeline
-An interactive 7-stage criminal case timeline provides descriptions, rights, and tips for each stage of a criminal proceeding, available in English, Spanish, and Chinese.
+An interactive 7-stage criminal case timeline (`/case-timeline`) provides descriptions, rights, and tips for each stage of a criminal proceeding, available in English, Spanish, and Chinese. The page also includes detailed bail and plea bargain accordion guides, speedy trial and public defender info cards, and a jurisdiction selector with state-specific callouts. The former `/process` route permanently redirects to `/case-timeline`.
 
 ### Quick-Reference Cards
 Printable and saveable rights reference cards are available, covering police encounters and various court stages, with full multilingual support.

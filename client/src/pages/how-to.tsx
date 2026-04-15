@@ -68,7 +68,7 @@ export default function HowTo() {
         { title: t('howTo.sections.knowYourRights.constitutionalRights.title'), description: t('howTo.sections.knowYourRights.constitutionalRights.description'), link: "/rights-info" },
         { title: t('howTo.sections.knowYourRights.caseTimeline.title'), description: t('howTo.sections.knowYourRights.caseTimeline.description'), link: "/case-timeline" },
         { title: t('howTo.sections.knowYourRights.quickReference.title'), description: t('howTo.sections.knowYourRights.quickReference.description'), link: "/quick-reference" },
-        { title: t('howTo.sections.knowYourRights.criminalJusticeProcess.title'), description: t('howTo.sections.knowYourRights.criminalJusticeProcess.description'), link: "/process" },
+        { title: t('howTo.sections.knowYourRights.criminalJusticeProcess.title'), description: t('howTo.sections.knowYourRights.criminalJusticeProcess.description'), link: "/case-timeline" },
         { title: t('howTo.sections.knowYourRights.searchSeizure.title'), description: t('howTo.sections.knowYourRights.searchSeizure.description'), link: "/search-seizure" },
         { title: t('howTo.sections.knowYourRights.friendsFamily.title'), description: t('howTo.sections.knowYourRights.friendsFamily.description'), link: "/friends-family" },
         { title: t('howTo.sections.knowYourRights.mockQA.title'), description: t('howTo.sections.knowYourRights.mockQA.description'), link: "/resources" },

@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route, Redirect, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { AnimatePresence } from "framer-motion";
@@ -37,7 +37,6 @@ const RecordExpungement = lazy(() => import("@/pages/record-expungement"));
 const MissionStatement = lazy(() => import("@/pages/mission-statement"));
 const CourtRecords = lazy(() => import("@/pages/court-records"));
 const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
-const Process = lazy(() => import("@/pages/process"));
 const SearchSeizure = lazy(() => import("@/pages/search-seizure"));
 const FriendsFamily = lazy(() => import("@/pages/friends-family"));
 const HowTo = lazy(() => import("@/pages/how-to"));
@@ -138,7 +137,7 @@ function Router() {
       <Route path="/mission-statement" component={MissionStatement} />
       <Route path="/court-records" component={CourtRecords} />
       <Route path="/recap-extensions" component={RecapExtensions} />
-      <Route path="/process" component={Process} />
+      <Route path="/process"><Redirect to="/case-timeline" /></Route>
       <Route path="/case-timeline" component={CaseTimeline} />
       <Route path="/quick-reference" component={QuickReference} />
       <Route path="/search-seizure" component={SearchSeizure} />

@@ -671,7 +671,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </Link>
-                  <Link href="/process" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                  <Link href="/case-timeline" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
                     <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
                       <CardContent className="p-3 text-center">
                         <p className="text-xs font-semibold text-foreground">What Happens Next</p>

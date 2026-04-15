@@ -232,7 +232,7 @@ export default function JailPhoneCall() {
               {[
                 { href: "/first-24-hours", icon: Clock, title: "Your First 24 Hours" },
                 { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
-                { href: "/process", icon: Scale, title: "Criminal Justice Process" },
+                { href: "/case-timeline", icon: Scale, title: "Criminal Justice Process" },
                 { href: "/friends-family", icon: Users, title: "Guide for Friends & Family" },
               ].map((item) => (
                 <Link key={item.href} href={item.href}>

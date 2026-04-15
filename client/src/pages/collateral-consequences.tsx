@@ -392,7 +392,7 @@ export default function CollateralConsequences() {
             <h2 className="text-lg font-semibold mb-3">{t('collateralConsequences.relatedGuides')}</h2>
             <div className="grid sm:grid-cols-2 gap-2">
               {[
-                { href: "/process", icon: Scale, title: "Plea Bargains" },
+                { href: "/case-timeline", icon: Scale, title: "Plea Bargains" },
                 { href: "/immigration-guidance", icon: FileText, title: "Immigration Guidance" },
                 { href: "/record-expungement", icon: Shield, title: "Record Expungement" },
                 { href: "/first-24-hours", icon: Clock, title: "Your First 24 Hours" },

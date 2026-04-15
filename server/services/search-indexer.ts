@@ -242,7 +242,7 @@ export function buildSearchIndex(): void {
       contentEs: `Preguntas y respuestas de práctica para prepararse para su ${group.label.es}. Incluye ${group.count} preguntas de ejemplo.`,
       tags: Array.from(new Set(group.tags)),
       aliases: [],
-      url: `/process?proceeding=${proceedingType}`,
+      url: `/case-timeline`,
     });
   });
   devLog('search', `Indexed ${proceedingGroups.size} mock QA proceeding types`);
@@ -673,7 +673,7 @@ export function buildSearchIndex(): void {
       content: 'Understanding the court process. Arraignment. Bail hearings. Pretrial. Plea deals. Trial. Sentencing. Mock Q&A practice.',
       tags: ['court process', 'arraignment', 'trial', 'sentencing', 'plea'],
       aliases: ['what to expect', 'court steps'],
-      url: '/process'
+      url: '/case-timeline'
     },
     {
       id: 'search-seizure-page',

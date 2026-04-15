@@ -69,7 +69,7 @@ const contentPages = [
       { route: "/statutes", title: "Federal Statutes", description: "Complete verbatim text of key federal criminal statutes sourced from Cornell LII. Quarterly URL validation via GitHub Actions." },
       { route: "/legal-aid", title: "Legal Aid Directory", description: "24 verified legal aid organizations with addresses, phone numbers, and websites. Quarterly link checks." },
       { route: "/court-locator", title: "Court & Resource Locator", description: "Find courts, public defender offices, and legal aid organizations near you." },
-      { route: "/process", title: "Criminal Justice Process", description: "Overview of the full criminal justice process with mock Q&A preparation for each stage." },
+      { route: "/case-timeline", title: "Criminal Justice Process & Case Timeline", description: "Interactive 7-stage case timeline with rights and tips per stage, plus detailed bail and plea bargain guides with state-specific rules." },
     ],
   },
 ];

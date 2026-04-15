@@ -3,23 +3,22 @@ import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  
   Clock,
-  ChevronRight,
   AlertTriangle,
   Scale,
   Gavel,
-  UserCheck,
   FileText,
   Users,
   Search,
   BookOpen,
   HandMetal,
   DollarSign,
+  Calendar,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
@@ -29,6 +28,9 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
+import { useJurisdiction } from "@/hooks/use-jurisdiction";
+import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
+import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 
 interface TimelineStage {
   id: string;
@@ -52,6 +54,7 @@ const stages: TimelineStage[] = [
 export default function CaseTimeline() {
   useScrollToTop();
   const { t } = useTranslation();
+  const { jurisdiction } = useJurisdiction();
   const [selectedStage, setSelectedStage] = useState<string>("arrest");
   const [direction, setDirection] = useState<number>(1);
   const prevStageRef = useRef<string>("arrest");
@@ -66,7 +69,6 @@ export default function CaseTimeline() {
 
   const breadcrumbItems = [
     { label: t("breadcrumb.home", "Home"), href: "/" },
-    { label: t("process.hero.title", "Criminal Justice Process"), href: "/process" },
   ];
 
   const currentStage = stages.find((s) => s.id === selectedStage) || stages[0];
@@ -268,6 +270,22 @@ export default function CaseTimeline() {
                       </Button>
                     </Link>
                   </div>
+
+                  {selectedStage === 'booking' && (
+                    <a href="#bail-guide" className="inline-flex items-center gap-2 text-sm text-green-700 dark:text-green-400 hover:underline font-medium mt-2">
+                      <DollarSign className="h-4 w-4" />
+                      How bail works — types, options if you can't pay, and conditions ↓
+                    </a>
+                  )}
+
+                  {(selectedStage === 'booking' || selectedStage === 'firstAppearance') && (
+                    <div className="mt-4">
+                      <JurisdictionCallout
+                        jurisdiction={jurisdiction}
+                        topic={selectedStage === 'booking' ? 'bail' : 'arraignment'}
+                      />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
@@ -279,6 +297,263 @@ export default function CaseTimeline() {
               <AlertDescription className="text-muted-foreground">
                 <strong>{t("caseTimeline.disclaimer.title", "Important:")}</strong>{" "}
                 {t("caseTimeline.disclaimer.text", "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation.")}
+              </AlertDescription>
+            </Alert>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Detailed Guides */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="text-3xl font-bold text-center text-foreground mb-4">
+              {t('process.guides.title')}
+            </h2>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              {t('process.guides.subtitle')}
+            </p>
+          </ScrollReveal>
+
+          <JurisdictionSelector label="See rules for your state (optional)" />
+
+          <ScrollReveal>
+            <Alert className="my-8 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
+              <Scale className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              <AlertDescription className="text-blue-800 dark:text-blue-200">
+                <strong>{t('process.alert.important')}</strong> {t('process.alert.text')}
+              </AlertDescription>
+            </Alert>
+          </ScrollReveal>
+
+          <div className="space-y-8">
+            {/* Bail Guide */}
+            <ScrollReveal delay={0.1}>
+              <div id="bail-guide" className="scroll-mt-20">
+                <Card className="border-2 border-green-200 dark:border-green-800">
+                  <CardHeader className="bg-green-50 dark:bg-green-950/50">
+                    <CardTitle className="text-green-800 dark:text-green-200">
+                      {t('process.guides.bail.title')}
+                    </CardTitle>
+                    <p className="text-sm text-green-700 dark:text-green-300 mt-2">
+                      {t('process.guides.bail.intro')}
+                    </p>
+                  </CardHeader>
+                  <CardContent className="pt-6">
+                    <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="bail-what">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.whatIs.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.whatIs.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.whatIs.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-set">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.howSet.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.howSet.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.howSet.factors', { returnObjects: true }) as string[]).map((factor, idx) => <li key={idx}>{factor}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-options">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.options.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-4 pl-6">
+                          {(t('process.guides.bail.options.types', { returnObjects: true }) as { name: string; description: string }[]).map((option, idx) => (
+                            <div key={idx} className="border-l-2 border-green-300 pl-3">
+                              <strong className="text-foreground">{option.name}</strong>
+                              <p className="text-sm mt-1">{option.description}</p>
+                            </div>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-afford">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.cantAfford.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.cantAfford.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.cantAfford.options', { returnObjects: true }) as string[]).map((opt, idx) => <li key={idx}>{opt}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-conditions">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.conditions.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.conditions.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.conditions.examples', { returnObjects: true }) as string[]).map((ex, idx) => <li key={idx}>{ex}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-miss">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.missCourt.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.missCourt.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.missCourt.consequences', { returnObjects: true }) as string[]).map((con, idx) => <li key={idx}>{con}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-deny">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.preventiveDetention.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.preventiveDetention.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.preventiveDetention.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-schedule">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.schedule.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.schedule.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.schedule.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-landscape">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.landscape.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.landscape.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.landscape.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      <AccordionItem value="bail-risk">
+                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.riskAssessment.title')}</AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                          <p>{t('process.guides.bail.riskAssessment.description')}</p>
+                          <ul className="list-disc pl-4 space-y-1">
+                            {(t('process.guides.bail.riskAssessment.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </CardContent>
+                </Card>
+              </div>
+            </ScrollReveal>
+
+            {/* Plea Bargain Guide */}
+            <ScrollReveal delay={0.2}>
+              <Card className="border-2 border-blue-200 dark:border-blue-800">
+                <CardHeader className="bg-blue-50 dark:bg-blue-950/50">
+                  <CardTitle className="text-blue-800 dark:text-blue-200">
+                    {t('process.guides.plea.title')}
+                  </CardTitle>
+                  <p className="text-sm text-blue-700 dark:text-blue-300 mt-2">
+                    {t('process.guides.plea.intro')}
+                  </p>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="plea-what">
+                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.whatIs.title')}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.plea.whatIs.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.plea.whatIs.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="plea-types">
+                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.types.title')}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-4 pl-6">
+                        {(t('process.guides.plea.types.deals', { returnObjects: true }) as { name: string; description: string }[]).map((deal, idx) => (
+                          <div key={idx} className="border-l-2 border-blue-300 pl-3">
+                            <strong className="text-foreground">{deal.name}</strong>
+                            <p className="text-sm mt-1">{deal.description}</p>
+                          </div>
+                        ))}
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="plea-rights">
+                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.rights.title')}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.plea.rights.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.plea.rights.list', { returnObjects: true }) as string[]).map((right, idx) => <li key={idx}>{right}</li>)}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="plea-questions">
+                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.questions.title')}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.plea.questions.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.plea.questions.list', { returnObjects: true }) as string[]).map((q, idx) => <li key={idx}>{q}</li>)}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="plea-collateral">
+                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.collateral.title')}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.plea.collateral.description')}</p>
+                        <ul className="list-disc pl-4 space-y-1">
+                          {(t('process.guides.plea.collateral.consequences', { returnObjects: true }) as string[]).map((con, idx) => <li key={idx}>{con}</li>)}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="plea-decide">
+                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.decide.title')}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
+                        <p>{t('process.guides.plea.decide.description')}</p>
+                        <div className="grid md:grid-cols-2 gap-4 mt-3">
+                          <div className="bg-green-50 dark:bg-green-950/30 p-3 rounded-lg">
+                            <strong className="text-green-700 dark:text-green-300 text-sm">{t('process.guides.plea.decide.acceptTitle')}</strong>
+                            <ul className="list-disc pl-4 mt-2 space-y-1 text-sm">
+                              {(t('process.guides.plea.decide.acceptReasons', { returnObjects: true }) as string[]).map((r, idx) => <li key={idx}>{r}</li>)}
+                            </ul>
+                          </div>
+                          <div className="bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg">
+                            <strong className="text-blue-700 dark:text-blue-300 text-sm">{t('process.guides.plea.decide.trialTitle')}</strong>
+                            <ul className="list-disc pl-4 mt-2 space-y-1 text-sm">
+                              {(t('process.guides.plea.decide.trialReasons', { returnObjects: true }) as string[]).map((r, idx) => <li key={idx}>{r}</li>)}
+                            </ul>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            {/* Speedy Trial + Public Defender */}
+            <ScrollReveal delay={0.3}>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg mb-3 flex items-center">
+                      <Clock className="h-5 w-5 text-green-600 mr-2" />
+                      {t('process.additionalInfo.speedyTrial.title')}
+                    </h3>
+                    <LegalTextHighlighter text={t('process.additionalInfo.speedyTrial.text')} as="p" className="text-sm text-muted-foreground" />
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg mb-3 flex items-center">
+                      <Users className="h-5 w-5 text-blue-600 mr-2" />
+                      {t('process.additionalInfo.publicDefender.title')}
+                    </h3>
+                    <LegalTextHighlighter text={t('process.additionalInfo.publicDefender.text')} as="p" className="text-sm text-muted-foreground" />
+                  </CardContent>
+                </Card>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.4}>
+            <Alert className="mt-8 border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+              <AlertDescription className="text-amber-800 dark:text-amber-200">
+                <strong>{t('process.legalDisclaimer.title')}</strong> {t('process.legalDisclaimer.text')}
               </AlertDescription>
             </Alert>
           </ScrollReveal>
