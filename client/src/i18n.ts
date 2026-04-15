@@ -1878,7 +1878,7 @@ i18n
               "backButton": "Back to Main Menu",
               "constitutionalRights": "Your Legal Rights",
               "criminalJusticeProcess": "Criminal Justice Process",
-              "caseTimeline": "Case Timeline",
+              "caseTimeline": "Case Timeline & Process",
               "quickReference": "Quick-Reference Cards",
               "searchSeizure": "Search and Seizure",
               "assistingFriends": "Assisting Friends or Family",
@@ -3157,7 +3157,7 @@ i18n
             }
           },
           "caseTimeline": {
-            "title": "Case Timeline",
+            "title": "Case Timeline & Process",
             "subtitle": "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.",
             "selectStage": "Select a stage to learn what happens and what your rights are",
             "yourRights": "Your Rights",
@@ -6808,7 +6808,7 @@ i18n
               "backButton": "Volver al Menú Principal",
               "constitutionalRights": "Sus Derechos Legales",
               "criminalJusticeProcess": "Proceso de Justicia Criminal",
-              "caseTimeline": "Línea de Tiempo del Caso",
+              "caseTimeline": "Línea de Tiempo y Proceso",
               "quickReference": "Tarjetas de Referencia Rápida",
               "searchSeizure": "Registro e Incautación",
               "assistingFriends": "Ayudar a Amigos o Familiares",
@@ -8087,7 +8087,7 @@ i18n
             }
           },
           "caseTimeline": {
-            "title": "Línea de Tiempo del Caso",
+            "title": "Línea de Tiempo y Proceso del Caso",
             "subtitle": "Siga las etapas de un caso penal de principio a fin. Seleccione su etapa actual para ver qué esperar y cuáles son sus derechos.",
             "selectStage": "Seleccione una etapa para saber qué sucede y cuáles son sus derechos",
             "yourRights": "Sus Derechos",
@@ -11739,7 +11739,7 @@ i18n
               "backButton": "返回主菜单",
               "constitutionalRights": "你的法律权利",
               "criminalJusticeProcess": "刑事司法流程",
-              "caseTimeline": "案件时间线",
+              "caseTimeline": "案件时间线与诉讼流程",
               "quickReference": "快速参考卡",
               "searchSeizure": "搜查与扣押",
               "assistingFriends": "帮助亲友",
@@ -13017,7 +13017,7 @@ i18n
             }
           },
           "caseTimeline": {
-            "title": "案件时间线",
+            "title": "案件时间线与诉讼流程",
             "subtitle": "从头到尾跟踪刑事案件的各个阶段。选择您当前的阶段，了解会发生什么以及您的权利。",
             "selectStage": "选择一个阶段，了解会发生什么以及您有什么权利",
             "yourRights": "您的权利",

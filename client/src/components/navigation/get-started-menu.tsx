@@ -303,7 +303,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
             <div className="flex items-center gap-3">
               <Clock className="h-5 w-5 text-teal-600" />
               <span className="font-medium group-hover:text-teal-600 transition-colors">
-                {t('getStartedMenu.legalRightsSubmenu.caseTimeline', 'Case Timeline')}
+                {t('getStartedMenu.legalRightsSubmenu.caseTimeline', 'Case Timeline & Process')}
               </span>
             </div>
           </CardContent>

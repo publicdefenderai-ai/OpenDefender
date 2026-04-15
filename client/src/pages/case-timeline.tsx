@@ -79,7 +79,7 @@ export default function CaseTimeline() {
       <Header />
       <PageBreadcrumb
         items={breadcrumbItems}
-        currentPage={t("caseTimeline.title", "Case Timeline")}
+        currentPage={t("caseTimeline.title", "Case Timeline & Process")}
       />
 
       <section className="vivid-header py-16 md:py-20">
@@ -87,7 +87,7 @@ export default function CaseTimeline() {
           <ScrollReveal>
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                {t("caseTimeline.title", "Case Timeline")}
+                {t("caseTimeline.title", "Case Timeline & Process")}
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
                 {t("caseTimeline.subtitle", "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.")}

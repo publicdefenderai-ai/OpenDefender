@@ -662,20 +662,12 @@ export default function Home() {
                     </ol>
                   </CardContent>
                 </Card>
-                <div className="grid grid-cols-2 gap-3 pt-1">
+                <div className="pt-1">
                   <Link href="/case-guidance" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
-                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer">
                       <CardContent className="p-3 text-center">
                         <p className="text-xs font-semibold text-foreground">Get Case Guidance</p>
                         <p className="text-xs text-muted-foreground mt-0.5">Personalized guidance for your situation</p>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                  <Link href="/case-timeline" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
-                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
-                      <CardContent className="p-3 text-center">
-                        <p className="text-xs font-semibold text-foreground">What Happens Next</p>
-                        <p className="text-xs text-muted-foreground mt-0.5">The full criminal process explained</p>
                       </CardContent>
                     </Card>
                   </Link>
