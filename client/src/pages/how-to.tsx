@@ -118,14 +118,6 @@ export default function HowTo() {
         { title: t('howTo.sections.attorneyTools.courtRecords.title'), description: t('howTo.sections.attorneyTools.courtRecords.description'), link: "/court-records" },
       ]
     },
-    {
-      title: t('howTo.sections.developersPartners.title'),
-      description: t('howTo.sections.developersPartners.description'),
-      resources: [
-        { title: t('howTo.sections.developersPartners.apiDocs.title'), description: t('howTo.sections.developersPartners.apiDocs.description'), link: "/api-docs" },
-        { title: t('howTo.sections.developersPartners.widgets.title'), description: t('howTo.sections.developersPartners.widgets.description'), link: "/widgets" },
-      ]
-    }
   ];
 
   return (

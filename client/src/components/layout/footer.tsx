@@ -95,6 +95,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/api-docs" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.publicApi')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/widgets" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.embeddableWidgets')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.privacyPolicy')}
                 </Link>
