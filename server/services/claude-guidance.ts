@@ -582,7 +582,7 @@ async function callClaudeWithRetry(
       const timeoutMs = 150000; // 150 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: CLAUDE_MODEL,
-        max_tokens: 3000,
+        max_tokens: 2500,
         temperature: 0.3,
         system: [
           {
@@ -600,7 +600,7 @@ async function callClaudeWithRetry(
       });
       
       const timeoutPromise = new Promise<never>((_, reject) => {
-        setTimeout(() => reject(new Error('Claude API timed out after 95 seconds')), timeoutMs);
+        setTimeout(() => reject(new Error('Claude API timed out after 150 seconds')), timeoutMs);
       });
       
       const message = await Promise.race([apiCallPromise, timeoutPromise]);
