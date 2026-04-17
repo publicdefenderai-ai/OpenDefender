@@ -110,7 +110,7 @@ The application uses session-based authentication with PostgreSQL for session st
 -   **NDAA Diversion Programs Directory**: Diversion program reference.
 
 ### AI and Machine Learning
--   **Anthropic Claude API**: AI-powered legal guidance generation. Dual-model setup: **Claude Opus 4.6** (`claude-opus-4-6`) for legal guidance and attorney document generation; **Claude Sonnet 4.6** (`claude-sonnet-4-6`) for document summarization. Config: `server/config/ai-model.ts`.
+-   **Anthropic Claude API**: AI-powered legal guidance generation. All AI operations use **Claude Sonnet 4.6** (`claude-sonnet-4-6`) — legal guidance, attorney document generation, and document summarization. Config: `server/config/ai-model.ts`. Timeout: 150s (SDK 145s).
 -   **Legal Accuracy Validator (Tier 1 & 2)**: Validates AI guidance against statutes and case law.
 -   **Rule-Based Fallback Engine**: Provides guidance when AI is unavailable.
 

@@ -3824,7 +3824,7 @@ i18n
               },
               "aiGuidance": {
                 "title": "AI Case Support Engine",
-                "description": "Advanced AI system for generating personalized case support based on case parameters. Powered by Claude Opus 4.6 for legal guidance and attorney documents, and Claude Sonnet 4.6 for document summaries, with jurisdiction-aware prompting.",
+                "description": "Advanced AI system for generating personalized case support based on case parameters. Currently powered by Claude Sonnet 4.6 with jurisdiction-aware prompting.",
                 "impact": "Core functionality for personalized legal assistance",
                 "challenges": {
                   "accuracy": "Legal accuracy validation",
@@ -4039,7 +4039,7 @@ i18n
                 "title": "External Data Sources",
                 "description": "Our platform accesses public legal databases and services to provide you with information:",
                 "services": {
-                  "anthropic": "Anthropic Claude Opus 4.6 (legal guidance and attorney documents) and Claude Sonnet 4.6 (document summaries). Your personal information is removed before processing. Anthropic may retain data for up to 30 days for operational and safety purposes, then it is automatically deleted. This data is never used to train AI models.",
+                  "anthropic": "Anthropic Claude Sonnet 4.6 - for generating legal guidance and document summaries. Your personal information is removed before processing. Anthropic may retain data for up to 30 days for operational and safety purposes, then it is automatically deleted. This data is never used to train AI models.",
                   "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
                   "courtListener": "CourtListener API - for case law and court data",
                   "recap": "RECAP Archive - for federal court documents",
@@ -8756,7 +8756,7 @@ i18n
               },
               "aiGuidance": {
                 "title": "Motor de Orientación Legal con IA",
-                "description": "Sistema avanzado de IA para generar orientación legal personalizada basada en parámetros de caso. Impulsado por Claude Opus 4.6 para orientación legal y documentos de abogados, y Claude Sonnet 4.6 para resúmenes de documentos, con indicaciones conscientes de jurisdicción.",
+                "description": "Sistema avanzado de IA para generar orientación legal personalizada basada en parámetros de caso. Actualmente impulsado por Claude Sonnet 4.6 con indicaciones conscientes de jurisdicción.",
                 "impact": "Funcionalidad central para asistencia legal personalizada",
                 "challenges": {
                   "accuracy": "Validación de precisión legal",
@@ -8971,7 +8971,7 @@ i18n
                 "title": "Fuentes de Datos Externas",
                 "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
                 "services": {
-                  "anthropic": "Anthropic Claude Opus 4.6 (orientación legal y documentos de abogados) y Claude Sonnet 4.6 (resúmenes de documentos). Su información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad, luego se eliminan automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
+                  "anthropic": "Anthropic Claude Sonnet 4.6 - para generar orientación legal y resúmenes de documentos. Su información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad, luego se eliminan automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
                   "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
                   "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
                   "recap": "Archivo RECAP - para documentos judiciales federales",
@@ -13688,7 +13688,7 @@ i18n
               },
               "aiGuidance": {
                 "title": "AI 法律指导引擎",
-                "description": "基于案件参数生成个性化法律指导的先进AI系统。由 Claude Opus 4.6 驱动法律指导和律师文件，由 Claude Sonnet 4.6 驱动文件摘要，支持管辖区感知提示。",
+                "description": "基于案件参数生成个性化法律指导的先进AI系统。目前由 Claude Sonnet 4.6 驱动，支持管辖区感知提示。",
                 "impact": "个性化法律援助的核心功能",
                 "challenges": {
                   "accuracy": "法律准确性验证",
@@ -13904,7 +13904,7 @@ i18n
                 "title": "外部数据源",
                 "description": "我们的平台访问公共法律数据库和服务来为您提供信息：",
                 "services": {
-                  "anthropic": "Anthropic Claude Opus 4.6（法律指导和律师文件）与 Claude Sonnet 4.6（文件摘要）。您的个人信息在处理前会被移除。Anthropic 可能会出于运营和安全目的保留数据最多30天，之后自动删除。这些数据不会用于训练 AI 模型。",
+                  "anthropic": "Anthropic Claude Sonnet 4.6 - 用于生成法律指导和文件摘要。您的个人信息在处理前会被移除。Anthropic 可能会出于运营和安全目的保留数据最多30天，之后自动删除。这些数据不会用于训练 AI 模型。",
                   "govInfo": "GovInfo.gov API - 用于联邦刑事法规（美国法典第18编）",
                   "courtListener": "CourtListener API - 用于判例法和法院数据",
                   "recap": "RECAP Archive - 用于联邦法院文件",

@@ -8,7 +8,7 @@ import { devLog, opsLog, errLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { buildJurisdictionContextBlock } from '@shared/jurisdiction-procedure-rules';
-import { CLAUDE_MODEL_OPUS as CLAUDE_MODEL } from '../config/ai-model';
+import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
@@ -20,7 +20,7 @@ if (!apiKey) {
 } else {
   anthropic = new Anthropic({
     apiKey,
-    timeout: 145000, // 145 second timeout for the SDK - generous time for Opus 4.6 complex legal guidance
+    timeout: 145000, // 145 second timeout for the SDK - generous time for complex legal guidance
   });
 }
 
@@ -591,7 +591,7 @@ async function callClaudeWithRetry(
       const startTime = Date.now();
       
       // Wrap the API call in a timeout promise to ensure it actually times out
-      const timeoutMs = 150000; // 150 seconds - slightly longer than SDK timeout for Opus 4.6 complex legal guidance
+      const timeoutMs = 150000; // 150 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: CLAUDE_MODEL,
         max_tokens: 4096,
@@ -723,13 +723,13 @@ export async function generateClaudeGuidance(
     // Validate response structure
     validateClaudeResponse(parsedData);
 
-    // Calculate costs (Opus 4.6 pricing: $5/MTok input, $25/MTok output)
-    // With prompt caching: cache writes = $6.25/MTok (+25%), cache reads = $0.50/MTok (-90%)
-    const regularInputCost = (message.usage.input_tokens / 1_000_000) * 5.0;
-    const cacheWriteCost = ((message.usage.cache_creation_input_tokens ?? 0) / 1_000_000) * 6.25;
-    const cacheReadCost = ((message.usage.cache_read_input_tokens ?? 0) / 1_000_000) * 0.50;
+    // Calculate costs (Sonnet 4.6 pricing: $3/MTok input, $15/MTok output)
+    // With prompt caching: cache writes = $3.75/MTok (+25%), cache reads = $0.30/MTok (-90%)
+    const regularInputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
+    const cacheWriteCost = ((message.usage.cache_creation_input_tokens ?? 0) / 1_000_000) * 3.75;
+    const cacheReadCost = ((message.usage.cache_read_input_tokens ?? 0) / 1_000_000) * 0.30;
     const inputCost = regularInputCost + cacheWriteCost + cacheReadCost;
-    const outputCost = (message.usage.output_tokens / 1_000_000) * 25.0;
+    const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
 
     // Record cost for daily budget tracking (awaited so it's durable before returning)
     await recordAICost(inputCost + outputCost, 'claude-guidance');
