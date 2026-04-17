@@ -237,18 +237,6 @@ Return a JSON object with these exact fields:
 - timeline: Array of {stage, description, timeframe, completed: boolean}
 - uncertainties: Array of areas where you are not fully certain. If you are unsure about a jurisdiction-specific deadline, statute, fee amount, or procedure, you MUST add an entry here instead of stating it as fact. Each entry has: {area: string, note: string}. Use an empty array [] if you are confident throughout.
   Example: {"area": "Bail eligibility in this county", "note": "This varies significantly by local court practice — confirm with your attorney or public defender."}
-- mockQA: Array of 3-5 personalized practice Q&A items tailored to the user's specific case. Each item must have:
-  - question: A question the judge, prosecutor, or attorney might ask during the relevant proceeding (based on case stage)
-  - suggestedResponse: A recommended response tailored to their specific circumstances (speak as the defendant)
-  - explanation: Why this response is appropriate and what to be mindful of
-  - category: One of 'identity', 'charges', 'circumstances', 'plea', 'procedural', or 'general'
-  
-MOCK Q&A GUIDELINES:
-- Base questions on the user's specific charges, case stage, and circumstances
-- Responses should be honest, respectful, and protect the user's rights
-- Include questions about specific incidents only if the user provided those details
-- Focus on the upcoming court proceeding based on the case stage
-- Keep responses brief and direct - courts prefer concise answers
 
 TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system.
 
@@ -624,17 +612,13 @@ async function callClaudeWithRetry(
     } catch (error: any) {
       lastError = error;
       
-      // Check if this is a timeout error that we should retry
-      const isTimeout = error.constructor.name === 'APIConnectionTimeoutError' || 
-                       (error instanceof Error && error.message.includes('timed out'));
-      
       // Check if this is an overloaded error (529) that we should retry
       const isOverloaded = error instanceof Anthropic.APIError && error.status === 529;
       
-      if ((isTimeout || isOverloaded) && attempt < maxRetries) {
-        devLog('claude', `API ${isOverloaded ? 'overloaded' : 'timed out'} on attempt ${attempt + 1}, will retry...`);
-        // Add a delay before retry (3 seconds for overloaded, 1 second for timeout)
-        const delay = isOverloaded ? 3000 : 1000;
+      if (isOverloaded && attempt < maxRetries) {
+        devLog('claude', `API overloaded on attempt ${attempt + 1}, will retry...`);
+        // Add a delay before retry on overloaded responses
+        const delay = 3000;
         await new Promise(resolve => setTimeout(resolve, delay));
         continue;
       }
