@@ -6,7 +6,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
-import { CLAUDE_MODEL } from "../../config/ai-model";
+import { CLAUDE_MODEL_OPUS as CLAUDE_MODEL } from "../../config/ai-model";
 import { randomUUID } from "crypto";
 import { motionToContinueTemplate } from "../../../shared/templates/motion-to-continue";
 import { motionToReduceBailTemplate } from "../../../shared/templates/motion-to-reduce-bail";

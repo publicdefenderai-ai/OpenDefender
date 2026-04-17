@@ -152,7 +152,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender uses artificial intelligence to help generate legal guidance. Specifically, we use <strong className="text-foreground">Anthropic's Claude Sonnet 4</strong>, a large language model, to analyze your situation and provide information.
+                  OpenDefender uses artificial intelligence to help generate legal guidance. Specifically, we use <strong className="text-foreground">Anthropic's Claude Opus 4.6</strong> for legal guidance and attorney documents, and <strong className="text-foreground">Claude Sonnet 4.6</strong> for document summaries — both large language models made by Anthropic — to analyze your situation and provide information.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   <strong className="text-foreground">Important:</strong> AI-generated guidance is not a substitute for advice from a licensed attorney. While we verify responses against legal databases, AI can make mistakes. Always consult with a qualified lawyer for legal decisions.

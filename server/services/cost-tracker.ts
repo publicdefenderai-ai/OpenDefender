@@ -166,12 +166,12 @@ const SERVICE_BUDGET_USD: Record<string, number> = {
 // Maximum allowed estimated cost for a single request
 const MAX_REQUEST_COST_USD = parseFloat(process.env.AI_MAX_REQUEST_COST || '0');
 
-// Sonnet 4 input cost: $3 per 1M tokens, ~4 chars per token
-const INPUT_COST_PER_CHAR = 3.0 / (1_000_000 * 4);
+// Opus 4.6 input cost: $5 per 1M tokens, ~4 chars per token
+const INPUT_COST_PER_CHAR = 5.0 / (1_000_000 * 4);
 
 /**
  * Estimate the input cost for a request given total prompt character count.
- * Uses ~4 chars/token heuristic with Sonnet 4 input pricing ($3/MTok).
+ * Uses ~4 chars/token heuristic with Opus 4.6 input pricing ($5/MTok).
  */
 export function estimateRequestCost(inputChars: number): number {
   return inputChars * INPUT_COST_PER_CHAR;

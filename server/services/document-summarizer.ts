@@ -13,7 +13,7 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk';
-import { CLAUDE_MODEL } from '../config/ai-model';
+import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 // @ts-ignore — pdf-parse ships CJS
 import * as pdfParseModule from 'pdf-parse';
 const pdfParse = (pdfParseModule as any).default || pdfParseModule;
@@ -337,7 +337,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
 
     const parsed = JSON.parse(jsonText);
 
-    // Calculate costs (Sonnet 4 pricing: $3/MTok input, $15/MTok output)
+    // Calculate costs (Sonnet 4.6 pricing: $3/MTok input, $15/MTok output)
     // With prompt caching: cache writes = $3.75/MTok (+25%), cache reads = $0.30/MTok (-90%)
     const regularInputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
     const cacheWriteCost = ((message.usage.cache_creation_input_tokens ?? 0) / 1_000_000) * 3.75;
@@ -403,7 +403,7 @@ export function getSupportedFileTypes(): Array<{ mimeType: string; extension: st
 
 const MAX_BATCH_DOCUMENTS = 10;
 
-// Batch pricing for Sonnet 4 (50% of standard rates)
+// Batch pricing for Sonnet 4.6 (50% of standard rates)
 const BATCH_INPUT_COST_PER_MTOKEN = 1.5;    // vs $3.00 standard
 const BATCH_OUTPUT_COST_PER_MTOKEN = 7.5;   // vs $15.00 standard
 const BATCH_CACHE_WRITE_PER_MTOKEN = 1.875; // vs $3.75 standard
