@@ -57,7 +57,7 @@ import { CHARGE_CITATIONS } from './criminal-charge-citations';
 /** Returns the confidence level for a charge, checking the overlay first. */
 export function getChargeConfidence(
   charge: CriminalCharge
-): 'unverified' | 'low' | 'medium' | 'high' {
+): 'unverified' | 'low' | 'medium' | 'needs_review' | 'high' {
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay) return overlay.confidence;
   return charge.dataConfidence ?? 'unverified';

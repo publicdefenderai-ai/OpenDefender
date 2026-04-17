@@ -5,19 +5,24 @@
  * a real, current, non-repealed statute via the OpenLaws API.
  *
  * Modes:
- *   default     — check all charges that have statuteCitations populated
- *   --all       — also report charges with no citations (pending Phase 3 work)
- *   --state XX  — limit to a single state code (e.g., --state CA)
- *   --category  — limit to charge names matching a substring (e.g., --category assault)
- *   --dry-run   — parse and categorise only; do not call OpenLaws API
+ *   default                — check all charges that have citations populated
+ *   --all                  — also report charges with no citations
+ *   --state XX             — limit to a single state code (e.g., --state CA)
+ *   --category             — limit to charge names matching a substring (e.g., --category assault)
+ *   --batch N              — limit to one of 10 priority batches (1=homicide through 10=catch-all)
+ *   --exclude-territories  — skip AS/GU/MP/PR/VI entries (default: true)
+ *   --include-territories  — override the default exclusion and include territory entries
+ *   --dry-run              — parse and categorise only; do not call OpenLaws API
  *
  * Usage:
  *   npx tsx scripts/data-review/verify-charge-citations.ts
- *   npx tsx scripts/data-review/verify-charge-citations.ts --all
+ *   npx tsx scripts/data-review/verify-charge-citations.ts --batch 1 --dry-run
+ *   npx tsx scripts/data-review/verify-charge-citations.ts --batch 1
  *   npx tsx scripts/data-review/verify-charge-citations.ts --state CA --dry-run
  *
  * Outputs:
- *   scripts/data-review/output/charge-citations-report.json
+ *   scripts/data-review/output/charge-citations-report.json          (default / --state / --category)
+ *   scripts/data-review/output/charge-citations-batch-N-report.json  (--batch N)
  *
  * Quarterly integration:
  *   Run automatically by .github/workflows/quarterly-data-review.yml
@@ -44,12 +49,21 @@ import { CHARGE_CITATIONS } from '../../shared/criminal-charge-citations';
 const args = process.argv.slice(2);
 const INCLUDE_PENDING = args.includes('--all');
 const DRY_RUN = args.includes('--dry-run');
+const INCLUDE_TERRITORIES = args.includes('--include-territories');
+const EXCLUDE_TERRITORIES = !INCLUDE_TERRITORIES; // default: exclude territories
 
 const stateArg = args.indexOf('--state');
 const STATE_FILTER: string | null = stateArg !== -1 ? (args[stateArg + 1] ?? '').toUpperCase() : null;
 
 const categoryArg = args.indexOf('--category');
 const CATEGORY_FILTER: string | null = categoryArg !== -1 ? (args[categoryArg + 1] ?? '').toLowerCase() : null;
+
+const batchArg = args.indexOf('--batch');
+const BATCH_FILTER: number | null = batchArg !== -1 ? parseInt(args[batchArg + 1] ?? '0', 10) : null;
+if (BATCH_FILTER !== null && (isNaN(BATCH_FILTER) || BATCH_FILTER < 1 || BATCH_FILTER > 10)) {
+  console.error('--batch must be a number 1–10');
+  process.exit(1);
+}
 
 const OPENLAWS_API_URL = process.env.OPENLAWS_API_URL ?? 'https://api.openlaws.us/api/v1';
 const OPENLAWS_API_KEY = process.env.OPENLAWS_API_KEY ?? '';
@@ -78,6 +92,9 @@ interface ChargeVerificationResult {
   needsManualReview: boolean;
   reason?: string;
   checkedAt: string;
+  /** 'training_data' when the source field contains "Training data —"; helps distinguish
+   *  Phase 3 machine-generated citations from previously human-verified ones. */
+  sourceType?: 'training_data' | 'other';
 }
 
 interface ReportOutput {
@@ -135,6 +152,76 @@ const STATE_ABBREV: Record<string, string> = {
   'Vt.': 'VT', 'Va.': 'VA', 'Wash.': 'WA', 'W.Va.': 'WV',
   'Wis.': 'WI', 'Wyo.': 'WY', 'D.C.': 'DC',
 };
+
+// ── Territory exclusion ───────────────────────────────────────────────────────
+
+const TERRITORY_PREFIXES = ['as-', 'gu-', 'mp-', 'pr-', 'vi-'];
+
+function isTerritoryCharge(chargeId: string): boolean {
+  return TERRITORY_PREFIXES.some(prefix => chargeId.startsWith(prefix));
+}
+
+// ── Batch definitions ─────────────────────────────────────────────────────────
+//
+// 10 priority-ordered batches for Phase 4 OpenLaws verification.
+// Batches are checked in order (1 first). First match wins; batch 10 is catch-all.
+// Territory entries (as-, gu-, mp-, pr-, vi-) are always excluded unless
+// --include-territories is passed.
+
+/** Strip the state prefix (2-letter code or 'fed') from a charge ID. */
+function getChargeSlug(chargeId: string): string {
+  const m = chargeId.match(/^(?:[a-z]{2}|fed)-(.+)$/);
+  return m ? m[1] : chargeId;
+}
+
+/** Returns the batch number (1–10) for a given charge ID. */
+function getChargeBatch(chargeId: string): number {
+  const slug = getChargeSlug(chargeId);
+
+  // Batch 1: Homicide (highest stakes)
+  if (/murder|manslaughter|criminally.negligent.homicide|vehicular.homicide|negligent.homicide/.test(slug)) return 1;
+
+  // Batch 3: Sexual offenses — checked before batch 2 to avoid "sexual-assault" → batch 2
+  if (/^sexual-|^rape-|^statutory-rape|^child-rape|^stalking|^cyberstalking|child-sexual|^lewd-|^indecent-/.test(slug)) return 3;
+
+  // Batch 2: Assault / battery / domestic violence
+  if (/\bassault\b|assault-in-the|\bbattery\b|domestic-violence|domestic-battery|domestic-assault|spousal-battery/.test(slug)) return 2;
+
+  // Batch 4: Drug offenses and DUI
+  if (/^dui\b|^dwi\b|^oui\b|^owi\b|-dui$|-dwi$|drug-possession|simple-possession|possession-with-intent|drug-trafficking|drug-distribution|distribution-of-controlled|manufacturing-controlled|open-container|driving-under-the-influence/.test(slug)) return 4;
+
+  // Batch 5: Major violent property crimes
+  if (/^robbery|^burglary|^arson|^kidnapping|^false-imprisonment|^carjacking/.test(slug)) return 5;
+
+  // Batch 6: Fraud and financial crimes
+  if (/grand-theft|grand-larceny|embezzlement|identity-theft|forgery|credit-card-fraud|wire-fraud|money-laundering|computer-fraud|bribery|extortion|blackmail|receiving-stolen-property|insurance-fraud|bank-fraud|mail-fraud|securities-fraud|welfare-fraud|healthcare-fraud|mortgage-fraud|tax-evasion|counterfeiting|bad-check/.test(slug)) return 6;
+
+  // Batch 7: Minor property crimes and public order
+  if (/shoplifting|retail-theft|petit-theft|petty-theft|petty-larceny|vandalism|criminal-mischief|malicious-mischief|trespassing|criminal-trespass|trespass-after|^loitering|disorderly-conduct|disturbing-the-peace|public-intoxication|drunk-in-public|breach-of-peace/.test(slug)) return 7;
+
+  // Batch 8: Weapons offenses and organized crime
+  if (/firearm|weapons-offense|concealed-carry|felon-in-possession|possession-by-felon|possession-by-a-felon|rico\b|organized-crime|racketeering|^gang-/.test(slug)) return 8;
+
+  // Batch 9: Traffic and public order offenses
+  if (/driving-while-suspended|suspended-license|driving-without-a-license|reckless-driving|reckless-operation|resisting-arrest|obstruction-of-justice|failure-to-appear|fare-evasion|hit-and-run|leaving-the-scene|jaywalking/.test(slug)) return 9;
+
+  // Batch 10: Catch-all (juvenile, inchoate, enhancements, state-specific variants)
+  return 10;
+}
+
+// ── Multi-section citation pre-processing ─────────────────────────────────────
+//
+// Phase 3 added attempt charges with two citations: "Ala. Code §§ 13A-4-2, 13A-6-2"
+// The citation parser expects a single section. Extract the first section only.
+
+function extractFirstCitation(citation: string): string {
+  // "§§ A, B" → "§ A" — replace plural section marker and drop everything after first comma
+  const multiMatch = citation.match(/^(.+?§§\s*)([\w.\-:]+)(,.*)?$/);
+  if (multiMatch) {
+    return `${multiMatch[1].replace('§§', '§')}${multiMatch[2]}`.trim();
+  }
+  return citation;
+}
 
 interface ParsedCitation {
   jurisdiction: string;
@@ -373,7 +460,9 @@ async function checkCitationViaOpenLaws(
     return { found: false, isRepealed: false, error: 'OPENLAWS_API_KEY not set' };
   }
 
-  const parsed = parseCitationForVerifier(citation);
+  // Pre-process: extract first section from multi-section citations (e.g. "§§ 13A-4-2, 13A-6-2")
+  const effectiveCitation = extractFirstCitation(citation);
+  const parsed = parseCitationForVerifier(effectiveCitation);
   if (!parsed) {
     return { found: false, isRepealed: false, error: `Cannot parse citation: ${citation}` };
   }
@@ -510,7 +599,10 @@ async function verifyCharge(
 ): Promise<ChargeVerificationResult> {
   const confidence = getChargeConfidence(charge);
   // Prefer overlay citation; fall back to inline statuteCitations[]
-  const citation = CHARGE_CITATIONS[charge.id]?.citation ?? charge.statuteCitations?.[0] ?? null;
+  const overlayCitation = CHARGE_CITATIONS[charge.id];
+  const citation = overlayCitation?.citation ?? charge.statuteCitations?.[0] ?? null;
+  const sourceType: 'training_data' | 'other' =
+    overlayCitation?.source?.includes('Training data') ? 'training_data' : 'other';
   const checkedAt = new Date().toISOString();
   const label = `${charge.name} (${charge.jurisdiction})`;
 
@@ -527,6 +619,7 @@ async function verifyCharge(
       needsManualReview: false, // Not a defect — expected during Phase 3 rollout
       reason: 'Citation not yet populated. Awaiting Phase 3 verification pass.',
       checkedAt,
+      sourceType,
     };
   }
 
@@ -547,6 +640,7 @@ async function verifyCharge(
       needsManualReview: false,
       reason: skipReason,
       checkedAt,
+      sourceType,
     };
   }
 
@@ -564,6 +658,7 @@ async function verifyCharge(
       needsManualReview: false,
       reason: 'Dry-run mode — OpenLaws API not called.',
       checkedAt,
+      sourceType,
     };
   }
 
@@ -584,6 +679,7 @@ async function verifyCharge(
       needsManualReview: true,
       reason: `No OpenLaws jurisdiction key for '${charge.jurisdiction}' — verify manually`,
       checkedAt,
+      sourceType,
     };
   }
 
@@ -607,6 +703,7 @@ async function verifyCharge(
       needsManualReview: true,
       reason: result.error,
       checkedAt,
+      sourceType,
     };
   }
 
@@ -623,6 +720,7 @@ async function verifyCharge(
       needsManualReview: true,
       reason: result.error,
       checkedAt,
+      sourceType,
     };
   }
 
@@ -639,6 +737,7 @@ async function verifyCharge(
       needsManualReview: true,
       reason: 'OpenLaws API could not locate this citation. Citation may be wrong or the state uses a different numbering system.',
       checkedAt,
+      sourceType,
     };
   }
 
@@ -657,6 +756,7 @@ async function verifyCharge(
       needsManualReview: true,
       reason: 'Statute is marked as repealed or effective_date_end is in the past. Update citation to current law.',
       checkedAt,
+      sourceType,
     };
   }
 
@@ -674,6 +774,7 @@ async function verifyCharge(
     effectiveDate: result.effectiveDate,
     needsManualReview: false,
     checkedAt,
+    sourceType,
   };
 }
 
@@ -686,6 +787,8 @@ async function main(): Promise<void> {
   let charges = criminalCharges.filter(c => {
     if (STATE_FILTER && c.jurisdiction !== STATE_FILTER) return false;
     if (CATEGORY_FILTER && !c.name.toLowerCase().includes(CATEGORY_FILTER)) return false;
+    if (EXCLUDE_TERRITORIES && isTerritoryCharge(c.id)) return false;
+    if (BATCH_FILTER !== null && getChargeBatch(c.id) !== BATCH_FILTER) return false;
     return true;
   });
 
@@ -703,12 +806,40 @@ async function main(): Promise<void> {
   console.log(`\n=== Criminal Charge Citation Verifier ===`);
   console.log(`Run at:   ${runAt}`);
   console.log(`Mode:     ${DRY_RUN ? 'DRY-RUN' : OPENLAWS_API_KEY ? 'API' : 'NO API KEY (report only)'}`);
+  if (BATCH_FILTER !== null) console.log(`Batch:    ${BATCH_FILTER} of 10`);
   if (STATE_FILTER) console.log(`Filter:   state=${STATE_FILTER}`);
   if (CATEGORY_FILTER) console.log(`Filter:   category contains "${CATEGORY_FILTER}"`);
+  console.log(`Territories: ${EXCLUDE_TERRITORIES ? 'excluded (default)' : 'included (--include-territories)'}`);
   console.log(`Total charges in file: ${criminalCharges.length}`);
   console.log(`Pending (no citation): ${pendingCharges.length}`);
   console.log(`To verify this run:    ${total}`);
   console.log('');
+
+  // ── Pre-run duplicate citation warning ──────────────────────────────────────
+  // Scan for citations shared by more than one charge in the same jurisdiction.
+  // This is informational only — does not abort the run.
+  {
+    const citationMap = new Map<string, string[]>(); // "JX:citation" → [chargeId, ...]
+    for (const c of charges) {
+      const cit = CHARGE_CITATIONS[c.id]?.citation ?? c.statuteCitations?.[0];
+      if (!cit) continue;
+      const key = `${c.jurisdiction}:${cit}`;
+      const existing = citationMap.get(key) ?? [];
+      existing.push(c.id);
+      citationMap.set(key, existing);
+    }
+    const dupes = [...citationMap.entries()].filter(([, ids]) => ids.length > 1);
+    if (dupes.length > 0) {
+      console.log(`⚠️  Pre-run warning: ${dupes.length} citation(s) shared by multiple charges in the same jurisdiction.`);
+      console.log('   Both charges will receive the same API result. Review intentionality after the run.');
+      for (const [key, ids] of dupes.slice(0, 10)) {
+        const [jx, cit] = key.split(':', 2);
+        console.log(`   [${jx}] ${cit} → ${ids.join(', ')}`);
+      }
+      if (dupes.length > 10) console.log(`   ... and ${dupes.length - 10} more.`);
+      console.log('');
+    }
+  }
 
   const results: ChargeVerificationResult[] = [];
 
@@ -757,10 +888,13 @@ async function main(): Promise<void> {
     results,
   };
 
-  // Write output
+  // Write output — use per-batch filename when --batch is set
   const outputDir = path.join(process.cwd(), 'scripts/data-review/output');
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
-  const outputPath = path.join(outputDir, 'charge-citations-report.json');
+  const outputFilename = BATCH_FILTER !== null
+    ? `charge-citations-batch-${BATCH_FILTER}-report.json`
+    : 'charge-citations-report.json';
+  const outputPath = path.join(outputDir, outputFilename);
   fs.writeFileSync(outputPath, JSON.stringify(report, null, 2));
 
   // Console summary

@@ -6,9 +6,10 @@
  * without touching the 100K+ line base data file.
  *
  * Confidence levels:
- *   'medium' — confirmed via secondary source (Justia, state legislature, NCSL)
- *   'high'   — confirmed via OpenLaws API traversal or cross-verified against official state
- *              legislature site; only 'high' entries surface the "Read the Law" button to users
+ *   'medium'       — confirmed via secondary source (Justia, state legislature, NCSL)
+ *   'needs_review' — OpenLaws API returned not_found; human review required before promoting
+ *   'high'         — confirmed via OpenLaws API traversal or cross-verified against official state
+ *                    legislature site; only 'high' entries surface the "Read the Law" button to users
  *
  * How to add a citation:
  *   1. Add an entry to CHARGE_CITATIONS below with confidence: 'medium'
@@ -25,7 +26,7 @@ export interface CitationRecord {
   citation: string;
   /** Secondary citations (alternate section, effective date range, etc.) */
   alternateCitations?: string[];
-  confidence: 'medium' | 'high';
+  confidence: 'medium' | 'needs_review' | 'high';
   /** YYYY-MM when this entry was last verified */
   lastVerified: string;
   /** Source used to confirm citation (secondary source name or 'OpenLaws') */
