@@ -20,7 +20,7 @@ if (!apiKey) {
 } else {
   anthropic = new Anthropic({
     apiKey,
-    timeout: 90000, // 90 second timeout for the SDK - generous time for complex legal guidance
+    timeout: 145000, // 145 second timeout for the SDK - generous time for Opus 4.6 complex legal guidance
   });
 }
 
@@ -591,7 +591,7 @@ async function callClaudeWithRetry(
       const startTime = Date.now();
       
       // Wrap the API call in a timeout promise to ensure it actually times out
-      const timeoutMs = 95000; // 95 seconds - slightly longer than SDK timeout for complex legal guidance
+      const timeoutMs = 150000; // 150 seconds - slightly longer than SDK timeout for Opus 4.6 complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: CLAUDE_MODEL,
         max_tokens: 4096,
