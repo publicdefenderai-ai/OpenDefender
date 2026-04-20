@@ -241,6 +241,22 @@ Return a JSON object with these exact fields:
 
 TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system.
 
+OUTPUT SIZE RULES — MUST FOLLOW TO AVOID TRUNCATION:
+- criticalAlerts: 3 items maximum
+- immediateActions: 4 items maximum
+- nextSteps: 5 items maximum
+- deadlines: 3 items maximum
+- rights: 5 items maximum
+- resources: 3 items maximum
+- warnings: 4 items maximum
+- evidenceToGather: 4 items maximum
+- courtPreparation: 4 items maximum
+- avoidActions: 4 items maximum
+- timeline: 5 items maximum
+- uncertainties: 3 items maximum
+- Keep each individual string value to 1-2 sentences maximum (3 sentences only for overview)
+- Prioritize the most important items in each array — do not pad arrays with obvious or generic content
+
 JSON FORMATTING RULES:
 - Return ONLY a valid JSON object, no markdown code blocks, no explanatory text before or after
 - Escape all special characters in strings properly (double quotes, backslashes, newlines)
@@ -598,7 +614,7 @@ async function callClaudeWithRetry(
       const timeoutMs = 150000; // 150 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: CLAUDE_MODEL,
-        max_tokens: 2500,
+        max_tokens: 3500,
         temperature: 0.3,
         system: [
           {
