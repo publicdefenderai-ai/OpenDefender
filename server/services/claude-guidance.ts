@@ -960,10 +960,16 @@ export async function streamClaudeGuidance(
       messages: [{ role: 'user', content: userPrompt }],
     });
 
-    // Stream text tokens to caller
-    for await (const text of stream.textStream) {
-      fullText += text;
-      onChunk(text);
+    // Stream text tokens to caller via event iteration (SDK 0.37 API)
+    for await (const event of stream) {
+      if (
+        event.type === 'content_block_delta' &&
+        event.delta.type === 'text_delta'
+      ) {
+        const text = (event.delta as { type: 'text_delta'; text: string }).text;
+        fullText += text;
+        onChunk(text);
+      }
     }
 
     const finalMessage = await stream.finalMessage();
