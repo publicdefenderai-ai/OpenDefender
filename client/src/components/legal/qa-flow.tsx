@@ -40,7 +40,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     chargesUnknown: false,
     caseStage: "",
     custodyStatus: "",
-    hasAttorney: false,
+    hasAttorney: null,
     consentGiven: false,
     incidentDescription: "",
     selectedConcerns: [] as string[],
@@ -800,17 +800,6 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
             </div>
           )}
 
-          <div className="flex items-center space-x-2">
-            <Checkbox
-              id="hasAttorney"
-              checked={formData.hasAttorney}
-              onCheckedChange={(checked) => updateFormData("hasAttorney", checked)}
-              data-testid="checkbox-has-attorney"
-            />
-            <Label htmlFor="hasAttorney" className="text-sm">
-              {t('legalGuidance.qaFlow.caseDetails.hasAttorneyLabel')}
-            </Label>
-          </div>
         </div>
       </div>
 
@@ -912,6 +901,22 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
                 <SelectItem value="released">{t('legalGuidance.qaFlow.status.custodyOptions.bail')}</SelectItem>
                 <SelectItem value="ownRecognizance">{t('legalGuidance.qaFlow.status.custodyOptions.recognizance')}</SelectItem>
                 <SelectItem value="notArrested">{t('legalGuidance.qaFlow.status.custodyOptions.no')}</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label htmlFor="hasAttorney">Do you currently have an attorney or public defender?</Label>
+            <Select
+              value={formData.hasAttorney === true ? "yes" : formData.hasAttorney === false ? "no" : ""}
+              onValueChange={(value) => updateFormData("hasAttorney", value === "yes")}
+            >
+              <SelectTrigger data-testid="select-has-attorney">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="yes">Yes</SelectItem>
+                <SelectItem value="no">No</SelectItem>
               </SelectContent>
             </Select>
           </div>
