@@ -517,39 +517,6 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
       <div>
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
 
-        {/* "I don't know" option */}
-        <div
-          className={`mb-4 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-            formData.chargesUnknown
-              ? "border-amber-400 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-600"
-              : "border-gray-200 dark:border-gray-700 hover:border-amber-300 dark:hover:border-amber-700"
-          }`}
-          onClick={handleChargesUnknownToggle}
-          role="checkbox"
-          aria-checked={formData.chargesUnknown}
-          tabIndex={0}
-          onKeyDown={(e) => e.key === " " && handleChargesUnknownToggle()}
-        >
-          <div className="flex items-start gap-3">
-            <Checkbox
-              checked={formData.chargesUnknown}
-              onCheckedChange={handleChargesUnknownToggle}
-              onClick={(e) => e.stopPropagation()}
-              className="mt-0.5"
-              id="charges-unknown"
-              aria-label="I don't know what charges I'm facing"
-            />
-            <div>
-              <label htmlFor="charges-unknown" className="font-medium text-sm cursor-pointer">
-                I don't know what charges I'm facing
-              </label>
-              <p className="text-xs text-muted-foreground mt-1">
-                Select this if you haven't received paperwork or aren't sure of the official charges. You'll receive general rights and process guidance instead.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className="space-y-4">
           {/* Selected Charges */}
           {!formData.chargesUnknown && formData.charges.length > 0 && (
@@ -843,6 +810,39 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
             <Label htmlFor="hasAttorney" className="text-sm">
               {t('legalGuidance.qaFlow.caseDetails.hasAttorneyLabel')}
             </Label>
+          </div>
+        </div>
+      </div>
+
+      {/* "I don't know" option */}
+      <div
+        className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+          formData.chargesUnknown
+            ? "border-amber-400 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-600"
+            : "border-gray-200 dark:border-gray-700 hover:border-amber-300 dark:hover:border-amber-700"
+        }`}
+        onClick={handleChargesUnknownToggle}
+        role="checkbox"
+        aria-checked={formData.chargesUnknown}
+        tabIndex={0}
+        onKeyDown={(e) => e.key === " " && handleChargesUnknownToggle()}
+      >
+        <div className="flex items-start gap-3">
+          <Checkbox
+            checked={formData.chargesUnknown}
+            onCheckedChange={handleChargesUnknownToggle}
+            onClick={(e) => e.stopPropagation()}
+            className="mt-0.5"
+            id="charges-unknown"
+            aria-label="I don't know what charges I'm facing"
+          />
+          <div>
+            <label htmlFor="charges-unknown" className="font-medium text-sm cursor-pointer">
+              I don't know what charges I'm facing
+            </label>
+            <p className="text-xs text-muted-foreground mt-1">
+              Select this if you haven't received paperwork or aren't sure of the official charges. You'll receive general rights and process guidance instead.
+            </p>
           </div>
         </div>
       </div>
