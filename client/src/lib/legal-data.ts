@@ -122,6 +122,61 @@ export const legalDataApi = {
     return response.json();
   },
 
+  async streamLegalGuidance(
+    caseData: any,
+    onProgress: (charsReceived: number, progress: number) => void
+  ): Promise<{ success: boolean; sessionId: string; guidance: LegalGuidance }> {
+    const response = await fetch('/api/legal-guidance/stream', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(caseData),
+    });
+
+    if (!response.ok || !response.body) {
+      throw new Error(`HTTP ${response.status}: Failed to start guidance stream`);
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    let totalChars = 0;
+    const estimatedTotal = 13000; // ~3500 tokens × ~3.7 chars avg
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+
+      // SSE messages are separated by double newline
+      const messages = buffer.split('\n\n');
+      buffer = messages.pop() ?? '';
+
+      for (const message of messages) {
+        const line = message.trim();
+        if (!line.startsWith('data: ')) continue;
+        const jsonStr = line.slice(6).trim();
+        if (!jsonStr) continue;
+
+        let event: any;
+        try { event = JSON.parse(jsonStr); } catch { continue; }
+
+        if (event.type === 'chunk') {
+          totalChars += (event.text as string).length;
+          const progress = Math.min(92, Math.round((totalChars / estimatedTotal) * 100));
+          onProgress(totalChars, progress);
+        } else if (event.type === 'complete') {
+          onProgress(totalChars, 100);
+          return event as { success: boolean; sessionId: string; guidance: LegalGuidance };
+        } else if (event.type === 'error') {
+          throw new Error((event.error as string) || 'Streaming guidance failed');
+        }
+      }
+    }
+
+    throw new Error('Guidance stream ended without a complete event');
+  },
+
   async getLegalGuidance(sessionId: string): Promise<{ success: boolean; guidance: LegalGuidance; case: any }> {
     const response = await apiRequest('GET', `/api/legal-guidance/${sessionId}`);
     return response.json();

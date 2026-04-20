@@ -31,10 +31,10 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { QAFlow } from "@/components/legal/qa-flow";
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance, useAIAvailability } from "@/hooks/use-legal-data";
+import { legalDataApi } from "@/lib/legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
-import { AnimatedProgressBar } from "@/components/chat/progress-indicator";
 import { useToast } from "@/hooks/use-toast";
 
 interface ImmediateAction {
@@ -303,7 +303,9 @@ export default function CaseGuidance() {
   const { toast } = useToast();
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
-  const { generateGuidance, deleteGuidance } = useLegalGuidance();
+  const [isStreaming, setIsStreaming] = useState(false);
+  const [streamProgress, setStreamProgress] = useState(0);
+  const { deleteGuidance } = useLegalGuidance();
   const { data: aiStatus } = useAIAvailability();
   const aiUnavailable = aiStatus && aiStatus.available === false;
   const { registerGuard, unregisterGuard } = useNavigationGuard();
@@ -407,8 +409,12 @@ export default function CaseGuidance() {
   };
 
   const handleQAComplete = async (data: any) => {
+    setIsStreaming(true);
+    setStreamProgress(0);
     try {
-      const result = await generateGuidance.mutateAsync(data);
+      const result = await legalDataApi.streamLegalGuidance(data, (_chars, progress) => {
+        setStreamProgress(progress);
+      });
       
       if (result && result.success) {
         // Wait a tick to ensure the API response is fully processed
@@ -461,12 +467,14 @@ export default function CaseGuidance() {
       }
     } catch (error) {
       console.error("Failed to generate guidance:", error);
-      console.error("Error details:", error);
       toast({
         title: t('caseGuidance.errors.errorOccurred', 'Error'),
         description: t('caseGuidance.errors.tryAgain', 'An error occurred while generating guidance. Please try again.'),
         variant: "destructive",
       });
+    } finally {
+      setIsStreaming(false);
+      setStreamProgress(0);
     }
   };
 
@@ -550,26 +558,42 @@ export default function CaseGuidance() {
     }
   };
 
-  // Show loading state while generating guidance
-  if (generateGuidance.isPending) {
+  // Show streaming progress while generating guidance
+  if (isStreaming) {
+    const stage =
+      streamProgress === 0 ? 'Connecting to AI...' :
+      streamProgress < 20 ? 'Analyzing your case details...' :
+      streamProgress < 55 ? 'Writing your personalized guidance...' :
+      streamProgress < 88 ? 'Finalizing recommendations...' :
+      streamProgress < 100 ? 'Reviewing for legal accuracy...' :
+      'Almost done...';
+
     return (
       <div className="min-h-screen bg-background">
         <Header />
         <main className="px-4 py-8 flex items-center justify-center min-h-[60vh]">
           <Card className="w-full max-w-md">
             <CardContent className="pt-6">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="flex flex-col items-center justify-center space-y-5 text-center">
                 <div className="relative">
                   <div className="h-16 w-16 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin"></div>
                   <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-1">
                   <h3 className="text-xl font-semibold">Generating Your Personalized Guidance</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Our AI is analyzing your case details and creating customized case support. This may take up to a minute...
+                  <p className="text-sm text-muted-foreground">{stage}</p>
+                </div>
+                <div className="w-full space-y-1">
+                  <div className="h-2 w-full bg-blue-100 dark:bg-blue-900/30 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ease-out"
+                      style={{ width: `${streamProgress === 0 ? 2 : streamProgress}%` }}
+                    />
+                  </div>
+                  <p className="text-xs text-muted-foreground text-right">
+                    {streamProgress < 100 ? `${streamProgress}%` : 'Complete'}
                   </p>
                 </div>
-                <AnimatedProgressBar duration={30} maxProgress={80} />
               </div>
             </CardContent>
           </Card>

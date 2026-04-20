@@ -9,7 +9,7 @@ import { bjsStatisticsService } from "./services/bjs-statistics";
 import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSchema } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
-import { generateClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
+import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
@@ -903,6 +903,92 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to generate legal guidance", error);
       res.status(500).json({ success: false, error: "Failed to generate guidance" });
+    }
+  });
+
+  // Streaming Legal Guidance (SSE) — identical middleware, streams tokens as they arrive
+  app.post("/api/legal-guidance/stream", requireServiceBudget('claude-guidance'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+    // Set SSE headers before writing anything
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+    res.setHeader('X-Accel-Buffering', 'no');
+    res.flushHeaders();
+
+    const sendEvent = (data: object) => {
+      res.write(`data: ${JSON.stringify(data)}\n\n`);
+    };
+
+    try {
+      const sessionId = req.body.sessionId || randomUUID();
+
+      const transformedData = {
+        ...req.body,
+        sessionId,
+        charges: Array.isArray(req.body.charges)
+          ? req.body.charges
+          : typeof req.body.charges === 'string'
+            ? [req.body.charges]
+            : req.body.charges,
+        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
+      };
+
+      const validatedData = insertLegalCaseSchema.parse(transformedData);
+      const caseDataWithFlags = {
+        ...validatedData,
+        chargesUnknown: req.body.chargesUnknown === true,
+      };
+
+      // Charge lookup (same guard logic as generateLegalGuidance)
+      const chargeIds = Array.isArray(caseDataWithFlags.charges) ? caseDataWithFlags.charges : [caseDataWithFlags.charges];
+      const chargeClassifications = chargeIds
+        .map((id: string) => {
+          const charge = getChargeById(id);
+          if (!charge) return null;
+          return { name: charge.name, classification: charge.category, code: charge.code, title: charge.name, maxPenalty: charge.maxPenalty };
+        })
+        .filter(Boolean);
+
+      if (chargeClassifications.length === 0 && chargeIds.length > 0 && chargeIds[0] !== '') {
+        sendEvent({ type: 'error', error: 'None of the provided charge IDs were recognized.' });
+        return res.end();
+      }
+
+      const useAI = !!process.env.ANTHROPIC_API_KEY;
+      let guidance: any;
+
+      if (useAI && (caseDataWithFlags.incidentDescription || (caseDataWithFlags.selectedConcerns && caseDataWithFlags.selectedConcerns.length > 0))) {
+        try {
+          guidance = await streamClaudeGuidance(
+            caseDataWithFlags as any,
+            (text) => sendEvent({ type: 'chunk', text }),
+            sessionId
+          );
+          guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'claude-ai' };
+          opsLog('ai', `Stream tokens: ${guidance.usageMetrics?.inputTokens}+${guidance.usageMetrics?.outputTokens}, Cost: $${guidance.usageMetrics?.estimatedCost?.toFixed(4)}`);
+        } catch (aiError) {
+          errLog('Claude stream failed, falling back to rule-based', aiError);
+          // Fall back to rule-based (no streaming chunks for this path)
+          guidance = generateEnhancedGuidance(caseDataWithFlags as any);
+          guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'rule-based' };
+        }
+      } else {
+        guidance = generateEnhancedGuidance(caseDataWithFlags as any);
+        guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'rule-based' };
+      }
+
+      const legalCase = await storage.createLegalCase({ ...validatedData, guidance });
+      const guidanceWithTimestamp = {
+        ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
+        generatedAt: new Date().toISOString(),
+      };
+
+      sendEvent({ type: 'complete', success: true, sessionId, guidance: guidanceWithTimestamp });
+      res.end();
+    } catch (error) {
+      errLog('Failed to stream legal guidance', error);
+      sendEvent({ type: 'error', error: 'Failed to generate guidance. Please try again.' });
+      res.end();
     }
   });
 

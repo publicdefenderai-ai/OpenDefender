@@ -897,6 +897,214 @@ export async function generateClaudeGuidance(
   }
 }
 
+// Streaming version of generateClaudeGuidance — uses anthropic.messages.stream()
+// Calls onChunk for each text token so the route can forward them as SSE.
+// Returns the fully-parsed ClaudeGuidance once streaming is complete.
+export async function streamClaudeGuidance(
+  caseDetails: CaseDetails,
+  onChunk: (text: string) => void,
+  sessionId?: string
+): Promise<ClaudeGuidance> {
+  if (!anthropic) {
+    throw new Error('AI guidance service is not configured. Please contact support or try again later.');
+  }
+
+  // PII redaction — same as non-streaming path
+  let processedDetails = caseDetails;
+  if (isPIIRedactionEnabled()) {
+    const { redactedDetails, stats } = redactCaseDetails(caseDetails);
+    processedDetails = redactedDetails;
+    if (stats.total > 0) {
+      devLog('pii', 'Redacted sensitive information (stream)', {
+        total: stats.total,
+        breakdown: { names: stats.name, emails: stats.email, phones: stats.phone, ssn: stats.ssn, creditCards: stats.creditCard, addresses: stats.address, dob: stats.dob },
+      });
+    }
+  }
+
+  // Cache check — on a hit, emit the full JSON as a single chunk and return
+  const baseKey = generateCacheKey(processedDetails);
+  const cacheKey = sessionId ? `${sessionId}:${baseKey}` : baseKey;
+  const cachedEntry = responseCache.get(cacheKey);
+  if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_TTL) {
+    devLog('claude', 'Cache hit — skipping stream, returning cached guidance');
+    onChunk(JSON.stringify(cachedEntry.response));
+    return cachedEntry.response;
+  }
+
+  const systemPrompt = buildSystemPrompt(processedDetails.language);
+  const userPrompt = buildUserPrompt(processedDetails);
+
+  if (!isRequestCostAcceptable(systemPrompt.length + userPrompt.length)) {
+    throw new Error('Request input is too large to process. Please reduce the amount of detail provided.');
+  }
+
+  devLog('claude', 'Streaming personalized guidance...');
+  devLog('claude', `Prompt length: ${userPrompt.length} characters`);
+
+  const startTime = Date.now();
+  let fullText = '';
+
+  try {
+    const stream = anthropic.messages.stream({
+      model: CLAUDE_MODEL,
+      max_tokens: 3500,
+      temperature: 0.3,
+      system: [
+        {
+          type: 'text' as const,
+          text: systemPrompt,
+          cache_control: { type: 'ephemeral' as const },
+        },
+      ],
+      messages: [{ role: 'user', content: userPrompt }],
+    });
+
+    // Stream text tokens to caller
+    for await (const text of stream.textStream) {
+      fullText += text;
+      onChunk(text);
+    }
+
+    const finalMessage = await stream.finalMessage();
+    devLog('claude', `Stream completed in ${Date.now() - startTime}ms`);
+    devLog('claude', 'Stream usage', finalMessage.usage);
+
+    // Parse accumulated JSON
+    const jsonText = extractJSON(fullText);
+    let parsedData: any;
+    try {
+      parsedData = JSON.parse(jsonText);
+    } catch (parseError) {
+      throw new Error(
+        `Failed to parse streamed response as JSON: ${parseError instanceof Error ? parseError.message : 'Unknown error'}. ` +
+        `Received ${fullText.length} chars. Preview: ${fullText.slice(0, 200)}...`
+      );
+    }
+
+    validateClaudeResponse(parsedData);
+
+    // Cost tracking
+    const regularInputCost = (finalMessage.usage.input_tokens / 1_000_000) * 3.0;
+    const cacheWriteCost = ((finalMessage.usage.cache_creation_input_tokens ?? 0) / 1_000_000) * 3.75;
+    const cacheReadCost = ((finalMessage.usage.cache_read_input_tokens ?? 0) / 1_000_000) * 0.30;
+    const inputCost = regularInputCost + cacheWriteCost + cacheReadCost;
+    const outputCost = (finalMessage.usage.output_tokens / 1_000_000) * 15.0;
+    await recordAICost(inputCost + outputCost, 'claude-guidance');
+
+    const guidance: ClaudeGuidance = {
+      overview: parsedData.overview,
+      criticalAlerts: parsedData.criticalAlerts,
+      immediateActions: parsedData.immediateActions,
+      nextSteps: parsedData.nextSteps,
+      deadlines: parsedData.deadlines,
+      rights: parsedData.rights,
+      resources: parsedData.resources,
+      warnings: parsedData.warnings,
+      evidenceToGather: parsedData.evidenceToGather,
+      courtPreparation: parsedData.courtPreparation,
+      avoidActions: parsedData.avoidActions,
+      timeline: parsedData.timeline,
+      chargeClassifications: parsedData.chargeClassifications,
+      mockQA: parsedData.mockQA,
+      uncertainties: Array.isArray(parsedData.uncertainties) ? parsedData.uncertainties : [],
+      usageMetrics: {
+        inputTokens: finalMessage.usage.input_tokens,
+        outputTokens: finalMessage.usage.output_tokens,
+        estimatedCost: inputCost + outputCost,
+      },
+    };
+
+    // Legal accuracy validation (same as non-streaming path)
+    try {
+      const validationResult = await validateLegalGuidance(guidance, {
+        jurisdiction: processedDetails.jurisdiction,
+        charges: processedDetails.charges,
+        caseStage: processedDetails.caseStage,
+      });
+      guidance.validation = {
+        confidenceScore: validationResult.confidenceScore,
+        isValid: validationResult.isValid,
+        summary: validationResult.summary,
+        checksPerformed: validationResult.checksPerformed,
+        checksPassed: validationResult.checksPassed,
+        issues: validationResult.issues.map(issue => ({
+          type: issue.type,
+          severity: issue.severity,
+          message: issue.message,
+          suggestion: issue.suggestion,
+        })),
+      };
+      devLog('guidance', `Stream validation complete — Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+    } catch (validationError) {
+      devLog('guidance', 'Validation failed on stream path, continuing without it', validationError);
+    }
+
+    // Safety scan
+    try {
+      const guidanceText = JSON.stringify(guidance);
+      const scanResult = scanGuidanceForDangerContent(guidanceText, cacheKey.slice(0, 8));
+      if (scanResult.hasDangerContent) {
+        const stripped = stripDangerousItems(guidance.immediateActions, guidance.avoidActions);
+        guidance.immediateActions = stripped.immediateActions;
+        guidance.avoidActions = stripped.avoidActions;
+        guidance.dangerFlags = scanResult.dangerFlags;
+      }
+    } catch (safetyError) {
+      devLog('safety', 'Safety scan failed on stream path', safetyError);
+    }
+
+    // Diversion program cross-reference
+    try {
+      const allText = [
+        guidance.overview || '',
+        ...(guidance.nextSteps || []),
+        ...(guidance.warnings || []),
+        ...(guidance.resources || []).map(r => r.description || ''),
+      ].join(' ');
+      const mentionedDiversions = extractDiversionMentions(allText);
+      if (mentionedDiversions.length > 0) {
+        const diversionValidation = checkDiversionAvailability(processedDetails.jurisdiction, mentionedDiversions);
+        if (diversionValidation.warnings.length > 0) {
+          guidance.warnings = [...(guidance.warnings || []), ...diversionValidation.warnings];
+        }
+      }
+    } catch (diversionError) {
+      devLog('guidance', 'Diversion check failed on stream path', diversionError);
+    }
+
+    // Statute citation disclaimer
+    guidance.uncertainties = [
+      ...(guidance.uncertainties || []),
+      {
+        area: 'Statute Citations',
+        note: 'Citations in this guidance are provided for reference and cross-checked where possible. Laws change frequently and vary by jurisdiction. Verify all statute citations with your attorney or at law.cornell.edu/uscode before relying on them.',
+      },
+    ];
+
+    // Cache the result
+    responseCache.set(cacheKey, { response: guidance, timestamp: Date.now() });
+    if (sessionId) {
+      if (!sessionCacheKeys.has(sessionId)) sessionCacheKeys.set(sessionId, new Set());
+      sessionCacheKeys.get(sessionId)!.add(cacheKey);
+    }
+
+    return guidance;
+  } catch (error: any) {
+    errLog('Claude stream error', error);
+    if (error instanceof Anthropic.APIError) {
+      if (error.status === 429) throw new Error('AI service is currently overloaded. Please try again in a few minutes.');
+      if (error.status === 401 || error.status === 403) throw new Error('AI service authentication failed. Please contact support.');
+      if (error.status === 500 || error.status === 503) throw new Error('AI service is temporarily unavailable. Please try again shortly.');
+      if (error.status === 400) throw new Error('Invalid request to AI service. Please try with different input.');
+    }
+    if (error instanceof Error && error.message.includes('timed out')) {
+      throw new Error('AI service request timed out. Please try again.');
+    }
+    throw new Error(`Failed to generate AI guidance: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+}
+
 // Health check function to verify API key is working
 export async function testClaudeConnection(): Promise<boolean> {
   if (!anthropic) {
