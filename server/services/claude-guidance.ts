@@ -90,6 +90,7 @@ interface CaseDetails {
   familySituation?: string;
   selectedConcerns?: string[];
   language?: string;
+  chargesUnknown?: boolean;
 }
 
 interface ClaudeGuidance {
@@ -264,9 +265,13 @@ function sanitizeInput(input: string | undefined, maxLength: number = 5000): str
 
 function buildUserPrompt(caseDetails: CaseDetails): string {
   // Sanitize charges array/string
-  const chargesText = Array.isArray(caseDetails.charges)
-    ? caseDetails.charges.map(c => sanitizeInput(c, 200)).join(', ')
-    : sanitizeInput(caseDetails.charges, 200);
+  const chargesUnknown = caseDetails.chargesUnknown || 
+    (Array.isArray(caseDetails.charges) ? caseDetails.charges.length === 0 : !caseDetails.charges);
+  const chargesText = chargesUnknown
+    ? 'Unknown — user has not been formally charged or does not yet know the charges'
+    : Array.isArray(caseDetails.charges)
+      ? caseDetails.charges.map(c => sanitizeInput(c, 200)).join(', ')
+      : sanitizeInput(caseDetails.charges, 200);
 
   // Inject verified jurisdiction context when available (high/medium confidence states only)
   const jurisdictionBlock = buildJurisdictionContextBlock(
@@ -322,7 +327,17 @@ BASIC CASE INFORMATION:
     prompt += `\n\nSPECIFIC CONCERNS: The person is particularly worried about: ${concernsList}. Please address these specific concerns in your guidance and recommend relevant resources.`;
   }
 
-  prompt += `\n\nProvide comprehensive guidance tailored to these specific facts. Focus on:
+  if (chargesUnknown) {
+    prompt += `\n\nIMPORTANT: The specific charges are not yet known. Do NOT guess or speculate about what the charges might be. Instead, provide:
+1. General rights that apply at the current stage (${sanitizeInput(caseDetails.caseStage, 100)}) regardless of charge type
+2. How to find out what the official charges are (e.g., arrest record, court clerk, public defender)
+3. Jurisdiction-specific procedures and deadlines for ${sanitizeInput(caseDetails.jurisdiction, 100)} at this stage
+4. Universal protective steps (right to remain silent, right to counsel, etc.)
+5. Warnings about common mistakes when charges are unclear
+
+Remember: Use simple language, be specific, and prioritize by urgency. Do not fabricate charges.`;
+  } else {
+    prompt += `\n\nProvide comprehensive guidance tailored to these specific facts. Focus on:
 1. Immediate actions based on the current stage (${sanitizeInput(caseDetails.caseStage, 100)})
 2. Jurisdiction-specific deadlines and procedures for ${sanitizeInput(caseDetails.jurisdiction, 100)}
 3. Rights specific to the charges: ${chargesText}
@@ -330,6 +345,7 @@ BASIC CASE INFORMATION:
 5. Warnings about common mistakes in this type of case
 
 Remember: Use simple language, be specific, and prioritize by urgency.`;
+  }
 
   // Add language instruction if Spanish is requested
   if (caseDetails.language === 'es') {

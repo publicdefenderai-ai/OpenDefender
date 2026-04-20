@@ -878,7 +878,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
       // Generate personalized guidance based on case details
-      const guidance = await generateLegalGuidance(validatedData);
+      // chargesUnknown is a runtime flag (not a DB column) so it is passed separately
+      const guidance = await generateLegalGuidance({
+        ...validatedData,
+        chargesUnknown: req.body.chargesUnknown === true,
+      });
       
       const legalCase = await storage.createLegalCase({
         ...validatedData,

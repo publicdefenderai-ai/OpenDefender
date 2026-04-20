@@ -37,6 +37,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
   const [formData, setFormData] = useState({
     jurisdiction: "",
     charges: [] as string[],
+    chargesUnknown: false,
     caseStage: "",
     custodyStatus: "",
     hasAttorney: false,
@@ -503,14 +504,55 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     return criminalCharges.find(charge => charge.id === id);
   };
 
+  const handleChargesUnknownToggle = () => {
+    const newValue = !formData.chargesUnknown;
+    updateFormData("chargesUnknown", newValue);
+    if (newValue) {
+      updateFormData("charges", []);
+    }
+  };
+
   return (
     <div className="space-y-6">
       <div>
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
-        
+
+        {/* "I don't know" option */}
+        <div
+          className={`mb-4 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+            formData.chargesUnknown
+              ? "border-amber-400 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-600"
+              : "border-gray-200 dark:border-gray-700 hover:border-amber-300 dark:hover:border-amber-700"
+          }`}
+          onClick={handleChargesUnknownToggle}
+          role="checkbox"
+          aria-checked={formData.chargesUnknown}
+          tabIndex={0}
+          onKeyDown={(e) => e.key === " " && handleChargesUnknownToggle()}
+        >
+          <div className="flex items-start gap-3">
+            <Checkbox
+              checked={formData.chargesUnknown}
+              onCheckedChange={handleChargesUnknownToggle}
+              onClick={(e) => e.stopPropagation()}
+              className="mt-0.5"
+              id="charges-unknown"
+              aria-label="I don't know what charges I'm facing"
+            />
+            <div>
+              <label htmlFor="charges-unknown" className="font-medium text-sm cursor-pointer">
+                I don't know what charges I'm facing
+              </label>
+              <p className="text-xs text-muted-foreground mt-1">
+                Select this if you haven't received paperwork or aren't sure of the official charges. You'll receive general rights and process guidance instead.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-4">
           {/* Selected Charges */}
-          {formData.charges.length > 0 && (
+          {!formData.chargesUnknown && formData.charges.length > 0 && (
             <div className="mb-4">
               <Label className="text-sm font-medium mb-2 block">{t('legalGuidance.qaFlow.caseDetails.selectedCharges')}</Label>
               <div className="space-y-2">
@@ -582,6 +624,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
             </div>
           )}
           
+          {!formData.chargesUnknown && (<>
           {/* Charge Search */}
           <div>
             <Label htmlFor="charge-search">{t('legalGuidance.qaFlow.caseDetails.searchLabel', 'Search charges')}</Label>
@@ -780,6 +823,15 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               )}
             </div>
           </div>
+          </>)}
+
+          {formData.chargesUnknown && (
+            <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg border border-amber-200 dark:border-amber-800">
+              <p className="text-sm text-amber-800 dark:text-amber-200 leading-relaxed">
+                <strong>General guidance will be provided</strong> based on your jurisdiction, case stage, and any details you share in the next step. For more accurate guidance, describe what happened and any paperwork or information you've received in the "Additional Details" section.
+              </p>
+            </div>
+          )}
 
           <div className="flex items-center space-x-2">
             <Checkbox
@@ -805,7 +857,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         </Button>
         <Button
           onClick={onNext}
-          disabled={formData.charges.length === 0}
+          disabled={formData.charges.length === 0 && !formData.chargesUnknown}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"
         >
