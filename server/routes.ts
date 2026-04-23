@@ -1,5 +1,7 @@
 import type { Express, Request, Response, NextFunction } from "express";
 import { CLAUDE_MODEL_SONNET_DISPLAY_NAME } from "./config/ai-model";
+import fs from "fs";
+import path from "path";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { courtListenerService } from "./services/courtlistener";
@@ -664,6 +666,205 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch seeding status", error);
       res.status(500).json({ success: false, error: "Failed to fetch status" });
+    }
+  });
+
+  // ============================================================================
+  // ADMIN: Citation Review API
+  // All endpoints require x-admin-api-key header.
+  // ============================================================================
+
+  const REVIEW_STATE_PATH = path.join(process.cwd(), "scripts/data-review/citation-review-state.json");
+
+  function loadReviewState(): Record<string, any> {
+    try {
+      if (!fs.existsSync(REVIEW_STATE_PATH)) return { schemaVersion: 1, reviews: {} };
+      return JSON.parse(fs.readFileSync(REVIEW_STATE_PATH, "utf-8"));
+    } catch {
+      return { schemaVersion: 1, reviews: {} };
+    }
+  }
+
+  function saveReviewState(state: Record<string, any>): void {
+    const reviewed = Object.values(state.reviews as Record<string, any>).filter(
+      (r: any) => r.status !== "pending"
+    ).length;
+    state.lastUpdated = new Date().toISOString();
+    state.totalReviewed = reviewed;
+    fs.writeFileSync(REVIEW_STATE_PATH, JSON.stringify(state, null, 2));
+  }
+
+  // GET /api/admin/citation-review/charges
+  // Returns all charge entries grouped by slug, with review state merged in.
+  // Optional query params: ?slug=murder-in-the-first-degree  ?state=AL  ?status=pending
+  app.get("/api/admin/citation-review/charges", adminRateLimiter, requireAdminAuth, (req, res) => {
+    try {
+      const { CHARGE_CITATIONS } = require("../shared/criminal-charge-citations.js");
+      const reviewState = loadReviewState();
+      const reviews = reviewState.reviews as Record<string, any>;
+
+      const filterSlug = req.query.slug as string | undefined;
+      const filterState = (req.query.state as string | undefined)?.toUpperCase();
+      const filterStatus = req.query.status as string | undefined;
+
+      // Build structured response: array of entries with review state merged
+      const entries = Object.entries(CHARGE_CITATIONS as Record<string, any>)
+        .map(([id, rec]: [string, any]) => {
+          const m = id.match(/^([a-z]{2,3})-(.+)$/);
+          const jurisdiction = m ? m[1].toUpperCase() : id;
+          const slug = m ? m[2] : id;
+          const review = reviews[id] ?? { status: "pending" };
+          return {
+            id,
+            jurisdiction,
+            slug,
+            citation: rec.citation,
+            alternateCitations: rec.alternateCitations,
+            confidence: rec.confidence,
+            lastVerified: rec.lastVerified,
+            source: rec.source,
+            reviewStatus: review.status ?? "pending",
+            reviewedAt: review.reviewedAt ?? null,
+            correctedCitation: review.correctedCitation ?? null,
+            sourceUrl: review.sourceUrl ?? null,
+            notes: review.notes ?? null,
+          };
+        })
+        .filter((e) => {
+          if (filterSlug && e.slug !== filterSlug) return false;
+          if (filterState && e.jurisdiction !== filterState) return false;
+          if (filterStatus && e.reviewStatus !== filterStatus) return false;
+          return true;
+        });
+
+      // Group by slug for the review UI
+      const bySlug: Record<string, any> = {};
+      for (const entry of entries) {
+        if (!bySlug[entry.slug]) bySlug[entry.slug] = [];
+        bySlug[entry.slug].push(entry);
+      }
+
+      res.json({ success: true, entries, bySlug, total: entries.length });
+    } catch (err) {
+      errLog("Failed to load citation charges", err);
+      res.status(500).json({ success: false, error: "Failed to load citation data" });
+    }
+  });
+
+  // GET /api/admin/citation-review/progress
+  // Returns review progress summary.
+  app.get("/api/admin/citation-review/progress", adminRateLimiter, requireAdminAuth, (req, res) => {
+    try {
+      const { CHARGE_CITATIONS } = require("../shared/criminal-charge-citations.js");
+      const reviewState = loadReviewState();
+      const reviews = reviewState.reviews as Record<string, any>;
+      const total = Object.keys(CHARGE_CITATIONS).length;
+      const reviewed = Object.values(reviews).filter((r: any) => r.status !== "pending").length;
+      const verified = Object.values(reviews).filter((r: any) => r.status === "verified").length;
+      const corrected = Object.values(reviews).filter((r: any) => r.status === "corrected").length;
+      const flagged = Object.values(reviews).filter((r: any) => r.status === "flagged").length;
+
+      // Unique slugs
+      const slugSet = new Set(
+        Object.keys(CHARGE_CITATIONS).map((id) => id.replace(/^[a-z]{2,3}-/, ""))
+      );
+      const reviewedSlugs = new Set<string>();
+      const pendingSlugs = new Set<string>();
+      for (const [id] of Object.entries(CHARGE_CITATIONS)) {
+        const slug = id.replace(/^[a-z]{2,3}-/, "");
+        const r = reviews[id];
+        if (r && r.status !== "pending") reviewedSlugs.add(slug);
+        else pendingSlugs.add(slug);
+      }
+
+      res.json({
+        success: true,
+        total,
+        reviewed,
+        pending: total - reviewed,
+        verified,
+        corrected,
+        flagged,
+        percentComplete: ((reviewed / total) * 100).toFixed(1),
+        uniqueChargeSlugs: slugSet.size,
+        lastUpdated: reviewState.lastUpdated ?? null,
+      });
+    } catch (err) {
+      res.status(500).json({ success: false, error: "Failed to load progress" });
+    }
+  });
+
+  // POST /api/admin/citation-review/submit
+  // Submit review decisions for one or more entries.
+  // Body: { reviews: [{ id, status, correctedCitation?, sourceUrl?, notes? }] }
+  app.post("/api/admin/citation-review/submit", adminRateLimiter, requireAdminAuth, (req, res) => {
+    try {
+      const { reviews: incoming } = req.body as {
+        reviews: Array<{
+          id: string;
+          status: "verified" | "corrected" | "flagged" | "pending";
+          correctedCitation?: string;
+          sourceUrl?: string;
+          notes?: string;
+        }>;
+      };
+
+      if (!Array.isArray(incoming) || incoming.length === 0) {
+        return res.status(400).json({ success: false, error: "reviews array required" });
+      }
+
+      const state = loadReviewState();
+      if (!state.reviews) state.reviews = {};
+
+      for (const item of incoming) {
+        if (!item.id || !item.status) continue;
+        if (!["verified", "corrected", "flagged", "pending"].includes(item.status)) continue;
+        state.reviews[item.id] = {
+          status: item.status,
+          reviewedAt: new Date().toISOString(),
+          correctedCitation: item.correctedCitation ?? null,
+          sourceUrl: item.sourceUrl ?? null,
+          notes: item.notes ?? null,
+        };
+      }
+
+      saveReviewState(state);
+      opsLog("citation-review", `Saved ${incoming.length} review(s)`);
+      res.json({ success: true, saved: incoming.length });
+    } catch (err) {
+      errLog("Failed to save citation reviews", err);
+      res.status(500).json({ success: false, error: "Failed to save review data" });
+    }
+  });
+
+  // GET /api/admin/citation-review/slugs
+  // Returns all unique charge slugs with per-slug progress, for the sidebar nav.
+  app.get("/api/admin/citation-review/slugs", adminRateLimiter, requireAdminAuth, (req, res) => {
+    try {
+      const { CHARGE_CITATIONS } = require("../shared/criminal-charge-citations.js");
+      const reviewState = loadReviewState();
+      const reviews = reviewState.reviews as Record<string, any>;
+
+      const slugMap: Record<string, { total: number; reviewed: number; verified: number; flagged: number }> = {};
+      for (const id of Object.keys(CHARGE_CITATIONS)) {
+        const slug = id.replace(/^[a-z]{2,3}-/, "");
+        if (!slugMap[slug]) slugMap[slug] = { total: 0, reviewed: 0, verified: 0, flagged: 0 };
+        slugMap[slug].total++;
+        const r = reviews[id];
+        if (r && r.status !== "pending") {
+          slugMap[slug].reviewed++;
+          if (r.status === "verified") slugMap[slug].verified++;
+          if (r.status === "flagged") slugMap[slug].flagged++;
+        }
+      }
+
+      const slugs = Object.entries(slugMap)
+        .map(([slug, stats]) => ({ slug, ...stats }))
+        .sort((a, b) => a.slug.localeCompare(b.slug));
+
+      res.json({ success: true, slugs });
+    } catch (err) {
+      res.status(500).json({ success: false, error: "Failed to load slugs" });
     }
   });
 

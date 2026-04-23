@@ -70,6 +70,8 @@ const MentalHealthSupport = lazy(() => import("@/pages/support/mental-health"));
 const TransportationSupport = lazy(() => import("@/pages/support/transportation"));
 const ChildcareSupport = lazy(() => import("@/pages/support/childcare"));
 const HousingSupport = lazy(() => import("@/pages/support/housing"));
+// Admin-only pages — not indexed, not linked in public nav
+const AdminCitationReview = lazy(() => import("@/pages/admin/citation-review"));
 const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
 const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
 const PersonalHealthSupport = lazy(() => import("@/pages/support/personal-health"));
@@ -179,6 +181,8 @@ function Router() {
       <Route path="/embed/search" component={EmbedSearch} />
       <Route path="/embed/rights" component={EmbedRights} />
       <Route path="/embed/glossary" component={EmbedGlossary} />
+      {/* Admin-only: not in public nav, not search-indexed, requires admin key */}
+      <Route path="/admin/citation-review" component={AdminCitationReview} />
       <Route component={NotFound} />
     </Switch>
   );
