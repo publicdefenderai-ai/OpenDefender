@@ -474,6 +474,10 @@ function fetchHtml(url: string): Promise<string> {
   });
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // ── Mode: --state fl ──────────────────────────────────────────────────────────
 //
 // Florida Criminal Punishment Code — § 921.0022 Offense Severity Ranking Chart
@@ -557,48 +561,346 @@ async function fetchFLCommissionTable(): Promise<Map<string, CommissionEntry>> {
 // ── Mode: --state pa ──────────────────────────────────────────────────────────
 //
 // Pennsylvania Commission on Sentencing — § 303.15 Offense Listing
-// URL: https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/204/chapter303/s303.15.html
+// Source: Cornell LII mirror (pacodeandbulletin.gov is JS-rendered)
+// URL: https://www.law.cornell.edu/regulations/pennsylvania/204-Pa-Code-SS-303-15
 //
 // Table structure: offense name, statute section, OGS score.
+// PA citations look like "18 Pa.C.S. § 2502(a)" or "75 Pa.C.S. § 3802"
 
 async function fetchPACommissionTable(): Promise<Map<string, CommissionEntry>> {
-  const tableUrl = 'https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/204/chapter303/s303.15.html';
-  console.log(`Fetching: ${tableUrl}`);
+  const tableUrl = 'https://www.law.cornell.edu/regulations/pennsylvania/204-Pa-Code-SS-303-15';
+  console.log(`Fetching PA OGS § 303.15 (Cornell LII): ${tableUrl}`);
 
   const html = await fetchHtml(tableUrl);
   const dom = new JSDOM(html);
   const doc = dom.window.document;
-
   const map = new Map<string, CommissionEntry>();
 
-  // PA § 303.15 renders as a table with columns: offense, statute, OGS
-  // Statute column contains references like "18 Pa.C.S. § 2502" or "75 Pa.C.S. § 3802"
+  // Cornell LII table structure (verified):
+  //   <td> 2502(a) </td>  <td> Murder of the first degree </td>  <td> F-1 </td>  <td> 14 </td>
+  // All sections are Title 18 Pa.C.S. (a few Title 23/30/34 sections appear at the end).
+  // Use JSDOM row-based parsing so descriptions with "<" characters (e.g. "victim <12 yrs") work.
   const rows = doc.querySelectorAll('tr');
   for (const row of Array.from(rows)) {
     const cells = row.querySelectorAll('td');
     if (cells.length < 2) continue;
 
-    for (const cell of Array.from(cells)) {
-      const text = cell.textContent?.trim() ?? '';
-      // Look for PA statute pattern: "18 Pa.C.S. § 2502" or "§ 2502"
-      const secM = text.match(/§\s*([\dA-Za-z.-]+)/);
-      if (!secM) continue;
+    const firstCellText = (cells[0].textContent ?? '').trim();
+    // Strip trailing asterisk (used for conditional entries)
+    const rawSection = firstCellText.replace(/\*$/, '').trim();
 
-      const base = secM[1].replace(/\.$/, '');
-      if (!map.has(base)) {
-        // Description is in the adjacent cell
-        const desc = cells[0]?.textContent?.trim() ?? '';
-        map.set(base, {
-          section: base,
-          description: desc,
-          classification: 'PA Offense Gravity Score § 303.15',
-          sourceUrl: `https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&div=0&chpt=${base.slice(0, 2)}&sctn=${base.slice(2)}&subsctn=0`,
-        });
-      }
+    // Must look like a section number: starts with digit
+    if (!/^\d/.test(rawSection)) continue;
+    // Skip degree/score cells like "F-1", "M-1", "14"
+    if (/^(F|M|S)-\d$/.test(rawSection)) continue;
+    if (/^\d{1,2}$/.test(rawSection)) continue; // single/double digits are scores
+
+    const baseSection = rawSection.replace(/\([^)]*\)/g, '').replace(/[.]$/, '').trim();
+    if (!baseSection || map.has(baseSection)) continue;
+
+    const desc = (cells[1].textContent ?? '').trim();
+    // Skip header rows where desc looks like "Description" or "Offense"
+    if (desc === 'Description' || desc === 'Offense' || desc.length === 0) continue;
+
+    map.set(baseSection, {
+      section: baseSection,
+      description: desc,
+      classification: `PA OGS § 303.15 — 18 Pa.C.S. § ${baseSection}`,
+      sourceUrl: `https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=${baseSection}`,
+    });
+  }
+
+  // Second pass: capture Title 35 / other-title sections using the codecitation+codesec span format
+  // These appear as: <span class="codecitation">35 P.S. §<span class="codesec">780-113</span></span>
+  const codeSecRe = /(\d+)\s+(?:Pa\.|P\.S\.|P\.L\.)[^<]*<[^>]*codesec[^>]*>([\dA-Za-z().\-]+)<\/span>/g;
+  let csM: RegExpExecArray | null;
+  while ((csM = codeSecRe.exec(html)) !== null) {
+    const titleNum = csM[1];
+    const rawSection = csM[2].replace(/\([^)]*\)/g, '').replace(/[,.]$/, '').trim();
+    if (!rawSection || map.has(rawSection)) continue;
+    map.set(rawSection, {
+      section: rawSection,
+      description: '',
+      classification: `PA OGS § 303.15 — ${titleNum} Pa. Stat. § ${rawSection}`,
+      sourceUrl: `https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=${titleNum}&sctn=${rawSection}`,
+    });
+  }
+
+  console.log(`  Found ${map.size} PA sections.`);
+  return map;
+}
+
+// ── Mode: --state mn ─────────────────────────────────────────────────────────
+//
+// Minnesota Statutes — revisor.mn.gov chapter pages
+// Fetches each chapter that appears in MN overlay citations.
+// sourceUrl: https://www.revisor.mn.gov/statutes/cite/{section}
+
+async function fetchMNStatuteMap(stateEntries: ChargeEntry[]): Promise<Map<string, CommissionEntry>> {
+  // Extract unique chapter numbers from MN citations (e.g. "609.185" → chapter "609")
+  const chapSet = new Set<string>();
+  for (const e of stateEntries) {
+    const sec = extractSection(e.citation);
+    if (sec?.base) {
+      const chap = sec.base.split('.')[0];
+      if (chap) chapSet.add(chap);
     }
   }
 
-  console.log(`  Found ${map.size} PA sections in commission table.`);
+  const map = new Map<string, CommissionEntry>();
+  const chapters = [...chapSet].sort();
+  console.log(`  MN: ${stateEntries.length} entries across chapters: ${chapters.join(', ')}`);
+
+  for (const chap of chapters) {
+    // revisor.mn.gov chapter TOC: https://www.revisor.mn.gov/statutes/cite/609
+    // Table structure: <td><a href="/statutes/cite/609.185">609.185</a></td><td>MURDER IN THE FIRST DEGREE.</td>
+    const chapUrl = `https://www.revisor.mn.gov/statutes/cite/${chap}`;
+    console.log(`  Fetching MN chapter ${chap}...`);
+
+    try {
+      const html = await fetchHtml(chapUrl);
+      const dom = new JSDOM(html);
+      const doc = dom.window.document;
+      let found = 0;
+
+      // Each section is a table row: first td has the link, second td has the title
+      const rows = doc.querySelectorAll('tr');
+      for (const row of Array.from(rows)) {
+        const cells = row.querySelectorAll('td');
+        if (cells.length < 2) continue;
+
+        const link = cells[0].querySelector('a');
+        if (!link) continue;
+        const href = link.getAttribute('href') ?? '';
+        const sectionM = href.match(/\/statutes\/cite\/([\w.]+)/);
+        if (!sectionM) continue;
+        const section = sectionM[1];
+
+        // Must be in this chapter (starts with chapter prefix)
+        const chapPrefix = chap.replace('.', '\\.');
+        if (!new RegExp(`^${chapPrefix}\\.`).test(section) && section !== chap) continue;
+
+        const desc = (cells[1].textContent ?? '').replace(/\.$/, '').trim();
+
+        if (!map.has(section)) {
+          map.set(section, {
+            section,
+            description: desc,
+            classification: `Minnesota Statutes § ${section} (2024)`,
+            sourceUrl: `https://www.revisor.mn.gov/statutes/cite/${section}`,
+          });
+          found++;
+        }
+      }
+
+      console.log(`    → ${found} sections in chapter ${chap}`);
+    } catch (err: any) {
+      console.warn(`    Warning: failed to fetch MN chapter ${chap}: ${err.message}`);
+    }
+
+    await sleep(400);
+  }
+
+  console.log(`  Total MN sections mapped: ${map.size}`);
+  return map;
+}
+
+// ── Mode: --state nc ─────────────────────────────────────────────────────────
+//
+// North Carolina General Statutes — ncleg.gov per-section pages
+// URL pattern: /EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-17.html
+// Title is extracted from the § heading in the body.
+
+async function fetchNCStatuteMap(stateEntries: ChargeEntry[]): Promise<Map<string, CommissionEntry>> {
+  const map = new Map<string, CommissionEntry>();
+  const toFetch = stateEntries.filter(e => !map.has(extractSection(e.citation)?.base ?? ''));
+  console.log(`  NC: Fetching up to ${toFetch.length} individual section pages...`);
+
+  for (const entry of toFetch) {
+    const sec = extractSection(entry.citation);
+    if (!sec?.base) continue;
+    const base = sec.base; // e.g. "14-17"
+    if (map.has(base)) continue;
+
+    const ncM = base.match(/^(\d+[A-Z]*)-(.+)$/);
+    if (!ncM) continue;
+    const chapter = ncM[1];
+    const url = `https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_${chapter}/GS_${base}.html`;
+
+    try {
+      const html = await fetchHtml(url);
+
+      // NC pages have body text like: "§ 14-17. Murder in the first and second degree defined; punishment."
+      const titleM = html.match(/§\s*[\dA-Z-]+\.\s*([^<\n]+?)(?=\s*<|\n)/);
+      const desc = titleM ? titleM[1].replace(/\.$/, '').trim() : '';
+
+      map.set(base, {
+        section: base,
+        description: desc,
+        classification: `North Carolina General Statutes § ${base}`,
+        sourceUrl: url,
+      });
+    } catch (err: any) {
+      // 404 or network error — still record the URL so sourceUrl gets set
+      console.warn(`    Warning: NC § ${base}: ${err.message}`);
+      map.set(base, {
+        section: base,
+        description: '',
+        classification: `North Carolina General Statutes § ${base}`,
+        sourceUrl: url,
+      });
+    }
+
+    await sleep(300);
+  }
+
+  console.log(`  Total NC sections mapped: ${map.size}`);
+  return map;
+}
+
+// ── Mode: --state wa ─────────────────────────────────────────────────────────
+//
+// Washington Revised Code — app.leg.wa.gov chapter pages
+// Chapter extracted from WA section: "9A.32.030" → chapter "9A.32"
+// sourceUrl: https://app.leg.wa.gov/rcw/default.aspx?cite={section}
+
+async function fetchWAStatuteMap(stateEntries: ChargeEntry[]): Promise<Map<string, CommissionEntry>> {
+  // Extract unique WA chapter prefixes
+  const chapSet = new Set<string>();
+  for (const e of stateEntries) {
+    const sec = extractSection(e.citation);
+    if (sec?.base) {
+      const parts = sec.base.split('.');
+      if (parts.length >= 2) chapSet.add(`${parts[0]}.${parts[1]}`);
+      else if (parts.length === 1) chapSet.add(parts[0]);
+    }
+  }
+
+  const map = new Map<string, CommissionEntry>();
+  const chapters = [...chapSet].sort();
+  console.log(`  WA: ${stateEntries.length} entries across chapters: ${chapters.join(', ')}`);
+
+  for (const chap of chapters) {
+    const chapUrl = `https://app.leg.wa.gov/rcw/default.aspx?cite=${chap}`;
+    console.log(`  Fetching WA chapter ${chap}...`);
+
+    try {
+      const html = await fetchHtml(chapUrl);
+      const dom = new JSDOM(html);
+      const doc = dom.window.document;
+      let found = 0;
+
+      // WA chapter pages have links: href="...?cite=9A.32.030"
+      const links = doc.querySelectorAll('a[href*="?cite="]');
+      for (const link of Array.from(links)) {
+        const href = link.getAttribute('href') ?? '';
+        const citeM = href.match(/[?&]cite=([\w.]+)/);
+        if (!citeM) continue;
+        const section = citeM[1];
+        // Only sections within this chapter (not the chapter link itself)
+        if (section === chap || !section.startsWith(chap + '.')) continue;
+
+        const parentText = link.parentElement?.textContent?.trim() ?? '';
+        const desc = parentText
+          .replace(/^RCW\s+/i, '')
+          .replace(section, '')
+          .replace(/^\s*[-–:.\s]+/, '')
+          .trim()
+          .split('\n')[0]
+          .trim();
+
+        if (!map.has(section)) {
+          map.set(section, {
+            section,
+            description: desc,
+            classification: `Washington Revised Code § ${section}`,
+            sourceUrl: `https://app.leg.wa.gov/rcw/default.aspx?cite=${section}`,
+          });
+          found++;
+        }
+      }
+
+      // Regex fallback if link extraction found nothing
+      if (found === 0) {
+        const chapEsc = chap.replace('.', '\\.').replace('.', '\\.');
+        const secRe = new RegExp(`(${chapEsc}\\.[0-9]+)\\s*[-–:]\\s*([^<\\n]{5,120})`, 'g');
+        let m: RegExpExecArray | null;
+        while ((m = secRe.exec(html)) !== null) {
+          const section = m[1];
+          const desc = m[2].trim();
+          if (!map.has(section)) {
+            map.set(section, {
+              section,
+              description: desc,
+              classification: `Washington Revised Code § ${section}`,
+              sourceUrl: `https://app.leg.wa.gov/rcw/default.aspx?cite=${section}`,
+            });
+            found++;
+          }
+        }
+      }
+
+      console.log(`    → ${found} sections in WA chapter ${chap}`);
+    } catch (err: any) {
+      console.warn(`    Warning: failed to fetch WA chapter ${chap}: ${err.message}`);
+    }
+
+    await sleep(400);
+  }
+
+  console.log(`  Total WA sections mapped: ${map.size}`);
+  return map;
+}
+
+// ── Mode: --state va ─────────────────────────────────────────────────────────
+//
+// Virginia Code — law.lis.virginia.gov per-section pages
+// Title tag: "§ 18.2-32. First and second degree murder defined; punishment"
+// sourceUrl: https://law.lis.virginia.gov/vacode/{section}/
+
+async function fetchVAStatuteMap(stateEntries: ChargeEntry[]): Promise<Map<string, CommissionEntry>> {
+  const map = new Map<string, CommissionEntry>();
+  console.log(`  VA: Fetching up to ${stateEntries.length} individual section pages...`);
+
+  for (const entry of stateEntries) {
+    const sec = extractSection(entry.citation);
+    if (!sec?.base) continue;
+    const base = sec.base; // e.g. "18.2-32"
+    if (map.has(base)) continue;
+
+    const url = `https://law.lis.virginia.gov/vacode/${base}/`;
+
+    try {
+      const html = await fetchHtml(url);
+
+      // VA pages: <title>§ 18.2-32. First and second degree murder defined; punishment</title>
+      const titleM = html.match(/<title>\s*§?\s*[\d.\-]+\.\s*([^<]+?)\s*<\/title>/i);
+      const desc = titleM ? titleM[1].trim() : '';
+
+      // Body fallback: "§ 18.2-32. Title text"
+      const bodyM = !desc ? html.match(/§\s*[\d.\-]+\.\s*([^<\n.]{10,150})/) : null;
+      const bodyDesc = bodyM ? bodyM[1].trim() : '';
+
+      map.set(base, {
+        section: base,
+        description: desc || bodyDesc,
+        classification: `Virginia Code Ann. § ${base}`,
+        sourceUrl: url,
+      });
+    } catch (err: any) {
+      console.warn(`    Warning: VA § ${base}: ${err.message}`);
+      map.set(base, {
+        section: base,
+        description: '',
+        classification: `Virginia Code Ann. § ${base}`,
+        sourceUrl: url,
+      });
+    }
+
+    await sleep(250);
+  }
+
+  console.log(`  Total VA sections mapped: ${map.size}`);
   return map;
 }
 
@@ -608,6 +910,11 @@ async function runStateCommission(state: string): Promise<void> {
   console.log(`\n=== Commission Import: ${state.toUpperCase()} ===`);
   console.log(`Mode: ${DRY_RUN ? 'DRY-RUN' : 'LIVE'}`);
   console.log('');
+
+  // Parse overlay entries first — new state scrapers need stateEntries as input
+  let source = fs.readFileSync(OVERLAY_PATH, 'utf-8');
+  const entries = parseOverlayEntries(source);
+  const stateEntries = entries.filter(e => e.jurisdiction === state);
 
   let commissionMap: Map<string, CommissionEntry>;
   let commissionName: string;
@@ -622,26 +929,42 @@ async function runStateCommission(state: string): Promise<void> {
         break;
       case 'pa':
         commissionMap = await fetchPACommissionTable();
-        commissionName = `Pennsylvania Commission on Sentencing — Offense Gravity Score § 303.15`;
-        commissionTableUrl = 'https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/204/chapter303/s303.15.html';
+        commissionName = `Pennsylvania Commission on Sentencing — OGS § 303.15`;
+        commissionTableUrl = 'https://www.law.cornell.edu/regulations/pennsylvania/204-Pa-Code-SS-303-15';
+        break;
+      case 'mn':
+        commissionMap = await fetchMNStatuteMap(stateEntries);
+        commissionName = `Minnesota Statutes (2024) — revisor.mn.gov`;
+        commissionTableUrl = 'https://www.revisor.mn.gov/statutes/';
+        break;
+      case 'nc':
+        commissionMap = await fetchNCStatuteMap(stateEntries);
+        commissionName = `North Carolina General Statutes — ncleg.gov`;
+        commissionTableUrl = 'https://www.ncleg.gov/Laws/GeneralStatuteSections/Chapter14';
+        break;
+      case 'wa':
+        commissionMap = await fetchWAStatuteMap(stateEntries);
+        commissionName = `Washington Revised Code — app.leg.wa.gov`;
+        commissionTableUrl = 'https://app.leg.wa.gov/rcw/';
+        break;
+      case 'va':
+        commissionMap = await fetchVAStatuteMap(stateEntries);
+        commissionName = `Virginia Code Annotated — law.lis.virginia.gov`;
+        commissionTableUrl = 'https://law.lis.virginia.gov/vacode/title18.2/';
         break;
       default:
         console.error(`Commission scraping not yet implemented for: ${state.toUpperCase()}`);
-        console.error('Available: fl, pa');
+        console.error('Available: fl, pa, mn, nc, wa, va');
         console.error('For other states, use: --generate-urls --states ' + state);
         process.exit(1);
     }
   } catch (err: any) {
-    console.error(`Failed to fetch commission table: ${err.message}`);
+    console.error(`Failed to fetch statute data: ${err.message}`);
     process.exit(1);
   }
 
-  let source = fs.readFileSync(OVERLAY_PATH, 'utf-8');
-  const entries = parseOverlayEntries(source);
-  const stateEntries = entries.filter(e => e.jurisdiction === state);
-
   console.log(`\nOverlay entries for ${state.toUpperCase()}: ${stateEntries.length}`);
-  console.log(`Commission table entries: ${commissionMap.size}`);
+  console.log(`Statute map entries: ${commissionMap.size}`);
   console.log('');
 
   const report = {
@@ -756,7 +1079,11 @@ async function main(): Promise<void> {
   console.error('  --generate-urls              Add sourceUrl to all entries via citation patterns');
   console.error('  --generate-urls --states mn,nc,wa,va   Limit to specific states');
   console.error('  --state fl                   Import from FL Criminal Punishment Code table');
-  console.error('  --state pa                   Import from PA OGS table');
+  console.error('  --state pa                   Import from PA OGS table (Cornell LII)');
+  console.error('  --state mn                   Import from MN Statutes (revisor.mn.gov chapters)');
+  console.error('  --state nc                   Import from NC General Statutes (ncleg.gov per-section)');
+  console.error('  --state wa                   Import from WA Revised Code (app.leg.wa.gov chapters)');
+  console.error('  --state va                   Import from VA Code (law.lis.virginia.gov per-section)');
   console.error('  --dry-run                    Preview changes without writing');
   process.exit(1);
 }
