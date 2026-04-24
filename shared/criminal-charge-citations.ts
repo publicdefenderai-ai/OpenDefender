@@ -3249,9 +3249,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // Only federal-attempted-murder has a matching charge ID in the base data
   "federal-attempted-murder": {
     citation: "18 U.S.C. § 1113",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
-    source: "Cornell LII — 18 U.S.C. § 1113 Attempt to commit murder or manslaughter",
+    source: "GovInfo USCODE structured endpoint — verified 2026-04",
+  
+    sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1113&edition=prelim",
   },
 
   // ── BATCH 7: CT, NJ, IL, IN, KY, SD, NM, WY ──────────────────────────────
@@ -9884,9 +9886,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
   "federal-drug-trafficking-841": {
     citation: "21 U.S.C. § 841(a)(1)",
-    confidence: "medium",
+    confidence: "high",
     lastVerified: "2026-04",
-    source: "Training data — federal manufacture/distribution of controlled substance (21 U.S.C. § 841); verify against Cornell LII before promoting to high",
+    source: "GovInfo USCODE structured endpoint — verified 2026-04",
+  
+    sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section841&edition=prelim",
   },
 
   // ── BATCH 20: Loitering — all 50 states + DC ────────────────────────────
@@ -14847,7 +14851,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-child-sexual-abuse": { citation: "9 GCA § 25.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-child-sexual-abuse": { citation: "Am. Samoa Code Ann. § 46.3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-child-sexual-abuse": { citation: "6 CMC § 1306", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-child-sexual-abuse": { citation: "18 U.S.C. § 2241", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal aggravated sexual abuse (minor victim)" },
+  "federal-child-sexual-abuse": { citation: "18 U.S.C. § 2241", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2241&edition=prelim" },
 
   // sexual-exploitation-of-minor (56 entries)
   "al-sexual-exploitation-of-minor": { citation: "Ala. Code § 13A-12-197", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama production of obscene matter containing minors", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-197/" },
@@ -14906,7 +14910,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-sexual-exploitation-of-minor": { citation: "9 GCA § 28.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-sexual-exploitation-of-minor": { citation: "Am. Samoa Code Ann. § 46.3605", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-sexual-exploitation-of-minor": { citation: "6 CMC § 1307", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-sexual-exploitation-of-minor": { citation: "18 U.S.C. § 2251", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal sexual exploitation of children" },
+  "federal-sexual-exploitation-of-minor": { citation: "18 U.S.C. § 2251", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2251&edition=prelim" },
 
   // theft-by-receiving (56 entries) -- receiving stolen property / possession of stolen property
   "al-theft-by-receiving": { citation: "Ala. Code § 13A-8-16", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama theft of property by receiving stolen property", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-8-16/" },
@@ -14965,7 +14969,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-theft-by-receiving": { citation: "9 GCA § 43.40", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-theft-by-receiving": { citation: "Am. Samoa Code Ann. § 46.4210", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-theft-by-receiving": { citation: "6 CMC § 1302", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-theft-by-receiving": { citation: "18 U.S.C. § 2315", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal receipt of stolen goods (interstate commerce)" },
+  "federal-theft-by-receiving": { citation: "18 U.S.C. § 2315", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2315&edition=prelim" },
 
   // statutory-rape (55 entries -- age of consent offenses)
   "al-statutory-rape": { citation: "Ala. Code § 13A-6-62", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama rape second degree (statutory rape)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-62/" },
@@ -15084,7 +15088,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-open-container": { citation: "16 GCA § 6201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-open-container": { citation: "Am. Samoa Code Ann. § 22.0732", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-open-container": { citation: "9 CMC § 4114", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-open-container": { citation: "23 U.S.C. § 154", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal open container law (highway funding compliance)" },
+  "federal-open-container": { citation: "23 U.S.C. § 154", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title23-section154&edition=prelim" },
 
   // minor-in-possession (56 entries) -- MIP: underage possession of alcohol
   "al-minor-in-possession": { citation: "Ala. Code § 28-1-5", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama minor in possession of alcohol", sourceUrl: "https://law.justia.com/codes/alabama/section-28-1-5/" },
@@ -15143,7 +15147,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-minor-in-possession": { citation: "9 GCA § 34.30", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-minor-in-possession": { citation: "Am. Samoa Code Ann. § 22.0705", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-minor-in-possession": { citation: "4 CMC § 2005", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-minor-in-possession": { citation: "10 U.S.C. § 2683", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal installation-specific; state law typically governs" },
+  "federal-minor-in-possession": { citation: "10 U.S.C. § 2683", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title10-section2683&edition=prelim" },
 
   // false-info-to-police (56 entries) -- false report / giving false information to law enforcement
   "al-false-info-to-police": { citation: "Ala. Code § 13A-10-9", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama giving false information to law enforcement officer", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-10-9/" },
@@ -15202,7 +15206,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-false-info-to-police": { citation: "9 GCA § 70.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-false-info-to-police": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-false-info-to-police": { citation: "6 CMC § 4204", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-false-info-to-police": { citation: "18 U.S.C. § 1001", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal false statements to federal law enforcement" },
+  "federal-false-info-to-police": { citation: "18 U.S.C. § 1001", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1001&edition=prelim" },
 
   // driving-without-insurance (56 entries)
   "al-driving-without-insurance": { citation: "Ala. Code § 32-7A-16", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama driving without insurance", sourceUrl: "https://law.justia.com/codes/alabama/section-32-7a-16/" },
@@ -15261,7 +15265,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-driving-without-insurance": { citation: "16 GCA § 9106", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-driving-without-insurance": { citation: "Am. Samoa Code Ann. § 22.0716", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-driving-without-insurance": { citation: "9 CMC § 4109", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-driving-without-insurance": { citation: "49 U.S.C. § 30102", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal financial responsibility standards (state enforcement primary)" },
+  "federal-driving-without-insurance": { citation: "49 U.S.C. § 30102", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title49-section30102&edition=prelim" },
 
   // --- Batch 41: expired-registration, expired-inspection, failure-to-pay-child-support, noise-violation ---
 
@@ -15322,7 +15326,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-expired-registration": { citation: "16 GCA § 8101", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-expired-registration": { citation: "Am. Samoa Code Ann. § 22.0601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-expired-registration": { citation: "9 CMC § 4102", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-expired-registration": { citation: "49 U.S.C. § 30112", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal vehicle standards (registration governed by state law)" },
+  "federal-expired-registration": { citation: "49 U.S.C. § 30112", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title49-section30112&edition=prelim" },
 
   // expired-inspection (56 entries) -- vehicle safety/emissions inspection violations
   "al-expired-inspection": { citation: "Ala. Code § 32-5-210", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama vehicle safety inspection", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5-210/" },
@@ -15381,7 +15385,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-expired-inspection": { citation: "16 GCA § 9104", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-expired-inspection": { citation: "Am. Samoa Code Ann. § 22.0611", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-expired-inspection": { citation: "9 CMC § 4111", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-expired-inspection": { citation: "49 C.F.R. § 396.17", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal commercial vehicle inspection (FMCSA)" },
+  "federal-expired-inspection": { citation: "49 C.F.R. § 396.17", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal commercial vehicle inspection (FMCSA)", sourceUrl: "https://uscode.house.gov/" },
 
   // failure-to-pay-child-support (56 entries)
   "al-failure-to-pay-child-support": { citation: "Ala. Code § 30-3-62", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama criminal nonsupport", sourceUrl: "https://law.justia.com/codes/alabama/section-30-3-62/" },
@@ -15440,7 +15444,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-failure-to-pay-child-support": { citation: "19 GCA § 8130", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-failure-to-pay-child-support": { citation: "Am. Samoa Code Ann. § 45.0103", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-failure-to-pay-child-support": { citation: "8 CMC § 1523", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-failure-to-pay-child-support": { citation: "18 U.S.C. § 228", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal deadbeat parents punishment act (interstate nonsupport)" },
+  "federal-failure-to-pay-child-support": { citation: "18 U.S.C. § 228", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section228&edition=prelim" },
 
   // noise-violation (56 entries) -- disturbing peace by noise / excessive noise
   "al-noise-violation": { citation: "Ala. Code § 13A-11-7", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama disorderly conduct (noise variant)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-7/" },
@@ -15499,7 +15503,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-noise-violation": { citation: "9 GCA § 19.70", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-noise-violation": { citation: "Am. Samoa Code Ann. § 46.4202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-noise-violation": { citation: "6 CMC § 4252", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-noise-violation": { citation: "36 C.F.R. § 2.34", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal noise violation in national parks (NPS regulation)" },
+  "federal-noise-violation": { citation: "36 C.F.R. § 2.34", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal noise violation in national parks (NPS regulation)", sourceUrl: "https://uscode.house.gov/" },
 
   // --- Batch 42: indecent-exposure, fake-id, animal-at-large, animal-cruelty-misdemeanor ---
 
@@ -15560,7 +15564,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-indecent-exposure": { citation: "9 GCA § 28.70", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-indecent-exposure": { citation: "Am. Samoa Code Ann. § 46.3701", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-indecent-exposure": { citation: "6 CMC § 1308", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-indecent-exposure": { citation: "36 C.F.R. § 2.34(a)(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal indecent exposure in national parks" },
+  "federal-indecent-exposure": { citation: "36 C.F.R. § 2.34(a)(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal indecent exposure in national parks", sourceUrl: "https://uscode.house.gov/" },
 
   // fake-id (56 entries) -- fraudulent identification / misrepresenting age
   "al-fake-id": { citation: "Ala. Code § 28-1-5.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama false identification to purchase alcohol", sourceUrl: "https://law.justia.com/codes/alabama/section-28-1-5-1/" },
@@ -15619,7 +15623,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-fake-id": { citation: "9 GCA § 34.32", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-fake-id": { citation: "Am. Samoa Code Ann. § 22.0707", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-fake-id": { citation: "4 CMC § 2006", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-fake-id": { citation: "18 U.S.C. § 1028", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal fraud and related activity in connection with identification documents" },
+  "federal-fake-id": { citation: "18 U.S.C. § 1028", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1028&edition=prelim" },
 
   // animal-at-large (56 entries)
   "al-animal-at-large": { citation: "Ala. Code § 3-5-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama animal running at large", sourceUrl: "https://law.justia.com/codes/alabama/section-3-5-3/" },
@@ -15678,7 +15682,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-animal-at-large": { citation: "10 GCA § 88106", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-animal-at-large": { citation: "Am. Samoa Code Ann. § 25.0102", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-animal-at-large": { citation: "2 CMC § 3441", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-animal-at-large": { citation: "36 C.F.R. § 2.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal animal at large in national parks" },
+  "federal-animal-at-large": { citation: "36 C.F.R. § 2.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal animal at large in national parks", sourceUrl: "https://uscode.house.gov/" },
 
   // animal-cruelty-misdemeanor (56 entries)
   "al-animal-cruelty-misdemeanor": { citation: "Ala. Code § 13A-11-14", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama animal cruelty", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-14/" },
@@ -15737,7 +15741,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-animal-cruelty-misdemeanor": { citation: "10 GCA § 88101", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-animal-cruelty-misdemeanor": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-animal-cruelty-misdemeanor": { citation: "6 CMC § 4253", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-animal-cruelty-misdemeanor": { citation: "7 U.S.C. § 2156", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal animal welfare / animal fighting prohibition" },
+  "federal-animal-cruelty-misdemeanor": { citation: "7 U.S.C. § 2156", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section2156&edition=prelim" },
 
   // --- Batch 43: illegal-camping, panhandling, curfew-violation, defective-vehicle-equipment ---
 
@@ -15798,7 +15802,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-illegal-camping": { citation: "9 GCA § 37.40", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-illegal-camping": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-illegal-camping": { citation: "6 CMC § 4261", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-illegal-camping": { citation: "36 C.F.R. § 2.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal camping in unauthorized area (national parks)" },
+  "federal-illegal-camping": { citation: "36 C.F.R. § 2.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal camping in unauthorized area (national parks)", sourceUrl: "https://uscode.house.gov/" },
 
   // panhandling (56 entries) -- aggressive solicitation / begging
   "al-panhandling": { citation: "Ala. Code § 13A-11-7", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama disorderly conduct (aggressive solicitation)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-7/" },
@@ -15857,7 +15861,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-panhandling": { citation: "9 GCA § 19.70", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-panhandling": { citation: "Am. Samoa Code Ann. § 46.4202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-panhandling": { citation: "6 CMC § 4252", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-panhandling": { citation: "36 C.F.R. § 2.31", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal soliciting / business without permit in national parks" },
+  "federal-panhandling": { citation: "36 C.F.R. § 2.31", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal soliciting / business without permit in national parks", sourceUrl: "https://uscode.house.gov/" },
 
   // curfew-violation (56 entries)
   "al-curfew-violation": { citation: "Ala. Code § 12-15-13", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile curfew violation", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-13/" },
@@ -15916,7 +15920,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-curfew-violation": { citation: "19 GCA § 13201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-curfew-violation": { citation: "Am. Samoa Code Ann. § 45.1501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-curfew-violation": { citation: "8 CMC § 1535", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-curfew-violation": { citation: "36 C.F.R. § 2.4", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal curfew in national parks" },
+  "federal-curfew-violation": { citation: "36 C.F.R. § 2.4", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal curfew in national parks", sourceUrl: "https://uscode.house.gov/" },
 
   // defective-vehicle-equipment (56 entries)
   "al-defective-vehicle-equipment": { citation: "Ala. Code § 32-5-240", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama defective vehicle equipment", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5-240/" },
@@ -15975,7 +15979,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-defective-vehicle-equipment": { citation: "16 GCA § 9102", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-defective-vehicle-equipment": { citation: "Am. Samoa Code Ann. § 22.0621", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-defective-vehicle-equipment": { citation: "9 CMC § 4112", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-defective-vehicle-equipment": { citation: "49 C.F.R. § 393.9", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal defective commercial vehicle equipment (FMCSA)" },
+  "federal-defective-vehicle-equipment": { citation: "49 C.F.R. § 393.9", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal defective commercial vehicle equipment (FMCSA)", sourceUrl: "https://uscode.house.gov/" },
 
   // --- Batch 44: truancy, littering, illegal-fireworks, alcohol-in-park ---
 
@@ -16036,7 +16040,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-truancy": { citation: "17 GCA § 6103", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-truancy": { citation: "Am. Samoa Code Ann. § 40.0105", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-truancy": { citation: "3 CMC § 1302", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-truancy": { citation: "20 U.S.C. § 6312", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal Every Student Succeeds Act (attendance requirements)" },
+  "federal-truancy": { citation: "20 U.S.C. § 6312", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title20-section6312&edition=prelim" },
 
   // littering (56 entries)
   "al-littering": { citation: "Ala. Code § 13A-7-29", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama criminal littering", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-29/" },
@@ -16095,7 +16099,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-littering": { citation: "10 GCA § 51101", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-littering": { citation: "Am. Samoa Code Ann. § 25.0201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-littering": { citation: "1 CMC § 3802", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-littering": { citation: "36 C.F.R. § 2.14", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal littering in national parks" },
+  "federal-littering": { citation: "36 C.F.R. § 2.14", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal littering in national parks", sourceUrl: "https://uscode.house.gov/" },
 
   // illegal-fireworks (56 entries)
   "al-illegal-fireworks": { citation: "Ala. Code § 8-17-212", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama illegal fireworks", sourceUrl: "https://law.justia.com/codes/alabama/section-8-17-212/" },
@@ -16154,7 +16158,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-illegal-fireworks": { citation: "10 GCA § 66110", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-illegal-fireworks": { citation: "Am. Samoa Code Ann. § 25.0301", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-illegal-fireworks": { citation: "6 CMC § 4271", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-illegal-fireworks": { citation: "18 U.S.C. § 836", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal transportation of fireworks into states prohibiting sale" },
+  "federal-illegal-fireworks": { citation: "18 U.S.C. § 836", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section836&edition=prelim" },
 
   // alcohol-in-park (56 entries) -- consumption of alcohol in public parks / prohibited areas
   "al-alcohol-in-park": { citation: "Ala. Code § 13A-11-10", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama public consumption of alcohol (park)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-10/" },
@@ -16213,7 +16217,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-alcohol-in-park": { citation: "9 GCA § 34.40", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-alcohol-in-park": { citation: "Am. Samoa Code Ann. § 22.0706", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-alcohol-in-park": { citation: "4 CMC § 2007", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-alcohol-in-park": { citation: "36 C.F.R. § 2.35", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal consumption of alcoholic beverages in national parks" },
+  "federal-alcohol-in-park": { citation: "36 C.F.R. § 2.35", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal consumption of alcoholic beverages in national parks", sourceUrl: "https://uscode.house.gov/" },
 
   // --- Batch 45: hunting-fishing-no-license, attempted-robbery, attempted-sexual-assault, solicitation ---
 
@@ -16274,7 +16278,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-hunting-fishing-no-license": { citation: "5 GCA § 63105", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-hunting-fishing-no-license": { citation: "Am. Samoa Code Ann. § 24.0301", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-hunting-fishing-no-license": { citation: "2 CMC § 3411", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-hunting-fishing-no-license": { citation: "16 U.S.C. § 1538", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal Endangered Species Act (unlawful take of listed species)" },
+  "federal-hunting-fishing-no-license": { citation: "16 U.S.C. § 1538", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title16-section1538&edition=prelim" },
 
   // attempted-robbery (56 entries)
   "al-attempted-robbery": { citation: "Ala. Code §§ 13A-4-2, 13A-8-41", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama attempt + robbery first degree", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-4-2/" },
@@ -16333,7 +16337,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-attempted-robbery": { citation: "9 GCA §§ 4.50, 40.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-attempted-robbery": { citation: "Am. Samoa Code Ann. §§ 46.3101, 46.4201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-attempted-robbery": { citation: "6 CMC §§ 101, 1201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-attempted-robbery": { citation: "18 U.S.C. § 1951", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal Hobbs Act (attempted robbery affecting interstate commerce)" },
+  "federal-attempted-robbery": { citation: "18 U.S.C. § 1951", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1951&edition=prelim" },
 
   // attempted-sexual-assault (56 entries)
   "al-attempted-sexual-assault": { citation: "Ala. Code §§ 13A-4-2, 13A-6-61", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama attempt + rape first degree", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-4-2/" },
@@ -16392,7 +16396,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-attempted-sexual-assault": { citation: "9 GCA §§ 4.50, 25.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-attempted-sexual-assault": { citation: "Am. Samoa Code Ann. §§ 46.3101, 46.3501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-attempted-sexual-assault": { citation: "6 CMC §§ 101, 1304", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-attempted-sexual-assault": { citation: "18 U.S.C. § 2241", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal attempt + aggravated sexual abuse" },
+  "federal-attempted-sexual-assault": { citation: "18 U.S.C. § 2241", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2241&edition=prelim" },
 
   // solicitation (55 entries) -- solicitation of prostitution
   "al-solicitation": { citation: "Ala. Code § 13A-12-121", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama soliciting prostitution", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-121/" },
@@ -16511,7 +16515,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-rico-organized-crime": { citation: "9 GCA § 94.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-rico-organized-crime": { citation: "Am. Samoa Code Ann. § 46.4801", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-rico-organized-crime": { citation: "6 CMC § 4601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-rico-organized-crime": { citation: "18 U.S.C. § 1962", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal RICO (Racketeer Influenced and Corrupt Organizations Act)" },
+  "federal-rico-organized-crime": { citation: "18 U.S.C. § 1962", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1962&edition=prelim" },
 
   // juvenile-delinquency-felony (56 entries)
   "al-juvenile-delinquency-felony": { citation: "Ala. Code § 12-15-102(3)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile delinquency (felony level)", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-102/" },
@@ -16570,7 +16574,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-delinquency-felony": { citation: "19 GCA § 13201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-delinquency-felony": { citation: "Am. Samoa Code Ann. § 45.1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-delinquency-felony": { citation: "8 CMC § 1502", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-delinquency-felony": { citation: "18 U.S.C. § 5031", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal juvenile delinquency (felony level)" },
+  "federal-juvenile-delinquency-felony": { citation: "18 U.S.C. § 5031", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5031&edition=prelim" },
 
   // juvenile-delinquency-misdemeanor (56 entries)
   "al-juvenile-delinquency-misdemeanor": { citation: "Ala. Code § 12-15-102(3)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile delinquency (misdemeanor level)", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-102/" },
@@ -16629,7 +16633,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-delinquency-misdemeanor": { citation: "19 GCA § 13201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-delinquency-misdemeanor": { citation: "Am. Samoa Code Ann. § 45.1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-delinquency-misdemeanor": { citation: "8 CMC § 1502", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-delinquency-misdemeanor": { citation: "18 U.S.C. § 5031", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal juvenile delinquency (misdemeanor level)" },
+  "federal-juvenile-delinquency-misdemeanor": { citation: "18 U.S.C. § 5031", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5031&edition=prelim" },
 
   // juvenile-transfer-adult-court (56 entries)
   "al-juvenile-transfer-adult-court": { citation: "Ala. Code § 12-15-203", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile transfer to adult court", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-203/" },
@@ -16688,7 +16692,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-transfer-adult-court": { citation: "19 GCA § 13207", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-transfer-adult-court": { citation: "Am. Samoa Code Ann. § 45.1210", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-transfer-adult-court": { citation: "8 CMC § 1515", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-transfer-adult-court": { citation: "18 U.S.C. § 5032", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal transfer of juvenile to adult prosecution" },
+  "federal-juvenile-transfer-adult-court": { citation: "18 U.S.C. § 5032", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5032&edition=prelim" },
 
   // --- Batch 47: juvenile-firearm-possession, sexual-assault-in-the-third-degree, sexual-assault-in-the-second-degree, unregistered-vehicle ---
   "al-juvenile-firearm-possession": { citation: "Ala. Code § 13A-11-72", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama possession of firearms by minor", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-72/" },
@@ -16747,7 +16751,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-firearm-possession": { citation: "10 GCA § 60115", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-firearm-possession": { citation: "Am. Samoa Code Ann. § 46.4225", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-firearm-possession": { citation: "6 CMC § 3106", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-firearm-possession": { citation: "18 U.S.C. § 922(x)", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal transfer of handgun to juvenile" },
+  "federal-juvenile-firearm-possession": { citation: "18 U.S.C. § 922(x)", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section922&edition=prelim" },
 
   "al-sexual-assault-in-the-third-degree": { citation: "Ala. Code § 13A-6-22", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama sexual misconduct (third degree equivalent)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-22/" },
   "ak-sexual-assault-in-the-third-degree": { citation: "Alaska Stat. § 11.41.425", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska sexual assault in the third degree", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-425/" },
@@ -16805,7 +16809,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-sexual-assault-in-the-third-degree": { citation: "9 GCA § 25.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-sexual-assault-in-the-third-degree": { citation: "Am. Samoa Code Ann. § 46.3810", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-sexual-assault-in-the-third-degree": { citation: "6 CMC § 1302", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-sexual-assault-in-the-third-degree": { citation: "18 U.S.C. § 2243", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal sexual abuse of a minor (third degree equivalent)" },
+  "federal-sexual-assault-in-the-third-degree": { citation: "18 U.S.C. § 2243", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2243&edition=prelim" },
 
   "al-sexual-assault-in-the-second-degree": { citation: "Ala. Code § 13A-6-68", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama sexual abuse in the second degree", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-68/" },
   "ak-sexual-assault-in-the-second-degree": { citation: "Alaska Stat. § 11.41.420", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska sexual assault in the second degree", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-420/" },
@@ -16863,7 +16867,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-sexual-assault-in-the-second-degree": { citation: "9 GCA § 25.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-sexual-assault-in-the-second-degree": { citation: "Am. Samoa Code Ann. § 46.3808", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-sexual-assault-in-the-second-degree": { citation: "6 CMC § 1301", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-sexual-assault-in-the-second-degree": { citation: "18 U.S.C. § 2242", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal sexual abuse (second degree equivalent)" },
+  "federal-sexual-assault-in-the-second-degree": { citation: "18 U.S.C. § 2242", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2242&edition=prelim" },
 
   "al-unregistered-vehicle": { citation: "Ala. Code § 40-12-260", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama operation of unregistered vehicle", sourceUrl: "https://law.justia.com/codes/alabama/section-40-12-260/" },
   "ak-unregistered-vehicle": { citation: "Alaska Stat. § 28.10.031", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska registration required", sourceUrl: "https://law.justia.com/codes/alaska/section-28-10-031/" },
@@ -16921,7 +16925,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-unregistered-vehicle": { citation: "16 GCA § 9103", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-unregistered-vehicle": { citation: "Am. Samoa Code Ann. § 22.0302", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-unregistered-vehicle": { citation: "9 CMC § 5152", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-unregistered-vehicle": { citation: "49 U.S.C. § 30112", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal safety standards / registration (federal property equivalent)" },
+  "federal-unregistered-vehicle": { citation: "49 U.S.C. § 30112", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title49-section30112&edition=prelim" },
 
   // --- Batch 48: trespass-after-warning, rape-in-the-second-degree, bad-checks, disturbing-the-peace ---
   "al-trespass-after-warning": { citation: "Ala. Code § 13A-7-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama criminal trespass after warning", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-2/" },
@@ -17322,7 +17326,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-felony-murder": { citation: "9 GCA § 16.30", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-felony-murder": { citation: "Am. Samoa Code Ann. § 46.3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-felony-murder": { citation: "6 CMC § 1102", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-felony-murder": { citation: "18 U.S.C. § 1111", confidence: "medium", lastVerified: "2026-04", source: "Training data — federal murder / felony murder" },
+  "federal-felony-murder": { citation: "18 U.S.C. § 1111", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1111&edition=prelim" },
 
   // --- Batch 50: driving-while-suspended/reckless-driving DC+territories, criminally-negligent-homicide, vehicular-homicide ---
   "dc-driving-while-suspended": { citation: "D.C. Code § 50-1403.01", confidence: "medium", lastVerified: "2026-04", source: "Training data — DC operating after revocation", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-1403-01" },

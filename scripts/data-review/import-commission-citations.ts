@@ -12,6 +12,13 @@
  *                              Promote matched entries: confidence → "high", sourceUrl set.
  *   --state pa                 Fetch PA Offense Gravity Score table § 303.15 (HTML).
  *                              Promote matched entries: confidence → "high", sourceUrl set.
+ *   --state mn                 Fetch MN Statutes chapter pages (revisor.mn.gov).
+ *   --state nc                 Fetch NC General Statutes per-section (ncleg.gov).
+ *   --state wa                 Fetch WA Revised Code chapter pages (app.leg.wa.gov).
+ *   --state va                 Fetch VA Code per-section (law.lis.virginia.gov).
+ *   --state federal            Verify federal citations via GovInfo USCODE structured endpoint.
+ *                              Requires GOVINFO_API_KEY in .env.
+ *                              Promote verified entries: confidence → "high", sourceUrl set.
  *   --dry-run                  Show what would change without writing to disk.
  *   --states al,mn,fl,...      Restrict --generate-urls to these jurisdictions only.
  *
@@ -21,12 +28,25 @@
  *   npx tsx scripts/data-review/import-commission-citations.ts --state fl --dry-run
  *   npx tsx scripts/data-review/import-commission-citations.ts --state fl
  *   npx tsx scripts/data-review/import-commission-citations.ts --state pa
+ *   npx tsx scripts/data-review/import-commission-citations.ts --state federal --dry-run
+ *   npx tsx scripts/data-review/import-commission-citations.ts --state federal
  */
 
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
 import { JSDOM } from 'jsdom';
+
+// Load .env from project root so GOVINFO_API_KEY and other keys are available
+// when the script is run via `npx tsx` (which doesn't auto-source .env).
+try {
+  const envPath = path.join(process.cwd(), '.env');
+  const envContent = fs.readFileSync(envPath, 'utf-8');
+  for (const line of envContent.split('\n')) {
+    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].trim();
+  }
+} catch { /* .env not present — keys must be set in environment */ }
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const GENERATE_URLS = process.argv.includes('--generate-urls');
@@ -232,11 +252,13 @@ function generateSourceUrl(jurisdiction: string, citation: string): string | nul
       return justiaUrl(jurisdiction, base);
     }
 
-    case 'fed': {
+    case 'fed':
+    case 'federal': {
       // US Code — extract title from "18 U.S.C. § 1111" pattern
-      const fedM = citation.match(/(\d+)\s+U\.S\.C\.\s+§\s*([\d.]+)/);
+      const fedM = citation.match(/(\d+)\s+U\.S\.C\.?\s+§\s*([\d.A-Za-z]+)/);
       if (fedM) {
-        return `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title${fedM[1]}-section${fedM[2]}&edition=prelim`;
+        const baseSection = fedM[2].replace(/\([^)]*\)/g, '').trim();
+        return `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title${fedM[1]}-section${baseSection}&edition=prelim`;
       }
       return `https://uscode.house.gov/`;
     }
@@ -351,7 +373,8 @@ interface ChargeEntry {
 function parseOverlayEntries(source: string): ChargeEntry[] {
   const entries: ChargeEntry[] = [];
   // Match: "xx-slug": { ... citation: "...", ... confidence: "...", ...
-  const entryRe = /"([a-z]{2,3}-[^"]+)":\s*\{([^}]+)\}/g;
+  // Supports 2-3 char state codes (al, pa, ...) and "federal-" prefix (8 chars before dash)
+  const entryRe = /"([a-z]{2,8}-[^"]+)":\s*\{([^}]+)\}/g;
   let m: RegExpExecArray | null;
   while ((m = entryRe.exec(source)) !== null) {
     const id = m[1];
@@ -476,6 +499,94 @@ function fetchHtml(url: string): Promise<string> {
 
 function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+interface FetchJsonError extends Error {
+  statusCode?: number;
+}
+
+/**
+ * Fetches a JSON endpoint using the built-in https module (GET).
+ * Throws a FetchJsonError with statusCode set on HTTP 4xx/5xx responses
+ * so callers can distinguish 404 (not found) from network errors.
+ */
+function fetchJson(url: string, headers: Record<string, string> = {}): Promise<any> {
+  return new Promise((resolve, reject) => {
+    const req = https.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; OpenDefender citation verifier)',
+        'Accept': 'application/json',
+        ...headers,
+      },
+    }, (res) => {
+      if (res.statusCode === 301 || res.statusCode === 302) {
+        const loc = res.headers.location;
+        if (loc) return fetchJson(loc, headers).then(resolve).catch(reject);
+      }
+      if (!res.statusCode || res.statusCode >= 400) {
+        const e: FetchJsonError = new Error(`HTTP ${res.statusCode} for ${url}`);
+        e.statusCode = res.statusCode;
+        res.resume();
+        return reject(e);
+      }
+      const chunks: Buffer[] = [];
+      res.on('data', (c: Buffer) => chunks.push(c));
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(Buffer.concat(chunks).toString('utf-8')));
+        } catch {
+          reject(new Error(`JSON parse error for ${url}`));
+        }
+      });
+      res.on('error', reject);
+    });
+    req.on('error', reject);
+    req.setTimeout(20000, () => { req.destroy(); reject(new Error(`Timeout: ${url}`)); });
+  });
+}
+
+/**
+ * POSTs a JSON body to a URL and returns the parsed JSON response.
+ * Used for the GovInfo search API which requires POST.
+ */
+function postJson(url: string, body: string, headers: Record<string, string> = {}): Promise<any> {
+  return new Promise((resolve, reject) => {
+    const parsed = new URL(url);
+    const options = {
+      hostname: parsed.hostname,
+      path: parsed.pathname + parsed.search,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        'User-Agent': 'Mozilla/5.0 (compatible; OpenDefender citation verifier)',
+        'Accept': 'application/json',
+        ...headers,
+      },
+    };
+    const req = https.request(options, (res) => {
+      if (!res.statusCode || res.statusCode >= 400) {
+        const e: FetchJsonError = new Error(`HTTP ${res.statusCode} for POST ${url}`);
+        e.statusCode = res.statusCode;
+        res.resume();
+        return reject(e);
+      }
+      const chunks: Buffer[] = [];
+      res.on('data', (c: Buffer) => chunks.push(c));
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(Buffer.concat(chunks).toString('utf-8')));
+        } catch {
+          reject(new Error(`JSON parse error for POST ${url}`));
+        }
+      });
+      res.on('error', reject);
+    });
+    req.on('error', reject);
+    req.setTimeout(20000, () => { req.destroy(); reject(new Error(`Timeout: POST ${url}`)); });
+    req.write(body);
+    req.end();
+  });
 }
 
 // ── Mode: --state fl ──────────────────────────────────────────────────────────
@@ -904,6 +1015,163 @@ async function fetchVAStatuteMap(stateEntries: ChargeEntry[]): Promise<Map<strin
   return map;
 }
 
+// ── Mode: --state fed ────────────────────────────────────────────────────────
+//
+// Federal citations verified via GovInfo USCODE structured endpoint.
+// Requires GOVINFO_API_KEY in environment.
+//
+// Two-step process:
+//   1. One collections call → discover latest USCODE package per title (e.g. title18, title21)
+//   2. Per-section granule call → confirm section exists and is not repealed
+//
+// Map key: "${title}:${baseSection}" (e.g. "18:1111") to avoid collisions across titles.
+// CommissionEntry.sourceUrl is always set to the canonical uscode.house.gov URL.
+
+async function fetchFederalStatuteMap(fedEntries: ChargeEntry[]): Promise<Map<string, CommissionEntry>> {
+  const govInfoKey = process.env.GOVINFO_API_KEY;
+  if (!govInfoKey) {
+    console.error('  ✗ GOVINFO_API_KEY not set — add it to .env before running --state fed');
+    return new Map();
+  }
+
+  const GOVINFO_BASE = 'https://api.govinfo.gov';
+  const map = new Map<string, CommissionEntry>();
+
+  // Step 1: collect unique title numbers from all federal citations
+  const titleSet = new Set<string>();
+  for (const entry of fedEntries) {
+    const m = entry.citation.match(/(\d+)\s+U\.?S\.?C/i);
+    if (m) titleSet.add(m[1]);
+  }
+
+  const titles = [...titleSet].sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+  console.log(`  FED: ${fedEntries.length} entries across USC titles: ${titles.join(', ')}`);
+
+  // Step 2: one collections call to get all USCODE packages, then pick latest per title
+  const packageIdByTitle = new Map<string, string>();
+  try {
+    // GovInfo requires api_key as a query parameter (header alone is not sufficient)
+    const collUrl = `${GOVINFO_BASE}/collections/USCODE/2018-01-01T00%3A00%3A00Z?api_key=${encodeURIComponent(govInfoKey)}&pageSize=100&offset=0`;
+    console.log(`  Fetching USCODE package list from GovInfo...`);
+    const collData = await fetchJson(collUrl, { 'X-Api-Key': govInfoKey });
+    const packages: Array<{ packageId: string; dateIssued?: string }> = collData.packages || [];
+
+    for (const title of titles) {
+      // Package IDs look like "USCODE-2022-title18" or "USCODE-2022-title18supp1"
+      const titlePkgs = packages.filter(p => {
+        const id = p.packageId?.toLowerCase() ?? '';
+        return id.includes(`-title${title.padStart(2, '0')}`) || id.includes(`-title${title}`);
+      });
+
+      if (titlePkgs.length === 0) {
+        console.warn(`  No USCODE package found for title ${title}`);
+        continue;
+      }
+
+      // Pick most recently issued
+      titlePkgs.sort((a, b) =>
+        new Date(b.dateIssued ?? '2000').getTime() - new Date(a.dateIssued ?? '2000').getTime()
+      );
+      packageIdByTitle.set(title, titlePkgs[0].packageId);
+      console.log(`  Title ${title} → ${titlePkgs[0].packageId}`);
+    }
+  } catch (err: any) {
+    console.error(`  Failed to fetch USCODE package list: ${err.message}`);
+    return map;
+  }
+
+  await sleep(300);
+
+  // Step 3: per-section lookup via search API
+  //
+  // Granule IDs use part+chapter structure: USCODE-2024-title18-partI-chap51-sec1111
+  // We can't construct this ID without knowing the part/chapter, so we use the search
+  // API instead: query "packageId:{id} {section}" and match a result where granuleId
+  // ends with "-sec{section}". This is reliable because section numbers are unique
+  // within a title.
+  const SEARCH_URL = `${GOVINFO_BASE}/search`;
+  let verified = 0;
+  let notFound = 0;
+  let errors = 0;
+
+  for (const entry of fedEntries) {
+    const m = entry.citation.match(/(\d+)\s+U\.?S\.?C\.?\s+§?\s*([\dA-Za-z().\-]+)/i);
+    if (!m) continue;
+
+    const title = m[1];
+    const rawSection = m[2].trim();
+    // Strip subsection designators: "841(a)(1)" → "841"
+    const baseSection = rawSection.replace(/\s*\([^)]*\)/g, '').trim();
+    const mapKey = `${title}:${baseSection}`;
+
+    if (map.has(mapKey)) continue;
+
+    const uscodeUrl =
+      `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title${title}-section${baseSection}&edition=prelim`;
+
+    const packageId = packageIdByTitle.get(title);
+    if (!packageId) {
+      map.set(mapKey, {
+        section: mapKey,
+        description: '',
+        classification: `${title} U.S.C. § ${baseSection} (package not found in GovInfo)`,
+        sourceUrl: uscodeUrl,
+      });
+      continue;
+    }
+
+    const searchBody = JSON.stringify({
+      query: `collection:USCODE packageId:${packageId} ${baseSection}`,
+      pageSize: 5,
+      offsetMark: '*',
+      sorts: [{ field: 'score', sortOrder: 'DESC' }],
+    });
+
+    try {
+      const results: Array<{ granuleId: string; title?: string }> =
+        await postJson(SEARCH_URL, searchBody, { 'X-Api-Key': govInfoKey }).then(
+          (d: any) => d.results ?? []
+        );
+
+      // Find a result whose granuleId ends with "-sec{baseSection}"
+      const secSuffix = `-sec${baseSection}`;
+      const match = results.find(r => r.granuleId?.endsWith(secSuffix));
+
+      if (!match) {
+        console.log(`  NOT FOUND   ${title} U.S.C. § ${baseSection}`);
+        notFound++;
+      } else {
+        const heading = match.title ?? '';
+        const headingLower = heading.toLowerCase();
+        const isRepealed = headingLower.includes('repealed') || headingLower.includes('reserved');
+
+        if (isRepealed) {
+          console.log(`  REPEALED    ${title} U.S.C. § ${baseSection}: "${heading}"`);
+          notFound++;
+        } else {
+          map.set(mapKey, {
+            section: mapKey,
+            description: heading,
+            classification: `${title} U.S.C. § ${baseSection} — GovInfo USCODE verified ${NOW_MONTH}`,
+            sourceUrl: uscodeUrl,
+          });
+          console.log(`  ✓ verified  ${title} U.S.C. § ${baseSection}: "${heading}"`);
+          verified++;
+        }
+      }
+    } catch (err: any) {
+      console.warn(`  ERROR       ${title} U.S.C. § ${baseSection}: ${err.message}`);
+      errors++;
+    }
+
+    await sleep(400);
+  }
+
+  console.log(`\n  GovInfo results: ${verified} verified, ${notFound} not found/repealed, ${errors} errors`);
+  console.log(`  Total sections in verified map: ${map.size}`);
+  return map;
+}
+
 // ── Mode: --state XX (commission verification) ────────────────────────────────
 
 async function runStateCommission(state: string): Promise<void> {
@@ -952,9 +1220,14 @@ async function runStateCommission(state: string): Promise<void> {
         commissionName = `Virginia Code Annotated — law.lis.virginia.gov`;
         commissionTableUrl = 'https://law.lis.virginia.gov/vacode/title18.2/';
         break;
+      case 'federal':
+        commissionMap = await fetchFederalStatuteMap(stateEntries);
+        commissionName = `GovInfo USCODE structured endpoint — verified ${NOW_MONTH}`;
+        commissionTableUrl = 'https://uscode.house.gov/';
+        break;
       default:
         console.error(`Commission scraping not yet implemented for: ${state.toUpperCase()}`);
-        console.error('Available: fl, pa, mn, nc, wa, va');
+        console.error('Available: fl, pa, mn, nc, wa, va, federal');
         console.error('For other states, use: --generate-urls --states ' + state);
         process.exit(1);
     }
@@ -982,8 +1255,16 @@ async function runStateCommission(state: string): Promise<void> {
     const sec = extractSection(entry.citation);
     const base = sec?.base ?? null;
 
-    const inTable = base ? commissionMap.has(base) : false;
-    const commEntry = base ? commissionMap.get(base) : undefined;
+    // Federal entries use a compound key "title:section" to avoid cross-title collisions
+    // (e.g. "18:1111" instead of "1111") since multiple USC titles appear in the overlay.
+    let mapKey: string | null = base;
+    if (state === 'federal' && base) {
+      const titleM = entry.citation.match(/(\d+)\s+U\.?S\.?C/i);
+      if (titleM) mapKey = `${titleM[1]}:${base}`;
+    }
+
+    const inTable = mapKey ? commissionMap.has(mapKey) : false;
+    const commEntry = mapKey ? commissionMap.get(mapKey) : undefined;
 
     const statUrl = commEntry?.sourceUrl ?? generateSourceUrl(state, entry.citation) ?? commissionTableUrl;
 
@@ -1084,6 +1365,7 @@ async function main(): Promise<void> {
   console.error('  --state nc                   Import from NC General Statutes (ncleg.gov per-section)');
   console.error('  --state wa                   Import from WA Revised Code (app.leg.wa.gov chapters)');
   console.error('  --state va                   Import from VA Code (law.lis.virginia.gov per-section)');
+  console.error('  --state federal              Verify federal citations via GovInfo (requires GOVINFO_API_KEY)');
   console.error('  --dry-run                    Preview changes without writing');
   process.exit(1);
 }
