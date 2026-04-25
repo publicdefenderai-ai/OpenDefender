@@ -623,7 +623,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </Link>
-                  <Link href="/jail-phone-call" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                  <Link href="/first-24-hours#phone-call" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
                     <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
                       <CardContent className="p-3 text-center">
                         <p className="text-xs font-semibold text-foreground">Jail Phone Call Guide</p>
@@ -711,7 +711,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </Link>
-                  <Link href="/jail-phone-call" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                  <Link href="/first-24-hours#phone-call" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
                     <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
                       <CardContent className="p-3 text-center">
                         <p className="text-xs font-semibold text-foreground">Jail Phone Calls</p>

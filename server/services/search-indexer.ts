@@ -949,10 +949,10 @@ export function buildSearchIndex(): void {
       id: 'first-24-hours',
       title: 'The First 24 Hours After Arrest',
       titleEs: 'Las Primeras 24 Horas Después del Arresto',
-      titleZh: '被捕后的前24小时',
-      content: 'Step-by-step guide for the first 24 hours after arrest. At the moment of arrest: invoke your right to remain silent and ask for a lawyer immediately. Booking: cooperate with fingerprints and photos but do not answer questions about the incident. Your first phone call: call a family member, give them where you are held and your booking number, ask them to find a lawyer. Bail hearing: have your attorney argue for release, mention ties to community. Getting legal representation: request a public defender if you cannot afford an attorney. Arraignment: plead not guilty — preserve your options. Between now and your next court date: attend every hearing, follow bail conditions, do not contact victims or witnesses. Do not discuss your case on social media.',
-      tags: ['arrest', 'first 24 hours', 'booking', 'bail', 'arraignment', 'phone call', 'public defender', 'attorney', 'right to remain silent', 'miranda', 'custody'],
-      aliases: ['just arrested', 'what to do after arrest', 'arrested now what', 'first steps after arrest', 'arrested guide', 'what happens when arrested', 'after being arrested', 'booking process', 'bail hearing guide'],
+      titleZh: '逮捕后的前24小时',
+      content: 'Step-by-step guide for the first 24 hours after arrest. At the moment of arrest: invoke your right to remain silent and ask for a lawyer immediately. Booking: cooperate with fingerprints and photos but do not answer questions about the incident. Your first phone call from jail: jail calls are recorded — call a family member, give them your facility name and booking number, ask them to find a lawyer. What never to say on a jail call. Sample script for first jail call. Facility and inmate locator by state. Bail hearing: have your attorney argue for release, mention ties to community. Getting legal representation: request a public defender if you cannot afford an attorney. Arraignment: plead not guilty — preserve your options. Between now and your next court date: attend every hearing, follow bail conditions, do not contact victims or witnesses. Do not discuss your case on social media. When does your right to a lawyer actually begin: Fifth Amendment right during interrogation vs Sixth Amendment right at formal proceedings. The gap between arrest and arraignment. Right to counsel timing in California, New York, Texas, Florida, and federal courts. If you are on probation or parole: violation holds, probation officer notification, revocation hearing rights. Your first appearance before a magistrate: probable cause, bail conditions, right to counsel, how it works in each state.',
+      tags: ['arrest', 'first 24 hours', 'booking', 'bail', 'arraignment', 'phone call', 'jail call', 'recorded call', 'public defender', 'attorney', 'right to remain silent', 'miranda', 'custody', 'right to counsel', 'sixth amendment', 'fifth amendment', 'probation', 'parole', 'violation', 'revocation', 'magistrate', 'first appearance', 'initial appearance', 'inmate locator', 'facility lookup', 'juvenile arrest'],
+      aliases: ['just arrested', 'what to do after arrest', 'arrested now what', 'first steps after arrest', 'arrested guide', 'what happens when arrested', 'after being arrested', 'booking process', 'bail hearing guide', 'phone call from jail', 'calling from jail', 'jail call advice', 'what to say on jail call', 'when does right to lawyer begin', 'arrested on probation', 'arrested on parole', 'first court appearance', 'magistrate hearing', 'find someone in jail', 'inmate locator'],
       url: '/first-24-hours'
     },
     {
@@ -960,10 +960,10 @@ export function buildSearchIndex(): void {
       title: 'Jail Phone Call Guide',
       titleEs: 'Guía de Llamadas desde la Cárcel',
       titleZh: '监狱电话指南',
-      content: 'What to say and what never to say on a jail or prison phone call. Jail calls are recorded and monitored. Do not discuss your case, what happened, or anything about the charges. Do not ask anyone to destroy evidence, move items, or contact witnesses. Call a family member or attorney. Attorney calls are confidential and not recorded. Keep the call short. Give your location, booking number, and charges. Ask family to find you a lawyer.',
+      content: 'See the First 24 Hours guide for complete jail phone call guidance, including what to say, what never to say, a sample script, and a state-by-state facility locator.',
       tags: ['jail phone call', 'prison call', 'recorded call', 'what to say', 'booking', 'attorney call'],
       aliases: ['phone call from jail', 'calling from jail', 'jail call advice', 'prison phone call', 'what to say when arrested', 'call from detention'],
-      url: '/jail-phone-call'
+      url: '/first-24-hours#phone-call'
     },
     {
       id: 'collateral-consequences',

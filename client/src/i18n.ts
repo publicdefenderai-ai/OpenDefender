@@ -4708,7 +4708,14 @@ i18n
             "title": "Your First 24 Hours",
             "subtitle": "From arrest through your first court appearance — decisions made early in a case can have lasting consequences.",
             "alert": "One rule applies to every step below: Do not discuss the facts of your case with anyone except your attorney — not police, not family, not cellmates, and not on the jail phone.",
-            "relatedGuides": "Related guides"
+            "relatedGuides": "Related guides",
+            "deepDiveTitle": "Go deeper",
+            "deepDiveSubtitle": "Important topics that affect how you navigate the first 24 hours — click any section to expand.",
+            "accordion": {
+              "counselTitle": "When does your right to a lawyer actually begin?",
+              "probationTitle": "If you're on probation or parole",
+              "firstAppearanceTitle": "Your first appearance before a magistrate: what to expect"
+            }
           },
           "jailPhoneCall": {
             "title": "Making Your First Call from Jail",
@@ -9640,7 +9647,14 @@ i18n
             "title": "Sus Primeras 24 Horas",
             "subtitle": "Desde el arresto hasta su primera comparecencia ante el tribunal — las decisiones tomadas al inicio de un caso pueden tener consecuencias duraderas.",
             "alert": "Una regla aplica a cada paso a continuación: No discuta los hechos de su caso con nadie excepto su abogado — ni con la policía, ni con familiares, ni con compañeros de celda, ni por teléfono de la cárcel.",
-            "relatedGuides": "Guías relacionadas"
+            "relatedGuides": "Guías relacionadas",
+            "deepDiveTitle": "Profundice más",
+            "deepDiveSubtitle": "Temas importantes que afectan cómo navegar las primeras 24 horas — haga clic en cualquier sección para expandir.",
+            "accordion": {
+              "counselTitle": "¿Cuándo comienza realmente su derecho a un abogado?",
+              "probationTitle": "Si está en libertad condicional o en libertad supervisada",
+              "firstAppearanceTitle": "Su primera comparecencia ante el magistrado: qué esperar"
+            }
           },
           "jailPhoneCall": {
             "title": "Su Primera Llamada desde la Cárcel",
@@ -14573,7 +14587,14 @@ i18n
             "title": "逮捕后的前24小时",
             "subtitle": "从逮捕到第一次出庭——案件初期做出的决定可能产生深远的后果。",
             "alert": "以下每个步骤都适用一条规则：除您的律师外，不要与任何人讨论案件事实——不要与警察、家人、狱友交谈，也不要通过监狱电话透露任何信息。",
-            "relatedGuides": "相关指南"
+            "relatedGuides": "相关指南",
+            "deepDiveTitle": "深入了解",
+            "deepDiveSubtitle": "影响您如何度过被捕后24小时的重要议题——点击任意部分展开。",
+            "accordion": {
+              "counselTitle": "您的律师权利究竟从何时开始？",
+              "probationTitle": "如果您正处于缓刑或假释期间",
+              "firstAppearanceTitle": "第一次出庭：将会发生什么"
+            }
           },
           "jailPhoneCall": {
             "title": "在押期间的第一个电话",

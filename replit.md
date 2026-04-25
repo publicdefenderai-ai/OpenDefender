@@ -58,6 +58,9 @@ The backend uses Express.js and TypeScript, exposing a RESTful API. Drizzle ORM 
 ### Site-Wide Search
 A comprehensive, multilingual search system indexes 6,663 legal documents, including glossary terms, criminal charges, diversion programs, and all 38 site pages (including all 11 `/support/*` pages). It uses legal synonym expansion and weighted relevance scoring for accurate results.
 
+### First 24 Hours After Arrest (`/first-24-hours`)
+The definitive arrest-to-arraignment hub. Features: 7-step guide (arrest → booking → phone call → bail → counsel → arraignment → post-arraignment), expanded Step 3 with full jail phone call guidance (script, "never say" categories, attorney call rules), a state-by-state facility/inmate locator widget (all 50 states + DC + Federal via VINELink and direct DOC links), a juvenile arrest callout, and three deep-dive accordion sections: (1) when your right to a lawyer actually begins (5th vs. 6th Amendment, the arrest-to-arraignment gap, CA/NY/TX/FL/Federal notes), (2) what to do if arrested while on probation or parole (hold mechanics, revocation hearing rights), (3) your first appearance before a magistrate (what's decided, jurisdiction-by-jurisdiction breakdown). Full EN/ES/ZH i18n support. The former `/jail-phone-call` route permanently redirects to `/first-24-hours#phone-call`.
+
 ### Visual Case Timeline
 An interactive 7-stage criminal case timeline (`/case-timeline`) provides descriptions, rights, and tips for each stage of a criminal proceeding, available in English, Spanish, and Chinese. The page also includes detailed bail and plea bargain accordion guides, speedy trial and public defender info cards, and a jurisdiction selector with state-specific callouts. The former `/process` route permanently redirects to `/case-timeline`.
 

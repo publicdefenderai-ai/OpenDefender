@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link } from "wouter";
-import { Check, X } from "lucide-react";
+import { Check, X, ChevronDown, Phone, MapPin } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { BrandShieldIcon } from "@/components/brand-logo";
@@ -8,11 +9,13 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
-import { Phone, Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
+import { Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
 import { LegalTerm } from "@/components/ui/legal-term";
 import { useJurisdiction } from "@/hooks/use-jurisdiction";
 import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface StepProps {
   number: number;
@@ -22,12 +25,13 @@ interface StepProps {
   dos: string[];
   donts: string[];
   isLast?: boolean;
+  id?: string;
   children?: React.ReactNode;
 }
 
-function Step({ number, title, timeframe, context, dos, donts, isLast, children }: StepProps) {
+function Step({ number, title, timeframe, context, dos, donts, isLast, id, children }: StepProps) {
   return (
-    <div className="relative">
+    <div className="relative" id={id}>
       <div className="flex items-start gap-5">
         <div className="flex flex-col items-center flex-shrink-0">
           <div className="w-9 h-9 bg-slate-800 dark:bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md z-10">
@@ -89,6 +93,111 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, children 
   );
 }
 
+// State-level official inmate/jail locator data
+const FACILITY_LOCATORS: Record<string, { name: string; url: string; note?: string }> = {
+  AL: { name: "Alabama", url: "https://vinelink.vineapps.com/search/AL/Person" },
+  AK: { name: "Alaska", url: "https://vinelink.vineapps.com/search/AK/Person" },
+  AZ: { name: "Arizona", url: "https://corrections.az.gov/public-inmate-search" },
+  AR: { name: "Arkansas", url: "https://vinelink.vineapps.com/search/AR/Person" },
+  CA: { name: "California", url: "https://vinelink.vineapps.com/search/CA/Person", note: "For county jails. State prison use: inmatelocator.cdcr.ca.gov" },
+  CO: { name: "Colorado", url: "https://www.colorado.gov/apps/offender/public/#/" },
+  CT: { name: "Connecticut", url: "https://www.ctinmateinfo.state.ct.us/" },
+  DE: { name: "Delaware", url: "https://vinelink.vineapps.com/search/DE/Person" },
+  FL: { name: "Florida", url: "https://vinelink.vineapps.com/search/FL/Person", note: "For county jails. State prison: dc.myflorida.com" },
+  GA: { name: "Georgia", url: "https://vinelink.vineapps.com/search/GA/Person" },
+  HI: { name: "Hawaii", url: "https://vinelink.vineapps.com/search/HI/Person" },
+  ID: { name: "Idaho", url: "https://vinelink.vineapps.com/search/ID/Person" },
+  IL: { name: "Illinois", url: "https://vinelink.vineapps.com/search/IL/Person" },
+  IN: { name: "Indiana", url: "https://vinelink.vineapps.com/search/IN/Person" },
+  IA: { name: "Iowa", url: "https://vinelink.vineapps.com/search/IA/Person" },
+  KS: { name: "Kansas", url: "https://vinelink.vineapps.com/search/KS/Person" },
+  KY: { name: "Kentucky", url: "https://corrections.ky.gov/depts/facilityops/Pages/kool.aspx" },
+  LA: { name: "Louisiana", url: "https://vinelink.vineapps.com/search/LA/Person" },
+  ME: { name: "Maine", url: "https://vinelink.vineapps.com/search/ME/Person" },
+  MD: { name: "Maryland", url: "https://vinelink.vineapps.com/search/MD/Person" },
+  MA: { name: "Massachusetts", url: "https://vinelink.vineapps.com/search/MA/Person" },
+  MI: { name: "Michigan", url: "https://mdocweb.state.mi.us/otis2/otis2.aspx" },
+  MN: { name: "Minnesota", url: "https://vinelink.vineapps.com/search/MN/Person" },
+  MS: { name: "Mississippi", url: "https://vinelink.vineapps.com/search/MS/Person" },
+  MO: { name: "Missouri", url: "https://vinelink.vineapps.com/search/MO/Person" },
+  MT: { name: "Montana", url: "https://vinelink.vineapps.com/search/MT/Person" },
+  NE: { name: "Nebraska", url: "https://vinelink.vineapps.com/search/NE/Person" },
+  NV: { name: "Nevada", url: "https://vinelink.vineapps.com/search/NV/Person" },
+  NH: { name: "New Hampshire", url: "https://vinelink.vineapps.com/search/NH/Person" },
+  NJ: { name: "New Jersey", url: "https://www.njinmateinfo.com/" },
+  NM: { name: "New Mexico", url: "https://vinelink.vineapps.com/search/NM/Person" },
+  NY: { name: "New York", url: "https://vinelink.vineapps.com/search/NY/Person", note: "For county jails. State prison: nysdoccslookup.doccs.ny.gov" },
+  NC: { name: "North Carolina", url: "https://webapps.doc.state.nc.us/opi/offendersearch.do" },
+  ND: { name: "North Dakota", url: "https://vinelink.vineapps.com/search/ND/Person" },
+  OH: { name: "Ohio", url: "https://appgateway.drc.ohio.gov/OffenderSearch" },
+  OK: { name: "Oklahoma", url: "https://vinelink.vineapps.com/search/OK/Person" },
+  OR: { name: "Oregon", url: "https://vinelink.vineapps.com/search/OR/Person" },
+  PA: { name: "Pennsylvania", url: "https://vinelink.vineapps.com/search/PA/Person" },
+  RI: { name: "Rhode Island", url: "https://vinelink.vineapps.com/search/RI/Person" },
+  SC: { name: "South Carolina", url: "https://vinelink.vineapps.com/search/SC/Person" },
+  SD: { name: "South Dakota", url: "https://vinelink.vineapps.com/search/SD/Person" },
+  TN: { name: "Tennessee", url: "https://vinelink.vineapps.com/search/TN/Person" },
+  TX: { name: "Texas", url: "https://vinelink.vineapps.com/search/TX/Person", note: "For county jails. State prison: offender.tdcj.texas.gov" },
+  UT: { name: "Utah", url: "https://vinelink.vineapps.com/search/UT/Person" },
+  VT: { name: "Vermont", url: "https://vinelink.vineapps.com/search/VT/Person" },
+  VA: { name: "Virginia", url: "https://vadoc.virginia.gov/offenders/locator/" },
+  WA: { name: "Washington", url: "https://vinelink.vineapps.com/search/WA/Person" },
+  WV: { name: "West Virginia", url: "https://vinelink.vineapps.com/search/WV/Person" },
+  WI: { name: "Wisconsin", url: "https://vinelink.vineapps.com/search/WI/Person" },
+  WY: { name: "Wyoming", url: "https://vinelink.vineapps.com/search/WY/Person" },
+  DC: { name: "Washington D.C.", url: "https://vinelink.vineapps.com/search/DC/Person" },
+  FED: { name: "Federal (BOP)", url: "https://www.bop.gov/inmateloc/", note: "For federal custody. Search by name or register number." },
+};
+
+function FacilityLookupWidget() {
+  const [selectedState, setSelectedState] = useState("");
+  const locator = selectedState ? FACILITY_LOCATORS[selectedState] : null;
+
+  return (
+    <div className="mt-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/40 p-4">
+      <div className="flex items-center gap-2 mb-3">
+        <MapPin className="w-4 h-4 text-muted-foreground" />
+        <p className="text-sm font-semibold text-foreground">Find who to call: locate a detained person</p>
+      </div>
+      <p className="text-xs text-muted-foreground mb-3">
+        Select a state to go directly to that state's official inmate/detainee locator. Most county jails are also covered via VINELink.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-2">
+        <select
+          value={selectedState}
+          onChange={(e) => setSelectedState(e.target.value)}
+          className="flex-1 text-sm rounded-md border border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          aria-label="Select state to find inmate locator"
+        >
+          <option value="">Select a state…</option>
+          {Object.entries(FACILITY_LOCATORS).map(([code, { name }]) => (
+            <option key={code} value={code}>{name}</option>
+          ))}
+        </select>
+        {locator && (
+          <a
+            href={locator.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1.5 text-sm font-medium px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5" />
+            Go to {locator.name} locator
+          </a>
+        )}
+      </div>
+      {locator?.note && (
+        <p className="text-xs text-muted-foreground mt-2 pl-0.5">
+          <span className="font-medium">Note:</span> {locator.note}
+        </p>
+      )}
+      <p className="text-xs text-muted-foreground mt-2 pl-0.5">
+        Can't find them? Call the county sheriff's office directly or search "[county name] sheriff inmate lookup."
+      </p>
+    </div>
+  );
+}
+
 export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
@@ -138,6 +247,7 @@ export default function FirstTwentyFourHours() {
         </ScrollReveal>
 
         <div>
+          {/* STEP 1 */}
           <ScrollReveal delay={0.05}>
             <Step
               number={1}
@@ -171,6 +281,7 @@ export default function FirstTwentyFourHours() {
             </Step>
           </ScrollReveal>
 
+          {/* STEP 2 */}
           <ScrollReveal delay={0.1}>
             <Step
               number={2}
@@ -198,31 +309,84 @@ export default function FirstTwentyFourHours() {
             </Step>
           </ScrollReveal>
 
+          {/* STEP 3 — EXPANDED, with phone-call anchor */}
           <ScrollReveal delay={0.15}>
             <Step
               number={3}
+              id="phone-call"
               title="Your First Phone Call"
               timeframe="During or shortly after booking"
-              context="You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Use it wisely."
+              context="You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Every subsequent call is recorded too. Use them wisely."
               dos={[
-                "Call a family member or trusted friend. Give them: (1) where you are held, (2) your booking number, (3) the charges, (4) ask them to find a lawyer or contact the public defender's office.",
-                "Keep the call short and practical.",
+                "Call a family member or trusted friend — not your attorney (they likely won't answer an unfamiliar collect call).",
+                "Give them: (1) the facility name, (2) your booking number, (3) the charges if known, (4) ask them to find a lawyer or contact the public defender's office in the county where you were arrested.",
+                "Keep the call short and practical. Longer calls mean more recorded material.",
                 "Ask family to write everything down and start finding legal help immediately.",
+                "For ongoing calls: stick to practical matters — court dates, commissary, updates on legal counsel, family wellbeing.",
+                "Verify with your attorney that their line is registered as an attorney-client call before discussing case details.",
               ]}
               donts={[
                 'Don\'t say anything about what happened. Even "I didn\'t do it" can be used against you.',
-                "Don't ask anyone to destroy evidence, move your car, or warn other people.",
-                "Don't call the alleged victim, even to apologize.",
+                "Don't mention alibi information, co-defendants, or anyone else involved. Share that only with your attorney.",
+                "Don't ask anyone to destroy, move, or hold onto any item related to the incident.",
+                "Don't call the alleged victim, even to apologize or explain.",
+                "Don't speak in code. Law enforcement is trained to interpret coded language, and a jury can draw adverse inferences from evasive speech.",
+                "Don't assume letters, texts, or emails from jail are any more private than phone calls. They aren't.",
               ]}
             >
-              <div className="flex gap-3 flex-wrap mt-2">
-                <Link href="/jail-phone-call">
-                  <Button variant="outline" size="sm">Jail Phone Call Guide</Button>
-                </Link>
+              <div className="space-y-4 mt-2">
+                {/* Warning banner */}
+                <Alert className="border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
+                  <AlertDescription className="text-red-800 dark:text-red-200 text-sm">
+                    <strong>Every call is monitored and recorded — without exception.</strong> Prosecutors have used jail calls as key evidence in countless cases, including statements made to family members. The only protected calls are to your attorney — and only if that line is properly designated.
+                  </AlertDescription>
+                </Alert>
+
+                {/* Script */}
+                <div>
+                  <p className="text-sm font-semibold text-foreground mb-2">Sample script for your first call:</p>
+                  <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 border border-slate-200 dark:border-slate-700 font-mono text-sm leading-relaxed text-foreground space-y-2">
+                    <p>"Hey, it's me. I'm okay, but I've been arrested."</p>
+                    <p>"I'm at [facility name]. My booking number is [number]."</p>
+                    <p>"I've been charged with [charge, if known]."</p>
+                    <p>"I need you to find a lawyer — call [attorney name if known] or contact the public defender's office in [county]."</p>
+                    <p>"Don't talk to any police or detectives until there's a lawyer involved. I can't say anything else right now."</p>
+                    <p>"I love you. I'll be okay. Go make those calls."</p>
+                  </div>
+                </div>
+
+                {/* What never to say — collapsed list */}
+                <div className="rounded-lg border border-red-200 dark:border-red-900 overflow-hidden">
+                  <div className="bg-red-50/60 dark:bg-red-950/30 px-4 py-3 border-b border-red-200 dark:border-red-900">
+                    <p className="text-sm font-semibold text-red-800 dark:text-red-300">What never to say — on any jail call</p>
+                  </div>
+                  <div className="p-4 space-y-3">
+                    {[
+                      { category: "Facts about the incident", detail: '"I didn\'t do it," "I wasn\'t there," "It was self-defense" — all open the door to cross-examination and can be twisted out of context.' },
+                      { category: "Alibi information", detail: "Don't say where you were or who you were with. Share that only with your attorney." },
+                      { category: "Other people involved", detail: "Don't mention co-defendants, witnesses, or anyone else who may have been present." },
+                      { category: "Evidence", detail: "Don't ask anyone to find, move, or hold onto any item related to the incident." },
+                      { category: "Contact with the alleged victim", detail: "Never ask someone to pass along a message, apology, or explanation to the alleged victim or their family." },
+                      { category: "Frustration about the case", detail: '"The police lied," "They don\'t have real evidence" — prosecutors can use these to establish consciousness of guilt.' },
+                    ].map(({ category, detail }) => (
+                      <div key={category} className="flex items-start gap-2.5">
+                        <span className="flex-shrink-0 mt-0.5 text-red-500 font-medium text-sm">–</span>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">{category}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{detail}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Facility lookup */}
+                <FacilityLookupWidget />
               </div>
             </Step>
           </ScrollReveal>
 
+          {/* STEP 4 */}
           <ScrollReveal delay={0.2}>
             <Step
               number={4}
@@ -260,6 +424,7 @@ export default function FirstTwentyFourHours() {
             </Step>
           </ScrollReveal>
 
+          {/* STEP 5 */}
           <ScrollReveal delay={0.25}>
             <Step
               number={5}
@@ -291,6 +456,7 @@ export default function FirstTwentyFourHours() {
             </Step>
           </ScrollReveal>
 
+          {/* STEP 6 */}
           <ScrollReveal delay={0.3}>
             <Step
               number={6}
@@ -312,6 +478,7 @@ export default function FirstTwentyFourHours() {
             </Step>
           </ScrollReveal>
 
+          {/* STEP 7 */}
           <ScrollReveal delay={0.35}>
             <Step
               number={7}
@@ -335,14 +502,212 @@ export default function FirstTwentyFourHours() {
           </ScrollReveal>
         </div>
 
+        {/* ─── DEEP-DIVE ACCORDIONS ─── */}
         <ScrollReveal delay={0.4}>
           <div className="mt-4 border-t border-border pt-10">
+            <h2 className="text-xl font-bold text-foreground mb-2">{t('first24Hours.deepDiveTitle')}</h2>
+            <p className="text-sm text-muted-foreground mb-6">{t('first24Hours.deepDiveSubtitle')}</p>
+
+            <Accordion type="single" collapsible className="w-full space-y-3">
+
+              {/* ACCORDION 1: When does right to a lawyer actually begin */}
+              <AccordionItem value="right-to-counsel-timing" className="border border-border rounded-lg px-4">
+                <AccordionTrigger className="text-left hover:no-underline py-4">
+                  <span className="font-semibold text-base">{t('first24Hours.accordion.counselTitle')}</span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 space-y-4">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    The right to a lawyer is actually two separate rights under two different amendments — and they kick in at different moments.
+                  </p>
+
+                  <div className="space-y-3">
+                    <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
+                      <p className="text-sm font-semibold text-foreground mb-1.5">Fifth Amendment right: during interrogation</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        This right applies any time police want to question you — before arrest, during arrest, at the station, or anywhere else. You can invoke it immediately by saying "I want a lawyer." Once you say this, police must stop questioning until an attorney is present. Critically, this applies even before charges are filed.
+                      </p>
+                    </div>
+
+                    <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
+                      <p className="text-sm font-semibold text-foreground mb-1.5">Sixth Amendment right: at formal proceedings</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        This right attaches once formal charges are filed — typically at arraignment or indictment. From this point, police cannot question you about the charged offense outside the presence of your attorney, even if you waive your Fifth Amendment rights. The Sixth Amendment is charge-specific: it only covers the crimes you've been formally charged with.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-lg border border-amber-200 dark:border-amber-800/60 bg-amber-50/60 dark:bg-amber-900/10 p-4">
+                    <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">The gap: after arrest, before formal charges</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Between arrest and arraignment, your Sixth Amendment right has not yet attached for most purposes. This is the most dangerous window — you have your Fifth Amendment right to silence, but no court-appointed attorney yet. <strong>Do not answer any questions during this period without an attorney present.</strong> Your invocation of silence must be clear and unambiguous.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <p className="text-sm font-semibold text-foreground">How this varies by state</p>
+                    <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                      {[
+                        { state: "California", note: "Police must stop questioning immediately upon any invocation. You do not need to repeat yourself. CA also requires arraignment within 48 hours of arrest (excluding weekends/holidays)." },
+                        { state: "New York", note: "NY courts have interpreted the right to counsel broadly. Once you retain or request an attorney, police must contact that attorney before questioning. This is stronger than federal law." },
+                        { state: "Texas", note: "Right to counsel attaches at arraignment. Until then, the Fifth Amendment is your main protection. TX magistration must occur within 48 hours of arrest." },
+                        { state: "Florida", note: "Must be brought before a magistrate within 24 hours for a first-appearance hearing. Arraignment is typically 21–33 days after filing. Fifth Amendment is your protection in the interim." },
+                        { state: "Federal", note: "Must appear before a magistrate 'without unnecessary delay' — typically within 48 hours. Federal rules are strictly applied." },
+                      ].map(({ state, note }) => (
+                        <div key={state} className="rounded-md border border-border/60 bg-background p-3">
+                          <p className="text-xs font-bold text-foreground mb-1">{state}</p>
+                          <p className="text-xs text-muted-foreground leading-relaxed">{note}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2 flex-wrap pt-1">
+                    <Link href="/right-to-counsel">
+                      <Button variant="outline" size="sm">Full Right-to-Counsel Guide</Button>
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* ACCORDION 2: On probation or parole */}
+              <AccordionItem value="probation-parole" className="border border-border rounded-lg px-4">
+                <AccordionTrigger className="text-left hover:no-underline py-4">
+                  <span className="font-semibold text-base">{t('first24Hours.accordion.probationTitle')}</span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 space-y-4">
+                  <Alert className="border-orange-300 bg-orange-50 dark:bg-orange-900/20 dark:border-orange-700">
+                    <AlertDescription className="text-orange-800 dark:text-orange-200 text-sm">
+                      <strong>If you are on probation or parole, a new arrest is a more serious situation than it would otherwise be.</strong> You are not just facing new charges — you are likely also facing a violation proceeding on your existing supervision. The two tracks run in parallel.
+                    </AlertDescription>
+                  </Alert>
+
+                  <div className="space-y-3">
+                    <Card className="border-border/60">
+                      <CardHeader className="pb-2 pt-4">
+                        <CardTitle className="text-sm font-semibold">What happens immediately</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-2 pb-4">
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>A probation or parole hold may be placed on you</strong> — meaning even if you make bail on the new charges, you may remain detained on the violation hold.</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Your probation or parole officer will be notified</strong> — usually within hours of your arrest appearing in the system.</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>An arrest alone can trigger a violation</strong> — even if you are never convicted of the new charge. The standard of proof for a violation hearing (preponderance of evidence) is much lower than for a criminal conviction.</span></li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-border/60">
+                      <CardHeader className="pb-2 pt-4">
+                        <CardTitle className="text-sm font-semibold">Rights that still apply</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-2 pb-4">
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>You have the <strong>right to remain silent</strong> on the new charges. Exercise it.</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>You have the <strong>right to a revocation hearing</strong> before your supervision is formally revoked. This must include written notice of the alleged violation, disclosure of the evidence against you, the opportunity to be heard, and a neutral hearing officer.</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>You have the <strong>right to counsel at a revocation hearing</strong> if revocation could result in incarceration — which it typically does.</span></li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="border-border/60">
+                      <CardHeader className="pb-2 pt-4">
+                        <CardTitle className="text-sm font-semibold">What to do first</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-2 pb-4">
+                        <ol className="space-y-2 text-sm text-muted-foreground list-none">
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">1.</span><span>Tell your attorney about your supervision status <em>immediately</em> — it affects strategy for both the new case and the violation proceeding.</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">2.</span><span>Do not attempt to contact your PO directly without attorney guidance. Statements to your PO may not be protected.</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">3.</span><span>Ask your attorney specifically: will bail on the new case release me, or is there a separate supervision hold? Are these the same attorney or do I need two?</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">4.</span><span>Check whether your probation terms require self-reporting. Your attorney can help you decide if and how to respond.</span></li>
+                        </ol>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  <p className="text-xs text-muted-foreground">
+                    Violation outcomes vary widely by jurisdiction, the nature of the new offense, your supervision history, and your PO's discretion. An attorney who understands both tracks is essential.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              {/* ACCORDION 3: First appearance / magistrate */}
+              <AccordionItem value="first-appearance" className="border border-border rounded-lg px-4">
+                <AccordionTrigger className="text-left hover:no-underline py-4">
+                  <span className="font-semibold text-base">{t('first24Hours.accordion.firstAppearanceTitle')}</span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 space-y-4">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Before your formal arraignment, most jurisdictions require a brief "first appearance" or "initial appearance" before a magistrate or duty judge — often within 24–48 hours of arrest. In some states this is the same as arraignment; in others it's a separate, shorter proceeding.
+                  </p>
+
+                  <div className="space-y-3">
+                    <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
+                      <p className="text-sm font-semibold text-foreground mb-2">What the magistrate decides</p>
+                      <ul className="space-y-1.5 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Identity:</strong> confirming you are the person named in the arrest report</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Probable cause:</strong> in some jurisdictions, whether there was a legal basis for arrest</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Bail/release conditions:</strong> setting or denying bail, often without a full hearing (that comes later)</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Right to counsel:</strong> informing you of your right to an attorney and appointing one if you qualify</span></li>
+                      </ul>
+                    </div>
+
+                    <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
+                      <p className="text-sm font-semibold text-foreground mb-2">What the magistrate does NOT decide</p>
+                      <p className="text-sm text-muted-foreground">Guilt or innocence. This is not a mini-trial. You will not be asked to explain what happened, and you should not volunteer anything. The magistrate is handling procedural steps only.</p>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-sm font-semibold text-foreground">How it works by jurisdiction</p>
+                      <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                        {[
+                          { state: "California", note: "First appearance typically within 48 hours of arrest (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail. Judges may not set unaffordable bail simply to detain you. OR release is the default unless you are a danger or flight risk." },
+                          { state: "New York", note: "\"Arraignment\" serves as first appearance in NY — typically within 24 hours in NYC, 24–48 hours upstate. Bail reform (2020): most misdemeanors and many non-violent felonies are non-bailable — release on recognizance is presumptive." },
+                          { state: "Texas", note: "Magistration must occur within 48 hours. A magistrate sets initial bail per statutory factors (Tex. Code Crim. Proc. Art. 17.15). Many rural TX counties use PR bonds for low-level offenses. Formal bail hearing before the trial court follows." },
+                          { state: "Florida", note: "First appearance before a county judge within 24 hours. Judge must inform you of charges, set bail, and appoint counsel. Formal arraignment is usually 3–4 weeks later." },
+                          { state: "Federal", note: "Initial appearance before a federal magistrate judge 'without unnecessary delay' — courts interpret this as within 48 hours. A detention hearing typically follows 3 business days later. Federal bail is governed by the Bail Reform Act of 1984; flight risk and danger to the community are both considered." },
+                        ].map(({ state, note }) => (
+                          <div key={state} className="rounded-md border border-border/60 bg-background p-3">
+                            <p className="text-xs font-bold text-foreground mb-1">{state}</p>
+                            <p className="text-xs text-muted-foreground leading-relaxed">{note}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
+                      <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2">What to do at your first appearance</p>
+                      <ul className="space-y-1.5 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>State your name. Confirm your identity. Nothing more unless your attorney instructs otherwise.</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If you don't have an attorney, ask for a public defender immediately. The magistrate is required to inform you of this right and facilitate appointment.</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If asked about bail, briefly mention community ties (family, job, residence). Do not discuss the charges.</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If you are on probation or parole, your attorney needs to know before this hearing. It affects the bail calculus.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2 flex-wrap pt-1">
+                    <Link href="/case-timeline">
+                      <Button variant="outline" size="sm">Full Case Timeline</Button>
+                    </Link>
+                    <Link href="/case-guidance">
+                      <Button variant="outline" size="sm">Get Personalized Guidance</Button>
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+            </Accordion>
+          </div>
+        </ScrollReveal>
+
+        {/* Related Guides */}
+        <ScrollReveal delay={0.45}>
+          <div className="mt-10 border-t border-border pt-10">
             <h2 className="text-lg font-semibold mb-3">{t('first24Hours.relatedGuides')}</h2>
             <div className="grid sm:grid-cols-2 gap-2">
               {[
-                { href: "/jail-phone-call", icon: Phone, title: "Jail Phone Call Guide" },
                 { href: "/case-timeline", icon: Scale, title: "Criminal Justice Process" },
                 { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
+                { href: "/right-to-counsel", icon: Shield, title: "Right to an Attorney" },
                 { href: "/collateral-consequences", icon: BookOpen, title: "Hidden Consequences of a Conviction" },
                 { href: "/case-guidance", icon: MessageSquare, title: "Get Personalized Guidance" },
               ].map((item) => (
