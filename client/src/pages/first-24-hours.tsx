@@ -140,8 +140,8 @@ function FacilityLookupWidget() {
               >
                 <Phone className="w-3.5 h-3.5" />
                 {isStatewideUrl(result.inmateUrl)
-                  ? `${result.state} statewide inmate locator (VINELink)`
-                  : `${result.county} inmate locator`}
+                  ? `${result.state} ${t('first24Hours.facilityLookup.statewideLocatorSuffix')}`
+                  : `${result.county} ${t('first24Hours.facilityLookup.countyLocatorSuffix')}`}
               </a>
               {result.urlNote && (
                 <p className="text-xs text-muted-foreground">

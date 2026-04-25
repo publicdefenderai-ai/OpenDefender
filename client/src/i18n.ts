@@ -4797,7 +4797,9 @@ i18n
               "stateGoButton": "Go to state locator",
               "fallbackNote": "Can't find them? Call the county sheriff's office directly or search \"[county name] sheriff inmate lookup.\"",
               "zipNotFound": "ZIP not in our database. Select a state below for a state-level search, or call the county sheriff's office directly.",
-              "urlNote": "Note"
+              "urlNote": "Note",
+              "statewideLocatorSuffix": "statewide inmate locator (VINELink)",
+              "countyLocatorSuffix": "inmate locator"
             },
             "juvenile": {
               "title": "If the person arrested is under 18",
@@ -9946,7 +9948,9 @@ i18n
               "stateGoButton": "Ir al localizador estatal",
               "fallbackNote": "¿No lo encuentra? Llame directamente a la oficina del alguacil del condado o busque «[nombre del condado] alguacil búsqueda de presos».",
               "zipNotFound": "Este código postal no está en nuestra base de datos. Seleccione un estado a continuación o llame directamente al alguacil del condado.",
-              "urlNote": "Nota"
+              "urlNote": "Nota",
+              "statewideLocatorSuffix": "localizador estatal de presos (VINELink)",
+              "countyLocatorSuffix": "localizador de presos"
             },
             "juvenile": {
               "title": "Si la persona arrestada tiene menos de 18 años",
@@ -15096,7 +15100,9 @@ i18n
               "stateGoButton": "前往州级查询系统",
               "fallbackNote": "找不到？请直接拨打县治安官办公室电话，或搜索「[县名] 治安官在押人员查询」。",
               "zipNotFound": "该邮政编码不在我们的数据库中。请在下方选择一个州进行州级搜索，或直接联系县治安官办公室。",
-              "urlNote": "注意"
+              "urlNote": "注意",
+              "statewideLocatorSuffix": "州级在押人员查询系统（VINELink）",
+              "countyLocatorSuffix": "在押人员查询系统"
             },
             "juvenile": {
               "title": "如果被捕者未满18岁",
