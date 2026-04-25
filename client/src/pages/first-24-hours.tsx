@@ -322,23 +322,23 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.05}>
             <Step
               number={1}
-              title="At the Moment of Arrest"
-              timeframe="Immediately"
-              context="Police are detaining you. Your rights exist right now, but they only protect you if you use them."
+              title={t('first24Hours.steps.step1.title')}
+              timeframe={t('first24Hours.steps.step1.timeframe')}
+              context={t('first24Hours.steps.step1.context')}
               dos={[
-                'Say clearly: "I am invoking my right to remain silent" and "I want a lawyer."',
-                "Comply physically. Do not resist, even if you believe the arrest is unlawful.",
-                "Try to remember badge numbers, officer names, and everything that happens.",
+                t('first24Hours.steps.step1.do1'),
+                t('first24Hours.steps.step1.do2'),
+                t('first24Hours.steps.step1.do3'),
               ]}
               donts={[
-                'Don\'t try to explain, justify, or "clear things up." Anything you say can be used against you.',
-                "Don't consent to any search of your person, vehicle, or home.",
-                "Don't argue about whether the arrest is legal. That is your attorney's job.",
+                t('first24Hours.steps.step1.dont1'),
+                t('first24Hours.steps.step1.dont2'),
+                t('first24Hours.steps.step1.dont3'),
               ]}
             >
               <div className="mt-2 space-y-3">
                 <p className="text-sm text-muted-foreground">
-                  Your Fifth Amendment right to remain silent and your Sixth Amendment right to counsel apply from the moment of arrest. You don't need to wait for <LegalTerm term="Miranda rights">Miranda warnings</LegalTerm>. Note that an arrest warrant does not give officers the right to search your home.
+                  {t('first24Hours.steps.step1.note')}
                 </p>
                 <div className="flex gap-3 flex-wrap">
                   <Link href="/right-to-counsel">
@@ -356,24 +356,24 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.1}>
             <Step
               number={2}
-              title="Booking"
-              timeframe="Within a few hours of arrest"
-              context="You'll be taken to a police station or jail for processing: fingerprints, photographs, personal property inventoried, and charges entered into the system."
+              title={t('first24Hours.steps.step2.title')}
+              timeframe={t('first24Hours.steps.step2.timeframe')}
+              context={t('first24Hours.steps.step2.context')}
               dos={[
-                "Cooperate with the mechanical booking process (fingerprints, photos, property).",
-                "Note the name of the facility, your booking number, and the charges. You'll need this information.",
-                "Ask how family can find out where you are being held and how to contact you.",
-                "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication. Document every request.",
-                "You have the right to at least one phone call. Timing varies by state — California sets a 3-hour limit; most other states require 'reasonable time.' Ask booking staff when you can make your call.",
-                'If you don\'t speak English fluently, clearly say "I need an interpreter." You have the right to one at no cost.',
-                'Invoke your right to remain silent for anything beyond your name and date of birth. Booking intake questions ("where were you tonight?") are interrogation.',
+                t('first24Hours.steps.step2.do1'),
+                t('first24Hours.steps.step2.do2'),
+                t('first24Hours.steps.step2.do3'),
+                t('first24Hours.steps.step2.do4'),
+                t('first24Hours.steps.step2.do5'),
+                t('first24Hours.steps.step2.do6'),
+                t('first24Hours.steps.step2.do7'),
               ]}
               donts={[
-                "Don't discuss your case with anyone: other detainees, intake officers, or jail staff.",
-                "Don't sign anything you don't understand. You can ask what a form is for.",
-                "Don't assume booking staff are neutral. Everything is documented.",
-                "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
-                "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
+                t('first24Hours.steps.step2.dont1'),
+                t('first24Hours.steps.step2.dont2'),
+                t('first24Hours.steps.step2.dont3'),
+                t('first24Hours.steps.step2.dont4'),
+                t('first24Hours.steps.step2.dont5'),
               ]}
             >
               <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
@@ -385,24 +385,24 @@ export default function FirstTwentyFourHours() {
             <Step
               number={3}
               id="phone-call"
-              title="Your First Phone Call"
-              timeframe="During or shortly after booking"
-              context="You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Every subsequent call is recorded too. Use them wisely."
+              title={t('first24Hours.steps.step3.title')}
+              timeframe={t('first24Hours.steps.step3.timeframe')}
+              context={t('first24Hours.steps.step3.context')}
               dos={[
-                "Call a family member or trusted friend — not your attorney (they likely won't answer an unfamiliar collect call).",
-                "Give them: (1) the facility name, (2) your booking number, (3) the charges if known, (4) ask them to find a lawyer or contact the public defender's office in the county where you were arrested.",
-                "Keep the call short and practical. Longer calls mean more recorded material.",
-                "Ask family to write everything down and start finding legal help immediately.",
-                "For ongoing calls: stick to practical matters — court dates, commissary, updates on legal counsel, family wellbeing.",
-                "Verify with your attorney that their line is registered as an attorney-client call before discussing case details.",
+                t('first24Hours.steps.step3.do1'),
+                t('first24Hours.steps.step3.do2'),
+                t('first24Hours.steps.step3.do3'),
+                t('first24Hours.steps.step3.do4'),
+                t('first24Hours.steps.step3.do5'),
+                t('first24Hours.steps.step3.do6'),
               ]}
               donts={[
-                'Don\'t say anything about what happened. Even "I didn\'t do it" can be used against you.',
-                "Don't mention alibi information, co-defendants, or anyone else involved. Share that only with your attorney.",
-                "Don't ask anyone to destroy, move, or hold onto any item related to the incident.",
-                "Don't call the alleged victim, even to apologize or explain.",
-                "Don't speak in code. Law enforcement is trained to interpret coded language, and a jury can draw adverse inferences from evasive speech.",
-                "Don't assume letters, texts, or emails from jail are any more private than phone calls. They aren't.",
+                t('first24Hours.steps.step3.dont1'),
+                t('first24Hours.steps.step3.dont2'),
+                t('first24Hours.steps.step3.dont3'),
+                t('first24Hours.steps.step3.dont4'),
+                t('first24Hours.steps.step3.dont5'),
+                t('first24Hours.steps.step3.dont6'),
               ]}
             >
               <div className="space-y-4 mt-2">
@@ -462,29 +462,29 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.2}>
             <Step
               number={4}
-              title="Bail Hearing"
-              timeframe="Usually within 24–48 hours"
-              context="A judge will set the conditions of your release, or deny bail. This is often one of the most important early hearings because it determines whether you go home or stay in custody while your case proceeds."
+              title={t('first24Hours.steps.step4.title')}
+              timeframe={t('first24Hours.steps.step4.timeframe')}
+              context={t('first24Hours.steps.step4.context')}
               dos={[
-                "If you have an attorney, have them argue for release on your own recognizance (OR) or lower bail.",
-                "Be calm, respectful, and presentable. First impressions matter.",
-                "If speaking, mention your ties to the community: family, job, how long you've lived in the area.",
+                t('first24Hours.steps.step4.do1'),
+                t('first24Hours.steps.step4.do2'),
+                t('first24Hours.steps.step4.do3'),
               ]}
               donts={[
-                "Don't say anything about the underlying facts of the case at the bail hearing.",
-                "Don't waive your right to a bail hearing.",
-                "Don't assume bail will be unaffordable. There are options if you can't pay.",
+                t('first24Hours.steps.step4.dont1'),
+                t('first24Hours.steps.step4.dont2'),
+                t('first24Hours.steps.step4.dont3'),
               ]}
             >
               <div className="mt-2">
-                <p className="text-sm font-semibold text-foreground mb-3">If you can't afford <LegalTerm term="bail" />, here are your options:</p>
+                <p className="text-sm font-semibold text-foreground mb-3">{t('first24Hours.steps.step4.bailHeader')}</p>
                 <ol className="space-y-2.5 text-sm text-foreground/80 dark:text-foreground/75 list-none">
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">1.</span><span><strong>Request OR release</strong> (<LegalTerm term="release on own recognizance" />): ask your attorney to argue you are not a flight risk. No money required. Judge considers ties to community, employment, and family.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">2.</span><span><strong>Request reduced bail:</strong> your attorney can argue bail is excessive relative to your income. Courts are required to consider your ability to pay.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">3.</span><span><strong>Bail fund:</strong> nonprofit organizations that pay bail for people who can't afford it. Search "[your city] bail fund" or ask your attorney. Money is typically recycled after your case ends.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">4.</span><span><strong>Bail bond company:</strong> a bondsman pays your full bail for a non-refundable fee (usually 10–15%). <strong>Warning:</strong> if you miss court, the bondsman can pursue you and take any collateral you pledged.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">5.</span><span><strong>Property bond:</strong> use home equity as collateral instead of cash. Risk: the court can place a lien on the property if you miss a hearing.</span></li>
-                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span><strong>Remain in custody temporarily.</strong> Sometimes the timeline to arraignment is short enough that fighting for release is less critical. Discuss with your attorney.</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">1.</span><span>{t('first24Hours.steps.step4.bail1')}</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">2.</span><span>{t('first24Hours.steps.step4.bail2')}</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">3.</span><span>{t('first24Hours.steps.step4.bail3')}</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">4.</span><span>{t('first24Hours.steps.step4.bail4')}</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">5.</span><span>{t('first24Hours.steps.step4.bail5')}</span></li>
+                  <li className="flex items-start gap-2"><span className="flex-shrink-0 font-bold">6.</span><span>{t('first24Hours.steps.step4.bail6')}</span></li>
                 </ol>
                 <div className="flex gap-3 flex-wrap mt-3">
                   <Link href="/case-timeline#bail-guide">
@@ -500,18 +500,18 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.25}>
             <Step
               number={5}
-              title="Getting Legal Representation"
-              timeframe="Before your arraignment"
-              context="You have the right to an attorney at every critical stage of your case. If you cannot afford one, a public defender will be appointed. Do not wait. Get this started immediately."
+              title={t('first24Hours.steps.step5.title')}
+              timeframe={t('first24Hours.steps.step5.timeframe')}
+              context={t('first24Hours.steps.step5.context')}
               dos={[
-                "If you cannot afford an attorney, formally request a public defender at your first court appearance.",
-                "If you can afford an attorney, have family start calling private criminal defense attorneys right away. Many offer emergency consultations.",
-                "When you do speak with your attorney, tell them everything. Those conversations are protected by attorney-client privilege.",
+                t('first24Hours.steps.step5.do1'),
+                t('first24Hours.steps.step5.do2'),
+                t('first24Hours.steps.step5.do3'),
               ]}
               donts={[
-                "Don't waive your right to counsel. Representing yourself in a criminal case is almost never a good idea.",
-                "Don't delay. The earlier an attorney is involved, the more they can do.",
-                "Don't make any deals or statements to prosecutors without a lawyer present.",
+                t('first24Hours.steps.step5.dont1'),
+                t('first24Hours.steps.step5.dont2'),
+                t('first24Hours.steps.step5.dont3'),
               ]}
             >
               <div className="flex gap-3 flex-wrap mt-2">
@@ -532,18 +532,18 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.3}>
             <Step
               number={6}
-              title="Arraignment: Your First Court Appearance"
-              timeframe="Within 48–72 hours (some states longer)"
-              context="You will be formally read the charges against you and asked to enter a plea. This is not the time to fight your case. It is the time to preserve your options."
+              title={t('first24Hours.steps.step6.title')}
+              timeframe={t('first24Hours.steps.step6.timeframe')}
+              context={t('first24Hours.steps.step6.context')}
               dos={[
-                'Plead "not guilty" at arraignment, unless your attorney has specifically advised otherwise after reviewing your case.',
-                "This preserves every option available to you. You can always change a not-guilty plea later.",
-                "Appear in clean, appropriate clothing if you have been released on bail.",
+                t('first24Hours.steps.step6.do1'),
+                t('first24Hours.steps.step6.do2'),
+                t('first24Hours.steps.step6.do3'),
               ]}
               donts={[
-                "Don't plead guilty at arraignment. You cannot take it back, and you haven't had time to evaluate the full case.",
-                "Don't speak to the judge about the facts of your case.",
-                "Don't miss this court date. A warrant will be issued for your arrest.",
+                t('first24Hours.steps.step6.dont1'),
+                t('first24Hours.steps.step6.dont2'),
+                t('first24Hours.steps.step6.dont3'),
               ]}
             >
               <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
@@ -554,20 +554,20 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.35}>
             <Step
               number={7}
-              title="Between Now and Your Next Court Date"
-              timeframe="Ongoing"
-              context="After arraignment, your case enters the pre-trial phase. What you do and don't do during this period matters."
+              title={t('first24Hours.steps.step7.title')}
+              timeframe={t('first24Hours.steps.step7.timeframe')}
+              context={t('first24Hours.steps.step7.context')}
               dos={[
-                "Attend every court date without exception. Missing a hearing results in an arrest warrant and forfeiture of any bail.",
-                "Follow every condition of your bail or release exactly. Violations result in immediate re-arrest.",
-                "Write down everything you remember about the incident as soon as possible while it is fresh.",
-                "Communicate with your attorney promptly and honestly.",
+                t('first24Hours.steps.step7.do1'),
+                t('first24Hours.steps.step7.do2'),
+                t('first24Hours.steps.step7.do3'),
+                t('first24Hours.steps.step7.do4'),
               ]}
               donts={[
-                "Don't contact any alleged victims or witnesses, even to apologize or explain.",
-                "Don't post anything about your case on social media. Prosecutors monitor this.",
-                "Don't discuss your case with family or friends. Prosecutors can subpoena them to testify about what you said.",
-                "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome.",
+                t('first24Hours.steps.step7.dont1'),
+                t('first24Hours.steps.step7.dont2'),
+                t('first24Hours.steps.step7.dont3'),
+                t('first24Hours.steps.step7.dont4'),
               ]}
               isLast
             />
@@ -612,7 +612,7 @@ export default function FirstTwentyFourHours() {
                     <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">{t('first24Hours.accordion.counselGapTitle')}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {t('first24Hours.accordion.counselGapBody')}{" "}
-                      <strong>Do not answer any questions during this period without an attorney present.</strong> Your invocation of silence must be clear and unambiguous.
+                      <strong>{t('first24Hours.accordion.counselGapWarning')}</strong>
                     </p>
                   </div>
 
@@ -620,15 +620,15 @@ export default function FirstTwentyFourHours() {
                     <p className="text-sm font-semibold text-foreground">{t('first24Hours.accordion.counselVariationsTitle')}</p>
                     <div className="grid sm:grid-cols-2 gap-2 text-sm">
                       {[
-                        { state: "California", note: "Police must stop questioning immediately upon any invocation. CA also requires arraignment within 48 hours of arrest (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail." },
-                        { state: "New York", note: "NY courts interpret the right to counsel broadly. Once you retain or request an attorney, police must contact that attorney before questioning — stronger than federal law." },
-                        { state: "Texas", note: "Right to counsel attaches at arraignment. Until then, the Fifth Amendment is your main protection. TX magistration must occur within 48 hours of arrest." },
-                        { state: "Florida", note: "First appearance before a magistrate within 24 hours for a first-appearance hearing. Arraignment is typically 21–33 days after filing." },
-                        { state: "Federal", note: "Must appear before a magistrate 'without unnecessary delay' — courts interpret this as within 48 hours. Federal rules are strictly applied." },
-                      ].map(({ state, note }) => (
+                        { state: "California", noteKey: "counselStateCA" },
+                        { state: "New York", noteKey: "counselStateNY" },
+                        { state: "Texas", noteKey: "counselStateTX" },
+                        { state: "Florida", noteKey: "counselStateFL" },
+                        { state: "Federal", noteKey: "counselStateFed" },
+                      ].map(({ state, noteKey }) => (
                         <div key={state} className="rounded-md border border-border/60 bg-background p-3">
                           <p className="text-xs font-bold text-foreground mb-1">{state}</p>
-                          <p className="text-xs text-muted-foreground leading-relaxed">{note}</p>
+                          <p className="text-xs text-muted-foreground leading-relaxed">{t(`first24Hours.accordion.${noteKey}`)}</p>
                         </div>
                       ))}
                     </div>
@@ -732,15 +732,15 @@ export default function FirstTwentyFourHours() {
                       <p className="text-sm font-semibold text-foreground">{t('first24Hours.accordion.firstAppearanceVariationsTitle')}</p>
                       <div className="grid sm:grid-cols-2 gap-2 text-sm">
                         {[
-                          { state: "California", note: "First appearance typically within 48 hours (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail." },
-                          { state: "New York", note: "Arraignment serves as first appearance in NY — typically within 24 hours in NYC, 24–48 hours upstate. Bail reform (2020): most misdemeanors and many non-violent felonies are non-bailable." },
-                          { state: "Texas", note: "Magistration must occur within 48 hours. A magistrate sets initial bail per statutory factors (Tex. Code Crim. Proc. Art. 17.15)." },
-                          { state: "Florida", note: "First appearance before a county judge within 24 hours. Judge must inform you of charges, set bail, and appoint counsel." },
-                          { state: "Federal", note: "Initial appearance before a federal magistrate judge 'without unnecessary delay' — courts interpret this as within 48 hours." },
-                        ].map(({ state, note }) => (
+                          { state: "California", noteKey: "firstAppearanceStateCA" },
+                          { state: "New York", noteKey: "firstAppearanceStateNY" },
+                          { state: "Texas", noteKey: "firstAppearanceStateTX" },
+                          { state: "Florida", noteKey: "firstAppearanceStateFL" },
+                          { state: "Federal", noteKey: "firstAppearanceStateFed" },
+                        ].map(({ state, noteKey }) => (
                           <div key={state} className="rounded-md border border-border/60 bg-background p-3">
                             <p className="text-xs font-bold text-foreground mb-1">{state}</p>
-                            <p className="text-xs text-muted-foreground leading-relaxed">{note}</p>
+                            <p className="text-xs text-muted-foreground leading-relaxed">{t(`first24Hours.accordion.${noteKey}`)}</p>
                           </div>
                         ))}
                       </div>
@@ -800,7 +800,7 @@ export default function FirstTwentyFourHours() {
             <AlertDescription className="text-muted-foreground text-sm">
               <div className="flex items-start gap-3">
                 <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0 opacity-60" />
-                <span>This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.</span>
+                <span>{t('first24Hours.disclaimer')}</span>
               </div>
             </AlertDescription>
           </Alert>
