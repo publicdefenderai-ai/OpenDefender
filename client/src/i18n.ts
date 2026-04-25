@@ -4713,8 +4713,57 @@ i18n
             "deepDiveSubtitle": "Important topics that affect how you navigate the first 24 hours — click any section to expand.",
             "accordion": {
               "counselTitle": "When does your right to a lawyer actually begin?",
+              "counselIntro": "The right to a lawyer is actually two separate rights under two different amendments — and they kick in at different moments.",
+              "counselFifthTitle": "Fifth Amendment right: during interrogation",
+              "counselFifthBody": "This right applies any time police want to question you — before arrest, during arrest, or at the station. Say \"I want a lawyer\" and questioning must stop until an attorney is present. This applies even before charges are filed.",
+              "counselSixthTitle": "Sixth Amendment right: at formal proceedings",
+              "counselSixthBody": "This right attaches once formal charges are filed — typically at arraignment or indictment. From this point, police cannot question you about the charged offense outside your attorney's presence.",
+              "counselGapTitle": "The gap: after arrest, before formal charges",
+              "counselGapBody": "Between arrest and arraignment, your Sixth Amendment right has not yet attached for most purposes. This is the most dangerous window — do not answer any questions during this period without an attorney present.",
               "probationTitle": "If you're on probation or parole",
-              "firstAppearanceTitle": "Your first appearance before a magistrate: what to expect"
+              "probationAlert": "If you are on probation or parole, a new arrest is a more serious situation. You are not just facing new charges — you are likely also facing a violation proceeding on your existing supervision. The two tracks run in parallel.",
+              "probationImmediateTitle": "What happens immediately",
+              "probationRightsTitle": "Rights that still apply",
+              "probationWhatToDoTitle": "What to do first",
+              "firstAppearanceTitle": "Your first appearance before a magistrate: what to expect",
+              "firstAppearanceIntro": "Before your formal arraignment, most jurisdictions require a brief first appearance before a magistrate or duty judge — often within 24–48 hours of arrest.",
+              "firstAppearanceDecidesTitle": "What the magistrate decides",
+              "firstAppearanceNotTitle": "What the magistrate does NOT decide",
+              "firstAppearanceNotBody": "Guilt or innocence. This is not a mini-trial. You will not be asked to explain what happened, and you should not volunteer anything.",
+              "firstAppearanceHowTitle": "What to do at your first appearance"
+            },
+            "phoneCall": {
+              "warningTitle": "Every call is monitored and recorded — without exception.",
+              "warningBody": "Prosecutors have used jail calls as key evidence in countless cases, including statements made to family members. The only protected calls are to your attorney — and only if that line is properly designated.",
+              "scriptTitle": "Sample script for your first call:",
+              "neverSayTitle": "What never to say — on any jail call",
+              "neverSay": {
+                "factsTitle": "Facts about the incident",
+                "factsDetail": "\"I didn't do it,\" \"I wasn't there,\" \"It was self-defense\" — all open the door to cross-examination and can be twisted out of context.",
+                "alibiTitle": "Alibi information",
+                "alibiDetail": "Don't say where you were or who you were with. Share that only with your attorney.",
+                "codefTitle": "Other people involved",
+                "codefDetail": "Don't mention co-defendants, witnesses, or anyone else who may have been present.",
+                "evidenceTitle": "Evidence",
+                "evidenceDetail": "Don't ask anyone to find, move, or hold onto any item related to the incident.",
+                "victimTitle": "Contact with the alleged victim",
+                "victimDetail": "Never ask someone to pass along a message, apology, or explanation to the alleged victim or their family.",
+                "frustrationTitle": "Frustration about the case",
+                "frustrationDetail": "\"The police lied,\" \"They don't have real evidence\" — prosecutors can use these to establish consciousness of guilt."
+              }
+            },
+            "facilityLookup": {
+              "title": "Find who to call: locate a detained person",
+              "subtitle": "Enter a ZIP code to find your county's official inmate locator — or select a state for state-level search.",
+              "zipPlaceholder": "Enter ZIP code (e.g. 90001)",
+              "zipLabel": "ZIP code",
+              "countyFound": "County found:",
+              "goToLocator": "Go to inmate locator",
+              "stateSelect": "Or select a state",
+              "stateGoButton": "Go to state locator",
+              "fallbackNote": "Can't find them? Call the county sheriff's office directly or search \"[county name] sheriff inmate lookup.\"",
+              "zipNotFound": "ZIP not in our database. Select a state below for a state-level search, or call the county sheriff's office directly.",
+              "urlNote": "Note"
             }
           },
           "jailPhoneCall": {
@@ -9652,8 +9701,57 @@ i18n
             "deepDiveSubtitle": "Temas importantes que afectan cómo navegar las primeras 24 horas — haga clic en cualquier sección para expandir.",
             "accordion": {
               "counselTitle": "¿Cuándo comienza realmente su derecho a un abogado?",
+              "counselIntro": "El derecho a un abogado en realidad comprende dos derechos separados bajo dos enmiendas diferentes, y entran en vigor en momentos distintos.",
+              "counselFifthTitle": "Derecho de la Quinta Enmienda: durante el interrogatorio",
+              "counselFifthBody": "Este derecho aplica cada vez que la policía quiera interrogarle — antes, durante o después del arresto. Diga «Quiero un abogado» y el interrogatorio debe cesar hasta que haya un abogado presente.",
+              "counselSixthTitle": "Derecho de la Sexta Enmienda: en procedimientos formales",
+              "counselSixthBody": "Este derecho se activa una vez que se presentan cargos formales — generalmente en la lectura de cargos. Desde ese momento, la policía no puede interrogarle sobre el delito imputado sin que su abogado esté presente.",
+              "counselGapTitle": "El intervalo: después del arresto, antes de los cargos formales",
+              "counselGapBody": "Entre el arresto y la lectura de cargos, su derecho de la Sexta Enmienda no ha entrado en vigor. Este es el período más peligroso — no responda ninguna pregunta sin un abogado presente.",
               "probationTitle": "Si está en libertad condicional o en libertad supervisada",
-              "firstAppearanceTitle": "Su primera comparecencia ante el magistrado: qué esperar"
+              "probationAlert": "Si está en libertad condicional o supervisada, un nuevo arresto es una situación más seria. No solo enfrenta nuevos cargos — probablemente también enfrenta un procedimiento de violación de su supervisión. Los dos procesos corren en paralelo.",
+              "probationImmediateTitle": "Qué sucede de inmediato",
+              "probationRightsTitle": "Derechos que aún se aplican",
+              "probationWhatToDoTitle": "Qué hacer primero",
+              "firstAppearanceTitle": "Su primera comparecencia ante el magistrado: qué esperar",
+              "firstAppearanceIntro": "Antes de su lectura formal de cargos, la mayoría de los estados requieren una breve primera comparecencia ante un magistrado — generalmente dentro de las 24 a 48 horas del arresto.",
+              "firstAppearanceDecidesTitle": "Qué decide el magistrado",
+              "firstAppearanceNotTitle": "Lo que el magistrado NO decide",
+              "firstAppearanceNotBody": "Culpabilidad o inocencia. Esto no es un juicio abreviado. No se le pedirá que explique lo que ocurrió, y no debe ofrecer información voluntariamente.",
+              "firstAppearanceHowTitle": "Qué hacer en su primera comparecencia"
+            },
+            "phoneCall": {
+              "warningTitle": "Todas las llamadas son monitoreadas y grabadas — sin excepción.",
+              "warningBody": "Los fiscales han usado llamadas de cárcel como evidencia clave en innumerables casos, incluyendo declaraciones hechas a familiares. Las únicas llamadas protegidas son las que hace a su abogado — y solo si esa línea está debidamente registrada.",
+              "scriptTitle": "Guión de ejemplo para su primera llamada:",
+              "neverSayTitle": "Lo que nunca debe decir — en ninguna llamada de cárcel",
+              "neverSay": {
+                "factsTitle": "Hechos sobre el incidente",
+                "factsDetail": "«No lo hice», «No estaba allí», «Fue en defensa propia» — todo esto abre la puerta a contrainterrogatorios y puede ser malinterpretado.",
+                "alibiTitle": "Información de coartada",
+                "alibiDetail": "No diga dónde estaba ni con quién. Comparta eso solo con su abogado.",
+                "codefTitle": "Otras personas involucradas",
+                "codefDetail": "No mencione coacusados, testigos ni ninguna otra persona que pudiera haber estado presente.",
+                "evidenceTitle": "Evidencia",
+                "evidenceDetail": "No pida a nadie que encuentre, mueva o guarde ningún artículo relacionado con el incidente.",
+                "victimTitle": "Contacto con la supuesta víctima",
+                "victimDetail": "Nunca pida a alguien que transmita un mensaje, disculpa o explicación a la supuesta víctima o su familia.",
+                "frustrationTitle": "Frustración con el caso",
+                "frustrationDetail": "«La policía mintió», «No tienen pruebas reales» — los fiscales pueden usar esto para establecer conciencia de culpabilidad."
+              }
+            },
+            "facilityLookup": {
+              "title": "Encuentre a quién llamar: localice a una persona detenida",
+              "subtitle": "Ingrese un código postal para encontrar el localizador oficial de presos de su condado, o seleccione un estado.",
+              "zipPlaceholder": "Ingrese el código postal (ej. 90001)",
+              "zipLabel": "Código postal",
+              "countyFound": "Condado encontrado:",
+              "goToLocator": "Ir al localizador de presos",
+              "stateSelect": "O seleccione un estado",
+              "stateGoButton": "Ir al localizador estatal",
+              "fallbackNote": "¿No lo encuentra? Llame directamente a la oficina del alguacil del condado o busque «[nombre del condado] alguacil búsqueda de presos».",
+              "zipNotFound": "Este código postal no está en nuestra base de datos. Seleccione un estado a continuación o llame directamente al alguacil del condado.",
+              "urlNote": "Nota"
             }
           },
           "jailPhoneCall": {
@@ -14592,8 +14690,57 @@ i18n
             "deepDiveSubtitle": "影响您如何度过被捕后24小时的重要议题——点击任意部分展开。",
             "accordion": {
               "counselTitle": "您的律师权利究竟从何时开始？",
+              "counselIntro": "律师权利实际上涉及两项独立权利，分别适用于不同修正案，且在不同时机生效。",
+              "counselFifthTitle": "第五修正案权利：审讯期间",
+              "counselFifthBody": "只要警察想要询问您——无论是在逮捕前、逮捕中还是在警察局——此权利均适用。说「我要律师」，审讯必须停止，直到律师在场。即使在正式指控之前，此权利也适用。",
+              "counselSixthTitle": "第六修正案权利：正式程序中",
+              "counselSixthBody": "此权利在正式提出指控后生效——通常是在提审或起诉时。从此时起，警察不得在没有您律师在场的情况下就指控罪行进行询问。",
+              "counselGapTitle": "空白期：逮捕后、正式指控前",
+              "counselGapBody": "在逮捕和提审之间，您的第六修正案权利尚未在大多数情况下生效。这是最危险的时期——在此期间没有律师在场请勿回答任何问题。",
               "probationTitle": "如果您正处于缓刑或假释期间",
-              "firstAppearanceTitle": "第一次出庭：将会发生什么"
+              "probationAlert": "如果您正处于缓刑或假释期间，新的逮捕是一种更严重的情况。您不仅面临新的指控，还可能面临针对现有监督的违规程序。两个程序同时进行。",
+              "probationImmediateTitle": "立即发生的情况",
+              "probationRightsTitle": "仍然适用的权利",
+              "probationWhatToDoTitle": "首先应该做什么",
+              "firstAppearanceTitle": "第一次出庭：将会发生什么",
+              "firstAppearanceIntro": "在正式提审之前，大多数司法管辖区要求在逮捕后24至48小时内，在治安法官或值班法官面前进行简短的首次出庭。",
+              "firstAppearanceDecidesTitle": "治安法官决定的内容",
+              "firstAppearanceNotTitle": "治安法官不会决定的内容",
+              "firstAppearanceNotBody": "有罪或无罪。这不是一次迷你审判。不会要求您解释发生了什么，您也不应主动提供任何信息。",
+              "firstAppearanceHowTitle": "首次出庭时应该怎么做"
+            },
+            "phoneCall": {
+              "warningTitle": "所有电话均被监听和录音——无一例外。",
+              "warningBody": "检察官在无数案件中将监狱电话作为关键证据，包括对家人说的话。唯一受保护的通话是与您律师的通话——且仅当该线路被正确登记为律师-委托人通话时。",
+              "scriptTitle": "第一次通话的参考脚本：",
+              "neverSayTitle": "任何监狱电话中都不要说的话",
+              "neverSay": {
+                "factsTitle": "关于事件的事实",
+                "factsDetail": "「我没有做」「我不在场」「那是自卫」——这些都会为交叉审问打开大门，且可能被断章取义。",
+                "alibiTitle": "不在场证明信息",
+                "alibiDetail": "不要说您在哪里或与谁在一起。只与您的律师分享这些信息。",
+                "codefTitle": "其他涉案人员",
+                "codefDetail": "不要提及共同被告、证人或任何可能在场的人。",
+                "evidenceTitle": "证据",
+                "evidenceDetail": "不要要求任何人寻找、移动或保管与事件相关的任何物品。",
+                "victimTitle": "与所谓受害者的联系",
+                "victimDetail": "永远不要让任何人向所谓受害者或其家人转达信息、道歉或解释。",
+                "frustrationTitle": "对案件的不满",
+                "frustrationDetail": "「警察撒谎了」「他们没有真实证据」——检察官可以用这些来证明您有罪意识。"
+              }
+            },
+            "facilityLookup": {
+              "title": "查找联系方式：定位被拘留者",
+              "subtitle": "输入邮政编码查找您所在县的官方被拘留者查询系统，或选择所在州。",
+              "zipPlaceholder": "输入邮政编码（例如 90001）",
+              "zipLabel": "邮政编码",
+              "countyFound": "找到所在县：",
+              "goToLocator": "前往被拘留者查询系统",
+              "stateSelect": "或选择州",
+              "stateGoButton": "前往州级查询系统",
+              "fallbackNote": "找不到？请直接拨打县治安官办公室电话，或搜索「[县名] 治安官在押人员查询」。",
+              "zipNotFound": "该邮政编码不在我们的数据库中。请在下方选择一个州进行州级搜索，或直接联系县治安官办公室。",
+              "urlNote": "注意"
             }
           },
           "jailPhoneCall": {

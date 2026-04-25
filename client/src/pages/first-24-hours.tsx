@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Check, X, ChevronDown, Phone, MapPin } from "lucide-react";
+import { Check, X, Phone, MapPin } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { BrandShieldIcon } from "@/components/brand-logo";
@@ -16,6 +16,202 @@ import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { lookupZip, getStateFallback } from "@/lib/zip-county-data";
+
+// State-level VINELink fallbacks for state dropdown
+const STATE_LOCATORS: Record<string, { name: string; url: string; note?: string }> = {
+  AL: { name: "Alabama", url: "https://vinelink.vineapps.com/search/AL/Person" },
+  AK: { name: "Alaska", url: "https://vinelink.vineapps.com/search/AK/Person" },
+  AZ: { name: "Arizona", url: "https://corrections.az.gov/public-inmate-search" },
+  AR: { name: "Arkansas", url: "https://vinelink.vineapps.com/search/AR/Person" },
+  CA: { name: "California", url: "https://vinelink.vineapps.com/search/CA/Person", note: "For county jails. State prison: inmatelocator.cdcr.ca.gov" },
+  CO: { name: "Colorado", url: "https://www.colorado.gov/apps/offender/public/#/" },
+  CT: { name: "Connecticut", url: "https://www.ctinmateinfo.state.ct.us/" },
+  DE: { name: "Delaware", url: "https://vinelink.vineapps.com/search/DE/Person" },
+  FL: { name: "Florida", url: "https://vinelink.vineapps.com/search/FL/Person" },
+  GA: { name: "Georgia", url: "https://vinelink.vineapps.com/search/GA/Person" },
+  HI: { name: "Hawaii", url: "https://vinelink.vineapps.com/search/HI/Person" },
+  ID: { name: "Idaho", url: "https://vinelink.vineapps.com/search/ID/Person" },
+  IL: { name: "Illinois", url: "https://vinelink.vineapps.com/search/IL/Person" },
+  IN: { name: "Indiana", url: "https://vinelink.vineapps.com/search/IN/Person" },
+  IA: { name: "Iowa", url: "https://vinelink.vineapps.com/search/IA/Person" },
+  KS: { name: "Kansas", url: "https://vinelink.vineapps.com/search/KS/Person" },
+  KY: { name: "Kentucky", url: "https://corrections.ky.gov/depts/facilityops/Pages/kool.aspx" },
+  LA: { name: "Louisiana", url: "https://vinelink.vineapps.com/search/LA/Person" },
+  ME: { name: "Maine", url: "https://vinelink.vineapps.com/search/ME/Person" },
+  MD: { name: "Maryland", url: "https://vinelink.vineapps.com/search/MD/Person" },
+  MA: { name: "Massachusetts", url: "https://vinelink.vineapps.com/search/MA/Person" },
+  MI: { name: "Michigan", url: "https://mdocweb.state.mi.us/otis2/otis2.aspx" },
+  MN: { name: "Minnesota", url: "https://vinelink.vineapps.com/search/MN/Person" },
+  MS: { name: "Mississippi", url: "https://vinelink.vineapps.com/search/MS/Person" },
+  MO: { name: "Missouri", url: "https://vinelink.vineapps.com/search/MO/Person" },
+  MT: { name: "Montana", url: "https://vinelink.vineapps.com/search/MT/Person" },
+  NE: { name: "Nebraska", url: "https://vinelink.vineapps.com/search/NE/Person" },
+  NV: { name: "Nevada", url: "https://vinelink.vineapps.com/search/NV/Person" },
+  NH: { name: "New Hampshire", url: "https://vinelink.vineapps.com/search/NH/Person" },
+  NJ: { name: "New Jersey", url: "https://www.njinmateinfo.com/" },
+  NM: { name: "New Mexico", url: "https://vinelink.vineapps.com/search/NM/Person" },
+  NY: { name: "New York", url: "https://vinelink.vineapps.com/search/NY/Person", note: "County jails. State prison: nysdoccslookup.doccs.ny.gov" },
+  NC: { name: "North Carolina", url: "https://webapps.doc.state.nc.us/opi/offendersearch.do" },
+  ND: { name: "North Dakota", url: "https://vinelink.vineapps.com/search/ND/Person" },
+  OH: { name: "Ohio", url: "https://appgateway.drc.ohio.gov/OffenderSearch" },
+  OK: { name: "Oklahoma", url: "https://vinelink.vineapps.com/search/OK/Person" },
+  OR: { name: "Oregon", url: "https://vinelink.vineapps.com/search/OR/Person" },
+  PA: { name: "Pennsylvania", url: "https://vinelink.vineapps.com/search/PA/Person" },
+  RI: { name: "Rhode Island", url: "https://vinelink.vineapps.com/search/RI/Person" },
+  SC: { name: "South Carolina", url: "https://vinelink.vineapps.com/search/SC/Person" },
+  SD: { name: "South Dakota", url: "https://vinelink.vineapps.com/search/SD/Person" },
+  TN: { name: "Tennessee", url: "https://vinelink.vineapps.com/search/TN/Person" },
+  TX: { name: "Texas", url: "https://vinelink.vineapps.com/search/TX/Person", note: "County jails. State prison: offender.tdcj.texas.gov" },
+  UT: { name: "Utah", url: "https://vinelink.vineapps.com/search/UT/Person" },
+  VT: { name: "Vermont", url: "https://vinelink.vineapps.com/search/VT/Person" },
+  VA: { name: "Virginia", url: "https://vadoc.virginia.gov/offenders/locator/" },
+  WA: { name: "Washington", url: "https://vinelink.vineapps.com/search/WA/Person" },
+  WV: { name: "West Virginia", url: "https://vinelink.vineapps.com/search/WV/Person" },
+  WI: { name: "Wisconsin", url: "https://vinelink.vineapps.com/search/WI/Person" },
+  WY: { name: "Wyoming", url: "https://vinelink.vineapps.com/search/WY/Person" },
+  DC: { name: "Washington D.C.", url: "https://vinelink.vineapps.com/search/DC/Person" },
+  FED: { name: "Federal (BOP)", url: "https://www.bop.gov/inmateloc/", note: "Federal custody only. Search by name or register number." },
+};
+
+function FacilityLookupWidget() {
+  const { t } = useTranslation();
+  const [zip, setZip] = useState("");
+  const [selectedState, setSelectedState] = useState("");
+  const [result, setResult] = useState<ReturnType<typeof lookupZip> | null | undefined>(undefined);
+  const [stateFallback, setStateFallback] = useState<ReturnType<typeof getStateFallback> | null>(null);
+
+  function handleZipSearch() {
+    if (zip.replace(/\D/g, "").length < 5) return;
+    const found = lookupZip(zip);
+    setResult(found);
+    if (!found) {
+      const fb = getStateFallback(zip);
+      setStateFallback(fb);
+    } else {
+      setStateFallback(null);
+    }
+  }
+
+  const stateLocator = selectedState ? STATE_LOCATORS[selectedState] : null;
+
+  return (
+    <div className="mt-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/40 p-4">
+      <div className="flex items-center gap-2 mb-3">
+        <MapPin className="w-4 h-4 text-muted-foreground" />
+        <p className="text-sm font-semibold text-foreground">{t('first24Hours.facilityLookup.title')}</p>
+      </div>
+      <p className="text-xs text-muted-foreground mb-3">{t('first24Hours.facilityLookup.subtitle')}</p>
+
+      {/* ZIP lookup */}
+      <div className="flex gap-2 mb-3">
+        <input
+          type="text"
+          inputMode="numeric"
+          maxLength={5}
+          value={zip}
+          onChange={(e) => {
+            const v = e.target.value.replace(/\D/g, "").slice(0, 5);
+            setZip(v);
+            setResult(undefined);
+            setStateFallback(null);
+          }}
+          onKeyDown={(e) => e.key === "Enter" && handleZipSearch()}
+          placeholder={t('first24Hours.facilityLookup.zipPlaceholder')}
+          aria-label={t('first24Hours.facilityLookup.zipLabel')}
+          className="flex-1 text-sm rounded-md border border-input bg-background px-3 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        />
+        <Button
+          size="sm"
+          onClick={handleZipSearch}
+          disabled={zip.replace(/\D/g, "").length < 5}
+          className="shrink-0"
+        >
+          <Phone className="w-3.5 h-3.5 mr-1.5" />
+          {t('first24Hours.facilityLookup.goToLocator')}
+        </Button>
+      </div>
+
+      {/* Result area */}
+      {result !== undefined && (
+        <div className="rounded-md bg-background border border-border p-3 mb-3">
+          {result ? (
+            <div className="space-y-2">
+              <p className="text-xs text-muted-foreground">
+                <span className="font-semibold text-foreground">{t('first24Hours.facilityLookup.countyFound')}</span>{" "}
+                {result.county}, {result.state}
+              </p>
+              <a
+                href={result.inmateUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline underline-offset-2 hover:text-primary/80"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                {result.county} inmate locator
+              </a>
+              {result.urlNote && (
+                <p className="text-xs text-muted-foreground">
+                  <span className="font-medium">{t('first24Hours.facilityLookup.urlNote')}:</span> {result.urlNote}
+                </p>
+              )}
+            </div>
+          ) : (
+            <div className="space-y-2">
+              <p className="text-xs text-amber-700 dark:text-amber-300">{t('first24Hours.facilityLookup.zipNotFound')}</p>
+              {stateFallback && (
+                <a
+                  href={stateFallback.inmateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline underline-offset-2 hover:text-primary/80"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  {stateFallback.state} statewide inmate locator
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* State selector fallback */}
+      <div className="border-t border-border/60 pt-3 mt-1">
+        <p className="text-xs text-muted-foreground mb-2">{t('first24Hours.facilityLookup.stateSelect')}</p>
+        <div className="flex gap-2">
+          <select
+            value={selectedState}
+            onChange={(e) => setSelectedState(e.target.value)}
+            className="flex-1 text-sm rounded-md border border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            aria-label={t('first24Hours.facilityLookup.stateSelect')}
+          >
+            <option value="">—</option>
+            {Object.entries(STATE_LOCATORS).map(([code, { name }]) => (
+              <option key={code} value={code}>{name}</option>
+            ))}
+          </select>
+          {stateLocator && (
+            <a
+              href={stateLocator.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors whitespace-nowrap"
+            >
+              {t('first24Hours.facilityLookup.stateGoButton')}
+            </a>
+          )}
+        </div>
+        {stateLocator?.note && (
+          <p className="text-xs text-muted-foreground mt-2">
+            <span className="font-medium">{t('first24Hours.facilityLookup.urlNote')}:</span> {stateLocator.note}
+          </p>
+        )}
+      </div>
+
+      <p className="text-xs text-muted-foreground mt-3">{t('first24Hours.facilityLookup.fallbackNote')}</p>
+    </div>
+  );
+}
 
 interface StepProps {
   number: number;
@@ -93,111 +289,6 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, child
   );
 }
 
-// State-level official inmate/jail locator data
-const FACILITY_LOCATORS: Record<string, { name: string; url: string; note?: string }> = {
-  AL: { name: "Alabama", url: "https://vinelink.vineapps.com/search/AL/Person" },
-  AK: { name: "Alaska", url: "https://vinelink.vineapps.com/search/AK/Person" },
-  AZ: { name: "Arizona", url: "https://corrections.az.gov/public-inmate-search" },
-  AR: { name: "Arkansas", url: "https://vinelink.vineapps.com/search/AR/Person" },
-  CA: { name: "California", url: "https://vinelink.vineapps.com/search/CA/Person", note: "For county jails. State prison use: inmatelocator.cdcr.ca.gov" },
-  CO: { name: "Colorado", url: "https://www.colorado.gov/apps/offender/public/#/" },
-  CT: { name: "Connecticut", url: "https://www.ctinmateinfo.state.ct.us/" },
-  DE: { name: "Delaware", url: "https://vinelink.vineapps.com/search/DE/Person" },
-  FL: { name: "Florida", url: "https://vinelink.vineapps.com/search/FL/Person", note: "For county jails. State prison: dc.myflorida.com" },
-  GA: { name: "Georgia", url: "https://vinelink.vineapps.com/search/GA/Person" },
-  HI: { name: "Hawaii", url: "https://vinelink.vineapps.com/search/HI/Person" },
-  ID: { name: "Idaho", url: "https://vinelink.vineapps.com/search/ID/Person" },
-  IL: { name: "Illinois", url: "https://vinelink.vineapps.com/search/IL/Person" },
-  IN: { name: "Indiana", url: "https://vinelink.vineapps.com/search/IN/Person" },
-  IA: { name: "Iowa", url: "https://vinelink.vineapps.com/search/IA/Person" },
-  KS: { name: "Kansas", url: "https://vinelink.vineapps.com/search/KS/Person" },
-  KY: { name: "Kentucky", url: "https://corrections.ky.gov/depts/facilityops/Pages/kool.aspx" },
-  LA: { name: "Louisiana", url: "https://vinelink.vineapps.com/search/LA/Person" },
-  ME: { name: "Maine", url: "https://vinelink.vineapps.com/search/ME/Person" },
-  MD: { name: "Maryland", url: "https://vinelink.vineapps.com/search/MD/Person" },
-  MA: { name: "Massachusetts", url: "https://vinelink.vineapps.com/search/MA/Person" },
-  MI: { name: "Michigan", url: "https://mdocweb.state.mi.us/otis2/otis2.aspx" },
-  MN: { name: "Minnesota", url: "https://vinelink.vineapps.com/search/MN/Person" },
-  MS: { name: "Mississippi", url: "https://vinelink.vineapps.com/search/MS/Person" },
-  MO: { name: "Missouri", url: "https://vinelink.vineapps.com/search/MO/Person" },
-  MT: { name: "Montana", url: "https://vinelink.vineapps.com/search/MT/Person" },
-  NE: { name: "Nebraska", url: "https://vinelink.vineapps.com/search/NE/Person" },
-  NV: { name: "Nevada", url: "https://vinelink.vineapps.com/search/NV/Person" },
-  NH: { name: "New Hampshire", url: "https://vinelink.vineapps.com/search/NH/Person" },
-  NJ: { name: "New Jersey", url: "https://www.njinmateinfo.com/" },
-  NM: { name: "New Mexico", url: "https://vinelink.vineapps.com/search/NM/Person" },
-  NY: { name: "New York", url: "https://vinelink.vineapps.com/search/NY/Person", note: "For county jails. State prison: nysdoccslookup.doccs.ny.gov" },
-  NC: { name: "North Carolina", url: "https://webapps.doc.state.nc.us/opi/offendersearch.do" },
-  ND: { name: "North Dakota", url: "https://vinelink.vineapps.com/search/ND/Person" },
-  OH: { name: "Ohio", url: "https://appgateway.drc.ohio.gov/OffenderSearch" },
-  OK: { name: "Oklahoma", url: "https://vinelink.vineapps.com/search/OK/Person" },
-  OR: { name: "Oregon", url: "https://vinelink.vineapps.com/search/OR/Person" },
-  PA: { name: "Pennsylvania", url: "https://vinelink.vineapps.com/search/PA/Person" },
-  RI: { name: "Rhode Island", url: "https://vinelink.vineapps.com/search/RI/Person" },
-  SC: { name: "South Carolina", url: "https://vinelink.vineapps.com/search/SC/Person" },
-  SD: { name: "South Dakota", url: "https://vinelink.vineapps.com/search/SD/Person" },
-  TN: { name: "Tennessee", url: "https://vinelink.vineapps.com/search/TN/Person" },
-  TX: { name: "Texas", url: "https://vinelink.vineapps.com/search/TX/Person", note: "For county jails. State prison: offender.tdcj.texas.gov" },
-  UT: { name: "Utah", url: "https://vinelink.vineapps.com/search/UT/Person" },
-  VT: { name: "Vermont", url: "https://vinelink.vineapps.com/search/VT/Person" },
-  VA: { name: "Virginia", url: "https://vadoc.virginia.gov/offenders/locator/" },
-  WA: { name: "Washington", url: "https://vinelink.vineapps.com/search/WA/Person" },
-  WV: { name: "West Virginia", url: "https://vinelink.vineapps.com/search/WV/Person" },
-  WI: { name: "Wisconsin", url: "https://vinelink.vineapps.com/search/WI/Person" },
-  WY: { name: "Wyoming", url: "https://vinelink.vineapps.com/search/WY/Person" },
-  DC: { name: "Washington D.C.", url: "https://vinelink.vineapps.com/search/DC/Person" },
-  FED: { name: "Federal (BOP)", url: "https://www.bop.gov/inmateloc/", note: "For federal custody. Search by name or register number." },
-};
-
-function FacilityLookupWidget() {
-  const [selectedState, setSelectedState] = useState("");
-  const locator = selectedState ? FACILITY_LOCATORS[selectedState] : null;
-
-  return (
-    <div className="mt-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/40 p-4">
-      <div className="flex items-center gap-2 mb-3">
-        <MapPin className="w-4 h-4 text-muted-foreground" />
-        <p className="text-sm font-semibold text-foreground">Find who to call: locate a detained person</p>
-      </div>
-      <p className="text-xs text-muted-foreground mb-3">
-        Select a state to go directly to that state's official inmate/detainee locator. Most county jails are also covered via VINELink.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-2">
-        <select
-          value={selectedState}
-          onChange={(e) => setSelectedState(e.target.value)}
-          className="flex-1 text-sm rounded-md border border-input bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-          aria-label="Select state to find inmate locator"
-        >
-          <option value="">Select a state…</option>
-          {Object.entries(FACILITY_LOCATORS).map(([code, { name }]) => (
-            <option key={code} value={code}>{name}</option>
-          ))}
-        </select>
-        {locator && (
-          <a
-            href={locator.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 text-sm font-medium px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-          >
-            <Phone className="w-3.5 h-3.5" />
-            Go to {locator.name} locator
-          </a>
-        )}
-      </div>
-      {locator?.note && (
-        <p className="text-xs text-muted-foreground mt-2 pl-0.5">
-          <span className="font-medium">Note:</span> {locator.note}
-        </p>
-      )}
-      <p className="text-xs text-muted-foreground mt-2 pl-0.5">
-        Can't find them? Call the county sheriff's office directly or search "[county name] sheriff inmate lookup."
-      </p>
-    </div>
-  );
-}
-
 export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
@@ -223,7 +314,7 @@ export default function FirstTwentyFourHours() {
         <ScrollReveal>
           <Alert className="mb-10 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
             <AlertDescription className="text-amber-800 dark:text-amber-200">
-              <strong>One rule applies to every step below:</strong> {t('first24Hours.alert')}
+              {t('first24Hours.alert')}
             </AlertDescription>
           </Alert>
         </ScrollReveal>
@@ -309,7 +400,7 @@ export default function FirstTwentyFourHours() {
             </Step>
           </ScrollReveal>
 
-          {/* STEP 3 — EXPANDED, with phone-call anchor */}
+          {/* STEP 3 — with phone-call anchor */}
           <ScrollReveal delay={0.15}>
             <Step
               number={3}
@@ -338,13 +429,14 @@ export default function FirstTwentyFourHours() {
                 {/* Warning banner */}
                 <Alert className="border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-700">
                   <AlertDescription className="text-red-800 dark:text-red-200 text-sm">
-                    <strong>Every call is monitored and recorded — without exception.</strong> Prosecutors have used jail calls as key evidence in countless cases, including statements made to family members. The only protected calls are to your attorney — and only if that line is properly designated.
+                    <strong>{t('first24Hours.phoneCall.warningTitle')}</strong>{" "}
+                    {t('first24Hours.phoneCall.warningBody')}
                   </AlertDescription>
                 </Alert>
 
                 {/* Script */}
                 <div>
-                  <p className="text-sm font-semibold text-foreground mb-2">Sample script for your first call:</p>
+                  <p className="text-sm font-semibold text-foreground mb-2">{t('first24Hours.phoneCall.scriptTitle')}</p>
                   <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 border border-slate-200 dark:border-slate-700 font-mono text-sm leading-relaxed text-foreground space-y-2">
                     <p>"Hey, it's me. I'm okay, but I've been arrested."</p>
                     <p>"I'm at [facility name]. My booking number is [number]."</p>
@@ -355,24 +447,24 @@ export default function FirstTwentyFourHours() {
                   </div>
                 </div>
 
-                {/* What never to say — collapsed list */}
+                {/* What never to say */}
                 <div className="rounded-lg border border-red-200 dark:border-red-900 overflow-hidden">
                   <div className="bg-red-50/60 dark:bg-red-950/30 px-4 py-3 border-b border-red-200 dark:border-red-900">
-                    <p className="text-sm font-semibold text-red-800 dark:text-red-300">What never to say — on any jail call</p>
+                    <p className="text-sm font-semibold text-red-800 dark:text-red-300">{t('first24Hours.phoneCall.neverSayTitle')}</p>
                   </div>
                   <div className="p-4 space-y-3">
                     {[
-                      { category: "Facts about the incident", detail: '"I didn\'t do it," "I wasn\'t there," "It was self-defense" — all open the door to cross-examination and can be twisted out of context.' },
-                      { category: "Alibi information", detail: "Don't say where you were or who you were with. Share that only with your attorney." },
-                      { category: "Other people involved", detail: "Don't mention co-defendants, witnesses, or anyone else who may have been present." },
-                      { category: "Evidence", detail: "Don't ask anyone to find, move, or hold onto any item related to the incident." },
-                      { category: "Contact with the alleged victim", detail: "Never ask someone to pass along a message, apology, or explanation to the alleged victim or their family." },
-                      { category: "Frustration about the case", detail: '"The police lied," "They don\'t have real evidence" — prosecutors can use these to establish consciousness of guilt.' },
-                    ].map(({ category, detail }) => (
-                      <div key={category} className="flex items-start gap-2.5">
+                      { title: t('first24Hours.phoneCall.neverSay.factsTitle'), detail: t('first24Hours.phoneCall.neverSay.factsDetail') },
+                      { title: t('first24Hours.phoneCall.neverSay.alibiTitle'), detail: t('first24Hours.phoneCall.neverSay.alibiDetail') },
+                      { title: t('first24Hours.phoneCall.neverSay.codefTitle'), detail: t('first24Hours.phoneCall.neverSay.codefDetail') },
+                      { title: t('first24Hours.phoneCall.neverSay.evidenceTitle'), detail: t('first24Hours.phoneCall.neverSay.evidenceDetail') },
+                      { title: t('first24Hours.phoneCall.neverSay.victimTitle'), detail: t('first24Hours.phoneCall.neverSay.victimDetail') },
+                      { title: t('first24Hours.phoneCall.neverSay.frustrationTitle'), detail: t('first24Hours.phoneCall.neverSay.frustrationDetail') },
+                    ].map(({ title, detail }) => (
+                      <div key={title} className="flex items-start gap-2.5">
                         <span className="flex-shrink-0 mt-0.5 text-red-500 font-medium text-sm">–</span>
                         <div>
-                          <p className="text-sm font-semibold text-foreground">{category}</p>
+                          <p className="text-sm font-semibold text-foreground">{title}</p>
                           <p className="text-xs text-muted-foreground mt-0.5">{detail}</p>
                         </div>
                       </div>
@@ -502,7 +594,7 @@ export default function FirstTwentyFourHours() {
           </ScrollReveal>
         </div>
 
-        {/* ─── DEEP-DIVE ACCORDIONS ─── */}
+        {/* DEEP-DIVE ACCORDIONS */}
         <ScrollReveal delay={0.4}>
           <div className="mt-4 border-t border-border pt-10">
             <h2 className="text-xl font-bold text-foreground mb-2">{t('first24Hours.deepDiveTitle')}</h2>
@@ -510,36 +602,37 @@ export default function FirstTwentyFourHours() {
 
             <Accordion type="single" collapsible className="w-full space-y-3">
 
-              {/* ACCORDION 1: When does right to a lawyer actually begin */}
+              {/* ACCORDION 1: When does right to a lawyer begin */}
               <AccordionItem value="right-to-counsel-timing" className="border border-border rounded-lg px-4">
                 <AccordionTrigger className="text-left hover:no-underline py-4">
                   <span className="font-semibold text-base">{t('first24Hours.accordion.counselTitle')}</span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-5 space-y-4">
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    The right to a lawyer is actually two separate rights under two different amendments — and they kick in at different moments.
+                    {t('first24Hours.accordion.counselIntro')}
                   </p>
 
                   <div className="space-y-3">
                     <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
-                      <p className="text-sm font-semibold text-foreground mb-1.5">Fifth Amendment right: during interrogation</p>
+                      <p className="text-sm font-semibold text-foreground mb-1.5">{t('first24Hours.accordion.counselFifthTitle')}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        This right applies any time police want to question you — before arrest, during arrest, at the station, or anywhere else. You can invoke it immediately by saying "I want a lawyer." Once you say this, police must stop questioning until an attorney is present. Critically, this applies even before charges are filed.
+                        {t('first24Hours.accordion.counselFifthBody')}
                       </p>
                     </div>
 
                     <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
-                      <p className="text-sm font-semibold text-foreground mb-1.5">Sixth Amendment right: at formal proceedings</p>
+                      <p className="text-sm font-semibold text-foreground mb-1.5">{t('first24Hours.accordion.counselSixthTitle')}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        This right attaches once formal charges are filed — typically at arraignment or indictment. From this point, police cannot question you about the charged offense outside the presence of your attorney, even if you waive your Fifth Amendment rights. The Sixth Amendment is charge-specific: it only covers the crimes you've been formally charged with.
+                        {t('first24Hours.accordion.counselSixthBody')}
                       </p>
                     </div>
                   </div>
 
                   <div className="rounded-lg border border-amber-200 dark:border-amber-800/60 bg-amber-50/60 dark:bg-amber-900/10 p-4">
-                    <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">The gap: after arrest, before formal charges</p>
+                    <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">{t('first24Hours.accordion.counselGapTitle')}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Between arrest and arraignment, your Sixth Amendment right has not yet attached for most purposes. This is the most dangerous window — you have your Fifth Amendment right to silence, but no court-appointed attorney yet. <strong>Do not answer any questions during this period without an attorney present.</strong> Your invocation of silence must be clear and unambiguous.
+                      {t('first24Hours.accordion.counselGapBody')}{" "}
+                      <strong>Do not answer any questions during this period without an attorney present.</strong> Your invocation of silence must be clear and unambiguous.
                     </p>
                   </div>
 
@@ -547,11 +640,11 @@ export default function FirstTwentyFourHours() {
                     <p className="text-sm font-semibold text-foreground">How this varies by state</p>
                     <div className="grid sm:grid-cols-2 gap-2 text-sm">
                       {[
-                        { state: "California", note: "Police must stop questioning immediately upon any invocation. You do not need to repeat yourself. CA also requires arraignment within 48 hours of arrest (excluding weekends/holidays)." },
-                        { state: "New York", note: "NY courts have interpreted the right to counsel broadly. Once you retain or request an attorney, police must contact that attorney before questioning. This is stronger than federal law." },
+                        { state: "California", note: "Police must stop questioning immediately upon any invocation. CA also requires arraignment within 48 hours of arrest (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail." },
+                        { state: "New York", note: "NY courts interpret the right to counsel broadly. Once you retain or request an attorney, police must contact that attorney before questioning — stronger than federal law." },
                         { state: "Texas", note: "Right to counsel attaches at arraignment. Until then, the Fifth Amendment is your main protection. TX magistration must occur within 48 hours of arrest." },
-                        { state: "Florida", note: "Must be brought before a magistrate within 24 hours for a first-appearance hearing. Arraignment is typically 21–33 days after filing. Fifth Amendment is your protection in the interim." },
-                        { state: "Federal", note: "Must appear before a magistrate 'without unnecessary delay' — typically within 48 hours. Federal rules are strictly applied." },
+                        { state: "Florida", note: "First appearance before a magistrate within 24 hours for a first-appearance hearing. Arraignment is typically 21–33 days after filing." },
+                        { state: "Federal", note: "Must appear before a magistrate 'without unnecessary delay' — courts interpret this as within 48 hours. Federal rules are strictly applied." },
                       ].map(({ state, note }) => (
                         <div key={state} className="rounded-md border border-border/60 bg-background p-3">
                           <p className="text-xs font-bold text-foreground mb-1">{state}</p>
@@ -577,14 +670,14 @@ export default function FirstTwentyFourHours() {
                 <AccordionContent className="pb-5 space-y-4">
                   <Alert className="border-orange-300 bg-orange-50 dark:bg-orange-900/20 dark:border-orange-700">
                     <AlertDescription className="text-orange-800 dark:text-orange-200 text-sm">
-                      <strong>If you are on probation or parole, a new arrest is a more serious situation than it would otherwise be.</strong> You are not just facing new charges — you are likely also facing a violation proceeding on your existing supervision. The two tracks run in parallel.
+                      <strong>{t('first24Hours.accordion.probationAlert')}</strong>
                     </AlertDescription>
                   </Alert>
 
                   <div className="space-y-3">
                     <Card className="border-border/60">
                       <CardHeader className="pb-2 pt-4">
-                        <CardTitle className="text-sm font-semibold">What happens immediately</CardTitle>
+                        <CardTitle className="text-sm font-semibold">{t('first24Hours.accordion.probationImmediateTitle')}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-2 pb-4">
                         <ul className="space-y-2 text-sm text-muted-foreground">
@@ -597,7 +690,7 @@ export default function FirstTwentyFourHours() {
 
                     <Card className="border-border/60">
                       <CardHeader className="pb-2 pt-4">
-                        <CardTitle className="text-sm font-semibold">Rights that still apply</CardTitle>
+                        <CardTitle className="text-sm font-semibold">{t('first24Hours.accordion.probationRightsTitle')}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-2 pb-4">
                         <ul className="space-y-2 text-sm text-muted-foreground">
@@ -610,7 +703,7 @@ export default function FirstTwentyFourHours() {
 
                     <Card className="border-border/60">
                       <CardHeader className="pb-2 pt-4">
-                        <CardTitle className="text-sm font-semibold">What to do first</CardTitle>
+                        <CardTitle className="text-sm font-semibold">{t('first24Hours.accordion.probationWhatToDoTitle')}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-2 pb-4">
                         <ol className="space-y-2 text-sm text-muted-foreground list-none">
@@ -629,19 +722,19 @@ export default function FirstTwentyFourHours() {
                 </AccordionContent>
               </AccordionItem>
 
-              {/* ACCORDION 3: First appearance / magistrate */}
+              {/* ACCORDION 3: First appearance */}
               <AccordionItem value="first-appearance" className="border border-border rounded-lg px-4">
                 <AccordionTrigger className="text-left hover:no-underline py-4">
                   <span className="font-semibold text-base">{t('first24Hours.accordion.firstAppearanceTitle')}</span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-5 space-y-4">
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Before your formal arraignment, most jurisdictions require a brief "first appearance" or "initial appearance" before a magistrate or duty judge — often within 24–48 hours of arrest. In some states this is the same as arraignment; in others it's a separate, shorter proceeding.
+                    {t('first24Hours.accordion.firstAppearanceIntro')}
                   </p>
 
                   <div className="space-y-3">
                     <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
-                      <p className="text-sm font-semibold text-foreground mb-2">What the magistrate decides</p>
+                      <p className="text-sm font-semibold text-foreground mb-2">{t('first24Hours.accordion.firstAppearanceDecidesTitle')}</p>
                       <ul className="space-y-1.5 text-sm text-muted-foreground">
                         <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Identity:</strong> confirming you are the person named in the arrest report</span></li>
                         <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Probable cause:</strong> in some jurisdictions, whether there was a legal basis for arrest</span></li>
@@ -651,19 +744,19 @@ export default function FirstTwentyFourHours() {
                     </div>
 
                     <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
-                      <p className="text-sm font-semibold text-foreground mb-2">What the magistrate does NOT decide</p>
-                      <p className="text-sm text-muted-foreground">Guilt or innocence. This is not a mini-trial. You will not be asked to explain what happened, and you should not volunteer anything. The magistrate is handling procedural steps only.</p>
+                      <p className="text-sm font-semibold text-foreground mb-2">{t('first24Hours.accordion.firstAppearanceNotTitle')}</p>
+                      <p className="text-sm text-muted-foreground">{t('first24Hours.accordion.firstAppearanceNotBody')}</p>
                     </div>
 
                     <div className="space-y-2">
                       <p className="text-sm font-semibold text-foreground">How it works by jurisdiction</p>
                       <div className="grid sm:grid-cols-2 gap-2 text-sm">
                         {[
-                          { state: "California", note: "First appearance typically within 48 hours of arrest (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail. Judges may not set unaffordable bail simply to detain you. OR release is the default unless you are a danger or flight risk." },
-                          { state: "New York", note: "\"Arraignment\" serves as first appearance in NY — typically within 24 hours in NYC, 24–48 hours upstate. Bail reform (2020): most misdemeanors and many non-violent felonies are non-bailable — release on recognizance is presumptive." },
-                          { state: "Texas", note: "Magistration must occur within 48 hours. A magistrate sets initial bail per statutory factors (Tex. Code Crim. Proc. Art. 17.15). Many rural TX counties use PR bonds for low-level offenses. Formal bail hearing before the trial court follows." },
-                          { state: "Florida", note: "First appearance before a county judge within 24 hours. Judge must inform you of charges, set bail, and appoint counsel. Formal arraignment is usually 3–4 weeks later." },
-                          { state: "Federal", note: "Initial appearance before a federal magistrate judge 'without unnecessary delay' — courts interpret this as within 48 hours. A detention hearing typically follows 3 business days later. Federal bail is governed by the Bail Reform Act of 1984; flight risk and danger to the community are both considered." },
+                          { state: "California", note: "First appearance typically within 48 hours (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail." },
+                          { state: "New York", note: "Arraignment serves as first appearance in NY — typically within 24 hours in NYC, 24–48 hours upstate. Bail reform (2020): most misdemeanors and many non-violent felonies are non-bailable." },
+                          { state: "Texas", note: "Magistration must occur within 48 hours. A magistrate sets initial bail per statutory factors (Tex. Code Crim. Proc. Art. 17.15)." },
+                          { state: "Florida", note: "First appearance before a county judge within 24 hours. Judge must inform you of charges, set bail, and appoint counsel." },
+                          { state: "Federal", note: "Initial appearance before a federal magistrate judge 'without unnecessary delay' — courts interpret this as within 48 hours." },
                         ].map(({ state, note }) => (
                           <div key={state} className="rounded-md border border-border/60 bg-background p-3">
                             <p className="text-xs font-bold text-foreground mb-1">{state}</p>
@@ -674,7 +767,7 @@ export default function FirstTwentyFourHours() {
                     </div>
 
                     <div className="rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
-                      <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2">What to do at your first appearance</p>
+                      <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2">{t('first24Hours.accordion.firstAppearanceHowTitle')}</p>
                       <ul className="space-y-1.5 text-sm text-muted-foreground">
                         <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>State your name. Confirm your identity. Nothing more unless your attorney instructs otherwise.</span></li>
                         <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If you don't have an attorney, ask for a public defender immediately. The magistrate is required to inform you of this right and facilitate appointment.</span></li>
