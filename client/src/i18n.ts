@@ -4730,7 +4730,29 @@ i18n
               "firstAppearanceDecidesTitle": "What the magistrate decides",
               "firstAppearanceNotTitle": "What the magistrate does NOT decide",
               "firstAppearanceNotBody": "Guilt or innocence. This is not a mini-trial. You will not be asked to explain what happened, and you should not volunteer anything.",
-              "firstAppearanceHowTitle": "What to do at your first appearance"
+              "firstAppearanceHowTitle": "What to do at your first appearance",
+              "counselVariationsTitle": "How this varies by state",
+              "counselCtaButton": "Full Right-to-Counsel Guide",
+              "probationImmediate1": "A probation or parole hold may be placed on you — meaning even if you make bail on the new charges, you may remain detained on the violation hold.",
+              "probationImmediate2": "Your probation or parole officer will be notified — usually within hours of your arrest appearing in the system.",
+              "probationImmediate3": "An arrest alone can trigger a violation — even if you are never convicted of the new charge. The standard of proof for a violation hearing (preponderance of evidence) is much lower than for a criminal conviction.",
+              "probationRights1": "You have the right to remain silent on the new charges. Exercise it.",
+              "probationRights2": "You have the right to a revocation hearing before your supervision is formally revoked. This must include written notice of the alleged violation, disclosure of the evidence against you, the opportunity to be heard, and a neutral hearing officer.",
+              "probationRights3": "You have the right to counsel at a revocation hearing if revocation could result in incarceration — which it typically does.",
+              "probationStep1": "Tell your attorney about your supervision status immediately — it affects strategy for both the new case and the violation proceeding.",
+              "probationStep2": "Do not attempt to contact your PO directly without attorney guidance. Statements to your PO may not be protected.",
+              "probationStep3": "Ask your attorney specifically: will bail on the new case release me, or is there a separate supervision hold? Are these the same attorney or do I need two?",
+              "probationStep4": "Check whether your probation terms require self-reporting. Your attorney can help you decide if and how to respond.",
+              "probationDisclaimer": "Violation outcomes vary widely by jurisdiction, the nature of the new offense, your supervision history, and your PO's discretion. An attorney who understands both tracks is essential.",
+              "firstAppearanceDecides1": "Identity: confirming you are the person named in the arrest report",
+              "firstAppearanceDecides2": "Probable cause: in some jurisdictions, whether there was a legal basis for arrest",
+              "firstAppearanceDecides3": "Bail/release conditions: setting or denying bail, often without a full hearing (that comes later)",
+              "firstAppearanceDecides4": "Right to counsel: informing you of your right to an attorney and appointing one if you qualify",
+              "firstAppearanceVariationsTitle": "How it works by jurisdiction",
+              "firstAppearanceHow1": "State your name. Confirm your identity. Nothing more unless your attorney instructs otherwise.",
+              "firstAppearanceHow2": "If you don't have an attorney, ask for a public defender immediately. The magistrate is required to inform you of this right and facilitate appointment.",
+              "firstAppearanceHow3": "If asked about bail, briefly mention community ties (family, job, residence). Do not discuss the charges.",
+              "firstAppearanceHow4": "If you are on probation or parole, your attorney needs to know before this hearing. It affects the bail calculus."
             },
             "phoneCall": {
               "warningTitle": "Every call is monitored and recorded — without exception.",
@@ -4764,6 +4786,32 @@ i18n
               "fallbackNote": "Can't find them? Call the county sheriff's office directly or search \"[county name] sheriff inmate lookup.\"",
               "zipNotFound": "ZIP not in our database. Select a state below for a state-level search, or call the county sheriff's office directly.",
               "urlNote": "Note"
+            },
+            "juvenile": {
+              "title": "If the person arrested is under 18",
+              "intro": "The juvenile justice system works differently in important ways:",
+              "bullet1": "Police must notify parents or guardians before questioning a juvenile. If you are a minor, ask for your parent immediately.",
+              "bullet2": "You may be held in a juvenile facility rather than an adult jail, depending on the charges and your age.",
+              "bullet3": "Juvenile court is separate from adult criminal court. The process, rights, and outcomes differ significantly.",
+              "bullet4": "Do not waive your rights. Juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.",
+              "bullet5": "If charges are serious, prosecutors may seek to try you as an adult. Your attorney must fight this."
+            },
+            "links": {
+              "rightToCounsel": "Right to an Attorney",
+              "warrants": "Learn about Warrants",
+              "howBailWorks": "How Bail Works",
+              "fullCounselGuide": "Full Right-to-Counsel Guide",
+              "caseTimeline": "Full Case Timeline",
+              "getGuidance": "Get Personalized Guidance",
+              "findDefender": "Find a Public Defender"
+            },
+            "script": {
+              "line1": "\"Hey, it's me. I'm okay, but I've been arrested.\"",
+              "line2": "\"I'm at [facility name]. My booking number is [number].\"",
+              "line3": "\"I've been charged with [charge, if known].\"",
+              "line4": "\"I need you to find a lawyer — call [attorney name if known] or contact the public defender's office in [county].\"",
+              "line5": "\"Don't talk to any police or detectives until there's a lawyer involved. I can't say anything else right now.\"",
+              "line6": "\"I love you. I'll be okay. Go make those calls.\""
             }
           },
           "jailPhoneCall": {
@@ -9718,7 +9766,29 @@ i18n
               "firstAppearanceDecidesTitle": "Qué decide el magistrado",
               "firstAppearanceNotTitle": "Lo que el magistrado NO decide",
               "firstAppearanceNotBody": "Culpabilidad o inocencia. Esto no es un juicio abreviado. No se le pedirá que explique lo que ocurrió, y no debe ofrecer información voluntariamente.",
-              "firstAppearanceHowTitle": "Qué hacer en su primera comparecencia"
+              "firstAppearanceHowTitle": "Qué hacer en su primera comparecencia",
+              "counselVariationsTitle": "Cómo varía según el estado",
+              "counselCtaButton": "Guía completa sobre el derecho a un abogado",
+              "probationImmediate1": "Se puede imponer una retención por libertad condicional o supervisada — lo que significa que incluso si paga la fianza por los nuevos cargos, puede permanecer detenido por la infracción.",
+              "probationImmediate2": "Su oficial de libertad condicional o supervisada será notificado — generalmente pocas horas después de que su arresto aparezca en el sistema.",
+              "probationImmediate3": "Solo el arresto puede desencadenar una violación — incluso si nunca es condenado por el nuevo cargo. El estándar de prueba para una audiencia de violación (preponderancia de la evidencia) es mucho más bajo que para una condena penal.",
+              "probationRights1": "Tiene derecho a guardar silencio sobre los nuevos cargos. Ejerza ese derecho.",
+              "probationRights2": "Tiene derecho a una audiencia de revocación antes de que se revoque formalmente su supervisión. Esto debe incluir aviso escrito de la presunta violación, divulgación de las pruebas en su contra, la oportunidad de ser escuchado y un oficial de audiencia neutral.",
+              "probationRights3": "Tiene derecho a asesoramiento legal en una audiencia de revocación si la revocación puede resultar en encarcelamiento — lo que generalmente ocurre.",
+              "probationStep1": "Informe a su abogado sobre su situación de supervisión de inmediato — esto afecta la estrategia tanto para el nuevo caso como para el procedimiento de violación.",
+              "probationStep2": "No intente contactar a su oficial de libertad condicional directamente sin orientación de su abogado. Las declaraciones a su oficial pueden no estar protegidas.",
+              "probationStep3": "Pregúntele específicamente a su abogado: ¿la fianza del nuevo caso me pondrá en libertad, o existe una retención separada por supervisión? ¿Es el mismo abogado o necesito dos?",
+              "probationStep4": "Verifique si los términos de su libertad condicional requieren que se reporte a sí mismo. Su abogado puede ayudarle a decidir si debe hacerlo y cómo.",
+              "probationDisclaimer": "Los resultados de las violaciones varían ampliamente según la jurisdicción, la naturaleza del nuevo delito, su historial de supervisión y la discreción de su oficial. Un abogado que comprenda ambos procesos es esencial.",
+              "firstAppearanceDecides1": "Identidad: confirmar que usted es la persona nombrada en el informe de arresto",
+              "firstAppearanceDecides2": "Causa probable: en algunas jurisdicciones, si había una base legal para el arresto",
+              "firstAppearanceDecides3": "Condiciones de libertad bajo fianza: establecer o negar la fianza, a menudo sin una audiencia completa (eso viene después)",
+              "firstAppearanceDecides4": "Derecho a asesoramiento legal: informarle sobre su derecho a un abogado y designarle uno si califica",
+              "firstAppearanceVariationsTitle": "Cómo funciona según la jurisdicción",
+              "firstAppearanceHow1": "Diga su nombre. Confirme su identidad. Nada más a menos que su abogado le indique lo contrario.",
+              "firstAppearanceHow2": "Si no tiene abogado, solicite un defensor público de inmediato. El magistrado está obligado a informarle sobre este derecho y facilitar su designación.",
+              "firstAppearanceHow3": "Si le preguntan sobre la fianza, mencione brevemente sus vínculos comunitarios (familia, trabajo, residencia). No hable de los cargos.",
+              "firstAppearanceHow4": "Si está en libertad condicional o supervisada, su abogado debe saberlo antes de esta audiencia. Esto afecta el cálculo de la fianza."
             },
             "phoneCall": {
               "warningTitle": "Todas las llamadas son monitoreadas y grabadas — sin excepción.",
@@ -9752,6 +9822,32 @@ i18n
               "fallbackNote": "¿No lo encuentra? Llame directamente a la oficina del alguacil del condado o busque «[nombre del condado] alguacil búsqueda de presos».",
               "zipNotFound": "Este código postal no está en nuestra base de datos. Seleccione un estado a continuación o llame directamente al alguacil del condado.",
               "urlNote": "Nota"
+            },
+            "juvenile": {
+              "title": "Si la persona arrestada tiene menos de 18 años",
+              "intro": "El sistema de justicia juvenil funciona de manera diferente en aspectos importantes:",
+              "bullet1": "La policía debe notificar a los padres o tutores antes de interrogar a un menor. Si usted es menor de edad, pida a sus padres de inmediato.",
+              "bullet2": "Puede ser detenido en un centro juvenil en lugar de una cárcel de adultos, según los cargos y su edad.",
+              "bullet3": "El tribunal juvenil es independiente del tribunal penal para adultos. El proceso, los derechos y los resultados difieren significativamente.",
+              "bullet4": "No renuncie a sus derechos. Los menores son especialmente vulnerables durante los interrogatorios. Invoque su derecho a guardar silencio y pida a sus padres y un abogado antes de responder cualquier pregunta.",
+              "bullet5": "Si los cargos son graves, los fiscales pueden buscar juzgarle como adulto. Su abogado debe luchar contra esto."
+            },
+            "links": {
+              "rightToCounsel": "Derecho a un Abogado",
+              "warrants": "Aprenda sobre las Órdenes de Arresto",
+              "howBailWorks": "Cómo Funciona la Fianza",
+              "fullCounselGuide": "Guía Completa sobre el Derecho a un Abogado",
+              "caseTimeline": "Cronología Completa del Caso",
+              "getGuidance": "Obtener Orientación Personalizada",
+              "findDefender": "Encontrar un Defensor Público"
+            },
+            "script": {
+              "line1": "«Hola, soy yo. Estoy bien, pero me han arrestado.»",
+              "line2": "«Estoy en [nombre del centro]. Mi número de reserva es [número].»",
+              "line3": "«Me han acusado de [cargo, si se sabe].»",
+              "line4": "«Necesito que encuentres un abogado — llama a [nombre del abogado si se sabe] o contacta la oficina del defensor público en [condado].»",
+              "line5": "«No hables con la policía ni con ningún detective hasta que haya un abogado involucrado. No puedo decir nada más ahora mismo.»",
+              "line6": "«Te quiero. Estaré bien. Ve a hacer esas llamadas.»"
             }
           },
           "jailPhoneCall": {
@@ -14707,7 +14803,29 @@ i18n
               "firstAppearanceDecidesTitle": "治安法官决定的内容",
               "firstAppearanceNotTitle": "治安法官不会决定的内容",
               "firstAppearanceNotBody": "有罪或无罪。这不是一次迷你审判。不会要求您解释发生了什么，您也不应主动提供任何信息。",
-              "firstAppearanceHowTitle": "首次出庭时应该怎么做"
+              "firstAppearanceHowTitle": "首次出庭时应该怎么做",
+              "counselVariationsTitle": "各州的差异",
+              "counselCtaButton": "完整律师权利指南",
+              "probationImmediate1": "您可能面临缓刑或假释保留——这意味着即使您为新指控缴纳了保释金，您也可能因违规被继续羁押。",
+              "probationImmediate2": "您的缓刑官或假释官将收到通知——通常在您的逮捕记录进入系统后数小时内。",
+              "probationImmediate3": "仅凭逮捕本身即可引发违规程序——即使您最终未被判定新指控成立。违规听证会的证明标准（证据优势）远低于刑事定罪标准。",
+              "probationRights1": "您有权就新指控保持沉默。请行使这一权利。",
+              "probationRights2": "在正式撤销监督之前，您有权参加撤销听证会。这必须包括：关于违规指控的书面通知、对您所掌握证据的披露、被倾听的机会，以及中立的听证官。",
+              "probationRights3": "如果撤销可能导致监禁——通常如此——您有权在撤销听证会上获得法律顾问的帮助。",
+              "probationStep1": "立即告知您的律师您的监督状况——这会影响新案件和违规程序两方面的策略。",
+              "probationStep2": "未经律师指导，不要试图直接联系您的缓刑官。您对缓刑官的陈述可能不受保护。",
+              "probationStep3": "具体询问您的律师：新案件的保释金能让我获释吗？还是存在单独的监督保留？这是同一位律师还是我需要两位？",
+              "probationStep4": "检查您的缓刑条款是否要求自我报告。您的律师可以帮助您决定是否以及如何应对。",
+              "probationDisclaimer": "违规结果因司法管辖区、新罪行的性质、您的监督历史以及您的缓刑官的自由裁量权而差异显著。了解两个程序的律师至关重要。",
+              "firstAppearanceDecides1": "身份核实：确认您就是逮捕报告中所列的人",
+              "firstAppearanceDecides2": "合理依据：在某些司法管辖区，裁定是否有合法的逮捕依据",
+              "firstAppearanceDecides3": "保释/释放条件：设定或拒绝保释，通常不进行完整听证（这将在后续进行）",
+              "firstAppearanceDecides4": "律师权利：告知您有权聘请律师，并在您符合条件时指派律师",
+              "firstAppearanceVariationsTitle": "各司法管辖区的程序差异",
+              "firstAppearanceHow1": "陈述您的姓名，确认您的身份。除非律师另有指示，不要说其他任何话。",
+              "firstAppearanceHow2": "如果您没有律师，请立即申请公设辩护人。治安法官有义务告知您这一权利并协助指派。",
+              "firstAppearanceHow3": "如果被问及保释，简要提及您与社区的联系（家庭、工作、居住地）。不要讨论指控内容。",
+              "firstAppearanceHow4": "如果您正处于缓刑或假释期间，您的律师在此次听证前需要知晓这一情况。这将影响保释评估。"
             },
             "phoneCall": {
               "warningTitle": "所有电话均被监听和录音——无一例外。",
@@ -14741,6 +14859,32 @@ i18n
               "fallbackNote": "找不到？请直接拨打县治安官办公室电话，或搜索「[县名] 治安官在押人员查询」。",
               "zipNotFound": "该邮政编码不在我们的数据库中。请在下方选择一个州进行州级搜索，或直接联系县治安官办公室。",
               "urlNote": "注意"
+            },
+            "juvenile": {
+              "title": "如果被捕者未满18岁",
+              "intro": "少年司法系统在一些重要方面运作方式不同：",
+              "bullet1": "警察在询问未成年人之前必须通知其父母或监护人。如果您是未成年人，请立即要求见父母。",
+              "bullet2": "根据指控内容和您的年龄，您可能被关押在少年拘留设施而非成人监狱。",
+              "bullet3": "少年法庭与成人刑事法庭相互独立，程序、权利和结果有很大不同。",
+              "bullet4": "不要放弃您的权利。未成年人在审讯过程中尤其容易受到伤害。在回答任何问题之前，请援引您保持沉默的权利，并要求见父母和律师。",
+              "bullet5": "如果指控严重，检察官可能寻求以成人身份对您提起诉讼。您的律师必须对此提出异议。"
+            },
+            "links": {
+              "rightToCounsel": "获得律师的权利",
+              "warrants": "了解逮捕令",
+              "howBailWorks": "保释金如何运作",
+              "fullCounselGuide": "完整律师权利指南",
+              "caseTimeline": "完整案件时间线",
+              "getGuidance": "获取个性化指导",
+              "findDefender": "查找公设辩护人"
+            },
+            "script": {
+              "line1": "「是我。我还好，但我被逮捕了。」",
+              "line2": "「我在[设施名称]。我的登记号码是[号码]。」",
+              "line3": "「我被指控[指控内容，如已知]。」",
+              "line4": "「我需要你帮我找律师——打电话给[律师姓名，如已知]或联系[县]的公设辩护人办公室。」",
+              "line5": "「在律师介入之前不要和警察或侦探说话。我现在不能说更多了。」",
+              "line6": "「我爱你。我会没事的。去打那些电话吧。」"
             }
           },
           "jailPhoneCall": {

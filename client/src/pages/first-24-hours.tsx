@@ -16,7 +16,7 @@ import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { lookupZip, getStateFallback } from "@/lib/zip-county-data";
+import { lookupZip, isStatewideUrl } from "@/lib/zip-county-data";
 
 // State-level VINELink fallbacks for state dropdown
 const STATE_LOCATORS: Record<string, { name: string; url: string; note?: string }> = {
@@ -79,18 +79,10 @@ function FacilityLookupWidget() {
   const [zip, setZip] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [result, setResult] = useState<ReturnType<typeof lookupZip> | null | undefined>(undefined);
-  const [stateFallback, setStateFallback] = useState<ReturnType<typeof getStateFallback> | null>(null);
 
   function handleZipSearch() {
     if (zip.replace(/\D/g, "").length < 5) return;
-    const found = lookupZip(zip);
-    setResult(found);
-    if (!found) {
-      const fb = getStateFallback(zip);
-      setStateFallback(fb);
-    } else {
-      setStateFallback(null);
-    }
+    setResult(lookupZip(zip));
   }
 
   const stateLocator = selectedState ? STATE_LOCATORS[selectedState] : null;
@@ -114,7 +106,6 @@ function FacilityLookupWidget() {
             const v = e.target.value.replace(/\D/g, "").slice(0, 5);
             setZip(v);
             setResult(undefined);
-            setStateFallback(null);
           }}
           onKeyDown={(e) => e.key === "Enter" && handleZipSearch()}
           placeholder={t('first24Hours.facilityLookup.zipPlaceholder')}
@@ -148,7 +139,9 @@ function FacilityLookupWidget() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline underline-offset-2 hover:text-primary/80"
               >
                 <Phone className="w-3.5 h-3.5" />
-                {result.county} inmate locator
+                {isStatewideUrl(result.inmateUrl)
+                  ? `${result.state} statewide inmate locator (VINELink)`
+                  : `${result.county} inmate locator`}
               </a>
               {result.urlNote && (
                 <p className="text-xs text-muted-foreground">
@@ -157,20 +150,7 @@ function FacilityLookupWidget() {
               )}
             </div>
           ) : (
-            <div className="space-y-2">
-              <p className="text-xs text-amber-700 dark:text-amber-300">{t('first24Hours.facilityLookup.zipNotFound')}</p>
-              {stateFallback && (
-                <a
-                  href={stateFallback.inmateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline underline-offset-2 hover:text-primary/80"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  {stateFallback.state} statewide inmate locator
-                </a>
-              )}
-            </div>
+            <p className="text-xs text-amber-700 dark:text-amber-300">{t('first24Hours.facilityLookup.zipNotFound')}</p>
           )}
         </div>
       )}
@@ -325,14 +305,14 @@ export default function FirstTwentyFourHours() {
 
         <ScrollReveal delay={0.03}>
           <div className="mb-8 rounded-lg border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 p-5">
-            <h3 className="text-base font-bold text-amber-800 dark:text-amber-200 mb-3">If the person arrested is under 18</h3>
-            <p className="text-sm text-amber-900 dark:text-amber-100 mb-3">The juvenile justice system works differently in important ways:</p>
+            <h3 className="text-base font-bold text-amber-800 dark:text-amber-200 mb-3">{t('first24Hours.juvenile.title')}</h3>
+            <p className="text-sm text-amber-900 dark:text-amber-100 mb-3">{t('first24Hours.juvenile.intro')}</p>
             <ul className="space-y-2 text-sm text-amber-900 dark:text-amber-100">
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Police must notify parents or guardians</strong> before questioning a juvenile. If you are a minor, ask for your parent immediately.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>You may be held in a juvenile facility</strong> rather than an adult jail, depending on the charges and your age.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Juvenile court is separate</strong> from adult criminal court. The process, rights, and outcomes differ significantly.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span><strong>Do not waive your rights.</strong> Juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>If charges are serious, prosecutors may seek to try you as an adult. Your attorney must fight this.</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet1')}</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet2')}</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet3')}</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet4')}</span></li>
+              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet5')}</span></li>
             </ul>
           </div>
         </ScrollReveal>
@@ -362,10 +342,10 @@ export default function FirstTwentyFourHours() {
                 </p>
                 <div className="flex gap-3 flex-wrap">
                   <Link href="/right-to-counsel">
-                    <Button variant="outline" size="sm">Right to an Attorney</Button>
+                    <Button variant="outline" size="sm">{t('first24Hours.links.rightToCounsel')}</Button>
                   </Link>
                   <Link href="/warrants">
-                    <Button variant="outline" size="sm">Learn about Warrants</Button>
+                    <Button variant="outline" size="sm">{t('first24Hours.links.warrants')}</Button>
                   </Link>
                 </div>
               </div>
@@ -438,12 +418,12 @@ export default function FirstTwentyFourHours() {
                 <div>
                   <p className="text-sm font-semibold text-foreground mb-2">{t('first24Hours.phoneCall.scriptTitle')}</p>
                   <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 border border-slate-200 dark:border-slate-700 font-mono text-sm leading-relaxed text-foreground space-y-2">
-                    <p>"Hey, it's me. I'm okay, but I've been arrested."</p>
-                    <p>"I'm at [facility name]. My booking number is [number]."</p>
-                    <p>"I've been charged with [charge, if known]."</p>
-                    <p>"I need you to find a lawyer — call [attorney name if known] or contact the public defender's office in [county]."</p>
-                    <p>"Don't talk to any police or detectives until there's a lawyer involved. I can't say anything else right now."</p>
-                    <p>"I love you. I'll be okay. Go make those calls."</p>
+                    <p>{t('first24Hours.script.line1')}</p>
+                    <p>{t('first24Hours.script.line2')}</p>
+                    <p>{t('first24Hours.script.line3')}</p>
+                    <p>{t('first24Hours.script.line4')}</p>
+                    <p>{t('first24Hours.script.line5')}</p>
+                    <p>{t('first24Hours.script.line6')}</p>
                   </div>
                 </div>
 
@@ -508,7 +488,7 @@ export default function FirstTwentyFourHours() {
                 </ol>
                 <div className="flex gap-3 flex-wrap mt-3">
                   <Link href="/case-timeline#bail-guide">
-                    <Button variant="outline" size="sm">How Bail Works</Button>
+                    <Button variant="outline" size="sm">{t('first24Hours.links.howBailWorks')}</Button>
                   </Link>
                 </div>
                 <JurisdictionCallout jurisdiction={jurisdiction} topic="bail" />
@@ -536,13 +516,13 @@ export default function FirstTwentyFourHours() {
             >
               <div className="flex gap-3 flex-wrap mt-2">
                 <Link href="/?search=public-defender">
-                  <Button variant="outline" size="sm">Find a Public Defender</Button>
+                  <Button variant="outline" size="sm">{t('first24Hours.links.findDefender')}</Button>
                 </Link>
                 <Link href="/case-guidance">
-                  <Button variant="outline" size="sm">Get Personalized Guidance</Button>
+                  <Button variant="outline" size="sm">{t('first24Hours.links.getGuidance')}</Button>
                 </Link>
                 <Link href="/right-to-counsel">
-                  <Button variant="outline" size="sm">Right to an Attorney</Button>
+                  <Button variant="outline" size="sm">{t('first24Hours.links.rightToCounsel')}</Button>
                 </Link>
               </div>
             </Step>
@@ -637,7 +617,7 @@ export default function FirstTwentyFourHours() {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-sm font-semibold text-foreground">How this varies by state</p>
+                    <p className="text-sm font-semibold text-foreground">{t('first24Hours.accordion.counselVariationsTitle')}</p>
                     <div className="grid sm:grid-cols-2 gap-2 text-sm">
                       {[
                         { state: "California", note: "Police must stop questioning immediately upon any invocation. CA also requires arraignment within 48 hours of arrest (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail." },
@@ -656,7 +636,7 @@ export default function FirstTwentyFourHours() {
 
                   <div className="flex gap-2 flex-wrap pt-1">
                     <Link href="/right-to-counsel">
-                      <Button variant="outline" size="sm">Full Right-to-Counsel Guide</Button>
+                      <Button variant="outline" size="sm">{t('first24Hours.accordion.counselCtaButton')}</Button>
                     </Link>
                   </div>
                 </AccordionContent>
@@ -681,9 +661,9 @@ export default function FirstTwentyFourHours() {
                       </CardHeader>
                       <CardContent className="space-y-2 pb-4">
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>A probation or parole hold may be placed on you</strong> — meaning even if you make bail on the new charges, you may remain detained on the violation hold.</span></li>
-                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Your probation or parole officer will be notified</strong> — usually within hours of your arrest appearing in the system.</span></li>
-                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>An arrest alone can trigger a violation</strong> — even if you are never convicted of the new charge. The standard of proof for a violation hearing (preponderance of evidence) is much lower than for a criminal conviction.</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.probationImmediate1')}</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.probationImmediate2')}</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.probationImmediate3')}</span></li>
                         </ul>
                       </CardContent>
                     </Card>
@@ -694,9 +674,9 @@ export default function FirstTwentyFourHours() {
                       </CardHeader>
                       <CardContent className="space-y-2 pb-4">
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>You have the <strong>right to remain silent</strong> on the new charges. Exercise it.</span></li>
-                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>You have the <strong>right to a revocation hearing</strong> before your supervision is formally revoked. This must include written notice of the alleged violation, disclosure of the evidence against you, the opportunity to be heard, and a neutral hearing officer.</span></li>
-                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>You have the <strong>right to counsel at a revocation hearing</strong> if revocation could result in incarceration — which it typically does.</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.probationRights1')}</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.probationRights2')}</span></li>
+                          <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.probationRights3')}</span></li>
                         </ul>
                       </CardContent>
                     </Card>
@@ -707,17 +687,17 @@ export default function FirstTwentyFourHours() {
                       </CardHeader>
                       <CardContent className="space-y-2 pb-4">
                         <ol className="space-y-2 text-sm text-muted-foreground list-none">
-                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">1.</span><span>Tell your attorney about your supervision status <em>immediately</em> — it affects strategy for both the new case and the violation proceeding.</span></li>
-                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">2.</span><span>Do not attempt to contact your PO directly without attorney guidance. Statements to your PO may not be protected.</span></li>
-                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">3.</span><span>Ask your attorney specifically: will bail on the new case release me, or is there a separate supervision hold? Are these the same attorney or do I need two?</span></li>
-                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">4.</span><span>Check whether your probation terms require self-reporting. Your attorney can help you decide if and how to respond.</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">1.</span><span>{t('first24Hours.accordion.probationStep1')}</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">2.</span><span>{t('first24Hours.accordion.probationStep2')}</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">3.</span><span>{t('first24Hours.accordion.probationStep3')}</span></li>
+                          <li className="flex items-start gap-2"><span className="font-bold text-foreground flex-shrink-0">4.</span><span>{t('first24Hours.accordion.probationStep4')}</span></li>
                         </ol>
                       </CardContent>
                     </Card>
                   </div>
 
                   <p className="text-xs text-muted-foreground">
-                    Violation outcomes vary widely by jurisdiction, the nature of the new offense, your supervision history, and your PO's discretion. An attorney who understands both tracks is essential.
+                    {t('first24Hours.accordion.probationDisclaimer')}
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -736,10 +716,10 @@ export default function FirstTwentyFourHours() {
                     <div className="rounded-lg bg-muted/40 p-4 border border-border/60">
                       <p className="text-sm font-semibold text-foreground mb-2">{t('first24Hours.accordion.firstAppearanceDecidesTitle')}</p>
                       <ul className="space-y-1.5 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Identity:</strong> confirming you are the person named in the arrest report</span></li>
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Probable cause:</strong> in some jurisdictions, whether there was a legal basis for arrest</span></li>
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Bail/release conditions:</strong> setting or denying bail, often without a full hearing (that comes later)</span></li>
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span><strong>Right to counsel:</strong> informing you of your right to an attorney and appointing one if you qualify</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.firstAppearanceDecides1')}</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.firstAppearanceDecides2')}</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.firstAppearanceDecides3')}</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-foreground/40">•</span><span>{t('first24Hours.accordion.firstAppearanceDecides4')}</span></li>
                       </ul>
                     </div>
 
@@ -749,7 +729,7 @@ export default function FirstTwentyFourHours() {
                     </div>
 
                     <div className="space-y-2">
-                      <p className="text-sm font-semibold text-foreground">How it works by jurisdiction</p>
+                      <p className="text-sm font-semibold text-foreground">{t('first24Hours.accordion.firstAppearanceVariationsTitle')}</p>
                       <div className="grid sm:grid-cols-2 gap-2 text-sm">
                         {[
                           { state: "California", note: "First appearance typically within 48 hours (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail." },
@@ -769,20 +749,20 @@ export default function FirstTwentyFourHours() {
                     <div className="rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
                       <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2">{t('first24Hours.accordion.firstAppearanceHowTitle')}</p>
                       <ul className="space-y-1.5 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>State your name. Confirm your identity. Nothing more unless your attorney instructs otherwise.</span></li>
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If you don't have an attorney, ask for a public defender immediately. The magistrate is required to inform you of this right and facilitate appointment.</span></li>
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If asked about bail, briefly mention community ties (family, job, residence). Do not discuss the charges.</span></li>
-                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>If you are on probation or parole, your attorney needs to know before this hearing. It affects the bail calculus.</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>{t('first24Hours.accordion.firstAppearanceHow1')}</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>{t('first24Hours.accordion.firstAppearanceHow2')}</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>{t('first24Hours.accordion.firstAppearanceHow3')}</span></li>
+                        <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0 text-blue-500">•</span><span>{t('first24Hours.accordion.firstAppearanceHow4')}</span></li>
                       </ul>
                     </div>
                   </div>
 
                   <div className="flex gap-2 flex-wrap pt-1">
                     <Link href="/case-timeline">
-                      <Button variant="outline" size="sm">Full Case Timeline</Button>
+                      <Button variant="outline" size="sm">{t('first24Hours.links.caseTimeline')}</Button>
                     </Link>
                     <Link href="/case-guidance">
-                      <Button variant="outline" size="sm">Get Personalized Guidance</Button>
+                      <Button variant="outline" size="sm">{t('first24Hours.links.getGuidance')}</Button>
                     </Link>
                   </div>
                 </AccordionContent>

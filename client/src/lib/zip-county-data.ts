@@ -315,33 +315,21 @@ const ZIP3_LOOKUP: Record<string, CountyResult> = {
   "968": { county: "Honolulu County (Oahu)", state: "Hawaii", stateCode: "HI", inmateUrl: "https://vinelink.vineapps.com/search/HI/Person" },
 };
 
-// VINELink state fallback for ZIP3 → state
-const ZIP3_TO_STATE_FALLBACK: Record<string, { stateCode: string; state: string }> = {
-  "0": { stateCode: "NJ", state: "New Jersey" },
-  "1": { stateCode: "NY", state: "New York" },
-  "2": { stateCode: "VA", state: "Virginia" },
-  "3": { stateCode: "FL", state: "Florida" },
-  "4": { stateCode: "OH", state: "Ohio" },
-  "5": { stateCode: "MN", state: "Minnesota" },
-  "6": { stateCode: "IL", state: "Illinois" },
-  "7": { stateCode: "TX", state: "Texas" },
-  "8": { stateCode: "CO", state: "Colorado" },
-  "9": { stateCode: "CA", state: "California" },
-};
-
 export function lookupZip(zip: string): CountyResult | null {
   const digits = zip.replace(/\D/g, "");
   if (digits.length < 5) return null;
   const zip3 = digits.slice(0, 3);
-  if (ZIP3_LOOKUP[zip3]) return ZIP3_LOOKUP[zip3];
-  return null;
+  return ZIP3_LOOKUP[zip3] ?? null;
 }
 
-export function getStateFallback(zip: string): { stateCode: string; state: string; inmateUrl: string } | null {
-  const digits = zip.replace(/\D/g, "");
-  if (!digits.length) return null;
-  const firstDigit = digits[0];
-  const fb = ZIP3_TO_STATE_FALLBACK[firstDigit];
-  if (!fb) return null;
-  return { ...fb, inmateUrl: `https://vinelink.vineapps.com/search/${fb.stateCode}/Person` };
+// Returns true when the inmate URL is a generic statewide tool (VINELink or state DOC)
+// rather than a direct county sheriff page.
+export function isStatewideUrl(url: string): boolean {
+  return url.includes("vinelink") || url.includes(".state.") || url.includes("doccs") || url.includes("tdcj.texas") || url.includes("vadoc.virginia") || url.includes("webapps.doc.state") || url.includes("appgateway.drc") || url.includes("appsdoc.wi") || url.includes("corrections.az") || url.includes("mdocweb");
+}
+
+// No auto-inference from first digit — too many states share the same first digit.
+// When a ZIP is not found, callers should show the state dropdown for manual selection.
+export function getStateFallback(_zip: string): null {
+  return null;
 }
