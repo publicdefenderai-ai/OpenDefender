@@ -58,7 +58,6 @@ export default function HowTo() {
         { title: t('howTo.sections.getHelp.immigrationRights.title'), description: t('howTo.sections.getHelp.immigrationRights.description'), link: "/immigration-guidance" },
         { title: t('howTo.sections.getHelp.documentSummarizer.title'), description: t('howTo.sections.getHelp.documentSummarizer.description'), link: "/document-summarizer" },
         { title: t('howTo.sections.getHelp.first24Hours.title'), description: t('howTo.sections.getHelp.first24Hours.description'), link: "/first-24-hours" },
-        { title: t('howTo.sections.getHelp.jailPhoneCall.title'), description: t('howTo.sections.getHelp.jailPhoneCall.description'), link: "/first-24-hours#phone-call" },
       ]
     },
     {

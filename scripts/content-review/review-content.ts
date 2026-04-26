@@ -53,7 +53,6 @@ const CATEGORIES: { name: string; outputFile: string; files: string[] }[] = [
       "client/src/pages/process.tsx",
       "client/src/pages/collateral-consequences.tsx",
       "client/src/pages/first-24-hours.tsx",
-      "client/src/pages/jail-phone-call.tsx",
       "client/src/pages/quick-reference.tsx",
     ],
   },

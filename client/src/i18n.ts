@@ -4929,11 +4929,6 @@ i18n
               }
             }
           },
-          "jailPhoneCall": {
-            "title": "Making Your First Call from Jail",
-            "subtitle": "Phone calls from jail are recorded and routinely reviewed by prosecutors. What you say — and what you don't — matters.",
-            "relatedGuides": "Related guides"
-          },
           "collateralConsequences": {
             "title": "Hidden Consequences of a Criminal Record",
             "subtitle": "A conviction — or even a guilty plea — triggers consequences that extend far beyond the sentence itself. Many of these are never explained in court.",
@@ -4967,10 +4962,6 @@ i18n
                 "first24Hours": {
                   "title": "Your First 24 Hours",
                   "description": "Step-by-step guide from arrest through your first court appearance."
-                },
-                "jailPhoneCall": {
-                  "title": "Jail Phone Call Guide",
-                  "description": "What to say and what never to say on jail calls."
                 }
               },
               "knowYourRights": {
@@ -10080,11 +10071,6 @@ i18n
               }
             }
           },
-          "jailPhoneCall": {
-            "title": "Su Primera Llamada desde la Cárcel",
-            "subtitle": "Las llamadas telefónicas desde la cárcel son grabadas y revisadas regularmente por los fiscales. Lo que usted diga — y lo que no diga — importa.",
-            "relatedGuides": "Guías relacionadas"
-          },
           "collateralConsequences": {
             "title": "Consecuencias Ocultas de un Antecedente Penal",
             "subtitle": "Una condena — o incluso una declaración de culpabilidad — desencadena consecuencias que van mucho más allá de la sentencia en sí. Muchas de estas nunca se explican en el tribunal.",
@@ -10118,10 +10104,6 @@ i18n
                 "first24Hours": {
                   "title": "Sus Primeras 24 Horas",
                   "description": "Guía paso a paso desde el arresto hasta su primera comparecencia en el tribunal."
-                },
-                "jailPhoneCall": {
-                  "title": "Guía de Llamadas desde la Cárcel",
-                  "description": "Qué decir y qué nunca decir en llamadas desde la cárcel."
                 }
               },
               "knowYourRights": {
@@ -15232,11 +15214,6 @@ i18n
               }
             }
           },
-          "jailPhoneCall": {
-            "title": "在押期间的第一个电话",
-            "subtitle": "监狱电话会被录音，并由检察官定期审查。您说的话——以及您不说的话——都至关重要。",
-            "relatedGuides": "相关指南"
-          },
           "collateralConsequences": {
             "title": "犯罪记录的隐性后果",
             "subtitle": "定罪——甚至认罪——会引发远超刑期本身的后果。其中许多从未在法庭上得到解释。",
@@ -15270,10 +15247,6 @@ i18n
                 "first24Hours": {
                   "title": "被捕后的首个24小时",
                   "description": "从逮捕到首次出庭的逐步指南。"
-                },
-                "jailPhoneCall": {
-                  "title": "监狱电话指南",
-                  "description": "在监狱电话中该说什么、绝对不能说什么。"
                 }
               },
               "knowYourRights": {
