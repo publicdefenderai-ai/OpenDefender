@@ -956,16 +956,6 @@ export function buildSearchIndex(): void {
       url: '/first-24-hours'
     },
     {
-      id: 'jail-phone-call',
-      title: 'Jail Phone Call Guide',
-      titleEs: 'Guía de Llamadas desde la Cárcel',
-      titleZh: '监狱电话指南',
-      content: 'See the First 24 Hours guide for complete jail phone call guidance, including what to say, what never to say, a sample script, and a state-by-state facility locator.',
-      tags: ['jail phone call', 'prison call', 'recorded call', 'what to say', 'booking', 'attorney call'],
-      aliases: ['phone call from jail', 'calling from jail', 'jail call advice', 'prison phone call', 'what to say when arrested', 'call from detention'],
-      url: '/first-24-hours#phone-call'
-    },
-    {
       id: 'collateral-consequences',
       title: 'Collateral Consequences of a Conviction',
       titleEs: 'Consecuencias Colaterales de una Condena',

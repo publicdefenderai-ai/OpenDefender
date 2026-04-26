@@ -38,7 +38,6 @@ const contentPages = [
     section: "Post-Arrest Guides",
     pages: [
       { route: "/first-24-hours", title: "First 24 Hours After Arrest", description: "Step-by-step guide from moment of arrest through booking, first phone call, bail hearing, and arraignment." },
-      { route: "/jail-phone-call", title: "Jail Phone Call Guide (redirects → /first-24-hours#phone-call)", description: "Redirects to the First 24 Hours guide, which now contains the full jail phone call section." },
       { route: "/quick-reference", title: "Quick Reference Cards", description: "Printable scenario cards for police stops, arraignment, bail hearing, pretrial, plea, and sentencing. Available in tabbed and print-all views." },
       { route: "/case-timeline", title: "Case Timeline", description: "Interactive timeline of the criminal justice process from arrest to sentencing with state-specific deadline information." },
       { route: "/collateral-consequences", title: "Hidden Consequences of a Conviction", description: "Employment, housing, voting rights, professional licenses, immigration, public benefits, and more. Organized by category with jurisdiction notes." },

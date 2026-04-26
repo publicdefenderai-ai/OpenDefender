@@ -144,7 +144,6 @@ function Router() {
       <Route path="/search-seizure" component={SearchSeizure} />
       <Route path="/friends-family" component={FriendsFamily} />
       <Route path="/first-24-hours" component={FirstTwentyFourHours} />
-      <Route path="/jail-phone-call"><Redirect to="/first-24-hours#phone-call" /></Route>
       <Route path="/collateral-consequences" component={CollateralConsequences} />
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
