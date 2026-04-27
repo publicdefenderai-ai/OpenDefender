@@ -6,4 +6,5 @@ requires-python = ">=3.11"
 dependencies = [
     "olefile>=0.47",
     "openpyxl>=3.1.5",
+    "pypdf>=6.10.2",
 ]
