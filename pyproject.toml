@@ -4,5 +4,6 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
+    "olefile>=0.47",
     "openpyxl>=3.1.5",
 ]
