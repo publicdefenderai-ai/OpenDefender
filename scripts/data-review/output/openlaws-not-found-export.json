@@ -1,0 +1,2424 @@
+{
+  "description": "Citation strings that returned not_found from OpenLaws API \u2014 OpenDefender Phase 4 audit, April 2026. All citations are in Bluebook format sourced from training data. Provided to OpenLaws team to help expand citation coverage.",
+  "totalEntries": 586,
+  "uniqueJurisdictions": 36,
+  "generatedAt": "2026-04-24",
+  "byJurisdiction": {
+    "AL": [
+      {
+        "citation": "Ala. Code \u00a7 13A-12-130",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Ala. Code \u00a7 13A-12-197",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Ala. Code \u00a7 13A-12-211",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Ala. Code \u00a7 13A-12-217",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Ala. Code \u00a7 13A-12-231",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Ala. Code \u00a7 13A-6-130",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Ala. Code \u00a7 13A-6-132",
+        "chargeName": "DV 3rd Degree"
+      },
+      {
+        "citation": "Ala. Code \u00a7 32-5A-191",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Ala. Code \u00a7 32-5A-192",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Ala. Code \u00a7 32-5A-330",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "AR": [
+      {
+        "citation": "Ark. Code Ann. \u00a7\u00a7 5-3-201, 5-10-102",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Ark. Code Ann. \u00a7\u00a7 5-3-201, 5-14-103",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "AZ": [
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1102",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1103",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1104",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1105",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1105(A)(2)",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1203",
+        "chargeName": "Assault"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1204",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1204(A)(8)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1402",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1403",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1404",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1405",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-1406",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-3407",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-3407(A)(3)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-3408(A)(2)",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-3408(A)(7)",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-3553",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 13-3601",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 28-1381",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 28-1381(J)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 28-1383(A)(1)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 28-675",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7 4-251",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7\u00a7 13-1001, 13-1105",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Ariz. Rev. Stat. \u00a7\u00a7 13-1001, 13-1406",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "CA": [
+      {
+        "citation": "Cal. Health & Saf. Code \u00a7 11351",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Cal. Health & Saf. Code \u00a7 11352",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Cal. Health & Safety Code \u00a7 11352",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 187",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 189",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 192(a)",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 192(b)",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 240",
+        "chargeName": "Assault"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 241(c)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 243",
+        "chargeName": "Battery"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 243(e)(1)",
+        "chargeName": "Domestic Battery"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 245(a)(1)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 261",
+        "chargeName": "Rape"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 288",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 314",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7 664",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Cal. Penal Code \u00a7\u00a7 664, 261",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "Cal. Veh. Code \u00a7 23152",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Cal. Veh. Code \u00a7 23222",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Cal. Veh. Code \u00a7 23540",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Cal. Veh. Code \u00a7 23546",
+        "chargeName": "DUI Third Offense"
+      }
+    ],
+    "CO": [
+      {
+        "citation": "Colo. Rev. Stat. \u00a7 42-4-1301",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Colo. Rev. Stat. \u00a7 42-4-1301(1)(a)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Colo. Rev. Stat. \u00a7 42-4-1305",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "CT": [
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 21a-277",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 21a-277(a)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 21a-278",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-167c",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-186",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-196a",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-54a",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-54b",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-54c",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-55",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-56",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-56b",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-58",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-59",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-59(a)(1)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-60",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-61",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-70",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-71",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-72a",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7 53a-73a",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7\u00a7 53a-49, 53a-54a",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Conn. Gen. Stat. \u00a7\u00a7 53a-49, 53a-70",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "DC": [
+      {
+        "citation": "D.C. Code \u00a7 16-1001",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-1312",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-1803",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-2101",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-2103",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-2105",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-3002",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-3003",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-3004",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-3008",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-3009.01",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-3102",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-402",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-404",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-404(a)(1)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-404.01",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "D.C. Code \u00a7 22-405",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "D.C. Code \u00a7 25-1001",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "D.C. Code \u00a7 48-904.01",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "D.C. Code \u00a7 48-904.01(a)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "D.C. Code \u00a7 48-904.01(a)(1)",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "D.C. Code \u00a7 50-2203.01",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "D.C. Code \u00a7 50-2206.11",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "D.C. Code \u00a7 50-2206.11(b)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "D.C. Code \u00a7 50-2206.11(c)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "D.C. Code \u00a7\u00a7 22-1803, 22-3002",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "DE": [
+      {
+        "citation": "Del. Code Ann. tit. 11 \u00a7 1042",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11 \u00a7 612",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11 \u00a7 773",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 1102",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 1108",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 531",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 611",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 630A",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 631",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 632",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 635",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 636",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 765",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 768",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 770",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 772",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7 778",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 11, \u00a7\u00a7 531, 771",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 16 \u00a7 4752",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 16 \u00a7 4753A",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 16, \u00a7 4751",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 16, \u00a7 4752",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 21 \u00a7 4177",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 21, \u00a7 4177",
+        "chargeName": "DUI - First Offense"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 21, \u00a7 4177(d)(2)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 21, \u00a7 4177(d)(3)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Del. Code Ann. tit. 21, \u00a7 4177M",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "GA": [
+      {
+        "citation": "Ga. Code Ann. \u00a7 40-6-391(a)(1)",
+        "chargeName": "DUI Less Safe"
+      },
+      {
+        "citation": "Ga. Code Ann. \u00a7 40-6-391(c)(2)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Ga. Code Ann. \u00a7 40-6-391(c)(3)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "O.C.G.A. \u00a7 40-6-393",
+        "chargeName": "Vehicular Homicide"
+      }
+    ],
+    "HI": [
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 291-3.1",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 291E-61",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 291E-61(b)(2)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 291E-61(b)(3)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-701",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-701(1)(b)",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-701.5",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-702",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-702.5",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-710",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-711",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-711(1)(d)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-712",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-712.5",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-730",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-731",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-732",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-734",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 707-750",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 709-906",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 712-1241",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7 712-1242",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7\u00a7 705-500, 707-701",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Haw. Rev. Stat. \u00a7\u00a7 705-500, 707-730",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "ID": [
+      {
+        "citation": "Idaho Code \u00a7 18-1507",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-1508",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4003",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4003(d)",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4006",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4006(3)",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4006(3)(a)",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4015",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-4116",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-6101",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-6101(1)",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-8004",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-8004(4)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-8005(5)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-901",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-903",
+        "chargeName": "Battery"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-905",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-905(a)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-907",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-915",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-918",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Idaho Code \u00a7 18-918(3)",
+        "chargeName": "Domestic Battery"
+      },
+      {
+        "citation": "Idaho Code \u00a7 37-2732(a)",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Idaho Code \u00a7 37-2732(a)(1)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Idaho Code \u00a7 37-2732(a)(1)(A)",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Idaho Code \u00a7 37-2732B",
+        "chargeName": "Drug Trafficking"
+      }
+    ],
+    "IL": [
+      {
+        "citation": "720 ILCS 5/11-1.50",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "720 ILCS 5/11-1.50(a)(3)",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "720 ILCS 5/11-20.1",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "720 ILCS 5/11-30",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "720 ILCS 5/12-3",
+        "chargeName": "Battery"
+      },
+      {
+        "citation": "720 ILCS 5/12-3.05",
+        "chargeName": "Aggravated Battery"
+      },
+      {
+        "citation": "720 ILCS 5/8-4, 5/11-1.20",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "720 ILCS 5/9-2",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "720 ILCS 5/9-3",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "720 Ill. Comp. Stat. 5/11-1.20",
+        "chargeName": "Aggravated Criminal Sexual Assault"
+      },
+      {
+        "citation": "720 Ill. Comp. Stat. 5/11-1.50",
+        "chargeName": "Criminal Sexual Abuse"
+      },
+      {
+        "citation": "720 Ill. Comp. Stat. 5/12-2",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "720 Ill. Comp. Stat. 5/12-3.2",
+        "chargeName": "Domestic Battery"
+      },
+      {
+        "citation": "720 Ill. Comp. Stat. 5/8-4, 5/9-1",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "720 Ill. Comp. Stat. 570/401",
+        "chargeName": "Possession with Intent to Distribute"
+      }
+    ],
+    "IN": [
+      {
+        "citation": "Ind. Code \u00a7 9-30-15-4",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "KS": [
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5402",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5403",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5404",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5405",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5406",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5412",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5413",
+        "chargeName": "Battery"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5413(a)",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5413(b)(1)(A)",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5413(b)(1)(B)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5413(c)(1)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5414",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5503",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5504",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5505",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5506",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5507",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5510",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5703",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-5705",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 21-6401",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Kan. Stat. Ann. \u00a7 8-1599",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "KY": [
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 403.720",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 507.020",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 507.020(1)(b)",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 508.010",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 508.010(1)(b)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 508.020",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 508.025",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 508.030",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 510.040",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 510.060",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 510.080",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 510.090",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 510.110",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7 510.148",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7\u00a7 506.010, 507.020",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Ky. Rev. Stat. Ann. \u00a7\u00a7 506.010, 510.040",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "Ky. Rev. Stat. \u00a7 507.020",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Ky. Rev. Stat. \u00a7 507.030",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Ky. Rev. Stat. \u00a7 507.040",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Ky. Rev. Stat. \u00a7 507.050",
+        "chargeName": "Criminally Negligent Homicide"
+      }
+    ],
+    "LA": [
+      {
+        "citation": "La. R.S. 14:30.1",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "La. R.S. 14:32.1",
+        "chargeName": "Vehicular Homicide"
+      }
+    ],
+    "MA": [
+      {
+        "citation": "Mass. Gen. Laws c. 265, \u00a7 1",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Mass. Gen. Laws c. 265, \u00a7 13",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Mass. Gen. Laws c. 265, \u00a7 13\u00bd",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Mass. Gen. Laws c. 265, \u00a7 16",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265 \u00a7 13A",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265 \u00a7 22",
+        "chargeName": "Rape"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 1",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 13A",
+        "chargeName": "Assault and Battery"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 13B",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 13D",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 13H",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 13M",
+        "chargeName": "Domestic Assault and Battery"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 15A",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 22(b)",
+        "chargeName": "Rape of a Child"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 265, \u00a7 23",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 272, \u00a7 16",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 272, \u00a7 29A",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 274, \u00a7 6; ch. 265, \u00a7 22",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 90 \u00a7 24",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 90, \u00a7 24(1)(a)(1)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 90, \u00a7 24I",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 94C \u00a7 32A",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 94C \u00a7 32E",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 94C, \u00a7 32",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Mass. Gen. Laws ch. 94C, \u00a7 32A",
+        "chargeName": "Manufacturing Controlled Substance"
+      }
+    ],
+    "MD": [
+      {
+        "citation": "Md. Code Ann., Crim. Law \u00a7 5-602",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Md. Code Ann., Crim. Law \u00a7 5-603",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Md. Code Ann., Crim. Law \u00a7 5-608",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Md. Code Ann., Fam. Law \u00a7 4-501",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Md. Code Ann., Transp. \u00a7 21-902",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Md. Code Ann., Transp. \u00a7 21-902(b)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Md. Code Ann., Transp. \u00a7 21-902(c)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Md. Code Ann., Transp. \u00a7 21-903",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "ME": [
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 17-A, \u00a7 203",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 17-A, \u00a7 207",
+        "chargeName": "Assault (Class D Crime)"
+      },
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 17-A, \u00a7 252",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 17-A, \u00a7 253",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 17-A, \u00a7 255-A",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 17-A, \u00a7\u00a7 152, 201",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Me. Rev. Stat. Ann. tit. 29-A, \u00a7 2411",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A \u00a7 1103",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A \u00a7 1104",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A \u00a7 201",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A \u00a7 208",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A \u00a7 253",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 1103",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 1106",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 201",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 202",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 203",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 207",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 207(1)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 208",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 208(1)(B)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 254",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 255-A",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 284",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 752-A",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7 854",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 17-A, \u00a7\u00a7 152, 253",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 19-A \u00a7 4002",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 29-A \u00a7 2411",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 29-A, \u00a7 2076",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 29-A, \u00a7 2411(1-A)(B)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Me. Rev. Stat. tit. 29-A, \u00a7 2411(1-A)(C)",
+        "chargeName": "DUI Third Offense"
+      }
+    ],
+    "MI": [
+      {
+        "citation": "Mich. Comp. Laws \u00a7 257.625",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 257.625(9)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 257.625(9)(c)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 333.7401",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 333.7401(1)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 333.7401(2)(a)(i)",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.145c",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.317",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.321",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.324",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.335a",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.520b",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.520c",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.520d",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.81a",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.81d",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.83",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Mich. Comp. Laws \u00a7 750.84",
+        "chargeName": "Assault in the First Degree"
+      }
+    ],
+    "MN": [
+      {
+        "citation": "Minn. Stat. \u00a7 609.342",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Minn. Stat. \u00a7 609.343",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Minn. Stat. \u00a7 609.344",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Minn. Stat. \u00a7 617.23",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Minn. Stat. \u00a7 617.246",
+        "chargeName": "Sexual Exploitation of Minor"
+      }
+    ],
+    "NC": [
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-17",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-17(b)",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-18",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-190.16",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-190.9",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-202.1",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-27.21",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-27.22",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-27.26",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-27.27",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-27.30",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-32",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-32.1",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-33",
+        "chargeName": "Simple Assault"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-33(a)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-33(c)(1)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 14-33(c)(4)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 20-138.1",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 20-138.7",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 20-141.4",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 20-179(c)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 20-179(d)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 50B-1",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 50B-4.1",
+        "chargeName": "DVPO Violation"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 90-95(a)(1)",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7 90-95(h)",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "N.C. Gen. Stat. \u00a7\u00a7 14-17, 14-2.5",
+        "chargeName": "Attempted Murder"
+      }
+    ],
+    "ND": [
+      {
+        "citation": "N.D. Cent. Code \u00a7 12.1-27.2-04",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "N.D. Cent. Code \u00a7 14-07.1-01",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "N.D. Cent. Code \u00a7 14-07.1-02",
+        "chargeName": "Domestic Violence - Misdemeanor"
+      }
+    ],
+    "NH": [
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 265-A:18(II)(b)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 265-A:18(II)(c)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 265-A:2",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 265-A:3",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 265-A:44",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 318-B:2",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 318-B:2(I)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 318-B:26(I)(c)",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 632-A:2",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 632-A:3",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 632-A:4",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "N.H. Rev. Stat. Ann. \u00a7 649-A:3",
+        "chargeName": "Sexual Exploitation of Minor"
+      }
+    ],
+    "NY": [
+      {
+        "citation": "N.Y. Alco. Bev. Cont. Law \u00a7 65",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 110.00",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 120.00",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 120.05",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 120.05(2)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 120.08",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 120.10",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 125.10",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 125.12",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 125.15",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 125.20",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 125.25",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 125.27",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 130.25",
+        "chargeName": "Rape in the Third Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 130.30",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 130.35",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 130.65",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 220.43",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 245.01",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7 263.05",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "N.Y. Penal Law \u00a7\u00a7 110.00, 130.35",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "N.Y. Veh. & Traf. Law \u00a7 1192",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "N.Y. Veh. & Traf. Law \u00a7 1192(9)(a)(ii)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "N.Y. Veh. & Traf. Law \u00a7 1193(1)(c)(i)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "N.Y. Veh. & Traf. Law \u00a7 1227",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "OK": [
+      {
+        "citation": "Okla. Stat. tit. 21 \u00a7 1111",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21 \u00a7 644",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21 \u00a7 646",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21 \u00a7 711",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21 \u00a7 716",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 1021",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 1021.2",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 1111",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 1114",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 1123",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 641",
+        "chargeName": "Assault and Battery"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 644",
+        "chargeName": "Domestic Assault and Battery"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 644(A)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 644(B)",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 645",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 649",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 701.7",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 701.7(B)",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 701.8",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7 711",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7\u00a7 42, 1111",
+        "chargeName": "Attempted Sexual Assault"
+      },
+      {
+        "citation": "Okla. Stat. tit. 21, \u00a7\u00a7 42, 701.7",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Okla. Stat. tit. 47 \u00a7 11-902",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Okla. Stat. tit. 47, \u00a7 11-902",
+        "chargeName": "DUI - First Offense"
+      },
+      {
+        "citation": "Okla. Stat. tit. 47, \u00a7 11-902(C)(2)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Okla. Stat. tit. 47, \u00a7 11-902(C)(3)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Okla. Stat. tit. 47, \u00a7 11-902.1",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Okla. Stat. tit. 47, \u00a7 11-903",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Okla. Stat. tit. 63 \u00a7 2-415",
+        "chargeName": "Drug Trafficking"
+      }
+    ],
+    "OR": [
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.107",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.115",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.118",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.125",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.145",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.149",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.160",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.165",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.175",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.185",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.185(1)(b)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.208",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.345",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.365",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.375",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.415",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.425",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.427",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.465",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 163.684",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 475.752(1)",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 475.752(2)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 475.860",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 811.170",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 813.010",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 813.010(5)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7 813.010(6)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7\u00a7 161.405, 163.115",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Or. Rev. Stat. \u00a7\u00a7 161.405, 163.375",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "PA": [
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 2701",
+        "chargeName": "Simple Assault"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 2702",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 2702(a)(2)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 3121",
+        "chargeName": "Rape"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 3122.1",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 3123",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 3124.2",
+        "chargeName": "Indecent Assault"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 3127",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "18 Pa. Cons. Stat. \u00a7 6312",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "18 Pa.C.S. \u00a7 2502(a)",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "18 Pa.C.S. \u00a7 2502(b)",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "18 Pa.C.S. \u00a7 2503",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "18 Pa.C.S. \u00a7 2504",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "75 Pa. Cons. Stat. \u00a7 3732",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "75 Pa. Cons. Stat. \u00a7 3802",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "75 Pa. Cons. Stat. \u00a7 3802(a)",
+        "chargeName": "DUI - General Impairment"
+      },
+      {
+        "citation": "75 Pa. Cons. Stat. \u00a7 3804(a)(2)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "75 Pa. Cons. Stat. \u00a7 3804(a)(3)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "75 Pa. Cons. Stat. \u00a7 3809",
+        "chargeName": "Open Container Violation"
+      }
+    ],
+    "SC": [
+      {
+        "citation": "S.C. Code Ann. \u00a7 16-3-629",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "S.C. Code Ann. \u00a7 56-5-2910",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "S.C. Code Ann. \u00a7 56-5-2930",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "S.C. Code Ann. \u00a7 56-5-2933(c)",
+        "chargeName": "DUI Third Offense"
+      }
+    ],
+    "TX": [
+      {
+        "citation": "Tex. Fam. Code \u00a7 71.004",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Tex. Health & Safety Code \u00a7 481.112",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Tex. Health & Safety Code \u00a7 481.112(a)",
+        "chargeName": "Manufacturing Controlled Substance"
+      }
+    ],
+    "UT": [
+      {
+        "citation": "Utah Code Ann. \u00a7 41-6a-502",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 41-6a-503(2)(b)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 41-6a-526",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 58-37-8(1)(a)(ii)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 58-37-8(1)(a)(iii)",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-102",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-102(1)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-103",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-103(1)(a)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-202",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-203",
+        "chargeName": "Murder in the Second Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-203(1)(b)",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-205",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-206",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-207",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-401",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-402",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-404",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5-404.1",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-5b-201",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 76-9-702",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7 77-36-1",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Utah Code Ann. \u00a7\u00a7 76-4-101, 76-5-402",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "VA": [
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-248",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-248(A)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-25",
+        "chargeName": "Attempted Murder"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-266",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-270(B)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-270(C)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-32",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-323.1",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-33",
+        "chargeName": "Felony Murder"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-35",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-36",
+        "chargeName": "Involuntary Manslaughter"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-36.1",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-374.1",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-387",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-51",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-57",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-57(A)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-57(C)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-57.2",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-61",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-63",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-67.1",
+        "chargeName": "Sexual Assault in the Second Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-67.3",
+        "chargeName": "Child Sexual Abuse"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7 18.2-67.4",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Va. Code Ann. \u00a7\u00a7 18.2-25, 18.2-61",
+        "chargeName": "Attempted Sexual Assault"
+      }
+    ],
+    "VT": [
+      {
+        "citation": "Vt. Stat. Ann. tit. 13 \u00a7 1024",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13 \u00a7 3252",
+        "chargeName": "Rape in the First Degree"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 1023",
+        "chargeName": "Simple Assault"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 1023(a)(1)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 1023(b)",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 1023(c)",
+        "chargeName": "Assault in the Third Degree"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 1024(a)(2)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 1042",
+        "chargeName": "Domestic Assault"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 2301",
+        "chargeName": "Murder in the First Degree"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 2303",
+        "chargeName": "Voluntary Manslaughter"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 2304",
+        "chargeName": "Criminally Negligent Homicide"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 2601",
+        "chargeName": "Indecent Exposure / Public Urination"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 2822",
+        "chargeName": "Sexual Exploitation of Minor"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 3252",
+        "chargeName": "Sexual Assault in the Third Degree"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 3252(a)(1)",
+        "chargeName": "Rape in the Second Degree"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 13, \u00a7 3252(c)",
+        "chargeName": "Statutory Rape"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 15 \u00a7 1101",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 18 \u00a7 4231(a)(1)",
+        "chargeName": "Possession with Intent to Distribute"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 18 \u00a7 4231(a)(2)",
+        "chargeName": "Drug Trafficking"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 18, \u00a7 4231",
+        "chargeName": "Distribution of Controlled Substance"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 18, \u00a7 4231(a)",
+        "chargeName": "Manufacturing Controlled Substance"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 23 \u00a7 1201",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 23, \u00a7 1091(b)",
+        "chargeName": "Vehicular Homicide"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 23, \u00a7 1134",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 23, \u00a7 1201",
+        "chargeName": "Driving Under the Influence"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 23, \u00a7 1210(b)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Vt. Stat. Ann. tit. 23, \u00a7 1210(c)",
+        "chargeName": "DUI Third Offense"
+      }
+    ],
+    "WA": [
+      {
+        "citation": "Wash. Rev. Code \u00a7 26.50.010",
+        "chargeName": "Domestic Violence Assault"
+      },
+      {
+        "citation": "Wash. Rev. Code \u00a7 46.61.502",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Wash. Rev. Code \u00a7 46.61.502(6)(b)(ii)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Wash. Rev. Code \u00a7 46.61.502(6)(b)(iii)",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Wash. Rev. Code \u00a7 46.61.519",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Wash. Rev. Code \u00a7 46.61.520",
+        "chargeName": "Vehicular Homicide"
+      }
+    ],
+    "WI": [
+      {
+        "citation": "Wis. Stat. \u00a7 346.63",
+        "chargeName": "DUI First Offense"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 346.63(1)",
+        "chargeName": "OWI First Offense"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 346.63(1)(b)",
+        "chargeName": "DUI Second Offense"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 346.65(2)(am)3",
+        "chargeName": "DUI Third Offense"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 346.935",
+        "chargeName": "Open Container Violation"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 940.19(1)",
+        "chargeName": "Assault in the Second Degree"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 940.19(2)",
+        "chargeName": "Assault with Deadly Weapon"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 940.19(5)",
+        "chargeName": "Aggravated Assault"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 940.19(6)",
+        "chargeName": "Assault in the First Degree"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7 940.20(2)",
+        "chargeName": "Assault on Peace Officer"
+      },
+      {
+        "citation": "Wis. Stat. \u00a7\u00a7 940.19, 968.075",
+        "chargeName": "Domestic Abuse Battery"
+      }
+    ],
+    "federal": [
+      {
+        "citation": "18 U.S.C. \u00a7 1113",
+        "chargeName": "Attempted Murder (Federal)"
+      },
+      {
+        "citation": "18 U.S.C. \u00a7 2241",
+        "chargeName": "Attempted Sexual Abuse (Federal)"
+      },
+      {
+        "citation": "21 U.S.C. \u00a7 841(a)(1)",
+        "chargeName": "Federal Drug Trafficking (21 U.S.C. \u00a7 841)"
+      }
+    ]
+  }
+}

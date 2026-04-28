@@ -1,0 +1,591 @@
+GAP ANALYSIS SUMMARY — KS, NC, MO
+Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026
+
+======================================================================
+KS
+======================================================================
+Our entries:            128
+Authoritative entries:  926
+Matched:                6 (4%)
+Unmatched (phantom?):   122
+Missing from ours:      920
+Citation mismatches:    4
+
+UNMATCHED — charges we have with no authoritative match:
+  [F] Murder in the First Degree                         | Kan. Stat. Ann. § 21-5402 | confidence: needs_review
+  [F] Murder in the Second Degree                        | Kan. Stat. Ann. § 21-5403 | confidence: needs_review
+  [F] Voluntary Manslaughter                             | Kan. Stat. Ann. § 21-5404 | confidence: needs_review
+  [F] Criminally Negligent Homicide                      | Kan. Stat. Ann. § 21-5406 | confidence: needs_review
+  [F] Vehicular Homicide                                 | Kan. Stat. Ann. § 21-5406 | confidence: needs_review
+  [F] Felony Murder                                      | Kan. Stat. Ann. § 21-5402 | confidence: needs_review
+  [F] Assault in the First Degree                        | Kan. Stat. Ann. § 21-5413(b)(1)(A) | confidence: needs_review
+  [F] Assault in the Second Degree                       | Kan. Stat. Ann. § 21-5413(a) | confidence: needs_review
+  [M] Assault in the Third Degree                        | Kan. Stat. Ann. § 21-5412 | confidence: needs_review
+  [M] Domestic Violence Assault                          | Kan. Stat. Ann. § 21-5414 | confidence: needs_review
+  [F] Assault on Peace Officer                           | Kan. Stat. Ann. § 21-5413(c)(1) | confidence: needs_review
+  [M] Menacing                                           | Kan. Stat. Ann. § 21-5415 | confidence: medium
+  [F] Rape in the First Degree                           | Kan. Stat. Ann. § 21-5503 | confidence: needs_review
+  [F] Rape in the Second Degree                          | Kan. Stat. Ann. § 21-5503 | confidence: needs_review
+  [F] Sexual Assault in the First Degree                 | Kan. Stat. Ann. § 21-5503 | confidence: needs_review
+  [F] Sexual Assault in the Second Degree                | Kan. Stat. Ann. § 21-5504 | confidence: needs_review
+  [F] Sexual Assault in the Third Degree                 | Kan. Stat. Ann. § 21-5505 | confidence: needs_review
+  [F] Statutory Rape                                     | Kan. Stat. Ann. § 21-5507 | confidence: needs_review
+  [F] Child Sexual Abuse                                 | Kan. Stat. Ann. § 21-5506 | confidence: needs_review
+  [F] Sexual Exploitation of Minor                       | Kan. Stat. Ann. § 21-5510 | confidence: needs_review
+  [F] Grand Theft in the First Degree                    | Kan. Stat. Ann. § 21-5801 | confidence: medium
+  [F] Grand Theft in the Second Degree                   | Kan. Stat. Ann. § 21-5801 | confidence: medium
+  [M] Petty Theft                                        | Kan. Stat. Ann. § 21-5801 | confidence: medium
+  [M] Theft by Receiving                                 | Kan. Stat. Ann. § 21-5801(a)(4) | confidence: medium
+  [F] Identity Theft                                     | Kan. Stat. Ann. § 21-6107 | confidence: medium
+  [F] Credit Card Fraud                                  | Kan. Stat. Ann. § 21-5828 | confidence: medium
+  [F] Embezzlement                                       | Kan. Stat. Ann. § 21-5801(a)(4) | confidence: medium
+  [M] Shoplifting                                        | Kan. Stat. Ann. § 21-5801 | confidence: medium
+  [F] Burglary in the First Degree                       | Kan. Stat. Ann. § 21-5807(a)(1) | confidence: medium
+  [F] Burglary in the Second Degree                      | Kan. Stat. Ann. § 21-5807(a)(2) | confidence: medium
+  [F] Residential Burglary                               | Kan. Stat. Ann. § 21-5807(a)(1) | confidence: medium
+  [F] Commercial Burglary                                | Kan. Stat. Ann. § 21-5807(a)(2) | confidence: medium
+  [F] Auto Burglary                                      | Kan. Stat. Ann. § 21-5807(b) | confidence: medium
+  [F] Robbery in the First Degree                        | Kan. Stat. Ann. § 21-5421 | confidence: medium
+  [F] Robbery in the Second Degree                       | Kan. Stat. Ann. § 21-5420 | confidence: medium
+  [F] Carjacking                                         | Kan. Stat. Ann. § 21-5422 | confidence: medium
+  [F] Bank Robbery                                       | Kan. Stat. Ann. § 21-5420 | confidence: medium
+  [M] Possession of Controlled Substance                 | Kan. Stat. Ann. § 21-5706 | confidence: medium
+  [F] Possession with Intent to Distribute               | Kan. Stat. Ann. § 21-5705 | confidence: needs_review
+  [F] Distribution of Controlled Substance               | Kan. Stat. Ann. § 21-5705 | confidence: needs_review
+  [F] Manufacturing Controlled Substance                 | Kan. Stat. Ann. § 21-5703 | confidence: needs_review
+  [F] Drug Trafficking                                   | Kan. Stat. Ann. § 21-5703 | confidence: needs_review
+  [F] Maintaining Drug House                             | Kan. Stat. Ann. § 21-5710 | confidence: medium
+  [M] Unlawful Carrying of Weapon                        | Kan. Stat. Ann. § 21-6302 | confidence: medium
+  [F] Felon in Possession of Firearm                     | Kan. Stat. Ann. § 21-6304 | confidence: medium
+  [F] Discharge of Firearm in City                       | Kan. Stat. Ann. § 21-6308 | confidence: medium
+  [F] Possession of Prohibited Weapon                    | Kan. Stat. Ann. § 21-6301 | confidence: medium
+  [F] Wire Fraud                                         | Kan. Stat. Ann. § 21-5801(a)(2) | confidence: medium
+  [F] Mail Fraud                                         | Kan. Stat. Ann. § 21-5843 | confidence: medium
+  [F] Check Fraud                                        | Kan. Stat. Ann. § 21-5821 | confidence: medium
+  [F] Insurance Fraud                                    | Kan. Stat. Ann. § 40-2,118 | confidence: medium
+  [F] Tax Fraud                                          | Kan. Stat. Ann. § 79-3240 | confidence: medium
+  [F] Forgery                                            | Kan. Stat. Ann. § 21-5823 | confidence: medium
+  [F] Computer Fraud                                     | Kan. Stat. Ann. § 21-5839 | confidence: medium
+  [M] Disorderly Conduct                                 | Kan. Stat. Ann. § 21-6203 | confidence: medium
+  [M] Public Intoxication                                | Kan. Stat. Ann. § 21-6206 | confidence: medium
+  [M] Disturbing the Peace                               | Kan. Stat. Ann. § 21-6203 | confidence: medium
+  [M] Trespassing                                        | Kan. Stat. Ann. § 21-5808 | confidence: medium
+  [M] Vandalism                                          | Kan. Stat. Ann. § 21-5813 | confidence: medium
+  [M] Loitering                                          | Kan. Stat. Ann. § 21-6204 | confidence: medium
+  [M] DUI First Offense                                  | Kan. Stat. Ann. § 8-1567 | confidence: high
+  [M] DUI Second Offense                                 | Kan. Stat. Ann. § 8-1567(b)(2) | confidence: high
+  [F] DUI Third Offense                                  | Kan. Stat. Ann. § 8-1567(b)(3) | confidence: high
+  [M] Reckless Driving                                   | Kan. Stat. Ann. § 8-1566 | confidence: medium
+  [M] Hit and Run                                        | Kan. Stat. Ann. § 8-1601 | confidence: medium
+  [M] Driving While Suspended                            | Kan. Stat. Ann. § 8-262 | confidence: medium
+  [M] Theft (Class A Misdemeanor)                        | Kan. Stat. Ann. § 21-5801 | confidence: medium
+  [M] DUI - First Offense                                | Kan. Stat. Ann. § 8-1567(a) | confidence: high
+  [M] Battery                                            | Kan. Stat. Ann. § 21-5413 | confidence: needs_review
+  [M] Domestic Battery                                   | Kan. Stat. Ann. § 21-5414 | confidence: needs_review
+  [M] Criminal Trespass                                  | Kan. Stat. Ann. § 21-5808 | confidence: medium
+  [M] Criminal Damage to Property                        | Kan. Stat. Ann. § 21-5813 | confidence: medium
+  [M] Probation Violation                                | Kan. Stat. Ann. § 22-3716 | confidence: medium
+  [M] Resisting Arrest / Obstruction                     | Kan. Stat. Ann. § 21-5414 | confidence: medium
+  [M] Violation of Protective Order                      | Kan. Stat. Ann. § 21-5924 | confidence: medium
+  [M] Open Container Violation                           | Kan. Stat. Ann. § 8-1599 | confidence: needs_review
+  [M] Minor in Possession of Alcohol                     | Kan. Stat. Ann. § 41-727 | confidence: medium
+  [M] Providing False Information to Police              | Kan. Stat. Ann. § 21-5904(a)(3) | confidence: medium
+  [M] Harassment / Stalking                              | Kan. Stat. Ann. § 21-6101 | confidence: medium
+  [M] Contempt of Court                                  | Kan. Stat. Ann. § 20-1204a | confidence: medium
+  [M] Writing Bad Checks / Worthless Checks              | Kan. Stat. Ann. § 21-5821 | confidence: medium
+  [M] Solicitation / Prostitution                        | Kan. Stat. Ann. § 21-6421 | confidence: medium
+  [M] Driving Without Insurance                          | Kan. Stat. Ann. § 40-3104 | confidence: medium
+  [M] Reckless/Careless Driving (Criminal)               | Kan. Stat. Ann. § 8-1566 | confidence: medium
+  [M] Driving with Expired Registration                  | Kan. Stat. Ann. § 8-135 | confidence: medium
+  [M] Driving with Expired/No Inspection                 | Kan. Stat. Ann. § 8-1749 | confidence: medium
+  [M] Criminal Nonsupport / Failure to Pay Child Support | Kan. Stat. Ann. § 21-5606 | confidence: medium
+  [M] Noise Violation / Disturbing the Peace by Noise    | Kan. Stat. Ann. § 21-6203(a)(2) | confidence: medium
+  [M] Indecent Exposure / Public Urination               | Kan. Stat. Ann. § 21-6401 | confidence: needs_review
+  [M] Possession of Fake/Fraudulent ID                   | Kan. Stat. Ann. § 41-715 | confidence: medium
+  [M] Animal at Large / Leash Law Violation              | Kan. Stat. Ann. § 47-646 | confidence: medium
+  [M] Animal Cruelty (Misdemeanor)                       | Kan. Stat. Ann. § 21-6412 | confidence: medium
+  [M] Illegal Camping / Sleeping in Public               | Kan. Stat. Ann. § 21-5808 | confidence: medium
+  [M] Panhandling / Aggressive Solicitation              | Kan. Stat. Ann. § 21-6203 | confidence: medium
+  [M] Operating Unregistered / Uninsured Vehicle         | Kan. Stat. Ann. § 8-135 | confidence: medium
+  [M] Curfew Violation                                   | Kan. Stat. Ann. § 38-2303 | confidence: medium
+  [M] Trespass After Warning / Return After Ban          | Kan. Stat. Ann. § 21-5808 | confidence: medium
+  [I] Defective Vehicle Equipment / Broken Taillight     | Kan. Stat. Ann. § 8-1701 | confidence: medium
+  [M] Truancy / Chronic Absenteeism                      | Kan. Stat. Ann. § 72-3122 | confidence: medium
+  [M] Littering / Illegal Dumping                        | Kan. Stat. Ann. § 21-6107 | confidence: medium
+  [M] Illegal Discharge of Fireworks                     | Kan. Stat. Ann. § 31-157 | confidence: medium
+  [M] Possession of Alcohol in Park / Prohibited Area    | Kan. Stat. Ann. § 41-719 | confidence: medium
+  [M] Fishing / Hunting Without a License                | Kan. Stat. Ann. § 32-1005 | confidence: medium
+  [F] Criminal Attempt                                   | Kan. Stat. Ann. § 21-5301 | confidence: medium
+  [F] Criminal Conspiracy                                | Kan. Stat. Ann. § 21-5302 | confidence: medium
+  [F] Aiding and Abetting / Accomplice Liability         | Kan. Stat. Ann. § 21-5210 | confidence: medium
+  [F] Accessory After the Fact                           | Kan. Stat. Ann. § 21-5212 | confidence: medium
+  [F] Attempted Murder                                   | Kan. Stat. Ann. §§ 21-5301, 21-5402 | confidence: high
+  [F] Attempted Robbery                                  | Kan. Stat. Ann. §§ 21-5301, 21-5420 | confidence: medium
+  [F] Attempted Sexual Assault                           | Kan. Stat. Ann. §§ 21-5301, 21-5503 | confidence: high
+  [F] Criminal Solicitation                              | Kan. Stat. Ann. § 21-5303 | confidence: medium
+  [F] Criminal Street Gang Enhancement                   | Kan. Stat. Ann. § 21-6422 | confidence: medium
+  [F] Hate Crime Enhancement                             | Kan. Stat. Ann. § 21-6815 | confidence: medium
+  [F] Prior Felony / Recidivist Sentencing Enhancement   | Kan. Stat. Ann. § 21-6804 | confidence: medium
+  [F] Use of a Firearm in Commission of a Felony         | Kan. Stat. Ann. § 21-6811 | confidence: medium
+  [F] Drug Offense in a School Zone (Proximity Enhancement) | Kan. Stat. Ann. § 21-5709 | confidence: medium
+  [F] RICO / Organized Crime (Racketeering)              | Kan. Stat. Ann. § 21-6329 | confidence: medium
+  [F] Money Laundering                                   | Kan. Stat. Ann. § 21-6404 | confidence: medium
+  [F] Juvenile Delinquency Adjudication (Felony-Level Act) | Kan. Stat. Ann. § 38-2302(f) | confidence: medium
+  [M] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Kan. Stat. Ann. § 38-2302(f) | confidence: medium
+  [F] Juvenile Transfer to Adult Court (Waiver Hearing)  | Kan. Stat. Ann. § 38-2347 | confidence: medium
+  [F] Juvenile Firearm Possession                        | Kan. Stat. Ann. § 21-6301 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Assault with Deadly Weapon                    | ours: 21-5413            | auth: 21-5412
+  Possession of Drug Paraphernalia              | ours: 21-5709            | auth: 21-6414
+  Possession of Marijuana                       | ours: 21-5706            | auth: 21-6408
+  Failure to Appear                             | ours: 21-5915            | auth: 21-5935
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Murder; 1st Degree; intentionally and with premeditation | K.S.A. § 21-5402(a)(1) | Felony severity Off-grid
+  Murder; 1st Degree; in the commission of, attempt to commit, or flight from an inherently dangerous felony as defined in K.S.A. 21-3436 | K.S.A. § 21-5402(a)(2) | Felony severity Off-grid
+  Murder; 2nd Degree; intentional killing            | K.S.A. § 21-5403(a)(1) | Felony severity 1
+  Murder; 2nd Degree; unintentionally but recklessly, under circumstances manifesting extreme indifference to human life | K.S.A. § 21-5403(a)(2) | Felony severity 2
+  Voluntary Manslaughter; Knowingly killing upon sudden quarrel or in heat of passion | K.S.A. § 21-5404(a)(1) | Felony severity 3
+  Voluntary Manslaughter; Knowingly killing upon unreasonable but honest belief that deadly force was justified | K.S.A. § 21-5404(a)(2) | Felony severity 3
+  Involuntary Manslaughter; In the commission, attempted commission, or flight from other felonies excluding DUI | K.S.A. § 21-5405(a)(2) | Felony severity 5
+  Involuntary Manslaughter; In commission of lawful act in unlawful manner | K.S.A. § 21-5405(a)(4) | Felony severity 5
+  Assisting Suicide; Knowingly, by force or duress, causing another to commit or attempt to commit suicide | K.S.A. § 21-5407(a)(1) | Felony severity 3
+  Assisting Suicide; Intentionally providing the physical means by which another commits or attempts to commit suicide | K.S.A. § 21-5407(a)(2)(A) | Felony severity 9
+  Assisting Suicide; Intentionally participating in a physical act by which another commits or attempts to commit suicide | K.S.A. § 21-5407(a)(2)(B) | Felony severity 9
+  Aggravated Assault; While disguised in any manner designed to conceal identity | K.S.A. § 21-5412(b)(2) | Felony severity 7
+  Aggravated Assault; With intent to commit any felony | K.S.A. § 21-5412(b)(3) | Felony severity 7
+  Aggravated Assault; On a state, county, city, university or campus law enforcement officer while disguised in any manner designed to conceal identity | K.S.A. § 21-5412(d)(2) | Felony severity 6
+  Aggravated Assault; On a state, county, city, university or campus law enforcement officer with a deadly weapon | K.S.A. § 21-5412(d)(1) | Felony severity 6
+  Aggravated Assault; On a state, county, city, university or campus law enforcement officer with the intent to commit a felony | K.S.A. § 21-5412(d)(3) | Felony severity 6
+  Domestic Battery; Knowingly or Recklessly causing bodily harm; 3rd or subsequent within 5 yrs | K.S.A. § 21-5414(a)(1) | Felony severity Nongrid
+  Domestic Battery; Knowingly causing physical contact in rude, insulting or angry manner; 3rd or subsequent within 5 yrs | K.S.A. § 21-5414(a)(2) | Felony severity Nongrid
+  Battery; Campus or university police officer; knowingly or recklessly causing bodily harm | K.S.A. § 21-5413(c)(2)(A) | Felony severity 7
+  Battery; State, county or city law enforcement officer; knowingly or recklessly causing bodily harm | K.S.A. § 21-5413(c)(2)(B) | Felony severity 7
+  Battery; State correctional officer/employee by a person in custody of the Secretary of Corrections | K.S.A. § 21-5413(c)(3)(A) | Felony severity 5
+  Battery; Juvenile correctional facility officer/employee by a person confined in a JCF | K.S.A. § 21-5413(c)(3)(B) | Felony severity 5
+  Battery; Juvenile detention facility officer/employee by a person confined in a JDC | K.S.A. § 21-5413(c)(3)(C) | Felony severity 5
+  Battery; City or county correctional officer/employee by a person confined in city holding facility or county jail | K.S.A. § 21-5413(c)(3)(D) | Felony severity 5
+  Aggravated Battery; Knowingly causing great bodily harm or disfigurement | K.S.A. § 21-5413(b)(1)(A) | Felony severity 4
+  Aggravated Battery; Knowingly causing bodily harm to another with a deadly weapon, or in a manner whereby great bodily harm, disfigurement or death can be inflicted | K.S.A. § 21-5413(b)(1)(B) | Felony severity 7
+  Aggravated Battery; Knowingly causing physical contact when done in a rude, insulting or angry manner with a deadly weapon, or in a manner whereby great bodily harm, disfigurement or death can be inflicted | K.S.A. § 21-5413(b)(1)(C) | Felony severity 7
+  Aggravated Battery; Recklessly causing great bodily harm or disfigurement | K.S.A. § 21-5413(b)(2)(A) | Felony severity 5
+  Aggravated Battery; Recklessly causing bodily harm to another with a deadly weapon, or in a manner whereby great bodily harm, disfigurement or death can be inflicted | K.S.A. § 21-5413(b)(2)(B) | Felony severity 8
+  Aggravated Battery; State, county or city law enforcement officer; knowingly causing great bodily harm or disfigurement | K.S.A. § 21-5413(d)(1)(A) | Felony severity 3
+  Aggravated Battery; Campus or university police officer; knowingly causing great bodily harm or disfigurement | K.S.A. § 21-5413(d)(1)(B) | Felony severity 3
+  Aggravated Battery; State, county or city law enforcement officer; knowingly causing bodily harm with a deadly weapon; physical contact done in a rude, insulting or angry manner, with a deadly weapon or in a manner whereby great bodily harm, disfigurement or death can be inflicted | K.S.A. § 21-5413(d)(2)(A) | Felony severity 4
+  Aggravated Battery; Campus or university police officer; knowingly causing bodily harm with a deadly weapon; physical contact done in a rude, insulting or angry manner, with a deadly weapon or in a manner whereby great bodily harm, disfigurement or death can be inflicted | K.S.A. § 21-5413(d)(2)(B) | Felony severity 4
+  Aggravated Battery; State, county or city law enforcement officer; knowingly causing bodily harm with a motor vehicle | K.S.A. § 21-5413(d)(3)(A) | Felony severity 3
+  Aggravated Battery; Campus or university police officer; knowingly causing bodily harm with a motor vehicle | K.S.A. § 21-5413(d)(3)(B) | Felony severity 3
+  Criminal Threat; Threaten to commit violence with intent to place another in fear, to cause the evacuation, lock down or disruption in regular, ongoing activities of any building, place of assembly or facility of transportation, or in reckless disregard of the risk of causing such fear or evacuation, lock down or disruption in regular, ongoing activities | K.S.A. § 21-5415(a)(1) | Felony severity 9
+  Criminal Threat; Threaten to adulterate or contaminate any food, raw agricultural commodity, beverage, drug, animal feed, plant or public water supply | K.S.A. § 21-5415(a)(2) | Felony severity 9
+  Criminal Threat; Threaten to expose any animal in this state to any contagious or infectious disease | K.S.A. § 21-5415(a)(3) | Felony severity 9
+  Aggravated Criminal Threat; When public, commercial or industrial building, place of assembly or facility of transportation is evacuated, locked down or disrupted as to regular, ongoing activities as result of threat | K.S.A. § 21-5415(b) | Felony severity 5
+  Kidnapping; For ransom, or as a shield or hostage  | K.S.A. § 21-5408(a)(1) | Felony severity 3
+  ... and 557 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+  Anticipatory Crimes; Attempt to commit a class A misdemeanor | K.S.A. § 21-5301(e) | Misdemeanor class B
+  Anticipatory Crimes; Attempt to commit a class B or C misdemeanor | K.S.A. § 21-5301(f) | Misdemeanor class C
+  Anticipatory Crimes; Conspiracy to commit a misdemeanor | K.S.A. § 21-5302(e) | Misdemeanor class C
+  Vehicular Homicide; Killing by operation of a vehicle in a manner which creates an unreasonable risk of injury and which constitutes a material deviation from the reasonable standard of care | K.S.A. § 21-5406(a) | Misdemeanor class A
+  Assault; Knowingly placing another person in reasonable apprehension of immediate bodily harm | K.S.A. § 21-5412(a) | Misdemeanor class C
+  Assault of a Law Enforcement Officer; Uniformed or properly identified state, county or city law enforcement officer | K.S.A. § 21-5412(c)(1) | Misdemeanor class A
+  Assault of a Law Enforcement Officer; Uniformed or properly identified university or campus police officer | K.S.A. § 21-5412(c)(2) | Misdemeanor class A
+  Battery; Knowingly or recklessly causing bodily harm to another person | K.S.A. § 21-5413(a)(1) | Misdemeanor class B
+  Battery; Knowingly causing physical contact with another person when done in a rude, insulting or angry manner | K.S.A. § 21-5413(a)(2) | Misdemeanor class B
+  Domestic Battery; Knowingly or recklessly causing bodily harm by a family or household member against a family or household member; 1st conviction | K.S.A. § 21-5414(a)(1) | Misdemeanor class B
+  Domestic Battery; Knowingly causing physical contact with a family or household member by a family or household member when done in a rude, insulting or angry manner; 2nd conviction within 5 yrs of 1st conviction | K.S.A. § 21-5414(a)(2) | Misdemeanor class A
+  Domestic Battery; Knowingly or recklessly causing bodily harm by a family or household member against a family or household member; 2nd conviction within 5 yrs of 1st conviction | K.S.A. § 21-5414(a)(1) | Misdemeanor class A
+  Domestic Battery; Knowingly causing physical contact with a family or household member by a family or household member when done in a rude, insulting or angry manner; 1st conviction | K.S.A. § 21-5414(a)(2) | Misdemeanor class B
+  Battery; Campus/university police officer; Knowingly causing physical contact in a rude, insulting or angry manner | K.S.A. § 21-5413(c)(1)(A) | Misdemeanor class A
+  Battery; Law enforcement officer; Knowingly causing physical contact in a rude, insulting or angry manner | K.S.A. § 21-5413(c)(1)(B) | Misdemeanor class A
+  Unlawful Interference with a Firefighter; Knowingly interfering while firefighter is engaged in performance of duties | K.S.A. § 21-6325(a)(1) | Misdemeanor class B
+  Unlawful Interference with a Firefighter; Knowingly obstructing, interfering with or impeding the efforts of firefighter to reach the location of fire or other emergency | K.S.A. § 21-6325(a)(2) | Misdemeanor class B
+  Dangerous Animals; Permitting a dangerous animal to be at large | K.S.A. § 21-6418(a) | Misdemeanor class B
+  Interference With Parental Custody; By parent if parent is entitled to joint custody | K.S.A. § 21-5409(a) | Misdemeanor class A
+  Interference With Custody; Of a committed person   | K.S.A. § 21-5410(a) | Misdemeanor class A
+  ... and 303 more misdemeanors
+
+======================================================================
+NC
+======================================================================
+Our entries:            130
+Authoritative entries:  2753
+Matched:                26 (20%)
+Unmatched (phantom?):   104
+Missing from ours:      2718
+Citation mismatches:    11
+
+UNMATCHED — charges we have with no authoritative match:
+  [F] Voluntary Manslaughter                             | N.C. Gen. Stat. § 14-18 | confidence: high
+  [F] Criminally Negligent Homicide                      | N.C. Gen. Stat. § 14-18 | confidence: high
+  [F] Vehicular Homicide                                 | N.C. Gen. Stat. § 20-141.4 | confidence: high
+  [F] Assault in the First Degree                        | N.C. Gen. Stat. § 14-32 | confidence: high
+  [F] Assault in the Second Degree                       | N.C. Gen. Stat. § 14-32.1 | confidence: high
+  [M] Assault in the Third Degree                        | N.C. Gen. Stat. § 14-33(a) | confidence: high
+  [F] Aggravated Assault                                 | N.C. Gen. Stat. § 14-32 | confidence: high
+  [M] Domestic Violence Assault                          | N.C. Gen. Stat. § 50B-1 | confidence: high
+  [M] Menacing                                           | N.C. Gen. Stat. § 14-277.1 | confidence: high
+  [F] Rape in the First Degree                           | N.C. Gen. Stat. § 14-27.21 | confidence: high
+  [F] Rape in the Second Degree                          | N.C. Gen. Stat. § 14-27.22 | confidence: high
+  [F] Sexual Assault in the First Degree                 | N.C. Gen. Stat. § 14-27.21 | confidence: high
+  [F] Sexual Assault in the Second Degree                | N.C. Gen. Stat. § 14-27.26 | confidence: high
+  [F] Sexual Assault in the Third Degree                 | N.C. Gen. Stat. § 14-27.27 | confidence: high
+  [F] Statutory Rape                                     | N.C. Gen. Stat. § 14-27.30 | confidence: high
+  [F] Child Sexual Abuse                                 | N.C. Gen. Stat. § 14-202.1 | confidence: high
+  [F] Grand Theft in the First Degree                    | N.C. Gen. Stat. § 14-72 | confidence: high
+  [F] Grand Theft in the Second Degree                   | N.C. Gen. Stat. § 14-72 | confidence: high
+  [M] Petty Theft                                        | N.C. Gen. Stat. § 14-72 | confidence: high
+  [M] Theft by Receiving                                 | N.C. Gen. Stat. § 14-71 | confidence: high
+  [F] Identity Theft                                     | N.C. Gen. Stat. § 14-113.20 | confidence: high
+  [F] Credit Card Fraud                                  | N.C. Gen. Stat. § 14-113.9 | confidence: high
+  [F] Embezzlement                                       | N.C. Gen. Stat. § 14-90 | confidence: high
+  [M] Shoplifting                                        | N.C. Gen. Stat. § 14-72.1 | confidence: high
+  [F] Residential Burglary                               | N.C. Gen. Stat. § 14-51 | confidence: high
+  [F] Commercial Burglary                                | N.C. Gen. Stat. § 14-54 | confidence: high
+  [F] Auto Burglary                                      | N.C. Gen. Stat. § 14-56 | confidence: high
+  [F] Carjacking                                         | N.C. Gen. Stat. § 14-87 | confidence: high
+  [F] Bank Robbery                                       | N.C. Gen. Stat. § 14-87 | confidence: high
+  [F] Possession with Intent to Distribute               | N.C. Gen. Stat. § 90-95(a)(1) | confidence: high
+  [F] Manufacturing Controlled Substance                 | N.C. Gen. Stat. § 90-95(a)(1) | confidence: high
+  [F] Drug Trafficking                                   | N.C. Gen. Stat. § 90-95(h) | confidence: high
+  [F] Maintaining Drug House                             | N.C. Gen. Stat. § 90-108(a)(7) | confidence: high
+  [M] Unlawful Carrying of Weapon                        | N.C. Gen. Stat. § 14-269 | confidence: high
+  [F] Felon in Possession of Firearm                     | N.C. Gen. Stat. § 14-415.1 | confidence: high
+  [F] Discharge of Firearm in City                       | N.C. Gen. Stat. § 14-34.1 | confidence: high
+  [F] Wire Fraud                                         | N.C. Gen. Stat. § 14-100 | confidence: high
+  [F] Mail Fraud                                         | N.C. Gen. Stat. § 14-100(a) | confidence: high
+  [F] Check Fraud                                        | N.C. Gen. Stat. § 14-106 | confidence: high
+  [F] Insurance Fraud                                    | N.C. Gen. Stat. § 58-2-161 | confidence: high
+  [F] Tax Fraud                                          | N.C. Gen. Stat. § 105-236(a)(7) | confidence: high
+  [F] Computer Fraud                                     | N.C. Gen. Stat. § 14-453.1 | confidence: high
+  [M] Public Intoxication                                | N.C. Gen. Stat. § 14-444 | confidence: high
+  [M] Disturbing the Peace                               | N.C. Gen. Stat. § 14-288.4 | confidence: high
+  [M] Trespassing                                        | N.C. Gen. Stat. § 14-159.12 | confidence: high
+  [M] Vandalism                                          | N.C. Gen. Stat. § 14-127 | confidence: high
+  [M] Loitering                                          | N.C. Gen. Stat. § 14-132 | confidence: high
+  [M] DUI First Offense                                  | N.C. Gen. Stat. § 20-138.1 | confidence: high
+  [M] DUI Second Offense                                 | N.C. Gen. Stat. § 20-179(c) | confidence: high
+  [F] DUI Third Offense                                  | N.C. Gen. Stat. § 20-179(d) | confidence: high
+  [M] Hit and Run                                        | N.C. Gen. Stat. § 20-166 | confidence: high
+  [M] Driving While Suspended                            | N.C. Gen. Stat. § 20-28 | confidence: high
+  [M] Misdemeanor Larceny                                | N.C. Gen. Stat. § 14-72 | confidence: high
+  [M] Simple Assault                                     | N.C. Gen. Stat. § 14-33 | confidence: high
+  [M] DWI                                                | N.C. Gen. Stat. § 20-138.1 | confidence: high
+  [M] Possession of Marijuana up to 0.5 oz               | N.C. Gen. Stat. § 90-95(d)(4) | confidence: high
+  [M] DVPO Violation                                     | N.C. Gen. Stat. § 50B-4.1 | confidence: high
+  [M] Driving While License Revoked                      | N.C. Gen. Stat. § 20-28 | confidence: high
+  [M] Resist, Delay, or Obstruct Officer                 | N.C. Gen. Stat. § 14-223 | confidence: high
+  [M] Probation Violation                                | N.C. Gen. Stat. § 15A-1344 | confidence: high
+  [M] Resisting Arrest / Obstruction                     | N.C. Gen. Stat. § 14-223 | confidence: high
+  [M] Open Container Violation                           | N.C. Gen. Stat. § 20-138.7 | confidence: high
+  [M] Minor in Possession of Alcohol                     | N.C. Gen. Stat. § 18B-302(b) | confidence: high
+  [M] Providing False Information to Police              | N.C. Gen. Stat. § 14-225 | confidence: high
+  [M] Harassment / Stalking                              | N.C. Gen. Stat. § 14-395 | confidence: high
+  [M] Writing Bad Checks / Worthless Checks              | N.C. Gen. Stat. § 14-107 | confidence: high
+  [M] Solicitation / Prostitution                        | N.C. Gen. Stat. § 14-204 | confidence: high
+  [M] Driving Without Insurance                          | N.C. Gen. Stat. § 20-313 | confidence: high
+  [M] Driving with Expired Registration                  | N.C. Gen. Stat. § 20-111 | confidence: high
+  [M] Driving with Expired/No Inspection                 | N.C. Gen. Stat. § 20-183.2 | confidence: high
+  [M] Criminal Nonsupport / Failure to Pay Child Support | N.C. Gen. Stat. § 14-322 | confidence: high
+  [M] Noise Violation / Disturbing the Peace by Noise    | N.C. Gen. Stat. § 14-274 | confidence: high
+  [M] Indecent Exposure / Public Urination               | N.C. Gen. Stat. § 14-190.9 | confidence: high
+  [M] Possession of Fake/Fraudulent ID                   | N.C. Gen. Stat. § 18B-302(e) | confidence: high
+  [M] Animal at Large / Leash Law Violation              | N.C. Gen. Stat. § 67-12 | confidence: high
+  [M] Animal Cruelty (Misdemeanor)                       | N.C. Gen. Stat. § 14-360(a) | confidence: high
+  [M] Illegal Camping / Sleeping in Public               | N.C. Gen. Stat. § 14-159.12 | confidence: high
+  [M] Panhandling / Aggressive Solicitation              | N.C. Gen. Stat. § 14-274 | confidence: high
+  [M] Operating Unregistered / Uninsured Vehicle         | N.C. Gen. Stat. § 20-122 | confidence: high
+  [M] Trespass After Warning / Return After Ban          | N.C. Gen. Stat. § 14-134.3 | confidence: high
+  [I] Defective Vehicle Equipment / Broken Taillight     | N.C. Gen. Stat. § 20-123 | confidence: high
+  [M] Truancy / Chronic Absenteeism                      | N.C. Gen. Stat. § 115C-381 | confidence: high
+  [M] Littering / Illegal Dumping                        | N.C. Gen. Stat. § 14-399 | confidence: high
+  [M] Illegal Discharge of Fireworks                     | N.C. Gen. Stat. § 14-410 | confidence: high
+  [M] Possession of Alcohol in Park / Prohibited Area    | N.C. Gen. Stat. § 18B-301(f) | confidence: high
+  [M] Fishing / Hunting Without a License                | N.C. Gen. Stat. § 113-276 | confidence: high
+  [F] Criminal Attempt                                   | N.C. Gen. Stat. § 14-2.5 | confidence: high
+  [F] Criminal Conspiracy                                | N.C. Gen. Stat. § 14-2.4 | confidence: high
+  [F] Aiding and Abetting / Accomplice Liability         | N.C. Gen. Stat. § 14-5.2 | confidence: high
+  [F] Accessory After the Fact                           | N.C. Gen. Stat. § 14-7 | confidence: high
+  [F] Attempted Robbery                                  | N.C. Gen. Stat. §§ 14-2.5, 14-87 | confidence: high
+  [F] Attempted Sexual Assault                           | N.C. Gen. Stat. §§ 14-2.5, 14-27.21 | confidence: high
+  [F] Criminal Solicitation                              | N.C. Gen. Stat. § 14-2.6 | confidence: high
+  [F] Criminal Street Gang Enhancement                   | N.C. Gen. Stat. § 14-50.22 | confidence: high
+  [F] Hate Crime Enhancement                             | N.C. Gen. Stat. § 14-3(c) | confidence: high
+  [F] Prior Felony / Recidivist Sentencing Enhancement   | N.C. Gen. Stat. § 14-7.1 | confidence: high
+  [F] Use of a Firearm in Commission of a Felony         | N.C. Gen. Stat. § 15A-1340.16A | confidence: high
+  [F] Drug Offense in a School Zone (Proximity Enhancement) | N.C. Gen. Stat. § 90-95(e)(8) | confidence: high
+  [F] RICO / Organized Crime (Racketeering)              | N.C. Gen. Stat. § 75D-4 | confidence: high
+  [F] Money Laundering                                   | N.C. Gen. Stat. § 14-294.4 | confidence: high
+  [F] Juvenile Delinquency Adjudication (Felony-Level Act) | N.C. Gen. Stat. § 7B-1501(7) | confidence: high
+  [M] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | N.C. Gen. Stat. § 7B-1501(7) | confidence: high
+  [F] Juvenile Transfer to Adult Court (Waiver Hearing)  | N.C. Gen. Stat. § 7B-2200 | confidence: high
+  [F] Juvenile Firearm Possession                        | N.C. Gen. Stat. § 14-269.2 | confidence: high
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Assault with Deadly Weapon                    | ours: 14-33              | auth: 14-32
+  Burglary in the First Degree                  | ours: 14-51              | auth: 14-57
+  Burglary in the Second Degree                 | ours: 14-54              | auth: 14-57
+  Robbery in the First Degree                   | ours: 14-87              | auth: 14-88
+  Robbery in the Second Degree                  | ours: 14-87.1            | auth: 14-88
+  Possession of Prohibited Weapon               | ours: 14-288.8           | auth: 14-258.2
+  Injury to Personal Property                   | ours: 14-160             | auth: 14-165
+  Failure to Appear                             | ours: 15A-543            | auth: 125-11
+  Violation of Protective Order                 | ours: 50B-4.1            | auth: 160A-421
+  Contempt of Court                             | ours: 5A-11              | auth: 14-226.1
+  Curfew Violation                              | ours: 153A-142           | auth: 116-213
+
+MISSING FELONIES — in authoritative source but not in our database:
+  False statements to the question of indigency.     | N.C. Gen. Stat. § 7A-456(a) | I
+  Notary taking acknowledgment or performing verification knowing it is false or fraudulent. (Repealed - Effective 12/1/05) | N.C. Gen. Stat. § 10A-12(c) | I
+  Enforcement and penalties (verification, proof, or acknowledgment knowing it is false or fraudulent or with intent to commit fraud). (Effective 12/1/05) | N.C. Gen. Stat. § 10B-60(d) | I
+  Enforcement and penalties (perform notarial acts without commission). (Effective 12/1/05) | N.C. Gen. Stat. § 10B-60(e) | I
+  Enforcement and penalties (obtain, use, conceal, deface, or destroy seal or notarial records without permission). (Effective 12/1/05) | N.C. Gen. Stat. § 10B-60(f) | I
+  Enforcement and penalties (knowingly create, manufacture, or distribute a notary seal allowing a person to act as a notary without being commissioned/registered). (Effective 7/1/23) | N.C. Gen. Stat. § 10B-60(n) | G
+  Wrongful manufacture, distribution, or possession of software or hardware (creates, manufactures, distributes software). (Effective 12/1/05) | N.C. Gen. Stat. § 10B-146(a) | G
+  Wrongful manufacture, distribution, or possession of software or hardware (wrongfully obtains, conceals, damages, or destroys the certificate, etc.). (Effective 12/1/05) | N.C. Gen. Stat. § 10B-146(b) | I
+  Unclassified misdemeanor which is infamous, done in secrecy and malice, or with deceit and intent to defraud. | N.C. Gen. Stat. § 14-3(b) | H
+  Class 1 misdemeanor offense committed because of the victim's race, color, religion, nationality, or country of origin. (Was Class I - Effective 12/1/08) | N.C. Gen. Stat. § 14-3(c) | H
+  Continuing criminal enterprise. (Effective 12/1/95) | N.C. Gen. Stat. § 14-7.20 | H
+  Continuing criminal enterprise (terrorism). (Effective 12/1/12) | N.C. Gen. Stat. § 14-7.20(a1) | D
+  Sentencing of status offenders (Habitual breaking and entering). (Effective 12/1/11) | N.C. Gen. Stat. § 14-7.31 | E
+  Armed habitual felon. (Effective 10/1/13)          | N.C. Gen. Stat. § 14-7.36 | C
+  Rebellion against the state.                       | N.C. Gen. Stat. § 14-8 | F
+  Activities aimed at overthrow of government; use of public buildings (second and subsequent offense). | N.C. Gen. Stat. § 14-11, -12 | H
+  Certain subversive activities made unlawful.       | N.C. Gen. Stat. § 14-12.1 | H
+  Placing burning/flaming cross on property of another or on public street or highway or on any public place. (Was Class I - Effective 12/1/08) | N.C. Gen. Stat. § 14-12.12(b), -12.15 | H
+  Placing exhibit with intention of intimidating, etc., another. (Was Class I - Effective 12/1/08) | N.C. Gen. Stat. § 14-12.13,-12.15 | H
+  Placing exhibit while wearing mask, hood, or other disguise. (Was Class I - Effective 12/1/08) | N.C. Gen. Stat. § 14-12.14,-12.15 | H
+  Counterfeiting coin and uttering coin that is counterfeit. | N.C. Gen. Stat. § 14-13 | I
+  Possessing tools for counterfeiting.               | N.C. Gen. Stat. § 14-14 | I
+  Assault on executive, legislative, court, or local elected officers (assaults local elected official or another as retaliation against a local official). (Added an assault on another person in retaliation - Effective 12/1/14) (Added “local elected officer” Effective 12/1/25) (Was Class I – Effective 12/1/25) | N.C. Gen. Stat. § 14-16.6(a) | H
+  Assault on executive, legislative, court, or local elected officers (assaults local elected official or another as retaliation against a local official and uses a deadly weapon). (Added an assault on another person in retaliation - Effective 12/1/14) (Added “local elected officer” – Effective 12/1/25) (Was Class F – Effective 12/1/25) | N.C. Gen. Stat. § 14-16.6(b) | E
+  Assault on executive, legislative, court, or local elected officers (assaults local elected official or another as retaliation against a local official and inflicts serious bodily injury). (Added an assault on another person in retaliation - Effective 12/1/14) (Was Class F – Effective 12/1/23) (Added “local elected officer” – Effective 12/1/25) (Was Class E – Effective 12/1/25) | N.C. Gen. Stat. § 14-16.6(c) | D
+  Threats against executive, legislative, court, or local elected officers (makes threat to inflict serious bodily injury or to kill elected officer). (Added making a threat against another person in retaliation - Effective 12/1/14) (Added “local elected officer” – Effective 12/1/25) (Was Class I – Effective 12/1/25) | N.C. Gen. Stat. § 14-16.7(a) | H
+  Threats against executive, legislative, court, or local elected officers (deposits letter, writing, or document containing a threat to commit). (Added making a threat against another person in retaliation - Effective 12/1/14) (Added “local elected officer” Effective 12/1/25) (Was Class I – Effective 12/1/25) | N.C. Gen. Stat. § 14-16.7(b) | H
+  Murder in the 1st degree (committed against a spouse, former spouse, etc., and the offender has previously been convicted of one of the listed offenses involving the same victim.) (Effective 12/1/17) | N.C. Gen. Stat. § 14-17(a1) | A
+  Murder in the 2nd degree (except as provided in (b)(1) and (2)). (Was Class B2 – Effective 12/1/12) ((b)(2) repealed and (b)(1) merged with (b) – effective 12/1/23) | N.C. Gen. Stat. § 14-17(b) | B1
+  Murder in the 2nd degree (depraved heart malice).  | N.C. Gen. Stat. § 14-17(b) | B2
+  Murder in the 2nd degree (by distribution of listed substance). (Added substances – Effective 12/1/17) (Repealed – Effective 12/1/23) | N.C. Gen. Stat. § 14-17(b)(2) | B2
+  Murder in the 1st degree (child dies as a result of injuries inflicted prior to being born alive, or dies as a result of an intentional, overt act performed after the child is born alive). (Effective 12/1/13) (Added “dies as a result of an intentional, overt act performed after the child is born alive” - Effective 7/1/23) | N.C. Gen. Stat. § 14-17(c) | A
+  Murder in the 2nd degree (except as provided in (b)(1) and (2)) (child dies as a result of injuries inflicted prior to being born alive, or dies as a result of an intentional, overt act performed after the child is born alive). (Effective 12/1/13) (Added “dies as a result of an intentional, overt act performed after the child is born alive” - Effective 7/1/23) | N.C. Gen. Stat. § 14-17(c) | B1
+  Murder in the 2nd degree (child dies as a result of injuries inflicted prior to being born alive, or dies as a result of an intentional, overt act performed after the child is born alive – depraved heart malice). (Effective 12/1/13) (Added “dies as a result of an intentional, overt act performed after the child is born alive” - Effective 7/1/23) | N.C. Gen. Stat. § 14-17(c) | B2
+  Voluntary manslaughter. (Was Class E - Effective 12/1/97) | N.C. Gen. Stat. § 14-18 | D
+  Death by distribution of certain controlled substances; aggravated death by distribution of certain controlled substances (unlawful delivery). (Effective 12/1/23) | N.C. Gen. Stat. § 14-18.4(a1) | C
+  Death by distribution of certain controlled substances; aggravated death by distribution of certain controlled substances (unlawful delivery with malice). (Effective 12/1/23) | N.C. Gen. Stat. § 14-18.4(a2) | B2
+  Death by distribution of certain controlled substances; aggravated death by distribution of certain controlled substances (unlawful sale). (Added “Through Unlawful Sale” – Effective 12/1/23) (Was Class C – Effective 12/1/23) | N.C. Gen. Stat. § 14-18.4(b) | B2
+  Death by distribution of certain controlled substances; aggravated death by distribution of certain controlled substances (aggravated, unlawful sale). (Effective 12/1/19) (Added “Through Unlawful Sale” – Effective 12/1/23) (Was Class B2 – Effective 12/1/23) | N.C. Gen. Stat. § 14-18.4(c) | B1
+  Murder of an unborn child (willful and malicious with intent to cause death of the child). (Effective 12/1/11) | N.C. Gen. Stat. § 14-23.2(a)(1) | A
+  ... and 901 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+  Go armed to the terror of the people.              | Common Law | 1
+  Uttering of forged paper (without alleging deceit and intent to defraud). | Common Law | 1
+  False imprisonment.                                | Common Law | 1
+  Obstruction of justice (without alleging deceit and intent to defraud). | Common Law | 1
+  Compounding a felony.                              | Common Law | 1
+  Unlawful assembly.                                 | Common Law | 1
+  Agent must furnish information as to corporate officers and property (after service of writ of execution). | N.C. Gen. Stat. § 1-324.2, -324.5 | 1
+  Shares subject to execution; agent must furnish information. | N.C. Gen. Stat. § 1-324.3, -324.5 | 1
+  Debts due corporation subject to execution; duty, etc., of agent. | N.C. Gen. Stat. § 1-324.4, -324.5 | 1
+  Refusal to surrender official papers misdemeanor.  | N.C. Gen. Stat. § 1-531 | 1
+  Charges for legal advertising (no printing of legal ads unless filed with clerk). | N.C. Gen. Stat. § 1-596 | 1
+  Penalties; injunctive relief (violate various provisions of Chapter 140E). | N.C. Gen. Stat. § 1E-21 | 1
+  Confidential information protected.                | N.C. Gen. Stat. § 1E-27 | 1
+  Inspections (officer/administrator/employee of Department of Health and Human Services who willfully discloses confidential information). | N.C. Gen. Stat. § 1E-78 | 3
+  Authority of administrator; refusal to leave after discharge. | N.C. Gen. Stat. § 1E-88 | 2
+  Penalties (own/operate an ambulatory surgical facility without a license). | N.C. Gen. Stat. § 1E-149 | 3
+  Violation declared misdemeanor (operation of an ambulance without valid permit/after permit revoked). | N.C. Gen. Stat. § 1E-159 | 1
+  Confidentiality (willful disclosure of information regarding inspection). | N.C. Gen. Stat. § 1E-205 | 3
+  Investment of funds in clerk’s hands (applying or investing money beyond authority of statute). | N.C. Gen. Stat. § 7A-112 | 1
+  Duty to report abuse, neglect, dependency, or death due to maltreatment (person or institution knowingly or wantonly fail to report suspicion). (Effective 12/1/13) | N.C. Gen. Stat. § 7B-301(b) | 1
+  ... and 1693 more misdemeanors
+
+======================================================================
+MO
+======================================================================
+Our entries:            130
+Authoritative entries:  2675
+Matched:                62 (47%)
+Unmatched (phantom?):   68
+Missing from ours:      2568
+Citation mismatches:    39
+
+UNMATCHED — charges we have with no authoritative match:
+  [F] Criminally Negligent Homicide                      | Mo. Rev. Stat. § 565.024 | confidence: high
+  [F] Vehicular Homicide                                 | Mo. Rev. Stat. § 565.024(1)(2) | confidence: high
+  [F] Assault with Deadly Weapon                         | Mo. Rev. Stat. § 565.052(1)(1) | confidence: high
+  [F] Assault on Peace Officer                           | Mo. Rev. Stat. § 565.083 | confidence: low
+  [M] Menacing                                           | Mo. Rev. Stat. § 565.090 | confidence: medium
+  [F] Grand Theft in the First Degree                    | Mo. Rev. Stat. § 570.030(2)(a) | confidence: medium
+  [F] Grand Theft in the Second Degree                   | Mo. Rev. Stat. § 570.030 | confidence: medium
+  [M] Petty Theft                                        | Mo. Rev. Stat. § 570.030(3) | confidence: medium
+  [M] Theft by Receiving                                 | Mo. Rev. Stat. § 570.080 | confidence: medium
+  [F] Embezzlement                                       | Mo. Rev. Stat. § 570.030 | confidence: medium
+  [M] Shoplifting                                        | Mo. Rev. Stat. § 570.030 | confidence: medium
+  [F] Carjacking                                         | Mo. Rev. Stat. § 570.025 | confidence: medium
+  [F] Possession with Intent to Distribute               | Mo. Rev. Stat. § 579.020 | confidence: high
+  [F] Drug Trafficking                                   | Mo. Rev. Stat. § 579.065 | confidence: high
+  [F] Maintaining Drug House                             | Mo. Rev. Stat. § 195.130 | confidence: medium
+  [F] Wire Fraud                                         | Mo. Rev. Stat. § 570.095 | confidence: medium
+  [F] Mail Fraud                                         | Mo. Rev. Stat. § 570.180 | confidence: medium
+  [F] Check Fraud                                        | Mo. Rev. Stat. § 570.110 | confidence: medium
+  [F] Insurance Fraud                                    | Mo. Rev. Stat. § 375.991 | confidence: medium
+  [F] Tax Fraud                                          | Mo. Rev. Stat. § 143.911 | confidence: medium
+  [F] Computer Fraud                                     | Mo. Rev. Stat. § 569.095 | confidence: medium
+  [M] Public Intoxication                                | Mo. Rev. Stat. § 574.075 | confidence: high
+  [M] Disturbing the Peace                               | Mo. Rev. Stat. § 574.010 | confidence: medium
+  [M] Loitering                                          | Mo. Rev. Stat. § 574.050 | confidence: medium
+  [M] DUI First Offense                                  | Mo. Rev. Stat. § 577.010 | confidence: high
+  [M] DUI Second Offense                                 | Mo. Rev. Stat. § 577.010(2) | confidence: high
+  [F] DUI Third Offense                                  | Mo. Rev. Stat. § 577.010(3) | confidence: high
+  [M] Reckless Driving                                   | Mo. Rev. Stat. § 304.012 | confidence: medium
+  [M] Hit and Run                                        | Mo. Rev. Stat. § 577.060 | confidence: medium
+  [M] Possession of Marijuana 10g or Less                | Mo. Rev. Stat. § 579.015 | confidence: medium
+  [M] Resisting Arrest / Obstruction                     | Mo. Rev. Stat. § 575.150 | confidence: medium
+  [M] Open Container Violation                           | Mo. Rev. Stat. § 577.017 | confidence: high
+  [M] Minor in Possession of Alcohol                     | Mo. Rev. Stat. § 311.325 | confidence: medium
+  [M] Writing Bad Checks / Worthless Checks              | Mo. Rev. Stat. § 570.120 | confidence: medium
+  [M] Driving Without Insurance                          | Mo. Rev. Stat. § 303.025 | confidence: medium
+  [M] Reckless/Careless Driving (Criminal)               | Mo. Rev. Stat. § 304.012 | confidence: medium
+  [M] Driving with Expired/No Inspection                 | Mo. Rev. Stat. § 307.350 | confidence: medium
+  [M] Criminal Nonsupport / Failure to Pay Child Support | Mo. Rev. Stat. § 568.040 | confidence: medium
+  [M] Noise Violation / Disturbing the Peace by Noise    | Mo. Rev. Stat. § 574.010(1)(2) | confidence: medium
+  [M] Indecent Exposure / Public Urination               | Mo. Rev. Stat. § 566.093 | confidence: high
+  [M] Possession of Fake/Fraudulent ID                   | Mo. Rev. Stat. § 311.328 | confidence: medium
+  [M] Animal at Large / Leash Law Violation              | Mo. Rev. Stat. § 272.010 | confidence: medium
+  [M] Animal Cruelty (Misdemeanor)                       | Mo. Rev. Stat. § 578.012(1)(3) | confidence: medium
+  [M] Illegal Camping / Sleeping in Public               | Mo. Rev. Stat. § 569.140 | confidence: medium
+  [M] Panhandling / Aggressive Solicitation              | Mo. Rev. Stat. § 574.010 | confidence: medium
+  [M] Curfew Violation                                   | Mo. Rev. Stat. § 544.216 | confidence: medium
+  [M] Trespass After Warning / Return After Ban          | Mo. Rev. Stat. § 569.140 | confidence: medium
+  [I] Defective Vehicle Equipment / Broken Taillight     | Mo. Rev. Stat. § 307.020 | confidence: medium
+  [M] Truancy / Chronic Absenteeism                      | Mo. Rev. Stat. § 167.031 | confidence: medium
+  [M] Littering / Illegal Dumping                        | Mo. Rev. Stat. § 577.070 | confidence: medium
+  [M] Illegal Discharge of Fireworks                     | Mo. Rev. Stat. § 320.106 | confidence: medium
+  [M] Possession of Alcohol in Park / Prohibited Area    | Mo. Rev. Stat. § 311.327 | confidence: medium
+  [M] Fishing / Hunting Without a License                | Mo. Rev. Stat. § 252.040 | confidence: medium
+  [F] Criminal Attempt                                   | Mo. Rev. Stat. § 564.011 | confidence: medium
+  [F] Criminal Conspiracy                                | Mo. Rev. Stat. § 564.016 | confidence: medium
+  [F] Aiding and Abetting / Accomplice Liability         | Mo. Rev. Stat. § 562.041 | confidence: medium
+  [F] Accessory After the Fact                           | Mo. Rev. Stat. § 575.080 | confidence: medium
+  [F] Attempted Sexual Assault                           | Mo. Rev. Stat. §§ 562.012, 566.030 | confidence: high
+  [F] Criminal Solicitation                              | Mo. Rev. Stat. § 564.021 | confidence: medium
+  [F] Criminal Street Gang Enhancement                   | Mo. Rev. Stat. § 578.425 | confidence: medium
+  [F] Hate Crime Enhancement                             | Mo. Rev. Stat. § 557.035 | confidence: medium
+  [F] Prior Felony / Recidivist Sentencing Enhancement   | Mo. Rev. Stat. § 558.016 | confidence: medium
+  [F] Use of a Firearm in Commission of a Felony         | Mo. Rev. Stat. § 571.015 | confidence: medium
+  [F] Drug Offense in a School Zone (Proximity Enhancement) | Mo. Rev. Stat. § 195.214 | confidence: medium
+  [F] RICO / Organized Crime (Racketeering)              | Mo. Rev. Stat. § 513.607 | confidence: medium
+  [F] Juvenile Delinquency Adjudication (Felony-Level Act) | Mo. Rev. Stat. § 211.031(1)(a) | confidence: medium
+  [M] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Mo. Rev. Stat. § 211.031(1)(a) | confidence: medium
+  [F] Juvenile Transfer to Adult Court (Waiver Hearing)  | Mo. Rev. Stat. § 211.071 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the Second Degree                   | ours: 565.021            | auth: 565.020
+  Felony Murder                                 | ours: 565.021            | auth: 565.020
+  Assault in the First Degree                   | ours: 565.050            | auth: 565.052
+  Assault in the Third Degree                   | ours: 565.054            | auth: 565.052
+  Aggravated Assault                            | ours: 565.050            | auth: 565.052
+  Domestic Violence Assault                     | ours: 565.076            | auth: 565.073
+  Rape in the First Degree                      | ours: 566.030            | auth: 566.031
+  Sexual Assault in the First Degree            | ours: 566.030            | auth: 565.052
+  Sexual Assault in the Second Degree           | ours: 566.030            | auth: 565.052
+  Sexual Assault in the Third Degree            | ours: 566.040            | auth: 565.052
+  Child Sexual Abuse                            | ours: 566.067            | auth: 566.100
+  Credit Card Fraud                             | ours: 570.130            | auth: 407.436
+  Burglary in the Second Degree                 | ours: 569.170            | auth: 569.160
+  Commercial Burglary                           | ours: 569.170            | auth: 569.160
+  Auto Burglary                                 | ours: 569.170            | auth: 569.160
+  Robbery in the Second Degree                  | ours: 570.025            | auth: 570.023
+  Bank Robbery                                  | ours: 570.025            | auth: 570.023
+  Distribution of Controlled Substance          | ours: 195.211            | auth: 579.015
+  Manufacturing Controlled Substance            | ours: 195.211            | auth: 570.030
+  Possession of Drug Paraphernalia              | ours: 195.233            | auth: 579.074
+  Unlawful Carrying of Weapon                   | ours: 571.030            | auth: 571.060
+  Felon in Possession of Firearm                | ours: 571.070            | auth: 569.170
+  Discharge of Firearm in City                  | ours: 571.030            | auth: 571.031
+  Possession of Prohibited Weapon               | ours: 571.020            | auth: 571.072
+  Disorderly Conduct                            | ours: 574.010            | auth: 577.712
+  Trespassing                                   | ours: 569.140            | auth: 569.150
+  Vandalism                                     | ours: 569.100            | auth: 574.085
+  Assault 4th Degree                            | ours: 565.056            | auth: 565.052
+  Domestic Assault 4th Degree                   | ours: 565.076            | auth: 565.073
+  Trespass First Degree                         | ours: 569.010            | auth: 569.140
+  Property Damage 2nd Degree                    | ours: 569.120            | auth: 569.100
+  Violation of Protective Order                 | ours: 455.085            | auth: 455.538
+  Providing False Information to Police         | ours: 575.080            | auth: 193.315
+  Solicitation / Prostitution                   | ours: 567.030            | auth: 567.020
+  Driving with Expired Registration             | ours: 301.025            | auth: 306.020
+  Operating Unregistered / Uninsured Vehicle    | ours: 301.020            | auth: 301.707
+  Attempted Murder                              | ours: 564.011            | auth: 565.020
+  Attempted Robbery                             | ours: 562.012            | auth: 570.023
+  Juvenile Firearm Possession                   | ours: 571.070            | auth: 571.050
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Assault First Degree Or Attempt - Serious Physical Injury Or Special Victim | Mo. Rev. Stat. § 565.050 | F/A
+  Record Vote Of Member Of House Of Representatives By Other Than The Member | Mo. Rev. Stat. § 21.360 | F / UN
+  State Auditor Examiner - Violate Oath Of Office Or Any Duty Imposed By Chapter 29 | Mo. Rev. Stat. § 29.080 | F / UN
+  Violation Of Provisions Of Section 30.400 Regarding State Treasurer'S Handling Of State Money Or Bonds | Mo. Rev. Stat. § 30.400 | F / UN
+  Breach Of Confidentiality Regarding Taxes          | Mo. Rev. Stat. § 32.057 | F / E
+  Acceptance Of Gift/Rebate/Thing Of Value From Bidder By Commissioner Of Administration | Mo. Rev. Stat. § 34.160 | F / UN
+  Resist/Aid In Resisting A Force Ordered By The Governor To Execute Laws/Suppress Insurrection/Repel Invasion | Mo. Rev. Stat. § 41.720 | F / UN
+  Publication Of False County Financial Statements - Willful Or Knowing Conduct | Mo. Rev. Stat. § 50.815 | F / UN
+  Members/Employees Of Land Reutilization Authority - Receive Compensation, Emolument Or Profit From Lands Held By The Authority | Mo. Rev. Stat. § 92.920 | F / UN
+  Fraudulent Use Of Facsimile Signature Or Seal      | Mo. Rev. Stat. § 105.276 | F / UN
+  Committed Acts Prohibited By Elected And Appointed Public Official And Employees - 2Nd And Subsequent Offense | Mo. Rev. Stat. § 105.452 | F / E
+  Accept/Receive Compensation As Paid Political Consultant - 2Nd Or Subsequent Offense | Mo. Rev. Stat. § 105.453 | F / E
+  Ethics Violation By Elected Official Or Lobbyist - 2Nd Offense | Mo. Rev. Stat. § 105.454 | F / E
+  Elected/Appointed Official Violate Registration Limitation As Lobbyist - 2Nd Or Subsequent | Mo. Rev. Stat. § 105.455 | F / E
+  Commit Prohibited Acts By Members Of General Assembly And Statewide Elected Officials - 2Nd Or Subsequent Offense | Mo. Rev. Stat. § 105.456 | F / E
+  Committed Act Prohibited By Members Of Governing Bodies Of Political Subdivisions - 2Nd Or Subsequent Offense | Mo. Rev. Stat. § 105.458 | F / E
+  Class One Election Offense - Make False Sworn Statement/Affidavit/Statement Of Candidacy Or Sign Such Documents Knowing Statement Is Untrue | Mo. Rev. Stat. § 115.405 | F / UN
+  Class I Election Offense - Willfully Provide False Documentation Required For Voter Registration Under Ch 115 | Mo. Rev. Stat. § 115.631 | F / D
+  Committed Class One Election Offense               | Mo. Rev. Stat. § 115.631 | F / UN
+  Committing Class Two Election Offenses             | Mo. Rev. Stat. § 115.633 | F / UN
+  Violate Attorney General'S Civil Investigative Order | Mo. Rev. Stat. § 127.040 | F / E
+  Violate Section 130.028.1 Regarding Discrimination/Intimidation In Elections | Mo. Rev. Stat. § 130.028 | F / E
+  Land Bank Agency/Employee Violate Compensation Restrictions | Mo. Rev. Stat. § 140.1000 | F / D
+  Land Trust Employee/Trustee Receiving Compensation/Profit From Lands Held By Such Land Trusts (1St Class County) | Mo. Rev. Stat. § 141.810 | F / UN
+  Violation Of Chapter 142 Motor Fuel Requirements And Regulations To Defraud | Mo. Rev. Stat. § 142.909 | F / E
+  Motor Fuel Tax Evasion                             | Mo. Rev. Stat. § 142.911 | F / E
+  Release/Use Of Names/Addresses Of Individuals Contributing To Veterans Trust Fund | Mo. Rev. Stat. § 143.1001 | F / D
+  Releasing Names And Addresses Of Individuals Contributing To The "Missouri National Guard Trust Fund" | Mo. Rev. Stat. § 143.1003 | F / D
+  Employer, With Intent To Defraud, Willfully Failed To File Return/Truthfully Account For/Pay Withholding Tax | Mo. Rev. Stat. § 143.221 | F / UN
+  Attempting To Evade Or Defeat Income Tax           | Mo. Rev. Stat. § 143.911 | F / UN
+  Failure To Collect Or Pay Over Income Tax          | Mo. Rev. Stat. § 143.921 | F / UN
+  Failure To File/Pay A Missouri Income Tax Return - | Mo. Rev. Stat. § 143.931 | F / UN
+  Filing A False Missouri Income Tax Return          | Mo. Rev. Stat. § 143.941 | F / UN
+  With Intent To Defraud, Willfully Failed To Make A Sales Tax Return/Pay Sales Tax/Keep Records/Supply Information | Mo. Rev. Stat. § 144.480 | F / UN
+  Filing False Sales Tax Return                      | Mo. Rev. Stat. § 144.490 | F / UN
+  Fail To Pay Missouri Use Tax                       | Mo. Rev. Stat. § 144.610 | F / UN
+  Making False Statement On Franchise Tax Report     | Mo. Rev. Stat. § 147.120 | F / UN
+  Violate Provision Of Section 149.071 Regarding Evidence Of Payment Of Cigarette Taxes | Mo. Rev. Stat. § 149.071 | F / UN
+  File False Report/Application Or Make A False Statement To Department Of Revenue Regarding Purchase Or Sale Of Cigarettes | Mo. Rev. Stat. § 149.076 | F / UN
+  Knowingly/Recklessly Alter Cigarette Package And/Or Sell/Distribute/Possess Cigarettes Not In Compliance With Federal Regulations | Mo. Rev. Stat. § 149.200 | F / E
+  ... and 683 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+  Make False/Misleading/Unfounded Report To Auditor  | Mo. Rev. Stat. § 29.250 | M / A
+  Refuse Or Fail To Comply With State Auditor Chapter Provisions | Mo. Rev. Stat. § 29.250 | M / A
+  False Statement On Loan Application By Farming Operation, Small Business Or Job Enhancement Business | Mo. Rev. Stat. § 30.756 | M / A
+  Knowingly/Willfully Disclose Confidential Information From Examination From Child Advocacy To Unauthorized Person(S) | Mo. Rev. Stat. § 37.725 | M / A
+  Knowingly/Willfully Violate Provisions Of Section 37.730 | Mo. Rev. Stat. § 37.730 | M / A
+  Person Willfully Resists/Opposes A Member Of The Patrol In The Proper Discharge Of Their Duties | Mo. Rev. Stat. § 43.170 | M / A
+  Failed To Stop Or Obey Reasonable Signal Direction Of A Highway Patrolman | Mo. Rev. Stat. § 43.170 | M / A
+  Make False Report Or False Statement Of Missing Person(S) | Mo. Rev. Stat. § 43.405 | M / A
+  Obtain Criminal History Record Information Under False Pretense | Mo. Rev. Stat. § 43.532 | M / A
+  Provider/Youth Services Agency Disclosed Confidential Information | Mo. Rev. Stat. § 43.532 | M / A
+  Disclosure Of Confidential Criminal Records        | Mo. Rev. Stat. § 43.535 | M / A
+  Authorized State Agency/Qualified Entity Disclosed Confidential Criminal History Information | Mo. Rev. Stat. § 43.540 | M / A
+  Filing False Report On Highway Patrol Emergency Telephone System | Mo. Rev. Stat. § 43.600 | M / B
+  Violate Burn Ban                                   | Mo. Rev. Stat. § 49.266 | M / UN
+  Publication Of False County Financial Statements   | Mo. Rev. Stat. § 50.815 | M / UN
+  Failure By A Coroner Or Medical Examiner To Properly Refer A Suspicious Death Of A Child Under 18 Years | Mo. Rev. Stat. § 58.452 | M / A
+  Willfully Neglect/Refuse To Perform Any Of The Duties Required Of Recorder | Mo. Rev. Stat. § 59.660 | M / UN
+  Knowingly Move/Remove/Deface Or Destroy Boundary Marker, Bench Mark Or Horizontal Control Monument | Mo. Rev. Stat. § 60.355 | M / B
+  Violation Or Zoning Regulations, Restrictions Or Orders (Non- Charter 1St Class County) | Mo. Rev. Stat. § 64.295 | M / A
+  Dumping In An Unlicensed Area                      | Mo. Rev. Stat. § 64.463 | M / UN
+  ... and 1627 more misdemeanors
+
