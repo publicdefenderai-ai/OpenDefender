@@ -1,5 +1,5 @@
-GAP ANALYSIS SUMMARY — KS, NC, MO
-Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026
+GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA
+Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024
 
 ======================================================================
 KS
@@ -588,4 +588,523 @@ MISSING MISDEMEANORS — in authoritative source but not in our database (sample
   Violation Or Zoning Regulations, Restrictions Or Orders (Non- Charter 1St Class County) | Mo. Rev. Stat. § 64.295 | M / A
   Dumping In An Unlicensed Area                      | Mo. Rev. Stat. § 64.463 | M / UN
   ... and 1627 more misdemeanors
+
+======================================================================
+MD
+======================================================================
+Our entries:            130
+Authoritative entries:  767
+Matched:                37 (28%)
+Unmatched (phantom?):   93
+Missing from ours:      725
+Citation mismatches:    15
+
+UNMATCHED — charges we have with no authoritative match:
+  [F] Murder in the First Degree                         | Md. Code Ann., Crim. Law § 2-201 | confidence: high
+  [F] Murder in the Second Degree                        | Md. Code Ann., Crim. Law § 2-204 | confidence: high
+  [F] Criminally Negligent Homicide                      | Md. Code Ann., Crim. Law § 2-209 | confidence: high
+  [F] Vehicular Homicide                                 | Md. Code Ann., Crim. Law § 2-209 | confidence: high
+  [F] Felony Murder                                      | Md. Code Ann., Crim. Law § 2-201 | confidence: high
+  [F] Aggravated Assault                                 | Md. Code Ann., Crim. Law § 3-202 | confidence: high
+  [F] Assault with Deadly Weapon                         | Md. Code Ann., Crim. Law § 3-202(a)(1) | confidence: high
+  [M] Domestic Violence Assault                          | Md. Code Ann., Fam. Law § 4-501 | confidence: needs_review
+  [F] Assault on Peace Officer                           | Md. Code Ann., Crim. Law § 3-203(c) | confidence: high
+  [M] Menacing                                           | Md. Code Ann., Crim. Law § 3-803 | confidence: medium
+  [F] Sexual Assault in the First Degree                 | Md. Code Ann., Crim. Law § 3-303 | confidence: high
+  [F] Sexual Assault in the Second Degree                | Md. Code Ann., Crim. Law § 3-306 | confidence: low
+  [F] Sexual Assault in the Third Degree                 | Md. Code Ann., Crim. Law § 3-307 | confidence: high
+  [F] Sexual Exploitation of Minor                       | Md. Code Ann., Crim. Law § 11-207 | confidence: high
+  [F] Grand Theft in the First Degree                    | Md. Code Ann., Crim. Law § 7-104 | confidence: medium
+  [F] Grand Theft in the Second Degree                   | Md. Code Ann., Crim. Law § 7-104 | confidence: medium
+  [M] Petty Theft                                        | Md. Code Ann., Crim. Law § 7-104 | confidence: medium
+  [M] Theft by Receiving                                 | Md. Code Ann., Crim. Law § 7-104(c) | confidence: medium
+  [F] Identity Theft                                     | Md. Code Ann., Crim. Law § 8-301 | confidence: medium
+  [F] Credit Card Fraud                                  | Md. Code Ann., Crim. Law § 8-206 | confidence: medium
+  [F] Embezzlement                                       | Md. Code Ann., Crim. Law § 7-113 | confidence: medium
+  [M] Shoplifting                                        | Md. Code Ann., Crim. Law § 7-104 | confidence: medium
+  [M] Possession of Controlled Substance                 | Md. Code Ann., Crim. Law § 5-601 | confidence: medium
+  [F] Possession with Intent to Distribute               | Md. Code Ann., Crim. Law § 5-602 | confidence: needs_review
+  [F] Manufacturing Controlled Substance                 | Md. Code Ann., Crim. Law § 5-603 | confidence: needs_review
+  [F] Drug Trafficking                                   | Md. Code Ann., Crim. Law § 5-608 | confidence: needs_review
+  [M] Possession of Drug Paraphernalia                   | Md. Code Ann., Crim. Law § 5-619 | confidence: medium
+  [F] Maintaining Drug House                             | Md. Code Ann., Crim. Law § 5-622 | confidence: medium
+  [M] Unlawful Carrying of Weapon                        | Md. Code Ann., Crim. Law § 4-203 | confidence: medium
+  [F] Discharge of Firearm in City                       | Md. Code Ann., Crim. Law § 4-108 | confidence: medium
+  [F] Possession of Prohibited Weapon                    | Md. Code Ann., Crim. Law § 4-301 | confidence: medium
+  [F] Wire Fraud                                         | Md. Code Ann., Crim. Law § 8-516 | confidence: medium
+  [F] Mail Fraud                                         | Md. Code Ann., Crim. Law § 8-514 | confidence: medium
+  [F] Check Fraud                                        | Md. Code Ann., Crim. Law § 8-106 | confidence: medium
+  [F] Insurance Fraud                                    | Md. Code Ann., Ins. § 27-805 | confidence: medium
+  [F] Tax Fraud                                          | Md. Code Ann., Tax-Gen. § 13-1001 | confidence: medium
+  [F] Forgery                                            | Md. Code Ann., Crim. Law § 8-602 | confidence: medium
+  [F] Computer Fraud                                     | Md. Code Ann., Crim. Law § 7-302 | confidence: medium
+  [M] Disorderly Conduct                                 | Md. Code Ann., Crim. Law § 10-201 | confidence: medium
+  [M] Public Intoxication                                | Md. Code Ann., Crim. Law § 10-203 | confidence: medium
+  [M] Disturbing the Peace                               | Md. Code Ann., Crim. Law § 10-201 | confidence: medium
+  [M] Trespassing                                        | Md. Code Ann., Crim. Law § 6-403 | confidence: medium
+  [M] Vandalism                                          | Md. Code Ann., Crim. Law § 6-301 | confidence: medium
+  [M] Loitering                                          | Md. Code Ann., Crim. Law § 10-201 | confidence: medium
+  [M] DUI First Offense                                  | Md. Code Ann., Transp. § 21-902 | confidence: needs_review
+  [M] DUI Second Offense                                 | Md. Code Ann., Transp. § 21-902(b) | confidence: needs_review
+  [F] DUI Third Offense                                  | Md. Code Ann., Transp. § 21-902(c) | confidence: needs_review
+  [M] Hit and Run                                        | Md. Code Ann., Transp. § 20-102 | confidence: medium
+  [M] Driving While Suspended                            | Md. Code Ann., Transp. § 16-303 | confidence: medium
+  [M] Theft Under $1,500                                 | Md. Code Ann., Crim. Law § 7-104 | confidence: medium
+  [M] DUI                                                | Md. Code Ann., Transp. § 21-902 | confidence: needs_review
+  [M] DV Assault 2nd Degree                              | Md. Code Ann., Crim. Law § 3-203 | confidence: high
+  [M] Trespass                                           | Md. Code Ann., Crim. Law § 6-403 | confidence: medium
+  [M] Possession of Marijuana                            | Md. Code Ann., Crim. Law § 5-601 | confidence: medium
+  [M] Malicious Destruction Under $1,000                 | Md. Code Ann., Crim. Law § 6-301 | confidence: medium
+  [M] Driving on Suspended License                       | Md. Code Ann., Transp. § 16-303 | confidence: medium
+  [M] Shoplifting Under $1,500                           | Md. Code Ann., Crim. Law § 7-104 | confidence: medium
+  [M] Probation Violation                                | Md. Code Ann., Crim. Proc. § 6-223 | confidence: medium
+  [M] Open Container Violation                           | Md. Code Ann., Transp. § 21-903 | confidence: needs_review
+  [M] Minor in Possession of Alcohol                     | Md. Code Ann., Crim. Law § 10-114 | confidence: medium
+  [M] Contempt of Court                                  | Md. Code Ann., Cts. & Jud. Proc. § 1-202 | confidence: medium
+  [M] Writing Bad Checks / Worthless Checks              | Md. Code Ann., Crim. Law § 8-103 | confidence: medium
+  [M] Driving Without Insurance                          | Md. Code Ann., Transp. § 17-107 | confidence: medium
+  [M] Driving with Expired Registration                  | Md. Code Ann., Transp. § 13-401 | confidence: medium
+  [M] Driving with Expired/No Inspection                 | Md. Code Ann., Transp. § 23-101 | confidence: medium
+  [M] Criminal Nonsupport / Failure to Pay Child Support | Md. Code Ann., Fam. Law § 10-203 | confidence: medium
+  [M] Noise Violation / Disturbing the Peace by Noise    | Md. Code Ann., Crim. Law § 10-201(c)(3) | confidence: medium
+  [M] Possession of Fake/Fraudulent ID                   | Md. Code Ann., Crim. Law § 8-301 | confidence: medium
+  [M] Animal at Large / Leash Law Violation              | Md. Code Ann., Crim. Law § 10-617 | confidence: medium
+  [M] Illegal Camping / Sleeping in Public               | Md. Code Ann., Crim. Law § 6-409 | confidence: medium
+  [M] Panhandling / Aggressive Solicitation              | Md. Code Ann., Crim. Law § 10-201 | confidence: medium
+  [M] Operating Unregistered / Uninsured Vehicle         | Md. Code Ann., Transp. § 13-402 | confidence: medium
+  [M] Curfew Violation                                   | Md. Code Ann., Cts. & Jud. Proc. § 3-8A-07 | confidence: medium
+  [M] Trespass After Warning / Return After Ban          | Md. Code Ann., Crim. Law § 6-403 | confidence: medium
+  [I] Defective Vehicle Equipment / Broken Taillight     | Md. Code Ann., Transp. § 22-401 | confidence: medium
+  [M] Truancy / Chronic Absenteeism                      | Md. Code Ann., Educ. § 7-301 | confidence: medium
+  [M] Littering / Illegal Dumping                        | Md. Code Ann., Crim. Law § 10-110 | confidence: medium
+  [M] Illegal Discharge of Fireworks                     | Md. Code Ann., Crim. Law § 10-108 | confidence: medium
+  [M] Possession of Alcohol in Park / Prohibited Area    | Md. Code Ann., Crim. Law § 10-121 | confidence: medium
+  [M] Fishing / Hunting Without a License                | Md. Code Ann., Nat. Res. § 4-602 | confidence: medium
+  [F] Criminal Attempt                                   | Md. Code Ann., Crim. Law § 1-203 | confidence: medium
+  [F] Aiding and Abetting / Accomplice Liability         | Md. Code Ann., Crim. Law § 4-201 | confidence: medium
+  [F] Attempted Sexual Assault                           | Md. Code Ann., Crim. Law §§ 4-501, 3-303 | confidence: high
+  [F] Criminal Street Gang Enhancement                   | Md. Code Ann., Crim. Law § 9-804 | confidence: medium
+  [F] Hate Crime Enhancement                             | Md. Code Ann., Crim. Law § 10-304 | confidence: medium
+  [F] Prior Felony / Recidivist Sentencing Enhancement   | Md. Code Ann., Crim. Law § 14-101 | confidence: medium
+  [F] Drug Offense in a School Zone (Proximity Enhancement) | Md. Code Ann., Crim. Law § 5-627 | confidence: medium
+  [F] RICO / Organized Crime (Racketeering)              | Md. Code Ann., Crim. Law § 9-804 | confidence: medium
+  [F] Money Laundering                                   | Md. Code Ann., Crim. Law § 9-703 | confidence: medium
+  [F] Juvenile Delinquency Adjudication (Felony-Level Act) | Md. Code Ann., Cts. & Jud. Proc. § 3-8A-01(h) | confidence: medium
+  [M] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Md. Code Ann., Cts. & Jud. Proc. § 3-8A-01(h) | confidence: medium
+  [F] Juvenile Transfer to Adult Court (Waiver Hearing)  | Md. Code Ann., Cts. & Jud. Proc. § 3-8A-06 | confidence: medium
+  [F] Juvenile Firearm Possession                        | Md. Code Ann., Crim. Law § 4-101 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Assault in the Second Degree                  | ours: 3-203              | auth: 3-202
+  Assault in the Third Degree                   | ours: 3-203              | auth: 3-202
+  Rape in the Second Degree                     | ours: 3-304              | auth: 3-303
+  Statutory Rape                                | ours: 3-308              | auth: 3-303
+  Burglary in the Second Degree                 | ours: 6-203              | auth: 6-202
+  Commercial Burglary                           | ours: 6-205              | auth: 6-202
+  Auto Burglary                                 | ours: 6-206              | auth: 6-202
+  Robbery in the First Degree                   | ours: 3-403              | auth: 3-402
+  Distribution of Controlled Substance          | ours: 5-602              | auth: 5-617
+  Felon in Possession of Firearm                | ours: 5-133              | auth: 4-208
+  Assault Second Degree                         | ours: 3-203              | auth: 3-202
+  Failure to Appear                             | ours: 9-304              | auth: 5-211
+  Providing False Information to Police         | ours: 9-501              | auth: 11-721
+  Harassment / Stalking                         | ours: 3-803              | auth: 3-802
+  Attempted Robbery                             | ours: 4-501              | auth: 2-205
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Conduct Child Abuse—physical, 1st degree with death, victim at least 13 years old | Md. Code Ann., Crim. Law § 3-601(b)(2)(ii) | II
+  Conduct Child Abuse—physical, 1st degree with death, victim younger than 13 years old | Md. Code Ann., Crim. Law § 3-601(b)(2)(iii) | I
+  Conduct Child Abuse—physical, previous conviction for child abuse | Md. Code Ann., Crim. Law § 3-601(c)(1) | II
+  Conduct Child Abuse—physical, with death, previous conviction for child abuse | Md. Code Ann., Crim. Law § 3-601(c)(2) | I
+  Conduct Abuse, neglect of vulnerable adult by custodian, 1st degree | Md. Code Ann., Crim. Law § 3-604 | IV
+  Conduct Commit a crime of violence against another person when the person knows or believes that the other person is pregnant | Md. Code Ann., Crim. Law § 14-104 | IV
+  Conduct Sell, barter, trade, etc., a child for money, property, etc. | Md. Code Ann., Crim. Law § 3-603 | V
+  Use dog in dogfight or for baiting; arrange dogfight; possess, own, etc. dog for dogfight or baiting; allow dogfight or baiting on premises | Md. Code Ann., Crim. Law § 10-607 | VI
+  Use or allow use of bird for cockfight; possess implement of cockfighting; arrange or conduct cockfight; possess bird for cockfight; allow premises to be used for cockfight | Md. Code Ann., Crim. Law § 10-608 | VI
+  Arson—dwelling or occupied structure (arson, 1st degree) | Md. Code Ann., Crim. Law § 6-102(a) | III
+  Arson—Other structure (arson, 2nd degree)          | Md. Code Ann., Crim. Law § 6-103(a) | IV
+  Malicious or fraudulent burning resulting in the death of or serious physical injury to a firefighter | Md. Code Ann., Crim. Law § 6-112 | IV
+  Burning personal property of another, $1,000 or more (malicious burning 1st degree) | Md. Code Ann., Crim. Law § 6-104(b) | VI
+  Woundings Poisoning—attempted                      | Md. Code Ann., Crim. Law § 3-213 | II
+  Woundings Poisoning—contaminating water, food, etc. | Md. Code Ann., Crim. Law § 3-214 | II
+  Woundings Female genital mutilation—perform or consent to | Md. Code Ann., Health-Gen. § 20-601 HG, §20-603 | V
+  Woundings Assault on law enforcement officer, parole or probation agent, or first responder, 2nd degree | Md. Code Ann., Crim. Law § 3-203(c) | V
+  Woundings Assault by incarcerated individual on employee or other incarcerated individual of State, local, or sheriff's office correctional facility, 1st degree | Md. Code Ann., Crim. Law § 3-210 | III
+  Coercion; provide means; participation             | Md. Code Ann., Crim. Law § 3-102 CR, §3-104 | VII
+  Felony bad check, $100,000 or greater              | Md. Code Ann., Crim. Law § 8-103 CR, §8-106(a)(3) | III
+  Felony bad check, at least $25,000 but less than $100,000 | Md. Code Ann., Crim. Law § 8-103 CR, §8-106(a)(2) | V
+  Felony bad check, at least $1,500 but less than $25,000 | Md. Code Ann., Crim. Law § 8-103 CR, §8-106(a)(1) | VI
+  Multiple bad checks within a 30-day period, each at least $1,500 but less than $25,000 and totaling at least $1,500 but less than $25,000 | Md. Code Ann., Crim. Law § 8-103 CR, §8-106(b) | VI
+  Failure to immediately stop a vessel involved in a collision, accident, or other casualty when the person knew or reasonably should have known that serious bodily injury to another person might occur and serious bodily injury actually occurred | Md. Code Ann., Nat. Res. § 8-724(a)(3)(iii)(1) | V
+  Failure to immediately stop a vessel involved in a collision, accident, or other casualty when the person knew or reasonably should have known that the death of another person might occur and death actually occurred | Md. Code Ann., Nat. Res. § 8-724(3)(iii)(2) | IV
+  Home invasion                                      | Md. Code Ann., Crim. Law § 6-202(d) | III
+  Burglary, 2nd degree, steal or take firearm        | Md. Code Ann., Crim. Law § 6-203(c)(2) | IV
+  Breaking and entering —research facility           | Md. Code Ann., Crim. Law § 6-208 | VI
+  Manufacture, distribute, dispense, or possess certain Schedule I through V non-narcotics, large amounts as specified in CR, §5-612, non- cannabis | Md. Code Ann., Crim. Law § 5-612(c)(1) | IV
+  Manufacture, distribute, dispense, or possess certain Schedule I or II controlled dangerous substances, large amounts as specified in CR, §5-612 | Md. Code Ann., Crim. Law § 5-612(c)(1) | IIIB
+  Drug kingpin—non-cannabis                          | Md. Code Ann., Crim. Law § 5-613(b)(1) | II
+  Drug kingpin—cannabis                              | Md. Code Ann., Crim. Law § 5-613(b)(2) | IIIB
+  Controlled dangerous substance importation into State, non-cannabis | Md. Code Ann., Crim. Law § 5-614(a) | IIIC
+  Controlled dangerous substance importation into State, cannabis (45 kilograms or more) | Md. Code Ann., Crim. Law § 5-614(a) | IIIA
+  Bringing minor into State to violate drug laws     | Md. Code Ann., Crim. Law § 5-628(a)(2) | IIIB
+  Unlawfully distribute, PWID, manufacture, possess production equipment, distribute counterfeit, PWID counterfeit, possess counterfeiting equipment, keep common nuisance, possess false prescription—narcotics and hallucinogenics (e.g., PCP, heroin, cocaine, LSD, oxycodone, fentanyl, and methadone) | Md. Code Ann., Crim. Law § 5-602(a) CR, §5-603(a) CR, §5-604 CR, §5-605 CR, §5-606 CR, §5-608(a) CR, §5-609(a) (penalty) | IIIB
+  Unlawfully distribute, PWID, manufacture, possess production equipment, distribute counterfeit, PWID counterfeit, possess counterfeiting equipment, keep common nuisance, possess false prescription—narcotics and hallucinogenics (e.g., PCP, heroin, cocaine, LSD, oxycodone, fentanyl, and methadone), subsequent | Md. Code Ann., Crim. Law § 5-602(a) CR, §5-603(a) CR, §5-604 CR, §5-605 CR, §5-606 CR, §5-608(b) CR, §5-609(b) CR, §5-608(c) CR, §5-609(c) CR, §5-608(d) CR, §5-609(d) (penalty) | IIIB IIIB IIIC
+  Knowingly violated CR, §5-602 with a mixture of heroin and fentanyl or any analogue of fentanyl; or fentanyl or any analogue of fentanyl | Md. Code Ann., Crim. Law § 5-608.1 | IIIC
+  Unlawfully distribute, PWID, manufacture, possess production equipment, distribute counterfeit, PWID counterfeit, possess counterfeiting equipment, keep common nuisance, possess false prescription—MDMA (methylenedioxymethamphetamine), 750 grams or more | Md. Code Ann., Crim. Law § 5-602(a) CR, §5-603(a) CR, §5-604 CR, §5-605 CR, §5-606 CR, §5-609(a) (penalty) | IIIA
+  Unlawfully distribute, PWID, manufacture, possess production equipment, distribute counterfeit, PWID counterfeit, possess counterfeiting equipment, keep common nuisance, possess false prescription—MDMA (methylenedioxymethamphetamine), 750 grams or more, subsequent | Md. Code Ann., Crim. Law § 5-602(a) CR, §5-603(a) CR, §5-604 CR, §5-605 CR, §5-606 CR, §5-609(b) CR, §5-609(c) CR, §5-609(d) (penalty) | IIIA IIIA IIIB
+  ... and 198 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+MI
+======================================================================
+Our entries:            130
+Authoritative entries:  1368
+Matched:                42 (32%)
+Unmatched (phantom?):   88
+Missing from ours:      1298
+Citation mismatches:    26
+
+UNMATCHED — charges we have with no authoritative match:
+  [F] Vehicular Homicide                                 | Mich. Comp. Laws § 257.625 | confidence: needs_review
+  [F] Assault with Deadly Weapon                         | Mich. Comp. Laws § 750.82 | confidence: medium
+  [M] Menacing                                           | Mich. Comp. Laws § 750.81 | confidence: medium
+  [F] Rape in the First Degree                           | Mich. Comp. Laws § 750.520b | confidence: needs_review
+  [F] Rape in the Second Degree                          | Mich. Comp. Laws § 750.520c | confidence: needs_review
+  [F] Sexual Assault in the First Degree                 | Mich. Comp. Laws § 750.520b | confidence: needs_review
+  [F] Sexual Assault in the Second Degree                | Mich. Comp. Laws § 750.520c | confidence: needs_review
+  [F] Sexual Assault in the Third Degree                 | Mich. Comp. Laws § 750.520d | confidence: needs_review
+  [F] Statutory Rape                                     | Mich. Comp. Laws § 750.520d | confidence: needs_review
+  [F] Grand Theft in the First Degree                    | Mich. Comp. Laws § 750.356(2) | confidence: medium
+  [F] Grand Theft in the Second Degree                   | Mich. Comp. Laws § 750.356(3) | confidence: medium
+  [M] Petty Theft                                        | Mich. Comp. Laws § 750.356 | confidence: medium
+  [M] Theft by Receiving                                 | Mich. Comp. Laws § 750.535 | confidence: medium
+  [F] Credit Card Fraud                                  | Mich. Comp. Laws § 750.157q | confidence: medium
+  [M] Shoplifting                                        | Mich. Comp. Laws § 750.356c | confidence: medium
+  [F] Residential Burglary                               | Mich. Comp. Laws § 750.110a | confidence: medium
+  [F] Commercial Burglary                                | Mich. Comp. Laws § 750.110 | confidence: medium
+  [F] Auto Burglary                                      | Mich. Comp. Laws § 750.356a | confidence: medium
+  [F] Possession with Intent to Distribute               | Mich. Comp. Laws § 333.7401 | confidence: needs_review
+  [F] Drug Trafficking                                   | Mich. Comp. Laws § 333.7401(2)(a)(i) | confidence: needs_review
+  [F] Discharge of Firearm in City                       | Mich. Comp. Laws § 750.234e | confidence: medium
+  [F] Wire Fraud                                         | Mich. Comp. Laws § 750.218 | confidence: medium
+  [F] Mail Fraud                                         | Mich. Comp. Laws § 750.218(6) | confidence: medium
+  [F] Check Fraud                                        | Mich. Comp. Laws § 750.131 | confidence: medium
+  [F] Insurance Fraud                                    | Mich. Comp. Laws § 500.4503 | confidence: medium
+  [F] Tax Fraud                                          | Mich. Comp. Laws § 205.27a(6) | confidence: medium
+  [F] Computer Fraud                                     | Mich. Comp. Laws § 752.796 | confidence: medium
+  [M] Disorderly Conduct                                 | Mich. Comp. Laws § 750.167 | confidence: medium
+  [M] Public Intoxication                                | Mich. Comp. Laws § 750.167 | confidence: medium
+  [M] Disturbing the Peace                               | Mich. Comp. Laws § 750.167 | confidence: medium
+  [M] Trespassing                                        | Mich. Comp. Laws § 750.552 | confidence: medium
+  [M] Vandalism                                          | Mich. Comp. Laws § 750.377a | confidence: medium
+  [M] Loitering                                          | Mich. Comp. Laws § 750.167(1)(f) | confidence: medium
+  [M] DUI First Offense                                  | Mich. Comp. Laws § 257.625 | confidence: needs_review
+  [M] DUI Second Offense                                 | Mich. Comp. Laws § 257.625(9) | confidence: needs_review
+  [F] DUI Third Offense                                  | Mich. Comp. Laws § 257.625(9)(c) | confidence: needs_review
+  [M] Hit and Run                                        | Mich. Comp. Laws § 257.617 | confidence: medium
+  [M] Driving While Suspended                            | Mich. Comp. Laws § 257.904 | confidence: medium
+  [M] OWI                                                | Mich. Comp. Laws § 257.625 | confidence: needs_review
+  [M] Domestic Violence                                  | Mich. Comp. Laws § 750.81(2) | confidence: high
+  [M] Disorderly Person                                  | Mich. Comp. Laws § 750.167 | confidence: medium
+  [M] MDOP Under $200                                    | Mich. Comp. Laws § 750.377a | confidence: medium
+  [M] DWLS                                               | Mich. Comp. Laws § 257.904 | confidence: medium
+  [M] Larceny Under $200                                 | Mich. Comp. Laws § 750.356(5) | confidence: medium
+  [M] Trespass                                           | Mich. Comp. Laws § 750.552 | confidence: medium
+  [M] Failure to Appear                                  | Mich. Comp. Laws § 750.199a | confidence: medium
+  [M] Probation Violation                                | Mich. Comp. Laws § 771.4 | confidence: medium
+  [M] Resisting Arrest / Obstruction                     | Mich. Comp. Laws § 750.479 | confidence: medium
+  [M] Open Container Violation                           | Mich. Comp. Laws § 257.624a | confidence: medium
+  [M] Minor in Possession of Alcohol                     | Mich. Comp. Laws § 436.1703 | confidence: medium
+  [M] Harassment / Stalking                              | Mich. Comp. Laws § 750.411s | confidence: medium
+  [M] Contempt of Court                                  | Mich. Comp. Laws § 600.1711 | confidence: medium
+  [M] Writing Bad Checks / Worthless Checks              | Mich. Comp. Laws § 750.131 | confidence: medium
+  [M] Solicitation / Prostitution                        | Mich. Comp. Laws § 750.449a | confidence: medium
+  [M] Driving Without Insurance                          | Mich. Comp. Laws § 500.3102 | confidence: medium
+  [M] Driving with Expired Registration                  | Mich. Comp. Laws § 257.255 | confidence: medium
+  [M] Driving with Expired/No Inspection                 | Mich. Comp. Laws § 257.683 | confidence: medium
+  [M] Criminal Nonsupport / Failure to Pay Child Support | Mich. Comp. Laws § 750.165 | confidence: medium
+  [M] Noise Violation / Disturbing the Peace by Noise    | Mich. Comp. Laws § 750.170 | confidence: medium
+  [M] Possession of Fake/Fraudulent ID                   | Mich. Comp. Laws § 436.1703(3) | confidence: medium
+  [M] Animal at Large / Leash Law Violation              | Mich. Comp. Laws § 287.262 | confidence: medium
+  [M] Illegal Camping / Sleeping in Public               | Mich. Comp. Laws § 750.552 | confidence: medium
+  [M] Panhandling / Aggressive Solicitation              | Mich. Comp. Laws § 750.167(1)(c) | confidence: medium
+  [M] Operating Unregistered / Uninsured Vehicle         | Mich. Comp. Laws § 257.216 | confidence: medium
+  [M] Curfew Violation                                   | Mich. Comp. Laws § 722.751 | confidence: medium
+  [M] Trespass After Warning / Return After Ban          | Mich. Comp. Laws § 750.552 | confidence: medium
+  [I] Defective Vehicle Equipment / Broken Taillight     | Mich. Comp. Laws § 257.683 | confidence: medium
+  [M] Truancy / Chronic Absenteeism                      | Mich. Comp. Laws § 380.1561 | confidence: medium
+  [M] Littering / Illegal Dumping                        | Mich. Comp. Laws § 324.8901 | confidence: medium
+  [M] Illegal Discharge of Fireworks                     | Mich. Comp. Laws § 28.457 | confidence: medium
+  [M] Possession of Alcohol in Park / Prohibited Area    | Mich. Comp. Laws § 436.1915 | confidence: medium
+  [M] Fishing / Hunting Without a License                | Mich. Comp. Laws § 324.43504 | confidence: medium
+  [F] Criminal Attempt                                   | Mich. Comp. Laws § 750.92 | confidence: medium
+  [F] Aiding and Abetting / Accomplice Liability         | Mich. Comp. Laws § 767.39 | confidence: medium
+  [F] Accessory After the Fact                           | Mich. Comp. Laws § 750.505 | confidence: medium
+  [F] Attempted Robbery                                  | Mich. Comp. Laws §§ 750.92, 750.530 | confidence: medium
+  [F] Attempted Sexual Assault                           | Mich. Comp. Laws §§ 750.92, 750.520b | confidence: high
+  [F] Criminal Solicitation                              | Mich. Comp. Laws § 750.157b | confidence: medium
+  [F] Criminal Street Gang Enhancement                   | Mich. Comp. Laws § 750.411u | confidence: medium
+  [F] Hate Crime Enhancement                             | Mich. Comp. Laws § 750.147b | confidence: medium
+  [F] Prior Felony / Recidivist Sentencing Enhancement   | Mich. Comp. Laws § 769.10 | confidence: medium
+  [F] Use of a Firearm in Commission of a Felony         | Mich. Comp. Laws § 750.227b | confidence: medium
+  [F] Drug Offense in a School Zone (Proximity Enhancement) | Mich. Comp. Laws § 333.7410 | confidence: medium
+  [F] RICO / Organized Crime (Racketeering)              | Mich. Comp. Laws § 750.159i | confidence: medium
+  [F] Juvenile Delinquency Adjudication (Felony-Level Act) | Mich. Comp. Laws § 712A.2(a)(1) | confidence: medium
+  [M] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Mich. Comp. Laws § 712A.2(a)(1) | confidence: medium
+  [F] Juvenile Transfer to Adult Court (Waiver Hearing)  | Mich. Comp. Laws § 712A.4 | confidence: medium
+  [F] Juvenile Firearm Possession                        | Mich. Comp. Laws § 750.234f | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the First Degree                    | ours: 750.316            | auth: 750.317
+  Felony Murder                                 | ours: 750.316            | auth: 750.317
+  Assault in the First Degree                   | ours: 750.84             | auth: 750.82
+  Assault in the Second Degree                  | ours: 750.81             | auth: 750.82
+  Assault in the Third Degree                   | ours: 750.81             | auth: 750.82
+  Assault on Peace Officer                      | ours: 750.81d            | auth: 750.215
+  Child Sexual Abuse                            | ours: 750.520b           | auth: 750.136b
+  Sexual Exploitation of Minor                  | ours: 750.145c           | auth: 750.411h
+  Embezzlement                                  | ours: 750.174            | auth: 750.182
+  Burglary in the First Degree                  | ours: 750.110a           | auth: 750.112
+  Burglary in the Second Degree                 | ours: 750.110            | auth: 750.112
+  Robbery in the Second Degree                  | ours: 750.530            | auth: 750.529
+  Bank Robbery                                  | ours: 750.529            | auth: 750.531
+  Possession of Controlled Substance            | ours: 333.7403           | auth: 333.7341
+  Distribution of Controlled Substance          | ours: 333.7401           | auth: 333.7341
+  Manufacturing Controlled Substance            | ours: 333.7401           | auth: 333.7405
+  Possession of Drug Paraphernalia              | ours: 333.7451           | auth: 333.7401b
+  Unlawful Carrying of Weapon                   | ours: 750.227            | auth: 750.226
+  Possession of Prohibited Weapon               | ours: 750.224            | auth: 324.41309
+  Retail Fraud Third Degree                     | ours: 750.356d           | auth: 750.356c
+  Assault and Battery                           | ours: 750.81             | auth: 750.81c
+  Possession of Marijuana                       | ours: 333.7403           | auth: 333.7401b
+  Violation of Protective Order                 | ours: 600.2950           | auth: 712A.6b
+  Providing False Information to Police         | ours: 750.411a           | auth: 750.479c
+  Attempted Murder                              | ours: 750.83             | auth: 750.91
+  Money Laundering                              | ours: 750.411k           | auth: 750.411l
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Using a signal preemption device causing death     | Mich. Comp. Laws § 257.616a(2)(e) | Felony class C
+  Selling or purchasing a signal preemption device   | Mich. Comp. Laws § 257.616a(2)(f) | Felony class G
+  Failure to stop at scene of a serious personal injury accident | Mich. Comp. Laws § 257.617 | Felony class E
+  Failure to stop at scene of accident resulting in serious impairment or death | Mich. Comp. Laws § 257.617(2) | Felony class E
+  Failure to stop at scene of accident resulting in death when at fault | Mich. Comp. Laws § 257.617(3) | Felony class C
+  OUIL – causing death                               | Mich. Comp. Laws § 257.625(4) | Felony class C
+  Operating a vehicle under the influence or while impaired causing death | Mich. Comp. Laws § 257.625(4) | Felony class C
+  Operating a vehicle while intoxicated or impaired causing death | Mich. Comp. Laws § 257.625(4)(a) | Felony class C
+  Operating a vehicle while intoxicated or impaired or with the presence of a controlled substance causing death | Mich. Comp. Laws § 257.625(4)(a) | Felony class C
+  Operating a vehicle under the influence or while impaired causing death to certain per- sons | Mich. Comp. Laws § 257.625(4)(b) | Felony class B
+  Operating a vehicle with alcohol content of 0.17 grams or more with prior conviction and causing death | Mich. Comp. Laws § 257.625(4)(b) | Felony class B
+  Operating a vehicle while intoxicated or impaired or with the presence of a controlled substance causing death to certain persons | Mich. Comp. Laws § 257.625(4)(c) | Felony class B
+  OUIL – causing serious impairment of body function | Mich. Comp. Laws § 257.625(5) | Felony class E
+  Operating a vehicle under the influence or while impaired causing serious impairment | Mich. Comp. Laws § 257.625(5) | Felony class E
+  Operating a vehicle while intoxicated or impaired or with the presence of a controlled substance causing serious impairment | Mich. Comp. Laws § 257.625(5)(a) | Felony class E
+  Operating a vehicle with alcohol content of 0.17 grams or more with prior conviction and causing serious impairment | Mich. Comp. Laws § 257.625(5)(b) | Felony class D
+  Operating under the influence/while impaired with a minor in the vehicle – subsequent offense | Mich. Comp. Laws § 257.625(7)(a)(ii) | Felony class E
+  Operating a vehicle while intoxicated or impaired or with the presence of a controlled substance with a minor in the vehicle – subsequent offense | Mich. Comp. Laws § 257.625(7)(a)(ii) | Felony class E
+  OUIL – third offense                               | Mich. Comp. Laws § 257.625(7)(d) | Felony class E
+  Operating a vehicle under the influence – third or subsequent offense | Mich. Comp. Laws § 257.625(8)(c) | Felony class E
+  Allowing a vehicle to be operated while under the influence or impaired causing death | Mich. Comp. Laws § 257.625(9)(b) | Felony class E
+  Allowing a vehicle to be operated while under the influence/impaired – serious impairment | Mich. Comp. Laws § 257.625(9)(c) | Felony class G
+  Operating a vehicle while intoxicated or with the presence of a controlled substance – third or subsequent offense | Mich. Comp. Laws § 257.625(9)(c) | Felony class E
+  Allowing a vehicle to be operated while intoxicated or impaired causing death | Mich. Comp. Laws § 257.625(10)(b) | Felony class E
+  Impaired driving – third or subsequent offense     | Mich. Comp. Laws § 257.625(10)(c) | Felony class E
+  Allowing a vehicle to be operated while intoxicated or impaired causing serious impair- ment | Mich. Comp. Laws § 257.625(10)(c) | Felony class G
+  Operating a vehicle while impaired – third or subsequent offense | Mich. Comp. Laws § 257.625(11)(c) | Felony class E
+  Knowingly providing false information concerning an ignition interlock device | Mich. Comp. Laws § 257.625k(7) | Felony class D
+  Failure to report that an ignition interlock device does not meet legal requirements | Mich. Comp. Laws § 257.625k(9) | Felony class D
+  Commercial drunk driving – third or subsequent offense | Mich. Comp. Laws § 257.625m(5) | Felony class E
+  Disposing of vehicle to avoid forfeiture           | Mich. Comp. Laws § 257.625n(10) | Felony class G
+  Knowingly providing false information concerning an ignition interlock device | Mich. Comp. Laws § 257.625q(3) | Felony class D
+  Failure to report illegal ignition interlock device | Mich. Comp. Laws § 257.625q(5) | Felony class D
+  Felonious driving                                  | Mich. Comp. Laws § 257.626c | Felony class G
+  Failure to use due care and caution causing injury to emergency personnel | Mich. Comp. Laws § 257.653a(3) | Felony class G
+  Failure to use due care and caution causing death to emergency personnel | Mich. Comp. Laws § 257.653a(4) | Felony class C
+  False statement in citation – perjury              | Mich. Comp. Laws § 257.744a | Felony class D
+  Motor vehicle code violations                      | Mich. Comp. Laws § 257.902 | Felony class E
+  Motor vehicle code – false certification – first offense | Mich. Comp. Laws § 257.903(1) | Felony class E
+  Motor vehicle code – false certification – second offense | Mich. Comp. Laws § 257.903(2) | Felony class E
+  ... and 1258 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+PA
+======================================================================
+Our entries:            112
+Authoritative entries:  1391
+Matched:                22 (19%)
+Unmatched (phantom?):   90
+Missing from ours:      1329
+Citation mismatches:    9
+
+UNMATCHED — charges we have with no authoritative match:
+  [F] Murder in the First Degree                         | 18 Pa.C.S. § 2502(a) | confidence: high
+  [F] Murder in the Second Degree                        | 18 Pa.C.S. § 2502(b) | confidence: high
+  [F] Vehicular Homicide                                 | 75 Pa. Cons. Stat. § 3732 | confidence: high
+  [M] Menacing                                           | 18 Pa. Cons. Stat. § 2706 | confidence: high
+  [F] Rape                                               | 18 Pa. Cons. Stat. § 3121 | confidence: high
+  [F] Statutory Rape                                     | 18 Pa. Cons. Stat. § 3122.1 | confidence: high
+  [M] Petty Theft                                        | 18 Pa.C.S. § 3921 | confidence: high
+  [F] Credit Card Fraud                                  | 18 Pa. Cons. Stat. § 4106 | confidence: high
+  [F] Embezzlement                                       | 18 Pa. Cons. Stat. § 3924 | confidence: high
+  [F] Burglary in the First Degree                       | 18 Pa. Cons. Stat. § 3502(a)(1) | confidence: high
+  [F] Burglary in the Second Degree                      | 18 Pa. Cons. Stat. § 3502(a)(2) | confidence: high
+  [F] Auto Burglary                                      | 18 Pa. Cons. Stat. § 3701(a)(1)(vi) | confidence: high
+  [F] Robbery in the First Degree                        | 18 Pa. Cons. Stat. § 3701(a)(1)(i) | confidence: high
+  [F] Robbery in the Second Degree                       | 18 Pa. Cons. Stat. § 3701(a)(1)(ii) | confidence: high
+  [F] Carjacking                                         | 18 Pa. Cons. Stat. § 3702 | confidence: high
+  [F] Bank Robbery                                       | 18 Pa. Cons. Stat. § 3701(a)(1)(ii) | confidence: high
+  [F] Possession with Intent to Distribute               | 35 Pa. Stat. § 780-113(a)(30) | confidence: high
+  [F] Manufacturing Controlled Substance                 | 35 Pa. Stat. § 780-113(a)(30) | confidence: high
+  [F] Drug Trafficking                                   | 35 Pa. Stat. § 780-113(a)(30) | confidence: high
+  [M] Possession of Drug Paraphernalia                   | 35 Pa. Stat. § 780-113(a)(32) | confidence: high
+  [F] Maintaining Drug House                             | 35 Pa. Stat. § 780-113(a)(17) | confidence: high
+  [M] Unlawful Carrying of Weapon                        | 18 Pa. Cons. Stat. § 6106 | confidence: high
+  [F] Felon in Possession of Firearm                     | 18 Pa. Cons. Stat. § 6105 | confidence: high
+  [F] Discharge of Firearm in City                       | 18 Pa. Cons. Stat. § 6107 | confidence: high
+  [F] Possession of Prohibited Weapon                    | 18 Pa. Cons. Stat. § 908 | confidence: high
+  [F] Wire Fraud                                         | 18 Pa. Cons. Stat. § 3922 | confidence: high
+  [F] Mail Fraud                                         | 18 Pa. Cons. Stat. § 4107 | confidence: high
+  [F] Check Fraud                                        | 18 Pa. Cons. Stat. § 4105 | confidence: high
+  [F] Tax Fraud                                          | 72 P.S. § 7354 | confidence: medium
+  [F] Forgery                                            | 18 Pa. Cons. Stat. § 4101 | confidence: high
+  [F] Computer Fraud                                     | 18 Pa. Cons. Stat. § 7611 | confidence: high
+  [M] Disorderly Conduct                                 | 18 Pa.C.S. § 5503 | confidence: high
+  [M] Vandalism                                          | 18 Pa. Cons. Stat. § 3304 | confidence: high
+  [M] Loitering                                          | 18 Pa. Cons. Stat. § 5506 | confidence: high
+  [M] DUI First Offense                                  | 75 Pa. Cons. Stat. § 3802 | confidence: high
+  [M] DUI Second Offense                                 | 75 Pa. Cons. Stat. § 3804(a)(2) | confidence: needs_review
+  [F] DUI Third Offense                                  | 75 Pa. Cons. Stat. § 3804(a)(3) | confidence: needs_review
+  [M] Reckless Driving                                   | 75 Pa. Cons. Stat. § 3736 | confidence: medium
+  [M] Hit and Run                                        | 75 Pa. Cons. Stat. § 3742 | confidence: high
+  [M] Driving While Suspended                            | 75 Pa. Cons. Stat. § 1543 | confidence: high
+  [M] Possession of Small Amount of Marijuana            | 35 Pa. Cons. Stat. § 780-113(a)(31) | confidence: high
+  [M] Harassment                                         | 18 Pa. Cons. Stat. § 2709 | confidence: high
+  [M] Driving Under Suspension                           | 75 Pa. Cons. Stat. § 1543 | confidence: high
+  [M] Public Drunkenness                                 | 18 Pa. Cons. Stat. § 5505 | confidence: medium
+  [M] Failure to Appear                                  | 18 Pa. Cons. Stat. § 5124 | confidence: high
+  [M] Probation Violation                                | 42 Pa. Cons. Stat. § 9771 | confidence: medium
+  [M] Violation of Protective Order                      | 23 Pa. Cons. Stat. § 6114 | confidence: medium
+  [M] Open Container Violation                           | 75 Pa. Cons. Stat. § 3809 | confidence: needs_review
+  [M] Minor in Possession of Alcohol                     | 47 Pa. Cons. Stat. § 4-493(1) | confidence: medium
+  [M] Providing False Information to Police              | 18 Pa. Cons. Stat. § 4906 | confidence: high
+  [M] Harassment / Stalking                              | 18 Pa. Cons. Stat. § 2709 | confidence: high
+  [M] Writing Bad Checks / Worthless Checks              | 18 Pa. Cons. Stat. § 4105 | confidence: high
+  [M] Solicitation / Prostitution                        | 18 Pa. Cons. Stat. § 5902(e) | confidence: high
+  [M] Driving Without Insurance                          | 75 Pa. Cons. Stat. § 1786 | confidence: medium
+  [M] Reckless/Careless Driving (Criminal)               | 75 Pa. Cons. Stat. § 3736 | confidence: medium
+  [M] Driving with Expired Registration                  | 75 Pa. Cons. Stat. § 1301 | confidence: medium
+  [M] Driving with Expired/No Inspection                 | 75 Pa. Cons. Stat. § 4703 | confidence: high
+  [M] Criminal Nonsupport / Failure to Pay Child Support | 18 Pa. Cons. Stat. § 4322 | confidence: medium
+  [M] Noise Violation / Disturbing the Peace by Noise    | 18 Pa. Cons. Stat. § 5503(a)(1) | confidence: high
+  [M] Possession of Fake/Fraudulent ID                   | 18 Pa. Cons. Stat. § 6307 | confidence: high
+  [M] Animal at Large / Leash Law Violation              | 3 Pa. Cons. Stat. § 459-305 | confidence: medium
+  [M] Animal Cruelty (Misdemeanor)                       | 18 Pa. Cons. Stat. § 5533 | confidence: high
+  [M] Illegal Camping / Sleeping in Public               | 18 Pa. Cons. Stat. § 3503 | confidence: high
+  [M] Panhandling / Aggressive Solicitation              | 18 Pa. Cons. Stat. § 5503 | confidence: high
+  [M] Curfew Violation                                   | 42 Pa. Cons. Stat. § 6302 | confidence: high
+  [M] Trespass After Warning / Return After Ban          | 18 Pa. Cons. Stat. § 3503 | confidence: high
+  [I] Defective Vehicle Equipment / Broken Taillight     | 75 Pa. Cons. Stat. § 4107 | confidence: high
+  [M] Truancy / Chronic Absenteeism                      | 24 Pa. Cons. Stat. § 13-1333 | confidence: medium
+  [M] Littering / Illegal Dumping                        | 75 Pa. Cons. Stat. § 3709 | confidence: medium
+  [M] Illegal Discharge of Fireworks                     | 35 Pa. Cons. Stat. § 1279.105 | confidence: medium
+  [M] Possession of Alcohol in Park / Prohibited Area    | 47 Pa. Cons. Stat. § 4-406 | confidence: medium
+  [M] Fishing / Hunting Without a License                | 34 Pa. Cons. Stat. § 2711 | confidence: medium
+  [F] Criminal Attempt                                   | 18 Pa. Cons. Stat. § 901 | confidence: high
+  [F] Criminal Conspiracy                                | 18 Pa. Cons. Stat. § 903 | confidence: high
+  [F] Aiding and Abetting / Accomplice Liability         | 18 Pa. Cons. Stat. § 306 | confidence: medium
+  [F] Accessory After the Fact                           | 18 Pa. Cons. Stat. § 5105 | confidence: high
+  [F] Attempted Murder                                   | 18 Pa.C.S. § 901 | confidence: high
+  [F] Attempted Robbery                                  | 18 Pa. Cons. Stat. §§ 901, 3701 | confidence: high
+  [F] Criminal Solicitation                              | 18 Pa. Cons. Stat. § 902 | confidence: high
+  [F] Criminal Street Gang Enhancement                   | 18 Pa. Cons. Stat. § 911 | confidence: high
+  [F] Hate Crime Enhancement                             | 18 Pa. Cons. Stat. § 2710 | confidence: high
+  [F] Prior Felony / Recidivist Sentencing Enhancement   | 42 Pa. Cons. Stat. § 9714 | confidence: medium
+  [F] Use of a Firearm in Commission of a Felony         | 42 Pa. Cons. Stat. § 9712 | confidence: medium
+  [F] Drug Offense in a School Zone (Proximity Enhancement) | 35 Pa. Stat. § 780-113.1 | confidence: high
+  [F] RICO / Organized Crime (Racketeering)              | 18 Pa. Cons. Stat. § 911 | confidence: high
+  [F] Money Laundering                                   | 18 Pa. Cons. Stat. § 5111 | confidence: high
+  [F] Juvenile Delinquency Adjudication (Felony-Level Act) | 42 Pa. Cons. Stat. § 6302 | confidence: high
+  [M] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | 42 Pa. Cons. Stat. § 6302 | confidence: high
+  [F] Juvenile Transfer to Adult Court (Waiver Hearing)  | 42 Pa. Cons. Stat. § 6355 | confidence: medium
+  [F] Juvenile Firearm Possession                        | 18 Pa. Cons. Stat. § 6110.1 | confidence: high
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Aggravated Assault                            | ours: 2702               | auth: 3732.1
+  Assault on Peace Officer                      | ours: 2702               | auth: 3124.2
+  Sexual Assault in the Second Degree           | ours: 3123               | auth: 3124.1
+  Indecent Assault                              | ours: 3124.2             | auth: 3126
+  Sexual Exploitation of Minor                  | ours: 6312               | auth: 6320
+  Possession of Controlled Substance            | ours: 780-113            | auth: 5123
+  Distribution of Controlled Substance          | ours: 780-113            | auth: 5123
+  Contempt of Court                             | ours: 4132               | auth: 5110
+  Attempted Sexual Assault                      | ours: 901                | auth: 3124.1
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Use electric incapacitation device (intent to commit felony) | 18 Pa.C.S. § 908.1(a)(1) | F-2
+  Possess electric incapacitation device (intent to commit felony) | 18 Pa.C.S. § 908.1(a)(2) | F-2
+  Manufacture/etc.-device for theft of telecommunications (>50 | 18 Pa.C.S. § 910(a)(1)(i) | F-2
+  Manufacture/etc.-device for theft of telecommunications | 18 Pa.C.S. § 910(a)(1)(i) | F-2
+  Manufacture/etc.-device to conceal telecommunications (>50 | 18 Pa.C.S. § 910(a)(1)(ii) | F-2
+  Manufacture/etc.-device to conceal telecommunications | 18 Pa.C.S. § 910(a)(1)(ii) | F-2
+  Sell/etc. unlawful telecommunications device (>50 devices) | 18 Pa.C.S. § 910(a)(2)(i) | F-2
+  Sell/etc. unlawful telecommunications device (3rd/subsq off) | 18 Pa.C.S. § 910(a)(2)(i) | F-2
+  Sell/etc. material for unlawful telecommunications device (>50 | 18 Pa.C.S. § 910(a)(2)(ii) | F-2
+  Sell/etc. material for unlawful telecommunications device | 18 Pa.C.S. § 910(a)(2)(ii) | F-2
+  Corrupt organizations                              | 18 Pa.C.S. § 911(b)(1) | F-1
+  Corrupt organizations-interest in/control of enterprise | 18 Pa.C.S. § 911(b)(2) | F-1
+  Corrupt organizations-employee participation       | 18 Pa.C.S. § 911(b)(3) | F-1
+  Corrupt organizations-conspire                     | 18 Pa.C.S. § 911(b)(4) | F-1
+  Murder-3rd degree (involving domestic violence) F-1 G2 POG4 2503(a)(1) Voluntary manslaughter (provocation from victim) | 18 Pa.C.S. § 2502(c) | F-1
+  Pa.C.S. § Description (OGS) (POG) 2503(a)(2) Voluntary manslaughter (provocation from another) | 18 Pa.C.S. § 18 | F-1
+  Suicide, causing (as homicide/murder 3) (<18/disability/autism) F-1 G2 POG4 2505(a) Suicide, causing (as homicide/vol. manslaughter) | 18 Pa.C.S. § 2505(a) | F-1
+  Suicide, causing (as homicide/vol. manslaughter)   | 18 Pa.C.S. § 2505(a) | F-1
+  Suicide, causing (as homicide/invol. manslaughter) (victim <12 yrs.) | 18 Pa.C.S. § 2505(a) | F-2
+  Suicide, aiding or soliciting (positive result) (<18/disability/autism) | 18 Pa.C.S. § 2505(b) | F-2
+  Drug delivery resulting in death                   | 18 Pa.C.S. § 2506(a) | F-1
+  Manslaughter of law enforcement officer (1st degree/provocation | 18 Pa.C.S. § 2507(c)(1)(i) | F-1
+  Manslaughter of law enforcement officer (1st degree/provocation | 18 Pa.C.S. § 2507(c)(1)(ii) | F-1
+  Manslaughter of law enforcement officer (1st degree/believe | 18 Pa.C.S. § 2507(c)(2) | F-1
+  Manslaughter of law enforcement officer (2nd degree) | 18 Pa.C.S. § 2507(d) | F-2
+  Voluntary manslaughter of unborn child (provocation from | 18 Pa.C.S. § 2605(a)(1) | F-1
+  Voluntary manslaughter of unborn child (provocation from | 18 Pa.C.S. § 2605(a)(2) | F-1
+  Voluntary manslaughter of unborn child (believe justified) | 18 Pa.C.S. § 2605(b) | F-1
+  Aggravated assault of unborn child (causes SBI)    | 18 Pa.C.S. § 2606(a) | F-1
+  Aggravated assault of unborn child (attempts to cause SBI) | 18 Pa.C.S. § 2606(a) | F-1
+  Aggravated assault-cause SBI to police/enumerated persons | 18 Pa.C.S. § 2702(a)(2) | F-1
+  Aggravated assault-attempt SBI to police/enumerated persons | 18 Pa.C.S. § 2702(a)(2) | F-1
+  Aggravated assault-cause BI to police/enumerated persons | 18 Pa.C.S. § 2702(a)(3) | F-2
+  Aggravated assault-attempt BI to police/enumerated persons | 18 Pa.C.S. § 2702(a)(3) | F-2
+  Aggravated assault-cause BI w/deadly weapon        | 18 Pa.C.S. § 2702(a)(4) | F-2
+  Pa.C.S. § Description (OGS) (POG) 2702(a)(4)* Aggravated assault-attempt BI w/deadly weapon | 18 Pa.C.S. § 18 | F-2
+  Aggravated assault-cause BI to teacher, etc.       | 18 Pa.C.S. § 2702(a)(5) | F-2
+  Aggravated assault-attempt BI to teacher, etc.     | 18 Pa.C.S. § 2702(a)(5) | F-2
+  Aggravated assault-cause fear of SBI               | 18 Pa.C.S. § 2702(a)(6) | F-2
+  Aggravated assault-use tear gas/electronic device ag. police, etc. | 18 Pa.C.S. § 2702(a)(7) | F-2
+  ... and 860 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+  Prohibited offensive weapons                       | 18 Pa.C.S. § 908(a) | M-1
+  Possess electric incapacitation device (no intent to commit felony) | 18 Pa.C.S. § 908.1(a)(2) | M-1
+  Insults to national or Commonwealth flag           | 18 Pa.C.S. § 2103 | M-2
+  Suicide, causing (as homicide/invol. manslaughter) | 18 Pa.C.S. § 2505(a) | M-1
+  Suicide, causing (as homicide/invol. manslaughter) (w/DUI or BUI | 18 Pa.C.S. § 2505(a) | M-1
+  Suicide, aiding or soliciting (no result)          | 18 Pa.C.S. § 2505(b) | M-2
+  Suicide, aiding or soliciting (no result) (<18/disability/autism) | 18 Pa.C.S. § 2505(b) | M-2
+  Simple assault-cause BI (against child <12 by adult >=18) | 18 Pa.C.S. § 2701(a)(1) | M-1
+  Simple assault-attempt BI (against child <12 by adult >=18) | 18 Pa.C.S. § 2701(a)(1) | M-1
+  Simple assault-attempt/cause BI (mutual consent)   | 18 Pa.C.S. § 2701(a)(1) | M-3
+  Simple assault-cause BI w/deadly weapon            | 18 Pa.C.S. § 2701(a)(2) | M-2
+  Simple assault-cause BI w/deadly weapon (against child <12 by | 18 Pa.C.S. § 2701(a)(2) | M-1
+  Simple assault-cause BI w/deadly weapon (mutual consent) | 18 Pa.C.S. § 2701(a)(2) | M-3
+  Simple assault-cause fear of SBI                   | 18 Pa.C.S. § 2701(a)(3) | M-2
+  Simple assault-cause fear of SBI (against child <12 by adult >=18) | 18 Pa.C.S. § 2701(a)(3) | M-1
+  Simple assault-cause fear of SBI (mutual consent)  | 18 Pa.C.S. § 2701(a)(3) | M-3
+  Simple assault-penetrate w/hypodermic needle       | 18 Pa.C.S. § 2701(a)(4) | M-2
+  Simple assault-penetrate w/hypodermic needle (against child <12 | 18 Pa.C.S. § 2701(a)(4) | M-1
+  Simple assault-penetrate w/hypodermic needle (mutual consent) | 18 Pa.C.S. § 2701(a)(4) | M-3
+  Recklessly endangering another person              | 18 Pa.C.S. § 2705 | M-2
+  ... and 409 more misdemeanors
 

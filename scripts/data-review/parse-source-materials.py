@@ -250,10 +250,300 @@ def parse_mo() -> list[dict]:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+# ── Maryland parser ───────────────────────────────────────────────────────────
+
+# Maryland code article abbreviations → full citation prefix
+MD_CODE_MAP = {
+    "CR":  "Md. Code Ann., Crim. Law §",
+    "CP":  "Md. Code Ann., Crim. Proc. §",
+    "TR":  "Md. Code Ann., Transp. §",
+    "HO":  "Md. Code Ann., Health-Occ. §",
+    "HG":  "Md. Code Ann., Health-Gen. §",
+    "BO":  "Md. Code Ann., Bus. Occ. & Prof. §",
+    "BR":  "Md. Code Ann., Bus. Reg. §",
+    "CA":  "Md. Code Ann., Corps. & Ass'ns §",
+    "CL":  "Md. Code Ann., Com. Law §",
+    "CS":  "Md. Code Ann., Corp. & Ass'ns §",
+    "EC":  "Md. Code Ann., Elec. §",
+    "ED":  "Md. Code Ann., Educ. §",
+    "EN":  "Md. Code Ann., Env't §",
+    "ET":  "Md. Code Ann., Est. & Trusts §",
+    "FA":  "Md. Code Ann., Fam. Law §",
+    "FI":  "Md. Code Ann., Fin. Inst. §",
+    "FL":  "Md. Code Ann., Fam. Law §",
+    "FP":  "Md. Code Ann., For. Pol. §",
+    "GS":  "Md. Code Ann., Gen. Prov. §",
+    "IN":  "Md. Code Ann., Ins. §",
+    "LG":  "Md. Code Ann., Local Gov't §",
+    "NR":  "Md. Code Ann., Nat. Res. §",
+    "PS":  "Md. Code Ann., Pub. Safety §",
+    "PU":  "Md. Code Ann., Pub. Util. §",
+    "RP":  "Md. Code Ann., Real Prop. §",
+    "SF":  "Md. Code Ann., State Fin. & Proc. §",
+    "SG":  "Md. Code Ann., State Gov't §",
+    "SP":  "Md. Code Ann., State Pers. & Pens. §",
+    "TP":  "Md. Code Ann., Tax-Prop. §",
+    "TG":  "Md. Code Ann., Tax-Gen. §",
+}
+
+
+def parse_md() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "MD - offensetable.pdf"
+    results = []
+    skipped = 0
+    current_category = ""
+
+    # Table columns: [entry_num, category+name, offense_code, citation, F/M, max_penalty, blank, person/prop, cat_class, blank]
+    with pdfplumber.open(str(path)) as pdf:
+        for page in pdf.pages:
+            tables = page.extract_tables()
+            for table in tables:
+                for row in table:
+                    if len(row) < 5:
+                        continue
+                    raw_name = clean(row[1]) if len(row) > 1 else ""
+                    citation_raw = clean(row[3]) if len(row) > 3 else ""
+                    fm_raw = clean(row[4]) if len(row) > 4 else ""
+                    cat_class = clean(row[8]) if len(row) > 8 else ""
+
+                    if not raw_name or not citation_raw:
+                        skipped += 1
+                        continue
+                    if fm_raw.upper() in ("FELONY/MISDEMEANOR", "F/M", "TYPE"):
+                        continue  # header row
+
+                    # raw_name format: "Category\nOffense Name" or just "Offense Name"
+                    # Split on newline — first line is category, subsequent are name
+                    parts = [p.strip() for p in row[1].split("\n") if p.strip()] if row[1] else []
+                    if len(parts) >= 2:
+                        current_category = parts[0]
+                        offense_name = " ".join(parts[1:])
+                    elif parts:
+                        offense_name = parts[0]
+                    else:
+                        skipped += 1
+                        continue
+
+                    if not offense_name or len(offense_name) < 3:
+                        skipped += 1
+                        continue
+
+                    # Expand MD code abbreviation
+                    # citation_raw like "CR, §3-601(b)(2)(ii)" or "CR, §3-601"
+                    cit_match = re.match(r'^([A-Z]{2,3}),?\s*§?\s*(.+)$', citation_raw.replace("\n", ""))
+                    if cit_match:
+                        abbr = cit_match.group(1).strip()
+                        section = cit_match.group(2).strip().lstrip("§").strip()
+                        # Remove OCR-artifact spaces within section numbers (e.g. "3- 601" → "3-601")
+                        section = re.sub(r'(\d)\s*-\s*(\d)', r'\1-\2', section)
+                        section = re.sub(r'(\d)\s*\.\s*(\d)', r'\1.\2', section)
+                        section = re.sub(r'\s{2,}', ' ', section).strip()
+                        prefix = MD_CODE_MAP.get(abbr, f"Md. Code Ann., {abbr} §")
+                        citation = f"{prefix} {section}"
+                    else:
+                        citation = citation_raw
+
+                    i_felony = "felony" in fm_raw.lower()
+                    i_misdemeanor = "misdemeanor" in fm_raw.lower()
+
+                    charge_class = cat_class if cat_class else fm_raw
+
+                    results.append({
+                        "state": "MD",
+                        "chargeName": offense_name,
+                        "citation": citation,
+                        "chargeClass": charge_class,
+                        "isFelony": i_felony,
+                        "isMisdemeanor": i_misdemeanor,
+                        "category": current_category,
+                        "source": "Maryland MSCCSP Offense Table Jan 2026",
+                    })
+
+    # Deduplicate by citation + name
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  MD: {len(deduped)} unique charges parsed ({skipped} rows skipped)")
+    return deduped
+
+
+# ── Michigan parser ───────────────────────────────────────────────────────────
+
+def parse_mi() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "MI - 2025 Sentencing Guidelines.pdf"
+    results = []
+    skipped = 0
+
+    # Felony list is on pages 141–180 (index 140–179), in MCL order
+    # Columns: [blank, MCL_number, category, class, description, stat_max, date_added]
+    # Skip alphabetical list (pages 181+) to avoid duplicates
+
+    felony_classes = {"A", "B", "C", "D", "E", "F", "G", "H"}
+
+    with pdfplumber.open(str(path)) as pdf:
+        for page_num in range(140, min(180, len(pdf.pages))):
+            page = pdf.pages[page_num]
+            tables = page.extract_tables()
+            for table in tables:
+                for row in table:
+                    if len(row) < 5:
+                        continue
+                    mcl_raw = clean(row[1])
+                    category = clean(row[2])
+                    cls = clean(row[3])
+                    description = clean(row[4])
+
+                    if not mcl_raw or not description:
+                        skipped += 1
+                        continue
+                    if "MCL #" in mcl_raw or "Felonies by" in mcl_raw or "Description" in description:
+                        continue  # header
+
+                    # MCL number cleanup: "MCL\n750.316" or "MCL 750.316"
+                    mcl_clean = re.sub(r'\s+', ' ', mcl_raw).replace("MCL ", "").strip()
+                    if not mcl_clean or not re.match(r'[\d]', mcl_clean):
+                        skipped += 1
+                        continue
+
+                    citation = f"Mich. Comp. Laws § {mcl_clean}"
+
+                    # All entries in this section are felonies
+                    charge_class = f"Felony class {cls}" if cls in felony_classes else cls
+
+                    results.append({
+                        "state": "MI",
+                        "chargeName": description,
+                        "citation": citation,
+                        "chargeClass": charge_class,
+                        "isFelony": True,
+                        "isMisdemeanor": False,
+                        "category": category,
+                        "source": "Michigan Sentencing Guidelines Manual 2024",
+                    })
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  MI: {len(deduped)} unique felony charges parsed ({skipped} rows skipped, misdemeanors not in source)")
+    return deduped
+
+
+# ── Pennsylvania parser ───────────────────────────────────────────────────────
+
+def parse_pa() -> list[dict]:
+    import pdfplumber
+
+    # PA uses two files — standard offenses and DUI/BUI offenses
+    paths = [
+        SOURCE_DIR / "PA - 8th Edition Sentencing Guidelines - 303a.9 Errata Incorporated.pdf",
+        SOURCE_DIR / "PA - 8th Edition Sentencing Guidelines - 303a.10 Errata Incorporated.pdf",
+    ]
+
+    results = []
+    skipped = 0
+
+    # Current Pa.C.S. title context (most entries are 18 Pa.C.S.)
+    current_title = "18 Pa.C.S."
+
+    # Pattern: line starting with a section number
+    # section number: digits + optional letter/parens/dots/asterisks
+    section_pat = re.compile(r'^(\d[\w.\(\)/\*-]+)\s+(.+?)\s+((?:F|M)-\d|S)\s+(\d+)\s+(POG\d+|N/A)(.*)?$')
+    title_pat = re.compile(r'(\d+)\s+Pa\.?C\.?S\.?', re.IGNORECASE)
+
+    for path in paths:
+        if not path.exists():
+            continue
+
+        with pdfplumber.open(str(path)) as pdf:
+            for page in pdf.pages:
+                text = page.extract_text() or ""
+
+                # Detect title changes ("75 Pa.C.S. §", "42 Pa.C.S. §" etc.)
+                for line in text.split("\n"):
+                    title_m = title_pat.search(line)
+                    if title_m and "Pa.C.S." in line and "§" not in line[:20]:
+                        current_title = f"{title_m.group(1)} Pa.C.S."
+
+                # Parse offense lines
+                # Handle wrapped lines: if a line ends mid-description, next line continues it
+                lines = text.split("\n")
+                i = 0
+                while i < len(lines):
+                    line = lines[i].strip()
+                    # Skip standalone page numbers (e.g. "905") — they match section_pat
+                    # via wrapped-line logic but are not section numbers
+                    if re.match(r'^\d{1,4}$', line):
+                        skipped += 1
+                        i += 1
+                        continue
+                    # Try to match as a data line
+                    m = section_pat.match(line)
+                    if not m:
+                        # Check if next line completes a wrapped description
+                        if i + 1 < len(lines):
+                            combined = line + " " + lines[i + 1].strip()
+                            m = section_pat.match(combined)
+                            if m:
+                                i += 1  # consumed next line
+                    if m:
+                        section = m.group(1).rstrip("*")
+                        description = m.group(2).strip()
+                        offense_class = m.group(3)
+                        citation = f"{current_title} § {section}"
+
+                        i_felony = offense_class.startswith("F")
+                        i_misdemeanor = offense_class.startswith("M")
+                        i_summary = offense_class == "S"
+
+                        if not i_summary:  # skip summaries
+                            results.append({
+                                "state": "PA",
+                                "chargeName": description,
+                                "citation": citation,
+                                "chargeClass": offense_class,
+                                "isFelony": i_felony,
+                                "isMisdemeanor": i_misdemeanor,
+                                "source": "PA Commission on Sentencing 8th Edition 2024",
+                            })
+                    else:
+                        skipped += 1
+                    i += 1
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  PA: {len(deduped)} unique charges parsed ({skipped} lines skipped)")
+    return deduped
+
+
 PARSERS = {
     "KS": parse_kansas,
     "NC": parse_nc,
     "MO": parse_mo,
+    "MD": parse_md,
+    "MI": parse_mi,
+    "PA": parse_pa,
 }
 
 def main():
@@ -266,10 +556,13 @@ def main():
 
     # Load existing output if merging
     existing = []
-    if OUTPUT_FILE.exists() and not state_filter:
+    if OUTPUT_FILE.exists():
         with open(OUTPUT_FILE) as f:
             existing = json.load(f)
-        print(f"Loaded {len(existing)} existing entries from {OUTPUT_FILE.name}")
+        if state_filter:
+            print(f"Loaded {len(existing)} existing entries from {OUTPUT_FILE.name} (will replace {state_filter})")
+        else:
+            print(f"Loaded {len(existing)} existing entries from {OUTPUT_FILE.name}")
 
     all_results = []
     for state in states_to_run:

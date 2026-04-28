@@ -248,7 +248,18 @@ def analyze_state(state: str) -> dict:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    states = ["KS", "NC", "MO"]
+    import sys
+    # Allow --state XX[,YY,...] override; default to all parsed states
+    state_arg = None
+    if "--state" in sys.argv:
+        idx = sys.argv.index("--state")
+        state_arg = sys.argv[idx + 1].upper()
+
+    if state_arg:
+        states = [s.strip() for s in state_arg.split(",")]
+    else:
+        states = ["KS", "NC", "MO", "MD", "MI", "PA"]
+
     results = {}
 
     for state in states:
@@ -256,15 +267,31 @@ def main():
 
     # Write full report
     report_path = OUTPUT_DIR / "gap-analysis-report.json"
+    # Merge with existing report if it exists and we're running a subset
+    if state_arg and report_path.exists():
+        with open(report_path) as f:
+            existing_report = json.load(f)
+        existing_report.update(results)
+        results = existing_report
+
     with open(report_path, "w") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"\nFull report written to {report_path}")
 
     # Write human-readable summary
     summary_path = OUTPUT_DIR / "gap-analysis-summary.txt"
+    state_labels = {
+        "KS": "KS Sentencing Commission 2013",
+        "NC": "NC Combined Offense List Dec 2025",
+        "MO": "MO Charge Code Manual Feb 2026",
+        "MD": "Maryland MSCCSP Offense Table Jan 2026",
+        "MI": "MI Sentencing Guidelines Oct 2024",
+        "PA": "PA Commission on Sentencing 8th Edition 2024",
+    }
     with open(summary_path, "w") as f:
-        f.write("GAP ANALYSIS SUMMARY — KS, NC, MO\n")
-        f.write("Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026\n\n")
+        f.write(f"GAP ANALYSIS SUMMARY — {', '.join(results.keys())}\n")
+        sources = ", ".join(state_labels.get(s, s) for s in results.keys())
+        f.write(f"Generated against: {sources}\n\n")
 
         for state, r in results.items():
             f.write(f"{'='*70}\n{state}\n{'='*70}\n")
