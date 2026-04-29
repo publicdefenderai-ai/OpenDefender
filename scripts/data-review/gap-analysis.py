@@ -293,6 +293,8 @@ def main():
         "VA": "Virginia Crime Code System FY17",
         "AL": "Alabama Sentencing Commission Presumptive Manual 2024",
         "TX": "Texas Legislative Council Felony Offenses 2018",
+        "DE": "Delaware SENTAC Benchbook 2025",
+        "CA": "California CALCRIM 2026 (Judicial Council Jury Instructions)",
     }
     with open(summary_path, "w") as f:
         f.write(f"GAP ANALYSIS SUMMARY — {', '.join(results.keys())}\n")

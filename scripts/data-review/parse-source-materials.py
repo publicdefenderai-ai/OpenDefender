@@ -1178,6 +1178,177 @@ def parse_tx() -> list[dict]:
     return deduped
 
 
+# ── Delaware parser ───────────────────────────────────────────────────────────
+
+def parse_de() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "DE - Bench-Book-2025-Final.pdf"
+    results = []
+    skipped = 0
+
+    # DE felony classes: A (most serious) through G (least serious)
+    felony_pat = re.compile(r'Class\s+([A-G])\s+Felon', re.IGNORECASE)
+
+    with pdfplumber.open(str(path)) as pdf:
+        # Index section runs from page 4 to approximately page 26 (0-indexed 3–25)
+        for page_idx in range(3, 27):
+            page = pdf.pages[page_idx]
+            tables = page.extract_tables()
+            if not tables:
+                continue
+            table = tables[0]
+
+            for row in table:
+                if not row or len(row) < 10:
+                    continue
+
+                # 12-column layout: crime=0, class=3, statute=6, page=9
+                crime_raw = clean(row[0]) if row[0] else ""
+                class_raw = clean(row[3]) if row[3] else ""
+                statute_raw = clean(row[6]) if row[6] else ""
+
+                # Skip header and non-data rows
+                if not crime_raw or crime_raw.upper() in ("CRIME", ""):
+                    continue
+                if not statute_raw or statute_raw.upper() in ("STATUE", "STATUTE", ""):
+                    continue
+                # Skip "See X" cross-reference rows
+                if crime_raw.lower().startswith("see ") or statute_raw.lower().startswith("see "):
+                    skipped += 1
+                    continue
+                # Filter for felony class (A–G); skip misdemeanors, violations, etc.
+                fm = felony_pat.search(class_raw)
+                if not fm:
+                    skipped += 1
+                    continue
+
+                felony_class = f"Class {fm.group(1).upper()} Felony"
+                violent = "(Violent)" in class_raw or "Violent" in class_raw
+
+                # Build citation: statute is "TITLE-SECTION" → Del. Code Ann. tit. TITLE, § SECTION
+                # Strip "et seq." and other qualifiers for the base citation
+                stat_clean = statute_raw.replace("et seq.", "").replace("et. seq.", "").strip().rstrip(".")
+                dash_idx = stat_clean.find("-")
+                if dash_idx != -1:
+                    title = stat_clean[:dash_idx]
+                    section = stat_clean[dash_idx + 1:]
+                    citation = f"Del. Code Ann. tit. {title}, § {section}"
+                else:
+                    citation = f"Del. Code Ann. § {stat_clean}"
+
+                results.append({
+                    "state": "DE",
+                    "chargeName": crime_raw,
+                    "citation": citation,
+                    "chargeClass": felony_class + (" (Violent)" if violent else " (Nonviolent)"),
+                    "isFelony": True,
+                    "isMisdemeanor": False,
+                    "source": "Delaware SENTAC Benchbook 2025",
+                })
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  DE: {len(deduped)} unique felony charges parsed ({skipped} rows skipped)")
+    return deduped
+
+
+# ── California parser (CALCRIM TOC) ──────────────────────────────────────────
+
+def parse_ca() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "CA - calcrim-2026.pdf"
+    results = []
+
+    # CA code abbreviations used in CALCRIM TOC (ordered longest-first for matching)
+    CA_CODE_MAP: dict[str, str] = {
+        "Health&Saf.Code":  "Cal. Health & Safety Code",
+        "Welf.&Inst.Code":  "Cal. Welf. & Inst. Code",
+        "Bus.&Prof.Code":   "Cal. Bus. & Prof. Code",
+        "Rev.&Tax.Code":    "Cal. Rev. & Tax. Code",
+        "FormerPen.Code":   "Cal. Penal Code",
+        "Pen.Code":         "Cal. Penal Code",
+        "Veh.Code":         "Cal. Veh. Code",
+    }
+    CODE_KEYS = sorted(CA_CODE_MAP.keys(), key=len, reverse=True)
+
+    # Matches statute parenthetical: (CodeAbbrev,§section...)
+    stat_re = re.compile(
+        r'\((' + '|'.join(re.escape(k) for k in CODE_KEYS) + r'),\s*§{1,2}\s*([\d.)(,:A-Za-z &/\\-]+?)\)(?=\s*$|\s+\d|\n|$)'
+    )
+
+    def split_title(raw: str) -> str:
+        """Insert spaces in concatenated CamelCase CALCRIM title text."""
+        t = re.sub(r'([a-z])([A-Z])', r'\1 \2', raw)
+        t = re.sub(r'([A-Z]{2,})([A-Z][a-z])', r'\1 \2', t)
+        return t.strip()
+
+    with pdfplumber.open(str(path)) as pdf:
+        # CALCRIM TOC occupies approximately pages 7–71 (0-indexed 6–70)
+        for page_idx in range(6, 71):
+            page = pdf.pages[page_idx]
+            text = page.extract_text() or ""
+
+            # Normalize line-wrapping inside statute references
+            text = re.sub(r'\(Pen\.\n', '(Pen.', text)
+            text = re.sub(r'(?<=Code),\n', ',', text)
+            text = re.sub(r',\n§', ',§', text)
+
+            for line in text.split("\n"):
+                line = line.strip()
+                # Must start with an instruction number (digits + optional letter)
+                num_m = re.match(r'^(\d{1,4}[A-Z]?)\.\s+', line)
+                if not num_m:
+                    continue
+                num = num_m.group(1)
+                rest = line[num_m.end():]
+
+                # Find the statute parenthetical by code abbreviation keyword
+                sm = stat_re.search(rest)
+                if not sm:
+                    continue
+
+                code_abbrev = sm.group(1)
+                section_raw = sm.group(2).strip().rstrip(",")
+                # Take first section only (before comma not inside parens)
+                section = re.split(r',(?!\s*\()', section_raw)[0].strip()
+                code_full = CA_CODE_MAP.get(code_abbrev, f"Cal. {code_abbrev}")
+                citation = f"{code_full} § {section}"
+
+                title_raw = rest[:sm.start()].strip()
+                charge_name = split_title(title_raw)
+
+                results.append({
+                    "state": "CA",
+                    "chargeName": charge_name,
+                    "citation": citation,
+                    "chargeClass": "Felony",    # CALCRIM covers both felonies and misdemeanors
+                    "isFelony": True,
+                    "isMisdemeanor": False,
+                    "source": "California CALCRIM 2026 (Judicial Council Jury Instructions)",
+                })
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  CA: {len(deduped)} unique entries parsed from CALCRIM TOC")
+    return deduped
+
+
 PARSERS = {
     "KS": parse_kansas,
     "NC": parse_nc,
@@ -1191,6 +1362,8 @@ PARSERS = {
     "VA": parse_va,
     "AL": parse_al,
     "TX": parse_tx,
+    "DE": parse_de,
+    "CA": parse_ca,
 }
 
 def main():

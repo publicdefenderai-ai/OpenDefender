@@ -1,5 +1,5 @@
-GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA, WA, MN, AR, VA, AL, TX
-Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024, Washington Adult Sentencing Manual Oct 2025, Minnesota Sentencing Guidelines Aug 2025, Arkansas Sentencing Commission Benchbook 2026, VA, AL, TX
+GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA, WA, MN, AR, VA, AL, TX, DE, CA
+Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024, Washington Adult Sentencing Manual Oct 2025, Minnesota Sentencing Guidelines Aug 2025, Arkansas Sentencing Commission Benchbook 2026, Virginia Crime Code System FY17, Alabama Sentencing Commission Presumptive Manual 2024, Texas Legislative Council Felony Offenses 2018, DE, CA
 
 ======================================================================
 KS
@@ -2108,6 +2108,334 @@ MISSING FELONIES — in authoritative source but not in our database:
   Unauthorized duplication of certain recordings     | Tex. Bus. & Com. Code § 641.051 | Felony (Unclassified)
   Unauthorized recording of a live performance       | Tex. Bus. & Com. Code § 641.052 | Felony (Unclassified)
   ... and 397 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+DE
+======================================================================
+Our entries:            131
+Authoritative entries:  369
+Matched:                48 (36%)
+Unmatched (phantom?):   83
+Missing from ours:      313
+Citation mismatches:    32
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Domestic Violence Assault                          | Del. Code Ann. tit. 11 § 1042 | confidence: needs_review
+  [] Assault on Peace Officer                           | Del. Code Ann. tit. 11, § 1102 | confidence: needs_review
+  [] Menacing                                           | 11 Del. C. § 602 | confidence: medium
+  [] Grand Theft in the First Degree                    | Del. Code Ann. tit. 11 § 841 | confidence: medium
+  [] Grand Theft in the Second Degree                   | Del. Code Ann. tit. 11 § 841 | confidence: medium
+  [] Petty Theft                                        | Del. Code Ann. tit. 11, § 841 | confidence: medium
+  [] Theft by Receiving                                 | Del. Code Ann. tit. 11, § 851 | confidence: medium
+  [] Embezzlement                                       | Del. Code Ann. tit. 11, § 845 | confidence: medium
+  [] Carjacking                                         | 11 Del. C. § 831 | confidence: medium
+  [] Possession of Controlled Substance                 | Del. Code Ann. tit. 16 § 4753 | confidence: medium
+  [] Possession with Intent to Distribute               | Del. Code Ann. tit. 16 § 4752 | confidence: needs_review
+  [] Distribution of Controlled Substance               | Del. Code Ann. tit. 16, § 4751 | confidence: needs_review
+  [] Manufacturing Controlled Substance                 | Del. Code Ann. tit. 16, § 4752 | confidence: needs_review
+  [] Drug Trafficking                                   | Del. Code Ann. tit. 16 § 4753A | confidence: needs_review
+  [] Unlawful Carrying of Weapon                        | Del. Code Ann. tit. 11, § 1442 | confidence: medium
+  [] Discharge of Firearm in City                       | Del. Code Ann. tit. 11, § 1444 | confidence: medium
+  [] Possession of Prohibited Weapon                    | Del. Code Ann. tit. 11, § 1446 | confidence: medium
+  [] Wire Fraud                                         | Del. Code Ann. tit. 11, § 843 | confidence: medium
+  [] Mail Fraud                                         | Del. Code Ann. tit. 11, § 903 | confidence: medium
+  [] Check Fraud                                        | Del. Code Ann. tit. 11, § 900 | confidence: medium
+  [] Tax Fraud                                          | Del. Code Ann. tit. 30, § 536 | confidence: medium
+  [] Computer Fraud                                     | Del. Code Ann. tit. 11, § 932 | confidence: medium
+  [] Disorderly Conduct                                 | Del. Code Ann. tit. 11, § 1301 | confidence: medium
+  [] Public Intoxication                                | Del. Code Ann. tit. 11, § 1315 | confidence: medium
+  [] Disturbing the Peace                               | Del. Code Ann. tit. 11, § 1301 | confidence: medium
+  [] Trespassing                                        | Del. Code Ann. tit. 11, § 821 | confidence: medium
+  [] Vandalism                                          | Del. Code Ann. tit. 11 § 811 | confidence: medium
+  [] Loitering                                          | Del. Code Ann. tit. 11 § 1321 | confidence: medium
+  [] DUI First Offense                                  | Del. Code Ann. tit. 21 § 4177 | confidence: needs_review
+  [] DUI Second Offense                                 | Del. Code Ann. tit. 21, § 4177(d)(2) | confidence: needs_review
+  [] DUI Third Offense                                  | Del. Code Ann. tit. 21, § 4177(d)(3) | confidence: needs_review
+  [] Reckless Driving                                   | 21 Del. C. § 4175 | confidence: medium
+  [] Hit and Run                                        | 21 Del. C. § 4202 | confidence: medium
+  [] Driving While Suspended                            | Del. Code Ann. tit. 21, § 2756 | confidence: medium
+  [] Shoplifting (Under $1,000)                         | Del. Code Ann. tit. 11, § 840 | confidence: medium
+  [] DUI - First Offense                                | Del. Code Ann. tit. 21, § 4177 | confidence: needs_review
+  [] Offensive Touching                                 | Del. Code Ann. tit. 11, § 601 | confidence: medium
+  [] Criminal Trespass in the Third Degree              | Del. Code Ann. tit. 11, § 823 | confidence: medium
+  [] Criminal Mischief (Under $1,000)                   | Del. Code Ann. tit. 11, § 811 | confidence: medium
+  [] Possession of Marijuana (Over 1 oz)                | Del. Code Ann. tit. 16, § 4764 | confidence: medium
+  [] Driving While Suspended or Revoked                 | Del. Code Ann. tit. 21, § 2756 | confidence: medium
+  [] Harassment                                         | Del. Code Ann. tit. 11, § 1311 | confidence: medium
+  [] Failure to Appear                                  | Del. Code Ann. tit. 11, § 1271 | confidence: medium
+  [] Probation Violation                                | 11 Del. C. § 4334 | confidence: medium
+  [] Open Container Violation                           | Del. Code Ann. tit. 21, § 4177M | confidence: needs_review
+  [] Minor in Possession of Alcohol                     | Del. Code Ann. tit. 4, § 904 | confidence: medium
+  [] Providing False Information to Police              | Del. Code Ann. tit. 11, § 1243 | confidence: medium
+  [] Contempt of Court                                  | 10 Del. C. § 1161 | confidence: medium
+  [] Writing Bad Checks / Worthless Checks              | Del. Code Ann. tit. 11, § 900 | confidence: medium
+  [] Solicitation / Prostitution                        | Del. Code Ann. tit. 11, § 1342 | confidence: medium
+  [] Driving Without Insurance                          | Del. Code Ann. tit. 21, § 2118A | confidence: medium
+  [] Reckless/Careless Driving (Criminal)               | Del. Code Ann. tit. 21, § 4175 | confidence: medium
+  [] Driving with Expired Registration                  | Del. Code Ann. tit. 21, § 2103 | confidence: medium
+  [] Driving with Expired/No Inspection                 | Del. Code Ann. tit. 21, § 2143 | confidence: medium
+  [] Criminal Nonsupport / Failure to Pay Child Support | Del. Code Ann. tit. 13, § 501 | confidence: medium
+  [] Noise Violation / Disturbing the Peace by Noise    | Del. Code Ann. tit. 11, § 1301(1)(b) | confidence: medium
+  [] Indecent Exposure / Public Urination               | Del. Code Ann. tit. 11, § 765 | confidence: needs_review
+  [] Possession of Fake/Fraudulent ID                   | Del. Code Ann. tit. 4, § 902 | confidence: medium
+  [] Animal at Large / Leash Law Violation              | Del. Code Ann. tit. 7, § 1706 | confidence: medium
+  [] Animal Cruelty (Misdemeanor)                       | Del. Code Ann. tit. 11, § 1325(b) | confidence: medium
+  [] Illegal Camping / Sleeping in Public               | Del. Code Ann. tit. 11, § 820 | confidence: medium
+  [] Panhandling / Aggressive Solicitation              | Del. Code Ann. tit. 11, § 1321 | confidence: medium
+  [] Operating Unregistered / Uninsured Vehicle         | Del. Code Ann. tit. 21, § 2102 | confidence: medium
+  [] Curfew Violation                                   | Del. Code Ann. tit. 10, § 1009 | confidence: medium
+  [] Trespass After Warning / Return After Ban          | Del. Code Ann. tit. 11, § 823 | confidence: medium
+  [] Defective Vehicle Equipment / Broken Taillight     | Del. Code Ann. tit. 21, § 4310 | confidence: medium
+  [] Truancy / Chronic Absenteeism                      | Del. Code Ann. tit. 14, § 2706 | confidence: medium
+  [] Littering / Illegal Dumping                        | Del. Code Ann. tit. 7, § 6307 | confidence: medium
+  [] Illegal Discharge of Fireworks                     | Del. Code Ann. tit. 16, § 7003 | confidence: medium
+  [] Possession of Alcohol in Park / Prohibited Area    | Del. Code Ann. tit. 4, § 907 | confidence: medium
+  [] Fishing / Hunting Without a License                | Del. Code Ann. tit. 7, § 2714 | confidence: medium
+  [] Criminal Attempt                                   | Del. Code Ann. tit. 11, § 531 | confidence: medium
+  [] Aiding and Abetting / Accomplice Liability         | Del. Code Ann. tit. 11, § 271 | confidence: medium
+  [] Accessory After the Fact                           | Del. Code Ann. tit. 11, § 274 | confidence: medium
+  [] Attempted Sexual Assault                           | Del. Code Ann. tit. 11, §§ 531, 771 | confidence: needs_review
+  [] Criminal Street Gang Enhancement                   | Del. Code Ann. tit. 11, § 616 | confidence: medium
+  [] Hate Crime Enhancement                             | Del. Code Ann. tit. 11, § 1304 | confidence: medium
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Del. Code Ann. tit. 11, § 4214 | confidence: medium
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Del. Code Ann. tit. 16, § 4767 | confidence: medium
+  [] RICO / Organized Crime (Racketeering)              | Del. Code Ann. tit. 11, § 1504 | confidence: medium
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Del. Code Ann. tit. 10, § 901(7) | confidence: medium
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Del. Code Ann. tit. 10, § 901(7) | confidence: medium
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Del. Code Ann. tit. 10, § 1010 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the First Degree                    | ours: 636                | auth: 635
+  Vehicular Homicide                            | ours: 630A               | auth: 630
+  Felony Murder                                 | ours: 636                | auth: 635
+  Assault in the Second Degree                  | ours: 612                | auth: 613
+  Assault in the Third Degree                   | ours: 611                | auth: 613
+  Aggravated Assault                            | ours: 612                | auth: 613
+  Assault with Deadly Weapon                    | ours: 613                | auth: 1442
+  Rape in the Second Degree                     | ours: 772                | auth: 773
+  Sexual Assault in the First Degree            | ours: 773                | auth: 613
+  Sexual Assault in the Second Degree           | ours: 768                | auth: 613
+  Sexual Assault in the Third Degree            | ours: 770                | auth: 613
+  Statutory Rape                                | ours: 770                | auth: 773
+  Child Sexual Abuse                            | ours: 778                | auth: 1103C
+  Credit Card Fraud                             | ours: 903A               | auth: 903
+  Burglary in the Second Degree                 | ours: 825                | auth: 826
+  Burglary in the Third Degree                  | ours: 824                | auth: 826
+  Commercial Burglary                           | ours: 825                | auth: 826
+  Auto Burglary                                 | ours: 824A               | auth: 826
+  Robbery in the Second Degree                  | ours: 831                | auth: 832
+  Bank Robbery                                  | ours: 831                | auth: 832
+  Possession of Drug Paraphernalia              | ours: 4771               | auth: 4756
+  Maintaining Drug House                        | ours: 4755               | auth: 4760
+  Felon in Possession of Firearm                | ours: 1448               | auth: 1457A
+  Insurance Fraud                               | ours: 2407A              | auth: 913
+  Assault in the Third Degree                   | ours: 611                | auth: 613
+  Violation of Protective Order                 | ours: 1076               | auth: 1335
+  Harassment / Stalking                         | ours: 1311               | auth: 1312
+  Criminal Conspiracy                           | ours: 512                | auth: 513
+  Attempted Murder                              | ours: 531                | auth: 635
+  Attempted Robbery                             | ours: 531                | auth: 832
+  Money Laundering                              | ours: 1256               | auth: 951
+  Juvenile Firearm Possession                   | ours: 1448A              | auth: 1462
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Abandonment of Child (>= 14 yrs of age)            | Del. Code Ann. tit. 11, § 1101 | Class F Felony (Nonviolent)
+  Abandonment of Child (< 14 yrs of age)             | Del. Code Ann. tit. 11, § 1101 | Class E Felony (Nonviolent)
+  Abetting Driver's License Violation (Prior Conviction/Death) | Del. Code Ann. tit. 11, § 1249 | Class G Felony (Nonviolent)
+  Abuse of Pregnant Female 1st Degree                | Del. Code Ann. tit. 11, § 606 | Class B Felony (Violent)
+  Abuse of Pregnant Female 2nd Degree                | Del. Code Ann. tit. 11, § 605 | Class C Felony (Violent)
+  Abuse of Sports Official (Prior Conv)              | Del. Code Ann. tit. 11, § 614 | Class G Felony (Violent)
+  Abuse of Infirm Adult: Bodily Harm                 | Del. Code Ann. tit. 31, § 3913(c) | Class D Felony (Violent)
+  Abuse/Neglect of Infirm Adult: Death               | Del. Code Ann. tit. 31, § 3913(c) | Class A Felony (Violent)
+  Abuse/Neglect of patient in Facility               | Del. Code Ann. tit. 16, § 1136(a) | Class C Felony (Violent)
+  Abuse/Neglect of Patient: Death                    | Del. Code Ann. tit. 16, § 1136(a) | Class A Felony (Violent)
+  Abuse/Neglect of Patient: Sexual Contact           | Del. Code Ann. tit. 16, § 1136(a) | Class G Felony (Violent)
+  Act of Intimidation                                | Del. Code Ann. tit. 11, § 3532 | Class D Felony (Nonviolent)
+  Adulteration                                       | Del. Code Ann. tit. 11, § 1339 | Class G Felony (Nonviolent)
+  Adulteration (Injury/Illness)                      | Del. Code Ann. tit. 11, § 1339 | Class E Felony (Violent)
+  Adulteration: Death                                | Del. Code Ann. tit. 11, § 1339 | Class A Felony (Violent)
+  Aggravated Criminal Non-Support                    | Del. Code Ann. tit. 11, § 1113(b) | Class G Felony (Nonviolent)
+  Aggravated Act of Intimidation                     | Del. Code Ann. tit. 11, § 3533 | Class B Felony (Violent)
+  Aggravated Menacing (Display Deadly Weapon)        | Del. Code Ann. tit. 11, § 602(b) | Class E Felony (Violent)
+  Aggravated Strangulation                           | Del. Code Ann. tit. 11, § 607A | Class C Felony (Nonviolent)
+  Animals: Fighting/Baiting                          | Del. Code Ann. tit. 11, § 1326(a) | Class E Felony (Nonviolent)
+  Animals: Fighting/Bating                           | Del. Code Ann. tit. 11, § 1326(b) | Class F Felony (Nonviolent)
+  Arson 1st Degree                                   | Del. Code Ann. tit. 11, § 803 | Class C Felony (Violent)
+  Arson 2nd Degree                                   | Del. Code Ann. tit. 11, § 802 | Class D Felony (Violent)
+  Arson 3rd Degree                                   | Del. Code Ann. tit. 11, § 801 | Class G Felony (Nonviolent)
+  Assault 1st Degree on Law Enforc Animal            | Del. Code Ann. tit. 11, § 1250(c) | Class D Felony (Violent)
+  Assault in Detention Facility: Serious Injury      | Del. Code Ann. tit. 11, § 1254(b) | Class B Felony (Violent)
+  Assault in Detention Facility: Bodily Emissions    | Del. Code Ann. tit. 11, § 1254(c) | Class D Felony (Violent)
+  Assault in Detention Facility: Injury              | Del. Code Ann. tit. 11, § 1254(a) | Class D Felony (Violent)
+  Background Checks for Child Serving Ents           | Del. Code Ann. tit. 31, § 310(c) | Class G Felony (Nonviolent)
+  Benefit by False Representation                    | Del. Code Ann. tit. 31, § 1003 | Class E Felony (Nonviolent)
+  Benefit by False Representation >$10,000           | Del. Code Ann. tit. 31, § 1003 | Class C Felony (Nonviolent)
+  Bestiality                                         | Del. Code Ann. tit. 11, § 775 | Class D Felony (Violent)
+  Bigamy                                             | Del. Code Ann. tit. 11, § 1001 | Class G Felony (Nonviolent)
+  Breach of Conditions of Bail                       | Del. Code Ann. tit. 11, § 2109(c)(1) | Class G Felony (Nonviolent)
+  Breach of Release Conditions (Felony/Prior Conviction Crime) | Del. Code Ann. tit. 11, § 2113(c)(1) | Class G Felony (Nonviolent)
+  Bribery of a Juror                                 | Del. Code Ann. tit. 11, § 1264 | Class E Felony (Nonviolent)
+  Bribery of a Public Servant                        | Del. Code Ann. tit. 11, § 1201 | Class E Felony (Nonviolent)
+  Bribery of a Witness                               | Del. Code Ann. tit. 11, § 1261 | Class E Felony (Nonviolent)
+  Burglary 1st Degree Home Invasion                  | Del. Code Ann. tit. 11, § 826(b) | Class C Felony (Violent)
+  Carry Concealed Deadly Weapon (Firearm)            | Del. Code Ann. tit. 11, § 1442 | Class D Felony (Violent)
+  ... and 273 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+CA
+======================================================================
+Our entries:            115
+Authoritative entries:  473
+Matched:                37 (32%)
+Unmatched (phantom?):   78
+Missing from ours:      426
+Citation mismatches:    17
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Criminally Negligent Homicide                      | Cal. Penal Code § 192(b) | confidence: needs_review
+  [] Vehicular Homicide                                 | Cal. Penal Code § 191.5 | confidence: high
+  [] Domestic Violence Assault                          | Cal. Penal Code § 273.5 | confidence: high
+  [] Menacing                                           | Cal. Penal Code § 422 | confidence: medium
+  [] Rape                                               | Cal. Penal Code § 261 | confidence: needs_review
+  [] Sexual Penetration by Foreign Object               | Cal. Penal Code § 261.5 | confidence: high
+  [] Statutory Rape                                     | Cal. Penal Code § 261.5 | confidence: high
+  [] Sexual Exploitation of Minor                       | Cal. Penal Code § 311.4 | confidence: high
+  [] Grand Theft                                        | Cal. Penal Code § 487 | confidence: medium
+  [] Theft by Receiving                                 | Cal. Penal Code § 496 | confidence: medium
+  [] Identity Theft                                     | Cal. Penal Code § 530.5 | confidence: medium
+  [] Credit Card Fraud                                  | Cal. Penal Code § 484g | confidence: medium
+  [] Possession with Intent to Distribute               | Cal. Health & Saf. Code § 11351 | confidence: needs_review
+  [] Drug Trafficking                                   | Cal. Health & Saf. Code § 11352 | confidence: needs_review
+  [] Possession of Drug Paraphernalia                   | Cal. Health & Safety Code § 11364 | confidence: medium
+  [] Maintaining Drug House                             | Cal. Health & Safety Code § 11366 | confidence: medium
+  [] Unlawful Carrying of Weapon                        | Cal. Penal Code § 25400 | confidence: medium
+  [] Felon in Possession of Firearm                     | Cal. Penal Code § 29800 | confidence: medium
+  [] Discharge of Firearm in City                       | Cal. Penal Code § 246.3 | confidence: medium
+  [] Possession of Prohibited Weapon                    | Cal. Penal Code § 33215 | confidence: medium
+  [] Wire Fraud                                         | Cal. Penal Code § 532(a) | confidence: medium
+  [] Mail Fraud                                         | Cal. Penal Code § 532b | confidence: medium
+  [] Check Fraud                                        | Cal. Penal Code § 476a | confidence: medium
+  [] Tax Fraud                                          | Cal. Rev. & Tax. Code § 19705 | confidence: medium
+  [] Forgery                                            | Cal. Penal Code § 470 | confidence: medium
+  [] Computer Fraud                                     | Cal. Penal Code § 502 | confidence: medium
+  [] Public Intoxication                                | Cal. Penal Code § 647(f) | confidence: medium
+  [] Disturbing the Peace                               | Cal. Penal Code § 415 | confidence: medium
+  [] Trespassing                                        | Cal. Penal Code § 602 | confidence: medium
+  [] DUI First Offense                                  | Cal. Veh. Code § 23152 | confidence: needs_review
+  [] DUI Second Offense                                 | Cal. Veh. Code § 23540 | confidence: needs_review
+  [] DUI Third Offense                                  | Cal. Veh. Code § 23546 | confidence: needs_review
+  [] Hit and Run                                        | Cal. Veh. Code § 20001 | confidence: medium
+  [] Petty Theft (Under $950)                           | Cal. Penal Code § 484 | confidence: medium
+  [] Domestic Battery                                   | Cal. Penal Code § 243(e)(1) | confidence: needs_review
+  [] Fare Evasion (Transit)                             | Cal. Penal Code § 640 | confidence: medium
+  [] Contempt of Court (Violation of Court Order)       | Cal. Penal Code § 166 | confidence: medium
+  [] Solicitation / Prostitution                        | Cal. Penal Code § 647(b) | confidence: medium
+  [] Failure to Appear                                  | Cal. Penal Code § 1320 | confidence: medium
+  [] Probation Violation                                | Cal. Penal Code § 1203.2 | confidence: medium
+  [] Resisting Arrest / Obstruction                     | Cal. Penal Code § 148 | confidence: medium
+  [] Violation of Protective Order                      | Cal. Penal Code § 273.6 | confidence: medium
+  [] Open Container Violation                           | Cal. Veh. Code § 23222 | confidence: needs_review
+  [] Minor in Possession of Alcohol                     | Cal. Bus. & Prof. Code § 25662 | confidence: medium
+  [] Providing False Information to Police              | Cal. Penal Code § 148.9 | confidence: medium
+  [] Harassment / Stalking                              | Cal. Penal Code § 653m | confidence: medium
+  [] Writing Bad Checks / Worthless Checks              | Cal. Penal Code § 476a | confidence: medium
+  [] Driving Without Insurance                          | Cal. Veh. Code § 16029 | confidence: medium
+  [] Driving with Expired Registration                  | Cal. Veh. Code § 4000 | confidence: medium
+  [] Driving with Expired/No Inspection                 | Cal. Veh. Code § 4000.3 | confidence: medium
+  [] Criminal Nonsupport / Failure to Pay Child Support | Cal. Penal Code § 270 | confidence: medium
+  [] Noise Violation / Disturbing the Peace by Noise    | Cal. Penal Code § 415 | confidence: medium
+  [] Possession of Fake/Fraudulent ID                   | Cal. Bus. & Prof. Code § 25661 | confidence: medium
+  [] Animal at Large / Leash Law Violation              | Cal. Food & Agric. Code § 31103 | confidence: medium
+  [] Animal Cruelty (Misdemeanor)                       | Cal. Penal Code § 597(b) | confidence: medium
+  [] Illegal Camping / Sleeping in Public               | Cal. Penal Code § 647(e) | confidence: medium
+  [] Panhandling / Aggressive Solicitation              | Cal. Penal Code § 647(c) | confidence: medium
+  [] Curfew Violation                                   | Cal. Welf. & Inst. Code § 625.1 | confidence: medium
+  [] Trespass After Warning / Return After Ban          | Cal. Penal Code § 602 | confidence: medium
+  [] Defective Vehicle Equipment / Broken Taillight     | Cal. Veh. Code § 27150 | confidence: medium
+  [] Truancy / Chronic Absenteeism                      | Cal. Educ. Code § 48260 | confidence: medium
+  [] Littering / Illegal Dumping                        | Cal. Penal Code § 374 | confidence: medium
+  [] Illegal Discharge of Fireworks                     | Cal. Health & Safety Code § 12677 | confidence: medium
+  [] Possession of Alcohol in Park / Prohibited Area    | Cal. Bus. & Prof. Code § 25620 | confidence: medium
+  [] Fishing / Hunting Without a License                | Cal. Fish & Game Code § 12019 | confidence: medium
+  [] Criminal Attempt                                   | Cal. Penal Code § 664 | confidence: medium
+  [] Aiding and Abetting / Accomplice Liability         | Cal. Penal Code § 31 | confidence: medium
+  [] Accessory After the Fact                           | Cal. Penal Code § 32 | confidence: medium
+  [] Attempted Sexual Assault                           | Cal. Penal Code §§ 664, 261 | confidence: needs_review
+  [] Criminal Solicitation                              | Cal. Penal Code § 653f | confidence: medium
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Cal. Penal Code § 667 | confidence: medium
+  [] Use of a Firearm in Commission of a Felony         | Cal. Penal Code § 12022.5 | confidence: medium
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Cal. Health & Safety Code § 11353.6 | confidence: medium
+  [] RICO / Organized Crime (Racketeering)              | Cal. Penal Code § 186.2 | confidence: medium
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Cal. Welf. & Inst. Code § 602 | confidence: medium
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Cal. Welf. & Inst. Code § 602 | confidence: medium
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Cal. Welf. & Inst. Code § 707 | confidence: medium
+  [] Juvenile Firearm Possession                        | Cal. Penal Code § 29610 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the First Degree                    | ours: 187                | auth: 189
+  Murder in the Second Degree                   | ours: 187                | auth: 189
+  Battery                                       | ours: 243                | auth: 242
+  Assault with Deadly Weapon                    | ours: 245                | auth: 17500
+  Assault on Peace Officer                      | ours: 241                | auth: 190
+  Sexual Battery                                | ours: 243.4              | auth: 242
+  Child Sexual Abuse                            | ours: 288                | auth: 273a
+  Petty Theft                                   | ours: 488                | auth: 666
+  Embezzlement                                  | ours: 503                | auth: 484
+  Robbery in the First Degree                   | ours: 212.5              | auth: 211
+  Robbery in the Second Degree                  | ours: 212.5              | auth: 211
+  Bank Robbery                                  | ours: 213                | auth: 211
+  Possession of Controlled Substance            | ours: 11350              | auth: 11352
+  Driving While Suspended                       | ours: 14601.1            | auth: 23152
+  Attempted Murder                              | ours: 664                | auth: 21a
+  Attempted Robbery                             | ours: 664                | auth: 211
+  Hate Crime Enhancement                        | ours: 422.75             | auth: 190.03
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Presenceof Support Person/Dog/Dog Handler          | Cal. Penal Code § 868.4 | Felony
+  Accessories                                        | Cal. Penal Code § 32 | Felony
+  Solicitation:Elements                              | Cal. Penal Code § 653f | Felony
+  Solicitationofa Minor                              | Cal. Penal Code § 653j | Felony
+  Presumption That Killing Not Criminal              | Cal. Penal Code § 194 | Felony
+  Firstor Second Degree Murder With Malice Aforethought | Cal. Penal Code § 187 | Felony
+  Second Degree Murder:Discharge From Motor Vehicle  | Cal. Penal Code § 190(d) | Felony
+  Felony Murder:First Degree—Defendant Allegedly Committed Fatal Act | Cal. Penal Code § 189 | Felony
+  Felony Murder:First Degree—Coparticipant Allegedly Committed Fatal Act | Cal. Penal Code § 189 | Felony
+  Felony Murder:First Degree—Other Acts Allegedly Caused Death | Cal. Penal Code § 189 | Felony
+  Conspiracyto Commit Murder                         | Cal. Penal Code § 182 | Felony
+  Voluntary Manslaughter:Heatof Passion—Lesser Included Offense | Cal. Penal Code § 192(a) | Felony
+  Involuntary Manslaughter:Failureto Perform Legal Duty—Murder Not Charged | Cal. Penal Code § 192(b) | Felony
+  Gross Vehicular Manslaughter While Intoxicated     | Cal. Penal Code § 191.5(a) | Felony
+  Vehicular Manslaughter While Intoxicated—Ordinary Negligence | Cal. Penal Code § 191.5(b) | Felony
+  Gross Vehicular Manslaughter                       | Cal. Penal Code § 192(c)(1) | Felony
+  Misdemeanor Vehicular Manslaughter                 | Cal. Penal Code § 192(c)(2) | Felony
+  Vehicular Manslaughter:Collisionfor Financial Gain | Cal. Penal Code § 192(c)(3) | Felony
+  Attempted Voluntary Manslaughter:Heatof Passion—Lesser Included Offense | Cal. Penal Code § 21a | Felony
+  Voluntary Intoxication:Effectson Homicide Crimes   | Cal. Penal Code § 29.4 | Felony
+  Voluntary Intoxication Causing Unconsciousness:Effectson Homicide Crimes | Cal. Penal Code § 29.4 | Felony
+  Special Circumstances:Introduction                 | Cal. Penal Code § 190.2 | Felony
+  Special Circumstances:Financial Gain               | Cal. Penal Code § 190.2(a)(1) | Felony
+  Special Circumstances:Multiple Murder Convictions(Same Case) | Cal. Penal Code § 190.2(a)(3) | Felony
+  Special Circumstances:Murderto Prevent Arrestor Complete Escape | Cal. Penal Code § 190.2(a)(5) | Felony
+  Special Circumstances:Murderof Peace Officer,Federal Officer,or Firefighter | Cal. Penal Code § 190.2(a)(7),(8)&(9) | Felony
+  Special Circumstances:Murderof Witness             | Cal. Penal Code § 190.2(a)(10) | Felony
+  Special Circumstances:Lyingin Wait—Before March8,2000 | Cal. Penal Code § 190.2(a)(15) | Felony
+  Special Circumstances:Lyingin Wait—After March7,2000 | Cal. Penal Code § 190.2(a)(15) | Felony
+  Special Circumstances:Murder Becauseof Race,Religion,or Nationality | Cal. Penal Code § 190.2(a)(16) | Felony
+  Special Circumstances:Murderin Commissionof Felony | Cal. Penal Code § 190.2(a)(17) | Felony
+  Special Circumstances:Murder With Torture          | Cal. Penal Code § 190.2(a)(18) | Felony
+  Special Circumstances:Murderby Poison              | Cal. Penal Code § 190.2(a)(19) | Felony
+  Special Circumstances:Discharge From Vehicle       | Cal. Penal Code § 190.2(a)(21) | Felony
+  Special Circumstances:Killingby Street Gang Member | Cal. Penal Code § 190.2(a)(22) | Felony
+  Special Circumstances:Murderof Transportation Worker | Cal. Penal Code § 190.25 | Felony
+  Second Degree Murder With Prior Prisonfor Murder   | Cal. Penal Code § 190.05 | Felony
+  Death Penalty:Factorsto Consider—Not Identifiedas Aggravatingor Mitigating | Cal. Penal Code § 190.3 | Felony
+  Death Penalty:Intellectual Disability              | Cal. Penal Code § 1376 | Felony
+  Aggravated Mayhem                                  | Cal. Penal Code § 205 | Felony
+  ... and 386 more felonies
 
 MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
 
