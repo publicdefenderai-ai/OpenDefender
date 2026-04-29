@@ -4244,11 +4244,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // after Justia/OpenLaws confirmation.
 
   "al-aggravated-assault": {
-    citation: "Ala. Code § 13A-6-21",
-    confidence: "high",
+    citation: "Ala. Code § 13A-6-20",
+    confidence: "medium",
     lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-21/",
+    source: "Alabama Sentencing Commission 2024 — corrected from § 13A-6-21 (Assault 2nd Degree, Class C felony) to § 13A-6-20 (Assault 1st Degree, Class B felony; the appropriate AL analog for aggravated assault)",
+    sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/",
   },
   "ak-aggravated-assault": {
     citation: "Alaska Stat. § 11.41.200",
@@ -10593,11 +10593,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   // murder-in-the-second-degree — remaining states not covered in earlier batches
   "al-murder-in-the-second-degree": {
-    citation: "Ala. Code § 13A-6-3",
-    confidence: "high",
+    citation: "Ala. Code § 13A-6-2",
+    confidence: "medium",
     lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-3/",
+    source: "Alabama Sentencing Commission 2024 — corrected from § 13A-6-3 (Manslaughter, a distinct offense) to § 13A-6-2 (Murder; Alabama does not distinguish murder degrees — § 13A-6-2 covers all intentional murder)",
+    sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-2/",
   },
   "ga-murder-in-the-second-degree": {
     citation: "Ga. Code Ann. § 16-5-1(b)",
@@ -12148,7 +12148,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "vi-distribution-of-controlled-substance": { citation: "V.I. Code Ann. tit. 19, § 604", confidence: "medium", lastVerified: "2026-04", source: "Training data — U.S. Virgin Islands distribution of controlled substance; territory code — verify manually before promoting to high" },
 
   // manufacturing-controlled-substance — all states
-  "al-manufacturing-controlled-substance": { citation: "Ala. Code § 13A-12-217", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-217/" },
+  "al-manufacturing-controlled-substance": { citation: "Ala. Code § 13A-12-218", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 13A-12-217 (Manufacturing 2nd, Class B felony) to § 13A-12-218 (Manufacturing Controlled Substance 1st, Class A felony; the primary manufacturing offense in AL sentencing guidelines)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-218/" },
   "ak-manufacturing-controlled-substance": { citation: "Alaska Stat. § 11.71.020", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-71-020/" },
   "az-manufacturing-controlled-substance": { citation: "Ariz. Rev. Stat. § 13-3407(A)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/arizona/section-13-3407/" },
   "ar-manufacturing-controlled-substance": { citation: "Ark. Code Ann. § 5-64-424", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-64-424/" },
@@ -16326,7 +16326,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tx-attempted-robbery": { citation: "Tex. Penal Code §§ 15.01, 29.02", confidence: "medium", lastVerified: "2026-04", source: "Training data — Texas attempt + robbery", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm" },
   "ut-attempted-robbery": { citation: "Utah Code Ann. §§ 76-4-101, 76-6-301", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah attempt + robbery", sourceUrl: "https://law.justia.com/codes/utah/section-76-4-101/" },
   "vt-attempted-robbery": { citation: "Vt. Stat. Ann. tit. 13, §§ 9, 608", confidence: "medium", lastVerified: "2026-04", source: "Training data — Vermont attempt + robbery", sourceUrl: "https://law.justia.com/codes/vermont/section-9/" },
-  "va-attempted-robbery": { citation: "Va. Code Ann. §§ 18.2-25, 18.2-58", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-25/" },
+  "va-attempted-robbery": { citation: "Va. Code Ann. §§ 18.2-26, 18.2-58", confidence: "medium", lastVerified: "2026-04", source: "Virginia Crime Code System FY17 — corrected attempt statute from § 18.2-25 (applies only to capital offenses and Class 1 felonies) to § 18.2-26 (attempt to commit other felonies; robbery is Class 4)", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-26/" },
   "wa-attempted-robbery": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.56.200", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.28.020" },
   "wv-attempted-robbery": { citation: "W. Va. Code §§ 61-11-8, 61-2-12", confidence: "medium", lastVerified: "2026-04", source: "Training data — West Virginia attempt + robbery", sourceUrl: "https://code.wvlegislature.gov/61-11-8/" },
   "wi-attempted-robbery": { citation: "Wis. Stat. §§ 939.32, 943.32", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wisconsin attempt + robbery", sourceUrl: "https://law.justia.com/codes/wisconsin/section-939-32/" },
@@ -16385,7 +16385,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tx-attempted-sexual-assault": { citation: "Tex. Penal Code §§ 15.01, 22.011", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm" },
   "ut-attempted-sexual-assault": { citation: "Utah Code Ann. §§ 76-4-101, 76-5-402", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-4-101/" },
   "vt-attempted-sexual-assault": { citation: "Vt. Stat. Ann. tit. 13, §§ 9, 3252", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/vermont/section-9/" },
-  "va-attempted-sexual-assault": { citation: "Va. Code Ann. §§ 18.2-25, 18.2-61", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-25/" },
+  "va-attempted-sexual-assault": { citation: "Va. Code Ann. §§ 18.2-26, 18.2-61", confidence: "medium", lastVerified: "2026-04", source: "Virginia Crime Code System FY17 — corrected attempt statute from § 18.2-25 (capital/Class 1 felony attempts only) to § 18.2-26 (attempt to commit other felonies; rape § 18.2-61 is Class 4)", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-26/" },
   "wa-attempted-sexual-assault": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.44.040", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.28.020" },
   "wv-attempted-sexual-assault": { citation: "W. Va. Code §§ 61-11-8, 61-8B-3", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/61-11-8/" },
   "wi-attempted-sexual-assault": { citation: "Wis. Stat. §§ 939.32, 940.225", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wisconsin/section-939-32/" },
@@ -16753,7 +16753,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "mp-juvenile-firearm-possession": { citation: "6 CMC § 3106", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "federal-juvenile-firearm-possession": { citation: "18 U.S.C. § 922(x)", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section922&edition=prelim" },
 
-  "al-sexual-assault-in-the-third-degree": { citation: "Ala. Code § 13A-6-22", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-22/" },
+  "al-sexual-assault-in-the-third-degree": { citation: "Ala. Code § 13A-6-65", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 13A-6-22 (Assault 3rd Degree, a non-sexual physical assault) to § 13A-6-65 (Sexual Abuse 1st Degree, Class C felony; the lowest-degree sexual felony in Alabama)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-65/" },
   "ak-sexual-assault-in-the-third-degree": { citation: "Alaska Stat. § 11.41.425", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-425/" },
   "az-sexual-assault-in-the-third-degree": { citation: "Ariz. Rev. Stat. § 13-1404", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1404/" },
   "ar-sexual-assault-in-the-third-degree": { citation: "Ark. Code Ann. § 5-14-126", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-14-126/" },
@@ -16853,7 +16853,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "sc-sexual-assault-in-the-second-degree": { citation: "S.C. Code Ann. § 16-3-653", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-653/" },
   "sd-sexual-assault-in-the-second-degree": { citation: "S.D. Codified Laws § 22-22-1(3)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-22-1/" },
   "tn-sexual-assault-in-the-second-degree": { citation: "Tenn. Code Ann. § 39-13-504", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-504/" },
-  "tx-sexual-assault-in-the-second-degree": { citation: "Tex. Penal Code § 22.021", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm" },
+  "tx-sexual-assault-in-the-second-degree": { citation: "Tex. Penal Code § 22.011", confidence: "medium", lastVerified: "2026-04", source: "Texas Legislative Council Felony Offenses 2018 — corrected from § 22.021 (Aggravated Sexual Assault, 1st degree felony) to § 22.011 (Sexual Assault, 2nd degree felony; the correct statute for 2nd-degree-equivalent sexual assault in TX)", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm" },
   "ut-sexual-assault-in-the-second-degree": { citation: "Utah Code Ann. § 76-5-402", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-5-402/" },
   "vt-sexual-assault-in-the-second-degree": { citation: "Vt. Stat. Ann. tit. 13, § 3252(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-3252/" },
   "va-sexual-assault-in-the-second-degree": { citation: "Va. Code Ann. § 18.2-67.1", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-67.1/" },
@@ -17518,7 +17518,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ny-robbery-in-the-third-degree": { citation: "N.Y. Penal Law § 160.05", confidence: "medium", lastVerified: "2026-04", source: "Training data — New York robbery in the third degree", sourceUrl: "https://www.nysenate.gov/legislation/laws/PEN/160.05" },
   "or-robbery-in-the-third-degree": { citation: "Or. Rev. Stat. § 164.395", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon robbery in the third degree", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html" },
 
-  "al-dui": { citation: "Ala. Code § 32-5A-191", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/" },
+  "al-dui": { citation: "Ala. Code § 32-5A-191(h)", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 32-5A-191 (general DUI, which is a misdemeanor on first offense) to § 32-5A-191(h) (Felony DUI; the specific subsection covering felony-level DUI under the Alabama sentencing standards)", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/" },
   "md-dui": { citation: "Md. Code Ann., Transp. § 21-902", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/" },
   "va-dui": { citation: "Va. Code Ann. § 18.2-266", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-266/" },
   "wa-dui": { citation: "Wash. Rev. Code § 46.61.502", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502" },

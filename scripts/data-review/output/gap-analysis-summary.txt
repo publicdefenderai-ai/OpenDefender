@@ -1,5 +1,5 @@
-GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA, WA, MN, AR
-Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024, Washington Adult Sentencing Manual Oct 2025, Minnesota Sentencing Guidelines Aug 2025, Arkansas Sentencing Commission Benchbook 2026
+GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA, WA, MN, AR, VA, AL, TX
+Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024, Washington Adult Sentencing Manual Oct 2025, Minnesota Sentencing Guidelines Aug 2025, Arkansas Sentencing Commission Benchbook 2026, VA, AL, TX
 
 ======================================================================
 KS
@@ -1621,6 +1621,493 @@ MISSING FELONIES — in authoritative source but not in our database:
   Terroristic Act                                    | Ark. Code Ann. § 5-13-310 | Class B
   Rape - Forcible Compulsion                         | Ark. Code Ann. § 5-14-103 (a)(1) & (c)(1) | Class Y
   ... and 781 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+VA
+======================================================================
+Our entries:            130
+Authoritative entries:  1003
+Matched:                20 (15%)
+Unmatched (phantom?):   110
+Missing from ours:      973
+Citation mismatches:    6
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Murder in the First Degree                         | Va. Code Ann. § 18.2-32 | confidence: high
+  [] Murder in the Second Degree                        | Va. Code Ann. § 18.2-32 | confidence: high
+  [] Criminally Negligent Homicide                      | Va. Code Ann. § 18.2-36 | confidence: high
+  [] Vehicular Homicide                                 | Va. Code Ann. § 18.2-36.1 | confidence: high
+  [] Assault in the First Degree                        | Va. Code Ann. § 18.2-51 | confidence: high
+  [] Assault in the Second Degree                       | Va. Code Ann. § 18.2-57 | confidence: high
+  [] Assault in the Third Degree                        | Va. Code Ann. § 18.2-57(A) | confidence: high
+  [] Aggravated Assault                                 | Va. Code Ann. § 18.2-51 | confidence: high
+  [] Assault with Deadly Weapon                         | Va. Code Ann. § 18.2-51 | confidence: high
+  [] Domestic Violence Assault                          | Va. Code Ann. § 18.2-57.2 | confidence: high
+  [] Assault on Peace Officer                           | Va. Code Ann. § 18.2-57(C) | confidence: high
+  [] Menacing                                           | Va. Code Ann. § 18.2-60 | confidence: high
+  [] Rape in the First Degree                           | Va. Code Ann. § 18.2-61 | confidence: high
+  [] Rape in the Second Degree                          | Va. Code Ann. § 18.2-61 | confidence: high
+  [] Sexual Assault in the First Degree                 | Va. Code Ann. § 18.2-61 | confidence: high
+  [] Sexual Assault in the Second Degree                | Va. Code Ann. § 18.2-67.1 | confidence: high
+  [] Sexual Assault in the Third Degree                 | Va. Code Ann. § 18.2-67.4 | confidence: high
+  [] Statutory Rape                                     | Va. Code Ann. § 18.2-63 | confidence: high
+  [] Child Sexual Abuse                                 | Va. Code Ann. § 18.2-67.3 | confidence: high
+  [] Sexual Exploitation of Minor                       | Va. Code Ann. § 18.2-374.1 | confidence: high
+  [] Petty Theft                                        | Va. Code Ann. § 18.2-96 | confidence: high
+  [] Theft by Receiving                                 | Va. Code Ann. § 18.2-108 | confidence: high
+  [] Identity Theft                                     | Va. Code Ann. § 18.2-186.3 | confidence: high
+  [] Embezzlement                                       | Va. Code Ann. § 18.2-111 | confidence: high
+  [] Shoplifting                                        | Va. Code Ann. § 18.2-103 | confidence: high
+  [] Burglary in the First Degree                       | Va. Code Ann. § 18.2-89 | confidence: high
+  [] Burglary in the Second Degree                      | Va. Code Ann. § 18.2-91 | confidence: high
+  [] Residential Burglary                               | Va. Code Ann. § 18.2-89 | confidence: high
+  [] Commercial Burglary                                | Va. Code Ann. § 18.2-91 | confidence: high
+  [] Auto Burglary                                      | Va. Code Ann. § 18.2-92 | confidence: high
+  [] Robbery in the First Degree                        | Va. Code Ann. § 18.2-58 | confidence: high
+  [] Robbery in the Second Degree                       | Va. Code Ann. § 18.2-58.1 | confidence: high
+  [] Bank Robbery                                       | Va. Code Ann. § 18.2-58 | confidence: high
+  [] Possession of Controlled Substance                 | Va. Code Ann. § 18.2-250 | confidence: high
+  [] Distribution of Controlled Substance               | Va. Code Ann. § 18.2-248 | confidence: high
+  [] Manufacturing Controlled Substance                 | Va. Code Ann. § 18.2-248(A) | confidence: high
+  [] Drug Trafficking                                   | Va. Code Ann. § 18.2-248 | confidence: high
+  [] Possession of Drug Paraphernalia                   | Va. Code Ann. § 54.1-3466 | confidence: high
+  [] Maintaining Drug House                             | Va. Code Ann. § 18.2-258 | confidence: high
+  [] Unlawful Carrying of Weapon                        | Va. Code Ann. § 18.2-308 | confidence: high
+  [] Discharge of Firearm in City                       | Va. Code Ann. § 18.2-280 | confidence: high
+  [] Possession of Prohibited Weapon                    | Va. Code Ann. § 18.2-288 | confidence: high
+  [] Wire Fraud                                         | Va. Code Ann. § 18.2-178 | confidence: high
+  [] Mail Fraud                                         | Va. Code Ann. § 18.2-178.1 | confidence: high
+  [] Check Fraud                                        | Va. Code Ann. § 18.2-181 | confidence: high
+  [] Insurance Fraud                                    | Va. Code Ann. § 38.2-512 | confidence: high
+  [] Tax Fraud                                          | Va. Code Ann. § 58.1-1817 | confidence: high
+  [] Computer Fraud                                     | Va. Code Ann. § 18.2-152.3 | confidence: high
+  [] Disorderly Conduct                                 | Va. Code Ann. § 18.2-415 | confidence: high
+  [] Public Intoxication                                | Va. Code Ann. § 18.2-388 | confidence: high
+  [] Disturbing the Peace                               | Va. Code Ann. § 18.2-415 | confidence: high
+  [] Trespassing                                        | Va. Code Ann. § 18.2-119 | confidence: high
+  [] Vandalism                                          | Va. Code Ann. § 18.2-137 | confidence: high
+  [] Loitering                                          | Va. Code Ann. § 18.2-176 | confidence: high
+  [] DUI First Offense                                  | Va. Code Ann. § 18.2-266 | confidence: high
+  [] DUI Second Offense                                 | Va. Code Ann. § 18.2-270(B) | confidence: high
+  [] DUI Third Offense                                  | Va. Code Ann. § 18.2-270(C) | confidence: high
+  [] Reckless Driving                                   | Va. Code Ann. § 46.2-852 | confidence: high
+  [] Hit and Run                                        | Va. Code Ann. § 46.2-894 | confidence: high
+  [] Driving While Suspended                            | Va. Code Ann. § 46.2-301 | confidence: high
+  [] Petit Larceny                                      | Va. Code Ann. § 18.2-96 | confidence: high
+  [] DUI                                                | Va. Code Ann. § 18.2-266 | confidence: high
+  [] Domestic Assault and Battery                       | Va. Code Ann. § 18.2-57.2 | confidence: high
+  [] Trespass                                           | Va. Code Ann. § 18.2-119 | confidence: high
+  [] Possession of Marijuana                            | Va. Code Ann. § 4.1-1100 | confidence: high
+  [] Driving on Suspended License                       | Va. Code Ann. § 46.2-301 | confidence: high
+  [] Destruction of Property                            | Va. Code Ann. § 18.2-137 | confidence: high
+  [] Obstruction of Justice                             | Va. Code Ann. § 18.2-460 | confidence: high
+  [] Failure to Appear                                  | Va. Code Ann. § 19.2-128 | confidence: high
+  [] Resisting Arrest / Obstruction                     | Va. Code Ann. § 18.2-460 | confidence: high
+  [] Open Container Violation                           | Va. Code Ann. § 18.2-323.1 | confidence: high
+  [] Providing False Information to Police              | Va. Code Ann. § 18.2-461 | confidence: high
+  [] Harassment / Stalking                              | Va. Code Ann. § 18.2-186.3 | confidence: high
+  [] Contempt of Court                                  | Va. Code Ann. § 18.2-456 | confidence: high
+  [] Writing Bad Checks / Worthless Checks              | Va. Code Ann. § 18.2-181 | confidence: high
+  [] Solicitation / Prostitution                        | Va. Code Ann. § 18.2-346 | confidence: high
+  [] Driving Without Insurance                          | Va. Code Ann. § 46.2-706 | confidence: high
+  [] Reckless/Careless Driving (Criminal)               | Va. Code Ann. § 46.2-852 | confidence: high
+  [] Driving with Expired Registration                  | Va. Code Ann. § 46.2-600 | confidence: high
+  [] Driving with Expired/No Inspection                 | Va. Code Ann. § 46.2-1157 | confidence: high
+  [] Criminal Nonsupport / Failure to Pay Child Support | Va. Code Ann. § 20-61 | confidence: high
+  [] Noise Violation / Disturbing the Peace by Noise    | Va. Code Ann. § 18.2-415 | confidence: high
+  [] Possession of Fake/Fraudulent ID                   | Va. Code Ann. § 4.1-306 | confidence: high
+  [] Animal at Large / Leash Law Violation              | Va. Code Ann. § 3.2-6543 | confidence: high
+  [] Animal Cruelty (Misdemeanor)                       | Va. Code Ann. § 3.2-6570 | confidence: high
+  [] Illegal Camping / Sleeping in Public               | Va. Code Ann. § 18.2-119 | confidence: high
+  [] Panhandling / Aggressive Solicitation              | Va. Code Ann. § 18.2-415 | confidence: high
+  [] Operating Unregistered / Uninsured Vehicle         | Va. Code Ann. § 46.2-600 | confidence: high
+  [] Curfew Violation                                   | Va. Code Ann. § 16.1-228 | confidence: high
+  [] Trespass After Warning / Return After Ban          | Va. Code Ann. § 18.2-119 | confidence: high
+  [] Defective Vehicle Equipment / Broken Taillight     | Va. Code Ann. § 46.2-1003 | confidence: high
+  [] Truancy / Chronic Absenteeism                      | Va. Code Ann. § 22.1-258 | confidence: high
+  [] Littering / Illegal Dumping                        | Va. Code Ann. § 33.2-802 | confidence: high
+  [] Illegal Discharge of Fireworks                     | Va. Code Ann. § 59.1-148.3 | confidence: high
+  [] Possession of Alcohol in Park / Prohibited Area    | Va. Code Ann. § 4.1-308 | confidence: high
+  [] Fishing / Hunting Without a License                | Va. Code Ann. § 29.1-303 | confidence: high
+  [] Criminal Attempt                                   | Va. Code Ann. § 18.2-25 | confidence: high
+  [] Criminal Conspiracy                                | Va. Code Ann. § 18.2-22 | confidence: high
+  [] Aiding and Abetting / Accomplice Liability         | Va. Code Ann. § 18.2-18 | confidence: high
+  [] Attempted Murder                                   | Va. Code Ann. § 18.2-25 | confidence: high
+  [] Criminal Solicitation                              | Va. Code Ann. § 18.2-29 | confidence: high
+  [] Hate Crime Enhancement                             | Va. Code Ann. § 18.2-57(B) | confidence: high
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Va. Code Ann. § 19.2-297.1 | confidence: high
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Va. Code Ann. § 18.2-255.2 | confidence: high
+  [] RICO / Organized Crime (Racketeering)              | Va. Code Ann. § 18.2-514 | confidence: high
+  [] Money Laundering                                   | Va. Code Ann. § 18.2-246.2 | confidence: high
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Va. Code Ann. § 16.1-228 | confidence: high
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Va. Code Ann. § 16.1-228 | confidence: high
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Va. Code Ann. § 16.1-269.1 | confidence: high
+  [] Juvenile Firearm Possession                        | Va. Code Ann. § 18.2-308.7 | confidence: high
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Felon in Possession of Firearm                | ours: 18.2-308.2         | auth: 18.2-289
+  Violation of Protective Order                 | ours: 16.1-253.2         | auth: 18.2-60.4
+  Minor in Possession of Alcohol                | ours: 4.1-305            | auth: 18.2-289
+  Indecent Exposure / Public Urination          | ours: 18.2-387           | auth: 18.2-67.5
+  Attempted Robbery                             | ours: 18.2-25            | auth: 18.2-31
+  Attempted Sexual Assault                      | ours: 18.2-25            | auth: 18.2-67.5
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Partial birth infanticide, perform                 | Va. Code Ann. § 18.2-71.1 | Class 4 Felony
+  Producing                                          | Va. Code Ann. § 18.2-71 | Class 4 Felony
+  Grain dealer fraud                                 | Va. Code Ann. § 3.2-4763(B) | Class 6 Felony
+  Accept bribe, employee of Board of Agriculture & Consumer Services | Va. Code Ann. § 3.2-5410(A) | Class 6 Felony
+  Assault, etc., employee of Board of Agriculture & Consumer Services | Va. Code Ann. § 3.2-5410(B) | Class 6 Felony
+  Bribery of employee of Board of Agriculture & Consumer Services | Va. Code Ann. § 3.2-5410(A) | Class 6 Felony
+  Distribute adulterated, misbranded, uninspected products - to defraud | Va. Code Ann. § 3.2-5407 | Class 6 Felony
+  Distribution of equine, or dead, etc., livestock/poultry - to defraud | Va. Code Ann. § 3.2-5409 | Class 6 Felony
+  False representation regarding inspection, etc. - to defraud | Va. Code Ann. § 3.2-5408 | Class 6 Felony
+  Fraud related to meat and slaughterhouse regulations | Va. Code Ann. § 3.2-5416(h) | Class 6 Felony
+  Other felony violation of slaughterhouse, meat & poultry chapter | Va. Code Ann. § 3.2-5415 | Class 6 Felony
+  Formulas, reveal information about                 | Va. Code Ann. § 3.2-3908 | Class 6 Felony
+  False information on any return by Tobacco manufacturer/importer | Va. Code Ann. § 3.2-4209.1 | Class 6 Felony
+  False statement in record required by Tobacco Settlement Agreement | Va. Code Ann. § 3.2-4219 | Class 6 Felony
+  Interfere with operation of an aircraft - endangerment | Va. Code Ann. § 5.1-22 | Class 6 Felony
+  Operating under the influence                      | Va. Code Ann. § 5.1-13 | Class 6 Felony
+  Conspire to manufacture                            | Va. Code Ann. § 4.1-301 | Class 6 Felony
+  Manufacture, Illegal                               | Va. Code Ann. § 4.1-300 | Class 6 Felony
+  Manufacture, transport by armed person             | Va. Code Ann. § 4.1-318 | Class 6 Felony
+  Cruelty to animals, 2nd/subsq., (one act resulted in death) | Va. Code Ann. § 3.2-6570(B) | Class 6 Felony
+  Torture/mutilate dog or cat causing death          | Va. Code Ann. § 3.2-6570(F) | Class 6 Felony
+  Fail to care, control, contain dog, results in serious human injury | Va. Code Ann. § 3.2-6540(J,3) | Class 6 Felony
+  Fail to care, control, contain dog, results in serious human injury | Va. Code Ann. § 3.2-6540.1(D) | Class 6 Felony
+  Sale, etc., wild bird, animal, fish - aggregate $200 or more | Va. Code Ann. § 29.1-564 | Class 6 Felony
+  Device or substance used to enhance animal's ability to fight | Va. Code Ann. § 3.2-6571(B,2) | Class 6 Felony
+  Dogfighting activity                               | Va. Code Ann. § 3.2-6571(B,1) | Class 6 Felony
+  Minor child allowed to attend or be involved in animal fighting | Va. Code Ann. § 3.2-6571(B,6) | Class 6 Felony
+  Pay or receive admission for animal fighting       | Va. Code Ann. § 3.2-6571(B,4) | Class 6 Felony
+  Possess, etc., animal for fighting                 | Va. Code Ann. § 3.2-6571(B,5) | Class 6 Felony
+  Wager money, etc., on animal fighting              | Va. Code Ann. § 3.2-6571(B,3) | Class 6 Felony
+  Kill dog or cat for hide, fur or pelt - 2nd or subsequent | Va. Code Ann. § 3.2-6570(E) | Class 6 Felony
+  Enticement to bomb                                 | Va. Code Ann. § 18.2-84 | Class 5 Felony
+  Hoax firebomb, explosive, construct, use or send   | Va. Code Ann. § 18.2-85 | Class 6 Felony
+  Manufacture or possession of firebomb, explosive, etc. | Va. Code Ann. § 18.2-85 | Class 5 Felony
+  Occupied dwelling/church, aid or procure burning   | Va. Code Ann. § 18.2-77(A,ii) | Unclassified Felony
+  Occupied dwelling/church, burn                     | Va. Code Ann. § 18.2-77(A,i) | Unclassified Felony
+  Unoccupied dwelling/church, burn                   | Va. Code Ann. § 18.2-77(B) | Class 4 Felony
+  Occupied                                           | Va. Code Ann. § 18.2-80 | Class 3 Felony
+  Unoccupied - value $200 or more                    | Va. Code Ann. § 18.2-80 | Class 4 Felony
+  Occupied                                           | Va. Code Ann. § 18.2-79 | Class 3 Felony
+  ... and 933 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+AL
+======================================================================
+Our entries:            129
+Authoritative entries:  87
+Matched:                40 (31%)
+Unmatched (phantom?):   89
+Missing from ours:      45
+Citation mismatches:    25
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Vehicular Homicide                                 | Ala. Code § 32-5A-192 | confidence: needs_review
+  [] Assault with Deadly Weapon                         | Ala. Code § 13A-6-20(a)(1) | confidence: high
+  [] Assault on Peace Officer                           | Ala. Code § 13A-6-20 | confidence: high
+  [] Menacing                                           | Ala. Code § 13A-6-23 | confidence: medium
+  [] Sexual Exploitation of Minor                       | Ala. Code § 13A-12-197 | confidence: needs_review
+  [] Grand Theft in the First Degree                    | Ala. Code § 13A-8-3 | confidence: medium
+  [] Grand Theft in the Second Degree                   | Ala. Code § 13A-8-4 | confidence: medium
+  [] Petty Theft                                        | Ala. Code § 13A-8-5 | confidence: high
+  [] Theft by Receiving                                 | Ala. Code § 13A-8-16 | confidence: medium
+  [] Identity Theft                                     | Ala. Code § 13A-8-192 | confidence: medium
+  [] Credit Card Fraud                                  | Ala. Code § 13A-9-14 | confidence: medium
+  [] Embezzlement                                       | Ala. Code § 13A-9-51 | confidence: medium
+  [] Shoplifting                                        | Ala. Code § 13A-8-60 | confidence: medium
+  [] Carjacking                                         | Ala. Code § 13A-8-197 | confidence: medium
+  [] Drug Trafficking                                   | Ala. Code § 13A-12-231 | confidence: needs_review
+  [] Maintaining Drug House                             | Ala. Code § 13A-12-250 | confidence: medium
+  [] Unlawful Carrying of Weapon                        | Ala. Code § 13A-11-73 | confidence: medium
+  [] Felon in Possession of Firearm                     | Ala. Code § 13A-11-72 | confidence: medium
+  [] Discharge of Firearm in City                       | Ala. Code § 13A-11-61 | confidence: medium
+  [] Wire Fraud                                         | Ala. Code § 13A-8-2 | confidence: medium
+  [] Mail Fraud                                         | Ala. Code § 13A-9-14 | confidence: medium
+  [] Check Fraud                                        | Ala. Code § 13A-9-13.1 | confidence: medium
+  [] Insurance Fraud                                    | Ala. Code § 13A-9-44 | confidence: medium
+  [] Tax Fraud                                          | Ala. Code § 40-29-110 | confidence: medium
+  [] Computer Fraud                                     | Ala. Code § 13A-8-102 | confidence: medium
+  [] Disorderly Conduct                                 | Ala. Code § 13A-11-7 | confidence: high
+  [] Public Intoxication                                | Ala. Code § 13A-11-10 | confidence: high
+  [] Disturbing the Peace                               | Ala. Code § 13A-11-7 | confidence: medium
+  [] Trespassing                                        | Ala. Code § 13A-7-2 | confidence: high
+  [] Vandalism                                          | Ala. Code § 13A-7-29 | confidence: medium
+  [] Loitering                                          | Ala. Code § 13A-11-9 | confidence: medium
+  [] DUI First Offense                                  | Ala. Code § 32-5A-191 | confidence: needs_review
+  [] DUI Second Offense                                 | Ala. Code § 32-5A-191(b) | confidence: high
+  [] DUI Third Offense                                  | Ala. Code § 32-5A-191(c) | confidence: high
+  [] Reckless Driving                                   | Ala. Code § 32-5A-190 | confidence: medium
+  [] Hit and Run                                        | Ala. Code § 32-10-1 | confidence: medium
+  [] Driving While Suspended                            | Ala. Code § 32-6-19 | confidence: medium
+  [] Theft 4th Degree                                   | Ala. Code § 13A-8-5 | confidence: medium
+  [] DV 3rd Degree                                      | Ala. Code § 13A-6-132 | confidence: needs_review
+  [] Criminal Trespass 3rd Degree                       | Ala. Code § 13A-7-4 | confidence: medium
+  [] Criminal Mischief 3rd Degree                       | Ala. Code § 13A-7-24 | confidence: medium
+  [] Failure to Appear                                  | Ala. Code § 13A-10-39 | confidence: high
+  [] Probation Violation                                | Ala. Code § 15-22-54 | confidence: medium
+  [] Resisting Arrest / Obstruction                     | Ala. Code § 13A-10-41 | confidence: high
+  [] Violation of Protective Order                      | Ala. Code § 13A-6-142 | confidence: medium
+  [] Open Container Violation                           | Ala. Code § 32-5A-330 | confidence: needs_review
+  [] Minor in Possession of Alcohol                     | Ala. Code § 28-1-5 | confidence: medium
+  [] Providing False Information to Police              | Ala. Code § 13A-10-9 | confidence: medium
+  [] Contempt of Court                                  | Ala. Code § 12-11-30 | confidence: medium
+  [] Writing Bad Checks / Worthless Checks              | Ala. Code § 13A-9-13.1 | confidence: medium
+  [] Solicitation / Prostitution                        | Ala. Code § 13A-12-121 | confidence: medium
+  [] Driving Without Insurance                          | Ala. Code § 32-7A-16 | confidence: medium
+  [] Reckless/Careless Driving (Criminal)               | Ala. Code § 32-5A-190 | confidence: medium
+  [] Driving with Expired Registration                  | Ala. Code § 32-6-18 | confidence: medium
+  [] Driving with Expired/No Inspection                 | Ala. Code § 32-5-210 | confidence: medium
+  [] Criminal Nonsupport / Failure to Pay Child Support | Ala. Code § 30-3-62 | confidence: medium
+  [] Noise Violation / Disturbing the Peace by Noise    | Ala. Code § 13A-11-7 | confidence: medium
+  [] Indecent Exposure / Public Urination               | Ala. Code § 13A-12-130 | confidence: needs_review
+  [] Possession of Fake/Fraudulent ID                   | Ala. Code § 28-1-5.1 | confidence: medium
+  [] Animal at Large / Leash Law Violation              | Ala. Code § 3-5-3 | confidence: medium
+  [] Animal Cruelty (Misdemeanor)                       | Ala. Code § 13A-11-14 | confidence: medium
+  [] Illegal Camping / Sleeping in Public               | Ala. Code § 13A-7-2 | confidence: medium
+  [] Panhandling / Aggressive Solicitation              | Ala. Code § 13A-11-7 | confidence: medium
+  [] Operating Unregistered / Uninsured Vehicle         | Ala. Code § 40-12-260 | confidence: medium
+  [] Curfew Violation                                   | Ala. Code § 12-15-13 | confidence: medium
+  [] Trespass After Warning / Return After Ban          | Ala. Code § 13A-7-2 | confidence: medium
+  [] Defective Vehicle Equipment / Broken Taillight     | Ala. Code § 32-5-240 | confidence: medium
+  [] Truancy / Chronic Absenteeism                      | Ala. Code § 16-28-12 | confidence: medium
+  [] Littering / Illegal Dumping                        | Ala. Code § 13A-7-29 | confidence: medium
+  [] Illegal Discharge of Fireworks                     | Ala. Code § 8-17-212 | confidence: medium
+  [] Possession of Alcohol in Park / Prohibited Area    | Ala. Code § 13A-11-10 | confidence: medium
+  [] Fishing / Hunting Without a License                | Ala. Code § 9-11-54 | confidence: medium
+  [] Criminal Attempt                                   | Ala. Code § 13A-4-2 | confidence: medium
+  [] Criminal Conspiracy                                | Ala. Code § 13A-4-3 | confidence: medium
+  [] Aiding and Abetting / Accomplice Liability         | Ala. Code § 13A-2-23 | confidence: medium
+  [] Accessory After the Fact                           | Ala. Code § 13A-10-43 | confidence: medium
+  [] Attempted Sexual Assault                           | Ala. Code §§ 13A-4-2, 13A-6-61 | confidence: high
+  [] Criminal Solicitation                              | Ala. Code § 13A-4-1 | confidence: medium
+  [] Criminal Street Gang Enhancement                   | Ala. Code § 13A-6-26 | confidence: medium
+  [] Hate Crime Enhancement                             | Ala. Code § 13A-5-13 | confidence: medium
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Ala. Code § 13A-5-9 | confidence: medium
+  [] Use of a Firearm in Commission of a Felony         | Ala. Code § 13A-5-6(a)(4) | confidence: medium
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Ala. Code § 13A-12-250 | confidence: medium
+  [] RICO / Organized Crime (Racketeering)              | Ala. Code § 13A-12-232 | confidence: medium
+  [] Money Laundering                                   | Ala. Code § 13A-12-200.7 | confidence: medium
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Ala. Code § 12-15-102(3) | confidence: medium
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Ala. Code § 12-15-102(3) | confidence: medium
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Ala. Code § 12-15-203 | confidence: medium
+  [] Juvenile Firearm Possession                        | Ala. Code § 13A-11-72 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the Second Degree                   | ours: 13A-6-3            | auth: 13A-6-2
+  Assault in the Second Degree                  | ours: 13A-6-21           | auth: 13A-6-20
+  Assault in the Third Degree                   | ours: 13A-6-22           | auth: 13A-6-20
+  Aggravated Assault                            | ours: 13A-6-21           | auth: 13A-6-20
+  Rape in the Second Degree                     | ours: 13A-6-62           | auth: 13A-6-61
+  Sexual Assault in the First Degree            | ours: 13A-6-61           | auth: 13A-6-20
+  Sexual Assault in the Second Degree           | ours: 13A-6-68           | auth: 13A-6-20
+  Sexual Assault in the Third Degree            | ours: 13A-6-22           | auth: 13A-6-20
+  Statutory Rape                                | ours: 13A-6-62           | auth: 13A-6-61
+  Child Sexual Abuse                            | ours: 13A-6-69.1         | auth: 26-15-3
+  Burglary in the Second Degree                 | ours: 13A-7-6            | auth: 13A-7-5
+  Burglary in the Third Degree                  | ours: 13A-7-7            | auth: 13A-7-5
+  Commercial Burglary                           | ours: 13A-7-6            | auth: 13A-7-5
+  Auto Burglary                                 | ours: 13A-7-7            | auth: 13A-7-5
+  Robbery in the Second Degree                  | ours: 13A-8-42           | auth: 13A-8-41
+  Robbery in the Third Degree                   | ours: 13A-8-43           | auth: 13A-8-41
+  Distribution of Controlled Substance          | ours: 13A-12-211         | auth: 13A-12-212
+  Manufacturing Controlled Substance            | ours: 13A-12-217         | auth: 13A-12-218
+  Possession of Drug Paraphernalia              | ours: 13A-12-260         | auth: 13A-12-213
+  Possession of Prohibited Weapon               | ours: 13A-11-60          | auth: 13A-12-213
+  DUI                                           | ours: 32-5A-191          | auth: 32-5a-191
+  Possession of Marijuana 2nd Degree            | ours: 13A-12-214         | auth: 13A-12-213
+  Harassment / Stalking                         | ours: 13A-11-8           | auth: 13A-6-90
+  Attempted Murder                              | ours: 13A-4-2            | auth: 13A-6-2
+  Attempted Robbery                             | ours: 13A-4-2            | auth: 13A-8-41
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Compelling street gang membership                  | Ala. Code § 13A-6-26 | Felony
+  Kidnapping I                                       | Ala. Code § 13A-6-43 | Felony
+  Kidnapping II                                      | Ala. Code § 13A-6-44 | Felony
+  Sodomy I                                           | Ala. Code § 13A-6-63 | Felony
+  Sodomy II                                          | Ala. Code § 13A-6-64 | Felony
+  Sexual torture                                     | Ala. Code § 13A-6-65.l | Felony
+  Enticing a child to enter a vehicle for immoral purposes | Ala. Code § 13A-6-69 | Felony
+  Aggravated stalking                                | Ala. Code § 13A-6-91 | Felony
+  Soliciting a child by computer                     | Ala. Code § 13A-6-110 | Felony
+  Arson I                                            | Ala. Code § 13A-7-41 | Felony
+  Extortion I                                        | Ala. Code § 13A-8-14 | Felony
+  Terrorist threats                                  | Ala. Code § 13A-10-15 | Felony
+  Escape I                                           | Ala. Code § 13A-10-31 | Felony
+  Promoting prison contraband I                      | Ala. Code § 13A-10-36 | Felony
+  Intimidating a witness                             | Ala. Code § 13A-10-123 | Felony
+  Intimidating a juror                               | Ala. Code § 13A-10-127 | Felony
+  Treason                                            | Ala. Code § 13A-11-2 | Felony
+  Promoting prostitution I                           | Ala. Code § 13A-12-111 | Felony
+  Production of obscene matter involving a minor     | Ala. Code § 13A-12-197 | Felony
+  Traffi cking                                       | Ala. Code § 13A-12-231 | Felony
+  Elder abuse                                        | Ala. Code § 38-9-7 | Felony
+  Terrorism                                          | Ala. Code § 13A-10-152 | Felony
+  Hindering prosecution for terrorism                | Ala. Code § 13A-10-154 | Felony
+  Domestic violence by strangulation or suff ocation | Ala. Code § 13A-6-138 | Felony
+  Human traffi cking I                               | Ala. Code § 13A-6-152 | Felony
+  Human traffi cking II                              | Ala. Code § 13A-6-153 | Felony
+  Hindering prosecution in the fi rst degree         | Ala. Code § 13A-10-43 | Felony
+  Sale/Distribution of Marihuana (other than to minor) | Ala. Code § 13A-12-211 | Class B Felony
+  Sale/Distribution of Schedule I-V (other than to minor) | Ala. Code § 13A-12-211 | Class B Felony
+  Receiving Stolen Property 1st                      | Ala. Code § 13A-8-17 | Class B Felony
+  Receiving Stolen Property 2nd                      | Ala. Code § 13A-8-18 | Class C Felony
+  Receiving Stolen Property 3rd                      | Ala. Code § 13A-8-18.1 | Class D Felony
+  Theft of Lost Property 1st                         | Ala. Code § 13A-8-7 | Class B Felony
+  Theft of Lost Property 2nd                         | Ala. Code § 13A-8-8 | Class C Felony
+  Theft of Lost Property 3rd                         | Ala. Code § 13A-8-8.1 | Class D Felony
+  Theft of Property 1st *                            | Ala. Code § 13A-8-3 | Class B Felony
+  Theft of Property 2nd *                            | Ala. Code § 13A-8-4 | Class C Felony
+  Theft of Property 3rd *                            | Ala. Code § 13A-8-4.1 | Class D Felony
+  Theft of Services 1st                              | Ala. Code § 13A-8-10.1 | Class B Felony
+  Theft of Services 2nd                              | Ala. Code § 13A-8-10.2 | Class C Felony
+  ... and 5 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+TX
+======================================================================
+Our entries:            111
+Authoritative entries:  482
+Matched:                44 (39%)
+Unmatched (phantom?):   67
+Missing from ours:      437
+Citation mismatches:    13
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Domestic Violence Assault                          | Tex. Fam. Code § 71.004 | confidence: needs_review
+  [] Assault on Peace Officer                           | Tex. Penal Code § 22.01(b)(1) | confidence: high
+  [] Menacing                                           | Tex. Penal Code § 22.07 | confidence: medium
+  [] Statutory Rape                                     | Tex. Penal Code § 22.011(a)(2) | confidence: high
+  [] Sexual Exploitation of Minor                       | Tex. Penal Code § 43.25 | confidence: high
+  [] Embezzlement                                       | Tex. Penal Code § 31.03(a) | confidence: medium
+  [] Shoplifting                                        | Tex. Penal Code § 31.03 | confidence: medium
+  [] Possession with Intent to Distribute               | Tex. Health & Safety Code § 481.115 | confidence: medium
+  [] Manufacturing Controlled Substance                 | Tex. Health & Safety Code § 481.112(a) | confidence: needs_review
+  [] Drug Trafficking                                   | Tex. Health & Safety Code § 481.112 | confidence: needs_review
+  [] Maintaining Drug House                             | Tex. Health & Safety Code § 481.117 | confidence: medium
+  [] Discharge of Firearm in City                       | Tex. Penal Code § 42.12 | confidence: medium
+  [] Wire Fraud                                         | Tex. Penal Code § 31.06 | confidence: medium
+  [] Mail Fraud                                         | Tex. Penal Code § 32.21 | confidence: medium
+  [] Check Fraud                                        | Tex. Penal Code § 32.41 | confidence: medium
+  [] Tax Fraud                                          | Tex. Tax Code § 151.713 | confidence: medium
+  [] Computer Fraud                                     | Tex. Penal Code § 33.02 | confidence: medium
+  [] Disorderly Conduct                                 | Tex. Penal Code § 42.01 | confidence: medium
+  [] Public Intoxication                                | Tex. Penal Code § 49.02 | confidence: medium
+  [] Loitering                                          | Tex. Penal Code § 42.01(a)(9) | confidence: medium
+  [] DUI First Offense                                  | Tex. Penal Code § 49.04 | confidence: high
+  [] DUI Second Offense                                 | Tex. Penal Code § 49.04(b) | confidence: high
+  [] DUI Third Offense                                  | Tex. Penal Code § 49.09(b)(1) | confidence: high
+  [] Reckless Driving                                   | Tex. Transp. Code § 545.401 | confidence: medium
+  [] Hit and Run                                        | Tex. Transp. Code § 550.021 | confidence: medium
+  [] Theft (Under $2,500)                               | Tex. Penal Code § 31.03 | confidence: medium
+  [] Assault Causing Bodily Injury (Family Violence)    | Tex. Penal Code § 22.01(b)(2) | confidence: high
+  [] Driving While License Invalid (DWLI)               | Tex. Transp. Code § 521.457 | confidence: medium
+  [] Possession of Marijuana (Under 2 oz)               | Tex. Health & Safety Code § 481.121 | confidence: medium
+  [] Criminal Trespass                                  | Tex. Penal Code § 30.05 | confidence: medium
+  [] Failure to Identify                                | Tex. Penal Code § 38.02 | confidence: medium
+  [] Probation Violation                                | Tex. Code Crim. Proc. art. 42A.751 | confidence: medium
+  [] Open Container Violation                           | Tex. Penal Code § 49.031 | confidence: high
+  [] Minor in Possession of Alcohol                     | Tex. Alco. Bev. Code § 106.05 | confidence: medium
+  [] Providing False Information to Police              | Tex. Penal Code § 37.08 | confidence: medium
+  [] Contempt of Court                                  | Tex. Civ. Prac. & Rem. Code § 21.002 | confidence: medium
+  [] Driving Without Insurance                          | Tex. Transp. Code § 601.191 | confidence: medium
+  [] Driving with Expired Registration                  | Tex. Transp. Code § 502.151 | confidence: medium
+  [] Driving with Expired/No Inspection                 | Tex. Transp. Code § 548.101 | confidence: medium
+  [] Criminal Nonsupport / Failure to Pay Child Support | Tex. Penal Code § 25.05 | confidence: medium
+  [] Noise Violation / Disturbing the Peace by Noise    | Tex. Penal Code § 42.01(a)(5) | confidence: medium
+  [] Indecent Exposure / Public Urination               | Tex. Penal Code § 21.08 | confidence: high
+  [] Possession of Fake/Fraudulent ID                   | Tex. Alco. Bev. Code § 106.07 | confidence: medium
+  [] Animal at Large / Leash Law Violation              | Tex. Health & Safety Code § 822.005 | confidence: medium
+  [] Animal Cruelty (Misdemeanor)                       | Tex. Penal Code § 42.092(b)(1) | confidence: medium
+  [] Illegal Camping / Sleeping in Public               | Tex. Penal Code § 30.05 | confidence: medium
+  [] Panhandling / Aggressive Solicitation              | Tex. Penal Code § 42.01(a)(8) | confidence: medium
+  [] Operating Unregistered / Uninsured Vehicle         | Tex. Transp. Code § 502.002 | confidence: medium
+  [] Curfew Violation                                   | Tex. Hum. Res. Code § 51.03(b)(4) | confidence: medium
+  [] Trespass After Warning / Return After Ban          | Tex. Penal Code § 30.05 | confidence: medium
+  [] Defective Vehicle Equipment / Broken Taillight     | Tex. Transp. Code § 547.004 | confidence: medium
+  [] Truancy / Chronic Absenteeism                      | Tex. Educ. Code § 25.094 | confidence: medium
+  [] Littering / Illegal Dumping                        | Tex. Health & Safety Code § 365.012 | confidence: medium
+  [] Illegal Discharge of Fireworks                     | Tex. Occ. Code § 2154.251 | confidence: medium
+  [] Possession of Alcohol in Park / Prohibited Area    | Tex. Penal Code § 49.031 | confidence: medium
+  [] Fishing / Hunting Without a License                | Tex. Parks & Wild. Code § 42.001 | confidence: medium
+  [] Aiding and Abetting / Accomplice Liability         | Tex. Penal Code § 7.02 | confidence: medium
+  [] Accessory After the Fact                           | Tex. Penal Code § 38.05 | confidence: medium
+  [] Criminal Street Gang Enhancement                   | Tex. Penal Code § 71.02 | confidence: medium
+  [] Hate Crime Enhancement                             | Tex. Penal Code § 12.47 | confidence: medium
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Tex. Penal Code § 12.42 | confidence: medium
+  [] Use of a Firearm in Commission of a Felony         | Tex. Penal Code § 46.04 | confidence: medium
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Tex. Health & Safety Code § 481.134 | confidence: medium
+  [] RICO / Organized Crime (Racketeering)              | Tex. Penal Code § 71.02 | confidence: medium
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Tex. Fam. Code § 51.03(a)(1) | confidence: medium
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Tex. Fam. Code § 51.03(a)(1) | confidence: medium
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Tex. Fam. Code § 54.02 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Sexual Assault                                | ours: 22.021             | auth: 22.011
+  Child Sexual Abuse                            | ours: 21.11              | auth: 43.25
+  Identity Theft                                | ours: 32.51              | auth: 31.03
+  Auto Burglary                                 | ours: 30.04              | auth: 30.02
+  Bank Robbery                                  | ours: 29.03              | auth: 29.02
+  Distribution of Controlled Substance          | ours: 481.112            | auth: 481.131
+  Possession of Prohibited Weapon               | ours: 46.05              | auth: 46.03
+  Violation of Protective Order                 | ours: 25.07              | auth: 25.071
+  Harassment / Stalking                         | ours: 42.07              | auth: 42.072
+  Attempted Murder                              | ours: 15.01              | auth: 19.02
+  Attempted Robbery                             | ours: 15.01              | auth: 29.02
+  Attempted Sexual Assault                      | ours: 15.01              | auth: 22.011
+  Juvenile Firearm Possession                   | ours: 46.13              | auth: 46.04
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Operating a public grain warehouse without a license | Tex. Agric. Code § 14.072 | Third Degree Felony
+  Fraud by a public grain warehouse operator         | Tex. Agric. Code § 14.073 | Second Degree Felony
+  Unlawful delivery of grain out of a public grain warehouse | Tex. Agric. Code § 14.074 | Second Degree Felony
+  Fraudulently issuing a scale weight ticket or receipt | Tex. Agric. Code § 14.075 | Second Degree Felony
+  Changing a receipt or scale weight ticket after issuance | Tex. Agric. Code § 14.076 | Second Degree Felony
+  Depositing grain without title                     | Tex. Agric. Code § 14.077 | Second Degree Felony
+  Stealing grain or receiving stolen grain           | Tex. Agric. Code § 14.078 | Second Degree Felony
+  Interfering with a sealed grain warehouse or a Texas Department of Agriculture inspection or investigation | Tex. Agric. Code § 14.079 | Third Degree Felony
+  False or fictitious written statement relating to the procurement of financial assistance or to a property transaction under the farm and ranch finance program | Tex. Agric. Code § 59.046 | Third Degree Felony
+  Fraud relating to the farm and ranch finance program | Tex. Agric. Code § 59.047 | Third Degree Felony
+  Purchase of ammonium nitrate or ammonium nitrate material with the intent to manufacture an explosive device | Tex. Agric. Code § 63.157 | Third Degree Felony
+  Certain offenses relating to regulated pesticides and herbicides | Tex. Agric. Code § 76.202 | Third Degree Felony
+  Unlawful acquisition of or control over certain cultured species of aquatic animals with the intent to deprive the owner of the cultured species | Tex. Agric. Code § 134.023 | Third Degree Felony
+  Reproduction or destruction of a tattoo mark on livestock without the owner's consent | Tex. Agric. Code § 144.127 | Felony (Unclassified)
+  Purchase, sale, or transportation of tattooed livestock without the owner's consent | Tex. Agric. Code § 144.128 | Felony (Unclassified)
+  Failure to file or maintain bond required of livestock commission merchants | Tex. Agric. Code § 147.061 | Felony (Unclassified)
+  Appropriation of proceeds of sale made by a livestock commission merchant for a purpose other than remittance to the appropriate person or depository | Tex. Agric. Code § 147.064 | Felony (Unclassified)
+  Sale of horsemeat for human consumption            | Tex. Agric. Code § 149.005 | Felony (Unclassified)
+  Movement of certain livestock, fowl, and other animals in violation of quarantine | Tex. Agric. Code § 161.141 | Felony (Unclassified)
+  Shipping alcohol without a permit                  | Tex. Alco. Bev. Code § 54.12 | State Jail Felony
+  Offenses relating to alcoholic beverages in dry areas | Tex. Alco. Bev. Code § 101.31 | State Jail Felony
+  Making a false statement or representation in an alcoholic beverage permit or license application or in a sworn instrument to be filed with the Texas Alcoholic Beverage Commission | Tex. Alco. Bev. Code § 101.69 | Felony (Unclassified)
+  False report by a peace officer regarding the seizure of illicit beverages | Tex. Alco. Bev. Code § 103.05 | Felony (Unclassified)
+  Unlawful release or disclosure of criminal history information received by the Texas Alcoholic Beverage Commission | Tex. Alco. Bev. Code § 109.532 | Second Degree Felony
+  Forgery or counterfeiting of an alcoholic beverage stamp, permit, license, signature, certificate, evidence of tax payment, or other instrument | Tex. Alco. Bev. Code § 206.06 | Felony (Unclassified)
+  Certain offenses relating to the restraint of trade | Tex. Bus. & Com. Code § 15.22 | Felony (Unclassified)
+  Offenses relating to a pyramid promotional scheme  | Tex. Bus. & Com. Code § 17.461 | State Jail Felony
+  Fraudulent filing under the Assumed Business or Professional Name Act | Tex. Bus. & Com. Code § 71.203 | Felony (Other)
+  Warehouseman issuing a warehouse receipt without control of goods | Tex. Bus. & Com. Code § 251.004 | Felony (Unclassified)
+  Warehouseman issuing a duplicate or additional warehouse receipt | Tex. Bus. & Com. Code § 251.005 | Felony (Unclassified)
+  Agent issuing a fraudulent bill of lading          | Tex. Bus. & Com. Code § 252.004 | Felony (Unclassified)
+  Agent issuing an order bill of lading in duplicate or set of parts | Tex. Bus. & Com. Code § 252.005 | Felony (Unclassified)
+  Fraudulently inducing issuance of a bill of lading | Tex. Bus. & Com. Code § 252.006 | Felony (Unclassified)
+  Fraudulently negotiating or transferring a bill of lading | Tex. Bus. & Com. Code § 252.007 | Felony (Unclassified)
+  Selling, purchasing, installing, transferring, using, or possessing an automated sales suppression device or phantom-ware | Tex. Bus. & Com. Code § 326.002 | State Jail Felony
+  Using crime victim or motor vehicle accident information for solicitation or sale | Tex. Bus. & Com. Code § 504.002 | Third Degree Felony
+  Certain offenses relating to the theft of protected health information by electronic device | Tex. Bus. & Com. Code § 522.002 | State Jail Felony
+  Certain offenses under the Contest and Gift Giveaway Act | Tex. Bus. & Com. Code § 621.251 | Third Degree Felony
+  Unauthorized duplication of certain recordings     | Tex. Bus. & Com. Code § 641.051 | Felony (Unclassified)
+  Unauthorized recording of a live performance       | Tex. Bus. & Com. Code § 641.052 | Felony (Unclassified)
+  ... and 397 more felonies
 
 MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
 

@@ -290,6 +290,9 @@ def main():
         "WA": "Washington Adult Sentencing Manual Oct 2025",
         "MN": "Minnesota Sentencing Guidelines Aug 2025",
         "AR": "Arkansas Sentencing Commission Benchbook 2026",
+        "VA": "Virginia Crime Code System FY17",
+        "AL": "Alabama Sentencing Commission Presumptive Manual 2024",
+        "TX": "Texas Legislative Council Felony Offenses 2018",
     }
     with open(summary_path, "w") as f:
         f.write(f"GAP ANALYSIS SUMMARY — {', '.join(results.keys())}\n")

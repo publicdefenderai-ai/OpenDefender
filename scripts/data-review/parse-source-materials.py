@@ -899,6 +899,285 @@ def parse_ar() -> list[dict]:
     return deduped
 
 
+# ── Virginia parser ───────────────────────────────────────────────────────────
+
+def parse_va() -> list[dict]:
+    import openpyxl
+
+    path = SOURCE_DIR / "VA - FY17vccs.xlsx"
+    wb = openpyxl.load_workbook(str(path))
+    ws = wb.active
+
+    results = []
+    skipped = 0
+
+    # VA felony ViewKey suffixes: F1 (Class 1, most serious) through F6, F9 (unclassified)
+    felony_pat = re.compile(r'-F(\d)$')
+
+    felony_class_map = {
+        "1": "Class 1 Felony", "2": "Class 2 Felony", "3": "Class 3 Felony",
+        "4": "Class 4 Felony", "5": "Class 5 Felony", "6": "Class 6 Felony",
+        "9": "Unclassified Felony",
+    }
+
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        heading, subhead, descrtn, viewkey, statute, sentence, effdate, retiredate = (
+            row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7]
+        )
+
+        # Skip retired offenses
+        if retiredate:
+            skipped += 1
+            continue
+        # Need statute and ViewKey for classification
+        if not statute or not viewkey:
+            skipped += 1
+            continue
+
+        fm = felony_pat.search(str(viewkey))
+        if not fm:
+            skipped += 1
+            continue
+
+        charge_class = felony_class_map.get(fm.group(1), "Felony")
+
+        # Build charge name from description (primary) with subhead context
+        name_parts = []
+        if descrtn:
+            name_parts.append(str(descrtn).strip())
+        if not name_parts:
+            skipped += 1
+            continue
+
+        charge_name = name_parts[0]
+
+        results.append({
+            "state": "VA",
+            "chargeName": charge_name,
+            "citation": f"Va. Code Ann. § {statute}",
+            "chargeClass": charge_class,
+            "isFelony": True,
+            "isMisdemeanor": False,
+            "source": "Virginia Crime Code System FY17",
+        })
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  VA: {len(deduped)} unique felony charges parsed ({skipped} rows skipped)")
+    return deduped
+
+
+# ── Alabama parser ────────────────────────────────────────────────────────────
+
+def parse_al() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "AL - 2024-presumptive-manual.pdf"
+    results = []
+    skipped = 0
+
+    # Format 1 (pages 13-14, 0-indexed): numbered list
+    # "N. Offense name pursuant to Section 13A-6-20."
+    numbered_pat = re.compile(
+        r'^\d+\.\s+(.+?)\s+pursuant to Section\s+(\d+[A-Z]?-\d+-\d+[\w.\(\)-]*)'
+    )
+
+    # Format 2 (pages 40, 62, 86): § statute + name + class
+    # "§13A-7-5 Burglary 1st Class A felony"
+    # "§ 13A-12-218 Manufacturing Controlled Substance 1st Class A felony"
+    table_pat = re.compile(
+        r'§\s*(\d+[A-Z]?-\d+-\d+[\w.()\-]*)\s+(.+?)\s+Class\s+([A-Z])\s+felon',
+        re.IGNORECASE
+    )
+    # Variant without "Class X felony" at the end — just statute + name on same line
+    # "§ 32-5a-191(h) Felony DUI Class C felony"
+    table_pat2 = re.compile(
+        r'§\s*([\dA-Za-z]+[-\d][\w.()\-]*)\s+(.+?)\s+Class\s+([A-Z])\s+felon',
+        re.IGNORECASE
+    )
+
+    # Pages to parse
+    page_indices = [13, 14, 40, 62, 86]  # 0-indexed
+
+    with pdfplumber.open(str(path)) as pdf:
+        for page_idx in page_indices:
+            if page_idx >= len(pdf.pages):
+                continue
+            page = pdf.pages[page_idx]
+            text = page.extract_text() or ""
+            lines = text.split("\n")
+
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+
+                # Try numbered list format first (pages 13-14)
+                if page_idx in (13, 14):
+                    m = numbered_pat.match(line)
+                    if m:
+                        name = m.group(1).strip()
+                        statute = m.group(2).strip().rstrip(".")
+                        results.append({
+                            "state": "AL",
+                            "chargeName": name,
+                            "citation": f"Ala. Code § {statute}",
+                            "chargeClass": "Felony",
+                            "isFelony": True,
+                            "isMisdemeanor": False,
+                            "source": "Alabama Sentencing Commission Presumptive Manual 2024",
+                        })
+                        continue
+
+                # Try § format for drug/property/personal sections
+                m = table_pat.search(line) or table_pat2.search(line)
+                if m:
+                    statute = m.group(1).strip()
+                    name = m.group(2).strip()
+                    charge_class = m.group(3).upper()
+                    # Skip header/non-data lines
+                    if name.lower().startswith(("most serious", "offense", "ranking")):
+                        continue
+                    results.append({
+                        "state": "AL",
+                        "chargeName": name,
+                        "citation": f"Ala. Code § {statute}",
+                        "chargeClass": f"Class {charge_class} Felony",
+                        "isFelony": True,
+                        "isMisdemeanor": False,
+                        "source": "Alabama Sentencing Commission Presumptive Manual 2024",
+                    })
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  AL: {len(deduped)} unique charges parsed ({skipped} rows skipped)")
+    return deduped
+
+
+# ── Texas parser ──────────────────────────────────────────────────────────────
+
+def parse_tx() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "TX - Felony_Offenses.pdf"
+    results = []
+    skipped = 0
+
+    # Maps TX Code column names to standard citation prefixes
+    TX_CODE_ABBREV: dict[str, str] = {
+        "Penal Code":                   "Tex. Penal Code",
+        "Health and Safety Code":       "Tex. Health & Safety Code",
+        "Occupations Code":             "Tex. Occ. Code",
+        "Election Code":                "Tex. Elec. Code",
+        "Transportation Code":          "Tex. Transp. Code",
+        "Government Code":              "Tex. Gov't Code",
+        "Natural Resources Code":       "Tex. Nat. Res. Code",
+        "Business & Commerce Code":     "Tex. Bus. & Com. Code",
+        "Tax Code":                     "Tex. Tax Code",
+        "Vernon's Civil Statutes":      "Tex. Rev. Civ. Stat.",
+        "Agriculture Code":             "Tex. Agric. Code",
+        "Insurance Code":               "Tex. Ins. Code",
+        "Insurance Code (Not Codified)":"Tex. Ins. Code",
+        "Finance Code":                 "Tex. Fin. Code",
+        "Parks and Wildlife Code":      "Tex. Parks & Wild. Code",
+        "Family Code":                  "Tex. Fam. Code",
+        "Alcoholic Beverage Code":      "Tex. Alco. Bev. Code",
+        "Education Code":               "Tex. Educ. Code",
+        "Human Resources Code":         "Tex. Hum. Res. Code",
+        "Local Government Code":        "Tex. Loc. Gov't Code",
+        "Code of Criminal Procedure":   "Tex. Code Crim. Proc.",
+        "Water Code":                   "Tex. Water Code",
+        "Labor Code":                   "Tex. Labor Code",
+        "Utilities Code":               "Tex. Util. Code",
+        "Business Organizations Code":  "Tex. Bus. Orgs. Code",
+    }
+
+    # Felony categories to determine class
+    felony_classes = {
+        "Capital Felony": "Capital Felony",
+        "First Degree": "First Degree Felony",
+        "Second Degree": "Second Degree Felony",
+        "Third Degree": "Third Degree Felony",
+        "State Jail": "State Jail Felony",
+        "Other": "Felony (Other)",
+        "Uncategorized": "Felony (Unclassified)",
+    }
+
+    with pdfplumber.open(str(path)) as pdf:
+        current_code = None
+
+        for page in pdf.pages:
+            tables = page.extract_tables()
+            for table in tables:
+                for row in table:
+                    if not row or len(row) < 3:
+                        continue
+
+                    code_raw = clean(row[0]) if row[0] else ""
+                    section_raw = clean(row[1]) if row[1] else ""
+                    offense_raw = clean(row[2]) if row[2] else ""
+                    category_raw = clean(row[3]) if len(row) > 3 and row[3] else ""
+
+                    # Skip header rows
+                    if code_raw in ("Code", "") and section_raw in ("Section\nNumber", "Section Number", ""):
+                        continue
+                    if offense_raw in ("Offense", ""):
+                        continue
+                    # Update current code context when new code appears
+                    if code_raw and code_raw not in ("Code",):
+                        current_code = code_raw
+                    if not section_raw or not offense_raw or not current_code:
+                        skipped += 1
+                        continue
+
+                    # Build citation
+                    abbrev = TX_CODE_ABBREV.get(current_code, f"Tex. {current_code}")
+                    citation = f"{abbrev} § {section_raw}"
+
+                    # Normalize felony category
+                    charge_class = "Felony"
+                    for key, label in felony_classes.items():
+                        if key.lower() in category_raw.lower():
+                            charge_class = label
+                            break
+
+                    results.append({
+                        "state": "TX",
+                        "chargeName": offense_raw,
+                        "citation": citation,
+                        "chargeClass": charge_class,
+                        "isFelony": True,
+                        "isMisdemeanor": False,
+                        "source": "Texas Legislative Council Felony Offenses 2018",
+                    })
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  TX: {len(deduped)} unique felony charges parsed ({skipped} rows skipped)")
+    return deduped
+
+
 PARSERS = {
     "KS": parse_kansas,
     "NC": parse_nc,
@@ -909,6 +1188,9 @@ PARSERS = {
     "WA": parse_wa,
     "MN": parse_mn,
     "AR": parse_ar,
+    "VA": parse_va,
+    "AL": parse_al,
+    "TX": parse_tx,
 }
 
 def main():
