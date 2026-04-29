@@ -760,17 +760,44 @@ export default function ImmigrationGuidance() {
                   <div className="space-y-4">
                     <div>
                       <strong className="text-lg">{t('immigration.resources.locators.iceDetainee.name')}</strong>
-                      <p className="text-lg font-bold text-primary">{t('immigration.resources.locators.iceDetainee.url')}</p>
+                      <p className="text-lg font-bold">
+                        <a
+                          href={`https://${t('immigration.resources.locators.iceDetainee.url')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline break-all"
+                        >
+                          {t('immigration.resources.locators.iceDetainee.url')}
+                        </a>
+                      </p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.locators.iceDetainee.description')}</p>
                     </div>
                     <div>
                       <strong className="text-lg">{t('immigration.resources.locators.legalServices.name')}</strong>
-                      <p className="text-lg font-bold text-primary">{t('immigration.resources.locators.legalServices.url')}</p>
+                      <p className="text-lg font-bold">
+                        <a
+                          href={`https://${t('immigration.resources.locators.legalServices.url')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline break-all"
+                        >
+                          {t('immigration.resources.locators.legalServices.url')}
+                        </a>
+                      </p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.locators.legalServices.description')}</p>
                     </div>
                     <div>
                       <strong className="text-lg">{t('immigration.resources.locators.consulate.name')}</strong>
-                      <p className="text-lg font-bold text-primary">{t('immigration.resources.locators.consulate.url')}</p>
+                      <p className="text-lg font-bold">
+                        <a
+                          href={`https://${t('immigration.resources.locators.consulate.url')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline break-all"
+                        >
+                          {t('immigration.resources.locators.consulate.url')}
+                        </a>
+                      </p>
                       <p className="text-sm text-muted-foreground">{t('immigration.resources.locators.consulate.description')}</p>
                     </div>
                   </div>
