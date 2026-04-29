@@ -537,6 +537,368 @@ def parse_pa() -> list[dict]:
     return deduped
 
 
+# ── Washington parser ────────────────────────────────────────────────────────
+
+def parse_wa() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "WA - Adult_Sentencing_Manual_2025_3.pdf"
+    results = []
+    skipped = 0
+
+    # Seriousness levels used in WA: Roman numerals, DG-I/II/III (drug grid), or Unranked
+    level_pat = re.compile(
+        r'\s+(A|B|C)\s+(Unranked|DG-I{1,3}|XVI|XV|XIV|XIII|XII|XI|X|IX|VIII|VII|VI|V|IV|III|II|I)\s*$'
+    )
+    # RCW pattern: starts with digit(s), has at least two dots (e.g. 9A.36.011, 20.01.460)
+    rcw_start_pat = re.compile(r'^\d+[A-Z]?\.\d+[A-Z]?\.\d')
+
+    pending_rcw = None
+    pending_name = None
+    pending_class = None
+
+    def flush():
+        if pending_rcw:
+            name = re.sub(r'\s+', ' ', pending_name).strip()
+            # Strip leading "&" artifact from compound RCW entries
+            name = re.sub(r'^&\s*', '', name).strip()
+            results.append({
+                "state": "WA",
+                "chargeName": name,
+                "citation": f"Wash. Rev. Code § {pending_rcw}",
+                "chargeClass": f"Class {pending_class}",
+                "isFelony": True,
+                "isMisdemeanor": False,
+                "source": "Washington Adult Sentencing Manual Oct 2025",
+            })
+
+    skip_lines = {
+        "FELONY INDEX BY OFFENSE", "Felony Index by Offense",
+        "Seriousness", "Level", "Statute (RCW)", "Offense", "Class",
+        "MANDATORY REMAND OFFENSES", "Unranked Offenses",
+    }
+
+    with pdfplumber.open(str(path)) as pdf:
+        in_index = False
+        for page_idx, page in enumerate(pdf.pages):
+            text = page.extract_text() or ""
+            lines = text.split("\n")
+
+            # Detect entry into felony index section
+            if not in_index:
+                if "FELONY INDEX BY OFFENSE" in text or "Felony Index by Offense" in text:
+                    in_index = True
+                else:
+                    continue
+
+            # Detect leaving the index (next major section starts)
+            if in_index and page_idx > 165:
+                first = next((l.strip() for l in lines if l.strip()), "")
+                if first and "Felony Index" not in text[:300] and not rcw_start_pat.match(first):
+                    # Check if this page still has RCW data
+                    has_rcw = any(rcw_start_pat.match(l.strip()) for l in lines)
+                    if not has_rcw:
+                        break
+
+            for line in lines:
+                line = line.strip()
+                if not line or line in skip_lines:
+                    continue
+                # Skip page number / footer lines (e.g. "165 2025 Washington State...")
+                if re.match(r'^\d{1,3}\s+20\d\d\s+Washington', line):
+                    continue
+                if re.match(r'^20\d\d\s+Washington', line):
+                    continue
+                # Skip "RCW 10.64.025(2)" type sub-headers
+                if line.startswith("RCW ") and "(" in line and len(line) < 30:
+                    continue
+
+                m = level_pat.search(line)
+                if m and rcw_start_pat.match(line):
+                    flush()
+                    pending_class = m.group(1)
+                    before = line[:m.start()].strip()
+                    # Split RCW (first token) from offense name (rest)
+                    space_idx = before.find(" ")
+                    if space_idx != -1:
+                        pending_rcw = before[:space_idx].strip()
+                        pending_name = before[space_idx:].strip()
+                    else:
+                        pending_rcw = before
+                        pending_name = ""
+                elif pending_rcw is not None:
+                    # Continuation line — append to name
+                    # Strip leading subsection ranges like "(i-j)" that are RCW continuations
+                    cont = re.sub(r'^\([a-z\d\s\-]+\)\s*', '', line)
+                    pending_name += " " + cont
+                else:
+                    skipped += 1
+
+        flush()
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  WA: {len(deduped)} unique felony charges parsed ({skipped} lines skipped)")
+    return deduped
+
+
+# ── Minnesota parser ──────────────────────────────────────────────────────────
+
+def parse_mn() -> list[dict]:
+    import pdfplumber
+
+    path = SOURCE_DIR / "MN - 2025_Minn_Sentencing_Guidelines_Commentary_tcm30-700116.pdf"
+    results = []
+    skipped = 0
+
+    # MN statute pattern: 3+ digits, optional uppercase letter, dot, digit — at end of line.
+    # Permissive: captures everything from the section number to end-of-line.
+    # Works for: 609.19, 609.195(b), 609.221 subd. 4, 609.582 1(b) & (c), 169A.24, etc.
+    statute_end_pat = re.compile(r'\s+(\d{3,}[A-Z]?\.\d.*?)\s*;?\s*$')
+    # A line that IS just a statute continuation (e.g. second statute after ";")
+    solo_statute_pat = re.compile(r'^(\d{3,}[A-Z]?\.\d[^\s].*)\s*$')
+
+    # Severity level at start of line: "9 Assault..." or "10 Murder..."
+    severity_start_pat = re.compile(r'^(\d{1,2}) (.+)')
+
+    current_severity = None
+    pending_name = None
+    pending_statute = None
+
+    def flush():
+        if pending_name and pending_statute and current_severity is not None:
+            name = re.sub(r'\s+', ' ', pending_name).strip()
+            results.append({
+                "state": "MN",
+                "chargeName": name,
+                "citation": f"Minn. Stat. § {pending_statute}",
+                "chargeClass": f"Severity Level {current_severity}",
+                "isFelony": True,
+                "isMisdemeanor": False,
+                "source": "Minnesota Sentencing Guidelines Aug 2025",
+            })
+        elif pending_name and current_severity is not None:
+            skipped  # name without statute — skip silently
+
+    with pdfplumber.open(str(path)) as pdf:
+        in_table = False
+        for page_idx, page in enumerate(pdf.pages):
+            text = page.extract_text() or ""
+
+            # Section 5.A starts at the page with the header AND actual statute data
+            # (page_idx >= 85 avoids the Table of Contents on page 4 which also mentions 5.A)
+            if not in_table and page_idx >= 85 and "5.A. Offense Severity Reference Table" in text:
+                in_table = True
+            # Section 5.B starts after section 5.A; use page index to be safe
+            if in_table and page_idx >= 105 and "5.B. Severity Level" in text:
+                break
+            if not in_table:
+                continue
+
+            for line in (text.split("\n")):
+                line = line.strip()
+                if not line:
+                    continue
+                # Skip page headers / footers
+                if re.match(r'^\d+\s+Minnesota Sentencing', line):
+                    continue
+                if "§ 5.A" in line or "§ 5.B" in line:
+                    continue
+                skip_mn = {
+                    "Severity", "Offense Title", "Statute Number", "Level",
+                    "Offense Title Statute Number", "Severity Level",
+                    "5.A. Offense Severity Reference Table",
+                    "Offenses subject to a mandatory life sentence, including first-degree murder and certain sex",
+                }
+                if line in skip_mn:
+                    continue
+                if "offenses under Minn. Stat." in line and "subdivision 2" in line:
+                    continue
+                if "Minnesota Sentencing Guidelines" in line and "Commentary" in line:
+                    continue
+
+                # Check if line starts a new severity level group
+                sev_m = severity_start_pat.match(line)
+                if sev_m and int(sev_m.group(1)) <= 11:
+                    # Could be a new severity level
+                    new_sev = int(sev_m.group(1))
+                    rest = sev_m.group(2)
+                    # Validate: not a page number (page numbers would be > 11)
+                    stat_m = statute_end_pat.search(rest)
+                    if stat_m:
+                        flush()
+                        current_severity = new_sev
+                        pending_name = rest[:stat_m.start()].strip()
+                        pending_statute = stat_m.group(1).strip().rstrip(";,")
+                        continue
+                    else:
+                        # Severity line without statute on same line; name continues to next line
+                        flush()
+                        current_severity = new_sev
+                        pending_name = rest.strip()
+                        pending_statute = None
+                        continue
+
+                # Try to match as a new offense line (name + statute at end)
+                stat_m = statute_end_pat.search(line)
+                if stat_m and current_severity is not None:
+                    # Check it's not just a page-number-like artifact
+                    name_part = line[:stat_m.start()].strip()
+                    if name_part:
+                        flush()
+                        pending_name = name_part
+                        pending_statute = stat_m.group(1).strip().rstrip(";,")
+                        continue
+
+                # Check if line is a standalone statute continuation (second statute, e.g. after ";")
+                solo_m = solo_statute_pat.match(line)
+                if solo_m and pending_statute is not None:
+                    pending_statute += "; " + solo_m.group(1).strip().rstrip(";,")
+                    continue
+
+                # Continuation: append to current name
+                if pending_name is not None and current_severity is not None:
+                    # Skip if the line looks like a footer number
+                    if not re.match(r'^\d+\s*$', line):
+                        pending_name += " " + line
+                else:
+                    skipped += 1
+
+        flush()
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  MN: {len(deduped)} unique felony charges parsed ({skipped} lines skipped)")
+    return deduped
+
+
+# ── Arkansas parser ───────────────────────────────────────────────────────────
+
+def parse_ar() -> list[dict]:
+    import pdfplumber
+
+    # File is mislabeled "AK" but contains Arkansas sentencing data
+    path = SOURCE_DIR / "AK - Edited-2026-Benchbook-Word-Draft-Final.pdf"
+    results = []
+    skipped = 0
+
+    # AR felony classes: Y (special/life-eligible), A, B, C, D, U (unranked)
+    felony_classes = {"Y", "A", "B", "C", "D", "U"}
+
+    with pdfplumber.open(str(path)) as pdf:
+        for page_idx, page in enumerate(pdf.pages):
+            text = page.extract_text() or ""
+            # Only process pages with the offense ranking table (pages 22–73, 0-indexed 21–72)
+            if page_idx < 21 or page_idx > 72:
+                continue
+            if "Offense Seriousness Ranking Table" not in text:
+                continue
+
+            tables = page.extract_tables()
+            for table in tables:
+                pending_statute = None
+                pending_class = None
+                pending_name = None
+                pending_ranking = None
+                pending_end = None
+
+                for row in table:
+                    if not row or len(row) < 4:
+                        continue
+
+                    # Normalize cells
+                    cells = [clean(c) if c is not None else "" for c in row]
+
+                    # Skip header row
+                    if cells[1] == "Statute #" or cells[3] == "Name of Crime":
+                        continue
+
+                    statute_raw = cells[1] if len(cells) > 1 else ""
+                    charge_class = cells[2] if len(cells) > 2 else ""
+                    name_raw = cells[3] if len(cells) > 3 else ""
+                    end_raw = cells[6] if len(cells) > 6 else ""
+                    ranking_raw = cells[7] if len(cells) > 7 else ""
+
+                    # Statute continuation row: index 1 has "(something)", rest are blank
+                    if statute_raw.startswith("(") and not charge_class and not name_raw:
+                        if pending_statute:
+                            pending_statute += " " + statute_raw
+                        continue
+
+                    # Blank data rows
+                    if not statute_raw and not name_raw:
+                        continue
+
+                    # Flush any pending entry before starting a new one
+                    if pending_statute and pending_class and pending_name:
+                        if not pending_end and pending_class in felony_classes:
+                            results.append({
+                                "state": "AR",
+                                "chargeName": pending_name,
+                                "citation": f"Ark. Code Ann. § {pending_statute}",
+                                "chargeClass": f"Class {pending_class}",
+                                "isFelony": True,
+                                "isMisdemeanor": False,
+                                "source": "Arkansas Sentencing Commission Benchbook 2026",
+                            })
+                        elif pending_end:
+                            skipped += 1  # retired offense
+
+                    # Start new entry
+                    if statute_raw and charge_class and name_raw:
+                        pending_statute = statute_raw
+                        pending_class = charge_class.upper()
+                        pending_name = name_raw
+                        pending_end = end_raw
+                        pending_ranking = ranking_raw
+                    else:
+                        pending_statute = None
+                        pending_class = None
+                        pending_name = None
+                        pending_end = None
+
+                # Flush last entry on the page
+                if pending_statute and pending_class and pending_name:
+                    if not pending_end and pending_class in felony_classes:
+                        results.append({
+                            "state": "AR",
+                            "chargeName": pending_name,
+                            "citation": f"Ark. Code Ann. § {pending_statute}",
+                            "chargeClass": f"Class {pending_class}",
+                            "isFelony": True,
+                            "isMisdemeanor": False,
+                            "source": "Arkansas Sentencing Commission Benchbook 2026",
+                        })
+                    elif pending_end:
+                        skipped += 1
+
+    # Deduplicate
+    seen = set()
+    deduped = []
+    for r in results:
+        key = (r["citation"], r["chargeName"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+
+    print(f"  AR: {len(deduped)} unique felony charges parsed ({skipped} retired offenses skipped)")
+    return deduped
+
+
 PARSERS = {
     "KS": parse_kansas,
     "NC": parse_nc,
@@ -544,6 +906,9 @@ PARSERS = {
     "MD": parse_md,
     "MI": parse_mi,
     "PA": parse_pa,
+    "WA": parse_wa,
+    "MN": parse_mn,
+    "AR": parse_ar,
 }
 
 def main():

@@ -287,6 +287,9 @@ def main():
         "MD": "Maryland MSCCSP Offense Table Jan 2026",
         "MI": "MI Sentencing Guidelines Oct 2024",
         "PA": "PA Commission on Sentencing 8th Edition 2024",
+        "WA": "Washington Adult Sentencing Manual Oct 2025",
+        "MN": "Minnesota Sentencing Guidelines Aug 2025",
+        "AR": "Arkansas Sentencing Commission Benchbook 2026",
     }
     with open(summary_path, "w") as f:
         f.write(f"GAP ANALYSIS SUMMARY — {', '.join(results.keys())}\n")

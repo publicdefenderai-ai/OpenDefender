@@ -1,5 +1,5 @@
-GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA
-Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024
+GAP ANALYSIS SUMMARY — KS, NC, MO, MD, MI, PA, WA, MN, AR
+Generated against: KS Sentencing Commission 2013, NC Combined Offense List Dec 2025, MO Charge Code Manual Feb 2026, Maryland MSCCSP Offense Table Jan 2026, MI Sentencing Guidelines Oct 2024, PA Commission on Sentencing 8th Edition 2024, Washington Adult Sentencing Manual Oct 2025, Minnesota Sentencing Guidelines Aug 2025, Arkansas Sentencing Commission Benchbook 2026
 
 ======================================================================
 KS
@@ -1107,4 +1107,520 @@ MISSING MISDEMEANORS — in authoritative source but not in our database (sample
   Simple assault-penetrate w/hypodermic needle (mutual consent) | 18 Pa.C.S. § 2701(a)(4) | M-3
   Recklessly endangering another person              | 18 Pa.C.S. § 2705 | M-2
   ... and 409 more misdemeanors
+
+======================================================================
+WA
+======================================================================
+Our entries:            124
+Authoritative entries:  822
+Matched:                37 (29%)
+Unmatched (phantom?):   87
+Missing from ours:      758
+Citation mismatches:    21
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Voluntary Manslaughter                             | Wash. Rev. Code § 9A.32.060 | confidence: high
+  [] Involuntary Manslaughter                           | Wash. Rev. Code § 9A.32.070 | confidence: high
+  [] Criminally Negligent Homicide                      | Wash. Rev. Code § 9A.32.070 | confidence: high
+  [] Felony Murder                                      | Wash. Rev. Code § 9A.32.030(1)(c) | confidence: high
+  [] Aggravated Assault                                 | Wash. Rev. Code § 9A.36.011 | confidence: high
+  [] Assault with Deadly Weapon                         | Wash. Rev. Code § 9A.36.021(1)(c) | confidence: high
+  [] Assault on Peace Officer                           | Wash. Rev. Code § 9A.36.031(1)(g) | confidence: high
+  [] Menacing                                           | Wash. Rev. Code § 9A.46.020 | confidence: high
+  [] Sexual Assault in the First Degree                 | Wash. Rev. Code § 9A.44.040 | confidence: high
+  [] Sexual Assault in the Second Degree                | Wash. Rev. Code § 9A.44.050 | confidence: high
+  [] Sexual Assault in the Third Degree                 | Wash. Rev. Code § 9A.44.060 | confidence: high
+  [] Statutory Rape                                     | Wash. Rev. Code § 9A.44.079 | confidence: high
+  [] Child Sexual Abuse                                 | Wash. Rev. Code § 9A.44.083 | confidence: high
+  [] Grand Theft in the First Degree                    | Wash. Rev. Code § 9A.56.040 | confidence: high
+  [] Grand Theft in the Second Degree                   | Wash. Rev. Code § 9A.56.050 | confidence: high
+  [] Petty Theft                                        | Wash. Rev. Code § 9A.56.050 | confidence: high
+  [] Theft by Receiving                                 | Wash. Rev. Code § 9A.56.170 | confidence: high
+  [] Credit Card Fraud                                  | Wash. Rev. Code § 9A.56.290 | confidence: high
+  [] Embezzlement                                       | Wash. Rev. Code § 9A.56.020(1)(b) | confidence: high
+  [] Shoplifting                                        | Wash. Rev. Code § 9A.56.340 | confidence: high
+  [] Commercial Burglary                                | Wash. Rev. Code § 9A.52.030 | confidence: high
+  [] Auto Burglary                                      | Wash. Rev. Code § 9A.52.100 | confidence: high
+  [] Carjacking                                         | Wash. Rev. Code § 9A.56.200 | confidence: high
+  [] Bank Robbery                                       | Wash. Rev. Code § 9A.56.200 | confidence: high
+  [] Possession with Intent to Distribute               | Wash. Rev. Code § 69.50.401(1) | confidence: high
+  [] Drug Trafficking                                   | Wash. Rev. Code § 69.50.401(1) | confidence: high
+  [] Possession of Drug Paraphernalia                   | Wash. Rev. Code § 69.50.412 | confidence: high
+  [] Maintaining Drug House                             | Wash. Rev. Code § 69.50.402 | confidence: high
+  [] Unlawful Carrying of Weapon                        | Wash. Rev. Code § 9.41.050 | confidence: high
+  [] Discharge of Firearm in City                       | Wash. Rev. Code § 9.41.230 | confidence: high
+  [] Possession of Prohibited Weapon                    | Wash. Rev. Code § 9.41.190 | confidence: high
+  [] Wire Fraud                                         | Wash. Rev. Code § 9A.60.030 | confidence: high
+  [] Mail Fraud                                         | Wash. Rev. Code § 9A.60.030(1)(a) | confidence: high
+  [] Check Fraud                                        | Wash. Rev. Code § 9A.56.060 | confidence: high
+  [] Insurance Fraud                                    | Wash. Rev. Code § 48.30.230 | confidence: high
+  [] Tax Fraud                                          | Wash. Rev. Code § 82.32.290 | confidence: high
+  [] Computer Fraud                                     | Wash. Rev. Code § 9A.52.110 | confidence: medium
+  [] Disorderly Conduct                                 | Wash. Rev. Code § 9A.84.030 | confidence: high
+  [] Public Intoxication                                | Wash. Rev. Code § 70.96A.120 | confidence: medium
+  [] Trespassing                                        | Wash. Rev. Code § 9A.52.070 | confidence: high
+  [] Vandalism                                          | Wash. Rev. Code § 9A.48.080 | confidence: high
+  [] Loitering                                          | Wash. Rev. Code § 9A.84.030 | confidence: high
+  [] DUI First Offense                                  | Wash. Rev. Code § 46.61.502 | confidence: high
+  [] DUI Second Offense                                 | Wash. Rev. Code § 46.61.502(6)(b)(ii) | confidence: high
+  [] DUI Third Offense                                  | Wash. Rev. Code § 46.61.502(6)(b)(iii) | confidence: high
+  [] Reckless Driving                                   | Wash. Rev. Code § 46.61.500 | confidence: high
+  [] Driving While Suspended                            | Wash. Rev. Code § 46.20.342 | confidence: high
+  [] DUI                                                | Wash. Rev. Code § 46.61.502 | confidence: high
+  [] DWLS Third Degree                                  | Wash. Rev. Code § 46.20.342 | confidence: high
+  [] Failure to Appear                                  | Wash. Rev. Code § 9A.76.170 | confidence: high
+  [] Probation Violation                                | Wash. Rev. Code § 9.94A.634 | confidence: medium
+  [] Resisting Arrest / Obstruction                     | Wash. Rev. Code § 9A.76.040 | confidence: high
+  [] Violation of Protective Order                      | Wash. Rev. Code § 26.50.110 | confidence: medium
+  [] Open Container Violation                           | Wash. Rev. Code § 46.61.519 | confidence: high
+  [] Minor in Possession of Alcohol                     | Wash. Rev. Code § 66.44.270 | confidence: high
+  [] Providing False Information to Police              | Wash. Rev. Code § 9A.76.175 | confidence: high
+  [] Contempt of Court                                  | Wash. Rev. Code § 7.21.040 | confidence: high
+  [] Writing Bad Checks / Worthless Checks              | Wash. Rev. Code § 9A.56.060 | confidence: high
+  [] Solicitation / Prostitution                        | Wash. Rev. Code § 9A.88.110 | confidence: high
+  [] Driving Without Insurance                          | Wash. Rev. Code § 46.30.020 | confidence: high
+  [] Driving with Expired Registration                  | Wash. Rev. Code § 46.16A.030 | confidence: high
+  [] Driving with Expired/No Inspection                 | Wash. Rev. Code § 46.16A.540 | confidence: high
+  [] Criminal Nonsupport / Failure to Pay Child Support | Wash. Rev. Code § 26.20.035 | confidence: high
+  [] Noise Violation / Disturbing the Peace by Noise    | Wash. Rev. Code § 9A.84.030(1)(a) | confidence: high
+  [] Indecent Exposure / Public Urination               | Wash. Rev. Code § 9A.88.010 | confidence: high
+  [] Possession of Fake/Fraudulent ID                   | Wash. Rev. Code § 66.44.291 | confidence: medium
+  [] Animal at Large / Leash Law Violation              | Wash. Rev. Code § 16.08.010 | confidence: high
+  [] Illegal Camping / Sleeping in Public               | Wash. Rev. Code § 9A.52.080 | confidence: high
+  [] Panhandling / Aggressive Solicitation              | Wash. Rev. Code § 9A.84.030 | confidence: high
+  [] Operating Unregistered / Uninsured Vehicle         | Wash. Rev. Code § 46.16A.030 | confidence: high
+  [] Curfew Violation                                   | Wash. Rev. Code § 13.32A.010 | confidence: high
+  [] Defective Vehicle Equipment / Broken Taillight     | Wash. Rev. Code § 46.37.010 | confidence: high
+  [] Truancy / Chronic Absenteeism                      | Wash. Rev. Code § 28A.225.010 | confidence: high
+  [] Littering / Illegal Dumping                        | Wash. Rev. Code § 70A.200.060 | confidence: high
+  [] Illegal Discharge of Fireworks                     | Wash. Rev. Code § 70.77.515 | confidence: high
+  [] Possession of Alcohol in Park / Prohibited Area    | Wash. Rev. Code § 66.44.100 | confidence: high
+  [] Aiding and Abetting / Accomplice Liability         | Wash. Rev. Code § 9A.08.020 | confidence: high
+  [] Accessory After the Fact                           | Wash. Rev. Code § 9A.76.070 | confidence: high
+  [] Attempted Murder                                   | Wash. Rev. Code §§ 9A.28.020, 9A.32.030 | confidence: high
+  [] Attempted Robbery                                  | Wash. Rev. Code §§ 9A.28.020, 9A.56.200 | confidence: high
+  [] Attempted Sexual Assault                           | Wash. Rev. Code §§ 9A.28.020, 9A.44.040 | confidence: high
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Wash. Rev. Code § 9.94A.570 | confidence: high
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Wash. Rev. Code § 69.50.435 | confidence: high
+  [] RICO / Organized Crime (Racketeering)              | Wash. Rev. Code § 9A.82.060 | confidence: high
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Wash. Rev. Code § 13.40.020(10) | confidence: high
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Wash. Rev. Code § 13.40.020(10) | confidence: high
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Wash. Rev. Code § 13.40.110 | confidence: high
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the Second Degree                   | ours: 9A.32.050          | auth: 9A.32.030
+  Assault in the Second Degree                  | ours: 9A.36.021          | auth: 9A.36.011
+  Assault in the Third Degree                   | ours: 9A.36.031          | auth: 9A.36.011
+  Domestic Violence Assault                     | ours: 26.50.010          | auth: 9A.36.041
+  Rape in the First Degree                      | ours: 9A.44.040          | auth: 9A.44.050
+  Burglary in the Second Degree                 | ours: 9A.52.030          | auth: 9A.52.020
+  Robbery in the First Degree                   | ours: 9A.56.200          | auth: 9A.56.210
+  Possession of Controlled Substance            | ours: 69.50.4013         | auth: 9.94.041
+  Distribution of Controlled Substance          | ours: 69.50.401          | auth: 69.50.415
+  Manufacturing Controlled Substance            | ours: 69.50.401          | auth: 69.50.415
+  Felon in Possession of Firearm                | ours: 9.41.040           | auth: 9.41.171
+  Theft Third Degree                            | ours: 9A.56.050          | auth: 9A.56.370
+  Assault Fourth Degree                         | ours: 9A.36.041          | auth: 9A.36.011
+  Criminal Trespass Second Degree               | ours: 9A.52.080          | auth: 9A.44.196
+  Malicious Mischief Third Degree               | ours: 9A.48.090          | auth: 9A.48.070
+  Harassment / Stalking                         | ours: 9A.46.020          | auth: 9A.46.110
+  Animal Cruelty (Misdemeanor)                  | ours: 16.52.207          | auth: 16.52.205
+  Fishing / Hunting Without a License           | ours: 77.15.380          | auth: 77.15.500
+  Criminal Street Gang Enhancement              | ours: 9.94A.535          | auth: 9A.46.120
+  Use of a Firearm in Commission of a Felony    | ours: 9.94A.533          | auth: 9.41.225
+  Juvenile Firearm Possession                   | ours: 9.41.040           | auth: 9.41.171
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Aggravated Murder 1                                | Wash. Rev. Code § 10.95.020 | Class A
+  Assault of a Child 1                               | Wash. Rev. Code § 9A.36.120 | Class A
+  Homicide by Abuse                                  | Wash. Rev. Code § 9A.32.055 | Class A
+  Kidnapping 1                                       | Wash. Rev. Code § 9A.40.020 | Class A
+  Manslaughter 1                                     | Wash. Rev. Code § 9A.32.060 | Class A
+  Rape 1 Attempt, Solicitation or Conspiracy to commit one of these felonies. Any federal or out-of-state conviction for an offense that, under the laws of this state, would be a felony classified as a serious violent offense. VIOLENT OFFENSES RCW 9.94A.030(58), ((59) ON OR AFTER 1/1/2026) Statute (RCW) Offense Class | Wash. Rev. Code § 9A.44.040 | Class A
+  Arson 1                                            | Wash. Rev. Code § 9A.48.020 | Class A
+  Arson 2                                            | Wash. Rev. Code § 9A.48.030 | Class B
+  Assault 2 with a Finding of Sexual Motivation      | Wash. Rev. Code § 9A.36.021(2)(b) | Class A
+  Assault of a Child 2                               | Wash. Rev. Code § 9A.36.130 | Class B
+  Bail Jumping with Murder 1                         | Wash. Rev. Code § 9A.76.170(3)(a) | Class A
+  Child Molestation 1                                | Wash. Rev. Code § 9A.44.083 | Class A
+  Coerce Patient to Request Life-ending Medication   | Wash. Rev. Code § 70.245.200(2) | Class A
+  Drive-by Shooting                                  | Wash. Rev. Code § 9A.36.045 | Class B
+  Explosive Devices Prohibited                       | Wash. Rev. Code § 70.74.180 | Class A
+  Extortion 1                                        | Wash. Rev. Code § 9A.56.120 | Class B
+  Forging Request for Medication                     | Wash. Rev. Code § 70.245.200(1) | Class A
+  Homicide by Watercraft - Disregard for the Safety of Others | Wash. Rev. Code § 79A.60.050(1)(c) | Class A
+  Homicide by Watercraft – in a Reckless Manner Homicide by Watercraft – while under the Influence of | Wash. Rev. Code § 79A.60.050(1)(b) | Class A
+  Intoxicating Liquor or any Drug                    | Wash. Rev. Code § 79A.60.050(1)(a) | Class A
+  Indecent Liberties - with Forcible Compulsion      | Wash. Rev. Code § 9A.44.100(1)(a) | Class A
+  Kidnapping 2                                       | Wash. Rev. Code § 9A.40.030(3)(a) | Class B
+  Kidnapping 2 with a Finding of Sexual Motivation   | Wash. Rev. Code § 9A.40.030(3)(b) | Class A
+  Leading Organized Crime – Organizing Criminal Profiteering | Wash. Rev. Code § 9A.82.060(1)(a) | Class A
+  Malicious Explosion of a Substance 1               | Wash. Rev. Code § 70.74.280(1) | Class A
+  Malicious Explosion of a Substance 2               | Wash. Rev. Code § 70.74.280(2) | Class A
+  Malicious Placement of an Explosive 1              | Wash. Rev. Code § 70.74.270(1) | Class A
+  Manslaughter 2 Over 18 and Deliver Heroin, Methamphetamine, a Narcotic | Wash. Rev. Code § 9A.32.070 | Class B
+  from Schedule I or II, or Flunitrazepam from Schedule IV to Someone under 18 | Wash. Rev. Code § 69.50.406(1) | Class A
+  Rape of a Child 1                                  | Wash. Rev. Code § 9A.44.073 | Class A
+  Rape of a Child 2                                  | Wash. Rev. Code § 9A.44.076 | Class A
+  Robbery 1 Violent Offenses Statute (RCW) Offense Class | Wash. Rev. Code § 9A.56.200 | Class A
+  Sexually Violent Predator Escape                   | Wash. Rev. Code § 9A.76.115 | Class A
+  Trafficking 1                                      | Wash. Rev. Code § 9A.40.100(1) | Class A
+  Trafficking 2                                      | Wash. Rev. Code § 9A.40.100(3) | Class A
+  Treason Use of a Machine Gun or Bump-fire Stock in Commission of | Wash. Rev. Code § 9.82.010 | Class A
+  a Felony Vehicular Assault – in a Reckless Manner or while under the | Wash. Rev. Code § 9.41.225 | Class A
+  Influence of Intoxicating Liquor or any Drug       | Wash. Rev. Code § 46.61.522(1)(a-b) | Class B
+  Vehicular Homicide – in a Reckless Manner Vehicular Homicide – while under the Influence of | Wash. Rev. Code § 46.61.520(1)(b) | Class A
+  Intoxicating Liquor or any Drug Any conviction for a felony offense in effect at any time prior to July 1, 1976, that is comparable to a felony classified as a violent offense. Any federal or out-of-state conviction for an offense that under the laws of this state would be a felony classified as a violent offense. Criminal solicitation of or criminal conspiracy to commit a Class A felony. Any felony defined under any law as a Class A felony or an attempt to commit a Class A felony. Any offense defined as a Serious Violent offense. Note: Vehicular Homicide – Disregard for the Safety of Others is defined as a Class A felony offense and appears to be a violent offense under RCW 9.94A.030. However, under State v. Stately, 152 Wn. App. 604, 216 P.3d 1102 (2009), it is not to be considered a violent offense. SEX OFFENSES RCW 9.94A.030(47), ((48) ON OR AFTER 1/1/2026) Statute (RCW) Offense Class | Wash. Rev. Code § 46.61.520(1)(a) | Class A
+  ... and 718 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+MN
+======================================================================
+Our entries:            131
+Authoritative entries:  406
+Matched:                40 (30%)
+Unmatched (phantom?):   91
+Missing from ours:      362
+Citation mismatches:    25
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Criminally Negligent Homicide                      | Minn. Stat. § 609.21 | confidence: high
+  [] Menacing                                           | Minn. Stat. § 609.713 | confidence: high
+  [] Rape in the First Degree                           | Minn. Stat. § 609.342 | confidence: high
+  [] Rape in the Second Degree                          | Minn. Stat. § 609.343 | confidence: high
+  [] Statutory Rape                                     | Minn. Stat. § 609.344 | confidence: high
+  [] Sexual Exploitation of Minor                       | Minn. Stat. § 617.246 | confidence: high
+  [] Grand Theft in the First Degree                    | Minn. Stat. § 609.52(3)(a)(1) | confidence: high
+  [] Grand Theft in the Second Degree                   | Minn. Stat. § 609.52(3)(a)(2) | confidence: high
+  [] Petty Theft                                        | Minn. Stat. § 609.52 | confidence: high
+  [] Theft by Receiving                                 | Minn. Stat. § 609.53 | confidence: high
+  [] Identity Theft                                     | Minn. Stat. § 609.527 | confidence: high
+  [] Credit Card Fraud                                  | Minn. Stat. § 609.821 | confidence: high
+  [] Embezzlement                                       | Minn. Stat. § 609.52(2)(a)(4) | confidence: high
+  [] Shoplifting                                        | Minn. Stat. § 609.52 | confidence: high
+  [] Residential Burglary                               | Minn. Stat. § 609.582(1)(a) | confidence: high
+  [] Commercial Burglary                                | Minn. Stat. § 609.582(2)(a) | confidence: high
+  [] Auto Burglary                                      | Minn. Stat. § 609.582(4) | confidence: high
+  [] Bank Robbery                                       | Minn. Stat. § 609.245 | confidence: high
+  [] Possession with Intent to Distribute               | Minn. Stat. § 152.022 | confidence: high
+  [] Drug Trafficking                                   | Minn. Stat. § 152.021 | confidence: high
+  [] Possession of Drug Paraphernalia                   | Minn. Stat. § 152.092 | confidence: high
+  [] Maintaining Drug House                             | Minn. Stat. § 152.025(2)(3) | confidence: high
+  [] Unlawful Carrying of Weapon                        | Minn. Stat. § 624.714 | confidence: high
+  [] Felon in Possession of Firearm                     | Minn. Stat. § 624.713 | confidence: high
+  [] Possession of Prohibited Weapon                    | Minn. Stat. § 609.67 | confidence: high
+  [] Wire Fraud                                         | Minn. Stat. § 609.52(2)(a)(3) | confidence: high
+  [] Mail Fraud                                         | Minn. Stat. § 609.27 | confidence: high
+  [] Check Fraud                                        | Minn. Stat. § 609.535 | confidence: high
+  [] Tax Fraud                                          | Minn. Stat. § 289A.63 | confidence: high
+  [] Computer Fraud                                     | Minn. Stat. § 609.87 | confidence: high
+  [] Disorderly Conduct                                 | Minn. Stat. § 609.72 | confidence: high
+  [] Public Intoxication                                | Minn. Stat. § 340A.902 | confidence: high
+  [] Disturbing the Peace                               | Minn. Stat. § 609.72 | confidence: high
+  [] Trespassing                                        | Minn. Stat. § 609.605 | confidence: high
+  [] Vandalism                                          | Minn. Stat. § 609.595 | confidence: high
+  [] Loitering                                          | Minn. Stat. § 609.725 | confidence: high
+  [] DUI First Offense                                  | Minn. Stat. § 169A.20 | confidence: high
+  [] DUI Second Offense                                 | Minn. Stat. § 169A.25 | confidence: high
+  [] DUI Third Offense                                  | Minn. Stat. § 169A.24 | confidence: high
+  [] Reckless Driving                                   | Minn. Stat. § 169.13 | confidence: high
+  [] Hit and Run                                        | Minn. Stat. § 169.09 | confidence: high
+  [] Theft Under $500                                   | Minn. Stat. § 609.52(3)(5) | confidence: high
+  [] DWI                                                | Minn. Stat. § 169A.20 | confidence: high
+  [] Trespass                                           | Minn. Stat. § 609.605 | confidence: high
+  [] Possession of Small Amount Marijuana               | Minn. Stat. § 152.027(4) | confidence: high
+  [] Driving After Revocation                           | Minn. Stat. § 171.24(2) | confidence: high
+  [] Probation Violation                                | Minn. Stat. § 609.14 | confidence: high
+  [] Resisting Arrest / Obstruction                     | Minn. Stat. § 609.50 | confidence: high
+  [] Open Container Violation                           | Minn. Stat. § 169A.35 | confidence: high
+  [] Minor in Possession of Alcohol                     | Minn. Stat. § 340A.503(1) | confidence: high
+  [] Providing False Information to Police              | Minn. Stat. § 609.505 | confidence: high
+  [] Contempt of Court                                  | Minn. Stat. § 588.01 | confidence: high
+  [] Writing Bad Checks / Worthless Checks              | Minn. Stat. § 609.535 | confidence: high
+  [] Solicitation / Prostitution                        | Minn. Stat. § 609.324 | confidence: high
+  [] Driving Without Insurance                          | Minn. Stat. § 169.792 | confidence: high
+  [] Reckless/Careless Driving (Criminal)               | Minn. Stat. § 169.13 | confidence: high
+  [] Driving with Expired Registration                  | Minn. Stat. § 168.09 | confidence: high
+  [] Driving with Expired/No Inspection                 | Minn. Stat. § 169.781 | confidence: high
+  [] Criminal Nonsupport / Failure to Pay Child Support | Minn. Stat. § 609.375 | confidence: high
+  [] Noise Violation / Disturbing the Peace by Noise    | Minn. Stat. § 609.72(1)(3) | confidence: high
+  [] Possession of Fake/Fraudulent ID                   | Minn. Stat. § 340A.703 | confidence: high
+  [] Animal at Large / Leash Law Violation              | Minn. Stat. § 347.03 | confidence: high
+  [] Animal Cruelty (Misdemeanor)                       | Minn. Stat. § 343.21(2) | confidence: high
+  [] Illegal Camping / Sleeping in Public               | Minn. Stat. § 609.605(1)(b)(3) | confidence: high
+  [] Panhandling / Aggressive Solicitation              | Minn. Stat. § 609.72(1) | confidence: high
+  [] Operating Unregistered / Uninsured Vehicle         | Minn. Stat. § 168.09 | confidence: high
+  [] Curfew Violation                                   | Minn. Stat. § 260C.143 | confidence: high
+  [] Trespass After Warning / Return After Ban          | Minn. Stat. § 609.605 | confidence: high
+  [] Defective Vehicle Equipment / Broken Taillight     | Minn. Stat. § 169.47 | confidence: high
+  [] Truancy / Chronic Absenteeism                      | Minn. Stat. § 260C.007(6)(c) | confidence: high
+  [] Littering / Illegal Dumping                        | Minn. Stat. § 609.68 | confidence: high
+  [] Illegal Discharge of Fireworks                     | Minn. Stat. § 624.20 | confidence: high
+  [] Possession of Alcohol in Park / Prohibited Area    | Minn. Stat. § 340A.503(2) | confidence: high
+  [] Fishing / Hunting Without a License                | Minn. Stat. § 97A.421 | confidence: high
+  [] Criminal Attempt                                   | Minn. Stat. § 609.17 | confidence: high
+  [] Criminal Conspiracy                                | Minn. Stat. § 609.175 | confidence: high
+  [] Aiding and Abetting / Accomplice Liability         | Minn. Stat. § 609.05 | confidence: high
+  [] Attempted Robbery                                  | Minn. Stat. §§ 609.17, 609.24 | confidence: high
+  [] Attempted Sexual Assault                           | Minn. Stat. §§ 609.17, 609.342 | confidence: high
+  [] Criminal Solicitation                              | Minn. Stat. § 609.195 | confidence: high
+  [] Criminal Street Gang Enhancement                   | Minn. Stat. § 609.229 | confidence: high
+  [] Hate Crime Enhancement                             | Minn. Stat. § 609.2231(4) | confidence: high
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Minn. Stat. § 609.108 | confidence: high
+  [] Use of a Firearm in Commission of a Felony         | Minn. Stat. § 609.11 | confidence: high
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Minn. Stat. § 152.022(2)(3) | confidence: high
+  [] RICO / Organized Crime (Racketeering)              | Minn. Stat. § 609.903 | confidence: high
+  [] Money Laundering                                   | Minn. Stat. § 609.322 | confidence: high
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Minn. Stat. § 260B.101(1) | confidence: high
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Minn. Stat. § 260B.101(1) | confidence: high
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Minn. Stat. § 260B.125 | confidence: high
+  [] Juvenile Firearm Possession                        | Minn. Stat. § 624.713 | confidence: high
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Murder in the First Degree                    | ours: 609.185            | auth: 609.195
+  Murder in the Second Degree                   | ours: 609.19             | auth: 609.195
+  Involuntary Manslaughter                      | ours: 609.205            | auth: 609.20
+  Felony Murder                                 | ours: 609.185            | auth: 609.195
+  Assault in the First Degree                   | ours: 609.221            | auth: 609.222
+  Assault in the Third Degree                   | ours: 609.223            | auth: 609.222
+  Aggravated Assault                            | ours: 609.225            | auth: 609.222
+  Assault with Deadly Weapon                    | ours: 609.222            | auth: 609.582
+  Domestic Violence Assault                     | ours: 518B.01            | auth: 609.2242
+  Assault on Peace Officer                      | ours: 609.2231           | auth: 609.504
+  Sexual Assault in the First Degree            | ours: 609.342            | auth: 609.222
+  Sexual Assault in the Second Degree           | ours: 609.343            | auth: 609.222
+  Sexual Assault in the Third Degree            | ours: 609.344            | auth: 609.222
+  Child Sexual Abuse                            | ours: 609.342            | auth: 617.247
+  Robbery in the Second Degree                  | ours: 609.24             | auth: 609.245
+  Carjacking                                    | ours: 609.245            | auth: 609.247
+  Possession of Controlled Substance            | ours: 152.025            | auth: 152.097
+  Distribution of Controlled Substance          | ours: 152.021            | auth: 152.097
+  Insurance Fraud                               | ours: 609.611            | auth: 609.612
+  Forgery                                       | ours: 609.631            | auth: 609.63
+  Driving While Suspended                       | ours: 171.24             | auth: 169A.24
+  Assault 5th Degree                            | ours: 609.224            | auth: 609.222
+  Failure to Appear                             | ours: 609.491            | auth: 609.49
+  Violation of Protective Order                 | ours: 518B.01            | auth: 609.2334
+  Attempted Murder                              | ours: 609.17             | auth: 609.195
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Adulteration                                       | Minn. Stat. § 609.687, subd. 3(1) | Severity Level 11
+  Assault 1st Degree (Great Bodily Harm Upon Official by Dangerous Weapon or Deadly Force) | Minn. Stat. § 609.221, subd. 4 | Severity Level 11
+  Murder 2nd Degree (Intentional Murder; Unintentional Drive-By Shootings) | Minn. Stat. § 609.19, subd. 1 | Severity Level 11
+  Murder of an Unborn Child 2nd Degree               | Minn. Stat. § 609.2662(1) | Severity Level 11
+  Assault 1st Degree (Great Bodily Harm Upon Official) | Minn. Stat. § 609.221, subd. 3 | Severity Level 10
+  Fleeing a Peace Officer (Death)                    | Minn. Stat. § 609.487, subd. 4(a) | Severity Level 10
+  Murder of an Unborn Child 2nd Degree               | Minn. Stat. § 609.2662(2) | Severity Level 10
+  Murder of an Unborn Child 3rd Degree               | Minn. Stat. § 609.2663 | Severity Level 10
+  Assault 1st Degree (Deadly Force Against Official) | Minn. Stat. § 609.221, subd. 2 | Severity Level 9
+  Assault 1st Degree (Great Bodily Harm)             | Minn. Stat. § 609.221, subd. 1 | Severity Level 9
+  Assault of an Unborn Child 1st Degree              | Minn. Stat. § 609.267 | Severity Level 9
+  Criminal Abuse of Vulnerable Adult (Death)         | Minn. Stat. § 609.2325, subd. 3(1) | Severity Level 9
+  Death of an Unborn Child in the Commission of Crime | Minn. Stat. § 609.268, subd. 1 | Severity Level 9
+  Engage or Hire a Minor to Engage in Prostitution   | Minn. Stat. § 609.324, subd. 1(a) | Severity Level 9
+  Kidnapping (Great Bodily Harm)                     | Minn. Stat. § 609.25, subd. 2(2)(ii) | Severity Level 9
+  Labor Trafficking (Death)                          | Minn. Stat. § 609.282, subd. 1 | Severity Level 9
+  Manslaughter of an Unborn Child 1st Degree         | Minn. Stat. § 609.2664(1) & (2) | Severity Level 9
+  Tampering with Witness, Aggravated 1st Degree      | Minn. Stat. § 609.498, subd. 1b | Severity Level 9
+  Arson 1st Degree                                   | Minn. Stat. § 609.561 | Severity Level 8
+  Child Torture                                      | Minn. Stat. § 609.3775 | Severity Level 8
+  Criminal Abuse of Vulnerable Adult (Great Bodily Harm) | Minn. Stat. § 609.2325, subd. 3(2) | Severity Level 8
+  Criminal Vehicular Homicide (Death, and Qualified Prior Conviction) | Minn. Stat. § 609.2112, subd. 1(b) | Severity Level 8
+  Criminal Vehicular Operation (Death to an Unborn Child) | Minn. Stat. § 609.2114, subd. 1(a) | Severity Level 8
+  Criminal Vehicular Operation (Death to an Unborn Child, and Qualified Prior Conviction) | Minn. Stat. § 609.2114, subd. 1(b) | Severity Level 8
+  Deprivation of Vulnerable Adult (Great Bodily Harm) | Minn. Stat. § 609.233, subd. 3(1) | Severity Level 8
+  Drive-By Shooting (Toward a Person or Occupied Motor Vehicle or Building) & (3) | Minn. Stat. § 609.66, subd. 1e(a)(2) | Severity Level 8
+  Escape with Violence from Felony Offense           | Minn. Stat. § 609.485, subd. 4(b) | Severity Level 8
+  Fictitious Emergency Call (Great Bodily Harm or Death) | Minn. Stat. § 609.78, subd. 2a(1) | Severity Level 8
+  Great Bodily Harm Caused by Distribution of Drugs  | Minn. Stat. § 609.228 | Severity Level 8
+  Identity Theft (8 or More Direct Victims or Loss Over $35,000) | Minn. Stat. § 609.527, subd. 3(5) | Severity Level 8
+  Identity Theft (Related to Child Sexual Abuse Material) | Minn. Stat. § 609.527, subd. 3(6) | Severity Level 8
+  Kidnapping (Not Released in Safe Place or Victim Under 16) (iii) | Minn. Stat. § 609.25, subd. 2(2)(i) & | Severity Level 8
+  Labor Trafficking (Great Bodily Harm)              | Minn. Stat. § 609.282, subd. 1a(3) | Severity Level 8
+  Labor Trafficking (Minor Victim)                   | Minn. Stat. § 609.282, subd. 1a(1) | Severity Level 8
+  Machine Gun, Trigger Activator, or Conversion Kit  | Minn. Stat. § 609.67, subd. 2(a) | Severity Level 8
+  Malicious Punishment of Child (Great Bodily Harm)  | Minn. Stat. § 609.377, subd. 6 | Severity Level 8
+  Manslaughter of an Unborn Child 1st Degree         | Minn. Stat. § 609.2664(3) | Severity Level 8
+  Manslaughter 2nd Degree – Culpable Negligence      | Minn. Stat. § 609.205(1) & (5) | Severity Level 8
+  Manslaughter of an Unborn Child 2nd Degree         | Minn. Stat. § 609.2665(1) | Severity Level 8
+  Riot 1st Degree                                    | Minn. Stat. § 609.71, subd. 1 | Severity Level 8
+  ... and 322 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
+
+======================================================================
+AR
+======================================================================
+Our entries:            129
+Authoritative entries:  888
+Matched:                38 (29%)
+Unmatched (phantom?):   91
+Missing from ours:      821
+Citation mismatches:    24
+
+UNMATCHED — charges we have with no authoritative match:
+  [] Murder in the First Degree                         | Ark. Code Ann. § 5-10-102 | confidence: high
+  [] Murder in the Second Degree                        | Ark. Code Ann. § 5-10-103 | confidence: high
+  [] Voluntary Manslaughter                             | Ark. Code Ann. § 5-10-104 | confidence: high
+  [] Involuntary Manslaughter                           | Ark. Code Ann. § 5-10-104 | confidence: high
+  [] Criminally Negligent Homicide                      | Ark. Code Ann. § 5-10-105 | confidence: high
+  [] Vehicular Homicide                                 | Ark. Code Ann. § 5-10-105 | confidence: high
+  [] Felony Murder                                      | Ark. Code Ann. § 5-10-101 | confidence: high
+  [] Assault with Deadly Weapon                         | Ark. Code Ann. § 5-13-201(a)(2) | confidence: high
+  [] Domestic Violence Assault                          | Ark. Code Ann. § 5-26-303 | confidence: high
+  [] Assault on Peace Officer                           | Ark. Code Ann. § 5-13-207 | confidence: high
+  [] Menacing                                           | Ark. Code Ann. § 5-13-301 | confidence: medium
+  [] Statutory Rape                                     | Ark. Code Ann. § 5-14-103 | confidence: high
+  [] Sexual Exploitation of Minor                       | Ark. Code Ann. § 5-27-303 | confidence: high
+  [] Grand Theft in the First Degree                    | Ark. Code Ann. § 5-36-103 | confidence: medium
+  [] Grand Theft in the Second Degree                   | Ark. Code Ann. § 5-36-103 | confidence: medium
+  [] Petty Theft                                        | Ark. Code Ann. § 5-36-103 | confidence: medium
+  [] Identity Theft                                     | Ark. Code Ann. § 5-37-227 | confidence: medium
+  [] Credit Card Fraud                                  | Ark. Code Ann. § 5-37-207 | confidence: medium
+  [] Embezzlement                                       | Ark. Code Ann. § 5-36-201 | confidence: medium
+  [] Shoplifting                                        | Ark. Code Ann. § 5-36-116 | confidence: medium
+  [] Auto Burglary                                      | Ark. Code Ann. § 5-39-203(a)(1) | confidence: medium
+  [] Carjacking                                         | Ark. Code Ann. § 5-12-102 | confidence: medium
+  [] Possession with Intent to Distribute               | Ark. Code Ann. § 5-64-401(a)(1) | confidence: low
+  [] Drug Trafficking                                   | Ark. Code Ann. § 5-64-440 | confidence: high
+  [] Maintaining Drug House                             | Ark. Code Ann. § 5-64-402 | confidence: medium
+  [] Unlawful Carrying of Weapon                        | Ark. Code Ann. § 5-73-120 | confidence: medium
+  [] Wire Fraud                                         | Ark. Code Ann. § 5-36-101 | confidence: medium
+  [] Mail Fraud                                         | Ark. Code Ann. § 5-37-226 | confidence: medium
+  [] Check Fraud                                        | Ark. Code Ann. § 5-37-302 | confidence: medium
+  [] Tax Fraud                                          | Ark. Code Ann. § 26-18-303 | confidence: medium
+  [] Disorderly Conduct                                 | Ark. Code Ann. § 5-71-207 | confidence: medium
+  [] Public Intoxication                                | Ark. Code Ann. § 5-71-212 | confidence: medium
+  [] Disturbing the Peace                               | Ark. Code Ann. § 5-71-207 | confidence: medium
+  [] Trespassing                                        | Ark. Code Ann. § 5-39-203 | confidence: medium
+  [] Vandalism                                          | Ark. Code Ann. § 5-38-203 | confidence: medium
+  [] Loitering                                          | Ark. Code Ann. § 5-71-213 | confidence: medium
+  [] DUI First Offense                                  | Ark. Code Ann. § 5-65-103 | confidence: high
+  [] DUI Second Offense                                 | Ark. Code Ann. § 5-65-103(b) | confidence: high
+  [] DUI Third Offense                                  | Ark. Code Ann. § 5-65-103(c) | confidence: high
+  [] Reckless Driving                                   | Ark. Code Ann. § 27-50-308 | confidence: medium
+  [] Hit and Run                                        | Ark. Code Ann. § 27-53-101 | confidence: medium
+  [] Driving While Suspended                            | Ark. Code Ann. § 27-16-303 | confidence: medium
+  [] Possession of Marijuana (Under 4 oz)               | Ark. Code Ann. § 5-64-419 | confidence: medium
+  [] Driving on Suspended License                       | Ark. Code Ann. § 27-16-303 | confidence: medium
+  [] Probation Violation                                | Ark. Code Ann. § 5-4-310 | confidence: medium
+  [] Resisting Arrest / Obstruction                     | Ark. Code Ann. § 5-54-103 | confidence: medium
+  [] Violation of Protective Order                      | Ark. Code Ann. § 5-53-134 | confidence: medium
+  [] Open Container Violation                           | Ark. Code Ann. § 5-71-218 | confidence: high
+  [] Minor in Possession of Alcohol                     | Ark. Code Ann. § 3-3-203 | confidence: medium
+  [] Providing False Information to Police              | Ark. Code Ann. § 5-54-122 | confidence: medium
+  [] Contempt of Court                                  | Ark. Code Ann. § 16-10-108 | confidence: medium
+  [] Writing Bad Checks / Worthless Checks              | Ark. Code Ann. § 5-37-302 | confidence: medium
+  [] Solicitation / Prostitution                        | Ark. Code Ann. § 5-70-102 | confidence: medium
+  [] Driving Without Insurance                          | Ark. Code Ann. § 27-22-103 | confidence: medium
+  [] Reckless/Careless Driving (Criminal)               | Ark. Code Ann. § 27-50-308 | confidence: medium
+  [] Driving with Expired Registration                  | Ark. Code Ann. § 27-14-601 | confidence: medium
+  [] Driving with Expired/No Inspection                 | Ark. Code Ann. § 27-37-601 | confidence: medium
+  [] Criminal Nonsupport / Failure to Pay Child Support | Ark. Code Ann. § 5-26-401 | confidence: medium
+  [] Noise Violation / Disturbing the Peace by Noise    | Ark. Code Ann. § 5-71-207 | confidence: medium
+  [] Indecent Exposure / Public Urination               | Ark. Code Ann. § 5-14-112 | confidence: high
+  [] Possession of Fake/Fraudulent ID                   | Ark. Code Ann. § 3-3-202 | confidence: medium
+  [] Animal at Large / Leash Law Violation              | Ark. Code Ann. § 20-19-301 | confidence: medium
+  [] Animal Cruelty (Misdemeanor)                       | Ark. Code Ann. § 5-62-101 | confidence: medium
+  [] Illegal Camping / Sleeping in Public               | Ark. Code Ann. § 5-39-203 | confidence: medium
+  [] Panhandling / Aggressive Solicitation              | Ark. Code Ann. § 5-71-207 | confidence: medium
+  [] Operating Unregistered / Uninsured Vehicle         | Ark. Code Ann. § 27-14-306 | confidence: medium
+  [] Curfew Violation                                   | Ark. Code Ann. § 9-13-101 | confidence: medium
+  [] Trespass After Warning / Return After Ban          | Ark. Code Ann. § 5-39-203 | confidence: medium
+  [] Defective Vehicle Equipment / Broken Taillight     | Ark. Code Ann. § 27-37-101 | confidence: medium
+  [] Truancy / Chronic Absenteeism                      | Ark. Code Ann. § 6-18-201 | confidence: medium
+  [] Littering / Illegal Dumping                        | Ark. Code Ann. § 8-6-406 | confidence: medium
+  [] Illegal Discharge of Fireworks                     | Ark. Code Ann. § 20-22-705 | confidence: medium
+  [] Possession of Alcohol in Park / Prohibited Area    | Ark. Code Ann. § 3-3-204 | confidence: medium
+  [] Fishing / Hunting Without a License                | Ark. Code Ann. § 15-42-104 | confidence: medium
+  [] Criminal Attempt                                   | Ark. Code Ann. § 5-3-201 | confidence: medium
+  [] Criminal Conspiracy                                | Ark. Code Ann. § 5-3-401 | confidence: medium
+  [] Aiding and Abetting / Accomplice Liability         | Ark. Code Ann. § 5-2-403 | confidence: medium
+  [] Accessory After the Fact                           | Ark. Code Ann. § 5-2-405 | confidence: medium
+  [] Attempted Murder                                   | Ark. Code Ann. §§ 5-3-201, 5-10-102 | confidence: needs_review
+  [] Criminal Solicitation                              | Ark. Code Ann. § 5-3-301 | confidence: medium
+  [] Criminal Street Gang Enhancement                   | Ark. Code Ann. § 5-74-106 | confidence: medium
+  [] Hate Crime Enhancement                             | Ark. Code Ann. § 5-71-215 | confidence: medium
+  [] Prior Felony / Recidivist Sentencing Enhancement   | Ark. Code Ann. § 5-4-501 | confidence: medium
+  [] Use of a Firearm in Commission of a Felony         | Ark. Code Ann. § 16-90-120 | confidence: medium
+  [] Drug Offense in a School Zone (Proximity Enhancement) | Ark. Code Ann. § 5-64-412 | confidence: medium
+  [] RICO / Organized Crime (Racketeering)              | Ark. Code Ann. § 5-74-203 | confidence: medium
+  [] Money Laundering                                   | Ark. Code Ann. § 5-55-103 | confidence: medium
+  [] Juvenile Delinquency Adjudication (Felony-Level Act) | Ark. Code Ann. § 9-27-303(21) | confidence: medium
+  [] Juvenile Delinquency Adjudication (Misdemeanor-Level Act) | Ark. Code Ann. § 9-27-303(21) | confidence: medium
+  [] Juvenile Transfer to Adult Court (Waiver Hearing)  | Ark. Code Ann. § 9-27-318 | confidence: medium
+  [] Juvenile Firearm Possession                        | Ark. Code Ann. § 5-73-119 | confidence: medium
+
+CITATION MISMATCHES — matched charges with differing section numbers:
+  Assault in the First Degree                   | ours: 5-13-201           | auth: 5-13-204
+  Assault in the Second Degree                  | ours: 5-13-203           | auth: 5-13-204
+  Assault in the Third Degree                   | ours: 5-13-205           | auth: 5-13-204
+  Rape in the First Degree                      | ours: 5-14-103           | auth: 5-14-114
+  Rape in the Second Degree                     | ours: 5-14-103           | auth: 5-14-114
+  Sexual Assault in the First Degree            | ours: 5-14-103           | auth: 5-14-124
+  Sexual Assault in the Second Degree           | ours: 5-14-125           | auth: 5-14-124
+  Sexual Assault in the Third Degree            | ours: 5-14-126           | auth: 5-14-124
+  Child Sexual Abuse                            | ours: 5-14-125           | auth: 5-14-110
+  Burglary in the Second Degree                 | ours: 5-39-204           | auth: 5-39-201
+  Residential Burglary                          | ours: 5-39-201           | auth: 5-39-204
+  Commercial Burglary                           | ours: 5-39-202           | auth: 5-39-201
+  Robbery in the First Degree                   | ours: 5-12-103           | auth: 5-12-102
+  Distribution of Controlled Substance          | ours: 5-64-422           | auth: 5-64-440
+  Manufacturing Controlled Substance            | ours: 5-64-424           | auth: 5-64-440
+  Discharge of Firearm in City                  | ours: 5-73-107           | auth: 5-74-107
+  Possession of Prohibited Weapon               | ours: 5-73-104           | auth: 5-73-131
+  Insurance Fraud                               | ours: 23-66-502          | auth: 5-37-505
+  DWI - First Offense                           | ours: 5-65-103           | auth: 5-75-102
+  Battery in the Third Degree                   | ours: 5-13-203           | auth: 5-13-201
+  Domestic Battering in the Third Degree        | ours: 5-26-305           | auth: 5-26-303
+  Harassment / Stalking                         | ours: 5-71-208           | auth: 5-71-229
+  Attempted Robbery                             | ours: 5-3-201            | auth: 5-12-102
+  Attempted Sexual Assault                      | ours: 5-3-201            | auth: 5-14-124
+
+MISSING FELONIES — in authoritative source but not in our database:
+  Aggravated Death by Delivery - Victim is a Minor < 3 Years Younger than Defendant | Ark. Code Ann. § 5-10-202 (a)(2) & (b)(2)(B) | Class U
+  Death by delivery – 1st Degree                     | Ark. Code Ann. § 5-10-203 (a) & (b)(1) | Class Y
+  Death by delivery – 1st Degree                     | Ark. Code Ann. § 5-10-203 (a) & (b)(2) | Class A
+  Death by delivery 2nd Degree                       | Ark. Code Ann. § 5-10-204 (a) & (b)(1) | Class A
+  Death by delivery 2nd Degree                       | Ark. Code Ann. § 5-10-204 (a) & (b)(2) | Class B
+  Death by delivery 2nd Degree                       | Ark. Code Ann. § 5-10-204 (a) & (b)(3) | Class Y
+  Kidnapping                                         | Ark. Code Ann. § 5-11-102 | Class Y
+  Kidnapping, Victim Voluntarily Released Alive      | Ark. Code Ann. § 5-11-102 | Class B
+  False Imprisonment 1st Degree                      | Ark. Code Ann. § 5-11-103 | Class C
+  Vehicular Piracy of an Aircraft                    | Ark. Code Ann. § 5-11-105 | Class B
+  Vehicular Piracy                                   | Ark. Code Ann. § 5-11-105 | Class C
+  Permanent Detention                                | Ark. Code Ann. § 5-11-106 | Class B
+  Permanent Detention of Offender's Child            | Ark. Code Ann. § 5-11-106 | Class D
+  Battery 1st Degree - Victim is 4 Years of Age or Younger | Ark. Code Ann. § 5-13-201 | Class Y
+  Battery 1st Degree - Victim is Law Enforcement in Line of Duty | Ark. Code Ann. § 5-13-201 | Class Y
+  Battery 1st Degree - Victim is Employee of a Correctional Facility | Ark. Code Ann. § 5-13-201 (c)(3) | Class Y
+  Battery 1st Degree - Purposely Causing Permanent Disfigurement | Ark. Code Ann. § 5-13-201 (a)(2) & (c)(2) | Class Y
+  Battery 1st Degree - Victim is 60 Years of Age or Older / 12 Years of Age or Younger | Ark. Code Ann. § 5-13-201 (a)(7) | Class B
+  Battery 2nd Degree - Motor Vehicle or Motor Boat   | Ark. Code Ann. § 5-13-202 (a)(3)(B) & (b)(1) | Class C
+  Battery 2nd Degree - Recklessly Injure Victim < 4 years of age | Ark. Code Ann. § 5-13-202 (a)(3)(C) | Class D
+  Battery 2nd Degree - Certain Victims               | Ark. Code Ann. § 5-13-202(a)(4) | Class D
+  Aggravated Assault - Impedes or Prevents Respiration of Another or Circulation of Another Person's Blood (includes pressure on chest 07/24/2019 and thereafter) | Ark. Code Ann. § 5-13-204 (a)(3) | Class D
+  Abuse of an Athletic Contest Official - Purpose to Cause Serious Physical Injury | Ark. Code Ann. § 5-13-209 (a)(1) & (b)(1) | Class B
+  Abuse of an Athletic Contest Official - Purpose to Cause Physical Injury | Ark. Code Ann. § 5-13-209 (a)(2) & (b)(2) | Class C
+  Intro C/S into Body - Schedule I-II, Narcotic      | Ark. Code Ann. § 5-13-210 | Class Y
+  Intro C/S into Body to Commit Sexual Offense       | Ark. Code Ann. § 5-13-210 (f) | Class Y
+  Intro C/S into Body Schedule I-III, Non-Narcotic   | Ark. Code Ann. § 5-13-210 | Class B
+  Intro C/S into Body Schedule IV-V                  | Ark. Code Ann. § 5-13-210 | Class C
+  Aggravated Assault upon a Certified Law Enforcement Officer or Employee of a Correctional Facility | Ark. Code Ann. § 5-13-211 (a)(1) & (b)(1) | Class D
+  Aggravated Assault Upon a Law Enforcement Officer or Employee of a Correctional Facility - Discharge of a Firearm | Ark. Code Ann. § 5-13-211 (a)(2) & (b)(2) | Class Y
+  Fertility Treatment Abuse                          | Ark. Code Ann. § 5-13-212 (b) & (c) | Class B
+  Knowingly Exposing Another Person to Fentanyl – 1st Degree - Certain Victims | Ark. Code Ann. § 5-13-214 (b)(1) & (b)(2)(A) | Class Y
+  Knowingly Exposing Another Person to Fentanyl - 1st Degree | Ark. Code Ann. § 5-13-214 (b)(1) & (b)(2)(B) | Class A
+  Knowingly Exposing Another Person to Fentanyl – 1st Degree - Certain Victims | Ark. Code Ann. § 5-13-214 (c)(1) & (c)(2)(A) | Class A
+  Knowingly Exposing Another Person to Fentanyl – 2nd Degree | Ark. Code Ann. § 5-13-214 (c)(1) & (c)(2)(B) | Class B
+  Terroristic Threatening 1st Degree                 | Ark. Code Ann. § 5-13-301 | Class D
+  Threatening to Commit an Act of Mass Violence on School Property | Ark. Code Ann. § 5-13-302 | Class C
+  Terroristic Act - Serious Physical Injury/Death    | Ark. Code Ann. § 5-13-310 | Class Y
+  Terroristic Act                                    | Ark. Code Ann. § 5-13-310 | Class B
+  Rape - Forcible Compulsion                         | Ark. Code Ann. § 5-14-103 (a)(1) & (c)(1) | Class Y
+  ... and 781 more felonies
+
+MISSING MISDEMEANORS — in authoritative source but not in our database (sample):
 
