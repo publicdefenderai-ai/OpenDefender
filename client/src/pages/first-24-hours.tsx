@@ -616,23 +616,45 @@ export default function FirstTwentyFourHours() {
                     </p>
                   </div>
 
-                  <div className="space-y-2">
-                    <p className="text-sm font-semibold text-foreground">{t('first24Hours.accordion.counselVariationsTitle')}</p>
-                    <div className="grid sm:grid-cols-2 gap-2 text-sm">
-                      {[
-                        { state: "California", noteKey: "counselStateCA" },
-                        { state: "New York", noteKey: "counselStateNY" },
-                        { state: "Texas", noteKey: "counselStateTX" },
-                        { state: "Florida", noteKey: "counselStateFL" },
-                        { state: "Federal", noteKey: "counselStateFed" },
-                      ].map(({ state, noteKey }) => (
-                        <div key={state} className="rounded-md border border-border/60 bg-background p-3">
-                          <p className="text-xs font-bold text-foreground mb-1">{state}</p>
-                          <p className="text-xs text-muted-foreground leading-relaxed">{t(`first24Hours.accordion.${noteKey}`)}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  {(() => {
+                    const allCounselStates = [
+                      { state: "California", noteKey: "counselStateCA", code: "california" },
+                      { state: "New York", noteKey: "counselStateNY", code: "new york" },
+                      { state: "Texas", noteKey: "counselStateTX", code: "texas" },
+                      { state: "Florida", noteKey: "counselStateFL", code: "florida" },
+                      { state: "Federal", noteKey: "counselStateFed", code: "federal" },
+                    ];
+                    const visibleStates = jurisdiction
+                      ? allCounselStates.filter(s => s.code === jurisdiction)
+                      : allCounselStates;
+                    const stateName = jurisdiction
+                      ? jurisdiction.split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+                      : "";
+                    return (
+                      <div className="space-y-2">
+                        <p className="text-sm font-semibold text-foreground">
+                          {jurisdiction && visibleStates.length > 0
+                            ? `Rules for ${stateName}`
+                            : t('first24Hours.accordion.counselVariationsTitle')}
+                        </p>
+                        {visibleStates.length > 0 ? (
+                          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                            {visibleStates.map(({ state, noteKey }) => (
+                              <div key={state} className="rounded-md border border-border/60 bg-background p-3">
+                                <p className="text-xs font-bold text-foreground mb-1">{state}</p>
+                                <p className="text-xs text-muted-foreground leading-relaxed">{t(`first24Hours.accordion.${noteKey}`)}</p>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground">
+                            <strong>{stateName}</strong> does not have a specific state rule catalogued here — your rights during this stage are governed by the federal constitutional rules described above.{" "}
+                            <Link href="/case-guidance" className="underline underline-offset-2 font-medium">Get personalized guidance</Link> for {stateName}-specific details.
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
 
                   <div className="flex gap-2 flex-wrap pt-1">
                     <Link href="/right-to-counsel">
@@ -728,23 +750,45 @@ export default function FirstTwentyFourHours() {
                       <p className="text-sm text-muted-foreground">{t('first24Hours.accordion.firstAppearanceNotBody')}</p>
                     </div>
 
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold text-foreground">{t('first24Hours.accordion.firstAppearanceVariationsTitle')}</p>
-                      <div className="grid sm:grid-cols-2 gap-2 text-sm">
-                        {[
-                          { state: "California", noteKey: "firstAppearanceStateCA" },
-                          { state: "New York", noteKey: "firstAppearanceStateNY" },
-                          { state: "Texas", noteKey: "firstAppearanceStateTX" },
-                          { state: "Florida", noteKey: "firstAppearanceStateFL" },
-                          { state: "Federal", noteKey: "firstAppearanceStateFed" },
-                        ].map(({ state, noteKey }) => (
-                          <div key={state} className="rounded-md border border-border/60 bg-background p-3">
-                            <p className="text-xs font-bold text-foreground mb-1">{state}</p>
-                            <p className="text-xs text-muted-foreground leading-relaxed">{t(`first24Hours.accordion.${noteKey}`)}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    {(() => {
+                      const allAppearanceStates = [
+                        { state: "California", noteKey: "firstAppearanceStateCA", code: "california" },
+                        { state: "New York", noteKey: "firstAppearanceStateNY", code: "new york" },
+                        { state: "Texas", noteKey: "firstAppearanceStateTX", code: "texas" },
+                        { state: "Florida", noteKey: "firstAppearanceStateFL", code: "florida" },
+                        { state: "Federal", noteKey: "firstAppearanceStateFed", code: "federal" },
+                      ];
+                      const visibleStates = jurisdiction
+                        ? allAppearanceStates.filter(s => s.code === jurisdiction)
+                        : allAppearanceStates;
+                      const stateName = jurisdiction
+                        ? jurisdiction.split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+                        : "";
+                      return (
+                        <div className="space-y-2">
+                          <p className="text-sm font-semibold text-foreground">
+                            {jurisdiction && visibleStates.length > 0
+                              ? `Rules for ${stateName}`
+                              : t('first24Hours.accordion.firstAppearanceVariationsTitle')}
+                          </p>
+                          {visibleStates.length > 0 ? (
+                            <div className="grid sm:grid-cols-2 gap-2 text-sm">
+                              {visibleStates.map(({ state, noteKey }) => (
+                                <div key={state} className="rounded-md border border-border/60 bg-background p-3">
+                                  <p className="text-xs font-bold text-foreground mb-1">{state}</p>
+                                  <p className="text-xs text-muted-foreground leading-relaxed">{t(`first24Hours.accordion.${noteKey}`)}</p>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground">
+                              <strong>{stateName}</strong> does not have a specific first appearance timeline catalogued here — the federal constitutional standard applies (appearance "without unnecessary delay," typically within 48 hours).{" "}
+                              <Link href="/case-guidance" className="underline underline-offset-2 font-medium">Get personalized guidance</Link> for {stateName}-specific details.
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
 
                     <div className="rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
                       <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-2">{t('first24Hours.accordion.firstAppearanceHowTitle')}</p>
