@@ -61,7 +61,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **File:** `shared/criminal-charges.ts`
 
-**Total charges:** 7,579 (as of 2026-03) — original base charges plus 456 inchoate/derivative charges (Phases 1 & 2) plus 285 sentencing enhancement charges (Phase 3) added March 2026.
+**Total charges:** 7,155 (verified April 2026 against live file) — original base charges plus phases 1–5 as described below. Note: the earlier figure of 7,579 cited in March 2026 did not match the live file; the correct count from the search indexer and direct file analysis is 7,155.
 
 **Phase breakdown:**
 - Phase 1 (228 entries): Criminal attempt, conspiracy, aiding and abetting, accessory after the fact — MPC §§ 2.06, 2.07, 5.01, 5.03; federal 18 U.S.C. §§ 2, 3, 371
@@ -70,7 +70,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 - Phase 4 (117 entries): White-collar and federal-specific crimes — state RICO/racketeering and money laundering (56 jurisdictions each) plus federal-only entries for RICO (18 U.S.C. § 1962), money laundering (18 U.S.C. § 1956), drug trafficking (21 U.S.C. § 841), illegal entry (8 U.S.C. § 1325), illegal re-entry (8 U.S.C. § 1326)
 - Phase 5 (225 entries): Juvenile-specific proceedings — delinquency adjudication (felony and misdemeanor level), transfer to adult court, juvenile firearm possession — all 56 jurisdictions plus federal (18 U.S.C. §§ 5031–5042); key cases: In re Gault (1967), Kent v. United States (1966), Miller v. Alabama (2012)
 
-**Total as of 2026-03: 7,579 charges.** All phases cover 56 jurisdictions (50 states + DC + AS/GU/MP/PR/VI) plus federal.
+**Total as of 2026-04: 7,155 charges.** All phases cover 57 jurisdiction codes: 50 states + DC + AS/GU/MP/PR/VI (56 geographic jurisdictions) plus a separate `federal` code (19 charges).
 
 **Two tiers of accuracy apply:**
 

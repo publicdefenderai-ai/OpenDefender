@@ -66,7 +66,7 @@ const contentPages = [
     pages: [
       { route: "/legal-glossary", title: "Legal Glossary", description: "46 plain-language definitions written at a 6th grade reading level. Filterable by letter and category. Trilingual (EN/ES/ZH). Terms link to relevant content pages." },
       { route: "/statutes", title: "Federal Statutes", description: "Complete verbatim text of key federal criminal statutes sourced from Cornell LII. Quarterly URL validation via GitHub Actions." },
-      { route: "/legal-aid", title: "Legal Aid Directory", description: "170+ verified organizations including federal public defenders, county public defenders, court-appointed programs, and EOIR/LSC legal aid providers. Quarterly link and phone number checks." },
+      { route: "/legal-aid", title: "Legal Aid Directory", description: "195+ verified organizations including federal public defenders, county public defenders, court-appointed programs, and EOIR/LSC legal aid providers. Quarterly link and phone number checks." },
       { route: "/court-locator", title: "Court & Resource Locator", description: "Find courts, public defender offices, and legal aid organizations near you." },
       { route: "/case-timeline", title: "Criminal Justice Process & Case Timeline", description: "Interactive 7-stage case timeline with rights and tips per stage, plus detailed bail and plea bargain guides with state-specific rules." },
     ],
@@ -200,11 +200,11 @@ export default function TechDocs() {
           <CardContent>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">7,579+</div>
+                <div className="text-2xl font-bold text-primary">7,155</div>
                 <div className="text-sm text-muted-foreground">Criminal Charges</div>
               </div>
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">56</div>
+                <div className="text-2xl font-bold text-primary">57</div>
                 <div className="text-sm text-muted-foreground">Jurisdictions</div>
               </div>
               <div className="text-center p-4 bg-muted rounded-lg">
@@ -212,7 +212,7 @@ export default function TechDocs() {
                 <div className="text-sm text-muted-foreground">Diversion Programs</div>
               </div>
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">170+</div>
+                <div className="text-2xl font-bold text-primary">195+</div>
                 <div className="text-sm text-muted-foreground">Legal Aid Organizations</div>
               </div>
             </div>
