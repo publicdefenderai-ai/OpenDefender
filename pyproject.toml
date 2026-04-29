@@ -7,4 +7,5 @@ dependencies = [
     "olefile>=0.47",
     "openpyxl>=3.1.5",
     "pypdf>=6.10.2",
+    "python-docx>=1.2.0",
 ]
