@@ -4,7 +4,7 @@
 
 This index documents where every category of data on the OpenDefender platform comes from, what verification processes are in place, and where to look to update the data. It is intended for quality control reviewers, contributors, and maintainers.
 
-Last reviewed: April 2026 (diversion programs section updated after national expansion)
+Last reviewed: April 2026 (diversion programs section updated after national expansion; sentencing commission offense tables section added)
 
 ---
 
@@ -12,6 +12,7 @@ Last reviewed: April 2026 (diversion programs section updated after national exp
 
 1. [Federal Statutes](#1-federal-statutes)
 2. [Criminal Charges Database](#2-criminal-charges-database)
+2b. [Citation Verification — State Sentencing Commission Offense Tables](#2b-citation-verification--state-sentencing-commission-offense-tables)
 3. [Legal Aid Organizations](#3-legal-aid-organizations)
 4. [Expungement Eligibility Data](#4-expungement-eligibility-data)
 5. [Diversion Programs](#5-diversion-programs)
@@ -95,6 +96,61 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | LegiScan — https://api.legiscan.com/ | Bill tracking — monitors new criminal legislation across states for staleness detection. Not part of the guidance or validation pipeline. | Configured, not actively called | `LEGISCAN_API_KEY` |
 
 **To update:** For a given state, cross-reference the synthesized charges against the state's current criminal code via its official legislature website. Any corrections to statute citations or penalty ranges should be applied in `shared/criminal-charges.ts`.
+
+---
+
+## 2b. Citation Verification — State Sentencing Commission Offense Tables
+
+**Purpose:** These official state publications serve as ground-truth audit references for the criminal charges database and for validating AI-generated statute citations. They represent the authoritative enumeration of criminal offenses and their classifications as published by each state's sentencing commission, legislature, or judicial body.
+
+**Audit workbook:** `sentencing-commission-audit.xlsx` (project root) — generated and maintained by `generate_audit_sheet.py`. Contains per-state row counts, source document metadata, and audit notes.
+
+**Source documents inventoried (as of April 2026):**
+
+| State | Document | Edition / Year | Row Count | Notes |
+|-------|----------|---------------|-----------|-------|
+| Washington | Adult Sentencing Manual — "Felony Index by Offense" | 2025 | 620 | Pages 165–186 of sentencing manual; rows identified by RCW citation pattern at line start |
+| Pennsylvania | Sentencing Guidelines — §303a.9 Offense Listing | 8th Edition | 1,335 | 1,348 raw matches minus 13 false positives from statutory class cross-references preceded by "18 Pa.C.S. §" |
+| Arkansas | Criminal Benchbook — "Offense Seriousness Ranking Table" | 2026 | 1,222 | Printed pages 15–68 (PDF pages 20–73); rows identified by ACA statute citation pattern |
+| Michigan | Sentencing Guidelines — "Alphabetical Felony List" | 2025 | 1,542 | Pages 177–214; 1,328 standard MCL entries + 214 split MCL entries on continuation lines |
+| Missouri | Charge Code Manual | Current (pages 1–116) | 2,730 | PDF pages 13–128; rows identified by charge code format `\d+\.\d-\d{3}[YN]\d{4}` |
+| Delaware | Criminal Benchbook — "Index of Offenses" | 2025 | 615 | Pages 4–26; 609 full entries + 6 split statute entries (11-1471 Video Lottery subdivisions) |
+| Texas | Inventory of Texas Felony Offenses by Category | Current through 85th Legislature (April 2018) | 726 | 706 entries under 24 standard Texas code titles + 20 Vernon's Civil Statutes entries (Racing Act, Securities Act, Sabotage, Sports Bribery, Commodity Markets) |
+
+**How these are used:**
+
+1. **Citation audit:** Row counts from each table are compared against the corresponding charges in `shared/criminal-charges.ts` to identify gaps (charges in our DB with no matching state source entry) or surplus (state offenses not yet in our DB).
+2. **Statute code verification:** The official section numbers from these tables are cross-referenced against the synthesized codes in the criminal charges database. Discrepancies are flagged for correction.
+3. **Felony classification accuracy:** Penalty classifications (e.g., Class A/B/C felony, First/Second/Third Degree) in these official tables serve as ground truth for auditing AI guidance output.
+
+**Source types by state:**
+
+| Document Type | States | Publisher |
+|---|---|---|
+| Sentencing commission manual / guidelines | WA, PA, MI | State sentencing commission |
+| Criminal benchbook / judicial reference | AR, DE | State Supreme Court or Administrative Office of Courts |
+| Legislative charge code manual | MO | Missouri State Courts Administrator |
+| Legislative inventory | TX | Texas Legislative Council |
+
+**Obtaining updated editions:**
+
+| State | Source URL |
+|-------|-----------|
+| WA | https://www.cfc.wa.gov/PublicationRepository/SentencingManual.pdf |
+| PA | https://www.pcs.la.psu.edu/guidelines/sentencing-guidelines/current-edition |
+| AR | Arkansas Supreme Court / Administrative Office of Courts (benchbook distribution) |
+| MI | https://courts.michigan.gov/Administration/SCAO/OfficesPrograms/CriminalCases/Pages/SentencingGuidelines.aspx |
+| MO | https://www.courts.mo.gov/page.jsp?id=304 |
+| DE | https://courts.delaware.gov/Superior/benchbook.aspx |
+| TX | https://www.tlc.texas.gov/policy/felony_offenses.pdf |
+
+**Verification cadence:** These documents are updated by their respective states on legislative session cycles (typically annually or biennially). Re-count and re-audit when a new edition is published or when a state legislative session concludes.
+
+**Known limitations:**
+- TX document is through the 85th Legislature, 1st Called Session (April 2018) — newer editions should be checked at tlc.texas.gov
+- MO charge code format (`NNNN.N-NNNYNN NNNN`) is specific to the Missouri court case management system and does not map directly to MO Revised Statutes without cross-referencing
+- AR Benchbook rows include all seriousness ranking levels (A through E unranked); each seriousness level for the same offense is a separate row
+- MI split MCL entries (214 rows) occur when multiple subsections share a single MCL base citation across multiple lines; each subsection line is counted separately
 
 ---
 

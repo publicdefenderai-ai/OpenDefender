@@ -46,7 +46,7 @@ const contentPages = [
   {
     section: "Record Relief",
     pages: [
-      { route: "/diversion-programs", title: "Diversion Programs", description: "73 pre-trial diversion and alternative sentencing programs across major U.S. metros. Filterable by state, county, and program type." },
+      { route: "/diversion-programs", title: "Diversion Programs", description: "111 pre-trial diversion and alternative sentencing programs covering all 50 states + DC + Federal. Includes metro-area drug courts and statewide specialty court portals. Filterable by state, county, and program type." },
       { route: "/record-expungement", title: "Record Expungement", description: "Eligibility rules and waiting periods for all 50 states plus DC. Searchable by state." },
     ],
   },
@@ -66,7 +66,7 @@ const contentPages = [
     pages: [
       { route: "/legal-glossary", title: "Legal Glossary", description: "46 plain-language definitions written at a 6th grade reading level. Filterable by letter and category. Trilingual (EN/ES/ZH). Terms link to relevant content pages." },
       { route: "/statutes", title: "Federal Statutes", description: "Complete verbatim text of key federal criminal statutes sourced from Cornell LII. Quarterly URL validation via GitHub Actions." },
-      { route: "/legal-aid", title: "Legal Aid Directory", description: "24 verified legal aid organizations with addresses, phone numbers, and websites. Quarterly link checks." },
+      { route: "/legal-aid", title: "Legal Aid Directory", description: "170+ verified organizations including federal public defenders, county public defenders, court-appointed programs, and EOIR/LSC legal aid providers. Quarterly link and phone number checks." },
       { route: "/court-locator", title: "Court & Resource Locator", description: "Find courts, public defender offices, and legal aid organizations near you." },
       { route: "/case-timeline", title: "Criminal Justice Process & Case Timeline", description: "Interactive 7-stage case timeline with rights and tips per stage, plus detailed bail and plea bargain guides with state-specific rules." },
     ],
@@ -200,20 +200,20 @@ export default function TechDocs() {
           <CardContent>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">4,144+</div>
+                <div className="text-2xl font-bold text-primary">7,579+</div>
                 <div className="text-sm text-muted-foreground">Criminal Charges</div>
               </div>
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">51</div>
+                <div className="text-2xl font-bold text-primary">56</div>
                 <div className="text-sm text-muted-foreground">Jurisdictions</div>
               </div>
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">73</div>
+                <div className="text-2xl font-bold text-primary">111</div>
                 <div className="text-sm text-muted-foreground">Diversion Programs</div>
               </div>
               <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">46</div>
-                <div className="text-sm text-muted-foreground">Glossary Terms</div>
+                <div className="text-2xl font-bold text-primary">170+</div>
+                <div className="text-sm text-muted-foreground">Legal Aid Organizations</div>
               </div>
             </div>
           </CardContent>
@@ -467,15 +467,23 @@ export default function TechDocs() {
             <div className="space-y-2">
               <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-legal-aid.ts</code>
-                <span>HTTP checks all 24 legal aid organization URLs. Outputs <code className="bg-background px-1 rounded text-xs">legal-aid-diff.json</code> with any that return non-200 or redirect.</span>
+                <span>HTTP checks all legal aid organization URLs (170+ entries). Outputs <code className="bg-background px-1 rounded text-xs">legal-aid-diff.json</code> with any that return non-200 or redirect.</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-public-defenders.ts</code>
+                <span>HTTP checks all public defender and court-appointed program websites; also flags entries with missing phone numbers. Outputs <code className="bg-background px-1 rounded text-xs">public-defenders-diff.json</code>.</span>
               </div>
               <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-federal-statutes.ts</code>
                 <span>HEAD checks all Cornell LII statute URLs in the database. Outputs <code className="bg-background px-1 rounded text-xs">statutes-diff.json</code>.</span>
               </div>
               <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-diversion-programs.ts</code>
+                <span>HEAD/GET checks all 111 diversion program contact URLs. Treats 403/999 CDN bot-blocks as live; exits non-zero on true 404/error. Outputs <code className="bg-background px-1 rounded text-xs">diversion-link-report.json</code>.</span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">generate-report.ts</code>
-                <span>Reads both diff outputs and opens a GitHub Issue listing items needing manual review.</span>
+                <span>Reads all diff outputs and opens a GitHub Issue listing items needing manual review.</span>
               </div>
             </div>
             <p>Organizations forking this project should retain these workflows or implement equivalent checks. Statute content uses complete verbatim text — no excerpts or truncation.</p>
