@@ -321,14 +321,18 @@ export default function FirstTwentyFourHours() {
 
       <section className="vivid-header-alt py-14 md:py-18">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-white">
             {t('first24Hours.title')}
           </h1>
-          <p className="text-lg md:text-xl font-light italic tracking-wide text-white/90 mb-5">
-            {t('first24Hours.tagline')}
-          </p>
+          <div className="flex items-center justify-center gap-4 mb-5">
+            <span className="h-px w-10 bg-amber-300/50 flex-shrink-0" />
+            <p className="text-lg md:text-xl font-semibold tracking-[0.12em] text-amber-200 uppercase">
+              {t('first24Hours.tagline')}
+            </p>
+            <span className="h-px w-10 bg-amber-300/50 flex-shrink-0" />
+          </div>
           <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
-            {t('first24Hours.calmIntro')}
+            {t('first24Hours.subtitle')}
           </p>
         </div>
       </section>
