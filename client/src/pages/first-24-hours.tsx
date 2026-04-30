@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Check, X, Phone, MapPin } from "lucide-react";
+import { Check, X, Phone, MapPin, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, type LucideIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { BrandShieldIcon } from "@/components/brand-logo";
@@ -203,23 +203,24 @@ interface StepProps {
   id?: string;
   highlighted?: boolean;
   priorityLabel?: string;
+  icon?: LucideIcon;
   children?: React.ReactNode;
 }
 
-function Step({ number, title, timeframe, context, dos, donts, isLast, id, highlighted, priorityLabel, children }: StepProps) {
+function Step({ number, title, timeframe, context, dos, donts, isLast, id, highlighted, priorityLabel, icon: Icon, children }: StepProps) {
   return (
     <div className="relative" id={id}>
       <div className="flex items-start gap-5">
         <div className="flex flex-col items-center flex-shrink-0">
-          <div className={`w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md z-10 transition-colors ${
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md z-10 transition-all ${
             highlighted
-              ? 'bg-blue-600 dark:bg-blue-500 ring-2 ring-blue-400 ring-offset-2 dark:ring-offset-background'
-              : 'bg-slate-800 dark:bg-slate-700'
+              ? 'bg-blue-600 dark:bg-blue-500 ring-2 ring-blue-400 ring-offset-2 dark:ring-offset-background scale-110'
+              : 'bg-slate-700 dark:bg-slate-600'
           }`}>
             {number}
           </div>
           {!isLast && (
-            <div className="w-0.5 flex-1 bg-slate-200 dark:bg-slate-700 min-h-[80px] mt-3" />
+            <div className={`w-0.5 flex-1 min-h-[80px] mt-3 ${highlighted ? 'bg-blue-200 dark:bg-blue-800' : 'bg-slate-200 dark:bg-slate-700'}`} />
           )}
         </div>
 
@@ -230,7 +231,10 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
             </p>
           )}
           <div className="mb-3">
-            <h2 className="text-xl font-bold text-foreground">{title}</h2>
+            <div className="flex items-center gap-2 mb-0.5">
+              {Icon && <Icon className={`h-5 w-5 flex-shrink-0 ${highlighted ? 'text-blue-500 dark:text-blue-400' : 'text-muted-foreground'}`} />}
+              <h2 className="text-xl font-bold text-foreground">{title}</h2>
+            </div>
             <span className="text-xs text-muted-foreground">{timeframe}</span>
           </div>
 
@@ -407,10 +411,42 @@ export default function FirstTwentyFourHours() {
           </div>
         </ScrollReveal>
 
+        {/* Step quick-jump navigator */}
+        <ScrollReveal delay={0.019}>
+          <div className="mb-8">
+            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">Jump to any step</p>
+            <div className="grid grid-cols-7 gap-1.5">
+              {([
+                { n: 1, id: 'step-arrest',      label: 'Arrest',       Icon: ShieldAlert },
+                { n: 2, id: 'step-booking',     label: 'Booking',      Icon: ClipboardList },
+                { n: 3, id: 'phone-call',       label: 'Phone Call',   Icon: Phone },
+                { n: 4, id: 'step-bail',        label: 'Bail',         Icon: Banknote },
+                { n: 5, id: 'step-lawyer',      label: 'Lawyer',       Icon: Scale },
+                { n: 6, id: 'step-arraignment', label: 'Arraignment',  Icon: Landmark },
+                { n: 7, id: 'step-ongoing',     label: 'Next Steps',   Icon: CalendarCheck },
+              ]).map(({ n, id, label, Icon }) => (
+                <button
+                  key={n}
+                  onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                  className="flex flex-col items-center gap-1 py-2.5 px-1 rounded-lg border border-border/60 bg-muted/20 hover:border-primary/40 hover:bg-muted/60 transition-all text-center group"
+                >
+                  <Icon className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-foreground leading-tight hidden sm:block">{label}</span>
+                  <span className="text-[10px] font-bold text-muted-foreground sm:hidden">{n}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* Before-arrest section */}
         <ScrollReveal delay={0.02}>
-          <div id="before-arrest" className="mb-10">
-            <h2 className="text-xl font-bold text-foreground mb-1">{t('first24Hours.beforeArrest.heading')}</h2>
+          <div id="before-arrest" className="mb-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-900/30 p-5">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-700 px-2 py-0.5 rounded-full">Optional</span>
+              <span className="text-xs text-muted-foreground">— for people not yet arrested</span>
+            </div>
+            <h2 className="text-lg font-bold text-foreground mt-2 mb-1">{t('first24Hours.beforeArrest.heading')}</h2>
             <p className="text-sm text-muted-foreground mb-4">{t('first24Hours.beforeArrest.subheading')}</p>
             <Accordion type="single" collapsible className="w-full space-y-2">
               {[
@@ -543,12 +579,20 @@ export default function FirstTwentyFourHours() {
           </div>
         </ScrollReveal>
 
+        {/* Section header */}
+        <div className="flex items-center gap-4 mb-8 mt-2">
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground px-1 whitespace-nowrap">Your 7-Step Guide</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+
         <div>
           {/* STEP 1 */}
           <ScrollReveal delay={0.05}>
             <Step
               number={1}
               id="step-arrest"
+              icon={ShieldAlert}
               highlighted={isHighlighted(1)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step1.title')}
@@ -586,6 +630,7 @@ export default function FirstTwentyFourHours() {
             <Step
               number={2}
               id="step-booking"
+              icon={ClipboardList}
               highlighted={isHighlighted(2)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step2.title')}
@@ -617,6 +662,7 @@ export default function FirstTwentyFourHours() {
             <Step
               number={3}
               id="phone-call"
+              icon={Phone}
               highlighted={isHighlighted(3)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step3.title')}
@@ -697,6 +743,7 @@ export default function FirstTwentyFourHours() {
             <Step
               number={4}
               id="step-bail"
+              icon={Banknote}
               highlighted={isHighlighted(4)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step4.title')}
@@ -738,6 +785,7 @@ export default function FirstTwentyFourHours() {
             <Step
               number={5}
               id="step-lawyer"
+              icon={Scale}
               highlighted={isHighlighted(5)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step5.title')}
@@ -797,6 +845,7 @@ export default function FirstTwentyFourHours() {
             <Step
               number={6}
               id="step-arraignment"
+              icon={Landmark}
               highlighted={isHighlighted(6)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step6.title')}
@@ -822,6 +871,7 @@ export default function FirstTwentyFourHours() {
             <Step
               number={7}
               id="step-ongoing"
+              icon={CalendarCheck}
               highlighted={isHighlighted(7)}
               priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step7.title')}
