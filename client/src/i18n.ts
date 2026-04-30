@@ -1752,13 +1752,13 @@ i18n
                 "submit": "Get My Case Support"
               },
               "privilegeWarning": {
-                "title": "Before You Share Details",
-                "criminalWarning": "If you are facing criminal charges, anything you share here could potentially be used against you.",
-                "notPrivate": "What you type here is NOT protected by attorney-client privilege. Your prompts are processed by Anthropic's AI and could be disclosed if requested through legal process (such as a subpoena or court order).",
-                "recommendation": "If you are under investigation or facing charges, we strongly recommend consulting a licensed attorney first. They can provide truly confidential advice. This step is optional—skip it to receive general guidance without sharing details.",
-                "governmentWarning": "Important: Anthropic may retain prompts for up to 30 days. During this time, your conversations could be disclosed pursuant to a valid legal request.",
-                "continueAnyway": "Continue Anyway",
-                "skipAndGetGuidance": "Skip & Get General Guidance",
+                "title": "You don't need to share what happened",
+                "criminalWarning": "Nothing you type here is private or confidential. There is no attorney-client protection.",
+                "notPrivate": "This tool does not need to know what happened to help you. We can explain your rights, what comes next, who to call, and what to expect — without any details about your case.",
+                "recommendation": "The safer choice for most people: skip this box. The guidance you get will still be specific to your charges, case stage, and state.",
+                "governmentWarning": "If you do share details: your messages are processed by Anthropic's AI and may be stored for up to 30 days. If a court or government agency requests them, they can be disclosed.",
+                "continueAnyway": "I understand — add details anyway",
+                "skipAndGetGuidance": "Get guidance without sharing details",
                 "findLawyer": "Help Me Find a Lawyer"
               },
               "clearSession": {
@@ -1809,7 +1809,8 @@ i18n
                 "title": "Local Resources"
               },
               "evidenceToGather": {
-                "title": "Evidence to Gather"
+                "title": "Evidence — Discuss With Your Attorney",
+                "warning": "Evidence decisions depend entirely on your specific case facts. Do not touch, move, share, or discard anything related to your case before speaking with your attorney."
               },
               "importantWarnings": {
                 "title": "Important Warnings"
@@ -4357,9 +4358,9 @@ i18n
             "custodyQuestion": "Are you currently in custody or have you been released?",
             "attorneyQuestion": "Do you have an attorney or public defender?",
             "descriptionPrompt": "Thanks for that information. Now, briefly describe what happened - this helps me give you more relevant guidance.\n\n(Your information is analyzed by AI to provide guidance. Personal details are automatically removed before processing. Nothing is stored after your session.)",
-            "descriptionPromptWithWarning": "Thanks for that information.\n\n⚠️ **Before You Share Details**\n\nThis is not legal advice. For specific legal advice, consult with a qualified attorney.\n\n**Your conversations with this AI are NOT protected by attorney-client privilege** and could be requested by law enforcement or through legal process.\n\nOur AI provider (Anthropic) may retain your prompts for up to 30 days. During this time, if the government issues a valid subpoena or court order, your conversations may be disclosed.\n\n**If you are under investigation or facing criminal charges**, speak with a licensed attorney for confidential advice before sharing case details here.\n\nThis step is optional—skip it to still receive general guidance.",
-            "privilegeWarning": "⚠️ **Before You Share Details**\n\nThis is not legal advice. For specific legal advice, consult with a qualified attorney.\n\n**Your conversations with this AI are NOT protected by attorney-client privilege** and could be requested by law enforcement or through legal process.\n\nOur AI provider (Anthropic) may retain your prompts for up to 30 days. During this time, if the government issues a valid subpoena or court order, your conversations may be disclosed.\n\n**If you are under investigation or facing criminal charges**, speak with a licensed attorney for confidential advice before sharing case details here.\n\nThis step is optional—skip it to still receive general guidance.",
-            "privilegeAcknowledged": "Understood. Go ahead and describe what happened—take your time.",
+            "descriptionPromptWithWarning": "Thanks for that. Before the next step — **you don't need to share what happened.**\n\nWe can tell you your rights, what comes next, and who to call without knowing any details of your case.\n\nIf you do choose to share details: nothing here is private or confidential. There is no attorney-client protection. Anthropic may store your messages for up to 30 days and they can be disclosed if a court or government agency requests them.\n\nThe safer choice for most people: skip the details. Your guidance will still be specific to your charges and state.",
+            "privilegeWarning": "Thanks for that. Before the next step — **you don't need to share what happened.**\n\nWe can tell you your rights, what comes next, and who to call without knowing any details of your case.\n\nIf you do choose to share details: nothing here is private or confidential. There is no attorney-client protection. Anthropic may store your messages for up to 30 days and they can be disclosed if a court or government agency requests them.\n\nThe safer choice for most people: skip the details. Your guidance will still be specific to your charges and state.",
+            "privilegeAcknowledged": "Understood. Go ahead — take your time.",
             "concernsQuestion": "What are you most worried about? Select all that apply:",
             "generating": "Thank you. I'm now reviewing your situation and preparing your personalized guidance. This may take a moment...",
             "stillWorking": "Still working on your guidance... Complex legal situations require careful analysis. Thank you for your patience.",
@@ -4450,8 +4451,8 @@ i18n
             "notInCustody": "Not in custody",
             "hasAttorney": "Yes, I have representation",
             "noAttorney": "No, I need to find one",
-            "privilegeContinue": "I Understand, Continue",
-            "privilegeSkip": "Skip & Get General Guidance",
+            "privilegeContinue": "I understand — add details",
+            "privilegeSkip": "Get guidance without details",
             "viewGuidance": "View My Guidance",
             "exportPdf": "Export as PDF",
             "saveGuidance": "Save This Guidance",
@@ -6894,13 +6895,13 @@ i18n
                 "submit": "Obtener Mi Orientación Legal"
               },
               "privilegeWarning": {
-                "title": "Antes de Compartir Detalles",
-                "criminalWarning": "Si enfrenta cargos penales, cualquier información que comparta aquí podría usarse en su contra.",
-                "notPrivate": "Lo que escriba aquí NO está protegido por el privilegio abogado-cliente. Sus mensajes son procesados por la IA de Anthropic y podrían ser divulgados si se solicitan mediante un proceso legal (como una citación u orden judicial).",
-                "recommendation": "Si está bajo investigación o enfrenta cargos, recomendamos encarecidamente consultar primero con un abogado licenciado. Ellos pueden brindar asesoramiento verdaderamente confidencial. Este paso es opcional—omítalo para recibir orientación general sin compartir detalles.",
-                "governmentWarning": "Importante: Anthropic puede retener los mensajes hasta por 30 días. Durante este tiempo, sus conversaciones podrían ser divulgadas en respuesta a una solicitud legal válida.",
-                "continueAnyway": "Continuar de Todos Modos",
-                "skipAndGetGuidance": "Omitir y Obtener Orientación General",
+                "title": "No necesita decirle qué pasó",
+                "criminalWarning": "Nada de lo que escriba aquí es privado o confidencial. No existe protección de privilegio abogado-cliente.",
+                "notPrivate": "Esta herramienta no necesita saber lo que pasó para ayudarle. Podemos explicarle sus derechos, qué sigue, a quién llamar y qué esperar — sin ningún detalle de su caso.",
+                "recommendation": "La opción más segura para la mayoría de las personas: omita esta sección. La orientación que reciba seguirá siendo específica para sus cargos, etapa del caso y estado.",
+                "governmentWarning": "Si comparte detalles: sus mensajes son procesados por la IA de Anthropic y pueden almacenarse hasta 30 días. Si un tribunal o agencia gubernamental los solicita, pueden ser divulgados.",
+                "continueAnyway": "Entiendo — agregar detalles de todos modos",
+                "skipAndGetGuidance": "Obtener orientación sin compartir detalles",
                 "findLawyer": "Ayúdeme a Encontrar un Abogado"
               },
               "clearSession": {
@@ -6951,7 +6952,8 @@ i18n
                 "title": "Recursos Locales"
               },
               "evidenceToGather": {
-                "title": "Evidencia a Recopilar"
+                "title": "Evidencia — Consulte con Su Abogado",
+                "warning": "Las decisiones sobre evidencia dependen completamente de los hechos específicos de su caso. No toque, mueva, comparta ni descarte nada relacionado con su caso sin antes hablar con su abogado."
               },
               "importantWarnings": {
                 "title": "Advertencias Importantes"
@@ -9499,9 +9501,9 @@ i18n
             "custodyQuestion": "¿Está actualmente bajo custodia o ha sido liberado?",
             "attorneyQuestion": "¿Tiene un abogado o defensor público?",
             "descriptionPrompt": "Gracias por esa información. Ahora, describa brevemente lo que pasó - esto me ayuda a darle orientación más relevante.\n\n(Su información es analizada por IA para proporcionar orientación. Los datos personales se eliminan automáticamente antes del procesamiento. Nada se almacena después de su sesión.)",
-            "descriptionPromptWithWarning": "Gracias por esa información.\n\n⚠️ **Antes de Compartir Detalles**\n\nEsto no es asesoramiento legal. Para asesoramiento legal específico, consulte con un abogado calificado.\n\n**Sus conversaciones con esta IA NO están protegidas por el privilegio abogado-cliente** y podrían ser solicitadas por las autoridades o mediante proceso legal.\n\nNuestro proveedor de IA (Anthropic) puede conservar sus mensajes por hasta 30 días. Durante ese tiempo, si el gobierno emite una citación o orden judicial válida, sus conversaciones podrían ser divulgadas.\n\n**Si está bajo investigación o enfrenta cargos criminales**, hable con un abogado autorizado para obtener asesoramiento confidencial antes de compartir detalles del caso aquí.\n\nEste paso es opcional—omítalo para recibir orientación general.",
-            "privilegeWarning": "⚠️ **Antes de Compartir Detalles**\n\nEsto no es asesoramiento legal. Para asesoramiento legal específico, consulte con un abogado calificado.\n\n**Sus conversaciones con esta IA NO están protegidas por el privilegio abogado-cliente** y podrían ser solicitadas por las autoridades o mediante proceso legal.\n\nNuestro proveedor de IA (Anthropic) puede conservar sus mensajes por hasta 30 días. Durante ese tiempo, si el gobierno emite una citación o orden judicial válida, sus conversaciones podrían ser divulgadas.\n\n**Si está bajo investigación o enfrenta cargos criminales**, hable con un abogado autorizado para obtener asesoramiento confidencial antes de compartir detalles del caso aquí.\n\nEste paso es opcional—omítalo para recibir orientación general.",
-            "privilegeAcknowledged": "Entendido. Adelante, describa lo que pasó—tómese su tiempo.",
+            "descriptionPromptWithWarning": "Gracias. Antes del siguiente paso — **no necesita decirle qué pasó.**\n\nPodemos explicarle sus derechos, qué sigue y a quién llamar sin conocer ningún detalle de su caso.\n\nSi decide compartir detalles: nada aquí es privado o confidencial. No existe protección de privilegio abogado-cliente. Anthropic puede almacenar sus mensajes hasta 30 días y pueden ser divulgados si un tribunal o agencia gubernamental los solicita.\n\nLa opción más segura para la mayoría: omita los detalles. Su orientación seguirá siendo específica para sus cargos y estado.",
+            "privilegeWarning": "Gracias. Antes del siguiente paso — **no necesita decirle qué pasó.**\n\nPodemos explicarle sus derechos, qué sigue y a quién llamar sin conocer ningún detalle de su caso.\n\nSi decide compartir detalles: nada aquí es privado o confidencial. No existe protección de privilegio abogado-cliente. Anthropic puede almacenar sus mensajes hasta 30 días y pueden ser divulgados si un tribunal o agencia gubernamental los solicita.\n\nLa opción más segura para la mayoría: omita los detalles. Su orientación seguirá siendo específica para sus cargos y estado.",
+            "privilegeAcknowledged": "Entendido. Adelante — tómese su tiempo.",
             "concernsQuestion": "¿Qué es lo que más le preocupa? Seleccione todas las que apliquen:",
             "generating": "Gracias. Ahora estoy revisando su situación y preparando su orientación personalizada. Esto puede tomar un momento...",
             "stillWorking": "Todavía trabajando en su orientación... Las situaciones legales complejas requieren un análisis cuidadoso. Gracias por su paciencia.",
@@ -9592,8 +9594,8 @@ i18n
             "notInCustody": "No bajo custodia",
             "hasAttorney": "Sí, tengo representación",
             "noAttorney": "No, necesito encontrar uno",
-            "privilegeContinue": "Entiendo, Continuar",
-            "privilegeSkip": "Omitir y Obtener Orientación General",
+            "privilegeContinue": "Entiendo — agregar detalles",
+            "privilegeSkip": "Obtener orientación sin detalles",
             "viewGuidance": "Ver Mi Orientación",
             "exportPdf": "Exportar como PDF",
             "saveGuidance": "Guardar Esta Orientación",
@@ -12037,13 +12039,13 @@ i18n
                 "submit": "获取我的法律指导"
               },
               "privilegeWarning": {
-                "title": "分享信息之前请注意",
-                "criminalWarning": "如果您面临刑事指控，您在此分享的任何信息都可能被用来对您不利。",
-                "notPrivate": "和律师交谈不同，你在这里输入的内容不受保密特权保护，如果在法庭上被问到，可能会被用作对你不利的证据。",
-                "recommendation": "我们建议你先咨询律师。这一步是可选的——跳过它你仍然可以获得一般性指导。",
-                "governmentWarning": "重要提示：Anthropic可能会保留消息长达30天。在此期间，您的对话可能会根据有效的法律请求被披露。",
-                "continueAnyway": "仍然继续",
-                "skipAndGetGuidance": "跳过并获取一般性指导",
+                "title": "您无需说明发生了什么",
+                "criminalWarning": "您在此输入的任何内容均不具有隐私保护或保密性，不受律师-委托人特权保护。",
+                "notPrivate": "本工具无需了解发生了什么就能帮助您。我们可以在不了解您案件任何细节的情况下，向您说明您的权利、接下来会发生什么、应该联系谁以及可以期待什么。",
+                "recommendation": "对大多数人来说更安全的选择：跳过此栏。您收到的指导仍会针对您的具体指控、案件阶段和所在州。",
+                "governmentWarning": "如果您分享详情：您的消息由 Anthropic 的 AI 处理，可能被存储最长 30 天。如果法院或政府机构提出请求，这些内容可能被披露。",
+                "continueAnyway": "我明白了——仍要添加详情",
+                "skipAndGetGuidance": "不分享详情，直接获取指导",
                 "findLawyer": "帮我找一位律师"
               },
               "clearSession": {
@@ -12094,7 +12096,8 @@ i18n
                 "title": "当地资源"
               },
               "evidenceToGather": {
-                "title": "需要收集的证据"
+                "title": "证据事项 — 请与律师讨论",
+                "warning": "证据处理的决定完全取决于您案件的具体事实。在与律师交谈之前，请勿触碰、移动、分享或处置任何与您案件相关的物品。"
               },
               "importantWarnings": {
                 "title": "重要警告"
@@ -14642,9 +14645,9 @@ i18n
               "custodyQuestion": "您目前是被拘留还是已被释放？",
               "attorneyQuestion": "您是否已有律师或公设辩护人？",
               "descriptionPrompt": "感谢您提供的信息。现在，请简要描述发生了什么——这有助于我给您更有针对性的指导。\n\n（您的信息将由 AI 分析以提供指导。个人详细信息在处理前会被自动移除。会话结束后不会保存任何内容。）",
-              "descriptionPromptWithWarning": "感谢您提供的信息。\n\n⚠️ **在您分享细节之前**\n\n本平台不提供法律建议。如需具体法律建议，请咨询合格的律师。\n\n**您与本 AI 的对话不受律师-委托人特权保护**，可能被执法机关或通过法律程序调取。\n\n我们的 AI 服务提供商（Anthropic）可能保留您的对话内容最长 30 天。在此期间，若政府发出合法传票或法院命令，您的对话内容可能会被披露。\n\n**如果您正处于调查之中或面临刑事指控**，请在此处分享案件细节之前，先咨询持牌律师以获得保密建议。\n\n此步骤为可选——跳过此步仍可获得一般性指导。",
-              "privilegeWarning": "⚠️ **在您分享细节之前**\n\n本平台不提供法律建议。如需具体法律建议，请咨询合格的律师。\n\n**您与本 AI 的对话不受律师-委托人特权保护**，可能被执法机关或通过法律程序调取。\n\n我们的 AI 服务提供商（Anthropic）可能保留您的对话内容最长 30 天。在此期间，若政府发出合法传票或法院命令，您的对话内容可能会被披露。\n\n**如果您正处于调查之中或面临刑事指控**，请在此处分享案件细节之前，先咨询持牌律师以获得保密建议。\n\n此步骤为可选——跳过此步仍可获得一般性指导。",
-              "privilegeAcknowledged": "明白了。请描述发生了什么——不用着急。",
+              "descriptionPromptWithWarning": "感谢您的信息。在下一步之前——**您无需说明发生了什么。**\n\n我们无需了解您案件的任何细节，就能向您说明您的权利、接下来会发生什么以及应该联系谁。\n\n如果您选择分享详情：这里的任何内容都不具有隐私保护或保密性，不受律师-委托人特权保护。Anthropic 可能会将您的消息存储最长 30 天，如果法院或政府机构提出请求，这些内容可能被披露。\n\n对大多数人来说更安全的选择：跳过详情。您的指导仍将针对您的具体指控和所在州。",
+              "privilegeWarning": "感谢您的信息。在下一步之前——**您无需说明发生了什么。**\n\n我们无需了解您案件的任何细节，就能向您说明您的权利、接下来会发生什么以及应该联系谁。\n\n如果您选择分享详情：这里的任何内容都不具有隐私保护或保密性，不受律师-委托人特权保护。Anthropic 可能会将您的消息存储最长 30 天，如果法院或政府机构提出请求，这些内容可能被披露。\n\n对大多数人来说更安全的选择：跳过详情。您的指导仍将针对您的具体指控和所在州。",
+              "privilegeAcknowledged": "明白了。请继续——不用着急。",
               "concernsQuestion": "您最担心什么？有什么具体问题吗？\n\n（例如：担心失去工作、负担不起律师费、什么时候必须出庭）",
               "generating": "谢谢。我现在正在分析您的情况并准备个性化指导。这可能需要一些时间……",
               "stillWorking": "仍在准备您的指导……复杂的法律情况需要仔细分析。感谢您的耐心。",
@@ -14735,8 +14738,8 @@ i18n
               "notInCustody": "未被拘留",
               "hasAttorney": "是的，我有律师代理",
               "noAttorney": "没有，我需要找一个",
-              "privilegeContinue": "我理解了，继续",
-              "privilegeSkip": "跳过，获取一般性指导",
+              "privilegeContinue": "我明白了——添加详情",
+              "privilegeSkip": "不分享详情，获取指导",
               "viewGuidance": "查看我的指导",
               "exportPdf": "导出为 PDF",
               "saveGuidance": "保存此指导",

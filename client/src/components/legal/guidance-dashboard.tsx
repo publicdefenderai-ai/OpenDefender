@@ -1439,7 +1439,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </CollapsibleContent>
         </Collapsible>
 
-        {/* Evidence to Gather */}
+        {/* Evidence — Discuss With Attorney */}
         {guidance.evidenceToGather.length > 0 && (
           <Collapsible>
             <CollapsibleTrigger asChild>
@@ -1447,7 +1447,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 <CardHeader>
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <FileText className="h-5 w-5 text-purple-600" />
+                      <FileText className="h-5 w-5 text-amber-600" />
                       {t('legalGuidance.dashboard.evidenceToGather.title')}
                     </div>
                     <ChevronDown className="h-4 w-4" />
@@ -1457,11 +1457,17 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             </CollapsibleTrigger>
             <CollapsibleContent>
               <Card className="mt-2">
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 space-y-4">
+                  <div className="flex items-start gap-2 p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg">
+                    <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                    <p className="text-sm text-amber-800 dark:text-amber-300">
+                      {t('legalGuidance.dashboard.evidenceToGather.warning')}
+                    </p>
+                  </div>
                   <ul className="space-y-2">
                     {guidance.evidenceToGather.map((evidence, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="text-purple-600 mt-1">•</span>
+                        <span className="text-amber-600 mt-1">•</span>
                         <span className="text-sm">{evidence}</span>
                       </li>
                     ))}
