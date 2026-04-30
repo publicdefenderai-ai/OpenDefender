@@ -334,8 +334,7 @@ export default function FirstTwentyFourHours() {
 
         {/* Calm intro */}
         <ScrollReveal>
-          <div className="mb-6 rounded-xl border border-teal-200/70 dark:border-teal-800/30 bg-gradient-to-r from-teal-50 to-sky-50 dark:from-teal-950/20 dark:to-sky-950/10 p-5 flex items-start gap-3 shadow-sm">
-            <Shield className="h-5 w-5 text-teal-600 dark:text-teal-400 mt-0.5 flex-shrink-0" />
+          <div className="mb-6 rounded-xl border border-teal-200/70 dark:border-teal-800/30 bg-gradient-to-r from-teal-50 to-sky-50 dark:from-teal-950/20 dark:to-sky-950/10 p-5 shadow-sm">
             <p className="text-base text-foreground/90 font-medium leading-relaxed">
               {t('first24Hours.calmIntro')}
             </p>
