@@ -324,22 +324,16 @@ export default function FirstTwentyFourHours() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 text-white">
             {t('first24Hours.title')}
           </h1>
-          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            {t('first24Hours.subtitle')}
+          <p className="text-lg md:text-xl font-light italic tracking-wide text-white/90 mb-5">
+            {t('first24Hours.tagline')}
+          </p>
+          <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
+            {t('first24Hours.calmIntro')}
           </p>
         </div>
       </section>
 
       <main className="max-w-3xl mx-auto px-4 py-12 md:py-16">
-
-        {/* Calm intro */}
-        <ScrollReveal>
-          <div className="mb-6 rounded-xl border border-teal-200/70 dark:border-teal-800/30 bg-gradient-to-r from-teal-50 to-sky-50 dark:from-teal-950/20 dark:to-sky-950/10 p-5 shadow-sm">
-            <p className="text-base text-foreground/90 font-medium leading-relaxed">
-              {t('first24Hours.calmIntro')}
-            </p>
-          </div>
-        </ScrollReveal>
 
         {/* Family path callout */}
         <ScrollReveal delay={0.01}>

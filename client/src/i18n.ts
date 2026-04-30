@@ -4828,6 +4828,7 @@ i18n
               "line5": "\"Don't talk to any police or detectives until there's a lawyer involved. I can't say anything else right now.\"",
               "line6": "\"I love you. I'll be okay. Go make those calls.\""
             },
+            "tagline": "Begin your defense here.",
             "calmIntro": "You're in the right place. The single most important thing right now: say nothing to police, and make one phone call to a family member or attorney. Everything else on this page explains what comes next.",
             "stageSelector": {
               "prompt": "Where are you right now?",
@@ -10035,6 +10036,7 @@ i18n
               "line5": "«No hables con la policía ni con ningún detective hasta que haya un abogado involucrado. No puedo decir nada más ahora mismo.»",
               "line6": "«Te quiero. Estaré bien. Ve a hacer esas llamadas.»"
             },
+            "tagline": "Comience su defensa aquí.",
             "calmIntro": "Está en el lugar correcto. Lo más importante ahora mismo: no diga nada a la policía y haga una sola llamada a un familiar o abogado. Todo lo demás en esta página explica qué sigue.",
             "stageSelector": {
               "prompt": "¿En qué situación se encuentra ahora?",
@@ -15243,6 +15245,7 @@ i18n
               "line5": "「在律师介入之前不要和警察或侦探说话。我现在不能说更多了。」",
               "line6": "「我爱你。我会没事的。去打那些电话吧。」"
             },
+            "tagline": "从这里开始您的辩护。",
             "calmIntro": "您找对地方了。现在最重要的一件事：不要对警察说任何话，并打一个电话给家人或律师。本页其余内容将解释接下来该怎么做。",
             "stageSelector": {
               "prompt": "您现在处于哪个阶段？",
