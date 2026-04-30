@@ -4854,7 +4854,8 @@ i18n
               "task2": "Start the search for a lawyer or public defender",
               "task3": "Learn what to say — and not say — on jail calls",
               "fullGuide": "Full family guide",
-              "jailCallGuide": "Jail call guide"
+              "jailCallGuide": "Jail call guide",
+              "findDefender": "Find a public defender"
             },
             "beforeArrest": {
               "heading": "Before You're Arrested",
@@ -10062,7 +10063,8 @@ i18n
               "task2": "Empiece a buscar un abogado o defensor público",
               "task3": "Aprenda qué decir — y qué no decir — en las llamadas desde la cárcel",
               "fullGuide": "Guía completa para familias",
-              "jailCallGuide": "Guía de llamadas desde la cárcel"
+              "jailCallGuide": "Guía de llamadas desde la cárcel",
+              "findDefender": "Encontrar un defensor público"
             },
             "beforeArrest": {
               "heading": "Antes de Ser Arrestado",
@@ -15271,7 +15273,8 @@ i18n
               "task2": "开始寻找律师或公设辩护人",
               "task3": "了解在监狱电话中该说什么——以及不该说什么",
               "fullGuide": "家属完整指南",
-              "jailCallGuide": "监狱电话指南"
+              "jailCallGuide": "监狱电话指南",
+              "findDefender": "寻找公设辩护人"
             },
             "beforeArrest": {
               "heading": "被捕之前",

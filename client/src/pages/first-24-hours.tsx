@@ -360,6 +360,9 @@ export default function FirstTwentyFourHours() {
               <Link href="#phone-call">
                 <Button variant="outline" size="sm">{t('first24Hours.familyCallout.jailCallGuide')}</Button>
               </Link>
+              <Link href="/legal-aid">
+                <Button variant="outline" size="sm">{t('first24Hours.familyCallout.findDefender')}</Button>
+              </Link>
             </div>
           </div>
         </ScrollReveal>
@@ -811,9 +814,6 @@ export default function FirstTwentyFourHours() {
                 <div className="flex gap-3 flex-wrap">
                   <Link href="/?search=public-defender">
                     <Button variant="outline" size="sm">{t('first24Hours.links.findDefender')}</Button>
-                  </Link>
-                  <Link href="/case-guidance">
-                    <Button variant="outline" size="sm">{t('first24Hours.links.getGuidance')}</Button>
                   </Link>
                   <Link href="/right-to-counsel">
                     <Button variant="outline" size="sm">{t('first24Hours.links.rightToCounsel')}</Button>
