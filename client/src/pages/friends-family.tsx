@@ -1,11 +1,12 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { Users, Phone, FileText, Clock, MapPin, AlertCircle, AlertTriangle, CheckCircle } from "lucide-react";
+import { Users, Phone, FileText, Clock, MapPin, AlertCircle, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 
+import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -125,18 +126,32 @@ export default function FriendsFamily() {
                     </Alert>
 
                     <div className="grid md:grid-cols-3 gap-4">
-                      <div className="bg-muted p-4 rounded-lg">
+                      <div className="bg-muted p-4 rounded-lg flex flex-col">
                         <h4 className="font-semibold mb-2">{t('friendsFamily.step2.publicDefenderTitle')}</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground flex-1">
                           {t('friendsFamily.step2.publicDefenderDesc')}
                         </p>
+                        <Link
+                          href="/right-to-counsel"
+                          className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                        >
+                          Learn about your right to a public defender
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
                       </div>
                       
-                      <div className="bg-muted p-4 rounded-lg">
+                      <div className="bg-muted p-4 rounded-lg flex flex-col">
                         <h4 className="font-semibold mb-2">{t('friendsFamily.step2.legalAidTitle')}</h4>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground flex-1">
                           {t('friendsFamily.step2.legalAidDesc')}
                         </p>
+                        <Link
+                          href="/legal-aid"
+                          className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                        >
+                          Find legal aid organizations near you
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
                       </div>
                       
                       <div className="bg-muted p-4 rounded-lg">
