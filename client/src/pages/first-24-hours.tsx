@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Check, X, Phone, MapPin } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -201,15 +201,21 @@ interface StepProps {
   donts: string[];
   isLast?: boolean;
   id?: string;
+  highlighted?: boolean;
+  priorityLabel?: string;
   children?: React.ReactNode;
 }
 
-function Step({ number, title, timeframe, context, dos, donts, isLast, id, children }: StepProps) {
+function Step({ number, title, timeframe, context, dos, donts, isLast, id, highlighted, priorityLabel, children }: StepProps) {
   return (
     <div className="relative" id={id}>
       <div className="flex items-start gap-5">
         <div className="flex flex-col items-center flex-shrink-0">
-          <div className="w-9 h-9 bg-slate-800 dark:bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md z-10">
+          <div className={`w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md z-10 transition-colors ${
+            highlighted
+              ? 'bg-blue-600 dark:bg-blue-500 ring-2 ring-blue-400 ring-offset-2 dark:ring-offset-background'
+              : 'bg-slate-800 dark:bg-slate-700'
+          }`}>
             {number}
           </div>
           {!isLast && (
@@ -218,6 +224,11 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, child
         </div>
 
         <div className="flex-1 pb-10">
+          {highlighted && priorityLabel && (
+            <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide mb-1.5">
+              ↑ {priorityLabel}
+            </p>
+          )}
           <div className="mb-3">
             <h2 className="text-xl font-bold text-foreground">{title}</h2>
             <span className="text-xs text-muted-foreground">{timeframe}</span>
@@ -272,6 +283,33 @@ export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
   const [jurisdiction, setJurisdiction] = useState<string>("");
+  const [stageSelection, setStageSelection] = useState<'custody' | 'released' | 'arraignment' | null>(null);
+
+  // Scroll to first priority step when stage is selected
+  useEffect(() => {
+    if (!stageSelection) return;
+    const scrollTargets: Record<string, string> = {
+      custody: 'step-booking',
+      released: 'step-lawyer',
+      arraignment: 'step-lawyer',
+    };
+    const targetId = scrollTargets[stageSelection];
+    if (targetId) {
+      setTimeout(() => {
+        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    }
+  }, [stageSelection]);
+
+  // Which steps to highlight per stage selection
+  const HIGHLIGHTED: Record<string, number[]> = {
+    custody: [2, 3, 4],
+    released: [4, 5, 6],
+    arraignment: [5, 6, 7],
+  };
+  const isHighlighted = (n: number) =>
+    stageSelection != null && (HIGHLIGHTED[stageSelection]?.includes(n) ?? false);
+  const priorityLabel = t('first24Hours.stageSelector.priorityLabel');
 
   return (
     <div className="min-h-screen bg-background">
@@ -290,15 +328,197 @@ export default function FirstTwentyFourHours() {
 
       <main className="max-w-3xl mx-auto px-4 py-12 md:py-16">
 
+        {/* Calm intro */}
         <ScrollReveal>
-          <Alert className="mb-10 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+          <p className="text-base text-foreground font-medium leading-relaxed mb-6">
+            {t('first24Hours.calmIntro')}
+          </p>
+        </ScrollReveal>
+
+        {/* Family path callout */}
+        <ScrollReveal delay={0.01}>
+          <div className="mb-6 rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
+            <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-3">
+              {t('first24Hours.familyCallout.title')}
+            </p>
+            <ul className="space-y-1.5 mb-3">
+              {(['task1', 'task2', 'task3'] as const).map((key) => (
+                <li key={key} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <span className="text-blue-500 mt-0.5 flex-shrink-0">→</span>
+                  <span>{t(`first24Hours.familyCallout.${key}`)}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex gap-3 flex-wrap">
+              <Link href="/friends-family">
+                <Button variant="outline" size="sm">{t('first24Hours.familyCallout.fullGuide')}</Button>
+              </Link>
+              <Link href="#phone-call">
+                <Button variant="outline" size="sm">{t('first24Hours.familyCallout.jailCallGuide')}</Button>
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.015}>
+          <Alert className="mb-8 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
             <AlertDescription className="text-amber-800 dark:text-amber-200">
               {t('first24Hours.alert')}
             </AlertDescription>
           </Alert>
         </ScrollReveal>
 
+        {/* Stage selector */}
+        <ScrollReveal delay={0.018}>
+          <div className="mb-8 rounded-lg border border-border bg-muted/30 p-4">
+            <p className="text-sm font-semibold text-foreground mb-1">{t('first24Hours.stageSelector.prompt')}</p>
+            <p className="text-xs text-muted-foreground mb-3">{t('first24Hours.stageSelector.detail')}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {([
+                { key: 'custody', label: t('first24Hours.stageSelector.custody'), desc: t('first24Hours.stageSelector.custodyDesc') },
+                { key: 'released', label: t('first24Hours.stageSelector.released'), desc: t('first24Hours.stageSelector.releasedDesc') },
+                { key: 'arraignment', label: t('first24Hours.stageSelector.arraignment'), desc: t('first24Hours.stageSelector.arraignmentDesc') },
+              ] as const).map(({ key, label, desc }) => (
+                <button
+                  key={key}
+                  onClick={() => setStageSelection(stageSelection === key ? null : key)}
+                  className={`text-left p-3 rounded-lg border text-xs transition-all ${
+                    stageSelection === key
+                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-500'
+                      : 'border-border hover:border-muted-foreground/40 hover:bg-muted/50'
+                  }`}
+                >
+                  <p className={`font-semibold mb-0.5 ${stageSelection === key ? 'text-blue-700 dark:text-blue-300' : 'text-foreground'}`}>{label}</p>
+                  <p className="text-muted-foreground leading-tight">{desc}</p>
+                </button>
+              ))}
+            </div>
+            <div className="mt-2.5 flex items-center justify-between flex-wrap gap-2">
+              <p className="text-xs text-muted-foreground">{t('first24Hours.stageSelector.preArrestNote')}</p>
+              {stageSelection && (
+                <button onClick={() => setStageSelection(null)} className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2 flex-shrink-0">
+                  {t('first24Hours.stageSelector.clear')}
+                </button>
+              )}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Before-arrest section */}
         <ScrollReveal delay={0.02}>
+          <div id="before-arrest" className="mb-10">
+            <h2 className="text-xl font-bold text-foreground mb-1">{t('first24Hours.beforeArrest.heading')}</h2>
+            <p className="text-sm text-muted-foreground mb-4">{t('first24Hours.beforeArrest.subheading')}</p>
+            <Accordion type="single" collapsible className="w-full space-y-2">
+              {[
+                {
+                  value: 'police-talk',
+                  title: t('first24Hours.beforeArrest.policeWantToTalkTitle'),
+                  context: t('first24Hours.beforeArrest.policeWantToTalkContext'),
+                  dos: [
+                    t('first24Hours.beforeArrest.policeWantToTalkDo1'),
+                    t('first24Hours.beforeArrest.policeWantToTalkDo2'),
+                    t('first24Hours.beforeArrest.policeWantToTalkDo3'),
+                  ],
+                  donts: [
+                    t('first24Hours.beforeArrest.policeWantToTalkDont1'),
+                    t('first24Hours.beforeArrest.policeWantToTalkDont2'),
+                    t('first24Hours.beforeArrest.policeWantToTalkDont3'),
+                  ],
+                },
+                {
+                  value: 'target-letter',
+                  title: t('first24Hours.beforeArrest.targetLetterTitle'),
+                  context: t('first24Hours.beforeArrest.targetLetterContext'),
+                  dos: [
+                    t('first24Hours.beforeArrest.targetLetterDo1'),
+                    t('first24Hours.beforeArrest.targetLetterDo2'),
+                  ],
+                  donts: [
+                    t('first24Hours.beforeArrest.targetLetterDont1'),
+                    t('first24Hours.beforeArrest.targetLetterDont2'),
+                    t('first24Hours.beforeArrest.targetLetterDont3'),
+                  ],
+                },
+                {
+                  value: 'warrant',
+                  title: t('first24Hours.beforeArrest.warrantTitle'),
+                  context: t('first24Hours.beforeArrest.warrantContext'),
+                  dos: [
+                    t('first24Hours.beforeArrest.warrantDo1'),
+                    t('first24Hours.beforeArrest.warrantDo2'),
+                    t('first24Hours.beforeArrest.warrantDo3'),
+                  ],
+                  donts: [
+                    t('first24Hours.beforeArrest.warrantDont1'),
+                    t('first24Hours.beforeArrest.warrantDont2'),
+                    t('first24Hours.beforeArrest.warrantDont3'),
+                  ],
+                },
+                {
+                  value: 'detained',
+                  title: t('first24Hours.beforeArrest.detainedTitle'),
+                  context: t('first24Hours.beforeArrest.detainedContext'),
+                  dos: [
+                    t('first24Hours.beforeArrest.detainedDo1'),
+                    t('first24Hours.beforeArrest.detainedDo2'),
+                    t('first24Hours.beforeArrest.detainedDo3'),
+                  ],
+                  donts: [
+                    t('first24Hours.beforeArrest.detainedDont1'),
+                    t('first24Hours.beforeArrest.detainedDont2'),
+                    t('first24Hours.beforeArrest.detainedDont3'),
+                  ],
+                },
+              ].map(({ value, title, context, dos, donts }) => (
+                <AccordionItem key={value} value={value} className="border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left hover:no-underline py-3">
+                    <span className="font-semibold text-sm">{title}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4">
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{context}</p>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-3">
+                        <div className="flex items-center gap-2 mb-2 pb-2 border-b border-emerald-200 dark:border-emerald-800/60">
+                          <div className="w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
+                          </div>
+                          <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
+                        </div>
+                        <ul className="space-y-2">
+                          {dos.map((item, i) => (
+                            <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
+                              <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-3">
+                        <div className="flex items-center gap-2 mb-2 pb-2 border-b border-rose-200 dark:border-rose-800/60">
+                          <div className="w-4 h-4 rounded-full bg-rose-500 flex items-center justify-center flex-shrink-0">
+                            <X className="w-2.5 h-2.5 text-white" strokeWidth={3} />
+                          </div>
+                          <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
+                        </div>
+                        <ul className="space-y-2">
+                          {donts.map((item, i) => (
+                            <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
+                              <X className="w-3.5 h-3.5 text-rose-500 flex-shrink-0 mt-0.5" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.025}>
           <JurisdictionSelector
             label="See state-specific rules for your location (optional)"
             value={jurisdiction}
@@ -325,6 +545,9 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.05}>
             <Step
               number={1}
+              id="step-arrest"
+              highlighted={isHighlighted(1)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step1.title')}
               timeframe={t('first24Hours.steps.step1.timeframe')}
               context={t('first24Hours.steps.step1.context')}
@@ -359,6 +582,9 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.1}>
             <Step
               number={2}
+              id="step-booking"
+              highlighted={isHighlighted(2)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step2.title')}
               timeframe={t('first24Hours.steps.step2.timeframe')}
               context={t('first24Hours.steps.step2.context')}
@@ -388,6 +614,8 @@ export default function FirstTwentyFourHours() {
             <Step
               number={3}
               id="phone-call"
+              highlighted={isHighlighted(3)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step3.title')}
               timeframe={t('first24Hours.steps.step3.timeframe')}
               context={t('first24Hours.steps.step3.context')}
@@ -465,6 +693,9 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.2}>
             <Step
               number={4}
+              id="step-bail"
+              highlighted={isHighlighted(4)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step4.title')}
               timeframe={t('first24Hours.steps.step4.timeframe')}
               context={t('first24Hours.steps.step4.context')}
@@ -503,6 +734,9 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.25}>
             <Step
               number={5}
+              id="step-lawyer"
+              highlighted={isHighlighted(5)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step5.title')}
               timeframe={t('first24Hours.steps.step5.timeframe')}
               context={t('first24Hours.steps.step5.context')}
@@ -517,16 +751,40 @@ export default function FirstTwentyFourHours() {
                 t('first24Hours.steps.step5.dont3'),
               ]}
             >
-              <div className="flex gap-3 flex-wrap mt-2">
-                <Link href="/?search=public-defender">
-                  <Button variant="outline" size="sm">{t('first24Hours.links.findDefender')}</Button>
-                </Link>
-                <Link href="/case-guidance">
-                  <Button variant="outline" size="sm">{t('first24Hours.links.getGuidance')}</Button>
-                </Link>
-                <Link href="/right-to-counsel">
-                  <Button variant="outline" size="sm">{t('first24Hours.links.rightToCounsel')}</Button>
-                </Link>
+              <div className="space-y-4 mt-2">
+                <div className="rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
+                  <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-1.5">
+                    {t('first24Hours.steps.step5.attorneyUrgencyTitle')}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t('first24Hours.steps.step5.attorneyUrgencyBody')}
+                  </p>
+                </div>
+                <div className="flex gap-3 flex-wrap">
+                  <Link href="/?search=public-defender">
+                    <Button variant="outline" size="sm">{t('first24Hours.links.findDefender')}</Button>
+                  </Link>
+                  <Link href="/case-guidance">
+                    <Button variant="outline" size="sm">{t('first24Hours.links.getGuidance')}</Button>
+                  </Link>
+                  <Link href="/right-to-counsel">
+                    <Button variant="outline" size="sm">{t('first24Hours.links.rightToCounsel')}</Button>
+                  </Link>
+                </div>
+                {/* Item 7 — AI guidance CTA */}
+                <div className="rounded-lg border border-border bg-background p-4 text-center">
+                  <p className="text-sm font-semibold text-foreground mb-1">
+                    {t('first24Hours.guidanceCta.title')}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                    {t('first24Hours.guidanceCta.body')}
+                  </p>
+                  <Link href="/case-guidance">
+                    <Button size="sm" className="bg-slate-800 hover:bg-slate-700 text-white dark:bg-slate-700 dark:hover:bg-slate-600">
+                      {t('first24Hours.guidanceCta.button')} →
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </Step>
           </ScrollReveal>
@@ -535,6 +793,9 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.3}>
             <Step
               number={6}
+              id="step-arraignment"
+              highlighted={isHighlighted(6)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step6.title')}
               timeframe={t('first24Hours.steps.step6.timeframe')}
               context={t('first24Hours.steps.step6.context')}
@@ -557,6 +818,9 @@ export default function FirstTwentyFourHours() {
           <ScrollReveal delay={0.35}>
             <Step
               number={7}
+              id="step-ongoing"
+              highlighted={isHighlighted(7)}
+              priorityLabel={priorityLabel}
               title={t('first24Hours.steps.step7.title')}
               timeframe={t('first24Hours.steps.step7.timeframe')}
               context={t('first24Hours.steps.step7.context')}

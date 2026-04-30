@@ -577,6 +577,20 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </button>
+
+                  <Link href="/first-24-hours#before-arrest" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-slate-400 dark:hover:border-slate-500 transition-all cursor-pointer group border-slate-200 dark:border-slate-700">
+                      <CardContent className="p-4 flex items-start gap-3">
+                        <div className="w-9 h-9 bg-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <AlertTriangle className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm text-foreground group-hover:text-slate-700 dark:group-hover:text-slate-300">Police want to talk to me / I may be arrested soon</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">What to do before an arrest happens</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </div>
               </>
             )}

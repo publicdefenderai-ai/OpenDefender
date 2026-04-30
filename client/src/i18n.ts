@@ -4828,6 +4828,68 @@ i18n
               "line5": "\"Don't talk to any police or detectives until there's a lawyer involved. I can't say anything else right now.\"",
               "line6": "\"I love you. I'll be okay. Go make those calls.\""
             },
+            "calmIntro": "You're in the right place. The single most important thing right now: say nothing to police, and make one phone call to a family member or attorney. Everything else on this page explains what comes next.",
+            "stageSelector": {
+              "prompt": "Where are you right now?",
+              "detail": "Pick your situation and we'll highlight the steps that matter most. You can still read everything.",
+              "custody": "Still in custody",
+              "custodyDesc": "Recently arrested, not yet released",
+              "released": "Released on bail or OR",
+              "releasedDesc": "Out, waiting for a court date",
+              "arraignment": "Court date coming soon",
+              "arraignmentDesc": "Arraignment in the next few days",
+              "priorityLabel": "Priority for your situation",
+              "clear": "Show all steps equally",
+              "preArrestNote": "Not arrested yet? See below for what to do if police want to speak with you."
+            },
+            "guidanceCta": {
+              "title": "Want guidance for your specific situation?",
+              "body": "Once you have a sense of the process, this tool can walk you through what to expect based on your charges and state.",
+              "button": "Get case-specific guidance"
+            },
+            "familyCallout": {
+              "title": "Are you here to help a family member?",
+              "task1": "Find out where they're being held",
+              "task2": "Start the search for a lawyer or public defender",
+              "task3": "Learn what to say — and not say — on jail calls",
+              "fullGuide": "Full family guide",
+              "jailCallGuide": "Jail call guide"
+            },
+            "beforeArrest": {
+              "heading": "Before You're Arrested",
+              "subheading": "If police want to speak with you, you are under investigation, or you know a warrant has been issued — read this first.",
+              "policeWantToTalkTitle": "Police want to question you",
+              "policeWantToTalkContext": "You have no obligation to answer questions beyond identifying yourself in most states. Many people who speak to police to \"clear things up\" unintentionally give investigators exactly what they need.",
+              "policeWantToTalkDo1": "Say: \"I would like a lawyer before speaking with you.\" Then stop talking.",
+              "policeWantToTalkDo2": "Call a criminal defense attorney before any voluntary interview — even one described as routine.",
+              "policeWantToTalkDo3": "Remain calm and polite while exercising your rights.",
+              "policeWantToTalkDont1": "Don't explain, provide context, or try to help investigators. Everything is being recorded.",
+              "policeWantToTalkDont2": "Don't agree to a voluntary interview at the station, even if told you're not a suspect.",
+              "policeWantToTalkDont3": "Don't assume staying silent makes you look guilty. It doesn't — and it's your right.",
+              "targetLetterTitle": "You received a target letter or think you're under investigation",
+              "targetLetterContext": "A target letter means a grand jury is investigating you as a likely defendant. You have more options now than after charges are filed — but the window is closing.",
+              "targetLetterDo1": "Contact a criminal defense attorney immediately. Do not wait.",
+              "targetLetterDo2": "Stop discussing the subject matter with anyone — friends, family, or colleagues.",
+              "targetLetterDont1": "Don't contact the prosecutor or investigators directly.",
+              "targetLetterDont2": "Don't destroy or delete anything related to the investigation — that can be charged separately as obstruction.",
+              "targetLetterDont3": "Don't assume retaining counsel makes you look guilty. It is your right and your best protection.",
+              "warrantTitle": "There is a warrant for your arrest",
+              "warrantContext": "If you know a warrant exists, you still have options. Turning yourself in on your own terms — with an attorney — typically produces better outcomes than being arrested unexpectedly.",
+              "warrantDo1": "Contact a criminal defense attorney before doing anything.",
+              "warrantDo2": "Ask your attorney to arrange a coordinated surrender. This often allows for a bail argument the same day.",
+              "warrantDo3": "Gather information: what the charges are, which court issued the warrant, what bail is likely.",
+              "warrantDont1": "Don't flee or evade the warrant. It compounds charges and makes bail much harder.",
+              "warrantDont2": "Don't go to the police station alone without an attorney.",
+              "warrantDont3": "Don't discuss the underlying matter with anyone until you have legal counsel.",
+              "detainedTitle": "You're being stopped or detained but not yet arrested",
+              "detainedContext": "Detention is not arrest. You have rights at both stages — but they work differently.",
+              "detainedDo1": "Ask clearly: \"Am I free to go?\" If yes, calmly leave.",
+              "detainedDo2": "If not free to go: \"I am invoking my right to remain silent\" and \"I want a lawyer.\"",
+              "detainedDo3": "Comply physically with lawful orders. Do not resist — challenge the stop in court later.",
+              "detainedDont1": "Don't answer questions about your whereabouts, who you were with, or what you were doing.",
+              "detainedDont2": "Don't consent to a search of your person, vehicle, or belongings.",
+              "detainedDont3": "Don't physically resist, even if you believe the stop is unlawful."
+            },
             "steps": {
               "step1": {
                 "title": "At the Moment of Arrest",
@@ -4902,7 +4964,9 @@ i18n
                 "do3": "When you do speak with your attorney, tell them everything. Those conversations are protected by attorney-client privilege.",
                 "dont1": "Don't waive your right to counsel. Representing yourself in a criminal case is almost never a good idea.",
                 "dont2": "Don't delay. The earlier an attorney is involved, the more they can do.",
-                "dont3": "Don't make any deals or statements to prosecutors without a lawyer present."
+                "dont3": "Don't make any deals or statements to prosecutors without a lawyer present.",
+                "attorneyUrgencyTitle": "Why today — not next week — matters",
+                "attorneyUrgencyBody": "An attorney involved at the precinct, before charges are formally filed, can sometimes speak with investigators and influence what gets charged — or whether charges are filed at all. An attorney who enters at arraignment no longer has that option. Evidence gets deleted, charging decisions lock in, and the window for early intervention closes. The earlier counsel is retained, the wider the range of possible outcomes."
               },
               "step6": {
                 "title": "Arraignment: Your First Court Appearance",
@@ -9971,6 +10035,68 @@ i18n
               "line5": "«No hables con la policía ni con ningún detective hasta que haya un abogado involucrado. No puedo decir nada más ahora mismo.»",
               "line6": "«Te quiero. Estaré bien. Ve a hacer esas llamadas.»"
             },
+            "calmIntro": "Está en el lugar correcto. Lo más importante ahora mismo: no diga nada a la policía y haga una sola llamada a un familiar o abogado. Todo lo demás en esta página explica qué sigue.",
+            "stageSelector": {
+              "prompt": "¿En qué situación se encuentra ahora?",
+              "detail": "Elija su situación y resaltaremos los pasos más importantes para usted. Puede leer todo de todos modos.",
+              "custody": "Aún bajo custodia",
+              "custodyDesc": "Recién arrestado, aún no liberado",
+              "released": "Liberado bajo fianza o en libertad",
+              "releasedDesc": "Fuera, esperando una fecha en el tribunal",
+              "arraignment": "Comparecencia próxima",
+              "arraignmentDesc": "Lectura de cargos en los próximos días",
+              "priorityLabel": "Prioridad para su situación",
+              "clear": "Mostrar todos los pasos por igual",
+              "preArrestNote": "¿Aún no ha sido arrestado? Vea a continuación qué hacer si la policía quiere hablar con usted."
+            },
+            "guidanceCta": {
+              "title": "¿Desea orientación para su situación específica?",
+              "body": "Una vez que comprenda el proceso, esta herramienta puede explicarle qué esperar según sus cargos y estado.",
+              "button": "Obtener orientación para su caso"
+            },
+            "familyCallout": {
+              "title": "¿Está aquí para ayudar a un familiar?",
+              "task1": "Averigüe dónde está detenido",
+              "task2": "Empiece a buscar un abogado o defensor público",
+              "task3": "Aprenda qué decir — y qué no decir — en las llamadas desde la cárcel",
+              "fullGuide": "Guía completa para familias",
+              "jailCallGuide": "Guía de llamadas desde la cárcel"
+            },
+            "beforeArrest": {
+              "heading": "Antes de Ser Arrestado",
+              "subheading": "Si la policía quiere hablar con usted, está bajo investigación o sabe que existe una orden de arresto — lea esto primero.",
+              "policeWantToTalkTitle": "La policía quiere interrogarlo",
+              "policeWantToTalkContext": "En la mayoría de los estados no está obligado a responder preguntas más allá de identificarse. Muchas personas que hablan con la policía para «aclarar las cosas» proporcionan involuntariamente exactamente lo que los investigadores necesitan.",
+              "policeWantToTalkDo1": "Diga: «Quisiera hablar con un abogado antes de responder preguntas.» Luego, guarde silencio.",
+              "policeWantToTalkDo2": "Llame a un abogado de defensa penal antes de cualquier entrevista voluntaria, aunque la describan como rutinaria.",
+              "policeWantToTalkDo3": "Manténgase calmado y cortés mientras ejerce sus derechos.",
+              "policeWantToTalkDont1": "No explique, no dé contexto ni intente ayudar a los investigadores. Todo queda registrado.",
+              "policeWantToTalkDont2": "No acepte una entrevista voluntaria en la comisaría, aunque le digan que no es sospechoso.",
+              "policeWantToTalkDont3": "No asuma que guardar silencio lo hace parecer culpable. No es así — y es su derecho.",
+              "targetLetterTitle": "Recibió una carta de objetivo o cree que está bajo investigación",
+              "targetLetterContext": "Una carta de objetivo significa que un gran jurado lo investiga como posible acusado. Tiene más opciones ahora que después de que se presenten los cargos, pero la ventana se está cerrando.",
+              "targetLetterDo1": "Contacte a un abogado de defensa penal de inmediato. No espere.",
+              "targetLetterDo2": "Deje de hablar sobre el asunto con cualquier persona: amigos, familiares o colegas.",
+              "targetLetterDont1": "No contacte directamente al fiscal o a los investigadores.",
+              "targetLetterDont2": "No destruya ni elimine nada relacionado con la investigación — eso puede cargarse por separado como obstrucción.",
+              "targetLetterDont3": "No asuma que contratar a un abogado lo hace parecer culpable. Es su derecho y su mejor protección.",
+              "warrantTitle": "Existe una orden de arresto en su contra",
+              "warrantContext": "Si sabe que existe una orden de arresto, todavía tiene opciones. Entregarse en sus propios términos — con un abogado — generalmente produce mejores resultados que ser arrestado inesperadamente.",
+              "warrantDo1": "Contacte a un abogado de defensa penal antes de hacer cualquier cosa.",
+              "warrantDo2": "Pida a su abogado que organice una entrega coordinada. Esto a menudo permite argumentar una fianza el mismo día.",
+              "warrantDo3": "Reúna información: cuáles son los cargos, qué tribunal emitió la orden, qué fianza es probable.",
+              "warrantDont1": "No huya ni evada la orden. Complica los cargos y dificulta mucho más la fianza.",
+              "warrantDont2": "No vaya a la comisaría solo sin un abogado.",
+              "warrantDont3": "No hable sobre el asunto subyacente con nadie hasta tener asesoría legal.",
+              "detainedTitle": "Lo están deteniendo pero aún no lo han arrestado",
+              "detainedContext": "La detención no es un arresto. Tiene derechos en ambas situaciones, pero funcionan de manera diferente.",
+              "detainedDo1": "Pregunte claramente: «¿Soy libre de irme?» Si la respuesta es sí, retírese con calma.",
+              "detainedDo2": "Si no es libre de irse: «Estoy invocando mi derecho a guardar silencio» y «Quiero un abogado».",
+              "detainedDo3": "Cumpla físicamente con las órdenes legales. No se resista — impugne la detención en el tribunal después.",
+              "detainedDont1": "No responda preguntas sobre su paradero, con quién estaba ni qué hacía.",
+              "detainedDont2": "No autorice un registro de su persona, vehículo o pertenencias.",
+              "detainedDont3": "No se resista físicamente, aunque crea que la detención es ilegal."
+            },
             "steps": {
               "step1": {
                 "title": "En el Momento del Arresto",
@@ -10045,7 +10171,9 @@ i18n
                 "do3": "Cuando hable con su abogado, cuéntele todo. Esas conversaciones están protegidas por el privilegio abogado-cliente.",
                 "dont1": "No renuncie a su derecho a un abogado. Representarse a sí mismo en un caso penal casi nunca es una buena idea.",
                 "dont2": "No se demore. Cuanto antes participe un abogado, más puede hacer.",
-                "dont3": "No haga ningún trato ni declaración a los fiscales sin un abogado presente."
+                "dont3": "No haga ningún trato ni declaración a los fiscales sin un abogado presente.",
+                "attorneyUrgencyTitle": "Por qué hoy — y no la próxima semana — importa",
+                "attorneyUrgencyBody": "Un abogado involucrado en la comisaría, antes de que se presenten formalmente los cargos, a veces puede hablar con los investigadores e influir en qué se carga — o si se presentan cargos en absoluto. Un abogado que interviene en la lectura de cargos ya no tiene esa opción. Las pruebas se eliminan, las decisiones de acusación se consolidan y la ventana para una intervención temprana se cierra. Cuanto antes se contrate un abogado, más amplio es el rango de resultados posibles."
               },
               "step6": {
                 "title": "Lectura de Cargos: Su Primera Comparecencia ante el Tribunal",
@@ -15115,6 +15243,68 @@ i18n
               "line5": "「在律师介入之前不要和警察或侦探说话。我现在不能说更多了。」",
               "line6": "「我爱你。我会没事的。去打那些电话吧。」"
             },
+            "calmIntro": "您找对地方了。现在最重要的一件事：不要对警察说任何话，并打一个电话给家人或律师。本页其余内容将解释接下来该怎么做。",
+            "stageSelector": {
+              "prompt": "您现在处于哪个阶段？",
+              "detail": "选择您的情况，我们将突出显示对您最重要的步骤。您仍然可以阅读所有内容。",
+              "custody": "仍处于羁押中",
+              "custodyDesc": "刚被捕，尚未获释",
+              "released": "已获保释或无条件释放",
+              "releasedDesc": "已出去，等待开庭日期",
+              "arraignment": "即将出庭",
+              "arraignmentDesc": "起诉聆讯在未来几天内",
+              "priorityLabel": "您情况的优先事项",
+              "clear": "同等显示所有步骤",
+              "preArrestNote": "尚未被捕？请参阅下方，了解如果警察想与您交谈时该怎么做。"
+            },
+            "guidanceCta": {
+              "title": "想了解您具体情况的指导？",
+              "body": "了解整个流程后，您可以根据您的指控和所在州，进一步了解可以预期什么。",
+              "button": "获取针对您案件的指导"
+            },
+            "familyCallout": {
+              "title": "您是来帮助家人的吗？",
+              "task1": "查明他们被关押在哪里",
+              "task2": "开始寻找律师或公设辩护人",
+              "task3": "了解在监狱电话中该说什么——以及不该说什么",
+              "fullGuide": "家属完整指南",
+              "jailCallGuide": "监狱电话指南"
+            },
+            "beforeArrest": {
+              "heading": "被捕之前",
+              "subheading": "如果警察想与您交谈、您正处于调查之中，或您知道已有逮捕令——请先阅读这部分。",
+              "policeWantToTalkTitle": "警察想向您问话",
+              "policeWantToTalkContext": "在大多数州，您没有义务回答超出表明身份之外的问题。许多人与警察交谈以为能「说清楚」，却在无意中提供了调查人员所需的证据。",
+              "policeWantToTalkDo1": "说：「我希望在接受问询之前先与律师交谈。」然后停止说话。",
+              "policeWantToTalkDo2": "在任何自愿接受的问询之前——即使被描述为例行程序——也要先致电刑事辩护律师。",
+              "policeWantToTalkDo3": "在行使权利的同时保持冷静和礼貌。",
+              "policeWantToTalkDont1": "不要解释、提供背景或试图「配合」调查人员。所有内容都在被记录。",
+              "policeWantToTalkDont2": "不要同意去警察局接受自愿问询，即使对方告诉您不是嫌疑人。",
+              "policeWantToTalkDont3": "不要认为保持沉默会让您显得有罪。事实并非如此——而且这是您的权利。",
+              "targetLetterTitle": "您收到了目标信或认为您正在接受调查",
+              "targetLetterContext": "目标信意味着大陪审团正将您作为可能的被告展开调查。您现在拥有的选择比正式起诉后要多——但时间窗口正在缩小。",
+              "targetLetterDo1": "立即联系刑事辩护律师。不要等待。",
+              "targetLetterDo2": "停止与任何人——包括朋友、家人或同事——讨论相关事项。",
+              "targetLetterDont1": "不要直接联系检察官或调查人员。",
+              "targetLetterDont2": "不要销毁或删除任何与调查相关的内容——这可能被单独指控为妨碍司法。",
+              "targetLetterDont3": "不要认为聘请律师会让您显得有罪。这是您的权利，也是最好的保护。",
+              "warrantTitle": "有针对您的逮捕令",
+              "warrantContext": "如果您知道存在逮捕令，您仍然有选择。在自己的条件下——由律师陪同——主动投案，通常比意外被捕产生更好的结果。",
+              "warrantDo1": "在采取任何行动之前，先联系刑事辩护律师。",
+              "warrantDo2": "请律师安排协调投案。这通常可以在当天进行保释申辩。",
+              "warrantDo3": "收集信息：指控内容是什么、哪个法院签发了逮捕令、可能的保释条件是什么。",
+              "warrantDont1": "不要逃跑或回避逮捕令。这会使指控更加复杂，保释也会更加困难。",
+              "warrantDont2": "不要独自前往警察局，没有律师陪同。",
+              "warrantDont3": "在获得法律顾问之前，不要与任何人讨论与案件相关的内容。",
+              "detainedTitle": "您被拦截或羁押，但尚未被逮捕",
+              "detainedContext": "羁押与逮捕不同。两种情况下您都有权利——但运作方式不同。",
+              "detainedDo1": "清楚询问：「我可以离开吗？」如果可以，请冷静离开。",
+              "detainedDo2": "如果不能离开：「我援引保持沉默的权利」和「我要一名律师」。",
+              "detainedDo3": "在身体上配合合法命令。不要抵抗——事后在法庭上对拦截提出质疑。",
+              "detainedDont1": "不要回答关于您的行踪、您与谁在一起或您在做什么的问题。",
+              "detainedDont2": "不要同意对您的人身、车辆或随身物品进行搜查。",
+              "detainedDont3": "即使您认为拦截是非法的，也不要进行身体抵抗。"
+            },
             "steps": {
               "step1": {
                 "title": "被捕时",
@@ -15189,7 +15379,9 @@ i18n
                 "do3": "当您与律师交谈时，如实告知一切。这些对话受律师-委托人特权保护。",
                 "dont1": "不要放弃您获得律师帮助的权利。在刑事案件中代表自己几乎从来都不是个好主意。",
                 "dont2": "不要拖延。律师介入越早，能做的事情越多。",
-                "dont3": "没有律师在场，不要与检察官达成任何协议或作出任何陈述。"
+                "dont3": "没有律师在场，不要与检察官达成任何协议或作出任何陈述。",
+                "attorneyUrgencyTitle": "为什么是今天——而不是下周——很重要",
+                "attorneyUrgencyBody": "在警察局阶段、正式提出指控之前介入的律师，有时可以与调查人员沟通，从而影响所提指控的内容——乃至是否提出指控。在起诉时才参与的律师已不再拥有这一选项。证据被删除，起诉决定已定，早期干预的窗口关闭。律师越早参与，可能的结果范围就越广。"
               },
               "step6": {
                 "title": "起诉：您的首次法庭出庭",
