@@ -58,10 +58,14 @@ const US_STATES = [
 
 interface JurisdictionSelectorProps {
   label?: string;
+  value?: string;
+  onChange?: (value: string) => void;
 }
 
-export function JurisdictionSelector({ label }: JurisdictionSelectorProps) {
-  const { jurisdiction, setJurisdiction } = useJurisdiction();
+export function JurisdictionSelector({ label, value: valueProp, onChange }: JurisdictionSelectorProps) {
+  const { jurisdiction: hookJurisdiction, setJurisdiction: hookSetJurisdiction } = useJurisdiction();
+  const jurisdiction = valueProp !== undefined ? valueProp : hookJurisdiction;
+  const setJurisdiction = onChange ?? hookSetJurisdiction;
 
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-2 py-3">

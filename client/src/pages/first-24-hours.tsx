@@ -11,7 +11,6 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
 import { LegalTerm } from "@/components/ui/legal-term";
-import { useJurisdiction } from "@/hooks/use-jurisdiction";
 import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -272,7 +271,7 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, child
 export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
-  const { jurisdiction } = useJurisdiction();
+  const [jurisdiction, setJurisdiction] = useState<string>("");
 
   return (
     <div className="min-h-screen bg-background">
@@ -300,7 +299,11 @@ export default function FirstTwentyFourHours() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.02}>
-          <JurisdictionSelector label="See state-specific rules for your location (optional)" />
+          <JurisdictionSelector
+            label="See state-specific rules for your location (optional)"
+            value={jurisdiction}
+            onChange={setJurisdiction}
+          />
         </ScrollReveal>
 
         <ScrollReveal delay={0.03}>
