@@ -330,9 +330,12 @@ export default function FirstTwentyFourHours() {
 
         {/* Calm intro */}
         <ScrollReveal>
-          <p className="text-base text-foreground font-medium leading-relaxed mb-6">
-            {t('first24Hours.calmIntro')}
-          </p>
+          <div className="mb-6 rounded-xl border border-teal-200/70 dark:border-teal-800/30 bg-gradient-to-r from-teal-50 to-sky-50 dark:from-teal-950/20 dark:to-sky-950/10 p-5 flex items-start gap-3 shadow-sm">
+            <Shield className="h-5 w-5 text-teal-600 dark:text-teal-400 mt-0.5 flex-shrink-0" />
+            <p className="text-base text-foreground/90 font-medium leading-relaxed">
+              {t('first24Hours.calmIntro')}
+            </p>
+          </div>
         </ScrollReveal>
 
         {/* Family path callout */}
@@ -382,10 +385,10 @@ export default function FirstTwentyFourHours() {
                 <button
                   key={key}
                   onClick={() => setStageSelection(stageSelection === key ? null : key)}
-                  className={`text-left p-3 rounded-lg border text-xs transition-all ${
+                  className={`text-left p-3 rounded-lg border text-xs transition-all cursor-pointer ${
                     stageSelection === key
-                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-500'
-                      : 'border-border hover:border-muted-foreground/40 hover:bg-muted/50'
+                      ? 'border-blue-500 bg-blue-100 dark:bg-blue-900/30 dark:border-blue-500 shadow-sm'
+                      : 'border-blue-200/80 dark:border-blue-800/50 bg-blue-50/70 dark:bg-blue-950/20 hover:border-blue-400/70 dark:hover:border-blue-600/60 hover:bg-blue-100/60 dark:hover:bg-blue-900/20 shadow-sm'
                   }`}
                 >
                   <p className={`font-semibold mb-0.5 ${stageSelection === key ? 'text-blue-700 dark:text-blue-300' : 'text-foreground'}`}>{label}</p>
