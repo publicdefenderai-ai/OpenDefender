@@ -268,6 +268,12 @@ i18n
             "startHere": "Start Here",
             "practicalSteps": "Practical steps",
             "helpfulResources": "Helpful Resources",
+            "startHereCard": {
+              "heading": "Not sure where to start?",
+              "callout": "Call or text 211",
+              "calloutDesc": "211 connects you to local services for housing, food, health care, and benefits — free, 24/7, in every state. It's the fastest way to find what's available near you.",
+              "eligibilityNote": "Some programs ask about open cases or prior convictions. It's worth a call to ask — many are more flexible than their intake staff first suggests."
+            },
             "relatedResources": "Related Resources",
             "visitWebsite": "Visit website",
             "free": "Free",
@@ -510,6 +516,35 @@ i18n
                 "tip3": "If you receive a bill you can't pay, contact the court immediately rather than ignoring it",
                 "tip4": "Ask your attorney about expungement options that might help with future employment and housing"
               },
+              "benefits": {
+                "sectionTitle": "What happens to your benefits when you're arrested",
+                "sectionSubtitle": "An arrest can suspend or end benefits you depend on. Acting quickly after release can often preserve or restore them.",
+                "snap": {
+                  "name": "SNAP (Food Assistance)",
+                  "what": "SNAP is typically suspended during incarceration and restored after release — it is not automatically terminated. You must re-apply or request reinstatement.",
+                  "action": "Contact your local SNAP office as soon as possible after release. The reinstatement window varies by state. Call 211 if you're unsure who to call."
+                },
+                "medicaid": {
+                  "name": "Medicaid",
+                  "what": "Medicaid is suspended during incarceration but can be reinstated after release. Many people miss the reinstatement window and lose coverage permanently — this is one of the most common avoidable post-release losses.",
+                  "action": "Contact your state Medicaid office or marketplace within 30 days of release. If your state expanded Medicaid under the ACA, you may be able to re-enroll at any time."
+                },
+                "tanf": {
+                  "name": "TANF (Cash Assistance)",
+                  "what": "Federal law bans lifetime TANF receipt for people convicted of certain drug felonies, though many states have opted out of this ban. Your eligibility depends on your state and the nature of your conviction.",
+                  "action": "Call 211 or your local Department of Social Services to confirm your state's rules. Do not assume you are ineligible without checking."
+                },
+                "socialSecurity": {
+                  "name": "Social Security, SSI, and SSDI",
+                  "what": "Benefits are suspended after 30 consecutive days of incarceration but can be reinstated after release. SSA will eventually find out through databases — proactive notification avoids overpayments you will owe back.",
+                  "action": "Notify your local Social Security office before or immediately after release. Bring your release documents. Reinstatement can take several weeks, so start early."
+                },
+                "banking": {
+                  "name": "Banking access",
+                  "what": "If you lost access to a bank account, or never had one, direct deposit for benefits and employment requires a bank account in most cases.",
+                  "action": "Community credit unions and many banks offer 'second chance' checking accounts for people with past financial issues. Call 211 to find one near you."
+                }
+              },
               "courtFees": {
                 "sectionTitle": "Court Fees & Fines",
                 "stateSelector": {
@@ -644,6 +679,74 @@ i18n
                 "tip3": "Eat before you go — you may not be able to leave the courtroom once proceedings start",
                 "tip4": "Turn off your phone completely before entering the courtroom, not just silence it",
                 "tip5": "If you feel overwhelmed, it's okay to ask the judge if you can have a moment to compose yourself"
+              },
+              "requirements": {
+                "sectionTitle": "What may be required of you",
+                "sectionSubtitle": "Judges often attach conditions to bail, diversion, or sentences. These sections explain how to meet them correctly — choosing the wrong program is a common and costly mistake.",
+                "courtOrdered": {
+                  "title": "Court-ordered programs",
+                  "context": "A judge may require you to complete a program as a condition of bail, diversion, or sentencing — DUI education, anger management, domestic violence intervention, parenting classes, and others. The critical detail: the program must be court-approved. Completing a non-approved program does not satisfy the requirement.",
+                  "verifyTitle": "How to verify a program is approved",
+                  "verifySteps": [
+                    "Call the court clerk's office and ask specifically: 'Is [program name] approved by this court for [your charge type]?' Get the answer in writing if possible.",
+                    "Ask your attorney or public defender to confirm before you enroll — this is a quick check they can do.",
+                    "Do not rely only on the program's own claim that they are court-approved. Verify directly with the court."
+                  ],
+                  "enrollTitle": "Questions to ask when you call to enroll",
+                  "enrollQuestions": [
+                    "Are you currently accepting new participants?",
+                    "What is the cost, and do you offer sliding-scale fees or waivers?",
+                    "How do you document and report completion to the court?",
+                    "What happens if I miss a session?"
+                  ],
+                  "completionTitle": "Completing the program",
+                  "completionNote": "Most programs issue a certificate of completion. Your attorney typically files this with the court — confirm with them that this has been done. Keep a copy for yourself."
+                },
+                "communityService": {
+                  "title": "Community service",
+                  "context": "Community service hours are a common requirement in diversion programs, plea deals, and sentences. Hours served at non-qualifying organizations will not count toward your requirement.",
+                  "findTitle": "How to find qualifying programs",
+                  "findSteps": [
+                    "Ask your probation officer or the court clerk for a list of court-approved organizations in your area.",
+                    "Your public defender or attorney can also request this list.",
+                    "If you find an organization on your own, confirm with the court or your attorney before starting."
+                  ],
+                  "docsTitle": "Documentation you will need",
+                  "docsNote": "Most courts require a signed letter from the organization on their letterhead confirming the dates, hours, and type of work completed. Ask for this letter before you leave on your last day — it is much harder to get later.",
+                  "turnedAwayNote": "If an organization cannot accept you because of your case or record, ask if they know of another program that can. Many community service providers have experience with court-mandated participants."
+                },
+                "propertyRetrieval": {
+                  "title": "Getting your property back",
+                  "context": "After arrest, your personal belongings — phone, wallet, keys, cash, and ID — are inventoried and held at the evidence unit of the arresting precinct. They are not held at the jail or courthouse. Many people do not know where to go, and some property is lost permanently because no one asked for it.",
+                  "steps": [
+                    "Call the evidence or property unit at the specific precinct where you were arrested. This is a different number from the main precinct line.",
+                    "Have your case number or booking number ready. If you don't have it, give your full legal name and the date of arrest.",
+                    "Ask what identification you need to bring to pick up your property. A state ID or passport is usually required.",
+                    "Ask about the process for any cash that was taken — this often requires a separate form or request."
+                  ],
+                  "carTitle": "If your vehicle was towed",
+                  "carNote": "Contact the towing company directly — not the precinct. The police can tell you which company towed the vehicle. Storage fees accumulate daily; act quickly to avoid losing the vehicle.",
+                  "missingNote": "If property is missing or damaged, file a formal complaint with the precinct in writing as soon as possible. Keep a copy."
+                },
+                "idReplacement": {
+                  "title": "Replacing your ID and documents",
+                  "context": "Your state ID or driver's license may have been taken at arrest, lost, or expired. Many services — shelters, benefit programs, job applications, and banking — require a valid ID. Replacing it early removes a barrier to almost everything else.",
+                  "items": [
+                    {
+                      "name": "State ID or driver's license",
+                      "detail": "Visit your state's Department of Motor Vehicles (DMV) in person or online. Typical cost is $10–$30. Many states waive this fee if you can show financial hardship — ask specifically about a fee waiver when you call."
+                    },
+                    {
+                      "name": "Social Security card",
+                      "detail": "Replacement is free. Apply at ssa.gov or visit your local Social Security office. You can replace up to 3 cards per year and 10 in a lifetime."
+                    },
+                    {
+                      "name": "Birth certificate",
+                      "detail": "Contact the vital records office in the state where you were born. Fees vary. Some legal aid organizations can help cover the cost if money is a barrier."
+                    }
+                  ],
+                  "helpNote": "If cost is a barrier to getting your ID, call 211 — local organizations sometimes help cover the fee or provide transportation to the DMV."
+                }
               }
             },
             "mentalHealth": {
@@ -773,9 +876,17 @@ i18n
                   "title": "Understand what happens to medications upon arrest",
                   "description": "You typically cannot bring personal medications into a jail — they must go through the jail pharmacy or be provided by family through official channels. Your attorney can help you understand what to expect and advocate for your medication continuity.",
                   "priority": "medium"
+                },
+                "emergencyPhone": {
+                  "title": "Get a free phone if you've lost yours",
+                  "description": "The federal Lifeline program provides free or low-cost phone service to people who qualify based on income or participation in certain government programs. A phone is essential for reaching your attorney, attending court, and staying in contact with family. Apply at lifelinesupport.org or call 1-800-234-9473.",
+                  "priority": "low"
                 }
               },
               "resources": {
+                "lifeline": {
+                  "description": "Federal program providing free or discounted phone service to people who qualify based on income or enrollment in Medicaid, SNAP, or other assistance programs. Apply at lifelinesupport.org."
+                },
                 "samhsa": {
                   "description": "Free, confidential 24/7 helpline for substance use and mental health information and treatment referrals. Available in English and Spanish."
                 },
@@ -1719,8 +1830,8 @@ i18n
                     "description": "Eviction risk, lease issues, housing stability"
                   },
                   "finances": {
-                    "label": "Finances",
-                    "description": "Legal costs, fines, lost income"
+                    "label": "Finances & Benefits",
+                    "description": "Legal costs, fines, benefits, and financial recovery"
                   },
                   "transportation": {
                     "label": "Transportation",
@@ -4818,7 +4929,9 @@ i18n
               "fullCounselGuide": "Full Right-to-Counsel Guide",
               "caseTimeline": "Full Case Timeline",
               "getGuidance": "Get Personalized Guidance",
-              "findDefender": "Find a Public Defender"
+              "findDefender": "Find a Public Defender",
+              "courtLogistics": "Court & Legal in Life Support",
+              "lifeSupport": "Life Support"
             },
             "script": {
               "line1": "\"Hey, it's me. I'm okay, but I've been arrested.\"",
@@ -4920,7 +5033,8 @@ i18n
                 "dont2": "Don't sign anything you don't understand. You can ask what a form is for.",
                 "dont3": "Don't assume booking staff are neutral. Everything is documented.",
                 "dont4": "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
-                "dont5": "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first."
+                "dont5": "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
+                "propertyNote": "Before or during booking, try to note everything taken from you: phone, wallet, ID, keys, and any cash. Property is held at the evidence unit of the arresting precinct — not the jail. The Court & Legal section of our Life Support guide explains exactly how to retrieve it."
               },
               "step3": {
                 "title": "Your First Phone Call",
@@ -4992,7 +5106,10 @@ i18n
                 "dont1": "Don't contact any alleged victims or witnesses, even to apologize or explain.",
                 "dont2": "Don't post anything about your case on social media. Prosecutors monitor this.",
                 "dont3": "Don't discuss your case with family or friends. Prosecutors can subpoena them to testify about what you said.",
-                "dont4": "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome."
+                "dont4": "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome.",
+                "supportBridge": "Being arrested affects more than just the legal case. Housing, benefits, employment, and family stability are often disrupted at the same time — and court orders may require you to complete specific classes or community service. The Life Support section of this site covers all of it.",
+                "supportBridgeLink": "Go to Life Support",
+                "twoOneBridge": "For local services near you, call or text 211 — free and available 24/7."
               }
             }
           },
@@ -5477,6 +5594,12 @@ i18n
             "startHere": "Comience Aquí",
             "practicalSteps": "Pasos prácticos",
             "helpfulResources": "Recursos Útiles",
+            "startHereCard": {
+              "heading": "¿No sabe por dónde empezar?",
+              "callout": "Llame o envíe un mensaje al 211",
+              "calloutDesc": "El 211 le conecta con servicios locales de vivienda, alimentos, atención médica y beneficios — gratuito, disponible 24/7, en todo el país. Es la forma más rápida de encontrar lo que hay disponible cerca de usted.",
+              "eligibilityNote": "Algunos programas preguntan sobre casos abiertos o condenas previas. Vale la pena llamar para preguntar — muchos son más flexibles de lo que el personal de admisión sugiere inicialmente."
+            },
             "relatedResources": "Recursos Relacionados",
             "visitWebsite": "Visitar sitio web",
             "free": "Gratis",
@@ -5719,6 +5842,35 @@ i18n
                 "tip3": "Si recibe una factura que no puede pagar, contacte a la corte inmediatamente en lugar de ignorarla",
                 "tip4": "Pregunte a su abogado sobre opciones de eliminación de antecedentes que podrían ayudar con empleo y vivienda futuros"
               },
+              "benefits": {
+                "sectionTitle": "Qué pasa con sus beneficios cuando es arrestado",
+                "sectionSubtitle": "Un arresto puede suspender o terminar los beneficios de los que depende. Actuar rápidamente después de su liberación a menudo puede preservarlos o restaurarlos.",
+                "snap": {
+                  "name": "SNAP (Asistencia Alimentaria)",
+                  "what": "El SNAP generalmente se suspende durante el encarcelamiento y se restaura al salir — no se termina automáticamente. Debe volver a solicitar o pedir la reactivación.",
+                  "action": "Contacte su oficina local de SNAP tan pronto como sea posible después de su liberación. El período de reactivación varía según el estado. Llame al 211 si no sabe a quién llamar."
+                },
+                "medicaid": {
+                  "name": "Medicaid",
+                  "what": "Medicaid se suspende durante el encarcelamiento pero puede reactivarse después. Muchas personas pierden el período de reactivación y pierden la cobertura permanentemente — esta es una de las pérdidas postliberación más comunes y evitables.",
+                  "action": "Contacte la oficina de Medicaid de su estado o el mercado de seguros dentro de los 30 días de su liberación. Si su estado amplió Medicaid bajo la ACA, puede volver a inscribirse en cualquier momento."
+                },
+                "tanf": {
+                  "name": "TANF (Asistencia en Efectivo)",
+                  "what": "La ley federal prohíbe la recepción vitalicia de TANF para personas condenadas por ciertos delitos graves relacionados con drogas, aunque muchos estados han optado por no aplicar esta prohibición. Su elegibilidad depende de su estado y la naturaleza de su condena.",
+                  "action": "Llame al 211 o a su Departamento de Servicios Sociales local para confirmar las reglas de su estado. No asuma que no es elegible sin verificarlo."
+                },
+                "socialSecurity": {
+                  "name": "Seguro Social, SSI y SSDI",
+                  "what": "Los beneficios se suspenden después de 30 días consecutivos de encarcelamiento pero pueden reactivarse al salir. La SSA eventualmente se enterará a través de bases de datos — la notificación proactiva evita pagos en exceso que deberá devolver.",
+                  "action": "Notifique a su oficina local del Seguro Social antes o inmediatamente después de su liberación. Lleve sus documentos de liberación. La reactivación puede tardar varias semanas, así que empiece temprano."
+                },
+                "banking": {
+                  "name": "Acceso bancario",
+                  "what": "Si perdió el acceso a una cuenta bancaria, o nunca tuvo una, el depósito directo para beneficios y empleo requiere una cuenta bancaria en la mayoría de los casos.",
+                  "action": "Las cooperativas de crédito comunitarias y muchos bancos ofrecen cuentas corrientes de 'segunda oportunidad' para personas con problemas financieros pasados. Llame al 211 para encontrar una cerca de usted."
+                }
+              },
               "courtFees": {
                 "sectionTitle": "Tarifas y Multas de la Corte",
                 "stateSelector": {
@@ -5853,6 +6005,74 @@ i18n
                 "tip3": "Coma antes de ir — puede que no pueda salir de la sala una vez que comiencen los procedimientos",
                 "tip4": "Apague su teléfono completamente antes de entrar a la sala de la corte, no solo siléncielo",
                 "tip5": "Si se siente abrumado, está bien pedirle al juez un momento para calmarse"
+              },
+              "requirements": {
+                "sectionTitle": "Lo que puede ser requerido de usted",
+                "sectionSubtitle": "Los jueces a menudo imponen condiciones en la fianza, la derivación o las sentencias. Estas secciones explican cómo cumplirlas correctamente — elegir el programa incorrecto es un error común y costoso.",
+                "courtOrdered": {
+                  "title": "Programas ordenados por la corte",
+                  "context": "Un juez puede requerir que complete un programa como condición de la fianza, derivación o sentencia: educación sobre DUI, manejo de la ira, intervención en violencia doméstica, clases de crianza, entre otros. El detalle clave: el programa debe ser aprobado por la corte. Completar un programa no aprobado no satisface el requisito.",
+                  "verifyTitle": "Cómo verificar que un programa es aprobado",
+                  "verifySteps": [
+                    "Llame a la oficina del secretario de la corte y pregunte específicamente: '¿Está [nombre del programa] aprobado por esta corte para [tipo de cargo]?' Obtenga la respuesta por escrito si es posible.",
+                    "Pida a su abogado o defensor público que confirme antes de inscribirse — es una verificación rápida que ellos pueden hacer.",
+                    "No confíe solo en la afirmación del propio programa de que está aprobado por la corte. Verifique directamente con la corte."
+                  ],
+                  "enrollTitle": "Preguntas que hacer al llamar para inscribirse",
+                  "enrollQuestions": [
+                    "¿Están aceptando nuevos participantes actualmente?",
+                    "¿Cuál es el costo y ofrecen tarifas según ingresos o exenciones?",
+                    "¿Cómo documentan y reportan la finalización a la corte?",
+                    "¿Qué pasa si falto a una sesión?"
+                  ],
+                  "completionTitle": "Al completar el programa",
+                  "completionNote": "La mayoría de los programas emiten un certificado de finalización. Su abogado generalmente presenta este documento ante la corte — confirme con ellos que esto se haya hecho. Guarde una copia para usted."
+                },
+                "communityService": {
+                  "title": "Servicio comunitario",
+                  "context": "Las horas de servicio comunitario son un requisito común en programas de derivación, acuerdos de declaración y sentencias. Las horas realizadas en organizaciones no calificadas no contarán para su requisito.",
+                  "findTitle": "Cómo encontrar programas calificados",
+                  "findSteps": [
+                    "Pregúntele a su oficial de libertad condicional o al secretario de la corte por una lista de organizaciones aprobadas por la corte en su área.",
+                    "Su defensor público o abogado también puede solicitar esta lista.",
+                    "Si encuentra una organización por su cuenta, confirme con la corte o su abogado antes de comenzar."
+                  ],
+                  "docsTitle": "Documentación que necesitará",
+                  "docsNote": "La mayoría de los tribunales requieren una carta firmada de la organización en su membrete oficial, confirmando las fechas, horas y tipo de trabajo realizado. Pida esta carta antes de irse el último día.",
+                  "turnedAwayNote": "Si una organización no puede aceptarle debido a su caso o antecedentes, pregúnteles si conocen otro programa que pueda. Muchos proveedores de servicio comunitario tienen experiencia con participantes ordenados por la corte."
+                },
+                "propertyRetrieval": {
+                  "title": "Recuperar sus pertenencias",
+                  "context": "Tras el arresto, sus pertenencias personales — teléfono, billetera, llaves, efectivo e identificación — se inventarían y retienen en la unidad de evidencias de la estación policial donde fue arrestado. No se retienen en la cárcel ni en el juzgado.",
+                  "steps": [
+                    "Llame a la unidad de evidencias o bienes de la estación policial específica donde fue arrestado. Este es un número diferente al de la línea principal de la estación.",
+                    "Tenga a mano su número de caso o número de registro. Si no lo tiene, proporcione su nombre legal completo y la fecha del arresto.",
+                    "Pregunte qué identificación debe traer para recoger sus pertenencias. Generalmente se requiere una identificación estatal o pasaporte.",
+                    "Pregunte sobre el proceso para cualquier efectivo que le hayan tomado — esto a menudo requiere un formulario o solicitud separada."
+                  ],
+                  "carTitle": "Si su vehículo fue remolcado",
+                  "carNote": "Contacte directamente a la empresa de remolque — no a la estación policial. La policía puede decirle qué empresa remolcó el vehículo. Los cargos de almacenamiento se acumulan diariamente; actúe rápido para evitar perder el vehículo.",
+                  "missingNote": "Si alguna pertenencia falta o está dañada, presente una queja formal ante la estación por escrito lo antes posible. Guarde una copia."
+                },
+                "idReplacement": {
+                  "title": "Reemplazar su identificación y documentos",
+                  "context": "Su identificación estatal o licencia de conducir puede haber sido confiscada, perdida o vencida. Muchos servicios — albergues, programas de beneficios, solicitudes de empleo y bancos — requieren una identificación válida. Reemplazarla temprano elimina una barrera para casi todo lo demás.",
+                  "items": [
+                    {
+                      "name": "Identificación estatal o licencia de conducir",
+                      "detail": "Visite el Departamento de Vehículos Motorizados (DMV) de su estado en persona o en línea. El costo típico es entre $10 y $30. Muchos estados exoneran esta tarifa si puede demostrar dificultades económicas — pregunte específicamente sobre una exención de tarifa cuando llame."
+                    },
+                    {
+                      "name": "Tarjeta de Seguro Social",
+                      "detail": "El reemplazo es gratuito. Solicítelo en ssa.gov o visite su oficina local del Seguro Social. Puede reemplazar hasta 3 tarjetas por año y 10 de por vida."
+                    },
+                    {
+                      "name": "Acta de nacimiento",
+                      "detail": "Contacte la oficina de registros vitales del estado donde nació. Los costos varían. Algunas organizaciones de ayuda legal pueden ayudar a cubrir el costo si el dinero es un obstáculo."
+                    }
+                  ],
+                  "helpNote": "Si el costo es un obstáculo para obtener su identificación, llame al 211 — las organizaciones locales a veces ayudan a cubrir la tarifa o brindan transporte al DMV."
+                }
               }
             },
             "mentalHealth": {
@@ -5982,9 +6202,17 @@ i18n
                   "title": "Entienda qué ocurre con sus medicamentos al ser detenido",
                   "description": "Por lo general no puede llevar medicamentos personales a la cárcel — deben pasar por la farmacia del centro o ser entregados por familiares a través de canales oficiales. Su abogado puede ayudarle a entender qué esperar y abogar por la continuidad de sus medicamentos.",
                   "priority": "medium"
+                },
+                "emergencyPhone": {
+                  "title": "Obtenga un teléfono gratuito si perdió el suyo",
+                  "description": "El programa federal Lifeline proporciona servicio telefónico gratuito o de bajo costo a personas que califican según sus ingresos o participación en ciertos programas gubernamentales. Un teléfono es esencial para comunicarse con su abogado, asistir a la corte y mantenerse en contacto con su familia. Solicítelo en lifelinesupport.org o llame al 1-800-234-9473.",
+                  "priority": "low"
                 }
               },
               "resources": {
+                "lifeline": {
+                  "description": "Programa federal que proporciona servicio telefónico gratuito o con descuento a personas que califican según ingresos o inscripción en Medicaid, SNAP u otros programas de asistencia. Solicítelo en lifelinesupport.org."
+                },
                 "samhsa": {
                   "description": "Línea de ayuda gratuita y confidencial las 24 horas para información sobre uso de sustancias y salud mental, y referencias a tratamiento. Disponible en inglés y español."
                 },
@@ -6928,8 +7156,8 @@ i18n
                     "description": "Riesgo de desalojo, problemas de arrendamiento"
                   },
                   "finances": {
-                    "label": "Finanzas",
-                    "description": "Costos legales, multas, pérdida de ingresos"
+                    "label": "Finanzas y Beneficios",
+                    "description": "Costos legales, multas, beneficios y recuperación financiera"
                   },
                   "transportation": {
                     "label": "Transporte",
@@ -10129,7 +10357,8 @@ i18n
                 "dont2": "No firme nada que no entienda. Puede preguntar para qué sirve un formulario.",
                 "dont3": "No asuma que el personal de fichaje es neutral. Todo queda documentado.",
                 "dont4": "No responda preguntas sobre el incidente, su paradero o cualquier otra persona involucrada, aunque parezcan rutinarias o no relacionadas con el delito.",
-                "dont5": "No autorice hisopos de ADN, registros adicionales ni interrogatorios más allá del proceso mecánico de fichaje sin pedir primero hablar con su abogado."
+                "dont5": "No autorice hisopos de ADN, registros adicionales ni interrogatorios más allá del proceso mecánico de fichaje sin pedir primero hablar con su abogado.",
+                "propertyNote": "Antes o durante el fichaje, intente anotar todo lo que le fue confiscado: teléfono, billetera, identificación, llaves y cualquier efectivo. Sus pertenencias se guardan en la unidad de evidencias de la estación policial donde fue arrestado, no en la cárcel. La sección de Apoyo Legal y de la Corte de nuestra guía de Apoyo para la Vida explica exactamente cómo recuperarlas."
               },
               "step3": {
                 "title": "Su Primera Llamada Telefónica",
@@ -10201,7 +10430,10 @@ i18n
                 "dont1": "No contacte a ninguna supuesta víctima o testigo, ni siquiera para disculparse o explicarse.",
                 "dont2": "No publique nada sobre su caso en redes sociales. Los fiscales monitorean esto.",
                 "dont3": "No hable de su caso con familiares o amigos. Los fiscales pueden citarlos para que testifiquen sobre lo que usted dijo.",
-                "dont4": "No incurra en nuevos cargos. Incluso incidentes menores pueden afectar su situación de fianza y el resultado de su caso."
+                "dont4": "No incurra en nuevos cargos. Incluso incidentes menores pueden afectar su situación de fianza y el resultado de su caso.",
+                "supportBridge": "Ser arrestado afecta más que solo el caso legal. La vivienda, los beneficios, el empleo y la estabilidad familiar a menudo se ven afectados al mismo tiempo, y las órdenes judiciales pueden requerirle completar clases específicas o servicio comunitario. La sección de Apoyo para la Vida de este sitio lo cubre todo.",
+                "supportBridgeLink": "Ir a Apoyo para la Vida",
+                "twoOneBridge": "Para servicios locales cerca de usted, llame o envíe un mensaje al 211 — gratuito y disponible las 24 horas."
               }
             }
           },
@@ -10687,6 +10919,12 @@ i18n
             "startHere": "从这里开始",
             "practicalSteps": "实用步骤",
             "helpfulResources": "有用资源",
+            "startHereCard": {
+              "heading": "不知道从哪里开始？",
+              "callout": "拨打或发短信至 211",
+              "calloutDesc": "211 为您连接住房、食物、医疗保健和福利等本地服务——免费、全天候、覆盖全国。这是找到您附近可用资源的最快方式。",
+              "eligibilityNote": "部分项目会询问未决案件或过往定罪情况。致电咨询是值得的——许多项目实际上比工作人员最初所说的更灵活。"
+            },
             "relatedResources": "相关资源",
             "visitWebsite": "访问网站",
             "free": "免费",
@@ -10929,6 +11167,35 @@ i18n
                 "tip3": "如果收到无力支付的账单，立即联系法院，而不是置之不理",
                 "tip4": "询问律师关于消除记录的选项，这可能有助于未来的就业和住房"
               },
+              "benefits": {
+                "sectionTitle": "被捕后您的福利会发生什么",
+                "sectionSubtitle": "被捕可能暂停或终止您依赖的福利。释放后迅速采取行动通常可以保留或恢复这些福利。",
+                "snap": {
+                  "name": "SNAP（食品援助）",
+                  "what": "SNAP在羁押期间通常会被暂停，释放后可以恢复——不会自动终止。您必须重新申请或请求恢复。",
+                  "action": "释放后尽快联系当地SNAP办公室。恢复窗口因州而异。如果不知道该打给谁，请拨打211。"
+                },
+                "medicaid": {
+                  "name": "Medicaid（医疗补助）",
+                  "what": "Medicaid在羁押期间暂停，但释放后可以恢复。许多人错过了恢复窗口，永久失去了保险——这是释放后最常见且可以避免的损失之一。",
+                  "action": "在释放后30天内联系您所在州的Medicaid办公室或保险市场。如果您的州在ACA下扩展了Medicaid，您可以随时重新注册。"
+                },
+                "tanf": {
+                  "name": "TANF（现金援助）",
+                  "what": "联邦法律禁止特定毒品重罪定罪人员终身领取TANF，但许多州已选择不执行此禁令。您的资格取决于您所在的州和定罪性质。",
+                  "action": "拨打211或联系当地社会服务部门确认您所在州的规定。未经核实不要假设自己不符合资格。"
+                },
+                "socialSecurity": {
+                  "name": "社会保障、SSI和SSDI",
+                  "what": "连续羁押30天后福利将被暂停，但释放后可以恢复。SSA最终会通过数据库得知情况——主动通知可避免您需要归还的多付款。",
+                  "action": "在释放前或释放后立即通知当地社会保障局办公室。携带您的释放文件。恢复可能需要几周时间，请尽早开始。"
+                },
+                "banking": {
+                  "name": "银行账户使用",
+                  "what": "如果您失去了银行账户的使用权，或从未有过账户，大多数情况下福利和工资的直接存款都需要银行账户。",
+                  "action": "社区信用合作社和许多银行为有过往财务问题的人提供'第二次机会'支票账户。拨打211寻找您附近的机构。"
+                }
+              },
               "courtFees": {
                 "sectionTitle": "法庭费用与罚款",
                 "stateSelector": {
@@ -11063,6 +11330,74 @@ i18n
                 "tip3": "出发前吃东西——一旦程序开始，你可能无法离开法庭",
                 "tip4": "进入法庭前完全关闭手机，不仅仅是静音",
                 "tip5": "如果感到不知所措，可以请求法官给你片刻时间平复情绪"
+              },
+              "requirements": {
+                "sectionTitle": "可能对您的要求",
+                "sectionSubtitle": "法官通常会为保释、转介或判决附加条件。以下内容说明如何正确满足这些条件——选择错误的项目是一个常见且代价高昂的错误。",
+                "courtOrdered": {
+                  "title": "法院命令参加的项目",
+                  "context": "法官可能要求您作为保释、转介或判决条件完成某项目——如酒驾教育、愤怒管理、家庭暴力干预、育儿课程等。关键细节：该项目必须经过法院批准。完成未获批准的项目不满足要求。",
+                  "verifyTitle": "如何核实项目是否获批",
+                  "verifySteps": [
+                    "致电法院书记员办公室，明确询问：[项目名称]是否已获本院批准用于[您的指控类型]？如有可能，请以书面形式获取答复。",
+                    "请您的律师或公设辩护人在您报名前确认——这是他们可以迅速完成的核实工作。",
+                    "不要仅凭项目本身声称已获法院批准就信以为真。请直接向法院核实。"
+                  ],
+                  "enrollTitle": "报名时需要询问的问题",
+                  "enrollQuestions": [
+                    "目前是否还在招收新学员？",
+                    "费用是多少？是否提供滑动收费或费用豁免？",
+                    "如何向法院记录和报告完成情况？",
+                    "如果缺课会怎么样？"
+                  ],
+                  "completionTitle": "完成项目后",
+                  "completionNote": "大多数项目会颁发结业证书。您的律师通常会将其提交给法院——请向他们确认已完成提交。自己也保留一份副本。"
+                },
+                "communityService": {
+                  "title": "社区服务",
+                  "context": "社区服务时数是转介项目、认罪协议和判决中的常见要求。在不符合资格的机构完成的时数不计入您的要求。",
+                  "findTitle": "如何寻找符合资格的项目",
+                  "findSteps": [
+                    "请向您的缓刑官或法院书记员索取您所在地区法院批准机构的名单。",
+                    "您的公设辩护人或律师也可以申请获取此名单。",
+                    "如果您自行找到某机构，请在开始前向法院或律师确认其资格。"
+                  ],
+                  "docsTitle": "所需文件",
+                  "docsNote": "大多数法院要求提供机构在其信头纸上出具的签名信函，确认完成日期、时数和工作类型。请在最后一天离开前索取此信——事后索取会困难得多。",
+                  "turnedAwayNote": "如果某机构因您的案件或记录无法接受您，请询问他们是否了解其他可以接受您的项目。许多社区服务机构都有服务法院指派参与者的经验。"
+                },
+                "propertyRetrieval": {
+                  "title": "取回您的财物",
+                  "context": "被捕后，您的个人财物——手机、钱包、钥匙、现金和身份证——将被登记并保管在逮捕您的分局证据室，而非羁押机构或法院。许多人不知道该去哪里取回财物，有些财物因此永久丢失。",
+                  "steps": [
+                    "致电逮捕您的特定分局的证据室或财物室。这与分局总机号码不同。",
+                    "准备好您的案件编号或登记号。如果没有，提供您的法定全名和被捕日期。",
+                    "询问取回财物需要携带什么证件。通常需要州身份证或护照。",
+                    "询问取回任何没收现金的流程——这通常需要单独填写表格或提出申请。"
+                  ],
+                  "carTitle": "如果您的车辆被拖走",
+                  "carNote": "直接联系拖车公司——而非分局。警方可以告诉您是哪家公司拖走了车辆。存储费用每天累积；请尽快处理，以免失去车辆。",
+                  "missingNote": "如果财物丢失或损坏，请尽快以书面形式向分局提交正式投诉。保留副本。"
+                },
+                "idReplacement": {
+                  "title": "补办身份证件和文件",
+                  "context": "您的州身份证或驾照可能在被捕时被没收、丢失或已过期。许多服务——庇护所、福利项目、求职申请和银行业务——都需要有效身份证件。尽早补办可以消除几乎所有其他事务的障碍。",
+                  "items": [
+                    {
+                      "name": "州身份证或驾照",
+                      "detail": "亲自或在线前往您所在州的机动车辆管理局（DMV）。典型费用为10至30美元。如果能证明经济困难，许多州会免除此费用——致电时请明确询问费用豁免事宜。"
+                    },
+                    {
+                      "name": "社会安全卡",
+                      "detail": "补办免费。在ssa.gov申请或前往当地社会安全局办公室。每年最多可补办3张，一生最多10张。"
+                    },
+                    {
+                      "name": "出生证明",
+                      "detail": "联系您出生所在州的生命档案办公室。费用因州而异。如果费用是障碍，部分法律援助机构可以帮助支付费用。"
+                    }
+                  ],
+                  "helpNote": "如果费用是获取身份证件的障碍，请拨打211——当地机构有时可以帮助支付费用或提供前往DMV的交通。"
+                }
               }
             },
             "mentalHealth": {
@@ -11192,9 +11527,17 @@ i18n
                   "title": "了解被捕时药物的处理方式",
                   "description": "通常你无法将个人药物带入监狱——必须通过监狱药房处理，或由家人通过官方渠道提供。你的律师可以帮助你了解预期情况，并为你的药物连续性进行辩护。",
                   "priority": "medium"
+                },
+                "emergencyPhone": {
+                  "title": "如果您丢失了手机，可以申请免费手机",
+                  "description": "美国联邦Lifeline计划为符合收入资格或参与特定政府项目的人提供免费或低价电话服务。手机对于联系律师、出庭和与家人保持联系至关重要。请访问lifelinesupport.org申请，或拨打1-800-234-9473。",
+                  "priority": "low"
                 }
               },
               "resources": {
+                "lifeline": {
+                  "description": "联邦计划，为符合收入资格或已登记Medicaid、SNAP或其他援助项目的人提供免费或折扣电话服务。请访问lifelinesupport.org申请。"
+                },
                 "samhsa": {
                   "description": "免费、保密的24小时药物使用和心理健康信息及治疗转介热线。提供英语和西班牙语服务。"
                 },
@@ -12138,8 +12481,8 @@ i18n
                     "description": "被驱逐风险、租约问题、住房稳定"
                   },
                   "finances": {
-                    "label": "财务",
-                    "description": "法律费用、罚款、收入损失"
+                    "label": "财务与福利",
+                    "description": "法律费用、罚款、福利保障与经济恢复"
                   },
                   "transportation": {
                     "label": "交通",
@@ -15339,7 +15682,8 @@ i18n
                 "dont2": "不要签署任何您不理解的文件。您可以询问表格的用途。",
                 "dont3": "不要认为登记人员是中立的。一切都会被记录在案。",
                 "dont4": "不要回答有关事件、您的下落或任何其他相关人员的问题，即使这些问题看起来很常规或与犯罪无关。",
-                "dont5": "在要求与您的律师交谈之前，不要同意采集DNA样本、额外搜查或超出登记程序的审讯。"
+                "dont5": "在要求与您的律师交谈之前，不要同意采集DNA样本、额外搜查或超出登记程序的审讯。",
+                "propertyNote": "在登记手续前后，尽量记下所有被没收的物品：手机、钱包、身份证、钥匙和现金。您的财物保存在逮捕您的分局的证据室，而非羁押机构。本网站生活支持指南中的【法庭与法律】部分详细说明了如何取回这些财物。"
               },
               "step3": {
                 "title": "您的第一个电话",
@@ -15411,7 +15755,10 @@ i18n
                 "dont1": "不要联系任何指控的受害者或证人，即使是为了道歉或解释。",
                 "dont2": "不要在社交媒体上发布任何关于您案件的内容。检察官会监控这些。",
                 "dont3": "不要与家人或朋友讨论您的案件。检察官可以传唤他们作证，证明您所说的话。",
-                "dont4": "不要新增任何指控。即使是轻微事件也可能影响您的保释状态和案件结果。"
+                "dont4": "不要新增任何指控。即使是轻微事件也可能影响您的保释状态和案件结果。",
+                "supportBridge": "被捕影响的不只是法律案件。住房、福利、就业和家庭稳定往往同时受到影响——法院命令可能还要求您完成特定课程或社区服务。本网站的生活支持部分涵盖了所有这些内容。",
+                "supportBridgeLink": "前往生活支持",
+                "twoOneBridge": "如需获取附近的本地服务，请拨打或发短信至211——免费，全天候提供服务。"
               }
             }
           },

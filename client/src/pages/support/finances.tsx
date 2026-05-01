@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import financesHero from "@assets/stock_images/finances.jpg";
-import { DollarSign, CheckCircle, CheckCircle2, Calendar, ExternalLink } from "lucide-react";
+import { DollarSign, CheckCircle, CheckCircle2, Calendar, ExternalLink, Info } from "lucide-react";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -11,7 +11,37 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { getCourtFeesForState, courtFeesByState, ALL_STATE_CODES, NATIONAL_ASSISTANCE_ORGS } from "@shared/court-fees-data";
+
+const BENEFIT_IDS = ["snap", "medicaid", "tanf", "socialSecurity", "banking"] as const;
+
+function BenefitsSection() {
+  const { t } = useTranslation();
+  const b = 'support.finances.benefits';
+  return (
+    <section className="py-10 md:py-12 bg-muted/20">
+      <div className="container mx-auto px-4">
+        <ScrollReveal>
+          <h2 className="text-xl font-bold text-foreground mb-1">{t(`${b}.sectionTitle`)}</h2>
+          <p className="text-sm text-muted-foreground mb-6">{t(`${b}.sectionSubtitle`)}</p>
+          <div className="space-y-3">
+            {BENEFIT_IDS.map((id) => (
+              <div key={id} className="rounded-lg border border-border bg-background p-4">
+                <p className="text-sm font-semibold text-foreground mb-2">{t(`${b}.${id}.name`)}</p>
+                <p className="text-sm text-muted-foreground mb-2 leading-relaxed">{t(`${b}.${id}.what`)}</p>
+                <div className="flex items-start gap-1.5 bg-muted/40 rounded-md p-2.5">
+                  <Info className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <p className="text-xs text-muted-foreground leading-relaxed">{t(`${b}.${id}.action`)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
 
 const FEE_TYPE_IDS = ["filing", "probation", "publicDefender", "restitution", "labFees", "surcharges"] as const;
 
@@ -310,7 +340,7 @@ export default function FinancesSupport() {
         { label: t('support.relatedLinks.employment'), href: "/support/employment" },
         { label: t('support.relatedLinks.publicDefender'), href: "/resources" },
       ]}
-      customSections={<CourtFeesSection />}
+      customSections={<><BenefitsSection /><CourtFeesSection /></>}
     />
   );
 }

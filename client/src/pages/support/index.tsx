@@ -16,6 +16,8 @@ import {
   ChevronLeft,
   ExternalLink,
   HandHeart,
+  Phone,
+  Info,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -125,6 +127,36 @@ export default function SupportHub() {
             <p className="text-base md:text-lg text-white/75 max-w-xl mx-auto leading-relaxed">
               {t('support.description')}
             </p>
+          </div>
+        </section>
+
+        {/* 211 Start Here card */}
+        <section className="pt-8 pb-0">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <ScrollReveal>
+              <div className="rounded-xl border border-border bg-muted/30 p-5 flex items-start gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center">
+                  <Phone className="h-4 w-4 text-foreground" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-foreground mb-1">{t('support.startHereCard.heading')}</p>
+                  <p className="text-sm font-bold text-foreground">
+                    <a
+                      href="tel:211"
+                      className="underline underline-offset-2 hover:text-primary transition-colors"
+                      aria-label="Call or text 211 for local services"
+                    >
+                      {t('support.startHereCard.callout')}
+                    </a>
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{t('support.startHereCard.calloutDesc')}</p>
+                  <div className="flex items-start gap-1.5 mt-2.5">
+                    <Info className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" aria-hidden="true" />
+                    <p className="text-xs text-muted-foreground leading-relaxed">{t('support.startHereCard.eligibilityNote')}</p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
