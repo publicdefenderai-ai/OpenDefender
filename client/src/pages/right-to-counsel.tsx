@@ -259,7 +259,6 @@ export default function RightToCounsel() {
     if (openId === id) {
       setOpenId("");
     } else {
-      scrollToSection(id);
       setOpenId(id);
     }
   };

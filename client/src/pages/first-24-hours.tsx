@@ -604,11 +604,6 @@ export default function FirstTwentyFourHours() {
   const toggleStep = (n: number) => setOpenStepId((prev) => (prev === n ? -1 : n));
   const openStep = (n: number) => setOpenStepId(n);
   const openJuvenile = () => {
-    const el = document.getElementById("juvenile-note");
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 88;
-      window.scrollTo({ top: Math.max(0, top) });
-    }
     setJuvenileOpen(true);
   };
 

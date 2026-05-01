@@ -297,7 +297,6 @@ export default function Warrants() {
     if (openId === id) {
       setOpenId("");
     } else {
-      scrollToSection(id);
       setOpenId(id);
     }
   };
