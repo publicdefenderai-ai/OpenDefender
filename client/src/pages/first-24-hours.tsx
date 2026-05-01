@@ -1111,6 +1111,10 @@ export default function FirstTwentyFourHours() {
                 </p>
               </div>
             </Step>
+<<<<<<< HEAD
+=======
+          </ScrollReveal>
+>>>>>>> 62718a5da730353fc0b8507508be928ff83b9187
         </div>
 
         {/* Friends & Family callout — matches mockup */}
