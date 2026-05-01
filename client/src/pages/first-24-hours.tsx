@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Check, X, Phone, MapPin, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, type LucideIcon } from "lucide-react";
+import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, type LucideIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { BrandShieldIcon } from "@/components/brand-logo";
@@ -283,11 +283,163 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
   );
 }
 
+const US_STATES_SIDEBAR = [
+  { code: "alabama", label: "Alabama" }, { code: "alaska", label: "Alaska" },
+  { code: "arizona", label: "Arizona" }, { code: "arkansas", label: "Arkansas" },
+  { code: "california", label: "California" }, { code: "colorado", label: "Colorado" },
+  { code: "connecticut", label: "Connecticut" }, { code: "delaware", label: "Delaware" },
+  { code: "florida", label: "Florida" }, { code: "georgia", label: "Georgia" },
+  { code: "hawaii", label: "Hawaii" }, { code: "idaho", label: "Idaho" },
+  { code: "illinois", label: "Illinois" }, { code: "indiana", label: "Indiana" },
+  { code: "iowa", label: "Iowa" }, { code: "kansas", label: "Kansas" },
+  { code: "kentucky", label: "Kentucky" }, { code: "louisiana", label: "Louisiana" },
+  { code: "maine", label: "Maine" }, { code: "maryland", label: "Maryland" },
+  { code: "massachusetts", label: "Massachusetts" }, { code: "michigan", label: "Michigan" },
+  { code: "minnesota", label: "Minnesota" }, { code: "mississippi", label: "Mississippi" },
+  { code: "missouri", label: "Missouri" }, { code: "montana", label: "Montana" },
+  { code: "nebraska", label: "Nebraska" }, { code: "nevada", label: "Nevada" },
+  { code: "new hampshire", label: "New Hampshire" }, { code: "new jersey", label: "New Jersey" },
+  { code: "new mexico", label: "New Mexico" }, { code: "new york", label: "New York" },
+  { code: "north carolina", label: "North Carolina" }, { code: "north dakota", label: "North Dakota" },
+  { code: "ohio", label: "Ohio" }, { code: "oklahoma", label: "Oklahoma" },
+  { code: "oregon", label: "Oregon" }, { code: "pennsylvania", label: "Pennsylvania" },
+  { code: "rhode island", label: "Rhode Island" }, { code: "south carolina", label: "South Carolina" },
+  { code: "south dakota", label: "South Dakota" }, { code: "tennessee", label: "Tennessee" },
+  { code: "texas", label: "Texas" }, { code: "utah", label: "Utah" },
+  { code: "vermont", label: "Vermont" }, { code: "virginia", label: "Virginia" },
+  { code: "washington", label: "Washington" }, { code: "west virginia", label: "West Virginia" },
+  { code: "wisconsin", label: "Wisconsin" }, { code: "wyoming", label: "Wyoming" },
+  { code: "district of columbia", label: "Washington D.C." },
+];
+
+const STEP_TOC = [
+  { id: "step-arrest",      label: "Arrest",            Icon: ShieldAlert  },
+  { id: "step-booking",     label: "Booking",           Icon: ClipboardList },
+  { id: "phone-call",       label: "Phone Call",        Icon: Phone        },
+  { id: "step-bail",        label: "Bail",              Icon: Banknote     },
+  { id: "step-lawyer",      label: "Right to Counsel",  Icon: Scale        },
+  { id: "step-arraignment", label: "Arraignment",       Icon: Landmark     },
+  { id: "step-ongoing",     label: "After Arraignment", Icon: CalendarCheck },
+];
+
+function PageSidebar({
+  jurisdiction,
+  onJurisdictionChange,
+  activeStepId,
+}: {
+  jurisdiction: string;
+  onJurisdictionChange: (v: string) => void;
+  activeStepId: string;
+}) {
+  return (
+    <aside className="hidden lg:block w-56 flex-shrink-0" aria-label="Page navigation">
+      <div className="sticky top-6 space-y-1">
+
+        {/* State selector */}
+        <div className="mb-4 rounded-lg border border-border bg-muted/30 p-3">
+          <label htmlFor="sidebar-state-select" className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2">
+            <MapPinned className="w-3 h-3" />
+            Your State
+          </label>
+          <select
+            id="sidebar-state-select"
+            value={jurisdiction || ""}
+            onChange={(e) => onJurisdictionChange(e.target.value)}
+            className="w-full text-sm rounded-md border border-input bg-background px-2 py-1.5 text-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+            aria-label="Select your state for state-specific rules"
+          >
+            <option value="">All states (general)</option>
+            {US_STATES_SIDEBAR.map(({ code, label }) => (
+              <option key={code} value={code}>{label}</option>
+            ))}
+          </select>
+          {jurisdiction && (
+            <button
+              onClick={() => onJurisdictionChange("")}
+              className="mt-1.5 text-xs text-muted-foreground hover:text-foreground underline underline-offset-2"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+
+        {/* Step TOC */}
+        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Jump to step</p>
+        {STEP_TOC.map(({ id, label, Icon }) => {
+          const isActive = activeStepId === id;
+          return (
+            <button
+              key={id}
+              onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left transition-all duration-150 text-sm ${
+                isActive
+                  ? "bg-primary/10 border border-primary/20 text-foreground font-medium"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+              }`}
+            >
+              <Icon className={`w-3.5 h-3.5 flex-shrink-0 ${isActive ? "text-primary" : ""}`} />
+              <span className="truncate flex-1">{label}</span>
+              {isActive && <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />}
+            </button>
+          );
+        })}
+
+        {/* Quick links */}
+        <div className="pt-3 mt-3 border-t border-border/60">
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Quick help</p>
+          <Link href="/legal-aid" className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all">
+            <Users className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>Find a lawyer</span>
+          </Link>
+          <Link href="/case-guidance" className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all">
+            <MessageSquare className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>Get AI guidance</span>
+          </Link>
+        </div>
+
+        {/* For Friends & Family */}
+        <div className="pt-3 mt-1 border-t border-border/60">
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">For family &amp; friends</p>
+          <Link href="/friends-family" className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all">
+            <BookOpen className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>Full Family Guide</span>
+          </Link>
+          <button
+            onClick={() => document.getElementById("phone-call")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left"
+          >
+            <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>Inmate Locator</span>
+          </button>
+        </div>
+
+      </div>
+    </aside>
+  );
+}
+
 export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
   const [jurisdiction, setJurisdiction] = useState<string>("");
   const [stageSelection, setStageSelection] = useState<'custody' | 'released' | 'arraignment' | null>(null);
+  const [activeStepId, setActiveStepId] = useState<string>("step-arrest");
+
+  useEffect(() => {
+    const ids = STEP_TOC.map((s) => s.id);
+    const observers: IntersectionObserver[] = [];
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveStepId(id); },
+        { rootMargin: "-10% 0px -60% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((obs) => obs.disconnect());
+  }, []);
 
   // Scroll to first priority step when stage is selected
   useEffect(() => {
@@ -337,32 +489,46 @@ export default function FirstTwentyFourHours() {
         </div>
       </section>
 
-      <main className="max-w-3xl mx-auto px-4 py-12 md:py-16">
+      <main className="max-w-5xl mx-auto px-4 py-12 md:py-16">
+        <div className="flex gap-12 items-start">
+          <PageSidebar
+            jurisdiction={jurisdiction}
+            onJurisdictionChange={setJurisdiction}
+            activeStepId={activeStepId}
+          />
+          <div className="flex-1 min-w-0">
 
         {/* Family path callout */}
         <ScrollReveal delay={0.01}>
-          <div className="mb-6 rounded-lg border border-blue-200 dark:border-blue-800/60 bg-blue-50/60 dark:bg-blue-900/10 p-4">
-            <p className="text-sm font-semibold text-blue-800 dark:text-blue-300 mb-3">
-              {t('first24Hours.familyCallout.title')}
-            </p>
-            <ul className="space-y-1.5 mb-3">
-              {(['task1', 'task2', 'task3'] as const).map((key) => (
-                <li key={key} className="flex items-start gap-2 text-sm text-foreground/80">
-                  <span className="text-blue-500 mt-0.5 flex-shrink-0">→</span>
-                  <span>{t(`first24Hours.familyCallout.${key}`)}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="flex gap-3 flex-wrap">
-              <Link href="/friends-family">
-                <Button variant="outline" size="sm">{t('first24Hours.familyCallout.fullGuide')}</Button>
-              </Link>
-              <Link href="#phone-call">
-                <Button variant="outline" size="sm">{t('first24Hours.familyCallout.jailCallGuide')}</Button>
-              </Link>
-              <Link href="/legal-aid">
-                <Button variant="outline" size="sm">{t('first24Hours.familyCallout.findDefender')}</Button>
-              </Link>
+          <div className="mb-6 rounded-xl border border-teal-200 dark:border-teal-800/60 bg-teal-50/60 dark:bg-teal-900/10 p-5">
+            <div className="flex gap-3">
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-teal-100 dark:bg-teal-900/60 border border-teal-200 dark:border-teal-700 flex items-center justify-center">
+                <Users className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+                  {t('first24Hours.familyCallout.title')}
+                </p>
+                <ul className="space-y-1.5 mb-3">
+                  {(['task1', 'task2', 'task3'] as const).map((key) => (
+                    <li key={key} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <span className="text-teal-500 mt-0.5 flex-shrink-0">→</span>
+                      <span>{t(`first24Hours.familyCallout.${key}`)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-2 flex-wrap">
+                  <Link href="/friends-family">
+                    <Button variant="outline" size="sm" className="border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20">{t('first24Hours.familyCallout.fullGuide')}</Button>
+                  </Link>
+                  <Link href="#phone-call">
+                    <Button variant="outline" size="sm" className="border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20">{t('first24Hours.familyCallout.jailCallGuide')}</Button>
+                  </Link>
+                  <Link href="/legal-aid">
+                    <Button variant="outline" size="sm" className="border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20">{t('first24Hours.familyCallout.findDefender')}</Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </ScrollReveal>
@@ -411,7 +577,8 @@ export default function FirstTwentyFourHours() {
           </div>
         </ScrollReveal>
 
-        {/* Step quick-jump navigator */}
+        {/* Step quick-jump navigator — mobile only; sidebar handles desktop */}
+        <div className="lg:hidden">
         <ScrollReveal delay={0.019}>
           <div className="mb-8">
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">Jump to any step</p>
@@ -438,6 +605,7 @@ export default function FirstTwentyFourHours() {
             </div>
           </div>
         </ScrollReveal>
+        </div>{/* end lg:hidden step nav */}
 
         {/* Before-arrest section */}
         <ScrollReveal delay={0.02}>
@@ -557,13 +725,16 @@ export default function FirstTwentyFourHours() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.025}>
-          <JurisdictionSelector
-            label="See state-specific rules for your location (optional)"
-            value={jurisdiction}
-            onChange={setJurisdiction}
-          />
-        </ScrollReveal>
+        {/* JurisdictionSelector — mobile only; sidebar handles desktop */}
+        <div className="lg:hidden">
+          <ScrollReveal delay={0.025}>
+            <JurisdictionSelector
+              label="See state-specific rules for your location (optional)"
+              value={jurisdiction}
+              onChange={setJurisdiction}
+            />
+          </ScrollReveal>
+        </div>
 
         <ScrollReveal delay={0.03}>
           <div className="mb-8 rounded-lg border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 p-5">
@@ -1167,6 +1338,8 @@ export default function FirstTwentyFourHours() {
           </Alert>
         </ScrollReveal>
 
+          </div>{/* end flex-1 content column */}
+        </div>{/* end flex row */}
       </main>
 
       <Footer />
