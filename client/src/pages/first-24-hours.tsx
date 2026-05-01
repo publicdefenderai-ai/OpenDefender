@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
-import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, type LucideIcon } from "lucide-react";
+import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, ChevronDown as ChevronDownIcon, FileText, ExternalLink, type LucideIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
-import { BrandShieldIcon } from "@/components/brand-logo";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
-import { LegalTerm } from "@/components/ui/legal-term";
-import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -192,6 +189,17 @@ function FacilityLookupWidget() {
   );
 }
 
+// Step color palettes keyed by step number
+const STEP_COLORS: Record<number, { border: string; iconBg: string; iconText: string; activeBg: string }> = {
+  1: { border: "border-red-200 dark:border-red-800/60",    iconBg: "bg-red-100 dark:bg-red-900/50",    iconText: "text-red-600 dark:text-red-400",    activeBg: "bg-red-50/60 dark:bg-red-900/10" },
+  2: { border: "border-orange-200 dark:border-orange-800/60", iconBg: "bg-orange-100 dark:bg-orange-900/50", iconText: "text-orange-600 dark:text-orange-400", activeBg: "bg-orange-50/60 dark:bg-orange-900/10" },
+  3: { border: "border-yellow-200 dark:border-yellow-800/60", iconBg: "bg-yellow-100 dark:bg-yellow-900/50", iconText: "text-yellow-600 dark:text-yellow-400", activeBg: "bg-yellow-50/60 dark:bg-yellow-900/10" },
+  4: { border: "border-green-200 dark:border-green-800/60",  iconBg: "bg-green-100 dark:bg-green-900/50",  iconText: "text-green-600 dark:text-green-400",  activeBg: "bg-green-50/60 dark:bg-green-900/10" },
+  5: { border: "border-blue-200 dark:border-blue-800/60",   iconBg: "bg-blue-100 dark:bg-blue-900/50",   iconText: "text-blue-600 dark:text-blue-400",   activeBg: "bg-blue-50/60 dark:bg-blue-900/10" },
+  6: { border: "border-purple-200 dark:border-purple-800/60", iconBg: "bg-purple-100 dark:bg-purple-900/50", iconText: "text-purple-600 dark:text-purple-400", activeBg: "bg-purple-50/60 dark:bg-purple-900/10" },
+  7: { border: "border-indigo-200 dark:border-indigo-800/60", iconBg: "bg-indigo-100 dark:bg-indigo-900/50", iconText: "text-indigo-600 dark:text-indigo-400", activeBg: "bg-indigo-50/60 dark:bg-indigo-900/10" },
+};
+
 interface StepProps {
   number: number;
   title: string;
@@ -205,9 +213,97 @@ interface StepProps {
   priorityLabel?: string;
   icon?: LucideIcon;
   children?: React.ReactNode;
+  isOpen?: boolean;
+  onToggle?: () => void;
 }
 
-function Step({ number, title, timeframe, context, dos, donts, isLast, id, highlighted, priorityLabel, icon: Icon, children }: StepProps) {
+function Step({ number, title, timeframe, context, dos, donts, isLast, id, highlighted, priorityLabel, icon: Icon, children, isOpen, onToggle }: StepProps) {
+  const colors = STEP_COLORS[number] ?? STEP_COLORS[7];
+  const isAccordion = isOpen !== undefined && onToggle !== undefined;
+
+  const headerContent = (
+    <div className="flex items-center gap-4 w-full text-left">
+      <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center border ${colors.iconBg} ${colors.border}`}>
+        {Icon ? (
+          <Icon className={`w-5 h-5 ${colors.iconText}`} />
+        ) : (
+          <span className="text-sm font-bold text-foreground">{number}</span>
+        )}
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Step {number}</span>
+          <span className="text-xs text-muted-foreground/60">·</span>
+          <span className="text-xs text-muted-foreground">{timeframe}</span>
+        </div>
+        <h2 className="text-base font-bold text-foreground leading-snug">{title}</h2>
+      </div>
+      {isAccordion && (
+        <ChevronDownIcon className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+      )}
+    </div>
+  );
+
+  const bodyContent = (
+    <div className={isAccordion ? "px-5 pb-6 pt-1 border-t border-border/50" : ""}>
+      <p className="text-muted-foreground mb-5 leading-relaxed text-sm mt-4">{context}</p>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-4">
+          <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-emerald-200 dark:border-emerald-800/60">
+            <div className="w-5 h-5 rounded-full bg-emerald-500 dark:bg-emerald-600 flex items-center justify-center flex-shrink-0">
+              <Check className="w-3 h-3 text-white" strokeWidth={3} />
+            </div>
+            <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
+          </div>
+          <ul className="space-y-2.5">
+            {dos.map((item, i) => (
+              <li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-4">
+          <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-rose-200 dark:border-rose-800/60">
+            <div className="w-5 h-5 rounded-full bg-rose-500 dark:bg-rose-600 flex items-center justify-center flex-shrink-0">
+              <X className="w-3 h-3 text-white" strokeWidth={3} />
+            </div>
+            <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
+          </div>
+          <ul className="space-y-2.5">
+            {donts.map((item, i) => (
+              <li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5">
+                <X className="w-4 h-4 text-rose-500 dark:text-rose-400 flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {children && <div className="mt-4">{children}</div>}
+    </div>
+  );
+
+  if (isAccordion) {
+    return (
+      <div id={id} className={`rounded-xl border overflow-hidden transition-all duration-200 ${colors.border} ${isOpen ? colors.activeBg : "bg-background"}`}>
+        <button
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          className="w-full p-5 hover:opacity-90 transition-opacity"
+        >
+          {headerContent}
+        </button>
+        {isOpen && bodyContent}
+      </div>
+    );
+  }
+
+  // Legacy non-accordion mode (kept for backward compatibility)
   return (
     <div className="relative" id={id}>
       <div className="flex items-start gap-5">
@@ -223,12 +319,9 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
             <div className={`w-0.5 flex-1 min-h-[80px] mt-3 ${highlighted ? 'bg-blue-200 dark:bg-blue-800' : 'bg-slate-200 dark:bg-slate-700'}`} />
           )}
         </div>
-
         <div className="flex-1 pb-10">
           {highlighted && priorityLabel && (
-            <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide mb-1.5">
-              ↑ {priorityLabel}
-            </p>
+            <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide mb-1.5">↑ {priorityLabel}</p>
           )}
           <div className="mb-3">
             <div className="flex items-center gap-2 mb-0.5">
@@ -237,45 +330,23 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
             </div>
             <span className="text-xs text-muted-foreground">{timeframe}</span>
           </div>
-
           <p className="text-muted-foreground mb-5 leading-relaxed text-sm">{context}</p>
-
           <div className="grid md:grid-cols-2 gap-4">
             <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-4">
               <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-emerald-200 dark:border-emerald-800/60">
-                <div className="w-5 h-5 rounded-full bg-emerald-500 dark:bg-emerald-600 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                </div>
+                <div className="w-5 h-5 rounded-full bg-emerald-500 dark:bg-emerald-600 flex items-center justify-center flex-shrink-0"><Check className="w-3 h-3 text-white" strokeWidth={3} /></div>
                 <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
               </div>
-              <ul className="space-y-2.5">
-                {dos.map((item, i) => (
-                  <li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <ul className="space-y-2.5">{dos.map((item, i) => (<li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5"><Check className="w-4 h-4 text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" /><span>{item}</span></li>))}</ul>
             </div>
-
             <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-4">
               <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-rose-200 dark:border-rose-800/60">
-                <div className="w-5 h-5 rounded-full bg-rose-500 dark:bg-rose-600 flex items-center justify-center flex-shrink-0">
-                  <X className="w-3 h-3 text-white" strokeWidth={3} />
-                </div>
+                <div className="w-5 h-5 rounded-full bg-rose-500 dark:bg-rose-600 flex items-center justify-center flex-shrink-0"><X className="w-3 h-3 text-white" strokeWidth={3} /></div>
                 <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
               </div>
-              <ul className="space-y-2.5">
-                {donts.map((item, i) => (
-                  <li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5">
-                    <X className="w-4 h-4 text-rose-500 dark:text-rose-400 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <ul className="space-y-2.5">{donts.map((item, i) => (<li key={i} className="text-sm text-foreground/80 dark:text-foreground/75 flex items-start gap-2.5"><X className="w-4 h-4 text-rose-500 dark:text-rose-400 flex-shrink-0 mt-0.5" /><span>{item}</span></li>))}</ul>
             </div>
           </div>
-
           {children && <div className="mt-4">{children}</div>}
         </div>
       </div>
@@ -313,23 +384,93 @@ const US_STATES_SIDEBAR = [
 ];
 
 const STEP_TOC = [
-  { id: "step-arrest",      label: "Arrest",            Icon: ShieldAlert  },
-  { id: "step-booking",     label: "Booking",           Icon: ClipboardList },
-  { id: "phone-call",       label: "Phone Call",        Icon: Phone        },
-  { id: "step-bail",        label: "Bail",              Icon: Banknote     },
-  { id: "step-lawyer",      label: "Right to Counsel",  Icon: Scale        },
-  { id: "step-arraignment", label: "Arraignment",       Icon: Landmark     },
-  { id: "step-ongoing",     label: "After Arraignment", Icon: CalendarCheck },
+  { n: 1, id: "step-arrest",      label: "Arrest",            Icon: ShieldAlert  },
+  { n: 2, id: "step-booking",     label: "Booking",           Icon: ClipboardList },
+  { n: 3, id: "phone-call",       label: "Phone Call",        Icon: Phone        },
+  { n: 4, id: "step-bail",        label: "Bail",              Icon: Banknote     },
+  { n: 5, id: "step-lawyer",      label: "Right to Counsel",  Icon: Scale        },
+  { n: 6, id: "step-arraignment", label: "Arraignment",       Icon: Landmark     },
+  { n: 7, id: "step-ongoing",     label: "After Arraignment", Icon: CalendarCheck },
 ];
+
+function ResourcesCard() {
+  const resources = [
+    {
+      Icon: Users,
+      color: "text-blue-600 dark:text-blue-400",
+      bg: "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800/50",
+      title: "Free Legal Aid",
+      desc: "Find a public defender or legal aid organization near you — all 50 states.",
+      link: "Browse legal aid →",
+      href: "/legal-aid",
+    },
+    {
+      Icon: MapPin,
+      color: "text-emerald-600 dark:text-emerald-400",
+      bg: "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800/50",
+      title: "Inmate Locator",
+      desc: "Locate an arrested person in any county jail or state prison across the US.",
+      link: "Use the locator →",
+      href: "#phone-call",
+    },
+    {
+      Icon: FileText,
+      color: "text-amber-600 dark:text-amber-400",
+      bg: "bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800/50",
+      title: "Print Rights Card",
+      desc: "A pocket-sized reference card of your rights during a police encounter.",
+      link: "View rights cards →",
+      href: "/rights-cards",
+    },
+    {
+      Icon: BookOpen,
+      color: "text-purple-600 dark:text-purple-400",
+      bg: "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800/50",
+      title: "Case Timeline",
+      desc: "What happens after arraignment — bail hearings, motions, trial, and sentencing.",
+      link: "View timeline →",
+      href: "/case-timeline",
+    },
+  ];
+
+  return (
+    <div className="mt-8 rounded-xl border border-border overflow-hidden">
+      <div className="px-5 py-4 border-b border-border bg-muted/30">
+        <h2 className="text-base font-bold text-foreground">Resources &amp; Next Steps</h2>
+        <p className="text-sm text-muted-foreground mt-0.5">Everything you need — in one place. No searching required.</p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        {resources.map((r, i) => (
+          <Link key={i} href={r.href}>
+            <div className={`p-5 flex gap-4 hover:bg-muted/30 transition-colors cursor-pointer group ${i >= 2 ? "border-t border-border/60" : ""} ${i % 2 === 0 && i < 2 ? "sm:border-r border-border/60" : ""} ${i === 2 ? "sm:border-r border-border/60" : ""}`}>
+              <div className={`flex-shrink-0 w-9 h-9 rounded-lg border flex items-center justify-center ${r.bg}`}>
+                <r.Icon className={`w-4 h-4 ${r.color}`} />
+              </div>
+              <div className="min-w-0">
+                <h3 className="text-sm font-semibold text-foreground">{r.title}</h3>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{r.desc}</p>
+                <span className={`inline-flex items-center gap-1 text-xs font-medium mt-2 ${r.color} group-hover:underline`}>
+                  {r.link} <ExternalLink className="w-3 h-3" />
+                </span>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function PageSidebar({
   jurisdiction,
   onJurisdictionChange,
-  activeStepId,
+  openStepId,
+  onOpenStep,
 }: {
   jurisdiction: string;
   onJurisdictionChange: (v: string) => void;
-  activeStepId: string;
+  openStepId: number;
+  onOpenStep: (n: number) => void;
 }) {
   return (
     <aside className="hidden lg:block w-56 flex-shrink-0" aria-label="Page navigation">
@@ -365,12 +506,15 @@ function PageSidebar({
 
         {/* Step TOC */}
         <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Jump to step</p>
-        {STEP_TOC.map(({ id, label, Icon }) => {
-          const isActive = activeStepId === id;
+        {STEP_TOC.map(({ n, id, label, Icon }) => {
+          const isActive = openStepId === n;
           return (
             <button
               key={id}
-              onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              onClick={() => {
+                onOpenStep(n);
+                setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+              }}
               className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left transition-all duration-150 text-sm ${
                 isActive
                   ? "bg-primary/10 border border-primary/20 text-foreground font-medium"
@@ -422,50 +566,10 @@ export default function FirstTwentyFourHours() {
   useScrollToTop();
   const { t } = useTranslation();
   const [jurisdiction, setJurisdiction] = useState<string>("");
-  const [stageSelection, setStageSelection] = useState<'custody' | 'released' | 'arraignment' | null>(null);
-  const [activeStepId, setActiveStepId] = useState<string>("step-arrest");
+  const [openStepId, setOpenStepId] = useState<number>(1);
 
-  useEffect(() => {
-    const ids = STEP_TOC.map((s) => s.id);
-    const observers: IntersectionObserver[] = [];
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveStepId(id); },
-        { rootMargin: "-10% 0px -60% 0px", threshold: 0 }
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
-    return () => observers.forEach((obs) => obs.disconnect());
-  }, []);
-
-  // Scroll to first priority step when stage is selected
-  useEffect(() => {
-    if (!stageSelection) return;
-    const scrollTargets: Record<string, string> = {
-      custody: 'step-booking',
-      released: 'step-lawyer',
-      arraignment: 'step-lawyer',
-    };
-    const targetId = scrollTargets[stageSelection];
-    if (targetId) {
-      setTimeout(() => {
-        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 150);
-    }
-  }, [stageSelection]);
-
-  // Which steps to highlight per stage selection
-  const HIGHLIGHTED: Record<string, number[]> = {
-    custody: [2, 3, 4],
-    released: [4, 5, 6],
-    arraignment: [5, 6, 7],
-  };
-  const isHighlighted = (n: number) =>
-    stageSelection != null && (HIGHLIGHTED[stageSelection]?.includes(n) ?? false);
-  const priorityLabel = t('first24Hours.stageSelector.priorityLabel');
+  const toggleStep = (n: number) => setOpenStepId((prev) => (prev === n ? -1 : n));
+  const openStep = (n: number) => setOpenStepId(n);
 
   return (
     <div className="min-h-screen bg-background">
@@ -494,88 +598,12 @@ export default function FirstTwentyFourHours() {
           <PageSidebar
             jurisdiction={jurisdiction}
             onJurisdictionChange={setJurisdiction}
-            activeStepId={activeStepId}
+            openStepId={openStepId}
+            onOpenStep={openStep}
           />
           <div className="flex-1 min-w-0">
 
-        {/* Family path callout */}
-        <ScrollReveal delay={0.01}>
-          <div className="mb-6 rounded-xl border border-teal-200 dark:border-teal-800/60 bg-teal-50/60 dark:bg-teal-900/10 p-5">
-            <div className="flex gap-3">
-              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-teal-100 dark:bg-teal-900/60 border border-teal-200 dark:border-teal-700 flex items-center justify-center">
-                <Users className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-              </div>
-              <div className="min-w-0">
-                <p className="text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
-                  {t('first24Hours.familyCallout.title')}
-                </p>
-                <ul className="space-y-1.5 mb-3">
-                  {(['task1', 'task2', 'task3'] as const).map((key) => (
-                    <li key={key} className="flex items-start gap-2 text-sm text-foreground/80">
-                      <span className="text-teal-500 mt-0.5 flex-shrink-0">→</span>
-                      <span>{t(`first24Hours.familyCallout.${key}`)}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex gap-2 flex-wrap">
-                  <Link href="/friends-family">
-                    <Button variant="outline" size="sm" className="border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20">{t('first24Hours.familyCallout.fullGuide')}</Button>
-                  </Link>
-                  <Link href="#phone-call">
-                    <Button variant="outline" size="sm" className="border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20">{t('first24Hours.familyCallout.jailCallGuide')}</Button>
-                  </Link>
-                  <Link href="/legal-aid">
-                    <Button variant="outline" size="sm" className="border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 dark:hover:bg-teal-900/20">{t('first24Hours.familyCallout.findDefender')}</Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ScrollReveal>
 
-        <ScrollReveal delay={0.015}>
-          <Alert className="mb-8 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-            <AlertDescription className="text-amber-800 dark:text-amber-200">
-              {t('first24Hours.alert')}
-            </AlertDescription>
-          </Alert>
-        </ScrollReveal>
-
-        {/* Stage selector */}
-        <ScrollReveal delay={0.018}>
-          <div className="mb-8 rounded-lg border border-border bg-muted/30 p-4">
-            <p className="text-sm font-semibold text-foreground mb-1">{t('first24Hours.stageSelector.prompt')}</p>
-            <p className="text-xs text-muted-foreground mb-3">{t('first24Hours.stageSelector.detail')}</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {([
-                { key: 'custody', label: t('first24Hours.stageSelector.custody'), desc: t('first24Hours.stageSelector.custodyDesc') },
-                { key: 'released', label: t('first24Hours.stageSelector.released'), desc: t('first24Hours.stageSelector.releasedDesc') },
-                { key: 'arraignment', label: t('first24Hours.stageSelector.arraignment'), desc: t('first24Hours.stageSelector.arraignmentDesc') },
-              ] as const).map(({ key, label, desc }) => (
-                <button
-                  key={key}
-                  onClick={() => setStageSelection(stageSelection === key ? null : key)}
-                  className={`text-left p-3 rounded-lg border text-xs transition-all cursor-pointer ${
-                    stageSelection === key
-                      ? 'border-blue-500 bg-blue-100 dark:bg-blue-900/30 dark:border-blue-500 shadow-sm'
-                      : 'border-blue-200/80 dark:border-blue-800/50 bg-blue-50/70 dark:bg-blue-950/20 hover:border-blue-400/70 dark:hover:border-blue-600/60 hover:bg-blue-100/60 dark:hover:bg-blue-900/20 shadow-sm'
-                  }`}
-                >
-                  <p className={`font-semibold mb-0.5 ${stageSelection === key ? 'text-blue-700 dark:text-blue-300' : 'text-foreground'}`}>{label}</p>
-                  <p className="text-muted-foreground leading-tight">{desc}</p>
-                </button>
-              ))}
-            </div>
-            <div className="mt-2.5 flex items-center justify-between flex-wrap gap-2">
-              <p className="text-xs text-muted-foreground">{t('first24Hours.stageSelector.preArrestNote')}</p>
-              {stageSelection && (
-                <button onClick={() => setStageSelection(null)} className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2 flex-shrink-0">
-                  {t('first24Hours.stageSelector.clear')}
-                </button>
-              )}
-            </div>
-          </div>
-        </ScrollReveal>
 
         {/* Step quick-jump navigator — mobile only; sidebar handles desktop */}
         <div className="lg:hidden">
@@ -607,148 +635,7 @@ export default function FirstTwentyFourHours() {
         </ScrollReveal>
         </div>{/* end lg:hidden step nav */}
 
-        {/* Before-arrest section */}
-        <ScrollReveal delay={0.02}>
-          <div id="before-arrest" className="mb-10 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-900/30 p-5">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-700 px-2 py-0.5 rounded-full">Optional</span>
-              <span className="text-xs text-muted-foreground">— for people not yet arrested</span>
-            </div>
-            <h2 className="text-lg font-bold text-foreground mt-2 mb-1">{t('first24Hours.beforeArrest.heading')}</h2>
-            <p className="text-sm text-muted-foreground mb-4">{t('first24Hours.beforeArrest.subheading')}</p>
-            <Accordion type="single" collapsible className="w-full space-y-2">
-              {[
-                {
-                  value: 'police-talk',
-                  title: t('first24Hours.beforeArrest.policeWantToTalkTitle'),
-                  context: t('first24Hours.beforeArrest.policeWantToTalkContext'),
-                  dos: [
-                    t('first24Hours.beforeArrest.policeWantToTalkDo1'),
-                    t('first24Hours.beforeArrest.policeWantToTalkDo2'),
-                    t('first24Hours.beforeArrest.policeWantToTalkDo3'),
-                  ],
-                  donts: [
-                    t('first24Hours.beforeArrest.policeWantToTalkDont1'),
-                    t('first24Hours.beforeArrest.policeWantToTalkDont2'),
-                    t('first24Hours.beforeArrest.policeWantToTalkDont3'),
-                  ],
-                },
-                {
-                  value: 'target-letter',
-                  title: t('first24Hours.beforeArrest.targetLetterTitle'),
-                  context: t('first24Hours.beforeArrest.targetLetterContext'),
-                  dos: [
-                    t('first24Hours.beforeArrest.targetLetterDo1'),
-                    t('first24Hours.beforeArrest.targetLetterDo2'),
-                  ],
-                  donts: [
-                    t('first24Hours.beforeArrest.targetLetterDont1'),
-                    t('first24Hours.beforeArrest.targetLetterDont2'),
-                    t('first24Hours.beforeArrest.targetLetterDont3'),
-                  ],
-                },
-                {
-                  value: 'warrant',
-                  title: t('first24Hours.beforeArrest.warrantTitle'),
-                  context: t('first24Hours.beforeArrest.warrantContext'),
-                  dos: [
-                    t('first24Hours.beforeArrest.warrantDo1'),
-                    t('first24Hours.beforeArrest.warrantDo2'),
-                    t('first24Hours.beforeArrest.warrantDo3'),
-                  ],
-                  donts: [
-                    t('first24Hours.beforeArrest.warrantDont1'),
-                    t('first24Hours.beforeArrest.warrantDont2'),
-                    t('first24Hours.beforeArrest.warrantDont3'),
-                  ],
-                },
-                {
-                  value: 'detained',
-                  title: t('first24Hours.beforeArrest.detainedTitle'),
-                  context: t('first24Hours.beforeArrest.detainedContext'),
-                  dos: [
-                    t('first24Hours.beforeArrest.detainedDo1'),
-                    t('first24Hours.beforeArrest.detainedDo2'),
-                    t('first24Hours.beforeArrest.detainedDo3'),
-                  ],
-                  donts: [
-                    t('first24Hours.beforeArrest.detainedDont1'),
-                    t('first24Hours.beforeArrest.detainedDont2'),
-                    t('first24Hours.beforeArrest.detainedDont3'),
-                  ],
-                },
-              ].map(({ value, title, context, dos, donts }) => (
-                <AccordionItem key={value} value={value} className="border border-border rounded-lg px-4">
-                  <AccordionTrigger className="text-left hover:no-underline py-3">
-                    <span className="font-semibold text-sm">{title}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-4">
-                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{context}</p>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-3">
-                        <div className="flex items-center gap-2 mb-2 pb-2 border-b border-emerald-200 dark:border-emerald-800/60">
-                          <div className="w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
-                          </div>
-                          <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
-                        </div>
-                        <ul className="space-y-2">
-                          {dos.map((item, i) => (
-                            <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
-                              <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-3">
-                        <div className="flex items-center gap-2 mb-2 pb-2 border-b border-rose-200 dark:border-rose-800/60">
-                          <div className="w-4 h-4 rounded-full bg-rose-500 flex items-center justify-center flex-shrink-0">
-                            <X className="w-2.5 h-2.5 text-white" strokeWidth={3} />
-                          </div>
-                          <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
-                        </div>
-                        <ul className="space-y-2">
-                          {donts.map((item, i) => (
-                            <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
-                              <X className="w-3.5 h-3.5 text-rose-500 flex-shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </ScrollReveal>
 
-        {/* JurisdictionSelector — mobile only; sidebar handles desktop */}
-        <div className="lg:hidden">
-          <ScrollReveal delay={0.025}>
-            <JurisdictionSelector
-              label="See state-specific rules for your location (optional)"
-              value={jurisdiction}
-              onChange={setJurisdiction}
-            />
-          </ScrollReveal>
-        </div>
-
-        <ScrollReveal delay={0.03}>
-          <div className="mb-8 rounded-lg border-2 border-amber-400 bg-amber-50 dark:bg-amber-900/20 p-5">
-            <h3 className="text-base font-bold text-amber-800 dark:text-amber-200 mb-3">{t('first24Hours.juvenile.title')}</h3>
-            <p className="text-sm text-amber-900 dark:text-amber-100 mb-3">{t('first24Hours.juvenile.intro')}</p>
-            <ul className="space-y-2 text-sm text-amber-900 dark:text-amber-100">
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet1')}</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet2')}</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet3')}</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet4')}</span></li>
-              <li className="flex items-start gap-2"><span className="mt-1 flex-shrink-0">•</span><span>{t('first24Hours.juvenile.bullet5')}</span></li>
-            </ul>
-          </div>
-        </ScrollReveal>
 
         {/* Section header */}
         <div className="flex items-center gap-4 mb-8 mt-2">
@@ -757,15 +644,14 @@ export default function FirstTwentyFourHours() {
           <div className="flex-1 h-px bg-border" />
         </div>
 
-        <div>
+        <div className="space-y-3">
           {/* STEP 1 */}
-          <ScrollReveal delay={0.05}>
             <Step
               number={1}
               id="step-arrest"
               icon={ShieldAlert}
-              highlighted={isHighlighted(1)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 1}
+              onToggle={() => toggleStep(1)}
               title={t('first24Hours.steps.step1.title')}
               timeframe={t('first24Hours.steps.step1.timeframe')}
               context={t('first24Hours.steps.step1.context')}
@@ -794,16 +680,14 @@ export default function FirstTwentyFourHours() {
                 </div>
               </div>
             </Step>
-          </ScrollReveal>
 
           {/* STEP 2 */}
-          <ScrollReveal delay={0.1}>
             <Step
               number={2}
               id="step-booking"
               icon={ClipboardList}
-              highlighted={isHighlighted(2)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 2}
+              onToggle={() => toggleStep(2)}
               title={t('first24Hours.steps.step2.title')}
               timeframe={t('first24Hours.steps.step2.timeframe')}
               context={t('first24Hours.steps.step2.context')}
@@ -826,16 +710,14 @@ export default function FirstTwentyFourHours() {
             >
               <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
             </Step>
-          </ScrollReveal>
 
           {/* STEP 3 — with phone-call anchor */}
-          <ScrollReveal delay={0.15}>
             <Step
               number={3}
               id="phone-call"
               icon={Phone}
-              highlighted={isHighlighted(3)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 3}
+              onToggle={() => toggleStep(3)}
               title={t('first24Hours.steps.step3.title')}
               timeframe={t('first24Hours.steps.step3.timeframe')}
               context={t('first24Hours.steps.step3.context')}
@@ -907,16 +789,14 @@ export default function FirstTwentyFourHours() {
                 <FacilityLookupWidget />
               </div>
             </Step>
-          </ScrollReveal>
 
           {/* STEP 4 */}
-          <ScrollReveal delay={0.2}>
             <Step
               number={4}
               id="step-bail"
               icon={Banknote}
-              highlighted={isHighlighted(4)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 4}
+              onToggle={() => toggleStep(4)}
               title={t('first24Hours.steps.step4.title')}
               timeframe={t('first24Hours.steps.step4.timeframe')}
               context={t('first24Hours.steps.step4.context')}
@@ -949,16 +829,14 @@ export default function FirstTwentyFourHours() {
                 <JurisdictionCallout jurisdiction={jurisdiction} topic="bail" />
               </div>
             </Step>
-          </ScrollReveal>
 
           {/* STEP 5 */}
-          <ScrollReveal delay={0.25}>
             <Step
               number={5}
               id="step-lawyer"
               icon={Scale}
-              highlighted={isHighlighted(5)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 5}
+              onToggle={() => toggleStep(5)}
               title={t('first24Hours.steps.step5.title')}
               timeframe={t('first24Hours.steps.step5.timeframe')}
               context={t('first24Hours.steps.step5.context')}
@@ -1006,16 +884,14 @@ export default function FirstTwentyFourHours() {
                 </div>
               </div>
             </Step>
-          </ScrollReveal>
 
           {/* STEP 6 */}
-          <ScrollReveal delay={0.3}>
             <Step
               number={6}
               id="step-arraignment"
               icon={Landmark}
-              highlighted={isHighlighted(6)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 6}
+              onToggle={() => toggleStep(6)}
               title={t('first24Hours.steps.step6.title')}
               timeframe={t('first24Hours.steps.step6.timeframe')}
               context={t('first24Hours.steps.step6.context')}
@@ -1032,16 +908,14 @@ export default function FirstTwentyFourHours() {
             >
               <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
             </Step>
-          </ScrollReveal>
 
           {/* STEP 7 */}
-          <ScrollReveal delay={0.35}>
             <Step
               number={7}
               id="step-ongoing"
               icon={CalendarCheck}
-              highlighted={isHighlighted(7)}
-              priorityLabel={priorityLabel}
+              isOpen={openStepId === 7}
+              onToggle={() => toggleStep(7)}
               title={t('first24Hours.steps.step7.title')}
               timeframe={t('first24Hours.steps.step7.timeframe')}
               context={t('first24Hours.steps.step7.context')}
@@ -1057,14 +931,48 @@ export default function FirstTwentyFourHours() {
                 t('first24Hours.steps.step7.dont3'),
                 t('first24Hours.steps.step7.dont4'),
               ]}
-              isLast
             />
-          </ScrollReveal>
         </div>
 
-        {/* DEEP-DIVE ACCORDIONS */}
-        <ScrollReveal delay={0.4}>
-          <div className="mt-4 border-t border-border pt-10">
+        {/* Friends & Family callout — matches mockup */}
+        <div className="mt-8 rounded-xl border border-teal-200 dark:border-teal-800/60 bg-teal-50/60 dark:bg-teal-900/10 overflow-hidden">
+          <div className="flex gap-4 p-5">
+            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-100 dark:bg-teal-900/70 border border-teal-200 dark:border-teal-700 flex items-center justify-center">
+              <Users className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+            </div>
+            <div className="min-w-0">
+              <h3 className="text-base font-bold text-teal-800 dark:text-teal-300">{t('first24Hours.familyCallout.title')}</h3>
+              <p className="text-sm text-teal-700/80 dark:text-teal-200/80 mt-1">
+                {t('first24Hours.familyCallout.task1')}. {t('first24Hours.familyCallout.task2')}.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Link href="#phone-call" onClick={() => openStep(3)}>
+                  <button className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-teal-300 dark:border-teal-700 text-sm text-teal-700 dark:text-teal-300 hover:bg-teal-100/60 dark:hover:bg-teal-900/30 transition-colors">
+                    <MapPin className="w-3.5 h-3.5" />
+                    Inmate locator — all 50 states
+                  </button>
+                </Link>
+                <Link href="/friends-family">
+                  <button className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-teal-300 dark:border-teal-700 text-sm text-teal-700 dark:text-teal-300 hover:bg-teal-100/60 dark:hover:bg-teal-900/30 transition-colors">
+                    <BookOpen className="w-3.5 h-3.5" />
+                    Full friends &amp; family guide
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resources card */}
+        <ResourcesCard />
+
+        {/* Footer nudge */}
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          {t('first24Hours.disclaimer')}
+        </p>
+
+        {/* DEEP-DIVE ACCORDIONS — hidden but preserved */}
+        <div className="hidden" aria-hidden="true"><div className="mt-4 border-t border-border pt-10">
             <h2 className="text-xl font-bold text-foreground mb-2">{t('first24Hours.deepDiveTitle')}</h2>
             <p className="text-sm text-muted-foreground mb-6">{t('first24Hours.deepDiveSubtitle')}</p>
 
@@ -1301,42 +1209,7 @@ export default function FirstTwentyFourHours() {
               </AccordionItem>
 
             </Accordion>
-          </div>
-        </ScrollReveal>
-
-        {/* Related Guides */}
-        <ScrollReveal delay={0.45}>
-          <div className="mt-10 border-t border-border pt-10">
-            <h2 className="text-lg font-semibold mb-3">{t('first24Hours.relatedGuides')}</h2>
-            <div className="grid sm:grid-cols-2 gap-2">
-              {[
-                { href: "/case-timeline", icon: Scale, title: "Criminal Justice Process" },
-                { href: "/rights-info", icon: Shield, title: "Your Constitutional Rights" },
-                { href: "/right-to-counsel", icon: Shield, title: "Right to an Attorney" },
-                { href: "/collateral-consequences", icon: BookOpen, title: "Hidden Consequences of a Conviction" },
-                { href: "/case-guidance", icon: MessageSquare, title: "Get Personalized Guidance" },
-              ].map((item) => (
-                <Link key={item.href} href={item.href}>
-                  <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
-                    <item.icon className="h-4 w-4 text-muted-foreground shrink-0" />
-                    <span className="text-sm font-medium">{item.title}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.5}>
-          <Alert className="mt-8 border-slate-200 dark:border-slate-700">
-            <AlertDescription className="text-muted-foreground text-sm">
-              <div className="flex items-start gap-3">
-                <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0 opacity-60" />
-                <span>{t('first24Hours.disclaimer')}</span>
-              </div>
-            </AlertDescription>
-          </Alert>
-        </ScrollReveal>
+          </div></div>{/* end hidden deep-dives */}
 
           </div>{/* end flex-1 content column */}
         </div>{/* end flex row */}
