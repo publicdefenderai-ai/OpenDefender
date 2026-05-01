@@ -5034,7 +5034,7 @@ i18n
                 "dont3": "Don't assume booking staff are neutral. Everything is documented.",
                 "dont4": "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
                 "dont5": "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
-                "propertyNote": "Before or during booking, try to note everything taken from you: phone, wallet, ID, keys, and any cash. Property is held at the evidence unit of the arresting precinct — not the jail. The Court & Legal section of our Life Support guide explains exactly how to retrieve it."
+                "propertyNote": "Before or during booking, try to note everything taken from you: phone, wallet, ID, keys, and any cash. Property is held at the evidence unit of the arresting precinct — not the jail. The <1>Court & Legal</1> section of our Life Support guide explains exactly how to retrieve it."
               },
               "step3": {
                 "title": "Your First Phone Call",
@@ -10358,7 +10358,7 @@ i18n
                 "dont3": "No asuma que el personal de fichaje es neutral. Todo queda documentado.",
                 "dont4": "No responda preguntas sobre el incidente, su paradero o cualquier otra persona involucrada, aunque parezcan rutinarias o no relacionadas con el delito.",
                 "dont5": "No autorice hisopos de ADN, registros adicionales ni interrogatorios más allá del proceso mecánico de fichaje sin pedir primero hablar con su abogado.",
-                "propertyNote": "Antes o durante el fichaje, intente anotar todo lo que le fue confiscado: teléfono, billetera, identificación, llaves y cualquier efectivo. Sus pertenencias se guardan en la unidad de evidencias de la estación policial donde fue arrestado, no en la cárcel. La sección de Apoyo Legal y de la Corte de nuestra guía de Apoyo para la Vida explica exactamente cómo recuperarlas."
+                "propertyNote": "Antes o durante el fichaje, intente anotar todo lo que le fue confiscado: teléfono, billetera, identificación, llaves y cualquier efectivo. Sus pertenencias se guardan en la unidad de evidencias de la estación policial donde fue arrestado, no en la cárcel. La sección de <1>Apoyo Legal y de la Corte</1> de nuestra guía de Apoyo para la Vida explica exactamente cómo recuperarlas."
               },
               "step3": {
                 "title": "Su Primera Llamada Telefónica",
@@ -15683,7 +15683,7 @@ i18n
                 "dont3": "不要认为登记人员是中立的。一切都会被记录在案。",
                 "dont4": "不要回答有关事件、您的下落或任何其他相关人员的问题，即使这些问题看起来很常规或与犯罪无关。",
                 "dont5": "在要求与您的律师交谈之前，不要同意采集DNA样本、额外搜查或超出登记程序的审讯。",
-                "propertyNote": "在登记手续前后，尽量记下所有被没收的物品：手机、钱包、身份证、钥匙和现金。您的财物保存在逮捕您的分局的证据室，而非羁押机构。本网站生活支持指南中的【法庭与法律】部分详细说明了如何取回这些财物。"
+                "propertyNote": "在登记手续前后，尽量记下所有被没收的物品：手机、钱包、身份证、钥匙和现金。您的财物保存在逮捕您的分局的证据室，而非羁押机构。本网站生活支持指南中的<1>【法庭与法律】</1>部分详细说明了如何取回这些财物。"
               },
               "step3": {
                 "title": "您的第一个电话",

@@ -8,7 +8,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { Shield, Scale, MessageSquare, BookOpen } from "lucide-react";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -865,11 +865,14 @@ export default function FirstTwentyFourHours() {
             >
               <div className="space-y-3 mt-2">
                 <div className="rounded-lg bg-muted/40 border border-border/60 p-3">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('first24Hours.steps.step2.propertyNote')}{' '}
-                    <Link href="/support/court-logistics" className="underline underline-offset-2 font-medium hover:text-foreground transition-colors">
-                      {t('first24Hours.links.courtLogistics')}
-                    </Link>
+                  <p className="text-sm text-foreground/75 leading-relaxed">
+                    <Trans
+                      i18nKey="first24Hours.steps.step2.propertyNote"
+                      components={[
+                        <span />,
+                        <Link href="/support/court-logistics" className="underline underline-offset-2 font-medium hover:text-foreground transition-colors" />,
+                      ]}
+                    />
                   </p>
                 </div>
                 <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
