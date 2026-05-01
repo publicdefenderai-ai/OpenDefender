@@ -187,12 +187,17 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '5000', 10);
 
-  // Free the port if a previous process is still holding it (unclean shutdown)
-  try {
-    execSync(`fuser -k ${port}/tcp`, { stdio: 'ignore' });
-    await new Promise(resolve => setTimeout(resolve, 500));
-  } catch (_) {
-    // No process was holding the port — this is the normal case
+  // Free the port if a previous process is still holding it (unclean shutdown).
+  // Retries up to 3 times with increasing delays to handle slow process teardown
+  // (common after task-agent merges trigger a workflow restart).
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      execSync(`fuser -k ${port}/tcp`, { stdio: 'ignore' });
+    } catch (_) {
+      // No process holding the port — normal case, stop retrying
+      break;
+    }
+    await new Promise(resolve => setTimeout(resolve, 800 + attempt * 400));
   }
 
   server.listen({
