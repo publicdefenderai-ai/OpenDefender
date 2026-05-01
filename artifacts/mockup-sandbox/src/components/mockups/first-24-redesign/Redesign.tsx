@@ -299,14 +299,14 @@ function Sidebar({
               className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all"
             >
               <MapPin className="w-4 h-4 text-slate-500" />
-              <span>Locate the facility</span>
+              <span>Inmate Locator</span>
             </a>
             <a
               href="#"
               className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all"
             >
               <BookOpen className="w-4 h-4 text-slate-500" />
-              <span>Family guide</span>
+              <span>Full Family Guide</span>
             </a>
           </div>
         </div>
