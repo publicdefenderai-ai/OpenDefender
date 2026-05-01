@@ -299,7 +299,20 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
         >
           {headerContent}
         </button>
-        {isOpen && bodyContent}
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              key="content"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+              style={{ overflow: "hidden" }}
+            >
+              {bodyContent}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     );
   }
@@ -516,8 +529,12 @@ function PageSidebar({
             <button
               key={id}
               onClick={() => {
+                const el = document.getElementById(id);
+                if (el) {
+                  const top = el.getBoundingClientRect().top + window.scrollY - 88;
+                  window.scrollTo({ top: Math.max(0, top) });
+                }
                 onOpenStep(n);
-                setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
               }}
               className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left transition-all duration-150 text-sm ${
                 isActive
@@ -587,8 +604,12 @@ export default function FirstTwentyFourHours() {
   const toggleStep = (n: number) => setOpenStepId((prev) => (prev === n ? -1 : n));
   const openStep = (n: number) => setOpenStepId(n);
   const openJuvenile = () => {
+    const el = document.getElementById("juvenile-note");
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top: Math.max(0, top) });
+    }
     setJuvenileOpen(true);
-    setTimeout(() => document.getElementById("juvenile-note")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
   };
 
   return (

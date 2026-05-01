@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Scale, AlertTriangle, ChevronDown, CheckCircle, XCircle,
   Info, Gavel, MessageSquare, Shield,
@@ -152,11 +153,22 @@ function SectionPanel({ id, title, icon, isOpen, onToggle, children }: SectionPa
           className={`h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
-      {isOpen && (
-        <div className="px-5 pb-6 pt-4 border-t border-border/50 space-y-4">
-          {children}
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+            style={{ overflow: "hidden" }}
+          >
+            <div className="px-5 pb-6 pt-4 border-t border-border/50 space-y-4">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -230,15 +242,26 @@ export default function RightToCounsel() {
   const { jurisdiction } = useJurisdiction();
   const [openId, setOpenId] = useState("constitutional-sources");
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top: Math.max(0, top) });
+    }
+  };
+
   const openAndScroll = (id: string) => {
+    scrollToSection(id);
     setOpenId(id);
-    setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 50);
   };
 
   const toggleSection = (id: string) => {
-    setOpenId((prev) => (prev === id ? "" : id));
+    if (openId === id) {
+      setOpenId("");
+    } else {
+      scrollToSection(id);
+      setOpenId(id);
+    }
   };
 
   const breadcrumbItems = [
