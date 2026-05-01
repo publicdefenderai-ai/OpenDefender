@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import {
   ShieldAlert,
   ClipboardList,
@@ -17,8 +17,96 @@ import {
   CheckCircle2,
   MessageSquare,
   FileText,
+  MapPinned,
 } from "lucide-react";
 
+// ---------------------------------------------------------------------------
+// State-specific data — keyed by step role, then by state abbreviation
+// ---------------------------------------------------------------------------
+type StateNotes = {
+  phoneCall?: string;
+  bail?: string;
+  counsel?: string;
+  arraignment?: string;
+};
+
+const STATE_NOTES: Record<string, StateNotes> = {
+  CA: {
+    phoneCall:
+      "California law (Penal Code § 851.5) guarantees 3 completed phone calls within 3 hours of booking. If denied, evidence obtained afterward may be suppressed.",
+    bail:
+      "California still uses cash bail. Judges must consider ability to pay and may set own-recognizance release. A 2020 ballot measure to eliminate cash bail was rejected by voters.",
+    arraignment:
+      "California requires arraignment within 48 hours of arrest, excluding weekends and holidays. For misdemeanors, up to 5 days if released.",
+  },
+  NY: {
+    phoneCall:
+      "New York requires phone access within a \"reasonable time\" — courts have interpreted this as 1–3 hours of booking.",
+    bail:
+      "New York's 2020 bail reform eliminated cash bail for most misdemeanors and non-violent felonies. Judges must use the least-restrictive release condition.",
+    counsel:
+      "New York's right to counsel attaches at arraignment AND once formal charging begins — broader than the federal standard. Police must stop questioning once counsel is requested.",
+    arraignment:
+      "New York requires arraignment within 24 hours of arrest. For felonies, the DA has 6 days to present charges to a grand jury.",
+  },
+  TX: {
+    phoneCall:
+      "Texas has no specific statute on phone call timing, but courts require access within a \"reasonable time\" — typically 2–4 hours of booking.",
+    bail:
+      "Texas requires a magistrate hearing within 48 hours of arrest. The magistrate — not a schedule — sets bail. Personal bond (OR release) is available at magistrate discretion.",
+    arraignment:
+      "Texas arraignment must occur within 48 hours for felonies (72 hours if no magistrate is available over a weekend).",
+  },
+  FL: {
+    phoneCall:
+      "Florida requires a first appearance before a judge within 24 hours — phone calls should be available at booking before that hearing.",
+    bail:
+      "Florida's first appearance (bail hearing) must occur within 24 hours of arrest — one of the fastest timelines in the country. Bail schedules exist for common charges.",
+    arraignment:
+      "Florida first appearance within 24 hours; formal arraignment scheduled within 21 days for felonies in custody.",
+  },
+  IL: {
+    bail:
+      "Illinois eliminated cash bail entirely as of September 18, 2023 (Pretrial Fairness Act). A judge determines release or detention at a hearing — no bail amount is set.",
+    counsel:
+      "Illinois law extends the right to counsel to before any police questioning — broader than the federal Miranda standard.",
+    arraignment:
+      "Illinois requires arraignment within 14 days of arrest for defendants held in custody.",
+  },
+  WA: {
+    phoneCall:
+      "Washington state law (RCW 70.48.400) requires access to a phone within 1 hour of booking — one of the strictest timelines in the US.",
+    arraignment:
+      "Washington requires arraignment within 3 days of arrest for felonies (1 business day for in-custody misdemeanors).",
+  },
+  CO: {
+    bail:
+      "Colorado uses a statewide bond schedule, but judges can deviate. Pretrial Services assesses every defendant and recommends release conditions.",
+    arraignment:
+      "Colorado requires a county court advisement (similar to arraignment) within 48 hours of arrest.",
+  },
+  GA: {
+    bail:
+      "Georgia requires a first appearance within 72 hours of arrest. Bail commissioners can set bail at the jail before the hearing for many charges.",
+    arraignment:
+      "Georgia arraignment is typically scheduled 2–4 weeks after arrest for felonies; misdemeanor arraignment may be same-day or next-day.",
+  },
+};
+
+const STATE_LABELS: Record<string, string> = {
+  CA: "California",
+  NY: "New York",
+  TX: "Texas",
+  FL: "Florida",
+  IL: "Illinois",
+  WA: "Washington",
+  CO: "Colorado",
+  GA: "Georgia",
+};
+
+// ---------------------------------------------------------------------------
+// Step definitions
+// ---------------------------------------------------------------------------
 const steps = [
   {
     id: 1,
@@ -29,15 +117,17 @@ const steps = [
     color: "text-red-400",
     bg: "bg-red-950/40",
     border: "border-red-800/50",
+    stateKey: null as keyof StateNotes | null,
     content: {
       rights: [
         "You have the right to remain silent — use it.",
         "You must provide your name in most states (stop-and-identify laws).",
         "Do not consent to searches, but do not physically resist.",
-        "Ask calmly: \"Am I free to go?\" — if yes, walk away slowly.",
+        'Ask calmly: "Am I free to go?" — if yes, walk away slowly.',
       ],
-      warning: "Everything you say CAN and WILL be used against you in court. Stay silent until you have an attorney.",
-      tip: "Officers may tell you that \"cooperating\" will help. It rarely does. The only safe thing to say is: \"I am exercising my right to remain silent. I want a lawyer.\"",
+      warning:
+        "Everything you say CAN and WILL be used against you in court. Stay silent until you have an attorney.",
+      tip: 'Officers may tell you that "cooperating" will help. It rarely does. The only safe thing to say is: "I am exercising my right to remain silent. I want a lawyer."',
     },
   },
   {
@@ -49,6 +139,7 @@ const steps = [
     color: "text-orange-400",
     bg: "bg-orange-950/40",
     border: "border-orange-800/50",
+    stateKey: null as keyof StateNotes | null,
     content: {
       rights: [
         "You will be photographed and fingerprinted.",
@@ -56,7 +147,8 @@ const steps = [
         "You will be told the charges against you.",
         "You are entitled to make at least one phone call.",
       ],
-      warning: "Jail phone calls are recorded. Never discuss your case on a jail phone — only exception is calls to a licensed attorney.",
+      warning:
+        "Jail phone calls are recorded. Never discuss your case on a jail phone — the only exception is calls to a licensed attorney.",
       tip: "Memorize two numbers before going out: a trusted person who can find you a lawyer, and a bail bondsman if you know one.",
     },
   },
@@ -69,15 +161,17 @@ const steps = [
     color: "text-yellow-400",
     bg: "bg-yellow-950/40",
     border: "border-yellow-800/50",
+    stateKey: "phoneCall" as keyof StateNotes,
     content: {
       rights: [
         "In most states, you get at least one phone call within a few hours of arrest.",
-        "California law: 3 completed calls within 3 hours.",
         "Use your call to reach a lawyer, family member, or bail bondsman.",
-        "If calling a family member, give them: your full name, the jail name, and the charges.",
+        "If calling family, give them: your full name, the jail name, and the charges.",
+        "Do not discuss the incident — the call is recorded.",
       ],
-      warning: "The jail phone is monitored. Do not say anything about the incident, the evidence, or anyone else involved. Just coordinate your release.",
-      tip: "What to say on a jail call: \"I've been arrested at [jail name]. The charges are [X]. I need you to contact a lawyer and find out about bail. Do not discuss anything else on this call.\"",
+      warning:
+        "The jail phone is monitored. Do not say anything about the incident, the evidence, or anyone else involved. Just coordinate your release.",
+      tip: 'What to say: "I\'ve been arrested at [jail name]. The charges are [X]. I need you to contact a lawyer and find out about bail. Do not discuss anything else on this call."',
     },
   },
   {
@@ -89,6 +183,7 @@ const steps = [
     color: "text-green-400",
     bg: "bg-green-950/40",
     border: "border-green-800/50",
+    stateKey: "bail" as keyof StateNotes,
     content: {
       rights: [
         "Bail is money deposited to ensure you appear at future court dates.",
@@ -96,7 +191,8 @@ const steps = [
         "You can post cash bail (full amount) or use a bondsman (10% fee, non-refundable).",
         "If you can't afford bail, your lawyer can request a bail reduction.",
       ],
-      warning: "If released on bail, follow every condition: attend all hearings, comply with any no-contact orders, and report to a pretrial services officer if required.",
+      warning:
+        "If released on bail, follow every condition: attend all hearings, comply with no-contact orders, and report to pretrial services if required.",
       tip: "Own-recognizance (OR) release means the judge lets you go without bail — just your promise to appear. Your lawyer can argue for this if you have strong community ties.",
     },
   },
@@ -109,15 +205,17 @@ const steps = [
     color: "text-blue-400",
     bg: "bg-blue-950/40",
     border: "border-blue-800/50",
+    stateKey: "counsel" as keyof StateNotes,
     content: {
       rights: [
-        "6th Amendment: You have the right to an attorney at all \"critical stages\" (after formal charges).",
-        "5th Amendment (Miranda): You can refuse to answer questions without an attorney present — even before charges.",
+        'You have the right to an attorney at all "critical stages" (after formal charges).',
+        "You can refuse to answer questions without an attorney present — even before charges.",
         "If you cannot afford an attorney, the court must appoint one at no cost.",
-        "You can invoke this right at any time by saying: \"I want a lawyer.\"",
+        'You can invoke this right at any time by saying: "I want a lawyer."',
       ],
-      warning: "Once you say \"I want a lawyer,\" police must stop questioning immediately. If they continue, any answers may be suppressed. Do not keep talking after invoking — stay silent.",
-      tip: "Ask specifically for a public defender at your first appearance. Don't assume one will be assigned automatically — request one.",
+      warning:
+        'Once you say "I want a lawyer," police must stop questioning immediately. Do not keep talking after invoking — stay completely silent.',
+      tip: "Ask specifically for a public defender at your first appearance. Don't assume one will be assigned automatically — you must request one.",
     },
   },
   {
@@ -129,6 +227,7 @@ const steps = [
     color: "text-purple-400",
     bg: "bg-purple-950/40",
     border: "border-purple-800/50",
+    stateKey: "arraignment" as keyof StateNotes,
     content: {
       rights: [
         "The judge will read the formal charges against you.",
@@ -136,8 +235,9 @@ const steps = [
         "Bail may be revisited if not set at booking.",
         "You will be given future court dates.",
       ],
-      warning: "In nearly all cases, plead NOT GUILTY at arraignment — even if you plan to take a deal later. Pleading guilty at arraignment gives up your bargaining power entirely.",
-      tip: "An arraignment typically takes 5–15 minutes. The judge is not deciding your case here — this is just a procedural step. Your lawyer does most of the talking.",
+      warning:
+        "In nearly all cases, plead NOT GUILTY at arraignment — even if you plan to take a deal later. Pleading guilty at arraignment gives up your bargaining power entirely.",
+      tip: "An arraignment typically takes 5–15 minutes. The judge is not deciding your case here — this is a procedural step. Your lawyer does most of the talking.",
     },
   },
   {
@@ -149,6 +249,7 @@ const steps = [
     color: "text-indigo-400",
     bg: "bg-indigo-950/40",
     border: "border-indigo-800/50",
+    stateKey: null as keyof StateNotes | null,
     content: {
       rights: [
         "Your case enters the pretrial phase: discovery, motions, plea negotiations.",
@@ -156,22 +257,56 @@ const steps = [
         "You can file motions to suppress illegally obtained evidence.",
         "You have a constitutional right to a speedy trial.",
       ],
-      warning: "Do not discuss your case on social media, with friends, or with family in ways that could be subpoenaed. Only communications with your attorney are protected.",
+      warning:
+        "Do not discuss your case on social media, with friends, or with family in ways that could be subpoenaed. Only communications with your attorney are protected.",
       tip: "Keep a dated journal of everything you remember about the arrest — write it down while it's fresh. This helps your attorney spot procedural errors that could help your case.",
     },
   },
 ];
 
+// ---------------------------------------------------------------------------
+// StateCallout
+// ---------------------------------------------------------------------------
+function StateCallout({
+  stateAbbr,
+  note,
+}: {
+  stateAbbr: string;
+  note: string;
+}) {
+  return (
+    <div className="flex gap-3 rounded-lg bg-amber-950/50 border border-amber-700/50 p-4">
+      <MapPinned className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-400" />
+      <div>
+        <p className="text-xs font-semibold text-amber-300 uppercase tracking-wide mb-1">
+          {STATE_LABELS[stateAbbr]} — State-specific rule
+        </p>
+        <p className="text-sm text-amber-100/90">{note}</p>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// StepCard
+// ---------------------------------------------------------------------------
 function StepCard({
   step,
   isOpen,
   onToggle,
+  selectedState,
 }: {
   step: (typeof steps)[0];
   isOpen: boolean;
   onToggle: () => void;
+  selectedState: string;
 }) {
   const Icon = step.icon;
+  const stateNote =
+    selectedState && step.stateKey
+      ? STATE_NOTES[selectedState]?.[step.stateKey]
+      : undefined;
+
   return (
     <div
       id={`step-${step.id}`}
@@ -182,16 +317,26 @@ function StepCard({
         className="w-full flex items-center gap-4 p-5 text-left hover:opacity-90 transition-opacity"
         aria-expanded={isOpen}
       >
-        <div className={`flex-shrink-0 w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center`}>
+        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center">
           <Icon className={`w-5 h-5 ${step.color}`} />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Step {step.id}</span>
+            <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
+              Step {step.id}
+            </span>
             <span className="text-xs text-slate-500">·</span>
             <span className="text-xs text-slate-400">{step.duration}</span>
+            {stateNote && (
+              <span className="ml-1 inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-900/60 border border-amber-700/50 text-amber-300 text-xs font-medium">
+                <MapPinned className="w-3 h-3" />
+                {STATE_LABELS[selectedState]}
+              </span>
+            )}
           </div>
-          <h3 className="text-white font-bold text-lg leading-snug">{step.title}</h3>
+          <h3 className="text-white font-bold text-lg leading-snug">
+            {step.title}
+          </h3>
           <p className="text-slate-300 text-sm mt-0.5">{step.short}</p>
         </div>
         <div className="flex-shrink-0">
@@ -213,6 +358,9 @@ function StepCard({
               </li>
             ))}
           </ul>
+          {stateNote && (
+            <StateCallout stateAbbr={selectedState} note={stateNote} />
+          )}
           <div className="flex gap-3 rounded-lg bg-red-950/60 border border-red-800/50 p-4">
             <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-red-400" />
             <p className="text-sm text-red-200">{step.content.warning}</p>
@@ -230,22 +378,70 @@ function StepCard({
   );
 }
 
+// ---------------------------------------------------------------------------
+// Sidebar
+// ---------------------------------------------------------------------------
 function Sidebar({
   activeStep,
   openStep,
+  selectedState,
+  onStateChange,
 }: {
   activeStep: number;
   openStep: (n: number) => void;
+  selectedState: string;
+  onStateChange: (s: string) => void;
 }) {
+  const stepsWithStateData = new Set(
+    steps
+      .filter(
+        (s) =>
+          s.stateKey &&
+          selectedState &&
+          STATE_NOTES[selectedState]?.[s.stateKey]
+      )
+      .map((s) => s.id)
+  );
+
   return (
     <div className="hidden lg:block w-64 flex-shrink-0">
       <div className="sticky top-6 space-y-1">
+        {/* State selector */}
+        <div className="mb-4 rounded-xl border border-slate-700/60 bg-slate-900/70 p-3">
+          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">
+            Your State
+          </label>
+          <select
+            value={selectedState}
+            onChange={(e) => onStateChange(e.target.value)}
+            className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white appearance-none cursor-pointer focus:outline-none focus:border-blue-500"
+          >
+            <option value="">All states (general)</option>
+            {Object.entries(STATE_LABELS).map(([abbr, name]) => (
+              <option key={abbr} value={abbr}>
+                {name}
+              </option>
+            ))}
+          </select>
+          {selectedState && (
+            <p className="mt-2 text-xs text-amber-400/80">
+              State-specific rules highlighted in steps{" "}
+              {steps
+                .filter((s) => stepsWithStateData.has(s.id))
+                .map((s) => s.id)
+                .join(", ")}
+              .
+            </p>
+          )}
+        </div>
+
         <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3 px-2">
           Jump to step
         </p>
         {steps.map((step) => {
           const Icon = step.icon;
           const isActive = activeStep === step.id;
+          const hasStateNote = stepsWithStateData.has(step.id);
           return (
             <button
               key={step.id}
@@ -262,10 +458,17 @@ function Sidebar({
               }`}
             >
               <Icon
-                className={`w-4 h-4 flex-shrink-0 ${isActive ? step.color : "text-slate-500"}`}
+                className={`w-4 h-4 flex-shrink-0 ${
+                  isActive ? step.color : "text-slate-500"
+                }`}
               />
-              <span className="text-sm font-medium truncate">{step.title}</span>
-              {isActive && (
+              <span className="text-sm font-medium truncate flex-1">
+                {step.title}
+              </span>
+              {hasStateNote && (
+                <span className="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0" title={`${STATE_LABELS[selectedState]}-specific rule`} />
+              )}
+              {!hasStateNote && isActive && (
                 <span className="ml-auto w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
               )}
             </button>
@@ -292,7 +495,7 @@ function Sidebar({
           </a>
           <div className="mt-3 pt-3 border-t border-slate-700/40">
             <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2 px-2">
-              For family & friends
+              For family &amp; friends
             </p>
             <a
               href="#"
@@ -315,6 +518,9 @@ function Sidebar({
   );
 }
 
+// ---------------------------------------------------------------------------
+// ResourcesCard
+// ---------------------------------------------------------------------------
 function ResourcesCard() {
   const resources = [
     {
@@ -329,7 +535,7 @@ function ResourcesCard() {
       icon: MapPin,
       color: "text-emerald-400",
       bg: "bg-emerald-950/50 border-emerald-800/50",
-      title: "Find Your Facility",
+      title: "Inmate Locator",
       desc: "Locate an arrested person in any county jail or state prison across the US.",
       link: "Use the locator →",
     },
@@ -352,9 +558,9 @@ function ResourcesCard() {
   ];
 
   return (
-    <div className="mt-12 rounded-2xl border border-slate-700/60 bg-slate-900/70 overflow-hidden">
+    <div className="mt-8 rounded-2xl border border-slate-700/60 bg-slate-900/70 overflow-hidden">
       <div className="px-6 py-5 border-b border-slate-700/60">
-        <h2 className="text-lg font-bold text-white">Resources & Next Steps</h2>
+        <h2 className="text-lg font-bold text-white">Resources &amp; Next Steps</h2>
         <p className="text-sm text-slate-400 mt-1">
           Everything you need — in one place. No searching required.
         </p>
@@ -376,7 +582,9 @@ function ResourcesCard() {
               </div>
               <div className="min-w-0">
                 <h3 className="text-sm font-semibold text-white">{r.title}</h3>
-                <p className="text-xs text-slate-400 mt-1 leading-relaxed">{r.desc}</p>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  {r.desc}
+                </p>
                 <span
                   className={`inline-flex items-center gap-1 text-xs font-medium mt-2 ${r.color} group-hover:underline`}
                 >
@@ -391,8 +599,12 @@ function ResourcesCard() {
   );
 }
 
+// ---------------------------------------------------------------------------
+// Main page
+// ---------------------------------------------------------------------------
 export function Redesign() {
   const [openStepId, setOpenStepId] = useState<number>(1);
+  const [selectedState, setSelectedState] = useState<string>("");
 
   const toggleStep = (id: number) => {
     setOpenStepId((prev) => (prev === id ? -1 : id));
@@ -441,8 +653,9 @@ export function Redesign() {
             <span className="text-blue-400">After an Arrest</span>
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
-            A plain-language guide to every stage — from the moment of arrest through
-            your first court appearance. Know your rights. Know what to do next.
+            A plain-language guide to every stage — from the moment of arrest
+            through your first court appearance. Know your rights. Know what to
+            do next.
           </p>
 
           {/* Step pills — mobile quick nav */}
@@ -473,7 +686,12 @@ export function Redesign() {
       <div className="max-w-5xl mx-auto px-6 py-10">
         <div className="flex gap-10">
           {/* Sticky sidebar */}
-          <Sidebar activeStep={openStepId} openStep={openStep} />
+          <Sidebar
+            activeStep={openStepId}
+            openStep={openStep}
+            selectedState={selectedState}
+            onStateChange={setSelectedState}
+          />
 
           {/* Main content */}
           <div className="flex-1 min-w-0">
@@ -494,6 +712,7 @@ export function Redesign() {
                   step={step}
                   isOpen={openStepId === step.id}
                   onToggle={() => toggleStep(step.id)}
+                  selectedState={selectedState}
                 />
               ))}
             </div>
@@ -505,9 +724,13 @@ export function Redesign() {
                   <Users className="w-5 h-5 text-teal-400" />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-white font-bold text-base">For Friends &amp; Family</h3>
+                  <h3 className="text-white font-bold text-base">
+                    For Friends &amp; Family
+                  </h3>
                   <p className="text-sm text-teal-200/80 mt-1">
-                    If someone you love has been arrested, the first steps are finding where they're being held and getting them a lawyer. You don't need to navigate this alone.
+                    If someone you love has been arrested, the first steps are
+                    finding where they're being held and getting them a lawyer.
+                    You don't need to navigate this alone.
                   </p>
                   <div className="mt-3 flex flex-wrap gap-3">
                     <a
@@ -534,7 +757,8 @@ export function Redesign() {
 
             {/* Footer nudge */}
             <p className="mt-8 text-center text-xs text-slate-500">
-              This guide covers general U.S. law. State-specific rules vary — your attorney can clarify local procedures.
+              This guide covers general U.S. law. State-specific rules vary —
+              your attorney can clarify local procedures.
             </p>
           </div>
         </div>
