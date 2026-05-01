@@ -650,6 +650,74 @@ i18n
                 "tip3": "Eat before you go — you may not be able to leave the courtroom once proceedings start",
                 "tip4": "Turn off your phone completely before entering the courtroom, not just silence it",
                 "tip5": "If you feel overwhelmed, it's okay to ask the judge if you can have a moment to compose yourself"
+              },
+              "requirements": {
+                "sectionTitle": "What may be required of you",
+                "sectionSubtitle": "Judges often attach conditions to bail, diversion, or sentences. These sections explain how to meet them correctly — choosing the wrong program is a common and costly mistake.",
+                "courtOrdered": {
+                  "title": "Court-ordered programs",
+                  "context": "A judge may require you to complete a program as a condition of bail, diversion, or sentencing — DUI education, anger management, domestic violence intervention, parenting classes, and others. The critical detail: the program must be court-approved. Completing a non-approved program does not satisfy the requirement.",
+                  "verifyTitle": "How to verify a program is approved",
+                  "verifySteps": [
+                    "Call the court clerk's office and ask specifically: 'Is [program name] approved by this court for [your charge type]?' Get the answer in writing if possible.",
+                    "Ask your attorney or public defender to confirm before you enroll — this is a quick check they can do.",
+                    "Do not rely only on the program's own claim that they are court-approved. Verify directly with the court."
+                  ],
+                  "enrollTitle": "Questions to ask when you call to enroll",
+                  "enrollQuestions": [
+                    "Are you currently accepting new participants?",
+                    "What is the cost, and do you offer sliding-scale fees or waivers?",
+                    "How do you document and report completion to the court?",
+                    "What happens if I miss a session?"
+                  ],
+                  "completionTitle": "Completing the program",
+                  "completionNote": "Most programs issue a certificate of completion. Your attorney typically files this with the court — confirm with them that this has been done. Keep a copy for yourself."
+                },
+                "communityService": {
+                  "title": "Community service",
+                  "context": "Community service hours are a common requirement in diversion programs, plea deals, and sentences. Hours served at non-qualifying organizations will not count toward your requirement.",
+                  "findTitle": "How to find qualifying programs",
+                  "findSteps": [
+                    "Ask your probation officer or the court clerk for a list of court-approved organizations in your area.",
+                    "Your public defender or attorney can also request this list.",
+                    "If you find an organization on your own, confirm with the court or your attorney before starting."
+                  ],
+                  "docsTitle": "Documentation you will need",
+                  "docsNote": "Most courts require a signed letter from the organization on their letterhead confirming the dates, hours, and type of work completed. Ask for this letter before you leave on your last day — it is much harder to get later.",
+                  "turnedAwayNote": "If an organization cannot accept you because of your case or record, ask if they know of another program that can. Many community service providers have experience with court-mandated participants."
+                },
+                "propertyRetrieval": {
+                  "title": "Getting your property back",
+                  "context": "After arrest, your personal belongings — phone, wallet, keys, cash, and ID — are inventoried and held at the evidence unit of the arresting precinct. They are not held at the jail or courthouse. Many people do not know where to go, and some property is lost permanently because no one asked for it.",
+                  "steps": [
+                    "Call the evidence or property unit at the specific precinct where you were arrested. This is a different number from the main precinct line.",
+                    "Have your case number or booking number ready. If you don't have it, give your full legal name and the date of arrest.",
+                    "Ask what identification you need to bring to pick up your property. A state ID or passport is usually required.",
+                    "Ask about the process for any cash that was taken — this often requires a separate form or request."
+                  ],
+                  "carTitle": "If your vehicle was towed",
+                  "carNote": "Contact the towing company directly — not the precinct. The police can tell you which company towed the vehicle. Storage fees accumulate daily; act quickly to avoid losing the vehicle.",
+                  "missingNote": "If property is missing or damaged, file a formal complaint with the precinct in writing as soon as possible. Keep a copy."
+                },
+                "idReplacement": {
+                  "title": "Replacing your ID and documents",
+                  "context": "Your state ID or driver's license may have been taken at arrest, lost, or expired. Many services — shelters, benefit programs, job applications, and banking — require a valid ID. Replacing it early removes a barrier to almost everything else.",
+                  "items": [
+                    {
+                      "name": "State ID or driver's license",
+                      "detail": "Visit your state's Department of Motor Vehicles (DMV) in person or online. Typical cost is $10–$30. Many states waive this fee if you can show financial hardship — ask specifically about a fee waiver when you call."
+                    },
+                    {
+                      "name": "Social Security card",
+                      "detail": "Replacement is free. Apply at ssa.gov or visit your local Social Security office. You can replace up to 3 cards per year and 10 in a lifetime."
+                    },
+                    {
+                      "name": "Birth certificate",
+                      "detail": "Contact the vital records office in the state where you were born. Fees vary. Some legal aid organizations can help cover the cost if money is a barrier."
+                    }
+                  ],
+                  "helpNote": "If cost is a barrier to getting your ID, call 211 — local organizations sometimes help cover the fee or provide transportation to the DMV."
+                }
               }
             },
             "mentalHealth": {
@@ -5865,6 +5933,74 @@ i18n
                 "tip3": "Coma antes de ir — puede que no pueda salir de la sala una vez que comiencen los procedimientos",
                 "tip4": "Apague su teléfono completamente antes de entrar a la sala de la corte, no solo siléncielo",
                 "tip5": "Si se siente abrumado, está bien pedirle al juez un momento para calmarse"
+              },
+              "requirements": {
+                "sectionTitle": "Lo que puede ser requerido de usted",
+                "sectionSubtitle": "Los jueces a menudo imponen condiciones en la fianza, la derivación o las sentencias. Estas secciones explican cómo cumplirlas correctamente — elegir el programa incorrecto es un error común y costoso.",
+                "courtOrdered": {
+                  "title": "Programas ordenados por la corte",
+                  "context": "Un juez puede requerir que complete un programa como condición de la fianza, derivación o sentencia: educación sobre DUI, manejo de la ira, intervención en violencia doméstica, clases de crianza, entre otros. El detalle clave: el programa debe ser aprobado por la corte. Completar un programa no aprobado no satisface el requisito.",
+                  "verifyTitle": "Cómo verificar que un programa es aprobado",
+                  "verifySteps": [
+                    "Llame a la oficina del secretario de la corte y pregunte específicamente: '¿Está [nombre del programa] aprobado por esta corte para [tipo de cargo]?' Obtenga la respuesta por escrito si es posible.",
+                    "Pida a su abogado o defensor público que confirme antes de inscribirse — es una verificación rápida que ellos pueden hacer.",
+                    "No confíe solo en la afirmación del propio programa de que está aprobado por la corte. Verifique directamente con la corte."
+                  ],
+                  "enrollTitle": "Preguntas que hacer al llamar para inscribirse",
+                  "enrollQuestions": [
+                    "¿Están aceptando nuevos participantes actualmente?",
+                    "¿Cuál es el costo y ofrecen tarifas según ingresos o exenciones?",
+                    "¿Cómo documentan y reportan la finalización a la corte?",
+                    "¿Qué pasa si falto a una sesión?"
+                  ],
+                  "completionTitle": "Al completar el programa",
+                  "completionNote": "La mayoría de los programas emiten un certificado de finalización. Su abogado generalmente presenta este documento ante la corte — confirme con ellos que esto se haya hecho. Guarde una copia para usted."
+                },
+                "communityService": {
+                  "title": "Servicio comunitario",
+                  "context": "Las horas de servicio comunitario son un requisito común en programas de derivación, acuerdos de declaración y sentencias. Las horas realizadas en organizaciones no calificadas no contarán para su requisito.",
+                  "findTitle": "Cómo encontrar programas calificados",
+                  "findSteps": [
+                    "Pregúntele a su oficial de libertad condicional o al secretario de la corte por una lista de organizaciones aprobadas por la corte en su área.",
+                    "Su defensor público o abogado también puede solicitar esta lista.",
+                    "Si encuentra una organización por su cuenta, confirme con la corte o su abogado antes de comenzar."
+                  ],
+                  "docsTitle": "Documentación que necesitará",
+                  "docsNote": "La mayoría de los tribunales requieren una carta firmada de la organización en su membrete oficial, confirmando las fechas, horas y tipo de trabajo realizado. Pida esta carta antes de irse el último día.",
+                  "turnedAwayNote": "Si una organización no puede aceptarle debido a su caso o antecedentes, pregúnteles si conocen otro programa que pueda. Muchos proveedores de servicio comunitario tienen experiencia con participantes ordenados por la corte."
+                },
+                "propertyRetrieval": {
+                  "title": "Recuperar sus pertenencias",
+                  "context": "Tras el arresto, sus pertenencias personales — teléfono, billetera, llaves, efectivo e identificación — se inventarían y retienen en la unidad de evidencias de la estación policial donde fue arrestado. No se retienen en la cárcel ni en el juzgado.",
+                  "steps": [
+                    "Llame a la unidad de evidencias o bienes de la estación policial específica donde fue arrestado. Este es un número diferente al de la línea principal de la estación.",
+                    "Tenga a mano su número de caso o número de registro. Si no lo tiene, proporcione su nombre legal completo y la fecha del arresto.",
+                    "Pregunte qué identificación debe traer para recoger sus pertenencias. Generalmente se requiere una identificación estatal o pasaporte.",
+                    "Pregunte sobre el proceso para cualquier efectivo que le hayan tomado — esto a menudo requiere un formulario o solicitud separada."
+                  ],
+                  "carTitle": "Si su vehículo fue remolcado",
+                  "carNote": "Contacte directamente a la empresa de remolque — no a la estación policial. La policía puede decirle qué empresa remolcó el vehículo. Los cargos de almacenamiento se acumulan diariamente; actúe rápido para evitar perder el vehículo.",
+                  "missingNote": "Si alguna pertenencia falta o está dañada, presente una queja formal ante la estación por escrito lo antes posible. Guarde una copia."
+                },
+                "idReplacement": {
+                  "title": "Reemplazar su identificación y documentos",
+                  "context": "Su identificación estatal o licencia de conducir puede haber sido confiscada, perdida o vencida. Muchos servicios — albergues, programas de beneficios, solicitudes de empleo y bancos — requieren una identificación válida. Reemplazarla temprano elimina una barrera para casi todo lo demás.",
+                  "items": [
+                    {
+                      "name": "Identificación estatal o licencia de conducir",
+                      "detail": "Visite el Departamento de Vehículos Motorizados (DMV) de su estado en persona o en línea. El costo típico es entre $10 y $30. Muchos estados exoneran esta tarifa si puede demostrar dificultades económicas — pregunte específicamente sobre una exención de tarifa cuando llame."
+                    },
+                    {
+                      "name": "Tarjeta de Seguro Social",
+                      "detail": "El reemplazo es gratuito. Solicítelo en ssa.gov o visite su oficina local del Seguro Social. Puede reemplazar hasta 3 tarjetas por año y 10 de por vida."
+                    },
+                    {
+                      "name": "Acta de nacimiento",
+                      "detail": "Contacte la oficina de registros vitales del estado donde nació. Los costos varían. Algunas organizaciones de ayuda legal pueden ayudar a cubrir el costo si el dinero es un obstáculo."
+                    }
+                  ],
+                  "helpNote": "Si el costo es un obstáculo para obtener su identificación, llame al 211 — las organizaciones locales a veces ayudan a cubrir la tarifa o brindan transporte al DMV."
+                }
               }
             },
             "mentalHealth": {
@@ -11081,6 +11217,74 @@ i18n
                 "tip3": "出发前吃东西——一旦程序开始，你可能无法离开法庭",
                 "tip4": "进入法庭前完全关闭手机，不仅仅是静音",
                 "tip5": "如果感到不知所措，可以请求法官给你片刻时间平复情绪"
+              },
+              "requirements": {
+                "sectionTitle": "可能对您的要求",
+                "sectionSubtitle": "法官通常会为保释、转介或判决附加条件。以下内容说明如何正确满足这些条件——选择错误的项目是一个常见且代价高昂的错误。",
+                "courtOrdered": {
+                  "title": "法院命令参加的项目",
+                  "context": "法官可能要求您作为保释、转介或判决条件完成某项目——如酒驾教育、愤怒管理、家庭暴力干预、育儿课程等。关键细节：该项目必须经过法院批准。完成未获批准的项目不满足要求。",
+                  "verifyTitle": "如何核实项目是否获批",
+                  "verifySteps": [
+                    "致电法院书记员办公室，明确询问：[项目名称]是否已获本院批准用于[您的指控类型]？如有可能，请以书面形式获取答复。",
+                    "请您的律师或公设辩护人在您报名前确认——这是他们可以迅速完成的核实工作。",
+                    "不要仅凭项目本身声称已获法院批准就信以为真。请直接向法院核实。"
+                  ],
+                  "enrollTitle": "报名时需要询问的问题",
+                  "enrollQuestions": [
+                    "目前是否还在招收新学员？",
+                    "费用是多少？是否提供滑动收费或费用豁免？",
+                    "如何向法院记录和报告完成情况？",
+                    "如果缺课会怎么样？"
+                  ],
+                  "completionTitle": "完成项目后",
+                  "completionNote": "大多数项目会颁发结业证书。您的律师通常会将其提交给法院——请向他们确认已完成提交。自己也保留一份副本。"
+                },
+                "communityService": {
+                  "title": "社区服务",
+                  "context": "社区服务时数是转介项目、认罪协议和判决中的常见要求。在不符合资格的机构完成的时数不计入您的要求。",
+                  "findTitle": "如何寻找符合资格的项目",
+                  "findSteps": [
+                    "请向您的缓刑官或法院书记员索取您所在地区法院批准机构的名单。",
+                    "您的公设辩护人或律师也可以申请获取此名单。",
+                    "如果您自行找到某机构，请在开始前向法院或律师确认其资格。"
+                  ],
+                  "docsTitle": "所需文件",
+                  "docsNote": "大多数法院要求提供机构在其信头纸上出具的签名信函，确认完成日期、时数和工作类型。请在最后一天离开前索取此信——事后索取会困难得多。",
+                  "turnedAwayNote": "如果某机构因您的案件或记录无法接受您，请询问他们是否了解其他可以接受您的项目。许多社区服务机构都有服务法院指派参与者的经验。"
+                },
+                "propertyRetrieval": {
+                  "title": "取回您的财物",
+                  "context": "被捕后，您的个人财物——手机、钱包、钥匙、现金和身份证——将被登记并保管在逮捕您的分局证据室，而非羁押机构或法院。许多人不知道该去哪里取回财物，有些财物因此永久丢失。",
+                  "steps": [
+                    "致电逮捕您的特定分局的证据室或财物室。这与分局总机号码不同。",
+                    "准备好您的案件编号或登记号。如果没有，提供您的法定全名和被捕日期。",
+                    "询问取回财物需要携带什么证件。通常需要州身份证或护照。",
+                    "询问取回任何没收现金的流程——这通常需要单独填写表格或提出申请。"
+                  ],
+                  "carTitle": "如果您的车辆被拖走",
+                  "carNote": "直接联系拖车公司——而非分局。警方可以告诉您是哪家公司拖走了车辆。存储费用每天累积；请尽快处理，以免失去车辆。",
+                  "missingNote": "如果财物丢失或损坏，请尽快以书面形式向分局提交正式投诉。保留副本。"
+                },
+                "idReplacement": {
+                  "title": "补办身份证件和文件",
+                  "context": "您的州身份证或驾照可能在被捕时被没收、丢失或已过期。许多服务——庇护所、福利项目、求职申请和银行业务——都需要有效身份证件。尽早补办可以消除几乎所有其他事务的障碍。",
+                  "items": [
+                    {
+                      "name": "州身份证或驾照",
+                      "detail": "亲自或在线前往您所在州的机动车辆管理局（DMV）。典型费用为10至30美元。如果能证明经济困难，许多州会免除此费用——致电时请明确询问费用豁免事宜。"
+                    },
+                    {
+                      "name": "社会安全卡",
+                      "detail": "补办免费。在ssa.gov申请或前往当地社会安全局办公室。每年最多可补办3张，一生最多10张。"
+                    },
+                    {
+                      "name": "出生证明",
+                      "detail": "联系您出生所在州的生命档案办公室。费用因州而异。如果费用是障碍，部分法律援助机构可以帮助支付费用。"
+                    }
+                  ],
+                  "helpNote": "如果费用是获取身份证件的障碍，请拨打211——当地机构有时可以帮助支付费用或提供前往DMV的交通。"
+                }
               }
             },
             "mentalHealth": {
