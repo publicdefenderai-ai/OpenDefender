@@ -268,6 +268,12 @@ i18n
             "startHere": "Start Here",
             "practicalSteps": "Practical steps",
             "helpfulResources": "Helpful Resources",
+            "startHereCard": {
+              "heading": "Not sure where to start?",
+              "callout": "Call or text 211",
+              "calloutDesc": "211 connects you to local services for housing, food, health care, and benefits — free, 24/7, in every state. It's the fastest way to find what's available near you.",
+              "eligibilityNote": "Some programs ask about open cases or prior convictions. It's worth a call to ask — many are more flexible than their intake staff first suggests."
+            },
             "relatedResources": "Related Resources",
             "visitWebsite": "Visit website",
             "free": "Free",
@@ -1719,8 +1725,8 @@ i18n
                     "description": "Eviction risk, lease issues, housing stability"
                   },
                   "finances": {
-                    "label": "Finances",
-                    "description": "Legal costs, fines, lost income"
+                    "label": "Finances & Benefits",
+                    "description": "Legal costs, fines, benefits, and financial recovery"
                   },
                   "transportation": {
                     "label": "Transportation",
@@ -5477,6 +5483,12 @@ i18n
             "startHere": "Comience Aquí",
             "practicalSteps": "Pasos prácticos",
             "helpfulResources": "Recursos Útiles",
+            "startHereCard": {
+              "heading": "¿No sabe por dónde empezar?",
+              "callout": "Llame o envíe un mensaje al 211",
+              "calloutDesc": "El 211 le conecta con servicios locales de vivienda, alimentos, atención médica y beneficios — gratuito, disponible 24/7, en todo el país. Es la forma más rápida de encontrar lo que hay disponible cerca de usted.",
+              "eligibilityNote": "Algunos programas preguntan sobre casos abiertos o condenas previas. Vale la pena llamar para preguntar — muchos son más flexibles de lo que el personal de admisión sugiere inicialmente."
+            },
             "relatedResources": "Recursos Relacionados",
             "visitWebsite": "Visitar sitio web",
             "free": "Gratis",
@@ -6928,8 +6940,8 @@ i18n
                     "description": "Riesgo de desalojo, problemas de arrendamiento"
                   },
                   "finances": {
-                    "label": "Finanzas",
-                    "description": "Costos legales, multas, pérdida de ingresos"
+                    "label": "Finanzas y Beneficios",
+                    "description": "Costos legales, multas, beneficios y recuperación financiera"
                   },
                   "transportation": {
                     "label": "Transporte",
@@ -10687,6 +10699,12 @@ i18n
             "startHere": "从这里开始",
             "practicalSteps": "实用步骤",
             "helpfulResources": "有用资源",
+            "startHereCard": {
+              "heading": "不知道从哪里开始？",
+              "callout": "拨打或发短信至 211",
+              "calloutDesc": "211 为您连接住房、食物、医疗保健和福利等本地服务——免费、全天候、覆盖全国。这是找到您附近可用资源的最快方式。",
+              "eligibilityNote": "部分项目会询问未决案件或过往定罪情况。致电咨询是值得的——许多项目实际上比工作人员最初所说的更灵活。"
+            },
             "relatedResources": "相关资源",
             "visitWebsite": "访问网站",
             "free": "免费",
@@ -12138,8 +12156,8 @@ i18n
                     "description": "被驱逐风险、租约问题、住房稳定"
                   },
                   "finances": {
-                    "label": "财务",
-                    "description": "法律费用、罚款、收入损失"
+                    "label": "财务与福利",
+                    "description": "法律费用、罚款、福利保障与经济恢复"
                   },
                   "transportation": {
                     "label": "交通",
