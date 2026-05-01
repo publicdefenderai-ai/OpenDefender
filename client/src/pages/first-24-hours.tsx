@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, ChevronDown as ChevronDownIcon, FileText, ExternalLink, AlertTriangle, Info, type LucideIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -1111,10 +1112,6 @@ export default function FirstTwentyFourHours() {
                 </p>
               </div>
             </Step>
-<<<<<<< HEAD
-=======
-          </ScrollReveal>
->>>>>>> 62718a5da730353fc0b8507508be928ff83b9187
         </div>
 
         {/* Friends & Family callout — matches mockup */}
