@@ -109,9 +109,23 @@ export default function PersonalHealthSupport() {
       description: t('support.personalHealth.actions.medicationStorage.description'),
       priority: "medium",
     },
+    {
+      id: "emergency-phone",
+      title: t('support.personalHealth.actions.emergencyPhone.title'),
+      description: t('support.personalHealth.actions.emergencyPhone.description'),
+      priority: "low",
+    },
   ];
 
   const externalResources: ExternalResource[] = [
+    {
+      name: "Lifeline Program (Free Phone)",
+      description: t('support.personalHealth.resources.lifeline.description'),
+      url: "https://www.lifelinesupport.org/",
+      phone: "1-800-234-9473",
+      type: "national",
+      free: true,
+    },
     {
       name: "SAMHSA National Helpline",
       description: t('support.personalHealth.resources.samhsa.description'),

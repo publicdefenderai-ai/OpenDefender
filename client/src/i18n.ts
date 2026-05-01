@@ -516,6 +516,35 @@ i18n
                 "tip3": "If you receive a bill you can't pay, contact the court immediately rather than ignoring it",
                 "tip4": "Ask your attorney about expungement options that might help with future employment and housing"
               },
+              "benefits": {
+                "sectionTitle": "What happens to your benefits when you're arrested",
+                "sectionSubtitle": "An arrest can suspend or end benefits you depend on. Acting quickly after release can often preserve or restore them.",
+                "snap": {
+                  "name": "SNAP (Food Assistance)",
+                  "what": "SNAP is typically suspended during incarceration and restored after release — it is not automatically terminated. You must re-apply or request reinstatement.",
+                  "action": "Contact your local SNAP office as soon as possible after release. The reinstatement window varies by state. Call 211 if you're unsure who to call."
+                },
+                "medicaid": {
+                  "name": "Medicaid",
+                  "what": "Medicaid is suspended during incarceration but can be reinstated after release. Many people miss the reinstatement window and lose coverage permanently — this is one of the most common avoidable post-release losses.",
+                  "action": "Contact your state Medicaid office or marketplace within 30 days of release. If your state expanded Medicaid under the ACA, you may be able to re-enroll at any time."
+                },
+                "tanf": {
+                  "name": "TANF (Cash Assistance)",
+                  "what": "Federal law bans lifetime TANF receipt for people convicted of certain drug felonies, though many states have opted out of this ban. Your eligibility depends on your state and the nature of your conviction.",
+                  "action": "Call 211 or your local Department of Social Services to confirm your state's rules. Do not assume you are ineligible without checking."
+                },
+                "socialSecurity": {
+                  "name": "Social Security, SSI, and SSDI",
+                  "what": "Benefits are suspended after 30 consecutive days of incarceration but can be reinstated after release. SSA will eventually find out through databases — proactive notification avoids overpayments you will owe back.",
+                  "action": "Notify your local Social Security office before or immediately after release. Bring your release documents. Reinstatement can take several weeks, so start early."
+                },
+                "banking": {
+                  "name": "Banking access",
+                  "what": "If you lost access to a bank account, or never had one, direct deposit for benefits and employment requires a bank account in most cases.",
+                  "action": "Community credit unions and many banks offer 'second chance' checking accounts for people with past financial issues. Call 211 to find one near you."
+                }
+              },
               "courtFees": {
                 "sectionTitle": "Court Fees & Fines",
                 "stateSelector": {
@@ -847,9 +876,17 @@ i18n
                   "title": "Understand what happens to medications upon arrest",
                   "description": "You typically cannot bring personal medications into a jail — they must go through the jail pharmacy or be provided by family through official channels. Your attorney can help you understand what to expect and advocate for your medication continuity.",
                   "priority": "medium"
+                },
+                "emergencyPhone": {
+                  "title": "Get a free phone if you've lost yours",
+                  "description": "The federal Lifeline program provides free or low-cost phone service to people who qualify based on income or participation in certain government programs. A phone is essential for reaching your attorney, attending court, and staying in contact with family. Apply at lifelinesupport.org or call 1-800-234-9473.",
+                  "priority": "low"
                 }
               },
               "resources": {
+                "lifeline": {
+                  "description": "Federal program providing free or discounted phone service to people who qualify based on income or enrollment in Medicaid, SNAP, or other assistance programs. Apply at lifelinesupport.org."
+                },
                 "samhsa": {
                   "description": "Free, confidential 24/7 helpline for substance use and mental health information and treatment referrals. Available in English and Spanish."
                 },
@@ -4892,7 +4929,9 @@ i18n
               "fullCounselGuide": "Full Right-to-Counsel Guide",
               "caseTimeline": "Full Case Timeline",
               "getGuidance": "Get Personalized Guidance",
-              "findDefender": "Find a Public Defender"
+              "findDefender": "Find a Public Defender",
+              "courtLogistics": "Court & Legal in Life Support",
+              "lifeSupport": "Life Support"
             },
             "script": {
               "line1": "\"Hey, it's me. I'm okay, but I've been arrested.\"",
@@ -4994,7 +5033,8 @@ i18n
                 "dont2": "Don't sign anything you don't understand. You can ask what a form is for.",
                 "dont3": "Don't assume booking staff are neutral. Everything is documented.",
                 "dont4": "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
-                "dont5": "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first."
+                "dont5": "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
+                "propertyNote": "Before or during booking, try to note everything taken from you: phone, wallet, ID, keys, and any cash. Property is held at the evidence unit of the arresting precinct — not the jail. The Court & Legal section of our Life Support guide explains exactly how to retrieve it."
               },
               "step3": {
                 "title": "Your First Phone Call",
@@ -5066,7 +5106,10 @@ i18n
                 "dont1": "Don't contact any alleged victims or witnesses, even to apologize or explain.",
                 "dont2": "Don't post anything about your case on social media. Prosecutors monitor this.",
                 "dont3": "Don't discuss your case with family or friends. Prosecutors can subpoena them to testify about what you said.",
-                "dont4": "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome."
+                "dont4": "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome.",
+                "supportBridge": "Being arrested affects more than just the legal case. Housing, benefits, employment, and family stability are often disrupted at the same time — and court orders may require you to complete specific classes or community service. The Life Support section of this site covers all of it.",
+                "supportBridgeLink": "Go to Life Support",
+                "twoOneBridge": "For local services near you, call or text 211 — free and available 24/7."
               }
             }
           },
@@ -5799,6 +5842,35 @@ i18n
                 "tip3": "Si recibe una factura que no puede pagar, contacte a la corte inmediatamente en lugar de ignorarla",
                 "tip4": "Pregunte a su abogado sobre opciones de eliminación de antecedentes que podrían ayudar con empleo y vivienda futuros"
               },
+              "benefits": {
+                "sectionTitle": "Qué pasa con sus beneficios cuando es arrestado",
+                "sectionSubtitle": "Un arresto puede suspender o terminar los beneficios de los que depende. Actuar rápidamente después de su liberación a menudo puede preservarlos o restaurarlos.",
+                "snap": {
+                  "name": "SNAP (Asistencia Alimentaria)",
+                  "what": "El SNAP generalmente se suspende durante el encarcelamiento y se restaura al salir — no se termina automáticamente. Debe volver a solicitar o pedir la reactivación.",
+                  "action": "Contacte su oficina local de SNAP tan pronto como sea posible después de su liberación. El período de reactivación varía según el estado. Llame al 211 si no sabe a quién llamar."
+                },
+                "medicaid": {
+                  "name": "Medicaid",
+                  "what": "Medicaid se suspende durante el encarcelamiento pero puede reactivarse después. Muchas personas pierden el período de reactivación y pierden la cobertura permanentemente — esta es una de las pérdidas postliberación más comunes y evitables.",
+                  "action": "Contacte la oficina de Medicaid de su estado o el mercado de seguros dentro de los 30 días de su liberación. Si su estado amplió Medicaid bajo la ACA, puede volver a inscribirse en cualquier momento."
+                },
+                "tanf": {
+                  "name": "TANF (Asistencia en Efectivo)",
+                  "what": "La ley federal prohíbe la recepción vitalicia de TANF para personas condenadas por ciertos delitos graves relacionados con drogas, aunque muchos estados han optado por no aplicar esta prohibición. Su elegibilidad depende de su estado y la naturaleza de su condena.",
+                  "action": "Llame al 211 o a su Departamento de Servicios Sociales local para confirmar las reglas de su estado. No asuma que no es elegible sin verificarlo."
+                },
+                "socialSecurity": {
+                  "name": "Seguro Social, SSI y SSDI",
+                  "what": "Los beneficios se suspenden después de 30 días consecutivos de encarcelamiento pero pueden reactivarse al salir. La SSA eventualmente se enterará a través de bases de datos — la notificación proactiva evita pagos en exceso que deberá devolver.",
+                  "action": "Notifique a su oficina local del Seguro Social antes o inmediatamente después de su liberación. Lleve sus documentos de liberación. La reactivación puede tardar varias semanas, así que empiece temprano."
+                },
+                "banking": {
+                  "name": "Acceso bancario",
+                  "what": "Si perdió el acceso a una cuenta bancaria, o nunca tuvo una, el depósito directo para beneficios y empleo requiere una cuenta bancaria en la mayoría de los casos.",
+                  "action": "Las cooperativas de crédito comunitarias y muchos bancos ofrecen cuentas corrientes de 'segunda oportunidad' para personas con problemas financieros pasados. Llame al 211 para encontrar una cerca de usted."
+                }
+              },
               "courtFees": {
                 "sectionTitle": "Tarifas y Multas de la Corte",
                 "stateSelector": {
@@ -6130,9 +6202,17 @@ i18n
                   "title": "Entienda qué ocurre con sus medicamentos al ser detenido",
                   "description": "Por lo general no puede llevar medicamentos personales a la cárcel — deben pasar por la farmacia del centro o ser entregados por familiares a través de canales oficiales. Su abogado puede ayudarle a entender qué esperar y abogar por la continuidad de sus medicamentos.",
                   "priority": "medium"
+                },
+                "emergencyPhone": {
+                  "title": "Obtenga un teléfono gratuito si perdió el suyo",
+                  "description": "El programa federal Lifeline proporciona servicio telefónico gratuito o de bajo costo a personas que califican según sus ingresos o participación en ciertos programas gubernamentales. Un teléfono es esencial para comunicarse con su abogado, asistir a la corte y mantenerse en contacto con su familia. Solicítelo en lifelinesupport.org o llame al 1-800-234-9473.",
+                  "priority": "low"
                 }
               },
               "resources": {
+                "lifeline": {
+                  "description": "Programa federal que proporciona servicio telefónico gratuito o con descuento a personas que califican según ingresos o inscripción en Medicaid, SNAP u otros programas de asistencia. Solicítelo en lifelinesupport.org."
+                },
                 "samhsa": {
                   "description": "Línea de ayuda gratuita y confidencial las 24 horas para información sobre uso de sustancias y salud mental, y referencias a tratamiento. Disponible en inglés y español."
                 },
@@ -10277,7 +10357,8 @@ i18n
                 "dont2": "No firme nada que no entienda. Puede preguntar para qué sirve un formulario.",
                 "dont3": "No asuma que el personal de fichaje es neutral. Todo queda documentado.",
                 "dont4": "No responda preguntas sobre el incidente, su paradero o cualquier otra persona involucrada, aunque parezcan rutinarias o no relacionadas con el delito.",
-                "dont5": "No autorice hisopos de ADN, registros adicionales ni interrogatorios más allá del proceso mecánico de fichaje sin pedir primero hablar con su abogado."
+                "dont5": "No autorice hisopos de ADN, registros adicionales ni interrogatorios más allá del proceso mecánico de fichaje sin pedir primero hablar con su abogado.",
+                "propertyNote": "Antes o durante el fichaje, intente anotar todo lo que le fue confiscado: teléfono, billetera, identificación, llaves y cualquier efectivo. Sus pertenencias se guardan en la unidad de evidencias de la estación policial donde fue arrestado, no en la cárcel. La sección de Apoyo Legal y de la Corte de nuestra guía de Apoyo para la Vida explica exactamente cómo recuperarlas."
               },
               "step3": {
                 "title": "Su Primera Llamada Telefónica",
@@ -10349,7 +10430,10 @@ i18n
                 "dont1": "No contacte a ninguna supuesta víctima o testigo, ni siquiera para disculparse o explicarse.",
                 "dont2": "No publique nada sobre su caso en redes sociales. Los fiscales monitorean esto.",
                 "dont3": "No hable de su caso con familiares o amigos. Los fiscales pueden citarlos para que testifiquen sobre lo que usted dijo.",
-                "dont4": "No incurra en nuevos cargos. Incluso incidentes menores pueden afectar su situación de fianza y el resultado de su caso."
+                "dont4": "No incurra en nuevos cargos. Incluso incidentes menores pueden afectar su situación de fianza y el resultado de su caso.",
+                "supportBridge": "Ser arrestado afecta más que solo el caso legal. La vivienda, los beneficios, el empleo y la estabilidad familiar a menudo se ven afectados al mismo tiempo, y las órdenes judiciales pueden requerirle completar clases específicas o servicio comunitario. La sección de Apoyo para la Vida de este sitio lo cubre todo.",
+                "supportBridgeLink": "Ir a Apoyo para la Vida",
+                "twoOneBridge": "Para servicios locales cerca de usted, llame o envíe un mensaje al 211 — gratuito y disponible las 24 horas."
               }
             }
           },
@@ -11083,6 +11167,35 @@ i18n
                 "tip3": "如果收到无力支付的账单，立即联系法院，而不是置之不理",
                 "tip4": "询问律师关于消除记录的选项，这可能有助于未来的就业和住房"
               },
+              "benefits": {
+                "sectionTitle": "被捕后您的福利会发生什么",
+                "sectionSubtitle": "被捕可能暂停或终止您依赖的福利。释放后迅速采取行动通常可以保留或恢复这些福利。",
+                "snap": {
+                  "name": "SNAP（食品援助）",
+                  "what": "SNAP在羁押期间通常会被暂停，释放后可以恢复——不会自动终止。您必须重新申请或请求恢复。",
+                  "action": "释放后尽快联系当地SNAP办公室。恢复窗口因州而异。如果不知道该打给谁，请拨打211。"
+                },
+                "medicaid": {
+                  "name": "Medicaid（医疗补助）",
+                  "what": "Medicaid在羁押期间暂停，但释放后可以恢复。许多人错过了恢复窗口，永久失去了保险——这是释放后最常见且可以避免的损失之一。",
+                  "action": "在释放后30天内联系您所在州的Medicaid办公室或保险市场。如果您的州在ACA下扩展了Medicaid，您可以随时重新注册。"
+                },
+                "tanf": {
+                  "name": "TANF（现金援助）",
+                  "what": "联邦法律禁止特定毒品重罪定罪人员终身领取TANF，但许多州已选择不执行此禁令。您的资格取决于您所在的州和定罪性质。",
+                  "action": "拨打211或联系当地社会服务部门确认您所在州的规定。未经核实不要假设自己不符合资格。"
+                },
+                "socialSecurity": {
+                  "name": "社会保障、SSI和SSDI",
+                  "what": "连续羁押30天后福利将被暂停，但释放后可以恢复。SSA最终会通过数据库得知情况——主动通知可避免您需要归还的多付款。",
+                  "action": "在释放前或释放后立即通知当地社会保障局办公室。携带您的释放文件。恢复可能需要几周时间，请尽早开始。"
+                },
+                "banking": {
+                  "name": "银行账户使用",
+                  "what": "如果您失去了银行账户的使用权，或从未有过账户，大多数情况下福利和工资的直接存款都需要银行账户。",
+                  "action": "社区信用合作社和许多银行为有过往财务问题的人提供'第二次机会'支票账户。拨打211寻找您附近的机构。"
+                }
+              },
               "courtFees": {
                 "sectionTitle": "法庭费用与罚款",
                 "stateSelector": {
@@ -11414,9 +11527,17 @@ i18n
                   "title": "了解被捕时药物的处理方式",
                   "description": "通常你无法将个人药物带入监狱——必须通过监狱药房处理，或由家人通过官方渠道提供。你的律师可以帮助你了解预期情况，并为你的药物连续性进行辩护。",
                   "priority": "medium"
+                },
+                "emergencyPhone": {
+                  "title": "如果您丢失了手机，可以申请免费手机",
+                  "description": "美国联邦Lifeline计划为符合收入资格或参与特定政府项目的人提供免费或低价电话服务。手机对于联系律师、出庭和与家人保持联系至关重要。请访问lifelinesupport.org申请，或拨打1-800-234-9473。",
+                  "priority": "low"
                 }
               },
               "resources": {
+                "lifeline": {
+                  "description": "联邦计划，为符合收入资格或已登记Medicaid、SNAP或其他援助项目的人提供免费或折扣电话服务。请访问lifelinesupport.org申请。"
+                },
                 "samhsa": {
                   "description": "免费、保密的24小时药物使用和心理健康信息及治疗转介热线。提供英语和西班牙语服务。"
                 },
@@ -15561,7 +15682,8 @@ i18n
                 "dont2": "不要签署任何您不理解的文件。您可以询问表格的用途。",
                 "dont3": "不要认为登记人员是中立的。一切都会被记录在案。",
                 "dont4": "不要回答有关事件、您的下落或任何其他相关人员的问题，即使这些问题看起来很常规或与犯罪无关。",
-                "dont5": "在要求与您的律师交谈之前，不要同意采集DNA样本、额外搜查或超出登记程序的审讯。"
+                "dont5": "在要求与您的律师交谈之前，不要同意采集DNA样本、额外搜查或超出登记程序的审讯。",
+                "propertyNote": "在登记手续前后，尽量记下所有被没收的物品：手机、钱包、身份证、钥匙和现金。您的财物保存在逮捕您的分局的证据室，而非羁押机构。本网站生活支持指南中的【法庭与法律】部分详细说明了如何取回这些财物。"
               },
               "step3": {
                 "title": "您的第一个电话",
@@ -15633,7 +15755,10 @@ i18n
                 "dont1": "不要联系任何指控的受害者或证人，即使是为了道歉或解释。",
                 "dont2": "不要在社交媒体上发布任何关于您案件的内容。检察官会监控这些。",
                 "dont3": "不要与家人或朋友讨论您的案件。检察官可以传唤他们作证，证明您所说的话。",
-                "dont4": "不要新增任何指控。即使是轻微事件也可能影响您的保释状态和案件结果。"
+                "dont4": "不要新增任何指控。即使是轻微事件也可能影响您的保释状态和案件结果。",
+                "supportBridge": "被捕影响的不只是法律案件。住房、福利、就业和家庭稳定往往同时受到影响——法院命令可能还要求您完成特定课程或社区服务。本网站的生活支持部分涵盖了所有这些内容。",
+                "supportBridgeLink": "前往生活支持",
+                "twoOneBridge": "如需获取附近的本地服务，请拨打或发短信至211——免费，全天候提供服务。"
               }
             }
           },

@@ -824,7 +824,17 @@ export default function FirstTwentyFourHours() {
                 t('first24Hours.steps.step2.dont5'),
               ]}
             >
-              <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
+              <div className="space-y-3 mt-2">
+                <div className="rounded-lg bg-muted/40 border border-border/60 p-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t('first24Hours.steps.step2.propertyNote')}{' '}
+                    <Link href="/support/court-logistics" className="underline underline-offset-2 font-medium hover:text-foreground transition-colors">
+                      {t('first24Hours.links.courtLogistics')}
+                    </Link>
+                  </p>
+                </div>
+                <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
+              </div>
             </Step>
           </ScrollReveal>
 
@@ -1058,7 +1068,21 @@ export default function FirstTwentyFourHours() {
                 t('first24Hours.steps.step7.dont4'),
               ]}
               isLast
-            />
+            >
+              <div className="mt-4 rounded-lg border border-border bg-muted/30 p-4 space-y-3">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t('first24Hours.steps.step7.supportBridge')}
+                </p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <Link href="/support">
+                    <Button variant="outline" size="sm">{t('first24Hours.steps.step7.supportBridgeLink')}</Button>
+                  </Link>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed border-t border-border/60 pt-3">
+                  {t('first24Hours.steps.step7.twoOneBridge')}
+                </p>
+              </div>
+            </Step>
           </ScrollReveal>
         </div>
 
