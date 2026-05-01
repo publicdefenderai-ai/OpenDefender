@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, ChevronDown as ChevronDownIcon, FileText, ExternalLink, type LucideIcon } from "lucide-react";
+import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, ChevronDown as ChevronDownIcon, FileText, ExternalLink, AlertTriangle, Info, type LucideIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -191,6 +191,7 @@ function FacilityLookupWidget() {
 
 // Step color palettes keyed by step number
 const STEP_COLORS: Record<number, { border: string; iconBg: string; iconText: string; activeBg: string }> = {
+  0: { border: "border-slate-300 dark:border-slate-600",  iconBg: "bg-slate-100 dark:bg-slate-800/50", iconText: "text-slate-600 dark:text-slate-400", activeBg: "bg-slate-50/60 dark:bg-slate-900/20" },
   1: { border: "border-red-200 dark:border-red-800/60",    iconBg: "bg-red-100 dark:bg-red-900/50",    iconText: "text-red-600 dark:text-red-400",    activeBg: "bg-red-50/60 dark:bg-red-900/10" },
   2: { border: "border-orange-200 dark:border-orange-800/60", iconBg: "bg-orange-100 dark:bg-orange-900/50", iconText: "text-orange-600 dark:text-orange-400", activeBg: "bg-orange-50/60 dark:bg-orange-900/10" },
   3: { border: "border-yellow-200 dark:border-yellow-800/60", iconBg: "bg-yellow-100 dark:bg-yellow-900/50", iconText: "text-yellow-600 dark:text-yellow-400", activeBg: "bg-yellow-50/60 dark:bg-yellow-900/10" },
@@ -248,7 +249,7 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
     <div className={isAccordion ? "px-5 pb-6 pt-1 border-t border-border/50" : ""}>
       <p className="text-muted-foreground mb-5 leading-relaxed text-sm mt-4">{context}</p>
 
-      <div className="grid md:grid-cols-2 gap-4">
+      {(dos.length > 0 || donts.length > 0) && <div className="grid md:grid-cols-2 gap-4">
         <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-4">
           <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-emerald-200 dark:border-emerald-800/60">
             <div className="w-5 h-5 rounded-full bg-emerald-500 dark:bg-emerald-600 flex items-center justify-center flex-shrink-0">
@@ -282,7 +283,7 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
             ))}
           </ul>
         </div>
-      </div>
+      </div>}
 
       {children && <div className="mt-4">{children}</div>}
     </div>
@@ -384,6 +385,7 @@ const US_STATES_SIDEBAR = [
 ];
 
 const STEP_TOC = [
+  { n: 0, id: "step-before-arrest", label: "Before Arrest",   Icon: AlertTriangle },
   { n: 1, id: "step-arrest",      label: "Arrest",            Icon: ShieldAlert  },
   { n: 2, id: "step-booking",     label: "Booking",           Icon: ClipboardList },
   { n: 3, id: "phone-call",       label: "Phone Call",        Icon: Phone        },
@@ -557,6 +559,18 @@ function PageSidebar({
           </button>
         </div>
 
+        {/* Juveniles */}
+        <div className="pt-3 mt-1 border-t border-border/60">
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Under 18?</p>
+          <button
+            onClick={() => document.getElementById("juvenile-note")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-amber-50/60 dark:hover:bg-amber-900/10 hover:text-amber-700 dark:hover:text-amber-300 transition-all text-left"
+          >
+            <Info className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>Juvenile rules differ</span>
+          </button>
+        </div>
+
       </div>
     </aside>
   );
@@ -610,8 +624,9 @@ export default function FirstTwentyFourHours() {
         <ScrollReveal delay={0.019}>
           <div className="mb-8">
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">Jump to any step</p>
-            <div className="grid grid-cols-7 gap-1.5">
+            <div className="grid grid-cols-8 gap-1.5">
               {([
+                { n: 0, id: 'step-before-arrest', label: 'Pre-Arrest', Icon: AlertTriangle },
                 { n: 1, id: 'step-arrest',      label: 'Arrest',       Icon: ShieldAlert },
                 { n: 2, id: 'step-booking',     label: 'Booking',      Icon: ClipboardList },
                 { n: 3, id: 'phone-call',       label: 'Phone Call',   Icon: Phone },
@@ -637,8 +652,124 @@ export default function FirstTwentyFourHours() {
 
 
 
+        {/* STEP 0 — Before Arrest */}
+        <Step
+          number={0}
+          id="step-before-arrest"
+          icon={AlertTriangle}
+          isOpen={openStepId === 0}
+          onToggle={() => toggleStep(0)}
+          title={t('first24Hours.beforeArrest.heading')}
+          timeframe="Optional — if you haven't been arrested yet"
+          context={t('first24Hours.beforeArrest.subheading')}
+          dos={[]}
+          donts={[]}
+        >
+          <Accordion type="single" collapsible className="w-full space-y-2 mt-1">
+            {([
+              {
+                value: 'police-talk',
+                title: t('first24Hours.beforeArrest.policeWantToTalkTitle'),
+                dos: [
+                  t('first24Hours.beforeArrest.policeWantToTalkDo1'),
+                  t('first24Hours.beforeArrest.policeWantToTalkDo2'),
+                  t('first24Hours.beforeArrest.policeWantToTalkDo3'),
+                ],
+                donts: [
+                  t('first24Hours.beforeArrest.policeWantToTalkDont1'),
+                  t('first24Hours.beforeArrest.policeWantToTalkDont2'),
+                  t('first24Hours.beforeArrest.policeWantToTalkDont3'),
+                ],
+              },
+              {
+                value: 'target-letter',
+                title: t('first24Hours.beforeArrest.targetLetterTitle'),
+                dos: [
+                  t('first24Hours.beforeArrest.targetLetterDo1'),
+                  t('first24Hours.beforeArrest.targetLetterDo2'),
+                ],
+                donts: [
+                  t('first24Hours.beforeArrest.targetLetterDont1'),
+                  t('first24Hours.beforeArrest.targetLetterDont2'),
+                  t('first24Hours.beforeArrest.targetLetterDont3'),
+                ],
+              },
+              {
+                value: 'warrant',
+                title: t('first24Hours.beforeArrest.warrantTitle'),
+                dos: [
+                  t('first24Hours.beforeArrest.warrantDo1'),
+                  t('first24Hours.beforeArrest.warrantDo2'),
+                  t('first24Hours.beforeArrest.warrantDo3'),
+                ],
+                donts: [
+                  t('first24Hours.beforeArrest.warrantDont1'),
+                  t('first24Hours.beforeArrest.warrantDont2'),
+                  t('first24Hours.beforeArrest.warrantDont3'),
+                ],
+              },
+              {
+                value: 'detained',
+                title: t('first24Hours.beforeArrest.detainedTitle'),
+                dos: [
+                  t('first24Hours.beforeArrest.detainedDo1'),
+                  t('first24Hours.beforeArrest.detainedDo2'),
+                  t('first24Hours.beforeArrest.detainedDo3'),
+                ],
+                donts: [
+                  t('first24Hours.beforeArrest.detainedDont1'),
+                  t('first24Hours.beforeArrest.detainedDont2'),
+                  t('first24Hours.beforeArrest.detainedDont3'),
+                ],
+              },
+            ] as { value: string; title: string; dos: string[]; donts: string[] }[]).map(({ value, title, dos, donts }) => (
+              <AccordionItem key={value} value={value} className="border border-border/70 rounded-lg px-4 bg-background/60">
+                <AccordionTrigger className="text-left hover:no-underline py-3">
+                  <span className="font-semibold text-sm">{title}</span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="grid md:grid-cols-2 gap-3">
+                    <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-3">
+                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-emerald-200 dark:border-emerald-800/60">
+                        <div className="w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
+                        </div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
+                      </div>
+                      <ul className="space-y-2">
+                        {dos.map((item, i) => (
+                          <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
+                            <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-3">
+                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-rose-200 dark:border-rose-800/60">
+                        <div className="w-4 h-4 rounded-full bg-rose-500 flex items-center justify-center flex-shrink-0">
+                          <X className="w-2.5 h-2.5 text-white" strokeWidth={3} />
+                        </div>
+                        <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
+                      </div>
+                      <ul className="space-y-2">
+                        {donts.map((item, i) => (
+                          <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
+                            <X className="w-3.5 h-3.5 text-rose-500 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Step>
+
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-8 mt-2">
+        <div className="flex items-center gap-4 mb-8 mt-6">
           <div className="flex-1 h-px bg-border" />
           <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground px-1 whitespace-nowrap">Your 7-Step Guide</span>
           <div className="flex-1 h-px bg-border" />
@@ -965,6 +1096,25 @@ export default function FirstTwentyFourHours() {
 
         {/* Resources card */}
         <ResourcesCard />
+
+        {/* Juvenile note */}
+        <div id="juvenile-note" className="mt-8 rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50/60 dark:bg-amber-900/10 p-5">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-9 h-9 rounded-full bg-amber-100 dark:bg-amber-900/50 border border-amber-200 dark:border-amber-700 flex items-center justify-center flex-shrink-0">
+              <Info className="w-4.5 h-4.5 text-amber-600 dark:text-amber-400" />
+            </div>
+            <h3 className="text-base font-bold text-amber-900 dark:text-amber-200">{t('first24Hours.juvenile.title')}</h3>
+          </div>
+          <p className="text-sm text-amber-800/80 dark:text-amber-200/70 mb-3 leading-relaxed">{t('first24Hours.juvenile.intro')}</p>
+          <ul className="space-y-2">
+            {([1, 2, 3, 4, 5] as const).map((n) => (
+              <li key={n} className="flex items-start gap-2.5 text-sm text-amber-800/80 dark:text-amber-200/70">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" />
+                <span>{t(`first24Hours.juvenile.bullet${n}`)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Footer nudge */}
         <p className="mt-8 text-center text-xs text-muted-foreground">
