@@ -228,7 +228,7 @@ function SectionPanel({ id, title, icon, isOpen, onToggle, children, urgent }: S
 
 /* ── Sidebar ───────────────────────────────────────────────────── */
 
-function PageSidebar({ openId, onOpen }: { openId: string; onOpen: (id: string) => void }) {
+function PageSidebar({ openIds, onOpen }: { openIds: Set<string>; onOpen: (id: string) => void }) {
   return (
     <nav aria-label="Page sections">
       <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-2">
@@ -236,7 +236,7 @@ function PageSidebar({ openId, onOpen }: { openId: string; onOpen: (id: string) 
       </p>
       <div className="space-y-0.5">
         {SECTIONS.map(({ id, shortLabel, Icon, urgent }) => {
-          const active = openId === id;
+          const active = openIds.has(id);
           return (
             <button
               key={id}
@@ -278,7 +278,7 @@ function PageSidebar({ openId, onOpen }: { openId: string; onOpen: (id: string) 
 
 export default function Warrants() {
   useScrollToTop();
-  const [openId, setOpenId] = useState("at-the-door");
+  const [openIds, setOpenIds] = useState<Set<string>>(new Set(["at-the-door"]));
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -290,15 +290,15 @@ export default function Warrants() {
 
   const openAndScroll = (id: string) => {
     scrollToSection(id);
-    setOpenId(id);
+    setOpenIds(prev => new Set([...prev, id]));
   };
 
   const toggleSection = (id: string) => {
-    if (openId === id) {
-      setOpenId("");
-    } else {
-      setOpenId(id);
-    }
+    setOpenIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
   };
 
   const breadcrumbItems = [
@@ -332,7 +332,7 @@ export default function Warrants() {
                 key={id}
                 onClick={() => openAndScroll(id)}
                 className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
-                  id === openId
+                  openIds.has(id)
                     ? urgent
                       ? "border-amber-400 bg-amber-50 text-amber-800 dark:bg-amber-900/20 dark:text-amber-300"
                       : "border-primary/50 bg-primary/10 text-primary"
@@ -355,7 +355,7 @@ export default function Warrants() {
           {/* Sidebar — desktop only */}
           <aside className="hidden lg:block w-52 flex-shrink-0">
             <div className="sticky top-24">
-              <PageSidebar openId={openId} onOpen={openAndScroll} />
+              <PageSidebar openIds={openIds} onOpen={openAndScroll} />
             </div>
           </aside>
 
@@ -367,7 +367,7 @@ export default function Warrants() {
               id="at-the-door"
               title="If Officers Are at Your Door Right Now"
               icon={<AlertTriangle className="h-4 w-4" />}
-              isOpen={openId === "at-the-door"}
+              isOpen={openIds.has("at-the-door")}
               onToggle={() => toggleSection("at-the-door")}
               urgent
             >
@@ -399,7 +399,7 @@ export default function Warrants() {
               id="what-is-warrant"
               title="What Is a Warrant?"
               icon={<FileText className="h-4 w-4" />}
-              isOpen={openId === "what-is-warrant"}
+              isOpen={openIds.has("what-is-warrant")}
               onToggle={() => toggleSection("what-is-warrant")}
             >
               <Card>
@@ -452,7 +452,7 @@ export default function Warrants() {
               id="search-warrants"
               title="Search Warrants"
               icon={<Search className="h-4 w-4" />}
-              isOpen={openId === "search-warrants"}
+              isOpen={openIds.has("search-warrants")}
               onToggle={() => toggleSection("search-warrants")}
             >
               <div className="space-y-4">
@@ -525,7 +525,7 @@ export default function Warrants() {
               id="arrest-warrants"
               title="Arrest Warrants"
               icon={<User className="h-4 w-4" />}
-              isOpen={openId === "arrest-warrants"}
+              isOpen={openIds.has("arrest-warrants")}
               onToggle={() => toggleSection("arrest-warrants")}
             >
               <div className="space-y-4">
@@ -563,7 +563,7 @@ export default function Warrants() {
               id="no-warrant-needed"
               title="When Officers Don't Need a Warrant"
               icon={<XCircle className="h-4 w-4" />}
-              isOpen={openId === "no-warrant-needed"}
+              isOpen={openIds.has("no-warrant-needed")}
               onToggle={() => toggleSection("no-warrant-needed")}
             >
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -580,7 +580,7 @@ export default function Warrants() {
               id="ice-warrants"
               title="ICE Warrants vs. Court Warrants"
               icon={<Globe className="h-4 w-4" />}
-              isOpen={openId === "ice-warrants"}
+              isOpen={openIds.has("ice-warrants")}
               onToggle={() => toggleSection("ice-warrants")}
             >
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -675,7 +675,7 @@ export default function Warrants() {
               id="documented-concerns"
               title="Documented Concerns"
               icon={<BookOpen className="h-4 w-4" />}
-              isOpen={openId === "documented-concerns"}
+              isOpen={openIds.has("documented-concerns")}
               onToggle={() => toggleSection("documented-concerns")}
             >
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -757,7 +757,7 @@ export default function Warrants() {
               id="what-to-do"
               title="What to Do"
               icon={<CheckCircle className="h-4 w-4" />}
-              isOpen={openId === "what-to-do"}
+              isOpen={openIds.has("what-to-do")}
               onToggle={() => toggleSection("what-to-do")}
             >
               <div className="space-y-5">

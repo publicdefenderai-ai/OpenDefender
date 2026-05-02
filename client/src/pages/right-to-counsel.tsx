@@ -7,7 +7,6 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Link } from "wouter";
 
 import { Header } from "@/components/layout/header";
@@ -85,35 +84,44 @@ const greyAreas: GreyAreaItem[] = [
 function GreyAreaCard({ item }: { item: GreyAreaItem }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger asChild>
-        <button className="w-full text-left">
-          <Card className="hover:shadow-md transition-all duration-200 hover:border-amber-300 cursor-pointer">
-            <CardContent className="p-5">
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
-                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
-                  </div>
+    <div>
+      <button className="w-full text-left" onClick={() => setIsOpen(p => !p)}>
+        <Card className="hover:shadow-md transition-all duration-200 hover:border-amber-300 cursor-pointer">
+          <CardContent className="p-5">
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                 </div>
-                <div className="flex-shrink-0 mt-1">
-                  <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+                <div>
+                  <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </button>
-      </CollapsibleTrigger>
-      <CollapsibleContent>
-        <div className="mx-1 mb-2 rounded-b-lg border border-t-0 border-amber-200 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-900/10 p-4">
-          <p className="text-sm text-foreground/85 leading-relaxed">{item.answer}</p>
-        </div>
-      </CollapsibleContent>
-    </Collapsible>
+              <div className="flex-shrink-0 mt-1">
+                <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="grey-content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+            style={{ overflow: "hidden" }}
+          >
+            <div className="mx-1 mb-2 rounded-b-lg border border-t-0 border-amber-200 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-900/10 p-4">
+              <p className="text-sm text-foreground/85 leading-relaxed">{item.answer}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
@@ -176,11 +184,11 @@ function SectionPanel({ id, title, icon, isOpen, onToggle, children }: SectionPa
 /* ── Sidebar ───────────────────────────────────────────────────── */
 
 function PageSidebar({
-  openId,
+  openIds,
   onOpen,
   jurisdiction,
 }: {
-  openId: string;
+  openIds: Set<string>;
   onOpen: (id: string) => void;
   jurisdiction: string;
 }) {
@@ -199,7 +207,7 @@ function PageSidebar({
       </p>
       <div className="space-y-0.5">
         {SECTIONS.map(({ id, shortLabel, Icon }) => {
-          const active = openId === id;
+          const active = openIds.has(id);
           return (
             <button
               key={id}
@@ -240,7 +248,7 @@ function PageSidebar({
 export default function RightToCounsel() {
   useScrollToTop();
   const { jurisdiction } = useJurisdiction();
-  const [openId, setOpenId] = useState("constitutional-sources");
+  const [openIds, setOpenIds] = useState<Set<string>>(new Set(["constitutional-sources"]));
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -252,15 +260,15 @@ export default function RightToCounsel() {
 
   const openAndScroll = (id: string) => {
     scrollToSection(id);
-    setOpenId(id);
+    setOpenIds(prev => new Set([...prev, id]));
   };
 
   const toggleSection = (id: string) => {
-    if (openId === id) {
-      setOpenId("");
-    } else {
-      setOpenId(id);
-    }
+    setOpenIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
   };
 
   const breadcrumbItems = [
@@ -299,7 +307,7 @@ export default function RightToCounsel() {
                 key={id}
                 onClick={() => openAndScroll(id)}
                 className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
-                  id === openId
+                  openIds.has(id)
                     ? "border-primary/50 bg-primary/10 text-primary"
                     : "border-border hover:bg-muted hover:border-foreground/20 text-muted-foreground"
                 }`}
@@ -318,7 +326,7 @@ export default function RightToCounsel() {
           {/* Sidebar — desktop only */}
           <aside className="hidden lg:block w-52 flex-shrink-0">
             <div className="sticky top-24">
-              <PageSidebar openId={openId} onOpen={openAndScroll} jurisdiction={jurisdiction} />
+              <PageSidebar openIds={openIds} onOpen={openAndScroll} jurisdiction={jurisdiction} />
             </div>
           </aside>
 
@@ -335,7 +343,7 @@ export default function RightToCounsel() {
               id="constitutional-sources"
               title="Two Constitutional Sources, Two Different Triggers"
               icon={<Scale className="h-4 w-4" />}
-              isOpen={openId === "constitutional-sources"}
+              isOpen={openIds.has("constitutional-sources")}
               onToggle={() => toggleSection("constitutional-sources")}
             >
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -423,7 +431,7 @@ export default function RightToCounsel() {
               id="custody-levels"
               title="Detention, Custody, and Arrest — They're Not the Same"
               icon={<Shield className="h-4 w-4" />}
-              isOpen={openId === "custody-levels"}
+              isOpen={openIds.has("custody-levels")}
               onToggle={() => toggleSection("custody-levels")}
             >
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -504,7 +512,7 @@ export default function RightToCounsel() {
               id="interrogation-vs-trial"
               title="Interrogation Counsel vs. Trial Counsel"
               icon={<MessageSquare className="h-4 w-4" />}
-              isOpen={openId === "interrogation-vs-trial"}
+              isOpen={openIds.has("interrogation-vs-trial")}
               onToggle={() => toggleSection("interrogation-vs-trial")}
             >
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -583,7 +591,7 @@ export default function RightToCounsel() {
               id="when-not-apply"
               title="When the Right to Counsel May Not Apply"
               icon={<XCircle className="h-4 w-4" />}
-              isOpen={openId === "when-not-apply"}
+              isOpen={openIds.has("when-not-apply")}
               onToggle={() => toggleSection("when-not-apply")}
             >
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -639,7 +647,7 @@ export default function RightToCounsel() {
               id="unclear-situations"
               title="Unclear Situations — When It's Hard to Tell"
               icon={<AlertTriangle className="h-4 w-4" />}
-              isOpen={openId === "unclear-situations"}
+              isOpen={openIds.has("unclear-situations")}
               onToggle={() => toggleSection("unclear-situations")}
             >
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -657,7 +665,7 @@ export default function RightToCounsel() {
               id="what-happens"
               title="What Happens When You Ask for a Lawyer"
               icon={<CheckCircle className="h-4 w-4" />}
-              isOpen={openId === "what-happens"}
+              isOpen={openIds.has("what-happens")}
               onToggle={() => toggleSection("what-happens")}
             >
               <div className="space-y-4">
@@ -693,7 +701,7 @@ export default function RightToCounsel() {
               id="quick-reference"
               title="Quick Reference: Which Right Applies?"
               icon={<Gavel className="h-4 w-4" />}
-              isOpen={openId === "quick-reference"}
+              isOpen={openIds.has("quick-reference")}
               onToggle={() => toggleSection("quick-reference")}
             >
               <div className="rounded-xl border border-border bg-muted/30 p-5">
