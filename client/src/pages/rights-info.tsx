@@ -2,36 +2,23 @@ import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  
-  Calendar, 
-  MapPin, 
-  Book, 
-  FileText, 
-  Users, 
-  Phone, 
+import {
+  FileText,
+  Phone,
   AlertTriangle,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
   Clock,
   Scale,
   Gavel,
   UserCheck,
   FileX,
-  HelpCircle,
   Search,
-  Mail,
-  Navigation,
-  X
+  MessageSquare,
+  ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "wouter";
 
@@ -40,15 +27,12 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { ShareButton } from "@/components/ui/share-button";
-import { useLegalResources } from "@/hooks/use-legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
 
 export default function RightsInfo() {
   useScrollToTop();
   const { t } = useTranslation();
-  const [selectedJurisdiction, setSelectedJurisdiction] = useState("federal");
-  const { data: resources, isLoading } = useLegalResources(selectedJurisdiction);
   const [selectedRight, setSelectedRight] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState("miranda");
   const [animationKey, setAnimationKey] = useState(0);
@@ -94,7 +78,7 @@ export default function RightsInfo() {
       </section>
 
       {/* Quick Rights Reference */}
-      <section className="py-16 md:py-20 lg:py-24 bg-background">
+      <section className="py-16 md:py-20 lg:py-24 bg-background" id="quick-rights">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-quick-rights">
@@ -142,122 +126,150 @@ export default function RightsInfo() {
         </div>
       </section>
 
-      {/* Detailed Rights Information */}
+      {/* Detailed Rights Information — two-column layout with sticky sidebar on desktop */}
       <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="constitutional-rights">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-detailed-rights">
-              {t('rights.detailedRights.title')}
-            </h2>
-          </ScrollReveal>
+          <div className="flex gap-10 items-start">
 
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-            <ScrollReveal delay={0.1}>
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-10 md:mb-12 bg-background border border-border">
-                <TabsTrigger 
-                  value="miranda" 
-                  data-testid="tab-miranda"
-                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
-                >
-                  {t('rights.detailedRights.tabs.miranda')}
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="arrest" 
-                  data-testid="tab-arrest"
-                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
-                >
-                  {t('rights.detailedRights.tabs.arrest')}
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="court" 
-                  data-testid="tab-court"
-                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
-                >
-                  {t('rights.detailedRights.tabs.court')}
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="prison" 
-                  data-testid="tab-prison"
-                  className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200"
-                >
-                  {t('rights.detailedRights.tabs.prison')}
-                </TabsTrigger>
-              </TabsList>
-            </ScrollReveal>
+            {/* Main content */}
+            <div className="flex-1 min-w-0">
+              <ScrollReveal>
+                <h2 className="text-3xl font-bold text-foreground mb-10 md:mb-12" data-testid="heading-detailed-rights">
+                  {t('rights.detailedRights.title')}
+                </h2>
+              </ScrollReveal>
 
-            <div>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`tab-${activeTab}-${animationKey}`}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-                >
-                  <TabsContent value="miranda" className="mt-0" forceMount={activeTab === "miranda" ? true : undefined}>
-                    {activeTab === "miranda" && <MirandaRightsSection />}
-                  </TabsContent>
-                  <TabsContent value="arrest" className="mt-0" forceMount={activeTab === "arrest" ? true : undefined}>
-                    {activeTab === "arrest" && <ArrestRightsSection />}
-                  </TabsContent>
-                  <TabsContent value="court" className="mt-0" forceMount={activeTab === "court" ? true : undefined}>
-                    {activeTab === "court" && <CourtRightsSection />}
-                  </TabsContent>
-                  <TabsContent value="prison" className="mt-0" forceMount={activeTab === "prison" ? true : undefined}>
-                    {activeTab === "prison" && <PrisonRightsSection />}
-                  </TabsContent>
-                </motion.div>
-              </AnimatePresence>
+              <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+                <ScrollReveal delay={0.1}>
+                  <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-10 md:mb-12 bg-background border border-border">
+                    <TabsTrigger value="miranda" data-testid="tab-miranda" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                      {t('rights.detailedRights.tabs.miranda')}
+                    </TabsTrigger>
+                    <TabsTrigger value="arrest" data-testid="tab-arrest" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                      {t('rights.detailedRights.tabs.arrest')}
+                    </TabsTrigger>
+                    <TabsTrigger value="court" data-testid="tab-court" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                      {t('rights.detailedRights.tabs.court')}
+                    </TabsTrigger>
+                    <TabsTrigger value="prison" data-testid="tab-prison" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                      {t('rights.detailedRights.tabs.prison')}
+                    </TabsTrigger>
+                  </TabsList>
+                </ScrollReveal>
+
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`tab-${activeTab}-${animationKey}`}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                  >
+                    <TabsContent value="miranda" className="mt-0" forceMount={activeTab === "miranda" ? true : undefined}>
+                      {activeTab === "miranda" && <MirandaRightsSection />}
+                    </TabsContent>
+                    <TabsContent value="arrest" className="mt-0" forceMount={activeTab === "arrest" ? true : undefined}>
+                      {activeTab === "arrest" && <ArrestRightsSection />}
+                    </TabsContent>
+                    <TabsContent value="court" className="mt-0" forceMount={activeTab === "court" ? true : undefined}>
+                      {activeTab === "court" && <CourtRightsSection />}
+                    </TabsContent>
+                    <TabsContent value="prison" className="mt-0" forceMount={activeTab === "prison" ? true : undefined}>
+                      {activeTab === "prison" && <PrisonRightsSection />}
+                    </TabsContent>
+                  </motion.div>
+                </AnimatePresence>
+              </Tabs>
             </div>
-          </Tabs>
+
+            {/* Sticky sidebar — desktop only */}
+            <aside className="hidden lg:block w-52 flex-shrink-0 sticky top-6 self-start" aria-label="Rights navigation">
+              {/* On this page */}
+              <div className="mb-5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">On this page</p>
+                {([
+                  { value: 'miranda',  label: t('rights.detailedRights.tabs.miranda'), Icon: BrandShieldIcon },
+                  { value: 'arrest',   label: t('rights.detailedRights.tabs.arrest'),  Icon: UserCheck },
+                  { value: 'court',    label: t('rights.detailedRights.tabs.court'),   Icon: Gavel },
+                  { value: 'prison',   label: t('rights.detailedRights.tabs.prison'),  Icon: FileX },
+                ] as const).map(({ value, label, Icon }) => (
+                  <button
+                    key={value}
+                    onClick={() => handleTabChange(value)}
+                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm transition-all duration-150 ${
+                      activeTab === value
+                        ? "bg-primary/10 border border-primary/20 text-foreground font-medium"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                    }`}
+                  >
+                    <span className="flex-shrink-0 w-3.5 h-3.5"><Icon size={14} /></span>
+                    <span className="truncate flex-1">{label}</span>
+                    {activeTab === value && <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />}
+                  </button>
+                ))}
+              </div>
+
+              {/* Deep dives */}
+              <div className="border-t border-border/60 pt-4 mb-5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Go deeper</p>
+                {[
+                  { href: "/right-to-counsel",       label: "Right to an Attorney",       Icon: Scale   },
+                  { href: "/search-seizure",          label: "Search & Seizure Rights",    Icon: Search  },
+                  { href: "/warrants",                label: "Warrants & Your Rights",     Icon: FileText},
+                  { href: "/collateral-consequences", label: "Hidden Consequences",        Icon: FileX   },
+                ].map(({ href, label, Icon }) => (
+                  <Link key={href} href={href}>
+                    <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-150 text-left">
+                      <Icon className="h-3.5 w-3.5 flex-shrink-0" />
+                      <span className="flex-1">{label}</span>
+                      <ChevronRight className="h-3 w-3 flex-shrink-0 opacity-40" />
+                    </button>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Take action */}
+              <div className="border-t border-border/60 pt-4">
+                <Link href="/first-24-hours">
+                  <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left">
+                    <Clock className="h-3.5 w-3.5 flex-shrink-0" />
+                    <span>First 24 Hours</span>
+                  </button>
+                </Link>
+                <Link href="/case-guidance">
+                  <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left">
+                    <MessageSquare className="h-3.5 w-3.5 flex-shrink-0" />
+                    <span>Get guidance</span>
+                  </button>
+                </Link>
+              </div>
+            </aside>
+
+          </div>
         </div>
       </section>
 
-      {/* Learn More — Search Rights & Right to Counsel */}
-      <section className="py-8 bg-background">
+      {/* Rights Deep Dives — replaces the old "Learn More" button row */}
+      <section className="py-12 bg-background" id="deep-dives">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/search-seizure">
-                <Button
-                  data-testid="button-search-rights"
-                  variant="outline"
-                  className="py-4 px-8 bg-blue-100 dark:bg-blue-900/40 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/50"
-                >
-                  <Search className="mr-2 h-5 w-5" />
-                  Rights During a Search
-                </Button>
-              </Link>
-              <Link href="/right-to-counsel">
-                <Button
-                  data-testid="button-right-to-counsel"
-                  variant="outline"
-                  className="py-4 px-8 bg-green-100 dark:bg-green-900/40 border-green-300 dark:border-green-700 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-800/50"
-                >
-                  <Scale className="mr-2 h-5 w-5" />
-                  Right to an Attorney — Full Guide
-                </Button>
-              </Link>
-              <Link href="/warrants">
-                <Button
-                  data-testid="button-warrants"
-                  variant="outline"
-                  className="py-4 px-8 bg-amber-100 dark:bg-amber-900/40 border-amber-300 dark:border-amber-700 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-800/50"
-                >
-                  <FileText className="mr-2 h-5 w-5" />
-                  Warrants & Your Rights
-                </Button>
-              </Link>
-              <Link href="/collateral-consequences">
-                <Button
-                  data-testid="button-collateral-consequences"
-                  variant="outline"
-                  className="py-4 px-8 bg-slate-100 dark:bg-slate-800/40 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700/50"
-                >
-                  <FileX className="mr-2 h-5 w-5" />
-                  Hidden Consequences of a Conviction
-                </Button>
-              </Link>
+            <h2 className="text-xl font-bold text-foreground mb-1">Go deeper into your rights</h2>
+            <p className="text-sm text-muted-foreground mb-6">Each of these pages covers a specific area in full detail.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {[
+                { href: "/right-to-counsel",       Icon: Scale,    title: "Right to an Attorney",       desc: "When it begins, how to invoke it, and the dangerous gap before arraignment.", color: "text-green-600 dark:text-green-400", bg: "bg-green-50/60 dark:bg-green-900/10 border-green-200 dark:border-green-800/60", testId: "button-right-to-counsel" },
+                { href: "/search-seizure",          Icon: Search,   title: "Search & Seizure Rights",    desc: "What police can and can't search, when a warrant is required, and how to respond.", color: "text-blue-600 dark:text-blue-400",  bg: "bg-blue-50/60 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800/60",  testId: "button-search-rights" },
+                { href: "/warrants",                Icon: FileText, title: "Warrants & Your Rights",     desc: "Arrest warrants, search warrants, how to check if one exists, and what to do.", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50/60 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800/60", testId: "button-warrants" },
+                { href: "/collateral-consequences", Icon: FileX,    title: "Hidden Consequences",        desc: "What happens to housing, jobs, benefits, and family after a charge or conviction.", color: "text-slate-600 dark:text-slate-400", bg: "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700",   testId: "button-collateral-consequences" },
+              ].map(({ href, Icon, title, desc, color, bg, testId }) => (
+                <Link key={href} href={href}>
+                  <div data-testid={testId} className={`rounded-xl border p-4 h-full cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg}`}>
+                    <Icon className={`h-5 w-5 mb-3 ${color}`} strokeWidth={1.75} />
+                    <p className="font-semibold text-foreground text-sm mb-1">{title}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </ScrollReveal>
         </div>
@@ -548,138 +560,3 @@ function PrisonRightsSection() {
   );
 }
 
-function ProcessStep({ number, title, description, timeframe, rights, isLast }: {
-  number: number;
-  title: string;
-  description: string;
-  timeframe: string;
-  rights: string[];
-  isLast: boolean;
-}) {
-  return (
-    <div className="flex">
-      <div className="flex flex-col items-center mr-6">
-        <div className="w-10 h-10 legal-blue rounded-full flex items-center justify-center text-white font-bold">
-          {number}
-        </div>
-        {!isLast && <div className="w-0.5 h-16 bg-border mt-4"></div>}
-      </div>
-      
-      <Card className="flex-1">
-        <CardContent className="p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-            <Badge variant="outline" className="text-xs">
-              <Clock className="h-3 w-3 mr-1" />
-              {timeframe}
-            </Badge>
-          </div>
-          
-          <p className="text-muted-foreground mb-4">{description}</p>
-          
-          <div>
-            <h4 className="font-medium text-foreground mb-2">Your Rights at This Stage:</h4>
-            <ul className="space-y-1">
-              {rights.map((right, index) => (
-                <li key={index} className="text-sm text-muted-foreground flex items-start">
-                  <span className="text-success-green mr-2">•</span>
-                  {right}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  );
-}
-
-function ResourceCard({ icon, title, description, contact, bgColor }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  contact: string;
-  bgColor: string;
-}) {
-  return (
-    <Card className="hover:shadow-lg transition-all duration-300">
-      <CardContent className="p-6">
-        <div className={`w-12 h-12 ${bgColor} rounded-lg flex items-center justify-center mb-4`}>
-          {icon}
-        </div>
-        <h3 className="text-lg font-semibold text-foreground mb-3">{title}</h3>
-        <p className="text-muted-foreground mb-4 text-sm">{description}</p>
-        <div className="flex items-center text-sm text-primary">
-          <Phone className="h-4 w-4 mr-2" />
-          {contact}
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-const processSteps = [
-  {
-    title: "Arrest",
-    description: "Law enforcement takes you into custody based on probable cause or a warrant.",
-    timeframe: "Immediate",
-    rights: [
-      "Right to remain silent",
-      "Right to an attorney",
-      "Right to a phone call",
-      "Right to be informed of charges"
-    ]
-  },
-  {
-    title: "Booking",
-    description: "Processing at the police station including fingerprints, photos, and personal information.",
-    timeframe: "1-3 hours",
-    rights: [
-      "Right to medical attention if needed",
-      "Right to contact attorney or family",
-      "Right to humane treatment"
-    ]
-  },
-  {
-    title: "Initial Appearance/Arraignment",
-    description: "First court appearance where charges are formally read and you enter a plea.",
-    timeframe: "24-72 hours",
-    rights: [
-      "Right to be informed of charges",
-      "Right to have attorney present",
-      "Right to request public defender",
-      "Right to reasonable bail"
-    ]
-  },
-  {
-    title: "Preliminary Hearing",
-    description: "Court determines if there's probable cause to believe you committed the crime.",
-    timeframe: "1-2 weeks",
-    rights: [
-      "Right to challenge evidence",
-      "Right to cross-examine witnesses",
-      "Right to attorney representation"
-    ]
-  },
-  {
-    title: "Discovery",
-    description: "Both sides exchange evidence, witness lists, and other case information.",
-    timeframe: "Weeks to months",
-    rights: [
-      "Right to see prosecution's evidence",
-      "Right to present defense evidence",
-      "Right to expert witnesses"
-    ]
-  },
-  {
-    title: "Trial",
-    description: "Formal presentation of evidence before a judge or jury to determine guilt or innocence.",
-    timeframe: "Varies",
-    rights: [
-      "Right to jury trial",
-      "Right to confront witnesses",
-      "Right to remain silent",
-      "Right to present defense"
-    ]
-  }
-];
