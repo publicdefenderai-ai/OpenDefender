@@ -101,14 +101,14 @@ function calculateScore(doc: SearchDocument, queryTerms: string[], language: 'en
   }
 
   const typeBoosts: Record<SearchContentType, number> = {
-    glossary: 1.2,
-    charge: 1.3,
-    diversion_program: 1.1,
-    expungement: 1.1,
-    legal_resource: 1.0,
-    court: 0.9,
-    mock_qa: 0.8,
-    rights_info: 1.15,
+    legal_resource: 1.3,
+    rights_info: 1.2,
+    expungement: 1.15,
+    diversion_program: 1.15,
+    glossary: 1.1,
+    court: 1.0,
+    mock_qa: 0.9,
+    charge: 0.6,
   };
   score *= typeBoosts[doc.type] || 1;
 
@@ -977,10 +977,21 @@ export function buildSearchIndex(): void {
     },
   ];
 
+  // Support, resource, and logistics pages get 'legal_resource' type
+  // so they surface above charges in topic searches
+  const LEGAL_RESOURCE_PAGE_IDS = new Set([
+    'support-hub', 'support-employment', 'support-finances', 'support-court-logistics',
+    'support-mental-health', 'support-transportation', 'support-childcare', 'support-housing',
+    'support-family-care', 'support-reputation', 'support-personal-health',
+    'resources', 'friends-family', 'legal-aid', 'recap-extensions',
+    'document-library', 'document-summarizer', 'attorney-portal', 'attorney-playbooks',
+    'court-locator',
+  ]);
+
   for (const page of sitePages) {
     documents.push({
       id: `page-${page.id}`,
-      type: 'rights_info',
+      type: LEGAL_RESOURCE_PAGE_IDS.has(page.id) ? 'legal_resource' : 'rights_info',
       title: page.title,
       titleEs: page.titleEs,
       titleZh: page.titleZh,
@@ -1035,23 +1046,42 @@ export function search(query: SearchQuery): SearchResponse {
 
   results.sort((a, b) => b.score - a.score);
 
-  const limit = query.limit || 20;
-  const offset = query.offset || 0;
-  const paginatedResults = results.slice(offset, offset + limit);
+  // Topic order: support resources first, charges last
+  const TOPIC_ORDER: SearchContentType[] = [
+    'rights_info', 'legal_resource', 'expungement', 'diversion_program',
+    'glossary', 'court', 'mock_qa', 'charge',
+  ];
 
-  const groupedResults: Record<SearchContentType, SearchResult[]> = {
-    glossary: [],
-    charge: [],
-    diversion_program: [],
-    expungement: [],
-    legal_resource: [],
-    court: [],
-    mock_qa: [],
-    rights_info: [],
+  // Per-type result caps — charges get more slots but appear last
+  const GROUP_LIMITS: Record<SearchContentType, number> = {
+    rights_info: 5,
+    legal_resource: 5,
+    expungement: 3,
+    diversion_program: 4,
+    glossary: 3,
+    court: 2,
+    mock_qa: 2,
+    charge: 6,
   };
 
-  for (const result of paginatedResults) {
-    groupedResults[result.document.type].push(result);
+  // Group from ALL scored results (not just paginated) so each category gets its best matches
+  const groupedResults: Record<SearchContentType, SearchResult[]> = {
+    glossary: [], charge: [], diversion_program: [], expungement: [],
+    legal_resource: [], court: [], mock_qa: [], rights_info: [],
+  };
+
+  for (const result of results) {
+    const type = result.document.type;
+    const limit = GROUP_LIMITS[type] ?? 3;
+    if (groupedResults[type].length < limit) {
+      groupedResults[type].push(result);
+    }
+  }
+
+  // Flat results in topic order (charges last) — used for totalCount display
+  const flatResults: SearchResult[] = [];
+  for (const type of TOPIC_ORDER) {
+    flatResults.push(...groupedResults[type]);
   }
 
   const suggestions: string[] = [];
@@ -1068,7 +1098,7 @@ export function search(query: SearchQuery): SearchResponse {
 
   return {
     query: query.query,
-    results: paginatedResults,
+    results: flatResults,
     totalCount: results.length,
     groupedResults,
     suggestions: suggestions.slice(0, 5),

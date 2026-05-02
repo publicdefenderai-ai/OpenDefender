@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Search, X, Loader2, FileText, Scale, BookOpen, Building, AlertCircle, HelpCircle } from "lucide-react";
+import { Search, X, Loader2, FileText, Scale, BookOpen, Building, AlertCircle, HelpCircle, Shield, Briefcase } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import type { SearchResponse, SearchContentType } from "@shared/search-types";
+import type { SearchResponse, SearchResult, SearchContentType } from "@shared/search-types";
 import { CONTENT_TYPE_LABELS } from "@shared/search-types";
 
 interface SiteSearchProps {
@@ -21,10 +21,38 @@ const TYPE_ICONS: Record<SearchContentType, typeof FileText> = {
   charge: Scale,
   diversion_program: Building,
   expungement: FileText,
-  legal_resource: FileText,
+  legal_resource: Briefcase,
   court: Building,
   mock_qa: HelpCircle,
-  rights_info: AlertCircle,
+  rights_info: Shield,
+};
+
+const TYPE_COLORS: Record<SearchContentType, string> = {
+  rights_info: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
+  legal_resource: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+  expungement: 'bg-purple-500/10 text-purple-600 dark:text-purple-400',
+  diversion_program: 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
+  glossary: 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
+  court: 'bg-slate-500/10 text-slate-600 dark:text-slate-400',
+  mock_qa: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400',
+  charge: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+};
+
+// Display order: support resources first, charges last
+const TOPIC_ORDER: SearchContentType[] = [
+  'rights_info', 'legal_resource', 'expungement', 'diversion_program',
+  'glossary', 'court', 'mock_qa', 'charge',
+];
+
+const SECTION_LABELS: Record<SearchContentType, { en: string; es: string; zh: string }> = {
+  rights_info:       { en: 'Know Your Rights', es: 'Conozca Sus Derechos', zh: '了解您的权利' },
+  legal_resource:    { en: 'Resources & Support', es: 'Recursos y Apoyo', zh: '资源与支持' },
+  expungement:       { en: 'Record Clearing', es: 'Eliminación de Antecedentes', zh: '记录清除' },
+  diversion_program: { en: 'Diversion Programs', es: 'Programas de Diversión', zh: '转移计划' },
+  glossary:          { en: 'Legal Terms', es: 'Términos Legales', zh: '法律术语' },
+  court:             { en: 'Court Information', es: 'Información del Tribunal', zh: '法院信息' },
+  mock_qa:           { en: 'Court Preparation', es: 'Preparación para el Tribunal', zh: '法庭准备' },
+  charge:            { en: 'Criminal Charges', es: 'Cargos Criminales', zh: '刑事指控' },
 };
 
 export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
@@ -72,27 +100,42 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     }
   }, [onOpenChange]);
 
-  const getTypeLabel = (type: SearchContentType) => {
-    const labels = CONTENT_TYPE_LABELS[type];
+  const getSectionLabel = (type: SearchContentType) => {
+    const labels = SECTION_LABELS[type];
     return language === 'es' ? labels.es : language === 'zh' ? labels.zh : labels.en;
   };
 
-  const hasResults = data && data.results && data.results.length > 0;
+  // Build ordered, non-empty sections from groupedResults
+  const sections: Array<{ type: SearchContentType; results: SearchResult[] }> = [];
+  if (data?.groupedResults) {
+    for (const type of TOPIC_ORDER) {
+      const group = data.groupedResults[type];
+      if (group && group.length > 0) {
+        sections.push({ type, results: group });
+      }
+    }
+  }
+
+  const hasResults = sections.length > 0;
   const showNoResults = debouncedQuery.length >= 2 && !isLoading && !hasResults;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[600px] max-h-[80vh] flex flex-col p-0">
+      <DialogContent className="sm:max-w-[620px] max-h-[85vh] flex flex-col p-0">
         <DialogHeader className="p-4 pb-0">
           <DialogTitle className="sr-only">
-            {language === 'es' ? 'Buscar en el sitio' : 'Search this site'}
+            {language === 'es' ? 'Buscar en el sitio' : language === 'zh' ? '搜索网站' : 'Search this site'}
           </DialogTitle>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               ref={inputRef}
               type="text"
-              placeholder={language === 'es' ? 'Buscar términos legales, cargos, recursos...' : 'Search legal terms, charges, resources...'}
+              placeholder={
+                language === 'es' ? 'Buscar términos legales, recursos, cargos...' :
+                language === 'zh' ? '搜索法律术语、资源、指控...' :
+                'Search rights, resources, charges, legal terms...'
+              }
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
@@ -117,7 +160,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
             <div className="flex items-center justify-center py-8">
               <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
               <span className="ml-2 text-muted-foreground">
-                {language === 'es' ? 'Buscando...' : 'Searching...'}
+                {language === 'es' ? 'Buscando...' : language === 'zh' ? '搜索中...' : 'Searching...'}
               </span>
             </div>
           )}
@@ -132,14 +175,16 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
             <div className="p-8 text-center">
               <Search className="h-12 w-12 mx-auto text-muted-foreground/50 mb-4" />
               <p className="text-muted-foreground">
-                {language === 'es' 
+                {language === 'es'
                   ? `No se encontraron resultados para "${debouncedQuery}"`
+                  : language === 'zh'
+                  ? `未找到"${debouncedQuery}"的结果`
                   : `No results found for "${debouncedQuery}"`}
               </p>
               {data?.suggestions && data.suggestions.length > 0 && (
                 <div className="mt-4">
                   <p className="text-sm text-muted-foreground mb-2">
-                    {language === 'es' ? 'Intente buscar:' : 'Try searching for:'}
+                    {language === 'es' ? 'Intente buscar:' : language === 'zh' ? '尝试搜索：' : 'Try searching for:'}
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {data.suggestions.map((suggestion) => (
@@ -159,54 +204,91 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
           )}
 
           {hasResults && (
-            <ScrollArea className="h-[400px]">
-              <div className="p-4 space-y-2">
-                <p className="text-xs text-muted-foreground mb-3">
-                  {language === 'es' 
-                    ? `${data.totalCount} resultados en ${data.searchTimeMs}ms`
-                    : `${data.totalCount} results in ${data.searchTimeMs}ms`}
+            <ScrollArea className="h-[460px]">
+              <div className="px-4 pt-3 pb-2">
+                <p className="text-xs text-muted-foreground">
+                  {language === 'es'
+                    ? `${data!.totalCount} resultados · ${data!.searchTimeMs}ms`
+                    : language === 'zh'
+                    ? `${data!.totalCount} 个结果 · ${data!.searchTimeMs}ms`
+                    : `${data!.totalCount} results · ${data!.searchTimeMs}ms`}
                 </p>
-                
-                {data.results.map((result) => {
-                  const Icon = TYPE_ICONS[result.document.type];
-                  const title = language === 'zh' && result.document.titleZh 
-                    ? result.document.titleZh 
-                    : language === 'es' && result.document.titleEs 
-                    ? result.document.titleEs 
-                    : result.document.title;
-                  
+              </div>
+
+              <div className="px-4 pb-4 space-y-5">
+                {sections.map(({ type, results }, sectionIdx) => {
+                  const Icon = TYPE_ICONS[type];
+                  const colorClass = TYPE_COLORS[type];
+                  const isCharges = type === 'charge';
+
                   return (
-                    <button
-                      key={result.document.id}
-                      onClick={() => handleResultClick(result.document.url)}
-                      className="w-full text-left p-3 rounded-lg hover:bg-accent transition-colors border border-transparent hover:border-border"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="mt-0.5 p-1.5 rounded bg-primary/10">
-                          <Icon className="h-4 w-4 text-primary" />
+                    <div key={type}>
+                      {/* Section divider before charges */}
+                      {isCharges && sectionIdx > 0 && (
+                        <div className="flex items-center gap-2 mb-3 -mx-4 px-4 border-t pt-4">
+                          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                            {language === 'es' ? 'También encontrado' : language === 'zh' ? '相关刑事指控' : 'Also found'}
+                          </span>
+                          <div className="flex-1 h-px bg-border" />
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-medium text-foreground truncate">
-                              {title}
-                            </span>
-                            <Badge variant="secondary" className="text-xs shrink-0">
-                              {getTypeLabel(result.document.type)}
-                            </Badge>
-                            {result.document.jurisdiction && (
-                              <Badge variant="outline" className="text-xs shrink-0">
-                                {result.document.jurisdiction}
-                              </Badge>
-                            )}
-                          </div>
-                          {result.highlights[0] && (
-                            <p className="text-sm text-muted-foreground line-clamp-2">
-                              {result.highlights[0].snippet}
-                            </p>
-                          )}
+                      )}
+
+                      {/* Section heading */}
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className={`p-1 rounded ${colorClass}`}>
+                          <Icon className="h-3 w-3" />
                         </div>
+                        <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                          {getSectionLabel(type)}
+                        </span>
+                        <span className="text-xs text-muted-foreground/60">
+                          ({results.length})
+                        </span>
                       </div>
-                    </button>
+
+                      {/* Results in this section */}
+                      <div className="space-y-1">
+                        {results.map((result) => {
+                          const title =
+                            language === 'zh' && result.document.titleZh
+                              ? result.document.titleZh
+                              : language === 'es' && result.document.titleEs
+                              ? result.document.titleEs
+                              : result.document.title;
+
+                          return (
+                            <button
+                              key={result.document.id}
+                              onClick={() => handleResultClick(result.document.url)}
+                              className="w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent transition-colors border border-transparent hover:border-border"
+                            >
+                              <div className="flex items-start gap-2.5">
+                                <div className={`mt-0.5 p-1 rounded shrink-0 ${colorClass}`}>
+                                  <Icon className="h-3.5 w-3.5" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-2 flex-wrap mb-0.5">
+                                    <span className="font-medium text-sm text-foreground truncate">
+                                      {title}
+                                    </span>
+                                    {result.document.jurisdiction && (
+                                      <Badge variant="outline" className="text-xs shrink-0 h-4 px-1">
+                                        {result.document.jurisdiction}
+                                      </Badge>
+                                    )}
+                                  </div>
+                                  {result.highlights[0] && (
+                                    <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+                                      {result.highlights[0].snippet}
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
                   );
                 })}
               </div>
@@ -214,28 +296,30 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
           )}
 
           {!debouncedQuery && (
-            <div className="p-8 text-center">
-              <Search className="h-12 w-12 mx-auto text-muted-foreground/50 mb-4" />
-              <p className="text-muted-foreground">
-                {language === 'es' 
+            <div className="p-6 text-center">
+              <Search className="h-10 w-10 mx-auto text-muted-foreground/40 mb-3" />
+              <p className="text-sm text-muted-foreground mb-4">
+                {language === 'es'
                   ? 'Escriba al menos 2 caracteres para buscar'
+                  : language === 'zh'
+                  ? '输入至少2个字符进行搜索'
                   : 'Type at least 2 characters to search'}
               </p>
-              <div className="mt-4 text-xs text-muted-foreground">
-                <p>{language === 'es' ? 'Búsquedas populares:' : 'Popular searches:'}</p>
-                <div className="flex flex-wrap gap-2 justify-center mt-2">
-                  {['bail', 'expungement', 'miranda rights', 'DUI'].map((term) => (
-                    <Button
-                      key={term}
-                      variant="ghost"
-                      size="sm"
-                      className="text-xs"
-                      onClick={() => setQuery(term)}
-                    >
-                      {term}
-                    </Button>
-                  ))}
-                </div>
+              <div className="text-xs text-muted-foreground mb-2">
+                {language === 'es' ? 'Búsquedas populares:' : language === 'zh' ? '热门搜索：' : 'Popular searches:'}
+              </div>
+              <div className="flex flex-wrap gap-1.5 justify-center">
+                {['bail', 'property', 'expungement', 'miranda rights', 'housing', 'fines', 'DUI'].map((term) => (
+                  <Button
+                    key={term}
+                    variant="outline"
+                    size="sm"
+                    className="text-xs h-7"
+                    onClick={() => setQuery(term)}
+                  >
+                    {term}
+                  </Button>
+                ))}
               </div>
             </div>
           )}
@@ -243,10 +327,10 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
         <div className="p-3 border-t text-xs text-muted-foreground flex items-center justify-between">
           <span>
-            {language === 'es' ? 'Presione ESC para cerrar' : 'Press ESC to close'}
+            {language === 'es' ? 'Presione ESC para cerrar' : language === 'zh' ? '按ESC关闭' : 'Press ESC to close'}
           </span>
           <span>
-            {language === 'es' ? 'Solo resultados del sitio' : 'Site content only'}
+            {language === 'es' ? 'Solo resultados del sitio' : language === 'zh' ? '仅限站内内容' : 'Site content only'}
           </span>
         </div>
       </DialogContent>
@@ -257,7 +341,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 export function SearchButton() {
   const [open, setOpen] = useState(false);
   const { i18n } = useTranslation();
-  const language = i18n.language === 'es' ? 'es' : 'en';
+  const language = i18n.language === 'es' ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -277,7 +361,7 @@ export function SearchButton() {
         size="icon"
         onClick={() => setOpen(true)}
         className="h-9 w-9"
-        aria-label={language === 'es' ? 'Buscar en el sitio' : 'Search site'}
+        aria-label={language === 'es' ? 'Buscar en el sitio' : language === 'zh' ? '搜索网站' : 'Search site'}
       >
         <Search className="h-4 w-4" />
       </Button>
