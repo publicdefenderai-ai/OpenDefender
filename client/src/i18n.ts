@@ -25,18 +25,17 @@ i18n
             "title": "OpenDefender",
             "subtitle": "Free Case Support & Legal Rights Information",
             "menu": {
-              "getHelp": "Get Help",
+              "getHelp": "AI Guidance Chat",
               "getHelpDesc": "Chat with our AI for personalized case support",
               "knowRights": "Know Your Rights",
-              "knowRightsDesc": "Learn about your constitutional protections",
+              "knowRightsDesc": "Constitutional rights and legal protections explained in plain language",
               "documentLibrary": "Document Library",
               "documentLibraryDesc": "Understand the legal documents in your case",
-              "findResources": "Find Resources",
-              "findResourcesDesc": "Locate courts, public defenders, and legal aid",
-              "attorneyTools": "Attorney Tools",
-              "attorneyToolsDesc": "Document drafting for legal professionals",
-              "friendsFamily": "For Families",
-              "friendsFamilyDesc": "Support guide if a family member has been charged or detained"
+              "findResources": "Find Legal Help",
+              "findResourcesDesc": "Locate public defenders, legal aid, and courts near you",
+              "friendsFamily": "For Families & Friends",
+              "friendsFamilyDesc": "Start here if someone you know was arrested. Find them, understand the process, and get practical help.",
+              "familySection": "For Families & Friends"
             },
             "language": "Language",
             "theme": "Theme",
@@ -1856,6 +1855,10 @@ i18n
                   "courtLogistics": {
                     "label": "Court Logistics",
                     "description": "When and where to appear, what to expect"
+                  },
+                  "diversionPrograms": {
+                    "label": "Diversion Programs",
+                    "description": "Alternative paths that may help avoid conviction or reduce charges"
                   }
                 },
                 "noConcernsSelected": "You can skip this if none apply",
@@ -7182,6 +7185,10 @@ i18n
                   "courtLogistics": {
                     "label": "Logística de la Corte",
                     "description": "Cuándo y dónde presentarse, qué esperar"
+                  },
+                  "diversionPrograms": {
+                    "label": "Programas de Derivación",
+                    "description": "Caminos alternativos que pueden ayudar a evitar una condena o reducir los cargos"
                   }
                 },
                 "noConcernsSelected": "Puede omitir esto si ninguna aplica",
@@ -12507,6 +12514,10 @@ i18n
                   "courtLogistics": {
                     "label": "法庭事务",
                     "description": "何时何地出庭、需要准备什么"
+                  },
+                  "diversionPrograms": {
+                    "label": "转处计划",
+                    "description": "可能有助于避免定罪或减少指控的替代途径"
                   }
                 },
                 "noConcernsSelected": "如果没有适用的选项可以跳过",

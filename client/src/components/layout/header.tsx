@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Briefcase, Users } from "lucide-react";
+import { HelpCircle, Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, Clock, Heart } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
 import { Button } from "@/components/ui/button";
@@ -52,56 +52,56 @@ export function Header() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  // Primary nav — the three core resources + immigration
   const desktopNavLinks = [
-    { href: "/case-guidance", label: t('header.nav.caseGuidance', 'Case Guidance') },
+    { href: "/first-24-hours", label: t('header.nav.first24Hours', 'First 24 Hours') },
+    { href: "/support",        label: t('header.nav.support',      'Life Support') },
+    { href: "/case-guidance",  label: t('header.nav.caseGuidance', 'Get Guidance') },
     { href: "/immigration-guidance", label: t('header.nav.immigration', 'Immigration') },
-    { href: "/resources", label: t('header.nav.resources', 'Resources') },
-    { href: "/support", label: t('header.nav.support', 'Support') },
   ];
 
+  // Secondary menu — Friends & Family featured first, attorney tools removed
   const menuItems = [
     {
-      title: t('header.menu.getHelp'),
-      href: "/chat",
-      icon: MessageSquare,
-      description: t('header.menu.getHelpDesc'),
-      testId: "menu-get-help"
-    },
-    {
-      title: t('header.menu.knowRights'),
-      href: "/rights-info",
-      icon: Shield,
-      description: t('header.menu.knowRightsDesc'),
-      testId: "menu-know-rights"
-    },
-    {
-      title: t('header.menu.documentLibrary'),
-      href: "/document-library",
-      icon: FileText,
-      description: t('header.menu.documentLibraryDesc'),
-      testId: "menu-document-library"
-    },
-    {
-      title: t('header.menu.findResources'),
-      href: "/court-locator",
-      icon: MapPin,
-      description: t('header.menu.findResourcesDesc'),
-      testId: "menu-find-resources"
-    },
-    {
-      title: t('header.menu.attorneyTools'),
-      href: "/attorney",
-      icon: Briefcase,
-      description: t('header.menu.attorneyToolsDesc'),
-      testId: "menu-attorney-tools"
-    },
-    {
-      title: t('header.menu.friendsFamily'),
+      title: t('header.menu.friendsFamily', 'For Families & Friends'),
       href: "/friends-family",
       icon: Users,
-      description: t('header.menu.friendsFamilyDesc'),
-      testId: "menu-friends-family"
-    }
+      description: t('header.menu.friendsFamilyDesc', 'Start here if someone you know was arrested. Find them, understand the process, and get practical help.'),
+      testId: "menu-friends-family",
+      featured: true,
+    },
+    {
+      title: t('header.menu.getHelp', 'AI Guidance Chat'),
+      href: "/chat",
+      icon: MessageSquare,
+      description: t('header.menu.getHelpDesc', 'Chat with our AI for personalized case support'),
+      testId: "menu-get-help",
+      featured: false,
+    },
+    {
+      title: t('header.menu.knowRights', 'Know Your Rights'),
+      href: "/rights-info",
+      icon: Shield,
+      description: t('header.menu.knowRightsDesc', 'Constitutional rights and legal protections explained in plain language'),
+      testId: "menu-know-rights",
+      featured: false,
+    },
+    {
+      title: t('header.menu.documentLibrary', 'Document Library'),
+      href: "/document-library",
+      icon: FileText,
+      description: t('header.menu.documentLibraryDesc', 'Understand the legal documents in your case'),
+      testId: "menu-document-library",
+      featured: false,
+    },
+    {
+      title: t('header.menu.findResources', 'Find Legal Help'),
+      href: "/resources",
+      icon: MapPin,
+      description: t('header.menu.findResourcesDesc', 'Locate public defenders, legal aid, and courts near you'),
+      testId: "menu-find-resources",
+      featured: false,
+    },
   ];
 
   return (
@@ -256,27 +256,37 @@ export function Header() {
                   </Button>
                 </div>
 
-                <div className="mt-6 flex flex-col space-y-3">
-                  {menuItems.map((item) => {
+                <div className="mt-6 flex flex-col space-y-2">
+                  {menuItems.map((item, idx) => {
                     const Icon = item.icon;
+                    const isFeatured = item.featured;
                     return (
-                      <Button
-                        key={item.href}
-                        variant="ghost"
-                        className="w-full justify-start h-auto py-4 px-4"
-                        data-testid={item.testId}
-                        onClick={() => handleNavigate(item.href, true)}
-                      >
-                        <div className="flex items-start space-x-3 w-full">
-                          <Icon className="h-5 w-5 mt-0.5 text-blue-600 flex-shrink-0" />
-                          <div className="text-left flex-1 min-w-0">
-                            <div className="font-semibold">{item.title}</div>
-                            <div className="text-sm text-muted-foreground font-normal whitespace-normal break-words">
-                              {item.description}
+                      <div key={item.href}>
+                        {isFeatured && (
+                          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-4 mb-1">
+                            {t('header.menu.familySection', 'For Families & Friends')}
+                          </p>
+                        )}
+                        {!isFeatured && idx === 1 && (
+                          <div className="border-t border-border/60 my-2" />
+                        )}
+                        <Button
+                          variant={isFeatured ? "outline" : "ghost"}
+                          className={`w-full justify-start h-auto py-4 px-4 ${isFeatured ? "border-teal-200 dark:border-teal-800/60 bg-teal-50/60 dark:bg-teal-900/10 hover:bg-teal-100/60 dark:hover:bg-teal-900/20" : ""}`}
+                          data-testid={item.testId}
+                          onClick={() => handleNavigate(item.href, true)}
+                        >
+                          <div className="flex items-start space-x-3 w-full">
+                            <Icon className={`h-5 w-5 mt-0.5 flex-shrink-0 ${isFeatured ? "text-teal-600 dark:text-teal-400" : "text-blue-600"}`} />
+                            <div className="text-left flex-1 min-w-0">
+                              <div className="font-semibold">{item.title}</div>
+                              <div className="text-sm text-muted-foreground font-normal whitespace-normal break-words">
+                                {item.description}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </Button>
+                        </Button>
+                      </div>
                     );
                   })}
                 </div>

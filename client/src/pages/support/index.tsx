@@ -18,6 +18,7 @@ import {
   HandHeart,
   Phone,
   Info,
+  GitBranch,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -34,22 +35,23 @@ interface CategoryDef {
 }
 
 const CATEGORIES: Record<string, CategoryDef> = {
-  employment:      { id: "employment",      icon: Briefcase,   iconText: "text-blue-500",    href: "/support/employment" },
-  finances:        { id: "finances",        icon: Wallet,       iconText: "text-emerald-500", href: "/support/finances" },
-  housing:         { id: "housing",         icon: Home,         iconText: "text-amber-500",   href: "/support/housing" },
-  transportation:  { id: "transportation",  icon: Car,          iconText: "text-cyan-500",    href: "/support/transportation" },
-  childcare:       { id: "childcare",       icon: Baby,         iconText: "text-pink-500",    href: "/support/childcare" },
-  courtLogistics:  { id: "courtLogistics",  icon: Gavel,        iconText: "text-purple-500",  href: "/support/court-logistics" },
-  reputation:      { id: "reputation",      icon: ShieldCheck,  iconText: "text-slate-500",   href: "/support/reputation" },
-  immigration:     { id: "immigration",     icon: Globe2,       iconText: "text-teal-500",    href: "/immigration-guidance" },
-  mentalHealth:    { id: "mentalHealth",    icon: HeartPulse,   iconText: "text-rose-500",    href: "/support/mental-health" },
-  personalHealth:  { id: "personalHealth",  icon: Activity,     iconText: "text-green-500",   href: "/support/personal-health" },
-  familyCare:      { id: "familyCare",      icon: Users,        iconText: "text-indigo-500",  href: "/support/family-care" },
+  employment:         { id: "employment",         icon: Briefcase,   iconText: "text-blue-500",    href: "/support/employment" },
+  finances:           { id: "finances",           icon: Wallet,       iconText: "text-emerald-500", href: "/support/finances" },
+  housing:            { id: "housing",            icon: Home,         iconText: "text-amber-500",   href: "/support/housing" },
+  transportation:     { id: "transportation",     icon: Car,          iconText: "text-cyan-500",    href: "/support/transportation" },
+  childcare:          { id: "childcare",          icon: Baby,         iconText: "text-pink-500",    href: "/support/childcare" },
+  courtLogistics:     { id: "courtLogistics",     icon: Gavel,        iconText: "text-purple-500",  href: "/support/court-logistics" },
+  reputation:         { id: "reputation",         icon: ShieldCheck,  iconText: "text-slate-500",   href: "/support/reputation" },
+  diversionPrograms:  { id: "diversionPrograms",  icon: GitBranch,    iconText: "text-violet-500",  href: "/diversion-programs" },
+  immigration:        { id: "immigration",        icon: Globe2,       iconText: "text-teal-500",    href: "/immigration-guidance" },
+  mentalHealth:       { id: "mentalHealth",       icon: HeartPulse,   iconText: "text-rose-500",    href: "/support/mental-health" },
+  personalHealth:     { id: "personalHealth",     icon: Activity,     iconText: "text-green-500",   href: "/support/personal-health" },
+  familyCare:         { id: "familyCare",         icon: Users,        iconText: "text-indigo-500",  href: "/support/family-care" },
 };
 
 const GROUPS = [
   { labelKey: "support.groups.dailyLife",  ids: ["employment", "finances", "housing", "transportation", "childcare"] },
-  { labelKey: "support.groups.legalCourt", ids: ["courtLogistics", "reputation", "immigration"] },
+  { labelKey: "support.groups.legalCourt", ids: ["courtLogistics", "reputation", "diversionPrograms", "immigration"] },
   { labelKey: "support.groups.health",     ids: ["mentalHealth", "personalHealth", "familyCare"] },
 ];
 

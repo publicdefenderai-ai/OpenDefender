@@ -33,7 +33,7 @@ const KnowYourRights = lazy(() => import("@/pages/immigration/know-your-rights")
 const RaidsToolkit = lazy(() => import("@/pages/immigration/raids-toolkit"));
 const LegalGlossary = lazy(() => import("@/pages/legal-glossary"));
 const DiversionPrograms = lazy(() => import("@/pages/diversion-programs"));
-const RecordExpungement = lazy(() => import("@/pages/record-expungement"));
+// RecordExpungement redirects to /support/reputation — import no longer needed
 const MissionStatement = lazy(() => import("@/pages/mission-statement"));
 const CourtRecords = lazy(() => import("@/pages/court-records"));
 const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
@@ -134,7 +134,7 @@ function Router() {
       <Route path="/immigration-guidance/raids-toolkit" component={RaidsToolkit} />
       <Route path="/legal-glossary" component={LegalGlossary} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
-      <Route path="/record-expungement" component={RecordExpungement} />
+      <Route path="/record-expungement"><Redirect to="/support/reputation" /></Route>
       <Route path="/mission-statement" component={MissionStatement} />
       <Route path="/court-records" component={CourtRecords} />
       <Route path="/recap-extensions" component={RecapExtensions} />
