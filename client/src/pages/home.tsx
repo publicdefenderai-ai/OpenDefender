@@ -402,14 +402,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Commitment Section */}
+      {/* Why Free Section */}
       <section className="py-20 md:py-28 bg-slate-900 dark:bg-slate-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-14 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="mb-14 md:mb-16 max-w-3xl">
+              <p className="text-xs font-semibold tracking-widest uppercase text-teal-400 mb-4">
+                Our Belief
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
                 {t('home.commitment.title')}
               </h2>
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed border-l-2 border-teal-500/60 pl-5">
+                {t('home.commitment.subtitle')}
+              </p>
             </div>
           </ScrollReveal>
 
