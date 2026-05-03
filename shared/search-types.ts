@@ -62,7 +62,9 @@ export const LEGAL_SYNONYMS: Record<string, string[]> = {
   'assault': ['battery', 'attack', 'physical harm', 'aggravated assault', 'simple assault'],
   'battery': ['assault', 'attack', 'physical contact'],
   // Property offenses AND property recovery (seized belongings, getting property back)
-  'property': ['seized property', 'personal property', 'return property', 'get property back', 'property retrieval', 'property recovery', 'evidence unit', 'property crime', 'confiscated'],
+  // Also links to Fourth Amendment protections — scored at synonym weight so they
+  // appear in results but don't outrank the primary property-retrieval page.
+  'property': ['seized property', 'personal property', 'return property', 'get property back', 'property retrieval', 'property recovery', 'evidence unit', 'property crime', 'confiscated', 'fourth amendment', 'search and seizure', 'police search'],
   'belongings': ['property', 'personal property', 'seized property', 'possessions', 'property retrieval', 'evidence unit', 'get belongings back'],
   'seized': ['seized property', 'property retrieval', 'evidence unit', 'confiscated', 'taken by police', 'police took', 'property return'],
   'confiscated': ['seized property', 'property retrieval', 'taken by police', 'evidence unit'],
