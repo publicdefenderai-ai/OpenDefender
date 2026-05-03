@@ -1,6 +1,6 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { Users, Phone, FileText, Clock, MapPin, AlertCircle, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
+import { Users, Phone, FileText, Clock, Heart, MessageSquare, AlertCircle, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -25,13 +25,64 @@ export default function FriendsFamily() {
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                <Users className="inline h-10 w-10 mr-2 mb-2" />
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                 {t('friendsFamily.hero.title')}
               </h1>
-              <p className="text-xl text-white/85 max-w-3xl mx-auto">
+              <p className="text-lg text-white/85 max-w-2xl mx-auto">
                 {t('friendsFamily.hero.subtitle')}
               </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Orientation — what this site can do for you */}
+      <section className="py-10 bg-background border-b border-border/60">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <p className="text-base font-semibold text-foreground mb-1">{t('friendsFamily.orientation.heading')}</p>
+            <p className="text-sm text-muted-foreground mb-6">{t('friendsFamily.orientation.subheading')}</p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {[
+                {
+                  href: "/first-24-hours",
+                  Icon: Clock,
+                  color: "text-slate-600 dark:text-slate-400",
+                  bg: "bg-slate-50 dark:bg-slate-900/40 border-slate-200 dark:border-slate-700",
+                  titleKey: "friendsFamily.orientation.first24h.title",
+                  descKey:  "friendsFamily.orientation.first24h.desc",
+                  ctaKey:   "friendsFamily.orientation.first24h.cta",
+                },
+                {
+                  href: "/support",
+                  Icon: Heart,
+                  color: "text-teal-600 dark:text-teal-400",
+                  bg: "bg-teal-50/60 dark:bg-teal-900/10 border-teal-200 dark:border-teal-800/60",
+                  titleKey: "friendsFamily.orientation.lifeSupport.title",
+                  descKey:  "friendsFamily.orientation.lifeSupport.desc",
+                  ctaKey:   "friendsFamily.orientation.lifeSupport.cta",
+                },
+                {
+                  href: "/case-guidance",
+                  Icon: MessageSquare,
+                  color: "text-blue-600 dark:text-blue-400",
+                  bg: "bg-blue-50/60 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800/60",
+                  titleKey: "friendsFamily.orientation.guidance.title",
+                  descKey:  "friendsFamily.orientation.guidance.desc",
+                  ctaKey:   "friendsFamily.orientation.guidance.cta",
+                },
+              ].map(({ href, Icon, color, bg, titleKey, descKey, ctaKey }) => (
+                <Link key={href} href={href}>
+                  <div className={`rounded-xl border p-4 h-full cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg}`}>
+                    <Icon className={`h-5 w-5 mb-3 ${color}`} strokeWidth={1.75} />
+                    <p className="font-semibold text-foreground text-sm mb-1">{t(titleKey)}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">{t(descKey)}</p>
+                    <p className={`text-xs font-semibold flex items-center gap-1 ${color}`}>
+                      {t(ctaKey)} <ArrowRight className="h-3 w-3" />
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </ScrollReveal>
         </div>
@@ -146,7 +197,7 @@ export default function FriendsFamily() {
                           {t('friendsFamily.step2.legalAidDesc')}
                         </p>
                         <Link
-                          href="/legal-aid"
+                          href="/resources"
                           className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                         >
                           Find legal aid organizations near you

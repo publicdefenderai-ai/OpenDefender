@@ -3755,6 +3755,25 @@ i18n
               "title": "Legal Disclaimer:",
               "text": "This information is for educational purposes only and does not constitute legal advice. Every situation is different. Consult with a qualified attorney for guidance specific to your loved one's case."
             },
+            "orientation": {
+              "heading": "What this site can do for you right now",
+              "subheading": "You're in the right place. These are the three most useful parts of this site for someone in your situation.",
+              "first24h": {
+                "title": "First 24 Hours Guide",
+                "desc": "A step-by-step walkthrough of what's happening right now — arrest, booking, bail, and how to communicate with your loved one.",
+                "cta": "Open the guide"
+              },
+              "lifeSupport": {
+                "title": "Life Support Resources",
+                "desc": "An arrest affects more than the legal case. Housing, benefits, employment, and family care — find practical help for each.",
+                "cta": "Browse resources"
+              },
+              "guidance": {
+                "title": "Get Personalized Guidance",
+                "desc": "Once you know the charges, this tool creates a personalized roadmap of what to expect and what your loved one needs to do next.",
+                "cta": "Get guidance"
+              }
+            },
             "privacyBanner": {
               "title": "Privacy First:",
               "text": "We do not store your personal data — all input deleted after session."
@@ -9085,6 +9104,25 @@ i18n
               "title": "Descargo de Responsabilidad Legal:",
               "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Cada situación es diferente. Consulte con un abogado calificado para orientación específica al caso de su ser querido."
             },
+            "orientation": {
+              "heading": "Qué puede hacer este sitio por usted ahora mismo",
+              "subheading": "Está en el lugar correcto. Estas son las tres partes más útiles de este sitio para alguien en su situación.",
+              "first24h": {
+                "title": "Guía de las Primeras 24 Horas",
+                "desc": "Un recorrido paso a paso de lo que está pasando ahora — el arresto, el fichaje, la audiencia de fianza y cómo comunicarse con su ser querido.",
+                "cta": "Abrir la guía"
+              },
+              "lifeSupport": {
+                "title": "Recursos de Apoyo para la Vida",
+                "desc": "Un arresto afecta más que el caso legal. Vivienda, beneficios, empleo y cuidado familiar — encuentre ayuda práctica para cada área.",
+                "cta": "Ver recursos"
+              },
+              "guidance": {
+                "title": "Obtener Orientación Personalizada",
+                "desc": "Una vez que sepa los cargos, esta herramienta crea un mapa personalizado de qué esperar y qué necesita hacer su ser querido.",
+                "cta": "Obtener orientación"
+              }
+            },
             "privacyBanner": {
               "title": "Privacidad Primero:",
               "text": "No almacenamos sus datos personales — toda la información se elimina después de la sesión."
@@ -14412,6 +14450,25 @@ i18n
             "disclaimer": {
               "title": "法律免责声明：",
               "text": "此信息仅供教育目的，不构成法律建议。每种情况都不同。请咨询合格律师，获取针对您亲人案件的具体指导。"
+            },
+            "orientation": {
+              "heading": "本网站现在能为您做什么",
+              "subheading": "您来对地方了。以下是本网站针对您情况最有用的三个部分。",
+              "first24h": {
+                "title": "前24小时指南",
+                "desc": "逐步了解目前正在发生的事情——逮捕、登记入册、保释听证会，以及如何与您的亲人沟通。",
+                "cta": "打开指南"
+              },
+              "lifeSupport": {
+                "title": "生活支持资源",
+                "desc": "逮捕的影响不只限于法律案件。住房、福利、就业和家庭照料——为每个方面找到实用帮助。",
+                "cta": "浏览资源"
+              },
+              "guidance": {
+                "title": "获取个性化指导",
+                "desc": "一旦知道了指控，这个工具将创建个性化路线图，帮助您了解接下来会发生什么以及您的亲人需要做什么。",
+                "cta": "获取指导"
+              }
             },
             "privacyBanner": {
               "title": "隐私优先：",
