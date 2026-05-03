@@ -263,6 +263,7 @@ export default function Home() {
     t('home.hero.rotatingWord2'),
     t('home.hero.rotatingWord3'),
     t('home.hero.rotatingWord4'),
+    t('home.hero.rotatingWord5'),
   ];
   const [wordIndex, setWordIndex] = useState(0);
   useEffect(() => {
@@ -414,7 +415,7 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {[1, 2, 3, 4, 5].map((i) => (
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="flex gap-4 group">
                   <div className="flex-shrink-0 w-9 h-9 rounded-full bg-teal-400/20 border border-teal-400/40 flex items-center justify-center mt-0.5 group-hover:bg-teal-400/30 transition-colors">

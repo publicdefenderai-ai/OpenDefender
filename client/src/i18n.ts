@@ -56,7 +56,8 @@ i18n
               "rotatingWord1": "Clear",
               "rotatingWord2": "Free",
               "rotatingWord3": "Tailored",
-              "rotatingWord4": "Practical"
+              "rotatingWord4": "Practical",
+              "rotatingWord5": "Timely"
             },
             "features": {
               "title": "Powered by Real Legal Data",
@@ -95,7 +96,9 @@ i18n
               "pledge4Title": "Verified, Not Guessed",
               "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed, but you should always confirm with an attorney.",
               "pledge5Title": "Available in Your Language",
-              "pledge5Desc": "English, Spanish, and Chinese. Because understanding your rights should never require a translator."
+              "pledge5Desc": "English, Spanish, and Chinese. Because understanding your rights should never require a translator.",
+              "pledge6Title": "Early Knowledge, Better Outcomes",
+              "pledge6Desc": "Research consistently shows that early access to legal information leads to better case outcomes. Bail conditions, initial charges, and police questioning all happen before most people see a lawyer. We exist to close that window."
             },
             "urgentHelp": {
               "modalTitle": "Urgent Legal Situation",
@@ -5405,7 +5408,8 @@ i18n
               "rotatingWord1": "Claro",
               "rotatingWord2": "Gratuito",
               "rotatingWord3": "Personalizado",
-              "rotatingWord4": "Práctico"
+              "rotatingWord4": "Práctico",
+              "rotatingWord5": "Oportuno"
             },
             "features": {
               "title": "Respaldado por Datos Legales Reales",
@@ -5444,7 +5448,9 @@ i18n
               "pledge4Title": "Verificado, No Adivinado",
               "pledge4Desc": "Nuestra orientación de IA se valida con bases de datos reales de estatutos y jurisprudencia. Nuestro contenido educativo es cuidadosamente investigado y revisado, pero siempre debe confirmar con un abogado.",
               "pledge5Title": "Disponible en Su Idioma",
-              "pledge5Desc": "Inglés, español y chino. Porque entender sus derechos nunca debería requerir un traductor."
+              "pledge5Desc": "Inglés, español y chino. Porque entender sus derechos nunca debería requerir un traductor.",
+              "pledge6Title": "Conocimiento Temprano, Mejores Resultados",
+              "pledge6Desc": "La investigación muestra consistentemente que el acceso temprano a información legal conduce a mejores resultados. Las condiciones de fianza, los cargos iniciales y el interrogatorio policial ocurren antes de que la mayoría de las personas consulten a un abogado. Existimos para cerrar esa brecha."
             },
             "urgentHelp": {
               "modalTitle": "Situación Legal Urgente",
@@ -10753,7 +10759,8 @@ i18n
               "rotatingWord1": "清晰",
               "rotatingWord2": "免费",
               "rotatingWord3": "专属",
-              "rotatingWord4": "实用"
+              "rotatingWord4": "实用",
+              "rotatingWord5": "及时"
             },
             "features": {
               "title": "基于真实法律数据",
@@ -10792,7 +10799,9 @@ i18n
               "pledge4Title": "经过验证，而非猜测",
               "pledge4Desc": "我们的AI指导经过真实法规数据库和判例法的验证。我们的教育内容经过仔细研究和审查，但您应始终向律师确认。",
               "pledge5Title": "提供您所用的语言",
-              "pledge5Desc": "英语、西班牙语和中文。因为了解您的权利不应需要翻译。"
+              "pledge5Desc": "英语、西班牙语和中文。因为了解您的权利不应需要翻译。",
+              "pledge6Title": "早了解，结果更好",
+              "pledge6Desc": "研究一致表明，早期获得法律信息会带来更好的案件结果。保释条件、初始指控和警察问询都发生在大多数人见到律师之前。我们的存在就是为了填补这一空白。"
             },
             "urgentHelp": {
               "modalTitle": "紧急法律情况",
