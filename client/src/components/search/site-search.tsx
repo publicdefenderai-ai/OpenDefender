@@ -38,11 +38,14 @@ const TYPE_COLORS: Record<SearchContentType, string> = {
   charge: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
 };
 
-// Display order: support resources first, charges last
-const TOPIC_ORDER: SearchContentType[] = [
+// Stable fallback type order — actual display order is score-driven (see sections build below)
+const ALL_TYPES: SearchContentType[] = [
   'rights_info', 'legal_resource', 'expungement', 'diversion_program',
   'glossary', 'court', 'mock_qa', 'charge',
 ];
+
+// These types always appear last regardless of score
+const PINNED_LAST = new Set<SearchContentType>(['charge', 'mock_qa']);
 
 const SECTION_LABELS: Record<SearchContentType, { en: string; es: string; zh: string }> = {
   rights_info:       { en: 'Know Your Rights', es: 'Conozca Sus Derechos', zh: '了解您的权利' },
@@ -105,14 +108,16 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     return language === 'es' ? labels.es : language === 'zh' ? labels.zh : labels.en;
   };
 
-  // Build ordered, non-empty sections from groupedResults
+  // Build sections ordered by each group's top result score — most relevant section first.
+  // Charges and court-prep are always pinned last so the app never feels like a charge lookup tool.
   const sections: Array<{ type: SearchContentType; results: SearchResult[] }> = [];
   if (data?.groupedResults) {
-    for (const type of TOPIC_ORDER) {
-      const group = data.groupedResults[type];
-      if (group && group.length > 0) {
-        sections.push({ type, results: group });
-      }
+    const mainTypes = ALL_TYPES
+      .filter(t => !PINNED_LAST.has(t) && (data.groupedResults[t]?.length ?? 0) > 0)
+      .sort((a, b) => (data.groupedResults[b][0]?.score ?? 0) - (data.groupedResults[a][0]?.score ?? 0));
+    const pinnedTypes = ALL_TYPES.filter(t => PINNED_LAST.has(t) && (data.groupedResults[t]?.length ?? 0) > 0);
+    for (const type of [...mainTypes, ...pinnedTypes]) {
+      sections.push({ type, results: data.groupedResults[type] });
     }
   }
 

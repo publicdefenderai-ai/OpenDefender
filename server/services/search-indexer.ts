@@ -21,46 +21,122 @@ function normalizeText(text: string): string {
 // Common words that add noise if scored individually
 const STOP_WORDS = new Set(['the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'can', 'her', 'was', 'one', 'our', 'out', 'day', 'get', 'has', 'him', 'his', 'how', 'its', 'may', 'new', 'now', 'own', 'say', 'she', 'two', 'who', 'did', 'use', 'way', 'had', 'let', 'put', 'set', 'too', 'any', 'few', 'far', 'off', 'old', 'why', 'ask', 'men', 'ran', 'run', 'see', 'try', 'yes', 'yet', 'ago', 'did', 'due', 'via', 'per', 'etc']);
 
-function expandSynonyms(query: string): string[] {
+// Returned by expandSynonyms — keeps direct query terms separate from
+// synonym-inferred terms so they can be scored at different weights.
+interface ExpandedQuery {
+  directTerms: string[];   // the user's actual words (full phrase + individual words)
+  synonymTerms: string[];  // additional terms inferred from LEGAL_SYNONYMS
+}
+
+function expandSynonyms(query: string): ExpandedQuery {
   const normalized = normalizeText(query);
   const words = normalized.split(' ');
-  const expanded: string[] = [normalized];
-  const seen = new Set<string>([normalized]);
 
-  // For multi-word queries, also score meaningful individual words so that
-  // e.g. "phone search" finds both "phone" and "search" documents separately
+  const directSet = new Set<string>([normalized]);
+
+  // For multi-word queries, individual meaningful words are direct matches
   for (const word of words) {
-    if (word.length >= 4 && !STOP_WORDS.has(word) && !seen.has(word)) {
-      expanded.push(word);
-      seen.add(word);
+    if (word.length >= 4 && !STOP_WORDS.has(word)) {
+      directSet.add(word);
     }
   }
 
-  // Expand synonyms for each word and for the full phrase
+  const synonymSet = new Set<string>();
+
   for (const term of [...words, normalized]) {
     const synonyms = LEGAL_SYNONYMS[term];
     if (synonyms) {
       for (const syn of synonyms) {
-        const replacement = normalized.replace(term, syn);
-        if (!seen.has(replacement)) {
-          expanded.push(replacement);
-          seen.add(replacement);
-        }
-        if (!seen.has(syn)) {
-          expanded.push(syn);
-          seen.add(syn);
+        if (!directSet.has(syn)) synonymSet.add(syn);
+        // For multi-word queries, also add the phrase with the term substituted
+        if (words.length > 1) {
+          const replacement = normalized.replace(term, syn);
+          if (!directSet.has(replacement) && replacement !== normalized) {
+            synonymSet.add(replacement);
+          }
         }
       }
     }
   }
 
-  return expanded;
+  return {
+    directTerms: [...directSet],
+    synonymTerms: [...synonymSet].filter(s => !directSet.has(s)),
+  };
 }
 
-function calculateScore(doc: SearchDocument, queryTerms: string[], language: 'en' | 'es' | 'zh'): { score: number; matchedTerms: string[] } {
+// Escape special regex characters so expanded terms are safe to use in RegExp
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Score one set of terms against a document's fields.
+// isDirect=true → user's actual words (full weight)
+// isDirect=false → synonym-expanded words (reduced weight to prevent false positives)
+function scoreFields(
+  terms: string[],
+  normalizedTitle: string,
+  normalizedContent: string,
+  normalizedAliases: string[],
+  normalizedTags: string[],
+  isDirect: boolean
+): { score: number; matchedTerms: string[] } {
   let score = 0;
   const matchedTerms: string[] = [];
-  const title = language === 'zh' && doc.titleZh ? doc.titleZh : 
+
+  for (const term of terms) {
+    const nt = normalizeText(term);
+
+    // ── Title ──────────────────────────────────────────────────────
+    if (normalizedTitle === nt) {
+      score += isDirect ? 120 : 55;
+      matchedTerms.push(term);
+    } else if (normalizedTitle.includes(nt)) {
+      score += isDirect ? 60 : 28;
+      matchedTerms.push(term);
+    }
+
+    // ── Aliases (equivalent names / phrases for this document) ─────
+    if (normalizedAliases.some(a => a === nt)) {
+      score += isDirect ? 90 : 38;
+      matchedTerms.push(term);
+    } else if (normalizedAliases.some(a => a.includes(nt))) {
+      score += isDirect ? 45 : 18;
+      matchedTerms.push(term);
+    }
+
+    // ── Tags (primary topic signals — weighted heavily) ─────────────
+    if (normalizedTags.some(t => t === nt)) {
+      // Exact tag match
+      score += isDirect ? 70 : 28;
+      matchedTerms.push(term);
+    } else if (nt.length >= 4 && normalizedTags.some(t => t.split(' ').includes(nt))) {
+      // Word-boundary partial tag match (e.g. "property" inside "property retrieval")
+      // Min length 4 avoids false positives on short noise words
+      score += isDirect ? 35 : 14;
+      matchedTerms.push(term);
+    }
+
+    // ── Content body (capped low — incidental mentions shouldn't dominate) ──
+    if (normalizedContent.includes(nt)) {
+      const occurrences = (normalizedContent.match(new RegExp(escapeRegex(nt), 'g')) || []).length;
+      score += isDirect
+        ? Math.min(occurrences * 4, 18)
+        : Math.min(occurrences * 2, 8);
+      matchedTerms.push(term);
+    }
+  }
+
+  return { score, matchedTerms };
+}
+
+function calculateScore(
+  doc: SearchDocument,
+  directTerms: string[],
+  synonymTerms: string[],
+  language: 'en' | 'es' | 'zh'
+): { score: number; matchedTerms: string[] } {
+  const title = language === 'zh' && doc.titleZh ? doc.titleZh :
                 language === 'es' && doc.titleEs ? doc.titleEs : doc.title;
   const content = language === 'zh' && doc.contentZh ? doc.contentZh :
                   language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
@@ -69,36 +145,8 @@ function calculateScore(doc: SearchDocument, queryTerms: string[], language: 'en
   const normalizedAliases = doc.aliases.map(a => normalizeText(a));
   const normalizedTags = doc.tags.map(t => normalizeText(t));
 
-  for (const term of queryTerms) {
-    const normalizedTerm = normalizeText(term);
-    
-    if (normalizedTitle === normalizedTerm) {
-      score += 100;
-      matchedTerms.push(term);
-    } else if (normalizedTitle.includes(normalizedTerm)) {
-      score += 50;
-      matchedTerms.push(term);
-    }
-    
-    if (normalizedAliases.some(a => a === normalizedTerm)) {
-      score += 80;
-      matchedTerms.push(term);
-    } else if (normalizedAliases.some(a => a.includes(normalizedTerm))) {
-      score += 40;
-      matchedTerms.push(term);
-    }
-    
-    if (normalizedTags.some(t => t === normalizedTerm)) {
-      score += 30;
-      matchedTerms.push(term);
-    }
-    
-    if (normalizedContent.includes(normalizedTerm)) {
-      const occurrences = (normalizedContent.match(new RegExp(normalizedTerm, 'g')) || []).length;
-      score += Math.min(occurrences * 5, 25);
-      matchedTerms.push(term);
-    }
-  }
+  const direct = scoreFields(directTerms, normalizedTitle, normalizedContent, normalizedAliases, normalizedTags, true);
+  const syn = scoreFields(synonymTerms, normalizedTitle, normalizedContent, normalizedAliases, normalizedTags, false);
 
   const typeBoosts: Record<SearchContentType, number> = {
     legal_resource: 1.3,
@@ -110,9 +158,12 @@ function calculateScore(doc: SearchDocument, queryTerms: string[], language: 'en
     mock_qa: 0.9,
     charge: 0.6,
   };
-  score *= typeBoosts[doc.type] || 1;
 
-  return { score, matchedTerms: Array.from(new Set(matchedTerms)) };
+  const rawScore = direct.score + syn.score;
+  const score = rawScore * (typeBoosts[doc.type] || 1);
+  const matchedTerms = Array.from(new Set([...direct.matchedTerms, ...syn.matchedTerms]));
+
+  return { score, matchedTerms };
 }
 
 function generateHighlight(text: string, terms: string[], maxLength: number = 150): string {
@@ -1016,7 +1067,7 @@ export function search(query: SearchQuery): SearchResponse {
     buildSearchIndex();
   }
 
-  const queryTerms = expandSynonyms(query.query);
+  const expandedQuery = expandSynonyms(query.query);
   const results: SearchResult[] = [];
 
   for (const doc of searchIndex) {
@@ -1027,7 +1078,7 @@ export function search(query: SearchQuery): SearchResponse {
       continue;
     }
 
-    const { score, matchedTerms } = calculateScore(doc, queryTerms, query.language);
+    const { score, matchedTerms } = calculateScore(doc, expandedQuery.directTerms, expandedQuery.synonymTerms, query.language);
     
     const MIN_SCORE_THRESHOLD = 15;
     if (score >= MIN_SCORE_THRESHOLD) {
@@ -1046,13 +1097,16 @@ export function search(query: SearchQuery): SearchResponse {
 
   results.sort((a, b) => b.score - a.score);
 
-  // Topic order: support resources first, charges last
-  const TOPIC_ORDER: SearchContentType[] = [
+  // All known types in a stable fallback order (charges/mock_qa always last)
+  const ALL_TYPES: SearchContentType[] = [
     'rights_info', 'legal_resource', 'expungement', 'diversion_program',
     'glossary', 'court', 'mock_qa', 'charge',
   ];
 
-  // Per-type result caps — charges get more slots but appear last
+  // Types that should always appear last regardless of their score
+  const PINNED_LAST = new Set<SearchContentType>(['charge', 'mock_qa']);
+
+  // Per-type result caps
   const GROUP_LIMITS: Record<SearchContentType, number> = {
     rights_info: 5,
     legal_resource: 5,
@@ -1064,7 +1118,7 @@ export function search(query: SearchQuery): SearchResponse {
     charge: 6,
   };
 
-  // Group from ALL scored results (not just paginated) so each category gets its best matches
+  // Group from ALL scored results so each category gets its best matches
   const groupedResults: Record<SearchContentType, SearchResult[]> = {
     glossary: [], charge: [], diversion_program: [], expungement: [],
     legal_resource: [], court: [], mock_qa: [], rights_info: [],
@@ -1078,11 +1132,17 @@ export function search(query: SearchQuery): SearchResponse {
     }
   }
 
-  // Flat results in topic order (charges last) — used for totalCount display
-  const flatResults: SearchResult[] = [];
-  for (const type of TOPIC_ORDER) {
-    flatResults.push(...groupedResults[type]);
-  }
+  // Sort non-pinned sections by their top result score so the most relevant
+  // section always appears first, regardless of content type.
+  const mainTypes = ALL_TYPES
+    .filter(t => !PINNED_LAST.has(t) && groupedResults[t].length > 0)
+    .sort((a, b) => (groupedResults[b][0]?.score ?? 0) - (groupedResults[a][0]?.score ?? 0));
+  const pinnedTypes = ALL_TYPES.filter(t => PINNED_LAST.has(t) && groupedResults[t].length > 0);
+
+  const flatResults: SearchResult[] = [
+    ...mainTypes.flatMap(t => groupedResults[t]),
+    ...pinnedTypes.flatMap(t => groupedResults[t]),
+  ];
 
   const suggestions: string[] = [];
   if (results.length === 0) {

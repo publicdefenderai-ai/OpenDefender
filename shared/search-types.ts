@@ -78,7 +78,7 @@ export const LEGAL_SYNONYMS: Record<string, string[]> = {
   'substance': ['drug', 'controlled substance', 'substance abuse', 'addiction'],
   'addiction': ['substance abuse', 'drug treatment', 'alcohol treatment', 'rehabilitation'],
   // Record clearing
-  'expungement': ['expunction', 'record clearing', 'record sealing', 'dismissal', 'expunge'],
+  'expungement': ['expunction', 'record clearing', 'record sealing', 'expunge', 'clear record', 'seal record'],
   'expunge': ['expungement', 'expunction', 'record clearing', 'clear record', 'seal record'],
   'seal': ['record sealing', 'expungement', 'sealing records', 'clear record'],
   'record': ['criminal record', 'background check', 'rap sheet', 'expungement', 'record clearing'],
