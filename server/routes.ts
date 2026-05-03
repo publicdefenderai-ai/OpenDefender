@@ -2446,6 +2446,87 @@ export async function registerRoutes(app: Express): Promise<Server> {
   );
 
   // ============================================================================
+  // DOCUMENT Q&A — Conversational follow-up on summarized documents
+  // ============================================================================
+
+  /**
+   * Document Q&A endpoint.
+   * The client holds the PII-redacted extracted text in session state and sends
+   * it back with each question. Nothing is stored server-side.
+   *
+   * Abuse protections:
+   * - requireServiceBudget: daily dollar cap (same pool as summarizer)
+   * - aiRateLimiter: 10 req / 15 min per IP (shared with other AI endpoints)
+   * - aiDailyLimiter: 20 AI requests / day per IP (shared budget)
+   * - docChatRateLimiter: 30 chat messages / 15 min per IP (chat-specific)
+   * - Hard limits on question length (600 chars) and history turns (8 pairs)
+   * - extractedText server-side cap at 80k chars regardless of what client sends
+   * - Input sanitized via z.string().max() + server-side trim
+   */
+  const docChatRateLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 30,
+    message: {
+      success: false,
+      error: 'Too many document questions from this IP. Please wait 15 minutes before asking more.',
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
+    validate: { trustProxy: false, xForwardedForHeader: false },
+  });
+
+  app.post(
+    '/api/document-summary/chat',
+    requireServiceBudget('document-summarizer'),
+    aiRateLimiter,
+    aiDailyLimiter,
+    docChatRateLimiter,
+    async (req: Request, res: Response) => {
+      try {
+        const bodySchema = z.object({
+          question: z.string().min(1).max(600),
+          extractedText: z.string().min(50).max(85_000),
+          conversationHistory: z.array(
+            z.object({
+              role: z.enum(['user', 'assistant']),
+              content: z.string().max(4000),
+            })
+          ).max(16),
+          documentType: z.string().max(50).default('general'),
+          language: z.enum(['en', 'es']).default('en'),
+        });
+
+        const parseResult = bodySchema.safeParse(req.body);
+        if (!parseResult.success) {
+          return res.status(400).json({
+            success: false,
+            error: 'Invalid request: ' + parseResult.error.issues.map(i => i.message).join(', '),
+          });
+        }
+
+        const { question, extractedText, conversationHistory, documentType, language } = parseResult.data;
+
+        const { answerDocumentQuestion } = await import('./services/document-summarizer');
+
+        const result = await answerDocumentQuestion({
+          extractedText,
+          question,
+          conversationHistory,
+          documentType,
+          language,
+        });
+
+        res.json({ success: true, ...result });
+      } catch (error) {
+        errLog('[DocumentQA] Error:', error);
+        const message = error instanceof Error ? error.message : 'Failed to answer question';
+        res.status(500).json({ success: false, error: message });
+      }
+    }
+  );
+
+  // ============================================================================
   // GUIDANCE FLAGS — Anonymous quality feedback (zero PII stored)
   // ============================================================================
 

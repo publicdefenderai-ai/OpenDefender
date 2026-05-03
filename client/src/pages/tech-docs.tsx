@@ -22,6 +22,7 @@ import {
   Lock,
   AlertTriangle,
   Users,
+  Layers,
 } from "lucide-react";
 
 const contentPages = [
@@ -397,6 +398,49 @@ export default function TechDocs() {
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">
                 <p>Allows users to paste or upload a legal document (charging document, court order, plea agreement) and receive a plain-language summary written at a 6th grade reading level. Available at <code className="bg-muted px-1 rounded text-xs">/document-summarizer</code>. Subject to the same privacy architecture as Case Guidance — no document content is retained after the session.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-3">
+                  <Layers className="h-5 w-5 text-orange-600 dark:text-orange-400" />
+                  <CardTitle className="text-base">Alternative AI Providers (OpenRouter)</CardTitle>
+                  <Badge variant="secondary" className="text-xs">For forks only</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm text-muted-foreground">
+                <p>
+                  OpenDefender uses Anthropic's Claude API directly. <strong className="text-foreground">We do not use OpenRouter</strong>, and we do not plan to in the near term. The reason is straightforward: OpenRouter is a third-party proxy that routes your requests to AI providers through their infrastructure. That means user-submitted case data — charges, circumstances, jurisdiction — passes through an intermediary before reaching the model. For a platform built for people in legal distress, that intermediary layer is an unacceptable privacy risk.
+                </p>
+                <p>
+                  If you are forking this project and want to use OpenRouter to access multiple model providers, here is how:
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                    <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">1.</code>
+                    <span>Set <code className="bg-background px-1 rounded text-xs">OPENROUTER_API_KEY</code> as an environment variable instead of (or alongside) <code className="bg-background px-1 rounded text-xs">ANTHROPIC_API_KEY</code>.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                    <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">2.</code>
+                    <span>OpenRouter's API is compatible with the OpenAI SDK format. Replace the Anthropic SDK client in <code className="bg-background px-1 rounded text-xs">server/services/</code> with an OpenAI-compatible client pointed at <code className="bg-background px-1 rounded text-xs">https://openrouter.ai/api/v1</code> using your OpenRouter key as the bearer token.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                    <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">3.</code>
+                    <span>Update <code className="bg-background px-1 rounded text-xs">server/config/ai-model.ts</code> to export the model string for your chosen provider (e.g., <code className="bg-background px-1 rounded text-xs">anthropic/claude-sonnet-4-6</code>, <code className="bg-background px-1 rounded text-xs">openai/gpt-4o</code>, or <code className="bg-background px-1 rounded text-xs">google/gemini-2.5-pro</code>).</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                    <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">4.</code>
+                    <span>Note that prompt caching (used in the document summarizer and case guidance system prompt) is provider-specific. Cache control headers will be silently ignored by providers that do not support them — this is safe, but you will pay full input token prices and latency will increase on repeated calls.</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                    <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">5.</code>
+                    <span>Update your privacy disclosure to accurately reflect which providers your deployment uses and their data retention policies. Do not carry forward Anthropic's 30-day retention language if you are routing through a different provider.</span>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground border-t pt-3 mt-2">
+                  We may revisit OpenRouter in the future if acceptable data processing agreements become available for sensitive legal use cases. Until then, direct provider access is the only architecture we will use in production.
+                </p>
               </CardContent>
             </Card>
 

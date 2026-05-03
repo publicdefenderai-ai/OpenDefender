@@ -84,18 +84,18 @@ i18n
               "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
             "commitment": {
-              "title": "Why OpenDefender Is Free",
-              "subtitle": "Legal help in America has always been gatekept — by cost, by class, by who you know. The people who need it most are often the least able to afford it. We exist because we believe that's wrong.",
-              "pledge1Title": "Free Forever. Not Freemium.",
-              "pledge1Desc": "No subscription, no upgrade prompts, no premium tier. Every feature on this site is available to everyone, regardless of income. Legal information should cost nothing — because not knowing your rights costs everything.",
-              "pledge2Title": "Private by Design",
-              "pledge2Desc": "We don't store your case information. Sessions expire automatically. No account required. You can get help without leaving a record — because people who need legal help often have the most reason to protect their privacy.",
-              "pledge3Title": "Plain Language. Always.",
-              "pledge3Desc": "Every explanation is written so anyone can follow it — not because we underestimate you, but because comprehension is the whole point. Legal jargon protects the legal profession. We're not protecting the legal profession.",
-              "pledge4Title": "Grounded in Real Law",
-              "pledge4Desc": "Our AI guidance is validated against actual statute databases and case law. We show our sources because you deserve to verify what we tell you. Always confirm with an attorney for your specific situation.",
-              "pledge5Title": "Three Languages. No Exceptions.",
-              "pledge5Desc": "Nearly 25 million Americans aren't fluent in English. The legal system rarely accommodates them. We do — in English, Spanish, and Chinese — because your right to understand your situation shouldn't depend on what language you grew up speaking."
+              "title": "Our Commitment",
+              "subtitle": "",
+              "pledge1Title": "Free Access",
+              "pledge1Desc": "Access to legal information should not depend on your income. OpenDefender is Free.",
+              "pledge2Title": "Your Privacy, Protected",
+              "pledge2Desc": "Your session data is encrypted and auto-deleted when you leave. We never store, sell, or share your information.",
+              "pledge3Title": "Plain Language, Not Legal Jargon",
+              "pledge3Desc": "Every explanation is written to be understood, not to impress. Accurate legal information in words that make sense.",
+              "pledge4Title": "Verified, Not Guessed",
+              "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed, but you should always confirm with an attorney.",
+              "pledge5Title": "Available in Your Language",
+              "pledge5Desc": "English, Spanish, and Chinese. Because understanding your rights should never require a translator."
             },
             "urgentHelp": {
               "modalTitle": "Urgent Legal Situation",
@@ -5433,18 +5433,18 @@ i18n
               "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
             },
             "commitment": {
-              "title": "Por Qué OpenDefender Es Gratuito",
-              "subtitle": "El acceso a la ayuda legal en América siempre ha sido un privilegio — determinado por el dinero, la clase social y las conexiones. Quienes más lo necesitan son a menudo los que menos pueden pagarlo. Existimos porque creemos que eso está mal.",
-              "pledge1Title": "Gratuito Para Siempre. Sin Versiones Premium.",
-              "pledge1Desc": "Sin suscripción, sin presiones para actualizar, sin niveles de pago. Todas las funciones del sitio están disponibles para todos, sin importar sus ingresos. La información legal no debería costar nada — porque desconocer sus derechos lo cuesta todo.",
-              "pledge2Title": "Privado por Diseño",
-              "pledge2Desc": "No almacenamos la información de su caso. Las sesiones expiran automáticamente. No se requiere cuenta. Puede obtener ayuda sin dejar rastro — porque quienes necesitan ayuda legal a menudo tienen más razones para proteger su privacidad.",
-              "pledge3Title": "Lenguaje Claro. Siempre.",
-              "pledge3Desc": "Cada explicación está escrita para que cualquier persona pueda entenderla — no porque subestimemos su inteligencia, sino porque la comprensión es el objetivo. La jerga legal protege a la profesión legal. Nosotros no protegemos a la profesión legal.",
-              "pledge4Title": "Basado en Leyes Reales",
-              "pledge4Desc": "Nuestra orientación de IA se valida con bases de datos reales de leyes y jurisprudencia. Mostramos nuestras fuentes porque usted merece verificar lo que le decimos. Siempre confirme con un abogado para su situación específica.",
-              "pledge5Title": "Tres Idiomas. Sin Excepciones.",
-              "pledge5Desc": "Casi 25 millones de estadounidenses no dominan el inglés. El sistema legal rara vez los considera. Nosotros sí — en inglés, español y chino — porque su derecho a entender su situación no debería depender del idioma con que creció."
+              "title": "Nuestro Compromiso",
+              "subtitle": "",
+              "pledge1Title": "Acceso Gratuito",
+              "pledge1Desc": "El acceso a la información legal no debería depender de sus ingresos. OpenDefender es gratuito.",
+              "pledge2Title": "Su Privacidad, Protegida",
+              "pledge2Desc": "Los datos de su sesión están cifrados y se eliminan automáticamente cuando se va. Nunca almacenamos, vendemos ni compartimos su información.",
+              "pledge3Title": "Lenguaje Claro, No Jerga Legal",
+              "pledge3Desc": "Cada explicación está escrita para ser comprendida, no para impresionar. Información legal precisa en palabras que tienen sentido.",
+              "pledge4Title": "Verificado, No Adivinado",
+              "pledge4Desc": "Nuestra orientación de IA se valida con bases de datos reales de estatutos y jurisprudencia. Nuestro contenido educativo es cuidadosamente investigado y revisado, pero siempre debe confirmar con un abogado.",
+              "pledge5Title": "Disponible en Su Idioma",
+              "pledge5Desc": "Inglés, español y chino. Porque entender sus derechos nunca debería requerir un traductor."
             },
             "urgentHelp": {
               "modalTitle": "Situación Legal Urgente",
@@ -10781,18 +10781,18 @@ i18n
               "disclaimerText": "本AI仅提供一般性法律信息，不能替代专业法律建议。请务必就你的具体情况咨询合格的律师。所提供的信息可能未反映最新的法律动态，不应作为法律意见依赖。"
             },
             "commitment": {
-              "title": "为什么OpenDefender是免费的",
-              "subtitle": "在美国，法律援助历来是一种特权——由金钱、阶层和人脉决定。最需要帮助的人，往往最无力承担费用。我们的存在，是因为我们相信这是错误的。",
-              "pledge1Title": "永久免费。不是免费增值。",
-              "pledge1Desc": "没有订阅，没有升级提示，没有付费层级。本网站的所有功能对所有人开放，无论收入如何。法律信息不应收费——因为不了解自己的权利，代价可能是一切。",
-              "pledge2Title": "隐私优先的设计",
-              "pledge2Desc": "我们不存储您的案件信息。会话自动过期。无需注册账户。您可以在不留下记录的情况下获得帮助——因为需要法律帮助的人，往往最有理由保护自己的隐私。",
-              "pledge3Title": "通俗语言。始终如此。",
-              "pledge3Desc": "每一项解释都以任何人都能理解的方式写成——不是因为我们低估您，而是因为理解才是目的所在。法律术语是为了保护法律行业而存在的。我们不保护法律行业。",
-              "pledge4Title": "基于真实法律",
-              "pledge4Desc": "我们的AI指导经过真实法规数据库和判例法的验证。我们展示信息来源，因为您有权核实我们告诉您的内容。请务必就您的具体情况向律师确认。",
-              "pledge5Title": "三种语言。没有例外。",
-              "pledge5Desc": "美国有近2500万人英语不流利。法律系统很少为他们提供便利。我们提供——英语、西班牙语和中文——因为您了解自己处境的权利，不应取决于您成长时所说的语言。"
+              "title": "我们的承诺",
+              "subtitle": "",
+              "pledge1Title": "免费获取",
+              "pledge1Desc": "获取法律信息不应取决于您的收入。OpenDefender是免费的。",
+              "pledge2Title": "您的隐私，受到保护",
+              "pledge2Desc": "您的会话数据经过加密，并在您离开时自动删除。我们从不存储、出售或共享您的信息。",
+              "pledge3Title": "通俗语言，不用法律术语",
+              "pledge3Desc": "每一项解释都以易于理解的方式写成，而非为了给人留下深刻印象。用有意义的语言提供准确的法律信息。",
+              "pledge4Title": "经过验证，而非猜测",
+              "pledge4Desc": "我们的AI指导经过真实法规数据库和判例法的验证。我们的教育内容经过仔细研究和审查，但您应始终向律师确认。",
+              "pledge5Title": "提供您所用的语言",
+              "pledge5Desc": "英语、西班牙语和中文。因为了解您的权利不应需要翻译。"
             },
             "urgentHelp": {
               "modalTitle": "紧急法律情况",

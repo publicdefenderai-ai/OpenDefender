@@ -44,6 +44,10 @@ import {
   ListChecks,
   Clock,
   Info,
+  MessageSquare,
+  Send,
+  Bot,
+  User,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrandShieldIcon } from "@/components/brand-logo";
@@ -64,12 +68,21 @@ interface DocumentSummary {
   recommendedActions: string[];
   documentType: string;
   pageCount?: number;
+  extractedText?: string;
   usageMetrics: {
     inputTokens: number;
     outputTokens: number;
     estimatedCost: number;
   };
 }
+
+interface QAMessage {
+  role: 'user' | 'assistant';
+  content: string;
+  citations?: Array<{ quote: string; context: string }>;
+}
+
+const MAX_QA_TURNS = 8;
 
 interface DocumentSummarizerProps {
   /** Whether this is being used in the attorney tools section */
@@ -111,6 +124,13 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const dragCounter = useRef(0);
 
   const [summary, setSummary] = useState<DocumentSummary | null>(null);
+  const [extractedDocText, setExtractedDocText] = useState<string | null>(null);
+
+  // Q&A state
+  const [chatMessages, setChatMessages] = useState<QAMessage[]>([]);
+  const [chatQuestion, setChatQuestion] = useState('');
+  const [isChatLoading, setIsChatLoading] = useState(false);
+  const [chatError, setChatError] = useState<string | null>(null);
 
   // CAPTCHA state
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
@@ -232,6 +252,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
       }
 
       setSummary(data.summary);
+      setExtractedDocText(data.summary.extractedText || null);
+      setChatMessages([]);
+      setChatQuestion('');
       setStep('result');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
@@ -259,11 +282,65 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const handleReset = () => {
     setSelectedFile(null);
     setSummary(null);
+    setExtractedDocText(null);
+    setChatMessages([]);
+    setChatQuestion('');
+    setChatError(null);
     setError(null);
     setStep(isAttorneyMode ? 'upload' : 'disclosure');
     setConsentGiven(false);
     setIsDragging(false);
     dragCounter.current = 0;
+  };
+
+  const handleChatSubmit = async () => {
+    const question = chatQuestion.trim();
+    if (!question || !extractedDocText || isChatLoading || !summary) return;
+    if (chatMessages.filter(m => m.role === 'user').length >= MAX_QA_TURNS) return;
+
+    const userMsg: QAMessage = { role: 'user', content: question };
+    const updatedMessages = [...chatMessages, userMsg];
+    setChatMessages(updatedMessages);
+    setChatQuestion('');
+    setIsChatLoading(true);
+    setChatError(null);
+
+    try {
+      const historyForApi = updatedMessages
+        .slice(0, -1) // exclude the message we just added — it goes as the question
+        .map(m => ({ role: m.role, content: m.content }));
+
+      const response = await fetch('/api/document-summary/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({
+          question,
+          extractedText: extractedDocText,
+          conversationHistory: historyForApi,
+          documentType: summary.documentType,
+          language: i18n.language === 'es' ? 'es' : 'en',
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || 'Failed to get answer');
+      }
+
+      const assistantMsg: QAMessage = {
+        role: 'assistant',
+        content: data.answer,
+        citations: data.citations || [],
+      };
+      setChatMessages(prev => [...prev, assistantMsg]);
+    } catch (err) {
+      setChatError(err instanceof Error ? err.message : 'Failed to get answer. Please try again.');
+      // Remove the unanswered user message so they can retry
+      setChatMessages(prev => prev.slice(0, -1));
+    } finally {
+      setIsChatLoading(false);
+    }
   };
 
   const generateSummaryText = (s: DocumentSummary): string => {
@@ -720,6 +797,127 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                         </li>
                       ))}
                     </ul>
+                  </div>
+                </>
+              )}
+
+              {/* Document Q&A */}
+              {extractedDocText && (
+                <>
+                  <Separator />
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <MessageSquare className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                      <h3 className="font-semibold">Ask Questions About This Document</h3>
+                      {chatMessages.filter(m => m.role === 'user').length >= MAX_QA_TURNS && (
+                        <span className="text-xs text-muted-foreground ml-auto">Limit reached</span>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Ask follow-up questions about the document. Answers are grounded in the document text with direct quotations.
+                      The document is held only in your browser — nothing is stored on our servers.
+                    </p>
+
+                    {/* Chat history */}
+                    {chatMessages.length > 0 && (
+                      <div className="space-y-3 max-h-96 overflow-y-auto pr-1">
+                        {chatMessages.map((msg, i) => (
+                          <div key={i} className={`flex gap-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                            {msg.role === 'assistant' && (
+                              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                                <Bot className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                              </div>
+                            )}
+                            <div className={`max-w-[85%] space-y-2 ${msg.role === 'user' ? 'items-end' : 'items-start'} flex flex-col`}>
+                              <div className={`rounded-lg px-4 py-3 text-sm leading-relaxed ${
+                                msg.role === 'user'
+                                  ? 'bg-blue-600 text-white rounded-tr-none'
+                                  : 'bg-slate-100 dark:bg-slate-800 text-foreground rounded-tl-none'
+                              }`}>
+                                {msg.content}
+                              </div>
+                              {msg.role === 'assistant' && msg.citations && msg.citations.length > 0 && (
+                                <div className="space-y-1.5 w-full">
+                                  {msg.citations.map((c, ci) => (
+                                    <div key={ci} className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 rounded-md px-3 py-2 text-xs">
+                                      <p className="font-medium text-amber-800 dark:text-amber-300 mb-1">From the document:</p>
+                                      <blockquote className="italic text-amber-900 dark:text-amber-200 border-l-2 border-amber-400 pl-2 mb-1">
+                                        "{c.quote}"
+                                      </blockquote>
+                                      {c.context && (
+                                        <p className="text-amber-700 dark:text-amber-400">{c.context}</p>
+                                      )}
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                            {msg.role === 'user' && (
+                              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+                                <User className="h-4 w-4 text-slate-600 dark:text-slate-300" />
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                        {isChatLoading && (
+                          <div className="flex gap-3 justify-start">
+                            <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                              <Bot className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                            </div>
+                            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg rounded-tl-none px-4 py-3">
+                              <div className="flex gap-1 items-center h-5">
+                                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {chatError && (
+                      <Alert variant="destructive" className="py-2">
+                        <XCircle className="h-4 w-4" />
+                        <AlertDescription className="text-sm">{chatError}</AlertDescription>
+                      </Alert>
+                    )}
+
+                    {/* Question input */}
+                    {chatMessages.filter(m => m.role === 'user').length < MAX_QA_TURNS && (
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={chatQuestion}
+                          onChange={e => setChatQuestion(e.target.value.slice(0, 600))}
+                          onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleChatSubmit(); } }}
+                          placeholder="Ask something specific about this document…"
+                          disabled={isChatLoading || !!aiUnavailable}
+                          className="flex-1 text-sm border border-input bg-background rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 disabled:opacity-50"
+                          maxLength={600}
+                          aria-label="Ask a question about the document"
+                        />
+                        <Button
+                          onClick={handleChatSubmit}
+                          disabled={!chatQuestion.trim() || isChatLoading || !!aiUnavailable}
+                          size="sm"
+                          className="px-3"
+                          aria-label="Send question"
+                        >
+                          {isChatLoading ? (
+                            <Loader2 className="h-4 w-4 animate-spin" />
+                          ) : (
+                            <Send className="h-4 w-4" />
+                          )}
+                        </Button>
+                      </div>
+                    )}
+
+                    {chatMessages.filter(m => m.role === 'user').length >= MAX_QA_TURNS && (
+                      <p className="text-xs text-center text-muted-foreground bg-muted rounded-md py-2 px-3">
+                        You have reached the {MAX_QA_TURNS}-question limit for this document session. Download the summary to save what you've learned.
+                      </p>
+                    )}
                   </div>
                 </>
               )}

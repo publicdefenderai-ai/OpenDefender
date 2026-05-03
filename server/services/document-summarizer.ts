@@ -74,6 +74,23 @@ export interface DocumentSummary {
     outputTokens: number;
     estimatedCost: number;
   };
+  /** PII-redacted extracted text — returned to client for session Q&A, never stored server-side */
+  extractedText?: string;
+}
+
+export interface DocumentQAMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+export interface DocumentQACitation {
+  quote: string;
+  context: string;
+}
+
+export interface DocumentQAResponse {
+  answer: string;
+  citations: DocumentQACitation[];
 }
 
 export interface SummaryError {
@@ -357,6 +374,7 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
       recommendedActions: parsed.recommendedActions || [],
       documentType: parsed.documentType || 'Unknown Document Type',
       pageCount,
+      extractedText: redactedText || undefined,
       usageMetrics: {
         inputTokens: message.usage.input_tokens,
         outputTokens: message.usage.output_tokens,
@@ -384,6 +402,130 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
 
     throw new Error(`Failed to summarize document: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
+}
+
+// ============================================================================
+// Document Q&A — Conversational follow-up on already-summarized documents
+// ============================================================================
+
+const MAX_QA_HISTORY_TURNS = 8;       // max 8 back-and-forth pairs in context
+const MAX_QA_QUESTION_LENGTH = 600;   // chars per question
+const MAX_EXTRACTED_TEXT_FOR_QA = 80_000; // chars of doc text sent per request
+
+/**
+ * Answer a follow-up question about a document that was already summarized.
+ * The extractedText is the PII-redacted text returned from summarizeDocument.
+ * It is never stored server-side — the client holds it in session state and
+ * sends it back with each question.
+ */
+export async function answerDocumentQuestion(params: {
+  extractedText: string;
+  question: string;
+  conversationHistory: DocumentQAMessage[];
+  documentType: string;
+  language: 'en' | 'es';
+}): Promise<DocumentQAResponse> {
+  if (!anthropic) {
+    throw new Error('Document Q&A service is not configured');
+  }
+
+  const { extractedText, question, conversationHistory, documentType, language } = params;
+
+  // Sanitize and bound all inputs
+  const sanitizedQuestion = question.slice(0, MAX_QA_QUESTION_LENGTH).trim();
+  if (!sanitizedQuestion) {
+    throw new Error('Question cannot be empty');
+  }
+
+  const truncatedText = extractedText.slice(0, MAX_EXTRACTED_TEXT_FOR_QA);
+  if (!truncatedText || truncatedText.trim().length < 50) {
+    throw new Error('Document text is too short to answer questions about');
+  }
+
+  // Keep only the most recent N turns to stay within context budget
+  const limitedHistory = conversationHistory.slice(-(MAX_QA_HISTORY_TURNS * 2));
+
+  const langLabel = language === 'es' ? 'Spanish' : 'English';
+
+  const systemPrompt = `You are a legal document assistant helping a user understand their document. The document content is provided below.
+
+DOCUMENT TYPE: ${documentType}
+RESPONSE LANGUAGE: ${langLabel}
+
+DOCUMENT TEXT:
+${truncatedText}
+
+Your role:
+- Answer questions about THIS specific document only, using the text above as your sole source
+- When quoting the document, use the exact words from it — do not paraphrase quotes
+- Use plain language (6th–8th grade reading level) in your answers
+- Be clear about what the document says versus general legal information
+- If the answer is not in the document, say so directly
+- NEVER provide legal advice, predict outcomes, or recommend specific courses of action
+- Always recommend consulting a licensed attorney for legal decisions
+
+Respond in JSON format only:
+{
+  "answer": "your plain-language answer here",
+  "citations": [
+    { "quote": "exact text from the document", "context": "brief explanation of why this is relevant" }
+  ]
+}
+
+If there are no relevant quotable passages, return an empty citations array.`;
+
+  const messages: Anthropic.Messages.MessageParam[] = [
+    ...limitedHistory,
+    { role: 'user', content: sanitizedQuestion },
+  ];
+
+  devLog('doc-qa', `Q&A question (${sanitizedQuestion.length} chars), history turns: ${limitedHistory.length / 2}`);
+
+  const message = await anthropic.messages.create({
+    model: CLAUDE_MODEL,
+    max_tokens: 1024,
+    temperature: 0.1,
+    system: [{ type: 'text' as const, text: systemPrompt, cache_control: { type: 'ephemeral' as const } }],
+    messages,
+  });
+
+  const textContent = message.content.find(b => b.type === 'text');
+  if (!textContent || textContent.type !== 'text') {
+    throw new Error('No response received from AI');
+  }
+
+  // Parse structured JSON response
+  let parsed: DocumentQAResponse;
+  try {
+    const responseText = textContent.text;
+    const markdownMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+    let jsonText: string;
+    if (markdownMatch) {
+      jsonText = markdownMatch[1].trim();
+    } else {
+      const jsonStart = responseText.indexOf('{');
+      const jsonEnd = responseText.lastIndexOf('}');
+      jsonText = jsonStart !== -1 && jsonEnd > jsonStart
+        ? responseText.slice(jsonStart, jsonEnd + 1)
+        : responseText;
+    }
+    const raw = JSON.parse(jsonText);
+    parsed = {
+      answer: typeof raw.answer === 'string' ? raw.answer : textContent.text,
+      citations: Array.isArray(raw.citations) ? raw.citations : [],
+    };
+  } catch {
+    parsed = { answer: textContent.text, citations: [] };
+  }
+
+  // Record cost
+  const inputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
+  const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
+  recordAICost(inputCost + outputCost, 'document-summarizer');
+
+  opsLog('doc-qa', `Answered: tokens=${message.usage.input_tokens}+${message.usage.output_tokens}`);
+
+  return parsed;
 }
 
 /**
