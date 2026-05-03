@@ -1,12 +1,7 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import {
-  BookOpen,
-  FileText,
   MapPin,
-  Users,
-  ArrowLeft,
   ArrowRight,
   Search,
   Scale,
@@ -16,10 +11,9 @@ import {
   Clock,
   UserCheck,
   Heart,
-  FileSearch,
-  Gavel,
-  Library,
-  Wrench
+  BookOpen,
+  FileText,
+  GitBranch,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,58 +27,6 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
-import { DocumentSummarizer } from "@/components/document-summarizer";
-
-interface ResourceCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  href?: string;
-  onClick?: () => void;
-  color: string;
-}
-
-function ResourceCard({ icon, title, description, href, onClick, color }: ResourceCardProps) {
-  const content = (
-    <Card className="group h-full card-interactive cursor-pointer border-2 border-transparent hover:border-primary/20">
-      <CardContent className="p-6 h-full flex flex-col">
-        <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${color} transition-transform duration-300 group-hover:scale-110`}>
-          {icon}
-        </div>
-        <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-          {title}
-        </h3>
-        <p className="text-muted-foreground text-sm leading-relaxed flex-1">
-          {description}
-        </p>
-        <div className="flex items-center gap-2 mt-4 text-primary font-medium text-sm">
-          <span>{href ? "Learn more" : "Search now"}</span>
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </div>
-      </CardContent>
-    </Card>
-  );
-
-  if (onClick) {
-    return <div onClick={onClick}>{content}</div>;
-  }
-
-  return <Link href={href || "/"}>{content}</Link>;
-}
-
-function SectionHeader({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="flex items-start gap-3 mb-6">
-      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-        {icon}
-      </div>
-      <div>
-        <h2 className="text-lg font-semibold text-foreground">{title}</h2>
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </div>
-    </div>
-  );
-}
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   const { t } = useTranslation();
@@ -295,9 +237,6 @@ export default function Resources() {
   const [laError, setLaError] = useState("");
   const [laHasSearched, setLaHasSearched] = useState(false);
 
-  // Document Summarizer state
-  const [showDocumentSummarizerModal, setShowDocumentSummarizerModal] = useState(false);
-
   const handlePublicDefenderSearch = async () => {
     if (!pdZipCode.trim() || pdZipCode.length !== 5) {
       setPdError(t('home.publicDefenderSearch.error'));
@@ -336,213 +275,114 @@ export default function Resources() {
     }
   };
 
-  // ── Section 1: Find Legal Help ──────────────────────────────────────────────
-  const legalHelpResources = [
-    {
-      icon: <Heart className="h-7 w-7 text-white" />,
-      title: t('resources.legalAid.title', { defaultValue: 'Legal Aid Organizations' }),
-      description: t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations that provide free or low-cost legal assistance in your community.' }),
-      onClick: () => setShowLegalAidModal(true),
-      color: "bg-gradient-to-br from-rose-500 to-rose-700"
-    },
-    {
-      icon: <UserCheck className="h-7 w-7 text-white" />,
-      title: t('resources.publicDefender.title', { defaultValue: 'Find a Public Defender' }),
-      description: t('resources.publicDefender.description', { defaultValue: 'Search for public defender offices in your area by zip code to get free legal representation.' }),
-      onClick: () => setShowPublicDefenderModal(true),
-      color: "bg-gradient-to-br from-indigo-500 to-indigo-700"
-    },
-  ];
-
-  // ── Section 2: Courts & Records ─────────────────────────────────────────────
-  const courtsResources = [
-    {
-      icon: <MapPin className="h-7 w-7 text-white" />,
-      title: t('resources.courtLocator.title', { defaultValue: 'Find Local Courts' }),
-      description: t('resources.courtLocator.description', { defaultValue: 'Locate courts in your area, find addresses, phone numbers, and directions to courthouses.' }),
-      href: "/court-locator",
-      color: "bg-gradient-to-br from-teal-500 to-teal-700"
-    },
-    {
-      icon: <Search className="h-7 w-7 text-white" />,
-      title: t('resources.courtRecords.title', { defaultValue: 'Find Court Records' }),
-      description: t('resources.courtRecords.description', { defaultValue: 'Access public court records, case information, and PACER resources for federal and state courts.' }),
-      href: "/court-records",
-      color: "bg-gradient-to-br from-blue-500 to-blue-700"
-    },
-  ];
-
-  // ── Section 3: Legal Information ────────────────────────────────────────────
-  const infoResources = [
-    {
-      icon: <BookOpen className="h-7 w-7 text-white" />,
-      title: t('resources.glossary.title', { defaultValue: 'Legal Glossary' }),
-      description: t('resources.glossary.description', { defaultValue: 'Understand legal terminology with our comprehensive glossary of terms commonly used in criminal proceedings.' }),
-      href: "/legal-glossary",
-      color: "bg-gradient-to-br from-purple-500 to-purple-700"
-    },
-    {
-      icon: <Users className="h-7 w-7 text-white" />,
-      title: t('resources.diversionPrograms.title', { defaultValue: 'Diversion Programs' }),
-      description: t('resources.diversionPrograms.description', { defaultValue: 'Explore alternative sentencing programs that may help you avoid traditional prosecution and criminal records.' }),
-      href: "/diversion-programs",
-      color: "bg-gradient-to-br from-green-500 to-green-700"
-    },
-    {
-      icon: <FileText className="h-7 w-7 text-white" />,
-      title: t('resources.expungement.title', { defaultValue: 'Record Expungement' }),
-      description: t('resources.expungement.description', { defaultValue: 'Learn about clearing your criminal record, eligibility requirements, and the expungement process in your state.' }),
-      href: "/record-expungement",
-      color: "bg-gradient-to-br from-amber-500 to-amber-700"
-    },
-  ];
-
-  // ── Section 4: Tools ────────────────────────────────────────────────────────
-  const toolsResources = [
-    {
-      icon: <FileSearch className="h-7 w-7 text-white" />,
-      title: t('resources.documentSummarizer.title', { defaultValue: 'Document Summarizer' }),
-      description: t('resources.documentSummarizer.description', { defaultValue: 'Upload legal documents and get AI-powered plain-English summaries. Your documents are never stored.' }),
-      onClick: () => setShowDocumentSummarizerModal(true),
-      color: "bg-gradient-to-br from-cyan-500 to-cyan-700"
-    },
-  ];
-
-  const sections = [
-    {
-      key: "legal-help",
-      icon: <Heart className="h-5 w-5 text-primary" />,
-      title: t('resources.sections.legalHelp.title', { defaultValue: 'Find Legal Help' }),
-      description: t('resources.sections.legalHelp.description', { defaultValue: 'Free and low-cost legal representation near you' }),
-      resources: legalHelpResources,
-      cols: "md:grid-cols-2",
-    },
-    {
-      key: "courts",
-      icon: <Gavel className="h-5 w-5 text-primary" />,
-      title: t('resources.sections.courts.title', { defaultValue: 'Courts & Records' }),
-      description: t('resources.sections.courts.description', { defaultValue: 'Locate courthouses and search public court records' }),
-      resources: courtsResources,
-      cols: "md:grid-cols-2",
-    },
-    {
-      key: "info",
-      icon: <Library className="h-5 w-5 text-primary" />,
-      title: t('resources.sections.info.title', { defaultValue: 'Legal Information' }),
-      description: t('resources.sections.info.description', { defaultValue: 'Reference guides, glossary, and process explanations' }),
-      resources: infoResources,
-      cols: "md:grid-cols-2 lg:grid-cols-3",
-    },
-    {
-      key: "tools",
-      icon: <Wrench className="h-5 w-5 text-primary" />,
-      title: t('resources.sections.tools.title', { defaultValue: 'Tools' }),
-      description: t('resources.sections.tools.description', { defaultValue: 'AI-powered tools to help you understand your documents' }),
-      resources: toolsResources,
-      cols: "md:grid-cols-2 lg:grid-cols-3",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="vivid-header-teal py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <Scale className="h-8 w-8 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              {t('resources.hero.title', { defaultValue: 'Legal Resources' })}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/85 max-w-3xl mx-auto">
-              {t('resources.hero.subtitle', { defaultValue: 'Tools and information to help you navigate the legal system' })}
-            </p>
-          </motion.div>
+      {/* Hero */}
+      <section className="vivid-header-teal py-10 md:py-14">
+        <div className="max-w-3xl mx-auto px-4 vivid-header-content text-center">
+          <Scale className="h-8 w-8 text-white/80 mx-auto mb-3" />
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
+            {t('resources.hero.title', { defaultValue: 'Find Legal Help' })}
+          </h1>
+          <p className="text-base text-white/80 max-w-xl mx-auto">
+            {t('resources.hero.subtitle', { defaultValue: 'Free and low-cost legal representation near you — search by ZIP code.' })}
+          </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-12 lg:py-16">
-        <div className="max-w-6xl mx-auto px-4">
-
+      {/* Two finder cards */}
+      <section className="py-10 md:py-14">
+        <div className="max-w-3xl mx-auto px-4">
           <ScrollReveal>
-            <div className="flex items-center gap-4 mb-10">
-              <Link href="/">
-                <Button variant="outline" size="sm">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  {t('common.backToHome', { defaultValue: 'Back to Home' })}
-                </Button>
-              </Link>
+            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+              {/* Public Defender card */}
+              <Card
+                className="cursor-pointer group hover:shadow-md hover:-translate-y-0.5 transition-all border-indigo-200 dark:border-indigo-800/60 bg-indigo-50/60 dark:bg-indigo-900/10"
+                onClick={() => setShowPublicDefenderModal(true)}
+                data-testid="card-public-defender"
+              >
+                <CardContent className="p-5">
+                  <UserCheck className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mb-3" strokeWidth={1.75} />
+                  <p className="font-semibold text-foreground mb-1">
+                    {t('resources.publicDefender.title', { defaultValue: 'Find a Public Defender' })}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    {t('resources.publicDefender.description', { defaultValue: 'Search for public defender offices near you by ZIP code. Free legal representation if you can\'t afford an attorney.' })}
+                  </p>
+                  <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
+                    Search by ZIP <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Legal Aid card */}
+              <Card
+                className="cursor-pointer group hover:shadow-md hover:-translate-y-0.5 transition-all border-rose-200 dark:border-rose-800/60 bg-rose-50/60 dark:bg-rose-900/10"
+                onClick={() => setShowLegalAidModal(true)}
+                data-testid="card-legal-aid"
+              >
+                <CardContent className="p-5">
+                  <Heart className="h-6 w-6 text-rose-600 dark:text-rose-400 mb-3" strokeWidth={1.75} />
+                  <p className="font-semibold text-foreground mb-1">
+                    {t('resources.legalAid.title', { defaultValue: 'Find Legal Aid' })}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                    {t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations providing free or low-cost legal help in your community.' })}
+                  </p>
+                  <p className="text-sm font-semibold text-rose-600 dark:text-rose-400 flex items-center gap-1">
+                    Search by ZIP <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </ScrollReveal>
 
-          {/* Grouped Sections */}
-          <div className="space-y-14">
-            {sections.map((section, sectionIndex) => (
-              <ScrollReveal key={section.key} delay={sectionIndex * 0.08}>
-                <div>
-                  <SectionHeader
-                    icon={section.icon}
-                    title={section.title}
-                    description={section.description}
-                  />
-                  <div className={`grid ${section.cols} gap-6`}>
-                    {section.resources.map((resource, index) => (
-                      <motion.div
-                        key={resource.title}
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.35, delay: index * 0.07 }}
-                      >
-                        <ResourceCard {...resource} />
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <ScrollReveal delay={0.4}>
-            <Card className="mt-14 bg-muted/50 border-dashed">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold mb-3">
-                  {t('resources.needHelp.title', { defaultValue: 'Need Personalized Guidance?' })}
-                </h3>
-                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  {t('resources.needHelp.description', { defaultValue: 'Our case guidance tool can help you understand your specific situation and provide tailored information based on your charges and jurisdiction.' })}
-                </p>
-                <Link href="/case-guidance">
-                  <Button size="lg">
-                    {t('resources.needHelp.cta', { defaultValue: 'Get Case Guidance' })}
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+          {/* 211 callout */}
+          <ScrollReveal delay={0.1}>
+            <div className="rounded-xl border border-border bg-muted/30 p-4 mb-8 flex items-start gap-3">
+              <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-muted-foreground">
+                <strong className="text-foreground">Call or text 211</strong> — free, 24/7 social services hotline that can also connect you to local legal aid organizations in your area.
+              </p>
+            </div>
           </ScrollReveal>
 
+          {/* Secondary links */}
+          <ScrollReveal delay={0.15}>
+            <div className="border-t border-border/60 pt-8">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">Also available</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {[
+                  { href: "/court-locator",          Icon: MapPin,     label: "Court Locator" },
+                  { href: "/legal-glossary",          Icon: BookOpen,   label: "Legal Glossary" },
+                  { href: "/court-records",           Icon: Search,     label: "Court Records" },
+                  { href: "/diversion-programs",      Icon: GitBranch,  label: "Diversion Programs" },
+                  { href: "/support/reputation",      Icon: FileText,   label: "Record Expungement" },
+                  { href: "/document-summarizer",     Icon: FileText,   label: "Document Summarizer" },
+                ].map(({ href, Icon, label }) => (
+                  <Link key={href} href={href}>
+                    <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-border/60 hover:border-border hover:bg-muted/40 transition-all text-sm text-muted-foreground hover:text-foreground">
+                      <Icon className="h-3.5 w-3.5 flex-shrink-0" />
+                      <span>{label}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <Footer />
 
-      {/* Public Defender Search Modal */}
+      {/* Public Defender Search Modal — unchanged */}
       <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
         <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t('home.publicDefenderSearch.title')}</DialogTitle>
           </DialogHeader>
-
           <div className="space-y-4">
             <div className="flex gap-2">
               <Input
@@ -555,18 +395,12 @@ export default function Resources() {
                 className="flex-1"
                 data-testid="input-pd-zip-code-resources"
               />
-              <Button
-                onClick={handlePublicDefenderSearch}
-                disabled={pdSearching}
-                data-testid="button-search-pd-resources"
-              >
+              <Button onClick={handlePublicDefenderSearch} disabled={pdSearching} data-testid="button-search-pd-resources">
                 <Search className="h-4 w-4 mr-2" />
                 {pdSearching ? t('home.publicDefenderSearch.searching') : t('home.publicDefenderSearch.searchButton')}
               </Button>
             </div>
-
             {pdError && <div className="text-red-600 text-sm">{pdError}</div>}
-
             {pdOffices.length > 0 && (
               <div className="space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -577,23 +411,19 @@ export default function Resources() {
                 ))}
               </div>
             )}
-
             {!pdSearching && pdHasSearched && pdOffices.length === 0 && !pdError && (
-              <p className="text-sm text-muted-foreground">
-                {t('home.publicDefenderSearch.noResults')}
-              </p>
+              <p className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.noResults')}</p>
             )}
           </div>
         </DialogContent>
       </Dialog>
 
-      {/* Legal Aid Organizations Search Modal */}
+      {/* Legal Aid Search Modal — unchanged */}
       <Dialog open={showLegalAidModal} onOpenChange={setShowLegalAidModal}>
         <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t('home.legalAidSearch.title')}</DialogTitle>
           </DialogHeader>
-
           <div className="space-y-4">
             <div className="flex gap-2">
               <Input
@@ -606,18 +436,12 @@ export default function Resources() {
                 className="flex-1"
                 data-testid="input-la-zip-code-resources"
               />
-              <Button
-                onClick={handleLegalAidSearch}
-                disabled={laSearching}
-                data-testid="button-search-la-resources"
-              >
+              <Button onClick={handleLegalAidSearch} disabled={laSearching} data-testid="button-search-la-resources">
                 <Search className="h-4 w-4 mr-2" />
                 {laSearching ? t('home.legalAidSearch.searching') : t('home.legalAidSearch.searchButton')}
               </Button>
             </div>
-
             {laError && <div className="text-red-600 text-sm">{laError}</div>}
-
             {laOrganizations.length > 0 && (
               <div className="space-y-4">
                 <p className="text-sm text-muted-foreground">
@@ -628,23 +452,10 @@ export default function Resources() {
                 ))}
               </div>
             )}
-
             {!laSearching && laHasSearched && laOrganizations.length === 0 && !laError && (
-              <p className="text-sm text-muted-foreground">
-                {t('home.legalAidSearch.noResults')}
-              </p>
+              <p className="text-sm text-muted-foreground">{t('home.legalAidSearch.noResults')}</p>
             )}
           </div>
-        </DialogContent>
-      </Dialog>
-
-      {/* Document Summarizer Modal */}
-      <Dialog open={showDocumentSummarizerModal} onOpenChange={setShowDocumentSummarizerModal}>
-        <DialogContent className="max-w-[95vw] md:max-w-4xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>{t('resources.documentSummarizer.title', { defaultValue: 'Document Summarizer' })}</DialogTitle>
-          </DialogHeader>
-          <DocumentSummarizer />
         </DialogContent>
       </Dialog>
     </div>
