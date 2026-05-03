@@ -61,12 +61,12 @@ export const LEGAL_SYNONYMS: Record<string, string[]> = {
   // Violent offenses
   'assault': ['battery', 'attack', 'physical harm', 'aggravated assault', 'simple assault'],
   'battery': ['assault', 'attack', 'physical contact'],
-  // Property offenses AND property recovery (seized belongings, 4th amendment)
-  'property': ['seized property', 'belongings', 'personal property', 'return property', 'get property back', 'fourth amendment', 'search and seizure', 'property crime', 'theft', 'burglary', 'confiscated'],
-  'belongings': ['property', 'personal property', 'seized', 'possessions', 'stuff taken by police'],
-  'seized': ['search and seizure', 'property seized', 'fourth amendment', 'confiscated', 'taken by police', 'police took'],
-  'confiscated': ['seized', 'property', 'taken by police', 'fourth amendment'],
-  'possessions': ['property', 'belongings', 'personal property', 'seized'],
+  // Property offenses AND property recovery (seized belongings, getting property back)
+  'property': ['seized property', 'personal property', 'return property', 'get property back', 'property retrieval', 'property recovery', 'evidence unit', 'property crime', 'confiscated'],
+  'belongings': ['property', 'personal property', 'seized property', 'possessions', 'property retrieval', 'evidence unit', 'get belongings back'],
+  'seized': ['seized property', 'property retrieval', 'evidence unit', 'confiscated', 'taken by police', 'police took', 'property return'],
+  'confiscated': ['seized property', 'property retrieval', 'taken by police', 'evidence unit'],
+  'possessions': ['property', 'belongings', 'personal property', 'seized property', 'property retrieval'],
   'theft': ['larceny', 'stealing', 'robbery', 'burglary', 'shoplifting'],
   'larceny': ['theft', 'stealing', 'robbery'],
   'robbery': ['theft', 'mugging', 'holdup', 'armed robbery'],

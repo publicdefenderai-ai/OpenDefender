@@ -810,9 +810,9 @@ export function buildSearchIndex(): void {
       title: 'Court Logistics Support',
       titleEs: 'Apoyo Logístico para el Tribunal',
       titleZh: '法院后勤支持',
-      content: 'Help with court logistics. Transportation to court, childcare during hearings, what to wear, what to bring, courthouse navigation, interpreter services.',
-      tags: ['court logistics', 'transportation', 'childcare', 'courthouse', 'interpreter', 'what to wear'],
-      aliases: ['getting to court', 'court preparation', 'courthouse help', 'court day'],
+      content: 'Help with court logistics. Transportation to court, childcare during hearings, what to wear, what to bring, courthouse navigation, interpreter services. Getting your property back after arrest — personal belongings phone wallet keys cash ID inventoried at evidence unit of arresting precinct. Vehicle towed after arrest, contact towing company directly, storage fees accumulate daily. ID replacement after arrest, replacing driver license state ID Social Security card. Court-ordered programs verification, community service hours documentation. What happens if late to court, bench warrant, interpreter services.',
+      tags: ['court logistics', 'transportation', 'childcare', 'courthouse', 'interpreter', 'what to wear', 'property retrieval', 'get property back', 'belongings', 'evidence unit', 'precinct', 'vehicle towed', 'ID replacement', 'court-ordered programs', 'community service'],
+      aliases: ['getting to court', 'court preparation', 'courthouse help', 'court day', 'get belongings back', 'get property back after arrest', 'property retrieval', 'towed car after arrest', 'ID replacement after arrest', 'court ordered program', 'verify community service'],
       url: '/support/court-logistics'
     },
     {
