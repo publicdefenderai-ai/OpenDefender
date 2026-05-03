@@ -56,7 +56,7 @@ export function Header() {
   const desktopNavLinks = [
     { href: "/first-24-hours", label: t('header.nav.first24Hours', 'First 24 Hours') },
     { href: "/support",        label: t('header.nav.support',      'Life Support') },
-    { href: "/case-guidance",  label: t('header.nav.caseGuidance', 'Get Guidance') },
+    { href: "/case-guidance",  label: t('header.nav.caseGuidance', 'Case Guidance') },
     { href: "/immigration-guidance", label: t('header.nav.immigration', 'Immigration') },
   ];
 
