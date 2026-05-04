@@ -24,13 +24,13 @@ To democratize access to legal information and resources, particularly for indiv
 - **Live Statute Retrieval** via OpenLaws API across 53 jurisdictions
 
 ### AI-Powered Case Guidance
-- **Claude Sonnet 4** for personalized, jurisdiction-aware case guidance
+- **Claude Sonnet 4.6** for personalized, jurisdiction-aware case guidance
 - **Dual-mode engine**: AI for complex situations, rule-based fallback for reliability
-- **Privacy-first**: All case data is session-based and expires after 1 hour
+- **Privacy-first**: All case data is session-based and expires after 24 hours or server restart
 - **NLP-based PII redaction** before any data reaches the AI
 
 ### Site-Wide Search
-- Indexes **7,850+ legal documents** across charges, statutes, glossary terms, diversion programs, and all site pages
+- Indexes **6,663 legal documents** across charges, statutes, glossary terms, diversion programs, and all site pages
 - Legal synonym expansion and weighted relevance scoring
 - Fully multilingual (EN / ES / ZH)
 
@@ -40,7 +40,7 @@ To democratize access to legal information and resources, particularly for indiv
 - **Mock Q&A Practice** — static Q&A library plus AI-generated personalized practice questions
 - **Legal Glossary** — plain-language definitions with search
 - **Search & Seizure Guide** — Fourth Amendment rights across common scenarios
-- **First 24 Hours Guide** and **Jail Phone Call Guide**
+- **First 24 Hours Guide** — arrest through arraignment, including a full jail phone call section (scripts, what never to say, attorney call rules, and a state-by-state inmate locator)
 
 ### Life Support Resources Hub
 11 dedicated resource pages covering real-life challenges alongside a criminal case:
@@ -95,7 +95,7 @@ Visit the live platform — no account required:
 
 | Variable | Service | Purpose | Required? |
 |----------|---------|---------|-----------|
-| `ANTHROPIC_API_KEY` | [Anthropic](https://console.anthropic.com/) | AI guidance via Claude Sonnet 4 | **Required** for AI features |
+| `ANTHROPIC_API_KEY` | [Anthropic](https://console.anthropic.com/) | AI guidance via Claude Sonnet 4.6 | **Required** for AI features |
 | `DATABASE_URL` | PostgreSQL | Database connection string | **Required** |
 | `COURTLISTENER_API_TOKEN` | [CourtListener](https://www.courtlistener.com/help/api/) | Case law search and court records | Optional |
 | `OPENLAWS_API_KEY` | [OpenLaws](https://openlaws.com/) | Live statute retrieval (53 jurisdictions) | Optional |
@@ -160,7 +160,10 @@ The app runs at `http://localhost:5000`.
 │   ├── templates/              # Document template definitions
 │   └── attorney/               # Attorney types and schemas
 ├── scripts/
-│   └── content-review/         # Quarterly AI-powered content accuracy review
+│   ├── content-review/         # Quarterly AI-powered content accuracy review
+│   ├── data-review/            # Data quality and audit tooling
+│   ├── check-diversion-programs.ts  # Link validation for all 111 diversion programs
+│   └── post-merge.sh           # Post-merge setup (npm install + db:push)
 ├── docs/                       # Technical design documents
 └── .github/workflows/          # Quarterly content review CI
 ```
