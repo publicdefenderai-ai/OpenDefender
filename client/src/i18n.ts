@@ -74,7 +74,7 @@ i18n
             },
             "trust": {
               "title": "Built on Trust & Transparency",
-              "subtitle": "Every piece of legal information is backed by credible sources",
+              "subtitle": "Built on verified legal data, trusted advocacy sources, and a commitment to your privacy",
               "verifiedTitle": "Verified Citations",
               "verifiedDesc": "All legal statements include proper citations to laws, court cases, and regulations",
               "privacyTitle": "Privacy Protected",
@@ -5426,7 +5426,7 @@ i18n
             },
             "trust": {
               "title": "Basado en Confianza y Transparencia",
-              "subtitle": "Cada pieza de información legal está respaldada por fuentes creíbles",
+              "subtitle": "Basado en datos legales verificados, fuentes de defensa confiables y un compromiso con su privacidad",
               "verifiedTitle": "Citas Verificadas",
               "verifiedDesc": "Todas las declaraciones legales incluyen citas apropiadas a estatutos, jurisprudencia y regulaciones",
               "privacyTitle": "Privacidad Protegida",
@@ -10777,7 +10777,7 @@ i18n
             },
             "trust": {
               "title": "建立在信任和透明之上",
-              "subtitle": "每一条法律信息都有可靠来源支持",
+              "subtitle": "建立在经过验证的法律数据、可信的倡导资源以及对您隐私的承诺之上",
               "verifiedTitle": "经过验证的引用",
               "verifiedDesc": "所有法律声明都包含对法律、法院案件和法规的正确引用",
               "privacyTitle": "隐私受到保护",
