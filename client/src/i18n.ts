@@ -4076,7 +4076,7 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Mission Statement",
-              "subtitle1": "Public defense in America is underfunded and overstretched. Public defenders and their allies are asked to do the impossible with almost nothing. The gap between what people need and what the system provides is structural, and has gone unaddressed for too long. If you can afford a private attorney, you already know how the system works differently for you. If, like most people, you can't, you've been left to figure it out on your own. OpenDefender was built to change that.",
+              "subtitle1": "Public defense in America is underfunded and overstretched. Public defenders and their allies are asked to do the impossible with almost nothing. The gap between what people need and what the system provides is structural, and has gone unaddressed for too long. If you can afford a private attorney or advisors, you already know how the system works differently for you. If, like most people, you can't, you've been left to figure it out on your own. OpenDefender was built to change that.",
               "subtitle2": "OpenDefender is a public good dedicated to leveraging AI and online resources to provide timely, useful, and accessible assistance to individuals facing the US criminal justice or immigration enforcement systems on their own. The site is fully open source, ensuring it remains free and accessible for all who need it."
             },
             "publicGood": {
@@ -4086,19 +4086,19 @@ i18n
               "title": "Our Primary Goals",
               "expandAccess": {
                 "title": "Expand Access to Justice",
-                "description": "Deliver preliminary case support, guidance, and relevant insights to anyone who needs them — at no cost. The people who need this most are the ones who have always been expected to navigate the system alone."
+                "description": "Deliver preliminary case support, timely action plans, and practical guidance to anyone in need, at no cost. The people who need this most are the ones who have always been expected to figure it out on their own, in the most frightening hours of their lives."
               },
               "supportDefenders": {
-                "title": "Support Public Defender Workflows",
-                "description": "Provide public defenders with fast access to aggregated legal data, case statistics, and procedural requirements to help them prepare more effective defense strategies."
+                "title": "Support Client Advocate Workflows",
+                "description": "Equip public defenders, legal aid attorneys, and community advocates with fast access to aggregated data, procedural tools, and support resources, so more of their time goes directly to the people they serve, both inside and outside the courtroom."
               },
               "empowerDecisions": {
                 "title": "Empower Informed Decision-Making",
-                "description": "Enable defendants to better understand their rights, legal options, and potential outcomes through clear, plain-language explanations grounded in reliable data."
+                "description": "Enable people to better understand their rights, options, and immediate next steps, through clear, plain-language explanations grounded in reliable data. Everyone deserves the opportunity to protect the life they have worked to build."
               },
               "increaseFairness": {
                 "title": "Increase Efficiency and Fairness",
-                "description": "Automate collection and synthesis of public legal datasets so that defendants and attorneys can quickly identify relevant precedents, procedural rules, and plea or sentencing trends."
+                "description": "Surface public legal data, procedural rules, and advocacy resources so that attorneys, advocates, and informed family members can quickly find what they need, without spending hours searching for it."
               }
             },
             "philosophy": {
@@ -4109,7 +4109,7 @@ i18n
             "principles": {
               "title": "Guiding Principles",
               "description": "This project is guided by the principles of fairness, transparency, data privacy, and compliance with applicable laws and ethical guidelines governing legal practice.",
-              "disclaimer": "The AI agent is not a substitute for a licensed attorney but a support tool to supplement human legal counsel and improve access to equitable defense resources."
+              "disclaimer": "OpenDefender is not a substitute for a licensed attorney. It is an orientation tool, designed to help you understand what is happening, what your options are, and where to find the right support, whether that is legal, logistical, or personal."
             }
           },
           "privacyPolicy": {
@@ -9428,7 +9428,7 @@ i18n
           "missionStatement": {
             "hero": {
               "title": "Declaración de Misión",
-              "subtitle1": "La defensa pública en Estados Unidos está subfinanciada y sobrecargada. Los defensores públicos y sus aliados son llamados a hacer lo imposible con casi nada. La brecha entre lo que las personas necesitan y lo que el sistema ofrece es estructural, y ha quedado sin resolver por demasiado tiempo. Si puede pagar a un abogado privado, ya sabe cómo el sistema funciona diferente para usted. Si, como la mayoría de las personas, no puede, se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso.",
+              "subtitle1": "La defensa pública en Estados Unidos está subfinanciada y sobrecargada. Los defensores públicos y sus aliados son llamados a hacer lo imposible con casi nada. La brecha entre lo que las personas necesitan y lo que el sistema ofrece es estructural, y ha quedado sin resolver por demasiado tiempo. Si puede pagar a un abogado privado o asesores, ya sabe cómo el sistema funciona diferente para usted. Si, como la mayoría de las personas, no puede, se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso.",
               "subtitle2": "OpenDefender es un bien público dedicado a aprovechar la IA, datos legales y automatización para brindar asistencia oportuna, útil y accesible a personas que se enfrentan al sistema de justicia penal o de aplicación de inmigración de EE.UU. y que pueden no tener acceso a asesoramiento legal o apoyo en su caso. El sitio y todo su contenido son completamente de código abierto, asegurando que permanezca gratuito y accesible para todos los que lo necesiten."
             },
             "publicGood": {
@@ -9438,19 +9438,19 @@ i18n
               "title": "Nuestros Objetivos Principales",
               "expandAccess": {
                 "title": "Expandir el Acceso a la Justicia",
-                "description": "Brindar apoyo preliminar al caso, orientación y perspectivas relevantes a quien lo necesite — sin costo alguno. Quienes más necesitan esto son quienes siempre han tenido que enfrentar el sistema solos."
+                "description": "Brindar apoyo preliminar al caso, planes de acción oportunos y orientación práctica a quien lo necesite, sin costo alguno. Quienes más necesitan esto son quienes siempre han tenido que resolverlo solos, en las horas más aterradoras de sus vidas."
               },
               "supportDefenders": {
-                "title": "Apoyar Flujos de Trabajo de Defensores Públicos",
-                "description": "Proporcionar a los defensores públicos acceso rápido a datos legales agregados, estadísticas de casos y requisitos procedimentales para ayudarles a preparar estrategias de defensa más efectivas."
+                "title": "Apoyar Flujos de Trabajo de Defensores de Clientes",
+                "description": "Equipar a los defensores públicos, abogados de ayuda legal y defensores comunitarios con acceso rápido a datos agregados, herramientas procesales y recursos de apoyo, para que más de su tiempo vaya directamente a las personas a quienes sirven, tanto dentro como fuera de la sala del tribunal."
               },
               "empowerDecisions": {
                 "title": "Empoderar la Toma de Decisiones Informadas",
-                "description": "Permitir que los acusados comprendan mejor sus derechos, opciones legales y resultados potenciales a través de explicaciones claras y en lenguaje simple fundamentadas en datos confiables."
+                "description": "Permitir que las personas comprendan mejor sus derechos, opciones y próximos pasos inmediatos, a través de explicaciones claras y en lenguaje simple fundamentadas en datos confiables. Todos merecen la oportunidad de proteger la vida que han trabajado para construir."
               },
               "increaseFairness": {
                 "title": "Aumentar la Eficiencia y Equidad",
-                "description": "Automatizar la recopilación y síntesis de conjuntos de datos legales públicos para que los acusados y abogados puedan identificar rápidamente precedentes relevantes, reglas procedimentales y tendencias de acuerdos o sentencias."
+                "description": "Hacer accesibles los datos legales públicos, las reglas procesales y los recursos de defensa para que abogados, defensores y familiares informados puedan encontrar rápidamente lo que necesitan, sin pasar horas buscando."
               }
             },
             "philosophy": {
@@ -9461,7 +9461,7 @@ i18n
             "principles": {
               "title": "Principios Rectores",
               "description": "Este proyecto está guiado por los principios de equidad, transparencia, privacidad de datos y cumplimiento con las leyes aplicables y pautas éticas que rigen la práctica legal.",
-              "disclaimer": "El agente de IA no sustituye a un abogado con licencia, sino que es una herramienta de apoyo para complementar el asesoramiento legal humano y mejorar el acceso a recursos de defensa equitativos."
+              "disclaimer": "OpenDefender no sustituye a un abogado con licencia. Es una herramienta de orientación, diseñada para ayudarle a entender lo que está ocurriendo, cuáles son sus opciones y dónde encontrar el apoyo adecuado, ya sea legal, logístico o personal."
             }
           },
           "privacyPolicy": {
@@ -14779,7 +14779,7 @@ i18n
             "hero": {
               "title": "使命宣言",
               "subtitle": "OpenDefender 是一项公益服务，致力于利用人工智能、法律数据和自动化技术，为美国境内被指控犯罪且可能无法立即获得法律顾问的个人提供及时、准确、便捷的帮助。本平台基于开源原则构建，代码采用 MIT 许可证，文档采用 CC0（知识共享零权利）许可证，确保所有需要帮助的人都能免费使用。",
-              "subtitle1": "美国的公设辩护工作长期面临经费不足、人员超负荷的困境。公设辩护人及其盟友被要求在几乎一无所有的情况下完成不可能完成的任务。人们的需求与体制所能提供的之间存在结构性差距，而这一差距长期未得到解决。如果您负担得起私人律师，您已经知道这个体制对您的运作方式有所不同。如果您像大多数人一样无力承担，您就被迫独自面对这一切。OpenDefender 正是为了改变这一现状而建立的。",
+              "subtitle1": "美国的公设辩护工作长期面临经费不足、人员超负荷的困境。公设辩护人及其盟友被要求在几乎一无所有的情况下完成不可能完成的任务。人们的需求与体制所能提供的之间存在结构性差距，而这一差距长期未得到解决。如果您负担得起私人律师或顾问，您已经知道这个体制对您的运作方式有所不同。如果您像大多数人一样无力承担，您就被迫独自面对这一切。OpenDefender 正是为了改变这一现状而建立的。",
               "subtitle2": "OpenDefender 是一项公益服务，致力于利用人工智能和网络资源，为在美国刑事司法或移民执法体系中独自奋战的个人提供及时、有用、便捷的援助。本网站完全开源，确保所有需要帮助的人都能免费使用。"
             },
             "publicGood": {
@@ -14789,19 +14789,19 @@ i18n
               "title": "我们的主要目标",
               "expandAccess": {
                 "title": "扩大司法服务覆盖面",
-                "description": "免费为被告提供初步法律信息、指导和案件相关分析，减少弱势群体获取法律帮助的障碍。"
+                "description": "为任何有需要的人免费提供初步案件支持、及时行动计划和实用指导。最需要这些帮助的人，正是那些一直被迫独自面对这一切的人，在他们人生中最艰难的时刻。"
               },
               "supportDefenders": {
-                "title": "支持公设辩护人的工作",
-                "description": "帮助公设辩护人快速获取汇总的法律数据、案件统计和程序要求，协助他们制定更有效的辩护策略。"
+                "title": "支持客户倡导者的工作",
+                "description": "为公设辩护人、法律援助律师和社区倡导者提供快速获取汇总数据、程序工具和支持资源的途径，使他们能将更多时间直接用于服务所帮助的人，无论是在法庭内外。"
               },
               "empowerDecisions": {
                 "title": "帮助做出明智的决定",
-                "description": "通过基于可靠数据的清晰易懂的解释，帮助被告更好地了解自己的权利、法律选项和可能的结果。"
+                "description": "通过基于可靠数据的清晰易懂的解释，帮助人们更好地了解自己的权利、选项和下一步行动。每个人都值得拥有保护自己辛苦建立的生活的机会。"
               },
               "increaseFairness": {
                 "title": "提高效率和公平性",
-                "description": "自动收集和整合公共法律数据，帮助被告和律师快速找到相关判例、程序规则以及认罪协议或量刑趋势。"
+                "description": "整合公共法律数据、程序规则和倡导资源，让律师、倡导者和知情的家庭成员能够快速找到所需信息，无需花费数小时搜索。"
               }
             },
             "philosophy": {
@@ -14812,7 +14812,7 @@ i18n
             "principles": {
               "title": "指导原则",
               "description": "本项目以公平、透明、数据隐私以及遵守适用法律和法律执业道德准则为指导原则。",
-              "disclaimer": "本 AI 工具不能替代持证律师，而是作为辅助工具来补充人工法律咨询，并改善获得公平辩护资源的途径。"
+              "disclaimer": "OpenDefender 不能替代持证律师。它是一个指导工具，旨在帮助您了解正在发生的事情、您的选择以及在哪里找到合适的支持，无论是法律上的、后勤上的还是个人方面的。"
             }
           },
           "privacyPolicy": {
