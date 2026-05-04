@@ -76,11 +76,11 @@ i18n
               "title": "Built on Trust & Transparency",
               "subtitle": "Built on verified legal data, trusted advocacy sources, and a commitment to your privacy",
               "verifiedTitle": "Current & Verified Information",
-              "verifiedDesc": "Verified regularly against current statutes, court decisions, and legal procedures.",
+              "verifiedDesc": "Verified regularly against current statutes, court decisions, and legal procedures",
               "privacyTitle": "Privacy Protected",
               "privacyDesc": "No personal information stored, all session data automatically deleted",
               "currentTitle": "Early Advocacy Sources",
-              "currentDesc": "Drawn from legal aid organizations, public defenders, and trusted advocates.",
+              "currentDesc": "Drawn from legal aid organizations, public defenders, and trusted advocates",
               "disclaimerTitle": "Legal Disclaimer:",
               "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
