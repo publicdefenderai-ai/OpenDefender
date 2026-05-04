@@ -80,7 +80,7 @@ i18n
               "privacyTitle": "Privacy Protected",
               "privacyDesc": "No personal information stored, all session data automatically deleted",
               "currentTitle": "Early Advocacy Sources",
-              "currentDesc": "Sourced from legal aid organizations, public defenders, and advocacy groups.",
+              "currentDesc": "Drawn from legal aid organizations, public defenders, and trusted advocates.",
               "disclaimerTitle": "Legal Disclaimer:",
               "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
             },
@@ -5432,7 +5432,7 @@ i18n
               "privacyTitle": "Privacidad Protegida",
               "privacyDesc": "No se almacena información personal, todos los datos de la sesión se eliminan automáticamente",
               "currentTitle": "Fuentes de Defensa Temprana",
-              "currentDesc": "Obtenido de organizaciones de ayuda legal, defensores públicos y grupos de defensa.",
+              "currentDesc": "Obtenido de organizaciones de ayuda legal, defensores públicos y defensores de confianza.",
               "disclaimerTitle": "Descargo de Responsabilidad Legal:",
               "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
             },
@@ -10783,7 +10783,7 @@ i18n
               "privacyTitle": "隐私受到保护",
               "privacyDesc": "不存储个人信息，所有会话数据自动删除",
               "currentTitle": "早期倡导来源",
-              "currentDesc": "来源于法律援助组织、公共辩护人和倡导团体。",
+              "currentDesc": "来源于法律援助组织、公共辩护人和可信赖的倡导者。",
               "disclaimerTitle": "法律免责声明：",
               "disclaimerText": "本AI仅提供一般性法律信息，不能替代专业法律建议。请务必就你的具体情况咨询合格的律师。所提供的信息可能未反映最新的法律动态，不应作为法律意见依赖。"
             },
