@@ -44,3 +44,6 @@ scraped-*.json
 
 # Content review script output (ephemeral CI artifacts)
 scripts/content-review/output/
+
+# Generated output documents (not source code)
+outputs/

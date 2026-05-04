@@ -9,7 +9,7 @@ import { legalDataService } from "./services/legal-data";
 import { recapService } from "./services/recap";
 import { bjsStatisticsService } from "./services/bjs-statistics";
 import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSchema } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories } from "../shared/criminal-charges.js";
@@ -136,6 +136,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
     validate: { trustProxy: false, xForwardedForHeader: false }
   });
 
+  // Rate limiter for document chat (30 messages per 15 min per IP)
+  const docChatRateLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 30,
+    message: {
+      success: false,
+      error: 'Too many document questions from this IP. Please wait 15 minutes before asking more.',
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: (req) => process.env.NODE_ENV === 'development',
+    validate: { trustProxy: false, xForwardedForHeader: false },
+  });
+
+  // Rate limiter for anonymous guidance flags (10 per hour per IP)
+  const flagRateLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000,
+    max: 10,
+    message: { success: false, error: 'Too many flag requests. Please try again later.' },
+    standardHeaders: true,
+    legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false }
+  });
+
+  // Rate limiter for equity audit (2 per hour — AI cost control)
+  const equityAuditLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000,
+    max: 2,
+    message: { success: false, error: 'Equity audit rate limit reached. Try again in 1 hour.' },
+    validate: { trustProxy: false, xForwardedForHeader: false },
+  });
+
   // ============================================================================
   // SECURITY: Input Validation Helpers
   // ============================================================================
@@ -165,34 +197,52 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
 
   /**
-   * Middleware to protect administrative endpoints with API key authentication.
-   * Set ADMIN_API_KEY environment variable to enable protection.
+   * Middleware to protect administrative endpoints with token authentication.
+   * Set ADMIN_TOKEN environment variable to enable protection.
    * If not set, admin endpoints are disabled in production for security.
+   *
+   * SECURITY: Uses timing-safe comparison to prevent timing-oracle attacks.
+   * SECURITY: ADMIN_DISABLE_AUTH=true is blocked outright in production.
    */
   const requireAdminAuth = (req: Request, res: Response, next: NextFunction) => {
-    const adminApiKey = process.env.ADMIN_API_KEY;
-
-    // Without ADMIN_API_KEY, admin endpoints are disabled unless explicitly
-    // opted in via ADMIN_DISABLE_AUTH=true (never set this in production).
-    if (!adminApiKey) {
-      if (process.env.ADMIN_DISABLE_AUTH === 'true') {
-        devLog('security', 'Admin endpoint accessed with auth disabled via ADMIN_DISABLE_AUTH=true');
-        return next();
+    // S4: Block ADMIN_DISABLE_AUTH in production unconditionally.
+    if (process.env.ADMIN_DISABLE_AUTH === 'true') {
+      if (process.env.NODE_ENV === 'production') {
+        errLog('ADMIN_DISABLE_AUTH=true is set in production — blocking request and alerting');
+        return res.status(503).json({ success: false, error: 'Admin access misconfigured.' });
       }
+      devLog('security', 'Admin endpoint accessed with auth disabled via ADMIN_DISABLE_AUTH=true');
+      return next();
+    }
+
+    // S2: Single token source — ADMIN_TOKEN — used by all admin endpoints.
+    const adminToken = process.env.ADMIN_TOKEN;
+    if (!adminToken) {
       return res.status(503).json({
         success: false,
-        error: 'Administrative endpoints are disabled. Set ADMIN_API_KEY to enable.'
+        error: 'Administrative endpoints are disabled. Set ADMIN_TOKEN to enable.'
       });
     }
 
-    // Check for API key in header
-    const providedKey = req.headers['x-admin-api-key'] || req.headers['authorization']?.replace('Bearer ', '');
+    // Accept token via Authorization: Bearer <token> or X-Admin-Api-Key: <token>
+    const providedKey = req.headers['authorization']?.replace('Bearer ', '')
+      ?? (req.headers['x-admin-api-key'] as string)
+      ?? '';
 
-    if (!providedKey || providedKey !== adminApiKey) {
+    // S1: Timing-safe comparison — prevents byte-by-byte timing oracle attacks.
+    const tokenBuf = Buffer.from(adminToken);
+    const keyBuf = Buffer.from(providedKey);
+    const lengthMatch = tokenBuf.length === keyBuf.length;
+    // Always run timingSafeEqual to avoid leaking length via branch timing.
+    const valueMatch = timingSafeEqual(
+      tokenBuf,
+      lengthMatch ? keyBuf : tokenBuf,
+    );
+    if (!lengthMatch || !valueMatch) {
       opsLog('security', `Unauthorized admin access attempt from ${req.ip}`);
       return res.status(401).json({
         success: false,
-        error: 'Unauthorized. Valid admin API key required.'
+        error: 'Unauthorized. Valid admin token required.'
       });
     }
 
@@ -1393,7 +1443,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         timestamp: new Date().toISOString()
       });
     } catch (error) {
-      console.error("Failed to clear session:", error);
+      errLog("Failed to clear session:", error);
       res.status(500).json({ success: false, error: "Failed to clear session" });
     }
   });
@@ -2463,19 +2513,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * - extractedText server-side cap at 80k chars regardless of what client sends
    * - Input sanitized via z.string().max() + server-side trim
    */
-  const docChatRateLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 30,
-    message: {
-      success: false,
-      error: 'Too many document questions from this IP. Please wait 15 minutes before asking more.',
-    },
-    standardHeaders: true,
-    legacyHeaders: false,
-    skip: (req) => process.env.NODE_ENV === 'development',
-    validate: { trustProxy: false, xForwardedForHeader: false },
-  });
-
   app.post(
     '/api/document-summary/chat',
     requireServiceBudget('document-summarizer'),
@@ -2530,15 +2567,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // GUIDANCE FLAGS — Anonymous quality feedback (zero PII stored)
   // ============================================================================
 
-  const flagRateLimiter = rateLimit({
-    windowMs: 60 * 60 * 1000, // 1 hour
-    max: 10, // max 10 flags per IP per hour
-    message: { success: false, error: 'Too many flag requests. Please try again later.' },
-    standardHeaders: true,
-    legacyHeaders: false,
-    validate: { trustProxy: false, xForwardedForHeader: false }
-  });
-
   app.post("/api/guidance/flag", flagRateLimiter, async (req: Request, res: Response) => {
     try {
       const schema = insertGuidanceFlagSchema.extend({
@@ -2570,16 +2598,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Admin-only: view flag data. Requires Authorization: Bearer <ADMIN_TOKEN> header.
-  app.get("/api/admin/guidance-flags", async (req: Request, res: Response) => {
-    const adminToken = process.env.ADMIN_TOKEN;
-    if (!adminToken) {
-      return res.status(503).json({ success: false, error: 'Admin access not configured.' });
-    }
-    const authHeader = req.headers.authorization;
-    if (!authHeader || authHeader !== `Bearer ${adminToken}`) {
-      return res.status(401).json({ success: false, error: 'Unauthorized.' });
-    }
+  // Admin-only: view flag data. Protected by requireAdminAuth middleware.
+  app.get("/api/admin/guidance-flags", requireAdminAuth, adminRateLimiter, async (req: Request, res: Response) => {
     try {
       const [flags, summary] = await Promise.all([
         storage.getGuidanceFlags(200),
@@ -2592,25 +2612,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Admin-only: run a demographic equity audit. Requires Authorization: Bearer <ADMIN_TOKEN>.
+  // Admin-only: run a demographic equity audit. Protected by requireAdminAuth middleware.
   // Runs two paired case scenarios through the AI and returns outputs + metrics for human review.
   // Rate-limited to 2 requests per hour to control AI cost.
-  const equityAuditLimiter = rateLimit({
-    windowMs: 60 * 60 * 1000,
-    max: 2,
-    message: { success: false, error: 'Equity audit rate limit reached. Try again in 1 hour.' },
-  });
-
-  app.post("/api/admin/equity-audit", equityAuditLimiter, async (req: Request, res: Response) => {
-    const adminToken = process.env.ADMIN_TOKEN;
-    if (!adminToken) {
-      return res.status(503).json({ success: false, error: 'Admin access not configured.' });
-    }
-    const authHeader = req.headers.authorization;
-    if (!authHeader || authHeader !== `Bearer ${adminToken}`) {
-      return res.status(401).json({ success: false, error: 'Unauthorized.' });
-    }
-
+  app.post("/api/admin/equity-audit", requireAdminAuth, adminRateLimiter, equityAuditLimiter, async (req: Request, res: Response) => {
     const { scenarioPairId } = req.body || {};
     if (!scenarioPairId || typeof scenarioPairId !== 'string') {
       return res.status(400).json({
