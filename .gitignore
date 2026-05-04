@@ -47,3 +47,11 @@ scripts/content-review/output/
 
 # Generated output documents (not source code)
 outputs/
+
+# Python tooling (one-off data scripts, not part of Node.js app)
+pyproject.toml
+.pythonlibs/
+
+# Agent / internal ops files (not source code)
+CLAUDE.md
+EDITORIAL_REVIEW_LOG.md
