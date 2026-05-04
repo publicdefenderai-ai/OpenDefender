@@ -494,12 +494,12 @@ export default function Home() {
             <Card className="border-border/50">
               <CardContent className="p-5 md:p-6">
                 <TrustItem
-                  title={t('home.trust.verifiedTitle')}
-                  description={t('home.trust.verifiedDesc')}
-                />
-                <TrustItem
                   title={t('home.trust.privacyTitle')}
                   description={t('home.trust.privacyDesc')}
+                />
+                <TrustItem
+                  title={t('home.trust.verifiedTitle')}
+                  description={t('home.trust.verifiedDesc')}
                 />
                 <TrustItem
                   title={t('home.trust.currentTitle')}
