@@ -6,6 +6,7 @@
  * without touching the 100K+ line base data file.
  *
  * Confidence levels:
+ *   'low'          — training-data derived or inferred; requires verification before use in UI
  *   'medium'       — confirmed via secondary source (Justia, state legislature, NCSL)
  *   'needs_review' — OpenLaws API returned not_found; human review required before promoting
  *   'high'         — confirmed via OpenLaws API traversal or cross-verified against official state
@@ -26,7 +27,7 @@ export interface CitationRecord {
   citation: string;
   /** Secondary citations (alternate section, effective date range, etc.) */
   alternateCitations?: string[];
-  confidence: 'medium' | 'needs_review' | 'high';
+  confidence: 'low' | 'medium' | 'needs_review' | 'high';
   /** YYYY-MM when this entry was last verified */
   lastVerified: string;
   /** Source used to confirm citation (secondary source name or 'OpenLaws') */
