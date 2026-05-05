@@ -5125,6 +5125,95 @@ export default {
   "howTo": {
     "pageTitle": "Navigate This Tool",
     "pageSubtitle": "Find legal resources, understand your rights, and get the support you need",
+    "hero": {
+      "title": "Where do you want to start?",
+      "subtitle": "OpenDefender has four main paths. Most people use more than one. Choose based on where you are right now.",
+      "pills": {
+        "first24": "First 24 Hours",
+        "caseGuidance": "Case Guidance",
+        "lifeSupport": "Life Support",
+        "immigration": "Immigration"
+      }
+    },
+    "paths": {
+      "path1": {
+        "badge": "Just arrested or recently released",
+        "headline": "First 24 Hours After Arrest",
+        "subhead": "The decisions made in the first day set the course of the entire case. This guide walks you through every step from the moment of arrest to your first court appearance.",
+        "bullet1": "7-step guide: arrest, booking, phone calls, bail, counsel, arraignment",
+        "bullet2": "State-by-state inmate locator — all 50 states plus federal facilities",
+        "bullet3": "Scripts for your one phone call from jail",
+        "bullet4": "When your right to a lawyer actually begins, by state",
+        "cta": "Open First 24 Hours"
+      },
+      "path2": {
+        "badge": "Understand your specific situation",
+        "headline": "Personalized Case Guidance",
+        "subhead": "Answer a few questions and get AI-powered guidance tailored to your charges, location, and situation. Private by design — your answers are never stored.",
+        "bullet1": "5-step intake: safety check, location, charges, situation, details",
+        "bullet2": "Explains your charges in plain language",
+        "bullet3": "Identifies diversion programs and plea options in your state",
+        "bullet4": "Powered by Claude AI with verified legal accuracy checks",
+        "cta": "Get Case Guidance"
+      },
+      "path3": {
+        "badge": "Life doesn't stop while your case is pending",
+        "headline": "Life Support Resources",
+        "subhead": "A legal case touches every part of your life. These resources help with employment, finances, housing, mental health, and more — so you can stay stable while your case moves forward.",
+        "bullet1": "Employment rights when facing charges or after a conviction",
+        "bullet2": "Emergency financial assistance and bail funds",
+        "bullet3": "Free mental health support resources",
+        "bullet4": "Housing stability, childcare, and transportation help",
+        "cta": "Browse Life Support"
+      },
+      "path4": {
+        "badge": "Immigration or mixed-status family concerns",
+        "headline": "Immigration Rights",
+        "subhead": "Immigration law runs on a completely different clock and legal system than criminal law. Whether you are facing an ICE encounter, deportation, or have family members at risk — these rights apply to every person in the US.",
+        "bullet1": "Rights during ICE encounters and raids — citizens and non-citizens alike",
+        "bullet2": "Deportation defense and your right to a hearing",
+        "bullet3": "Guidance for mixed-status families",
+        "bullet4": "AI-powered immigration guidance in English, Spanish, and Chinese",
+        "cta": "Immigration Guidance"
+      }
+    },
+    "flow": {
+      "label": "Example Journey",
+      "title": "See how the paths work together",
+      "subtitle": "Most people use more than one path. Here is how Maria used OpenDefender through a DUI case.",
+      "step1": {
+        "time": "Day 0",
+        "path": "First 24 Hours",
+        "action": "Maria is arrested. She opens First 24 Hours on her husband's phone.",
+        "detail": "Reads Step 1: stay silent, ask for a lawyer. Learns booking takes 2–4 hours and what bail hearing to expect."
+      },
+      "step2": {
+        "time": "Day 1",
+        "path": "Personalized Guidance",
+        "action": "Released on bail. Maria uses Case Guidance to understand the DUI charge.",
+        "detail": "AI explains the charge, potential penalties, and that first-offense diversion may be available in her state."
+      },
+      "step3": {
+        "time": "Week 1",
+        "path": "Life Support",
+        "action": "Maria worries about losing her job and paying rent while her case is pending.",
+        "detail": "Support Hub connects her to an employment rights clinic and emergency rental assistance in her county."
+      },
+      "step4": {
+        "time": "Month 2",
+        "path": "Personalized Guidance",
+        "action": "Court date approaching. She asks what to expect at arraignment.",
+        "detail": "Guidance walks through the timeline, plea options, and how to talk to her public defender."
+      }
+    },
+    "inventory": {
+      "title": "Full Site Directory",
+      "subtitle": "Every page on OpenDefender, organized by what you need"
+    },
+    "collateralConsequences": "Collateral Consequences",
+    "collateralConsequencesDesc": "Hidden consequences of a conviction beyond the sentence",
+    "reputation": "Reputation & Background Checks",
+    "reputationDesc": "Managing background check impacts after an arrest or conviction",
     "privacyLabel": "Privacy First:",
     "privacyText": "We do not store your personal data — all input deleted after session.",
     "sections": {

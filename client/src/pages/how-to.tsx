@@ -200,65 +200,34 @@ function PathCard({ number, icon: Icon, badge, headline, subhead, bullets, link,
 
 // ─── Example flow ────────────────────────────────────────────────────────────
 
-const flowSteps = [
-  {
-    time: "Day 0",
-    path: "First 24 Hours",
-    accent: "#1e3a5f",
-    accentBg: "#eef2f8",
-    icon: Clock,
-    action: "Maria is arrested. She opens First 24 Hours on her husband's phone.",
-    detail: "Reads Step 1: stay silent, ask for a lawyer. Learns booking takes 2–4 hours and what bail hearing to expect.",
-  },
-  {
-    time: "Day 1",
-    path: "Personalized Guidance",
-    accent: "#0f766e",
-    accentBg: "#eef9f8",
-    icon: MessageSquare,
-    action: "Released on bail. Maria uses Case Guidance to understand the DUI charge.",
-    detail: "AI explains the charge, potential penalties, and that first-offense diversion may be available in her state.",
-  },
-  {
-    time: "Week 1",
-    path: "Life Support",
-    accent: "#8b2252",
-    accentBg: "#f8eef3",
-    icon: Heart,
-    action: "Maria worries about losing her job and paying rent while her case is pending.",
-    detail: "Support Hub connects her to an employment rights clinic and emergency rental assistance in her county.",
-  },
-  {
-    time: "Month 2",
-    path: "Personalized Guidance",
-    accent: "#0f766e",
-    accentBg: "#eef9f8",
-    icon: MessageSquare,
-    action: "Court date approaching. She asks what to expect at arraignment.",
-    detail: "Guidance walks through the timeline, plea options, and how to talk to her public defender.",
-  },
-];
+interface FlowStep {
+  time: string;
+  path: string;
+  accent: string;
+  accentBg: string;
+  icon: React.ElementType;
+  action: string;
+  detail: string;
+}
 
-function ExampleFlow() {
+function ExampleFlow({ steps, label, title, subtitle }: { steps: FlowStep[]; label: string; title: string; subtitle: string }) {
   return (
     <div className="py-14 bg-muted/30">
       <div className="max-w-3xl mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-background border border-border mb-4">
-              Example Journey
+              {label}
             </div>
-            <h2 className="text-2xl font-bold text-foreground mb-3">See how the paths work together</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto text-[15px]">
-              Most people use more than one path. Here is how Maria used OpenDefender through a DUI case.
-            </p>
+            <h2 className="text-2xl font-bold text-foreground mb-3">{title}</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-[15px]">{subtitle}</p>
           </div>
         </ScrollReveal>
 
         <div className="relative">
           <div className="absolute left-[99px] top-8 bottom-8 w-px bg-border hidden sm:block" />
           <div className="space-y-5">
-            {flowSteps.map((step, i) => (
+            {steps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="flex items-start gap-4 sm:gap-5">
                   <div className="w-16 sm:w-20 text-right flex-shrink-0 pt-2.5">
@@ -355,20 +324,51 @@ export default function HowTo() {
   useScrollToTop();
   const { t } = useTranslation();
 
+  const flowSteps: FlowStep[] = [
+    {
+      time: t("howTo.flow.step1.time"),
+      path: t("howTo.flow.step1.path"),
+      accent: "#1e3a5f", accentBg: "#eef2f8", icon: Clock,
+      action: t("howTo.flow.step1.action"),
+      detail: t("howTo.flow.step1.detail"),
+    },
+    {
+      time: t("howTo.flow.step2.time"),
+      path: t("howTo.flow.step2.path"),
+      accent: "#0f766e", accentBg: "#eef9f8", icon: MessageSquare,
+      action: t("howTo.flow.step2.action"),
+      detail: t("howTo.flow.step2.detail"),
+    },
+    {
+      time: t("howTo.flow.step3.time"),
+      path: t("howTo.flow.step3.path"),
+      accent: "#8b2252", accentBg: "#f8eef3", icon: Heart,
+      action: t("howTo.flow.step3.action"),
+      detail: t("howTo.flow.step3.detail"),
+    },
+    {
+      time: t("howTo.flow.step4.time"),
+      path: t("howTo.flow.step4.path"),
+      accent: "#0f766e", accentBg: "#eef9f8", icon: MessageSquare,
+      action: t("howTo.flow.step4.action"),
+      detail: t("howTo.flow.step4.detail"),
+    },
+  ];
+
   const paths: PathCardProps[] = [
     {
       number: "1", icon: Clock,
-      badge: "Just arrested or recently released",
-      headline: "First 24 Hours After Arrest",
-      subhead: "The decisions made in the first day set the course of the entire case. This guide walks you through every step from the moment of arrest to your first court appearance.",
+      badge: t("howTo.paths.path1.badge"),
+      headline: t("howTo.paths.path1.headline"),
+      subhead: t("howTo.paths.path1.subhead"),
       bullets: [
-        "7-step guide: arrest, booking, phone calls, bail, counsel, arraignment",
-        "State-by-state inmate locator — all 50 states plus federal facilities",
-        "Scripts for your one phone call from jail",
-        "When your right to a lawyer actually begins, by state",
+        t("howTo.paths.path1.bullet1"),
+        t("howTo.paths.path1.bullet2"),
+        t("howTo.paths.path1.bullet3"),
+        t("howTo.paths.path1.bullet4"),
       ],
       link: "/first-24-hours",
-      cta: "Open First 24 Hours",
+      cta: t("howTo.paths.path1.cta"),
       preview: <First24Preview />,
       flip: false,
       accent: "#1e3a5f",
@@ -376,17 +376,17 @@ export default function HowTo() {
     },
     {
       number: "2", icon: MessageSquare,
-      badge: "Understand your specific situation",
-      headline: "Personalized Case Guidance",
-      subhead: "Answer a few questions and get AI-powered guidance tailored to your charges, location, and situation. Private by design — your answers are never stored.",
+      badge: t("howTo.paths.path2.badge"),
+      headline: t("howTo.paths.path2.headline"),
+      subhead: t("howTo.paths.path2.subhead"),
       bullets: [
-        "5-step intake: safety check, location, charges, situation, details",
-        "Explains your charges in plain language",
-        "Identifies diversion programs and plea options in your state",
-        "Powered by Claude AI with verified legal accuracy checks",
+        t("howTo.paths.path2.bullet1"),
+        t("howTo.paths.path2.bullet2"),
+        t("howTo.paths.path2.bullet3"),
+        t("howTo.paths.path2.bullet4"),
       ],
       link: "/case-guidance",
-      cta: "Get Case Guidance",
+      cta: t("howTo.paths.path2.cta"),
       preview: <GuidancePreview />,
       flip: true,
       accent: "#0f766e",
@@ -394,17 +394,17 @@ export default function HowTo() {
     },
     {
       number: "3", icon: Heart,
-      badge: "Life doesn't stop while your case is pending",
-      headline: "Life Support Resources",
-      subhead: "A legal case touches every part of your life. These resources help with employment, finances, housing, mental health, and more — so you can stay stable while your case moves forward.",
+      badge: t("howTo.paths.path3.badge"),
+      headline: t("howTo.paths.path3.headline"),
+      subhead: t("howTo.paths.path3.subhead"),
       bullets: [
-        "Employment rights when facing charges or after a conviction",
-        "Emergency financial assistance and bail funds",
-        "Free mental health support resources",
-        "Housing stability, childcare, and transportation help",
+        t("howTo.paths.path3.bullet1"),
+        t("howTo.paths.path3.bullet2"),
+        t("howTo.paths.path3.bullet3"),
+        t("howTo.paths.path3.bullet4"),
       ],
       link: "/support",
-      cta: "Browse Life Support",
+      cta: t("howTo.paths.path3.cta"),
       preview: <SupportPreview />,
       flip: false,
       accent: "#8b2252",
@@ -412,17 +412,17 @@ export default function HowTo() {
     },
     {
       number: "4", icon: Globe,
-      badge: "Immigration or mixed-status family concerns",
-      headline: "Immigration Rights",
-      subhead: "Immigration law runs on a completely different clock and legal system than criminal law. Whether you are facing an ICE encounter, deportation, or have family members at risk — these rights apply to every person in the US.",
+      badge: t("howTo.paths.path4.badge"),
+      headline: t("howTo.paths.path4.headline"),
+      subhead: t("howTo.paths.path4.subhead"),
       bullets: [
-        "Rights during ICE encounters and raids — citizens and non-citizens alike",
-        "Deportation defense and your right to a hearing",
-        "Guidance for mixed-status families",
-        "AI-powered immigration guidance in English, Spanish, and Chinese",
+        t("howTo.paths.path4.bullet1"),
+        t("howTo.paths.path4.bullet2"),
+        t("howTo.paths.path4.bullet3"),
+        t("howTo.paths.path4.bullet4"),
       ],
       link: "/immigration-guidance",
-      cta: "Immigration Guidance",
+      cta: t("howTo.paths.path4.cta"),
       preview: <ImmigrationPreview />,
       flip: true,
       accent: "#92400e",
@@ -452,7 +452,7 @@ export default function HowTo() {
         { title: t("howTo.sections.knowYourRights.quickReference.title"), description: t("howTo.sections.knowYourRights.quickReference.description"), link: "/quick-reference" },
         { title: t("howTo.sections.knowYourRights.searchSeizure.title"), description: t("howTo.sections.knowYourRights.searchSeizure.description"), link: "/search-seizure" },
         { title: t("howTo.sections.knowYourRights.friendsFamily.title"), description: t("howTo.sections.knowYourRights.friendsFamily.description"), link: "/friends-family" },
-        { title: "Collateral Consequences", description: "Hidden consequences of a conviction beyond the sentence", link: "/collateral-consequences" },
+        { title: t("howTo.collateralConsequences"), description: t("howTo.collateralConsequencesDesc"), link: "/collateral-consequences" },
         { title: t("howTo.sections.knowYourRights.mockQA.title"), description: t("howTo.sections.knowYourRights.mockQA.description"), link: "/resources" },
       ],
     },
@@ -479,7 +479,7 @@ export default function HowTo() {
         { title: t("howTo.sections.lifeSupport.transportation.title"), description: t("howTo.sections.lifeSupport.transportation.description"), link: "/support/transportation" },
         { title: t("howTo.sections.lifeSupport.childcare.title"), description: t("howTo.sections.lifeSupport.childcare.description"), link: "/support/childcare" },
         { title: t("howTo.sections.lifeSupport.courtLogistics.title"), description: t("howTo.sections.lifeSupport.courtLogistics.description"), link: "/support/court-logistics" },
-        { title: "Reputation & Background Checks", description: "Managing background check impacts after an arrest or conviction", link: "/support/reputation" },
+        { title: t("howTo.reputation"), description: t("howTo.reputationDesc"), link: "/support/reputation" },
       ],
     },
     {
@@ -518,18 +518,18 @@ export default function HowTo() {
                 <span className="text-blue-200 text-sm font-semibold tracking-wide uppercase">OpenDefender</span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white leading-tight">
-                Where do you want to start?
+                {t("howTo.hero.title")}
               </h1>
               <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto">
-                OpenDefender has four main paths. Most people use more than one. Choose based on where you are right now.
+                {t("howTo.hero.subtitle")}
               </p>
               {/* Quick-jump pills */}
               <div className="flex flex-wrap justify-center gap-2 mt-6">
                 {[
-                  { label: "First 24 Hours", href: "#path-1" },
-                  { label: "Case Guidance", href: "#path-2" },
-                  { label: "Life Support", href: "#path-3" },
-                  { label: "Immigration", href: "#path-4" },
+                  { label: t("howTo.hero.pills.first24"),      href: "#path-1" },
+                  { label: t("howTo.hero.pills.caseGuidance"), href: "#path-2" },
+                  { label: t("howTo.hero.pills.lifeSupport"),  href: "#path-3" },
+                  { label: t("howTo.hero.pills.immigration"),  href: "#path-4" },
                 ].map(({ label, href }) => (
                   <a
                     key={label}
@@ -560,15 +560,20 @@ export default function HowTo() {
       </section>
 
       {/* Example journey */}
-      <ExampleFlow />
+      <ExampleFlow
+        steps={flowSteps}
+        label={t("howTo.flow.label")}
+        title={t("howTo.flow.title")}
+        subtitle={t("howTo.flow.subtitle")}
+      />
 
       {/* Full site inventory */}
       <section className="py-12 bg-muted/20">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-8">
-              <h2 className="text-xl font-bold text-foreground mb-2">Full Site Directory</h2>
-              <p className="text-sm text-muted-foreground">Every page on OpenDefender, organized by what you need</p>
+              <h2 className="text-xl font-bold text-foreground mb-2">{t("howTo.inventory.title")}</h2>
+              <p className="text-sm text-muted-foreground">{t("howTo.inventory.subtitle")}</p>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -5124,6 +5124,95 @@ export default {
   "howTo": {
     "pageTitle": "Guía de Navegación",
     "pageSubtitle": "Encuentre recursos legales, entienda sus derechos y obtenga el apoyo que necesita",
+    "hero": {
+      "title": "¿Por dónde quiere comenzar?",
+      "subtitle": "OpenDefender tiene cuatro caminos principales. La mayoría de las personas usa más de uno. Elija según dónde se encuentre ahora.",
+      "pills": {
+        "first24": "Primeras 24 Horas",
+        "caseGuidance": "Orientación de Caso",
+        "lifeSupport": "Apoyo para la Vida",
+        "immigration": "Inmigración"
+      }
+    },
+    "paths": {
+      "path1": {
+        "badge": "Recién arrestado o recién liberado",
+        "headline": "Primeras 24 Horas Tras el Arresto",
+        "subhead": "Las decisiones tomadas en el primer día marcan el curso de todo el caso. Esta guía lo lleva por cada paso desde el momento del arresto hasta su primera comparecencia en el tribunal.",
+        "bullet1": "Guía de 7 pasos: arresto, procesamiento, llamadas, fianza, abogado, audiencia",
+        "bullet2": "Localizador de reclusos por estado — los 50 estados más instalaciones federales",
+        "bullet3": "Guiones para su única llamada telefónica desde la cárcel",
+        "bullet4": "Cuándo comienza realmente su derecho a un abogado, según el estado",
+        "cta": "Abrir Primeras 24 Horas"
+      },
+      "path2": {
+        "badge": "Entienda su situación específica",
+        "headline": "Orientación Personalizada de Caso",
+        "subhead": "Responda algunas preguntas y obtenga orientación impulsada por IA adaptada a sus cargos, ubicación y situación. Privada por diseño — sus respuestas nunca se almacenan.",
+        "bullet1": "Proceso de 5 pasos: verificación de seguridad, ubicación, cargos, situación, detalles",
+        "bullet2": "Explica sus cargos en lenguaje sencillo",
+        "bullet3": "Identifica programas de diversión y opciones de acuerdo en su estado",
+        "bullet4": "Impulsado por Claude AI con verificaciones de precisión legal",
+        "cta": "Obtener Orientación de Caso"
+      },
+      "path3": {
+        "badge": "La vida no se detiene mientras su caso está pendiente",
+        "headline": "Recursos de Apoyo para la Vida",
+        "subhead": "Un caso legal afecta cada parte de su vida. Estos recursos ayudan con empleo, finanzas, vivienda, salud mental y más — para que pueda mantenerse estable mientras su caso avanza.",
+        "bullet1": "Derechos laborales cuando enfrenta cargos o después de una condena",
+        "bullet2": "Asistencia financiera de emergencia y fondos de fianza",
+        "bullet3": "Recursos gratuitos de apoyo para la salud mental",
+        "bullet4": "Estabilidad de vivienda, cuidado infantil y ayuda de transporte",
+        "cta": "Ver Apoyo para la Vida"
+      },
+      "path4": {
+        "badge": "Preocupaciones de inmigración o familia de estatus mixto",
+        "headline": "Derechos de Inmigración",
+        "subhead": "La ley de inmigración opera en un calendario y sistema legal completamente diferente al derecho penal. Ya sea que enfrente un encuentro con ICE, deportación, o tenga familiares en riesgo — estos derechos aplican a todas las personas en los EE. UU.",
+        "bullet1": "Derechos durante encuentros y redadas de ICE — ciudadanos y no ciudadanos por igual",
+        "bullet2": "Defensa contra la deportación y su derecho a una audiencia",
+        "bullet3": "Orientación para familias de estatus mixto",
+        "bullet4": "Orientación de inmigración impulsada por IA en inglés, español y chino",
+        "cta": "Orientación de Inmigración"
+      }
+    },
+    "flow": {
+      "label": "Ejemplo de Recorrido",
+      "title": "Vea cómo los caminos trabajan juntos",
+      "subtitle": "La mayoría de las personas usa más de un camino. Así es como María usó OpenDefender durante un caso de DUI.",
+      "step1": {
+        "time": "Día 0",
+        "path": "Primeras 24 Horas",
+        "action": "María es arrestada. Abre Primeras 24 Horas en el teléfono de su esposo.",
+        "detail": "Lee el Paso 1: guardar silencio, pedir un abogado. Aprende que el procesamiento tarda 2–4 horas y qué esperar en la audiencia de fianza."
+      },
+      "step2": {
+        "time": "Día 1",
+        "path": "Orientación Personalizada",
+        "action": "Liberada bajo fianza. María usa Orientación de Caso para entender el cargo de DUI.",
+        "detail": "La IA explica el cargo, las posibles penas y que puede haber un programa de diversión para el primer delito en su estado."
+      },
+      "step3": {
+        "time": "Semana 1",
+        "path": "Apoyo para la Vida",
+        "action": "María se preocupa por perder su trabajo y pagar la renta mientras su caso está pendiente.",
+        "detail": "El Centro de Apoyo la conecta con una clínica de derechos laborales y asistencia de alquiler de emergencia en su condado."
+      },
+      "step4": {
+        "time": "Mes 2",
+        "path": "Orientación Personalizada",
+        "action": "Se acerca la fecha del tribunal. Pregunta qué esperar en la audiencia de presentación.",
+        "detail": "La orientación explica el cronograma, las opciones de acuerdo y cómo hablar con su defensor público."
+      }
+    },
+    "inventory": {
+      "title": "Directorio Completo del Sitio",
+      "subtitle": "Cada página en OpenDefender, organizada por lo que necesita"
+    },
+    "collateralConsequences": "Consecuencias Colaterales",
+    "collateralConsequencesDesc": "Consecuencias ocultas de una condena más allá de la sentencia",
+    "reputation": "Reputación y Verificación de Antecedentes",
+    "reputationDesc": "Gestión del impacto de la verificación de antecedentes después de un arresto o condena",
     "privacyLabel": "Privacidad Primero:",
     "privacyText": "No almacenamos sus datos personales — toda la información se elimina al finalizar la sesión.",
     "sections": {
