@@ -30,7 +30,7 @@ export default {
       "subtitle": "获取免费的法律指导，了解法庭流程，获取资源帮助你应对刑事司法系统。",
       "urgentHelpButton": "紧急求助",
       "getStartedButton": "开始使用",
-      "navigatingToolButton": "如何使用这个工具",
+      "navigatingToolButton": "这是如何运作的？",
       "urgentHelpNotice": "如果你正在被逮捕或正在出庭，请点击\"紧急求助\"获取即时指导。",
       "rotatingPrefix": "法律指导，做到",
       "rotatingWord1": "清晰",

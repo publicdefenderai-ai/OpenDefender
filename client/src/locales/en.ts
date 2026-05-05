@@ -29,7 +29,7 @@ export default {
       "subtitle": "Get free case support, understand court processes, and access resources to help navigate the criminal justice system.",
       "urgentHelpButton": "URGENT HELP NEEDED",
       "getStartedButton": "GET STARTED",
-      "navigatingToolButton": "How to use this site",
+      "navigatingToolButton": "How does this work?",
       "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance.",
       "rotatingPrefix": "Guidance that is",
       "rotatingWord1": "Clear",

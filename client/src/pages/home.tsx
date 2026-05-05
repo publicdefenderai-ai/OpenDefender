@@ -389,35 +389,15 @@ export default function Home() {
                 {t('home.hero.urgentHelpNotice')}
               </p>
               
-              <div className="mt-5 flex flex-col items-start md:items-center gap-3">
-                <Link href="/how-to">
-                  <button
-                    className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors flex items-center gap-1.5"
-                    data-testid="link-how-to"
-                    aria-label={t('home.hero.navigatingToolButton')}
-                  >
-                    <Compass className="h-4 w-4" />
-                    {t('howTo.hero.title')}
-                  </button>
-                </Link>
-                <div className="flex flex-wrap gap-2">
-                  {([
-                    { labelKey: 'howTo.hero.pills.first24',    href: '/first-24-hours',       color: '#1e3a5f' },
-                    { labelKey: 'howTo.hero.pills.caseGuidance', href: '/case-guidance',       color: '#0f766e' },
-                    { labelKey: 'howTo.hero.pills.lifeSupport', href: '/support',              color: '#8b2252' },
-                    { labelKey: 'howTo.hero.pills.immigration', href: '/immigration-guidance', color: '#92400e' },
-                  ] as const).map(({ labelKey, href, color }) => (
-                    <Link key={labelKey} href={href}>
-                      <span
-                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white hover:opacity-85 transition-opacity cursor-pointer"
-                        style={{ background: color }}
-                      >
-                        {t(labelKey)}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <Link href="/how-to">
+                <button
+                  className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-foreground/30 hover:bg-muted/50 transition-all"
+                  data-testid="link-how-to"
+                >
+                  <Compass className="h-4 w-4" />
+                  {t('home.hero.navigatingToolButton')}
+                </button>
+              </Link>
             </div>
           </ScrollReveal>
         </div>

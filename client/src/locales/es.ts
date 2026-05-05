@@ -30,7 +30,7 @@ export default {
       "subtitle": "Obtenga orientación legal gratuita, entienda los procesos judiciales y acceda a recursos para navegar el sistema de justicia penal.",
       "urgentHelpButton": "AYUDA URGENTE NECESARIA",
       "getStartedButton": "COMENZAR",
-      "navigatingToolButton": "Cómo Usar Esta Herramienta",
+      "navigatingToolButton": "¿Cómo funciona esto?",
       "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata.",
       "rotatingPrefix": "Orientación que es",
       "rotatingWord1": "Claro",
