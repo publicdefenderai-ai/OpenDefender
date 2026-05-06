@@ -15,7 +15,41 @@ export default {
       "attorneyTools": "Herramientas para Abogados",
       "attorneyToolsDesc": "Redacción de documentos para profesionales legales",
       "friendsFamily": "Para Familias",
-      "friendsFamilyDesc": "Guía de apoyo si un familiar fue acusado o detenido"
+      "friendsFamilyDesc": "Guía de apoyo si un familiar fue acusado o detenido",
+      "familySection": "Para Familias y Amigos"
+    },
+    "nav": {
+      "first24Hours": "Las Primeras 24 Horas",
+      "support": "Apoyo para la Vida",
+      "caseGuidance": "Obtener Orientación",
+      "immigration": "Inmigración",
+      "explore": "Explorar"
+    },
+    "dropdown": {
+      "guidance": {
+        "personalized": "Orientación Personalizada",
+        "personalizedDesc": "Mapa de IA para sus cargos y situación",
+        "chat": "Chat con IA",
+        "chatDesc": "Conversación abierta con nuestro asistente de IA",
+        "summarizer": "Resumidor de Documentos",
+        "summarizerDesc": "Entienda los documentos legales de su caso"
+      },
+      "immigration": {
+        "general": "Información General",
+        "generalDesc": "Descripción general de derechos y recursos migratorios",
+        "situational": "Guías por Situación",
+        "situationalDesc": "Encuentros con ICE, redadas, detención y más",
+        "rights": "Conozca Sus Derechos",
+        "rightsDesc": "Sus derechos independientemente del estatus migratorio",
+        "detained": "Localizar a una Persona Detenida",
+        "detainedDesc": "Encontrar a alguien bajo custodia de ICE",
+        "lawyer": "Encontrar un Abogado",
+        "lawyerDesc": "Representación legal en inmigración"
+      }
+    },
+    "mobile": {
+      "navigate": "Navegar",
+      "more": "Más"
     },
     "language": "Idioma",
     "theme": "Tema",

@@ -115,55 +115,117 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* 4-path selector */}
+          {/* Hero CTA — urgent help only */}
           <ScrollReveal delay={0.2}>
-            <div className="w-full max-w-lg mx-auto space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {([
-                  { href: "/first-24-hours",      Icon: Clock,        label: t('home.hero.path1Label'), desc: t('home.hero.path1Desc'), color: "text-slate-700 dark:text-slate-300",  bg: "bg-slate-50 hover:bg-slate-100 border-slate-200 dark:bg-slate-800/60 dark:hover:bg-slate-800 dark:border-slate-700",   testId: "path-first-24" },
-                  { href: "/case-guidance",       Icon: MessageSquare,label: t('home.hero.path2Label'), desc: t('home.hero.path2Desc'), color: "text-teal-700 dark:text-teal-300",    bg: "bg-teal-50 hover:bg-teal-100 border-teal-200 dark:bg-teal-900/30 dark:hover:bg-teal-900/50 dark:border-teal-800/60", testId: "path-guidance" },
-                  { href: "/support",             Icon: Heart,        label: t('home.hero.path3Label'), desc: t('home.hero.path3Desc'), color: "text-rose-700 dark:text-rose-300",    bg: "bg-rose-50 hover:bg-rose-100 border-rose-200 dark:bg-rose-900/20 dark:hover:bg-rose-900/40 dark:border-rose-800/60",   testId: "path-support" },
-                  { href: "/immigration-guidance",Icon: Globe2,       label: t('home.hero.path4Label'), desc: t('home.hero.path4Desc'), color: "text-amber-700 dark:text-amber-300",  bg: "bg-amber-50 hover:bg-amber-100 border-amber-200 dark:bg-amber-900/20 dark:hover:bg-amber-900/40 dark:border-amber-800/60",testId: "path-immigration" },
-                ] as const).map(({ href, Icon, label, desc, color, bg, testId }) => (
-                  <Link key={href} href={href}>
-                    <div
-                      className={`flex items-start gap-3 p-4 rounded-xl border text-left cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg}`}
-                      data-testid={testId}
-                    >
-                      <Icon className={`h-5 w-5 flex-shrink-0 mt-0.5 ${color}`} strokeWidth={1.75} />
-                      <div className="min-w-0">
-                        <p className={`font-semibold text-sm leading-snug ${color}`}>{label}</p>
-                        <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-
+            <div className="w-full max-w-sm mx-auto">
               <Button
                 onClick={handleUrgentHelp}
                 variant="outline"
                 size="lg"
-                className="w-full font-medium py-4 rounded-xl text-base border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-950/50 transition-all"
+                className="w-full font-semibold py-5 rounded-xl text-base border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-950/50 transition-all"
                 data-testid="button-urgent-help"
               >
                 <AlertTriangle className="h-4 w-4 mr-2" />
                 {t('home.hero.urgentHelpButton')}
               </Button>
-
-              <div className="text-center">
-                <Link href="/how-to">
-                  <button
-                    className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid="link-how-to"
-                  >
-                    {t('home.hero.navigatingToolButton')}
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </button>
-                </Link>
-              </div>
+              <p className="text-xs text-muted-foreground text-center mt-2">{t('home.hero.urgentHelpNotice')}</p>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Four paths — text-only cards, no browser previews */}
+      <section className="py-12 md:py-16 bg-background" id="paths">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2">{t('howTo.hero.subtitle', 'Four ways to use this site')}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{t('howTo.hero.title', 'Where do you want to start?')}</h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {([
+              { number: "1", accent: "#1e3a5f", accentBg: "#eef2f8", Icon: Clock,        badge: t('howTo.paths.path1.badge'), headline: t('howTo.paths.path1.headline'), subhead: t('howTo.paths.path1.subhead'), bullets: [t('howTo.paths.path1.bullet1'), t('howTo.paths.path1.bullet2'), t('howTo.paths.path1.bullet3'), t('howTo.paths.path1.bullet4')], link: "/first-24-hours", cta: t('howTo.paths.path1.cta') },
+              { number: "2", accent: "#0f766e", accentBg: "#eef9f8", Icon: MessageSquare, badge: t('howTo.paths.path2.badge'), headline: t('howTo.paths.path2.headline'), subhead: t('howTo.paths.path2.subhead'), bullets: [t('howTo.paths.path2.bullet1'), t('howTo.paths.path2.bullet2'), t('howTo.paths.path2.bullet3'), t('howTo.paths.path2.bullet4')], link: "/case-guidance",  cta: t('howTo.paths.path2.cta') },
+              { number: "3", accent: "#8b2252", accentBg: "#f8eef3", Icon: Heart,         badge: t('howTo.paths.path3.badge'), headline: t('howTo.paths.path3.headline'), subhead: t('howTo.paths.path3.subhead'), bullets: [t('howTo.paths.path3.bullet1'), t('howTo.paths.path3.bullet2'), t('howTo.paths.path3.bullet3'), t('howTo.paths.path3.bullet4')], link: "/support",        cta: t('howTo.paths.path3.cta') },
+              { number: "4", accent: "#92400e", accentBg: "#fef3e2", Icon: Globe2,        badge: t('howTo.paths.path4.badge'), headline: t('howTo.paths.path4.headline'), subhead: t('howTo.paths.path4.subhead'), bullets: [t('howTo.paths.path4.bullet1'), t('howTo.paths.path4.bullet2'), t('howTo.paths.path4.bullet3'), t('howTo.paths.path4.bullet4')], link: "/immigration-guidance", cta: t('howTo.paths.path4.cta') },
+            ] as const).map(({ number, accent, accentBg, Icon, badge, headline, subhead, bullets, link, cta }, i) => (
+              <ScrollReveal key={number} delay={i * 0.07}>
+                <div className="flex flex-col h-full rounded-2xl border border-border bg-background shadow-sm overflow-hidden">
+                  <div className="flex-1 p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={{ background: accent }}>{number}</div>
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold" style={{ background: accentBg, color: accent }}>
+                        <Icon className="w-3 h-3" />
+                        <span>{badge}</span>
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground mb-2 leading-snug">{headline}</h3>
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{subhead}</p>
+                    <ul className="space-y-2">
+                      {bullets.map((b, bi) => (
+                        <li key={bi} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: accentBg }}>
+                            <div className="w-1.5 h-1.5 rounded-full" style={{ background: accent }} />
+                          </div>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="px-6 pb-5">
+                    <Link href={link}>
+                      <button className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90 w-full justify-center" style={{ background: accent }}>
+                        {cta} <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Example journey */}
+      <section className="py-12 bg-muted/30">
+        <div className="max-w-3xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-background border border-border mb-4">
+                {t('howTo.flow.label', 'Example')}
+              </div>
+              <h2 className="text-2xl font-bold text-foreground mb-3">{t('howTo.flow.title', 'A typical first use')}</h2>
+              <p className="text-muted-foreground max-w-xl mx-auto text-[15px]">{t('howTo.flow.subtitle', 'Most people use OpenDefender in this order.')}</p>
+            </div>
+          </ScrollReveal>
+          <div className="relative">
+            <div className="absolute left-[99px] top-8 bottom-8 w-px bg-border hidden sm:block" />
+            <div className="space-y-5">
+              {([
+                { time: t('howTo.flow.step1.time'), path: t('howTo.flow.step1.path'), accent: "#1e3a5f", accentBg: "#eef2f8", Icon: Clock,        action: t('howTo.flow.step1.action'), detail: t('howTo.flow.step1.detail') },
+                { time: t('howTo.flow.step2.time'), path: t('howTo.flow.step2.path'), accent: "#0f766e", accentBg: "#eef9f8", Icon: MessageSquare, action: t('howTo.flow.step2.action'), detail: t('howTo.flow.step2.detail') },
+                { time: t('howTo.flow.step3.time'), path: t('howTo.flow.step3.path'), accent: "#8b2252", accentBg: "#f8eef3", Icon: Heart,         action: t('howTo.flow.step3.action'), detail: t('howTo.flow.step3.detail') },
+                { time: t('howTo.flow.step4.time'), path: t('howTo.flow.step4.path'), accent: "#0f766e", accentBg: "#eef9f8", Icon: MessageSquare, action: t('howTo.flow.step4.action'), detail: t('howTo.flow.step4.detail') },
+              ] as const).map(({ time, path, accent, accentBg, Icon, action, detail }, i) => (
+                <ScrollReveal key={i} delay={i * 0.08}>
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="w-16 sm:w-20 text-right flex-shrink-0 pt-2.5">
+                      <span className="text-xs font-bold text-muted-foreground">{time}</span>
+                    </div>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 z-10 shadow-sm" style={{ background: accent }}>
+                      <Icon className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1 bg-background rounded-xl border border-border p-4 shadow-sm">
+                      <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-2" style={{ background: accentBg, color: accent }}>{path}</span>
+                      <p className="text-sm font-semibold text-foreground mb-1">{action}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{detail}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

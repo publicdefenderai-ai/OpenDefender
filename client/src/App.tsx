@@ -39,7 +39,7 @@ const CourtRecords = lazy(() => import("@/pages/court-records"));
 const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
 const SearchSeizure = lazy(() => import("@/pages/search-seizure"));
 const FriendsFamily = lazy(() => import("@/pages/friends-family"));
-const HowTo = lazy(() => import("@/pages/how-to"));
+const HowTo = lazy(() => import("@/pages/how-to")); // serves both /how-to and /directory
 const PrivacyPolicy = lazy(() => import("@/pages/privacy-policy"));
 const Disclaimers = lazy(() => import("@/pages/disclaimers"));
 const Statutes = lazy(() => import("@/pages/statutes"));
@@ -147,7 +147,8 @@ function Router() {
       <Route path="/collateral-consequences" component={CollateralConsequences} />
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
-      <Route path="/how-to" component={HowTo} />
+      <Route path="/directory" component={HowTo} />
+      <Route path="/how-to"><Redirect to="/directory" /></Route>
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimers" component={Disclaimers} />
       <Route path="/statutes" component={Statutes} />

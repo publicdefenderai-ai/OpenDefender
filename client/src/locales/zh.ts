@@ -15,7 +15,41 @@ export default {
       "attorneyTools": "律师工具",
       "attorneyToolsDesc": "为法律专业人士提供文件起草工具",
       "friendsFamily": "家庭支持",
-      "friendsFamilyDesc": "家庭成员被指控或拘留时的支持指南"
+      "friendsFamilyDesc": "家庭成员被指控或拘留时的支持指南",
+      "familySection": "家人与朋友"
+    },
+    "nav": {
+      "first24Hours": "前24小时",
+      "support": "生活支持",
+      "caseGuidance": "获取指导",
+      "immigration": "移民事务",
+      "explore": "探索"
+    },
+    "dropdown": {
+      "guidance": {
+        "personalized": "个性化指导",
+        "personalizedDesc": "针对您指控和情况的AI路线图",
+        "chat": "AI对话",
+        "chatDesc": "与我们的AI助手进行开放对话",
+        "summarizer": "文件摘要工具",
+        "summarizerDesc": "了解您案件中的法律文件"
+      },
+      "immigration": {
+        "general": "一般信息",
+        "generalDesc": "移民权利与资源概述",
+        "situational": "情境指南",
+        "situationalDesc": "ICE遭遇、突击检查、拘留等情况",
+        "rights": "了解您的权利",
+        "rightsDesc": "无论移民身份，您的合法权利",
+        "detained": "查找被拘留者",
+        "detainedDesc": "查找ICE羁押中的人员",
+        "lawyer": "寻找律师",
+        "lawyerDesc": "移民法律代理"
+      }
+    },
+    "mobile": {
+      "navigate": "导航",
+      "more": "更多"
     },
     "language": "语言",
     "theme": "主题",

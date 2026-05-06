@@ -16,6 +16,39 @@ export default {
       "friendsFamilyDesc": "Start here if someone you know was arrested. Find them, understand the process, and get practical help.",
       "familySection": "For Families & Friends"
     },
+    "nav": {
+      "first24Hours": "First 24 Hours",
+      "support": "Life Support",
+      "caseGuidance": "Get Guidance",
+      "immigration": "Immigration",
+      "explore": "Explore"
+    },
+    "dropdown": {
+      "guidance": {
+        "personalized": "Personalized Guidance",
+        "personalizedDesc": "AI roadmap for your charges and situation",
+        "chat": "AI Chat",
+        "chatDesc": "Open conversation with our AI assistant",
+        "summarizer": "Document Summarizer",
+        "summarizerDesc": "Understand the legal documents in your case"
+      },
+      "immigration": {
+        "general": "General Information",
+        "generalDesc": "Overview of immigration rights and resources",
+        "situational": "Situational Guides",
+        "situationalDesc": "ICE encounters, raids, detention, and more",
+        "rights": "Know Your Rights",
+        "rightsDesc": "Your rights regardless of immigration status",
+        "detained": "Find a Detained Person",
+        "detainedDesc": "Locate someone in ICE custody",
+        "lawyer": "Find a Lawyer",
+        "lawyerDesc": "Immigration legal representation"
+      }
+    },
+    "mobile": {
+      "navigate": "Navigate",
+      "more": "More"
+    },
     "language": "Language",
     "theme": "Theme",
     "darkMode": "Dark Mode",
