@@ -10,6 +10,7 @@ import {
   Clock,
   MapPin,
   Book,
+  BookOpen,
   FileText,
   BarChart3,
   Search,
@@ -226,6 +227,16 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+        <div className="text-center mt-10">
+          <ScrollReveal>
+            <Link href="/directory">
+              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-sm font-semibold text-foreground hover:bg-muted/60 hover:border-foreground/20 transition-all">
+                <BookOpen className="h-4 w-4" />
+                Browse All Resources
+              </button>
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 

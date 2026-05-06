@@ -559,14 +559,6 @@ export default function HowTo() {
         </div>
       </section>
 
-      {/* Example journey */}
-      <ExampleFlow
-        steps={flowSteps}
-        label={t("howTo.flow.label")}
-        title={t("howTo.flow.title")}
-        subtitle={t("howTo.flow.subtitle")}
-      />
-
       {/* Full site inventory */}
       <section className="py-12 bg-muted/20">
         <div className="max-w-5xl mx-auto px-4">
