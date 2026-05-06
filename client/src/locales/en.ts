@@ -102,7 +102,7 @@ export default {
       "currentTitle": "Early Advocacy Sources",
       "currentDesc": "Drawn from legal aid organizations, public defenders, and trusted advocates",
       "disclaimerTitle": "Legal Disclaimer:",
-      "disclaimerText": "This AI agent provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
+      "disclaimerText": "This site provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
     },
     "commitment": {
       "title": "Our Commitment",

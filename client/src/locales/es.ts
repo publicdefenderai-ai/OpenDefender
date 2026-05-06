@@ -104,7 +104,7 @@ export default {
       "currentTitle": "Fuentes de Defensa Temprana",
       "currentDesc": "Obtenido de organizaciones de ayuda legal, defensores públicos y defensores de confianza.",
       "disclaimerTitle": "Descargo de Responsabilidad Legal:",
-      "disclaimerText": "Este agente de IA proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
+      "disclaimerText": "Este sitio proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
     },
     "commitment": {
       "title": "Nuestro Compromiso",
