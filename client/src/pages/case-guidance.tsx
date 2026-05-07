@@ -891,6 +891,13 @@ export default function CaseGuidance() {
             >
               {t('case.hero.startButton')}
             </Button>
+            <p className="mt-4 text-sm opacity-70">
+              Or start with the{" "}
+              <Link href="/first-24-hours" className="underline underline-offset-2 hover:opacity-90">
+                First 24 Hours guide
+              </Link>{" "}
+              first.
+            </p>
           </ScrollReveal>
         </div>
       </section>

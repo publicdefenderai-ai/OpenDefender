@@ -9,10 +9,7 @@ import {
   Navigation,
   Clock,
   MapPin,
-  Book,
   BookOpen,
-  FileText,
-  BarChart3,
   Search,
   HelpCircle,
   Check,
@@ -33,7 +30,7 @@ import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { RotatingCardCarousel } from "@/components/ui/rotating-card-carousel";
+
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 function TrustItem({ title, description }: { title: string; description: string }) {
@@ -273,45 +270,6 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Data Sources Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-background border-t border-border/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-12">
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                {t('home.features.subtitle')}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <RotatingCardCarousel
-              items={[
-                {
-                  id: "federal-courts",
-                  icon: <Book className="h-6 w-6" />,
-                  title: t('home.features.federalCourts'),
-                  description: t('home.features.federalCourtsDesc'),
-                },
-                {
-                  id: "state-laws",
-                  icon: <FileText className="h-6 w-6" />,
-                  title: t('home.features.stateLaws'),
-                  description: t('home.features.stateLawsDesc'),
-                },
-                {
-                  id: "analytics",
-                  icon: <BarChart3 className="h-6 w-6" />,
-                  title: t('home.features.analytics'),
-                  description: t('home.features.analyticsDesc'),
-                },
-              ]}
-              autoRotateInterval={5000}
-            />
-          </ScrollReveal>
         </div>
       </section>
 

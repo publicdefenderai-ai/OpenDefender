@@ -71,7 +71,7 @@ export default {
       "path1Label": "Las Primeras 24 Horas",
       "path1Desc": "Paso a paso: arresto, fichaje, fianza y su primera comparecencia",
       "path2Label": "Obtener Orientación",
-      "path2Desc": "Mapa personalizado de IA para sus cargos y situación específicos",
+      "path2Desc": "Mapa personalizado para sus cargos, plazos y próximos pasos",
       "path3Label": "Apoyo para la Vida",
       "path3Desc": "Vivienda, beneficios, empleo y recursos familiares",
       "path4Label": "Inmigración",
@@ -4117,7 +4117,7 @@ export default {
     "hero": {
       "title": "Declaración de Misión",
       "subtitle1": "La defensa pública en Estados Unidos está subfinanciada y sobrecargada. Los defensores públicos y sus aliados son llamados a hacer lo imposible con casi nada. La brecha entre lo que las personas necesitan y lo que el sistema ofrece es estructural, y ha quedado sin resolver por demasiado tiempo. Si puede pagar a un abogado privado o asesores, ya sabe cómo el sistema funciona diferente para usted. Si, como la mayoría de las personas, no puede, se ha visto obligado a resolverlo solo. OpenDefender fue creado para cambiar eso.",
-      "subtitle2": "OpenDefender es un bien público dedicado a aprovechar la IA, datos legales y automatización para brindar asistencia oportuna, útil y accesible a personas que se enfrentan al sistema de justicia penal o de aplicación de inmigración de EE.UU. y que pueden no tener acceso a asesoramiento legal o apoyo en su caso. El sitio y todo su contenido son completamente de código abierto, asegurando que permanezca gratuito y accesible para todos los que lo necesiten."
+      "subtitle2": "OpenDefender es un bien público dedicado a brindar asistencia oportuna, útil y accesible a personas que se enfrentan solas al sistema de justicia penal o de aplicación de inmigración de EE.UU. El sitio es completamente de código abierto, asegurando que permanezca gratuito y accesible para todos los que lo necesiten."
     },
     "publicGood": {
       "text": "Gratis · Sin cuenta requerida · Sin suscripción · Sin venta de datos, nunca"

@@ -69,7 +69,7 @@ export default {
       "path1Label": "First 24 Hours",
       "path1Desc": "Step-by-step through arrest, booking, bail, and your first court appearance",
       "path2Label": "Get Guidance",
-      "path2Desc": "Personalized AI roadmap for your specific charges and situation",
+      "path2Desc": "Personalized roadmap for your charges, deadlines, and next steps",
       "path3Label": "Life Support",
       "path3Desc": "Housing, benefits, employment, and family resources",
       "path4Label": "Immigration",
@@ -4115,7 +4115,7 @@ export default {
     "hero": {
       "title": "Mission Statement",
       "subtitle1": "Public defense in America is underfunded and overstretched. Public defenders and their allies are asked to do the impossible with almost nothing. The gap between what people need and what the system provides is structural, and has gone unaddressed for too long. If you can afford a private attorney or advisors, you already know how the system works differently for you. If, like most people, you can't, you've been left to figure it out on your own. OpenDefender was built to change that.",
-      "subtitle2": "OpenDefender is a public good dedicated to leveraging AI and online resources to provide timely, useful, and accessible assistance to individuals facing the US criminal justice or immigration enforcement systems on their own. The site is fully open source, ensuring it remains free and accessible for all who need it."
+      "subtitle2": "OpenDefender is a public good dedicated to providing timely, useful, and accessible assistance to individuals facing the US criminal justice or immigration enforcement systems on their own. The site is fully open source, ensuring it remains free and accessible for all who need it."
     },
     "publicGood": {
       "text": "Free to use · No account required · No paywall · No data sold, ever"
