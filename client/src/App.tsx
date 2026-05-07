@@ -37,7 +37,7 @@ const DiversionPrograms = lazy(() => import("@/pages/diversion-programs"));
 const MissionStatement = lazy(() => import("@/pages/mission-statement"));
 const CourtRecords = lazy(() => import("@/pages/court-records"));
 const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
-const SearchSeizure = lazy(() => import("@/pages/search-seizure"));
+// SearchSeizure merged into /rights-info as a tab — route now redirects
 const FriendsFamily = lazy(() => import("@/pages/friends-family"));
 const FamilyToolkit = lazy(() => import("@/pages/friends-family-toolkit"));
 const HowTo = lazy(() => import("@/pages/how-to")); // serves both /how-to and /directory
@@ -49,12 +49,7 @@ const DocumentLibrary = lazy(() => import("@/pages/document-library"));
 const Resources = lazy(() => import("@/pages/resources"));
 const LegalAid = lazy(() => import("@/pages/legal-aid"));
 const DocumentSummarizerPage = lazy(() => import("@/pages/document-summarizer"));
-const AttorneyPortal = lazy(() => import("@/pages/attorney/index"));
-const AttorneyVerify = lazy(() => import("@/pages/attorney/verify"));
-const AttorneyDocuments = lazy(() => import("@/pages/attorney/documents"));
-const DocumentWizard = lazy(() => import("@/pages/attorney/document-wizard"));
-const AttorneyPlaybooks = lazy(() => import("@/pages/attorney/playbooks"));
-const PlaybookDetail = lazy(() => import("@/pages/attorney/playbook-detail"));
+// Attorney tool pages removed from public router — all /attorney/* redirect to /directory
 const ApiDocs = lazy(() => import("@/pages/api-docs"));
 const Widgets = lazy(() => import("@/pages/widgets"));
 const TechDocs = lazy(() => import("@/pages/tech-docs"));
@@ -62,7 +57,7 @@ const EmbedSearch = lazy(() => import("@/pages/embed/search"));
 const EmbedRights = lazy(() => import("@/pages/embed/rights"));
 const EmbedGlossary = lazy(() => import("@/pages/embed/glossary"));
 const CaseTimeline = lazy(() => import("@/pages/case-timeline"));
-const QuickReference = lazy(() => import("@/pages/quick-reference"));
+// QuickReference page fails to load — route redirects to /rights-info
 const SupportHub = lazy(() => import("@/pages/support/index"));
 const EmploymentSupport = lazy(() => import("@/pages/support/employment"));
 const FinancesSupport = lazy(() => import("@/pages/support/finances"));
@@ -77,7 +72,7 @@ const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
 const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
 const PersonalHealthSupport = lazy(() => import("@/pages/support/personal-health"));
 const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
-const CollateralConsequences = lazy(() => import("@/pages/collateral-consequences"));
+// CollateralConsequences merged into /support/reputation — route now redirects
 const RightToCounsel = lazy(() => import("@/pages/right-to-counsel"));
 const Warrants = lazy(() => import("@/pages/warrants"));
 
@@ -141,12 +136,12 @@ function Router() {
       <Route path="/recap-extensions" component={RecapExtensions} />
       <Route path="/process"><Redirect to="/case-timeline" /></Route>
       <Route path="/case-timeline" component={CaseTimeline} />
-      <Route path="/quick-reference" component={QuickReference} />
-      <Route path="/search-seizure" component={SearchSeizure} />
+      <Route path="/quick-reference"><Redirect to="/rights-info" /></Route>
+      <Route path="/search-seizure"><Redirect to="/rights-info" /></Route>
       <Route path="/friends-family" component={FriendsFamily} />
       <Route path="/friends-family/toolkit" component={FamilyToolkit} />
       <Route path="/first-24-hours" component={FirstTwentyFourHours} />
-      <Route path="/collateral-consequences" component={CollateralConsequences} />
+      <Route path="/collateral-consequences"><Redirect to="/support/reputation" /></Route>
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
       <Route path="/directory" component={HowTo} />
@@ -170,12 +165,12 @@ function Router() {
       <Route path="/support/reputation" component={ReputationSupport} />
       <Route path="/support/personal-health" component={PersonalHealthSupport} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
-      <Route path="/attorney" component={AttorneyPortal} />
-      <Route path="/attorney/verify" component={AttorneyVerify} />
-      <Route path="/attorney/documents" component={AttorneyDocuments} />
-      <Route path="/attorney/documents/:templateId" component={DocumentWizard} />
-      <Route path="/attorney/playbooks" component={AttorneyPlaybooks} />
-      <Route path="/attorney/playbooks/:playbookId" component={PlaybookDetail} />
+      <Route path="/attorney"><Redirect to="/directory" /></Route>
+      <Route path="/attorney/verify"><Redirect to="/directory" /></Route>
+      <Route path="/attorney/documents"><Redirect to="/directory" /></Route>
+      <Route path="/attorney/documents/:templateId"><Redirect to="/directory" /></Route>
+      <Route path="/attorney/playbooks"><Redirect to="/directory" /></Route>
+      <Route path="/attorney/playbooks/:playbookId"><Redirect to="/directory" /></Route>
       <Route path="/api-docs" component={ApiDocs} />
       <Route path="/widgets" component={Widgets} />
       <Route path="/tech-docs" component={TechDocs} />

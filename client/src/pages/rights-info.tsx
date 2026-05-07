@@ -14,11 +14,18 @@ import {
   Search,
   MessageSquare,
   ChevronRight,
+  Home,
+  Car,
+  Smartphone,
+  CheckCircle,
+  ChevronDown,
+  User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "wouter";
 
@@ -141,7 +148,7 @@ export default function RightsInfo() {
 
               <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
                 <ScrollReveal delay={0.1}>
-                  <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-10 md:mb-12 bg-background border border-border">
+                  <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 mb-10 md:mb-12 bg-background border border-border">
                     <TabsTrigger value="miranda" data-testid="tab-miranda" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
                       {t('rights.detailedRights.tabs.miranda')}
                     </TabsTrigger>
@@ -153,6 +160,9 @@ export default function RightsInfo() {
                     </TabsTrigger>
                     <TabsTrigger value="prison" data-testid="tab-prison" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
                       {t('rights.detailedRights.tabs.prison')}
+                    </TabsTrigger>
+                    <TabsTrigger value="search" data-testid="tab-search" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                      Search & Seizure
                     </TabsTrigger>
                   </TabsList>
                 </ScrollReveal>
@@ -177,6 +187,9 @@ export default function RightsInfo() {
                     <TabsContent value="prison" className="mt-0" forceMount={activeTab === "prison" ? true : undefined}>
                       {activeTab === "prison" && <PrisonRightsSection />}
                     </TabsContent>
+                    <TabsContent value="search" className="mt-0" forceMount={activeTab === "search" ? true : undefined}>
+                      {activeTab === "search" && <SearchSeizureSection />}
+                    </TabsContent>
                   </motion.div>
                 </AnimatePresence>
               </Tabs>
@@ -192,6 +205,7 @@ export default function RightsInfo() {
                   { value: 'arrest',   label: t('rights.detailedRights.tabs.arrest'),  Icon: UserCheck },
                   { value: 'court',    label: t('rights.detailedRights.tabs.court'),   Icon: Gavel },
                   { value: 'prison',   label: t('rights.detailedRights.tabs.prison'),  Icon: FileX },
+                  { value: 'search',   label: 'Search & Seizure',                      Icon: Search },
                 ] as const).map(({ value, label, Icon }) => (
                   <button
                     key={value}
@@ -213,10 +227,9 @@ export default function RightsInfo() {
               <div className="border-t border-border/60 pt-4 mb-5">
                 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Go deeper</p>
                 {[
-                  { href: "/right-to-counsel",       label: "Right to an Attorney",       Icon: Scale   },
-                  { href: "/search-seizure",          label: "Search & Seizure Rights",    Icon: Search  },
-                  { href: "/warrants",                label: "Warrants & Your Rights",     Icon: FileText},
-                  { href: "/collateral-consequences", label: "Hidden Consequences",        Icon: FileX   },
+                  { href: "/right-to-counsel",   label: "Right to an Attorney",   Icon: Scale   },
+                  { href: "/warrants",           label: "Warrants & Your Rights", Icon: FileText},
+                  { href: "/support/reputation", label: "Hidden Consequences",    Icon: FileX   },
                 ].map(({ href, label, Icon }) => (
                   <Link key={href} href={href}>
                     <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-150 text-left">
@@ -255,12 +268,11 @@ export default function RightsInfo() {
           <ScrollReveal>
             <h2 className="text-xl font-bold text-foreground mb-1">Go deeper into your rights</h2>
             <p className="text-sm text-muted-foreground mb-6">Each of these pages covers a specific area in full detail.</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid sm:grid-cols-3 gap-3">
               {[
-                { href: "/right-to-counsel",       Icon: Scale,    title: "Right to an Attorney",       desc: "When it begins, how to invoke it, and the dangerous gap before arraignment.", color: "text-green-600 dark:text-green-400", bg: "bg-green-50/60 dark:bg-green-900/10 border-green-200 dark:border-green-800/60", testId: "button-right-to-counsel" },
-                { href: "/search-seizure",          Icon: Search,   title: "Search & Seizure Rights",    desc: "What police can and can't search, when a warrant is required, and how to respond.", color: "text-blue-600 dark:text-blue-400",  bg: "bg-blue-50/60 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800/60",  testId: "button-search-rights" },
-                { href: "/warrants",                Icon: FileText, title: "Warrants & Your Rights",     desc: "Arrest warrants, search warrants, how to check if one exists, and what to do.", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50/60 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800/60", testId: "button-warrants" },
-                { href: "/collateral-consequences", Icon: FileX,    title: "Hidden Consequences",        desc: "What happens to housing, jobs, benefits, and family after a charge or conviction.", color: "text-slate-600 dark:text-slate-400", bg: "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700",   testId: "button-collateral-consequences" },
+                { href: "/right-to-counsel",   Icon: Scale,    title: "Right to an Attorney",   desc: "When it begins, how to invoke it, and the dangerous gap before arraignment.", color: "text-green-600 dark:text-green-400", bg: "bg-green-50/60 dark:bg-green-900/10 border-green-200 dark:border-green-800/60", testId: "button-right-to-counsel" },
+                { href: "/warrants",           Icon: FileText, title: "Warrants & Your Rights", desc: "Arrest warrants, search warrants, how to check if one exists, and what to do.", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50/60 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800/60", testId: "button-warrants" },
+                { href: "/support/reputation", Icon: FileX,    title: "Hidden Consequences",    desc: "What happens to housing, jobs, benefits, and family after a charge or conviction.", color: "text-slate-600 dark:text-slate-400", bg: "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700",   testId: "button-collateral-consequences" },
               ].map(({ href, Icon, title, desc, color, bg, testId }) => (
                 <Link key={href} href={href}>
                   <div data-testid={testId} className={`rounded-xl border p-4 h-full cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg}`}>
@@ -516,7 +528,7 @@ function CourtRightsSection() {
 
 function PrisonRightsSection() {
   const { t } = useTranslation();
-  
+
   return (
     <Card>
       <CardHeader className="animate-rights-header">
@@ -553,6 +565,271 @@ function PrisonRightsSection() {
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
             <strong>{t('rights.detailedRights.prison.collateralTitle')}</strong> <LegalTextHighlighter text={t('rights.detailedRights.prison.collateralText')} />
+          </AlertDescription>
+        </Alert>
+      </CardContent>
+    </Card>
+  );
+}
+
+interface SearchScenario {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  yourRights: string[];
+  whatToDo: string[];
+  whatNotToDo: string[];
+  iconBgColor: string;
+}
+
+const searchScenarios: SearchScenario[] = [
+  {
+    icon: <User className="h-6 w-6 text-white" />,
+    title: "Stop and Frisk",
+    description: "When police stop you on the street and pat you down for weapons",
+    iconBgColor: "bg-blue-600",
+    yourRights: [
+      "You can ask if you're free to leave",
+      "You can refuse to answer questions (except giving your name in some states)",
+      "Officer needs a good reason to stop you",
+      "Pat-down should only check for weapons unless they see something illegal in plain view",
+    ],
+    whatToDo: [
+      "Stay calm and keep hands visible",
+      "Ask 'Am I free to go?'",
+      "State clearly: 'I do not consent to this search'",
+      "Remember the officer's name and badge number",
+      "Note any witnesses present",
+    ],
+    whatNotToDo: [
+      "Don't resist physically",
+      "Don't run away",
+      "Don't put hands in pockets",
+      "Don't make sudden movements",
+      "Don't consent to searches beyond what's legally required",
+    ],
+  },
+  {
+    icon: <Car className="h-6 w-6 text-white" />,
+    title: "Vehicle Search",
+    description: "When police want to search your car during a traffic stop",
+    iconBgColor: "bg-green-600",
+    yourRights: [
+      "Police need a good reason or your permission to search",
+      "You can say no to a search of your vehicle",
+      "Officer can see items that are out in the open",
+      "If arrested, your car can be searched without permission",
+    ],
+    whatToDo: [
+      "Pull over safely when signaled",
+      "Keep hands on steering wheel",
+      "Provide license, registration, and insurance when asked",
+      "Clearly state: 'I do not consent to a search'",
+      "Ask if you're free to go",
+    ],
+    whatNotToDo: [
+      "Don't exit vehicle unless instructed",
+      "Don't reach for documents until asked",
+      "Don't consent to searches",
+      "Don't volunteer information",
+      "Don't argue or become confrontational",
+    ],
+  },
+  {
+    icon: <Home className="h-6 w-6 text-white" />,
+    title: "Home Search",
+    description: "When law enforcement wants to enter or search your home",
+    iconBgColor: "bg-purple-600",
+    yourRights: [
+      "Police usually need a warrant (court order) to enter your home",
+      "You can say no if they don't have a warrant",
+      "The warrant must name exactly what they can search",
+      "You have the right to see the warrant before letting them in",
+      "Police can enter without a warrant in emergencies (such as hearing screams)",
+    ],
+    whatToDo: [
+      "Ask to see the warrant before opening the door",
+      "Read the warrant carefully",
+      "Step outside and close the door behind you to speak with officers",
+      "Clearly state: 'I do not consent to a search'",
+      "Ask for a lawyer immediately if they insist on searching",
+    ],
+    whatNotToDo: [
+      "Don't open the door fully",
+      "Don't let officers in without seeing a warrant",
+      "Don't physically resist",
+      "Don't interfere with the search",
+      "Don't answer questions beyond identifying yourself",
+    ],
+  },
+  {
+    icon: <BrandShieldIcon size={24} light />,
+    title: "Search of Your Person",
+    description: "When police want to conduct a body search",
+    iconBgColor: "bg-red-600",
+    yourRights: [
+      "Police need a good reason to pat you down",
+      "Full body search requires arrest or a very good reason",
+      "Strip searches require a warrant or serious emergency",
+      "You can state that you don't agree to the search",
+      "You have privacy rights under the law",
+    ],
+    whatToDo: [
+      "Keep hands visible at all times",
+      "Clearly state: 'I do not consent to this search'",
+      "Ask what the search is for",
+      "Remain calm and cooperative despite your objection",
+      "Document what happened as soon as you can",
+    ],
+    whatNotToDo: [
+      "Don't physically resist",
+      "Don't reach into your own pockets",
+      "Don't make sudden movements",
+      "Don't touch the officer",
+      "Don't run or attempt to flee",
+    ],
+  },
+  {
+    icon: <Smartphone className="h-6 w-6 text-white" />,
+    title: "Phone Search",
+    description: "When police ask to see or unlock your phone",
+    iconBgColor: "bg-indigo-600",
+    yourRights: [
+      "Police usually need a warrant (court order) to search your phone",
+      "You can refuse to unlock your phone",
+      "You have the right not to help them build a case against you",
+      "Courts are divided on biometrics — many have held police cannot force fingerprint or Face ID unlock without a warrant, but this varies by jurisdiction",
+      "Passcodes are more protected. Courts generally hold you cannot be compelled to reveal a passcode (5th Amendment)",
+    ],
+    whatToDo: [
+      "Clearly state: 'I do not consent to a search of my phone'",
+      "Ask if they have a warrant",
+      "Request to speak with an attorney",
+      "Keep phone locked and password-protected",
+      "Consider disabling biometric unlock in sensitive situations",
+    ],
+    whatNotToDo: [
+      "Don't unlock your phone for police",
+      "Don't provide your passcode",
+      "Don't let them use your biometrics to unlock",
+      "Don't let officers look through your phone to 'prove' something",
+      "Don't delete anything (this could be obstruction of justice)",
+    ],
+  },
+];
+
+function SearchScenarioCard({ scenario }: { scenario: SearchScenario }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Card className="hover:shadow-lg transition-shadow duration-300">
+      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+        <CardHeader>
+          <CollapsibleTrigger className="w-full">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className={`w-12 h-12 ${scenario.iconBgColor} rounded-lg flex items-center justify-center`}>
+                  {scenario.icon}
+                </div>
+                <div className="text-left">
+                  <CardTitle className="text-base">{scenario.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground mt-1">{scenario.description}</p>
+                </div>
+              </div>
+              <ChevronDown className={`h-5 w-5 flex-shrink-0 ml-2 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+            </div>
+          </CollapsibleTrigger>
+        </CardHeader>
+        <CollapsibleContent>
+          <CardContent className="space-y-4 pt-0">
+            <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3 flex items-center gap-2 text-sm">
+                <BrandShieldIcon size={14} />
+                Your Rights:
+              </h4>
+              <ul className="space-y-2">
+                {scenario.yourRights.map((right, i) => (
+                  <li key={i} className="text-sm text-blue-800 dark:text-blue-200 flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                    {right}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
+                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-3 text-sm">What to Do:</h4>
+                <ul className="space-y-1.5">
+                  {scenario.whatToDo.map((action, i) => (
+                    <li key={i} className="text-sm text-green-800 dark:text-green-200">+ {action}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-red-50 dark:bg-red-950 p-4 rounded-lg">
+                <h4 className="font-semibold text-red-900 dark:text-red-100 mb-3 text-sm">What NOT to Do:</h4>
+                <ul className="space-y-1.5">
+                  {scenario.whatNotToDo.map((action, i) => (
+                    <li key={i} className="text-sm text-red-800 dark:text-red-200">- {action}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </CollapsibleContent>
+      </Collapsible>
+    </Card>
+  );
+}
+
+function SearchSeizureSection() {
+  return (
+    <Card>
+      <CardHeader className="animate-rights-header">
+        <CardTitle className="flex items-center space-x-2">
+          <Search className="h-5 w-5 text-primary" />
+          <span>Search &amp; Seizure Rights</span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-6 animate-rights-content">
+        <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
+          <AlertDescription className="text-blue-800 dark:text-blue-200 flex items-start gap-3">
+            <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
+            <span><strong>Key Principle:</strong> Police usually need a warrant or your permission to search you. You have the right to say no, even if it doesn't stop the search. Refusing is not an admission of guilt. It protects your rights in court.</span>
+          </AlertDescription>
+        </Alert>
+
+        <div>
+          <h4 className="font-semibold text-foreground mb-4">General Guidelines</h4>
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-muted/50 rounded-lg p-4">
+              <p className="font-semibold text-sm text-foreground mb-1">Stay Calm</p>
+              <p className="text-sm text-muted-foreground">Remain polite and calm, even if you believe your rights are being violated. Arguments escalate situations.</p>
+            </div>
+            <div className="bg-muted/50 rounded-lg p-4">
+              <p className="font-semibold text-sm text-foreground mb-1">State Your Rights</p>
+              <p className="text-sm text-muted-foreground">Clearly say "I do not consent to this search" and "I want to speak to an attorney." Silence alone may not be enough.</p>
+            </div>
+            <div className="bg-muted/50 rounded-lg p-4">
+              <p className="font-semibold text-sm text-foreground mb-1">Document Everything</p>
+              <p className="text-sm text-muted-foreground">Note badge numbers, officer names, and witnesses. Write down what happened as soon as possible.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-foreground mb-4">Common Search Scenarios</h4>
+          <p className="text-sm text-muted-foreground mb-4">Tap each scenario to see your rights and what to do.</p>
+          <div className="space-y-3">
+            {searchScenarios.map((scenario) => (
+              <SearchScenarioCard key={scenario.title} scenario={scenario} />
+            ))}
+          </div>
+        </div>
+
+        <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-800 dark:text-amber-200">
+            <strong>Note:</strong> Laws vary by state and situation. This is general information, not legal advice. If your rights were violated during a search, tell your attorney immediately. Evidence obtained illegally may be excluded from your case.
           </AlertDescription>
         </Alert>
       </CardContent>
