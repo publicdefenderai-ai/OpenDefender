@@ -32,21 +32,22 @@ interface CategoryDef {
   icon: React.ElementType;
   iconText: string;
   href: string;
+  borderColor: string;
 }
 
 const CATEGORIES: Record<string, CategoryDef> = {
-  employment:         { id: "employment",         icon: Briefcase,   iconText: "text-blue-500",    href: "/support/employment" },
-  finances:           { id: "finances",           icon: Wallet,       iconText: "text-emerald-500", href: "/support/finances" },
-  housing:            { id: "housing",            icon: Home,         iconText: "text-amber-500",   href: "/support/housing" },
-  transportation:     { id: "transportation",     icon: Car,          iconText: "text-cyan-500",    href: "/support/transportation" },
-  childcare:          { id: "childcare",          icon: Baby,         iconText: "text-pink-500",    href: "/support/childcare" },
-  courtLogistics:     { id: "courtLogistics",     icon: Gavel,        iconText: "text-purple-500",  href: "/support/court-logistics" },
-  reputation:         { id: "reputation",         icon: ShieldCheck,  iconText: "text-slate-500",   href: "/support/reputation" },
-  diversionPrograms:  { id: "diversionPrograms",  icon: GitBranch,    iconText: "text-violet-500",  href: "/diversion-programs" },
-  immigration:        { id: "immigration",        icon: Globe2,       iconText: "text-teal-500",    href: "/immigration-guidance" },
-  mentalHealth:       { id: "mentalHealth",       icon: HeartPulse,   iconText: "text-rose-500",    href: "/support/mental-health" },
-  personalHealth:     { id: "personalHealth",     icon: Activity,     iconText: "text-green-500",   href: "/support/personal-health" },
-  familyCare:         { id: "familyCare",         icon: Users,        iconText: "text-indigo-500",  href: "/support/family-care" },
+  employment:         { id: "employment",         icon: Briefcase,   iconText: "text-blue-500",    href: "/support/employment",       borderColor: "#3b82f6" },
+  finances:           { id: "finances",           icon: Wallet,       iconText: "text-emerald-500", href: "/support/finances",          borderColor: "#10b981" },
+  housing:            { id: "housing",            icon: Home,         iconText: "text-amber-500",   href: "/support/housing",           borderColor: "#f59e0b" },
+  transportation:     { id: "transportation",     icon: Car,          iconText: "text-cyan-500",    href: "/support/transportation",    borderColor: "#06b6d4" },
+  childcare:          { id: "childcare",          icon: Baby,         iconText: "text-pink-500",    href: "/support/childcare",         borderColor: "#ec4899" },
+  courtLogistics:     { id: "courtLogistics",     icon: Gavel,        iconText: "text-purple-500",  href: "/support/court-logistics",   borderColor: "#a855f7" },
+  reputation:         { id: "reputation",         icon: ShieldCheck,  iconText: "text-slate-500",   href: "/support/reputation",        borderColor: "#64748b" },
+  diversionPrograms:  { id: "diversionPrograms",  icon: GitBranch,    iconText: "text-violet-500",  href: "/diversion-programs",        borderColor: "#8b5cf6" },
+  immigration:        { id: "immigration",        icon: Globe2,       iconText: "text-teal-500",    href: "/immigration-guidance",      borderColor: "#14b8a6" },
+  mentalHealth:       { id: "mentalHealth",       icon: HeartPulse,   iconText: "text-rose-500",    href: "/support/mental-health",     borderColor: "#f43f5e" },
+  personalHealth:     { id: "personalHealth",     icon: Activity,     iconText: "text-green-500",   href: "/support/personal-health",   borderColor: "#22c55e" },
+  familyCare:         { id: "familyCare",         icon: Users,        iconText: "text-indigo-500",  href: "/support/family-care",       borderColor: "#6366f1" },
 };
 
 const GROUPS = [
@@ -69,7 +70,7 @@ function CategoryCard({ category, index }: { category: CategoryDef; index: numbe
         transition={{ delay: index * 0.05, duration: 0.35 }}
         className="h-full"
       >
-        <Card className="group h-full cursor-pointer border-border/60 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 hover:border-border">
+        <Card className="group h-full cursor-pointer border-border/60 border-l-4 transition-all duration-200 hover:shadow-md hover:-translate-y-1 hover:border-border" style={{ borderLeftColor: category.borderColor }}>
           <CardContent className="p-5 flex flex-col gap-3">
             <Icon className={`h-6 w-6 ${category.iconText}`} strokeWidth={1.75} />
             <div>
@@ -123,7 +124,7 @@ export default function SupportHub() {
                 {t('common.backToHome')}
               </Button>
             </Link>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
+            <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-3 text-white">
               {t('support.title')}
             </h1>
             <p className="text-base md:text-lg text-white/75 max-w-xl mx-auto leading-relaxed">

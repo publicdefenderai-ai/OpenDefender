@@ -26,7 +26,7 @@ export default function FriendsFamily() {
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white">
                 {t('friendsFamily.hero.title')}
               </h1>
               <p className="text-lg text-white/85 max-w-2xl mx-auto">
@@ -49,7 +49,8 @@ export default function FriendsFamily() {
                   href: "/first-24-hours",
                   Icon: Clock,
                   color: "text-slate-600 dark:text-slate-400",
-                  bg: "bg-slate-50 dark:bg-slate-900/40 border-slate-200 dark:border-slate-700",
+                  bg: "bg-slate-50 dark:bg-slate-900/40",
+                  accent: "#1e3a5f",
                   titleKey: "friendsFamily.orientation.first24h.title",
                   descKey:  "friendsFamily.orientation.first24h.desc",
                   ctaKey:   "friendsFamily.orientation.first24h.cta",
@@ -57,8 +58,9 @@ export default function FriendsFamily() {
                 {
                   href: "/support",
                   Icon: Heart,
-                  color: "text-teal-600 dark:text-teal-400",
-                  bg: "bg-teal-50/60 dark:bg-teal-900/10 border-teal-200 dark:border-teal-800/60",
+                  color: "text-rose-600 dark:text-rose-400",
+                  bg: "bg-rose-50/60 dark:bg-rose-900/10",
+                  accent: "#8b2252",
                   titleKey: "friendsFamily.orientation.lifeSupport.title",
                   descKey:  "friendsFamily.orientation.lifeSupport.desc",
                   ctaKey:   "friendsFamily.orientation.lifeSupport.cta",
@@ -66,15 +68,19 @@ export default function FriendsFamily() {
                 {
                   href: "/case-guidance",
                   Icon: MessageSquare,
-                  color: "text-blue-600 dark:text-blue-400",
-                  bg: "bg-blue-50/60 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800/60",
+                  color: "text-teal-600 dark:text-teal-400",
+                  bg: "bg-teal-50/60 dark:bg-teal-900/10",
+                  accent: "#0f766e",
                   titleKey: "friendsFamily.orientation.guidance.title",
                   descKey:  "friendsFamily.orientation.guidance.desc",
                   ctaKey:   "friendsFamily.orientation.guidance.cta",
                 },
-              ].map(({ href, Icon, color, bg, titleKey, descKey, ctaKey }) => (
+              ].map(({ href, Icon, color, bg, accent, titleKey, descKey, ctaKey }) => (
                 <Link key={href} href={href}>
-                  <div className={`rounded-xl border p-4 h-full cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg}`}>
+                  <div
+                    className={`rounded-xl border border-l-4 p-4 h-full cursor-pointer transition-all hover:shadow-md hover:-translate-y-1 ${bg}`}
+                    style={{ borderLeftColor: accent }}
+                  >
                     <Icon className={`h-5 w-5 mb-3 ${color}`} strokeWidth={1.75} />
                     <p className="font-semibold text-foreground text-sm mb-1">{t(titleKey)}</p>
                     <p className="text-xs text-muted-foreground leading-relaxed mb-3">{t(descKey)}</p>

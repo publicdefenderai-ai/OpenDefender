@@ -254,10 +254,7 @@ export default function ImmigrationGuidance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center mx-auto mb-8 ring-1 ring-white/20">
-              <Flag className="h-10 w-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white" data-testid="text-immigration-hero-title">
+            <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white" data-testid="text-immigration-hero-title">
               {t('immigration.hero.title1')}<br />
               <span className="text-white/80">{t('immigration.hero.title2')}</span>
             </h1>
