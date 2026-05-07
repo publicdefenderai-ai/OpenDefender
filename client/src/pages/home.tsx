@@ -96,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-14 pb-6 md:pt-20 md:pb-8 lg:pt-24 lg:pb-10 overflow-hidden texture-grain">
+      <section className="relative pt-14 pb-4 md:pt-20 md:pb-4 lg:pt-24 lg:pb-6 overflow-hidden texture-grain">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
         <div className="absolute inset-0 texture-mesh" />
@@ -139,12 +139,12 @@ export default function Home() {
       </section>
 
       {/* Four paths — text-only cards, no browser previews */}
-      <section className="py-12 md:py-16 bg-background" id="paths">
+      <section className="pt-8 pb-12 md:pt-10 md:pb-16 bg-background" id="paths">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2">{t('howTo.hero.subtitle', 'Four ways to use this site')}</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">{t('howTo.hero.title', 'Where do you want to start?')}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-1">Get Started</h2>
+              <p className="text-base text-muted-foreground">Four paths to choose from. Most people use more than one.</p>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
