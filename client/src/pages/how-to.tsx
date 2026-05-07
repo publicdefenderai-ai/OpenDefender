@@ -530,7 +530,7 @@ export default function HowTo() {
                   { label: t("howTo.hero.pills.caseGuidance"), href: "#path-2" },
                   { label: t("howTo.hero.pills.lifeSupport"),  href: "#path-3" },
                   { label: t("howTo.hero.pills.immigration"),  href: "#path-4" },
-                  { label: t("howTo.inventory.title", "Full Directory"), href: "#full-directory" },
+                  { label: t("howTo.hero.pills.directory", "Directory"), href: "#full-directory" },
                 ].map(({ label, href }) => (
                   <a
                     key={label}
