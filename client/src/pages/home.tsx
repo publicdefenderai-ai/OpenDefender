@@ -93,9 +93,9 @@ export default function Home() {
       </div>
 
       {/* Hero Section — always dark, high contrast */}
-      <section className="relative pt-14 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 overflow-hidden texture-grain bg-slate-900 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800/90 to-teal-900/50 dark:from-slate-950 dark:via-slate-900/90 dark:to-teal-950/60" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/10 via-transparent to-transparent" />
+      <section className="relative pt-14 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 overflow-hidden texture-grain bg-slate-900 dark:bg-[hsl(192,55%,11%)]">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800/90 to-teal-900/50 dark:from-[hsl(192,60%,10%)] dark:via-[hsl(196,50%,13%)] dark:to-[hsl(210,42%,17%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/10 dark:from-teal-300/30 via-transparent to-transparent" />
         <div className="absolute inset-0 texture-mesh opacity-30" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
