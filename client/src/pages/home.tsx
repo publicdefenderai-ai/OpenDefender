@@ -135,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* Four paths — text-only cards, no browser previews */}
-      <section className="pt-10 pb-12 md:pt-14 md:pb-16 bg-white dark:bg-slate-900 border-t border-border/20" id="paths">
+      <section className="pt-10 pb-12 md:pt-14 md:pb-16 bg-white dark:bg-background border-t border-border/20" id="paths">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
@@ -191,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* Example journey */}
-      <section className="py-12 bg-muted/30">
+      <section className="py-12 bg-muted/30 dark:bg-background">
         <div className="max-w-3xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
@@ -243,7 +243,7 @@ export default function Home() {
       </section>
 
       {/* Commitment Section */}
-      <section className="py-20 md:py-28 bg-slate-900 dark:bg-slate-950">
+      <section className="py-20 md:py-28 bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-14 md:mb-16">
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-slate-900/60 border-t border-border/30">
+      <section className="py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-background border-t border-border/30">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-12">
