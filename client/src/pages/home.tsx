@@ -92,24 +92,24 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative pt-14 pb-4 md:pt-20 md:pb-4 lg:pt-24 lg:pb-6 overflow-hidden texture-grain">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
-        <div className="absolute inset-0 texture-mesh" />
-        
+      {/* Hero Section — always dark, high contrast */}
+      <section className="relative pt-14 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16 overflow-hidden texture-grain bg-slate-900 dark:bg-slate-950">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800/90 to-teal-900/50 dark:from-slate-950 dark:via-slate-900/90 dark:to-teal-950/60" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 texture-mesh opacity-30" />
+
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-foreground">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-[1.05] tracking-tight text-white">
               {t('home.hero.title1')}{' '}
-              <span className="text-primary">{t('home.hero.title2')}</span>
+              <span className="text-teal-400">{t('home.hero.title2')}</span>
             </h1>
 
-            <div className="mb-8 text-xl sm:text-2xl md:text-3xl font-medium text-foreground/80">
+            <div className="mb-8 text-xl sm:text-2xl md:text-3xl font-medium text-white/75">
               {t('home.hero.rotatingPrefix')}{' '}
               <span className="inline-block" style={{ minWidth: '9ch', verticalAlign: 'baseline' }}>
                 <AnimatePresence mode="wait">
@@ -119,7 +119,7 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.28 }}
-                    className="text-primary font-bold inline-block"
+                    className="text-teal-300 font-bold inline-block"
                   >
                     {rotatingWords[wordIndex]}.
                   </motion.span>
@@ -127,20 +127,19 @@ export default function Home() {
               </span>
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl mb-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl mb-6 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
-
         </div>
       </section>
 
       {/* Four paths — text-only cards, no browser previews */}
-      <section className="pt-8 pb-12 md:pt-10 md:pb-16 bg-background" id="paths">
+      <section className="pt-10 pb-12 md:pt-14 md:pb-16 bg-white dark:bg-slate-900 border-t border-border/20" id="paths">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-1">Get Started</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-foreground mb-1 tracking-tight">Get Started</h2>
               <p className="text-base text-muted-foreground">Four paths to choose from. Most people use more than one.</p>
             </div>
           </ScrollReveal>
@@ -152,7 +151,10 @@ export default function Home() {
               { number: "4", accent: "#92400e", accentBg: "#fef3e2", Icon: Globe2,        badge: t('howTo.paths.path4.badge'), headline: t('howTo.paths.path4.headline'), subhead: t('howTo.paths.path4.subhead'), bullets: [t('howTo.paths.path4.bullet1'), t('howTo.paths.path4.bullet2'), t('howTo.paths.path4.bullet3'), t('howTo.paths.path4.bullet4')], link: "/immigration-guidance", cta: t('howTo.paths.path4.cta') },
             ] as const).map(({ number, accent, accentBg, Icon, badge, headline, subhead, bullets, link, cta }, i) => (
               <ScrollReveal key={number} delay={i * 0.07}>
-                <div className="flex flex-col h-full rounded-2xl border border-border bg-background shadow-sm overflow-hidden">
+                <div
+                  className="flex flex-col h-full rounded-2xl border border-border border-l-4 bg-background shadow-sm overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+                  style={{ borderLeftColor: accent }}
+                >
                   <div className="flex-1 p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={{ background: accent }}>{number}</div>
