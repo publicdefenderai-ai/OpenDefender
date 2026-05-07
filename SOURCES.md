@@ -334,17 +334,24 @@ The following pages are manually authored and maintained by the platform team. T
 
 **Last review pass:** March 2026. Five content corrections applied (see log for details).
 
-| Page | File | Last Reviewed | Next Review |
-|------|------|--------------|-------------|
-| Your Constitutional Rights | `client/src/pages/rights-info.tsx` | 2026-03 | 2027-01 |
-| First 24 Hours After Arrest | `client/src/pages/first-24-hours.tsx` | 2026-03 | 2027-01 |
-| Right to an Attorney | `client/src/pages/right-to-counsel.tsx` | 2026-03 | 2027-01 |
-| Search and Seizure | `client/src/pages/search-seizure.tsx` | 2026-03 | 2027-01 |
-| Understanding Warrants | `client/src/pages/warrants.tsx` | 2026-03 | 2027-01 |
-| Collateral Consequences | `client/src/pages/collateral-consequences.tsx` | 2026-03 | 2027-01 |
-| Immigration Guidance | `client/src/pages/immigration-guidance.tsx` | 2026-03 (partial) | 2026-09 |
-| Quick Reference Card | `client/src/pages/quick-reference.tsx` | 2026-03 | 2027-01 |
-| Criminal Justice Process | `client/src/pages/process.tsx` | 2026-03 | 2027-01 |
+| Page | File | Route | Last Reviewed | Next Review |
+|------|------|-------|--------------|-------------|
+| Your Constitutional Rights | `client/src/pages/rights-info.tsx` | `/rights-info` | 2026-05 | 2027-01 |
+| First 24 Hours After Arrest | `client/src/pages/first-24-hours.tsx` | `/first-24-hours` | 2026-05 | 2027-01 |
+| Right to an Attorney | `client/src/pages/right-to-counsel.tsx` | `/right-to-counsel` | 2026-03 | 2027-01 |
+| Understanding Warrants | `client/src/pages/warrants.tsx` | `/warrants` | 2026-03 | 2027-01 |
+| Immigration Guidance | `client/src/pages/immigration-guidance.tsx` | `/immigration-guidance` | 2026-03 (partial) | 2026-09 |
+| Friends & Family | `client/src/pages/friends-family.tsx` | `/friends-family` | 2026-05 | 2027-01 |
+| Friends & Family Toolkit | `client/src/pages/friends-family-toolkit.tsx` | `/friends-family/toolkit` | 2026-05 | 2027-01 |
+| Site Directory | `client/src/pages/how-to.tsx` | `/directory` | 2026-05 | 2027-06 |
+
+**Merged/redirected pages (May 2026):**
+- Search and Seizure — merged as a tab into `/rights-info`. `client/src/pages/search-seizure.tsx` removed; route `/search-seizure` redirects to `/rights-info`.
+- Collateral Consequences — content absorbed into `/support/reputation`. Route `/collateral-consequences` redirects there.
+- Quick Reference Cards — merged into `/rights-info`. Route `/quick-reference` redirects there.
+- Criminal Case Process — redirects from `/process` to `/case-timeline`.
+- Record Expungement — redirects from `/record-expungement` to `/support/reputation`.
+- How To / Directory — `/how-to` now redirects to `/directory` (canonical URL).
 
 **Key primary sources across these pages:**
 - U.S. Constitution, Amendments IV, V, VI, VIII, XIV

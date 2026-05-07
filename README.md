@@ -30,17 +30,21 @@ To democratize access to legal information and resources, particularly for indiv
 - **NLP-based PII redaction** before any data reaches the AI
 
 ### Site-Wide Search
-- Indexes **6,663 legal documents** across charges, statutes, glossary terms, diversion programs, and all site pages
+- Indexes **7,436 legal documents** across charges, statutes, glossary terms, diversion programs, and all site pages
 - Legal synonym expansion and weighted relevance scoring
 - Fully multilingual (EN / ES / ZH)
 
 ### Rights & Education
 - **Interactive 7-stage Case Timeline** — from arrest through appeal, in 3 languages
-- **Quick-Reference Cards** — printable rights cards for police encounters and court stages
+- **Your Constitutional Rights** (`/rights-info`) — Miranda, Search & Seizure (tab), Right to Counsel (tab), Speedy Trial, Jury Trial — all in one place
 - **Mock Q&A Practice** — static Q&A library plus AI-generated personalized practice questions
 - **Legal Glossary** — plain-language definitions with search
-- **Search & Seizure Guide** — Fourth Amendment rights across common scenarios
-- **First 24 Hours Guide** — arrest through arraignment, including a full jail phone call section (scripts, what never to say, attorney call rules, and a state-by-state inmate locator)
+- **First 24 Hours Guide** (`/first-24-hours`) — arrest through arraignment, including a full jail phone call section (scripts, what never to say, attorney call rules), state-by-state inmate locator, probation/parole guidance, and an explanation of who is charging you (DA, State's Attorney, U.S. Attorney)
+- **Right to an Attorney** (`/right-to-counsel`) — 5th vs. 6th Amendment timing, custody vs. detention, how to invoke
+- **Warrants Guide** (`/warrants`) — search, arrest, and ICE warrants; what to do at the door
+
+### Site Directory
+`/directory` — curated index of all four main paths and every site page, with quick-jump navigation. (`/how-to` redirects here.)
 
 ### Life Support Resources Hub
 11 dedicated resource pages covering real-life challenges alongside a criminal case:
@@ -48,6 +52,10 @@ To democratize access to legal information and resources, particularly for indiv
 > Employment · Finances · Housing · Transportation · Childcare · Court Logistics · Reputation · Immigration · Mental Health · Personal Health · Family Care
 
 Each page includes actionable steps, vetted external resources, FAQs, and national organizations including [Partners for Justice](https://www.partnersforjustice.org/).
+
+### Friends & Family Hub
+- `/friends-family` — overview guide for people supporting an arrested loved one
+- `/friends-family/toolkit` — practical toolkit: conversation guides, what not to say on jail calls, bail help, probation/parole explainers, and mock Q&A court prep
 
 ### Attorney Portal — Document Generation
 Verified attorneys access 37 motion templates across criminal and immigration defense:

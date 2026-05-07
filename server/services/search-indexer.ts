@@ -317,7 +317,7 @@ export function buildSearchIndex(): void {
       content: 'Fourth Amendment protections against unreasonable searches and seizures. Police generally need a warrant signed by a judge to search your home, your phone, or your belongings. You have the right to refuse consent to a search. Stop and frisk: police can briefly stop you on the street if they have reasonable suspicion, and pat down for weapons only. Vehicle search: police can search your car without a warrant if they have probable cause. Phone search: police need a warrant to search your cell phone — Riley v. California (2014). Home search: refuse entry without a warrant signed by a judge. Search of person: you have privacy rights during searches. Do not physically resist a search even if it is unlawful — object verbally and raise it in court.',
       tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police', 'phone search', 'cell phone', 'digital privacy', 'stop and frisk', 'vehicle search', 'home search', 'consent', 'traffic stop', 'refuse search'],
       aliases: ['police search', 'can police search', 'phone search', 'cell phone search', 'can police search my phone', 'stop and frisk', 'traffic stop search', 'home search warrant', 'search my car', 'refuse search', 'fourth amendment rights'],
-      url: '/search-seizure',
+      url: '/rights-info',
     },
     {
       id: 'attorney',
@@ -375,7 +375,7 @@ export function buildSearchIndex(): void {
       content: 'Police need a warrant to search your cell phone or smartphone. Riley v. California (2014): the Supreme Court unanimously ruled that police cannot search your phone without a warrant. You are not required to provide your passcode or PIN to police. Biometric unlock (fingerprint or face scan) — police may attempt to compel biometric unlock, but your passcode is protected. Digital privacy: your phone contains deeply personal information and has stronger Fourth Amendment protection than physical items. Do not voluntarily hand over your phone. You can say: "I do not consent to a search of my phone."',
       tags: ['phone search', 'cell phone', 'digital privacy', 'fourth amendment', 'warrant', 'passcode', 'biometric', 'smartphone', 'riley v california'],
       aliases: ['can police search my phone', 'cell phone search', 'phone passcode', 'digital device search', 'phone privacy', 'search my phone', 'unlock phone for police', 'phone warrant'],
-      url: '/search-seizure#phone-search',
+      url: '/rights-info',
     },
     {
       id: 'stop-frisk',
@@ -384,7 +384,7 @@ export function buildSearchIndex(): void {
       content: 'Terry stop: police can briefly detain you on the street if they have reasonable suspicion of criminal activity — a hunch or your appearance alone is not enough. Pat-down for weapons: police may pat down your outer clothing only if they have reasonable suspicion you are armed and dangerous. You have the right to ask "Am I free to go?" — if yes, calmly walk away. Do not physically resist the stop even if it is unlawful. You can say: "I do not consent to this search." State your name if your state requires it. Terry v. Ohio established stop-and-frisk law.',
       tags: ['stop and frisk', 'terry stop', 'pat down', 'police stop', 'reasonable suspicion', 'fourth amendment', 'street stop'],
       aliases: ['stop and frisk', 'pat down', 'police pat down', 'can police stop me', 'terry stop', 'street stop', 'am i free to go', 'police detain me'],
-      url: '/search-seizure#stop-frisk',
+      url: '/rights-info',
     },
     {
       id: 'vehicle-search',
@@ -393,7 +393,7 @@ export function buildSearchIndex(): void {
       content: 'During a traffic stop, police can search your car without a warrant if they have probable cause — for example, if they see contraband in plain view (plain view doctrine), smell marijuana, or have other specific facts suggesting evidence of a crime. You have the right to refuse consent to a vehicle search. Refusing consent is not grounds for arrest. Do not physically resist. If you consent, you cannot take it back. Do not leave drugs, weapons, or contraband in plain view. You can say: "I do not consent to a search of my vehicle."',
       tags: ['vehicle search', 'car search', 'traffic stop', 'probable cause', 'consent', 'fourth amendment', 'plain view', 'automobile'],
       aliases: ['can police search my car', 'car search', 'vehicle search rights', 'traffic stop search', 'pulled over search', 'search my vehicle', 'car stopped by police'],
-      url: '/search-seizure#vehicle-search',
+      url: '/rights-info',
     },
     {
       id: 'home-search',
@@ -402,7 +402,7 @@ export function buildSearchIndex(): void {
       content: 'Police need a search warrant signed by a judge to enter and search your home. You have the right to refuse entry without a valid judicial warrant. Ask to see the warrant through the window or have it slipped under the door. Exigent circumstances — police may enter without a warrant in genuine emergencies (hot pursuit, imminent destruction of evidence, risk to life). Do not consent to a home search. An ICE administrative warrant (Form I-200 or I-205) is NOT a judicial warrant and does not give police the right to enter. Anything you say at the door can be used against you.',
       tags: ['home search', 'house search', 'warrant', 'fourth amendment', 'search warrant', 'residence', 'door', 'judicial warrant', 'exigent circumstances'],
       aliases: ['can police enter my home', 'home search warrant', 'house search', 'search my home', 'police at my door', 'do i have to let police in', 'police knock door'],
-      url: '/search-seizure#home-search',
+      url: '/rights-info',
     },
     {
       id: 'person-search',
@@ -411,7 +411,7 @@ export function buildSearchIndex(): void {
       content: 'Police may search your person incident to a lawful arrest — they do not need a separate warrant. Strip search: policies vary by jurisdiction; strip searches require more than an ordinary arrest and must be conducted by an officer of the same sex and in private. Body cavity search: requires a warrant or court order except in very limited circumstances. Do not physically resist a search. You can object verbally: "I do not consent to this search." Document everything afterward and raise it with your attorney.',
       tags: ['search of person', 'strip search', 'body search', 'fourth amendment', 'search incident to arrest', 'pat down', 'personal search'],
       aliases: ['can police search me', 'search my body', 'strip search rights', 'personal search rights', 'being searched by police'],
-      url: '/search-seizure#person-search',
+      url: '/rights-info',
     },
   ];
 
@@ -651,20 +651,30 @@ export function buildSearchIndex(): void {
       title: 'Resources for Friends and Family',
       titleEs: 'Recursos para Amigos y Familia',
       titleZh: '亲友资源',
-      content: 'How to support a loved one facing charges. Bail information. Court dates. Finding an attorney. Emotional support resources.',
-      tags: ['family', 'support', 'loved one', 'bail', 'visiting'],
-      aliases: ['help family member', 'loved one arrested'],
+      content: 'How to support a loved one facing charges. Bail information. Court dates. Finding an attorney. Emotional support resources. What to do in the first 24 hours. How to find someone who was arrested. Probation and parole holds. Understanding the criminal process as a family member.',
+      tags: ['family', 'support', 'loved one', 'bail', 'visiting', 'arrested family member', 'find someone in jail'],
+      aliases: ['help family member', 'loved one arrested', 'my son was arrested', 'my daughter was arrested', 'spouse arrested', 'find someone arrested'],
       url: '/friends-family'
     },
     {
+      id: 'friends-family-toolkit',
+      title: 'Family Support Toolkit',
+      titleEs: 'Kit de Herramientas de Apoyo Familiar',
+      titleZh: '家庭支持工具包',
+      content: 'Practical toolkit for families supporting someone through the criminal justice system. Conversation guides for jail and court. What to say and what not to say. Helping with bail. Understanding probation and parole conditions. Mock Q&A practice for court appearances. Glossary of key terms for families.',
+      tags: ['family toolkit', 'family support', 'jail visit', 'court support', 'conversation guide', 'probation', 'parole', 'mock qa', 'practice questions'],
+      aliases: ['family toolkit', 'support toolkit', 'helping someone in jail', 'court conversation guide', 'what to say to someone in jail', 'family court prep'],
+      url: '/friends-family/toolkit'
+    },
+    {
       id: 'how-to',
-      title: 'How to Use This App',
-      titleEs: 'Cómo Usar Esta Aplicación',
-      titleZh: '如何使用本应用',
-      content: 'Guide to using OpenDefender. Getting legal guidance. Understanding your case. Preparing for court.',
-      tags: ['guide', 'tutorial', 'help', 'instructions'],
-      aliases: ['getting started', 'user guide'],
-      url: '/how-to'
+      title: 'Site Directory — How to Use OpenDefender',
+      titleEs: 'Directorio del Sitio — Cómo Usar OpenDefender',
+      titleZh: '网站目录 — 如何使用 OpenDefender',
+      content: 'Full directory of all OpenDefender resources. Four main paths: First 24 Hours after arrest, Case Guidance, Life Support, Immigration. Browse all site pages and tools. Getting started guide.',
+      tags: ['directory', 'guide', 'tutorial', 'help', 'instructions', 'all resources', 'site map'],
+      aliases: ['getting started', 'user guide', 'directory', 'all pages', 'site directory', 'browse resources'],
+      url: '/directory'
     },
     {
       id: 'statutes',
@@ -784,7 +794,7 @@ export function buildSearchIndex(): void {
       content: 'Printable and saveable rights reference cards. Know your rights during police encounters, traffic stops, arrests, arraignment, bail hearings, and court appearances. Pocket-sized legal rights cards.',
       tags: ['quick reference', 'rights cards', 'printable', 'police encounter', 'traffic stop', 'arrest rights'],
       aliases: ['rights card', 'pocket card', 'printable rights', 'cheat sheet'],
-      url: '/quick-reference'
+      url: '/rights-info'
     },
     {
       id: 'diversion-programs-hub',
@@ -804,7 +814,7 @@ export function buildSearchIndex(): void {
       content: 'Learn how to clear your criminal record. Expungement eligibility by state. Record sealing. Certificates of rehabilitation. Clean slate laws. Start fresh after a conviction.',
       tags: ['expungement', 'record clearing', 'record sealing', 'clean slate', 'rehabilitation'],
       aliases: ['clear record', 'erase criminal record', 'second chance', 'record removal'],
-      url: '/record-expungement'
+      url: '/support/reputation'
     },
     {
       id: 'legal-glossary-hub',
@@ -1001,7 +1011,7 @@ export function buildSearchIndex(): void {
       title: 'The First 24 Hours After Arrest',
       titleEs: 'Las Primeras 24 Horas Después del Arresto',
       titleZh: '逮捕后的前24小时',
-      content: 'Step-by-step guide for the first 24 hours after arrest. At the moment of arrest: invoke your right to remain silent and ask for a lawyer immediately. Booking: cooperate with fingerprints and photos but do not answer questions about the incident. Your first phone call from jail: jail calls are recorded — call a family member, give them your facility name and booking number, ask them to find a lawyer. What never to say on a jail call. Sample script for first jail call. Facility and inmate locator by state. Bail hearing: have your attorney argue for release, mention ties to community. Getting legal representation: request a public defender if you cannot afford an attorney. Arraignment: plead not guilty — preserve your options. Between now and your next court date: attend every hearing, follow bail conditions, do not contact victims or witnesses. Do not discuss your case on social media. When does your right to a lawyer actually begin: Fifth Amendment right during interrogation vs Sixth Amendment right at formal proceedings. The gap between arrest and arraignment. Right to counsel timing in California, New York, Texas, Florida, and federal courts. If you are on probation or parole: violation holds, probation officer notification, revocation hearing rights. Your first appearance before a magistrate: probable cause, bail conditions, right to counsel, how it works in each state.',
+      content: 'Step-by-step guide for the first 24 hours after arrest. At the moment of arrest: invoke your right to remain silent and ask for a lawyer immediately. Booking: cooperate with fingerprints and photos but do not answer questions about the incident. Your first phone call from jail: jail calls are recorded — call a family member, give them your facility name and booking number, ask them to find a lawyer. What never to say on a jail call. Sample script for first jail call. Facility and inmate locator by state. Bail hearing: have your attorney argue for release, mention ties to community. Getting legal representation: request a public defender if you cannot afford an attorney. Arraignment: plead not guilty — preserve your options. Between now and your next court date: attend every hearing, follow bail conditions, do not contact victims or witnesses. Do not discuss your case on social media. Who is charging you: local charges filed by city or county prosecutor — called District Attorney, State\'s Attorney, City Attorney, or County Attorney depending on the state; state charges filed by the state attorney general\'s office or state prosecutor; federal charges filed by a U.S. Attorney — these carry harsher penalties and different procedures. Understanding who brings the case against you matters for negotiating and for knowing which court your case will be in. When does your right to a lawyer actually begin: Fifth Amendment right during interrogation vs Sixth Amendment right at formal proceedings. The gap between arrest and arraignment. Right to counsel timing in California, New York, Texas, Florida, and federal courts. If you are on probation or parole: violation holds, probation officer notification, revocation hearing rights. Your first appearance before a magistrate: probable cause, bail conditions, right to counsel, how it works in each state.',
       tags: ['arrest', 'first 24 hours', 'booking', 'bail', 'arraignment', 'phone call', 'jail call', 'recorded call', 'public defender', 'attorney', 'right to remain silent', 'miranda', 'custody', 'right to counsel', 'sixth amendment', 'fifth amendment', 'probation', 'parole', 'violation', 'revocation', 'magistrate', 'first appearance', 'initial appearance', 'inmate locator', 'facility lookup', 'juvenile arrest'],
       aliases: ['just arrested', 'what to do after arrest', 'arrested now what', 'first steps after arrest', 'arrested guide', 'what happens when arrested', 'after being arrested', 'booking process', 'bail hearing guide', 'phone call from jail', 'calling from jail', 'jail call advice', 'what to say on jail call', 'when does right to lawyer begin', 'arrested on probation', 'arrested on parole', 'first court appearance', 'magistrate hearing', 'find someone in jail', 'inmate locator'],
       url: '/first-24-hours'
@@ -1014,7 +1024,7 @@ export function buildSearchIndex(): void {
       content: 'Hidden consequences of a criminal conviction beyond jail and fines. Collateral consequences can affect employment, housing, professional licenses, voting rights, immigration status, public benefits, student loans, and child custody. Felony conviction can result in loss of voting rights in many states. Sex offender registration requirements. Deportation risk for non-citizens. Loss of occupational licenses. Difficulty finding housing with a criminal record. Drug conviction can affect eligibility for federal student aid.',
       tags: ['collateral consequences', 'conviction', 'criminal record', 'voting rights', 'immigration', 'housing', 'employment', 'professional license', 'student loans', 'deportation'],
       aliases: ['consequences of conviction', 'criminal record effects', 'felony consequences', 'hidden penalties', 'beyond jail time', 'conviction effects on life'],
-      url: '/collateral-consequences'
+      url: '/support/reputation'
     },
     {
       id: 'legal-aid',
@@ -1034,7 +1044,7 @@ export function buildSearchIndex(): void {
     'support-hub', 'support-employment', 'support-finances', 'support-court-logistics',
     'support-mental-health', 'support-transportation', 'support-childcare', 'support-housing',
     'support-family-care', 'support-reputation', 'support-personal-health',
-    'resources', 'friends-family', 'legal-aid', 'recap-extensions',
+    'resources', 'friends-family', 'friends-family-toolkit', 'legal-aid', 'recap-extensions',
     'document-library', 'document-summarizer', 'attorney-portal', 'attorney-playbooks',
     'court-locator',
   ]);
