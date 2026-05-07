@@ -248,7 +248,15 @@ export default function FriendsFamily() {
                       <li>• {t('friendsFamily.step3.keyInfo6')}</li>
                       <li>• {t('friendsFamily.step3.keyInfo7')}</li>
                       <li>• {t('friendsFamily.step3.keyInfo8')}</li>
+                      <li>• {t('friendsFamily.step3.keyInfo9')}</li>
                     </ul>
+                  </div>
+
+                  <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground leading-relaxed">
+                    {t('friendsFamily.step3.prosecutorNote')}{" "}
+                    <Link href="/legal-glossary?search=prosecutor" className="underline underline-offset-2 font-medium text-foreground hover:text-foreground/80 transition-colors">
+                      {t('friendsFamily.step3.prosecutorCta')} →
+                    </Link>
                   </div>
 
                   {/* Toolkit prompt — contextual entry inside Step 3 */}

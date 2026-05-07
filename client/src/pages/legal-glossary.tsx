@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import { 
@@ -39,6 +39,12 @@ export default function LegalGlossary() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
   const [selectedTag, setSelectedTag] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const search = params.get("search");
+    if (search) setSearchQuery(search);
+  }, []);
 
   // Get all unique tags
   const availableTags = useMemo(() => {

@@ -893,6 +893,14 @@ export default function FirstTwentyFourHours() {
                     />
                   </p>
                 </div>
+                <div className="rounded-lg border border-border/60 bg-muted/30 p-3">
+                  <p className="text-sm text-foreground/75 leading-relaxed">
+                    {t('first24Hours.steps.step2.prosecutorNote')}{" "}
+                    <Link href="/legal-glossary?search=prosecutor" className="underline underline-offset-2 font-medium hover:text-foreground transition-colors">
+                      {t('common.seeGlossary', 'See glossary')} →
+                    </Link>
+                  </p>
+                </div>
                 <JurisdictionCallout jurisdiction={jurisdiction} topic="phone_call" />
               </div>
             </Step>
@@ -1092,7 +1100,39 @@ export default function FirstTwentyFourHours() {
                 t('first24Hours.steps.step6.dont3'),
               ]}
             >
-              <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
+              <div className="space-y-3 mt-2">
+                <div className="rounded-lg border border-border bg-background p-4 space-y-4">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground mb-1">{t('first24Hours.steps.step6.whoCharges.heading')}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{t('first24Hours.steps.step6.whoCharges.intro')}</p>
+                  </div>
+
+                  <div className="rounded-md bg-muted/50 border border-border/60 p-3">
+                    <p className="text-xs font-semibold text-foreground mb-1">{t('first24Hours.steps.step6.whoCharges.howToFindHeading')}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{t('first24Hours.steps.step6.whoCharges.howToFind')}</p>
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-semibold text-foreground mb-2">{t('first24Hours.steps.step6.whoCharges.layersHeading')}</p>
+                    <ul className="space-y-1.5 text-xs text-muted-foreground">
+                      <li className="flex items-start gap-2"><span className="font-semibold text-foreground flex-shrink-0 w-16">Federal:</span><span>{t('first24Hours.steps.step6.whoCharges.layerFederal')}</span></li>
+                      <li className="flex items-start gap-2"><span className="font-semibold text-foreground flex-shrink-0 w-16">Felony:</span><span>{t('first24Hours.steps.step6.whoCharges.layerCounty')}</span></li>
+                      <li className="flex items-start gap-2"><span className="font-semibold text-foreground flex-shrink-0 w-16">Misdemeanor:</span><span>{t('first24Hours.steps.step6.whoCharges.layerCity')}</span></li>
+                      <li className="flex items-start gap-2"><span className="font-semibold text-foreground flex-shrink-0 w-16">Contract:</span><span>{t('first24Hours.steps.step6.whoCharges.layerContracted')}</span></li>
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-border/60 pt-3 flex items-start justify-between gap-4">
+                    <p className="text-xs text-muted-foreground leading-relaxed flex-1">
+                      <strong className="text-foreground">{t('first24Hours.steps.step6.whoCharges.action')}</strong>
+                    </p>
+                    <Link href="/legal-glossary?search=prosecutor" className="text-xs underline underline-offset-2 font-medium text-muted-foreground hover:text-foreground flex-shrink-0 transition-colors">
+                      Glossary →
+                    </Link>
+                  </div>
+                </div>
+                <JurisdictionCallout jurisdiction={jurisdiction} topic="arraignment" />
+              </div>
             </Step>
 
           {/* STEP 7 */}

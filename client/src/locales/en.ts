@@ -3734,7 +3734,10 @@ export default {
       "keyInfo5": "Names of arresting officers",
       "keyInfo6": "Case number",
       "keyInfo7": "Name of assigned public defender (if applicable)",
-      "keyInfo8": "Witness contact information"
+      "keyInfo8": "Witness contact information",
+      "keyInfo9": "Which office filed charges (not the police — see below)",
+      "prosecutorNote": "The office that filed charges is not the police department. Look at the top of any paperwork for a name like 'Office of the District Attorney,' 'City Attorney,' or 'United States Attorney.' This tells you who their attorney is actually dealing with — and it affects strategy, plea options, and which diversion programs may apply.",
+      "prosecutorCta": "See glossary: Prosecutor"
     },
     "step4": {
       "title": "Understand Bail and Bonding",
@@ -5101,7 +5104,8 @@ export default {
         "dont3": "Don't assume booking staff are neutral. Everything is documented.",
         "dont4": "Don't answer questions about the incident, your whereabouts, or anyone else involved, even questions that seem routine or unrelated to the crime.",
         "dont5": "Don't consent to DNA swabs, additional searches, or interrogations beyond the mechanical booking process without asking to speak to your attorney first.",
-        "propertyNote": "Before or during booking, try to note everything taken from you: phone, wallet, ID, keys, and any cash. Property is held at the evidence unit of the arresting precinct — not the jail. The <1>Court & Legal</1> section of our Life Support guide explains exactly how to retrieve it."
+        "propertyNote": "Before or during booking, try to note everything taken from you: phone, wallet, ID, keys, and any cash. Property is held at the evidence unit of the arresting precinct — not the jail. The <1>Court & Legal</1> section of our Life Support guide explains exactly how to retrieve it.",
+        "prosecutorNote": "Every piece of paperwork you receive at booking names the office that charged you — look at the header. It is not the police department. It may say 'Office of the District Attorney,' 'City Attorney,' or 'United States Attorney.' Note the name and tell your attorney right away. It is one of the first things they need to know."
       },
       "step3": {
         "title": "Your First Phone Call",
@@ -5160,7 +5164,20 @@ export default {
         "do3": "Appear in clean, appropriate clothing if you have been released on bail.",
         "dont1": "Don't plead guilty at arraignment. You cannot take it back, and you haven't had time to evaluate the full case.",
         "dont2": "Don't speak to the judge about the facts of your case.",
-        "dont3": "Don't miss this court date. A warrant will be issued for your arrest."
+        "dont3": "Don't miss this court date. A warrant will be issued for your arrest.",
+        "whoCharges": {
+          "heading": "Who is actually charging you?",
+          "intro": "Police arrest — but a separate office decides what charges to file and presses the case in court. This office is called the prosecutor. It is not the police department, and knowing which office it is affects your defense from day one.",
+          "howToFindHeading": "How to find out which office charged you",
+          "howToFind": "Every charging document names the prosecuting office in the header — usually the top left corner. Look for a name like 'Office of the District Attorney,' 'City Attorney,' or 'United States Attorney.' Federal case numbers have a distinctive format (for example, 2:24-CR-00123). Your attorney will recognize it immediately.",
+          "layersHeading": "The charging office depends on the crime and where it happened",
+          "layerFederal": "Federal crimes: Prosecuted by the U.S. Attorney's Office in federal court. If federal agents (FBI, DEA, ATF, or ICE in criminal cases) arrested you, your case is likely federal. Federal rules, timelines, and sentencing are very different from state court.",
+          "layerCounty": "Felonies (state): Prosecuted by the District Attorney for the county where the crime occurred. Called State's Attorney or County Attorney in some states.",
+          "layerCity": "Misdemeanors: Often prosecuted by a city attorney — not the county DA. In large metros, each incorporated city may have its own city attorney operating independently. In Los Angeles County, for example, there are dozens of separate offices. Which city the offense occurred in determines which office has the case.",
+          "layerContracted": "Some smaller cities contract private law firms to prosecute certain cases. Your attorney can identify this from your case number and court filing.",
+          "whyMatters": "Each office has different plea policies, different diversion programs, and different staff. Your attorney needs to know which office has your case before they can assess your options.",
+          "action": "Tell your attorney the exact name of the prosecuting office from your paperwork. If you don't have paperwork yet, they can look it up once they have your case number."
+        }
       },
       "step7": {
         "title": "Between Now and Your Next Court Date",

@@ -3736,7 +3736,10 @@ export default {
       "keyInfo5": "Nombres de los oficiales que realizaron el arresto",
       "keyInfo6": "Número de caso",
       "keyInfo7": "Nombre del defensor público asignado (si corresponde)",
-      "keyInfo8": "Información de contacto de testigos"
+      "keyInfo8": "Información de contacto de testigos",
+      "keyInfo9": "Qué oficina presentó los cargos (no la policía — vea abajo)",
+      "prosecutorNote": "La oficina que presentó los cargos no es el departamento de policía. Busque en la parte superior de cualquier documento un nombre como 'Fiscalía del Distrito,' 'Procurador Municipal' o 'Fiscal Federal.' Esto le dice con quién trata realmente el abogado — y afecta la estrategia, las opciones de negociación y los programas alternativos disponibles.",
+      "prosecutorCta": "Ver glosario: Fiscal"
     },
     "step4": {
       "title": "Entender la Fianza y la Libertad Bajo Fianza",
@@ -5101,7 +5104,8 @@ export default {
         "dont3": "No asuma que el personal de fichaje es neutral. Todo queda documentado.",
         "dont4": "No responda preguntas sobre el incidente, su paradero o cualquier otra persona involucrada, aunque parezcan rutinarias o no relacionadas con el delito.",
         "dont5": "No autorice hisopos de ADN, registros adicionales ni interrogatorios más allá del proceso mecánico de fichaje sin pedir primero hablar con su abogado.",
-        "propertyNote": "Antes o durante el fichaje, intente anotar todo lo que le fue confiscado: teléfono, billetera, identificación, llaves y cualquier efectivo. Sus pertenencias se guardan en la unidad de evidencias de la estación policial donde fue arrestado, no en la cárcel. La sección de <1>Apoyo Legal y de la Corte</1> de nuestra guía de Apoyo para la Vida explica exactamente cómo recuperarlas."
+        "propertyNote": "Antes o durante el fichaje, intente anotar todo lo que le fue confiscado: teléfono, billetera, identificación, llaves y cualquier efectivo. Sus pertenencias se guardan en la unidad de evidencias de la estación policial donde fue arrestado, no en la cárcel. La sección de <1>Apoyo Legal y de la Corte</1> de nuestra guía de Apoyo para la Vida explica exactamente cómo recuperarlas.",
+        "prosecutorNote": "Cada documento que reciba durante el fichaje lleva el nombre de la oficina que presentó los cargos — revise el encabezado. No es el departamento de policía. Puede decir 'Fiscalía del Distrito,' 'Procurador Municipal' o 'Fiscal Federal.' Anote el nombre y dígselo a su abogado de inmediato. Es una de las primeras cosas que necesita saber."
       },
       "step3": {
         "title": "Su Primera Llamada Telefónica",
@@ -5160,7 +5164,20 @@ export default {
         "do3": "Vista ropa limpia y apropiada si ha sido puesto en libertad bajo fianza.",
         "dont1": "No se declare culpable en la lectura de cargos. No puede deshacerse de ello, y no ha tenido tiempo de evaluar el caso completo.",
         "dont2": "No hable con el juez sobre los hechos de su caso.",
-        "dont3": "No falte a esta fecha judicial. Se emitirá una orden de arresto contra usted."
+        "dont3": "No falte a esta fecha judicial. Se emitirá una orden de arresto contra usted.",
+        "whoCharges": {
+          "heading": "¿Quién lo está acusando realmente?",
+          "intro": "La policía arresta, pero una oficina separada decide qué cargos presentar y lleva el caso ante el tribunal. Esta oficina se llama el fiscal. No es el departamento de policía, y saber qué oficina es afecta su defensa desde el primer día.",
+          "howToFindHeading": "Cómo averiguar qué oficina lo acusó",
+          "howToFind": "Todo documento de acusación lleva el nombre de la oficina fiscal en el encabezado, generalmente en la esquina superior izquierda. Busque un nombre como 'Fiscalía del Distrito,' 'Procurador de la Ciudad' o 'Fiscal de los Estados Unidos.' Los números de caso federal tienen un formato distinto (por ejemplo, 2:24-CR-00123). Su abogado lo reconocerá de inmediato.",
+          "layersHeading": "La oficina fiscal depende del delito y del lugar donde ocurrió",
+          "layerFederal": "Delitos federales: Procesados por la Fiscalía Federal en el tribunal federal. Si agentes federales (FBI, DEA, ATF o ICE en casos penales) lo arrestaron, su caso probablemente es federal. Las reglas, plazos y sentencias son muy diferentes a los tribunales estatales.",
+          "layerCounty": "Delitos graves (estatales): Procesados por el Fiscal del Distrito del condado donde ocurrió el delito. En algunos estados se llama Fiscal Estatal o Fiscal del Condado.",
+          "layerCity": "Delitos menores: A menudo procesados por un procurador municipal, no por el Fiscal del Distrito del condado. En grandes metrópolis como Los Ángeles, cada ciudad incorporada tiene su propio procurador que opera de forma independiente. La ciudad donde ocurrió el delito determina qué oficina tiene el caso.",
+          "layerContracted": "Algunas ciudades pequeñas contratan firmas de abogados privadas para procesar ciertos casos. Su abogado puede identificarlo con el número del caso y los documentos judiciales.",
+          "whyMatters": "Cada oficina tiene diferentes políticas de negociación, programas de derivación y personal. Su abogado necesita saber qué oficina tiene su caso antes de poder evaluar sus opciones.",
+          "action": "Dígale a su abogado el nombre exacto de la oficina fiscal que aparece en sus documentos. Si aún no tiene documentos, pueden buscarlo una vez que tengan su número de caso."
+        }
       },
       "step7": {
         "title": "Entre Ahora y Su Próxima Fecha Judicial",
