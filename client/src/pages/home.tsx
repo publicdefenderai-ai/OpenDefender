@@ -96,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-14 md:py-20 lg:py-24 overflow-hidden texture-grain">
+      <section className="relative pt-14 pb-6 md:pt-20 md:pb-8 lg:pt-24 lg:pb-10 overflow-hidden texture-grain">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
         <div className="absolute inset-0 texture-mesh" />
