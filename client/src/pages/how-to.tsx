@@ -530,6 +530,7 @@ export default function HowTo() {
                   { label: t("howTo.hero.pills.caseGuidance"), href: "#path-2" },
                   { label: t("howTo.hero.pills.lifeSupport"),  href: "#path-3" },
                   { label: t("howTo.hero.pills.immigration"),  href: "#path-4" },
+                  { label: t("howTo.inventory.title", "Full Directory"), href: "#full-directory" },
                 ].map(({ label, href }) => (
                   <a
                     key={label}
@@ -560,7 +561,7 @@ export default function HowTo() {
       </section>
 
       {/* Full site inventory */}
-      <section className="py-12 bg-muted/20">
+      <section id="full-directory" className="py-12 bg-muted/20">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-8">
