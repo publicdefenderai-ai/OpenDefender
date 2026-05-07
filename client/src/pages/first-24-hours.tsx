@@ -234,7 +234,7 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Step {number}</span>
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest whitespace-nowrap">Step {number}</span>
           <span className="text-xs text-muted-foreground/60">·</span>
           <span className="text-xs text-muted-foreground">{timeframe}</span>
         </div>
