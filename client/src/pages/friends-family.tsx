@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
@@ -249,6 +250,19 @@ export default function FriendsFamily() {
                       <li>• {t('friendsFamily.step3.keyInfo8')}</li>
                     </ul>
                   </div>
+
+                  {/* Toolkit prompt — contextual entry inside Step 3 */}
+                  <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4 flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-foreground">Ready to collect this information?</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">The Family Toolkit has a fillable Contact Info Kit, a court record lookup, and more.</p>
+                    </div>
+                    <Link href="/friends-family/toolkit" className="flex-shrink-0">
+                      <Button size="sm" variant="outline" className="whitespace-nowrap">
+                        Open toolkit →
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -393,6 +407,25 @@ export default function FriendsFamily() {
                 </div>
               </AlertDescription>
             </Alert>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Bottom toolkit CTA */}
+      <section className="py-10 bg-background border-t border-border/60">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="rounded-2xl border border-border bg-muted/20 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-foreground mb-1">Now use the Family Toolkit</p>
+                <p className="text-sm text-muted-foreground max-w-md">Collect contact information, look up court records, and track what needs certified mail — all in one place.</p>
+              </div>
+              <Link href="/friends-family/toolkit" className="flex-shrink-0">
+                <Button className="whitespace-nowrap">
+                  Open toolkit →
+                </Button>
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

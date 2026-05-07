@@ -570,6 +570,10 @@ function PageSidebar({
             <BookOpen className="w-3.5 h-3.5 flex-shrink-0" />
             <span>Full Family Guide</span>
           </Link>
+          <Link href="/friends-family/toolkit" className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all">
+            <FileText className="w-3.5 h-3.5 flex-shrink-0" />
+            <span>Family Toolkit</span>
+          </Link>
           <button
             onClick={() => document.getElementById("phone-call")?.scrollIntoView({ behavior: "smooth", block: "start" })}
             className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left"
