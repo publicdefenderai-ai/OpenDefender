@@ -3801,6 +3801,19 @@ export default {
         "cta": "Obtener orientación"
       }
     },
+    "probationParole": {
+      "sectionTitle": "Si su familiar está en libertad condicional o supervisión",
+      "sectionSubtitle": "Un arresto durante una supervisión activa es una situación más complicada. Esto es lo que las familias necesitan saber.",
+      "holdTitle": "Pagar la fianza puede no liberarlos",
+      "holdText": "Una orden de supervisión es distinta a la fianza por los nuevos cargos. Aunque pague la fianza completa, una orden de libertad condicional puede mantenerlos detenidos. No se puede pagar para salir de una orden de supervisión. Pregúntele al abogado si ambas órdenes deben resolverse.",
+      "facilityTitle": "Pueden estar en un lugar diferente al esperado",
+      "facilityText": "Las personas en libertad condicional que son arrestadas nuevamente pueden ser trasladadas a una institución correccional estatal en lugar de quedarse en la cárcel local. Por eso el localizador del condado puede no encontrarlos. Busque también en la base de datos de reclusos del Departamento de Correcciones del estado.",
+      "parallelTitle": "Ahora hay dos procesos legales separados",
+      "parallelText": "El nuevo caso penal y la audiencia de revocación corren al mismo tiempo en procesos separados. Pueden estar en tribunales distintos, con diferentes plazos y posiblemente necesitar abogados diferentes. Una revocación puede resultar en que su familiar cumpla el resto de su sentencia original, incluso si los nuevos cargos se retiran.",
+      "poTitle": "El oficial de supervisión ya lo sabe",
+      "poText": "El oficial generalmente es notificado del arresto en pocas horas. No necesita llamar al oficial en nombre de su familiar.",
+      "disclaimer": "Los resultados varían ampliamente según la jurisdicción, la naturaleza del nuevo delito, el historial de supervisión y la discreción del oficial. Obtener un abogado que entienda ambos procesos es el paso más importante."
+    },
     "privacyBanner": {
       "title": "Privacidad Primero:",
       "text": "No almacenamos sus datos personales — toda la información se elimina después de la sesión."
@@ -5050,7 +5063,14 @@ export default {
       "detainedDo3": "Cumpla físicamente con las órdenes legales. No se resista — impugne la detención en el tribunal después.",
       "detainedDont1": "No responda preguntas sobre su paradero, con quién estaba ni qué hacía.",
       "detainedDont2": "No autorice un registro de su persona, vehículo o pertenencias.",
-      "detainedDont3": "No se resista físicamente, aunque crea que la detención es ilegal."
+      "detainedDont3": "No se resista físicamente, aunque crea que la detención es ilegal.",
+      "probationParoleTitle": "Ya está en libertad condicional o supervisión",
+      "probationParoleDo1": "Dígale a su abogado de inmediato que está en libertad condicional. Esto cambia la estrategia para los nuevos cargos y para el proceso de violación por separado.",
+      "probationParoleDo2": "Pregúntele a su abogado si una orden de supervisión podría mantenerlo detenido aunque se fije una fianza por los nuevos cargos. Son dos órdenes distintas y deben resolverse por separado.",
+      "probationParoleDo3": "Verifique si sus condiciones de supervisión requieren reportar un nuevo arresto. Su abogado puede ayudarle a decidir si y cómo responder.",
+      "probationParoleDont1": "No hable con su oficial de libertad condicional sin que su abogado esté presente. Las declaraciones al oficial pueden no tener las mismas protecciones legales que las declaraciones a la policía.",
+      "probationParoleDont2": "No asuma que se necesita una condena para iniciar un proceso de revocación. Un arresto solo puede comenzar ese proceso, y el estándar de prueba es mucho más bajo que en un juicio penal.",
+      "probationParoleDont3": "No contacte a su oficial de supervisión directamente. Toda comunicación debe pasar por su abogado."
     },
     "steps": {
       "step1": {

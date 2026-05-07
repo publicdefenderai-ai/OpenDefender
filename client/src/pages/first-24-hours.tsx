@@ -750,6 +750,20 @@ export default function FirstTwentyFourHours() {
                   t('first24Hours.beforeArrest.detainedDont3'),
                 ],
               },
+              {
+                value: 'probation-parole',
+                title: t('first24Hours.beforeArrest.probationParoleTitle'),
+                dos: [
+                  t('first24Hours.beforeArrest.probationParoleDo1'),
+                  t('first24Hours.beforeArrest.probationParoleDo2'),
+                  t('first24Hours.beforeArrest.probationParoleDo3'),
+                ],
+                donts: [
+                  t('first24Hours.beforeArrest.probationParoleDont1'),
+                  t('first24Hours.beforeArrest.probationParoleDont2'),
+                  t('first24Hours.beforeArrest.probationParoleDont3'),
+                ],
+              },
             ] as { value: string; title: string; dos: string[]; donts: string[] }[]).map(({ value, title, dos, donts }) => (
               <AccordionItem key={value} value={value} className="border border-border/70 rounded-lg px-4 bg-background/60">
                 <AccordionTrigger className="text-left hover:no-underline py-3">

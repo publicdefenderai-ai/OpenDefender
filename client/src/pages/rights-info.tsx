@@ -798,6 +798,13 @@ function SearchSeizureSection() {
           </AlertDescription>
         </Alert>
 
+        <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-800 dark:text-amber-200">
+            <strong>On probation or parole?</strong> Your search rights may be significantly reduced. Most supervision agreements include a search condition that allows your PO or law enforcement to search you or your home with little or no warning and without a warrant. Know your supervision conditions before assuming you can refuse a search.
+          </AlertDescription>
+        </Alert>
+
         <div>
           <h4 className="font-semibold text-foreground mb-4">General Guidelines</h4>
           <div className="grid md:grid-cols-3 gap-4 mb-6">

@@ -3799,6 +3799,19 @@ export default {
         "cta": "Get guidance"
       }
     },
+    "probationParole": {
+      "sectionTitle": "If your family member is on probation or parole",
+      "sectionSubtitle": "An arrest during active supervision is a more complicated situation. Here is what families need to know.",
+      "holdTitle": "Posting bail may not release them",
+      "holdText": "A supervision hold is separate from bail on the new charges. Even if you pay full bail, a probation or parole hold can keep them in custody. You cannot pay your way out of a supervision hold. Ask the attorney whether both holds need to be addressed.",
+      "facilityTitle": "They may be in a different facility than you expect",
+      "facilityText": "People on parole who are re-arrested may be transferred to a state correctional facility rather than staying in the local county jail. This is why the county inmate locator may not find them. Search the state Department of Corrections inmate database as well.",
+      "parallelTitle": "There are now two separate legal proceedings",
+      "parallelText": "The new criminal case and a revocation hearing run at the same time in separate proceedings. These may be in different courts, move on different timelines, and may need different attorneys. A revocation can result in your family member serving the rest of their original sentence — even if the new charges are later dropped.",
+      "poTitle": "The probation or parole officer already knows",
+      "poText": "The PO is typically notified of an arrest within hours of it appearing in the system. You do not need to call the PO on your family member's behalf.",
+      "disclaimer": "Outcomes vary widely by jurisdiction, the nature of the new offense, supervision history, and PO discretion. Getting an attorney who understands both proceedings is the most important step."
+    },
     "privacyBanner": {
       "title": "Privacy First:",
       "text": "We do not store your personal data — all input deleted after session."
@@ -5050,7 +5063,14 @@ export default {
       "detainedDo3": "Comply physically with lawful orders. Do not resist — challenge the stop in court later.",
       "detainedDont1": "Don't answer questions about your whereabouts, who you were with, or what you were doing.",
       "detainedDont2": "Don't consent to a search of your person, vehicle, or belongings.",
-      "detainedDont3": "Don't physically resist, even if you believe the stop is unlawful."
+      "detainedDont3": "Don't physically resist, even if you believe the stop is unlawful.",
+      "probationParoleTitle": "You're already on probation or parole",
+      "probationParoleDo1": "Tell your attorney right away that you're on probation or parole. It changes the strategy for both the new charges and the separate violation proceeding.",
+      "probationParoleDo2": "Ask your attorney whether a supervision hold could keep you in custody even if bail is set on the new charges. These are two different holds and must be resolved separately.",
+      "probationParoleDo3": "Check whether your supervision terms require self-reporting a new arrest. Your attorney can help decide if and how to respond.",
+      "probationParoleDont1": "Don't speak to your probation or parole officer without your attorney present. Statements to your PO may not have the same legal protections as statements to police.",
+      "probationParoleDont2": "Don't assume a conviction is required to trigger a violation. An arrest alone can start a revocation proceeding — and the standard of proof is much lower than at a criminal trial.",
+      "probationParoleDont3": "Don't contact your PO or case manager directly. All communication should go through your attorney."
     },
     "steps": {
       "step1": {

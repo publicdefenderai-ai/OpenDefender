@@ -1,6 +1,6 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { Users, Phone, FileText, Clock, Heart, MessageSquare, AlertCircle, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
+import { Users, Phone, FileText, Clock, Heart, MessageSquare, AlertCircle, AlertTriangle, CheckCircle, ArrowRight, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -366,6 +366,63 @@ export default function FriendsFamily() {
               </Card>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Probation / Parole — family-specific section */}
+      <section className="py-14 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="flex items-start gap-3 mb-6">
+              <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+              <div>
+                <h2 className="text-xl font-bold text-foreground mb-1">{t('friendsFamily.probationParole.sectionTitle')}</h2>
+                <p className="text-sm text-muted-foreground">{t('friendsFamily.probationParole.sectionSubtitle')}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <ScrollReveal delay={0.1}>
+              <Card className="border-amber-200 dark:border-amber-800/60 h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.probationParole.holdTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.probationParole.holdText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Card className="border-amber-200 dark:border-amber-800/60 h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.probationParole.facilityTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.probationParole.facilityText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Card className="border-amber-200 dark:border-amber-800/60 h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.probationParole.parallelTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.probationParole.parallelText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Card className="border-amber-200 dark:border-amber-800/60 h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.probationParole.poTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.probationParole.poText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.5}>
+            <p className="text-xs text-muted-foreground mt-4 px-1">{t('friendsFamily.probationParole.disclaimer')}</p>
+          </ScrollReveal>
         </div>
       </section>
 
