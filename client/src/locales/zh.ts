@@ -63,6 +63,8 @@ export default {
       "title2": "保护你的未来。",
       "subtitle": "获取免费的法律指导，了解法庭流程，获取资源帮助你应对刑事司法系统。",
       "urgentHelpButton": "紧急求助",
+      "urgentStripMessage": "正在被逮捕或正在出庭吗？",
+      "urgentStripCta": "立即获取帮助",
       "getStartedButton": "开始使用",
       "navigatingToolButton": "浏览所有资源",
       "urgentHelpNotice": "如果你正在被逮捕或正在出庭，请点击\"紧急求助\"获取即时指导。",

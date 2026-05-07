@@ -63,6 +63,8 @@ export default {
       "title2": "Proteja su Futuro.",
       "subtitle": "Obtenga orientación legal gratuita, entienda los procesos judiciales y acceda a recursos para navegar el sistema de justicia penal.",
       "urgentHelpButton": "AYUDA URGENTE NECESARIA",
+      "urgentStripMessage": "¿Está siendo arrestado o está en el tribunal ahora mismo?",
+      "urgentStripCta": "Obtener ayuda inmediata",
       "getStartedButton": "COMENZAR",
       "navigatingToolButton": "Ver todos los recursos",
       "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata.",

@@ -76,8 +76,27 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
 
+      {/* Urgent alert strip */}
+      <div className="w-full bg-red-50 dark:bg-red-950/30 border-b border-red-200 dark:border-red-800/60">
+        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3 flex-wrap">
+          <div className="flex items-center gap-2">
+            <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400 flex-shrink-0" aria-hidden="true" />
+            <span className="text-sm text-red-800 dark:text-red-200">
+              {t('home.hero.urgentStripMessage')}
+            </span>
+          </div>
+          <button
+            onClick={handleUrgentHelp}
+            className="text-sm font-semibold text-red-700 dark:text-red-300 underline underline-offset-2 hover:no-underline whitespace-nowrap transition-colors"
+            data-testid="button-urgent-strip"
+          >
+            {t('home.hero.urgentStripCta')} →
+          </button>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 lg:py-28 overflow-hidden texture-grain">
+      <section className="relative py-14 md:py-20 lg:py-24 overflow-hidden texture-grain">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-slate-950 dark:via-blue-950/20 dark:to-indigo-950/30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
         <div className="absolute inset-0 texture-mesh" />
@@ -111,27 +130,11 @@ export default function Home() {
               </span>
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl mb-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </motion.div>
 
-          {/* Hero CTA — urgent help only */}
-          <ScrollReveal delay={0.2}>
-            <div className="w-full max-w-sm mx-auto">
-              <Button
-                onClick={handleUrgentHelp}
-                variant="outline"
-                size="lg"
-                className="w-full font-semibold py-5 rounded-xl text-base border-red-200 text-red-600 hover:bg-red-50 hover:border-red-300 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-950/50 transition-all"
-                data-testid="button-urgent-help"
-              >
-                <AlertTriangle className="h-4 w-4 mr-2" />
-                {t('home.hero.urgentHelpButton')}
-              </Button>
-              <p className="text-xs text-muted-foreground text-center mt-2">{t('home.hero.urgentHelpNotice')}</p>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 

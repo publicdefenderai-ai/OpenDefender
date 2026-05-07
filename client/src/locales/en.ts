@@ -61,6 +61,8 @@ export default {
       "title2": "Protect Your Future.",
       "subtitle": "Get free case support, understand court processes, and access resources to help navigate the criminal justice system.",
       "urgentHelpButton": "URGENT HELP NEEDED",
+      "urgentStripMessage": "Being arrested or in court right now?",
+      "urgentStripCta": "Get immediate help",
       "getStartedButton": "GET STARTED",
       "navigatingToolButton": "Browse all resources",
       "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance.",
