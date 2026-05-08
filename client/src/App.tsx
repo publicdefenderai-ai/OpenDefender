@@ -49,6 +49,7 @@ const DocumentLibrary = lazy(() => import("@/pages/document-library"));
 const Resources = lazy(() => import("@/pages/resources"));
 const LegalAid = lazy(() => import("@/pages/legal-aid"));
 const DocumentSummarizerPage = lazy(() => import("@/pages/document-summarizer"));
+const LetterGeneratorPage = lazy(() => import("@/pages/letter-generator"));
 // Attorney tool pages removed from public router — all /attorney/* redirect to /directory
 const ApiDocs = lazy(() => import("@/pages/api-docs"));
 const Widgets = lazy(() => import("@/pages/widgets"));
@@ -167,6 +168,7 @@ function Router() {
       <Route path="/support/reentry" component={ReentrySupport} />
       <Route path="/support/personal-health" component={PersonalHealthSupport} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
+      <Route path="/letter-generator" component={LetterGeneratorPage} />
       <Route path="/attorney"><Redirect to="/directory" /></Route>
       <Route path="/attorney/verify"><Redirect to="/directory" /></Route>
       <Route path="/attorney/documents"><Redirect to="/directory" /></Route>

@@ -837,6 +837,16 @@ export function buildSearchIndex(): void {
       url: '/document-summarizer'
     },
     {
+      id: 'letter-generator',
+      title: 'Letter Generator — Employer, Landlord & Utility Letters',
+      titleEs: 'Generador de Cartas — Empleador, Arrendador y Servicios',
+      titleZh: '信件生成器 — 雇主、房东和公用事业信件',
+      content: 'AI-powered letter generator for non-legal communication. Write personalized letters to employers requesting court date leave, explaining an absence, or disclosing a criminal record. Write letters to landlords requesting a payment plan or notifying of changed circumstances. Write letters to utility companies requesting hardship assistance. Not legal advice — practical communication support.',
+      tags: ['letter', 'communication', 'employer letter', 'landlord letter', 'utility letter', 'payment plan', 'court time off', 'record disclosure', 'hardship', 'writing help'],
+      aliases: ['write a letter', 'letter to employer', 'letter to landlord', 'rent deferral letter', 'court date leave', 'record disclosure letter', 'hardship letter', 'utility payment plan'],
+      url: '/letter-generator'
+    },
+    {
       id: 'support-hub',
       title: 'Support Resources Hub',
       titleEs: 'Centro de Recursos de Apoyo',

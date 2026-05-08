@@ -439,6 +439,7 @@ export default function HowTo() {
         { title: t("howTo.sections.getHelp.caseGuidance.title"), description: t("howTo.sections.getHelp.caseGuidance.description"), link: "/case-guidance" },
         { title: t("howTo.sections.getHelp.aiChat.title"), description: t("howTo.sections.getHelp.aiChat.description"), link: "/chat" },
         { title: t("howTo.sections.getHelp.documentSummarizer.title"), description: t("howTo.sections.getHelp.documentSummarizer.description"), link: "/document-summarizer" },
+        { title: t("howTo.sections.getHelp.letterGenerator.title"), description: t("howTo.sections.getHelp.letterGenerator.description"), link: "/letter-generator" },
         { title: t("howTo.sections.getHelp.first24Hours.title"), description: t("howTo.sections.getHelp.first24Hours.description"), link: "/first-24-hours" },
       ],
     },

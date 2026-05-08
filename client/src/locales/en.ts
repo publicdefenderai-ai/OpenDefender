@@ -5322,6 +5322,10 @@ export default {
           "title": "Document Summarizer",
           "description": "Upload a legal document and get a plain-language summary."
         },
+        "letterGenerator": {
+          "title": "Letter Generator",
+          "description": "Generate a personalized letter to your employer, landlord, or utility company for your specific situation."
+        },
         "first24Hours": {
           "title": "Your First 24 Hours",
           "description": "Step-by-step guide from arrest through your first court appearance."

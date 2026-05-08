@@ -2102,6 +2102,53 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   /**
+   * Generate a personalized letter using Claude AI (non-legal life support tool).
+   * Takes a letter type + situation answers, returns a drafted letter with placeholders.
+   * No personal data is collected — placeholders ([YOUR NAME], etc.) are filled by the user.
+   */
+  app.post(
+    '/api/generate-letter',
+    requireServiceBudget('document-summarizer'),
+    aiRateLimiter,
+    aiDailyLimiter,
+    async (req: Request, res: Response) => {
+      try {
+        const bodySchema = z.object({
+          letterType: z.enum([
+            'employer-court-dates',
+            'employer-explain-absence',
+            'employer-record-disclosure',
+            'landlord-payment-plan',
+            'landlord-situation-notice',
+            'utility-hardship',
+          ]),
+          answers: z.record(z.string().max(500)).refine(
+            (obj) => Object.keys(obj).length <= 8,
+            'Too many answer fields'
+          ),
+          language: z.enum(['en', 'es']).default('en'),
+        });
+
+        const parseResult = bodySchema.safeParse(req.body);
+        if (!parseResult.success) {
+          return res.status(400).json({
+            success: false,
+            error: 'Invalid request: ' + parseResult.error.issues.map((i) => i.message).join(', '),
+          });
+        }
+
+        const { generateLetter } = await import('./services/letter-generator.js');
+        const result = await generateLetter(parseResult.data);
+
+        return res.json({ success: true, ...result });
+      } catch (err) {
+        errLog('Letter generator failed', err);
+        return res.status(500).json({ success: false, error: 'Failed to generate letter. Please try again.' });
+      }
+    }
+  );
+
+  /**
    * Summarize a document using Claude AI
    *
    * PRIVACY GUARANTEES:

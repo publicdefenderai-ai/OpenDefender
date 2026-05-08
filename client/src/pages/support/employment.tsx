@@ -2,7 +2,7 @@ import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import employmentHero from "@assets/stock_images/employment.jpg";
-import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, FileText } from "lucide-react";
+import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, FileText, Sparkles } from "lucide-react";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -143,13 +143,28 @@ function CourtTimeOffSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8 flex items-start gap-3">
+          <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4 flex items-start gap-3">
             <Badge variant="outline" className="shrink-0 mt-0.5 border-amber-400 text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40">
               {t('support.employment.courtTimeOff.tipLabel')}
             </Badge>
             <p className="text-sm text-amber-800 dark:text-amber-300">
               {t('support.employment.courtTimeOff.personalizeNote')}
             </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10 p-4 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-foreground mb-0.5">Need something tailored to your exact situation?</p>
+              <p className="text-xs text-muted-foreground">The templates below are a good starting point. Our letter generator creates a personalized draft based on your specific circumstances.</p>
+            </div>
+            <a href="/letter-generator" className="flex-shrink-0">
+              <Button size="sm" variant="outline" className="whitespace-nowrap gap-1.5">
+                <Sparkles className="h-3.5 w-3.5" />
+                Generate a personalized letter
+              </Button>
+            </a>
           </div>
         </ScrollReveal>
 
