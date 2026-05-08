@@ -529,20 +529,22 @@ export default function HowTo() {
               {/* Quick-jump pills */}
               <div className="flex flex-wrap justify-center gap-2 mt-6">
                 {[
-                  { label: t("howTo.hero.pills.first24"),      href: "#path-1" },
-                  { label: t("howTo.hero.pills.caseGuidance"), href: "#path-2" },
-                  { label: t("howTo.hero.pills.lifeSupport"),  href: "#path-3" },
-                  { label: t("howTo.hero.pills.immigration"),  href: "#path-4" },
-                  { label: t("howTo.hero.pills.directory", "Directory"), href: "#full-directory" },
-                ].map(({ label, href }) => (
-                  <a
+                  { label: t("howTo.hero.pills.first24"),      id: "path-1" },
+                  { label: t("howTo.hero.pills.caseGuidance"), id: "path-2" },
+                  { label: t("howTo.hero.pills.lifeSupport"),  id: "path-3" },
+                  { label: t("howTo.hero.pills.immigration"),  id: "path-4" },
+                  { label: t("howTo.hero.pills.directory", "Directory"), id: "full-directory" },
+                ].map(({ label, id }) => (
+                  <button
                     key={label}
-                    href={href}
+                    onClick={() => {
+                      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
                     className="px-4 py-1.5 rounded-full text-sm font-medium text-white/90 transition-colors hover:text-white"
                     style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.25)" }}
                   >
                     {label}
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
