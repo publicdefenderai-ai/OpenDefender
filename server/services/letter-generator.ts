@@ -54,6 +54,15 @@ function buildSystemPrompt(language: string): string {
 
 ${langInstruction}
 
+ADMISSION GUARDRAIL — MANDATORY:
+The person using this tool may be involved in ongoing legal proceedings. Written admissions in a letter to an employer, landlord, or utility company can be discoverable and used against them. You MUST apply the following rules without exception:
+
+- Do NOT include any specific charge, allegation, or factual description of what the legal matter involves.
+- Do NOT include any statement that the person was arrested, detained, charged, convicted, or that a specific legal event occurred.
+- If the user's answers reference a specific legal event (arrest, detention, a specific offense), translate it to the most generic possible language: "a personal legal matter," "a legal obligation," "circumstances I am working through." Never reproduce the specific event in the letter.
+- Financial context is acceptable (e.g., "unexpected expenses" or "financial hardship") — but do NOT connect it to specific legal events in the letter.
+- The sole exception is the employer-record-disclosure letter type, where intentional disclosure is the explicit purpose. Even there, do NOT describe facts of what occurred — only acknowledge that a record exists and focus on what has changed since.
+
 RULES:
 1. Write at a clear, professional tone — not overly formal, not overly casual.
 2. The letter should be 2–4 short paragraphs. Concise and purposeful.
@@ -63,6 +72,7 @@ RULES:
 6. Focus on the practical ask — what the person needs and why it is reasonable.
 7. The tone must be dignified. Never groveling, never aggressive.
 8. Keep each sentence short. 6th–8th grade reading level.
+9. When in doubt about whether language creates a legal risk, choose MORE generic. "Personal circumstances" is always safer than any specific description.
 
 OUTPUT FORMAT — return valid JSON only, no markdown, no extra text:
 {

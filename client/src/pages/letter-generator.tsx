@@ -119,8 +119,8 @@ const LETTER_TYPES: LetterTypeDef[] = [
         type: "select",
         options: [
           "A legal matter that required my attendance",
-          "I was temporarily detained and have resolved the situation",
-          "A family legal emergency",
+          "A personal matter that required my immediate attention and has since been addressed",
+          "A family emergency",
           "A personal matter I would prefer not to detail",
         ],
       },
@@ -257,7 +257,7 @@ const LETTER_TYPES: LetterTypeDef[] = [
         label: "What are you telling your landlord?",
         type: "select",
         options: [
-          "A recent arrest that may affect payments or my presence",
+          "A change in personal circumstances that may temporarily affect my situation",
           "A possible disruption to upcoming rent payments",
           "A need to explain a recent absence from the unit",
           "A change in household circumstances",
@@ -395,6 +395,8 @@ function IntakeForm({
     (f) => answers[f.key] && answers[f.key].trim()
   );
 
+  const isDisclosure = def.id === "employer-record-disclosure";
+
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
@@ -410,6 +412,21 @@ function IntakeForm({
           <h2 className="font-semibold text-foreground">{def.title}</h2>
         </div>
       </div>
+
+      {isDisclosure ? (
+        <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-800 dark:text-amber-200 text-sm">
+            This letter intentionally discloses a criminal record. Review the final draft carefully before sending. If you are unsure whether or when to disclose, speak with your attorney first.
+          </AlertDescription>
+        </Alert>
+      ) : (
+        <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
+          <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
+            <strong>Note:</strong> These letters use general language. Do not include specific facts about your case — what you are charged with, what happened, or anything related to the underlying dispute. The letter will say "a legal matter" rather than specific details, which protects your legal position.
+          </AlertDescription>
+        </Alert>
+      )}
 
       <div className="space-y-4">
         {def.fields.map((field) => (
@@ -575,7 +592,7 @@ function LetterResult({
 
       <Alert className="border-border bg-muted/50">
         <AlertDescription className="text-xs text-muted-foreground">
-          This is a communication draft, not legal advice. Replace all [bracketed] text with your own details. You are not required to disclose more than you choose to.
+          This is a communication draft, not legal advice. Replace all [bracketed] text with your own details before sending. Review the letter carefully — if anything in it describes facts about your case that you did not intend to disclose, remove or replace it with general language before sending. You are never required to explain more than the practical need.
         </AlertDescription>
       </Alert>
     </div>
