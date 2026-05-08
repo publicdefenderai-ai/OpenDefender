@@ -937,6 +937,16 @@ export function buildSearchIndex(): void {
       url: '/support/reputation'
     },
     {
+      id: 'support-reentry',
+      title: 'Re-entry Resources',
+      titleEs: 'Recursos de Reinserción',
+      titleZh: '重返社会资源',
+      content: 'Resources for people leaving incarceration or completing a sentence. Covers ID restoration (birth certificate, Social Security card, state ID), housing with a criminal record, employment and Ban the Box rights, and voting rights restoration. Includes verified national resources and state-by-state guidance on voting eligibility.',
+      tags: ['reentry', 're-entry', 'after incarceration', 'after release', 'ID restoration', 'voting rights', 'housing with record', 'employment with record', 'ban the box', 'fair chance', 'voting restoration', 'social security card', 'birth certificate', 'state ID'],
+      aliases: ['after prison', 'getting out of jail', 'life after arrest', 'getting ID after prison', 'voting after felony', 'housing after prison', 'jobs with criminal record', 'ban the box', 'fair chance housing', 'restore voting rights'],
+      url: '/support/reentry'
+    },
+    {
       id: 'support-personal-health',
       title: 'Personal Health Support Resources',
       titleEs: 'Recursos de Apoyo de Salud Personal',

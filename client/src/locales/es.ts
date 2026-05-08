@@ -1886,6 +1886,10 @@ export default {
           "diversionPrograms": {
             "label": "Programas de Derivación",
             "description": "Caminos alternativos que pueden ayudar a evitar una condena o reducir los cargos"
+          },
+          "reentry": {
+            "label": "Recursos de Reinserción",
+            "description": "Restauración de identificación, vivienda, empleo y derechos de voto tras la encarcelación"
           }
         },
         "noConcernsSelected": "Puede omitir esto si ninguna aplica",

@@ -359,9 +359,14 @@ export default function FriendsFamily() {
                         <li>• {t('friendsFamily.step5.practicalHelp4')}</li>
                         <li>• {t('friendsFamily.step5.practicalHelp5')}</li>
                         <li>• {t('friendsFamily.step5.practicalHelp6')}</li>
+                        <li>• Start planning for re-entry now:{" "}
+                          <Link href="/support/reentry" className="underline underline-offset-2 font-medium">
+                            ID, housing, employment, and voting rights →
+                          </Link>
+                        </li>
                       </ul>
                     </div>
-                    
+
                     <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
                       <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">
                         {t('friendsFamily.step5.emotionalSupportTitle')}

@@ -71,6 +71,7 @@ const categoryThemes: Record<string, { accent: string; accentBg: string; accentB
   familyCare:     { accent: "text-indigo-600 dark:text-indigo-400", accentBg: "bg-indigo-50 dark:bg-indigo-950/30", accentBorder: "border-indigo-200 dark:border-indigo-800", heroClass: "vivid-header-rose" },
   immigration:    { accent: "text-teal-600 dark:text-teal-400",     accentBg: "bg-teal-50 dark:bg-teal-950/30",     accentBorder: "border-teal-200 dark:border-teal-800",     heroClass: "vivid-header-rose" },
   reputation:     { accent: "text-slate-600 dark:text-slate-400",   accentBg: "bg-slate-50 dark:bg-slate-950/30",   accentBorder: "border-slate-200 dark:border-slate-800",   heroClass: "vivid-header-rose" },
+  reentry:        { accent: "text-orange-600 dark:text-orange-400", accentBg: "bg-orange-50 dark:bg-orange-950/30", accentBorder: "border-orange-200 dark:border-orange-800", heroClass: "vivid-header-rose" },
 };
 
 function SectionHeading({ title }: { title: string }) {

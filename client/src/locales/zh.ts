@@ -1886,6 +1886,10 @@ export default {
           "diversionPrograms": {
             "label": "转处计划",
             "description": "可能有助于避免定罪或减少指控的替代途径"
+          },
+          "reentry": {
+            "label": "重返社会资源",
+            "description": "服刑后的身份证恢复、住房、就业和投票权"
           }
         },
         "noConcernsSelected": "如果没有适用的选项可以跳过",

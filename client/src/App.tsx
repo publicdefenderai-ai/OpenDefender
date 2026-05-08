@@ -70,6 +70,7 @@ const HousingSupport = lazy(() => import("@/pages/support/housing"));
 const AdminCitationReview = lazy(() => import("@/pages/admin/citation-review"));
 const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
 const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
+const ReentrySupport = lazy(() => import("@/pages/support/reentry"));
 const PersonalHealthSupport = lazy(() => import("@/pages/support/personal-health"));
 const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
 // CollateralConsequences merged into /support/reputation — route now redirects
@@ -163,6 +164,7 @@ function Router() {
       <Route path="/support/housing" component={HousingSupport} />
       <Route path="/support/family-care" component={FamilyCareSupport} />
       <Route path="/support/reputation" component={ReputationSupport} />
+      <Route path="/support/reentry" component={ReentrySupport} />
       <Route path="/support/personal-health" component={PersonalHealthSupport} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
       <Route path="/attorney"><Redirect to="/directory" /></Route>

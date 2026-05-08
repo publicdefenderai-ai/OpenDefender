@@ -480,6 +480,7 @@ export default function HowTo() {
         { title: t("howTo.sections.lifeSupport.childcare.title"), description: t("howTo.sections.lifeSupport.childcare.description"), link: "/support/childcare" },
         { title: t("howTo.sections.lifeSupport.courtLogistics.title"), description: t("howTo.sections.lifeSupport.courtLogistics.description"), link: "/support/court-logistics" },
         { title: t("howTo.reputation"), description: t("howTo.reputationDesc"), link: "/support/reputation" },
+        { title: t("howTo.reentry"), description: t("howTo.reentryDesc"), link: "/support/reentry" },
       ],
     },
     {

@@ -19,6 +19,7 @@ import {
   Phone,
   Info,
   GitBranch,
+  Compass,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -45,6 +46,7 @@ const CATEGORIES: Record<string, CategoryDef> = {
   reputation:         { id: "reputation",         icon: ShieldCheck,  iconText: "text-slate-500",   href: "/support/reputation",        borderColor: "#64748b" },
   diversionPrograms:  { id: "diversionPrograms",  icon: GitBranch,    iconText: "text-violet-500",  href: "/diversion-programs",        borderColor: "#8b5cf6" },
   immigration:        { id: "immigration",        icon: Globe2,       iconText: "text-teal-500",    href: "/immigration-guidance",      borderColor: "#14b8a6" },
+  reentry:            { id: "reentry",            icon: Compass,      iconText: "text-orange-500",  href: "/support/reentry",           borderColor: "#f97316" },
   mentalHealth:       { id: "mentalHealth",       icon: HeartPulse,   iconText: "text-rose-500",    href: "/support/mental-health",     borderColor: "#f43f5e" },
   personalHealth:     { id: "personalHealth",     icon: Activity,     iconText: "text-green-500",   href: "/support/personal-health",   borderColor: "#22c55e" },
   familyCare:         { id: "familyCare",         icon: Users,        iconText: "text-indigo-500",  href: "/support/family-care",       borderColor: "#6366f1" },
@@ -52,7 +54,7 @@ const CATEGORIES: Record<string, CategoryDef> = {
 
 const GROUPS = [
   { labelKey: "support.groups.dailyLife",  ids: ["employment", "finances", "housing", "transportation", "childcare"] },
-  { labelKey: "support.groups.legalCourt", ids: ["courtLogistics", "reputation", "diversionPrograms", "immigration"] },
+  { labelKey: "support.groups.legalCourt", ids: ["courtLogistics", "reputation", "diversionPrograms", "immigration", "reentry"] },
   { labelKey: "support.groups.health",     ids: ["mentalHealth", "personalHealth", "familyCare"] },
 ];
 

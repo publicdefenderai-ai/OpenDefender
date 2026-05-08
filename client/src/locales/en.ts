@@ -1884,6 +1884,10 @@ export default {
           "diversionPrograms": {
             "label": "Diversion Programs",
             "description": "Alternative paths that may help avoid conviction or reduce charges"
+          },
+          "reentry": {
+            "label": "Re-entry Resources",
+            "description": "ID restoration, housing, employment, and voting rights after incarceration"
           }
         },
         "noConcernsSelected": "You can skip this if none apply",
@@ -5294,6 +5298,8 @@ export default {
     "collateralConsequencesDesc": "Hidden consequences of a conviction beyond the sentence",
     "reputation": "Reputation & Background Checks",
     "reputationDesc": "Managing background check impacts after an arrest or conviction",
+    "reentry": "Re-entry Resources",
+    "reentryDesc": "ID restoration, housing, employment, and voting rights after incarceration",
     "privacyLabel": "Privacy First:",
     "privacyText": "We do not store your personal data — all input deleted after session.",
     "sections": {

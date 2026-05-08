@@ -557,6 +557,23 @@ export default function CaseTimeline() {
               </AlertDescription>
             </Alert>
           </ScrollReveal>
+
+          <ScrollReveal delay={0.5}>
+            <div className="mt-6 rounded-xl border border-orange-200 dark:border-orange-800/60 bg-orange-50/60 dark:bg-orange-950/20 p-4 flex items-start gap-3">
+              <BookOpen className="h-4 w-4 text-orange-600 dark:text-orange-400 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-medium text-foreground mb-1">Planning for what comes after sentencing?</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  The Re-entry Resources hub covers ID restoration, housing, employment with a record, and voting rights — with direct action steps and verified resources.
+                </p>
+                <Link href="/support/reentry">
+                  <Button variant="link" size="sm" className="p-0 h-auto text-orange-700 dark:text-orange-400 font-medium">
+                    Go to Re-entry Resources →
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
