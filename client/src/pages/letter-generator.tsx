@@ -689,7 +689,7 @@ export default function LetterGenerator() {
               Letter Generator
             </h1>
             <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto">
-              Generate a personalized letter for your specific situation — to your employer, landlord, or utility company. Not legal advice. Communication support.
+              Generate a personalized letter for your specific situation — to your employer, landlord, or utility company.
             </p>
           </ScrollReveal>
         </div>
