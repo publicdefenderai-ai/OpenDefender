@@ -116,22 +116,24 @@ function TopicSection({
   icon: Icon,
   title,
   color,
+  borderColor,
   children,
 }: {
   icon: React.ElementType;
   title: string;
   color: string;
+  borderColor: string;
   children: React.ReactNode;
 }) {
   return (
-    <Card className="h-full">
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-base">
+    <Card className="h-full border-l-4 overflow-hidden" style={{ borderLeftColor: borderColor }}>
+      <CardHeader className="pb-2 pt-4 px-4">
+        <CardTitle className="flex items-center gap-2 text-sm font-semibold">
           <Icon className={`h-4 w-4 flex-shrink-0 ${color}`} strokeWidth={1.75} />
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent className="pt-0 space-y-2 text-sm text-muted-foreground">
+      <CardContent className="pt-0 px-4 pb-4 space-y-2 text-sm text-muted-foreground">
         {children}
       </CardContent>
     </Card>
@@ -144,9 +146,9 @@ function ActionLink({ href, children }: { href: string; children: React.ReactNod
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-start gap-1.5 text-primary hover:underline underline-offset-2 font-medium"
+      className="inline-flex items-center gap-1 text-primary hover:underline underline-offset-2 font-medium"
     >
-      <ExternalLink className="h-3.5 w-3.5 flex-shrink-0 mt-0.5" />
+      <ExternalLink className="h-3 w-3 flex-shrink-0" />
       <span>{children}</span>
     </a>
   );
@@ -159,79 +161,47 @@ function CustomSections() {
         <h2 className="text-xl font-bold text-foreground mb-4">Where to start, by topic</h2>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-w-0">
         <ScrollReveal delay={0.1}>
-          <TopicSection icon={IdCard} title="Get Your ID First" color="text-orange-600 dark:text-orange-400">
-            <p>Everything else requires a government-issued photo ID. Do this before applying for housing, jobs, or benefits.</p>
+          <TopicSection icon={IdCard} title="Get Your ID First" color="text-orange-600 dark:text-orange-400" borderColor="#ea580c">
+            <p>Photo ID is required for housing, jobs, and benefits. Do this before anything else.</p>
             <ol className="space-y-1.5 list-none">
-              <li>
-                <span className="font-semibold text-foreground">1. Birth certificate:</span> Order through your state's vital records office or{" "}
-                <ActionLink href="https://www.vitalchek.com/">VitalChek.com</ActionLink>, the official birth certificate partner for most U.S. states.
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">2. Social Security card:</span> Replace it free at{" "}
-                <ActionLink href="https://www.ssa.gov/ssnumber/">ssa.gov/ssnumber</ActionLink> or any Social Security office (1-800-772-1213).
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">3. State ID or driver's license:</span> Bring your birth certificate and Social Security card to your state DMV. Many states offer fee waivers for people recently released — call 211 to ask about programs near you.
-              </li>
+              <li><span className="font-semibold text-foreground">1. Birth certificate</span> — order via your state or <ActionLink href="https://www.vitalchek.com/">VitalChek.com</ActionLink></li>
+              <li><span className="font-semibold text-foreground">2. Social Security card</span> — free at <ActionLink href="https://www.ssa.gov/ssnumber/">ssa.gov/ssnumber</ActionLink> or call 1-800-772-1213</li>
+              <li><span className="font-semibold text-foreground">3. State ID</span> — bring both documents to the DMV. Call 211 to ask about fee waivers.</li>
             </ol>
           </TopicSection>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <TopicSection icon={Home} title="Housing" color="text-amber-600 dark:text-amber-400">
-            <p>Many landlords run background checks. Your rights depend on your state and the type of housing.</p>
+          <TopicSection icon={Home} title="Housing" color="text-amber-600 dark:text-amber-400" borderColor="#d97706">
+            <p>Your rights depend on the type of housing and your state.</p>
             <ul className="space-y-1.5 list-none">
-              <li>
-                <span className="font-semibold text-foreground">Know your rights:</span> Federal fair housing rules prohibit blanket bans based on arrest records for federally assisted housing.{" "}
-                <ActionLink href="https://www.hud.gov/program_offices/fair_housing_equal_opp/criminal_records">HUD fair housing guidance →</ActionLink>
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">Find local help:</span> Call or text 211 to find transitional housing, re-entry housing programs, and emergency shelter near you.
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">Local protections:</span> Many cities and states have "fair chance" housing ordinances. Search "[your city] fair chance housing" or ask a local legal aid office.
-              </li>
+              <li><span className="font-semibold text-foreground">Federally assisted housing</span> — blanket bans on arrest records are not allowed. <ActionLink href="https://www.hud.gov/program_offices/fair_housing_equal_opp/criminal_records">HUD guidance →</ActionLink></li>
+              <li><span className="font-semibold text-foreground">Find programs</span> — call or text 211 for transitional housing and re-entry programs near you.</li>
+              <li><span className="font-semibold text-foreground">Local protections</span> — many cities have "fair chance" housing laws. Ask a local legal aid office.</li>
             </ul>
           </TopicSection>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <TopicSection icon={Briefcase} title="Employment" color="text-blue-600 dark:text-blue-400">
-            <p>Federal law and many state laws limit how employers can use your criminal history.</p>
+          <TopicSection icon={Briefcase} title="Employment" color="text-blue-600 dark:text-blue-400" borderColor="#2563eb">
+            <p>Federal law limits how employers can use your criminal history.</p>
             <ul className="space-y-1.5 list-none">
-              <li>
-                <span className="font-semibold text-foreground">Your EEOC rights:</span> Employers must assess whether a criminal record is relevant to the specific job. Blanket rejections are often illegal.{" "}
-                <ActionLink href="https://www.eeoc.gov/laws/guidance/questions-and-answers-clarifying-guidance-use-arrest-conviction-records">EEOC guidance →</ActionLink>
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">Ban the Box:</span> Over 35 states and 150+ cities limit when employers can ask about your record — often not until a conditional job offer is made. Check your state's rules at{" "}
-                <ActionLink href="https://www.nelp.org/policy-issue/fair-chance-ban-the-box/">NELP →</ActionLink> (Source: NELP, 2024.)
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">Job search and training:</span>{" "}
-                <ActionLink href="https://www.careeronestop.org/">CareerOneStop</ActionLink> (U.S. Dept. of Labor) has a re-entry job search section and helps you find local American Job Centers.
-              </li>
+              <li><span className="font-semibold text-foreground">EEOC rights</span> — employers must show a record is relevant to the job. Blanket rejections are often illegal. <ActionLink href="https://www.eeoc.gov/laws/guidance/questions-and-answers-clarifying-guidance-use-arrest-conviction-records">EEOC guidance →</ActionLink></li>
+              <li><span className="font-semibold text-foreground">Ban the Box</span> — 35+ states delay criminal history questions until after a job offer. <ActionLink href="https://www.nelp.org/policy-issue/fair-chance-ban-the-box/">Check your state →</ActionLink></li>
+              <li><span className="font-semibold text-foreground">Job search</span> — <ActionLink href="https://www.careeronestop.org/">CareerOneStop</ActionLink> (Dept. of Labor) has a re-entry section and local job centers.</li>
             </ul>
           </TopicSection>
         </ScrollReveal>
 
         <ScrollReveal delay={0.25}>
-          <TopicSection icon={Vote} title="Voting Rights" color="text-green-600 dark:text-green-400">
-            <p>Many people don't know their right to vote was automatically restored. Eligibility varies by state.</p>
+          <TopicSection icon={Vote} title="Voting Rights" color="text-green-600 dark:text-green-400" borderColor="#16a34a">
+            <p>Most states restore voting rights automatically when you leave prison.</p>
             <ul className="space-y-1.5 list-none">
-              <li>
-                <span className="font-semibold text-foreground">Check your state:</span> Most states restore voting rights when you leave prison. Some require finishing parole or probation. Maine and Vermont never suspend them. A few states require a separate application.{" "}
-                <ActionLink href="https://www.ncsl.org/elections-and-campaigns/felon-voting-rights">State-by-state chart →</ActionLink> (Source: NCSL, 2024.)
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">Register if eligible:</span>{" "}
-                <ActionLink href="https://vote.gov/">Vote.gov</ActionLink> — the official U.S. government voter registration portal. Many states offer online registration.
-              </li>
-              <li>
-                <span className="font-semibold text-foreground">Need help?</span> Your state's election office can confirm your eligibility. Many legal aid organizations also assist with voter registration restoration.
-              </li>
+              <li><span className="font-semibold text-foreground">Check your state</span> — some require finishing parole; Maine and Vermont never suspend rights. <ActionLink href="https://www.ncsl.org/elections-and-campaigns/felon-voting-rights">State-by-state chart →</ActionLink></li>
+              <li><span className="font-semibold text-foreground">Register</span> — <ActionLink href="https://vote.gov/">Vote.gov</ActionLink> is the official U.S. registration portal. Many states allow online registration.</li>
+              <li><span className="font-semibold text-foreground">Need help?</span> — your state election office or a local legal aid org can confirm your eligibility.</li>
             </ul>
           </TopicSection>
         </ScrollReveal>
@@ -240,7 +210,7 @@ function CustomSections() {
       <ScrollReveal delay={0.3}>
         <Alert className="border-border bg-muted/50">
           <AlertDescription className="text-muted-foreground text-sm">
-            Re-entry resources vary significantly by state and county. The links above are national starting points. Call 211 to connect with programs specific to your location.
+            Resources vary by state and county. Links above are national starting points. Call 211 for programs specific to your location.
           </AlertDescription>
         </Alert>
       </ScrollReveal>
