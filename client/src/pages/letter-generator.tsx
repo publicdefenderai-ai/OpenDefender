@@ -396,6 +396,7 @@ function IntakeForm({
   );
 
   const isDisclosure = def.id === "employer-record-disclosure";
+  const isEmployerLetter = def.id.startsWith("employer-");
 
   return (
     <div className="space-y-6">
@@ -424,6 +425,15 @@ function IntakeForm({
         <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
           <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
             <strong>Note:</strong> These letters use general language. Do not include specific facts about your case — what you are charged with, what happened, or anything related to the underlying dispute. The letter will say "a legal matter" rather than specific details, which protects your legal position.
+          </AlertDescription>
+        </Alert>
+      )}
+
+      {isEmployerLetter && (
+        <Alert className="border-orange-200 bg-orange-50 dark:bg-orange-900/20 dark:border-orange-700">
+          <AlertTriangle className="h-4 w-4 text-orange-600 dark:text-orange-400" />
+          <AlertDescription className="text-orange-800 dark:text-orange-200 text-sm">
+            <strong>Check your employee handbook first.</strong> Some employers require employees to report certain types of arrests or legal matters — for example, a DUI for someone in a driving role, or a financial offense for someone in a financial role. Review your company policy or contract before sending, and contact HR or a union representative if you are unsure what is required. This letter template covers the basics but may not meet all employer-specific requirements.
           </AlertDescription>
         </Alert>
       )}

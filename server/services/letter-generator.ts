@@ -82,6 +82,12 @@ OUTPUT FORMAT — return valid JSON only, no markdown, no extra text:
 }`;
 }
 
+const EMPLOYER_TYPES: LetterType[] = [
+  'employer-court-dates',
+  'employer-explain-absence',
+  'employer-record-disclosure',
+];
+
 function buildUserPrompt(letterType: LetterType, answers: Record<string, string>): string {
   const context = LETTER_CONTEXTS[letterType];
   const answerBlock = Object.entries(answers)
@@ -89,7 +95,11 @@ function buildUserPrompt(letterType: LetterType, answers: Record<string, string>
     .map(([k, v]) => `${k}: ${v}`)
     .join('\n');
 
-  return `Context: ${context}\n\nUser's situation:\n${answerBlock}\n\nWrite the letter now.`;
+  const employerTipInstruction = EMPLOYER_TYPES.includes(letterType)
+    ? `\n\nIMPORTANT — include this as one of your tips: Remind the user to check their employee handbook or company policy for any mandatory notification requirements before sending. Some employers require employees to report certain types of arrests (for example, a DUI for a driver, or a financial offense for someone in a financial role). If unsure what is required, they should contact HR or a union representative before sending this letter.`
+    : '';
+
+  return `Context: ${context}\n\nUser's situation:\n${answerBlock}\n\nWrite the letter now.${employerTipInstruction}`;
 }
 
 export async function generateLetter(request: LetterRequest): Promise<LetterResult> {
