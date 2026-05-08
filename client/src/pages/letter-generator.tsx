@@ -715,6 +715,17 @@ export default function LetterGenerator() {
               <h2 className="text-lg font-semibold text-foreground mb-1">
                 What kind of letter do you need?
               </h2>
+              <p className="text-sm text-muted-foreground mb-6">
+                The{" "}
+                <a href="/support/employment" className="underline underline-offset-2 font-medium text-foreground hover:text-foreground/80">
+                  employment page
+                </a>{" "}
+                and{" "}
+                <a href="/support/housing" className="underline underline-offset-2 font-medium text-foreground hover:text-foreground/80">
+                  housing page
+                </a>{" "}
+                have copyable templates. This tool tailors the letter to your specific situation.
+              </p>
               <div className="grid gap-3">
                 {LETTER_TYPES.map((def) => (
                   <TypeCard key={def.id} def={def} onSelect={handleSelect} />
