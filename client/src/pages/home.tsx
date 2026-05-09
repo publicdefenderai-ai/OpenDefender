@@ -33,13 +33,16 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
-function TrustItem({ title, description }: { title: string; description: string }) {
+function TrustItem({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) {
   return (
-    <div className="border-b border-border/50 last:border-b-0 py-4 px-2" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <h3 className="font-medium text-foreground mb-1">{title}</h3>
-      <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-        {description}
-      </p>
+    <div className="flex flex-col items-start gap-3 p-5 rounded-2xl border border-border bg-background" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+      <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+        <Icon className="h-5 w-5 text-primary" />
+      </div>
+      <div>
+        <h3 className="font-semibold text-foreground mb-1 text-sm" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+      </div>
     </div>
   );
 }
@@ -78,13 +81,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3 flex-wrap">
           <div className="flex items-center gap-2">
             <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400 flex-shrink-0" aria-hidden="true" />
-            <span className="text-sm text-red-800 dark:text-red-200">
+            <span className="text-base font-medium text-red-800 dark:text-red-200">
               {t('home.hero.urgentStripMessage')}
             </span>
           </div>
           <button
             onClick={handleUrgentHelp}
-            className="text-sm font-semibold text-red-700 dark:text-red-300 underline underline-offset-2 hover:no-underline whitespace-nowrap transition-colors"
+            className="text-base font-semibold text-red-700 dark:text-red-300 underline underline-offset-2 hover:no-underline whitespace-nowrap transition-colors"
             data-testid="button-urgent-strip"
           >
             {t('home.hero.urgentStripCta')} →
@@ -139,7 +142,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-black text-foreground mb-1 tracking-tight">Get Started</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-foreground mb-1 tracking-tight">Choose your path</h2>
               <p className="text-base text-muted-foreground">Four paths to choose from. Most people use more than one.</p>
             </div>
           </ScrollReveal>
@@ -276,42 +279,38 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-background border-t border-border/30">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+      <section className="py-16 md:py-20 bg-slate-50 dark:bg-muted/20 border-t border-border/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-10 md:mb-12">
+            <div className="text-center mb-10">
               <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
                 {t('home.trust.title')}
               </h2>
-              <p className="text-sm text-muted-foreground">
-                {t('home.trust.subtitle')}
-              </p>
             </div>
           </ScrollReveal>
 
-          {/* Expandable Trust Items */}
           <ScrollReveal delay={0.1}>
-            <Card className="border-border/50">
-              <CardContent className="p-5 md:p-6">
-                <TrustItem
-                  title={t('home.trust.privacyTitle')}
-                  description={t('home.trust.privacyDesc')}
-                />
-                <TrustItem
-                  title={t('home.trust.verifiedTitle')}
-                  description={t('home.trust.verifiedDesc')}
-                />
-                <TrustItem
-                  title={t('home.trust.currentTitle')}
-                  description={t('home.trust.currentDesc')}
-                />
-              </CardContent>
-            </Card>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <TrustItem
+                icon={Shield}
+                title={t('home.trust.privacyTitle')}
+                description={t('home.trust.privacyDesc')}
+              />
+              <TrustItem
+                icon={Check}
+                title={t('home.trust.verifiedTitle')}
+                description={t('home.trust.verifiedDesc')}
+              />
+              <TrustItem
+                icon={Heart}
+                title={t('home.trust.currentTitle')}
+                description={t('home.trust.currentDesc')}
+              />
+            </div>
           </ScrollReveal>
 
-          {/* Disclaimer */}
           <ScrollReveal delay={0.3}>
-            <p className="mt-10 md:mt-12 text-xs text-muted-foreground text-center leading-relaxed">
+            <p className="mt-8 text-xs text-muted-foreground text-center leading-relaxed">
               <span className="font-medium">{t('home.trust.disclaimerTitle')}</span>{' '}
               {t('home.trust.disclaimerText')}
             </p>
