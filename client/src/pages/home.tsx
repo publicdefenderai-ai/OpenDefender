@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
   ArrowRight,
-  Shield,
   Phone,
   Mail,
   Navigation,
@@ -33,16 +32,11 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
-function TrustItem({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) {
+function TrustItem({ title, description }: { title: string; description: string }) {
   return (
-    <div className="flex flex-col items-start gap-3 p-5 rounded-2xl border border-border bg-background" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
-        <Icon className="h-5 w-5 text-primary" />
-      </div>
-      <div>
-        <h3 className="font-semibold text-foreground mb-1 text-sm" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
-      </div>
+    <div className="p-5 rounded-2xl border border-border bg-background" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+      <h3 className="font-semibold text-foreground mb-2 text-sm" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -292,17 +286,14 @@ export default function Home() {
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <TrustItem
-                icon={Shield}
                 title={t('home.trust.privacyTitle')}
                 description={t('home.trust.privacyDesc')}
               />
               <TrustItem
-                icon={Check}
                 title={t('home.trust.verifiedTitle')}
                 description={t('home.trust.verifiedDesc')}
               />
               <TrustItem
-                icon={Heart}
                 title={t('home.trust.currentTitle')}
                 description={t('home.trust.currentDesc')}
               />
