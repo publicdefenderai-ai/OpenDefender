@@ -34,9 +34,11 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 function TrustItem({ title, description }: { title: string; description: string }) {
   return (
-    <div className="p-5 rounded-2xl border border-border bg-background" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-      <h3 className="font-semibold text-foreground mb-2 text-sm" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
-      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+    <div className="border-b border-border/50 last:border-b-0 py-4 px-2" data-testid={`trust-item-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+      <h3 className="font-medium text-foreground mb-1">{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed" data-testid={`text-description-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+        {description}
+      </p>
     </div>
   );
 }
@@ -273,35 +275,40 @@ export default function Home() {
       </section>
 
       {/* Trust & Safety Section */}
-      <section className="py-16 md:py-20 bg-slate-50 dark:bg-muted/20 border-t border-border/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="py-16 md:py-20 lg:py-24 bg-slate-50 dark:bg-background border-t border-border/30">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 md:mb-12">
               <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
                 {t('home.trust.title')}
               </h2>
+              <p className="text-sm text-muted-foreground">
+                {t('home.trust.subtitle')}
+              </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <TrustItem
-                title={t('home.trust.privacyTitle')}
-                description={t('home.trust.privacyDesc')}
-              />
-              <TrustItem
-                title={t('home.trust.verifiedTitle')}
-                description={t('home.trust.verifiedDesc')}
-              />
-              <TrustItem
-                title={t('home.trust.currentTitle')}
-                description={t('home.trust.currentDesc')}
-              />
-            </div>
+            <Card className="border-border/50">
+              <CardContent className="p-5 md:p-6">
+                <TrustItem
+                  title={t('home.trust.privacyTitle')}
+                  description={t('home.trust.privacyDesc')}
+                />
+                <TrustItem
+                  title={t('home.trust.verifiedTitle')}
+                  description={t('home.trust.verifiedDesc')}
+                />
+                <TrustItem
+                  title={t('home.trust.currentTitle')}
+                  description={t('home.trust.currentDesc')}
+                />
+              </CardContent>
+            </Card>
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <p className="mt-8 text-xs text-muted-foreground text-center leading-relaxed">
+            <p className="mt-10 md:mt-12 text-xs text-muted-foreground text-center leading-relaxed">
               <span className="font-medium">{t('home.trust.disclaimerTitle')}</span>{' '}
               {t('home.trust.disclaimerText')}
             </p>
