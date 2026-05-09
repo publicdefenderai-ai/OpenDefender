@@ -91,7 +91,7 @@ const LETTER_TYPES: LetterTypeDef[] = [
       },
       {
         key: "Additional context",
-        label: "Anything else to address in the letter? (optional)",
+        label: "Anything else to address in the letter?",
         type: "textarea",
         placeholder: "e.g., requesting to make up missed work, flexible scheduling, etc.",
         optional: true,
@@ -136,7 +136,7 @@ const LETTER_TYPES: LetterTypeDef[] = [
       },
       {
         key: "Additional context",
-        label: "Anything else to address? (optional)",
+        label: "Anything else to address?",
         type: "textarea",
         placeholder: "e.g., offering to make up work, noting strong performance history, etc.",
         optional: true,
@@ -285,7 +285,7 @@ const LETTER_TYPES: LetterTypeDef[] = [
       },
       {
         key: "Additional context",
-        label: "Anything else to address? (optional)",
+        label: "Anything else to address?",
         type: "textarea",
         placeholder: "e.g., strong payment history, long tenancy, etc.",
         optional: true,
