@@ -134,8 +134,8 @@ export default {
       "assertRightsText2": "Then stop talking to police. Don't answer questions until you have a lawyer.",
       "noConsentTitle": "3. Don't Let Them Search",
       "noConsentText": "Say: \"I don't give permission to search.\" Don't fight back, but make it clear you're saying no.",
-      "publicDefenderTitle": "4. Ask for a Public Defender",
-      "publicDefenderText": "If you can't pay for a lawyer, you can get one for free. Ask for a public defender when you first go to court.",
+      "publicDefenderTitle": "4. Request a Court-Appointed Attorney",
+      "publicDefenderText": "If you cannot afford a lawyer, the court must appoint one at no cost. Tell the judge at your first appearance that you cannot afford an attorney and need court-appointed counsel.",
       "rememberTitle": "Remember:",
       "rememberText": "Anything you say can be used against you in court. The best way to protect yourself is to stay silent until you have a lawyer."
     },
@@ -476,7 +476,7 @@ export default {
         },
         "explorePD": {
           "title": "Explore public defender or legal aid",
-          "description": "If you can't afford an attorney, you may qualify for a free public defender. Income limits vary by jurisdiction. Legal aid organizations also provide free help for some cases.",
+          "description": "If you cannot afford an attorney, the court may appoint a public defender at no cost. You request this from the judge at your first court appearance — not from the public defender's office directly. Income limits vary by jurisdiction.",
           "timeframe": "Immediately"
         },
         "feeWaiver": {
@@ -2137,7 +2137,7 @@ export default {
       "attorney": {
         "title": "Right to an Attorney",
         "description": "Free legal representation if you cannot afford one",
-        "detailedExplanation": "The law guarantees your right to have a lawyer for criminal cases. If you can't afford to hire a lawyer, the court must give you a public defender for free - this applies to any criminal case where you could go to jail. You should ask for a lawyer right away when arrested and before answering any questions, because having a lawyer from the start greatly improves your chances of a fair outcome."
+        "detailedExplanation": "The law guarantees your right to have a lawyer for criminal cases. If you cannot afford a lawyer, the court must appoint a public defender at no cost — this applies to any criminal case where you could go to jail. Invoke your right to counsel as soon as you are arrested and before answering any questions. At your first court appearance, tell the judge you need a court-appointed attorney."
       },
       "phoneCall": {
         "title": "Right to a Phone Call",
@@ -3487,7 +3487,7 @@ export default {
       "expect1": "The judge reads the charges against you",
       "expect2": "You enter a plea: guilty, not guilty, or no contest",
       "expect3": "Bail amount may be set or modified",
-      "expect4": "Your attorney can request a public defender if needed",
+      "expect4": "If unrepresented, tell the judge you cannot afford an attorney — the court will appoint one",
       "say": "What to Say",
       "say1": "\"Not guilty\" — this is almost always the best initial plea",
       "say2": "\"I would like a court-appointed attorney\" — if you can't afford one",
@@ -3721,7 +3721,7 @@ export default {
       "alertTitle": "Important:",
       "alertText": "If they can't afford a lawyer, they have the right to a public defender. Don't delay - ask for one when they first see the judge.",
       "publicDefenderTitle": "Public Defender",
-      "publicDefenderDesc": "Free for those who can't afford a lawyer. Ask for one at first court appearance or through court clerk.",
+      "publicDefenderDesc": "The court appoints a public defender at no cost for those who qualify. Tell the judge at the first court appearance that you cannot afford an attorney.",
       "legalAidTitle": "Legal Aid Organizations",
       "legalAidDesc": "Free or low-cost legal services for qualifying individuals.",
       "privateAttorneyTitle": "Private Attorney",
@@ -5004,7 +5004,7 @@ export default {
       "line1": "\"Hey, it's me. I'm okay, but I've been arrested.\"",
       "line2": "\"I'm at [facility name]. My booking number is [number].\"",
       "line3": "\"I've been charged with [charge, if known].\"",
-      "line4": "\"I need you to find a lawyer — call [attorney name if known] or contact the public defender's office in [county].\"",
+      "line4": "\"I need you to find a lawyer. If cost is a problem, contact the public defender's office in [county] to ask about the court-appointment process — a lawyer is appointed by the judge at my first court appearance, not by calling the office.\"",
       "line5": "\"Don't talk to any police or detectives until there's a lawyer involved. I can't say anything else right now.\"",
       "line6": "\"I love you. I'll be okay. Go make those calls.\""
     },
@@ -5031,11 +5031,11 @@ export default {
     "familyCallout": {
       "title": "Are you here to help a family member?",
       "task1": "Find out where they're being held",
-      "task2": "Start the search for a lawyer or public defender",
+      "task2": "Help them get legal representation — private attorney, or request court-appointed counsel at their first appearance",
       "task3": "Learn what to say — and not say — on jail calls",
       "fullGuide": "Full family guide",
       "jailCallGuide": "Jail call guide",
-      "findDefender": "Find a public defender"
+      "findDefender": "Find public defender offices"
     },
     "beforeArrest": {
       "heading": "Before You're Arrested",
@@ -5116,7 +5116,7 @@ export default {
         "timeframe": "During or shortly after booking",
         "context": "You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Every subsequent call is recorded too. Use them wisely.",
         "do1": "Call a family member or trusted friend — not your attorney (they likely won't answer an unfamiliar collect call).",
-        "do2": "Give them: (1) the facility name, (2) your booking number, (3) the charges if known, (4) ask them to find a lawyer or contact the public defender's office in the county where you were arrested.",
+        "do2": "Give them: (1) the facility name, (2) your booking number, (3) the charges if known, (4) ask them to find a private attorney, or if cost is a concern, contact the public defender's office in the county where you were arrested to ask about the court-appointment process.",
         "do3": "Keep the call short and practical. Longer calls mean more recorded material.",
         "do4": "Ask family to write everything down and start finding legal help immediately.",
         "do5": "For ongoing calls: stick to practical matters — court dates, commissary, updates on legal counsel, family wellbeing.",
@@ -5149,7 +5149,7 @@ export default {
       "step5": {
         "title": "Getting Legal Representation",
         "timeframe": "Before your arraignment",
-        "context": "You have the right to an attorney at every critical stage of your case. If you cannot afford one, a public defender will be appointed. Do not wait. Get this started immediately.",
+        "context": "You have the right to an attorney at every critical stage of your case. If you cannot afford one, a public defender will be appointed by the court — you request this by telling the judge at your first appearance. Do not discuss your case without counsel.",
         "do1": "If you cannot afford an attorney, formally request a public defender at your first court appearance.",
         "do2": "If you can afford an attorney, have family start calling private criminal defense attorneys right away. Many offer emergency consultations.",
         "do3": "When you do speak with your attorney, tell them everything. Those conversations are protected by attorney-client privilege.",
@@ -5476,7 +5476,7 @@ export default {
     },
     "publicDefender": {
       "title": "Find a Public Defender",
-      "description": "Search for public defender offices in your area by zip code to get free legal representation."
+      "description": "Search for public defender offices in your area by zip code to find contact information and learn about the court-appointed counsel process."
     },
     "courtLocator": {
       "title": "Find Local Courts",

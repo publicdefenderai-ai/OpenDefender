@@ -136,8 +136,8 @@ export default {
       "assertRightsText2": "Luego deje de hablar con la policía. No responda preguntas hasta tener un abogado.",
       "noConsentTitle": "3. NO Consienta Registros",
       "noConsentText": "Diga: \"No consiento ningún registro.\" No resista físicamente, pero deje clara su negativa.",
-      "publicDefenderTitle": "4. Solicite un Defensor Público",
-      "publicDefenderText": "Si no puede pagar un abogado, tiene derecho a un defensor público gratuito. Solicite uno inmediatamente en su primera comparecencia ante el tribunal.",
+      "publicDefenderTitle": "4. Solicite un Abogado de Oficio",
+      "publicDefenderText": "Si no puede pagar un abogado, el tribunal debe asignarle uno sin costo. Dígale al juez en su primera comparecencia que no puede pagar un abogado y que necesita uno de oficio.",
       "rememberTitle": "Recuerde:",
       "rememberText": "Todo lo que diga puede y será usado en su contra en la corte. La mejor protección es permanecer en silencio hasta tener representación legal."
     },
@@ -478,7 +478,7 @@ export default {
         },
         "explorePD": {
           "title": "Explore defensor público o ayuda legal",
-          "description": "Si no puede pagar un abogado, puede calificar para un defensor público gratuito. Los límites de ingresos varían según la jurisdicción. Las organizaciones de ayuda legal también brindan ayuda gratuita para algunos casos.",
+          "description": "Si no puede pagar un abogado, el tribunal puede asignarle un defensor público sin costo. Esta solicitud se hace al juez en su primera comparecencia — no se tramita directamente con la oficina del defensor público. Los límites de ingresos varían según la jurisdicción.",
           "timeframe": "Inmediatamente"
         },
         "feeWaiver": {
@@ -2139,7 +2139,7 @@ export default {
       "attorney": {
         "title": "Derecho a un Abogado",
         "description": "Representación legal gratuita si no puede pagarla",
-        "detailedExplanation": "La Sexta Enmienda garantiza su derecho a asesoría legal en procedimientos criminales. Si no puede pagar un abogado privado, la corte debe proporcionarle un defensor público sin costo para usted - esto aplica a cualquier caso criminal donde el tiempo en prisión sea una pena posible. Debe solicitar un abogado inmediatamente después del arresto y antes de responder cualquier pregunta, ya que tener representación legal desde el principio mejora significativamente sus posibilidades de un resultado justo."
+        "detailedExplanation": "La Sexta Enmienda garantiza su derecho a asesoría legal en procedimientos criminales. Si no puede pagar un abogado, el tribunal debe asignarle un defensor público sin costo — esto aplica a cualquier caso criminal donde la cárcel sea una pena posible. Invoque su derecho a un abogado inmediatamente al ser arrestado y antes de responder cualquier pregunta. En su primera comparecencia, dígale al juez que necesita un abogado de oficio."
       },
       "phoneCall": {
         "title": "Derecho a una Llamada Telefónica",
@@ -3489,7 +3489,7 @@ export default {
       "expect1": "El juez lee los cargos en su contra",
       "expect2": "Usted declara: culpable, no culpable o nolo contendere",
       "expect3": "Se puede establecer o modificar el monto de la fianza",
-      "expect4": "Su abogado puede solicitar un defensor público si es necesario",
+      "expect4": "Si no tiene abogado, dígale al juez que no puede pagar uno — el tribunal le asignará uno",
       "say": "Qué Decir",
       "say1": "\"No culpable\" — casi siempre es la mejor declaración inicial",
       "say2": "\"Me gustaría un abogado designado por la corte\" — si no puede pagar uno",
@@ -3723,7 +3723,7 @@ export default {
       "alertTitle": "Importante:",
       "alertText": "Si no pueden pagar un abogado, tienen derecho a un defensor público. No se demore - solicite uno en la primera comparecencia ante el tribunal (lectura de cargos).",
       "publicDefenderTitle": "Defensor Público",
-      "publicDefenderDesc": "Gratuito para quienes califican financieramente. Solicite en la lectura de cargos o a través del secretario del tribunal.",
+      "publicDefenderDesc": "El tribunal asigna un defensor público sin costo para quienes califican. Dígale al juez en la primera comparecencia que no puede pagar un abogado.",
       "legalAidTitle": "Organizaciones de Asistencia Legal",
       "legalAidDesc": "Servicios legales gratuitos o de bajo costo para personas que califiquen.",
       "privateAttorneyTitle": "Abogado Privado",
@@ -5004,7 +5004,7 @@ export default {
       "line1": "«Hola, soy yo. Estoy bien, pero me han arrestado.»",
       "line2": "«Estoy en [nombre del centro]. Mi número de reserva es [número].»",
       "line3": "«Me han acusado de [cargo, si se sabe].»",
-      "line4": "«Necesito que encuentres un abogado — llama a [nombre del abogado si se sabe] o contacta la oficina del defensor público en [condado].»",
+      "line4": "«Necesito que busques un abogado. Si el costo es un problema, llama a la oficina del defensor público de [condado] para preguntar sobre el proceso de nombramiento — el juez asigna el abogado en la primera comparecencia, no la oficina.»",
       "line5": "«No hables con la policía ni con ningún detective hasta que haya un abogado involucrado. No puedo decir nada más ahora mismo.»",
       "line6": "«Te quiero. Estaré bien. Ve a hacer esas llamadas.»"
     },
@@ -5031,11 +5031,11 @@ export default {
     "familyCallout": {
       "title": "¿Está aquí para ayudar a un familiar?",
       "task1": "Averigüe dónde está detenido",
-      "task2": "Empiece a buscar un abogado o defensor público",
+      "task2": "Ayudarles a obtener representación legal — abogado privado o solicitar abogado de oficio en la primera comparecencia",
       "task3": "Aprenda qué decir — y qué no decir — en las llamadas desde la cárcel",
       "fullGuide": "Guía completa para familias",
       "jailCallGuide": "Guía de llamadas desde la cárcel",
-      "findDefender": "Encontrar un defensor público"
+      "findDefender": "Encontrar oficinas de defensores públicos"
     },
     "beforeArrest": {
       "heading": "Antes de Ser Arrestado",
@@ -5116,7 +5116,7 @@ export default {
         "timeframe": "Durante o poco después del fichaje",
         "context": "Normalmente se le permitirá al menos una llamada telefónica. Es casi seguro que esta llamada está siendo grabada. Todas las llamadas posteriores también se graban. Úselas con prudencia.",
         "do1": "Llame a un familiar o amigo de confianza, no a su abogado (probablemente no contestará una llamada de cobro revertido desconocida).",
-        "do2": "Dígales: (1) el nombre del centro, (2) su número de fichaje, (3) los cargos si los conoce, (4) pídales que busquen un abogado o contacten con la oficina del defensor público del condado donde fue arrestado.",
+        "do2": "Dígales: (1) el nombre del centro, (2) su número de fichaje, (3) los cargos si los conoce, (4) pídales que busquen un abogado privado, o si el costo es un problema, que llamen a la oficina del defensor público del condado donde fue arrestado para preguntar sobre el proceso de nombramiento.",
         "do3": "Mantenga la llamada corta y práctica. Las llamadas más largas suponen más material grabado.",
         "do4": "Pida a su familia que anote todo y comience a buscar ayuda legal de inmediato.",
         "do5": "Para llamadas posteriores: limítese a asuntos prácticos: fechas de audiencia, comisaría, novedades sobre asesoramiento legal, bienestar familiar.",
@@ -5149,7 +5149,7 @@ export default {
       "step5": {
         "title": "Obtener Representación Legal",
         "timeframe": "Antes de su lectura de cargos",
-        "context": "Tiene derecho a un abogado en cada etapa crítica de su caso. Si no puede costearlo, se le asignará un defensor público. No espere. Comience este proceso de inmediato.",
+        "context": "Tiene derecho a un abogado en cada etapa crítica de su caso. Si no puede costearlo, el tribunal le asignará un defensor público — solicítelo diciéndoselo al juez en su primera comparecencia. No hable sobre su caso sin tener abogado.",
         "do1": "Si no puede costear un abogado, solicite formalmente un defensor público en su primera comparecencia ante el tribunal.",
         "do2": "Si puede costear un abogado, pida a su familia que llame de inmediato a abogados penalistas privados. Muchos ofrecen consultas de urgencia.",
         "do3": "Cuando hable con su abogado, cuéntele todo. Esas conversaciones están protegidas por el privilegio abogado-cliente.",
@@ -5470,7 +5470,7 @@ export default {
     },
     "publicDefender": {
       "title": "Encontrar un Defensor Público",
-      "description": "Busque oficinas de defensores públicos en su área por código postal para obtener representación legal gratuita."
+      "description": "Busque oficinas de defensores públicos en su área por código postal para encontrar información de contacto y aprender sobre el proceso de nombramiento de abogado de oficio."
     },
     "courtLocator": {
       "title": "Encontrar Tribunales Locales",
