@@ -209,7 +209,7 @@ interface StepProps {
   context: string;
   dos?: string[];
   donts?: string[];
-  considerations?: string[];
+  considerations?: Array<{ heading: string; text: string }>;
   isLast?: boolean;
   id?: string;
   highlighted?: boolean;
@@ -252,17 +252,14 @@ function Step({ number, title, timeframe, context, dos = [], donts = [], conside
       <p className="text-muted-foreground mb-5 leading-relaxed text-sm mt-4">{context}</p>
 
       {considerations.length > 0 && (
-        <div className="rounded-lg border border-border bg-muted/30 p-4 space-y-3">
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Key points</p>
-          <ul className="space-y-3">
-            {considerations.map((item, i) => (
-              <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/80 dark:text-foreground/75">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0 mt-2" />
-                <span className="leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="space-y-2.5">
+          {considerations.map((item, i) => (
+            <li key={i} className="rounded-lg border border-border bg-background p-4">
+              <p className="text-sm font-semibold text-foreground mb-1.5">{item.heading}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+            </li>
+          ))}
+        </ul>
       )}
 
       {considerations.length === 0 && (dos.length > 0 || donts.length > 0) && <div className="grid md:grid-cols-2 gap-4">
@@ -714,59 +711,59 @@ export default function FirstTwentyFourHours() {
                 value: 'police-talk',
                 title: t('first24Hours.beforeArrest.policeWantToTalkTitle'),
                 considerations: [
-                  t('first24Hours.beforeArrest.policeWantToTalkC1'),
-                  t('first24Hours.beforeArrest.policeWantToTalkC2'),
-                  t('first24Hours.beforeArrest.policeWantToTalkC3'),
+                  { heading: t('first24Hours.beforeArrest.policeWantToTalkC1Title'), text: t('first24Hours.beforeArrest.policeWantToTalkC1') },
+                  { heading: t('first24Hours.beforeArrest.policeWantToTalkC2Title'), text: t('first24Hours.beforeArrest.policeWantToTalkC2') },
+                  { heading: t('first24Hours.beforeArrest.policeWantToTalkC3Title'), text: t('first24Hours.beforeArrest.policeWantToTalkC3') },
                 ],
               },
               {
                 value: 'target-letter',
                 title: t('first24Hours.beforeArrest.targetLetterTitle'),
                 considerations: [
-                  t('first24Hours.beforeArrest.targetLetterC1'),
-                  t('first24Hours.beforeArrest.targetLetterC2'),
-                  t('first24Hours.beforeArrest.targetLetterC3'),
+                  { heading: t('first24Hours.beforeArrest.targetLetterC1Title'), text: t('first24Hours.beforeArrest.targetLetterC1') },
+                  { heading: t('first24Hours.beforeArrest.targetLetterC2Title'), text: t('first24Hours.beforeArrest.targetLetterC2') },
+                  { heading: t('first24Hours.beforeArrest.targetLetterC3Title'), text: t('first24Hours.beforeArrest.targetLetterC3') },
                 ],
               },
               {
                 value: 'warrant',
                 title: t('first24Hours.beforeArrest.warrantTitle'),
                 considerations: [
-                  t('first24Hours.beforeArrest.warrantC1'),
-                  t('first24Hours.beforeArrest.warrantC2'),
-                  t('first24Hours.beforeArrest.warrantC3'),
+                  { heading: t('first24Hours.beforeArrest.warrantC1Title'), text: t('first24Hours.beforeArrest.warrantC1') },
+                  { heading: t('first24Hours.beforeArrest.warrantC2Title'), text: t('first24Hours.beforeArrest.warrantC2') },
+                  { heading: t('first24Hours.beforeArrest.warrantC3Title'), text: t('first24Hours.beforeArrest.warrantC3') },
                 ],
               },
               {
                 value: 'detained',
                 title: t('first24Hours.beforeArrest.detainedTitle'),
                 considerations: [
-                  t('first24Hours.beforeArrest.detainedC1'),
-                  t('first24Hours.beforeArrest.detainedC2'),
-                  t('first24Hours.beforeArrest.detainedC3'),
+                  { heading: t('first24Hours.beforeArrest.detainedC1Title'), text: t('first24Hours.beforeArrest.detainedC1') },
+                  { heading: t('first24Hours.beforeArrest.detainedC2Title'), text: t('first24Hours.beforeArrest.detainedC2') },
+                  { heading: t('first24Hours.beforeArrest.detainedC3Title'), text: t('first24Hours.beforeArrest.detainedC3') },
                 ],
               },
               {
                 value: 'probation-parole',
                 title: t('first24Hours.beforeArrest.probationParoleTitle'),
                 considerations: [
-                  t('first24Hours.beforeArrest.probationParoleC1'),
-                  t('first24Hours.beforeArrest.probationParoleC2'),
-                  t('first24Hours.beforeArrest.probationParoleC3'),
-                  t('first24Hours.beforeArrest.probationParoleC4'),
+                  { heading: t('first24Hours.beforeArrest.probationParoleC1Title'), text: t('first24Hours.beforeArrest.probationParoleC1') },
+                  { heading: t('first24Hours.beforeArrest.probationParoleC2Title'), text: t('first24Hours.beforeArrest.probationParoleC2') },
+                  { heading: t('first24Hours.beforeArrest.probationParoleC3Title'), text: t('first24Hours.beforeArrest.probationParoleC3') },
+                  { heading: t('first24Hours.beforeArrest.probationParoleC4Title'), text: t('first24Hours.beforeArrest.probationParoleC4') },
                 ],
               },
-            ] as { value: string; title: string; considerations: string[] }[]).map(({ value, title, considerations }) => (
+            ] as { value: string; title: string; considerations: Array<{ heading: string; text: string }> }[]).map(({ value, title, considerations }) => (
               <AccordionItem key={value} value={value} className="border border-border/70 rounded-lg px-4 bg-background/60">
                 <AccordionTrigger className="text-left hover:no-underline py-3">
                   <span className="font-semibold text-sm">{title}</span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-4">
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-2">
                     {considerations.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-xs text-foreground/80">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0 mt-1.5" />
-                        <span className="leading-relaxed">{item}</span>
+                      <li key={i} className="rounded-lg border border-border/70 bg-background p-3">
+                        <p className="text-xs font-semibold text-foreground mb-1">{item.heading}</p>
+                        <p className="text-xs text-muted-foreground leading-relaxed">{item.text}</p>
                       </li>
                     ))}
                   </ul>
@@ -795,11 +792,11 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step1.timeframe')}
               context={t('first24Hours.steps.step1.context')}
               considerations={[
-                t('first24Hours.steps.step1.c1'),
-                t('first24Hours.steps.step1.c2'),
-                t('first24Hours.steps.step1.c3'),
-                t('first24Hours.steps.step1.c4'),
-                t('first24Hours.steps.step1.c5'),
+                { heading: t('first24Hours.steps.step1.c1Title'), text: t('first24Hours.steps.step1.c1') },
+                { heading: t('first24Hours.steps.step1.c2Title'), text: t('first24Hours.steps.step1.c2') },
+                { heading: t('first24Hours.steps.step1.c3Title'), text: t('first24Hours.steps.step1.c3') },
+                { heading: t('first24Hours.steps.step1.c4Title'), text: t('first24Hours.steps.step1.c4') },
+                { heading: t('first24Hours.steps.step1.c5Title'), text: t('first24Hours.steps.step1.c5') },
               ]}
             >
               <div className="mt-2 space-y-3">
@@ -828,11 +825,11 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step2.timeframe')}
               context={t('first24Hours.steps.step2.context')}
               considerations={[
-                t('first24Hours.steps.step2.c1'),
-                t('first24Hours.steps.step2.c2'),
-                t('first24Hours.steps.step2.c3'),
-                t('first24Hours.steps.step2.c4'),
-                t('first24Hours.steps.step2.c5'),
+                { heading: t('first24Hours.steps.step2.c1Title'), text: t('first24Hours.steps.step2.c1') },
+                { heading: t('first24Hours.steps.step2.c2Title'), text: t('first24Hours.steps.step2.c2') },
+                { heading: t('first24Hours.steps.step2.c3Title'), text: t('first24Hours.steps.step2.c3') },
+                { heading: t('first24Hours.steps.step2.c4Title'), text: t('first24Hours.steps.step2.c4') },
+                { heading: t('first24Hours.steps.step2.c5Title'), text: t('first24Hours.steps.step2.c5') },
               ]}
             >
               <div className="space-y-3 mt-2">
@@ -870,10 +867,10 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step3.timeframe')}
               context={t('first24Hours.steps.step3.context')}
               considerations={[
-                t('first24Hours.steps.step3.c1'),
-                t('first24Hours.steps.step3.c2'),
-                t('first24Hours.steps.step3.c3'),
-                t('first24Hours.steps.step3.c4'),
+                { heading: t('first24Hours.steps.step3.c1Title'), text: t('first24Hours.steps.step3.c1') },
+                { heading: t('first24Hours.steps.step3.c2Title'), text: t('first24Hours.steps.step3.c2') },
+                { heading: t('first24Hours.steps.step3.c3Title'), text: t('first24Hours.steps.step3.c3') },
+                { heading: t('first24Hours.steps.step3.c4Title'), text: t('first24Hours.steps.step3.c4') },
               ]}
             >
               <div className="space-y-4 mt-2">
@@ -939,10 +936,10 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step4.timeframe')}
               context={t('first24Hours.steps.step4.context')}
               considerations={[
-                t('first24Hours.steps.step4.c1'),
-                t('first24Hours.steps.step4.c2'),
-                t('first24Hours.steps.step4.c3'),
-                t('first24Hours.steps.step4.c4'),
+                { heading: t('first24Hours.steps.step4.c1Title'), text: t('first24Hours.steps.step4.c1') },
+                { heading: t('first24Hours.steps.step4.c2Title'), text: t('first24Hours.steps.step4.c2') },
+                { heading: t('first24Hours.steps.step4.c3Title'), text: t('first24Hours.steps.step4.c3') },
+                { heading: t('first24Hours.steps.step4.c4Title'), text: t('first24Hours.steps.step4.c4') },
               ]}
             >
               <div className="mt-2">
@@ -975,10 +972,10 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step5.timeframe')}
               context={t('first24Hours.steps.step5.context')}
               considerations={[
-                t('first24Hours.steps.step5.c1'),
-                t('first24Hours.steps.step5.c2'),
-                t('first24Hours.steps.step5.c3'),
-                t('first24Hours.steps.step5.c4'),
+                { heading: t('first24Hours.steps.step5.c1Title'), text: t('first24Hours.steps.step5.c1') },
+                { heading: t('first24Hours.steps.step5.c2Title'), text: t('first24Hours.steps.step5.c2') },
+                { heading: t('first24Hours.steps.step5.c3Title'), text: t('first24Hours.steps.step5.c3') },
+                { heading: t('first24Hours.steps.step5.c4Title'), text: t('first24Hours.steps.step5.c4') },
               ]}
             >
               <div className="space-y-4 mt-2">
@@ -1026,10 +1023,10 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step6.timeframe')}
               context={t('first24Hours.steps.step6.context')}
               considerations={[
-                t('first24Hours.steps.step6.c1'),
-                t('first24Hours.steps.step6.c2'),
-                t('first24Hours.steps.step6.c3'),
-                t('first24Hours.steps.step6.c4'),
+                { heading: t('first24Hours.steps.step6.c1Title'), text: t('first24Hours.steps.step6.c1') },
+                { heading: t('first24Hours.steps.step6.c2Title'), text: t('first24Hours.steps.step6.c2') },
+                { heading: t('first24Hours.steps.step6.c3Title'), text: t('first24Hours.steps.step6.c3') },
+                { heading: t('first24Hours.steps.step6.c4Title'), text: t('first24Hours.steps.step6.c4') },
               ]}
             >
               <div className="space-y-3 mt-2">
@@ -1078,11 +1075,11 @@ export default function FirstTwentyFourHours() {
               timeframe={t('first24Hours.steps.step7.timeframe')}
               context={t('first24Hours.steps.step7.context')}
               considerations={[
-                t('first24Hours.steps.step7.c1'),
-                t('first24Hours.steps.step7.c2'),
-                t('first24Hours.steps.step7.c3'),
-                t('first24Hours.steps.step7.c4'),
-                t('first24Hours.steps.step7.c5'),
+                { heading: t('first24Hours.steps.step7.c1Title'), text: t('first24Hours.steps.step7.c1') },
+                { heading: t('first24Hours.steps.step7.c2Title'), text: t('first24Hours.steps.step7.c2') },
+                { heading: t('first24Hours.steps.step7.c3Title'), text: t('first24Hours.steps.step7.c3') },
+                { heading: t('first24Hours.steps.step7.c4Title'), text: t('first24Hours.steps.step7.c4') },
+                { heading: t('first24Hours.steps.step7.c5Title'), text: t('first24Hours.steps.step7.c5') },
               ]}
               isLast
             >
