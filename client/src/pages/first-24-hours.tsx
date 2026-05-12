@@ -428,7 +428,7 @@ function ResourcesCard() {
       color: "text-blue-600 dark:text-blue-400",
       bg: "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800/50",
       title: "Free Legal Aid",
-      desc: "Find legal aid organizations and public defender offices near you — all 50 states.",
+      desc: "Find legal aid organizations and public defender offices near you, all 50 states.",
       link: "Browse legal aid →",
       href: "/legal-aid",
     },
@@ -455,7 +455,7 @@ function ResourcesCard() {
       color: "text-purple-600 dark:text-purple-400",
       bg: "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800/50",
       title: "Case Timeline",
-      desc: "What happens after arraignment — bail hearings, motions, trial, and sentencing.",
+      desc: "What happens after arraignment: bail hearings, motions, trial, and sentencing.",
       link: "View timeline →",
       href: "/case-timeline",
     },
@@ -465,7 +465,7 @@ function ResourcesCard() {
     <div className="mt-8 rounded-xl border border-border overflow-hidden">
       <div className="px-5 py-4 border-b border-border bg-muted/30">
         <h2 className="text-base font-bold text-foreground">Resources &amp; Next Steps</h2>
-        <p className="text-sm text-muted-foreground mt-0.5">Everything you need — in one place. No searching required.</p>
+        <p className="text-sm text-muted-foreground mt-0.5">Everything you need, in one place. No searching required.</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2">
         {resources.map((r, i) => (
@@ -700,7 +700,7 @@ export default function FirstTwentyFourHours() {
           isOpen={openStepId === 0}
           onToggle={() => toggleStep(0)}
           title={t('first24Hours.beforeArrest.heading')}
-          timeframe="Optional — if you haven't been arrested yet"
+          timeframe="Optional, if you haven't been arrested yet"
           context={t('first24Hours.beforeArrest.subheading')}
           dos={[]}
           donts={[]}
@@ -1114,7 +1114,7 @@ export default function FirstTwentyFourHours() {
                 <Link href="#phone-call" onClick={() => openStep(3)}>
                   <button className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-teal-300 dark:border-teal-700 text-sm text-teal-700 dark:text-teal-300 hover:bg-teal-100/60 dark:hover:bg-teal-900/30 transition-colors">
                     <MapPin className="w-3.5 h-3.5" />
-                    Inmate locator — all 50 states
+                    Inmate locator, all 50 states
                   </button>
                 </Link>
                 <Link href="/friends-family">
@@ -1241,7 +1241,7 @@ export default function FirstTwentyFourHours() {
                           </div>
                         ) : (
                           <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground">
-                            <strong>{stateName}</strong> does not have a specific state rule catalogued here — your rights during this stage are governed by the federal constitutional rules described above.{" "}
+                            <strong>{stateName}</strong> does not have a specific state rule catalogued here. Your rights during this stage are governed by the federal constitutional rules described above.{" "}
                             <Link href="/case-guidance" className="underline underline-offset-2 font-medium">Get personalized guidance</Link> for {stateName}-specific details.
                           </div>
                         )}
@@ -1375,7 +1375,7 @@ export default function FirstTwentyFourHours() {
                             </div>
                           ) : (
                             <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground">
-                              <strong>{stateName}</strong> does not have a specific first appearance timeline catalogued here — the federal constitutional standard applies (appearance "without unnecessary delay," typically within 48 hours).{" "}
+                              <strong>{stateName}</strong> does not have a specific first appearance timeline catalogued here. The federal constitutional standard applies (appearance "without unnecessary delay," typically within 48 hours).{" "}
                               <Link href="/case-guidance" className="underline underline-offset-2 font-medium">Get personalized guidance</Link> for {stateName}-specific details.
                             </div>
                           )}
