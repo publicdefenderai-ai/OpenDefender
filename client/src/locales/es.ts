@@ -131,9 +131,9 @@ export default {
       "immediateActions": "Acciones Inmediatas:",
       "stayCalmTitle": "1. Mantenga la Calma",
       "stayCalmText": "No resista el arresto. Mantenga sus manos visibles. Siga las instrucciones con calma.",
-      "assertRightsTitle": "2. Diga Sus Derechos",
-      "assertRightsText1": "Diga claramente: \"Quiero quedarme en silencio. Quiero hablar con un abogado.\"",
-      "assertRightsText2": "Luego deje de hablar con la policía. No responda preguntas hasta tener un abogado.",
+      "assertRightsTitle": "2. Invoque Sus Derechos",
+      "assertRightsText1": "Para invocar su derecho al silencio y a un abogado, diga claramente: \"Quiero quedarme en silencio. Quiero hablar con un abogado.\"",
+      "assertRightsText2": "Una vez que lo diga claramente, la policía está obligada por ley a dejar de interrogarle. No necesita explicar ni decir nada más.",
       "noConsentTitle": "3. NO Consienta Registros",
       "noConsentText": "Diga: \"No consiento ningún registro.\" No resista físicamente, pero deje clara su negativa.",
       "publicDefenderTitle": "4. Solicite un Abogado de Oficio",
@@ -1613,8 +1613,8 @@ export default {
     "arraignment": {
       "plea": {
         "question": "¿Cómo se declara respecto a los cargos en su contra?",
-        "response": "No culpable, Su Señoría.",
-        "explanation": "La mayoría de los abogados recomiendan declararse no culpable en la lectura de cargos. Esto preserva todas sus opciones y da tiempo para revisar la evidencia."
+        "response": "[Lo que le aconseje su abogado: Culpable, No Culpable o Nolo Contendere]",
+        "explanation": "La declaración que introduzca en la lectura de cargos tiene efectos legales permanentes. Esta decisión debe tomarse con su abogado antes de comparecer ante el tribunal."
       },
       "understand": {
         "question": "¿Entiende los cargos en su contra?",
@@ -1936,7 +1936,7 @@ export default {
         "title": "Plazos Próximos"
       },
       "immediateActions": {
-        "title": "Acciones Inmediatas (Próximas 48 Horas)",
+        "title": "Qué Importa Ahora",
         "completed": "Completadas: {{count}} de {{total}} acciones"
       },
       "caseTimeline": {
@@ -1964,7 +1964,7 @@ export default {
         "title": "Preparación para la Corte"
       },
       "actionsToAvoid": {
-        "title": "Acciones a Evitar"
+        "title": "Preocupaciones Comunes"
       },
       "supportResources": {
         "title": "Recursos de Apoyo Para Usted",
@@ -3363,7 +3363,7 @@ export default {
           "Derecho a declararse inocente"
         ],
         "tips": [
-          "Casi siempre declare 'no culpable' en esta etapa",
+          "Hable con su abogado sobre sus opciones de declaración antes de la lectura de cargos — es una decisión crítica",
           "Solicite un defensor público si no puede pagar un abogado",
           "Vístase apropiadamente y diríjase al juez como 'Su Señoría'",
           "No discuta los hechos de su caso en audiencia pública",
@@ -3491,7 +3491,7 @@ export default {
       "expect3": "Se puede establecer o modificar el monto de la fianza",
       "expect4": "Si no tiene abogado, dígale al juez que no puede pagar uno — el tribunal le asignará uno",
       "say": "Qué Decir",
-      "say1": "\"No culpable\" — casi siempre es la mejor declaración inicial",
+      "say1": "Sus tres opciones de declaración son: Culpable, No Culpable o Nolo Contendere. Su abogado le aconseja cuál introducir según su caso.",
       "say2": "\"Me gustaría un abogado designado por la corte\" — si no puede pagar uno",
       "say3": "\"Sí, Su Señoría\" / \"No, Su Señoría\" — al dirigirse al juez",
       "dontSay": "No Diga",
@@ -4362,7 +4362,7 @@ export default {
       "title": "Aviso de Lectura de Cargos",
       "description": "Aviso de su primera comparecencia ante la corte después del arresto.",
       "purpose": "Esto le dice cuándo y dónde debe presentarse para su lectura de cargos - la audiencia donde se le informará formalmente los cargos y se le pedirá declarar.",
-      "whatToDo": "¡No falte a esta fecha! Llegue temprano. Si no tiene abogado, dígale al juez que quiere un defensor público. Típicamente declarará 'no culpable' en esta etapa.",
+      "whatToDo": "No falte a esta fecha. Llegue temprano. El juez le pedirá que introduzca una declaración — su abogado debe aconsejarle cuál elegir. Si aún no tiene uno, informe al juez en esta audiencia.",
       "sections": {
         "courtLocation": { "label": "Ubicación de la Corte", "explanation": "El juzgado específico, número de sala y dirección donde debe presentarse. Llegue temprano para pasar seguridad y encontrar la sala correcta." },
         "dateTime": { "label": "Fecha y Hora", "explanation": "Exactamente cuándo debe presentarse. Faltar a esta fecha probablemente resultará en una orden de arresto." },
@@ -5084,7 +5084,7 @@ export default {
         "title": "En el Momento del Arresto",
         "timeframe": "De inmediato",
         "context": "La policía le está deteniendo. Sus derechos existen ahora mismo, pero solo le protegen si los ejerce.",
-        "do1": "Diga claramente: «Estoy invocando mi derecho a guardar silencio» y «Quiero un abogado».",
+        "do1": "Para invocar su derecho a guardar silencio, diga claramente: «Estoy invocando mi derecho a guardar silencio». Para solicitar un abogado, diga: «Quiero un abogado». Una vez que lo diga claramente, la policía está obligada a dejar de interrogarle.",
         "do2": "Cumpla físicamente. No se resista, aunque crea que el arresto es ilegal.",
         "do3": "Trate de recordar los números de placa, nombres de los agentes y todo lo que ocurra.",
         "dont1": "No intente explicar, justificar o «aclarar las cosas». Todo lo que diga puede ser usado en su contra.",
@@ -5162,11 +5162,11 @@ export default {
       "step6": {
         "title": "Lectura de Cargos: Su Primera Comparecencia ante el Tribunal",
         "timeframe": "Dentro de las 48–72 horas (algunos estados más tiempo)",
-        "context": "Se le leerán formalmente los cargos en su contra y se le pedirá que introduzca una declaración. Este no es el momento de defender su caso. Es el momento de preservar sus opciones.",
-        "do1": "Declare «no culpable» en la lectura de cargos, a menos que su abogado le haya aconsejado específicamente otra cosa tras revisar su caso.",
-        "do2": "Esto preserva todas las opciones disponibles para usted. Siempre puede cambiar una declaración de inocencia más adelante.",
+        "context": "En la lectura de cargos, se le leen formalmente los cargos y se le pide que introduzca una declaración. Esta es una decisión crítica que su abogado debe guiarle. El juez también abordará la fianza en esta audiencia.",
+        "do1": "En la lectura de cargos, se le pedirá que introduzca una declaración. Existen tres opciones: culpable, no culpable y nolo contendere. Cada una tiene efectos legales diferentes en su caso. Su abogado debe aconsejarle cuál elegir según los hechos de su situación.",
+        "do2": "Si aún no tiene abogado, informe al juez. Puede pedir más tiempo para conseguir uno, o solicitar un abogado de oficio si no puede permitírselo.",
         "do3": "Vista ropa limpia y apropiada si ha sido puesto en libertad bajo fianza.",
-        "dont1": "No se declare culpable en la lectura de cargos. No puede deshacerse de ello, y no ha tenido tiempo de evaluar el caso completo.",
+        "dont1": "Introducir cualquier declaración sin haber hablado primero con un abogado significa tomar una decisión con efectos legales permanentes, sin conocer todas sus opciones.",
         "dont2": "No hable con el juez sobre los hechos de su caso.",
         "dont3": "No falte a esta fecha judicial. Se emitirá una orden de arresto contra usted.",
         "whoCharges": {
@@ -5191,10 +5191,10 @@ export default {
         "do2": "Cumpla exactamente todas las condiciones de su fianza o libertad. Las infracciones resultan en un arresto inmediato.",
         "do3": "Escriba todo lo que recuerde sobre el incidente lo antes posible, mientras está fresco.",
         "do4": "Comuníquese con su abogado de forma puntual y honesta.",
-        "dont1": "No contacte a ninguna supuesta víctima o testigo, ni siquiera para disculparse o explicarse.",
-        "dont2": "No publique nada sobre su caso en redes sociales. Los fiscales monitorean esto.",
-        "dont3": "No hable de su caso con familiares o amigos. Los fiscales pueden citarlos para que testifiquen sobre lo que usted dijo.",
-        "dont4": "No incurra en nuevos cargos. Incluso incidentes menores pueden afectar su situación de fianza y el resultado de su caso.",
+        "dont1": "El contacto con supuestas víctimas o testigos durante un caso activo puede plantear serias preocupaciones legales, incluyendo obstrucción a la justicia. Su abogado debe aconsejarle antes de que contacte a cualquier persona relacionada con el caso.",
+        "dont2": "Lo que publique sobre su caso en redes sociales puede ser obtenido por los fiscales y utilizado en el tribunal. Muchos abogados aconsejan no hablar públicamente del caso por esta razón.",
+        "dont3": "Las conversaciones sobre su caso fuera del privilegio abogado-cliente no están protegidas. Familiares y amigos pueden ser requeridos por ley a testificar sobre lo que usted les dijo. Su abogado puede orientarle sobre qué, si acaso, es apropiado compartir.",
+        "dont4": "Nuevos incidentes criminales mientras un caso está pendiente pueden afectar las condiciones de la fianza, aumentar la exposición legal y complicar la defensa.",
         "supportBridge": "Ser arrestado afecta más que solo el caso legal. La vivienda, los beneficios, el empleo y la estabilidad familiar a menudo se ven afectados al mismo tiempo, y las órdenes judiciales pueden requerirle completar clases específicas o servicio comunitario. La sección de Apoyo para la Vida de este sitio lo cubre todo.",
         "supportBridgeLink": "Ir a Apoyo para la Vida",
         "twoOneBridge": "Para servicios locales cerca de usted, llame o envíe un mensaje al 211 — gratuito y disponible las 24 horas."

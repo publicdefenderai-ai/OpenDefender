@@ -459,7 +459,7 @@ export default function Home() {
                     <ol className="space-y-3">
                       {[
                         { title: "Get a lawyer before you appear", body: "If you cannot afford one, contact the public defender's office in the county where you were charged immediately. Do not go to your first appearance without representation if you can avoid it." },
-                        { title: "Don't discuss your case", body: "Do not talk about the charges with friends, family, or on social media. Prosecutors can subpoena anyone you speak to." },
+                        { title: "Conversations about your case are not protected", body: "Anything you tell friends, family, or post publicly can be obtained by prosecutors. Those people can be required by law to testify about what you told them." },
                         { title: "Understand your bail conditions", body: "If you were released on bail, read every condition carefully. Violating any condition, even accidentally, results in immediate re-arrest." },
                         { title: "Don't miss your court date", body: "Missing a hearing results in an arrest warrant being issued. Set multiple reminders." },
                       ].map((step, i) => (

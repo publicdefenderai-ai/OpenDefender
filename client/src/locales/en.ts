@@ -129,9 +129,9 @@ export default {
       "immediateActions": "What to Do Right Now:",
       "stayCalmTitle": "1. Stay Calm",
       "stayCalmText": "Don't fight back. Keep your hands where police can see them. Do what they say calmly.",
-      "assertRightsTitle": "2. State Your Rights",
-      "assertRightsText1": "Say clearly: \"I want to stay silent. I want to talk to a lawyer.\"",
-      "assertRightsText2": "Then stop talking to police. Don't answer questions until you have a lawyer.",
+      "assertRightsTitle": "2. Invoke Your Rights",
+      "assertRightsText1": "To invoke your right to silence and right to counsel, say clearly: \"I want to stay silent. I want to talk to a lawyer.\"",
+      "assertRightsText2": "Once you clearly say this, police are required by law to stop questioning you. You do not need to explain or say anything further.",
       "noConsentTitle": "3. Don't Let Them Search",
       "noConsentText": "Say: \"I don't give permission to search.\" Don't fight back, but make it clear you're saying no.",
       "publicDefenderTitle": "4. Request a Court-Appointed Attorney",
@@ -1611,8 +1611,8 @@ export default {
     "arraignment": {
       "plea": {
         "question": "How do you plead to the charges against you?",
-        "response": "Not guilty, Your Honor.",
-        "explanation": "Most attorneys recommend pleading not guilty at arraignment. This preserves all your options and gives time to review evidence."
+        "response": "[What your attorney advises — Guilty, Not Guilty, or No Contest]",
+        "explanation": "The plea you enter at arraignment has permanent legal effects. This decision must be made with your attorney before you appear in court."
       },
       "understand": {
         "question": "Do you understand the charges against you?",
@@ -1934,7 +1934,7 @@ export default {
         "title": "Upcoming Deadlines"
       },
       "immediateActions": {
-        "title": "Immediate Actions (Next 48 Hours)",
+        "title": "What Matters Now",
         "completed": "Completed: {{count}} of {{total}} actions"
       },
       "caseTimeline": {
@@ -1962,7 +1962,7 @@ export default {
         "title": "Court Preparation"
       },
       "actionsToAvoid": {
-        "title": "Actions to Avoid"
+        "title": "Common Concerns"
       },
       "supportResources": {
         "title": "Support Resources For You",
@@ -3361,7 +3361,7 @@ export default {
           "Right to plead not guilty"
         ],
         "tips": [
-          "Almost always plead 'not guilty' at this stage",
+          "Discuss your plea options with your attorney before arraignment — this is a critical decision",
           "Request a public defender if you cannot afford a lawyer",
           "Dress appropriately and address the judge as 'Your Honor'",
           "Do not discuss facts of your case in open court",
@@ -3489,7 +3489,7 @@ export default {
       "expect3": "Bail amount may be set or modified",
       "expect4": "If unrepresented, tell the judge you cannot afford an attorney — the court will appoint one",
       "say": "What to Say",
-      "say1": "\"Not guilty\" — this is almost always the best initial plea",
+      "say1": "Your three plea options are: Guilty, Not Guilty, or No Contest. Your attorney advises which to enter based on your case.",
       "say2": "\"I would like a court-appointed attorney\" — if you can't afford one",
       "say3": "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge",
       "dontSay": "Don't Say",
@@ -4360,7 +4360,7 @@ export default {
       "title": "Arraignment Notice",
       "description": "Notice of your first court appearance after arrest.",
       "purpose": "This tells you when and where you must appear for your arraignment - the hearing where you'll be formally told the charges and asked to enter a plea.",
-      "whatToDo": "Do not miss this date! Arrive early. If you don't have a lawyer, tell the judge you want a public defender. You'll typically plead 'not guilty' at this stage.",
+      "whatToDo": "Do not miss this date. Arrive early. The judge will ask you to enter a plea — your attorney must advise you on which to choose. If you do not yet have one, tell the judge at this hearing.",
       "sections": {
         "courtLocation": { "label": "Court Location", "explanation": "The specific courthouse, room number, and address where you must appear. Arrive early to go through security and find the right courtroom." },
         "dateTime": { "label": "Date and Time", "explanation": "Exactly when you must appear. Missing this date will likely result in a bench warrant for your arrest." },
@@ -5084,7 +5084,7 @@ export default {
         "title": "At the Moment of Arrest",
         "timeframe": "Immediately",
         "context": "Police are detaining you. Your rights exist right now, but they only protect you if you use them.",
-        "do1": "Say clearly: \"I am invoking my right to remain silent\" and \"I want a lawyer.\"",
+        "do1": "To invoke your right to remain silent, say clearly: \"I am invoking my right to remain silent.\" To request an attorney, say: \"I want a lawyer.\" Once you clearly state this, police must stop questioning.",
         "do2": "Comply physically. Do not resist, even if you believe the arrest is unlawful.",
         "do3": "Try to remember badge numbers, officer names, and everything that happens.",
         "dont1": "Don't try to explain, justify, or \"clear things up.\" Anything you say can be used against you.",
@@ -5162,11 +5162,11 @@ export default {
       "step6": {
         "title": "Arraignment: Your First Court Appearance",
         "timeframe": "Within 48–72 hours (some states longer)",
-        "context": "You will be formally read the charges against you and asked to enter a plea. This is not the time to fight your case. It is the time to preserve your options.",
-        "do1": "Plead \"not guilty\" at arraignment, unless your attorney has specifically advised otherwise after reviewing your case.",
-        "do2": "This preserves every option available to you. You can always change a not-guilty plea later.",
+        "context": "At arraignment, the charges are formally read and you are asked to enter a plea. This is a critical decision — one your attorney must guide you on. The judge will also address bail at this hearing.",
+        "do1": "At arraignment, you will be asked to enter a plea. Three options exist: guilty, not guilty, and no contest. Each has different legal effects on your case. Your attorney must advise you on which to choose based on the facts of your situation.",
+        "do2": "If you do not yet have an attorney, tell the judge. You can ask for more time to get one, or request a court-appointed attorney if you cannot afford one.",
         "do3": "Appear in clean, appropriate clothing if you have been released on bail.",
-        "dont1": "Don't plead guilty at arraignment. You cannot take it back, and you haven't had time to evaluate the full case.",
+        "dont1": "Entering any plea without first speaking with an attorney means making a decision with permanent legal effects — without knowing all of your options.",
         "dont2": "Don't speak to the judge about the facts of your case.",
         "dont3": "Don't miss this court date. A warrant will be issued for your arrest.",
         "whoCharges": {
@@ -5191,10 +5191,10 @@ export default {
         "do2": "Follow every condition of your bail or release exactly. Violations result in immediate re-arrest.",
         "do3": "Write down everything you remember about the incident as soon as possible while it is fresh.",
         "do4": "Communicate with your attorney promptly and honestly.",
-        "dont1": "Don't contact any alleged victims or witnesses, even to apologize or explain.",
-        "dont2": "Don't post anything about your case on social media. Prosecutors monitor this.",
-        "dont3": "Don't discuss your case with family or friends. Prosecutors can subpoena them to testify about what you said.",
-        "dont4": "Don't pick up any new charges. Even minor incidents can affect your bail status and case outcome.",
+        "dont1": "Contact with alleged victims or witnesses during an active case can raise serious legal concerns, including obstruction of justice. Your attorney should advise you before you reach out to anyone connected to the case.",
+        "dont2": "What you post about your case on social media can be obtained by prosecutors and used in court. Many attorneys advise against discussing the case publicly for this reason.",
+        "dont3": "Conversations about your case outside of attorney-client privilege are not protected. Friends and family can be required by law to testify about what you told them. Your attorney can guide you on what, if anything, is appropriate to share.",
+        "dont4": "New criminal incidents while a case is pending can affect bail conditions, add legal exposure, and complicate a defense.",
         "supportBridge": "Being arrested affects more than just the legal case. Housing, benefits, employment, and family stability are often disrupted at the same time — and court orders may require you to complete specific classes or community service. The Life Support section of this site covers all of it.",
         "supportBridgeLink": "Go to Life Support",
         "twoOneBridge": "For local services near you, call or text 211 — free and available 24/7."
