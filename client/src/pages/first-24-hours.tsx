@@ -207,8 +207,9 @@ interface StepProps {
   title: string;
   timeframe: string;
   context: string;
-  dos: string[];
-  donts: string[];
+  dos?: string[];
+  donts?: string[];
+  considerations?: string[];
   isLast?: boolean;
   id?: string;
   highlighted?: boolean;
@@ -219,7 +220,7 @@ interface StepProps {
   onToggle?: () => void;
 }
 
-function Step({ number, title, timeframe, context, dos, donts, isLast, id, highlighted, priorityLabel, icon: Icon, children, isOpen, onToggle }: StepProps) {
+function Step({ number, title, timeframe, context, dos = [], donts = [], considerations = [], isLast, id, highlighted, priorityLabel, icon: Icon, children, isOpen, onToggle }: StepProps) {
   const colors = STEP_COLORS[number] ?? STEP_COLORS[7];
   const isAccordion = isOpen !== undefined && onToggle !== undefined;
 
@@ -250,7 +251,21 @@ function Step({ number, title, timeframe, context, dos, donts, isLast, id, highl
     <div className={isAccordion ? "px-5 pb-6 pt-1 border-t border-border/50" : ""}>
       <p className="text-muted-foreground mb-5 leading-relaxed text-sm mt-4">{context}</p>
 
-      {(dos.length > 0 || donts.length > 0) && <div className="grid md:grid-cols-2 gap-4">
+      {considerations.length > 0 && (
+        <div className="rounded-lg border border-border bg-muted/30 p-4 space-y-3">
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Key points</p>
+          <ul className="space-y-3">
+            {considerations.map((item, i) => (
+              <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/80 dark:text-foreground/75">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0 mt-2" />
+                <span className="leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {considerations.length === 0 && (dos.length > 0 || donts.length > 0) && <div className="grid md:grid-cols-2 gap-4">
         <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-4">
           <div className="flex items-center gap-2 mb-3 pb-2.5 border-b border-emerald-200 dark:border-emerald-800/60">
             <div className="w-5 h-5 rounded-full bg-emerald-500 dark:bg-emerald-600 flex items-center justify-center flex-shrink-0">
@@ -698,112 +713,63 @@ export default function FirstTwentyFourHours() {
               {
                 value: 'police-talk',
                 title: t('first24Hours.beforeArrest.policeWantToTalkTitle'),
-                dos: [
-                  t('first24Hours.beforeArrest.policeWantToTalkDo1'),
-                  t('first24Hours.beforeArrest.policeWantToTalkDo2'),
-                  t('first24Hours.beforeArrest.policeWantToTalkDo3'),
-                ],
-                donts: [
-                  t('first24Hours.beforeArrest.policeWantToTalkDont1'),
-                  t('first24Hours.beforeArrest.policeWantToTalkDont2'),
-                  t('first24Hours.beforeArrest.policeWantToTalkDont3'),
+                considerations: [
+                  t('first24Hours.beforeArrest.policeWantToTalkC1'),
+                  t('first24Hours.beforeArrest.policeWantToTalkC2'),
+                  t('first24Hours.beforeArrest.policeWantToTalkC3'),
                 ],
               },
               {
                 value: 'target-letter',
                 title: t('first24Hours.beforeArrest.targetLetterTitle'),
-                dos: [
-                  t('first24Hours.beforeArrest.targetLetterDo1'),
-                  t('first24Hours.beforeArrest.targetLetterDo2'),
-                ],
-                donts: [
-                  t('first24Hours.beforeArrest.targetLetterDont1'),
-                  t('first24Hours.beforeArrest.targetLetterDont2'),
-                  t('first24Hours.beforeArrest.targetLetterDont3'),
+                considerations: [
+                  t('first24Hours.beforeArrest.targetLetterC1'),
+                  t('first24Hours.beforeArrest.targetLetterC2'),
+                  t('first24Hours.beforeArrest.targetLetterC3'),
                 ],
               },
               {
                 value: 'warrant',
                 title: t('first24Hours.beforeArrest.warrantTitle'),
-                dos: [
-                  t('first24Hours.beforeArrest.warrantDo1'),
-                  t('first24Hours.beforeArrest.warrantDo2'),
-                  t('first24Hours.beforeArrest.warrantDo3'),
-                ],
-                donts: [
-                  t('first24Hours.beforeArrest.warrantDont1'),
-                  t('first24Hours.beforeArrest.warrantDont2'),
-                  t('first24Hours.beforeArrest.warrantDont3'),
+                considerations: [
+                  t('first24Hours.beforeArrest.warrantC1'),
+                  t('first24Hours.beforeArrest.warrantC2'),
+                  t('first24Hours.beforeArrest.warrantC3'),
                 ],
               },
               {
                 value: 'detained',
                 title: t('first24Hours.beforeArrest.detainedTitle'),
-                dos: [
-                  t('first24Hours.beforeArrest.detainedDo1'),
-                  t('first24Hours.beforeArrest.detainedDo2'),
-                  t('first24Hours.beforeArrest.detainedDo3'),
-                ],
-                donts: [
-                  t('first24Hours.beforeArrest.detainedDont1'),
-                  t('first24Hours.beforeArrest.detainedDont2'),
-                  t('first24Hours.beforeArrest.detainedDont3'),
+                considerations: [
+                  t('first24Hours.beforeArrest.detainedC1'),
+                  t('first24Hours.beforeArrest.detainedC2'),
+                  t('first24Hours.beforeArrest.detainedC3'),
                 ],
               },
               {
                 value: 'probation-parole',
                 title: t('first24Hours.beforeArrest.probationParoleTitle'),
-                dos: [
-                  t('first24Hours.beforeArrest.probationParoleDo1'),
-                  t('first24Hours.beforeArrest.probationParoleDo2'),
-                  t('first24Hours.beforeArrest.probationParoleDo3'),
-                ],
-                donts: [
-                  t('first24Hours.beforeArrest.probationParoleDont1'),
-                  t('first24Hours.beforeArrest.probationParoleDont2'),
-                  t('first24Hours.beforeArrest.probationParoleDont3'),
+                considerations: [
+                  t('first24Hours.beforeArrest.probationParoleC1'),
+                  t('first24Hours.beforeArrest.probationParoleC2'),
+                  t('first24Hours.beforeArrest.probationParoleC3'),
+                  t('first24Hours.beforeArrest.probationParoleC4'),
                 ],
               },
-            ] as { value: string; title: string; dos: string[]; donts: string[] }[]).map(({ value, title, dos, donts }) => (
+            ] as { value: string; title: string; considerations: string[] }[]).map(({ value, title, considerations }) => (
               <AccordionItem key={value} value={value} className="border border-border/70 rounded-lg px-4 bg-background/60">
                 <AccordionTrigger className="text-left hover:no-underline py-3">
                   <span className="font-semibold text-sm">{title}</span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-4">
-                  <div className="grid md:grid-cols-2 gap-3">
-                    <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/60 bg-emerald-50/70 dark:bg-emerald-900/10 p-3">
-                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-emerald-200 dark:border-emerald-800/60">
-                        <div className="w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
-                        </div>
-                        <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">Do</p>
-                      </div>
-                      <ul className="space-y-2">
-                        {dos.map((item, i) => (
-                          <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
-                            <Check className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="rounded-lg border border-rose-200 dark:border-rose-800/60 bg-rose-50/70 dark:bg-rose-900/10 p-3">
-                      <div className="flex items-center gap-2 mb-2 pb-2 border-b border-rose-200 dark:border-rose-800/60">
-                        <div className="w-4 h-4 rounded-full bg-rose-500 flex items-center justify-center flex-shrink-0">
-                          <X className="w-2.5 h-2.5 text-white" strokeWidth={3} />
-                        </div>
-                        <p className="text-xs font-bold uppercase tracking-widest text-rose-600 dark:text-rose-400">Don't</p>
-                      </div>
-                      <ul className="space-y-2">
-                        {donts.map((item, i) => (
-                          <li key={i} className="text-xs text-foreground/80 flex items-start gap-2">
-                            <X className="w-3.5 h-3.5 text-rose-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  <ul className="space-y-2.5">
+                    {considerations.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-xs text-foreground/80">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0 mt-1.5" />
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -828,15 +794,12 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step1.title')}
               timeframe={t('first24Hours.steps.step1.timeframe')}
               context={t('first24Hours.steps.step1.context')}
-              dos={[
-                t('first24Hours.steps.step1.do1'),
-                t('first24Hours.steps.step1.do2'),
-                t('first24Hours.steps.step1.do3'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step1.dont1'),
-                t('first24Hours.steps.step1.dont2'),
-                t('first24Hours.steps.step1.dont3'),
+              considerations={[
+                t('first24Hours.steps.step1.c1'),
+                t('first24Hours.steps.step1.c2'),
+                t('first24Hours.steps.step1.c3'),
+                t('first24Hours.steps.step1.c4'),
+                t('first24Hours.steps.step1.c5'),
               ]}
             >
               <div className="mt-2 space-y-3">
@@ -864,21 +827,12 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step2.title')}
               timeframe={t('first24Hours.steps.step2.timeframe')}
               context={t('first24Hours.steps.step2.context')}
-              dos={[
-                t('first24Hours.steps.step2.do1'),
-                t('first24Hours.steps.step2.do2'),
-                t('first24Hours.steps.step2.do3'),
-                t('first24Hours.steps.step2.do4'),
-                t('first24Hours.steps.step2.do5'),
-                t('first24Hours.steps.step2.do6'),
-                t('first24Hours.steps.step2.do7'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step2.dont1'),
-                t('first24Hours.steps.step2.dont2'),
-                t('first24Hours.steps.step2.dont3'),
-                t('first24Hours.steps.step2.dont4'),
-                t('first24Hours.steps.step2.dont5'),
+              considerations={[
+                t('first24Hours.steps.step2.c1'),
+                t('first24Hours.steps.step2.c2'),
+                t('first24Hours.steps.step2.c3'),
+                t('first24Hours.steps.step2.c4'),
+                t('first24Hours.steps.step2.c5'),
               ]}
             >
               <div className="space-y-3 mt-2">
@@ -915,21 +869,11 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step3.title')}
               timeframe={t('first24Hours.steps.step3.timeframe')}
               context={t('first24Hours.steps.step3.context')}
-              dos={[
-                t('first24Hours.steps.step3.do1'),
-                t('first24Hours.steps.step3.do2'),
-                t('first24Hours.steps.step3.do3'),
-                t('first24Hours.steps.step3.do4'),
-                t('first24Hours.steps.step3.do5'),
-                t('first24Hours.steps.step3.do6'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step3.dont1'),
-                t('first24Hours.steps.step3.dont2'),
-                t('first24Hours.steps.step3.dont3'),
-                t('first24Hours.steps.step3.dont4'),
-                t('first24Hours.steps.step3.dont5'),
-                t('first24Hours.steps.step3.dont6'),
+              considerations={[
+                t('first24Hours.steps.step3.c1'),
+                t('first24Hours.steps.step3.c2'),
+                t('first24Hours.steps.step3.c3'),
+                t('first24Hours.steps.step3.c4'),
               ]}
             >
               <div className="space-y-4 mt-2">
@@ -994,15 +938,11 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step4.title')}
               timeframe={t('first24Hours.steps.step4.timeframe')}
               context={t('first24Hours.steps.step4.context')}
-              dos={[
-                t('first24Hours.steps.step4.do1'),
-                t('first24Hours.steps.step4.do2'),
-                t('first24Hours.steps.step4.do3'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step4.dont1'),
-                t('first24Hours.steps.step4.dont2'),
-                t('first24Hours.steps.step4.dont3'),
+              considerations={[
+                t('first24Hours.steps.step4.c1'),
+                t('first24Hours.steps.step4.c2'),
+                t('first24Hours.steps.step4.c3'),
+                t('first24Hours.steps.step4.c4'),
               ]}
             >
               <div className="mt-2">
@@ -1034,15 +974,11 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step5.title')}
               timeframe={t('first24Hours.steps.step5.timeframe')}
               context={t('first24Hours.steps.step5.context')}
-              dos={[
-                t('first24Hours.steps.step5.do1'),
-                t('first24Hours.steps.step5.do2'),
-                t('first24Hours.steps.step5.do3'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step5.dont1'),
-                t('first24Hours.steps.step5.dont2'),
-                t('first24Hours.steps.step5.dont3'),
+              considerations={[
+                t('first24Hours.steps.step5.c1'),
+                t('first24Hours.steps.step5.c2'),
+                t('first24Hours.steps.step5.c3'),
+                t('first24Hours.steps.step5.c4'),
               ]}
             >
               <div className="space-y-4 mt-2">
@@ -1089,15 +1025,11 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step6.title')}
               timeframe={t('first24Hours.steps.step6.timeframe')}
               context={t('first24Hours.steps.step6.context')}
-              dos={[
-                t('first24Hours.steps.step6.do1'),
-                t('first24Hours.steps.step6.do2'),
-                t('first24Hours.steps.step6.do3'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step6.dont1'),
-                t('first24Hours.steps.step6.dont2'),
-                t('first24Hours.steps.step6.dont3'),
+              considerations={[
+                t('first24Hours.steps.step6.c1'),
+                t('first24Hours.steps.step6.c2'),
+                t('first24Hours.steps.step6.c3'),
+                t('first24Hours.steps.step6.c4'),
               ]}
             >
               <div className="space-y-3 mt-2">
@@ -1145,17 +1077,12 @@ export default function FirstTwentyFourHours() {
               title={t('first24Hours.steps.step7.title')}
               timeframe={t('first24Hours.steps.step7.timeframe')}
               context={t('first24Hours.steps.step7.context')}
-              dos={[
-                t('first24Hours.steps.step7.do1'),
-                t('first24Hours.steps.step7.do2'),
-                t('first24Hours.steps.step7.do3'),
-                t('first24Hours.steps.step7.do4'),
-              ]}
-              donts={[
-                t('first24Hours.steps.step7.dont1'),
-                t('first24Hours.steps.step7.dont2'),
-                t('first24Hours.steps.step7.dont3'),
-                t('first24Hours.steps.step7.dont4'),
+              considerations={[
+                t('first24Hours.steps.step7.c1'),
+                t('first24Hours.steps.step7.c2'),
+                t('first24Hours.steps.step7.c3'),
+                t('first24Hours.steps.step7.c4'),
+                t('first24Hours.steps.step7.c5'),
               ]}
               isLast
             >

@@ -442,28 +442,15 @@ function ArrestRightsSection() {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6 animate-rights-content">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldDo')}</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do1')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do2')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do3')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do4')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.do5')} /></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.shouldNotDo')}</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont1')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont2')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont3')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont4')} /></li>
-              <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.dont5')} /></li>
-            </ul>
-          </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-3">{t('rights.detailedRights.arrest.keyPoints')}</h4>
+          <ul className="space-y-3 text-muted-foreground">
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.c1')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.c2')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.c3')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.c4')} /></li>
+            <li>• <LegalTextHighlighter text={t('rights.detailedRights.arrest.c5')} /></li>
+          </ul>
         </div>
 
         <div>
@@ -741,7 +728,7 @@ function SearchScenarioCard({ scenario }: { scenario: SearchScenario }) {
           </CollapsibleTrigger>
         </CardHeader>
         <CollapsibleContent>
-          <CardContent className="space-y-4 pt-0">
+          <CardContent className="pt-0">
             <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-lg">
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3 flex items-center gap-2 text-sm">
                 <BrandShieldIcon size={14} />
@@ -755,24 +742,6 @@ function SearchScenarioCard({ scenario }: { scenario: SearchScenario }) {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-green-50 dark:bg-green-950 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-3 text-sm">What to Do:</h4>
-                <ul className="space-y-1.5">
-                  {scenario.whatToDo.map((action, i) => (
-                    <li key={i} className="text-sm text-green-800 dark:text-green-200">+ {action}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-red-50 dark:bg-red-950 p-4 rounded-lg">
-                <h4 className="font-semibold text-red-900 dark:text-red-100 mb-3 text-sm">What NOT to Do:</h4>
-                <ul className="space-y-1.5">
-                  {scenario.whatNotToDo.map((action, i) => (
-                    <li key={i} className="text-sm text-red-800 dark:text-red-200">- {action}</li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </CardContent>
         </CollapsibleContent>
