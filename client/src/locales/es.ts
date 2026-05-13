@@ -2240,7 +2240,7 @@ export default {
     },
     "disclaimer": {
       "title": "Importante:",
-      "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes varían según la jurisdicción y cambian con el tiempo. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación.",
+      "text": "Esta información es solo para educación general. No constituye asesoramiento legal y el uso de este sitio no crea una relación abogado-cliente. La información aquí no está protegida por privilegio legal. Las leyes varían según el estado. Consulte a un abogado autorizado sobre su situación específica.",
       "needHelp": "¿Necesita Ayuda Legal Inmediata?",
       "emergencyAid": "Asistencia Legal de Emergencia",
       "caseGuidance": "Obtener Orientación de Caso"
@@ -4896,7 +4896,7 @@ export default {
     "subtitle": "Desde el arresto hasta su primera comparecencia ante el tribunal — las decisiones tomadas al inicio de un caso pueden tener consecuencias duraderas.",
     "alert": "Una regla aplica a cada paso a continuación: No discuta los hechos de su caso con nadie excepto su abogado — ni con la policía, ni con familiares, ni con compañeros de celda, ni por teléfono de la cárcel.",
     "relatedGuides": "Guías relacionadas",
-    "disclaimer": "Esta guía proporciona información general únicamente y no constituye asesoramiento legal. Las leyes y procedimientos varían según el estado y la jurisdicción. Siempre consulte a un abogado autorizado sobre su situación específica.",
+    "disclaimer": "Esta guía proporciona información legal general únicamente. No constituye asesoramiento legal y el uso de esta guía no crea una relación abogado-cliente. La información aquí no está protegida por el privilegio abogado-cliente. Las leyes y procedimientos varían según el estado. Consulte a un abogado autorizado sobre su situación específica.",
     "deepDiveTitle": "Profundice más",
     "deepDiveSubtitle": "Temas importantes que afectan cómo navegar las primeras 24 horas — haga clic en cualquier sección para expandir.",
     "accordion": {

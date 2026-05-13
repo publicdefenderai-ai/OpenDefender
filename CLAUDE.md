@@ -20,7 +20,34 @@ OpenDefender is a public legal aid platform providing constitutional rights info
 - All session data must auto-delete; cost tracking must be durable (awaited writes)
 - **No secrets in the codebase.** API keys, database credentials, session secrets, and tokens must only ever come from `process.env`. Never assign a secret as a string literal in source code. If a value looks like a key or credential, it belongs in the hosting environment's secret manager, not in code. The `.env` file is gitignored and must never be committed. See `.env.example` for the full list of required variables.
 
-### 2. Accuracy Above All — No Dummy, Stale, or Placeholder Data in Production
+### 2. Legal Information vs. Legal Advice — The Content Standard
+
+**OpenDefender is an orientation tool and trusted intermediary, not a legal advisor.** All content must be audited against the California Court Self-Help Center Guidelines Section 16 test before publication:
+
+**The test:** Does this content require or imply a strategic decision about how to handle the underlying case?
+- If **yes** → remove the recommendation. Replace with consequence-description, option-presentation, or referral to an attorney.
+- If **no** → it is likely permissible as legal information or procedural guidance.
+
+**What is permitted:**
+- Describing what is typically important at a case stage, and why
+- Presenting all available options and their legal consequences (without recommending one)
+- Explaining how legal processes work (procedural information)
+- Describing what attorneys commonly advise, attributed to attorneys: "Many attorneys advise..."
+- Referrals to legal aid, public defender offices, and other resources
+
+**What is not permitted:**
+- Recommending a specific plea, cooperation strategy, or evidence decision
+- Directing users to contact or avoid witnesses, victims, or investigators
+- Case-specific strategic recommendations framed as directives ("Do X," "Don't do Y")
+- Content that requires knowing the full facts of the case to be safe advice
+
+**Framing rule:** Replace imperative directives with consequence-description. "Don't discuss your case with family" (directive) becomes "Conversations about your case outside attorney-client privilege are not protected — friends and family can be subpoenaed to testify about what you said." The person decides; the content informs.
+
+**Notice requirement:** Pages containing operational guidance (First 24 Hours, Rights Info, AI guidance output) must carry a visible, non-duplicative notice that no attorney-client relationship is formed and information is not privileged.
+
+---
+
+### 3. Accuracy Above All — No Dummy, Stale, or Placeholder Data in Production
 This has been violated before. Never ship:
 - Mock court data with fake addresses or phone numbers
 - Legal aid contacts that haven't been verified against live sources

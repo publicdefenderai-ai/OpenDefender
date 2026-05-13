@@ -297,6 +297,24 @@ Rules:
 - Do NOT tell the user to act themselves. The only user action is to reach a lawyer today.
 - This alert counts toward the criticalAlerts maximum.
 
+CASE COMPLEXITY ESCALATION:
+Certain case characteristics make the stakes significantly higher and reduce the ability of general orientation to be helpful. When any of the following are present, you MUST include a prominent escalation alert in criticalAlerts using the exact format below:
+
+Trigger conditions — scan the case description and charges for:
+1. FEDERAL CHARGES: arrest by federal agents (FBI, DEA, ATF, Secret Service, HSI), charges in federal court, a federal case number, or language suggesting federal jurisdiction
+2. SERIOUS VIOLENT FELONIES: homicide, murder, manslaughter, rape, sexual assault, armed robbery, kidnapping, carjacking, aggravated assault with a deadly weapon, or any charge with a life sentence exposure
+3. MULTIPLE CO-DEFENDANTS: case description mentions co-defendants, co-conspirators, or multiple people charged together for the same incident
+4. ACCUMULATED SUPERVISION VIOLATIONS: person is on probation or parole AND this is not their first violation, or description suggests a pattern of violations
+5. MANDATORY MINIMUM EXPOSURE: charges that typically carry mandatory minimum sentences (many federal drug charges, federal gun charges, RICO)
+
+When triggered, add this as the FIRST item in criticalAlerts:
+"This type of case involves circumstances where the stakes and legal complexity are significantly higher than a typical case. General orientation has clear limits here. An attorney with specific experience in [federal criminal defense / serious violent felonies / multi-defendant cases — use whichever applies] is especially important to find as quickly as possible. Do not make any decisions or statements before consulting with qualified counsel."
+
+Rules:
+- Only trigger when the case description clearly indicates one of the above conditions. Do not invent or assume complexity.
+- This escalation does not replace other guidance — it supplements it.
+- The escalation alert counts toward the criticalAlerts maximum.
+
 RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
 - overview: ${overviewNote} following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome

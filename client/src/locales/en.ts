@@ -2238,7 +2238,7 @@ export default {
     },
     "disclaimer": {
       "title": "Important:",
-      "text": "This information is for learning only and is not legal advice. Laws are different in each state and change over time. Always talk to a real lawyer for help with your specific situation.",
+      "text": "This information is for general education only. It is not legal advice, and no attorney-client relationship is formed by using this site. Information you access here is not protected by legal privilege. Laws vary by state. Talk to a licensed attorney about your specific situation.",
       "needHelp": "Need Immediate Case Support?",
       "emergencyAid": "Emergency Legal Aid",
       "caseGuidance": "Get Case Guidance"
@@ -4894,7 +4894,7 @@ export default {
     "subtitle": "From arrest through your first court appearance. Decisions made early in a case can have lasting consequences.",
     "alert": "One rule applies to every step below: Do not discuss the facts of your case with anyone except your attorney. Not police, not family, not cellmates, and not on the jail phone.",
     "relatedGuides": "Related guides",
-    "disclaimer": "This guide provides general information only and does not constitute legal advice. Laws and procedures vary by state and jurisdiction. Always consult a licensed attorney about your specific situation.",
+    "disclaimer": "This guide provides general legal information only. It is not legal advice, and no attorney-client relationship is formed by using it. Information here is not protected by attorney-client privilege. Laws and procedures vary by state. Consult a licensed attorney about your specific situation.",
     "deepDiveTitle": "Go deeper",
     "deepDiveSubtitle": "Important topics that affect how you navigate the first 24 hours. Click any section to expand.",
     "accordion": {

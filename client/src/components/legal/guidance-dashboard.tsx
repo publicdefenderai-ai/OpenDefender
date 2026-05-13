@@ -1737,6 +1737,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal info redacted')}</span>
                 </div>
               </div>
+              <p className="text-xs text-blue-700 dark:text-blue-300 mt-3 pt-3 border-t border-blue-200 dark:border-blue-700">
+                {t('legalGuidance.dashboard.privacyNotice.legalNotice', 'This guidance is general legal information, not legal advice. No attorney-client relationship is formed. Information shared here is not protected by attorney-client privilege.')}
+              </p>
             </div>
             <Button
               variant="ghost"
