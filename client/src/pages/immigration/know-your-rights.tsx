@@ -178,6 +178,11 @@ export default function KnowYourRights() {
                           </Badge>
                         </h4>
                         <div className="space-y-2 bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
+                          <p className="text-xs text-green-700 dark:text-green-400 mb-2 italic">
+                            {lang === 'es'
+                              ? 'Si elige invocar sus derechos, los tribunales reconocen frases como estas:'
+                              : 'If you choose to invoke these rights, courts recognize language like:'}
+                          </p>
                           {script.whatToSay[lang].map((text, idx) => (
                             <p key={idx} className="text-sm font-medium text-green-800 dark:text-green-200">
                               {text}

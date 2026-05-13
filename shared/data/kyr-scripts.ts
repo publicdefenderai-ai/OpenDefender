@@ -88,13 +88,13 @@ export const kyrScripts: KYRScript[] = [
     whatToSay: {
       en: [
         '"I do not consent to you entering my home."',
-        '"Please slide any warrant under the door."',
+        'You can view a warrant without opening the door — for example: "Please slide any warrant under the door."',
         '"I am exercising my right to remain silent."',
         '"I want to speak to a lawyer before answering any questions."'
       ],
       es: [
         '"No doy mi consentimiento para que entren a mi casa."',
-        '"Por favor, deslice cualquier orden judicial por debajo de la puerta."',
+        'Puede ver una orden sin abrir la puerta — por ejemplo: "Por favor, deslice cualquier orden judicial por debajo de la puerta."',
         '"Estoy ejerciendo mi derecho a guardar silencio."',
         '"Quiero hablar con un abogado antes de contestar cualquier pregunta."'
       ]
