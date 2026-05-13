@@ -101,23 +101,23 @@ export const kyrScripts: KYRScript[] = [
     },
     whatNotToSay: {
       en: [
-        'Do NOT say where you were born',
-        'Do NOT discuss your immigration status',
-        'Do NOT say how long you have been in the US',
-        'Do NOT provide documents (passport, ID from another country)',
-        'Do NOT lie or provide false documents'
+        'Sharing where you were born can help agents determine your removability',
+        'Disclosing your immigration status can be used in enforcement proceedings',
+        'Saying how long you have been in the US may affect your immigration case',
+        'Providing foreign documents (passport, ID from another country) gives agents information they can use against you',
+        'Providing false information or documents is a separate federal crime that creates additional charges'
       ],
       es: [
-        'NO diga dónde nació',
-        'NO discuta su estatus migratorio',
-        'NO diga cuánto tiempo ha estado en EE.UU.',
-        'NO proporcione documentos (pasaporte, identificación de otro país)',
-        'NO mienta ni proporcione documentos falsos'
+        'Decir dónde nació puede ayudar a los agentes a determinar su deportabilidad',
+        'Revelar su estatus migratorio puede usarse en procedimientos de aplicación de ley',
+        'Decir cuánto tiempo ha estado en EE.UU. puede afectar su caso migratorio',
+        'Proporcionar documentos extranjeros (pasaporte, identificación de otro país) da a los agentes información que pueden usar en su contra',
+        'Proporcionar información o documentos falsos es un crimen federal adicional que genera cargos separados'
       ]
     },
     tips: {
       en: [
-        'Do NOT open the door - speak through it or through a window',
+        'Opening the door can be treated as consent to entry. Speak through the door or a window.',
         'Stay calm and be polite, but firm',
         'If you have children inside, ask a neighbor or friend to be ready to care for them',
         'Record the encounter if possible (video through window)',
@@ -125,7 +125,7 @@ export const kyrScripts: KYRScript[] = [
         'Remember: ICE cannot enter without a JUDICIAL warrant signed by a judge'
       ],
       es: [
-        'NO abra la puerta - hable a través de ella o por una ventana',
+        'Abrir la puerta puede interpretarse como consentimiento de entrada. Hable a través de la puerta o por una ventana.',
         'Mantenga la calma y sea cortés, pero firme',
         'Si tiene hijos adentro, pida a un vecino o amigo que esté listo para cuidarlos',
         'Grabe el encuentro si es posible (video a través de la ventana)',
@@ -160,16 +160,16 @@ export const kyrScripts: KYRScript[] = [
     },
     whatNotToSay: {
       en: [
-        'Do NOT volunteer information about your immigration status',
-        'Do NOT answer questions about where you were born',
-        'Do NOT consent to a search',
-        'Do NOT argue or resist physically'
+        'Volunteering your immigration status can be used in enforcement proceedings',
+        'Answering questions about your birthplace can help agents determine removability',
+        'Consenting to a search waives your Fourth Amendment right against unreasonable searches',
+        'Arguing or resisting physically can result in additional criminal charges, even if the stop was unlawful'
       ],
       es: [
-        'NO ofrezca información sobre su estatus migratorio',
-        'NO conteste preguntas sobre dónde nació',
-        'NO dé consentimiento para un registro',
-        'NO discuta ni se resista físicamente'
+        'Ofrecer voluntariamente su estatus migratorio puede usarse en procedimientos de aplicación de ley',
+        'Contestar preguntas sobre dónde nació puede ayudar a los agentes a determinar su deportabilidad',
+        'Consentir un registro renuncia a su protección de la Cuarta Enmienda contra registros irrazonables',
+        'Discutir o resistirse físicamente puede resultar en cargos criminales adicionales, aunque la detención haya sido ilegal'
       ]
     },
     tips: {
@@ -177,7 +177,7 @@ export const kyrScripts: KYRScript[] = [
         'Keep your hands visible on the steering wheel',
         'You must provide: license, registration, and proof of insurance',
         'You do NOT have to answer questions about citizenship or immigration status',
-        'Do not run - this can be used against you',
+        'Running can be used against you in immigration court and may result in additional criminal charges',
         'If you are a passenger, you have the same rights to remain silent',
         'In some states, you must identify yourself (give your name) - but nothing more'
       ],
@@ -185,7 +185,7 @@ export const kyrScripts: KYRScript[] = [
         'Mantenga sus manos visibles en el volante',
         'Debe proporcionar: licencia, registro y prueba de seguro',
         'NO tiene que contestar preguntas sobre ciudadanía o estatus migratorio',
-        'No corra - esto puede ser usado en su contra',
+        'Correr puede ser usado en su contra en la corte de inmigración y puede resultar en cargos criminales adicionales',
         'Si es pasajero, tiene los mismos derechos de guardar silencio',
         'En algunos estados, debe identificarse (dar su nombre) - pero nada más'
       ]
@@ -217,16 +217,16 @@ export const kyrScripts: KYRScript[] = [
     },
     whatNotToSay: {
       en: [
-        'Do NOT answer questions about your immigration status',
-        'Do NOT sign anything without a lawyer',
-        'Do NOT provide false documents',
-        'Do NOT run or hide'
+        'Answering questions about your immigration status can be used in enforcement proceedings',
+        'Signing documents without a lawyer may waive important rights — some forms are voluntary departure agreements',
+        'Providing false documents is a federal crime that creates additional charges',
+        'Running or hiding can be used against you and may result in additional charges'
       ],
       es: [
-        'NO conteste preguntas sobre su estatus migratorio',
-        'NO firme nada sin un abogado',
-        'NO proporcione documentos falsos',
-        'NO corra ni se esconda'
+        'Contestar preguntas sobre su estatus migratorio puede usarse en procedimientos de aplicación de ley',
+        'Firmar documentos sin un abogado puede renunciar a derechos importantes — algunos formularios son acuerdos de salida voluntaria',
+        'Proporcionar documentos falsos es un crimen federal que genera cargos adicionales',
+        'Correr o esconderse puede ser usado en su contra y puede resultar en cargos adicionales'
       ]
     },
     tips: {
@@ -274,16 +274,16 @@ export const kyrScripts: KYRScript[] = [
     },
     whatNotToSay: {
       en: [
-        'Do NOT answer questions about where you were born',
-        'Do NOT discuss your immigration status',
-        'Do NOT provide foreign documents or passports',
-        'Do NOT lie to officers'
+        'Answering questions about your birthplace can help agents determine your removability',
+        'Discussing your immigration status can be used in enforcement proceedings',
+        'Providing foreign documents or passports gives agents information they can use against you',
+        'Lying to federal officers is a separate federal crime that creates additional charges'
       ],
       es: [
-        'NO conteste preguntas sobre dónde nació',
-        'NO discuta su estatus migratorio',
-        'NO proporcione documentos extranjeros o pasaportes',
-        'NO mienta a los oficiales'
+        'Contestar preguntas sobre dónde nació puede ayudar a los agentes a determinar su deportabilidad',
+        'Discutir su estatus migratorio puede usarse en procedimientos de aplicación de ley',
+        'Proporcionar documentos extranjeros o pasaportes da a los agentes información que pueden usar en su contra',
+        'Mentirle a los oficiales federales es un crimen federal separado que genera cargos adicionales'
       ]
     },
     tips: {
@@ -292,7 +292,7 @@ export const kyrScripts: KYRScript[] = [
         'If you are not being detained, you are free to walk away',
         'Officers need "reasonable suspicion" to detain you',
         'You have the right to ask why you are being stopped',
-        'Do not physically resist even if you believe your rights are being violated',
+        'Physically resisting, even if your rights are being violated, can result in additional criminal charges. Challenge unlawful stops through the courts afterward.',
         'Try to remember details: badge numbers, car numbers, witnesses'
       ],
       es: [
@@ -329,14 +329,14 @@ export const kyrScripts: KYRScript[] = [
     },
     whatNotToSay: {
       en: [
-        'Do NOT volunteer information about citizenship or immigration status',
-        'Do NOT consent to a vehicle search',
-        'Do NOT provide false information'
+        'Volunteering information about citizenship or immigration status can be used against you',
+        'Consenting to a vehicle search waives your Fourth Amendment protections',
+        'Providing false information to federal agents is a crime'
       ],
       es: [
-        'NO ofrezca información sobre ciudadanía o estatus migratorio',
-        'NO dé consentimiento para registrar su vehículo',
-        'NO proporcione información falsa'
+        'Ofrecer información sobre ciudadanía o estatus migratorio puede ser usado en su contra',
+        'Consentir un registro de su vehículo renuncia a sus protecciones de la Cuarta Enmienda',
+        'Proporcionar información falsa a agentes federales es un crimen'
       ]
     },
     tips: {

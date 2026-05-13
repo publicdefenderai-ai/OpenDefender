@@ -174,7 +174,7 @@ export default function KnowYourRights() {
                       <div>
                         <h4 className="font-semibold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
                           <Badge variant="outline" className="border-green-500 text-green-700 dark:text-green-400">
-                            {lang === 'es' ? 'QUÉ DECIR' : 'WHAT TO SAY'}
+                            {lang === 'es' ? 'FRASES QUE PUEDE USAR' : 'LANGUAGE YOU CAN USE'}
                           </Badge>
                         </h4>
                         <div className="space-y-2 bg-green-50 dark:bg-green-950/30 rounded-lg p-4">
@@ -190,7 +190,7 @@ export default function KnowYourRights() {
                       <div>
                         <h4 className="font-semibold text-red-700 dark:text-red-400 mb-3 flex items-center gap-2">
                           <Badge variant="outline" className="border-red-500 text-red-700 dark:text-red-400">
-                            {lang === 'es' ? 'QUÉ NO DECIR' : 'WHAT NOT TO SAY'}
+                            {lang === 'es' ? 'LO QUE PUEDEN USAR EN SU CONTRA' : 'WHAT CAN BE USED AGAINST YOU'}
                           </Badge>
                         </h4>
                         <div className="space-y-2 bg-red-50 dark:bg-red-950/30 rounded-lg p-4">

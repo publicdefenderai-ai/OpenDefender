@@ -131,6 +131,10 @@ export default function BondHearings() {
             </h2>
           </ScrollReveal>
           
+          <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 p-4 text-sm text-amber-800 dark:text-amber-200">
+            <strong>These are general indicators, not a determination.</strong> Mandatory detention is defined by statute (<a href="https://uscode.house.gov/view.xhtml?req=(title:8+section:1226+edition:prelim)" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">8 U.S.C. § 1226(c)</a>), but courts apply it inconsistently and enforcement can be broader than these categories suggest. Whether you qualify for bond depends on how the law is applied to your specific conviction. An immigration attorney must evaluate your situation before any bond hearing.
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
               <Card className="h-full border-l-4 border-l-green-500">
@@ -166,9 +170,6 @@ export default function BondHearings() {
                     <li>{t('immigration.bond.eligibility.mandatory4')}</li>
                     <li>{t('immigration.bond.eligibility.mandatory5')}</li>
                   </ul>
-                  <p className="text-xs text-muted-foreground mt-4 border-t pt-3">
-                    <strong>Important:</strong> Mandatory detention categories are defined by statute (8 U.S.C. § 1226(c)) but enforcement interpretations can be broader than the categories listed here. Whether a specific conviction triggers mandatory detention depends on how the statute is applied to your case. An immigration attorney can evaluate your specific situation.
-                  </p>
                 </CardContent>
               </Card>
             </ScrollReveal>

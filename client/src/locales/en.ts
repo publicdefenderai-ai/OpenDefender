@@ -2279,23 +2279,23 @@ export default {
           "text": "You have the right to an interpreter during proceedings."
         }
       },
-      "whatNotToDoTitle": "What NOT to Do",
+      "whatNotToDoTitle": "What can be used against you",
       "whatNotToDo": {
         "lie": {
-          "title": "Don't lie or provide false documents:",
-          "text": "This can be used against you in immigration court."
+          "title": "Lying or providing false documents:",
+          "text": "This is a separate federal crime and can be used against you in immigration court."
         },
         "run": {
-          "title": "Don't run or resist:",
-          "text": "This can lead to additional criminal charges."
+          "title": "Running or resisting:",
+          "text": "This can lead to additional criminal charges, even if the original stop was unlawful."
         },
         "sign": {
-          "title": "Don't sign anything:",
-          "text": "Without understanding what it says or speaking to an attorney first."
+          "title": "Signing without understanding:",
+          "text": "Some documents are voluntary departure agreements. Ask to consult an attorney before signing anything."
         },
         "carryDocuments": {
-          "title": "Don't carry foreign documents:",
-          "text": "Unless required by law (like a driver's license)."
+          "title": "Carrying foreign documents:",
+          "text": "Foreign passports or IDs can give agents information they may use in enforcement proceedings. Carry only what law requires."
         }
       }
     },
@@ -2561,15 +2561,15 @@ export default {
         "basisText": "If detained, you can ask why and request to see the warrant or documentation."
       },
       "whatNotToDo": {
-        "title": "What NOT to Do",
-        "run": "Don't Run or Hide",
-        "runText": "Running may be used against you and could result in additional charges.",
-        "falseDocs": "Don't Provide False Documents",
-        "falseDocsText": "Using fake documents is a federal crime that can result in imprisonment and bars to future immigration relief.",
-        "lie": "Don't Lie About Identity",
-        "lieText": "Giving false information to federal agents is a crime. It's better to remain silent.",
-        "sign": "Don't Sign Documents You Don't Understand",
-        "signText": "Some forms may be voluntary departure agreements. Ask for time to consult an attorney."
+        "title": "What can be used against you",
+        "run": "Running or hiding",
+        "runText": "Running may be used against you in court and could result in additional charges.",
+        "falseDocs": "Providing false documents",
+        "falseDocsText": "Using false documents is a federal crime that can result in imprisonment and bars to future immigration relief.",
+        "lie": "Lying about your identity",
+        "lieText": "Giving false information to federal agents is a separate federal crime. Remaining silent is a safer option.",
+        "sign": "Signing documents without understanding them",
+        "signText": "Some forms are voluntary departure agreements. Ask for time to consult an attorney before signing anything."
       },
       "employer": {
         "title": "Employer Obligations",
@@ -2618,7 +2618,7 @@ export default {
           "description": "Designates someone to make legal and financial decisions on your behalf if you're detained.",
           "item1": "General POA for financial matters",
           "item2": "Durable POA (survives incapacity)",
-          "item3": "Must be notarized to be valid"
+          "item3": "Typically needs to be notarized to be legally valid. Requirements vary by state."
         },
         "caregiver": {
           "title": "Caregiver Authorization",
@@ -2632,7 +2632,7 @@ export default {
           "description": "Names your preferred guardian if you can't care for your children long-term.",
           "item1": "Courts consider but don't always follow",
           "item2": "Name backup guardians too",
-          "item3": "Should be notarized"
+          "item3": "Notarization is typically required. Verify requirements in your state."
         }
       },
       "emergencyPlan": {

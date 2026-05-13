@@ -247,9 +247,17 @@ export default function WorkplaceRaids() {
                     </strong>
                     <p className="text-sm text-muted-foreground">
                       {lang === 'es'
-                        ? 'Usted, el trabajador, tiene el derecho de elegir qué documentos de la lista aceptable del formulario I-9 presentar. Es ilegal que su empleador exija un documento específico o pida más documentos de los requeridos.'
-                        : 'You, the worker, have the right to choose which documents from the I-9 acceptable documents list to present. It is unlawful for your employer to demand a specific document or ask for more documents than required.'}
+                        ? 'Bajo la ley federal I-9, usted tiene el derecho de elegir qué documentos de la lista aceptable presentar. Los empleadores no pueden exigir un documento específico ni pedir más de lo requerido.'
+                        : 'Under federal I-9 law, you have the right to choose which documents from the acceptable list to present. Employers cannot demand a specific document or ask for more than required.'}
                     </p>
+                    <a
+                      href="https://www.uscis.gov/i-9-central"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-primary underline underline-offset-2 mt-1 inline-block"
+                    >
+                      {lang === 'es' ? 'USCIS I-9 Central →' : 'USCIS I-9 Central →'}
+                    </a>
                   </div>
                   <div className="border-l-2 border-green-500 pl-4">
                     <strong className="text-foreground">
