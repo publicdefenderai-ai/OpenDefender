@@ -79,15 +79,6 @@ interface CaseDetails {
   caseStage: string;
   custodyStatus: string;
   hasAttorney: boolean;
-  arrestDate?: string;
-  arrestLocation?: string;
-  incidentDescription?: string;
-  policeStatement?: string;
-  witnessesPresent?: boolean;
-  evidenceNotes?: string;
-  priorConvictions?: string;
-  employmentStatus?: string;
-  familySituation?: string;
   selectedConcerns?: string[];
   language?: string;
   chargesUnknown?: boolean;
@@ -387,7 +378,7 @@ function buildUserPrompt(caseDetails: CaseDetails): string {
     sanitizeInput(caseDetails.jurisdiction, 100)
   );
 
-  let prompt = `Provide legal guidance for this situation:
+  let prompt = `Provide general legal information for someone in this situation. Do not treat this as a case analysis — treat it as orientation for a person at this charge type, jurisdiction, and case stage:
 ${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}
 BASIC CASE INFORMATION:
 - Jurisdiction: ${sanitizeInput(caseDetails.jurisdiction, 100)}
@@ -395,41 +386,6 @@ BASIC CASE INFORMATION:
 - Case Stage: ${sanitizeInput(caseDetails.caseStage, 100)}
 - In Custody: ${sanitizeInput(caseDetails.custodyStatus, 100)}
 - Has Attorney: ${caseDetails.hasAttorney ? 'Yes' : 'No'}`;
-
-  if (caseDetails.arrestDate) {
-    prompt += `\n- Arrest Date: ${sanitizeInput(caseDetails.arrestDate, 100)}`;
-  }
-  if (caseDetails.arrestLocation) {
-    prompt += `\n- Arrest Location: ${sanitizeInput(caseDetails.arrestLocation, 500)}`;
-  }
-
-  if (caseDetails.incidentDescription) {
-    prompt += `\n\nINCIDENT DESCRIPTION:\n${sanitizeInput(caseDetails.incidentDescription)}`;
-  }
-
-  if (caseDetails.policeStatement) {
-    prompt += `\n\nPOLICE STATEMENT:\n${sanitizeInput(caseDetails.policeStatement)}`;
-  }
-
-  if (caseDetails.witnessesPresent !== undefined) {
-    prompt += `\n\nWitnesses Present: ${caseDetails.witnessesPresent ? 'Yes' : 'No'}`;
-  }
-
-  if (caseDetails.evidenceNotes) {
-    prompt += `\n\nEVIDENCE NOTES:\n${sanitizeInput(caseDetails.evidenceNotes)}`;
-  }
-
-  if (caseDetails.priorConvictions) {
-    prompt += `\n\nPRIOR CONVICTIONS:\n${sanitizeInput(caseDetails.priorConvictions)}`;
-  }
-
-  if (caseDetails.employmentStatus) {
-    prompt += `\n\nEmployment Status: ${sanitizeInput(caseDetails.employmentStatus, 500)}`;
-  }
-
-  if (caseDetails.familySituation) {
-    prompt += `\n\nFamily Situation: ${sanitizeInput(caseDetails.familySituation)}`;
-  }
 
   if (caseDetails.selectedConcerns && caseDetails.selectedConcerns.length > 0) {
     const concernsList = caseDetails.selectedConcerns.join(', ');
@@ -446,14 +402,14 @@ BASIC CASE INFORMATION:
 
 Remember: Use simple language, be specific, and prioritize by urgency. Do not fabricate charges.`;
   } else {
-    prompt += `\n\nProvide comprehensive guidance tailored to these specific facts. Focus on:
-1. Immediate actions based on the current stage (${sanitizeInput(caseDetails.caseStage, 100)})
+    prompt += `\n\nProvide general legal information for someone in this situation. Frame all guidance as what is typically important at this case stage for this charge type in this jurisdiction — not as personalized case analysis. Focus on:
+1. What typically happens at the ${sanitizeInput(caseDetails.caseStage, 100)} stage
 2. Jurisdiction-specific deadlines and procedures for ${sanitizeInput(caseDetails.jurisdiction, 100)}
-3. Rights specific to the charges: ${chargesText}
-4. Evidence that could help based on the incident description
-5. Warnings about common mistakes in this type of case
+3. Rights and considerations generally applicable to ${chargesText} charges
+4. What attorneys and courts typically focus on at this stage
+5. Common issues that arise in this type of case
 
-Remember: Use simple language, be specific, and prioritize by urgency.`;
+Remember: Use simple language, prioritize by urgency, and frame all guidance as general information rather than advice specific to this person's case.`;
   }
 
   // Add language instruction if Spanish is requested
@@ -474,15 +430,6 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     caseStage: caseDetails.caseStage,
     custodyStatus: caseDetails.custodyStatus,
     hasAttorney: caseDetails.hasAttorney,
-    arrestDate: caseDetails.arrestDate,
-    arrestLocation: caseDetails.arrestLocation,
-    incidentDescription: caseDetails.incidentDescription,
-    policeStatement: caseDetails.policeStatement,
-    witnessesPresent: caseDetails.witnessesPresent,
-    evidenceNotes: caseDetails.evidenceNotes,
-    priorConvictions: caseDetails.priorConvictions,
-    employmentStatus: caseDetails.employmentStatus,
-    familySituation: caseDetails.familySituation,
     selectedConcerns: caseDetails.selectedConcerns,
     language: caseDetails.language,
   }));

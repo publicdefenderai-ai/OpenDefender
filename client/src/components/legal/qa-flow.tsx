@@ -8,18 +8,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
-import { Textarea } from "@/components/ui/textarea";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
@@ -31,8 +23,6 @@ interface QAFlowProps {
 export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
-  const [showPrivilegeWarning, setShowPrivilegeWarning] = useState(false);
-  const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
   const [formData, setFormData] = useState({
     jurisdiction: "",
@@ -42,7 +32,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     custodyStatus: "",
     hasAttorney: null,
     consentGiven: false,
-    incidentDescription: "",
     selectedConcerns: [] as string[],
   });
 
@@ -75,25 +64,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     } else {
       onComplete({ ...formData, captchaToken });
     }
-  };
-
-  const handlePrivilegeWarningContinue = () => {
-    setPrivilegeWarningAcknowledged(true);
-    setShowPrivilegeWarning(false);
-  };
-
-  const handleTextareaFocus = () => {
-    if (!privilegeWarningAcknowledged) {
-      setShowPrivilegeWarning(true);
-    }
-  };
-
-  const handleSkipAndGetGuidance = () => {
-    setPrivilegeWarningAcknowledged(true);
-    setShowPrivilegeWarning(false);
-    updateFormData("incidentDescription", "");
-    updateFormData("selectedConcerns", []);
-    onComplete({ ...formData, captchaToken });
   };
 
   const prevStep = () => {
@@ -158,8 +128,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
               onPrev={prevStep}
               isFirst={currentStep === 0}
               isLast={currentStep === steps.length - 1}
-              onTextareaFocus={handleTextareaFocus}
-              privilegeAcknowledged={privilegeWarningAcknowledged}
               captchaToken={captchaToken}
               setCaptchaToken={setCaptchaToken}
               captchaRequired={captchaRequired}
@@ -186,51 +154,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
         </div>
       </CardContent>
 
-      {/* Privilege Warning Dialog */}
-      <Dialog open={showPrivilegeWarning} onOpenChange={setShowPrivilegeWarning}>
-        <DialogContent className="max-w-md w-[calc(100%-2rem)] overflow-hidden">
-          <DialogHeader className="overflow-hidden">
-            <div className="flex items-start gap-2 p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 rounded-lg mb-4">
-              <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
-              <p className="text-sm font-medium text-red-700 dark:text-red-300 break-words">
-                {t('legalGuidance.qaFlow.privilegeWarning.criminalWarning')}
-              </p>
-            </div>
-            <DialogTitle className="flex items-center gap-2 text-amber-600">
-              <AlertTriangle className="h-5 w-5 shrink-0" />
-              {t('legalGuidance.qaFlow.privilegeWarning.title')}
-            </DialogTitle>
-            <DialogDescription className="pt-4 space-y-4">
-              <p>
-                {t('legalGuidance.qaFlow.privilegeWarning.notPrivate')}
-              </p>
-              <p>
-                {t('legalGuidance.qaFlow.privilegeWarning.recommendation')}
-              </p>
-              <p className="text-amber-700 dark:text-amber-300 font-medium">
-                {t('legalGuidance.qaFlow.privilegeWarning.governmentWarning')}
-              </p>
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex flex-col gap-3 mt-4 w-full">
-            <Button
-              onClick={handlePrivilegeWarningContinue}
-              variant="outline"
-              className="w-full whitespace-normal text-center"
-              data-testid="button-privilege-continue"
-            >
-              {t('legalGuidance.qaFlow.privilegeWarning.continueAnyway')}
-            </Button>
-            <Button
-              onClick={handleSkipAndGetGuidance}
-              className="w-full bg-blue-600 hover:bg-blue-700 whitespace-normal text-center"
-              data-testid="button-privilege-skip"
-            >
-              {t('legalGuidance.qaFlow.privilegeWarning.skipAndGetGuidance')}
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </Card>
   );
 }
@@ -944,7 +867,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
   );
 }
 
-function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, onTextareaFocus, privilegeAcknowledged, captchaToken, setCaptchaToken, captchaRequired }: any) {
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
   const [concernsOpen, setConcernsOpen] = useState(false);
   const concernsRef = useRef<HTMLDivElement>(null);
@@ -993,21 +916,6 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
   return (
     <div className="space-y-6">
       <div>
-        <Label htmlFor="incidentDescription">
-          {t('legalGuidance.qaFlow.additionalDetails.incidentLabel')}
-        </Label>
-        <Textarea
-            id="incidentDescription"
-            value={formData.incidentDescription || ""}
-            onChange={(e) => updateFormData("incidentDescription", e.target.value)}
-            onFocus={onTextareaFocus}
-            placeholder={t('legalGuidance.qaFlow.additionalDetails.incidentPlaceholder')}
-            rows={4}
-            className="mt-2 placeholder:text-muted-foreground/40 placeholder:italic"
-          />
-      </div>
-
-      <div className="pt-4 border-t">
         <h3 className="text-lg font-semibold mb-2">
           {t('legalGuidance.qaFlow.additionalDetails.concernsLabel')}
         </h3>
