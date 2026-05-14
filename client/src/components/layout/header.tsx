@@ -142,7 +142,7 @@ export function Header() {
             )}
 
             {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-0.5 ml-2" aria-label="Section navigation">
+            <nav className="hidden md:flex items-center gap-1 ml-2" aria-label="Section navigation">
               {navLinks.map((link) => {
                 const isActive = location === link.href || location.startsWith(link.href + "/");
                 const isOpen = openDropdown === link.href;
@@ -153,11 +153,19 @@ export function Header() {
                       key={link.href}
                       onClick={() => { setOpenDropdown(null); handleNavigate(link.href); }}
                       className={cn(
-                        "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
-                        isActive ? "text-foreground bg-muted" : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        "relative px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
+                        isActive ? "font-semibold text-foreground" : "font-medium text-muted-foreground hover:text-foreground"
                       )}
                     >
                       {link.label}
+                      <span
+                        aria-hidden="true"
+                        className={cn(
+                          "absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-primary transition-all duration-200",
+                          isActive ? "opacity-100" : "opacity-0 group-hover:opacity-40"
+                        )}
+                      />
                     </button>
                   );
                 }
@@ -170,12 +178,20 @@ export function Header() {
                       aria-expanded={isOpen}
                       aria-haspopup="true"
                       className={cn(
-                        "flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
-                        isActive || isOpen ? "text-foreground bg-muted" : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        "relative flex items-center gap-1 px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
+                        isActive || isOpen ? "font-semibold text-foreground" : "font-medium text-muted-foreground hover:text-foreground"
                       )}
                     >
                       {link.label}
                       <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-150", isOpen && "rotate-180")} />
+                      <span
+                        aria-hidden="true"
+                        className={cn(
+                          "absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-primary transition-all duration-200",
+                          isActive || isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-40"
+                        )}
+                      />
                     </button>
 
                     {isOpen && (
