@@ -5405,7 +5405,7 @@ export default {
     "warrants": "Órdenes y Sus Derechos",
     "warrantsDesc": "Órdenes de registro, órdenes de arresto y cómo identificar un documento administrativo de ICE.",
     "housing": "Apoyo de Vivienda",
-    "housingDesc": "Asistencia de vivienda, derechos del inquilino con antecedentes penales y programas de vivienda transitoria.",
+    "housingDesc": "Asistencia de vivienda para inquilinos, propietarios con dificultades hipotecarias y personas con inestabilidad habitacional.",
     "familyCare": "Apoyo para el Cuidado Familiar",
     "familyCareDesc": "Recursos para cuidar a hijos y dependientes mientras navega el sistema legal.",
     "personalHealth": "Apoyo de Salud Personal",

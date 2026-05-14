@@ -921,9 +921,9 @@ export function buildSearchIndex(): void {
       title: 'Housing Support Resources',
       titleEs: 'Recursos de Apoyo de Vivienda',
       titleZh: '住房支持资源',
-      content: 'Housing assistance for people with criminal records. Transitional housing, reentry housing programs, fair chance housing policies, tenant rights, and homelessness prevention.',
-      tags: ['housing', 'shelter', 'reentry housing', 'fair chance housing', 'eviction', 'homelessness'],
-      aliases: ['find housing', 'reentry housing', 'housing with record', 'fair chance apartment', 'homeless shelter'],
+      content: 'Housing assistance for renters, homeowners, and people experiencing housing instability. Tenant rights, fair chance housing, eviction defense, mortgage forbearance guidance, CFPB homeowner resources, HUD housing counseling, transitional and emergency housing, homelessness resources, and guidance on maintaining a mailing address for court notices.',
+      tags: ['housing', 'shelter', 'reentry housing', 'fair chance housing', 'eviction', 'homelessness', 'mortgage', 'foreclosure', 'homeowner', 'forbearance', 'rent', 'landlord', 'unstable housing', 'emergency housing'],
+      aliases: ['find housing', 'reentry housing', 'housing with record', 'fair chance apartment', 'homeless shelter', 'missed mortgage payment', 'mortgage help', 'foreclosure help', 'cant pay rent', 'cant pay mortgage', 'housing instability', 'no housing', 'emergency shelter'],
       url: '/support/housing'
     },
     {

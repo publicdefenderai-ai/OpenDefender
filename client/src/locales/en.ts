@@ -5405,7 +5405,7 @@ export default {
     "warrants": "Warrants & Your Rights",
     "warrantsDesc": "Search warrants, arrest warrants, and how to identify an ICE administrative document.",
     "housing": "Housing Support",
-    "housingDesc": "Housing assistance, tenant rights with a criminal record, and transitional housing programs.",
+    "housingDesc": "Housing assistance for renters, homeowners facing mortgage hardship, and anyone dealing with housing instability.",
     "familyCare": "Family Care Support",
     "familyCareDesc": "Resources for caring for children and dependents while navigating the legal system.",
     "personalHealth": "Personal Health Support",

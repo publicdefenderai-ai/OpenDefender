@@ -5405,7 +5405,7 @@ export default {
     "warrants": "搜查令与您的权利",
     "warrantsDesc": "搜查令、逮捕令，以及如何识别ICE行政文件。",
     "housing": "住房支持",
-    "housingDesc": "有犯罪记录者的住房援助、租户权利和过渡性住房项目。",
+    "housingDesc": "为租户、面临抵押贷款困难的房主以及住房不稳定人群提供的住房援助。",
     "familyCare": "家庭照护支持",
     "familyCareDesc": "在应对法律诉讼期间照顾子女和家属的资源。",
     "personalHealth": "个人健康支持",
