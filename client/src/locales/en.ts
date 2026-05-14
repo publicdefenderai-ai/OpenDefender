@@ -2215,7 +2215,7 @@ export default {
         "burden3": "You don't have to prove your innocence",
         "burden4": "You have the right not to testify",
         "etiquetteTitle": "Court Etiquette:",
-        "etiquetteText": "Dress appropriately, arrive on time, stand when the judge enters, address the judge as \"Your Honor,\" and let your attorney speak for you."
+        "etiquetteText": "Dress appropriately, arrive on time, stand when the judge enters, and address the judge as \"Your Honor.\" Your attorney typically presents arguments and responses on your behalf during proceedings."
       },
       "prison": {
         "title": "Rights If Convicted",
@@ -3331,11 +3331,11 @@ export default {
           "You have the right to know why you are being arrested"
         ],
         "tips": [
-          "Stay calm and do not resist, even if the arrest feels unfair",
-          "Clearly state: 'I am exercising my right to remain silent'",
-          "Say: 'I want a lawyer' — then stop talking",
-          "Remember officer badge numbers and patrol car numbers",
-          "Do not sign anything without a lawyer present"
+          "Resistance during arrest typically leads to additional criminal charges, even when the arrest feels unlawful",
+          "If you want to invoke your right to remain silent, courts recognize language like: 'I am exercising my right to remain silent'",
+          "To invoke your right to counsel, courts recognize language like: 'I want a lawyer'",
+          "Note officer badge numbers, patrol car numbers, and any witnesses if you can",
+          "Signing documents during or after an arrest can have lasting legal consequences. Your attorney should review anything before you sign"
         ]
       },
       "booking": {
@@ -3349,11 +3349,11 @@ export default {
           "Your belongings must be returned when you are released"
         ],
         "tips": [
-          "You will be fingerprinted and photographed",
-          "Use your phone call to contact a lawyer or family member",
-          "Do not discuss your case with anyone in the holding area",
-          "Be polite to booking officers — it does not hurt your case",
-          "Ask when you will see a judge"
+          "You will be fingerprinted, photographed, and have personal property inventoried",
+          "The phone call is typically used to reach a family member or attorney. All jail calls except to attorneys are recorded",
+          "Conversations in the holding area are not protected by any privilege. Other detainees or staff may repeat what they hear",
+          "Demeanor during booking is documented and can affect how subsequent proceedings unfold",
+          "Ask when you will see a judge so you understand the timeline"
         ]
       },
       "firstAppearance": {
@@ -3367,11 +3367,11 @@ export default {
           "Right to plead not guilty"
         ],
         "tips": [
-          "Discuss your plea options with your attorney before arraignment — this is a critical decision",
+          "Plea options arise at this hearing. The right choice depends on the specific facts of your case and requires attorney guidance",
           "Request a public defender if you cannot afford a lawyer",
           "Dress appropriately and address the judge as 'Your Honor'",
-          "Do not discuss facts of your case in open court",
-          "Bring information about your ties to the community for bail arguments"
+          "Statements made in open court are on the record. Save case discussions for private conversations with your attorney",
+          "Judges consider community ties — family, employment, length of residence — when making bail decisions"
         ]
       },
       "pretrial": {
@@ -3387,8 +3387,8 @@ export default {
         "tips": [
           "Stay in close contact with your attorney",
           "Attend every court date — missing one leads to a bench warrant",
-          "Follow all bail conditions carefully",
-          "Do not post about your case on social media",
+          "Bail violations, including accidental ones, typically result in immediate re-arrest",
+          "Social media posts about active cases can be obtained by prosecutors and used as evidence. Many attorneys advise against public case discussion",
           "Approximately 97–98% of convictions result from guilty pleas, not trials (USSC, 2024)"
         ]
       },
@@ -3403,11 +3403,11 @@ export default {
           "Right to have your attorney review all discovery materials"
         ],
         "tips": [
-          "Share all information with your attorney — attorney-client privilege protects you",
+          "Attorney-client privilege protects communications with your attorney — this is why attorneys need a complete factual picture",
           "Help your attorney identify potential witnesses",
-          "Gather any documents, texts, or records that support your case",
+          "Documents and records relevant to your case may be important to your defense. Your attorney will advise what to collect and preserve",
           "Your attorney may file motions to suppress improperly obtained evidence",
-          "Keep notes of anything you remember about the incident"
+          "Keep notes of anything you remember about the incident while memory is fresh"
         ]
       },
       "trial": {
@@ -3422,10 +3422,10 @@ export default {
           "Presumption of innocence until proven guilty"
         ],
         "tips": [
-          "Trust your attorney's strategy — they know the process",
+          "Trial strategy is developed by your attorney based on the specific facts and applicable law in your case",
           "Dress professionally and be respectful in court",
-          "Do not react emotionally to testimony or evidence",
-          "Your attorney decides whether you should testify",
+          "How defendants present themselves in court can influence how judges and juries perceive the proceedings",
+          "Whether to testify carries significant legal consequences either way. Your attorney must advise on this based on your specific situation",
           "The burden of proof is on the prosecution, not on you"
         ]
       },
@@ -3440,11 +3440,11 @@ export default {
           "Right to fair and proportional punishment (8th Amendment)"
         ],
         "tips": [
-          "Show genuine accountability — judges notice",
-          "Highlight rehabilitation steps (counseling, employment, education)",
-          "Have family or community members write support letters",
-          "Ask your attorney about sentencing alternatives (probation, community service)",
-          "Understand your right to appeal — there are deadlines"
+          "Judges commonly weigh whether a defendant has demonstrated accountability for the offense as a mitigating factor",
+          "Rehabilitation efforts — counseling, employment, education — are factors courts regularly consider at sentencing",
+          "Letters from family and community members can be submitted as mitigating evidence. Your attorney can advise on their preparation and use",
+          "Ask your attorney about sentencing alternatives such as probation or community service",
+          "The right to appeal has strict deadlines. Your attorney should advise on this immediately after sentencing"
         ]
       }
     }
@@ -3498,14 +3498,14 @@ export default {
       "say1": "Your three plea options are: Guilty, Not Guilty, or No Contest. Your attorney advises which to enter based on your case.",
       "say2": "\"I would like a court-appointed attorney\" — if you can't afford one",
       "say3": "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge",
-      "dontSay": "Don't Say",
-      "dontSay1": "Don't discuss the facts of your case in open court",
-      "dontSay2": "Don't plead guilty without talking to a lawyer first",
-      "dontSay3": "Don't argue with the judge or prosecutor",
+      "dontSay": "Things to be aware of",
+      "dontSay1": "Statements made in open court are on the record and can be used in subsequent proceedings",
+      "dontSay2": "Entering a plea before speaking with an attorney means making a decision with permanent legal effects without knowing all options",
+      "dontSay3": "Arguing with the judge or prosecutor at arraignment does not help your case and can affect how future proceedings unfold",
       "rights": "Your Rights",
       "right1": "Right to an attorney (free if you can't afford one)",
       "right2": "Right to know the charges against you",
-      "right3": "Right to reasonable bail",
+      "right3": "Right to request reasonable bail",
       "right4": "Right to a speedy trial"
     },
     "bail": {
@@ -3515,14 +3515,14 @@ export default {
       "expect2": "Factors: severity of charge, flight risk, community ties, criminal history",
       "expect3": "You or your attorney can argue for lower bail or release",
       "expect4": "Conditions of release may be set (curfew, no contact orders, etc.)",
-      "say": "What to Say",
-      "say1": "Emphasize community ties: family, job, length of residence",
-      "say2": "Mention you will comply with all court dates",
-      "say3": "Offer alternatives if bail is too high (ankle monitor, check-ins)",
-      "dontSay": "Don't Say",
-      "dontSay1": "Don't discuss the details of your case",
-      "dontSay2": "Don't make promises you can't keep",
-      "dontSay3": "Don't show frustration or anger toward the court",
+      "say": "What courts typically consider",
+      "say1": "Judges consider community ties — family, employment, and length of residence — when assessing flight risk",
+      "say2": "A history of appearing for court dates and complying with legal obligations is relevant to bail decisions",
+      "say3": "Courts may consider alternatives to cash bail, such as electronic monitoring or regular check-ins, when standard bail presents hardship",
+      "dontSay": "Things to be aware of",
+      "dontSay1": "Statements about the underlying case at a bail hearing are on the record and can affect the prosecution",
+      "dontSay2": "Commitments made to the court at a bail hearing that are not met can result in bail revocation",
+      "dontSay3": "How defendants present themselves before the court can affect judicial impressions throughout the case",
       "rights": "Your Rights",
       "right1": "Right to reasonable bail (8th Amendment)",
       "right2": "Right to a bail hearing",
@@ -3535,15 +3535,15 @@ export default {
       "expect2": "Your attorney may file motions to suppress evidence or dismiss charges",
       "expect3": "Plea bargain negotiations often happen during this phase",
       "expect4": "This phase can take weeks to months",
-      "say": "What to Do",
+      "say": "What typically matters during this phase",
       "do1": "Stay in close contact with your attorney",
-      "do2": "Attend every court date — missing one can result in a bench warrant",
-      "do3": "Follow all bail conditions strictly",
-      "do4": "Gather any evidence or witnesses that help your case",
-      "dontSay": "Don't Do",
-      "dont1": "Don't discuss your case on social media or with others",
-      "dont2": "Don't contact witnesses or victims directly",
-      "dont3": "Don't accept a plea deal without fully understanding the consequences",
+      "do2": "Missing a court date results in a bench warrant and forfeiture of any bail",
+      "do3": "Bail violations, including accidental ones, typically result in immediate re-arrest",
+      "do4": "Documents, records, and potential witnesses may be relevant to your defense. Your attorney will guide what to gather",
+      "dontSay": "Things to be aware of",
+      "dont1": "Social media posts about active cases can be obtained by prosecutors and used as evidence",
+      "dont2": "Contact with witnesses or alleged victims during an active case can raise obstruction concerns. Your attorney should advise before any such contact",
+      "dont3": "Plea agreements have permanent legal effects, including collateral consequences on housing, employment, and immigration. Your attorney must walk through all implications",
       "rights": "Your Rights",
       "right1": "Right to see all evidence against you (Brady Rule)",
       "right2": "Right to a speedy trial",
@@ -3556,14 +3556,14 @@ export default {
       "expect2": "You must confirm the plea is voluntary and not coerced",
       "expect3": "The judge explains the maximum possible sentence",
       "expect4": "Sentencing may happen immediately or be scheduled later",
-      "say": "What to Say",
-      "say1": "\"Yes, I understand\" — when the judge explains the plea terms",
-      "say2": "\"Yes, this is my voluntary decision\" — confirm you were not forced",
-      "say3": "Ask your lawyer to explain anything you don't understand",
-      "dontSay": "Don't Say",
-      "dontSay1": "Don't say \"I didn't do it\" while pleading guilty — the judge may reject the plea",
-      "dontSay2": "Don't agree to a plea if you don't understand the collateral consequences (immigration, housing, employment)",
-      "dontSay3": "Don't rush — you can ask for more time to decide",
+      "say": "How the hearing typically proceeds",
+      "say1": "The judge will ask whether you understand the plea terms and its consequences",
+      "say2": "The judge will ask whether your plea is voluntary and not the result of threats or promises",
+      "say3": "You have the right to ask your attorney to explain anything before responding",
+      "dontSay": "Things to be aware of",
+      "dontSay1": "Stating 'I didn't do it' while entering a guilty plea typically leads the judge to reject the plea, since courts require a factual basis",
+      "dontSay2": "Plea agreements carry collateral consequences beyond the sentence itself — including effects on immigration, housing, and employment. These must be understood before agreeing",
+      "dontSay3": "You have the right to ask for more time before entering a plea. Rushing into a plea agreement has permanent legal effects",
       "rights": "Your Rights",
       "right1": "Right to withdraw a guilty plea in certain circumstances",
       "right2": "Right to know the full consequences before pleading",
@@ -3576,14 +3576,14 @@ export default {
       "expect2": "Your attorney can present mitigating factors (first offense, employment, family responsibilities)",
       "expect3": "Possible outcomes: fines, probation, community service, imprisonment, or combination",
       "expect4": "You may have the opportunity to address the court",
-      "say": "What to Say",
-      "say1": "Express genuine remorse if you have been found guilty",
-      "say2": "Mention rehabilitation steps you've taken (counseling, classes, employment)",
-      "say3": "Describe your responsibilities (children, family, community)",
-      "dontSay": "Don't Say",
-      "dontSay1": "Don't blame the victim or minimize the offense",
-      "dontSay2": "Don't argue with the judge's questions",
-      "dontSay3": "Don't make excuses — take responsibility where appropriate",
+      "say": "What courts typically weigh at sentencing",
+      "say1": "Judges commonly consider whether a defendant has demonstrated genuine accountability for the offense as a mitigating factor",
+      "say2": "Rehabilitation efforts taken since the offense — counseling, classes, employment — are factors courts regularly weigh",
+      "say3": "Family responsibilities and community ties are factors courts may consider when determining the type and length of sentence",
+      "dontSay": "Things to be aware of",
+      "dontSay1": "Statements that minimize the offense or shift responsibility to others can affect how a judge views the case",
+      "dontSay2": "Arguing with the judge's questions at sentencing can affect judicial impressions",
+      "dontSay3": "How a defendant presents at sentencing is one factor courts weigh. Your attorney can advise on what is appropriate to your situation",
       "rights": "Your Rights",
       "right1": "Right to speak at your sentencing (allocution)",
       "right2": "Right to appeal the sentence",
