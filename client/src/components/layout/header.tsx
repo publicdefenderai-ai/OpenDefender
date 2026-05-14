@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Fragment } from "react";
 import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, Clock, Heart, ChevronDown, Globe2, Compass } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
@@ -142,37 +142,50 @@ export function Header() {
             )}
 
             {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-1 ml-2" aria-label="Section navigation">
-              {navLinks.map((link) => {
+            <nav className="hidden md:flex items-center gap-0 ml-3" aria-label="Section navigation">
+              {navLinks.map((link, idx) => {
                 const isActive = location === link.href || location.startsWith(link.href + "/");
                 const isOpen = openDropdown === link.href;
+                const isLast = idx === navLinks.length - 1;
+
+                const separator = !isLast ? (
+                  <span aria-hidden="true" className="text-border select-none px-0.5 text-base leading-none">·</span>
+                ) : null;
 
                 if (!link.dropdown) {
                   return (
-                    <button
-                      key={link.href}
-                      onClick={() => { setOpenDropdown(null); handleNavigate(link.href); }}
-                      className={cn(
-                        "relative px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
-                        isActive ? "font-semibold text-foreground" : "font-medium text-muted-foreground hover:text-foreground"
-                      )}
-                    >
-                      {link.label}
-                      <span
-                        aria-hidden="true"
+                    <Fragment key={link.href}>
+                      <button
+                        onClick={() => { setOpenDropdown(null); handleNavigate(link.href); }}
                         className={cn(
-                          "absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-primary transition-all duration-200",
-                          isActive ? "opacity-100" : "opacity-0 group-hover:opacity-40"
+                          "relative px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
+                          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
+                          isActive ? "font-semibold text-foreground" : "font-medium text-muted-foreground hover:text-foreground"
                         )}
-                      />
-                    </button>
+                      >
+                        {link.label}
+                        {/* Always-visible hairline — static state texture */}
+                        <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
+                        {/* Hover / active overlay */}
+                        <span
+                          aria-hidden="true"
+                          className={cn(
+                            "absolute bottom-0 left-0 right-0 h-[2px] rounded-full transition-all duration-200",
+                            isActive
+                              ? "bg-gradient-to-r from-transparent via-primary to-transparent opacity-100"
+                              : "bg-primary opacity-0 group-hover:opacity-50"
+                          )}
+                        />
+                      </button>
+                      {separator}
+                    </Fragment>
                   );
                 }
 
                 // Dropdown item
                 return (
-                  <div key={link.href} className="relative">
+                  <Fragment key={link.href}>
+                  <div className="relative">
                     <button
                       onClick={() => setOpenDropdown(isOpen ? null : link.href)}
                       aria-expanded={isOpen}
@@ -185,11 +198,16 @@ export function Header() {
                     >
                       {link.label}
                       <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-150", isOpen && "rotate-180")} />
+                      {/* Always-visible hairline */}
+                      <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
+                      {/* Hover / active overlay */}
                       <span
                         aria-hidden="true"
                         className={cn(
-                          "absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-primary transition-all duration-200",
-                          isActive || isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-40"
+                          "absolute bottom-0 left-0 right-0 h-[2px] rounded-full transition-all duration-200",
+                          isActive || isOpen
+                            ? "bg-gradient-to-r from-transparent via-primary to-transparent opacity-100"
+                            : "bg-primary opacity-0 group-hover:opacity-50"
                         )}
                       />
                     </button>
@@ -214,6 +232,8 @@ export function Header() {
                       </>
                     )}
                   </div>
+                  {separator}
+                  </Fragment>
                 );
               })}
             </nav>
