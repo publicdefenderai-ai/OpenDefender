@@ -407,7 +407,7 @@ export default {
       },
       "courtTimeOff": {
         "sectionTitle": "Court Time Off Templates",
-        "sectionDescription": "Use these ready-made templates to request time off from work for court appearances. Copy and personalize them with your details.",
+        "sectionDescription": "These templates are written for employees requesting time off from an employer. If you're self-employed, a gig worker, or a contractor, adapt the language to notify a client or platform of your unavailability — the core information is the same. Copy and personalize the template that fits your situation.",
         "tipLabel": "Tip",
         "copyButton": "Copy to Clipboard",
         "copied": "Copied!",
@@ -541,8 +541,8 @@ export default {
         "tip4": "Ask your attorney about expungement options that might help with future employment and housing"
       },
       "benefits": {
-        "sectionTitle": "What happens to your benefits when you're arrested",
-        "sectionSubtitle": "An arrest can suspend or end benefits you depend on. Acting quickly after release can often preserve or restore them.",
+        "sectionTitle": "If you receive government benefits",
+        "sectionSubtitle": "An arrest can suspend or end certain benefits. Acting quickly after release can often preserve or restore them. If you don't currently receive these benefits, you may become eligible depending on your income after your case.",
         "snap": {
           "name": "SNAP (Food Assistance)",
           "what": "SNAP is typically suspended during incarceration and restored after release — it is not automatically terminated. You must re-apply or request reinstatement.",
@@ -866,7 +866,7 @@ export default {
       }
     },
     "personalHealth": {
-      "overview": "A legal case can disrupt your healthcare routines — especially if there is any chance of jail time. Planning ahead for your medications and health needs is one of the most important steps you can take right now.",
+      "overview": "A legal case can disrupt your healthcare routines. Planning ahead for your medications and health needs matters whether you're managing care at home or dealing with the possibility of custody. This guide covers both situations.",
       "actions": {
         "listMedications": {
           "title": "Make a complete medication list",
@@ -881,8 +881,8 @@ export default {
           "timeframe": "Before your next court date"
         },
         "notifyJailHealth": {
-          "title": "Notify jail health staff immediately upon intake",
-          "description": "If you are booked into jail, tell the medical staff your medications as soon as possible during intake. Ask about the facility's policy for continuing prescriptions. Jails are required to provide medically necessary medications.",
+          "title": "If in custody: notify jail health staff at intake",
+          "description": "If you are booked into jail, tell medical staff your medications as soon as possible during intake. Ask about the facility's policy for continuing prescriptions. Jails are required to provide medically necessary medications. If you are not in custody, focus on the steps above to maintain your medications at home.",
           "priority": "high"
         },
         "getRefills": {
@@ -973,7 +973,7 @@ export default {
       }
     },
     "transportation": {
-      "overview": "Your case may affect your ability to drive or get around — but it doesn't have to stop your life. Understanding your license status, planning alternatives, and communicating proactively with the people who depend on you will help you stay on track.",
+      "overview": "Your case may affect how you get around — whether you drive or not. This guide covers license concerns for drivers and practical options for getting to court without a vehicle. Whatever your situation, missing court because of a transportation problem is avoidable.",
       "actions": {
         "checkLicense": {
           "title": "Check your license status right away",
@@ -1119,7 +1119,7 @@ export default {
         },
         "talkToChild": {
           "title": "Have an age-appropriate conversation with your child",
-          "description": "Children sense when something is wrong, even when you don't say anything. A brief, calm reassurance goes a long way. You don't need to share legal details — focus on the message that they are safe, loved, and that the adults in their life are taking care of things. Younger children need very simple language; older children may need slightly more.",
+          "description": "If your children are in your regular care, a brief, calm reassurance goes a long way. You don't need to share legal details — focus on the message that they are safe, loved, and that the adults in their life are taking care of things. Children sense when something is wrong even when you don't say anything. Younger children need very simple language; older children may need slightly more.",
           "priority": "medium"
         },
         "knowCustodyRules": {
@@ -1211,7 +1211,7 @@ export default {
       }
     },
     "housing": {
-      "overview": "A legal case can create real uncertainty about your home — through missed rent, lease concerns, or fear of what comes next. But you have more rights and more options than it may feel like right now. This guide helps you understand where you stand, have honest conversations with people in your support network, and connect with organizations that can provide real help.",
+      "overview": "A legal case can create real uncertainty about your home — whether you rent or own it. This guide covers options for renters dealing with missed payments or lease concerns, homeowners managing mortgage hardship, and anyone dealing with housing instability. Whatever your situation, you have more options than it may feel like right now.",
       "actions": {
         "reviewLease": {
           "title": "Read your lease and know your rights",
@@ -1497,7 +1497,7 @@ export default {
         },
         "documentPositives": {
           "title": "Gather documentation of your positive character",
-          "description": "Employment records, performance reviews, volunteer involvement, community ties, awards, and character references all matter — both for your case and for your long-term reputation. Now is a good time to start collecting them. Character letters from people who know you well can carry real weight with judges and employers alike.",
+          "description": "Positive documentation matters for your case and your long-term reputation — whether formal or not. Employment records and performance reviews if you have them. Volunteer work, community involvement, and organizations you're part of. Character references from people who know you: neighbors, mentors, faith leaders, coaches, or anyone who can speak to who you are. Start collecting what's available to you. Letters from people who know you well carry real weight with judges and employers.",
           "priority": "medium"
         },
         "planRecordRelief": {

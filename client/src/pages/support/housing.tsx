@@ -150,6 +150,68 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
   );
 }
 
+function HomeownerSection() {
+  return (
+    <div className="mb-8">
+      <ScrollReveal>
+        <h2 className="text-xl font-bold text-foreground mb-1">If you own your home</h2>
+        <p className="text-sm text-muted-foreground mb-4">The content above focuses on renters. If you own your home, your concerns are different — here's where to start.</p>
+      </ScrollReveal>
+      <div className="grid sm:grid-cols-3 gap-4">
+        <ScrollReveal delay={0.05}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Contact your mortgage servicer</p>
+              <p className="text-sm text-muted-foreground">Call the number on your mortgage statement and ask about hardship options. Most servicers have forbearance programs that let you pause or reduce payments temporarily — you typically must request this; it is not automatic.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Know your forbearance rights</p>
+              <p className="text-sm text-muted-foreground">The CFPB (Consumer Financial Protection Bureau) provides free guidance on mortgage forbearance and your rights as a homeowner facing hardship. Visit <a href="https://www.consumerfinance.gov/housing/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">consumerfinance.gov/housing</a> or call 1-855-411-2372.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+        <ScrollReveal delay={0.15}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Free HUD-approved counseling</p>
+              <p className="text-sm text-muted-foreground">HUD-approved housing counselors can help you understand your options at no cost. Call <strong>1-800-569-4287</strong> or visit <a href="https://www.hud.gov/findacounselor" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">hud.gov/findacounselor</a> to find someone in your area.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+      </div>
+    </div>
+  );
+}
+
+function HousingInstabilitySection() {
+  return (
+    <div className="mb-8 rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50/60 dark:bg-amber-900/10 p-5">
+      <ScrollReveal>
+        <h2 className="text-base font-bold text-foreground mb-1">If you don't have stable housing</h2>
+        <p className="text-sm text-muted-foreground mb-4">If you're currently without stable housing, that's the most urgent thing to address — it also affects your ability to receive court notices and meet bail conditions.</p>
+        <ul className="space-y-2.5 text-sm text-muted-foreground">
+          <li className="flex items-start gap-2">
+            <span className="font-semibold text-foreground flex-shrink-0">Call or text 211</span>
+            <span>Free, 24/7, available in most of the US. Tell them you need emergency housing — they can connect you to shelters, transitional housing, and local programs.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="font-semibold text-foreground flex-shrink-0">HUD emergency resources</span>
+            <span>Visit <a href="https://www.hud.gov/topics/homelessness" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">hud.gov/topics/homelessness</a> to find emergency housing assistance programs in your area.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="font-semibold text-foreground flex-shrink-0">Keep a mailing address</span>
+            <span>Court notices and case documents must reach you. A trusted contact's address, a shelter's address, or a local post office box all work. Let your attorney and the court know immediately if your address changes.</span>
+          </li>
+        </ul>
+      </ScrollReveal>
+    </div>
+  );
+}
+
 function HousingNetworkSection() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"written" | "call">("written");
@@ -469,7 +531,13 @@ export default function HousingSupport() {
         { label: t("support.relatedLinks.employment"), href: "/support/employment" },
         { label: t("support.relatedLinks.mentalHealth"), href: "/support/mental-health" },
       ]}
-      customSections={<HousingNetworkSection />}
+      customSections={
+        <>
+          <HomeownerSection />
+          <HousingInstabilitySection />
+          <HousingNetworkSection />
+        </>
+      }
     />
   );
 }

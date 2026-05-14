@@ -225,7 +225,7 @@ export default function ReentrySupport() {
       icon={Compass}
       iconColor="bg-orange-500/10 text-orange-600 dark:text-orange-400"
       heroGradient="bg-gradient-to-br from-orange-500/5 via-background to-background"
-      overview="Leaving incarceration or completing a sentence is a major transition. This guide covers the four areas that matter most first: getting official ID, finding housing, finding work, and knowing your voting rights. Start with ID — everything else requires it."
+      overview="This guide is for people approaching release or who have recently completed a sentence. It covers the four areas that matter most first: getting official ID, finding housing, finding work, and knowing your voting rights. Start with ID — everything else requires it."
       startHereItems={startHereItems}
       externalResources={externalResources}
       faqs={faqs}

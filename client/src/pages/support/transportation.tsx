@@ -150,6 +150,51 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
   );
 }
 
+function NonDriverSection() {
+  return (
+    <div className="mb-8">
+      <ScrollReveal>
+        <h2 className="text-xl font-bold text-foreground mb-1">Getting to court without a car</h2>
+        <p className="text-sm text-muted-foreground mb-4">If you don't drive or your license is suspended, missing court is still not an option. Here are reliable ways to get there.</p>
+      </ScrollReveal>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <ScrollReveal delay={0.05}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Public transit</p>
+              <p className="text-sm text-muted-foreground">Look up your courthouse address and plan the trip in advance using Google Maps or your local transit agency's app. Many courthouses are on major bus or rail lines. Do a practice run if you're unsure of timing.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Transportation assistance</p>
+              <p className="text-sm text-muted-foreground">Call 211 to find local programs that provide rides to court appointments. Many legal aid organizations and nonprofits offer this service. Some courts also have partnerships with rideshare programs — ask your attorney or the clerk's office.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+        <ScrollReveal delay={0.15}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Paratransit (if disabled)</p>
+              <p className="text-sm text-muted-foreground">If you have a disability that prevents using standard transit, ADA paratransit services provide door-to-door rides. Contact your local transit authority to apply. Allow extra time — you must typically register in advance.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+        <ScrollReveal delay={0.2}>
+          <Card className="h-full">
+            <CardContent className="p-4">
+              <p className="font-semibold text-sm text-foreground mb-1.5">Ask about remote appearance</p>
+              <p className="text-sm text-muted-foreground">Some courts allow virtual appearances for certain hearings, especially pre-trial matters. Ask your attorney whether any of your upcoming court dates can be attended by video or phone before assuming you must appear in person.</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+      </div>
+    </div>
+  );
+}
+
 function TransportationCommsSection() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"email" | "call">("email");
@@ -454,7 +499,12 @@ export default function TransportationSupport() {
         { label: t("support.relatedLinks.courtLogistics"), href: "/support/court-logistics" },
         { label: t("support.relatedLinks.childcare"), href: "/support/childcare" },
       ]}
-      customSections={<TransportationCommsSection />}
+      customSections={
+        <>
+          <NonDriverSection />
+          <TransportationCommsSection />
+        </>
+      }
     />
   );
 }
