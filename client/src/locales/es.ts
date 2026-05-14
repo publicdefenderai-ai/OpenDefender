@@ -3727,7 +3727,7 @@ export default {
       "title": "Asegurar Representación Legal",
       "description": "Involucrar a un abogado temprano es una de las cosas más importantes que puede hacer.",
       "alertTitle": "Importante:",
-      "alertText": "Si no pueden pagar un abogado, tienen derecho a un defensor público. No se demore - solicite uno en la primera comparecencia ante el tribunal (lectura de cargos).",
+      "alertText": "Si no pueden pagar un abogado, tienen derecho a un defensor público. La solicitud se hace en la primera comparecencia ante el tribunal — cuanto antes se cuente con representación legal, mejor.",
       "publicDefenderTitle": "Defensor Público",
       "publicDefenderDesc": "El tribunal asigna un defensor público sin costo para quienes califican. Dígale al juez en la primera comparecencia que no puede pagar un abogado.",
       "legalAidTitle": "Organizaciones de Asistencia Legal",
@@ -3748,7 +3748,7 @@ export default {
       "keyInfo7": "Nombre del defensor público asignado (si corresponde)",
       "keyInfo8": "Información de contacto de testigos",
       "keyInfo9": "Qué oficina presentó los cargos (no la policía — vea abajo)",
-      "prosecutorNote": "La oficina que presentó los cargos no es el departamento de policía. Busque en la parte superior de cualquier documento un nombre como 'Fiscalía del Distrito,' 'Procurador Municipal' o 'Fiscal Federal.' Esto le dice con quién trata realmente el abogado — y afecta la estrategia, las opciones de negociación y los programas alternativos disponibles.",
+      "prosecutorNote": "La oficina que presentó los cargos no es el departamento de policía. Busque en la parte superior de cualquier documento un nombre como 'Fiscalía del Distrito,' 'Procurador Municipal' o 'Fiscal Federal.' Esto indica en qué tribunal se lleva el caso y qué programas pueden estar disponibles — información que el abogado necesitará.",
       "prosecutorCta": "Ver glosario: Fiscal"
     },
     "step4": {
@@ -3786,10 +3786,10 @@ export default {
     },
     "warnings": {
       "title": "Recordatorios Importantes",
-      "jailCallsTitle": "Nunca Discuta Detalles del Caso por Teléfono de la Cárcel:",
-      "jailCallsText": "Todas las llamadas desde la cárcel se graban y pueden usarse como evidencia. Solo discuta el caso con su abogado a través de canales confidenciales aprobados.",
-      "interferenceTitle": "No Intente Interferir:",
-      "interferenceText": "Nunca intente contactar testigos, destruir evidencia o interferir con la investigación. Esto puede resultar en cargos adicionales tanto para usted como para su ser querido."
+      "jailCallsTitle": "Las llamadas desde la cárcel son grabadas:",
+      "jailCallsText": "Todas las llamadas desde la cárcel se graban y pueden usarse como evidencia. Las únicas llamadas protegidas son las realizadas al abogado a través de canales oficialmente designados.",
+      "interferenceTitle": "Contacto con testigos e interferencia:",
+      "interferenceText": "Contactar testigos, manipular evidencia o interferir con una investigación activa puede resultar en cargos de obstrucción — tanto para usted como para su ser querido. Evite cualquier acción que pueda interpretarse como un intento de influir en el caso."
     },
     "disclaimer": {
       "title": "Descargo de Responsabilidad Legal:",

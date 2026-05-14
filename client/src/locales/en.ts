@@ -3725,7 +3725,7 @@ export default {
       "title": "Secure Legal Representation",
       "description": "Getting a lawyer involved early is one of the most important things you can do.",
       "alertTitle": "Important:",
-      "alertText": "If they can't afford a lawyer, they have the right to a public defender. Don't delay - ask for one when they first see the judge.",
+      "alertText": "If they can't afford a lawyer, they have the right to a public defender. The request happens at their first court appearance — the sooner legal representation is in place, the better.",
       "publicDefenderTitle": "Public Defender",
       "publicDefenderDesc": "The court appoints a public defender at no cost for those who qualify. Tell the judge at the first court appearance that you cannot afford an attorney.",
       "legalAidTitle": "Legal Aid Organizations",
@@ -3746,7 +3746,7 @@ export default {
       "keyInfo7": "Name of assigned public defender (if applicable)",
       "keyInfo8": "Witness contact information",
       "keyInfo9": "Which office filed charges (not the police — see below)",
-      "prosecutorNote": "The office that filed charges is not the police department. Look at the top of any paperwork for a name like 'Office of the District Attorney,' 'City Attorney,' or 'United States Attorney.' This tells you who their attorney is actually dealing with — and it affects strategy, plea options, and which diversion programs may apply.",
+      "prosecutorNote": "The office that filed charges is not the police department. Look at the top of any paperwork for a name like 'Office of the District Attorney,' 'City Attorney,' or 'United States Attorney.' This tells you which court the case is in and which programs may be available — information their attorney will need.",
       "prosecutorCta": "See glossary: Prosecutor"
     },
     "step4": {
@@ -3784,10 +3784,10 @@ export default {
     },
     "warnings": {
       "title": "Important Reminders",
-      "jailCallsTitle": "Never Discuss Case Details on Jail Phones:",
-      "jailCallsText": "All calls from jail are recorded and can be used as evidence. Only discuss the case with their attorney through approved confidential channels.",
-      "interferenceTitle": "Don't Try to Interfere:",
-      "interferenceText": "Never attempt to contact witnesses, destroy evidence, or interfere with the investigation. This can result in additional charges for both you and your loved one."
+      "jailCallsTitle": "Jail calls are recorded:",
+      "jailCallsText": "All calls from jail are recorded and can be used as evidence. The only protected calls are to an attorney through officially designated channels.",
+      "interferenceTitle": "Witness contact and interference:",
+      "interferenceText": "Contacting witnesses, tampering with evidence, or interfering with an active investigation can result in obstruction charges — for you as well as your loved one. Avoid any action that could be seen as attempting to influence the case."
     },
     "disclaimer": {
       "title": "Legal Disclaimer:",
