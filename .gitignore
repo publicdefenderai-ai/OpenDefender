@@ -55,3 +55,6 @@ pyproject.toml
 # Agent / internal ops files (not source code)
 CLAUDE.md
 EDITORIAL_REVIEW_LOG.md
+
+# Regulatory monitor outputs
+scripts/reg-monitor/output/

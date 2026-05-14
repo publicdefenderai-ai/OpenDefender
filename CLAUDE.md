@@ -19,6 +19,7 @@ OpenDefender is a public legal aid platform providing constitutional rights info
 - Never expose test routes, admin bypasses, or debug endpoints in production
 - All session data must auto-delete; cost tracking must be durable (awaited writes)
 - **No secrets in the codebase.** API keys, database credentials, session secrets, and tokens must only ever come from `process.env`. Never assign a secret as a string literal in source code. If a value looks like a key or credential, it belongs in the hosting environment's secret manager, not in code. The `.env` file is gitignored and must never be committed. See `.env.example` for the full list of required variables.
+- **Run a PIA before shipping any new feature that collects user input, adds AI processing, or integrates a third-party service.** Template at `docs/pia-template.md`. This applies even for "temporary" or "session-only" data. If the PIA reveals a gap with our privacy policy commitments, close the gap before launch — either by redesigning the feature or updating disclosures first.
 
 ### 2. Legal Information vs. Legal Advice — The Content Standard
 
