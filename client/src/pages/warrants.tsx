@@ -35,12 +35,12 @@ const QUICK_LINKS = [
 /* ── Sub-components ────────────────────────────────────────────── */
 
 const AT_THE_DOOR_STEPS = [
-  "Do not open the door. You can speak through the door or a window.",
+  "Opening the door can be treated as consent to entry. You can speak through the door or a window.",
   'Ask: "Do you have a warrant?" You have the right to ask this.',
-  "If they say yes: ask them to slide it under the door. Read it before doing anything else.",
-  "Check the document: look for a judge's signature and your address. If it is signed by an immigration officer rather than a judge, it does not allow officers to enter your home without your consent.",
-  'If it is a valid judicial warrant: say "I am invoking my right to remain silent" and contact your attorney as soon as possible. Do not physically resist.',
-  'If there is no judicial warrant: say "I do not consent to entry." You can say this calmly through the door.',
+  "If they say yes: you can view it without opening the door — for example, by asking them to slide it under. Read it before anything else happens.",
+  "Check the document: look for a judge's signature and your address. If it is signed by an immigration officer rather than a judge, it does not authorize entry into your home without your consent.",
+  'If it is a valid judicial warrant: officers may enter. If you want to invoke your right to remain silent, say so clearly — for example: "I am invoking my right to remain silent." Contact your attorney as soon as possible. Physically resisting entry, even if unlawful, creates additional criminal exposure.',
+  'If there is no judicial warrant: you do not have to let them in. If you want to make your position clear, you can say calmly through the door: "I do not consent to entry."',
   "After the encounter: write down officer names, badge numbers, what was said, and what documents you saw.",
 ];
 
@@ -514,7 +514,7 @@ export default function Warrants() {
                 <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
                   <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                   <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
-                    <strong>How to check a warrant at the door:</strong> Ask officers to slide it under. Look for a judge's signature, your specific address, and a list of what they're looking for. You have the right to read it. You do not have to help officers search, but do not physically interfere.
+                    <strong>Checking a warrant at the door:</strong> You have the right to read any warrant before anything else happens. You can ask officers to slide it under the door. Look for: a judge's signature, your specific address, and a description of what they're looking for. You are not required to help officers search, and physically interfering with a search carries legal consequences.
                   </AlertDescription>
                 </Alert>
               </div>
@@ -760,6 +760,7 @@ export default function Warrants() {
               isOpen={openIds.has("what-to-do")}
               onToggle={() => toggleSection("what-to-do")}
             >
+              <p className="text-sm text-muted-foreground mb-4">The following describes how these rights work in practice and what you are legally able to do in each situation.</p>
               <div className="space-y-5">
                 <Card>
                   <CardHeader className="pb-3">
@@ -768,12 +769,12 @@ export default function Warrants() {
                   <CardContent>
                     <ol className="space-y-3">
                       {[
-                        "Do not open the door. Speak through it.",
+                        "Opening the door can be treated as consent to entry. Speak through the door or a window.",
                         'Ask: "Do you have a warrant?"',
-                        "Ask them to slide the warrant under the door. Look for a judge's signature and your address.",
-                        "If it is a valid judicial warrant: they may enter. Stay calm, say you are invoking your right to remain silent, and call your attorney as soon as possible.",
-                        'If there is no judicial warrant, or officers have an ICE administrative form only: say "I do not consent to entry."',
-                        "Do not physically resist, even if entry is forced. Contest it in court afterward. Your stated non-consent is your record.",
+                        "You can view the warrant without opening the door — for example, by asking them to slide it under. Look for a judge's signature and your address.",
+                        "If it is a valid judicial warrant: they may enter. Stay calm. If you want to invoke your right to remain silent, say so clearly and call your attorney as soon as possible.",
+                        'If there is no judicial warrant, or officers have an ICE administrative form only: you do not have to let them in. You can say: "I do not consent to entry."',
+                        "Physically resisting entry, even when entry is unlawful, creates additional criminal exposure. Contest unlawful entry in court afterward. Your stated non-consent is part of the record.",
                         "Write down everything as soon as it is safe: names, badge numbers, what was said, and what documents you saw.",
                       ].map((step, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -795,10 +796,10 @@ export default function Warrants() {
                     <ol className="space-y-3">
                       {[
                         'Ask: "Am I free to go?" If the answer is yes, you may leave.',
-                        "If no: you are being detained. Stay calm. Do not run.",
-                        'Say: "I am invoking my right to remain silent."',
-                        "Officers may pat you down for weapons during a lawful stop. This is not a full search. Say 'I do not consent to a search' regardless. Your objection matters even if they proceed.",
-                        "You do not have to answer questions about where you are going, where you have been, or your immigration status.",
+                        "If no: you are being detained. Stay calm. Running can result in additional charges.",
+                        'If you want to invoke your right to remain silent, say so clearly: "I am invoking my right to remain silent."',
+                        "Officers may pat you down for weapons during a lawful stop. This is not a full search. You can state: 'I do not consent to a search.' Your objection is part of the record even if officers proceed.",
+                        "You are not required to answer questions about where you are going, where you have been, or your immigration status.",
                       ].map((step, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
                           <span className="w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -818,9 +819,9 @@ export default function Warrants() {
                   <CardContent>
                     <ol className="space-y-3">
                       {[
-                        "Do not resist. Resisting arrest creates additional criminal exposure and physical danger.",
-                        'Say clearly: "I am invoking my right to remain silent and my right to an attorney."',
-                        "Do not answer any questions beyond your name. You can say: 'I will not answer questions without a lawyer present.'",
+                        "Physically resisting arrest creates additional criminal exposure and physical danger.",
+                        'If you want to invoke your rights, say so clearly: "I am invoking my right to remain silent and my right to an attorney."',
+                        "You are not required to answer questions beyond your name. If you want to invoke this protection, you can say: 'I will not answer questions without a lawyer present.'",
                         "Contact your attorney as soon as you are allowed to make a phone call.",
                       ].map((step, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">

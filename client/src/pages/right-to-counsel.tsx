@@ -50,32 +50,32 @@ const greyAreas: GreyAreaItem[] = [
   {
     title: "You're detained but not formally arrested",
     description: "Police stop you on the street, tell you not to leave, and begin questioning — but haven't said you're under arrest.",
-    answer: "If a reasonable person in your situation would not feel free to leave, courts may treat this as 'custody', which means your right to remain silent applies. However, your 6th Amendment right to counsel has not kicked in yet because no formal charges have been filed. Ask clearly: 'Am I free to go?' If the answer is no, invoke your right to remain silent and your right to a lawyer before answering anything."
+    answer: "If a reasonable person in your situation would not feel free to leave, courts may treat this as 'custody,' which means your right to remain silent applies. Asking 'Am I free to go?' establishes whether you are being detained. If the answer is no, you can invoke your right to remain silent and your right to a lawyer at that point — before answering anything. Your 6th Amendment right to appointed counsel has not yet attached because no formal charges have been filed."
   },
   {
     title: "Police come to your home to 'talk'",
     description: "Officers knock, you let them in, and they start asking questions. You feel like you can't ask them to leave.",
-    answer: "If you voluntarily agree to speak with officers in your home, courts have sometimes found this is not custody even if you felt pressure to cooperate. However, if officers block exits or the encounter turns coercive, the analysis changes. You always have the right to say: 'I am not going to answer questions without a lawyer present.'"
+    answer: "If you voluntarily agree to speak with officers in your home, courts have sometimes found this is not custody even if you felt pressure to cooperate. However, if officers block exits or the encounter turns coercive, the analysis changes. You always have the right to decline to answer questions. If you want to invoke this right, you can say clearly: 'I am not going to answer questions without a lawyer present.'"
   },
   {
     title: "You're in a squad car but told you're 'not under arrest'",
     description: "Officers ask you to sit in their car while they 'sort things out.' They say you're free to go but the doors don't open from inside.",
-    answer: "Courts look at whether a reasonable person would feel free to leave — not at what officers say. Being in a locked police vehicle strongly suggests custody. Anything said here may be treated as a custodial statement. Invoke your rights immediately."
+    answer: "Courts look at whether a reasonable person would feel free to leave — not at what officers say. Being in a locked police vehicle strongly suggests custody. Anything said here may be treated as a custodial statement. You can invoke your right to remain silent and your right to counsel at any point during this encounter."
   },
   {
     title: "Questioning in a workplace or school",
     description: "Police come to your workplace or school and question you in a private room.",
-    answer: "Courts look at all the details of what happened. Generally, if you were free to leave and no one pressured you to stay, this may not count as custody. But if your employer or school required you to participate, or if officers made clear you could not leave, it becomes more likely courts would call it custody. When in doubt, clearly say you will not answer questions without a lawyer."
+    answer: "Courts look at all the details of what happened. Generally, if you were free to leave and no one pressured you to stay, this may not count as custody. But if your employer or school required you to participate, or if officers made clear you could not leave, courts are more likely to treat it as custody. You can say you will not answer questions without a lawyer present."
   },
   {
     title: "Questioning after charges are filed but before indictment",
     description: "You've been charged with a crime, released on bail, and officers want to interview you again without your lawyer present.",
-    answer: "Once formal charges are filed, your 6th Amendment right to an attorney applies to those specific charges. Police cannot try to get statements from you about those charges without your lawyer present, whether directly or through other people. This is a firm right. Tell them to contact your attorney."
+    answer: "Once formal charges are filed, your 6th Amendment right to an attorney applies to those specific charges. Police cannot initiate questioning about those charges without your attorney present — whether directly or through other people. If contacted, you can say you will speak only through your attorney."
   },
   {
     title: "You're a juvenile being questioned",
     description: "You are under 18 and police question you, with or without your parents present.",
-    answer: "Courts look more closely at whether a young person was truly free to leave. Many states require police to notify parents before questioning someone under 18. A minor's age is an important factor in deciding whether they felt free to go. Juveniles should always clearly ask for a parent and a lawyer before answering any questions."
+    answer: "Courts look more closely at whether a young person was truly free to leave. Many states require police to notify parents before questioning someone under 18. A minor's age is an important factor in deciding whether they felt free to go. In most states, juvenile courts give heightened scrutiny to statements made without a parent or attorney present. Minors can invoke by clearly asking for both a parent and a lawyer before answering questions."
   }
 ];
 
@@ -546,7 +546,7 @@ export default function RightToCounsel() {
                       <p className="text-muted-foreground">Cannot be "reinitiated" by police: if you invoked, only you can restart the conversation, and even then cautiously</p>
                     </div>
                     <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-md">
-                      <p className="font-semibold text-blue-800 dark:text-blue-300 text-xs mb-1">How to invoke:</p>
+                      <p className="font-semibold text-blue-800 dark:text-blue-300 text-xs mb-1">If you want to invoke these rights, courts recognize clear statements like:</p>
                       <p className="text-blue-700 dark:text-blue-400 text-xs italic">"I am invoking my right to remain silent and my right to an attorney. I will not answer any questions without a lawyer present."</p>
                     </div>
                   </CardContent>
@@ -578,7 +578,7 @@ export default function RightToCounsel() {
                       <p className="text-muted-foreground">Covers the specific crimes you were charged with. Police can still question you about other matters you have not been formally charged with</p>
                     </div>
                     <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-md">
-                      <p className="font-semibold text-green-800 dark:text-green-300 text-xs mb-1">How to invoke:</p>
+                      <p className="font-semibold text-green-800 dark:text-green-300 text-xs mb-1">If you want to invoke this right, courts recognize clear statements like:</p>
                       <p className="text-green-700 dark:text-green-400 text-xs italic">At your first court appearance: "I am requesting appointed counsel." Or directly: "I want my attorney present."</p>
                     </div>
                   </CardContent>
@@ -677,20 +677,20 @@ export default function RightToCounsel() {
                 </Card>
                 <Card className="border-l-4 border-l-blue-500">
                   <CardContent className="p-5">
-                    <h3 className="font-semibold text-foreground mb-2 text-sm">You must invoke clearly</h3>
-                    <p className="text-sm text-muted-foreground">Saying "maybe I should get a lawyer" or "do you think I need an attorney?" is not enough. Courts have ruled that a vague or unclear request does not give you the full protection. You must say it directly: "I want a lawyer. I am not answering any questions without a lawyer present."</p>
+                    <h3 className="font-semibold text-foreground mb-2 text-sm">Clear invocation is required</h3>
+                    <p className="text-sm text-muted-foreground">Phrases like "maybe I should get a lawyer" or "do you think I need an attorney?" have not been recognized by courts as valid invocation. Courts require a clear, unambiguous statement. Language like this is recognized: "I want a lawyer. I am not answering any questions without a lawyer present."</p>
                   </CardContent>
                 </Card>
                 <Card className="border-l-4 border-l-blue-500">
                   <CardContent className="p-5">
-                    <h3 className="font-semibold text-foreground mb-2 text-sm">You stay in custody — asking for a lawyer does not release you</h3>
-                    <p className="text-sm text-muted-foreground">Asking for a lawyer does not end your detention or get you released. You will remain in custody until arraignment or bail. But you will no longer be questioned, which protects you from saying something that could hurt your case.</p>
+                    <h3 className="font-semibold text-foreground mb-2 text-sm">Invoking does not end your detention</h3>
+                    <p className="text-sm text-muted-foreground">Asking for a lawyer does not end your detention or get you released. You will remain in custody until arraignment or bail. Questioning, however, must stop — and anything you say after invoking can still be used against you.</p>
                   </CardContent>
                 </Card>
                 <Card className="border-l-4 border-l-amber-500">
                   <CardContent className="p-5">
-                    <h3 className="font-semibold text-foreground mb-2 text-sm">Do not take it back</h3>
-                    <p className="text-sm text-muted-foreground">After invoking, officers may come back hours later, act friendly, or suggest that talking would help your case. Do not engage. Once you have asked for a lawyer, anything you say can still be used against you. The safest thing to do is stay quiet until your attorney is there.</p>
+                    <h3 className="font-semibold text-foreground mb-2 text-sm">After you invoke</h3>
+                    <p className="text-sm text-muted-foreground">Once invoked, officers are legally required to stop all questioning — not just the current question. They may not send in a different officer or try again later. Engaging in conversation after invoking can create legal complications for any future challenge to statements made.</p>
                   </CardContent>
                 </Card>
               </div>
