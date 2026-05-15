@@ -20,7 +20,7 @@ export default {
     },
     "nav": {
       "first24Hours": "Las Primeras 24 Horas",
-      "support": "Apoyo para la Vida",
+      "support": "Vida y Familia",
       "caseGuidance": "Obtener Orientación",
       "immigration": "Inmigración",
       "explore": "Explorar"

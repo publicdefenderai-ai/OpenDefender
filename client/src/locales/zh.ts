@@ -20,7 +20,7 @@ export default {
     },
     "nav": {
       "first24Hours": "前24小时",
-      "support": "生活支持",
+      "support": "生活与家庭",
       "caseGuidance": "获取指导",
       "immigration": "移民事务",
       "explore": "探索"

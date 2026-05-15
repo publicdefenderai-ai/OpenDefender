@@ -117,7 +117,7 @@ export function Header() {
 
   const navLinks: NavLink[] = [
     { href: "/first-24-hours", label: t('header.nav.first24Hours', 'First 24 Hours') },
-    { href: "/support",        label: t('header.nav.support', 'Life Support') },
+    { href: "/support",        label: t('header.nav.support', 'Life & Family') },
     {
       href: "/case-guidance",
       label: t('header.nav.caseGuidance', 'Get Guidance'),

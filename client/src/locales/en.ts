@@ -18,7 +18,7 @@ export default {
     },
     "nav": {
       "first24Hours": "First 24 Hours",
-      "support": "Life Support",
+      "support": "Life & Family",
       "caseGuidance": "Get Guidance",
       "immigration": "Immigration",
       "explore": "Explore"
