@@ -244,7 +244,6 @@ export function Header() {
 
                       {isOpen && (
                         <>
-                          <div className="fixed inset-0 z-30" onClick={() => setOpenDropdown(null)} aria-hidden="true" />
                           {isMegaMenu ? (
                             <div className={cn(
                               "absolute top-full mt-2 bg-background border border-border rounded-xl shadow-xl z-50 p-2",
