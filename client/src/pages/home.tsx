@@ -129,6 +129,14 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl mb-6 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
+            <div className="flex justify-center">
+              <button
+                onClick={() => document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' })}
+                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-white font-bold text-base transition-colors shadow-lg shadow-teal-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+              >
+                Get Started <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -138,7 +146,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-black text-foreground mb-1 tracking-tight">Choose your path</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-foreground mb-1 tracking-tight">What's your situation?</h2>
               <p className="text-base text-muted-foreground">Four paths to choose from. Most people use more than one.</p>
             </div>
           </ScrollReveal>

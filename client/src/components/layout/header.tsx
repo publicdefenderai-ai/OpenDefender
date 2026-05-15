@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, Fragment } from "react";
-import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, Clock, Heart, ChevronDown, Globe2, Compass } from "lucide-react";
+import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, Compass, AlertCircle, Scale } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
 import { Button } from "@/components/ui/button";
@@ -27,12 +28,16 @@ interface DropdownItem {
   href: string;
   label: string;
   desc: string;
+  icon?: LucideIcon;
+  iconBg?: string;
+  iconColor?: string;
 }
 
 interface NavLink {
   href: string;
   label: string;
   dropdown?: DropdownItem[];
+  megaMenu?: boolean;
 }
 
 export function Header() {
@@ -45,6 +50,8 @@ export function Header() {
   const { attemptNavigation } = useNavigationGuard();
   const isHomePage = location === "/";
   const navRef = useRef<HTMLDivElement>(null);
+  const hoverOpenTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hoverCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -67,6 +74,14 @@ export function Header() {
     return () => document.removeEventListener("keydown", handle);
   }, []);
 
+  // Clean up hover timers on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverOpenTimer.current) clearTimeout(hoverOpenTimer.current);
+      if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
+    };
+  }, []);
+
   const handleNavigate = (href: string, closeMobileMenu = false) => {
     setOpenDropdown(null);
     const wasBlocked = !attemptNavigation(() => {
@@ -81,6 +96,22 @@ export function Header() {
     }
   };
 
+  const handleDropdownMouseEnter = (href: string) => {
+    if (hoverCloseTimer.current) {
+      clearTimeout(hoverCloseTimer.current);
+      hoverCloseTimer.current = null;
+    }
+    hoverOpenTimer.current = setTimeout(() => setOpenDropdown(href), 80);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    if (hoverOpenTimer.current) {
+      clearTimeout(hoverOpenTimer.current);
+      hoverOpenTimer.current = null;
+    }
+    hoverCloseTimer.current = setTimeout(() => setOpenDropdown(null), 280);
+  };
+
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng);
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
@@ -90,32 +121,33 @@ export function Header() {
     {
       href: "/case-guidance",
       label: t('header.nav.caseGuidance', 'Get Guidance'),
+      megaMenu: true,
       dropdown: [
-        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Personalized Guidance'), desc: t('header.dropdown.guidance.personalizedDesc', 'AI roadmap for your charges and situation') },
-        { href: "/chat",                label: t('header.dropdown.guidance.chat', 'AI Chat'),                        desc: t('header.dropdown.guidance.chatDesc', 'Open conversation with our AI assistant') },
-        { href: "/document-summarizer", label: t('header.dropdown.guidance.summarizer', 'Document Summarizer'),      desc: t('header.dropdown.guidance.summarizerDesc', 'Understand the legal documents in your case') },
+        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Personalized Guidance'), desc: t('header.dropdown.guidance.personalizedDesc', 'AI roadmap for your charges and situation'),       icon: Compass,      iconBg: '#eef9f8', iconColor: '#0f766e' },
+        { href: "/chat",                label: t('header.dropdown.guidance.chat', 'AI Chat'),                        desc: t('header.dropdown.guidance.chatDesc', 'Open conversation with our AI assistant'),               icon: MessageSquare, iconBg: '#eef9f8', iconColor: '#0f766e' },
+        { href: "/document-summarizer", label: t('header.dropdown.guidance.summarizer', 'Document Summarizer'),      desc: t('header.dropdown.guidance.summarizerDesc', 'Understand the legal documents in your case'),       icon: FileText,      iconBg: '#eef9f8', iconColor: '#0f766e' },
       ],
     },
     {
       href: "/immigration-guidance",
       label: t('header.nav.immigration', 'Immigration'),
+      megaMenu: true,
       dropdown: [
-        { href: "/immigration-guidance",                   label: t('header.dropdown.immigration.general', 'General Information'),      desc: t('header.dropdown.immigration.generalDesc', 'Overview of immigration rights and resources') },
-        { href: "/immigration-guidance#detailed-guides",   label: t('header.dropdown.immigration.situational', 'Situational Guides'),    desc: t('header.dropdown.immigration.situationalDesc', 'ICE encounters, raids, detention, and more') },
-        { href: "/immigration-guidance/know-your-rights",  label: t('header.dropdown.immigration.rights', 'Know Your Rights'),          desc: t('header.dropdown.immigration.rightsDesc', 'Your rights regardless of status') },
-        { href: "/immigration-guidance/find-detained",     label: t('header.dropdown.immigration.detained', 'Find a Detained Person'),  desc: t('header.dropdown.immigration.detainedDesc', 'Locate someone in ICE custody') },
-        { href: "/immigration-guidance/find-attorney",     label: t('header.dropdown.immigration.lawyer', 'Find a Lawyer'),             desc: t('header.dropdown.immigration.lawyerDesc', 'Immigration legal representation') },
+        { href: "/immigration-guidance",                   label: t('header.dropdown.immigration.general', 'General Information'),      desc: t('header.dropdown.immigration.generalDesc', 'Overview of immigration rights and resources'), icon: Globe2,       iconBg: '#fef3e2', iconColor: '#92400e' },
+        { href: "/immigration-guidance#detailed-guides",   label: t('header.dropdown.immigration.situational', 'Situational Guides'),    desc: t('header.dropdown.immigration.situationalDesc', 'ICE encounters, raids, detention, and more'), icon: AlertCircle,  iconBg: '#fef3e2', iconColor: '#92400e' },
+        { href: "/immigration-guidance/know-your-rights",  label: t('header.dropdown.immigration.rights', 'Know Your Rights'),          desc: t('header.dropdown.immigration.rightsDesc', 'Your rights regardless of status'),              icon: Shield,       iconBg: '#fef3e2', iconColor: '#92400e' },
+        { href: "/immigration-guidance/find-detained",     label: t('header.dropdown.immigration.detained', 'Find a Detained Person'),  desc: t('header.dropdown.immigration.detainedDesc', 'Locate someone in ICE custody'),               icon: MapPin,       iconBg: '#fef3e2', iconColor: '#92400e' },
+        { href: "/immigration-guidance/find-attorney",     label: t('header.dropdown.immigration.lawyer', 'Find a Lawyer'),             desc: t('header.dropdown.immigration.lawyerDesc', 'Immigration legal representation'),             icon: Scale,        iconBg: '#fef3e2', iconColor: '#92400e' },
       ],
     },
     { href: "/directory", label: t('header.nav.explore', 'Explore') },
   ];
 
-  // Secondary menu items for the mobile Sheet
   const menuItems = [
-    { title: t('header.menu.friendsFamily', 'For Families & Friends'), href: "/friends-family", icon: Users,         description: t('header.menu.friendsFamilyDesc', 'Start here if someone you know was arrested.'), testId: "menu-friends-family", featured: true },
-    { title: t('header.menu.knowRights', 'Know Your Rights'),          href: "/rights-info",    icon: Shield,        description: t('header.menu.knowRightsDesc', 'Constitutional rights in plain language'),       testId: "menu-know-rights",   featured: false },
-    { title: t('header.menu.documentLibrary', 'Document Library'),     href: "/document-library",icon: FileText,     description: t('header.menu.documentLibraryDesc', 'Understand the legal documents in your case'), testId: "menu-document-library", featured: false },
-    { title: t('header.menu.findResources', 'Find Legal Help'),        href: "/resources",      icon: MapPin,        description: t('header.menu.findResourcesDesc', 'Locate public defenders, legal aid, and courts'), testId: "menu-find-resources", featured: false },
+    { title: t('header.menu.friendsFamily', 'For Families & Friends'), href: "/friends-family",  icon: Users,    description: t('header.menu.friendsFamilyDesc', 'Start here if someone you know was arrested.'),              testId: "menu-friends-family",   featured: true  },
+    { title: t('header.menu.knowRights', 'Know Your Rights'),          href: "/rights-info",     icon: Shield,   description: t('header.menu.knowRightsDesc', 'Constitutional rights in plain language'),                     testId: "menu-know-rights",      featured: false },
+    { title: t('header.menu.documentLibrary', 'Document Library'),     href: "/document-library", icon: FileText, description: t('header.menu.documentLibraryDesc', 'Understand the legal documents in your case'),          testId: "menu-document-library", featured: false },
+    { title: t('header.menu.findResources', 'Find Legal Help'),        href: "/resources",        icon: MapPin,   description: t('header.menu.findResourcesDesc', 'Locate public defenders, legal aid, and courts'),         testId: "menu-find-resources",   featured: false },
   ];
 
   return (
@@ -126,14 +158,8 @@ export function Header() {
           {/* Left: Logo + Desktop nav */}
           <div className="flex items-center gap-5" ref={navRef}>
             {isHomePage ? (
-              <Link href="/" className="flex items-center gap-3" aria-label="OpenDefender home">
+              <Link href="/" className="flex items-center" aria-label="OpenDefender home">
                 <BrandLogo size="md" />
-                <div className="hidden lg:flex items-center gap-3">
-                  <div className="h-6 border-l border-slate-300 dark:border-slate-600" />
-                  <span className="text-xs text-muted-foreground font-medium leading-snug max-w-[160px]">
-                    Free Case Support &amp; Legal Rights Information
-                  </span>
-                </div>
               </Link>
             ) : (
               <button onClick={() => handleNavigate("/")} className="hover:opacity-75 transition-opacity" aria-label="Go to home page" data-testid="button-home">
@@ -164,9 +190,7 @@ export function Header() {
                         )}
                       >
                         {link.label}
-                        {/* Always-visible hairline — static state texture */}
                         <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
-                        {/* Hover / active overlay */}
                         <span
                           aria-hidden="true"
                           className={cn(
@@ -182,57 +206,99 @@ export function Header() {
                   );
                 }
 
-                // Dropdown item
+                // Dropdown item — hover-enabled with grace period
+                const isMegaMenu = link.megaMenu;
+                const panelAlign = link.href === '/immigration-guidance' ? 'right-0' : 'left-0';
+                const panelWidth = link.href === '/immigration-guidance' ? 'w-[460px]' : 'w-72';
+
                 return (
                   <Fragment key={link.href}>
-                  <div className="relative">
-                    <button
-                      onClick={() => setOpenDropdown(isOpen ? null : link.href)}
-                      aria-expanded={isOpen}
-                      aria-haspopup="true"
-                      className={cn(
-                        "relative flex items-center gap-1 px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
-                        isActive || isOpen ? "font-semibold text-foreground" : "font-medium text-muted-foreground hover:text-foreground"
-                      )}
+                    <div
+                      className="relative"
+                      onMouseEnter={() => handleDropdownMouseEnter(link.href)}
+                      onMouseLeave={handleDropdownMouseLeave}
                     >
-                      {link.label}
-                      <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-150", isOpen && "rotate-180")} />
-                      {/* Always-visible hairline */}
-                      <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
-                      {/* Hover / active overlay */}
-                      <span
-                        aria-hidden="true"
+                      <button
+                        onClick={() => setOpenDropdown(isOpen ? null : link.href)}
+                        aria-expanded={isOpen}
+                        aria-haspopup="true"
                         className={cn(
-                          "absolute bottom-0 left-0 right-0 h-[2px] rounded-full transition-all duration-200",
-                          isActive || isOpen
-                            ? "bg-gradient-to-r from-transparent via-primary to-transparent opacity-100"
-                            : "bg-primary opacity-0 group-hover:opacity-50"
+                          "relative flex items-center gap-1 px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
+                          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
+                          isActive || isOpen ? "font-semibold text-foreground" : "font-medium text-muted-foreground hover:text-foreground"
                         )}
-                      />
-                    </button>
+                      >
+                        {link.label}
+                        <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-150", isOpen && "rotate-180")} />
+                        <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
+                        <span
+                          aria-hidden="true"
+                          className={cn(
+                            "absolute bottom-0 left-0 right-0 h-[2px] rounded-full transition-all duration-200",
+                            isActive || isOpen
+                              ? "bg-gradient-to-r from-transparent via-primary to-transparent opacity-100"
+                              : "bg-primary opacity-0 group-hover:opacity-50"
+                          )}
+                        />
+                      </button>
 
-                    {isOpen && (
-                      <>
-                        {/* Invisible backdrop to catch outside clicks */}
-                        <div className="fixed inset-0 z-40" onClick={() => setOpenDropdown(null)} aria-hidden="true" />
-                        {/* Dropdown panel */}
-                        <div className="absolute top-full left-0 mt-1.5 w-64 bg-background border border-border rounded-xl shadow-lg z-50 py-1.5 overflow-hidden">
-                          {link.dropdown.map((item) => (
-                            <button
-                              key={item.href}
-                              onClick={() => handleNavigate(item.href)}
-                              className="w-full text-left px-4 py-2.5 hover:bg-muted/60 transition-colors group"
-                            >
-                              <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{item.label}</p>
-                              <p className="text-xs text-muted-foreground mt-0.5 leading-snug">{item.desc}</p>
-                            </button>
-                          ))}
-                        </div>
-                      </>
-                    )}
-                  </div>
-                  {separator}
+                      {isOpen && (
+                        <>
+                          <div className="fixed inset-0 z-30" onClick={() => setOpenDropdown(null)} aria-hidden="true" />
+                          {isMegaMenu ? (
+                            <div className={cn(
+                              "absolute top-full mt-2 bg-background border border-border rounded-xl shadow-xl z-50 p-2",
+                              panelAlign,
+                              panelWidth
+                            )}>
+                              <div className={link.href === '/immigration-guidance' ? 'grid grid-cols-2 gap-1' : 'flex flex-col'}>
+                                {link.dropdown!.map((item, itemIdx) => {
+                                  const Icon = item.icon;
+                                  const isLastOdd = link.dropdown!.length % 2 !== 0 && itemIdx === link.dropdown!.length - 1;
+                                  return (
+                                    <button
+                                      key={item.href}
+                                      onClick={() => handleNavigate(item.href)}
+                                      className={cn(
+                                        "flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-muted/60 transition-colors group text-left",
+                                        isLastOdd && "col-span-2"
+                                      )}
+                                    >
+                                      {Icon && (
+                                        <div
+                                          className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                                          style={{ background: item.iconBg }}
+                                        >
+                                          <Icon className="w-4 h-4" style={{ color: item.iconColor }} />
+                                        </div>
+                                      )}
+                                      <div>
+                                        <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">{item.label}</p>
+                                        <p className="text-xs text-muted-foreground mt-0.5 leading-snug">{item.desc}</p>
+                                      </div>
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="absolute top-full left-0 mt-1.5 w-64 bg-background border border-border rounded-xl shadow-lg z-50 py-1.5 overflow-hidden">
+                              {link.dropdown!.map((item) => (
+                                <button
+                                  key={item.href}
+                                  onClick={() => handleNavigate(item.href)}
+                                  className="w-full text-left px-4 py-2.5 hover:bg-muted/60 transition-colors group"
+                                >
+                                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{item.label}</p>
+                                  <p className="text-xs text-muted-foreground mt-0.5 leading-snug">{item.desc}</p>
+                                </button>
+                              ))}
+                            </div>
+                          )}
+                        </>
+                      )}
+                    </div>
+                    {separator}
                   </Fragment>
                 );
               })}
@@ -243,7 +309,6 @@ export function Header() {
           <div className="flex items-center space-x-2">
             <SearchButton />
 
-            {/* Language Selector - Desktop */}
             <div className="hidden md:block">
               <Select value={i18n.language} onValueChange={changeLanguage}>
                 <SelectTrigger className="w-[140px] h-9 border-0 bg-transparent hover:bg-accent" data-testid="select-language">
@@ -260,7 +325,6 @@ export function Header() {
               </Select>
             </div>
 
-            {/* Theme Toggle - Desktop */}
             <Button variant="ghost" size="sm" onClick={toggleTheme} className="text-muted-foreground hover:text-foreground hidden md:flex" data-testid="button-theme-toggle" aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}>
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
@@ -278,7 +342,6 @@ export function Header() {
                   <SheetTitle>{t('header.mobileMenu', 'Menu')}</SheetTitle>
                 </SheetHeader>
 
-                {/* Primary nav — accordion for items with dropdowns */}
                 <div className="mt-5 mb-2">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest px-1 mb-2">{t('header.mobile.navigate', 'Navigate')}</p>
                   <div className="space-y-0.5">
@@ -316,16 +379,31 @@ export function Header() {
 
                           {isExpanded && (
                             <div className="ml-3 pl-3 border-l border-border/60 mt-0.5 mb-1 space-y-0.5">
-                              {link.dropdown.map((item) => (
-                                <button
-                                  key={item.href}
-                                  onClick={() => handleNavigate(item.href, true)}
-                                  className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-muted/60 transition-colors group"
-                                >
-                                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{item.label}</p>
-                                  <p className="text-xs text-muted-foreground mt-0.5 leading-snug">{item.desc}</p>
-                                </button>
-                              ))}
+                              {link.dropdown.map((item) => {
+                                const ItemIcon = item.icon;
+                                return (
+                                  <button
+                                    key={item.href}
+                                    onClick={() => handleNavigate(item.href, true)}
+                                    className="w-full text-left px-2.5 py-2 rounded-lg hover:bg-muted/60 transition-colors group"
+                                  >
+                                    <div className="flex items-start gap-2.5">
+                                      {ItemIcon && (
+                                        <div
+                                          className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5"
+                                          style={{ background: item.iconBg }}
+                                        >
+                                          <ItemIcon className="w-3.5 h-3.5" style={{ color: item.iconColor }} />
+                                        </div>
+                                      )}
+                                      <div>
+                                        <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{item.label}</p>
+                                        <p className="text-xs text-muted-foreground mt-0.5 leading-snug">{item.desc}</p>
+                                      </div>
+                                    </div>
+                                  </button>
+                                );
+                              })}
                             </div>
                           )}
                         </div>
@@ -368,7 +446,6 @@ export function Header() {
                   </div>
                 </div>
 
-                {/* Language + Theme at the bottom */}
                 <div className="mt-auto pt-4 border-t border-border/60 space-y-3">
                   <div>
                     <label className="text-xs font-semibold text-muted-foreground uppercase tracking-widest block mb-2">{t('header.language', 'Language')}</label>
