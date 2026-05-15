@@ -66,6 +66,14 @@ const concernsCategories = [
   { id: 'courtLogistics', labelKey: 'chat.concerns.courtLogistics' },
 ];
 
+const PATHWAY_MENU_REPLIES: QuickReply[] = [
+  { id: 'menu-first-24', labelKey: 'chat.replies.first24Hours', value: 'menu_first_24_hours', color: 'blue' as const },
+  { id: 'menu-case-roadmap', labelKey: 'chat.replies.caseRoadmap', value: 'menu_case_roadmap', color: 'green' as const },
+  { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
+  { id: 'menu-life-family', labelKey: 'chat.replies.lifeFamilyNav', value: 'menu_life_family', color: 'amber' as const },
+  { id: 'menu-resources', labelKey: 'chat.replies.resourcesDirectory', value: 'menu_resources_directory', color: 'slate' as const },
+];
+
 const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; value: string; color: 'blue' | 'rose' | 'slate' | 'green' | 'purple' | 'amber' }> = {
   personalized_guidance: { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' },
   immigration: { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' },
@@ -75,12 +83,8 @@ const FLOW_MENU_OPTIONS: Record<CompletedFlow, { id: string; labelKey: string; v
   attorney_tools: { id: 'menu-attorney', labelKey: 'chat.replies.attorneyTools', value: 'menu_attorney', color: 'slate' },
 };
 
-function getNextMenuOptions(excludeFlow: CompletedFlow, completedFlows: CompletedFlow[] = []): QuickReply[] {
-  // 4 main journeys: Get Help, Immigration Enforcement, Know Your Rights, Resources
-  const mainFlows: CompletedFlow[] = ['personalized_guidance', 'immigration', 'rights_info', 'resources'];
-  return mainFlows
-    .filter(flow => flow !== excludeFlow && !completedFlows.includes(flow))
-    .map(flow => FLOW_MENU_OPTIONS[flow]);
+function getNextMenuOptions(_excludeFlow?: CompletedFlow, _completedFlows?: CompletedFlow[]): QuickReply[] {
+  return PATHWAY_MENU_REPLIES;
 }
 
 export default function ChatPage() {
@@ -178,15 +182,11 @@ export default function ChatPage() {
 
     // If chat is stuck (no quick replies, can't use free text, not in special states)
     if (state.messages.length > 0 && !hasReplies && !isFreeTextStep && !isWelcome && !isGenerating && !isChargeSelection && !isStateSelection && !isConcernsQuestion) {
-      // Show "What else can I help you with?" with 3 main journey options
+      // Show "What else can I help you with?" with pathway menu options
       actions.addMessage({
         role: 'bot',
         contentKey: 'chat.messages.whatElse',
-        quickReplies: [
-          { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
-          { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
-          { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources_category', color: 'purple' as const },
-        ],
+        quickReplies: PATHWAY_MENU_REPLIES,
       });
       actions.setCurrentStep('main_menu');
     }
@@ -252,20 +252,10 @@ export default function ChatPage() {
       case 'emergency_check':
         if (reply.value === 'urgent_yes') {
           actions.updateCaseInfo({ isEmergency: true });
-          addBotMessageWithKey('chat.messages.emergencyAdviceFull', [
-            { id: 'emergency-personalized', labelKey: 'chat.replies.personalizedGuidance', value: 'personalized_guidance', color: 'blue' as const },
-            { id: 'emergency-rights', labelKey: 'chat.replies.myRights', value: 'learn_rights', color: 'slate' as const },
-            { id: 'emergency-process', labelKey: 'chat.replies.criminalJusticeProcess', value: 'learn_process', color: 'green' as const },
-          ]);
-          actions.setCurrentStep('emergency_options');
+          addBotMessageWithKey('chat.messages.emergencyAdviceFull', PATHWAY_MENU_REPLIES);
+          actions.setCurrentStep('main_menu');
         } else {
-          addBotMessageWithKey('chat.messages.mainMenu', [
-            { id: 'menu-guidance', labelKey: 'chat.replies.getHelp', value: 'menu_personalized', color: 'blue' as const },
-            { id: 'menu-immigration', labelKey: 'chat.replies.immigrationEnforcement', value: 'menu_immigration', color: 'rose' as const },
-            { id: 'menu-rights', labelKey: 'chat.replies.knowRights', value: 'menu_rights', color: 'slate' as const },
-            { id: 'menu-attorney', labelKey: 'chat.replies.attorneyTools', value: 'menu_attorney', color: 'slate' as const },
-            { id: 'menu-resources', labelKey: 'chat.replies.resources', value: 'menu_resources_category', color: 'purple' as const },
-          ]);
+          addBotMessageWithKey('chat.messages.pathwayMenu', PATHWAY_MENU_REPLIES);
           actions.setCurrentStep('main_menu');
         }
         break;
@@ -330,6 +320,37 @@ export default function ChatPage() {
           actions.setCurrentStep('legal_aid_zip_search');
         } else if (reply.value === 'export_pdf') {
           handleExportClick();
+        } else if (reply.value === 'menu_first_24_hours') {
+          addBotMessageWithKey('chat.messages.first24HoursInfo', [
+            { id: 'view-first24', labelKey: 'chat.replies.viewFirst24Hours', value: 'navigate:/first-24-hours', color: 'blue' as const },
+          ]);
+          actions.setCurrentStep('first_24_hours_info');
+        } else if (reply.value === 'menu_case_roadmap') {
+          setPrivilegeWarningAcknowledged(false);
+          addBotMessageWithKey('chat.messages.stateQuestion');
+          actions.setCurrentStep('state_selection');
+        } else if (reply.value === 'menu_life_family') {
+          addBotMessageWithKey('chat.messages.lifeFamilyMenu', [
+            { id: 'lf-hub', labelKey: 'chat.replies.dirSupportHub', value: 'navigate:/support', color: 'amber' as const },
+            { id: 'lf-employment', labelKey: 'chat.replies.dirEmployment', value: 'navigate:/support/employment', color: 'amber' as const },
+            { id: 'lf-housing', labelKey: 'chat.replies.dirHousing', value: 'navigate:/support/housing', color: 'amber' as const },
+            { id: 'lf-finances', labelKey: 'chat.replies.dirFinances', value: 'navigate:/support/finances', color: 'amber' as const },
+            { id: 'lf-family-care', labelKey: 'chat.replies.dirFamilyCare', value: 'navigate:/support/family-care', color: 'amber' as const },
+            { id: 'lf-mental-health', labelKey: 'chat.replies.dirMentalHealth', value: 'navigate:/support/mental-health', color: 'amber' as const },
+            { id: 'lf-transportation', labelKey: 'chat.replies.dirTransportation', value: 'navigate:/support/transportation', color: 'amber' as const },
+            { id: 'lf-reentry', labelKey: 'chat.replies.dirReentry', value: 'navigate:/support/reentry', color: 'amber' as const },
+          ]);
+          actions.setCurrentStep('life_family_menu');
+        } else if (reply.value === 'menu_resources_directory') {
+          addBotMessageWithKey('chat.messages.resourcesDirectoryMenu', [
+            { id: 'dir-get-help', labelKey: 'chat.replies.dirGetHelp', value: 'dir_get_help', color: 'blue' as const },
+            { id: 'dir-know-rights', labelKey: 'chat.replies.dirKnowRights', value: 'dir_know_rights', color: 'slate' as const },
+            { id: 'dir-legal-support', labelKey: 'chat.replies.dirLegalSupport', value: 'dir_legal_support', color: 'green' as const },
+            { id: 'dir-life-family', labelKey: 'chat.replies.dirLifeFamily', value: 'dir_life_family', color: 'amber' as const },
+            { id: 'dir-reference', labelKey: 'chat.replies.dirReference', value: 'dir_reference', color: 'purple' as const },
+            { id: 'dir-attorney-tools', labelKey: 'chat.replies.dirAttorneyTools', value: 'dir_attorney_tools', color: 'slate' as const },
+          ]);
+          actions.setCurrentStep('resources_directory_menu');
         }
         break;
 
@@ -560,6 +581,63 @@ export default function ChatPage() {
         }
         break;
 
+      case 'resources_directory_menu':
+        if (reply.value === 'dir_get_help') {
+          addBotMessageWithKey('chat.messages.dirGetHelpMenu', [
+            { id: 'dgh-case-roadmap', labelKey: 'chat.replies.dirCaseRoadmap', value: 'navigate:/case-guidance', color: 'blue' as const },
+            { id: 'dgh-ai-chat', labelKey: 'chat.replies.dirAiChat', value: 'navigate:/chat', color: 'blue' as const },
+            { id: 'dgh-doc-summarizer', labelKey: 'chat.replies.dirDocumentSummarizer', value: 'navigate:/document-summarizer', color: 'blue' as const },
+            { id: 'dgh-letter-gen', labelKey: 'chat.replies.dirLetterGenerator', value: 'navigate:/letter-generator', color: 'blue' as const },
+            { id: 'dgh-first-24', labelKey: 'chat.replies.dirFirst24HoursGuide', value: 'navigate:/first-24-hours', color: 'blue' as const },
+          ]);
+          actions.setCurrentStep('dir_get_help_menu');
+        } else if (reply.value === 'dir_know_rights') {
+          addBotMessageWithKey('chat.messages.dirKnowRightsMenu', [
+            { id: 'dkr-rights', labelKey: 'chat.replies.dirConstitutionalRights', value: 'navigate:/rights-info', color: 'slate' as const },
+            { id: 'dkr-timeline', labelKey: 'chat.replies.dirCaseTimeline', value: 'navigate:/case-timeline', color: 'slate' as const },
+            { id: 'dkr-friends-family', labelKey: 'chat.replies.dirFriendsFamily', value: 'navigate:/friends-family', color: 'slate' as const },
+            { id: 'dkr-warrants', labelKey: 'chat.replies.dirWarrants', value: 'navigate:/warrants', color: 'slate' as const },
+            { id: 'dkr-counsel', labelKey: 'chat.replies.dirRightToCounsel', value: 'navigate:/right-to-counsel', color: 'slate' as const },
+            { id: 'dkr-mock-qa', labelKey: 'chat.replies.dirMockQA', value: 'navigate:/resources', color: 'slate' as const },
+          ]);
+          actions.setCurrentStep('dir_know_rights_menu');
+        } else if (reply.value === 'dir_legal_support') {
+          addBotMessageWithKey('chat.messages.dirLegalSupportMenu', [
+            { id: 'dls-pd', labelKey: 'chat.replies.dirPublicDefenders', value: 'navigate:/legal-aid', color: 'green' as const },
+            { id: 'dls-diversion', labelKey: 'chat.replies.dirDiversionPrograms', value: 'navigate:/diversion-programs', color: 'green' as const },
+            { id: 'dls-expungement', labelKey: 'chat.replies.dirRecordExpungement', value: 'navigate:/support/reputation', color: 'green' as const },
+            { id: 'dls-immigration', labelKey: 'chat.replies.dirImmigrationHelp', value: 'navigate:/immigration-guidance', color: 'green' as const },
+          ]);
+          actions.setCurrentStep('dir_legal_support_menu');
+        } else if (reply.value === 'dir_life_family') {
+          addBotMessageWithKey('chat.messages.dirLifeFamilyMenu', [
+            { id: 'dlf-hub', labelKey: 'chat.replies.dirSupportHub', value: 'navigate:/support', color: 'amber' as const },
+            { id: 'dlf-employment', labelKey: 'chat.replies.dirEmployment', value: 'navigate:/support/employment', color: 'amber' as const },
+            { id: 'dlf-housing', labelKey: 'chat.replies.dirHousing', value: 'navigate:/support/housing', color: 'amber' as const },
+            { id: 'dlf-finances', labelKey: 'chat.replies.dirFinances', value: 'navigate:/support/finances', color: 'amber' as const },
+            { id: 'dlf-family-care', labelKey: 'chat.replies.dirFamilyCare', value: 'navigate:/support/family-care', color: 'amber' as const },
+            { id: 'dlf-mental-health', labelKey: 'chat.replies.dirMentalHealth', value: 'navigate:/support/mental-health', color: 'amber' as const },
+            { id: 'dlf-transportation', labelKey: 'chat.replies.dirTransportation', value: 'navigate:/support/transportation', color: 'amber' as const },
+            { id: 'dlf-reentry', labelKey: 'chat.replies.dirReentry', value: 'navigate:/support/reentry', color: 'amber' as const },
+          ]);
+          actions.setCurrentStep('dir_life_family_menu');
+        } else if (reply.value === 'dir_reference') {
+          addBotMessageWithKey('chat.messages.dirReferenceMenu', [
+            { id: 'dr-glossary', labelKey: 'chat.replies.dirLegalGlossary', value: 'navigate:/legal-glossary', color: 'purple' as const },
+            { id: 'dr-court-locator', labelKey: 'chat.replies.dirCourtLocator', value: 'navigate:/court-locator', color: 'purple' as const },
+            { id: 'dr-statutes', labelKey: 'chat.replies.dirStatuteLookup', value: 'navigate:/statutes', color: 'purple' as const },
+            { id: 'dr-doc-library', labelKey: 'chat.replies.dirDocumentLibrary', value: 'navigate:/document-library', color: 'purple' as const },
+          ]);
+          actions.setCurrentStep('dir_reference_menu');
+        } else if (reply.value === 'dir_attorney_tools') {
+          addBotMessageWithKey('chat.messages.dirAttorneyToolsMenu', [
+            { id: 'dat-portal', labelKey: 'chat.replies.dirAttorneyPortal', value: 'navigate:/attorney', color: 'slate' as const },
+            { id: 'dat-court-records', labelKey: 'chat.replies.dirCourtRecords', value: 'navigate:/court-records', color: 'slate' as const },
+          ]);
+          actions.setCurrentStep('dir_attorney_tools_menu');
+        }
+        break;
+
       case 'immigration_result':
         if (reply.value === 'imm_find_attorney') {
           setLocation('/immigration-guidance/find-attorney');
@@ -640,6 +718,10 @@ export default function ChatPage() {
           const menuOptions = getNextMenuOptions('personalized_guidance', state.completedFlows);
           addBotMessageWithKey('chat.messages.whatElse', menuOptions);
           actions.setCurrentStep('main_menu');
+        } else if (reply.value.startsWith('navigate:')) {
+          const path = reply.value.replace('navigate:', '');
+          setLocation(path);
+          actions.markFlowCompleted('resources');
         }
         break;
     }
