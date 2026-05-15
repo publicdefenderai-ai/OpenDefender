@@ -123,7 +123,7 @@ export function Header() {
       label: t('header.nav.caseGuidance', 'Get Guidance'),
       megaMenu: true,
       dropdown: [
-        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Personalized Guidance'), desc: t('header.dropdown.guidance.personalizedDesc', 'AI roadmap for your charges and situation'),       icon: Compass,      iconBg: '#eef9f8', iconColor: '#0f766e' },
+        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Case Roadmap'), desc: t('header.dropdown.guidance.personalizedDesc', 'Plain-language overview of what to expect for your charges and state'),       icon: Compass,      iconBg: '#eef9f8', iconColor: '#0f766e' },
         { href: "/chat",                label: t('header.dropdown.guidance.chat', 'AI Chat'),                        desc: t('header.dropdown.guidance.chatDesc', 'Open conversation with our AI assistant'),               icon: MessageSquare, iconBg: '#eef9f8', iconColor: '#0f766e' },
         { href: "/document-summarizer", label: t('header.dropdown.guidance.summarizer', 'Document Summarizer'),      desc: t('header.dropdown.guidance.summarizerDesc', 'Understand the legal documents in your case'),       icon: FileText,      iconBg: '#eef9f8', iconColor: '#0f766e' },
       ],

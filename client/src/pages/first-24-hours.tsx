@@ -571,7 +571,7 @@ function PageSidebar({
           </Link>
           <Link href="/case-guidance" className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all">
             <MessageSquare className="w-3.5 h-3.5 flex-shrink-0" />
-            <span>Get AI guidance</span>
+            <span>Case Roadmap</span>
           </Link>
         </div>
 
@@ -1242,7 +1242,7 @@ export default function FirstTwentyFourHours() {
                         ) : (
                           <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground">
                             <strong>{stateName}</strong> does not have a specific state rule catalogued here. Your rights during this stage are governed by the federal constitutional rules described above.{" "}
-                            <Link href="/case-guidance" className="underline underline-offset-2 font-medium">Get personalized guidance</Link> for {stateName}-specific details.
+                            <Link href="/case-guidance" className="underline underline-offset-2 font-medium">View Case Roadmap</Link> for {stateName}-specific details.
                           </div>
                         )}
                       </div>
@@ -1376,7 +1376,7 @@ export default function FirstTwentyFourHours() {
                           ) : (
                             <div className="rounded-md border border-border/60 bg-muted/30 p-3 text-sm text-muted-foreground">
                               <strong>{stateName}</strong> does not have a specific first appearance timeline catalogued here. The federal constitutional standard applies (appearance "without unnecessary delay," typically within 48 hours).{" "}
-                              <Link href="/case-guidance" className="underline underline-offset-2 font-medium">Get personalized guidance</Link> for {stateName}-specific details.
+                              <Link href="/case-guidance" className="underline underline-offset-2 font-medium">View Case Roadmap</Link> for {stateName}-specific details.
                             </div>
                           )}
                         </div>

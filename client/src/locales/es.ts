@@ -27,8 +27,8 @@ export default {
     },
     "dropdown": {
       "guidance": {
-        "personalized": "Orientación Personalizada",
-        "personalizedDesc": "Mapa de IA para sus cargos y situación",
+        "personalized": "Hoja de Ruta del Caso",
+        "personalizedDesc": "Resumen en lenguaje claro de lo que puede esperar según sus cargos y estado",
         "chat": "Chat con IA",
         "chatDesc": "Conversación abierta con nuestro asistente de IA",
         "summarizer": "Resumidor de Documentos",
@@ -70,8 +70,8 @@ export default {
       "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata.",
       "path1Label": "Las Primeras 24 Horas",
       "path1Desc": "Paso a paso: arresto, fichaje, fianza y su primera comparecencia",
-      "path2Label": "Obtener Orientación",
-      "path2Desc": "Mapa personalizado para sus cargos, plazos y próximos pasos",
+      "path2Label": "Hoja de Ruta del Caso",
+      "path2Desc": "Resumen en lenguaje claro de lo que puede esperar según sus cargos, estado y etapa del caso",
       "path3Label": "Apoyo para la Vida",
       "path3Desc": "Vivienda, beneficios, empleo y recursos familiares",
       "path4Label": "Inmigración",
@@ -5331,14 +5331,14 @@ export default {
         "cta": "Abrir Primeras 24 Horas"
       },
       "path2": {
-        "badge": "Entienda su situación específica",
-        "headline": "Orientación Personalizada de Caso",
-        "subhead": "Responda algunas preguntas y obtenga orientación impulsada por IA adaptada a sus cargos, ubicación y situación. Privada por diseño — sus respuestas nunca se almacenan.",
-        "bullet1": "Proceso de 5 pasos: verificación de seguridad, ubicación, cargos, situación, detalles",
-        "bullet2": "Explica sus cargos en lenguaje sencillo",
-        "bullet3": "Identifica programas de diversión y opciones de acuerdo en su estado",
-        "bullet4": "Impulsado por Claude AI con verificaciones de precisión legal",
-        "cta": "Obtener Orientación de Caso"
+        "badge": "Entienda el proceso para sus cargos",
+        "headline": "Hoja de Ruta del Caso",
+        "subhead": "Seleccione su estado, tipo de cargo y en qué parte del proceso se encuentra. Obtenga un resumen en lenguaje claro de lo que suele ocurrir en cada etapa, qué significan los cargos y qué suele importar más.",
+        "bullet1": "Seleccione su estado, tipo de cargo y etapa del caso",
+        "bullet2": "Explica los cargos y las penas típicas en lenguaje sencillo",
+        "bullet3": "Describe lo que los tribunales suelen buscar en su etapa",
+        "bullet4": "La información se verifica con bases de datos legales verificadas",
+        "cta": "Ver Hoja de Ruta del Caso"
       },
       "path3": {
         "badge": "La vida no se detiene mientras su caso está pendiente",

@@ -25,8 +25,8 @@ export default {
     },
     "dropdown": {
       "guidance": {
-        "personalized": "Personalized Guidance",
-        "personalizedDesc": "AI roadmap for your charges and situation",
+        "personalized": "Case Roadmap",
+        "personalizedDesc": "Plain-language overview of what to expect for your charges and state",
         "chat": "AI Chat",
         "chatDesc": "Open conversation with our AI assistant",
         "summarizer": "Document Summarizer",
@@ -68,8 +68,8 @@ export default {
       "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance.",
       "path1Label": "First 24 Hours",
       "path1Desc": "Step-by-step through arrest, booking, bail, and your first court appearance",
-      "path2Label": "Get Guidance",
-      "path2Desc": "Personalized roadmap for your charges, deadlines, and next steps",
+      "path2Label": "Case Roadmap",
+      "path2Desc": "Plain-language overview of what to expect based on your charges, state, and case stage",
       "path3Label": "Life Support",
       "path3Desc": "Housing, benefits, employment, and family resources",
       "path4Label": "Immigration",
@@ -228,7 +228,7 @@ export default {
     "friendsFamily": "For Friends & Family",
     "courtRecords": "Find Court Records",
     "getHelp": "Get Help",
-    "getCaseGuidance": "Get Case Guidance",
+    "getCaseGuidance": "Get Case Roadmap",
     "immigrationEnforcement": "Immigration Enforcement",
     "diversionPrograms": "Diversion Programs",
     "findLocalCourts": "Find Local Courts",
@@ -2057,14 +2057,14 @@ export default {
   },
   "case": {
     "hero": {
-      "title": "Case Guidance",
-      "subtitle": "Get Personalized Guidance",
-      "description": "Answer a few questions about your situation to get case support, next steps, and resources for your case.",
+      "title": "Case Roadmap",
+      "subtitle": "Understand Your Charges and Case Process",
+      "description": "Tell us your state, charges, and where you are in the process. Get a plain-language overview of what typically happens at your stage.",
       "startButton": "Get Started",
       "privacyNote": "Your responses are private and automatically deleted after your session"
     },
     "howItWorks": {
-      "title": "How Personalized Guidance Works",
+      "title": "How It Works",
       "step1Title": "Answer Questions",
       "step1Desc": "Tell us about your state, charges, and where you are in the legal process",
       "step2Title": "We Review Your Situation",
@@ -2241,7 +2241,7 @@ export default {
       "text": "This information is for general education only. It is not legal advice, and no attorney-client relationship is formed by using this site. Information you access here is not protected by legal privilege. Laws vary by state. Talk to a licensed attorney about your specific situation.",
       "needHelp": "Need Immediate Case Support?",
       "emergencyAid": "Emergency Legal Aid",
-      "caseGuidance": "Get Case Guidance"
+      "caseGuidance": "Get Case Roadmap"
     }
   },
   "immigration": {
@@ -5001,7 +5001,7 @@ export default {
       "howBailWorks": "How Bail Works",
       "fullCounselGuide": "Full Right-to-Counsel Guide",
       "caseTimeline": "Full Case Timeline",
-      "getGuidance": "Get Personalized Guidance",
+      "getGuidance": "Case Roadmap",
       "findDefender": "Find a Public Defender",
       "courtLogistics": "Court & Legal in Life Support",
       "lifeSupport": "Life Support"
@@ -5030,9 +5030,9 @@ export default {
       "preArrestNote": "Not arrested yet? See below for what to do if police want to speak with you."
     },
     "guidanceCta": {
-      "title": "Want guidance for your specific situation?",
-      "body": "Once you have a sense of the process, this tool can walk you through what to expect based on your charges and state.",
-      "button": "Get case-specific guidance"
+      "title": "Want to understand your charges and case process?",
+      "body": "Once you have a sense of the process, the Case Roadmap walks you through what to expect based on your charges and state.",
+      "button": "View Case Roadmap"
     },
     "familyCallout": {
       "title": "Are you here to help a family member?",
@@ -5331,14 +5331,14 @@ export default {
         "cta": "Open First 24 Hours"
       },
       "path2": {
-        "badge": "Understand your specific situation",
-        "headline": "Personalized Case Guidance",
-        "subhead": "Answer a few questions and get AI-powered guidance tailored to your charges, location, and situation. Private by design — your answers are never stored.",
-        "bullet1": "5-step intake: safety check, location, charges, situation, details",
-        "bullet2": "Explains your charges in plain language",
-        "bullet3": "Identifies diversion programs and plea options in your state",
-        "bullet4": "Powered by Claude AI with verified legal accuracy checks",
-        "cta": "Get Case Guidance"
+        "badge": "Understand the process for your charges",
+        "headline": "Case Roadmap",
+        "subhead": "Select your state, charge type, and where you are in the process. Get a plain-language overview of what typically happens at each stage, what the charges mean, and what usually matters.",
+        "bullet1": "Select your state, charge type, and case stage",
+        "bullet2": "Explains charges and typical penalties in plain language",
+        "bullet3": "Describes what courts typically look for at your stage",
+        "bullet4": "Information is checked against verified legal databases",
+        "cta": "Get Case Roadmap"
       },
       "path3": {
         "badge": "Life doesn't stop while your case is pending",
@@ -5373,9 +5373,9 @@ export default {
       },
       "step2": {
         "time": "Day 1",
-        "path": "Personalized Guidance",
-        "action": "Released on bail. Maria uses Case Guidance to understand the DUI charge.",
-        "detail": "AI explains the charge, potential penalties, and that first-offense diversion may be available in her state."
+        "path": "Case Roadmap",
+        "action": "Released on bail. Maria opens the Case Roadmap to understand the DUI charge.",
+        "detail": "The roadmap explains the charge, potential penalties, and that first-offense diversion may be available in her state."
       },
       "step3": {
         "time": "Week 1",
@@ -5385,9 +5385,9 @@ export default {
       },
       "step4": {
         "time": "Month 2",
-        "path": "Personalized Guidance",
-        "action": "Court date approaching. She asks what to expect at arraignment.",
-        "detail": "Guidance walks through the timeline, plea options, and how to talk to her public defender."
+        "path": "Case Roadmap",
+        "action": "Court date approaching. She checks what to expect at arraignment.",
+        "detail": "The Case Roadmap walks through the typical timeline, how arraignment usually works, and what to discuss with her public defender."
       }
     },
     "inventory": {
@@ -5419,8 +5419,8 @@ export default {
         "title": "Get Help",
         "description": "Start here if you need guidance on your situation",
         "caseGuidance": {
-          "title": "Personalized Case Guidance",
-          "description": "Get tailored case support based on your charges and jurisdiction."
+          "title": "Case Roadmap",
+          "description": "Plain-language overview of what to expect based on your charges, state, and case stage."
         },
         "aiChat": {
           "title": "AI Legal Chat",
@@ -5633,9 +5633,9 @@ export default {
       }
     },
     "needHelp": {
-      "title": "Need Personalized Guidance?",
-      "description": "Our case guidance tool can help you understand your specific situation and provide tailored information based on your charges and jurisdiction.",
-      "cta": "Get Case Guidance"
+      "title": "Need a Case Roadmap?",
+      "description": "The Case Roadmap explains what to expect based on your charges, state, and case stage — in plain language.",
+      "cta": "Get Case Roadmap"
     }
   }
   },
