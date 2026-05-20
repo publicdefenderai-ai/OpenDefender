@@ -3813,6 +3813,19 @@ export default {
         "cta": "Get guidance"
       }
     },
+    "followingCase": {
+      "sectionTitle": "Following the Case After Arraignment",
+      "sectionSubtitle": "Once the immediate crisis is handled, the case continues for weeks or months. Here is how to stay informed.",
+      "courtDocketTitle": "Find the court docket",
+      "courtDocketText": "The docket is the official record of everything filed in the case — charges, scheduled hearings, motions, and court orders. Most state courts have a public case search tool on the court's website. Search by the defendant's full legal name and county. The docket updates as events happen.",
+      "hearingDatesTitle": "Court dates and continuances",
+      "hearingDatesText": "Upcoming hearings appear as scheduled events on the docket. If a hearing is postponed (called a continuance), the new date appears there. Continuances are common — they do not mean something is wrong. Check the docket regularly rather than relying on what was said at the last hearing.",
+      "federalTitle": "Federal cases",
+      "federalText": "Federal cases are on PACER (pacer.gov). Many documents are also available free through CourtListener, which is integrated into our court records tool. Federal case numbers have a distinctive format — for example, 2:24-CR-00123. If you see a format like that, the case is federal.",
+      "vineTitle": "Custody status notifications",
+      "vineText": "VINELink (vinelink.com) is a free government service that sends automatic notifications when a detained person's custody status changes — including transfers, scheduled releases, and unexpected releases. Register online or by phone.",
+      "continuanceNote": "A continuance is a postponement. Cases routinely have several before a resolution. It is a normal part of the process."
+    },
     "probationParole": {
       "sectionTitle": "If your family member is on probation or parole",
       "sectionSubtitle": "An arrest during active supervision is a more complicated situation. Here is what families need to know.",

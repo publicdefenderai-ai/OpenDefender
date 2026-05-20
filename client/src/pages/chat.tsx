@@ -1023,7 +1023,34 @@ export default function ChatPage() {
     if (!formattedContent) {
       formattedContent = "Your case support summary is ready. Please export as PDF for full details.";
     }
-    
+
+    // Add "Based on your concerns" resource links
+    const selectedConcernIds = state.caseInfo.selectedConcerns;
+    if (selectedConcernIds && selectedConcernIds.length > 0) {
+      const CONCERN_LINKS: Record<string, { label: string; path: string }> = {
+        employment:     { label: 'Employment Rights',     path: '/support/employment' },
+        housing:        { label: 'Housing',               path: '/support/housing' },
+        finances:       { label: 'Finances & Benefits',   path: '/support/finances' },
+        childcare:      { label: 'Childcare Resources',   path: '/support/childcare' },
+        familyCare:     { label: 'Family Care',           path: '/support/family-care' },
+        mentalHealth:   { label: 'Mental Health Support', path: '/support/mental-health' },
+        personalHealth: { label: 'Personal Health',       path: '/support/personal-health' },
+        transportation: { label: 'Transportation',        path: '/support/transportation' },
+        reputation:     { label: 'Record & Reputation',  path: '/support/reputation' },
+        courtLogistics: { label: 'Court Logistics',       path: '/support/court-logistics' },
+        immigration:    { label: 'Immigration Resources', path: '/immigration-guidance' },
+      };
+      const matchedLinks = selectedConcernIds
+        .map(id => CONCERN_LINKS[id])
+        .filter(Boolean);
+      if (matchedLinks.length > 0) {
+        formattedContent += '\n\n**Resources for what you selected:**\n';
+        matchedLinks.forEach(link => {
+          formattedContent += `• [${link.label}](${link.path})\n`;
+        });
+      }
+    }
+
     // Add confidence badge
     const stateName = state.caseInfo.stateName || state.caseInfo.state;
     const verificationBadge = stateName 

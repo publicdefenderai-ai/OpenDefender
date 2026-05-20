@@ -445,6 +445,63 @@ export default function FriendsFamily() {
         </div>
       </section>
 
+      {/* Following the Case */}
+      <section className="py-14 bg-background border-b border-border/60">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="flex items-start gap-3 mb-6">
+              <FileText className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+              <div>
+                <h2 className="text-xl font-bold text-foreground mb-1">{t('friendsFamily.followingCase.sectionTitle')}</h2>
+                <p className="text-sm text-muted-foreground">{t('friendsFamily.followingCase.sectionSubtitle')}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <ScrollReveal delay={0.1}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.followingCase.courtDocketTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.followingCase.courtDocketText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.followingCase.hearingDatesTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.followingCase.hearingDatesText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.followingCase.vineTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.followingCase.vineText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.followingCase.federalTitle')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.followingCase.federalText')}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.5}>
+            <p className="text-xs text-muted-foreground mt-4 px-1">{t('friendsFamily.followingCase.continuanceNote')}</p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Important Warnings */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4">

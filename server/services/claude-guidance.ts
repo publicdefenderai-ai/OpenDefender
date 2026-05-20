@@ -389,7 +389,18 @@ BASIC CASE INFORMATION:
 
   if (caseDetails.selectedConcerns && caseDetails.selectedConcerns.length > 0) {
     const concernsList = caseDetails.selectedConcerns.join(', ');
-    prompt += `\n\nSPECIFIC CONCERNS: The person is particularly worried about: ${concernsList}. Please address these specific concerns in your guidance and recommend relevant resources.`;
+    prompt += `\n\nSPECIFIC CONCERNS: The person is particularly worried about: ${concernsList}. Address each concern factually in the guidance. When you do, include a markdown link to the relevant resource page from this map (only link to pages matching the selected concerns — weave the links naturally into the text):
+- employment → [Employment Rights](/support/employment)
+- housing → [Housing](/support/housing)
+- finances → [Finances & Benefits](/support/finances)
+- childcare → [Childcare Resources](/support/childcare)
+- familyCare → [Family Care](/support/family-care)
+- mentalHealth → [Mental Health Support](/support/mental-health)
+- personalHealth → [Personal Health](/support/personal-health)
+- transportation → [Transportation](/support/transportation)
+- reputation → [Record & Reputation](/support/reputation)
+- courtLogistics → [Court Logistics](/support/court-logistics)
+- immigration → [Immigration Resources](/immigration-guidance)`;
   }
 
   if (chargesUnknown) {
