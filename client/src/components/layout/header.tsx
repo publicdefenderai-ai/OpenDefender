@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, Fragment } from "react";
-import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, Compass, AlertCircle, Scale } from "lucide-react";
+import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, Compass, AlertCircle, Scale, Heart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
@@ -117,7 +117,15 @@ export function Header() {
 
   const navLinks: NavLink[] = [
     { href: "/first-24-hours", label: t('header.nav.first24Hours', 'First 24 Hours') },
-    { href: "/support",        label: t('header.nav.support', 'Life & Family') },
+    {
+      href: "/support",
+      label: t('header.nav.support', 'Life & Family'),
+      megaMenu: true,
+      dropdown: [
+        { href: "/support",         label: t('header.dropdown.support.resources',        'Support Resources'), desc: t('header.dropdown.support.resourcesDesc',        'Housing, employment, finances, mental health, and more'), icon: Heart, iconBg: '#f8eef3', iconColor: '#8b2252' },
+        { href: "/friends-family",  label: t('header.dropdown.support.friendsFamily',    'Friends & Family'),  desc: t('header.dropdown.support.friendsFamilyDesc',    'Help someone who was arrested'),                          icon: Users, iconBg: '#f8eef3', iconColor: '#8b2252' },
+      ],
+    },
     {
       href: "/case-guidance",
       label: t('header.nav.caseGuidance', 'Get Guidance'),

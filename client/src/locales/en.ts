@@ -43,6 +43,12 @@ export default {
         "detainedDesc": "Locate someone in ICE custody",
         "lawyer": "Find a Lawyer",
         "lawyerDesc": "Immigration legal representation"
+      },
+      "support": {
+        "resources": "Support Resources",
+        "resourcesDesc": "Housing, employment, finances, mental health, and more",
+        "friendsFamily": "Friends & Family",
+        "friendsFamilyDesc": "Help someone who was arrested"
       }
     },
     "mobile": {
