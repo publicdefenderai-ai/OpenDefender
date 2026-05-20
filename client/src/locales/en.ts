@@ -5187,6 +5187,8 @@ export default {
         "c4": "Anything said to police from the moment of arrest can be used as evidence. Statements meant to explain or clear things up often create complications rather than resolving them. Remaining silent is not an admission of guilt.",
         "c5Title": "Note Details",
         "c5": "Note what you can: badge numbers, officer names, any witnesses present, and the location. This information may be useful to your attorney.",
+        "c6Title": "Between Arrest and Booking",
+        "c6": "After arrest, you may spend time in a patrol car, holding area, or interview room before formal booking begins. Officers may speak with you informally during this window — offering water, saying you're not under arrest yet, or asking casual questions. Miranda warnings are not required at this stage, but statements made here can be documented and used as evidence. Your invocation of silence from the moment of arrest applies throughout this entire window.",
         "do1": "To invoke your right to remain silent, say clearly: \"I am invoking my right to remain silent.\" To request an attorney, say: \"I want a lawyer.\" Once you clearly state this, police must stop questioning.",
         "do2": "Comply physically. Do not resist, even if you believe the arrest is unlawful.",
         "do3": "Try to remember badge numbers, officer names, and everything that happens.",
@@ -5244,7 +5246,7 @@ export default {
         "c2Title": "What to Share",
         "c2": "The most important things to share: the facility name, your booking number, the charges as written, and any court date given. The person you call needs this to find an attorney and track your case.",
         "c3Title": "Legal Representation",
-        "c3": "If you cannot afford an attorney, the court appoints one at your first court appearance. A family member can contact the public defender's office in the county where you were arrested to ask about the appointment process.",
+        "c3": "If you cannot afford an attorney, the court assigns a public defender at your first court appearance — calling the public defender's office beforehand will not result in an assignment. A family member can call the PD's office for general orientation: which court will likely hear the case, and what the process looks like. Until a PD is assigned in court, the most effective protection is invoking the right to silence clearly and holding to it.",
         "c4Title": "What Not to Discuss",
         "c4": "This call is not the place to describe what happened, discuss evidence, or coordinate with anyone connected to the case. Those conversations are not protected and become part of the record.",
         "dont6": "Don't assume letters, texts, or emails from jail are any more private than phone calls. They aren't."
@@ -5293,6 +5295,8 @@ export default {
         "c3": "Everything you tell your attorney is protected by attorney-client privilege. What you tell anyone else, including family, friends, or jail staff, is not protected and can be used as evidence.",
         "c4Title": "Statements to Prosecutors",
         "c4": "Agreements or statements made to prosecutors without an attorney present can have serious consequences. Attorney-client privilege begins only when an attorney-client relationship exists.",
+        "c5Title": "How a Public Defender Is Actually Assigned",
+        "c5": "A public defender is assigned by a judge at your first court appearance — you cannot get one assigned beforehand, and calling the public defender's office will not change this. What a family member can get from calling the PD's office: general orientation about which court will likely hear the case and roughly what to expect. What they cannot get: an attorney assigned to your case. Until an attorney is present, your most effective protection is a clear, consistent invocation: \"I want a lawyer. I am not answering any questions.\"",
         "attorneyUrgencyTitle": "Why today, not next week, matters",
         "attorneyUrgencyBody": "An attorney involved at the precinct, before charges are formally filed, can sometimes speak with investigators and influence what gets charged, or whether charges are filed at all. An attorney who enters at arraignment no longer has that option. Evidence gets deleted, charging decisions lock in, and the window for early intervention closes. The earlier counsel is retained, the wider the range of possible outcomes."
       },

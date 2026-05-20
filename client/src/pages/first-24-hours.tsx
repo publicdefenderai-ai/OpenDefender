@@ -797,6 +797,7 @@ export default function FirstTwentyFourHours() {
                 { heading: t('first24Hours.steps.step1.c3Title'), text: t('first24Hours.steps.step1.c3') },
                 { heading: t('first24Hours.steps.step1.c4Title'), text: t('first24Hours.steps.step1.c4') },
                 { heading: t('first24Hours.steps.step1.c5Title'), text: t('first24Hours.steps.step1.c5') },
+                { heading: t('first24Hours.steps.step1.c6Title'), text: t('first24Hours.steps.step1.c6') },
               ]}
             >
               <div className="mt-2 space-y-3">
@@ -976,6 +977,7 @@ export default function FirstTwentyFourHours() {
                 { heading: t('first24Hours.steps.step5.c2Title'), text: t('first24Hours.steps.step5.c2') },
                 { heading: t('first24Hours.steps.step5.c3Title'), text: t('first24Hours.steps.step5.c3') },
                 { heading: t('first24Hours.steps.step5.c4Title'), text: t('first24Hours.steps.step5.c4') },
+                { heading: t('first24Hours.steps.step5.c5Title'), text: t('first24Hours.steps.step5.c5') },
               ]}
             >
               <div className="space-y-4 mt-2">
