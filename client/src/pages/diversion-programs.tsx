@@ -433,6 +433,9 @@ export default function DiversionPrograms() {
                     <p className="text-sm text-blue-700 dark:text-blue-300">
                       {t('diversionPrograms.infoBanner.description')}
                     </p>
+                    <p className="text-xs text-blue-600/80 dark:text-blue-400/80 mt-3 leading-relaxed">
+                      {t('diversionPrograms.infoBanner.disclaimer')}
+                    </p>
                   </div>
                 </div>
               </CardContent>

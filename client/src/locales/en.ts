@@ -3594,7 +3594,7 @@ export default {
   "diversionPrograms": {
     "hero": {
       "title": "Diversion Programs",
-      "subtitle": "Find alternative programs to avoid conviction and get the help you need"
+      "subtitle": "Find treatment, community service, and supervision programs that may resolve charges outside of traditional prosecution"
     },
     "navigation": {
       "backToHome": "Back to Home",
@@ -3621,7 +3621,8 @@ export default {
     },
     "infoBanner": {
       "title": "What are Diversion Programs?",
-      "description": "Diversion programs allow eligible defendants to avoid traditional prosecution by completing treatment, community service, or other requirements. Successful completion often results in dismissed charges or reduced penalties."
+      "description": "Diversion programs allow eligible defendants to avoid traditional prosecution by completing treatment, community service, or other requirements. Successful completion often results in dismissed charges or reduced penalties.",
+      "disclaimer": "This directory lists programs and their eligibility criteria as reported by the programs themselves. Program availability and terms vary by jurisdiction. Whether a specific program is appropriate for your situation is a decision for you and your attorney. This page does not form an attorney-client relationship."
     },
     "programCard": {
       "location": "Location",
@@ -3639,9 +3640,9 @@ export default {
       "ndaaLink": "Search NDAA National Directory"
     },
     "quickNav": {
-      "legalGuidanceTitle": "Need Case Support?",
-      "legalGuidanceDesc": "Get personalized case support for your specific charges and situation.",
-      "legalGuidanceButton": "Get Case Support",
+      "legalGuidanceTitle": "Understand Your Charges",
+      "legalGuidanceDesc": "Get a plain-language overview of what to expect based on your charges and state.",
+      "legalGuidanceButton": "View Case Roadmap",
       "recordClearingTitle": "Learn About Record Clearing",
       "recordClearingDesc": "Check if you're eligible to expunge or seal your criminal record.",
       "recordClearingButton": "Check Eligibility"
