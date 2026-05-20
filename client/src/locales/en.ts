@@ -4603,7 +4603,9 @@ export default {
     "dirLegalSupportMenu": "Legal Support Services — select a resource:",
     "dirLifeFamilyMenu": "Life & Family — select an area:",
     "dirReferenceMenu": "Reference — select a resource:",
-    "dirAttorneyToolsMenu": "Attorney Tools:"
+    "dirAttorneyToolsMenu": "Attorney Tools:",
+    "concernsQuestionEarly": "Before we look at the charges, what are you most worried about right now? Select all that apply, then continue.",
+    "helpingFamilyInfo": "**Helping Someone Who Was Arrested**\n\nHere is what to do in the next few hours:\n\n**Find where they are**\nCall the county jail or use an online inmate locator. You'll need their full legal name and date of birth. Many counties have a search tool on the county sheriff's website.\n\n**Get them legal representation**\nContact the public defender's office in the county where they were arrested. Do this before the bail hearing if at all possible.\n\n**Find out when the bail hearing is**\nBail hearings usually happen within 24–72 hours of arrest. The jail can tell you when it is scheduled. The bail hearing is when you may be able to post bail.\n\n**Be very careful on jail calls**\nJail calls are recorded and monitored. Do not discuss the case, what happened, or ask them to do anything related to the incident. Prosecutors can and do use jail calls as evidence.\n\n**What you can say on a call**\n\"I love you. I'm working on getting help. Stay calm. Don't talk to anyone about what happened.\"\n\n---\nOur full Friends & Family guide covers inmate locators, bail, communication, and more:"
   },
   "replies": {
     "urgentYes": "Yes, I need help right now",
@@ -4720,7 +4722,9 @@ export default {
     "dirStatuteLookup": "Statute Lookup",
     "dirDocumentLibrary": "Document Library",
     "dirAttorneyPortal": "Attorney Portal",
-    "dirCourtRecords": "Court Records"
+    "dirCourtRecords": "Court Records",
+    "helpingFamilyMember": "Helping someone who was arrested",
+    "viewFriendsFamily": "View Friends & Family Guide →"
   },
   "header": {
     "title": "Case Support Chat",

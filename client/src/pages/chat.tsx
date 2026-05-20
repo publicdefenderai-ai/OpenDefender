@@ -178,7 +178,7 @@ export default function ChatPage() {
     const isGenerating = state.currentStep === 'generating_guidance';
     const isChargeSelection = state.currentStep === 'charge_selection';
     const isStateSelection = state.currentStep === 'state_selection';
-    const isConcernsQuestion = state.currentStep === 'concerns_question';
+    const isConcernsQuestion = state.currentStep === 'concerns_question' || state.currentStep === 'concerns_early';
 
     // If chat is stuck (no quick replies, can't use free text, not in special states)
     if (state.messages.length > 0 && !hasReplies && !isFreeTextStep && !isWelcome && !isGenerating && !isChargeSelection && !isStateSelection && !isConcernsQuestion) {
@@ -252,7 +252,10 @@ export default function ChatPage() {
       case 'emergency_check':
         if (reply.value === 'urgent_yes') {
           actions.updateCaseInfo({ isEmergency: true });
-          addBotMessageWithKey('chat.messages.emergencyAdviceFull', PATHWAY_MENU_REPLIES);
+          addBotMessageWithKey('chat.messages.emergencyAdviceFull', [
+            ...PATHWAY_MENU_REPLIES,
+            { id: 'menu-helping-family', labelKey: 'chat.replies.helpingFamilyMember', value: 'menu_helping_family', color: 'green' as const },
+          ]);
           actions.setCurrentStep('main_menu');
         } else {
           addBotMessageWithKey('chat.messages.pathwayMenu', PATHWAY_MENU_REPLIES);
@@ -351,6 +354,11 @@ export default function ChatPage() {
             { id: 'dir-attorney-tools', labelKey: 'chat.replies.dirAttorneyTools', value: 'dir_attorney_tools', color: 'slate' as const },
           ]);
           actions.setCurrentStep('resources_directory_menu');
+        } else if (reply.value === 'menu_helping_family') {
+          addBotMessageWithKey('chat.messages.helpingFamilyInfo', [
+            { id: 'view-friends-family', labelKey: 'chat.replies.viewFriendsFamily', value: 'navigate:/friends-family', color: 'blue' as const },
+          ]);
+          actions.setCurrentStep('life_family_menu');
         }
         break;
 
@@ -732,10 +740,10 @@ export default function ChatPage() {
     const stateName = US_STATES[stateCode] || stateCode;
     actions.addMessage({ role: 'user', content: stateName });
     actions.updateCaseInfo({ state: stateCode, stateName });
-    
-    addBotMessageWithKey('chat.messages.chargeQuestion', undefined, { state: stateName });
-    setShowChargeSelector(true);
-    actions.setCurrentStep('charge_selection');
+
+    setSelectedConcerns([]);
+    addBotMessageWithKey('chat.messages.concernsQuestionEarly');
+    actions.setCurrentStep('concerns_early');
   }, [actions, addBotMessageWithKey]);
 
   const handleChargesSelect = useCallback((charges: Array<{ id: string; code: string; name: string }>) => {
@@ -774,6 +782,16 @@ export default function ChatPage() {
     });
     actions.addMessage({ role: 'user', content: selectedLabels.join(', ') || t('chat.concerns.none', 'None selected') });
     actions.updateCaseInfo({ selectedConcerns: [...selectedConcerns] });
+
+    // Early concerns (collected before charges) — proceed to charge selection
+    if (state.currentStep === 'concerns_early') {
+      const stateName = state.caseInfo.stateName || state.caseInfo.state || '';
+      setSelectedConcerns([]);
+      addBotMessageWithKey('chat.messages.chargeQuestion', undefined, { state: stateName });
+      setShowChargeSelector(true);
+      actions.setCurrentStep('charge_selection');
+      return;
+    }
 
     setIsTyping(true);
     actions.setIsGenerating(true);
@@ -816,17 +834,47 @@ export default function ChatPage() {
         { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
       ]);
     }
-  }, [selectedConcerns, state.caseInfo, actions, addBotMessageWithKey, t, i18n.language]);
+  }, [selectedConcerns, state.caseInfo, state.currentStep, state.caseInfo.stateName, state.caseInfo.state, actions, addBotMessageWithKey, t, i18n.language]);
 
   const handleFreeTextSubmit = useCallback(async (message: string) => {
     if (state.currentStep === 'incident_description') {
       actions.addMessage({ role: 'user', content: message });
       actions.updateCaseInfo({ incidentDescription: message });
 
-      // Reset selected concerns when entering concerns step
-      setSelectedConcerns([]);
-      addBotMessageWithKey('chat.messages.concernsQuestion');
-      actions.setCurrentStep('concerns_question');
+      setIsTyping(true);
+      actions.setIsGenerating(true);
+      actions.setCurrentStep('generating_guidance');
+      setStillWorkingShown(false);
+
+      try {
+        const response = await apiRequest('POST', '/api/legal-guidance', {
+          jurisdiction: state.caseInfo.state,
+          charges: state.caseInfo.charges,
+          caseStage: state.caseInfo.courtStage,
+          custodyStatus: state.caseInfo.custodyStatus,
+          hasAttorney: state.caseInfo.hasAttorney,
+          incidentDescription: message,
+          selectedConcerns: state.caseInfo.selectedConcerns || [],
+          language: i18n.language,
+        });
+        const data = await response.json();
+        setIsTyping(false);
+        actions.setIsGenerating(false);
+        actions.setGuidanceData(data.guidance || data);
+        actions.markFlowCompleted('personalized_guidance');
+        addBotMessageWithKey('chat.messages.guidanceReady', [
+          { id: 'view-guidance', labelKey: 'chat.replies.viewGuidance', value: 'view_guidance', color: 'blue' as const },
+          { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
+        ]);
+        setSelectedConcerns([]);
+      } catch (error) {
+        console.error('Guidance generation error:', error);
+        setIsTyping(false);
+        actions.setIsGenerating(false);
+        addBotMessageWithKey('chat.messages.error', [
+          { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
+        ]);
+      }
 
     } else if (state.currentStep === 'pd_zip_search') {
       const zipCode = message.trim();
@@ -1051,7 +1099,7 @@ export default function ChatPage() {
         custodyStatus: state.caseInfo.custodyStatus,
         hasAttorney: false,
         incidentDescription: '',
-        concerns: '',
+        selectedConcerns: state.caseInfo.selectedConcerns || [],
         language: i18n.language,
       });
 
@@ -1239,7 +1287,7 @@ export default function ChatPage() {
                 </div>
               )}
 
-              {state.currentStep === 'concerns_question' && (
+              {(state.currentStep === 'concerns_question' || state.currentStep === 'concerns_early') && (
                 <div className="ml-0 sm:ml-11 mt-3">
                   <p className="text-sm text-muted-foreground mb-3">
                     {t('chat.concerns.selectPrompt', 'Tap all that apply, then Continue')}

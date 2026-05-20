@@ -194,6 +194,16 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal delay={0.2}>
+            <div className="mt-7 pt-5 border-t border-border/40 text-center">
+              <p className="text-sm text-muted-foreground">
+                Here to help someone who was arrested?{' '}
+                <Link href="/friends-family" className="font-semibold text-foreground underline underline-offset-2 hover:no-underline whitespace-nowrap">
+                  Start here →
+                </Link>
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

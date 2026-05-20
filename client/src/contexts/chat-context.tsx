@@ -64,6 +64,7 @@ export type ConversationStep =
   | 'legal_aid_zip_search'
   | 'legal_aid_results'
   | 'state_selection'
+  | 'concerns_early'
   | 'charge_selection'
   | 'court_stage'
   | 'custody_status'
