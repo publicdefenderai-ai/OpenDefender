@@ -5347,7 +5347,7 @@ export default {
     "pageSubtitle": "查找法律资源，了解您的权利，获取所需的支持",
     "hero": {
       "title": "您想从哪里开始？",
-      "subtitle": "OpenDefender有四条主要路径。大多数人会使用不止一条。根据您现在所处的情况来选择。",
+      "subtitle": "OpenDefender有五条主要路径。大多数人会使用不止一条。根据您现在所处的情况来选择。",
       "pills": {
         "first24": "被捕后24小时",
         "caseGuidance": "案件指导",

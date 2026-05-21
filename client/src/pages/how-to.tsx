@@ -488,10 +488,10 @@ export default function HowTo() {
           <ScrollReveal>
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 mb-4">
-                {t("howTo.flow.familyNote.label")}
+                {t("howTo.familyNote.label")}
               </div>
-              <h2 className="text-2xl font-bold text-foreground mb-3">{t("howTo.flow.familyNote.title")}</h2>
-              <p className="text-muted-foreground max-w-xl mx-auto text-[15px]">{t("howTo.flow.familyNote.subtitle")}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-3">{t("howTo.familyNote.title")}</h2>
+              <p className="text-muted-foreground max-w-xl mx-auto text-[15px]">{t("howTo.familyNote.subtitle")}</p>
             </div>
           </ScrollReveal>
           <div className="relative">
@@ -504,15 +504,15 @@ export default function HowTo() {
                 <ScrollReveal key={step} delay={i * 0.08}>
                   <div className="flex items-start gap-4 sm:gap-5">
                     <div className="w-16 sm:w-20 text-right flex-shrink-0 pt-2.5">
-                      <span className="text-xs font-bold text-muted-foreground">{t(`howTo.flow.familyNote.${step}.time`)}</span>
+                      <span className="text-xs font-bold text-muted-foreground">{t(`howTo.familyNote.${step}.time`)}</span>
                     </div>
                     <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 z-10 shadow-sm" style={{ background: accent }}>
                       <Users className="w-4 h-4 text-white" />
                     </div>
                     <div className="flex-1 bg-background rounded-xl border border-blue-100 dark:border-blue-900 p-4 shadow-sm">
-                      <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-2" style={{ background: accentBg, color: accent }}>{t(`howTo.flow.familyNote.${step}.path`)}</span>
-                      <p className="text-sm font-semibold text-foreground mb-1">{t(`howTo.flow.familyNote.${step}.action`)}</p>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{t(`howTo.flow.familyNote.${step}.detail`)}</p>
+                      <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-2" style={{ background: accentBg, color: accent }}>{t(`howTo.familyNote.${step}.path`)}</span>
+                      <p className="text-sm font-semibold text-foreground mb-1">{t(`howTo.familyNote.${step}.action`)}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{t(`howTo.familyNote.${step}.detail`)}</p>
                     </div>
                   </div>
                 </ScrollReveal>

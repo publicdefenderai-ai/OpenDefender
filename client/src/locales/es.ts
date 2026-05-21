@@ -5347,7 +5347,7 @@ export default {
     "pageSubtitle": "Encuentre recursos legales, entienda sus derechos y obtenga el apoyo que necesita",
     "hero": {
       "title": "¿Por dónde quiere comenzar?",
-      "subtitle": "OpenDefender tiene cuatro caminos principales. La mayoría de las personas usa más de uno. Elija según dónde se encuentre ahora.",
+      "subtitle": "OpenDefender tiene cinco caminos principales. La mayoría de las personas usa más de uno. Elija según dónde se encuentre ahora.",
       "pills": {
         "first24": "Primeras 24 Horas",
         "caseGuidance": "Orientación de Caso",

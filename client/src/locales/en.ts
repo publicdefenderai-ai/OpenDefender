@@ -5425,7 +5425,7 @@ export default {
     "pageSubtitle": "Find legal resources, understand your rights, and get the support you need",
     "hero": {
       "title": "Where do you want to start?",
-      "subtitle": "OpenDefender has four main paths. Most people use more than one. Choose based on where you are right now.",
+      "subtitle": "OpenDefender has five main paths. Most people use more than one. Choose based on where you are right now.",
       "pills": {
         "first24": "First 24 Hours",
         "caseGuidance": "Case Guidance",
