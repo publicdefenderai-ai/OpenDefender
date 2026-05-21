@@ -667,14 +667,24 @@ export function buildSearchIndex(): void {
       url: '/friends-family/toolkit'
     },
     {
-      id: 'how-to',
-      title: 'Site Directory — How to Use OpenDefender',
-      titleEs: 'Directorio del Sitio — Cómo Usar OpenDefender',
-      titleZh: '网站目录 — 如何使用 OpenDefender',
-      content: 'Full directory of all OpenDefender resources. Four main paths: First 24 Hours after arrest, Case Guidance, Life Support, Immigration. Browse all site pages and tools. Getting started guide.',
-      tags: ['directory', 'guide', 'tutorial', 'help', 'instructions', 'all resources', 'site map'],
-      aliases: ['getting started', 'user guide', 'directory', 'all pages', 'site directory', 'browse resources'],
+      id: 'directory',
+      title: 'Site Directory',
+      titleEs: 'Directorio del Sitio',
+      titleZh: '网站目录',
+      content: 'Full directory of all OpenDefender resources. Browse all site pages and tools organized by category: get help, know your rights, find resources, life support, reference, and attorney tools.',
+      tags: ['directory', 'all resources', 'site map', 'browse'],
+      aliases: ['all pages', 'site directory', 'browse resources', 'full directory'],
       url: '/directory'
+    },
+    {
+      id: 'how-to',
+      title: 'How It Works — The Five Paths',
+      titleEs: 'Cómo Funciona — Los Cinco Caminos',
+      titleZh: '如何使用 — 五条路径',
+      content: 'Detailed guide to OpenDefender\'s five main paths: First 24 Hours after arrest, Case Roadmap, Life & Family support, Immigration Rights, and helping Friends & Family who were arrested. Example journeys showing how the paths work together.',
+      tags: ['guide', 'tutorial', 'how to', 'getting started', 'paths', 'friends family', 'example'],
+      aliases: ['getting started', 'user guide', 'how to use', 'paths explained'],
+      url: '/how-to'
     },
     {
       id: 'statutes',

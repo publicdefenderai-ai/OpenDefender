@@ -63,29 +63,12 @@ export default {
   },
   "home": {
     "hero": {
-      "title1": "Know Your Rights.",
-      "title2": "Protect Your Future.",
-      "subtitle": "Get free case support, understand court processes, and access resources to help navigate the criminal justice system.",
-      "urgentHelpButton": "URGENT HELP NEEDED",
+      "headline": "Arrested or Facing Charges? Free Information. Right Now.",
+      "subtitle": "When police contact you, or you're arrested, the next few hours matter most. Get free, plain-language help from your first encounter through your full case — and support for housing, employment, and family.",
       "urgentStripMessage": "Being arrested or in court right now?",
       "urgentStripCta": "Get immediate help",
-      "getStartedButton": "GET STARTED",
-      "navigatingToolButton": "Browse all resources",
-      "urgentHelpNotice": "If you're being arrested or are in court now, click \"Urgent Help Needed\" for immediate guidance.",
-      "path1Label": "First 24 Hours",
-      "path1Desc": "Step-by-step through arrest, booking, bail, and your first court appearance",
-      "path2Label": "Case Roadmap",
-      "path2Desc": "Plain-language overview of what to expect based on your charges, state, and case stage",
-      "path3Label": "Life Support",
-      "path3Desc": "Housing, benefits, employment, and family resources",
-      "path4Label": "Immigration",
-      "path4Desc": "Rights and resources for immigration matters",
-      "rotatingPrefix": "Guidance that is",
-      "rotatingWord1": "Clear",
-      "rotatingWord2": "Free",
-      "rotatingWord3": "Tailored",
-      "rotatingWord4": "Practical",
-      "rotatingWord5": "Timely"
+      "primaryCta": "I Need Help Now",
+      "secondaryCta": "Browse All Resources"
     },
     "features": {
       "title": "Powered by Real Legal Data",
@@ -101,32 +84,40 @@ export default {
       "analyticsStatus": "Partial Completion"
     },
     "trust": {
-      "title": "Built on Trust & Transparency",
-      "subtitle": "Built on verified legal data, trusted advocacy sources, and a commitment to your privacy",
-      "verifiedTitle": "Current & Verified Information",
-      "verifiedDesc": "Verified regularly against current statutes, court decisions, and legal procedures",
+      "title": "What We Stand For",
+      "freeTitle": "Always Free",
+      "freeDesc": "Understanding your rights should not cost money. OpenDefender is free for anyone who needs it.",
       "privacyTitle": "Privacy Protected",
-      "privacyDesc": "No personal information stored, all session data automatically deleted",
-      "currentTitle": "Early Advocacy Sources",
-      "currentDesc": "Drawn from legal aid organizations, public defenders, and trusted advocates",
-      "disclaimerTitle": "Legal Disclaimer:",
-      "disclaimerText": "This site provides general legal information only and is not a substitute for professional legal advice. Always consult with a qualified attorney for your specific situation. The information provided may not reflect the most recent legal developments and should not be relied upon as legal counsel."
+      "privacyDesc": "No personal information stored. All session data deleted when you leave.",
+      "earlyKnowledgeTitle": "Early Knowledge, Better Outcomes",
+      "earlyKnowledgeDesc": "Research shows that early access to legal information leads to better case outcomes. Bail conditions, charges, and police questioning happen before most people see a lawyer. We exist to close that gap.",
+      "multilingualTitle": "Available in Your Language",
+      "multilingualDesc": "English, Spanish, and Chinese. Understanding your rights should never require a translator."
     },
-    "commitment": {
-      "title": "Our Commitment",
-      "subtitle": "",
-      "pledge1Title": "Free Access",
-      "pledge1Desc": "Access to legal information should not depend on your income. OpenDefender is Free.",
-      "pledge2Title": "Your Privacy, Protected",
-      "pledge2Desc": "Your session data is encrypted and auto-deleted when you leave. We never store, sell, or share your information.",
-      "pledge3Title": "Plain Language, Not Legal Jargon",
-      "pledge3Desc": "Every explanation is written to be understood, not to impress. Accurate legal information in words that make sense.",
-      "pledge4Title": "Verified, Not Guessed",
-      "pledge4Desc": "Our AI-generated guidance is validated against real statute databases and case law. Our educational content is carefully researched and reviewed, but you should always confirm with an attorney.",
-      "pledge5Title": "Available in Your Language",
-      "pledge5Desc": "English, Spanish, and Chinese. Because understanding your rights should never require a translator.",
-      "pledge6Title": "Early Knowledge, Better Outcomes",
-      "pledge6Desc": "Research consistently shows that early access to legal information leads to better case outcomes. Bail conditions, initial charges, and police questioning all happen before most people see a lawyer. We exist to close that window."
+    "paths": {
+      "situationLabel": "What's your situation?",
+      "situationSubtitle": "Choose your path. Most people use more than one.",
+      "path1Badge": "Just arrested or recently released",
+      "path1Headline": "First 24 Hours",
+      "path1Desc": "Step-by-step from arrest through your first court appearance.",
+      "path1Cta": "Start Here",
+      "path2Badge": "Charged and need to understand the process",
+      "path2Headline": "Case Roadmap",
+      "path2Desc": "What to expect at each stage of your case, in plain language.",
+      "path2Cta": "Get Roadmap",
+      "path3Badge": "Life disruption while your case is pending",
+      "path3Headline": "Life & Family",
+      "path3Desc": "Housing, employment, childcare, and mental health resources.",
+      "path3Cta": "Find Support",
+      "path4Badge": "Immigration or mixed-status concerns",
+      "path4Headline": "Immigration Rights",
+      "path4Desc": "Rights during ICE encounters for everyone in the US.",
+      "path4Cta": "Know Your Rights",
+      "path5Badge": "Helping a friend or family member",
+      "path5Headline": "Helping Someone Who Was Arrested",
+      "path5Desc": "Find them, understand what's happening, and learn what you can do right now.",
+      "path5Cta": "Family Support Guide",
+      "searchPlaceholder": "Search rights, court processes, resources..."
     },
     "urgentHelp": {
       "modalTitle": "Urgent Legal Situation",
@@ -143,7 +134,45 @@ export default {
       "publicDefenderTitle": "4. Request a Court-Appointed Attorney",
       "publicDefenderText": "If you cannot afford a lawyer, the court must appoint one at no cost. Tell the judge at your first appearance that you cannot afford an attorney and need court-appointed counsel.",
       "rememberTitle": "Remember:",
-      "rememberText": "Anything you say can be used against you in court. The best way to protect yourself is to stay silent until you have a lawyer."
+      "rememberText": "Anything you say can be used against you in court. The best way to protect yourself is to stay silent until you have a lawyer.",
+      "triageLead": "What best describes your situation right now?",
+      "scenario1Label": "I was just arrested or am currently in custody",
+      "scenario1Sub": "What to do in the next few hours",
+      "scenario2Label": "I've been charged and released — I have a court date coming up",
+      "scenario2Sub": "What you need to do before your first appearance",
+      "scenario3Label": "Someone I know was arrested and I'm trying to help",
+      "scenario3Sub": "How to find them and what to do",
+      "scenario4Label": "Police want to talk to me / I may be arrested soon",
+      "scenario4Sub": "What to do before an arrest happens",
+      "back": "← Back",
+      "chargedSectionTitle": "Before your first court date",
+      "chargedStep1Title": "Get a lawyer before you appear",
+      "chargedStep1Body": "If you cannot afford one, contact the public defender's office in the county where you were charged right away. Don't go to your first appearance without representation if you can avoid it.",
+      "chargedStep2Title": "Conversations about your case are not protected",
+      "chargedStep2Body": "Anything you tell friends, family, or post publicly can be obtained by prosecutors. Those people can be required by law to testify about what you told them.",
+      "chargedStep3Title": "Understand your bail conditions",
+      "chargedStep3Body": "If you were released on bail, read every condition carefully. Violating any condition, even accidentally, results in immediate re-arrest.",
+      "chargedStep4Title": "Don't miss your court date",
+      "chargedStep4Body": "Missing a hearing results in an arrest warrant being issued. Set multiple reminders.",
+      "chargedLinkLabel": "Get Case Roadmap",
+      "chargedLinkSub": "Personalized guidance for your situation",
+      "familySectionTitle": "How to help someone who was arrested",
+      "familyStep1Title": "Find out where they are",
+      "familyStep1Body": "Call the county jail or use an online inmate locator. You'll need their full legal name and date of birth.",
+      "familyStep2Title": "Get them legal representation",
+      "familyStep2Body": "Contact a criminal defense attorney or the public defender's office in the county where they were arrested. Do this before the bail hearing if at all possible.",
+      "familyStep3Title": "Learn their booking number and the charges",
+      "familyStep3Body": "You'll need this to post bail, contact their attorney, and stay informed about court dates.",
+      "familyStep4Title": "Be careful what you say on phone calls",
+      "familyStep4Body": "Jail phone calls are recorded. Don't discuss the case or ask them to do anything related to the incident.",
+      "familyLink1Label": "Full Family Guide",
+      "familyLink1Sub": "Finding, contacting, and supporting someone in custody",
+      "familyLink2Label": "Jail Phone Calls",
+      "familyLink2Sub": "What to say and what to avoid",
+      "full24HourGuide": "Full 24-Hour Guide",
+      "full24HourGuideSub": "Step-by-step through arrest, bail, and arraignment",
+      "jailPhoneCallGuide": "Jail Phone Call Guide",
+      "jailPhoneCallGuideSub": "What to say, and what never to say"
     },
     "whatWeDo": {
       "title": "What We Do",
@@ -250,7 +279,14 @@ export default {
     "viewOnGithub": "View on GitHub",
     "viewOnX": "Follow on X",
     "privacyNotice": "Privacy First: We do not store your personal data. All input is deleted after session.",
-    "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice."
+    "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice.",
+    "legalDisclaimer": "General legal information only — not a substitute for professional legal advice. Always consult a qualified attorney for your specific situation."
+  },
+  "directory": {
+    "hero": {
+      "title": "Site Directory",
+      "subtitle": "Every page on OpenDefender, organized by what you need."
+    }
   },
   "beta": {
     "label": "Beta",
@@ -5391,8 +5427,9 @@ export default {
       "pills": {
         "first24": "First 24 Hours",
         "caseGuidance": "Case Guidance",
-        "lifeSupport": "Life Support",
-        "immigration": "Immigration"
+        "lifeSupport": "Life & Family",
+        "immigration": "Immigration",
+        "familySupport": "Friends & Family"
       }
     },
     "paths": {
@@ -5418,7 +5455,7 @@ export default {
       },
       "path3": {
         "badge": "Life doesn't stop while your case is pending",
-        "headline": "Life Support Resources",
+        "headline": "Life & Family Resources",
         "subhead": "A legal case touches every part of your life. These resources help with employment, finances, housing, mental health, and more — so you can stay stable while your case moves forward.",
         "bullet1": "Employment rights when facing charges or after a conviction",
         "bullet2": "Emergency financial assistance and bail funds",
@@ -5435,6 +5472,16 @@ export default {
         "bullet3": "Guidance for mixed-status families",
         "bullet4": "AI-powered immigration guidance in English, Spanish, and Chinese",
         "cta": "Immigration Guidance"
+      },
+      "path5": {
+        "badge": "Helping someone who was arrested",
+        "headline": "Friends & Family Support",
+        "subhead": "When someone you care about is arrested, you may be the most important resource they have in the first few hours. This guide covers how to find them, what you can legally do, and how to support them without making their situation worse.",
+        "bullet1": "State-by-state inmate locator — find anyone in local, state, or federal custody",
+        "bullet2": "What to say (and not say) on recorded jail phone calls",
+        "bullet3": "How to get them legal representation before the bail hearing",
+        "bullet4": "Understanding bail conditions and how to post bail",
+        "cta": "Open Family Guide"
       }
     },
     "flow": {
@@ -5464,6 +5511,23 @@ export default {
         "path": "Case Roadmap",
         "action": "Court date approaching. She checks what to expect at arraignment.",
         "detail": "The Case Roadmap walks through the typical timeline, how arraignment usually works, and what to discuss with her public defender."
+      }
+    },
+    "familyNote": {
+      "label": "For Friends & Family",
+      "title": "What her family did in parallel",
+      "subtitle": "Alongside Maria, her husband used OpenDefender to help from the outside.",
+      "step1": {
+        "time": "Day 0",
+        "path": "Friends & Family",
+        "action": "Gets the call. Opens the Friends & Family guide.",
+        "detail": "Finds which jail she's in using the inmate locator. Learns her booking number and that recorded calls should not discuss the case."
+      },
+      "step2": {
+        "time": "Day 1",
+        "path": "Friends & Family",
+        "action": "Posts bail and contacts the public defender's office.",
+        "detail": "Learns the difference between a bail bond and a cash payment. Asks the public defender about the arraignment date and what to bring."
       }
     },
     "inventory": {

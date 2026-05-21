@@ -40,7 +40,8 @@ const RecapExtensions = lazy(() => import("@/pages/recap-extensions"));
 // SearchSeizure merged into /rights-info as a tab — route now redirects
 const FriendsFamily = lazy(() => import("@/pages/friends-family"));
 const FamilyToolkit = lazy(() => import("@/pages/friends-family-toolkit"));
-const HowTo = lazy(() => import("@/pages/how-to")); // serves both /how-to and /directory
+const HowTo = lazy(() => import("@/pages/how-to"));
+const Directory = lazy(() => import("@/pages/directory"));
 const PrivacyPolicy = lazy(() => import("@/pages/privacy-policy"));
 const Disclaimers = lazy(() => import("@/pages/disclaimers"));
 const Statutes = lazy(() => import("@/pages/statutes"));
@@ -146,8 +147,8 @@ function Router() {
       <Route path="/collateral-consequences"><Redirect to="/support/reputation" /></Route>
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
-      <Route path="/directory" component={HowTo} />
-      <Route path="/how-to"><Redirect to="/directory" /></Route>
+      <Route path="/directory" component={Directory} />
+      <Route path="/how-to" component={HowTo} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimers" component={Disclaimers} />
       <Route path="/statutes" component={Statutes} />

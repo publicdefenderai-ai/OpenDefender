@@ -59,29 +59,12 @@ export default {
   },
   "home": {
     "hero": {
-      "title1": "Conozca sus Derechos.",
-      "title2": "Proteja su Futuro.",
-      "subtitle": "Obtenga orientación legal gratuita, entienda los procesos judiciales y acceda a recursos para navegar el sistema de justicia penal.",
-      "urgentHelpButton": "AYUDA URGENTE NECESARIA",
+      "headline": "¿Arrestado o Enfrentando Cargos? Información Gratuita. Ahora Mismo.",
+      "subtitle": "Cuando la policía lo contacta, o lo arrestan, las próximas horas importan más. Obtenga ayuda gratuita en lenguaje claro desde su primer encuentro hasta su caso completo — y apoyo para vivienda, empleo y familia.",
       "urgentStripMessage": "¿Está siendo arrestado o está en el tribunal ahora mismo?",
       "urgentStripCta": "Obtener ayuda inmediata",
-      "getStartedButton": "COMENZAR",
-      "navigatingToolButton": "Ver todos los recursos",
-      "urgentHelpNotice": "Si está siendo arrestado o está en la corte ahora, haga clic en \"Ayuda Urgente Necesaria\" para orientación inmediata.",
-      "path1Label": "Las Primeras 24 Horas",
-      "path1Desc": "Paso a paso: arresto, fichaje, fianza y su primera comparecencia",
-      "path2Label": "Hoja de Ruta del Caso",
-      "path2Desc": "Resumen en lenguaje claro de lo que puede esperar según sus cargos, estado y etapa del caso",
-      "path3Label": "Apoyo para la Vida",
-      "path3Desc": "Vivienda, beneficios, empleo y recursos familiares",
-      "path4Label": "Inmigración",
-      "path4Desc": "Derechos y recursos para asuntos de inmigración",
-      "rotatingPrefix": "Orientación que es",
-      "rotatingWord1": "Claro",
-      "rotatingWord2": "Gratuito",
-      "rotatingWord3": "Personalizado",
-      "rotatingWord4": "Práctico",
-      "rotatingWord5": "Oportuno"
+      "primaryCta": "Necesito Ayuda Ahora",
+      "secondaryCta": "Ver Todos los Recursos"
     },
     "features": {
       "title": "Respaldado por Datos Legales Reales",
@@ -97,32 +80,40 @@ export default {
       "analyticsStatus": "Finalización Parcial"
     },
     "trust": {
-      "title": "Basado en Confianza y Transparencia",
-      "subtitle": "Basado en datos legales verificados, fuentes de defensa confiables y un compromiso con su privacidad",
-      "verifiedTitle": "Información Actual y Verificada",
-      "verifiedDesc": "Verificada regularmente contra estatutos vigentes, decisiones judiciales y procedimientos legales.",
+      "title": "Lo Que Defendemos",
+      "freeTitle": "Siempre Gratuito",
+      "freeDesc": "Entender sus derechos no debería costar dinero. OpenDefender es gratuito para cualquiera que lo necesite.",
       "privacyTitle": "Privacidad Protegida",
-      "privacyDesc": "No se almacena información personal, todos los datos de la sesión se eliminan automáticamente",
-      "currentTitle": "Fuentes de Defensa Temprana",
-      "currentDesc": "Obtenido de organizaciones de ayuda legal, defensores públicos y defensores de confianza.",
-      "disclaimerTitle": "Descargo de Responsabilidad Legal:",
-      "disclaimerText": "Este sitio proporciona información legal general únicamente y no sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para su situación específica. La información proporcionada puede no reflejar los desarrollos legales más recientes y no debe utilizarse como asesoría legal."
+      "privacyDesc": "No se almacena información personal. Todos los datos de la sesión se eliminan cuando usted se va.",
+      "earlyKnowledgeTitle": "Conocimiento Temprano, Mejores Resultados",
+      "earlyKnowledgeDesc": "La investigación muestra que el acceso temprano a información legal conduce a mejores resultados. Las condiciones de fianza, los cargos y el interrogatorio policial ocurren antes de que la mayoría consulten a un abogado. Existimos para cerrar esa brecha.",
+      "multilingualTitle": "Disponible en Su Idioma",
+      "multilingualDesc": "Inglés, español y chino. Entender sus derechos nunca debería requerir un traductor."
     },
-    "commitment": {
-      "title": "Nuestro Compromiso",
-      "subtitle": "",
-      "pledge1Title": "Acceso Gratuito",
-      "pledge1Desc": "El acceso a la información legal no debería depender de sus ingresos. OpenDefender es gratuito.",
-      "pledge2Title": "Su Privacidad, Protegida",
-      "pledge2Desc": "Los datos de su sesión están cifrados y se eliminan automáticamente cuando se va. Nunca almacenamos, vendemos ni compartimos su información.",
-      "pledge3Title": "Lenguaje Claro, No Jerga Legal",
-      "pledge3Desc": "Cada explicación está escrita para ser comprendida, no para impresionar. Información legal precisa en palabras que tienen sentido.",
-      "pledge4Title": "Verificado, No Adivinado",
-      "pledge4Desc": "Nuestra orientación de IA se valida con bases de datos reales de estatutos y jurisprudencia. Nuestro contenido educativo es cuidadosamente investigado y revisado, pero siempre debe confirmar con un abogado.",
-      "pledge5Title": "Disponible en Su Idioma",
-      "pledge5Desc": "Inglés, español y chino. Porque entender sus derechos nunca debería requerir un traductor.",
-      "pledge6Title": "Conocimiento Temprano, Mejores Resultados",
-      "pledge6Desc": "La investigación muestra consistentemente que el acceso temprano a información legal conduce a mejores resultados. Las condiciones de fianza, los cargos iniciales y el interrogatorio policial ocurren antes de que la mayoría de las personas consulten a un abogado. Existimos para cerrar esa brecha."
+    "paths": {
+      "situationLabel": "¿Cuál es su situación?",
+      "situationSubtitle": "Elija su camino. La mayoría de las personas usa más de uno.",
+      "path1Badge": "Recién arrestado o liberado recientemente",
+      "path1Headline": "Primeras 24 Horas",
+      "path1Desc": "Paso a paso desde el arresto hasta su primera comparecencia.",
+      "path1Cta": "Comenzar Aquí",
+      "path2Badge": "Acusado y necesita entender el proceso",
+      "path2Headline": "Hoja de Ruta del Caso",
+      "path2Desc": "Qué esperar en cada etapa de su caso, en lenguaje claro.",
+      "path2Cta": "Ver Hoja de Ruta",
+      "path3Badge": "Problemas de vida mientras su caso está pendiente",
+      "path3Headline": "Vida y Familia",
+      "path3Desc": "Recursos de vivienda, empleo, cuidado infantil y salud mental.",
+      "path3Cta": "Encontrar Apoyo",
+      "path4Badge": "Preocupaciones de inmigración o familia de estatus mixto",
+      "path4Headline": "Derechos de Inmigración",
+      "path4Desc": "Derechos durante encuentros con ICE para todos en EE.UU.",
+      "path4Cta": "Conozca Sus Derechos",
+      "path5Badge": "Ayudando a un amigo o familiar",
+      "path5Headline": "Ayudando a Alguien que Fue Arrestado",
+      "path5Desc": "Encuéntrelos, entienda lo que está pasando y aprenda qué puede hacer ahora.",
+      "path5Cta": "Guía de Apoyo Familiar",
+      "searchPlaceholder": "Buscar derechos, procesos judiciales, recursos..."
     },
     "urgentHelp": {
       "modalTitle": "Situación Legal Urgente",
@@ -139,7 +130,45 @@ export default {
       "publicDefenderTitle": "4. Solicite un Abogado de Oficio",
       "publicDefenderText": "Si no puede pagar un abogado, el tribunal debe asignarle uno sin costo. Dígale al juez en su primera comparecencia que no puede pagar un abogado y que necesita uno de oficio.",
       "rememberTitle": "Recuerde:",
-      "rememberText": "Todo lo que diga puede y será usado en su contra en la corte. La mejor protección es permanecer en silencio hasta tener representación legal."
+      "rememberText": "Todo lo que diga puede y será usado en su contra en la corte. La mejor protección es permanecer en silencio hasta tener representación legal.",
+      "triageLead": "¿Qué describe mejor su situación ahora mismo?",
+      "scenario1Label": "Acabo de ser arrestado o estoy actualmente bajo custodia",
+      "scenario1Sub": "Qué hacer en las próximas horas",
+      "scenario2Label": "Me han acusado y liberado — tengo una fecha de tribunal próxima",
+      "scenario2Sub": "Lo que necesita hacer antes de su primera comparecencia",
+      "scenario3Label": "Alguien que conozco fue arrestado y estoy tratando de ayudar",
+      "scenario3Sub": "Cómo encontrarlos y qué hacer",
+      "scenario4Label": "La policía quiere hablar conmigo / puede que me arresten pronto",
+      "scenario4Sub": "Qué hacer antes de que ocurra un arresto",
+      "back": "← Atrás",
+      "chargedSectionTitle": "Antes de su primera fecha de tribunal",
+      "chargedStep1Title": "Consiga un abogado antes de comparecer",
+      "chargedStep1Body": "Si no puede pagar uno, contacte a la oficina del defensor público en el condado donde fue acusado de inmediato. No vaya a su primera comparecencia sin representación si puede evitarlo.",
+      "chargedStep2Title": "Las conversaciones sobre su caso no están protegidas",
+      "chargedStep2Body": "Cualquier cosa que diga a amigos, familiares o publique pueden obtenerla los fiscales. Esas personas pueden ser obligadas por ley a testificar sobre lo que usted les dijo.",
+      "chargedStep3Title": "Entienda sus condiciones de fianza",
+      "chargedStep3Body": "Si fue liberado bajo fianza, lea cada condición con cuidado. Violar cualquier condición, incluso accidentalmente, resulta en re-arresto inmediato.",
+      "chargedStep4Title": "No falte a su fecha de tribunal",
+      "chargedStep4Body": "Faltar a una audiencia resulta en la emisión de una orden de arresto. Configure múltiples recordatorios.",
+      "chargedLinkLabel": "Ver Hoja de Ruta del Caso",
+      "chargedLinkSub": "Orientación personalizada para su situación",
+      "familySectionTitle": "Cómo ayudar a alguien que fue arrestado",
+      "familyStep1Title": "Averigüe dónde está",
+      "familyStep1Body": "Llame a la cárcel del condado o use un localizador de reclusos en línea. Necesitará su nombre legal completo y fecha de nacimiento.",
+      "familyStep2Title": "Consígale representación legal",
+      "familyStep2Body": "Contacte a un abogado defensor penal o a la oficina del defensor público en el condado donde fue arrestado. Hágalo antes de la audiencia de fianza si es posible.",
+      "familyStep3Title": "Aprenda su número de fichaje y los cargos",
+      "familyStep3Body": "Lo necesitará para pagar la fianza, contactar a su abogado y estar informado sobre las fechas del tribunal.",
+      "familyStep4Title": "Tenga cuidado con lo que dice en las llamadas",
+      "familyStep4Body": "Las llamadas de la cárcel se graban. No discuta el caso ni les pida que hagan nada relacionado con el incidente.",
+      "familyLink1Label": "Guía Completa para Familias",
+      "familyLink1Sub": "Encontrar, contactar y apoyar a alguien bajo custodia",
+      "familyLink2Label": "Llamadas desde la Cárcel",
+      "familyLink2Sub": "Qué decir y qué evitar",
+      "full24HourGuide": "Guía Completa de 24 Horas",
+      "full24HourGuideSub": "Paso a paso a través del arresto, fianza y audiencia",
+      "jailPhoneCallGuide": "Guía de Llamadas desde la Cárcel",
+      "jailPhoneCallGuideSub": "Qué decir, y qué nunca decir"
     },
     "whatWeDo": {
       "title": "Lo Que Hacemos",
@@ -246,7 +275,14 @@ export default {
     "viewOnGithub": "Ver en GitHub",
     "viewOnX": "Seguir en X",
     "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales. Toda información se elimina después de la sesión.",
-    "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional."
+    "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional.",
+    "legalDisclaimer": "Solo información legal general — no sustituye el asesoramiento legal profesional. Consulte siempre a un abogado calificado para su situación específica."
+  },
+  "directory": {
+    "hero": {
+      "title": "Directorio del Sitio",
+      "subtitle": "Cada página de OpenDefender, organizada según lo que necesita."
+    }
   },
   "beta": {
     "label": "Beta",
@@ -5313,8 +5349,9 @@ export default {
       "pills": {
         "first24": "Primeras 24 Horas",
         "caseGuidance": "Orientación de Caso",
-        "lifeSupport": "Apoyo para la Vida",
-        "immigration": "Inmigración"
+        "lifeSupport": "Vida y Familia",
+        "immigration": "Inmigración",
+        "familySupport": "Amigos y Familia"
       }
     },
     "paths": {
@@ -5340,7 +5377,7 @@ export default {
       },
       "path3": {
         "badge": "La vida no se detiene mientras su caso está pendiente",
-        "headline": "Recursos de Apoyo para la Vida",
+        "headline": "Recursos de Vida y Familia",
         "subhead": "Un caso legal afecta cada parte de su vida. Estos recursos ayudan con empleo, finanzas, vivienda, salud mental y más — para que pueda mantenerse estable mientras su caso avanza.",
         "bullet1": "Derechos laborales cuando enfrenta cargos o después de una condena",
         "bullet2": "Asistencia financiera de emergencia y fondos de fianza",
@@ -5357,6 +5394,16 @@ export default {
         "bullet3": "Orientación para familias de estatus mixto",
         "bullet4": "Orientación de inmigración impulsada por IA en inglés, español y chino",
         "cta": "Orientación de Inmigración"
+      },
+      "path5": {
+        "badge": "Ayudando a alguien que fue arrestado",
+        "headline": "Apoyo para Amigos y Familia",
+        "subhead": "Cuando alguien que le importa es arrestado, usted puede ser el recurso más importante que tienen en las primeras horas. Esta guía cubre cómo encontrarlos, qué puede hacer legalmente y cómo apoyarlos sin empeorar su situación.",
+        "bullet1": "Localizador de reclusos por estado — encuentre a cualquier persona bajo custodia local, estatal o federal",
+        "bullet2": "Qué decir (y no decir) en llamadas grabadas de la cárcel",
+        "bullet3": "Cómo conseguirles representación legal antes de la audiencia de fianza",
+        "bullet4": "Entender las condiciones de fianza y cómo pagarla",
+        "cta": "Abrir Guía Familiar"
       }
     },
     "flow": {
@@ -5386,6 +5433,23 @@ export default {
         "path": "Orientación Personalizada",
         "action": "Se acerca la fecha del tribunal. Pregunta qué esperar en la audiencia de presentación.",
         "detail": "La orientación explica el cronograma, las opciones de acuerdo y cómo hablar con su defensor público."
+      }
+    },
+    "familyNote": {
+      "label": "Para Amigos y Familia",
+      "title": "Lo que hizo su familia en paralelo",
+      "subtitle": "Al mismo tiempo, el esposo de María usó OpenDefender para ayudar desde afuera.",
+      "step1": {
+        "time": "Día 0",
+        "path": "Amigos y Familia",
+        "action": "Recibe la llamada. Abre la guía de Amigos y Familia.",
+        "detail": "Encuentra en qué cárcel está con el localizador de reclusos. Aprende su número de fichaje y que las llamadas grabadas no deben discutir el caso."
+      },
+      "step2": {
+        "time": "Día 1",
+        "path": "Amigos y Familia",
+        "action": "Paga la fianza y contacta la oficina del defensor público.",
+        "detail": "Aprende la diferencia entre un bono de fianza y un pago en efectivo. Pregunta al defensor público sobre la fecha de la audiencia y qué llevar."
       }
     },
     "inventory": {

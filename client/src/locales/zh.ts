@@ -59,29 +59,12 @@ export default {
   },
   "home": {
     "hero": {
-      "title1": "了解你的权利。",
-      "title2": "保护你的未来。",
-      "subtitle": "获取免费的法律指导，了解法庭流程，获取资源帮助你应对刑事司法系统。",
-      "urgentHelpButton": "紧急求助",
+      "headline": "被捕或面临指控？免费信息。立即获取。",
+      "subtitle": "当警察联系您或您被逮捕时，接下来的几个小时至关重要。从第一次接触到整个案件，获取免费、简明的帮助——以及住房、就业和家庭方面的支持。",
       "urgentStripMessage": "正在被逮捕或正在出庭吗？",
       "urgentStripCta": "立即获取帮助",
-      "getStartedButton": "开始使用",
-      "navigatingToolButton": "浏览所有资源",
-      "urgentHelpNotice": "如果你正在被逮捕或正在出庭，请点击\"紧急求助\"获取即时指导。",
-      "path1Label": "前24小时",
-      "path1Desc": "逐步了解逮捕、登记入册、保释及首次出庭",
-      "path2Label": "案件路线图",
-      "path2Desc": "根据您的指控、所在州和案件阶段，用简单语言说明您可以期待什么",
-      "path3Label": "生活支持",
-      "path3Desc": "住房、福利、就业和家庭资源",
-      "path4Label": "移民事务",
-      "path4Desc": "移民事务相关权利与资源",
-      "rotatingPrefix": "法律指导，做到",
-      "rotatingWord1": "清晰",
-      "rotatingWord2": "免费",
-      "rotatingWord3": "专属",
-      "rotatingWord4": "实用",
-      "rotatingWord5": "及时"
+      "primaryCta": "我现在需要帮助",
+      "secondaryCta": "浏览所有资源"
     },
     "features": {
       "title": "基于真实法律数据",
@@ -97,32 +80,40 @@ export default {
       "analyticsStatus": "部分完成"
     },
     "trust": {
-      "title": "建立在信任和透明之上",
-      "subtitle": "建立在经过验证的法律数据、可信的倡导资源以及对您隐私的承诺之上",
-      "verifiedTitle": "当前且经过验证的信息",
-      "verifiedDesc": "定期对照现行法规、法院判决和法律程序进行验证。",
+      "title": "我们的立场",
+      "freeTitle": "始终免费",
+      "freeDesc": "了解您的权利不应花钱。OpenDefender对任何有需要的人免费开放。",
       "privacyTitle": "隐私受到保护",
-      "privacyDesc": "不存储个人信息，所有会话数据自动删除",
-      "currentTitle": "早期倡导来源",
-      "currentDesc": "来源于法律援助组织、公共辩护人和可信赖的倡导者。",
-      "disclaimerTitle": "法律免责声明：",
-      "disclaimerText": "本网站仅提供一般性法律信息，不能替代专业法律建议。请务必就你的具体情况咨询合格的律师。所提供的信息可能未反映最新的法律动态，不应作为法律意见依赖。"
+      "privacyDesc": "不存储个人信息。您离开时所有会话数据将被删除。",
+      "earlyKnowledgeTitle": "早了解，结果更好",
+      "earlyKnowledgeDesc": "研究表明，早期获得法律信息会带来更好的案件结果。保释条件、指控和警察问询发生在大多数人见到律师之前。我们的存在就是为了填补这一空白。",
+      "multilingualTitle": "提供您所用的语言",
+      "multilingualDesc": "英语、西班牙语和中文。了解您的权利不应需要翻译。"
     },
-    "commitment": {
-      "title": "我们的承诺",
-      "subtitle": "",
-      "pledge1Title": "免费获取",
-      "pledge1Desc": "获取法律信息不应取决于您的收入。OpenDefender是免费的。",
-      "pledge2Title": "您的隐私，受到保护",
-      "pledge2Desc": "您的会话数据经过加密，并在您离开时自动删除。我们从不存储、出售或共享您的信息。",
-      "pledge3Title": "通俗语言，不用法律术语",
-      "pledge3Desc": "每一项解释都以易于理解的方式写成，而非为了给人留下深刻印象。用有意义的语言提供准确的法律信息。",
-      "pledge4Title": "经过验证，而非猜测",
-      "pledge4Desc": "我们的AI指导经过真实法规数据库和判例法的验证。我们的教育内容经过仔细研究和审查，但您应始终向律师确认。",
-      "pledge5Title": "提供您所用的语言",
-      "pledge5Desc": "英语、西班牙语和中文。因为了解您的权利不应需要翻译。",
-      "pledge6Title": "早了解，结果更好",
-      "pledge6Desc": "研究一致表明，早期获得法律信息会带来更好的案件结果。保释条件、初始指控和警察问询都发生在大多数人见到律师之前。我们的存在就是为了填补这一空白。"
+    "paths": {
+      "situationLabel": "您的情况是什么？",
+      "situationSubtitle": "选择您的路径。大多数人使用不止一条。",
+      "path1Badge": "刚被逮捕或最近获释",
+      "path1Headline": "前24小时",
+      "path1Desc": "从逮捕到首次出庭的逐步指导。",
+      "path1Cta": "从这里开始",
+      "path2Badge": "被指控，需要了解流程",
+      "path2Headline": "案件路线图",
+      "path2Desc": "用简单语言说明您案件每个阶段的情况。",
+      "path2Cta": "查看路线图",
+      "path3Badge": "案件审理期间的生活困难",
+      "path3Headline": "生活与家庭",
+      "path3Desc": "住房、就业、托儿和心理健康资源。",
+      "path3Cta": "寻找支持",
+      "path4Badge": "移民或混合身份家庭问题",
+      "path4Headline": "移民权利",
+      "path4Desc": "美国所有人在ICE接触时的权利。",
+      "path4Cta": "了解您的权利",
+      "path5Badge": "帮助朋友或家人",
+      "path5Headline": "帮助被逮捕的人",
+      "path5Desc": "找到他们，了解情况，学习您现在可以做什么。",
+      "path5Cta": "家庭支持指南",
+      "searchPlaceholder": "搜索权利、法庭流程、资源..."
     },
     "urgentHelp": {
       "modalTitle": "紧急法律情况",
@@ -139,7 +130,45 @@ export default {
       "publicDefenderTitle": "4. 申请法院指派律师",
       "publicDefenderText": "如果您请不起律师，法院必须免费为您指派一位。在第一次出庭时告诉法官您无法负担律师费用，并需要法院指派辩护律师。",
       "rememberTitle": "请记住：",
-      "rememberText": "你说的任何话都可能在法庭上被用作对你不利的证据。保护自己的最好方式就是在有律师之前保持沉默。"
+      "rememberText": "你说的任何话都可能在法庭上被用作对你不利的证据。保护自己的最好方式就是在有律师之前保持沉默。",
+      "triageLead": "哪项最能描述您目前的情况？",
+      "scenario1Label": "我刚被逮捕或目前在押",
+      "scenario1Sub": "接下来几小时该怎么做",
+      "scenario2Label": "我被指控并获释——有即将到来的庭审日期",
+      "scenario2Sub": "首次出庭前您需要做什么",
+      "scenario3Label": "我认识的人被逮捕，我想帮助他们",
+      "scenario3Sub": "如何找到他们以及该怎么做",
+      "scenario4Label": "警察想和我谈话/我可能很快会被逮捕",
+      "scenario4Sub": "逮捕发生前该怎么做",
+      "back": "← 返回",
+      "chargedSectionTitle": "首次庭审日期前",
+      "chargedStep1Title": "出庭前找好律师",
+      "chargedStep1Body": "如果您请不起律师，请立即联系您被指控所在县的公设辩护人办公室。如果可以避免的话，不要在没有代理的情况下首次出庭。",
+      "chargedStep2Title": "关于您案件的谈话不受保护",
+      "chargedStep2Body": "您告诉朋友、家人的任何话或公开发布的内容都可能被检察官获取。这些人可能依法被要求出庭作证讲述您告诉他们的内容。",
+      "chargedStep3Title": "了解您的保释条件",
+      "chargedStep3Body": "如果您保释获释，请仔细阅读每一个条件。违反任何条件，即使是意外，都将导致立即重新被捕。",
+      "chargedStep4Title": "不要错过庭审日期",
+      "chargedStep4Body": "缺席听证将导致发出逮捕令。请设置多个提醒。",
+      "chargedLinkLabel": "获取案件路线图",
+      "chargedLinkSub": "针对您情况的个性化指导",
+      "familySectionTitle": "如何帮助被逮捕的人",
+      "familyStep1Title": "找出他们在哪里",
+      "familyStep1Body": "拨打县监狱电话或使用在线囚犯查询系统。您需要他们的全名和出生日期。",
+      "familyStep2Title": "为他们获得法律代理",
+      "familyStep2Body": "联系刑事辩护律师或被逮捕所在县的公设辩护人办公室。如果可能，在保释听证前完成此事。",
+      "familyStep3Title": "了解他们的登记号码和指控",
+      "familyStep3Body": "您需要这些信息来支付保释金、联系律师并了解庭审日期。",
+      "familyStep4Title": "注意您在电话中说的话",
+      "familyStep4Body": "监狱电话是录音的。不要讨论案件或要求他们做任何与事件相关的事情。",
+      "familyLink1Label": "完整家庭指南",
+      "familyLink1Sub": "寻找、联系并支持在押人员",
+      "familyLink2Label": "监狱电话",
+      "familyLink2Sub": "该说什么以及该避免什么",
+      "full24HourGuide": "完整24小时指南",
+      "full24HourGuideSub": "逐步了解逮捕、保释和听证",
+      "jailPhoneCallGuide": "监狱电话指南",
+      "jailPhoneCallGuideSub": "该说什么以及永远不该说什么"
     },
     "whatWeDo": {
       "title": "我们做什么",
@@ -246,7 +275,14 @@ export default {
     "viewOnGithub": "在 GitHub 上查看",
     "viewOnX": "在 X 上关注",
     "privacyNotice": "隐私优先：我们不存储你的个人数据。所有输入在会话结束后删除。",
-    "copyright": "© 2026 OpenDefender。不能替代专业法律建议。"
+    "copyright": "© 2026 OpenDefender。不能替代专业法律建议。",
+    "legalDisclaimer": "仅为一般法律信息——不能替代专业法律建议。请就您的具体情况咨询合格律师。"
+  },
+  "directory": {
+    "hero": {
+      "title": "网站目录",
+      "subtitle": "OpenDefender的每个页面，按您的需求分类整理。"
+    }
   },
   "beta": {
     "label": "Beta",
@@ -5313,8 +5349,9 @@ export default {
       "pills": {
         "first24": "被捕后24小时",
         "caseGuidance": "案件指导",
-        "lifeSupport": "生活支持",
-        "immigration": "移民"
+        "lifeSupport": "生活与家庭",
+        "immigration": "移民",
+        "familySupport": "朋友与家人"
       }
     },
     "paths": {
@@ -5357,6 +5394,16 @@ export default {
         "bullet3": "混合身份家庭指导",
         "bullet4": "AI驱动的移民指导，提供英语、西班牙语和中文",
         "cta": "移民指导"
+      },
+      "path5": {
+        "badge": "帮助被逮捕的人",
+        "headline": "朋友与家庭支持",
+        "subhead": "当您关心的人被逮捕时，您可能是他们在最初几小时内最重要的资源。本指南介绍如何找到他们、您可以合法做什么，以及如何在不使情况变差的情况下支持他们。",
+        "bullet1": "按州查找囚犯——在地方、州或联邦拘留设施中找到任何人",
+        "bullet2": "在录音监狱电话中该说什么（以及不该说什么）",
+        "bullet3": "如何在保释听证前为他们获得法律代理",
+        "bullet4": "了解保释条件以及如何支付保释金",
+        "cta": "打开家庭指南"
       }
     },
     "flow": {
@@ -5386,6 +5433,23 @@ export default {
         "path": "个性化指导",
         "action": "开庭日期临近。她询问出庭时的预期情况。",
         "detail": "指导解释了时间安排、认罪选项以及如何与公设辩护人沟通。"
+      }
+    },
+    "familyNote": {
+      "label": "朋友与家人",
+      "title": "她的家人同时采取的行动",
+      "subtitle": "与玛丽亚同时，她的丈夫使用OpenDefender从外部提供帮助。",
+      "step1": {
+        "time": "第0天",
+        "path": "朋友与家人",
+        "action": "接到电话。打开朋友与家人指南。",
+        "detail": "使用囚犯查询系统找到她在哪个拘留所。获取她的登记号码，并了解录音电话不应讨论案件。"
+      },
+      "step2": {
+        "time": "第1天",
+        "path": "朋友与家人",
+        "action": "支付保释金并联系公设辩护人办公室。",
+        "detail": "了解保释债券和现金支付的区别。询问公设辩护人关于出庭日期和需要带什么的问题。"
       }
     },
     "inventory": {

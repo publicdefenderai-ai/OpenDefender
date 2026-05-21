@@ -116,7 +116,10 @@ export function Footer() {
 
       {/* Copyright Bar */}
       <div className="bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-7xl mx-auto px-4 py-4 space-y-1.5">
+          <p className="text-gray-400 text-xs text-center leading-relaxed">
+            {t('footer.legalDisclaimer')}
+          </p>
           <p className="text-gray-300 text-sm text-center">
             {t('footer.copyright')}
           </p>

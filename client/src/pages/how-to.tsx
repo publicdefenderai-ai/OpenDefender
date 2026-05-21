@@ -1,7 +1,6 @@
-import { ChevronRight, Clock, MessageSquare, Heart, Globe, ArrowRight, Shield, Scale, FileText, BookOpen, Users } from "lucide-react";
+import { ChevronRight, Clock, MessageSquare, Heart, Globe, ArrowRight, Shield, Users } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -256,65 +255,34 @@ function ExampleFlow({ steps, label, title, subtitle }: { steps: FlowStep[]; lab
   );
 }
 
-// ─── Site inventory ──────────────────────────────────────────────────────────
+// ─── Friends & Family preview ─────────────────────────────────────────────────
 
-interface ResourceItem {
-  title: string;
-  description: string;
-  link: string;
-}
-
-interface CategorySection {
-  icon: React.ElementType;
-  accent: string;
-  accentBg: string;
-  title: string;
-  description: string;
-  resources: ResourceItem[];
-}
-
-function ResourceLink({ resource, index = 0 }: { resource: ResourceItem; index?: number }) {
+function FamilyPreview() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25, delay: index * 0.05, ease: "easeOut" }}
-    >
-      <Link href={resource.link}>
-        <div className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-border hover:border-primary/30 hover:bg-muted/50 transition-all cursor-pointer group card-press">
-          <div className="min-w-0">
-            <h3 className="text-sm font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
-              {resource.title}
-            </h3>
-            <p className="text-xs text-muted-foreground truncate mt-0.5">{resource.description}</p>
-          </div>
-          <ChevronRight className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary group-active:translate-x-1 transition-all flex-shrink-0 ml-3" />
+    <PreviewChrome url="opendefender.org/friends-family">
+      <div className="bg-[#1d4ed8] px-4 py-3.5">
+        <div className="flex items-center gap-2 mb-1">
+          <Users className="w-4 h-4 text-white/80" />
+          <div className="text-white/50 text-[10px] uppercase tracking-widest">FRIENDS & FAMILY GUIDE</div>
         </div>
-      </Link>
-    </motion.div>
-  );
-}
-
-function InventoryCategory({ cat, idx }: { cat: CategorySection; idx: number }) {
-  return (
-    <ScrollReveal delay={idx * 0.05}>
-      <div className="bg-background rounded-xl border border-border overflow-hidden shadow-sm">
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-border" style={{ background: cat.accentBg }}>
-          <div className="w-6 h-6 rounded flex items-center justify-center flex-shrink-0" style={{ background: cat.accent }}>
-            <cat.icon className="w-3.5 h-3.5 text-white" />
-          </div>
-          <div>
-            <div className="text-sm font-semibold" style={{ color: cat.accent }}>{cat.title}</div>
-            <div className="text-[10px] text-muted-foreground">{cat.description}</div>
-          </div>
-        </div>
-        <div className="p-3 space-y-1">
-          {cat.resources.map((r, i) => (
-            <ResourceLink key={r.title} resource={r} index={i} />
-          ))}
-        </div>
+        <div className="text-white text-base font-bold leading-tight">Helping Someone Who Was Arrested</div>
+        <div className="text-white/60 text-[11px] mt-0.5">What to do when you get the call</div>
       </div>
-    </ScrollReveal>
+      <div className="bg-slate-50 px-4 py-3 space-y-1.5">
+        {[
+          { n: "1", label: "Find which jail they're in", t: "Now", c: "#dc2626" },
+          { n: "2", label: "Get them a lawyer", t: "ASAP", c: "#d97706" },
+          { n: "3", label: "Learn the bail process", t: "Day 1", c: "#2563eb" },
+          { n: "4", label: "Safe phone call guide", t: "Ongoing", c: "#059669" },
+        ].map(({ n, label, t, c }) => (
+          <div key={n} className="flex items-center gap-2.5 px-2.5 py-2 rounded-lg bg-white border border-slate-100 shadow-sm">
+            <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0" style={{ background: c }}>{n}</div>
+            <div className="flex-1 min-w-0 text-[11px] font-semibold text-slate-700 truncate">{label}</div>
+            <div className="text-[10px] text-slate-400 flex-shrink-0">{t}</div>
+          </div>
+        ))}
+      </div>
+    </PreviewChrome>
   );
 }
 
@@ -428,86 +396,23 @@ export default function HowTo() {
       accent: "#92400e",
       accentBg: "#fef3e2",
     },
-  ];
-
-  const inventoryCategories: CategorySection[] = [
     {
-      icon: MessageSquare, accent: "#0f766e", accentBg: "#eef9f8",
-      title: t("howTo.sections.getHelp.title"),
-      description: t("howTo.sections.getHelp.description"),
-      resources: [
-        { title: t("howTo.sections.getHelp.caseGuidance.title"), description: t("howTo.sections.getHelp.caseGuidance.description"), link: "/case-guidance" },
-        { title: t("howTo.sections.getHelp.aiChat.title"), description: t("howTo.sections.getHelp.aiChat.description"), link: "/chat" },
-        { title: t("howTo.sections.getHelp.documentSummarizer.title"), description: t("howTo.sections.getHelp.documentSummarizer.description"), link: "/document-summarizer" },
-        { title: t("howTo.sections.getHelp.letterGenerator.title"), description: t("howTo.sections.getHelp.letterGenerator.description"), link: "/letter-generator" },
-        { title: t("howTo.sections.getHelp.first24Hours.title"), description: t("howTo.sections.getHelp.first24Hours.description"), link: "/first-24-hours" },
+      number: "5", icon: Users,
+      badge: t("howTo.paths.path5.badge"),
+      headline: t("howTo.paths.path5.headline"),
+      subhead: t("howTo.paths.path5.subhead"),
+      bullets: [
+        t("howTo.paths.path5.bullet1"),
+        t("howTo.paths.path5.bullet2"),
+        t("howTo.paths.path5.bullet3"),
+        t("howTo.paths.path5.bullet4"),
       ],
-    },
-    {
-      icon: Scale, accent: "#1e3a5f", accentBg: "#eef2f8",
-      title: t("howTo.sections.knowYourRights.title"),
-      description: t("howTo.sections.knowYourRights.description"),
-      resources: [
-        { title: t("howTo.sections.knowYourRights.constitutionalRights.title"), description: t("howTo.sections.knowYourRights.constitutionalRights.description"), link: "/rights-info" },
-        { title: t("howTo.rightToCounsel"), description: t("howTo.rightToCounselDesc"), link: "/right-to-counsel" },
-        { title: t("howTo.warrants"), description: t("howTo.warrantsDesc"), link: "/warrants" },
-        { title: t("howTo.sections.knowYourRights.caseTimeline.title"), description: t("howTo.sections.knowYourRights.caseTimeline.description"), link: "/case-timeline" },
-        { title: t("howTo.sections.knowYourRights.friendsFamily.title"), description: t("howTo.sections.knowYourRights.friendsFamily.description"), link: "/friends-family" },
-        { title: t("howTo.collateralConsequences"), description: t("howTo.collateralConsequencesDesc"), link: "/support/reputation" },
-        { title: t("howTo.sections.knowYourRights.mockQA.title"), description: t("howTo.sections.knowYourRights.mockQA.description"), link: "/resources" },
-      ],
-    },
-    {
-      icon: Users, accent: "#5b21b6", accentBg: "#f3effe",
-      title: t("howTo.sections.findResources.title"),
-      description: t("howTo.sections.findResources.description"),
-      resources: [
-        { title: t("howTo.sections.findResources.publicDefenders.title"), description: t("howTo.sections.findResources.publicDefenders.description"), link: "/legal-aid" },
-        { title: t("howTo.sections.findResources.legalAid.title"), description: t("howTo.sections.findResources.legalAid.description"), link: "/legal-aid" },
-        { title: t("howTo.sections.findResources.diversionPrograms.title"), description: t("howTo.sections.findResources.diversionPrograms.description"), link: "/diversion-programs" },
-        { title: t("howTo.sections.findResources.recordExpungement.title"), description: t("howTo.sections.findResources.recordExpungement.description"), link: "/support/reputation" },
-        { title: t("howTo.immigrationGuidance"), description: t("howTo.immigrationGuidanceDesc"), link: "/immigration-guidance" },
-      ],
-    },
-    {
-      icon: Heart, accent: "#8b2252", accentBg: "#f8eef3",
-      title: t("howTo.sections.lifeSupport.title"),
-      description: t("howTo.sections.lifeSupport.description"),
-      resources: [
-        { title: t("howTo.sections.lifeSupport.supportHub.title"), description: t("howTo.sections.lifeSupport.supportHub.description"), link: "/support" },
-        { title: t("howTo.sections.lifeSupport.employment.title"), description: t("howTo.sections.lifeSupport.employment.description"), link: "/support/employment" },
-        { title: t("howTo.sections.lifeSupport.finances.title"), description: t("howTo.sections.lifeSupport.finances.description"), link: "/support/finances" },
-        { title: t("howTo.sections.lifeSupport.mentalHealth.title"), description: t("howTo.sections.lifeSupport.mentalHealth.description"), link: "/support/mental-health" },
-        { title: t("howTo.sections.lifeSupport.transportation.title"), description: t("howTo.sections.lifeSupport.transportation.description"), link: "/support/transportation" },
-        { title: t("howTo.sections.lifeSupport.childcare.title"), description: t("howTo.sections.lifeSupport.childcare.description"), link: "/support/childcare" },
-        { title: t("howTo.sections.lifeSupport.courtLogistics.title"), description: t("howTo.sections.lifeSupport.courtLogistics.description"), link: "/support/court-logistics" },
-        { title: t("howTo.housing"), description: t("howTo.housingDesc"), link: "/support/housing" },
-        { title: t("howTo.familyCare"), description: t("howTo.familyCareDesc"), link: "/support/family-care" },
-        { title: t("howTo.personalHealth"), description: t("howTo.personalHealthDesc"), link: "/support/personal-health" },
-        { title: t("howTo.reputation"), description: t("howTo.reputationDesc"), link: "/support/reputation" },
-        { title: t("howTo.reentry"), description: t("howTo.reentryDesc"), link: "/support/reentry" },
-        { title: t("howTo.sections.getHelp.letterGenerator.title"), description: t("howTo.sections.getHelp.letterGenerator.description"), link: "/letter-generator" },
-      ],
-    },
-    {
-      icon: BookOpen, accent: "#374151", accentBg: "#f3f4f6",
-      title: t("howTo.sections.reference.title"),
-      description: t("howTo.sections.reference.description"),
-      resources: [
-        { title: t("howTo.sections.reference.legalGlossary.title"), description: t("howTo.sections.reference.legalGlossary.description"), link: "/legal-glossary" },
-        { title: t("howTo.sections.reference.courtLocator.title"), description: t("howTo.sections.reference.courtLocator.description"), link: "/court-locator" },
-        { title: t("howTo.sections.reference.statuteLookup.title"), description: t("howTo.sections.reference.statuteLookup.description"), link: "/statutes" },
-        { title: t("howTo.sections.reference.documentLibrary.title"), description: t("howTo.sections.reference.documentLibrary.description"), link: "/document-library" },
-      ],
-    },
-    {
-      icon: FileText, accent: "#92400e", accentBg: "#fef3e2",
-      title: t("howTo.sections.attorneyTools.title"),
-      description: t("howTo.sections.attorneyTools.description"),
-      resources: [
-        { title: t("howTo.sections.attorneyTools.attorneyPortal.title"), description: t("howTo.sections.attorneyTools.attorneyPortal.description"), link: "/attorney" },
-        { title: t("howTo.sections.attorneyTools.courtRecords.title"), description: t("howTo.sections.attorneyTools.courtRecords.description"), link: "/court-records" },
-      ],
+      link: "/friends-family",
+      cta: t("howTo.paths.path5.cta"),
+      preview: <FamilyPreview />,
+      flip: false,
+      accent: "#1d4ed8",
+      accentBg: "#eff6ff",
     },
   ];
 
@@ -533,11 +438,11 @@ export default function HowTo() {
               {/* Quick-jump pills */}
               <div className="flex flex-wrap justify-center gap-2 mt-6">
                 {[
-                  { label: t("howTo.hero.pills.first24"),      id: "path-1" },
-                  { label: t("howTo.hero.pills.caseGuidance"), id: "path-2" },
-                  { label: t("howTo.hero.pills.lifeSupport"),  id: "path-3" },
-                  { label: t("howTo.hero.pills.immigration"),  id: "path-4" },
-                  { label: t("howTo.hero.pills.directory", "Directory"), id: "full-directory" },
+                  { label: t("howTo.hero.pills.first24"),       id: "path-1" },
+                  { label: t("howTo.hero.pills.caseGuidance"),  id: "path-2" },
+                  { label: t("howTo.hero.pills.lifeSupport"),   id: "path-3" },
+                  { label: t("howTo.hero.pills.immigration"),   id: "path-4" },
+                  { label: t("howTo.hero.pills.familySupport"), id: "path-5" },
                 ].map(({ label, id }) => (
                   <button
                     key={label}
@@ -556,7 +461,7 @@ export default function HowTo() {
         </div>
       </section>
 
-      {/* Four paths */}
+      {/* Five paths */}
       <section className="py-8 md:py-10">
         <div className="max-w-5xl mx-auto px-4 space-y-6">
           {paths.map((path, i) => (
@@ -569,20 +474,60 @@ export default function HowTo() {
         </div>
       </section>
 
-      {/* Full site inventory */}
-      <section id="full-directory" className="py-12 bg-muted/20">
-        <div className="max-w-5xl mx-auto px-4">
+      {/* Example journey — Maria's case */}
+      <ExampleFlow
+        steps={flowSteps}
+        label={t("howTo.flow.label")}
+        title={t("howTo.flow.title")}
+        subtitle={t("howTo.flow.subtitle")}
+      />
+
+      {/* Family member parallel journey */}
+      <section className="py-12 bg-blue-50/50 dark:bg-blue-950/10 border-t border-blue-100 dark:border-blue-900/30">
+        <div className="max-w-3xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-8">
-              <h2 className="text-xl font-bold text-foreground mb-2">{t("howTo.inventory.title")}</h2>
-              <p className="text-sm text-muted-foreground">{t("howTo.inventory.subtitle")}</p>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 mb-4">
+                {t("howTo.flow.familyNote.label")}
+              </div>
+              <h2 className="text-2xl font-bold text-foreground mb-3">{t("howTo.flow.familyNote.title")}</h2>
+              <p className="text-muted-foreground max-w-xl mx-auto text-[15px]">{t("howTo.flow.familyNote.subtitle")}</p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {inventoryCategories.map((cat, i) => (
-              <InventoryCategory key={cat.title} cat={cat} idx={i} />
-            ))}
+          <div className="relative">
+            <div className="absolute left-[99px] top-8 bottom-8 w-px bg-blue-200 dark:bg-blue-800 hidden sm:block" />
+            <div className="space-y-5">
+              {[
+                { step: "step1", accent: "#1d4ed8", accentBg: "#eff6ff" },
+                { step: "step2", accent: "#1d4ed8", accentBg: "#eff6ff" },
+              ].map(({ step, accent, accentBg }, i) => (
+                <ScrollReveal key={step} delay={i * 0.08}>
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="w-16 sm:w-20 text-right flex-shrink-0 pt-2.5">
+                      <span className="text-xs font-bold text-muted-foreground">{t(`howTo.flow.familyNote.${step}.time`)}</span>
+                    </div>
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 z-10 shadow-sm" style={{ background: accent }}>
+                      <Users className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1 bg-background rounded-xl border border-blue-100 dark:border-blue-900 p-4 shadow-sm">
+                      <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-2" style={{ background: accentBg, color: accent }}>{t(`howTo.flow.familyNote.${step}.path`)}</span>
+                      <p className="text-sm font-semibold text-foreground mb-1">{t(`howTo.flow.familyNote.${step}.action`)}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{t(`howTo.flow.familyNote.${step}.detail`)}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
+          <ScrollReveal delay={0.2}>
+            <div className="mt-8 text-center">
+              <Link href="/friends-family">
+                <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors">
+                  {t("howTo.paths.path5.cta")} <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
