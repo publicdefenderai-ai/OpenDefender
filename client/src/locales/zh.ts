@@ -114,6 +114,7 @@ export default {
       "path5Headline": "帮助被逮捕的人",
       "path5Desc": "找到他们，了解情况，学习您现在可以做什么。",
       "path5Cta": "家庭支持指南",
+      "howToLink": "不确定哪条路径适合您？查看五条路径如何协同工作 →",
       "searchPlaceholder": "搜索权利、法庭流程、资源..."
     },
     "urgentHelp": {

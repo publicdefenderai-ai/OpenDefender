@@ -228,8 +228,19 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
+          {/* How-to link */}
+          <ScrollReveal delay={0.28}>
+            <div className="mt-4 text-center">
+              <Link href="/how-to">
+                <span className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2 hover:no-underline cursor-pointer">
+                  {t("home.paths.howToLink")}
+                </span>
+              </Link>
+            </div>
+          </ScrollReveal>
+
           {/* Search bar */}
-          <ScrollReveal delay={0.3}>
+          <ScrollReveal delay={0.35}>
             <form onSubmit={handleSearch} className="mt-6 mb-2">
               <div className="relative max-w-xl mx-auto">
                 <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />

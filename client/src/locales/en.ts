@@ -118,6 +118,7 @@ export default {
       "path5Headline": "Helping Someone Who Was Arrested",
       "path5Desc": "Find them, understand what's happening, and learn what you can do right now.",
       "path5Cta": "Family Support Guide",
+      "howToLink": "Not sure which path fits? See how the five paths work together →",
       "searchPlaceholder": "Search rights, court processes, resources..."
     },
     "urgentHelp": {

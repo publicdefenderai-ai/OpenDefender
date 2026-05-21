@@ -114,6 +114,7 @@ export default {
       "path5Headline": "Ayudando a Alguien que Fue Arrestado",
       "path5Desc": "Encuéntrelos, entienda lo que está pasando y aprenda qué puede hacer ahora.",
       "path5Cta": "Guía de Apoyo Familiar",
+      "howToLink": "¿No sabe qué camino elegir? Vea cómo funcionan los cinco caminos juntos →",
       "searchPlaceholder": "Buscar derechos, procesos judiciales, recursos..."
     },
     "urgentHelp": {
