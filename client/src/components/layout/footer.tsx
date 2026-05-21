@@ -73,8 +73,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/how-to" className="text-gray-300 hover:text-white transition-colors font-medium">
-                  {t('footer.allResources')}
+                <Link href="/court-locator" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.findLocalCourts')}
                 </Link>
               </li>
             </ul>
@@ -90,18 +90,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/right-to-counsel" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.rightToCounsel')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/tech-docs" className="text-gray-300 hover:text-white transition-colors">
-                  {t('footer.technicalDocs')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/api-docs" className="text-gray-300 hover:text-white transition-colors">
-                  {t('footer.publicApi')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/widgets" className="text-gray-300 hover:text-white transition-colors">
-                  {t('footer.embeddableWidgets')}
+                  {t('footer.forDevelopers')}
                 </Link>
               </li>
               <li>
