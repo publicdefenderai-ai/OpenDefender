@@ -137,7 +137,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 leading-[1.05] tracking-tight text-white">
-              {t("home.hero.headline")}
+              <span className="text-teal-400">{t("home.hero.headlinePart1")}</span>
+              <br />
+              {t("home.hero.headlinePart2")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}

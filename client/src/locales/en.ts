@@ -63,7 +63,8 @@ export default {
   },
   "home": {
     "hero": {
-      "headline": "Know Your Rights Before You Have a Lawyer.",
+      "headlinePart1": "Know Your Rights",
+      "headlinePart2": "Before You Have a Lawyer.",
       "subtitle": "When police contact you, or you're arrested, the next few hours matter most. Get free, plain-language help from your first encounter through your full case — and support for housing, employment, and family.",
       "urgentStripMessage": "Being arrested or in court right now?",
       "urgentStripCta": "Get immediate help",
