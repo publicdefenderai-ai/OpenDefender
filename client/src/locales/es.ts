@@ -59,7 +59,7 @@ export default {
   },
   "home": {
     "hero": {
-      "headline": "¿Arrestado o Enfrentando Cargos? Información Gratuita. Ahora Mismo.",
+      "headline": "Conozca Sus Derechos Antes de Tener un Abogado.",
       "subtitle": "Cuando la policía lo contacta, o lo arrestan, las próximas horas importan más. Obtenga ayuda gratuita en lenguaje claro desde su primer encuentro hasta su caso completo — y apoyo para vivienda, empleo y familia.",
       "urgentStripMessage": "¿Está siendo arrestado o está en el tribunal ahora mismo?",
       "urgentStripCta": "Obtener ayuda inmediata",
