@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import {
   Home,
   Clock,
@@ -34,7 +33,6 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { BrandShieldIcon } from "@/components/brand-logo";
 
 /* ── Sidebar section map ───────────────────────────────────────── */
 
@@ -186,31 +184,17 @@ export default function AfterDeportation() {
       />
 
       {/* Hero */}
-      <section className="vivid-header-alt text-white py-12 lg:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-slate-500/5" />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20 flex-shrink-0 mt-1">
-                <BrandShieldIcon size={28} light />
-              </div>
-              <div>
-                <Badge className="mb-2 bg-amber-500/20 text-amber-200 border-amber-400/30 text-xs">
-                  {t("afterDeportation.heroTagline")}
-                </Badge>
-                <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                  {t("afterDeportation.heroTitle")}
-                </h1>
-              </div>
-            </div>
-            <p className="text-base text-white/85 max-w-3xl leading-relaxed mt-2">
-              {t("afterDeportation.heroSubtitle")}
-            </p>
-          </motion.div>
+      <section className="vivid-header-alt py-14 md:py-18">
+        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+          <Badge className="mb-4 bg-amber-500/20 text-amber-200 border-amber-400/30 text-xs">
+            {t("afterDeportation.heroTagline")}
+          </Badge>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight mb-5 text-white">
+            {t("afterDeportation.heroTitle")}
+          </h1>
+          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+            {t("afterDeportation.heroSubtitle")}
+          </p>
         </div>
       </section>
 
