@@ -4,7 +4,7 @@
 
 This index documents where every category of data on the OpenDefender platform comes from, what verification processes are in place, and where to look to update the data. It is intended for quality control reviewers, contributors, and maintainers.
 
-Last reviewed: April 2026 (diversion programs section updated after national expansion; sentencing commission offense tables section added)
+Last reviewed: May 2026 (after-deportation page added; /directory and /how-to split into separate pages; immigration guidance updated with USCIS AOS policy memo PM-602-0199; six organizations added to external links table)
 
 ---
 
@@ -340,10 +340,12 @@ The following pages are manually authored and maintained by the platform team. T
 | First 24 Hours After Arrest | `client/src/pages/first-24-hours.tsx` | `/first-24-hours` | 2026-05 | 2027-01 |
 | Right to an Attorney | `client/src/pages/right-to-counsel.tsx` | `/right-to-counsel` | 2026-03 | 2027-01 |
 | Understanding Warrants | `client/src/pages/warrants.tsx` | `/warrants` | 2026-03 | 2027-01 |
-| Immigration Guidance | `client/src/pages/immigration-guidance.tsx` | `/immigration-guidance` | 2026-03 (partial) | 2026-09 |
+| Immigration Guidance | `client/src/pages/immigration-guidance.tsx` | `/immigration-guidance` | 2026-05 (USCIS AOS memo added) | 2026-09 |
+| After Deportation | `client/src/pages/immigration/after-deportation.tsx` | `/immigration-guidance/after-deportation` | 2026-05 (new) | 2026-11 |
 | Friends & Family | `client/src/pages/friends-family.tsx` | `/friends-family` | 2026-05 | 2027-01 |
 | Friends & Family Toolkit | `client/src/pages/friends-family-toolkit.tsx` | `/friends-family/toolkit` | 2026-05 | 2027-01 |
-| Site Directory | `client/src/pages/how-to.tsx` | `/directory` | 2026-05 | 2027-06 |
+| Site Directory | `client/src/pages/directory.tsx` | `/directory` | 2026-05 | 2027-06 |
+| How It Works (Five Paths) | `client/src/pages/how-to.tsx` | `/how-to` | 2026-05 | 2027-06 |
 
 **Merged/redirected pages (May 2026):**
 - Search and Seizure — merged as a tab into `/rights-info`. `client/src/pages/search-seizure.tsx` removed; route `/search-seizure` redirects to `/rights-info`.
@@ -351,7 +353,9 @@ The following pages are manually authored and maintained by the platform team. T
 - Quick Reference Cards — merged into `/rights-info`. Route `/quick-reference` redirects there.
 - Criminal Case Process — redirects from `/process` to `/case-timeline`.
 - Record Expungement — redirects from `/record-expungement` to `/support/reputation`.
-- How To / Directory — `/how-to` now redirects to `/directory` (canonical URL).
+
+**Routing change (May 2026):**
+- `/directory` and `/how-to` are now separate pages (previously both served by `how-to.tsx` with `/how-to` redirecting to `/directory`). `/directory` (site inventory) now uses `directory.tsx`; `/how-to` (five-path explainer with example journeys) uses `how-to.tsx`. Both are canonical.
 
 **Key primary sources across these pages:**
 - U.S. Constitution, Amendments IV, V, VI, VIII, XIV
@@ -541,6 +545,13 @@ The following external organizations are linked from support and resource pages.
 | NADCP Find-a-Drug-Court | https://www.nadcp.org/find-a-drug-court/ | Drug court and problem-solving court locator (all 50 states) |
 | National TASC | https://www.nationaltasc.org | Treatment Accountability for Safer Communities — fallback for states where DHSS sites block automated checks |
 | Cornell LII | https://www.law.cornell.edu/uscode | Federal statute text |
+| Al Otro Lado | https://alotrolado.org | After-deportation: legal services for deportees in Mexico and Central America; cross-border family reunification |
+| RAICES | https://raicestexas.org | After-deportation: legal representation and family reunification services |
+| NILC (National Immigration Law Center) | https://nilc.org | After-deportation: know-your-rights resources and immigration policy guidance |
+| CLINIC (Catholic Legal Immigration Network) | https://cliniclegal.org | After-deportation: referrals to 370+ affiliated immigration legal service providers |
+| Immigration Advocates Network | https://immigrationadvocates.org | After-deportation: free search for immigration legal aid by location |
+| NLIHC (National Low Income Housing Coalition) | https://nlihc.org | After-deportation: emergency rental assistance locator by county |
+| Vera Institute of Justice | https://vera.org | After-deportation: research and resources on immigration detention and deportation |
 
 ---
 
@@ -555,7 +566,7 @@ The charges in `shared/criminal-charges.ts` are based on Model Penal Code patter
 Eligibility criteria, operating hours, phone numbers, and even program existence change often. The quarterly URL check catches dead links but cannot verify whether the program details are still accurate. Diversion program entries should be re-verified against the source court or prosecutor's office at least annually.
 
 **Immigration guidance requires accelerated review.**
-Immigration law and enforcement policy change rapidly. `immigration-guidance.tsx` is on a 6-month review cycle (next due 2026-09) and was only partially reviewed in the March 2026 pass due to file size. Full line-by-line review is outstanding.
+Immigration law and enforcement policy change rapidly. `immigration-guidance.tsx` is on a 6-month review cycle (next due 2026-09). A dated policy alert for USCIS memo PM-602-0199 (adjustment of status policy change, May 22, 2026) was added in May 2026. Full line-by-line review of the page body remains outstanding. The new `after-deportation.tsx` page was added May 2026 and is due for its first review by November 2026.
 
 **BJS analytics integration is in progress.**
 References to Bureau of Justice Statistics (BJS) API integration for crime statistics and NCVS/NIBRS data appear in the codebase but are not yet live. Do not cite these as active data sources.
@@ -577,6 +588,9 @@ Platform content has not been formally reviewed by a licensed attorney as of Mar
 | CalGang "2016 audit" had no auditor attribution | Added "California State Auditor report (Report 2015-130)" | `2b2f6fd` |
 | Synthesized statute codes could pass validator unchecked | Added OpenLaws Tier 3 live citation fallback to validator | `83f3d6c` |
 | No user-facing statute disclaimer on AI guidance | Added standard "Statute Citations" uncertainty entry to all guidance responses | `83f3d6c` |
+| USCIS AOS policy change not reflected on site | Added dated policy alert (PM-602-0199, May 22 2026) to `/immigration-guidance`; updated after-deportation FAQ Q7 | `1cd0214` |
+| After-deportation page had no source inventory entry | Added to Section 8 static editorial pages table with review schedule | This update |
+| /directory and /how-to routing entry was stale (said /how-to redirects to /directory) | Updated to reflect split: both are now canonical separate pages | This update |
 
 ### What has continuous automated validation
 - Federal statute URLs (quarterly)
