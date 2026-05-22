@@ -2295,6 +2295,12 @@ export default {
       "title": "CRÍTICO:",
       "text": "Estos derechos se aplican a TODAS las personas en los Estados Unidos, sin importar su estatus migratorio. Usted tiene protecciones constitucionales incluso durante acciones de cumplimiento de inmigración."
     },
+    "aosNotice": {
+      "date": "Actualización de Política — Mayo 2026",
+      "title": "USCIS cambia cómo se evalúan las solicitudes de tarjeta de residencia dentro de los EE.UU.",
+      "body": "El 22 de mayo de 2026, USCIS emitió el memorando de política PM-602-0199 que indica que el ajuste de estatus — solicitar una tarjeta de residencia mientras se está físicamente en los EE.UU. — ahora se trata como una medida discrecional extraordinaria en lugar de un beneficio estándar. La vía predeterminada es el procesamiento consular en una Embajada o Consulado de los EE.UU. en el extranjero. Esto afecta a las personas que actualmente están en los EE.UU. y que son elegibles para una tarjeta de residencia y planeaban solicitar dentro del país. Incluso los solicitantes que cumplen con todos los requisitos legales pueden ser denegados bajo esta política.",
+      "cta": "Un abogado de inmigración puede explicar lo que esto significa para una situación específica."
+    },
     "emergencyRights": {
       "title": "Derechos Inmediatos Durante Encuentros con ICE",
       "subtitle": "Estos derechos se aplican a TODOS - ciudadanos, no ciudadanos, personas documentadas e indocumentadas",
@@ -5852,7 +5858,7 @@ export default {
       },
       "q7": {
         "question": "¿Puede un cónyuge o hijo ciudadano estadounidense presentar una petición para que la persona deportada regrese legalmente?",
-        "answer": "Los ciudadanos estadounidenses típicamente pueden presentar peticiones para ciertos familiares, incluidos cónyuges y padres. Sin embargo, alguien que ha sido deportado típicamente necesita abordar la prohibición de reingreso antes de que una petición pueda resultar en una visa o tarjeta de residencia. El proceso específico depende de la relación, el tiempo que la persona estuvo en los EE.UU. sin estatus y otros factores. Este proceso típicamente toma años e involucra múltiples agencias gubernamentales. Un abogado de inmigración puede asesorar sobre si este camino está disponible en una situación específica."
+        "answer": "Los ciudadanos estadounidenses típicamente pueden presentar peticiones para ciertos familiares, incluidos cónyuges y padres. Sin embargo, alguien que ha sido deportado típicamente necesita abordar la prohibición de reingreso antes de que una petición pueda resultar en una visa o tarjeta de residencia. El proceso específico depende de la relación, el tiempo que la persona estuvo en los EE.UU. sin estatus y otros factores. Este proceso típicamente toma años e involucra múltiples agencias gubernamentales. Nota: En mayo de 2026, USCIS emitió un memorando de política (PM-602-0199) que endureció los estándares discrecionales para las solicitudes de ajuste de estatus. Dado que las personas deportadas ya procesan a través de consulados en el extranjero, este memorando afecta principalmente los estándares aplicados cuando se revisa cualquier solicitud resultante. Un abogado de inmigración puede asesorar sobre si este camino está disponible y cómo la política actual se aplica a una situación específica."
       }
     }
   }

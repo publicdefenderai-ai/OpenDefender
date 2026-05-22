@@ -2299,6 +2299,12 @@ export default {
       "title": "CRITICAL:",
       "text": "These rights apply to ALL persons in the United States, no matter your citizenship. You have legal protections even during immigration enforcement actions."
     },
+    "aosNotice": {
+      "date": "Policy Update — May 2026",
+      "title": "USCIS changes how green card applications inside the US are evaluated",
+      "body": "On May 22, 2026, USCIS issued policy memo PM-602-0199 indicating that adjustment of status — applying for a green card while physically inside the US — is now treated as extraordinary discretionary relief rather than a standard benefit. The default pathway is consular processing at a US Embassy or Consulate abroad. This affects people currently in the US who are eligible for a green card and were planning to apply domestically. Even applicants who meet all legal requirements may be denied under this policy.",
+      "cta": "An immigration attorney can explain what this means for a specific situation."
+    },
     "emergencyRights": {
       "title": "Immediate Rights During ICE Encounters",
       "subtitle": "These rights apply to EVERYONE - citizens, non-citizens, documented, and undocumented persons",
@@ -5934,7 +5940,7 @@ export default {
       },
       "q7": {
         "question": "Can a US citizen spouse or child petition for the removed person to return legally?",
-        "answer": "US citizens can typically file petitions for certain family members, including spouses and parents. However, someone who has been removed typically needs to address the bar to reentry before a petition can result in a visa or green card. The specific process depends on the relationship, the length of time the person was in the US without status, and other factors. This process typically takes years and involves multiple government agencies. An immigration attorney can advise on whether this path is available in a specific situation."
+        "answer": "US citizens can typically file petitions for certain family members, including spouses and parents. However, someone who has been removed typically needs to address the bar to reentry before a petition can result in a visa or green card. The specific process depends on the relationship, the length of time the person was in the US without status, and other factors. This process typically takes years and involves multiple government agencies. Note: In May 2026, USCIS issued a policy memo (PM-602-0199) tightening the discretionary standards for adjustment of status applications. Because removed persons already go through consular processing abroad, this memo primarily affects the standards applied when any resulting application is reviewed. An immigration attorney can advise on whether this path is available and how current policy applies to a specific situation."
       }
     }
   }
