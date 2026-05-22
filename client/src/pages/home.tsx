@@ -105,25 +105,6 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Urgent alert strip */}
-      <div className="w-full bg-red-50 dark:bg-red-950/30 border-b border-red-200 dark:border-red-800/60">
-        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3 flex-wrap">
-          <div className="flex items-center gap-2">
-            <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400 flex-shrink-0" aria-hidden="true" />
-            <span className="text-base font-medium text-red-800 dark:text-red-200">
-              {t("home.hero.urgentStripMessage")}
-            </span>
-          </div>
-          <button
-            onClick={handleUrgentHelp}
-            className="text-base font-semibold text-red-700 dark:text-red-300 underline underline-offset-2 hover:no-underline whitespace-nowrap transition-colors"
-            data-testid="button-urgent-strip"
-          >
-            {t("home.hero.urgentStripCta")} →
-          </button>
-        </div>
-      </div>
-
       {/* Hero — always dark, high contrast */}
       <section className="relative pt-14 pb-12 md:pt-20 md:pb-16 overflow-hidden texture-grain bg-slate-900 dark:bg-[hsl(192,55%,11%)]">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800/90 to-teal-900/50 dark:from-[hsl(192,60%,10%)] dark:via-[hsl(196,50%,13%)] dark:to-[hsl(210,42%,17%)]" />
