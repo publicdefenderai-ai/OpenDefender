@@ -44,7 +44,9 @@ export default {
         "detained": "Localizar a una Persona Detenida",
         "detainedDesc": "Encontrar a alguien bajo custodia de ICE",
         "lawyer": "Encontrar un Abogado",
-        "lawyerDesc": "Representación legal en inmigración"
+        "lawyerDesc": "Representación legal en inmigración",
+        "afterDeportation": "Después de la Deportación",
+        "afterDeportationDesc": "Ayuda para familias en ambos lados de una orden de remoción"
       }
     },
     "mobile": {

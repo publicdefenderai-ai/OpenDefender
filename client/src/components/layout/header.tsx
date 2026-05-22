@@ -146,6 +146,7 @@ export function Header() {
         { href: "/immigration-guidance/know-your-rights",  label: t('header.dropdown.immigration.rights', 'Know Your Rights'),          desc: t('header.dropdown.immigration.rightsDesc', 'Your rights regardless of status'),              icon: Shield,       iconBg: '#fef3e2', iconColor: '#92400e' },
         { href: "/immigration-guidance/find-detained",     label: t('header.dropdown.immigration.detained', 'Find a Detained Person'),  desc: t('header.dropdown.immigration.detainedDesc', 'Locate someone in ICE custody'),               icon: MapPin,       iconBg: '#fef3e2', iconColor: '#92400e' },
         { href: "/immigration-guidance/find-attorney",     label: t('header.dropdown.immigration.lawyer', 'Find a Lawyer'),             desc: t('header.dropdown.immigration.lawyerDesc', 'Immigration legal representation'),             icon: Scale,        iconBg: '#fef3e2', iconColor: '#92400e' },
+        { href: "/immigration-guidance/after-deportation", label: t('header.dropdown.immigration.afterDeportation', 'After Deportation'),  desc: t('header.dropdown.immigration.afterDeportationDesc', 'Help for families on both sides of a removal'), icon: Users, iconBg: '#fef3e2', iconColor: '#92400e' },
       ],
     },
     { href: "/directory", label: t('header.nav.explore', 'Explore') },

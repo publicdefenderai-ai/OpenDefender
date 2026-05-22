@@ -42,7 +42,9 @@ export default {
         "detained": "Find a Detained Person",
         "detainedDesc": "Locate someone in ICE custody",
         "lawyer": "Find a Lawyer",
-        "lawyerDesc": "Immigration legal representation"
+        "lawyerDesc": "Immigration legal representation",
+        "afterDeportation": "After Deportation",
+        "afterDeportationDesc": "Help for families on both sides of a removal"
       },
       "support": {
         "resources": "Support Resources",

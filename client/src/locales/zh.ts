@@ -44,7 +44,9 @@ export default {
         "detained": "查找被拘留者",
         "detainedDesc": "查找ICE羁押中的人员",
         "lawyer": "寻找律师",
-        "lawyerDesc": "移民法律代理"
+        "lawyerDesc": "移民法律代理",
+        "afterDeportation": "被驱逐后",
+        "afterDeportationDesc": "为驱逐令两侧家庭提供的帮助"
       }
     },
     "mobile": {
