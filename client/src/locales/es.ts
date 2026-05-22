@@ -5697,7 +5697,6 @@ export default {
       "description": "Nuestra herramienta de orientación de casos puede ayudarle a entender su situación específica y proporcionar información adaptada a sus cargos y jurisdicción.",
       "cta": "Obtener Orientación de Caso"
     }
-  }
   },
   "afterDeportation": {
     "breadcrumb": "Después de la Deportación",
@@ -5856,5 +5855,6 @@ export default {
         "answer": "Los ciudadanos estadounidenses típicamente pueden presentar peticiones para ciertos familiares, incluidos cónyuges y padres. Sin embargo, alguien que ha sido deportado típicamente necesita abordar la prohibición de reingreso antes de que una petición pueda resultar en una visa o tarjeta de residencia. El proceso específico depende de la relación, el tiempo que la persona estuvo en los EE.UU. sin estatus y otros factores. Este proceso típicamente toma años e involucra múltiples agencias gubernamentales. Un abogado de inmigración puede asesorar sobre si este camino está disponible en una situación específica."
       }
     }
+  }
   }
 };

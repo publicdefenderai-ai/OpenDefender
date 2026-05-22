@@ -5779,7 +5779,6 @@ export default {
       "description": "The Case Roadmap explains what to expect based on your charges, state, and case stage — in plain language.",
       "cta": "Get Case Roadmap"
     }
-  }
   },
   "afterDeportation": {
     "breadcrumb": "After Deportation",
@@ -5938,5 +5937,6 @@ export default {
         "answer": "US citizens can typically file petitions for certain family members, including spouses and parents. However, someone who has been removed typically needs to address the bar to reentry before a petition can result in a visa or green card. The specific process depends on the relationship, the length of time the person was in the US without status, and other factors. This process typically takes years and involves multiple government agencies. An immigration attorney can advise on whether this path is available in a specific situation."
       }
     }
+  }
   }
 };
