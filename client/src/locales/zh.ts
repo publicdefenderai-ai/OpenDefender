@@ -59,8 +59,8 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "了解您的权利",
-      "headlinePart2": "在有律师之前",
+      "headlinePart1": "被捕了？面临指控？",
+      "headlinePart2": "了解您的权利",
       "subtitle": "当警察联系您或您被逮捕时，接下来的几个小时至关重要。从第一次接触到整个案件，获取免费、简明的帮助，以及住房、就业和家庭方面的支持。",
       "urgentStripMessage": "正在被逮捕或正在出庭吗？",
       "urgentStripCta": "立即获取帮助",
