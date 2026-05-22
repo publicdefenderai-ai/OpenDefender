@@ -5779,4 +5779,162 @@ export default {
     }
   }
   },
+  "afterDeportation": {
+    "breadcrumb": "After Deportation",
+    "heroTitle": "After Deportation: Help for Families",
+    "heroTagline": "Practical steps for people on both sides",
+    "heroSubtitle": "When a removal order is carried out, it typically separates a family into two different situations at once. This page has practical information for the person who was removed and for the family that remains in the US.",
+    "sidebar": {
+      "onThisPage": "On this page",
+      "overview": "Overview",
+      "ifDeported": "If You Were Deported",
+      "first72": "First 72 hours",
+      "grewUpInUs": "If you grew up here",
+      "documents": "Getting documents",
+      "money": "Receiving money",
+      "familyInUs": "If Family Is in the US",
+      "contact": "Staying in contact",
+      "financial": "Emergency finances",
+      "children": "Children & school",
+      "legalNext": "Legal next steps",
+      "organizations": "Organizations",
+      "faq": "Common Questions",
+      "quickLinks": "Quick links",
+      "immigrationGuidance": "Immigration Guidance",
+      "lifeFamily": "Life & Family",
+      "findLawyer": "Find a Lawyer"
+    },
+    "overview": {
+      "title": "Overview",
+      "body": "This page covers the practical aftermath of removal, not the legal process itself. It applies regardless of how the removal happened. People dealing with this situation often face two simultaneous challenges: the removed person needs to orient in a new place, and the remaining family faces financial and logistical disruption."
+    },
+    "ifDeported": {
+      "sectionTitle": "If You Were Deported",
+      "first72": {
+        "title": "First 72 Hours",
+        "step1Title": "Find communication",
+        "step1Body": "Libraries, churches, shelters, and migrant shelters (casas del migrante) typically offer free wifi. WhatsApp, Signal, and Google Voice work internationally over wifi at no cost.",
+        "step2Title": "Contact the nearest US Embassy or Consulate",
+        "step2Body": "They can help US citizen family members reach you and can connect you with repatriation resources if applicable.",
+        "step3Title": "Contact a migrant shelter",
+        "step3Body": "Casas del Migrante and similar shelters are present in most major Mexican and Central American cities. They typically offer emergency shelter, food, orientation, and help locating services. No immigration status is required to use them.",
+        "step4Title": "Reach out to Al Otro Lado",
+        "step4Body": "If you were removed to Mexico or Central America, Al Otro Lado has staff and legal support on both sides of the border. They specifically serve long-term US residents who were removed."
+      },
+      "grewUpInUs": {
+        "title": "If You Grew Up in the US",
+        "body": "Some people are removed to countries they lived in only briefly or not at all as adults. People in this situation typically face challenges including language barriers, lack of social networks, and unfamiliarity with local systems. Organizations like Al Otro Lado specifically work with long-term US residents who were removed and can help with orientation, language access, and connecting to local services. The US Embassy can sometimes refer to interpreter services."
+      },
+      "documents": {
+        "title": "Getting Documents",
+        "item1": "Your birth certificate from your country of birth is the foundational document for establishing identity in that country. The civil registry office (registro civil in Spanish-speaking countries) issues certified copies.",
+        "item2": "If you have US-born children, their US birth certificates or passports establish that relationship and may be relevant to future processes.",
+        "item3": "For Mexico: the Secretaria de Relaciones Exteriores (SRE) can help Mexican nationals obtain consular documentation even if they lack a birth certificate.",
+        "note": "The exact documents needed vary by country. The local civil registry office or a migrant shelter can advise on the specific process."
+      },
+      "money": {
+        "title": "Receiving Money from Family in the US",
+        "item1": "Western Union, MoneyGram, and Remitly all offer international transfers with cash pickup at pharmacies, convenience stores, and banks in most countries.",
+        "item2": "Wise (formerly TransferWise) typically has lower fees for regular transfers and deposits directly to a bank account.",
+        "item3": "Cash pickup requires a government ID. Your birth certificate or any document with a photo and name is usually accepted to start."
+      }
+    },
+    "familyInUs": {
+      "sectionTitle": "If Your Family Is in the US",
+      "contact": {
+        "title": "Staying in Contact",
+        "item1": "WhatsApp is the most widely used free international messaging and calling app. If you do not have a number for the removed person yet, try having them contact you via wifi as soon as they can reach a shelter or library.",
+        "item2": "Al Otro Lado has a family reunification line specifically for cross-border contact after removal.",
+        "item3": "The consulate of your family member's destination country in the US can sometimes assist with family tracing in the immediate aftermath of removal.",
+        "item4": "Google Voice provides a free US phone number that can receive calls internationally over wifi. This is useful if the removed person does not have a local SIM yet."
+      },
+      "financial": {
+        "title": "Emergency Financial Help",
+        "item1": "211 (call or text): connects to local emergency financial assistance, food banks, rental help, and utility assistance. Available across the US.",
+        "item2": "SNAP (food assistance): US citizen children in mixed-status families typically remain eligible for SNAP benefits even after a parent is deported. Eligibility is based on the child's status, not the parent's.",
+        "item3": "Emergency rental assistance programs exist in most counties. Search through the National Low Income Housing Coalition (nlihc.org) or call 211.",
+        "item4": "Local mutual aid networks and community foundations often maintain rapid-response funds for families in crisis. Searching your city name plus 'mutual aid' or 'immigrant community fund' often surfaces local options."
+      },
+      "children": {
+        "title": "Children and School",
+        "item1": "US-born children have the right to remain in the US and to continue attending public school. Schools are generally not permitted to ask about a student's or parent's immigration status.",
+        "item2": "If a US-born child has no caregiver in the US after a parent's removal, the school counselor can connect the family to child welfare and support resources.",
+        "item3": "Children who choose to join a deported parent abroad typically retain their US citizenship. They can return to the US at any time as US citizens.",
+        "item4": "If a non-parent is caring for a US-born child after removal, a letter of guardianship or power of attorney from the parent is typically helpful for school enrollment and medical decisions. A local legal aid organization can help prepare these documents."
+      },
+      "legalNext": {
+        "title": "Possible Next Legal Steps",
+        "item1": "Some families explore legal options after removal. These can include motions to reopen, appeals, or hardship waivers. These processes typically have strict time deadlines.",
+        "item2": "This page does not cover those processes. The Case Roadmap and Immigration Guidance pages on this site can help understand what those processes generally involve. An immigration attorney can advise on whether any apply to a specific situation.",
+        "item3": "Immigration legal aid: use immigrationadvocates.org to find free or low-cost immigration attorneys by location."
+      }
+    },
+    "organizations": {
+      "title": "Organizations",
+      "note": "This is not an exhaustive list. Local resources vary significantly by city and destination country. 211 and a local legal aid organization are typically the fastest starting points.",
+      "alOtroLado": {
+        "name": "Al Otro Lado",
+        "description": "Legal services and support for deportees in Mexico and Central America; family reunification across the border"
+      },
+      "raices": {
+        "name": "RAICES",
+        "description": "Legal representation and family reunification services"
+      },
+      "nilc": {
+        "name": "National Immigration Law Center (NILC)",
+        "description": "Know-your-rights resources and policy guidance"
+      },
+      "clinic": {
+        "name": "CLINIC (Catholic Legal Immigration Network)",
+        "description": "Referrals to 370+ affiliated immigration legal service providers across the US"
+      },
+      "ian": {
+        "name": "Immigration Advocates Network",
+        "description": "Free search for immigration legal aid by location"
+      },
+      "twoEleven": {
+        "name": "211",
+        "description": "Local emergency financial assistance, food banks, housing help. Dial 211 or text your zip to 898-211"
+      },
+      "nlihc": {
+        "name": "NLIHC (National Low Income Housing Coalition)",
+        "description": "Emergency rental assistance locator by county"
+      },
+      "vera": {
+        "name": "Vera Institute of Justice",
+        "description": "Research and resources on immigration detention and deportation"
+      }
+    },
+    "faq": {
+      "title": "Common Questions",
+      "q1": {
+        "question": "Can my US-born children stay in the US after I am removed?",
+        "answer": "US-born children are US citizens regardless of their parents' immigration status. They typically have the right to remain in the US, attend school, and access benefits they are eligible for. Children can also choose to accompany a removed parent to another country. They retain their US citizenship and can return to the US at any time as US citizens. In situations where no other caregiver is in the US, social service agencies can help identify options."
+      },
+      "q2": {
+        "question": "Is there a waiting period before someone who was removed can legally return to the US?",
+        "answer": "People who are formally removed typically face a bar to returning to the US without government permission. The length of that bar varies depending on the specific circumstances of the removal, prior immigration history, and other factors. It is commonly 10 years for a standard removal, though it can be shorter or longer. Entering the US without authorization after removal typically carries additional consequences. An immigration attorney can explain what applies to a specific situation."
+      },
+      "q3": {
+        "question": "What happens to a bank account or property in the US after someone is deported?",
+        "answer": "Deportation itself does not automatically close a US bank account or transfer ownership of property. People in this situation typically continue to have access to their accounts remotely. Many US banks allow international online banking and international transfers. Property (a car, belongings, a lease) typically requires someone in the US to manage it on the person's behalf. A power of attorney document, prepared with the help of a lawyer or legal aid organization, is commonly used to authorize a trusted person to handle those matters."
+      },
+      "q4": {
+        "question": "Can the removed person still receive Social Security benefits they paid into?",
+        "answer": "People who paid into Social Security while working in the US may have options for accessing those contributions depending on their specific situation. The Social Security Administration has agreements with some countries that affect how benefits are handled. The SSA website (ssa.gov) has information about international benefit agreements, and a legal aid organization can help understand what applies to a specific case."
+      },
+      "q5": {
+        "question": "What if I was deported to a country where I do not speak the language or know anyone?",
+        "answer": "This situation is more common than many people expect, particularly for people who came to the US as young children. Organizations like Al Otro Lado specifically work with long-term US residents who are removed to countries they have limited connection to. Migrant shelters (Casas del Migrante and similar) in Mexico and Central America regularly serve people in this situation and can provide orientation, language support referrals, and connection to local services. The US Embassy or Consulate in the destination country can also sometimes provide referrals to interpreter services."
+      },
+      "q6": {
+        "question": "How can I get a copy of my removal order?",
+        "answer": "Removal orders are typically issued by an immigration judge or, in some cases, by immigration enforcement directly. People who went through immigration court typically received paperwork at the time. A copy can be requested through the immigration court or through an attorney. The Executive Office for Immigration Review (EOIR) manages immigration court records. An immigration attorney or legal aid organization can help with obtaining documentation."
+      },
+      "q7": {
+        "question": "Can a US citizen spouse or child petition for the removed person to return legally?",
+        "answer": "US citizens can typically file petitions for certain family members, including spouses and parents. However, someone who has been removed typically needs to address the bar to reentry before a petition can result in a visa or green card. The specific process depends on the relationship, the length of time the person was in the US without status, and other factors. This process typically takes years and involves multiple government agencies. An immigration attorney can advise on whether this path is available in a specific situation."
+      }
+    }
+  }
 };

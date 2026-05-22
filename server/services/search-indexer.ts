@@ -1066,6 +1066,16 @@ export function buildSearchIndex(): void {
       aliases: ['free attorney', 'free lawyer', 'legal help low income', 'cannot afford lawyer', 'pro bono attorney', 'free legal services', 'legal aid office'],
       url: '/legal-aid'
     },
+    {
+      id: 'after-deportation',
+      title: 'After Deportation: Help for Families',
+      titleEs: 'Después de la Deportación: Ayuda para Familias',
+      titleZh: '被驱逐后：家庭帮助',
+      content: 'Practical help after a deportation removal order. For the person removed: first steps, documents, receiving money. For family in the US: staying in contact, emergency finances, children\'s rights, school. Key organizations including Al Otro Lado, RAICES, NILC. FAQ on reentry bars, bank accounts, Social Security, grew up in US.',
+      tags: ['deportation', 'removal', 'family separation', 'after deportation', 'deported', 'immigration'],
+      aliases: ['deported family', 'after removal', 'deportation help', 'family reunification'],
+      url: '/immigration-guidance/after-deportation'
+    },
   ];
 
   // Support, resource, and logistics pages get 'legal_resource' type

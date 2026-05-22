@@ -5697,4 +5697,162 @@ export default {
     }
   }
   },
+  "afterDeportation": {
+    "breadcrumb": "Después de la Deportación",
+    "heroTitle": "Después de la Deportación: Ayuda para Familias",
+    "heroTagline": "Pasos prácticos para personas en ambos lados",
+    "heroSubtitle": "Cuando se lleva a cabo una orden de deportación, típicamente separa a una familia en dos situaciones diferentes al mismo tiempo. Esta página tiene información práctica para la persona que fue deportada y para la familia que permanece en los EE.UU.",
+    "sidebar": {
+      "onThisPage": "En esta página",
+      "overview": "Resumen",
+      "ifDeported": "Si Usted Fue Deportado",
+      "first72": "Primeras 72 horas",
+      "grewUpInUs": "Si creció aquí",
+      "documents": "Obtener documentos",
+      "money": "Recibir dinero",
+      "familyInUs": "Si la Familia Está en los EE.UU.",
+      "contact": "Mantenerse en contacto",
+      "financial": "Finanzas de emergencia",
+      "children": "Hijos y escuela",
+      "legalNext": "Próximos pasos legales",
+      "organizations": "Organizaciones",
+      "faq": "Preguntas Frecuentes",
+      "quickLinks": "Enlaces rápidos",
+      "immigrationGuidance": "Orientación de Inmigración",
+      "lifeFamily": "Vida y Familia",
+      "findLawyer": "Encontrar un Abogado"
+    },
+    "overview": {
+      "title": "Resumen",
+      "body": "Esta página cubre las consecuencias prácticas de la deportación, no el proceso legal en sí. Se aplica independientemente de cómo ocurrió la deportación. Las personas que enfrentan esta situación a menudo enfrentan dos desafíos simultáneos: la persona deportada necesita orientarse en un nuevo lugar, y la familia que permanece enfrenta interrupciones financieras y logísticas."
+    },
+    "ifDeported": {
+      "sectionTitle": "Si Usted Fue Deportado",
+      "first72": {
+        "title": "Primeras 72 Horas",
+        "step1Title": "Encontrar comunicación",
+        "step1Body": "Las bibliotecas, iglesias, albergues y casas del migrante típicamente ofrecen wifi gratuito. WhatsApp, Signal y Google Voice funcionan internacionalmente por wifi sin costo.",
+        "step2Title": "Contactar la Embajada o Consulado de EE.UU. más cercano",
+        "step2Body": "Pueden ayudar a los familiares ciudadanos estadounidenses a comunicarse con usted y pueden conectarlo con recursos de repatriación si aplica.",
+        "step3Title": "Contactar un albergue para migrantes",
+        "step3Body": "Las Casas del Migrante y albergues similares están presentes en la mayoría de las ciudades importantes de México y Centroamérica. Típicamente ofrecen alojamiento de emergencia, comida, orientación y ayuda para localizar servicios. No se requiere estatus migratorio para usarlos.",
+        "step4Title": "Comunicarse con Al Otro Lado",
+        "step4Body": "Si fue deportado a México o Centroamérica, Al Otro Lado tiene personal y apoyo legal en ambos lados de la frontera. Trabajan específicamente con residentes de EE.UU. a largo plazo que fueron deportados."
+      },
+      "grewUpInUs": {
+        "title": "Si Creció en los EE.UU.",
+        "body": "Algunas personas son deportadas a países en los que vivieron brevemente o en los que nunca vivieron como adultos. Las personas en esta situación típicamente enfrentan desafíos como barreras de idioma, falta de redes sociales y desconocimiento de los sistemas locales. Organizaciones como Al Otro Lado trabajan específicamente con residentes de EE.UU. a largo plazo que fueron deportados y pueden ayudar con orientación, acceso a idiomas y conexión con servicios locales. La Embajada de EE.UU. a veces puede referir a servicios de intérpretes."
+      },
+      "documents": {
+        "title": "Obtener Documentos",
+        "item1": "Su acta de nacimiento del país de nacimiento es el documento fundamental para establecer identidad en ese país. La oficina del registro civil emite copias certificadas.",
+        "item2": "Si tiene hijos nacidos en EE.UU., sus actas de nacimiento o pasaportes estadounidenses establecen esa relación y pueden ser relevantes para futuros procesos.",
+        "item3": "Para México: la Secretaría de Relaciones Exteriores (SRE) puede ayudar a los ciudadanos mexicanos a obtener documentación consular incluso si no tienen acta de nacimiento.",
+        "note": "Los documentos exactos necesarios varían por país. La oficina del registro civil local o un albergue para migrantes puede asesorar sobre el proceso específico."
+      },
+      "money": {
+        "title": "Recibir Dinero de Familiares en los EE.UU.",
+        "item1": "Western Union, MoneyGram y Remitly ofrecen transferencias internacionales con retiro en efectivo en farmacias, tiendas de conveniencia y bancos en la mayoría de los países.",
+        "item2": "Wise (anteriormente TransferWise) típicamente tiene tarifas más bajas para transferencias regulares y deposita directamente en una cuenta bancaria.",
+        "item3": "El retiro en efectivo requiere una identificación gubernamental. Su acta de nacimiento o cualquier documento con foto y nombre generalmente se acepta para comenzar."
+      }
+    },
+    "familyInUs": {
+      "sectionTitle": "Si Su Familia Está en los EE.UU.",
+      "contact": {
+        "title": "Mantenerse en Contacto",
+        "item1": "WhatsApp es la aplicación gratuita de mensajería y llamadas internacionales más utilizada. Si aún no tiene un número para la persona deportada, pídales que lo contacten por wifi tan pronto como puedan llegar a un albergue o biblioteca.",
+        "item2": "Al Otro Lado tiene una línea de reunificación familiar específicamente para contacto transfronterizo después de la deportación.",
+        "item3": "El consulado del país de destino de su familiar en los EE.UU. a veces puede ayudar con la localización familiar en las horas inmediatas después de la deportación.",
+        "item4": "Google Voice proporciona un número de teléfono de EE.UU. gratuito que puede recibir llamadas internacionales por wifi. Esto es útil si la persona deportada aún no tiene una SIM local."
+      },
+      "financial": {
+        "title": "Ayuda Financiera de Emergencia",
+        "item1": "211 (llamar o enviar mensaje de texto): conecta con asistencia financiera de emergencia local, bancos de alimentos, ayuda de alquiler y asistencia de servicios públicos. Disponible en todo EE.UU.",
+        "item2": "SNAP (asistencia alimentaria): los hijos ciudadanos estadounidenses en familias de estatus mixto típicamente siguen siendo elegibles para los beneficios de SNAP incluso después de que un padre sea deportado. La elegibilidad se basa en el estatus del niño, no del padre.",
+        "item3": "Los programas de asistencia de alquiler de emergencia existen en la mayoría de los condados. Busque a través de la Coalición Nacional de Vivienda para Personas de Bajos Ingresos (nlihc.org) o llame al 211.",
+        "item4": "Las redes de ayuda mutua local y las fundaciones comunitarias a menudo mantienen fondos de respuesta rápida para familias en crisis. Buscar el nombre de su ciudad más 'mutual aid' o 'immigrant community fund' a menudo muestra opciones locales."
+      },
+      "children": {
+        "title": "Hijos y Escuela",
+        "item1": "Los hijos nacidos en EE.UU. tienen derecho a permanecer en los EE.UU. y a continuar asistiendo a la escuela pública. En general, las escuelas no pueden preguntar sobre el estatus migratorio de un estudiante o padre.",
+        "item2": "Si un hijo nacido en EE.UU. no tiene cuidador en los EE.UU. después de que un padre sea deportado, el consejero escolar puede conectar a la familia con recursos de bienestar infantil y apoyo.",
+        "item3": "Los hijos que eligen acompañar a un padre deportado al extranjero típicamente conservan su ciudadanía estadounidense. Pueden regresar a los EE.UU. en cualquier momento como ciudadanos estadounidenses.",
+        "item4": "Si un no-padre está cuidando a un hijo nacido en EE.UU. después de la deportación, una carta de tutela o poder notarial del padre es típicamente útil para la inscripción escolar y las decisiones médicas. Una organización local de ayuda legal puede ayudar a preparar estos documentos."
+      },
+      "legalNext": {
+        "title": "Posibles Próximos Pasos Legales",
+        "item1": "Algunas familias exploran opciones legales después de la deportación. Estas pueden incluir mociones para reabrir, apelaciones o exenciones por dificultades. Estos procesos típicamente tienen plazos estrictos.",
+        "item2": "Esta página no cubre esos procesos. Las páginas de Guía de Casos y Orientación de Inmigración en este sitio pueden ayudar a entender lo que generalmente implican esos procesos. Un abogado de inmigración puede asesorar si alguno aplica a una situación específica.",
+        "item3": "Ayuda legal de inmigración: use immigrationadvocates.org para encontrar abogados de inmigración gratuitos o de bajo costo por ubicación."
+      }
+    },
+    "organizations": {
+      "title": "Organizaciones",
+      "note": "Esta no es una lista exhaustiva. Los recursos locales varían significativamente por ciudad y país de destino. 211 y una organización local de ayuda legal son típicamente los puntos de partida más rápidos.",
+      "alOtroLado": {
+        "name": "Al Otro Lado",
+        "description": "Servicios legales y apoyo para deportados en México y Centroamérica; reunificación familiar a través de la frontera"
+      },
+      "raices": {
+        "name": "RAICES",
+        "description": "Representación legal y servicios de reunificación familiar"
+      },
+      "nilc": {
+        "name": "Centro Nacional de Ley de Inmigración (NILC)",
+        "description": "Recursos sobre sus derechos y orientación de políticas"
+      },
+      "clinic": {
+        "name": "CLINIC (Red Católica de Inmigración Legal)",
+        "description": "Derivaciones a más de 370 proveedores de servicios legales de inmigración afiliados en todo EE.UU."
+      },
+      "ian": {
+        "name": "Red de Defensores de Inmigración",
+        "description": "Búsqueda gratuita de ayuda legal de inmigración por ubicación"
+      },
+      "twoEleven": {
+        "name": "211",
+        "description": "Asistencia financiera de emergencia local, bancos de alimentos, ayuda de vivienda. Marque 211 o envíe su código postal al 898-211"
+      },
+      "nlihc": {
+        "name": "NLIHC (Coalición Nacional de Vivienda para Personas de Bajos Ingresos)",
+        "description": "Localizador de asistencia de alquiler de emergencia por condado"
+      },
+      "vera": {
+        "name": "Instituto Vera de Justicia",
+        "description": "Investigación y recursos sobre detención de inmigrantes y deportación"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿Pueden mis hijos nacidos en EE.UU. permanecer en los EE.UU. después de que yo sea deportado?",
+        "answer": "Los hijos nacidos en EE.UU. son ciudadanos estadounidenses independientemente del estatus migratorio de sus padres. Típicamente tienen derecho a permanecer en los EE.UU., asistir a la escuela y acceder a los beneficios para los que son elegibles. Los hijos también pueden elegir acompañar a un padre deportado a otro país. Conservan su ciudadanía estadounidense y pueden regresar a los EE.UU. en cualquier momento como ciudadanos estadounidenses. En situaciones donde no hay otro cuidador en los EE.UU., las agencias de servicios sociales pueden ayudar a identificar opciones."
+      },
+      "q2": {
+        "question": "¿Hay un período de espera antes de que alguien que fue deportado pueda regresar legalmente a los EE.UU.?",
+        "answer": "Las personas que son deportadas formalmente típicamente enfrentan una prohibición de regresar a los EE.UU. sin permiso del gobierno. La duración de esa prohibición varía según las circunstancias específicas de la deportación, el historial migratorio previo y otros factores. Comúnmente es de 10 años para una deportación estándar, aunque puede ser más corta o más larga. Entrar a los EE.UU. sin autorización después de la deportación típicamente conlleva consecuencias adicionales. Un abogado de inmigración puede explicar lo que aplica a una situación específica."
+      },
+      "q3": {
+        "question": "¿Qué pasa con una cuenta bancaria o propiedad en los EE.UU. después de que alguien es deportado?",
+        "answer": "La deportación por sí sola no cierra automáticamente una cuenta bancaria estadounidense ni transfiere la propiedad. Las personas en esta situación típicamente continúan teniendo acceso a sus cuentas de forma remota. Muchos bancos de EE.UU. permiten la banca en línea internacional y las transferencias internacionales. La propiedad (un carro, pertenencias, un contrato de arrendamiento) típicamente requiere que alguien en los EE.UU. la administre en nombre de la persona. Un documento de poder notarial, preparado con la ayuda de un abogado u organización de ayuda legal, se usa comúnmente para autorizar a una persona de confianza a manejar esos asuntos."
+      },
+      "q4": {
+        "question": "¿Puede la persona deportada seguir recibiendo los beneficios del Seguro Social por los que pagó?",
+        "answer": "Las personas que contribuyeron al Seguro Social mientras trabajaban en los EE.UU. pueden tener opciones para acceder a esas contribuciones dependiendo de su situación específica. La Administración del Seguro Social tiene acuerdos con algunos países que afectan cómo se manejan los beneficios. El sitio web de la SSA (ssa.gov) tiene información sobre acuerdos internacionales de beneficios, y una organización de ayuda legal puede ayudar a entender lo que aplica a un caso específico."
+      },
+      "q5": {
+        "question": "¿Qué pasa si fui deportado a un país donde no hablo el idioma ni conozco a nadie?",
+        "answer": "Esta situación es más común de lo que muchas personas esperan, particularmente para personas que llegaron a los EE.UU. cuando eran niños. Organizaciones como Al Otro Lado trabajan específicamente con residentes de EE.UU. a largo plazo que son deportados a países con los que tienen poca conexión. Los albergues para migrantes (Casas del Migrante y similares) en México y Centroamérica regularmente sirven a personas en esta situación y pueden proporcionar orientación, derivaciones de apoyo de idiomas y conexión con servicios locales. La Embajada o Consulado de EE.UU. en el país de destino también a veces puede proporcionar derivaciones a servicios de intérpretes."
+      },
+      "q6": {
+        "question": "¿Cómo puedo obtener una copia de mi orden de deportación?",
+        "answer": "Las órdenes de deportación son típicamente emitidas por un juez de inmigración o, en algunos casos, directamente por las autoridades de inmigración. Las personas que pasaron por el tribunal de inmigración típicamente recibieron documentación en ese momento. Se puede solicitar una copia a través del tribunal de inmigración o a través de un abogado. La Oficina Ejecutiva de Revisión de Inmigración (EOIR) gestiona los registros del tribunal de inmigración. Un abogado de inmigración u organización de ayuda legal puede ayudar a obtener documentación."
+      },
+      "q7": {
+        "question": "¿Puede un cónyuge o hijo ciudadano estadounidense presentar una petición para que la persona deportada regrese legalmente?",
+        "answer": "Los ciudadanos estadounidenses típicamente pueden presentar peticiones para ciertos familiares, incluidos cónyuges y padres. Sin embargo, alguien que ha sido deportado típicamente necesita abordar la prohibición de reingreso antes de que una petición pueda resultar en una visa o tarjeta de residencia. El proceso específico depende de la relación, el tiempo que la persona estuvo en los EE.UU. sin estatus y otros factores. Este proceso típicamente toma años e involucra múltiples agencias gubernamentales. Un abogado de inmigración puede asesorar sobre si este camino está disponible en una situación específica."
+      }
+    }
+  }
 };
