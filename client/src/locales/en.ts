@@ -5851,7 +5851,7 @@ export default {
       "sectionTitle": "If Your Family Is in the US",
       "contact": {
         "title": "Staying in Contact",
-        "item1": "WhatsApp is the most widely used free international messaging and calling app. If you do not have a number for the removed person yet, try having them contact you via wifi as soon as they can reach a shelter or library.",
+        "item1": "WhatsApp and Signal are both free international messaging and calling apps that work over wifi. Signal uses end-to-end encryption, meaning messages and calls are readable only by the sender and recipient. If you do not have a number for the removed person yet, try having them contact you via wifi as soon as they reach a shelter or library.",
         "item2": "Al Otro Lado has a family reunification line specifically for cross-border contact after removal.",
         "item3": "The consulate of your family member's destination country in the US can sometimes assist with family tracing in the immediate aftermath of removal.",
         "item4": "Google Voice provides a free US phone number that can receive calls internationally over wifi. This is useful if the removed person does not have a local SIM yet."

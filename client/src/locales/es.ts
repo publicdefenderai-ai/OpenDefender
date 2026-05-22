@@ -5769,7 +5769,7 @@ export default {
       "sectionTitle": "Si Su Familia Está en los EE.UU.",
       "contact": {
         "title": "Mantenerse en Contacto",
-        "item1": "WhatsApp es la aplicación gratuita de mensajería y llamadas internacionales más utilizada. Si aún no tiene un número para la persona deportada, pídales que lo contacten por wifi tan pronto como puedan llegar a un albergue o biblioteca.",
+        "item1": "WhatsApp y Signal son aplicaciones gratuitas de mensajería y llamadas internacionales que funcionan por wifi. Signal utiliza cifrado de extremo a extremo, lo que significa que los mensajes y llamadas solo pueden ser leídos por el remitente y el destinatario. Si aún no tiene un número para la persona deportada, pídales que lo contacten por wifi tan pronto como lleguen a un albergue o biblioteca.",
         "item2": "Al Otro Lado tiene una línea de reunificación familiar específicamente para contacto transfronterizo después de la deportación.",
         "item3": "El consulado del país de destino de su familiar en los EE.UU. a veces puede ayudar con la localización familiar en las horas inmediatas después de la deportación.",
         "item4": "Google Voice proporciona un número de teléfono de EE.UU. gratuito que puede recibir llamadas internacionales por wifi. Esto es útil si la persona deportada aún no tiene una SIM local."
