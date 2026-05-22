@@ -339,7 +339,7 @@ export default function AfterDeportation() {
                   <Card>
                     <CardContent className="pt-4 pb-4">
                       <ul className="space-y-3">
-                        {(["item1", "item2", "item3"] as const).map((item) => (
+                        {(["item1", "item2", "item3", "item4"] as const).map((item) => (
                           <li key={item} className="flex gap-2 text-sm text-muted-foreground leading-relaxed">
                             <span className="text-amber-500 mt-0.5 flex-shrink-0">•</span>
                             {t(`afterDeportation.ifDeported.money.${item}`)}

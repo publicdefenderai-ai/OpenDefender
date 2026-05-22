@@ -5843,7 +5843,8 @@ export default {
         "title": "Receiving Money from Family in the US",
         "item1": "Western Union, MoneyGram, and Remitly all offer international transfers with cash pickup at pharmacies, convenience stores, and banks in most countries.",
         "item2": "Wise (formerly TransferWise) typically has lower fees for regular transfers and deposits directly to a bank account.",
-        "item3": "Cash pickup requires a government ID. Your birth certificate or any document with a photo and name is usually accepted to start."
+        "item3": "Cash pickup requires a government ID. Your birth certificate or any document with a photo and name is usually accepted to start.",
+        "item4": "Cryptocurrencies and stablecoins (such as USDC or USDT) are used by some people in this situation for cross-border transfers, particularly where traditional services have limited reach. People considering this option typically review the terms of the platforms they use. Laws governing crypto transactions vary in both the US and the destination country, and those differences can affect how transfers are treated."
       }
     },
     "familyInUs": {

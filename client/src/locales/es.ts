@@ -5761,7 +5761,8 @@ export default {
         "title": "Recibir Dinero de Familiares en los EE.UU.",
         "item1": "Western Union, MoneyGram y Remitly ofrecen transferencias internacionales con retiro en efectivo en farmacias, tiendas de conveniencia y bancos en la mayoría de los países.",
         "item2": "Wise (anteriormente TransferWise) típicamente tiene tarifas más bajas para transferencias regulares y deposita directamente en una cuenta bancaria.",
-        "item3": "El retiro en efectivo requiere una identificación gubernamental. Su acta de nacimiento o cualquier documento con foto y nombre generalmente se acepta para comenzar."
+        "item3": "El retiro en efectivo requiere una identificación gubernamental. Su acta de nacimiento o cualquier documento con foto y nombre generalmente se acepta para comenzar.",
+        "item4": "Las criptomonedas y monedas estables (como USDC o USDT) son utilizadas por algunas personas en esta situación para transferencias internacionales, especialmente donde los servicios tradicionales tienen un alcance limitado. Las personas que consideran esta opción típicamente revisan los términos de las plataformas que usan. Las leyes que regulan las transacciones de criptomonedas varían tanto en los EE.UU. como en el país de destino, y esas diferencias pueden afectar cómo se tratan las transferencias."
       }
     },
     "familyInUs": {
