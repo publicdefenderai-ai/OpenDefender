@@ -5571,7 +5571,7 @@ export default {
           "description": "Plain-language overview of what to expect based on your charges, state, and case stage."
         },
         "aiChat": {
-          "title": "AI Legal Chat",
+          "title": "Case Support Chat",
           "description": "Ask legal questions and get plain-language answers from our AI assistant."
         },
         "immigrationRights": {
