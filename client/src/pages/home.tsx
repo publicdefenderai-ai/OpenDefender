@@ -324,7 +324,7 @@ export default function Home() {
                     </Card>
                   </button>
 
-                  <Link href="/first-24-hours#before-arrest" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                  <Link href="/first-24-hours#before-arrest" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }} className="block">
                     <Card className="hover:shadow-md hover:border-slate-400 dark:hover:border-slate-500 transition-all cursor-pointer group border-slate-200 dark:border-slate-700">
                       <CardContent className="p-4 flex items-start gap-3">
                         <div className="w-9 h-9 bg-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
