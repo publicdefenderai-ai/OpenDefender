@@ -1705,6 +1705,63 @@ export default {
         "cleanSlateDesc": "State-by-state tracker of Clean Slate legislation and automatic clearance program status.",
         "lawHelpLabel": "LawHelp.org",
         "lawHelpDesc": "Find free legal aid organizations that offer expungement help by state."
+      },
+      "fcraRights": {
+        "sectionTitle": "Your Rights When a Background Check Is Run",
+        "sectionSubtitle": "Federal law gives you specific rights before an employer can use a background check against you. Most people are never told these rights exist.",
+        "adverseActionTitle": "Employers must notify you before acting",
+        "adverseActionBody": "Before an employer can reject you based on a background check, federal law (the Fair Credit Reporting Act) requires them to give you a pre-adverse action notice. This includes a copy of the report and a written summary of your rights. You have time to review the report and dispute any errors before the decision is final. Many employers skip this step — if they did, that is a violation of federal law.",
+        "disputeTitle": "You can dispute inaccurate information",
+        "disputeBody": "If a background check contains errors — wrong charges, someone else's record, outdated information — you have the right to dispute it. The background check company must investigate within 30 days and correct or remove inaccurate information. Submit your dispute in writing and keep a copy. Include any documentation that supports your claim.",
+        "lookbackTitle": "The 7-year rule",
+        "lookbackBody": "Under federal law, most negative information, including many criminal records, can only be reported for 7 years for jobs paying under roughly $75,000 per year. This limit does not apply to convictions in all cases, and several states have stricter rules. If older records are appearing on your report, this may be worth disputing.",
+        "rapSheetNote": "Not sure what is on your record? You can request your FBI Identity History Summary for free at IdentityHistory.fbi.gov. Many states also allow you to request your state criminal history through the state police or court administrator.",
+        "whatToDoTitle": "If a background check is used against you",
+        "whatToDoSteps": [
+          "Ask the employer for the pre-adverse action notice and a copy of the report",
+          "Review the report carefully for errors — wrong names, dismissed charges still listed as convictions, records from another person",
+          "If you find errors, submit a written dispute directly to the background check company listed on the report",
+          "The company must investigate within 30 days and respond in writing",
+          "If the employer already made a final decision without giving you the notice, that may be a violation you can report to the CFPB or pursue through a consumer protection attorney"
+        ],
+        "cfpbLabel": "CFPB: Background Checks and Your Rights",
+        "cfpbDesc": "The Consumer Financial Protection Bureau explains your rights under the Fair Credit Reporting Act and how to submit a complaint.",
+        "eeocLabel": "EEOC: Criminal Records in Hiring",
+        "eeocDesc": "Federal guidance on when and how employers can consider criminal records in hiring decisions. Employers cannot use a blanket policy of excluding all applicants with records.",
+        "nelp2Label": "NELP: Fair Chance Hiring Laws",
+        "nelp2Desc": "State-by-state guide to ban-the-box laws and fair chance hiring protections from the National Employment Law Project."
+      },
+      "certificatesOfRelief": {
+        "sectionTitle": "Certificates of Relief",
+        "sectionSubtitle": "About 20 states allow people with records to apply for a certificate that lifts specific legal barriers to employment, licensing, or housing. These tools are rarely used because few people know they exist.",
+        "whatTitle": "What a certificate does",
+        "whatBody": "A certificate of relief is an official government document that removes specific legal disabilities caused by a conviction. It does not erase the record, but it can legally lift barriers that would otherwise prevent someone from getting a job, a professional license, or housing. In some states it also provides employers and landlords with legal protection for hiring or renting to the holder.",
+        "vsExpungementTitle": "How it differs from expungement",
+        "vsExpungementBody": "Expungement clears the record. A certificate leaves the record but removes specific consequences. Certificates are often available to people who are not eligible for expungement, including people with more serious convictions, people who have not yet waited out the required period, or people who need relief faster than expungement allows.",
+        "statesTitle": "States with active certificate programs",
+        "statesList": [
+          "New York: Certificate of Relief from Disabilities and Certificate of Good Conduct",
+          "Ohio: Certificate of Qualification for Employment (available 6 months after conviction)",
+          "Illinois: Certificate of Relief from Collateral Consequences",
+          "North Carolina: Certificate of Relief",
+          "New Jersey: Certificate of Rehabilitation",
+          "California: Certificate of Rehabilitation (felony convictions; automatic application to pardon)",
+          "Tennessee: Certificate of Employability",
+          "Colorado: Certificate of Relief (2021)",
+          "Nevada: Certificate of Relief"
+        ],
+        "statesNote": "Approximately 20 states have some form of certificate program under various names. The Collateral Consequences Resource Center maintains the most complete state-by-state inventory.",
+        "howTitle": "How to find out if you qualify",
+        "howSteps": [
+          "Check the CCRC state inventory to see if your state has a certificate program and what offenses qualify",
+          "Contact your state's Department of Corrections, parole board, or the court where you were sentenced — they administer most certificate programs",
+          "Legal aid organizations can help you apply in most states at no cost",
+          "Some states allow you to apply while you are still on probation or parole"
+        ],
+        "ccrcLabel": "Collateral Consequences Resource Center",
+        "ccrcDesc": "The authoritative national resource on certificates of relief and all other collateral consequences. Includes a state-by-state inventory of available programs.",
+        "cleanSlateLink": "Clean Slate Initiative: State Tracker",
+        "cleanSlateLinkDesc": "Tracks Clean Slate legislation and related relief programs by state."
       }
     }
   },

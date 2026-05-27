@@ -13,6 +13,9 @@ import {
   RefreshCw,
   ExternalLink,
   ArrowRight,
+  FileSearch,
+  Award,
+  Info,
 } from "lucide-react";
 import {
   ResourcePageTemplate,
@@ -242,6 +245,185 @@ function CleanSlateSection() {
             ].map(({ label, desc, url }) => (
               <a key={label} href={url} target="_blank" rel="noopener noreferrer">
                 <Card className="h-full hover:border-teal-300 dark:hover:border-teal-700 transition-colors cursor-pointer">
+                  <CardContent className="pt-4">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <span className="text-sm font-semibold text-foreground">{label}</span>
+                      <ExternalLink className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
+function FcraRightsSection() {
+  const { t } = useTranslation();
+  const ns = "support.reputation.fcraRights";
+  const steps = t(`${ns}.whatToDoSteps`, { returnObjects: true }) as string[];
+
+  return (
+    <section className="py-10 md:py-14 bg-background border-t border-border/30" id="fcra-rights">
+      <div className="max-w-4xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-2">
+            <FileSearch className="h-5 w-5 text-blue-600" />
+            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+          </div>
+          <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-2 gap-5 mb-6">
+          {[
+            { title: t(`${ns}.adverseActionTitle`), body: t(`${ns}.adverseActionBody`) },
+            { title: t(`${ns}.disputeTitle`), body: t(`${ns}.disputeBody`) },
+            { title: t(`${ns}.lookbackTitle`), body: t(`${ns}.lookbackBody`) },
+          ].map(({ title, body }, i) => (
+            <ScrollReveal key={title} delay={i * 0.07}>
+              <Card className="h-full">
+                <CardContent className="pt-5">
+                  <h3 className="text-sm font-semibold text-foreground mb-2">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{body}</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          ))}
+          <ScrollReveal delay={0.21}>
+            <Card className="h-full border-blue-200 dark:border-blue-800 bg-blue-50/40 dark:bg-blue-950/20">
+              <CardContent className="pt-5">
+                <div className="flex gap-2">
+                  <Info className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-blue-800 dark:text-blue-200 leading-relaxed">{t(`${ns}.rapSheetNote`)}</p>
+                </div>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+        </div>
+
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.whatToDoTitle`)}</h3>
+              <ol className="space-y-2">
+                {steps.map((step, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="font-bold text-foreground flex-shrink-0">{i + 1}.</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { label: t(`${ns}.cfpbLabel`), desc: t(`${ns}.cfpbDesc`), url: "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" },
+              { label: t(`${ns}.eeocLabel`), desc: t(`${ns}.eeocDesc`), url: "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines" },
+              { label: t(`${ns}.nelp2Label`), desc: t(`${ns}.nelp2Desc`), url: "https://www.nelp.org/publication/fair-chance-hiring-criminal-records/" },
+            ].map(({ label, desc, url }) => (
+              <a key={label} href={url} target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:border-blue-300 dark:hover:border-blue-700 transition-colors cursor-pointer">
+                  <CardContent className="pt-4">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <span className="text-sm font-semibold text-foreground">{label}</span>
+                      <ExternalLink className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
+function CertificatesOfReliefSection() {
+  const { t } = useTranslation();
+  const ns = "support.reputation.certificatesOfRelief";
+  const statesList = t(`${ns}.statesList`, { returnObjects: true }) as string[];
+  const howSteps = t(`${ns}.howSteps`, { returnObjects: true }) as string[];
+
+  return (
+    <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="certificates-of-relief">
+      <div className="max-w-4xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-2">
+            <Award className="h-5 w-5 text-amber-600" />
+            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+          </div>
+          <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-2 gap-5 mb-6">
+          <ScrollReveal>
+            <Card className="h-full">
+              <CardContent className="pt-5">
+                <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.whatTitle`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.whatBody`)}</p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+          <ScrollReveal delay={0.07}>
+            <Card className="h-full">
+              <CardContent className="pt-5">
+                <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.vsExpungementTitle`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.vsExpungementBody`)}</p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+        </div>
+
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.statesTitle`)}</h3>
+              <ul className="space-y-1.5">
+                {statesList.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <Check className="h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-muted-foreground mt-3 italic">{t(`${ns}.statesNote`)}</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.howTitle`)}</h3>
+              <ol className="space-y-2">
+                {howSteps.map((step, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="font-bold text-foreground flex-shrink-0">{i + 1}.</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { label: t(`${ns}.ccrcLabel`), desc: t(`${ns}.ccrcDesc`), url: "https://ccrcatlaw.org/resources/" },
+              { label: t(`${ns}.cleanSlateLink`), desc: t(`${ns}.cleanSlateLinkDesc`), url: "https://cleanslateinitiative.org/states/" },
+            ].map(({ label, desc, url }) => (
+              <a key={label} href={url} target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:border-amber-300 dark:hover:border-amber-700 transition-colors cursor-pointer">
                   <CardContent className="pt-4">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <span className="text-sm font-semibold text-foreground">{label}</span>
@@ -566,7 +748,7 @@ export default function ReputationSupport() {
         { label: t("support.relatedLinks.mentalHealth"), href: "/support/mental-health" },
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
       ]}
-      customSections={<><CleanSlateSection /><ReputationCommsSection /></>}
+      customSections={<><CleanSlateSection /><FcraRightsSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
     />
   );
 }

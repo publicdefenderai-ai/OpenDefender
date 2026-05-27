@@ -1701,6 +1701,63 @@ export default {
         "cleanSlateDesc": "Rastreador estado por estado de la legislación de Pizarra Limpia y el estado de los programas de eliminación automática.",
         "lawHelpLabel": "LawHelp.org",
         "lawHelpDesc": "Encuentre organizaciones de ayuda legal gratuita que ofrecen asistencia con la eliminación de antecedentes por estado."
+      },
+      "fcraRights": {
+        "sectionTitle": "Sus Derechos Cuando Se Realiza una Verificación de Antecedentes",
+        "sectionSubtitle": "La ley federal le otorga derechos específicos antes de que un empleador pueda usar una verificación de antecedentes en su contra. La mayoría de las personas nunca son informadas de que estos derechos existen.",
+        "adverseActionTitle": "Los empleadores deben notificarle antes de actuar",
+        "adverseActionBody": "Antes de que un empleador pueda rechazarle basándose en una verificación de antecedentes, la ley federal (la Ley de Informes de Crédito Justos) les exige que le proporcionen un aviso previo a la acción adversa. Esto incluye una copia del informe y un resumen escrito de sus derechos. Tiene tiempo para revisar el informe y disputar cualquier error antes de que se tome la decisión final. Muchos empleadores omiten este paso — si lo hicieron, eso es una violación de la ley federal.",
+        "disputeTitle": "Puede disputar información inexacta",
+        "disputeBody": "Si una verificación de antecedentes contiene errores — cargos incorrectos, el historial de otra persona, información desactualizada — tiene derecho a disputarla. La empresa de verificación de antecedentes debe investigar en un plazo de 30 días y corregir o eliminar la información inexacta. Presente su disputa por escrito y conserve una copia. Incluya cualquier documentación que respalde su reclamación.",
+        "lookbackTitle": "La regla de los 7 años",
+        "lookbackBody": "Según la ley federal, la mayoría de la información negativa, incluidos muchos antecedentes penales, solo puede reportarse durante 7 años para empleos con salario inferior a aproximadamente $75,000 al año. Este límite no se aplica a las condenas en todos los casos, y varios estados tienen reglas más estrictas. Si aparecen registros más antiguos en su informe, puede valer la pena disputarlo.",
+        "rapSheetNote": "¿No sabe qué aparece en su historial? Puede solicitar su Resumen de Historia de Identidad del FBI de forma gratuita en IdentityHistory.fbi.gov. Muchos estados también le permiten solicitar su historial penal estatal a través de la policía estatal o el administrador de tribunales.",
+        "whatToDoTitle": "Si se usa una verificación de antecedentes en su contra",
+        "whatToDoSteps": [
+          "Solicite al empleador el aviso previo a la acción adversa y una copia del informe",
+          "Revise el informe cuidadosamente en busca de errores — nombres incorrectos, cargos desestimados que aún aparecen como condenas, registros de otra persona",
+          "Si encuentra errores, presente una disputa por escrito directamente a la empresa de verificación de antecedentes indicada en el informe",
+          "La empresa debe investigar en 30 días y responder por escrito",
+          "Si el empleador ya tomó una decisión final sin darle el aviso, eso puede ser una violación que puede reportar a la CFPB o perseguir a través de un abogado de protección al consumidor"
+        ],
+        "cfpbLabel": "CFPB: Verificaciones de Antecedentes y Sus Derechos",
+        "cfpbDesc": "La Oficina de Protección Financiera del Consumidor explica sus derechos bajo la Ley de Informes de Crédito Justos y cómo presentar una queja.",
+        "eeocLabel": "EEOC: Antecedentes Penales en la Contratación",
+        "eeocDesc": "Guía federal sobre cuándo y cómo los empleadores pueden considerar antecedentes penales en las decisiones de contratación. Los empleadores no pueden usar una política general de excluir a todos los solicitantes con antecedentes.",
+        "nelp2Label": "NELP: Leyes de Contratación Justa",
+        "nelp2Desc": "Guía estado por estado sobre leyes ban-the-box y protecciones de contratación justa del Proyecto Nacional de Derecho Laboral."
+      },
+      "certificatesOfRelief": {
+        "sectionTitle": "Certificados de Alivio",
+        "sectionSubtitle": "Aproximadamente 20 estados permiten a personas con antecedentes solicitar un certificado que elimina barreras legales específicas para el empleo, licencias o vivienda. Estas herramientas rara vez se usan porque pocas personas saben que existen.",
+        "whatTitle": "Qué hace un certificado",
+        "whatBody": "Un certificado de alivio es un documento oficial del gobierno que elimina discapacidades legales específicas causadas por una condena. No borra el historial, pero puede levantar legalmente barreras que de otro modo impedirían a alguien obtener un trabajo, una licencia profesional o vivienda. En algunos estados también proporciona a los empleadores y propietarios protección legal por contratar o alquilar al titular.",
+        "vsExpungementTitle": "Cómo difiere de la eliminación de antecedentes",
+        "vsExpungementBody": "La eliminación borra el historial. Un certificado deja el historial pero elimina consecuencias específicas. Los certificados suelen estar disponibles para personas que no son elegibles para la eliminación, incluidas personas con condenas más graves, personas que aún no han esperado el período requerido, o personas que necesitan alivio más rápido de lo que permite la eliminación.",
+        "statesTitle": "Estados con programas de certificados activos",
+        "statesList": [
+          "Nueva York: Certificado de Alivio de Discapacidades y Certificado de Buena Conducta",
+          "Ohio: Certificado de Calificación para el Empleo (disponible 6 meses después de la condena)",
+          "Illinois: Certificado de Alivio de Consecuencias Colaterales",
+          "Carolina del Norte: Certificado de Alivio",
+          "Nueva Jersey: Certificado de Rehabilitación",
+          "California: Certificado de Rehabilitación (condenas por delitos graves; solicitud automática de indulto)",
+          "Tennessee: Certificado de Empleabilidad",
+          "Colorado: Certificado de Alivio (2021)",
+          "Nevada: Certificado de Alivio"
+        ],
+        "statesNote": "Aproximadamente 20 estados tienen algún tipo de programa de certificados bajo varios nombres. El Centro de Recursos de Consecuencias Colaterales mantiene el inventario estatal más completo.",
+        "howTitle": "Cómo saber si califica",
+        "howSteps": [
+          "Consulte el inventario estatal del CCRC para ver si su estado tiene un programa de certificados y qué delitos califican",
+          "Contacte al Departamento de Correcciones, la junta de libertad condicional o el tribunal donde fue sentenciado — ellos administran la mayoría de los programas",
+          "Las organizaciones de ayuda legal pueden ayudarle a solicitar en la mayoría de los estados sin costo",
+          "Algunos estados le permiten solicitar mientras aún está en probatoria o libertad condicional"
+        ],
+        "ccrcLabel": "Centro de Recursos de Consecuencias Colaterales",
+        "ccrcDesc": "El recurso nacional autorizado sobre certificados de alivio y todas las demás consecuencias colaterales. Incluye un inventario estado por estado de los programas disponibles.",
+        "cleanSlateLink": "Iniciativa de Pizarra Limpia: Rastreador Estatal",
+        "cleanSlateLinkDesc": "Rastrea la legislación de Pizarra Limpia y programas de alivio relacionados por estado."
       }
     }
   },
