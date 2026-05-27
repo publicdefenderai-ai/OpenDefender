@@ -8,6 +8,7 @@ import { devLog, opsLog, errLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { buildJurisdictionContextBlock } from '@shared/jurisdiction-procedure-rules';
+import { buildCollateralConsequenceContextBlock } from '../../client/src/lib/collateral-consequences-data';
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 
@@ -378,9 +379,12 @@ function buildUserPrompt(caseDetails: CaseDetails): string {
   const jurisdictionBlock = buildJurisdictionContextBlock(
     sanitizeInput(caseDetails.jurisdiction, 100)
   );
+  const collateralBlock = buildCollateralConsequenceContextBlock(
+    sanitizeInput(caseDetails.jurisdiction, 100)
+  );
 
   let prompt = `Provide general legal information for someone in this situation. Do not treat this as a case analysis — treat it as orientation for a person at this charge type, jurisdiction, and case stage:
-${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}
+${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}${collateralBlock ? `\n${collateralBlock}\n` : ''}
 BASIC CASE INFORMATION:
 - Jurisdiction: ${sanitizeInput(caseDetails.jurisdiction, 100)}
 - Charges: ${chargesText}
@@ -436,6 +440,13 @@ BASIC CASE INFORMATION:
     if (urgencyLines.length > 0) {
       prompt += `\n\nCIVIL EMERGENCY URGENCY SIGNALS — these represent active situations happening NOW, not hypothetical concerns. Address each one with specific, time-sensitive guidance. Urgency-level signals are more important than general case stage guidance:\n${urgencyLines.join('\n')}`;
     }
+  }
+
+  // Collateral consequences and CCRC resource guidance
+  if (collateralBlock || (caseDetails.selectedConcerns && caseDetails.selectedConcerns.some(c =>
+    ['housing', 'employment', 'finances', 'immigration', 'childcare', 'familyCare'].includes(c)
+  ))) {
+    prompt += `\n\nCOLLATERAL CONSEQUENCES RESOURCE: When discussing collateral consequences (effects on housing, employment, benefits, voting, or immigration), include the Collateral Consequences Resource Center as a resource. Use this format in the resources array: { type: "national", description: "State-by-state database of collateral consequences, certificates of relief, and restoration of rights. Authoritative source for understanding what a specific conviction affects.", contact: "ccrcatlaw.org/resources", website: "https://ccrcatlaw.org/resources" }. Include this resource whenever the guidance covers collateral consequences or civil impacts of a criminal case.`;
   }
 
   if (chargesUnknown) {
