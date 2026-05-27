@@ -1969,3 +1969,86 @@ export function assessEligibility(
     ]
   };
 }
+
+// Automatic clearance data — separate from the petition-based expungement rules above.
+// Sources: Code for America, Clean Slate Initiative (cleanslateinitiative.org), state legislation.
+// Last updated: May 2026.
+
+export interface AutomaticClearanceEntry {
+  state: string;
+  hasActive: boolean;
+  offenseTypes: string[];         // types of offenses covered by automatic clearance
+  waitingPeriodNote?: string;     // any waiting period before automatic clearance triggers
+  legislation?: string;           // primary legislation
+  link?: string;                  // official or Code for America resource
+  notes?: string;                 // caveats or limitations
+}
+
+export const automaticClearanceData: Record<string, AutomaticClearanceEntry> = {
+  CA: {
+    state: "CA",
+    hasActive: true,
+    offenseTypes: ["marijuana", "cannabis"],
+    legislation: "AB 1599 (2024); HS § 11361.9",
+    link: "https://www.codeforamerica.org/programs/clear-my-record/",
+    notes: "Code for America's Clear My Record tool serves California. Petition-based expungement under PC § 1203.4 is still required for most non-cannabis offenses.",
+  },
+  IL: {
+    state: "IL",
+    hasActive: true,
+    offenseTypes: ["cannabis"],
+    legislation: "Cannabis Regulation and Tax Act (410 ILCS 705)",
+    notes: "Automatic expungement for cannabis convictions. Other offenses still require petition.",
+  },
+  NY: {
+    state: "NY",
+    hasActive: true,
+    offenseTypes: ["marijuana"],
+    legislation: "Marijuana Regulation and Taxation Act (MRTA, 2021)",
+    notes: "Automatic expungement of prior marijuana convictions. No petition required. NY does not have general expungement; non-marijuana offenses use CPL § 160.59 sealing.",
+  },
+  PA: {
+    state: "PA",
+    hasActive: true,
+    offenseTypes: ["non-violent misdemeanors"],
+    waitingPeriodNote: "10 years after conviction with no subsequent offense",
+    legislation: "Clean Slate Act (Act 56 of 2018)",
+    notes: "Covers non-violent misdemeanors and summary offenses. Felonies and violent offenses are excluded.",
+  },
+  MI: {
+    state: "MI",
+    hasActive: true,
+    offenseTypes: ["misdemeanors", "certain felonies"],
+    waitingPeriodNote: "7 years after conviction or release from incarceration",
+    legislation: "Clean Slate legislation (2021)",
+    notes: "Excludes violent offenses, sexual assault, and crimes against minors. Up to 2 felonies and 4 misdemeanors may be automatically expunged.",
+  },
+  CT: {
+    state: "CT",
+    hasActive: true,
+    offenseTypes: ["misdemeanors", "certain felonies"],
+    waitingPeriodNote: "7 years for misdemeanors; 10 years for most felonies",
+    legislation: "Clean Slate legislation (2021)",
+    notes: "Violent offenses and sex offenses are excluded.",
+  },
+  DE: {
+    state: "DE",
+    hasActive: true,
+    offenseTypes: ["misdemeanors", "certain felonies"],
+    waitingPeriodNote: "3 years for misdemeanors; 7 years for certain felonies",
+    legislation: "Clean Slate legislation (2021)",
+    notes: "Violent offenses excluded.",
+  },
+  NJ: {
+    state: "NJ",
+    hasActive: true,
+    offenseTypes: ["marijuana", "cannabis"],
+    legislation: "Cannabis Regulatory, Enforcement Assistance, and Marketplace Modernization Act (2021)",
+    notes: "Automatic expungement for marijuana offenses. NJ also has petition-based Clean Slate expungement (10-year general, automatic after 10 years for eligible offenses).",
+  },
+};
+
+// Helper: returns true if a state has any active automatic clearance program
+export function hasAutomaticClearance(stateCode: string): boolean {
+  return automaticClearanceData[stateCode]?.hasActive === true;
+}

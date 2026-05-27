@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import courtLogisticsHero from "@assets/stock_images/court-logistics.jpg";
-import { Calendar, ClipboardCheck, Users, Package, CreditCard } from "lucide-react";
+import { Calendar, ClipboardCheck, Users, Package, CreditCard, Bell, ExternalLink, ArrowRight } from "lucide-react";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -8,7 +8,97 @@ import {
   FAQ,
 } from "@/components/support/resource-page-template";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+
+function RemindersSection() {
+  const { t } = useTranslation();
+  const ns = 'support.courtLogistics.reminders';
+  const selfHelpItems = t(`${ns}.selfHelpItems`, { returnObjects: true }) as string[];
+
+  return (
+    <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="court-reminders">
+      <div className="max-w-4xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-2">
+            <Bell className="h-5 w-5 text-purple-600" />
+            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+          </div>
+          <p className="text-muted-foreground mb-2">{t(`${ns}.sectionSubtitle`)}</p>
+          <p className="text-xs text-muted-foreground italic mb-8">{t(`${ns}.researchNote`)}</p>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <h3 className="text-sm font-semibold text-foreground mb-4">{t(`${ns}.servicesTitle`)}</h3>
+          <div className="space-y-3 mb-8">
+            {[
+              {
+                name: t(`${ns}.bailProject.name`),
+                desc: t(`${ns}.bailProject.desc`),
+                url: t(`${ns}.bailProject.url`),
+                external: true,
+              },
+              {
+                name: t(`${ns}.stateCourts.name`),
+                desc: t(`${ns}.stateCourts.desc`),
+                url: null,
+                external: false,
+              },
+              {
+                name: t(`${ns}.pdOffice.name`),
+                desc: t(`${ns}.pdOffice.desc`),
+                url: null,
+                external: false,
+              },
+            ].map(({ name, desc, url, external }) => (
+              <Card key={name}>
+                <CardContent className="pt-4 pb-4">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{name}</p>
+                      <p className="text-sm text-muted-foreground mt-0.5 leading-relaxed">{desc}</p>
+                    </div>
+                    {external && url && (
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 text-purple-600 hover:text-purple-500 mt-0.5">
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.selfHelpTitle`)}</h3>
+              <ul className="space-y-2">
+                {selfHelpItems.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="text-purple-400 mt-0.5 flex-shrink-0">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50/50 dark:bg-purple-950/20 p-5">
+            <h3 className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.guideLabel`)}</h3>
+            <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.guideDesc`)}</p>
+            <a href="/support/court-logistics/court-date-guide" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold transition-colors">
+              Open Guide <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
 
 function CourtRequirementsSection() {
   const { t } = useTranslation();
@@ -278,7 +368,7 @@ export default function CourtLogisticsSupport() {
       externalResources={externalResources}
       faqs={faqs}
       tips={tips}
-      customSections={<CourtRequirementsSection />}
+      customSections={<><RemindersSection /><CourtRequirementsSection /></>}
       relatedLinks={[
         { label: t('support.relatedLinks.process'), href: "/case-timeline" },
         { label: t('support.relatedLinks.rights'), href: "/rights-info" },

@@ -1076,6 +1076,36 @@ export function buildSearchIndex(): void {
       aliases: ['deported family', 'after removal', 'deportation help', 'family reunification'],
       url: '/immigration-guidance/after-deportation'
     },
+    {
+      id: 'record-clearance-screener',
+      title: 'Record Clearance Eligibility Screener',
+      titleEs: 'Evaluador de Elegibilidad para Eliminación de Antecedentes',
+      titleZh: '记录清除资格评估',
+      content: 'Step-by-step decision tree to check eligibility for record expungement, sealing, or automatic Clean Slate clearance. Covers arrest-only records, misdemeanors, felonies, and marijuana offenses. No data stored.',
+      tags: ['expungement', 'record sealing', 'clean slate', 'criminal record', 'eligibility', 'screener'],
+      aliases: ['record clearing', 'expunge my record', 'seal my record', 'clean slate eligibility', 'can I expunge'],
+      url: '/support/reputation/eligibility'
+    },
+    {
+      id: 'pd-intake-form',
+      title: 'Public Defender Intake Form',
+      titleEs: 'Formulario de Ingreso del Defensor Público',
+      titleZh: '公设辩护人入档表格',
+      content: 'Printable intake form to bring to your first public defender meeting. Covers background information: personal details, housing, employment, dependents, prior legal history, and immigration concerns. Does not collect case facts. Print and fill out by hand.',
+      tags: ['public defender', 'intake form', 'first meeting', 'attorney', 'preparation'],
+      aliases: ['public defender form', 'intake form', 'first meeting preparation', 'what to bring public defender'],
+      url: '/support/court-logistics/intake-form'
+    },
+    {
+      id: 'court-date-guide',
+      title: 'Court Date Guide: How to Track and Not Miss Your Court Date',
+      titleEs: 'Guía de Fechas de Tribunal',
+      titleZh: '法庭日期指南',
+      content: 'How to confirm court dates in writing, set up redundant reminders, find transportation, and what to do if you have missed a court date. Third-party reminder services including The Bail Project. What to bring and how to prepare on the day of court.',
+      tags: ['court date', 'bench warrant', 'failure to appear', 'reminder', 'transportation', 'bail project'],
+      aliases: ['court reminder', 'missed court date', 'bench warrant', 'court appearance', 'what to bring to court'],
+      url: '/support/court-logistics/court-date-guide'
+    },
   ];
 
   // Support, resource, and logistics pages get 'legal_resource' type
@@ -1086,7 +1116,7 @@ export function buildSearchIndex(): void {
     'support-family-care', 'support-reputation', 'support-personal-health',
     'resources', 'friends-family', 'friends-family-toolkit', 'legal-aid', 'recap-extensions',
     'document-library', 'document-summarizer', 'attorney-portal', 'attorney-playbooks',
-    'court-locator',
+    'court-locator', 'record-clearance-screener', 'pd-intake-form', 'court-date-guide',
   ]);
 
   for (const page of sitePages) {

@@ -75,6 +75,9 @@ const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
 const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
 const ReentrySupport = lazy(() => import("@/pages/support/reentry"));
 const PersonalHealthSupport = lazy(() => import("@/pages/support/personal-health"));
+const RecordClearanceScreener = lazy(() => import("@/pages/support/record-clearance-screener"));
+const PdIntakeForm = lazy(() => import("@/pages/support/pd-intake-form"));
+const CourtDateGuide = lazy(() => import("@/pages/support/court-date-guide"));
 const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
 // CollateralConsequences merged into /support/reputation — route now redirects
 const RightToCounsel = lazy(() => import("@/pages/right-to-counsel"));
@@ -168,8 +171,11 @@ function Router() {
       <Route path="/support/housing" component={HousingSupport} />
       <Route path="/support/family-care" component={FamilyCareSupport} />
       <Route path="/support/reputation" component={ReputationSupport} />
+      <Route path="/support/reputation/eligibility" component={RecordClearanceScreener} />
       <Route path="/support/reentry" component={ReentrySupport} />
       <Route path="/support/personal-health" component={PersonalHealthSupport} />
+      <Route path="/support/court-logistics/intake-form" component={PdIntakeForm} />
+      <Route path="/support/court-logistics/court-date-guide" component={CourtDateGuide} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
       <Route path="/letter-generator" component={LetterGeneratorPage} />
       <Route path="/attorney"><Redirect to="/directory" /></Route>

@@ -742,6 +742,34 @@ export default {
         "tip4": "Apague su teléfono completamente antes de entrar a la sala de la corte, no solo siléncielo",
         "tip5": "Si se siente abrumado, está bien pedirle al juez un momento para calmarse"
       },
+      "reminders": {
+        "sectionTitle": "Recordatorios de Fechas de Tribunal",
+        "sectionSubtitle": "Faltar a una fecha de tribunal suele ser un problema logístico, no una elección intencional. Los recordatorios simples hacen una diferencia significativa.",
+        "researchNote": "Investigaciones de NYU, Harvard y Stanford encontraron que los recordatorios por mensaje de texto a clientes de defensores públicos redujeron significativamente las órdenes de arresto y la encarcelación previa al juicio. El Bail Project, que proporciona recordatorios y transporte a los clientes, reporta que el 92% de los clientes regresó al tribunal.",
+        "servicesTitle": "Servicios de recordatorio disponibles",
+        "bailProject": {
+          "name": "The Bail Project",
+          "desc": "Opera en más de 18 ciudades y proporciona recordatorios de fechas de tribunal y asistencia con transporte. Verifique su sitio para una sucursal local cerca de usted.",
+          "url": "https://bailproject.org/"
+        },
+        "stateCourts": {
+          "name": "Portales de Tribunales Estatales",
+          "desc": "La mayoría de los sistemas de tribunales estatales ofrecen búsqueda de casos en línea y recordatorios de texto opcionales. Busque el nombre de su estado y 'consulta de caso judicial' para encontrar el portal de su estado."
+        },
+        "pdOffice": {
+          "name": "La Oficina de su Defensor Público",
+          "desc": "Pregunte en su primera reunión si la oficina envía recordatorios de citas. Muchas lo hacen."
+        },
+        "selfHelpTitle": "Pasos simples que funcionan",
+        "selfHelpItems": [
+          "Configure un recordatorio en el calendario del teléfono 1 semana antes, 2 días antes y la mañana de su fecha de tribunal",
+          "Pida a un amigo o familiar de confianza que también le recuerde",
+          "Escriba la fecha en un calendario físico en casa",
+          "Anote su número de caso, sala del tribunal y nombre del juez junto a la fecha"
+        ],
+        "guideLabel": "Guía Completa de Fechas de Tribunal",
+        "guideDesc": "Una guía completa para confirmar su fecha de tribunal por escrito, configurar recordatorios, encontrar transporte y qué hacer si ha faltado a una fecha."
+      },
       "requirements": {
         "sectionTitle": "Lo que puede ser requerido de usted",
         "sectionSubtitle": "Los jueces a menudo imponen condiciones en la fianza, la derivación o las sentencias. Estas secciones explican cómo cumplirlas correctamente — elegir el programa incorrecto es un error común y costoso.",
@@ -1636,6 +1664,43 @@ export default {
         "tip3": "Su abogado debe asesorarle sobre qué, si algo, decir públicamente sobre su caso — siga su orientación de cerca",
         "tip4": "Comience a recopilar documentación positiva ahora: evaluaciones de desempeño, cartas de referencia, registros de voluntariado, participación comunitaria",
         "tip5": "Después de que su caso se resuelva, explore las opciones de eliminación de registros — la eliminación o el sellado puede marcar una diferencia real en el acceso a vivienda y empleo en el futuro"
+      },
+      "cleanSlate": {
+        "sectionTitle": "Eliminación Automática de Antecedentes",
+        "sectionSubtitle": "En más de 20 estados, algunos antecedentes se borran automáticamente sin que usted presente nada.",
+        "gapLabel": "La brecha de la segunda oportunidad",
+        "gapBody": "La investigación muestra que menos del 10% de las personas elegibles para sellar sus antecedentes lo hacen a través de sistemas basados en peticiones. El papeleo es confuso, la ayuda legal es difícil de encontrar y muchas personas no saben que califican. La eliminación automática cierra esta brecha haciendo que el gobierno inicie el proceso.",
+        "autoLabel": "Cómo funciona la eliminación automática",
+        "autoBody": "En los estados con leyes de Pizarra Limpia, los sistemas gubernamentales escanean periódicamente los registros para identificar a las personas que califican. Cuando cumple los criterios, generalmente completar su sentencia y esperar el tiempo requerido, su registro se sella o se borra sin ninguna acción de su parte. No presenta nada, no paga una tarifa ni comparece ante el tribunal.",
+        "petitionLabel": "Sistemas basados en peticiones (mayoría de estados)",
+        "petitionBody": "En los estados sin eliminación automática, usted presenta una petición al tribunal para que su registro sea sellado o eliminado. Las organizaciones de ayuda legal pueden ayudar con este proceso sin costo. El evaluador de elegibilidad a continuación puede decirle si su estado tiene un programa automático o requiere una petición.",
+        "statesTitle": "Estados con programas activos de eliminación automática (hasta 2026)",
+        "statesList": [
+          "California: condenas por marihuana y cannabis (AB 1599, 2024)",
+          "Illinois: condenas por cannabis (Ley de Regulación y Tributación del Cannabis)",
+          "Nueva York: condenas por marihuana (Ley de Regulación y Tributación de la Marihuana, 2021)",
+          "Pensilvania: faltas menores no violentas después de 10 años (Ley de Pizarra Limpia, 2018)",
+          "Michigan: ciertas ofensas después de 7 años (legislación de Pizarra Limpia, 2021)",
+          "Connecticut: ciertas faltas menores (legislación de Pizarra Limpia, 2021)",
+          "Delaware: ciertas faltas menores (legislación de Pizarra Limpia, 2021)",
+          "Nueva Jersey: condenas por marihuana y cannabis"
+        ],
+        "statesNote": "Otros estados están implementando legislación de Pizarra Limpia. Consulte el rastreador de la Iniciativa de Pizarra Limpia a continuación para conocer el estado actual.",
+        "checkTitle": "Cómo verificar si su registro ha sido eliminado",
+        "checkSteps": [
+          "Realice una verificación de antecedentes sobre usted mismo a través de un servicio de informes al consumidor para ver lo que ven los empleadores",
+          "Contacte al secretario del tribunal de su condado y solicite una copia de su historial criminal",
+          "En California, use la herramienta Clear My Record de Code for America directamente"
+        ],
+        "screenerLabel": "Verifique su elegibilidad",
+        "screenerDesc": "Responda cuatro preguntas para saber si la eliminación automática o una petición puede aplicar a su situación.",
+        "screenerCta": "Abrir Evaluador de Elegibilidad",
+        "cfaLabel": "Code for America: Clear My Record",
+        "cfaDesc": "La plataforma líder para la eliminación automática de antecedentes. Incluye herramientas para California y orientación para otros estados.",
+        "cleanSlateLabel": "Iniciativa de Pizarra Limpia",
+        "cleanSlateDesc": "Rastreador estado por estado de la legislación de Pizarra Limpia y el estado de los programas de eliminación automática.",
+        "lawHelpLabel": "LawHelp.org",
+        "lawHelpDesc": "Encuentre organizaciones de ayuda legal gratuita que ofrecen asistencia con la eliminación de antecedentes por estado."
       }
     }
   },
@@ -5860,6 +5925,238 @@ export default {
       "q7": {
         "question": "¿Puede un cónyuge o hijo ciudadano estadounidense presentar una petición para que la persona deportada regrese legalmente?",
         "answer": "Los ciudadanos estadounidenses típicamente pueden presentar peticiones para ciertos familiares, incluidos cónyuges y padres. Sin embargo, alguien que ha sido deportado típicamente necesita abordar la prohibición de reingreso antes de que una petición pueda resultar en una visa o tarjeta de residencia. El proceso específico depende de la relación, el tiempo que la persona estuvo en los EE.UU. sin estatus y otros factores. Este proceso típicamente toma años e involucra múltiples agencias gubernamentales. Nota: En mayo de 2026, USCIS emitió un memorando de política (PM-602-0199) que endureció los estándares discrecionales para las solicitudes de ajuste de estatus. Dado que las personas deportadas ya procesan a través de consulados en el extranjero, este memorando afecta principalmente los estándares aplicados cuando se revisa cualquier solicitud resultante. Un abogado de inmigración puede asesorar sobre si este camino está disponible y cómo la política actual se aplica a una situación específica."
+      }
+    }
+  },
+  "screener": {
+    "badge": "Herramienta Gratuita",
+    "title": "Evaluador de Elegibilidad para Eliminación de Antecedentes",
+    "subtitle": "Responda cuatro preguntas para saber si sus antecedentes pueden ser elegibles para expungement, sellado o eliminación automática. Esta herramienta solo proporciona información general. No es asesoramiento legal.",
+    "backToReputation": "Volver a Reputación y Registro",
+    "stepIndicator": "Paso {{current}} de {{total}}",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "seeResult": "Ver Mi Resultado",
+    "startOver": "Comenzar de Nuevo",
+    "step1": {
+      "question": "¿En qué estado se encuentra?",
+      "hint": "Las reglas de elegibilidad varían mucho según el estado. Seleccione el estado donde se creó el registro.",
+      "placeholder": "Seleccione un estado..."
+    },
+    "step2": {
+      "question": "¿Qué tipo de registro desea eliminar?",
+      "options": {
+        "arrest": "Arresto que no resultó en condena (cargo retirado, desestimado o absuelto)",
+        "misdemeanor": "Condena por delito menor",
+        "felony": "Condena por delito grave",
+        "marijuana": "Delito de drogas (marihuana o cannabis específicamente)"
+      }
+    },
+    "step3": {
+      "question": "¿Cuánto tiempo hace que ocurrió esto?",
+      "hint": "La mayoría de los estados requieren un período de espera antes de que pueda solicitar.",
+      "options": {
+        "lt1": "Hace menos de 1 año",
+        "1to3": "De 1 a 3 años",
+        "3to7": "De 3 a 7 años",
+        "gt7": "Hace más de 7 años"
+      }
+    },
+    "step4": {
+      "question": "¿Ha completado todas las partes de su sentencia?",
+      "hint": "Esto incluye libertad condicional, libertad bajo fianza, multas y restitución.",
+      "options": {
+        "complete": "Sí, todo está completo",
+        "fines": "Casi completo, pero algunas multas o cargos aún están pendientes",
+        "probation": "No, todavía estoy en libertad condicional o supervisada"
+      }
+    },
+    "results": {
+      "A": {
+        "title": "Puede aplicar la eliminación automática",
+        "message": "Según sus respuestas, su estado puede eliminar automáticamente este registro sin que usted presente ningún trámite. Esto significa que el gobierno inicia el proceso. Consulte los enlaces a continuación para confirmar si califica y si el proceso ya ha comenzado para su registro."
+      },
+      "B": {
+        "title": "Puede estar disponible el expungement por petición",
+        "message": "Según sus respuestas, usted puede ser elegible para solicitar expungement o sellado de registros. Una petición significa que usted presenta documentos ante el tribunal. Muchas organizaciones de ayuda legal ofrecen asistencia gratuita con este proceso."
+      },
+      "C": {
+        "title": "Es posible que necesite esperar más tiempo",
+        "message": "Según sus respuestas, es posible que todavía no sea elegible. La elegibilidad generalmente depende de completar su sentencia y esperar el tiempo requerido. Lleve un registro de su fecha de elegibilidad. Cuando esté listo, las organizaciones de ayuda legal gratuitas pueden ayudar."
+      },
+      "D": {
+        "title": "Existen vías limitadas o no existen",
+        "message": "El expungement para este tipo de delito es limitado en muchos estados. Algunos estados no permiten el expungement de delitos graves violentos en absoluto. Una organización de ayuda legal puede revisar su situación específica."
+      }
+    },
+    "resources": {
+      "title": "Enlaces Útiles",
+      "clearMyRecord": "Code for America: Elimina Mi Registro",
+      "cleanSlate": "Iniciativa Clean Slate: Seguimiento por Estado",
+      "lawHelp": "LawHelp.org: Ayuda Legal Gratuita por Estado"
+    },
+    "disclaimer": "Este evaluador proporciona solo información general. No es asesoramiento legal. Los resultados dependen de su registro específico y la ley estatal. Contacte a una organización de ayuda legal para una revisión completa."
+  },
+  "pdIntakeForm": {
+    "badge": "Formulario Imprimible",
+    "title": "Formulario de Ingreso del Defensor Público",
+    "formTitle": "Formulario de Ingreso del Defensor Público",
+    "intro": "Imprima este formulario y llévelo a su primera reunión con su defensor público. Ayuda a su abogado a entender su situación rápidamente. Complételo a mano. No lo comparta con nadie excepto su abogado.",
+    "privacyNote": "No complete este formulario en una computadora compartida o pública. Complételo en papel después de imprimir.",
+    "printButton": "Imprimir Este Formulario",
+    "backToCourtLogistics": "Volver a Apoyo Logístico del Tribunal",
+    "printIntro": "Complete esto a mano. Llévelo a su primera reunión con su defensor público. No lo comparta con nadie excepto su abogado.",
+    "formFooter": "Este formulario no es privilegiado a menos que sea revisado con su abogado. No lo comparta con nadie excepto su defensor público.",
+    "options": {
+      "yes": "Sí",
+      "no": "No",
+      "preferNotSay": "Prefiero no decir",
+      "rent": "Alquilando",
+      "own": "Propietario",
+      "stayingWith": "Viviendo con familiares o amigos",
+      "shelter": "Refugio",
+      "other": "Otro",
+      "stable": "Estable",
+      "atRisk": "En riesgo",
+      "noHousing": "Actualmente sin vivienda",
+      "completed": "Completado",
+      "currentlyOn": "Actualmente en"
+    },
+    "sections": {
+      "personal": {
+        "title": "Información Personal",
+        "fullName": "Nombre Legal Completo",
+        "preferredName": "Nombre Preferido (si es diferente)",
+        "dob": "Fecha de Nacimiento",
+        "address": "Dirección Actual",
+        "phone": "Número de Teléfono (mejor forma de contacto)",
+        "email": "Dirección de Correo Electrónico",
+        "language": "Idioma Preferido"
+      },
+      "support": {
+        "title": "Su Sistema de Apoyo",
+        "emergencyContact": "Nombre del Contacto de Emergencia",
+        "emergencyPhone": "Teléfono del Contacto de Emergencia",
+        "hasDependents": "¿Tiene hijos o dependientes?",
+        "howManyDependents": "Si es así, ¿cuántos?",
+        "employed": "¿Está empleado actualmente?",
+        "employerName": "Nombre y Dirección del Empleador (opcional)",
+        "employerAddress": "Ciudad/Estado del Empleador",
+        "student": "¿Es estudiante?",
+        "veteran": "¿Es veterano militar?"
+      },
+      "housing": {
+        "title": "Vivienda",
+        "situation": "Situación actual de vivienda",
+        "stability": "¿Qué tan estable es su vivienda ahora?"
+      },
+      "financial": {
+        "title": "Información Financiera",
+        "monthlyIncome": "Ingreso Mensual Aproximado",
+        "outstandingDebts": "¿Tiene deudas o multas pendientes de casos anteriores?",
+        "healthInsurance": "¿Tiene seguro médico?",
+        "insuranceType": "Si es así, ¿qué tipo de seguro?"
+      },
+      "legalHistory": {
+        "title": "Historial Legal Previo (General, No el Caso Actual)",
+        "note": "Esta sección pregunta sobre su historial general, no sobre los hechos de su caso actual.",
+        "everArrested": "¿Alguna vez ha sido arrestado antes?",
+        "everConvicted": "¿Alguna vez ha sido condenado?",
+        "probationParole": "¿Alguna vez ha estado en libertad condicional o supervisada?",
+        "expunged": "¿Alguna vez ha tenido un registro eliminado o sellado?"
+      },
+      "immigration": {
+        "title": "Inmigración (Opcional, Marque si es Relevante)",
+        "note": "No está obligado a responder estas preguntas. Esta información puede ser relevante para cómo se maneja su caso.",
+        "usCitizen": "¿Es ciudadano estadounidense?",
+        "concerns": "¿Tiene alguna preocupación de inmigración relacionada con su caso?"
+      },
+      "additional": {
+        "title": "Información Adicional",
+        "anythingElse": "¿Hay algo más que su abogado deba saber sobre su historial o situación?",
+        "medications": "Liste los medicamentos que está tomando actualmente que su abogado deba conocer (para comparecencias en el tribunal, detención, etc.):"
+      }
+    }
+  },
+  "courtDateGuide": {
+    "badge": "Guía Práctica",
+    "title": "Guía de Fechas de Tribunal: Cómo Seguir y No Perder su Fecha",
+    "subtitle": "Perder una fecha en el tribunal generalmente resulta en una orden de arresto. Esta guía cubre cómo confirmar su fecha, establecer recordatorios, encontrar transporte y qué hacer si ya ha perdido una fecha.",
+    "backToCourtLogistics": "Volver a Apoyo Logístico del Tribunal",
+    "relatedTitle": "Recursos Relacionados",
+    "relatedLinks": {
+      "courtLogistics": "Apoyo Logístico del Tribunal",
+      "transportation": "Ayuda de Transporte",
+      "intakeForm": "Formulario de Ingreso del Defensor Público"
+    },
+    "sections": {
+      "whyMatters": {
+        "title": "Por Qué Importa",
+        "body": "Las investigaciones muestran que perder fechas en el tribunal es frecuentemente un problema logístico, no una elección intencional. Las barreras de transporte, los horarios de trabajo, el cuidado de niños y el simple olvido son razones comunes por las que las personas pierden el tribunal. Los recordatorios simples y repetidos pueden marcar una gran diferencia. Los tribunales generalmente no distinguen entre una fecha perdida que fue intencional y una que fue accidental.",
+        "warrantNote": "Una fecha perdida en el tribunal típicamente resulta en una orden de arresto emitida. Actuar rápidamente, con su abogado, es casi siempre mejor que esperar."
+      },
+      "confirmWriting": {
+        "title": "Confirme su Fecha del Tribunal por Escrito",
+        "intro": "No confíe solo en la memoria. Confirme su fecha del tribunal por escrito a través de tantos de estos pasos como sea posible.",
+        "step1": "Pida a su abogado o defensor público una copia escrita de todas las fechas programadas.",
+        "step2": "Solicite una copia del calendario de casos del tribunal en la oficina del secretario del juzgado.",
+        "step3": "Consulte el portal de tribunales en línea de su estado. La mayoría de los estados tienen un sistema de búsqueda de casos público. Busque el nombre de su estado más 'court case lookup' para encontrarlo.",
+        "step4": "Escriba la fecha, hora, sala del tribunal y nombre del juez en papel y guárdelo en un lugar seguro.",
+        "saveTitle": "Guarde Estos Detalles",
+        "saveItems": {
+          "caseNumber": "Su número de caso completo",
+          "courtroom": "Número o ubicación de la sala",
+          "judgeName": "Nombre del juez",
+          "time": "Fecha y hora exacta"
+        }
+      },
+      "reminders": {
+        "title": "Configure Recordatorios Redundantes",
+        "intro": "Un recordatorio no es suficiente. Use múltiples sistemas para que si uno falla, otros lo capturen.",
+        "tip1": "Configure recordatorios en el calendario del teléfono para una semana antes, dos días antes y la mañana de su fecha en el tribunal.",
+        "tip2": "Pida a una persona de confianza en su vida que le recuerde cuando se acerque la fecha.",
+        "tip3": "Escriba la fecha en un calendario físico o papel que vea todos los días.",
+        "tip4": "Si tiene un oficial de libertad condicional o supervisada, es posible que también envíen recordatorios. Pregúnteles directamente."
+      },
+      "thirdParty": {
+        "title": "Servicios de Recordatorio de Terceros",
+        "bailProject": {
+          "name": "The Bail Project (bailproject.org)",
+          "description": "The Bail Project opera en 18 o más ciudades y proporciona recordatorios de fechas en el tribunal y asistencia de transporte a los clientes. Consulte su sitio para capítulos locales cerca de usted."
+        },
+        "courtPortals": {
+          "name": "Programas de Recordatorio de Tribunales Estatales",
+          "description": "Muchos sistemas de tribunales estatales tienen programas de recordatorio por texto de inscripción voluntaria a través de sus portales de gestión de casos. Busque el nombre de su estado más 'court case lookup' para encontrar el portal de su estado y verificar si hay una opción de inscripción para recordatorios."
+        },
+        "pdOffice": {
+          "name": "La Oficina de su Defensor Público",
+          "description": "Pregunte en su primera reunión si la oficina envía recordatorios de citas. Muchas oficinas de defensores públicos envían recordatorios por teléfono, texto o carta."
+        }
+      },
+      "transportation": {
+        "title": "Si Necesita Transporte",
+        "bailProject": "The Bail Project también proporciona viajes gratuitos al tribunal para clientes en ciudades donde operan.",
+        "twoEleven": "Llame al 2-1-1 o envíe su código postal al 898-211 para encontrar programas de asistencia de transporte local.",
+        "pdOffice": "Pregunte a su defensor público sobre programas de autobús al tribunal. Algunos condados proporcionan transporte gratuito al juzgado en días de audiencia."
+      },
+      "missed": {
+        "title": "Qué Hacer si Ya Ha Perdido una Fecha",
+        "warning": "Típicamente se emite una orden de arresto cuando alguien pierde una fecha en el tribunal. No lo ignore. Contacte a su abogado de inmediato.",
+        "step1": "Contacte a su abogado de inmediato. No espere a ver qué sucede.",
+        "step2": "En muchas situaciones, un abogado puede presentar una moción para retirar la orden y reprogramar su fecha en el tribunal.",
+        "step3": "Presentarse voluntariamente con su abogado generalmente resulta en mejores resultados que ser arrestado por la orden más tarde.",
+        "step4": "Reúna cualquier documento que explique por qué perdió la fecha, como un registro médico o un horario de trabajo. Su abogado puede usarlo.",
+        "disclaimer": "Los resultados varían ampliamente según la jurisdicción y el juez. Esta es información general. Contacte a una organización de ayuda legal o a su abogado para orientación sobre su situación específica."
+      },
+      "dayOf": {
+        "title": "El Día del Tribunal",
+        "intro": "La preparación marca la diferencia. Aquí hay una lista de verificación para el día de su comparecencia en el tribunal.",
+        "item1": "Llegue al menos 30 minutos antes. Las filas de seguridad del juzgado pueden ser lentas.",
+        "item2": "Traiga su identificación con foto.",
+        "item3": "Traiga cualquier documento que haya recibido sobre su caso.",
+        "item4": "Vístase apropiadamente. Se recomienda ropa de negocios informal o mejor.",
+        "item5": "Ponga su teléfono en silencio antes de entrar a la sala del tribunal.",
+        "item6": "Informe a su abogado sobre cualquier cambio en su situación desde su última reunión."
       }
     }
   }

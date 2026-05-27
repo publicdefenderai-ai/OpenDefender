@@ -746,6 +746,34 @@ export default {
         "tip4": "Turn off your phone completely before entering the courtroom, not just silence it",
         "tip5": "If you feel overwhelmed, it's okay to ask the judge if you can have a moment to compose yourself"
       },
+      "reminders": {
+        "sectionTitle": "Court Date Reminders",
+        "sectionSubtitle": "Missing a court date is often a logistics problem, not an intentional choice. Simple reminders make a significant difference.",
+        "researchNote": "Research from NYU, Harvard, and Stanford found that text message reminders to public defender clients significantly reduced bench warrants and pretrial incarceration. The Bail Project, which provides reminders and transportation to clients, reports that 92% of clients returned to court.",
+        "servicesTitle": "Reminder services you can use",
+        "bailProject": {
+          "name": "The Bail Project",
+          "desc": "Operates in 18+ cities and provides court date reminders plus transportation assistance. Check their site for a local chapter near you.",
+          "url": "https://bailproject.org/"
+        },
+        "stateCourts": {
+          "name": "State Court Portals",
+          "desc": "Most state court systems offer online case lookup and opt-in text reminders. Search your state name plus 'court case lookup' to find your state's portal."
+        },
+        "pdOffice": {
+          "name": "Your Public Defender's Office",
+          "desc": "Ask at your first meeting whether the office sends appointment reminders. Many do."
+        },
+        "selfHelpTitle": "Simple steps that work",
+        "selfHelpItems": [
+          "Set a phone calendar reminder 1 week before, 2 days before, and the morning of your court date",
+          "Ask a trusted friend or family member to remind you as well",
+          "Write the date on a physical calendar at home",
+          "Note your case number, courtroom, and judge's name next to the date"
+        ],
+        "guideLabel": "Full Court Date Tracker Guide",
+        "guideDesc": "A complete guide to confirming your court date in writing, setting up reminders, finding transportation, and what to do if you have missed a date."
+      },
       "requirements": {
         "sectionTitle": "What may be required of you",
         "sectionSubtitle": "Judges often attach conditions to bail, diversion, or sentences. These sections explain how to meet them correctly — choosing the wrong program is a common and costly mistake.",
@@ -1640,6 +1668,43 @@ export default {
         "tip3": "Your attorney should advise you on what, if anything, to say publicly about your case — follow their guidance closely",
         "tip4": "Start collecting positive documentation now: performance reviews, reference letters, volunteer records, community involvement",
         "tip5": "After your case resolves, explore record clearing options — expungement or sealing can make a real difference in housing and employment going forward"
+      },
+      "cleanSlate": {
+        "sectionTitle": "Automatic Record Clearance",
+        "sectionSubtitle": "In more than 20 states, some records are cleared automatically without you filing anything.",
+        "gapLabel": "The second chance gap",
+        "gapBody": "Research shows that fewer than 10% of people eligible to seal their records actually do so through petition-based systems. The paperwork is confusing, legal help is hard to find, and many people do not know they qualify. Automatic clearance closes this gap by having the government initiate the process.",
+        "autoLabel": "How automatic clearance works",
+        "autoBody": "In states with Clean Slate laws, government systems periodically scan records to identify people who qualify. When you meet the criteria, typically completing your sentence and waiting the required time, your record is sealed or cleared without any action from you. You do not file anything, pay a fee, or appear in court.",
+        "petitionLabel": "Petition-based systems (most states)",
+        "petitionBody": "In states without automatic clearance, you file a petition with the court to have your record sealed or expunged. Legal aid organizations can help with this process at no cost. The eligibility screener below can tell you whether your state has an automatic program or requires a petition.",
+        "statesTitle": "States with active automatic clearance programs (as of 2026)",
+        "statesList": [
+          "California: marijuana and cannabis convictions (AB 1599, 2024)",
+          "Illinois: cannabis convictions (Cannabis Regulation and Tax Act)",
+          "New York: marijuana convictions (Marijuana Regulation and Taxation Act, 2021)",
+          "Pennsylvania: non-violent misdemeanors after 10 years (Clean Slate Act, 2018)",
+          "Michigan: certain offenses after 7 years (Clean Slate legislation, 2021)",
+          "Connecticut: certain misdemeanors (Clean Slate legislation, 2021)",
+          "Delaware: certain misdemeanors (Clean Slate legislation, 2021)",
+          "New Jersey: marijuana and cannabis convictions"
+        ],
+        "statesNote": "Other states are implementing Clean Slate legislation. Check the Clean Slate Initiative tracker below for the latest status.",
+        "checkTitle": "How to check whether your record has been cleared",
+        "checkSteps": [
+          "Run a background check on yourself through a consumer reporting service to see what employers see",
+          "Contact your county court clerk and request a copy of your criminal history",
+          "In California, use Code for America's Clear My Record tool directly"
+        ],
+        "screenerLabel": "Check your eligibility",
+        "screenerDesc": "Answer four questions to find out whether automatic clearance or a petition may apply to your situation.",
+        "screenerCta": "Open Eligibility Screener",
+        "cfaLabel": "Code for America: Clear My Record",
+        "cfaDesc": "The leading platform for automatic record clearance. Includes tools for California and guidance for other states.",
+        "cleanSlateLabel": "Clean Slate Initiative",
+        "cleanSlateDesc": "State-by-state tracker of Clean Slate legislation and automatic clearance program status.",
+        "lawHelpLabel": "LawHelp.org",
+        "lawHelpDesc": "Find free legal aid organizations that offer expungement help by state."
       }
     }
   },
@@ -5942,6 +6007,238 @@ export default {
       "q7": {
         "question": "Can a US citizen spouse or child petition for the removed person to return legally?",
         "answer": "US citizens can typically file petitions for certain family members, including spouses and parents. However, someone who has been removed typically needs to address the bar to reentry before a petition can result in a visa or green card. The specific process depends on the relationship, the length of time the person was in the US without status, and other factors. This process typically takes years and involves multiple government agencies. Note: In May 2026, USCIS issued a policy memo (PM-602-0199) tightening the discretionary standards for adjustment of status applications. Because removed persons already go through consular processing abroad, this memo primarily affects the standards applied when any resulting application is reviewed. An immigration attorney can advise on whether this path is available and how current policy applies to a specific situation."
+      }
+    }
+  },
+  "screener": {
+    "badge": "Free Tool",
+    "title": "Record Clearance Eligibility Screener",
+    "subtitle": "Answer four questions to find out if your record may be eligible for expungement, sealing, or automatic clearance. This tool gives general information only. It is not legal advice.",
+    "backToReputation": "Back to Reputation and Record Support",
+    "stepIndicator": "Step {{current}} of {{total}}",
+    "back": "Back",
+    "next": "Next",
+    "seeResult": "See My Result",
+    "startOver": "Start Over",
+    "step1": {
+      "question": "What state are you in?",
+      "hint": "Eligibility rules vary a lot by state. Pick the state where the record was created.",
+      "placeholder": "Select a state..."
+    },
+    "step2": {
+      "question": "What type of record do you want to clear?",
+      "options": {
+        "arrest": "Arrest that did not lead to a conviction (charge dropped, dismissed, or acquitted)",
+        "misdemeanor": "Misdemeanor conviction",
+        "felony": "Felony conviction",
+        "marijuana": "Drug offense (marijuana or cannabis specifically)"
+      }
+    },
+    "step3": {
+      "question": "How long ago did this happen?",
+      "hint": "Most states require a waiting period before you can apply.",
+      "options": {
+        "lt1": "Less than 1 year ago",
+        "1to3": "1 to 3 years ago",
+        "3to7": "3 to 7 years ago",
+        "gt7": "More than 7 years ago"
+      }
+    },
+    "step4": {
+      "question": "Have you completed all parts of your sentence?",
+      "hint": "This includes probation, parole, fines, and restitution.",
+      "options": {
+        "complete": "Yes, everything is complete",
+        "fines": "Mostly complete, but some fines or fees are still outstanding",
+        "probation": "No, I am still on probation or parole"
+      }
+    },
+    "results": {
+      "A": {
+        "title": "Automatic clearance may apply",
+        "message": "Based on your answers, your state may automatically clear this record without you filing anything. This means the government starts the process. Check the links below to confirm whether you qualify and whether the process has already started for your record."
+      },
+      "B": {
+        "title": "Petition-based expungement may be available",
+        "message": "Based on your answers, you may be eligible to petition for expungement or record sealing. A petition means you file paperwork with the court. Many legal aid organizations offer free help with this process."
+      },
+      "C": {
+        "title": "You may need to wait longer",
+        "message": "Based on your answers, you may not be eligible yet. Eligibility typically depends on completing your sentence and waiting the required time. Keep track of your eligibility date. When you are ready, free legal aid organizations can help."
+      },
+      "D": {
+        "title": "Limited or no pathway exists",
+        "message": "Expungement for this type of offense is limited in many states. Some states do not allow expungement of violent felonies at all. A legal aid organization can review your specific situation."
+      }
+    },
+    "resources": {
+      "title": "Helpful Links",
+      "clearMyRecord": "Code for America: Clear My Record",
+      "cleanSlate": "Clean Slate Initiative: State Tracker",
+      "lawHelp": "LawHelp.org: Free Legal Aid by State"
+    },
+    "disclaimer": "This screener provides general information only. It is not legal advice. Results depend on your specific record and state law. Contact a legal aid organization for a full review."
+  },
+  "pdIntakeForm": {
+    "badge": "Print-Ready Form",
+    "title": "Public Defender Intake Form",
+    "formTitle": "Public Defender Intake Form",
+    "intro": "Print this form and bring it to your first meeting with your public defender. It helps your attorney understand your situation quickly. Fill it out by hand. Do not share it with anyone except your attorney.",
+    "privacyNote": "Do not fill this form out on a shared or public computer. Fill it out on paper after printing.",
+    "printButton": "Print This Form",
+    "backToCourtLogistics": "Back to Court Logistics Support",
+    "printIntro": "Fill this out by hand. Bring it to your first meeting with your public defender. Do not share it with anyone except your attorney.",
+    "formFooter": "This form is not privileged unless reviewed with your attorney. Do not share it with anyone except your public defender.",
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "preferNotSay": "Prefer not to say",
+      "rent": "Renting",
+      "own": "Own",
+      "stayingWith": "Staying with family or friends",
+      "shelter": "Shelter",
+      "other": "Other",
+      "stable": "Stable",
+      "atRisk": "At risk",
+      "noHousing": "Currently without housing",
+      "completed": "Completed",
+      "currentlyOn": "Currently on"
+    },
+    "sections": {
+      "personal": {
+        "title": "Personal Information",
+        "fullName": "Full Legal Name",
+        "preferredName": "Preferred Name (if different)",
+        "dob": "Date of Birth",
+        "address": "Current Address",
+        "phone": "Phone Number (best way to reach you)",
+        "email": "Email Address",
+        "language": "Preferred Language"
+      },
+      "support": {
+        "title": "Your Support System",
+        "emergencyContact": "Emergency Contact Name",
+        "emergencyPhone": "Emergency Contact Phone",
+        "hasDependents": "Do you have children or dependents?",
+        "howManyDependents": "If yes, how many?",
+        "employed": "Are you currently employed?",
+        "employerName": "Employer Name and Address (optional)",
+        "employerAddress": "Employer City / State",
+        "student": "Are you a student?",
+        "veteran": "Are you a military veteran?"
+      },
+      "housing": {
+        "title": "Housing",
+        "situation": "Current housing situation",
+        "stability": "How stable is your housing right now?"
+      },
+      "financial": {
+        "title": "Financial Information",
+        "monthlyIncome": "Approximate Monthly Income",
+        "outstandingDebts": "Do you have outstanding debts or fines from prior cases?",
+        "healthInsurance": "Do you have health insurance?",
+        "insuranceType": "If yes, what type of insurance?"
+      },
+      "legalHistory": {
+        "title": "Prior Legal History (General, Not Current Case)",
+        "note": "This section asks about your general background, not the facts of your current case.",
+        "everArrested": "Have you ever been arrested before?",
+        "everConvicted": "Have you ever been convicted?",
+        "probationParole": "Have you ever been on probation or parole?",
+        "expunged": "Have you ever had a record expunged or sealed?"
+      },
+      "immigration": {
+        "title": "Immigration (Optional, Check If Relevant)",
+        "note": "You are not required to answer these questions. This information may be relevant to how your case is handled.",
+        "usCitizen": "Are you a US citizen?",
+        "concerns": "Do you have any immigration concerns related to your case?"
+      },
+      "additional": {
+        "title": "Additional Information",
+        "anythingElse": "Is there anything else your attorney should know about your background or situation?",
+        "medications": "List any medications you are currently taking that your attorney should be aware of (for court appearances, detention, etc.):"
+      }
+    }
+  },
+  "courtDateGuide": {
+    "badge": "Practical Guide",
+    "title": "Court Date Guide: How to Track and Not Miss Your Court Date",
+    "subtitle": "Missing a court date typically results in a bench warrant. This guide covers how to confirm your date, set reminders, find transportation, and what to do if you have already missed a date.",
+    "backToCourtLogistics": "Back to Court Logistics Support",
+    "relatedTitle": "Related Resources",
+    "relatedLinks": {
+      "courtLogistics": "Court Logistics Support",
+      "transportation": "Transportation Help",
+      "intakeForm": "Public Defender Intake Form"
+    },
+    "sections": {
+      "whyMatters": {
+        "title": "Why This Matters",
+        "body": "Research shows that missing court dates is often a logistics problem, not an intentional choice. Transportation barriers, work schedules, childcare, and simple forgetfulness are common reasons people miss court. Simple, repeated reminders can make a big difference. Courts generally do not distinguish between a missed date that was intentional and one that was accidental.",
+        "warrantNote": "A missed court date typically results in a bench warrant being issued for your arrest. Acting quickly, with your attorney, is almost always better than waiting."
+      },
+      "confirmWriting": {
+        "title": "Confirm Your Court Date in Writing",
+        "intro": "Do not rely on memory alone. Get your court date confirmed in writing through as many of these steps as possible.",
+        "step1": "Ask your attorney or public defender for a written copy of all scheduled dates.",
+        "step2": "Request a copy of the court's case calendar from the clerk's office at the courthouse.",
+        "step3": "Check your state's online court portal. Most states have a public case lookup system. Search for your state name plus 'court case lookup' to find it.",
+        "step4": "Write the date, time, courtroom, and judge's name on paper and keep it somewhere safe.",
+        "saveTitle": "Save These Details",
+        "saveItems": {
+          "caseNumber": "Your full case number",
+          "courtroom": "Courtroom number or location",
+          "judgeName": "Judge's name",
+          "time": "Date and exact time"
+        }
+      },
+      "reminders": {
+        "title": "Set Up Redundant Reminders",
+        "intro": "One reminder is not enough. Use multiple systems so that if one fails, others will catch it.",
+        "tip1": "Set phone calendar reminders for one week before, two days before, and the morning of your court date.",
+        "tip2": "Ask a trusted person in your life to remind you as the date gets close.",
+        "tip3": "Write the date on a physical calendar or paper you see every day.",
+        "tip4": "If you have a probation or parole officer, they may also send reminders. Ask them directly."
+      },
+      "thirdParty": {
+        "title": "Third-Party Reminder Services",
+        "bailProject": {
+          "name": "The Bail Project (bailproject.org)",
+          "description": "The Bail Project operates in 18 or more cities and provides court date reminders and transportation assistance to clients. Check their site for local chapters near you."
+        },
+        "courtPortals": {
+          "name": "State Court Reminder Programs",
+          "description": "Many state court systems have opt-in text reminder programs through their case management portals. Search your state name plus 'court case lookup' to find your state's portal and check for a reminder sign-up option."
+        },
+        "pdOffice": {
+          "name": "Your Public Defender's Office",
+          "description": "Ask at your first meeting whether the office sends appointment reminders. Many public defender offices do send reminders by phone, text, or letter."
+        }
+      },
+      "transportation": {
+        "title": "If You Need Transportation",
+        "bailProject": "The Bail Project also provides free rides to court for clients in cities where they operate.",
+        "twoEleven": "Call 2-1-1 or text your zip code to 898-211 to find local transportation assistance programs.",
+        "pdOffice": "Ask your public defender about court bus programs. Some counties provide free transportation to the courthouse on hearing days."
+      },
+      "missed": {
+        "title": "What To Do If You Have Already Missed a Date",
+        "warning": "A bench warrant is typically issued when someone misses a court date. Do not ignore it. Contact your attorney right away.",
+        "step1": "Contact your attorney immediately. Do not wait to see if anything happens.",
+        "step2": "In many situations, an attorney can file a motion to recall the warrant and reschedule your court date.",
+        "step3": "Turning yourself in voluntarily with your attorney typically results in better outcomes than being arrested on the warrant later.",
+        "step4": "Gather any documents that explain why you missed the date, such as a medical record or work schedule. Your attorney may be able to use this.",
+        "disclaimer": "Outcomes vary widely by jurisdiction and by judge. This is general information. Contact a legal aid organization or your attorney for guidance on your specific situation."
+      },
+      "dayOf": {
+        "title": "On the Day of Court",
+        "intro": "Preparation makes a difference. Here is a checklist for the day of your court appearance.",
+        "item1": "Arrive at least 30 minutes early. Courthouse security lines can be slow.",
+        "item2": "Bring your photo ID.",
+        "item3": "Bring any paperwork you have received about your case.",
+        "item4": "Dress appropriately. Business casual or better is recommended.",
+        "item5": "Turn your phone to silent before entering the courtroom.",
+        "item6": "Tell your attorney about any changes in your situation since your last meeting."
       }
     }
   }

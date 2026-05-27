@@ -10,6 +10,9 @@ import {
   Mail,
   ChevronDown,
   BookOpen,
+  RefreshCw,
+  ExternalLink,
+  ArrowRight,
 } from "lucide-react";
 import {
   ResourcePageTemplate,
@@ -146,6 +149,113 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
         ? t("support.reputation.commsSection.copied")
         : t("support.reputation.commsSection.copyButton")}
     </Button>
+  );
+}
+
+function CleanSlateSection() {
+  const { t } = useTranslation();
+  const ns = "support.reputation.cleanSlate";
+  const statesList = t(`${ns}.statesList`, { returnObjects: true }) as string[];
+  const checkSteps = t(`${ns}.checkSteps`, { returnObjects: true }) as string[];
+
+  return (
+    <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="clean-slate">
+      <div className="max-w-4xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-2">
+            <RefreshCw className="h-5 w-5 text-teal-600" />
+            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+          </div>
+          <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-2 gap-5 mb-8">
+          <ScrollReveal>
+            <Card>
+              <CardContent className="pt-5">
+                <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.gapLabel`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.gapBody`)}</p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+          <ScrollReveal delay={0.07}>
+            <Card>
+              <CardContent className="pt-5">
+                <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.autoLabel`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.autoBody`)}</p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
+        </div>
+
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base">{t(`${ns}.statesTitle`)}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-1.5">
+                {statesList.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <Check className="h-4 w-4 text-teal-500 flex-shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-muted-foreground mt-3 italic">{t(`${ns}.statesNote`)}</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.checkTitle`)}</h3>
+              <ol className="space-y-2">
+                {checkSteps.map((step, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="font-bold text-foreground flex-shrink-0">{i + 1}.</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="rounded-xl border border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-950/20 p-5 mb-6">
+            <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.screenerLabel`)}</h3>
+            <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.screenerDesc`)}</p>
+            <a href="/support/reputation/eligibility" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white text-sm font-semibold transition-colors">
+              {t(`${ns}.screenerCta`)} <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { label: t(`${ns}.cfaLabel`), desc: t(`${ns}.cfaDesc`), url: "https://www.codeforamerica.org/programs/clear-my-record/" },
+              { label: t(`${ns}.cleanSlateLabel`), desc: t(`${ns}.cleanSlateDesc`), url: "https://cleanslateinitiative.org/states/" },
+              { label: t(`${ns}.lawHelpLabel`), desc: t(`${ns}.lawHelpDesc`), url: "https://www.lawhelp.org/" },
+            ].map(({ label, desc, url }) => (
+              <a key={label} href={url} target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:border-teal-300 dark:hover:border-teal-700 transition-colors cursor-pointer">
+                  <CardContent className="pt-4">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <span className="text-sm font-semibold text-foreground">{label}</span>
+                      <ExternalLink className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
   );
 }
 
@@ -456,7 +566,7 @@ export default function ReputationSupport() {
         { label: t("support.relatedLinks.mentalHealth"), href: "/support/mental-health" },
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
       ]}
-      customSections={<ReputationCommsSection />}
+      customSections={<><CleanSlateSection /><ReputationCommsSection /></>}
     />
   );
 }
