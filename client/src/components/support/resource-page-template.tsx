@@ -57,6 +57,7 @@ export interface ResourcePageProps {
   relatedLinks?: { label: string; href: string }[];
   customSections?: ReactNode;
   heroImage?: string;
+  sidebar?: ReactNode;
 }
 
 const categoryThemes: Record<string, { accent: string; accentBg: string; accentBorder: string; heroClass: string }> = {
@@ -266,6 +267,7 @@ export function ResourcePageTemplate({
   relatedLinks,
   customSections,
   heroImage,
+  sidebar,
 }: ResourcePageProps) {
   useScrollToTop();
   const { t } = useTranslation();
@@ -310,74 +312,102 @@ export function ResourcePageTemplate({
           </div>
         </section>
 
-        {/* Start Here */}
-        <section className="py-10 md:py-12">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <SectionHeading title={t('support.startHere')} />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {startHereItems.map((item, index) => (
-                  <ActionCard key={item.id} item={item} index={index} theme={theme} />
-                ))}
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
+        {/* All post-hero content — flex layout when sidebar is provided */}
+        <div className={sidebar ? "max-w-6xl mx-auto px-4" : ""}>
+          <div className={sidebar ? "flex gap-10 items-start" : ""}>
 
-        {customSections}
+            {/* Sidebar */}
+            {sidebar && (
+              <aside className="hidden lg:block w-52 flex-shrink-0">
+                <div className="sticky top-6 pt-8">
+                  {sidebar}
+                </div>
+              </aside>
+            )}
 
-        {/* Helpful Resources */}
-        <section className="py-10 md:py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <SectionHeading title={t('support.helpfulResources')} />
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {externalResources.map((resource, index) => (
-                  <ResourceCard key={index} resource={resource} theme={theme} />
-                ))}
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
+            {/* Main content */}
+            <div className={sidebar ? "flex-1 min-w-0" : ""}>
 
-        {faqs && faqs.length > 0 && <FAQSection faqs={faqs} theme={theme} />}
+              {/* Start Here */}
+              <section id="section-start-here" className="py-10 md:py-12 scroll-mt-20">
+                <div className={sidebar ? "" : "container mx-auto px-4"}>
+                  <ScrollReveal>
+                    <SectionHeading title={t('support.startHere')} />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {startHereItems.map((item, index) => (
+                        <ActionCard key={item.id} item={item} index={index} theme={theme} />
+                      ))}
+                    </div>
+                  </ScrollReveal>
+                </div>
+              </section>
 
-        {tips && tips.length > 0 && <TipsSection tips={tips} />}
+              {customSections}
 
-        {/* Related links */}
-        {relatedLinks && relatedLinks.length > 0 && (
-          <section className="py-10 md:py-12">
-            <div className="container mx-auto px-4">
-              <ScrollReveal>
-                <div className="max-w-3xl mx-auto">
-                  <SectionHeading title={t('support.relatedResources')} />
-                  <div className="flex flex-wrap gap-3">
-                    {relatedLinks.map((link, index) => (
-                      <Link key={index} href={link.href}>
-                        <Button variant="outline" size="sm" className="group">
-                          {link.label}
-                          <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
-                        </Button>
-                      </Link>
-                    ))}
+              {/* Helpful Resources */}
+              <section id="section-resources" className="py-10 md:py-12 bg-muted/30 scroll-mt-20">
+                <div className={sidebar ? "" : "container mx-auto px-4"}>
+                  <ScrollReveal>
+                    <SectionHeading title={t('support.helpfulResources')} />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {externalResources.map((resource, index) => (
+                        <ResourceCard key={index} resource={resource} theme={theme} />
+                      ))}
+                    </div>
+                  </ScrollReveal>
+                </div>
+              </section>
+
+              {faqs && faqs.length > 0 && (
+                <div id="section-faq" className="scroll-mt-20">
+                  <FAQSection faqs={faqs} theme={theme} />
+                </div>
+              )}
+
+              {tips && tips.length > 0 && (
+                <div id="section-tips" className="scroll-mt-20">
+                  <TipsSection tips={tips} />
+                </div>
+              )}
+
+              {/* Related links */}
+              {relatedLinks && relatedLinks.length > 0 && (
+                <section className="py-10 md:py-12">
+                  <div className={sidebar ? "" : "container mx-auto px-4"}>
+                    <ScrollReveal>
+                      <div className={sidebar ? "" : "max-w-3xl mx-auto"}>
+                        <SectionHeading title={t('support.relatedResources')} />
+                        <div className="flex flex-wrap gap-3">
+                          {relatedLinks.map((link, index) => (
+                            <Link key={index} href={link.href}>
+                              <Button variant="outline" size="sm" className="group">
+                                {link.label}
+                                <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                              </Button>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  </div>
+                </section>
+              )}
+
+              {/* Disclaimer */}
+              <section className="py-8">
+                <div className={sidebar ? "" : "container mx-auto px-4"}>
+                  <div className={sidebar ? "flex items-start gap-2" : "max-w-3xl mx-auto flex items-start gap-2"}>
+                    <AlertCircle className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {t('support.disclaimer')}
+                    </p>
                   </div>
                 </div>
-              </ScrollReveal>
-            </div>
-          </section>
-        )}
+              </section>
 
-        {/* Disclaimer */}
-        <section className="py-8">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto flex items-start gap-2">
-              <AlertCircle className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                {t('support.disclaimer')}
-              </p>
-            </div>
-          </div>
-        </section>
+            </div>{/* end main content */}
+          </div>{/* end flex */}
+        </div>{/* end sidebar wrapper */}
 
       </main>
       <Footer />

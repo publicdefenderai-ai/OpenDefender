@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import reputationHero from "@assets/stock_images/reputation.jpg";
 import {
@@ -615,8 +615,71 @@ function ReputationCommsSection() {
   );
 }
 
+const SIDEBAR_SECTIONS = [
+  { id: "section-start-here", labelKey: "support.startHere",                      indent: false },
+  { id: "clean-slate",        labelKey: "support.reputation.cleanSlate.sectionTitle", indent: false },
+  { id: "fcra-rights",        labelKey: "support.reputation.fcraRights.sectionTitle", indent: false },
+  { id: "certificates-of-relief", labelKey: "support.reputation.certificatesOfRelief.sectionTitle", indent: false },
+  { id: "reputation-comms",   labelKey: "support.reputation.commsSection.sectionTitle", indent: false },
+  { id: "section-resources",  labelKey: "support.helpfulResources",  indent: false },
+  { id: "section-faq",        labelKey: "support.faq.title",         indent: false },
+  { id: "section-tips",       labelKey: "support.tips.title",        indent: false },
+] as const;
+
+function ReputationSidebar({ activeId }: { activeId: string | null }) {
+  const { t } = useTranslation();
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    }
+  };
+
+  return (
+    <nav aria-label="Page sections" className="space-y-0.5">
+      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-3 px-2">
+        On this page
+      </p>
+      {SIDEBAR_SECTIONS.map(({ id, labelKey }) => {
+        const isActive = activeId === id;
+        return (
+          <button
+            key={id}
+            onClick={() => scrollTo(id)}
+            className={`w-full flex items-center gap-2 text-left rounded-lg px-2 py-1.5 transition-all duration-150 text-xs ${
+              isActive
+                ? "bg-slate-100 dark:bg-slate-800 text-foreground font-semibold"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+            }`}
+          >
+            {isActive && <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />}
+            <span className="truncate leading-snug">{t(labelKey)}</span>
+          </button>
+        );
+      })}
+    </nav>
+  );
+}
+
 export default function ReputationSupport() {
   const { t } = useTranslation();
+  const [activeId, setActiveId] = useState<string | null>("section-start-here");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const ids = SIDEBAR_SECTIONS.map((s) => s.id);
+      let current: string | null = null;
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) current = id;
+      }
+      setActiveId(current);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const startHereItems: ActionItem[] = [
     {
@@ -749,6 +812,7 @@ export default function ReputationSupport() {
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
       ]}
       customSections={<><CleanSlateSection /><FcraRightsSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
+      sidebar={<ReputationSidebar activeId={activeId} />}
     />
   );
 }
