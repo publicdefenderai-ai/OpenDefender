@@ -4410,7 +4410,7 @@ export default {
     "hero": {
       "title": "Privacy Policy",
       "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-      "lastUpdated": "Last Updated: March 20, 2026"
+      "lastUpdated": "Last Updated: May 2026"
     },
     "notice": {
       "title": "Privacy-First Platform:",
@@ -4420,7 +4420,7 @@ export default {
       "title": "Our Privacy Principles",
       "noPersonalData": {
         "title": "No Personal Data Collection",
-        "description": "We do not collect, store, or maintain any personally identifiable information. This includes names, addresses, case details, charges, or any other information that could identify you personally. All interactions with our platform are anonymous."
+        "description": "We do not collect names, contact information, case numbers, or any other information that identifies you as a person. When you use the Case Roadmap or AI chat tools, the inputs you provide — jurisdiction, charge type, case stage, and concerns — are held in temporary server memory and auto-deleted within 24 hours. They are not written to a persistent database and are not linked to any identity."
       },
       "anonymizedData": {
         "title": "Anonymized Data Only",
@@ -4437,24 +4437,28 @@ export default {
       }
     },
     "caseData": {
-      "title": "How We Protect Your Case Information",
-      "summary": "When you use our case support tool, your case information receives multiple layers of protection. Here's exactly what happens to your data:",
+      "title": "How We Handle Case Roadmap and AI Tool Data",
+      "summary": "The Case Roadmap, AI Chat, Document Summarizer, and the civil emergency triage step all use temporary server memory only. No data from these tools is written to a persistent database. Here is exactly what happens:",
       "memoryOnly": {
-        "title": "Memory-Only Storage",
-        "description": "Your case information is stored only in temporary server memory - it is never written to a database or saved to disk. This means your data exists only while being processed and cannot be recovered after your session ends."
+        "title": "What is stored — and what is not",
+        "description": "Your inputs are held in server memory only: jurisdiction, charge type, case stage, custody status, concerns selected, and the AI guidance generated. What is never collected: your name, address, phone number, email, case number, or any identifying information. The inputs you provide are categorical (a state, a charge type, a yes or no) — not free-form case facts."
       },
       "piiRedaction": {
-        "title": "Personal Information Automatically Removed",
-        "description": "Before your case details are processed by our AI, we automatically detect and remove personal information like names, phone numbers, email addresses, and Social Security numbers. This redaction happens locally on our servers using machine learning - your personal details are never sent to external AI services."
+        "title": "Additional safeguard: personal information removed before AI processing",
+        "description": "Before inputs reach the AI, we automatically scan for and remove personal information such as phone numbers, email addresses, and Social Security numbers. This applies even if you enter identifying information in a free-text field. Your personal details are not sent to external AI services."
       },
       "autoDelete": {
-        "title": "Automatic 24-Hour Deletion",
-        "description": "Even in memory, your case data has a maximum lifespan of 24 hours. After this time, it is automatically and permanently deleted. You don't need to take any action - deletion happens automatically."
+        "title": "Automatic deletion after 24 hours",
+        "description": "Memory-held session data expires automatically after 24 hours and is permanently deleted. No action needed. Every server restart also clears all session data."
       },
       "serverRestart": {
-        "title": "Cleared on Server Restart",
-        "description": "Because data is stored only in memory, any server restart or update completely clears all session data. This happens regularly as we improve the platform, providing an additional layer of data ephemerality."
+        "title": "Tools that store nothing at all",
+        "description": "The Record Clearance Eligibility Screener and the Public Defender Intake Form make no server calls. The screener runs entirely in your browser. The intake form is a printable document — no data is submitted or transmitted. All other static pages on the site (rights guides, support resources, court date guides, immigration guides) are similarly passive."
       }
+    },
+    "noDataTools": {
+      "title": "Tools That Collect No Data",
+      "description": "The Record Clearance Eligibility Screener and the Public Defender Intake Form make no server calls at any point. The screener runs entirely in your browser as a decision tree. The intake form is a printable document you fill out by hand. No information is submitted, transmitted, or stored electronically when using either of these tools."
     },
     "technical": {
       "title": "Technical Details",
@@ -4470,7 +4474,7 @@ export default {
         "title": "External Data Sources",
         "description": "Our platform accesses public legal databases and services to provide you with information:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - for generating legal guidance and document summaries. Your personal information is removed before processing. Anthropic may retain data for up to 30 days for operational and safety purposes, then it is automatically deleted. This data is never used to train AI models.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap, Document Summarizer, and AI Chat. Personal information is removed before processing. Anthropic may retain inputs for up to 30 days for operational and safety purposes and then automatically deletes them. This data is never used to train AI models.",
           "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
           "courtListener": "CourtListener API - for case law and court data",
           "recap": "RECAP Archive - for federal court documents",

@@ -4392,7 +4392,7 @@ export default {
     "hero": {
       "title": "Política de Privacidad",
       "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-      "lastUpdated": "Última actualización: 20 de marzo de 2026"
+      "lastUpdated": "Última actualización: Mayo 2026"
     },
     "notice": {
       "title": "Plataforma que prioriza la privacidad:",
@@ -4402,7 +4402,7 @@ export default {
       "title": "Nuestros Principios de Privacidad",
       "noPersonalData": {
         "title": "Sin Recopilación de Datos Personales",
-        "description": "No recopilamos, almacenamos ni mantenemos información de identificación personal. Esto incluye nombres, direcciones, detalles de casos, cargos o cualquier otra información que pueda identificarlo personalmente. Todas las interacciones con nuestra plataforma son anónimas."
+        "description": "No recopilamos nombres, información de contacto, números de caso ni ninguna otra información que lo identifique como persona. Cuando usa la Hoja de Ruta del Caso o las herramientas de chat con IA, los datos que ingresa — jurisdicción, tipo de cargo, etapa del caso y preocupaciones — se mantienen en memoria temporal del servidor y se eliminan automáticamente en 24 horas. No se escriben en una base de datos persistente ni se vinculan a ninguna identidad."
       },
       "anonymizedData": {
         "title": "Solo Datos Anonimizados",
@@ -4419,24 +4419,28 @@ export default {
       }
     },
     "caseData": {
-      "title": "Cómo Protegemos la Información de su Caso",
-      "summary": "Cuando usa nuestra herramienta de orientación legal, la información de su caso recibe múltiples capas de protección. Esto es exactamente lo que sucede con sus datos:",
+      "title": "Cómo Manejamos los Datos de la Hoja de Ruta del Caso y las Herramientas de IA",
+      "summary": "La Hoja de Ruta del Caso, el Chat de IA, el Resumidor de Documentos y el paso de triaje de emergencias civiles utilizan solo memoria temporal del servidor. Ningún dato de estas herramientas se escribe en una base de datos persistente. Esto es exactamente lo que sucede:",
       "memoryOnly": {
-        "title": "Almacenamiento Solo en Memoria",
-        "description": "La información de su caso se almacena solo en la memoria temporal del servidor - nunca se escribe en una base de datos ni se guarda en disco. Esto significa que sus datos existen solo mientras se procesan y no se pueden recuperar después de que finalice su sesión."
+        "title": "Qué se almacena — y qué no",
+        "description": "Sus datos se mantienen solo en la memoria del servidor: jurisdicción, tipo de cargo, etapa del caso, estado de custodia, preocupaciones seleccionadas y la orientación de IA generada. Lo que nunca se recopila: su nombre, dirección, teléfono, correo electrónico, número de caso o cualquier información identificatoria. Los datos que proporciona son categóricos (un estado, un tipo de cargo, un sí o no), no hechos del caso en formato libre."
       },
       "piiRedaction": {
-        "title": "Información Personal Eliminada Automáticamente",
-        "description": "Antes de que los detalles de su caso sean procesados por nuestra IA, detectamos y eliminamos automáticamente información personal como nombres, números de teléfono, direcciones de correo electrónico y números de Seguro Social. Esta redacción ocurre localmente en nuestros servidores usando aprendizaje automático - sus datos personales nunca se envían a servicios de IA externos."
+        "title": "Medida adicional: información personal eliminada antes del procesamiento de IA",
+        "description": "Antes de que los datos lleguen a la IA, escaneamos automáticamente y eliminamos información personal como números de teléfono, correos electrónicos y números de Seguro Social. Esto aplica incluso si ingresa información identificatoria en un campo de texto libre. Sus datos personales no se envían a servicios de IA externos."
       },
       "autoDelete": {
-        "title": "Eliminación Automática en 24 Horas",
-        "description": "Incluso en memoria, los datos de su caso tienen una vida útil máxima de 24 horas. Después de este tiempo, se eliminan automática y permanentemente. No necesita tomar ninguna acción - la eliminación ocurre automáticamente."
+        "title": "Eliminación automática después de 24 horas",
+        "description": "Los datos de sesión en memoria expiran automáticamente después de 24 horas y se eliminan permanentemente. No se requiere ninguna acción. Cada reinicio del servidor también borra todos los datos de sesión."
       },
       "serverRestart": {
-        "title": "Borrado al Reiniciar el Servidor",
-        "description": "Debido a que los datos se almacenan solo en memoria, cualquier reinicio o actualización del servidor borra completamente todos los datos de sesión. Esto ocurre regularmente mientras mejoramos la plataforma, proporcionando una capa adicional de efímero de datos."
+        "title": "Herramientas que no almacenan nada",
+        "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes y el Formulario de Ingreso del Defensor Público no realizan ninguna llamada al servidor. El evaluador funciona completamente en su navegador. El formulario de ingreso es un documento imprimible que llena a mano. No se envía ni transmite ningún dato electrónicamente al usar ninguna de estas herramientas."
       }
+    },
+    "noDataTools": {
+      "title": "Herramientas que no recopilan datos",
+      "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes y el Formulario de Ingreso del Defensor Público no realizan ninguna llamada al servidor en ningún momento. El evaluador funciona completamente en su navegador como un árbol de decisión. El formulario de ingreso es un documento imprimible que llena a mano. No se envía, transmite ni almacena ninguna información electrónicamente al usar cualquiera de estas herramientas."
     },
     "technical": {
       "title": "Detalles Técnicos",
@@ -4452,7 +4456,7 @@ export default {
         "title": "Fuentes de Datos Externas",
         "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - para generar orientación legal y resúmenes de documentos. Su información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad, luego se eliminan automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta del Caso, el Resumidor de Documentos y el Chat de IA. La información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad y luego los elimina automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
           "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
           "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
           "recap": "Archivo RECAP - para documentos judiciales federales",

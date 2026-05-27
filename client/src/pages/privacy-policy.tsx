@@ -413,6 +413,45 @@ export default function PrivacyPolicy() {
           </div>
         </ScrollReveal>
 
+        {/* AI Feature Reference Table */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Which Features Use AI
+            </h2>
+            <Card>
+              <CardContent className="p-0 overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border bg-muted/40">
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Feature</th>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Uses AI?</th>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Data stored?</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {[
+                      { feature: "Case Roadmap", ai: "Yes — Claude Sonnet 4.6", data: "Server memory only, 24-hour TTL" },
+                      { feature: "Civil Emergency Triage (Case Roadmap step 6)", ai: "Yes — same session", data: "Server memory only, 24-hour TTL" },
+                      { feature: "Document Summarizer", ai: "Yes — Claude Sonnet 4.6", data: "Never written to disk" },
+                      { feature: "AI Legal Chat", ai: "Yes — Claude Sonnet 4.6", data: "Server memory only, 24-hour TTL" },
+                      { feature: "Record Clearance Eligibility Screener", ai: "No — decision tree", data: "No — runs in browser" },
+                      { feature: "Public Defender Intake Form", ai: "No", data: "No — user prints and fills by hand" },
+                      { feature: "All other pages (rights, support, guides)", ai: "No", data: "No" },
+                    ].map(({ feature, ai, data }) => (
+                      <tr key={feature}>
+                        <td className="px-4 py-3 text-foreground">{feature}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{ai}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{data}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
         {/* Contact */}
         <ScrollReveal>
           <Card>

@@ -39,7 +39,7 @@ export default function Disclaimers() {
             Important information about using OpenDefender
           </p>
           <p className="text-sm text-white/60 mt-2">
-            Last updated: March 22, 2026
+            Last updated: May 2026
           </p>
         </div>
       </section>
@@ -148,21 +148,50 @@ export default function Disclaimers() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
               AI Technology Disclosure
             </h2>
-            
+
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender uses artificial intelligence to help generate legal guidance. Specifically, we use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>, a large language model, to analyze your situation and provide information.
+                  Several tools on OpenDefender use AI to generate content. These are: the <strong className="text-foreground">Case Roadmap</strong> (personalized guidance), the <strong className="text-foreground">Document Summarizer</strong>, and the <strong className="text-foreground">AI Legal Chat</strong>. All use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Important:</strong> AI-generated guidance is not a substitute for advice from a licensed attorney. While we verify responses against legal databases, AI can make mistakes. Always consult with a qualified lawyer for legal decisions.
+                  All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Your privacy:</strong> Before your case details are sent to the AI, we automatically remove personal information like names, phone numbers, and addresses. See our{" "}
+                  <strong className="text-foreground">The Case Roadmap</strong> also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  AI-generated guidance is not a substitute for advice from a licensed attorney. We validate responses against legal databases, but AI can make mistakes. Consult a qualified attorney before making legal decisions.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our{" "}
                   <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
                     Privacy Policy
                   </Link>{" "}
-                  for details.
+                  for the full details on data handling.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Record and Eligibility Tools */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Screening and Eligibility Tools
+            </h2>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong className="text-foreground">Record Clearance Eligibility Screener</strong> is a decision tree — it uses no AI and makes no server calls. It runs entirely in your browser. No data is transmitted or stored.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong className="text-foreground">Public Defender Intake Form</strong> is a printable document you fill out by hand. No information is submitted, transmitted, or stored electronically.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong className="text-foreground">Rap Sheet Error Identification Guide</strong> and <strong className="text-foreground">FCRA rights information</strong> are informational only. They describe general processes and rights. Verify all dispute procedures and deadlines directly with the relevant agency — the FBI, your state criminal repository, or the background check company.
                 </p>
               </CardContent>
             </Card>
