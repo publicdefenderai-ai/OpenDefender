@@ -347,6 +347,123 @@ function FcraRightsSection() {
   );
 }
 
+function RapSheetSection() {
+  const { t } = useTranslation();
+  const ns = "support.reputation.rapSheet";
+
+  const errors = [
+    { key: "error1", icon: "1" },
+    { key: "error2", icon: "2" },
+    { key: "error3", icon: "3" },
+  ] as const;
+
+  return (
+    <section className="py-10 md:py-14 bg-background border-t border-border/30" id="rap-sheet">
+      <div className="max-w-4xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-2">
+            <FileSearch className="h-5 w-5 text-slate-600" />
+            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+          </div>
+          <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
+        </ScrollReveal>
+
+        {/* Step 1 */}
+        <ScrollReveal>
+          <div className="mb-8">
+            <h3 className="text-base font-semibold text-foreground mb-3">{t(`${ns}.step1Title`)}</h3>
+            <p className="text-sm text-muted-foreground mb-4">{t(`${ns}.step1Intro`)}</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Card>
+                <CardContent className="pt-4">
+                  <p className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.fbiTitle`)}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">{t(`${ns}.fbiBody`)}</p>
+                  <a
+                    href="https://www.fbi.gov/services/cjis/identity-history-summary-checks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:underline"
+                  >
+                    IdentityHistory.fbi.gov <ExternalLink className="h-3 w-3" />
+                  </a>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-4">
+                  <p className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.stateTitle`)}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.stateBody`)}</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Step 2 */}
+        <ScrollReveal>
+          <div className="mb-8">
+            <h3 className="text-base font-semibold text-foreground mb-1">{t(`${ns}.step2Title`)}</h3>
+            <p className="text-sm text-muted-foreground mb-4">{t(`${ns}.step2Intro`)}</p>
+            <div className="space-y-3">
+              {errors.map(({ key, icon }) => (
+                <Card key={key} className="border-l-4 border-l-slate-400">
+                  <CardContent className="pt-4">
+                    <div className="flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                        {icon}
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.${key}Title`)}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-2">{t(`${ns}.${key}Body`)}</p>
+                        <p className="text-xs text-muted-foreground leading-relaxed italic border-t border-border/50 pt-2">
+                          <span className="font-semibold not-italic">Fix: </span>{t(`${ns}.${key}Fix`)}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Step 3 */}
+        <ScrollReveal>
+          <div className="mb-6">
+            <h3 className="text-base font-semibold text-foreground mb-1">{t(`${ns}.step3Title`)}</h3>
+            <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.step3Intro`)}</p>
+            <Card>
+              <CardContent className="pt-4">
+                <ul className="space-y-2">
+                  {[
+                    t(`${ns}.fbiFix`),
+                    t(`${ns}.stateFix`),
+                    t(`${ns}.fcraNote`),
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="text-slate-400 mt-0.5 flex-shrink-0">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Timing callout */}
+        <ScrollReveal>
+          <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
+            <CardContent className="pt-4">
+              <p className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.timingTitle`)}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.timingBody`)}</p>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
 function CertificatesOfReliefSection() {
   const { t } = useTranslation();
   const ns = "support.reputation.certificatesOfRelief";
@@ -619,6 +736,7 @@ const SIDEBAR_SECTIONS = [
   { id: "section-start-here",    label: "Start Here" },
   { id: "clean-slate",            label: "Record Clearance" },
   { id: "fcra-rights",            label: "Background Checks" },
+  { id: "rap-sheet",              label: "Record Errors" },
   { id: "certificates-of-relief", label: "Certificates of Relief" },
   { id: "reputation-comms",       label: "Conversations" },
   { id: "section-resources",      label: "Resources" },
@@ -809,7 +927,7 @@ export default function ReputationSupport() {
         { label: t("support.relatedLinks.mentalHealth"), href: "/support/mental-health" },
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
       ]}
-      customSections={<><CleanSlateSection /><FcraRightsSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
+      customSections={<><CleanSlateSection /><FcraRightsSection /><RapSheetSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
       sidebar={<ReputationSidebar activeId={activeId} />}
     />
   );
