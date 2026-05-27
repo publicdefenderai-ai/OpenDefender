@@ -1129,10 +1129,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
       // Generate personalized guidance based on case details
-      // chargesUnknown is a runtime flag (not a DB column) so it is passed separately
+      // chargesUnknown and civilUrgency are runtime flags (not DB columns) so passed separately
       const guidance = await generateLegalGuidance({
         ...validatedData,
         chargesUnknown: req.body.chargesUnknown === true,
+        civilUrgency: req.body.civilUrgency,
       });
       
       const legalCase = await storage.createLegalCase({
@@ -1188,6 +1189,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const caseDataWithFlags = {
         ...validatedData,
         chargesUnknown: req.body.chargesUnknown === true,
+        civilUrgency: req.body.civilUrgency,
       };
 
       // Charge lookup (same guard logic as generateLegalGuidance)

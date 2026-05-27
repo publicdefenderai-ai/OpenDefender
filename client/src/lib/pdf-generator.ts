@@ -539,6 +539,26 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition += 10;
   }
 
+  // Critical Alerts / Urgent Takeaways
+  if (guidance.criticalAlerts && guidance.criticalAlerts.length > 0) {
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(180, 100, 0);
+    doc.text(guidance.criticalAlerts.length > 1 ? 'Urgent Takeaways' : 'Urgent Takeaway', margin, yPosition);
+    yPosition += 8;
+
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
+    guidance.criticalAlerts.forEach((alert) => {
+      checkPageBreak();
+      yPosition = addText(`   • ${alert}`, margin + 5, yPosition);
+      yPosition += 3;
+    });
+    yPosition += 5;
+  }
+
   // Immediate Actions
   if (guidance.immediateActions.length > 0) {
     checkPageBreak(30);
