@@ -16,8 +16,9 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { SiteSearch } from "@/components/search/site-search";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -30,21 +31,10 @@ export default function Home() {
   const { t } = useTranslation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
   const [urgentSituation, setUrgentSituation] = useState<"arrested" | "charged" | "family" | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  const searchRef = useRef<HTMLInputElement>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const handleUrgentHelp = () => {
     setUrgentHelpOpen(true);
-  };
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const q = searchQuery.trim();
-    if (q) {
-      window.location.href = `/directory?q=${encodeURIComponent(q)}`;
-    } else {
-      window.location.href = "/directory";
-    }
   };
 
   const paths = [
@@ -220,23 +210,20 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          {/* Search bar */}
+          {/* Search bar — opens the same modal as the header search */}
           <ScrollReveal delay={0.35}>
-            <form onSubmit={handleSearch} className="mt-6 mb-2">
-              <div className="relative max-w-xl mx-auto">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                <input
-                  ref={searchRef}
-                  type="search"
-                  value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
-                  placeholder={t("home.paths.searchPlaceholder")}
-                  aria-label={t("home.paths.searchPlaceholder")}
-                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500 transition-colors"
-                />
-              </div>
-            </form>
+            <div className="mt-6 mb-2 max-w-xl mx-auto">
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="w-full flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-xl border border-border bg-background text-sm text-muted-foreground hover:border-teal-500/50 hover:bg-muted/40 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/40"
+                aria-label={t("home.paths.searchPlaceholder")}
+              >
+                <Search className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                {t("home.paths.searchPlaceholder")}
+              </button>
+            </div>
           </ScrollReveal>
+          <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
         </div>
       </section>
 
