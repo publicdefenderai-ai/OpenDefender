@@ -76,7 +76,7 @@ export default function PdIntakeForm() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Header />
+      <div className="print:hidden"><Header /></div>
 
       <main className="flex-1">
         {/* Screen-only intro section */}
@@ -279,7 +279,7 @@ export default function PdIntakeForm() {
           </div>
         </div>
       </main>
-      <Footer />
+      <div className="print:hidden"><Footer /></div>
     </div>
   );
 }
