@@ -4438,7 +4438,7 @@ export default {
     },
     "caseData": {
       "title": "How We Handle Case Roadmap and AI Tool Data",
-      "summary": "The Case Roadmap, AI Chat, Document Summarizer, and the civil emergency triage step all use temporary server memory only. No data from these tools is written to a persistent database. Here is exactly what happens:",
+      "summary": "The Case Roadmap, guided case support tool, Document Summarizer, and the civil emergency triage step all use temporary server memory only. No data from these tools is written to a persistent database. Here is exactly what happens:",
       "memoryOnly": {
         "title": "What is stored — and what is not",
         "description": "Your inputs are held in server memory only: jurisdiction, charge type, case stage, custody status, concerns selected, and the AI guidance generated. What is never collected: your name, address, phone number, email, case number, or any identifying information. The inputs you provide are categorical (a state, a charge type, a yes or no) — not free-form case facts."
@@ -4474,7 +4474,7 @@ export default {
         "title": "External Data Sources",
         "description": "Our platform accesses public legal databases and services to provide you with information:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap, Document Summarizer, and AI Chat tool. Personal information is removed before processing. Anthropic may retain inputs for up to 30 days for operational and safety purposes and then automatically deletes them. This data is never used to train AI models.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap, guided case support tool, and Document Summarizer. Personal information is removed before processing. Anthropic may retain inputs for up to 30 days for operational and safety purposes and then automatically deletes them. This data is never used to train AI models.",
           "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
           "courtListener": "CourtListener API - for case law and court data",
           "recap": "RECAP Archive - for federal court documents",

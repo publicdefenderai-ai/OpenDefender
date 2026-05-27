@@ -155,7 +155,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Several tools on OpenDefender use AI to generate content. These are: the <strong className="text-foreground">Case Roadmap</strong> (personalized guidance), the <strong className="text-foreground">Document Summarizer</strong>, and the <strong className="text-foreground">AI Chat</strong>. All use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
+                  Two tools on OpenDefender use AI to generate content: the <strong className="text-foreground">Case Roadmap and guided case support tool</strong> (both collect structured inputs and produce Claude-powered guidance), and the <strong className="text-foreground">Document Summarizer</strong>. Both use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.

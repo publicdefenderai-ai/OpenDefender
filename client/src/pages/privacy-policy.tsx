@@ -431,10 +431,8 @@ export default function PrivacyPolicy() {
                   </thead>
                   <tbody className="divide-y divide-border">
                     {[
-                      { feature: "Case Roadmap", ai: "Yes — Claude Sonnet 4.6", data: "Server memory only, 24-hour TTL" },
-                      { feature: "Civil Emergency Triage (Case Roadmap step 6)", ai: "Yes — same session", data: "Server memory only, 24-hour TTL" },
+                      { feature: "Case Roadmap and guided case support tool (including civil emergency triage)", ai: "Yes — Claude Sonnet 4.6", data: "Server memory only, 24-hour TTL" },
                       { feature: "Document Summarizer", ai: "Yes — Claude Sonnet 4.6", data: "Never written to disk" },
-                      { feature: "AI Chat", ai: "Yes — Claude Sonnet 4.6", data: "Server memory only, 24-hour TTL" },
                       { feature: "Record Clearance Eligibility Screener", ai: "No — decision tree", data: "No — runs in browser" },
                       { feature: "Public Defender Intake Form", ai: "No", data: "No — user prints and fills by hand" },
                       { feature: "All other pages (rights, support, guides)", ai: "No", data: "No" },
