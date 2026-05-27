@@ -67,7 +67,10 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender is a free, open source tool that helps people understand and navigate the U.S. criminal justice and immigration systems. Think of it as a "public defender in your pocket." You're welcome to use it, share it, change it, or build on it however you'd like.
+                  OpenDefender is a free, open source resource for people navigating the U.S. criminal justice and immigration systems, and for the practical life disruptions those systems create. It provides general rights information, early advocacy guidance, and practical support resources covering housing, employment, finances, family, mental health, immigration, and record clearing. It is not a legal service and does not provide legal advice.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  You're welcome to use it, share it, change it, or build on it however you'd like.
                 </p>
               </CardContent>
             </Card>
@@ -84,7 +87,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender is not the same as getting advice from a lawyer and does not establish an attorney-client relationship. We provide general information only. If you have a specific legal problem, it's best to talk to a qualified attorney.
+                  OpenDefender provides general information and practical resources — it is not legal advice and does not establish an attorney-client relationship. Most of the platform covers practical support: understanding what is happening, knowing your rights, finding resources, and managing life disruptions that come with a legal case. For advice specific to your legal situation, consult a qualified attorney.
                 </p>
               </CardContent>
             </Card>
@@ -152,7 +155,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Several tools on OpenDefender use AI to generate content. These are: the <strong className="text-foreground">Case Roadmap</strong> (personalized guidance), the <strong className="text-foreground">Document Summarizer</strong>, and the <strong className="text-foreground">AI Legal Chat</strong>. All use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
+                  Several tools on OpenDefender use AI to generate content. These are: the <strong className="text-foreground">Case Roadmap</strong> (personalized guidance), the <strong className="text-foreground">Document Summarizer</strong>, and the <strong className="text-foreground">AI Chat</strong>. All use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.
@@ -229,7 +232,7 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  We provide content in English, Spanish, and Simplified Chinese to make legal information more accessible.
+                  We provide content in English, Spanish, and Simplified Chinese to make information and resources more accessible.
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                   <li>Translations may not capture the precise legal meaning of every term — the English version is authoritative</li>
@@ -339,7 +342,7 @@ export default function Disclaimers() {
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                   <li><strong className="text-foreground">Code (MIT License):</strong> All source code is open source under the MIT License, allowing free use, modification, and distribution with attribution.</li>
-                  <li><strong className="text-foreground">Content (CC0 Public Domain):</strong> All non-code content — legal information, educational materials, and templates — is released to the public domain under CC0, meaning anyone can use it without restrictions or attribution requirements.</li>
+                  <li><strong className="text-foreground">Content (CC0 Public Domain):</strong> All non-code content — informational resources, practical guides, and templates — is released to the public domain under CC0, meaning anyone can use it without restrictions or attribution requirements.</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
                   The public repository is available{" "}
