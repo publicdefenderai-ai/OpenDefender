@@ -1902,7 +1902,8 @@ export default {
         "jurisdiction": "Su Estado",
         "caseDetails": "Su Caso",
         "status": "Estado Actual",
-        "additionalDetails": "Detalles Adicionales (Opcional)"
+        "additionalDetails": "Detalles Adicionales (Opcional)",
+        "civilEmergencies": "Situaciones Activas"
       },
       "consent": {
         "title": "Antes de comenzar",
@@ -2082,7 +2083,38 @@ export default {
         },
         "noConcernsSelected": "Puede omitir esto si ninguna aplica",
         "back": "Volver",
-        "submit": "Obtener Mi Orientación Legal"
+        "submit": "Obtener Mi Orientación Legal",
+        "next": "Siguiente"
+      },
+      "civilEmergencies": {
+        "title": "¿Qué está pasando ahora mismo?",
+        "subtitle": "Para cada área que mencionó, díganos si ya está ocurriendo algo. Esto nos ayuda a identificar lo que es más urgente.",
+        "back": "Volver",
+        "generate": "Obtener Mi Orientación Legal",
+        "housing": {
+          "question": "Respecto a su vivienda — ¿ha pasado algo ya?",
+          "none": "Todavía no ha pasado nada",
+          "active": "Recibí una carta, aviso o llamada de mi arrendador",
+          "emergency": "Han comenzado procedimientos de desalojo o terminación de contrato"
+        },
+        "employment": {
+          "question": "Respecto a su trabajo — ¿cuál es su situación actual?",
+          "none": "Mi empleador no sabe del arresto",
+          "active": "Mi empleador sabe, y todavía no ha tomado ninguna medida",
+          "emergency": "Me han suspendido, puesto en licencia, o despedido"
+        },
+        "dependents": {
+          "question": "Respecto a sus hijos o dependientes — ¿cuál es su situación actual?",
+          "none": "Están cuidados y no hay preocupaciones ahora mismo",
+          "active": "No estoy seguro/a de quién los cuidará mientras manejo esto",
+          "emergency": "Una agencia de bienestar infantil ha estado involucrada o se ha comunicado"
+        },
+        "immigration": {
+          "question": "Respecto a inmigración — ¿ha pasado algo ya?",
+          "none": "No hay procedimientos de inmigración activos",
+          "active": "Tengo un caso de inmigración existente o preocupación de estatus pendiente",
+          "emergency": "Recibí un aviso de inmigración, detención, o contacto de ICE"
+        }
       },
       "privilegeWarning": {
         "title": "No necesita decirle qué pasó",

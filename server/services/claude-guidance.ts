@@ -80,6 +80,7 @@ interface CaseDetails {
   custodyStatus: string;
   hasAttorney: boolean;
   selectedConcerns?: string[];
+  civilUrgency?: Record<string, 'none' | 'active' | 'emergency'>;
   language?: string;
   chargesUnknown?: boolean;
 }
@@ -403,6 +404,40 @@ BASIC CASE INFORMATION:
 - immigration → [Immigration Resources](/immigration-guidance)`;
   }
 
+  // Civil emergency urgency signals
+  if (caseDetails.civilUrgency && Object.keys(caseDetails.civilUrgency).length > 0) {
+    const urgency = caseDetails.civilUrgency;
+    const urgencyLines: string[] = [];
+
+    if (urgency.housing === 'active') {
+      urgencyLines.push('HOUSING - ACTIVE: Person has received a notice or contact from landlord. Include specific guidance on responding to landlord communications, tenant rights at this stage, and connecting with housing legal aid. This is time-sensitive.');
+    } else if (urgency.housing === 'emergency') {
+      urgencyLines.push('HOUSING - EMERGENCY: Eviction or lease termination proceedings have started. This is a legal emergency with strict deadlines (typically 3-30 days depending on state). This MUST appear in criticalAlerts and as the top immediateAction. Include: specific response deadline context, tenant rights during eviction, and urgent referral to housing legal aid. Do not bury this.');
+    }
+
+    if (urgency.employment === 'active') {
+      urgencyLines.push('EMPLOYMENT - ACTIVE: Employer knows about the arrest but has not yet acted. Include guidance on employment rights, what employers can and cannot do with arrest information, and how to document the situation.');
+    } else if (urgency.employment === 'emergency') {
+      urgencyLines.push('EMPLOYMENT - EMERGENCY: Person has been suspended, placed on leave, or terminated. Include EEOC rights, the distinction between arrest and conviction for employment purposes, whether wrongful termination may apply, and referral to an employment attorney or legal aid.');
+    }
+
+    if (urgency.dependents === 'active') {
+      urgencyLines.push('DEPENDENTS - ACTIVE: Caregiver situation for children or dependents is uncertain. Include guidance on identifying and documenting a caregiver plan immediately, notifying schools and care providers, and what documentation to prepare.');
+    } else if (urgency.dependents === 'emergency') {
+      urgencyLines.push('DEPENDENTS - EMERGENCY: Child welfare agency has been involved or reached out. This requires immediate action. Include specific rights during child welfare investigations, importance of legal representation in family court proceedings, and that responding promptly and cooperatively to the agency is important. Referral to family law legal aid.');
+    }
+
+    if (urgency.immigration === 'active') {
+      urgencyLines.push('IMMIGRATION - ACTIVE: Person has an existing immigration case or pending status concern. Include guidance on how a criminal case can interact with immigration status, the importance of an immigration attorney reviewing the case, and that some plea dispositions can have immigration consequences that a general public defender may not address.');
+    } else if (urgency.immigration === 'emergency') {
+      urgencyLines.push('IMMIGRATION - EMERGENCY: Person has received an immigration notice, detainer, or ICE contact. This is a dual-system emergency. Include rights during ICE contact, the importance of an immigration attorney immediately, and link to [Immigration Resources](/immigration-guidance). Flag this in criticalAlerts.');
+    }
+
+    if (urgencyLines.length > 0) {
+      prompt += `\n\nCIVIL EMERGENCY URGENCY SIGNALS — these represent active situations happening NOW, not hypothetical concerns. Address each one with specific, time-sensitive guidance. Urgency-level signals are more important than general case stage guidance:\n${urgencyLines.join('\n')}`;
+    }
+  }
+
   if (chargesUnknown) {
     prompt += `\n\nIMPORTANT: The specific charges are not yet known. Do NOT guess or speculate about what the charges might be. Instead, provide:
 1. General rights that apply at the current stage (${sanitizeInput(caseDetails.caseStage, 100)}) regardless of charge type
@@ -442,6 +477,7 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     custodyStatus: caseDetails.custodyStatus,
     hasAttorney: caseDetails.hasAttorney,
     selectedConcerns: caseDetails.selectedConcerns,
+    civilUrgency: caseDetails.civilUrgency,
     language: caseDetails.language,
   }));
   return hash.digest('hex');

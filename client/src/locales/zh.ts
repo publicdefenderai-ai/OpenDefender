@@ -1902,7 +1902,8 @@ export default {
         "jurisdiction": "你的州",
         "caseDetails": "你的案件",
         "status": "当前状态",
-        "additionalDetails": "补充信息（可选）"
+        "additionalDetails": "补充信息（可选）",
+        "civilEmergencies": "当前情况"
       },
       "consent": {
         "title": "开始前请了解",
@@ -2082,7 +2083,38 @@ export default {
         },
         "noConcernsSelected": "如果没有适用的选项可以跳过",
         "back": "返回",
-        "submit": "获取我的法律指导"
+        "submit": "获取我的法律指导",
+        "next": "下一步"
+      },
+      "civilEmergencies": {
+        "title": "现在正在发生什么？",
+        "subtitle": "对于您提到的每个方面，告诉我们是否已经有事情发生。这有助于我们确定最紧迫的事项。",
+        "back": "返回",
+        "generate": "获取我的法律指导",
+        "housing": {
+          "question": "关于您的住房——有什么事情已经发生了吗？",
+          "none": "目前什么都没有发生",
+          "active": "我收到了房东的信件、通知或电话",
+          "emergency": "驱逐或租约终止程序已经开始"
+        },
+        "employment": {
+          "question": "关于您的工作——您目前的情况是什么？",
+          "none": "我的雇主不知道这次逮捕",
+          "active": "我的雇主知道了，但目前还没有采取任何行动",
+          "emergency": "我已被停职、休假或解雇"
+        },
+        "dependents": {
+          "question": "关于您的子女或家属——您目前的情况是什么？",
+          "none": "他们有人照顾，目前没有担忧",
+          "active": "我不确定在我处理这件事时谁会照顾他们",
+          "emergency": "儿童福利机构已经介入或与我联系"
+        },
+        "immigration": {
+          "question": "关于移民——有什么事情已经发生了吗？",
+          "none": "没有进行中的移民程序",
+          "active": "我有现有的移民案件或待处理的身份问题",
+          "emergency": "我收到了移民通知、拘留令或ICE接触"
+        }
       },
       "privilegeWarning": {
         "title": "您无需说明发生了什么",

@@ -1906,7 +1906,8 @@ export default {
         "jurisdiction": "Your State",
         "caseDetails": "Your Case",
         "status": "Current Status",
-        "additionalDetails": "Life Support Needs (Optional)"
+        "additionalDetails": "Life Support Needs (Optional)",
+        "civilEmergencies": "Active Situations"
       },
       "consent": {
         "title": "Before you start",
@@ -2086,7 +2087,38 @@ export default {
         },
         "noConcernsSelected": "You can skip this if none apply",
         "back": "Back",
-        "submit": "Get My Case Support"
+        "submit": "Get My Case Support",
+        "next": "Next"
+      },
+      "civilEmergencies": {
+        "title": "What's happening right now?",
+        "subtitle": "For each area you mentioned, let us know if anything is already happening. This helps us flag what's most time-sensitive.",
+        "back": "Back",
+        "generate": "Get My Case Support",
+        "housing": {
+          "question": "Regarding your housing — has anything happened yet?",
+          "none": "Nothing has happened yet",
+          "active": "I received a letter, notice, or call from my landlord",
+          "emergency": "Eviction or lease termination proceedings have started"
+        },
+        "employment": {
+          "question": "Regarding your job — what is your current situation?",
+          "none": "My employer does not know about the arrest",
+          "active": "My employer knows, and no action has been taken yet",
+          "emergency": "I have been suspended, placed on leave, or let go"
+        },
+        "dependents": {
+          "question": "Regarding your children or dependents — what is your current situation?",
+          "none": "They have care and there are no concerns right now",
+          "active": "I am not sure who will care for them while I deal with this",
+          "emergency": "A child welfare agency has been involved or reached out"
+        },
+        "immigration": {
+          "question": "Regarding immigration — has anything happened yet?",
+          "none": "No active immigration proceedings",
+          "active": "I have an existing immigration case or pending status concern",
+          "emergency": "I received an immigration notice, detainer, or ICE contact"
+        }
       },
       "privilegeWarning": {
         "title": "You don't need to share what happened",

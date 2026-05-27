@@ -33,30 +33,32 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     hasAttorney: null,
     consentGiven: false,
     selectedConcerns: [] as string[],
+    civilUrgency: {} as Record<string, 'none' | 'active' | 'emergency'>,
   });
 
-  const steps = [
-    {
-      title: t('legalGuidance.qaFlow.steps.consent'),
-      component: ConsentStep,
-    },
-    {
-      title: t('legalGuidance.qaFlow.steps.jurisdiction'),
-      component: JurisdictionStep,
-    },
-    {
-      title: t('legalGuidance.qaFlow.steps.caseDetails'),
-      component: CaseDetailsStep,
-    },
-    {
-      title: t('legalGuidance.qaFlow.steps.status'),
-      component: StatusStep,
-    },
-    {
-      title: t('legalGuidance.qaFlow.steps.additionalDetails'),
-      component: AdditionalDetailsStep,
-    },
+  const URGENCY_CONCERN_IDS = ['housing', 'employment', 'childcare', 'familyCare', 'immigration'];
+  const hasUrgencyConcerns = URGENCY_CONCERN_IDS.some(c =>
+    (formData.selectedConcerns || []).includes(c)
+  );
+
+  const baseSteps = [
+    { title: t('legalGuidance.qaFlow.steps.consent'),           component: ConsentStep },
+    { title: t('legalGuidance.qaFlow.steps.jurisdiction'),      component: JurisdictionStep },
+    { title: t('legalGuidance.qaFlow.steps.caseDetails'),       component: CaseDetailsStep },
+    { title: t('legalGuidance.qaFlow.steps.status'),            component: StatusStep },
+    { title: t('legalGuidance.qaFlow.steps.additionalDetails'), component: AdditionalDetailsStep },
   ];
+
+  const steps = hasUrgencyConcerns
+    ? [...baseSteps, { title: t('legalGuidance.qaFlow.steps.civilEmergencies'), component: CivilEmergenciesStep }]
+    : baseSteps;
+
+  // Clamp currentStep if urgency concerns are removed while on the triage step
+  useEffect(() => {
+    if (currentStep >= steps.length) {
+      setCurrentStep(steps.length - 1);
+    }
+  }, [steps.length]);
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
@@ -128,6 +130,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
               onPrev={prevStep}
               isFirst={currentStep === 0}
               isLast={currentStep === steps.length - 1}
+              hasUrgencyConcerns={hasUrgencyConcerns}
               captchaToken={captchaToken}
               setCaptchaToken={setCaptchaToken}
               captchaRequired={captchaRequired}
@@ -867,7 +870,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
   );
 }
 
-function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, captchaToken, setCaptchaToken, captchaRequired }: any) {
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, hasUrgencyConcerns, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
   const [concernsOpen, setConcernsOpen] = useState(false);
   const concernsRef = useRef<HTMLDivElement>(null);
@@ -1017,10 +1020,132 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         </Button>
         <Button
           onClick={onNext}
-          disabled={captchaRequired && !captchaToken}
+          disabled={!hasUrgencyConcerns && captchaRequired && !captchaToken}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
         >
-          {t('legalGuidance.qaFlow.additionalDetails.submit')} <ArrowRight className="ml-2 h-4 w-4" />
+          {hasUrgencyConcerns
+            ? t('legalGuidance.qaFlow.additionalDetails.next')
+            : t('legalGuidance.qaFlow.additionalDetails.submit')}
+          <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+// ─── Civil Emergencies Step ───────────────────────────────────────────────────
+
+const URGENCY_LEVELS = ['none', 'active', 'emergency'] as const;
+type UrgencyLevel = typeof URGENCY_LEVELS[number];
+
+interface CivilQuestion {
+  key: string;
+  field: string;
+  isRelevant: (concerns: string[]) => boolean;
+}
+
+const CIVIL_QUESTIONS: CivilQuestion[] = [
+  {
+    key: 'housing',
+    field: 'housing',
+    isRelevant: (c) => c.includes('housing'),
+  },
+  {
+    key: 'employment',
+    field: 'employment',
+    isRelevant: (c) => c.includes('employment'),
+  },
+  {
+    key: 'dependents',
+    field: 'dependents',
+    isRelevant: (c) => c.includes('childcare') || c.includes('familyCare'),
+  },
+  {
+    key: 'immigration',
+    field: 'immigration',
+    isRelevant: (c) => c.includes('immigration'),
+  },
+];
+
+function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, captchaToken, setCaptchaToken, captchaRequired }: any) {
+  const { t } = useTranslation();
+  const concerns = formData.selectedConcerns || [];
+  const civilUrgency = formData.civilUrgency || {};
+
+  const activeQuestions = CIVIL_QUESTIONS.filter(q => q.isRelevant(concerns));
+
+  const setUrgency = (field: string, value: UrgencyLevel) => {
+    updateFormData('civilUrgency', { ...civilUrgency, [field]: value });
+  };
+
+  const allAnswered = activeQuestions.every(q => civilUrgency[q.field] !== undefined);
+
+  const urgencyStyles: Record<UrgencyLevel, string> = {
+    none:      'border-green-300 bg-green-50 dark:bg-green-950/20 dark:border-green-800',
+    active:    'border-amber-300 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-800',
+    emergency: 'border-red-300 bg-red-50 dark:bg-red-950/20 dark:border-red-800',
+  };
+
+  const selectedStyles: Record<UrgencyLevel, string> = {
+    none:      'ring-2 ring-green-500',
+    active:    'ring-2 ring-amber-500',
+    emergency: 'ring-2 ring-red-500',
+  };
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h3 className="text-lg font-semibold mb-1">
+          {t('legalGuidance.qaFlow.civilEmergencies.title')}
+        </h3>
+        <p className="text-sm text-muted-foreground mb-5">
+          {t('legalGuidance.qaFlow.civilEmergencies.subtitle')}
+        </p>
+      </div>
+
+      {activeQuestions.map(({ key, field }) => {
+        const selected = civilUrgency[field] as UrgencyLevel | undefined;
+        return (
+          <div key={key}>
+            <p className="text-sm font-semibold text-foreground mb-2">
+              {t(`legalGuidance.qaFlow.civilEmergencies.${key}.question`)}
+            </p>
+            <div className="space-y-2">
+              {URGENCY_LEVELS.map((level) => (
+                <button
+                  key={level}
+                  type="button"
+                  onClick={() => setUrgency(field, level)}
+                  className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-all ${
+                    urgencyStyles[level]
+                  } ${selected === level ? selectedStyles[level] : 'hover:opacity-80'}`}
+                >
+                  {t(`legalGuidance.qaFlow.civilEmergencies.${key}.${level}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+
+      {captchaRequired && (
+        <div className="flex justify-center">
+          <TurnstileCaptcha onVerify={setCaptchaToken} />
+        </div>
+      )}
+
+      <div className="flex space-x-4">
+        <Button variant="outline" onClick={onPrev}>
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          {t('legalGuidance.qaFlow.civilEmergencies.back')}
+        </Button>
+        <Button
+          onClick={onNext}
+          disabled={!allAnswered || (captchaRequired && !captchaToken)}
+          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
+        >
+          {t('legalGuidance.qaFlow.civilEmergencies.generate')}
+          <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </div>
