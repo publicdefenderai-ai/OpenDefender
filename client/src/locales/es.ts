@@ -4380,7 +4380,7 @@ export default {
     "philosophy": {
       "title": "Por Qué Lo Construimos",
       "opening": "La mayoría de la tecnología legal está diseñada para gobiernos poderosos, despachos de abogados y los clientes que representan. Construimos OpenDefender para la gente.",
-      "body": "La tecnología no tiene que ser extractiva y orientada a las ganancias. La IA tiene el potencial de ser un recurso público genuino. Puede crear bienes públicos que sean gratuitos, accesibles y realmente útiles. Sin trucos. Sin recopilación de datos disfrazada de servicio público. Para las personas trabajadoras que han pasado años navegando un complejo sistema legal en su contra con poca o ninguna ayuda de su lado, ese potencial importa."
+      "body": "La tecnología no tiene que ser extractiva y orientada a las ganancias. La tecnología moderna, incluida la IA, tiene el potencial de ser un recurso público genuino. Puede crear bienes públicos que sean gratuitos, accesibles y realmente útiles. Sin trucos. Sin recopilación de datos disfrazada de servicio público. Para las personas trabajadoras que han pasado años navegando un complejo sistema legal en su contra con poca o ninguna ayuda de su lado, ese potencial importa."
     },
     "principles": {
       "title": "Principios Rectores",

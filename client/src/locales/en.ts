@@ -4398,7 +4398,7 @@ export default {
     "philosophy": {
       "title": "Why We Built This",
       "opening": "Most legal technology is built for powerful governments, law firms, and the clients they represent. We built OpenDefender for the people.",
-      "body": "Tech doesn't have to be extractive and profit driven. AI has the potential to be a genuine public resource. It can create public goods that are free, accessible, and actually useful. No gimmicks. Not data harvesting dressed up as a public service. For working people who have spent years navigating a complex legal system weighed against them with little to no help in their corner, that potential matters."
+      "body": "Tech doesn't have to be extractive and profit driven. Modern tech, including AI, has the potential to be a genuine public resource. It can create public goods that are free, accessible, and actually useful. No gimmicks. Not data harvesting dressed up as a public service. For working people who have spent years navigating a complex legal system weighed against them with little to no help in their corner, that potential matters."
     },
     "principles": {
       "title": "Guiding Principles",
