@@ -895,8 +895,7 @@ export default function CaseGuidance() {
               Or start with the{" "}
               <Link href="/first-24-hours" className="underline underline-offset-2 hover:opacity-90">
                 First 24 Hours guide
-              </Link>{" "}
-              first.
+              </Link>.
             </p>
           </ScrollReveal>
         </div>
