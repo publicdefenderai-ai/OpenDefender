@@ -1,6 +1,6 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
 import {
@@ -179,6 +179,26 @@ interface GuidanceDashboardProps {
 }
 
 // Utility function to format charge names in plain English
+// Converts [text](url) markdown links in guidance text to real links.
+// Internal paths (/support/...) use wouter Link; external URLs use <a>.
+function renderWithLinks(text: string): React.ReactNode {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  if (parts.length === 1) return text;
+  return (
+    <>
+      {parts.map((part, i) => {
+        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (!match) return <React.Fragment key={i}>{part}</React.Fragment>;
+        const [, label, href] = match;
+        if (href.startsWith('/')) {
+          return <Link key={i} href={href} className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</Link>;
+        }
+        return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</a>;
+      })}
+    </>
+  );
+}
+
 const formatChargeName = (name: string): string => {
   return name
     .split('-')
@@ -1016,7 +1036,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-guidance-overview">
-              {guidance.overview}
+              {renderWithLinks(guidance.overview)}
             </p>
           </CardContent>
         </Card>
@@ -1212,7 +1232,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     completedActions.has(actionItem.action) ? 'line-through text-muted-foreground' : ''
                   }`}
                 >
-                  {actionItem.action}
+                  {renderWithLinks(actionItem.action)}
                 </label>
                 <Badge 
                   variant={getUrgencyBadgeVariant(actionItem.urgency)}
@@ -1324,7 +1344,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
                     {index + 1}
                   </div>
-                  <span className="flex-1 text-sm text-foreground">{step}</span>
+                  <span className="flex-1 text-sm text-foreground">{renderWithLinks(step)}</span>
                 </div>
               ))}
             </div>
@@ -1528,7 +1548,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     {guidance.warnings.map((warning, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-600 mt-1">•</span>
-                        <span className="text-sm">{warning}</span>
+                        <span className="text-sm">{renderWithLinks(warning)}</span>
                       </li>
                     ))}
                   </ul>
@@ -1602,7 +1622,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     {guidance.avoidActions.map((action, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-500 mt-1">•</span>
-                        <span className="text-sm">{action}</span>
+                        <span className="text-sm">{renderWithLinks(action)}</span>
                       </li>
                     ))}
                   </ul>

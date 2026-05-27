@@ -408,6 +408,21 @@ export default function CaseGuidance() {
     setPendingNavigation(null);
   };
 
+  // Simulated slow-advance ticker — keeps the bar moving during Claude's
+  // pre-generation "thinking" phase when no real chunks have arrived yet.
+  useEffect(() => {
+    if (!isStreaming) return;
+    const interval = setInterval(() => {
+      setStreamProgress(prev => {
+        // Only advance the simulated ticker while real progress hasn't kicked in.
+        // Once real chunks drive progress above 8%, stop simulating.
+        if (prev >= 8) return prev;
+        return Math.min(prev + 1, 8);
+      });
+    }, 600);
+    return () => clearInterval(interval);
+  }, [isStreaming]);
+
   const handleQAComplete = async (data: any) => {
     setIsStreaming(true);
     setStreamProgress(0);

@@ -3,6 +3,14 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 
+// Convert markdown links to readable plain text for PDF output:
+// [Childcare Resources](/support/childcare) → Childcare Resources (opendefender.org/support/childcare)
+function pl(text: string): string {
+  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) =>
+    href.startsWith('/') ? `${label} (opendefender.org${href})` : `${label} (${href})`
+  );
+}
+
 interface ImmediateAction {
   action: string;
   urgency: 'urgent' | 'high' | 'medium' | 'low';
@@ -418,7 +426,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    yPosition = addText(guidance.overview, margin + 5, yPosition);
+    yPosition = addText(pl(guidance.overview), margin + 5, yPosition);
     yPosition += 10;
   }
 
@@ -553,7 +561,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setTextColor(0, 0, 0);
     guidance.criticalAlerts.forEach((alert) => {
       checkPageBreak();
-      yPosition = addText(`   • ${alert}`, margin + 5, yPosition);
+      yPosition = addText(`   • ${pl(alert)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -575,7 +583,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     guidance.immediateActions.forEach((actionItem, idx) => {
       checkPageBreak();
       const urgencyLabel = `[${actionItem.urgency.toUpperCase()}]`;
-      yPosition = addText(`   [ ] ${urgencyLabel} ${actionItem.action}`, margin + 5, yPosition);
+      yPosition = addText(`   [ ] ${urgencyLabel} ${pl(actionItem.action)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -690,7 +698,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     guidance.nextSteps.forEach((step, idx) => {
       checkPageBreak();
-      yPosition = addText(`${idx + 1}. ${step}`, margin + 5, yPosition);
+      yPosition = addText(`${idx + 1}. ${pl(step)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
