@@ -724,7 +724,7 @@ export function buildSearchIndex(): void {
       content: 'Comprehensive legal resources. Legal aid organizations. Pro bono attorneys. Self-help legal information.',
       tags: ['resources', 'legal aid', 'help', 'assistance'],
       aliases: ['legal help', 'free legal'],
-      url: '/resources'
+      url: '/legal-aid'
     },
     {
       id: 'case-guidance',

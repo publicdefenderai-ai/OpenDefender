@@ -14,6 +14,8 @@ import {
   BookOpen,
   FileText,
   GitBranch,
+  Info,
+  ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -372,6 +374,87 @@ export default function Resources() {
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Court-Appointed Counsel section */}
+      <section className="py-10 md:py-14 bg-muted/30 border-t border-border/30">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="flex items-center gap-3 mb-2">
+              <Scale className="h-5 w-5 text-slate-600" />
+              <h2 className="text-xl md:text-2xl font-bold text-foreground">Beyond the Public Defender: Court-Appointed Attorneys</h2>
+            </div>
+            <p className="text-muted-foreground mb-8 max-w-3xl">
+              When a public defender's office has a conflict of interest, is unavailable, or has reached capacity, courts appoint private attorneys from a local panel instead. Requesting court-appointed counsel works the same way as requesting a public defender — tell the judge at your first appearance that you cannot afford an attorney.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            <ScrollReveal>
+              <Card>
+                <CardContent className="pt-5">
+                  <div className="flex gap-3">
+                    <Info className="h-5 w-5 text-slate-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground mb-2">How to find the assigned counsel program near you</p>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-slate-400 mt-0.5 flex-shrink-0">•</span>
+                          Search the court's website for an "assigned counsel," "appointment panel," or "indigent defense" section — many courts publish their appointed attorney lists there.
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-slate-400 mt-0.5 flex-shrink-0">•</span>
+                          Ask the court clerk directly — they administer the appointment panel and can tell you who is on it and how the process works in that court.
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-slate-400 mt-0.5 flex-shrink-0">•</span>
+                          At your arraignment or first appearance, tell the judge you cannot afford an attorney. The court is required to appoint one. You do not need to identify a specific attorney yourself.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.07}>
+              <Card>
+                <CardContent className="pt-5">
+                  <div className="flex gap-3">
+                    <BookOpen className="h-5 w-5 text-slate-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground mb-2">National resources on indigent defense</p>
+                      <ul className="space-y-3 text-sm">
+                        <li>
+                          <a
+                            href="https://www.nlada.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 font-medium text-foreground hover:underline"
+                          >
+                            National Legal Aid & Defender Association (NLADA) <ExternalLink className="h-3 w-3" />
+                          </a>
+                          <p className="text-muted-foreground mt-0.5">The principal national organization for public defense. Covers both public defender offices and assigned counsel programs.</p>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.americanbar.org/groups/legal_services/flh-home/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 font-medium text-foreground hover:underline"
+                          >
+                            ABA Free Legal Help Directory <ExternalLink className="h-3 w-3" />
+                          </a>
+                          <p className="text-muted-foreground mt-0.5">Search for free and low-cost legal help by state, including criminal defense resources.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 

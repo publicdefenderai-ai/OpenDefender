@@ -46,7 +46,7 @@ export default function DocumentSummarizerPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Back Button */}
           <div className="mb-6">
-            <Link href="/resources">
+            <Link href="/legal-aid">
               <Button variant="outline" size="sm">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 {t('common.backToResources', 'Back to Resources')}

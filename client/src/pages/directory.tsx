@@ -96,7 +96,7 @@ export default function Directory() {
         { title: t("howTo.sections.knowYourRights.caseTimeline.title"), description: t("howTo.sections.knowYourRights.caseTimeline.description"), link: "/case-timeline" },
         { title: t("howTo.sections.knowYourRights.friendsFamily.title"), description: t("howTo.sections.knowYourRights.friendsFamily.description"), link: "/friends-family" },
         { title: t("howTo.collateralConsequences"), description: t("howTo.collateralConsequencesDesc"), link: "/support/reputation" },
-        { title: t("howTo.sections.knowYourRights.mockQA.title"), description: t("howTo.sections.knowYourRights.mockQA.description"), link: "/resources" },
+        { title: t("howTo.sections.knowYourRights.mockQA.title"), description: t("howTo.sections.knowYourRights.mockQA.description"), link: "/legal-aid" },
       ],
     },
     {

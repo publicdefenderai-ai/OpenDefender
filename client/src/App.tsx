@@ -159,8 +159,8 @@ function Router() {
       <Route path="/statutes" component={Statutes} />
       <Route path="/chat" component={Chat} />
       <Route path="/document-library" component={DocumentLibrary} />
-      <Route path="/resources" component={Resources} />
-      <Route path="/legal-aid" component={LegalAid} />
+      <Route path="/legal-aid" component={Resources} />
+      <Route path="/resources"><Redirect to="/legal-aid" /></Route>
       <Route path="/support" component={SupportHub} />
       <Route path="/support/employment" component={EmploymentSupport} />
       <Route path="/support/finances" component={FinancesSupport} />

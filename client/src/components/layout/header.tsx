@@ -156,7 +156,7 @@ export function Header() {
     { title: t('header.menu.friendsFamily', 'For Families & Friends'), href: "/friends-family",  icon: Users,    description: t('header.menu.friendsFamilyDesc', 'Start here if someone you know was arrested.'),              testId: "menu-friends-family",   featured: true  },
     { title: t('header.menu.knowRights', 'Know Your Rights'),          href: "/rights-info",     icon: Shield,   description: t('header.menu.knowRightsDesc', 'Constitutional rights in plain language'),                     testId: "menu-know-rights",      featured: false },
     { title: t('header.menu.documentLibrary', 'Document Library'),     href: "/document-library", icon: FileText, description: t('header.menu.documentLibraryDesc', 'Understand the legal documents in your case'),          testId: "menu-document-library", featured: false },
-    { title: t('header.menu.findResources', 'Find Legal Help'),        href: "/resources",        icon: MapPin,   description: t('header.menu.findResourcesDesc', 'Locate public defenders, legal aid, and courts'),         testId: "menu-find-resources",   featured: false },
+    { title: t('header.menu.findResources', 'Find Legal Help'),        href: "/legal-aid",        icon: MapPin,   description: t('header.menu.findResourcesDesc', 'Locate public defenders, legal aid, and courts'),         testId: "menu-find-resources",   featured: false },
   ];
 
   return (

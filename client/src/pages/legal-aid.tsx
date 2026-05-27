@@ -5,7 +5,7 @@ export default function LegalAid() {
   const [, setLocation] = useLocation();
 
   useEffect(() => {
-    setLocation("/resources");
+    setLocation("/legal-aid");
   }, [setLocation]);
 
   return null;
