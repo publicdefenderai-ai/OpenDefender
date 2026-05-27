@@ -93,7 +93,7 @@ function BetaBanner() {
 
   return (
     <div
-      className="w-full bg-muted/80 border-b border-border py-2.5 px-4"
+      className="w-full bg-muted/80 border-b border-border py-2.5 px-4 print:hidden"
       data-testid="beta-banner"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
