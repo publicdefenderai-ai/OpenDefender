@@ -616,19 +616,17 @@ function ReputationCommsSection() {
 }
 
 const SIDEBAR_SECTIONS = [
-  { id: "section-start-here", labelKey: "support.startHere",                      indent: false },
-  { id: "clean-slate",        labelKey: "support.reputation.cleanSlate.sectionTitle", indent: false },
-  { id: "fcra-rights",        labelKey: "support.reputation.fcraRights.sectionTitle", indent: false },
-  { id: "certificates-of-relief", labelKey: "support.reputation.certificatesOfRelief.sectionTitle", indent: false },
-  { id: "reputation-comms",   labelKey: "support.reputation.commsSection.sectionTitle", indent: false },
-  { id: "section-resources",  labelKey: "support.helpfulResources",  indent: false },
-  { id: "section-faq",        labelKey: "support.faq.title",         indent: false },
-  { id: "section-tips",       labelKey: "support.tips.title",        indent: false },
+  { id: "section-start-here",    label: "Start Here" },
+  { id: "clean-slate",            label: "Record Clearance" },
+  { id: "fcra-rights",            label: "Background Checks" },
+  { id: "certificates-of-relief", label: "Certificates of Relief" },
+  { id: "reputation-comms",       label: "Conversations" },
+  { id: "section-resources",      label: "Resources" },
+  { id: "section-faq",            label: "Common Questions" },
+  { id: "section-tips",           label: "Tips" },
 ] as const;
 
 function ReputationSidebar({ activeId }: { activeId: string | null }) {
-  const { t } = useTranslation();
-
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -642,7 +640,7 @@ function ReputationSidebar({ activeId }: { activeId: string | null }) {
       <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-3 px-2">
         On this page
       </p>
-      {SIDEBAR_SECTIONS.map(({ id, labelKey }) => {
+      {SIDEBAR_SECTIONS.map(({ id, label }) => {
         const isActive = activeId === id;
         return (
           <button
@@ -655,7 +653,7 @@ function ReputationSidebar({ activeId }: { activeId: string | null }) {
             }`}
           >
             {isActive && <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />}
-            <span className="truncate leading-snug">{t(labelKey)}</span>
+            <span className="leading-snug">{label}</span>
           </button>
         );
       })}
