@@ -605,7 +605,7 @@ function ReputationCommsSection() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                A charge means the government has accused you of something — not that you are guilty. You have the right to a presumption of innocence. You can say this clearly and accurately in any conversation, professional context, or written response. Many people are charged and never convicted, or have charges reduced or dismissed. Your story is not finished.
+                A charge means the government has accused you of something, not that you are guilty. You have the right to a presumption of innocence. You can say this clearly and accurately in any conversation, professional context, or written response. Many people are charged and never convicted, or have charges reduced or dismissed. Your story is not finished.
               </p>
             </CardContent>
           </Card>
@@ -675,14 +675,14 @@ export default function ReputationSupport() {
       free: true,
     },
     {
-      name: "EEOC — Criminal Background Checks",
+      name: "EEOC: Criminal Background Checks",
       description: t("support.reputation.resources.eeoc.description"),
       url: "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines",
       type: "national",
       free: true,
     },
     {
-      name: "Mugshot Removal — Know Your State's Law",
+      name: "Mugshot Removal: Know Your State's Law",
       description: t("support.reputation.resources.mugRemoval.description"),
       url: "https://consumerfed.org/issues/privacy/",
       type: "online",
@@ -696,7 +696,7 @@ export default function ReputationSupport() {
       free: true,
     },
     {
-      name: "LawHelp.org — Expungement by State",
+      name: "LawHelp.org: Expungement by State",
       description: t("support.reputation.resources.lawHelp.description"),
       url: "https://www.lawhelp.org/",
       type: "national",

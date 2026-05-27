@@ -1541,85 +1541,85 @@ export default {
       }
     },
     "reputation": {
-      "overview": "Charges — even pending ones — can feel like they define you to the world. They don't. You are not your charges, and many people navigate this with their relationships, careers, and communities intact. This guide helps you understand what is actually in your public record, take control of the conversations you choose to have, and plan for protecting and rebuilding your reputation over time.",
+      "overview": "Charges, even pending ones, can feel like they define you to the world. They don't. You are not your charges, and many people navigate this with their relationships, careers, and communities intact. This guide helps you understand what is actually in your public record, take control of the conversations you choose to have, and plan for protecting and rebuilding your reputation over time.",
       "actions": {
         "controlNarrative": {
-          "title": "Decide who you tell — and what you say",
-          "description": "You are not obligated to disclose your charges to anyone. Being intentional about who you confide in protects you from rumors and lets you build a support network of people who know the full picture. Share selectively and purposefully — close friends and family who will support you, not gossip. The templates below can help you start those conversations on your own terms.",
+          "title": "Decide who you tell and what you say",
+          "description": "You are not obligated to disclose your charges to anyone. Being intentional about who you confide in protects you from rumors and lets you build a support network of people who know the full picture. Share selectively and purposefully: close friends and family who will support you, not gossip. The templates below can help you start those conversations on your own terms.",
           "timeframe": "This week",
           "priority": "high"
         },
         "understandRecord": {
           "title": "Understand what is actually in your public record right now",
-          "description": "Arrest records may or may not appear on background checks depending on your state. A pending charge is not a conviction. Many states restrict employers from considering arrests that didn't result in conviction. Knowing exactly what shows up — and what your state's laws say about it — lets you respond accurately and confidently when asked.",
+          "description": "Arrest records may or may not appear on background checks depending on your state. A pending charge is not a conviction. Many states restrict employers from considering arrests that didn't result in conviction. Knowing exactly what shows up, and what your state's laws say about it, lets you respond accurately and confidently when asked.",
           "timeframe": "This week",
           "priority": "high"
         },
         "socialMedia": {
           "title": "Pause and review your social media",
-          "description": "Anything posted publicly can be found, screenshot, and misinterpreted. During your case, avoid posting about the situation, your frustration, or anything emotionally charged. Review your existing posts and privacy settings. Your attorney should advise on anything specific — but the general rule is: when in doubt, don't post.",
+          "description": "Anything posted publicly can be found, screenshot, and misinterpreted. During your case, avoid posting about the situation, your frustration, or anything emotionally charged. Review your existing posts and privacy settings. Your attorney should advise on anything specific. The general rule is: when in doubt, don't post.",
           "priority": "high"
         },
         "prepareResponse": {
           "title": "Prepare a calm, brief response for when it comes up",
-          "description": "Professionally — for background checks, employer questions, or licensing disclosures — being prepared with a measured, factual response is far better than being caught off guard. You don't need to over-explain. A short statement that your case is pending and you're handling it responsibly is usually sufficient. The scripts below can help you practice.",
+          "description": "Professionally, for background checks, employer questions, or licensing disclosures, being prepared with a measured, factual response is far better than being caught off guard. You don't need to over-explain. A short statement that your case is pending and you're handling it responsibly is usually sufficient. The scripts below can help you practice.",
           "priority": "medium"
         },
         "documentPositives": {
           "title": "Gather documentation of your positive character",
-          "description": "Positive documentation matters for your case and your long-term reputation — whether formal or not. Employment records and performance reviews if you have them. Volunteer work, community involvement, and organizations you're part of. Character references from people who know you: neighbors, mentors, faith leaders, coaches, or anyone who can speak to who you are. Start collecting what's available to you. Letters from people who know you well carry real weight with judges and employers.",
+          "description": "Positive documentation matters for your case and your long-term reputation, formal or informal. Employment records and performance reviews if you have them. Volunteer work, community involvement, and organizations you're part of. Character references from people who know you: neighbors, mentors, faith leaders, coaches, or anyone who can speak to who you are. Start collecting what's available to you. Letters from people who know you well carry real weight with judges and employers.",
           "priority": "medium"
         },
         "planRecordRelief": {
           "title": "Plan for record relief after your case",
-          "description": "Depending on your outcome and your state, you may be eligible for expungement, record sealing, or other forms of record clearing after your case resolves. These can meaningfully limit what shows up on future background checks. Ask your attorney early, or contact a legal aid organization — many offer free record clearing services.",
+          "description": "Depending on your outcome and your state, you may be eligible for expungement, record sealing, or other forms of record clearing after your case resolves. These can meaningfully limit what shows up on future background checks. Ask your attorney early, or contact a legal aid organization. Many offer free record clearing services.",
           "priority": "medium"
         }
       },
       "commsSection": {
         "sectionTitle": "Handling These Conversations",
-        "sectionDescription": "Some of the hardest moments aren't in the courtroom — they're when someone you know finds out. These templates give you language for the conversations you didn't plan for, so you're not left searching for words.",
+        "sectionDescription": "Some of the hardest moments aren't in the courtroom. They're when someone you know finds out. These templates give you language for the conversations you didn't plan for, so you're not left searching for words.",
         "tipLabel": "Remember",
-        "personalizeNote": "You control how much you share and with whom. These templates are starting points — adjust the level of detail to match your comfort and your relationship with the person.",
+        "personalizeNote": "You control how much you share and with whom. These templates are starting points. Adjust the level of detail to match your comfort and your relationship with the person.",
         "copyButton": "Copy to Clipboard",
         "copied": "Copied!",
         "printButton": "Print",
         "emailTemplates": {
           "title": "Written Messages",
           "closeFriend": {
-            "label": "Message to a Close Friend — Telling Them on Your Own Terms",
+            "label": "Message to a Close Friend: Telling Them on Your Own Terms",
             "subject": "Subject: Something I wanted you to hear from me directly",
-            "body": "Hi [Name],\n\nI wanted to reach out because I'd rather you hear this from me than through someone else.\n\nI'm dealing with a legal matter right now. I'm not going to go into all the details, but I want you to know that I'm taking it seriously and working through it with my attorney. This has been one of the hardest periods of my life and I'm doing my best to handle it responsibly.\n\nI'm not looking for pity — I just didn't want there to be a wall between us, and I trust you. If you have questions, I'm happy to talk, though there are limits to what I can share right now.\n\nMost of all, I just wanted you to know. Having people in my corner means everything.\n\n[Your Name]"
+            "body": "Hi [Name],\n\nI wanted to reach out because I'd rather you hear this from me than through someone else.\n\nI'm dealing with a legal matter right now. I'm not going to go into all the details, but I want you to know that I'm taking it seriously and working through it with my attorney. This has been one of the hardest periods of my life and I'm doing my best to handle it responsibly.\n\nI'm not looking for pity. I just didn't want there to be a wall between us, and I trust you. If you have questions, I'm happy to talk, though there are limits to what I can share right now.\n\nMost of all, I just wanted you to know. Having people in my corner means everything.\n\n[Your Name]"
           },
           "professional": {
             "label": "Written Response for an Employer or Background Check Inquiry",
-            "subject": "Subject: Regarding Background Check Results — [Your Name]",
-            "body": "Dear [Hiring Manager / HR Department],\n\nI am writing to address the pending legal matter that may appear in my background check results.\n\nI want to be transparent: I am currently facing [a charge / charges] that I am contesting with the assistance of legal counsel. The matter is unresolved and I am not able to share specifics at this time. I want to emphasize that this is a pending case — not a conviction — and I am committed to resolving it through the proper legal process.\n\nI have consistently performed [at a high level / with integrity / responsibly] in my professional life and I am happy to provide references who can speak to my character and work ethic. I would welcome the opportunity to discuss this further if you feel it is necessary.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]"
+            "subject": "Subject: Regarding Background Check Results, [Your Name]",
+            "body": "Dear [Hiring Manager / HR Department],\n\nI am writing to address the pending legal matter that may appear in my background check results.\n\nI want to be transparent: I am currently facing [a charge / charges] that I am contesting with the assistance of legal counsel. The matter is unresolved and I am not able to share specifics at this time. I want to emphasize that this is a pending case, not a conviction, and I am committed to resolving it through the proper legal process.\n\nI have consistently performed [at a high level / with integrity / responsibly] in my professional life and I am happy to provide references who can speak to my character and work ethic. I would welcome the opportunity to discuss this further if you feel it is necessary.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]\n[Your Contact Information]"
           },
           "mugshot": {
             "label": "Request to Remove a Mugshot or Record from a Website",
-            "subject": "Subject: Removal Request — [Your Full Name] — [Date of Arrest]",
+            "subject": "Subject: Removal Request | [Your Full Name] | [Date of Arrest]",
             "body": "To Whom It May Concern,\n\nI am writing to formally request the removal of my personal information and photograph from your website.\n\nName: [Your Full Name]\nDate of birth: [DOB]\nDate of arrest: [Date]\nURL of the page containing my information: [URL]\n\nThis listing is causing significant harm to my professional and personal reputation. [If applicable: My state's law (cite state, e.g., California Civil Code § 1798.91.1) requires the removal of this content upon request without a fee.]\n\nI request that you remove this content within [30 days / the timeframe required by law]. Please confirm receipt of this request and the expected removal date.\n\nIf you require any additional information, please contact me at [your email / phone].\n\nSincerely,\n[Your Full Name]\n[Your Contact Information]"
           }
         },
         "callScripts": {
           "title": "Conversation Scripts",
-          "description": "These give you a framework for some of the most uncomfortable conversations — so you're prepared rather than caught off guard.",
+          "description": "These give you a framework for some of the most uncomfortable conversations, so you're prepared rather than caught off guard.",
           "unexpected": {
             "label": "When Someone Brings It Up Unexpectedly",
-            "script": "If a coworker, acquaintance, or someone you don't know well brings it up:\n\n\"I appreciate you mentioning it. It's a situation I'm working through and I don't really want to get into the details — but I'm doing okay and taking it seriously. I'd appreciate keeping it between us.\"\n\n— or, if you want to shut it down quickly —\n\n\"I'm not really able to talk about that right now. I hope you understand.\"\n\nYou don't owe anyone an explanation. A calm, brief response signals that you're composed and not inviting further discussion."
+            "script": "If a coworker, acquaintance, or someone you don't know well brings it up:\n\n\"I appreciate you mentioning it. It's a situation I'm working through and I don't really want to get into the details, but I'm doing okay and taking it seriously. I'd appreciate keeping it between us.\"\n\nOr, if you want to shut it down quickly:\n\n\"I'm not really able to talk about that right now. I hope you understand.\"\n\nYou don't owe anyone an explanation. A calm, brief response signals that you're composed and not inviting further discussion."
           },
           "interview": {
             "label": "Addressing It in a Job Interview or with an Employer",
-            "script": "If asked directly about a background check result or charges:\n\n\"Yes, there is a pending legal matter that I want to address directly. It's an open case that I'm contesting with legal counsel — it has not been resolved and there has been no conviction. I'm committed to handling it through the proper process.\n\nWhat I can tell you is that it doesn't reflect how I conduct myself professionally or personally, and I'm happy to provide references who can speak to that. I don't want it to be a surprise to you, and I appreciate the opportunity to address it directly.\"\n\nThen pause. Let them respond. Don't over-explain."
+            "script": "If asked directly about a background check result or charges:\n\n\"Yes, there is a pending legal matter that I want to address directly. It's an open case that I'm contesting with legal counsel. It has not been resolved and there has been no conviction. I'm committed to handling it through the proper process.\n\nWhat I can tell you is that it doesn't reflect how I conduct myself professionally or personally, and I'm happy to provide references who can speak to that. I don't want it to be a surprise to you, and I appreciate the opportunity to address it directly.\"\n\nThen pause. Let them respond. Don't over-explain."
           },
           "tips": {
             "label": "Principles for All of These Conversations",
             "items": {
-              "tip1": "Brief and calm is always more effective than lengthy and defensive — over-explaining can make things worse",
-              "tip2": "You never have to share more than you're comfortable with — 'I'm not able to go into detail right now' is a complete sentence",
-              "tip3": "Charges are allegations, not convictions — you are entitled to say so clearly and accurately",
-              "tip4": "After the conversation, write down what was said and when — especially in professional contexts where it may be relevant later"
+              "tip1": "Brief and calm is always more effective than lengthy and defensive. Over-explaining can make things worse.",
+              "tip2": "You never have to share more than you're comfortable with. 'I'm not able to go into detail right now' is a complete sentence.",
+              "tip3": "Charges are allegations, not convictions. You are entitled to say so clearly and accurately.",
+              "tip4": "After the conversation, write down what was said and when, especially in professional contexts where it may be relevant later."
             }
           }
         }
@@ -1638,7 +1638,7 @@ export default {
           "description": "Many states now require mugshot websites to remove photos upon request. Search '[your state] mugshot removal law' to find the process and whether fees can be charged."
         },
         "repDefender": {
-          "description": "Online reputation management services can help suppress or remove harmful search results. Costs vary — free options include direct requests to websites and search engines."
+          "description": "Online reputation management services can help suppress or remove harmful search results. Costs vary. Free options include direct requests to websites and search engines."
         },
         "lawHelp": {
           "description": "LawHelp.org connects you to free legal aid for expungement, record sealing, and other post-case record relief by state."
@@ -1647,15 +1647,15 @@ export default {
       "faq": {
         "q1": {
           "question": "Is my arrest public record? Can anyone see it?",
-          "answer": "In most states, arrest records are technically public, but what actually shows up on a background check varies significantly. Many background check companies don't report arrests that are older than a certain period or that didn't lead to conviction. Additionally, many states have laws restricting employers from asking about or considering arrests that didn't result in conviction. Check your state's specific laws — a legal aid organization can help you understand what applies to you."
+          "answer": "In most states, arrest records are technically public, but what actually shows up on a background check varies significantly. Many background check companies don't report arrests that are older than a certain period or that didn't lead to conviction. Additionally, many states have laws restricting employers from asking about or considering arrests that didn't result in conviction. Check your state's specific laws. A legal aid organization can help you understand what applies to you."
         },
         "q2": {
           "question": "Can I get my record expunged or sealed?",
-          "answer": "Possibly — and it's worth finding out. Eligibility depends on the charge, the outcome of your case, how much time has passed, and your state's laws. Many states allow expungement for dismissed charges, first offenses, or cases resolved through diversion programs. Many legal aid organizations offer free expungement clinics. Ask your attorney about your options early — some steps need to be taken at the right point in your case."
+          "answer": "Possibly, and it's worth finding out. Eligibility depends on the charge, the outcome of your case, how much time has passed, and your state's laws. Many states allow expungement for dismissed charges, first offenses, or cases resolved through diversion programs. Many legal aid organizations offer free expungement clinics. Ask your attorney about your options early. Some steps need to be taken at the right point in your case."
         },
         "q3": {
           "question": "What do I say when someone asks about my case?",
-          "answer": "You are not required to discuss your case with anyone other than your attorney. A calm, brief response — 'I'm dealing with a legal matter and I can't get into the details right now' — is complete and professional. In employment contexts, you may be required to disclose pending charges on certain applications, but you can frame your response factually: it's pending, it's not a conviction, and you're handling it properly."
+          "answer": "You are not required to discuss your case with anyone other than your attorney. A calm, brief response such as 'I'm dealing with a legal matter and I can't get into the details right now' is complete and professional. In employment contexts, you may be required to disclose pending charges on certain applications, but you can frame your response factually: it's pending, it's not a conviction, and you're handling it properly."
         },
         "q4": {
           "question": "Can I get my mugshot removed from the internet?",
@@ -1663,11 +1663,11 @@ export default {
         }
       },
       "tips": {
-        "tip1": "You are not your charges — charges are allegations, and many people move through this period with their relationships and careers fully intact",
-        "tip2": "Be very selective about who you confide in during your case — information shared casually can spread in ways you don't anticipate",
-        "tip3": "Your attorney should advise you on what, if anything, to say publicly about your case — follow their guidance closely",
+        "tip1": "You are not your charges. Charges are allegations, and many people move through this period with their relationships and careers fully intact.",
+        "tip2": "Be very selective about who you confide in during your case. Information shared casually can spread in ways you don't anticipate.",
+        "tip3": "Your attorney should advise you on what, if anything, to say publicly about your case. Follow their guidance closely.",
         "tip4": "Start collecting positive documentation now: performance reviews, reference letters, volunteer records, community involvement",
-        "tip5": "After your case resolves, explore record clearing options — expungement or sealing can make a real difference in housing and employment going forward"
+        "tip5": "After your case resolves, explore record clearing options. Expungement or sealing can make a real difference in housing and employment going forward."
       },
       "cleanSlate": {
         "sectionTitle": "Automatic Record Clearance",
@@ -1710,16 +1710,16 @@ export default {
         "sectionTitle": "Your Rights When a Background Check Is Run",
         "sectionSubtitle": "Federal law gives you specific rights before an employer can use a background check against you. Most people are never told these rights exist.",
         "adverseActionTitle": "Employers must notify you before acting",
-        "adverseActionBody": "Before an employer can reject you based on a background check, federal law (the Fair Credit Reporting Act) requires them to give you a pre-adverse action notice. This includes a copy of the report and a written summary of your rights. You have time to review the report and dispute any errors before the decision is final. Many employers skip this step — if they did, that is a violation of federal law.",
+        "adverseActionBody": "Before an employer can reject you based on a background check, federal law (the Fair Credit Reporting Act) requires them to give you a pre-adverse action notice. This includes a copy of the report and a written summary of your rights. You have time to review the report and dispute any errors before the decision is final. Many employers skip this step. If they did, that is a violation of federal law.",
         "disputeTitle": "You can dispute inaccurate information",
-        "disputeBody": "If a background check contains errors — wrong charges, someone else's record, outdated information — you have the right to dispute it. The background check company must investigate within 30 days and correct or remove inaccurate information. Submit your dispute in writing and keep a copy. Include any documentation that supports your claim.",
+        "disputeBody": "If a background check contains errors, such as wrong charges, someone else's record, or outdated information, you have the right to dispute it. The background check company must investigate within 30 days and correct or remove inaccurate information. Submit your dispute in writing and keep a copy. Include any documentation that supports your claim.",
         "lookbackTitle": "The 7-year rule",
         "lookbackBody": "Under federal law, most negative information, including many criminal records, can only be reported for 7 years for jobs paying under roughly $75,000 per year. This limit does not apply to convictions in all cases, and several states have stricter rules. If older records are appearing on your report, this may be worth disputing.",
         "rapSheetNote": "Not sure what is on your record? You can request your FBI Identity History Summary for free at IdentityHistory.fbi.gov. Many states also allow you to request your state criminal history through the state police or court administrator.",
         "whatToDoTitle": "If a background check is used against you",
         "whatToDoSteps": [
           "Ask the employer for the pre-adverse action notice and a copy of the report",
-          "Review the report carefully for errors — wrong names, dismissed charges still listed as convictions, records from another person",
+          "Review the report carefully for errors: wrong names, dismissed charges still listed as convictions, records from another person",
           "If you find errors, submit a written dispute directly to the background check company listed on the report",
           "The company must investigate within 30 days and respond in writing",
           "If the employer already made a final decision without giving you the notice, that may be a violation you can report to the CFPB or pursue through a consumer protection attorney"
@@ -1754,7 +1754,7 @@ export default {
         "howTitle": "How to find out if you qualify",
         "howSteps": [
           "Check the CCRC state inventory to see if your state has a certificate program and what offenses qualify",
-          "Contact your state's Department of Corrections, parole board, or the court where you were sentenced — they administer most certificate programs",
+          "Contact your state's Department of Corrections, parole board, or the court where you were sentenced. They administer most certificate programs.",
           "Legal aid organizations can help you apply in most states at no cost",
           "Some states allow you to apply while you are still on probation or parole"
         ],
