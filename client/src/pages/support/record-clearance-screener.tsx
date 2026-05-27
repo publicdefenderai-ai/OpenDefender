@@ -318,12 +318,6 @@ export default function RecordClearanceScreener() {
                 <div className="p-2 rounded-lg bg-amber-500/10">
                   <ShieldCheck className="h-6 w-6 text-amber-600 dark:text-amber-400" />
                 </div>
-                <Badge
-                  variant="outline"
-                  className="border-amber-400 text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40"
-                >
-                  {t("screener.badge")}
-                </Badge>
               </div>
               <h1 className="text-3xl font-bold text-foreground mb-3">
                 {t("screener.title")}

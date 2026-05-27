@@ -6011,7 +6011,6 @@ export default {
     }
   },
   "screener": {
-    "badge": "Free Tool",
     "title": "Record Clearance Eligibility Screener",
     "subtitle": "Answer four questions to find out if your record may be eligible for expungement, sealing, or automatic clearance. This tool gives general information only. It is not legal advice.",
     "backToReputation": "Back to Reputation and Record Support",

@@ -5929,7 +5929,6 @@ export default {
     }
   },
   "screener": {
-    "badge": "Herramienta Gratuita",
     "title": "Evaluador de Elegibilidad para Eliminación de Antecedentes",
     "subtitle": "Responda cuatro preguntas para saber si sus antecedentes pueden ser elegibles para expungement, sellado o eliminación automática. Esta herramienta solo proporciona información general. No es asesoramiento legal.",
     "backToReputation": "Volver a Reputación y Registro",

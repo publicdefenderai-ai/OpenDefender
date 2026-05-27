@@ -5929,7 +5929,6 @@ export default {
     }
   },
   "screener": {
-    "badge": "免费工具",
     "title": "记录清除资格评估",
     "subtitle": "回答四个问题，了解您的记录是否符合清除、封存或自动清除的条件。此工具仅提供一般信息，不是法律建议。",
     "backToReputation": "返回声誉和记录支持",
