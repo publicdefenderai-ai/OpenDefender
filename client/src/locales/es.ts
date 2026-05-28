@@ -6200,6 +6200,173 @@ export default {
       }
     }
   },
+  "bailPrep": {
+    "breadcrumb": "Preparacion para la Fianza",
+    "heroTagline": "Kit de Herramientas para la Audiencia de Fianza",
+    "heroTitle": "Prepare su Audiencia de Fianza",
+    "heroSubtitle": "La informacion que organice en las horas antes de una audiencia de fianza puede afectar si alguien es liberado. Esta guia explica que recopilar y como presentarlo.",
+    "sidebar": {
+      "onThisPage": "En Esta Pagina",
+      "quickLinks": "Enlaces Rapidos",
+      "overview": "Por Que Importa",
+      "whatJudgesConsider": "Que Pesan los Jueces",
+      "documentation": "Que Recopilar",
+      "templates": "Plantillas de Cartas",
+      "releaseTypes": "Tipos de Libertad",
+      "bailHelp": "Ayuda con la Fianza",
+      "printChecklist": "Imprimir Lista",
+      "first24Hours": "Guia de las Primeras 24 Horas",
+      "courtLogistics": "Logistica del Tribunal",
+      "friendsFamily": "Guia para Amigos y Familia"
+    },
+    "overview": {
+      "title": "Por Que Importa",
+      "body1": "Estar detenido antes del juicio tiene consecuencias reales incluso antes de cualquier veredicto. Las personas que no pueden salir de la carcel antes del juicio tienen mas probabilidades de perder su trabajo, perder su vivienda y enfrentar interrupciones en la custodia de sus hijos. Esto se llama detencion previa al juicio y afecta a decenas de miles de personas cada ano.",
+      "body2": "Una audiencia de fianza a menudo ocurre dentro de las 24 a 48 horas del arresto. Los jueces consideran varios factores al decidir si liberar a alguien y bajo que condiciones. Tener informacion organizada puede marcar una diferencia en como se presentan esos factores.",
+      "attorneyNote": "Un abogado o defensor publico puede hacer argumentos en la audiencia de fianza. Si hay uno disponible, debe liderarlo. Esta guia le ayuda a apoyar ese proceso con informacion organizada."
+    },
+    "whatJudgesConsider": {
+      "title": "Que Consideran los Jueces",
+      "factors": {
+        "communityTies": {
+          "title": "Lazos con la Comunidad",
+          "body": "Cuanto tiempo ha vivido la persona en el area. Familiares, hijos y una direccion estable aqui indican que la persona tiene razones para quedarse y para regresar al tribunal."
+        },
+        "employment": {
+          "title": "Empleo",
+          "body": "Si la persona tiene trabajo, cuanto tiempo lo ha tenido y si se espera que regrese. Los tribunales suelen ver el empleo estable como una senal de estabilidad y lazos con la comunidad."
+        },
+        "housing": {
+          "title": "Estabilidad de Vivienda",
+          "body": "Una direccion estable y establecida en la comunidad. Ser propietario de una casa o tener un contrato de arrendamiento a largo plazo se valora positivamente."
+        },
+        "supportNetwork": {
+          "title": "Red de Apoyo",
+          "body": "Familiares, amigos, empleadores o miembros de la comunidad dispuestos a aparecer en la audiencia o dar fe de la persona. Su presencia en la sala del tribunal a menudo tiene peso."
+        },
+        "courtAppearances": {
+          "title": "Comparecencias Anteriores",
+          "body": "Si la persona ha faltado a fechas del tribunal en el pasado. Un historial de comparecencias limpio es uno de los factores mas importantes en la decision de un juez."
+        },
+        "chargesNature": {
+          "title": "Naturaleza de los Cargos",
+          "body": "El tipo y la gravedad de los cargos es parte de la evaluacion del juez. Esto es algo que un abogado aborda. Los factores anteriores son donde la preparacion del acusado y la familia puede ayudar mas."
+        }
+      }
+    },
+    "documentation": {
+      "title": "Que Recopilar",
+      "intro": "La siguiente lista cubre la informacion que los tribunales suelen revisar. Recopilar la mayor cantidad posible antes de la audiencia ayuda a un abogado a presentar el caso mas solido para la liberacion.",
+      "employment": {
+        "title": "Empleo",
+        "items": [
+          "Nombre del empleador y numero de telefono principal",
+          "Nombre del supervisor y numero de contacto directo",
+          "Titulo del puesto y fecha de inicio (cuanto tiempo empleado)",
+          "Si el empleador puede confirmar el empleo por telefono si se le llama",
+          "Una carta del empleador (vea las plantillas abajo)"
+        ]
+      },
+      "housing": {
+        "title": "Vivienda",
+        "items": [
+          "Direccion actual y cuanto tiempo ha vivido ahi",
+          "Contrato de arrendamiento, estado de cuenta hipotecario o factura de servicios que muestre la direccion",
+          "Nombre del propietario y numero de telefono",
+          "Nombres de familiares que viven en la misma direccion"
+        ]
+      },
+      "communityTies": {
+        "title": "Lazos con la Comunidad",
+        "items": [
+          "Cuanto tiempo ha vivido la persona en esta ciudad o condado",
+          "Nombres y relaciones de familiares inmediatos en el area",
+          "Nombres, edades y escuelas de los hijos (si aplica)",
+          "Organizaciones comunitarias, comunidad religiosa o actividades regulares en el area"
+        ]
+      },
+      "supportNetwork": {
+        "title": "Red de Apoyo",
+        "items": [
+          "Nombres de personas que pueden estar presentes en la audiencia de fianza (la presencia importa)",
+          "Nombres de personas dispuestas a escribir una referencia de caracter",
+          "Cualquier persona dispuesta a actuar como cosignatario o garante si se establece una fianza"
+        ]
+      }
+    },
+    "templates": {
+      "title": "Plantillas de Cartas",
+      "personalizeNote": "Estos son puntos de partida. Personalice los detalles. Una carta de alguien que conoce bien a la persona, escrita en sus propias palabras, es mas efectiva que una plantilla generica.",
+      "copyButton": "Copiar",
+      "copied": "Copiado",
+      "printButton": "Imprimir",
+      "printNote": "Este es un punto de partida. Personalice los detalles antes de presentarlo al tribunal.",
+      "employer": {
+        "label": "Carta de Apoyo del Empleador",
+        "body": "[Fecha]\n\nPara: El Tribunal\nRe: [Nombre Completo del Empleado]\n\nEscribo para confirmar que [Nombre Completo del Empleado] ha estado empleado en [Nombre de la Empresa] desde [Fecha de Inicio] como [Titulo del Puesto]. [El/Ella/Elle] trabaja [tiempo completo / medio tiempo] y se espera que regrese.\n\n[El/Ella/Elle] ha sido un miembro confiable de nuestro equipo. Estamos preparados para continuar su empleo y apoyar su regreso al trabajo.\n\nNo dude en contactarme al numero de abajo si tiene alguna pregunta.\n\nAtentamente,\n[Su Nombre]\n[Titulo]\n[Nombre de la Empresa]\n[Numero de Telefono]\n[Correo Electronico]"
+      },
+      "character": {
+        "label": "Carta de Referencia de Caracter",
+        "body": "[Fecha]\n\nPara: El Tribunal\nRe: [Nombre Completo del Acusado]\n\nMi nombre es [Su Nombre]. He conocido a [Nombre Completo] por [numero de anos] como [relacion: vecino, companero de congregacion, amigo de la familia, etc.].\n\n[Nombre Completo] ha vivido en esta comunidad por [X anos]. [El/Ella/Elle] [describa lazos: tiene hijos en la escuela X / ha sido parte de la organizacion X / ha sido una parte estable de este vecindario].\n\nCreo que [el/ella/elle] se presentara a todas las fechas del tribunal programadas. [El/Ella/Elle] tiene familia y responsabilidades aqui que importan profundamente.\n\nSe me puede contactar al [numero de telefono] si el tribunal tiene alguna pregunta.\n\nRespetuosamente,\n[Su Nombre]\n[Direccion]\n[Numero de Telefono]"
+      },
+      "family": {
+        "label": "Declaracion de Apoyo Familiar (para que un familiar presente)",
+        "body": "[Fecha]\n\nPara: El Tribunal\nRe: [Nombre Completo del Acusado]\n\nMi nombre es [Su Nombre]. Soy el/la [relacion: conyuge, padre/madre, hermano/hermana, pareja] de [Nombre Completo].\n\n[Nombre Completo] ha vivido en esta area por [X anos] y vive con [yo / nuestra familia] en [direccion]. [El/Ella/Elle] es responsable de [describa responsabilidades familiares: cuidar a nuestros hijos / apoyar el hogar].\n\nNuestra familia se asegurara de que [el/ella/elle] este en cada fecha del tribunal. Estoy presente en el tribunal hoy y estoy disponible para responder cualquier pregunta.\n\nRespetuosamente,\n[Su Nombre]\n[Relacion con el Acusado]\n[Direccion]\n[Numero de Telefono]"
+      }
+    },
+    "releaseTypes": {
+      "title": "Tipos de Libertad",
+      "types": {
+        "ror": {
+          "title": "Liberacion Bajo Reconocimiento Propio (ROR)",
+          "body": "La persona es liberada sin pagar ningun dinero. Firma una promesa de comparecer en todas las fechas del tribunal. Los jueces otorgan ROR cuando estan satisfechos de que la persona tiene fuertes lazos con la comunidad y un historial de comparecencias."
+        },
+        "unsecured": {
+          "title": "Fianza No Garantizada",
+          "body": "No se paga dinero por adelantado. Si la persona falta a una fecha del tribunal, debe la cantidad total de la fianza. Esto funciona como una promesa firmada respaldada por una obligacion financiera."
+        },
+        "cash": {
+          "title": "Fianza en Efectivo",
+          "body": "Se deposita una cantidad especifica de dinero en el tribunal. El dinero se retiene hasta que termine el caso y se devuelve si la persona se presento a todas las audiencias."
+        },
+        "bond": {
+          "title": "Fianza (Fianza de Garantia)",
+          "body": "Un fiador autorizado paga la cantidad total de la fianza al tribunal. La persona paga al fiador una tarifa no reembolsable, generalmente el 10% del monto total de la fianza. El fiador es responsable de asegurarse de que la persona se presente."
+        },
+        "conditional": {
+          "title": "Libertad Condicional",
+          "body": "Liberado con requisitos especificos como presentaciones regulares con un oficial de servicios previos al juicio, monitoreo electronico, restricciones de viaje o evitar el contacto con personas especificas."
+        }
+      }
+    },
+    "bailHelp": {
+      "title": "Ayuda con la Fianza",
+      "resources": {
+        "bailProject": {
+          "name": "The Bail Project",
+          "description": "Opera en 18 o mas ciudades. Proporciona fondos de fianza gratuitos y recordatorios de audiencias. Consulte bailproject.org para encontrar un capitulo local."
+        },
+        "nationalBailFund": {
+          "name": "Red Nacional de Fondos de Fianza",
+          "description": "Directorio de fondos de fianza locales en todo EE.UU. Busque por ubicacion en nationalbailfund.org."
+        },
+        "legalAid": {
+          "name": "Ayuda Legal",
+          "description": "Muchas organizaciones de ayuda legal manejan audiencias de fianza para personas que no pueden pagar un abogado. Use la pagina Encontrar Ayuda Legal para encontrar organizaciones cerca de usted."
+        },
+        "publicDefender": {
+          "name": "Defensor Publico",
+          "description": "Los defensores publicos pueden hacer argumentos de fianza en la acusacion formal. Solicite uno de inmediato si no tiene un abogado."
+        }
+      }
+    },
+    "printChecklist": {
+      "title": "Imprimir la Lista",
+      "intro": "Use este boton para imprimir la lista de documentacion. Lleve la copia impresa a la audiencia de fianza para que no se olvide nada.",
+      "button": "Imprimir Lista",
+      "disclaimer": "Esta lista es solo una herramienta practica. No es asesoramiento legal y no es privilegiada."
+    }
+  },
   "courtDateGuide": {
     "badge": "Guía Práctica",
     "title": "Guía de Fechas de Tribunal: Cómo Seguir y No Perder su Fecha",

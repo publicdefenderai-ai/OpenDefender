@@ -957,6 +957,9 @@ export default function FirstTwentyFourHours() {
                   <Link href="/case-timeline#bail-guide">
                     <Button variant="outline" size="sm">{t('first24Hours.links.howBailWorks')}</Button>
                   </Link>
+                  <Link href="/support/court-logistics/bail-preparation">
+                    <Button variant="outline" size="sm">Bail Preparation Checklist</Button>
+                  </Link>
                 </div>
                 <JurisdictionCallout jurisdiction={jurisdiction} topic="bail" />
               </div>

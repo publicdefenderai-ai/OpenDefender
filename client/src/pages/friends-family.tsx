@@ -223,7 +223,7 @@ export default function FriendsFamily() {
                     <div className="mt-4 rounded-lg border border-border bg-background p-4">
                       <h4 className="font-semibold text-sm mb-2">If the public defender's office isn't available</h4>
                       <p className="text-sm text-muted-foreground mb-3">
-                        When a public defender has a conflict of interest or the office is at capacity, the court appoints a private attorney from a local panel instead. The person still receives free representation — the process is the same.
+                        When a public defender has a conflict of interest or the office is at capacity, the court appoints a private attorney from a local panel instead. The person still receives free representation. The process is the same.
                       </p>
                       <ul className="space-y-1.5 text-sm text-muted-foreground">
                         <li className="flex items-start gap-2">
@@ -232,9 +232,22 @@ export default function FriendsFamily() {
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="flex-shrink-0 mt-0.5">•</span>
-                          Ask the court clerk directly — they administer the panel and know who is on it.
+                          Ask the court clerk directly. They administer the panel and know who is on it.
                         </li>
                       </ul>
+                    </div>
+
+                    <div className="mt-4 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-4">
+                      <h4 className="font-semibold text-sm mb-2">Preparing for the bail hearing</h4>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        The bail hearing often happens within 24 to 48 hours of arrest. Gathering information before it starts can help the attorney argue for release. Employment records, proof of housing, names of family members in the area, and character references all factor in.
+                      </p>
+                      <Link
+                        href="/support/court-logistics/bail-preparation"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-amber-700 dark:text-amber-400 hover:underline"
+                      >
+                        Bail Preparation Checklist and Templates <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
                     </div>
                   </div>
                 </CardContent>

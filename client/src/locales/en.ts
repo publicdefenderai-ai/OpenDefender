@@ -6282,6 +6282,173 @@ export default {
       }
     }
   },
+  "bailPrep": {
+    "breadcrumb": "Bail Preparation",
+    "heroTagline": "Pretrial Release Advocacy Toolkit",
+    "heroTitle": "Prepare for Your Bail Hearing",
+    "heroSubtitle": "The information you organize in the hours before a bail hearing can affect whether someone is released. This guide walks through what to gather and how to present it.",
+    "sidebar": {
+      "onThisPage": "On This Page",
+      "quickLinks": "Quick Links",
+      "overview": "Why This Matters",
+      "whatJudgesConsider": "What Judges Weigh",
+      "documentation": "What to Gather",
+      "templates": "Letter Templates",
+      "releaseTypes": "Types of Release",
+      "bailHelp": "Bail Assistance",
+      "printChecklist": "Print Checklist",
+      "first24Hours": "First 24 Hours Guide",
+      "courtLogistics": "Court Logistics",
+      "friendsFamily": "Friends and Family Guide"
+    },
+    "overview": {
+      "title": "Why This Matters",
+      "body1": "Being held before trial has real consequences even before any verdict. People who cannot get out of jail before trial are more likely to lose their job, lose their housing, and face disruption to child custody. This is called pretrial detention, and it affects tens of thousands of people every year.",
+      "body2": "A bail hearing often happens within 24 to 48 hours of arrest. Judges consider several factors when deciding whether to release someone and on what terms. Having organized information ready can make a difference in how those factors are presented.",
+      "attorneyNote": "An attorney or public defender can make arguments at the bail hearing. If one is available, they should lead. This guide helps you support that process with organized information."
+    },
+    "whatJudgesConsider": {
+      "title": "What Judges Typically Weigh",
+      "factors": {
+        "communityTies": {
+          "title": "Community Ties",
+          "body": "How long the person has lived in the area. Family members, children, and a stable address here all signal that the person has reasons to stay and reasons to return to court."
+        },
+        "employment": {
+          "title": "Employment",
+          "body": "Whether the person has a job, how long they have held it, and whether they are expected back. Courts often see stable employment as a sign of stability and ties to the community."
+        },
+        "housing": {
+          "title": "Housing Stability",
+          "body": "A stable, established address in the community. Owning a home or having a long-term lease is weighed positively."
+        },
+        "supportNetwork": {
+          "title": "Support Network",
+          "body": "Family members, friends, employers, or community members willing to appear at the hearing or vouch for the person. Their presence in the courtroom often carries weight."
+        },
+        "courtAppearances": {
+          "title": "Prior Court Appearances",
+          "body": "Whether the person has missed court dates in the past. A clean appearance record is one of the strongest factors in a judge's decision."
+        },
+        "chargesNature": {
+          "title": "Nature of the Charges",
+          "body": "The type and severity of the charges is part of the judge's assessment. This is something an attorney addresses. The factors above are where preparation by the defendant and family can help most."
+        }
+      }
+    },
+    "documentation": {
+      "title": "What to Gather",
+      "intro": "The following checklist covers the information courts typically review. Gathering as much of this as possible before the hearing helps an attorney present the strongest case for release.",
+      "employment": {
+        "title": "Employment",
+        "items": [
+          "Employer name and main phone number",
+          "Supervisor name and direct contact number",
+          "Job title and start date (how long employed)",
+          "Whether the employer can confirm employment by phone if called",
+          "An employer letter (see templates below)"
+        ]
+      },
+      "housing": {
+        "title": "Housing",
+        "items": [
+          "Current address and how long you have lived there",
+          "Lease, mortgage statement, or utility bill showing the address",
+          "Landlord name and phone number",
+          "Names of family members who live at the same address"
+        ]
+      },
+      "communityTies": {
+        "title": "Community Ties",
+        "items": [
+          "How long the person has lived in this city or county",
+          "Names and relationships of immediate family in the area",
+          "Children's names, ages, and schools (if applicable)",
+          "Any community organizations, religious community, or regular activities in the area"
+        ]
+      },
+      "supportNetwork": {
+        "title": "Support Network",
+        "items": [
+          "Names of people who can be present at the bail hearing (presence matters)",
+          "Names of people willing to write a character reference",
+          "Anyone willing to act as a cosigner or surety if a bond is set"
+        ]
+      }
+    },
+    "templates": {
+      "title": "Letter Templates",
+      "personalizeNote": "These are starting points. Personalize the details. A letter from someone who knows the person well, written in their own words, is more effective than a generic template.",
+      "copyButton": "Copy",
+      "copied": "Copied",
+      "printButton": "Print",
+      "printNote": "This is a starting point. Personalize the details before submitting to the court.",
+      "employer": {
+        "label": "Employer Support Letter",
+        "body": "[Date]\n\nTo: The Court\nRe: [Employee Full Name]\n\nI am writing to confirm that [Employee Full Name] has been employed at [Company Name] since [Start Date] as a [Job Title]. [He/She/They] works [full-time / part-time] and is expected to return.\n\n[He/She/They] has been a reliable member of our team. We are prepared to continue [his/her/their] employment and support [his/her/their] return to work.\n\nPlease feel free to contact me at the number below with any questions.\n\nSincerely,\n[Your Name]\n[Title]\n[Company Name]\n[Phone Number]\n[Email Address]"
+      },
+      "character": {
+        "label": "Character Reference Letter",
+        "body": "[Date]\n\nTo: The Court\nRe: [Full Name of Defendant]\n\nMy name is [Your Name]. I have known [Full Name] for [number of years] as [relationship: neighbor, fellow congregant, family friend, etc.].\n\n[Full Name] has lived in this community for [X years]. [He/She/They] [describe ties: has children at X school / has been part of X organization / has been a stable part of this neighborhood].\n\nI believe [he/she/they] will appear for all scheduled court dates. [He/She/They] has family and responsibilities here that matter deeply.\n\nI can be reached at [phone number] if the court has any questions.\n\nRespectfully,\n[Your Name]\n[Address]\n[Phone Number]"
+      },
+      "family": {
+        "label": "Family Support Statement (for a family member to present)",
+        "body": "[Date]\n\nTo: The Court\nRe: [Full Name of Defendant]\n\nMy name is [Your Name]. I am the [relationship: spouse, parent, sibling, partner] of [Full Name].\n\n[Full Name] has lived in this area for [X years] and lives with [me / our family] at [address]. [He/She/They] is responsible for [describe family responsibilities: caring for our children / supporting the household].\n\nOur family will make sure [he/she/they] is at every court date. I am present in court today and am available to answer any questions.\n\nRespectfully,\n[Your Name]\n[Relationship to Defendant]\n[Address]\n[Phone Number]"
+      }
+    },
+    "releaseTypes": {
+      "title": "Types of Release",
+      "types": {
+        "ror": {
+          "title": "Release on Own Recognizance (ROR)",
+          "body": "The person is released without paying any money. They sign a promise to appear at all court dates. Judges grant ROR when they are satisfied the person has strong community ties and a history of appearing in court."
+        },
+        "unsecured": {
+          "title": "Unsecured Bond",
+          "body": "No money is paid upfront. If the person misses a court date, they owe the full bond amount. This functions like a signed promise backed by a financial obligation."
+        },
+        "cash": {
+          "title": "Cash Bail",
+          "body": "A specific dollar amount is deposited with the court. The money is held until the case ends and is returned if the person appeared at all hearings."
+        },
+        "bond": {
+          "title": "Bail Bond (Surety Bond)",
+          "body": "A licensed bail bondsman pays the full bail amount to the court. The person pays the bondsman a non-refundable fee, usually 10% of the total bail amount. The bondsman is responsible for ensuring the person appears."
+        },
+        "conditional": {
+          "title": "Conditional Release",
+          "body": "Released with specific requirements such as regular check-ins with a pretrial services officer, electronic monitoring, travel restrictions, or avoiding contact with specific people."
+        }
+      }
+    },
+    "bailHelp": {
+      "title": "Bail Assistance",
+      "resources": {
+        "bailProject": {
+          "name": "The Bail Project",
+          "description": "Operates in 18 or more cities. Provides free bail funds and court reminders. Check bailproject.org for a local chapter."
+        },
+        "nationalBailFund": {
+          "name": "National Bail Fund Network",
+          "description": "Directory of local bail funds across the US. Search by location at nationalbailfund.org."
+        },
+        "legalAid": {
+          "name": "Legal Aid",
+          "description": "Many legal aid organizations handle bail hearings for people who cannot afford an attorney. Use the Find Legal Aid page to find organizations near you."
+        },
+        "publicDefender": {
+          "name": "Public Defender",
+          "description": "Public defenders can make bail arguments at arraignment. Request one immediately if you do not have an attorney."
+        }
+      }
+    },
+    "printChecklist": {
+      "title": "Print the Checklist",
+      "intro": "Use this button to print the documentation checklist. Bring the printed copy to the bail hearing so nothing is forgotten.",
+      "button": "Print Checklist",
+      "disclaimer": "This checklist is a practical tool only. It is not legal advice and is not privileged."
+    }
+  },
   "courtDateGuide": {
     "badge": "Practical Guide",
     "title": "Court Date Guide: How to Track and Not Miss Your Court Date",

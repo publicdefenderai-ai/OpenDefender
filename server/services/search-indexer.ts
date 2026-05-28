@@ -1106,6 +1106,16 @@ export function buildSearchIndex(): void {
       aliases: ['court reminder', 'missed court date', 'bench warrant', 'court appearance', 'what to bring to court'],
       url: '/support/court-logistics/court-date-guide'
     },
+    {
+      id: 'bail-preparation',
+      title: 'Pretrial Release Advocacy Toolkit: Prepare for Your Bail Hearing',
+      titleEs: 'Herramientas para la Audiencia de Fianza',
+      titleZh: '保释听证准备工具包',
+      content: 'How to prepare for a bail hearing. What judges consider: community ties, employment, housing, support network. Documentation checklist. Letter templates: employer support letter, character reference, family support statement. Types of release: ROR, cash bail, bail bond, conditional release. Bail fund resources including The Bail Project and National Bail Fund Network.',
+      tags: ['bail', 'pretrial', 'bail hearing', 'release', 'ROR', 'bail bond', 'pretrial detention', 'arraignment', 'bail preparation'],
+      aliases: ['bail hearing', 'get out of jail', 'pretrial release', 'release on recognizance', 'reduce bail', 'bail help'],
+      url: '/support/court-logistics/bail-preparation'
+    },
   ];
 
   // Support, resource, and logistics pages get 'legal_resource' type
@@ -1116,7 +1126,7 @@ export function buildSearchIndex(): void {
     'support-family-care', 'support-reputation', 'support-personal-health',
     'resources', 'friends-family', 'friends-family-toolkit', 'legal-aid', 'recap-extensions',
     'document-library', 'document-summarizer', 'attorney-portal', 'attorney-playbooks',
-    'court-locator', 'record-clearance-screener', 'pd-intake-form', 'court-date-guide',
+    'court-locator', 'record-clearance-screener', 'pd-intake-form', 'court-date-guide', 'bail-preparation',
   ]);
 
   for (const page of sitePages) {
