@@ -587,6 +587,87 @@ export default function FriendsFamily() {
         </div>
       </section>
 
+      {/* Long-term support — for families beyond the first 48 hours */}
+      <section className="py-14 bg-background border-t border-border/40">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="flex items-center gap-3 mb-2">
+              <Clock className="h-5 w-5 text-slate-500" />
+              <h2 className="text-xl font-bold text-foreground">If Your Family Member Has Been in Custody for a While</h2>
+            </div>
+            <p className="text-muted-foreground mb-8 max-w-2xl">The first 48 hours pass. The case continues for weeks or months. Here is how to support someone in custody over a longer period and how to plan for what comes next.</p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            <ScrollReveal>
+              <Card>
+                <CardContent className="pt-5">
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Staying in contact</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Jail phone calls are recorded and can be monitored. Do not discuss the case, evidence, or anything that could be used in court.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Mail is typically read by facility staff. Apply the same caution to written letters.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>In-person visitation rules vary by facility. Call the jail to understand scheduling, approved visitor lists, and ID requirements.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Keeping contact consistent matters for the person's mental health and for demonstrating family support to the court.</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.07}>
+              <Card>
+                <CardContent className="pt-5">
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Financial support while in custody</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Most facilities have a commissary account system. You can typically deposit money online, by phone, or by money order. The person can use these funds for phone calls, food items, and hygiene products.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Phone call costs from jail are often high. Services like Securus and ICSolutions are common providers — you can set up a prepaid account to reduce per-call costs.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>If you are managing their finances or property while they are in custody, a power of attorney document prepared with the help of a legal aid organization can authorize you to act on their behalf.</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <Card>
+                <CardContent className="pt-5">
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Supporting their case from the outside</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Stay in contact with their attorney or public defender. They can update you on court dates and what documentation or character references they need.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Gather character references from employers, community members, teachers, or religious leaders. Written letters from people who know the person well can be submitted to the court.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>In drug-related cases, helping them enroll in a treatment program — even from custody — can affect sentencing outcomes. Ask the attorney what programs are available.</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.14}>
+              <Card>
+                <CardContent className="pt-5">
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Planning for release</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>People leaving custody often need ID documents, a place to stay, and a plan for employment immediately on release. Starting this planning early matters.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Some release conditions (probation, reporting, treatment programs) begin on the day of release. Knowing the conditions in advance helps avoid violations.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Our Re-entry Resources page covers ID restoration, housing with a record, and employment rights in detail.</li>
+                  </ul>
+                  <Link href="/support/reentry" className="inline-flex items-center gap-1 text-sm font-medium text-foreground underline underline-offset-2 hover:no-underline mt-3">
+                    Re-entry Resources <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.2}>
+            <div className="mt-6 rounded-xl border border-border bg-muted/20 p-5">
+              <h3 className="text-sm font-semibold text-foreground mb-2">Taking care of yourself</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">Supporting someone through a long legal case is exhausting and stressful. Many families experience anxiety, financial strain, and relationship pressure during this time. The mental health resources on this site are for family members too — not just defendants. Reaching out for support is not a sign of giving up.</p>
+              <Link href="/support/mental-health" className="inline-flex items-center gap-1 text-sm font-medium text-foreground underline underline-offset-2 hover:no-underline mt-3">
+                Mental Health & Treatment Resources <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Bottom toolkit CTA */}
       <section className="py-10 bg-background border-t border-border/60">
         <div className="max-w-5xl mx-auto px-4">

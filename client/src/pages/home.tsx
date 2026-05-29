@@ -215,11 +215,11 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          {/* How-to link */}
+          {/* How-to link — more prominent */}
           <ScrollReveal delay={0.28}>
             <div className="mt-4 text-center">
               <Link href="/how-to">
-                <span className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2 hover:no-underline cursor-pointer">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground border border-border rounded-lg px-4 py-2 hover:bg-muted/60 hover:border-foreground/20 transition-colors cursor-pointer">
                   {t("home.paths.howToLink")}
                 </span>
               </Link>
@@ -425,12 +425,20 @@ export default function Home() {
                     </ol>
                   </CardContent>
                 </Card>
-                <div className="pt-1">
+                <div className="grid grid-cols-2 gap-3 pt-1">
                   <Link href="/case-guidance" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
-                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer">
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
                       <CardContent className="p-3 text-center">
                         <p className="text-xs font-semibold text-foreground">{t("home.urgentHelp.chargedLinkLabel")}</p>
                         <p className="text-xs text-muted-foreground mt-0.5">{t("home.urgentHelp.chargedLinkSub")}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                  <Link href="/support/court-logistics/bail-preparation" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }}>
+                    <Card className="hover:shadow-md hover:border-foreground/30 transition-all cursor-pointer h-full">
+                      <CardContent className="p-3 text-center">
+                        <p className="text-xs font-semibold text-foreground">Bail Preparation Checklist</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">Gather documentation before the bail hearing</p>
                       </CardContent>
                     </Card>
                   </Link>
