@@ -365,7 +365,7 @@ export default {
       "employment": "就业支持",
       "finances": "财务帮助",
       "courtLogistics": "法庭事务",
-      "mentalHealth": "心理健康",
+      "mentalHealth": "心理健康与治疗",
       "process": "刑事流程",
       "rights": "你的权利",
       "courtLocator": "查找法院",
@@ -2053,8 +2053,8 @@ export default {
             "description": "驾照暂停、上班或上庭出行"
           },
           "mentalHealth": {
-            "label": "心理健康",
-            "description": "压力、焦虑、需要心理咨询"
+            "label": "心理健康与治疗",
+            "description": "药物治疗、心理健康咨询和支持"
           },
           "personalHealth": {
             "label": "个人健康",
@@ -4754,7 +4754,7 @@ export default {
       "housing": "住房",
       "finances": "财务",
       "transportation": "交通",
-      "mentalHealth": "心理健康",
+      "mentalHealth": "心理健康与治疗",
       "personalHealth": "个人健康",
       "immigration": "移民身份",
       "reputation": "名誉",

@@ -365,7 +365,7 @@ export default {
       "employment": "Apoyo Laboral",
       "finances": "Ayuda Financiera",
       "courtLogistics": "Logística de la Corte",
-      "mentalHealth": "Salud Mental",
+      "mentalHealth": "Salud Mental y Tratamiento",
       "process": "Proceso Penal",
       "rights": "Sus Derechos",
       "courtLocator": "Encontrar Su Corte",
@@ -2053,8 +2053,8 @@ export default {
             "description": "Suspensión de licencia, llegar al trabajo o corte"
           },
           "mentalHealth": {
-            "label": "Salud Mental",
-            "description": "Estrés, ansiedad, necesidad de consejería"
+            "label": "Salud Mental y Tratamiento",
+            "description": "Tratamiento de adicciones, consejería de salud mental y apoyo"
           },
           "personalHealth": {
             "label": "Salud Personal",
@@ -4754,7 +4754,7 @@ export default {
     "housing": "Vivienda",
     "finances": "Finanzas",
     "transportation": "Transporte",
-    "mentalHealth": "Salud Mental",
+    "mentalHealth": "Salud Mental y Tratamiento",
     "personalHealth": "Salud Personal",
     "immigration": "Estatus Migratorio",
     "reputation": "Reputación",

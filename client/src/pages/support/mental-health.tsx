@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import mentalHealthHero from "@assets/stock_images/mental-health.png";
-import { Heart, Phone, MessageCircle } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Heart, Phone, MessageCircle, ClipboardCheck, Copy, Check, Printer, ExternalLink, AlertCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Link } from "wouter";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -9,6 +13,157 @@ import {
   FAQ,
 } from "@/components/support/resource-page-template";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+
+function TemplateCard({ label, body }: { label: string; body: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    try { await navigator.clipboard.writeText(body); }
+    catch { const t = document.createElement("textarea"); t.value = body; document.body.appendChild(t); t.select(); document.execCommand("copy"); document.body.removeChild(t); }
+    setCopied(true); setTimeout(() => setCopied(false), 2000);
+  };
+  const handlePrint = () => {
+    const w = window.open("", "_blank");
+    if (!w) return;
+    w.document.write(`<!DOCTYPE html><html><head><title>${label}</title><style>body{font-family:Arial,sans-serif;padding:32px;max-width:640px;margin:0 auto;white-space:pre-wrap;font-size:13px;line-height:1.6;}</style></head><body>${body.replace(/\n/g, "<br>")}</body></html>`);
+    w.document.close(); w.print();
+  };
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <div className="flex items-center justify-between gap-2">
+          <CardTitle className="text-sm font-semibold text-foreground">{label}</CardTitle>
+          <div className="flex gap-2 flex-shrink-0">
+            <Button variant="outline" size="sm" className="h-7 text-xs gap-1" onClick={handleCopy}>
+              {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
+              {copied ? "Copied!" : "Copy"}
+            </Button>
+            <Button variant="outline" size="sm" className="h-7 text-xs gap-1" onClick={handlePrint}>
+              <Printer className="h-3 w-3" /> Print
+            </Button>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <pre className="whitespace-pre-wrap text-sm text-muted-foreground font-sans leading-relaxed">{body}</pre>
+      </CardContent>
+    </Card>
+  );
+}
+
+function TreatmentConnectionSection() {
+  const { t } = useTranslation();
+  const ns = "support.mentalHealth.treatmentConnection";
+  const checklistItems = t(`${ns}.checklistItems`, { returnObjects: true }) as string[];
+  const angerQuestions = t(`${ns}.angerQuestions`, { returnObjects: true }) as string[];
+
+  return (
+    <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="treatment-connection">
+      <div className="max-w-4xl mx-auto px-4">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-2">
+            <ClipboardCheck className="h-5 w-5 text-teal-600" />
+            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+          </div>
+          <p className="text-muted-foreground mb-6 max-w-3xl">{t(`${ns}.sectionSubtitle`)}</p>
+        </ScrollReveal>
+
+        {/* Why this matters */}
+        <ScrollReveal>
+          <Alert className="border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-950/20 mb-6">
+            <AlertCircle className="h-4 w-4 text-teal-600" />
+            <AlertDescription className="text-teal-800 dark:text-teal-200">
+              <strong className="block mb-1">{t(`${ns}.whyTitle`)}</strong>
+              {t(`${ns}.whyBody`)}
+            </AlertDescription>
+          </Alert>
+        </ScrollReveal>
+
+        {/* Checklist */}
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.checklistTitle`)}</h3>
+              <ul className="space-y-2">
+                {checklistItems.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="flex-shrink-0 w-4 h-4 border border-teal-400 rounded-sm mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        {/* Finding programs */}
+        <ScrollReveal>
+          <div className="mb-6">
+            <h3 className="text-base font-semibold text-foreground mb-4">{t(`${ns}.findTitle`)}</h3>
+            <div className="space-y-3">
+              <Card>
+                <CardContent className="pt-4">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-semibold text-foreground mb-1">SAMHSA Treatment Locator — findtreatment.gov</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.findSamhsa`)}</p>
+                      <p className="text-xs text-muted-foreground italic mt-1">{t(`${ns}.findSamhsaNote`)}</p>
+                    </div>
+                    <a href="https://findtreatment.gov" target="_blank" rel="noopener noreferrer" className="flex-shrink-0 text-teal-600 hover:text-teal-500 mt-0.5">
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+              {[
+                { body: t(`${ns}.find211`) },
+                { body: t(`${ns}.findAttorney`) },
+                { body: t(`${ns}.findCourt`) },
+              ].map(({ body }, i) => (
+                <Card key={i}>
+                  <CardContent className="pt-4 pb-4">
+                    <p className="text-sm text-muted-foreground">{body}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Anger management */}
+        <ScrollReveal>
+          <Card className="mb-6">
+            <CardContent className="pt-5">
+              <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.angerTitle`)}</h3>
+              <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.angerBody`)}</p>
+              <p className="text-xs font-semibold text-foreground mb-1.5">Questions to ask any anger management program:</p>
+              <ul className="space-y-1">
+                {angerQuestions.map((q, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="text-muted-foreground/50 flex-shrink-0">•</span>{q}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
+        {/* Templates */}
+        <ScrollReveal>
+          <h3 className="text-base font-semibold text-foreground mb-4">{t(`${ns}.scriptTitle`)}</h3>
+          <div className="space-y-4">
+            <Card>
+              <CardContent className="pt-4">
+                <p className="text-sm text-muted-foreground leading-relaxed italic">"{t(`${ns}.scriptBody`)}"</p>
+              </CardContent>
+            </Card>
+            <TemplateCard label={t(`${ns}.letterLabel`)} body={t(`${ns}.letterBody`)} />
+            <TemplateCard label={t(`${ns}.attorneyLabel`)} body={t(`${ns}.attorneyBody`)} />
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
 
 function CrisisSection() {
   const { t } = useTranslation();
@@ -198,7 +353,7 @@ export default function MentalHealthSupport() {
       externalResources={externalResources}
       faqs={faqs}
       tips={tips}
-      customSections={<CrisisSection />}
+      customSections={<><TreatmentConnectionSection /><CrisisSection /></>}
       relatedLinks={[
         { label: t('support.relatedLinks.familyFriends'), href: "/friends-family" },
         { label: t('support.relatedLinks.finances'), href: "/support/finances" },

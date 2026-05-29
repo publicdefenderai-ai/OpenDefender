@@ -369,7 +369,7 @@ export default {
       "employment": "Employment Support",
       "finances": "Financial Help",
       "courtLogistics": "Court Logistics",
-      "mentalHealth": "Mental Health",
+      "mentalHealth": "Mental Health & Treatment",
       "process": "Criminal Process",
       "rights": "Your Rights",
       "courtLocator": "Find Your Court",
@@ -844,7 +844,7 @@ export default {
       }
     },
     "mentalHealth": {
-      "overview": "Facing legal challenges is stressful and can affect your mental health. It's normal to feel anxious, overwhelmed, or depressed. Taking care of your mental health isn't a luxury — it's essential for getting through this difficult time.",
+      "overview": "Facing legal charges is stressful and affects mental health in real ways. This page covers crisis resources, counseling, and substance use treatment. It also includes guidance on connecting to drug treatment or other programs before sentencing, which courts often consider when deciding outcomes.",
       "crisis": {
         "title": "If You're in Crisis",
         "description": "If you're having thoughts of suicide or self-harm, or are in emotional distress, help is available 24/7:",
@@ -1040,6 +1040,44 @@ export default {
           "title": "Fill prescriptions before court dates",
           "body": "Do not let prescriptions lapse before a court date where incarceration is possible. Ask for a 90-day supply if your insurance allows. If cost is a concern, use GoodRx or ask your doctor for samples."
         }
+      },
+      "treatmentConnection": {
+        "sectionTitle": "Connecting to Treatment Before Your Court Date",
+        "sectionSubtitle": "Enrolling in a relevant program before sentencing can affect how a judge views your case. Courts often look favorably on defendants who take steps toward treatment or stabilization on their own. This section helps you find a program, get enrolled, and document it for your attorney.",
+        "whyTitle": "Why this matters",
+        "whyBody": "In drug cases and some other charge types, judges and prosecutors regularly consider whether a defendant has already enrolled in treatment when deciding between incarceration and alternatives. A letter from a program confirming your enrollment date is something your attorney can present at any hearing. Even being on a waitlist and documenting that you applied carries weight.",
+        "checklistTitle": "Before your next court date",
+        "checklistItems": [
+          "Contact at least one relevant program (drug treatment, mental health counseling, or anger management)",
+          "Ask if they accept court-involved participants",
+          "Get a letter on their letterhead confirming your enrollment or application date",
+          "Give that letter to your attorney as soon as possible",
+          "If a program has a waitlist, ask for a letter confirming your place on the waitlist. Courts recognize that you applied even if you have not started yet."
+        ],
+        "findTitle": "Finding programs",
+        "findSamhsa": "SAMHSA's treatment locator (findtreatment.gov) is the most complete national database of licensed drug treatment and mental health facilities. Enter your ZIP code to find programs near you, filter by payment type (Medicaid, sliding scale, free), and see what services each facility offers.",
+        "findSamhsaNote": "Availability and wait times change frequently. Call to confirm before counting on a specific program.",
+        "find211": "211 (call or text) connects you to local treatment resources and can often find programs with current openings faster than a web search.",
+        "findAttorney": "Ask your attorney or public defender if they have relationships with local programs. Many defense attorneys know which programs judges in your county view favorably.",
+        "findCourt": "If you have court-mandated treatment as a condition of bail or diversion, confirm with your attorney which providers are court-approved before enrolling.",
+        "angerTitle": "Anger management programs",
+        "angerBody": "There is no national database of anger management providers. Court-approved programs vary by county and sometimes by judge. Contact the court clerk or your attorney to ask if your county has a list of approved providers. Before enrolling in any program, confirm it is court-acceptable. Completing a non-approved program will not satisfy a court requirement.",
+        "angerQuestions": [
+          "Do you provide a letter of completion formatted for court submission?",
+          "Are you recognized or approved by courts in this county?",
+          "How many sessions does the program require, and what is the schedule?"
+        ],
+        "scriptTitle": "What to say when you call a program",
+        "scriptBody": "Hello, my name is [your name]. I am currently involved in a legal matter and I am looking to enroll in [drug treatment / mental health counseling / anger management]. I have a few questions: Do you accept court-involved participants? Do you accept [Medicaid / sliding scale fees / self-pay]? If I enroll, can you provide a letter on your letterhead confirming my enrollment date and program name for my attorney?",
+        "letterTitle": "Enrollment documentation request",
+        "letterLabel": "Letter requesting enrollment confirmation",
+        "letterBody": "[Date]\n\nTo: [Program Name]\nRe: Enrollment Confirmation for Legal Proceeding\n\nI am currently enrolled in [or: applying to] your [program name] program. I am involved in a legal proceeding and my attorney has requested written confirmation of my enrollment.\n\nPlease provide a letter on your organization's letterhead that includes:\n- My full name\n- The date my enrollment began (or my application date)\n- The name and description of the program\n- Expected completion date, if applicable\n\nPlease address the letter to my attorney or To Whom It May Concern.\n\nThank you,\n[Your Name]\n[Your Phone Number]",
+        "attorneyTitle": "Letting your attorney know",
+        "attorneyLabel": "Message to your attorney",
+        "attorneyBody": "Hello [Attorney Name], I wanted to let you know that I have [enrolled in / applied to] [Program Name], a [drug treatment / mental health / anger management] program. I started on [date] / I am on the waitlist as of [date]. I am getting a letter from them confirming this to share with you. Please let me know if there is a specific format you need or other programs you would recommend.",
+        "copyButton": "Copy to Clipboard",
+        "copied": "Copied!",
+        "printButton": "Print"
       }
     },
     "transportation": {
@@ -2057,8 +2095,8 @@ export default {
             "description": "License suspension, getting to work or court"
           },
           "mentalHealth": {
-            "label": "Mental Health",
-            "description": "Stress, anxiety, need for counseling"
+            "label": "Mental Health & Treatment",
+            "description": "Drug treatment, mental health counseling, and stress support"
           },
           "personalHealth": {
             "label": "Personal Health",
@@ -4772,7 +4810,7 @@ export default {
     "housing": "Housing",
     "finances": "Finances",
     "transportation": "Transportation",
-    "mentalHealth": "Mental Health",
+    "mentalHealth": "Mental Health & Treatment",
     "personalHealth": "Personal Health",
     "immigration": "Immigration Status",
     "reputation": "Reputation",
@@ -5855,8 +5893,8 @@ export default {
           "description": "What to expect, what to bring, and how to prepare for court."
         },
         "mentalHealth": {
-          "title": "Mental Health Support",
-          "description": "Crisis hotlines, counseling resources, and stress management."
+          "title": "Mental Health & Treatment",
+          "description": "Drug treatment, mental health counseling, crisis resources, and stress support."
         },
         "transportation": {
           "title": "Transportation Help",
