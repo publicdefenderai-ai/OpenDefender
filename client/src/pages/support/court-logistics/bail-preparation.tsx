@@ -232,6 +232,55 @@ export default function BailPreparation() {
   const { t } = useTranslation();
   const [activeId, setActiveId] = useState<SectionId | null>("overview");
 
+  const handlePrintChecklist = () => {
+    const subsections = [
+      { key: "employment",     label: t("bailPrep.documentation.employment.title") },
+      { key: "housing",        label: t("bailPrep.documentation.housing.title") },
+      { key: "communityTies",  label: t("bailPrep.documentation.communityTies.title") },
+      { key: "supportNetwork", label: t("bailPrep.documentation.supportNetwork.title") },
+    ];
+
+    const sectionsHtml = subsections.map(({ key, label }) => {
+      const items = t(`bailPrep.documentation.${key}.items`, { returnObjects: true }) as string[];
+      const itemsHtml = items.map(item =>
+        `<li style="display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;">
+           <span style="flex-shrink:0;width:14px;height:14px;border:1px solid #666;border-radius:3px;margin-top:2px;"></span>
+           <span style="font-size:13px;line-height:1.5;">${item}</span>
+         </li>`
+      ).join('');
+      return `<div style="margin-bottom:24px;">
+        <h3 style="font-size:15px;font-weight:600;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #ddd;">${label}</h3>
+        <ul style="list-style:none;padding:0;margin:0;">${itemsHtml}</ul>
+      </div>`;
+    }).join('');
+
+    const disclaimer = t("bailPrep.printChecklist.disclaimer");
+    const printWindow = window.open("", "_blank");
+    if (!printWindow) return;
+    printWindow.document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bail Preparation Checklist</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 32px; max-width: 680px; margin: 0 auto; color: #111; }
+    h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .subtitle { font-size: 13px; color: #555; margin-bottom: 28px; }
+    .footer { font-size: 11px; color: #777; font-style: italic; margin-top: 28px; border-top: 1px solid #ddd; padding-top: 10px; }
+    @media print { body { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <h1>Bail Preparation Checklist</h1>
+  <p class="subtitle">opendefender.org/support/court-logistics/bail-preparation</p>
+  ${sectionsHtml}
+  <p class="footer">${disclaimer}</p>
+</body>
+</html>`);
+    printWindow.document.close();
+    printWindow.print();
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const ids = TOP_SECTIONS.map((s) => s.id);
@@ -549,7 +598,7 @@ export default function BailPreparation() {
                   <Button
                     variant="outline"
                     className="gap-2"
-                    onClick={() => window.print()}
+                    onClick={handlePrintChecklist}
                   >
                     <Printer className="h-4 w-4" />
                     {t("bailPrep.printChecklist.button")}
