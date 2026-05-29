@@ -964,7 +964,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       {/* Urgent Takeaways — attorney notice (hardcoded) + AI critical alerts combined */}
       {(() => {
         const attorneyNotice = !guidance.caseData.hasAttorney
-          ? "You indicated you do not have an attorney. At your next court appearance, tell the judge you cannot afford an attorney and ask the court to appoint a public defender. You have the right to one at no cost."
+          ? "If you cannot afford an attorney, ask the court to appoint you one at your next court appearance."
           : null;
         const allAlerts = [
           ...(attorneyNotice ? [attorneyNotice] : []),

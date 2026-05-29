@@ -832,7 +832,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
           </div>
 
           <div>
-            <Label htmlFor="hasAttorney">Do you currently have an attorney or public defender?</Label>
+            <Label htmlFor="hasAttorney">Do you currently have a lawyer?</Label>
             <Select
               value={formData.hasAttorney === true ? "yes" : formData.hasAttorney === false ? "no" : ""}
               onValueChange={(value) => updateFormData("hasAttorney", value === "yes")}
