@@ -596,6 +596,32 @@ export default function ImmigrationGuidance() {
                 </Card>
               </Link>
             </ScrollReveal>
+
+            {/* After Deportation — prominently surfaced */}
+            <ScrollReveal delay={0.35}>
+              <div className="mt-6 pt-6 border-t border-border/40">
+                <Link href="/immigration-guidance/after-deportation">
+                  <Card className="h-full hover:shadow-lg hover:border-slate-500/50 transition-all duration-200 cursor-pointer group border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/20">
+                    <CardContent className="pt-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-500/20 via-slate-500/10 to-transparent flex items-center justify-center ring-1 ring-slate-500/20 flex-shrink-0">
+                          <Users className="h-6 w-6 text-slate-600 dark:text-slate-400" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-semibold text-lg group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors">
+                            {t('header.dropdown.immigration.afterDeportation')}
+                          </h3>
+                          <p className="text-sm text-muted-foreground mt-1">
+                            {t('header.dropdown.immigration.afterDeportationDesc')}
+                          </p>
+                        </div>
+                        <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-slate-600 transition-colors flex-shrink-0" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

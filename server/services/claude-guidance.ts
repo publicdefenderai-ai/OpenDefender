@@ -383,6 +383,9 @@ function buildUserPrompt(caseDetails: CaseDetails): string {
     sanitizeInput(caseDetails.jurisdiction, 100)
   );
 
+  // Detect drug-related charges to surface treatment enrollment guidance
+  const isDrugCase = !chargesUnknown && /drug|narcotic|controlled.?substance|marijuana|cannabis|cocaine|methamphetamine|heroin|fentanyl|opioid|possession.{0,20}substance/i.test(chargesText);
+
   let prompt = `Provide general legal information for someone in this situation. Do not treat this as a case analysis — treat it as orientation for a person at this charge type, jurisdiction, and case stage:
 ${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}${collateralBlock ? `\n${collateralBlock}\n` : ''}
 BASIC CASE INFORMATION:
@@ -440,6 +443,11 @@ BASIC CASE INFORMATION:
     if (urgencyLines.length > 0) {
       prompt += `\n\nCIVIL EMERGENCY URGENCY SIGNALS — these represent active situations happening NOW, not hypothetical concerns. Address each one with specific, time-sensitive guidance. Urgency-level signals are more important than general case stage guidance:\n${urgencyLines.join('\n')}`;
     }
+  }
+
+  // Drug case: prompt treatment enrollment as an immediateAction
+  if (isDrugCase) {
+    prompt += `\n\nDRUG CASE — TREATMENT ENROLLMENT: Enrolling in a substance use treatment program before the next court date is one of the most impactful steps someone facing drug charges can take. Courts regularly consider proactive enrollment when deciding between incarceration and alternatives. Include this as an immediateAction or prominent nextStep: "Enroll in a drug treatment or substance use program before your next court date — courts consider proactive enrollment when deciding outcomes. Get a letter from the program confirming your enrollment date for your attorney. See our [Treatment Connection Guide](/support/mental-health#treatment-connection) for how to find programs, what to ask when you call, and letter templates." Use this exact markdown link in the text.`;
   }
 
   // Collateral consequences and CCRC resource guidance

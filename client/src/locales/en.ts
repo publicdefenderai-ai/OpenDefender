@@ -119,6 +119,9 @@ export default {
       "path5Desc": "Find them, understand what's happening, and learn what you can do right now.",
       "path5Cta": "Family Support Guide",
       "howToLink": "Not sure which path fits? See how the five paths work together →",
+      "pastConvictionLabel": "Not dealing with an active case?",
+      "pastConvictionLink1": "Clear a past record",
+      "pastConvictionLink2": "understand background check rights",
       "searchPlaceholder": "Search rights, court processes, resources..."
     },
     "urgentHelp": {

@@ -115,6 +115,9 @@ export default {
       "path5Desc": "Encuéntrelos, entienda lo que está pasando y aprenda qué puede hacer ahora.",
       "path5Cta": "Guía de Apoyo Familiar",
       "howToLink": "¿No sabe qué camino elegir? Vea cómo funcionan los cinco caminos juntos →",
+      "pastConvictionLabel": "¿No tiene un caso activo?",
+      "pastConvictionLink1": "Limpiar un antecedente pasado",
+      "pastConvictionLink2": "entender los derechos de verificación de antecedentes",
       "searchPlaceholder": "Buscar derechos, procesos judiciales, recursos..."
     },
     "urgentHelp": {

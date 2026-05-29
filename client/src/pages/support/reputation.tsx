@@ -927,7 +927,29 @@ export default function ReputationSupport() {
         { label: t("support.relatedLinks.mentalHealth"), href: "/support/mental-health" },
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
       ]}
-      customSections={<><CleanSlateSection /><FcraRightsSection /><RapSheetSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
+      customSections={<>
+        {/* Mobile section nav — hidden on desktop (sidebar handles that) */}
+        <div className="lg:hidden sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm -mx-4 px-4">
+          <div className="flex gap-2 overflow-x-auto py-2.5 no-scrollbar">
+            {SIDEBAR_SECTIONS.map(({ id, label }) => (
+              <button
+                key={id}
+                onClick={() => {
+                  const el = document.getElementById(id);
+                  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 56, behavior: "smooth" });
+                }}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
+                  activeId === id
+                    ? "border-slate-400 bg-slate-100 dark:bg-slate-800 text-foreground font-semibold"
+                    : "border-border hover:bg-muted hover:border-foreground/20 text-muted-foreground"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <CleanSlateSection /><FcraRightsSection /><RapSheetSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
       sidebar={<ReputationSidebar activeId={activeId} />}
     />
   );

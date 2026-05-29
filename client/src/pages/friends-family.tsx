@@ -249,6 +249,19 @@ export default function FriendsFamily() {
                         Bail Preparation Checklist and Templates <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
+
+                    <div className="mt-4 rounded-lg border border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-950/20 p-4">
+                      <h4 className="font-semibold text-sm mb-2">If this is a drug-related case</h4>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Courts in drug cases often consider whether the defendant has already enrolled in a treatment program when deciding between incarceration and alternatives. Enrolling before the first court appearance can matter. A letter from the program confirming enrollment is something the attorney can present.
+                      </p>
+                      <Link
+                        href="/support/mental-health#treatment-connection"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-teal-700 dark:text-teal-400 hover:underline"
+                      >
+                        Treatment Connection Guide: How to Enroll and Document It <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

@@ -199,6 +199,22 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
+          {/* Past conviction entry point */}
+          <ScrollReveal delay={0.26}>
+            <div className="mt-5 pt-5 border-t border-border/30 text-center">
+              <p className="text-sm text-muted-foreground">
+                {t("home.paths.pastConvictionLabel")}{" "}
+                <Link href="/support/reputation" className="font-medium text-foreground underline underline-offset-2 hover:no-underline">
+                  {t("home.paths.pastConvictionLink1")}
+                </Link>
+                {" "}or{" "}
+                <Link href="/support/reputation#fcra-rights" className="font-medium text-foreground underline underline-offset-2 hover:no-underline">
+                  {t("home.paths.pastConvictionLink2")}
+                </Link>.
+              </p>
+            </div>
+          </ScrollReveal>
+
           {/* How-to link */}
           <ScrollReveal delay={0.28}>
             <div className="mt-4 text-center">
