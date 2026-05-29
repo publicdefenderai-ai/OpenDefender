@@ -28,6 +28,7 @@ export interface ActionItem {
   description: string;
   priority?: "high" | "medium" | "low";
   timeframe?: string;
+  url?: string;
 }
 
 export interface ExternalResource {
@@ -95,41 +96,45 @@ function ActionCard({ item, index, theme }: { item: ActionItem; index: number; t
     low:    { color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400", label: t('support.priority.low') },
   };
 
+  const card = (
+    <Card className={`h-full hover:shadow-md transition-shadow duration-200 ${item.url ? 'cursor-pointer hover:border-primary/30' : ''}`}>
+      <CardContent className="p-5">
+        <div className="flex items-start gap-3">
+          <span className="flex-shrink-0 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground mt-0.5">
+            {index + 1}
+          </span>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-start justify-between gap-2 flex-wrap mb-1.5">
+              <h4 className="font-semibold text-[15px] text-foreground leading-snug">{item.title}</h4>
+              <div className="flex gap-1.5 flex-shrink-0">
+                {item.priority && (
+                  <Badge variant="secondary" className={`text-xs ${priorityConfig[item.priority].color}`}>
+                    {priorityConfig[item.priority].label}
+                  </Badge>
+                )}
+                {item.timeframe && (
+                  <Badge variant="outline" className="text-xs">
+                    {item.timeframe}
+                  </Badge>
+                )}
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.07, duration: 0.35 }}
     >
-      <Card className="h-full hover:shadow-md transition-shadow duration-200">
-        <CardContent className="p-5">
-          <div className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground mt-0.5">
-              {index + 1}
-            </span>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-2 flex-wrap mb-1.5">
-                <h4 className="font-semibold text-[15px] text-foreground leading-snug">{item.title}</h4>
-                <div className="flex gap-1.5 flex-shrink-0">
-                  {item.priority && (
-                    <Badge variant="secondary" className={`text-xs ${priorityConfig[item.priority].color}`}>
-                      {priorityConfig[item.priority].label}
-                    </Badge>
-                  )}
-                  {item.timeframe && (
-                    <Badge variant="outline" className="text-xs">
-                      {item.timeframe}
-                    </Badge>
-                  )}
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      {item.url ? <Link href={item.url}>{card}</Link> : card}
     </motion.div>
   );
 }

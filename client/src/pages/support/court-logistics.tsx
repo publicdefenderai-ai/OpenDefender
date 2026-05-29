@@ -248,6 +248,14 @@ export default function CourtLogisticsSupport() {
 
   const startHereItems: ActionItem[] = [
     {
+      id: "bail-preparation",
+      title: "Prepare for Your Bail Hearing",
+      description: "If a bail hearing is coming up in the next 24 to 48 hours, gather employment records, proof of housing, and contact information for family in the area. Our Bail Preparation Checklist walks through everything to collect and provides letter templates.",
+      priority: "high",
+      timeframe: "Before the hearing",
+      url: "/support/court-logistics/bail-preparation",
+    },
+    {
       id: "find-court",
       title: t('support.courtLogistics.actions.findCourt.title'),
       description: t('support.courtLogistics.actions.findCourt.description'),
