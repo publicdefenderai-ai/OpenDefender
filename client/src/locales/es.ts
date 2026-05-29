@@ -1893,7 +1893,7 @@ export default {
   },
   "legalGuidance": {
     "qaFlow": {
-      "title": "Entienda su Etapa del Caso",
+      "title": "Entienda su Hoja de Ruta del Caso",
       "cancel": "Cancelar",
       "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
       "privacyNotice": "Sus datos están encriptados y se eliminan automáticamente dentro de 24 horas. Sin embargo, los mensajes de IA pueden ser retenidos por nuestro proveedor hasta por 30 días y podrían estar sujetos a procesos legales durante ese tiempo.",

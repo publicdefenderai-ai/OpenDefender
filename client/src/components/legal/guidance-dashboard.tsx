@@ -877,7 +877,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 <CardTitle className="text-xl text-foreground">
                   {guidance.chargeClassifications && guidance.chargeClassifications.length > 0
                     ? `Guidance: ${formatChargeName(guidance.chargeClassifications[0].name)} in ${guidance.caseData.jurisdiction.toUpperCase()}`
-                    : `Case Stage Guidance in ${guidance.caseData.jurisdiction.toUpperCase()}`}
+                    : `Case Roadmap: ${guidance.caseData.jurisdiction.toUpperCase()}`}
                 </CardTitle>
               </div>
               {guidance.generatedAt && (
