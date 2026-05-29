@@ -949,34 +949,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </CardHeader>
       </Card>
 
-      {/* Attorney Alert - Show if no attorney */}
-      {!guidance.caseData.hasAttorney && (
-        <Alert className="border-red-200 bg-red-50 dark:bg-red-900/20">
-          <AlertTriangle className="h-4 w-4 text-red-600" />
-          <AlertDescription className="text-red-800 dark:text-red-200">
-            <div className="font-semibold">
-              Request{' '}
-              {onShowPublicDefender ? (
-                <button
-                  onClick={onShowPublicDefender}
-                  className="underline hover:text-red-900 dark:hover:text-red-100 font-bold"
-                  data-testid="link-public-defender-alert"
-                >
-                  public defender
-                </button>
-              ) : (
-                <button
-                  onClick={() => guardedNavigate('/public-defender')}
-                  className="underline hover:text-red-900 dark:hover:text-red-100 font-bold cursor-pointer"
-                >
-                  public defender
-                </button>
-              )}{' '}
-              immediately if you cannot afford attorney
-            </div>
-          </AlertDescription>
-        </Alert>
-      )}
+      {/* (Attorney notice folded into Urgent Takeaways below) */}
 
       {/* Low-confidence warning banner */}
       {guidance.validation && (
@@ -1051,32 +1024,42 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </Card>
       </div>
 
-      {/* Critical Alerts — consolidated into one box when multiple */}
-      {guidance.criticalAlerts && guidance.criticalAlerts.length > 0 && (
-        <Alert
-          className="border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700"
-          data-testid="section-critical-alerts"
-        >
-          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-          <AlertDescription className="text-amber-800 dark:text-amber-200">
-            {guidance.criticalAlerts.length > 1 && (
-              <p className="font-semibold text-sm mb-2">Urgent Takeaways</p>
-            )}
-            {guidance.criticalAlerts.length === 1 ? (
-              <span className="text-sm">{guidance.criticalAlerts[0]}</span>
-            ) : (
-              <ul className="space-y-1.5 text-sm list-none">
-                {guidance.criticalAlerts.map((alert, index) => (
-                  <li key={index} data-testid={`critical-alert-${index}`} className="flex items-start gap-2">
-                    <span className="mt-0.5 flex-shrink-0">•</span>
-                    <span>{alert}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </AlertDescription>
-        </Alert>
-      )}
+      {/* Urgent Takeaways — attorney notice (hardcoded) + AI critical alerts combined */}
+      {(() => {
+        const attorneyNotice = !guidance.caseData.hasAttorney
+          ? "You indicated you do not have an attorney. At your next court appearance, tell the judge you cannot afford an attorney and ask the court to appoint a public defender. You have the right to one at no cost."
+          : null;
+        const allAlerts = [
+          ...(attorneyNotice ? [attorneyNotice] : []),
+          ...(guidance.criticalAlerts || []),
+        ];
+        if (allAlerts.length === 0) return null;
+        return (
+          <Alert
+            className="border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700"
+            data-testid="section-critical-alerts"
+          >
+            <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+            <AlertDescription className="text-amber-800 dark:text-amber-200">
+              {allAlerts.length > 1 && (
+                <p className="font-semibold text-sm mb-2">Urgent Takeaways</p>
+              )}
+              {allAlerts.length === 1 ? (
+                <span className="text-sm">{allAlerts[0]}</span>
+              ) : (
+                <ul className="space-y-1.5 text-sm list-none">
+                  {allAlerts.map((alert, index) => (
+                    <li key={index} data-testid={`critical-alert-${index}`} className="flex items-start gap-2">
+                      <span className="mt-0.5 flex-shrink-0">•</span>
+                      <span>{renderWithLinks(alert)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </AlertDescription>
+          </Alert>
+        );
+      })()}
 
       {/* Overview Section */}
       {guidance.overview && (
