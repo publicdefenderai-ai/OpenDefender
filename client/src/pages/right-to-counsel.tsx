@@ -35,7 +35,7 @@ const QUICK_LINKS = [
   { href: "/first-24-hours",  title: "First 24 Hours After Arrest" },
   { href: "/search-seizure",  title: "Rights During a Search" },
   { href: "/warrants",        title: "Warrants & Your Rights" },
-  { href: "/case-guidance",   title: "Get Personalized Guidance" },
+  { href: "/case-guidance",   title: "Get Guidance for Your Situation" },
 ];
 
 /* ── Grey area data ────────────────────────────────────────────── */
@@ -748,7 +748,7 @@ export default function RightToCounsel() {
                   { href: "/rights-info",    Icon: Shield,        title: "Your Constitutional Rights" },
                   { href: "/first-24-hours", Icon: Scale,         title: "The First 24 Hours After Arrest" },
                   { href: "/search-seizure", Icon: Gavel,         title: "Rights During a Search" },
-                  { href: "/case-guidance",  Icon: MessageSquare, title: "Get Personalized Guidance" },
+                  { href: "/case-guidance",  Icon: MessageSquare, title: "Get Guidance for Your Situation" },
                 ].map((item) => (
                   <Link key={item.href} href={item.href}>
                     <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">

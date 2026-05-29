@@ -157,7 +157,7 @@ export default {
       "chargedStep4Title": "Don't miss your court date",
       "chargedStep4Body": "Missing a hearing results in an arrest warrant being issued. Set multiple reminders.",
       "chargedLinkLabel": "Get Case Roadmap",
-      "chargedLinkSub": "Personalized guidance for your situation",
+      "chargedLinkSub": "Guidance calibrated to your charge type, state, and case stage",
       "familySectionTitle": "How to help someone who was arrested",
       "familyStep1Title": "Find out where they are",
       "familyStep1Body": "Call the county jail or use an online inmate locator. You'll need their full legal name and date of birth.",
@@ -1897,7 +1897,7 @@ export default {
   },
   "legalGuidance": {
     "qaFlow": {
-      "title": "Get Personalized Guidance",
+      "title": "Understand Your Case Stage",
       "cancel": "Cancel",
       "stepProgress": "Step {{current}} of {{total}}: {{title}}",
       "privacyNotice": "Your session data is encrypted and auto-deleted within 24 hours. AI processing is handled by Anthropic, who may retain session data for up to 30 days for safety and operational purposes.",
@@ -2211,7 +2211,7 @@ export default {
       "title": "What Do You Need?",
       "caseGuidance": {
         "title": "Get Guidance For My Case",
-        "description": "Personalized case support based on your situation"
+        "description": "Guidance calibrated to your charge type, state, and case stage"
       },
       "immigration": {
         "title": "Immigration Enforcement",
@@ -4040,8 +4040,8 @@ export default {
         "cta": "Browse resources"
       },
       "guidance": {
-        "title": "Get Personalized Guidance",
-        "desc": "Once you know the charges, this tool creates a personalized roadmap of what to expect and what your loved one needs to do next.",
+        "title": "Get Guidance for Your Situation",
+        "desc": "Once you know the charges, this tool explains what to expect at each stage and what typically matters for this type of case.",
         "cta": "Get guidance"
       }
     },

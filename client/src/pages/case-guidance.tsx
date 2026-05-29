@@ -578,7 +578,7 @@ export default function CaseGuidance() {
     const stage =
       streamProgress === 0 ? 'Connecting to AI...' :
       streamProgress < 20 ? 'Analyzing your case details...' :
-      streamProgress < 55 ? 'Writing your personalized guidance...' :
+      streamProgress < 55 ? 'Writing your case stage guidance...' :
       streamProgress < 88 ? 'Finalizing recommendations...' :
       streamProgress < 100 ? 'Reviewing for legal accuracy...' :
       'Almost done...';
@@ -595,7 +595,7 @@ export default function CaseGuidance() {
                   <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-xl font-semibold">Generating Your Personalized Guidance</h3>
+                  <h3 className="text-xl font-semibold">Generating Your Case Stage Guidance</h3>
                   <p className="text-sm text-muted-foreground">{stage}</p>
                 </div>
                 <div className="w-full space-y-1">

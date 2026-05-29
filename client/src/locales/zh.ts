@@ -1893,7 +1893,7 @@ export default {
   },
   "legalGuidance": {
     "qaFlow": {
-      "title": "获取个性化指导",
+      "title": "了解您的案件阶段",
       "cancel": "取消",
       "stepProgress": "第{{current}}步，共{{total}}步：{{title}}",
       "privacyNotice": "你的回答不会被保存，会在你关闭会话时删除",

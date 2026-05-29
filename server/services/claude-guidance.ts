@@ -315,17 +315,17 @@ Return a JSON object with these exact fields:
 - immediateActions: Array of {action: string, urgency: 'urgent'|'high'|'medium'|'low'} — describe what is typically important at this case stage and why, NOT as personal directives. Frame as what courts and attorneys generally focus on. Write "Having legal representation before arraignment is typically important because..." NOT "Get a lawyer today." Each item informs the person about what matters; it does not instruct them what to do.
 - nextSteps: Array of what to do after immediate actions
 - deadlines: Array of {event, timeframe, description, priority: 'critical'|'important'|'normal', daysFromNow}
-- rights: Array of specific rights that apply to this situation
+- rights: Array of charge-specific and stage-specific rights that apply to this situation. DO NOT include universal Miranda rights, the right to remain silent, the right to an attorney, or the right against self-incrimination — those are displayed separately as hardcoded content. Focus only on rights specific to this charge type or case stage.
 - resources: Array of {type, description, contact, hours?, website?}
 - warnings: Array of things to be aware of
 - evidenceToGather: Array with exactly ONE item per the FACT-SPECIFIC HARD STOPS rule above
 - courtPreparation: Array of how to prepare for court appearances
-- avoidActions: Array of common legal concerns at this stage — NOT written as prohibitions or directives. Describe factually what can happen and why attorneys commonly raise these concerns. Write "Statements made outside attorney-client privilege are not protected and can be subpoenaed — attorneys commonly advise limiting case discussions for this reason" NOT "Don't talk to your friends about the case." Each item describes a concern and its legal context; it does not instruct behavior.
+- avoidActions: Array of charge-specific and stage-specific concerns at this stage — NOT written as prohibitions or directives. DO NOT include universal cautions (discussing the case with non-attorneys, consenting to searches, missing court dates) — those are displayed separately as hardcoded content. Focus on concerns specific to this charge type or case stage. Each item describes a concern and its legal context, not an instruction.
 - timeline: Array of {stage, description, timeframe, completed: boolean}
 - uncertainties: Array of areas where you are not fully certain. If you are unsure about a jurisdiction-specific deadline, statute, fee amount, or procedure, you MUST add an entry here instead of stating it as fact. Each entry has: {area: string, note: string}. Use an empty array [] if you are confident throughout.
   Example: {"area": "Bail eligibility in this county", "note": "This varies significantly by local court practice — confirm with your attorney or public defender."}
 
-TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system.
+TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system. Frame all guidance as what is typical for this charge type, jurisdiction, and case stage — for example "For someone facing [charge] at [stage] in [state]..." Do NOT use phrases like "based on your specific situation" or "personalized to your case" — the guidance is calibrated to the charge type and stage, not to the individual's personal facts.
 
 OUTPUT SIZE RULES — MUST FOLLOW TO AVOID TRUNCATION:
 - criticalAlerts: 3 items maximum
