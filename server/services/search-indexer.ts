@@ -728,12 +728,12 @@ export function buildSearchIndex(): void {
     },
     {
       id: 'case-guidance',
-      title: 'Case Guidance',
-      titleEs: 'Orientación de Caso',
-      titleZh: '案件指导',
-      content: 'Get guidance for your specific case. Understand charges. Learn about defenses. Prepare for court.',
-      tags: ['case', 'guidance', 'charges', 'defense'],
-      aliases: ['my case', 'case help'],
+      title: 'Case Roadmap',
+      titleEs: 'Hoja de Ruta del Caso',
+      titleZh: '案件路线图',
+      content: 'Get guidance calibrated to your charge type, state, and case stage. Enter your jurisdiction, charges, case stage, and custody status. Understand what typically happens next, what courts look at, your rights at this stage, and what deadlines apply. Includes civil emergency triage for housing, employment, childcare, and immigration concerns.',
+      tags: ['case guidance', 'case roadmap', 'charges', 'arraignment', 'pretrial', 'bail', 'sentencing', 'personalized guidance', 'case stage'],
+      aliases: ['my case', 'case help', 'what happens next', 'understand my charges', 'what to expect at arraignment'],
       url: '/case-guidance'
     },
     {
@@ -898,12 +898,12 @@ export function buildSearchIndex(): void {
     },
     {
       id: 'support-mental-health',
-      title: 'Mental Health Support Resources',
-      titleEs: 'Recursos de Apoyo de Salud Mental',
-      titleZh: '心理健康支持资源',
-      content: 'Mental health resources for people in the criminal justice system. Counseling, crisis hotlines, substance abuse treatment, trauma support, anxiety and stress management.',
-      tags: ['mental health', 'counseling', 'therapy', 'crisis', 'substance abuse', 'anxiety', 'stress'],
-      aliases: ['therapy', 'counseling', 'crisis hotline', 'substance abuse help', 'emotional support'],
+      title: 'Mental Health & Treatment Resources',
+      titleEs: 'Recursos de Salud Mental y Tratamiento',
+      titleZh: '心理健康与治疗资源',
+      content: 'Mental health and drug treatment resources for people in the criminal justice system. Counseling, crisis hotlines, substance use treatment, anger management programs, and trauma support. Includes a treatment connection guide: how to find and enroll in a drug treatment or mental health program before sentencing, which courts consider favorably. Templates for enrollment documentation letters and attorney notification. SAMHSA treatment locator guidance.',
+      tags: ['mental health', 'drug treatment', 'substance abuse', 'counseling', 'therapy', 'crisis', 'anger management', 'treatment before sentencing', 'rehabilitation', 'SAMHSA'],
+      aliases: ['therapy', 'counseling', 'crisis hotline', 'drug treatment program', 'substance abuse help', 'anger management class', 'rehab', 'treatment program', 'enroll in treatment before court', 'show judge treatment'],
       url: '/support/mental-health'
     },
     {
@@ -948,12 +948,12 @@ export function buildSearchIndex(): void {
     },
     {
       id: 'support-reputation',
-      title: 'Reputation and Record Support',
-      titleEs: 'Apoyo para la Reputación y el Registro',
-      titleZh: '声誉和记录支持',
-      content: 'Resources to rebuild reputation after a criminal record. Expungement assistance, record sealing, background check disputes, digital reputation management, and employer reference guidance.',
-      tags: ['reputation', 'record', 'expungement', 'record sealing', 'background check', 'digital reputation'],
-      aliases: ['clear criminal record', 'expunge record', 'seal record', 'background check dispute', 'reputation repair'],
+      title: 'Reputation, Record, and Background Check Support',
+      titleEs: 'Apoyo para la Reputación, Registro y Verificación de Antecedentes',
+      titleZh: '声誉、记录和背景调查支持',
+      content: 'Resources to manage and rebuild reputation after a criminal record. Expungement and record sealing eligibility screener. Clean Slate automatic clearance programs (8 states with active programs). FCRA rights when a background check is run: pre-adverse action notice, 7-year lookback rule, how to dispute errors. Rap sheet error identification: missing dispositions, improperly unsealed records, unrecorded warrant vacaturs. Certificates of relief from collateral consequences. Mugshot removal. Handling conversations with employers and family.',
+      tags: ['reputation', 'record', 'expungement', 'record sealing', 'background check', 'FCRA', 'Clean Slate', 'certificates of relief', 'rap sheet errors', 'background check dispute', 'automatic clearance', 'collateral consequences'],
+      aliases: ['clear criminal record', 'expunge record', 'seal record', 'background check dispute', 'dispute background check error', 'FCRA rights', 'certificate of relief', 'clean slate', 'rap sheet', 'missing disposition', 'mugshot removal', 'employer background check'],
       url: '/support/reputation'
     },
     {
@@ -1058,12 +1058,12 @@ export function buildSearchIndex(): void {
     },
     {
       id: 'legal-aid',
-      title: 'Legal Aid Resources',
-      titleEs: 'Recursos de Ayuda Legal',
-      titleZh: '法律援助资源',
-      content: 'Find free or low-cost legal help. Legal aid organizations provide free civil and criminal legal assistance to people who qualify based on income. Public defender offices handle criminal cases for those who cannot afford an attorney. Law school clinics offer free legal services. Pro bono attorneys volunteer their services. How to apply for legal aid. Income eligibility guidelines. Types of cases legal aid handles.',
-      tags: ['legal aid', 'free lawyer', 'low cost attorney', 'pro bono', 'public defender', 'law clinic', 'income eligibility', 'free legal help'],
-      aliases: ['free attorney', 'free lawyer', 'legal help low income', 'cannot afford lawyer', 'pro bono attorney', 'free legal services', 'legal aid office'],
+      title: 'Find Legal Help: Public Defenders, Legal Aid, and Court-Appointed Attorneys',
+      titleEs: 'Encontrar Ayuda Legal: Defensores Públicos, Ayuda Legal y Abogados Designados',
+      titleZh: '寻找法律帮助：公设辩护人、法律援助和法院指定律师',
+      content: 'Find free or low-cost legal help. Public defender offices handle criminal cases for people who cannot afford an attorney. Legal aid organizations provide free civil and criminal assistance based on income. Court-appointed private attorneys are assigned when the public defender has a conflict or is unavailable — how to find your county assigned counsel program and what to ask the court clerk. NLADA and ABA free legal help resources.',
+      tags: ['legal aid', 'free lawyer', 'low cost attorney', 'pro bono', 'public defender', 'law clinic', 'income eligibility', 'free legal help', 'court appointed attorney', 'assigned counsel'],
+      aliases: ['free attorney', 'free lawyer', 'legal help low income', 'cannot afford lawyer', 'pro bono attorney', 'free legal services', 'legal aid office', 'court appointed lawyer', 'assigned counsel program', 'public defender office'],
       url: '/legal-aid'
     },
     {
@@ -1116,6 +1116,46 @@ export function buildSearchIndex(): void {
       aliases: ['bail hearing', 'get out of jail', 'pretrial release', 'release on recognizance', 'reduce bail', 'bail help'],
       url: '/support/court-logistics/bail-preparation'
     },
+    {
+      id: 'treatment-connection',
+      title: 'Drug Treatment and Mental Health Programs: Connect Before Sentencing',
+      titleEs: 'Programas de Tratamiento y Salud Mental: Cómo Conectarse Antes de la Sentencia',
+      titleZh: '药物治疗和心理健康项目：判决前建立联系',
+      content: 'How to find and enroll in drug treatment, mental health counseling, or anger management programs before your court date. Courts often consider proactive enrollment when deciding outcomes in drug and other cases. Checklist of steps to take before next court date. How to document enrollment for your attorney. SAMHSA treatment locator. Anger management: how to find a court-approved program and verify eligibility. Templates: phone script for calling programs, enrollment confirmation letter request, attorney notification message.',
+      tags: ['drug treatment', 'mental health treatment', 'anger management', 'treatment before sentencing', 'rehabilitation', 'SAMHSA', 'enrollment documentation', 'court approved program', 'proactive treatment'],
+      aliases: ['find drug treatment', 'enroll in treatment', 'drug program before court', 'anger management court', 'mental health program', 'show judge I am in treatment', 'rehabilitation program', 'SAMHSA locator', 'treatment enrollment letter'],
+      url: '/support/mental-health#treatment-connection'
+    },
+    {
+      id: 'fcra-background-check-rights',
+      title: 'Your Rights When a Background Check Is Run (FCRA)',
+      titleEs: 'Sus Derechos Cuando Se Realiza una Verificación de Antecedentes',
+      titleZh: '背景调查时您的权利',
+      content: 'Federal rights under the Fair Credit Reporting Act when an employer runs a background check. Pre-adverse action notice requirement: employer must give you a copy of the report before rejecting you. How to dispute background check errors. 7-year lookback rule for criminal records. How to get a free copy of your background check report. CFPB and EEOC resources.',
+      tags: ['FCRA', 'background check', 'background check rights', 'adverse action', 'background check dispute', 'employer background check', 'criminal record employment'],
+      aliases: ['background check denied job', 'dispute background check', 'background check error', 'employer used background check', 'adverse action notice', 'FCRA rights', 'pre adverse action'],
+      url: '/support/reputation#fcra-rights'
+    },
+    {
+      id: 'certificates-of-relief',
+      title: 'Certificates of Relief from Collateral Consequences',
+      titleEs: 'Certificados de Alivio de Consecuencias Colaterales',
+      titleZh: '附带后果救济证书',
+      content: 'Certificates of relief lift specific legal barriers caused by a conviction without erasing the record. Available in approximately 20 states including New York, Ohio, Illinois, North Carolina, New Jersey, California, Tennessee, Colorado, and Nevada. How to find out if your state has a certificate program, who qualifies, how to apply, and what barriers can be lifted for employment and licensing.',
+      tags: ['certificate of relief', 'collateral consequences', 'conviction consequences', 'employment with record', 'occupational license conviction', 'certificate of good conduct'],
+      aliases: ['certificate of relief', 'certificate of good conduct', 'remove barriers conviction', 'employment after conviction', 'license after conviction', 'collateral consequences relief'],
+      url: '/support/reputation#certificates-of-relief'
+    },
+    {
+      id: 'rap-sheet-errors',
+      title: 'Check Your Criminal Record for Errors',
+      titleEs: 'Revise su Historial Penal en Busca de Errores',
+      titleZh: '检查您的犯罪记录是否有错误',
+      content: 'Research shows more than 60% of criminal records contain significant errors. How to request your FBI Identity History Summary and state criminal history. Three common errors: missing dispositions (arrest without recorded outcome), improperly unsealed records, unrecorded warrant vacaturs. How to submit corrections to the FBI and state repositories. Errors affect bail amounts, plea offers, housing, and employment.',
+      tags: ['rap sheet', 'criminal record errors', 'missing disposition', 'record correction', 'FBI record request', 'state criminal history', 'background check errors'],
+      aliases: ['rap sheet error', 'wrong criminal record', 'fix criminal record', 'missing disposition', 'FBI identity history summary', 'correct criminal record', 'criminal record mistake'],
+      url: '/support/reputation#rap-sheet'
+    },
   ];
 
   // Support, resource, and logistics pages get 'legal_resource' type
@@ -1127,6 +1167,7 @@ export function buildSearchIndex(): void {
     'resources', 'friends-family', 'friends-family-toolkit', 'legal-aid', 'recap-extensions',
     'document-library', 'document-summarizer', 'attorney-portal', 'attorney-playbooks',
     'court-locator', 'record-clearance-screener', 'pd-intake-form', 'court-date-guide', 'bail-preparation',
+    'treatment-connection', 'fcra-background-check-rights', 'certificates-of-relief', 'rap-sheet-errors',
   ]);
 
   for (const page of sitePages) {
