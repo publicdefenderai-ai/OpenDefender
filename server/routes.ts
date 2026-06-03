@@ -709,7 +709,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Get seeding status
-  app.get("/api/statutes/seed-status", async (req, res) => {
+  app.get("/api/statutes/seed-status", searchRateLimiter, async (req, res) => {
     try {
       const status = await statuteSeeder.getSeedingStatus();
       res.json({ success: true, ...status });
@@ -1768,7 +1768,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Cleanup attorney session on page unload (via sendBeacon)
   // sendBeacon sends a POST with cookies but no custom headers,
   // so this is a separate endpoint from the DELETE route.
-  app.post("/api/attorney/session/cleanup", async (req, res) => {
+  app.post("/api/attorney/session/cleanup", writeRateLimiter, async (req, res) => {
     try {
       const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
 
@@ -1789,7 +1789,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Terminate attorney session
-  app.delete("/api/attorney/session", async (req, res) => {
+  app.delete("/api/attorney/session", writeRateLimiter, async (req, res) => {
     try {
       const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
 

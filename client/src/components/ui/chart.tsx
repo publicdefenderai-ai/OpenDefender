@@ -80,8 +80,18 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   // (which never contain ; < > characters). This prevents CSS injection if chart
   // config ever flows from user-controlled data.
   const sanitizeColor = (color: string): string => {
-    if (/^(#[0-9a-fA-F]{3,8}|rgb\(|rgba\(|hsl\(|hsla\(|oklch\(|[a-zA-Z]+$)/.test(color.trim())) {
-      return color;
+    const c = color.trim();
+    if (
+      /^#[0-9a-fA-F]{3,8}$/.test(c) ||
+      /^rgb\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*\)$/.test(c) ||
+      /^rgba\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*[\d.]+\s*\)$/.test(c) ||
+      /^hsl\(\s*[\d.]+\s*,\s*[\d.]+%\s*,\s*[\d.]+%\s*\)$/.test(c) ||
+      /^hsla\(\s*[\d.]+\s*,\s*[\d.]+%\s*,\s*[\d.]+%\s*,\s*[\d.]+\s*\)$/.test(c) ||
+      /^oklch\(\s*[\d.]+%?\s+[\d.]+\s+[\d.]+\s*\)$/.test(c) ||
+      /^var\(--[a-zA-Z0-9-]+\)$/.test(c) ||
+      /^[a-zA-Z]{2,30}$/.test(c)
+    ) {
+      return c;
     }
     return 'transparent';
   };
