@@ -10,8 +10,12 @@ import { opsLog } from "./utils/dev-logger";
 import { initializeCostTracker } from "./services/cost-tracker";
 
 const app = express();
-// Enable trust proxy for rate limiting to work correctly with X-Forwarded-For header
-app.set('trust proxy', true);
+// Trust only the first proxy hop (Replit's load balancer).
+// 'true' would trust all hops, letting clients spoof X-Forwarded-For and bypass
+// per-IP rate limits. '1' reads only the load balancer's addition and ignores
+// any X-Forwarded-For header sent by the client itself. VPN users are unaffected —
+// they appear as their VPN exit node IP regardless of this setting.
+app.set('trust proxy', 1);
 
 // Security headers with Helmet
 // SECURITY: Removed 'unsafe-eval' to prevent XSS attacks via eval()
@@ -67,7 +71,9 @@ app.use((req, res, next) => {
       // Allow multipart/form-data for file upload endpoints
       const fileUploadPaths = [
         '/api/document-summary/summarize',
-        '/api/attorney/document-summary/summarize'
+        '/api/attorney/document-summary/summarize',
+        '/api/document-summary/batch',           // C-3: batch upload also uses multipart
+        '/api/attorney/document-summary/batch',
       ];
       const isFileUpload = fileUploadPaths.some(p => req.path === p);
       

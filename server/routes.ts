@@ -27,7 +27,7 @@ import { generateDocx } from "./services/attorney-docs/docx-generator";
 import { search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
 import { z } from "zod";
 import multer from "multer";
-import { summarizeDocument, validateFile, getSupportedFileTypes, createSummaryBatch, getSummaryBatchStatus, cancelSummaryBatch } from "./services/document-summarizer";
+import { summarizeDocument, validateFile, getSupportedFileTypes, createSummaryBatch, getSummaryBatchStatus, cancelSummaryBatch, redactDocumentPII } from "./services/document-summarizer";
 import { requireCaptcha } from "./middleware/captcha-middleware";
 import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verification";
 import { requireServiceBudget } from "./middleware/budget-gate";
@@ -1136,8 +1136,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         civilUrgency: req.body.civilUrgency,
       });
       
+      // C-1: Strip incidentDescription before storing — raw user narrative may
+      // contain PII (names, addresses, witnesses) that must not persist even in
+      // session memory after guidance generation is complete.
+      const { incidentDescription: _dropped, ...storableData } = validatedData;
       const legalCase = await storage.createLegalCase({
-        ...validatedData,
+        ...storableData,
         guidance,
       });
 
@@ -1230,7 +1234,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'rule-based' };
       }
 
-      const legalCase = await storage.createLegalCase({ ...validatedData, guidance });
+      // C-1: Strip incidentDescription before storing (same fix as non-stream route)
+      const { incidentDescription: _droppedStream, ...storableStreamData } = validatedData;
+      const legalCase = await storage.createLegalCase({ ...storableStreamData, guidance });
       const guidanceWithTimestamp = {
         ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
         generatedAt: new Date().toISOString(),
@@ -2113,6 +2119,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     requireServiceBudget('document-summarizer'),
     aiRateLimiter,
     aiDailyLimiter,
+    requireCaptcha,  // H-4: prevent automated abuse of this AI endpoint
     async (req: Request, res: Response) => {
       try {
         const bodySchema = z.object({
@@ -2139,8 +2146,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
           });
         }
 
+        // H-4: Redact any PII a user may have entered in answer fields before
+        // they reach Claude. The letter generator uses placeholders, but users
+        // sometimes fill in real names/addresses in the context fields.
+        const sanitizedAnswers = Object.fromEntries(
+          Object.entries(parseResult.data.answers).map(([k, v]) => [k, redactDocumentPII(v)])
+        );
+
         const { generateLetter } = await import('./services/letter-generator.js');
-        const result = await generateLetter(parseResult.data);
+        const result = await generateLetter({ ...parseResult.data, answers: sanitizedAnswers });
 
         return res.json({ success: true, ...result });
       } catch (err) {
@@ -2568,6 +2582,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     aiRateLimiter,
     aiDailyLimiter,
     docChatRateLimiter,
+    requireCaptcha,  // H-3: prevent automated abuse of this general-purpose AI text endpoint
     async (req: Request, res: Response) => {
       try {
         const bodySchema = z.object({
@@ -2591,7 +2606,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
           });
         }
 
-        const { question, extractedText, conversationHistory, documentType, language } = parseResult.data;
+        const { question, extractedText: rawExtractedText, conversationHistory, documentType, language } = parseResult.data;
+
+        // H-3: Re-redact client-supplied extractedText before passing to AI.
+        // The client may not have sent back what the server returned — re-redacting
+        // server-side ensures PII cannot reach Claude via a crafted request.
+        const extractedText = redactDocumentPII(rawExtractedText);
 
         const { answerDocumentQuestion } = await import('./services/document-summarizer');
 

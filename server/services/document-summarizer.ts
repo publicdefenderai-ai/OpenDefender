@@ -168,7 +168,7 @@ async function extractText(file: Buffer, mimeType: string): Promise<{ text: stri
  * Basic PII redaction for document text
  * Note: This is a simplified version - the full PII redactor handles more cases
  */
-function redactDocumentPII(text: string): string {
+export function redactDocumentPII(text: string): string {
   let redacted = text;
 
   // SSN patterns
@@ -362,8 +362,8 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
     const inputCost = regularInputCost + cacheWriteCost + cacheReadCost;
     const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
 
-    // Record cost for daily budget tracking
-    recordAICost(inputCost + outputCost, 'document-summarizer');
+    // Record cost for daily budget tracking (awaited — unawaited drops cost on crash)
+    await recordAICost(inputCost + outputCost, 'document-summarizer');
 
     const summary: DocumentSummary = {
       summary: parsed.summary || 'Unable to generate summary',
@@ -518,10 +518,10 @@ If there are no relevant quotable passages, return an empty citations array.`;
     parsed = { answer: textContent.text, citations: [] };
   }
 
-  // Record cost
+  // Record cost (awaited — unawaited drops cost on crash)
   const inputCost = (message.usage.input_tokens / 1_000_000) * 3.0;
   const outputCost = (message.usage.output_tokens / 1_000_000) * 15.0;
-  recordAICost(inputCost + outputCost, 'document-summarizer');
+  await recordAICost(inputCost + outputCost, 'document-summarizer');
 
   opsLog('doc-qa', `Answered: tokens=${message.usage.input_tokens}+${message.usage.output_tokens}`);
 
