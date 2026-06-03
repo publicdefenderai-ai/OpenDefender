@@ -161,6 +161,7 @@ const SERVICE_BUDGET_USD: Record<string, number> = {
   'claude-guidance': parseFloat(process.env.AI_BUDGET_GUIDANCE || '0'),
   'document-summarizer': parseFloat(process.env.AI_BUDGET_SUMMARIZER || '0'),
   'attorney-docs': parseFloat(process.env.AI_BUDGET_ATTORNEY || '0'),
+  'letter-generator': parseFloat(process.env.AI_BUDGET_LETTER || '0'),
 };
 
 // Maximum allowed estimated cost for a single request

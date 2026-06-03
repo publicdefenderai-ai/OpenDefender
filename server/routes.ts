@@ -350,7 +350,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       
       // Limit results
-      const maxResults = Math.min(parseInt(limit as string) || 200, 500);
+      const maxResults = Math.min(parseInt(limit as string, 10) || 200, 500);
       charges = charges.slice(0, maxResults);
       
       // Return simplified charge data for the selector with localized fields
@@ -1460,7 +1460,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const HEALTH_CACHE_TTL_MS = 5 * 60 * 1000;
   let healthCache: { available: boolean; checkedAt: number } | null = null;
 
-  app.get("/api/ai/health", async (req, res) => {
+  app.get("/api/ai/health", searchRateLimiter, async (req, res) => {
     try {
       const hasApiKey = !!process.env.ANTHROPIC_API_KEY;
       if (!hasApiKey) {
@@ -1604,8 +1604,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { startYear, endYear } = req.query;
       const stats = await bjsStatisticsService.getCrimeStatistics(
-        startYear ? parseInt(startYear as string) : undefined,
-        endYear ? parseInt(endYear as string) : undefined
+        startYear ? parseInt(startYear as string, 10) : undefined,
+        endYear ? parseInt(endYear as string, 10) : undefined
       );
       res.json({ success: true, ...stats });
     } catch (error) {
@@ -2116,7 +2116,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    */
   app.post(
     '/api/generate-letter',
-    requireServiceBudget('document-summarizer'),
+    requireServiceBudget('letter-generator'),
     aiRateLimiter,
     aiDailyLimiter,
     requireCaptcha,  // H-4: prevent automated abuse of this AI endpoint

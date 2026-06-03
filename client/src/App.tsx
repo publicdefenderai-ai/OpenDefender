@@ -49,7 +49,6 @@ const Statutes = lazy(() => import("@/pages/statutes"));
 const Chat = lazy(() => import("@/pages/chat"));
 const DocumentLibrary = lazy(() => import("@/pages/document-library"));
 const Resources = lazy(() => import("@/pages/resources"));
-const LegalAid = lazy(() => import("@/pages/legal-aid"));
 const DocumentSummarizerPage = lazy(() => import("@/pages/document-summarizer"));
 const LetterGeneratorPage = lazy(() => import("@/pages/letter-generator"));
 // Attorney tool pages removed from public router — all /attorney/* redirect to /directory
