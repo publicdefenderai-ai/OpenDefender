@@ -138,7 +138,6 @@ export default function Directory() {
       resources: [
         { title: t("howTo.sections.reference.legalGlossary.title"), description: t("howTo.sections.reference.legalGlossary.description"), link: "/legal-glossary" },
         { title: t("howTo.sections.reference.courtLocator.title"), description: t("howTo.sections.reference.courtLocator.description"), link: "/court-locator" },
-        { title: t("howTo.sections.reference.statuteLookup.title"), description: t("howTo.sections.reference.statuteLookup.description"), link: "/statutes" },
         { title: t("howTo.sections.reference.documentLibrary.title"), description: t("howTo.sections.reference.documentLibrary.description"), link: "/document-library" },
       ],
     },
@@ -147,7 +146,7 @@ export default function Directory() {
       title: t("howTo.sections.attorneyTools.title"),
       description: t("howTo.sections.attorneyTools.description"),
       resources: [
-        { title: t("howTo.sections.attorneyTools.attorneyPortal.title"), description: t("howTo.sections.attorneyTools.attorneyPortal.description"), link: "/attorney" },
+        { title: t("howTo.sections.reference.statuteLookup.title"), description: t("howTo.sections.reference.statuteLookup.description"), link: "/statutes" },
         { title: t("howTo.sections.attorneyTools.courtRecords.title"), description: t("howTo.sections.attorneyTools.courtRecords.description"), link: "/court-records" },
       ],
     },
