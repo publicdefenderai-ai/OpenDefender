@@ -168,23 +168,50 @@ async function extractText(file: Buffer, mimeType: string): Promise<{ text: stri
  * Basic PII redaction for document text
  * Note: This is a simplified version - the full PII redactor handles more cases
  */
+/**
+ * Tiered PII redaction for document uploads.
+ *
+ * Strategy:
+ *   Tier 1 (regex — high confidence, redact): SSN, phone, email, credit card,
+ *     street addresses, dates of birth, driver's license numbers.
+ *   Names are intentionally NOT redacted here — they are structural information
+ *   in legal documents that users need preserved in their summary. Instead, the
+ *   summarizer system prompt instructs Claude to refer to parties by role only
+ *   in its output (defendant, plaintiff, judge, etc.), not by name.
+ */
 export function redactDocumentPII(text: string): string {
   let redacted = text;
 
-  // SSN patterns
+  // SSN (xxx-xx-xxxx and variants)
   redacted = redacted.replace(/\b\d{3}[-.]?\d{2}[-.]?\d{4}\b/g, '[SSN REDACTED]');
 
-  // Phone numbers
+  // Phone numbers (US formats)
   redacted = redacted.replace(/\b(\+?1[-.]?)?\(?\d{3}\)?[-.]?\d{3}[-.]?\d{4}\b/g, '[PHONE REDACTED]');
 
   // Email addresses
-  redacted = redacted.replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g, '[EMAIL REDACTED]');
+  redacted = redacted.replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g, '[EMAIL REDACTED]');
 
-  // Credit card numbers
+  // Credit card numbers (13-16 digit groups with optional separators)
   redacted = redacted.replace(/\b(?:\d{4}[-. ]?){3}\d{4}\b/g, '[CARD REDACTED]');
 
-  // Driver's license patterns (varies by state, basic pattern)
+  // Driver's license (1-2 alpha + 6-8 digits — basic cross-state pattern)
   redacted = redacted.replace(/\b[A-Z]{1,2}\d{6,8}\b/gi, '[DL# REDACTED]');
+
+  // Street addresses — number + street name + street type
+  redacted = redacted.replace(
+    /\b\d{1,5}\s+(?:[A-Za-z0-9]+\s){1,4}(?:Street|St|Avenue|Ave|Boulevard|Blvd|Road|Rd|Lane|Ln|Drive|Dr|Court|Ct|Place|Pl|Way|Circle|Cir|Highway|Hwy|Parkway|Pkwy)\b\.?/gi,
+    '[ADDRESS REDACTED]'
+  );
+
+  // ZIP codes following city/state — only when preceded by a 2-letter state code
+  // (avoids false positives on case numbers and statute citations)
+  redacted = redacted.replace(/\b([A-Z]{2})\s+(\d{5}(?:-\d{4})?)\b/g, '$1 [ZIP REDACTED]');
+
+  // Dates of birth — labeled patterns (high precision, avoids redacting court dates)
+  redacted = redacted.replace(
+    /\b(?:Date\s+of\s+Birth|DOB|D\.O\.B\.?)\s*:?\s*\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}\b/gi,
+    '[DOB REDACTED]'
+  );
 
   return redacted;
 }
@@ -221,6 +248,10 @@ CRITICAL REQUIREMENTS:
 4. Be thorough but concise
 5. Never provide legal advice - explain what the document says, not what to do about it
 6. If the document quality is poor or text is unclear, note this
+7. PRIVACY: Refer to all parties by their role only — "the defendant", "the plaintiff",
+   "the petitioner", "the judge", "the officer", "the victim" — not by name. Do not
+   reproduce any personal names, addresses, dates of birth, or identification numbers
+   in your response, even if they appear in the document.
 
 RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
