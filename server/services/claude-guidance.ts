@@ -311,7 +311,7 @@ Rules:
 RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
 - overview: ${overviewNote} following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome
-- criticalAlerts: Array of urgent warnings (3-5 items max)
+- criticalAlerts: Array of urgent warnings — MAXIMUM 2 ITEMS. Only include a criticalAlert when inaction in the next 24-48 hours has a concrete legal consequence (e.g., a missed deadline triggers a bench warrant, a bail condition violation causes re-arrest, a time-limited right is about to expire). General reminders such as "get a lawyer," "don't discuss your case," or "attend court" belong in warnings or avoidActions — NOT here. If nothing in the case rises to that standard, return an empty array [].
 - immediateActions: Array of {action: string, urgency: 'urgent'|'high'|'medium'|'low'} — describe what is typically important at this case stage and why, NOT as personal directives. Frame as what courts and attorneys generally focus on. Write "Having legal representation before arraignment is typically important because..." NOT "Get a lawyer today." Each item informs the person about what matters; it does not instruct them what to do.
 - nextSteps: Array of what to do after immediate actions
 - deadlines: Array of {event, timeframe, description, priority: 'critical'|'important'|'normal', daysFromNow}
@@ -328,7 +328,7 @@ Return a JSON object with these exact fields:
 TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system. Frame all guidance as what is typical for this charge type, jurisdiction, and case stage — for example "For someone facing [charge] at [stage] in [state]..." Do NOT use phrases like "based on your specific situation" or "personalized to your case" — the guidance is calibrated to the charge type and stage, not to the individual's personal facts.
 
 OUTPUT SIZE RULES — MUST FOLLOW TO AVOID TRUNCATION:
-- criticalAlerts: 3 items maximum
+- criticalAlerts: 2 items maximum
 - immediateActions: 4 items maximum
 - nextSteps: 5 items maximum
 - deadlines: 3 items maximum
