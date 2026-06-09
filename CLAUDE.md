@@ -170,18 +170,19 @@ Do not overstate the platform's accuracy coverage in user-facing copy. The home 
 
 ## Accuracy Audits & Privacy Impact Assessments
 
-### Monthly Accuracy Audits
-Automated GitHub Issues are created monthly in the **private audits repo** (`OpenDefender-audits`) to audit content accuracy:
-- Resource URLs (legal aid orgs, courts, government services)
-- Contact information (addresses, phone numbers, hours)
-- Statute citations and content
-- External resource descriptions
+### Monthly Accuracy Audits (Split 3-Month Cycle)
+Automated GitHub Issues are created monthly in the **private audits repo** (`OpenDefender-audits`) to audit content accuracy. Work is split across 3 focus areas, each receiving dedicated attention each month:
 
-**Audit rotation:** 3 months × 3-4 categories per month (Employment/Finances, Housing/Transportation, Mental Health/Childcare/Other).
+**Monthly Rotation (3-month cycle):**
+- **Months 1, 4, 7, 10** (Jan, Apr, Jul, Oct): **URLs & Broken Links** — Verify all resource URLs are live, no 404s, links resolve correctly
+- **Months 2, 5, 8, 11** (Feb, May, Aug, Nov): **Contact Info & Descriptions** — Verify addresses, phone numbers, hours, eligibility requirements, and resource descriptions match live sources
+- **Months 3, 6, 9, 12** (Mar, Jun, Sep, Dec): **Statute Citations** — Verify statute citations, legal content, and references are accurate and current
+
+**This means:** Each category gets audited on its specific focus area **every 3 months**, ensuring thoroughness without overwhelming the auditor.
 
 **Process:**
-1. GitHub Actions creates an issue on the 1st of each month
-2. Assigned auditor verifies URLs and content against live sources
+1. GitHub Actions creates an issue on the 1st of each month with that month's focus
+2. Assigned auditor reviews the relevant category against that month's focus area
 3. Findings are logged in the issue
 4. Any broken/stale resources trigger a PR to fix
 5. Audit issue closes when PRs are merged

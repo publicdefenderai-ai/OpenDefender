@@ -12,22 +12,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Determine audit category
+      - name: Determine audit category and focus
         id: category
         run: |
           month=$(date +%m)
           case $month in
             1|4|7|10)
               echo "category=Employment & Finances" >> $GITHUB_OUTPUT
-              echo "category_slug=employment-finances" >> $GITHUB_OUTPUT
+              echo "focus=URLs & Broken Links" >> $GITHUB_OUTPUT
+              echo "focus_detail=Verify all resource URLs are live and no 404s exist" >> $GITHUB_OUTPUT
               ;;
             2|5|8|11)
               echo "category=Housing & Transportation" >> $GITHUB_OUTPUT
-              echo "category_slug=housing-transportation" >> $GITHUB_OUTPUT
+              echo "focus=Contact Info & Descriptions" >> $GITHUB_OUTPUT
+              echo "focus_detail=Verify contact info (addresses, hours, eligibility) and resource descriptions are current" >> $GITHUB_OUTPUT
               ;;
             3|6|9|12)
               echo "category=Mental Health, Childcare & Other" >> $GITHUB_OUTPUT
-              echo "category_slug=mental-health-childcare-other" >> $GITHUB_OUTPUT
+              echo "focus=Statute Citations" >> $GITHUB_OUTPUT
+              echo "focus_detail=Verify all statute citations and legal content are accurate and current" >> $GITHUB_OUTPUT
               ;;
           esac
 
@@ -35,17 +38,21 @@ jobs:
         uses: actions/github-script@v7
         env:
           AUDIT_CATEGORY: ${{ steps.category.outputs.category }}
+          AUDIT_FOCUS: ${{ steps.category.outputs.focus }}
+          AUDIT_DETAIL: ${{ steps.category.outputs.focus_detail }}
         with:
           github-token: ${{ secrets.AUDITS_REPO_TOKEN }}
           script: |
             const month = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
             const category = process.env.AUDIT_CATEGORY;
+            const focus = process.env.AUDIT_FOCUS;
+            const detail = process.env.AUDIT_DETAIL;
             try {
               const issue = await github.rest.issues.create({
                 owner: 'publicdefenderai-ai',
                 repo: 'OpenDefender-audits',
-                title: `Accuracy Audit — ${category} (${month})`,
-                body: `## Category\n${category}\n\n## Audit Month\n${month}\n\n## Audit Checklist\n- [ ] All resource URLs verified (live + content accurate)\n- [ ] Statute citations verified\n- [ ] Contact info current (addresses, hours, eligibility)\n- [ ] Resource descriptions match live websites\n- [ ] No broken links or 404s\n\n## Findings\n[See issue template: accuracy-audit.md]\n\n| URL / Item | Status | Notes |\n|-----|--------|-------|\n| | ✓ Accurate / ✗ Broken / ? Stale | |\n\n## Issues to Create\n[Link any PRs/issues for fixing findings]`,
+                title: `Accuracy Audit — ${category} | ${focus} (${month})`,
+                body: `## Category\n${category}\n\n## Focus This Month\n${focus}\n\n${detail}\n\n## Audit Month\n${month}\n\n## Checklist\n- [ ] All items in this category checked against this month's focus\n- [ ] Found items are accurate and current\n- [ ] No broken links or dead resources (URLs focus)\n- [ ] Contact info matches live sources (contact info focus)\n- [ ] Citations match source documents (citations focus)\n\n## Findings\n\n| Item | Status | Notes |\n|-----|--------|-------|\n| | ✓ Accurate / ✗ Broken / ? Stale | |\n\n## Issues to Create\n[Link any PRs/issues for fixing findings]`,
                 labels: ['accuracy-audit'],
                 assignees: []
               });
