@@ -36,20 +36,15 @@ jobs:
         with:
           github-token: ${{ secrets.AUDITS_REPO_TOKEN }}
           script: |
+            const prNum = context.payload.pull_request.number;
+            const prTitle = context.payload.pull_request.title;
+            const prBody = context.payload.pull_request.body || 'No description provided';
             try {
               const issue = await github.rest.issues.create({
                 owner: 'publicdefenderai-ai',
                 repo: 'OpenDefender-audits',
-                title: `PIA Required: PR #${{ github.event.pull_request.number }} — ${{ github.event.pull_request.title }}`,
-                body: `## PR Link
-[PR #${{ github.event.pull_request.number }}](https://github.com/publicdefenderai-ai/OpenDefender/pull/${{ github.event.pull_request.number }})
-
-## Feature Description
-${{ github.event.pull_request.body }}
-
----
-
-[Fill in PIA template using the issue template provided in OpenDefender-audits]`,
+                title: `PIA Required: PR #${prNum} — ${prTitle}`,
+                body: `## PR Link\n[PR #${prNum}](https://github.com/publicdefenderai-ai/OpenDefender/pull/${prNum})\n\n## Feature Description\n${prBody}\n\n---\n\n[Fill in PIA template using the issue template provided in OpenDefender-audits]`,
                 labels: ['pia-pending']
               });
               console.log('Created issue:', issue.data.html_url);
