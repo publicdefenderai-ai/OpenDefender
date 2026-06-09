@@ -33,37 +33,19 @@ jobs:
 
       - name: Create accuracy audit issue
         uses: actions/github-script@v7
+        env:
+          AUDIT_CATEGORY: ${{ steps.category.outputs.category }}
         with:
           github-token: ${{ secrets.AUDITS_REPO_TOKEN }}
           script: |
             const month = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
+            const category = process.env.AUDIT_CATEGORY;
             try {
               const issue = await github.rest.issues.create({
                 owner: 'publicdefenderai-ai',
                 repo: 'OpenDefender-audits',
-                title: `Accuracy Audit — ${{ steps.category.outputs.category }} (${month})`,
-                body: `## Category
-${{ steps.category.outputs.category }}
-
-## Audit Month
-${month}
-
-## Audit Checklist
-- [ ] All resource URLs verified (live + content accurate)
-- [ ] Statute citations verified
-- [ ] Contact info current (addresses, hours, eligibility)
-- [ ] Resource descriptions match live websites
-- [ ] No broken links or 404s
-
-## Findings
-[See issue template: accuracy-audit.md]
-
-| URL / Item | Status | Notes |
-|-----|--------|-------|
-| | ✓ Accurate / ✗ Broken / ? Stale | |
-
-## Issues to Create
-[Link any PRs/issues for fixing findings]`,
+                title: `Accuracy Audit — ${category} (${month})`,
+                body: `## Category\n${category}\n\n## Audit Month\n${month}\n\n## Audit Checklist\n- [ ] All resource URLs verified (live + content accurate)\n- [ ] Statute citations verified\n- [ ] Contact info current (addresses, hours, eligibility)\n- [ ] Resource descriptions match live websites\n- [ ] No broken links or 404s\n\n## Findings\n[See issue template: accuracy-audit.md]\n\n| URL / Item | Status | Notes |\n|-----|--------|-------|\n| | ✓ Accurate / ✗ Broken / ? Stale | |\n\n## Issues to Create\n[Link any PRs/issues for fixing findings]`,
                 labels: ['accuracy-audit'],
                 assignees: []
               });
