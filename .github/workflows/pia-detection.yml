@@ -1,0 +1,72 @@
+name: PIA Detection
+
+on:
+  pull_request:
+    paths:
+      - 'server/services/**'
+      - 'server/routes/**'
+      - 'shared/schemas/**'
+      - 'client/src/pages/**'
+  workflow_dispatch:
+
+jobs:
+  detect-pia-required:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if PIA is needed
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          # Check if PR description mentions PIA or privacy
+          if echo "$PR_BODY" | grep -iq "privacy\|pii\|data collection\|third.party\|api"; then
+            echo "pia_needed=true" >> $GITHUB_OUTPUT
+          else
+            echo "pia_needed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create PIA issue in audits repo
+        if: steps.check.outputs.pia_needed == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.AUDITS_REPO_TOKEN }}
+          script: |
+            try {
+              const issue = await github.rest.issues.create({
+                owner: 'publicdefenderai-ai',
+                repo: 'OpenDefender-audits',
+                title: `PIA Required: PR #${{ github.event.pull_request.number }} — ${{ github.event.pull_request.title }}`,
+                body: `## PR Link
+[PR #${{ github.event.pull_request.number }}](https://github.com/publicdefenderai-ai/OpenDefender/pull/${{ github.event.pull_request.number }})
+
+## Feature Description
+${{ github.event.pull_request.body }}
+
+---
+
+[Fill in PIA template using the issue template provided in OpenDefender-audits]`,
+                labels: ['pia-pending']
+              });
+              console.log('Created issue:', issue.data.html_url);
+            } catch (error) {
+              console.error('Error creating issue:', error);
+              throw error;
+            }
+
+      - name: Comment on PR
+        if: steps.check.outputs.pia_needed == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ This PR appears to involve data collection, third-party integrations, or privacy-relevant changes. A **Privacy Impact Assessment (PIA)** is required. A corresponding issue has been created in the private audits repo. Please complete the PIA before this PR can be merged.'
+            })

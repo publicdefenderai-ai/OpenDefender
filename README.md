@@ -207,9 +207,28 @@ The app runs at `http://localhost:5000`.
 
 ---
 
-## Automated Content Review
+## Automated Content Review & Accuracy Audits
 
 A quarterly GitHub Actions workflow (`.github/workflows/quarterly-content-review.yml`) uses Claude to scan user-facing content for accuracy and currency. It runs on January 1, April 1, July 1, and October 1, and can also be triggered manually from the Actions tab.
+
+### Monthly Accuracy Audits
+
+OpenDefender conducts automated monthly accuracy audits to verify:
+- Resource URLs (legal aid orgs, courts, government services)
+- Contact information (addresses, phone numbers, hours, eligibility)
+- Statute citations and content accuracy
+- External resource descriptions and relevance
+
+**Audit Rotation:**
+- **Month 1, 4, 7, 10**: Employment & Finances
+- **Month 2, 5, 8, 11**: Housing & Transportation
+- **Month 3, 6, 9, 12**: Mental Health, Childcare & Other Categories
+
+**Audit Process:** Monthly GitHub Issues are automatically created in a private companion repository to track findings and remediation.
+
+### Privacy Impact Assessments (PIAs)
+
+Any PR that adds data collection, third-party integrations, or modifies user-facing data handling automatically triggers a Privacy Impact Assessment requirement. PIAs are tracked in the private audits repository and must be completed before merge.
 
 ---
 

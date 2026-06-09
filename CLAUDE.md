@@ -168,7 +168,43 @@ Do not overstate the platform's accuracy coverage in user-facing copy. The home 
 
 ---
 
-## Quarterly Maintenance (Automated)
+## Accuracy Audits & Privacy Impact Assessments
+
+### Monthly Accuracy Audits
+Automated GitHub Issues are created monthly in the **private audits repo** (`OpenDefender-audits`) to audit content accuracy:
+- Resource URLs (legal aid orgs, courts, government services)
+- Contact information (addresses, phone numbers, hours)
+- Statute citations and content
+- External resource descriptions
+
+**Audit rotation:** 3 months × 3-4 categories per month (Employment/Finances, Housing/Transportation, Mental Health/Childcare/Other).
+
+**Process:**
+1. GitHub Actions creates an issue on the 1st of each month
+2. Assigned auditor verifies URLs and content against live sources
+3. Findings are logged in the issue
+4. Any broken/stale resources trigger a PR to fix
+5. Audit issue closes when PRs are merged
+
+**Tracked in:** Private repo `publicdefenderai-ai/OpenDefender-audits`
+
+### Privacy Impact Assessments (PIAs)
+Any PR that touches `server/services/`, `server/routes/`, or `shared/schemas/` may require a Privacy Impact Assessment:
+- Data collection, storage duration, retention policies
+- Third-party integrations and data sharing
+- User consent and disclosure
+- Compliance with privacy policy commitments
+
+**Process:**
+1. GitHub Actions detects PIA-relevant changes
+2. Auto-comments on PR flagging PIA requirement
+3. PIA Issue created in private audits repo
+4. Assigned reviewer completes PIA template
+5. Must be approved before PR merge
+
+**Tracked in:** Private repo `publicdefenderai-ai/OpenDefender-audits`
+
+### Quarterly Maintenance (Automated)
 
 Three GitHub Actions workflows run quarterly to flag stale data:
 - `check-legal-aid.ts` — HTTP checks all 24 legal aid org URLs, outputs `legal-aid-diff.json`
