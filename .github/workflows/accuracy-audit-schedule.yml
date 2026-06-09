@@ -19,22 +19,27 @@ jobs:
           script: |
             const now = new Date();
             const month = now.toLocaleString('default', { month: 'long', year: 'numeric' });
-            const monthNum = String(now.getMonth() + 1).padStart(2, '0');
+            const monthNum = now.getMonth() + 1;
 
-            let category, focus, detail;
-            if (['01', '04', '07', '10'].includes(monthNum)) {
-              category = 'Employment & Finances';
-              focus = 'URLs & Broken Links';
-              detail = 'Verify all resource URLs are live and no 404s exist';
-            } else if (['02', '05', '08', '11'].includes(monthNum)) {
-              category = 'Housing & Transportation';
-              focus = 'Contact Info & Descriptions';
-              detail = 'Verify contact info (addresses, hours, eligibility) and resource descriptions are current';
-            } else {
-              category = 'Mental Health, Childcare & Other';
-              focus = 'Statute Citations';
-              detail = 'Verify all statute citations and legal content are accurate and current';
-            }
+            // Quarterly breakdown: Each quarter (3 months) covers one category
+            // Each month within the quarter covers one audit focus
+            const auditSchedule = {
+              1: { category: 'Employment & Finances', focus: 'URLs & Broken Links', detail: 'Verify all resource URLs are live and no 404s exist' },
+              2: { category: 'Employment & Finances', focus: 'Contact Info & Descriptions', detail: 'Verify contact info (addresses, hours, eligibility) and resource descriptions are current' },
+              3: { category: 'Employment & Finances', focus: 'Statute Citations', detail: 'Verify all statute citations and legal content are accurate and current' },
+              4: { category: 'Housing & Transportation', focus: 'URLs & Broken Links', detail: 'Verify all resource URLs are live and no 404s exist' },
+              5: { category: 'Housing & Transportation', focus: 'Contact Info & Descriptions', detail: 'Verify contact info (addresses, hours, eligibility) and resource descriptions are current' },
+              6: { category: 'Housing & Transportation', focus: 'Statute Citations', detail: 'Verify all statute citations and legal content are accurate and current' },
+              7: { category: 'Mental Health, Childcare & Other', focus: 'URLs & Broken Links', detail: 'Verify all resource URLs are live and no 404s exist' },
+              8: { category: 'Mental Health, Childcare & Other', focus: 'Contact Info & Descriptions', detail: 'Verify contact info (addresses, hours, eligibility) and resource descriptions are current' },
+              9: { category: 'Mental Health, Childcare & Other', focus: 'Statute Citations', detail: 'Verify all statute citations and legal content are accurate and current' },
+              10: { category: 'Court Logistics', focus: 'URLs & Broken Links', detail: 'Verify all resource URLs are live and no 404s exist' },
+              11: { category: 'Court Logistics', focus: 'Contact Info & Descriptions', detail: 'Verify contact info (addresses, hours, eligibility) and resource descriptions are current' },
+              12: { category: 'Court Logistics', focus: 'Statute Citations', detail: 'Verify all statute citations and legal content are accurate and current' }
+            };
+
+            const audit = auditSchedule[monthNum];
+            const { category, focus, detail } = audit;
 
             try {
               const issue = await github.rest.issues.create({

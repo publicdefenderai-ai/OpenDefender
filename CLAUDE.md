@@ -170,15 +170,28 @@ Do not overstate the platform's accuracy coverage in user-facing copy. The home 
 
 ## Accuracy Audits & Privacy Impact Assessments
 
-### Monthly Accuracy Audits (Split 3-Month Cycle)
-Automated GitHub Issues are created monthly in the **private audits repo** (`OpenDefender-audits`) to audit content accuracy. Work is split across 3 focus areas, each receiving dedicated attention each month:
+### Monthly Accuracy Audits (Quarterly Category Cycle)
+Automated GitHub Issues are created monthly in the **private audits repo** (`OpenDefender-audits`) to audit content accuracy. Each quarter (3 months) focuses on one category, with that category's audit split into three monthly focus areas:
 
-**Monthly Rotation (3-month cycle):**
-- **Months 1, 4, 7, 10** (Jan, Apr, Jul, Oct): **URLs & Broken Links** — Verify all resource URLs are live, no 404s, links resolve correctly
-- **Months 2, 5, 8, 11** (Feb, May, Aug, Nov): **Contact Info & Descriptions** — Verify addresses, phone numbers, hours, eligibility requirements, and resource descriptions match live sources
-- **Months 3, 6, 9, 12** (Mar, Jun, Sep, Dec): **Statute Citations** — Verify statute citations, legal content, and references are accurate and current
+**Quarterly Breakdown:**
+- **Q1 (Jan-Mar):** Employment & Finances
+  - Jan: URLs & Broken Links
+  - Feb: Contact Info & Descriptions
+  - Mar: Statute Citations
+- **Q2 (Apr-Jun):** Housing & Transportation
+  - Apr: URLs & Broken Links
+  - May: Contact Info & Descriptions
+  - Jun: Statute Citations
+- **Q3 (Jul-Sep):** Mental Health, Childcare & Other
+  - Jul: URLs & Broken Links
+  - Aug: Contact Info & Descriptions
+  - Sep: Statute Citations
+- **Q4 (Oct-Dec):** Court Logistics
+  - Oct: URLs & Broken Links
+  - Nov: Contact Info & Descriptions
+  - Dec: Statute Citations
 
-**This means:** Each category gets audited on its specific focus area **every 3 months**, ensuring thoroughness without overwhelming the auditor.
+**This means:** One category receives intensive, multi-faceted audit each quarter, with each month focusing on a specific aspect (URLs, contact info, statutes) for thorough verification.
 
 **Process:**
 1. GitHub Actions creates an issue on the 1st of each month with that month's focus
