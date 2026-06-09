@@ -36,17 +36,13 @@ jobs:
 
       - name: Create accuracy audit issue
         uses: actions/github-script@v7
-        env:
-          AUDIT_CATEGORY: ${{ steps.category.outputs.category }}
-          AUDIT_FOCUS: ${{ steps.category.outputs.focus }}
-          AUDIT_DETAIL: ${{ steps.category.outputs.focus_detail }}
         with:
           github-token: ${{ secrets.AUDITS_REPO_TOKEN }}
           script: |
             const month = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
-            const category = process.env.AUDIT_CATEGORY;
-            const focus = process.env.AUDIT_FOCUS;
-            const detail = process.env.AUDIT_DETAIL;
+            const category = '${{ steps.category.outputs.category }}';
+            const focus = '${{ steps.category.outputs.focus }}';
+            const detail = '${{ steps.category.outputs.focus_detail }}';
             try {
               const issue = await github.rest.issues.create({
                 owner: 'publicdefenderai-ai',
