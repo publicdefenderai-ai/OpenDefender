@@ -63,6 +63,32 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
+      # ── Hotline & phone number verification ─────────────────────────────────
+      # Runs scripts/check-detention-facilities.ts, which:
+      #   (1) HEAD-checks the ICE Online Detainee Locator URL and reference pages
+      #   (2) Fetches ice.gov/contact/ero and immigrantjustice.org/contact and
+      #       scans for the two hardcoded hotlines: 1-888-351-4024 (ICE ERO) and
+      #       312-660-1370 (NIJC). Exits 1 if either number is absent/unconfirmed.
+      #   (3) Generates a full manual-review table of all 27 facility records
+      #       (30 phone numbers) grouped by state for cross-check against
+      #       ice.gov/detention-facilities.
+      # Phone numbers cannot be verified programmatically. The artifact output
+      # (detention-facilities-report.json) is the checklist for manual review.
+      # A reviewer should call or check each facility number at least quarterly.
+      - name: Verify detention hotlines and generate phone review checklist
+        run: npx tsx scripts/check-detention-facilities.ts --report
+        # Exit code 1 means a hotline number was not found on its source page —
+        # flag it, but still upload the artifact so reviewers have the full list.
+        continue-on-error: true
+
+      - name: Upload hotline and phone number review report
+        uses: actions/upload-artifact@v4
+        with:
+          name: detention-phone-report
+          path: scripts/output/detention-facilities-report.json
+          if-no-files-found: error
+          retention-days: 90
+
   # ──────────────────────────────────────────────────────────────────────────────
   # Job 2: Consulate Information
   # ──────────────────────────────────────────────────────────────────────────────
@@ -302,6 +328,13 @@ jobs:
         with:
           name: detention-diff
           path: scripts/data-review/output
+
+      - name: Download detention hotline and phone review report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: detention-phone-report
+          path: scripts/output
 
       - name: Download consulates diff
         uses: actions/download-artifact@v4
