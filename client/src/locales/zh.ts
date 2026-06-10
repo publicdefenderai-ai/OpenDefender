@@ -2488,6 +2488,17 @@ export default {
       "body": "2026年5月22日，USCIS发布政策备忘录PM-602-0199，表明调整身份——在美国境内申请绿卡——现在被视为非凡的自由裁量救济，而非标准福利。默认途径是在美国驻外大使馆或领事馆进行领事处理。这影响到目前在美国且有资格申请绿卡并计划在国内申请的人。即使符合所有法律要求的申请人也可能在此政策下被拒绝。",
       "cta": "移民律师可以解释这对具体情况意味着什么。"
     },
+    "rapidResponse": {
+      "title": "紧急：快速响应热线",
+      "subtitle": "如果您或您认识的人正受到移民执法机构的针对，请立即拨打",
+      "selectorLabel": "显示您所在地区的热线",
+      "textTo": "发送短信至",
+      "languagesLabel": "语言：",
+      "verifiedLabel": "验证于",
+      "nationalAlwaysTitle": "全国热线 — 全国可用",
+      "fullDirectoryLink": "查看完整国家目录（NNIRR）",
+      "lastVerifiedNote": "号码于2026年6月验证。如果号码有误，请联系我们。"
+    },
     "emergencyRights": {
       "title": "ICE遭遇时的即时权利",
       "subtitle": "这些权利适用于所有人——公民、非公民、有身份者和无身份者",

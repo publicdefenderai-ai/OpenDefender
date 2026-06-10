@@ -2530,6 +2530,17 @@ export default {
       "body": "On May 22, 2026, USCIS issued policy memo PM-602-0199 indicating that adjustment of status — applying for a green card while physically inside the US — is now treated as extraordinary discretionary relief rather than a standard benefit. The default pathway is consular processing at a US Embassy or Consulate abroad. This affects people currently in the US who are eligible for a green card and were planning to apply domestically. Even applicants who meet all legal requirements may be denied under this policy.",
       "cta": "An immigration attorney can explain what this means for a specific situation."
     },
+    "rapidResponse": {
+      "title": "Emergency: Rapid Response Hotlines",
+      "subtitle": "Call immediately if you or someone you know is being targeted by immigration enforcement",
+      "selectorLabel": "Show hotlines for your area",
+      "textTo": "Text",
+      "languagesLabel": "Languages:",
+      "verifiedLabel": "Verified",
+      "nationalAlwaysTitle": "National hotlines — available everywhere",
+      "fullDirectoryLink": "See full national directory (NNIRR)",
+      "lastVerifiedNote": "Numbers verified June 2026. If a number appears wrong, please contact us."
+    },
     "emergencyRights": {
       "title": "Immediate Rights During ICE Encounters",
       "subtitle": "These rights apply to EVERYONE - citizens, non-citizens, documented, and undocumented persons",

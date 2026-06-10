@@ -2488,6 +2488,17 @@ export default {
       "body": "El 22 de mayo de 2026, USCIS emitió el memorando de política PM-602-0199 que indica que el ajuste de estatus — solicitar una tarjeta de residencia mientras se está físicamente en los EE.UU. — ahora se trata como una medida discrecional extraordinaria en lugar de un beneficio estándar. La vía predeterminada es el procesamiento consular en una Embajada o Consulado de los EE.UU. en el extranjero. Esto afecta a las personas que actualmente están en los EE.UU. y que son elegibles para una tarjeta de residencia y planeaban solicitar dentro del país. Incluso los solicitantes que cumplen con todos los requisitos legales pueden ser denegados bajo esta política.",
       "cta": "Un abogado de inmigración puede explicar lo que esto significa para una situación específica."
     },
+    "rapidResponse": {
+      "title": "Emergencia: Líneas de Respuesta Rápida",
+      "subtitle": "Llame de inmediato si usted o alguien que conoce está siendo señalado por las autoridades de inmigración",
+      "selectorLabel": "Ver líneas para su área",
+      "textTo": "Enviar texto al",
+      "languagesLabel": "Idiomas:",
+      "verifiedLabel": "Verificado",
+      "nationalAlwaysTitle": "Líneas nacionales — disponibles en todo el país",
+      "fullDirectoryLink": "Ver directorio nacional completo (NNIRR)",
+      "lastVerifiedNote": "Números verificados en junio de 2026. Si un número parece incorrecto, contáctenos."
+    },
     "emergencyRights": {
       "title": "Derechos Inmediatos Durante Encuentros con ICE",
       "subtitle": "Estos derechos se aplican a TODOS - ciudadanos, no ciudadanos, personas documentadas e indocumentadas",
