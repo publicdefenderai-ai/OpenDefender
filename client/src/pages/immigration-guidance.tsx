@@ -575,21 +575,6 @@ export default function ImmigrationGuidance() {
 
       <RapidlyEvolvingNotice />
 
-      {/* AOS policy update — May 2026 */}
-      <div className="max-w-4xl mx-auto px-4 mb-6">
-        <Alert className="border-blue-300 bg-blue-50 dark:bg-blue-950/30 dark:border-blue-700">
-          <AlertTriangle className="h-4 w-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-          <AlertDescription className="text-blue-900 dark:text-blue-200">
-            <span className="block text-xs font-semibold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-1">
-              {t('immigration.aosNotice.date')}
-            </span>
-            <strong className="block text-sm mb-1">{t('immigration.aosNotice.title')}</strong>
-            <span className="text-sm leading-relaxed">{t('immigration.aosNotice.body')}</span>
-            <span className="block mt-1.5 text-sm font-medium">{t('immigration.aosNotice.cta')}</span>
-          </AlertDescription>
-        </Alert>
-      </div>
-
       {/* Rapid Response Hotlines */}
       <RapidResponseSection />
 
@@ -695,6 +680,21 @@ export default function ImmigrationGuidance() {
           </div>
         </div>
       </section>
+
+      {/* AOS policy update — May 2026 */}
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <Alert className="border-blue-300 bg-blue-50 dark:bg-blue-950/30 dark:border-blue-700">
+          <AlertTriangle className="h-4 w-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+          <AlertDescription className="text-blue-900 dark:text-blue-200">
+            <span className="block text-xs font-semibold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-1">
+              {t('immigration.aosNotice.date')}
+            </span>
+            <strong className="block text-sm mb-1">{t('immigration.aosNotice.title')}</strong>
+            <span className="text-sm leading-relaxed">{t('immigration.aosNotice.body')}</span>
+            <span className="block mt-1.5 text-sm font-medium">{t('immigration.aosNotice.cta')}</span>
+          </AlertDescription>
+        </Alert>
+      </div>
 
       {/* Topic Navigation Cards */}
       <section id="detailed-guides" className="py-16 bg-background">
