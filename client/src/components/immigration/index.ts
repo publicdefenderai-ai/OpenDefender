@@ -6,3 +6,5 @@ export { EmergencyCard } from './emergency-card';
 export { FacilitySearch } from './facility-search';
 export { POAGenerator } from './poa-generator';
 export { DocumentChecklist } from './document-checklist';
+export { RapidResponseSection } from './rapid-response-section';
+export type { HotlineEntry, RapidRegion } from './rapid-response-section';

@@ -556,6 +556,137 @@ export default function TechDocs() {
           </CardContent>
         </Card>
 
+        {/* Reusing Individual Features */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Layers className="h-5 w-5" />
+              Reusing Individual Features
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6 text-sm">
+            <p className="text-muted-foreground">
+              OpenDefender is MIT-licensed. You are free to copy any part of the site into your own project.
+              Each significant feature lives in its own component file with a documented header listing
+              exactly which files, i18n keys, npm packages, and backend calls it needs. The table below
+              covers the eight most portable features.
+            </p>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="border-b">
+                    <th className="text-left py-2 pr-4 font-semibold">Feature</th>
+                    <th className="text-left py-2 pr-4 font-semibold">Component file</th>
+                    <th className="text-left py-2 pr-4 font-semibold">Backend?</th>
+                    <th className="text-left py-2 font-semibold">i18n namespace</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/50">
+                  {[
+                    {
+                      feature: "Rapid Response Hotlines",
+                      file: "components/immigration/rapid-response-section.tsx",
+                      backend: "None",
+                      i18n: "immigration.rapidResponse.*",
+                    },
+                    {
+                      feature: "Know Your Rights Card",
+                      file: "components/widgets/rights-card.tsx",
+                      backend: "None",
+                      i18n: "None (content hardcoded)",
+                    },
+                    {
+                      feature: "Legal Glossary Widget",
+                      file: "components/widgets/glossary-widget.tsx",
+                      backend: "GET /api/v1/glossary",
+                      i18n: "None (content from API)",
+                    },
+                    {
+                      feature: "Site Search Widget",
+                      file: "components/widgets/embeddable-search.tsx",
+                      backend: "GET /api/v1/search",
+                      i18n: "None (labels hardcoded)",
+                    },
+                    {
+                      feature: "Diversion Program Card",
+                      file: "components/legal/diversion-program-card.tsx",
+                      backend: "None",
+                      i18n: "diversionPrograms.programCard.*",
+                    },
+                    {
+                      feature: "Facility / Inmate Locator",
+                      file: "components/legal/facility-lookup-widget.tsx",
+                      backend: "None",
+                      i18n: "first24Hours.facilityLookup.*",
+                    },
+                    {
+                      feature: "Deportation Phase Carousel",
+                      file: "pages/immigration-guidance.tsx → DeportationPhasesCarousel",
+                      backend: "None",
+                      i18n: "immigration.deportationPhases.*",
+                    },
+                    {
+                      feature: "Case Timeline",
+                      file: "pages/case-timeline.tsx",
+                      backend: "None",
+                      i18n: "caseTimeline.*",
+                    },
+                  ].map((row) => (
+                    <tr key={row.feature}>
+                      <td className="py-2 pr-4 font-medium">{row.feature}</td>
+                      <td className="py-2 pr-4 font-mono text-muted-foreground">{row.file}</td>
+                      <td className="py-2 pr-4 text-muted-foreground">{row.backend}</td>
+                      <td className="py-2 font-mono text-muted-foreground">{row.i18n}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="font-semibold text-sm">How to copy a feature into your project</h3>
+              <ol className="list-decimal list-inside space-y-2 text-muted-foreground text-xs leading-relaxed">
+                <li>
+                  <strong className="text-foreground">Copy the component file</strong> listed above into your project.
+                  Read its <code className="bg-muted px-1 rounded">@standalone-use</code> JSDoc header —
+                  it lists every dependency explicitly.
+                </li>
+                <li>
+                  <strong className="text-foreground">Install npm packages</strong> listed in the header
+                  (shadcn/ui, lucide-react, react-i18next, and @tanstack/react-query are the most common).
+                </li>
+                <li>
+                  <strong className="text-foreground">Copy i18n keys</strong> from{" "}
+                  <code className="bg-muted px-1 rounded">client/src/locales/en.ts</code> under the namespace
+                  listed in the table. Spanish and Chinese translations are in{" "}
+                  <code className="bg-muted px-1 rounded">es.ts</code> and{" "}
+                  <code className="bg-muted px-1 rounded">zh.ts</code>.
+                </li>
+                <li>
+                  <strong className="text-foreground">For API-dependent widgets</strong>, point{" "}
+                  <code className="bg-muted px-1 rounded">baseUrl</code> at your own OpenDefender instance
+                  or at <code className="bg-muted px-1 rounded">https://opendefender.io</code> (subject to
+                  rate limits).
+                </li>
+                <li>
+                  <strong className="text-foreground">Adapt the Tailwind theme</strong> — components use
+                  CSS variables (<code className="bg-muted px-1 rounded">--background</code>,{" "}
+                  <code className="bg-muted px-1 rounded">--foreground</code>, etc.) from shadcn's default
+                  theme. Override them in your own CSS to match your brand.
+                </li>
+              </ol>
+            </div>
+
+            <div className="rounded-lg border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/20 p-4 text-xs text-amber-900 dark:text-amber-200">
+              <strong>Content standards apply to reuse.</strong> If you display legal information derived
+              from OpenDefender, you must follow the same accuracy rules: no placeholder data, statutory
+              citations must be verified, and reading level must remain accessible (6th–8th grade).
+              See the Content Standards for Forks section above.
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Quick Links */}
         <Card>
           <CardHeader>

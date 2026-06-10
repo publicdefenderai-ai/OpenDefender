@@ -1,3 +1,31 @@
+/**
+ * @component RightsCard
+ * @description Self-contained, embeddable "Know Your Rights" card for police encounters.
+ *   Available in English and Spanish. Three size variants: full, compact, mini.
+ *   No server dependency — all content is hardcoded in this file.
+ *
+ * @standalone-use
+ *   Files:    components/widgets/rights-card.tsx
+ *             components/brand-logo.tsx  (optional — only for the "Powered by" attribution)
+ *   i18n:     None — content is hardcoded in the rightsContent object below.
+ *   Packages: lucide-react
+ *   Backend:  None — fully self-contained.
+ *
+ * @props
+ *   language?  "en" | "es"           default "en"
+ *   theme?     "light" | "dark"      default "light"
+ *   variant?   "full" | "compact" | "mini"  default "full"
+ *   baseUrl?   string                base URL for the "Learn more" link
+ *
+ * @usage
+ *   import { RightsCard } from "@/components/widgets/rights-card";
+ *   <RightsCard language="es" variant="compact" theme="dark" />
+ *
+ * @embed
+ *   Also available as an iframe embed via /embed/rights?lang=en&theme=light&variant=full
+ *   See /widgets for the embed builder UI.
+ */
+
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { AlertTriangle, Phone } from "lucide-react";
 

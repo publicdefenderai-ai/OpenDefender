@@ -1,3 +1,32 @@
+/**
+ * @component GlossaryWidget
+ * @description Embeddable legal glossary widget. Fetches terms from the OpenDefender
+ *   public API and renders them with expand/collapse, optional search, and a
+ *   "Learn more" link back to the full glossary. Supports light/dark themes.
+ *
+ * @standalone-use
+ *   Files:    components/widgets/glossary-widget.tsx
+ *   i18n:     None — labels are hardcoded; term content comes from the API.
+ *   Packages: @tanstack/react-query, lucide-react
+ *   Backend:  GET /api/v1/glossary  (public, no auth, rate-limited at 60 req/min)
+ *             Response: Array<{ id, term, definition, aliases? }>
+ *
+ * @props
+ *   baseUrl?       string   Base URL for the API host. Defaults to same origin.
+ *   language?      "en" | "es"  default "en"
+ *   theme?         "light" | "dark"  default "light"
+ *   initialTerms?  number   How many terms to show before "Show more". Default 5.
+ *   showSearch?    boolean  Show inline search input. Default true.
+ *
+ * @usage
+ *   import { GlossaryWidget } from "@/components/widgets/glossary-widget";
+ *   <GlossaryWidget baseUrl="https://opendefender.io" initialTerms={3} />
+ *
+ * @embed
+ *   Also available as an iframe embed via /embed/glossary
+ *   See /widgets for the embed builder UI.
+ */
+
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { BookOpen, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";

@@ -1,3 +1,32 @@
+/**
+ * @component EmbeddableSearch
+ * @description Debounced search widget for OpenDefender's legal document index.
+ *   Queries the public search API and renders results with type badges and
+ *   links. Covers 7,453+ documents: charges, glossary terms, diversion programs,
+ *   expungement rules, rights pages, and all 58 site pages.
+ *
+ * @standalone-use
+ *   Files:    components/widgets/embeddable-search.tsx
+ *   i18n:     None — labels are hardcoded in English.
+ *   Packages: @tanstack/react-query, lucide-react
+ *   Backend:  GET /api/v1/search?q=<query>  (public, no auth, rate-limited at 60 req/min)
+ *             Response: { results: Array<{ document: { id, type, title, url }, score }> }
+ *
+ * @props
+ *   baseUrl?      string  Base URL for API calls and result links. Defaults to same origin.
+ *   placeholder?  string  Input placeholder text.
+ *   theme?        "light" | "dark"  default "light"
+ *   maxResults?   number  Max results to display. Default 8.
+ *
+ * @usage
+ *   import { EmbeddableSearch } from "@/components/widgets/embeddable-search";
+ *   <EmbeddableSearch baseUrl="https://opendefender.io" placeholder="Search legal terms..." />
+ *
+ * @embed
+ *   Also available as an iframe embed via /embed/search
+ *   See /widgets for the embed builder UI.
+ */
+
 import { useState, useCallback, useRef, useEffect } from "react";
 import { Search, X, ExternalLink } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
