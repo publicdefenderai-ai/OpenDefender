@@ -53,8 +53,10 @@ function TemplateCard({ label, body }: { label: string; body: string }) {
 function TreatmentConnectionSection() {
   const { t } = useTranslation();
   const ns = "support.mentalHealth.treatmentConnection";
-  const checklistItems = t(`${ns}.checklistItems`, { returnObjects: true }) as string[];
-  const angerQuestions = t(`${ns}.angerQuestions`, { returnObjects: true }) as string[];
+  const rawChecklist = t(`${ns}.checklistItems`, { returnObjects: true });
+  const checklistItems: string[] = Array.isArray(rawChecklist) ? rawChecklist : [];
+  const rawAnger = t(`${ns}.angerQuestions`, { returnObjects: true });
+  const angerQuestions: string[] = Array.isArray(rawAnger) ? rawAnger : [];
 
   return (
     <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="treatment-connection">
