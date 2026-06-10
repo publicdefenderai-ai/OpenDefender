@@ -839,6 +839,19 @@ export default function TechDocs() {
                 <span>HEAD/GET checks all 111 diversion program contact URLs. Treats 403/999 CDN bot-blocks as live; exits non-zero on true 404/error. Outputs <code className="bg-background px-1 rounded text-xs">diversion-link-report.json</code>.</span>
               </div>
               <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-detention-facilities.ts</code>
+                <span>
+                  Three-phase audit for the <code className="bg-background px-1 rounded text-xs">/find-detained</code> page.
+                  (1) HEAD-checks the ICE Online Detainee Locator URL and ICE/NIJC reference pages.
+                  (2) Fetches the ICE ERO contact page and NIJC website and scans for the two hardcoded hotline numbers
+                  (<code className="bg-background px-1 rounded text-xs">1-888-351-4024</code>, <code className="bg-background px-1 rounded text-xs">312-660-1370</code>) — flags if either is absent.
+                  (3) Prints all 27 detention facility records (30 phone numbers) grouped by state for manual cross-check against
+                  <code className="bg-background px-1 rounded text-xs">ice.gov/detention-facilities</code>.
+                  Outputs <code className="bg-background px-1 rounded text-xs">detention-facilities-report.json</code>.
+                  Note: phone numbers cannot be verified programmatically — manual review is always required for the facility table.
+                </span>
+              </div>
+              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">generate-report.ts</code>
                 <span>Reads all diff outputs and opens a GitHub Issue listing items needing manual review.</span>
               </div>

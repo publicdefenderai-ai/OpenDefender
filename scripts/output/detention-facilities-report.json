@@ -1,0 +1,408 @@
+{
+  "generated": "2026-06-10T17:15:59.966Z",
+  "urlChecks": [
+    {
+      "label": "ICE Online Detainee Locator",
+      "url": "https://locator.ice.gov/odls/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "label": "ICE Detention Facilities (reference page)",
+      "url": "https://www.ice.gov/detention-facilities",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "label": "ICE ERO Contact / Detention Reporting",
+      "url": "https://www.ice.gov/contact/ero",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "label": "NIJC (National Immigrant Justice Center)",
+      "url": "https://immigrantjustice.org/contact",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    }
+  ],
+  "hotlineChecks": [
+    {
+      "label": "ICE Detention Reporting Line",
+      "number": "1-888-351-4024",
+      "sourceUrl": "https://www.ice.gov/contact/ero",
+      "foundOnPage": true,
+      "note": "Number found in page source"
+    },
+    {
+      "label": "NIJC Legal Help Line",
+      "number": "312-660-1370",
+      "sourceUrl": "https://immigrantjustice.org/contact",
+      "foundOnPage": false,
+      "note": "Number NOT found — verify manually at source URL"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "az-eloy",
+      "name": "Eloy Detention Center",
+      "type": "CDF",
+      "state": "AZ",
+      "city": "Eloy",
+      "address": "1705 E Hanna Rd",
+      "zip": "85131",
+      "phone": "(520) 464-8600",
+      "detaineePhone": "(520) 464-8500",
+      "fieldOffice": "Phoenix",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "az-florence",
+      "name": "Florence Service Processing Center",
+      "type": "SPC",
+      "state": "AZ",
+      "city": "Florence",
+      "address": "3250 N Pinal Pkwy",
+      "zip": "85132",
+      "phone": "(520) 868-5821",
+      "fieldOffice": "Phoenix",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "az-lacinta",
+      "name": "La Palma Correctional Center",
+      "type": "CDF",
+      "state": "AZ",
+      "city": "Eloy",
+      "address": "1250 W Woody Mountain Rd",
+      "zip": "85131",
+      "phone": "(520) 464-8400",
+      "fieldOffice": "Phoenix",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "ca-adelanto",
+      "name": "Adelanto ICE Processing Center",
+      "type": "CDF",
+      "state": "CA",
+      "city": "Adelanto",
+      "address": "10400 Rancho Rd",
+      "zip": "92301",
+      "phone": "(760) 530-3100",
+      "fieldOffice": "Los Angeles",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "ca-otay",
+      "name": "Otay Mesa Detention Center",
+      "type": "CDF",
+      "state": "CA",
+      "city": "San Diego",
+      "address": "7488 Calzada de la Fuente",
+      "zip": "92154",
+      "phone": "(619) 671-8400",
+      "fieldOffice": "San Diego",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "ca-imperial",
+      "name": "Imperial Regional Detention Facility",
+      "type": "CDF",
+      "state": "CA",
+      "city": "Calexico",
+      "address": "1572 Gateway Rd",
+      "zip": "92231",
+      "phone": "(760) 312-9000",
+      "fieldOffice": "San Diego",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "co-aurora",
+      "name": "Aurora Contract Detention Facility",
+      "type": "CDF",
+      "state": "CO",
+      "city": "Aurora",
+      "address": "3130 N Oakland St",
+      "zip": "80010",
+      "phone": "(303) 361-6612",
+      "fieldOffice": "Denver",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "fl-krome",
+      "name": "Krome Service Processing Center",
+      "type": "SPC",
+      "state": "FL",
+      "city": "Miami",
+      "address": "18201 SW 12th St",
+      "zip": "33194",
+      "phone": "(305) 207-5500",
+      "fieldOffice": "Miami",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "fl-broward",
+      "name": "Broward Transitional Center",
+      "type": "CDF",
+      "state": "FL",
+      "city": "Pompano Beach",
+      "address": "3900 N Powerline Rd",
+      "zip": "33073",
+      "phone": "(954) 975-4700",
+      "fieldOffice": "Miami",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "fl-glades",
+      "name": "Glades County Detention Center",
+      "type": "IGSA",
+      "state": "FL",
+      "city": "Moore Haven",
+      "address": "1297 E State Rd 78",
+      "zip": "33471",
+      "phone": "(863) 946-1600",
+      "fieldOffice": "Miami",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "ga-stewart",
+      "name": "Stewart Detention Center",
+      "type": "CDF",
+      "state": "GA",
+      "city": "Lumpkin",
+      "address": "146 CCA Rd",
+      "zip": "31815",
+      "phone": "(229) 838-5000",
+      "fieldOffice": "Atlanta",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "ga-irwin",
+      "name": "Irwin County Detention Center",
+      "type": "IGSA",
+      "state": "GA",
+      "city": "Ocilla",
+      "address": "132 Cotton Dr",
+      "zip": "31774",
+      "phone": "(229) 468-4100",
+      "fieldOffice": "Atlanta",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "la-pine",
+      "name": "Pine Prairie ICE Processing Center",
+      "type": "CDF",
+      "state": "LA",
+      "city": "Pine Prairie",
+      "address": "1133 Hampton Dupre Rd",
+      "zip": "70576",
+      "phone": "(337) 599-3800",
+      "fieldOffice": "New Orleans",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "la-jackson",
+      "name": "Jackson Parish Correctional Center",
+      "type": "IGSA",
+      "state": "LA",
+      "city": "Jonesboro",
+      "address": "371 Industrial Dr",
+      "zip": "71251",
+      "phone": "(318) 259-2315",
+      "fieldOffice": "New Orleans",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "la-richwood",
+      "name": "Richwood Correctional Center",
+      "type": "CDF",
+      "state": "LA",
+      "city": "Monroe",
+      "address": "5182 Richwood Rd",
+      "zip": "71202",
+      "phone": "(318) 325-7000",
+      "fieldOffice": "New Orleans",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "nj-elizabeth",
+      "name": "Elizabeth Contract Detention Facility",
+      "type": "CDF",
+      "state": "NJ",
+      "city": "Elizabeth",
+      "address": "625 Evans St",
+      "zip": "07201",
+      "phone": "(908) 282-6400",
+      "fieldOffice": "Newark",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "nm-otero",
+      "name": "Otero County Processing Center",
+      "type": "CDF",
+      "state": "NM",
+      "city": "Chaparral",
+      "address": "26 McGregor Range Rd",
+      "zip": "88081",
+      "phone": "(575) 824-0440",
+      "fieldOffice": "El Paso",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "nm-cibola",
+      "name": "Cibola County Correctional Center",
+      "type": "CDF",
+      "state": "NM",
+      "city": "Milan",
+      "address": "200 Corrections St",
+      "zip": "87021",
+      "phone": "(505) 285-5900",
+      "fieldOffice": "El Paso",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "ny-buffalo",
+      "name": "Buffalo Federal Detention Facility",
+      "type": "SPC",
+      "state": "NY",
+      "city": "Batavia",
+      "address": "4250 Federal Dr",
+      "zip": "14020",
+      "phone": "(585) 344-6100",
+      "fieldOffice": "Buffalo",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "pa-york",
+      "name": "York County Prison",
+      "type": "IGSA",
+      "state": "PA",
+      "city": "York",
+      "address": "3400 Concord Rd",
+      "zip": "17402",
+      "phone": "(717) 840-7580",
+      "fieldOffice": "Philadelphia",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "pa-pike",
+      "name": "Pike County Correctional Facility",
+      "type": "IGSA",
+      "state": "PA",
+      "city": "Lords Valley",
+      "address": "175 Pike County Blvd",
+      "zip": "18428",
+      "phone": "(570) 775-5550",
+      "fieldOffice": "Philadelphia",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "tx-port-isabel",
+      "name": "Port Isabel Service Processing Center",
+      "type": "SPC",
+      "state": "TX",
+      "city": "Los Fresnos",
+      "address": "27991 Buena Vista Blvd",
+      "zip": "78566",
+      "phone": "(956) 547-1700",
+      "fieldOffice": "Harlingen",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "tx-el-paso",
+      "name": "El Paso Service Processing Center",
+      "type": "SPC",
+      "state": "TX",
+      "city": "El Paso",
+      "address": "8915 Montana Ave",
+      "zip": "79925",
+      "phone": "(915) 225-0700",
+      "fieldOffice": "El Paso",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "tx-karnes",
+      "name": "South Texas Family Residential Center",
+      "type": "FRC",
+      "state": "TX",
+      "city": "Karnes City",
+      "address": "409 FM 1144",
+      "zip": "78118",
+      "phone": "(830) 254-6300",
+      "fieldOffice": "San Antonio",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "tx-dilley",
+      "name": "South Texas Family Residential Center (Dilley)",
+      "type": "FRC",
+      "state": "TX",
+      "city": "Dilley",
+      "address": "101 Southbound Dr",
+      "zip": "78017",
+      "phone": "(830) 965-3000",
+      "fieldOffice": "San Antonio",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "tx-houston-cdf",
+      "name": "Houston Contract Detention Facility",
+      "type": "CDF",
+      "state": "TX",
+      "city": "Houston",
+      "address": "15850 Export Plaza Dr",
+      "zip": "77032",
+      "phone": "(281) 449-1481",
+      "fieldOffice": "Houston",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "tx-laredo",
+      "name": "Laredo Processing Center",
+      "type": "CDF",
+      "state": "TX",
+      "city": "Laredo",
+      "address": "4702 E Saunders St",
+      "zip": "78041",
+      "phone": "(956) 764-3800",
+      "fieldOffice": "San Antonio",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "va-farmville",
+      "name": "Farmville Detention Center",
+      "type": "CDF",
+      "state": "VA",
+      "city": "Farmville",
+      "address": "500 Industrial Park Rd",
+      "zip": "23901",
+      "phone": "(434) 391-0048",
+      "fieldOffice": "Washington DC",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    },
+    {
+      "id": "wa-tacoma",
+      "name": "Northwest ICE Processing Center",
+      "type": "CDF",
+      "state": "WA",
+      "city": "Tacoma",
+      "address": "1623 E J St",
+      "zip": "98421",
+      "phone": "(253) 779-6000",
+      "fieldOffice": "Seattle",
+      "reviewNote": "Verify phone, address, and facility status against ice.gov/detention-facilities"
+    }
+  ],
+  "summary": {
+    "urlsChecked": 4,
+    "urlsFailed": 0,
+    "hotlinesChecked": 2,
+    "hotlinesMissingFromSource": 1,
+    "facilitiesNeedingManualReview": 29
+  }
+}
