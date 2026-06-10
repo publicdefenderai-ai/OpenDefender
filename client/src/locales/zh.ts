@@ -145,6 +145,8 @@ export default {
       "scenario3Sub": "如何找到他们以及该怎么做",
       "scenario4Label": "警察想和我谈话/我可能很快会被逮捕",
       "scenario4Sub": "逮捕发生前该怎么做",
+      "scenario5Label": "正在面对移民执法",
+      "scenario5Sub": "紧急热线及ICE遭遇期间的权利",
       "back": "← 返回",
       "chargedSectionTitle": "首次庭审日期前",
       "chargedStep1Title": "出庭前找好律师",
@@ -2650,7 +2652,7 @@ export default {
       }
     },
     "resources": {
-      "title": "紧急资源和联系方式",
+      "title": "其他资源和联系方式",
       "subtitle": "移民紧急情况的重要电话号码和资源",
       "hotlines": {
         "title": "全国热线",

@@ -149,6 +149,8 @@ export default {
       "scenario3Sub": "How to find them and what to do",
       "scenario4Label": "Police want to talk to me / I may be arrested soon",
       "scenario4Sub": "What to do before an arrest happens",
+      "scenario5Label": "Facing immigration enforcement right now",
+      "scenario5Sub": "Emergency hotlines and your rights during ICE encounters",
       "back": "← Back",
       "chargedSectionTitle": "Before your first court date",
       "chargedStep1Title": "Get a lawyer before you appear",
@@ -2693,7 +2695,7 @@ export default {
       }
     },
     "resources": {
-      "title": "Emergency Resources & Contacts",
+      "title": "Additional Resources & Contacts",
       "subtitle": "Critical phone numbers and resources for immigration emergencies",
       "hotlines": {
         "title": "National Hotlines",

@@ -11,6 +11,7 @@ import {
   Heart,
   Globe2,
   MessageSquare,
+  Phone,
 } from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
@@ -336,6 +337,20 @@ export default function Home() {
                         <div>
                           <p className="font-semibold text-sm text-foreground group-hover:text-slate-700 dark:group-hover:text-slate-300">{t("home.urgentHelp.scenario4Label")}</p>
                           <p className="text-xs text-muted-foreground mt-0.5">{t("home.urgentHelp.scenario4Sub")}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+
+                  <Link href="/immigration-guidance#rapid-response" onClick={() => { setUrgentHelpOpen(false); setUrgentSituation(null); }} className="block">
+                    <Card className="hover:shadow-md hover:border-orange-400 dark:hover:border-orange-600 transition-all cursor-pointer group border-orange-200 dark:border-orange-900 bg-orange-50/40 dark:bg-orange-950/20">
+                      <CardContent className="p-4 flex items-start gap-3">
+                        <div className="w-9 h-9 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Phone className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-sm text-foreground group-hover:text-orange-700 dark:group-hover:text-orange-300">{t("home.urgentHelp.scenario5Label")}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{t("home.urgentHelp.scenario5Sub")}</p>
                         </div>
                       </CardContent>
                     </Card>

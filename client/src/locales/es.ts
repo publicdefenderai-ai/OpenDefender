@@ -145,6 +145,8 @@ export default {
       "scenario3Sub": "Cómo encontrarlos y qué hacer",
       "scenario4Label": "La policía quiere hablar conmigo / puede que me arresten pronto",
       "scenario4Sub": "Qué hacer antes de que ocurra un arresto",
+      "scenario5Label": "Enfrentando autoridades de inmigración ahora mismo",
+      "scenario5Sub": "Líneas de emergencia y sus derechos durante encuentros con ICE",
       "back": "← Atrás",
       "chargedSectionTitle": "Antes de su primera fecha de tribunal",
       "chargedStep1Title": "Consiga un abogado antes de comparecer",
@@ -2651,7 +2653,7 @@ export default {
       }
     },
     "resources": {
-      "title": "Recursos y Contactos de Emergencia",
+      "title": "Recursos y Contactos Adicionales",
       "subtitle": "Números telefónicos críticos y recursos para emergencias de inmigración",
       "hotlines": {
         "title": "Líneas Directas Nacionales",

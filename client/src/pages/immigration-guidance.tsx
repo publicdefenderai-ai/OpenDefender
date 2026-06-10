@@ -157,7 +157,7 @@ const RAPID_REGIONS: RapidRegion[] = [
   },
   {
     id: 'washington',
-    label: 'Washington State',
+    label: 'Washington (statewide)',
     hotlines: [
       {
         id: 'waisn',
