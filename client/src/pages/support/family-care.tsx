@@ -10,7 +10,9 @@ import {
   Mail,
   ChevronDown,
   Heart,
+  AlertTriangle,
 } from "lucide-react";
+import { Link } from "wouter";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -323,6 +325,40 @@ function FamilyCareCommsSection() {
   );
 }
 
+function FamilyCareCollateralCallout() {
+  return (
+    <section className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <div>
+            <h2 className="text-lg font-bold text-foreground mb-1">Before any plea: protect your family arrangements</h2>
+            <p className="text-sm text-muted-foreground">Criminal charges can have direct consequences in family court — often running on a separate track from the criminal case. These risks are not automatically raised by the criminal defense attorney and must be asked about directly.</p>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-3 mb-4">
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">CPS involvement</p>
+            <p className="text-xs text-muted-foreground">Certain charges — especially those involving alleged violence, neglect, or substance use — can trigger child protective services (CPS) to open a separate investigation. This can happen before conviction. Having legal representation in family court proceedings is critical.</p>
+          </div>
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Custody modification</p>
+            <p className="text-xs text-muted-foreground">An arrest or conviction can be used as grounds to seek modification of an existing custody order. The other parent may file for emergency custody based on the criminal case. If you have a custody agreement, talk to a family law attorney as well.</p>
+          </div>
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Protective orders and contact restrictions</p>
+            <p className="text-xs text-muted-foreground">In domestic violence or family-related charges, the court may issue no-contact orders as a condition of release or conviction. Violating these orders, even accidentally, can result in new criminal charges and jeopardize custody.</p>
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground">
+          Ask your attorney specifically: "How will this charge affect my custody or family court situation?" before any decision.{' '}
+          <Link href="/collateral-consequences" className="text-amber-700 dark:text-amber-400 underline font-medium">See all collateral consequences.</Link>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function FamilyCareSupport() {
   const { t } = useTranslation();
 
@@ -460,7 +496,7 @@ export default function FamilyCareSupport() {
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
         { label: t("support.relatedLinks.childcare"), href: "/support/childcare" },
       ]}
-      customSections={<FamilyCareCommsSection />}
+      customSections={<><FamilyCareCommsSection /><FamilyCareCollateralCallout /></>}
     />
   );
 }

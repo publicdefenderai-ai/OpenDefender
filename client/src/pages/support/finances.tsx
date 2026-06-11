@@ -593,6 +593,39 @@ export default function FinancesSupport() {
               </div>
             </SectionPanel>
 
+            {/* Collateral consequences callout */}
+            <div className="rounded-xl border border-amber-200 dark:border-amber-800/50 bg-amber-50/60 dark:bg-amber-900/10 p-5">
+              <div className="flex items-start gap-3 mb-3">
+                <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+                <p className="text-sm font-semibold text-foreground">Before any plea: know the benefit impacts</p>
+              </div>
+              <p className="text-sm text-muted-foreground mb-3">
+                Certain convictions can reduce or eliminate eligibility for federal benefits — sometimes automatically. These consequences are separate from fines and court fees and may affect your household for years.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-2 mb-3">
+                <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
+                  <p className="text-xs font-semibold text-foreground mb-1">SNAP (food stamps)</p>
+                  <p className="text-xs text-muted-foreground">Federal law restricts SNAP for people with certain drug felony convictions. Some states have opted out of this restriction — check your state's rules. A drug felony plea without checking the SNAP impact first can affect your family's food access.</p>
+                </div>
+                <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
+                  <p className="text-xs font-semibold text-foreground mb-1">SSI / Social Security Disability</p>
+                  <p className="text-xs text-muted-foreground">SSI payments are suspended during incarceration of 30 days or more. They are not terminated — but they must be reinstated, which takes time after release. Planning ahead helps avoid a payment gap.</p>
+                </div>
+                <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
+                  <p className="text-xs font-semibold text-foreground mb-1">Public housing / Section 8</p>
+                  <p className="text-xs text-muted-foreground">Certain convictions — especially drug or violent felonies — can trigger mandatory eviction from public housing or disqualification from the Section 8 voucher program. This can affect all household members.</p>
+                </div>
+                <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/40 rounded-lg p-3">
+                  <p className="text-xs font-semibold text-foreground mb-1">Student financial aid (Pell Grants / loans)</p>
+                  <p className="text-xs text-muted-foreground">Drug convictions while receiving federal student aid can result in temporary ineligibility for Pell Grants and federal student loans. Completing a drug treatment program can restore eligibility in some cases.</p>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Ask your attorney specifically about how any plea will affect your benefits before signing anything.{' '}
+                <Link href="/collateral-consequences" className="text-amber-700 dark:text-amber-400 underline font-medium">Learn more about collateral consequences.</Link>
+              </p>
+            </div>
+
             {/* Disclaimer */}
             <Alert className="border-slate-200 dark:border-slate-700">
               <AlertCircle className="h-4 w-4" />

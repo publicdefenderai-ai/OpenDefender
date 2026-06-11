@@ -2,7 +2,8 @@ import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import employmentHero from "@assets/stock_images/employment.jpg";
-import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, FileText, Sparkles } from "lucide-react";
+import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, FileText, Sparkles, AlertTriangle } from "lucide-react";
+import { Link } from "wouter";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -335,6 +336,40 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
   );
 }
 
+function EmploymentCollateralCallout() {
+  return (
+    <section className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <div>
+            <h2 className="text-lg font-bold text-foreground mb-1">Before any plea: protect your livelihood</h2>
+            <p className="text-sm text-muted-foreground">A conviction — even a guilty plea to a misdemeanor — can trigger automatic consequences for your job and professional license that a criminal defense attorney may not raise unless specifically asked.</p>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-3 mb-4">
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Professional licenses</p>
+            <p className="text-xs text-muted-foreground">Nursing, teaching, CDL, contractor, security, real estate, and many other licenses can be automatically suspended or revoked upon conviction. The licensing board acts independently of the court.</p>
+          </div>
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Background checks</p>
+            <p className="text-xs text-muted-foreground">Employers in healthcare, education, childcare, finance, and security sectors are often legally required to terminate employees with certain convictions. This can happen even if you have worked there for years.</p>
+          </div>
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Federal contractor jobs</p>
+            <p className="text-xs text-muted-foreground">Felony convictions can result in loss of security clearance and disqualification from federal employment or work on government contracts. Some positions require a waiting period before you can reapply.</p>
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground">
+          Ask your attorney specifically: "Will this charge or plea affect my professional license or employment?" before any decision.{' '}
+          <Link href="/collateral-consequences" className="text-amber-700 dark:text-amber-400 underline font-medium">See all collateral consequences.</Link>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function EmploymentSupport() {
   const { t } = useTranslation();
 
@@ -463,7 +498,7 @@ export default function EmploymentSupport() {
         { label: t('support.relatedLinks.finances'), href: "/support/finances" },
         { label: t('support.relatedLinks.courtLogistics'), href: "/support/court-logistics" },
       ]}
-      customSections={<CourtTimeOffSection />}
+      customSections={<><CourtTimeOffSection /><EmploymentCollateralCallout /></>}
     />
   );
 }

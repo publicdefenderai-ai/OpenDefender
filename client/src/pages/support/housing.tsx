@@ -11,7 +11,9 @@ import {
   ChevronDown,
   Users,
   ShieldCheck,
+  AlertTriangle,
 } from "lucide-react";
+import { Link } from "wouter";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -396,6 +398,40 @@ function HousingNetworkSection() {
   );
 }
 
+function HousingCollateralCallout() {
+  return (
+    <section className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <div>
+            <h2 className="text-lg font-bold text-foreground mb-1">Before any plea: protect your housing</h2>
+            <p className="text-sm text-muted-foreground">A conviction can trigger automatic housing consequences that go far beyond anything the court orders. These can affect your entire household — not just you — and often cannot be undone after the fact.</p>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-3 mb-4">
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Public housing eviction</p>
+            <p className="text-xs text-muted-foreground">Many public housing authorities are required by federal regulation to terminate leases after certain convictions, especially drug or violent felonies. The entire household can be displaced, not just the person convicted.</p>
+          </div>
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Section 8 / Housing Choice Voucher</p>
+            <p className="text-xs text-muted-foreground">Certain convictions — including manufacturing methamphetamine on federally assisted premises or lifetime sex offender registry — are grounds for mandatory denial or termination of housing vouchers under federal law.</p>
+          </div>
+          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+            <p className="text-xs font-semibold text-foreground mb-1">Private rentals</p>
+            <p className="text-xs text-muted-foreground">Private landlords can legally screen for criminal history. A conviction — especially a felony — can make finding private rental housing significantly harder. Some cities have "ban the box" rules that limit when landlords can ask; check your local laws.</p>
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground">
+          Ask your attorney specifically: "Will this charge or plea affect my housing or my family's housing?"before any decision.{' '}
+          <Link href="/collateral-consequences" className="text-amber-700 dark:text-amber-400 underline font-medium">See all collateral consequences.</Link>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function HousingSupport() {
   const { t } = useTranslation();
 
@@ -536,6 +572,7 @@ export default function HousingSupport() {
           <HomeownerSection />
           <HousingInstabilitySection />
           <HousingNetworkSection />
+          <HousingCollateralCallout />
         </>
       }
     />

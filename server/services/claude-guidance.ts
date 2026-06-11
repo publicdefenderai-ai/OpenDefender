@@ -84,6 +84,12 @@ interface CaseDetails {
   civilUrgency?: Record<string, 'none' | 'active' | 'emergency'>;
   language?: string;
   chargesUnknown?: boolean;
+  supervisionStatus?: string;
+  priorConvictions?: boolean | null;
+  citizenshipStatus?: string;
+  hasMinorChildren?: boolean | null;
+  hasProfessionalLicense?: boolean | null;
+  hasHousingAssistance?: boolean | null;
 }
 
 interface ClaudeGuidance {
@@ -136,6 +142,12 @@ interface ClaudeGuidance {
     note: string;
   }>;
   dangerFlags?: string[];
+  collateralConsequences?: Array<{
+    category: string;
+    consequence: string;
+    timing: string;
+    actionNote: string;
+  }>;
   usageMetrics: {
     inputTokens: number;
     outputTokens: number;
@@ -324,6 +336,7 @@ Return a JSON object with these exact fields:
 - timeline: Array of {stage, description, timeframe, completed: boolean}
 - uncertainties: Array of areas where you are not fully certain. If you are unsure about a jurisdiction-specific deadline, statute, fee amount, or procedure, you MUST add an entry here instead of stating it as fact. Each entry has: {area: string, note: string}. Use an empty array [] if you are confident throughout.
   Example: {"area": "Bail eligibility in this county", "note": "This varies significantly by local court practice — confirm with your attorney or public defender."}
+- collateralConsequences: Array of collateral consequences that are plausibly triggered by the charges and background context. Only include consequences that are genuinely likely given the specific charges and background, not a generic list. Each entry has: {category: string (one of: "drivers_license"|"immigration"|"housing"|"employment"|"custody"|"benefits"|"firearms"|"registry"|"supervision_revocation"|"other"), consequence: string (what the consequence is and which conviction types trigger it), timing: string (when it takes effect: e.g. "upon guilty plea", "upon conviction", "upon sentencing", "upon release"), actionNote: string (one concrete thing to raise with attorney or action that could prevent or mitigate)}. Only include if background fields are provided OR the charges commonly trigger specific collateral consequences. Return empty array [] if no relevant background was provided and charges are unlikely to trigger notable collateral consequences.
 
 TONE: Supportive, clear, and empowering. You're helping someone navigate a scary system. Frame all guidance as what is typical for this charge type, jurisdiction, and case stage — for example "For someone facing [charge] at [stage] in [state]..." Do NOT use phrases like "based on your specific situation" or "personalized to your case" — the guidance is calibrated to the charge type and stage, not to the individual's personal facts.
 
@@ -340,6 +353,7 @@ OUTPUT SIZE RULES — MUST FOLLOW TO AVOID TRUNCATION:
 - avoidActions: 4 items maximum
 - timeline: 5 items maximum
 - uncertainties: 3 items maximum
+- collateralConsequences: 4 items maximum
 - Keep each individual string value to 1-2 sentences maximum (3 sentences only for overview)
 - Prioritize the most important items in each array — do not pad arrays with obvious or generic content
 
@@ -394,6 +408,30 @@ BASIC CASE INFORMATION:
 - Case Stage: ${sanitizeInput(caseDetails.caseStage, 100)}
 - In Custody: ${sanitizeInput(caseDetails.custodyStatus, 100)}
 - Has Attorney: ${caseDetails.hasAttorney ? 'Yes' : 'No'}`;
+
+  // Background context for collateral consequences
+  const backgroundLines: string[] = [];
+  if (caseDetails.supervisionStatus && caseDetails.supervisionStatus !== 'none') {
+    backgroundLines.push(`Supervision status: ${caseDetails.supervisionStatus}`);
+  }
+  if (caseDetails.priorConvictions === true) {
+    backgroundLines.push('Prior convictions: Yes');
+  }
+  if (caseDetails.citizenshipStatus && caseDetails.citizenshipStatus !== 'prefer_not') {
+    backgroundLines.push(`Citizenship/immigration status: ${caseDetails.citizenshipStatus === 'non_citizen' ? 'Non-citizen (has immigration status to protect)' : 'U.S. citizen'}`);
+  }
+  if (caseDetails.hasMinorChildren === true) {
+    backgroundLines.push('Has minor children in care: Yes');
+  }
+  if (caseDetails.hasProfessionalLicense === true) {
+    backgroundLines.push('Holds a professional license: Yes');
+  }
+  if (caseDetails.hasHousingAssistance === true) {
+    backgroundLines.push('In public or subsidized housing: Yes');
+  }
+  if (backgroundLines.length > 0) {
+    prompt += `\n\nBACKGROUND / COLLATERAL RISK CONTEXT (use to populate collateralConsequences field — only flag risks that are genuinely likely given these background facts and the charges above):\n${backgroundLines.join('\n')}`;
+  }
 
   if (caseDetails.selectedConcerns && caseDetails.selectedConcerns.length > 0) {
     const concernsList = caseDetails.selectedConcerns.join(', ');
@@ -454,7 +492,7 @@ BASIC CASE INFORMATION:
   if (collateralBlock || (caseDetails.selectedConcerns && caseDetails.selectedConcerns.some(c =>
     ['housing', 'employment', 'finances', 'immigration', 'childcare', 'familyCare'].includes(c)
   ))) {
-    prompt += `\n\nCOLLATERAL CONSEQUENCES RESOURCE: When discussing collateral consequences (effects on housing, employment, benefits, voting, or immigration), include the Collateral Consequences Resource Center as a resource. Use this format in the resources array: { type: "national", description: "State-by-state database of collateral consequences, certificates of relief, and restoration of rights. Authoritative source for understanding what a specific conviction affects.", contact: "ccrcatlaw.org/resources", website: "https://ccrcatlaw.org/resources" }. Include this resource whenever the guidance covers collateral consequences or civil impacts of a criminal case.\n\nRECORD CLEARING SCREENER: When guidance mentions expungement, record sealing, record clearing, or collateral consequences that could be addressed through record relief, include a link to the Record Clearance Eligibility Screener in the relevant nextSteps or resources: [Check your eligibility for record clearing](/support/reputation/eligibility). This screener is a decision-tree tool that takes about one minute. Include it whenever post-conviction record relief is relevant to the case stage.`;
+    prompt += `\n\nCOLLATERAL CONSEQUENCES RESOURCE: When discussing collateral consequences (effects on housing, employment, benefits, voting, or immigration), include the Collateral Consequences Resource Center as a resource. Use this format in the resources array: { type: "national", description: "State-by-state database of collateral consequences, certificates of relief, and restoration of rights. Authoritative source for understanding what a specific conviction affects.", contact: "ccrcatlaw.org", website: "https://ccrcatlaw.org" }. Include this resource whenever the guidance covers collateral consequences or civil impacts of a criminal case.\n\nRECORD CLEARING SCREENER: When guidance mentions expungement, record sealing, record clearing, or collateral consequences that could be addressed through record relief, include a link to the Record Clearance Eligibility Screener in the relevant nextSteps or resources: [Check your eligibility for record clearing](/support/reputation/eligibility). This screener is a decision-tree tool that takes about one minute. Include it whenever post-conviction record relief is relevant to the case stage.`;
   }
 
   if (chargesUnknown) {
@@ -498,6 +536,12 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     selectedConcerns: caseDetails.selectedConcerns,
     civilUrgency: caseDetails.civilUrgency,
     language: caseDetails.language,
+    supervisionStatus: caseDetails.supervisionStatus,
+    priorConvictions: caseDetails.priorConvictions,
+    citizenshipStatus: caseDetails.citizenshipStatus,
+    hasMinorChildren: caseDetails.hasMinorChildren,
+    hasProfessionalLicense: caseDetails.hasProfessionalLicense,
+    hasHousingAssistance: caseDetails.hasHousingAssistance,
   }));
   return hash.digest('hex');
 }

@@ -98,6 +98,12 @@ interface EnhancedGuidanceResult {
     explanation: string;
     category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
   }>;
+  collateralConsequences?: Array<{
+    category: string;
+    consequence: string;
+    timing: string;
+    actionNote: string;
+  }>;
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -458,6 +464,7 @@ export default function CaseGuidance() {
           validation: guidance.validation,
           chargeClassifications: guidance.chargeClassifications,
           mockQA: guidance.mockQA,
+          collateralConsequences: guidance.collateralConsequences,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges

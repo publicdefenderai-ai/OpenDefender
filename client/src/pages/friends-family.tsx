@@ -545,6 +545,87 @@ export default function FriendsFamily() {
         </div>
       </section>
 
+      {/* What else may be at risk */}
+      <section className="py-14 bg-background border-b border-border/60">
+        <div className="max-w-5xl mx-auto px-4">
+          <ScrollReveal>
+            <div className="flex items-start gap-3 mb-6">
+              <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+              <div>
+                <h2 className="text-xl font-bold text-foreground mb-1">What else may be at risk</h2>
+                <p className="text-sm text-muted-foreground">A conviction can trigger consequences that go far beyond the sentence itself. These are called collateral consequences — and they can affect your family member's job, housing, benefits, immigration status, and more. The most important time to raise these with an attorney is before any plea decision.</p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <ScrollReveal delay={0.1}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">Employment and professional licenses</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">A conviction can result in job loss, background-check failures, or automatic suspension of a professional license (nursing, teaching, commercial driver's license, contractor, etc.). These consequences can happen even before sentencing is complete.</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">Public and subsidized housing</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Many public housing authorities require lease termination after certain convictions. This can affect the entire household, not just the person convicted. Private landlords may also legally refuse to rent to someone with a criminal record.</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">Government benefits (SNAP, SSI, Medicaid)</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Some federal benefit programs restrict eligibility after certain drug felony convictions. The impact varies by state and benefit type, but can affect the whole household's access to food assistance and healthcare.</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">Immigration status</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Even a misdemeanor conviction can trigger deportation, denial of citizenship, or loss of visa eligibility for non-citizens. This risk can apply to a guilty plea even before trial. An immigration attorney should review the case early.</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.5}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">Child custody and family court</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Charges involving violence, drugs, or children can trigger CPS involvement or be used as grounds to modify custody in family court. These proceedings can run parallel to the criminal case with their own deadlines.</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.6}>
+              <Card className="h-full">
+                <CardContent className="p-4">
+                  <p className="font-semibold text-sm text-foreground mb-1">Firearms, voting, and civil rights</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">A felony conviction typically results in loss of the right to own or possess a firearm under federal law. In many states, voting rights are temporarily suspended during incarceration or parole. Some states restore these rights automatically; others require a separate application.</p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.7}>
+            <div className="mt-5 flex items-start gap-3 p-4 bg-amber-50 dark:bg-amber-900/15 border border-amber-200 dark:border-amber-800/40 rounded-lg">
+              <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-amber-800 dark:text-amber-200">
+                <strong>These consequences are sometimes called "invisible punishments"</strong> — they are not announced in court and the attorney handling the criminal case may not raise them unless asked. The best time to address them is before any plea decision is made.{' '}
+                <Link href="/collateral-consequences" className="underline font-semibold hover:text-amber-900 dark:hover:text-amber-100">Learn more on our Collateral Consequences page.</Link>
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Important Warnings */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4">

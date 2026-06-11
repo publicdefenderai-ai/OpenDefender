@@ -34,6 +34,12 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     consentGiven: false,
     selectedConcerns: [] as string[],
     civilUrgency: {} as Record<string, 'none' | 'active' | 'emergency'>,
+    supervisionStatus: "" as string,
+    priorConvictions: null as boolean | null,
+    citizenshipStatus: "" as string,
+    hasMinorChildren: null as boolean | null,
+    hasProfessionalLicense: null as boolean | null,
+    hasHousingAssistance: null as boolean | null,
   });
 
   const URGENCY_CONCERN_IDS = ['housing', 'employment', 'childcare', 'familyCare', 'immigration'];
@@ -46,6 +52,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     { title: t('legalGuidance.qaFlow.steps.jurisdiction'),      component: JurisdictionStep },
     { title: t('legalGuidance.qaFlow.steps.caseDetails'),       component: CaseDetailsStep },
     { title: t('legalGuidance.qaFlow.steps.status'),            component: StatusStep },
+    { title: 'Your Situation',                                   component: BackgroundStep },
     { title: t('legalGuidance.qaFlow.steps.additionalDetails'), component: AdditionalDetailsStep },
   ];
 
@@ -862,6 +869,161 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
           disabled={!formData.caseStage || !formData.custodyStatus}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-continue-status"
+        >
+          Continue <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
+  return (
+    <div className="space-y-6">
+      <div>
+        <h3 className="text-lg font-semibold mb-1">Your Situation</h3>
+        <p className="text-sm text-muted-foreground mb-5">
+          These questions help flag hidden consequences many people don't know about — like effects on housing, benefits, or professional licenses. All answers are private and completely optional.
+        </p>
+
+        <div className="space-y-4">
+          <div>
+            <Label className="mb-1.5 block">Are you currently on probation or parole?</Label>
+            <Select
+              value={formData.supervisionStatus || ""}
+              onValueChange={(v) => updateFormData("supervisionStatus", v)}
+            >
+              <SelectTrigger data-testid="select-supervision-status">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="none">No</SelectItem>
+                <SelectItem value="probation">Yes — probation</SelectItem>
+                <SelectItem value="parole">Yes — parole</SelectItem>
+                <SelectItem value="both">Yes — both</SelectItem>
+                <SelectItem value="unsure">Not sure</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label className="mb-1.5 block">Have you had prior convictions?</Label>
+            <Select
+              value={formData.priorConvictions === true ? "yes" : formData.priorConvictions === false ? "no" : ""}
+              onValueChange={(v) => {
+                if (v === "yes") updateFormData("priorConvictions", true);
+                else if (v === "no") updateFormData("priorConvictions", false);
+                else updateFormData("priorConvictions", null);
+              }}
+            >
+              <SelectTrigger data-testid="select-prior-convictions">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="yes">Yes</SelectItem>
+                <SelectItem value="no">No</SelectItem>
+                <SelectItem value="unsure">Not sure / prefer not to say</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label className="mb-1.5 block">What is your citizenship or immigration status?</Label>
+            <Select
+              value={formData.citizenshipStatus || ""}
+              onValueChange={(v) => updateFormData("citizenshipStatus", v)}
+            >
+              <SelectTrigger data-testid="select-citizenship-status">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="citizen">U.S. citizen</SelectItem>
+                <SelectItem value="non_citizen">Non-citizen (green card, visa, DACA, etc.)</SelectItem>
+                <SelectItem value="prefer_not">Prefer not to say</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label className="mb-1.5 block">Do you have minor children in your care?</Label>
+            <Select
+              value={formData.hasMinorChildren === true ? "yes" : formData.hasMinorChildren === false ? "no" : ""}
+              onValueChange={(v) => {
+                if (v === "yes") updateFormData("hasMinorChildren", true);
+                else if (v === "no") updateFormData("hasMinorChildren", false);
+                else updateFormData("hasMinorChildren", null);
+              }}
+            >
+              <SelectTrigger data-testid="select-minor-children">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="yes">Yes</SelectItem>
+                <SelectItem value="no">No</SelectItem>
+                <SelectItem value="prefer_not">Prefer not to say</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label className="mb-1.5 block">
+              Do you hold a professional license?{" "}
+              <span className="text-xs text-muted-foreground font-normal">(nursing, teaching, CDL, contractor, etc.)</span>
+            </Label>
+            <Select
+              value={formData.hasProfessionalLicense === true ? "yes" : formData.hasProfessionalLicense === false ? "no" : ""}
+              onValueChange={(v) => {
+                if (v === "yes") updateFormData("hasProfessionalLicense", true);
+                else if (v === "no") updateFormData("hasProfessionalLicense", false);
+                else updateFormData("hasProfessionalLicense", null);
+              }}
+            >
+              <SelectTrigger data-testid="select-professional-license">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="yes">Yes</SelectItem>
+                <SelectItem value="no">No</SelectItem>
+                <SelectItem value="prefer_not">Prefer not to say</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label className="mb-1.5 block">Are you in public or subsidized housing?</Label>
+            <Select
+              value={formData.hasHousingAssistance === true ? "yes" : formData.hasHousingAssistance === false ? "no" : ""}
+              onValueChange={(v) => {
+                if (v === "yes") updateFormData("hasHousingAssistance", true);
+                else if (v === "no") updateFormData("hasHousingAssistance", false);
+                else updateFormData("hasHousingAssistance", null);
+              }}
+            >
+              <SelectTrigger data-testid="select-housing-assistance">
+                <SelectValue placeholder="Select an option" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="yes">Yes</SelectItem>
+                <SelectItem value="no">No</SelectItem>
+                <SelectItem value="prefer_not">Prefer not to say</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex space-x-4">
+        <Button
+          variant="outline"
+          onClick={onPrev}
+          data-testid="button-prev-background"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" /> Back
+        </Button>
+        <Button
+          onClick={onNext}
+          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+          data-testid="button-continue-background"
         >
           Continue <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
