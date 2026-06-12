@@ -1,11 +1,11 @@
 {
   "state": "NY",
-  "generatedAt": "2026-06-12T05:34:00.814Z",
+  "generatedAt": "2026-06-12T05:45:38.175Z",
   "source": "NY Open Legislation API (legislation.nysenate.gov)",
   "stats": {
     "total": 118,
-    "verified": 0,
-    "apiFailed": 0,
+    "verified": 107,
+    "apiFailed": 7,
     "skipped": 4
   },
   "entries": [
@@ -15,10 +15,10 @@
       "lawId": "PEN",
       "section": "125.27",
       "citation": "N.Y. Penal Law § 125.27",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.27: \"Murder in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.27",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-murder-in-the-second-degree",
@@ -26,10 +26,10 @@
       "lawId": "PEN",
       "section": "125.25",
       "citation": "N.Y. Penal Law § 125.25",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.25: \"Murder in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.25",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-voluntary-manslaughter",
@@ -37,10 +37,10 @@
       "lawId": "PEN",
       "section": "125.20",
       "citation": "N.Y. Penal Law § 125.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.20: \"Manslaughter in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-involuntary-manslaughter",
@@ -48,10 +48,10 @@
       "lawId": "PEN",
       "section": "125.15",
       "citation": "N.Y. Penal Law § 125.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.15: \"Manslaughter in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-criminally-negligent-homicide",
@@ -59,10 +59,10 @@
       "lawId": "PEN",
       "section": "125.10",
       "citation": "N.Y. Penal Law § 125.10",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.10: \"Criminally negligent homicide\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.10",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-vehicular-homicide",
@@ -70,10 +70,10 @@
       "lawId": "PEN",
       "section": "125.12",
       "citation": "N.Y. Penal Law § 125.12",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.12: \"Vehicular manslaughter in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.12",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-felony-murder",
@@ -81,10 +81,10 @@
       "lawId": "PEN",
       "section": "125.25",
       "citation": "N.Y. Penal Law § 125.25(3)",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 125.25: \"Murder in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.25",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-assault-in-the-first-degree",
@@ -92,10 +92,10 @@
       "lawId": "PEN",
       "section": "120.10",
       "citation": "N.Y. Penal Law § 120.10",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.10: \"Assault in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.10",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-assault-in-the-second-degree",
@@ -103,10 +103,10 @@
       "lawId": "PEN",
       "section": "120.05",
       "citation": "N.Y. Penal Law § 120.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.05: \"Assault in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-assault-in-the-third-degree",
@@ -114,10 +114,10 @@
       "lawId": "PEN",
       "section": "120.00",
       "citation": "N.Y. Penal Law § 120.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.00: \"Assault in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-aggravated-assault",
@@ -125,10 +125,10 @@
       "lawId": "PEN",
       "section": "120.11",
       "citation": "N.Y. Penal Law § 120.11",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.11: \"Aggravated assault upon a police officer or a peace officer\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.11",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-assault-with-deadly-weapon",
@@ -136,10 +136,10 @@
       "lawId": "PEN",
       "section": "120.10",
       "citation": "N.Y. Penal Law § 120.10(1)",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.10: \"Assault in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.10",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-assault-on-peace-officer",
@@ -147,10 +147,10 @@
       "lawId": "PEN",
       "section": "120.08",
       "citation": "N.Y. Penal Law § 120.08",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.08: \"Assault on a peace officer, police officer, firefighter or emergency medical services professional\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.08",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-menacing",
@@ -158,10 +158,10 @@
       "lawId": "PEN",
       "section": "120.15",
       "citation": "N.Y. Penal Law § 120.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.15: \"Menacing in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-rape-in-the-first-degree",
@@ -169,10 +169,10 @@
       "lawId": "PEN",
       "section": "130.35",
       "citation": "N.Y. Penal Law § 130.35",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 130.35: \"Rape in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/130.35",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-rape-in-the-second-degree",
@@ -180,10 +180,10 @@
       "lawId": "PEN",
       "section": "130.30",
       "citation": "N.Y. Penal Law § 130.30",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 130.30: \"Rape in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/130.30",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-sexual-assault-in-the-third-degree",
@@ -191,10 +191,10 @@
       "lawId": "PEN",
       "section": "130.25",
       "citation": "N.Y. Penal Law § 130.25",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 130.25: \"Rape in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/130.25",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-child-sexual-abuse",
@@ -202,10 +202,10 @@
       "lawId": "PEN",
       "section": "130.65",
       "citation": "N.Y. Penal Law § 130.65",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 130.65: \"Sexual abuse in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/130.65",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-sexual-exploitation-of-minor",
@@ -213,10 +213,10 @@
       "lawId": "PEN",
       "section": "263.15",
       "citation": "N.Y. Penal Law § 263.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 263.15: \"Promoting a sexual performance by a child\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/263.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-grand-theft-in-the-first-degree",
@@ -224,10 +224,10 @@
       "lawId": "PEN",
       "section": "155.42",
       "citation": "N.Y. Penal Law § 155.42",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 155.42: \"Grand larceny in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/155.42",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-grand-theft-in-the-second-degree",
@@ -235,10 +235,10 @@
       "lawId": "PEN",
       "section": "155.40",
       "citation": "N.Y. Penal Law § 155.40",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 155.40: \"Grand larceny in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/155.40",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-theft-by-receiving",
@@ -246,10 +246,10 @@
       "lawId": "PEN",
       "section": "165.50",
       "citation": "N.Y. Penal Law § 165.50",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 165.50: \"Criminal possession of stolen property in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.50",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-identity-theft",
@@ -257,10 +257,10 @@
       "lawId": "PEN",
       "section": "190.78",
       "citation": "N.Y. Penal Law § 190.78",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 190.78: \"Identity theft in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.78",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-credit-card-fraud",
@@ -268,10 +268,10 @@
       "lawId": "PEN",
       "section": "190.80",
       "citation": "N.Y. Penal Law § 190.80",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 190.80: \"Identity theft in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.80",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-embezzlement",
@@ -279,10 +279,10 @@
       "lawId": "PEN",
       "section": "155.05",
       "citation": "N.Y. Penal Law § 155.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 155.05: \"Larceny; defined\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/155.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-burglary-in-the-first-degree",
@@ -290,10 +290,10 @@
       "lawId": "PEN",
       "section": "140.30",
       "citation": "N.Y. Penal Law § 140.30",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 140.30: \"Burglary in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.30",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-burglary-in-the-second-degree",
@@ -301,10 +301,10 @@
       "lawId": "PEN",
       "section": "140.25",
       "citation": "N.Y. Penal Law § 140.25",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 140.25: \"Burglary in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.25",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-burglary-in-the-third-degree",
@@ -312,10 +312,10 @@
       "lawId": "PEN",
       "section": "140.20",
       "citation": "N.Y. Penal Law § 140.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 140.20: \"Burglary in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-auto-burglary",
@@ -323,10 +323,10 @@
       "lawId": "PEN",
       "section": "140.15",
       "citation": "N.Y. Penal Law § 140.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 140.15: \"Criminal trespass in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-robbery-in-the-first-degree",
@@ -334,10 +334,10 @@
       "lawId": "PEN",
       "section": "160.15",
       "citation": "N.Y. Penal Law § 160.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 160.15: \"Robbery in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/160.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-robbery-in-the-second-degree",
@@ -345,10 +345,10 @@
       "lawId": "PEN",
       "section": "160.10",
       "citation": "N.Y. Penal Law § 160.10",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 160.10: \"Robbery in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/160.10",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-robbery-in-the-third-degree",
@@ -356,10 +356,10 @@
       "lawId": "PEN",
       "section": "160.05",
       "citation": "N.Y. Penal Law § 160.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 160.05: \"Robbery in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/160.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-bank-robbery",
@@ -367,10 +367,10 @@
       "lawId": "PEN",
       "section": "160.15",
       "citation": "N.Y. Penal Law § 160.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 160.15: \"Robbery in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/160.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-possession-of-controlled-substance",
@@ -378,10 +378,10 @@
       "lawId": "PEN",
       "section": "220.03",
       "citation": "N.Y. Penal Law § 220.03",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.03: \"Criminal possession of a controlled substance in the seventh degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.03",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-possession-with-intent-to-distribute",
@@ -389,10 +389,10 @@
       "lawId": "PEN",
       "section": "220.16",
       "citation": "N.Y. Penal Law § 220.16",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.16: \"Criminal possession of a controlled substance in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.16",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-distribution-of-controlled-substance",
@@ -400,10 +400,10 @@
       "lawId": "PEN",
       "section": "220.31",
       "citation": "N.Y. Penal Law § 220.31",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.31: \"Criminal sale of a controlled substance in the fifth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.31",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-manufacturing-controlled-substance",
@@ -411,10 +411,10 @@
       "lawId": "PEN",
       "section": "220.73",
       "citation": "N.Y. Penal Law § 220.73",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.73: \"Unlawful manufacture of methamphetamine in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.73",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-drug-trafficking",
@@ -422,10 +422,10 @@
       "lawId": "PEN",
       "section": "220.77",
       "citation": "N.Y. Penal Law § 220.77",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.77: \"Operating as a major trafficker\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.77",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-possession-of-drug-paraphernalia",
@@ -433,10 +433,10 @@
       "lawId": "PEN",
       "section": "220.50",
       "citation": "N.Y. Penal Law § 220.50",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.50: \"Criminally using drug paraphernalia in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.50",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-maintaining-drug-house",
@@ -445,9 +445,9 @@
       "section": "221.77",
       "citation": "N.Y. Penal Law § 221.77",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/221.77",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-unlawful-carrying-of-weapon",
@@ -455,10 +455,10 @@
       "lawId": "PEN",
       "section": "265.01",
       "citation": "N.Y. Penal Law § 265.01",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 265.01: \"Criminal possession of a weapon in the fourth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-felon-in-possession-of-firearm",
@@ -466,10 +466,10 @@
       "lawId": "PEN",
       "section": "265.01",
       "citation": "N.Y. Penal Law § 265.01",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 265.01: \"Criminal possession of a weapon in the fourth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-discharge-of-firearm-in-city",
@@ -477,10 +477,10 @@
       "lawId": "PEN",
       "section": "265.35",
       "citation": "N.Y. Penal Law § 265.35",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 265.35: \"Prohibited use of weapons\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.35",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-possession-of-prohibited-weapon",
@@ -488,10 +488,10 @@
       "lawId": "PEN",
       "section": "265.01",
       "citation": "N.Y. Penal Law § 265.01",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 265.01: \"Criminal possession of a weapon in the fourth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.01",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-wire-fraud",
@@ -500,9 +500,9 @@
       "section": "346.12",
       "citation": "N.Y. Penal Law § 346.12",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/346.12",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-mail-fraud",
@@ -511,9 +511,9 @@
       "section": "235.45",
       "citation": "N.Y. Penal Law § 235.45",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/235.45",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-check-fraud",
@@ -521,10 +521,10 @@
       "lawId": "PEN",
       "section": "190.05",
       "citation": "N.Y. Penal Law § 190.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 190.05: \"Issuing a bad check\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/190.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-insurance-fraud",
@@ -532,10 +532,10 @@
       "lawId": "PEN",
       "section": "176.15",
       "citation": "N.Y. Penal Law § 176.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 176.15: \"Insurance fraud in the fourth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/176.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-tax-fraud",
@@ -543,10 +543,10 @@
       "lawId": "TAX",
       "section": "1801",
       "citation": "N.Y. Tax Law § 1801",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Tax Law § 1801: \"Tax fraud acts\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/TAX/1801",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-forgery",
@@ -554,10 +554,10 @@
       "lawId": "PEN",
       "section": "170.05",
       "citation": "N.Y. Penal Law § 170.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 170.05: \"Forgery in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/170.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-computer-fraud",
@@ -565,10 +565,10 @@
       "lawId": "PEN",
       "section": "156.05",
       "citation": "N.Y. Penal Law § 156.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 156.05: \"Unauthorized use of a computer\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/156.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-disorderly-conduct",
@@ -576,10 +576,10 @@
       "lawId": "PEN",
       "section": "240.20",
       "citation": "N.Y. Penal Law § 240.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.20: \"Disorderly conduct\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-public-intoxication",
@@ -587,10 +587,10 @@
       "lawId": "PEN",
       "section": "240.40",
       "citation": "N.Y. Penal Law § 240.40",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.40: \"Appearance in public under the influence of narcotics or a drug other than alcohol\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.40",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-trespassing",
@@ -598,10 +598,10 @@
       "lawId": "PEN",
       "section": "140.05",
       "citation": "N.Y. Penal Law § 140.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 140.05: \"Trespass\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-vandalism",
@@ -609,10 +609,10 @@
       "lawId": "PEN",
       "section": "145.00",
       "citation": "N.Y. Penal Law § 145.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 145.00: \"Criminal mischief in the fourth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/145.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-loitering",
@@ -620,10 +620,10 @@
       "lawId": "PEN",
       "section": "240.35",
       "citation": "N.Y. Penal Law § 240.35",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.35: \"Loitering\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.35",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-dui-first-offense",
@@ -631,10 +631,10 @@
       "lawId": "VAT",
       "section": "1192",
       "citation": "N.Y. Veh. & Traf. Law § 1192",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 1192: \"Operating a motor vehicle while under the influence of alcohol or drugs\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/1192",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-dui-second-offense",
@@ -642,10 +642,10 @@
       "lawId": "VAT",
       "section": "1192",
       "citation": "N.Y. Veh. & Traf. Law § 1192",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 1192: \"Operating a motor vehicle while under the influence of alcohol or drugs\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/1192",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-dui-third-offense",
@@ -653,10 +653,10 @@
       "lawId": "VAT",
       "section": "1192",
       "citation": "N.Y. Veh. & Traf. Law § 1192",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 1192: \"Operating a motor vehicle while under the influence of alcohol or drugs\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/1192",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-reckless-driving",
@@ -664,10 +664,10 @@
       "lawId": "VAT",
       "section": "1212",
       "citation": "N.Y. Veh. & Traf. Law § 1212",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 1212: \"Reckless driving\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/1212",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-hit-and-run",
@@ -675,10 +675,10 @@
       "lawId": "VAT",
       "section": "600",
       "citation": "N.Y. Veh. & Traf. Law § 600",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 600: \"Leaving scene of an incident without reporting\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/600",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-theft-of-services",
@@ -686,10 +686,10 @@
       "lawId": "PEN",
       "section": "165.15",
       "citation": "N.Y. Penal Law § 165.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 165.15: \"Theft of services\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-petit-larceny",
@@ -697,10 +697,10 @@
       "lawId": "PEN",
       "section": "155.25",
       "citation": "N.Y. Penal Law § 155.25",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 155.25: \"Petit larceny\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/155.25",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-aggravated-unlicensed-operation",
@@ -708,10 +708,10 @@
       "lawId": "VAT",
       "section": "511",
       "citation": "N.Y. Veh. & Traf. Law § 511",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 511: \"Operation while license or privilege is suspended or revoked; aggravated unlicensed operation\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/511",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-criminal-contempt",
@@ -719,10 +719,10 @@
       "lawId": "PEN",
       "section": "215.50",
       "citation": "N.Y. Penal Law § 215.50",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 215.50: \"Criminal contempt in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/215.50",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-criminal-possession-of-stolen-property",
@@ -730,10 +730,10 @@
       "lawId": "PEN",
       "section": "165.40",
       "citation": "N.Y. Penal Law § 165.40",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 165.40: \"Criminal possession of stolen property in the fifth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.40",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-harassment",
@@ -741,10 +741,10 @@
       "lawId": "PEN",
       "section": "240.26",
       "citation": "N.Y. Penal Law § 240.26",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.26: \"Harassment in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.26",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-marijuana-unlawful-possession",
@@ -752,10 +752,10 @@
       "lawId": "PEN",
       "section": "222.05",
       "citation": "N.Y. Penal Law § 222.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 222.05: \"Personal use of cannabis\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/222.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-turnstile-jumping",
@@ -763,10 +763,10 @@
       "lawId": "PEN",
       "section": "165.15",
       "citation": "N.Y. Penal Law § 165.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 165.15: \"Theft of services\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/165.15",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-open-container",
@@ -774,10 +774,10 @@
       "lawId": "VAT",
       "section": "1227",
       "citation": "N.Y. Veh. & Traf. Law § 1227",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 1227: \"Consumption or possession of alcoholic beverages in certain motor vehicles\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/1227",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-failure-to-appear",
@@ -785,10 +785,10 @@
       "lawId": "PEN",
       "section": "215.59",
       "citation": "N.Y. Penal Law § 215.59",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 215.59: \"Bail jumping and failing to respond to an appearance ticket; defense\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/215.59",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-probation-violation",
@@ -797,9 +797,9 @@
       "section": "410.70",
       "citation": "N.Y. Penal Law § 410.70",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/410.70",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-resisting-arrest",
@@ -807,10 +807,10 @@
       "lawId": "PEN",
       "section": "205.30",
       "citation": "N.Y. Penal Law § 205.30",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 205.30: \"Resisting arrest\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/205.30",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-protective-order-violation",
@@ -818,10 +818,10 @@
       "lawId": "PEN",
       "section": "215.51",
       "citation": "N.Y. Penal Law § 215.51",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 215.51: \"Criminal contempt in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/215.51",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-open-container-violation",
@@ -830,9 +830,9 @@
       "section": "1227-a",
       "citation": "N.Y. Veh. & Traf. Law § 1227-a",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/1227-a",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-minor-in-possession",
@@ -840,10 +840,10 @@
       "lawId": "ABC",
       "section": "65-c",
       "citation": "N.Y. Alco. Bev. Cont. Law § 65-c",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Alco. Bev. Cont. Law § 65-c: \"Unlawful possession of an alcoholic beverage with the intent to consume by persons under the age of twenty-one years\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/ABC/65-c",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-false-info-to-police",
@@ -851,10 +851,10 @@
       "lawId": "PEN",
       "section": "240.50",
       "citation": "N.Y. Penal Law § 240.50",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.50: \"Falsely reporting an incident in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.50",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-harassment-stalking",
@@ -862,10 +862,10 @@
       "lawId": "PEN",
       "section": "120.45",
       "citation": "N.Y. Penal Law § 120.45",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 120.45: \"Stalking in the fourth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/120.45",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-contempt-of-court",
@@ -873,10 +873,10 @@
       "lawId": "JUD",
       "section": "750",
       "citation": "N.Y. Jud. Law § 750",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Jud. Law § 750: \"Power of courts to punish for criminal contempts\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/JUD/750",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-solicitation",
@@ -884,10 +884,10 @@
       "lawId": "PEN",
       "section": "230.00",
       "citation": "N.Y. Penal Law § 230.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 230.00: \"Prostitution\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/230.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-driving-without-insurance",
@@ -895,10 +895,10 @@
       "lawId": "VAT",
       "section": "319",
       "citation": "N.Y. Veh. & Traf. Law § 319",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 319: \"Penalties\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/319",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-expired-registration",
@@ -906,10 +906,10 @@
       "lawId": "VAT",
       "section": "401",
       "citation": "N.Y. Veh. & Traf. Law § 401",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 401: \"Registration of motor vehicles; fees; renewals\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/401",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-expired-inspection",
@@ -917,10 +917,10 @@
       "lawId": "VAT",
       "section": "306",
       "citation": "N.Y. Veh. & Traf. Law § 306",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 306: \"Enforcement\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/306",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-failure-to-pay-child-support",
@@ -928,10 +928,10 @@
       "lawId": "PEN",
       "section": "260.05",
       "citation": "N.Y. Penal Law § 260.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 260.05: \"Non-support of a child in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/260.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-noise-violation",
@@ -939,10 +939,10 @@
       "lawId": "PEN",
       "section": "240.20",
       "citation": "N.Y. Penal Law § 240.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.20: \"Disorderly conduct\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-indecent-exposure",
@@ -950,10 +950,10 @@
       "lawId": "PEN",
       "section": "245.01",
       "citation": "N.Y. Penal Law § 245.01",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 245.01: \"Exposure of a person\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/245.01",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-fake-id",
@@ -961,10 +961,10 @@
       "lawId": "PEN",
       "section": "170.25",
       "citation": "N.Y. Penal Law § 170.25",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 170.25: \"Criminal possession of a forged instrument in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/170.25",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-animal-at-large",
@@ -972,10 +972,10 @@
       "lawId": "AGM",
       "section": "121",
       "citation": "N.Y. Agric. & Mkts. Law § 121",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Agric. & Mkts. Law § 121: \"Night quarantine\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/AGM/121",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-animal-cruelty-misdemeanor",
@@ -983,10 +983,10 @@
       "lawId": "AGM",
       "section": "353",
       "citation": "N.Y. Agric. & Mkts. Law § 353",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Agric. & Mkts. Law § 353: \"Overdriving, torturing and injuring animals; failure to provide proper sustenance\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/AGM/353",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-illegal-camping",
@@ -994,10 +994,10 @@
       "lawId": "PEN",
       "section": "240.37",
       "citation": "N.Y. Penal Law § 240.37",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.37: \"Loitering for the purpose of engaging in a prostitution offense\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.37",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-panhandling",
@@ -1005,10 +1005,10 @@
       "lawId": "PEN",
       "section": "240.35",
       "citation": "N.Y. Penal Law § 240.35",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.35: \"Loitering\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.35",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-curfew-violation",
@@ -1027,10 +1027,10 @@
       "lawId": "PEN",
       "section": "140.10",
       "citation": "N.Y. Penal Law § 140.10",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 140.10: \"Criminal trespass in the third degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/140.10",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-defective-vehicle-equipment",
@@ -1038,10 +1038,10 @@
       "lawId": "VAT",
       "section": "375",
       "citation": "N.Y. Veh. & Traf. Law § 375",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Veh. & Traf. Law § 375: \"Equipment\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/VAT/375",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-truancy",
@@ -1049,10 +1049,10 @@
       "lawId": "EDN",
       "section": "3212",
       "citation": "N.Y. Educ. Law § 3212",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Educ. Law § 3212: \"Definition of persons in parental relation and their duties; duties of certain other persons\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/EDN/3212",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-littering",
@@ -1060,10 +1060,10 @@
       "lawId": "ENV",
       "section": "71-2505",
       "citation": "N.Y. Envtl. Conserv. Law § 71-2505",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Envtl. Conserv. Law § 71-2505: \"Enforcement\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/ENV/71-2505",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-illegal-fireworks",
@@ -1072,9 +1072,9 @@
       "section": "405",
       "citation": "N.Y. Penal Law § 405",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/405",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-alcohol-in-park",
@@ -1093,10 +1093,10 @@
       "lawId": "ENV",
       "section": "71-0925",
       "citation": "N.Y. Envtl. Conserv. Law § 71-0925",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Envtl. Conserv. Law § 71-0925: \"Civil penalties\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/ENV/71-0925",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-criminal-attempt",
@@ -1104,10 +1104,10 @@
       "lawId": "PEN",
       "section": "110.00",
       "citation": "N.Y. Penal Law § 110.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 110.00: \"Attempt to commit a crime\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/110.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-conspiracy",
@@ -1115,10 +1115,10 @@
       "lawId": "PEN",
       "section": "105.00",
       "citation": "N.Y. Penal Law § 105.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 105.00: \"Conspiracy in the sixth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/105.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-aiding-and-abetting",
@@ -1126,10 +1126,10 @@
       "lawId": "PEN",
       "section": "20.00",
       "citation": "N.Y. Penal Law § 20.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 20.00: \"Criminal liability for conduct of another\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/20.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-accessory-after-the-fact",
@@ -1137,10 +1137,10 @@
       "lawId": "PEN",
       "section": "205.50",
       "citation": "N.Y. Penal Law § 205.50",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 205.50: \"Hindering prosecution; definition of term\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/205.50",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-attempted-murder",
@@ -1148,10 +1148,10 @@
       "lawId": "PEN",
       "section": "110.00",
       "citation": "N.Y. Penal Law §§ 110.00, 125.25",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 110.00: \"Attempt to commit a crime\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/110.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-attempted-robbery",
@@ -1159,10 +1159,10 @@
       "lawId": "PEN",
       "section": "110.00",
       "citation": "N.Y. Penal Law §§ 110.00, 160.15",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 110.00: \"Attempt to commit a crime\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/110.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-attempted-sexual-assault",
@@ -1170,10 +1170,10 @@
       "lawId": "PEN",
       "section": "110.00",
       "citation": "N.Y. Penal Law §§ 110.00, 130.35",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 110.00: \"Attempt to commit a crime\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/110.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-criminal-solicitation",
@@ -1181,10 +1181,10 @@
       "lawId": "PEN",
       "section": "100.00",
       "citation": "N.Y. Penal Law § 100.00",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 100.00: \"Criminal solicitation in the fifth degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/100.00",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-gang-enhancement",
@@ -1192,10 +1192,10 @@
       "lawId": "PEN",
       "section": "460.20",
       "citation": "N.Y. Penal Law § 460.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 460.20: \"Enterprise corruption\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/460.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-hate-crime-enhancement",
@@ -1203,10 +1203,10 @@
       "lawId": "PEN",
       "section": "485.05",
       "citation": "N.Y. Penal Law § 485.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 485.05: \"Hate crimes\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/485.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-recidivist-enhancement",
@@ -1214,10 +1214,10 @@
       "lawId": "PEN",
       "section": "70.08",
       "citation": "N.Y. Penal Law § 70.08",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 70.08: \"Sentence of imprisonment for persistent violent felony offender; criteria\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/70.08",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-firearm-in-felony-enhancement",
@@ -1225,10 +1225,10 @@
       "lawId": "PEN",
       "section": "265.09",
       "citation": "N.Y. Penal Law § 265.09",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 265.09: \"Criminal use of a firearm in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.09",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-drug-school-zone-enhancement",
@@ -1236,10 +1236,10 @@
       "lawId": "PEN",
       "section": "220.44",
       "citation": "N.Y. Penal Law § 220.44",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.44: \"Criminal sale of a controlled substance in or near school grounds\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.44",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-rico-organized-crime",
@@ -1247,10 +1247,10 @@
       "lawId": "PEN",
       "section": "460.20",
       "citation": "N.Y. Penal Law § 460.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 460.20: \"Enterprise corruption\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/460.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-money-laundering",
@@ -1258,10 +1258,10 @@
       "lawId": "PEN",
       "section": "470.20",
       "citation": "N.Y. Penal Law § 470.20",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 470.20: \"Money laundering in the first degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/470.20",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-juvenile-transfer-adult-court",
@@ -1270,9 +1270,9 @@
       "section": "325.2",
       "citation": "N.Y. Fam. Ct. Act § 325.2",
       "confidence": "medium",
-      "source": "dry-run — not verified",
+      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/FCA/325.2",
-      "apiStatus": "dry_run"
+      "apiStatus": "api_error"
     },
     {
       "chargeId": "ny-juvenile-firearm-possession",
@@ -1280,10 +1280,10 @@
       "lawId": "PEN",
       "section": "265.05",
       "citation": "N.Y. Penal Law § 265.05",
-      "confidence": "medium",
-      "source": "dry-run — not verified",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 265.05: \"Unlawful possession of weapons by persons under sixteen\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/265.05",
-      "apiStatus": "dry_run"
+      "apiStatus": "verified"
     }
   ]
 }
