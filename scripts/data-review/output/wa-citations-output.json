@@ -1,0 +1,44 @@
+[
+  {
+    "key": "wa-domestic-violence-assault",
+    "citation": "Wash. Rev. Code § 9A.36.041",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.36.041",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "wa-computer-fraud",
+    "citation": "Wash. Rev. Code § 9A.52.110",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.52.110",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "wa-public-intoxication",
+    "citation": "Wash. Rev. Code § 70.96A.120",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=70.96A.120",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "wa-probation-violation",
+    "citation": "Wash. Rev. Code § 9.94A.634",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=9.94A.634",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "wa-protective-order-violation",
+    "citation": "Wash. Rev. Code § 26.50.110",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=26.50.110",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "wa-fake-id",
+    "citation": "Wash. Rev. Code § 66.44.291",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=66.44.291",
+    "valid": true,
+    "upgraded": true
+  }
+]

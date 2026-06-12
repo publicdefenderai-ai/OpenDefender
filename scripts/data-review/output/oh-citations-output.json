@@ -1,0 +1,65 @@
+[
+  {
+    "key": "oh-fake-id",
+    "citation": "Ohio Rev. Code Ann. § 4301.633",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-panhandling",
+    "citation": "Ohio Rev. Code Ann. § 2917.11",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.11",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-trespass-after-warning",
+    "citation": "Ohio Rev. Code Ann. § 2911.21(A)(1)",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.21",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-illegal-fireworks",
+    "citation": "Ohio Rev. Code Ann. § 3743.65",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-3743.65",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-conspiracy",
+    "citation": "Ohio Rev. Code Ann. § 2923.01",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-criminal-solicitation",
+    "citation": "Ohio Rev. Code Ann. § 2923.03",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.03",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-firearm-in-felony-enhancement",
+    "citation": "Ohio Rev. Code Ann. § 2941.145",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-2941.145",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-money-laundering",
+    "citation": "Ohio Rev. Code Ann. § 1315.55",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-1315.55",
+    "valid": true,
+    "upgraded": true
+  },
+  {
+    "key": "oh-juvenile-delinquency-misdemeanor",
+    "citation": "Ohio Rev. Code Ann. § 2152.02(F)",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-2152.02",
+    "valid": true,
+    "upgraded": true
+  }
+]
