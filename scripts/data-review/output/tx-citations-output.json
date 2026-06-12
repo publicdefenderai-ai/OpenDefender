@@ -1,0 +1,736 @@
+{
+  "state": "TX",
+  "generatedAt": "2026-06-12T05:34:40.063Z",
+  "confidence": "medium",
+  "entryCount": 104,
+  "entries": [
+    {
+      "chargeId": "tx-murder-in-the-first-degree",
+      "citation": "Tex. Penal Code § 19.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.02 (Murder)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-murder-in-the-second-degree",
+      "citation": "Tex. Penal Code § 19.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-capital-murder",
+      "citation": "Tex. Penal Code § 19.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.03 (Capital Murder)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-voluntary-manslaughter",
+      "citation": "Tex. Penal Code § 19.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.04 (Manslaughter)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-involuntary-manslaughter",
+      "citation": "Tex. Penal Code § 19.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.04 (Manslaughter)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-criminally-negligent-homicide",
+      "citation": "Tex. Penal Code § 19.05",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.05",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-vehicular-homicide",
+      "citation": "Tex. Penal Code § 49.08",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 49.08 (Intoxication Manslaughter)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm"
+    },
+    {
+      "chargeId": "tx-felony-murder",
+      "citation": "Tex. Penal Code § 19.02(b)(3)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 19.02(b)(3)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm"
+    },
+    {
+      "chargeId": "tx-assault-in-the-first-degree",
+      "citation": "Tex. Penal Code § 22.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.02 (Aggravated Assault)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-assault-in-the-second-degree",
+      "citation": "Tex. Penal Code § 22.01(a)(1)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.01 (Assault)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-assault-in-the-third-degree",
+      "citation": "Tex. Penal Code § 22.01(a)(3)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.01 (Assault)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-aggravated-assault",
+      "citation": "Tex. Penal Code § 22.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-assault-with-deadly-weapon",
+      "citation": "Tex. Penal Code § 22.02(a)(2)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.02(a)(2)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-domestic-violence-assault",
+      "citation": "Tex. Penal Code § 22.01(a)(1)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.01 (Family Violence)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-assault-bodily-injury-family",
+      "citation": "Tex. Penal Code § 22.01(a)(1)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.01(a)(1) (Assault Bodily Injury, Family Violence)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-assault-on-peace-officer",
+      "citation": "Tex. Penal Code § 22.01(b)(1)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.01(b)(1)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-menacing",
+      "citation": "Tex. Penal Code § 22.07",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.07 (Terroristic Threat)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-terroristic-threat",
+      "citation": "Tex. Penal Code § 22.07",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.07",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-rape-in-the-first-degree",
+      "citation": "Tex. Penal Code § 22.021",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.021 (Aggravated Sexual Assault)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-sexual-assault-in-the-first-degree",
+      "citation": "Tex. Penal Code § 22.021",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.021",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-sexual-assault-in-the-second-degree",
+      "citation": "Tex. Penal Code § 22.011",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.011 (Sexual Assault)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-statutory-rape",
+      "citation": "Tex. Penal Code § 22.011(a)(2)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 22.011(a)(2)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm"
+    },
+    {
+      "chargeId": "tx-child-sexual-abuse",
+      "citation": "Tex. Penal Code § 21.11",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 21.11 (Indecency with a Child)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.21.htm"
+    },
+    {
+      "chargeId": "tx-sexual-exploitation-of-minor",
+      "citation": "Tex. Penal Code § 43.25",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 43.25",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.43.htm"
+    },
+    {
+      "chargeId": "tx-grand-theft-in-the-first-degree",
+      "citation": "Tex. Penal Code § 31.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 31.03 (Theft)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm"
+    },
+    {
+      "chargeId": "tx-petty-theft",
+      "citation": "Tex. Penal Code § 31.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 31.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm"
+    },
+    {
+      "chargeId": "tx-theft-under-2500",
+      "citation": "Tex. Penal Code § 31.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 31.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm"
+    },
+    {
+      "chargeId": "tx-shoplifting",
+      "citation": "Tex. Penal Code § 31.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 31.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm"
+    },
+    {
+      "chargeId": "tx-theft-by-receiving",
+      "citation": "Tex. Penal Code § 31.03(a)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 31.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm"
+    },
+    {
+      "chargeId": "tx-embezzlement",
+      "citation": "Tex. Penal Code § 31.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 31.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.31.htm"
+    },
+    {
+      "chargeId": "tx-identity-theft",
+      "citation": "Tex. Penal Code § 32.51",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 32.51",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm"
+    },
+    {
+      "chargeId": "tx-credit-card-fraud",
+      "citation": "Tex. Penal Code § 32.31",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 32.31",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm"
+    },
+    {
+      "chargeId": "tx-check-fraud",
+      "citation": "Tex. Penal Code § 32.41",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 32.41",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm"
+    },
+    {
+      "chargeId": "tx-forgery",
+      "citation": "Tex. Penal Code § 32.21",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 32.21",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm"
+    },
+    {
+      "chargeId": "tx-insurance-fraud",
+      "citation": "Tex. Penal Code § 35.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 35.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.35.htm"
+    },
+    {
+      "chargeId": "tx-computer-fraud",
+      "citation": "Tex. Penal Code § 33.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 33.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.33.htm"
+    },
+    {
+      "chargeId": "tx-wire-fraud",
+      "citation": "Tex. Penal Code § 32.46",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 32.46 (Securing Execution of Document by Deception; federal wire fraud = 18 U.S.C. § 1343)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm"
+    },
+    {
+      "chargeId": "tx-mail-fraud",
+      "citation": "Tex. Penal Code § 32.46",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 32.46 (state analog; federal mail fraud = 18 U.S.C. § 1341)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm"
+    },
+    {
+      "chargeId": "tx-tax-fraud",
+      "citation": "Tex. Tax Code § 171.212",
+      "confidence": "medium",
+      "source": "Texas Legislature — Tax Code § 171.212",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.171.htm"
+    },
+    {
+      "chargeId": "tx-burglary-in-the-first-degree",
+      "citation": "Tex. Penal Code § 30.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 30.02 (Burglary)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm"
+    },
+    {
+      "chargeId": "tx-burglary-in-the-second-degree",
+      "citation": "Tex. Penal Code § 30.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 30.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm"
+    },
+    {
+      "chargeId": "tx-residential-burglary",
+      "citation": "Tex. Penal Code § 30.02(a)(1)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 30.02(a)(1)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm"
+    },
+    {
+      "chargeId": "tx-commercial-burglary",
+      "citation": "Tex. Penal Code § 30.02(a)(2)",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 30.02(a)(2)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm"
+    },
+    {
+      "chargeId": "tx-auto-burglary",
+      "citation": "Tex. Penal Code § 30.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 30.04 (Burglary of Vehicles)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm"
+    },
+    {
+      "chargeId": "tx-robbery-in-the-first-degree",
+      "citation": "Tex. Penal Code § 29.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 29.03 (Aggravated Robbery)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.29.htm"
+    },
+    {
+      "chargeId": "tx-robbery-in-the-second-degree",
+      "citation": "Tex. Penal Code § 29.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 29.02 (Robbery)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.29.htm"
+    },
+    {
+      "chargeId": "tx-bank-robbery",
+      "citation": "18 U.S.C. § 2113",
+      "confidence": "medium",
+      "source": "Federal statute — bank robbery prosecuted under federal law",
+      "sourceUrl": "https://www.law.cornell.edu/uscode/text/18/2113"
+    },
+    {
+      "chargeId": "tx-carjacking",
+      "citation": "Tex. Penal Code § 29.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 29.03 (Aggravated Robbery)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.29.htm"
+    },
+    {
+      "chargeId": "tx-possession-of-controlled-substance",
+      "citation": "Tex. Health & Safety Code § 481.115",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.115",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-possession-with-intent-to-distribute",
+      "citation": "Tex. Health & Safety Code § 481.112",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.112",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-distribution-of-controlled-substance",
+      "citation": "Tex. Health & Safety Code § 481.112",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.112",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-manufacturing-controlled-substance",
+      "citation": "Tex. Health & Safety Code § 481.112",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.112",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-drug-trafficking",
+      "citation": "Tex. Health & Safety Code § 481.112",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.112",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-possession-of-drug-paraphernalia",
+      "citation": "Tex. Health & Safety Code § 481.125",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.125",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-possession-of-marijuana",
+      "citation": "Tex. Health & Safety Code § 481.121",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.121",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-maintaining-drug-house",
+      "citation": "Tex. Health & Safety Code § 481.122",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.122",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-unlawful-carrying-of-weapon",
+      "citation": "Tex. Penal Code § 46.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 46.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm"
+    },
+    {
+      "chargeId": "tx-felon-in-possession-of-firearm",
+      "citation": "Tex. Penal Code § 46.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 46.04",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm"
+    },
+    {
+      "chargeId": "tx-discharge-of-firearm-in-city",
+      "citation": "Tex. Penal Code § 42.12",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 42.12 (Discharge of Firearm in Certain Municipalities)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.42.htm"
+    },
+    {
+      "chargeId": "tx-possession-of-prohibited-weapon",
+      "citation": "Tex. Penal Code § 46.05",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 46.05",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm"
+    },
+    {
+      "chargeId": "tx-disorderly-conduct",
+      "citation": "Tex. Penal Code § 42.01",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 42.01",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.42.htm"
+    },
+    {
+      "chargeId": "tx-public-intoxication",
+      "citation": "Tex. Penal Code § 49.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 49.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm"
+    },
+    {
+      "chargeId": "tx-criminal-trespass",
+      "citation": "Tex. Penal Code § 30.05",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 30.05",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm"
+    },
+    {
+      "chargeId": "tx-criminal-mischief",
+      "citation": "Tex. Penal Code § 28.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 28.03 (Criminal Mischief / Vandalism)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.28.htm"
+    },
+    {
+      "chargeId": "tx-harassment",
+      "citation": "Tex. Penal Code § 42.07",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 42.07",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.42.htm"
+    },
+    {
+      "chargeId": "tx-loitering",
+      "citation": "Tex. Penal Code § 42.01",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 42.01 (Disorderly Conduct covers loitering)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.42.htm"
+    },
+    {
+      "chargeId": "tx-solicitation",
+      "citation": "Tex. Penal Code § 43.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 43.02 (Prostitution)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.43.htm"
+    },
+    {
+      "chargeId": "tx-open-container",
+      "citation": "Tex. Penal Code § 49.031",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 49.031",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm"
+    },
+    {
+      "chargeId": "tx-minor-in-possession",
+      "citation": "Tex. Alco. Bev. Code § 106.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Alcoholic Beverage Code § 106.04",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/AL/htm/AL.106.htm"
+    },
+    {
+      "chargeId": "tx-false-info-to-police",
+      "citation": "Tex. Penal Code § 37.08",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 37.08",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.37.htm"
+    },
+    {
+      "chargeId": "tx-evading-arrest",
+      "citation": "Tex. Penal Code § 38.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 38.04",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm"
+    },
+    {
+      "chargeId": "tx-failure-to-identify",
+      "citation": "Tex. Penal Code § 38.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 38.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm"
+    },
+    {
+      "chargeId": "tx-dui-first-offense",
+      "citation": "Tex. Penal Code § 49.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 49.04 (DWI)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm"
+    },
+    {
+      "chargeId": "tx-dui-second-offense",
+      "citation": "Tex. Penal Code § 49.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 49.04 (DWI with prior)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm"
+    },
+    {
+      "chargeId": "tx-dui-third-offense",
+      "citation": "Tex. Penal Code § 49.04",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 49.04 (DWI, 3rd or more = felony)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm"
+    },
+    {
+      "chargeId": "tx-reckless-driving",
+      "citation": "Tex. Transp. Code § 545.401",
+      "confidence": "medium",
+      "source": "Texas Legislature — Transportation Code § 545.401",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/TN/htm/TN.545.htm"
+    },
+    {
+      "chargeId": "tx-hit-and-run",
+      "citation": "Tex. Transp. Code § 550.021",
+      "confidence": "medium",
+      "source": "Texas Legislature — Transportation Code § 550.021",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/TN/htm/TN.550.htm"
+    },
+    {
+      "chargeId": "tx-driving-while-license-invalid",
+      "citation": "Tex. Transp. Code § 521.457",
+      "confidence": "medium",
+      "source": "Texas Legislature — Transportation Code § 521.457 (DWLI)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/TN/htm/TN.521.htm"
+    },
+    {
+      "chargeId": "tx-driving-without-insurance",
+      "citation": "Tex. Transp. Code § 601.051",
+      "confidence": "medium",
+      "source": "Texas Legislature — Transportation Code § 601.051",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/TN/htm/TN.601.htm"
+    },
+    {
+      "chargeId": "tx-expired-registration",
+      "citation": "Tex. Transp. Code § 502.412",
+      "confidence": "medium",
+      "source": "Texas Legislature — Transportation Code § 502.412",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/TN/htm/TN.502.htm"
+    },
+    {
+      "chargeId": "tx-failure-to-appear",
+      "citation": "Tex. Penal Code § 38.10",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 38.10",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm"
+    },
+    {
+      "chargeId": "tx-probation-violation",
+      "citation": "Tex. Code Crim. Proc. art. 42A.751",
+      "confidence": "medium",
+      "source": "Texas Legislature — Code of Criminal Procedure Art. 42A.751",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/CR/htm/CR.42A.htm"
+    },
+    {
+      "chargeId": "tx-resisting-arrest",
+      "citation": "Tex. Penal Code § 38.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 38.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm"
+    },
+    {
+      "chargeId": "tx-protective-order-violation",
+      "citation": "Tex. Penal Code § 25.07",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 25.07",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.25.htm"
+    },
+    {
+      "chargeId": "tx-contempt-of-court",
+      "citation": "Tex. Gov't Code § 21.002",
+      "confidence": "medium",
+      "source": "Texas Legislature — Government Code § 21.002",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.21.htm"
+    },
+    {
+      "chargeId": "tx-criminal-attempt",
+      "citation": "Tex. Penal Code § 15.01",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 15.01 (Criminal Attempt)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm"
+    },
+    {
+      "chargeId": "tx-conspiracy",
+      "citation": "Tex. Penal Code § 15.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 15.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm"
+    },
+    {
+      "chargeId": "tx-aiding-and-abetting",
+      "citation": "Tex. Penal Code § 7.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 7.02 (Criminal Responsibility for Conduct of Another)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.7.htm"
+    },
+    {
+      "chargeId": "tx-accessory-after-the-fact",
+      "citation": "Tex. Penal Code § 38.05",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 38.05 (Hindering Apprehension)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.38.htm"
+    },
+    {
+      "chargeId": "tx-criminal-solicitation",
+      "citation": "Tex. Penal Code § 15.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 15.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm"
+    },
+    {
+      "chargeId": "tx-attempted-murder",
+      "citation": "Tex. Penal Code §§ 15.01, 19.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code §§ 15.01, 19.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm"
+    },
+    {
+      "chargeId": "tx-attempted-robbery",
+      "citation": "Tex. Penal Code §§ 15.01, 29.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code §§ 15.01, 29.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm"
+    },
+    {
+      "chargeId": "tx-attempted-sexual-assault",
+      "citation": "Tex. Penal Code §§ 15.01, 22.011",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code §§ 15.01, 22.011",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm"
+    },
+    {
+      "chargeId": "tx-gang-enhancement",
+      "citation": "Tex. Penal Code § 71.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 71.02 (Engaging in Organized Criminal Activity)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.71.htm"
+    },
+    {
+      "chargeId": "tx-hate-crime-enhancement",
+      "citation": "Tex. Penal Code § 12.47",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 12.47 (Penalty If Offense Committed Because of Bias)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm"
+    },
+    {
+      "chargeId": "tx-recidivist-enhancement",
+      "citation": "Tex. Penal Code § 12.42",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 12.42 (Penalties for Repeat Felony Offenders)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.12.htm"
+    },
+    {
+      "chargeId": "tx-firearm-in-felony-enhancement",
+      "citation": "Tex. Penal Code § 46.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 46.03 (Places Weapons Prohibited)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm"
+    },
+    {
+      "chargeId": "tx-drug-school-zone-enhancement",
+      "citation": "Tex. Health & Safety Code § 481.134",
+      "confidence": "medium",
+      "source": "Texas Legislature — Health & Safety Code § 481.134 (Drug Free Zone)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.481.htm"
+    },
+    {
+      "chargeId": "tx-rico-organized-crime",
+      "citation": "Tex. Penal Code § 71.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 71.02 (Organized Criminal Activity)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.71.htm"
+    },
+    {
+      "chargeId": "tx-money-laundering",
+      "citation": "Tex. Penal Code § 34.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 34.02",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.34.htm"
+    },
+    {
+      "chargeId": "tx-juvenile-delinquency-felony",
+      "citation": "Tex. Fam. Code § 51.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Family Code § 51.03 (Delinquent Conduct)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.51.htm"
+    },
+    {
+      "chargeId": "tx-juvenile-delinquency-misdemeanor",
+      "citation": "Tex. Fam. Code § 51.03",
+      "confidence": "medium",
+      "source": "Texas Legislature — Family Code § 51.03",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.51.htm"
+    },
+    {
+      "chargeId": "tx-juvenile-transfer-adult-court",
+      "citation": "Tex. Fam. Code § 54.02",
+      "confidence": "medium",
+      "source": "Texas Legislature — Family Code § 54.02 (Waiver of Jurisdiction)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/FA/htm/FA.54.htm"
+    },
+    {
+      "chargeId": "tx-juvenile-firearm-possession",
+      "citation": "Tex. Penal Code § 46.13",
+      "confidence": "medium",
+      "source": "Texas Legislature — Penal Code § 46.13 (Making a Firearm Accessible to a Child)",
+      "sourceUrl": "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.46.htm"
+    }
+  ]
+}

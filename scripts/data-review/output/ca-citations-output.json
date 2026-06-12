@@ -1,0 +1,813 @@
+{
+  "state": "CA",
+  "generatedAt": "2026-06-12T05:42:14.211Z",
+  "confidence": "medium",
+  "entryCount": 115,
+  "entries": [
+    {
+      "chargeId": "ca-murder-in-the-first-degree",
+      "citation": "Cal. Penal Code §§ 187(a), 189(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 187, 189",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=189."
+    },
+    {
+      "chargeId": "ca-murder-in-the-second-degree",
+      "citation": "Cal. Penal Code § 187(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 187",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=187."
+    },
+    {
+      "chargeId": "ca-voluntary-manslaughter",
+      "citation": "Cal. Penal Code § 192(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 192(a)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=192."
+    },
+    {
+      "chargeId": "ca-involuntary-manslaughter",
+      "citation": "Cal. Penal Code § 192(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 192(b)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=192."
+    },
+    {
+      "chargeId": "ca-criminally-negligent-homicide",
+      "citation": "Cal. Penal Code § 192(c)(2)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 192(c)(2)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=192."
+    },
+    {
+      "chargeId": "ca-vehicular-homicide",
+      "citation": "Cal. Penal Code § 191.5(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 191.5",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=191.5."
+    },
+    {
+      "chargeId": "ca-felony-murder",
+      "citation": "Cal. Penal Code § 189(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 189(a)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=189."
+    },
+    {
+      "chargeId": "ca-assault-in-the-second-degree",
+      "citation": "Cal. Penal Code § 243(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 243 (Battery)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243."
+    },
+    {
+      "chargeId": "ca-assault-in-the-third-degree",
+      "citation": "Cal. Penal Code § 240",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 240 (Assault)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=240."
+    },
+    {
+      "chargeId": "ca-assault-with-deadly-weapon",
+      "citation": "Cal. Penal Code § 245(a)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 245(a)(1)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=245."
+    },
+    {
+      "chargeId": "ca-domestic-violence-assault",
+      "citation": "Cal. Penal Code § 243(e)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 243(e)(1)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243."
+    },
+    {
+      "chargeId": "ca-assault-on-peace-officer",
+      "citation": "Cal. Penal Code § 241(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 241(b)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=241."
+    },
+    {
+      "chargeId": "ca-menacing",
+      "citation": "Cal. Penal Code § 422",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 422 (Criminal Threats)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=422."
+    },
+    {
+      "chargeId": "ca-domestic-battery",
+      "citation": "Cal. Penal Code § 243(e)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 243(e)(1)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243."
+    },
+    {
+      "chargeId": "ca-rape-in-the-first-degree",
+      "citation": "Cal. Penal Code § 261(a)(2)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 261",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261."
+    },
+    {
+      "chargeId": "ca-sexual-assault-in-the-second-degree",
+      "citation": "Cal. Penal Code § 289(a)(1)(A)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 289",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=289."
+    },
+    {
+      "chargeId": "ca-sexual-assault-in-the-third-degree",
+      "citation": "Cal. Penal Code § 243.4(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 243.4 (Sexual Battery)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243.4."
+    },
+    {
+      "chargeId": "ca-statutory-rape",
+      "citation": "Cal. Penal Code § 261.5(c)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 261.5",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261.5."
+    },
+    {
+      "chargeId": "ca-child-sexual-abuse",
+      "citation": "Cal. Penal Code § 288(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 288",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=288."
+    },
+    {
+      "chargeId": "ca-sexual-exploitation-of-minor",
+      "citation": "Cal. Penal Code § 311.4(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 311.4",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=311.4."
+    },
+    {
+      "chargeId": "ca-grand-theft-in-the-first-degree",
+      "citation": "Cal. Penal Code § 487(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 487 (Grand Theft)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=487."
+    },
+    {
+      "chargeId": "ca-petty-theft",
+      "citation": "Cal. Penal Code § 484(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 484",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484."
+    },
+    {
+      "chargeId": "ca-petty-theft-misdemeanor",
+      "citation": "Cal. Penal Code §§ 484(a), 488",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 484, 488",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=488."
+    },
+    {
+      "chargeId": "ca-theft-by-receiving",
+      "citation": "Cal. Penal Code § 496(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 496",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=496."
+    },
+    {
+      "chargeId": "ca-identity-theft",
+      "citation": "Cal. Penal Code § 530.5(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 530.5",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=530.5."
+    },
+    {
+      "chargeId": "ca-credit-card-fraud",
+      "citation": "Cal. Penal Code § 484e(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 484e",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484e."
+    },
+    {
+      "chargeId": "ca-embezzlement",
+      "citation": "Cal. Penal Code § 503",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 503",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=503."
+    },
+    {
+      "chargeId": "ca-shoplifting",
+      "citation": "Cal. Penal Code § 459.5(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 459.5 (Prop 47)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.5."
+    },
+    {
+      "chargeId": "ca-check-fraud",
+      "citation": "Cal. Penal Code § 476",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 476",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=476."
+    },
+    {
+      "chargeId": "ca-bad-checks",
+      "citation": "Cal. Penal Code § 476a",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 476a",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=476a."
+    },
+    {
+      "chargeId": "ca-forgery",
+      "citation": "Cal. Penal Code § 470(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 470",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=470."
+    },
+    {
+      "chargeId": "ca-fake-id",
+      "citation": "Cal. Penal Code § 470b",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 470b",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=470b."
+    },
+    {
+      "chargeId": "ca-computer-fraud",
+      "citation": "Cal. Penal Code § 502(c)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 502",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=502."
+    },
+    {
+      "chargeId": "ca-wire-fraud",
+      "citation": "Cal. Penal Code § 532(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 532 (Obtaining property by false pretenses; federal wire fraud = 18 U.S.C. § 1343)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=532."
+    },
+    {
+      "chargeId": "ca-mail-fraud",
+      "citation": "Cal. Penal Code § 532(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 532 (state analog; federal mail fraud = 18 U.S.C. § 1341)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=532."
+    },
+    {
+      "chargeId": "ca-insurance-fraud",
+      "citation": "Cal. Penal Code § 550(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 550",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=550."
+    },
+    {
+      "chargeId": "ca-tax-fraud",
+      "citation": "Cal. Rev. & Tax. Code § 19706",
+      "confidence": "medium",
+      "source": "California Legislature — Revenue and Taxation Code § 19706",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=19706."
+    },
+    {
+      "chargeId": "ca-burglary-in-the-first-degree",
+      "citation": "Cal. Penal Code §§ 459, 460(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 459, 460(a) (inhabited dwelling = 1st degree)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=460."
+    },
+    {
+      "chargeId": "ca-burglary-in-the-second-degree",
+      "citation": "Cal. Penal Code §§ 459, 460(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 459, 460(b) (commercial = 2nd degree)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=460."
+    },
+    {
+      "chargeId": "ca-robbery-in-the-first-degree",
+      "citation": "Cal. Penal Code §§ 211, 212.5(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 211, 212.5(a) (robbery 1st degree)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=212.5."
+    },
+    {
+      "chargeId": "ca-robbery-in-the-second-degree",
+      "citation": "Cal. Penal Code §§ 211, 212.5(c)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 211, 212.5(c) (robbery 2nd degree)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=212.5."
+    },
+    {
+      "chargeId": "ca-carjacking",
+      "citation": "Cal. Penal Code § 215(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 215",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=215."
+    },
+    {
+      "chargeId": "ca-bank-robbery",
+      "citation": "Cal. Penal Code § 211",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 211 (bank robbery prosecuted as robbery in CA; federal = 18 U.S.C. § 2113)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=211."
+    },
+    {
+      "chargeId": "ca-possession-of-controlled-substance",
+      "citation": "Cal. Health & Safety Code § 11350(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11350",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11350."
+    },
+    {
+      "chargeId": "ca-possession-with-intent-to-distribute",
+      "citation": "Cal. Health & Safety Code § 11351",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11351",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11351."
+    },
+    {
+      "chargeId": "ca-distribution-of-controlled-substance",
+      "citation": "Cal. Health & Safety Code § 11352(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11352",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11352."
+    },
+    {
+      "chargeId": "ca-manufacturing-controlled-substance",
+      "citation": "Cal. Health & Safety Code § 11379.6(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11379.6",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11379.6."
+    },
+    {
+      "chargeId": "ca-drug-trafficking",
+      "citation": "Cal. Health & Safety Code § 11352(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11352 (transportation/sale)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11352."
+    },
+    {
+      "chargeId": "ca-possession-of-drug-paraphernalia",
+      "citation": "Cal. Health & Safety Code § 11364(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11364",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11364."
+    },
+    {
+      "chargeId": "ca-maintaining-drug-house",
+      "citation": "Cal. Health & Safety Code § 11366",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11366",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11366."
+    },
+    {
+      "chargeId": "ca-unlawful-carrying-of-weapon",
+      "citation": "Cal. Penal Code § 25400(a)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 25400 (carrying concealed firearm)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25400."
+    },
+    {
+      "chargeId": "ca-felon-in-possession-of-firearm",
+      "citation": "Cal. Penal Code § 29800(a)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 29800",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=29800."
+    },
+    {
+      "chargeId": "ca-discharge-of-firearm-in-city",
+      "citation": "Cal. Penal Code § 246.3(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 246.3",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=246.3."
+    },
+    {
+      "chargeId": "ca-possession-of-prohibited-weapon",
+      "citation": "Cal. Penal Code § 16590",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 16590 (generally prohibited weapons; specific offense section varies by weapon type)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=16590."
+    },
+    {
+      "chargeId": "ca-disorderly-conduct",
+      "citation": "Cal. Penal Code § 647",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 647",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647."
+    },
+    {
+      "chargeId": "ca-public-intoxication",
+      "citation": "Cal. Penal Code § 647(f)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 647(f)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647."
+    },
+    {
+      "chargeId": "ca-disturbing-the-peace",
+      "citation": "Cal. Penal Code § 415",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 415",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=415."
+    },
+    {
+      "chargeId": "ca-noise-violation",
+      "citation": "Cal. Penal Code § 415",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 415",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=415."
+    },
+    {
+      "chargeId": "ca-trespassing",
+      "citation": "Cal. Penal Code § 602(m)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 602",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=602."
+    },
+    {
+      "chargeId": "ca-trespass-after-warning",
+      "citation": "Cal. Penal Code § 602(o)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 602(o) (return after being asked to leave)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=602."
+    },
+    {
+      "chargeId": "ca-vandalism",
+      "citation": "Cal. Penal Code § 594(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 594",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=594."
+    },
+    {
+      "chargeId": "ca-loitering",
+      "citation": "Cal. Penal Code § 647(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 647(b)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647."
+    },
+    {
+      "chargeId": "ca-indecent-exposure",
+      "citation": "Cal. Penal Code § 314(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 314",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=314."
+    },
+    {
+      "chargeId": "ca-panhandling",
+      "citation": "Cal. Penal Code § 647(c)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 647(c)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647."
+    },
+    {
+      "chargeId": "ca-illegal-camping",
+      "citation": "Cal. Penal Code § 647(e)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 647(e)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647."
+    },
+    {
+      "chargeId": "ca-fare-evasion",
+      "citation": "Cal. Penal Code § 640(c)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 640 (transit fare evasion)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=640."
+    },
+    {
+      "chargeId": "ca-prostitution-solicitation",
+      "citation": "Cal. Penal Code § 647(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 647(b)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647."
+    },
+    {
+      "chargeId": "ca-harassment",
+      "citation": "Cal. Penal Code § 646.9(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 646.9 (Stalking)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=646.9."
+    },
+    {
+      "chargeId": "ca-animal-cruelty-misdemeanor",
+      "citation": "Cal. Penal Code § 597(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 597",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=597."
+    },
+    {
+      "chargeId": "ca-animal-at-large",
+      "citation": "Cal. Penal Code § 597t",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 597t (local ordinance may also apply)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=597t."
+    },
+    {
+      "chargeId": "ca-littering",
+      "citation": "Cal. Penal Code § 374.4",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 374.4",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=374.4."
+    },
+    {
+      "chargeId": "ca-illegal-fireworks",
+      "citation": "Cal. Health & Safety Code § 12677",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 12677 (dangerous fireworks)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12677."
+    },
+    {
+      "chargeId": "ca-dui-first-offense",
+      "citation": "Cal. Vehicle Code § 23152(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 23152",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23152."
+    },
+    {
+      "chargeId": "ca-dui-second-offense",
+      "citation": "Cal. Vehicle Code §§ 23152(a), 23540",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 23540 (DUI with prior)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23540."
+    },
+    {
+      "chargeId": "ca-dui-third-offense",
+      "citation": "Cal. Vehicle Code §§ 23152(a), 23546",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 23546 (DUI with 2 priors)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23546."
+    },
+    {
+      "chargeId": "ca-reckless-driving",
+      "citation": "Cal. Vehicle Code § 23103(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 23103",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23103."
+    },
+    {
+      "chargeId": "ca-hit-and-run",
+      "citation": "Cal. Vehicle Code § 20002(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 20002",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=20002."
+    },
+    {
+      "chargeId": "ca-driving-while-suspended",
+      "citation": "Cal. Vehicle Code § 14601.1(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 14601.1",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=14601.1."
+    },
+    {
+      "chargeId": "ca-driving-without-license",
+      "citation": "Cal. Vehicle Code § 12500(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 12500",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=12500."
+    },
+    {
+      "chargeId": "ca-driving-without-insurance",
+      "citation": "Cal. Vehicle Code § 16029(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 16029",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=16029."
+    },
+    {
+      "chargeId": "ca-expired-registration",
+      "citation": "Cal. Vehicle Code § 4000(a)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 4000",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=4000."
+    },
+    {
+      "chargeId": "ca-expired-inspection",
+      "citation": "Cal. Vehicle Code § 24002(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 24002",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=24002."
+    },
+    {
+      "chargeId": "ca-open-container",
+      "citation": "Cal. Vehicle Code § 23222(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 23222",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23222."
+    },
+    {
+      "chargeId": "ca-defective-vehicle-equipment",
+      "citation": "Cal. Vehicle Code § 24252(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Vehicle Code § 24252",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=24252."
+    },
+    {
+      "chargeId": "ca-contempt-of-court",
+      "citation": "Cal. Penal Code § 166(a)(4)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 166",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=166."
+    },
+    {
+      "chargeId": "ca-protective-order-violation",
+      "citation": "Cal. Penal Code § 166(c)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 166(c)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=166."
+    },
+    {
+      "chargeId": "ca-failure-to-appear",
+      "citation": "Cal. Penal Code § 1320(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 1320",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1320."
+    },
+    {
+      "chargeId": "ca-probation-violation",
+      "citation": "Cal. Penal Code § 1203.2(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 1203.2",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1203.2."
+    },
+    {
+      "chargeId": "ca-resisting-arrest",
+      "citation": "Cal. Penal Code § 148(a)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 148",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=148."
+    },
+    {
+      "chargeId": "ca-false-info-to-police",
+      "citation": "Cal. Penal Code § 148.9(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 148.9",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=148.9."
+    },
+    {
+      "chargeId": "ca-failure-to-pay-child-support",
+      "citation": "Cal. Penal Code § 270",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 270",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=270."
+    },
+    {
+      "chargeId": "ca-minor-in-possession",
+      "citation": "Cal. Bus. & Prof. Code § 25662(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Business & Professions Code § 25662",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=25662."
+    },
+    {
+      "chargeId": "ca-alcohol-in-park",
+      "citation": "Cal. Bus. & Prof. Code § 25620",
+      "confidence": "medium",
+      "source": "California Legislature — Business & Professions Code § 25620",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=25620."
+    },
+    {
+      "chargeId": "ca-curfew-violation",
+      "citation": "Cal. Welf. & Inst. Code § 625.3",
+      "confidence": "medium",
+      "source": "California Legislature — Welfare & Institutions Code § 625.3 (juvenile curfew enforcement)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=625.3."
+    },
+    {
+      "chargeId": "ca-truancy",
+      "citation": "Cal. Educ. Code § 48260",
+      "confidence": "medium",
+      "source": "California Legislature — Education Code § 48260",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=EDC&sectionNum=48260."
+    },
+    {
+      "chargeId": "ca-hunting-fishing-no-license",
+      "citation": "Cal. Fish & Game Code § 7145",
+      "confidence": "medium",
+      "source": "California Legislature — Fish & Game Code § 7145",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FGC&sectionNum=7145."
+    },
+    {
+      "chargeId": "ca-criminal-attempt",
+      "citation": "Cal. Penal Code § 664",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 664 (Criminal Attempt)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=664."
+    },
+    {
+      "chargeId": "ca-conspiracy",
+      "citation": "Cal. Penal Code § 182(a)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 182",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=182."
+    },
+    {
+      "chargeId": "ca-aiding-and-abetting",
+      "citation": "Cal. Penal Code § 31",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 31 (Aiding & Abetting)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31."
+    },
+    {
+      "chargeId": "ca-accessory-after-the-fact",
+      "citation": "Cal. Penal Code § 32",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 32",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=32."
+    },
+    {
+      "chargeId": "ca-criminal-solicitation",
+      "citation": "Cal. Penal Code § 653f",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 653f",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=653f."
+    },
+    {
+      "chargeId": "ca-attempted-murder",
+      "citation": "Cal. Penal Code §§ 664, 187(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 664, 187",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=664."
+    },
+    {
+      "chargeId": "ca-attempted-robbery",
+      "citation": "Cal. Penal Code §§ 664, 211",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 664, 211",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=664."
+    },
+    {
+      "chargeId": "ca-attempted-sexual-assault",
+      "citation": "Cal. Penal Code §§ 664, 261(a)(2)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code §§ 664, 261",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=664."
+    },
+    {
+      "chargeId": "ca-gang-enhancement",
+      "citation": "Cal. Penal Code § 186.22(b)(1)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 186.22 (Street Gang Enhancement)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=186.22."
+    },
+    {
+      "chargeId": "ca-hate-crime-enhancement",
+      "citation": "Cal. Penal Code § 422.75(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 422.75 (Hate Crime Enhancement)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=422.75."
+    },
+    {
+      "chargeId": "ca-recidivist-enhancement",
+      "citation": "Cal. Penal Code §§ 667(b)–(j), 1170.12",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 667 (Three Strikes Law)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667."
+    },
+    {
+      "chargeId": "ca-firearm-in-felony-enhancement",
+      "citation": "Cal. Penal Code § 12022.5(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 12022.5 (Firearm Use Enhancement)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=12022.5."
+    },
+    {
+      "chargeId": "ca-drug-school-zone-enhancement",
+      "citation": "Cal. Health & Safety Code § 11353.6",
+      "confidence": "medium",
+      "source": "California Legislature — Health & Safety Code § 11353.6 (Drug offense within 1,000 ft of school)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11353.6."
+    },
+    {
+      "chargeId": "ca-rico-organized-crime",
+      "citation": "Cal. Penal Code § 186.11",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 186.11 (Aggravated White Collar Crime)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=186.11."
+    },
+    {
+      "chargeId": "ca-money-laundering",
+      "citation": "Cal. Penal Code § 186.10",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 186.10",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=186.10."
+    },
+    {
+      "chargeId": "ca-juvenile-delinquency-felony",
+      "citation": "Cal. Welf. & Inst. Code § 602",
+      "confidence": "medium",
+      "source": "California Legislature — Welfare & Institutions Code § 602",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=602."
+    },
+    {
+      "chargeId": "ca-juvenile-delinquency-misdemeanor",
+      "citation": "Cal. Welf. & Inst. Code § 602",
+      "confidence": "medium",
+      "source": "California Legislature — Welfare & Institutions Code § 602",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=602."
+    },
+    {
+      "chargeId": "ca-juvenile-transfer-adult-court",
+      "citation": "Cal. Welf. & Inst. Code § 707(a)",
+      "confidence": "medium",
+      "source": "California Legislature — Welfare & Institutions Code § 707 (Transfer to adult court)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=707."
+    },
+    {
+      "chargeId": "ca-juvenile-firearm-possession",
+      "citation": "Cal. Penal Code § 29820(b)",
+      "confidence": "medium",
+      "source": "California Legislature — Penal Code § 29820 (Minor in possession of concealable firearm)",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=29820."
+    }
+  ]
+}
