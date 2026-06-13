@@ -97,6 +97,12 @@ export function isChargeInOverlay(charge: CriminalCharge): boolean {
  *
  * For CA charges, use buildCaLeginfoUrlFromCitation() instead — it builds correct
  * leginfo.legislature.ca.gov URLs from the verified citation string.
+ *
+ * GA and CO entries intentionally produce null here:
+ *  - O.C.G.A. (Georgia) has no public .gov per-section URL; no View Law link is shown.
+ *  - CRS (Colorado) similarly has no public .gov per-section URL.
+ *  - For both states, the instructionRef text (GPJI/COLJI) is the primary UI display.
+ *  - This is correct behavior, not a gap — see getInstructionUrl() for the full policy.
  */
 export function getVerifiedSourceUrl(charge: CriminalCharge): string | null {
   const overlay = CHARGE_CITATIONS[charge.id];
@@ -143,6 +149,15 @@ export function getInstructionRef(charge: CriminalCharge): string | null {
  * maintained by state courts, explicitly cite every statute element, and are always
  * on .gov domains. For CA, use buildCaLeginfoUrlFromCitation() which builds leginfo
  * URLs from the citation text directly.
+ *
+ * Jurisdictions with instructionUrl set: NY (nycourts.gov PDFs), NJ (njcourts.gov PDFs).
+ * Jurisdictions with instructionRef text only (no instructionUrl):
+ *   - CA: leginfo statute URL built from citation text via buildCaLeginfoUrlFromCitation()
+ *   - AZ: azleg.gov statute URL in sourceUrl (no per-instruction RAJI URL publicly available)
+ *   - GA: O.C.G.A. has no public .gov per-section URL; Justia sourceUrl blocked by design;
+ *          GPJI instructionRef text is shown in UI — no View Law link is correct behavior
+ *   - CO: CRS has no public .gov per-section URL; Justia/OpenLaws sourceUrl blocked by design;
+ *          COLJI instructionRef text is shown in UI — no View Law link is correct behavior
  */
 export function getInstructionUrl(charge: CriminalCharge): string | null {
   return CHARGE_CITATIONS[charge.id]?.instructionUrl ?? null;
