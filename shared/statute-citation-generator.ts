@@ -574,6 +574,64 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
 }
 
 /**
+ * Maps CA citation prefixes (from verified overlay citations) to leginfo lawCode values.
+ * All combinations tested against leginfo.legislature.ca.gov and confirmed HTTP 200.
+ */
+const CA_CITATION_TO_LAWCODE: Record<string, string> = {
+  'Cal. Penal Code':                  'PEN',
+  'Cal. Veh. Code':                   'VEH',
+  'Cal. Vehicle Code':                'VEH',
+  'Cal. Health & Saf. Code':          'HSC',
+  'Cal. Health & Safety Code':        'HSC',
+  'Cal. Welf. & Inst. Code':          'WIC',
+  'Cal. Welfare & Institutions Code': 'WIC',
+  'Cal. Bus. & Prof. Code':           'BPC',
+  'Cal. Business & Professions Code': 'BPC',
+  'Cal. Fish & Game Code':            'FGC',
+  'Cal. Rev. & Tax. Code':            'RTC',
+  'Cal. Revenue and Taxation Code':   'RTC',
+  'Cal. Educ. Code':                  'EDC',
+  'Cal. Education Code':              'EDC',
+  'Cal. Food & Agric. Code':          'FAC',
+  'Cal. Food and Agricultural Code':  'FAC',
+};
+
+/**
+ * Build a leginfo.legislature.ca.gov section URL from a verified CA citation string.
+ *
+ * Works for any CA code (Penal, Vehicle, Health & Safety, WIC, BPC, FGC, RTC, EDC, FAC).
+ * Uses the overlay citation text as the source of truth — NOT charge.code, which is
+ * unreliable. All lawCodes and section number formats confirmed via HTTP 200 tests.
+ *
+ * Trailing period is appended per CA official section-number convention (§ 32.).
+ *
+ * @param citation  e.g. "Cal. Penal Code § 32" or "Cal. Veh. Code § 23152"
+ * @returns         leginfo section URL, or null if citation cannot be parsed
+ */
+export function buildCaLeginfoUrlFromCitation(citation: string): string | null {
+  if (!citation) return null;
+
+  let lawCode: string | null = null;
+  for (const [prefix, code] of Object.entries(CA_CITATION_TO_LAWCODE)) {
+    if (citation.startsWith(prefix)) {
+      lawCode = code;
+      break;
+    }
+  }
+  if (!lawCode) return null;
+
+  // Extract section number after § or §§, stopping at ( or , (subsections / multi-section)
+  // Handles: "§ 32", "§ 192(a)", "§§ 664, 211", "§ 476a", "§ 186.22", "§ 212.5(a)"
+  const secMatch = citation.match(/§§?\s*([\w.]+)/);
+  if (!secMatch) return null;
+
+  const sectionNum = secMatch[1].trim();
+  if (!sectionNum) return null;
+
+  return `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=${lawCode}&sectionNum=${encodeURIComponent(sectionNum)}.`;
+}
+
+/**
  * Enrich a criminal charge with statute citation information
  * @param charge - Criminal charge object
  * @returns Charge with added statute citation fields

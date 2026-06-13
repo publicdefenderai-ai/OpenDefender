@@ -82,13 +82,30 @@ export function getVerifiedCitation(charge: CriminalCharge): string | null {
   return null;
 }
 
-/** Returns the verified sourceUrl from the overlay, or null if none.
- *  Only returns a URL when the overlay entry exists at 'high' confidence and has a sourceUrl.
- *  Use this as the primary source for "View Law" links — it points to the verified statute page. */
+/** True if this charge has an entry in the citation overlay. */
+export function isChargeInOverlay(charge: CriminalCharge): boolean {
+  return charge.id in CHARGE_CITATIONS;
+}
+
+/**
+ * Returns the verified sourceUrl from the overlay — only official .gov URLs.
+ *
+ * Justia (law.justia.com) and OpenLaws (openlaws.us) are excluded:
+ *  - Justia returns HTTP 403 for direct access and has inconsistent URL formats.
+ *  - OpenLaws static CDN returns HTTP 404.
+ * Only .gov and official legislature URLs are returned.
+ *
+ * For CA charges, use buildCaLeginfoUrlFromCitation() instead — it builds correct
+ * leginfo.legislature.ca.gov URLs from the verified citation string.
+ */
 export function getVerifiedSourceUrl(charge: CriminalCharge): string | null {
   const overlay = CHARGE_CITATIONS[charge.id];
-  if (overlay && overlay.confidence === 'high' && overlay.sourceUrl) return overlay.sourceUrl;
-  return null;
+  if (!overlay || overlay.confidence !== 'high') return null;
+  const url = overlay.sourceUrl;
+  if (!url) return null;
+  if (url.includes('law.justia.com')) return null;
+  if (url.includes('openlaws.us')) return null;
+  return url;
 }
 
 export const criminalCharges: CriminalCharge[] = [
