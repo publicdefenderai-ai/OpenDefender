@@ -34,6 +34,23 @@ export interface CitationRecord {
   source?: string;
   /** Direct URL to the official statute text or sentencing commission entry */
   sourceUrl?: string;
+  /**
+   * Pattern Jury Instruction reference, e.g. "CALCRIM 1600" or "CJI2d 125.25".
+   * These are meticulously maintained by state courts and updated annually —
+   * they are the gold standard for citation accuracy and multi-statute coverage.
+   * Displayed in the UI as a secondary label to help users find authoritative guidance.
+   */
+  instructionRef?: string;
+  /** Direct URL to the official jury instruction page (court-hosted HTML or PDF) */
+  instructionUrl?: string;
+  /**
+   * For multi-section citations (e.g., "§§ 664, 211"), which statute (0-based index)
+   * is the primary "View Law" link target. Defaults to auto-detection:
+   *   - Attempt charges (name starts with "Attempted"): 1 (the underlying offense)
+   *   - All others: 0 (first statute)
+   * Set explicitly to override auto-detection for non-standard cases.
+   */
+  primaryStatuteIndex?: number;
 }
 
 /**
@@ -2494,56 +2511,62 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   // — California (confirmed from leginfo.legislature.ca.gov) —
   "ca-murder-in-the-first-degree": {
-    citation: "Cal. Penal Code § 187",
+    citation: "Cal. Penal Code § 187(a)",
     alternateCitations: ["Cal. Penal Code § 189"],
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-187/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 187 (Stats. 2023); CALCRIM 521",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=187.",
+    instructionRef: "CALCRIM 521",
   },
   "ca-murder-in-the-second-degree": {
-    citation: "Cal. Penal Code § 187",
+    citation: "Cal. Penal Code § 187(a)",
     alternateCitations: ["Cal. Penal Code § 189"],
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-187/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 187 (Stats. 2023); CALCRIM 520",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=187.",
+    instructionRef: "CALCRIM 520",
   },
   "ca-felony-murder": {
     citation: "Cal. Penal Code § 189",
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-189/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 189 (Stats. 2018, SB 1437 reform); CALCRIM 540A",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=189.",
+    instructionRef: "CALCRIM 540A",
   },
   "ca-voluntary-manslaughter": {
     citation: "Cal. Penal Code § 192(a)",
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-192/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 192 (Stats. 2023); CALCRIM 570",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=192.",
+    instructionRef: "CALCRIM 570",
   },
   "ca-involuntary-manslaughter": {
     citation: "Cal. Penal Code § 192(b)",
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-192/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 192 (Stats. 2023); CALCRIM 580",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=192.",
+    instructionRef: "CALCRIM 580",
   },
   "ca-vehicular-homicide": {
     citation: "Cal. Penal Code § 191.5",
     confidence: "high",
-    lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://law.justia.com/codes/california/section-191-5/",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 191.5 (Stats. 2016); CALCRIM 590",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=191.5.",
+    instructionRef: "CALCRIM 590",
   },
   "ca-attempted-murder": {
-    citation: "Cal. Penal Code § 664",
-    alternateCitations: ["Cal. Penal Code § 187"],
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-664/",
+    citation: "Cal. Penal Code §§ 664, 187",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code §§ 664 (attempt) + 187 (murder); CALCRIM 600",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=187.",
+    instructionRef: "CALCRIM 600",
   },
   "ca-trespassing": {
     citation: "Cal. Penal Code § 602",
@@ -2585,8 +2608,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     alternateCitations: ["Cal. Penal Code § 484"],
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 488 (Stats. 1927)",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 488 (Stats. 1927); CALCRIM 1800",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=488.",
+    instructionRef: "CALCRIM 1800",
   },
 
   // — Hawaii (site unreachable; citations from standard legal references) —
@@ -3830,10 +3854,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
   "ca-dui-first-offense": {
     citation: "Cal. Veh. Code § 23152",
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-23152/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Veh. Code § 23152 (Stats. 2025); CALCRIM 2110",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23152.",
+    instructionRef: "CALCRIM 2110",
   },
   "ct-dui-first-offense": {
     citation: "Conn. Gen. Stat. § 14-227a",
@@ -4526,9 +4551,10 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ca-domestic-violence-assault": {
     citation: "Cal. Penal Code § 273.5",
     confidence: "high",
-    lastVerified: "2026-04",
-    source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://law.justia.com/codes/california/section-273-5/",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 273.5 (Stats. 2022); CALCRIM 840",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=273.5.",
+    instructionRef: "CALCRIM 840",
   },
   "co-domestic-violence-assault": {
     citation: "Colo. Rev. Stat. § 18-6-800.3",
@@ -4838,8 +4864,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     citation: "Cal. Penal Code § 212.5(a)",
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 212.5 (Stats. 1994)",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 212.5 (Stats. 1994); CALCRIM 1600",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=212.5.",
+    instructionRef: "CALCRIM 1600",
   },
   "co-robbery-in-the-first-degree": { citation: "Colo. Rev. Stat. § 18-4-302", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_3/section_18_4_302" },
   "ct-robbery-in-the-first-degree": {
@@ -5180,8 +5207,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     citation: "Cal. Penal Code § 212.5(c)",
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 212.5 (Stats. 1994)",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 212.5 (Stats. 1994); CALCRIM 1600",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=212.5.",
+    instructionRef: "CALCRIM 1600",
   },
   "co-robbery-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-4-301", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_3/section_18_4_301" },
   "ct-robbery-in-the-second-degree": {
@@ -5522,8 +5550,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     citation: "Cal. Penal Code §§ 459, 460(a)",
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 459 (Stats. 2025)",
+    source: "California Legislature (leginfo) — Cal. Penal Code §§ 459, 460(a) (Stats. 2025); CALCRIM 1700",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.",
+    instructionRef: "CALCRIM 1700",
   },
   "co-burglary-in-the-first-degree": { citation: "Colo. Rev. Stat. § 18-4-202", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_2/section_18_4_202" },
   "ct-burglary-in-the-first-degree": {
@@ -5870,8 +5899,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     citation: "Cal. Penal Code §§ 459, 460(b)",
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 459 (Stats. 2025)",
+    source: "California Legislature (leginfo) — Cal. Penal Code §§ 459, 460(b) (Stats. 2025); CALCRIM 1700",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.",
+    instructionRef: "CALCRIM 1700",
   },
   "co-burglary-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-4-203", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_2/section_18_4_203" },
   "ct-burglary-in-the-second-degree": {
@@ -6972,8 +7002,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     citation: "Cal. Penal Code § 487",
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 487 (Stats. 2024)",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 487 (Stats. 2024); CALCRIM 1801",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=487.",
+    instructionRef: "CALCRIM 1801",
   },
   "co-grand-theft-in-the-first-degree": { citation: "Colo. Rev. Stat. § 18-4-401", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_4/section_18_4_401" },
   "ct-grand-theft-in-the-first-degree": {
@@ -7925,10 +7956,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
   "ca-rape-in-the-first-degree": {
     citation: "Cal. Penal Code § 261",
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-261/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 261 (Stats. 2021); CALCRIM 1000",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261.",
+    instructionRef: "CALCRIM 1000",
   },
   "co-rape-in-the-first-degree": {
     citation: "Colo. Rev. Stat. § 18-3-402",
@@ -8273,8 +8305,9 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     citation: "Cal. Penal Code § 594",
     confidence: "high",
     lastVerified: "2026-06",
-    source: "California Legislature (leginfo) — Cal. Penal Code § 594 (Stats. 2011)",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 594 (Stats. 2011); CALCRIM 2900",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=594.",
+    instructionRef: "CALCRIM 2900",
   },
   "co-vandalism": { citation: "Colo. Rev. Stat. § 18-4-501", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_5/section_18_4_501" },
   "ct-vandalism": {
@@ -8989,10 +9022,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
   "ca-drug-trafficking": {
     citation: "Cal. Health & Saf. Code § 11352",
-    confidence: "needs_review",
-    lastVerified: "2026-04",
-    source: "OpenLaws not_found — needs manual review",
-    sourceUrl: "https://law.justia.com/codes/california/section-11352/",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Health & Safety Code § 11352 (Stats. 2022); CALCRIM 2300",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11352.",
+    instructionRef: "CALCRIM 2300",
   },
   "ca-possession-with-intent-to-distribute": {
     citation: "Cal. Health & Saf. Code § 11351",
@@ -13534,7 +13568,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ak-embezzlement": { citation: "Alaska Stat. § 11.46.210", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska theft by failure to make required payments", sourceUrl: "https://law.justia.com/codes/alaska/section-11-46-210/" },
   "az-embezzlement": { citation: "Ariz. Rev. Stat. § 13-1802(A)(5)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona theft including embezzlement", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1802/" },
   "ar-embezzlement": { citation: "Ark. Code Ann. § 5-36-201", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arkansas theft (embezzlement)", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-36-201/" },
-  "ca-embezzlement": { citation: "Cal. Penal Code § 503", confidence: "high", lastVerified: "2026-06", source: "Training data — California embezzlement statute", sourceUrl: "https://law.justia.com/codes/california/section-503/" },
+  "ca-embezzlement": { citation: "Cal. Penal Code § 503", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 503 (Stats. 1872); CALCRIM 1806", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=503.", instructionRef: "CALCRIM 1806" },
   "co-embezzlement": { citation: "Colo. Rev. Stat. § 18-4-401(1)(b)", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_4/section_18_4_401" },
   "ct-embezzlement": { citation: "Conn. Gen. Stat. § 53a-119(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Connecticut larceny by embezzlement", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-119/" },
   "de-embezzlement": { citation: "Del. Code Ann. tit. 11, § 845", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware theft by embezzlement", sourceUrl: "https://law.justia.com/codes/delaware/section-845/" },
@@ -13644,7 +13678,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // ── Batch 34 cont.: Assault with Deadly Weapon — all 52 applicable states + territories ──
   "al-assault-with-deadly-weapon": { citation: "Ala. Code § 13A-6-20(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/" },
   "ak-assault-with-deadly-weapon": { citation: "Alaska Stat. § 11.41.210(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-210/" },
-  "ca-assault-with-deadly-weapon": { citation: "Cal. Penal Code § 245(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/california/section-245/" },
+  "ca-assault-with-deadly-weapon": { citation: "Cal. Penal Code § 245(a)(1)", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 245 (Stats. 2014); CALCRIM 875", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=245.", instructionRef: "CALCRIM 875" },
   "az-assault-with-deadly-weapon": { citation: "A.R.S. § 13-1204(A)(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona aggravated assault with deadly weapon", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1204/" },
   "ar-assault-with-deadly-weapon": { citation: "Ark. Code Ann. § 5-13-201(a)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-13-201/" },
   "co-assault-with-deadly-weapon": { citation: "Colo. Rev. Stat. § 18-3-202(1)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-202/" },
@@ -13808,7 +13842,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // States without 'menacing' statutes use the equivalent criminal threatening / terroristic threat statute.
   "al-menacing": { citation: "Ala. Code § 13A-6-23", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama menacing", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-23/" },
   "ak-menacing": { citation: "Alaska Stat. § 11.41.250", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska terroristic threatening second degree (menacing equivalent)", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-250/" },
-  "ca-menacing": { citation: "Cal. Penal Code § 422", confidence: "high", lastVerified: "2026-06", source: "Training data — California criminal threats (menacing equivalent)", sourceUrl: "https://law.justia.com/codes/california/section-422/" },
+  "ca-menacing": { citation: "Cal. Penal Code § 422", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 422 (Stats. 2000); CALCRIM 1300", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=422.", instructionRef: "CALCRIM 1300" },
   "az-menacing": { citation: "A.R.S. § 13-1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona threatening or intimidating", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1202/" },
   "ar-menacing": { citation: "Ark. Code Ann. § 5-13-301", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arkansas terroristic threatening second degree (menacing equivalent)", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-13-301/" },
   "co-menacing": { citation: "Colo. Rev. Stat. § 18-3-206", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_3/part_2/section_18_3_206" },
@@ -13867,7 +13901,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // statute applied to motor-vehicle takings by force.
   "al-carjacking": { citation: "Ala. Code § 13A-8-197", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama carjacking statute", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-8-197/" },
   "ak-carjacking": { citation: "Alaska Stat. § 11.41.500", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska robbery first degree (carjacking charged under robbery statute)", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-500/" },
-  "ca-carjacking": { citation: "Cal. Penal Code § 215", confidence: "high", lastVerified: "2026-06", source: "Training data — California carjacking", sourceUrl: "https://law.justia.com/codes/california/section-215/" },
+  "ca-carjacking": { citation: "Cal. Penal Code § 215", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 215 (Stats. 1993); CALCRIM 1650", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=215.", instructionRef: "CALCRIM 1650" },
   "az-carjacking": { citation: "A.R.S. § 13-1902", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona robbery (carjacking charged under robbery statute; no specific AZ carjacking statute)", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1902/" },
   "ar-carjacking": { citation: "Ark. Code Ann. § 5-12-102", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arkansas robbery first degree (carjacking charged under robbery statute)", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-12-102/" },
   "co-carjacking": { citation: "Colo. Rev. Stat. § 18-4-302", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_3/section_18_4_302" },
@@ -15992,7 +16026,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ak-attempted-robbery": { citation: "Alaska Stat. §§ 11.31.100, 11.41.500", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska attempt + robbery", sourceUrl: "https://law.justia.com/codes/alaska/section-11-31-100/" },
   "az-attempted-robbery": { citation: "Ariz. Rev. Stat. §§ 13-1001, 13-1902", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona attempt + robbery", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1001/" },
   "ar-attempted-robbery": { citation: "Ark. Code Ann. §§ 5-3-201, 5-12-102", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arkansas attempt + robbery", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-3-201/" },
-  "ca-attempted-robbery": { citation: "Cal. Penal Code §§ 664, 211", confidence: "high", lastVerified: "2026-06", source: "Training data — California attempt + robbery", sourceUrl: "https://law.justia.com/codes/california/section-664/" },
+  "ca-attempted-robbery": { citation: "Cal. Penal Code §§ 664, 211", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code §§ 664 (attempt) + 211 (robbery); CALCRIM 1600", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=211.", instructionRef: "CALCRIM 1600" },
   "co-attempted-robbery": { citation: "Colo. Rev. Stat. §§ 18-2-101, 18-4-301", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_2/part_1/section_18_2_101" },
   "ct-attempted-robbery": { citation: "Conn. Gen. Stat. §§ 53a-49, 53a-134", confidence: "medium", lastVerified: "2026-04", source: "Training data — Connecticut attempt + robbery first degree", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-49/" },
   "de-attempted-robbery": { citation: "Del. Code Ann. tit. 11, §§ 531, 831", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware attempt + robbery first degree", sourceUrl: "https://law.justia.com/codes/delaware/section-531/" },
@@ -16051,7 +16085,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ak-attempted-sexual-assault": { citation: "Alaska Stat. §§ 11.31.100, 11.41.410", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-31-100/" },
   "az-attempted-sexual-assault": { citation: "Ariz. Rev. Stat. §§ 13-1001, 13-1406", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1001/" },
   "ar-attempted-sexual-assault": { citation: "Ark. Code Ann. §§ 5-3-201, 5-14-124", confidence: "medium", lastVerified: "2026-04", source: "Arkansas Sentencing Commission Benchbook 2026 — corrected underlying offense from § 5-14-103 (Rape) to § 5-14-124 (Sexual Assault 1st Degree, current AR statute post-2013 reorganization)", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-14-124/" },
-  "ca-attempted-sexual-assault": { citation: "Cal. Penal Code §§ 664, 261", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/california/section-664/" },
+  "ca-attempted-sexual-assault": { citation: "Cal. Penal Code §§ 664, 261", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code §§ 664 (attempt) + 261 (rape); CALCRIM 1000", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261.", instructionRef: "CALCRIM 1000" },
   "co-attempted-sexual-assault": { citation: "Colo. Rev. Stat. §§ 18-2-101, 18-3-402", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-2-101/" },
   "ct-attempted-sexual-assault": { citation: "Conn. Gen. Stat. §§ 53a-49, 53a-70", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-49/" },
   "de-attempted-sexual-assault": { citation: "Del. Code Ann. tit. 11, §§ 531, 771", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-531/" },
@@ -16696,7 +16730,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ak-rape-in-the-second-degree": { citation: "Alaska Stat. § 11.41.420", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-420/" },
   "az-rape-in-the-second-degree": { citation: "Ariz. Rev. Stat. § 13-1406", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1406/" },
   "ar-rape-in-the-second-degree": { citation: "Ark. Code Ann. § 5-14-103", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-14-103/" },
-  "ca-rape-in-the-second-degree": { citation: "Cal. Penal Code § 261", confidence: "medium", lastVerified: "2026-04", source: "Training data — California rape (second degree equivalent)", sourceUrl: "https://law.justia.com/codes/california/section-261/" },
+  "ca-rape-in-the-second-degree": { citation: "Cal. Penal Code § 261", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 261 (Stats. 2021); CALCRIM 1000", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261.", instructionRef: "CALCRIM 1000" },
   "co-rape-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-3-402", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-402/" },
   "ct-rape-in-the-second-degree": { citation: "Conn. Gen. Stat. § 53a-71", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-71/" },
   "de-rape-in-the-second-degree": { citation: "Del. Code Ann. tit. 11, § 772", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-772/" },
@@ -17360,7 +17394,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "al-domestic-violence-third-degree": { citation: "Ala. Code § 13A-6-132", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-132/" },
   "al-possession-marijuana-second-degree": { citation: "Ala. Code § 13A-12-214", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama possession of marijuana in the second degree", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-214/" },
 
-  "ca-petty-theft-misdemeanor": { citation: "Cal. Penal Code § 484", confidence: "high", lastVerified: "2026-06", source: "Training data — California petty theft misdemeanor", sourceUrl: "https://law.justia.com/codes/california/section-484/" },
+  "ca-petty-theft-misdemeanor": { citation: "Cal. Penal Code § 484", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 484 (Stats. 2014); CALCRIM 1800", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484.", instructionRef: "CALCRIM 1800" },
   "ca-fare-evasion": { citation: "Cal. Penal Code § 640", confidence: "high", lastVerified: "2026-06", source: "Training data — California fare evasion", sourceUrl: "https://law.justia.com/codes/california/section-640/" },
   "ca-prostitution-solicitation": { citation: "Cal. Penal Code § 647(b)", confidence: "high", lastVerified: "2026-06", source: "Training data — California soliciting prostitution", sourceUrl: "https://law.justia.com/codes/california/section-647/" },
 

@@ -108,6 +108,33 @@ export function getVerifiedSourceUrl(charge: CriminalCharge): string | null {
   return url;
 }
 
+/**
+ * Returns the 0-based index of the primary statute in a multi-section citation.
+ *
+ * For attempt charges (e.g., §§ 664, 211), the attempt modifier is first (§ 664)
+ * and the underlying offense is second (§ 211). For "View Law" links, the underlying
+ * offense is more useful to users — so attempt charges return index 1.
+ *
+ * Override per-entry via CitationRecord.primaryStatuteIndex when auto-detection
+ * would be wrong (e.g., a non-attempt charge whose primary section is at index 1).
+ */
+export function getPrimaryStatuteIndex(charge: CriminalCharge): number {
+  const overlay = CHARGE_CITATIONS[charge.id];
+  if (overlay?.primaryStatuteIndex !== undefined) return overlay.primaryStatuteIndex;
+  if (charge.name.startsWith('Attempted ')) return 1;
+  return 0;
+}
+
+/**
+ * Returns the Pattern Jury Instruction reference for a charge, if set in the overlay.
+ * e.g. "CALCRIM 1600" for California robbery, "CALCRIM 600" for attempted murder.
+ * Jury instructions are maintained by state courts and are the gold standard for
+ * citation accuracy — displayed in the UI to help users identify the right source.
+ */
+export function getInstructionRef(charge: CriminalCharge): string | null {
+  return CHARGE_CITATIONS[charge.id]?.instructionRef ?? null;
+}
+
 export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-first-degree',

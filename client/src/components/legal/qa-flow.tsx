@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay } from "@shared/criminal-charges";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
@@ -461,10 +461,12 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   if (!charge) return null;
 
                   const statuteCitation = getVerifiedCitation(charge);
+                  const instructionRef = getInstructionRef(charge);
+                  const primaryStatuteIndex = getPrimaryStatuteIndex(charge);
                   let statuteUrl: string | null = null;
                   if (isCitationVerified(charge)) {
                     if (charge.jurisdiction === 'CA' && statuteCitation) {
-                      statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation);
+                      statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                     } else {
                       const govUrl = getVerifiedSourceUrl(charge);
                       if (govUrl) {
@@ -495,6 +497,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               <span className="text-xs font-medium text-blue-700 dark:text-blue-300">
                                 {statuteCitation}
                               </span>
+                              {instructionRef && (
+                                <span className="text-xs text-blue-500 dark:text-blue-400 font-medium">
+                                  · {instructionRef}
+                                </span>
+                              )}
                               {(statuteUrl || officialSite) && (
                                 <a
                                   href={statuteUrl || officialSite || '#'}
@@ -601,10 +608,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   <div className="space-y-2">
                     {displayedStateCharges.map(charge => {
                       const statuteCitation = getVerifiedCitation(charge);
+                      const primaryStatuteIndex = getPrimaryStatuteIndex(charge);
                       let statuteUrl: string | null = null;
                       if (isCitationVerified(charge)) {
                         if (charge.jurisdiction === 'CA' && statuteCitation) {
-                          statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation);
+                          statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                         } else {
                           const govUrl = getVerifiedSourceUrl(charge);
                           if (govUrl) {
@@ -675,10 +683,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   <div className="space-y-2">
                     {displayedFederalCharges.map(charge => {
                       const statuteCitation = getVerifiedCitation(charge);
+                      const primaryStatuteIndex = getPrimaryStatuteIndex(charge);
                       let statuteUrl: string | null = null;
                       if (isCitationVerified(charge)) {
                         if (charge.jurisdiction === 'CA' && statuteCitation) {
-                          statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation);
+                          statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                         } else {
                           const govUrl = getVerifiedSourceUrl(charge);
                           if (govUrl) {

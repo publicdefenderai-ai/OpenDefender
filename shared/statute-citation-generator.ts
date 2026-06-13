@@ -597,6 +597,34 @@ const CA_CITATION_TO_LAWCODE: Record<string, string> = {
 };
 
 /**
+ * Extracts the Nth statute section number from a legal citation string.
+ *
+ * Examples:
+ *   extractNthStatute("Cal. Penal Code §§ 664, 211", 1) → "211"   (underlying offense)
+ *   extractNthStatute("Cal. Penal Code §§ 459, 460(a)", 0) → "459" (primary section)
+ *   extractNthStatute("Cal. Penal Code § 187(a)", 0) → "187"
+ *   extractNthStatute("Cal. Veh. Code § 23152", 0) → "23152"
+ *
+ * Subsection markers like "(a)" are stripped — leginfo uses base section numbers only
+ * (e.g., sectionNum=187. not sectionNum=187(a).).
+ */
+export function extractNthStatute(citation: string, index: number = 0): string | null {
+  // Multi-section: §§ X, Y, Z ...
+  const multiMatch = citation.match(/§§\s+([\w.]+(?:\([^)]*\))?(?:,\s*[\w.]+(?:\([^)]*\))?)*)/);
+  if (multiMatch) {
+    const parts = multiMatch[1].split(/,\s*/);
+    if (index >= parts.length) return null;
+    // Strip subsection markers like "(a)" — leginfo needs bare section numbers
+    return parts[index].match(/^[\w.]+/)?.[0]?.trim() ?? null;
+  }
+  // Single section: § X — only valid at index 0
+  if (index === 0) {
+    return citation.match(/§\s*([\w.]+)/)?.[1]?.trim() ?? null;
+  }
+  return null;
+}
+
+/**
  * Build a leginfo.legislature.ca.gov section URL from a verified CA citation string.
  *
  * Works for any CA code (Penal, Vehicle, Health & Safety, WIC, BPC, FGC, RTC, EDC, FAC).
@@ -605,10 +633,14 @@ const CA_CITATION_TO_LAWCODE: Record<string, string> = {
  *
  * Trailing period is appended per CA official section-number convention (§ 32.).
  *
- * @param citation  e.g. "Cal. Penal Code § 32" or "Cal. Veh. Code § 23152"
- * @returns         leginfo section URL, or null if citation cannot be parsed
+ * @param citation             e.g. "Cal. Penal Code § 32" or "Cal. Veh. Code § 23152"
+ * @param primaryStatuteIndex  For multi-section citations (§§ X, Y), which statute to link.
+ *                             0 = first (default). 1 = second (underlying offense for attempt
+ *                             charges like §§ 664, 211 → links to § 211 robbery, not § 664).
+ *                             Use getPrimaryStatuteIndex(charge) from criminal-charges.ts.
+ * @returns                    leginfo section URL, or null if citation cannot be parsed
  */
-export function buildCaLeginfoUrlFromCitation(citation: string): string | null {
+export function buildCaLeginfoUrlFromCitation(citation: string, primaryStatuteIndex: number = 0): string | null {
   if (!citation) return null;
 
   let lawCode: string | null = null;
@@ -620,12 +652,9 @@ export function buildCaLeginfoUrlFromCitation(citation: string): string | null {
   }
   if (!lawCode) return null;
 
-  // Extract section number after § or §§, stopping at ( or , (subsections / multi-section)
-  // Handles: "§ 32", "§ 192(a)", "§§ 664, 211", "§ 476a", "§ 186.22", "§ 212.5(a)"
-  const secMatch = citation.match(/§§?\s*([\w.]+)/);
-  if (!secMatch) return null;
-
-  const sectionNum = secMatch[1].trim();
+  // For multi-section citations (§§ X, Y), extract the Nth statute per primaryStatuteIndex.
+  // Attempt charges set index=1 (underlying offense) instead of 0 (attempt modifier).
+  const sectionNum = extractNthStatute(citation, primaryStatuteIndex);
   if (!sectionNum) return null;
 
   return `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=${lawCode}&sectionNum=${encodeURIComponent(sectionNum)}.`;
