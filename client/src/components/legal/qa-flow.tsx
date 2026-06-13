@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef } from "@shared/criminal-charges";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
@@ -468,11 +468,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                     if (charge.jurisdiction === 'CA' && statuteCitation) {
                       statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                     } else {
-                      const govUrl = getVerifiedSourceUrl(charge);
-                      if (govUrl) {
-                        statuteUrl = govUrl;
-                      } else if (!isChargeInOverlay(charge)) {
-                        statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                      const instrUrl = getInstructionUrl(charge);
+                      if (instrUrl) {
+                        statuteUrl = instrUrl;
+                      } else {
+                        const govUrl = getVerifiedSourceUrl(charge);
+                        if (govUrl) {
+                          statuteUrl = govUrl;
+                        } else if (!isChargeInOverlay(charge)) {
+                          statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                        }
                       }
                     }
                   }
@@ -614,11 +619,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                         if (charge.jurisdiction === 'CA' && statuteCitation) {
                           statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                         } else {
-                          const govUrl = getVerifiedSourceUrl(charge);
-                          if (govUrl) {
-                            statuteUrl = govUrl;
-                          } else if (!isChargeInOverlay(charge)) {
-                            statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                          const instrUrl = getInstructionUrl(charge);
+                          if (instrUrl) {
+                            statuteUrl = instrUrl;
+                          } else {
+                            const govUrl = getVerifiedSourceUrl(charge);
+                            if (govUrl) {
+                              statuteUrl = govUrl;
+                            } else if (!isChargeInOverlay(charge)) {
+                              statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                            }
                           }
                         }
                       }
@@ -689,11 +699,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                         if (charge.jurisdiction === 'CA' && statuteCitation) {
                           statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                         } else {
-                          const govUrl = getVerifiedSourceUrl(charge);
-                          if (govUrl) {
-                            statuteUrl = govUrl;
-                          } else if (!isChargeInOverlay(charge)) {
-                            statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                          const instrUrl = getInstructionUrl(charge);
+                          if (instrUrl) {
+                            statuteUrl = instrUrl;
+                          } else {
+                            const govUrl = getVerifiedSourceUrl(charge);
+                            if (govUrl) {
+                              statuteUrl = govUrl;
+                            } else if (!isChargeInOverlay(charge)) {
+                              statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
+                            }
                           }
                         }
                       }

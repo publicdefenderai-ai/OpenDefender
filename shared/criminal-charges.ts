@@ -135,6 +135,19 @@ export function getInstructionRef(charge: CriminalCharge): string | null {
   return CHARGE_CITATIONS[charge.id]?.instructionRef ?? null;
 }
 
+/**
+ * Returns a government-hosted URL to the Pattern Jury Instruction page for a charge,
+ * if set in the overlay (e.g., nycourts.gov PDF for NY, njcourts.gov PDF for NJ).
+ *
+ * Preferred over sourceUrl for "View Law" links when present — instruction pages are
+ * maintained by state courts, explicitly cite every statute element, and are always
+ * on .gov domains. For CA, use buildCaLeginfoUrlFromCitation() which builds leginfo
+ * URLs from the citation text directly.
+ */
+export function getInstructionUrl(charge: CriminalCharge): string | null {
+  return CHARGE_CITATIONS[charge.id]?.instructionUrl ?? null;
+}
+
 export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-first-degree',
