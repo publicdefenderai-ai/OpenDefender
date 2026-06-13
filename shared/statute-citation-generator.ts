@@ -254,8 +254,24 @@ export function getStatuteUrl(jurisdiction: string, code: string): string | null
     case 'US':
       return `https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section${code}`;
     
-    case 'CA':
-      return `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=${code}&lawCode=PEN`;
+    case 'CA': {
+      // Only build a leginfo URL if the code looks like an actual section number.
+      // CA charge.code fields may contain descriptive garbage like "MPC § 2.07 / CA accessory statute"
+      // — those must not be used as sectionNum params or the URL will be broken.
+      // Valid formats: "187", "192(a)", "191.5", "245(a)(1)", "11352", "23152", "602"
+      const caCodeValid = /^\d[\d.()\[\]a-zA-Z]*$/.test(code.trim());
+      if (!caCodeValid) return null;
+      // Determine lawCode from section number ranges:
+      //   Health & Safety Code (HSC): 11000-12999 (drug crimes)
+      //   Vehicle Code (VEH): 20000+ (traffic and vehicle crimes)
+      //   Penal Code (PEN): default for all other criminal sections
+      // Note: WIC sections (e.g. "WIC §602") have non-numeric codes that fail caCodeValid above.
+      const sectionNum = parseInt(code.split('(')[0].split('.')[0], 10);
+      let lawCode = 'PEN';
+      if (sectionNum >= 11000 && sectionNum <= 12999) lawCode = 'HSC';
+      else if (sectionNum >= 20000) lawCode = 'VEH';
+      return `https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=${lawCode}&sectionNum=${encodeURIComponent(code)}`;
+    }
     
     case 'TX': {
       // Texas: Official site serves chapter pages with anchor fragments

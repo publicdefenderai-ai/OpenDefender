@@ -82,6 +82,15 @@ export function getVerifiedCitation(charge: CriminalCharge): string | null {
   return null;
 }
 
+/** Returns the verified sourceUrl from the overlay, or null if none.
+ *  Only returns a URL when the overlay entry exists at 'high' confidence and has a sourceUrl.
+ *  Use this as the primary source for "View Law" links — it points to the verified statute page. */
+export function getVerifiedSourceUrl(charge: CriminalCharge): string | null {
+  const overlay = CHARGE_CITATIONS[charge.id];
+  if (overlay && overlay.confidence === 'high' && overlay.sourceUrl) return overlay.sourceUrl;
+  return null;
+}
+
 export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-first-degree',

@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified } from "@shared/criminal-charges";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
@@ -462,7 +462,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
 
                   const statuteCitation = getVerifiedCitation(charge);
                   const statuteUrl = isCitationVerified(charge)
-                    ? getStatuteUrl(charge.jurisdiction, charge.code)
+                    ? (getVerifiedSourceUrl(charge) || getStatuteUrl(charge.jurisdiction, charge.code))
                     : null;
                   const officialSite = getOfficialStatuteSite(charge.jurisdiction);
                   
@@ -592,7 +592,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                     {displayedStateCharges.map(charge => {
                       const statuteCitation = getVerifiedCitation(charge);
                       const statuteUrl = isCitationVerified(charge)
-                        ? getStatuteUrl(charge.jurisdiction, charge.code)
+                        ? (getVerifiedSourceUrl(charge) || getStatuteUrl(charge.jurisdiction, charge.code))
                         : null;
                       
                       return (
@@ -656,7 +656,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                     {displayedFederalCharges.map(charge => {
                       const statuteCitation = getVerifiedCitation(charge);
                       const statuteUrl = isCitationVerified(charge)
-                        ? getStatuteUrl(charge.jurisdiction, charge.code)
+                        ? (getVerifiedSourceUrl(charge) || getStatuteUrl(charge.jurisdiction, charge.code))
                         : null;
                       
                       return (
