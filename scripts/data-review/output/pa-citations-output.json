@@ -1,0 +1,146 @@
+[
+  {
+    "key": "pa-sexual-assault-in-the-second-degree",
+    "citation": "18 Pa.C.S. § 3124.1",
+    "foundPath": "title_18.part_ii.article_b.chapter_31.subchapter_b.section_3124_1",
+    "upgraded": true
+  },
+  {
+    "key": "pa-sexual-assault-in-the-third-degree",
+    "citation": "18 Pa.C.S. § 3126",
+    "foundPath": "title_18.part_ii.article_b.chapter_31.subchapter_b.section_3126",
+    "upgraded": true
+  },
+  {
+    "key": "pa-tax-fraud",
+    "citation": "72 P.S. § 7354",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-reckless-driving",
+    "citation": "75 Pa. Cons. Stat. § 3736",
+    "foundPath": "title_75.part_iii.chapter_37.subchapter_b.section_3736",
+    "upgraded": true
+  },
+  {
+    "key": "pa-public-drunkenness",
+    "citation": "18 Pa. Cons. Stat. § 5505",
+    "foundPath": "title_18.part_ii.article_f.chapter_55.subchapter_a.section_5505",
+    "upgraded": true
+  },
+  {
+    "key": "pa-probation-violation",
+    "citation": "42 Pa. Cons. Stat. § 9771",
+    "foundPath": "title_42.part_viii.chapter_97.subchapter_f.section_9771",
+    "upgraded": true
+  },
+  {
+    "key": "pa-protective-order-violation",
+    "citation": "23 Pa. Cons. Stat. § 6114",
+    "foundPath": "title_23.part_vii.chapter_61.section_6114",
+    "upgraded": true
+  },
+  {
+    "key": "pa-minor-in-possession",
+    "citation": "47 Pa. Cons. Stat. § 4-493(1)",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-contempt-of-court",
+    "citation": "42 Pa. Cons. Stat. § 4132",
+    "foundPath": "title_42.part_v.chapter_41.subchapter_c.section_4132",
+    "upgraded": true
+  },
+  {
+    "key": "pa-driving-without-insurance",
+    "citation": "75 Pa. Cons. Stat. § 1786",
+    "foundPath": "title_75.part_ii.chapter_17.subchapter_h.section_1786",
+    "upgraded": true
+  },
+  {
+    "key": "pa-reckless-driving-criminal",
+    "citation": "75 Pa. Cons. Stat. § 3736",
+    "foundPath": "title_75.part_iii.chapter_37.subchapter_b.section_3736",
+    "upgraded": true
+  },
+  {
+    "key": "pa-expired-registration",
+    "citation": "75 Pa. Cons. Stat. § 1301",
+    "foundPath": "title_75.part_ii.chapter_13.subchapter_a.section_1301",
+    "upgraded": true
+  },
+  {
+    "key": "pa-failure-to-pay-child-support",
+    "citation": "18 Pa. Cons. Stat. § 4322",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-animal-at-large",
+    "citation": "3 Pa. Cons. Stat. § 459-305",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-truancy",
+    "citation": "24 Pa. Cons. Stat. § 13-1333",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-littering",
+    "citation": "75 Pa. Cons. Stat. § 3709",
+    "foundPath": "title_75.part_iii.chapter_37.subchapter_a.section_3709",
+    "upgraded": true
+  },
+  {
+    "key": "pa-illegal-fireworks",
+    "citation": "35 Pa. Cons. Stat. § 1279.105",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-alcohol-in-park",
+    "citation": "47 Pa. Cons. Stat. § 4-406",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "pa-hunting-fishing-no-license",
+    "citation": "34 Pa. Cons. Stat. § 2711",
+    "foundPath": "title_34.chapter_27.subchapter_a.section_2711",
+    "upgraded": true
+  },
+  {
+    "key": "pa-aiding-and-abetting",
+    "citation": "18 Pa. Cons. Stat. § 306",
+    "foundPath": "title_18.part_i.chapter_3.section_306",
+    "upgraded": true
+  },
+  {
+    "key": "pa-attempted-sexual-assault",
+    "citation": "18 Pa.C.S. §§ 901, 3124.1",
+    "foundPath": "title_18.part_i.chapter_9.section_901",
+    "upgraded": true
+  },
+  {
+    "key": "pa-recidivist-enhancement",
+    "citation": "42 Pa. Cons. Stat. § 9714",
+    "foundPath": "title_42.part_viii.chapter_97.subchapter_b.section_9714",
+    "upgraded": true
+  },
+  {
+    "key": "pa-firearm-in-felony-enhancement",
+    "citation": "42 Pa. Cons. Stat. § 9712",
+    "foundPath": "title_42.part_viii.chapter_97.subchapter_b.section_9712",
+    "upgraded": true
+  },
+  {
+    "key": "pa-juvenile-transfer-adult-court",
+    "citation": "42 Pa. Cons. Stat. § 6355",
+    "foundPath": "title_42.part_vi.chapter_63.subchapter_d.section_6355",
+    "upgraded": true
+  }
+]

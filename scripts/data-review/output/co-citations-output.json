@@ -1,0 +1,554 @@
+[
+  {
+    "key": "co-menacing",
+    "citation": "Colo. Rev. Stat. § 18-3-206",
+    "foundPath": "title_18.article_3.part_2.section_18_3_206",
+    "upgraded": true
+  },
+  {
+    "key": "co-grand-theft-in-the-first-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-401",
+    "foundPath": "title_18.article_4.part_4.section_18_4_401",
+    "upgraded": true
+  },
+  {
+    "key": "co-grand-theft-in-the-second-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-401",
+    "foundPath": "title_18.article_4.part_4.section_18_4_401",
+    "upgraded": true
+  },
+  {
+    "key": "co-petty-theft",
+    "citation": "Colo. Rev. Stat. § 18-4-401",
+    "foundPath": "title_18.article_4.part_4.section_18_4_401",
+    "upgraded": true
+  },
+  {
+    "key": "co-theft-by-receiving",
+    "citation": "Colo. Rev. Stat. § 18-4-410",
+    "foundPath": "title_18.article_4.part_4.section_18_4_410",
+    "upgraded": true
+  },
+  {
+    "key": "co-identity-theft",
+    "citation": "Colo. Rev. Stat. § 18-5-902",
+    "foundPath": "title_18.article_5.part_9.section_18_5_902",
+    "upgraded": true
+  },
+  {
+    "key": "co-credit-card-fraud",
+    "citation": "Colo. Rev. Stat. § 18-5-702",
+    "foundPath": "title_18.article_5.part_7.section_18_5_702",
+    "upgraded": true
+  },
+  {
+    "key": "co-embezzlement",
+    "citation": "Colo. Rev. Stat. § 18-4-401(1)(b)",
+    "foundPath": "title_18.article_4.part_4.section_18_4_401",
+    "upgraded": true
+  },
+  {
+    "key": "co-shoplifting",
+    "citation": "Colo. Rev. Stat. § 18-4-406",
+    "foundPath": "title_18.article_4.part_4.section_18_4_406",
+    "upgraded": true
+  },
+  {
+    "key": "co-burglary-in-the-first-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-202",
+    "foundPath": "title_18.article_4.part_2.section_18_4_202",
+    "upgraded": true
+  },
+  {
+    "key": "co-burglary-in-the-second-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-203",
+    "foundPath": "title_18.article_4.part_2.section_18_4_203",
+    "upgraded": true
+  },
+  {
+    "key": "co-residential-burglary",
+    "citation": "Colo. Rev. Stat. § 18-4-202",
+    "foundPath": "title_18.article_4.part_2.section_18_4_202",
+    "upgraded": true
+  },
+  {
+    "key": "co-commercial-burglary",
+    "citation": "Colo. Rev. Stat. § 18-4-203",
+    "foundPath": "title_18.article_4.part_2.section_18_4_203",
+    "upgraded": true
+  },
+  {
+    "key": "co-auto-burglary",
+    "citation": "Colo. Rev. Stat. § 18-4-203(1)",
+    "foundPath": "title_18.article_4.part_2.section_18_4_203",
+    "upgraded": true
+  },
+  {
+    "key": "co-robbery-in-the-first-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-302",
+    "foundPath": "title_18.article_4.part_3.section_18_4_302",
+    "upgraded": true
+  },
+  {
+    "key": "co-robbery-in-the-second-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-301",
+    "foundPath": "title_18.article_4.part_3.section_18_4_301",
+    "upgraded": true
+  },
+  {
+    "key": "co-carjacking",
+    "citation": "Colo. Rev. Stat. § 18-4-302",
+    "foundPath": "title_18.article_4.part_3.section_18_4_302",
+    "upgraded": true
+  },
+  {
+    "key": "co-bank-robbery",
+    "citation": "Colo. Rev. Stat. § 18-4-302",
+    "foundPath": "title_18.article_4.part_3.section_18_4_302",
+    "upgraded": true
+  },
+  {
+    "key": "co-possession-of-controlled-substance",
+    "citation": "Colo. Rev. Stat. § 18-18-403.5",
+    "foundPath": "title_18.article_18.part_4.section_18_18_403_5",
+    "upgraded": true
+  },
+  {
+    "key": "co-possession-of-drug-paraphernalia",
+    "citation": "Colo. Rev. Stat. § 18-18-428",
+    "foundPath": "title_18.article_18.part_4.section_18_18_428",
+    "upgraded": true
+  },
+  {
+    "key": "co-maintaining-drug-house",
+    "citation": "Colo. Rev. Stat. § 18-18-411",
+    "foundPath": "title_18.article_18.part_4.section_18_18_411",
+    "upgraded": true
+  },
+  {
+    "key": "co-unlawful-carrying-of-weapon",
+    "citation": "Colo. Rev. Stat. § 18-12-105",
+    "foundPath": "title_18.article_12.part_1.section_18_12_105",
+    "upgraded": true
+  },
+  {
+    "key": "co-felon-in-possession-of-firearm",
+    "citation": "Colo. Rev. Stat. § 18-12-108",
+    "foundPath": "title_18.article_12.part_1.section_18_12_108",
+    "upgraded": true
+  },
+  {
+    "key": "co-discharge-of-firearm-in-city",
+    "citation": "Colo. Rev. Stat. § 18-12-107.5",
+    "foundPath": "title_18.article_12.part_1.section_18_12_107_5",
+    "upgraded": true
+  },
+  {
+    "key": "co-possession-of-prohibited-weapon",
+    "citation": "Colo. Rev. Stat. § 18-12-102",
+    "foundPath": "title_18.article_12.part_1.section_18_12_102",
+    "upgraded": true
+  },
+  {
+    "key": "co-wire-fraud",
+    "citation": "Colo. Rev. Stat. § 18-5-206",
+    "foundPath": "title_18.article_5.part_2.section_18_5_206",
+    "upgraded": true
+  },
+  {
+    "key": "co-mail-fraud",
+    "citation": "Colo. Rev. Stat. § 18-5-109",
+    "foundPath": "title_18.article_5.part_1.section_18_5_109",
+    "upgraded": true
+  },
+  {
+    "key": "co-check-fraud",
+    "citation": "Colo. Rev. Stat. § 18-5-205",
+    "foundPath": "title_18.article_5.part_2.section_18_5_205",
+    "upgraded": true
+  },
+  {
+    "key": "co-insurance-fraud",
+    "citation": "Colo. Rev. Stat. § 10-1-128",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-tax-fraud",
+    "citation": "Colo. Rev. Stat. § 39-21-118",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-forgery",
+    "citation": "Colo. Rev. Stat. § 18-5-102",
+    "foundPath": "title_18.article_5.part_1.section_18_5_102",
+    "upgraded": true
+  },
+  {
+    "key": "co-computer-fraud",
+    "citation": "Colo. Rev. Stat. § 18-5.5-102",
+    "foundPath": "title_18.article_5_5.section_18_5_5_102",
+    "upgraded": true
+  },
+  {
+    "key": "co-disorderly-conduct",
+    "citation": "Colo. Rev. Stat. § 18-9-106",
+    "foundPath": "title_18.article_9.part_1.section_18_9_106",
+    "upgraded": true
+  },
+  {
+    "key": "co-public-intoxication",
+    "citation": "Colo. Rev. Stat. § 25-1.5-104",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-disturbing-the-peace",
+    "citation": "Colo. Rev. Stat. § 18-9-106",
+    "foundPath": "title_18.article_9.part_1.section_18_9_106",
+    "upgraded": true
+  },
+  {
+    "key": "co-trespassing",
+    "citation": "Colo. Rev. Stat. § 18-4-502",
+    "foundPath": "title_18.article_4.part_5.section_18_4_502",
+    "upgraded": true
+  },
+  {
+    "key": "co-vandalism",
+    "citation": "Colo. Rev. Stat. § 18-4-501",
+    "foundPath": "title_18.article_4.part_5.section_18_4_501",
+    "upgraded": true
+  },
+  {
+    "key": "co-loitering",
+    "citation": "Colo. Rev. Stat. § 18-9-112",
+    "foundPath": "title_18.article_9.part_1.section_18_9_112",
+    "upgraded": true
+  },
+  {
+    "key": "co-reckless-driving",
+    "citation": "Colo. Rev. Stat. § 42-4-1401",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-hit-and-run",
+    "citation": "Colo. Rev. Stat. § 42-4-1601",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-driving-while-suspended",
+    "citation": "Colo. Rev. Stat. § 42-2-138",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-theft-under-2000",
+    "citation": "Colo. Rev. Stat. § 18-4-401",
+    "foundPath": "title_18.article_4.part_4.section_18_4_401",
+    "upgraded": true
+  },
+  {
+    "key": "co-trespass-first-degree",
+    "citation": "Colo. Rev. Stat. § 18-4-502",
+    "foundPath": "title_18.article_4.part_5.section_18_4_502",
+    "upgraded": true
+  },
+  {
+    "key": "co-possession-marijuana-public",
+    "citation": "Colo. Rev. Stat. § 18-18-406(3)(a)",
+    "foundPath": "title_18.article_18.part_4.section_18_18_406",
+    "upgraded": true
+  },
+  {
+    "key": "co-criminal-mischief",
+    "citation": "Colo. Rev. Stat. § 18-4-501",
+    "foundPath": "title_18.article_4.part_5.section_18_4_501",
+    "upgraded": true
+  },
+  {
+    "key": "co-driving-under-restraint",
+    "citation": "Colo. Rev. Stat. § 42-2-138",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-failure-to-appear",
+    "citation": "Colo. Rev. Stat. § 18-8-212",
+    "foundPath": "title_18.article_8.part_2.section_18_8_212",
+    "upgraded": true
+  },
+  {
+    "key": "co-probation-violation",
+    "citation": "Colo. Rev. Stat. § 16-11-206",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-resisting-arrest",
+    "citation": "Colo. Rev. Stat. § 18-8-103",
+    "foundPath": "title_18.article_8.part_1.section_18_8_103",
+    "upgraded": true
+  },
+  {
+    "key": "co-protective-order-violation",
+    "citation": "Colo. Rev. Stat. § 18-6-803.5",
+    "foundPath": "title_18.article_6.part_8.section_18_6_803_5",
+    "upgraded": true
+  },
+  {
+    "key": "co-minor-in-possession",
+    "citation": "Colo. Rev. Stat. § 18-13-122",
+    "foundPath": "title_18.article_13.section_18_13_122",
+    "upgraded": true
+  },
+  {
+    "key": "co-false-info-to-police",
+    "citation": "Colo. Rev. Stat. § 18-8-111",
+    "foundPath": "title_18.article_8.part_1.section_18_8_111",
+    "upgraded": true
+  },
+  {
+    "key": "co-harassment",
+    "citation": "Colo. Rev. Stat. § 18-9-111",
+    "foundPath": "title_18.article_9.part_1.section_18_9_111",
+    "upgraded": true
+  },
+  {
+    "key": "co-contempt-of-court",
+    "citation": "Colo. Rev. Stat. § 18-8-608",
+    "foundPath": "title_18.article_8.part_6.section_18_8_608",
+    "upgraded": true
+  },
+  {
+    "key": "co-bad-checks",
+    "citation": "Colo. Rev. Stat. § 18-5-205",
+    "foundPath": "title_18.article_5.part_2.section_18_5_205",
+    "upgraded": true
+  },
+  {
+    "key": "co-solicitation",
+    "citation": "Colo. Rev. Stat. § 18-7-202",
+    "foundPath": "title_18.article_7.part_2.section_18_7_202",
+    "upgraded": true
+  },
+  {
+    "key": "co-driving-without-insurance",
+    "citation": "Colo. Rev. Stat. § 42-7-422",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-expired-registration",
+    "citation": "Colo. Rev. Stat. § 42-3-103",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-expired-inspection",
+    "citation": "Colo. Rev. Stat. § 42-4-308",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-failure-to-pay-child-support",
+    "citation": "Colo. Rev. Stat. § 14-6-109",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-noise-violation",
+    "citation": "Colo. Rev. Stat. § 18-9-106(1)(a)",
+    "foundPath": "title_18.article_9.part_1.section_18_9_106",
+    "upgraded": true
+  },
+  {
+    "key": "co-fake-id",
+    "citation": "Colo. Rev. Stat. § 18-13-122(3)",
+    "foundPath": "title_18.article_13.section_18_13_122",
+    "upgraded": true
+  },
+  {
+    "key": "co-animal-at-large",
+    "citation": "Colo. Rev. Stat. § 35-43-126",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-animal-cruelty-misdemeanor",
+    "citation": "Colo. Rev. Stat. § 18-9-202(2)(b)(I)",
+    "foundPath": "title_18.article_9.part_2.section_18_9_202",
+    "upgraded": true
+  },
+  {
+    "key": "co-illegal-camping",
+    "citation": "Colo. Rev. Stat. § 18-4-504",
+    "foundPath": "title_18.article_4.part_5.section_18_4_504",
+    "upgraded": true
+  },
+  {
+    "key": "co-panhandling",
+    "citation": "Colo. Rev. Stat. § 18-9-106",
+    "foundPath": "title_18.article_9.part_1.section_18_9_106",
+    "upgraded": true
+  },
+  {
+    "key": "co-unregistered-vehicle",
+    "citation": "Colo. Rev. Stat. § 42-3-103",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-curfew-violation",
+    "citation": "Colo. Rev. Stat. § 22-33-108",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-trespass-after-warning",
+    "citation": "Colo. Rev. Stat. § 18-4-504",
+    "foundPath": "title_18.article_4.part_5.section_18_4_504",
+    "upgraded": true
+  },
+  {
+    "key": "co-defective-vehicle-equipment",
+    "citation": "Colo. Rev. Stat. § 42-4-201",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-truancy",
+    "citation": "Colo. Rev. Stat. § 22-33-107",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-littering",
+    "citation": "Colo. Rev. Stat. § 18-4-511",
+    "foundPath": "title_18.article_4.part_5.section_18_4_511",
+    "upgraded": true
+  },
+  {
+    "key": "co-illegal-fireworks",
+    "citation": "Colo. Rev. Stat. § 12-28-102",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-alcohol-in-park",
+    "citation": "Colo. Rev. Stat. § 18-13-123",
+    "foundPath": "title_18.article_13.section_18_13_123",
+    "upgraded": true
+  },
+  {
+    "key": "co-hunting-fishing-no-license",
+    "citation": "Colo. Rev. Stat. § 33-6-107",
+    "foundPath": null,
+    "upgraded": false
+  },
+  {
+    "key": "co-criminal-attempt",
+    "citation": "Colo. Rev. Stat. § 18-2-101",
+    "foundPath": "title_18.article_2.part_1.section_18_2_101",
+    "upgraded": true
+  },
+  {
+    "key": "co-conspiracy",
+    "citation": "Colo. Rev. Stat. § 18-2-201",
+    "foundPath": "title_18.article_2.part_2.section_18_2_201",
+    "upgraded": true
+  },
+  {
+    "key": "co-aiding-and-abetting",
+    "citation": "Colo. Rev. Stat. § 18-1-603",
+    "foundPath": "title_18.article_1.part_6.section_18_1_603",
+    "upgraded": true
+  },
+  {
+    "key": "co-accessory-after-the-fact",
+    "citation": "Colo. Rev. Stat. § 18-8-105",
+    "foundPath": "title_18.article_8.part_1.section_18_8_105",
+    "upgraded": true
+  },
+  {
+    "key": "co-attempted-robbery",
+    "citation": "Colo. Rev. Stat. §§ 18-2-101, 18-4-301",
+    "foundPath": "title_18.article_2.part_1.section_18_2_101",
+    "upgraded": true
+  },
+  {
+    "key": "co-criminal-solicitation",
+    "citation": "Colo. Rev. Stat. § 18-2-301",
+    "foundPath": "title_18.article_2.part_3.section_18_2_301",
+    "upgraded": true
+  },
+  {
+    "key": "co-gang-enhancement",
+    "citation": "Colo. Rev. Stat. § 18-23-102",
+    "foundPath": "title_18.article_23.section_18_23_102",
+    "upgraded": true
+  },
+  {
+    "key": "co-hate-crime-enhancement",
+    "citation": "Colo. Rev. Stat. § 18-9-121",
+    "foundPath": "title_18.article_9.part_1.section_18_9_121",
+    "upgraded": true
+  },
+  {
+    "key": "co-recidivist-enhancement",
+    "citation": "Colo. Rev. Stat. § 18-1.3-801",
+    "foundPath": "title_18.article_1_3.part_8.section_18_1_3_801",
+    "upgraded": true
+  },
+  {
+    "key": "co-firearm-in-felony-enhancement",
+    "citation": "Colo. Rev. Stat. § 18-1.3-406",
+    "foundPath": "title_18.article_1_3.part_4.section_18_1_3_406",
+    "upgraded": true
+  },
+  {
+    "key": "co-drug-school-zone-enhancement",
+    "citation": "Colo. Rev. Stat. § 18-18-407",
+    "foundPath": "title_18.article_18.part_4.section_18_18_407",
+    "upgraded": true
+  },
+  {
+    "key": "co-rico-organized-crime",
+    "citation": "Colo. Rev. Stat. § 18-17-104",
+    "foundPath": "title_18.article_17.section_18_17_104",
+    "upgraded": true
+  },
+  {
+    "key": "co-money-laundering",
+    "citation": "Colo. Rev. Stat. § 18-5-309",
+    "foundPath": "title_18.article_5.part_3.section_18_5_309",
+    "upgraded": true
+  },
+  {
+    "key": "co-juvenile-delinquency-felony",
+    "citation": "Colo. Rev. Stat. § 19-2.5-102",
+    "foundPath": "title_19.article_2_5.part_1.section_19_2_5_102",
+    "upgraded": true
+  },
+  {
+    "key": "co-juvenile-delinquency-misdemeanor",
+    "citation": "Colo. Rev. Stat. § 19-2.5-102",
+    "foundPath": "title_19.article_2_5.part_1.section_19_2_5_102",
+    "upgraded": true
+  },
+  {
+    "key": "co-juvenile-transfer-adult-court",
+    "citation": "Colo. Rev. Stat. § 19-2.5-801",
+    "foundPath": "title_19.article_2_5.part_8.section_19_2_5_801",
+    "upgraded": true
+  },
+  {
+    "key": "co-juvenile-firearm-possession",
+    "citation": "Colo. Rev. Stat. § 18-12-108.5",
+    "foundPath": "title_18.article_12.part_1.section_18_12_108_5",
+    "upgraded": true
+  }
+]
