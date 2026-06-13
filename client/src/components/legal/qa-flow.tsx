@@ -507,7 +507,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                   · {instructionRef}
                                 </span>
                               )}
-                              {(statuteUrl || officialSite) && (
+                              {(statuteUrl || (officialSite && !isChargeInOverlay(charge))) && (
                                 <a
                                   href={statuteUrl || officialSite || '#'}
                                   target="_blank"
