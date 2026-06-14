@@ -486,12 +486,12 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
   },
   "fl-attempted-murder": {
-    citation: "Fla. Stat. § 777.04",
+    citation: "Fla. Stat. §§ 777.04, 782.04",
     confidence: "high",
     lastVerified: "2026-06",
     source: "OpenLaws verified 2026-04",
-    sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/777.04",
-    instructionRef: "FSJI 5.1",
+    sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.04",
+    instructionRef: "FSJI 7.2",
     instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
   },
   "fl-trespassing": {
