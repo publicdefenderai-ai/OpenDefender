@@ -25,7 +25,7 @@ multi-section charges that generic legal databases often miss.
 |-------------|----------|-----------|-----------|----------|-----------|---------|--------|
 | CA | CALCRIM | Judicial Council of CA | No | Yes (bulk) | No | No | **IMPL** — leginfo URLs via citation |
 | NY | CJI2d | NY OCA | No | Yes (per-instruction) | No | Yes | **IMPL** — nycourts.gov PDFs |
-| FL | Fla. Std. Jury Instr. (Crim.) | FL Supreme Court | Yes | Yes | No | Yes | PLANNED |
+| FL | Fla. Std. Jury Instr. (Crim.) | FL Supreme Court | Yes | Yes | No | Yes | **IMPL** — FSJI refs (7.x homicide, 8.4 assault, 11.1 sex battery, 13.1 burglary, 15.1 robbery, 25.x drugs, 28.1 DUI); base instructionUrl |
 | NJ | Model Jury Charges (Crim.) | NJ Courts | No | Yes (per-charge) | No | Yes | **IMPL** — njcourts.gov PDFs |
 | TX | Texas Criminal Pattern Jury Charges | State Bar of TX | No | No | Yes (Westlaw) | No | NO URL — ref text only |
 | PA | Pa. SSJI (Criminal) | PA Bar | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
@@ -34,7 +34,7 @@ multi-section charges that generic legal databases often miss.
 | IL | Illinois Pattern Jury Instructions (Crim.) | IL Sup. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
 | NC | North Carolina Pattern Jury Instructions | NC Judicial College | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
 | MI | Michigan Criminal Jury Instructions | MI Judicial Institute | Yes (HTML) | Yes | No | Yes | PLANNED |
-| WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — WPIC refs (26.x homicide, 35.x assault, 37.x robbery, 38.x burglary, 45.02 rape, 50.x drugs, 92.06 DUI); base instructionUrl |
 | AZ | RAJI Criminal | State Bar of AZ | No | Yes (bulk) | No | No | **IMPL** — azleg.gov statute URLs; ref text |
 | MA | Instruction 9.00 series | MA Sup. Jud. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
 | TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
@@ -274,11 +274,11 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 4. **AZ** — RAJI **IMPLEMENTED** (azleg.gov statute URLs; ref text only for instruction)
 5. **GA** — GPJI **IMPLEMENTED** (ref text only — bulk PDF, no per-URL)
 6. **CO** — COLJI **IMPLEMENTED** (ref text only — paywalled)
-7. **FL** — Standard Instructions PLANNED (per-instruction HTML confirmed free)
+7. **FL** — FSJI **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, sex battery, drugs, DUI covered)
 8. **OK** — OUJI-CR PLANNED (per-instruction HTML on oscn.net)
 9. **CT** — CT Jury Instructions PLANNED (per-instruction HTML on jud.ct.gov)
 10. **OH** — Ohio Jury Instructions PLANNED (per-instruction HTML confirmed)
-11. **WA** — WPI-Criminal PLANNED (per-instruction HTML confirmed)
+11. **WA** — WPIC **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, rape, drugs, DUI covered)
 12. **NM** — NMRA 14 PLANNED (HTML available via nmonesource.com)
 
 ---
