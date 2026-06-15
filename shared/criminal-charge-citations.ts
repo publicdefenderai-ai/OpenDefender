@@ -429,7 +429,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.04",
     instructionRef: "FSJI 7.2",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-murder-in-the-second-degree": {
     citation: "Fla. Stat. § 782.04(2)",
@@ -438,7 +438,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.04",
     instructionRef: "FSJI 7.4",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-murder-in-the-third-degree": {
     citation: "Fla. Stat. § 782.04(4)",
@@ -447,7 +447,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.04",
     instructionRef: "FSJI 7.5",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-felony-murder": {
     citation: "Fla. Stat. § 782.04(1)(a)",
@@ -456,7 +456,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.04",
     instructionRef: "FSJI 7.5",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-voluntary-manslaughter": {
     citation: "Fla. Stat. § 782.07",
@@ -465,7 +465,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.07",
     instructionRef: "FSJI 7.7",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-involuntary-manslaughter": {
     citation: "Fla. Stat. § 782.07",
@@ -474,7 +474,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.07",
     instructionRef: "FSJI 7.7",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-vehicular-homicide": {
     citation: "Fla. Stat. § 782.071",
@@ -483,7 +483,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.071",
     instructionRef: "FSJI 7.9",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-attempted-murder": {
     citation: "Fla. Stat. §§ 777.04, 782.04",
@@ -492,7 +492,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/782.04",
     instructionRef: "FSJI 7.2",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-7-homicide",
   },
   "fl-trespassing": {
     citation: "Fla. Stat. § 810.08",
@@ -2918,7 +2918,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.030",
     instructionRef: "WPIC 26.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.02",
   },
   "wa-murder-in-the-second-degree": {
     citation: "Wash. Rev. Code § 9A.32.050",
@@ -2927,7 +2927,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.050",
     instructionRef: "WPIC 26.04",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.04",
   },
   "wa-voluntary-manslaughter": {
     citation: "Wash. Rev. Code § 9A.32.060",
@@ -2936,7 +2936,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.060",
     instructionRef: "WPIC 26.08",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.08",
   },
   "wa-involuntary-manslaughter": {
     citation: "Wash. Rev. Code § 9A.32.070",
@@ -2945,7 +2945,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.070",
     instructionRef: "WPIC 26.10",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.10",
   },
   "wa-vehicular-homicide": {
     citation: "Wash. Rev. Code § 46.61.520",
@@ -2954,7 +2954,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.520",
     instructionRef: "WPIC 36.53.01",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+36.53.01",
   },
   "wa-trespassing": {
     citation: "Wash. Rev. Code § 9A.52.070",
@@ -3975,7 +3975,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/316.193",
     instructionRef: "FSJI 28.1",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-28",
   },
   "ga-dui-first-offense": {
     citation: "Ga. Code Ann. § 40-6-391",
@@ -4234,7 +4234,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502",
     instructionRef: "WPIC 92.06",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06",
   },
   "wv-dui-first-offense": {
     citation: "W. Va. Code § 17C-5-2",
@@ -4326,7 +4326,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/784.021",
     instructionRef: "FSJI 8.4",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-8-assault",
   },
   "ga-aggravated-assault": {
     citation: "Ga. Code Ann. § 16-5-21",
@@ -4598,7 +4598,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.36.011",
     instructionRef: "WPIC 35.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.02",
   },
   "wv-aggravated-assault": {
     citation: "W. Va. Code § 61-2-9",
@@ -5002,7 +5002,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.13",
     instructionRef: "FSJI 15.1",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-15",
   },
   "ga-robbery-in-the-first-degree": {
     citation: "Ga. Code Ann. § 16-8-41",
@@ -5263,7 +5263,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.56.200",
     instructionRef: "WPIC 37.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+37.02",
   },
   "wv-robbery-in-the-first-degree": {
     citation: "W. Va. Code § 61-2-12(a)",
@@ -5354,7 +5354,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.13",
     instructionRef: "FSJI 15.1",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-15",
   },
   "ga-robbery-in-the-second-degree": {
     citation: "Ga. Code Ann. § 16-8-40",
@@ -5614,7 +5614,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.56.210",
     instructionRef: "WPIC 37.06",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+37.06",
   },
   "wv-robbery-in-the-second-degree": {
     citation: "W. Va. Code § 61-2-12(b)",
@@ -5706,7 +5706,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/810.02",
     instructionRef: "FSJI 13.1",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-13",
   },
   "ga-burglary-in-the-first-degree": {
     citation: "Ga. Code Ann. § 16-7-1(a)",
@@ -5973,7 +5973,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.52.020",
     instructionRef: "WPIC 38.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+38.02",
   },
   "wv-burglary-in-the-first-degree": {
     citation: "W. Va. Code § 61-3-11(a)",
@@ -6064,7 +6064,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/810.02",
     instructionRef: "FSJI 13.1",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-13",
   },
   "ga-burglary-in-the-second-degree": {
     citation: "Ga. Code Ann. § 16-7-1(b)",
@@ -6336,7 +6336,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.52.030",
     instructionRef: "WPIC 38.08",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+38.08",
   },
   "wv-burglary-in-the-second-degree": {
     citation: "W. Va. Code § 61-3-11(b)",
@@ -6430,7 +6430,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/893.13",
     instructionRef: "FSJI 25.2",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-25",
   },
   "ga-possession-of-controlled-substance": {
     citation: "Ga. Code Ann. § 16-13-30(a)",
@@ -6690,7 +6690,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4013",
     instructionRef: "WPIC 50.06",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+50.06",
   },
   "wv-possession-of-controlled-substance": {
     citation: "W. Va. Code § 60A-4-401(c)",
@@ -7826,7 +7826,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011",
     instructionRef: "FSJI 11.1",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-11",
   },
   "ga-sexual-assault-in-the-first-degree": {
     citation: "Ga. Code Ann. § 16-6-1",
@@ -8061,7 +8061,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.44.040",
     instructionRef: "WPIC 45.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.02",
   },
   "wv-sexual-assault-in-the-first-degree": {
     citation: "W. Va. Code § 61-8B-3",
@@ -8420,7 +8420,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.44.040",
     instructionRef: "WPIC 45.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.02",
   },
   "wi-rape-in-the-first-degree": {
     citation: "Wis. Stat. § 940.225(1)",
@@ -9272,7 +9272,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/893.135",
     instructionRef: "FSJI 25.9",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-25",
   },
   "fl-possession-with-intent-to-distribute": {
     citation: "Fla. Stat. § 893.13(1)(a)",
@@ -9281,7 +9281,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/893.13",
     instructionRef: "FSJI 25.7",
-    instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/",
+    instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-25",
   },
   "ga-drug-trafficking": {
     citation: "Ga. Code Ann. § 16-13-31",
@@ -9811,7 +9811,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.401",
     instructionRef: "WPIC 50.02",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+50.02",
   },
   "wa-possession-with-intent-to-distribute": {
     citation: "Wash. Rev. Code § 69.50.401(1)",
@@ -9820,7 +9820,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.401",
     instructionRef: "WPIC 50.04",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+50.04",
   },
   "wv-drug-trafficking": {
     citation: "W. Va. Code § 60A-4-401(a)",
@@ -11097,7 +11097,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.36.041",
     instructionRef: "WPIC 35.50",
-    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.50",
   },
   "ky-assault-fourth-degree": {
     citation: "Ky. Rev. Stat. Ann. § 508.030",
@@ -16314,7 +16314,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-attempted-robbery": { citation: "Colo. Rev. Stat. §§ 18-2-101, 18-4-301", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_2/part_1/section_18_2_101" },
   "ct-attempted-robbery": { citation: "Conn. Gen. Stat. §§ 53a-49, 53a-134", confidence: "medium", lastVerified: "2026-04", source: "Training data — Connecticut attempt + robbery first degree", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-49/" },
   "de-attempted-robbery": { citation: "Del. Code Ann. tit. 11, §§ 531, 831", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware attempt + robbery first degree", sourceUrl: "https://law.justia.com/codes/delaware/section-531/" },
-  "fl-attempted-robbery": { citation: "Fla. Stat. §§ 777.04, 812.13", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.13", instructionRef: "FSJI 15.1", instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/" },
+  "fl-attempted-robbery": { citation: "Fla. Stat. §§ 777.04, 812.13", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.13", instructionRef: "FSJI 15.1", instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-15" },
   "ga-attempted-robbery": { citation: "Ga. Code Ann. §§ 16-4-1, 16-8-40", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia attempt + robbery", sourceUrl: "https://law.justia.com/codes/georgia/section-16-4-1/" },
   "hi-attempted-robbery": { citation: "Haw. Rev. Stat. §§ 705-500, 708-840", confidence: "medium", lastVerified: "2026-04", source: "Training data — Hawaii attempt + robbery in the first degree", sourceUrl: "https://law.justia.com/codes/hawaii/section-705-500/" },
   "id-attempted-robbery": { citation: "Idaho Code §§ 18-306, 18-6501", confidence: "medium", lastVerified: "2026-04", source: "Training data — Idaho attempt + robbery", sourceUrl: "https://law.justia.com/codes/idaho/section-18-306/" },
@@ -16352,7 +16352,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ut-attempted-robbery": { citation: "Utah Code Ann. §§ 76-4-101, 76-6-301", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah attempt + robbery", sourceUrl: "https://law.justia.com/codes/utah/section-76-4-101/" },
   "vt-attempted-robbery": { citation: "Vt. Stat. Ann. tit. 13, §§ 9, 608", confidence: "medium", lastVerified: "2026-04", source: "Training data — Vermont attempt + robbery", sourceUrl: "https://law.justia.com/codes/vermont/section-9/" },
   "va-attempted-robbery": { citation: "Va. Code Ann. §§ 18.2-26, 18.2-58", confidence: "medium", lastVerified: "2026-04", source: "Virginia Crime Code System FY17 — corrected attempt statute from § 18.2-25 (applies only to capital offenses and Class 1 felonies) to § 18.2-26 (attempt to commit other felonies; robbery is Class 4)", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-26/" },
-  "wa-attempted-robbery": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.56.200", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.56.200", instructionRef: "WPIC 37.02", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/" },
+  "wa-attempted-robbery": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.56.200", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.56.200", instructionRef: "WPIC 37.02", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+37.02" },
   "wv-attempted-robbery": { citation: "W. Va. Code §§ 61-11-8, 61-2-12", confidence: "medium", lastVerified: "2026-04", source: "Training data — West Virginia attempt + robbery", sourceUrl: "https://code.wvlegislature.gov/61-11-8/" },
   "wi-attempted-robbery": { citation: "Wis. Stat. §§ 939.32, 943.32", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wisconsin attempt + robbery", sourceUrl: "https://law.justia.com/codes/wisconsin/section-939-32/" },
   "wy-attempted-robbery": { citation: "Wyo. Stat. Ann. §§ 6-1-301, 6-2-401", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming attempt + robbery", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-1-301/" },
@@ -16373,7 +16373,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-attempted-sexual-assault": { citation: "Colo. Rev. Stat. §§ 18-2-101, 18-3-402", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-2-101/" },
   "ct-attempted-sexual-assault": { citation: "Conn. Gen. Stat. §§ 53a-49, 53a-70", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-49/" },
   "de-attempted-sexual-assault": { citation: "Del. Code Ann. tit. 11, §§ 531, 771", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-531/" },
-  "fl-attempted-sexual-assault": { citation: "Fla. Stat. §§ 777.04, 794.011", confidence: "high", lastVerified: "2026-06", source: "OpenLaws verified 2026-04", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011", instructionRef: "FSJI 11.1", instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/" },
+  "fl-attempted-sexual-assault": { citation: "Fla. Stat. §§ 777.04, 794.011", confidence: "high", lastVerified: "2026-06", source: "OpenLaws verified 2026-04", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011", instructionRef: "FSJI 11.1", instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-11" },
   "ga-attempted-sexual-assault": { citation: "Ga. Code Ann. §§ 16-4-1, 16-6-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-4-1/" },
   "hi-attempted-sexual-assault": { citation: "Haw. Rev. Stat. §§ 705-500, 707-730", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-705-500/" },
   "id-attempted-sexual-assault": { citation: "Idaho Code §§ 18-306, 18-6101", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/idaho/section-18-306/" },
@@ -16411,7 +16411,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ut-attempted-sexual-assault": { citation: "Utah Code Ann. §§ 76-4-101, 76-5-402", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-4-101/" },
   "vt-attempted-sexual-assault": { citation: "Vt. Stat. Ann. tit. 13, §§ 9, 3252", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/vermont/section-9/" },
   "va-attempted-sexual-assault": { citation: "Va. Code Ann. §§ 18.2-26, 18.2-61", confidence: "medium", lastVerified: "2026-04", source: "Virginia Crime Code System FY17 — corrected attempt statute from § 18.2-25 (capital/Class 1 felony attempts only) to § 18.2-26 (attempt to commit other felonies; rape § 18.2-61 is Class 4)", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-26/" },
-  "wa-attempted-sexual-assault": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.44.040", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.44.040", instructionRef: "WPIC 45.02", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/" },
+  "wa-attempted-sexual-assault": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.44.040", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.44.040", instructionRef: "WPIC 45.02", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.02" },
   "wv-attempted-sexual-assault": { citation: "W. Va. Code §§ 61-11-8, 61-8B-3", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/61-11-8/" },
   "wi-attempted-sexual-assault": { citation: "Wis. Stat. §§ 939.32, 940.225", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wisconsin/section-939-32/" },
   "wy-attempted-sexual-assault": { citation: "Wyo. Stat. Ann. §§ 6-1-301, 6-2-302", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-1-301/" },
@@ -16794,7 +16794,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-sexual-assault-in-the-third-degree": { citation: "Colo. Rev. Stat. § 18-3-404", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-404/" },
   "ct-sexual-assault-in-the-third-degree": { citation: "Conn. Gen. Stat. § 53a-72a", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-72a/" },
   "de-sexual-assault-in-the-third-degree": { citation: "Del. Code Ann. tit. 11, § 770", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-770/" },
-  "fl-sexual-assault-in-the-third-degree": { citation: "Fla. Stat. § 794.011(5)", confidence: "high", lastVerified: "2026-06", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011", instructionRef: "FSJI 11.1", instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/" },
+  "fl-sexual-assault-in-the-third-degree": { citation: "Fla. Stat. § 794.011(5)", confidence: "high", lastVerified: "2026-06", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011", instructionRef: "FSJI 11.1", instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-11" },
   "ga-sexual-assault-in-the-third-degree": { citation: "Ga. Code Ann. § 16-6-5.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-6-5-1/" },
   "hi-sexual-assault-in-the-third-degree": { citation: "Haw. Rev. Stat. § 707-732", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-732/" },
   "id-sexual-assault-in-the-third-degree": { citation: "Idaho Code § 18-907", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-907/" },
@@ -16854,7 +16854,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-sexual-assault-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-3-403", confidence: "low", lastVerified: "2026-04", source: "REPEALED per OpenLaws 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-403/" },
   "ct-sexual-assault-in-the-second-degree": { citation: "Conn. Gen. Stat. § 53a-71", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-71/" },
   "de-sexual-assault-in-the-second-degree": { citation: "Del. Code Ann. tit. 11, § 768", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-768/" },
-  "fl-sexual-assault-in-the-second-degree": { citation: "Fla. Stat. § 800.04", confidence: "high", lastVerified: "2026-06", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/800.04", instructionRef: "FSJI 11.10", instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/" },
+  "fl-sexual-assault-in-the-second-degree": { citation: "Fla. Stat. § 800.04", confidence: "high", lastVerified: "2026-06", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/800.04", instructionRef: "FSJI 11.10", instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-11" },
   "ga-sexual-assault-in-the-second-degree": { citation: "Ga. Code Ann. § 16-6-22.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-6-22-1/" },
   "hi-sexual-assault-in-the-second-degree": { citation: "Haw. Rev. Stat. § 707-731", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-731/" },
   "id-sexual-assault-in-the-second-degree": { citation: "Idaho Code § 18-1508", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-1508/" },
@@ -17030,7 +17030,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-rape-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-3-402", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-402/" },
   "ct-rape-in-the-second-degree": { citation: "Conn. Gen. Stat. § 53a-71", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-71/" },
   "de-rape-in-the-second-degree": { citation: "Del. Code Ann. tit. 11, § 772", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-772/" },
-  "fl-rape-in-the-second-degree": { citation: "Fla. Stat. § 794.011(4)", confidence: "high", lastVerified: "2026-06", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011", instructionRef: "FSJI 11.1", instructionUrl: "https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/" },
+  "fl-rape-in-the-second-degree": { citation: "Fla. Stat. § 794.011(4)", confidence: "high", lastVerified: "2026-06", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/794.011", instructionRef: "FSJI 11.1", instructionUrl: "https://supremecourt.flcourts.gov/jury-instructions/criminal-standard-jury-instructions/chapter-11" },
   "ga-rape-in-the-second-degree": { citation: "Ga. Code Ann. § 16-6-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-6-1/" },
   "hi-rape-in-the-second-degree": { citation: "Haw. Rev. Stat. § 707-731", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-731/" },
   "id-rape-in-the-second-degree": { citation: "Idaho Code § 18-6101", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-6101/" },
@@ -17330,7 +17330,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tx-attempted-murder": { citation: "Tex. Penal Code §§ 15.01, 19.02", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.15.htm" },
   "ut-attempted-murder": { citation: "Utah Code Ann. §§ 76-4-101, 76-5-203", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah attempt + murder", sourceUrl: "https://law.justia.com/codes/utah/section-76-4-101/" },
   "vt-attempted-murder": { citation: "Vt. Stat. Ann. tit. 13, §§ 9, 2301", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/vermont/section-9/" },
-  "wa-attempted-murder": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.32.030", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.030", instructionRef: "WPIC 26.02", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/" },
+  "wa-attempted-murder": { citation: "Wash. Rev. Code §§ 9A.28.020, 9A.32.030", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.030", instructionRef: "WPIC 26.02", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.02" },
   "wv-attempted-murder": { citation: "W. Va. Code §§ 61-11-8, 61-2-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/61-11-8/" },
   "wi-attempted-murder": { citation: "Wis. Stat. §§ 939.32, 940.01", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wisconsin/section-939-32/" },
   "wy-attempted-murder": { citation: "Wyo. Stat. Ann. §§ 6-1-301, 6-2-101", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-1-301/" },
