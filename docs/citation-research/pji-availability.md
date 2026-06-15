@@ -180,14 +180,19 @@ Example (Murder 2nd, Penal Law § 125.25):
 | Manslaughter 1st | CJI2d PL 125.20 | 125.20 | nycourts.gov/…/125.20.pdf |
 | Manslaughter 2nd | CJI2d PL 125.15 | 125.15 | nycourts.gov/…/125.15.pdf |
 | Criminally Neg. Homicide | CJI2d PL 125.10 | 125.10 | nycourts.gov/…/125.10.pdf |
+| Vehicular Homicide | CJI2d PL 125.12 | 125.12 | nycourts.gov/…/125.12.pdf |
 | Attempted Murder | CJI2d PL 125.25 | §§ 110.00+125.25 (index=1) | nycourts.gov/…/125.25.pdf |
+| Assault 1st (agg.) | CJI2d PL 120.10 | 120.10 | nycourts.gov/…/120.10.pdf |
+| Assault 2nd | CJI2d PL 120.05 | 120.05 | nycourts.gov/…/120.05.pdf |
 | Robbery 1st | CJI2d PL 160.15 | 160.15 | nycourts.gov/…/160.15.pdf |
+| Robbery 2nd | CJI2d PL 160.10 | 160.10 | nycourts.gov/…/160.10.pdf |
 | Burglary 1st | CJI2d PL 140.30 | 140.30 | nycourts.gov/…/140.30.pdf |
+| Burglary 2nd | CJI2d PL 140.25 | 140.25 | nycourts.gov/…/140.25.pdf |
+| Burglary 3rd | CJI2d PL 140.20 | 140.20 | nycourts.gov/…/140.20.pdf |
 | Rape 1st | CJI2d PL 130.35 | 130.35 | nycourts.gov/…/130.35.pdf |
 | Drug Trafficking | CJI2d PL 220.43 | 220.43 | nycourts.gov/…/220.43.pdf |
+| Possession w/ Intent | CJI2d PL 220.16 | 220.16 | nycourts.gov/…/220.16.pdf |
 | DUI | CJI2d VTL 1192 | VAT/1192 | nycourts.gov/…/1192.pdf |
-| Assault 2nd (deadly weapon) | CJI2d PL 120.05 | 120.05 | — |
-| Assault 3rd | CJI2d PL 120.00 | 120.00 | — |
 
 ---
 
@@ -214,11 +219,18 @@ Examples:
 | Charge | NJ MJC Ref | Statute |
 |--------|------------|---------|
 | Murder 1st / 2nd | NJ MJC 2C:11-3 | § 2C:11-3(a)/(b) |
+| Felony Murder | NJ MJC 2C:11-3 | § 2C:11-3(a)(3) |
+| Manslaughter (vol/invol) | NJ MJC 2C:11-4 | § 2C:11-4(a)/(b) |
+| Criminally Neg. Homicide | NJ MJC 2C:11-5 | § 2C:11-5 |
+| Vehicular Homicide | NJ MJC 2C:11-5 | § 2C:11-5 |
+| Assault (aggravated) | NJ MJC 2C:12-1 | § 2C:12-1(b) |
+| Assault (simple) | NJ MJC 2C:12-1 | § 2C:12-1(a) |
+| Robbery 1st / 2nd | NJ MJC 2C:15-1 | § 2C:15-1(a)(2)/(1) |
+| Burglary 1st / 2nd / 3rd | NJ MJC 2C:18-2 | § 2C:18-2(b)(1)/(a) |
+| Sexual Assault / Rape 1st | NJ MJC 2C:14-2 | § 2C:14-2(a) |
+| Drug Trafficking | NJ MJC 2C:35-5 | § 2C:35-5 |
+| Possession w/ Intent | NJ MJC 2C:35-5 | § 2C:35-5(a)(1) |
 | DWI | NJ MJC 39:4-50 | § 39:4-50 |
-| Robbery 1st | NJ MJC 2C:15-1 | § 2C:15-1(a)(2) |
-| Burglary 1st | NJ MJC 2C:18-2 | § 2C:18-2(b)(1) |
-| Sexual Assault | NJ MJC 2C:14-2 | § 2C:14-2(a) |
-| Drug Distribution | NJ MJC 2C:35-5 | § 2C:35-5 |
 
 ---
 
@@ -283,5 +295,5 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 
 ---
 
-*Last updated: 2026-06-13*  
+*Last updated: 2026-06-15*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*
