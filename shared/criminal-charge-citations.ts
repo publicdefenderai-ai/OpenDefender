@@ -18020,4 +18020,40 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "mp-domestic-violence-simple": { citation: "6 CMC § 1304", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-driving-without-license-misdemeanor": { citation: "9 CMC § 5157", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-shoplifting-retail-theft": { citation: "6 CMC § 1808", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+
+  // ── CA remaining charges: stalking, kidnapping, arson, welfare fraud ──────
+  // Verified: 2026-06 | Source: California Legislature (leginfo.legislature.ca.gov)
+  // CALCRIM refs: Judicial Council of California Criminal Jury Instructions (2024 ed.)
+  "ca-stalking": {
+    citation: "Cal. Penal Code § 646.9",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 646.9 (Stats. 2014); CALCRIM 1301 (Stalking)",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=646.9.",
+    instructionRef: "CALCRIM 1301",
+  },
+  "ca-kidnapping": {
+    citation: "Cal. Penal Code § 207",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 207 (Stats. 1872); CALCRIM 1215 (Kidnapping)",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=207.",
+    instructionRef: "CALCRIM 1215",
+  },
+  "ca-arson": {
+    citation: "Cal. Penal Code § 451",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Penal Code § 451 (Stats. 2009); CALCRIM 1515 (Arson)",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=451.",
+    instructionRef: "CALCRIM 1515",
+  },
+  "ca-welfare-fraud": {
+    citation: "Cal. Welf. & Inst. Code § 10980",
+    confidence: "high",
+    lastVerified: "2026-06",
+    source: "California Legislature (leginfo) — Cal. Welf. & Inst. Code § 10980 (Stats. 2023); CALCRIM 1804 (Theft by False Pretense — obtaining benefits by misrepresentation)",
+    sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=10980.",
+    instructionRef: "CALCRIM 1804",
+  },
 };

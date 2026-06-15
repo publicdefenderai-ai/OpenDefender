@@ -145,11 +145,18 @@ These states publish free, per-instruction URLs suitable for direct `instruction
 | Conspiracy | 415 | § 182 |
 | Identity Theft | 2040 | § 530.5 |
 
-### CA Charges Still Needing CALCRIM Refs (future work)
+### CA Charges — Additional Entries Added (2026-06)
 
-- ca-stalking (CALCRIM 1301, § 646.9)
-- ca-kidnapping (CALCRIM 1215, § 207)
-- ca-arson (CALCRIM 1515, § 451)
+The following entries were added with `confidence: "high"`, leginfo sourceUrls, and instructionRef values:
+
+| Charge | CALCRIM | Statute |
+|--------|---------|---------|
+| Stalking | 1301 | § 646.9 |
+| Kidnapping | 1215 | § 207 |
+| Arson | 1515 | § 451 |
+| Welfare Fraud | 1804 (Theft by False Pretense — obtaining benefits by misrepresentation) | WIC § 10980 |
+
+All leginfo URLs verified live (HTTP 200) as of 2026-06.
 
 ---
 
