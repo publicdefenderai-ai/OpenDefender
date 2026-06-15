@@ -29,11 +29,11 @@ multi-section charges that generic legal databases often miss.
 | NJ | Model Jury Charges (Crim.) | NJ Courts | No | Yes (per-charge) | No | Yes | **IMPL** — njcourts.gov PDFs |
 | TX | Texas Criminal Pattern Jury Charges | State Bar of TX | No | No | Yes (Westlaw) | No | NO URL — ref text only |
 | PA | Pa. SSJI (Criminal) | PA Bar | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
-| OH | Ohio Jury Instructions | Ohio Judicial College | Yes (HTML) | Yes | No | Yes | PLANNED |
+| OH | Ohio Jury Instructions | Ohio Judicial College | Yes (HTML) | Yes | No | Yes | **IMPL** — OJI refs only (paywalled; no instructionUrl); murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs |
 | GA | Suggested Pattern Jury Instr. | Council of Superior Court Judges | No | Yes (bulk PDF) | No | No | **IMPL** — ref text only (no per-URL) |
-| IL | Illinois Pattern Jury Instructions (Crim.) | IL Sup. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| IL | Illinois Pattern Jury Instructions (Crim.) | IL Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — IPI-CR refs + illinoiscourts.gov chapter PDF URLs; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs, attempt |
 | NC | North Carolina Pattern Jury Instructions | NC Judicial College | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
-| MI | Michigan Criminal Jury Instructions | MI Judicial Institute | Yes (HTML) | Yes | No | Yes | PLANNED |
+| MI | Michigan Criminal Jury Instructions | MI Judicial Institute | Yes (HTML) | Yes | No | Yes | **IMPL** — CJI2d refs + courts.michigan.gov base URL; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs |
 | WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — WPIC refs (26.x homicide, 35.x assault, 37.x robbery, 38.x burglary, 45.02 rape, 50.x drugs, 92.06 DUI); base instructionUrl |
 | AZ | RAJI Criminal | State Bar of AZ | No | Yes (bulk) | No | No | **IMPL** — azleg.gov statute URLs; ref text |
 | MA | Instruction 9.00 series | MA Sup. Jud. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
@@ -296,9 +296,11 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 7. **FL** — FSJI **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, sex battery, drugs, DUI covered)
 8. **OK** — OUJI-CR PLANNED (per-instruction HTML on oscn.net)
 9. **CT** — CT Jury Instructions PLANNED (per-instruction HTML on jud.ct.gov)
-10. **OH** — Ohio Jury Instructions PLANNED (per-instruction HTML confirmed)
-11. **WA** — WPIC **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, rape, drugs, DUI covered)
-12. **NM** — NMRA 14 PLANNED (HTML available via nmonesource.com)
+10. **OH** — OJI **IMPL** (instructionRef only — paywalled; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs covered 2026-06)
+11. **IL** — IPI-CR **IMPL** (illinoiscourts.gov chapter PDF URLs; all target charge categories covered 2026-06)
+12. **MI** — CJI2d **IMPL** (courts.michigan.gov base URL; all target charge categories covered 2026-06)
+13. **WA** — WPIC **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, rape, drugs, DUI covered)
+14. **NM** — NMRA 14 PLANNED (HTML available via nmonesource.com)
 
 ---
 
