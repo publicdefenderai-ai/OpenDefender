@@ -764,7 +764,7 @@ async function callClaudeWithRetry(
       const timeoutMs = 150000; // 150 seconds - slightly longer than SDK timeout for complex legal guidance
       const apiCallPromise = anthropic.messages.create({
         model: CLAUDE_MODEL,
-        max_tokens: 3500,
+        max_tokens: 6000,
         temperature: 0.3,
         system: [
           {
@@ -917,6 +917,7 @@ export async function generateClaudeGuidance(
       chargeClassifications: parsedData.chargeClassifications,
       mockQA: parsedData.mockQA,
       uncertainties: Array.isArray(parsedData.uncertainties) ? parsedData.uncertainties : [],
+      collateralConsequences: Array.isArray(parsedData.collateralConsequences) ? parsedData.collateralConsequences : undefined,
       usageMetrics: {
         inputTokens: message.usage.input_tokens,
         outputTokens: message.usage.output_tokens,
@@ -1098,7 +1099,7 @@ export async function streamClaudeGuidance(
   try {
     const stream = anthropic.messages.stream({
       model: CLAUDE_MODEL,
-      max_tokens: 3500,
+      max_tokens: 6000,
       temperature: 0.3,
       system: [
         {
@@ -1164,6 +1165,7 @@ export async function streamClaudeGuidance(
       chargeClassifications: parsedData.chargeClassifications,
       mockQA: parsedData.mockQA,
       uncertainties: Array.isArray(parsedData.uncertainties) ? parsedData.uncertainties : [],
+      collateralConsequences: Array.isArray(parsedData.collateralConsequences) ? parsedData.collateralConsequences : undefined,
       usageMetrics: {
         inputTokens: finalMessage.usage.input_tokens,
         outputTokens: finalMessage.usage.output_tokens,

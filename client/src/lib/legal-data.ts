@@ -82,6 +82,16 @@ export interface LegalGuidance {
     explanation: string;
     category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
   }>;
+  collateralConsequences?: Array<{
+    category: string;
+    consequence: string;
+    timing: string;
+    actionNote: string;
+  }>;
+  uncertainties?: Array<{
+    area: string;
+    note: string;
+  }>;
 }
 
 export const legalDataApi = {
