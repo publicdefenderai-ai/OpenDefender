@@ -1997,7 +1997,7 @@ export default {
         "federalCharges": "Cargos Federales",
         "showMore": "Mostrar {{count}} cargos más...",
         "hasAttorneyLabel": "Ya tengo un abogado o defensor público",
-        "juryInstruction": "Instrucción",
+        "juryInstruction": "Instrucciones Oficiales del Jurado",
         "back": "Volver",
         "continue": "Continuar"
       },

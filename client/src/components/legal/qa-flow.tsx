@@ -523,7 +523,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             <div className="flex items-center gap-1.5 mt-1.5">
                               <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
                               <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                                {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Official Jury Instructions')}:
                               </span>
                               {chargeInstructionUrl ? (
                                 <a

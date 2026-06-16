@@ -1997,7 +1997,7 @@ export default {
         "federalCharges": "联邦指控",
         "showMore": "显示更多{{count}}项指控...",
         "hasAttorneyLabel": "我已经有律师或公设辩护人",
-        "juryInstruction": "陪审团指令",
+        "juryInstruction": "官方陪审团指令",
         "back": "返回",
         "continue": "继续"
       },

@@ -691,10 +691,10 @@ function YourChargesSection({
 
             {/* Jury Instruction Reference */}
             {charge.instructionRef && (
-              <div className="flex items-center gap-1.5">
-                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
-                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+              <div className="flex items-start gap-1.5">
+                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
+                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex-shrink-0">
+                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Official Jury Instructions')}:
                 </span>
                 {charge.instructionUrl ? (
                   <a
@@ -702,7 +702,7 @@ function YourChargesSection({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
-                    aria-label={`Jury instruction ${charge.instructionRef}`}
+                    aria-label={`Official jury instruction ${charge.instructionRef}`}
                   >
                     {charge.instructionRef}
                   </a>
