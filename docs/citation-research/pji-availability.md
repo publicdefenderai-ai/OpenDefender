@@ -32,12 +32,12 @@ multi-section charges that generic legal databases often miss.
 | OH | Ohio Jury Instructions | Ohio Judicial College | Yes (HTML) | Yes | No | Yes | **IMPL** — OJI refs only (paywalled; no instructionUrl); murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs |
 | GA | Suggested Pattern Jury Instr. | Council of Superior Court Judges | No | Yes (bulk PDF) | No | No | **IMPL** — ref text only (no per-URL) |
 | IL | Illinois Pattern Jury Instructions (Crim.) | IL Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — IPI-CR refs + illinoiscourts.gov chapter PDF URLs; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs, attempt |
-| NC | North Carolina Pattern Jury Instructions | NC Judicial College | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
+| NC | North Carolina Pattern Jury Instructions | NC Judicial College | No | No | Yes (LexisNexis) | No | **IMPL** — NC PJI refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, DUI, drugs |
 | MI | Michigan Criminal Jury Instructions | MI Judicial Institute | Yes (HTML) | Yes | No | Yes | **IMPL** — CJI2d refs + courts.michigan.gov base URL; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs |
 | WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — WPIC per-instruction URLs; 26.x homicide, 35.x assault (incl. DV), 36.53.01 vehicular, 37.x robbery, 38.x burglary, 45.x rape/sexual assault, 50.x drugs, 92.06 DUI (all 3 offenses) |
 | AZ | RAJI Criminal | State Bar of AZ | No | Yes (bulk) | No | No | **IMPL** — azleg.gov statute URLs; ref text |
 | MA | Instruction 9.00 series | MA Sup. Jud. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
-| TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
+| TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | **IMPL** — TPI-Crim. refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, DUI, drugs |
 | IN | Indiana Model Criminal Jury Instructions | IN Judicial Ctr. | Yes (HTML) | Yes | No | Yes | **IMPL** — Ind. Model Crim. Jury Instr. base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | MO | Missouri Approved Instructions (Criminal) | MO Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — MAI-CR base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | MD | Maryland Criminal Jury Instructions | MD Judicial Coll. | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
@@ -309,5 +309,5 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 
 ---
 
-*Last updated: 2026-06-16 (NM, IN, MO, WI, UT, KS promoted to IMPL)*  
+*Last updated: 2026-06-16 (NM, IN, MO, WI, UT, KS promoted to IMPL; NC and TN added)*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*
