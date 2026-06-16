@@ -236,51 +236,65 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-murder-in-the-first-degree": {
     citation: "D.C. Code § 22-2101",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2101",
+    instructionRef: "DC Redbook § 4.101",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-murder-in-the-second-degree": {
     citation: "D.C. Code § 22-2103",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2103",
+    instructionRef: "DC Redbook § 4.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-felony-murder": {
     citation: "D.C. Code § 22-2101",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2101",
+    instructionRef: "DC Redbook § 4.400",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-voluntary-manslaughter": {
     citation: "D.C. Code § 22-2105",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2105",
+    instructionRef: "DC Redbook § 4.200",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-involuntary-manslaughter": {
     citation: "D.C. Code § 22-2105",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2105",
+    instructionRef: "DC Redbook § 4.210",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-vehicular-homicide": {
     citation: "D.C. Code § 50-2203.01",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2203-01",
+    instructionRef: "DC Redbook § 4.220",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-attempted-murder": {
     citation: "D.C. Code § 22-1803",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-1803",
+    instructionRef: "DC Redbook § 4.101",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-trespassing": {
     citation: "D.C. Code § 22-3302",
@@ -1028,44 +1042,56 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-murder-in-the-first-degree": {
     citation: "Mass. Gen. Laws c. 265, § 1",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-1/",
+    instructionRef: "MA SJC Homicide Instr. § IV",
+    instructionUrl: "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-iv-murder-in-the-first-degree",
   },
   "ma-murder-in-the-second-degree": {
     citation: "Mass. Gen. Laws c. 265, § 1",
     confidence: "medium",
-    lastVerified: "2026-03",
+    lastVerified: "2026-06",
     source: "Massachusetts Legislature — c. 265 § 1 (2nd degree = all murder not 1st degree)",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-1/",
+    instructionRef: "MA SJC Homicide Instr. § V",
+    instructionUrl: "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-v-murder-in-the-second-degree",
   },
   "ma-voluntary-manslaughter": {
     citation: "Mass. Gen. Laws c. 265, § 13",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-13/",
+    instructionRef: "MA SJC Homicide Instr. § VI",
+    instructionUrl: "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-vi-voluntary-manslaughter",
   },
   "ma-involuntary-manslaughter": {
     citation: "Mass. Gen. Laws c. 265, § 13",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-13/",
+    instructionRef: "MA SJC Homicide Instr. § VII",
+    instructionUrl: "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-vii-involuntary-manslaughter",
   },
   "ma-vehicular-homicide": {
     citation: "Mass. Gen. Laws c. 265, § 13½",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-13/",
+    instructionRef: "MA Dist.Ct. Instr. 5.140",
+    instructionUrl: "https://www.mass.gov/doc/5140-motor-vehicle-homicide-felony-oui-liquor-and-recklessness-gl-c-90-ss-24ga/download",
   },
   "ma-attempted-murder": {
     citation: "Mass. Gen. Laws c. 265, § 16",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-16/",
+    instructionRef: "MA SJC Homicide Instr. § VIII",
+    instructionUrl: "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-viii-supplemental-instructions",
   },
   "ma-trespassing": {
     citation: "Mass. Gen. Laws c. 266, § 120",
@@ -4226,9 +4252,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-dui-first-offense": {
     citation: "Mass. Gen. Laws ch. 90 § 24",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/",
+    instructionRef: "MA Dist.Ct. Instr. 5.310",
+    instructionUrl: "https://www.mass.gov/doc/5310-operating-under-the-influence-of-intoxicating-liquor-gl-c-90-ss-24/download",
   },
   "mi-dui-first-offense": {
     citation: "Mich. Comp. Laws § 257.625",
@@ -4445,9 +4473,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-dui-first-offense": {
     citation: "D.C. Code § 50-2206.11",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11",
+    instructionRef: "DC Redbook § 3.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 9: Aggravated Assault — all 50 states + DC ─────────────────────
@@ -4603,9 +4633,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-aggravated-assault": {
     citation: "Mass. Gen. Laws ch. 265 § 13A",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-13a/",
+    instructionRef: "MA Dist.Ct. Instr. 6.160",
+    instructionUrl: "https://www.mass.gov/doc/6160-assault-and-battery-causing-serious-bodily-injury-gl-c-265-ss-13abi/download",
   },
   "mi-aggravated-assault": {
     citation: "Mich. Comp. Laws § 750.81a",
@@ -4838,9 +4870,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-aggravated-assault": {
     citation: "D.C. Code § 22-404.01",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-404-01",
+    instructionRef: "DC Redbook § 4.501",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 10: Domestic Violence Assault — all covered states ─────────────
@@ -5169,9 +5203,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-domestic-violence-assault": {
     citation: "D.C. Code § 16-1001",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/16-1001",
+    instructionRef: "DC Redbook § 4.500",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 11: Robbery in the First Degree — all 50 states + DC ───────────
@@ -5322,9 +5358,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-robbery-in-the-first-degree": {
     citation: "Mass. Gen. Laws ch. 265 § 17",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Massachusetts robbery (armed robbery under § 18 for weapon-involved); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-17/",
+    instructionRef: "MA Sup.Ct. Instr. — Armed Robbery",
+    instructionUrl: "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-armed-robbery-pdf/download",
   },
   "mi-robbery-in-the-first-degree": {
     citation: "Mich. Comp. Laws § 750.529",
@@ -5550,9 +5588,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-robbery-in-the-first-degree": {
     citation: "D.C. Code § 22-2801",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — D.C. robbery; verify against Justia before promoting to high",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2801",
+    instructionRef: "DC Redbook § 4.600",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 11b: Robbery in the Second Degree — all 50 states + DC ─────────
@@ -5699,9 +5739,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-robbery-in-the-second-degree": {
     citation: "Mass. Gen. Laws ch. 265 § 19",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Massachusetts unarmed robbery; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-19/",
+    instructionRef: "MA Sup.Ct. Instr. — Unarmed Robbery",
+    instructionUrl: "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-unarmed-robbery-pdf/download",
   },
   "mi-robbery-in-the-second-degree": {
     citation: "Mich. Comp. Laws § 750.530",
@@ -5927,9 +5969,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-robbery-in-the-second-degree": {
     citation: "D.C. Code § 22-2801",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — D.C. robbery (same statute covers both degrees; charging depends on weapon/injury facts); verify against Justia before promoting to high",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2801",
+    instructionRef: "DC Redbook § 4.600",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 12: Burglary in the First Degree — all 50 states + DC ──────────
@@ -6085,9 +6129,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-burglary-in-the-first-degree": {
     citation: "Mass. Gen. Laws ch. 266 § 14",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Massachusetts breaking and entering in the nighttime with intent (first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-14/",
+    instructionRef: "MA Dist.Ct. Instr. 8.100",
+    instructionUrl: "https://www.mass.gov/doc/8100-breaking-and-entering-a-building-ship-vessel-vehicle-in-the-nighttime-with-intent-to-commit-a-felony-gl-c-266-s-16-part-1/download",
   },
   "mi-burglary-in-the-first-degree": {
     citation: "Mich. Comp. Laws § 750.110a(2)",
@@ -6313,9 +6359,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-burglary-in-the-first-degree": {
     citation: "D.C. Code § 22-801(a)",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — D.C. burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-801",
+    instructionRef: "DC Redbook § 5.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 12b: Burglary in the Second Degree — all 50 states + DC ────────
@@ -6470,9 +6518,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-burglary-in-the-second-degree": {
     citation: "Mass. Gen. Laws ch. 266 § 17",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Massachusetts breaking and entering in the daytime (second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-17/",
+    instructionRef: "MA Dist.Ct. Instr. 8.104",
+    instructionUrl: "https://www.mass.gov/doc/8104-breaking-and-entering-in-the-daytime-to-a-building-ship-vessel-vehicle-with-intent-to-commit-felony-no-person-therein-being-put-in-fear-gl-c-266-ss-18-part-ii/download",
   },
   "mi-burglary-in-the-second-degree": {
     citation: "Mich. Comp. Laws § 750.110",
@@ -6705,9 +6755,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-burglary-in-the-second-degree": {
     citation: "D.C. Code § 22-801(b)",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — D.C. burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-801",
+    instructionRef: "DC Redbook § 5.200",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 13: Possession of Controlled Substance — all 50 states + DC ────
@@ -6855,9 +6907,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-possession-of-controlled-substance": {
     citation: "Mass. Gen. Laws ch. 94C § 34",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Massachusetts possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-34/",
+    instructionRef: "MA Dist.Ct. Instr. 7.820",
+    instructionUrl: "https://www.mass.gov/doc/7820-possession-of-a-controlled-substance-other-than-marijuana/download",
   },
   "mi-possession-of-controlled-substance": {
     citation: "Mich. Comp. Laws § 333.7403",
@@ -7077,9 +7131,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-possession-of-controlled-substance": {
     citation: "D.C. Code § 48-904.01(d)",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — D.C. possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/48-904-01",
+    instructionRef: "DC Redbook § 9.200",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 14: Petty Theft (remaining 8 states) + Shoplifting (all states) ─
@@ -8478,9 +8534,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-sexual-assault-in-the-first-degree": {
     citation: "D.C. Code § 22-3002",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-3002",
+    instructionRef: "DC Redbook § 8.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 17: Rape in the First Degree — all applicable states ───────────
@@ -8622,9 +8680,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-rape-in-the-first-degree": {
     citation: "Mass. Gen. Laws ch. 265 § 22",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-22/",
+    instructionRef: "MA Sup.Ct. Instr. — Rape",
+    instructionUrl: "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-rape-pdf/download",
   },
   "md-rape-in-the-first-degree": {
     citation: "Md. Code Ann., Crim. Law § 3-303",
@@ -8864,9 +8924,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-rape-in-the-first-degree": {
     citation: "D.C. Code § 22-3002",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-3002",
+    instructionRef: "DC Redbook § 8.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
 
   // ── BATCH 17b: Vandalism / Criminal Mischief — all 48 applicable states ──
@@ -9881,16 +9943,20 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-drug-trafficking": {
     citation: "Mass. Gen. Laws ch. 94C § 32E",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-32e/",
+    instructionRef: "MA Dist.Ct. Instr. 7.800",
+    instructionUrl: "https://www.mass.gov/doc/7800-distribution-manufacturing-or-cultivating-a-controlled-substance-other-than-marijuana-gl-c-94c-ss-32-32d/download",
   },
   "ma-possession-with-intent-to-distribute": {
     citation: "Mass. Gen. Laws ch. 94C § 32A",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-32a/",
+    instructionRef: "MA Dist.Ct. Instr. 7.830",
+    instructionUrl: "https://www.mass.gov/doc/7830-possession-with-intent-to-distribute-controlled-substance-other-than-marijuana/download",
   },
   "mi-drug-trafficking": {
     citation: "Mich. Comp. Laws § 333.7401(2)(a)(i)",
@@ -10341,16 +10407,20 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-drug-trafficking": {
     citation: "D.C. Code § 48-904.01(a)",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/48-904-01",
+    instructionRef: "DC Redbook § 9.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "dc-possession-with-intent-to-distribute": {
     citation: "D.C. Code § 48-904.01(a)(1)",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/48-904-01",
+    instructionRef: "DC Redbook § 9.100",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "federal-drug-trafficking-841": {
     citation: "21 U.S.C. § 841(a)(1)",
@@ -11768,9 +11838,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "dc-simple-assault-misdemeanor": {
     citation: "D.C. Code § 22-404",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-404",
+    instructionRef: "DC Redbook § 4.500",
+    instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions",
   },
   "gu-simple-assault-misdemeanor": {
     citation: "9 GCA § 19.10",
@@ -12775,7 +12847,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-dui-second-offense": { citation: "Colo. Rev. Stat. § 42-4-1301(1)(a)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/colorado/section-42-4-1301/" },
   "ct-dui-second-offense": { citation: "Conn. Gen. Stat. § 14-227a(g)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/connecticut/section-14-227a/" },
   "de-dui-second-offense": { citation: "Del. Code Ann. tit. 21, § 4177(d)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-4177/" },
-  "dc-dui-second-offense": { citation: "D.C. Code § 50-2206.11(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11" },
+  "dc-dui-second-offense": { citation: "D.C. Code § 50-2206.11(b)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11", instructionRef: "DC Redbook § 3.100", instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions" },
   "fl-dui-second-offense": { citation: "Fla. Stat. § 316.193(2)(a)", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/316.193" },
   "ga-dui-second-offense": { citation: "Ga. Code Ann. § 40-6-391(c)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/" },
   "hi-dui-second-offense": { citation: "Haw. Rev. Stat. § 291E-61(b)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-291e-61/" },
@@ -12788,7 +12860,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "la-dui-second-offense": { citation: "La. Rev. Stat. § 14:98(C)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana DWI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/louisiana/revised-statutes/section-14-98/" },
   "me-dui-second-offense": { citation: "Me. Rev. Stat. tit. 29-A, § 2411(1-A)(B)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maine/section-2411/" },
   "md-dui-second-offense": { citation: "Md. Code Ann., Transp. § 21-902(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/", instructionRef: "MCJI § 4:17.12" },
-  "ma-dui-second-offense": { citation: "Mass. Gen. Laws ch. 90, § 24(1)(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/" },
+  "ma-dui-second-offense": { citation: "Mass. Gen. Laws ch. 90, § 24(1)(a)(1)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/", instructionRef: "MA Dist.Ct. Instr. 5.310", instructionUrl: "https://www.mass.gov/doc/5310-operating-under-the-influence-of-intoxicating-liquor-gl-c-90-ss-24/download" },
   "mi-dui-second-offense": { citation: "Mich. Comp. Laws § 257.625(9)", confidence: "high", lastVerified: "2026-06", source: "Michigan Legislature — legislature.mi.gov; OWI second offense", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625", instructionRef: "CJI2d 15.1", instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
   "mn-dui-second-offense": { citation: "Minn. Stat. § 169A.25", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.25", instructionRef: "CRIMJIG 29.01" },
   "ms-dui-second-offense": { citation: "Miss. Code Ann. § 63-11-30(2)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/mississippi/section-63-11-30/" },
@@ -12834,7 +12906,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-dui-third-offense": { citation: "Colo. Rev. Stat. § 42-4-1301(1)(a)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/colorado/section-42-4-1301/" },
   "ct-dui-third-offense": { citation: "Conn. Gen. Stat. § 14-227a(h)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/connecticut/section-14-227a/" },
   "de-dui-third-offense": { citation: "Del. Code Ann. tit. 21, § 4177(d)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-4177/" },
-  "dc-dui-third-offense": { citation: "D.C. Code § 50-2206.11(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11" },
+  "dc-dui-third-offense": { citation: "D.C. Code § 50-2206.11(c)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11", instructionRef: "DC Redbook § 3.100", instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions" },
   "fl-dui-third-offense": { citation: "Fla. Stat. § 316.193(2)(b)1", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/316.193" },
   "ga-dui-third-offense": { citation: "Ga. Code Ann. § 40-6-391(c)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/" },
   "hi-dui-third-offense": { citation: "Haw. Rev. Stat. § 291E-61(b)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-291e-61/" },
@@ -12847,7 +12919,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "la-dui-third-offense": { citation: "La. Rev. Stat. § 14:98(D)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana DWI third offense (felony); verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/louisiana/revised-statutes/section-14-98/" },
   "me-dui-third-offense": { citation: "Me. Rev. Stat. tit. 29-A, § 2411(1-A)(C)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maine/section-2411/" },
   "md-dui-third-offense": { citation: "Md. Code Ann., Transp. § 21-902(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/", instructionRef: "MCJI § 4:17.12" },
-  "ma-dui-third-offense": { citation: "Mass. Gen. Laws ch. 90, § 24(1)(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/" },
+  "ma-dui-third-offense": { citation: "Mass. Gen. Laws ch. 90, § 24(1)(a)(1)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/", instructionRef: "MA Dist.Ct. Instr. 5.310", instructionUrl: "https://www.mass.gov/doc/5310-operating-under-the-influence-of-intoxicating-liquor-gl-c-90-ss-24/download" },
   "mi-dui-third-offense": { citation: "Mich. Comp. Laws § 257.625(9)(c)", confidence: "high", lastVerified: "2026-06", source: "Michigan Legislature — legislature.mi.gov; OWI third offense (felony)", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625", instructionRef: "CJI2d 15.1", instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
   "mn-dui-third-offense": { citation: "Minn. Stat. § 169A.24", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.24", instructionRef: "CRIMJIG 29.01" },
   "ms-dui-third-offense": { citation: "Miss. Code Ann. § 63-11-30(2)(c)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/mississippi/section-63-11-30/" },
@@ -17525,7 +17597,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "la-rape-in-the-second-degree": { citation: "La. Rev. Stat. Ann. § 14:42.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana forcible rape (second degree equivalent)", sourceUrl: "https://law.justia.com/codes/louisiana/revised-statutes/section-14-42-1/" },
   "me-rape-in-the-second-degree": { citation: "Me. Rev. Stat. Ann. tit. 17-A, § 252", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maine/section-252/" },
   "md-rape-in-the-second-degree": { citation: "Md. Code Ann., Crim. Law § 3-304", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/maryland/section-3-304/" },
-  "ma-rape-in-the-second-degree": { citation: "Mass. Gen. Laws ch. 265, § 22(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-22/" },
+  "ma-rape-in-the-second-degree": { citation: "Mass. Gen. Laws ch. 265, § 22(b)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-22/", instructionRef: "MA Sup.Ct. Instr. — Rape", instructionUrl: "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-rape-pdf/download" },
   "mi-rape-in-the-second-degree": { citation: "Mich. Comp. Laws § 750.520c", confidence: "high", lastVerified: "2026-06", source: "Michigan Legislature — legislature.mi.gov; criminal sexual conduct second degree", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520c", instructionRef: "CJI2d 20.2", instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
   "mn-rape-in-the-second-degree": { citation: "Minn. Stat. § 609.343", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.343" },
   "ms-rape-in-the-second-degree": { citation: "Miss. Code Ann. § 97-3-65", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/mississippi/section-97-3-65/" },
@@ -17830,7 +17902,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "in-felony-murder": { citation: "Ind. Code § 35-42-1-1(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/indiana/section-35-42-1-1/" },
   "ia-felony-murder": { citation: "Iowa Code § 707.2(1)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/iowa/section-707-2/" },
   "ky-felony-murder": { citation: "Ky. Rev. Stat. Ann. § 507.020(1)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/kentucky/section-507-020/" },
-  "ma-felony-murder": { citation: "Mass. Gen. Laws ch. 265, § 1", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-1/" },
+  "ma-felony-murder": { citation: "Mass. Gen. Laws ch. 265, § 1", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-1/", instructionRef: "MA SJC Homicide Instr. § IV", instructionUrl: "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-iv-murder-in-the-first-degree" },
   "mi-felony-murder": { citation: "Mich. Comp. Laws § 750.316(1)(b)", confidence: "high", lastVerified: "2026-06", source: "Michigan Legislature — legislature.mi.gov; felony murder (first degree)", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-316", instructionRef: "CJI2d 16.4", instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
   "mn-felony-murder": { citation: "Minn. Stat. § 609.185(a)(3)", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.185" },
   "mo-felony-murder": { citation: "Mo. Rev. Stat. § 565.021(1)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=565.021" },
@@ -17897,7 +17969,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wa-criminally-negligent-homicide": { citation: "Wash. Rev. Code § 9A.32.070", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.070" },
   "wv-criminally-negligent-homicide": { citation: "W. Va. Code § 61-2-5", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/61-2-5/" },
   "wy-criminally-negligent-homicide": { citation: "Wyo. Stat. Ann. § 6-2-105", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-2-105/" },
-  "dc-criminally-negligent-homicide": { citation: "D.C. Code § 22-2105", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2105" },
+  "dc-criminally-negligent-homicide": { citation: "D.C. Code § 22-2105", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2105", instructionRef: "DC Redbook § 4.300", instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions" },
   "pr-criminally-negligent-homicide": { citation: "P.R. Laws Ann. tit. 33, § 4736", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "vi-criminally-negligent-homicide": { citation: "14 V.I.C. § 925", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "gu-criminally-negligent-homicide": { citation: "9 GCA § 16.50", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
@@ -18151,11 +18223,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ma-malicious-destruction-of-property": { citation: "Mass. Gen. Laws ch. 266, § 127", confidence: "medium", lastVerified: "2026-04", source: "Training data — Massachusetts malicious destruction of property", sourceUrl: "https://law.justia.com/codes/massachusetts/section-127/" },
   "mi-malicious-destruction-of-property": { citation: "Mich. Comp. Laws § 750.377a", confidence: "medium", lastVerified: "2026-04", source: "Training data — Michigan malicious destruction of property", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-377a" },
 
-  "ma-assault-and-battery": { citation: "Mass. Gen. Laws ch. 265, § 13A", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-13a/" },
+  "ma-assault-and-battery": { citation: "Mass. Gen. Laws ch. 265, § 13A", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-13a/", instructionRef: "MA Dist.Ct. Instr. 6.140", instructionUrl: "https://www.mass.gov/doc/6140-assault-and-battery-gl-c-265-ss-13a/download" },
   "mi-assault-and-battery": { citation: "Mich. Comp. Laws § 750.81", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81" },
   "va-assault-and-battery": { citation: "Va. Code Ann. § 18.2-57", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-57/" },
 
-  "ma-domestic-assault-battery": { citation: "Mass. Gen. Laws ch. 265, § 13M", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-13m/" },
+  "ma-domestic-assault-battery": { citation: "Mass. Gen. Laws ch. 265, § 13M", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-13m/", instructionRef: "MA Dist.Ct. Instr. 6.270", instructionUrl: "https://www.mass.gov/doc/6270-assault-on-family-or-household-member-gl-c-265-ss-13m/download" },
   "va-domestic-assault-battery": { citation: "Va. Code Ann. § 18.2-57.2", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-57.2/" },
   "ok-domestic-assault-battery": { citation: "Okla. Stat. tit. 21, § 644", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/" },
 
@@ -18467,7 +18539,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wy-domestic-battery-misdemeanor": { citation: "Wyo. Stat. Ann. § 6-2-501(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-2-501/" },
   "wy-larceny-misdemeanor": { citation: "Wyo. Stat. Ann. § 6-3-402", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming larceny misdemeanor", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-3-402/" },
 
-  "dc-oui-misdemeanor": { citation: "D.C. Code § 50-2206.11", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11" },
+  "dc-oui-misdemeanor": { citation: "D.C. Code § 50-2206.11", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11", instructionRef: "DC Redbook § 3.100", instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions" },
   "dc-domestic-violence-simple-assault": { citation: "D.C. Code § 22-404", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-404" },
   "dc-second-degree-theft-misdemeanor": { citation: "D.C. Code § 22-3212", confidence: "medium", lastVerified: "2026-04", source: "Training data — DC theft in the second degree misdemeanor", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-3212" },
   "dc-driving-after-revocation": { citation: "D.C. Code § 50-1403.01", confidence: "medium", lastVerified: "2026-04", source: "Training data — DC driving after revocation", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-1403-01" },

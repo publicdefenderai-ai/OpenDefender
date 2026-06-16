@@ -36,7 +36,7 @@ multi-section charges that generic legal databases often miss.
 | MI | Michigan Criminal Jury Instructions | MI Judicial Institute | Yes (HTML) | Yes | No | Yes | **IMPL** — CJI2d refs + courts.michigan.gov base URL; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs |
 | WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — WPIC per-instruction URLs; 26.x homicide, 35.x assault (incl. DV), 36.53.01 vehicular, 37.x robbery, 38.x burglary, 45.x rape/sexual assault, 50.x drugs, 92.06 DUI (all 3 offenses) |
 | AZ | RAJI Criminal | State Bar of AZ | No | Yes (bulk) | No | No | **IMPL** — azleg.gov statute URLs; ref text |
-| MA | Instruction 9.00 series | MA Sup. Jud. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| MA | SJC Homicide Instr. (§ I–IX) + Dist.Ct. + Sup.Ct. | MA SJC / Dist.Ct. / Sup.Ct. | Yes (HTML + PDF) | Yes | No | Yes | **IMPL** — per-instruction URLs: SJC Homicide §§ IV–VIII (murder/manslaughter/attempt, mass.gov/info-details/); Dist.Ct. PDFs (5.140 vehicular, 5.310 OUI, 6.140/6.160/6.270 assault, 7.800/7.820/7.830 drugs, 8.100/8.104 B&E, mass.gov/doc/{slug}/download); Sup.Ct. PDFs (armed/unarmed robbery, rape, mass.gov/doc/superior-court-model-criminal-jury-instructions-{topic}-pdf/download) |
 | TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | **IMPL** — TPI-Crim. refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, DUI, drugs |
 | IN | Indiana Model Criminal Jury Instructions | IN Judicial Ctr. | Yes (HTML) | Yes | No | Yes | **IMPL** — Ind. Model Crim. Jury Instr. base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | MO | Missouri Approved Instructions (Criminal) | MO Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — MAI-CR base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
@@ -73,7 +73,7 @@ multi-section charges that generic legal databases often miss.
 | WY | Wyoming Criminal Pattern Jury Instructions | WY Bar | No | No | Yes | No | NO URL — ref text only |
 | LA | Louisiana Criminal Jury Instructions | LA Jud. College | No | No | Yes | No | NO URL — ref text only |
 | VA | Virginia Model Jury Instructions (Crim.) (VMJI) | VA CLE | No | No | Yes (LexisNexis) | No | **IMPL** — VMJI refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI, drugs |
-| DC | DC Criminal Jury Instructions (Redbook) | DC Courts | Yes (HTML) | Yes | No | Yes | PLANNED |
+| DC | DC Criminal Jury Instructions (Redbook) | DC Courts | Yes (HTML) | Yes | No | Yes | **IMPL** — DC Redbook §§ refs + dccourts.gov base URL; murder (§§ 4.100/4.101/4.400), manslaughter (§§ 4.200/4.210/4.220/4.300), assault (§§ 4.500/4.501), robbery (§ 4.600), burglary (§§ 5.100/5.200), sexual abuse/rape (§ 8.100), drugs (§§ 9.100/9.200), DUI/OUI (§ 3.100) |
 | PR | Puerto Rico (Spanish) Jury Instructions | PR Sup. Ct. | No | Yes (bulk) | No | No | NO URL — territory |
 | AS/GU/MP/VI | Territory jury instructions | Various | No | No | No | No | NO URL — territory |
 | Federal | Federal Criminal Jury Instructions | Various circuits | Varies | Varies | Varies | Varies | See federal note |
@@ -97,7 +97,8 @@ These states publish free, per-instruction URLs suitable for direct `instruction
 | **WA** | `https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+{N}.{NN}` | per-instruction query param URL |
 | **OK** | `https://www.oscn.net/applications/ouji-cr/{chapter}-{number}.htm` | per-instruction HTM URL |
 | **CT** | `https://www.jud.ct.gov/ji/Criminal/{chapter}/{instruction}.htm` | per-instruction HTM URL |
-| **DC** | `https://www.dccourts.gov/` | HTML; per-instruction TBD |
+| **MA** | SJC Homicide: `https://www.mass.gov/info-details/model-jury-instructions-on-homicide-{chapter-slug}` · Dist.Ct. PDFs: `https://www.mass.gov/doc/{nnnn-topic-slug}/download` · Sup.Ct. PDFs: `https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-{topic}-pdf/download` | per-instruction; 403 from curl = CDN bot-block; confirmed live via browser/webFetch (2026-06) |
+| **DC** | `https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions` | base URL only; 403 from all access methods — full Redbook not publicly browsable per-instruction (2026-06 verification) |
 | **NM** | `https://nmonesource.com/nmos/nmra/en/item/4248/` | NMRA 14-series HTML |
 
 ---
@@ -309,8 +310,10 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 20. **MD** — MCJI **IMPLEMENTED** (ref text only — paywalled LexisNexis; murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI, drugs all 3 offenses)
 21. **MN** — CRIMJIG **IMPLEMENTED** (ref text only — paywalled Westlaw; murder incl. 3rd degree, manslaughter, assault, DV, robbery, burglary incl. 3rd degree, rape, sexual assault, grand theft, DUI all 3 offenses, drugs)
 22. **VA** — VMJI **IMPLEMENTED** (ref text only — paywalled LexisNexis; murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI all 3 offenses, drugs)
+23. **MA** — SJC Homicide + Dist.Ct. + Sup.Ct. PDFs **IMPLEMENTED** (per-instruction URLs; murder SJC §§ IV/V, felony murder § IV, manslaughter §§ VI/VII, vehicular homicide Dist.Ct. 5.140, attempted murder § VIII; aggravated assault 6.160, A&B 6.140, domestic A&B 6.270; armed robbery Sup.Ct. PDF, unarmed robbery Sup.Ct. PDF; B&E nighttime 8.100, B&E daytime 8.104; rape Sup.Ct. PDF; OUI 5.310; drug distribution 7.800, possession 7.820, PWID 7.830)
+24. **DC** — DC Redbook **IMPLEMENTED** (base URL only — dccourts.gov 403s all access; §§ refs: murder 4.100/4.101/4.400, manslaughter 4.200/4.210/4.220/4.300, assault 4.500/4.501, robbery 4.600, burglary 5.100/5.200, sexual abuse/rape 8.100, drugs 9.100/9.200, DUI/OUI 3.100)
 
 ---
 
-*Last updated: 2026-06-16 (NM, IN, MO, WI, UT, KS promoted to IMPL; NC and TN added; MD, MN, VA added; OH URL verification updated: supremecourt.ohio.gov OJI paths confirmed 404 — no instructionUrl added)*  
+*Last updated: 2026-06-16 (MA promoted from PLANNED to IMPL with per-instruction URLs: SJC Homicide §§ IV–VIII, Dist.Ct. 5.140/5.310/6.140/6.160/6.270/7.800/7.820/7.830/8.100/8.104 PDFs, Sup.Ct. armed/unarmed robbery and rape PDFs — 7 URLs spot-checked live 2026-06; DC promoted to IMPL with base URL + DC Redbook §§ refs; mass.gov returns 403 from curl/CDN, confirmed live via browser/webFetch)*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*
