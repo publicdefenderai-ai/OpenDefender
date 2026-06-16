@@ -34,7 +34,7 @@ multi-section charges that generic legal databases often miss.
 | IL | Illinois Pattern Jury Instructions (Crim.) | IL Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — IPI-CR refs + illinoiscourts.gov chapter PDF URLs; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs, attempt |
 | NC | North Carolina Pattern Jury Instructions | NC Judicial College | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
 | MI | Michigan Criminal Jury Instructions | MI Judicial Institute | Yes (HTML) | Yes | No | Yes | **IMPL** — CJI2d refs + courts.michigan.gov base URL; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs |
-| WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — WPIC refs (26.x homicide, 35.x assault, 37.x robbery, 38.x burglary, 45.02 rape, 50.x drugs, 92.06 DUI); base instructionUrl |
+| WA | Washington Pattern Jury Instructions (Crim.) | WA Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — WPIC per-instruction URLs; 26.x homicide, 35.x assault (incl. DV), 36.53.01 vehicular, 37.x robbery, 38.x burglary, 45.x rape/sexual assault, 50.x drugs, 92.06 DUI (all 3 offenses) |
 | AZ | RAJI Criminal | State Bar of AZ | No | Yes (bulk) | No | No | **IMPL** — azleg.gov statute URLs; ref text |
 | MA | Instruction 9.00 series | MA Sup. Jud. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
 | TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
@@ -48,8 +48,8 @@ multi-section charges that generic legal databases often miss.
 | SC | South Carolina Requests to Charge | SC Bar | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
 | KY | Kentucky Instructions to Juries (Crim.) | KY Bar | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
 | OR | Oregon Uniform Criminal Jury Instructions | OR Crim. Law Sect. | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
-| OK | Oklahoma Uniform Jury Instructions — Crim. | OK OUJI-CR | Yes (HTML) | Yes | No | Yes | PLANNED |
-| CT | Connecticut Jury Instructions (Crim.) | CT Jud. Branch | Yes (HTML) | Yes | No | Yes | PLANNED |
+| OK | Oklahoma Uniform Jury Instructions — Crim. | OK OUJI-CR | Yes (HTML) | Yes | No | Yes | **IMPL** — OUJI-CR refs + oscn.net per-instruction URLs; 4-72/83 murder, 4-89/97 manslaughter, 4-15a DV assault, 4-18 aggravated assault, 4-120 rape/sexual assault, 4-133/141 robbery, 5-8/17 burglary, 6-11 DUI, 6-39/44/46 drugs |
+| CT | Connecticut Jury Instructions (Crim.) | CT Jud. Branch | Yes (HTML) | Yes | No | Yes | **IMPL** — CT JI refs + jud.ct.gov per-instruction URLs; 2.x homicide, 3.1 sexual assault, 5.x robbery, 6.x assault, 7.x burglary, 11.1 DUI, 12.x drugs |
 | IA | Iowa Criminal Jury Instructions | Iowa State Bar | No | No | Yes (Westlaw) | No | NO URL — ref text only |
 | MS | Mississippi Model Jury Instructions | MS Bar | No | No | Yes | No | NO URL — ref text only |
 | AR | Arkansas Model Jury Instructions (Crim.) | AR Judicial Council | No | No | Yes | No | NO URL — ref text only |
@@ -94,9 +94,9 @@ These states publish free, per-instruction URLs suitable for direct `instruction
 | **IL** | `https://www.illinoiscourts.gov/resources/{guid}/file` | [Chapter 7 (Homicide)](https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file) — per-chapter PDFs; each GUID is unique per chapter (verified 200 on 6 chapters 2026-06) |
 | **OH** | N/A — OJI not publicly accessible as per-instruction URLs | Per-instruction pages require Ohio Judicial College login; `instructionRef` label only (no `instructionUrl`) |
 | **MI** | `https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/` | One HTML document with all CJI2d instructions (mjieducation.mi.gov redirects here); verified 200 (2026-06) |
-| **WA** | `https://www.courts.wa.gov/newsinfo/resources/?fa=newsinfo_jury.juryinstruct&section=11` | HTML; per-instruction TBD |
-| **OK** | `https://www.oscn.net/applications/ouji-cr/` | HTML pages per instruction |
-| **CT** | `https://www.jud.ct.gov/ji/Criminal/` | HTML pages per instruction |
+| **WA** | `https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+{N}.{NN}` | per-instruction query param URL |
+| **OK** | `https://www.oscn.net/applications/ouji-cr/{chapter}-{number}.htm` | per-instruction HTM URL |
+| **CT** | `https://www.jud.ct.gov/ji/Criminal/{chapter}/{instruction}.htm` | per-instruction HTM URL |
 | **DC** | `https://www.dccourts.gov/` | HTML; per-instruction TBD |
 | **NM** | `https://nmonesource.com/nmos/nmra/en/item/4248/` | NMRA 14-series HTML |
 
@@ -294,15 +294,15 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 5. **GA** — GPJI **IMPLEMENTED** (ref text only — bulk PDF, no per-URL)
 6. **CO** — COLJI **IMPLEMENTED** (ref text only — paywalled)
 7. **FL** — FSJI **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, sex battery, drugs, DUI covered)
-8. **OK** — OUJI-CR PLANNED (per-instruction HTML on oscn.net)
-9. **CT** — CT Jury Instructions PLANNED (per-instruction HTML on jud.ct.gov)
+8. **OK** — OUJI-CR **IMPL** (oscn.net per-instruction URLs; murder, manslaughter, assault, rape, robbery, burglary, DUI, drugs covered 2026-06)
+9. **CT** — CT JI **IMPL** (jud.ct.gov per-instruction URLs; homicide, sexual assault, robbery, burglary, assault, DUI, drugs covered 2026-06)
 10. **OH** — OJI **IMPL** (instructionRef only — no public per-instruction URLs confirmed; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs covered; HTTP spot-check 2026-06: OJI not accessible via supremecourt.ohio.gov public paths)
 11. **IL** — IPI-CR **IMPL** (illinoiscourts.gov chapter PDF URLs via GUID pattern; all target categories covered including assault; HTTP spot-check 2026-06: all 6 chapter URLs confirmed 200)
 12. **MI** — CJI2d **IMPL** (courts.michigan.gov full-HTML-set page; all target categories covered including assault and sexual assault; mjieducation.mi.gov redirects to courts.michigan.gov; HTTP spot-check 2026-06: base URL confirmed 200)
-13. **WA** — WPIC **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, rape, drugs, DUI covered)
+13. **WA** — WPIC **IMPL** (per-instruction query-param URLs; murder, manslaughter, vehicular, assault incl. DV, robbery, burglary, rape/sexual assault, drugs, DUI all 3 offenses covered 2026-06)
 14. **NM** — NMRA 14 PLANNED (HTML available via nmonesource.com)
 
 ---
 
-*Last updated: 2026-06-16*  
+*Last updated: 2026-06-16 (WA, OK, CT promoted to IMPL)*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*

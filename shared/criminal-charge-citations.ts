@@ -2366,16 +2366,20 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-murder-in-the-first-degree": {
     citation: "Okla. Stat. tit. 21, § 701.7",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-7/",
+    instructionRef: "OUJI-CR 4-72",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-72.htm",
   },
   "ok-murder-in-the-second-degree": {
     citation: "Okla. Stat. tit. 21, § 701.8",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-8/",
+    instructionRef: "OUJI-CR 4-83",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-83.htm",
   },
 
   // — Tennessee —
@@ -3317,51 +3321,65 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-murder-in-the-first-degree": {
     citation: "Conn. Gen. Stat. § 53a-54a",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-54a/",
+    instructionRef: "CT JI 2.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.1-1.htm",
   },
   "ct-murder-in-the-second-degree": {
     citation: "Conn. Gen. Stat. § 53a-54b",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-54b/",
+    instructionRef: "CT JI 2.2-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.2-1.htm",
   },
   "ct-voluntary-manslaughter": {
     citation: "Conn. Gen. Stat. § 53a-55",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-55/",
+    instructionRef: "CT JI 2.3-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.3-1.htm",
   },
   "ct-involuntary-manslaughter": {
     citation: "Conn. Gen. Stat. § 53a-56",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-56/",
+    instructionRef: "CT JI 2.4-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.4-1.htm",
   },
   "ct-criminally-negligent-homicide": {
     citation: "Conn. Gen. Stat. § 53a-58",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-58/",
+    instructionRef: "CT JI 2.5-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.5-1.htm",
   },
   "ct-vehicular-homicide": {
     citation: "Conn. Gen. Stat. § 53a-56b",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-56b/",
+    instructionRef: "CT JI 2.6-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.6-1.htm",
   },
   "ct-felony-murder": {
     citation: "Conn. Gen. Stat. § 53a-54c",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-54c/",
+    instructionRef: "CT JI 2.7-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.7-1.htm",
   },
   "ct-disorderly-conduct": {
     citation: "Conn. Gen. Stat. § 53a-182",
@@ -4006,9 +4024,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-dui-first-offense": {
     citation: "Conn. Gen. Stat. § 14-227a",
     confidence: "high",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-14-227a/",
+    instructionRef: "CT JI 11.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/MotorVehicleOffenses/11.1-1.htm",
   },
   "de-dui-first-offense": {
     citation: "Del. Code Ann. tit. 21 § 4177",
@@ -4221,9 +4241,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-dui-first-offense": {
     citation: "Okla. Stat. tit. 47 § 11-902",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-11-902/",
+    instructionRef: "OUJI-CR 6-11",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-11.htm",
   },
   "or-dui-first-offense": {
     citation: "Or. Rev. Stat. § 813.010",
@@ -4363,9 +4385,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-aggravated-assault": {
     citation: "Conn. Gen. Stat. § 53a-59",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-59/",
+    instructionRef: "CT JI 6.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/AssaultOffenses/6.1-1.htm",
   },
   "de-aggravated-assault": {
     citation: "Del. Code Ann. tit. 11, § 613",
@@ -4578,9 +4602,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-aggravated-assault": {
     citation: "Okla. Stat. tit. 21 § 646",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-646/",
+    instructionRef: "OUJI-CR 4-18",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-18.htm",
   },
   "or-aggravated-assault": {
     citation: "Or. Rev. Stat. § 163.185",
@@ -4740,9 +4766,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-domestic-violence-assault": {
     citation: "Conn. Gen. Stat. § 53a-61",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-61/",
+    instructionRef: "CT JI 6.3-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/AssaultOffenses/6.3-1.htm",
   },
   "de-domestic-violence-assault": {
     citation: "Del. Code Ann. tit. 11 § 1042",
@@ -4905,9 +4933,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-domestic-violence-assault": {
     citation: "Okla. Stat. tit. 21 § 644",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/",
+    instructionRef: "OUJI-CR 4-15a",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-15a.htm",
   },
   "or-domestic-violence-assault": {
     citation: "Or. Rev. Stat. § 163.160",
@@ -4972,7 +5002,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-57.2/",
   },
-  "wa-domestic-violence-assault": { citation: "Wash. Rev. Code § 9A.36.041", confidence: "high", lastVerified: "2026-06", source: "Washington Legislature — app.leg.wa.gov/rcw", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.36.041" },
+  "wa-domestic-violence-assault": { citation: "Wash. Rev. Code § 9A.36.041", confidence: "high", lastVerified: "2026-06", source: "Washington Legislature — app.leg.wa.gov/rcw", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.36.041", instructionRef: "WPIC 35.50", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.50" },
   "wv-domestic-violence-assault": {
     citation: "W. Va. Code § 48-27-202",
     confidence: "high",
@@ -5048,9 +5078,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-robbery-in-the-first-degree": {
     citation: "Conn. Gen. Stat. § 53a-134",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Connecticut robbery in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-134/",
+    instructionRef: "CT JI 5.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Robbery/5.1-1.htm",
   },
   "de-robbery-in-the-first-degree": {
     citation: "Del. Code Ann. tit. 11 § 832",
@@ -5248,9 +5280,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-robbery-in-the-first-degree": {
     citation: "Okla. Stat. tit. 21 § 797",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Oklahoma robbery with firearms or dangerous weapons; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-797/",
+    instructionRef: "OUJI-CR 4-141",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-141.htm",
   },
   "or-robbery-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 164.415",
@@ -5404,9 +5438,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-robbery-in-the-second-degree": {
     citation: "Conn. Gen. Stat. § 53a-135",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Connecticut robbery in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-135/",
+    instructionRef: "CT JI 5.2-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Robbery/5.2-1.htm",
   },
   "de-robbery-in-the-second-degree": {
     citation: "Del. Code Ann. tit. 11 § 831",
@@ -5604,9 +5640,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-robbery-in-the-second-degree": {
     citation: "Okla. Stat. tit. 21 § 791",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Oklahoma robbery by force or fear (unarmed); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-791/",
+    instructionRef: "OUJI-CR 4-133",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-133.htm",
   },
   "or-robbery-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 164.405",
@@ -5761,9 +5799,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-burglary-in-the-first-degree": {
     citation: "Conn. Gen. Stat. § 53a-101",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Connecticut burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-101/",
+    instructionRef: "CT JI 7.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Burglary/7.1-1.htm",
   },
   "de-burglary-in-the-first-degree": {
     citation: "Del. Code Ann. tit. 11 § 826",
@@ -5969,9 +6009,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-burglary-in-the-first-degree": {
     citation: "Okla. Stat. tit. 21 § 1431",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Oklahoma burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1431/",
+    instructionRef: "OUJI-CR 5-8",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-8.htm",
   },
   "or-burglary-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 164.225",
@@ -6125,9 +6167,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-burglary-in-the-second-degree": {
     citation: "Conn. Gen. Stat. § 53a-102",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Connecticut burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-102/",
+    instructionRef: "CT JI 7.2-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Burglary/7.2-1.htm",
   },
   "de-burglary-in-the-second-degree": {
     citation: "Del. Code Ann. tit. 11 § 825",
@@ -6340,9 +6384,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-burglary-in-the-second-degree": {
     citation: "Okla. Stat. tit. 21 § 1435",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Oklahoma burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1435/",
+    instructionRef: "OUJI-CR 5-17",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-17.htm",
   },
   "or-burglary-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 164.215",
@@ -6499,9 +6545,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-possession-of-controlled-substance": {
     citation: "Conn. Gen. Stat. § 21a-279",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Connecticut possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-21a-279/",
+    instructionRef: "CT JI 12.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Narcotics/12.1-1.htm",
   },
   "de-possession-of-controlled-substance": {
     citation: "Del. Code Ann. tit. 16 § 4753",
@@ -6696,9 +6744,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-possession-of-controlled-substance": {
     citation: "Okla. Stat. tit. 63 § 2-402",
     confidence: "medium",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "Training data — Oklahoma possession of controlled dangerous substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-402/",
+    instructionRef: "OUJI-CR 6-39",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-39.htm",
   },
   "or-possession-of-controlled-substance": {
     citation: "Or. Rev. Stat. § 475C.909",
@@ -7895,9 +7945,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-sexual-assault-in-the-first-degree": {
     citation: "Conn. Gen. Stat. § 53a-70",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-70/",
+    instructionRef: "CT JI 3.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/SexOffenses/3.1-1.htm",
   },
   "de-sexual-assault-in-the-first-degree": {
     citation: "Del. Code Ann. tit. 11 § 773",
@@ -8076,9 +8128,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-sexual-assault-in-the-first-degree": {
     citation: "Okla. Stat. tit. 21 § 1111",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1111/",
+    instructionRef: "OUJI-CR 4-120",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-120.htm",
   },
   "or-sexual-assault-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 163.375",
@@ -8235,9 +8289,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-rape-in-the-first-degree": {
     citation: "Conn. Gen. Stat. § 53a-70",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-70/",
+    instructionRef: "CT JI 3.1-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/SexOffenses/3.1-1.htm",
   },
   "de-rape-in-the-first-degree": {
     citation: "Del. Code Ann. tit. 11 § 773",
@@ -8441,9 +8497,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-rape-in-the-first-degree": {
     citation: "Okla. Stat. tit. 21 § 1111",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1111/",
+    instructionRef: "OUJI-CR 4-120",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-120.htm",
   },
   "or-rape-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 163.375",
@@ -9336,16 +9394,20 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ct-drug-trafficking": {
     citation: "Conn. Gen. Stat. § 21a-278",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-21a-278/",
+    instructionRef: "CT JI 12.5-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Narcotics/12.5-1.htm",
   },
   "ct-possession-with-intent-to-distribute": {
     citation: "Conn. Gen. Stat. § 21a-277",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/connecticut/section-21a-277/",
+    instructionRef: "CT JI 12.3-1",
+    instructionUrl: "https://www.jud.ct.gov/ji/Criminal/Narcotics/12.3-1.htm",
   },
   "de-drug-trafficking": {
     citation: "Del. Code Ann. tit. 16 § 4753A",
@@ -9758,16 +9820,20 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-drug-trafficking": {
     citation: "Okla. Stat. tit. 63 § 2-415",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-415/",
+    instructionRef: "OUJI-CR 6-46",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-46.htm",
   },
   "ok-possession-with-intent-to-distribute": {
     citation: "Okla. Stat. tit. 63 § 2-401(a)(1)",
     confidence: "high",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-401/",
+    instructionRef: "OUJI-CR 6-44",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-44.htm",
   },
   "or-drug-trafficking": {
     citation: "Or. Rev. Stat. § 475.860",
@@ -10729,9 +10795,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-voluntary-manslaughter": {
     citation: "Okla. Stat. tit. 21 § 711",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-711/",
+    instructionRef: "OUJI-CR 4-89",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-89.htm",
   },
   "wi-voluntary-manslaughter": {
     citation: "Wis. Stat. § 940.01(2)",
@@ -10766,9 +10834,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-involuntary-manslaughter": {
     citation: "Okla. Stat. tit. 21 § 716",
     confidence: "needs_review",
-    lastVerified: "2026-04",
+    lastVerified: "2026-06",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-716/",
+    instructionRef: "OUJI-CR 4-97",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-97.htm",
   },
   "ut-involuntary-manslaughter": {
     citation: "Utah Code Ann. § 76-5-206",
@@ -12439,7 +12509,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ut-dui-second-offense": { citation: "Utah Code Ann. § 41-6a-503(2)(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah DUI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-503/" },
   "vt-dui-second-offense": { citation: "Vt. Stat. Ann. tit. 23, § 1210(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-1210/" },
   "va-dui-second-offense": { citation: "Va. Code Ann. § 18.2-270(B)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/" },
-  "wa-dui-second-offense": { citation: "Wash. Rev. Code § 46.61.502(6)(b)(ii)", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502" },
+  "wa-dui-second-offense": { citation: "Wash. Rev. Code § 46.61.502(6)(b)(ii)", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502", instructionRef: "WPIC 92.06", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06" },
   "wv-dui-second-offense": { citation: "W. Va. Code § 17C-5-2(e)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/17C-5-2/" },
   "wi-dui-second-offense": { citation: "Wis. Stat. § 346.63(1)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/wisconsin/section-346-63/" },
   "wy-dui-second-offense": { citation: "Wyo. Stat. Ann. § 31-5-233(b)(ii)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-31-5-233/" },
@@ -12498,7 +12568,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ut-dui-third-offense": { citation: "Utah Code Ann. § 41-6a-503(2)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-503/" },
   "vt-dui-third-offense": { citation: "Vt. Stat. Ann. tit. 23, § 1210(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-1210/" },
   "va-dui-third-offense": { citation: "Va. Code Ann. § 18.2-270(C)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/" },
-  "wa-dui-third-offense": { citation: "Wash. Rev. Code § 46.61.502(6)(b)(iii)", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502" },
+  "wa-dui-third-offense": { citation: "Wash. Rev. Code § 46.61.502(6)(b)(iii)", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502", instructionRef: "WPIC 92.06", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06" },
   "wv-dui-third-offense": { citation: "W. Va. Code § 17C-5-2(f)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/17C-5-2/" },
   "wi-dui-third-offense": { citation: "Wis. Stat. § 346.65(2)(am)3", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/wisconsin/section-346-65/" },
   "wy-dui-third-offense": { citation: "Wyo. Stat. Ann. § 31-5-233(e)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-31-5-233/" },
