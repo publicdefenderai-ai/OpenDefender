@@ -91,9 +91,9 @@ These states publish free, per-instruction URLs suitable for direct `instruction
 | **NY** | `https://www.nycourts.gov/judges/cji/2-PenalLaw/{art}/{art}.{sec}.pdf` | [Murder 2nd §125.25](https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.25.pdf) |
 | **NJ** | `https://www.njcourts.gov/sites/default/files/attorneys/crimjury/{2c}{sec}.pdf` | [Murder 2C:11-3](https://www.njcourts.gov/sites/default/files/attorneys/crimjury/2c1103.pdf) |
 | **FL** | `https://www.floridasupremecourt.org/jury-instructions/criminal-standard-jury-instructions/{instr}.pdf` | Research needed for exact pattern |
-| **IL** | `https://www.illinoiscourts.gov/courts/supreme-court/jury-instructions/criminal/` | HTML index; per-instruction URLs TBD |
-| **OH** | `https://www.supremecourt.ohio.gov/` | Per-instruction URLs TBD |
-| **MI** | `https://mjieducation.mi.gov/` | Per-instruction HTML pages confirmed |
+| **IL** | `https://www.illinoiscourts.gov/resources/{guid}/file` | [Chapter 7 (Homicide)](https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file) — per-chapter PDFs; each GUID is unique per chapter (verified 200 on 6 chapters 2026-06) |
+| **OH** | N/A — OJI not publicly accessible as per-instruction URLs | Per-instruction pages require Ohio Judicial College login; `instructionRef` label only (no `instructionUrl`) |
+| **MI** | `https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/` | One HTML document with all CJI2d instructions (mjieducation.mi.gov redirects here); verified 200 (2026-06) |
 | **WA** | `https://www.courts.wa.gov/newsinfo/resources/?fa=newsinfo_jury.juryinstruct&section=11` | HTML; per-instruction TBD |
 | **OK** | `https://www.oscn.net/applications/ouji-cr/` | HTML pages per instruction |
 | **CT** | `https://www.jud.ct.gov/ji/Criminal/` | HTML pages per instruction |
@@ -296,13 +296,13 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 7. **FL** — FSJI **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, sex battery, drugs, DUI covered)
 8. **OK** — OUJI-CR PLANNED (per-instruction HTML on oscn.net)
 9. **CT** — CT Jury Instructions PLANNED (per-instruction HTML on jud.ct.gov)
-10. **OH** — OJI **IMPL** (instructionRef only — paywalled; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs covered 2026-06)
-11. **IL** — IPI-CR **IMPL** (illinoiscourts.gov chapter PDF URLs; all target charge categories covered 2026-06)
-12. **MI** — CJI2d **IMPL** (courts.michigan.gov base URL; all target charge categories covered 2026-06)
+10. **OH** — OJI **IMPL** (instructionRef only — no public per-instruction URLs confirmed; murder, manslaughter, robbery, burglary, rape, assault, DUI, drugs covered; HTTP spot-check 2026-06: OJI not accessible via supremecourt.ohio.gov public paths)
+11. **IL** — IPI-CR **IMPL** (illinoiscourts.gov chapter PDF URLs via GUID pattern; all target categories covered including assault; HTTP spot-check 2026-06: all 6 chapter URLs confirmed 200)
+12. **MI** — CJI2d **IMPL** (courts.michigan.gov full-HTML-set page; all target categories covered including assault and sexual assault; mjieducation.mi.gov redirects to courts.michigan.gov; HTTP spot-check 2026-06: base URL confirmed 200)
 13. **WA** — WPIC **IMPL** (base instructionUrl; murder, manslaughter, assault, robbery, burglary, rape, drugs, DUI covered)
 14. **NM** — NMRA 14 PLANNED (HTML available via nmonesource.com)
 
 ---
 
-*Last updated: 2026-06-15*  
+*Last updated: 2026-06-16*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*

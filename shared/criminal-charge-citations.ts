@@ -4411,6 +4411,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/illinois/chapter-720/act-5/section-5-12-2/",
+    instructionRef: "IPI-CR 11.07",
+    instructionUrl: "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file",
   },
   "in-aggravated-assault": {
     citation: "Ind. Code § 35-42-2-1.5",
@@ -4474,6 +4476,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81a",
+    instructionRef: "CJI2d 17.6",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mn-aggravated-assault": {
     citation: "Minn. Stat. § 609.225",
@@ -4569,6 +4573,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2903.12",
+    instructionRef: "OJI 509.02",
   },
   "ok-aggravated-assault": {
     citation: "Okla. Stat. tit. 21 § 646",
@@ -7986,6 +7991,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520b",
+    instructionRef: "CJI2d 20.1",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mn-sexual-assault-in-the-first-degree": {
     citation: "Minn. Stat. § 609.342",
