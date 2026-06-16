@@ -38,10 +38,10 @@ multi-section charges that generic legal databases often miss.
 | AZ | RAJI Criminal | State Bar of AZ | No | Yes (bulk) | No | No | **IMPL** — azleg.gov statute URLs; ref text |
 | MA | Instruction 9.00 series | MA Sup. Jud. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
 | TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
-| IN | Indiana Model Criminal Jury Instructions | IN Judicial Ctr. | Yes (HTML) | Yes | No | Yes | PLANNED |
-| MO | Missouri Approved Instructions (Criminal) | MO Sup. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| IN | Indiana Model Criminal Jury Instructions | IN Judicial Ctr. | Yes (HTML) | Yes | No | Yes | **IMPL** — Ind. Model Crim. Jury Instr. base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
+| MO | Missouri Approved Instructions (Criminal) | MO Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — MAI-CR base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | MD | Maryland Criminal Jury Instructions | MD Judicial Coll. | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
-| WI | Wisconsin Jury Instructions — Criminal | WI Judicial Coll. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| WI | Wisconsin Jury Instructions — Criminal | WI Judicial Coll. | Yes (HTML) | Yes | No | Yes | **IMPL** — Wis JI-Criminal base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | MN | Minnesota Jury Instruction Guides (Crim.) | MN Dist. Judges Assoc. | No | No | Yes (Westlaw) | No | NO URL — ref text only |
 | CO | COLJI-Criminal | CO Sup. Ct. Comm. | No | No | Yes (Westlaw) | No | **IMPL** — ref text only (paywalled) |
 | AL | Alabama Pattern Jury Instructions — Crim. | AL Bar / Circuit Judges | No | No | Yes (ALBarStar) | No | NO URL — ref text only |
@@ -53,10 +53,10 @@ multi-section charges that generic legal databases often miss.
 | IA | Iowa Criminal Jury Instructions | Iowa State Bar | No | No | Yes (Westlaw) | No | NO URL — ref text only |
 | MS | Mississippi Model Jury Instructions | MS Bar | No | No | Yes | No | NO URL — ref text only |
 | AR | Arkansas Model Jury Instructions (Crim.) | AR Judicial Council | No | No | Yes | No | NO URL — ref text only |
-| KS | Kansas Pattern Instructions — Crim. | KS Judicial Council | Yes (HTML) | Yes | No | Yes | PLANNED |
-| UT | Utah Model Jury Instructions | UT Cts. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| KS | Kansas Pattern Instructions — Crim. | KS Judicial Council | Yes (HTML) | Yes | No | Yes | **IMPL** — PIK Crim. 4th base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
+| UT | Utah Model Jury Instructions | UT Cts. | Yes (HTML) | Yes | No | Yes | **IMPL** — UMJI-CR base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | NV | Nevada Jury Instructions | NV Cts. / State Bar | No | No | Yes | No | NO URL — ref text only |
-| NM | Uniform Jury Instructions — Crim. (NMRA 14) | NM Sup. Ct. | Yes (HTML) | Yes | No | Yes | PLANNED |
+| NM | Uniform Jury Instructions — Crim. (NMRA 14) | NM Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — UJI 14-series base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | WV | West Virginia Criminal Jury Instructions | WV Bar | No | No | Yes | No | NO URL — ref text only |
 | NE | Nebraska Jury Instructions (Crim.) | NE Jud. Council | No | Yes (bulk) | No | No | NO URL — bulk only |
 | ID | Idaho Criminal Jury Instructions | ID Cts. | No | Yes (bulk) | No | No | NO URL — bulk only |
@@ -300,9 +300,14 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 11. **IL** — IPI-CR **IMPL** (illinoiscourts.gov chapter PDF URLs via GUID pattern; all target categories covered including assault; HTTP spot-check 2026-06: all 6 chapter URLs confirmed 200)
 12. **MI** — CJI2d **IMPL** (courts.michigan.gov full-HTML-set page; all target categories covered including assault and sexual assault; mjieducation.mi.gov redirects to courts.michigan.gov; HTTP spot-check 2026-06: base URL confirmed 200)
 13. **WA** — WPIC **IMPL** (per-instruction query-param URLs; murder, manslaughter, vehicular, assault incl. DV, robbery, burglary, rape/sexual assault, drugs, DUI all 3 offenses covered 2026-06)
-14. **NM** — NMRA 14 PLANNED (HTML available via nmonesource.com)
+14. **NM** — UJI 14 **IMPLEMENTED** (nmsupremecourt.nmcourts.gov base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
+15. **IN** — Ind. Model Crim. Jury Instr. **IMPLEMENTED** (in.gov/courts base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
+16. **MO** — MAI-CR **IMPLEMENTED** (courts.mo.gov base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
+17. **WI** — Wis JI-Criminal **IMPLEMENTED** (wicourts.gov base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
+18. **UT** — UMJI-CR **IMPLEMENTED** (utcourts.gov base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
+19. **KS** — PIK Crim. 4th **IMPLEMENTED** (kscourts.org base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
 
 ---
 
-*Last updated: 2026-06-16 (WA, OK, CT promoted to IMPL)*  
+*Last updated: 2026-06-16 (NM, IN, MO, WI, UT, KS promoted to IMPL)*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*
