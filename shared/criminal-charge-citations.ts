@@ -1439,6 +1439,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2502",
+    instructionRef: "Pa. SSJI (Crim.) 15.2502A",
   },
   "pa-murder-in-the-second-degree": {
     citation: "18 Pa.C.S. § 2502(b)",
@@ -1446,6 +1447,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2502",
+    instructionRef: "Pa. SSJI (Crim.) 15.2502B",
   },
   "pa-murder-in-the-third-degree": {
     citation: "18 Pa.C.S. § 2502(c)",
@@ -1453,6 +1455,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2502",
+    instructionRef: "Pa. SSJI (Crim.) 15.2502C",
   },
   "pa-felony-murder": {
     citation: "18 Pa.C.S. § 2502(b)",
@@ -1460,6 +1463,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2502",
+    instructionRef: "Pa. SSJI (Crim.) 15.2502B",
   },
   "pa-voluntary-manslaughter": {
     citation: "18 Pa.C.S. § 2503",
@@ -1467,6 +1471,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2503",
+    instructionRef: "Pa. SSJI (Crim.) 15.2503",
   },
   "pa-involuntary-manslaughter": {
     citation: "18 Pa.C.S. § 2504",
@@ -1474,6 +1479,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2504",
+    instructionRef: "Pa. SSJI (Crim.) 15.2504",
   },
   "pa-attempted-murder": {
     citation: "18 Pa.C.S. § 901",
@@ -1481,6 +1487,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=901",
+    instructionRef: "Pa. SSJI (Crim.) 5.901",
   },
   "pa-trespassing": {
     citation: "18 Pa.C.S. § 3503",
@@ -2395,6 +2402,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Texas Legislature — Tex. Penal Code § 19.03 Capital Murder (mapped to murder-in-the-first-degree)",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
+    instructionRef: "TPJC 19.03",
   },
   "tx-murder-in-the-second-degree": {
     citation: "Tex. Penal Code § 19.02",
@@ -2402,6 +2410,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Texas Legislature — Tex. Penal Code § 19.02 Murder (mapped to murder-in-the-second-degree)",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
+    instructionRef: "TPJC 19.02",
   },
   "tx-voluntary-manslaughter": {
     citation: "Tex. Penal Code § 19.04",
@@ -2409,6 +2418,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Texas Legislature — Tex. Penal Code § 19.04 Manslaughter",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
+    instructionRef: "TPJC 19.04",
   },
   "tx-criminally-negligent-homicide": {
     citation: "Tex. Penal Code § 19.05",
@@ -2416,6 +2426,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
+    instructionRef: "TPJC 19.05",
   },
 
   // — Utah —
@@ -3202,6 +3213,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
+    instructionRef: "TPJC 19.02",
   },
   "tx-vehicular-homicide": {
     citation: "Tex. Penal Code § 49.08",
@@ -3209,6 +3221,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm",
+    instructionRef: "TPJC 49.08",
   },
   "tx-involuntary-manslaughter": {
     citation: "Tex. Penal Code § 19.04",
@@ -3216,6 +3229,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.19.htm",
+    instructionRef: "TPJC 19.04",
   },
   "tx-disorderly-conduct": {
     citation: "Tex. Penal Code § 42.01",
@@ -3272,6 +3286,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm",
+    instructionRef: "TPJC 49.04",
   },
   "tx-driving-while-suspended": {
     citation: "Tex. Transp. Code § 521.457",
@@ -4223,6 +4238,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3802",
+    instructionRef: "Pa. SSJI (Crim.) 73.3802",
   },
   "ri-dui-first-offense": {
     citation: "R.I. Gen. Laws § 31-27-2",
@@ -4373,6 +4389,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-21/",
+    instructionRef: "GPJI §16-5-21",
   },
   "hi-aggravated-assault": {
     citation: "Haw. Rev. Stat. § 707-711",
@@ -4573,6 +4590,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2702",
+    instructionRef: "Pa. SSJI (Crim.) 15.2702",
   },
   "ri-aggravated-assault": {
     citation: "R.I. Gen. Laws § 11-5-2",
@@ -4608,6 +4626,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm",
+    instructionRef: "TPJC 22.02",
   },
   "ut-aggravated-assault": {
     citation: "Utah Code Ann. § 76-5-103",
@@ -4733,6 +4752,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/georgia/section-19-13-1/",
+    instructionRef: "GPJI §19-13-1",
   },
   "hi-domestic-violence-assault": {
     citation: "Haw. Rev. Stat. § 709-906",
@@ -5240,6 +5260,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3701",
+    instructionRef: "Pa. SSJI (Crim.) 15.3701",
   },
   "ri-robbery-in-the-first-degree": {
     citation: "R.I. Gen. Laws § 11-39-1",
@@ -5275,6 +5296,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 29.03",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.29.htm#29.03",
+    instructionRef: "TPJC 29.03",
   },
   "ut-robbery-in-the-first-degree": {
     citation: "Utah Code Ann. § 76-6-302",
@@ -5403,6 +5425,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Georgia robbery (unarmed — second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/georgia/section-16-8-40/",
+    instructionRef: "GPJI §16-8-40",
   },
   "hi-robbery-in-the-second-degree": {
     citation: "Haw. Rev. Stat. § 708-841",
@@ -5593,6 +5616,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3701",
+    instructionRef: "Pa. SSJI (Crim.) 15.3701",
   },
   "ri-robbery-in-the-second-degree": {
     citation: "R.I. Gen. Laws § 11-39-1(b)",
@@ -5628,6 +5652,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 29.02",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.29.htm#29.02",
+    instructionRef: "TPJC 29.02",
   },
   "ut-robbery-in-the-second-degree": {
     citation: "Utah Code Ann. § 76-6-301",
@@ -5956,6 +5981,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3502",
+    instructionRef: "Pa. SSJI (Crim.) 15.3502",
   },
   "ri-burglary-in-the-first-degree": {
     citation: "R.I. Gen. Laws § 11-8-1",
@@ -5991,6 +6017,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 30.02",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.02",
+    instructionRef: "TPJC 30.02",
   },
   "ut-burglary-in-the-first-degree": {
     citation: "Utah Code Ann. § 76-6-202",
@@ -6119,6 +6146,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Georgia burglary in the second degree (commercial/non-dwelling); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/georgia/section-16-7-1/",
+    instructionRef: "GPJI §16-7-1",
   },
   "hi-burglary-in-the-second-degree": {
     citation: "Haw. Rev. Stat. § 708-811",
@@ -6324,6 +6352,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3502",
+    instructionRef: "Pa. SSJI (Crim.) 15.3502",
   },
   "ri-burglary-in-the-second-degree": {
     citation: "R.I. Gen. Laws § 11-8-2",
@@ -6359,6 +6388,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 30.02",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.02",
+    instructionRef: "TPJC 30.02",
   },
   "ut-burglary-in-the-second-degree": {
     citation: "Utah Code Ann. § 76-6-202(1)",
@@ -8084,6 +8114,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.22.htm",
+    instructionRef: "TPJC 22.021",
   },
   "ut-sexual-assault-in-the-first-degree": {
     citation: "Utah Code Ann. § 76-5-402",
@@ -8420,6 +8451,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3121",
+    instructionRef: "Pa. SSJI (Crim.) 15.3121",
   },
   "ri-rape-in-the-first-degree": {
     citation: "R.I. Gen. Laws § 11-37-2",
@@ -9750,6 +9782,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=35&sctn=780-113",
+    instructionRef: "Pa. SSJI (Crim.) 60.780-113",
   },
   "pa-possession-with-intent-to-distribute": {
     citation: "35 Pa. Stat. § 780-113(a)(30)",
@@ -9757,6 +9790,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=35&sctn=780-113",
+    instructionRef: "Pa. SSJI (Crim.) 60.780-113",
   },
   "ri-drug-trafficking": {
     citation: "R.I. Gen. Laws § 21-28-4.01.1",
@@ -9820,6 +9854,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/texas/section-481-112/",
+    instructionRef: "TPJC H&S 481.112",
   },
   "tx-possession-with-intent-to-distribute": {
     citation: "Tex. Health & Safety Code § 481.115",
