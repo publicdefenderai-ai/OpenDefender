@@ -55,7 +55,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
-import { criminalCharges } from "@shared/criminal-charges";
+import { criminalCharges, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
@@ -595,6 +595,8 @@ function YourChargesSection({
       explanation,
       dataConfidence: dbCharge?.dataConfidence,
       statuteCitations: dbCharge?.statuteCitations,
+      instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
+      instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
     };
   });
 
@@ -685,6 +687,31 @@ function YourChargesSection({
                 jurisdiction={jurisdiction}
                 citation={charge.statuteCitations[0]}
               />
+            )}
+
+            {/* Jury Instruction Reference */}
+            {charge.instructionRef && (
+              <div className="flex items-center gap-1.5">
+                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
+                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                </span>
+                {charge.instructionUrl ? (
+                  <a
+                    href={charge.instructionUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
+                    aria-label={`Jury instruction ${charge.instructionRef}`}
+                  >
+                    {charge.instructionRef}
+                  </a>
+                ) : (
+                  <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                    {charge.instructionRef}
+                  </span>
+                )}
+              </div>
             )}
 
             {/* Separator between charges */}
