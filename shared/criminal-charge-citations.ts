@@ -605,6 +605,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-201/",
+    instructionRef: "MCJI § 4:17",
   },
   "md-murder-in-the-second-degree": {
     citation: "Md. Code Ann., Crim. Law § 2-204",
@@ -612,6 +613,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-204/",
+    instructionRef: "MCJI § 4:17.1",
   },
   "md-felony-murder": {
     citation: "Md. Code Ann., Crim. Law § 2-201",
@@ -619,6 +621,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-201/",
+    instructionRef: "MCJI § 4:17.3",
   },
   "md-voluntary-manslaughter": {
     citation: "Md. Code Ann., Crim. Law § 2-207",
@@ -626,6 +629,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-207/",
+    instructionRef: "MCJI § 4:17.7",
   },
   "md-involuntary-manslaughter": {
     citation: "Md. Code Ann., Crim. Law § 2-207",
@@ -633,6 +637,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-207/",
+    instructionRef: "MCJI § 4:17.8",
   },
   "md-vehicular-homicide": {
     citation: "Md. Code Ann., Crim. Law § 2-209",
@@ -640,6 +645,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-209/",
+    instructionRef: "MCJI § 4:17.10",
   },
   "md-attempted-murder": {
     citation: "Md. Code Ann., Crim. Law § 2-205",
@@ -647,6 +653,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-2-205/",
+    instructionRef: "MCJI § 4:17.2",
   },
   "md-trespassing": {
     citation: "Md. Code Ann., Crim. Law § 6-403",
@@ -918,6 +925,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-32/",
+    instructionRef: "VMJI § 33.100",
   },
   "va-murder-in-the-second-degree": {
     citation: "Va. Code Ann. § 18.2-32",
@@ -925,6 +933,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-32/",
+    instructionRef: "VMJI § 33.200",
   },
   "va-felony-murder": {
     citation: "Va. Code Ann. § 18.2-33",
@@ -932,6 +941,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-33/",
+    instructionRef: "VMJI § 33.300",
   },
   "va-voluntary-manslaughter": {
     citation: "Va. Code Ann. § 18.2-35",
@@ -939,6 +949,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-35/",
+    instructionRef: "VMJI § 33.600",
   },
   "va-involuntary-manslaughter": {
     citation: "Va. Code Ann. § 18.2-36",
@@ -946,6 +957,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-36/",
+    instructionRef: "VMJI § 33.700",
   },
   "va-vehicular-homicide": {
     citation: "Va. Code Ann. § 18.2-36.1",
@@ -953,6 +965,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-36.1/",
+    instructionRef: "VMJI § 33.720",
   },
   "va-attempted-murder": {
     citation: "Va. Code Ann. § 18.2-25",
@@ -960,6 +973,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-25/",
+    instructionRef: "VMJI § 33.400",
   },
   "va-trespassing": {
     citation: "Va. Code Ann. § 18.2-119",
@@ -1798,6 +1812,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.185",
+    instructionRef: "CRIMJIG 11.01",
   },
   "mn-murder-in-the-second-degree": {
     citation: "Minn. Stat. § 609.19",
@@ -1805,6 +1820,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.19",
+    instructionRef: "CRIMJIG 11.13",
   },
   "mn-murder-in-the-third-degree": {
     citation: "Minn. Stat. § 609.195",
@@ -1812,6 +1828,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.195",
+    instructionRef: "CRIMJIG 11.24",
   },
   "mn-voluntary-manslaughter": {
     citation: "Minn. Stat. § 609.20",
@@ -1819,6 +1836,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.20",
+    instructionRef: "CRIMJIG 11.25",
   },
   "mn-involuntary-manslaughter": {
     citation: "Minn. Stat. § 609.205",
@@ -1826,6 +1844,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.205",
+    instructionRef: "CRIMJIG 11.30",
   },
   "mn-vehicular-homicide": {
     citation: "Minn. Stat. § 609.2112",
@@ -1833,6 +1852,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.2112",
+    instructionRef: "CRIMJIG 11.36",
   },
   "mn-trespassing": {
     citation: "Minn. Stat. § 609.605",
@@ -4201,6 +4221,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/",
+    instructionRef: "MCJI § 4:17.12",
   },
   "ma-dui-first-offense": {
     citation: "Mass. Gen. Laws ch. 90 § 24",
@@ -4224,6 +4245,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.20",
+    instructionRef: "CRIMJIG 29.01",
   },
   "ms-dui-first-offense": {
     citation: "Miss. Code Ann. § 63-11-30",
@@ -4386,6 +4408,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-266/",
+    instructionRef: "VMJI § 27.100",
   },
   "wa-dui-first-offense": {
     citation: "Wash. Rev. Code § 46.61.502",
@@ -4575,6 +4598,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-3-202/",
+    instructionRef: "MCJI § 4:01",
   },
   "ma-aggravated-assault": {
     citation: "Mass. Gen. Laws ch. 265 § 13A",
@@ -4598,6 +4622,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.225",
+    instructionRef: "CRIMJIG 13.03",
   },
   "ms-aggravated-assault": {
     citation: "Miss. Code Ann. § 97-3-7",
@@ -4776,6 +4801,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-51/",
+    instructionRef: "VMJI § 45.100",
   },
   "wa-aggravated-assault": {
     citation: "Wash. Rev. Code § 9A.36.011",
@@ -4955,6 +4981,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/maryland/section-4-501/",
+    instructionRef: "MCJI § 4:01.3",
   },
   "mi-domestic-violence-assault": {
     citation: "Mich. Comp. Laws § 750.81",
@@ -4969,6 +4996,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "MN Sentencing Guidelines Aug 2025 — corrected from § 518B.01 (Domestic Abuse Act, civil definition) to § 609.2242 subd. 4 (Domestic Assault, felony offense in Criminal Code)",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.2242",
+    instructionRef: "CRIMJIG 13.09",
   },
   "ms-domestic-violence-assault": {
     citation: "Miss. Code Ann. § 97-3-7(3)",
@@ -5112,6 +5140,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-57.2/",
+    instructionRef: "VMJI § 45.500",
   },
   "wa-domestic-violence-assault": { citation: "Wash. Rev. Code § 9A.36.041", confidence: "high", lastVerified: "2026-06", source: "Washington Legislature — app.leg.wa.gov/rcw", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.36.041", instructionRef: "WPIC 35.50", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.50" },
   "wv-domestic-violence-assault": {
@@ -5288,6 +5317,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland armed robbery; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-3-403/",
+    instructionRef: "MCJI § 4:29.1",
   },
   "ma-robbery-in-the-first-degree": {
     citation: "Mass. Gen. Laws ch. 265 § 17",
@@ -5311,6 +5341,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.245",
+    instructionRef: "CRIMJIG 16.01",
   },
   "ms-robbery-in-the-first-degree": {
     citation: "Miss. Code Ann. § 97-3-79",
@@ -5482,6 +5513,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-58/",
+    instructionRef: "VMJI § 46.100",
   },
   "wa-robbery-in-the-first-degree": {
     citation: "Wash. Rev. Code § 9A.56.200",
@@ -5662,6 +5694,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland robbery (unarmed — second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-3-402/",
+    instructionRef: "MCJI § 4:29",
   },
   "ma-robbery-in-the-second-degree": {
     citation: "Mass. Gen. Laws ch. 265 § 19",
@@ -5685,6 +5718,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.24",
+    instructionRef: "CRIMJIG 16.02",
   },
   "ms-robbery-in-the-second-degree": {
     citation: "Miss. Code Ann. § 97-3-73",
@@ -5856,6 +5890,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-58.1/",
+    instructionRef: "VMJI § 46.200",
   },
   "wa-robbery-in-the-second-degree": {
     citation: "Wash. Rev. Code § 9A.56.210",
@@ -6045,6 +6080,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-6-202/",
+    instructionRef: "MCJI § 4:05",
   },
   "ma-burglary-in-the-first-degree": {
     citation: "Mass. Gen. Laws ch. 266 § 14",
@@ -6068,6 +6104,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.582",
+    instructionRef: "CRIMJIG 17.01",
   },
   "ms-burglary-in-the-first-degree": {
     citation: "Miss. Code Ann. § 97-17-23",
@@ -6239,6 +6276,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-89/",
+    instructionRef: "VMJI § 49.100",
   },
   "wa-burglary-in-the-first-degree": {
     citation: "Wash. Rev. Code § 9A.52.020",
@@ -6427,6 +6465,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-6-203/",
+    instructionRef: "MCJI § 4:05.1",
   },
   "ma-burglary-in-the-second-degree": {
     citation: "Mass. Gen. Laws ch. 266 § 17",
@@ -6450,6 +6489,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.582",
+    instructionRef: "CRIMJIG 17.02",
   },
   "ms-burglary-in-the-second-degree": {
     citation: "Miss. Code Ann. § 97-17-33",
@@ -6628,6 +6668,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-91/",
+    instructionRef: "VMJI § 49.200",
   },
   "wa-burglary-in-the-second-degree": {
     citation: "Wash. Rev. Code § 9A.52.030",
@@ -7580,6 +7621,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland theft (felony — value > $25,000 = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-7-104/",
+    instructionRef: "MCJI § 4:35",
   },
   "mi-grand-theft-in-the-first-degree": {
     citation: "Mich. Comp. Laws § 750.356(2)",
@@ -7594,6 +7636,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.52",
+    instructionRef: "CRIMJIG 20.01",
   },
   "ms-grand-theft-in-the-first-degree": {
     citation: "Miss. Code Ann. § 97-17-41",
@@ -7736,6 +7779,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-95/",
+    instructionRef: "VMJI § 52.100",
   },
   "wa-grand-theft-in-the-first-degree": {
     citation: "Wash. Rev. Code § 9A.56.040",
@@ -7896,6 +7940,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland theft (felony — second degree equivalent, value $1,500-$25,000); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-7-104/",
+    instructionRef: "MCJI § 4:35",
   },
   "mi-grand-theft-in-the-second-degree": {
     citation: "Mich. Comp. Laws § 750.356(3)",
@@ -7910,6 +7955,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.52",
+    instructionRef: "CRIMJIG 20.01",
   },
   "ms-grand-theft-in-the-second-degree": {
     citation: "Miss. Code Ann. § 97-17-41",
@@ -8052,6 +8098,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-95/",
+    instructionRef: "VMJI § 52.200",
   },
   "wa-grand-theft-in-the-second-degree": {
     citation: "Wash. Rev. Code § 9A.56.050",
@@ -8225,6 +8272,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-3-303/",
+    instructionRef: "MCJI § 4:31",
   },
   "mi-sexual-assault-in-the-first-degree": {
     citation: "Mich. Comp. Laws § 750.520b",
@@ -8241,6 +8289,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.342",
+    instructionRef: "CRIMJIG 12.01",
   },
   "ms-sexual-assault-in-the-first-degree": {
     citation: "Miss. Code Ann. § 97-3-65",
@@ -8392,6 +8441,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-61/",
+    instructionRef: "VMJI § 40.100",
   },
   "wa-sexual-assault-in-the-first-degree": {
     citation: "Wash. Rev. Code § 9A.44.040",
@@ -8582,6 +8632,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/maryland/section-3-303/",
+    instructionRef: "MCJI § 4:28",
   },
   "me-rape-in-the-first-degree": {
     citation: "Me. Rev. Stat. tit. 17-A § 253",
@@ -8605,6 +8656,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.342",
+    instructionRef: "CRIMJIG 12.01",
   },
   "ms-rape-in-the-first-degree": {
     citation: "Miss. Code Ann. § 97-3-65",
@@ -8768,6 +8820,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-61/",
+    instructionRef: "VMJI § 40.100",
   },
   "vt-rape-in-the-first-degree": {
     citation: "Vt. Stat. Ann. tit. 13 § 3252",
@@ -9815,6 +9868,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/maryland/section-5-608/",
+    instructionRef: "MCJI § 4:17.17",
   },
   "md-possession-with-intent-to-distribute": {
     citation: "Md. Code Ann., Crim. Law § 5-602",
@@ -9822,6 +9876,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/maryland/section-5-602/",
+    instructionRef: "MCJI § 4:17.14",
   },
   "ma-drug-trafficking": {
     citation: "Mass. Gen. Laws ch. 94C § 32E",
@@ -9861,6 +9916,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/152.021",
+    instructionRef: "CRIMJIG 20.10",
   },
   "mn-possession-with-intent-to-distribute": {
     citation: "Minn. Stat. § 152.022",
@@ -9868,6 +9924,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/152.022",
+    instructionRef: "CRIMJIG 20.15",
   },
   "ms-drug-trafficking": {
     citation: "Miss. Code Ann. § 41-29-139(a)(1)",
@@ -10193,6 +10250,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-248/",
+    instructionRef: "VMJI § 55.100",
   },
   "va-possession-with-intent-to-distribute": {
     citation: "Va. Code Ann. § 18.2-248",
@@ -10200,6 +10258,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-248/",
+    instructionRef: "VMJI § 55.100",
   },
   "vt-drug-trafficking": {
     citation: "Vt. Stat. Ann. tit. 18 § 4231(a)(2)",
@@ -12067,6 +12126,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.582",
+    instructionRef: "CRIMJIG 17.03",
   },
   "nj-burglary-in-the-third-degree": {
     citation: "N.J. Stat. Ann. § 2C:18-2",
@@ -12727,10 +12787,10 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ky-dui-second-offense": { citation: "Ky. Rev. Stat. Ann. § 189A.010(5)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/kentucky/section-189a-010/" },
   "la-dui-second-offense": { citation: "La. Rev. Stat. § 14:98(C)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana DWI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/louisiana/revised-statutes/section-14-98/" },
   "me-dui-second-offense": { citation: "Me. Rev. Stat. tit. 29-A, § 2411(1-A)(B)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maine/section-2411/" },
-  "md-dui-second-offense": { citation: "Md. Code Ann., Transp. § 21-902(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/" },
+  "md-dui-second-offense": { citation: "Md. Code Ann., Transp. § 21-902(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/", instructionRef: "MCJI § 4:17.12" },
   "ma-dui-second-offense": { citation: "Mass. Gen. Laws ch. 90, § 24(1)(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/" },
   "mi-dui-second-offense": { citation: "Mich. Comp. Laws § 257.625(9)", confidence: "high", lastVerified: "2026-06", source: "Michigan Legislature — legislature.mi.gov; OWI second offense", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625", instructionRef: "CJI2d 15.1", instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
-  "mn-dui-second-offense": { citation: "Minn. Stat. § 169A.25", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.25" },
+  "mn-dui-second-offense": { citation: "Minn. Stat. § 169A.25", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.25", instructionRef: "CRIMJIG 29.01" },
   "ms-dui-second-offense": { citation: "Miss. Code Ann. § 63-11-30(2)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/mississippi/section-63-11-30/" },
   "mo-dui-second-offense": { citation: "Mo. Rev. Stat. § 577.010(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=577.010" },
   "mt-dui-second-offense": { citation: "Mont. Code Ann. § 61-8-401(4)(b)", confidence: "low", lastVerified: "2026-04", source: "REPEALED per OpenLaws 2026-04", sourceUrl: "https://law.justia.com/codes/montana/section-61-8-401/" },
@@ -12753,7 +12813,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tx-dui-second-offense": { citation: "Tex. Penal Code § 49.04(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm" },
   "ut-dui-second-offense": { citation: "Utah Code Ann. § 41-6a-503(2)(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Utah DUI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-503/" },
   "vt-dui-second-offense": { citation: "Vt. Stat. Ann. tit. 23, § 1210(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-1210/" },
-  "va-dui-second-offense": { citation: "Va. Code Ann. § 18.2-270(B)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/" },
+  "va-dui-second-offense": { citation: "Va. Code Ann. § 18.2-270(B)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/", instructionRef: "VMJI § 27.100" },
   "wa-dui-second-offense": { citation: "Wash. Rev. Code § 46.61.502(6)(b)(ii)", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502", instructionRef: "WPIC 92.06", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06" },
   "wv-dui-second-offense": { citation: "W. Va. Code § 17C-5-2(e)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/17C-5-2/" },
   "wi-dui-second-offense": { citation: "Wis. Stat. § 346.63(1)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/wisconsin/section-346-63/" },
@@ -12786,10 +12846,10 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ky-dui-third-offense": { citation: "Ky. Rev. Stat. Ann. § 189A.010(5)(c)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/kentucky/section-189a-010/" },
   "la-dui-third-offense": { citation: "La. Rev. Stat. § 14:98(D)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Louisiana DWI third offense (felony); verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/louisiana/revised-statutes/section-14-98/" },
   "me-dui-third-offense": { citation: "Me. Rev. Stat. tit. 29-A, § 2411(1-A)(C)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maine/section-2411/" },
-  "md-dui-third-offense": { citation: "Md. Code Ann., Transp. § 21-902(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/" },
+  "md-dui-third-offense": { citation: "Md. Code Ann., Transp. § 21-902(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/", instructionRef: "MCJI § 4:17.12" },
   "ma-dui-third-offense": { citation: "Mass. Gen. Laws ch. 90, § 24(1)(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-24/" },
   "mi-dui-third-offense": { citation: "Mich. Comp. Laws § 257.625(9)(c)", confidence: "high", lastVerified: "2026-06", source: "Michigan Legislature — legislature.mi.gov; OWI third offense (felony)", sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625", instructionRef: "CJI2d 15.1", instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
-  "mn-dui-third-offense": { citation: "Minn. Stat. § 169A.24", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.24" },
+  "mn-dui-third-offense": { citation: "Minn. Stat. § 169A.24", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/169A.24", instructionRef: "CRIMJIG 29.01" },
   "ms-dui-third-offense": { citation: "Miss. Code Ann. § 63-11-30(2)(c)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/mississippi/section-63-11-30/" },
   "mo-dui-third-offense": { citation: "Mo. Rev. Stat. § 577.010(3)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=577.010" },
   "mt-dui-third-offense": { citation: "Mont. Code Ann. § 61-8-401(6)(b)", confidence: "low", lastVerified: "2026-04", source: "REPEALED per OpenLaws 2026-04", sourceUrl: "https://law.justia.com/codes/montana/section-61-8-401/" },
@@ -12812,7 +12872,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "tx-dui-third-offense": { citation: "Tex. Penal Code § 49.09(b)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm" },
   "ut-dui-third-offense": { citation: "Utah Code Ann. § 41-6a-503(2)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-503/" },
   "vt-dui-third-offense": { citation: "Vt. Stat. Ann. tit. 23, § 1210(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-1210/" },
-  "va-dui-third-offense": { citation: "Va. Code Ann. § 18.2-270(C)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/" },
+  "va-dui-third-offense": { citation: "Va. Code Ann. § 18.2-270(C)", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-270/", instructionRef: "VMJI § 27.100" },
   "wa-dui-third-offense": { citation: "Wash. Rev. Code § 46.61.502(6)(b)(iii)", confidence: "high", lastVerified: "2026-06", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502", instructionRef: "WPIC 92.06", instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06" },
   "wv-dui-third-offense": { citation: "W. Va. Code § 17C-5-2(f)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/17C-5-2/" },
   "wi-dui-third-offense": { citation: "Wis. Stat. § 346.65(2)(am)3", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/wisconsin/section-346-65/" },

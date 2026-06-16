@@ -40,9 +40,9 @@ multi-section charges that generic legal databases often miss.
 | TN | TPI-Criminal | TN Judicial Conference | No | No | Yes (LexisNexis) | No | **IMPL** — TPI-Crim. refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, DUI, drugs |
 | IN | Indiana Model Criminal Jury Instructions | IN Judicial Ctr. | Yes (HTML) | Yes | No | Yes | **IMPL** — Ind. Model Crim. Jury Instr. base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
 | MO | Missouri Approved Instructions (Criminal) | MO Sup. Ct. | Yes (HTML) | Yes | No | Yes | **IMPL** — MAI-CR base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
-| MD | Maryland Criminal Jury Instructions | MD Judicial Coll. | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
+| MD | Maryland Criminal Jury Instructions (MCJI) | MD Judicial Coll. | No | No | Yes (LexisNexis) | No | **IMPL** — MCJI refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI, drugs |
 | WI | Wisconsin Jury Instructions — Criminal | WI Judicial Coll. | Yes (HTML) | Yes | No | Yes | **IMPL** — Wis JI-Criminal base URL; murder, manslaughter, assault, DV assault, robbery, burglary, sexual assault, rape, DUI, drugs covered |
-| MN | Minnesota Jury Instruction Guides (Crim.) | MN Dist. Judges Assoc. | No | No | Yes (Westlaw) | No | NO URL — ref text only |
+| MN | Minnesota Jury Instruction Guides (Crim.) (CRIMJIG) | MN Dist. Judges Assoc. | No | No | Yes (Westlaw) | No | **IMPL** — CRIMJIG refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI, drugs |
 | CO | COLJI-Criminal | CO Sup. Ct. Comm. | No | No | Yes (Westlaw) | No | **IMPL** — ref text only (paywalled) |
 | AL | Alabama Pattern Jury Instructions — Crim. | AL Bar / Circuit Judges | No | No | Yes (ALBarStar) | No | NO URL — ref text only |
 | SC | South Carolina Requests to Charge | SC Bar | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
@@ -72,7 +72,7 @@ multi-section charges that generic legal databases often miss.
 | DE | Delaware Criminal Jury Instructions | DE Cts. | No | No | Yes | No | NO URL — ref text only |
 | WY | Wyoming Criminal Pattern Jury Instructions | WY Bar | No | No | Yes | No | NO URL — ref text only |
 | LA | Louisiana Criminal Jury Instructions | LA Jud. College | No | No | Yes | No | NO URL — ref text only |
-| VA | Virginia Model Jury Instructions (Crim.) | VA CLE | No | No | Yes (LexisNexis) | No | NO URL — ref text only |
+| VA | Virginia Model Jury Instructions (Crim.) (VMJI) | VA CLE | No | No | Yes (LexisNexis) | No | **IMPL** — VMJI refs only (paywalled; no instructionUrl); murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI, drugs |
 | DC | DC Criminal Jury Instructions (Redbook) | DC Courts | Yes (HTML) | Yes | No | Yes | PLANNED |
 | PR | Puerto Rico (Spanish) Jury Instructions | PR Sup. Ct. | No | Yes (bulk) | No | No | NO URL — territory |
 | AS/GU/MP/VI | Territory jury instructions | Various | No | No | No | No | NO URL — territory |
@@ -306,8 +306,11 @@ label (e.g., "RAJI Criminal §13-1105") is shown in the UI; "View Law" links use
 17. **WI** — Wis JI-Criminal **IMPLEMENTED** (wicourts.gov base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
 18. **UT** — UMJI-CR **IMPLEMENTED** (utcourts.gov base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
 19. **KS** — PIK Crim. 4th **IMPLEMENTED** (kscourts.org base URL; murder, manslaughter, assault, DV, robbery, burglary, sexual assault, rape, DUI, drugs)
+20. **MD** — MCJI **IMPLEMENTED** (ref text only — paywalled LexisNexis; murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI, drugs all 3 offenses)
+21. **MN** — CRIMJIG **IMPLEMENTED** (ref text only — paywalled Westlaw; murder incl. 3rd degree, manslaughter, assault, DV, robbery, burglary incl. 3rd degree, rape, sexual assault, grand theft, DUI all 3 offenses, drugs)
+22. **VA** — VMJI **IMPLEMENTED** (ref text only — paywalled LexisNexis; murder, manslaughter, assault, DV, robbery, burglary, rape, sexual assault, grand theft, DUI all 3 offenses, drugs)
 
 ---
 
-*Last updated: 2026-06-16 (NM, IN, MO, WI, UT, KS promoted to IMPL; NC and TN added)*  
+*Last updated: 2026-06-16 (NM, IN, MO, WI, UT, KS promoted to IMPL; NC and TN added; MD, MN, VA added)*  
 *Maintained by the citation research team. See `shared/criminal-charge-citations.ts` for implemented data.*
