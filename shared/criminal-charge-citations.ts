@@ -6915,6 +6915,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=35&sctn=780-113",
+    instructionRef: "Pa. SSJI (Crim.) 60.780-113",
   },
   "ri-possession-of-controlled-substance": {
     citation: "R.I. Gen. Laws § 21-28-4.01(c)",
@@ -6950,6 +6951,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Health & Safety Code § 481.115",
     sourceUrl: "https://tcss.legis.texas.gov/resources/HS/htm/HS.481.htm#481.115",
+    instructionRef: "TPJC H&S 481.115",
   },
   "ut-possession-of-controlled-substance": {
     citation: "Utah Code Ann. § 58-37-8(2)",
@@ -7327,6 +7329,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3929",
+    instructionRef: "Pa. SSJI (Crim.) 15.3929",
   },
   "ri-shoplifting": {
     citation: "R.I. Gen. Laws § 11-41-20",
@@ -7362,6 +7365,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 31.03",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.31.htm#31.03",
+    instructionRef: "TPJC 31.03",
   },
   "ut-shoplifting": {
     citation: "Utah Code Ann. § 76-6-602",
@@ -9043,6 +9047,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3304",
+    instructionRef: "Pa. SSJI (Crim.) 15.3304",
   },
   "ri-vandalism": {
     citation: "R.I. Gen. Laws § 11-44-1",
@@ -9078,6 +9083,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Texas criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.28.htm",
+    instructionRef: "TPJC 28.03",
   },
   "ut-vandalism": {
     citation: "Utah Code Ann. § 76-6-106",
@@ -9388,6 +9394,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=2709",
+    instructionRef: "Pa. SSJI (Crim.) 15.2709",
   },
   "ri-harassment": {
     citation: "R.I. Gen. Laws § 11-52-4.2",
@@ -9423,6 +9430,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 42.07",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.42.htm#42.07",
+    instructionRef: "TPJC 42.07",
   },
   "ut-harassment": {
     citation: "Utah Code Ann. § 76-9-201",
@@ -10520,6 +10528,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=5506",
+    instructionRef: "Pa. SSJI (Crim.) 15.5506",
   },
   "ri-loitering": {
     citation: "R.I. Gen. Laws § 11-45-1(a)(1)",
@@ -10555,6 +10564,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 42.01",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.42.htm#42.01",
+    instructionRef: "TPJC 42.01",
   },
   "ut-loitering": {
     citation: "Utah Code Ann. § 76-9-102",
@@ -11772,6 +11782,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3503",
+    instructionRef: "Pa. SSJI (Crim.) 15.3503",
   },
   "tn-criminal-trespass": {
     citation: "Tenn. Code Ann. § 39-14-405",
@@ -11786,6 +11797,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 30.05",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.30.htm#30.05",
+    instructionRef: "TPJC 30.05",
   },
 
   // criminal-trespass-misdemeanor — remaining states
