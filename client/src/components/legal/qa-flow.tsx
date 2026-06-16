@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
@@ -462,22 +462,18 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
 
                   const statuteCitation = getVerifiedCitation(charge);
                   const instructionRef = getInstructionRef(charge);
+                  const chargeInstructionUrl = getInstructionUrl(charge);
                   const primaryStatuteIndex = getPrimaryStatuteIndex(charge);
                   let statuteUrl: string | null = null;
                   if (isCitationVerified(charge)) {
                     if (charge.jurisdiction === 'CA' && statuteCitation) {
                       statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                     } else {
-                      const instrUrl = getInstructionUrl(charge);
-                      if (instrUrl) {
-                        statuteUrl = instrUrl;
-                      } else {
-                        const govUrl = getVerifiedSourceUrl(charge);
-                        if (govUrl) {
-                          statuteUrl = govUrl;
-                        } else if (!isChargeInOverlay(charge)) {
-                          statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
-                        }
+                      const govUrl = getVerifiedSourceUrl(charge);
+                      if (govUrl) {
+                        statuteUrl = govUrl;
+                      } else if (!isChargeInOverlay(charge)) {
+                        statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
                       }
                     }
                   }
@@ -502,11 +498,6 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               <span className="text-xs font-medium text-blue-700 dark:text-blue-300">
                                 {statuteCitation}
                               </span>
-                              {instructionRef && (
-                                <span className="text-xs text-blue-500 dark:text-blue-400 font-medium">
-                                  · {instructionRef}
-                                </span>
-                              )}
                               {(statuteUrl || (officialSite && !isChargeInOverlay(charge))) && (
                                 <a
                                   href={statuteUrl || officialSite || '#'}
@@ -526,6 +517,31 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               <span className="text-xs text-gray-500 dark:text-gray-400 italic">
                                 Statute reference pending - contact legal aid for details
                               </span>
+                            </div>
+                          )}
+                          {instructionRef && (
+                            <div className="flex items-center gap-1.5 mt-1.5">
+                              <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
+                              <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                              </span>
+                              {chargeInstructionUrl ? (
+                                <a
+                                  href={chargeInstructionUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
+                                  onClick={(e) => e.stopPropagation()}
+                                  data-testid={`link-instruction-${charge.id}`}
+                                  aria-label={`${t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')} ${instructionRef}`}
+                                >
+                                  {instructionRef}
+                                </a>
+                              ) : (
+                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                  {instructionRef}
+                                </span>
+                              )}
                             </div>
                           )}
                         </div>
@@ -613,22 +629,19 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   <div className="space-y-2">
                     {displayedStateCharges.map(charge => {
                       const statuteCitation = getVerifiedCitation(charge);
+                      const listInstructionRef = getInstructionRef(charge);
+                      const listInstructionUrl = getInstructionUrl(charge);
                       const primaryStatuteIndex = getPrimaryStatuteIndex(charge);
                       let statuteUrl: string | null = null;
                       if (isCitationVerified(charge)) {
                         if (charge.jurisdiction === 'CA' && statuteCitation) {
                           statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                         } else {
-                          const instrUrl = getInstructionUrl(charge);
-                          if (instrUrl) {
-                            statuteUrl = instrUrl;
-                          } else {
-                            const govUrl = getVerifiedSourceUrl(charge);
-                            if (govUrl) {
-                              statuteUrl = govUrl;
-                            } else if (!isChargeInOverlay(charge)) {
-                              statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
-                            }
+                          const govUrl = getVerifiedSourceUrl(charge);
+                          if (govUrl) {
+                            statuteUrl = govUrl;
+                          } else if (!isChargeInOverlay(charge)) {
+                            statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
                           }
                         }
                       }
@@ -673,6 +686,30 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                 )}
                               </div>
                             )}
+                            {listInstructionRef && (
+                              <div className="flex items-center gap-1.5 mb-1">
+                                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
+                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                                </span>
+                                {listInstructionUrl ? (
+                                  <a
+                                    href={listInstructionUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
+                                    onClick={(e) => e.stopPropagation()}
+                                    data-testid={`link-instruction-list-${charge.id}`}
+                                  >
+                                    {listInstructionRef}
+                                  </a>
+                                ) : (
+                                  <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                    {listInstructionRef}
+                                  </span>
+                                )}
+                              </div>
+                            )}
                             <p className="text-xs text-muted-foreground">
                               {charge.description}
                             </p>
@@ -693,22 +730,19 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                   <div className="space-y-2">
                     {displayedFederalCharges.map(charge => {
                       const statuteCitation = getVerifiedCitation(charge);
+                      const fedInstructionRef = getInstructionRef(charge);
+                      const fedInstructionUrl = getInstructionUrl(charge);
                       const primaryStatuteIndex = getPrimaryStatuteIndex(charge);
                       let statuteUrl: string | null = null;
                       if (isCitationVerified(charge)) {
                         if (charge.jurisdiction === 'CA' && statuteCitation) {
                           statuteUrl = buildCaLeginfoUrlFromCitation(statuteCitation, primaryStatuteIndex);
                         } else {
-                          const instrUrl = getInstructionUrl(charge);
-                          if (instrUrl) {
-                            statuteUrl = instrUrl;
-                          } else {
-                            const govUrl = getVerifiedSourceUrl(charge);
-                            if (govUrl) {
-                              statuteUrl = govUrl;
-                            } else if (!isChargeInOverlay(charge)) {
-                              statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
-                            }
+                          const govUrl = getVerifiedSourceUrl(charge);
+                          if (govUrl) {
+                            statuteUrl = govUrl;
+                          } else if (!isChargeInOverlay(charge)) {
+                            statuteUrl = getStatuteUrl(charge.jurisdiction, charge.code);
                           }
                         }
                       }
@@ -750,6 +784,30 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                   >
                                     <ExternalLink className="h-3 w-3" />
                                   </a>
+                                )}
+                              </div>
+                            )}
+                            {fedInstructionRef && (
+                              <div className="flex items-center gap-1.5 mb-1">
+                                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
+                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                                </span>
+                                {fedInstructionUrl ? (
+                                  <a
+                                    href={fedInstructionUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
+                                    onClick={(e) => e.stopPropagation()}
+                                    data-testid={`link-instruction-fed-${charge.id}`}
+                                  >
+                                    {fedInstructionRef}
+                                  </a>
+                                ) : (
+                                  <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                    {fedInstructionRef}
+                                  </span>
                                 )}
                               </div>
                             )}

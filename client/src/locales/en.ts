@@ -2039,6 +2039,7 @@ export default {
         "federalCharges": "Federal Charges",
         "showMore": "Show {{count}} more charges...",
         "hasAttorneyLabel": "I already have an attorney or public defender",
+        "juryInstruction": "Instruction",
         "back": "Back",
         "continue": "Continue"
       },
